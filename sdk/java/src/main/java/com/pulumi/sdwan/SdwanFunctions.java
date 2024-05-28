@@ -421,7 +421,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -443,12 +444,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getAdvancedInspectionProfilePolicyDefinition(GetAdvancedInspectionProfilePolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -461,7 +463,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -483,12 +486,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getAdvancedInspectionProfilePolicyDefinition(GetAdvancedInspectionProfilePolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -501,7 +505,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -523,12 +528,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getAdvancedInspectionProfilePolicyDefinition(GetAdvancedInspectionProfilePolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -541,7 +547,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -563,12 +570,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getAdvancedInspectionProfilePolicyDefinition(GetAdvancedInspectionProfilePolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -581,7 +589,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -603,12 +612,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getAdvancedMalwareProtectionPolicyDefinition(GetAdvancedMalwareProtectionPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -621,7 +631,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -643,12 +654,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getAdvancedMalwareProtectionPolicyDefinition(GetAdvancedMalwareProtectionPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -661,7 +673,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -683,12 +696,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getAdvancedMalwareProtectionPolicyDefinition(GetAdvancedMalwareProtectionPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -701,7 +715,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -723,12 +738,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getAdvancedMalwareProtectionPolicyDefinition(GetAdvancedMalwareProtectionPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -741,7 +757,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -763,12 +780,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getAllowUrlListPolicyObject(GetAllowUrlListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -781,7 +799,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -803,12 +822,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getAllowUrlListPolicyObject(GetAllowUrlListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -821,7 +841,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -843,12 +864,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getAllowUrlListPolicyObject(GetAllowUrlListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -861,7 +883,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -883,12 +906,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getAllowUrlListPolicyObject(GetAllowUrlListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -901,7 +925,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -923,12 +948,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getAppProbeClassPolicyObject(GetAppProbeClassPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -941,7 +967,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -963,12 +990,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getAppProbeClassPolicyObject(GetAppProbeClassPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -981,7 +1009,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1003,12 +1032,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getAppProbeClassPolicyObject(GetAppProbeClassPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1021,7 +1051,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1043,12 +1074,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getAppProbeClassPolicyObject(GetAppProbeClassPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1061,7 +1093,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1083,12 +1116,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getApplicationAwareRoutingPolicyDefinition(GetApplicationAwareRoutingPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1101,7 +1135,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1123,12 +1158,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getApplicationAwareRoutingPolicyDefinition(GetApplicationAwareRoutingPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1141,7 +1177,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1163,12 +1200,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getApplicationAwareRoutingPolicyDefinition(GetApplicationAwareRoutingPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1181,7 +1219,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1203,12 +1242,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getApplicationAwareRoutingPolicyDefinition(GetApplicationAwareRoutingPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1221,7 +1261,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1243,12 +1284,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getApplicationListPolicyObject(GetApplicationListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1261,7 +1303,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1283,12 +1326,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getApplicationListPolicyObject(GetApplicationListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1301,7 +1345,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1323,12 +1368,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getApplicationListPolicyObject(GetApplicationListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1341,7 +1387,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1363,12 +1410,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getApplicationListPolicyObject(GetApplicationListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1381,7 +1429,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1403,12 +1452,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getApplicationPriorityFeatureProfile(GetApplicationPriorityFeatureProfileArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1421,7 +1471,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1443,12 +1494,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getApplicationPriorityFeatureProfile(GetApplicationPriorityFeatureProfileArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1461,7 +1513,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1483,12 +1536,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getApplicationPriorityFeatureProfile(GetApplicationPriorityFeatureProfileArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1501,7 +1555,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1523,12 +1578,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getApplicationPriorityFeatureProfile(GetApplicationPriorityFeatureProfileArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1541,7 +1597,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1563,13 +1620,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getApplicationPriorityQosPolicyProfileParcel(GetApplicationPriorityQosPolicyProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1582,7 +1640,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1604,13 +1663,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getApplicationPriorityQosPolicyProfileParcel(GetApplicationPriorityQosPolicyProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1623,7 +1683,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1645,13 +1706,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getApplicationPriorityQosPolicyProfileParcel(GetApplicationPriorityQosPolicyProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1664,7 +1726,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1686,13 +1749,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getApplicationPriorityQosPolicyProfileParcel(GetApplicationPriorityQosPolicyProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1705,7 +1769,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1727,12 +1792,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getAsPathListPolicyObject(GetAsPathListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1745,7 +1811,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1767,12 +1834,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getAsPathListPolicyObject(GetAsPathListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1785,7 +1853,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1807,12 +1876,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getAsPathListPolicyObject(GetAsPathListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1825,7 +1895,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1847,12 +1918,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getAsPathListPolicyObject(GetAsPathListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1865,7 +1937,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1887,12 +1960,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getBlockUrlListPolicyObject(GetBlockUrlListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1905,7 +1979,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1927,12 +2002,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getBlockUrlListPolicyObject(GetBlockUrlListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1945,7 +2021,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1967,12 +2044,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getBlockUrlListPolicyObject(GetBlockUrlListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1985,7 +2063,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2007,12 +2086,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getBlockUrlListPolicyObject(GetBlockUrlListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2025,7 +2105,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2047,12 +2128,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCedgeAaaFeatureTemplate(GetCedgeAaaFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2065,7 +2147,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2087,12 +2170,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCedgeAaaFeatureTemplate(GetCedgeAaaFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2105,7 +2189,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2127,12 +2212,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCedgeAaaFeatureTemplate(GetCedgeAaaFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2145,7 +2231,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2167,12 +2254,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCedgeAaaFeatureTemplate(GetCedgeAaaFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2185,7 +2273,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2207,12 +2296,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCedgeAaaFeatureTemplate(GetCedgeAaaFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2225,7 +2315,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2247,12 +2338,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCedgeAaaFeatureTemplate(GetCedgeAaaFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2265,7 +2357,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2287,12 +2380,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCedgeGlobalFeatureTemplate(GetCedgeGlobalFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2305,7 +2399,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2327,12 +2422,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCedgeGlobalFeatureTemplate(GetCedgeGlobalFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2345,7 +2441,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2367,12 +2464,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCedgeGlobalFeatureTemplate(GetCedgeGlobalFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2385,7 +2483,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2407,12 +2506,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCedgeGlobalFeatureTemplate(GetCedgeGlobalFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2425,7 +2525,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2447,12 +2548,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCedgeGlobalFeatureTemplate(GetCedgeGlobalFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2465,7 +2567,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2487,12 +2590,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCedgeGlobalFeatureTemplate(GetCedgeGlobalFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2505,7 +2609,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2527,12 +2632,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCedgeIgmpFeatureTemplate(GetCedgeIgmpFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2545,7 +2651,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2567,12 +2674,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCedgeIgmpFeatureTemplate(GetCedgeIgmpFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2585,7 +2693,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2607,12 +2716,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCedgeIgmpFeatureTemplate(GetCedgeIgmpFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2625,7 +2735,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2647,12 +2758,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCedgeIgmpFeatureTemplate(GetCedgeIgmpFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2665,7 +2777,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2687,12 +2800,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCedgeIgmpFeatureTemplate(GetCedgeIgmpFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2705,7 +2819,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2727,12 +2842,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCedgeIgmpFeatureTemplate(GetCedgeIgmpFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2745,7 +2861,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2767,12 +2884,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCedgeMulticastFeatureTemplate(GetCedgeMulticastFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2785,7 +2903,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2807,12 +2926,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCedgeMulticastFeatureTemplate(GetCedgeMulticastFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2825,7 +2945,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2847,12 +2968,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCedgeMulticastFeatureTemplate(GetCedgeMulticastFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2865,7 +2987,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2887,12 +3010,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCedgeMulticastFeatureTemplate(GetCedgeMulticastFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2905,7 +3029,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2927,12 +3052,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCedgeMulticastFeatureTemplate(GetCedgeMulticastFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2945,7 +3071,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2967,12 +3094,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCedgeMulticastFeatureTemplate(GetCedgeMulticastFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2985,7 +3113,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3007,12 +3136,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCedgePimFeatureTemplate(GetCedgePimFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3025,7 +3155,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3047,12 +3178,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCedgePimFeatureTemplate(GetCedgePimFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3065,7 +3197,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3087,12 +3220,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCedgePimFeatureTemplate(GetCedgePimFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3105,7 +3239,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3127,12 +3262,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCedgePimFeatureTemplate(GetCedgePimFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3145,7 +3281,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3167,12 +3304,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCedgePimFeatureTemplate(GetCedgePimFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3185,7 +3323,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3207,12 +3346,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCedgePimFeatureTemplate(GetCedgePimFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3225,7 +3365,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3247,12 +3388,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCellularCedgeProfileFeatureTemplate(GetCellularCedgeProfileFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3265,7 +3407,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3287,12 +3430,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCellularCedgeProfileFeatureTemplate(GetCellularCedgeProfileFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3305,7 +3449,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3327,12 +3472,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCellularCedgeProfileFeatureTemplate(GetCellularCedgeProfileFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3345,7 +3491,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3367,12 +3514,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCellularCedgeProfileFeatureTemplate(GetCellularCedgeProfileFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3385,7 +3533,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3407,12 +3556,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCellularCedgeProfileFeatureTemplate(GetCellularCedgeProfileFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3425,7 +3575,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3447,12 +3598,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCellularCedgeProfileFeatureTemplate(GetCellularCedgeProfileFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3465,7 +3617,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3487,12 +3640,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCellularControllerFeatureTemplate(GetCellularControllerFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3505,7 +3659,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3527,12 +3682,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCellularControllerFeatureTemplate(GetCellularControllerFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3545,7 +3701,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3567,12 +3724,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCellularControllerFeatureTemplate(GetCellularControllerFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3585,7 +3743,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3607,12 +3766,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCellularControllerFeatureTemplate(GetCellularControllerFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3625,7 +3785,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3647,12 +3808,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCellularControllerFeatureTemplate(GetCellularControllerFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3665,7 +3827,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3687,12 +3850,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCellularControllerFeatureTemplate(GetCellularControllerFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3705,7 +3869,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3727,12 +3892,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCellularProfileFeatureTemplate(GetCellularProfileFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3745,7 +3911,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3767,12 +3934,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCellularProfileFeatureTemplate(GetCellularProfileFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3785,7 +3953,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3807,12 +3976,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCellularProfileFeatureTemplate(GetCellularProfileFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3825,7 +3995,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3847,12 +4018,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCellularProfileFeatureTemplate(GetCellularProfileFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3865,7 +4037,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3887,12 +4060,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCellularProfileFeatureTemplate(GetCellularProfileFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3905,7 +4079,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3927,12 +4102,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCellularProfileFeatureTemplate(GetCellularProfileFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3945,7 +4121,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3967,12 +4144,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCentralizedPolicy(GetCentralizedPolicyArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3985,7 +4163,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4007,12 +4186,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCentralizedPolicy(GetCentralizedPolicyArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4025,7 +4205,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4047,12 +4228,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCentralizedPolicy(GetCentralizedPolicyArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4065,7 +4247,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4087,12 +4270,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCentralizedPolicy(GetCentralizedPolicyArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4105,7 +4289,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4127,12 +4312,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCflowdPolicyDefinition(GetCflowdPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4145,7 +4331,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4167,12 +4354,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCflowdPolicyDefinition(GetCflowdPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4185,7 +4373,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4207,12 +4396,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCflowdPolicyDefinition(GetCflowdPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4225,7 +4415,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4247,12 +4438,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCflowdPolicyDefinition(GetCflowdPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4265,7 +4457,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4287,12 +4480,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoBannerFeatureTemplate(GetCiscoBannerFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4305,7 +4499,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4327,12 +4522,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoBannerFeatureTemplate(GetCiscoBannerFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4345,7 +4541,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4367,12 +4564,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoBannerFeatureTemplate(GetCiscoBannerFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4385,7 +4583,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4407,12 +4606,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoBannerFeatureTemplate(GetCiscoBannerFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4425,7 +4625,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4447,12 +4648,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoBannerFeatureTemplate(GetCiscoBannerFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4465,7 +4667,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4487,12 +4690,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoBannerFeatureTemplate(GetCiscoBannerFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4505,7 +4709,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4527,12 +4732,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoBfdFeatureTemplate(GetCiscoBfdFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4545,7 +4751,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4567,12 +4774,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoBfdFeatureTemplate(GetCiscoBfdFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4585,7 +4793,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4607,12 +4816,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoBfdFeatureTemplate(GetCiscoBfdFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4625,7 +4835,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4647,12 +4858,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoBfdFeatureTemplate(GetCiscoBfdFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4665,7 +4877,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4687,12 +4900,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoBfdFeatureTemplate(GetCiscoBfdFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4705,7 +4919,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4727,12 +4942,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoBfdFeatureTemplate(GetCiscoBfdFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4745,7 +4961,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4767,12 +4984,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoBgpFeatureTemplate(GetCiscoBgpFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4785,7 +5003,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4807,12 +5026,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoBgpFeatureTemplate(GetCiscoBgpFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4825,7 +5045,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4847,12 +5068,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoBgpFeatureTemplate(GetCiscoBgpFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4865,7 +5087,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4887,12 +5110,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoBgpFeatureTemplate(GetCiscoBgpFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4905,7 +5129,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4927,12 +5152,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoBgpFeatureTemplate(GetCiscoBgpFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4945,7 +5171,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4967,12 +5194,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoBgpFeatureTemplate(GetCiscoBgpFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4985,7 +5213,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5007,12 +5236,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoDhcpServerFeatureTemplate(GetCiscoDhcpServerFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5025,7 +5255,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5047,12 +5278,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoDhcpServerFeatureTemplate(GetCiscoDhcpServerFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5065,7 +5297,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5087,12 +5320,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoDhcpServerFeatureTemplate(GetCiscoDhcpServerFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5105,7 +5339,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5127,12 +5362,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoDhcpServerFeatureTemplate(GetCiscoDhcpServerFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5145,7 +5381,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5167,12 +5404,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoDhcpServerFeatureTemplate(GetCiscoDhcpServerFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5185,7 +5423,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5207,12 +5446,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoDhcpServerFeatureTemplate(GetCiscoDhcpServerFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5225,7 +5465,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5247,12 +5488,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoLoggingFeatureTemplate(GetCiscoLoggingFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5265,7 +5507,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5287,12 +5530,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoLoggingFeatureTemplate(GetCiscoLoggingFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5305,7 +5549,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5327,12 +5572,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoLoggingFeatureTemplate(GetCiscoLoggingFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5345,7 +5591,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5367,12 +5614,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoLoggingFeatureTemplate(GetCiscoLoggingFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5385,7 +5633,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5407,12 +5656,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoLoggingFeatureTemplate(GetCiscoLoggingFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5425,7 +5675,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5447,12 +5698,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoLoggingFeatureTemplate(GetCiscoLoggingFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5465,7 +5717,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5487,12 +5740,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoNtpFeatureTemplate(GetCiscoNtpFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5505,7 +5759,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5527,12 +5782,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoNtpFeatureTemplate(GetCiscoNtpFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5545,7 +5801,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5567,12 +5824,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoNtpFeatureTemplate(GetCiscoNtpFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5585,7 +5843,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5607,12 +5866,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoNtpFeatureTemplate(GetCiscoNtpFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5625,7 +5885,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5647,12 +5908,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoNtpFeatureTemplate(GetCiscoNtpFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5665,7 +5927,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5687,12 +5950,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoNtpFeatureTemplate(GetCiscoNtpFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5705,7 +5969,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5727,12 +5992,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoOmpFeatureTemplate(GetCiscoOmpFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5745,7 +6011,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5767,12 +6034,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoOmpFeatureTemplate(GetCiscoOmpFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5785,7 +6053,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5807,12 +6076,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoOmpFeatureTemplate(GetCiscoOmpFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5825,7 +6095,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5847,12 +6118,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoOmpFeatureTemplate(GetCiscoOmpFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5865,7 +6137,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5887,12 +6160,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoOmpFeatureTemplate(GetCiscoOmpFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5905,7 +6179,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5927,12 +6202,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoOmpFeatureTemplate(GetCiscoOmpFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5945,7 +6221,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5967,12 +6244,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoOspfFeatureTemplate(GetCiscoOspfFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5985,7 +6263,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6007,12 +6286,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoOspfFeatureTemplate(GetCiscoOspfFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6025,7 +6305,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6047,12 +6328,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoOspfFeatureTemplate(GetCiscoOspfFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6065,7 +6347,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6087,12 +6370,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoOspfFeatureTemplate(GetCiscoOspfFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6105,7 +6389,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6127,12 +6412,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoOspfFeatureTemplate(GetCiscoOspfFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6145,7 +6431,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6167,12 +6454,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoOspfFeatureTemplate(GetCiscoOspfFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6185,7 +6473,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6207,12 +6496,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoOspfv3FeatureTemplate(GetCiscoOspfv3FeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6225,7 +6515,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6247,12 +6538,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoOspfv3FeatureTemplate(GetCiscoOspfv3FeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6265,7 +6557,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6287,12 +6580,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoOspfv3FeatureTemplate(GetCiscoOspfv3FeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6305,7 +6599,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6327,12 +6622,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoOspfv3FeatureTemplate(GetCiscoOspfv3FeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6345,7 +6641,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6367,12 +6664,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoOspfv3FeatureTemplate(GetCiscoOspfv3FeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6385,7 +6683,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6407,12 +6706,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoOspfv3FeatureTemplate(GetCiscoOspfv3FeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6425,7 +6725,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6447,12 +6748,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoSecureInternetGatewayFeatureTemplate(GetCiscoSecureInternetGatewayFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6465,7 +6767,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6487,12 +6790,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoSecureInternetGatewayFeatureTemplate(GetCiscoSecureInternetGatewayFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6505,7 +6809,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6527,12 +6832,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoSecureInternetGatewayFeatureTemplate(GetCiscoSecureInternetGatewayFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6545,7 +6851,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6567,12 +6874,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoSecureInternetGatewayFeatureTemplate(GetCiscoSecureInternetGatewayFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6585,7 +6893,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6607,12 +6916,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoSecureInternetGatewayFeatureTemplate(GetCiscoSecureInternetGatewayFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6625,7 +6935,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6647,12 +6958,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoSecureInternetGatewayFeatureTemplate(GetCiscoSecureInternetGatewayFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6665,7 +6977,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6687,12 +7000,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoSecurityFeatureTemplate(GetCiscoSecurityFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6705,7 +7019,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6727,12 +7042,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoSecurityFeatureTemplate(GetCiscoSecurityFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6745,7 +7061,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6767,12 +7084,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoSecurityFeatureTemplate(GetCiscoSecurityFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6785,7 +7103,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6807,12 +7126,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoSecurityFeatureTemplate(GetCiscoSecurityFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6825,7 +7145,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6847,12 +7168,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoSecurityFeatureTemplate(GetCiscoSecurityFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6865,7 +7187,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6887,12 +7210,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoSecurityFeatureTemplate(GetCiscoSecurityFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6905,7 +7229,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6927,12 +7252,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoSigCredentialsFeatureTemplate(GetCiscoSigCredentialsFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6945,7 +7271,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6967,12 +7294,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoSigCredentialsFeatureTemplate(GetCiscoSigCredentialsFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6985,7 +7313,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7007,12 +7336,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoSigCredentialsFeatureTemplate(GetCiscoSigCredentialsFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7025,7 +7355,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7047,12 +7378,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoSigCredentialsFeatureTemplate(GetCiscoSigCredentialsFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7065,7 +7397,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7087,12 +7420,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoSigCredentialsFeatureTemplate(GetCiscoSigCredentialsFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7105,7 +7439,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7127,12 +7462,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoSigCredentialsFeatureTemplate(GetCiscoSigCredentialsFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7145,7 +7481,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7167,12 +7504,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoSnmpFeatureTemplate(GetCiscoSnmpFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7185,7 +7523,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7207,12 +7546,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoSnmpFeatureTemplate(GetCiscoSnmpFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7225,7 +7565,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7247,12 +7588,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoSnmpFeatureTemplate(GetCiscoSnmpFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7265,7 +7607,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7287,12 +7630,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoSnmpFeatureTemplate(GetCiscoSnmpFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7305,7 +7649,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7327,12 +7672,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoSnmpFeatureTemplate(GetCiscoSnmpFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7345,7 +7691,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7367,12 +7714,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoSnmpFeatureTemplate(GetCiscoSnmpFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7385,7 +7733,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7407,12 +7756,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoSystemFeatureTemplate(GetCiscoSystemFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7425,7 +7775,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7447,12 +7798,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoSystemFeatureTemplate(GetCiscoSystemFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7465,7 +7817,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7487,12 +7840,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoSystemFeatureTemplate(GetCiscoSystemFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7505,7 +7859,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7527,12 +7882,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoSystemFeatureTemplate(GetCiscoSystemFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7545,7 +7901,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7567,12 +7924,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoSystemFeatureTemplate(GetCiscoSystemFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7585,7 +7943,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7607,12 +7966,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoSystemFeatureTemplate(GetCiscoSystemFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7625,7 +7985,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7647,12 +8008,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoThousandeyesFeatureTemplate(GetCiscoThousandeyesFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7665,7 +8027,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7687,12 +8050,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoThousandeyesFeatureTemplate(GetCiscoThousandeyesFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7705,7 +8069,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7727,12 +8092,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoThousandeyesFeatureTemplate(GetCiscoThousandeyesFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7745,7 +8111,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7767,12 +8134,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoThousandeyesFeatureTemplate(GetCiscoThousandeyesFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7785,7 +8153,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7807,12 +8176,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoThousandeyesFeatureTemplate(GetCiscoThousandeyesFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7825,7 +8195,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7847,12 +8218,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoThousandeyesFeatureTemplate(GetCiscoThousandeyesFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7865,7 +8237,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7887,12 +8260,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoTrustsecFeatureTemplate(GetCiscoTrustsecFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7905,7 +8279,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7927,12 +8302,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoTrustsecFeatureTemplate(GetCiscoTrustsecFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7945,7 +8321,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7967,12 +8344,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoTrustsecFeatureTemplate(GetCiscoTrustsecFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7985,7 +8363,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8007,12 +8386,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoTrustsecFeatureTemplate(GetCiscoTrustsecFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8025,7 +8405,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8047,12 +8428,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoTrustsecFeatureTemplate(GetCiscoTrustsecFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8065,7 +8447,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8087,12 +8470,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoTrustsecFeatureTemplate(GetCiscoTrustsecFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8105,7 +8489,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8127,12 +8512,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoVpnFeatureTemplate(GetCiscoVpnFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8145,7 +8531,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8167,12 +8554,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoVpnFeatureTemplate(GetCiscoVpnFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8185,7 +8573,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8207,12 +8596,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoVpnFeatureTemplate(GetCiscoVpnFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8225,7 +8615,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8247,12 +8638,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoVpnFeatureTemplate(GetCiscoVpnFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8265,7 +8657,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8287,12 +8680,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoVpnFeatureTemplate(GetCiscoVpnFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8305,7 +8699,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8327,12 +8722,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoVpnFeatureTemplate(GetCiscoVpnFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8345,7 +8741,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8367,12 +8764,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoVpnInterfaceFeatureTemplate(GetCiscoVpnInterfaceFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8385,7 +8783,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8407,12 +8806,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoVpnInterfaceFeatureTemplate(GetCiscoVpnInterfaceFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8425,7 +8825,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8447,12 +8848,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoVpnInterfaceFeatureTemplate(GetCiscoVpnInterfaceFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8465,7 +8867,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8487,12 +8890,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoVpnInterfaceFeatureTemplate(GetCiscoVpnInterfaceFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8505,7 +8909,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8527,12 +8932,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoVpnInterfaceFeatureTemplate(GetCiscoVpnInterfaceFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8545,7 +8951,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8567,12 +8974,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoVpnInterfaceFeatureTemplate(GetCiscoVpnInterfaceFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8585,7 +8993,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8607,12 +9016,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoVpnInterfaceGreFeatureTemplate(GetCiscoVpnInterfaceGreFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8625,7 +9035,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8647,12 +9058,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoVpnInterfaceGreFeatureTemplate(GetCiscoVpnInterfaceGreFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8665,7 +9077,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8687,12 +9100,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoVpnInterfaceGreFeatureTemplate(GetCiscoVpnInterfaceGreFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8705,7 +9119,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8727,12 +9142,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoVpnInterfaceGreFeatureTemplate(GetCiscoVpnInterfaceGreFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8745,7 +9161,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8767,12 +9184,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoVpnInterfaceGreFeatureTemplate(GetCiscoVpnInterfaceGreFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8785,7 +9203,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8807,12 +9226,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoVpnInterfaceGreFeatureTemplate(GetCiscoVpnInterfaceGreFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8825,7 +9245,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8847,12 +9268,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoVpnInterfaceIpsecFeatureTemplate(GetCiscoVpnInterfaceIpsecFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8865,7 +9287,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8887,12 +9310,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoVpnInterfaceIpsecFeatureTemplate(GetCiscoVpnInterfaceIpsecFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8905,7 +9329,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8927,12 +9352,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoVpnInterfaceIpsecFeatureTemplate(GetCiscoVpnInterfaceIpsecFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8945,7 +9371,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8967,12 +9394,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoVpnInterfaceIpsecFeatureTemplate(GetCiscoVpnInterfaceIpsecFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8985,7 +9413,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9007,12 +9436,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoVpnInterfaceIpsecFeatureTemplate(GetCiscoVpnInterfaceIpsecFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9025,7 +9455,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9047,12 +9478,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoVpnInterfaceIpsecFeatureTemplate(GetCiscoVpnInterfaceIpsecFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9065,7 +9497,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9087,12 +9520,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoWirelessLanFeatureTemplate(GetCiscoWirelessLanFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9105,7 +9539,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9127,12 +9562,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoWirelessLanFeatureTemplate(GetCiscoWirelessLanFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9145,7 +9581,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9167,12 +9604,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoWirelessLanFeatureTemplate(GetCiscoWirelessLanFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9185,7 +9623,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9207,12 +9646,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoWirelessLanFeatureTemplate(GetCiscoWirelessLanFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9225,7 +9665,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9247,12 +9688,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoWirelessLanFeatureTemplate(GetCiscoWirelessLanFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9265,7 +9707,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9287,12 +9730,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCiscoWirelessLanFeatureTemplate(GetCiscoWirelessLanFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9305,7 +9749,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9327,12 +9772,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getClassMapPolicyObject(GetClassMapPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9345,7 +9791,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9367,12 +9814,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getClassMapPolicyObject(GetClassMapPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9385,7 +9833,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9407,12 +9856,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getClassMapPolicyObject(GetClassMapPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9425,7 +9875,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9447,12 +9898,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getClassMapPolicyObject(GetClassMapPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9465,7 +9917,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9487,13 +9940,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCliConfigProfileParcel(GetCliConfigProfileParcelArgs.builder()
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9506,7 +9960,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9528,13 +9983,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCliConfigProfileParcel(GetCliConfigProfileParcelArgs.builder()
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9547,7 +10003,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9569,13 +10026,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCliConfigProfileParcel(GetCliConfigProfileParcelArgs.builder()
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9588,7 +10046,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9610,13 +10069,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCliConfigProfileParcel(GetCliConfigProfileParcelArgs.builder()
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9629,7 +10089,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9651,12 +10112,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCliDeviceTemplate(GetCliDeviceTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9669,7 +10131,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9691,12 +10154,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCliDeviceTemplate(GetCliDeviceTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9709,7 +10173,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9731,12 +10196,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCliDeviceTemplate(GetCliDeviceTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9749,7 +10215,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9771,12 +10238,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCliDeviceTemplate(GetCliDeviceTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9789,7 +10257,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9811,12 +10280,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCliFeatureProfile(GetCliFeatureProfileArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9829,7 +10299,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9851,12 +10322,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCliFeatureProfile(GetCliFeatureProfileArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9869,7 +10341,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9891,12 +10364,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCliFeatureProfile(GetCliFeatureProfileArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9909,7 +10383,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9931,12 +10406,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCliFeatureProfile(GetCliFeatureProfileArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9949,7 +10425,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9971,12 +10448,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCliTemplateFeatureTemplate(GetCliTemplateFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9989,7 +10467,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10011,12 +10490,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCliTemplateFeatureTemplate(GetCliTemplateFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10029,7 +10509,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10051,12 +10532,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCliTemplateFeatureTemplate(GetCliTemplateFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10069,7 +10551,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10091,12 +10574,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCliTemplateFeatureTemplate(GetCliTemplateFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10109,7 +10593,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10131,12 +10616,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCliTemplateFeatureTemplate(GetCliTemplateFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10149,7 +10635,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10171,12 +10658,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCliTemplateFeatureTemplate(GetCliTemplateFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10189,7 +10677,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10211,12 +10700,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getColorListPolicyObject(GetColorListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10229,7 +10719,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10251,12 +10742,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getColorListPolicyObject(GetColorListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10269,7 +10761,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10291,12 +10784,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getColorListPolicyObject(GetColorListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10309,7 +10803,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10331,12 +10826,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getColorListPolicyObject(GetColorListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10349,7 +10845,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10371,12 +10868,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getConfigurationGroup(GetConfigurationGroupArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10389,7 +10887,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10411,12 +10910,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getConfigurationGroup(GetConfigurationGroupArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10429,7 +10929,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10451,12 +10952,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getConfigurationGroup(GetConfigurationGroupArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10469,7 +10971,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10491,12 +10994,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getConfigurationGroup(GetConfigurationGroupArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10509,7 +11013,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10531,12 +11036,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getConfigurationGroupDeviceVariables(GetConfigurationGroupDeviceVariablesArgs.builder()
-     *             .configurationGroupId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .configurationGroupId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10549,7 +11055,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10571,12 +11078,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getConfigurationGroupDeviceVariables(GetConfigurationGroupDeviceVariablesArgs.builder()
-     *             .configurationGroupId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .configurationGroupId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10589,7 +11097,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10611,12 +11120,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getConfigurationGroupDeviceVariables(GetConfigurationGroupDeviceVariablesArgs.builder()
-     *             .configurationGroupId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .configurationGroupId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10629,7 +11139,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10651,12 +11162,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getConfigurationGroupDeviceVariables(GetConfigurationGroupDeviceVariablesArgs.builder()
-     *             .configurationGroupId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .configurationGroupId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10669,7 +11181,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10691,12 +11204,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getConfigurationGroupDevices(GetConfigurationGroupDevicesArgs.builder()
-     *             .configurationGroupId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .configurationGroupId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10709,7 +11223,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10731,12 +11246,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getConfigurationGroupDevices(GetConfigurationGroupDevicesArgs.builder()
-     *             .configurationGroupId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .configurationGroupId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10749,7 +11265,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10771,12 +11288,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getConfigurationGroupDevices(GetConfigurationGroupDevicesArgs.builder()
-     *             .configurationGroupId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .configurationGroupId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10789,7 +11307,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10811,12 +11330,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getConfigurationGroupDevices(GetConfigurationGroupDevicesArgs.builder()
-     *             .configurationGroupId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .configurationGroupId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10829,7 +11349,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10851,12 +11372,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCustomControlTopologyPolicyDefinition(GetCustomControlTopologyPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10869,7 +11391,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10891,12 +11414,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCustomControlTopologyPolicyDefinition(GetCustomControlTopologyPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10909,7 +11433,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10931,12 +11456,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCustomControlTopologyPolicyDefinition(GetCustomControlTopologyPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10949,7 +11475,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10971,12 +11498,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getCustomControlTopologyPolicyDefinition(GetCustomControlTopologyPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10989,7 +11517,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11011,12 +11540,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getDataFqdnPrefixListPolicyObject(GetDataFqdnPrefixListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11029,7 +11559,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11051,12 +11582,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getDataFqdnPrefixListPolicyObject(GetDataFqdnPrefixListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11069,7 +11601,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11091,12 +11624,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getDataFqdnPrefixListPolicyObject(GetDataFqdnPrefixListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11109,7 +11643,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11131,12 +11666,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getDataFqdnPrefixListPolicyObject(GetDataFqdnPrefixListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11149,7 +11685,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11171,12 +11708,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getDataIpv4PrefixListPolicyObject(GetDataIpv4PrefixListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11189,7 +11727,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11211,12 +11750,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getDataIpv4PrefixListPolicyObject(GetDataIpv4PrefixListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11229,7 +11769,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11251,12 +11792,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getDataIpv4PrefixListPolicyObject(GetDataIpv4PrefixListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11269,7 +11811,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11291,12 +11834,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getDataIpv4PrefixListPolicyObject(GetDataIpv4PrefixListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11309,7 +11853,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11331,12 +11876,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getDataIpv6PrefixListPolicyObject(GetDataIpv6PrefixListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11349,7 +11895,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11371,12 +11918,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getDataIpv6PrefixListPolicyObject(GetDataIpv6PrefixListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11389,7 +11937,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11411,12 +11960,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getDataIpv6PrefixListPolicyObject(GetDataIpv6PrefixListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11429,7 +11979,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11451,12 +12002,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getDataIpv6PrefixListPolicyObject(GetDataIpv6PrefixListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11469,7 +12021,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11491,13 +12044,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getDevice(GetDeviceArgs.builder()
-     *             .serialNumber(&#34;3FFEFB37892E415FAF34A95D2328EC4C&#34;)
-     *             .name(&#34;Controller01&#34;)
+     *             .serialNumber("3FFEFB37892E415FAF34A95D2328EC4C")
+     *             .name("Controller01")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11510,7 +12064,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11532,13 +12087,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getDevice(GetDeviceArgs.builder()
-     *             .serialNumber(&#34;3FFEFB37892E415FAF34A95D2328EC4C&#34;)
-     *             .name(&#34;Controller01&#34;)
+     *             .serialNumber("3FFEFB37892E415FAF34A95D2328EC4C")
+     *             .name("Controller01")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11551,7 +12107,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11573,13 +12130,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getDevice(GetDeviceArgs.builder()
-     *             .serialNumber(&#34;3FFEFB37892E415FAF34A95D2328EC4C&#34;)
-     *             .name(&#34;Controller01&#34;)
+     *             .serialNumber("3FFEFB37892E415FAF34A95D2328EC4C")
+     *             .name("Controller01")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11592,7 +12150,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11614,13 +12173,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getDevice(GetDeviceArgs.builder()
-     *             .serialNumber(&#34;3FFEFB37892E415FAF34A95D2328EC4C&#34;)
-     *             .name(&#34;Controller01&#34;)
+     *             .serialNumber("3FFEFB37892E415FAF34A95D2328EC4C")
+     *             .name("Controller01")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11633,7 +12193,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11655,13 +12216,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getDevice(GetDeviceArgs.builder()
-     *             .serialNumber(&#34;3FFEFB37892E415FAF34A95D2328EC4C&#34;)
-     *             .name(&#34;Controller01&#34;)
+     *             .serialNumber("3FFEFB37892E415FAF34A95D2328EC4C")
+     *             .name("Controller01")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11674,7 +12236,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11696,13 +12259,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getDevice(GetDeviceArgs.builder()
-     *             .serialNumber(&#34;3FFEFB37892E415FAF34A95D2328EC4C&#34;)
-     *             .name(&#34;Controller01&#34;)
+     *             .serialNumber("3FFEFB37892E415FAF34A95D2328EC4C")
+     *             .name("Controller01")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11715,7 +12279,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11737,12 +12302,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getDnsSecurityPolicyDefinition(GetDnsSecurityPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11755,7 +12321,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11777,12 +12344,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getDnsSecurityPolicyDefinition(GetDnsSecurityPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11795,7 +12363,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11817,12 +12386,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getDnsSecurityPolicyDefinition(GetDnsSecurityPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11835,7 +12405,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11857,12 +12428,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getDnsSecurityPolicyDefinition(GetDnsSecurityPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11875,7 +12447,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11897,12 +12470,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getDomainListPolicyObject(GetDomainListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11915,7 +12489,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11937,12 +12512,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getDomainListPolicyObject(GetDomainListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11955,7 +12531,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11977,12 +12554,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getDomainListPolicyObject(GetDomainListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11995,7 +12573,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12017,12 +12596,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getDomainListPolicyObject(GetDomainListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12035,7 +12615,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12057,12 +12638,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getEigrpFeatureTemplate(GetEigrpFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12075,7 +12657,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12097,12 +12680,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getEigrpFeatureTemplate(GetEigrpFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12115,7 +12699,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12137,12 +12722,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getEigrpFeatureTemplate(GetEigrpFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12155,7 +12741,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12177,12 +12764,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getEigrpFeatureTemplate(GetEigrpFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12195,7 +12783,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12217,12 +12806,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getEigrpFeatureTemplate(GetEigrpFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12235,7 +12825,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12257,12 +12848,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getEigrpFeatureTemplate(GetEigrpFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12275,7 +12867,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12297,12 +12890,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getExpandedCommunityListPolicyObject(GetExpandedCommunityListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12315,7 +12909,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12337,12 +12932,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getExpandedCommunityListPolicyObject(GetExpandedCommunityListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12355,7 +12951,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12377,12 +12974,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getExpandedCommunityListPolicyObject(GetExpandedCommunityListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12395,7 +12993,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12417,12 +13016,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getExpandedCommunityListPolicyObject(GetExpandedCommunityListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12435,7 +13035,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12457,12 +13058,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getExtendedCommunityListPolicyObject(GetExtendedCommunityListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12475,7 +13077,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12497,12 +13100,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getExtendedCommunityListPolicyObject(GetExtendedCommunityListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12515,7 +13119,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12537,12 +13142,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getExtendedCommunityListPolicyObject(GetExtendedCommunityListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12555,7 +13161,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12577,12 +13184,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getExtendedCommunityListPolicyObject(GetExtendedCommunityListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12595,7 +13203,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12617,12 +13226,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getFeatureDeviceTemplate(GetFeatureDeviceTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12635,7 +13245,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12657,12 +13268,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getFeatureDeviceTemplate(GetFeatureDeviceTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12675,7 +13287,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12697,12 +13310,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getFeatureDeviceTemplate(GetFeatureDeviceTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12715,7 +13329,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12737,12 +13352,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getFeatureDeviceTemplate(GetFeatureDeviceTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12755,7 +13371,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12777,12 +13394,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getGeoLocationListPolicyObject(GetGeoLocationListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12795,7 +13413,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12817,12 +13436,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getGeoLocationListPolicyObject(GetGeoLocationListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12835,7 +13455,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12857,12 +13478,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getGeoLocationListPolicyObject(GetGeoLocationListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12875,7 +13497,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12897,12 +13520,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getGeoLocationListPolicyObject(GetGeoLocationListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12915,7 +13539,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12937,12 +13562,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getGpsFeatureTemplate(GetGpsFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12955,7 +13581,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12977,12 +13604,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getGpsFeatureTemplate(GetGpsFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12995,7 +13623,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13017,12 +13646,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getGpsFeatureTemplate(GetGpsFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13035,7 +13665,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13057,12 +13688,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getGpsFeatureTemplate(GetGpsFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13075,7 +13707,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13097,12 +13730,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getGpsFeatureTemplate(GetGpsFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13115,7 +13749,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13137,12 +13772,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getGpsFeatureTemplate(GetGpsFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13155,7 +13791,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13177,12 +13814,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getHubAndSpokeTopologyPolicyDefinition(GetHubAndSpokeTopologyPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13195,7 +13833,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13217,12 +13856,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getHubAndSpokeTopologyPolicyDefinition(GetHubAndSpokeTopologyPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13235,7 +13875,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13257,12 +13898,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getHubAndSpokeTopologyPolicyDefinition(GetHubAndSpokeTopologyPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13275,7 +13917,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13297,12 +13940,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getHubAndSpokeTopologyPolicyDefinition(GetHubAndSpokeTopologyPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13315,7 +13959,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13337,12 +13982,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getIntrusionPreventionPolicyDefinition(GetIntrusionPreventionPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13355,7 +14001,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13377,12 +14024,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getIntrusionPreventionPolicyDefinition(GetIntrusionPreventionPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13395,7 +14043,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13417,12 +14066,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getIntrusionPreventionPolicyDefinition(GetIntrusionPreventionPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13435,7 +14085,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13457,12 +14108,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getIntrusionPreventionPolicyDefinition(GetIntrusionPreventionPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13475,7 +14127,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13497,12 +14150,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getIpsSignatureListPolicyObject(GetIpsSignatureListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13515,7 +14169,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13537,12 +14192,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getIpsSignatureListPolicyObject(GetIpsSignatureListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13555,7 +14211,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13577,12 +14234,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getIpsSignatureListPolicyObject(GetIpsSignatureListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13595,7 +14253,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13617,12 +14276,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getIpsSignatureListPolicyObject(GetIpsSignatureListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13635,7 +14295,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13657,12 +14318,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getIpv4AclPolicyDefinition(GetIpv4AclPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13675,7 +14337,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13697,12 +14360,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getIpv4AclPolicyDefinition(GetIpv4AclPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13715,7 +14379,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13737,12 +14402,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getIpv4AclPolicyDefinition(GetIpv4AclPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13755,7 +14421,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13777,12 +14444,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getIpv4AclPolicyDefinition(GetIpv4AclPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13795,7 +14463,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13817,12 +14486,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getIpv4DeviceAclPolicyDefinition(GetIpv4DeviceAclPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13835,7 +14505,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13857,12 +14528,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getIpv4DeviceAclPolicyDefinition(GetIpv4DeviceAclPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13875,7 +14547,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13897,12 +14570,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getIpv4DeviceAclPolicyDefinition(GetIpv4DeviceAclPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13915,7 +14589,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13937,12 +14612,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getIpv4DeviceAclPolicyDefinition(GetIpv4DeviceAclPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13955,7 +14631,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13977,12 +14654,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getIpv4PrefixListPolicyObject(GetIpv4PrefixListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13995,7 +14673,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14017,12 +14696,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getIpv4PrefixListPolicyObject(GetIpv4PrefixListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14035,7 +14715,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14057,12 +14738,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getIpv4PrefixListPolicyObject(GetIpv4PrefixListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14075,7 +14757,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14097,12 +14780,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getIpv4PrefixListPolicyObject(GetIpv4PrefixListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14115,7 +14799,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14137,12 +14822,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getIpv6AclPolicyDefinition(GetIpv6AclPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14155,7 +14841,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14177,12 +14864,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getIpv6AclPolicyDefinition(GetIpv6AclPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14195,7 +14883,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14217,12 +14906,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getIpv6AclPolicyDefinition(GetIpv6AclPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14235,7 +14925,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14257,12 +14948,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getIpv6AclPolicyDefinition(GetIpv6AclPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14275,7 +14967,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14297,12 +14990,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getIpv6DeviceAclPolicyDefinition(GetIpv6DeviceAclPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14315,7 +15009,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14337,12 +15032,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getIpv6DeviceAclPolicyDefinition(GetIpv6DeviceAclPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14355,7 +15051,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14377,12 +15074,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getIpv6DeviceAclPolicyDefinition(GetIpv6DeviceAclPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14395,7 +15093,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14417,12 +15116,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getIpv6DeviceAclPolicyDefinition(GetIpv6DeviceAclPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14435,7 +15135,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14457,12 +15158,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getIpv6PrefixListPolicyObject(GetIpv6PrefixListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14475,7 +15177,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14497,12 +15200,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getIpv6PrefixListPolicyObject(GetIpv6PrefixListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14515,7 +15219,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14537,12 +15242,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getIpv6PrefixListPolicyObject(GetIpv6PrefixListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14555,7 +15261,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14577,12 +15284,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getIpv6PrefixListPolicyObject(GetIpv6PrefixListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14595,7 +15303,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14617,12 +15326,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getLocalApplicationListPolicyObject(GetLocalApplicationListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14635,7 +15345,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14657,12 +15368,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getLocalApplicationListPolicyObject(GetLocalApplicationListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14675,7 +15387,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14697,12 +15410,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getLocalApplicationListPolicyObject(GetLocalApplicationListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14715,7 +15429,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14737,12 +15452,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getLocalApplicationListPolicyObject(GetLocalApplicationListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14755,7 +15471,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14777,12 +15494,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getLocalizedPolicy(GetLocalizedPolicyArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14795,7 +15513,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14817,12 +15536,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getLocalizedPolicy(GetLocalizedPolicyArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14835,7 +15555,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14857,12 +15578,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getLocalizedPolicy(GetLocalizedPolicyArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14875,7 +15597,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14897,12 +15620,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getLocalizedPolicy(GetLocalizedPolicyArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14915,7 +15639,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14937,12 +15662,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getMeshTopologyPolicyDefinition(GetMeshTopologyPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14955,7 +15681,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14977,12 +15704,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getMeshTopologyPolicyDefinition(GetMeshTopologyPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14995,7 +15723,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15017,12 +15746,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getMeshTopologyPolicyDefinition(GetMeshTopologyPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15035,7 +15765,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15057,12 +15788,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getMeshTopologyPolicyDefinition(GetMeshTopologyPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15075,7 +15807,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15097,12 +15830,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getMirrorPolicyObject(GetMirrorPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15115,7 +15849,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15137,12 +15872,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getMirrorPolicyObject(GetMirrorPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15155,7 +15891,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15177,12 +15914,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getMirrorPolicyObject(GetMirrorPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15195,7 +15933,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15217,12 +15956,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getMirrorPolicyObject(GetMirrorPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15235,7 +15975,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15257,12 +15998,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getObjectGroupPolicyDefinition(GetObjectGroupPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15275,7 +16017,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15297,12 +16040,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getObjectGroupPolicyDefinition(GetObjectGroupPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15315,7 +16059,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15337,12 +16082,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getObjectGroupPolicyDefinition(GetObjectGroupPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15355,7 +16101,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15377,12 +16124,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getObjectGroupPolicyDefinition(GetObjectGroupPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15395,7 +16143,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15417,12 +16166,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getPolicerPolicyObject(GetPolicerPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15435,7 +16185,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15457,12 +16208,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getPolicerPolicyObject(GetPolicerPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15475,7 +16227,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15497,12 +16250,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getPolicerPolicyObject(GetPolicerPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15515,7 +16269,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15537,12 +16292,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getPolicerPolicyObject(GetPolicerPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15555,7 +16311,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15577,12 +16334,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getPortListPolicyObject(GetPortListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15595,7 +16353,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15617,12 +16376,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getPortListPolicyObject(GetPortListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15635,7 +16395,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15657,12 +16418,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getPortListPolicyObject(GetPortListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15675,7 +16437,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15697,12 +16460,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getPortListPolicyObject(GetPortListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15715,7 +16479,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15737,12 +16502,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getPreferredColorGroupPolicyObject(GetPreferredColorGroupPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15755,7 +16521,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15777,12 +16544,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getPreferredColorGroupPolicyObject(GetPreferredColorGroupPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15795,7 +16563,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15817,12 +16586,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getPreferredColorGroupPolicyObject(GetPreferredColorGroupPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15835,7 +16605,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15857,12 +16628,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getPreferredColorGroupPolicyObject(GetPreferredColorGroupPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15875,7 +16647,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15897,12 +16670,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getProtocolListPolicyObject(GetProtocolListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15915,7 +16689,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15937,12 +16712,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getProtocolListPolicyObject(GetProtocolListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15955,7 +16731,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15977,12 +16754,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getProtocolListPolicyObject(GetProtocolListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15995,7 +16773,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16017,12 +16796,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getProtocolListPolicyObject(GetProtocolListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16035,7 +16815,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16057,12 +16838,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getQosMapPolicyDefinition(GetQosMapPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16075,7 +16857,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16097,12 +16880,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getQosMapPolicyDefinition(GetQosMapPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16115,7 +16899,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16137,12 +16922,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getQosMapPolicyDefinition(GetQosMapPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16155,7 +16941,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16177,12 +16964,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getQosMapPolicyDefinition(GetQosMapPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16195,7 +16983,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16217,12 +17006,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getRegionListPolicyObject(GetRegionListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16235,7 +17025,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16257,12 +17048,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getRegionListPolicyObject(GetRegionListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16275,7 +17067,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16297,12 +17090,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getRegionListPolicyObject(GetRegionListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16315,7 +17109,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16337,12 +17132,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getRegionListPolicyObject(GetRegionListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16355,7 +17151,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16377,12 +17174,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getRewriteRulePolicyDefinition(GetRewriteRulePolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16395,7 +17193,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16417,12 +17216,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getRewriteRulePolicyDefinition(GetRewriteRulePolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16435,7 +17235,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16457,12 +17258,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getRewriteRulePolicyDefinition(GetRewriteRulePolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16475,7 +17277,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16497,12 +17300,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getRewriteRulePolicyDefinition(GetRewriteRulePolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16515,7 +17319,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16537,12 +17342,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getRoutePolicyDefinition(GetRoutePolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16555,7 +17361,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16577,12 +17384,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getRoutePolicyDefinition(GetRoutePolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16595,7 +17403,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16617,12 +17426,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getRoutePolicyDefinition(GetRoutePolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16635,7 +17445,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16657,12 +17468,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getRoutePolicyDefinition(GetRoutePolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16675,7 +17487,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16697,12 +17510,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getRuleSetPolicyDefinition(GetRuleSetPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16715,7 +17529,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16737,12 +17552,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getRuleSetPolicyDefinition(GetRuleSetPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16755,7 +17571,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16777,12 +17594,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getRuleSetPolicyDefinition(GetRuleSetPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16795,7 +17613,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16817,12 +17636,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getRuleSetPolicyDefinition(GetRuleSetPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16835,7 +17655,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16857,12 +17678,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSecurityAppHostingFeatureTemplate(GetSecurityAppHostingFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16875,7 +17697,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16897,12 +17720,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSecurityAppHostingFeatureTemplate(GetSecurityAppHostingFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16915,7 +17739,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16937,12 +17762,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSecurityAppHostingFeatureTemplate(GetSecurityAppHostingFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16955,7 +17781,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16977,12 +17804,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSecurityAppHostingFeatureTemplate(GetSecurityAppHostingFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16995,7 +17823,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17017,12 +17846,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSecurityAppHostingFeatureTemplate(GetSecurityAppHostingFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17035,7 +17865,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17057,12 +17888,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSecurityAppHostingFeatureTemplate(GetSecurityAppHostingFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17075,7 +17907,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17097,12 +17930,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSecurityPolicy(GetSecurityPolicyArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17115,7 +17949,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17137,12 +17972,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSecurityPolicy(GetSecurityPolicyArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17155,7 +17991,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17177,12 +18014,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSecurityPolicy(GetSecurityPolicyArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17195,7 +18033,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17217,12 +18056,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSecurityPolicy(GetSecurityPolicyArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17235,7 +18075,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17257,12 +18098,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getServiceFeatureProfile(GetServiceFeatureProfileArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17275,7 +18117,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17297,12 +18140,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getServiceFeatureProfile(GetServiceFeatureProfileArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17315,7 +18159,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17337,12 +18182,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getServiceFeatureProfile(GetServiceFeatureProfileArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17355,7 +18201,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17377,12 +18224,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getServiceFeatureProfile(GetServiceFeatureProfileArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17395,7 +18243,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17417,14 +18266,15 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getServiceLanVpnInterfaceEthernetProfileParcel(GetServiceLanVpnInterfaceEthernetProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
-     *             .serviceLanVpnProfileParcelId(&#34;140331f6-5418-4755-a059-13c77eb96037&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .serviceLanVpnProfileParcelId("140331f6-5418-4755-a059-13c77eb96037")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17437,7 +18287,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17459,14 +18310,15 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getServiceLanVpnInterfaceEthernetProfileParcel(GetServiceLanVpnInterfaceEthernetProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
-     *             .serviceLanVpnProfileParcelId(&#34;140331f6-5418-4755-a059-13c77eb96037&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .serviceLanVpnProfileParcelId("140331f6-5418-4755-a059-13c77eb96037")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17479,7 +18331,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17501,14 +18354,15 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getServiceLanVpnInterfaceEthernetProfileParcel(GetServiceLanVpnInterfaceEthernetProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
-     *             .serviceLanVpnProfileParcelId(&#34;140331f6-5418-4755-a059-13c77eb96037&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .serviceLanVpnProfileParcelId("140331f6-5418-4755-a059-13c77eb96037")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17521,7 +18375,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17543,14 +18398,15 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getServiceLanVpnInterfaceEthernetProfileParcel(GetServiceLanVpnInterfaceEthernetProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
-     *             .serviceLanVpnProfileParcelId(&#34;140331f6-5418-4755-a059-13c77eb96037&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .serviceLanVpnProfileParcelId("140331f6-5418-4755-a059-13c77eb96037")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17563,7 +18419,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17585,13 +18442,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getServiceLanVpnProfileParcel(GetServiceLanVpnProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17604,7 +18462,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17626,13 +18485,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getServiceLanVpnProfileParcel(GetServiceLanVpnProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17645,7 +18505,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17667,13 +18528,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getServiceLanVpnProfileParcel(GetServiceLanVpnProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17686,7 +18548,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17708,13 +18571,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getServiceLanVpnProfileParcel(GetServiceLanVpnProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17727,7 +18591,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17749,13 +18614,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getServiceTrackerProfileParcel(GetServiceTrackerProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17768,7 +18634,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17790,13 +18657,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getServiceTrackerProfileParcel(GetServiceTrackerProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17809,7 +18677,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17831,13 +18700,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getServiceTrackerProfileParcel(GetServiceTrackerProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17850,7 +18720,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17872,13 +18743,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getServiceTrackerProfileParcel(GetServiceTrackerProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17891,7 +18763,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17913,12 +18786,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSiteListPolicyObject(GetSiteListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17931,7 +18805,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17953,12 +18828,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSiteListPolicyObject(GetSiteListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17971,7 +18847,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17993,12 +18870,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSiteListPolicyObject(GetSiteListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18011,7 +18889,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18033,12 +18912,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSiteListPolicyObject(GetSiteListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18051,7 +18931,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18073,12 +18954,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSlaClassPolicyObject(GetSlaClassPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18091,7 +18973,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18113,12 +18996,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSlaClassPolicyObject(GetSlaClassPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18131,7 +19015,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18153,12 +19038,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSlaClassPolicyObject(GetSlaClassPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18171,7 +19057,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18193,12 +19080,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSlaClassPolicyObject(GetSlaClassPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18211,7 +19099,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18233,12 +19122,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getStandardCommunityListPolicyObject(GetStandardCommunityListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18251,7 +19141,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18273,12 +19164,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getStandardCommunityListPolicyObject(GetStandardCommunityListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18291,7 +19183,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18313,12 +19206,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getStandardCommunityListPolicyObject(GetStandardCommunityListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18331,7 +19225,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18353,12 +19248,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getStandardCommunityListPolicyObject(GetStandardCommunityListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18371,7 +19267,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18393,12 +19290,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSwitchportFeatureTemplate(GetSwitchportFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18411,7 +19309,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18433,12 +19332,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSwitchportFeatureTemplate(GetSwitchportFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18451,7 +19351,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18473,12 +19374,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSwitchportFeatureTemplate(GetSwitchportFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18491,7 +19393,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18513,12 +19416,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSwitchportFeatureTemplate(GetSwitchportFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18531,7 +19435,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18553,12 +19458,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSwitchportFeatureTemplate(GetSwitchportFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18571,7 +19477,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18593,12 +19500,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSwitchportFeatureTemplate(GetSwitchportFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18611,7 +19519,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18633,13 +19542,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemAaaProfileParcel(GetSystemAaaProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18652,7 +19562,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18674,13 +19585,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemAaaProfileParcel(GetSystemAaaProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18693,7 +19605,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18715,13 +19628,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemAaaProfileParcel(GetSystemAaaProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18734,7 +19648,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18756,13 +19671,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemAaaProfileParcel(GetSystemAaaProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18775,7 +19691,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18797,13 +19714,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemBannerProfileParcel(GetSystemBannerProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18816,7 +19734,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18838,13 +19757,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemBannerProfileParcel(GetSystemBannerProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18857,7 +19777,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18879,13 +19800,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemBannerProfileParcel(GetSystemBannerProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18898,7 +19820,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18920,13 +19843,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemBannerProfileParcel(GetSystemBannerProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18939,7 +19863,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18961,13 +19886,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemBasicProfileParcel(GetSystemBasicProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18980,7 +19906,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19002,13 +19929,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemBasicProfileParcel(GetSystemBasicProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19021,7 +19949,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19043,13 +19972,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemBasicProfileParcel(GetSystemBasicProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19062,7 +19992,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19084,13 +20015,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemBasicProfileParcel(GetSystemBasicProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19103,7 +20035,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19125,13 +20058,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemBfdProfileParcel(GetSystemBfdProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19144,7 +20078,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19166,13 +20101,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemBfdProfileParcel(GetSystemBfdProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19185,7 +20121,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19207,13 +20144,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemBfdProfileParcel(GetSystemBfdProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19226,7 +20164,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19248,13 +20187,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemBfdProfileParcel(GetSystemBfdProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19267,7 +20207,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19289,12 +20230,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemFeatureProfile(GetSystemFeatureProfileArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19307,7 +20249,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19329,12 +20272,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemFeatureProfile(GetSystemFeatureProfileArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19347,7 +20291,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19369,12 +20314,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemFeatureProfile(GetSystemFeatureProfileArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19387,7 +20333,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19409,12 +20356,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemFeatureProfile(GetSystemFeatureProfileArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19427,7 +20375,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19449,13 +20398,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemFlexiblePortSpeedProfileParcel(GetSystemFlexiblePortSpeedProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19468,7 +20418,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19490,13 +20441,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemFlexiblePortSpeedProfileParcel(GetSystemFlexiblePortSpeedProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19509,7 +20461,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19531,13 +20484,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemFlexiblePortSpeedProfileParcel(GetSystemFlexiblePortSpeedProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19550,7 +20504,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19572,13 +20527,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemFlexiblePortSpeedProfileParcel(GetSystemFlexiblePortSpeedProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19591,7 +20547,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19613,13 +20570,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemGlobalProfileParcel(GetSystemGlobalProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19632,7 +20590,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19654,13 +20613,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemGlobalProfileParcel(GetSystemGlobalProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19673,7 +20633,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19695,13 +20656,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemGlobalProfileParcel(GetSystemGlobalProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19714,7 +20676,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19736,13 +20699,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemGlobalProfileParcel(GetSystemGlobalProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19755,7 +20719,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19777,13 +20742,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemLoggingProfileParcel(GetSystemLoggingProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19796,7 +20762,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19818,13 +20785,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemLoggingProfileParcel(GetSystemLoggingProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19837,7 +20805,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19859,13 +20828,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemLoggingProfileParcel(GetSystemLoggingProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19878,7 +20848,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19900,13 +20871,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemLoggingProfileParcel(GetSystemLoggingProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19919,7 +20891,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19941,13 +20914,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemMrfProfileParcel(GetSystemMrfProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19960,7 +20934,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19982,13 +20957,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemMrfProfileParcel(GetSystemMrfProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20001,7 +20977,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20023,13 +21000,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemMrfProfileParcel(GetSystemMrfProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20042,7 +21020,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20064,13 +21043,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemMrfProfileParcel(GetSystemMrfProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20083,7 +21063,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20105,13 +21086,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemNtpProfileParcel(GetSystemNtpProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20124,7 +21106,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20146,13 +21129,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemNtpProfileParcel(GetSystemNtpProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20165,7 +21149,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20187,13 +21172,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemNtpProfileParcel(GetSystemNtpProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20206,7 +21192,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20228,13 +21215,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemNtpProfileParcel(GetSystemNtpProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20247,7 +21235,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20269,13 +21258,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemOmpProfileParcel(GetSystemOmpProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20288,7 +21278,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20310,13 +21301,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemOmpProfileParcel(GetSystemOmpProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20329,7 +21321,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20351,13 +21344,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemOmpProfileParcel(GetSystemOmpProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20370,7 +21364,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20392,13 +21387,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemOmpProfileParcel(GetSystemOmpProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20411,7 +21407,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20433,13 +21430,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemPerformanceMonitoringProfileParcel(GetSystemPerformanceMonitoringProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20452,7 +21450,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20474,13 +21473,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemPerformanceMonitoringProfileParcel(GetSystemPerformanceMonitoringProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20493,7 +21493,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20515,13 +21516,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemPerformanceMonitoringProfileParcel(GetSystemPerformanceMonitoringProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20534,7 +21536,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20556,13 +21559,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemPerformanceMonitoringProfileParcel(GetSystemPerformanceMonitoringProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20575,7 +21579,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20597,13 +21602,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemRemoteAccessProfileParcel(GetSystemRemoteAccessProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20616,7 +21622,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20638,13 +21645,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemRemoteAccessProfileParcel(GetSystemRemoteAccessProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20657,7 +21665,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20679,13 +21688,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemRemoteAccessProfileParcel(GetSystemRemoteAccessProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20698,7 +21708,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20720,13 +21731,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemRemoteAccessProfileParcel(GetSystemRemoteAccessProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20739,7 +21751,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20761,13 +21774,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemSecurityProfileParcel(GetSystemSecurityProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20780,7 +21794,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20802,13 +21817,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemSecurityProfileParcel(GetSystemSecurityProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20821,7 +21837,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20843,13 +21860,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemSecurityProfileParcel(GetSystemSecurityProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20862,7 +21880,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20884,13 +21903,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemSecurityProfileParcel(GetSystemSecurityProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20903,7 +21923,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20925,13 +21946,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemSnmpProfileParcel(GetSystemSnmpProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20944,7 +21966,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20966,13 +21989,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemSnmpProfileParcel(GetSystemSnmpProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20985,7 +22009,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21007,13 +22032,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemSnmpProfileParcel(GetSystemSnmpProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21026,7 +22052,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21048,13 +22075,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getSystemSnmpProfileParcel(GetSystemSnmpProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21067,7 +22095,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21089,12 +22118,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTlocListPolicyObject(GetTlocListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21107,7 +22137,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21129,12 +22160,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTlocListPolicyObject(GetTlocListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21147,7 +22179,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21169,12 +22202,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTlocListPolicyObject(GetTlocListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21187,7 +22221,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21209,12 +22244,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTlocListPolicyObject(GetTlocListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21227,7 +22263,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21249,12 +22286,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTlsSslDecryptionPolicyDefinition(GetTlsSslDecryptionPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21267,7 +22305,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21289,12 +22328,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTlsSslDecryptionPolicyDefinition(GetTlsSslDecryptionPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21307,7 +22347,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21329,12 +22370,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTlsSslDecryptionPolicyDefinition(GetTlsSslDecryptionPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21347,7 +22389,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21369,12 +22412,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTlsSslDecryptionPolicyDefinition(GetTlsSslDecryptionPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21387,7 +22431,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21409,12 +22454,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTlsSslProfilePolicyDefinition(GetTlsSslProfilePolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21427,7 +22473,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21449,12 +22496,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTlsSslProfilePolicyDefinition(GetTlsSslProfilePolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21467,7 +22515,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21489,12 +22538,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTlsSslProfilePolicyDefinition(GetTlsSslProfilePolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21507,7 +22557,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21529,12 +22580,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTlsSslProfilePolicyDefinition(GetTlsSslProfilePolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21547,7 +22599,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21569,12 +22622,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTrafficDataPolicyDefinition(GetTrafficDataPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21587,7 +22641,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21609,12 +22664,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTrafficDataPolicyDefinition(GetTrafficDataPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21627,7 +22683,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21649,12 +22706,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTrafficDataPolicyDefinition(GetTrafficDataPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21667,7 +22725,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21689,12 +22748,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTrafficDataPolicyDefinition(GetTrafficDataPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21707,7 +22767,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21729,12 +22790,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTransportFeatureProfile(GetTransportFeatureProfileArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21747,7 +22809,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21769,12 +22832,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTransportFeatureProfile(GetTransportFeatureProfileArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21787,7 +22851,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21809,12 +22874,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTransportFeatureProfile(GetTransportFeatureProfileArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21827,7 +22893,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21849,12 +22916,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTransportFeatureProfile(GetTransportFeatureProfileArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21867,7 +22935,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21889,13 +22958,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTransportIpv6TrackerProfileParcel(GetTransportIpv6TrackerProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21908,7 +22978,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21930,13 +23001,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTransportIpv6TrackerProfileParcel(GetTransportIpv6TrackerProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21949,7 +23021,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21971,13 +23044,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTransportIpv6TrackerProfileParcel(GetTransportIpv6TrackerProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21990,7 +23064,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22012,13 +23087,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTransportIpv6TrackerProfileParcel(GetTransportIpv6TrackerProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22031,7 +23107,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22053,14 +23130,15 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTransportManagementVpnInterfaceEthernetProfileParcel(GetTransportManagementVpnInterfaceEthernetProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
-     *             .transportManagementVpnProfileParcelId(&#34;140331f6-5418-4755-a059-13c77eb96037&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .transportManagementVpnProfileParcelId("140331f6-5418-4755-a059-13c77eb96037")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22073,7 +23151,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22095,14 +23174,15 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTransportManagementVpnInterfaceEthernetProfileParcel(GetTransportManagementVpnInterfaceEthernetProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
-     *             .transportManagementVpnProfileParcelId(&#34;140331f6-5418-4755-a059-13c77eb96037&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .transportManagementVpnProfileParcelId("140331f6-5418-4755-a059-13c77eb96037")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22115,7 +23195,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22137,14 +23218,15 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTransportManagementVpnInterfaceEthernetProfileParcel(GetTransportManagementVpnInterfaceEthernetProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
-     *             .transportManagementVpnProfileParcelId(&#34;140331f6-5418-4755-a059-13c77eb96037&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .transportManagementVpnProfileParcelId("140331f6-5418-4755-a059-13c77eb96037")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22157,7 +23239,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22179,14 +23262,15 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTransportManagementVpnInterfaceEthernetProfileParcel(GetTransportManagementVpnInterfaceEthernetProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
-     *             .transportManagementVpnProfileParcelId(&#34;140331f6-5418-4755-a059-13c77eb96037&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .transportManagementVpnProfileParcelId("140331f6-5418-4755-a059-13c77eb96037")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22199,7 +23283,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22221,13 +23306,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTransportManagementVpnProfileParcel(GetTransportManagementVpnProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22240,7 +23326,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22262,13 +23349,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTransportManagementVpnProfileParcel(GetTransportManagementVpnProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22281,7 +23369,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22303,13 +23392,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTransportManagementVpnProfileParcel(GetTransportManagementVpnProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22322,7 +23412,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22344,13 +23435,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTransportManagementVpnProfileParcel(GetTransportManagementVpnProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22363,7 +23455,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22385,13 +23478,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTransportRoutingBgpProfileParcel(GetTransportRoutingBgpProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22404,7 +23498,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22426,13 +23521,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTransportRoutingBgpProfileParcel(GetTransportRoutingBgpProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22445,7 +23541,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22467,13 +23564,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTransportRoutingBgpProfileParcel(GetTransportRoutingBgpProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22486,7 +23584,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22508,13 +23607,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTransportRoutingBgpProfileParcel(GetTransportRoutingBgpProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22527,7 +23627,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22549,14 +23650,15 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTransportWanVpnInterfaceEthernetProfileParcel(GetTransportWanVpnInterfaceEthernetProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
-     *             .transportWanVpnProfileParcelId(&#34;140331f6-5418-4755-a059-13c77eb96037&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .transportWanVpnProfileParcelId("140331f6-5418-4755-a059-13c77eb96037")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22569,7 +23671,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22591,14 +23694,15 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTransportWanVpnInterfaceEthernetProfileParcel(GetTransportWanVpnInterfaceEthernetProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
-     *             .transportWanVpnProfileParcelId(&#34;140331f6-5418-4755-a059-13c77eb96037&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .transportWanVpnProfileParcelId("140331f6-5418-4755-a059-13c77eb96037")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22611,7 +23715,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22633,14 +23738,15 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTransportWanVpnInterfaceEthernetProfileParcel(GetTransportWanVpnInterfaceEthernetProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
-     *             .transportWanVpnProfileParcelId(&#34;140331f6-5418-4755-a059-13c77eb96037&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .transportWanVpnProfileParcelId("140331f6-5418-4755-a059-13c77eb96037")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22653,7 +23759,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22675,14 +23782,15 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTransportWanVpnInterfaceEthernetProfileParcel(GetTransportWanVpnInterfaceEthernetProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
-     *             .transportWanVpnProfileParcelId(&#34;140331f6-5418-4755-a059-13c77eb96037&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .transportWanVpnProfileParcelId("140331f6-5418-4755-a059-13c77eb96037")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22695,7 +23803,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22717,13 +23826,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTransportWanVpnProfileParcel(GetTransportWanVpnProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22736,7 +23846,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22758,13 +23869,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTransportWanVpnProfileParcel(GetTransportWanVpnProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22777,7 +23889,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22799,13 +23912,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTransportWanVpnProfileParcel(GetTransportWanVpnProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22818,7 +23932,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22840,13 +23955,14 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getTransportWanVpnProfileParcel(GetTransportWanVpnProfileParcelArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
-     *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22859,7 +23975,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22881,12 +23998,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getUrlFilteringPolicyDefinition(GetUrlFilteringPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22899,7 +24017,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22921,12 +24040,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getUrlFilteringPolicyDefinition(GetUrlFilteringPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22939,7 +24059,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22961,12 +24082,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getUrlFilteringPolicyDefinition(GetUrlFilteringPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22979,7 +24101,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23001,12 +24124,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getUrlFilteringPolicyDefinition(GetUrlFilteringPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23019,7 +24143,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23043,7 +24168,8 @@ public final class SdwanFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23056,7 +24182,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23080,7 +24207,8 @@ public final class SdwanFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23093,7 +24221,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23117,7 +24246,8 @@ public final class SdwanFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23130,7 +24260,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23154,7 +24285,8 @@ public final class SdwanFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23167,7 +24299,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23191,7 +24324,8 @@ public final class SdwanFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23204,7 +24338,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23228,7 +24363,8 @@ public final class SdwanFunctions {
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23241,7 +24377,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23263,12 +24400,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceCellularFeatureTemplate(GetVpnInterfaceCellularFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23281,7 +24419,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23303,12 +24442,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceCellularFeatureTemplate(GetVpnInterfaceCellularFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23321,7 +24461,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23343,12 +24484,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceCellularFeatureTemplate(GetVpnInterfaceCellularFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23361,7 +24503,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23383,12 +24526,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceCellularFeatureTemplate(GetVpnInterfaceCellularFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23401,7 +24545,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23423,12 +24568,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceCellularFeatureTemplate(GetVpnInterfaceCellularFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23441,7 +24587,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23463,12 +24610,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceCellularFeatureTemplate(GetVpnInterfaceCellularFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23481,7 +24629,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23503,12 +24652,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceDslIpoeFeatureTemplate(GetVpnInterfaceDslIpoeFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23521,7 +24671,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23543,12 +24694,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceDslIpoeFeatureTemplate(GetVpnInterfaceDslIpoeFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23561,7 +24713,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23583,12 +24736,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceDslIpoeFeatureTemplate(GetVpnInterfaceDslIpoeFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23601,7 +24755,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23623,12 +24778,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceDslIpoeFeatureTemplate(GetVpnInterfaceDslIpoeFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23641,7 +24797,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23663,12 +24820,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceDslIpoeFeatureTemplate(GetVpnInterfaceDslIpoeFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23681,7 +24839,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23703,12 +24862,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceDslIpoeFeatureTemplate(GetVpnInterfaceDslIpoeFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23721,7 +24881,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23743,12 +24904,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceDslPppoaFeatureTemplate(GetVpnInterfaceDslPppoaFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23761,7 +24923,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23783,12 +24946,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceDslPppoaFeatureTemplate(GetVpnInterfaceDslPppoaFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23801,7 +24965,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23823,12 +24988,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceDslPppoaFeatureTemplate(GetVpnInterfaceDslPppoaFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23841,7 +25007,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23863,12 +25030,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceDslPppoaFeatureTemplate(GetVpnInterfaceDslPppoaFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23881,7 +25049,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23903,12 +25072,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceDslPppoaFeatureTemplate(GetVpnInterfaceDslPppoaFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23921,7 +25091,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23943,12 +25114,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceDslPppoaFeatureTemplate(GetVpnInterfaceDslPppoaFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -23961,7 +25133,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -23983,12 +25156,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceDslPppoeFeatureTemplate(GetVpnInterfaceDslPppoeFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24001,7 +25175,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24023,12 +25198,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceDslPppoeFeatureTemplate(GetVpnInterfaceDslPppoeFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24041,7 +25217,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24063,12 +25240,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceDslPppoeFeatureTemplate(GetVpnInterfaceDslPppoeFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24081,7 +25259,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24103,12 +25282,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceDslPppoeFeatureTemplate(GetVpnInterfaceDslPppoeFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24121,7 +25301,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24143,12 +25324,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceDslPppoeFeatureTemplate(GetVpnInterfaceDslPppoeFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24161,7 +25343,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24183,12 +25366,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceDslPppoeFeatureTemplate(GetVpnInterfaceDslPppoeFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24201,7 +25385,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24223,12 +25408,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceEthernetPppoeFeatureTemplate(GetVpnInterfaceEthernetPppoeFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24241,7 +25427,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24263,12 +25450,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceEthernetPppoeFeatureTemplate(GetVpnInterfaceEthernetPppoeFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24281,7 +25469,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24303,12 +25492,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceEthernetPppoeFeatureTemplate(GetVpnInterfaceEthernetPppoeFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24321,7 +25511,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24343,12 +25534,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceEthernetPppoeFeatureTemplate(GetVpnInterfaceEthernetPppoeFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24361,7 +25553,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24383,12 +25576,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceEthernetPppoeFeatureTemplate(GetVpnInterfaceEthernetPppoeFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24401,7 +25595,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24423,12 +25618,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceEthernetPppoeFeatureTemplate(GetVpnInterfaceEthernetPppoeFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24441,7 +25637,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24463,12 +25660,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceMultilinkFeatureTemplate(GetVpnInterfaceMultilinkFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24481,7 +25679,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24503,12 +25702,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceMultilinkFeatureTemplate(GetVpnInterfaceMultilinkFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24521,7 +25721,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24543,12 +25744,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceMultilinkFeatureTemplate(GetVpnInterfaceMultilinkFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24561,7 +25763,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24583,12 +25786,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceMultilinkFeatureTemplate(GetVpnInterfaceMultilinkFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24601,7 +25805,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24623,12 +25828,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceMultilinkFeatureTemplate(GetVpnInterfaceMultilinkFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24641,7 +25847,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24663,12 +25870,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceMultilinkFeatureTemplate(GetVpnInterfaceMultilinkFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24681,7 +25889,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24703,12 +25912,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceSviFeatureTemplate(GetVpnInterfaceSviFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24721,7 +25931,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24743,12 +25954,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceSviFeatureTemplate(GetVpnInterfaceSviFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24761,7 +25973,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24783,12 +25996,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceSviFeatureTemplate(GetVpnInterfaceSviFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24801,7 +26015,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24823,12 +26038,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceSviFeatureTemplate(GetVpnInterfaceSviFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24841,7 +26057,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24863,12 +26080,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceSviFeatureTemplate(GetVpnInterfaceSviFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24881,7 +26099,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24903,12 +26122,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceSviFeatureTemplate(GetVpnInterfaceSviFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24921,7 +26141,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24943,12 +26164,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceT1E1SerialFeatureTemplate(GetVpnInterfaceT1E1SerialFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -24961,7 +26183,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -24983,12 +26206,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceT1E1SerialFeatureTemplate(GetVpnInterfaceT1E1SerialFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -25001,7 +26225,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -25023,12 +26248,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceT1E1SerialFeatureTemplate(GetVpnInterfaceT1E1SerialFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -25041,7 +26267,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -25063,12 +26290,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceT1E1SerialFeatureTemplate(GetVpnInterfaceT1E1SerialFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -25081,7 +26309,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -25103,12 +26332,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceT1E1SerialFeatureTemplate(GetVpnInterfaceT1E1SerialFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -25121,7 +26351,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -25143,12 +26374,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnInterfaceT1E1SerialFeatureTemplate(GetVpnInterfaceT1E1SerialFeatureTemplateArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -25161,7 +26393,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -25183,12 +26416,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnListPolicyObject(GetVpnListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -25201,7 +26435,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -25223,12 +26458,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnListPolicyObject(GetVpnListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -25241,7 +26477,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -25263,12 +26500,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnListPolicyObject(GetVpnListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -25281,7 +26519,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -25303,12 +26542,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnListPolicyObject(GetVpnListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -25321,7 +26561,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -25343,12 +26584,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnMembershipPolicyDefinition(GetVpnMembershipPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -25361,7 +26603,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -25383,12 +26626,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnMembershipPolicyDefinition(GetVpnMembershipPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -25401,7 +26645,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -25423,12 +26668,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnMembershipPolicyDefinition(GetVpnMembershipPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -25441,7 +26687,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -25463,12 +26710,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getVpnMembershipPolicyDefinition(GetVpnMembershipPolicyDefinitionArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -25481,7 +26729,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -25503,12 +26752,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getZoneListPolicyObject(GetZoneListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -25521,7 +26771,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -25543,12 +26794,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getZoneListPolicyObject(GetZoneListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -25561,7 +26813,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -25583,12 +26836,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getZoneListPolicyObject(GetZoneListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -25601,7 +26855,8 @@ public final class SdwanFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -25623,12 +26878,13 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getZoneListPolicyObject(GetZoneListPolicyObjectArgs.builder()
-     *             .id(&#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;)
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
      *             .build());
      * 
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */

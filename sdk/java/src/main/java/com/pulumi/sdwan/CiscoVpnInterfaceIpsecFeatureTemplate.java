@@ -24,7 +24,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -45,42 +46,43 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CiscoVpnInterfaceIpsecFeatureTemplate(&#34;example&#34;, CiscoVpnInterfaceIpsecFeatureTemplateArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .deviceTypes(&#34;vedge-C8000V&#34;)
- *             .interfaceName(&#34;ipsec1&#34;)
+ *         var example = new CiscoVpnInterfaceIpsecFeatureTemplate("example", CiscoVpnInterfaceIpsecFeatureTemplateArgs.builder()        
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
+ *             .interfaceName("ipsec1")
  *             .shutdown(false)
- *             .interfaceDescription(&#34;My Description&#34;)
- *             .ipAddress(&#34;1.1.1.1/24&#34;)
- *             .tunnelSource(&#34;1.2.3.4&#34;)
- *             .tunnelSourceInterface(&#34;e1&#34;)
- *             .tunnelDestination(&#34;3.4.5.6&#34;)
- *             .application(&#34;sig&#34;)
+ *             .interfaceDescription("My Description")
+ *             .ipAddress("1.1.1.1/24")
+ *             .tunnelSource("1.2.3.4")
+ *             .tunnelSourceInterface("e1")
+ *             .tunnelDestination("3.4.5.6")
+ *             .application("sig")
  *             .tcpMssAdjust(1400)
  *             .clearDontFragment(true)
  *             .mtu(1500)
  *             .deadPeerDetectionInterval(100)
  *             .deadPeerDetectionRetries(4)
  *             .ikeVersion(2)
- *             .ikeMode(&#34;main&#34;)
+ *             .ikeMode("main")
  *             .ikeRekeyInterval(20000)
- *             .ikeCiphersuite(&#34;aes256-cbc-sha1&#34;)
- *             .ikeGroup(&#34;20&#34;)
- *             .ikePreSharedKey(&#34;cisco123&#34;)
- *             .ikePreSharedKeyLocalId(&#34;1&#34;)
- *             .ikePreSharedKeyRemoteId(&#34;2&#34;)
+ *             .ikeCiphersuite("aes256-cbc-sha1")
+ *             .ikeGroup("20")
+ *             .ikePreSharedKey("cisco123")
+ *             .ikePreSharedKeyLocalId("1")
+ *             .ikePreSharedKeyRemoteId("2")
  *             .ipsecRekeyInterval(7200)
  *             .ipsecReplayWindow(128)
- *             .ipsecCiphersuite(&#34;aes256-cbc-sha256&#34;)
- *             .ipsecPerfectForwardSecrecy(&#34;group-20&#34;)
- *             .trackers(&#34;TRACKER1&#34;)
- *             .tunnelRouteVia(&#34;g0/0&#34;)
+ *             .ipsecCiphersuite("aes256-cbc-sha256")
+ *             .ipsecPerfectForwardSecrecy("group-20")
+ *             .trackers("TRACKER1")
+ *             .tunnelRouteVia("g0/0")
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

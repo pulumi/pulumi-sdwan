@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -43,19 +44,20 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new IntrusionPreventionPolicyDefinition(&#34;example&#34;, IntrusionPreventionPolicyDefinitionArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My description&#34;)
- *             .mode(&#34;security&#34;)
- *             .inspectionMode(&#34;protection&#34;)
- *             .logLevel(&#34;alert&#34;)
- *             .signatureSet(&#34;connectivity&#34;)
- *             .targetVpns(&#34;1&#34;)
+ *         var example = new IntrusionPreventionPolicyDefinition("example", IntrusionPreventionPolicyDefinitionArgs.builder()        
+ *             .name("Example")
+ *             .description("My description")
+ *             .mode("security")
+ *             .inspectionMode("protection")
+ *             .logLevel("alert")
+ *             .signatureSet("connectivity")
+ *             .targetVpns("1")
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

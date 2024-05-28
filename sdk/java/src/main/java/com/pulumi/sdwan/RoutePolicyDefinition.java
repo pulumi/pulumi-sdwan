@@ -23,7 +23,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -45,15 +46,15 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new RoutePolicyDefinition(&#34;example&#34;, RoutePolicyDefinitionArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My description&#34;)
- *             .defaultAction(&#34;reject&#34;)
+ *         var example = new RoutePolicyDefinition("example", RoutePolicyDefinitionArgs.builder()        
+ *             .name("Example")
+ *             .description("My description")
+ *             .defaultAction("reject")
  *             .sequences(RoutePolicyDefinitionSequenceArgs.builder()
  *                 .id(10)
- *                 .ip_type(&#34;ipv4&#34;)
- *                 .name(&#34;Sequence 10&#34;)
- *                 .base_action(&#34;accept&#34;)
+ *                 .ip_type("ipv4")
+ *                 .name("Sequence 10")
+ *                 .base_action("accept")
  *                 .match_entries(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .action_entries(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .build())
@@ -61,7 +62,8 @@ import javax.annotation.Nullable;
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

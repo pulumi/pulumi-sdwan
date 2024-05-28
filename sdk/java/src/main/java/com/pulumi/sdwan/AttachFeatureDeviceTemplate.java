@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,22 +45,23 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new AttachFeatureDeviceTemplate(&#34;example&#34;, AttachFeatureDeviceTemplateArgs.builder()        
+ *         var example = new AttachFeatureDeviceTemplate("example", AttachFeatureDeviceTemplateArgs.builder()        
  *             .id(DT1.id())
  *             .devices(AttachFeatureDeviceTemplateDeviceArgs.builder()
- *                 .id(&#34;C8K-CC678D1C-8EDF-3966-4F51-ABFAB64F5ABE&#34;)
+ *                 .id("C8K-CC678D1C-8EDF-3966-4F51-ABFAB64F5ABE")
  *                 .variables(Map.ofEntries(
- *                     Map.entry(&#34;systemSiteId&#34;, &#34;1001&#34;),
- *                     Map.entry(&#34;systemSystemIp&#34;, &#34;1.1.1.1&#34;),
- *                     Map.entry(&#34;systemHostName&#34;, &#34;router1&#34;),
- *                     Map.entry(&#34;vpnIfNameDefaultVEdgeDHCPTunnelInterface&#34;, &#34;GigabitEthernet1&#34;)
+ *                     Map.entry("systemSiteId", "1001"),
+ *                     Map.entry("systemSystemIp", "1.1.1.1"),
+ *                     Map.entry("systemHostName", "router1"),
+ *                     Map.entry("vpnIfNameDefaultVEdgeDHCPTunnelInterface", "GigabitEthernet1")
  *                 ))
  *                 .build())
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

@@ -30,7 +30,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -57,20 +58,20 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new VpnInterfaceCellularFeatureTemplate(&#34;example&#34;, VpnInterfaceCellularFeatureTemplateArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .deviceTypes(&#34;vedge-C8000V&#34;)
- *             .cellularInterfaceName(&#34;Cellular1&#34;)
- *             .interfaceDescription(&#34;My Description&#34;)
+ *         var example = new VpnInterfaceCellularFeatureTemplate("example", VpnInterfaceCellularFeatureTemplateArgs.builder()        
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
+ *             .cellularInterfaceName("Cellular1")
+ *             .interfaceDescription("My Description")
  *             .ipv6AccessLists(VpnInterfaceCellularFeatureTemplateIpv6AccessListArgs.builder()
- *                 .direction(&#34;in&#34;)
- *                 .acl_name(&#34;ACL1&#34;)
+ *                 .direction("in")
+ *                 .acl_name("ACL1")
  *                 .build())
- *             .ipv4DhcpHelpers(&#34;6.6.6.6&#34;)
- *             .trackers(&#34;tracker1&#34;)
+ *             .ipv4DhcpHelpers("6.6.6.6")
+ *             .trackers("tracker1")
  *             .nat(true)
- *             .natRefreshMode(&#34;outbound&#34;)
+ *             .natRefreshMode("outbound")
  *             .natUdpTimeout(1)
  *             .natTcpTimeout(60)
  *             .natBlockIcmpError(true)
@@ -78,15 +79,15 @@ import javax.annotation.Nullable;
  *             .natPortForwards(VpnInterfaceCellularFeatureTemplateNatPortForwardArgs.builder()
  *                 .port_start_range(0)
  *                 .port_end_range(65530)
- *                 .protocol(&#34;tcp&#34;)
+ *                 .protocol("tcp")
  *                 .private_vpn(65530)
- *                 .private_ip_address(&#34;1.2.3.4&#34;)
+ *                 .private_ip_address("1.2.3.4")
  *                 .build())
  *             .enableCoreRegion(true)
- *             .coreRegion(&#34;core&#34;)
- *             .secondaryRegion(&#34;off&#34;)
+ *             .coreRegion("core")
+ *             .secondaryRegion("off")
  *             .tunnelInterfaceEncapsulations(VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArgs.builder()
- *                 .encapsulation(&#34;gre&#34;)
+ *                 .encapsulation("gre")
  *                 .preference(4294967)
  *                 .weight(250)
  *                 .build())
@@ -94,8 +95,8 @@ import javax.annotation.Nullable;
  *             .tunnelInterfaceBorder(true)
  *             .perTunnelQos(true)
  *             .perTunnelQosAggregator(false)
- *             .tunnelQosMode(&#34;spoke&#34;)
- *             .tunnelInterfaceColor(&#34;custom1&#34;)
+ *             .tunnelQosMode("spoke")
+ *             .tunnelInterfaceColor("custom1")
  *             .tunnelInterfaceLastResortCircuit(false)
  *             .tunnelInterfaceLowBandwidthLink(false)
  *             .tunnelInterfaceTunnelTcpMss(1460)
@@ -108,11 +109,11 @@ import javax.annotation.Nullable;
  *             .tunnelInterfaceVmanageConnectionPreference(5)
  *             .tunnelInterfacePortHop(false)
  *             .tunnelInterfaceColorRestrict(false)
- *             .tunnelInterfaceCarrier(&#34;carrier1&#34;)
+ *             .tunnelInterfaceCarrier("carrier1")
  *             .tunnelInterfaceNatRefreshInterval(15)
  *             .tunnelInterfaceHelloInterval(1000)
  *             .tunnelInterfaceHelloTolerance(12)
- *             .tunnelInterfaceBindLoopbackTunnel(&#34;12&#34;)
+ *             .tunnelInterfaceBindLoopbackTunnel("12")
  *             .tunnelInterfaceAllowAll(false)
  *             .tunnelInterfaceAllowBgp(false)
  *             .tunnelInterfaceAllowDhcp(true)
@@ -130,7 +131,7 @@ import javax.annotation.Nullable;
  *             .ipMtu(1500)
  *             .staticIngressQos(6)
  *             .tcpMss(720)
- *             .tlocExtension(&#34;tloc&#34;)
+ *             .tlocExtension("tloc")
  *             .ipDirectedBroadcast(true)
  *             .shutdown(true)
  *             .autonegotiate(true)
@@ -142,28 +143,29 @@ import javax.annotation.Nullable;
  *             .qosAdaptiveMinUpstream(100)
  *             .qosAdaptiveMaxUpstream(100000)
  *             .shapingRate(10000000)
- *             .qosMap(&#34;test&#34;)
- *             .qosMapVpn(&#34;test&#34;)
+ *             .qosMap("test")
+ *             .qosMapVpn("test")
  *             .bandwidthUpstream(214748300)
  *             .bandwidthDownstream(214748300)
- *             .writeRule(&#34;RULE1&#34;)
+ *             .writeRule("RULE1")
  *             .ipv4AccessLists(VpnInterfaceCellularFeatureTemplateIpv4AccessListArgs.builder()
- *                 .direction(&#34;in&#34;)
- *                 .acl_name(&#34;ACL2&#34;)
+ *                 .direction("in")
+ *                 .acl_name("ACL2")
  *                 .build())
  *             .policers(VpnInterfaceCellularFeatureTemplatePolicerArgs.builder()
- *                 .direction(&#34;in&#34;)
- *                 .policer_name(&#34;example&#34;)
+ *                 .direction("in")
+ *                 .policer_name("example")
  *                 .build())
  *             .staticArps(VpnInterfaceCellularFeatureTemplateStaticArpArgs.builder()
- *                 .ip_address(&#34;1.2.3.4&#34;)
- *                 .mac(&#34;00-B0-D0-63-C2-26&#34;)
+ *                 .ip_address("1.2.3.4")
+ *                 .mac("00-B0-D0-63-C2-26")
  *                 .build())
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

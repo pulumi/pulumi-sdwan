@@ -24,7 +24,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -46,22 +47,23 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ApplicationPriorityQosPolicyProfileParcel(&#34;example&#34;, ApplicationPriorityQosPolicyProfileParcelArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
- *             .targetInterfaces(&#34;{{interface_var_1}}&#34;)
+ *         var example = new ApplicationPriorityQosPolicyProfileParcel("example", ApplicationPriorityQosPolicyProfileParcelArgs.builder()        
+ *             .name("Example")
+ *             .description("My Example")
+ *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+ *             .targetInterfaces("{{interface_var_1}}")
  *             .qosSchedulers(ApplicationPriorityQosPolicyProfileParcelQosSchedulerArgs.builder()
- *                 .drops(&#34;tail-drop&#34;)
- *                 .queue(&#34;0&#34;)
- *                 .bandwidth(&#34;10&#34;)
- *                 .scheduling_type(&#34;llq&#34;)
+ *                 .drops("tail-drop")
+ *                 .queue("0")
+ *                 .bandwidth("10")
+ *                 .scheduling_type("llq")
  *                 .build())
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

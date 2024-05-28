@@ -28,7 +28,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -53,37 +54,37 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CedgePimFeatureTemplate(&#34;example&#34;, CedgePimFeatureTemplateArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .deviceTypes(&#34;vedge-C8000V&#34;)
+ *         var example = new CedgePimFeatureTemplate("example", CedgePimFeatureTemplateArgs.builder()        
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
  *             .autoRp(true)
  *             .rpAnnounceFields(CedgePimFeatureTemplateRpAnnounceFieldArgs.builder()
- *                 .interface_name(&#34;Ethernet1&#34;)
+ *                 .interface_name("Ethernet1")
  *                 .scope(1)
  *                 .build())
- *             .interfaceName(&#34;Ethernet1&#34;)
+ *             .interfaceName("Ethernet1")
  *             .rpCandidates(CedgePimFeatureTemplateRpCandidateArgs.builder()
- *                 .interface_(&#34;Ethernet1&#34;)
- *                 .access_list(&#34;1&#34;)
+ *                 .interface_("Ethernet1")
+ *                 .access_list("1")
  *                 .interval(100)
  *                 .priority(2)
  *                 .build())
- *             .bsrCandidate(&#34;Ethernet1&#34;)
- *             .hashMaskLength(&#34;24&#34;)
+ *             .bsrCandidate("Ethernet1")
+ *             .hashMaskLength("24")
  *             .priority(1)
- *             .rpCandidateAccessList(&#34;120&#34;)
+ *             .rpCandidateAccessList("120")
  *             .scope(1)
- *             .range(&#34;16&#34;)
+ *             .range("16")
  *             .default_(true)
  *             .rpAddresses(CedgePimFeatureTemplateRpAddressArgs.builder()
- *                 .ip_address(&#34;1.2.3.4&#34;)
- *                 .access_list(&#34;99&#34;)
+ *                 .ip_address("1.2.3.4")
+ *                 .access_list("99")
  *                 .override(false)
  *                 .build())
- *             .sptThreshold(&#34;0&#34;)
+ *             .sptThreshold("0")
  *             .interfaces(CedgePimFeatureTemplateInterfaceArgs.builder()
- *                 .interface_name(&#34;Ethernet1&#34;)
+ *                 .interface_name("Ethernet1")
  *                 .query_interval(30)
  *                 .join_prune_interval(60)
  *                 .build())
@@ -91,7 +92,8 @@ import javax.annotation.Nullable;
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

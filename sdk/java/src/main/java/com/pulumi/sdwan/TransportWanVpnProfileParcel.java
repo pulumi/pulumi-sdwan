@@ -29,7 +29,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -55,45 +56,46 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new TransportWanVpnProfileParcel(&#34;example&#34;, TransportWanVpnProfileParcelArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+ *         var example = new TransportWanVpnProfileParcel("example", TransportWanVpnProfileParcelArgs.builder()        
+ *             .name("Example")
+ *             .description("My Example")
+ *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
  *             .vpn(0)
  *             .enhanceEcmpKeying(true)
- *             .primaryDnsAddressIpv4(&#34;1.2.3.4&#34;)
- *             .secondaryDnsAddressIpv4(&#34;2.3.4.5&#34;)
- *             .primaryDnsAddressIpv6(&#34;2001:0:0:1::0&#34;)
- *             .secondaryDnsAddressIpv6(&#34;2001:0:0:2::0&#34;)
+ *             .primaryDnsAddressIpv4("1.2.3.4")
+ *             .secondaryDnsAddressIpv4("2.3.4.5")
+ *             .primaryDnsAddressIpv6("2001:0:0:1::0")
+ *             .secondaryDnsAddressIpv6("2001:0:0:2::0")
  *             .newHostMappings(TransportWanVpnProfileParcelNewHostMappingArgs.builder()
- *                 .host_name(&#34;example&#34;)
- *                 .list_of_ip_addresses(&#34;1.2.3.4&#34;)
+ *                 .host_name("example")
+ *                 .list_of_ip_addresses("1.2.3.4")
  *                 .build())
  *             .ipv4StaticRoutes(TransportWanVpnProfileParcelIpv4StaticRouteArgs.builder()
- *                 .network_address(&#34;1.2.3.4&#34;)
- *                 .subnet_mask(&#34;0.0.0.0&#34;)
- *                 .gateway(&#34;nextHop&#34;)
+ *                 .network_address("1.2.3.4")
+ *                 .subnet_mask("0.0.0.0")
+ *                 .gateway("nextHop")
  *                 .next_hops(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .administrative_distance(1)
  *                 .build())
  *             .ipv6StaticRoutes(TransportWanVpnProfileParcelIpv6StaticRouteArgs.builder()
- *                 .prefix(&#34;2002::/16&#34;)
+ *                 .prefix("2002::/16")
  *                 .next_hops(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .build())
  *             .services(TransportWanVpnProfileParcelServiceArgs.builder()
- *                 .service_type(&#34;TE&#34;)
+ *                 .service_type("TE")
  *                 .build())
  *             .nat64V4Pools(TransportWanVpnProfileParcelNat64V4PoolArgs.builder()
- *                 .nat64_v4_pool_name(&#34;example&#34;)
- *                 .nat64_v4_pool_range_start(&#34;203.0.113.50&#34;)
- *                 .nat64_v4_pool_range_end(&#34;203.0.113.100&#34;)
+ *                 .nat64_v4_pool_name("example")
+ *                 .nat64_v4_pool_range_start("203.0.113.50")
+ *                 .nat64_v4_pool_range_end("203.0.113.100")
  *                 .nat64_v4_pool_overload(false)
  *                 .build())
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

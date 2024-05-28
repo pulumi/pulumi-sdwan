@@ -26,7 +26,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -49,10 +50,10 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CiscoOmpFeatureTemplate(&#34;example&#34;, CiscoOmpFeatureTemplateArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .deviceTypes(&#34;vedge-C8000V&#34;)
+ *         var example = new CiscoOmpFeatureTemplate("example", CiscoOmpFeatureTemplateArgs.builder()        
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
  *             .gracefulRestart(true)
  *             .overlayAs(1)
  *             .sendPathLimit(4)
@@ -65,19 +66,20 @@ import javax.annotation.Nullable;
  *             .eorTimer(300)
  *             .holdtime(60)
  *             .ignoreRegionPathLength(false)
- *             .transportGateway(&#34;prefer&#34;)
+ *             .transportGateway("prefer")
  *             .advertiseIpv4Routes(CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs.builder()
- *                 .protocol(&#34;ospf&#34;)
- *                 .advertise_external_ospf(&#34;external&#34;)
+ *                 .protocol("ospf")
+ *                 .advertise_external_ospf("external")
  *                 .build())
  *             .advertiseIpv6Routes(CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs.builder()
- *                 .protocol(&#34;ospf&#34;)
+ *                 .protocol("ospf")
  *                 .build())
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

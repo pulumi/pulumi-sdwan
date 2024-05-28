@@ -24,7 +24,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -45,21 +46,22 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new GpsFeatureTemplate(&#34;example&#34;, GpsFeatureTemplateArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .deviceTypes(&#34;vedge-C8000V&#34;)
+ *         var example = new GpsFeatureTemplate("example", GpsFeatureTemplateArgs.builder()        
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
  *             .enable(true)
- *             .gpsMode(&#34;ms-based&#34;)
+ *             .gpsMode("ms-based")
  *             .nmea(true)
- *             .sourceAddress(&#34;1.2.3.4&#34;)
- *             .destinationAddress(&#34;2.3.4.5&#34;)
+ *             .sourceAddress("1.2.3.4")
+ *             .destinationAddress("2.3.4.5")
  *             .destinationPort(1234)
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

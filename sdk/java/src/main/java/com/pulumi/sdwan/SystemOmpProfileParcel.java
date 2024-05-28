@@ -24,7 +24,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -45,10 +46,10 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SystemOmpProfileParcel(&#34;example&#34;, SystemOmpProfileParcelArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+ *         var example = new SystemOmpProfileParcel("example", SystemOmpProfileParcelArgs.builder()        
+ *             .name("Example")
+ *             .description("My Example")
+ *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
  *             .gracefulRestart(true)
  *             .overlayAs(10)
  *             .pathsAdvertisedPerPrefix(4)
@@ -76,13 +77,14 @@ import javax.annotation.Nullable;
  *             .advertiseIpv6Lisp(true)
  *             .advertiseIpv6Isis(true)
  *             .ignoreRegionPathLength(false)
- *             .transportGateway(&#34;prefer&#34;)
- *             .siteTypes(&#34;type-1&#34;)
+ *             .transportGateway("prefer")
+ *             .siteTypes("type-1")
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

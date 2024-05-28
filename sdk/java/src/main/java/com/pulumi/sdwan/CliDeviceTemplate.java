@@ -20,7 +20,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -41,19 +42,20 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CliDeviceTemplate(&#34;example&#34;, CliDeviceTemplateArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My description&#34;)
- *             .deviceType(&#34;vedge-ISR-4331&#34;)
- *             .cliType(&#34;device&#34;)
- *             .cliConfiguration(&#34;&#34;&#34;
+ *         var example = new CliDeviceTemplate("example", CliDeviceTemplateArgs.builder()        
+ *             .name("Example")
+ *             .description("My description")
+ *             .deviceType("vedge-ISR-4331")
+ *             .cliType("device")
+ *             .cliConfiguration("""
  *  system
- *  host-name             R1-ISR4331-1200-1            &#34;&#34;&#34;)
+ *  host-name             R1-ISR4331-1200-1            """)
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

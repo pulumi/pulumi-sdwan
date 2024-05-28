@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,10 +45,10 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new Ipv6PrefixListPolicyObject(&#34;example&#34;, Ipv6PrefixListPolicyObjectArgs.builder()        
- *             .name(&#34;Example&#34;)
+ *         var example = new Ipv6PrefixListPolicyObject("example", Ipv6PrefixListPolicyObjectArgs.builder()        
+ *             .name("Example")
  *             .entries(Ipv6PrefixListPolicyObjectEntryArgs.builder()
- *                 .prefix(&#34;2001:1:1:2::/64&#34;)
+ *                 .prefix("2001:1:1:2::/64")
  *                 .le(80)
  *                 .ge(128)
  *                 .build())
@@ -55,7 +56,8 @@ import javax.annotation.Nullable;
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

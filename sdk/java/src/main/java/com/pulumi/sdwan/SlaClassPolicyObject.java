@@ -21,7 +21,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -42,12 +43,12 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SlaClassPolicyObject(&#34;example&#34;, SlaClassPolicyObjectArgs.builder()        
- *             .name(&#34;Example&#34;)
+ *         var example = new SlaClassPolicyObject("example", SlaClassPolicyObjectArgs.builder()        
+ *             .name("Example")
  *             .jitter(100)
  *             .latency(10)
  *             .loss(1)
- *             .fallbackBestTunnelCriteria(&#34;jitter-loss-latency&#34;)
+ *             .fallbackBestTunnelCriteria("jitter-loss-latency")
  *             .fallbackBestTunnelJitter(100)
  *             .fallbackBestTunnelLatency(10)
  *             .fallbackBestTunnelLoss(1)
@@ -55,7 +56,8 @@ import javax.annotation.Nullable;
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

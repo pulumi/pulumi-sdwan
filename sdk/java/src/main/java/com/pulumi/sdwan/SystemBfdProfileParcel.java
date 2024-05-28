@@ -24,7 +24,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -46,15 +47,15 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SystemBfdProfileParcel(&#34;example&#34;, SystemBfdProfileParcelArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+ *         var example = new SystemBfdProfileParcel("example", SystemBfdProfileParcelArgs.builder()        
+ *             .name("Example")
+ *             .description("My Example")
+ *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
  *             .multiplier(3)
  *             .pollInterval(100)
  *             .defaultDscp(8)
  *             .colors(SystemBfdProfileParcelColorArgs.builder()
- *                 .color(&#34;3g&#34;)
+ *                 .color("3g")
  *                 .hello_interval(200)
  *                 .multiplier(3)
  *                 .pmtu_discovery(true)
@@ -64,7 +65,8 @@ import javax.annotation.Nullable;
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

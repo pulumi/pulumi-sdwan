@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,18 +45,19 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new VpnMembershipPolicyDefinition(&#34;example&#34;, VpnMembershipPolicyDefinitionArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My description&#34;)
+ *         var example = new VpnMembershipPolicyDefinition("example", VpnMembershipPolicyDefinitionArgs.builder()        
+ *             .name("Example")
+ *             .description("My description")
  *             .sites(VpnMembershipPolicyDefinitionSiteArgs.builder()
- *                 .site_list_id(&#34;e858e1c4-6aa8-4de7-99df-c3adbf80290d&#34;)
- *                 .vpn_list_ids(&#34;04fcbb0b-efbf-43d2-a04b-847d3a7b104e&#34;)
+ *                 .site_list_id("e858e1c4-6aa8-4de7-99df-c3adbf80290d")
+ *                 .vpn_list_ids("04fcbb0b-efbf-43d2-a04b-847d3a7b104e")
  *                 .build())
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

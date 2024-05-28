@@ -24,7 +24,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -45,20 +46,21 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new DnsSecurityPolicyDefinition(&#34;example&#34;, DnsSecurityPolicyDefinitionArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;Example&#34;)
- *             .domainListId(&#34;84f10c9d-def7-45a3-8c64-6df26163c861&#34;)
+ *         var example = new DnsSecurityPolicyDefinition("example", DnsSecurityPolicyDefinitionArgs.builder()        
+ *             .name("Example")
+ *             .description("Example")
+ *             .domainListId("84f10c9d-def7-45a3-8c64-6df26163c861")
  *             .localDomainBypassEnabled(false)
  *             .matchAllVpn(true)
  *             .dnscrypt(true)
  *             .umbrellaDnsDefault(true)
- *             .ciscoSigCredentialsFeatureTemplateId(&#34;885c3bce-eab6-4d45-8ff3-488f0df4072a&#34;)
+ *             .ciscoSigCredentialsFeatureTemplateId("885c3bce-eab6-4d45-8ff3-488f0df4072a")
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

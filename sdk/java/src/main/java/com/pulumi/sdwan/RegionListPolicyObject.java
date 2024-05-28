@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,16 +45,17 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new RegionListPolicyObject(&#34;example&#34;, RegionListPolicyObjectArgs.builder()        
- *             .name(&#34;Example&#34;)
+ *         var example = new RegionListPolicyObject("example", RegionListPolicyObjectArgs.builder()        
+ *             .name("Example")
  *             .entries(RegionListPolicyObjectEntryArgs.builder()
- *                 .region_id(&#34;1-2&#34;)
+ *                 .region_id("1-2")
  *                 .build())
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

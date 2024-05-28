@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -43,26 +44,27 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ServiceTrackerProfileParcel(&#34;example&#34;, ServiceTrackerProfileParcelArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
- *             .trackerName(&#34;TRACKER_2&#34;)
- *             .endpointApiUrl(&#34;google.com&#34;)
- *             .endpointDnsName(&#34;google.com&#34;)
- *             .endpointIp(&#34;1.2.3.4&#34;)
- *             .protocol(&#34;tcp&#34;)
+ *         var example = new ServiceTrackerProfileParcel("example", ServiceTrackerProfileParcelArgs.builder()        
+ *             .name("Example")
+ *             .description("My Example")
+ *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+ *             .trackerName("TRACKER_2")
+ *             .endpointApiUrl("google.com")
+ *             .endpointDnsName("google.com")
+ *             .endpointIp("1.2.3.4")
+ *             .protocol("tcp")
  *             .port(123)
  *             .interval(30)
  *             .multiplier(3)
  *             .threshold(300)
- *             .endpointTrackerType(&#34;static-route&#34;)
- *             .trackerType(&#34;endpoint&#34;)
+ *             .endpointTrackerType("static-route")
+ *             .trackerType("endpoint")
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

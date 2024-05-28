@@ -21,7 +21,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -42,18 +43,19 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ObjectGroupPolicyDefinition(&#34;example&#34;, ObjectGroupPolicyDefinitionArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My description&#34;)
- *             .ipv4Prefix(&#34;10.1.1.0/24&#34;)
- *             .fqdn(&#34;cisco.com&#34;)
- *             .port(&#34;80-90&#34;)
- *             .geoLocation(&#34;AF&#34;)
+ *         var example = new ObjectGroupPolicyDefinition("example", ObjectGroupPolicyDefinitionArgs.builder()        
+ *             .name("Example")
+ *             .description("My description")
+ *             .ipv4Prefix("10.1.1.0/24")
+ *             .fqdn("cisco.com")
+ *             .port("80-90")
+ *             .geoLocation("AF")
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

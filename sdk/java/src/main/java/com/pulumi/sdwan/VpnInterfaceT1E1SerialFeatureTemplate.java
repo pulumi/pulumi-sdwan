@@ -27,7 +27,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -51,23 +52,23 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new VpnInterfaceT1E1SerialFeatureTemplate(&#34;example&#34;, VpnInterfaceT1E1SerialFeatureTemplateArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .deviceTypes(&#34;vedge-C8000V&#34;)
- *             .serialInterfaceName(&#34;SERIAL1&#34;)
- *             .interfaceDescription(&#34;My description&#34;)
- *             .ipv4Address(&#34;1.2.3.4/24&#34;)
- *             .ipv6Address(&#34;2001:0:0:1::/64&#34;)
+ *         var example = new VpnInterfaceT1E1SerialFeatureTemplate("example", VpnInterfaceT1E1SerialFeatureTemplateArgs.builder()        
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
+ *             .serialInterfaceName("SERIAL1")
+ *             .interfaceDescription("My description")
+ *             .ipv4Address("1.2.3.4/24")
+ *             .ipv6Address("2001:0:0:1::/64")
  *             .ipv6AccessLists(VpnInterfaceT1E1SerialFeatureTemplateIpv6AccessListArgs.builder()
- *                 .direction(&#34;in&#34;)
- *                 .acl_name(&#34;ACL1&#34;)
+ *                 .direction("in")
+ *                 .acl_name("ACL1")
  *                 .build())
  *             .enableCoreRegion(true)
- *             .coreRegion(&#34;core&#34;)
- *             .secondaryRegion(&#34;off&#34;)
+ *             .coreRegion("core")
+ *             .secondaryRegion("off")
  *             .tunnelInterfaceEncapsulations(VpnInterfaceT1E1SerialFeatureTemplateTunnelInterfaceEncapsulationArgs.builder()
- *                 .encapsulation(&#34;gre&#34;)
+ *                 .encapsulation("gre")
  *                 .preference(4294967)
  *                 .weight(250)
  *                 .build())
@@ -75,8 +76,8 @@ import javax.annotation.Nullable;
  *             .tunnelInterfaceBorder(true)
  *             .perTunnelQos(true)
  *             .perTunnelQosAggregator(false)
- *             .tunnelQosMode(&#34;spoke&#34;)
- *             .tunnelInterfaceColor(&#34;custom1&#34;)
+ *             .tunnelQosMode("spoke")
+ *             .tunnelInterfaceColor("custom1")
  *             .tunnelInterfaceLastResortCircuit(false)
  *             .tunnelInterfaceLowBandwidthLink(false)
  *             .tunnelInterfaceTunnelTcpMss(1460)
@@ -88,11 +89,11 @@ import javax.annotation.Nullable;
  *             .tunnelInterfaceVmanageConnectionPreference(5)
  *             .tunnelInterfacePortHop(false)
  *             .tunnelInterfaceRestrict(false)
- *             .tunnelInterfaceCarrier(&#34;carrier1&#34;)
+ *             .tunnelInterfaceCarrier("carrier1")
  *             .tunnelInterfaceNatRefreshInterval(15)
  *             .tunnelInterfaceHelloInterval(1000)
  *             .tunnelInterfaceHelloTolerance(12)
- *             .tunnelInterfaceBindLoopbackTunnel(&#34;12&#34;)
+ *             .tunnelInterfaceBindLoopbackTunnel("12")
  *             .tunnelInterfaceAllowAll(false)
  *             .tunnelInterfaceAllowBgp(false)
  *             .tunnelInterfaceAllowDhcp(true)
@@ -110,26 +111,27 @@ import javax.annotation.Nullable;
  *             .ipMtu(1500)
  *             .staticIngressQos(6)
  *             .tcpMss(720)
- *             .tlocExtension(&#34;tloc&#34;)
+ *             .tlocExtension("tloc")
  *             .shutdown(true)
  *             .autonegotiate(true)
  *             .shapingRate(10000000)
- *             .qosMap(&#34;test&#34;)
- *             .qosMapVpn(&#34;test&#34;)
+ *             .qosMap("test")
+ *             .qosMapVpn("test")
  *             .interfaceBandwidthCapacity(128)
- *             .clockRate(&#34;5300000&#34;)
- *             .encapsulation(&#34;hdlc&#34;)
+ *             .clockRate("5300000")
+ *             .encapsulation("hdlc")
  *             .interfaceDownstreamBandwidthCapacity(10000000)
- *             .writeRule(&#34;RULE1&#34;)
+ *             .writeRule("RULE1")
  *             .ipv4AccessLists(VpnInterfaceT1E1SerialFeatureTemplateIpv4AccessListArgs.builder()
- *                 .direction(&#34;in&#34;)
- *                 .acl_name(&#34;ACL2&#34;)
+ *                 .direction("in")
+ *                 .acl_name("ACL2")
  *                 .build())
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

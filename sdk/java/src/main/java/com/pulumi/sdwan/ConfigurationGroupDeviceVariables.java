@@ -24,7 +24,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -46,21 +47,22 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ConfigurationGroupDeviceVariables(&#34;example&#34;, ConfigurationGroupDeviceVariablesArgs.builder()        
- *             .configurationGroupId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
- *             .solution(&#34;sdwan&#34;)
+ *         var example = new ConfigurationGroupDeviceVariables("example", ConfigurationGroupDeviceVariablesArgs.builder()        
+ *             .configurationGroupId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+ *             .solution("sdwan")
  *             .devices(ConfigurationGroupDeviceVariablesDeviceArgs.builder()
- *                 .device_id(&#34;C8K-15411CCC-D476-0B3B-21F2-5D6AC387EE7B&#34;)
+ *                 .device_id("C8K-15411CCC-D476-0B3B-21F2-5D6AC387EE7B")
  *                 .variables(ConfigurationGroupDeviceVariablesDeviceVariableArgs.builder()
- *                     .name(&#34;host_name&#34;)
- *                     .value(&#34;edge1&#34;)
+ *                     .name("host_name")
+ *                     .value("edge1")
  *                     .build())
  *                 .build())
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

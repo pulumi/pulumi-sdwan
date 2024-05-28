@@ -24,7 +24,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -45,21 +46,22 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SystemPerformanceMonitoringProfileParcel(&#34;example&#34;, SystemPerformanceMonitoringProfileParcelArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+ *         var example = new SystemPerformanceMonitoringProfileParcel("example", SystemPerformanceMonitoringProfileParcelArgs.builder()        
+ *             .name("Example")
+ *             .description("My Example")
+ *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
  *             .appPerfMonitorEnabled(true)
- *             .appPerfMonitorAppGroups(&#34;amazon-group&#34;)
+ *             .appPerfMonitorAppGroups("amazon-group")
  *             .monitoringConfigEnabled(true)
- *             .monitoringConfigInterval(&#34;30&#34;)
+ *             .monitoringConfigInterval("30")
  *             .eventDrivenConfigEnabled(true)
- *             .eventDrivenEvents(&#34;SLA_CHANGE&#34;)
+ *             .eventDrivenEvents("SLA_CHANGE")
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

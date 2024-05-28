@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,18 +45,19 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new AppProbeClassPolicyObject(&#34;example&#34;, AppProbeClassPolicyObjectArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .forwardingClass(&#34;FC1&#34;)
+ *         var example = new AppProbeClassPolicyObject("example", AppProbeClassPolicyObjectArgs.builder()        
+ *             .name("Example")
+ *             .forwardingClass("FC1")
  *             .mappings(AppProbeClassPolicyObjectMappingArgs.builder()
- *                 .color(&#34;blue&#34;)
+ *                 .color("blue")
  *                 .dscp(8)
  *                 .build())
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

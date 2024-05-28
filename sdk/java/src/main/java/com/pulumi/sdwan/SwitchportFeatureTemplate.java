@@ -25,7 +25,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -48,33 +49,33 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SwitchportFeatureTemplate(&#34;example&#34;, SwitchportFeatureTemplateArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .deviceTypes(&#34;vedge-C8000V&#34;)
+ *         var example = new SwitchportFeatureTemplate("example", SwitchportFeatureTemplateArgs.builder()        
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
  *             .slot(0)
  *             .subSlot(0)
- *             .moduleType(&#34;4&#34;)
+ *             .moduleType("4")
  *             .interfaces(SwitchportFeatureTemplateInterfaceArgs.builder()
- *                 .name(&#34;GigabitEthernet0/0/0&#34;)
- *                 .switchport_mode(&#34;access&#34;)
+ *                 .name("GigabitEthernet0/0/0")
+ *                 .switchport_mode("access")
  *                 .shutdown(true)
- *                 .speed(&#34;100&#34;)
- *                 .duplex(&#34;full&#34;)
+ *                 .speed("100")
+ *                 .duplex("full")
  *                 .switchport_access_vlan(100)
- *                 .switchport_trunk_allowed_vlans(&#34;100,200&#34;)
+ *                 .switchport_trunk_allowed_vlans("100,200")
  *                 .switchport_trunk_native_vlan(100)
  *                 .dot1x_enable(true)
- *                 .dot1x_port_control(&#34;auto&#34;)
- *                 .dot1x_authentication_order(&#34;dot1x&#34;)
+ *                 .dot1x_port_control("auto")
+ *                 .dot1x_authentication_order("dot1x")
  *                 .voice_vlan(200)
  *                 .dot1x_pae_enable(true)
  *                 .dot1x_mac_authentication_bypass(true)
- *                 .dot1x_host_mode(&#34;multi-domain&#34;)
+ *                 .dot1x_host_mode("multi-domain")
  *                 .dot1x_enable_periodic_reauth(true)
  *                 .dot1x_periodic_reauth_inactivity_timeout(100)
  *                 .dot1x_periodic_reauth_interval(60)
- *                 .dot1x_control_direction(&#34;both&#34;)
+ *                 .dot1x_control_direction("both")
  *                 .dot1x_restricted_vlan(100)
  *                 .dot1x_guest_vlan(101)
  *                 .dot1x_critical_vlan(102)
@@ -82,15 +83,16 @@ import javax.annotation.Nullable;
  *                 .build())
  *             .ageOutTime(500)
  *             .staticMacAddresses(SwitchportFeatureTemplateStaticMacAddressArgs.builder()
- *                 .mac_address(&#34;0000.0000.0000&#34;)
- *                 .if_name(&#34;GigabitEthernet0/0/0&#34;)
+ *                 .mac_address("0000.0000.0000")
+ *                 .if_name("GigabitEthernet0/0/0")
  *                 .vlan(100)
  *                 .build())
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

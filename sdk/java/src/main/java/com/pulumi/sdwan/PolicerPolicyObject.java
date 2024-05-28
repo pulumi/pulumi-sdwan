@@ -20,7 +20,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -41,16 +42,17 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new PolicerPolicyObject(&#34;example&#34;, PolicerPolicyObjectArgs.builder()        
- *             .name(&#34;Example&#34;)
+ *         var example = new PolicerPolicyObject("example", PolicerPolicyObjectArgs.builder()        
+ *             .name("Example")
  *             .burst(100000)
- *             .exceedAction(&#34;remark&#34;)
+ *             .exceedAction("remark")
  *             .rate(100)
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

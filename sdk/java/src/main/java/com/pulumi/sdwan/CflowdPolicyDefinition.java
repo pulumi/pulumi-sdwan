@@ -24,7 +24,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -46,29 +47,30 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CflowdPolicyDefinition(&#34;example&#34;, CflowdPolicyDefinitionArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My description&#34;)
+ *         var example = new CflowdPolicyDefinition("example", CflowdPolicyDefinitionArgs.builder()        
+ *             .name("Example")
+ *             .description("My description")
  *             .activeFlowTimeout(100)
  *             .inactiveFlowTimeout(10)
  *             .samplingInterval(10)
  *             .flowRefresh(120)
- *             .protocol(&#34;ipv4&#34;)
+ *             .protocol("ipv4")
  *             .tos(true)
  *             .remarkedDscp(true)
  *             .collectors(CflowdPolicyDefinitionCollectorArgs.builder()
  *                 .vpn_id(1)
- *                 .ip_address(&#34;10.0.0.1&#34;)
+ *                 .ip_address("10.0.0.1")
  *                 .port(12345)
- *                 .transport(&#34;transport_tcp&#34;)
- *                 .source_interface(&#34;Ethernet1&#34;)
- *                 .export_spreading(&#34;enable&#34;)
+ *                 .transport("transport_tcp")
+ *                 .source_interface("Ethernet1")
+ *                 .export_spreading("enable")
  *                 .build())
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

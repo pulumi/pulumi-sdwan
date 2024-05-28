@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,17 +45,18 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new GeoLocationListPolicyObject(&#34;example&#34;, GeoLocationListPolicyObjectArgs.builder()        
- *             .name(&#34;Example&#34;)
+ *         var example = new GeoLocationListPolicyObject("example", GeoLocationListPolicyObjectArgs.builder()        
+ *             .name("Example")
  *             .entries(GeoLocationListPolicyObjectEntryArgs.builder()
- *                 .country(&#34;USA&#34;)
- *                 .continent(&#34;AS&#34;)
+ *                 .country("USA")
+ *                 .continent("AS")
  *                 .build())
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

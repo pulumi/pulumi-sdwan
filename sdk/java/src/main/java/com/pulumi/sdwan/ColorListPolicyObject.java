@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,16 +45,17 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ColorListPolicyObject(&#34;example&#34;, ColorListPolicyObjectArgs.builder()        
- *             .name(&#34;Example&#34;)
+ *         var example = new ColorListPolicyObject("example", ColorListPolicyObjectArgs.builder()        
+ *             .name("Example")
  *             .entries(ColorListPolicyObjectEntryArgs.builder()
- *                 .color(&#34;blue&#34;)
+ *                 .color("blue")
  *                 .build())
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

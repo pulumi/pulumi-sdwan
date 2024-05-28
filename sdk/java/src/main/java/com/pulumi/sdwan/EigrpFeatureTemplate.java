@@ -27,7 +27,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -50,29 +51,29 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new EigrpFeatureTemplate(&#34;example&#34;, EigrpFeatureTemplateArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .deviceTypes(&#34;vedge-C8000V&#34;)
+ *         var example = new EigrpFeatureTemplate("example", EigrpFeatureTemplateArgs.builder()        
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
  *             .asNumber(1)
  *             .addressFamilies(EigrpFeatureTemplateAddressFamilyArgs.builder()
- *                 .type(&#34;ipv4&#34;)
+ *                 .type("ipv4")
  *                 .redistributes(EigrpFeatureTemplateAddressFamilyRedistributeArgs.builder()
- *                     .protocol(&#34;bgp&#34;)
- *                     .routePolicy(&#34;1.2.3.4&#34;)
+ *                     .protocol("bgp")
+ *                     .routePolicy("1.2.3.4")
  *                     .build())
  *                 .networks(EigrpFeatureTemplateAddressFamilyNetworkArgs.builder()
- *                     .prefix(&#34;1.2.3.4/24&#34;)
+ *                     .prefix("1.2.3.4/24")
  *                     .build())
  *                 .build())
  *             .helloInterval(5)
  *             .holdTime(15)
- *             .routePolicyName(&#34;RP1&#34;)
+ *             .routePolicyName("RP1")
  *             .filter(false)
- *             .authenticationType(&#34;hmac-sha-256&#34;)
- *             .hmacAuthenticationKey(&#34;myAuthKey&#34;)
+ *             .authenticationType("hmac-sha-256")
+ *             .hmacAuthenticationKey("myAuthKey")
  *             .interfaces(EigrpFeatureTemplateInterfaceArgs.builder()
- *                 .interface_name(&#34;Ethernet1&#34;)
+ *                 .interface_name("Ethernet1")
  *                 .shutdown(false)
  *                 .summary_addresses(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .build())
@@ -80,7 +81,8 @@ import javax.annotation.Nullable;
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

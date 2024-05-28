@@ -26,7 +26,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -49,37 +50,37 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new TransportManagementVpnInterfaceEthernetProfileParcel(&#34;example&#34;, TransportManagementVpnInterfaceEthernetProfileParcelArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
- *             .transportManagementVpnProfileParcelId(&#34;140331f6-5418-4755-a059-13c77eb96037&#34;)
+ *         var example = new TransportManagementVpnInterfaceEthernetProfileParcel("example", TransportManagementVpnInterfaceEthernetProfileParcelArgs.builder()        
+ *             .name("Example")
+ *             .description("My Example")
+ *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+ *             .transportManagementVpnProfileParcelId("140331f6-5418-4755-a059-13c77eb96037")
  *             .shutdown(true)
- *             .interfaceName(&#34;GigabitEthernet1&#34;)
- *             .basicConfigurationDescription(&#34;Transport Management VPN Interface Ethernet&#34;)
- *             .ipv4Address(&#34;1.2.3.4&#34;)
- *             .ipv4SubnetMask(&#34;0.0.0.0&#34;)
+ *             .interfaceName("GigabitEthernet1")
+ *             .basicConfigurationDescription("Transport Management VPN Interface Ethernet")
+ *             .ipv4Address("1.2.3.4")
+ *             .ipv4SubnetMask("0.0.0.0")
  *             .ipv4SecondaryAddresses(TransportManagementVpnInterfaceEthernetProfileParcelIpv4SecondaryAddressArgs.builder()
- *                 .address(&#34;1.2.3.4&#34;)
- *                 .subnet_mask(&#34;0.0.0.0&#34;)
+ *                 .address("1.2.3.4")
+ *                 .subnet_mask("0.0.0.0")
  *                 .build())
- *             .ipv4DhcpHelpers(&#34;1.2.3.4&#34;)
- *             .ipv4IperfServer(&#34;example&#34;)
+ *             .ipv4DhcpHelpers("1.2.3.4")
+ *             .ipv4IperfServer("example")
  *             .ipv4AutoDetectBandwidth(false)
- *             .ipv6Address(&#34;2001:0:0:1::/64&#34;)
+ *             .ipv6Address("2001:0:0:1::/64")
  *             .arpEntries(TransportManagementVpnInterfaceEthernetProfileParcelArpEntryArgs.builder()
- *                 .ip_address(&#34;1.2.3.4&#34;)
- *                 .mac_address(&#34;00-B0-D0-63-C2-26&#34;)
+ *                 .ip_address("1.2.3.4")
+ *                 .mac_address("00-B0-D0-63-C2-26")
  *                 .build())
- *             .duplex(&#34;full&#34;)
- *             .macAddress(&#34;00-B0-D0-63-C2-26&#34;)
+ *             .duplex("full")
+ *             .macAddress("00-B0-D0-63-C2-26")
  *             .ipMtu(1500)
  *             .interfaceMtu(1500)
  *             .tcpMss(505)
- *             .speed(&#34;2500&#34;)
+ *             .speed("2500")
  *             .arpTimeout(1200)
  *             .autonegotiate(false)
- *             .mediaType(&#34;rj45&#34;)
+ *             .mediaType("rj45")
  *             .loadInterval(30)
  *             .icmpRedirectDisable(true)
  *             .ipDirectedBroadcast(false)
@@ -87,7 +88,8 @@ import javax.annotation.Nullable;
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

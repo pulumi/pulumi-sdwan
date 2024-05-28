@@ -23,7 +23,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,21 +45,22 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new TlsSslProfilePolicyDefinition(&#34;example&#34;, TlsSslProfilePolicyDefinitionArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My description&#34;)
- *             .mode(&#34;security&#34;)
- *             .decryptCategories(&#34;alcohol-and-tobacco&#34;)
- *             .neverDecryptCategories(&#34;auctions&#34;)
- *             .skipDecryptCategories(&#34;cdns&#34;)
- *             .decryptThreshold(&#34;high-risk&#34;)
+ *         var example = new TlsSslProfilePolicyDefinition("example", TlsSslProfilePolicyDefinitionArgs.builder()        
+ *             .name("Example")
+ *             .description("My description")
+ *             .mode("security")
+ *             .decryptCategories("alcohol-and-tobacco")
+ *             .neverDecryptCategories("auctions")
+ *             .skipDecryptCategories("cdns")
+ *             .decryptThreshold("high-risk")
  *             .reputation(false)
  *             .failDecrypt(true)
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

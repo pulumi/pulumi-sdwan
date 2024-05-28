@@ -25,7 +25,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -47,32 +48,32 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CiscoTrustsecFeatureTemplate(&#34;example&#34;, CiscoTrustsecFeatureTemplateArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .deviceTypes(&#34;vedge-C8000V&#34;)
+ *         var example = new CiscoTrustsecFeatureTemplate("example", CiscoTrustsecFeatureTemplateArgs.builder()        
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
  *             .deviceSgt(100)
- *             .credentialsId(&#34;user1&#34;)
- *             .credentialsPassword(&#34;MyPassword&#34;)
+ *             .credentialsId("user1")
+ *             .credentialsPassword("MyPassword")
  *             .enableEnforcement(true)
  *             .enableSxp(true)
- *             .sxpSourceIp(&#34;1.2.3.4&#34;)
- *             .sxpDefaultPassword(&#34;MyPassword&#34;)
- *             .sxpKeyChain(&#34;keychain1&#34;)
+ *             .sxpSourceIp("1.2.3.4")
+ *             .sxpDefaultPassword("MyPassword")
+ *             .sxpKeyChain("keychain1")
  *             .sxpLogBindingChanges(false)
  *             .sxpReconciliationPeriod(120)
  *             .sxpRetryPeriod(120)
  *             .speakerHoldTime(120)
  *             .minimumListenerHoldTime(90)
  *             .maximumListenerHoldTime(180)
- *             .sxpNodeIdType(&#34;interface-name&#34;)
- *             .sxpNodeId(&#34;VirtualPortGroup&#34;)
+ *             .sxpNodeIdType("interface-name")
+ *             .sxpNodeId("VirtualPortGroup")
  *             .sxpConnections(CiscoTrustsecFeatureTemplateSxpConnectionArgs.builder()
- *                 .peer_ip(&#34;1.2.3.4&#34;)
- *                 .source_ip(&#34;2.3.4.5&#34;)
- *                 .preshared_key(&#34;default&#34;)
- *                 .mode(&#34;local&#34;)
- *                 .mode_type(&#34;listener&#34;)
+ *                 .peer_ip("1.2.3.4")
+ *                 .source_ip("2.3.4.5")
+ *                 .preshared_key("default")
+ *                 .mode("local")
+ *                 .mode_type("listener")
  *                 .minimum_hold_time(100)
  *                 .maximum_hold_time(200)
  *                 .vpn_id(0)
@@ -81,7 +82,8 @@ import javax.annotation.Nullable;
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

@@ -33,7 +33,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -61,12 +62,12 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new TransportRoutingBgpProfileParcel(&#34;example&#34;, TransportRoutingBgpProfileParcelArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+ *         var example = new TransportRoutingBgpProfileParcel("example", TransportRoutingBgpProfileParcelArgs.builder()        
+ *             .name("Example")
+ *             .description("My Example")
+ *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
  *             .asNumber(429)
- *             .routerId(&#34;1.2.3.4&#34;)
+ *             .routerId("1.2.3.4")
  *             .propagateAsPath(false)
  *             .propagateCommunity(false)
  *             .externalRoutesDistance(20)
@@ -80,19 +81,19 @@ import javax.annotation.Nullable;
  *             .compareRouterId(false)
  *             .multipathRelax(false)
  *             .ipv4Neighbors(TransportRoutingBgpProfileParcelIpv4NeighborArgs.builder()
- *                 .address(&#34;1.2.3.4&#34;)
- *                 .description(&#34;neighbor1&#34;)
+ *                 .address("1.2.3.4")
+ *                 .description("neighbor1")
  *                 .shutdown(false)
  *                 .remote_as(200)
  *                 .local_as(200)
  *                 .keepalive_time(40)
  *                 .hold_time(200)
- *                 .update_source_interface(&#34;GigabitEthernet0&#34;)
+ *                 .update_source_interface("GigabitEthernet0")
  *                 .next_hop_self(false)
  *                 .send_community(true)
  *                 .send_extended_community(true)
  *                 .ebgp_multihop(1)
- *                 .password(&#34;myPassword&#34;)
+ *                 .password("myPassword")
  *                 .send_label(true)
  *                 .explicit_null(false)
  *                 .as_override(false)
@@ -100,55 +101,56 @@ import javax.annotation.Nullable;
  *                 .address_families(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .build())
  *             .ipv6Neighbors(TransportRoutingBgpProfileParcelIpv6NeighborArgs.builder()
- *                 .address(&#34;2001::1&#34;)
- *                 .description(&#34;neighbor2&#34;)
+ *                 .address("2001::1")
+ *                 .description("neighbor2")
  *                 .shutdown(false)
  *                 .remote_as(200)
  *                 .local_as(200)
  *                 .keepalive_time(180)
  *                 .hold_time(60)
- *                 .update_source_interface(&#34;Loopback1&#34;)
+ *                 .update_source_interface("Loopback1")
  *                 .next_hop_self(true)
  *                 .send_community(true)
  *                 .send_extended_community(true)
  *                 .ebgp_multihop(3)
- *                 .password(&#34;myPassword&#34;)
+ *                 .password("myPassword")
  *                 .as_override(true)
  *                 .allowas_in_number(3)
  *                 .address_families(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .build())
  *             .ipv4AggregateAddresses(TransportRoutingBgpProfileParcelIpv4AggregateAddressArgs.builder()
- *                 .network_address(&#34;10.10.0.0&#34;)
- *                 .subnet_mask(&#34;255.255.0.0&#34;)
+ *                 .network_address("10.10.0.0")
+ *                 .subnet_mask("255.255.0.0")
  *                 .as_set_path(false)
  *                 .summary_only(false)
  *                 .build())
  *             .ipv4Networks(TransportRoutingBgpProfileParcelIpv4NetworkArgs.builder()
- *                 .network_address(&#34;10.10.0.0&#34;)
- *                 .subnet_mask(&#34;255.255.0.0&#34;)
+ *                 .network_address("10.10.0.0")
+ *                 .subnet_mask("255.255.0.0")
  *                 .build())
  *             .ipv4EibgpMaximumPaths(1)
  *             .ipv4Originate(false)
  *             .ipv4TableMapFilter(false)
  *             .ipv6AggregateAddresses(TransportRoutingBgpProfileParcelIpv6AggregateAddressArgs.builder()
- *                 .aggregate_prefix(&#34;3001::1/128&#34;)
+ *                 .aggregate_prefix("3001::1/128")
  *                 .as_set_path(false)
  *                 .summary_only(false)
  *                 .build())
  *             .ipv6Networks(TransportRoutingBgpProfileParcelIpv6NetworkArgs.builder()
- *                 .network_prefix(&#34;2001:0DB8:0000:000b::/64&#34;)
+ *                 .network_prefix("2001:0DB8:0000:000b::/64")
  *                 .build())
  *             .ipv6EibgpMaximumPaths(2)
  *             .ipv6Originate(true)
  *             .ipv6TableMapFilter(false)
  *             .mplsInterfaces(TransportRoutingBgpProfileParcelMplsInterfaceArgs.builder()
- *                 .interface_name(&#34;GigabitEthernet1&#34;)
+ *                 .interface_name("GigabitEthernet1")
  *                 .build())
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

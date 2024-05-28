@@ -33,7 +33,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -63,26 +64,26 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new VpnInterfaceSviFeatureTemplate(&#34;example&#34;, VpnInterfaceSviFeatureTemplateArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .deviceTypes(&#34;vedge-C8000V&#34;)
- *             .ifName(&#34;Vlan100&#34;)
- *             .interfaceDescription(&#34;VPN Interface SVI&#34;)
- *             .ipv4Address(&#34;2.3.4.5&#34;)
+ *         var example = new VpnInterfaceSviFeatureTemplate("example", VpnInterfaceSviFeatureTemplateArgs.builder()        
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
+ *             .ifName("Vlan100")
+ *             .interfaceDescription("VPN Interface SVI")
+ *             .ipv4Address("2.3.4.5")
  *             .ipv4SecondaryAddresses(VpnInterfaceSviFeatureTemplateIpv4SecondaryAddressArgs.builder()
- *                 .ipv4_address(&#34;4.5.6.7&#34;)
+ *                 .ipv4_address("4.5.6.7")
  *                 .build())
- *             .ipv6Address(&#34;2001:db8:85a3::8a2e:370:7334&#34;)
+ *             .ipv6Address("2001:db8:85a3::8a2e:370:7334")
  *             .ipv6DhcpClient(false)
  *             .ipv6DhcpDistance(101)
  *             .ipv6DhcpRapidCommit(false)
  *             .ipv6SecondaryAddresses(VpnInterfaceSviFeatureTemplateIpv6SecondaryAddressArgs.builder()
- *                 .ipv6_address(&#34;2001:db8:85a3::8a2e:370:7334&#34;)
+ *                 .ipv6_address("2001:db8:85a3::8a2e:370:7334")
  *                 .build())
- *             .ipv4DhcpHelpers(&#34;7.7.7.7&#34;)
+ *             .ipv4DhcpHelpers("7.7.7.7")
  *             .ipv6DhcpHelpers(VpnInterfaceSviFeatureTemplateIpv6DhcpHelperArgs.builder()
- *                 .address(&#34;2001:db8:85a3::8a2e:370:7334&#34;)
+ *                 .address("2001:db8:85a3::8a2e:370:7334")
  *                 .vpn_id(100)
  *                 .build())
  *             .ipDirectedBroadcast(true)
@@ -92,28 +93,28 @@ import javax.annotation.Nullable;
  *             .shutdown(false)
  *             .arpTimeout(100)
  *             .ipv4AccessLists(VpnInterfaceSviFeatureTemplateIpv4AccessListArgs.builder()
- *                 .direction(&#34;in&#34;)
- *                 .acl_name(&#34;ACL1&#34;)
+ *                 .direction("in")
+ *                 .acl_name("ACL1")
  *                 .build())
  *             .ipv6AccessLists(VpnInterfaceSviFeatureTemplateIpv6AccessListArgs.builder()
- *                 .direction(&#34;in&#34;)
- *                 .acl_name(&#34;ACL2&#34;)
+ *                 .direction("in")
+ *                 .acl_name("ACL2")
  *                 .build())
  *             .policers(VpnInterfaceSviFeatureTemplatePolicerArgs.builder()
- *                 .direction(&#34;in&#34;)
- *                 .policer_name(&#34;POLICER1&#34;)
+ *                 .direction("in")
+ *                 .policer_name("POLICER1")
  *                 .build())
  *             .staticArpEntries(VpnInterfaceSviFeatureTemplateStaticArpEntryArgs.builder()
- *                 .ipv4_address(&#34;3.4.4.5&#34;)
- *                 .mac_address(&#34;00:00:00:00:00:00&#34;)
+ *                 .ipv4_address("3.4.4.5")
+ *                 .mac_address("00:00:00:00:00:00")
  *                 .build())
  *             .ipv4Vrrps(VpnInterfaceSviFeatureTemplateIpv4VrrpArgs.builder()
  *                 .group_id(1)
  *                 .priority(100)
  *                 .timer(1000)
  *                 .track_omp(true)
- *                 .track_prefix_list(&#34;TRACK1&#34;)
- *                 .ipv4_address(&#34;5.6.7.8&#34;)
+ *                 .track_prefix_list("TRACK1")
+ *                 .ipv4_address("5.6.7.8")
  *                 .ipv4_secondary_addresses(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .tloc_preference_change(true)
  *                 .tloc_preference_change_value(100)
@@ -124,7 +125,7 @@ import javax.annotation.Nullable;
  *                 .priority(100)
  *                 .timer(1000)
  *                 .track_omp(true)
- *                 .track_prefix_list(&#34;TRACK1&#34;)
+ *                 .track_prefix_list("TRACK1")
  *                 .ipv6_addresses(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .ipv6_secondary_addresses(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .build())
@@ -132,7 +133,8 @@ import javax.annotation.Nullable;
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

@@ -30,7 +30,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -57,13 +58,13 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CiscoBgpFeatureTemplate(&#34;example&#34;, CiscoBgpFeatureTemplateArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .deviceTypes(&#34;vedge-C8000V&#34;)
- *             .asNumber(&#34;65000&#34;)
+ *         var example = new CiscoBgpFeatureTemplate("example", CiscoBgpFeatureTemplateArgs.builder()        
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
+ *             .asNumber("65000")
  *             .shutdown(true)
- *             .routerId(&#34;1.2.3.4&#34;)
+ *             .routerId("1.2.3.4")
  *             .propagateAspath(true)
  *             .propagateCommunity(true)
  *             .ipv4RouteTargets(CiscoBgpFeatureTemplateIpv4RouteTargetArgs.builder()
@@ -77,7 +78,7 @@ import javax.annotation.Nullable;
  *                 .import_(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .build())
  *             .mplsInterfaces(CiscoBgpFeatureTemplateMplsInterfaceArgs.builder()
- *                 .interface_name(&#34;GigabitEthernet0&#34;)
+ *                 .interface_name("GigabitEthernet0")
  *                 .build())
  *             .distanceExternal(30)
  *             .distanceInternal(210)
@@ -90,28 +91,28 @@ import javax.annotation.Nullable;
  *             .compareRouterId(true)
  *             .multipathRelax(true)
  *             .addressFamilies(CiscoBgpFeatureTemplateAddressFamilyArgs.builder()
- *                 .family_type(&#34;ipv4-unicast&#34;)
+ *                 .family_type("ipv4-unicast")
  *                 .ipv4_aggregate_addresses(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .ipv4_networks(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .maximum_paths(8)
  *                 .default_information_originate(true)
- *                 .table_map_policy(&#34;MAP1&#34;)
+ *                 .table_map_policy("MAP1")
  *                 .table_map_filter(true)
  *                 .redistribute_routes(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .build())
  *             .ipv4Neighbors(CiscoBgpFeatureTemplateIpv4NeighborArgs.builder()
- *                 .address(&#34;10.2.2.2&#34;)
- *                 .description(&#34;My neighbor&#34;)
+ *                 .address("10.2.2.2")
+ *                 .description("My neighbor")
  *                 .shutdown(true)
- *                 .remote_as(&#34;65001&#34;)
+ *                 .remote_as("65001")
  *                 .keepalive(30)
  *                 .holdtime(90)
- *                 .source_interface(&#34;GigabitEthernet1&#34;)
+ *                 .source_interface("GigabitEthernet1")
  *                 .next_hop_self(true)
  *                 .send_community(false)
  *                 .send_ext_community(false)
  *                 .ebgp_multihop(10)
- *                 .password(&#34;cisco123&#34;)
+ *                 .password("cisco123")
  *                 .send_label(true)
  *                 .send_label_explicit(true)
  *                 .as_override(true)
@@ -119,18 +120,18 @@ import javax.annotation.Nullable;
  *                 .address_families(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .build())
  *             .ipv6Neighbors(CiscoBgpFeatureTemplateIpv6NeighborArgs.builder()
- *                 .address(&#34;2001:1::1&#34;)
- *                 .description(&#34;My neighbor&#34;)
+ *                 .address("2001:1::1")
+ *                 .description("My neighbor")
  *                 .shutdown(true)
- *                 .remote_as(&#34;65001&#34;)
+ *                 .remote_as("65001")
  *                 .keepalive(30)
  *                 .holdtime(90)
- *                 .source_interface(&#34;GigabitEthernet1&#34;)
+ *                 .source_interface("GigabitEthernet1")
  *                 .next_hop_self(true)
  *                 .send_community(false)
  *                 .send_ext_community(false)
  *                 .ebgp_multihop(10)
- *                 .password(&#34;cisco123&#34;)
+ *                 .password("cisco123")
  *                 .send_label(true)
  *                 .send_label_explicit(true)
  *                 .as_override(true)
@@ -141,7 +142,8 @@ import javax.annotation.Nullable;
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

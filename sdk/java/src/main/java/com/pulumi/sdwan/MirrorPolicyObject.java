@@ -20,7 +20,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -41,15 +42,16 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new MirrorPolicyObject(&#34;example&#34;, MirrorPolicyObjectArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .remoteDestinationIp(&#34;10.1.1.1&#34;)
- *             .sourceIp(&#34;10.2.1.1&#34;)
+ *         var example = new MirrorPolicyObject("example", MirrorPolicyObjectArgs.builder()        
+ *             .name("Example")
+ *             .remoteDestinationIp("10.1.1.1")
+ *             .sourceIp("10.2.1.1")
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

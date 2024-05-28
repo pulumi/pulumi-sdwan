@@ -23,7 +23,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,10 +45,10 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SystemGlobalProfileParcel(&#34;example&#34;, SystemGlobalProfileParcelArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+ *         var example = new SystemGlobalProfileParcel("example", SystemGlobalProfileParcelArgs.builder()        
+ *             .name("Example")
+ *             .description("My Example")
+ *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
  *             .httpServer(false)
  *             .httpsServer(false)
  *             .ftpPassive(false)
@@ -57,7 +58,7 @@ import javax.annotation.Nullable;
  *             .lineVty(false)
  *             .cdp(true)
  *             .lldp(true)
- *             .sourceInterface(&#34;GigabitEthernet0/0/1&#34;)
+ *             .sourceInterface("GigabitEthernet0/0/1")
  *             .tcpKeepalivesIn(true)
  *             .tcpKeepalivesOut(true)
  *             .tcpSmallServers(false)
@@ -69,13 +70,14 @@ import javax.annotation.Nullable;
  *             .ignoreBootp(true)
  *             .nat64UdpTimeout(300)
  *             .nat64TcpTimeout(3600)
- *             .httpAuthentication(&#34;aaa&#34;)
- *             .sshVersion(&#34;2&#34;)
+ *             .httpAuthentication("aaa")
+ *             .sshVersion("2")
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

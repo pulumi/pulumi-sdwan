@@ -19,7 +19,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -40,14 +41,15 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new TransportFeatureProfile(&#34;example&#34;, TransportFeatureProfileArgs.builder()        
- *             .name(&#34;TRANSPORT_FP_1&#34;)
- *             .description(&#34;My transport feature profile 1&#34;)
+ *         var example = new TransportFeatureProfile("example", TransportFeatureProfileArgs.builder()        
+ *             .name("TRANSPORT_FP_1")
+ *             .description("My transport feature profile 1")
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

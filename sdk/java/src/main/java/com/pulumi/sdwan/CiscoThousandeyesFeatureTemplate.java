@@ -24,7 +24,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -46,28 +47,29 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CiscoThousandeyesFeatureTemplate(&#34;example&#34;, CiscoThousandeyesFeatureTemplateArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .deviceTypes(&#34;vedge-C8000V&#34;)
+ *         var example = new CiscoThousandeyesFeatureTemplate("example", CiscoThousandeyesFeatureTemplateArgs.builder()        
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
  *             .virtualApplications(CiscoThousandeyesFeatureTemplateVirtualApplicationArgs.builder()
- *                 .instance_id(&#34;1&#34;)
- *                 .application_type(&#34;te&#34;)
- *                 .te_account_group_token(&#34;1234567&#34;)
+ *                 .instance_id("1")
+ *                 .application_type("te")
+ *                 .te_account_group_token("1234567")
  *                 .te_vpn(1)
- *                 .te_agent_ip(&#34;1.1.1.2/24&#34;)
- *                 .te_default_gateway(&#34;1.1.1.255&#34;)
- *                 .te_name_server(&#34;10.2.2.2&#34;)
- *                 .te_hostname(&#34;agent1&#34;)
- *                 .te_web_proxy_type(&#34;static&#34;)
- *                 .te_proxy_host(&#34;3.3.3.3&#34;)
+ *                 .te_agent_ip("1.1.1.2/24")
+ *                 .te_default_gateway("1.1.1.255")
+ *                 .te_name_server("10.2.2.2")
+ *                 .te_hostname("agent1")
+ *                 .te_web_proxy_type("static")
+ *                 .te_proxy_host("3.3.3.3")
  *                 .te_proxy_port(80)
  *                 .build())
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

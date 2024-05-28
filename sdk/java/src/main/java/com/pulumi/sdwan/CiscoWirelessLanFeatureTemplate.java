@@ -25,7 +25,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -47,36 +48,37 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CiscoWirelessLanFeatureTemplate(&#34;example&#34;, CiscoWirelessLanFeatureTemplateArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .deviceTypes(&#34;vedge-C8000V&#34;)
+ *         var example = new CiscoWirelessLanFeatureTemplate("example", CiscoWirelessLanFeatureTemplateArgs.builder()        
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
  *             .shutdown24ghz(false)
  *             .shutdown5ghz(false)
  *             .ssids(CiscoWirelessLanFeatureTemplateSsidArgs.builder()
- *                 .wireless_network_name(&#34;WLAN1&#34;)
+ *                 .wireless_network_name("WLAN1")
  *                 .admin_state(false)
  *                 .broadcast_ssid(true)
  *                 .vlan_id(1)
- *                 .radio_type(&#34;24ghz&#34;)
- *                 .security_type(&#34;enterprise&#34;)
- *                 .radius_server_ip(&#34;1.2.3.4&#34;)
+ *                 .radio_type("24ghz")
+ *                 .security_type("enterprise")
+ *                 .radius_server_ip("1.2.3.4")
  *                 .radius_server_port(1812)
- *                 .radius_server_secret(&#34;MySecret1&#34;)
- *                 .passphrase(&#34;passphrase&#34;)
- *                 .qos_profile(&#34;silver&#34;)
+ *                 .radius_server_secret("MySecret1")
+ *                 .passphrase("passphrase")
+ *                 .qos_profile("silver")
  *                 .build())
- *             .country(&#34;AE&#34;)
- *             .username(&#34;user1&#34;)
- *             .password(&#34;myPassword01&#34;)
- *             .controllerIpAddress(&#34;0.0.0.0&#34;)
- *             .controllerSubnetMask(&#34;0.0.0.0&#34;)
- *             .controllerDefaultGateway(&#34;0.0.0.0&#34;)
+ *             .country("AE")
+ *             .username("user1")
+ *             .password("myPassword01")
+ *             .controllerIpAddress("0.0.0.0")
+ *             .controllerSubnetMask("0.0.0.0")
+ *             .controllerDefaultGateway("0.0.0.0")
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

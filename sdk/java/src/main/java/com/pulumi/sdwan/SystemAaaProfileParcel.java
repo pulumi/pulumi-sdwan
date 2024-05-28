@@ -29,7 +29,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -55,69 +56,70 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SystemAaaProfileParcel(&#34;example&#34;, SystemAaaProfileParcelArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+ *         var example = new SystemAaaProfileParcel("example", SystemAaaProfileParcelArgs.builder()        
+ *             .name("Example")
+ *             .description("My Example")
+ *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
  *             .authenticationGroup(true)
  *             .accountingGroup(true)
- *             .serverAuthOrders(&#34;local&#34;)
+ *             .serverAuthOrders("local")
  *             .users(SystemAaaProfileParcelUserArgs.builder()
- *                 .name(&#34;User1&#34;)
- *                 .password(&#34;cisco123&#34;)
- *                 .privilege(&#34;15&#34;)
+ *                 .name("User1")
+ *                 .password("cisco123")
+ *                 .privilege("15")
  *                 .public_keys(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .build())
  *             .radiusGroups(SystemAaaProfileParcelRadiusGroupArgs.builder()
- *                 .group_name(&#34;RGROUP1&#34;)
+ *                 .group_name("RGROUP1")
  *                 .vpn(10)
- *                 .source_interface(&#34;GigabitEthernet0&#34;)
+ *                 .source_interface("GigabitEthernet0")
  *                 .servers(SystemAaaProfileParcelRadiusGroupServerArgs.builder()
- *                     .address(&#34;1.2.3.4&#34;)
+ *                     .address("1.2.3.4")
  *                     .authPort(1812)
  *                     .acctPort(1813)
  *                     .timeout(5)
  *                     .retransmit(3)
- *                     .key(&#34;cisco123&#34;)
- *                     .secretKey(&#34;cisco123&#34;)
- *                     .keyEnum(&#34;7&#34;)
- *                     .keyType(&#34;key&#34;)
+ *                     .key("cisco123")
+ *                     .secretKey("cisco123")
+ *                     .keyEnum("7")
+ *                     .keyType("key")
  *                     .build())
  *                 .build())
  *             .tacacsGroups(SystemAaaProfileParcelTacacsGroupArgs.builder()
- *                 .group_name(&#34;TGROUP1&#34;)
+ *                 .group_name("TGROUP1")
  *                 .vpn(10)
- *                 .source_interface(&#34;GigabitEthernet0&#34;)
+ *                 .source_interface("GigabitEthernet0")
  *                 .servers(SystemAaaProfileParcelTacacsGroupServerArgs.builder()
- *                     .address(&#34;1.2.3.4&#34;)
+ *                     .address("1.2.3.4")
  *                     .port(49)
  *                     .timeout(5)
- *                     .key(&#34;cisco123&#34;)
- *                     .secretKey(&#34;cisco123&#34;)
- *                     .keyEnum(&#34;7&#34;)
+ *                     .key("cisco123")
+ *                     .secretKey("cisco123")
+ *                     .keyEnum("7")
  *                     .build())
  *                 .build())
  *             .accountingRules(SystemAaaProfileParcelAccountingRuleArgs.builder()
- *                 .rule_id(&#34;1&#34;)
- *                 .method(&#34;commands&#34;)
- *                 .level(&#34;15&#34;)
+ *                 .rule_id("1")
+ *                 .method("commands")
+ *                 .level("15")
  *                 .start_stop(true)
- *                 .group(&#34;RGROUP1&#34;)
+ *                 .group("RGROUP1")
  *                 .build())
  *             .authorizationConsole(true)
  *             .authorizationConfigCommands(true)
  *             .authorizationRules(SystemAaaProfileParcelAuthorizationRuleArgs.builder()
- *                 .rule_id(&#34;1&#34;)
- *                 .method(&#34;commands&#34;)
- *                 .level(&#34;15&#34;)
- *                 .group(&#34;RGROUP1&#34;)
+ *                 .rule_id("1")
+ *                 .method("commands")
+ *                 .level("15")
+ *                 .group("RGROUP1")
  *                 .if_authenticated(true)
  *                 .build())
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

@@ -23,7 +23,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,24 +45,24 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SystemRemoteAccessProfileParcel(&#34;example&#34;, SystemRemoteAccessProfileParcelArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+ *         var example = new SystemRemoteAccessProfileParcel("example", SystemRemoteAccessProfileParcelArgs.builder()        
+ *             .name("Example")
+ *             .description("My Example")
+ *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
  *             .connectionTypeSsl(false)
- *             .anyConnectEapAuthenticationType(&#34;user&#34;)
- *             .anyConnectEapProfileDownloadStatus(&#34;INITIALIZED&#34;)
- *             .anyConnectEapProfileFileName(&#34;&lt;form-data&gt;&#34;)
+ *             .anyConnectEapAuthenticationType("user")
+ *             .anyConnectEapProfileDownloadStatus("INITIALIZED")
+ *             .anyConnectEapProfileFileName("<form-data>")
  *             .ipv4PoolSize(50)
  *             .ipv6PoolSize(1024)
  *             .enableCrlCheck(false)
- *             .pskAuthenticationType(&#34;aaa&#34;)
- *             .pskAuthenticationPreSharedKey(&#34;Cisco123&#34;)
- *             .radiusGroupName(&#34;radius-1&#34;)
- *             .aaaDeriveNameIdentity(&#34;MyPassword&#34;)
+ *             .pskAuthenticationType("aaa")
+ *             .pskAuthenticationPreSharedKey("Cisco123")
+ *             .radiusGroupName("radius-1")
+ *             .aaaDeriveNameIdentity("MyPassword")
  *             .aaaEnableAccounting(false)
- *             .ikev2LocalIkeIdentityType(&#34;EMAIL&#34;)
- *             .ikev2LocalIkeIdentityValue(&#34;abc@xyz.com&#34;)
+ *             .ikev2LocalIkeIdentityType("EMAIL")
+ *             .ikev2LocalIkeIdentityValue("abc{@literal @}xyz.com")
  *             .ikev2SecurityAssociationLifetime(86400)
  *             .ikev2AntiDosThreshold(99)
  *             .ipsecEnableAntiReplay(false)
@@ -72,7 +73,8 @@ import javax.annotation.Nullable;
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

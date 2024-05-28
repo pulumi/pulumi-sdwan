@@ -24,7 +24,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -46,15 +47,15 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CiscoBfdFeatureTemplate(&#34;example&#34;, CiscoBfdFeatureTemplateArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .deviceTypes(&#34;vedge-C8000V&#34;)
+ *         var example = new CiscoBfdFeatureTemplate("example", CiscoBfdFeatureTemplateArgs.builder()        
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
  *             .multiplier(3)
  *             .pollInterval(800000)
  *             .defaultDscp(48)
  *             .colors(CiscoBfdFeatureTemplateColorArgs.builder()
- *                 .color(&#34;private5&#34;)
+ *                 .color("private5")
  *                 .hello_interval(1000)
  *                 .multiplier(7)
  *                 .pmtu_discovery(true)
@@ -64,7 +65,8 @@ import javax.annotation.Nullable;
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

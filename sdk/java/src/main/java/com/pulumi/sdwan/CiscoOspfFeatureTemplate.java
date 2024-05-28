@@ -28,7 +28,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -53,17 +54,17 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CiscoOspfFeatureTemplate(&#34;example&#34;, CiscoOspfFeatureTemplateArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .deviceTypes(&#34;vedge-C8000V&#34;)
- *             .routerId(&#34;1.2.3.4&#34;)
+ *         var example = new CiscoOspfFeatureTemplate("example", CiscoOspfFeatureTemplateArgs.builder()        
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
+ *             .routerId("1.2.3.4")
  *             .autoCostReferenceBandwidth(100000)
  *             .compatibleRfc1583(true)
  *             .defaultInformationOriginate(true)
  *             .defaultInformationOriginateAlways(true)
  *             .defaultInformationOriginateMetric(100)
- *             .defaultInformationOriginateMetricType(&#34;type1&#34;)
+ *             .defaultInformationOriginateMetricType("type1")
  *             .distanceExternal(111)
  *             .distanceInterArea(111)
  *             .distanceIntraArea(112)
@@ -71,17 +72,17 @@ import javax.annotation.Nullable;
  *             .timersSpfInitialHold(2000)
  *             .timersSpfMaxHold(20000)
  *             .redistributes(CiscoOspfFeatureTemplateRedistributeArgs.builder()
- *                 .protocol(&#34;static&#34;)
- *                 .route_policy(&#34;RP1&#34;)
+ *                 .protocol("static")
+ *                 .route_policy("RP1")
  *                 .nat_dia(true)
  *                 .build())
  *             .maxMetricRouterLsas(CiscoOspfFeatureTemplateMaxMetricRouterLsaArgs.builder()
- *                 .ad_type(&#34;on-startup&#34;)
+ *                 .ad_type("on-startup")
  *                 .time(100)
  *                 .build())
  *             .routePolicies(CiscoOspfFeatureTemplateRoutePolicyArgs.builder()
- *                 .direction(&#34;in&#34;)
- *                 .policy_name(&#34;POLICY1&#34;)
+ *                 .direction("in")
+ *                 .policy_name("POLICY1")
  *                 .build())
  *             .areas(CiscoOspfFeatureTemplateAreaArgs.builder()
  *                 .area_number(1)
@@ -90,20 +91,20 @@ import javax.annotation.Nullable;
  *                 .nssa(false)
  *                 .nssa_no_summary(true)
  *                 .interfaces(CiscoOspfFeatureTemplateAreaInterfaceArgs.builder()
- *                     .name(&#34;e1&#34;)
+ *                     .name("e1")
  *                     .helloInterval(20)
  *                     .deadInterval(60)
  *                     .retransmitInterval(10)
  *                     .cost(100)
  *                     .priority(10)
- *                     .network(&#34;point-to-point&#34;)
+ *                     .network("point-to-point")
  *                     .passiveInterface(true)
- *                     .authenticationType(&#34;message-digest&#34;)
+ *                     .authenticationType("message-digest")
  *                     .authenticationMessageDigestKeyId(1)
- *                     .authenticationMessageDigestKey(&#34;cisco123&#34;)
+ *                     .authenticationMessageDigestKey("cisco123")
  *                     .build())
  *                 .ranges(CiscoOspfFeatureTemplateAreaRangeArgs.builder()
- *                     .address(&#34;1.1.1.0/24&#34;)
+ *                     .address("1.1.1.0/24")
  *                     .cost(100)
  *                     .noAdvertise(true)
  *                     .build())
@@ -112,7 +113,8 @@ import javax.annotation.Nullable;
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

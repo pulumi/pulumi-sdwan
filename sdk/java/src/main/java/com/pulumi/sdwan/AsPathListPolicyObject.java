@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,16 +45,17 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new AsPathListPolicyObject(&#34;example&#34;, AsPathListPolicyObjectArgs.builder()        
- *             .name(&#34;Example&#34;)
+ *         var example = new AsPathListPolicyObject("example", AsPathListPolicyObjectArgs.builder()        
+ *             .name("Example")
  *             .entries(AsPathListPolicyObjectEntryArgs.builder()
- *                 .as_path(&#34;^1239_[0-9]*$&#34;)
+ *                 .as_path("^1239_[0-9]*$")
  *                 .build())
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

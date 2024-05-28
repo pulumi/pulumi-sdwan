@@ -29,7 +29,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -55,52 +56,53 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SystemSnmpProfileParcel(&#34;example&#34;, SystemSnmpProfileParcelArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+ *         var example = new SystemSnmpProfileParcel("example", SystemSnmpProfileParcelArgs.builder()        
+ *             .name("Example")
+ *             .description("My Example")
+ *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
  *             .shutdown(false)
- *             .contactPerson(&#34;wixie.cisco&#34;)
- *             .locationOfDevice(&#34;SHANGHAI&#34;)
+ *             .contactPerson("wixie.cisco")
+ *             .locationOfDevice("SHANGHAI")
  *             .views(SystemSnmpProfileParcelViewArgs.builder()
- *                 .name(&#34;VIEW1&#34;)
+ *                 .name("VIEW1")
  *                 .oids(SystemSnmpProfileParcelViewOidArgs.builder()
- *                     .id(&#34;1.3.6.1.4.1.9.9.394&#34;)
+ *                     .id("1.3.6.1.4.1.9.9.394")
  *                     .exclude(false)
  *                     .build())
  *                 .build())
  *             .communities(SystemSnmpProfileParcelCommunityArgs.builder()
- *                 .name(&#34;example&#34;)
- *                 .user_label(&#34;COMMUNITY1&#34;)
- *                 .view(&#34;VIEW1&#34;)
- *                 .authorization(&#34;read-only&#34;)
+ *                 .name("example")
+ *                 .user_label("COMMUNITY1")
+ *                 .view("VIEW1")
+ *                 .authorization("read-only")
  *                 .build())
  *             .groups(SystemSnmpProfileParcelGroupArgs.builder()
- *                 .name(&#34;GROUP1&#34;)
- *                 .security_level(&#34;auth-priv&#34;)
- *                 .view(&#34;VIEW1&#34;)
+ *                 .name("GROUP1")
+ *                 .security_level("auth-priv")
+ *                 .view("VIEW1")
  *                 .build())
  *             .users(SystemSnmpProfileParcelUserArgs.builder()
- *                 .name(&#34;USER1&#34;)
- *                 .authentication_protocol(&#34;sha&#34;)
- *                 .authentication_password(&#34;$CRYPT_CLUSTER$su56l1Z0Tk4Qc9N7+T/uOg==$sD6b0HLqEdI+RNwsEOoLcQ==&#34;)
- *                 .privacy_protocol(&#34;aes-256-cfb-128&#34;)
- *                 .privacy_password(&#34;$CRYPT_CLUSTER$su56l1Z0Tk4Qc9N7+T/uOg==$sD6b0HLqEdI+RNwsEOoLcQ==&#34;)
- *                 .group(&#34;GROUP1&#34;)
+ *                 .name("USER1")
+ *                 .authentication_protocol("sha")
+ *                 .authentication_password("$CRYPT_CLUSTER$su56l1Z0Tk4Qc9N7+T/uOg==$sD6b0HLqEdI+RNwsEOoLcQ==")
+ *                 .privacy_protocol("aes-256-cfb-128")
+ *                 .privacy_password("$CRYPT_CLUSTER$su56l1Z0Tk4Qc9N7+T/uOg==$sD6b0HLqEdI+RNwsEOoLcQ==")
+ *                 .group("GROUP1")
  *                 .build())
  *             .trapTargetServers(SystemSnmpProfileParcelTrapTargetServerArgs.builder()
  *                 .vpn_id(1)
- *                 .ip(&#34;10.75.221.156&#34;)
+ *                 .ip("10.75.221.156")
  *                 .port(161)
- *                 .user_label(&#34;TARGET1&#34;)
- *                 .user(&#34;USER1&#34;)
- *                 .source_interface(&#34;GigabitEthernet1&#34;)
+ *                 .user_label("TARGET1")
+ *                 .user("USER1")
+ *                 .source_interface("GigabitEthernet1")
  *                 .build())
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,23 +45,24 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new QosMapPolicyDefinition(&#34;example&#34;, QosMapPolicyDefinitionArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My description&#34;)
+ *         var example = new QosMapPolicyDefinition("example", QosMapPolicyDefinitionArgs.builder()        
+ *             .name("Example")
+ *             .description("My description")
  *             .qosSchedulers(QosMapPolicyDefinitionQosSchedulerArgs.builder()
  *                 .queue(6)
- *                 .class_map_id(&#34;2081c2f4-3f9f-4fee-8078-dcc8904e368d&#34;)
+ *                 .class_map_id("2081c2f4-3f9f-4fee-8078-dcc8904e368d")
  *                 .bandwidth_percent(10)
  *                 .buffer_percent(10)
  *                 .burst(100000)
- *                 .drop_type(&#34;red-drop&#34;)
- *                 .scheduling_type(&#34;wrr&#34;)
+ *                 .drop_type("red-drop")
+ *                 .scheduling_type("wrr")
  *                 .build())
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

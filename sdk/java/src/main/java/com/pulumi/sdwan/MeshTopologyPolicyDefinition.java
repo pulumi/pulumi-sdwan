@@ -23,7 +23,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -45,19 +46,20 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new MeshTopologyPolicyDefinition(&#34;example&#34;, MeshTopologyPolicyDefinitionArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My description&#34;)
- *             .vpnListId(&#34;04fcbb0b-efbf-43d2-a04b-847d3a7b104e&#34;)
+ *         var example = new MeshTopologyPolicyDefinition("example", MeshTopologyPolicyDefinitionArgs.builder()        
+ *             .name("Example")
+ *             .description("My description")
+ *             .vpnListId("04fcbb0b-efbf-43d2-a04b-847d3a7b104e")
  *             .regions(MeshTopologyPolicyDefinitionRegionArgs.builder()
- *                 .name(&#34;Region1&#34;)
- *                 .site_list_ids(&#34;e858e1c4-6aa8-4de7-99df-c3adbf80290d&#34;)
+ *                 .name("Region1")
+ *                 .site_list_ids("e858e1c4-6aa8-4de7-99df-c3adbf80290d")
  *                 .build())
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

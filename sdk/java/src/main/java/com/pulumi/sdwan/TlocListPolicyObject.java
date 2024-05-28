@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,19 +45,20 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new TlocListPolicyObject(&#34;example&#34;, TlocListPolicyObjectArgs.builder()        
- *             .name(&#34;Example&#34;)
+ *         var example = new TlocListPolicyObject("example", TlocListPolicyObjectArgs.builder()        
+ *             .name("Example")
  *             .entries(TlocListPolicyObjectEntryArgs.builder()
- *                 .tloc_ip(&#34;1.1.1.2&#34;)
- *                 .color(&#34;blue&#34;)
- *                 .encapsulation(&#34;gre&#34;)
+ *                 .tloc_ip("1.1.1.2")
+ *                 .color("blue")
+ *                 .encapsulation("gre")
  *                 .preference(10)
  *                 .build())
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

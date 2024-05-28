@@ -28,7 +28,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -52,25 +53,25 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CiscoSystemFeatureTemplate(&#34;example&#34;, CiscoSystemFeatureTemplateArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .deviceTypes(&#34;vedge-C8000V&#34;)
- *             .timezone(&#34;UTC&#34;)
- *             .hostname(&#34;Router1&#34;)
- *             .systemDescription(&#34;My Description&#34;)
- *             .location(&#34;Building 1&#34;)
+ *         var example = new CiscoSystemFeatureTemplate("example", CiscoSystemFeatureTemplateArgs.builder()        
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
+ *             .timezone("UTC")
+ *             .hostname("Router1")
+ *             .systemDescription("My Description")
+ *             .location("Building 1")
  *             .latitude(40)
  *             .longitude(50)
  *             .geoFencing(true)
  *             .geoFencingRange(1000)
  *             .geoFencingSms(true)
  *             .geoFencingSmsPhoneNumbers(CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgs.builder()
- *                 .number(&#34;+1234567&#34;)
+ *                 .number("+1234567")
  *                 .build())
- *             .deviceGroups(&#34;group1&#34;)
+ *             .deviceGroups("group1")
  *             .controllerGroupLists(1)
- *             .systemIp(&#34;5.5.5.5&#34;)
+ *             .systemIp("5.5.5.5")
  *             .overlayId(1)
  *             .siteId(1)
  *             .portOffset(1)
@@ -78,36 +79,37 @@ import javax.annotation.Nullable;
  *             .controlSessionPps(300)
  *             .trackTransport(true)
  *             .trackInterfaceTag(1)
- *             .consoleBaudRate(&#34;115200&#34;)
+ *             .consoleBaudRate("115200")
  *             .maxOmpSessions(5)
  *             .multiTenant(true)
  *             .trackDefaultGateway(true)
  *             .adminTechOnFailure(true)
  *             .idleTimeout(100)
  *             .trackers(CiscoSystemFeatureTemplateTrackerArgs.builder()
- *                 .name(&#34;tracker1&#34;)
- *                 .endpoint_ip(&#34;5.6.7.8&#34;)
+ *                 .name("tracker1")
+ *                 .endpoint_ip("5.6.7.8")
  *                 .threshold(300)
  *                 .interval(60)
  *                 .multiplier(3)
- *                 .type(&#34;interface&#34;)
+ *                 .type("interface")
  *                 .build())
  *             .objectTrackers(CiscoSystemFeatureTemplateObjectTrackerArgs.builder()
  *                 .object_number(1)
- *                 .interface_(&#34;e1&#34;)
+ *                 .interface_("e1")
  *                 .build())
  *             .onDemandTunnel(true)
  *             .onDemandTunnelIdleTimeout(10)
  *             .affinityGroupNumber(5)
  *             .affinityGroupPreferences(1)
  *             .transportGateway(true)
- *             .enableMrfMigration(&#34;enabled&#34;)
+ *             .enableMrfMigration("enabled")
  *             .migrationBgpCommunity(100)
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

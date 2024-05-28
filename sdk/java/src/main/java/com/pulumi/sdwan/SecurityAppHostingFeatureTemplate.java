@@ -24,7 +24,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -46,26 +47,27 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SecurityAppHostingFeatureTemplate(&#34;example&#34;, SecurityAppHostingFeatureTemplateArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .deviceTypes(&#34;vedge-C8000V&#34;)
+ *         var example = new SecurityAppHostingFeatureTemplate("example", SecurityAppHostingFeatureTemplateArgs.builder()        
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
  *             .virtualApplications(SecurityAppHostingFeatureTemplateVirtualApplicationArgs.builder()
- *                 .instance_id(&#34;2e89c1fe-440a-43f5-9f3a-54a9836fdbb5&#34;)
- *                 .application_type(&#34;utd&#34;)
+ *                 .instance_id("2e89c1fe-440a-43f5-9f3a-54a9836fdbb5")
+ *                 .application_type("utd")
  *                 .nat(true)
  *                 .database_url(false)
- *                 .resource_profile(&#34;low&#34;)
- *                 .service_gateway_ip(&#34;1.2.3.4/24&#34;)
- *                 .service_ip(&#34;1.2.3.5/24&#34;)
- *                 .data_gateway_ip(&#34;192.0.2.1/24&#34;)
- *                 .data_service_ip(&#34;192.0.2.2/24&#34;)
+ *                 .resource_profile("low")
+ *                 .service_gateway_ip("1.2.3.4/24")
+ *                 .service_ip("1.2.3.5/24")
+ *                 .data_gateway_ip("192.0.2.1/24")
+ *                 .data_service_ip("192.0.2.2/24")
  *                 .build())
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

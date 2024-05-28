@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -43,24 +44,25 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new TransportIpv6TrackerProfileParcel(&#34;example&#34;, TransportIpv6TrackerProfileParcelArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
- *             .trackerName(&#34;TRACKER_1&#34;)
- *             .endpointApiUrl(&#34;google.com&#34;)
- *             .endpointDnsName(&#34;google.com&#34;)
- *             .endpointIp(&#34;2001:0:0:1::0&#34;)
+ *         var example = new TransportIpv6TrackerProfileParcel("example", TransportIpv6TrackerProfileParcelArgs.builder()        
+ *             .name("Example")
+ *             .description("My Example")
+ *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+ *             .trackerName("TRACKER_1")
+ *             .endpointApiUrl("google.com")
+ *             .endpointDnsName("google.com")
+ *             .endpointIp("2001:0:0:1::0")
  *             .interval(30)
  *             .multiplier(3)
  *             .threshold(300)
- *             .endpointTrackerType(&#34;ipv6-interface&#34;)
- *             .trackerType(&#34;endpoint&#34;)
+ *             .endpointTrackerType("ipv6-interface")
+ *             .trackerType("endpoint")
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

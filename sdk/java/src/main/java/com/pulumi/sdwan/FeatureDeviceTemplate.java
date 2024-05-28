@@ -23,7 +23,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -45,19 +46,20 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new FeatureDeviceTemplate(&#34;example&#34;, FeatureDeviceTemplateArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My description&#34;)
- *             .deviceType(&#34;vedge-ISR-4331&#34;)
+ *         var example = new FeatureDeviceTemplate("example", FeatureDeviceTemplateArgs.builder()        
+ *             .name("Example")
+ *             .description("My description")
+ *             .deviceType("vedge-ISR-4331")
  *             .generalTemplates(FeatureDeviceTemplateGeneralTemplateArgs.builder()
- *                 .id(&#34;2081c2f4-3f9f-4fee-8078-dcc8904e368d&#34;)
- *                 .type(&#34;cisco_system&#34;)
+ *                 .id("2081c2f4-3f9f-4fee-8078-dcc8904e368d")
+ *                 .type("cisco_system")
  *                 .build())
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

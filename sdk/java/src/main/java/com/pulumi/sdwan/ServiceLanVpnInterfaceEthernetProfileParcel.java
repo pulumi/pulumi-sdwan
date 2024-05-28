@@ -32,7 +32,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -59,38 +60,38 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ServiceLanVpnInterfaceEthernetProfileParcel(&#34;example&#34;, ServiceLanVpnInterfaceEthernetProfileParcelArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
- *             .serviceLanVpnProfileParcelId(&#34;140331f6-5418-4755-a059-13c77eb96037&#34;)
+ *         var example = new ServiceLanVpnInterfaceEthernetProfileParcel("example", ServiceLanVpnInterfaceEthernetProfileParcelArgs.builder()        
+ *             .name("Example")
+ *             .description("My Example")
+ *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+ *             .serviceLanVpnProfileParcelId("140331f6-5418-4755-a059-13c77eb96037")
  *             .shutdown(false)
- *             .interfaceName(&#34;GigabitEthernet3&#34;)
- *             .configDescription(&#34;LAN&#34;)
- *             .ipv4Address(&#34;1.2.3.4&#34;)
- *             .ipv4SubnetMask(&#34;0.0.0.0&#34;)
+ *             .interfaceName("GigabitEthernet3")
+ *             .configDescription("LAN")
+ *             .ipv4Address("1.2.3.4")
+ *             .ipv4SubnetMask("0.0.0.0")
  *             .ipv4SecondaryAddresses(ServiceLanVpnInterfaceEthernetProfileParcelIpv4SecondaryAddressArgs.builder()
- *                 .address(&#34;1.2.3.5&#34;)
- *                 .subnet_mask(&#34;0.0.0.0&#34;)
+ *                 .address("1.2.3.5")
+ *                 .subnet_mask("0.0.0.0")
  *                 .build())
- *             .ipv4DhcpHelpers(&#34;1.2.3.4&#34;)
+ *             .ipv4DhcpHelpers("1.2.3.4")
  *             .ipv6DhcpHelpers(ServiceLanVpnInterfaceEthernetProfileParcelIpv6DhcpHelperArgs.builder()
- *                 .address(&#34;2001:0:0:1::0&#34;)
+ *                 .address("2001:0:0:1::0")
  *                 .dhcpv6_helper_vpn(1)
  *                 .build())
  *             .ipv4Nat(false)
- *             .ipv4NatType(&#34;pool&#34;)
- *             .ipv4NatRangeStart(&#34;1.2.3.4&#34;)
- *             .ipv4NatRangeEnd(&#34;4.5.6.7&#34;)
+ *             .ipv4NatType("pool")
+ *             .ipv4NatRangeStart("1.2.3.4")
+ *             .ipv4NatRangeEnd("4.5.6.7")
  *             .ipv4NatPrefixLength(1)
  *             .ipv4NatOverload(true)
- *             .ipv4NatLoopback(&#34;123&#34;)
+ *             .ipv4NatLoopback("123")
  *             .ipv4NatUdpTimeout(123)
  *             .ipv4NatTcpTimeout(123)
  *             .staticNats(ServiceLanVpnInterfaceEthernetProfileParcelStaticNatArgs.builder()
- *                 .source_ip(&#34;1.2.3.4&#34;)
- *                 .translate_ip(&#34;2.3.4.5&#34;)
- *                 .direction(&#34;inside&#34;)
+ *                 .source_ip("1.2.3.4")
+ *                 .translate_ip("2.3.4.5")
+ *                 .direction("inside")
  *                 .source_vpn(0)
  *                 .build())
  *             .ipv6Nat(true)
@@ -102,8 +103,8 @@ import javax.annotation.Nullable;
  *                 .timer(1000)
  *                 .track_omp(false)
  *                 .addresses(ServiceLanVpnInterfaceEthernetProfileParcelIpv6VrrpAddressArgs.builder()
- *                     .linkLocalAddress(&#34;1::1&#34;)
- *                     .globalAddress(&#34;1::1/24&#34;)
+ *                     .linkLocalAddress("1::1")
+ *                     .globalAddress("1::1/24")
  *                     .build())
  *                 .build())
  *             .ipv4Vrrps(ServiceLanVpnInterfaceEthernetProfileParcelIpv4VrrpArgs.builder()
@@ -111,39 +112,40 @@ import javax.annotation.Nullable;
  *                 .priority(100)
  *                 .timer(1000)
  *                 .track_omp(false)
- *                 .ip_address(&#34;1.2.3.4&#34;)
+ *                 .ip_address("1.2.3.4")
  *                 .secondary_addresses(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .tloc_prefix_change(true)
  *                 .tloc_pref_change_value(100)
  *                 .build())
  *             .arps(ServiceLanVpnInterfaceEthernetProfileParcelArpArgs.builder()
- *                 .ip_address(&#34;1.2.3.4&#34;)
- *                 .mac_address(&#34;00-B0-D0-63-C2-26&#34;)
+ *                 .ip_address("1.2.3.4")
+ *                 .mac_address("00-B0-D0-63-C2-26")
  *                 .build())
  *             .trustsecEnableSgtPropogation(false)
  *             .trustsecPropogate(true)
  *             .trustsecSecurityGroupTag(123)
  *             .trustsecEnableEnforcedPropogation(false)
  *             .trustsecEnforcedSecurityGroupTag(1234)
- *             .duplex(&#34;full&#34;)
- *             .macAddress(&#34;00-B0-D0-63-C2-26&#34;)
+ *             .duplex("full")
+ *             .macAddress("00-B0-D0-63-C2-26")
  *             .ipMtu(1500)
  *             .interfaceMtu(1500)
  *             .tcpMss(500)
- *             .speed(&#34;1000&#34;)
+ *             .speed("1000")
  *             .arpTimeout(1200)
  *             .autonegotiate(false)
- *             .mediaType(&#34;auto-select&#34;)
+ *             .mediaType("auto-select")
  *             .loadInterval(30)
- *             .tracker(&#34;TRACKER1&#34;)
+ *             .tracker("TRACKER1")
  *             .icmpRedirectDisable(true)
- *             .xconnect(&#34;1&#34;)
+ *             .xconnect("1")
  *             .ipDirectedBroadcast(false)
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

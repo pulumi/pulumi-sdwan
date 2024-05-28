@@ -24,7 +24,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -47,25 +48,26 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SecurityPolicy(&#34;example&#34;, SecurityPolicyArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;Example&#34;)
- *             .mode(&#34;security&#34;)
- *             .useCase(&#34;custom&#34;)
+ *         var example = new SecurityPolicy("example", SecurityPolicyArgs.builder()        
+ *             .name("Example")
+ *             .description("Example")
+ *             .mode("security")
+ *             .useCase("custom")
  *             .definitions(SecurityPolicyDefinitionArgs.builder()
- *                 .id(&#34;7d299c34-981c-4fb3-9167-6be44ab1691f&#34;)
- *                 .type(&#34;urlFiltering&#34;)
+ *                 .id("7d299c34-981c-4fb3-9167-6be44ab1691f")
+ *                 .type("urlFiltering")
  *                 .build())
- *             .failureMode(&#34;close&#34;)
+ *             .failureMode("close")
  *             .loggings(SecurityPolicyLoggingArgs.builder()
- *                 .external_syslog_server_ip(&#34;10.0.0.1&#34;)
- *                 .external_syslog_server_vpn(&#34;123&#34;)
+ *                 .external_syslog_server_ip("10.0.0.1")
+ *                 .external_syslog_server_vpn("123")
  *                 .build())
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

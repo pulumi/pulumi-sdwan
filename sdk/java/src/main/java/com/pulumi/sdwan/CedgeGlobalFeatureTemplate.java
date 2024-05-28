@@ -24,7 +24,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -45,17 +46,17 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CedgeGlobalFeatureTemplate(&#34;example&#34;, CedgeGlobalFeatureTemplateArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .deviceTypes(&#34;vedge-C8000V&#34;)
+ *         var example = new CedgeGlobalFeatureTemplate("example", CedgeGlobalFeatureTemplateArgs.builder()        
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
  *             .nat64UdpTimeout(300)
  *             .nat64TcpTimeout(3600)
- *             .httpAuthentication(&#34;local&#34;)
+ *             .httpAuthentication("local")
  *             .sshVersion(2)
  *             .httpServer(true)
  *             .httpsServer(true)
- *             .sourceInterface(&#34;e1&#34;)
+ *             .sourceInterface("e1")
  *             .ipSourceRouting(true)
  *             .arpProxy(true)
  *             .ftpPassive(true)
@@ -76,7 +77,8 @@ import javax.annotation.Nullable;
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

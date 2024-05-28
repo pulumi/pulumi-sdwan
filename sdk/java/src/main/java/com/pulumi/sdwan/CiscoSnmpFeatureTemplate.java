@@ -29,7 +29,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -55,48 +56,49 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CiscoSnmpFeatureTemplate(&#34;example&#34;, CiscoSnmpFeatureTemplateArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .deviceTypes(&#34;vedge-C8000V&#34;)
+ *         var example = new CiscoSnmpFeatureTemplate("example", CiscoSnmpFeatureTemplateArgs.builder()        
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
  *             .shutdown(false)
- *             .contact(&#34;Max&#34;)
- *             .location(&#34;Building 1&#34;)
+ *             .contact("Max")
+ *             .location("Building 1")
  *             .views(CiscoSnmpFeatureTemplateViewArgs.builder()
- *                 .name(&#34;VIEW1&#34;)
+ *                 .name("VIEW1")
  *                 .object_identifiers(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .build())
  *             .communities(CiscoSnmpFeatureTemplateCommunityArgs.builder()
- *                 .name(&#34;community1&#34;)
- *                 .view(&#34;VIEW1&#34;)
- *                 .authorization(&#34;read-only&#34;)
+ *                 .name("community1")
+ *                 .view("VIEW1")
+ *                 .authorization("read-only")
  *                 .build())
  *             .groups(CiscoSnmpFeatureTemplateGroupArgs.builder()
- *                 .name(&#34;GROUP1&#34;)
- *                 .security_level(&#34;auth-priv&#34;)
- *                 .view(&#34;VIEW1&#34;)
+ *                 .name("GROUP1")
+ *                 .security_level("auth-priv")
+ *                 .view("VIEW1")
  *                 .build())
  *             .users(CiscoSnmpFeatureTemplateUserArgs.builder()
- *                 .name(&#34;user1&#34;)
- *                 .authentication_protocol(&#34;sha&#34;)
- *                 .authentication_password(&#34;password123&#34;)
- *                 .privacy_protocol(&#34;aes-cfb-128&#34;)
- *                 .privacy_password(&#34;password123&#34;)
- *                 .group(&#34;GROUP1&#34;)
+ *                 .name("user1")
+ *                 .authentication_protocol("sha")
+ *                 .authentication_password("password123")
+ *                 .privacy_protocol("aes-cfb-128")
+ *                 .privacy_password("password123")
+ *                 .group("GROUP1")
  *                 .build())
  *             .trapTargets(CiscoSnmpFeatureTemplateTrapTargetArgs.builder()
  *                 .vpn_id(1)
- *                 .ip(&#34;1.1.1.1&#34;)
+ *                 .ip("1.1.1.1")
  *                 .udp_port(12345)
- *                 .community_name(&#34;community1&#34;)
- *                 .user(&#34;user1&#34;)
- *                 .source_interface(&#34;e1&#34;)
+ *                 .community_name("community1")
+ *                 .user("user1")
+ *                 .source_interface("e1")
  *                 .build())
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

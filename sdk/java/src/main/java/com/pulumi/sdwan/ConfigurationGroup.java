@@ -25,7 +25,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -47,18 +48,19 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ConfigurationGroup(&#34;example&#34;, ConfigurationGroupArgs.builder()        
- *             .name(&#34;CG_1&#34;)
- *             .description(&#34;My config group 1&#34;)
- *             .solution(&#34;sdwan&#34;)
+ *         var example = new ConfigurationGroup("example", ConfigurationGroupArgs.builder()        
+ *             .name("CG_1")
+ *             .description("My config group 1")
+ *             .solution("sdwan")
  *             .featureProfiles(ConfigurationGroupFeatureProfileArgs.builder()
- *                 .id(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+ *                 .id("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
  *                 .build())
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

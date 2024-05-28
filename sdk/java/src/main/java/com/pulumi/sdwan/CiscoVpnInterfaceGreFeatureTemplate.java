@@ -25,7 +25,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -47,33 +48,34 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CiscoVpnInterfaceGreFeatureTemplate(&#34;example&#34;, CiscoVpnInterfaceGreFeatureTemplateArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .deviceTypes(&#34;vedge-C8000V&#34;)
- *             .interfaceName(&#34;gre0/0&#34;)
- *             .interfaceDescription(&#34;My Description&#34;)
- *             .ipAddress(&#34;1.1.1.1/24&#34;)
- *             .tunnelSource(&#34;1.2.3.4&#34;)
+ *         var example = new CiscoVpnInterfaceGreFeatureTemplate("example", CiscoVpnInterfaceGreFeatureTemplateArgs.builder()        
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
+ *             .interfaceName("gre0/0")
+ *             .interfaceDescription("My Description")
+ *             .ipAddress("1.1.1.1/24")
+ *             .tunnelSource("1.2.3.4")
  *             .shutdown(true)
- *             .tunnelSourceInterface(&#34;e1&#34;)
- *             .tunnelDestination(&#34;3.4.5.6&#34;)
- *             .application(&#34;sig&#34;)
+ *             .tunnelSourceInterface("e1")
+ *             .tunnelDestination("3.4.5.6")
+ *             .application("sig")
  *             .ipMtu(1500)
  *             .tcpMssAdjust(1400)
  *             .clearDontFragment(true)
- *             .rewriteRule(&#34;ACL1&#34;)
+ *             .rewriteRule("ACL1")
  *             .accessLists(CiscoVpnInterfaceGreFeatureTemplateAccessListArgs.builder()
- *                 .direction(&#34;in&#34;)
- *                 .acl_name(&#34;ACL2&#34;)
+ *                 .direction("in")
+ *                 .acl_name("ACL2")
  *                 .build())
- *             .trackers(&#34;TRACKER1&#34;)
- *             .tunnelRouteVia(&#34;g0/0&#34;)
+ *             .trackers("TRACKER1")
+ *             .tunnelRouteVia("g0/0")
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

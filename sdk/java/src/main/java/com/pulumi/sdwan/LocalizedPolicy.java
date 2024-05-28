@@ -24,7 +24,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -46,9 +47,9 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new LocalizedPolicy(&#34;example&#34;, LocalizedPolicyArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My description&#34;)
+ *         var example = new LocalizedPolicy("example", LocalizedPolicyArgs.builder()        
+ *             .name("Example")
+ *             .description("My description")
  *             .flowVisibilityIpv4(true)
  *             .flowVisibilityIpv6(true)
  *             .applicationVisibilityIpv4(true)
@@ -60,14 +61,15 @@ import javax.annotation.Nullable;
  *             .ipv4VisibilityCacheEntries(1000)
  *             .ipv6VisibilityCacheEntries(1000)
  *             .definitions(LocalizedPolicyDefinitionArgs.builder()
- *                 .id(&#34;2081c2f4-3f9f-4fee-8078-dcc8904e368d&#34;)
- *                 .type(&#34;acl&#34;)
+ *                 .id("2081c2f4-3f9f-4fee-8078-dcc8904e368d")
+ *                 .type("acl")
  *                 .build())
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,12 +45,12 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new RewriteRulePolicyDefinition(&#34;example&#34;, RewriteRulePolicyDefinitionArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My description&#34;)
+ *         var example = new RewriteRulePolicyDefinition("example", RewriteRulePolicyDefinitionArgs.builder()        
+ *             .name("Example")
+ *             .description("My description")
  *             .rules(RewriteRulePolicyDefinitionRuleArgs.builder()
- *                 .class_map_id(&#34;2081c2f4-3f9f-4fee-8078-dcc8904e368d&#34;)
- *                 .priority(&#34;low&#34;)
+ *                 .class_map_id("2081c2f4-3f9f-4fee-8078-dcc8904e368d")
+ *                 .priority("low")
  *                 .dscp(16)
  *                 .layer2_cos(1)
  *                 .build())
@@ -57,7 +58,8 @@ import javax.annotation.Nullable;
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

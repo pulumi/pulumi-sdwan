@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,16 +45,17 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ProtocolListPolicyObject(&#34;example&#34;, ProtocolListPolicyObjectArgs.builder()        
- *             .name(&#34;Example&#34;)
+ *         var example = new ProtocolListPolicyObject("example", ProtocolListPolicyObjectArgs.builder()        
+ *             .name("Example")
  *             .entries(ProtocolListPolicyObjectEntryArgs.builder()
- *                 .protocol(&#34;cifs&#34;)
+ *                 .protocol("cifs")
  *                 .build())
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

@@ -26,7 +26,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -49,28 +50,28 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SystemSecurityProfileParcel(&#34;example&#34;, SystemSecurityProfileParcelArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
+ *         var example = new SystemSecurityProfileParcel("example", SystemSecurityProfileParcelArgs.builder()        
+ *             .name("Example")
+ *             .description("My Example")
+ *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
  *             .rekey(86400)
- *             .antiReplayWindow(&#34;512&#34;)
+ *             .antiReplayWindow("512")
  *             .extendedAntiReplayWindow(256)
  *             .ipsecPairwiseKeying(false)
- *             .integrityTypes(&#34;esp&#34;)
+ *             .integrityTypes("esp")
  *             .keychains(SystemSecurityProfileParcelKeychainArgs.builder()
- *                 .key_chain_name(&#34;aaa&#34;)
+ *                 .key_chain_name("aaa")
  *                 .key_id(1)
  *                 .build())
  *             .keys(SystemSecurityProfileParcelKeyArgs.builder()
  *                 .id(0)
- *                 .name(&#34;aaa&#34;)
+ *                 .name("aaa")
  *                 .send_id(1)
  *                 .receiver_id(2)
  *                 .include_tcp_options(false)
  *                 .accept_ao_mismatch(false)
- *                 .crypto_algorithm(&#34;aes-128-cmac&#34;)
- *                 .key_string(&#34;abcabc&#34;)
+ *                 .crypto_algorithm("aes-128-cmac")
+ *                 .key_string("abcabc")
  *                 .send_life_time_local(true)
  *                 .send_life_time_start_epoch(1659284400)
  *                 .send_life_time_infinite(true)
@@ -82,7 +83,8 @@ import javax.annotation.Nullable;
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

@@ -21,7 +21,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -42,19 +43,20 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new PreferredColorGroupPolicyObject(&#34;example&#34;, PreferredColorGroupPolicyObjectArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .primaryColorPreference(&#34;blue bronze&#34;)
- *             .primaryPathPreference(&#34;direct-path&#34;)
- *             .secondaryColorPreference(&#34;3g&#34;)
- *             .secondaryPathPreference(&#34;multi-hop-path&#34;)
- *             .tertiaryColorPreference(&#34;custom1&#34;)
- *             .tertiaryPathPreference(&#34;all-paths&#34;)
+ *         var example = new PreferredColorGroupPolicyObject("example", PreferredColorGroupPolicyObjectArgs.builder()        
+ *             .name("Example")
+ *             .primaryColorPreference("blue bronze")
+ *             .primaryPathPreference("direct-path")
+ *             .secondaryColorPreference("3g")
+ *             .secondaryPathPreference("multi-hop-path")
+ *             .tertiaryColorPreference("custom1")
+ *             .tertiaryPathPreference("all-paths")
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

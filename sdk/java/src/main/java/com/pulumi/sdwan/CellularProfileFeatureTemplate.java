@@ -23,7 +23,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,26 +45,27 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CellularProfileFeatureTemplate(&#34;example&#34;, CellularProfileFeatureTemplateArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .deviceTypes(&#34;vedge-C8000V&#34;)
- *             .ifName(&#34;Ethernet1&#34;)
+ *         var example = new CellularProfileFeatureTemplate("example", CellularProfileFeatureTemplateArgs.builder()        
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
+ *             .ifName("Ethernet1")
  *             .profileId(1)
- *             .accessPointName(&#34;APN1&#34;)
- *             .authenticationType(&#34;CHAP&#34;)
- *             .ipAddress(&#34;1.2.3.4&#34;)
- *             .profileName(&#34;PROFILE1&#34;)
- *             .packetDataNetworkType(&#34;ipv4&#34;)
- *             .profileUsername(&#34;MyUsername&#34;)
- *             .profilePassword(&#34;MyPassword&#34;)
- *             .primaryDnsAddress(&#34;1.2.3.4&#34;)
- *             .secondaryDnsAddress(&#34;1.2.3.5&#34;)
+ *             .accessPointName("APN1")
+ *             .authenticationType("CHAP")
+ *             .ipAddress("1.2.3.4")
+ *             .profileName("PROFILE1")
+ *             .packetDataNetworkType("ipv4")
+ *             .profileUsername("MyUsername")
+ *             .profilePassword("MyPassword")
+ *             .primaryDnsAddress("1.2.3.4")
+ *             .secondaryDnsAddress("1.2.3.5")
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

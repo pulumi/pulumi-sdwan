@@ -23,7 +23,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -45,16 +46,16 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CustomControlTopologyPolicyDefinition(&#34;example&#34;, CustomControlTopologyPolicyDefinitionArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My description&#34;)
- *             .defaultAction(&#34;reject&#34;)
+ *         var example = new CustomControlTopologyPolicyDefinition("example", CustomControlTopologyPolicyDefinitionArgs.builder()        
+ *             .name("Example")
+ *             .description("My description")
+ *             .defaultAction("reject")
  *             .sequences(CustomControlTopologyPolicyDefinitionSequenceArgs.builder()
  *                 .id(1)
- *                 .name(&#34;Region1&#34;)
- *                 .type(&#34;route&#34;)
- *                 .ip_type(&#34;ipv4&#34;)
- *                 .base_action(&#34;accept&#34;)
+ *                 .name("Region1")
+ *                 .type("route")
+ *                 .ip_type("ipv4")
+ *                 .base_action("accept")
  *                 .match_entries(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .action_entries(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .build())
@@ -62,7 +63,8 @@ import javax.annotation.Nullable;
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

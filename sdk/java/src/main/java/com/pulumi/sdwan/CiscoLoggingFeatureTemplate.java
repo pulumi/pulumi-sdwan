@@ -27,7 +27,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -51,42 +52,43 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CiscoLoggingFeatureTemplate(&#34;example&#34;, CiscoLoggingFeatureTemplateArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .deviceTypes(&#34;vedge-C8000V&#34;)
+ *         var example = new CiscoLoggingFeatureTemplate("example", CiscoLoggingFeatureTemplateArgs.builder()        
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
  *             .diskLogging(true)
  *             .maxSize(10)
  *             .logRotations(10)
  *             .tlsProfiles(CiscoLoggingFeatureTemplateTlsProfileArgs.builder()
- *                 .name(&#34;PROF1&#34;)
- *                 .version(&#34;TLSv1.2&#34;)
- *                 .authentication_type(&#34;Server&#34;)
- *                 .ciphersuite_list(&#34;aes-128-cbc-sha&#34;)
+ *                 .name("PROF1")
+ *                 .version("TLSv1.2")
+ *                 .authentication_type("Server")
+ *                 .ciphersuite_list("aes-128-cbc-sha")
  *                 .build())
  *             .ipv4Servers(CiscoLoggingFeatureTemplateIpv4ServerArgs.builder()
- *                 .hostname_ip(&#34;2.2.2.2&#34;)
+ *                 .hostname_ip("2.2.2.2")
  *                 .vpn_id(1)
- *                 .source_interface(&#34;e1&#34;)
- *                 .logging_level(&#34;information&#34;)
+ *                 .source_interface("e1")
+ *                 .logging_level("information")
  *                 .enable_tls(true)
  *                 .custom_profile(true)
- *                 .profile(&#34;PROF1&#34;)
+ *                 .profile("PROF1")
  *                 .build())
  *             .ipv6Servers(CiscoLoggingFeatureTemplateIpv6ServerArgs.builder()
- *                 .hostname_ip(&#34;2001::1&#34;)
+ *                 .hostname_ip("2001::1")
  *                 .vpn_id(1)
- *                 .source_interface(&#34;e1&#34;)
- *                 .logging_level(&#34;information&#34;)
+ *                 .source_interface("e1")
+ *                 .logging_level("information")
  *                 .enable_tls(true)
  *                 .custom_profile(true)
- *                 .profile(&#34;PROF1&#34;)
+ *                 .profile("PROF1")
  *                 .build())
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

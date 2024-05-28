@@ -21,7 +21,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -42,19 +43,20 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CliConfigProfileParcel(&#34;example&#34;, CliConfigProfileParcelArgs.builder()        
- *             .featureProfileId(&#34;f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;)
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .cliConfiguration(&#34;&#34;&#34;
+ *         var example = new CliConfigProfileParcel("example", CliConfigProfileParcelArgs.builder()        
+ *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+ *             .name("Example")
+ *             .description("My Example")
+ *             .cliConfiguration("""
  * bfd default-dscp 48
  * bfd app-route multiplier 6
- * bfd app-route poll-interval 600000            &#34;&#34;&#34;)
+ * bfd app-route poll-interval 600000            """)
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

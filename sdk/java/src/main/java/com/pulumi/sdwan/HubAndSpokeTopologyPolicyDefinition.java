@@ -23,7 +23,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -45,20 +46,20 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new HubAndSpokeTopologyPolicyDefinition(&#34;example&#34;, HubAndSpokeTopologyPolicyDefinitionArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My description&#34;)
- *             .vpnListId(&#34;04fcbb0b-efbf-43d2-a04b-847d3a7b104e&#34;)
+ *         var example = new HubAndSpokeTopologyPolicyDefinition("example", HubAndSpokeTopologyPolicyDefinitionArgs.builder()        
+ *             .name("Example")
+ *             .description("My description")
+ *             .vpnListId("04fcbb0b-efbf-43d2-a04b-847d3a7b104e")
  *             .topologies(HubAndSpokeTopologyPolicyDefinitionTopologyArgs.builder()
- *                 .name(&#34;Topology1&#34;)
+ *                 .name("Topology1")
  *                 .all_hubs_are_equal(false)
  *                 .advertise_hub_tlocs(true)
- *                 .tloc_list_id(&#34;b326e448-bf33-47e4-83e7-f947e6981382&#34;)
+ *                 .tloc_list_id("b326e448-bf33-47e4-83e7-f947e6981382")
  *                 .spokes(HubAndSpokeTopologyPolicyDefinitionTopologySpokeArgs.builder()
- *                     .siteListId(&#34;e858e1c4-6aa8-4de7-99df-c3adbf80290d&#34;)
+ *                     .siteListId("e858e1c4-6aa8-4de7-99df-c3adbf80290d")
  *                     .hubs(HubAndSpokeTopologyPolicyDefinitionTopologySpokeHubArgs.builder()
- *                         .siteListId(&#34;e858e1c4-6aa8-4de7-99df-c3adbf80290d&#34;)
- *                         .preference(&#34;30&#34;)
+ *                         .siteListId("e858e1c4-6aa8-4de7-99df-c3adbf80290d")
+ *                         .preference("30")
  *                         .build())
  *                     .build())
  *                 .build())
@@ -66,7 +67,8 @@ import javax.annotation.Nullable;
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

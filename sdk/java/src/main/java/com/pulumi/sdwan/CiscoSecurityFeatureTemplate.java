@@ -26,7 +26,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -49,38 +50,38 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CiscoSecurityFeatureTemplate(&#34;example&#34;, CiscoSecurityFeatureTemplateArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .deviceTypes(&#34;vedge-C8000V&#34;)
+ *         var example = new CiscoSecurityFeatureTemplate("example", CiscoSecurityFeatureTemplateArgs.builder()        
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
  *             .rekeyInterval(86400)
- *             .replayWindow(&#34;64&#34;)
+ *             .replayWindow("64")
  *             .extendedArWindow(256)
- *             .authenticationTypes(&#34;none&#34;)
- *             .integrityTypes(&#34;none&#34;)
+ *             .authenticationTypes("none")
+ *             .integrityTypes("none")
  *             .pairwiseKeying(true)
  *             .keychains(CiscoSecurityFeatureTemplateKeychainArgs.builder()
- *                 .name(&#34;CHAIN1&#34;)
+ *                 .name("CHAIN1")
  *                 .key_id(1)
  *                 .build())
  *             .keys(CiscoSecurityFeatureTemplateKeyArgs.builder()
- *                 .id(&#34;1&#34;)
- *                 .chain_name(&#34;CHAIN1&#34;)
+ *                 .id("1")
+ *                 .chain_name("CHAIN1")
  *                 .send_id(0)
  *                 .receive_id(0)
- *                 .crypto_algorithm(&#34;hmac-sha-256&#34;)
- *                 .key_string(&#34;abc123&#34;)
+ *                 .crypto_algorithm("hmac-sha-256")
+ *                 .key_string("abc123")
  *                 .send_lifetime_local(true)
- *                 .send_lifetime_start_time(&#34;2022-12-31T23:59&#34;)
- *                 .send_lifetime_end_time_format(&#34;infinite&#34;)
+ *                 .send_lifetime_start_time("2022-12-31T23:59")
+ *                 .send_lifetime_end_time_format("infinite")
  *                 .send_lifetime_duration(1000)
- *                 .send_lifetime_end_time(&#34;2032-12-31T23:59&#34;)
+ *                 .send_lifetime_end_time("2032-12-31T23:59")
  *                 .send_lifetime_infinite(true)
  *                 .accept_lifetime_local(true)
- *                 .accept_lifetime_start_time(&#34;2022-12-31T23:59&#34;)
- *                 .accept_lifetime_end_time_format(&#34;infinite&#34;)
+ *                 .accept_lifetime_start_time("2022-12-31T23:59")
+ *                 .accept_lifetime_end_time_format("infinite")
  *                 .accept_lifetime_duration(1000)
- *                 .accept_lifetime_end_time(&#34;2032-12-31T23:59&#34;)
+ *                 .accept_lifetime_end_time("2032-12-31T23:59")
  *                 .accept_lifetime_infinite(true)
  *                 .include_tcp_options(false)
  *                 .accept_ao_mismatch(true)
@@ -89,7 +90,8 @@ import javax.annotation.Nullable;
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

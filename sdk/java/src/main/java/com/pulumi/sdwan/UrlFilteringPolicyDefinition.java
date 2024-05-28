@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -43,22 +44,23 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new UrlFilteringPolicyDefinition(&#34;example&#34;, UrlFilteringPolicyDefinitionArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My description&#34;)
- *             .mode(&#34;security&#34;)
- *             .alerts(&#34;blacklist&#34;)
- *             .webCategories(&#34;alcohol-and-tobacco&#34;)
- *             .webCategoriesAction(&#34;allow&#34;)
- *             .webReputation(&#34;moderate-risk&#34;)
- *             .targetVpns(&#34;1&#34;)
- *             .blockPageAction(&#34;text&#34;)
- *             .blockPageContents(&#34;Access to the requested page has been denied. Please contact your Network Administrator&#34;)
+ *         var example = new UrlFilteringPolicyDefinition("example", UrlFilteringPolicyDefinitionArgs.builder()        
+ *             .name("Example")
+ *             .description("My description")
+ *             .mode("security")
+ *             .alerts("blacklist")
+ *             .webCategories("alcohol-and-tobacco")
+ *             .webCategoriesAction("allow")
+ *             .webReputation("moderate-risk")
+ *             .targetVpns("1")
+ *             .blockPageAction("text")
+ *             .blockPageContents("Access to the requested page has been denied. Please contact your Network Administrator")
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

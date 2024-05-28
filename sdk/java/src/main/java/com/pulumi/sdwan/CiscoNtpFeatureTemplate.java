@@ -26,7 +26,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -49,31 +50,32 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CiscoNtpFeatureTemplate(&#34;example&#34;, CiscoNtpFeatureTemplateArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .deviceTypes(&#34;vedge-C8000V&#34;)
+ *         var example = new CiscoNtpFeatureTemplate("example", CiscoNtpFeatureTemplateArgs.builder()        
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
  *             .master(true)
  *             .masterStratum(6)
- *             .masterSourceInterface(&#34;e1&#34;)
+ *             .masterSourceInterface("e1")
  *             .trustedKeys(1)
  *             .authenticationKeys(CiscoNtpFeatureTemplateAuthenticationKeyArgs.builder()
  *                 .id(1)
- *                 .value(&#34;12345&#34;)
+ *                 .value("12345")
  *                 .build())
  *             .servers(CiscoNtpFeatureTemplateServerArgs.builder()
- *                 .hostname_ip(&#34;NTP_SERVER1&#34;)
+ *                 .hostname_ip("NTP_SERVER1")
  *                 .authentication_key_id(1)
  *                 .vpn_id(1)
  *                 .version(4)
- *                 .source_interface(&#34;e1&#34;)
+ *                 .source_interface("e1")
  *                 .prefer(true)
  *                 .build())
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

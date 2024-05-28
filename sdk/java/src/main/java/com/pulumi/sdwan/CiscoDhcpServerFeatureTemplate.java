@@ -25,7 +25,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -48,34 +49,35 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CiscoDhcpServerFeatureTemplate(&#34;example&#34;, CiscoDhcpServerFeatureTemplateArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .deviceTypes(&#34;vedge-C8000V&#34;)
- *             .addressPool(&#34;10.1.1.0/24&#34;)
+ *         var example = new CiscoDhcpServerFeatureTemplate("example", CiscoDhcpServerFeatureTemplateArgs.builder()        
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
+ *             .addressPool("10.1.1.0/24")
  *             .excludeAddresses(            
- *                 &#34;10.1.1.1-10.1.1.5&#34;,
- *                 &#34;10.1.1.254&#34;)
+ *                 "10.1.1.1-10.1.1.5",
+ *                 "10.1.1.254")
  *             .leaseTime(600)
  *             .interfaceMtu(1500)
- *             .domainName(&#34;cisco.com&#34;)
- *             .defaultGateway(&#34;10.1.1.254&#34;)
- *             .dnsServers(&#34;1.2.3.4&#34;)
- *             .tftpServers(&#34;1.2.3.4&#34;)
+ *             .domainName("cisco.com")
+ *             .defaultGateway("10.1.1.254")
+ *             .dnsServers("1.2.3.4")
+ *             .tftpServers("1.2.3.4")
  *             .staticLeases(CiscoDhcpServerFeatureTemplateStaticLeaseArgs.builder()
- *                 .mac_address(&#34;11:11:11:11:11:11&#34;)
- *                 .ip_address(&#34;10.1.1.10&#34;)
- *                 .hostname(&#34;HOST1&#34;)
+ *                 .mac_address("11:11:11:11:11:11")
+ *                 .ip_address("10.1.1.10")
+ *                 .hostname("HOST1")
  *                 .build())
  *             .options(CiscoDhcpServerFeatureTemplateOptionArgs.builder()
  *                 .option_code(10)
- *                 .ascii(&#34;abc&#34;)
+ *                 .ascii("abc")
  *                 .build())
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

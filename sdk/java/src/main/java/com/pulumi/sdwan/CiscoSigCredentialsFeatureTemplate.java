@@ -23,7 +23,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,26 +45,27 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CiscoSigCredentialsFeatureTemplate(&#34;example&#34;, CiscoSigCredentialsFeatureTemplateArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .deviceTypes(&#34;vedge-C8000V&#34;)
- *             .zscalerOrganization(&#34;org1&#34;)
- *             .zscalerPartnerBaseUri(&#34;abc&#34;)
- *             .zscalerUsername(&#34;user1&#34;)
- *             .zscalerPassword(&#34;password123&#34;)
+ *         var example = new CiscoSigCredentialsFeatureTemplate("example", CiscoSigCredentialsFeatureTemplateArgs.builder()        
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
+ *             .zscalerOrganization("org1")
+ *             .zscalerPartnerBaseUri("abc")
+ *             .zscalerUsername("user1")
+ *             .zscalerPassword("password123")
  *             .zscalerCloudName(1)
- *             .zscalerPartnerUsername(&#34;partner1&#34;)
- *             .zscalerPartnerPassword(&#34;password123&#34;)
- *             .zscalerPartnerApiKey(&#34;key123&#34;)
- *             .umbrellaApiKey(&#34;key123&#34;)
- *             .umbrellaApiSecret(&#34;secret123&#34;)
- *             .umbrellaOrganizationId(&#34;org1&#34;)
+ *             .zscalerPartnerUsername("partner1")
+ *             .zscalerPartnerPassword("password123")
+ *             .zscalerPartnerApiKey("key123")
+ *             .umbrellaApiKey("key123")
+ *             .umbrellaApiSecret("secret123")
+ *             .umbrellaOrganizationId("org1")
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

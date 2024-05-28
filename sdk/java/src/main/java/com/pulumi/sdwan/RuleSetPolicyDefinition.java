@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,27 +45,28 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new RuleSetPolicyDefinition(&#34;example&#34;, RuleSetPolicyDefinitionArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My description&#34;)
+ *         var example = new RuleSetPolicyDefinition("example", RuleSetPolicyDefinitionArgs.builder()        
+ *             .name("Example")
+ *             .description("My description")
  *             .rules(RuleSetPolicyDefinitionRuleArgs.builder()
- *                 .name(&#34;Rule1&#34;)
+ *                 .name("Rule1")
  *                 .order(1)
- *                 .source_ipv4_prefix(&#34;10.1.1.0/24&#34;)
- *                 .source_fqdn(&#34;cisco.com&#34;)
- *                 .source_port(&#34;80-90&#34;)
- *                 .source_geo_location(&#34;AF&#34;)
- *                 .destination_ipv4_prefix(&#34;10.1.1.0/24&#34;)
- *                 .destination_fqdn(&#34;cisco.com&#34;)
- *                 .destination_port(&#34;80-90&#34;)
- *                 .destination_geo_location(&#34;AF&#34;)
- *                 .protocol(&#34;cifs&#34;)
+ *                 .source_ipv4_prefix("10.1.1.0/24")
+ *                 .source_fqdn("cisco.com")
+ *                 .source_port("80-90")
+ *                 .source_geo_location("AF")
+ *                 .destination_ipv4_prefix("10.1.1.0/24")
+ *                 .destination_fqdn("cisco.com")
+ *                 .destination_port("80-90")
+ *                 .destination_geo_location("AF")
+ *                 .protocol("cifs")
  *                 .build())
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

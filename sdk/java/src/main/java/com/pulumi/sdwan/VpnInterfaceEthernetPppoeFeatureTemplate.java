@@ -28,7 +28,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -53,32 +54,32 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new VpnInterfaceEthernetPppoeFeatureTemplate(&#34;example&#34;, VpnInterfaceEthernetPppoeFeatureTemplateArgs.builder()        
- *             .name(&#34;Example&#34;)
- *             .description(&#34;My Example&#34;)
- *             .deviceTypes(&#34;vedge-C8000V&#34;)
- *             .ethernetInterfaceName(&#34;Example&#34;)
+ *         var example = new VpnInterfaceEthernetPppoeFeatureTemplate("example", VpnInterfaceEthernetPppoeFeatureTemplateArgs.builder()        
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
+ *             .ethernetInterfaceName("Example")
  *             .shutdown(true)
- *             .interfaceDescription(&#34;My Description&#34;)
+ *             .interfaceDescription("My Description")
  *             .encap(4094)
  *             .dialerPoolNumber(255)
  *             .pppMaximumPayload(1790)
  *             .dialerAddressNegotiated(false)
  *             .ipDirectedBroadcast(false)
- *             .unnumberedLoopbackInterface(&#34;example&#34;)
- *             .pppAuthenticationProtocol(&#34;chap&#34;)
+ *             .unnumberedLoopbackInterface("example")
+ *             .pppAuthenticationProtocol("chap")
  *             .pppAuthenticationProtocolPap(false)
- *             .chapHostname(&#34;chap-example&#34;)
- *             .chapPppAuthPassword(&#34;myPassword&#34;)
- *             .papUsername(&#34;pap-username&#34;)
+ *             .chapHostname("chap-example")
+ *             .chapPppAuthPassword("myPassword")
+ *             .papUsername("pap-username")
  *             .papPassword(true)
- *             .papPppAuthPassword(&#34;myPassword&#34;)
- *             .pppAuthenticationType(&#34;callin&#34;)
+ *             .papPppAuthPassword("myPassword")
+ *             .pppAuthenticationType("callin")
  *             .enableCoreRegion(true)
- *             .coreRegion(&#34;core&#34;)
- *             .secondaryRegion(&#34;off&#34;)
+ *             .coreRegion("core")
+ *             .secondaryRegion("off")
  *             .tunnelInterfaceEncapsulations(VpnInterfaceEthernetPppoeFeatureTemplateTunnelInterfaceEncapsulationArgs.builder()
- *                 .encapsulation(&#34;gre&#34;)
+ *                 .encapsulation("gre")
  *                 .preference(4294967)
  *                 .weight(250)
  *                 .build())
@@ -86,8 +87,8 @@ import javax.annotation.Nullable;
  *             .tunnelInterfaceBorder(true)
  *             .perTunnelQos(true)
  *             .perTunnelQosAggregator(false)
- *             .tunnelQosMode(&#34;spoke&#34;)
- *             .tunnelInterfaceColor(&#34;custom1&#34;)
+ *             .tunnelQosMode("spoke")
+ *             .tunnelInterfaceColor("custom1")
  *             .tunnelInterfaceLastResortCircuit(false)
  *             .tunnelInterfaceLowBandwidthLink(false)
  *             .tunnelInterfaceTunnelTcpMss(1460)
@@ -100,11 +101,11 @@ import javax.annotation.Nullable;
  *             .tunnelInterfaceVmanageConnectionPreference(5)
  *             .tunnelInterfacePortHop(false)
  *             .tunnelInterfaceColorRestrict(false)
- *             .tunnelInterfaceCarrier(&#34;carrier1&#34;)
+ *             .tunnelInterfaceCarrier("carrier1")
  *             .tunnelInterfaceNatRefreshInterval(15)
  *             .tunnelInterfaceHelloInterval(1000)
  *             .tunnelInterfaceHelloTolerance(12)
- *             .tunnelInterfaceBindLoopbackTunnel(&#34;12&#34;)
+ *             .tunnelInterfaceBindLoopbackTunnel("12")
  *             .tunnelInterfaceAllowAll(false)
  *             .tunnelInterfaceAllowBgp(false)
  *             .tunnelInterfaceAllowDhcp(true)
@@ -118,7 +119,7 @@ import javax.annotation.Nullable;
  *             .tunnelInterfaceAllowSnmp(false)
  *             .tunnelInterfaceAllowHttps(true)
  *             .nat(true)
- *             .natRefreshMode(&#34;outbound&#34;)
+ *             .natRefreshMode("outbound")
  *             .natUdpTimeout(1)
  *             .natTcpTimeout(60)
  *             .natBlockIcmpError(true)
@@ -126,9 +127,9 @@ import javax.annotation.Nullable;
  *             .natPortForwards(VpnInterfaceEthernetPppoeFeatureTemplateNatPortForwardArgs.builder()
  *                 .port_start_range(0)
  *                 .port_end_range(65530)
- *                 .protocol(&#34;tcp&#34;)
+ *                 .protocol("tcp")
  *                 .private_vpn(65530)
- *                 .private_ip_address(&#34;1.2.3.4&#34;)
+ *                 .private_ip_address("1.2.3.4")
  *                 .build())
  *             .qosAdaptivePeriod(15)
  *             .qosAdaptiveBandwidthDownstream(10000)
@@ -138,28 +139,29 @@ import javax.annotation.Nullable;
  *             .qosAdaptiveMinUpstream(100)
  *             .qosAdaptiveMaxUpstream(100000)
  *             .shapingRate(10000000)
- *             .qosMap(&#34;test&#34;)
- *             .qosMapVpn(&#34;test&#34;)
+ *             .qosMap("test")
+ *             .qosMapVpn("test")
  *             .bandwidthUpstream(214748300)
  *             .bandwidthDownstream(214748300)
- *             .writeRule(&#34;RULE1&#34;)
+ *             .writeRule("RULE1")
  *             .accessLists(VpnInterfaceEthernetPppoeFeatureTemplateAccessListArgs.builder()
- *                 .direction(&#34;in&#34;)
- *                 .acl_name(&#34;ACL1&#34;)
+ *                 .direction("in")
+ *                 .acl_name("ACL1")
  *                 .build())
  *             .policers(VpnInterfaceEthernetPppoeFeatureTemplatePolicerArgs.builder()
- *                 .direction(&#34;in&#34;)
- *                 .policer_name(&#34;example&#34;)
+ *                 .direction("in")
+ *                 .policer_name("example")
  *                 .build())
  *             .ipMtuForDialerInterface(1500)
  *             .dialerTcpMss(720)
- *             .tlocExtension(&#34;tloc&#34;)
- *             .trackers(&#34;tracker1&#34;)
+ *             .tlocExtension("tloc")
+ *             .trackers("tracker1")
  *             .build());
  * 
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import
