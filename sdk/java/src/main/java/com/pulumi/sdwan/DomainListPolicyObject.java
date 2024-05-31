@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new DomainListPolicyObject("example", DomainListPolicyObjectArgs.builder()        
+ *         var example = new DomainListPolicyObject("example", DomainListPolicyObjectArgs.builder()
  *             .name("Example")
  *             .entries(DomainListPolicyObjectEntryArgs.builder()
  *                 .domain(".*.cisco.com")

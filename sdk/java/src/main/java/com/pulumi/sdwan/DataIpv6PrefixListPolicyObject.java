@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new DataIpv6PrefixListPolicyObject("example", DataIpv6PrefixListPolicyObjectArgs.builder()        
+ *         var example = new DataIpv6PrefixListPolicyObject("example", DataIpv6PrefixListPolicyObjectArgs.builder()
  *             .name("Example")
  *             .entries(DataIpv6PrefixListPolicyObjectEntryArgs.builder()
  *                 .prefix("2001:0:0:1::/64")

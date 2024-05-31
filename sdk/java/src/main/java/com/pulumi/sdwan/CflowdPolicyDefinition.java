@@ -47,7 +47,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CflowdPolicyDefinition("example", CflowdPolicyDefinitionArgs.builder()        
+ *         var example = new CflowdPolicyDefinition("example", CflowdPolicyDefinitionArgs.builder()
  *             .name("Example")
  *             .description("My description")
  *             .activeFlowTimeout(100)

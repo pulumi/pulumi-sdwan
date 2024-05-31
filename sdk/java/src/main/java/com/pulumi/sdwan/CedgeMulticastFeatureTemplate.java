@@ -46,7 +46,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CedgeMulticastFeatureTemplate("example", CedgeMulticastFeatureTemplateArgs.builder()        
+ *         var example = new CedgeMulticastFeatureTemplate("example", CedgeMulticastFeatureTemplateArgs.builder()
  *             .name("Example")
  *             .description("My Example")
  *             .deviceTypes("vedge-C8000V")

@@ -42,7 +42,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new PolicerPolicyObject("example", PolicerPolicyObjectArgs.builder()        
+ *         var example = new PolicerPolicyObject("example", PolicerPolicyObjectArgs.builder()
  *             .name("Example")
  *             .burst(100000)
  *             .exceedAction("remark")

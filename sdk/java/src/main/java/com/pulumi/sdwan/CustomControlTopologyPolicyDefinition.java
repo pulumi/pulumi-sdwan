@@ -46,7 +46,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CustomControlTopologyPolicyDefinition("example", CustomControlTopologyPolicyDefinitionArgs.builder()        
+ *         var example = new CustomControlTopologyPolicyDefinition("example", CustomControlTopologyPolicyDefinitionArgs.builder()
  *             .name("Example")
  *             .description("My description")
  *             .defaultAction("reject")

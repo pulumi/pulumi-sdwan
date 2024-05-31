@@ -43,7 +43,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CliConfigProfileParcel("example", CliConfigProfileParcelArgs.builder()        
+ *         var example = new CliConfigProfileParcel("example", CliConfigProfileParcelArgs.builder()
  *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
  *             .name("Example")
  *             .description("My Example")
