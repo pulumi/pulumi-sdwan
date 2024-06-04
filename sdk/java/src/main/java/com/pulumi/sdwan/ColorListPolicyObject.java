@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ColorListPolicyObject("example", ColorListPolicyObjectArgs.builder()        
+ *         var example = new ColorListPolicyObject("example", ColorListPolicyObjectArgs.builder()
  *             .name("Example")
  *             .entries(ColorListPolicyObjectEntryArgs.builder()
  *                 .color("blue")

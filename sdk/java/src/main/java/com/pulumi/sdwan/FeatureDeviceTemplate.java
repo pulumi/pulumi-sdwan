@@ -46,7 +46,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new FeatureDeviceTemplate("example", FeatureDeviceTemplateArgs.builder()        
+ *         var example = new FeatureDeviceTemplate("example", FeatureDeviceTemplateArgs.builder()
  *             .name("Example")
  *             .description("My description")
  *             .deviceType("vedge-ISR-4331")

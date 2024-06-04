@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new TlocListPolicyObject("example", TlocListPolicyObjectArgs.builder()        
+ *         var example = new TlocListPolicyObject("example", TlocListPolicyObjectArgs.builder()
  *             .name("Example")
  *             .entries(TlocListPolicyObjectEntryArgs.builder()
  *                 .tloc_ip("1.1.1.2")

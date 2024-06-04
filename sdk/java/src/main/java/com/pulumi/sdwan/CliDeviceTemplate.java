@@ -42,7 +42,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CliDeviceTemplate("example", CliDeviceTemplateArgs.builder()        
+ *         var example = new CliDeviceTemplate("example", CliDeviceTemplateArgs.builder()
  *             .name("Example")
  *             .description("My description")
  *             .deviceType("vedge-ISR-4331")

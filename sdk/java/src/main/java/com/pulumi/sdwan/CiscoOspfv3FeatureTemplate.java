@@ -58,7 +58,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CiscoOspfv3FeatureTemplate("example", CiscoOspfv3FeatureTemplateArgs.builder()        
+ *         var example = new CiscoOspfv3FeatureTemplate("example", CiscoOspfv3FeatureTemplateArgs.builder()
  *             .name("Example")
  *             .description("My Example")
  *             .deviceTypes("vedge-C8000V")

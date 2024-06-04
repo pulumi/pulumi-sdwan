@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CiscoSigCredentialsFeatureTemplate("example", CiscoSigCredentialsFeatureTemplateArgs.builder()        
+ *         var example = new CiscoSigCredentialsFeatureTemplate("example", CiscoSigCredentialsFeatureTemplateArgs.builder()
  *             .name("Example")
  *             .description("My Example")
  *             .deviceTypes("vedge-C8000V")

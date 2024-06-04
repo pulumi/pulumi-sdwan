@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ProtocolListPolicyObject("example", ProtocolListPolicyObjectArgs.builder()        
+ *         var example = new ProtocolListPolicyObject("example", ProtocolListPolicyObjectArgs.builder()
  *             .name("Example")
  *             .entries(ProtocolListPolicyObjectEntryArgs.builder()
  *                 .protocol("cifs")

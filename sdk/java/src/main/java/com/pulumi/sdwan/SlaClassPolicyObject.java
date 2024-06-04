@@ -43,7 +43,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SlaClassPolicyObject("example", SlaClassPolicyObjectArgs.builder()        
+ *         var example = new SlaClassPolicyObject("example", SlaClassPolicyObjectArgs.builder()
  *             .name("Example")
  *             .jitter(100)
  *             .latency(10)

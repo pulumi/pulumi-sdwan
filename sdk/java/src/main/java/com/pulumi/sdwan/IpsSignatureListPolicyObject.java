@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new IpsSignatureListPolicyObject("example", IpsSignatureListPolicyObjectArgs.builder()        
+ *         var example = new IpsSignatureListPolicyObject("example", IpsSignatureListPolicyObjectArgs.builder()
  *             .name("Example")
  *             .entries(IpsSignatureListPolicyObjectEntryArgs.builder()
  *                 .generator_id(1111)

@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new VpnListPolicyObject("example", VpnListPolicyObjectArgs.builder()        
+ *         var example = new VpnListPolicyObject("example", VpnListPolicyObjectArgs.builder()
  *             .name("Example")
  *             .entries(VpnListPolicyObjectEntryArgs.builder()
  *                 .vpn_id("100-200")

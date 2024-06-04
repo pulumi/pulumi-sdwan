@@ -48,7 +48,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new TlsSslDecryptionPolicyDefinition("example", TlsSslDecryptionPolicyDefinitionArgs.builder()        
+ *         var example = new TlsSslDecryptionPolicyDefinition("example", TlsSslDecryptionPolicyDefinitionArgs.builder()
  *             .name("Example")
  *             .description("My description")
  *             .mode("security")

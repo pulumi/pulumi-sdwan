@@ -41,7 +41,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new TransportFeatureProfile("example", TransportFeatureProfileArgs.builder()        
+ *         var example = new TransportFeatureProfile("example", TransportFeatureProfileArgs.builder()
  *             .name("TRANSPORT_FP_1")
  *             .description("My transport feature profile 1")
  *             .build());

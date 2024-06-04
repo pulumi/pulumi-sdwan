@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ExtendedCommunityListPolicyObject("example", ExtendedCommunityListPolicyObjectArgs.builder()        
+ *         var example = new ExtendedCommunityListPolicyObject("example", ExtendedCommunityListPolicyObjectArgs.builder()
  *             .name("Example")
  *             .entries(ExtendedCommunityListPolicyObjectEntryArgs.builder()
  *                 .community("community rt 100:10")

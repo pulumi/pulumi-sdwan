@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new BlockUrlListPolicyObject("example", BlockUrlListPolicyObjectArgs.builder()        
+ *         var example = new BlockUrlListPolicyObject("example", BlockUrlListPolicyObjectArgs.builder()
  *             .name("Example")
  *             .entries(BlockUrlListPolicyObjectEntryArgs.builder()
  *                 .url("cisco.com")

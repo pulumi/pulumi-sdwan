@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ApplicationListPolicyObject("example", ApplicationListPolicyObjectArgs.builder()        
+ *         var example = new ApplicationListPolicyObject("example", ApplicationListPolicyObjectArgs.builder()
  *             .name("Example")
  *             .entries(ApplicationListPolicyObjectEntryArgs.builder()
  *                 .application("netflix")

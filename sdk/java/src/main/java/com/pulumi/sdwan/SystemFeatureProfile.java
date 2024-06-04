@@ -41,7 +41,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SystemFeatureProfile("example", SystemFeatureProfileArgs.builder()        
+ *         var example = new SystemFeatureProfile("example", SystemFeatureProfileArgs.builder()
  *             .name("SYSTEM_FP_1")
  *             .description("My system feature profile 1")
  *             .build());

@@ -41,7 +41,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CliFeatureProfile("example", CliFeatureProfileArgs.builder()        
+ *         var example = new CliFeatureProfile("example", CliFeatureProfileArgs.builder()
  *             .name("CLI_FP_1")
  *             .description("My cli feature profile 1")
  *             .build());

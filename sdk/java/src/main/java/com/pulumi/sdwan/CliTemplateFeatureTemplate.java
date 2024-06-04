@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CliTemplateFeatureTemplate("example", CliTemplateFeatureTemplateArgs.builder()        
+ *         var example = new CliTemplateFeatureTemplate("example", CliTemplateFeatureTemplateArgs.builder()
  *             .name("Example")
  *             .description("My Example")
  *             .deviceTypes("vedge-C8000V")
