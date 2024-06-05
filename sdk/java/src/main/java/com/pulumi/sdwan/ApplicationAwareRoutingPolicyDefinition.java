@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ApplicationAwareRoutingPolicyDefinition("example", ApplicationAwareRoutingPolicyDefinitionArgs.builder()        
+ *         var example = new ApplicationAwareRoutingPolicyDefinition("example", ApplicationAwareRoutingPolicyDefinitionArgs.builder()
  *             .name("Example")
  *             .description("My description")
  *             .sequences(ApplicationAwareRoutingPolicyDefinitionSequenceArgs.builder()

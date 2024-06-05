@@ -47,7 +47,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CiscoBfdFeatureTemplate("example", CiscoBfdFeatureTemplateArgs.builder()        
+ *         var example = new CiscoBfdFeatureTemplate("example", CiscoBfdFeatureTemplateArgs.builder()
  *             .name("Example")
  *             .description("My Example")
  *             .deviceTypes("vedge-C8000V")

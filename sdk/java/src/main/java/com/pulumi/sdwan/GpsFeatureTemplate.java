@@ -46,7 +46,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new GpsFeatureTemplate("example", GpsFeatureTemplateArgs.builder()        
+ *         var example = new GpsFeatureTemplate("example", GpsFeatureTemplateArgs.builder()
  *             .name("Example")
  *             .description("My Example")
  *             .deviceTypes("vedge-C8000V")

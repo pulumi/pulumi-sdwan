@@ -48,7 +48,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CiscoTrustsecFeatureTemplate("example", CiscoTrustsecFeatureTemplateArgs.builder()        
+ *         var example = new CiscoTrustsecFeatureTemplate("example", CiscoTrustsecFeatureTemplateArgs.builder()
  *             .name("Example")
  *             .description("My Example")
  *             .deviceTypes("vedge-C8000V")

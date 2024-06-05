@@ -46,7 +46,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new RoutePolicyDefinition("example", RoutePolicyDefinitionArgs.builder()        
+ *         var example = new RoutePolicyDefinition("example", RoutePolicyDefinitionArgs.builder()
  *             .name("Example")
  *             .description("My description")
  *             .defaultAction("reject")

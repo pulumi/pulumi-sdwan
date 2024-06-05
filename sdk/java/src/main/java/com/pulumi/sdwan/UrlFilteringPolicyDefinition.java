@@ -44,7 +44,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new UrlFilteringPolicyDefinition("example", UrlFilteringPolicyDefinitionArgs.builder()        
+ *         var example = new UrlFilteringPolicyDefinition("example", UrlFilteringPolicyDefinitionArgs.builder()
  *             .name("Example")
  *             .description("My description")
  *             .mode("security")

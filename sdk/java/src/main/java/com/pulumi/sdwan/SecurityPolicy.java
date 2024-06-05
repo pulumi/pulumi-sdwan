@@ -48,7 +48,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SecurityPolicy("example", SecurityPolicyArgs.builder()        
+ *         var example = new SecurityPolicy("example", SecurityPolicyArgs.builder()
  *             .name("Example")
  *             .description("Example")
  *             .mode("security")

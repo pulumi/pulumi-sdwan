@@ -51,7 +51,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new EigrpFeatureTemplate("example", EigrpFeatureTemplateArgs.builder()        
+ *         var example = new EigrpFeatureTemplate("example", EigrpFeatureTemplateArgs.builder()
  *             .name("Example")
  *             .description("My Example")
  *             .deviceTypes("vedge-C8000V")

@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new PortListPolicyObject("example", PortListPolicyObjectArgs.builder()        
+ *         var example = new PortListPolicyObject("example", PortListPolicyObjectArgs.builder()
  *             .name("Example")
  *             .entries(PortListPolicyObjectEntryArgs.builder()
  *                 .port(80)

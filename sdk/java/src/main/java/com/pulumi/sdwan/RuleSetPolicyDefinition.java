@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new RuleSetPolicyDefinition("example", RuleSetPolicyDefinitionArgs.builder()        
+ *         var example = new RuleSetPolicyDefinition("example", RuleSetPolicyDefinitionArgs.builder()
  *             .name("Example")
  *             .description("My description")
  *             .rules(RuleSetPolicyDefinitionRuleArgs.builder()

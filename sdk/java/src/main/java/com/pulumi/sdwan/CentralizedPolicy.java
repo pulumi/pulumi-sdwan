@@ -46,7 +46,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CentralizedPolicy("example", CentralizedPolicyArgs.builder()        
+ *         var example = new CentralizedPolicy("example", CentralizedPolicyArgs.builder()
  *             .name("Example")
  *             .description("My description")
  *             .definitions(CentralizedPolicyDefinitionArgs.builder()

@@ -42,7 +42,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ClassMapPolicyObject("example", ClassMapPolicyObjectArgs.builder()        
+ *         var example = new ClassMapPolicyObject("example", ClassMapPolicyObjectArgs.builder()
  *             .name("Example")
  *             .queue(2)
  *             .build());
