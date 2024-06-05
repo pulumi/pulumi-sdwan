@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ZoneListPolicyObject("example", ZoneListPolicyObjectArgs.builder()        
+ *         var example = new ZoneListPolicyObject("example", ZoneListPolicyObjectArgs.builder()
  *             .name("Example")
  *             .entries(ZoneListPolicyObjectEntryArgs.builder()
  *                 .vpn("1")

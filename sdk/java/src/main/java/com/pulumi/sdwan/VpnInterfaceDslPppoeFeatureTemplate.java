@@ -56,7 +56,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new VpnInterfaceDslPppoeFeatureTemplate("example", VpnInterfaceDslPppoeFeatureTemplateArgs.builder()        
+ *         var example = new VpnInterfaceDslPppoeFeatureTemplate("example", VpnInterfaceDslPppoeFeatureTemplateArgs.builder()
  *             .name("Example")
  *             .description("My Example")
  *             .deviceTypes("vedge-C8000V")

@@ -46,7 +46,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CellularCedgeProfileFeatureTemplate("example", CellularCedgeProfileFeatureTemplateArgs.builder()        
+ *         var example = new CellularCedgeProfileFeatureTemplate("example", CellularCedgeProfileFeatureTemplateArgs.builder()
  *             .name("Example")
  *             .description("My Example")
  *             .deviceTypes("vedge-C8000V")

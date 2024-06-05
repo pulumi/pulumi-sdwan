@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new QosMapPolicyDefinition("example", QosMapPolicyDefinitionArgs.builder()        
+ *         var example = new QosMapPolicyDefinition("example", QosMapPolicyDefinitionArgs.builder()
  *             .name("Example")
  *             .description("My description")
  *             .qosSchedulers(QosMapPolicyDefinitionQosSchedulerArgs.builder()

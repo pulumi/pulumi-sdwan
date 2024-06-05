@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new LocalApplicationListPolicyObject("example", LocalApplicationListPolicyObjectArgs.builder()        
+ *         var example = new LocalApplicationListPolicyObject("example", LocalApplicationListPolicyObjectArgs.builder()
  *             .name("Example")
  *             .entries(LocalApplicationListPolicyObjectEntryArgs.builder()
  *                 .application("cisco-collab-video")

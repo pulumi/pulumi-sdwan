@@ -47,7 +47,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CiscoThousandeyesFeatureTemplate("example", CiscoThousandeyesFeatureTemplateArgs.builder()        
+ *         var example = new CiscoThousandeyesFeatureTemplate("example", CiscoThousandeyesFeatureTemplateArgs.builder()
  *             .name("Example")
  *             .description("My Example")
  *             .deviceTypes("vedge-C8000V")

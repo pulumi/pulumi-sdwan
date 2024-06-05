@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new AsPathListPolicyObject("example", AsPathListPolicyObjectArgs.builder()        
+ *         var example = new AsPathListPolicyObject("example", AsPathListPolicyObjectArgs.builder()
  *             .name("Example")
  *             .entries(AsPathListPolicyObjectEntryArgs.builder()
  *                 .as_path("^1239_[0-9]*$")

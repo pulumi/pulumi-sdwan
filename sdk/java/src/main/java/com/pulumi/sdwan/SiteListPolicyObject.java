@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SiteListPolicyObject("example", SiteListPolicyObjectArgs.builder()        
+ *         var example = new SiteListPolicyObject("example", SiteListPolicyObjectArgs.builder()
  *             .name("Example")
  *             .entries(SiteListPolicyObjectEntryArgs.builder()
  *                 .site_id("100-200")

@@ -51,7 +51,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new TransportManagementVpnProfileParcel("example", TransportManagementVpnProfileParcelArgs.builder()        
+ *         var example = new TransportManagementVpnProfileParcel("example", TransportManagementVpnProfileParcelArgs.builder()
  *             .name("Example")
  *             .description("My Example")
  *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")

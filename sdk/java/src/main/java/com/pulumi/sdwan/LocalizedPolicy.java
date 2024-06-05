@@ -47,7 +47,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new LocalizedPolicy("example", LocalizedPolicyArgs.builder()        
+ *         var example = new LocalizedPolicy("example", LocalizedPolicyArgs.builder()
  *             .name("Example")
  *             .description("My description")
  *             .flowVisibilityIpv4(true)

@@ -46,7 +46,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new Ipv4AclPolicyDefinition("example", Ipv4AclPolicyDefinitionArgs.builder()        
+ *         var example = new Ipv4AclPolicyDefinition("example", Ipv4AclPolicyDefinitionArgs.builder()
  *             .name("Example")
  *             .description("My description")
  *             .defaultAction("drop")

@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new RegionListPolicyObject("example", RegionListPolicyObjectArgs.builder()        
+ *         var example = new RegionListPolicyObject("example", RegionListPolicyObjectArgs.builder()
  *             .name("Example")
  *             .entries(RegionListPolicyObjectEntryArgs.builder()
  *                 .region_id("1-2")

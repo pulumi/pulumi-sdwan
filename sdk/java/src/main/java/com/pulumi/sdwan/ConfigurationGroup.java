@@ -48,7 +48,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ConfigurationGroup("example", ConfigurationGroupArgs.builder()        
+ *         var example = new ConfigurationGroup("example", ConfigurationGroupArgs.builder()
  *             .name("CG_1")
  *             .description("My config group 1")
  *             .solution("sdwan")

@@ -42,7 +42,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new MirrorPolicyObject("example", MirrorPolicyObjectArgs.builder()        
+ *         var example = new MirrorPolicyObject("example", MirrorPolicyObjectArgs.builder()
  *             .name("Example")
  *             .remoteDestinationIp("10.1.1.1")
  *             .sourceIp("10.2.1.1")

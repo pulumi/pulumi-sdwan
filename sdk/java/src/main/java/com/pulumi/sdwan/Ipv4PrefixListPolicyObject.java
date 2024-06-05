@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new Ipv4PrefixListPolicyObject("example", Ipv4PrefixListPolicyObjectArgs.builder()        
+ *         var example = new Ipv4PrefixListPolicyObject("example", Ipv4PrefixListPolicyObjectArgs.builder()
  *             .name("Example")
  *             .entries(Ipv4PrefixListPolicyObjectEntryArgs.builder()
  *                 .prefix("10.0.0.0/12")
