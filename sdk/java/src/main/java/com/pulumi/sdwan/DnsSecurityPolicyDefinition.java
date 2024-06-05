@@ -46,7 +46,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new DnsSecurityPolicyDefinition("example", DnsSecurityPolicyDefinitionArgs.builder()        
+ *         var example = new DnsSecurityPolicyDefinition("example", DnsSecurityPolicyDefinitionArgs.builder()
  *             .name("Example")
  *             .description("Example")
  *             .domainListId("84f10c9d-def7-45a3-8c64-6df26163c861")

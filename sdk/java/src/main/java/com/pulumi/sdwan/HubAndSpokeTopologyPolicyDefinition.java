@@ -46,7 +46,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new HubAndSpokeTopologyPolicyDefinition("example", HubAndSpokeTopologyPolicyDefinitionArgs.builder()        
+ *         var example = new HubAndSpokeTopologyPolicyDefinition("example", HubAndSpokeTopologyPolicyDefinitionArgs.builder()
  *             .name("Example")
  *             .description("My description")
  *             .vpnListId("04fcbb0b-efbf-43d2-a04b-847d3a7b104e")

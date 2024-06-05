@@ -44,7 +44,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new IntrusionPreventionPolicyDefinition("example", IntrusionPreventionPolicyDefinitionArgs.builder()        
+ *         var example = new IntrusionPreventionPolicyDefinition("example", IntrusionPreventionPolicyDefinitionArgs.builder()
  *             .name("Example")
  *             .description("My description")
  *             .mode("security")

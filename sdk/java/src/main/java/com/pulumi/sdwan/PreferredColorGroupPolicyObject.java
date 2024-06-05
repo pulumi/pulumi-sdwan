@@ -43,7 +43,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new PreferredColorGroupPolicyObject("example", PreferredColorGroupPolicyObjectArgs.builder()        
+ *         var example = new PreferredColorGroupPolicyObject("example", PreferredColorGroupPolicyObjectArgs.builder()
  *             .name("Example")
  *             .primaryColorPreference("blue bronze")
  *             .primaryPathPreference("direct-path")

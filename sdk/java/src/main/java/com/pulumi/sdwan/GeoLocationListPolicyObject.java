@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new GeoLocationListPolicyObject("example", GeoLocationListPolicyObjectArgs.builder()        
+ *         var example = new GeoLocationListPolicyObject("example", GeoLocationListPolicyObjectArgs.builder()
  *             .name("Example")
  *             .entries(GeoLocationListPolicyObjectEntryArgs.builder()
  *                 .country("USA")

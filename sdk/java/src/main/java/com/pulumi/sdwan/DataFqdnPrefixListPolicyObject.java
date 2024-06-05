@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new DataFqdnPrefixListPolicyObject("example", DataFqdnPrefixListPolicyObjectArgs.builder()        
+ *         var example = new DataFqdnPrefixListPolicyObject("example", DataFqdnPrefixListPolicyObjectArgs.builder()
  *             .name("Example")
  *             .entries(DataFqdnPrefixListPolicyObjectEntryArgs.builder()
  *                 .fqdn("cisco.com")

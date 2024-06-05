@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new RewriteRulePolicyDefinition("example", RewriteRulePolicyDefinitionArgs.builder()        
+ *         var example = new RewriteRulePolicyDefinition("example", RewriteRulePolicyDefinitionArgs.builder()
  *             .name("Example")
  *             .description("My description")
  *             .rules(RewriteRulePolicyDefinitionRuleArgs.builder()

@@ -43,7 +43,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ObjectGroupPolicyDefinition("example", ObjectGroupPolicyDefinitionArgs.builder()        
+ *         var example = new ObjectGroupPolicyDefinition("example", ObjectGroupPolicyDefinitionArgs.builder()
  *             .name("Example")
  *             .description("My description")
  *             .ipv4Prefix("10.1.1.0/24")

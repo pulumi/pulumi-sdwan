@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new AppProbeClassPolicyObject("example", AppProbeClassPolicyObjectArgs.builder()        
+ *         var example = new AppProbeClassPolicyObject("example", AppProbeClassPolicyObjectArgs.builder()
  *             .name("Example")
  *             .forwardingClass("FC1")
  *             .mappings(AppProbeClassPolicyObjectMappingArgs.builder()

@@ -48,7 +48,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CellularControllerFeatureTemplate("example", CellularControllerFeatureTemplateArgs.builder()        
+ *         var example = new CellularControllerFeatureTemplate("example", CellularControllerFeatureTemplateArgs.builder()
  *             .name("Example")
  *             .description("My Example")
  *             .deviceTypes("vedge-C8000V")

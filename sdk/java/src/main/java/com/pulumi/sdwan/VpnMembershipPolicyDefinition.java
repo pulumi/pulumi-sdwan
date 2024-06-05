@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new VpnMembershipPolicyDefinition("example", VpnMembershipPolicyDefinitionArgs.builder()        
+ *         var example = new VpnMembershipPolicyDefinition("example", VpnMembershipPolicyDefinitionArgs.builder()
  *             .name("Example")
  *             .description("My description")
  *             .sites(VpnMembershipPolicyDefinitionSiteArgs.builder()

@@ -41,7 +41,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ApplicationPriorityFeatureProfile("example", ApplicationPriorityFeatureProfileArgs.builder()        
+ *         var example = new ApplicationPriorityFeatureProfile("example", ApplicationPriorityFeatureProfileArgs.builder()
  *             .name("APPLICATION_PRIORITY_FP_1")
  *             .description("My application priority feature profile 1")
  *             .build());

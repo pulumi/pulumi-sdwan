@@ -41,7 +41,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ServiceFeatureProfile("example", ServiceFeatureProfileArgs.builder()        
+ *         var example = new ServiceFeatureProfile("example", ServiceFeatureProfileArgs.builder()
  *             .name("SERVICE_FP_1")
  *             .description("My service feature profile 1")
  *             .build());
