@@ -67,20 +67,6 @@
                     }
                 }
             },
-            "sdwan_application_priority_feature_profile": {
-                "current": "sdwan:index/applicationPriorityFeatureProfile:ApplicationPriorityFeatureProfile"
-            },
-            "sdwan_application_priority_qos_policy_profile_parcel": {
-                "current": "sdwan:index/applicationPriorityQosPolicyProfileParcel:ApplicationPriorityQosPolicyProfileParcel",
-                "fields": {
-                    "qos_schedulers": {
-                        "maxItemsOne": false
-                    },
-                    "target_interface": {
-                        "maxItemsOne": false
-                    }
-                }
-            },
             "sdwan_as_path_list_policy_object": {
                 "current": "sdwan:index/asPathListPolicyObject:AsPathListPolicyObject",
                 "fields": {
@@ -1020,47 +1006,6 @@
                     }
                 }
             },
-            "sdwan_configuration_group_deploy": {
-                "current": "sdwan:index/configurationGroupDeploy:ConfigurationGroupDeploy",
-                "fields": {
-                    "devices": {
-                        "maxItemsOne": false
-                    }
-                }
-            },
-            "sdwan_configuration_group_device_variables": {
-                "current": "sdwan:index/configurationGroupDeviceVariables:ConfigurationGroupDeviceVariables",
-                "fields": {
-                    "devices": {
-                        "maxItemsOne": false,
-                        "elem": {
-                            "fields": {
-                                "variables": {
-                                    "maxItemsOne": false
-                                }
-                            }
-                        }
-                    },
-                    "groups": {
-                        "maxItemsOne": false,
-                        "elem": {
-                            "fields": {
-                                "variables": {
-                                    "maxItemsOne": false
-                                }
-                            }
-                        }
-                    }
-                }
-            },
-            "sdwan_configuration_group_devices": {
-                "current": "sdwan:index/configurationGroupDevices:ConfigurationGroupDevices",
-                "fields": {
-                    "devices": {
-                        "maxItemsOne": false
-                    }
-                }
-            },
             "sdwan_custom_control_topology_policy_definition": {
                 "current": "sdwan:index/customControlTopologyPolicyDefinition:CustomControlTopologyPolicyDefinition",
                 "fields": {
@@ -1517,52 +1462,6 @@
             },
             "sdwan_service_feature_profile": {
                 "current": "sdwan:index/serviceFeatureProfile:ServiceFeatureProfile"
-            },
-            "sdwan_service_lan_vpn_interface_ethernet_profile_parcel": {
-                "current": "sdwan:index/serviceLanVpnInterfaceEthernetProfileParcel:ServiceLanVpnInterfaceEthernetProfileParcel",
-                "fields": {
-                    "arps": {
-                        "maxItemsOne": false
-                    },
-                    "ipv4_dhcp_helper": {
-                        "maxItemsOne": false
-                    },
-                    "ipv4_secondary_addresses": {
-                        "maxItemsOne": false
-                    },
-                    "ipv4_vrrps": {
-                        "maxItemsOne": false,
-                        "elem": {
-                            "fields": {
-                                "secondary_addresses": {
-                                    "maxItemsOne": false
-                                }
-                            }
-                        }
-                    },
-                    "ipv6_dhcp_helpers": {
-                        "maxItemsOne": false
-                    },
-                    "ipv6_dhcp_secondary_addresses": {
-                        "maxItemsOne": false
-                    },
-                    "ipv6_secondary_address": {
-                        "maxItemsOne": false
-                    },
-                    "ipv6_vrrps": {
-                        "maxItemsOne": false,
-                        "elem": {
-                            "fields": {
-                                "addresses": {
-                                    "maxItemsOne": false
-                                }
-                            }
-                        }
-                    },
-                    "static_nats": {
-                        "maxItemsOne": false
-                    }
-                }
             },
             "sdwan_service_lan_vpn_profile_parcel": {
                 "current": "sdwan:index/serviceLanVpnProfileParcel:ServiceLanVpnProfileParcel",
@@ -2035,20 +1934,6 @@
             "sdwan_transport_ipv6_tracker_profile_parcel": {
                 "current": "sdwan:index/transportIpv6TrackerProfileParcel:TransportIpv6TrackerProfileParcel"
             },
-            "sdwan_transport_management_vpn_interface_ethernet_profile_parcel": {
-                "current": "sdwan:index/transportManagementVpnInterfaceEthernetProfileParcel:TransportManagementVpnInterfaceEthernetProfileParcel",
-                "fields": {
-                    "arp_entries": {
-                        "maxItemsOne": false
-                    },
-                    "ipv4_dhcp_helper": {
-                        "maxItemsOne": false
-                    },
-                    "ipv4_secondary_addresses": {
-                        "maxItemsOne": false
-                    }
-                }
-            },
             "sdwan_transport_management_vpn_profile_parcel": {
                 "current": "sdwan:index/transportManagementVpnProfileParcel:TransportManagementVpnProfileParcel",
                 "fields": {
@@ -2126,38 +2011,6 @@
                         "maxItemsOne": false
                     },
                     "mpls_interfaces": {
-                        "maxItemsOne": false
-                    }
-                }
-            },
-            "sdwan_transport_wan_vpn_interface_ethernet_profile_parcel": {
-                "current": "sdwan:index/transportWanVpnInterfaceEthernetProfileParcel:TransportWanVpnInterfaceEthernetProfileParcel",
-                "fields": {
-                    "arps": {
-                        "maxItemsOne": false
-                    },
-                    "ipv4_dhcp_helper": {
-                        "maxItemsOne": false
-                    },
-                    "ipv4_secondary_addresses": {
-                        "maxItemsOne": false
-                    },
-                    "ipv6_dhcp_secondary_address": {
-                        "maxItemsOne": false
-                    },
-                    "ipv6_secondary_addresses": {
-                        "maxItemsOne": false
-                    },
-                    "new_static_nats": {
-                        "maxItemsOne": false
-                    },
-                    "static_nat66": {
-                        "maxItemsOne": false
-                    },
-                    "tunnel_interface_encapsulations": {
-                        "maxItemsOne": false
-                    },
-                    "tunnel_interface_exclude_controller_group_list": {
                         "maxItemsOne": false
                     }
                 }
@@ -2605,20 +2458,6 @@
                 "current": "sdwan:index/getApplicationListPolicyObject:getApplicationListPolicyObject",
                 "fields": {
                     "entries": {
-                        "maxItemsOne": false
-                    }
-                }
-            },
-            "sdwan_application_priority_feature_profile": {
-                "current": "sdwan:index/getApplicationPriorityFeatureProfile:getApplicationPriorityFeatureProfile"
-            },
-            "sdwan_application_priority_qos_policy_profile_parcel": {
-                "current": "sdwan:index/getApplicationPriorityQosPolicyProfileParcel:getApplicationPriorityQosPolicyProfileParcel",
-                "fields": {
-                    "qos_schedulers": {
-                        "maxItemsOne": false
-                    },
-                    "target_interface": {
                         "maxItemsOne": false
                     }
                 }
@@ -3554,39 +3393,6 @@
                     }
                 }
             },
-            "sdwan_configuration_group_device_variables": {
-                "current": "sdwan:index/getConfigurationGroupDeviceVariables:getConfigurationGroupDeviceVariables",
-                "fields": {
-                    "devices": {
-                        "maxItemsOne": false,
-                        "elem": {
-                            "fields": {
-                                "variables": {
-                                    "maxItemsOne": false
-                                }
-                            }
-                        }
-                    },
-                    "groups": {
-                        "maxItemsOne": false,
-                        "elem": {
-                            "fields": {
-                                "variables": {
-                                    "maxItemsOne": false
-                                }
-                            }
-                        }
-                    }
-                }
-            },
-            "sdwan_configuration_group_devices": {
-                "current": "sdwan:index/getConfigurationGroupDevices:getConfigurationGroupDevices",
-                "fields": {
-                    "devices": {
-                        "maxItemsOne": false
-                    }
-                }
-            },
             "sdwan_custom_control_topology_policy_definition": {
                 "current": "sdwan:index/getCustomControlTopologyPolicyDefinition:getCustomControlTopologyPolicyDefinition",
                 "fields": {
@@ -4051,52 +3857,6 @@
             },
             "sdwan_service_feature_profile": {
                 "current": "sdwan:index/getServiceFeatureProfile:getServiceFeatureProfile"
-            },
-            "sdwan_service_lan_vpn_interface_ethernet_profile_parcel": {
-                "current": "sdwan:index/getServiceLanVpnInterfaceEthernetProfileParcel:getServiceLanVpnInterfaceEthernetProfileParcel",
-                "fields": {
-                    "arps": {
-                        "maxItemsOne": false
-                    },
-                    "ipv4_dhcp_helper": {
-                        "maxItemsOne": false
-                    },
-                    "ipv4_secondary_addresses": {
-                        "maxItemsOne": false
-                    },
-                    "ipv4_vrrps": {
-                        "maxItemsOne": false,
-                        "elem": {
-                            "fields": {
-                                "secondary_addresses": {
-                                    "maxItemsOne": false
-                                }
-                            }
-                        }
-                    },
-                    "ipv6_dhcp_helpers": {
-                        "maxItemsOne": false
-                    },
-                    "ipv6_dhcp_secondary_addresses": {
-                        "maxItemsOne": false
-                    },
-                    "ipv6_secondary_address": {
-                        "maxItemsOne": false
-                    },
-                    "ipv6_vrrps": {
-                        "maxItemsOne": false,
-                        "elem": {
-                            "fields": {
-                                "addresses": {
-                                    "maxItemsOne": false
-                                }
-                            }
-                        }
-                    },
-                    "static_nats": {
-                        "maxItemsOne": false
-                    }
-                }
             },
             "sdwan_service_lan_vpn_profile_parcel": {
                 "current": "sdwan:index/getServiceLanVpnProfileParcel:getServiceLanVpnProfileParcel",
@@ -4569,20 +4329,6 @@
             "sdwan_transport_ipv6_tracker_profile_parcel": {
                 "current": "sdwan:index/getTransportIpv6TrackerProfileParcel:getTransportIpv6TrackerProfileParcel"
             },
-            "sdwan_transport_management_vpn_interface_ethernet_profile_parcel": {
-                "current": "sdwan:index/getTransportManagementVpnInterfaceEthernetProfileParcel:getTransportManagementVpnInterfaceEthernetProfileParcel",
-                "fields": {
-                    "arp_entries": {
-                        "maxItemsOne": false
-                    },
-                    "ipv4_dhcp_helper": {
-                        "maxItemsOne": false
-                    },
-                    "ipv4_secondary_addresses": {
-                        "maxItemsOne": false
-                    }
-                }
-            },
             "sdwan_transport_management_vpn_profile_parcel": {
                 "current": "sdwan:index/getTransportManagementVpnProfileParcel:getTransportManagementVpnProfileParcel",
                 "fields": {
@@ -4660,38 +4406,6 @@
                         "maxItemsOne": false
                     },
                     "mpls_interfaces": {
-                        "maxItemsOne": false
-                    }
-                }
-            },
-            "sdwan_transport_wan_vpn_interface_ethernet_profile_parcel": {
-                "current": "sdwan:index/getTransportWanVpnInterfaceEthernetProfileParcel:getTransportWanVpnInterfaceEthernetProfileParcel",
-                "fields": {
-                    "arps": {
-                        "maxItemsOne": false
-                    },
-                    "ipv4_dhcp_helper": {
-                        "maxItemsOne": false
-                    },
-                    "ipv4_secondary_addresses": {
-                        "maxItemsOne": false
-                    },
-                    "ipv6_dhcp_secondary_address": {
-                        "maxItemsOne": false
-                    },
-                    "ipv6_secondary_addresses": {
-                        "maxItemsOne": false
-                    },
-                    "new_static_nats": {
-                        "maxItemsOne": false
-                    },
-                    "static_nat66": {
-                        "maxItemsOne": false
-                    },
-                    "tunnel_interface_encapsulations": {
-                        "maxItemsOne": false
-                    },
-                    "tunnel_interface_exclude_controller_group_list": {
                         "maxItemsOne": false
                     }
                 }
