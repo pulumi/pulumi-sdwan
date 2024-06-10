@@ -21,10 +21,6 @@ import com.pulumi.sdwan.inputs.GetApplicationAwareRoutingPolicyDefinitionArgs;
 import com.pulumi.sdwan.inputs.GetApplicationAwareRoutingPolicyDefinitionPlainArgs;
 import com.pulumi.sdwan.inputs.GetApplicationListPolicyObjectArgs;
 import com.pulumi.sdwan.inputs.GetApplicationListPolicyObjectPlainArgs;
-import com.pulumi.sdwan.inputs.GetApplicationPriorityFeatureProfileArgs;
-import com.pulumi.sdwan.inputs.GetApplicationPriorityFeatureProfilePlainArgs;
-import com.pulumi.sdwan.inputs.GetApplicationPriorityQosPolicyProfileParcelArgs;
-import com.pulumi.sdwan.inputs.GetApplicationPriorityQosPolicyProfileParcelPlainArgs;
 import com.pulumi.sdwan.inputs.GetAsPathListPolicyObjectArgs;
 import com.pulumi.sdwan.inputs.GetAsPathListPolicyObjectPlainArgs;
 import com.pulumi.sdwan.inputs.GetBlockUrlListPolicyObjectArgs;
@@ -104,10 +100,6 @@ import com.pulumi.sdwan.inputs.GetCliTemplateFeatureTemplatePlainArgs;
 import com.pulumi.sdwan.inputs.GetColorListPolicyObjectArgs;
 import com.pulumi.sdwan.inputs.GetColorListPolicyObjectPlainArgs;
 import com.pulumi.sdwan.inputs.GetConfigurationGroupArgs;
-import com.pulumi.sdwan.inputs.GetConfigurationGroupDeviceVariablesArgs;
-import com.pulumi.sdwan.inputs.GetConfigurationGroupDeviceVariablesPlainArgs;
-import com.pulumi.sdwan.inputs.GetConfigurationGroupDevicesArgs;
-import com.pulumi.sdwan.inputs.GetConfigurationGroupDevicesPlainArgs;
 import com.pulumi.sdwan.inputs.GetConfigurationGroupPlainArgs;
 import com.pulumi.sdwan.inputs.GetCustomControlTopologyPolicyDefinitionArgs;
 import com.pulumi.sdwan.inputs.GetCustomControlTopologyPolicyDefinitionPlainArgs;
@@ -187,8 +179,6 @@ import com.pulumi.sdwan.inputs.GetSecurityPolicyArgs;
 import com.pulumi.sdwan.inputs.GetSecurityPolicyPlainArgs;
 import com.pulumi.sdwan.inputs.GetServiceFeatureProfileArgs;
 import com.pulumi.sdwan.inputs.GetServiceFeatureProfilePlainArgs;
-import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetProfileParcelArgs;
-import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetProfileParcelPlainArgs;
 import com.pulumi.sdwan.inputs.GetServiceLanVpnProfileParcelArgs;
 import com.pulumi.sdwan.inputs.GetServiceLanVpnProfileParcelPlainArgs;
 import com.pulumi.sdwan.inputs.GetServiceTrackerProfileParcelArgs;
@@ -243,14 +233,10 @@ import com.pulumi.sdwan.inputs.GetTransportFeatureProfileArgs;
 import com.pulumi.sdwan.inputs.GetTransportFeatureProfilePlainArgs;
 import com.pulumi.sdwan.inputs.GetTransportIpv6TrackerProfileParcelArgs;
 import com.pulumi.sdwan.inputs.GetTransportIpv6TrackerProfileParcelPlainArgs;
-import com.pulumi.sdwan.inputs.GetTransportManagementVpnInterfaceEthernetProfileParcelArgs;
-import com.pulumi.sdwan.inputs.GetTransportManagementVpnInterfaceEthernetProfileParcelPlainArgs;
 import com.pulumi.sdwan.inputs.GetTransportManagementVpnProfileParcelArgs;
 import com.pulumi.sdwan.inputs.GetTransportManagementVpnProfileParcelPlainArgs;
 import com.pulumi.sdwan.inputs.GetTransportRoutingBgpProfileParcelArgs;
 import com.pulumi.sdwan.inputs.GetTransportRoutingBgpProfileParcelPlainArgs;
-import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceEthernetProfileParcelArgs;
-import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceEthernetProfileParcelPlainArgs;
 import com.pulumi.sdwan.inputs.GetTransportWanVpnProfileParcelArgs;
 import com.pulumi.sdwan.inputs.GetTransportWanVpnProfileParcelPlainArgs;
 import com.pulumi.sdwan.inputs.GetUrlFilteringPolicyDefinitionArgs;
@@ -283,8 +269,6 @@ import com.pulumi.sdwan.outputs.GetAllowUrlListPolicyObjectResult;
 import com.pulumi.sdwan.outputs.GetAppProbeClassPolicyObjectResult;
 import com.pulumi.sdwan.outputs.GetApplicationAwareRoutingPolicyDefinitionResult;
 import com.pulumi.sdwan.outputs.GetApplicationListPolicyObjectResult;
-import com.pulumi.sdwan.outputs.GetApplicationPriorityFeatureProfileResult;
-import com.pulumi.sdwan.outputs.GetApplicationPriorityQosPolicyProfileParcelResult;
 import com.pulumi.sdwan.outputs.GetAsPathListPolicyObjectResult;
 import com.pulumi.sdwan.outputs.GetBlockUrlListPolicyObjectResult;
 import com.pulumi.sdwan.outputs.GetCedgeAaaFeatureTemplateResult;
@@ -324,8 +308,6 @@ import com.pulumi.sdwan.outputs.GetCliDeviceTemplateResult;
 import com.pulumi.sdwan.outputs.GetCliFeatureProfileResult;
 import com.pulumi.sdwan.outputs.GetCliTemplateFeatureTemplateResult;
 import com.pulumi.sdwan.outputs.GetColorListPolicyObjectResult;
-import com.pulumi.sdwan.outputs.GetConfigurationGroupDeviceVariablesResult;
-import com.pulumi.sdwan.outputs.GetConfigurationGroupDevicesResult;
 import com.pulumi.sdwan.outputs.GetConfigurationGroupResult;
 import com.pulumi.sdwan.outputs.GetCustomControlTopologyPolicyDefinitionResult;
 import com.pulumi.sdwan.outputs.GetDataFqdnPrefixListPolicyObjectResult;
@@ -366,7 +348,6 @@ import com.pulumi.sdwan.outputs.GetRuleSetPolicyDefinitionResult;
 import com.pulumi.sdwan.outputs.GetSecurityAppHostingFeatureTemplateResult;
 import com.pulumi.sdwan.outputs.GetSecurityPolicyResult;
 import com.pulumi.sdwan.outputs.GetServiceFeatureProfileResult;
-import com.pulumi.sdwan.outputs.GetServiceLanVpnInterfaceEthernetProfileParcelResult;
 import com.pulumi.sdwan.outputs.GetServiceLanVpnProfileParcelResult;
 import com.pulumi.sdwan.outputs.GetServiceTrackerProfileParcelResult;
 import com.pulumi.sdwan.outputs.GetSiteListPolicyObjectResult;
@@ -394,10 +375,8 @@ import com.pulumi.sdwan.outputs.GetTlsSslProfilePolicyDefinitionResult;
 import com.pulumi.sdwan.outputs.GetTrafficDataPolicyDefinitionResult;
 import com.pulumi.sdwan.outputs.GetTransportFeatureProfileResult;
 import com.pulumi.sdwan.outputs.GetTransportIpv6TrackerProfileParcelResult;
-import com.pulumi.sdwan.outputs.GetTransportManagementVpnInterfaceEthernetProfileParcelResult;
 import com.pulumi.sdwan.outputs.GetTransportManagementVpnProfileParcelResult;
 import com.pulumi.sdwan.outputs.GetTransportRoutingBgpProfileParcelResult;
-import com.pulumi.sdwan.outputs.GetTransportWanVpnInterfaceEthernetProfileParcelResult;
 import com.pulumi.sdwan.outputs.GetTransportWanVpnProfileParcelResult;
 import com.pulumi.sdwan.outputs.GetUrlFilteringPolicyDefinitionResult;
 import com.pulumi.sdwan.outputs.GetVedgeInventoryResult;
@@ -1422,346 +1401,6 @@ public final class SdwanFunctions {
      */
     public static CompletableFuture<GetApplicationListPolicyObjectResult> getApplicationListPolicyObjectPlain(GetApplicationListPolicyObjectPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("sdwan:index/getApplicationListPolicyObject:getApplicationListPolicyObject", TypeShape.of(GetApplicationListPolicyObjectResult.class), args, Utilities.withVersion(options));
-    }
-    /**
-     * This data source can read the Application Priority Feature Profile .
-     * 
-     * ## Example Usage
-     * 
-     * &lt;!--Start PulumiCodeChooser --&gt;
-     * <pre>
-     * {@code
-     * package generated_program;
-     * 
-     * import com.pulumi.Context;
-     * import com.pulumi.Pulumi;
-     * import com.pulumi.core.Output;
-     * import com.pulumi.sdwan.SdwanFunctions;
-     * import com.pulumi.sdwan.inputs.GetApplicationPriorityFeatureProfileArgs;
-     * import java.util.List;
-     * import java.util.ArrayList;
-     * import java.util.Map;
-     * import java.io.File;
-     * import java.nio.file.Files;
-     * import java.nio.file.Paths;
-     * 
-     * public class App {
-     *     public static void main(String[] args) {
-     *         Pulumi.run(App::stack);
-     *     }
-     * 
-     *     public static void stack(Context ctx) {
-     *         final var example = SdwanFunctions.getApplicationPriorityFeatureProfile(GetApplicationPriorityFeatureProfileArgs.builder()
-     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
-     *             .build());
-     * 
-     *     }
-     * }
-     * }
-     * </pre>
-     * &lt;!--End PulumiCodeChooser --&gt;
-     * 
-     */
-    public static Output<GetApplicationPriorityFeatureProfileResult> getApplicationPriorityFeatureProfile(GetApplicationPriorityFeatureProfileArgs args) {
-        return getApplicationPriorityFeatureProfile(args, InvokeOptions.Empty);
-    }
-    /**
-     * This data source can read the Application Priority Feature Profile .
-     * 
-     * ## Example Usage
-     * 
-     * &lt;!--Start PulumiCodeChooser --&gt;
-     * <pre>
-     * {@code
-     * package generated_program;
-     * 
-     * import com.pulumi.Context;
-     * import com.pulumi.Pulumi;
-     * import com.pulumi.core.Output;
-     * import com.pulumi.sdwan.SdwanFunctions;
-     * import com.pulumi.sdwan.inputs.GetApplicationPriorityFeatureProfileArgs;
-     * import java.util.List;
-     * import java.util.ArrayList;
-     * import java.util.Map;
-     * import java.io.File;
-     * import java.nio.file.Files;
-     * import java.nio.file.Paths;
-     * 
-     * public class App {
-     *     public static void main(String[] args) {
-     *         Pulumi.run(App::stack);
-     *     }
-     * 
-     *     public static void stack(Context ctx) {
-     *         final var example = SdwanFunctions.getApplicationPriorityFeatureProfile(GetApplicationPriorityFeatureProfileArgs.builder()
-     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
-     *             .build());
-     * 
-     *     }
-     * }
-     * }
-     * </pre>
-     * &lt;!--End PulumiCodeChooser --&gt;
-     * 
-     */
-    public static CompletableFuture<GetApplicationPriorityFeatureProfileResult> getApplicationPriorityFeatureProfilePlain(GetApplicationPriorityFeatureProfilePlainArgs args) {
-        return getApplicationPriorityFeatureProfilePlain(args, InvokeOptions.Empty);
-    }
-    /**
-     * This data source can read the Application Priority Feature Profile .
-     * 
-     * ## Example Usage
-     * 
-     * &lt;!--Start PulumiCodeChooser --&gt;
-     * <pre>
-     * {@code
-     * package generated_program;
-     * 
-     * import com.pulumi.Context;
-     * import com.pulumi.Pulumi;
-     * import com.pulumi.core.Output;
-     * import com.pulumi.sdwan.SdwanFunctions;
-     * import com.pulumi.sdwan.inputs.GetApplicationPriorityFeatureProfileArgs;
-     * import java.util.List;
-     * import java.util.ArrayList;
-     * import java.util.Map;
-     * import java.io.File;
-     * import java.nio.file.Files;
-     * import java.nio.file.Paths;
-     * 
-     * public class App {
-     *     public static void main(String[] args) {
-     *         Pulumi.run(App::stack);
-     *     }
-     * 
-     *     public static void stack(Context ctx) {
-     *         final var example = SdwanFunctions.getApplicationPriorityFeatureProfile(GetApplicationPriorityFeatureProfileArgs.builder()
-     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
-     *             .build());
-     * 
-     *     }
-     * }
-     * }
-     * </pre>
-     * &lt;!--End PulumiCodeChooser --&gt;
-     * 
-     */
-    public static Output<GetApplicationPriorityFeatureProfileResult> getApplicationPriorityFeatureProfile(GetApplicationPriorityFeatureProfileArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invoke("sdwan:index/getApplicationPriorityFeatureProfile:getApplicationPriorityFeatureProfile", TypeShape.of(GetApplicationPriorityFeatureProfileResult.class), args, Utilities.withVersion(options));
-    }
-    /**
-     * This data source can read the Application Priority Feature Profile .
-     * 
-     * ## Example Usage
-     * 
-     * &lt;!--Start PulumiCodeChooser --&gt;
-     * <pre>
-     * {@code
-     * package generated_program;
-     * 
-     * import com.pulumi.Context;
-     * import com.pulumi.Pulumi;
-     * import com.pulumi.core.Output;
-     * import com.pulumi.sdwan.SdwanFunctions;
-     * import com.pulumi.sdwan.inputs.GetApplicationPriorityFeatureProfileArgs;
-     * import java.util.List;
-     * import java.util.ArrayList;
-     * import java.util.Map;
-     * import java.io.File;
-     * import java.nio.file.Files;
-     * import java.nio.file.Paths;
-     * 
-     * public class App {
-     *     public static void main(String[] args) {
-     *         Pulumi.run(App::stack);
-     *     }
-     * 
-     *     public static void stack(Context ctx) {
-     *         final var example = SdwanFunctions.getApplicationPriorityFeatureProfile(GetApplicationPriorityFeatureProfileArgs.builder()
-     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
-     *             .build());
-     * 
-     *     }
-     * }
-     * }
-     * </pre>
-     * &lt;!--End PulumiCodeChooser --&gt;
-     * 
-     */
-    public static CompletableFuture<GetApplicationPriorityFeatureProfileResult> getApplicationPriorityFeatureProfilePlain(GetApplicationPriorityFeatureProfilePlainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("sdwan:index/getApplicationPriorityFeatureProfile:getApplicationPriorityFeatureProfile", TypeShape.of(GetApplicationPriorityFeatureProfileResult.class), args, Utilities.withVersion(options));
-    }
-    /**
-     * This data source can read the Application Priority QoS Policy profile parcel.
-     * 
-     * ## Example Usage
-     * 
-     * &lt;!--Start PulumiCodeChooser --&gt;
-     * <pre>
-     * {@code
-     * package generated_program;
-     * 
-     * import com.pulumi.Context;
-     * import com.pulumi.Pulumi;
-     * import com.pulumi.core.Output;
-     * import com.pulumi.sdwan.SdwanFunctions;
-     * import com.pulumi.sdwan.inputs.GetApplicationPriorityQosPolicyProfileParcelArgs;
-     * import java.util.List;
-     * import java.util.ArrayList;
-     * import java.util.Map;
-     * import java.io.File;
-     * import java.nio.file.Files;
-     * import java.nio.file.Paths;
-     * 
-     * public class App {
-     *     public static void main(String[] args) {
-     *         Pulumi.run(App::stack);
-     *     }
-     * 
-     *     public static void stack(Context ctx) {
-     *         final var example = SdwanFunctions.getApplicationPriorityQosPolicyProfileParcel(GetApplicationPriorityQosPolicyProfileParcelArgs.builder()
-     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
-     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
-     *             .build());
-     * 
-     *     }
-     * }
-     * }
-     * </pre>
-     * &lt;!--End PulumiCodeChooser --&gt;
-     * 
-     */
-    public static Output<GetApplicationPriorityQosPolicyProfileParcelResult> getApplicationPriorityQosPolicyProfileParcel(GetApplicationPriorityQosPolicyProfileParcelArgs args) {
-        return getApplicationPriorityQosPolicyProfileParcel(args, InvokeOptions.Empty);
-    }
-    /**
-     * This data source can read the Application Priority QoS Policy profile parcel.
-     * 
-     * ## Example Usage
-     * 
-     * &lt;!--Start PulumiCodeChooser --&gt;
-     * <pre>
-     * {@code
-     * package generated_program;
-     * 
-     * import com.pulumi.Context;
-     * import com.pulumi.Pulumi;
-     * import com.pulumi.core.Output;
-     * import com.pulumi.sdwan.SdwanFunctions;
-     * import com.pulumi.sdwan.inputs.GetApplicationPriorityQosPolicyProfileParcelArgs;
-     * import java.util.List;
-     * import java.util.ArrayList;
-     * import java.util.Map;
-     * import java.io.File;
-     * import java.nio.file.Files;
-     * import java.nio.file.Paths;
-     * 
-     * public class App {
-     *     public static void main(String[] args) {
-     *         Pulumi.run(App::stack);
-     *     }
-     * 
-     *     public static void stack(Context ctx) {
-     *         final var example = SdwanFunctions.getApplicationPriorityQosPolicyProfileParcel(GetApplicationPriorityQosPolicyProfileParcelArgs.builder()
-     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
-     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
-     *             .build());
-     * 
-     *     }
-     * }
-     * }
-     * </pre>
-     * &lt;!--End PulumiCodeChooser --&gt;
-     * 
-     */
-    public static CompletableFuture<GetApplicationPriorityQosPolicyProfileParcelResult> getApplicationPriorityQosPolicyProfileParcelPlain(GetApplicationPriorityQosPolicyProfileParcelPlainArgs args) {
-        return getApplicationPriorityQosPolicyProfileParcelPlain(args, InvokeOptions.Empty);
-    }
-    /**
-     * This data source can read the Application Priority QoS Policy profile parcel.
-     * 
-     * ## Example Usage
-     * 
-     * &lt;!--Start PulumiCodeChooser --&gt;
-     * <pre>
-     * {@code
-     * package generated_program;
-     * 
-     * import com.pulumi.Context;
-     * import com.pulumi.Pulumi;
-     * import com.pulumi.core.Output;
-     * import com.pulumi.sdwan.SdwanFunctions;
-     * import com.pulumi.sdwan.inputs.GetApplicationPriorityQosPolicyProfileParcelArgs;
-     * import java.util.List;
-     * import java.util.ArrayList;
-     * import java.util.Map;
-     * import java.io.File;
-     * import java.nio.file.Files;
-     * import java.nio.file.Paths;
-     * 
-     * public class App {
-     *     public static void main(String[] args) {
-     *         Pulumi.run(App::stack);
-     *     }
-     * 
-     *     public static void stack(Context ctx) {
-     *         final var example = SdwanFunctions.getApplicationPriorityQosPolicyProfileParcel(GetApplicationPriorityQosPolicyProfileParcelArgs.builder()
-     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
-     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
-     *             .build());
-     * 
-     *     }
-     * }
-     * }
-     * </pre>
-     * &lt;!--End PulumiCodeChooser --&gt;
-     * 
-     */
-    public static Output<GetApplicationPriorityQosPolicyProfileParcelResult> getApplicationPriorityQosPolicyProfileParcel(GetApplicationPriorityQosPolicyProfileParcelArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invoke("sdwan:index/getApplicationPriorityQosPolicyProfileParcel:getApplicationPriorityQosPolicyProfileParcel", TypeShape.of(GetApplicationPriorityQosPolicyProfileParcelResult.class), args, Utilities.withVersion(options));
-    }
-    /**
-     * This data source can read the Application Priority QoS Policy profile parcel.
-     * 
-     * ## Example Usage
-     * 
-     * &lt;!--Start PulumiCodeChooser --&gt;
-     * <pre>
-     * {@code
-     * package generated_program;
-     * 
-     * import com.pulumi.Context;
-     * import com.pulumi.Pulumi;
-     * import com.pulumi.core.Output;
-     * import com.pulumi.sdwan.SdwanFunctions;
-     * import com.pulumi.sdwan.inputs.GetApplicationPriorityQosPolicyProfileParcelArgs;
-     * import java.util.List;
-     * import java.util.ArrayList;
-     * import java.util.Map;
-     * import java.io.File;
-     * import java.nio.file.Files;
-     * import java.nio.file.Paths;
-     * 
-     * public class App {
-     *     public static void main(String[] args) {
-     *         Pulumi.run(App::stack);
-     *     }
-     * 
-     *     public static void stack(Context ctx) {
-     *         final var example = SdwanFunctions.getApplicationPriorityQosPolicyProfileParcel(GetApplicationPriorityQosPolicyProfileParcelArgs.builder()
-     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
-     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
-     *             .build());
-     * 
-     *     }
-     * }
-     * }
-     * </pre>
-     * &lt;!--End PulumiCodeChooser --&gt;
-     * 
-     */
-    public static CompletableFuture<GetApplicationPriorityQosPolicyProfileParcelResult> getApplicationPriorityQosPolicyProfileParcelPlain(GetApplicationPriorityQosPolicyProfileParcelPlainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("sdwan:index/getApplicationPriorityQosPolicyProfileParcel:getApplicationPriorityQosPolicyProfileParcel", TypeShape.of(GetApplicationPriorityQosPolicyProfileParcelResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source can read the AS Path List Policy Object .
@@ -11008,342 +10647,6 @@ public final class SdwanFunctions {
         return Deployment.getInstance().invokeAsync("sdwan:index/getConfigurationGroup:getConfigurationGroup", TypeShape.of(GetConfigurationGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * This data source can read the Configuration Group Device Variables .
-     * 
-     * ## Example Usage
-     * 
-     * &lt;!--Start PulumiCodeChooser --&gt;
-     * <pre>
-     * {@code
-     * package generated_program;
-     * 
-     * import com.pulumi.Context;
-     * import com.pulumi.Pulumi;
-     * import com.pulumi.core.Output;
-     * import com.pulumi.sdwan.SdwanFunctions;
-     * import com.pulumi.sdwan.inputs.GetConfigurationGroupDeviceVariablesArgs;
-     * import java.util.List;
-     * import java.util.ArrayList;
-     * import java.util.Map;
-     * import java.io.File;
-     * import java.nio.file.Files;
-     * import java.nio.file.Paths;
-     * 
-     * public class App {
-     *     public static void main(String[] args) {
-     *         Pulumi.run(App::stack);
-     *     }
-     * 
-     *     public static void stack(Context ctx) {
-     *         final var example = SdwanFunctions.getConfigurationGroupDeviceVariables(GetConfigurationGroupDeviceVariablesArgs.builder()
-     *             .configurationGroupId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
-     *             .build());
-     * 
-     *     }
-     * }
-     * }
-     * </pre>
-     * &lt;!--End PulumiCodeChooser --&gt;
-     * 
-     */
-    public static Output<GetConfigurationGroupDeviceVariablesResult> getConfigurationGroupDeviceVariables(GetConfigurationGroupDeviceVariablesArgs args) {
-        return getConfigurationGroupDeviceVariables(args, InvokeOptions.Empty);
-    }
-    /**
-     * This data source can read the Configuration Group Device Variables .
-     * 
-     * ## Example Usage
-     * 
-     * &lt;!--Start PulumiCodeChooser --&gt;
-     * <pre>
-     * {@code
-     * package generated_program;
-     * 
-     * import com.pulumi.Context;
-     * import com.pulumi.Pulumi;
-     * import com.pulumi.core.Output;
-     * import com.pulumi.sdwan.SdwanFunctions;
-     * import com.pulumi.sdwan.inputs.GetConfigurationGroupDeviceVariablesArgs;
-     * import java.util.List;
-     * import java.util.ArrayList;
-     * import java.util.Map;
-     * import java.io.File;
-     * import java.nio.file.Files;
-     * import java.nio.file.Paths;
-     * 
-     * public class App {
-     *     public static void main(String[] args) {
-     *         Pulumi.run(App::stack);
-     *     }
-     * 
-     *     public static void stack(Context ctx) {
-     *         final var example = SdwanFunctions.getConfigurationGroupDeviceVariables(GetConfigurationGroupDeviceVariablesArgs.builder()
-     *             .configurationGroupId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
-     *             .build());
-     * 
-     *     }
-     * }
-     * }
-     * </pre>
-     * &lt;!--End PulumiCodeChooser --&gt;
-     * 
-     */
-    public static CompletableFuture<GetConfigurationGroupDeviceVariablesResult> getConfigurationGroupDeviceVariablesPlain(GetConfigurationGroupDeviceVariablesPlainArgs args) {
-        return getConfigurationGroupDeviceVariablesPlain(args, InvokeOptions.Empty);
-    }
-    /**
-     * This data source can read the Configuration Group Device Variables .
-     * 
-     * ## Example Usage
-     * 
-     * &lt;!--Start PulumiCodeChooser --&gt;
-     * <pre>
-     * {@code
-     * package generated_program;
-     * 
-     * import com.pulumi.Context;
-     * import com.pulumi.Pulumi;
-     * import com.pulumi.core.Output;
-     * import com.pulumi.sdwan.SdwanFunctions;
-     * import com.pulumi.sdwan.inputs.GetConfigurationGroupDeviceVariablesArgs;
-     * import java.util.List;
-     * import java.util.ArrayList;
-     * import java.util.Map;
-     * import java.io.File;
-     * import java.nio.file.Files;
-     * import java.nio.file.Paths;
-     * 
-     * public class App {
-     *     public static void main(String[] args) {
-     *         Pulumi.run(App::stack);
-     *     }
-     * 
-     *     public static void stack(Context ctx) {
-     *         final var example = SdwanFunctions.getConfigurationGroupDeviceVariables(GetConfigurationGroupDeviceVariablesArgs.builder()
-     *             .configurationGroupId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
-     *             .build());
-     * 
-     *     }
-     * }
-     * }
-     * </pre>
-     * &lt;!--End PulumiCodeChooser --&gt;
-     * 
-     */
-    public static Output<GetConfigurationGroupDeviceVariablesResult> getConfigurationGroupDeviceVariables(GetConfigurationGroupDeviceVariablesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invoke("sdwan:index/getConfigurationGroupDeviceVariables:getConfigurationGroupDeviceVariables", TypeShape.of(GetConfigurationGroupDeviceVariablesResult.class), args, Utilities.withVersion(options));
-    }
-    /**
-     * This data source can read the Configuration Group Device Variables .
-     * 
-     * ## Example Usage
-     * 
-     * &lt;!--Start PulumiCodeChooser --&gt;
-     * <pre>
-     * {@code
-     * package generated_program;
-     * 
-     * import com.pulumi.Context;
-     * import com.pulumi.Pulumi;
-     * import com.pulumi.core.Output;
-     * import com.pulumi.sdwan.SdwanFunctions;
-     * import com.pulumi.sdwan.inputs.GetConfigurationGroupDeviceVariablesArgs;
-     * import java.util.List;
-     * import java.util.ArrayList;
-     * import java.util.Map;
-     * import java.io.File;
-     * import java.nio.file.Files;
-     * import java.nio.file.Paths;
-     * 
-     * public class App {
-     *     public static void main(String[] args) {
-     *         Pulumi.run(App::stack);
-     *     }
-     * 
-     *     public static void stack(Context ctx) {
-     *         final var example = SdwanFunctions.getConfigurationGroupDeviceVariables(GetConfigurationGroupDeviceVariablesArgs.builder()
-     *             .configurationGroupId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
-     *             .build());
-     * 
-     *     }
-     * }
-     * }
-     * </pre>
-     * &lt;!--End PulumiCodeChooser --&gt;
-     * 
-     */
-    public static CompletableFuture<GetConfigurationGroupDeviceVariablesResult> getConfigurationGroupDeviceVariablesPlain(GetConfigurationGroupDeviceVariablesPlainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("sdwan:index/getConfigurationGroupDeviceVariables:getConfigurationGroupDeviceVariables", TypeShape.of(GetConfigurationGroupDeviceVariablesResult.class), args, Utilities.withVersion(options));
-    }
-    /**
-     * This data source can read the Configuration Group Devices .
-     * 
-     * ## Example Usage
-     * 
-     * &lt;!--Start PulumiCodeChooser --&gt;
-     * <pre>
-     * {@code
-     * package generated_program;
-     * 
-     * import com.pulumi.Context;
-     * import com.pulumi.Pulumi;
-     * import com.pulumi.core.Output;
-     * import com.pulumi.sdwan.SdwanFunctions;
-     * import com.pulumi.sdwan.inputs.GetConfigurationGroupDevicesArgs;
-     * import java.util.List;
-     * import java.util.ArrayList;
-     * import java.util.Map;
-     * import java.io.File;
-     * import java.nio.file.Files;
-     * import java.nio.file.Paths;
-     * 
-     * public class App {
-     *     public static void main(String[] args) {
-     *         Pulumi.run(App::stack);
-     *     }
-     * 
-     *     public static void stack(Context ctx) {
-     *         final var example = SdwanFunctions.getConfigurationGroupDevices(GetConfigurationGroupDevicesArgs.builder()
-     *             .configurationGroupId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
-     *             .build());
-     * 
-     *     }
-     * }
-     * }
-     * </pre>
-     * &lt;!--End PulumiCodeChooser --&gt;
-     * 
-     */
-    public static Output<GetConfigurationGroupDevicesResult> getConfigurationGroupDevices(GetConfigurationGroupDevicesArgs args) {
-        return getConfigurationGroupDevices(args, InvokeOptions.Empty);
-    }
-    /**
-     * This data source can read the Configuration Group Devices .
-     * 
-     * ## Example Usage
-     * 
-     * &lt;!--Start PulumiCodeChooser --&gt;
-     * <pre>
-     * {@code
-     * package generated_program;
-     * 
-     * import com.pulumi.Context;
-     * import com.pulumi.Pulumi;
-     * import com.pulumi.core.Output;
-     * import com.pulumi.sdwan.SdwanFunctions;
-     * import com.pulumi.sdwan.inputs.GetConfigurationGroupDevicesArgs;
-     * import java.util.List;
-     * import java.util.ArrayList;
-     * import java.util.Map;
-     * import java.io.File;
-     * import java.nio.file.Files;
-     * import java.nio.file.Paths;
-     * 
-     * public class App {
-     *     public static void main(String[] args) {
-     *         Pulumi.run(App::stack);
-     *     }
-     * 
-     *     public static void stack(Context ctx) {
-     *         final var example = SdwanFunctions.getConfigurationGroupDevices(GetConfigurationGroupDevicesArgs.builder()
-     *             .configurationGroupId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
-     *             .build());
-     * 
-     *     }
-     * }
-     * }
-     * </pre>
-     * &lt;!--End PulumiCodeChooser --&gt;
-     * 
-     */
-    public static CompletableFuture<GetConfigurationGroupDevicesResult> getConfigurationGroupDevicesPlain(GetConfigurationGroupDevicesPlainArgs args) {
-        return getConfigurationGroupDevicesPlain(args, InvokeOptions.Empty);
-    }
-    /**
-     * This data source can read the Configuration Group Devices .
-     * 
-     * ## Example Usage
-     * 
-     * &lt;!--Start PulumiCodeChooser --&gt;
-     * <pre>
-     * {@code
-     * package generated_program;
-     * 
-     * import com.pulumi.Context;
-     * import com.pulumi.Pulumi;
-     * import com.pulumi.core.Output;
-     * import com.pulumi.sdwan.SdwanFunctions;
-     * import com.pulumi.sdwan.inputs.GetConfigurationGroupDevicesArgs;
-     * import java.util.List;
-     * import java.util.ArrayList;
-     * import java.util.Map;
-     * import java.io.File;
-     * import java.nio.file.Files;
-     * import java.nio.file.Paths;
-     * 
-     * public class App {
-     *     public static void main(String[] args) {
-     *         Pulumi.run(App::stack);
-     *     }
-     * 
-     *     public static void stack(Context ctx) {
-     *         final var example = SdwanFunctions.getConfigurationGroupDevices(GetConfigurationGroupDevicesArgs.builder()
-     *             .configurationGroupId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
-     *             .build());
-     * 
-     *     }
-     * }
-     * }
-     * </pre>
-     * &lt;!--End PulumiCodeChooser --&gt;
-     * 
-     */
-    public static Output<GetConfigurationGroupDevicesResult> getConfigurationGroupDevices(GetConfigurationGroupDevicesArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invoke("sdwan:index/getConfigurationGroupDevices:getConfigurationGroupDevices", TypeShape.of(GetConfigurationGroupDevicesResult.class), args, Utilities.withVersion(options));
-    }
-    /**
-     * This data source can read the Configuration Group Devices .
-     * 
-     * ## Example Usage
-     * 
-     * &lt;!--Start PulumiCodeChooser --&gt;
-     * <pre>
-     * {@code
-     * package generated_program;
-     * 
-     * import com.pulumi.Context;
-     * import com.pulumi.Pulumi;
-     * import com.pulumi.core.Output;
-     * import com.pulumi.sdwan.SdwanFunctions;
-     * import com.pulumi.sdwan.inputs.GetConfigurationGroupDevicesArgs;
-     * import java.util.List;
-     * import java.util.ArrayList;
-     * import java.util.Map;
-     * import java.io.File;
-     * import java.nio.file.Files;
-     * import java.nio.file.Paths;
-     * 
-     * public class App {
-     *     public static void main(String[] args) {
-     *         Pulumi.run(App::stack);
-     *     }
-     * 
-     *     public static void stack(Context ctx) {
-     *         final var example = SdwanFunctions.getConfigurationGroupDevices(GetConfigurationGroupDevicesArgs.builder()
-     *             .configurationGroupId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
-     *             .build());
-     * 
-     *     }
-     * }
-     * }
-     * </pre>
-     * &lt;!--End PulumiCodeChooser --&gt;
-     * 
-     */
-    public static CompletableFuture<GetConfigurationGroupDevicesResult> getConfigurationGroupDevicesPlain(GetConfigurationGroupDevicesPlainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("sdwan:index/getConfigurationGroupDevices:getConfigurationGroupDevices", TypeShape.of(GetConfigurationGroupDevicesResult.class), args, Utilities.withVersion(options));
-    }
-    /**
      * This data source can read the Custom Control Topology Policy Definition .
      * 
      * ## Example Usage
@@ -12044,7 +11347,7 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getDevice(GetDeviceArgs.builder()
-     *             .serialNumber("3FFEFB37892E415FAF34A95D2328EC4C")
+     *             .serialNumber("0DFF93B792354B08ABE5E43566347F09")
      *             .name("Controller01")
      *             .build());
      * 
@@ -12087,7 +11390,7 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getDevice(GetDeviceArgs.builder()
-     *             .serialNumber("3FFEFB37892E415FAF34A95D2328EC4C")
+     *             .serialNumber("0DFF93B792354B08ABE5E43566347F09")
      *             .name("Controller01")
      *             .build());
      * 
@@ -12130,7 +11433,7 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getDevice(GetDeviceArgs.builder()
-     *             .serialNumber("3FFEFB37892E415FAF34A95D2328EC4C")
+     *             .serialNumber("0DFF93B792354B08ABE5E43566347F09")
      *             .name("Controller01")
      *             .build());
      * 
@@ -12173,7 +11476,7 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getDevice(GetDeviceArgs.builder()
-     *             .serialNumber("3FFEFB37892E415FAF34A95D2328EC4C")
+     *             .serialNumber("0DFF93B792354B08ABE5E43566347F09")
      *             .name("Controller01")
      *             .build());
      * 
@@ -12216,7 +11519,7 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getDevice(GetDeviceArgs.builder()
-     *             .serialNumber("3FFEFB37892E415FAF34A95D2328EC4C")
+     *             .serialNumber("0DFF93B792354B08ABE5E43566347F09")
      *             .name("Controller01")
      *             .build());
      * 
@@ -12259,7 +11562,7 @@ public final class SdwanFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = SdwanFunctions.getDevice(GetDeviceArgs.builder()
-     *             .serialNumber("3FFEFB37892E415FAF34A95D2328EC4C")
+     *             .serialNumber("0DFF93B792354B08ABE5E43566347F09")
      *             .name("Controller01")
      *             .build());
      * 
@@ -18238,182 +17541,6 @@ public final class SdwanFunctions {
         return Deployment.getInstance().invokeAsync("sdwan:index/getServiceFeatureProfile:getServiceFeatureProfile", TypeShape.of(GetServiceFeatureProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * This data source can read the Service LAN VPN Interface Ethernet profile parcel.
-     * 
-     * ## Example Usage
-     * 
-     * &lt;!--Start PulumiCodeChooser --&gt;
-     * <pre>
-     * {@code
-     * package generated_program;
-     * 
-     * import com.pulumi.Context;
-     * import com.pulumi.Pulumi;
-     * import com.pulumi.core.Output;
-     * import com.pulumi.sdwan.SdwanFunctions;
-     * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetProfileParcelArgs;
-     * import java.util.List;
-     * import java.util.ArrayList;
-     * import java.util.Map;
-     * import java.io.File;
-     * import java.nio.file.Files;
-     * import java.nio.file.Paths;
-     * 
-     * public class App {
-     *     public static void main(String[] args) {
-     *         Pulumi.run(App::stack);
-     *     }
-     * 
-     *     public static void stack(Context ctx) {
-     *         final var example = SdwanFunctions.getServiceLanVpnInterfaceEthernetProfileParcel(GetServiceLanVpnInterfaceEthernetProfileParcelArgs.builder()
-     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
-     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
-     *             .serviceLanVpnProfileParcelId("140331f6-5418-4755-a059-13c77eb96037")
-     *             .build());
-     * 
-     *     }
-     * }
-     * }
-     * </pre>
-     * &lt;!--End PulumiCodeChooser --&gt;
-     * 
-     */
-    public static Output<GetServiceLanVpnInterfaceEthernetProfileParcelResult> getServiceLanVpnInterfaceEthernetProfileParcel(GetServiceLanVpnInterfaceEthernetProfileParcelArgs args) {
-        return getServiceLanVpnInterfaceEthernetProfileParcel(args, InvokeOptions.Empty);
-    }
-    /**
-     * This data source can read the Service LAN VPN Interface Ethernet profile parcel.
-     * 
-     * ## Example Usage
-     * 
-     * &lt;!--Start PulumiCodeChooser --&gt;
-     * <pre>
-     * {@code
-     * package generated_program;
-     * 
-     * import com.pulumi.Context;
-     * import com.pulumi.Pulumi;
-     * import com.pulumi.core.Output;
-     * import com.pulumi.sdwan.SdwanFunctions;
-     * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetProfileParcelArgs;
-     * import java.util.List;
-     * import java.util.ArrayList;
-     * import java.util.Map;
-     * import java.io.File;
-     * import java.nio.file.Files;
-     * import java.nio.file.Paths;
-     * 
-     * public class App {
-     *     public static void main(String[] args) {
-     *         Pulumi.run(App::stack);
-     *     }
-     * 
-     *     public static void stack(Context ctx) {
-     *         final var example = SdwanFunctions.getServiceLanVpnInterfaceEthernetProfileParcel(GetServiceLanVpnInterfaceEthernetProfileParcelArgs.builder()
-     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
-     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
-     *             .serviceLanVpnProfileParcelId("140331f6-5418-4755-a059-13c77eb96037")
-     *             .build());
-     * 
-     *     }
-     * }
-     * }
-     * </pre>
-     * &lt;!--End PulumiCodeChooser --&gt;
-     * 
-     */
-    public static CompletableFuture<GetServiceLanVpnInterfaceEthernetProfileParcelResult> getServiceLanVpnInterfaceEthernetProfileParcelPlain(GetServiceLanVpnInterfaceEthernetProfileParcelPlainArgs args) {
-        return getServiceLanVpnInterfaceEthernetProfileParcelPlain(args, InvokeOptions.Empty);
-    }
-    /**
-     * This data source can read the Service LAN VPN Interface Ethernet profile parcel.
-     * 
-     * ## Example Usage
-     * 
-     * &lt;!--Start PulumiCodeChooser --&gt;
-     * <pre>
-     * {@code
-     * package generated_program;
-     * 
-     * import com.pulumi.Context;
-     * import com.pulumi.Pulumi;
-     * import com.pulumi.core.Output;
-     * import com.pulumi.sdwan.SdwanFunctions;
-     * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetProfileParcelArgs;
-     * import java.util.List;
-     * import java.util.ArrayList;
-     * import java.util.Map;
-     * import java.io.File;
-     * import java.nio.file.Files;
-     * import java.nio.file.Paths;
-     * 
-     * public class App {
-     *     public static void main(String[] args) {
-     *         Pulumi.run(App::stack);
-     *     }
-     * 
-     *     public static void stack(Context ctx) {
-     *         final var example = SdwanFunctions.getServiceLanVpnInterfaceEthernetProfileParcel(GetServiceLanVpnInterfaceEthernetProfileParcelArgs.builder()
-     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
-     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
-     *             .serviceLanVpnProfileParcelId("140331f6-5418-4755-a059-13c77eb96037")
-     *             .build());
-     * 
-     *     }
-     * }
-     * }
-     * </pre>
-     * &lt;!--End PulumiCodeChooser --&gt;
-     * 
-     */
-    public static Output<GetServiceLanVpnInterfaceEthernetProfileParcelResult> getServiceLanVpnInterfaceEthernetProfileParcel(GetServiceLanVpnInterfaceEthernetProfileParcelArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invoke("sdwan:index/getServiceLanVpnInterfaceEthernetProfileParcel:getServiceLanVpnInterfaceEthernetProfileParcel", TypeShape.of(GetServiceLanVpnInterfaceEthernetProfileParcelResult.class), args, Utilities.withVersion(options));
-    }
-    /**
-     * This data source can read the Service LAN VPN Interface Ethernet profile parcel.
-     * 
-     * ## Example Usage
-     * 
-     * &lt;!--Start PulumiCodeChooser --&gt;
-     * <pre>
-     * {@code
-     * package generated_program;
-     * 
-     * import com.pulumi.Context;
-     * import com.pulumi.Pulumi;
-     * import com.pulumi.core.Output;
-     * import com.pulumi.sdwan.SdwanFunctions;
-     * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetProfileParcelArgs;
-     * import java.util.List;
-     * import java.util.ArrayList;
-     * import java.util.Map;
-     * import java.io.File;
-     * import java.nio.file.Files;
-     * import java.nio.file.Paths;
-     * 
-     * public class App {
-     *     public static void main(String[] args) {
-     *         Pulumi.run(App::stack);
-     *     }
-     * 
-     *     public static void stack(Context ctx) {
-     *         final var example = SdwanFunctions.getServiceLanVpnInterfaceEthernetProfileParcel(GetServiceLanVpnInterfaceEthernetProfileParcelArgs.builder()
-     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
-     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
-     *             .serviceLanVpnProfileParcelId("140331f6-5418-4755-a059-13c77eb96037")
-     *             .build());
-     * 
-     *     }
-     * }
-     * }
-     * </pre>
-     * &lt;!--End PulumiCodeChooser --&gt;
-     * 
-     */
-    public static CompletableFuture<GetServiceLanVpnInterfaceEthernetProfileParcelResult> getServiceLanVpnInterfaceEthernetProfileParcelPlain(GetServiceLanVpnInterfaceEthernetProfileParcelPlainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("sdwan:index/getServiceLanVpnInterfaceEthernetProfileParcel:getServiceLanVpnInterfaceEthernetProfileParcel", TypeShape.of(GetServiceLanVpnInterfaceEthernetProfileParcelResult.class), args, Utilities.withVersion(options));
-    }
-    /**
      * This data source can read the Service LAN VPN profile parcel.
      * 
      * ## Example Usage
@@ -23102,182 +22229,6 @@ public final class SdwanFunctions {
         return Deployment.getInstance().invokeAsync("sdwan:index/getTransportIpv6TrackerProfileParcel:getTransportIpv6TrackerProfileParcel", TypeShape.of(GetTransportIpv6TrackerProfileParcelResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * This data source can read the Transport Management VPN Interface Ethernet profile parcel.
-     * 
-     * ## Example Usage
-     * 
-     * &lt;!--Start PulumiCodeChooser --&gt;
-     * <pre>
-     * {@code
-     * package generated_program;
-     * 
-     * import com.pulumi.Context;
-     * import com.pulumi.Pulumi;
-     * import com.pulumi.core.Output;
-     * import com.pulumi.sdwan.SdwanFunctions;
-     * import com.pulumi.sdwan.inputs.GetTransportManagementVpnInterfaceEthernetProfileParcelArgs;
-     * import java.util.List;
-     * import java.util.ArrayList;
-     * import java.util.Map;
-     * import java.io.File;
-     * import java.nio.file.Files;
-     * import java.nio.file.Paths;
-     * 
-     * public class App {
-     *     public static void main(String[] args) {
-     *         Pulumi.run(App::stack);
-     *     }
-     * 
-     *     public static void stack(Context ctx) {
-     *         final var example = SdwanFunctions.getTransportManagementVpnInterfaceEthernetProfileParcel(GetTransportManagementVpnInterfaceEthernetProfileParcelArgs.builder()
-     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
-     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
-     *             .transportManagementVpnProfileParcelId("140331f6-5418-4755-a059-13c77eb96037")
-     *             .build());
-     * 
-     *     }
-     * }
-     * }
-     * </pre>
-     * &lt;!--End PulumiCodeChooser --&gt;
-     * 
-     */
-    public static Output<GetTransportManagementVpnInterfaceEthernetProfileParcelResult> getTransportManagementVpnInterfaceEthernetProfileParcel(GetTransportManagementVpnInterfaceEthernetProfileParcelArgs args) {
-        return getTransportManagementVpnInterfaceEthernetProfileParcel(args, InvokeOptions.Empty);
-    }
-    /**
-     * This data source can read the Transport Management VPN Interface Ethernet profile parcel.
-     * 
-     * ## Example Usage
-     * 
-     * &lt;!--Start PulumiCodeChooser --&gt;
-     * <pre>
-     * {@code
-     * package generated_program;
-     * 
-     * import com.pulumi.Context;
-     * import com.pulumi.Pulumi;
-     * import com.pulumi.core.Output;
-     * import com.pulumi.sdwan.SdwanFunctions;
-     * import com.pulumi.sdwan.inputs.GetTransportManagementVpnInterfaceEthernetProfileParcelArgs;
-     * import java.util.List;
-     * import java.util.ArrayList;
-     * import java.util.Map;
-     * import java.io.File;
-     * import java.nio.file.Files;
-     * import java.nio.file.Paths;
-     * 
-     * public class App {
-     *     public static void main(String[] args) {
-     *         Pulumi.run(App::stack);
-     *     }
-     * 
-     *     public static void stack(Context ctx) {
-     *         final var example = SdwanFunctions.getTransportManagementVpnInterfaceEthernetProfileParcel(GetTransportManagementVpnInterfaceEthernetProfileParcelArgs.builder()
-     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
-     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
-     *             .transportManagementVpnProfileParcelId("140331f6-5418-4755-a059-13c77eb96037")
-     *             .build());
-     * 
-     *     }
-     * }
-     * }
-     * </pre>
-     * &lt;!--End PulumiCodeChooser --&gt;
-     * 
-     */
-    public static CompletableFuture<GetTransportManagementVpnInterfaceEthernetProfileParcelResult> getTransportManagementVpnInterfaceEthernetProfileParcelPlain(GetTransportManagementVpnInterfaceEthernetProfileParcelPlainArgs args) {
-        return getTransportManagementVpnInterfaceEthernetProfileParcelPlain(args, InvokeOptions.Empty);
-    }
-    /**
-     * This data source can read the Transport Management VPN Interface Ethernet profile parcel.
-     * 
-     * ## Example Usage
-     * 
-     * &lt;!--Start PulumiCodeChooser --&gt;
-     * <pre>
-     * {@code
-     * package generated_program;
-     * 
-     * import com.pulumi.Context;
-     * import com.pulumi.Pulumi;
-     * import com.pulumi.core.Output;
-     * import com.pulumi.sdwan.SdwanFunctions;
-     * import com.pulumi.sdwan.inputs.GetTransportManagementVpnInterfaceEthernetProfileParcelArgs;
-     * import java.util.List;
-     * import java.util.ArrayList;
-     * import java.util.Map;
-     * import java.io.File;
-     * import java.nio.file.Files;
-     * import java.nio.file.Paths;
-     * 
-     * public class App {
-     *     public static void main(String[] args) {
-     *         Pulumi.run(App::stack);
-     *     }
-     * 
-     *     public static void stack(Context ctx) {
-     *         final var example = SdwanFunctions.getTransportManagementVpnInterfaceEthernetProfileParcel(GetTransportManagementVpnInterfaceEthernetProfileParcelArgs.builder()
-     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
-     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
-     *             .transportManagementVpnProfileParcelId("140331f6-5418-4755-a059-13c77eb96037")
-     *             .build());
-     * 
-     *     }
-     * }
-     * }
-     * </pre>
-     * &lt;!--End PulumiCodeChooser --&gt;
-     * 
-     */
-    public static Output<GetTransportManagementVpnInterfaceEthernetProfileParcelResult> getTransportManagementVpnInterfaceEthernetProfileParcel(GetTransportManagementVpnInterfaceEthernetProfileParcelArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invoke("sdwan:index/getTransportManagementVpnInterfaceEthernetProfileParcel:getTransportManagementVpnInterfaceEthernetProfileParcel", TypeShape.of(GetTransportManagementVpnInterfaceEthernetProfileParcelResult.class), args, Utilities.withVersion(options));
-    }
-    /**
-     * This data source can read the Transport Management VPN Interface Ethernet profile parcel.
-     * 
-     * ## Example Usage
-     * 
-     * &lt;!--Start PulumiCodeChooser --&gt;
-     * <pre>
-     * {@code
-     * package generated_program;
-     * 
-     * import com.pulumi.Context;
-     * import com.pulumi.Pulumi;
-     * import com.pulumi.core.Output;
-     * import com.pulumi.sdwan.SdwanFunctions;
-     * import com.pulumi.sdwan.inputs.GetTransportManagementVpnInterfaceEthernetProfileParcelArgs;
-     * import java.util.List;
-     * import java.util.ArrayList;
-     * import java.util.Map;
-     * import java.io.File;
-     * import java.nio.file.Files;
-     * import java.nio.file.Paths;
-     * 
-     * public class App {
-     *     public static void main(String[] args) {
-     *         Pulumi.run(App::stack);
-     *     }
-     * 
-     *     public static void stack(Context ctx) {
-     *         final var example = SdwanFunctions.getTransportManagementVpnInterfaceEthernetProfileParcel(GetTransportManagementVpnInterfaceEthernetProfileParcelArgs.builder()
-     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
-     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
-     *             .transportManagementVpnProfileParcelId("140331f6-5418-4755-a059-13c77eb96037")
-     *             .build());
-     * 
-     *     }
-     * }
-     * }
-     * </pre>
-     * &lt;!--End PulumiCodeChooser --&gt;
-     * 
-     */
-    public static CompletableFuture<GetTransportManagementVpnInterfaceEthernetProfileParcelResult> getTransportManagementVpnInterfaceEthernetProfileParcelPlain(GetTransportManagementVpnInterfaceEthernetProfileParcelPlainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("sdwan:index/getTransportManagementVpnInterfaceEthernetProfileParcel:getTransportManagementVpnInterfaceEthernetProfileParcel", TypeShape.of(GetTransportManagementVpnInterfaceEthernetProfileParcelResult.class), args, Utilities.withVersion(options));
-    }
-    /**
      * This data source can read the Transport Management VPN profile parcel.
      * 
      * ## Example Usage
@@ -23620,182 +22571,6 @@ public final class SdwanFunctions {
      */
     public static CompletableFuture<GetTransportRoutingBgpProfileParcelResult> getTransportRoutingBgpProfileParcelPlain(GetTransportRoutingBgpProfileParcelPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("sdwan:index/getTransportRoutingBgpProfileParcel:getTransportRoutingBgpProfileParcel", TypeShape.of(GetTransportRoutingBgpProfileParcelResult.class), args, Utilities.withVersion(options));
-    }
-    /**
-     * This data source can read the Transport WAN VPN Interface Ethernet profile parcel.
-     * 
-     * ## Example Usage
-     * 
-     * &lt;!--Start PulumiCodeChooser --&gt;
-     * <pre>
-     * {@code
-     * package generated_program;
-     * 
-     * import com.pulumi.Context;
-     * import com.pulumi.Pulumi;
-     * import com.pulumi.core.Output;
-     * import com.pulumi.sdwan.SdwanFunctions;
-     * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceEthernetProfileParcelArgs;
-     * import java.util.List;
-     * import java.util.ArrayList;
-     * import java.util.Map;
-     * import java.io.File;
-     * import java.nio.file.Files;
-     * import java.nio.file.Paths;
-     * 
-     * public class App {
-     *     public static void main(String[] args) {
-     *         Pulumi.run(App::stack);
-     *     }
-     * 
-     *     public static void stack(Context ctx) {
-     *         final var example = SdwanFunctions.getTransportWanVpnInterfaceEthernetProfileParcel(GetTransportWanVpnInterfaceEthernetProfileParcelArgs.builder()
-     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
-     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
-     *             .transportWanVpnProfileParcelId("140331f6-5418-4755-a059-13c77eb96037")
-     *             .build());
-     * 
-     *     }
-     * }
-     * }
-     * </pre>
-     * &lt;!--End PulumiCodeChooser --&gt;
-     * 
-     */
-    public static Output<GetTransportWanVpnInterfaceEthernetProfileParcelResult> getTransportWanVpnInterfaceEthernetProfileParcel(GetTransportWanVpnInterfaceEthernetProfileParcelArgs args) {
-        return getTransportWanVpnInterfaceEthernetProfileParcel(args, InvokeOptions.Empty);
-    }
-    /**
-     * This data source can read the Transport WAN VPN Interface Ethernet profile parcel.
-     * 
-     * ## Example Usage
-     * 
-     * &lt;!--Start PulumiCodeChooser --&gt;
-     * <pre>
-     * {@code
-     * package generated_program;
-     * 
-     * import com.pulumi.Context;
-     * import com.pulumi.Pulumi;
-     * import com.pulumi.core.Output;
-     * import com.pulumi.sdwan.SdwanFunctions;
-     * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceEthernetProfileParcelArgs;
-     * import java.util.List;
-     * import java.util.ArrayList;
-     * import java.util.Map;
-     * import java.io.File;
-     * import java.nio.file.Files;
-     * import java.nio.file.Paths;
-     * 
-     * public class App {
-     *     public static void main(String[] args) {
-     *         Pulumi.run(App::stack);
-     *     }
-     * 
-     *     public static void stack(Context ctx) {
-     *         final var example = SdwanFunctions.getTransportWanVpnInterfaceEthernetProfileParcel(GetTransportWanVpnInterfaceEthernetProfileParcelArgs.builder()
-     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
-     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
-     *             .transportWanVpnProfileParcelId("140331f6-5418-4755-a059-13c77eb96037")
-     *             .build());
-     * 
-     *     }
-     * }
-     * }
-     * </pre>
-     * &lt;!--End PulumiCodeChooser --&gt;
-     * 
-     */
-    public static CompletableFuture<GetTransportWanVpnInterfaceEthernetProfileParcelResult> getTransportWanVpnInterfaceEthernetProfileParcelPlain(GetTransportWanVpnInterfaceEthernetProfileParcelPlainArgs args) {
-        return getTransportWanVpnInterfaceEthernetProfileParcelPlain(args, InvokeOptions.Empty);
-    }
-    /**
-     * This data source can read the Transport WAN VPN Interface Ethernet profile parcel.
-     * 
-     * ## Example Usage
-     * 
-     * &lt;!--Start PulumiCodeChooser --&gt;
-     * <pre>
-     * {@code
-     * package generated_program;
-     * 
-     * import com.pulumi.Context;
-     * import com.pulumi.Pulumi;
-     * import com.pulumi.core.Output;
-     * import com.pulumi.sdwan.SdwanFunctions;
-     * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceEthernetProfileParcelArgs;
-     * import java.util.List;
-     * import java.util.ArrayList;
-     * import java.util.Map;
-     * import java.io.File;
-     * import java.nio.file.Files;
-     * import java.nio.file.Paths;
-     * 
-     * public class App {
-     *     public static void main(String[] args) {
-     *         Pulumi.run(App::stack);
-     *     }
-     * 
-     *     public static void stack(Context ctx) {
-     *         final var example = SdwanFunctions.getTransportWanVpnInterfaceEthernetProfileParcel(GetTransportWanVpnInterfaceEthernetProfileParcelArgs.builder()
-     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
-     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
-     *             .transportWanVpnProfileParcelId("140331f6-5418-4755-a059-13c77eb96037")
-     *             .build());
-     * 
-     *     }
-     * }
-     * }
-     * </pre>
-     * &lt;!--End PulumiCodeChooser --&gt;
-     * 
-     */
-    public static Output<GetTransportWanVpnInterfaceEthernetProfileParcelResult> getTransportWanVpnInterfaceEthernetProfileParcel(GetTransportWanVpnInterfaceEthernetProfileParcelArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invoke("sdwan:index/getTransportWanVpnInterfaceEthernetProfileParcel:getTransportWanVpnInterfaceEthernetProfileParcel", TypeShape.of(GetTransportWanVpnInterfaceEthernetProfileParcelResult.class), args, Utilities.withVersion(options));
-    }
-    /**
-     * This data source can read the Transport WAN VPN Interface Ethernet profile parcel.
-     * 
-     * ## Example Usage
-     * 
-     * &lt;!--Start PulumiCodeChooser --&gt;
-     * <pre>
-     * {@code
-     * package generated_program;
-     * 
-     * import com.pulumi.Context;
-     * import com.pulumi.Pulumi;
-     * import com.pulumi.core.Output;
-     * import com.pulumi.sdwan.SdwanFunctions;
-     * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceEthernetProfileParcelArgs;
-     * import java.util.List;
-     * import java.util.ArrayList;
-     * import java.util.Map;
-     * import java.io.File;
-     * import java.nio.file.Files;
-     * import java.nio.file.Paths;
-     * 
-     * public class App {
-     *     public static void main(String[] args) {
-     *         Pulumi.run(App::stack);
-     *     }
-     * 
-     *     public static void stack(Context ctx) {
-     *         final var example = SdwanFunctions.getTransportWanVpnInterfaceEthernetProfileParcel(GetTransportWanVpnInterfaceEthernetProfileParcelArgs.builder()
-     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
-     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
-     *             .transportWanVpnProfileParcelId("140331f6-5418-4755-a059-13c77eb96037")
-     *             .build());
-     * 
-     *     }
-     * }
-     * }
-     * </pre>
-     * &lt;!--End PulumiCodeChooser --&gt;
-     * 
-     */
-    public static CompletableFuture<GetTransportWanVpnInterfaceEthernetProfileParcelResult> getTransportWanVpnInterfaceEthernetProfileParcelPlain(GetTransportWanVpnInterfaceEthernetProfileParcelPlainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("sdwan:index/getTransportWanVpnInterfaceEthernetProfileParcel:getTransportWanVpnInterfaceEthernetProfileParcel", TypeShape.of(GetTransportWanVpnInterfaceEthernetProfileParcelResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source can read the Transport WAN VPN profile parcel.

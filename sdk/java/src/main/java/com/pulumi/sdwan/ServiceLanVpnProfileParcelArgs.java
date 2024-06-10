@@ -363,15 +363,15 @@ public final class ServiceLanVpnProfileParcelArgs extends com.pulumi.resources.R
      * Primary DNS Address (IPv4)
      * 
      */
-    @Import(name="primaryDnsAddressIpv4")
-    private @Nullable Output<String> primaryDnsAddressIpv4;
+    @Import(name="primaryDnsAddressIpv4", required=true)
+    private Output<String> primaryDnsAddressIpv4;
 
     /**
      * @return Primary DNS Address (IPv4)
      * 
      */
-    public Optional<Output<String>> primaryDnsAddressIpv4() {
-        return Optional.ofNullable(this.primaryDnsAddressIpv4);
+    public Output<String> primaryDnsAddressIpv4() {
+        return this.primaryDnsAddressIpv4;
     }
 
     /**
@@ -393,15 +393,15 @@ public final class ServiceLanVpnProfileParcelArgs extends com.pulumi.resources.R
      * Primary DNS Address (IPv6)
      * 
      */
-    @Import(name="primaryDnsAddressIpv6")
-    private @Nullable Output<String> primaryDnsAddressIpv6;
+    @Import(name="primaryDnsAddressIpv6", required=true)
+    private Output<String> primaryDnsAddressIpv6;
 
     /**
      * @return Primary DNS Address (IPv6)
      * 
      */
-    public Optional<Output<String>> primaryDnsAddressIpv6() {
-        return Optional.ofNullable(this.primaryDnsAddressIpv6);
+    public Output<String> primaryDnsAddressIpv6() {
+        return this.primaryDnsAddressIpv6;
     }
 
     /**
@@ -1222,7 +1222,7 @@ public final class ServiceLanVpnProfileParcelArgs extends com.pulumi.resources.R
          * @return builder
          * 
          */
-        public Builder primaryDnsAddressIpv4(@Nullable Output<String> primaryDnsAddressIpv4) {
+        public Builder primaryDnsAddressIpv4(Output<String> primaryDnsAddressIpv4) {
             $.primaryDnsAddressIpv4 = primaryDnsAddressIpv4;
             return this;
         }
@@ -1264,7 +1264,7 @@ public final class ServiceLanVpnProfileParcelArgs extends com.pulumi.resources.R
          * @return builder
          * 
          */
-        public Builder primaryDnsAddressIpv6(@Nullable Output<String> primaryDnsAddressIpv6) {
+        public Builder primaryDnsAddressIpv6(Output<String> primaryDnsAddressIpv6) {
             $.primaryDnsAddressIpv6 = primaryDnsAddressIpv6;
             return this;
         }
@@ -1615,6 +1615,12 @@ public final class ServiceLanVpnProfileParcelArgs extends com.pulumi.resources.R
         public ServiceLanVpnProfileParcelArgs build() {
             if ($.featureProfileId == null) {
                 throw new MissingRequiredPropertyException("ServiceLanVpnProfileParcelArgs", "featureProfileId");
+            }
+            if ($.primaryDnsAddressIpv4 == null) {
+                throw new MissingRequiredPropertyException("ServiceLanVpnProfileParcelArgs", "primaryDnsAddressIpv4");
+            }
+            if ($.primaryDnsAddressIpv6 == null) {
+                throw new MissingRequiredPropertyException("ServiceLanVpnProfileParcelArgs", "primaryDnsAddressIpv6");
             }
             return $;
         }

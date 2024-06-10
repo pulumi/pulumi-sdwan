@@ -100,16 +100,6 @@ public final class GetTransportRoutingBgpProfileParcelIpv4Neighbor {
      */
     private String keepaliveTimeVariable;
     /**
-     * @return Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
-     * 
-     */
-    private Integer localAs;
-    /**
-     * @return Variable name
-     * 
-     */
-    private String localAsVariable;
-    /**
      * @return Set router to be next hop for routes advertised to neighbor
      * 
      */
@@ -306,20 +296,6 @@ public final class GetTransportRoutingBgpProfileParcelIpv4Neighbor {
         return this.keepaliveTimeVariable;
     }
     /**
-     * @return Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
-     * 
-     */
-    public Integer localAs() {
-        return this.localAs;
-    }
-    /**
-     * @return Variable name
-     * 
-     */
-    public String localAsVariable() {
-        return this.localAsVariable;
-    }
-    /**
      * @return Set router to be next hop for routes advertised to neighbor
      * 
      */
@@ -451,8 +427,6 @@ public final class GetTransportRoutingBgpProfileParcelIpv4Neighbor {
         private String holdTimeVariable;
         private Integer keepaliveTime;
         private String keepaliveTimeVariable;
-        private Integer localAs;
-        private String localAsVariable;
         private Boolean nextHopSelf;
         private String nextHopSelfVariable;
         private String password;
@@ -488,8 +462,6 @@ public final class GetTransportRoutingBgpProfileParcelIpv4Neighbor {
     	      this.holdTimeVariable = defaults.holdTimeVariable;
     	      this.keepaliveTime = defaults.keepaliveTime;
     	      this.keepaliveTimeVariable = defaults.keepaliveTimeVariable;
-    	      this.localAs = defaults.localAs;
-    	      this.localAsVariable = defaults.localAsVariable;
     	      this.nextHopSelf = defaults.nextHopSelf;
     	      this.nextHopSelfVariable = defaults.nextHopSelfVariable;
     	      this.password = defaults.password;
@@ -647,22 +619,6 @@ public final class GetTransportRoutingBgpProfileParcelIpv4Neighbor {
             return this;
         }
         @CustomType.Setter
-        public Builder localAs(Integer localAs) {
-            if (localAs == null) {
-              throw new MissingRequiredPropertyException("GetTransportRoutingBgpProfileParcelIpv4Neighbor", "localAs");
-            }
-            this.localAs = localAs;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder localAsVariable(String localAsVariable) {
-            if (localAsVariable == null) {
-              throw new MissingRequiredPropertyException("GetTransportRoutingBgpProfileParcelIpv4Neighbor", "localAsVariable");
-            }
-            this.localAsVariable = localAsVariable;
-            return this;
-        }
-        @CustomType.Setter
         public Builder nextHopSelf(Boolean nextHopSelf) {
             if (nextHopSelf == null) {
               throw new MissingRequiredPropertyException("GetTransportRoutingBgpProfileParcelIpv4Neighbor", "nextHopSelf");
@@ -801,8 +757,6 @@ public final class GetTransportRoutingBgpProfileParcelIpv4Neighbor {
             _resultValue.holdTimeVariable = holdTimeVariable;
             _resultValue.keepaliveTime = keepaliveTime;
             _resultValue.keepaliveTimeVariable = keepaliveTimeVariable;
-            _resultValue.localAs = localAs;
-            _resultValue.localAsVariable = localAsVariable;
             _resultValue.nextHopSelf = nextHopSelf;
             _resultValue.nextHopSelfVariable = nextHopSelfVariable;
             _resultValue.password = password;

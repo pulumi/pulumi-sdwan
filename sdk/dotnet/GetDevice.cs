@@ -26,7 +26,7 @@ namespace Pulumi.Sdwan
         /// {
         ///     var example = Sdwan.GetDevice.Invoke(new()
         ///     {
-        ///         SerialNumber = "3FFEFB37892E415FAF34A95D2328EC4C",
+        ///         SerialNumber = "0DFF93B792354B08ABE5E43566347F09",
         ///         Name = "Controller01",
         ///     });
         /// 
@@ -51,7 +51,7 @@ namespace Pulumi.Sdwan
         /// {
         ///     var example = Sdwan.GetDevice.Invoke(new()
         ///     {
-        ///         SerialNumber = "3FFEFB37892E415FAF34A95D2328EC4C",
+        ///         SerialNumber = "0DFF93B792354B08ABE5E43566347F09",
         ///         Name = "Controller01",
         ///     });
         /// 

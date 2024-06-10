@@ -12,8 +12,6 @@ from .allow_url_list_policy_object import *
 from .app_probe_class_policy_object import *
 from .application_aware_routing_policy_definition import *
 from .application_list_policy_object import *
-from .application_priority_feature_profile import *
-from .application_priority_qos_policy_profile_parcel import *
 from .as_path_list_policy_object import *
 from .attach_feature_device_template import *
 from .block_url_list_policy_object import *
@@ -55,9 +53,6 @@ from .cli_feature_profile import *
 from .cli_template_feature_template import *
 from .color_list_policy_object import *
 from .configuration_group import *
-from .configuration_group_deploy import *
-from .configuration_group_device_variables import *
-from .configuration_group_devices import *
 from .custom_control_topology_policy_definition import *
 from .data_fqdn_prefix_list_policy_object import *
 from .data_ipv4_prefix_list_policy_object import *
@@ -75,8 +70,6 @@ from .get_allow_url_list_policy_object import *
 from .get_app_probe_class_policy_object import *
 from .get_application_aware_routing_policy_definition import *
 from .get_application_list_policy_object import *
-from .get_application_priority_feature_profile import *
-from .get_application_priority_qos_policy_profile_parcel import *
 from .get_as_path_list_policy_object import *
 from .get_block_url_list_policy_object import *
 from .get_cedge_aaa_feature_template import *
@@ -117,8 +110,6 @@ from .get_cli_feature_profile import *
 from .get_cli_template_feature_template import *
 from .get_color_list_policy_object import *
 from .get_configuration_group import *
-from .get_configuration_group_device_variables import *
-from .get_configuration_group_devices import *
 from .get_custom_control_topology_policy_definition import *
 from .get_data_fqdn_prefix_list_policy_object import *
 from .get_data_ipv4_prefix_list_policy_object import *
@@ -158,7 +149,6 @@ from .get_rule_set_policy_definition import *
 from .get_security_app_hosting_feature_template import *
 from .get_security_policy import *
 from .get_service_feature_profile import *
-from .get_service_lan_vpn_interface_ethernet_profile_parcel import *
 from .get_service_lan_vpn_profile_parcel import *
 from .get_service_tracker_profile_parcel import *
 from .get_site_list_policy_object import *
@@ -186,10 +176,8 @@ from .get_tls_ssl_profile_policy_definition import *
 from .get_traffic_data_policy_definition import *
 from .get_transport_feature_profile import *
 from .get_transport_ipv6_tracker_profile_parcel import *
-from .get_transport_management_vpn_interface_ethernet_profile_parcel import *
 from .get_transport_management_vpn_profile_parcel import *
 from .get_transport_routing_bgp_profile_parcel import *
-from .get_transport_wan_vpn_interface_ethernet_profile_parcel import *
 from .get_transport_wan_vpn_profile_parcel import *
 from .get_url_filtering_policy_definition import *
 from .get_vedge_inventory import *
@@ -232,7 +220,6 @@ from .rule_set_policy_definition import *
 from .security_app_hosting_feature_template import *
 from .security_policy import *
 from .service_feature_profile import *
-from .service_lan_vpn_interface_ethernet_profile_parcel import *
 from .service_lan_vpn_profile_parcel import *
 from .service_tracker_profile_parcel import *
 from .site_list_policy_object import *
@@ -260,10 +247,8 @@ from .tls_ssl_profile_policy_definition import *
 from .traffic_data_policy_definition import *
 from .transport_feature_profile import *
 from .transport_ipv6_tracker_profile_parcel import *
-from .transport_management_vpn_interface_ethernet_profile_parcel import *
 from .transport_management_vpn_profile_parcel import *
 from .transport_routing_bgp_profile_parcel import *
-from .transport_wan_vpn_interface_ethernet_profile_parcel import *
 from .transport_wan_vpn_profile_parcel import *
 from .url_filtering_policy_definition import *
 from .vpn_interface_cellular_feature_template import *
@@ -344,22 +329,6 @@ _utilities.register(
   "fqn": "pulumi_sdwan",
   "classes": {
    "sdwan:index/applicationListPolicyObject:ApplicationListPolicyObject": "ApplicationListPolicyObject"
-  }
- },
- {
-  "pkg": "sdwan",
-  "mod": "index/applicationPriorityFeatureProfile",
-  "fqn": "pulumi_sdwan",
-  "classes": {
-   "sdwan:index/applicationPriorityFeatureProfile:ApplicationPriorityFeatureProfile": "ApplicationPriorityFeatureProfile"
-  }
- },
- {
-  "pkg": "sdwan",
-  "mod": "index/applicationPriorityQosPolicyProfileParcel",
-  "fqn": "pulumi_sdwan",
-  "classes": {
-   "sdwan:index/applicationPriorityQosPolicyProfileParcel:ApplicationPriorityQosPolicyProfileParcel": "ApplicationPriorityQosPolicyProfileParcel"
   }
  },
  {
@@ -692,30 +661,6 @@ _utilities.register(
  },
  {
   "pkg": "sdwan",
-  "mod": "index/configurationGroupDeploy",
-  "fqn": "pulumi_sdwan",
-  "classes": {
-   "sdwan:index/configurationGroupDeploy:ConfigurationGroupDeploy": "ConfigurationGroupDeploy"
-  }
- },
- {
-  "pkg": "sdwan",
-  "mod": "index/configurationGroupDeviceVariables",
-  "fqn": "pulumi_sdwan",
-  "classes": {
-   "sdwan:index/configurationGroupDeviceVariables:ConfigurationGroupDeviceVariables": "ConfigurationGroupDeviceVariables"
-  }
- },
- {
-  "pkg": "sdwan",
-  "mod": "index/configurationGroupDevices",
-  "fqn": "pulumi_sdwan",
-  "classes": {
-   "sdwan:index/configurationGroupDevices:ConfigurationGroupDevices": "ConfigurationGroupDevices"
-  }
- },
- {
-  "pkg": "sdwan",
   "mod": "index/customControlTopologyPolicyDefinition",
   "fqn": "pulumi_sdwan",
   "classes": {
@@ -1020,14 +965,6 @@ _utilities.register(
  },
  {
   "pkg": "sdwan",
-  "mod": "index/serviceLanVpnInterfaceEthernetProfileParcel",
-  "fqn": "pulumi_sdwan",
-  "classes": {
-   "sdwan:index/serviceLanVpnInterfaceEthernetProfileParcel:ServiceLanVpnInterfaceEthernetProfileParcel": "ServiceLanVpnInterfaceEthernetProfileParcel"
-  }
- },
- {
-  "pkg": "sdwan",
   "mod": "index/serviceLanVpnProfileParcel",
   "fqn": "pulumi_sdwan",
   "classes": {
@@ -1244,14 +1181,6 @@ _utilities.register(
  },
  {
   "pkg": "sdwan",
-  "mod": "index/transportManagementVpnInterfaceEthernetProfileParcel",
-  "fqn": "pulumi_sdwan",
-  "classes": {
-   "sdwan:index/transportManagementVpnInterfaceEthernetProfileParcel:TransportManagementVpnInterfaceEthernetProfileParcel": "TransportManagementVpnInterfaceEthernetProfileParcel"
-  }
- },
- {
-  "pkg": "sdwan",
   "mod": "index/transportManagementVpnProfileParcel",
   "fqn": "pulumi_sdwan",
   "classes": {
@@ -1264,14 +1193,6 @@ _utilities.register(
   "fqn": "pulumi_sdwan",
   "classes": {
    "sdwan:index/transportRoutingBgpProfileParcel:TransportRoutingBgpProfileParcel": "TransportRoutingBgpProfileParcel"
-  }
- },
- {
-  "pkg": "sdwan",
-  "mod": "index/transportWanVpnInterfaceEthernetProfileParcel",
-  "fqn": "pulumi_sdwan",
-  "classes": {
-   "sdwan:index/transportWanVpnInterfaceEthernetProfileParcel:TransportWanVpnInterfaceEthernetProfileParcel": "TransportWanVpnInterfaceEthernetProfileParcel"
   }
  },
  {

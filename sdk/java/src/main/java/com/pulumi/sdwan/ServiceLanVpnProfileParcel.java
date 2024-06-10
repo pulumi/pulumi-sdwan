@@ -487,14 +487,14 @@ public class ServiceLanVpnProfileParcel extends com.pulumi.resources.CustomResou
      * 
      */
     @Export(name="primaryDnsAddressIpv4", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> primaryDnsAddressIpv4;
+    private Output<String> primaryDnsAddressIpv4;
 
     /**
      * @return Primary DNS Address (IPv4)
      * 
      */
-    public Output<Optional<String>> primaryDnsAddressIpv4() {
-        return Codegen.optional(this.primaryDnsAddressIpv4);
+    public Output<String> primaryDnsAddressIpv4() {
+        return this.primaryDnsAddressIpv4;
     }
     /**
      * Variable name
@@ -515,14 +515,14 @@ public class ServiceLanVpnProfileParcel extends com.pulumi.resources.CustomResou
      * 
      */
     @Export(name="primaryDnsAddressIpv6", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> primaryDnsAddressIpv6;
+    private Output<String> primaryDnsAddressIpv6;
 
     /**
      * @return Primary DNS Address (IPv6)
      * 
      */
-    public Output<Optional<String>> primaryDnsAddressIpv6() {
-        return Codegen.optional(this.primaryDnsAddressIpv6);
+    public Output<String> primaryDnsAddressIpv6() {
+        return this.primaryDnsAddressIpv6;
     }
     /**
      * Variable name

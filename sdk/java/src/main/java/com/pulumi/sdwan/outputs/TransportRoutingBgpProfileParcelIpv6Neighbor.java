@@ -99,16 +99,6 @@ public final class TransportRoutingBgpProfileParcelIpv6Neighbor {
      */
     private @Nullable String keepaliveTimeVariable;
     /**
-     * @return Set local autonomous system number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
-     * 
-     */
-    private @Nullable Integer localAs;
-    /**
-     * @return Variable name
-     * 
-     */
-    private @Nullable String localAsVariable;
-    /**
      * @return Set router to be next hop for routes advertised to neighbor
      *   - Default value: `false`
      * 
@@ -298,20 +288,6 @@ public final class TransportRoutingBgpProfileParcelIpv6Neighbor {
         return Optional.ofNullable(this.keepaliveTimeVariable);
     }
     /**
-     * @return Set local autonomous system number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
-     * 
-     */
-    public Optional<Integer> localAs() {
-        return Optional.ofNullable(this.localAs);
-    }
-    /**
-     * @return Variable name
-     * 
-     */
-    public Optional<String> localAsVariable() {
-        return Optional.ofNullable(this.localAsVariable);
-    }
-    /**
      * @return Set router to be next hop for routes advertised to neighbor
      *   - Default value: `false`
      * 
@@ -438,8 +414,6 @@ public final class TransportRoutingBgpProfileParcelIpv6Neighbor {
         private @Nullable String holdTimeVariable;
         private @Nullable Integer keepaliveTime;
         private @Nullable String keepaliveTimeVariable;
-        private @Nullable Integer localAs;
-        private @Nullable String localAsVariable;
         private @Nullable Boolean nextHopSelf;
         private @Nullable String nextHopSelfVariable;
         private @Nullable String password;
@@ -472,8 +446,6 @@ public final class TransportRoutingBgpProfileParcelIpv6Neighbor {
     	      this.holdTimeVariable = defaults.holdTimeVariable;
     	      this.keepaliveTime = defaults.keepaliveTime;
     	      this.keepaliveTimeVariable = defaults.keepaliveTimeVariable;
-    	      this.localAs = defaults.localAs;
-    	      this.localAsVariable = defaults.localAsVariable;
     	      this.nextHopSelf = defaults.nextHopSelf;
     	      this.nextHopSelfVariable = defaults.nextHopSelfVariable;
     	      this.password = defaults.password;
@@ -584,18 +556,6 @@ public final class TransportRoutingBgpProfileParcelIpv6Neighbor {
             return this;
         }
         @CustomType.Setter
-        public Builder localAs(@Nullable Integer localAs) {
-
-            this.localAs = localAs;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder localAsVariable(@Nullable String localAsVariable) {
-
-            this.localAsVariable = localAsVariable;
-            return this;
-        }
-        @CustomType.Setter
         public Builder nextHopSelf(@Nullable Boolean nextHopSelf) {
 
             this.nextHopSelf = nextHopSelf;
@@ -696,8 +656,6 @@ public final class TransportRoutingBgpProfileParcelIpv6Neighbor {
             _resultValue.holdTimeVariable = holdTimeVariable;
             _resultValue.keepaliveTime = keepaliveTime;
             _resultValue.keepaliveTimeVariable = keepaliveTimeVariable;
-            _resultValue.localAs = localAs;
-            _resultValue.localAsVariable = localAsVariable;
             _resultValue.nextHopSelf = nextHopSelf;
             _resultValue.nextHopSelfVariable = nextHopSelfVariable;
             _resultValue.password = password;

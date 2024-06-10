@@ -67,11 +67,11 @@ type ServiceLanVpnProfileParcel struct {
 	// Variable name
 	OmpAdminDistanceIpv6Variable pulumi.StringPtrOutput `pulumi:"ompAdminDistanceIpv6Variable"`
 	// Primary DNS Address (IPv4)
-	PrimaryDnsAddressIpv4 pulumi.StringPtrOutput `pulumi:"primaryDnsAddressIpv4"`
+	PrimaryDnsAddressIpv4 pulumi.StringOutput `pulumi:"primaryDnsAddressIpv4"`
 	// Variable name
 	PrimaryDnsAddressIpv4Variable pulumi.StringPtrOutput `pulumi:"primaryDnsAddressIpv4Variable"`
 	// Primary DNS Address (IPv6)
-	PrimaryDnsAddressIpv6 pulumi.StringPtrOutput `pulumi:"primaryDnsAddressIpv6"`
+	PrimaryDnsAddressIpv6 pulumi.StringOutput `pulumi:"primaryDnsAddressIpv6"`
 	// Variable name
 	PrimaryDnsAddressIpv6Variable pulumi.StringPtrOutput `pulumi:"primaryDnsAddressIpv6Variable"`
 	// Enable route leaking from Global to Service VPN
@@ -111,6 +111,12 @@ func NewServiceLanVpnProfileParcel(ctx *pulumi.Context,
 
 	if args.FeatureProfileId == nil {
 		return nil, errors.New("invalid value for required argument 'FeatureProfileId'")
+	}
+	if args.PrimaryDnsAddressIpv4 == nil {
+		return nil, errors.New("invalid value for required argument 'PrimaryDnsAddressIpv4'")
+	}
+	if args.PrimaryDnsAddressIpv6 == nil {
+		return nil, errors.New("invalid value for required argument 'PrimaryDnsAddressIpv6'")
 	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource ServiceLanVpnProfileParcel
@@ -343,11 +349,11 @@ type serviceLanVpnProfileParcelArgs struct {
 	// Variable name
 	OmpAdminDistanceIpv6Variable *string `pulumi:"ompAdminDistanceIpv6Variable"`
 	// Primary DNS Address (IPv4)
-	PrimaryDnsAddressIpv4 *string `pulumi:"primaryDnsAddressIpv4"`
+	PrimaryDnsAddressIpv4 string `pulumi:"primaryDnsAddressIpv4"`
 	// Variable name
 	PrimaryDnsAddressIpv4Variable *string `pulumi:"primaryDnsAddressIpv4Variable"`
 	// Primary DNS Address (IPv6)
-	PrimaryDnsAddressIpv6 *string `pulumi:"primaryDnsAddressIpv6"`
+	PrimaryDnsAddressIpv6 string `pulumi:"primaryDnsAddressIpv6"`
 	// Variable name
 	PrimaryDnsAddressIpv6Variable *string `pulumi:"primaryDnsAddressIpv6Variable"`
 	// Enable route leaking from Global to Service VPN
@@ -422,11 +428,11 @@ type ServiceLanVpnProfileParcelArgs struct {
 	// Variable name
 	OmpAdminDistanceIpv6Variable pulumi.StringPtrInput
 	// Primary DNS Address (IPv4)
-	PrimaryDnsAddressIpv4 pulumi.StringPtrInput
+	PrimaryDnsAddressIpv4 pulumi.StringInput
 	// Variable name
 	PrimaryDnsAddressIpv4Variable pulumi.StringPtrInput
 	// Primary DNS Address (IPv6)
-	PrimaryDnsAddressIpv6 pulumi.StringPtrInput
+	PrimaryDnsAddressIpv6 pulumi.StringInput
 	// Variable name
 	PrimaryDnsAddressIpv6Variable pulumi.StringPtrInput
 	// Enable route leaking from Global to Service VPN
@@ -682,8 +688,8 @@ func (o ServiceLanVpnProfileParcelOutput) OmpAdminDistanceIpv6Variable() pulumi.
 }
 
 // Primary DNS Address (IPv4)
-func (o ServiceLanVpnProfileParcelOutput) PrimaryDnsAddressIpv4() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *ServiceLanVpnProfileParcel) pulumi.StringPtrOutput { return v.PrimaryDnsAddressIpv4 }).(pulumi.StringPtrOutput)
+func (o ServiceLanVpnProfileParcelOutput) PrimaryDnsAddressIpv4() pulumi.StringOutput {
+	return o.ApplyT(func(v *ServiceLanVpnProfileParcel) pulumi.StringOutput { return v.PrimaryDnsAddressIpv4 }).(pulumi.StringOutput)
 }
 
 // Variable name
@@ -692,8 +698,8 @@ func (o ServiceLanVpnProfileParcelOutput) PrimaryDnsAddressIpv4Variable() pulumi
 }
 
 // Primary DNS Address (IPv6)
-func (o ServiceLanVpnProfileParcelOutput) PrimaryDnsAddressIpv6() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *ServiceLanVpnProfileParcel) pulumi.StringPtrOutput { return v.PrimaryDnsAddressIpv6 }).(pulumi.StringPtrOutput)
+func (o ServiceLanVpnProfileParcelOutput) PrimaryDnsAddressIpv6() pulumi.StringOutput {
+	return o.ApplyT(func(v *ServiceLanVpnProfileParcel) pulumi.StringOutput { return v.PrimaryDnsAddressIpv6 }).(pulumi.StringOutput)
 }
 
 // Variable name

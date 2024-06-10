@@ -36,7 +36,7 @@ import (
 //				MatchAllVpn:                          pulumi.Bool(true),
 //				Dnscrypt:                             pulumi.Bool(true),
 //				UmbrellaDnsDefault:                   pulumi.Bool(true),
-//				CiscoSigCredentialsFeatureTemplateId: pulumi.String("885c3bce-eab6-4d45-8ff3-488f0df4072a"),
+//				CiscoSigCredentialsFeatureTemplateId: pulumi.String("22e8bd63-df16-4487-bf49-745064b941ee"),
 //			})
 //			if err != nil {
 //				return err

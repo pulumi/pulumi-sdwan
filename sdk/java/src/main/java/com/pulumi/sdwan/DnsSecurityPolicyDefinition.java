@@ -54,7 +54,7 @@ import javax.annotation.Nullable;
  *             .matchAllVpn(true)
  *             .dnscrypt(true)
  *             .umbrellaDnsDefault(true)
- *             .ciscoSigCredentialsFeatureTemplateId("885c3bce-eab6-4d45-8ff3-488f0df4072a")
+ *             .ciscoSigCredentialsFeatureTemplateId("22e8bd63-df16-4487-bf49-745064b941ee")
  *             .build());
  * 
  *     }

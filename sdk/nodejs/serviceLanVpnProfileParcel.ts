@@ -128,7 +128,7 @@ export class ServiceLanVpnProfileParcel extends pulumi.CustomResource {
     /**
      * Primary DNS Address (IPv4)
      */
-    public readonly primaryDnsAddressIpv4!: pulumi.Output<string | undefined>;
+    public readonly primaryDnsAddressIpv4!: pulumi.Output<string>;
     /**
      * Variable name
      */
@@ -136,7 +136,7 @@ export class ServiceLanVpnProfileParcel extends pulumi.CustomResource {
     /**
      * Primary DNS Address (IPv6)
      */
-    public readonly primaryDnsAddressIpv6!: pulumi.Output<string | undefined>;
+    public readonly primaryDnsAddressIpv6!: pulumi.Output<string>;
     /**
      * Variable name
      */
@@ -252,6 +252,12 @@ export class ServiceLanVpnProfileParcel extends pulumi.CustomResource {
             const args = argsOrState as ServiceLanVpnProfileParcelArgs | undefined;
             if ((!args || args.featureProfileId === undefined) && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
+            }
+            if ((!args || args.primaryDnsAddressIpv4 === undefined) && !opts.urn) {
+                throw new Error("Missing required property 'primaryDnsAddressIpv4'");
+            }
+            if ((!args || args.primaryDnsAddressIpv6 === undefined) && !opts.urn) {
+                throw new Error("Missing required property 'primaryDnsAddressIpv6'");
             }
             resourceInputs["advertiseOmpIpv4s"] = args ? args.advertiseOmpIpv4s : undefined;
             resourceInputs["advertiseOmpIpv6s"] = args ? args.advertiseOmpIpv6s : undefined;
@@ -543,7 +549,7 @@ export interface ServiceLanVpnProfileParcelArgs {
     /**
      * Primary DNS Address (IPv4)
      */
-    primaryDnsAddressIpv4?: pulumi.Input<string>;
+    primaryDnsAddressIpv4: pulumi.Input<string>;
     /**
      * Variable name
      */
@@ -551,7 +557,7 @@ export interface ServiceLanVpnProfileParcelArgs {
     /**
      * Primary DNS Address (IPv6)
      */
-    primaryDnsAddressIpv6?: pulumi.Input<string>;
+    primaryDnsAddressIpv6: pulumi.Input<string>;
     /**
      * Variable name
      */

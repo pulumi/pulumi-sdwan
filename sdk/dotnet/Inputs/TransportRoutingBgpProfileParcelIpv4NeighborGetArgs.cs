@@ -130,18 +130,6 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? KeepaliveTimeVariable { get; set; }
 
         /// <summary>
-        /// Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
-        /// </summary>
-        [Input("localAs")]
-        public Input<int>? LocalAs { get; set; }
-
-        /// <summary>
-        /// Variable name
-        /// </summary>
-        [Input("localAsVariable")]
-        public Input<string>? LocalAsVariable { get; set; }
-
-        /// <summary>
         /// Set router to be next hop for routes advertised to neighbor
         ///   - Default value: `false`
         /// </summary>

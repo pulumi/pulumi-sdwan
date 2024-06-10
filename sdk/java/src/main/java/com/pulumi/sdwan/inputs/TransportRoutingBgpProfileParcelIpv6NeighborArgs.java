@@ -261,36 +261,6 @@ public final class TransportRoutingBgpProfileParcelIpv6NeighborArgs extends com.
     }
 
     /**
-     * Set local autonomous system number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
-     * 
-     */
-    @Import(name="localAs")
-    private @Nullable Output<Integer> localAs;
-
-    /**
-     * @return Set local autonomous system number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
-     * 
-     */
-    public Optional<Output<Integer>> localAs() {
-        return Optional.ofNullable(this.localAs);
-    }
-
-    /**
-     * Variable name
-     * 
-     */
-    @Import(name="localAsVariable")
-    private @Nullable Output<String> localAsVariable;
-
-    /**
-     * @return Variable name
-     * 
-     */
-    public Optional<Output<String>> localAsVariable() {
-        return Optional.ofNullable(this.localAsVariable);
-    }
-
-    /**
      * Set router to be next hop for routes advertised to neighbor
      *   - Default value: `false`
      * 
@@ -526,8 +496,6 @@ public final class TransportRoutingBgpProfileParcelIpv6NeighborArgs extends com.
         this.holdTimeVariable = $.holdTimeVariable;
         this.keepaliveTime = $.keepaliveTime;
         this.keepaliveTimeVariable = $.keepaliveTimeVariable;
-        this.localAs = $.localAs;
-        this.localAsVariable = $.localAsVariable;
         this.nextHopSelf = $.nextHopSelf;
         this.nextHopSelfVariable = $.nextHopSelfVariable;
         this.password = $.password;
@@ -901,48 +869,6 @@ public final class TransportRoutingBgpProfileParcelIpv6NeighborArgs extends com.
          */
         public Builder keepaliveTimeVariable(String keepaliveTimeVariable) {
             return keepaliveTimeVariable(Output.of(keepaliveTimeVariable));
-        }
-
-        /**
-         * @param localAs Set local autonomous system number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder localAs(@Nullable Output<Integer> localAs) {
-            $.localAs = localAs;
-            return this;
-        }
-
-        /**
-         * @param localAs Set local autonomous system number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder localAs(Integer localAs) {
-            return localAs(Output.of(localAs));
-        }
-
-        /**
-         * @param localAsVariable Variable name
-         * 
-         * @return builder
-         * 
-         */
-        public Builder localAsVariable(@Nullable Output<String> localAsVariable) {
-            $.localAsVariable = localAsVariable;
-            return this;
-        }
-
-        /**
-         * @param localAsVariable Variable name
-         * 
-         * @return builder
-         * 
-         */
-        public Builder localAsVariable(String localAsVariable) {
-            return localAsVariable(Output.of(localAsVariable));
         }
 
         /**

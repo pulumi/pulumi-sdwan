@@ -91,14 +91,6 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string? KeepaliveTimeVariable;
         /// <summary>
-        /// Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
-        /// </summary>
-        public readonly int? LocalAs;
-        /// <summary>
-        /// Variable name
-        /// </summary>
-        public readonly string? LocalAsVariable;
-        /// <summary>
         /// Set router to be next hop for routes advertised to neighbor
         ///   - Default value: `false`
         /// </summary>
@@ -200,10 +192,6 @@ namespace Pulumi.Sdwan.Outputs
 
             string? keepaliveTimeVariable,
 
-            int? localAs,
-
-            string? localAsVariable,
-
             bool? nextHopSelf,
 
             string? nextHopSelfVariable,
@@ -251,8 +239,6 @@ namespace Pulumi.Sdwan.Outputs
             HoldTimeVariable = holdTimeVariable;
             KeepaliveTime = keepaliveTime;
             KeepaliveTimeVariable = keepaliveTimeVariable;
-            LocalAs = localAs;
-            LocalAsVariable = localAsVariable;
             NextHopSelf = nextHopSelf;
             NextHopSelfVariable = nextHopSelfVariable;
             Password = password;

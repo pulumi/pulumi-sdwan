@@ -20,7 +20,6 @@ import javax.annotation.Nullable;
 
 /**
  * This resource can manage a Configuration Group .
- *   - Minimum SD-WAN Manager version: `20.12.0`
  * 
  * ## Example Usage
  * 

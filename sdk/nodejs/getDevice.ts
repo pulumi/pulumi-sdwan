@@ -16,7 +16,7 @@ import * as utilities from "./utilities";
  * import * as sdwan from "@pulumi/sdwan";
  *
  * const example = sdwan.getDevice({
- *     serialNumber: "3FFEFB37892E415FAF34A95D2328EC4C",
+ *     serialNumber: "0DFF93B792354B08ABE5E43566347F09",
  *     name: "Controller01",
  * });
  * ```
@@ -76,7 +76,7 @@ export interface GetDeviceResult {
  * import * as sdwan from "@pulumi/sdwan";
  *
  * const example = sdwan.getDevice({
- *     serialNumber: "3FFEFB37892E415FAF34A95D2328EC4C",
+ *     serialNumber: "0DFF93B792354B08ABE5E43566347F09",
  *     name: "Controller01",
  * });
  * ```

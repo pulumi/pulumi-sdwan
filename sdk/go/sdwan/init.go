@@ -35,10 +35,6 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &ApplicationAwareRoutingPolicyDefinition{}
 	case "sdwan:index/applicationListPolicyObject:ApplicationListPolicyObject":
 		r = &ApplicationListPolicyObject{}
-	case "sdwan:index/applicationPriorityFeatureProfile:ApplicationPriorityFeatureProfile":
-		r = &ApplicationPriorityFeatureProfile{}
-	case "sdwan:index/applicationPriorityQosPolicyProfileParcel:ApplicationPriorityQosPolicyProfileParcel":
-		r = &ApplicationPriorityQosPolicyProfileParcel{}
 	case "sdwan:index/asPathListPolicyObject:AsPathListPolicyObject":
 		r = &AsPathListPolicyObject{}
 	case "sdwan:index/attachFeatureDeviceTemplate:AttachFeatureDeviceTemplate":
@@ -121,12 +117,6 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &ColorListPolicyObject{}
 	case "sdwan:index/configurationGroup:ConfigurationGroup":
 		r = &ConfigurationGroup{}
-	case "sdwan:index/configurationGroupDeploy:ConfigurationGroupDeploy":
-		r = &ConfigurationGroupDeploy{}
-	case "sdwan:index/configurationGroupDeviceVariables:ConfigurationGroupDeviceVariables":
-		r = &ConfigurationGroupDeviceVariables{}
-	case "sdwan:index/configurationGroupDevices:ConfigurationGroupDevices":
-		r = &ConfigurationGroupDevices{}
 	case "sdwan:index/customControlTopologyPolicyDefinition:CustomControlTopologyPolicyDefinition":
 		r = &CustomControlTopologyPolicyDefinition{}
 	case "sdwan:index/dataFqdnPrefixListPolicyObject:DataFqdnPrefixListPolicyObject":
@@ -203,8 +193,6 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &SecurityPolicy{}
 	case "sdwan:index/serviceFeatureProfile:ServiceFeatureProfile":
 		r = &ServiceFeatureProfile{}
-	case "sdwan:index/serviceLanVpnInterfaceEthernetProfileParcel:ServiceLanVpnInterfaceEthernetProfileParcel":
-		r = &ServiceLanVpnInterfaceEthernetProfileParcel{}
 	case "sdwan:index/serviceLanVpnProfileParcel:ServiceLanVpnProfileParcel":
 		r = &ServiceLanVpnProfileParcel{}
 	case "sdwan:index/serviceTrackerProfileParcel:ServiceTrackerProfileParcel":
@@ -259,14 +247,10 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &TransportFeatureProfile{}
 	case "sdwan:index/transportIpv6TrackerProfileParcel:TransportIpv6TrackerProfileParcel":
 		r = &TransportIpv6TrackerProfileParcel{}
-	case "sdwan:index/transportManagementVpnInterfaceEthernetProfileParcel:TransportManagementVpnInterfaceEthernetProfileParcel":
-		r = &TransportManagementVpnInterfaceEthernetProfileParcel{}
 	case "sdwan:index/transportManagementVpnProfileParcel:TransportManagementVpnProfileParcel":
 		r = &TransportManagementVpnProfileParcel{}
 	case "sdwan:index/transportRoutingBgpProfileParcel:TransportRoutingBgpProfileParcel":
 		r = &TransportRoutingBgpProfileParcel{}
-	case "sdwan:index/transportWanVpnInterfaceEthernetProfileParcel:TransportWanVpnInterfaceEthernetProfileParcel":
-		r = &TransportWanVpnInterfaceEthernetProfileParcel{}
 	case "sdwan:index/transportWanVpnProfileParcel:TransportWanVpnProfileParcel":
 		r = &TransportWanVpnProfileParcel{}
 	case "sdwan:index/urlFilteringPolicyDefinition:UrlFilteringPolicyDefinition":
@@ -357,16 +341,6 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"sdwan",
 		"index/applicationListPolicyObject",
-		&module{version},
-	)
-	pulumi.RegisterResourceModule(
-		"sdwan",
-		"index/applicationPriorityFeatureProfile",
-		&module{version},
-	)
-	pulumi.RegisterResourceModule(
-		"sdwan",
-		"index/applicationPriorityQosPolicyProfileParcel",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
@@ -576,21 +550,6 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"sdwan",
-		"index/configurationGroupDeploy",
-		&module{version},
-	)
-	pulumi.RegisterResourceModule(
-		"sdwan",
-		"index/configurationGroupDeviceVariables",
-		&module{version},
-	)
-	pulumi.RegisterResourceModule(
-		"sdwan",
-		"index/configurationGroupDevices",
-		&module{version},
-	)
-	pulumi.RegisterResourceModule(
-		"sdwan",
 		"index/customControlTopologyPolicyDefinition",
 		&module{version},
 	)
@@ -781,11 +740,6 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"sdwan",
-		"index/serviceLanVpnInterfaceEthernetProfileParcel",
-		&module{version},
-	)
-	pulumi.RegisterResourceModule(
-		"sdwan",
 		"index/serviceLanVpnProfileParcel",
 		&module{version},
 	)
@@ -921,22 +875,12 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"sdwan",
-		"index/transportManagementVpnInterfaceEthernetProfileParcel",
-		&module{version},
-	)
-	pulumi.RegisterResourceModule(
-		"sdwan",
 		"index/transportManagementVpnProfileParcel",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
 		"sdwan",
 		"index/transportRoutingBgpProfileParcel",
-		&module{version},
-	)
-	pulumi.RegisterResourceModule(
-		"sdwan",
-		"index/transportWanVpnInterfaceEthernetProfileParcel",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(

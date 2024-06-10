@@ -17,6 +17,8 @@ __all__ = ['ServiceLanVpnProfileParcelArgs', 'ServiceLanVpnProfileParcel']
 class ServiceLanVpnProfileParcelArgs:
     def __init__(__self__, *,
                  feature_profile_id: pulumi.Input[str],
+                 primary_dns_address_ipv4: pulumi.Input[str],
+                 primary_dns_address_ipv6: pulumi.Input[str],
                  advertise_omp_ipv4s: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnProfileParcelAdvertiseOmpIpv4Args']]]] = None,
                  advertise_omp_ipv6s: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnProfileParcelAdvertiseOmpIpv6Args']]]] = None,
                  config_description: Optional[pulumi.Input[str]] = None,
@@ -40,9 +42,7 @@ class ServiceLanVpnProfileParcelArgs:
                  omp_admin_distance_ipv4_variable: Optional[pulumi.Input[str]] = None,
                  omp_admin_distance_ipv6: Optional[pulumi.Input[int]] = None,
                  omp_admin_distance_ipv6_variable: Optional[pulumi.Input[str]] = None,
-                 primary_dns_address_ipv4: Optional[pulumi.Input[str]] = None,
                  primary_dns_address_ipv4_variable: Optional[pulumi.Input[str]] = None,
-                 primary_dns_address_ipv6: Optional[pulumi.Input[str]] = None,
                  primary_dns_address_ipv6_variable: Optional[pulumi.Input[str]] = None,
                  route_leak_from_global_vpns: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnProfileParcelRouteLeakFromGlobalVpnArgs']]]] = None,
                  route_leak_from_other_services: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnProfileParcelRouteLeakFromOtherServiceArgs']]]] = None,
@@ -59,6 +59,8 @@ class ServiceLanVpnProfileParcelArgs:
         """
         The set of arguments for constructing a ServiceLanVpnProfileParcel resource.
         :param pulumi.Input[str] feature_profile_id: Feature Profile ID
+        :param pulumi.Input[str] primary_dns_address_ipv4: Primary DNS Address (IPv4)
+        :param pulumi.Input[str] primary_dns_address_ipv6: Primary DNS Address (IPv6)
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnProfileParcelAdvertiseOmpIpv4Args']]] advertise_omp_ipv4s: OMP Advertise IPv4
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnProfileParcelAdvertiseOmpIpv6Args']]] advertise_omp_ipv6s: OMP Advertise IPv6
         :param pulumi.Input[str] config_description: Name
@@ -77,9 +79,7 @@ class ServiceLanVpnProfileParcelArgs:
         :param pulumi.Input[str] omp_admin_distance_ipv4_variable: Variable name
         :param pulumi.Input[int] omp_admin_distance_ipv6: OMP Admin Distance IPv6 - Range: `1`-`255`
         :param pulumi.Input[str] omp_admin_distance_ipv6_variable: Variable name
-        :param pulumi.Input[str] primary_dns_address_ipv4: Primary DNS Address (IPv4)
         :param pulumi.Input[str] primary_dns_address_ipv4_variable: Variable name
-        :param pulumi.Input[str] primary_dns_address_ipv6: Primary DNS Address (IPv6)
         :param pulumi.Input[str] primary_dns_address_ipv6_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnProfileParcelRouteLeakFromGlobalVpnArgs']]] route_leak_from_global_vpns: Enable route leaking from Global to Service VPN
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnProfileParcelRouteLeakFromOtherServiceArgs']]] route_leak_from_other_services: Enable route leak from another Service VPN to current Service VPN
@@ -95,6 +95,8 @@ class ServiceLanVpnProfileParcelArgs:
         :param pulumi.Input[str] vpn_variable: Variable name
         """
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
+        pulumi.set(__self__, "primary_dns_address_ipv4", primary_dns_address_ipv4)
+        pulumi.set(__self__, "primary_dns_address_ipv6", primary_dns_address_ipv6)
         if advertise_omp_ipv4s is not None:
             pulumi.set(__self__, "advertise_omp_ipv4s", advertise_omp_ipv4s)
         if advertise_omp_ipv6s is not None:
@@ -141,12 +143,8 @@ class ServiceLanVpnProfileParcelArgs:
             pulumi.set(__self__, "omp_admin_distance_ipv6", omp_admin_distance_ipv6)
         if omp_admin_distance_ipv6_variable is not None:
             pulumi.set(__self__, "omp_admin_distance_ipv6_variable", omp_admin_distance_ipv6_variable)
-        if primary_dns_address_ipv4 is not None:
-            pulumi.set(__self__, "primary_dns_address_ipv4", primary_dns_address_ipv4)
         if primary_dns_address_ipv4_variable is not None:
             pulumi.set(__self__, "primary_dns_address_ipv4_variable", primary_dns_address_ipv4_variable)
-        if primary_dns_address_ipv6 is not None:
-            pulumi.set(__self__, "primary_dns_address_ipv6", primary_dns_address_ipv6)
         if primary_dns_address_ipv6_variable is not None:
             pulumi.set(__self__, "primary_dns_address_ipv6_variable", primary_dns_address_ipv6_variable)
         if route_leak_from_global_vpns is not None:
@@ -185,6 +183,30 @@ class ServiceLanVpnProfileParcelArgs:
     @feature_profile_id.setter
     def feature_profile_id(self, value: pulumi.Input[str]):
         pulumi.set(self, "feature_profile_id", value)
+
+    @property
+    @pulumi.getter(name="primaryDnsAddressIpv4")
+    def primary_dns_address_ipv4(self) -> pulumi.Input[str]:
+        """
+        Primary DNS Address (IPv4)
+        """
+        return pulumi.get(self, "primary_dns_address_ipv4")
+
+    @primary_dns_address_ipv4.setter
+    def primary_dns_address_ipv4(self, value: pulumi.Input[str]):
+        pulumi.set(self, "primary_dns_address_ipv4", value)
+
+    @property
+    @pulumi.getter(name="primaryDnsAddressIpv6")
+    def primary_dns_address_ipv6(self) -> pulumi.Input[str]:
+        """
+        Primary DNS Address (IPv6)
+        """
+        return pulumi.get(self, "primary_dns_address_ipv6")
+
+    @primary_dns_address_ipv6.setter
+    def primary_dns_address_ipv6(self, value: pulumi.Input[str]):
+        pulumi.set(self, "primary_dns_address_ipv6", value)
 
     @property
     @pulumi.getter(name="advertiseOmpIpv4s")
@@ -448,18 +470,6 @@ class ServiceLanVpnProfileParcelArgs:
         pulumi.set(self, "omp_admin_distance_ipv6_variable", value)
 
     @property
-    @pulumi.getter(name="primaryDnsAddressIpv4")
-    def primary_dns_address_ipv4(self) -> Optional[pulumi.Input[str]]:
-        """
-        Primary DNS Address (IPv4)
-        """
-        return pulumi.get(self, "primary_dns_address_ipv4")
-
-    @primary_dns_address_ipv4.setter
-    def primary_dns_address_ipv4(self, value: Optional[pulumi.Input[str]]):
-        pulumi.set(self, "primary_dns_address_ipv4", value)
-
-    @property
     @pulumi.getter(name="primaryDnsAddressIpv4Variable")
     def primary_dns_address_ipv4_variable(self) -> Optional[pulumi.Input[str]]:
         """
@@ -470,18 +480,6 @@ class ServiceLanVpnProfileParcelArgs:
     @primary_dns_address_ipv4_variable.setter
     def primary_dns_address_ipv4_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "primary_dns_address_ipv4_variable", value)
-
-    @property
-    @pulumi.getter(name="primaryDnsAddressIpv6")
-    def primary_dns_address_ipv6(self) -> Optional[pulumi.Input[str]]:
-        """
-        Primary DNS Address (IPv6)
-        """
-        return pulumi.get(self, "primary_dns_address_ipv6")
-
-    @primary_dns_address_ipv6.setter
-    def primary_dns_address_ipv6(self, value: Optional[pulumi.Input[str]]):
-        pulumi.set(self, "primary_dns_address_ipv6", value)
 
     @property
     @pulumi.getter(name="primaryDnsAddressIpv6Variable")
@@ -1484,8 +1482,12 @@ class ServiceLanVpnProfileParcel(pulumi.CustomResource):
             __props__.__dict__["omp_admin_distance_ipv4_variable"] = omp_admin_distance_ipv4_variable
             __props__.__dict__["omp_admin_distance_ipv6"] = omp_admin_distance_ipv6
             __props__.__dict__["omp_admin_distance_ipv6_variable"] = omp_admin_distance_ipv6_variable
+            if primary_dns_address_ipv4 is None and not opts.urn:
+                raise TypeError("Missing required property 'primary_dns_address_ipv4'")
             __props__.__dict__["primary_dns_address_ipv4"] = primary_dns_address_ipv4
             __props__.__dict__["primary_dns_address_ipv4_variable"] = primary_dns_address_ipv4_variable
+            if primary_dns_address_ipv6 is None and not opts.urn:
+                raise TypeError("Missing required property 'primary_dns_address_ipv6'")
             __props__.__dict__["primary_dns_address_ipv6"] = primary_dns_address_ipv6
             __props__.__dict__["primary_dns_address_ipv6_variable"] = primary_dns_address_ipv6_variable
             __props__.__dict__["route_leak_from_global_vpns"] = route_leak_from_global_vpns
@@ -1822,7 +1824,7 @@ class ServiceLanVpnProfileParcel(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="primaryDnsAddressIpv4")
-    def primary_dns_address_ipv4(self) -> pulumi.Output[Optional[str]]:
+    def primary_dns_address_ipv4(self) -> pulumi.Output[str]:
         """
         Primary DNS Address (IPv4)
         """
@@ -1838,7 +1840,7 @@ class ServiceLanVpnProfileParcel(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="primaryDnsAddressIpv6")
-    def primary_dns_address_ipv6(self) -> pulumi.Output[Optional[str]]:
+    def primary_dns_address_ipv6(self) -> pulumi.Output[str]:
         """
         Primary DNS Address (IPv6)
         """

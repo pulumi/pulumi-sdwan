@@ -155,7 +155,7 @@ namespace Pulumi.Sdwan
         /// Primary DNS Address (IPv4)
         /// </summary>
         [Output("primaryDnsAddressIpv4")]
-        public Output<string?> PrimaryDnsAddressIpv4 { get; private set; } = null!;
+        public Output<string> PrimaryDnsAddressIpv4 { get; private set; } = null!;
 
         /// <summary>
         /// Variable name
@@ -167,7 +167,7 @@ namespace Pulumi.Sdwan
         /// Primary DNS Address (IPv6)
         /// </summary>
         [Output("primaryDnsAddressIpv6")]
-        public Output<string?> PrimaryDnsAddressIpv6 { get; private set; } = null!;
+        public Output<string> PrimaryDnsAddressIpv6 { get; private set; } = null!;
 
         /// <summary>
         /// Variable name
@@ -510,8 +510,8 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// Primary DNS Address (IPv4)
         /// </summary>
-        [Input("primaryDnsAddressIpv4")]
-        public Input<string>? PrimaryDnsAddressIpv4 { get; set; }
+        [Input("primaryDnsAddressIpv4", required: true)]
+        public Input<string> PrimaryDnsAddressIpv4 { get; set; } = null!;
 
         /// <summary>
         /// Variable name
@@ -522,8 +522,8 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// Primary DNS Address (IPv6)
         /// </summary>
-        [Input("primaryDnsAddressIpv6")]
-        public Input<string>? PrimaryDnsAddressIpv6 { get; set; }
+        [Input("primaryDnsAddressIpv6", required: true)]
+        public Input<string> PrimaryDnsAddressIpv6 { get; set; } = null!;
 
         /// <summary>
         /// Variable name

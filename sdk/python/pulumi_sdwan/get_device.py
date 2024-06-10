@@ -93,7 +93,7 @@ def get_device(name: Optional[str] = None,
     import pulumi
     import pulumi_sdwan as sdwan
 
-    example = sdwan.get_device(serial_number="3FFEFB37892E415FAF34A95D2328EC4C",
+    example = sdwan.get_device(serial_number="0DFF93B792354B08ABE5E43566347F09",
         name="Controller01")
     ```
 
@@ -127,7 +127,7 @@ def get_device_output(name: Optional[pulumi.Input[Optional[str]]] = None,
     import pulumi
     import pulumi_sdwan as sdwan
 
-    example = sdwan.get_device(serial_number="3FFEFB37892E415FAF34A95D2328EC4C",
+    example = sdwan.get_device(serial_number="0DFF93B792354B08ABE5E43566347F09",
         name="Controller01")
     ```
 
