@@ -178,7 +178,7 @@ public class ApplicationPriorityQosPolicyProfileParcel extends com.pulumi.resour
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public ApplicationPriorityQosPolicyProfileParcel(String name) {
+    public ApplicationPriorityQosPolicyProfileParcel(java.lang.String name) {
         this(name, ApplicationPriorityQosPolicyProfileParcelArgs.Empty);
     }
     /**
@@ -186,7 +186,7 @@ public class ApplicationPriorityQosPolicyProfileParcel extends com.pulumi.resour
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public ApplicationPriorityQosPolicyProfileParcel(String name, ApplicationPriorityQosPolicyProfileParcelArgs args) {
+    public ApplicationPriorityQosPolicyProfileParcel(java.lang.String name, ApplicationPriorityQosPolicyProfileParcelArgs args) {
         this(name, args, null);
     }
     /**
@@ -195,15 +195,22 @@ public class ApplicationPriorityQosPolicyProfileParcel extends com.pulumi.resour
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ApplicationPriorityQosPolicyProfileParcel(String name, ApplicationPriorityQosPolicyProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/applicationPriorityQosPolicyProfileParcel:ApplicationPriorityQosPolicyProfileParcel", name, args == null ? ApplicationPriorityQosPolicyProfileParcelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public ApplicationPriorityQosPolicyProfileParcel(java.lang.String name, ApplicationPriorityQosPolicyProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/applicationPriorityQosPolicyProfileParcel:ApplicationPriorityQosPolicyProfileParcel", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private ApplicationPriorityQosPolicyProfileParcel(String name, Output<String> id, @Nullable ApplicationPriorityQosPolicyProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/applicationPriorityQosPolicyProfileParcel:ApplicationPriorityQosPolicyProfileParcel", name, state, makeResourceOptions(options, id));
+    private ApplicationPriorityQosPolicyProfileParcel(java.lang.String name, Output<java.lang.String> id, @Nullable ApplicationPriorityQosPolicyProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/applicationPriorityQosPolicyProfileParcel:ApplicationPriorityQosPolicyProfileParcel", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static ApplicationPriorityQosPolicyProfileParcelArgs makeArgs(ApplicationPriorityQosPolicyProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? ApplicationPriorityQosPolicyProfileParcelArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -219,7 +226,7 @@ public class ApplicationPriorityQosPolicyProfileParcel extends com.pulumi.resour
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ApplicationPriorityQosPolicyProfileParcel get(String name, Output<String> id, @Nullable ApplicationPriorityQosPolicyProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ApplicationPriorityQosPolicyProfileParcel get(java.lang.String name, Output<java.lang.String> id, @Nullable ApplicationPriorityQosPolicyProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new ApplicationPriorityQosPolicyProfileParcel(name, id, state, options);
     }
 }

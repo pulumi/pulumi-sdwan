@@ -282,7 +282,7 @@ public class LocalizedPolicy extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public LocalizedPolicy(String name) {
+    public LocalizedPolicy(java.lang.String name) {
         this(name, LocalizedPolicyArgs.Empty);
     }
     /**
@@ -290,7 +290,7 @@ public class LocalizedPolicy extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public LocalizedPolicy(String name, LocalizedPolicyArgs args) {
+    public LocalizedPolicy(java.lang.String name, LocalizedPolicyArgs args) {
         this(name, args, null);
     }
     /**
@@ -299,15 +299,22 @@ public class LocalizedPolicy extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public LocalizedPolicy(String name, LocalizedPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/localizedPolicy:LocalizedPolicy", name, args == null ? LocalizedPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public LocalizedPolicy(java.lang.String name, LocalizedPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/localizedPolicy:LocalizedPolicy", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private LocalizedPolicy(String name, Output<String> id, @Nullable LocalizedPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/localizedPolicy:LocalizedPolicy", name, state, makeResourceOptions(options, id));
+    private LocalizedPolicy(java.lang.String name, Output<java.lang.String> id, @Nullable LocalizedPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/localizedPolicy:LocalizedPolicy", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static LocalizedPolicyArgs makeArgs(LocalizedPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? LocalizedPolicyArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -323,7 +330,7 @@ public class LocalizedPolicy extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static LocalizedPolicy get(String name, Output<String> id, @Nullable LocalizedPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static LocalizedPolicy get(java.lang.String name, Output<java.lang.String> id, @Nullable LocalizedPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new LocalizedPolicy(name, id, state, options);
     }
 }

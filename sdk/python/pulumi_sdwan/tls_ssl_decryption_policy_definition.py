@@ -667,14 +667,14 @@ class TlsSslDecryptionPolicyDefinition(pulumi.CustomResource):
                  minimal_tls_version: Optional[pulumi.Input[str]] = None,
                  mode: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 network_rules: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TlsSslDecryptionPolicyDefinitionNetworkRuleArgs']]]]] = None,
+                 network_rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TlsSslDecryptionPolicyDefinitionNetworkRuleArgs', 'TlsSslDecryptionPolicyDefinitionNetworkRuleArgsDict']]]]] = None,
                  rsa_key_pair_modulus: Optional[pulumi.Input[str]] = None,
                  ssl_decryption_enabled: Optional[pulumi.Input[str]] = None,
                  unknown_revocation_status: Optional[pulumi.Input[str]] = None,
                  unsupported_cipher_suites: Optional[pulumi.Input[str]] = None,
                  unsupported_protocol_versions: Optional[pulumi.Input[str]] = None,
                  untrusted_certificate: Optional[pulumi.Input[str]] = None,
-                 url_rules: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TlsSslDecryptionPolicyDefinitionUrlRuleArgs']]]]] = None,
+                 url_rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TlsSslDecryptionPolicyDefinitionUrlRuleArgs', 'TlsSslDecryptionPolicyDefinitionUrlRuleArgsDict']]]]] = None,
                  use_default_ca_cert_bundle: Optional[pulumi.Input[bool]] = None,
                  __props__=None):
         """
@@ -698,14 +698,14 @@ class TlsSslDecryptionPolicyDefinition(pulumi.CustomResource):
         :param pulumi.Input[str] minimal_tls_version: Minimal TLS Version - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
         :param pulumi.Input[str] mode: The policy mode - Choices: `security`, `unified`
         :param pulumi.Input[str] name: The name of the policy definition.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TlsSslDecryptionPolicyDefinitionNetworkRuleArgs']]]] network_rules: List of network rules (applies when `mode` set to `security`)
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TlsSslDecryptionPolicyDefinitionNetworkRuleArgs', 'TlsSslDecryptionPolicyDefinitionNetworkRuleArgsDict']]]] network_rules: List of network rules (applies when `mode` set to `security`)
         :param pulumi.Input[str] rsa_key_pair_modulus: RSA key pair modules - Choices: `1024`, `2048`, `4096`
         :param pulumi.Input[str] ssl_decryption_enabled: SSL decryption enabled
         :param pulumi.Input[str] unknown_revocation_status: Unknown revocation status action - Choices: `drop`, `decrypt`
         :param pulumi.Input[str] unsupported_cipher_suites: Unsupported cipher suites action - Choices: `drop`, `no-decrypt`
         :param pulumi.Input[str] unsupported_protocol_versions: Unsupported protocol versions action - Choices: `drop`, `no-decrypt`
         :param pulumi.Input[str] untrusted_certificate: Untrusted certificate action - Choices: `drop`, `decrypt`
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TlsSslDecryptionPolicyDefinitionUrlRuleArgs']]]] url_rules: List of url rules (applies when `mode` set to `security`)
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TlsSslDecryptionPolicyDefinitionUrlRuleArgs', 'TlsSslDecryptionPolicyDefinitionUrlRuleArgsDict']]]] url_rules: List of url rules (applies when `mode` set to `security`)
         :param pulumi.Input[bool] use_default_ca_cert_bundle: Use default CA certificate bundle
         """
         ...
@@ -748,14 +748,14 @@ class TlsSslDecryptionPolicyDefinition(pulumi.CustomResource):
                  minimal_tls_version: Optional[pulumi.Input[str]] = None,
                  mode: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 network_rules: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TlsSslDecryptionPolicyDefinitionNetworkRuleArgs']]]]] = None,
+                 network_rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TlsSslDecryptionPolicyDefinitionNetworkRuleArgs', 'TlsSslDecryptionPolicyDefinitionNetworkRuleArgsDict']]]]] = None,
                  rsa_key_pair_modulus: Optional[pulumi.Input[str]] = None,
                  ssl_decryption_enabled: Optional[pulumi.Input[str]] = None,
                  unknown_revocation_status: Optional[pulumi.Input[str]] = None,
                  unsupported_cipher_suites: Optional[pulumi.Input[str]] = None,
                  unsupported_protocol_versions: Optional[pulumi.Input[str]] = None,
                  untrusted_certificate: Optional[pulumi.Input[str]] = None,
-                 url_rules: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TlsSslDecryptionPolicyDefinitionUrlRuleArgs']]]]] = None,
+                 url_rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TlsSslDecryptionPolicyDefinitionUrlRuleArgs', 'TlsSslDecryptionPolicyDefinitionUrlRuleArgsDict']]]]] = None,
                  use_default_ca_cert_bundle: Optional[pulumi.Input[bool]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -808,14 +808,14 @@ class TlsSslDecryptionPolicyDefinition(pulumi.CustomResource):
             minimal_tls_version: Optional[pulumi.Input[str]] = None,
             mode: Optional[pulumi.Input[str]] = None,
             name: Optional[pulumi.Input[str]] = None,
-            network_rules: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TlsSslDecryptionPolicyDefinitionNetworkRuleArgs']]]]] = None,
+            network_rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TlsSslDecryptionPolicyDefinitionNetworkRuleArgs', 'TlsSslDecryptionPolicyDefinitionNetworkRuleArgsDict']]]]] = None,
             rsa_key_pair_modulus: Optional[pulumi.Input[str]] = None,
             ssl_decryption_enabled: Optional[pulumi.Input[str]] = None,
             unknown_revocation_status: Optional[pulumi.Input[str]] = None,
             unsupported_cipher_suites: Optional[pulumi.Input[str]] = None,
             unsupported_protocol_versions: Optional[pulumi.Input[str]] = None,
             untrusted_certificate: Optional[pulumi.Input[str]] = None,
-            url_rules: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TlsSslDecryptionPolicyDefinitionUrlRuleArgs']]]]] = None,
+            url_rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TlsSslDecryptionPolicyDefinitionUrlRuleArgs', 'TlsSslDecryptionPolicyDefinitionUrlRuleArgsDict']]]]] = None,
             use_default_ca_cert_bundle: Optional[pulumi.Input[bool]] = None,
             version: Optional[pulumi.Input[int]] = None) -> 'TlsSslDecryptionPolicyDefinition':
         """
@@ -835,14 +835,14 @@ class TlsSslDecryptionPolicyDefinition(pulumi.CustomResource):
         :param pulumi.Input[str] minimal_tls_version: Minimal TLS Version - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
         :param pulumi.Input[str] mode: The policy mode - Choices: `security`, `unified`
         :param pulumi.Input[str] name: The name of the policy definition.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TlsSslDecryptionPolicyDefinitionNetworkRuleArgs']]]] network_rules: List of network rules (applies when `mode` set to `security`)
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TlsSslDecryptionPolicyDefinitionNetworkRuleArgs', 'TlsSslDecryptionPolicyDefinitionNetworkRuleArgsDict']]]] network_rules: List of network rules (applies when `mode` set to `security`)
         :param pulumi.Input[str] rsa_key_pair_modulus: RSA key pair modules - Choices: `1024`, `2048`, `4096`
         :param pulumi.Input[str] ssl_decryption_enabled: SSL decryption enabled
         :param pulumi.Input[str] unknown_revocation_status: Unknown revocation status action - Choices: `drop`, `decrypt`
         :param pulumi.Input[str] unsupported_cipher_suites: Unsupported cipher suites action - Choices: `drop`, `no-decrypt`
         :param pulumi.Input[str] unsupported_protocol_versions: Unsupported protocol versions action - Choices: `drop`, `no-decrypt`
         :param pulumi.Input[str] untrusted_certificate: Untrusted certificate action - Choices: `drop`, `decrypt`
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TlsSslDecryptionPolicyDefinitionUrlRuleArgs']]]] url_rules: List of url rules (applies when `mode` set to `security`)
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TlsSslDecryptionPolicyDefinitionUrlRuleArgs', 'TlsSslDecryptionPolicyDefinitionUrlRuleArgsDict']]]] url_rules: List of url rules (applies when `mode` set to `security`)
         :param pulumi.Input[bool] use_default_ca_cert_bundle: Use default CA certificate bundle
         :param pulumi.Input[int] version: The version of the object
         """

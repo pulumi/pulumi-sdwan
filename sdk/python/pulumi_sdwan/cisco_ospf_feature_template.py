@@ -1096,7 +1096,7 @@ class CiscoOspfFeatureTemplate(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 areas: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfFeatureTemplateAreaArgs']]]]] = None,
+                 areas: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateAreaArgs', 'CiscoOspfFeatureTemplateAreaArgsDict']]]]] = None,
                  auto_cost_reference_bandwidth: Optional[pulumi.Input[int]] = None,
                  auto_cost_reference_bandwidth_variable: Optional[pulumi.Input[str]] = None,
                  compatible_rfc1583: Optional[pulumi.Input[bool]] = None,
@@ -1116,10 +1116,10 @@ class CiscoOspfFeatureTemplate(pulumi.CustomResource):
                  distance_inter_area_variable: Optional[pulumi.Input[str]] = None,
                  distance_intra_area: Optional[pulumi.Input[int]] = None,
                  distance_intra_area_variable: Optional[pulumi.Input[str]] = None,
-                 max_metric_router_lsas: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfFeatureTemplateMaxMetricRouterLsaArgs']]]]] = None,
+                 max_metric_router_lsas: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateMaxMetricRouterLsaArgs', 'CiscoOspfFeatureTemplateMaxMetricRouterLsaArgsDict']]]]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 redistributes: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfFeatureTemplateRedistributeArgs']]]]] = None,
-                 route_policies: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfFeatureTemplateRoutePolicyArgs']]]]] = None,
+                 redistributes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateRedistributeArgs', 'CiscoOspfFeatureTemplateRedistributeArgsDict']]]]] = None,
+                 route_policies: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateRoutePolicyArgs', 'CiscoOspfFeatureTemplateRoutePolicyArgsDict']]]]] = None,
                  router_id: Optional[pulumi.Input[str]] = None,
                  router_id_variable: Optional[pulumi.Input[str]] = None,
                  timers_spf_delay: Optional[pulumi.Input[int]] = None,
@@ -1141,7 +1141,7 @@ class CiscoOspfFeatureTemplate(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfFeatureTemplateAreaArgs']]]] areas: Configure OSPF area
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateAreaArgs', 'CiscoOspfFeatureTemplateAreaArgsDict']]]] areas: Configure OSPF area
         :param pulumi.Input[int] auto_cost_reference_bandwidth: Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
         :param pulumi.Input[str] auto_cost_reference_bandwidth_variable: Variable name
         :param pulumi.Input[bool] compatible_rfc1583: Calculate summary route cost based on RFC 1583 - Default value: `true`
@@ -1163,10 +1163,10 @@ class CiscoOspfFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] distance_inter_area_variable: Variable name
         :param pulumi.Input[int] distance_intra_area: Set distance for intra-area routes - Range: `1`-`255` - Default value: `110`
         :param pulumi.Input[str] distance_intra_area_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfFeatureTemplateMaxMetricRouterLsaArgs']]]] max_metric_router_lsas: Advertise own router LSA with infinite distance
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateMaxMetricRouterLsaArgs', 'CiscoOspfFeatureTemplateMaxMetricRouterLsaArgsDict']]]] max_metric_router_lsas: Advertise own router LSA with infinite distance
         :param pulumi.Input[str] name: The name of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfFeatureTemplateRedistributeArgs']]]] redistributes: Redistribute routes
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfFeatureTemplateRoutePolicyArgs']]]] route_policies: Set route policy to apply
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateRedistributeArgs', 'CiscoOspfFeatureTemplateRedistributeArgsDict']]]] redistributes: Redistribute routes
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateRoutePolicyArgs', 'CiscoOspfFeatureTemplateRoutePolicyArgsDict']]]] route_policies: Set route policy to apply
         :param pulumi.Input[str] router_id: Set OSPF router ID to override system IP address
         :param pulumi.Input[str] router_id_variable: Variable name
         :param pulumi.Input[int] timers_spf_delay: Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
@@ -1207,7 +1207,7 @@ class CiscoOspfFeatureTemplate(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 areas: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfFeatureTemplateAreaArgs']]]]] = None,
+                 areas: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateAreaArgs', 'CiscoOspfFeatureTemplateAreaArgsDict']]]]] = None,
                  auto_cost_reference_bandwidth: Optional[pulumi.Input[int]] = None,
                  auto_cost_reference_bandwidth_variable: Optional[pulumi.Input[str]] = None,
                  compatible_rfc1583: Optional[pulumi.Input[bool]] = None,
@@ -1227,10 +1227,10 @@ class CiscoOspfFeatureTemplate(pulumi.CustomResource):
                  distance_inter_area_variable: Optional[pulumi.Input[str]] = None,
                  distance_intra_area: Optional[pulumi.Input[int]] = None,
                  distance_intra_area_variable: Optional[pulumi.Input[str]] = None,
-                 max_metric_router_lsas: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfFeatureTemplateMaxMetricRouterLsaArgs']]]]] = None,
+                 max_metric_router_lsas: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateMaxMetricRouterLsaArgs', 'CiscoOspfFeatureTemplateMaxMetricRouterLsaArgsDict']]]]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 redistributes: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfFeatureTemplateRedistributeArgs']]]]] = None,
-                 route_policies: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfFeatureTemplateRoutePolicyArgs']]]]] = None,
+                 redistributes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateRedistributeArgs', 'CiscoOspfFeatureTemplateRedistributeArgsDict']]]]] = None,
+                 route_policies: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateRoutePolicyArgs', 'CiscoOspfFeatureTemplateRoutePolicyArgsDict']]]]] = None,
                  router_id: Optional[pulumi.Input[str]] = None,
                  router_id_variable: Optional[pulumi.Input[str]] = None,
                  timers_spf_delay: Optional[pulumi.Input[int]] = None,
@@ -1296,7 +1296,7 @@ class CiscoOspfFeatureTemplate(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            areas: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfFeatureTemplateAreaArgs']]]]] = None,
+            areas: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateAreaArgs', 'CiscoOspfFeatureTemplateAreaArgsDict']]]]] = None,
             auto_cost_reference_bandwidth: Optional[pulumi.Input[int]] = None,
             auto_cost_reference_bandwidth_variable: Optional[pulumi.Input[str]] = None,
             compatible_rfc1583: Optional[pulumi.Input[bool]] = None,
@@ -1316,10 +1316,10 @@ class CiscoOspfFeatureTemplate(pulumi.CustomResource):
             distance_inter_area_variable: Optional[pulumi.Input[str]] = None,
             distance_intra_area: Optional[pulumi.Input[int]] = None,
             distance_intra_area_variable: Optional[pulumi.Input[str]] = None,
-            max_metric_router_lsas: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfFeatureTemplateMaxMetricRouterLsaArgs']]]]] = None,
+            max_metric_router_lsas: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateMaxMetricRouterLsaArgs', 'CiscoOspfFeatureTemplateMaxMetricRouterLsaArgsDict']]]]] = None,
             name: Optional[pulumi.Input[str]] = None,
-            redistributes: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfFeatureTemplateRedistributeArgs']]]]] = None,
-            route_policies: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfFeatureTemplateRoutePolicyArgs']]]]] = None,
+            redistributes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateRedistributeArgs', 'CiscoOspfFeatureTemplateRedistributeArgsDict']]]]] = None,
+            route_policies: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateRoutePolicyArgs', 'CiscoOspfFeatureTemplateRoutePolicyArgsDict']]]]] = None,
             router_id: Optional[pulumi.Input[str]] = None,
             router_id_variable: Optional[pulumi.Input[str]] = None,
             template_type: Optional[pulumi.Input[str]] = None,
@@ -1337,7 +1337,7 @@ class CiscoOspfFeatureTemplate(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfFeatureTemplateAreaArgs']]]] areas: Configure OSPF area
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateAreaArgs', 'CiscoOspfFeatureTemplateAreaArgsDict']]]] areas: Configure OSPF area
         :param pulumi.Input[int] auto_cost_reference_bandwidth: Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
         :param pulumi.Input[str] auto_cost_reference_bandwidth_variable: Variable name
         :param pulumi.Input[bool] compatible_rfc1583: Calculate summary route cost based on RFC 1583 - Default value: `true`
@@ -1359,10 +1359,10 @@ class CiscoOspfFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] distance_inter_area_variable: Variable name
         :param pulumi.Input[int] distance_intra_area: Set distance for intra-area routes - Range: `1`-`255` - Default value: `110`
         :param pulumi.Input[str] distance_intra_area_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfFeatureTemplateMaxMetricRouterLsaArgs']]]] max_metric_router_lsas: Advertise own router LSA with infinite distance
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateMaxMetricRouterLsaArgs', 'CiscoOspfFeatureTemplateMaxMetricRouterLsaArgsDict']]]] max_metric_router_lsas: Advertise own router LSA with infinite distance
         :param pulumi.Input[str] name: The name of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfFeatureTemplateRedistributeArgs']]]] redistributes: Redistribute routes
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfFeatureTemplateRoutePolicyArgs']]]] route_policies: Set route policy to apply
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateRedistributeArgs', 'CiscoOspfFeatureTemplateRedistributeArgsDict']]]] redistributes: Redistribute routes
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfFeatureTemplateRoutePolicyArgs', 'CiscoOspfFeatureTemplateRoutePolicyArgsDict']]]] route_policies: Set route policy to apply
         :param pulumi.Input[str] router_id: Set OSPF router ID to override system IP address
         :param pulumi.Input[str] router_id_variable: Variable name
         :param pulumi.Input[str] template_type: The template type

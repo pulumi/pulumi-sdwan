@@ -2372,7 +2372,7 @@ class SystemBasicProfileParcel(pulumi.CustomResource):
                  affinity_group_number_variable: Optional[pulumi.Input[str]] = None,
                  affinity_group_preferences: Optional[pulumi.Input[Sequence[pulumi.Input[int]]]] = None,
                  affinity_group_preferences_variable: Optional[pulumi.Input[str]] = None,
-                 affinity_per_vrfs: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemBasicProfileParcelAffinityPerVrfArgs']]]]] = None,
+                 affinity_per_vrfs: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemBasicProfileParcelAffinityPerVrfArgs', 'SystemBasicProfileParcelAffinityPerVrfArgsDict']]]]] = None,
                  affinity_preference_auto: Optional[pulumi.Input[bool]] = None,
                  affinity_preference_auto_variable: Optional[pulumi.Input[str]] = None,
                  config_description: Optional[pulumi.Input[str]] = None,
@@ -2397,7 +2397,7 @@ class SystemBasicProfileParcel(pulumi.CustomResource):
                  gps_longitude: Optional[pulumi.Input[int]] = None,
                  gps_longitude_variable: Optional[pulumi.Input[str]] = None,
                  gps_sms_enable: Optional[pulumi.Input[bool]] = None,
-                 gps_sms_mobile_numbers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemBasicProfileParcelGpsSmsMobileNumberArgs']]]]] = None,
+                 gps_sms_mobile_numbers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemBasicProfileParcelGpsSmsMobileNumberArgs', 'SystemBasicProfileParcelGpsSmsMobileNumberArgsDict']]]]] = None,
                  idle_timeout: Optional[pulumi.Input[int]] = None,
                  idle_timeout_variable: Optional[pulumi.Input[str]] = None,
                  location: Optional[pulumi.Input[str]] = None,
@@ -2448,7 +2448,7 @@ class SystemBasicProfileParcel(pulumi.CustomResource):
         :param pulumi.Input[str] affinity_group_number_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[int]]] affinity_group_preferences: Affinity Group Preference
         :param pulumi.Input[str] affinity_group_preferences_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemBasicProfileParcelAffinityPerVrfArgs']]]] affinity_per_vrfs: Affinity Group Number for VRFs
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemBasicProfileParcelAffinityPerVrfArgs', 'SystemBasicProfileParcelAffinityPerVrfArgsDict']]]] affinity_per_vrfs: Affinity Group Number for VRFs
         :param pulumi.Input[bool] affinity_preference_auto: Affinity Group Preference Auto - Default value: `false`
         :param pulumi.Input[str] affinity_preference_auto_variable: Variable name
         :param pulumi.Input[str] config_description: Set a text description of the device
@@ -2475,7 +2475,7 @@ class SystemBasicProfileParcel(pulumi.CustomResource):
         :param pulumi.Input[int] gps_longitude: Set the device physical longitude - Range: `-180`-`180`
         :param pulumi.Input[str] gps_longitude_variable: Variable name
         :param pulumi.Input[bool] gps_sms_enable: Enable device’s geo fencing SMS - Default value: `false`
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemBasicProfileParcelGpsSmsMobileNumberArgs']]]] gps_sms_mobile_numbers: Set device’s geo fencing SMS phone number
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemBasicProfileParcelGpsSmsMobileNumberArgs', 'SystemBasicProfileParcelGpsSmsMobileNumberArgsDict']]]] gps_sms_mobile_numbers: Set device’s geo fencing SMS phone number
         :param pulumi.Input[int] idle_timeout: Idle CLI timeout in minutes - Range: `0`-`300`
         :param pulumi.Input[str] idle_timeout_variable: Variable name
         :param pulumi.Input[str] location: Set the location of the device
@@ -2618,7 +2618,7 @@ class SystemBasicProfileParcel(pulumi.CustomResource):
                  affinity_group_number_variable: Optional[pulumi.Input[str]] = None,
                  affinity_group_preferences: Optional[pulumi.Input[Sequence[pulumi.Input[int]]]] = None,
                  affinity_group_preferences_variable: Optional[pulumi.Input[str]] = None,
-                 affinity_per_vrfs: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemBasicProfileParcelAffinityPerVrfArgs']]]]] = None,
+                 affinity_per_vrfs: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemBasicProfileParcelAffinityPerVrfArgs', 'SystemBasicProfileParcelAffinityPerVrfArgsDict']]]]] = None,
                  affinity_preference_auto: Optional[pulumi.Input[bool]] = None,
                  affinity_preference_auto_variable: Optional[pulumi.Input[str]] = None,
                  config_description: Optional[pulumi.Input[str]] = None,
@@ -2643,7 +2643,7 @@ class SystemBasicProfileParcel(pulumi.CustomResource):
                  gps_longitude: Optional[pulumi.Input[int]] = None,
                  gps_longitude_variable: Optional[pulumi.Input[str]] = None,
                  gps_sms_enable: Optional[pulumi.Input[bool]] = None,
-                 gps_sms_mobile_numbers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemBasicProfileParcelGpsSmsMobileNumberArgs']]]]] = None,
+                 gps_sms_mobile_numbers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemBasicProfileParcelGpsSmsMobileNumberArgs', 'SystemBasicProfileParcelGpsSmsMobileNumberArgsDict']]]]] = None,
                  idle_timeout: Optional[pulumi.Input[int]] = None,
                  idle_timeout_variable: Optional[pulumi.Input[str]] = None,
                  location: Optional[pulumi.Input[str]] = None,
@@ -2764,7 +2764,7 @@ class SystemBasicProfileParcel(pulumi.CustomResource):
             affinity_group_number_variable: Optional[pulumi.Input[str]] = None,
             affinity_group_preferences: Optional[pulumi.Input[Sequence[pulumi.Input[int]]]] = None,
             affinity_group_preferences_variable: Optional[pulumi.Input[str]] = None,
-            affinity_per_vrfs: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemBasicProfileParcelAffinityPerVrfArgs']]]]] = None,
+            affinity_per_vrfs: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemBasicProfileParcelAffinityPerVrfArgs', 'SystemBasicProfileParcelAffinityPerVrfArgsDict']]]]] = None,
             affinity_preference_auto: Optional[pulumi.Input[bool]] = None,
             affinity_preference_auto_variable: Optional[pulumi.Input[str]] = None,
             config_description: Optional[pulumi.Input[str]] = None,
@@ -2789,7 +2789,7 @@ class SystemBasicProfileParcel(pulumi.CustomResource):
             gps_longitude: Optional[pulumi.Input[int]] = None,
             gps_longitude_variable: Optional[pulumi.Input[str]] = None,
             gps_sms_enable: Optional[pulumi.Input[bool]] = None,
-            gps_sms_mobile_numbers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemBasicProfileParcelGpsSmsMobileNumberArgs']]]]] = None,
+            gps_sms_mobile_numbers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemBasicProfileParcelGpsSmsMobileNumberArgs', 'SystemBasicProfileParcelGpsSmsMobileNumberArgsDict']]]]] = None,
             idle_timeout: Optional[pulumi.Input[int]] = None,
             idle_timeout_variable: Optional[pulumi.Input[str]] = None,
             location: Optional[pulumi.Input[str]] = None,
@@ -2835,7 +2835,7 @@ class SystemBasicProfileParcel(pulumi.CustomResource):
         :param pulumi.Input[str] affinity_group_number_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[int]]] affinity_group_preferences: Affinity Group Preference
         :param pulumi.Input[str] affinity_group_preferences_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemBasicProfileParcelAffinityPerVrfArgs']]]] affinity_per_vrfs: Affinity Group Number for VRFs
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemBasicProfileParcelAffinityPerVrfArgs', 'SystemBasicProfileParcelAffinityPerVrfArgsDict']]]] affinity_per_vrfs: Affinity Group Number for VRFs
         :param pulumi.Input[bool] affinity_preference_auto: Affinity Group Preference Auto - Default value: `false`
         :param pulumi.Input[str] affinity_preference_auto_variable: Variable name
         :param pulumi.Input[str] config_description: Set a text description of the device
@@ -2862,7 +2862,7 @@ class SystemBasicProfileParcel(pulumi.CustomResource):
         :param pulumi.Input[int] gps_longitude: Set the device physical longitude - Range: `-180`-`180`
         :param pulumi.Input[str] gps_longitude_variable: Variable name
         :param pulumi.Input[bool] gps_sms_enable: Enable device’s geo fencing SMS - Default value: `false`
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemBasicProfileParcelGpsSmsMobileNumberArgs']]]] gps_sms_mobile_numbers: Set device’s geo fencing SMS phone number
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemBasicProfileParcelGpsSmsMobileNumberArgs', 'SystemBasicProfileParcelGpsSmsMobileNumberArgsDict']]]] gps_sms_mobile_numbers: Set device’s geo fencing SMS phone number
         :param pulumi.Input[int] idle_timeout: Idle CLI timeout in minutes - Range: `0`-`300`
         :param pulumi.Input[str] idle_timeout_variable: Variable name
         :param pulumi.Input[str] location: Set the location of the device

@@ -143,7 +143,7 @@ public class CliConfigProfileParcel extends com.pulumi.resources.CustomResource 
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public CliConfigProfileParcel(String name) {
+    public CliConfigProfileParcel(java.lang.String name) {
         this(name, CliConfigProfileParcelArgs.Empty);
     }
     /**
@@ -151,7 +151,7 @@ public class CliConfigProfileParcel extends com.pulumi.resources.CustomResource 
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public CliConfigProfileParcel(String name, CliConfigProfileParcelArgs args) {
+    public CliConfigProfileParcel(java.lang.String name, CliConfigProfileParcelArgs args) {
         this(name, args, null);
     }
     /**
@@ -160,15 +160,22 @@ public class CliConfigProfileParcel extends com.pulumi.resources.CustomResource 
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public CliConfigProfileParcel(String name, CliConfigProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/cliConfigProfileParcel:CliConfigProfileParcel", name, args == null ? CliConfigProfileParcelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public CliConfigProfileParcel(java.lang.String name, CliConfigProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/cliConfigProfileParcel:CliConfigProfileParcel", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private CliConfigProfileParcel(String name, Output<String> id, @Nullable CliConfigProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/cliConfigProfileParcel:CliConfigProfileParcel", name, state, makeResourceOptions(options, id));
+    private CliConfigProfileParcel(java.lang.String name, Output<java.lang.String> id, @Nullable CliConfigProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/cliConfigProfileParcel:CliConfigProfileParcel", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static CliConfigProfileParcelArgs makeArgs(CliConfigProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? CliConfigProfileParcelArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -184,7 +191,7 @@ public class CliConfigProfileParcel extends com.pulumi.resources.CustomResource 
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CliConfigProfileParcel get(String name, Output<String> id, @Nullable CliConfigProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static CliConfigProfileParcel get(java.lang.String name, Output<java.lang.String> id, @Nullable CliConfigProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new CliConfigProfileParcel(name, id, state, options);
     }
 }

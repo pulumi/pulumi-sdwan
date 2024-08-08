@@ -349,7 +349,7 @@ public class CellularCedgeProfileFeatureTemplate extends com.pulumi.resources.Cu
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public CellularCedgeProfileFeatureTemplate(String name) {
+    public CellularCedgeProfileFeatureTemplate(java.lang.String name) {
         this(name, CellularCedgeProfileFeatureTemplateArgs.Empty);
     }
     /**
@@ -357,7 +357,7 @@ public class CellularCedgeProfileFeatureTemplate extends com.pulumi.resources.Cu
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public CellularCedgeProfileFeatureTemplate(String name, CellularCedgeProfileFeatureTemplateArgs args) {
+    public CellularCedgeProfileFeatureTemplate(java.lang.String name, CellularCedgeProfileFeatureTemplateArgs args) {
         this(name, args, null);
     }
     /**
@@ -366,15 +366,22 @@ public class CellularCedgeProfileFeatureTemplate extends com.pulumi.resources.Cu
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public CellularCedgeProfileFeatureTemplate(String name, CellularCedgeProfileFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/cellularCedgeProfileFeatureTemplate:CellularCedgeProfileFeatureTemplate", name, args == null ? CellularCedgeProfileFeatureTemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public CellularCedgeProfileFeatureTemplate(java.lang.String name, CellularCedgeProfileFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/cellularCedgeProfileFeatureTemplate:CellularCedgeProfileFeatureTemplate", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private CellularCedgeProfileFeatureTemplate(String name, Output<String> id, @Nullable CellularCedgeProfileFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/cellularCedgeProfileFeatureTemplate:CellularCedgeProfileFeatureTemplate", name, state, makeResourceOptions(options, id));
+    private CellularCedgeProfileFeatureTemplate(java.lang.String name, Output<java.lang.String> id, @Nullable CellularCedgeProfileFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/cellularCedgeProfileFeatureTemplate:CellularCedgeProfileFeatureTemplate", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static CellularCedgeProfileFeatureTemplateArgs makeArgs(CellularCedgeProfileFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? CellularCedgeProfileFeatureTemplateArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -390,7 +397,7 @@ public class CellularCedgeProfileFeatureTemplate extends com.pulumi.resources.Cu
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CellularCedgeProfileFeatureTemplate get(String name, Output<String> id, @Nullable CellularCedgeProfileFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static CellularCedgeProfileFeatureTemplate get(java.lang.String name, Output<java.lang.String> id, @Nullable CellularCedgeProfileFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new CellularCedgeProfileFeatureTemplate(name, id, state, options);
     }
 }

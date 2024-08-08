@@ -139,7 +139,7 @@ public class PolicerPolicyObject extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public PolicerPolicyObject(String name) {
+    public PolicerPolicyObject(java.lang.String name) {
         this(name, PolicerPolicyObjectArgs.Empty);
     }
     /**
@@ -147,7 +147,7 @@ public class PolicerPolicyObject extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public PolicerPolicyObject(String name, PolicerPolicyObjectArgs args) {
+    public PolicerPolicyObject(java.lang.String name, PolicerPolicyObjectArgs args) {
         this(name, args, null);
     }
     /**
@@ -156,15 +156,22 @@ public class PolicerPolicyObject extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public PolicerPolicyObject(String name, PolicerPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/policerPolicyObject:PolicerPolicyObject", name, args == null ? PolicerPolicyObjectArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public PolicerPolicyObject(java.lang.String name, PolicerPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/policerPolicyObject:PolicerPolicyObject", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private PolicerPolicyObject(String name, Output<String> id, @Nullable PolicerPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/policerPolicyObject:PolicerPolicyObject", name, state, makeResourceOptions(options, id));
+    private PolicerPolicyObject(java.lang.String name, Output<java.lang.String> id, @Nullable PolicerPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/policerPolicyObject:PolicerPolicyObject", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static PolicerPolicyObjectArgs makeArgs(PolicerPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? PolicerPolicyObjectArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -180,7 +187,7 @@ public class PolicerPolicyObject extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PolicerPolicyObject get(String name, Output<String> id, @Nullable PolicerPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static PolicerPolicyObject get(java.lang.String name, Output<java.lang.String> id, @Nullable PolicerPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new PolicerPolicyObject(name, id, state, options);
     }
 }

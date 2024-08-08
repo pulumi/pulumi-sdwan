@@ -97,7 +97,7 @@ class ConfigurationGroupDeploy(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  configuration_group_id: Optional[pulumi.Input[str]] = None,
-                 devices: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ConfigurationGroupDeployDeviceArgs']]]]] = None,
+                 devices: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupDeployDeviceArgs', 'ConfigurationGroupDeployDeviceArgsDict']]]]] = None,
                  __props__=None):
         """
         This resource can manage a Configuration Group Deploy .
@@ -111,15 +111,15 @@ class ConfigurationGroupDeploy(pulumi.CustomResource):
 
         example = sdwan.ConfigurationGroupDeploy("example",
             configuration_group_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
-            devices=[sdwan.ConfigurationGroupDeployDeviceArgs(
-                id="C8K-15411CCC-D476-0B3B-21F2-5D6AC387EE7B",
-            )])
+            devices=[{
+                "id": "C8K-15411CCC-D476-0B3B-21F2-5D6AC387EE7B",
+            }])
         ```
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] configuration_group_id: Configuration Group ID
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ConfigurationGroupDeployDeviceArgs']]]] devices: List of devices
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupDeployDeviceArgs', 'ConfigurationGroupDeployDeviceArgsDict']]]] devices: List of devices
         """
         ...
     @overload
@@ -139,9 +139,9 @@ class ConfigurationGroupDeploy(pulumi.CustomResource):
 
         example = sdwan.ConfigurationGroupDeploy("example",
             configuration_group_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
-            devices=[sdwan.ConfigurationGroupDeployDeviceArgs(
-                id="C8K-15411CCC-D476-0B3B-21F2-5D6AC387EE7B",
-            )])
+            devices=[{
+                "id": "C8K-15411CCC-D476-0B3B-21F2-5D6AC387EE7B",
+            }])
         ```
 
         :param str resource_name: The name of the resource.
@@ -160,7 +160,7 @@ class ConfigurationGroupDeploy(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  configuration_group_id: Optional[pulumi.Input[str]] = None,
-                 devices: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ConfigurationGroupDeployDeviceArgs']]]]] = None,
+                 devices: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupDeployDeviceArgs', 'ConfigurationGroupDeployDeviceArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -187,7 +187,7 @@ class ConfigurationGroupDeploy(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             configuration_group_id: Optional[pulumi.Input[str]] = None,
-            devices: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ConfigurationGroupDeployDeviceArgs']]]]] = None) -> 'ConfigurationGroupDeploy':
+            devices: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupDeployDeviceArgs', 'ConfigurationGroupDeployDeviceArgsDict']]]]] = None) -> 'ConfigurationGroupDeploy':
         """
         Get an existing ConfigurationGroupDeploy resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -196,7 +196,7 @@ class ConfigurationGroupDeploy(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] configuration_group_id: Configuration Group ID
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ConfigurationGroupDeployDeviceArgs']]]] devices: List of devices
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupDeployDeviceArgs', 'ConfigurationGroupDeployDeviceArgsDict']]]] devices: List of devices
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

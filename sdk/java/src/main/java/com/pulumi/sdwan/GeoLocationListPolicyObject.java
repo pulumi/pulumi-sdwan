@@ -115,7 +115,7 @@ public class GeoLocationListPolicyObject extends com.pulumi.resources.CustomReso
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public GeoLocationListPolicyObject(String name) {
+    public GeoLocationListPolicyObject(java.lang.String name) {
         this(name, GeoLocationListPolicyObjectArgs.Empty);
     }
     /**
@@ -123,7 +123,7 @@ public class GeoLocationListPolicyObject extends com.pulumi.resources.CustomReso
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public GeoLocationListPolicyObject(String name, GeoLocationListPolicyObjectArgs args) {
+    public GeoLocationListPolicyObject(java.lang.String name, GeoLocationListPolicyObjectArgs args) {
         this(name, args, null);
     }
     /**
@@ -132,15 +132,22 @@ public class GeoLocationListPolicyObject extends com.pulumi.resources.CustomReso
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public GeoLocationListPolicyObject(String name, GeoLocationListPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/geoLocationListPolicyObject:GeoLocationListPolicyObject", name, args == null ? GeoLocationListPolicyObjectArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public GeoLocationListPolicyObject(java.lang.String name, GeoLocationListPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/geoLocationListPolicyObject:GeoLocationListPolicyObject", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private GeoLocationListPolicyObject(String name, Output<String> id, @Nullable GeoLocationListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/geoLocationListPolicyObject:GeoLocationListPolicyObject", name, state, makeResourceOptions(options, id));
+    private GeoLocationListPolicyObject(java.lang.String name, Output<java.lang.String> id, @Nullable GeoLocationListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/geoLocationListPolicyObject:GeoLocationListPolicyObject", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static GeoLocationListPolicyObjectArgs makeArgs(GeoLocationListPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? GeoLocationListPolicyObjectArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -156,7 +163,7 @@ public class GeoLocationListPolicyObject extends com.pulumi.resources.CustomReso
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static GeoLocationListPolicyObject get(String name, Output<String> id, @Nullable GeoLocationListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static GeoLocationListPolicyObject get(java.lang.String name, Output<java.lang.String> id, @Nullable GeoLocationListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new GeoLocationListPolicyObject(name, id, state, options);
     }
 }

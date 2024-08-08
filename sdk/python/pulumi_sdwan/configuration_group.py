@@ -225,10 +225,10 @@ class ConfigurationGroup(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: Optional[pulumi.Input[str]] = None,
-                 feature_profiles: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ConfigurationGroupFeatureProfileArgs']]]]] = None,
+                 feature_profiles: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupFeatureProfileArgs', 'ConfigurationGroupFeatureProfileArgsDict']]]]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  solution: Optional[pulumi.Input[str]] = None,
-                 topology_devices: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ConfigurationGroupTopologyDeviceArgs']]]]] = None,
+                 topology_devices: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupTopologyDeviceArgs', 'ConfigurationGroupTopologyDeviceArgsDict']]]]] = None,
                  topology_site_devices: Optional[pulumi.Input[int]] = None,
                  __props__=None):
         """
@@ -245,9 +245,9 @@ class ConfigurationGroup(pulumi.CustomResource):
             name="CG_1",
             description="My config group 1",
             solution="sdwan",
-            feature_profiles=[sdwan.ConfigurationGroupFeatureProfileArgs(
-                id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
-            )])
+            feature_profiles=[{
+                "id": "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+            }])
         ```
 
         ## Import
@@ -259,10 +259,10 @@ class ConfigurationGroup(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] description: Description
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ConfigurationGroupFeatureProfileArgs']]]] feature_profiles: List of feature profiles
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupFeatureProfileArgs', 'ConfigurationGroupFeatureProfileArgsDict']]]] feature_profiles: List of feature profiles
         :param pulumi.Input[str] name: The name of the configuration group
         :param pulumi.Input[str] solution: Type of solution - Choices: `mobility`, `sdwan`, `nfvirtual`
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ConfigurationGroupTopologyDeviceArgs']]]] topology_devices: List of topology device types
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupTopologyDeviceArgs', 'ConfigurationGroupTopologyDeviceArgsDict']]]] topology_devices: List of topology device types
         :param pulumi.Input[int] topology_site_devices: Number of devices per site - Range: `1`-`20`
         """
         ...
@@ -285,9 +285,9 @@ class ConfigurationGroup(pulumi.CustomResource):
             name="CG_1",
             description="My config group 1",
             solution="sdwan",
-            feature_profiles=[sdwan.ConfigurationGroupFeatureProfileArgs(
-                id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
-            )])
+            feature_profiles=[{
+                "id": "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+            }])
         ```
 
         ## Import
@@ -312,10 +312,10 @@ class ConfigurationGroup(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: Optional[pulumi.Input[str]] = None,
-                 feature_profiles: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ConfigurationGroupFeatureProfileArgs']]]]] = None,
+                 feature_profiles: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupFeatureProfileArgs', 'ConfigurationGroupFeatureProfileArgsDict']]]]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  solution: Optional[pulumi.Input[str]] = None,
-                 topology_devices: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ConfigurationGroupTopologyDeviceArgs']]]]] = None,
+                 topology_devices: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupTopologyDeviceArgs', 'ConfigurationGroupTopologyDeviceArgsDict']]]]] = None,
                  topology_site_devices: Optional[pulumi.Input[int]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -347,10 +347,10 @@ class ConfigurationGroup(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             description: Optional[pulumi.Input[str]] = None,
-            feature_profiles: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ConfigurationGroupFeatureProfileArgs']]]]] = None,
+            feature_profiles: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupFeatureProfileArgs', 'ConfigurationGroupFeatureProfileArgsDict']]]]] = None,
             name: Optional[pulumi.Input[str]] = None,
             solution: Optional[pulumi.Input[str]] = None,
-            topology_devices: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ConfigurationGroupTopologyDeviceArgs']]]]] = None,
+            topology_devices: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupTopologyDeviceArgs', 'ConfigurationGroupTopologyDeviceArgsDict']]]]] = None,
             topology_site_devices: Optional[pulumi.Input[int]] = None) -> 'ConfigurationGroup':
         """
         Get an existing ConfigurationGroup resource's state with the given name, id, and optional extra
@@ -360,10 +360,10 @@ class ConfigurationGroup(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] description: Description
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ConfigurationGroupFeatureProfileArgs']]]] feature_profiles: List of feature profiles
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupFeatureProfileArgs', 'ConfigurationGroupFeatureProfileArgsDict']]]] feature_profiles: List of feature profiles
         :param pulumi.Input[str] name: The name of the configuration group
         :param pulumi.Input[str] solution: Type of solution - Choices: `mobility`, `sdwan`, `nfvirtual`
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ConfigurationGroupTopologyDeviceArgs']]]] topology_devices: List of topology device types
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupTopologyDeviceArgs', 'ConfigurationGroupTopologyDeviceArgsDict']]]] topology_devices: List of topology device types
         :param pulumi.Input[int] topology_site_devices: Number of devices per site - Range: `1`-`20`
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

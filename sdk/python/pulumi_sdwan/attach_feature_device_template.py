@@ -97,7 +97,7 @@ class AttachFeatureDeviceTemplate(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 devices: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AttachFeatureDeviceTemplateDeviceArgs']]]]] = None,
+                 devices: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AttachFeatureDeviceTemplateDeviceArgs', 'AttachFeatureDeviceTemplateDeviceArgsDict']]]]] = None,
                  version: Optional[pulumi.Input[int]] = None,
                  __props__=None):
         """
@@ -105,7 +105,7 @@ class AttachFeatureDeviceTemplate(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AttachFeatureDeviceTemplateDeviceArgs']]]] devices: Devices
+        :param pulumi.Input[Sequence[pulumi.Input[Union['AttachFeatureDeviceTemplateDeviceArgs', 'AttachFeatureDeviceTemplateDeviceArgsDict']]]] devices: Devices
         :param pulumi.Input[int] version: The version of the device template
         """
         ...
@@ -132,7 +132,7 @@ class AttachFeatureDeviceTemplate(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 devices: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AttachFeatureDeviceTemplateDeviceArgs']]]]] = None,
+                 devices: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AttachFeatureDeviceTemplateDeviceArgs', 'AttachFeatureDeviceTemplateDeviceArgsDict']]]]] = None,
                  version: Optional[pulumi.Input[int]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -157,7 +157,7 @@ class AttachFeatureDeviceTemplate(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            devices: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AttachFeatureDeviceTemplateDeviceArgs']]]]] = None,
+            devices: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AttachFeatureDeviceTemplateDeviceArgs', 'AttachFeatureDeviceTemplateDeviceArgsDict']]]]] = None,
             version: Optional[pulumi.Input[int]] = None) -> 'AttachFeatureDeviceTemplate':
         """
         Get an existing AttachFeatureDeviceTemplate resource's state with the given name, id, and optional extra
@@ -166,7 +166,7 @@ class AttachFeatureDeviceTemplate(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AttachFeatureDeviceTemplateDeviceArgs']]]] devices: Devices
+        :param pulumi.Input[Sequence[pulumi.Input[Union['AttachFeatureDeviceTemplateDeviceArgs', 'AttachFeatureDeviceTemplateDeviceArgsDict']]]] devices: Devices
         :param pulumi.Input[int] version: The version of the device template
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

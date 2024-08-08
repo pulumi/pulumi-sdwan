@@ -329,7 +329,7 @@ public class SystemSnmpProfileParcel extends com.pulumi.resources.CustomResource
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public SystemSnmpProfileParcel(String name) {
+    public SystemSnmpProfileParcel(java.lang.String name) {
         this(name, SystemSnmpProfileParcelArgs.Empty);
     }
     /**
@@ -337,7 +337,7 @@ public class SystemSnmpProfileParcel extends com.pulumi.resources.CustomResource
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SystemSnmpProfileParcel(String name, @Nullable SystemSnmpProfileParcelArgs args) {
+    public SystemSnmpProfileParcel(java.lang.String name, @Nullable SystemSnmpProfileParcelArgs args) {
         this(name, args, null);
     }
     /**
@@ -346,15 +346,22 @@ public class SystemSnmpProfileParcel extends com.pulumi.resources.CustomResource
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SystemSnmpProfileParcel(String name, @Nullable SystemSnmpProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/systemSnmpProfileParcel:SystemSnmpProfileParcel", name, args == null ? SystemSnmpProfileParcelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public SystemSnmpProfileParcel(java.lang.String name, @Nullable SystemSnmpProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/systemSnmpProfileParcel:SystemSnmpProfileParcel", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private SystemSnmpProfileParcel(String name, Output<String> id, @Nullable SystemSnmpProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/systemSnmpProfileParcel:SystemSnmpProfileParcel", name, state, makeResourceOptions(options, id));
+    private SystemSnmpProfileParcel(java.lang.String name, Output<java.lang.String> id, @Nullable SystemSnmpProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/systemSnmpProfileParcel:SystemSnmpProfileParcel", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static SystemSnmpProfileParcelArgs makeArgs(@Nullable SystemSnmpProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? SystemSnmpProfileParcelArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -370,7 +377,7 @@ public class SystemSnmpProfileParcel extends com.pulumi.resources.CustomResource
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SystemSnmpProfileParcel get(String name, Output<String> id, @Nullable SystemSnmpProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SystemSnmpProfileParcel get(java.lang.String name, Output<java.lang.String> id, @Nullable SystemSnmpProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new SystemSnmpProfileParcel(name, id, state, options);
     }
 }

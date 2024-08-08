@@ -163,7 +163,7 @@ public class CliTemplateFeatureTemplate extends com.pulumi.resources.CustomResou
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public CliTemplateFeatureTemplate(String name) {
+    public CliTemplateFeatureTemplate(java.lang.String name) {
         this(name, CliTemplateFeatureTemplateArgs.Empty);
     }
     /**
@@ -171,7 +171,7 @@ public class CliTemplateFeatureTemplate extends com.pulumi.resources.CustomResou
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public CliTemplateFeatureTemplate(String name, CliTemplateFeatureTemplateArgs args) {
+    public CliTemplateFeatureTemplate(java.lang.String name, CliTemplateFeatureTemplateArgs args) {
         this(name, args, null);
     }
     /**
@@ -180,15 +180,22 @@ public class CliTemplateFeatureTemplate extends com.pulumi.resources.CustomResou
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public CliTemplateFeatureTemplate(String name, CliTemplateFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/cliTemplateFeatureTemplate:CliTemplateFeatureTemplate", name, args == null ? CliTemplateFeatureTemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public CliTemplateFeatureTemplate(java.lang.String name, CliTemplateFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/cliTemplateFeatureTemplate:CliTemplateFeatureTemplate", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private CliTemplateFeatureTemplate(String name, Output<String> id, @Nullable CliTemplateFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/cliTemplateFeatureTemplate:CliTemplateFeatureTemplate", name, state, makeResourceOptions(options, id));
+    private CliTemplateFeatureTemplate(java.lang.String name, Output<java.lang.String> id, @Nullable CliTemplateFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/cliTemplateFeatureTemplate:CliTemplateFeatureTemplate", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static CliTemplateFeatureTemplateArgs makeArgs(CliTemplateFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? CliTemplateFeatureTemplateArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -204,7 +211,7 @@ public class CliTemplateFeatureTemplate extends com.pulumi.resources.CustomResou
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CliTemplateFeatureTemplate get(String name, Output<String> id, @Nullable CliTemplateFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static CliTemplateFeatureTemplate get(java.lang.String name, Output<java.lang.String> id, @Nullable CliTemplateFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new CliTemplateFeatureTemplate(name, id, state, options);
     }
 }
