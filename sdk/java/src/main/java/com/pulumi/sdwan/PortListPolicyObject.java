@@ -114,7 +114,7 @@ public class PortListPolicyObject extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public PortListPolicyObject(String name) {
+    public PortListPolicyObject(java.lang.String name) {
         this(name, PortListPolicyObjectArgs.Empty);
     }
     /**
@@ -122,7 +122,7 @@ public class PortListPolicyObject extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public PortListPolicyObject(String name, PortListPolicyObjectArgs args) {
+    public PortListPolicyObject(java.lang.String name, PortListPolicyObjectArgs args) {
         this(name, args, null);
     }
     /**
@@ -131,15 +131,22 @@ public class PortListPolicyObject extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public PortListPolicyObject(String name, PortListPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/portListPolicyObject:PortListPolicyObject", name, args == null ? PortListPolicyObjectArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public PortListPolicyObject(java.lang.String name, PortListPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/portListPolicyObject:PortListPolicyObject", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private PortListPolicyObject(String name, Output<String> id, @Nullable PortListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/portListPolicyObject:PortListPolicyObject", name, state, makeResourceOptions(options, id));
+    private PortListPolicyObject(java.lang.String name, Output<java.lang.String> id, @Nullable PortListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/portListPolicyObject:PortListPolicyObject", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static PortListPolicyObjectArgs makeArgs(PortListPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? PortListPolicyObjectArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -155,7 +162,7 @@ public class PortListPolicyObject extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PortListPolicyObject get(String name, Output<String> id, @Nullable PortListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static PortListPolicyObject get(java.lang.String name, Output<java.lang.String> id, @Nullable PortListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new PortListPolicyObject(name, id, state, options);
     }
 }

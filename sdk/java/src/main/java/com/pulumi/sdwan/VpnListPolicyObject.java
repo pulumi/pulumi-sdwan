@@ -114,7 +114,7 @@ public class VpnListPolicyObject extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public VpnListPolicyObject(String name) {
+    public VpnListPolicyObject(java.lang.String name) {
         this(name, VpnListPolicyObjectArgs.Empty);
     }
     /**
@@ -122,7 +122,7 @@ public class VpnListPolicyObject extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public VpnListPolicyObject(String name, VpnListPolicyObjectArgs args) {
+    public VpnListPolicyObject(java.lang.String name, VpnListPolicyObjectArgs args) {
         this(name, args, null);
     }
     /**
@@ -131,15 +131,22 @@ public class VpnListPolicyObject extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public VpnListPolicyObject(String name, VpnListPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/vpnListPolicyObject:VpnListPolicyObject", name, args == null ? VpnListPolicyObjectArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public VpnListPolicyObject(java.lang.String name, VpnListPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/vpnListPolicyObject:VpnListPolicyObject", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private VpnListPolicyObject(String name, Output<String> id, @Nullable VpnListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/vpnListPolicyObject:VpnListPolicyObject", name, state, makeResourceOptions(options, id));
+    private VpnListPolicyObject(java.lang.String name, Output<java.lang.String> id, @Nullable VpnListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/vpnListPolicyObject:VpnListPolicyObject", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static VpnListPolicyObjectArgs makeArgs(VpnListPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? VpnListPolicyObjectArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -155,7 +162,7 @@ public class VpnListPolicyObject extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static VpnListPolicyObject get(String name, Output<String> id, @Nullable VpnListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static VpnListPolicyObject get(java.lang.String name, Output<java.lang.String> id, @Nullable VpnListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new VpnListPolicyObject(name, id, state, options);
     }
 }

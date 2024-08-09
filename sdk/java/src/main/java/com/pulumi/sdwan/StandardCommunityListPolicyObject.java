@@ -114,7 +114,7 @@ public class StandardCommunityListPolicyObject extends com.pulumi.resources.Cust
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public StandardCommunityListPolicyObject(String name) {
+    public StandardCommunityListPolicyObject(java.lang.String name) {
         this(name, StandardCommunityListPolicyObjectArgs.Empty);
     }
     /**
@@ -122,7 +122,7 @@ public class StandardCommunityListPolicyObject extends com.pulumi.resources.Cust
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public StandardCommunityListPolicyObject(String name, StandardCommunityListPolicyObjectArgs args) {
+    public StandardCommunityListPolicyObject(java.lang.String name, StandardCommunityListPolicyObjectArgs args) {
         this(name, args, null);
     }
     /**
@@ -131,15 +131,22 @@ public class StandardCommunityListPolicyObject extends com.pulumi.resources.Cust
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public StandardCommunityListPolicyObject(String name, StandardCommunityListPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/standardCommunityListPolicyObject:StandardCommunityListPolicyObject", name, args == null ? StandardCommunityListPolicyObjectArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public StandardCommunityListPolicyObject(java.lang.String name, StandardCommunityListPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/standardCommunityListPolicyObject:StandardCommunityListPolicyObject", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private StandardCommunityListPolicyObject(String name, Output<String> id, @Nullable StandardCommunityListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/standardCommunityListPolicyObject:StandardCommunityListPolicyObject", name, state, makeResourceOptions(options, id));
+    private StandardCommunityListPolicyObject(java.lang.String name, Output<java.lang.String> id, @Nullable StandardCommunityListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/standardCommunityListPolicyObject:StandardCommunityListPolicyObject", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static StandardCommunityListPolicyObjectArgs makeArgs(StandardCommunityListPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? StandardCommunityListPolicyObjectArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -155,7 +162,7 @@ public class StandardCommunityListPolicyObject extends com.pulumi.resources.Cust
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static StandardCommunityListPolicyObject get(String name, Output<String> id, @Nullable StandardCommunityListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static StandardCommunityListPolicyObject get(java.lang.String name, Output<java.lang.String> id, @Nullable StandardCommunityListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new StandardCommunityListPolicyObject(name, id, state, options);
     }
 }

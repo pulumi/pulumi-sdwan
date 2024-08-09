@@ -1320,7 +1320,7 @@ class CiscoBgpFeatureTemplate(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 address_families: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoBgpFeatureTemplateAddressFamilyArgs']]]]] = None,
+                 address_families: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateAddressFamilyArgs', 'CiscoBgpFeatureTemplateAddressFamilyArgsDict']]]]] = None,
                  always_compare_med: Optional[pulumi.Input[bool]] = None,
                  always_compare_med_variable: Optional[pulumi.Input[str]] = None,
                  as_number: Optional[pulumi.Input[str]] = None,
@@ -1339,15 +1339,15 @@ class CiscoBgpFeatureTemplate(pulumi.CustomResource):
                  distance_local_variable: Optional[pulumi.Input[str]] = None,
                  holdtime: Optional[pulumi.Input[int]] = None,
                  holdtime_variable: Optional[pulumi.Input[str]] = None,
-                 ipv4_neighbors: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoBgpFeatureTemplateIpv4NeighborArgs']]]]] = None,
-                 ipv4_route_targets: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoBgpFeatureTemplateIpv4RouteTargetArgs']]]]] = None,
-                 ipv6_neighbors: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoBgpFeatureTemplateIpv6NeighborArgs']]]]] = None,
-                 ipv6_route_targets: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoBgpFeatureTemplateIpv6RouteTargetArgs']]]]] = None,
+                 ipv4_neighbors: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv4NeighborArgs', 'CiscoBgpFeatureTemplateIpv4NeighborArgsDict']]]]] = None,
+                 ipv4_route_targets: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv4RouteTargetArgs', 'CiscoBgpFeatureTemplateIpv4RouteTargetArgsDict']]]]] = None,
+                 ipv6_neighbors: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv6NeighborArgs', 'CiscoBgpFeatureTemplateIpv6NeighborArgsDict']]]]] = None,
+                 ipv6_route_targets: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv6RouteTargetArgs', 'CiscoBgpFeatureTemplateIpv6RouteTargetArgsDict']]]]] = None,
                  keepalive: Optional[pulumi.Input[int]] = None,
                  keepalive_variable: Optional[pulumi.Input[str]] = None,
                  missing_med_worst: Optional[pulumi.Input[bool]] = None,
                  missing_med_worst_variable: Optional[pulumi.Input[str]] = None,
-                 mpls_interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoBgpFeatureTemplateMplsInterfaceArgs']]]]] = None,
+                 mpls_interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateMplsInterfaceArgs', 'CiscoBgpFeatureTemplateMplsInterfaceArgsDict']]]]] = None,
                  multipath_relax: Optional[pulumi.Input[bool]] = None,
                  multipath_relax_variable: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
@@ -1372,7 +1372,7 @@ class CiscoBgpFeatureTemplate(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoBgpFeatureTemplateAddressFamilyArgs']]]] address_families: Set BGP address family
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateAddressFamilyArgs', 'CiscoBgpFeatureTemplateAddressFamilyArgsDict']]]] address_families: Set BGP address family
         :param pulumi.Input[bool] always_compare_med: Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
         :param pulumi.Input[str] always_compare_med_variable: Variable name
         :param pulumi.Input[str] as_number: Set autonomous system number <1..4294967295> or <XX.YY>
@@ -1393,15 +1393,15 @@ class CiscoBgpFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] distance_local_variable: Variable name
         :param pulumi.Input[int] holdtime: Set the interval when BGP considers a neighbor to be down - Range: `0`-`65535` - Default value: `180`
         :param pulumi.Input[str] holdtime_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoBgpFeatureTemplateIpv4NeighborArgs']]]] ipv4_neighbors: Set BGP neighbors
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoBgpFeatureTemplateIpv4RouteTargetArgs']]]] ipv4_route_targets: Router Target for IPV4
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoBgpFeatureTemplateIpv6NeighborArgs']]]] ipv6_neighbors: Set BGP IPv6 neighbors
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoBgpFeatureTemplateIpv6RouteTargetArgs']]]] ipv6_route_targets: Router Target for IPV6
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv4NeighborArgs', 'CiscoBgpFeatureTemplateIpv4NeighborArgsDict']]]] ipv4_neighbors: Set BGP neighbors
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv4RouteTargetArgs', 'CiscoBgpFeatureTemplateIpv4RouteTargetArgsDict']]]] ipv4_route_targets: Router Target for IPV4
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv6NeighborArgs', 'CiscoBgpFeatureTemplateIpv6NeighborArgsDict']]]] ipv6_neighbors: Set BGP IPv6 neighbors
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv6RouteTargetArgs', 'CiscoBgpFeatureTemplateIpv6RouteTargetArgsDict']]]] ipv6_route_targets: Router Target for IPV6
         :param pulumi.Input[int] keepalive: Set how often keepalive messages are sent to BGP peer - Range: `0`-`65535` - Default value: `60`
         :param pulumi.Input[str] keepalive_variable: Variable name
         :param pulumi.Input[bool] missing_med_worst: If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
         :param pulumi.Input[str] missing_med_worst_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoBgpFeatureTemplateMplsInterfaceArgs']]]] mpls_interfaces: MPLS BGP Interface
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateMplsInterfaceArgs', 'CiscoBgpFeatureTemplateMplsInterfaceArgsDict']]]] mpls_interfaces: MPLS BGP Interface
         :param pulumi.Input[bool] multipath_relax: Ignore AS for multipath selection - Default value: `false`
         :param pulumi.Input[str] multipath_relax_variable: Variable name
         :param pulumi.Input[str] name: The name of the feature template
@@ -1445,7 +1445,7 @@ class CiscoBgpFeatureTemplate(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 address_families: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoBgpFeatureTemplateAddressFamilyArgs']]]]] = None,
+                 address_families: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateAddressFamilyArgs', 'CiscoBgpFeatureTemplateAddressFamilyArgsDict']]]]] = None,
                  always_compare_med: Optional[pulumi.Input[bool]] = None,
                  always_compare_med_variable: Optional[pulumi.Input[str]] = None,
                  as_number: Optional[pulumi.Input[str]] = None,
@@ -1464,15 +1464,15 @@ class CiscoBgpFeatureTemplate(pulumi.CustomResource):
                  distance_local_variable: Optional[pulumi.Input[str]] = None,
                  holdtime: Optional[pulumi.Input[int]] = None,
                  holdtime_variable: Optional[pulumi.Input[str]] = None,
-                 ipv4_neighbors: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoBgpFeatureTemplateIpv4NeighborArgs']]]]] = None,
-                 ipv4_route_targets: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoBgpFeatureTemplateIpv4RouteTargetArgs']]]]] = None,
-                 ipv6_neighbors: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoBgpFeatureTemplateIpv6NeighborArgs']]]]] = None,
-                 ipv6_route_targets: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoBgpFeatureTemplateIpv6RouteTargetArgs']]]]] = None,
+                 ipv4_neighbors: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv4NeighborArgs', 'CiscoBgpFeatureTemplateIpv4NeighborArgsDict']]]]] = None,
+                 ipv4_route_targets: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv4RouteTargetArgs', 'CiscoBgpFeatureTemplateIpv4RouteTargetArgsDict']]]]] = None,
+                 ipv6_neighbors: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv6NeighborArgs', 'CiscoBgpFeatureTemplateIpv6NeighborArgsDict']]]]] = None,
+                 ipv6_route_targets: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv6RouteTargetArgs', 'CiscoBgpFeatureTemplateIpv6RouteTargetArgsDict']]]]] = None,
                  keepalive: Optional[pulumi.Input[int]] = None,
                  keepalive_variable: Optional[pulumi.Input[str]] = None,
                  missing_med_worst: Optional[pulumi.Input[bool]] = None,
                  missing_med_worst_variable: Optional[pulumi.Input[str]] = None,
-                 mpls_interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoBgpFeatureTemplateMplsInterfaceArgs']]]]] = None,
+                 mpls_interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateMplsInterfaceArgs', 'CiscoBgpFeatureTemplateMplsInterfaceArgsDict']]]]] = None,
                  multipath_relax: Optional[pulumi.Input[bool]] = None,
                  multipath_relax_variable: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
@@ -1548,7 +1548,7 @@ class CiscoBgpFeatureTemplate(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            address_families: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoBgpFeatureTemplateAddressFamilyArgs']]]]] = None,
+            address_families: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateAddressFamilyArgs', 'CiscoBgpFeatureTemplateAddressFamilyArgsDict']]]]] = None,
             always_compare_med: Optional[pulumi.Input[bool]] = None,
             always_compare_med_variable: Optional[pulumi.Input[str]] = None,
             as_number: Optional[pulumi.Input[str]] = None,
@@ -1567,15 +1567,15 @@ class CiscoBgpFeatureTemplate(pulumi.CustomResource):
             distance_local_variable: Optional[pulumi.Input[str]] = None,
             holdtime: Optional[pulumi.Input[int]] = None,
             holdtime_variable: Optional[pulumi.Input[str]] = None,
-            ipv4_neighbors: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoBgpFeatureTemplateIpv4NeighborArgs']]]]] = None,
-            ipv4_route_targets: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoBgpFeatureTemplateIpv4RouteTargetArgs']]]]] = None,
-            ipv6_neighbors: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoBgpFeatureTemplateIpv6NeighborArgs']]]]] = None,
-            ipv6_route_targets: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoBgpFeatureTemplateIpv6RouteTargetArgs']]]]] = None,
+            ipv4_neighbors: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv4NeighborArgs', 'CiscoBgpFeatureTemplateIpv4NeighborArgsDict']]]]] = None,
+            ipv4_route_targets: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv4RouteTargetArgs', 'CiscoBgpFeatureTemplateIpv4RouteTargetArgsDict']]]]] = None,
+            ipv6_neighbors: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv6NeighborArgs', 'CiscoBgpFeatureTemplateIpv6NeighborArgsDict']]]]] = None,
+            ipv6_route_targets: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv6RouteTargetArgs', 'CiscoBgpFeatureTemplateIpv6RouteTargetArgsDict']]]]] = None,
             keepalive: Optional[pulumi.Input[int]] = None,
             keepalive_variable: Optional[pulumi.Input[str]] = None,
             missing_med_worst: Optional[pulumi.Input[bool]] = None,
             missing_med_worst_variable: Optional[pulumi.Input[str]] = None,
-            mpls_interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoBgpFeatureTemplateMplsInterfaceArgs']]]]] = None,
+            mpls_interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateMplsInterfaceArgs', 'CiscoBgpFeatureTemplateMplsInterfaceArgsDict']]]]] = None,
             multipath_relax: Optional[pulumi.Input[bool]] = None,
             multipath_relax_variable: Optional[pulumi.Input[str]] = None,
             name: Optional[pulumi.Input[str]] = None,
@@ -1596,7 +1596,7 @@ class CiscoBgpFeatureTemplate(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoBgpFeatureTemplateAddressFamilyArgs']]]] address_families: Set BGP address family
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateAddressFamilyArgs', 'CiscoBgpFeatureTemplateAddressFamilyArgsDict']]]] address_families: Set BGP address family
         :param pulumi.Input[bool] always_compare_med: Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
         :param pulumi.Input[str] always_compare_med_variable: Variable name
         :param pulumi.Input[str] as_number: Set autonomous system number <1..4294967295> or <XX.YY>
@@ -1617,15 +1617,15 @@ class CiscoBgpFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] distance_local_variable: Variable name
         :param pulumi.Input[int] holdtime: Set the interval when BGP considers a neighbor to be down - Range: `0`-`65535` - Default value: `180`
         :param pulumi.Input[str] holdtime_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoBgpFeatureTemplateIpv4NeighborArgs']]]] ipv4_neighbors: Set BGP neighbors
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoBgpFeatureTemplateIpv4RouteTargetArgs']]]] ipv4_route_targets: Router Target for IPV4
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoBgpFeatureTemplateIpv6NeighborArgs']]]] ipv6_neighbors: Set BGP IPv6 neighbors
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoBgpFeatureTemplateIpv6RouteTargetArgs']]]] ipv6_route_targets: Router Target for IPV6
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv4NeighborArgs', 'CiscoBgpFeatureTemplateIpv4NeighborArgsDict']]]] ipv4_neighbors: Set BGP neighbors
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv4RouteTargetArgs', 'CiscoBgpFeatureTemplateIpv4RouteTargetArgsDict']]]] ipv4_route_targets: Router Target for IPV4
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv6NeighborArgs', 'CiscoBgpFeatureTemplateIpv6NeighborArgsDict']]]] ipv6_neighbors: Set BGP IPv6 neighbors
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv6RouteTargetArgs', 'CiscoBgpFeatureTemplateIpv6RouteTargetArgsDict']]]] ipv6_route_targets: Router Target for IPV6
         :param pulumi.Input[int] keepalive: Set how often keepalive messages are sent to BGP peer - Range: `0`-`65535` - Default value: `60`
         :param pulumi.Input[str] keepalive_variable: Variable name
         :param pulumi.Input[bool] missing_med_worst: If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
         :param pulumi.Input[str] missing_med_worst_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoBgpFeatureTemplateMplsInterfaceArgs']]]] mpls_interfaces: MPLS BGP Interface
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateMplsInterfaceArgs', 'CiscoBgpFeatureTemplateMplsInterfaceArgsDict']]]] mpls_interfaces: MPLS BGP Interface
         :param pulumi.Input[bool] multipath_relax: Ignore AS for multipath selection - Default value: `false`
         :param pulumi.Input[str] multipath_relax_variable: Variable name
         :param pulumi.Input[str] name: The name of the feature template

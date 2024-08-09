@@ -466,13 +466,13 @@ class SystemNtpProfileParcel(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 authentication_keys: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemNtpProfileParcelAuthenticationKeyArgs']]]]] = None,
+                 authentication_keys: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemNtpProfileParcelAuthenticationKeyArgs', 'SystemNtpProfileParcelAuthenticationKeyArgsDict']]]]] = None,
                  authoritative_ntp_server: Optional[pulumi.Input[bool]] = None,
                  authoritative_ntp_server_variable: Optional[pulumi.Input[str]] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  feature_profile_id: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 servers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemNtpProfileParcelServerArgs']]]]] = None,
+                 servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemNtpProfileParcelServerArgs', 'SystemNtpProfileParcelServerArgsDict']]]]] = None,
                  source_interface: Optional[pulumi.Input[str]] = None,
                  source_interface_variable: Optional[pulumi.Input[str]] = None,
                  stratum: Optional[pulumi.Input[int]] = None,
@@ -492,13 +492,13 @@ class SystemNtpProfileParcel(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemNtpProfileParcelAuthenticationKeyArgs']]]] authentication_keys: Set MD5 authentication key
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemNtpProfileParcelAuthenticationKeyArgs', 'SystemNtpProfileParcelAuthenticationKeyArgsDict']]]] authentication_keys: Set MD5 authentication key
         :param pulumi.Input[bool] authoritative_ntp_server: Enable device as NTP Leader - Default value: `false`
         :param pulumi.Input[str] authoritative_ntp_server_variable: Variable name
         :param pulumi.Input[str] description: The description of the profile parcel
         :param pulumi.Input[str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[str] name: The name of the profile parcel
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemNtpProfileParcelServerArgs']]]] servers: Configure NTP servers
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemNtpProfileParcelServerArgs', 'SystemNtpProfileParcelServerArgsDict']]]] servers: Configure NTP servers
         :param pulumi.Input[str] source_interface: Enable device as NTP Leader
         :param pulumi.Input[str] source_interface_variable: Variable name
         :param pulumi.Input[int] stratum: Enable device as NTP Leader - Range: `1`-`15`
@@ -537,13 +537,13 @@ class SystemNtpProfileParcel(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 authentication_keys: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemNtpProfileParcelAuthenticationKeyArgs']]]]] = None,
+                 authentication_keys: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemNtpProfileParcelAuthenticationKeyArgs', 'SystemNtpProfileParcelAuthenticationKeyArgsDict']]]]] = None,
                  authoritative_ntp_server: Optional[pulumi.Input[bool]] = None,
                  authoritative_ntp_server_variable: Optional[pulumi.Input[str]] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  feature_profile_id: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 servers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemNtpProfileParcelServerArgs']]]]] = None,
+                 servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemNtpProfileParcelServerArgs', 'SystemNtpProfileParcelServerArgsDict']]]]] = None,
                  source_interface: Optional[pulumi.Input[str]] = None,
                  source_interface_variable: Optional[pulumi.Input[str]] = None,
                  stratum: Optional[pulumi.Input[int]] = None,
@@ -583,13 +583,13 @@ class SystemNtpProfileParcel(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            authentication_keys: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemNtpProfileParcelAuthenticationKeyArgs']]]]] = None,
+            authentication_keys: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemNtpProfileParcelAuthenticationKeyArgs', 'SystemNtpProfileParcelAuthenticationKeyArgsDict']]]]] = None,
             authoritative_ntp_server: Optional[pulumi.Input[bool]] = None,
             authoritative_ntp_server_variable: Optional[pulumi.Input[str]] = None,
             description: Optional[pulumi.Input[str]] = None,
             feature_profile_id: Optional[pulumi.Input[str]] = None,
             name: Optional[pulumi.Input[str]] = None,
-            servers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemNtpProfileParcelServerArgs']]]]] = None,
+            servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemNtpProfileParcelServerArgs', 'SystemNtpProfileParcelServerArgsDict']]]]] = None,
             source_interface: Optional[pulumi.Input[str]] = None,
             source_interface_variable: Optional[pulumi.Input[str]] = None,
             stratum: Optional[pulumi.Input[int]] = None,
@@ -604,13 +604,13 @@ class SystemNtpProfileParcel(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemNtpProfileParcelAuthenticationKeyArgs']]]] authentication_keys: Set MD5 authentication key
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemNtpProfileParcelAuthenticationKeyArgs', 'SystemNtpProfileParcelAuthenticationKeyArgsDict']]]] authentication_keys: Set MD5 authentication key
         :param pulumi.Input[bool] authoritative_ntp_server: Enable device as NTP Leader - Default value: `false`
         :param pulumi.Input[str] authoritative_ntp_server_variable: Variable name
         :param pulumi.Input[str] description: The description of the profile parcel
         :param pulumi.Input[str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[str] name: The name of the profile parcel
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemNtpProfileParcelServerArgs']]]] servers: Configure NTP servers
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemNtpProfileParcelServerArgs', 'SystemNtpProfileParcelServerArgsDict']]]] servers: Configure NTP servers
         :param pulumi.Input[str] source_interface: Enable device as NTP Leader
         :param pulumi.Input[str] source_interface_variable: Variable name
         :param pulumi.Input[int] stratum: Enable device as NTP Leader - Range: `1`-`15`

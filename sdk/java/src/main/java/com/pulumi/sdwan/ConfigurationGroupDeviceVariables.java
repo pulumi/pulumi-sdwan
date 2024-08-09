@@ -129,7 +129,7 @@ public class ConfigurationGroupDeviceVariables extends com.pulumi.resources.Cust
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public ConfigurationGroupDeviceVariables(String name) {
+    public ConfigurationGroupDeviceVariables(java.lang.String name) {
         this(name, ConfigurationGroupDeviceVariablesArgs.Empty);
     }
     /**
@@ -137,7 +137,7 @@ public class ConfigurationGroupDeviceVariables extends com.pulumi.resources.Cust
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public ConfigurationGroupDeviceVariables(String name, ConfigurationGroupDeviceVariablesArgs args) {
+    public ConfigurationGroupDeviceVariables(java.lang.String name, ConfigurationGroupDeviceVariablesArgs args) {
         this(name, args, null);
     }
     /**
@@ -146,15 +146,22 @@ public class ConfigurationGroupDeviceVariables extends com.pulumi.resources.Cust
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ConfigurationGroupDeviceVariables(String name, ConfigurationGroupDeviceVariablesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/configurationGroupDeviceVariables:ConfigurationGroupDeviceVariables", name, args == null ? ConfigurationGroupDeviceVariablesArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public ConfigurationGroupDeviceVariables(java.lang.String name, ConfigurationGroupDeviceVariablesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/configurationGroupDeviceVariables:ConfigurationGroupDeviceVariables", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private ConfigurationGroupDeviceVariables(String name, Output<String> id, @Nullable ConfigurationGroupDeviceVariablesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/configurationGroupDeviceVariables:ConfigurationGroupDeviceVariables", name, state, makeResourceOptions(options, id));
+    private ConfigurationGroupDeviceVariables(java.lang.String name, Output<java.lang.String> id, @Nullable ConfigurationGroupDeviceVariablesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/configurationGroupDeviceVariables:ConfigurationGroupDeviceVariables", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static ConfigurationGroupDeviceVariablesArgs makeArgs(ConfigurationGroupDeviceVariablesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? ConfigurationGroupDeviceVariablesArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -170,7 +177,7 @@ public class ConfigurationGroupDeviceVariables extends com.pulumi.resources.Cust
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ConfigurationGroupDeviceVariables get(String name, Output<String> id, @Nullable ConfigurationGroupDeviceVariablesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ConfigurationGroupDeviceVariables get(java.lang.String name, Output<java.lang.String> id, @Nullable ConfigurationGroupDeviceVariablesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new ConfigurationGroupDeviceVariables(name, id, state, options);
     }
 }

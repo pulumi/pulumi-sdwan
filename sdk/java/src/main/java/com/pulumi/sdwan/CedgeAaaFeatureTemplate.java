@@ -587,7 +587,7 @@ public class CedgeAaaFeatureTemplate extends com.pulumi.resources.CustomResource
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public CedgeAaaFeatureTemplate(String name) {
+    public CedgeAaaFeatureTemplate(java.lang.String name) {
         this(name, CedgeAaaFeatureTemplateArgs.Empty);
     }
     /**
@@ -595,7 +595,7 @@ public class CedgeAaaFeatureTemplate extends com.pulumi.resources.CustomResource
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public CedgeAaaFeatureTemplate(String name, CedgeAaaFeatureTemplateArgs args) {
+    public CedgeAaaFeatureTemplate(java.lang.String name, CedgeAaaFeatureTemplateArgs args) {
         this(name, args, null);
     }
     /**
@@ -604,15 +604,22 @@ public class CedgeAaaFeatureTemplate extends com.pulumi.resources.CustomResource
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public CedgeAaaFeatureTemplate(String name, CedgeAaaFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/cedgeAaaFeatureTemplate:CedgeAaaFeatureTemplate", name, args == null ? CedgeAaaFeatureTemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public CedgeAaaFeatureTemplate(java.lang.String name, CedgeAaaFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/cedgeAaaFeatureTemplate:CedgeAaaFeatureTemplate", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private CedgeAaaFeatureTemplate(String name, Output<String> id, @Nullable CedgeAaaFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/cedgeAaaFeatureTemplate:CedgeAaaFeatureTemplate", name, state, makeResourceOptions(options, id));
+    private CedgeAaaFeatureTemplate(java.lang.String name, Output<java.lang.String> id, @Nullable CedgeAaaFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/cedgeAaaFeatureTemplate:CedgeAaaFeatureTemplate", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static CedgeAaaFeatureTemplateArgs makeArgs(CedgeAaaFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? CedgeAaaFeatureTemplateArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -628,7 +635,7 @@ public class CedgeAaaFeatureTemplate extends com.pulumi.resources.CustomResource
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CedgeAaaFeatureTemplate get(String name, Output<String> id, @Nullable CedgeAaaFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static CedgeAaaFeatureTemplate get(java.lang.String name, Output<java.lang.String> id, @Nullable CedgeAaaFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new CedgeAaaFeatureTemplate(name, id, state, options);
     }
 }

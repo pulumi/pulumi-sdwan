@@ -97,7 +97,7 @@ class ConfigurationGroupDevices(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  configuration_group_id: Optional[pulumi.Input[str]] = None,
-                 devices: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ConfigurationGroupDevicesDeviceArgs']]]]] = None,
+                 devices: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupDevicesDeviceArgs', 'ConfigurationGroupDevicesDeviceArgsDict']]]]] = None,
                  __props__=None):
         """
         This resource can manage a Configuration Group Devices .
@@ -111,9 +111,9 @@ class ConfigurationGroupDevices(pulumi.CustomResource):
 
         example = sdwan.ConfigurationGroupDevices("example",
             configuration_group_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
-            devices=[sdwan.ConfigurationGroupDevicesDeviceArgs(
-                id="C8K-15411CCC-D476-0B3B-21F2-5D6AC387EE7B",
-            )])
+            devices=[{
+                "id": "C8K-15411CCC-D476-0B3B-21F2-5D6AC387EE7B",
+            }])
         ```
 
         ## Import
@@ -125,7 +125,7 @@ class ConfigurationGroupDevices(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] configuration_group_id: Configuration Group ID
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ConfigurationGroupDevicesDeviceArgs']]]] devices: List of devices
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupDevicesDeviceArgs', 'ConfigurationGroupDevicesDeviceArgsDict']]]] devices: List of devices
         """
         ...
     @overload
@@ -145,9 +145,9 @@ class ConfigurationGroupDevices(pulumi.CustomResource):
 
         example = sdwan.ConfigurationGroupDevices("example",
             configuration_group_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
-            devices=[sdwan.ConfigurationGroupDevicesDeviceArgs(
-                id="C8K-15411CCC-D476-0B3B-21F2-5D6AC387EE7B",
-            )])
+            devices=[{
+                "id": "C8K-15411CCC-D476-0B3B-21F2-5D6AC387EE7B",
+            }])
         ```
 
         ## Import
@@ -172,7 +172,7 @@ class ConfigurationGroupDevices(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  configuration_group_id: Optional[pulumi.Input[str]] = None,
-                 devices: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ConfigurationGroupDevicesDeviceArgs']]]]] = None,
+                 devices: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupDevicesDeviceArgs', 'ConfigurationGroupDevicesDeviceArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -199,7 +199,7 @@ class ConfigurationGroupDevices(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             configuration_group_id: Optional[pulumi.Input[str]] = None,
-            devices: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ConfigurationGroupDevicesDeviceArgs']]]]] = None) -> 'ConfigurationGroupDevices':
+            devices: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupDevicesDeviceArgs', 'ConfigurationGroupDevicesDeviceArgsDict']]]]] = None) -> 'ConfigurationGroupDevices':
         """
         Get an existing ConfigurationGroupDevices resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -208,7 +208,7 @@ class ConfigurationGroupDevices(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] configuration_group_id: Configuration Group ID
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ConfigurationGroupDevicesDeviceArgs']]]] devices: List of devices
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupDevicesDeviceArgs', 'ConfigurationGroupDevicesDeviceArgsDict']]]] devices: List of devices
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

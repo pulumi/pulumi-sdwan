@@ -237,7 +237,7 @@ public class SystemBfdProfileParcel extends com.pulumi.resources.CustomResource 
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public SystemBfdProfileParcel(String name) {
+    public SystemBfdProfileParcel(java.lang.String name) {
         this(name, SystemBfdProfileParcelArgs.Empty);
     }
     /**
@@ -245,7 +245,7 @@ public class SystemBfdProfileParcel extends com.pulumi.resources.CustomResource 
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SystemBfdProfileParcel(String name, SystemBfdProfileParcelArgs args) {
+    public SystemBfdProfileParcel(java.lang.String name, SystemBfdProfileParcelArgs args) {
         this(name, args, null);
     }
     /**
@@ -254,15 +254,22 @@ public class SystemBfdProfileParcel extends com.pulumi.resources.CustomResource 
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SystemBfdProfileParcel(String name, SystemBfdProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/systemBfdProfileParcel:SystemBfdProfileParcel", name, args == null ? SystemBfdProfileParcelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public SystemBfdProfileParcel(java.lang.String name, SystemBfdProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/systemBfdProfileParcel:SystemBfdProfileParcel", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private SystemBfdProfileParcel(String name, Output<String> id, @Nullable SystemBfdProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/systemBfdProfileParcel:SystemBfdProfileParcel", name, state, makeResourceOptions(options, id));
+    private SystemBfdProfileParcel(java.lang.String name, Output<java.lang.String> id, @Nullable SystemBfdProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/systemBfdProfileParcel:SystemBfdProfileParcel", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static SystemBfdProfileParcelArgs makeArgs(SystemBfdProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? SystemBfdProfileParcelArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -278,7 +285,7 @@ public class SystemBfdProfileParcel extends com.pulumi.resources.CustomResource 
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SystemBfdProfileParcel get(String name, Output<String> id, @Nullable SystemBfdProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SystemBfdProfileParcel get(java.lang.String name, Output<java.lang.String> id, @Nullable SystemBfdProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new SystemBfdProfileParcel(name, id, state, options);
     }
 }

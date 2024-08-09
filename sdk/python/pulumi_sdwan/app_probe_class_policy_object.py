@@ -145,7 +145,7 @@ class AppProbeClassPolicyObject(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  forwarding_class: Optional[pulumi.Input[str]] = None,
-                 mappings: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AppProbeClassPolicyObjectMappingArgs']]]]] = None,
+                 mappings: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AppProbeClassPolicyObjectMappingArgs', 'AppProbeClassPolicyObjectMappingArgsDict']]]]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
@@ -160,10 +160,10 @@ class AppProbeClassPolicyObject(pulumi.CustomResource):
         example = sdwan.AppProbeClassPolicyObject("example",
             name="Example",
             forwarding_class="FC1",
-            mappings=[sdwan.AppProbeClassPolicyObjectMappingArgs(
-                color="blue",
-                dscp=8,
-            )])
+            mappings=[{
+                "color": "blue",
+                "dscp": 8,
+            }])
         ```
 
         ## Import
@@ -175,7 +175,7 @@ class AppProbeClassPolicyObject(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] forwarding_class: Forwarding class name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AppProbeClassPolicyObjectMappingArgs']]]] mappings: Color mappings
+        :param pulumi.Input[Sequence[pulumi.Input[Union['AppProbeClassPolicyObjectMappingArgs', 'AppProbeClassPolicyObjectMappingArgsDict']]]] mappings: Color mappings
         :param pulumi.Input[str] name: The name of the policy object
         """
         ...
@@ -196,10 +196,10 @@ class AppProbeClassPolicyObject(pulumi.CustomResource):
         example = sdwan.AppProbeClassPolicyObject("example",
             name="Example",
             forwarding_class="FC1",
-            mappings=[sdwan.AppProbeClassPolicyObjectMappingArgs(
-                color="blue",
-                dscp=8,
-            )])
+            mappings=[{
+                "color": "blue",
+                "dscp": 8,
+            }])
         ```
 
         ## Import
@@ -224,7 +224,7 @@ class AppProbeClassPolicyObject(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  forwarding_class: Optional[pulumi.Input[str]] = None,
-                 mappings: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AppProbeClassPolicyObjectMappingArgs']]]]] = None,
+                 mappings: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AppProbeClassPolicyObjectMappingArgs', 'AppProbeClassPolicyObjectMappingArgsDict']]]]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -254,7 +254,7 @@ class AppProbeClassPolicyObject(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             forwarding_class: Optional[pulumi.Input[str]] = None,
-            mappings: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AppProbeClassPolicyObjectMappingArgs']]]]] = None,
+            mappings: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AppProbeClassPolicyObjectMappingArgs', 'AppProbeClassPolicyObjectMappingArgsDict']]]]] = None,
             name: Optional[pulumi.Input[str]] = None,
             version: Optional[pulumi.Input[int]] = None) -> 'AppProbeClassPolicyObject':
         """
@@ -265,7 +265,7 @@ class AppProbeClassPolicyObject(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] forwarding_class: Forwarding class name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AppProbeClassPolicyObjectMappingArgs']]]] mappings: Color mappings
+        :param pulumi.Input[Sequence[pulumi.Input[Union['AppProbeClassPolicyObjectMappingArgs', 'AppProbeClassPolicyObjectMappingArgsDict']]]] mappings: Color mappings
         :param pulumi.Input[str] name: The name of the policy object
         :param pulumi.Input[int] version: The version of the object
         """

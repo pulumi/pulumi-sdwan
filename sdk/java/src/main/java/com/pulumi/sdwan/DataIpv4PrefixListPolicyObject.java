@@ -114,7 +114,7 @@ public class DataIpv4PrefixListPolicyObject extends com.pulumi.resources.CustomR
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public DataIpv4PrefixListPolicyObject(String name) {
+    public DataIpv4PrefixListPolicyObject(java.lang.String name) {
         this(name, DataIpv4PrefixListPolicyObjectArgs.Empty);
     }
     /**
@@ -122,7 +122,7 @@ public class DataIpv4PrefixListPolicyObject extends com.pulumi.resources.CustomR
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public DataIpv4PrefixListPolicyObject(String name, DataIpv4PrefixListPolicyObjectArgs args) {
+    public DataIpv4PrefixListPolicyObject(java.lang.String name, DataIpv4PrefixListPolicyObjectArgs args) {
         this(name, args, null);
     }
     /**
@@ -131,15 +131,22 @@ public class DataIpv4PrefixListPolicyObject extends com.pulumi.resources.CustomR
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public DataIpv4PrefixListPolicyObject(String name, DataIpv4PrefixListPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/dataIpv4PrefixListPolicyObject:DataIpv4PrefixListPolicyObject", name, args == null ? DataIpv4PrefixListPolicyObjectArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public DataIpv4PrefixListPolicyObject(java.lang.String name, DataIpv4PrefixListPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/dataIpv4PrefixListPolicyObject:DataIpv4PrefixListPolicyObject", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private DataIpv4PrefixListPolicyObject(String name, Output<String> id, @Nullable DataIpv4PrefixListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/dataIpv4PrefixListPolicyObject:DataIpv4PrefixListPolicyObject", name, state, makeResourceOptions(options, id));
+    private DataIpv4PrefixListPolicyObject(java.lang.String name, Output<java.lang.String> id, @Nullable DataIpv4PrefixListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/dataIpv4PrefixListPolicyObject:DataIpv4PrefixListPolicyObject", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static DataIpv4PrefixListPolicyObjectArgs makeArgs(DataIpv4PrefixListPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? DataIpv4PrefixListPolicyObjectArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -155,7 +162,7 @@ public class DataIpv4PrefixListPolicyObject extends com.pulumi.resources.CustomR
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DataIpv4PrefixListPolicyObject get(String name, Output<String> id, @Nullable DataIpv4PrefixListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static DataIpv4PrefixListPolicyObject get(java.lang.String name, Output<java.lang.String> id, @Nullable DataIpv4PrefixListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new DataIpv4PrefixListPolicyObject(name, id, state, options);
     }
 }

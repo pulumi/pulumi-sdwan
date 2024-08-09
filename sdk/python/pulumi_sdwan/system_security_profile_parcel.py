@@ -544,8 +544,8 @@ class SystemSecurityProfileParcel(pulumi.CustomResource):
                  integrity_types: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  ipsec_pairwise_keying: Optional[pulumi.Input[bool]] = None,
                  ipsec_pairwise_keying_variable: Optional[pulumi.Input[str]] = None,
-                 keychains: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemSecurityProfileParcelKeychainArgs']]]]] = None,
-                 keys: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemSecurityProfileParcelKeyArgs']]]]] = None,
+                 keychains: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemSecurityProfileParcelKeychainArgs', 'SystemSecurityProfileParcelKeychainArgsDict']]]]] = None,
+                 keys: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemSecurityProfileParcelKeyArgs', 'SystemSecurityProfileParcelKeyArgsDict']]]]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  rekey: Optional[pulumi.Input[int]] = None,
                  rekey_variable: Optional[pulumi.Input[str]] = None,
@@ -573,8 +573,8 @@ class SystemSecurityProfileParcel(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[str]]] integrity_types: Set the authentication type for DTLS connections
         :param pulumi.Input[bool] ipsec_pairwise_keying: Enable or disable IPsec pairwise-keying - Default value: `false`
         :param pulumi.Input[str] ipsec_pairwise_keying_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemSecurityProfileParcelKeychainArgs']]]] keychains: Configure a Keychain
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemSecurityProfileParcelKeyArgs']]]] keys: Configure a Key
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSecurityProfileParcelKeychainArgs', 'SystemSecurityProfileParcelKeychainArgsDict']]]] keychains: Configure a Keychain
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSecurityProfileParcelKeyArgs', 'SystemSecurityProfileParcelKeyArgsDict']]]] keys: Configure a Key
         :param pulumi.Input[str] name: The name of the profile parcel
         :param pulumi.Input[int] rekey: Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
         :param pulumi.Input[str] rekey_variable: Variable name
@@ -620,8 +620,8 @@ class SystemSecurityProfileParcel(pulumi.CustomResource):
                  integrity_types: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  ipsec_pairwise_keying: Optional[pulumi.Input[bool]] = None,
                  ipsec_pairwise_keying_variable: Optional[pulumi.Input[str]] = None,
-                 keychains: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemSecurityProfileParcelKeychainArgs']]]]] = None,
-                 keys: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemSecurityProfileParcelKeyArgs']]]]] = None,
+                 keychains: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemSecurityProfileParcelKeychainArgs', 'SystemSecurityProfileParcelKeychainArgsDict']]]]] = None,
+                 keys: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemSecurityProfileParcelKeyArgs', 'SystemSecurityProfileParcelKeyArgsDict']]]]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  rekey: Optional[pulumi.Input[int]] = None,
                  rekey_variable: Optional[pulumi.Input[str]] = None,
@@ -670,8 +670,8 @@ class SystemSecurityProfileParcel(pulumi.CustomResource):
             integrity_types: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
             ipsec_pairwise_keying: Optional[pulumi.Input[bool]] = None,
             ipsec_pairwise_keying_variable: Optional[pulumi.Input[str]] = None,
-            keychains: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemSecurityProfileParcelKeychainArgs']]]]] = None,
-            keys: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemSecurityProfileParcelKeyArgs']]]]] = None,
+            keychains: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemSecurityProfileParcelKeychainArgs', 'SystemSecurityProfileParcelKeychainArgsDict']]]]] = None,
+            keys: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemSecurityProfileParcelKeyArgs', 'SystemSecurityProfileParcelKeyArgsDict']]]]] = None,
             name: Optional[pulumi.Input[str]] = None,
             rekey: Optional[pulumi.Input[int]] = None,
             rekey_variable: Optional[pulumi.Input[str]] = None,
@@ -694,8 +694,8 @@ class SystemSecurityProfileParcel(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[str]]] integrity_types: Set the authentication type for DTLS connections
         :param pulumi.Input[bool] ipsec_pairwise_keying: Enable or disable IPsec pairwise-keying - Default value: `false`
         :param pulumi.Input[str] ipsec_pairwise_keying_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemSecurityProfileParcelKeychainArgs']]]] keychains: Configure a Keychain
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemSecurityProfileParcelKeyArgs']]]] keys: Configure a Key
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSecurityProfileParcelKeychainArgs', 'SystemSecurityProfileParcelKeychainArgsDict']]]] keychains: Configure a Keychain
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSecurityProfileParcelKeyArgs', 'SystemSecurityProfileParcelKeyArgsDict']]]] keys: Configure a Key
         :param pulumi.Input[str] name: The name of the profile parcel
         :param pulumi.Input[int] rekey: Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
         :param pulumi.Input[str] rekey_variable: Variable name

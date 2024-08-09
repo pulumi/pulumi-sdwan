@@ -139,7 +139,7 @@ public class RuleSetPolicyDefinition extends com.pulumi.resources.CustomResource
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public RuleSetPolicyDefinition(String name) {
+    public RuleSetPolicyDefinition(java.lang.String name) {
         this(name, RuleSetPolicyDefinitionArgs.Empty);
     }
     /**
@@ -147,7 +147,7 @@ public class RuleSetPolicyDefinition extends com.pulumi.resources.CustomResource
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public RuleSetPolicyDefinition(String name, RuleSetPolicyDefinitionArgs args) {
+    public RuleSetPolicyDefinition(java.lang.String name, RuleSetPolicyDefinitionArgs args) {
         this(name, args, null);
     }
     /**
@@ -156,15 +156,22 @@ public class RuleSetPolicyDefinition extends com.pulumi.resources.CustomResource
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public RuleSetPolicyDefinition(String name, RuleSetPolicyDefinitionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/ruleSetPolicyDefinition:RuleSetPolicyDefinition", name, args == null ? RuleSetPolicyDefinitionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public RuleSetPolicyDefinition(java.lang.String name, RuleSetPolicyDefinitionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/ruleSetPolicyDefinition:RuleSetPolicyDefinition", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private RuleSetPolicyDefinition(String name, Output<String> id, @Nullable RuleSetPolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/ruleSetPolicyDefinition:RuleSetPolicyDefinition", name, state, makeResourceOptions(options, id));
+    private RuleSetPolicyDefinition(java.lang.String name, Output<java.lang.String> id, @Nullable RuleSetPolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/ruleSetPolicyDefinition:RuleSetPolicyDefinition", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static RuleSetPolicyDefinitionArgs makeArgs(RuleSetPolicyDefinitionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? RuleSetPolicyDefinitionArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -180,7 +187,7 @@ public class RuleSetPolicyDefinition extends com.pulumi.resources.CustomResource
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RuleSetPolicyDefinition get(String name, Output<String> id, @Nullable RuleSetPolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static RuleSetPolicyDefinition get(java.lang.String name, Output<java.lang.String> id, @Nullable RuleSetPolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new RuleSetPolicyDefinition(name, id, state, options);
     }
 }

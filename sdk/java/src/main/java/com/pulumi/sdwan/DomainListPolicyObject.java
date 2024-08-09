@@ -114,7 +114,7 @@ public class DomainListPolicyObject extends com.pulumi.resources.CustomResource 
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public DomainListPolicyObject(String name) {
+    public DomainListPolicyObject(java.lang.String name) {
         this(name, DomainListPolicyObjectArgs.Empty);
     }
     /**
@@ -122,7 +122,7 @@ public class DomainListPolicyObject extends com.pulumi.resources.CustomResource 
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public DomainListPolicyObject(String name, DomainListPolicyObjectArgs args) {
+    public DomainListPolicyObject(java.lang.String name, DomainListPolicyObjectArgs args) {
         this(name, args, null);
     }
     /**
@@ -131,15 +131,22 @@ public class DomainListPolicyObject extends com.pulumi.resources.CustomResource 
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public DomainListPolicyObject(String name, DomainListPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/domainListPolicyObject:DomainListPolicyObject", name, args == null ? DomainListPolicyObjectArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public DomainListPolicyObject(java.lang.String name, DomainListPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/domainListPolicyObject:DomainListPolicyObject", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private DomainListPolicyObject(String name, Output<String> id, @Nullable DomainListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/domainListPolicyObject:DomainListPolicyObject", name, state, makeResourceOptions(options, id));
+    private DomainListPolicyObject(java.lang.String name, Output<java.lang.String> id, @Nullable DomainListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/domainListPolicyObject:DomainListPolicyObject", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static DomainListPolicyObjectArgs makeArgs(DomainListPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? DomainListPolicyObjectArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -155,7 +162,7 @@ public class DomainListPolicyObject extends com.pulumi.resources.CustomResource 
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DomainListPolicyObject get(String name, Output<String> id, @Nullable DomainListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static DomainListPolicyObject get(java.lang.String name, Output<java.lang.String> id, @Nullable DomainListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new DomainListPolicyObject(name, id, state, options);
     }
 }

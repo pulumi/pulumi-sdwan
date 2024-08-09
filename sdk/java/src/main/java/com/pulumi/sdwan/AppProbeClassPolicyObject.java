@@ -130,7 +130,7 @@ public class AppProbeClassPolicyObject extends com.pulumi.resources.CustomResour
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public AppProbeClassPolicyObject(String name) {
+    public AppProbeClassPolicyObject(java.lang.String name) {
         this(name, AppProbeClassPolicyObjectArgs.Empty);
     }
     /**
@@ -138,7 +138,7 @@ public class AppProbeClassPolicyObject extends com.pulumi.resources.CustomResour
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AppProbeClassPolicyObject(String name, AppProbeClassPolicyObjectArgs args) {
+    public AppProbeClassPolicyObject(java.lang.String name, AppProbeClassPolicyObjectArgs args) {
         this(name, args, null);
     }
     /**
@@ -147,15 +147,22 @@ public class AppProbeClassPolicyObject extends com.pulumi.resources.CustomResour
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AppProbeClassPolicyObject(String name, AppProbeClassPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/appProbeClassPolicyObject:AppProbeClassPolicyObject", name, args == null ? AppProbeClassPolicyObjectArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public AppProbeClassPolicyObject(java.lang.String name, AppProbeClassPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/appProbeClassPolicyObject:AppProbeClassPolicyObject", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private AppProbeClassPolicyObject(String name, Output<String> id, @Nullable AppProbeClassPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/appProbeClassPolicyObject:AppProbeClassPolicyObject", name, state, makeResourceOptions(options, id));
+    private AppProbeClassPolicyObject(java.lang.String name, Output<java.lang.String> id, @Nullable AppProbeClassPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/appProbeClassPolicyObject:AppProbeClassPolicyObject", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static AppProbeClassPolicyObjectArgs makeArgs(AppProbeClassPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? AppProbeClassPolicyObjectArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -171,7 +178,7 @@ public class AppProbeClassPolicyObject extends com.pulumi.resources.CustomResour
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AppProbeClassPolicyObject get(String name, Output<String> id, @Nullable AppProbeClassPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AppProbeClassPolicyObject get(java.lang.String name, Output<java.lang.String> id, @Nullable AppProbeClassPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new AppProbeClassPolicyObject(name, id, state, options);
     }
 }

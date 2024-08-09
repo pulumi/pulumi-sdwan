@@ -794,7 +794,7 @@ public class SystemGlobalProfileParcel extends com.pulumi.resources.CustomResour
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public SystemGlobalProfileParcel(String name) {
+    public SystemGlobalProfileParcel(java.lang.String name) {
         this(name, SystemGlobalProfileParcelArgs.Empty);
     }
     /**
@@ -802,7 +802,7 @@ public class SystemGlobalProfileParcel extends com.pulumi.resources.CustomResour
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SystemGlobalProfileParcel(String name, SystemGlobalProfileParcelArgs args) {
+    public SystemGlobalProfileParcel(java.lang.String name, SystemGlobalProfileParcelArgs args) {
         this(name, args, null);
     }
     /**
@@ -811,15 +811,22 @@ public class SystemGlobalProfileParcel extends com.pulumi.resources.CustomResour
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SystemGlobalProfileParcel(String name, SystemGlobalProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/systemGlobalProfileParcel:SystemGlobalProfileParcel", name, args == null ? SystemGlobalProfileParcelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public SystemGlobalProfileParcel(java.lang.String name, SystemGlobalProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/systemGlobalProfileParcel:SystemGlobalProfileParcel", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private SystemGlobalProfileParcel(String name, Output<String> id, @Nullable SystemGlobalProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/systemGlobalProfileParcel:SystemGlobalProfileParcel", name, state, makeResourceOptions(options, id));
+    private SystemGlobalProfileParcel(java.lang.String name, Output<java.lang.String> id, @Nullable SystemGlobalProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/systemGlobalProfileParcel:SystemGlobalProfileParcel", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static SystemGlobalProfileParcelArgs makeArgs(SystemGlobalProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? SystemGlobalProfileParcelArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -835,7 +842,7 @@ public class SystemGlobalProfileParcel extends com.pulumi.resources.CustomResour
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SystemGlobalProfileParcel get(String name, Output<String> id, @Nullable SystemGlobalProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SystemGlobalProfileParcel get(java.lang.String name, Output<java.lang.String> id, @Nullable SystemGlobalProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new SystemGlobalProfileParcel(name, id, state, options);
     }
 }

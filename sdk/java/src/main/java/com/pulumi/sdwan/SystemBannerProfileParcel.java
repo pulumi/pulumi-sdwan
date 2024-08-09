@@ -168,7 +168,7 @@ public class SystemBannerProfileParcel extends com.pulumi.resources.CustomResour
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public SystemBannerProfileParcel(String name) {
+    public SystemBannerProfileParcel(java.lang.String name) {
         this(name, SystemBannerProfileParcelArgs.Empty);
     }
     /**
@@ -176,7 +176,7 @@ public class SystemBannerProfileParcel extends com.pulumi.resources.CustomResour
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SystemBannerProfileParcel(String name, SystemBannerProfileParcelArgs args) {
+    public SystemBannerProfileParcel(java.lang.String name, SystemBannerProfileParcelArgs args) {
         this(name, args, null);
     }
     /**
@@ -185,15 +185,22 @@ public class SystemBannerProfileParcel extends com.pulumi.resources.CustomResour
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SystemBannerProfileParcel(String name, SystemBannerProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/systemBannerProfileParcel:SystemBannerProfileParcel", name, args == null ? SystemBannerProfileParcelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public SystemBannerProfileParcel(java.lang.String name, SystemBannerProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/systemBannerProfileParcel:SystemBannerProfileParcel", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private SystemBannerProfileParcel(String name, Output<String> id, @Nullable SystemBannerProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/systemBannerProfileParcel:SystemBannerProfileParcel", name, state, makeResourceOptions(options, id));
+    private SystemBannerProfileParcel(java.lang.String name, Output<java.lang.String> id, @Nullable SystemBannerProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/systemBannerProfileParcel:SystemBannerProfileParcel", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static SystemBannerProfileParcelArgs makeArgs(SystemBannerProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? SystemBannerProfileParcelArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -209,7 +216,7 @@ public class SystemBannerProfileParcel extends com.pulumi.resources.CustomResour
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SystemBannerProfileParcel get(String name, Output<String> id, @Nullable SystemBannerProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SystemBannerProfileParcel get(java.lang.String name, Output<java.lang.String> id, @Nullable SystemBannerProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new SystemBannerProfileParcel(name, id, state, options);
     }
 }

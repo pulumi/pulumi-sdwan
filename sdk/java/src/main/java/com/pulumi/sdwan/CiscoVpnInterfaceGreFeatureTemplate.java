@@ -574,7 +574,7 @@ public class CiscoVpnInterfaceGreFeatureTemplate extends com.pulumi.resources.Cu
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public CiscoVpnInterfaceGreFeatureTemplate(String name) {
+    public CiscoVpnInterfaceGreFeatureTemplate(java.lang.String name) {
         this(name, CiscoVpnInterfaceGreFeatureTemplateArgs.Empty);
     }
     /**
@@ -582,7 +582,7 @@ public class CiscoVpnInterfaceGreFeatureTemplate extends com.pulumi.resources.Cu
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public CiscoVpnInterfaceGreFeatureTemplate(String name, CiscoVpnInterfaceGreFeatureTemplateArgs args) {
+    public CiscoVpnInterfaceGreFeatureTemplate(java.lang.String name, CiscoVpnInterfaceGreFeatureTemplateArgs args) {
         this(name, args, null);
     }
     /**
@@ -591,15 +591,22 @@ public class CiscoVpnInterfaceGreFeatureTemplate extends com.pulumi.resources.Cu
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public CiscoVpnInterfaceGreFeatureTemplate(String name, CiscoVpnInterfaceGreFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/ciscoVpnInterfaceGreFeatureTemplate:CiscoVpnInterfaceGreFeatureTemplate", name, args == null ? CiscoVpnInterfaceGreFeatureTemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public CiscoVpnInterfaceGreFeatureTemplate(java.lang.String name, CiscoVpnInterfaceGreFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/ciscoVpnInterfaceGreFeatureTemplate:CiscoVpnInterfaceGreFeatureTemplate", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private CiscoVpnInterfaceGreFeatureTemplate(String name, Output<String> id, @Nullable CiscoVpnInterfaceGreFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/ciscoVpnInterfaceGreFeatureTemplate:CiscoVpnInterfaceGreFeatureTemplate", name, state, makeResourceOptions(options, id));
+    private CiscoVpnInterfaceGreFeatureTemplate(java.lang.String name, Output<java.lang.String> id, @Nullable CiscoVpnInterfaceGreFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/ciscoVpnInterfaceGreFeatureTemplate:CiscoVpnInterfaceGreFeatureTemplate", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static CiscoVpnInterfaceGreFeatureTemplateArgs makeArgs(CiscoVpnInterfaceGreFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? CiscoVpnInterfaceGreFeatureTemplateArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -615,7 +622,7 @@ public class CiscoVpnInterfaceGreFeatureTemplate extends com.pulumi.resources.Cu
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CiscoVpnInterfaceGreFeatureTemplate get(String name, Output<String> id, @Nullable CiscoVpnInterfaceGreFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static CiscoVpnInterfaceGreFeatureTemplate get(java.lang.String name, Output<java.lang.String> id, @Nullable CiscoVpnInterfaceGreFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new CiscoVpnInterfaceGreFeatureTemplate(name, id, state, options);
     }
 }

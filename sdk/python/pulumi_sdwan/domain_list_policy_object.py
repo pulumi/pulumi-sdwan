@@ -113,7 +113,7 @@ class DomainListPolicyObject(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 entries: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['DomainListPolicyObjectEntryArgs']]]]] = None,
+                 entries: Optional[pulumi.Input[Sequence[pulumi.Input[Union['DomainListPolicyObjectEntryArgs', 'DomainListPolicyObjectEntryArgsDict']]]]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
@@ -127,9 +127,9 @@ class DomainListPolicyObject(pulumi.CustomResource):
 
         example = sdwan.DomainListPolicyObject("example",
             name="Example",
-            entries=[sdwan.DomainListPolicyObjectEntryArgs(
-                domain=".*.cisco.com",
-            )])
+            entries=[{
+                "domain": ".*.cisco.com",
+            }])
         ```
 
         ## Import
@@ -140,7 +140,7 @@ class DomainListPolicyObject(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['DomainListPolicyObjectEntryArgs']]]] entries: List of entries
+        :param pulumi.Input[Sequence[pulumi.Input[Union['DomainListPolicyObjectEntryArgs', 'DomainListPolicyObjectEntryArgsDict']]]] entries: List of entries
         :param pulumi.Input[str] name: The name of the policy object
         """
         ...
@@ -160,9 +160,9 @@ class DomainListPolicyObject(pulumi.CustomResource):
 
         example = sdwan.DomainListPolicyObject("example",
             name="Example",
-            entries=[sdwan.DomainListPolicyObjectEntryArgs(
-                domain=".*.cisco.com",
-            )])
+            entries=[{
+                "domain": ".*.cisco.com",
+            }])
         ```
 
         ## Import
@@ -186,7 +186,7 @@ class DomainListPolicyObject(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 entries: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['DomainListPolicyObjectEntryArgs']]]]] = None,
+                 entries: Optional[pulumi.Input[Sequence[pulumi.Input[Union['DomainListPolicyObjectEntryArgs', 'DomainListPolicyObjectEntryArgsDict']]]]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -212,7 +212,7 @@ class DomainListPolicyObject(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            entries: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['DomainListPolicyObjectEntryArgs']]]]] = None,
+            entries: Optional[pulumi.Input[Sequence[pulumi.Input[Union['DomainListPolicyObjectEntryArgs', 'DomainListPolicyObjectEntryArgsDict']]]]] = None,
             name: Optional[pulumi.Input[str]] = None,
             version: Optional[pulumi.Input[int]] = None) -> 'DomainListPolicyObject':
         """
@@ -222,7 +222,7 @@ class DomainListPolicyObject(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['DomainListPolicyObjectEntryArgs']]]] entries: List of entries
+        :param pulumi.Input[Sequence[pulumi.Input[Union['DomainListPolicyObjectEntryArgs', 'DomainListPolicyObjectEntryArgsDict']]]] entries: List of entries
         :param pulumi.Input[str] name: The name of the policy object
         :param pulumi.Input[int] version: The version of the object
         """
