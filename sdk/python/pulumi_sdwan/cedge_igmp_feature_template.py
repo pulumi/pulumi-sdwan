@@ -202,7 +202,7 @@ class CedgeIgmpFeatureTemplate(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  device_types: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-                 interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CedgeIgmpFeatureTemplateInterfaceArgs']]]]] = None,
+                 interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgeIgmpFeatureTemplateInterfaceArgs', 'CedgeIgmpFeatureTemplateInterfaceArgsDict']]]]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
@@ -221,7 +221,7 @@ class CedgeIgmpFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
                `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
                `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CedgeIgmpFeatureTemplateInterfaceArgs']]]] interfaces: Set IGMP interface parameters
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CedgeIgmpFeatureTemplateInterfaceArgs', 'CedgeIgmpFeatureTemplateInterfaceArgsDict']]]] interfaces: Set IGMP interface parameters
         :param pulumi.Input[str] name: The name of the feature template
         """
         ...
@@ -257,7 +257,7 @@ class CedgeIgmpFeatureTemplate(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  device_types: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-                 interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CedgeIgmpFeatureTemplateInterfaceArgs']]]]] = None,
+                 interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgeIgmpFeatureTemplateInterfaceArgs', 'CedgeIgmpFeatureTemplateInterfaceArgsDict']]]]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -290,7 +290,7 @@ class CedgeIgmpFeatureTemplate(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             description: Optional[pulumi.Input[str]] = None,
             device_types: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-            interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CedgeIgmpFeatureTemplateInterfaceArgs']]]]] = None,
+            interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgeIgmpFeatureTemplateInterfaceArgs', 'CedgeIgmpFeatureTemplateInterfaceArgsDict']]]]] = None,
             name: Optional[pulumi.Input[str]] = None,
             template_type: Optional[pulumi.Input[str]] = None,
             version: Optional[pulumi.Input[int]] = None) -> 'CedgeIgmpFeatureTemplate':
@@ -305,7 +305,7 @@ class CedgeIgmpFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
                `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
                `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CedgeIgmpFeatureTemplateInterfaceArgs']]]] interfaces: Set IGMP interface parameters
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CedgeIgmpFeatureTemplateInterfaceArgs', 'CedgeIgmpFeatureTemplateInterfaceArgsDict']]]] interfaces: Set IGMP interface parameters
         :param pulumi.Input[str] name: The name of the feature template
         :param pulumi.Input[str] template_type: The template type
         :param pulumi.Input[int] version: The version of the feature template

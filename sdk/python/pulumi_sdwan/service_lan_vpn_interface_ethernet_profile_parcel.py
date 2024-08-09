@@ -2877,7 +2877,7 @@ class ServiceLanVpnInterfaceEthernetProfileParcel(pulumi.CustomResource):
                  acl_shaping_rate_variable: Optional[pulumi.Input[str]] = None,
                  arp_timeout: Optional[pulumi.Input[int]] = None,
                  arp_timeout_variable: Optional[pulumi.Input[str]] = None,
-                 arps: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ServiceLanVpnInterfaceEthernetProfileParcelArpArgs']]]]] = None,
+                 arps: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetProfileParcelArpArgs', 'ServiceLanVpnInterfaceEthernetProfileParcelArpArgsDict']]]]] = None,
                  autonegotiate: Optional[pulumi.Input[bool]] = None,
                  autonegotiate_variable: Optional[pulumi.Input[str]] = None,
                  config_description: Optional[pulumi.Input[str]] = None,
@@ -2920,17 +2920,17 @@ class ServiceLanVpnInterfaceEthernetProfileParcel(pulumi.CustomResource):
                  ipv4_nat_type_variable: Optional[pulumi.Input[str]] = None,
                  ipv4_nat_udp_timeout: Optional[pulumi.Input[int]] = None,
                  ipv4_nat_udp_timeout_variable: Optional[pulumi.Input[str]] = None,
-                 ipv4_secondary_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ServiceLanVpnInterfaceEthernetProfileParcelIpv4SecondaryAddressArgs']]]]] = None,
+                 ipv4_secondary_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetProfileParcelIpv4SecondaryAddressArgs', 'ServiceLanVpnInterfaceEthernetProfileParcelIpv4SecondaryAddressArgsDict']]]]] = None,
                  ipv4_subnet_mask: Optional[pulumi.Input[str]] = None,
                  ipv4_subnet_mask_variable: Optional[pulumi.Input[str]] = None,
-                 ipv4_vrrps: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ServiceLanVpnInterfaceEthernetProfileParcelIpv4VrrpArgs']]]]] = None,
+                 ipv4_vrrps: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetProfileParcelIpv4VrrpArgs', 'ServiceLanVpnInterfaceEthernetProfileParcelIpv4VrrpArgsDict']]]]] = None,
                  ipv6_address: Optional[pulumi.Input[str]] = None,
                  ipv6_address_variable: Optional[pulumi.Input[str]] = None,
-                 ipv6_dhcp_helpers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ServiceLanVpnInterfaceEthernetProfileParcelIpv6DhcpHelperArgs']]]]] = None,
-                 ipv6_dhcp_secondary_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ServiceLanVpnInterfaceEthernetProfileParcelIpv6DhcpSecondaryAddressArgs']]]]] = None,
+                 ipv6_dhcp_helpers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetProfileParcelIpv6DhcpHelperArgs', 'ServiceLanVpnInterfaceEthernetProfileParcelIpv6DhcpHelperArgsDict']]]]] = None,
+                 ipv6_dhcp_secondary_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetProfileParcelIpv6DhcpSecondaryAddressArgs', 'ServiceLanVpnInterfaceEthernetProfileParcelIpv6DhcpSecondaryAddressArgsDict']]]]] = None,
                  ipv6_nat: Optional[pulumi.Input[bool]] = None,
-                 ipv6_secondary_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ServiceLanVpnInterfaceEthernetProfileParcelIpv6SecondaryAddressArgs']]]]] = None,
-                 ipv6_vrrps: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ServiceLanVpnInterfaceEthernetProfileParcelIpv6VrrpArgs']]]]] = None,
+                 ipv6_secondary_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetProfileParcelIpv6SecondaryAddressArgs', 'ServiceLanVpnInterfaceEthernetProfileParcelIpv6SecondaryAddressArgsDict']]]]] = None,
+                 ipv6_vrrps: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetProfileParcelIpv6VrrpArgs', 'ServiceLanVpnInterfaceEthernetProfileParcelIpv6VrrpArgsDict']]]]] = None,
                  load_interval: Optional[pulumi.Input[int]] = None,
                  load_interval_variable: Optional[pulumi.Input[str]] = None,
                  mac_address: Optional[pulumi.Input[str]] = None,
@@ -2944,7 +2944,7 @@ class ServiceLanVpnInterfaceEthernetProfileParcel(pulumi.CustomResource):
                  shutdown_variable: Optional[pulumi.Input[str]] = None,
                  speed: Optional[pulumi.Input[str]] = None,
                  speed_variable: Optional[pulumi.Input[str]] = None,
-                 static_nats: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ServiceLanVpnInterfaceEthernetProfileParcelStaticNatArgs']]]]] = None,
+                 static_nats: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetProfileParcelStaticNatArgs', 'ServiceLanVpnInterfaceEthernetProfileParcelStaticNatArgsDict']]]]] = None,
                  tcp_mss: Optional[pulumi.Input[int]] = None,
                  tcp_mss_variable: Optional[pulumi.Input[str]] = None,
                  tracker: Optional[pulumi.Input[str]] = None,
@@ -2975,7 +2975,7 @@ class ServiceLanVpnInterfaceEthernetProfileParcel(pulumi.CustomResource):
         :param pulumi.Input[str] acl_shaping_rate_variable: Variable name
         :param pulumi.Input[int] arp_timeout: Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
         :param pulumi.Input[str] arp_timeout_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ServiceLanVpnInterfaceEthernetProfileParcelArpArgs']]]] arps: Configure ARP entries
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetProfileParcelArpArgs', 'ServiceLanVpnInterfaceEthernetProfileParcelArpArgsDict']]]] arps: Configure ARP entries
         :param pulumi.Input[bool] autonegotiate: Link autonegotiation
         :param pulumi.Input[str] autonegotiate_variable: Variable name
         :param pulumi.Input[str] config_description_variable: Variable name
@@ -3017,21 +3017,21 @@ class ServiceLanVpnInterfaceEthernetProfileParcel(pulumi.CustomResource):
         :param pulumi.Input[str] ipv4_nat_type_variable: Variable name
         :param pulumi.Input[int] ipv4_nat_udp_timeout: Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
         :param pulumi.Input[str] ipv4_nat_udp_timeout_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ServiceLanVpnInterfaceEthernetProfileParcelIpv4SecondaryAddressArgs']]]] ipv4_secondary_addresses: Secondary IpV4 Addresses
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetProfileParcelIpv4SecondaryAddressArgs', 'ServiceLanVpnInterfaceEthernetProfileParcelIpv4SecondaryAddressArgsDict']]]] ipv4_secondary_addresses: Secondary IpV4 Addresses
         :param pulumi.Input[str] ipv4_subnet_mask: Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
                `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
                `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
                `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
                `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[str] ipv4_subnet_mask_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ServiceLanVpnInterfaceEthernetProfileParcelIpv4VrrpArgs']]]] ipv4_vrrps: Enable VRRP
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetProfileParcelIpv4VrrpArgs', 'ServiceLanVpnInterfaceEthernetProfileParcelIpv4VrrpArgsDict']]]] ipv4_vrrps: Enable VRRP
         :param pulumi.Input[str] ipv6_address: IPv6 Address Secondary
         :param pulumi.Input[str] ipv6_address_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ServiceLanVpnInterfaceEthernetProfileParcelIpv6DhcpHelperArgs']]]] ipv6_dhcp_helpers: DHCPv6 Helper
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ServiceLanVpnInterfaceEthernetProfileParcelIpv6DhcpSecondaryAddressArgs']]]] ipv6_dhcp_secondary_addresses: secondary IPv6 addresses
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetProfileParcelIpv6DhcpHelperArgs', 'ServiceLanVpnInterfaceEthernetProfileParcelIpv6DhcpHelperArgsDict']]]] ipv6_dhcp_helpers: DHCPv6 Helper
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetProfileParcelIpv6DhcpSecondaryAddressArgs', 'ServiceLanVpnInterfaceEthernetProfileParcelIpv6DhcpSecondaryAddressArgsDict']]]] ipv6_dhcp_secondary_addresses: secondary IPv6 addresses
         :param pulumi.Input[bool] ipv6_nat: enable Network Address Translation ipv6 on this interface - Default value: `false`
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ServiceLanVpnInterfaceEthernetProfileParcelIpv6SecondaryAddressArgs']]]] ipv6_secondary_addresses: Static secondary IPv6 addresses
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ServiceLanVpnInterfaceEthernetProfileParcelIpv6VrrpArgs']]]] ipv6_vrrps: Enable VRRP Ipv6
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetProfileParcelIpv6SecondaryAddressArgs', 'ServiceLanVpnInterfaceEthernetProfileParcelIpv6SecondaryAddressArgsDict']]]] ipv6_secondary_addresses: Static secondary IPv6 addresses
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetProfileParcelIpv6VrrpArgs', 'ServiceLanVpnInterfaceEthernetProfileParcelIpv6VrrpArgsDict']]]] ipv6_vrrps: Enable VRRP Ipv6
         :param pulumi.Input[int] load_interval: Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
         :param pulumi.Input[str] load_interval_variable: Variable name
         :param pulumi.Input[str] mac_address: MAC Address
@@ -3045,7 +3045,7 @@ class ServiceLanVpnInterfaceEthernetProfileParcel(pulumi.CustomResource):
         :param pulumi.Input[str] shutdown_variable: Variable name
         :param pulumi.Input[str] speed: Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
         :param pulumi.Input[str] speed_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ServiceLanVpnInterfaceEthernetProfileParcelStaticNatArgs']]]] static_nats: static NAT
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetProfileParcelStaticNatArgs', 'ServiceLanVpnInterfaceEthernetProfileParcelStaticNatArgsDict']]]] static_nats: static NAT
         :param pulumi.Input[int] tcp_mss: TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
         :param pulumi.Input[str] tcp_mss_variable: Variable name
         :param pulumi.Input[str] tracker: Enable tracker for this interface
@@ -3099,7 +3099,7 @@ class ServiceLanVpnInterfaceEthernetProfileParcel(pulumi.CustomResource):
                  acl_shaping_rate_variable: Optional[pulumi.Input[str]] = None,
                  arp_timeout: Optional[pulumi.Input[int]] = None,
                  arp_timeout_variable: Optional[pulumi.Input[str]] = None,
-                 arps: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ServiceLanVpnInterfaceEthernetProfileParcelArpArgs']]]]] = None,
+                 arps: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetProfileParcelArpArgs', 'ServiceLanVpnInterfaceEthernetProfileParcelArpArgsDict']]]]] = None,
                  autonegotiate: Optional[pulumi.Input[bool]] = None,
                  autonegotiate_variable: Optional[pulumi.Input[str]] = None,
                  config_description: Optional[pulumi.Input[str]] = None,
@@ -3142,17 +3142,17 @@ class ServiceLanVpnInterfaceEthernetProfileParcel(pulumi.CustomResource):
                  ipv4_nat_type_variable: Optional[pulumi.Input[str]] = None,
                  ipv4_nat_udp_timeout: Optional[pulumi.Input[int]] = None,
                  ipv4_nat_udp_timeout_variable: Optional[pulumi.Input[str]] = None,
-                 ipv4_secondary_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ServiceLanVpnInterfaceEthernetProfileParcelIpv4SecondaryAddressArgs']]]]] = None,
+                 ipv4_secondary_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetProfileParcelIpv4SecondaryAddressArgs', 'ServiceLanVpnInterfaceEthernetProfileParcelIpv4SecondaryAddressArgsDict']]]]] = None,
                  ipv4_subnet_mask: Optional[pulumi.Input[str]] = None,
                  ipv4_subnet_mask_variable: Optional[pulumi.Input[str]] = None,
-                 ipv4_vrrps: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ServiceLanVpnInterfaceEthernetProfileParcelIpv4VrrpArgs']]]]] = None,
+                 ipv4_vrrps: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetProfileParcelIpv4VrrpArgs', 'ServiceLanVpnInterfaceEthernetProfileParcelIpv4VrrpArgsDict']]]]] = None,
                  ipv6_address: Optional[pulumi.Input[str]] = None,
                  ipv6_address_variable: Optional[pulumi.Input[str]] = None,
-                 ipv6_dhcp_helpers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ServiceLanVpnInterfaceEthernetProfileParcelIpv6DhcpHelperArgs']]]]] = None,
-                 ipv6_dhcp_secondary_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ServiceLanVpnInterfaceEthernetProfileParcelIpv6DhcpSecondaryAddressArgs']]]]] = None,
+                 ipv6_dhcp_helpers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetProfileParcelIpv6DhcpHelperArgs', 'ServiceLanVpnInterfaceEthernetProfileParcelIpv6DhcpHelperArgsDict']]]]] = None,
+                 ipv6_dhcp_secondary_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetProfileParcelIpv6DhcpSecondaryAddressArgs', 'ServiceLanVpnInterfaceEthernetProfileParcelIpv6DhcpSecondaryAddressArgsDict']]]]] = None,
                  ipv6_nat: Optional[pulumi.Input[bool]] = None,
-                 ipv6_secondary_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ServiceLanVpnInterfaceEthernetProfileParcelIpv6SecondaryAddressArgs']]]]] = None,
-                 ipv6_vrrps: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ServiceLanVpnInterfaceEthernetProfileParcelIpv6VrrpArgs']]]]] = None,
+                 ipv6_secondary_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetProfileParcelIpv6SecondaryAddressArgs', 'ServiceLanVpnInterfaceEthernetProfileParcelIpv6SecondaryAddressArgsDict']]]]] = None,
+                 ipv6_vrrps: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetProfileParcelIpv6VrrpArgs', 'ServiceLanVpnInterfaceEthernetProfileParcelIpv6VrrpArgsDict']]]]] = None,
                  load_interval: Optional[pulumi.Input[int]] = None,
                  load_interval_variable: Optional[pulumi.Input[str]] = None,
                  mac_address: Optional[pulumi.Input[str]] = None,
@@ -3166,7 +3166,7 @@ class ServiceLanVpnInterfaceEthernetProfileParcel(pulumi.CustomResource):
                  shutdown_variable: Optional[pulumi.Input[str]] = None,
                  speed: Optional[pulumi.Input[str]] = None,
                  speed_variable: Optional[pulumi.Input[str]] = None,
-                 static_nats: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ServiceLanVpnInterfaceEthernetProfileParcelStaticNatArgs']]]]] = None,
+                 static_nats: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetProfileParcelStaticNatArgs', 'ServiceLanVpnInterfaceEthernetProfileParcelStaticNatArgsDict']]]]] = None,
                  tcp_mss: Optional[pulumi.Input[int]] = None,
                  tcp_mss_variable: Optional[pulumi.Input[str]] = None,
                  tracker: Optional[pulumi.Input[str]] = None,
@@ -3299,7 +3299,7 @@ class ServiceLanVpnInterfaceEthernetProfileParcel(pulumi.CustomResource):
             acl_shaping_rate_variable: Optional[pulumi.Input[str]] = None,
             arp_timeout: Optional[pulumi.Input[int]] = None,
             arp_timeout_variable: Optional[pulumi.Input[str]] = None,
-            arps: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ServiceLanVpnInterfaceEthernetProfileParcelArpArgs']]]]] = None,
+            arps: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetProfileParcelArpArgs', 'ServiceLanVpnInterfaceEthernetProfileParcelArpArgsDict']]]]] = None,
             autonegotiate: Optional[pulumi.Input[bool]] = None,
             autonegotiate_variable: Optional[pulumi.Input[str]] = None,
             config_description: Optional[pulumi.Input[str]] = None,
@@ -3342,17 +3342,17 @@ class ServiceLanVpnInterfaceEthernetProfileParcel(pulumi.CustomResource):
             ipv4_nat_type_variable: Optional[pulumi.Input[str]] = None,
             ipv4_nat_udp_timeout: Optional[pulumi.Input[int]] = None,
             ipv4_nat_udp_timeout_variable: Optional[pulumi.Input[str]] = None,
-            ipv4_secondary_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ServiceLanVpnInterfaceEthernetProfileParcelIpv4SecondaryAddressArgs']]]]] = None,
+            ipv4_secondary_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetProfileParcelIpv4SecondaryAddressArgs', 'ServiceLanVpnInterfaceEthernetProfileParcelIpv4SecondaryAddressArgsDict']]]]] = None,
             ipv4_subnet_mask: Optional[pulumi.Input[str]] = None,
             ipv4_subnet_mask_variable: Optional[pulumi.Input[str]] = None,
-            ipv4_vrrps: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ServiceLanVpnInterfaceEthernetProfileParcelIpv4VrrpArgs']]]]] = None,
+            ipv4_vrrps: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetProfileParcelIpv4VrrpArgs', 'ServiceLanVpnInterfaceEthernetProfileParcelIpv4VrrpArgsDict']]]]] = None,
             ipv6_address: Optional[pulumi.Input[str]] = None,
             ipv6_address_variable: Optional[pulumi.Input[str]] = None,
-            ipv6_dhcp_helpers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ServiceLanVpnInterfaceEthernetProfileParcelIpv6DhcpHelperArgs']]]]] = None,
-            ipv6_dhcp_secondary_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ServiceLanVpnInterfaceEthernetProfileParcelIpv6DhcpSecondaryAddressArgs']]]]] = None,
+            ipv6_dhcp_helpers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetProfileParcelIpv6DhcpHelperArgs', 'ServiceLanVpnInterfaceEthernetProfileParcelIpv6DhcpHelperArgsDict']]]]] = None,
+            ipv6_dhcp_secondary_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetProfileParcelIpv6DhcpSecondaryAddressArgs', 'ServiceLanVpnInterfaceEthernetProfileParcelIpv6DhcpSecondaryAddressArgsDict']]]]] = None,
             ipv6_nat: Optional[pulumi.Input[bool]] = None,
-            ipv6_secondary_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ServiceLanVpnInterfaceEthernetProfileParcelIpv6SecondaryAddressArgs']]]]] = None,
-            ipv6_vrrps: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ServiceLanVpnInterfaceEthernetProfileParcelIpv6VrrpArgs']]]]] = None,
+            ipv6_secondary_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetProfileParcelIpv6SecondaryAddressArgs', 'ServiceLanVpnInterfaceEthernetProfileParcelIpv6SecondaryAddressArgsDict']]]]] = None,
+            ipv6_vrrps: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetProfileParcelIpv6VrrpArgs', 'ServiceLanVpnInterfaceEthernetProfileParcelIpv6VrrpArgsDict']]]]] = None,
             load_interval: Optional[pulumi.Input[int]] = None,
             load_interval_variable: Optional[pulumi.Input[str]] = None,
             mac_address: Optional[pulumi.Input[str]] = None,
@@ -3366,7 +3366,7 @@ class ServiceLanVpnInterfaceEthernetProfileParcel(pulumi.CustomResource):
             shutdown_variable: Optional[pulumi.Input[str]] = None,
             speed: Optional[pulumi.Input[str]] = None,
             speed_variable: Optional[pulumi.Input[str]] = None,
-            static_nats: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ServiceLanVpnInterfaceEthernetProfileParcelStaticNatArgs']]]]] = None,
+            static_nats: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetProfileParcelStaticNatArgs', 'ServiceLanVpnInterfaceEthernetProfileParcelStaticNatArgsDict']]]]] = None,
             tcp_mss: Optional[pulumi.Input[int]] = None,
             tcp_mss_variable: Optional[pulumi.Input[str]] = None,
             tracker: Optional[pulumi.Input[str]] = None,
@@ -3392,7 +3392,7 @@ class ServiceLanVpnInterfaceEthernetProfileParcel(pulumi.CustomResource):
         :param pulumi.Input[str] acl_shaping_rate_variable: Variable name
         :param pulumi.Input[int] arp_timeout: Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
         :param pulumi.Input[str] arp_timeout_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ServiceLanVpnInterfaceEthernetProfileParcelArpArgs']]]] arps: Configure ARP entries
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetProfileParcelArpArgs', 'ServiceLanVpnInterfaceEthernetProfileParcelArpArgsDict']]]] arps: Configure ARP entries
         :param pulumi.Input[bool] autonegotiate: Link autonegotiation
         :param pulumi.Input[str] autonegotiate_variable: Variable name
         :param pulumi.Input[str] config_description_variable: Variable name
@@ -3434,21 +3434,21 @@ class ServiceLanVpnInterfaceEthernetProfileParcel(pulumi.CustomResource):
         :param pulumi.Input[str] ipv4_nat_type_variable: Variable name
         :param pulumi.Input[int] ipv4_nat_udp_timeout: Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
         :param pulumi.Input[str] ipv4_nat_udp_timeout_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ServiceLanVpnInterfaceEthernetProfileParcelIpv4SecondaryAddressArgs']]]] ipv4_secondary_addresses: Secondary IpV4 Addresses
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetProfileParcelIpv4SecondaryAddressArgs', 'ServiceLanVpnInterfaceEthernetProfileParcelIpv4SecondaryAddressArgsDict']]]] ipv4_secondary_addresses: Secondary IpV4 Addresses
         :param pulumi.Input[str] ipv4_subnet_mask: Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
                `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
                `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
                `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
                `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[str] ipv4_subnet_mask_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ServiceLanVpnInterfaceEthernetProfileParcelIpv4VrrpArgs']]]] ipv4_vrrps: Enable VRRP
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetProfileParcelIpv4VrrpArgs', 'ServiceLanVpnInterfaceEthernetProfileParcelIpv4VrrpArgsDict']]]] ipv4_vrrps: Enable VRRP
         :param pulumi.Input[str] ipv6_address: IPv6 Address Secondary
         :param pulumi.Input[str] ipv6_address_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ServiceLanVpnInterfaceEthernetProfileParcelIpv6DhcpHelperArgs']]]] ipv6_dhcp_helpers: DHCPv6 Helper
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ServiceLanVpnInterfaceEthernetProfileParcelIpv6DhcpSecondaryAddressArgs']]]] ipv6_dhcp_secondary_addresses: secondary IPv6 addresses
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetProfileParcelIpv6DhcpHelperArgs', 'ServiceLanVpnInterfaceEthernetProfileParcelIpv6DhcpHelperArgsDict']]]] ipv6_dhcp_helpers: DHCPv6 Helper
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetProfileParcelIpv6DhcpSecondaryAddressArgs', 'ServiceLanVpnInterfaceEthernetProfileParcelIpv6DhcpSecondaryAddressArgsDict']]]] ipv6_dhcp_secondary_addresses: secondary IPv6 addresses
         :param pulumi.Input[bool] ipv6_nat: enable Network Address Translation ipv6 on this interface - Default value: `false`
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ServiceLanVpnInterfaceEthernetProfileParcelIpv6SecondaryAddressArgs']]]] ipv6_secondary_addresses: Static secondary IPv6 addresses
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ServiceLanVpnInterfaceEthernetProfileParcelIpv6VrrpArgs']]]] ipv6_vrrps: Enable VRRP Ipv6
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetProfileParcelIpv6SecondaryAddressArgs', 'ServiceLanVpnInterfaceEthernetProfileParcelIpv6SecondaryAddressArgsDict']]]] ipv6_secondary_addresses: Static secondary IPv6 addresses
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetProfileParcelIpv6VrrpArgs', 'ServiceLanVpnInterfaceEthernetProfileParcelIpv6VrrpArgsDict']]]] ipv6_vrrps: Enable VRRP Ipv6
         :param pulumi.Input[int] load_interval: Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
         :param pulumi.Input[str] load_interval_variable: Variable name
         :param pulumi.Input[str] mac_address: MAC Address
@@ -3462,7 +3462,7 @@ class ServiceLanVpnInterfaceEthernetProfileParcel(pulumi.CustomResource):
         :param pulumi.Input[str] shutdown_variable: Variable name
         :param pulumi.Input[str] speed: Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
         :param pulumi.Input[str] speed_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ServiceLanVpnInterfaceEthernetProfileParcelStaticNatArgs']]]] static_nats: static NAT
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetProfileParcelStaticNatArgs', 'ServiceLanVpnInterfaceEthernetProfileParcelStaticNatArgsDict']]]] static_nats: static NAT
         :param pulumi.Input[int] tcp_mss: TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
         :param pulumi.Input[str] tcp_mss_variable: Variable name
         :param pulumi.Input[str] tracker: Enable tracker for this interface

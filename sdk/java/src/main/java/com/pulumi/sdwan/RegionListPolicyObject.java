@@ -114,7 +114,7 @@ public class RegionListPolicyObject extends com.pulumi.resources.CustomResource 
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public RegionListPolicyObject(String name) {
+    public RegionListPolicyObject(java.lang.String name) {
         this(name, RegionListPolicyObjectArgs.Empty);
     }
     /**
@@ -122,7 +122,7 @@ public class RegionListPolicyObject extends com.pulumi.resources.CustomResource 
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public RegionListPolicyObject(String name, RegionListPolicyObjectArgs args) {
+    public RegionListPolicyObject(java.lang.String name, RegionListPolicyObjectArgs args) {
         this(name, args, null);
     }
     /**
@@ -131,15 +131,22 @@ public class RegionListPolicyObject extends com.pulumi.resources.CustomResource 
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public RegionListPolicyObject(String name, RegionListPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/regionListPolicyObject:RegionListPolicyObject", name, args == null ? RegionListPolicyObjectArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public RegionListPolicyObject(java.lang.String name, RegionListPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/regionListPolicyObject:RegionListPolicyObject", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private RegionListPolicyObject(String name, Output<String> id, @Nullable RegionListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/regionListPolicyObject:RegionListPolicyObject", name, state, makeResourceOptions(options, id));
+    private RegionListPolicyObject(java.lang.String name, Output<java.lang.String> id, @Nullable RegionListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/regionListPolicyObject:RegionListPolicyObject", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static RegionListPolicyObjectArgs makeArgs(RegionListPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? RegionListPolicyObjectArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -155,7 +162,7 @@ public class RegionListPolicyObject extends com.pulumi.resources.CustomResource 
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RegionListPolicyObject get(String name, Output<String> id, @Nullable RegionListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static RegionListPolicyObject get(java.lang.String name, Output<java.lang.String> id, @Nullable RegionListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new RegionListPolicyObject(name, id, state, options);
     }
 }

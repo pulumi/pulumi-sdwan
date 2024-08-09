@@ -60,7 +60,7 @@ public class AttachFeatureDeviceTemplate extends com.pulumi.resources.CustomReso
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public AttachFeatureDeviceTemplate(String name) {
+    public AttachFeatureDeviceTemplate(java.lang.String name) {
         this(name, AttachFeatureDeviceTemplateArgs.Empty);
     }
     /**
@@ -68,7 +68,7 @@ public class AttachFeatureDeviceTemplate extends com.pulumi.resources.CustomReso
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AttachFeatureDeviceTemplate(String name, AttachFeatureDeviceTemplateArgs args) {
+    public AttachFeatureDeviceTemplate(java.lang.String name, AttachFeatureDeviceTemplateArgs args) {
         this(name, args, null);
     }
     /**
@@ -77,15 +77,22 @@ public class AttachFeatureDeviceTemplate extends com.pulumi.resources.CustomReso
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AttachFeatureDeviceTemplate(String name, AttachFeatureDeviceTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/attachFeatureDeviceTemplate:AttachFeatureDeviceTemplate", name, args == null ? AttachFeatureDeviceTemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public AttachFeatureDeviceTemplate(java.lang.String name, AttachFeatureDeviceTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/attachFeatureDeviceTemplate:AttachFeatureDeviceTemplate", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private AttachFeatureDeviceTemplate(String name, Output<String> id, @Nullable AttachFeatureDeviceTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/attachFeatureDeviceTemplate:AttachFeatureDeviceTemplate", name, state, makeResourceOptions(options, id));
+    private AttachFeatureDeviceTemplate(java.lang.String name, Output<java.lang.String> id, @Nullable AttachFeatureDeviceTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/attachFeatureDeviceTemplate:AttachFeatureDeviceTemplate", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static AttachFeatureDeviceTemplateArgs makeArgs(AttachFeatureDeviceTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? AttachFeatureDeviceTemplateArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -101,7 +108,7 @@ public class AttachFeatureDeviceTemplate extends com.pulumi.resources.CustomReso
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AttachFeatureDeviceTemplate get(String name, Output<String> id, @Nullable AttachFeatureDeviceTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AttachFeatureDeviceTemplate get(java.lang.String name, Output<java.lang.String> id, @Nullable AttachFeatureDeviceTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new AttachFeatureDeviceTemplate(name, id, state, options);
     }
 }

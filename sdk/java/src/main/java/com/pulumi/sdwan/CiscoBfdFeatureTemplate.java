@@ -257,7 +257,7 @@ public class CiscoBfdFeatureTemplate extends com.pulumi.resources.CustomResource
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public CiscoBfdFeatureTemplate(String name) {
+    public CiscoBfdFeatureTemplate(java.lang.String name) {
         this(name, CiscoBfdFeatureTemplateArgs.Empty);
     }
     /**
@@ -265,7 +265,7 @@ public class CiscoBfdFeatureTemplate extends com.pulumi.resources.CustomResource
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public CiscoBfdFeatureTemplate(String name, CiscoBfdFeatureTemplateArgs args) {
+    public CiscoBfdFeatureTemplate(java.lang.String name, CiscoBfdFeatureTemplateArgs args) {
         this(name, args, null);
     }
     /**
@@ -274,15 +274,22 @@ public class CiscoBfdFeatureTemplate extends com.pulumi.resources.CustomResource
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public CiscoBfdFeatureTemplate(String name, CiscoBfdFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/ciscoBfdFeatureTemplate:CiscoBfdFeatureTemplate", name, args == null ? CiscoBfdFeatureTemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public CiscoBfdFeatureTemplate(java.lang.String name, CiscoBfdFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/ciscoBfdFeatureTemplate:CiscoBfdFeatureTemplate", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private CiscoBfdFeatureTemplate(String name, Output<String> id, @Nullable CiscoBfdFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/ciscoBfdFeatureTemplate:CiscoBfdFeatureTemplate", name, state, makeResourceOptions(options, id));
+    private CiscoBfdFeatureTemplate(java.lang.String name, Output<java.lang.String> id, @Nullable CiscoBfdFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/ciscoBfdFeatureTemplate:CiscoBfdFeatureTemplate", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static CiscoBfdFeatureTemplateArgs makeArgs(CiscoBfdFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? CiscoBfdFeatureTemplateArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -298,7 +305,7 @@ public class CiscoBfdFeatureTemplate extends com.pulumi.resources.CustomResource
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CiscoBfdFeatureTemplate get(String name, Output<String> id, @Nullable CiscoBfdFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static CiscoBfdFeatureTemplate get(java.lang.String name, Output<java.lang.String> id, @Nullable CiscoBfdFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new CiscoBfdFeatureTemplate(name, id, state, options);
     }
 }

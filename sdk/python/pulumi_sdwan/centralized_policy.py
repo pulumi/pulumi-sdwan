@@ -145,7 +145,7 @@ class CentralizedPolicy(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 definitions: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CentralizedPolicyDefinitionArgs']]]]] = None,
+                 definitions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CentralizedPolicyDefinitionArgs', 'CentralizedPolicyDefinitionArgsDict']]]]] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  __props__=None):
@@ -161,15 +161,15 @@ class CentralizedPolicy(pulumi.CustomResource):
         example = sdwan.CentralizedPolicy("example",
             name="Example",
             description="My description",
-            definitions=[sdwan.CentralizedPolicyDefinitionArgs(
-                id="2081c2f4-3f9f-4fee-8078-dcc8904e368d",
-                type="data",
-                entries=[sdwan.CentralizedPolicyDefinitionEntryArgs(
-                    site_list_ids=["2081c2f4-3f9f-4fee-8078-dcc8904e368d"],
-                    vpn_list_ids=["7d0c2444-8743-4414-add0-866945ea9f70"],
-                    direction="service",
-                )],
-            )])
+            definitions=[{
+                "id": "2081c2f4-3f9f-4fee-8078-dcc8904e368d",
+                "type": "data",
+                "entries": [{
+                    "site_list_ids": ["2081c2f4-3f9f-4fee-8078-dcc8904e368d"],
+                    "vpn_list_ids": ["7d0c2444-8743-4414-add0-866945ea9f70"],
+                    "direction": "service",
+                }],
+            }])
         ```
 
         ## Import
@@ -180,7 +180,7 @@ class CentralizedPolicy(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CentralizedPolicyDefinitionArgs']]]] definitions: List of policy definitions
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CentralizedPolicyDefinitionArgs', 'CentralizedPolicyDefinitionArgsDict']]]] definitions: List of policy definitions
         :param pulumi.Input[str] description: The description of the centralized policy
         :param pulumi.Input[str] name: The name of the centralized policy
         """
@@ -202,15 +202,15 @@ class CentralizedPolicy(pulumi.CustomResource):
         example = sdwan.CentralizedPolicy("example",
             name="Example",
             description="My description",
-            definitions=[sdwan.CentralizedPolicyDefinitionArgs(
-                id="2081c2f4-3f9f-4fee-8078-dcc8904e368d",
-                type="data",
-                entries=[sdwan.CentralizedPolicyDefinitionEntryArgs(
-                    site_list_ids=["2081c2f4-3f9f-4fee-8078-dcc8904e368d"],
-                    vpn_list_ids=["7d0c2444-8743-4414-add0-866945ea9f70"],
-                    direction="service",
-                )],
-            )])
+            definitions=[{
+                "id": "2081c2f4-3f9f-4fee-8078-dcc8904e368d",
+                "type": "data",
+                "entries": [{
+                    "site_list_ids": ["2081c2f4-3f9f-4fee-8078-dcc8904e368d"],
+                    "vpn_list_ids": ["7d0c2444-8743-4414-add0-866945ea9f70"],
+                    "direction": "service",
+                }],
+            }])
         ```
 
         ## Import
@@ -234,7 +234,7 @@ class CentralizedPolicy(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 definitions: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CentralizedPolicyDefinitionArgs']]]]] = None,
+                 definitions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CentralizedPolicyDefinitionArgs', 'CentralizedPolicyDefinitionArgsDict']]]]] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  __props__=None):
@@ -262,7 +262,7 @@ class CentralizedPolicy(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            definitions: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CentralizedPolicyDefinitionArgs']]]]] = None,
+            definitions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CentralizedPolicyDefinitionArgs', 'CentralizedPolicyDefinitionArgsDict']]]]] = None,
             description: Optional[pulumi.Input[str]] = None,
             name: Optional[pulumi.Input[str]] = None,
             version: Optional[pulumi.Input[int]] = None) -> 'CentralizedPolicy':
@@ -273,7 +273,7 @@ class CentralizedPolicy(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CentralizedPolicyDefinitionArgs']]]] definitions: List of policy definitions
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CentralizedPolicyDefinitionArgs', 'CentralizedPolicyDefinitionArgsDict']]]] definitions: List of policy definitions
         :param pulumi.Input[str] description: The description of the centralized policy
         :param pulumi.Input[str] name: The name of the centralized policy
         :param pulumi.Input[int] version: The version of the object

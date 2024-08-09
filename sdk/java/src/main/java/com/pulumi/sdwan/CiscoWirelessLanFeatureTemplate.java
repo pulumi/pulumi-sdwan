@@ -417,7 +417,7 @@ public class CiscoWirelessLanFeatureTemplate extends com.pulumi.resources.Custom
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public CiscoWirelessLanFeatureTemplate(String name) {
+    public CiscoWirelessLanFeatureTemplate(java.lang.String name) {
         this(name, CiscoWirelessLanFeatureTemplateArgs.Empty);
     }
     /**
@@ -425,7 +425,7 @@ public class CiscoWirelessLanFeatureTemplate extends com.pulumi.resources.Custom
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public CiscoWirelessLanFeatureTemplate(String name, CiscoWirelessLanFeatureTemplateArgs args) {
+    public CiscoWirelessLanFeatureTemplate(java.lang.String name, CiscoWirelessLanFeatureTemplateArgs args) {
         this(name, args, null);
     }
     /**
@@ -434,15 +434,22 @@ public class CiscoWirelessLanFeatureTemplate extends com.pulumi.resources.Custom
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public CiscoWirelessLanFeatureTemplate(String name, CiscoWirelessLanFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/ciscoWirelessLanFeatureTemplate:CiscoWirelessLanFeatureTemplate", name, args == null ? CiscoWirelessLanFeatureTemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public CiscoWirelessLanFeatureTemplate(java.lang.String name, CiscoWirelessLanFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/ciscoWirelessLanFeatureTemplate:CiscoWirelessLanFeatureTemplate", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private CiscoWirelessLanFeatureTemplate(String name, Output<String> id, @Nullable CiscoWirelessLanFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/ciscoWirelessLanFeatureTemplate:CiscoWirelessLanFeatureTemplate", name, state, makeResourceOptions(options, id));
+    private CiscoWirelessLanFeatureTemplate(java.lang.String name, Output<java.lang.String> id, @Nullable CiscoWirelessLanFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/ciscoWirelessLanFeatureTemplate:CiscoWirelessLanFeatureTemplate", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static CiscoWirelessLanFeatureTemplateArgs makeArgs(CiscoWirelessLanFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? CiscoWirelessLanFeatureTemplateArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -458,7 +465,7 @@ public class CiscoWirelessLanFeatureTemplate extends com.pulumi.resources.Custom
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CiscoWirelessLanFeatureTemplate get(String name, Output<String> id, @Nullable CiscoWirelessLanFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static CiscoWirelessLanFeatureTemplate get(java.lang.String name, Output<java.lang.String> id, @Nullable CiscoWirelessLanFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new CiscoWirelessLanFeatureTemplate(name, id, state, options);
     }
 }

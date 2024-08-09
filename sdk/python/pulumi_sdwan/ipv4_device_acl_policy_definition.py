@@ -195,7 +195,7 @@ class Ipv4DeviceAclPolicyDefinition(pulumi.CustomResource):
                  default_action: Optional[pulumi.Input[str]] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 sequences: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['Ipv4DeviceAclPolicyDefinitionSequenceArgs']]]]] = None,
+                 sequences: Optional[pulumi.Input[Sequence[pulumi.Input[Union['Ipv4DeviceAclPolicyDefinitionSequenceArgs', 'Ipv4DeviceAclPolicyDefinitionSequenceArgsDict']]]]] = None,
                  __props__=None):
         """
         This resource can manage a IPv4 Device ACL Policy Definition .
@@ -211,7 +211,7 @@ class Ipv4DeviceAclPolicyDefinition(pulumi.CustomResource):
         :param pulumi.Input[str] default_action: Default action, either `accept` or `drop` - Choices: `accept`, `drop`
         :param pulumi.Input[str] description: The description of the policy definition
         :param pulumi.Input[str] name: The name of the policy definition
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['Ipv4DeviceAclPolicyDefinitionSequenceArgs']]]] sequences: List of ACL sequences
+        :param pulumi.Input[Sequence[pulumi.Input[Union['Ipv4DeviceAclPolicyDefinitionSequenceArgs', 'Ipv4DeviceAclPolicyDefinitionSequenceArgsDict']]]] sequences: List of ACL sequences
         """
         ...
     @overload
@@ -246,7 +246,7 @@ class Ipv4DeviceAclPolicyDefinition(pulumi.CustomResource):
                  default_action: Optional[pulumi.Input[str]] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 sequences: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['Ipv4DeviceAclPolicyDefinitionSequenceArgs']]]]] = None,
+                 sequences: Optional[pulumi.Input[Sequence[pulumi.Input[Union['Ipv4DeviceAclPolicyDefinitionSequenceArgs', 'Ipv4DeviceAclPolicyDefinitionSequenceArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -279,7 +279,7 @@ class Ipv4DeviceAclPolicyDefinition(pulumi.CustomResource):
             default_action: Optional[pulumi.Input[str]] = None,
             description: Optional[pulumi.Input[str]] = None,
             name: Optional[pulumi.Input[str]] = None,
-            sequences: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['Ipv4DeviceAclPolicyDefinitionSequenceArgs']]]]] = None,
+            sequences: Optional[pulumi.Input[Sequence[pulumi.Input[Union['Ipv4DeviceAclPolicyDefinitionSequenceArgs', 'Ipv4DeviceAclPolicyDefinitionSequenceArgsDict']]]]] = None,
             type: Optional[pulumi.Input[str]] = None,
             version: Optional[pulumi.Input[int]] = None) -> 'Ipv4DeviceAclPolicyDefinition':
         """
@@ -292,7 +292,7 @@ class Ipv4DeviceAclPolicyDefinition(pulumi.CustomResource):
         :param pulumi.Input[str] default_action: Default action, either `accept` or `drop` - Choices: `accept`, `drop`
         :param pulumi.Input[str] description: The description of the policy definition
         :param pulumi.Input[str] name: The name of the policy definition
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['Ipv4DeviceAclPolicyDefinitionSequenceArgs']]]] sequences: List of ACL sequences
+        :param pulumi.Input[Sequence[pulumi.Input[Union['Ipv4DeviceAclPolicyDefinitionSequenceArgs', 'Ipv4DeviceAclPolicyDefinitionSequenceArgsDict']]]] sequences: List of ACL sequences
         :param pulumi.Input[str] type: Type
         :param pulumi.Input[int] version: The version of the object
         """

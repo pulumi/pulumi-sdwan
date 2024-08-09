@@ -339,7 +339,7 @@ class FeatureDeviceTemplate(pulumi.CustomResource):
                  description: Optional[pulumi.Input[str]] = None,
                  device_role: Optional[pulumi.Input[str]] = None,
                  device_type: Optional[pulumi.Input[str]] = None,
-                 general_templates: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['FeatureDeviceTemplateGeneralTemplateArgs']]]]] = None,
+                 general_templates: Optional[pulumi.Input[Sequence[pulumi.Input[Union['FeatureDeviceTemplateGeneralTemplateArgs', 'FeatureDeviceTemplateGeneralTemplateArgsDict']]]]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  policy_id: Optional[pulumi.Input[str]] = None,
                  policy_version: Optional[pulumi.Input[int]] = None,
@@ -359,10 +359,10 @@ class FeatureDeviceTemplate(pulumi.CustomResource):
             name="Example",
             description="My description",
             device_type="vedge-ISR-4331",
-            general_templates=[sdwan.FeatureDeviceTemplateGeneralTemplateArgs(
-                id="2081c2f4-3f9f-4fee-8078-dcc8904e368d",
-                type="cisco_system",
-            )])
+            general_templates=[{
+                "id": "2081c2f4-3f9f-4fee-8078-dcc8904e368d",
+                "type": "cisco_system",
+            }])
         ```
 
         ## Import
@@ -376,7 +376,7 @@ class FeatureDeviceTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] description: The description of the device template
         :param pulumi.Input[str] device_role: The device role - Choices: `sdwan-edge`, `service-node`
         :param pulumi.Input[str] device_type: The device type (e.g., `vedge-ISR-4331`)
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['FeatureDeviceTemplateGeneralTemplateArgs']]]] general_templates: List of general templates
+        :param pulumi.Input[Sequence[pulumi.Input[Union['FeatureDeviceTemplateGeneralTemplateArgs', 'FeatureDeviceTemplateGeneralTemplateArgsDict']]]] general_templates: List of general templates
         :param pulumi.Input[str] name: The name of the device template
         :param pulumi.Input[str] policy_id: The policy ID
         :param pulumi.Input[int] policy_version: The policy version
@@ -402,10 +402,10 @@ class FeatureDeviceTemplate(pulumi.CustomResource):
             name="Example",
             description="My description",
             device_type="vedge-ISR-4331",
-            general_templates=[sdwan.FeatureDeviceTemplateGeneralTemplateArgs(
-                id="2081c2f4-3f9f-4fee-8078-dcc8904e368d",
-                type="cisco_system",
-            )])
+            general_templates=[{
+                "id": "2081c2f4-3f9f-4fee-8078-dcc8904e368d",
+                "type": "cisco_system",
+            }])
         ```
 
         ## Import
@@ -432,7 +432,7 @@ class FeatureDeviceTemplate(pulumi.CustomResource):
                  description: Optional[pulumi.Input[str]] = None,
                  device_role: Optional[pulumi.Input[str]] = None,
                  device_type: Optional[pulumi.Input[str]] = None,
-                 general_templates: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['FeatureDeviceTemplateGeneralTemplateArgs']]]]] = None,
+                 general_templates: Optional[pulumi.Input[Sequence[pulumi.Input[Union['FeatureDeviceTemplateGeneralTemplateArgs', 'FeatureDeviceTemplateGeneralTemplateArgsDict']]]]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  policy_id: Optional[pulumi.Input[str]] = None,
                  policy_version: Optional[pulumi.Input[int]] = None,
@@ -474,7 +474,7 @@ class FeatureDeviceTemplate(pulumi.CustomResource):
             description: Optional[pulumi.Input[str]] = None,
             device_role: Optional[pulumi.Input[str]] = None,
             device_type: Optional[pulumi.Input[str]] = None,
-            general_templates: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['FeatureDeviceTemplateGeneralTemplateArgs']]]]] = None,
+            general_templates: Optional[pulumi.Input[Sequence[pulumi.Input[Union['FeatureDeviceTemplateGeneralTemplateArgs', 'FeatureDeviceTemplateGeneralTemplateArgsDict']]]]] = None,
             name: Optional[pulumi.Input[str]] = None,
             policy_id: Optional[pulumi.Input[str]] = None,
             policy_version: Optional[pulumi.Input[int]] = None,
@@ -491,7 +491,7 @@ class FeatureDeviceTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] description: The description of the device template
         :param pulumi.Input[str] device_role: The device role - Choices: `sdwan-edge`, `service-node`
         :param pulumi.Input[str] device_type: The device type (e.g., `vedge-ISR-4331`)
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['FeatureDeviceTemplateGeneralTemplateArgs']]]] general_templates: List of general templates
+        :param pulumi.Input[Sequence[pulumi.Input[Union['FeatureDeviceTemplateGeneralTemplateArgs', 'FeatureDeviceTemplateGeneralTemplateArgsDict']]]] general_templates: List of general templates
         :param pulumi.Input[str] name: The name of the device template
         :param pulumi.Input[str] policy_id: The policy ID
         :param pulumi.Input[int] policy_version: The policy version

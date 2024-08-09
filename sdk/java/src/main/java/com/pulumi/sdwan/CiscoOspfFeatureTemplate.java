@@ -611,7 +611,7 @@ public class CiscoOspfFeatureTemplate extends com.pulumi.resources.CustomResourc
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public CiscoOspfFeatureTemplate(String name) {
+    public CiscoOspfFeatureTemplate(java.lang.String name) {
         this(name, CiscoOspfFeatureTemplateArgs.Empty);
     }
     /**
@@ -619,7 +619,7 @@ public class CiscoOspfFeatureTemplate extends com.pulumi.resources.CustomResourc
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public CiscoOspfFeatureTemplate(String name, CiscoOspfFeatureTemplateArgs args) {
+    public CiscoOspfFeatureTemplate(java.lang.String name, CiscoOspfFeatureTemplateArgs args) {
         this(name, args, null);
     }
     /**
@@ -628,15 +628,22 @@ public class CiscoOspfFeatureTemplate extends com.pulumi.resources.CustomResourc
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public CiscoOspfFeatureTemplate(String name, CiscoOspfFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/ciscoOspfFeatureTemplate:CiscoOspfFeatureTemplate", name, args == null ? CiscoOspfFeatureTemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public CiscoOspfFeatureTemplate(java.lang.String name, CiscoOspfFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/ciscoOspfFeatureTemplate:CiscoOspfFeatureTemplate", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private CiscoOspfFeatureTemplate(String name, Output<String> id, @Nullable CiscoOspfFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/ciscoOspfFeatureTemplate:CiscoOspfFeatureTemplate", name, state, makeResourceOptions(options, id));
+    private CiscoOspfFeatureTemplate(java.lang.String name, Output<java.lang.String> id, @Nullable CiscoOspfFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/ciscoOspfFeatureTemplate:CiscoOspfFeatureTemplate", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static CiscoOspfFeatureTemplateArgs makeArgs(CiscoOspfFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? CiscoOspfFeatureTemplateArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -652,7 +659,7 @@ public class CiscoOspfFeatureTemplate extends com.pulumi.resources.CustomResourc
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CiscoOspfFeatureTemplate get(String name, Output<String> id, @Nullable CiscoOspfFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static CiscoOspfFeatureTemplate get(java.lang.String name, Output<java.lang.String> id, @Nullable CiscoOspfFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new CiscoOspfFeatureTemplate(name, id, state, options);
     }
 }

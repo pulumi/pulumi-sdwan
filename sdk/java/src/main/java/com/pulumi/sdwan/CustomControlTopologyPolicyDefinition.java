@@ -165,7 +165,7 @@ public class CustomControlTopologyPolicyDefinition extends com.pulumi.resources.
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public CustomControlTopologyPolicyDefinition(String name) {
+    public CustomControlTopologyPolicyDefinition(java.lang.String name) {
         this(name, CustomControlTopologyPolicyDefinitionArgs.Empty);
     }
     /**
@@ -173,7 +173,7 @@ public class CustomControlTopologyPolicyDefinition extends com.pulumi.resources.
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public CustomControlTopologyPolicyDefinition(String name, CustomControlTopologyPolicyDefinitionArgs args) {
+    public CustomControlTopologyPolicyDefinition(java.lang.String name, CustomControlTopologyPolicyDefinitionArgs args) {
         this(name, args, null);
     }
     /**
@@ -182,15 +182,22 @@ public class CustomControlTopologyPolicyDefinition extends com.pulumi.resources.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public CustomControlTopologyPolicyDefinition(String name, CustomControlTopologyPolicyDefinitionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/customControlTopologyPolicyDefinition:CustomControlTopologyPolicyDefinition", name, args == null ? CustomControlTopologyPolicyDefinitionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public CustomControlTopologyPolicyDefinition(java.lang.String name, CustomControlTopologyPolicyDefinitionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/customControlTopologyPolicyDefinition:CustomControlTopologyPolicyDefinition", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private CustomControlTopologyPolicyDefinition(String name, Output<String> id, @Nullable CustomControlTopologyPolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/customControlTopologyPolicyDefinition:CustomControlTopologyPolicyDefinition", name, state, makeResourceOptions(options, id));
+    private CustomControlTopologyPolicyDefinition(java.lang.String name, Output<java.lang.String> id, @Nullable CustomControlTopologyPolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/customControlTopologyPolicyDefinition:CustomControlTopologyPolicyDefinition", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static CustomControlTopologyPolicyDefinitionArgs makeArgs(CustomControlTopologyPolicyDefinitionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? CustomControlTopologyPolicyDefinitionArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -206,7 +213,7 @@ public class CustomControlTopologyPolicyDefinition extends com.pulumi.resources.
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CustomControlTopologyPolicyDefinition get(String name, Output<String> id, @Nullable CustomControlTopologyPolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static CustomControlTopologyPolicyDefinition get(java.lang.String name, Output<java.lang.String> id, @Nullable CustomControlTopologyPolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new CustomControlTopologyPolicyDefinition(name, id, state, options);
     }
 }

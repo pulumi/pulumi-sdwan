@@ -259,7 +259,7 @@ public class DnsSecurityPolicyDefinition extends com.pulumi.resources.CustomReso
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public DnsSecurityPolicyDefinition(String name) {
+    public DnsSecurityPolicyDefinition(java.lang.String name) {
         this(name, DnsSecurityPolicyDefinitionArgs.Empty);
     }
     /**
@@ -267,7 +267,7 @@ public class DnsSecurityPolicyDefinition extends com.pulumi.resources.CustomReso
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public DnsSecurityPolicyDefinition(String name, DnsSecurityPolicyDefinitionArgs args) {
+    public DnsSecurityPolicyDefinition(java.lang.String name, DnsSecurityPolicyDefinitionArgs args) {
         this(name, args, null);
     }
     /**
@@ -276,15 +276,22 @@ public class DnsSecurityPolicyDefinition extends com.pulumi.resources.CustomReso
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public DnsSecurityPolicyDefinition(String name, DnsSecurityPolicyDefinitionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/dnsSecurityPolicyDefinition:DnsSecurityPolicyDefinition", name, args == null ? DnsSecurityPolicyDefinitionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public DnsSecurityPolicyDefinition(java.lang.String name, DnsSecurityPolicyDefinitionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/dnsSecurityPolicyDefinition:DnsSecurityPolicyDefinition", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private DnsSecurityPolicyDefinition(String name, Output<String> id, @Nullable DnsSecurityPolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/dnsSecurityPolicyDefinition:DnsSecurityPolicyDefinition", name, state, makeResourceOptions(options, id));
+    private DnsSecurityPolicyDefinition(java.lang.String name, Output<java.lang.String> id, @Nullable DnsSecurityPolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/dnsSecurityPolicyDefinition:DnsSecurityPolicyDefinition", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static DnsSecurityPolicyDefinitionArgs makeArgs(DnsSecurityPolicyDefinitionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? DnsSecurityPolicyDefinitionArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -300,7 +307,7 @@ public class DnsSecurityPolicyDefinition extends com.pulumi.resources.CustomReso
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DnsSecurityPolicyDefinition get(String name, Output<String> id, @Nullable DnsSecurityPolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static DnsSecurityPolicyDefinition get(java.lang.String name, Output<java.lang.String> id, @Nullable DnsSecurityPolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new DnsSecurityPolicyDefinition(name, id, state, options);
     }
 }

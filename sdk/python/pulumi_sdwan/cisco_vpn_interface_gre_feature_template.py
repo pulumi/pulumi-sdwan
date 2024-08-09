@@ -1100,7 +1100,7 @@ class CiscoVpnInterfaceGreFeatureTemplate(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 access_lists: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoVpnInterfaceGreFeatureTemplateAccessListArgs']]]]] = None,
+                 access_lists: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceGreFeatureTemplateAccessListArgs', 'CiscoVpnInterfaceGreFeatureTemplateAccessListArgsDict']]]]] = None,
                  application: Optional[pulumi.Input[str]] = None,
                  application_variable: Optional[pulumi.Input[str]] = None,
                  clear_dont_fragment: Optional[pulumi.Input[bool]] = None,
@@ -1145,7 +1145,7 @@ class CiscoVpnInterfaceGreFeatureTemplate(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoVpnInterfaceGreFeatureTemplateAccessListArgs']]]] access_lists: Apply ACL
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceGreFeatureTemplateAccessListArgs', 'CiscoVpnInterfaceGreFeatureTemplateAccessListArgsDict']]]] access_lists: Apply ACL
         :param pulumi.Input[str] application: Enable Application Tunnel Type - Choices: `none`, `sig` - Default value: `none`
         :param pulumi.Input[str] application_variable: Variable name
         :param pulumi.Input[bool] clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
@@ -1212,7 +1212,7 @@ class CiscoVpnInterfaceGreFeatureTemplate(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 access_lists: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoVpnInterfaceGreFeatureTemplateAccessListArgs']]]]] = None,
+                 access_lists: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceGreFeatureTemplateAccessListArgs', 'CiscoVpnInterfaceGreFeatureTemplateAccessListArgsDict']]]]] = None,
                  application: Optional[pulumi.Input[str]] = None,
                  application_variable: Optional[pulumi.Input[str]] = None,
                  clear_dont_fragment: Optional[pulumi.Input[bool]] = None,
@@ -1301,7 +1301,7 @@ class CiscoVpnInterfaceGreFeatureTemplate(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            access_lists: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoVpnInterfaceGreFeatureTemplateAccessListArgs']]]]] = None,
+            access_lists: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceGreFeatureTemplateAccessListArgs', 'CiscoVpnInterfaceGreFeatureTemplateAccessListArgsDict']]]]] = None,
             application: Optional[pulumi.Input[str]] = None,
             application_variable: Optional[pulumi.Input[str]] = None,
             clear_dont_fragment: Optional[pulumi.Input[bool]] = None,
@@ -1342,7 +1342,7 @@ class CiscoVpnInterfaceGreFeatureTemplate(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoVpnInterfaceGreFeatureTemplateAccessListArgs']]]] access_lists: Apply ACL
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceGreFeatureTemplateAccessListArgs', 'CiscoVpnInterfaceGreFeatureTemplateAccessListArgsDict']]]] access_lists: Apply ACL
         :param pulumi.Input[str] application: Enable Application Tunnel Type - Choices: `none`, `sig` - Default value: `none`
         :param pulumi.Input[str] application_variable: Variable name
         :param pulumi.Input[bool] clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`

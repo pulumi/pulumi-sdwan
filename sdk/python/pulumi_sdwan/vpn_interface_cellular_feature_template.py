@@ -4842,15 +4842,15 @@ class VpnInterfaceCellularFeatureTemplate(pulumi.CustomResource):
                  ip_directed_broadcast_variable: Optional[pulumi.Input[str]] = None,
                  ip_mtu: Optional[pulumi.Input[int]] = None,
                  ip_mtu_variable: Optional[pulumi.Input[str]] = None,
-                 ipv4_access_lists: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceCellularFeatureTemplateIpv4AccessListArgs']]]]] = None,
+                 ipv4_access_lists: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceCellularFeatureTemplateIpv4AccessListArgs', 'VpnInterfaceCellularFeatureTemplateIpv4AccessListArgsDict']]]]] = None,
                  ipv4_dhcp_helper_variable: Optional[pulumi.Input[str]] = None,
                  ipv4_dhcp_helpers: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-                 ipv6_access_lists: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceCellularFeatureTemplateIpv6AccessListArgs']]]]] = None,
+                 ipv6_access_lists: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceCellularFeatureTemplateIpv6AccessListArgs', 'VpnInterfaceCellularFeatureTemplateIpv6AccessListArgsDict']]]]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  nat: Optional[pulumi.Input[bool]] = None,
                  nat_block_icmp_error: Optional[pulumi.Input[bool]] = None,
                  nat_block_icmp_error_variable: Optional[pulumi.Input[str]] = None,
-                 nat_port_forwards: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceCellularFeatureTemplateNatPortForwardArgs']]]]] = None,
+                 nat_port_forwards: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceCellularFeatureTemplateNatPortForwardArgs', 'VpnInterfaceCellularFeatureTemplateNatPortForwardArgsDict']]]]] = None,
                  nat_refresh_mode: Optional[pulumi.Input[str]] = None,
                  nat_refresh_mode_variable: Optional[pulumi.Input[str]] = None,
                  nat_response_to_ping: Optional[pulumi.Input[bool]] = None,
@@ -4865,7 +4865,7 @@ class VpnInterfaceCellularFeatureTemplate(pulumi.CustomResource):
                  per_tunnel_qos_variable: Optional[pulumi.Input[str]] = None,
                  pmtu_discovery: Optional[pulumi.Input[bool]] = None,
                  pmtu_discovery_variable: Optional[pulumi.Input[str]] = None,
-                 policers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceCellularFeatureTemplatePolicerArgs']]]]] = None,
+                 policers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceCellularFeatureTemplatePolicerArgs', 'VpnInterfaceCellularFeatureTemplatePolicerArgsDict']]]]] = None,
                  qos_adaptive_bandwidth_downstream: Optional[pulumi.Input[int]] = None,
                  qos_adaptive_bandwidth_downstream_variable: Optional[pulumi.Input[str]] = None,
                  qos_adaptive_bandwidth_upstream: Optional[pulumi.Input[int]] = None,
@@ -4890,7 +4890,7 @@ class VpnInterfaceCellularFeatureTemplate(pulumi.CustomResource):
                  shaping_rate_variable: Optional[pulumi.Input[str]] = None,
                  shutdown: Optional[pulumi.Input[bool]] = None,
                  shutdown_variable: Optional[pulumi.Input[str]] = None,
-                 static_arps: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceCellularFeatureTemplateStaticArpArgs']]]]] = None,
+                 static_arps: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceCellularFeatureTemplateStaticArpArgs', 'VpnInterfaceCellularFeatureTemplateStaticArpArgsDict']]]]] = None,
                  static_ingress_qos: Optional[pulumi.Input[int]] = None,
                  static_ingress_qos_variable: Optional[pulumi.Input[str]] = None,
                  tcp_mss: Optional[pulumi.Input[int]] = None,
@@ -4937,7 +4937,7 @@ class VpnInterfaceCellularFeatureTemplate(pulumi.CustomResource):
                  tunnel_interface_color_variable: Optional[pulumi.Input[str]] = None,
                  tunnel_interface_control_connections: Optional[pulumi.Input[bool]] = None,
                  tunnel_interface_control_connections_variable: Optional[pulumi.Input[str]] = None,
-                 tunnel_interface_encapsulations: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArgs']]]]] = None,
+                 tunnel_interface_encapsulations: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArgs', 'VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArgsDict']]]]] = None,
                  tunnel_interface_exclude_controller_group_list_variable: Optional[pulumi.Input[str]] = None,
                  tunnel_interface_exclude_controller_group_lists: Optional[pulumi.Input[Sequence[pulumi.Input[int]]]] = None,
                  tunnel_interface_groups: Optional[pulumi.Input[Sequence[pulumi.Input[int]]]] = None,
@@ -5005,15 +5005,15 @@ class VpnInterfaceCellularFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] ip_directed_broadcast_variable: Variable name
         :param pulumi.Input[int] ip_mtu: Interface MTU <68...1500>, in bytes - Range: `68`-`1500` - Default value: `1428`
         :param pulumi.Input[str] ip_mtu_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceCellularFeatureTemplateIpv4AccessListArgs']]]] ipv4_access_lists: Apply ACL
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceCellularFeatureTemplateIpv4AccessListArgs', 'VpnInterfaceCellularFeatureTemplateIpv4AccessListArgsDict']]]] ipv4_access_lists: Apply ACL
         :param pulumi.Input[str] ipv4_dhcp_helper_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[str]]] ipv4_dhcp_helpers: List of DHCP server addresses
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceCellularFeatureTemplateIpv6AccessListArgs']]]] ipv6_access_lists: Apply IPv6 access list
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceCellularFeatureTemplateIpv6AccessListArgs', 'VpnInterfaceCellularFeatureTemplateIpv6AccessListArgsDict']]]] ipv6_access_lists: Apply IPv6 access list
         :param pulumi.Input[str] name: The name of the feature template
         :param pulumi.Input[bool] nat: Network Address Translation on this interface - Default value: `false`
         :param pulumi.Input[bool] nat_block_icmp_error: Block inbound ICMP error messages - Default value: `true`
         :param pulumi.Input[str] nat_block_icmp_error_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceCellularFeatureTemplateNatPortForwardArgs']]]] nat_port_forwards: Set port-forwarding rules for NAT on this interface
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceCellularFeatureTemplateNatPortForwardArgs', 'VpnInterfaceCellularFeatureTemplateNatPortForwardArgsDict']]]] nat_port_forwards: Set port-forwarding rules for NAT on this interface
         :param pulumi.Input[str] nat_refresh_mode: Set NAT refresh mode - Choices: `outbound`, `bi-directional` - Default value: `outbound`
         :param pulumi.Input[str] nat_refresh_mode_variable: Variable name
         :param pulumi.Input[bool] nat_response_to_ping: Respond to ping requests to NAT interface ip address from the public side - Default value: `false`
@@ -5028,7 +5028,7 @@ class VpnInterfaceCellularFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] per_tunnel_qos_variable: Variable name
         :param pulumi.Input[bool] pmtu_discovery: Path MTU Discovery - Default value: `false`
         :param pulumi.Input[str] pmtu_discovery_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceCellularFeatureTemplatePolicerArgs']]]] policers: Enable policer
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceCellularFeatureTemplatePolicerArgs', 'VpnInterfaceCellularFeatureTemplatePolicerArgsDict']]]] policers: Enable policer
         :param pulumi.Input[int] qos_adaptive_bandwidth_downstream: Adaptive QoS default downstream bandwidth - Range: `8`-`100000000`
         :param pulumi.Input[str] qos_adaptive_bandwidth_downstream_variable: Variable name
         :param pulumi.Input[int] qos_adaptive_bandwidth_upstream: Adaptive QoS default upstream bandwidth - Range: `8`-`100000000`
@@ -5053,7 +5053,7 @@ class VpnInterfaceCellularFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] shaping_rate_variable: Variable name
         :param pulumi.Input[bool] shutdown: Administrative state - Default value: `true`
         :param pulumi.Input[str] shutdown_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceCellularFeatureTemplateStaticArpArgs']]]] static_arps: Configure static ARP entries
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceCellularFeatureTemplateStaticArpArgs', 'VpnInterfaceCellularFeatureTemplateStaticArpArgsDict']]]] static_arps: Configure static ARP entries
         :param pulumi.Input[int] static_ingress_qos: Static ingress QoS for the port - Range: `0`-`7`
         :param pulumi.Input[str] static_ingress_qos_variable: Variable name
         :param pulumi.Input[int] tcp_mss: TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
@@ -5103,7 +5103,7 @@ class VpnInterfaceCellularFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] tunnel_interface_color_variable: Variable name
         :param pulumi.Input[bool] tunnel_interface_control_connections: Allow Control Connection - Default value: `true`
         :param pulumi.Input[str] tunnel_interface_control_connections_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArgs']]]] tunnel_interface_encapsulations: Encapsulation for TLOC
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArgs', 'VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArgsDict']]]] tunnel_interface_encapsulations: Encapsulation for TLOC
         :param pulumi.Input[str] tunnel_interface_exclude_controller_group_list_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[int]]] tunnel_interface_exclude_controller_group_lists: Exclude the following controller groups defined in this list
         :param pulumi.Input[Sequence[pulumi.Input[int]]] tunnel_interface_groups: List of groups
@@ -5188,15 +5188,15 @@ class VpnInterfaceCellularFeatureTemplate(pulumi.CustomResource):
                  ip_directed_broadcast_variable: Optional[pulumi.Input[str]] = None,
                  ip_mtu: Optional[pulumi.Input[int]] = None,
                  ip_mtu_variable: Optional[pulumi.Input[str]] = None,
-                 ipv4_access_lists: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceCellularFeatureTemplateIpv4AccessListArgs']]]]] = None,
+                 ipv4_access_lists: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceCellularFeatureTemplateIpv4AccessListArgs', 'VpnInterfaceCellularFeatureTemplateIpv4AccessListArgsDict']]]]] = None,
                  ipv4_dhcp_helper_variable: Optional[pulumi.Input[str]] = None,
                  ipv4_dhcp_helpers: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-                 ipv6_access_lists: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceCellularFeatureTemplateIpv6AccessListArgs']]]]] = None,
+                 ipv6_access_lists: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceCellularFeatureTemplateIpv6AccessListArgs', 'VpnInterfaceCellularFeatureTemplateIpv6AccessListArgsDict']]]]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  nat: Optional[pulumi.Input[bool]] = None,
                  nat_block_icmp_error: Optional[pulumi.Input[bool]] = None,
                  nat_block_icmp_error_variable: Optional[pulumi.Input[str]] = None,
-                 nat_port_forwards: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceCellularFeatureTemplateNatPortForwardArgs']]]]] = None,
+                 nat_port_forwards: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceCellularFeatureTemplateNatPortForwardArgs', 'VpnInterfaceCellularFeatureTemplateNatPortForwardArgsDict']]]]] = None,
                  nat_refresh_mode: Optional[pulumi.Input[str]] = None,
                  nat_refresh_mode_variable: Optional[pulumi.Input[str]] = None,
                  nat_response_to_ping: Optional[pulumi.Input[bool]] = None,
@@ -5211,7 +5211,7 @@ class VpnInterfaceCellularFeatureTemplate(pulumi.CustomResource):
                  per_tunnel_qos_variable: Optional[pulumi.Input[str]] = None,
                  pmtu_discovery: Optional[pulumi.Input[bool]] = None,
                  pmtu_discovery_variable: Optional[pulumi.Input[str]] = None,
-                 policers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceCellularFeatureTemplatePolicerArgs']]]]] = None,
+                 policers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceCellularFeatureTemplatePolicerArgs', 'VpnInterfaceCellularFeatureTemplatePolicerArgsDict']]]]] = None,
                  qos_adaptive_bandwidth_downstream: Optional[pulumi.Input[int]] = None,
                  qos_adaptive_bandwidth_downstream_variable: Optional[pulumi.Input[str]] = None,
                  qos_adaptive_bandwidth_upstream: Optional[pulumi.Input[int]] = None,
@@ -5236,7 +5236,7 @@ class VpnInterfaceCellularFeatureTemplate(pulumi.CustomResource):
                  shaping_rate_variable: Optional[pulumi.Input[str]] = None,
                  shutdown: Optional[pulumi.Input[bool]] = None,
                  shutdown_variable: Optional[pulumi.Input[str]] = None,
-                 static_arps: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceCellularFeatureTemplateStaticArpArgs']]]]] = None,
+                 static_arps: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceCellularFeatureTemplateStaticArpArgs', 'VpnInterfaceCellularFeatureTemplateStaticArpArgsDict']]]]] = None,
                  static_ingress_qos: Optional[pulumi.Input[int]] = None,
                  static_ingress_qos_variable: Optional[pulumi.Input[str]] = None,
                  tcp_mss: Optional[pulumi.Input[int]] = None,
@@ -5283,7 +5283,7 @@ class VpnInterfaceCellularFeatureTemplate(pulumi.CustomResource):
                  tunnel_interface_color_variable: Optional[pulumi.Input[str]] = None,
                  tunnel_interface_control_connections: Optional[pulumi.Input[bool]] = None,
                  tunnel_interface_control_connections_variable: Optional[pulumi.Input[str]] = None,
-                 tunnel_interface_encapsulations: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArgs']]]]] = None,
+                 tunnel_interface_encapsulations: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArgs', 'VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArgsDict']]]]] = None,
                  tunnel_interface_exclude_controller_group_list_variable: Optional[pulumi.Input[str]] = None,
                  tunnel_interface_exclude_controller_group_lists: Optional[pulumi.Input[Sequence[pulumi.Input[int]]]] = None,
                  tunnel_interface_groups: Optional[pulumi.Input[Sequence[pulumi.Input[int]]]] = None,
@@ -5509,15 +5509,15 @@ class VpnInterfaceCellularFeatureTemplate(pulumi.CustomResource):
             ip_directed_broadcast_variable: Optional[pulumi.Input[str]] = None,
             ip_mtu: Optional[pulumi.Input[int]] = None,
             ip_mtu_variable: Optional[pulumi.Input[str]] = None,
-            ipv4_access_lists: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceCellularFeatureTemplateIpv4AccessListArgs']]]]] = None,
+            ipv4_access_lists: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceCellularFeatureTemplateIpv4AccessListArgs', 'VpnInterfaceCellularFeatureTemplateIpv4AccessListArgsDict']]]]] = None,
             ipv4_dhcp_helper_variable: Optional[pulumi.Input[str]] = None,
             ipv4_dhcp_helpers: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-            ipv6_access_lists: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceCellularFeatureTemplateIpv6AccessListArgs']]]]] = None,
+            ipv6_access_lists: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceCellularFeatureTemplateIpv6AccessListArgs', 'VpnInterfaceCellularFeatureTemplateIpv6AccessListArgsDict']]]]] = None,
             name: Optional[pulumi.Input[str]] = None,
             nat: Optional[pulumi.Input[bool]] = None,
             nat_block_icmp_error: Optional[pulumi.Input[bool]] = None,
             nat_block_icmp_error_variable: Optional[pulumi.Input[str]] = None,
-            nat_port_forwards: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceCellularFeatureTemplateNatPortForwardArgs']]]]] = None,
+            nat_port_forwards: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceCellularFeatureTemplateNatPortForwardArgs', 'VpnInterfaceCellularFeatureTemplateNatPortForwardArgsDict']]]]] = None,
             nat_refresh_mode: Optional[pulumi.Input[str]] = None,
             nat_refresh_mode_variable: Optional[pulumi.Input[str]] = None,
             nat_response_to_ping: Optional[pulumi.Input[bool]] = None,
@@ -5532,7 +5532,7 @@ class VpnInterfaceCellularFeatureTemplate(pulumi.CustomResource):
             per_tunnel_qos_variable: Optional[pulumi.Input[str]] = None,
             pmtu_discovery: Optional[pulumi.Input[bool]] = None,
             pmtu_discovery_variable: Optional[pulumi.Input[str]] = None,
-            policers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceCellularFeatureTemplatePolicerArgs']]]]] = None,
+            policers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceCellularFeatureTemplatePolicerArgs', 'VpnInterfaceCellularFeatureTemplatePolicerArgsDict']]]]] = None,
             qos_adaptive_bandwidth_downstream: Optional[pulumi.Input[int]] = None,
             qos_adaptive_bandwidth_downstream_variable: Optional[pulumi.Input[str]] = None,
             qos_adaptive_bandwidth_upstream: Optional[pulumi.Input[int]] = None,
@@ -5557,7 +5557,7 @@ class VpnInterfaceCellularFeatureTemplate(pulumi.CustomResource):
             shaping_rate_variable: Optional[pulumi.Input[str]] = None,
             shutdown: Optional[pulumi.Input[bool]] = None,
             shutdown_variable: Optional[pulumi.Input[str]] = None,
-            static_arps: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceCellularFeatureTemplateStaticArpArgs']]]]] = None,
+            static_arps: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceCellularFeatureTemplateStaticArpArgs', 'VpnInterfaceCellularFeatureTemplateStaticArpArgsDict']]]]] = None,
             static_ingress_qos: Optional[pulumi.Input[int]] = None,
             static_ingress_qos_variable: Optional[pulumi.Input[str]] = None,
             tcp_mss: Optional[pulumi.Input[int]] = None,
@@ -5605,7 +5605,7 @@ class VpnInterfaceCellularFeatureTemplate(pulumi.CustomResource):
             tunnel_interface_color_variable: Optional[pulumi.Input[str]] = None,
             tunnel_interface_control_connections: Optional[pulumi.Input[bool]] = None,
             tunnel_interface_control_connections_variable: Optional[pulumi.Input[str]] = None,
-            tunnel_interface_encapsulations: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArgs']]]]] = None,
+            tunnel_interface_encapsulations: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArgs', 'VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArgsDict']]]]] = None,
             tunnel_interface_exclude_controller_group_list_variable: Optional[pulumi.Input[str]] = None,
             tunnel_interface_exclude_controller_group_lists: Optional[pulumi.Input[Sequence[pulumi.Input[int]]]] = None,
             tunnel_interface_groups: Optional[pulumi.Input[Sequence[pulumi.Input[int]]]] = None,
@@ -5668,15 +5668,15 @@ class VpnInterfaceCellularFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] ip_directed_broadcast_variable: Variable name
         :param pulumi.Input[int] ip_mtu: Interface MTU <68...1500>, in bytes - Range: `68`-`1500` - Default value: `1428`
         :param pulumi.Input[str] ip_mtu_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceCellularFeatureTemplateIpv4AccessListArgs']]]] ipv4_access_lists: Apply ACL
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceCellularFeatureTemplateIpv4AccessListArgs', 'VpnInterfaceCellularFeatureTemplateIpv4AccessListArgsDict']]]] ipv4_access_lists: Apply ACL
         :param pulumi.Input[str] ipv4_dhcp_helper_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[str]]] ipv4_dhcp_helpers: List of DHCP server addresses
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceCellularFeatureTemplateIpv6AccessListArgs']]]] ipv6_access_lists: Apply IPv6 access list
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceCellularFeatureTemplateIpv6AccessListArgs', 'VpnInterfaceCellularFeatureTemplateIpv6AccessListArgsDict']]]] ipv6_access_lists: Apply IPv6 access list
         :param pulumi.Input[str] name: The name of the feature template
         :param pulumi.Input[bool] nat: Network Address Translation on this interface - Default value: `false`
         :param pulumi.Input[bool] nat_block_icmp_error: Block inbound ICMP error messages - Default value: `true`
         :param pulumi.Input[str] nat_block_icmp_error_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceCellularFeatureTemplateNatPortForwardArgs']]]] nat_port_forwards: Set port-forwarding rules for NAT on this interface
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceCellularFeatureTemplateNatPortForwardArgs', 'VpnInterfaceCellularFeatureTemplateNatPortForwardArgsDict']]]] nat_port_forwards: Set port-forwarding rules for NAT on this interface
         :param pulumi.Input[str] nat_refresh_mode: Set NAT refresh mode - Choices: `outbound`, `bi-directional` - Default value: `outbound`
         :param pulumi.Input[str] nat_refresh_mode_variable: Variable name
         :param pulumi.Input[bool] nat_response_to_ping: Respond to ping requests to NAT interface ip address from the public side - Default value: `false`
@@ -5691,7 +5691,7 @@ class VpnInterfaceCellularFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] per_tunnel_qos_variable: Variable name
         :param pulumi.Input[bool] pmtu_discovery: Path MTU Discovery - Default value: `false`
         :param pulumi.Input[str] pmtu_discovery_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceCellularFeatureTemplatePolicerArgs']]]] policers: Enable policer
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceCellularFeatureTemplatePolicerArgs', 'VpnInterfaceCellularFeatureTemplatePolicerArgsDict']]]] policers: Enable policer
         :param pulumi.Input[int] qos_adaptive_bandwidth_downstream: Adaptive QoS default downstream bandwidth - Range: `8`-`100000000`
         :param pulumi.Input[str] qos_adaptive_bandwidth_downstream_variable: Variable name
         :param pulumi.Input[int] qos_adaptive_bandwidth_upstream: Adaptive QoS default upstream bandwidth - Range: `8`-`100000000`
@@ -5716,7 +5716,7 @@ class VpnInterfaceCellularFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] shaping_rate_variable: Variable name
         :param pulumi.Input[bool] shutdown: Administrative state - Default value: `true`
         :param pulumi.Input[str] shutdown_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceCellularFeatureTemplateStaticArpArgs']]]] static_arps: Configure static ARP entries
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceCellularFeatureTemplateStaticArpArgs', 'VpnInterfaceCellularFeatureTemplateStaticArpArgsDict']]]] static_arps: Configure static ARP entries
         :param pulumi.Input[int] static_ingress_qos: Static ingress QoS for the port - Range: `0`-`7`
         :param pulumi.Input[str] static_ingress_qos_variable: Variable name
         :param pulumi.Input[int] tcp_mss: TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
@@ -5767,7 +5767,7 @@ class VpnInterfaceCellularFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] tunnel_interface_color_variable: Variable name
         :param pulumi.Input[bool] tunnel_interface_control_connections: Allow Control Connection - Default value: `true`
         :param pulumi.Input[str] tunnel_interface_control_connections_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArgs']]]] tunnel_interface_encapsulations: Encapsulation for TLOC
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArgs', 'VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArgsDict']]]] tunnel_interface_encapsulations: Encapsulation for TLOC
         :param pulumi.Input[str] tunnel_interface_exclude_controller_group_list_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[int]]] tunnel_interface_exclude_controller_group_lists: Exclude the following controller groups defined in this list
         :param pulumi.Input[Sequence[pulumi.Input[int]]] tunnel_interface_groups: List of groups

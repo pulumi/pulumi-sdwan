@@ -498,20 +498,20 @@ class SystemSnmpProfileParcel(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 communities: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemSnmpProfileParcelCommunityArgs']]]]] = None,
+                 communities: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpProfileParcelCommunityArgs', 'SystemSnmpProfileParcelCommunityArgsDict']]]]] = None,
                  contact_person: Optional[pulumi.Input[str]] = None,
                  contact_person_variable: Optional[pulumi.Input[str]] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  feature_profile_id: Optional[pulumi.Input[str]] = None,
-                 groups: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemSnmpProfileParcelGroupArgs']]]]] = None,
+                 groups: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpProfileParcelGroupArgs', 'SystemSnmpProfileParcelGroupArgsDict']]]]] = None,
                  location_of_device: Optional[pulumi.Input[str]] = None,
                  location_of_device_variable: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  shutdown: Optional[pulumi.Input[bool]] = None,
                  shutdown_variable: Optional[pulumi.Input[str]] = None,
-                 trap_target_servers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemSnmpProfileParcelTrapTargetServerArgs']]]]] = None,
-                 users: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemSnmpProfileParcelUserArgs']]]]] = None,
-                 views: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemSnmpProfileParcelViewArgs']]]]] = None,
+                 trap_target_servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpProfileParcelTrapTargetServerArgs', 'SystemSnmpProfileParcelTrapTargetServerArgsDict']]]]] = None,
+                 users: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpProfileParcelUserArgs', 'SystemSnmpProfileParcelUserArgsDict']]]]] = None,
+                 views: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpProfileParcelViewArgs', 'SystemSnmpProfileParcelViewArgsDict']]]]] = None,
                  __props__=None):
         """
         This resource can manage a System SNMP profile parcel.
@@ -525,20 +525,20 @@ class SystemSnmpProfileParcel(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemSnmpProfileParcelCommunityArgs']]]] communities: Configure SNMP community
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpProfileParcelCommunityArgs', 'SystemSnmpProfileParcelCommunityArgsDict']]]] communities: Configure SNMP community
         :param pulumi.Input[str] contact_person: Set the contact for this managed node
         :param pulumi.Input[str] contact_person_variable: Variable name
         :param pulumi.Input[str] description: The description of the profile parcel
         :param pulumi.Input[str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemSnmpProfileParcelGroupArgs']]]] groups: Configure an SNMP group
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpProfileParcelGroupArgs', 'SystemSnmpProfileParcelGroupArgsDict']]]] groups: Configure an SNMP group
         :param pulumi.Input[str] location_of_device: Set the physical location of this managed node
         :param pulumi.Input[str] location_of_device_variable: Variable name
         :param pulumi.Input[str] name: The name of the profile parcel
         :param pulumi.Input[bool] shutdown: Enable or disable SNMP - Default value: `false`
         :param pulumi.Input[str] shutdown_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemSnmpProfileParcelTrapTargetServerArgs']]]] trap_target_servers: Configure SNMP server to receive SNMP traps
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemSnmpProfileParcelUserArgs']]]] users: Configure an SNMP user
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemSnmpProfileParcelViewArgs']]]] views: Configure a view record
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpProfileParcelTrapTargetServerArgs', 'SystemSnmpProfileParcelTrapTargetServerArgsDict']]]] trap_target_servers: Configure SNMP server to receive SNMP traps
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpProfileParcelUserArgs', 'SystemSnmpProfileParcelUserArgsDict']]]] users: Configure an SNMP user
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpProfileParcelViewArgs', 'SystemSnmpProfileParcelViewArgsDict']]]] views: Configure a view record
         """
         ...
     @overload
@@ -571,20 +571,20 @@ class SystemSnmpProfileParcel(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 communities: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemSnmpProfileParcelCommunityArgs']]]]] = None,
+                 communities: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpProfileParcelCommunityArgs', 'SystemSnmpProfileParcelCommunityArgsDict']]]]] = None,
                  contact_person: Optional[pulumi.Input[str]] = None,
                  contact_person_variable: Optional[pulumi.Input[str]] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  feature_profile_id: Optional[pulumi.Input[str]] = None,
-                 groups: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemSnmpProfileParcelGroupArgs']]]]] = None,
+                 groups: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpProfileParcelGroupArgs', 'SystemSnmpProfileParcelGroupArgsDict']]]]] = None,
                  location_of_device: Optional[pulumi.Input[str]] = None,
                  location_of_device_variable: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  shutdown: Optional[pulumi.Input[bool]] = None,
                  shutdown_variable: Optional[pulumi.Input[str]] = None,
-                 trap_target_servers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemSnmpProfileParcelTrapTargetServerArgs']]]]] = None,
-                 users: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemSnmpProfileParcelUserArgs']]]]] = None,
-                 views: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemSnmpProfileParcelViewArgs']]]]] = None,
+                 trap_target_servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpProfileParcelTrapTargetServerArgs', 'SystemSnmpProfileParcelTrapTargetServerArgsDict']]]]] = None,
+                 users: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpProfileParcelUserArgs', 'SystemSnmpProfileParcelUserArgsDict']]]]] = None,
+                 views: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpProfileParcelViewArgs', 'SystemSnmpProfileParcelViewArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -619,21 +619,21 @@ class SystemSnmpProfileParcel(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            communities: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemSnmpProfileParcelCommunityArgs']]]]] = None,
+            communities: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpProfileParcelCommunityArgs', 'SystemSnmpProfileParcelCommunityArgsDict']]]]] = None,
             contact_person: Optional[pulumi.Input[str]] = None,
             contact_person_variable: Optional[pulumi.Input[str]] = None,
             description: Optional[pulumi.Input[str]] = None,
             feature_profile_id: Optional[pulumi.Input[str]] = None,
-            groups: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemSnmpProfileParcelGroupArgs']]]]] = None,
+            groups: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpProfileParcelGroupArgs', 'SystemSnmpProfileParcelGroupArgsDict']]]]] = None,
             location_of_device: Optional[pulumi.Input[str]] = None,
             location_of_device_variable: Optional[pulumi.Input[str]] = None,
             name: Optional[pulumi.Input[str]] = None,
             shutdown: Optional[pulumi.Input[bool]] = None,
             shutdown_variable: Optional[pulumi.Input[str]] = None,
-            trap_target_servers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemSnmpProfileParcelTrapTargetServerArgs']]]]] = None,
-            users: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemSnmpProfileParcelUserArgs']]]]] = None,
+            trap_target_servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpProfileParcelTrapTargetServerArgs', 'SystemSnmpProfileParcelTrapTargetServerArgsDict']]]]] = None,
+            users: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpProfileParcelUserArgs', 'SystemSnmpProfileParcelUserArgsDict']]]]] = None,
             version: Optional[pulumi.Input[int]] = None,
-            views: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemSnmpProfileParcelViewArgs']]]]] = None) -> 'SystemSnmpProfileParcel':
+            views: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpProfileParcelViewArgs', 'SystemSnmpProfileParcelViewArgsDict']]]]] = None) -> 'SystemSnmpProfileParcel':
         """
         Get an existing SystemSnmpProfileParcel resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -641,21 +641,21 @@ class SystemSnmpProfileParcel(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemSnmpProfileParcelCommunityArgs']]]] communities: Configure SNMP community
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpProfileParcelCommunityArgs', 'SystemSnmpProfileParcelCommunityArgsDict']]]] communities: Configure SNMP community
         :param pulumi.Input[str] contact_person: Set the contact for this managed node
         :param pulumi.Input[str] contact_person_variable: Variable name
         :param pulumi.Input[str] description: The description of the profile parcel
         :param pulumi.Input[str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemSnmpProfileParcelGroupArgs']]]] groups: Configure an SNMP group
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpProfileParcelGroupArgs', 'SystemSnmpProfileParcelGroupArgsDict']]]] groups: Configure an SNMP group
         :param pulumi.Input[str] location_of_device: Set the physical location of this managed node
         :param pulumi.Input[str] location_of_device_variable: Variable name
         :param pulumi.Input[str] name: The name of the profile parcel
         :param pulumi.Input[bool] shutdown: Enable or disable SNMP - Default value: `false`
         :param pulumi.Input[str] shutdown_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemSnmpProfileParcelTrapTargetServerArgs']]]] trap_target_servers: Configure SNMP server to receive SNMP traps
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemSnmpProfileParcelUserArgs']]]] users: Configure an SNMP user
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpProfileParcelTrapTargetServerArgs', 'SystemSnmpProfileParcelTrapTargetServerArgsDict']]]] trap_target_servers: Configure SNMP server to receive SNMP traps
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpProfileParcelUserArgs', 'SystemSnmpProfileParcelUserArgsDict']]]] users: Configure an SNMP user
         :param pulumi.Input[int] version: The version of the profile parcel
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemSnmpProfileParcelViewArgs']]]] views: Configure a view record
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpProfileParcelViewArgs', 'SystemSnmpProfileParcelViewArgsDict']]]] views: Configure a view record
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

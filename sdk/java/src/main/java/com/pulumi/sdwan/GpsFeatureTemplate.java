@@ -320,7 +320,7 @@ public class GpsFeatureTemplate extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public GpsFeatureTemplate(String name) {
+    public GpsFeatureTemplate(java.lang.String name) {
         this(name, GpsFeatureTemplateArgs.Empty);
     }
     /**
@@ -328,7 +328,7 @@ public class GpsFeatureTemplate extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public GpsFeatureTemplate(String name, GpsFeatureTemplateArgs args) {
+    public GpsFeatureTemplate(java.lang.String name, GpsFeatureTemplateArgs args) {
         this(name, args, null);
     }
     /**
@@ -337,15 +337,22 @@ public class GpsFeatureTemplate extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public GpsFeatureTemplate(String name, GpsFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/gpsFeatureTemplate:GpsFeatureTemplate", name, args == null ? GpsFeatureTemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public GpsFeatureTemplate(java.lang.String name, GpsFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/gpsFeatureTemplate:GpsFeatureTemplate", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private GpsFeatureTemplate(String name, Output<String> id, @Nullable GpsFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/gpsFeatureTemplate:GpsFeatureTemplate", name, state, makeResourceOptions(options, id));
+    private GpsFeatureTemplate(java.lang.String name, Output<java.lang.String> id, @Nullable GpsFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/gpsFeatureTemplate:GpsFeatureTemplate", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static GpsFeatureTemplateArgs makeArgs(GpsFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? GpsFeatureTemplateArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -361,7 +368,7 @@ public class GpsFeatureTemplate extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static GpsFeatureTemplate get(String name, Output<String> id, @Nullable GpsFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static GpsFeatureTemplate get(java.lang.String name, Output<java.lang.String> id, @Nullable GpsFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new GpsFeatureTemplate(name, id, state, options);
     }
 }

@@ -160,8 +160,8 @@ class ConfigurationGroupDeviceVariables(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  configuration_group_id: Optional[pulumi.Input[str]] = None,
-                 devices: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ConfigurationGroupDeviceVariablesDeviceArgs']]]]] = None,
-                 groups: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ConfigurationGroupDeviceVariablesGroupArgs']]]]] = None,
+                 devices: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupDeviceVariablesDeviceArgs', 'ConfigurationGroupDeviceVariablesDeviceArgsDict']]]]] = None,
+                 groups: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupDeviceVariablesGroupArgs', 'ConfigurationGroupDeviceVariablesGroupArgsDict']]]]] = None,
                  solution: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
@@ -171,8 +171,8 @@ class ConfigurationGroupDeviceVariables(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] configuration_group_id: Configuration Group ID
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ConfigurationGroupDeviceVariablesDeviceArgs']]]] devices: List of devices
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ConfigurationGroupDeviceVariablesGroupArgs']]]] groups: List of device groups
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupDeviceVariablesDeviceArgs', 'ConfigurationGroupDeviceVariablesDeviceArgsDict']]]] devices: List of devices
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupDeviceVariablesGroupArgs', 'ConfigurationGroupDeviceVariablesGroupArgsDict']]]] groups: List of device groups
         :param pulumi.Input[str] solution: Type of solution - Choices: `mobility`, `sdwan`, `nfvirtual`
         """
         ...
@@ -201,8 +201,8 @@ class ConfigurationGroupDeviceVariables(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  configuration_group_id: Optional[pulumi.Input[str]] = None,
-                 devices: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ConfigurationGroupDeviceVariablesDeviceArgs']]]]] = None,
-                 groups: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ConfigurationGroupDeviceVariablesGroupArgs']]]]] = None,
+                 devices: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupDeviceVariablesDeviceArgs', 'ConfigurationGroupDeviceVariablesDeviceArgsDict']]]]] = None,
+                 groups: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupDeviceVariablesGroupArgs', 'ConfigurationGroupDeviceVariablesGroupArgsDict']]]]] = None,
                  solution: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -234,8 +234,8 @@ class ConfigurationGroupDeviceVariables(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             configuration_group_id: Optional[pulumi.Input[str]] = None,
-            devices: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ConfigurationGroupDeviceVariablesDeviceArgs']]]]] = None,
-            groups: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ConfigurationGroupDeviceVariablesGroupArgs']]]]] = None,
+            devices: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupDeviceVariablesDeviceArgs', 'ConfigurationGroupDeviceVariablesDeviceArgsDict']]]]] = None,
+            groups: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupDeviceVariablesGroupArgs', 'ConfigurationGroupDeviceVariablesGroupArgsDict']]]]] = None,
             solution: Optional[pulumi.Input[str]] = None) -> 'ConfigurationGroupDeviceVariables':
         """
         Get an existing ConfigurationGroupDeviceVariables resource's state with the given name, id, and optional extra
@@ -245,8 +245,8 @@ class ConfigurationGroupDeviceVariables(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] configuration_group_id: Configuration Group ID
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ConfigurationGroupDeviceVariablesDeviceArgs']]]] devices: List of devices
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ConfigurationGroupDeviceVariablesGroupArgs']]]] groups: List of device groups
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupDeviceVariablesDeviceArgs', 'ConfigurationGroupDeviceVariablesDeviceArgsDict']]]] devices: List of devices
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupDeviceVariablesGroupArgs', 'ConfigurationGroupDeviceVariablesGroupArgsDict']]]] groups: List of device groups
         :param pulumi.Input[str] solution: Type of solution - Choices: `mobility`, `sdwan`, `nfvirtual`
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

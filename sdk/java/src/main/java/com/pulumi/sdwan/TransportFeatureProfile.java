@@ -94,7 +94,7 @@ public class TransportFeatureProfile extends com.pulumi.resources.CustomResource
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public TransportFeatureProfile(String name) {
+    public TransportFeatureProfile(java.lang.String name) {
         this(name, TransportFeatureProfileArgs.Empty);
     }
     /**
@@ -102,7 +102,7 @@ public class TransportFeatureProfile extends com.pulumi.resources.CustomResource
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public TransportFeatureProfile(String name, TransportFeatureProfileArgs args) {
+    public TransportFeatureProfile(java.lang.String name, TransportFeatureProfileArgs args) {
         this(name, args, null);
     }
     /**
@@ -111,15 +111,22 @@ public class TransportFeatureProfile extends com.pulumi.resources.CustomResource
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public TransportFeatureProfile(String name, TransportFeatureProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/transportFeatureProfile:TransportFeatureProfile", name, args == null ? TransportFeatureProfileArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public TransportFeatureProfile(java.lang.String name, TransportFeatureProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/transportFeatureProfile:TransportFeatureProfile", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private TransportFeatureProfile(String name, Output<String> id, @Nullable TransportFeatureProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/transportFeatureProfile:TransportFeatureProfile", name, state, makeResourceOptions(options, id));
+    private TransportFeatureProfile(java.lang.String name, Output<java.lang.String> id, @Nullable TransportFeatureProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/transportFeatureProfile:TransportFeatureProfile", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static TransportFeatureProfileArgs makeArgs(TransportFeatureProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? TransportFeatureProfileArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -135,7 +142,7 @@ public class TransportFeatureProfile extends com.pulumi.resources.CustomResource
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TransportFeatureProfile get(String name, Output<String> id, @Nullable TransportFeatureProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static TransportFeatureProfile get(java.lang.String name, Output<java.lang.String> id, @Nullable TransportFeatureProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new TransportFeatureProfile(name, id, state, options);
     }
 }

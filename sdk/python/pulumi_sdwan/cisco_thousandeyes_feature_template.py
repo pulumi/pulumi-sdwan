@@ -203,7 +203,7 @@ class CiscoThousandeyesFeatureTemplate(pulumi.CustomResource):
                  description: Optional[pulumi.Input[str]] = None,
                  device_types: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 virtual_applications: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoThousandeyesFeatureTemplateVirtualApplicationArgs']]]]] = None,
+                 virtual_applications: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoThousandeyesFeatureTemplateVirtualApplicationArgs', 'CiscoThousandeyesFeatureTemplateVirtualApplicationArgsDict']]]]] = None,
                  __props__=None):
         """
         This resource can manage a Cisco ThousandEyes feature template.
@@ -222,7 +222,7 @@ class CiscoThousandeyesFeatureTemplate(pulumi.CustomResource):
                `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
                `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[str] name: The name of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoThousandeyesFeatureTemplateVirtualApplicationArgs']]]] virtual_applications: Virtual application Instance
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoThousandeyesFeatureTemplateVirtualApplicationArgs', 'CiscoThousandeyesFeatureTemplateVirtualApplicationArgsDict']]]] virtual_applications: Virtual application Instance
         """
         ...
     @overload
@@ -258,7 +258,7 @@ class CiscoThousandeyesFeatureTemplate(pulumi.CustomResource):
                  description: Optional[pulumi.Input[str]] = None,
                  device_types: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 virtual_applications: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoThousandeyesFeatureTemplateVirtualApplicationArgs']]]]] = None,
+                 virtual_applications: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoThousandeyesFeatureTemplateVirtualApplicationArgs', 'CiscoThousandeyesFeatureTemplateVirtualApplicationArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -293,7 +293,7 @@ class CiscoThousandeyesFeatureTemplate(pulumi.CustomResource):
             name: Optional[pulumi.Input[str]] = None,
             template_type: Optional[pulumi.Input[str]] = None,
             version: Optional[pulumi.Input[int]] = None,
-            virtual_applications: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoThousandeyesFeatureTemplateVirtualApplicationArgs']]]]] = None) -> 'CiscoThousandeyesFeatureTemplate':
+            virtual_applications: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoThousandeyesFeatureTemplateVirtualApplicationArgs', 'CiscoThousandeyesFeatureTemplateVirtualApplicationArgsDict']]]]] = None) -> 'CiscoThousandeyesFeatureTemplate':
         """
         Get an existing CiscoThousandeyesFeatureTemplate resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -308,7 +308,7 @@ class CiscoThousandeyesFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] name: The name of the feature template
         :param pulumi.Input[str] template_type: The template type
         :param pulumi.Input[int] version: The version of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoThousandeyesFeatureTemplateVirtualApplicationArgs']]]] virtual_applications: Virtual application Instance
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoThousandeyesFeatureTemplateVirtualApplicationArgs', 'CiscoThousandeyesFeatureTemplateVirtualApplicationArgsDict']]]] virtual_applications: Virtual application Instance
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

@@ -203,7 +203,7 @@ public class CiscoBannerFeatureTemplate extends com.pulumi.resources.CustomResou
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public CiscoBannerFeatureTemplate(String name) {
+    public CiscoBannerFeatureTemplate(java.lang.String name) {
         this(name, CiscoBannerFeatureTemplateArgs.Empty);
     }
     /**
@@ -211,7 +211,7 @@ public class CiscoBannerFeatureTemplate extends com.pulumi.resources.CustomResou
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public CiscoBannerFeatureTemplate(String name, CiscoBannerFeatureTemplateArgs args) {
+    public CiscoBannerFeatureTemplate(java.lang.String name, CiscoBannerFeatureTemplateArgs args) {
         this(name, args, null);
     }
     /**
@@ -220,15 +220,22 @@ public class CiscoBannerFeatureTemplate extends com.pulumi.resources.CustomResou
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public CiscoBannerFeatureTemplate(String name, CiscoBannerFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/ciscoBannerFeatureTemplate:CiscoBannerFeatureTemplate", name, args == null ? CiscoBannerFeatureTemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public CiscoBannerFeatureTemplate(java.lang.String name, CiscoBannerFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/ciscoBannerFeatureTemplate:CiscoBannerFeatureTemplate", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private CiscoBannerFeatureTemplate(String name, Output<String> id, @Nullable CiscoBannerFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/ciscoBannerFeatureTemplate:CiscoBannerFeatureTemplate", name, state, makeResourceOptions(options, id));
+    private CiscoBannerFeatureTemplate(java.lang.String name, Output<java.lang.String> id, @Nullable CiscoBannerFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/ciscoBannerFeatureTemplate:CiscoBannerFeatureTemplate", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static CiscoBannerFeatureTemplateArgs makeArgs(CiscoBannerFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? CiscoBannerFeatureTemplateArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -244,7 +251,7 @@ public class CiscoBannerFeatureTemplate extends com.pulumi.resources.CustomResou
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CiscoBannerFeatureTemplate get(String name, Output<String> id, @Nullable CiscoBannerFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static CiscoBannerFeatureTemplate get(java.lang.String name, Output<java.lang.String> id, @Nullable CiscoBannerFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new CiscoBannerFeatureTemplate(name, id, state, options);
     }
 }

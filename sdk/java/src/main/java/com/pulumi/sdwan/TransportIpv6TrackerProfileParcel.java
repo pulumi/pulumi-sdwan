@@ -387,7 +387,7 @@ public class TransportIpv6TrackerProfileParcel extends com.pulumi.resources.Cust
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public TransportIpv6TrackerProfileParcel(String name) {
+    public TransportIpv6TrackerProfileParcel(java.lang.String name) {
         this(name, TransportIpv6TrackerProfileParcelArgs.Empty);
     }
     /**
@@ -395,7 +395,7 @@ public class TransportIpv6TrackerProfileParcel extends com.pulumi.resources.Cust
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public TransportIpv6TrackerProfileParcel(String name, TransportIpv6TrackerProfileParcelArgs args) {
+    public TransportIpv6TrackerProfileParcel(java.lang.String name, TransportIpv6TrackerProfileParcelArgs args) {
         this(name, args, null);
     }
     /**
@@ -404,15 +404,22 @@ public class TransportIpv6TrackerProfileParcel extends com.pulumi.resources.Cust
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public TransportIpv6TrackerProfileParcel(String name, TransportIpv6TrackerProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/transportIpv6TrackerProfileParcel:TransportIpv6TrackerProfileParcel", name, args == null ? TransportIpv6TrackerProfileParcelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public TransportIpv6TrackerProfileParcel(java.lang.String name, TransportIpv6TrackerProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/transportIpv6TrackerProfileParcel:TransportIpv6TrackerProfileParcel", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private TransportIpv6TrackerProfileParcel(String name, Output<String> id, @Nullable TransportIpv6TrackerProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/transportIpv6TrackerProfileParcel:TransportIpv6TrackerProfileParcel", name, state, makeResourceOptions(options, id));
+    private TransportIpv6TrackerProfileParcel(java.lang.String name, Output<java.lang.String> id, @Nullable TransportIpv6TrackerProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/transportIpv6TrackerProfileParcel:TransportIpv6TrackerProfileParcel", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static TransportIpv6TrackerProfileParcelArgs makeArgs(TransportIpv6TrackerProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? TransportIpv6TrackerProfileParcelArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -428,7 +435,7 @@ public class TransportIpv6TrackerProfileParcel extends com.pulumi.resources.Cust
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TransportIpv6TrackerProfileParcel get(String name, Output<String> id, @Nullable TransportIpv6TrackerProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static TransportIpv6TrackerProfileParcel get(java.lang.String name, Output<java.lang.String> id, @Nullable TransportIpv6TrackerProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new TransportIpv6TrackerProfileParcel(name, id, state, options);
     }
 }

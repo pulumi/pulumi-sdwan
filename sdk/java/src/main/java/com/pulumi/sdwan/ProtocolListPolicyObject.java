@@ -114,7 +114,7 @@ public class ProtocolListPolicyObject extends com.pulumi.resources.CustomResourc
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public ProtocolListPolicyObject(String name) {
+    public ProtocolListPolicyObject(java.lang.String name) {
         this(name, ProtocolListPolicyObjectArgs.Empty);
     }
     /**
@@ -122,7 +122,7 @@ public class ProtocolListPolicyObject extends com.pulumi.resources.CustomResourc
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public ProtocolListPolicyObject(String name, ProtocolListPolicyObjectArgs args) {
+    public ProtocolListPolicyObject(java.lang.String name, ProtocolListPolicyObjectArgs args) {
         this(name, args, null);
     }
     /**
@@ -131,15 +131,22 @@ public class ProtocolListPolicyObject extends com.pulumi.resources.CustomResourc
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ProtocolListPolicyObject(String name, ProtocolListPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/protocolListPolicyObject:ProtocolListPolicyObject", name, args == null ? ProtocolListPolicyObjectArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public ProtocolListPolicyObject(java.lang.String name, ProtocolListPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/protocolListPolicyObject:ProtocolListPolicyObject", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private ProtocolListPolicyObject(String name, Output<String> id, @Nullable ProtocolListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/protocolListPolicyObject:ProtocolListPolicyObject", name, state, makeResourceOptions(options, id));
+    private ProtocolListPolicyObject(java.lang.String name, Output<java.lang.String> id, @Nullable ProtocolListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/protocolListPolicyObject:ProtocolListPolicyObject", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static ProtocolListPolicyObjectArgs makeArgs(ProtocolListPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? ProtocolListPolicyObjectArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -155,7 +162,7 @@ public class ProtocolListPolicyObject extends com.pulumi.resources.CustomResourc
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ProtocolListPolicyObject get(String name, Output<String> id, @Nullable ProtocolListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ProtocolListPolicyObject get(java.lang.String name, Output<java.lang.String> id, @Nullable ProtocolListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new ProtocolListPolicyObject(name, id, state, options);
     }
 }

@@ -94,7 +94,7 @@ public class SystemFeatureProfile extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public SystemFeatureProfile(String name) {
+    public SystemFeatureProfile(java.lang.String name) {
         this(name, SystemFeatureProfileArgs.Empty);
     }
     /**
@@ -102,7 +102,7 @@ public class SystemFeatureProfile extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SystemFeatureProfile(String name, SystemFeatureProfileArgs args) {
+    public SystemFeatureProfile(java.lang.String name, SystemFeatureProfileArgs args) {
         this(name, args, null);
     }
     /**
@@ -111,15 +111,22 @@ public class SystemFeatureProfile extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SystemFeatureProfile(String name, SystemFeatureProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/systemFeatureProfile:SystemFeatureProfile", name, args == null ? SystemFeatureProfileArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public SystemFeatureProfile(java.lang.String name, SystemFeatureProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/systemFeatureProfile:SystemFeatureProfile", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private SystemFeatureProfile(String name, Output<String> id, @Nullable SystemFeatureProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/systemFeatureProfile:SystemFeatureProfile", name, state, makeResourceOptions(options, id));
+    private SystemFeatureProfile(java.lang.String name, Output<java.lang.String> id, @Nullable SystemFeatureProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/systemFeatureProfile:SystemFeatureProfile", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static SystemFeatureProfileArgs makeArgs(SystemFeatureProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? SystemFeatureProfileArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -135,7 +142,7 @@ public class SystemFeatureProfile extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SystemFeatureProfile get(String name, Output<String> id, @Nullable SystemFeatureProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SystemFeatureProfile get(java.lang.String name, Output<java.lang.String> id, @Nullable SystemFeatureProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new SystemFeatureProfile(name, id, state, options);
     }
 }

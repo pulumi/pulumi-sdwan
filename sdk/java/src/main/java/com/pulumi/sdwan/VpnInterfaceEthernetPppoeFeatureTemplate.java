@@ -2414,7 +2414,7 @@ public class VpnInterfaceEthernetPppoeFeatureTemplate extends com.pulumi.resourc
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public VpnInterfaceEthernetPppoeFeatureTemplate(String name) {
+    public VpnInterfaceEthernetPppoeFeatureTemplate(java.lang.String name) {
         this(name, VpnInterfaceEthernetPppoeFeatureTemplateArgs.Empty);
     }
     /**
@@ -2422,7 +2422,7 @@ public class VpnInterfaceEthernetPppoeFeatureTemplate extends com.pulumi.resourc
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public VpnInterfaceEthernetPppoeFeatureTemplate(String name, VpnInterfaceEthernetPppoeFeatureTemplateArgs args) {
+    public VpnInterfaceEthernetPppoeFeatureTemplate(java.lang.String name, VpnInterfaceEthernetPppoeFeatureTemplateArgs args) {
         this(name, args, null);
     }
     /**
@@ -2431,15 +2431,22 @@ public class VpnInterfaceEthernetPppoeFeatureTemplate extends com.pulumi.resourc
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public VpnInterfaceEthernetPppoeFeatureTemplate(String name, VpnInterfaceEthernetPppoeFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/vpnInterfaceEthernetPppoeFeatureTemplate:VpnInterfaceEthernetPppoeFeatureTemplate", name, args == null ? VpnInterfaceEthernetPppoeFeatureTemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public VpnInterfaceEthernetPppoeFeatureTemplate(java.lang.String name, VpnInterfaceEthernetPppoeFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/vpnInterfaceEthernetPppoeFeatureTemplate:VpnInterfaceEthernetPppoeFeatureTemplate", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private VpnInterfaceEthernetPppoeFeatureTemplate(String name, Output<String> id, @Nullable VpnInterfaceEthernetPppoeFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/vpnInterfaceEthernetPppoeFeatureTemplate:VpnInterfaceEthernetPppoeFeatureTemplate", name, state, makeResourceOptions(options, id));
+    private VpnInterfaceEthernetPppoeFeatureTemplate(java.lang.String name, Output<java.lang.String> id, @Nullable VpnInterfaceEthernetPppoeFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/vpnInterfaceEthernetPppoeFeatureTemplate:VpnInterfaceEthernetPppoeFeatureTemplate", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static VpnInterfaceEthernetPppoeFeatureTemplateArgs makeArgs(VpnInterfaceEthernetPppoeFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? VpnInterfaceEthernetPppoeFeatureTemplateArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -2455,7 +2462,7 @@ public class VpnInterfaceEthernetPppoeFeatureTemplate extends com.pulumi.resourc
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static VpnInterfaceEthernetPppoeFeatureTemplate get(String name, Output<String> id, @Nullable VpnInterfaceEthernetPppoeFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static VpnInterfaceEthernetPppoeFeatureTemplate get(java.lang.String name, Output<java.lang.String> id, @Nullable VpnInterfaceEthernetPppoeFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new VpnInterfaceEthernetPppoeFeatureTemplate(name, id, state, options);
     }
 }

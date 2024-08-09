@@ -149,7 +149,7 @@ public class QosMapPolicyDefinition extends com.pulumi.resources.CustomResource 
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public QosMapPolicyDefinition(String name) {
+    public QosMapPolicyDefinition(java.lang.String name) {
         this(name, QosMapPolicyDefinitionArgs.Empty);
     }
     /**
@@ -157,7 +157,7 @@ public class QosMapPolicyDefinition extends com.pulumi.resources.CustomResource 
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public QosMapPolicyDefinition(String name, QosMapPolicyDefinitionArgs args) {
+    public QosMapPolicyDefinition(java.lang.String name, QosMapPolicyDefinitionArgs args) {
         this(name, args, null);
     }
     /**
@@ -166,15 +166,22 @@ public class QosMapPolicyDefinition extends com.pulumi.resources.CustomResource 
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public QosMapPolicyDefinition(String name, QosMapPolicyDefinitionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/qosMapPolicyDefinition:QosMapPolicyDefinition", name, args == null ? QosMapPolicyDefinitionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public QosMapPolicyDefinition(java.lang.String name, QosMapPolicyDefinitionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/qosMapPolicyDefinition:QosMapPolicyDefinition", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private QosMapPolicyDefinition(String name, Output<String> id, @Nullable QosMapPolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/qosMapPolicyDefinition:QosMapPolicyDefinition", name, state, makeResourceOptions(options, id));
+    private QosMapPolicyDefinition(java.lang.String name, Output<java.lang.String> id, @Nullable QosMapPolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/qosMapPolicyDefinition:QosMapPolicyDefinition", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static QosMapPolicyDefinitionArgs makeArgs(QosMapPolicyDefinitionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? QosMapPolicyDefinitionArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -190,7 +197,7 @@ public class QosMapPolicyDefinition extends com.pulumi.resources.CustomResource 
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static QosMapPolicyDefinition get(String name, Output<String> id, @Nullable QosMapPolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static QosMapPolicyDefinition get(java.lang.String name, Output<java.lang.String> id, @Nullable QosMapPolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new QosMapPolicyDefinition(name, id, state, options);
     }
 }

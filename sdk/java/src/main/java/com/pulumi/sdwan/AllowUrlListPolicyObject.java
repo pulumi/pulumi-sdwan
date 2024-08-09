@@ -114,7 +114,7 @@ public class AllowUrlListPolicyObject extends com.pulumi.resources.CustomResourc
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public AllowUrlListPolicyObject(String name) {
+    public AllowUrlListPolicyObject(java.lang.String name) {
         this(name, AllowUrlListPolicyObjectArgs.Empty);
     }
     /**
@@ -122,7 +122,7 @@ public class AllowUrlListPolicyObject extends com.pulumi.resources.CustomResourc
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AllowUrlListPolicyObject(String name, AllowUrlListPolicyObjectArgs args) {
+    public AllowUrlListPolicyObject(java.lang.String name, AllowUrlListPolicyObjectArgs args) {
         this(name, args, null);
     }
     /**
@@ -131,15 +131,22 @@ public class AllowUrlListPolicyObject extends com.pulumi.resources.CustomResourc
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AllowUrlListPolicyObject(String name, AllowUrlListPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/allowUrlListPolicyObject:AllowUrlListPolicyObject", name, args == null ? AllowUrlListPolicyObjectArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public AllowUrlListPolicyObject(java.lang.String name, AllowUrlListPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/allowUrlListPolicyObject:AllowUrlListPolicyObject", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private AllowUrlListPolicyObject(String name, Output<String> id, @Nullable AllowUrlListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/allowUrlListPolicyObject:AllowUrlListPolicyObject", name, state, makeResourceOptions(options, id));
+    private AllowUrlListPolicyObject(java.lang.String name, Output<java.lang.String> id, @Nullable AllowUrlListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/allowUrlListPolicyObject:AllowUrlListPolicyObject", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static AllowUrlListPolicyObjectArgs makeArgs(AllowUrlListPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? AllowUrlListPolicyObjectArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -155,7 +162,7 @@ public class AllowUrlListPolicyObject extends com.pulumi.resources.CustomResourc
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AllowUrlListPolicyObject get(String name, Output<String> id, @Nullable AllowUrlListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AllowUrlListPolicyObject get(java.lang.String name, Output<java.lang.String> id, @Nullable AllowUrlListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new AllowUrlListPolicyObject(name, id, state, options);
     }
 }

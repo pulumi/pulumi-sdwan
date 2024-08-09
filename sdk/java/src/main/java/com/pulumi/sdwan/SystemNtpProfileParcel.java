@@ -288,7 +288,7 @@ public class SystemNtpProfileParcel extends com.pulumi.resources.CustomResource 
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public SystemNtpProfileParcel(String name) {
+    public SystemNtpProfileParcel(java.lang.String name) {
         this(name, SystemNtpProfileParcelArgs.Empty);
     }
     /**
@@ -296,7 +296,7 @@ public class SystemNtpProfileParcel extends com.pulumi.resources.CustomResource 
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SystemNtpProfileParcel(String name, @Nullable SystemNtpProfileParcelArgs args) {
+    public SystemNtpProfileParcel(java.lang.String name, @Nullable SystemNtpProfileParcelArgs args) {
         this(name, args, null);
     }
     /**
@@ -305,15 +305,22 @@ public class SystemNtpProfileParcel extends com.pulumi.resources.CustomResource 
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SystemNtpProfileParcel(String name, @Nullable SystemNtpProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/systemNtpProfileParcel:SystemNtpProfileParcel", name, args == null ? SystemNtpProfileParcelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public SystemNtpProfileParcel(java.lang.String name, @Nullable SystemNtpProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/systemNtpProfileParcel:SystemNtpProfileParcel", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private SystemNtpProfileParcel(String name, Output<String> id, @Nullable SystemNtpProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/systemNtpProfileParcel:SystemNtpProfileParcel", name, state, makeResourceOptions(options, id));
+    private SystemNtpProfileParcel(java.lang.String name, Output<java.lang.String> id, @Nullable SystemNtpProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/systemNtpProfileParcel:SystemNtpProfileParcel", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static SystemNtpProfileParcelArgs makeArgs(@Nullable SystemNtpProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? SystemNtpProfileParcelArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -329,7 +336,7 @@ public class SystemNtpProfileParcel extends com.pulumi.resources.CustomResource 
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SystemNtpProfileParcel get(String name, Output<String> id, @Nullable SystemNtpProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SystemNtpProfileParcel get(java.lang.String name, Output<java.lang.String> id, @Nullable SystemNtpProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new SystemNtpProfileParcel(name, id, state, options);
     }
 }

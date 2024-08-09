@@ -114,7 +114,7 @@ public class DataFqdnPrefixListPolicyObject extends com.pulumi.resources.CustomR
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public DataFqdnPrefixListPolicyObject(String name) {
+    public DataFqdnPrefixListPolicyObject(java.lang.String name) {
         this(name, DataFqdnPrefixListPolicyObjectArgs.Empty);
     }
     /**
@@ -122,7 +122,7 @@ public class DataFqdnPrefixListPolicyObject extends com.pulumi.resources.CustomR
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public DataFqdnPrefixListPolicyObject(String name, DataFqdnPrefixListPolicyObjectArgs args) {
+    public DataFqdnPrefixListPolicyObject(java.lang.String name, DataFqdnPrefixListPolicyObjectArgs args) {
         this(name, args, null);
     }
     /**
@@ -131,15 +131,22 @@ public class DataFqdnPrefixListPolicyObject extends com.pulumi.resources.CustomR
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public DataFqdnPrefixListPolicyObject(String name, DataFqdnPrefixListPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/dataFqdnPrefixListPolicyObject:DataFqdnPrefixListPolicyObject", name, args == null ? DataFqdnPrefixListPolicyObjectArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public DataFqdnPrefixListPolicyObject(java.lang.String name, DataFqdnPrefixListPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/dataFqdnPrefixListPolicyObject:DataFqdnPrefixListPolicyObject", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private DataFqdnPrefixListPolicyObject(String name, Output<String> id, @Nullable DataFqdnPrefixListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/dataFqdnPrefixListPolicyObject:DataFqdnPrefixListPolicyObject", name, state, makeResourceOptions(options, id));
+    private DataFqdnPrefixListPolicyObject(java.lang.String name, Output<java.lang.String> id, @Nullable DataFqdnPrefixListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/dataFqdnPrefixListPolicyObject:DataFqdnPrefixListPolicyObject", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static DataFqdnPrefixListPolicyObjectArgs makeArgs(DataFqdnPrefixListPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? DataFqdnPrefixListPolicyObjectArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -155,7 +162,7 @@ public class DataFqdnPrefixListPolicyObject extends com.pulumi.resources.CustomR
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DataFqdnPrefixListPolicyObject get(String name, Output<String> id, @Nullable DataFqdnPrefixListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static DataFqdnPrefixListPolicyObject get(java.lang.String name, Output<java.lang.String> id, @Nullable DataFqdnPrefixListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new DataFqdnPrefixListPolicyObject(name, id, state, options);
     }
 }

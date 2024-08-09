@@ -725,7 +725,7 @@ public class ServiceLanVpnProfileParcel extends com.pulumi.resources.CustomResou
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public ServiceLanVpnProfileParcel(String name) {
+    public ServiceLanVpnProfileParcel(java.lang.String name) {
         this(name, ServiceLanVpnProfileParcelArgs.Empty);
     }
     /**
@@ -733,7 +733,7 @@ public class ServiceLanVpnProfileParcel extends com.pulumi.resources.CustomResou
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public ServiceLanVpnProfileParcel(String name, ServiceLanVpnProfileParcelArgs args) {
+    public ServiceLanVpnProfileParcel(java.lang.String name, ServiceLanVpnProfileParcelArgs args) {
         this(name, args, null);
     }
     /**
@@ -742,15 +742,22 @@ public class ServiceLanVpnProfileParcel extends com.pulumi.resources.CustomResou
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ServiceLanVpnProfileParcel(String name, ServiceLanVpnProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/serviceLanVpnProfileParcel:ServiceLanVpnProfileParcel", name, args == null ? ServiceLanVpnProfileParcelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public ServiceLanVpnProfileParcel(java.lang.String name, ServiceLanVpnProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/serviceLanVpnProfileParcel:ServiceLanVpnProfileParcel", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private ServiceLanVpnProfileParcel(String name, Output<String> id, @Nullable ServiceLanVpnProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/serviceLanVpnProfileParcel:ServiceLanVpnProfileParcel", name, state, makeResourceOptions(options, id));
+    private ServiceLanVpnProfileParcel(java.lang.String name, Output<java.lang.String> id, @Nullable ServiceLanVpnProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/serviceLanVpnProfileParcel:ServiceLanVpnProfileParcel", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static ServiceLanVpnProfileParcelArgs makeArgs(ServiceLanVpnProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? ServiceLanVpnProfileParcelArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -766,7 +773,7 @@ public class ServiceLanVpnProfileParcel extends com.pulumi.resources.CustomResou
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ServiceLanVpnProfileParcel get(String name, Output<String> id, @Nullable ServiceLanVpnProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ServiceLanVpnProfileParcel get(java.lang.String name, Output<java.lang.String> id, @Nullable ServiceLanVpnProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new ServiceLanVpnProfileParcel(name, id, state, options);
     }
 }

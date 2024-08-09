@@ -114,7 +114,7 @@ public class BlockUrlListPolicyObject extends com.pulumi.resources.CustomResourc
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public BlockUrlListPolicyObject(String name) {
+    public BlockUrlListPolicyObject(java.lang.String name) {
         this(name, BlockUrlListPolicyObjectArgs.Empty);
     }
     /**
@@ -122,7 +122,7 @@ public class BlockUrlListPolicyObject extends com.pulumi.resources.CustomResourc
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public BlockUrlListPolicyObject(String name, BlockUrlListPolicyObjectArgs args) {
+    public BlockUrlListPolicyObject(java.lang.String name, BlockUrlListPolicyObjectArgs args) {
         this(name, args, null);
     }
     /**
@@ -131,15 +131,22 @@ public class BlockUrlListPolicyObject extends com.pulumi.resources.CustomResourc
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public BlockUrlListPolicyObject(String name, BlockUrlListPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/blockUrlListPolicyObject:BlockUrlListPolicyObject", name, args == null ? BlockUrlListPolicyObjectArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public BlockUrlListPolicyObject(java.lang.String name, BlockUrlListPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/blockUrlListPolicyObject:BlockUrlListPolicyObject", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private BlockUrlListPolicyObject(String name, Output<String> id, @Nullable BlockUrlListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/blockUrlListPolicyObject:BlockUrlListPolicyObject", name, state, makeResourceOptions(options, id));
+    private BlockUrlListPolicyObject(java.lang.String name, Output<java.lang.String> id, @Nullable BlockUrlListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/blockUrlListPolicyObject:BlockUrlListPolicyObject", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static BlockUrlListPolicyObjectArgs makeArgs(BlockUrlListPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? BlockUrlListPolicyObjectArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -155,7 +162,7 @@ public class BlockUrlListPolicyObject extends com.pulumi.resources.CustomResourc
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static BlockUrlListPolicyObject get(String name, Output<String> id, @Nullable BlockUrlListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static BlockUrlListPolicyObject get(java.lang.String name, Output<java.lang.String> id, @Nullable BlockUrlListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new BlockUrlListPolicyObject(name, id, state, options);
     }
 }

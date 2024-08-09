@@ -94,7 +94,7 @@ public class ApplicationPriorityFeatureProfile extends com.pulumi.resources.Cust
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public ApplicationPriorityFeatureProfile(String name) {
+    public ApplicationPriorityFeatureProfile(java.lang.String name) {
         this(name, ApplicationPriorityFeatureProfileArgs.Empty);
     }
     /**
@@ -102,7 +102,7 @@ public class ApplicationPriorityFeatureProfile extends com.pulumi.resources.Cust
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public ApplicationPriorityFeatureProfile(String name, ApplicationPriorityFeatureProfileArgs args) {
+    public ApplicationPriorityFeatureProfile(java.lang.String name, ApplicationPriorityFeatureProfileArgs args) {
         this(name, args, null);
     }
     /**
@@ -111,15 +111,22 @@ public class ApplicationPriorityFeatureProfile extends com.pulumi.resources.Cust
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ApplicationPriorityFeatureProfile(String name, ApplicationPriorityFeatureProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/applicationPriorityFeatureProfile:ApplicationPriorityFeatureProfile", name, args == null ? ApplicationPriorityFeatureProfileArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public ApplicationPriorityFeatureProfile(java.lang.String name, ApplicationPriorityFeatureProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/applicationPriorityFeatureProfile:ApplicationPriorityFeatureProfile", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private ApplicationPriorityFeatureProfile(String name, Output<String> id, @Nullable ApplicationPriorityFeatureProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/applicationPriorityFeatureProfile:ApplicationPriorityFeatureProfile", name, state, makeResourceOptions(options, id));
+    private ApplicationPriorityFeatureProfile(java.lang.String name, Output<java.lang.String> id, @Nullable ApplicationPriorityFeatureProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/applicationPriorityFeatureProfile:ApplicationPriorityFeatureProfile", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static ApplicationPriorityFeatureProfileArgs makeArgs(ApplicationPriorityFeatureProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? ApplicationPriorityFeatureProfileArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -135,7 +142,7 @@ public class ApplicationPriorityFeatureProfile extends com.pulumi.resources.Cust
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ApplicationPriorityFeatureProfile get(String name, Output<String> id, @Nullable ApplicationPriorityFeatureProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ApplicationPriorityFeatureProfile get(java.lang.String name, Output<java.lang.String> id, @Nullable ApplicationPriorityFeatureProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new ApplicationPriorityFeatureProfile(name, id, state, options);
     }
 }

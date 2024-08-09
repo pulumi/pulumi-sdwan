@@ -116,7 +116,7 @@ public class Ipv4PrefixListPolicyObject extends com.pulumi.resources.CustomResou
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public Ipv4PrefixListPolicyObject(String name) {
+    public Ipv4PrefixListPolicyObject(java.lang.String name) {
         this(name, Ipv4PrefixListPolicyObjectArgs.Empty);
     }
     /**
@@ -124,7 +124,7 @@ public class Ipv4PrefixListPolicyObject extends com.pulumi.resources.CustomResou
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public Ipv4PrefixListPolicyObject(String name, Ipv4PrefixListPolicyObjectArgs args) {
+    public Ipv4PrefixListPolicyObject(java.lang.String name, Ipv4PrefixListPolicyObjectArgs args) {
         this(name, args, null);
     }
     /**
@@ -133,15 +133,22 @@ public class Ipv4PrefixListPolicyObject extends com.pulumi.resources.CustomResou
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Ipv4PrefixListPolicyObject(String name, Ipv4PrefixListPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/ipv4PrefixListPolicyObject:Ipv4PrefixListPolicyObject", name, args == null ? Ipv4PrefixListPolicyObjectArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public Ipv4PrefixListPolicyObject(java.lang.String name, Ipv4PrefixListPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/ipv4PrefixListPolicyObject:Ipv4PrefixListPolicyObject", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private Ipv4PrefixListPolicyObject(String name, Output<String> id, @Nullable Ipv4PrefixListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/ipv4PrefixListPolicyObject:Ipv4PrefixListPolicyObject", name, state, makeResourceOptions(options, id));
+    private Ipv4PrefixListPolicyObject(java.lang.String name, Output<java.lang.String> id, @Nullable Ipv4PrefixListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/ipv4PrefixListPolicyObject:Ipv4PrefixListPolicyObject", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static Ipv4PrefixListPolicyObjectArgs makeArgs(Ipv4PrefixListPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? Ipv4PrefixListPolicyObjectArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -157,7 +164,7 @@ public class Ipv4PrefixListPolicyObject extends com.pulumi.resources.CustomResou
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Ipv4PrefixListPolicyObject get(String name, Output<String> id, @Nullable Ipv4PrefixListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Ipv4PrefixListPolicyObject get(java.lang.String name, Output<java.lang.String> id, @Nullable Ipv4PrefixListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new Ipv4PrefixListPolicyObject(name, id, state, options);
     }
 }

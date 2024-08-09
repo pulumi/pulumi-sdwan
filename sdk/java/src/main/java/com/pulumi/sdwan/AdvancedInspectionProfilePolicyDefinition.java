@@ -238,7 +238,7 @@ public class AdvancedInspectionProfilePolicyDefinition extends com.pulumi.resour
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public AdvancedInspectionProfilePolicyDefinition(String name) {
+    public AdvancedInspectionProfilePolicyDefinition(java.lang.String name) {
         this(name, AdvancedInspectionProfilePolicyDefinitionArgs.Empty);
     }
     /**
@@ -246,7 +246,7 @@ public class AdvancedInspectionProfilePolicyDefinition extends com.pulumi.resour
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AdvancedInspectionProfilePolicyDefinition(String name, AdvancedInspectionProfilePolicyDefinitionArgs args) {
+    public AdvancedInspectionProfilePolicyDefinition(java.lang.String name, AdvancedInspectionProfilePolicyDefinitionArgs args) {
         this(name, args, null);
     }
     /**
@@ -255,15 +255,22 @@ public class AdvancedInspectionProfilePolicyDefinition extends com.pulumi.resour
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AdvancedInspectionProfilePolicyDefinition(String name, AdvancedInspectionProfilePolicyDefinitionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/advancedInspectionProfilePolicyDefinition:AdvancedInspectionProfilePolicyDefinition", name, args == null ? AdvancedInspectionProfilePolicyDefinitionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public AdvancedInspectionProfilePolicyDefinition(java.lang.String name, AdvancedInspectionProfilePolicyDefinitionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/advancedInspectionProfilePolicyDefinition:AdvancedInspectionProfilePolicyDefinition", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private AdvancedInspectionProfilePolicyDefinition(String name, Output<String> id, @Nullable AdvancedInspectionProfilePolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/advancedInspectionProfilePolicyDefinition:AdvancedInspectionProfilePolicyDefinition", name, state, makeResourceOptions(options, id));
+    private AdvancedInspectionProfilePolicyDefinition(java.lang.String name, Output<java.lang.String> id, @Nullable AdvancedInspectionProfilePolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/advancedInspectionProfilePolicyDefinition:AdvancedInspectionProfilePolicyDefinition", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static AdvancedInspectionProfilePolicyDefinitionArgs makeArgs(AdvancedInspectionProfilePolicyDefinitionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? AdvancedInspectionProfilePolicyDefinitionArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -279,7 +286,7 @@ public class AdvancedInspectionProfilePolicyDefinition extends com.pulumi.resour
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AdvancedInspectionProfilePolicyDefinition get(String name, Output<String> id, @Nullable AdvancedInspectionProfilePolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AdvancedInspectionProfilePolicyDefinition get(java.lang.String name, Output<java.lang.String> id, @Nullable AdvancedInspectionProfilePolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new AdvancedInspectionProfilePolicyDefinition(name, id, state, options);
     }
 }

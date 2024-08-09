@@ -161,7 +161,7 @@ public class ConfigurationGroup extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public ConfigurationGroup(String name) {
+    public ConfigurationGroup(java.lang.String name) {
         this(name, ConfigurationGroupArgs.Empty);
     }
     /**
@@ -169,7 +169,7 @@ public class ConfigurationGroup extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public ConfigurationGroup(String name, ConfigurationGroupArgs args) {
+    public ConfigurationGroup(java.lang.String name, ConfigurationGroupArgs args) {
         this(name, args, null);
     }
     /**
@@ -178,15 +178,22 @@ public class ConfigurationGroup extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ConfigurationGroup(String name, ConfigurationGroupArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/configurationGroup:ConfigurationGroup", name, args == null ? ConfigurationGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public ConfigurationGroup(java.lang.String name, ConfigurationGroupArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/configurationGroup:ConfigurationGroup", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private ConfigurationGroup(String name, Output<String> id, @Nullable ConfigurationGroupState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/configurationGroup:ConfigurationGroup", name, state, makeResourceOptions(options, id));
+    private ConfigurationGroup(java.lang.String name, Output<java.lang.String> id, @Nullable ConfigurationGroupState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/configurationGroup:ConfigurationGroup", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static ConfigurationGroupArgs makeArgs(ConfigurationGroupArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? ConfigurationGroupArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -202,7 +209,7 @@ public class ConfigurationGroup extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ConfigurationGroup get(String name, Output<String> id, @Nullable ConfigurationGroupState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ConfigurationGroup get(java.lang.String name, Output<java.lang.String> id, @Nullable ConfigurationGroupState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new ConfigurationGroup(name, id, state, options);
     }
 }

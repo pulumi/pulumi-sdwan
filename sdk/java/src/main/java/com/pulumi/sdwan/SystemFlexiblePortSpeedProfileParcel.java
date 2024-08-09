@@ -159,7 +159,7 @@ public class SystemFlexiblePortSpeedProfileParcel extends com.pulumi.resources.C
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public SystemFlexiblePortSpeedProfileParcel(String name) {
+    public SystemFlexiblePortSpeedProfileParcel(java.lang.String name) {
         this(name, SystemFlexiblePortSpeedProfileParcelArgs.Empty);
     }
     /**
@@ -167,7 +167,7 @@ public class SystemFlexiblePortSpeedProfileParcel extends com.pulumi.resources.C
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SystemFlexiblePortSpeedProfileParcel(String name, SystemFlexiblePortSpeedProfileParcelArgs args) {
+    public SystemFlexiblePortSpeedProfileParcel(java.lang.String name, SystemFlexiblePortSpeedProfileParcelArgs args) {
         this(name, args, null);
     }
     /**
@@ -176,15 +176,22 @@ public class SystemFlexiblePortSpeedProfileParcel extends com.pulumi.resources.C
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SystemFlexiblePortSpeedProfileParcel(String name, SystemFlexiblePortSpeedProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/systemFlexiblePortSpeedProfileParcel:SystemFlexiblePortSpeedProfileParcel", name, args == null ? SystemFlexiblePortSpeedProfileParcelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public SystemFlexiblePortSpeedProfileParcel(java.lang.String name, SystemFlexiblePortSpeedProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/systemFlexiblePortSpeedProfileParcel:SystemFlexiblePortSpeedProfileParcel", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private SystemFlexiblePortSpeedProfileParcel(String name, Output<String> id, @Nullable SystemFlexiblePortSpeedProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/systemFlexiblePortSpeedProfileParcel:SystemFlexiblePortSpeedProfileParcel", name, state, makeResourceOptions(options, id));
+    private SystemFlexiblePortSpeedProfileParcel(java.lang.String name, Output<java.lang.String> id, @Nullable SystemFlexiblePortSpeedProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/systemFlexiblePortSpeedProfileParcel:SystemFlexiblePortSpeedProfileParcel", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static SystemFlexiblePortSpeedProfileParcelArgs makeArgs(SystemFlexiblePortSpeedProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? SystemFlexiblePortSpeedProfileParcelArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -200,7 +207,7 @@ public class SystemFlexiblePortSpeedProfileParcel extends com.pulumi.resources.C
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SystemFlexiblePortSpeedProfileParcel get(String name, Output<String> id, @Nullable SystemFlexiblePortSpeedProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SystemFlexiblePortSpeedProfileParcel get(java.lang.String name, Output<java.lang.String> id, @Nullable SystemFlexiblePortSpeedProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new SystemFlexiblePortSpeedProfileParcel(name, id, state, options);
     }
 }

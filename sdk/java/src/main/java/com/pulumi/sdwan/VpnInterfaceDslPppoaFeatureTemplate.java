@@ -2338,7 +2338,7 @@ public class VpnInterfaceDslPppoaFeatureTemplate extends com.pulumi.resources.Cu
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public VpnInterfaceDslPppoaFeatureTemplate(String name) {
+    public VpnInterfaceDslPppoaFeatureTemplate(java.lang.String name) {
         this(name, VpnInterfaceDslPppoaFeatureTemplateArgs.Empty);
     }
     /**
@@ -2346,7 +2346,7 @@ public class VpnInterfaceDslPppoaFeatureTemplate extends com.pulumi.resources.Cu
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public VpnInterfaceDslPppoaFeatureTemplate(String name, VpnInterfaceDslPppoaFeatureTemplateArgs args) {
+    public VpnInterfaceDslPppoaFeatureTemplate(java.lang.String name, VpnInterfaceDslPppoaFeatureTemplateArgs args) {
         this(name, args, null);
     }
     /**
@@ -2355,15 +2355,22 @@ public class VpnInterfaceDslPppoaFeatureTemplate extends com.pulumi.resources.Cu
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public VpnInterfaceDslPppoaFeatureTemplate(String name, VpnInterfaceDslPppoaFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/vpnInterfaceDslPppoaFeatureTemplate:VpnInterfaceDslPppoaFeatureTemplate", name, args == null ? VpnInterfaceDslPppoaFeatureTemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public VpnInterfaceDslPppoaFeatureTemplate(java.lang.String name, VpnInterfaceDslPppoaFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/vpnInterfaceDslPppoaFeatureTemplate:VpnInterfaceDslPppoaFeatureTemplate", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private VpnInterfaceDslPppoaFeatureTemplate(String name, Output<String> id, @Nullable VpnInterfaceDslPppoaFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/vpnInterfaceDslPppoaFeatureTemplate:VpnInterfaceDslPppoaFeatureTemplate", name, state, makeResourceOptions(options, id));
+    private VpnInterfaceDslPppoaFeatureTemplate(java.lang.String name, Output<java.lang.String> id, @Nullable VpnInterfaceDslPppoaFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/vpnInterfaceDslPppoaFeatureTemplate:VpnInterfaceDslPppoaFeatureTemplate", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static VpnInterfaceDslPppoaFeatureTemplateArgs makeArgs(VpnInterfaceDslPppoaFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? VpnInterfaceDslPppoaFeatureTemplateArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -2379,7 +2386,7 @@ public class VpnInterfaceDslPppoaFeatureTemplate extends com.pulumi.resources.Cu
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static VpnInterfaceDslPppoaFeatureTemplate get(String name, Output<String> id, @Nullable VpnInterfaceDslPppoaFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static VpnInterfaceDslPppoaFeatureTemplate get(java.lang.String name, Output<java.lang.String> id, @Nullable VpnInterfaceDslPppoaFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new VpnInterfaceDslPppoaFeatureTemplate(name, id, state, options);
     }
 }

@@ -2292,7 +2292,7 @@ public class VpnInterfaceCellularFeatureTemplate extends com.pulumi.resources.Cu
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public VpnInterfaceCellularFeatureTemplate(String name) {
+    public VpnInterfaceCellularFeatureTemplate(java.lang.String name) {
         this(name, VpnInterfaceCellularFeatureTemplateArgs.Empty);
     }
     /**
@@ -2300,7 +2300,7 @@ public class VpnInterfaceCellularFeatureTemplate extends com.pulumi.resources.Cu
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public VpnInterfaceCellularFeatureTemplate(String name, VpnInterfaceCellularFeatureTemplateArgs args) {
+    public VpnInterfaceCellularFeatureTemplate(java.lang.String name, VpnInterfaceCellularFeatureTemplateArgs args) {
         this(name, args, null);
     }
     /**
@@ -2309,15 +2309,22 @@ public class VpnInterfaceCellularFeatureTemplate extends com.pulumi.resources.Cu
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public VpnInterfaceCellularFeatureTemplate(String name, VpnInterfaceCellularFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/vpnInterfaceCellularFeatureTemplate:VpnInterfaceCellularFeatureTemplate", name, args == null ? VpnInterfaceCellularFeatureTemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public VpnInterfaceCellularFeatureTemplate(java.lang.String name, VpnInterfaceCellularFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/vpnInterfaceCellularFeatureTemplate:VpnInterfaceCellularFeatureTemplate", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private VpnInterfaceCellularFeatureTemplate(String name, Output<String> id, @Nullable VpnInterfaceCellularFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/vpnInterfaceCellularFeatureTemplate:VpnInterfaceCellularFeatureTemplate", name, state, makeResourceOptions(options, id));
+    private VpnInterfaceCellularFeatureTemplate(java.lang.String name, Output<java.lang.String> id, @Nullable VpnInterfaceCellularFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/vpnInterfaceCellularFeatureTemplate:VpnInterfaceCellularFeatureTemplate", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static VpnInterfaceCellularFeatureTemplateArgs makeArgs(VpnInterfaceCellularFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? VpnInterfaceCellularFeatureTemplateArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -2333,7 +2340,7 @@ public class VpnInterfaceCellularFeatureTemplate extends com.pulumi.resources.Cu
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static VpnInterfaceCellularFeatureTemplate get(String name, Output<String> id, @Nullable VpnInterfaceCellularFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static VpnInterfaceCellularFeatureTemplate get(java.lang.String name, Output<java.lang.String> id, @Nullable VpnInterfaceCellularFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new VpnInterfaceCellularFeatureTemplate(name, id, state, options);
     }
 }

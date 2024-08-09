@@ -1685,7 +1685,7 @@ class TransportManagementVpnInterfaceEthernetProfileParcel(pulumi.CustomResource
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 arp_entries: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportManagementVpnInterfaceEthernetProfileParcelArpEntryArgs']]]]] = None,
+                 arp_entries: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TransportManagementVpnInterfaceEthernetProfileParcelArpEntryArgs', 'TransportManagementVpnInterfaceEthernetProfileParcelArpEntryArgsDict']]]]] = None,
                  arp_timeout: Optional[pulumi.Input[int]] = None,
                  arp_timeout_variable: Optional[pulumi.Input[str]] = None,
                  autonegotiate: Optional[pulumi.Input[bool]] = None,
@@ -1717,7 +1717,7 @@ class TransportManagementVpnInterfaceEthernetProfileParcel(pulumi.CustomResource
                  ipv4_dhcp_helpers: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  ipv4_iperf_server: Optional[pulumi.Input[str]] = None,
                  ipv4_iperf_server_variable: Optional[pulumi.Input[str]] = None,
-                 ipv4_secondary_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportManagementVpnInterfaceEthernetProfileParcelIpv4SecondaryAddressArgs']]]]] = None,
+                 ipv4_secondary_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TransportManagementVpnInterfaceEthernetProfileParcelIpv4SecondaryAddressArgs', 'TransportManagementVpnInterfaceEthernetProfileParcelIpv4SecondaryAddressArgsDict']]]]] = None,
                  ipv4_subnet_mask: Optional[pulumi.Input[str]] = None,
                  ipv4_subnet_mask_variable: Optional[pulumi.Input[str]] = None,
                  ipv6_address: Optional[pulumi.Input[str]] = None,
@@ -1749,7 +1749,7 @@ class TransportManagementVpnInterfaceEthernetProfileParcel(pulumi.CustomResource
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportManagementVpnInterfaceEthernetProfileParcelArpEntryArgs']]]] arp_entries: Configure ARP entries
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportManagementVpnInterfaceEthernetProfileParcelArpEntryArgs', 'TransportManagementVpnInterfaceEthernetProfileParcelArpEntryArgsDict']]]] arp_entries: Configure ARP entries
         :param pulumi.Input[int] arp_timeout: Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
         :param pulumi.Input[str] arp_timeout_variable: Variable name
         :param pulumi.Input[bool] autonegotiate: Link autonegotiation
@@ -1780,7 +1780,7 @@ class TransportManagementVpnInterfaceEthernetProfileParcel(pulumi.CustomResource
         :param pulumi.Input[Sequence[pulumi.Input[str]]] ipv4_dhcp_helpers: List of DHCP IPv4 helper addresses (min 1, max 8)
         :param pulumi.Input[str] ipv4_iperf_server: Iperf server for auto bandwidth detect
         :param pulumi.Input[str] ipv4_iperf_server_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportManagementVpnInterfaceEthernetProfileParcelIpv4SecondaryAddressArgs']]]] ipv4_secondary_addresses: Secondary IpV4 Addresses
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportManagementVpnInterfaceEthernetProfileParcelIpv4SecondaryAddressArgs', 'TransportManagementVpnInterfaceEthernetProfileParcelIpv4SecondaryAddressArgsDict']]]] ipv4_secondary_addresses: Secondary IpV4 Addresses
         :param pulumi.Input[str] ipv4_subnet_mask: Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
                `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
                `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
@@ -1835,7 +1835,7 @@ class TransportManagementVpnInterfaceEthernetProfileParcel(pulumi.CustomResource
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 arp_entries: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportManagementVpnInterfaceEthernetProfileParcelArpEntryArgs']]]]] = None,
+                 arp_entries: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TransportManagementVpnInterfaceEthernetProfileParcelArpEntryArgs', 'TransportManagementVpnInterfaceEthernetProfileParcelArpEntryArgsDict']]]]] = None,
                  arp_timeout: Optional[pulumi.Input[int]] = None,
                  arp_timeout_variable: Optional[pulumi.Input[str]] = None,
                  autonegotiate: Optional[pulumi.Input[bool]] = None,
@@ -1867,7 +1867,7 @@ class TransportManagementVpnInterfaceEthernetProfileParcel(pulumi.CustomResource
                  ipv4_dhcp_helpers: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  ipv4_iperf_server: Optional[pulumi.Input[str]] = None,
                  ipv4_iperf_server_variable: Optional[pulumi.Input[str]] = None,
-                 ipv4_secondary_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportManagementVpnInterfaceEthernetProfileParcelIpv4SecondaryAddressArgs']]]]] = None,
+                 ipv4_secondary_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TransportManagementVpnInterfaceEthernetProfileParcelIpv4SecondaryAddressArgs', 'TransportManagementVpnInterfaceEthernetProfileParcelIpv4SecondaryAddressArgsDict']]]]] = None,
                  ipv4_subnet_mask: Optional[pulumi.Input[str]] = None,
                  ipv4_subnet_mask_variable: Optional[pulumi.Input[str]] = None,
                  ipv6_address: Optional[pulumi.Input[str]] = None,
@@ -1959,7 +1959,7 @@ class TransportManagementVpnInterfaceEthernetProfileParcel(pulumi.CustomResource
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            arp_entries: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportManagementVpnInterfaceEthernetProfileParcelArpEntryArgs']]]]] = None,
+            arp_entries: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TransportManagementVpnInterfaceEthernetProfileParcelArpEntryArgs', 'TransportManagementVpnInterfaceEthernetProfileParcelArpEntryArgsDict']]]]] = None,
             arp_timeout: Optional[pulumi.Input[int]] = None,
             arp_timeout_variable: Optional[pulumi.Input[str]] = None,
             autonegotiate: Optional[pulumi.Input[bool]] = None,
@@ -1991,7 +1991,7 @@ class TransportManagementVpnInterfaceEthernetProfileParcel(pulumi.CustomResource
             ipv4_dhcp_helpers: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
             ipv4_iperf_server: Optional[pulumi.Input[str]] = None,
             ipv4_iperf_server_variable: Optional[pulumi.Input[str]] = None,
-            ipv4_secondary_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportManagementVpnInterfaceEthernetProfileParcelIpv4SecondaryAddressArgs']]]]] = None,
+            ipv4_secondary_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TransportManagementVpnInterfaceEthernetProfileParcelIpv4SecondaryAddressArgs', 'TransportManagementVpnInterfaceEthernetProfileParcelIpv4SecondaryAddressArgsDict']]]]] = None,
             ipv4_subnet_mask: Optional[pulumi.Input[str]] = None,
             ipv4_subnet_mask_variable: Optional[pulumi.Input[str]] = None,
             ipv6_address: Optional[pulumi.Input[str]] = None,
@@ -2018,7 +2018,7 @@ class TransportManagementVpnInterfaceEthernetProfileParcel(pulumi.CustomResource
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportManagementVpnInterfaceEthernetProfileParcelArpEntryArgs']]]] arp_entries: Configure ARP entries
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportManagementVpnInterfaceEthernetProfileParcelArpEntryArgs', 'TransportManagementVpnInterfaceEthernetProfileParcelArpEntryArgsDict']]]] arp_entries: Configure ARP entries
         :param pulumi.Input[int] arp_timeout: Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
         :param pulumi.Input[str] arp_timeout_variable: Variable name
         :param pulumi.Input[bool] autonegotiate: Link autonegotiation
@@ -2049,7 +2049,7 @@ class TransportManagementVpnInterfaceEthernetProfileParcel(pulumi.CustomResource
         :param pulumi.Input[Sequence[pulumi.Input[str]]] ipv4_dhcp_helpers: List of DHCP IPv4 helper addresses (min 1, max 8)
         :param pulumi.Input[str] ipv4_iperf_server: Iperf server for auto bandwidth detect
         :param pulumi.Input[str] ipv4_iperf_server_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportManagementVpnInterfaceEthernetProfileParcelIpv4SecondaryAddressArgs']]]] ipv4_secondary_addresses: Secondary IpV4 Addresses
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportManagementVpnInterfaceEthernetProfileParcelIpv4SecondaryAddressArgs', 'TransportManagementVpnInterfaceEthernetProfileParcelIpv4SecondaryAddressArgsDict']]]] ipv4_secondary_addresses: Secondary IpV4 Addresses
         :param pulumi.Input[str] ipv4_subnet_mask: Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
                `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
                `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,

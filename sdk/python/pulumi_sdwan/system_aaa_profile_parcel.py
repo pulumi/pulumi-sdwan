@@ -594,21 +594,21 @@ class SystemAaaProfileParcel(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  accounting_group: Optional[pulumi.Input[bool]] = None,
                  accounting_group_variable: Optional[pulumi.Input[str]] = None,
-                 accounting_rules: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemAaaProfileParcelAccountingRuleArgs']]]]] = None,
+                 accounting_rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaProfileParcelAccountingRuleArgs', 'SystemAaaProfileParcelAccountingRuleArgsDict']]]]] = None,
                  authentication_group: Optional[pulumi.Input[bool]] = None,
                  authentication_group_variable: Optional[pulumi.Input[str]] = None,
                  authorization_config_commands: Optional[pulumi.Input[bool]] = None,
                  authorization_config_commands_variable: Optional[pulumi.Input[str]] = None,
                  authorization_console: Optional[pulumi.Input[bool]] = None,
                  authorization_console_variable: Optional[pulumi.Input[str]] = None,
-                 authorization_rules: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemAaaProfileParcelAuthorizationRuleArgs']]]]] = None,
+                 authorization_rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaProfileParcelAuthorizationRuleArgs', 'SystemAaaProfileParcelAuthorizationRuleArgsDict']]]]] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  feature_profile_id: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 radius_groups: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemAaaProfileParcelRadiusGroupArgs']]]]] = None,
+                 radius_groups: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaProfileParcelRadiusGroupArgs', 'SystemAaaProfileParcelRadiusGroupArgsDict']]]]] = None,
                  server_auth_orders: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-                 tacacs_groups: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemAaaProfileParcelTacacsGroupArgs']]]]] = None,
-                 users: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemAaaProfileParcelUserArgs']]]]] = None,
+                 tacacs_groups: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaProfileParcelTacacsGroupArgs', 'SystemAaaProfileParcelTacacsGroupArgsDict']]]]] = None,
+                 users: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaProfileParcelUserArgs', 'SystemAaaProfileParcelUserArgsDict']]]]] = None,
                  __props__=None):
         """
         This resource can manage a System AAA profile parcel.
@@ -624,21 +624,21 @@ class SystemAaaProfileParcel(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[bool] accounting_group: Accounting configurations parameters - Default value: `false`
         :param pulumi.Input[str] accounting_group_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemAaaProfileParcelAccountingRuleArgs']]]] accounting_rules: Configure the accounting rules
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaProfileParcelAccountingRuleArgs', 'SystemAaaProfileParcelAccountingRuleArgsDict']]]] accounting_rules: Configure the accounting rules
         :param pulumi.Input[bool] authentication_group: Authentication configurations parameters - Default value: `false`
         :param pulumi.Input[str] authentication_group_variable: Variable name
         :param pulumi.Input[bool] authorization_config_commands: For configuration mode commands. - Default value: `false`
         :param pulumi.Input[str] authorization_config_commands_variable: Variable name
         :param pulumi.Input[bool] authorization_console: For enabling console authorization - Default value: `false`
         :param pulumi.Input[str] authorization_console_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemAaaProfileParcelAuthorizationRuleArgs']]]] authorization_rules: Configure the Authorization Rules
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaProfileParcelAuthorizationRuleArgs', 'SystemAaaProfileParcelAuthorizationRuleArgsDict']]]] authorization_rules: Configure the Authorization Rules
         :param pulumi.Input[str] description: The description of the profile parcel
         :param pulumi.Input[str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[str] name: The name of the profile parcel
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemAaaProfileParcelRadiusGroupArgs']]]] radius_groups: Configure the Radius serverGroup
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaProfileParcelRadiusGroupArgs', 'SystemAaaProfileParcelRadiusGroupArgsDict']]]] radius_groups: Configure the Radius serverGroup
         :param pulumi.Input[Sequence[pulumi.Input[str]]] server_auth_orders: ServerGroups priority order
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemAaaProfileParcelTacacsGroupArgs']]]] tacacs_groups: Configure the TACACS serverGroup
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemAaaProfileParcelUserArgs']]]] users: Create local login account
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaProfileParcelTacacsGroupArgs', 'SystemAaaProfileParcelTacacsGroupArgsDict']]]] tacacs_groups: Configure the TACACS serverGroup
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaProfileParcelUserArgs', 'SystemAaaProfileParcelUserArgsDict']]]] users: Create local login account
         """
         ...
     @overload
@@ -673,21 +673,21 @@ class SystemAaaProfileParcel(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  accounting_group: Optional[pulumi.Input[bool]] = None,
                  accounting_group_variable: Optional[pulumi.Input[str]] = None,
-                 accounting_rules: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemAaaProfileParcelAccountingRuleArgs']]]]] = None,
+                 accounting_rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaProfileParcelAccountingRuleArgs', 'SystemAaaProfileParcelAccountingRuleArgsDict']]]]] = None,
                  authentication_group: Optional[pulumi.Input[bool]] = None,
                  authentication_group_variable: Optional[pulumi.Input[str]] = None,
                  authorization_config_commands: Optional[pulumi.Input[bool]] = None,
                  authorization_config_commands_variable: Optional[pulumi.Input[str]] = None,
                  authorization_console: Optional[pulumi.Input[bool]] = None,
                  authorization_console_variable: Optional[pulumi.Input[str]] = None,
-                 authorization_rules: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemAaaProfileParcelAuthorizationRuleArgs']]]]] = None,
+                 authorization_rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaProfileParcelAuthorizationRuleArgs', 'SystemAaaProfileParcelAuthorizationRuleArgsDict']]]]] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  feature_profile_id: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 radius_groups: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemAaaProfileParcelRadiusGroupArgs']]]]] = None,
+                 radius_groups: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaProfileParcelRadiusGroupArgs', 'SystemAaaProfileParcelRadiusGroupArgsDict']]]]] = None,
                  server_auth_orders: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-                 tacacs_groups: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemAaaProfileParcelTacacsGroupArgs']]]]] = None,
-                 users: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemAaaProfileParcelUserArgs']]]]] = None,
+                 tacacs_groups: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaProfileParcelTacacsGroupArgs', 'SystemAaaProfileParcelTacacsGroupArgsDict']]]]] = None,
+                 users: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaProfileParcelUserArgs', 'SystemAaaProfileParcelUserArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -731,21 +731,21 @@ class SystemAaaProfileParcel(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             accounting_group: Optional[pulumi.Input[bool]] = None,
             accounting_group_variable: Optional[pulumi.Input[str]] = None,
-            accounting_rules: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemAaaProfileParcelAccountingRuleArgs']]]]] = None,
+            accounting_rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaProfileParcelAccountingRuleArgs', 'SystemAaaProfileParcelAccountingRuleArgsDict']]]]] = None,
             authentication_group: Optional[pulumi.Input[bool]] = None,
             authentication_group_variable: Optional[pulumi.Input[str]] = None,
             authorization_config_commands: Optional[pulumi.Input[bool]] = None,
             authorization_config_commands_variable: Optional[pulumi.Input[str]] = None,
             authorization_console: Optional[pulumi.Input[bool]] = None,
             authorization_console_variable: Optional[pulumi.Input[str]] = None,
-            authorization_rules: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemAaaProfileParcelAuthorizationRuleArgs']]]]] = None,
+            authorization_rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaProfileParcelAuthorizationRuleArgs', 'SystemAaaProfileParcelAuthorizationRuleArgsDict']]]]] = None,
             description: Optional[pulumi.Input[str]] = None,
             feature_profile_id: Optional[pulumi.Input[str]] = None,
             name: Optional[pulumi.Input[str]] = None,
-            radius_groups: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemAaaProfileParcelRadiusGroupArgs']]]]] = None,
+            radius_groups: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaProfileParcelRadiusGroupArgs', 'SystemAaaProfileParcelRadiusGroupArgsDict']]]]] = None,
             server_auth_orders: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-            tacacs_groups: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemAaaProfileParcelTacacsGroupArgs']]]]] = None,
-            users: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemAaaProfileParcelUserArgs']]]]] = None,
+            tacacs_groups: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaProfileParcelTacacsGroupArgs', 'SystemAaaProfileParcelTacacsGroupArgsDict']]]]] = None,
+            users: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaProfileParcelUserArgs', 'SystemAaaProfileParcelUserArgsDict']]]]] = None,
             version: Optional[pulumi.Input[int]] = None) -> 'SystemAaaProfileParcel':
         """
         Get an existing SystemAaaProfileParcel resource's state with the given name, id, and optional extra
@@ -756,21 +756,21 @@ class SystemAaaProfileParcel(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[bool] accounting_group: Accounting configurations parameters - Default value: `false`
         :param pulumi.Input[str] accounting_group_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemAaaProfileParcelAccountingRuleArgs']]]] accounting_rules: Configure the accounting rules
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaProfileParcelAccountingRuleArgs', 'SystemAaaProfileParcelAccountingRuleArgsDict']]]] accounting_rules: Configure the accounting rules
         :param pulumi.Input[bool] authentication_group: Authentication configurations parameters - Default value: `false`
         :param pulumi.Input[str] authentication_group_variable: Variable name
         :param pulumi.Input[bool] authorization_config_commands: For configuration mode commands. - Default value: `false`
         :param pulumi.Input[str] authorization_config_commands_variable: Variable name
         :param pulumi.Input[bool] authorization_console: For enabling console authorization - Default value: `false`
         :param pulumi.Input[str] authorization_console_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemAaaProfileParcelAuthorizationRuleArgs']]]] authorization_rules: Configure the Authorization Rules
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaProfileParcelAuthorizationRuleArgs', 'SystemAaaProfileParcelAuthorizationRuleArgsDict']]]] authorization_rules: Configure the Authorization Rules
         :param pulumi.Input[str] description: The description of the profile parcel
         :param pulumi.Input[str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[str] name: The name of the profile parcel
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemAaaProfileParcelRadiusGroupArgs']]]] radius_groups: Configure the Radius serverGroup
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaProfileParcelRadiusGroupArgs', 'SystemAaaProfileParcelRadiusGroupArgsDict']]]] radius_groups: Configure the Radius serverGroup
         :param pulumi.Input[Sequence[pulumi.Input[str]]] server_auth_orders: ServerGroups priority order
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemAaaProfileParcelTacacsGroupArgs']]]] tacacs_groups: Configure the TACACS serverGroup
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemAaaProfileParcelUserArgs']]]] users: Create local login account
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaProfileParcelTacacsGroupArgs', 'SystemAaaProfileParcelTacacsGroupArgsDict']]]] tacacs_groups: Configure the TACACS serverGroup
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaProfileParcelUserArgs', 'SystemAaaProfileParcelUserArgsDict']]]] users: Create local login account
         :param pulumi.Input[int] version: The version of the profile parcel
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

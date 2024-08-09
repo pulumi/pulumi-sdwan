@@ -1314,7 +1314,7 @@ public class CiscoSystemFeatureTemplate extends com.pulumi.resources.CustomResou
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public CiscoSystemFeatureTemplate(String name) {
+    public CiscoSystemFeatureTemplate(java.lang.String name) {
         this(name, CiscoSystemFeatureTemplateArgs.Empty);
     }
     /**
@@ -1322,7 +1322,7 @@ public class CiscoSystemFeatureTemplate extends com.pulumi.resources.CustomResou
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public CiscoSystemFeatureTemplate(String name, CiscoSystemFeatureTemplateArgs args) {
+    public CiscoSystemFeatureTemplate(java.lang.String name, CiscoSystemFeatureTemplateArgs args) {
         this(name, args, null);
     }
     /**
@@ -1331,15 +1331,22 @@ public class CiscoSystemFeatureTemplate extends com.pulumi.resources.CustomResou
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public CiscoSystemFeatureTemplate(String name, CiscoSystemFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/ciscoSystemFeatureTemplate:CiscoSystemFeatureTemplate", name, args == null ? CiscoSystemFeatureTemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public CiscoSystemFeatureTemplate(java.lang.String name, CiscoSystemFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/ciscoSystemFeatureTemplate:CiscoSystemFeatureTemplate", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private CiscoSystemFeatureTemplate(String name, Output<String> id, @Nullable CiscoSystemFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/ciscoSystemFeatureTemplate:CiscoSystemFeatureTemplate", name, state, makeResourceOptions(options, id));
+    private CiscoSystemFeatureTemplate(java.lang.String name, Output<java.lang.String> id, @Nullable CiscoSystemFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/ciscoSystemFeatureTemplate:CiscoSystemFeatureTemplate", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static CiscoSystemFeatureTemplateArgs makeArgs(CiscoSystemFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? CiscoSystemFeatureTemplateArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -1355,7 +1362,7 @@ public class CiscoSystemFeatureTemplate extends com.pulumi.resources.CustomResou
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CiscoSystemFeatureTemplate get(String name, Output<String> id, @Nullable CiscoSystemFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static CiscoSystemFeatureTemplate get(java.lang.String name, Output<java.lang.String> id, @Nullable CiscoSystemFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new CiscoSystemFeatureTemplate(name, id, state, options);
     }
 }

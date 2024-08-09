@@ -233,7 +233,7 @@ public class CedgeMulticastFeatureTemplate extends com.pulumi.resources.CustomRe
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public CedgeMulticastFeatureTemplate(String name) {
+    public CedgeMulticastFeatureTemplate(java.lang.String name) {
         this(name, CedgeMulticastFeatureTemplateArgs.Empty);
     }
     /**
@@ -241,7 +241,7 @@ public class CedgeMulticastFeatureTemplate extends com.pulumi.resources.CustomRe
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public CedgeMulticastFeatureTemplate(String name, CedgeMulticastFeatureTemplateArgs args) {
+    public CedgeMulticastFeatureTemplate(java.lang.String name, CedgeMulticastFeatureTemplateArgs args) {
         this(name, args, null);
     }
     /**
@@ -250,15 +250,22 @@ public class CedgeMulticastFeatureTemplate extends com.pulumi.resources.CustomRe
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public CedgeMulticastFeatureTemplate(String name, CedgeMulticastFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/cedgeMulticastFeatureTemplate:CedgeMulticastFeatureTemplate", name, args == null ? CedgeMulticastFeatureTemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public CedgeMulticastFeatureTemplate(java.lang.String name, CedgeMulticastFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/cedgeMulticastFeatureTemplate:CedgeMulticastFeatureTemplate", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private CedgeMulticastFeatureTemplate(String name, Output<String> id, @Nullable CedgeMulticastFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/cedgeMulticastFeatureTemplate:CedgeMulticastFeatureTemplate", name, state, makeResourceOptions(options, id));
+    private CedgeMulticastFeatureTemplate(java.lang.String name, Output<java.lang.String> id, @Nullable CedgeMulticastFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/cedgeMulticastFeatureTemplate:CedgeMulticastFeatureTemplate", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static CedgeMulticastFeatureTemplateArgs makeArgs(CedgeMulticastFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? CedgeMulticastFeatureTemplateArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -274,7 +281,7 @@ public class CedgeMulticastFeatureTemplate extends com.pulumi.resources.CustomRe
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CedgeMulticastFeatureTemplate get(String name, Output<String> id, @Nullable CedgeMulticastFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static CedgeMulticastFeatureTemplate get(java.lang.String name, Output<java.lang.String> id, @Nullable CedgeMulticastFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new CedgeMulticastFeatureTemplate(name, id, state, options);
     }
 }

@@ -488,7 +488,7 @@ class CiscoNtpFeatureTemplate(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 authentication_keys: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoNtpFeatureTemplateAuthenticationKeyArgs']]]]] = None,
+                 authentication_keys: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoNtpFeatureTemplateAuthenticationKeyArgs', 'CiscoNtpFeatureTemplateAuthenticationKeyArgsDict']]]]] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  device_types: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  master: Optional[pulumi.Input[bool]] = None,
@@ -498,7 +498,7 @@ class CiscoNtpFeatureTemplate(pulumi.CustomResource):
                  master_stratum_variable: Optional[pulumi.Input[str]] = None,
                  master_variable: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 servers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoNtpFeatureTemplateServerArgs']]]]] = None,
+                 servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoNtpFeatureTemplateServerArgs', 'CiscoNtpFeatureTemplateServerArgsDict']]]]] = None,
                  trusted_keys: Optional[pulumi.Input[Sequence[pulumi.Input[int]]]] = None,
                  trusted_keys_variable: Optional[pulumi.Input[str]] = None,
                  __props__=None):
@@ -514,7 +514,7 @@ class CiscoNtpFeatureTemplate(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoNtpFeatureTemplateAuthenticationKeyArgs']]]] authentication_keys: Set MD5 authentication key
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoNtpFeatureTemplateAuthenticationKeyArgs', 'CiscoNtpFeatureTemplateAuthenticationKeyArgsDict']]]] authentication_keys: Set MD5 authentication key
         :param pulumi.Input[str] description: The description of the feature template
         :param pulumi.Input[Sequence[pulumi.Input[str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
                `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
@@ -526,7 +526,7 @@ class CiscoNtpFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] master_stratum_variable: Variable name
         :param pulumi.Input[str] master_variable: Variable name
         :param pulumi.Input[str] name: The name of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoNtpFeatureTemplateServerArgs']]]] servers: Configure NTP servers
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoNtpFeatureTemplateServerArgs', 'CiscoNtpFeatureTemplateServerArgsDict']]]] servers: Configure NTP servers
         :param pulumi.Input[Sequence[pulumi.Input[int]]] trusted_keys: Designate authentication key as trustworthy
         :param pulumi.Input[str] trusted_keys_variable: Variable name
         """
@@ -561,7 +561,7 @@ class CiscoNtpFeatureTemplate(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 authentication_keys: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoNtpFeatureTemplateAuthenticationKeyArgs']]]]] = None,
+                 authentication_keys: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoNtpFeatureTemplateAuthenticationKeyArgs', 'CiscoNtpFeatureTemplateAuthenticationKeyArgsDict']]]]] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  device_types: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  master: Optional[pulumi.Input[bool]] = None,
@@ -571,7 +571,7 @@ class CiscoNtpFeatureTemplate(pulumi.CustomResource):
                  master_stratum_variable: Optional[pulumi.Input[str]] = None,
                  master_variable: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 servers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoNtpFeatureTemplateServerArgs']]]]] = None,
+                 servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoNtpFeatureTemplateServerArgs', 'CiscoNtpFeatureTemplateServerArgsDict']]]]] = None,
                  trusted_keys: Optional[pulumi.Input[Sequence[pulumi.Input[int]]]] = None,
                  trusted_keys_variable: Optional[pulumi.Input[str]] = None,
                  __props__=None):
@@ -612,7 +612,7 @@ class CiscoNtpFeatureTemplate(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            authentication_keys: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoNtpFeatureTemplateAuthenticationKeyArgs']]]]] = None,
+            authentication_keys: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoNtpFeatureTemplateAuthenticationKeyArgs', 'CiscoNtpFeatureTemplateAuthenticationKeyArgsDict']]]]] = None,
             description: Optional[pulumi.Input[str]] = None,
             device_types: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
             master: Optional[pulumi.Input[bool]] = None,
@@ -622,7 +622,7 @@ class CiscoNtpFeatureTemplate(pulumi.CustomResource):
             master_stratum_variable: Optional[pulumi.Input[str]] = None,
             master_variable: Optional[pulumi.Input[str]] = None,
             name: Optional[pulumi.Input[str]] = None,
-            servers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoNtpFeatureTemplateServerArgs']]]]] = None,
+            servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoNtpFeatureTemplateServerArgs', 'CiscoNtpFeatureTemplateServerArgsDict']]]]] = None,
             template_type: Optional[pulumi.Input[str]] = None,
             trusted_keys: Optional[pulumi.Input[Sequence[pulumi.Input[int]]]] = None,
             trusted_keys_variable: Optional[pulumi.Input[str]] = None,
@@ -634,7 +634,7 @@ class CiscoNtpFeatureTemplate(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoNtpFeatureTemplateAuthenticationKeyArgs']]]] authentication_keys: Set MD5 authentication key
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoNtpFeatureTemplateAuthenticationKeyArgs', 'CiscoNtpFeatureTemplateAuthenticationKeyArgsDict']]]] authentication_keys: Set MD5 authentication key
         :param pulumi.Input[str] description: The description of the feature template
         :param pulumi.Input[Sequence[pulumi.Input[str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
                `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
@@ -646,7 +646,7 @@ class CiscoNtpFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] master_stratum_variable: Variable name
         :param pulumi.Input[str] master_variable: Variable name
         :param pulumi.Input[str] name: The name of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoNtpFeatureTemplateServerArgs']]]] servers: Configure NTP servers
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoNtpFeatureTemplateServerArgs', 'CiscoNtpFeatureTemplateServerArgsDict']]]] servers: Configure NTP servers
         :param pulumi.Input[str] template_type: The template type
         :param pulumi.Input[Sequence[pulumi.Input[int]]] trusted_keys: Designate authentication key as trustworthy
         :param pulumi.Input[str] trusted_keys_variable: Variable name

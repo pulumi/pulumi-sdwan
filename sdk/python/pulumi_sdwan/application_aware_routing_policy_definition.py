@@ -162,7 +162,7 @@ class ApplicationAwareRoutingPolicyDefinition(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 sequences: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplicationAwareRoutingPolicyDefinitionSequenceArgs']]]]] = None,
+                 sequences: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplicationAwareRoutingPolicyDefinitionSequenceArgs', 'ApplicationAwareRoutingPolicyDefinitionSequenceArgsDict']]]]] = None,
                  __props__=None):
         """
         This resource can manage a Application Aware Routing Policy Definition .
@@ -177,7 +177,7 @@ class ApplicationAwareRoutingPolicyDefinition(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] description: The description of the policy definition
         :param pulumi.Input[str] name: The name of the policy definition
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplicationAwareRoutingPolicyDefinitionSequenceArgs']]]] sequences: List of sequences
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplicationAwareRoutingPolicyDefinitionSequenceArgs', 'ApplicationAwareRoutingPolicyDefinitionSequenceArgsDict']]]] sequences: List of sequences
         """
         ...
     @overload
@@ -211,7 +211,7 @@ class ApplicationAwareRoutingPolicyDefinition(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 sequences: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplicationAwareRoutingPolicyDefinitionSequenceArgs']]]]] = None,
+                 sequences: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplicationAwareRoutingPolicyDefinitionSequenceArgs', 'ApplicationAwareRoutingPolicyDefinitionSequenceArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -242,7 +242,7 @@ class ApplicationAwareRoutingPolicyDefinition(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             description: Optional[pulumi.Input[str]] = None,
             name: Optional[pulumi.Input[str]] = None,
-            sequences: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplicationAwareRoutingPolicyDefinitionSequenceArgs']]]]] = None,
+            sequences: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplicationAwareRoutingPolicyDefinitionSequenceArgs', 'ApplicationAwareRoutingPolicyDefinitionSequenceArgsDict']]]]] = None,
             type: Optional[pulumi.Input[str]] = None,
             version: Optional[pulumi.Input[int]] = None) -> 'ApplicationAwareRoutingPolicyDefinition':
         """
@@ -254,7 +254,7 @@ class ApplicationAwareRoutingPolicyDefinition(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] description: The description of the policy definition
         :param pulumi.Input[str] name: The name of the policy definition
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplicationAwareRoutingPolicyDefinitionSequenceArgs']]]] sequences: List of sequences
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplicationAwareRoutingPolicyDefinitionSequenceArgs', 'ApplicationAwareRoutingPolicyDefinitionSequenceArgsDict']]]] sequences: List of sequences
         :param pulumi.Input[str] type: Type
         :param pulumi.Input[int] version: The version of the object
         """

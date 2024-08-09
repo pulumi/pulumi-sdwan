@@ -522,7 +522,7 @@ class CellularControllerFeatureTemplate(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  cellular_interface_id: Optional[pulumi.Input[str]] = None,
                  cellular_interface_id_variable: Optional[pulumi.Input[str]] = None,
-                 data_profiles: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CellularControllerFeatureTemplateDataProfileArgs']]]]] = None,
+                 data_profiles: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CellularControllerFeatureTemplateDataProfileArgs', 'CellularControllerFeatureTemplateDataProfileArgsDict']]]]] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  device_types: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  firmware_auto_sim: Optional[pulumi.Input[bool]] = None,
@@ -549,7 +549,7 @@ class CellularControllerFeatureTemplate(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] cellular_interface_id: Cellular interface name
         :param pulumi.Input[str] cellular_interface_id_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CellularControllerFeatureTemplateDataProfileArgs']]]] data_profiles: Data Profile List
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CellularControllerFeatureTemplateDataProfileArgs', 'CellularControllerFeatureTemplateDataProfileArgsDict']]]] data_profiles: Data Profile List
         :param pulumi.Input[str] description: The description of the feature template
         :param pulumi.Input[Sequence[pulumi.Input[str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
                `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
@@ -597,7 +597,7 @@ class CellularControllerFeatureTemplate(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  cellular_interface_id: Optional[pulumi.Input[str]] = None,
                  cellular_interface_id_variable: Optional[pulumi.Input[str]] = None,
-                 data_profiles: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CellularControllerFeatureTemplateDataProfileArgs']]]]] = None,
+                 data_profiles: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CellularControllerFeatureTemplateDataProfileArgs', 'CellularControllerFeatureTemplateDataProfileArgsDict']]]]] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  device_types: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  firmware_auto_sim: Optional[pulumi.Input[bool]] = None,
@@ -650,7 +650,7 @@ class CellularControllerFeatureTemplate(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             cellular_interface_id: Optional[pulumi.Input[str]] = None,
             cellular_interface_id_variable: Optional[pulumi.Input[str]] = None,
-            data_profiles: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CellularControllerFeatureTemplateDataProfileArgs']]]]] = None,
+            data_profiles: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CellularControllerFeatureTemplateDataProfileArgs', 'CellularControllerFeatureTemplateDataProfileArgsDict']]]]] = None,
             description: Optional[pulumi.Input[str]] = None,
             device_types: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
             firmware_auto_sim: Optional[pulumi.Input[bool]] = None,
@@ -673,7 +673,7 @@ class CellularControllerFeatureTemplate(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] cellular_interface_id: Cellular interface name
         :param pulumi.Input[str] cellular_interface_id_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CellularControllerFeatureTemplateDataProfileArgs']]]] data_profiles: Data Profile List
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CellularControllerFeatureTemplateDataProfileArgs', 'CellularControllerFeatureTemplateDataProfileArgsDict']]]] data_profiles: Data Profile List
         :param pulumi.Input[str] description: The description of the feature template
         :param pulumi.Input[Sequence[pulumi.Input[str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
                `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,

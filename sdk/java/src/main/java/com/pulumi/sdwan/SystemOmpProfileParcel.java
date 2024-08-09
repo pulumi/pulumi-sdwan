@@ -969,7 +969,7 @@ public class SystemOmpProfileParcel extends com.pulumi.resources.CustomResource 
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public SystemOmpProfileParcel(String name) {
+    public SystemOmpProfileParcel(java.lang.String name) {
         this(name, SystemOmpProfileParcelArgs.Empty);
     }
     /**
@@ -977,7 +977,7 @@ public class SystemOmpProfileParcel extends com.pulumi.resources.CustomResource 
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SystemOmpProfileParcel(String name, SystemOmpProfileParcelArgs args) {
+    public SystemOmpProfileParcel(java.lang.String name, SystemOmpProfileParcelArgs args) {
         this(name, args, null);
     }
     /**
@@ -986,15 +986,22 @@ public class SystemOmpProfileParcel extends com.pulumi.resources.CustomResource 
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SystemOmpProfileParcel(String name, SystemOmpProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/systemOmpProfileParcel:SystemOmpProfileParcel", name, args == null ? SystemOmpProfileParcelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public SystemOmpProfileParcel(java.lang.String name, SystemOmpProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/systemOmpProfileParcel:SystemOmpProfileParcel", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private SystemOmpProfileParcel(String name, Output<String> id, @Nullable SystemOmpProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/systemOmpProfileParcel:SystemOmpProfileParcel", name, state, makeResourceOptions(options, id));
+    private SystemOmpProfileParcel(java.lang.String name, Output<java.lang.String> id, @Nullable SystemOmpProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/systemOmpProfileParcel:SystemOmpProfileParcel", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static SystemOmpProfileParcelArgs makeArgs(SystemOmpProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? SystemOmpProfileParcelArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -1010,7 +1017,7 @@ public class SystemOmpProfileParcel extends com.pulumi.resources.CustomResource 
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SystemOmpProfileParcel get(String name, Output<String> id, @Nullable SystemOmpProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SystemOmpProfileParcel get(java.lang.String name, Output<java.lang.String> id, @Nullable SystemOmpProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new SystemOmpProfileParcel(name, id, state, options);
     }
 }

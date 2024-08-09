@@ -163,7 +163,7 @@ public class Ipv6AclPolicyDefinition extends com.pulumi.resources.CustomResource
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public Ipv6AclPolicyDefinition(String name) {
+    public Ipv6AclPolicyDefinition(java.lang.String name) {
         this(name, Ipv6AclPolicyDefinitionArgs.Empty);
     }
     /**
@@ -171,7 +171,7 @@ public class Ipv6AclPolicyDefinition extends com.pulumi.resources.CustomResource
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public Ipv6AclPolicyDefinition(String name, Ipv6AclPolicyDefinitionArgs args) {
+    public Ipv6AclPolicyDefinition(java.lang.String name, Ipv6AclPolicyDefinitionArgs args) {
         this(name, args, null);
     }
     /**
@@ -180,15 +180,22 @@ public class Ipv6AclPolicyDefinition extends com.pulumi.resources.CustomResource
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Ipv6AclPolicyDefinition(String name, Ipv6AclPolicyDefinitionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/ipv6AclPolicyDefinition:Ipv6AclPolicyDefinition", name, args == null ? Ipv6AclPolicyDefinitionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public Ipv6AclPolicyDefinition(java.lang.String name, Ipv6AclPolicyDefinitionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/ipv6AclPolicyDefinition:Ipv6AclPolicyDefinition", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private Ipv6AclPolicyDefinition(String name, Output<String> id, @Nullable Ipv6AclPolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/ipv6AclPolicyDefinition:Ipv6AclPolicyDefinition", name, state, makeResourceOptions(options, id));
+    private Ipv6AclPolicyDefinition(java.lang.String name, Output<java.lang.String> id, @Nullable Ipv6AclPolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/ipv6AclPolicyDefinition:Ipv6AclPolicyDefinition", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static Ipv6AclPolicyDefinitionArgs makeArgs(Ipv6AclPolicyDefinitionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? Ipv6AclPolicyDefinitionArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -204,7 +211,7 @@ public class Ipv6AclPolicyDefinition extends com.pulumi.resources.CustomResource
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Ipv6AclPolicyDefinition get(String name, Output<String> id, @Nullable Ipv6AclPolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Ipv6AclPolicyDefinition get(java.lang.String name, Output<java.lang.String> id, @Nullable Ipv6AclPolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new Ipv6AclPolicyDefinition(name, id, state, options);
     }
 }

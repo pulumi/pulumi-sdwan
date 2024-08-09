@@ -226,7 +226,7 @@ class MeshTopologyPolicyDefinition(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 regions: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['MeshTopologyPolicyDefinitionRegionArgs']]]]] = None,
+                 regions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['MeshTopologyPolicyDefinitionRegionArgs', 'MeshTopologyPolicyDefinitionRegionArgsDict']]]]] = None,
                  vpn_list_id: Optional[pulumi.Input[str]] = None,
                  vpn_list_version: Optional[pulumi.Input[int]] = None,
                  __props__=None):
@@ -243,7 +243,7 @@ class MeshTopologyPolicyDefinition(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] description: The description of the policy definition
         :param pulumi.Input[str] name: The name of the policy definition
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['MeshTopologyPolicyDefinitionRegionArgs']]]] regions: List of regions
+        :param pulumi.Input[Sequence[pulumi.Input[Union['MeshTopologyPolicyDefinitionRegionArgs', 'MeshTopologyPolicyDefinitionRegionArgsDict']]]] regions: List of regions
         :param pulumi.Input[str] vpn_list_id: VPN list ID
         :param pulumi.Input[int] vpn_list_version: VPN list version
         """
@@ -279,7 +279,7 @@ class MeshTopologyPolicyDefinition(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 regions: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['MeshTopologyPolicyDefinitionRegionArgs']]]]] = None,
+                 regions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['MeshTopologyPolicyDefinitionRegionArgs', 'MeshTopologyPolicyDefinitionRegionArgsDict']]]]] = None,
                  vpn_list_id: Optional[pulumi.Input[str]] = None,
                  vpn_list_version: Optional[pulumi.Input[int]] = None,
                  __props__=None):
@@ -314,7 +314,7 @@ class MeshTopologyPolicyDefinition(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             description: Optional[pulumi.Input[str]] = None,
             name: Optional[pulumi.Input[str]] = None,
-            regions: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['MeshTopologyPolicyDefinitionRegionArgs']]]]] = None,
+            regions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['MeshTopologyPolicyDefinitionRegionArgs', 'MeshTopologyPolicyDefinitionRegionArgsDict']]]]] = None,
             type: Optional[pulumi.Input[str]] = None,
             version: Optional[pulumi.Input[int]] = None,
             vpn_list_id: Optional[pulumi.Input[str]] = None,
@@ -328,7 +328,7 @@ class MeshTopologyPolicyDefinition(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] description: The description of the policy definition
         :param pulumi.Input[str] name: The name of the policy definition
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['MeshTopologyPolicyDefinitionRegionArgs']]]] regions: List of regions
+        :param pulumi.Input[Sequence[pulumi.Input[Union['MeshTopologyPolicyDefinitionRegionArgs', 'MeshTopologyPolicyDefinitionRegionArgsDict']]]] regions: List of regions
         :param pulumi.Input[str] type: Type
         :param pulumi.Input[int] version: The version of the object
         :param pulumi.Input[str] vpn_list_id: VPN list ID

@@ -1064,8 +1064,8 @@ class CiscoOmpFeatureTemplate(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 advertise_ipv4_routes: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs']]]]] = None,
-                 advertise_ipv6_routes: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs']]]]] = None,
+                 advertise_ipv4_routes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgsDict']]]]] = None,
+                 advertise_ipv6_routes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgsDict']]]]] = None,
                  advertisement_interval: Optional[pulumi.Input[int]] = None,
                  advertisement_interval_variable: Optional[pulumi.Input[str]] = None,
                  description: Optional[pulumi.Input[str]] = None,
@@ -1108,8 +1108,8 @@ class CiscoOmpFeatureTemplate(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs']]]] advertise_ipv4_routes: Advertise locally learned routes to OMP
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs']]]] advertise_ipv6_routes: Advertise locally learned routes to OMP
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgsDict']]]] advertise_ipv4_routes: Advertise locally learned routes to OMP
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgsDict']]]] advertise_ipv6_routes: Advertise locally learned routes to OMP
         :param pulumi.Input[int] advertisement_interval: Set the time between OMP Update packets - Range: `0`-`65535` - Default value: `1`
         :param pulumi.Input[str] advertisement_interval_variable: Variable name
         :param pulumi.Input[str] description: The description of the feature template
@@ -1173,8 +1173,8 @@ class CiscoOmpFeatureTemplate(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 advertise_ipv4_routes: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs']]]]] = None,
-                 advertise_ipv6_routes: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs']]]]] = None,
+                 advertise_ipv4_routes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgsDict']]]]] = None,
+                 advertise_ipv6_routes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgsDict']]]]] = None,
                  advertisement_interval: Optional[pulumi.Input[int]] = None,
                  advertisement_interval_variable: Optional[pulumi.Input[str]] = None,
                  description: Optional[pulumi.Input[str]] = None,
@@ -1260,8 +1260,8 @@ class CiscoOmpFeatureTemplate(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            advertise_ipv4_routes: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs']]]]] = None,
-            advertise_ipv6_routes: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs']]]]] = None,
+            advertise_ipv4_routes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgsDict']]]]] = None,
+            advertise_ipv6_routes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgsDict']]]]] = None,
             advertisement_interval: Optional[pulumi.Input[int]] = None,
             advertisement_interval_variable: Optional[pulumi.Input[str]] = None,
             description: Optional[pulumi.Input[str]] = None,
@@ -1300,8 +1300,8 @@ class CiscoOmpFeatureTemplate(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs']]]] advertise_ipv4_routes: Advertise locally learned routes to OMP
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs']]]] advertise_ipv6_routes: Advertise locally learned routes to OMP
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgsDict']]]] advertise_ipv4_routes: Advertise locally learned routes to OMP
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgsDict']]]] advertise_ipv6_routes: Advertise locally learned routes to OMP
         :param pulumi.Input[int] advertisement_interval: Set the time between OMP Update packets - Range: `0`-`65535` - Default value: `1`
         :param pulumi.Input[str] advertisement_interval_variable: Variable name
         :param pulumi.Input[str] description: The description of the feature template

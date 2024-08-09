@@ -273,7 +273,7 @@ public class TlsSslProfilePolicyDefinition extends com.pulumi.resources.CustomRe
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public TlsSslProfilePolicyDefinition(String name) {
+    public TlsSslProfilePolicyDefinition(java.lang.String name) {
         this(name, TlsSslProfilePolicyDefinitionArgs.Empty);
     }
     /**
@@ -281,7 +281,7 @@ public class TlsSslProfilePolicyDefinition extends com.pulumi.resources.CustomRe
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public TlsSslProfilePolicyDefinition(String name, TlsSslProfilePolicyDefinitionArgs args) {
+    public TlsSslProfilePolicyDefinition(java.lang.String name, TlsSslProfilePolicyDefinitionArgs args) {
         this(name, args, null);
     }
     /**
@@ -290,15 +290,22 @@ public class TlsSslProfilePolicyDefinition extends com.pulumi.resources.CustomRe
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public TlsSslProfilePolicyDefinition(String name, TlsSslProfilePolicyDefinitionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/tlsSslProfilePolicyDefinition:TlsSslProfilePolicyDefinition", name, args == null ? TlsSslProfilePolicyDefinitionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public TlsSslProfilePolicyDefinition(java.lang.String name, TlsSslProfilePolicyDefinitionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/tlsSslProfilePolicyDefinition:TlsSslProfilePolicyDefinition", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private TlsSslProfilePolicyDefinition(String name, Output<String> id, @Nullable TlsSslProfilePolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/tlsSslProfilePolicyDefinition:TlsSslProfilePolicyDefinition", name, state, makeResourceOptions(options, id));
+    private TlsSslProfilePolicyDefinition(java.lang.String name, Output<java.lang.String> id, @Nullable TlsSslProfilePolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/tlsSslProfilePolicyDefinition:TlsSslProfilePolicyDefinition", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static TlsSslProfilePolicyDefinitionArgs makeArgs(TlsSslProfilePolicyDefinitionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? TlsSslProfilePolicyDefinitionArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -314,7 +321,7 @@ public class TlsSslProfilePolicyDefinition extends com.pulumi.resources.CustomRe
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TlsSslProfilePolicyDefinition get(String name, Output<String> id, @Nullable TlsSslProfilePolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static TlsSslProfilePolicyDefinition get(java.lang.String name, Output<java.lang.String> id, @Nullable TlsSslProfilePolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new TlsSslProfilePolicyDefinition(name, id, state, options);
     }
 }

@@ -654,11 +654,11 @@ class TransportWanVpnProfileParcel(pulumi.CustomResource):
                  enhance_ecmp_keying: Optional[pulumi.Input[bool]] = None,
                  enhance_ecmp_keying_variable: Optional[pulumi.Input[str]] = None,
                  feature_profile_id: Optional[pulumi.Input[str]] = None,
-                 ipv4_static_routes: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportWanVpnProfileParcelIpv4StaticRouteArgs']]]]] = None,
-                 ipv6_static_routes: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportWanVpnProfileParcelIpv6StaticRouteArgs']]]]] = None,
+                 ipv4_static_routes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnProfileParcelIpv4StaticRouteArgs', 'TransportWanVpnProfileParcelIpv4StaticRouteArgsDict']]]]] = None,
+                 ipv6_static_routes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnProfileParcelIpv6StaticRouteArgs', 'TransportWanVpnProfileParcelIpv6StaticRouteArgsDict']]]]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 nat64_v4_pools: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportWanVpnProfileParcelNat64V4PoolArgs']]]]] = None,
-                 new_host_mappings: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportWanVpnProfileParcelNewHostMappingArgs']]]]] = None,
+                 nat64_v4_pools: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnProfileParcelNat64V4PoolArgs', 'TransportWanVpnProfileParcelNat64V4PoolArgsDict']]]]] = None,
+                 new_host_mappings: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnProfileParcelNewHostMappingArgs', 'TransportWanVpnProfileParcelNewHostMappingArgsDict']]]]] = None,
                  primary_dns_address_ipv4: Optional[pulumi.Input[str]] = None,
                  primary_dns_address_ipv4_variable: Optional[pulumi.Input[str]] = None,
                  primary_dns_address_ipv6: Optional[pulumi.Input[str]] = None,
@@ -667,7 +667,7 @@ class TransportWanVpnProfileParcel(pulumi.CustomResource):
                  secondary_dns_address_ipv4_variable: Optional[pulumi.Input[str]] = None,
                  secondary_dns_address_ipv6: Optional[pulumi.Input[str]] = None,
                  secondary_dns_address_ipv6_variable: Optional[pulumi.Input[str]] = None,
-                 services: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportWanVpnProfileParcelServiceArgs']]]]] = None,
+                 services: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnProfileParcelServiceArgs', 'TransportWanVpnProfileParcelServiceArgsDict']]]]] = None,
                  vpn: Optional[pulumi.Input[int]] = None,
                  __props__=None):
         """
@@ -686,10 +686,10 @@ class TransportWanVpnProfileParcel(pulumi.CustomResource):
         :param pulumi.Input[bool] enhance_ecmp_keying: Enhance ECMP Keying - Default value: `false`
         :param pulumi.Input[str] enhance_ecmp_keying_variable: Variable name
         :param pulumi.Input[str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportWanVpnProfileParcelIpv4StaticRouteArgs']]]] ipv4_static_routes: IPv4 Static Route
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportWanVpnProfileParcelIpv6StaticRouteArgs']]]] ipv6_static_routes: IPv6 Static Route
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnProfileParcelIpv4StaticRouteArgs', 'TransportWanVpnProfileParcelIpv4StaticRouteArgsDict']]]] ipv4_static_routes: IPv4 Static Route
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnProfileParcelIpv6StaticRouteArgs', 'TransportWanVpnProfileParcelIpv6StaticRouteArgsDict']]]] ipv6_static_routes: IPv6 Static Route
         :param pulumi.Input[str] name: The name of the profile parcel
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportWanVpnProfileParcelNat64V4PoolArgs']]]] nat64_v4_pools: NAT64 V4 Pool
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnProfileParcelNat64V4PoolArgs', 'TransportWanVpnProfileParcelNat64V4PoolArgsDict']]]] nat64_v4_pools: NAT64 V4 Pool
         :param pulumi.Input[str] primary_dns_address_ipv4: Primary DNS Address (IPv4)
         :param pulumi.Input[str] primary_dns_address_ipv4_variable: Variable name
         :param pulumi.Input[str] primary_dns_address_ipv6: Primary DNS Address (IPv6)
@@ -698,7 +698,7 @@ class TransportWanVpnProfileParcel(pulumi.CustomResource):
         :param pulumi.Input[str] secondary_dns_address_ipv4_variable: Variable name
         :param pulumi.Input[str] secondary_dns_address_ipv6: Secondary DNS Address (IPv6)
         :param pulumi.Input[str] secondary_dns_address_ipv6_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportWanVpnProfileParcelServiceArgs']]]] services: Service
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnProfileParcelServiceArgs', 'TransportWanVpnProfileParcelServiceArgsDict']]]] services: Service
         :param pulumi.Input[int] vpn: VPN - Default value: `0`
         """
         ...
@@ -736,11 +736,11 @@ class TransportWanVpnProfileParcel(pulumi.CustomResource):
                  enhance_ecmp_keying: Optional[pulumi.Input[bool]] = None,
                  enhance_ecmp_keying_variable: Optional[pulumi.Input[str]] = None,
                  feature_profile_id: Optional[pulumi.Input[str]] = None,
-                 ipv4_static_routes: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportWanVpnProfileParcelIpv4StaticRouteArgs']]]]] = None,
-                 ipv6_static_routes: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportWanVpnProfileParcelIpv6StaticRouteArgs']]]]] = None,
+                 ipv4_static_routes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnProfileParcelIpv4StaticRouteArgs', 'TransportWanVpnProfileParcelIpv4StaticRouteArgsDict']]]]] = None,
+                 ipv6_static_routes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnProfileParcelIpv6StaticRouteArgs', 'TransportWanVpnProfileParcelIpv6StaticRouteArgsDict']]]]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 nat64_v4_pools: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportWanVpnProfileParcelNat64V4PoolArgs']]]]] = None,
-                 new_host_mappings: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportWanVpnProfileParcelNewHostMappingArgs']]]]] = None,
+                 nat64_v4_pools: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnProfileParcelNat64V4PoolArgs', 'TransportWanVpnProfileParcelNat64V4PoolArgsDict']]]]] = None,
+                 new_host_mappings: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnProfileParcelNewHostMappingArgs', 'TransportWanVpnProfileParcelNewHostMappingArgsDict']]]]] = None,
                  primary_dns_address_ipv4: Optional[pulumi.Input[str]] = None,
                  primary_dns_address_ipv4_variable: Optional[pulumi.Input[str]] = None,
                  primary_dns_address_ipv6: Optional[pulumi.Input[str]] = None,
@@ -749,7 +749,7 @@ class TransportWanVpnProfileParcel(pulumi.CustomResource):
                  secondary_dns_address_ipv4_variable: Optional[pulumi.Input[str]] = None,
                  secondary_dns_address_ipv6: Optional[pulumi.Input[str]] = None,
                  secondary_dns_address_ipv6_variable: Optional[pulumi.Input[str]] = None,
-                 services: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportWanVpnProfileParcelServiceArgs']]]]] = None,
+                 services: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnProfileParcelServiceArgs', 'TransportWanVpnProfileParcelServiceArgsDict']]]]] = None,
                  vpn: Optional[pulumi.Input[int]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -794,11 +794,11 @@ class TransportWanVpnProfileParcel(pulumi.CustomResource):
             enhance_ecmp_keying: Optional[pulumi.Input[bool]] = None,
             enhance_ecmp_keying_variable: Optional[pulumi.Input[str]] = None,
             feature_profile_id: Optional[pulumi.Input[str]] = None,
-            ipv4_static_routes: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportWanVpnProfileParcelIpv4StaticRouteArgs']]]]] = None,
-            ipv6_static_routes: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportWanVpnProfileParcelIpv6StaticRouteArgs']]]]] = None,
+            ipv4_static_routes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnProfileParcelIpv4StaticRouteArgs', 'TransportWanVpnProfileParcelIpv4StaticRouteArgsDict']]]]] = None,
+            ipv6_static_routes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnProfileParcelIpv6StaticRouteArgs', 'TransportWanVpnProfileParcelIpv6StaticRouteArgsDict']]]]] = None,
             name: Optional[pulumi.Input[str]] = None,
-            nat64_v4_pools: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportWanVpnProfileParcelNat64V4PoolArgs']]]]] = None,
-            new_host_mappings: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportWanVpnProfileParcelNewHostMappingArgs']]]]] = None,
+            nat64_v4_pools: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnProfileParcelNat64V4PoolArgs', 'TransportWanVpnProfileParcelNat64V4PoolArgsDict']]]]] = None,
+            new_host_mappings: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnProfileParcelNewHostMappingArgs', 'TransportWanVpnProfileParcelNewHostMappingArgsDict']]]]] = None,
             primary_dns_address_ipv4: Optional[pulumi.Input[str]] = None,
             primary_dns_address_ipv4_variable: Optional[pulumi.Input[str]] = None,
             primary_dns_address_ipv6: Optional[pulumi.Input[str]] = None,
@@ -807,7 +807,7 @@ class TransportWanVpnProfileParcel(pulumi.CustomResource):
             secondary_dns_address_ipv4_variable: Optional[pulumi.Input[str]] = None,
             secondary_dns_address_ipv6: Optional[pulumi.Input[str]] = None,
             secondary_dns_address_ipv6_variable: Optional[pulumi.Input[str]] = None,
-            services: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportWanVpnProfileParcelServiceArgs']]]]] = None,
+            services: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnProfileParcelServiceArgs', 'TransportWanVpnProfileParcelServiceArgsDict']]]]] = None,
             version: Optional[pulumi.Input[int]] = None,
             vpn: Optional[pulumi.Input[int]] = None) -> 'TransportWanVpnProfileParcel':
         """
@@ -821,10 +821,10 @@ class TransportWanVpnProfileParcel(pulumi.CustomResource):
         :param pulumi.Input[bool] enhance_ecmp_keying: Enhance ECMP Keying - Default value: `false`
         :param pulumi.Input[str] enhance_ecmp_keying_variable: Variable name
         :param pulumi.Input[str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportWanVpnProfileParcelIpv4StaticRouteArgs']]]] ipv4_static_routes: IPv4 Static Route
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportWanVpnProfileParcelIpv6StaticRouteArgs']]]] ipv6_static_routes: IPv6 Static Route
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnProfileParcelIpv4StaticRouteArgs', 'TransportWanVpnProfileParcelIpv4StaticRouteArgsDict']]]] ipv4_static_routes: IPv4 Static Route
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnProfileParcelIpv6StaticRouteArgs', 'TransportWanVpnProfileParcelIpv6StaticRouteArgsDict']]]] ipv6_static_routes: IPv6 Static Route
         :param pulumi.Input[str] name: The name of the profile parcel
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportWanVpnProfileParcelNat64V4PoolArgs']]]] nat64_v4_pools: NAT64 V4 Pool
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnProfileParcelNat64V4PoolArgs', 'TransportWanVpnProfileParcelNat64V4PoolArgsDict']]]] nat64_v4_pools: NAT64 V4 Pool
         :param pulumi.Input[str] primary_dns_address_ipv4: Primary DNS Address (IPv4)
         :param pulumi.Input[str] primary_dns_address_ipv4_variable: Variable name
         :param pulumi.Input[str] primary_dns_address_ipv6: Primary DNS Address (IPv6)
@@ -833,7 +833,7 @@ class TransportWanVpnProfileParcel(pulumi.CustomResource):
         :param pulumi.Input[str] secondary_dns_address_ipv4_variable: Variable name
         :param pulumi.Input[str] secondary_dns_address_ipv6: Secondary DNS Address (IPv6)
         :param pulumi.Input[str] secondary_dns_address_ipv6_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportWanVpnProfileParcelServiceArgs']]]] services: Service
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnProfileParcelServiceArgs', 'TransportWanVpnProfileParcelServiceArgsDict']]]] services: Service
         :param pulumi.Input[int] version: The version of the profile parcel
         :param pulumi.Input[int] vpn: VPN - Default value: `0`
         """

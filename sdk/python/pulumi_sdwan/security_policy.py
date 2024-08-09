@@ -493,14 +493,14 @@ class SecurityPolicy(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  audit_trail: Optional[pulumi.Input[str]] = None,
-                 definitions: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SecurityPolicyDefinitionArgs']]]]] = None,
+                 definitions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SecurityPolicyDefinitionArgs', 'SecurityPolicyDefinitionArgsDict']]]]] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  direct_internet_applications: Optional[pulumi.Input[str]] = None,
                  failure_mode: Optional[pulumi.Input[str]] = None,
                  high_speed_logging_server_ip: Optional[pulumi.Input[str]] = None,
                  high_speed_logging_server_port: Optional[pulumi.Input[str]] = None,
                  high_speed_logging_vpn: Optional[pulumi.Input[str]] = None,
-                 loggings: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SecurityPolicyLoggingArgs']]]]] = None,
+                 loggings: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SecurityPolicyLoggingArgs', 'SecurityPolicyLoggingArgsDict']]]]] = None,
                  match_statistics_per_filter: Optional[pulumi.Input[str]] = None,
                  mode: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
@@ -519,7 +519,7 @@ class SecurityPolicy(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] audit_trail: Audit trail - Choices: `on`, `off`
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SecurityPolicyDefinitionArgs']]]] definitions: List of policy definitions
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SecurityPolicyDefinitionArgs', 'SecurityPolicyDefinitionArgsDict']]]] definitions: List of policy definitions
         :param pulumi.Input[str] description: The description of the security policy
         :param pulumi.Input[str] direct_internet_applications: Bypass firewall policy and allow all Internet traffic to/from VPN 0 - Choices: `allow`, `deny`
         :param pulumi.Input[str] failure_mode: Failure mode - Choices: `open`, `close` - Default value: `open`
@@ -564,14 +564,14 @@ class SecurityPolicy(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  audit_trail: Optional[pulumi.Input[str]] = None,
-                 definitions: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SecurityPolicyDefinitionArgs']]]]] = None,
+                 definitions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SecurityPolicyDefinitionArgs', 'SecurityPolicyDefinitionArgsDict']]]]] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  direct_internet_applications: Optional[pulumi.Input[str]] = None,
                  failure_mode: Optional[pulumi.Input[str]] = None,
                  high_speed_logging_server_ip: Optional[pulumi.Input[str]] = None,
                  high_speed_logging_server_port: Optional[pulumi.Input[str]] = None,
                  high_speed_logging_vpn: Optional[pulumi.Input[str]] = None,
-                 loggings: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SecurityPolicyLoggingArgs']]]]] = None,
+                 loggings: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SecurityPolicyLoggingArgs', 'SecurityPolicyLoggingArgsDict']]]]] = None,
                  match_statistics_per_filter: Optional[pulumi.Input[str]] = None,
                  mode: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
@@ -616,14 +616,14 @@ class SecurityPolicy(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             audit_trail: Optional[pulumi.Input[str]] = None,
-            definitions: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SecurityPolicyDefinitionArgs']]]]] = None,
+            definitions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SecurityPolicyDefinitionArgs', 'SecurityPolicyDefinitionArgsDict']]]]] = None,
             description: Optional[pulumi.Input[str]] = None,
             direct_internet_applications: Optional[pulumi.Input[str]] = None,
             failure_mode: Optional[pulumi.Input[str]] = None,
             high_speed_logging_server_ip: Optional[pulumi.Input[str]] = None,
             high_speed_logging_server_port: Optional[pulumi.Input[str]] = None,
             high_speed_logging_vpn: Optional[pulumi.Input[str]] = None,
-            loggings: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SecurityPolicyLoggingArgs']]]]] = None,
+            loggings: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SecurityPolicyLoggingArgs', 'SecurityPolicyLoggingArgsDict']]]]] = None,
             match_statistics_per_filter: Optional[pulumi.Input[str]] = None,
             mode: Optional[pulumi.Input[str]] = None,
             name: Optional[pulumi.Input[str]] = None,
@@ -638,7 +638,7 @@ class SecurityPolicy(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] audit_trail: Audit trail - Choices: `on`, `off`
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SecurityPolicyDefinitionArgs']]]] definitions: List of policy definitions
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SecurityPolicyDefinitionArgs', 'SecurityPolicyDefinitionArgsDict']]]] definitions: List of policy definitions
         :param pulumi.Input[str] description: The description of the security policy
         :param pulumi.Input[str] direct_internet_applications: Bypass firewall policy and allow all Internet traffic to/from VPN 0 - Choices: `allow`, `deny`
         :param pulumi.Input[str] failure_mode: Failure mode - Choices: `open`, `close` - Default value: `open`

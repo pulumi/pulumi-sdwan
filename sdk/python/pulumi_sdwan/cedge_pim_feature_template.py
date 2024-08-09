@@ -948,17 +948,17 @@ class CedgePimFeatureTemplate(pulumi.CustomResource):
                  hash_mask_length_variable: Optional[pulumi.Input[str]] = None,
                  interface_name: Optional[pulumi.Input[str]] = None,
                  interface_name_variable: Optional[pulumi.Input[str]] = None,
-                 interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CedgePimFeatureTemplateInterfaceArgs']]]]] = None,
+                 interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateInterfaceArgs', 'CedgePimFeatureTemplateInterfaceArgsDict']]]]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  priority: Optional[pulumi.Input[int]] = None,
                  priority_variable: Optional[pulumi.Input[str]] = None,
                  range: Optional[pulumi.Input[str]] = None,
                  range_variable: Optional[pulumi.Input[str]] = None,
-                 rp_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CedgePimFeatureTemplateRpAddressArgs']]]]] = None,
-                 rp_announce_fields: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CedgePimFeatureTemplateRpAnnounceFieldArgs']]]]] = None,
+                 rp_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateRpAddressArgs', 'CedgePimFeatureTemplateRpAddressArgsDict']]]]] = None,
+                 rp_announce_fields: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateRpAnnounceFieldArgs', 'CedgePimFeatureTemplateRpAnnounceFieldArgsDict']]]]] = None,
                  rp_candidate_access_list: Optional[pulumi.Input[str]] = None,
                  rp_candidate_access_list_variable: Optional[pulumi.Input[str]] = None,
-                 rp_candidates: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CedgePimFeatureTemplateRpCandidateArgs']]]]] = None,
+                 rp_candidates: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateRpCandidateArgs', 'CedgePimFeatureTemplateRpCandidateArgsDict']]]]] = None,
                  scope: Optional[pulumi.Input[int]] = None,
                  scope_variable: Optional[pulumi.Input[str]] = None,
                  spt_threshold: Optional[pulumi.Input[str]] = None,
@@ -990,17 +990,17 @@ class CedgePimFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] hash_mask_length_variable: Variable name
         :param pulumi.Input[str] interface_name: Set RP Discovery Interface Name
         :param pulumi.Input[str] interface_name_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CedgePimFeatureTemplateInterfaceArgs']]]] interfaces: Set PIM interface parameters
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateInterfaceArgs', 'CedgePimFeatureTemplateInterfaceArgsDict']]]] interfaces: Set PIM interface parameters
         :param pulumi.Input[str] name: The name of the feature template
         :param pulumi.Input[int] priority: Set RP candidate priority - Range: `0`-`255`
         :param pulumi.Input[str] priority_variable: Variable name
         :param pulumi.Input[str] range: Set Access List for PIM SSM
         :param pulumi.Input[str] range_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CedgePimFeatureTemplateRpAddressArgs']]]] rp_addresses: Set Static RP Address(es)
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CedgePimFeatureTemplateRpAnnounceFieldArgs']]]] rp_announce_fields: Enable or disable RP Announce
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateRpAddressArgs', 'CedgePimFeatureTemplateRpAddressArgsDict']]]] rp_addresses: Set Static RP Address(es)
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateRpAnnounceFieldArgs', 'CedgePimFeatureTemplateRpAnnounceFieldArgsDict']]]] rp_announce_fields: Enable or disable RP Announce
         :param pulumi.Input[str] rp_candidate_access_list: Set BSR RP candidate filter
         :param pulumi.Input[str] rp_candidate_access_list_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CedgePimFeatureTemplateRpCandidateArgs']]]] rp_candidates: Set RP Discovery Scope
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateRpCandidateArgs', 'CedgePimFeatureTemplateRpCandidateArgsDict']]]] rp_candidates: Set RP Discovery Scope
         :param pulumi.Input[int] scope: Set RP Discovery Scope - Range: `1`-`255`
         :param pulumi.Input[str] scope_variable: Variable name
         :param pulumi.Input[str] spt_threshold: Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity`
@@ -1049,17 +1049,17 @@ class CedgePimFeatureTemplate(pulumi.CustomResource):
                  hash_mask_length_variable: Optional[pulumi.Input[str]] = None,
                  interface_name: Optional[pulumi.Input[str]] = None,
                  interface_name_variable: Optional[pulumi.Input[str]] = None,
-                 interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CedgePimFeatureTemplateInterfaceArgs']]]]] = None,
+                 interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateInterfaceArgs', 'CedgePimFeatureTemplateInterfaceArgsDict']]]]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  priority: Optional[pulumi.Input[int]] = None,
                  priority_variable: Optional[pulumi.Input[str]] = None,
                  range: Optional[pulumi.Input[str]] = None,
                  range_variable: Optional[pulumi.Input[str]] = None,
-                 rp_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CedgePimFeatureTemplateRpAddressArgs']]]]] = None,
-                 rp_announce_fields: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CedgePimFeatureTemplateRpAnnounceFieldArgs']]]]] = None,
+                 rp_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateRpAddressArgs', 'CedgePimFeatureTemplateRpAddressArgsDict']]]]] = None,
+                 rp_announce_fields: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateRpAnnounceFieldArgs', 'CedgePimFeatureTemplateRpAnnounceFieldArgsDict']]]]] = None,
                  rp_candidate_access_list: Optional[pulumi.Input[str]] = None,
                  rp_candidate_access_list_variable: Optional[pulumi.Input[str]] = None,
-                 rp_candidates: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CedgePimFeatureTemplateRpCandidateArgs']]]]] = None,
+                 rp_candidates: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateRpCandidateArgs', 'CedgePimFeatureTemplateRpCandidateArgsDict']]]]] = None,
                  scope: Optional[pulumi.Input[int]] = None,
                  scope_variable: Optional[pulumi.Input[str]] = None,
                  spt_threshold: Optional[pulumi.Input[str]] = None,
@@ -1128,17 +1128,17 @@ class CedgePimFeatureTemplate(pulumi.CustomResource):
             hash_mask_length_variable: Optional[pulumi.Input[str]] = None,
             interface_name: Optional[pulumi.Input[str]] = None,
             interface_name_variable: Optional[pulumi.Input[str]] = None,
-            interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CedgePimFeatureTemplateInterfaceArgs']]]]] = None,
+            interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateInterfaceArgs', 'CedgePimFeatureTemplateInterfaceArgsDict']]]]] = None,
             name: Optional[pulumi.Input[str]] = None,
             priority: Optional[pulumi.Input[int]] = None,
             priority_variable: Optional[pulumi.Input[str]] = None,
             range: Optional[pulumi.Input[str]] = None,
             range_variable: Optional[pulumi.Input[str]] = None,
-            rp_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CedgePimFeatureTemplateRpAddressArgs']]]]] = None,
-            rp_announce_fields: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CedgePimFeatureTemplateRpAnnounceFieldArgs']]]]] = None,
+            rp_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateRpAddressArgs', 'CedgePimFeatureTemplateRpAddressArgsDict']]]]] = None,
+            rp_announce_fields: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateRpAnnounceFieldArgs', 'CedgePimFeatureTemplateRpAnnounceFieldArgsDict']]]]] = None,
             rp_candidate_access_list: Optional[pulumi.Input[str]] = None,
             rp_candidate_access_list_variable: Optional[pulumi.Input[str]] = None,
-            rp_candidates: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CedgePimFeatureTemplateRpCandidateArgs']]]]] = None,
+            rp_candidates: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateRpCandidateArgs', 'CedgePimFeatureTemplateRpCandidateArgsDict']]]]] = None,
             scope: Optional[pulumi.Input[int]] = None,
             scope_variable: Optional[pulumi.Input[str]] = None,
             spt_threshold: Optional[pulumi.Input[str]] = None,
@@ -1166,17 +1166,17 @@ class CedgePimFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] hash_mask_length_variable: Variable name
         :param pulumi.Input[str] interface_name: Set RP Discovery Interface Name
         :param pulumi.Input[str] interface_name_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CedgePimFeatureTemplateInterfaceArgs']]]] interfaces: Set PIM interface parameters
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateInterfaceArgs', 'CedgePimFeatureTemplateInterfaceArgsDict']]]] interfaces: Set PIM interface parameters
         :param pulumi.Input[str] name: The name of the feature template
         :param pulumi.Input[int] priority: Set RP candidate priority - Range: `0`-`255`
         :param pulumi.Input[str] priority_variable: Variable name
         :param pulumi.Input[str] range: Set Access List for PIM SSM
         :param pulumi.Input[str] range_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CedgePimFeatureTemplateRpAddressArgs']]]] rp_addresses: Set Static RP Address(es)
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CedgePimFeatureTemplateRpAnnounceFieldArgs']]]] rp_announce_fields: Enable or disable RP Announce
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateRpAddressArgs', 'CedgePimFeatureTemplateRpAddressArgsDict']]]] rp_addresses: Set Static RP Address(es)
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateRpAnnounceFieldArgs', 'CedgePimFeatureTemplateRpAnnounceFieldArgsDict']]]] rp_announce_fields: Enable or disable RP Announce
         :param pulumi.Input[str] rp_candidate_access_list: Set BSR RP candidate filter
         :param pulumi.Input[str] rp_candidate_access_list_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CedgePimFeatureTemplateRpCandidateArgs']]]] rp_candidates: Set RP Discovery Scope
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateRpCandidateArgs', 'CedgePimFeatureTemplateRpCandidateArgsDict']]]] rp_candidates: Set RP Discovery Scope
         :param pulumi.Input[int] scope: Set RP Discovery Scope - Range: `1`-`255`
         :param pulumi.Input[str] scope_variable: Variable name
         :param pulumi.Input[str] spt_threshold: Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity`

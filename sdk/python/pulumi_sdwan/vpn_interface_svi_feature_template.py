@@ -1364,32 +1364,32 @@ class VpnInterfaceSviFeatureTemplate(pulumi.CustomResource):
                  ip_directed_broadcast_variable: Optional[pulumi.Input[str]] = None,
                  ip_mtu: Optional[pulumi.Input[int]] = None,
                  ip_mtu_variable: Optional[pulumi.Input[str]] = None,
-                 ipv4_access_lists: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplateIpv4AccessListArgs']]]]] = None,
+                 ipv4_access_lists: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv4AccessListArgs', 'VpnInterfaceSviFeatureTemplateIpv4AccessListArgsDict']]]]] = None,
                  ipv4_address: Optional[pulumi.Input[str]] = None,
                  ipv4_address_variable: Optional[pulumi.Input[str]] = None,
                  ipv4_dhcp_helper_variable: Optional[pulumi.Input[str]] = None,
                  ipv4_dhcp_helpers: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-                 ipv4_secondary_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplateIpv4SecondaryAddressArgs']]]]] = None,
-                 ipv4_vrrps: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplateIpv4VrrpArgs']]]]] = None,
-                 ipv6_access_lists: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplateIpv6AccessListArgs']]]]] = None,
+                 ipv4_secondary_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv4SecondaryAddressArgs', 'VpnInterfaceSviFeatureTemplateIpv4SecondaryAddressArgsDict']]]]] = None,
+                 ipv4_vrrps: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv4VrrpArgs', 'VpnInterfaceSviFeatureTemplateIpv4VrrpArgsDict']]]]] = None,
+                 ipv6_access_lists: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv6AccessListArgs', 'VpnInterfaceSviFeatureTemplateIpv6AccessListArgsDict']]]]] = None,
                  ipv6_address: Optional[pulumi.Input[str]] = None,
                  ipv6_address_variable: Optional[pulumi.Input[str]] = None,
                  ipv6_dhcp_client: Optional[pulumi.Input[bool]] = None,
                  ipv6_dhcp_client_variable: Optional[pulumi.Input[str]] = None,
                  ipv6_dhcp_distance: Optional[pulumi.Input[int]] = None,
                  ipv6_dhcp_distance_variable: Optional[pulumi.Input[str]] = None,
-                 ipv6_dhcp_helpers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplateIpv6DhcpHelperArgs']]]]] = None,
+                 ipv6_dhcp_helpers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv6DhcpHelperArgs', 'VpnInterfaceSviFeatureTemplateIpv6DhcpHelperArgsDict']]]]] = None,
                  ipv6_dhcp_rapid_commit: Optional[pulumi.Input[bool]] = None,
                  ipv6_dhcp_rapid_commit_variable: Optional[pulumi.Input[str]] = None,
-                 ipv6_secondary_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplateIpv6SecondaryAddressArgs']]]]] = None,
-                 ipv6_vrrps: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplateIpv6VrrpArgs']]]]] = None,
+                 ipv6_secondary_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv6SecondaryAddressArgs', 'VpnInterfaceSviFeatureTemplateIpv6SecondaryAddressArgsDict']]]]] = None,
+                 ipv6_vrrps: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv6VrrpArgs', 'VpnInterfaceSviFeatureTemplateIpv6VrrpArgsDict']]]]] = None,
                  mtu: Optional[pulumi.Input[int]] = None,
                  mtu_variable: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 policers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplatePolicerArgs']]]]] = None,
+                 policers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplatePolicerArgs', 'VpnInterfaceSviFeatureTemplatePolicerArgsDict']]]]] = None,
                  shutdown: Optional[pulumi.Input[bool]] = None,
                  shutdown_variable: Optional[pulumi.Input[str]] = None,
-                 static_arp_entries: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplateStaticArpEntryArgs']]]]] = None,
+                 static_arp_entries: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateStaticArpEntryArgs', 'VpnInterfaceSviFeatureTemplateStaticArpEntryArgsDict']]]]] = None,
                  tcp_mss_adjust: Optional[pulumi.Input[int]] = None,
                  tcp_mss_adjust_variable: Optional[pulumi.Input[str]] = None,
                  __props__=None):
@@ -1419,32 +1419,32 @@ class VpnInterfaceSviFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] ip_directed_broadcast_variable: Variable name
         :param pulumi.Input[int] ip_mtu: IP MTU <576..Interface MTU>, in bytes - Range: `576`-`9216` - Default value: `1500`
         :param pulumi.Input[str] ip_mtu_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplateIpv4AccessListArgs']]]] ipv4_access_lists: Apply ACL
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv4AccessListArgs', 'VpnInterfaceSviFeatureTemplateIpv4AccessListArgsDict']]]] ipv4_access_lists: Apply ACL
         :param pulumi.Input[str] ipv4_address: Assign IPv4 address
         :param pulumi.Input[str] ipv4_address_variable: Variable name
         :param pulumi.Input[str] ipv4_dhcp_helper_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[str]]] ipv4_dhcp_helpers: List of DHCP helper addresses
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplateIpv4SecondaryAddressArgs']]]] ipv4_secondary_addresses: Assign secondary IP addresses
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplateIpv4VrrpArgs']]]] ipv4_vrrps: Enable VRRP
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplateIpv6AccessListArgs']]]] ipv6_access_lists: Apply ACL
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv4SecondaryAddressArgs', 'VpnInterfaceSviFeatureTemplateIpv4SecondaryAddressArgsDict']]]] ipv4_secondary_addresses: Assign secondary IP addresses
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv4VrrpArgs', 'VpnInterfaceSviFeatureTemplateIpv4VrrpArgsDict']]]] ipv4_vrrps: Enable VRRP
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv6AccessListArgs', 'VpnInterfaceSviFeatureTemplateIpv6AccessListArgsDict']]]] ipv6_access_lists: Apply ACL
         :param pulumi.Input[str] ipv6_address: Assign IPv6 address
         :param pulumi.Input[str] ipv6_address_variable: Variable name
         :param pulumi.Input[bool] ipv6_dhcp_client: Enable DHCPv6 - Default value: `false`
         :param pulumi.Input[str] ipv6_dhcp_client_variable: Variable name
         :param pulumi.Input[int] ipv6_dhcp_distance: Set administrative distance for DHCP default route - Range: `1`-`65536` - Default value: `1`
         :param pulumi.Input[str] ipv6_dhcp_distance_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplateIpv6DhcpHelperArgs']]]] ipv6_dhcp_helpers: DHCPv6 Helper
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv6DhcpHelperArgs', 'VpnInterfaceSviFeatureTemplateIpv6DhcpHelperArgsDict']]]] ipv6_dhcp_helpers: DHCPv6 Helper
         :param pulumi.Input[bool] ipv6_dhcp_rapid_commit: Enable DHCPv6 rapid commit - Default value: `false`
         :param pulumi.Input[str] ipv6_dhcp_rapid_commit_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplateIpv6SecondaryAddressArgs']]]] ipv6_secondary_addresses: Assign secondary IPv6 addresses
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplateIpv6VrrpArgs']]]] ipv6_vrrps: Enable VRRP
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv6SecondaryAddressArgs', 'VpnInterfaceSviFeatureTemplateIpv6SecondaryAddressArgsDict']]]] ipv6_secondary_addresses: Assign secondary IPv6 addresses
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv6VrrpArgs', 'VpnInterfaceSviFeatureTemplateIpv6VrrpArgsDict']]]] ipv6_vrrps: Enable VRRP
         :param pulumi.Input[int] mtu: Interface MTU <1500..9216> in bytes - Range: `1500`-`9216` - Default value: `1500`
         :param pulumi.Input[str] mtu_variable: Variable name
         :param pulumi.Input[str] name: The name of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplatePolicerArgs']]]] policers: Enable policer
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplatePolicerArgs', 'VpnInterfaceSviFeatureTemplatePolicerArgsDict']]]] policers: Enable policer
         :param pulumi.Input[bool] shutdown: Administrative state - Default value: `true`
         :param pulumi.Input[str] shutdown_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplateStaticArpEntryArgs']]]] static_arp_entries: Configure static ARP entries
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateStaticArpEntryArgs', 'VpnInterfaceSviFeatureTemplateStaticArpEntryArgsDict']]]] static_arp_entries: Configure static ARP entries
         :param pulumi.Input[int] tcp_mss_adjust: TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
         :param pulumi.Input[str] tcp_mss_adjust_variable: Variable name
         """
@@ -1491,32 +1491,32 @@ class VpnInterfaceSviFeatureTemplate(pulumi.CustomResource):
                  ip_directed_broadcast_variable: Optional[pulumi.Input[str]] = None,
                  ip_mtu: Optional[pulumi.Input[int]] = None,
                  ip_mtu_variable: Optional[pulumi.Input[str]] = None,
-                 ipv4_access_lists: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplateIpv4AccessListArgs']]]]] = None,
+                 ipv4_access_lists: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv4AccessListArgs', 'VpnInterfaceSviFeatureTemplateIpv4AccessListArgsDict']]]]] = None,
                  ipv4_address: Optional[pulumi.Input[str]] = None,
                  ipv4_address_variable: Optional[pulumi.Input[str]] = None,
                  ipv4_dhcp_helper_variable: Optional[pulumi.Input[str]] = None,
                  ipv4_dhcp_helpers: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-                 ipv4_secondary_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplateIpv4SecondaryAddressArgs']]]]] = None,
-                 ipv4_vrrps: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplateIpv4VrrpArgs']]]]] = None,
-                 ipv6_access_lists: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplateIpv6AccessListArgs']]]]] = None,
+                 ipv4_secondary_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv4SecondaryAddressArgs', 'VpnInterfaceSviFeatureTemplateIpv4SecondaryAddressArgsDict']]]]] = None,
+                 ipv4_vrrps: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv4VrrpArgs', 'VpnInterfaceSviFeatureTemplateIpv4VrrpArgsDict']]]]] = None,
+                 ipv6_access_lists: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv6AccessListArgs', 'VpnInterfaceSviFeatureTemplateIpv6AccessListArgsDict']]]]] = None,
                  ipv6_address: Optional[pulumi.Input[str]] = None,
                  ipv6_address_variable: Optional[pulumi.Input[str]] = None,
                  ipv6_dhcp_client: Optional[pulumi.Input[bool]] = None,
                  ipv6_dhcp_client_variable: Optional[pulumi.Input[str]] = None,
                  ipv6_dhcp_distance: Optional[pulumi.Input[int]] = None,
                  ipv6_dhcp_distance_variable: Optional[pulumi.Input[str]] = None,
-                 ipv6_dhcp_helpers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplateIpv6DhcpHelperArgs']]]]] = None,
+                 ipv6_dhcp_helpers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv6DhcpHelperArgs', 'VpnInterfaceSviFeatureTemplateIpv6DhcpHelperArgsDict']]]]] = None,
                  ipv6_dhcp_rapid_commit: Optional[pulumi.Input[bool]] = None,
                  ipv6_dhcp_rapid_commit_variable: Optional[pulumi.Input[str]] = None,
-                 ipv6_secondary_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplateIpv6SecondaryAddressArgs']]]]] = None,
-                 ipv6_vrrps: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplateIpv6VrrpArgs']]]]] = None,
+                 ipv6_secondary_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv6SecondaryAddressArgs', 'VpnInterfaceSviFeatureTemplateIpv6SecondaryAddressArgsDict']]]]] = None,
+                 ipv6_vrrps: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv6VrrpArgs', 'VpnInterfaceSviFeatureTemplateIpv6VrrpArgsDict']]]]] = None,
                  mtu: Optional[pulumi.Input[int]] = None,
                  mtu_variable: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 policers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplatePolicerArgs']]]]] = None,
+                 policers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplatePolicerArgs', 'VpnInterfaceSviFeatureTemplatePolicerArgsDict']]]]] = None,
                  shutdown: Optional[pulumi.Input[bool]] = None,
                  shutdown_variable: Optional[pulumi.Input[str]] = None,
-                 static_arp_entries: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplateStaticArpEntryArgs']]]]] = None,
+                 static_arp_entries: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateStaticArpEntryArgs', 'VpnInterfaceSviFeatureTemplateStaticArpEntryArgsDict']]]]] = None,
                  tcp_mss_adjust: Optional[pulumi.Input[int]] = None,
                  tcp_mss_adjust_variable: Optional[pulumi.Input[str]] = None,
                  __props__=None):
@@ -1596,32 +1596,32 @@ class VpnInterfaceSviFeatureTemplate(pulumi.CustomResource):
             ip_directed_broadcast_variable: Optional[pulumi.Input[str]] = None,
             ip_mtu: Optional[pulumi.Input[int]] = None,
             ip_mtu_variable: Optional[pulumi.Input[str]] = None,
-            ipv4_access_lists: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplateIpv4AccessListArgs']]]]] = None,
+            ipv4_access_lists: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv4AccessListArgs', 'VpnInterfaceSviFeatureTemplateIpv4AccessListArgsDict']]]]] = None,
             ipv4_address: Optional[pulumi.Input[str]] = None,
             ipv4_address_variable: Optional[pulumi.Input[str]] = None,
             ipv4_dhcp_helper_variable: Optional[pulumi.Input[str]] = None,
             ipv4_dhcp_helpers: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-            ipv4_secondary_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplateIpv4SecondaryAddressArgs']]]]] = None,
-            ipv4_vrrps: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplateIpv4VrrpArgs']]]]] = None,
-            ipv6_access_lists: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplateIpv6AccessListArgs']]]]] = None,
+            ipv4_secondary_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv4SecondaryAddressArgs', 'VpnInterfaceSviFeatureTemplateIpv4SecondaryAddressArgsDict']]]]] = None,
+            ipv4_vrrps: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv4VrrpArgs', 'VpnInterfaceSviFeatureTemplateIpv4VrrpArgsDict']]]]] = None,
+            ipv6_access_lists: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv6AccessListArgs', 'VpnInterfaceSviFeatureTemplateIpv6AccessListArgsDict']]]]] = None,
             ipv6_address: Optional[pulumi.Input[str]] = None,
             ipv6_address_variable: Optional[pulumi.Input[str]] = None,
             ipv6_dhcp_client: Optional[pulumi.Input[bool]] = None,
             ipv6_dhcp_client_variable: Optional[pulumi.Input[str]] = None,
             ipv6_dhcp_distance: Optional[pulumi.Input[int]] = None,
             ipv6_dhcp_distance_variable: Optional[pulumi.Input[str]] = None,
-            ipv6_dhcp_helpers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplateIpv6DhcpHelperArgs']]]]] = None,
+            ipv6_dhcp_helpers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv6DhcpHelperArgs', 'VpnInterfaceSviFeatureTemplateIpv6DhcpHelperArgsDict']]]]] = None,
             ipv6_dhcp_rapid_commit: Optional[pulumi.Input[bool]] = None,
             ipv6_dhcp_rapid_commit_variable: Optional[pulumi.Input[str]] = None,
-            ipv6_secondary_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplateIpv6SecondaryAddressArgs']]]]] = None,
-            ipv6_vrrps: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplateIpv6VrrpArgs']]]]] = None,
+            ipv6_secondary_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv6SecondaryAddressArgs', 'VpnInterfaceSviFeatureTemplateIpv6SecondaryAddressArgsDict']]]]] = None,
+            ipv6_vrrps: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv6VrrpArgs', 'VpnInterfaceSviFeatureTemplateIpv6VrrpArgsDict']]]]] = None,
             mtu: Optional[pulumi.Input[int]] = None,
             mtu_variable: Optional[pulumi.Input[str]] = None,
             name: Optional[pulumi.Input[str]] = None,
-            policers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplatePolicerArgs']]]]] = None,
+            policers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplatePolicerArgs', 'VpnInterfaceSviFeatureTemplatePolicerArgsDict']]]]] = None,
             shutdown: Optional[pulumi.Input[bool]] = None,
             shutdown_variable: Optional[pulumi.Input[str]] = None,
-            static_arp_entries: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplateStaticArpEntryArgs']]]]] = None,
+            static_arp_entries: Optional[pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateStaticArpEntryArgs', 'VpnInterfaceSviFeatureTemplateStaticArpEntryArgsDict']]]]] = None,
             tcp_mss_adjust: Optional[pulumi.Input[int]] = None,
             tcp_mss_adjust_variable: Optional[pulumi.Input[str]] = None,
             template_type: Optional[pulumi.Input[str]] = None,
@@ -1647,32 +1647,32 @@ class VpnInterfaceSviFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] ip_directed_broadcast_variable: Variable name
         :param pulumi.Input[int] ip_mtu: IP MTU <576..Interface MTU>, in bytes - Range: `576`-`9216` - Default value: `1500`
         :param pulumi.Input[str] ip_mtu_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplateIpv4AccessListArgs']]]] ipv4_access_lists: Apply ACL
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv4AccessListArgs', 'VpnInterfaceSviFeatureTemplateIpv4AccessListArgsDict']]]] ipv4_access_lists: Apply ACL
         :param pulumi.Input[str] ipv4_address: Assign IPv4 address
         :param pulumi.Input[str] ipv4_address_variable: Variable name
         :param pulumi.Input[str] ipv4_dhcp_helper_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[str]]] ipv4_dhcp_helpers: List of DHCP helper addresses
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplateIpv4SecondaryAddressArgs']]]] ipv4_secondary_addresses: Assign secondary IP addresses
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplateIpv4VrrpArgs']]]] ipv4_vrrps: Enable VRRP
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplateIpv6AccessListArgs']]]] ipv6_access_lists: Apply ACL
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv4SecondaryAddressArgs', 'VpnInterfaceSviFeatureTemplateIpv4SecondaryAddressArgsDict']]]] ipv4_secondary_addresses: Assign secondary IP addresses
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv4VrrpArgs', 'VpnInterfaceSviFeatureTemplateIpv4VrrpArgsDict']]]] ipv4_vrrps: Enable VRRP
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv6AccessListArgs', 'VpnInterfaceSviFeatureTemplateIpv6AccessListArgsDict']]]] ipv6_access_lists: Apply ACL
         :param pulumi.Input[str] ipv6_address: Assign IPv6 address
         :param pulumi.Input[str] ipv6_address_variable: Variable name
         :param pulumi.Input[bool] ipv6_dhcp_client: Enable DHCPv6 - Default value: `false`
         :param pulumi.Input[str] ipv6_dhcp_client_variable: Variable name
         :param pulumi.Input[int] ipv6_dhcp_distance: Set administrative distance for DHCP default route - Range: `1`-`65536` - Default value: `1`
         :param pulumi.Input[str] ipv6_dhcp_distance_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplateIpv6DhcpHelperArgs']]]] ipv6_dhcp_helpers: DHCPv6 Helper
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv6DhcpHelperArgs', 'VpnInterfaceSviFeatureTemplateIpv6DhcpHelperArgsDict']]]] ipv6_dhcp_helpers: DHCPv6 Helper
         :param pulumi.Input[bool] ipv6_dhcp_rapid_commit: Enable DHCPv6 rapid commit - Default value: `false`
         :param pulumi.Input[str] ipv6_dhcp_rapid_commit_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplateIpv6SecondaryAddressArgs']]]] ipv6_secondary_addresses: Assign secondary IPv6 addresses
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplateIpv6VrrpArgs']]]] ipv6_vrrps: Enable VRRP
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv6SecondaryAddressArgs', 'VpnInterfaceSviFeatureTemplateIpv6SecondaryAddressArgsDict']]]] ipv6_secondary_addresses: Assign secondary IPv6 addresses
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv6VrrpArgs', 'VpnInterfaceSviFeatureTemplateIpv6VrrpArgsDict']]]] ipv6_vrrps: Enable VRRP
         :param pulumi.Input[int] mtu: Interface MTU <1500..9216> in bytes - Range: `1500`-`9216` - Default value: `1500`
         :param pulumi.Input[str] mtu_variable: Variable name
         :param pulumi.Input[str] name: The name of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplatePolicerArgs']]]] policers: Enable policer
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplatePolicerArgs', 'VpnInterfaceSviFeatureTemplatePolicerArgsDict']]]] policers: Enable policer
         :param pulumi.Input[bool] shutdown: Administrative state - Default value: `true`
         :param pulumi.Input[str] shutdown_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['VpnInterfaceSviFeatureTemplateStaticArpEntryArgs']]]] static_arp_entries: Configure static ARP entries
+        :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateStaticArpEntryArgs', 'VpnInterfaceSviFeatureTemplateStaticArpEntryArgsDict']]]] static_arp_entries: Configure static ARP entries
         :param pulumi.Input[int] tcp_mss_adjust: TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
         :param pulumi.Input[str] tcp_mss_adjust_variable: Variable name
         :param pulumi.Input[str] template_type: The template type
