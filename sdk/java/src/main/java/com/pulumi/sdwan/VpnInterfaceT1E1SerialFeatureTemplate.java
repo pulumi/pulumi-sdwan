@@ -1870,7 +1870,7 @@ public class VpnInterfaceT1E1SerialFeatureTemplate extends com.pulumi.resources.
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public VpnInterfaceT1E1SerialFeatureTemplate(String name) {
+    public VpnInterfaceT1E1SerialFeatureTemplate(java.lang.String name) {
         this(name, VpnInterfaceT1E1SerialFeatureTemplateArgs.Empty);
     }
     /**
@@ -1878,7 +1878,7 @@ public class VpnInterfaceT1E1SerialFeatureTemplate extends com.pulumi.resources.
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public VpnInterfaceT1E1SerialFeatureTemplate(String name, VpnInterfaceT1E1SerialFeatureTemplateArgs args) {
+    public VpnInterfaceT1E1SerialFeatureTemplate(java.lang.String name, VpnInterfaceT1E1SerialFeatureTemplateArgs args) {
         this(name, args, null);
     }
     /**
@@ -1887,15 +1887,22 @@ public class VpnInterfaceT1E1SerialFeatureTemplate extends com.pulumi.resources.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public VpnInterfaceT1E1SerialFeatureTemplate(String name, VpnInterfaceT1E1SerialFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/vpnInterfaceT1E1SerialFeatureTemplate:VpnInterfaceT1E1SerialFeatureTemplate", name, args == null ? VpnInterfaceT1E1SerialFeatureTemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public VpnInterfaceT1E1SerialFeatureTemplate(java.lang.String name, VpnInterfaceT1E1SerialFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/vpnInterfaceT1E1SerialFeatureTemplate:VpnInterfaceT1E1SerialFeatureTemplate", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private VpnInterfaceT1E1SerialFeatureTemplate(String name, Output<String> id, @Nullable VpnInterfaceT1E1SerialFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/vpnInterfaceT1E1SerialFeatureTemplate:VpnInterfaceT1E1SerialFeatureTemplate", name, state, makeResourceOptions(options, id));
+    private VpnInterfaceT1E1SerialFeatureTemplate(java.lang.String name, Output<java.lang.String> id, @Nullable VpnInterfaceT1E1SerialFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/vpnInterfaceT1E1SerialFeatureTemplate:VpnInterfaceT1E1SerialFeatureTemplate", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static VpnInterfaceT1E1SerialFeatureTemplateArgs makeArgs(VpnInterfaceT1E1SerialFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? VpnInterfaceT1E1SerialFeatureTemplateArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -1911,7 +1918,7 @@ public class VpnInterfaceT1E1SerialFeatureTemplate extends com.pulumi.resources.
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static VpnInterfaceT1E1SerialFeatureTemplate get(String name, Output<String> id, @Nullable VpnInterfaceT1E1SerialFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static VpnInterfaceT1E1SerialFeatureTemplate get(java.lang.String name, Output<java.lang.String> id, @Nullable VpnInterfaceT1E1SerialFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new VpnInterfaceT1E1SerialFeatureTemplate(name, id, state, options);
     }
 }

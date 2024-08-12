@@ -743,7 +743,7 @@ public class VpnInterfaceSviFeatureTemplate extends com.pulumi.resources.CustomR
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public VpnInterfaceSviFeatureTemplate(String name) {
+    public VpnInterfaceSviFeatureTemplate(java.lang.String name) {
         this(name, VpnInterfaceSviFeatureTemplateArgs.Empty);
     }
     /**
@@ -751,7 +751,7 @@ public class VpnInterfaceSviFeatureTemplate extends com.pulumi.resources.CustomR
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public VpnInterfaceSviFeatureTemplate(String name, VpnInterfaceSviFeatureTemplateArgs args) {
+    public VpnInterfaceSviFeatureTemplate(java.lang.String name, VpnInterfaceSviFeatureTemplateArgs args) {
         this(name, args, null);
     }
     /**
@@ -760,15 +760,22 @@ public class VpnInterfaceSviFeatureTemplate extends com.pulumi.resources.CustomR
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public VpnInterfaceSviFeatureTemplate(String name, VpnInterfaceSviFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/vpnInterfaceSviFeatureTemplate:VpnInterfaceSviFeatureTemplate", name, args == null ? VpnInterfaceSviFeatureTemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public VpnInterfaceSviFeatureTemplate(java.lang.String name, VpnInterfaceSviFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/vpnInterfaceSviFeatureTemplate:VpnInterfaceSviFeatureTemplate", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private VpnInterfaceSviFeatureTemplate(String name, Output<String> id, @Nullable VpnInterfaceSviFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/vpnInterfaceSviFeatureTemplate:VpnInterfaceSviFeatureTemplate", name, state, makeResourceOptions(options, id));
+    private VpnInterfaceSviFeatureTemplate(java.lang.String name, Output<java.lang.String> id, @Nullable VpnInterfaceSviFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/vpnInterfaceSviFeatureTemplate:VpnInterfaceSviFeatureTemplate", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static VpnInterfaceSviFeatureTemplateArgs makeArgs(VpnInterfaceSviFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? VpnInterfaceSviFeatureTemplateArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -784,7 +791,7 @@ public class VpnInterfaceSviFeatureTemplate extends com.pulumi.resources.CustomR
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static VpnInterfaceSviFeatureTemplate get(String name, Output<String> id, @Nullable VpnInterfaceSviFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static VpnInterfaceSviFeatureTemplate get(java.lang.String name, Output<java.lang.String> id, @Nullable VpnInterfaceSviFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new VpnInterfaceSviFeatureTemplate(name, id, state, options);
     }
 }

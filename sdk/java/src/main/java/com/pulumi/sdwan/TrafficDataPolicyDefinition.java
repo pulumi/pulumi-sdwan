@@ -165,7 +165,7 @@ public class TrafficDataPolicyDefinition extends com.pulumi.resources.CustomReso
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public TrafficDataPolicyDefinition(String name) {
+    public TrafficDataPolicyDefinition(java.lang.String name) {
         this(name, TrafficDataPolicyDefinitionArgs.Empty);
     }
     /**
@@ -173,7 +173,7 @@ public class TrafficDataPolicyDefinition extends com.pulumi.resources.CustomReso
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public TrafficDataPolicyDefinition(String name, TrafficDataPolicyDefinitionArgs args) {
+    public TrafficDataPolicyDefinition(java.lang.String name, TrafficDataPolicyDefinitionArgs args) {
         this(name, args, null);
     }
     /**
@@ -182,15 +182,22 @@ public class TrafficDataPolicyDefinition extends com.pulumi.resources.CustomReso
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public TrafficDataPolicyDefinition(String name, TrafficDataPolicyDefinitionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/trafficDataPolicyDefinition:TrafficDataPolicyDefinition", name, args == null ? TrafficDataPolicyDefinitionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public TrafficDataPolicyDefinition(java.lang.String name, TrafficDataPolicyDefinitionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/trafficDataPolicyDefinition:TrafficDataPolicyDefinition", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private TrafficDataPolicyDefinition(String name, Output<String> id, @Nullable TrafficDataPolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/trafficDataPolicyDefinition:TrafficDataPolicyDefinition", name, state, makeResourceOptions(options, id));
+    private TrafficDataPolicyDefinition(java.lang.String name, Output<java.lang.String> id, @Nullable TrafficDataPolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/trafficDataPolicyDefinition:TrafficDataPolicyDefinition", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static TrafficDataPolicyDefinitionArgs makeArgs(TrafficDataPolicyDefinitionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? TrafficDataPolicyDefinitionArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -206,7 +213,7 @@ public class TrafficDataPolicyDefinition extends com.pulumi.resources.CustomReso
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TrafficDataPolicyDefinition get(String name, Output<String> id, @Nullable TrafficDataPolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static TrafficDataPolicyDefinition get(java.lang.String name, Output<java.lang.String> id, @Nullable TrafficDataPolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new TrafficDataPolicyDefinition(name, id, state, options);
     }
 }

@@ -2346,7 +2346,7 @@ class CiscoOspfv3FeatureTemplate(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  device_types: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-                 ipv4_areas: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfv3FeatureTemplateIpv4AreaArgs']]]]] = None,
+                 ipv4_areas: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv4AreaArgs', 'CiscoOspfv3FeatureTemplateIpv4AreaArgsDict']]]]] = None,
                  ipv4_auto_cost_reference_bandwidth: Optional[pulumi.Input[int]] = None,
                  ipv4_auto_cost_reference_bandwidth_variable: Optional[pulumi.Input[str]] = None,
                  ipv4_compatible_rfc1583: Optional[pulumi.Input[bool]] = None,
@@ -2368,10 +2368,10 @@ class CiscoOspfv3FeatureTemplate(pulumi.CustomResource):
                  ipv4_distance_variable: Optional[pulumi.Input[str]] = None,
                  ipv4_filter: Optional[pulumi.Input[bool]] = None,
                  ipv4_filter_variable: Optional[pulumi.Input[str]] = None,
-                 ipv4_max_metric_router_lsas: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgs']]]]] = None,
+                 ipv4_max_metric_router_lsas: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgs', 'CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgsDict']]]]] = None,
                  ipv4_policy_name: Optional[pulumi.Input[str]] = None,
                  ipv4_policy_name_variable: Optional[pulumi.Input[str]] = None,
-                 ipv4_redistributes: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfv3FeatureTemplateIpv4RedistributeArgs']]]]] = None,
+                 ipv4_redistributes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv4RedistributeArgs', 'CiscoOspfv3FeatureTemplateIpv4RedistributeArgsDict']]]]] = None,
                  ipv4_router_id: Optional[pulumi.Input[str]] = None,
                  ipv4_router_id_variable: Optional[pulumi.Input[str]] = None,
                  ipv4_timers_spf_delay: Optional[pulumi.Input[int]] = None,
@@ -2380,7 +2380,7 @@ class CiscoOspfv3FeatureTemplate(pulumi.CustomResource):
                  ipv4_timers_spf_initial_hold_variable: Optional[pulumi.Input[str]] = None,
                  ipv4_timers_spf_max_hold: Optional[pulumi.Input[int]] = None,
                  ipv4_timers_spf_max_hold_variable: Optional[pulumi.Input[str]] = None,
-                 ipv6_areas: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfv3FeatureTemplateIpv6AreaArgs']]]]] = None,
+                 ipv6_areas: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv6AreaArgs', 'CiscoOspfv3FeatureTemplateIpv6AreaArgsDict']]]]] = None,
                  ipv6_auto_cost_reference_bandwidth: Optional[pulumi.Input[int]] = None,
                  ipv6_auto_cost_reference_bandwidth_variable: Optional[pulumi.Input[str]] = None,
                  ipv6_compatible_rfc1583: Optional[pulumi.Input[bool]] = None,
@@ -2402,10 +2402,10 @@ class CiscoOspfv3FeatureTemplate(pulumi.CustomResource):
                  ipv6_distance_variable: Optional[pulumi.Input[str]] = None,
                  ipv6_filter: Optional[pulumi.Input[bool]] = None,
                  ipv6_filter_variable: Optional[pulumi.Input[str]] = None,
-                 ipv6_max_metric_router_lsas: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgs']]]]] = None,
+                 ipv6_max_metric_router_lsas: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgs', 'CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgsDict']]]]] = None,
                  ipv6_policy_name: Optional[pulumi.Input[str]] = None,
                  ipv6_policy_name_variable: Optional[pulumi.Input[str]] = None,
-                 ipv6_redistributes: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfv3FeatureTemplateIpv6RedistributeArgs']]]]] = None,
+                 ipv6_redistributes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv6RedistributeArgs', 'CiscoOspfv3FeatureTemplateIpv6RedistributeArgsDict']]]]] = None,
                  ipv6_router_id: Optional[pulumi.Input[str]] = None,
                  ipv6_router_id_variable: Optional[pulumi.Input[str]] = None,
                  ipv6_timers_spf_delay: Optional[pulumi.Input[int]] = None,
@@ -2432,7 +2432,7 @@ class CiscoOspfv3FeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
                `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
                `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfv3FeatureTemplateIpv4AreaArgs']]]] ipv4_areas: Configure OSPF area
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv4AreaArgs', 'CiscoOspfv3FeatureTemplateIpv4AreaArgsDict']]]] ipv4_areas: Configure OSPF area
         :param pulumi.Input[int] ipv4_auto_cost_reference_bandwidth: Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
         :param pulumi.Input[str] ipv4_auto_cost_reference_bandwidth_variable: Variable name
         :param pulumi.Input[bool] ipv4_compatible_rfc1583: Calculate summary route cost based on RFC 1583 - Default value: `true`
@@ -2454,10 +2454,10 @@ class CiscoOspfv3FeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] ipv4_distance_variable: Variable name
         :param pulumi.Input[bool] ipv4_filter: Filter - Default value: `false`
         :param pulumi.Input[str] ipv4_filter_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgs']]]] ipv4_max_metric_router_lsas: Advertise own router LSA with infinite distance
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgs', 'CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgsDict']]]] ipv4_max_metric_router_lsas: Advertise own router LSA with infinite distance
         :param pulumi.Input[str] ipv4_policy_name: Policy Name
         :param pulumi.Input[str] ipv4_policy_name_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfv3FeatureTemplateIpv4RedistributeArgs']]]] ipv4_redistributes: Redistribute routes
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv4RedistributeArgs', 'CiscoOspfv3FeatureTemplateIpv4RedistributeArgsDict']]]] ipv4_redistributes: Redistribute routes
         :param pulumi.Input[str] ipv4_router_id: Set OSPF router ID to override system IP address
         :param pulumi.Input[str] ipv4_router_id_variable: Variable name
         :param pulumi.Input[int] ipv4_timers_spf_delay: Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
@@ -2466,7 +2466,7 @@ class CiscoOspfv3FeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] ipv4_timers_spf_initial_hold_variable: Variable name
         :param pulumi.Input[int] ipv4_timers_spf_max_hold: Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
         :param pulumi.Input[str] ipv4_timers_spf_max_hold_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfv3FeatureTemplateIpv6AreaArgs']]]] ipv6_areas: Configure OSPF area
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv6AreaArgs', 'CiscoOspfv3FeatureTemplateIpv6AreaArgsDict']]]] ipv6_areas: Configure OSPF area
         :param pulumi.Input[int] ipv6_auto_cost_reference_bandwidth: Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
         :param pulumi.Input[str] ipv6_auto_cost_reference_bandwidth_variable: Variable name
         :param pulumi.Input[bool] ipv6_compatible_rfc1583: Calculate summary route cost based on RFC 1583 - Default value: `true`
@@ -2488,10 +2488,10 @@ class CiscoOspfv3FeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] ipv6_distance_variable: Variable name
         :param pulumi.Input[bool] ipv6_filter: Filter - Default value: `false`
         :param pulumi.Input[str] ipv6_filter_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgs']]]] ipv6_max_metric_router_lsas: Advertise own router LSA with infinite distance
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgs', 'CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgsDict']]]] ipv6_max_metric_router_lsas: Advertise own router LSA with infinite distance
         :param pulumi.Input[str] ipv6_policy_name: Name
         :param pulumi.Input[str] ipv6_policy_name_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfv3FeatureTemplateIpv6RedistributeArgs']]]] ipv6_redistributes: Redistribute routes
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv6RedistributeArgs', 'CiscoOspfv3FeatureTemplateIpv6RedistributeArgsDict']]]] ipv6_redistributes: Redistribute routes
         :param pulumi.Input[str] ipv6_router_id: Set OSPF router ID to override system IP address
         :param pulumi.Input[str] ipv6_router_id_variable: Variable name
         :param pulumi.Input[int] ipv6_timers_spf_delay: Set delay from first change received until performing SPF calculation - Range: `0`-`600000` - Default value: `200`
@@ -2535,7 +2535,7 @@ class CiscoOspfv3FeatureTemplate(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  device_types: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-                 ipv4_areas: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfv3FeatureTemplateIpv4AreaArgs']]]]] = None,
+                 ipv4_areas: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv4AreaArgs', 'CiscoOspfv3FeatureTemplateIpv4AreaArgsDict']]]]] = None,
                  ipv4_auto_cost_reference_bandwidth: Optional[pulumi.Input[int]] = None,
                  ipv4_auto_cost_reference_bandwidth_variable: Optional[pulumi.Input[str]] = None,
                  ipv4_compatible_rfc1583: Optional[pulumi.Input[bool]] = None,
@@ -2557,10 +2557,10 @@ class CiscoOspfv3FeatureTemplate(pulumi.CustomResource):
                  ipv4_distance_variable: Optional[pulumi.Input[str]] = None,
                  ipv4_filter: Optional[pulumi.Input[bool]] = None,
                  ipv4_filter_variable: Optional[pulumi.Input[str]] = None,
-                 ipv4_max_metric_router_lsas: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgs']]]]] = None,
+                 ipv4_max_metric_router_lsas: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgs', 'CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgsDict']]]]] = None,
                  ipv4_policy_name: Optional[pulumi.Input[str]] = None,
                  ipv4_policy_name_variable: Optional[pulumi.Input[str]] = None,
-                 ipv4_redistributes: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfv3FeatureTemplateIpv4RedistributeArgs']]]]] = None,
+                 ipv4_redistributes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv4RedistributeArgs', 'CiscoOspfv3FeatureTemplateIpv4RedistributeArgsDict']]]]] = None,
                  ipv4_router_id: Optional[pulumi.Input[str]] = None,
                  ipv4_router_id_variable: Optional[pulumi.Input[str]] = None,
                  ipv4_timers_spf_delay: Optional[pulumi.Input[int]] = None,
@@ -2569,7 +2569,7 @@ class CiscoOspfv3FeatureTemplate(pulumi.CustomResource):
                  ipv4_timers_spf_initial_hold_variable: Optional[pulumi.Input[str]] = None,
                  ipv4_timers_spf_max_hold: Optional[pulumi.Input[int]] = None,
                  ipv4_timers_spf_max_hold_variable: Optional[pulumi.Input[str]] = None,
-                 ipv6_areas: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfv3FeatureTemplateIpv6AreaArgs']]]]] = None,
+                 ipv6_areas: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv6AreaArgs', 'CiscoOspfv3FeatureTemplateIpv6AreaArgsDict']]]]] = None,
                  ipv6_auto_cost_reference_bandwidth: Optional[pulumi.Input[int]] = None,
                  ipv6_auto_cost_reference_bandwidth_variable: Optional[pulumi.Input[str]] = None,
                  ipv6_compatible_rfc1583: Optional[pulumi.Input[bool]] = None,
@@ -2591,10 +2591,10 @@ class CiscoOspfv3FeatureTemplate(pulumi.CustomResource):
                  ipv6_distance_variable: Optional[pulumi.Input[str]] = None,
                  ipv6_filter: Optional[pulumi.Input[bool]] = None,
                  ipv6_filter_variable: Optional[pulumi.Input[str]] = None,
-                 ipv6_max_metric_router_lsas: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgs']]]]] = None,
+                 ipv6_max_metric_router_lsas: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgs', 'CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgsDict']]]]] = None,
                  ipv6_policy_name: Optional[pulumi.Input[str]] = None,
                  ipv6_policy_name_variable: Optional[pulumi.Input[str]] = None,
-                 ipv6_redistributes: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfv3FeatureTemplateIpv6RedistributeArgs']]]]] = None,
+                 ipv6_redistributes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv6RedistributeArgs', 'CiscoOspfv3FeatureTemplateIpv6RedistributeArgsDict']]]]] = None,
                  ipv6_router_id: Optional[pulumi.Input[str]] = None,
                  ipv6_router_id_variable: Optional[pulumi.Input[str]] = None,
                  ipv6_timers_spf_delay: Optional[pulumi.Input[int]] = None,
@@ -2702,7 +2702,7 @@ class CiscoOspfv3FeatureTemplate(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             description: Optional[pulumi.Input[str]] = None,
             device_types: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-            ipv4_areas: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfv3FeatureTemplateIpv4AreaArgs']]]]] = None,
+            ipv4_areas: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv4AreaArgs', 'CiscoOspfv3FeatureTemplateIpv4AreaArgsDict']]]]] = None,
             ipv4_auto_cost_reference_bandwidth: Optional[pulumi.Input[int]] = None,
             ipv4_auto_cost_reference_bandwidth_variable: Optional[pulumi.Input[str]] = None,
             ipv4_compatible_rfc1583: Optional[pulumi.Input[bool]] = None,
@@ -2724,10 +2724,10 @@ class CiscoOspfv3FeatureTemplate(pulumi.CustomResource):
             ipv4_distance_variable: Optional[pulumi.Input[str]] = None,
             ipv4_filter: Optional[pulumi.Input[bool]] = None,
             ipv4_filter_variable: Optional[pulumi.Input[str]] = None,
-            ipv4_max_metric_router_lsas: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgs']]]]] = None,
+            ipv4_max_metric_router_lsas: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgs', 'CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgsDict']]]]] = None,
             ipv4_policy_name: Optional[pulumi.Input[str]] = None,
             ipv4_policy_name_variable: Optional[pulumi.Input[str]] = None,
-            ipv4_redistributes: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfv3FeatureTemplateIpv4RedistributeArgs']]]]] = None,
+            ipv4_redistributes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv4RedistributeArgs', 'CiscoOspfv3FeatureTemplateIpv4RedistributeArgsDict']]]]] = None,
             ipv4_router_id: Optional[pulumi.Input[str]] = None,
             ipv4_router_id_variable: Optional[pulumi.Input[str]] = None,
             ipv4_timers_spf_delay: Optional[pulumi.Input[int]] = None,
@@ -2736,7 +2736,7 @@ class CiscoOspfv3FeatureTemplate(pulumi.CustomResource):
             ipv4_timers_spf_initial_hold_variable: Optional[pulumi.Input[str]] = None,
             ipv4_timers_spf_max_hold: Optional[pulumi.Input[int]] = None,
             ipv4_timers_spf_max_hold_variable: Optional[pulumi.Input[str]] = None,
-            ipv6_areas: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfv3FeatureTemplateIpv6AreaArgs']]]]] = None,
+            ipv6_areas: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv6AreaArgs', 'CiscoOspfv3FeatureTemplateIpv6AreaArgsDict']]]]] = None,
             ipv6_auto_cost_reference_bandwidth: Optional[pulumi.Input[int]] = None,
             ipv6_auto_cost_reference_bandwidth_variable: Optional[pulumi.Input[str]] = None,
             ipv6_compatible_rfc1583: Optional[pulumi.Input[bool]] = None,
@@ -2758,10 +2758,10 @@ class CiscoOspfv3FeatureTemplate(pulumi.CustomResource):
             ipv6_distance_variable: Optional[pulumi.Input[str]] = None,
             ipv6_filter: Optional[pulumi.Input[bool]] = None,
             ipv6_filter_variable: Optional[pulumi.Input[str]] = None,
-            ipv6_max_metric_router_lsas: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgs']]]]] = None,
+            ipv6_max_metric_router_lsas: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgs', 'CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgsDict']]]]] = None,
             ipv6_policy_name: Optional[pulumi.Input[str]] = None,
             ipv6_policy_name_variable: Optional[pulumi.Input[str]] = None,
-            ipv6_redistributes: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfv3FeatureTemplateIpv6RedistributeArgs']]]]] = None,
+            ipv6_redistributes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv6RedistributeArgs', 'CiscoOspfv3FeatureTemplateIpv6RedistributeArgsDict']]]]] = None,
             ipv6_router_id: Optional[pulumi.Input[str]] = None,
             ipv6_router_id_variable: Optional[pulumi.Input[str]] = None,
             ipv6_timers_spf_delay: Optional[pulumi.Input[int]] = None,
@@ -2784,7 +2784,7 @@ class CiscoOspfv3FeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
                `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
                `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfv3FeatureTemplateIpv4AreaArgs']]]] ipv4_areas: Configure OSPF area
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv4AreaArgs', 'CiscoOspfv3FeatureTemplateIpv4AreaArgsDict']]]] ipv4_areas: Configure OSPF area
         :param pulumi.Input[int] ipv4_auto_cost_reference_bandwidth: Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
         :param pulumi.Input[str] ipv4_auto_cost_reference_bandwidth_variable: Variable name
         :param pulumi.Input[bool] ipv4_compatible_rfc1583: Calculate summary route cost based on RFC 1583 - Default value: `true`
@@ -2806,10 +2806,10 @@ class CiscoOspfv3FeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] ipv4_distance_variable: Variable name
         :param pulumi.Input[bool] ipv4_filter: Filter - Default value: `false`
         :param pulumi.Input[str] ipv4_filter_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgs']]]] ipv4_max_metric_router_lsas: Advertise own router LSA with infinite distance
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgs', 'CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgsDict']]]] ipv4_max_metric_router_lsas: Advertise own router LSA with infinite distance
         :param pulumi.Input[str] ipv4_policy_name: Policy Name
         :param pulumi.Input[str] ipv4_policy_name_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfv3FeatureTemplateIpv4RedistributeArgs']]]] ipv4_redistributes: Redistribute routes
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv4RedistributeArgs', 'CiscoOspfv3FeatureTemplateIpv4RedistributeArgsDict']]]] ipv4_redistributes: Redistribute routes
         :param pulumi.Input[str] ipv4_router_id: Set OSPF router ID to override system IP address
         :param pulumi.Input[str] ipv4_router_id_variable: Variable name
         :param pulumi.Input[int] ipv4_timers_spf_delay: Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
@@ -2818,7 +2818,7 @@ class CiscoOspfv3FeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] ipv4_timers_spf_initial_hold_variable: Variable name
         :param pulumi.Input[int] ipv4_timers_spf_max_hold: Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
         :param pulumi.Input[str] ipv4_timers_spf_max_hold_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfv3FeatureTemplateIpv6AreaArgs']]]] ipv6_areas: Configure OSPF area
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv6AreaArgs', 'CiscoOspfv3FeatureTemplateIpv6AreaArgsDict']]]] ipv6_areas: Configure OSPF area
         :param pulumi.Input[int] ipv6_auto_cost_reference_bandwidth: Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
         :param pulumi.Input[str] ipv6_auto_cost_reference_bandwidth_variable: Variable name
         :param pulumi.Input[bool] ipv6_compatible_rfc1583: Calculate summary route cost based on RFC 1583 - Default value: `true`
@@ -2840,10 +2840,10 @@ class CiscoOspfv3FeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] ipv6_distance_variable: Variable name
         :param pulumi.Input[bool] ipv6_filter: Filter - Default value: `false`
         :param pulumi.Input[str] ipv6_filter_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgs']]]] ipv6_max_metric_router_lsas: Advertise own router LSA with infinite distance
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgs', 'CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgsDict']]]] ipv6_max_metric_router_lsas: Advertise own router LSA with infinite distance
         :param pulumi.Input[str] ipv6_policy_name: Name
         :param pulumi.Input[str] ipv6_policy_name_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoOspfv3FeatureTemplateIpv6RedistributeArgs']]]] ipv6_redistributes: Redistribute routes
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoOspfv3FeatureTemplateIpv6RedistributeArgs', 'CiscoOspfv3FeatureTemplateIpv6RedistributeArgsDict']]]] ipv6_redistributes: Redistribute routes
         :param pulumi.Input[str] ipv6_router_id: Set OSPF router ID to override system IP address
         :param pulumi.Input[str] ipv6_router_id_variable: Variable name
         :param pulumi.Input[int] ipv6_timers_spf_delay: Set delay from first change received until performing SPF calculation - Range: `0`-`600000` - Default value: `200`

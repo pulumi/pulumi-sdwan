@@ -828,7 +828,7 @@ public class TransportManagementVpnInterfaceEthernetProfileParcel extends com.pu
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public TransportManagementVpnInterfaceEthernetProfileParcel(String name) {
+    public TransportManagementVpnInterfaceEthernetProfileParcel(java.lang.String name) {
         this(name, TransportManagementVpnInterfaceEthernetProfileParcelArgs.Empty);
     }
     /**
@@ -836,7 +836,7 @@ public class TransportManagementVpnInterfaceEthernetProfileParcel extends com.pu
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public TransportManagementVpnInterfaceEthernetProfileParcel(String name, TransportManagementVpnInterfaceEthernetProfileParcelArgs args) {
+    public TransportManagementVpnInterfaceEthernetProfileParcel(java.lang.String name, TransportManagementVpnInterfaceEthernetProfileParcelArgs args) {
         this(name, args, null);
     }
     /**
@@ -845,15 +845,22 @@ public class TransportManagementVpnInterfaceEthernetProfileParcel extends com.pu
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public TransportManagementVpnInterfaceEthernetProfileParcel(String name, TransportManagementVpnInterfaceEthernetProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/transportManagementVpnInterfaceEthernetProfileParcel:TransportManagementVpnInterfaceEthernetProfileParcel", name, args == null ? TransportManagementVpnInterfaceEthernetProfileParcelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public TransportManagementVpnInterfaceEthernetProfileParcel(java.lang.String name, TransportManagementVpnInterfaceEthernetProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/transportManagementVpnInterfaceEthernetProfileParcel:TransportManagementVpnInterfaceEthernetProfileParcel", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private TransportManagementVpnInterfaceEthernetProfileParcel(String name, Output<String> id, @Nullable TransportManagementVpnInterfaceEthernetProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/transportManagementVpnInterfaceEthernetProfileParcel:TransportManagementVpnInterfaceEthernetProfileParcel", name, state, makeResourceOptions(options, id));
+    private TransportManagementVpnInterfaceEthernetProfileParcel(java.lang.String name, Output<java.lang.String> id, @Nullable TransportManagementVpnInterfaceEthernetProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/transportManagementVpnInterfaceEthernetProfileParcel:TransportManagementVpnInterfaceEthernetProfileParcel", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static TransportManagementVpnInterfaceEthernetProfileParcelArgs makeArgs(TransportManagementVpnInterfaceEthernetProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? TransportManagementVpnInterfaceEthernetProfileParcelArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -869,7 +876,7 @@ public class TransportManagementVpnInterfaceEthernetProfileParcel extends com.pu
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TransportManagementVpnInterfaceEthernetProfileParcel get(String name, Output<String> id, @Nullable TransportManagementVpnInterfaceEthernetProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static TransportManagementVpnInterfaceEthernetProfileParcel get(java.lang.String name, Output<java.lang.String> id, @Nullable TransportManagementVpnInterfaceEthernetProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new TransportManagementVpnInterfaceEthernetProfileParcel(name, id, state, options);
     }
 }

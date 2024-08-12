@@ -385,7 +385,7 @@ class CflowdPolicyDefinition(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  active_flow_timeout: Optional[pulumi.Input[int]] = None,
-                 collectors: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CflowdPolicyDefinitionCollectorArgs']]]]] = None,
+                 collectors: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CflowdPolicyDefinitionCollectorArgs', 'CflowdPolicyDefinitionCollectorArgsDict']]]]] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  flow_refresh: Optional[pulumi.Input[int]] = None,
                  inactive_flow_timeout: Optional[pulumi.Input[int]] = None,
@@ -407,7 +407,7 @@ class CflowdPolicyDefinition(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[int] active_flow_timeout: Active flow timeout in seconds - Range: `30`-`3600`
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CflowdPolicyDefinitionCollectorArgs']]]] collectors: List of collectors
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CflowdPolicyDefinitionCollectorArgs', 'CflowdPolicyDefinitionCollectorArgsDict']]]] collectors: List of collectors
         :param pulumi.Input[str] description: The description of the policy definition
         :param pulumi.Input[int] flow_refresh: Flow refresh in seconds - Range: `60`-`86400`
         :param pulumi.Input[int] inactive_flow_timeout: Inactive flow timeout in seconds - Range: `1`-`3600`
@@ -448,7 +448,7 @@ class CflowdPolicyDefinition(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  active_flow_timeout: Optional[pulumi.Input[int]] = None,
-                 collectors: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CflowdPolicyDefinitionCollectorArgs']]]]] = None,
+                 collectors: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CflowdPolicyDefinitionCollectorArgs', 'CflowdPolicyDefinitionCollectorArgsDict']]]]] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  flow_refresh: Optional[pulumi.Input[int]] = None,
                  inactive_flow_timeout: Optional[pulumi.Input[int]] = None,
@@ -493,7 +493,7 @@ class CflowdPolicyDefinition(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             active_flow_timeout: Optional[pulumi.Input[int]] = None,
-            collectors: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CflowdPolicyDefinitionCollectorArgs']]]]] = None,
+            collectors: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CflowdPolicyDefinitionCollectorArgs', 'CflowdPolicyDefinitionCollectorArgsDict']]]]] = None,
             description: Optional[pulumi.Input[str]] = None,
             flow_refresh: Optional[pulumi.Input[int]] = None,
             inactive_flow_timeout: Optional[pulumi.Input[int]] = None,
@@ -512,7 +512,7 @@ class CflowdPolicyDefinition(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[int] active_flow_timeout: Active flow timeout in seconds - Range: `30`-`3600`
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CflowdPolicyDefinitionCollectorArgs']]]] collectors: List of collectors
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CflowdPolicyDefinitionCollectorArgs', 'CflowdPolicyDefinitionCollectorArgsDict']]]] collectors: List of collectors
         :param pulumi.Input[str] description: The description of the policy definition
         :param pulumi.Input[int] flow_refresh: Flow refresh in seconds - Range: `60`-`86400`
         :param pulumi.Input[int] inactive_flow_timeout: Inactive flow timeout in seconds - Range: `1`-`3600`

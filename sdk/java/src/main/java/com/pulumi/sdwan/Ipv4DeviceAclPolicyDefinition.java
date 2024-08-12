@@ -163,7 +163,7 @@ public class Ipv4DeviceAclPolicyDefinition extends com.pulumi.resources.CustomRe
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public Ipv4DeviceAclPolicyDefinition(String name) {
+    public Ipv4DeviceAclPolicyDefinition(java.lang.String name) {
         this(name, Ipv4DeviceAclPolicyDefinitionArgs.Empty);
     }
     /**
@@ -171,7 +171,7 @@ public class Ipv4DeviceAclPolicyDefinition extends com.pulumi.resources.CustomRe
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public Ipv4DeviceAclPolicyDefinition(String name, Ipv4DeviceAclPolicyDefinitionArgs args) {
+    public Ipv4DeviceAclPolicyDefinition(java.lang.String name, Ipv4DeviceAclPolicyDefinitionArgs args) {
         this(name, args, null);
     }
     /**
@@ -180,15 +180,22 @@ public class Ipv4DeviceAclPolicyDefinition extends com.pulumi.resources.CustomRe
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Ipv4DeviceAclPolicyDefinition(String name, Ipv4DeviceAclPolicyDefinitionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/ipv4DeviceAclPolicyDefinition:Ipv4DeviceAclPolicyDefinition", name, args == null ? Ipv4DeviceAclPolicyDefinitionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public Ipv4DeviceAclPolicyDefinition(java.lang.String name, Ipv4DeviceAclPolicyDefinitionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/ipv4DeviceAclPolicyDefinition:Ipv4DeviceAclPolicyDefinition", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private Ipv4DeviceAclPolicyDefinition(String name, Output<String> id, @Nullable Ipv4DeviceAclPolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/ipv4DeviceAclPolicyDefinition:Ipv4DeviceAclPolicyDefinition", name, state, makeResourceOptions(options, id));
+    private Ipv4DeviceAclPolicyDefinition(java.lang.String name, Output<java.lang.String> id, @Nullable Ipv4DeviceAclPolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/ipv4DeviceAclPolicyDefinition:Ipv4DeviceAclPolicyDefinition", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static Ipv4DeviceAclPolicyDefinitionArgs makeArgs(Ipv4DeviceAclPolicyDefinitionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? Ipv4DeviceAclPolicyDefinitionArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -204,7 +211,7 @@ public class Ipv4DeviceAclPolicyDefinition extends com.pulumi.resources.CustomRe
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Ipv4DeviceAclPolicyDefinition get(String name, Output<String> id, @Nullable Ipv4DeviceAclPolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Ipv4DeviceAclPolicyDefinition get(java.lang.String name, Output<java.lang.String> id, @Nullable Ipv4DeviceAclPolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new Ipv4DeviceAclPolicyDefinition(name, id, state, options);
     }
 }

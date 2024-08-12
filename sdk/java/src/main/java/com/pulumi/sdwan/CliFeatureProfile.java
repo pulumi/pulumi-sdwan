@@ -94,7 +94,7 @@ public class CliFeatureProfile extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public CliFeatureProfile(String name) {
+    public CliFeatureProfile(java.lang.String name) {
         this(name, CliFeatureProfileArgs.Empty);
     }
     /**
@@ -102,7 +102,7 @@ public class CliFeatureProfile extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public CliFeatureProfile(String name, CliFeatureProfileArgs args) {
+    public CliFeatureProfile(java.lang.String name, CliFeatureProfileArgs args) {
         this(name, args, null);
     }
     /**
@@ -111,15 +111,22 @@ public class CliFeatureProfile extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public CliFeatureProfile(String name, CliFeatureProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/cliFeatureProfile:CliFeatureProfile", name, args == null ? CliFeatureProfileArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public CliFeatureProfile(java.lang.String name, CliFeatureProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/cliFeatureProfile:CliFeatureProfile", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private CliFeatureProfile(String name, Output<String> id, @Nullable CliFeatureProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/cliFeatureProfile:CliFeatureProfile", name, state, makeResourceOptions(options, id));
+    private CliFeatureProfile(java.lang.String name, Output<java.lang.String> id, @Nullable CliFeatureProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/cliFeatureProfile:CliFeatureProfile", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static CliFeatureProfileArgs makeArgs(CliFeatureProfileArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? CliFeatureProfileArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -135,7 +142,7 @@ public class CliFeatureProfile extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CliFeatureProfile get(String name, Output<String> id, @Nullable CliFeatureProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static CliFeatureProfile get(java.lang.String name, Output<java.lang.String> id, @Nullable CliFeatureProfileState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new CliFeatureProfile(name, id, state, options);
     }
 }

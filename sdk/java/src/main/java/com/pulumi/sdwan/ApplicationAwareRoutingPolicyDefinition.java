@@ -147,7 +147,7 @@ public class ApplicationAwareRoutingPolicyDefinition extends com.pulumi.resource
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public ApplicationAwareRoutingPolicyDefinition(String name) {
+    public ApplicationAwareRoutingPolicyDefinition(java.lang.String name) {
         this(name, ApplicationAwareRoutingPolicyDefinitionArgs.Empty);
     }
     /**
@@ -155,7 +155,7 @@ public class ApplicationAwareRoutingPolicyDefinition extends com.pulumi.resource
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public ApplicationAwareRoutingPolicyDefinition(String name, ApplicationAwareRoutingPolicyDefinitionArgs args) {
+    public ApplicationAwareRoutingPolicyDefinition(java.lang.String name, ApplicationAwareRoutingPolicyDefinitionArgs args) {
         this(name, args, null);
     }
     /**
@@ -164,15 +164,22 @@ public class ApplicationAwareRoutingPolicyDefinition extends com.pulumi.resource
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ApplicationAwareRoutingPolicyDefinition(String name, ApplicationAwareRoutingPolicyDefinitionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/applicationAwareRoutingPolicyDefinition:ApplicationAwareRoutingPolicyDefinition", name, args == null ? ApplicationAwareRoutingPolicyDefinitionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public ApplicationAwareRoutingPolicyDefinition(java.lang.String name, ApplicationAwareRoutingPolicyDefinitionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/applicationAwareRoutingPolicyDefinition:ApplicationAwareRoutingPolicyDefinition", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private ApplicationAwareRoutingPolicyDefinition(String name, Output<String> id, @Nullable ApplicationAwareRoutingPolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/applicationAwareRoutingPolicyDefinition:ApplicationAwareRoutingPolicyDefinition", name, state, makeResourceOptions(options, id));
+    private ApplicationAwareRoutingPolicyDefinition(java.lang.String name, Output<java.lang.String> id, @Nullable ApplicationAwareRoutingPolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/applicationAwareRoutingPolicyDefinition:ApplicationAwareRoutingPolicyDefinition", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static ApplicationAwareRoutingPolicyDefinitionArgs makeArgs(ApplicationAwareRoutingPolicyDefinitionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? ApplicationAwareRoutingPolicyDefinitionArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -188,7 +195,7 @@ public class ApplicationAwareRoutingPolicyDefinition extends com.pulumi.resource
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ApplicationAwareRoutingPolicyDefinition get(String name, Output<String> id, @Nullable ApplicationAwareRoutingPolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ApplicationAwareRoutingPolicyDefinition get(java.lang.String name, Output<java.lang.String> id, @Nullable ApplicationAwareRoutingPolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new ApplicationAwareRoutingPolicyDefinition(name, id, state, options);
     }
 }
