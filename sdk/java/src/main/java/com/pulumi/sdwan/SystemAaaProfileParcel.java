@@ -388,7 +388,7 @@ public class SystemAaaProfileParcel extends com.pulumi.resources.CustomResource 
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public SystemAaaProfileParcel(String name) {
+    public SystemAaaProfileParcel(java.lang.String name) {
         this(name, SystemAaaProfileParcelArgs.Empty);
     }
     /**
@@ -396,7 +396,7 @@ public class SystemAaaProfileParcel extends com.pulumi.resources.CustomResource 
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SystemAaaProfileParcel(String name, SystemAaaProfileParcelArgs args) {
+    public SystemAaaProfileParcel(java.lang.String name, SystemAaaProfileParcelArgs args) {
         this(name, args, null);
     }
     /**
@@ -405,15 +405,22 @@ public class SystemAaaProfileParcel extends com.pulumi.resources.CustomResource 
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SystemAaaProfileParcel(String name, SystemAaaProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/systemAaaProfileParcel:SystemAaaProfileParcel", name, args == null ? SystemAaaProfileParcelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public SystemAaaProfileParcel(java.lang.String name, SystemAaaProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/systemAaaProfileParcel:SystemAaaProfileParcel", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private SystemAaaProfileParcel(String name, Output<String> id, @Nullable SystemAaaProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/systemAaaProfileParcel:SystemAaaProfileParcel", name, state, makeResourceOptions(options, id));
+    private SystemAaaProfileParcel(java.lang.String name, Output<java.lang.String> id, @Nullable SystemAaaProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/systemAaaProfileParcel:SystemAaaProfileParcel", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static SystemAaaProfileParcelArgs makeArgs(SystemAaaProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? SystemAaaProfileParcelArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -429,7 +436,7 @@ public class SystemAaaProfileParcel extends com.pulumi.resources.CustomResource 
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SystemAaaProfileParcel get(String name, Output<String> id, @Nullable SystemAaaProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SystemAaaProfileParcel get(java.lang.String name, Output<java.lang.String> id, @Nullable SystemAaaProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new SystemAaaProfileParcel(name, id, state, options);
     }
 }

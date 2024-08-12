@@ -327,7 +327,7 @@ public class TransportManagementVpnProfileParcel extends com.pulumi.resources.Cu
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public TransportManagementVpnProfileParcel(String name) {
+    public TransportManagementVpnProfileParcel(java.lang.String name) {
         this(name, TransportManagementVpnProfileParcelArgs.Empty);
     }
     /**
@@ -335,7 +335,7 @@ public class TransportManagementVpnProfileParcel extends com.pulumi.resources.Cu
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public TransportManagementVpnProfileParcel(String name, @Nullable TransportManagementVpnProfileParcelArgs args) {
+    public TransportManagementVpnProfileParcel(java.lang.String name, @Nullable TransportManagementVpnProfileParcelArgs args) {
         this(name, args, null);
     }
     /**
@@ -344,15 +344,22 @@ public class TransportManagementVpnProfileParcel extends com.pulumi.resources.Cu
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public TransportManagementVpnProfileParcel(String name, @Nullable TransportManagementVpnProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/transportManagementVpnProfileParcel:TransportManagementVpnProfileParcel", name, args == null ? TransportManagementVpnProfileParcelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public TransportManagementVpnProfileParcel(java.lang.String name, @Nullable TransportManagementVpnProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/transportManagementVpnProfileParcel:TransportManagementVpnProfileParcel", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private TransportManagementVpnProfileParcel(String name, Output<String> id, @Nullable TransportManagementVpnProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/transportManagementVpnProfileParcel:TransportManagementVpnProfileParcel", name, state, makeResourceOptions(options, id));
+    private TransportManagementVpnProfileParcel(java.lang.String name, Output<java.lang.String> id, @Nullable TransportManagementVpnProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/transportManagementVpnProfileParcel:TransportManagementVpnProfileParcel", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static TransportManagementVpnProfileParcelArgs makeArgs(@Nullable TransportManagementVpnProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? TransportManagementVpnProfileParcelArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -368,7 +375,7 @@ public class TransportManagementVpnProfileParcel extends com.pulumi.resources.Cu
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TransportManagementVpnProfileParcel get(String name, Output<String> id, @Nullable TransportManagementVpnProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static TransportManagementVpnProfileParcel get(java.lang.String name, Output<java.lang.String> id, @Nullable TransportManagementVpnProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new TransportManagementVpnProfileParcel(name, id, state, options);
     }
 }

@@ -558,10 +558,10 @@ class TransportManagementVpnProfileParcel(pulumi.CustomResource):
                  basic_configuration_description_variable: Optional[pulumi.Input[str]] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  feature_profile_id: Optional[pulumi.Input[str]] = None,
-                 ipv4_static_routes: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportManagementVpnProfileParcelIpv4StaticRouteArgs']]]]] = None,
-                 ipv6_static_routes: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportManagementVpnProfileParcelIpv6StaticRouteArgs']]]]] = None,
+                 ipv4_static_routes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TransportManagementVpnProfileParcelIpv4StaticRouteArgs', 'TransportManagementVpnProfileParcelIpv4StaticRouteArgsDict']]]]] = None,
+                 ipv6_static_routes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TransportManagementVpnProfileParcelIpv6StaticRouteArgs', 'TransportManagementVpnProfileParcelIpv6StaticRouteArgsDict']]]]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 new_host_mappings: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportManagementVpnProfileParcelNewHostMappingArgs']]]]] = None,
+                 new_host_mappings: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TransportManagementVpnProfileParcelNewHostMappingArgs', 'TransportManagementVpnProfileParcelNewHostMappingArgsDict']]]]] = None,
                  primary_dns_address_ipv4: Optional[pulumi.Input[str]] = None,
                  primary_dns_address_ipv4_variable: Optional[pulumi.Input[str]] = None,
                  primary_dns_address_ipv6: Optional[pulumi.Input[str]] = None,
@@ -587,8 +587,8 @@ class TransportManagementVpnProfileParcel(pulumi.CustomResource):
         :param pulumi.Input[str] basic_configuration_description_variable: Variable name
         :param pulumi.Input[str] description: The description of the profile parcel
         :param pulumi.Input[str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportManagementVpnProfileParcelIpv4StaticRouteArgs']]]] ipv4_static_routes: IPv4 Static Route
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportManagementVpnProfileParcelIpv6StaticRouteArgs']]]] ipv6_static_routes: IPv6 Static Route
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportManagementVpnProfileParcelIpv4StaticRouteArgs', 'TransportManagementVpnProfileParcelIpv4StaticRouteArgsDict']]]] ipv4_static_routes: IPv4 Static Route
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportManagementVpnProfileParcelIpv6StaticRouteArgs', 'TransportManagementVpnProfileParcelIpv6StaticRouteArgsDict']]]] ipv6_static_routes: IPv6 Static Route
         :param pulumi.Input[str] name: The name of the profile parcel
         :param pulumi.Input[str] primary_dns_address_ipv4: Primary DNS Address (IPv4)
         :param pulumi.Input[str] primary_dns_address_ipv4_variable: Variable name
@@ -634,10 +634,10 @@ class TransportManagementVpnProfileParcel(pulumi.CustomResource):
                  basic_configuration_description_variable: Optional[pulumi.Input[str]] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  feature_profile_id: Optional[pulumi.Input[str]] = None,
-                 ipv4_static_routes: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportManagementVpnProfileParcelIpv4StaticRouteArgs']]]]] = None,
-                 ipv6_static_routes: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportManagementVpnProfileParcelIpv6StaticRouteArgs']]]]] = None,
+                 ipv4_static_routes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TransportManagementVpnProfileParcelIpv4StaticRouteArgs', 'TransportManagementVpnProfileParcelIpv4StaticRouteArgsDict']]]]] = None,
+                 ipv6_static_routes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TransportManagementVpnProfileParcelIpv6StaticRouteArgs', 'TransportManagementVpnProfileParcelIpv6StaticRouteArgsDict']]]]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 new_host_mappings: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportManagementVpnProfileParcelNewHostMappingArgs']]]]] = None,
+                 new_host_mappings: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TransportManagementVpnProfileParcelNewHostMappingArgs', 'TransportManagementVpnProfileParcelNewHostMappingArgsDict']]]]] = None,
                  primary_dns_address_ipv4: Optional[pulumi.Input[str]] = None,
                  primary_dns_address_ipv4_variable: Optional[pulumi.Input[str]] = None,
                  primary_dns_address_ipv6: Optional[pulumi.Input[str]] = None,
@@ -686,10 +686,10 @@ class TransportManagementVpnProfileParcel(pulumi.CustomResource):
             basic_configuration_description_variable: Optional[pulumi.Input[str]] = None,
             description: Optional[pulumi.Input[str]] = None,
             feature_profile_id: Optional[pulumi.Input[str]] = None,
-            ipv4_static_routes: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportManagementVpnProfileParcelIpv4StaticRouteArgs']]]]] = None,
-            ipv6_static_routes: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportManagementVpnProfileParcelIpv6StaticRouteArgs']]]]] = None,
+            ipv4_static_routes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TransportManagementVpnProfileParcelIpv4StaticRouteArgs', 'TransportManagementVpnProfileParcelIpv4StaticRouteArgsDict']]]]] = None,
+            ipv6_static_routes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TransportManagementVpnProfileParcelIpv6StaticRouteArgs', 'TransportManagementVpnProfileParcelIpv6StaticRouteArgsDict']]]]] = None,
             name: Optional[pulumi.Input[str]] = None,
-            new_host_mappings: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportManagementVpnProfileParcelNewHostMappingArgs']]]]] = None,
+            new_host_mappings: Optional[pulumi.Input[Sequence[pulumi.Input[Union['TransportManagementVpnProfileParcelNewHostMappingArgs', 'TransportManagementVpnProfileParcelNewHostMappingArgsDict']]]]] = None,
             primary_dns_address_ipv4: Optional[pulumi.Input[str]] = None,
             primary_dns_address_ipv4_variable: Optional[pulumi.Input[str]] = None,
             primary_dns_address_ipv6: Optional[pulumi.Input[str]] = None,
@@ -710,8 +710,8 @@ class TransportManagementVpnProfileParcel(pulumi.CustomResource):
         :param pulumi.Input[str] basic_configuration_description_variable: Variable name
         :param pulumi.Input[str] description: The description of the profile parcel
         :param pulumi.Input[str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportManagementVpnProfileParcelIpv4StaticRouteArgs']]]] ipv4_static_routes: IPv4 Static Route
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['TransportManagementVpnProfileParcelIpv6StaticRouteArgs']]]] ipv6_static_routes: IPv6 Static Route
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportManagementVpnProfileParcelIpv4StaticRouteArgs', 'TransportManagementVpnProfileParcelIpv4StaticRouteArgsDict']]]] ipv4_static_routes: IPv4 Static Route
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportManagementVpnProfileParcelIpv6StaticRouteArgs', 'TransportManagementVpnProfileParcelIpv6StaticRouteArgsDict']]]] ipv6_static_routes: IPv6 Static Route
         :param pulumi.Input[str] name: The name of the profile parcel
         :param pulumi.Input[str] primary_dns_address_ipv4: Primary DNS Address (IPv4)
         :param pulumi.Input[str] primary_dns_address_ipv4_variable: Variable name

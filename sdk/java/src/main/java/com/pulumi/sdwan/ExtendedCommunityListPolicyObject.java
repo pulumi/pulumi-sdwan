@@ -114,7 +114,7 @@ public class ExtendedCommunityListPolicyObject extends com.pulumi.resources.Cust
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public ExtendedCommunityListPolicyObject(String name) {
+    public ExtendedCommunityListPolicyObject(java.lang.String name) {
         this(name, ExtendedCommunityListPolicyObjectArgs.Empty);
     }
     /**
@@ -122,7 +122,7 @@ public class ExtendedCommunityListPolicyObject extends com.pulumi.resources.Cust
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public ExtendedCommunityListPolicyObject(String name, ExtendedCommunityListPolicyObjectArgs args) {
+    public ExtendedCommunityListPolicyObject(java.lang.String name, ExtendedCommunityListPolicyObjectArgs args) {
         this(name, args, null);
     }
     /**
@@ -131,15 +131,22 @@ public class ExtendedCommunityListPolicyObject extends com.pulumi.resources.Cust
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ExtendedCommunityListPolicyObject(String name, ExtendedCommunityListPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/extendedCommunityListPolicyObject:ExtendedCommunityListPolicyObject", name, args == null ? ExtendedCommunityListPolicyObjectArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public ExtendedCommunityListPolicyObject(java.lang.String name, ExtendedCommunityListPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/extendedCommunityListPolicyObject:ExtendedCommunityListPolicyObject", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private ExtendedCommunityListPolicyObject(String name, Output<String> id, @Nullable ExtendedCommunityListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/extendedCommunityListPolicyObject:ExtendedCommunityListPolicyObject", name, state, makeResourceOptions(options, id));
+    private ExtendedCommunityListPolicyObject(java.lang.String name, Output<java.lang.String> id, @Nullable ExtendedCommunityListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/extendedCommunityListPolicyObject:ExtendedCommunityListPolicyObject", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static ExtendedCommunityListPolicyObjectArgs makeArgs(ExtendedCommunityListPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? ExtendedCommunityListPolicyObjectArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -155,7 +162,7 @@ public class ExtendedCommunityListPolicyObject extends com.pulumi.resources.Cust
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ExtendedCommunityListPolicyObject get(String name, Output<String> id, @Nullable ExtendedCommunityListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ExtendedCommunityListPolicyObject get(java.lang.String name, Output<java.lang.String> id, @Nullable ExtendedCommunityListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new ExtendedCommunityListPolicyObject(name, id, state, options);
     }
 }

@@ -114,7 +114,7 @@ public class ColorListPolicyObject extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public ColorListPolicyObject(String name) {
+    public ColorListPolicyObject(java.lang.String name) {
         this(name, ColorListPolicyObjectArgs.Empty);
     }
     /**
@@ -122,7 +122,7 @@ public class ColorListPolicyObject extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public ColorListPolicyObject(String name, ColorListPolicyObjectArgs args) {
+    public ColorListPolicyObject(java.lang.String name, ColorListPolicyObjectArgs args) {
         this(name, args, null);
     }
     /**
@@ -131,15 +131,22 @@ public class ColorListPolicyObject extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ColorListPolicyObject(String name, ColorListPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/colorListPolicyObject:ColorListPolicyObject", name, args == null ? ColorListPolicyObjectArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public ColorListPolicyObject(java.lang.String name, ColorListPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/colorListPolicyObject:ColorListPolicyObject", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private ColorListPolicyObject(String name, Output<String> id, @Nullable ColorListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/colorListPolicyObject:ColorListPolicyObject", name, state, makeResourceOptions(options, id));
+    private ColorListPolicyObject(java.lang.String name, Output<java.lang.String> id, @Nullable ColorListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/colorListPolicyObject:ColorListPolicyObject", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static ColorListPolicyObjectArgs makeArgs(ColorListPolicyObjectArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? ColorListPolicyObjectArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -155,7 +162,7 @@ public class ColorListPolicyObject extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ColorListPolicyObject get(String name, Output<String> id, @Nullable ColorListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ColorListPolicyObject get(java.lang.String name, Output<java.lang.String> id, @Nullable ColorListPolicyObjectState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new ColorListPolicyObject(name, id, state, options);
     }
 }

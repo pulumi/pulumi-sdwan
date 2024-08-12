@@ -738,7 +738,7 @@ public class CiscoBgpFeatureTemplate extends com.pulumi.resources.CustomResource
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public CiscoBgpFeatureTemplate(String name) {
+    public CiscoBgpFeatureTemplate(java.lang.String name) {
         this(name, CiscoBgpFeatureTemplateArgs.Empty);
     }
     /**
@@ -746,7 +746,7 @@ public class CiscoBgpFeatureTemplate extends com.pulumi.resources.CustomResource
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public CiscoBgpFeatureTemplate(String name, CiscoBgpFeatureTemplateArgs args) {
+    public CiscoBgpFeatureTemplate(java.lang.String name, CiscoBgpFeatureTemplateArgs args) {
         this(name, args, null);
     }
     /**
@@ -755,15 +755,22 @@ public class CiscoBgpFeatureTemplate extends com.pulumi.resources.CustomResource
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public CiscoBgpFeatureTemplate(String name, CiscoBgpFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/ciscoBgpFeatureTemplate:CiscoBgpFeatureTemplate", name, args == null ? CiscoBgpFeatureTemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public CiscoBgpFeatureTemplate(java.lang.String name, CiscoBgpFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/ciscoBgpFeatureTemplate:CiscoBgpFeatureTemplate", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private CiscoBgpFeatureTemplate(String name, Output<String> id, @Nullable CiscoBgpFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/ciscoBgpFeatureTemplate:CiscoBgpFeatureTemplate", name, state, makeResourceOptions(options, id));
+    private CiscoBgpFeatureTemplate(java.lang.String name, Output<java.lang.String> id, @Nullable CiscoBgpFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/ciscoBgpFeatureTemplate:CiscoBgpFeatureTemplate", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static CiscoBgpFeatureTemplateArgs makeArgs(CiscoBgpFeatureTemplateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? CiscoBgpFeatureTemplateArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -779,7 +786,7 @@ public class CiscoBgpFeatureTemplate extends com.pulumi.resources.CustomResource
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CiscoBgpFeatureTemplate get(String name, Output<String> id, @Nullable CiscoBgpFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static CiscoBgpFeatureTemplate get(java.lang.String name, Output<java.lang.String> id, @Nullable CiscoBgpFeatureTemplateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new CiscoBgpFeatureTemplate(name, id, state, options);
     }
 }

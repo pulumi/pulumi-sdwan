@@ -396,11 +396,11 @@ class SwitchportFeatureTemplate(pulumi.CustomResource):
                  age_out_time_variable: Optional[pulumi.Input[str]] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  device_types: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-                 interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchportFeatureTemplateInterfaceArgs']]]]] = None,
+                 interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchportFeatureTemplateInterfaceArgs', 'SwitchportFeatureTemplateInterfaceArgsDict']]]]] = None,
                  module_type: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  slot: Optional[pulumi.Input[int]] = None,
-                 static_mac_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchportFeatureTemplateStaticMacAddressArgs']]]]] = None,
+                 static_mac_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchportFeatureTemplateStaticMacAddressArgs', 'SwitchportFeatureTemplateStaticMacAddressArgsDict']]]]] = None,
                  sub_slot: Optional[pulumi.Input[int]] = None,
                  __props__=None):
         """
@@ -421,11 +421,11 @@ class SwitchportFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
                `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
                `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchportFeatureTemplateInterfaceArgs']]]] interfaces: Interface name: GigabitEthernet0/<>/<> when present
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchportFeatureTemplateInterfaceArgs', 'SwitchportFeatureTemplateInterfaceArgsDict']]]] interfaces: Interface name: GigabitEthernet0/<>/<> when present
         :param pulumi.Input[str] module_type: Module type - Choices: `4`, `8`, `22`, `50`
         :param pulumi.Input[str] name: The name of the feature template
         :param pulumi.Input[int] slot: Number of Slots - Range: `0`-`31` - Default value: `0`
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchportFeatureTemplateStaticMacAddressArgs']]]] static_mac_addresses: Add static MAC address entries for interface
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchportFeatureTemplateStaticMacAddressArgs', 'SwitchportFeatureTemplateStaticMacAddressArgsDict']]]] static_mac_addresses: Add static MAC address entries for interface
         :param pulumi.Input[int] sub_slot: Number of Sub-Slots - Range: `0`-`31` - Default value: `0`
         """
         ...
@@ -463,11 +463,11 @@ class SwitchportFeatureTemplate(pulumi.CustomResource):
                  age_out_time_variable: Optional[pulumi.Input[str]] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  device_types: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-                 interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchportFeatureTemplateInterfaceArgs']]]]] = None,
+                 interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchportFeatureTemplateInterfaceArgs', 'SwitchportFeatureTemplateInterfaceArgsDict']]]]] = None,
                  module_type: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  slot: Optional[pulumi.Input[int]] = None,
-                 static_mac_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchportFeatureTemplateStaticMacAddressArgs']]]]] = None,
+                 static_mac_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchportFeatureTemplateStaticMacAddressArgs', 'SwitchportFeatureTemplateStaticMacAddressArgsDict']]]]] = None,
                  sub_slot: Optional[pulumi.Input[int]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -508,11 +508,11 @@ class SwitchportFeatureTemplate(pulumi.CustomResource):
             age_out_time_variable: Optional[pulumi.Input[str]] = None,
             description: Optional[pulumi.Input[str]] = None,
             device_types: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-            interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchportFeatureTemplateInterfaceArgs']]]]] = None,
+            interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchportFeatureTemplateInterfaceArgs', 'SwitchportFeatureTemplateInterfaceArgsDict']]]]] = None,
             module_type: Optional[pulumi.Input[str]] = None,
             name: Optional[pulumi.Input[str]] = None,
             slot: Optional[pulumi.Input[int]] = None,
-            static_mac_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchportFeatureTemplateStaticMacAddressArgs']]]]] = None,
+            static_mac_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchportFeatureTemplateStaticMacAddressArgs', 'SwitchportFeatureTemplateStaticMacAddressArgsDict']]]]] = None,
             sub_slot: Optional[pulumi.Input[int]] = None,
             template_type: Optional[pulumi.Input[str]] = None,
             version: Optional[pulumi.Input[int]] = None) -> 'SwitchportFeatureTemplate':
@@ -529,11 +529,11 @@ class SwitchportFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
                `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
                `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchportFeatureTemplateInterfaceArgs']]]] interfaces: Interface name: GigabitEthernet0/<>/<> when present
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchportFeatureTemplateInterfaceArgs', 'SwitchportFeatureTemplateInterfaceArgsDict']]]] interfaces: Interface name: GigabitEthernet0/<>/<> when present
         :param pulumi.Input[str] module_type: Module type - Choices: `4`, `8`, `22`, `50`
         :param pulumi.Input[str] name: The name of the feature template
         :param pulumi.Input[int] slot: Number of Slots - Range: `0`-`31` - Default value: `0`
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchportFeatureTemplateStaticMacAddressArgs']]]] static_mac_addresses: Add static MAC address entries for interface
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchportFeatureTemplateStaticMacAddressArgs', 'SwitchportFeatureTemplateStaticMacAddressArgsDict']]]] static_mac_addresses: Add static MAC address entries for interface
         :param pulumi.Input[int] sub_slot: Number of Sub-Slots - Range: `0`-`31` - Default value: `0`
         :param pulumi.Input[str] template_type: The template type
         :param pulumi.Input[int] version: The version of the feature template

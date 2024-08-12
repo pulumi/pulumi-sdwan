@@ -244,7 +244,7 @@ class ApplicationPriorityQosPolicyProfileParcel(pulumi.CustomResource):
                  description: Optional[pulumi.Input[str]] = None,
                  feature_profile_id: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 qos_schedulers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplicationPriorityQosPolicyProfileParcelQosSchedulerArgs']]]]] = None,
+                 qos_schedulers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplicationPriorityQosPolicyProfileParcelQosSchedulerArgs', 'ApplicationPriorityQosPolicyProfileParcelQosSchedulerArgsDict']]]]] = None,
                  target_interface_variable: Optional[pulumi.Input[str]] = None,
                  target_interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  __props__=None):
@@ -263,7 +263,7 @@ class ApplicationPriorityQosPolicyProfileParcel(pulumi.CustomResource):
         :param pulumi.Input[str] description: The description of the profile parcel
         :param pulumi.Input[str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[str] name: The name of the profile parcel
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplicationPriorityQosPolicyProfileParcelQosSchedulerArgs']]]] qos_schedulers: qosSchedulers
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplicationPriorityQosPolicyProfileParcelQosSchedulerArgs', 'ApplicationPriorityQosPolicyProfileParcelQosSchedulerArgsDict']]]] qos_schedulers: qosSchedulers
         :param pulumi.Input[str] target_interface_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[str]]] target_interfaces: interfaces
         """
@@ -301,7 +301,7 @@ class ApplicationPriorityQosPolicyProfileParcel(pulumi.CustomResource):
                  description: Optional[pulumi.Input[str]] = None,
                  feature_profile_id: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 qos_schedulers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplicationPriorityQosPolicyProfileParcelQosSchedulerArgs']]]]] = None,
+                 qos_schedulers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplicationPriorityQosPolicyProfileParcelQosSchedulerArgs', 'ApplicationPriorityQosPolicyProfileParcelQosSchedulerArgsDict']]]]] = None,
                  target_interface_variable: Optional[pulumi.Input[str]] = None,
                  target_interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  __props__=None):
@@ -335,7 +335,7 @@ class ApplicationPriorityQosPolicyProfileParcel(pulumi.CustomResource):
             description: Optional[pulumi.Input[str]] = None,
             feature_profile_id: Optional[pulumi.Input[str]] = None,
             name: Optional[pulumi.Input[str]] = None,
-            qos_schedulers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplicationPriorityQosPolicyProfileParcelQosSchedulerArgs']]]]] = None,
+            qos_schedulers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplicationPriorityQosPolicyProfileParcelQosSchedulerArgs', 'ApplicationPriorityQosPolicyProfileParcelQosSchedulerArgsDict']]]]] = None,
             target_interface_variable: Optional[pulumi.Input[str]] = None,
             target_interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
             version: Optional[pulumi.Input[int]] = None) -> 'ApplicationPriorityQosPolicyProfileParcel':
@@ -349,7 +349,7 @@ class ApplicationPriorityQosPolicyProfileParcel(pulumi.CustomResource):
         :param pulumi.Input[str] description: The description of the profile parcel
         :param pulumi.Input[str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[str] name: The name of the profile parcel
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplicationPriorityQosPolicyProfileParcelQosSchedulerArgs']]]] qos_schedulers: qosSchedulers
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplicationPriorityQosPolicyProfileParcelQosSchedulerArgs', 'ApplicationPriorityQosPolicyProfileParcelQosSchedulerArgsDict']]]] qos_schedulers: qosSchedulers
         :param pulumi.Input[str] target_interface_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[str]]] target_interfaces: interfaces
         :param pulumi.Input[int] version: The version of the profile parcel

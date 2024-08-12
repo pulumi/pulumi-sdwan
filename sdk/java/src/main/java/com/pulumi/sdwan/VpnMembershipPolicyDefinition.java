@@ -144,7 +144,7 @@ public class VpnMembershipPolicyDefinition extends com.pulumi.resources.CustomRe
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public VpnMembershipPolicyDefinition(String name) {
+    public VpnMembershipPolicyDefinition(java.lang.String name) {
         this(name, VpnMembershipPolicyDefinitionArgs.Empty);
     }
     /**
@@ -152,7 +152,7 @@ public class VpnMembershipPolicyDefinition extends com.pulumi.resources.CustomRe
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public VpnMembershipPolicyDefinition(String name, VpnMembershipPolicyDefinitionArgs args) {
+    public VpnMembershipPolicyDefinition(java.lang.String name, VpnMembershipPolicyDefinitionArgs args) {
         this(name, args, null);
     }
     /**
@@ -161,15 +161,22 @@ public class VpnMembershipPolicyDefinition extends com.pulumi.resources.CustomRe
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public VpnMembershipPolicyDefinition(String name, VpnMembershipPolicyDefinitionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/vpnMembershipPolicyDefinition:VpnMembershipPolicyDefinition", name, args == null ? VpnMembershipPolicyDefinitionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public VpnMembershipPolicyDefinition(java.lang.String name, VpnMembershipPolicyDefinitionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/vpnMembershipPolicyDefinition:VpnMembershipPolicyDefinition", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private VpnMembershipPolicyDefinition(String name, Output<String> id, @Nullable VpnMembershipPolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/vpnMembershipPolicyDefinition:VpnMembershipPolicyDefinition", name, state, makeResourceOptions(options, id));
+    private VpnMembershipPolicyDefinition(java.lang.String name, Output<java.lang.String> id, @Nullable VpnMembershipPolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/vpnMembershipPolicyDefinition:VpnMembershipPolicyDefinition", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static VpnMembershipPolicyDefinitionArgs makeArgs(VpnMembershipPolicyDefinitionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? VpnMembershipPolicyDefinitionArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -185,7 +192,7 @@ public class VpnMembershipPolicyDefinition extends com.pulumi.resources.CustomRe
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static VpnMembershipPolicyDefinition get(String name, Output<String> id, @Nullable VpnMembershipPolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static VpnMembershipPolicyDefinition get(java.lang.String name, Output<java.lang.String> id, @Nullable VpnMembershipPolicyDefinitionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new VpnMembershipPolicyDefinition(name, id, state, options);
     }
 }

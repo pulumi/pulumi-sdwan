@@ -1186,7 +1186,7 @@ class CiscoTrustsecFeatureTemplate(pulumi.CustomResource):
                  name: Optional[pulumi.Input[str]] = None,
                  speaker_hold_time: Optional[pulumi.Input[int]] = None,
                  speaker_hold_time_variable: Optional[pulumi.Input[str]] = None,
-                 sxp_connections: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoTrustsecFeatureTemplateSxpConnectionArgs']]]]] = None,
+                 sxp_connections: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoTrustsecFeatureTemplateSxpConnectionArgs', 'CiscoTrustsecFeatureTemplateSxpConnectionArgsDict']]]]] = None,
                  sxp_default_password: Optional[pulumi.Input[str]] = None,
                  sxp_default_password_variable: Optional[pulumi.Input[str]] = None,
                  sxp_key_chain: Optional[pulumi.Input[str]] = None,
@@ -1236,7 +1236,7 @@ class CiscoTrustsecFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] name: The name of the feature template
         :param pulumi.Input[int] speaker_hold_time: Configure Speaker hold-time in seconds <1..65534> - Range: `1`-`65534` - Default value: `120`
         :param pulumi.Input[str] speaker_hold_time_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoTrustsecFeatureTemplateSxpConnectionArgs']]]] sxp_connections: Configure SXP Connections
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoTrustsecFeatureTemplateSxpConnectionArgs', 'CiscoTrustsecFeatureTemplateSxpConnectionArgsDict']]]] sxp_connections: Configure SXP Connections
         :param pulumi.Input[str] sxp_default_password: Configure SXP default password
         :param pulumi.Input[str] sxp_default_password_variable: Variable name
         :param pulumi.Input[str] sxp_key_chain: Configure SXP key-chain
@@ -1303,7 +1303,7 @@ class CiscoTrustsecFeatureTemplate(pulumi.CustomResource):
                  name: Optional[pulumi.Input[str]] = None,
                  speaker_hold_time: Optional[pulumi.Input[int]] = None,
                  speaker_hold_time_variable: Optional[pulumi.Input[str]] = None,
-                 sxp_connections: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoTrustsecFeatureTemplateSxpConnectionArgs']]]]] = None,
+                 sxp_connections: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoTrustsecFeatureTemplateSxpConnectionArgs', 'CiscoTrustsecFeatureTemplateSxpConnectionArgsDict']]]]] = None,
                  sxp_default_password: Optional[pulumi.Input[str]] = None,
                  sxp_default_password_variable: Optional[pulumi.Input[str]] = None,
                  sxp_key_chain: Optional[pulumi.Input[str]] = None,
@@ -1396,7 +1396,7 @@ class CiscoTrustsecFeatureTemplate(pulumi.CustomResource):
             name: Optional[pulumi.Input[str]] = None,
             speaker_hold_time: Optional[pulumi.Input[int]] = None,
             speaker_hold_time_variable: Optional[pulumi.Input[str]] = None,
-            sxp_connections: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoTrustsecFeatureTemplateSxpConnectionArgs']]]]] = None,
+            sxp_connections: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CiscoTrustsecFeatureTemplateSxpConnectionArgs', 'CiscoTrustsecFeatureTemplateSxpConnectionArgsDict']]]]] = None,
             sxp_default_password: Optional[pulumi.Input[str]] = None,
             sxp_default_password_variable: Optional[pulumi.Input[str]] = None,
             sxp_key_chain: Optional[pulumi.Input[str]] = None,
@@ -1442,7 +1442,7 @@ class CiscoTrustsecFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] name: The name of the feature template
         :param pulumi.Input[int] speaker_hold_time: Configure Speaker hold-time in seconds <1..65534> - Range: `1`-`65534` - Default value: `120`
         :param pulumi.Input[str] speaker_hold_time_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CiscoTrustsecFeatureTemplateSxpConnectionArgs']]]] sxp_connections: Configure SXP Connections
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoTrustsecFeatureTemplateSxpConnectionArgs', 'CiscoTrustsecFeatureTemplateSxpConnectionArgsDict']]]] sxp_connections: Configure SXP Connections
         :param pulumi.Input[str] sxp_default_password: Configure SXP default password
         :param pulumi.Input[str] sxp_default_password_variable: Variable name
         :param pulumi.Input[str] sxp_key_chain: Configure SXP key-chain

@@ -469,7 +469,7 @@ class LocalizedPolicy(pulumi.CustomResource):
                  application_visibility_ipv6: Optional[pulumi.Input[bool]] = None,
                  cloud_qos: Optional[pulumi.Input[bool]] = None,
                  cloud_qos_service_side: Optional[pulumi.Input[bool]] = None,
-                 definitions: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['LocalizedPolicyDefinitionArgs']]]]] = None,
+                 definitions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['LocalizedPolicyDefinitionArgs', 'LocalizedPolicyDefinitionArgsDict']]]]] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  flow_visibility_ipv4: Optional[pulumi.Input[bool]] = None,
                  flow_visibility_ipv6: Optional[pulumi.Input[bool]] = None,
@@ -501,10 +501,10 @@ class LocalizedPolicy(pulumi.CustomResource):
             log_frequency=1000,
             ipv4_visibility_cache_entries=1000,
             ipv6_visibility_cache_entries=1000,
-            definitions=[sdwan.LocalizedPolicyDefinitionArgs(
-                id="2081c2f4-3f9f-4fee-8078-dcc8904e368d",
-                type="acl",
-            )])
+            definitions=[{
+                "id": "2081c2f4-3f9f-4fee-8078-dcc8904e368d",
+                "type": "acl",
+            }])
         ```
 
         ## Import
@@ -519,7 +519,7 @@ class LocalizedPolicy(pulumi.CustomResource):
         :param pulumi.Input[bool] application_visibility_ipv6: IPv6 application visibility - Default value: `true`
         :param pulumi.Input[bool] cloud_qos: Cloud QoS - Default value: `true`
         :param pulumi.Input[bool] cloud_qos_service_side: Cloud QoS service side - Default value: `true`
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['LocalizedPolicyDefinitionArgs']]]] definitions: List of policy definitions
+        :param pulumi.Input[Sequence[pulumi.Input[Union['LocalizedPolicyDefinitionArgs', 'LocalizedPolicyDefinitionArgsDict']]]] definitions: List of policy definitions
         :param pulumi.Input[str] description: The description of the localized policy
         :param pulumi.Input[bool] flow_visibility_ipv4: IPv4 flow visibility - Default value: `true`
         :param pulumi.Input[bool] flow_visibility_ipv6: IPv6 flow visibility - Default value: `true`
@@ -557,10 +557,10 @@ class LocalizedPolicy(pulumi.CustomResource):
             log_frequency=1000,
             ipv4_visibility_cache_entries=1000,
             ipv6_visibility_cache_entries=1000,
-            definitions=[sdwan.LocalizedPolicyDefinitionArgs(
-                id="2081c2f4-3f9f-4fee-8078-dcc8904e368d",
-                type="acl",
-            )])
+            definitions=[{
+                "id": "2081c2f4-3f9f-4fee-8078-dcc8904e368d",
+                "type": "acl",
+            }])
         ```
 
         ## Import
@@ -588,7 +588,7 @@ class LocalizedPolicy(pulumi.CustomResource):
                  application_visibility_ipv6: Optional[pulumi.Input[bool]] = None,
                  cloud_qos: Optional[pulumi.Input[bool]] = None,
                  cloud_qos_service_side: Optional[pulumi.Input[bool]] = None,
-                 definitions: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['LocalizedPolicyDefinitionArgs']]]]] = None,
+                 definitions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['LocalizedPolicyDefinitionArgs', 'LocalizedPolicyDefinitionArgsDict']]]]] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  flow_visibility_ipv4: Optional[pulumi.Input[bool]] = None,
                  flow_visibility_ipv6: Optional[pulumi.Input[bool]] = None,
@@ -636,7 +636,7 @@ class LocalizedPolicy(pulumi.CustomResource):
             application_visibility_ipv6: Optional[pulumi.Input[bool]] = None,
             cloud_qos: Optional[pulumi.Input[bool]] = None,
             cloud_qos_service_side: Optional[pulumi.Input[bool]] = None,
-            definitions: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['LocalizedPolicyDefinitionArgs']]]]] = None,
+            definitions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['LocalizedPolicyDefinitionArgs', 'LocalizedPolicyDefinitionArgsDict']]]]] = None,
             description: Optional[pulumi.Input[str]] = None,
             flow_visibility_ipv4: Optional[pulumi.Input[bool]] = None,
             flow_visibility_ipv6: Optional[pulumi.Input[bool]] = None,
@@ -657,7 +657,7 @@ class LocalizedPolicy(pulumi.CustomResource):
         :param pulumi.Input[bool] application_visibility_ipv6: IPv6 application visibility - Default value: `true`
         :param pulumi.Input[bool] cloud_qos: Cloud QoS - Default value: `true`
         :param pulumi.Input[bool] cloud_qos_service_side: Cloud QoS service side - Default value: `true`
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['LocalizedPolicyDefinitionArgs']]]] definitions: List of policy definitions
+        :param pulumi.Input[Sequence[pulumi.Input[Union['LocalizedPolicyDefinitionArgs', 'LocalizedPolicyDefinitionArgsDict']]]] definitions: List of policy definitions
         :param pulumi.Input[str] description: The description of the localized policy
         :param pulumi.Input[bool] flow_visibility_ipv4: IPv4 flow visibility - Default value: `true`
         :param pulumi.Input[bool] flow_visibility_ipv6: IPv6 flow visibility - Default value: `true`

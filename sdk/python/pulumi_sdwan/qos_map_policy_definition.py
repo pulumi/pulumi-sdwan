@@ -162,7 +162,7 @@ class QosMapPolicyDefinition(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 qos_schedulers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['QosMapPolicyDefinitionQosSchedulerArgs']]]]] = None,
+                 qos_schedulers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['QosMapPolicyDefinitionQosSchedulerArgs', 'QosMapPolicyDefinitionQosSchedulerArgsDict']]]]] = None,
                  __props__=None):
         """
         This resource can manage a QoS Map Policy Definition .
@@ -177,7 +177,7 @@ class QosMapPolicyDefinition(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] description: The description of the policy definition
         :param pulumi.Input[str] name: The name of the policy definition
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['QosMapPolicyDefinitionQosSchedulerArgs']]]] qos_schedulers: List of QoS schedulers
+        :param pulumi.Input[Sequence[pulumi.Input[Union['QosMapPolicyDefinitionQosSchedulerArgs', 'QosMapPolicyDefinitionQosSchedulerArgsDict']]]] qos_schedulers: List of QoS schedulers
         """
         ...
     @overload
@@ -211,7 +211,7 @@ class QosMapPolicyDefinition(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 qos_schedulers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['QosMapPolicyDefinitionQosSchedulerArgs']]]]] = None,
+                 qos_schedulers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['QosMapPolicyDefinitionQosSchedulerArgs', 'QosMapPolicyDefinitionQosSchedulerArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -242,7 +242,7 @@ class QosMapPolicyDefinition(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             description: Optional[pulumi.Input[str]] = None,
             name: Optional[pulumi.Input[str]] = None,
-            qos_schedulers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['QosMapPolicyDefinitionQosSchedulerArgs']]]]] = None,
+            qos_schedulers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['QosMapPolicyDefinitionQosSchedulerArgs', 'QosMapPolicyDefinitionQosSchedulerArgsDict']]]]] = None,
             type: Optional[pulumi.Input[str]] = None,
             version: Optional[pulumi.Input[int]] = None) -> 'QosMapPolicyDefinition':
         """
@@ -254,7 +254,7 @@ class QosMapPolicyDefinition(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] description: The description of the policy definition
         :param pulumi.Input[str] name: The name of the policy definition
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['QosMapPolicyDefinitionQosSchedulerArgs']]]] qos_schedulers: List of QoS schedulers
+        :param pulumi.Input[Sequence[pulumi.Input[Union['QosMapPolicyDefinitionQosSchedulerArgs', 'QosMapPolicyDefinitionQosSchedulerArgsDict']]]] qos_schedulers: List of QoS schedulers
         :param pulumi.Input[str] type: Type
         :param pulumi.Input[int] version: The version of the object
         """

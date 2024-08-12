@@ -39,12 +39,12 @@ import javax.annotation.Nullable;
  * import java.nio.file.Files;
  * import java.nio.file.Paths;
  * 
- * public class App {
- *     public static void main(String[] args) {
+ * public class App }{{@code
+ *     public static void main(String[] args) }{{@code
  *         Pulumi.run(App::stack);
- *     }
+ *     }}{@code
  * 
- *     public static void stack(Context ctx) {
+ *     public static void stack(Context ctx) }{{@code
  *         var example = new SystemRemoteAccessProfileParcel("example", SystemRemoteAccessProfileParcelArgs.builder()
  *             .name("Example")
  *             .description("My Example")
@@ -62,7 +62,7 @@ import javax.annotation.Nullable;
  *             .aaaDeriveNameIdentity("MyPassword")
  *             .aaaEnableAccounting(false)
  *             .ikev2LocalIkeIdentityType("EMAIL")
- *             .ikev2LocalIkeIdentityValue("abc{@literal @}xyz.com")
+ *             .ikev2LocalIkeIdentityValue("abc}{@literal @}{@code xyz.com")
  *             .ikev2SecurityAssociationLifetime(86400)
  *             .ikev2AntiDosThreshold(99)
  *             .ipsecEnableAntiReplay(false)
@@ -71,8 +71,8 @@ import javax.annotation.Nullable;
  *             .ipsecEnablePerfectFowardSecrecy(false)
  *             .build());
  * 
- *     }
- * }
+ *     }}{@code
+ * }}{@code
  * }
  * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
@@ -707,7 +707,7 @@ public class SystemRemoteAccessProfileParcel extends com.pulumi.resources.Custom
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public SystemRemoteAccessProfileParcel(String name) {
+    public SystemRemoteAccessProfileParcel(java.lang.String name) {
         this(name, SystemRemoteAccessProfileParcelArgs.Empty);
     }
     /**
@@ -715,7 +715,7 @@ public class SystemRemoteAccessProfileParcel extends com.pulumi.resources.Custom
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SystemRemoteAccessProfileParcel(String name, SystemRemoteAccessProfileParcelArgs args) {
+    public SystemRemoteAccessProfileParcel(java.lang.String name, SystemRemoteAccessProfileParcelArgs args) {
         this(name, args, null);
     }
     /**
@@ -724,15 +724,22 @@ public class SystemRemoteAccessProfileParcel extends com.pulumi.resources.Custom
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SystemRemoteAccessProfileParcel(String name, SystemRemoteAccessProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/systemRemoteAccessProfileParcel:SystemRemoteAccessProfileParcel", name, args == null ? SystemRemoteAccessProfileParcelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+    public SystemRemoteAccessProfileParcel(java.lang.String name, SystemRemoteAccessProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/systemRemoteAccessProfileParcel:SystemRemoteAccessProfileParcel", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private SystemRemoteAccessProfileParcel(String name, Output<String> id, @Nullable SystemRemoteAccessProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("sdwan:index/systemRemoteAccessProfileParcel:SystemRemoteAccessProfileParcel", name, state, makeResourceOptions(options, id));
+    private SystemRemoteAccessProfileParcel(java.lang.String name, Output<java.lang.String> id, @Nullable SystemRemoteAccessProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("sdwan:index/systemRemoteAccessProfileParcel:SystemRemoteAccessProfileParcel", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static SystemRemoteAccessProfileParcelArgs makeArgs(SystemRemoteAccessProfileParcelArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? SystemRemoteAccessProfileParcelArgs.Empty : args;
+    }
+
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -748,7 +755,7 @@ public class SystemRemoteAccessProfileParcel extends com.pulumi.resources.Custom
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SystemRemoteAccessProfileParcel get(String name, Output<String> id, @Nullable SystemRemoteAccessProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SystemRemoteAccessProfileParcel get(java.lang.String name, Output<java.lang.String> id, @Nullable SystemRemoteAccessProfileParcelState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new SystemRemoteAccessProfileParcel(name, id, state, options);
     }
 }

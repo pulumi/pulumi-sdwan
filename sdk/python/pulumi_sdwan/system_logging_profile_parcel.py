@@ -442,10 +442,10 @@ class SystemLoggingProfileParcel(pulumi.CustomResource):
                  disk_file_size: Optional[pulumi.Input[int]] = None,
                  disk_file_size_variable: Optional[pulumi.Input[str]] = None,
                  feature_profile_id: Optional[pulumi.Input[str]] = None,
-                 ipv4_servers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemLoggingProfileParcelIpv4ServerArgs']]]]] = None,
-                 ipv6_servers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemLoggingProfileParcelIpv6ServerArgs']]]]] = None,
+                 ipv4_servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemLoggingProfileParcelIpv4ServerArgs', 'SystemLoggingProfileParcelIpv4ServerArgsDict']]]]] = None,
+                 ipv6_servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemLoggingProfileParcelIpv6ServerArgs', 'SystemLoggingProfileParcelIpv6ServerArgsDict']]]]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 tls_profiles: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemLoggingProfileParcelTlsProfileArgs']]]]] = None,
+                 tls_profiles: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemLoggingProfileParcelTlsProfileArgs', 'SystemLoggingProfileParcelTlsProfileArgsDict']]]]] = None,
                  __props__=None):
         """
         This resource can manage a System Logging profile parcel.
@@ -467,10 +467,10 @@ class SystemLoggingProfileParcel(pulumi.CustomResource):
         :param pulumi.Input[int] disk_file_size: Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
         :param pulumi.Input[str] disk_file_size_variable: Variable name
         :param pulumi.Input[str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemLoggingProfileParcelIpv4ServerArgs']]]] ipv4_servers: Enable logging to remote server
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemLoggingProfileParcelIpv6ServerArgs']]]] ipv6_servers: Enable logging to remote ipv6 server
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemLoggingProfileParcelIpv4ServerArgs', 'SystemLoggingProfileParcelIpv4ServerArgsDict']]]] ipv4_servers: Enable logging to remote server
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemLoggingProfileParcelIpv6ServerArgs', 'SystemLoggingProfileParcelIpv6ServerArgsDict']]]] ipv6_servers: Enable logging to remote ipv6 server
         :param pulumi.Input[str] name: The name of the profile parcel
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemLoggingProfileParcelTlsProfileArgs']]]] tls_profiles: Configure a TLS profile
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemLoggingProfileParcelTlsProfileArgs', 'SystemLoggingProfileParcelTlsProfileArgsDict']]]] tls_profiles: Configure a TLS profile
         """
         ...
     @overload
@@ -511,10 +511,10 @@ class SystemLoggingProfileParcel(pulumi.CustomResource):
                  disk_file_size: Optional[pulumi.Input[int]] = None,
                  disk_file_size_variable: Optional[pulumi.Input[str]] = None,
                  feature_profile_id: Optional[pulumi.Input[str]] = None,
-                 ipv4_servers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemLoggingProfileParcelIpv4ServerArgs']]]]] = None,
-                 ipv6_servers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemLoggingProfileParcelIpv6ServerArgs']]]]] = None,
+                 ipv4_servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemLoggingProfileParcelIpv4ServerArgs', 'SystemLoggingProfileParcelIpv4ServerArgsDict']]]]] = None,
+                 ipv6_servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemLoggingProfileParcelIpv6ServerArgs', 'SystemLoggingProfileParcelIpv6ServerArgsDict']]]]] = None,
                  name: Optional[pulumi.Input[str]] = None,
-                 tls_profiles: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemLoggingProfileParcelTlsProfileArgs']]]]] = None,
+                 tls_profiles: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemLoggingProfileParcelTlsProfileArgs', 'SystemLoggingProfileParcelTlsProfileArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -555,10 +555,10 @@ class SystemLoggingProfileParcel(pulumi.CustomResource):
             disk_file_size: Optional[pulumi.Input[int]] = None,
             disk_file_size_variable: Optional[pulumi.Input[str]] = None,
             feature_profile_id: Optional[pulumi.Input[str]] = None,
-            ipv4_servers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemLoggingProfileParcelIpv4ServerArgs']]]]] = None,
-            ipv6_servers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemLoggingProfileParcelIpv6ServerArgs']]]]] = None,
+            ipv4_servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemLoggingProfileParcelIpv4ServerArgs', 'SystemLoggingProfileParcelIpv4ServerArgsDict']]]]] = None,
+            ipv6_servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemLoggingProfileParcelIpv6ServerArgs', 'SystemLoggingProfileParcelIpv6ServerArgsDict']]]]] = None,
             name: Optional[pulumi.Input[str]] = None,
-            tls_profiles: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemLoggingProfileParcelTlsProfileArgs']]]]] = None,
+            tls_profiles: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SystemLoggingProfileParcelTlsProfileArgs', 'SystemLoggingProfileParcelTlsProfileArgsDict']]]]] = None,
             version: Optional[pulumi.Input[int]] = None) -> 'SystemLoggingProfileParcel':
         """
         Get an existing SystemLoggingProfileParcel resource's state with the given name, id, and optional extra
@@ -575,10 +575,10 @@ class SystemLoggingProfileParcel(pulumi.CustomResource):
         :param pulumi.Input[int] disk_file_size: Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
         :param pulumi.Input[str] disk_file_size_variable: Variable name
         :param pulumi.Input[str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemLoggingProfileParcelIpv4ServerArgs']]]] ipv4_servers: Enable logging to remote server
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemLoggingProfileParcelIpv6ServerArgs']]]] ipv6_servers: Enable logging to remote ipv6 server
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemLoggingProfileParcelIpv4ServerArgs', 'SystemLoggingProfileParcelIpv4ServerArgsDict']]]] ipv4_servers: Enable logging to remote server
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemLoggingProfileParcelIpv6ServerArgs', 'SystemLoggingProfileParcelIpv6ServerArgsDict']]]] ipv6_servers: Enable logging to remote ipv6 server
         :param pulumi.Input[str] name: The name of the profile parcel
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SystemLoggingProfileParcelTlsProfileArgs']]]] tls_profiles: Configure a TLS profile
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SystemLoggingProfileParcelTlsProfileArgs', 'SystemLoggingProfileParcelTlsProfileArgsDict']]]] tls_profiles: Configure a TLS profile
         :param pulumi.Input[int] version: The version of the profile parcel
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
