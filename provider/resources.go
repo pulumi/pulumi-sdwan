@@ -15,6 +15,7 @@
 package provider
 
 import (
+	"context"
 	"fmt"
 	"path/filepath"
 
@@ -26,6 +27,7 @@ import (
 	pf "github.com/pulumi/pulumi-terraform-bridge/pf/tfbridge"
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
 	tfbridgetokens "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge/tokens"
+	"github.com/pulumi/pulumi/sdk/go/common/resource"
 
 	"github.com/pulumi/pulumi-sdwan/provider/pkg/version"
 )
@@ -38,6 +40,10 @@ const (
 	mainPkg = "sdwan"
 	mainMod = "index"
 )
+
+func StaticID(idValue string) func(context.Context, resource.PropertyMap) (resource.ID, error) {
+	return func(ctx context.Context, state resource.PropertyMap) (resource.ID, error) { return idValue, nil }
+}
 
 // Provider returns additional overlaid schema and metadata associated with the provider..
 func Provider() tfbridge.ProviderInfo {
@@ -77,8 +83,11 @@ func Provider() tfbridge.ProviderInfo {
 		TFProviderVersion: "0.2.1",
 		Version:           version.Version,
 		Config:            map[string]*tfbridge.SchemaInfo{},
-		Resources:         map[string]*tfbridge.ResourceInfo{},
-		DataSources:       map[string]*tfbridge.DataSourceInfo{},
+		Resources: map[string]*tfbridge.ResourceInfo{
+			"sdwan_activate_centralized_policy":    {ComputeID: StaticID("sdwan:activateCentralizedPolicy")},
+			"sdwan_attach_feature_device_template": {ComputeID: StaticID("sdwan:attachFeatureDeviceTemplate")},
+		},
+		DataSources: map[string]*tfbridge.DataSourceInfo{},
 		JavaScript: &tfbridge.JavaScriptInfo{
 			PackageName: "@pulumi/sdwan",
 
