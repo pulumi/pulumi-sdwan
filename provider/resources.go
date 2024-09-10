@@ -27,7 +27,7 @@ import (
 	pf "github.com/pulumi/pulumi-terraform-bridge/pf/tfbridge"
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
 	tfbridgetokens "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge/tokens"
-	"github.com/pulumi/pulumi/sdk/go/common/resource"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/resource"
 
 	"github.com/pulumi/pulumi-sdwan/provider/pkg/version"
 )
@@ -42,7 +42,7 @@ const (
 )
 
 func StaticID(idValue string) func(context.Context, resource.PropertyMap) (resource.ID, error) {
-	return func(ctx context.Context, state resource.PropertyMap) (resource.ID, error) { return idValue, nil }
+	return func(context.Context, resource.PropertyMap) (resource.ID, error) { return resource.ID(idValue), nil }
 }
 
 // Provider returns additional overlaid schema and metadata associated with the provider..
