@@ -189,6 +189,21 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
     }
 
     /**
+     * ICMP Message
+     * 
+     */
+    @Import(name="icmpMessage")
+    private @Nullable Output<String> icmpMessage;
+
+    /**
+     * @return ICMP Message
+     * 
+     */
+    public Optional<Output<String>> icmpMessage() {
+        return Optional.ofNullable(this.icmpMessage);
+    }
+
+    /**
      * Packet length
      *   - Range: `0`-`65535`
      * 
@@ -333,7 +348,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
 
     /**
      * Type of match entry
-     *   - Choices: `appList`, `dnsAppList`, `dns`, `dscp`, `packetLength`, `plp`, `protocol`, `sourceDataPrefixList`, `sourceIp`, `sourcePort`, `destinationDataPrefixList`, `destinationIp`, `destinationRegion`, `destinationPort`, `tcp`, `trafficTo`
+     *   - Choices: `appList`, `dnsAppList`, `dns`, `dscp`, `packetLength`, `plp`, `protocol`, `sourceDataPrefixList`, `sourceIp`, `sourcePort`, `destinationDataPrefixList`, `destinationIp`, `destinationRegion`, `destinationPort`, `tcp`, `trafficTo`, `icmpMessage`
      * 
      */
     @Import(name="type", required=true)
@@ -341,7 +356,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
 
     /**
      * @return Type of match entry
-     *   - Choices: `appList`, `dnsAppList`, `dns`, `dscp`, `packetLength`, `plp`, `protocol`, `sourceDataPrefixList`, `sourceIp`, `sourcePort`, `destinationDataPrefixList`, `destinationIp`, `destinationRegion`, `destinationPort`, `tcp`, `trafficTo`
+     *   - Choices: `appList`, `dnsAppList`, `dns`, `dscp`, `packetLength`, `plp`, `protocol`, `sourceDataPrefixList`, `sourceIp`, `sourcePort`, `destinationDataPrefixList`, `destinationIp`, `destinationRegion`, `destinationPort`, `tcp`, `trafficTo`, `icmpMessage`
      * 
      */
     public Output<String> type() {
@@ -362,6 +377,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
         this.dnsApplicationListId = $.dnsApplicationListId;
         this.dnsApplicationListVersion = $.dnsApplicationListVersion;
         this.dscp = $.dscp;
+        this.icmpMessage = $.icmpMessage;
         this.packetLength = $.packetLength;
         this.plp = $.plp;
         this.protocol = $.protocol;
@@ -630,6 +646,27 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
         }
 
         /**
+         * @param icmpMessage ICMP Message
+         * 
+         * @return builder
+         * 
+         */
+        public Builder icmpMessage(@Nullable Output<String> icmpMessage) {
+            $.icmpMessage = icmpMessage;
+            return this;
+        }
+
+        /**
+         * @param icmpMessage ICMP Message
+         * 
+         * @return builder
+         * 
+         */
+        public Builder icmpMessage(String icmpMessage) {
+            return icmpMessage(Output.of(icmpMessage));
+        }
+
+        /**
          * @param packetLength Packet length
          *   - Range: `0`-`65535`
          * 
@@ -828,7 +865,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
 
         /**
          * @param type Type of match entry
-         *   - Choices: `appList`, `dnsAppList`, `dns`, `dscp`, `packetLength`, `plp`, `protocol`, `sourceDataPrefixList`, `sourceIp`, `sourcePort`, `destinationDataPrefixList`, `destinationIp`, `destinationRegion`, `destinationPort`, `tcp`, `trafficTo`
+         *   - Choices: `appList`, `dnsAppList`, `dns`, `dscp`, `packetLength`, `plp`, `protocol`, `sourceDataPrefixList`, `sourceIp`, `sourcePort`, `destinationDataPrefixList`, `destinationIp`, `destinationRegion`, `destinationPort`, `tcp`, `trafficTo`, `icmpMessage`
          * 
          * @return builder
          * 
@@ -840,7 +877,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
 
         /**
          * @param type Type of match entry
-         *   - Choices: `appList`, `dnsAppList`, `dns`, `dscp`, `packetLength`, `plp`, `protocol`, `sourceDataPrefixList`, `sourceIp`, `sourcePort`, `destinationDataPrefixList`, `destinationIp`, `destinationRegion`, `destinationPort`, `tcp`, `trafficTo`
+         *   - Choices: `appList`, `dnsAppList`, `dns`, `dscp`, `packetLength`, `plp`, `protocol`, `sourceDataPrefixList`, `sourceIp`, `sourcePort`, `destinationDataPrefixList`, `destinationIp`, `destinationRegion`, `destinationPort`, `tcp`, `trafficTo`, `icmpMessage`
          * 
          * @return builder
          * 

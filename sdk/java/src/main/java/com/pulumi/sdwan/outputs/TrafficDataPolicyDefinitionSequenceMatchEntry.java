@@ -72,6 +72,11 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntry {
      */
     private @Nullable Integer dscp;
     /**
+     * @return ICMP Message
+     * 
+     */
+    private @Nullable String icmpMessage;
+    /**
      * @return Packet length
      *   - Range: `0`-`65535`
      * 
@@ -122,7 +127,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntry {
     private @Nullable String trafficTo;
     /**
      * @return Type of match entry
-     *   - Choices: `appList`, `dnsAppList`, `dns`, `dscp`, `packetLength`, `plp`, `protocol`, `sourceDataPrefixList`, `sourceIp`, `sourcePort`, `destinationDataPrefixList`, `destinationIp`, `destinationRegion`, `destinationPort`, `tcp`, `trafficTo`
+     *   - Choices: `appList`, `dnsAppList`, `dns`, `dscp`, `packetLength`, `plp`, `protocol`, `sourceDataPrefixList`, `sourceIp`, `sourcePort`, `destinationDataPrefixList`, `destinationIp`, `destinationRegion`, `destinationPort`, `tcp`, `trafficTo`, `icmpMessage`
      * 
      */
     private String type;
@@ -209,6 +214,13 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.dscp);
     }
     /**
+     * @return ICMP Message
+     * 
+     */
+    public Optional<String> icmpMessage() {
+        return Optional.ofNullable(this.icmpMessage);
+    }
+    /**
      * @return Packet length
      *   - Range: `0`-`65535`
      * 
@@ -277,7 +289,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntry {
     }
     /**
      * @return Type of match entry
-     *   - Choices: `appList`, `dnsAppList`, `dns`, `dscp`, `packetLength`, `plp`, `protocol`, `sourceDataPrefixList`, `sourceIp`, `sourcePort`, `destinationDataPrefixList`, `destinationIp`, `destinationRegion`, `destinationPort`, `tcp`, `trafficTo`
+     *   - Choices: `appList`, `dnsAppList`, `dns`, `dscp`, `packetLength`, `plp`, `protocol`, `sourceDataPrefixList`, `sourceIp`, `sourcePort`, `destinationDataPrefixList`, `destinationIp`, `destinationRegion`, `destinationPort`, `tcp`, `trafficTo`, `icmpMessage`
      * 
      */
     public String type() {
@@ -304,6 +316,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntry {
         private @Nullable String dnsApplicationListId;
         private @Nullable Integer dnsApplicationListVersion;
         private @Nullable Integer dscp;
+        private @Nullable String icmpMessage;
         private @Nullable Integer packetLength;
         private @Nullable String plp;
         private @Nullable String protocol;
@@ -328,6 +341,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntry {
     	      this.dnsApplicationListId = defaults.dnsApplicationListId;
     	      this.dnsApplicationListVersion = defaults.dnsApplicationListVersion;
     	      this.dscp = defaults.dscp;
+    	      this.icmpMessage = defaults.icmpMessage;
     	      this.packetLength = defaults.packetLength;
     	      this.plp = defaults.plp;
     	      this.protocol = defaults.protocol;
@@ -407,6 +421,12 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntry {
             return this;
         }
         @CustomType.Setter
+        public Builder icmpMessage(@Nullable String icmpMessage) {
+
+            this.icmpMessage = icmpMessage;
+            return this;
+        }
+        @CustomType.Setter
         public Builder packetLength(@Nullable Integer packetLength) {
 
             this.packetLength = packetLength;
@@ -481,6 +501,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntry {
             _resultValue.dnsApplicationListId = dnsApplicationListId;
             _resultValue.dnsApplicationListVersion = dnsApplicationListVersion;
             _resultValue.dscp = dscp;
+            _resultValue.icmpMessage = icmpMessage;
             _resultValue.packetLength = packetLength;
             _resultValue.plp = plp;
             _resultValue.protocol = protocol;

@@ -30,8 +30,8 @@ type SecurityPolicy struct {
 	Description pulumi.StringOutput `pulumi:"description"`
 	// Bypass firewall policy and allow all Internet traffic to/from VPN 0 - Choices: `allow`, `deny`
 	DirectInternetApplications pulumi.StringPtrOutput `pulumi:"directInternetApplications"`
-	// Failure mode - Choices: `open`, `close` - Default value: `open`
-	FailureMode pulumi.StringOutput `pulumi:"failureMode"`
+	// Failure mode - Choices: `open`, `close`
+	FailureMode pulumi.StringPtrOutput `pulumi:"failureMode"`
 	// High Speed Logging Server IP
 	HighSpeedLoggingServerIp pulumi.StringPtrOutput `pulumi:"highSpeedLoggingServerIp"`
 	// High Speed Logging Port
@@ -98,7 +98,7 @@ type securityPolicyState struct {
 	Description *string `pulumi:"description"`
 	// Bypass firewall policy and allow all Internet traffic to/from VPN 0 - Choices: `allow`, `deny`
 	DirectInternetApplications *string `pulumi:"directInternetApplications"`
-	// Failure mode - Choices: `open`, `close` - Default value: `open`
+	// Failure mode - Choices: `open`, `close`
 	FailureMode *string `pulumi:"failureMode"`
 	// High Speed Logging Server IP
 	HighSpeedLoggingServerIp *string `pulumi:"highSpeedLoggingServerIp"`
@@ -131,7 +131,7 @@ type SecurityPolicyState struct {
 	Description pulumi.StringPtrInput
 	// Bypass firewall policy and allow all Internet traffic to/from VPN 0 - Choices: `allow`, `deny`
 	DirectInternetApplications pulumi.StringPtrInput
-	// Failure mode - Choices: `open`, `close` - Default value: `open`
+	// Failure mode - Choices: `open`, `close`
 	FailureMode pulumi.StringPtrInput
 	// High Speed Logging Server IP
 	HighSpeedLoggingServerIp pulumi.StringPtrInput
@@ -168,7 +168,7 @@ type securityPolicyArgs struct {
 	Description string `pulumi:"description"`
 	// Bypass firewall policy and allow all Internet traffic to/from VPN 0 - Choices: `allow`, `deny`
 	DirectInternetApplications *string `pulumi:"directInternetApplications"`
-	// Failure mode - Choices: `open`, `close` - Default value: `open`
+	// Failure mode - Choices: `open`, `close`
 	FailureMode *string `pulumi:"failureMode"`
 	// High Speed Logging Server IP
 	HighSpeedLoggingServerIp *string `pulumi:"highSpeedLoggingServerIp"`
@@ -200,7 +200,7 @@ type SecurityPolicyArgs struct {
 	Description pulumi.StringInput
 	// Bypass firewall policy and allow all Internet traffic to/from VPN 0 - Choices: `allow`, `deny`
 	DirectInternetApplications pulumi.StringPtrInput
-	// Failure mode - Choices: `open`, `close` - Default value: `open`
+	// Failure mode - Choices: `open`, `close`
 	FailureMode pulumi.StringPtrInput
 	// High Speed Logging Server IP
 	HighSpeedLoggingServerIp pulumi.StringPtrInput
@@ -329,9 +329,9 @@ func (o SecurityPolicyOutput) DirectInternetApplications() pulumi.StringPtrOutpu
 	return o.ApplyT(func(v *SecurityPolicy) pulumi.StringPtrOutput { return v.DirectInternetApplications }).(pulumi.StringPtrOutput)
 }
 
-// Failure mode - Choices: `open`, `close` - Default value: `open`
-func (o SecurityPolicyOutput) FailureMode() pulumi.StringOutput {
-	return o.ApplyT(func(v *SecurityPolicy) pulumi.StringOutput { return v.FailureMode }).(pulumi.StringOutput)
+// Failure mode - Choices: `open`, `close`
+func (o SecurityPolicyOutput) FailureMode() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *SecurityPolicy) pulumi.StringPtrOutput { return v.FailureMode }).(pulumi.StringPtrOutput)
 }
 
 // High Speed Logging Server IP

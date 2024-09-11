@@ -64,6 +64,8 @@ import javax.annotation.Nullable;
  *                 .transport("transport_tcp")
  *                 .source_interface("Ethernet1")
  *                 .export_spreading("enable")
+ *                 .bfd_metrics_exporting(true)
+ *                 .exporting_interval(86400)
  *                 .build())
  *             .build());
  * 

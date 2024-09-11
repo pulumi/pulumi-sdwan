@@ -46,9 +46,6 @@ func NewCustomControlTopologyPolicyDefinition(ctx *pulumi.Context,
 	if args.Description == nil {
 		return nil, errors.New("invalid value for required argument 'Description'")
 	}
-	if args.Sequences == nil {
-		return nil, errors.New("invalid value for required argument 'Sequences'")
-	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource CustomControlTopologyPolicyDefinition
 	err := ctx.RegisterResource("sdwan:index/customControlTopologyPolicyDefinition:CustomControlTopologyPolicyDefinition", name, args, &resource, opts...)

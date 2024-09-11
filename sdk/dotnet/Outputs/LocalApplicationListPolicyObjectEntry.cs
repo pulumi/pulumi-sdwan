@@ -17,11 +17,19 @@ namespace Pulumi.Sdwan.Outputs
         /// Application name
         /// </summary>
         public readonly string? Application;
+        /// <summary>
+        /// Application family name
+        /// </summary>
+        public readonly string? ApplicationFamily;
 
         [OutputConstructor]
-        private LocalApplicationListPolicyObjectEntry(string? application)
+        private LocalApplicationListPolicyObjectEntry(
+            string? application,
+
+            string? applicationFamily)
         {
             Application = application;
+            ApplicationFamily = applicationFamily;
         }
     }
 }

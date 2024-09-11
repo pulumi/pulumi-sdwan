@@ -121,7 +121,7 @@ namespace Pulumi.Sdwan
         [Input("name")]
         public Input<string>? Name { get; set; }
 
-        [Input("sequences", required: true)]
+        [Input("sequences")]
         private InputList<Inputs.CustomControlTopologyPolicyDefinitionSequenceArgs>? _sequences;
 
         /// <summary>

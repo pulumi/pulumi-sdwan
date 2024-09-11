@@ -154,6 +154,10 @@ export interface ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry {
      */
     dscp?: number;
     /**
+     * ICMP Message
+     */
+    icmpMessage?: string;
+    /**
      * PLP
      *   - Choices: `low`, `high`
      */
@@ -185,7 +189,7 @@ export interface ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry {
     trafficTo?: string;
     /**
      * Type of match entry
-     *   - Choices: `appList`, `dnsAppList`, `dns`, `dscp`, `plp`, `protocol`, `sourceDataPrefixList`, `sourceIp`, `sourcePort`, `destinationDataPrefixList`, `destinationIp`, `destinationRegion`, `destinationPort`, `trafficTo`
+     *   - Choices: `appList`, `dnsAppList`, `dns`, `dscp`, `plp`, `protocol`, `sourceDataPrefixList`, `sourceIp`, `sourcePort`, `destinationDataPrefixList`, `destinationIp`, `destinationRegion`, `destinationPort`, `trafficTo`, `icmpMessage`
      */
     type: string;
 }
@@ -201,7 +205,7 @@ export interface ApplicationListPolicyObjectEntry {
     applicationFamily?: string;
 }
 
-export interface ApplicationPriorityQosPolicyProfileParcelQosScheduler {
+export interface ApplicationPriorityQosPolicyQosScheduler {
     /**
      * bandwidthPercent
      */
@@ -858,10 +862,18 @@ export interface CentralizedPolicyDefinitionEntry {
 
 export interface CflowdPolicyDefinitionCollector {
     /**
+     * BFD metrics exporting
+     */
+    bfdMetricsExporting?: boolean;
+    /**
      * Export spreading
      *   - Choices: `enable`, `disable`
      */
     exportSpreading?: string;
+    /**
+     * Exporting interval
+     */
+    exportingInterval?: number;
     /**
      * IP address
      */
@@ -5606,64 +5618,6 @@ export interface ColorListPolicyObjectEntry {
     color: string;
 }
 
-export interface ConfigurationGroupDeployDevice {
-    /**
-     * Device ID
-     */
-    id?: string;
-}
-
-export interface ConfigurationGroupDeviceVariablesDevice {
-    /**
-     * Device ID
-     */
-    deviceId?: string;
-    /**
-     * List of variables
-     */
-    variables?: outputs.ConfigurationGroupDeviceVariablesDeviceVariable[];
-}
-
-export interface ConfigurationGroupDeviceVariablesDeviceVariable {
-    /**
-     * Variable name
-     */
-    name?: string;
-    /**
-     * Variable value
-     */
-    value: string;
-}
-
-export interface ConfigurationGroupDeviceVariablesGroup {
-    /**
-     * Group name
-     */
-    name?: string;
-    /**
-     * List of variables
-     */
-    variables?: outputs.ConfigurationGroupDeviceVariablesGroupVariable[];
-}
-
-export interface ConfigurationGroupDeviceVariablesGroupVariable {
-    /**
-     * Variable name
-     */
-    name?: string;
-    /**
-     * Variable value
-     */
-    value: string;
-}
-
-export interface ConfigurationGroupDevicesDevice {
-    /**
-     * Device ID
-     */
-    id?: string;
-}
-
 export interface ConfigurationGroupFeatureProfile {
     /**
      * Feature profile ID
@@ -6161,7 +6115,7 @@ export interface FeatureDeviceTemplateGeneralTemplate {
     subTemplates?: outputs.FeatureDeviceTemplateGeneralTemplateSubTemplate[];
     /**
      * Feature template type
-     *   - Choices: `ciscoSystem`, `ciscoLogging`, `cedgeAaa`, `ciscoBfd`, `ciscoOmp`, `ciscoSecurity`, `ciscoBanner`, `ciscoSnmp`, `cedgeGlobal`, `cli-template`, `ciscoSigCredentials`, `switchport`, `ciscoThousandeyes`, `ciscoVpn`
+     *   - Choices: `ciscoSystem`, `ciscoLogging`, `cedgeAaa`, `ciscoBfd`, `ciscoOmp`, `ciscoSecurity`, `ciscoBanner`, `ciscoSnmp`, `cedgeGlobal`, `cli-template`, `ciscoSigCredentials`, `switchport`, `ciscoThousandeyes`, `ciscoVpn`, `virtual-application-utd`
      */
     type: string;
     /**
@@ -6359,6 +6313,10 @@ export interface GetApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry {
      */
     dscp: number;
     /**
+     * ICMP Message
+     */
+    icmpMessage: string;
+    /**
      * PLP
      */
     plp: string;
@@ -6403,7 +6361,7 @@ export interface GetApplicationListPolicyObjectEntry {
     applicationFamily: string;
 }
 
-export interface GetApplicationPriorityQosPolicyProfileParcelQosScheduler {
+export interface GetApplicationPriorityQosPolicyQosScheduler {
     /**
      * bandwidthPercent
      */
@@ -7008,9 +6966,17 @@ export interface GetCentralizedPolicyDefinitionEntry {
 
 export interface GetCflowdPolicyDefinitionCollector {
     /**
+     * BFD metrics exporting
+     */
+    bfdMetricsExporting: boolean;
+    /**
      * Export spreading
      */
     exportSpreading: string;
+    /**
+     * Exporting interval
+     */
+    exportingInterval: number;
     /**
      * IP address
      */
@@ -11354,57 +11320,6 @@ export interface GetColorListPolicyObjectEntry {
     color: string;
 }
 
-export interface GetConfigurationGroupDeviceVariablesDevice {
-    /**
-     * Device ID
-     */
-    deviceId: string;
-    /**
-     * List of variables
-     */
-    variables: outputs.GetConfigurationGroupDeviceVariablesDeviceVariable[];
-}
-
-export interface GetConfigurationGroupDeviceVariablesDeviceVariable {
-    /**
-     * Variable name
-     */
-    name: string;
-    /**
-     * Variable value
-     */
-    value: string;
-}
-
-export interface GetConfigurationGroupDeviceVariablesGroup {
-    /**
-     * Group name
-     */
-    name: string;
-    /**
-     * List of variables
-     */
-    variables: outputs.GetConfigurationGroupDeviceVariablesGroupVariable[];
-}
-
-export interface GetConfigurationGroupDeviceVariablesGroupVariable {
-    /**
-     * Variable name
-     */
-    name: string;
-    /**
-     * Variable value
-     */
-    value: string;
-}
-
-export interface GetConfigurationGroupDevicesDevice {
-    /**
-     * Device ID
-     */
-    id: string;
-}
-
 export interface GetConfigurationGroupFeatureProfile {
     /**
      * Feature profile ID
@@ -12143,6 +12058,10 @@ export interface GetIpv4AclPolicyDefinitionSequenceMatchEntry {
      */
     dscp: number;
     /**
+     * ICMP Message
+     */
+    icmpMessage: string;
+    /**
      * Packet length
      */
     packetLength: number;
@@ -12509,6 +12428,10 @@ export interface GetLocalApplicationListPolicyObjectEntry {
      * Application name
      */
     application: string;
+    /**
+     * Application family name
+     */
+    applicationFamily: string;
 }
 
 export interface GetLocalizedPolicyDefinition {
@@ -12539,6 +12462,243 @@ export interface GetMeshTopologyPolicyDefinitionRegion {
      * Site list versions
      */
     siteListVersions: string[];
+}
+
+export interface GetOtherThousandeyesFeatureVirtualApplication {
+    /**
+     * Set the Account Group Token
+     */
+    accountGroupToken: string;
+    /**
+     * Variable name
+     */
+    accountGroupTokenVariable: string;
+    /**
+     * Set the Agent default gateway
+     */
+    agentDefaultGateway: string;
+    /**
+     * Variable name
+     */
+    agentDefaultGatewayVariable: string;
+    /**
+     * Set the host name
+     */
+    hostname: string;
+    /**
+     * Variable name
+     */
+    hostnameVariable: string;
+    /**
+     * Set the Agent IP Address
+     */
+    managementIp: string;
+    /**
+     * Variable name
+     */
+    managementIpVariable: string;
+    /**
+     * Set the Agent SubnetMask
+     */
+    managementSubnetMask: string;
+    /**
+     * Variable name
+     */
+    managementSubnetMaskVariable: string;
+    /**
+     * Set the name server
+     */
+    nameServerIp: string;
+    /**
+     * Variable name
+     */
+    nameServerIpVariable: string;
+    /**
+     * Set the proxy PAC url
+     */
+    pacUrl: string;
+    /**
+     * Variable name
+     */
+    pacUrlVariable: string;
+    /**
+     * Set the Proxy Host
+     */
+    proxyHost: string;
+    /**
+     * Variable name
+     */
+    proxyHostVariable: string;
+    /**
+     * Set the Proxy Port
+     */
+    proxyPort: number;
+    /**
+     * Variable name
+     */
+    proxyPortVariable: string;
+    /**
+     * Select Web Proxy Type
+     */
+    proxyType: string;
+    /**
+     * VPN number
+     */
+    vpn: number;
+    /**
+     * Variable name
+     */
+    vpnVariable: string;
+}
+
+export interface GetOtherUcseFeatureInterface {
+    /**
+     * Set Inteface name
+     */
+    interfaceName: string;
+    /**
+     * Variable name
+     */
+    interfaceNameVariable: string;
+    /**
+     * Assign IPv4 address
+     */
+    ipv4Address: string;
+    /**
+     * Variable name
+     */
+    ipv4AddressVariable: string;
+    /**
+     * UCSE Interface VPN
+     */
+    ucseInterfaceVpn: number;
+    /**
+     * Variable name
+     */
+    ucseInterfaceVpnVariable: string;
+}
+
+export interface GetPolicyObjectClassMapEntry {
+    /**
+     * select a queue
+     */
+    queue: string;
+}
+
+export interface GetPolicyObjectColorListEntry {
+    color: string;
+}
+
+export interface GetPolicyObjectDataIpv4PrefixListEntry {
+    /**
+     * IPv4 address
+     */
+    ipv4Address: string;
+    /**
+     * IPv4 prefix Length
+     */
+    ipv4PrefixLength: number;
+}
+
+export interface GetPolicyObjectDataIpv6PrefixListEntry {
+    /**
+     * IPv6 address
+     */
+    ipv6Address: string;
+    /**
+     * IPv6 prefix
+     */
+    ipv6PrefixLength: number;
+}
+
+export interface GetPolicyObjectExtendedCommunityListEntry {
+    /**
+     * can be soo 10.0.0.1:30 or rt 500:50 etc.
+     */
+    extendedCommunity: string;
+}
+
+export interface GetPolicyObjectIpv4PrefixListEntry {
+    /**
+     * IPv4 prefix length with ge range operator
+     */
+    ge: number;
+    /**
+     * IPv4 address
+     */
+    ipv4Address: string;
+    /**
+     * IPv4 prefix length
+     */
+    ipv4PrefixLength: number;
+    /**
+     * IPv4 prefix length with le range operator
+     */
+    le: number;
+}
+
+export interface GetPolicyObjectIpv6PrefixListEntry {
+    /**
+     * IPv6 prefix length with ge range operator
+     */
+    ge: number;
+    /**
+     * IPv6 address
+     */
+    ipv6Address: string;
+    /**
+     * IPv6 prefix length
+     */
+    ipv6PrefixLength: number;
+    /**
+     * IPv6 prefix length with le range operator
+     */
+    le: number;
+}
+
+export interface GetPolicyObjectMirrorEntry {
+    /**
+     * remote destination ip address
+     */
+    remoteDestinationIp: string;
+    /**
+     * source ip address
+     */
+    sourceIp: string;
+}
+
+export interface GetPolicyObjectPolicerEntry {
+    /**
+     * Burst (Bytes)
+     */
+    burstBytes: number;
+    /**
+     * Exceed options such as Drop or Remark
+     */
+    exceedAction: string;
+    /**
+     * Rate (bps)
+     */
+    rateBps: number;
+}
+
+export interface GetPolicyObjectTlocListEntry {
+    /**
+     * color
+     */
+    color: string;
+    /**
+     * encapsulation
+     */
+    encapsulation: string;
+    /**
+     * Preference
+     */
+    preference: string;
+    /**
+     * tloc
+     */
+    tlocIp: string;
 }
 
 export interface GetPortListPolicyObjectEntry {
@@ -13041,245 +13201,11 @@ export interface GetSecurityPolicyLogging {
     externalSyslogServerVpn: string;
 }
 
-export interface GetServiceLanVpnInterfaceEthernetProfileParcelArp {
-    /**
-     * IPV4 Address
-     */
-    ipAddress: string;
-    /**
-     * Variable name
-     */
-    ipAddressVariable: string;
-    /**
-     * MAC Address
-     */
-    macAddress: string;
-    /**
-     * Variable name
-     */
-    macAddressVariable: string;
-}
-
-export interface GetServiceLanVpnInterfaceEthernetProfileParcelIpv4SecondaryAddress {
-    /**
-     * IpV4 Address
-     */
-    address: string;
-    /**
-     * Variable name
-     */
-    addressVariable: string;
-    /**
-     * Subnet Mask
-     */
-    subnetMask: string;
-    /**
-     * Variable name
-     */
-    subnetMaskVariable: string;
-}
-
-export interface GetServiceLanVpnInterfaceEthernetProfileParcelIpv4Vrrp {
-    /**
-     * Group ID
-     */
-    groupId: number;
-    /**
-     * Variable name
-     */
-    groupIdVariable: string;
-    /**
-     * VRRP Ip Address
-     */
-    ipAddress: string;
-    /**
-     * Variable name
-     */
-    ipAddressVariable: string;
-    /**
-     * Set priority
-     */
-    priority: number;
-    /**
-     * Variable name
-     */
-    priorityVariable: string;
-    /**
-     * VRRP Secondary Ip Addresses
-     */
-    secondaryAddresses: outputs.GetServiceLanVpnInterfaceEthernetProfileParcelIpv4VrrpSecondaryAddress[];
-    /**
-     * Timer interval for successive advertisements, in milliseconds
-     */
-    timer: number;
-    /**
-     * Variable name
-     */
-    timerVariable: string;
-    /**
-     * Timer interval for successive advertisements, in milliseconds
-     */
-    tlocPrefChangeValue: number;
-    /**
-     * Timer interval for successive advertisements, in milliseconds
-     */
-    tlocPrefixChange: boolean;
-    /**
-     * Track OMP status
-     */
-    trackOmp: boolean;
-}
-
-export interface GetServiceLanVpnInterfaceEthernetProfileParcelIpv4VrrpSecondaryAddress {
-    /**
-     * Ip Address
-     */
-    address: string;
-    /**
-     * Variable name
-     */
-    addressVariable: string;
-    /**
-     * Subnet Mask
-     */
-    subnetMask: string;
-    /**
-     * Variable name
-     */
-    subnetMaskVariable: string;
-}
-
-export interface GetServiceLanVpnInterfaceEthernetProfileParcelIpv6DhcpHelper {
-    /**
-     * DHCPv6 Helper address
-     */
-    address: string;
-    /**
-     * Variable name
-     */
-    addressVariable: string;
-    /**
-     * DHCPv6 Helper VPN
-     */
-    dhcpv6HelperVpn: number;
-    /**
-     * Variable name
-     */
-    dhcpv6HelperVpnVariable: string;
-}
-
-export interface GetServiceLanVpnInterfaceEthernetProfileParcelIpv6DhcpSecondaryAddress {
-    /**
-     * IPv6 Address Secondary
-     */
-    address: string;
-    /**
-     * Variable name
-     */
-    addressVariable: string;
-}
-
-export interface GetServiceLanVpnInterfaceEthernetProfileParcelIpv6SecondaryAddress {
-    /**
-     * IPv6 Address Secondary
-     */
-    address: string;
-    /**
-     * Variable name
-     */
-    addressVariable: string;
-}
-
-export interface GetServiceLanVpnInterfaceEthernetProfileParcelIpv6Vrrp {
-    /**
-     * IPv6 VRRP
-     */
-    addresses: outputs.GetServiceLanVpnInterfaceEthernetProfileParcelIpv6VrrpAddress[];
-    /**
-     * Group ID
-     */
-    groupId: number;
-    /**
-     * Variable name
-     */
-    groupIdVariable: string;
-    /**
-     * Set priority
-     */
-    priority: number;
-    /**
-     * Variable name
-     */
-    priorityVariable: string;
-    /**
-     * Timer interval for successive advertisements, in milliseconds
-     */
-    timer: number;
-    /**
-     * Variable name
-     */
-    timerVariable: string;
-    /**
-     * Track OMP status
-     */
-    trackOmp: boolean;
-}
-
-export interface GetServiceLanVpnInterfaceEthernetProfileParcelIpv6VrrpAddress {
-    /**
-     * Assign Global IPv6 Prefix
-     */
-    globalAddress: string;
-    /**
-     * Variable name
-     */
-    globalAddressVariable: string;
-    /**
-     * Use link-local IPv6 Address
-     */
-    linkLocalAddress: string;
-    /**
-     * Variable name
-     */
-    linkLocalAddressVariable: string;
-}
-
-export interface GetServiceLanVpnInterfaceEthernetProfileParcelStaticNat {
-    /**
-     * Direction of static NAT translation
-     */
-    direction: string;
-    /**
-     * Source IP address to be translated
-     */
-    sourceIp: string;
-    /**
-     * Variable name
-     */
-    sourceIpVariable: string;
-    /**
-     * Source VPN ID
-     */
-    sourceVpn: number;
-    /**
-     * Variable name
-     */
-    sourceVpnVariable: string;
-    /**
-     * Statically translated source IP address
-     */
-    translateIp: string;
-    /**
-     * Variable name
-     */
-    translateIpVariable: string;
-}
-
-export interface GetServiceLanVpnProfileParcelAdvertiseOmpIpv4 {
+export interface GetServiceLanVpnFeatureAdvertiseOmpIpv4 {
     /**
      * IPv4 Prefix List
      */
-    prefixes: outputs.GetServiceLanVpnProfileParcelAdvertiseOmpIpv4Prefix[];
+    prefixes: outputs.GetServiceLanVpnFeatureAdvertiseOmpIpv4Prefix[];
     /**
      * Protocol
      */
@@ -13291,7 +13217,7 @@ export interface GetServiceLanVpnProfileParcelAdvertiseOmpIpv4 {
     routePolicyId: string;
 }
 
-export interface GetServiceLanVpnProfileParcelAdvertiseOmpIpv4Prefix {
+export interface GetServiceLanVpnFeatureAdvertiseOmpIpv4Prefix {
     /**
      * Aggregate Only
      */
@@ -13316,11 +13242,11 @@ export interface GetServiceLanVpnProfileParcelAdvertiseOmpIpv4Prefix {
     subnetMaskVariable: string;
 }
 
-export interface GetServiceLanVpnProfileParcelAdvertiseOmpIpv6 {
+export interface GetServiceLanVpnFeatureAdvertiseOmpIpv6 {
     /**
      * IPv6 Prefix List
      */
-    prefixes: outputs.GetServiceLanVpnProfileParcelAdvertiseOmpIpv6Prefix[];
+    prefixes: outputs.GetServiceLanVpnFeatureAdvertiseOmpIpv6Prefix[];
     /**
      * Protocol
      */
@@ -13340,7 +13266,7 @@ export interface GetServiceLanVpnProfileParcelAdvertiseOmpIpv6 {
     routePolicyId: string;
 }
 
-export interface GetServiceLanVpnProfileParcelAdvertiseOmpIpv6Prefix {
+export interface GetServiceLanVpnFeatureAdvertiseOmpIpv6Prefix {
     /**
      * Aggregate Only
      */
@@ -13355,7 +13281,7 @@ export interface GetServiceLanVpnProfileParcelAdvertiseOmpIpv6Prefix {
     prefixVariable: string;
 }
 
-export interface GetServiceLanVpnProfileParcelGreRoute {
+export interface GetServiceLanVpnFeatureGreRoute {
     /**
      * Variable name
      */
@@ -13386,7 +13312,7 @@ export interface GetServiceLanVpnProfileParcelGreRoute {
     vpn: number;
 }
 
-export interface GetServiceLanVpnProfileParcelHostMapping {
+export interface GetServiceLanVpnFeatureHostMapping {
     /**
      * Hostname
      */
@@ -13405,7 +13331,7 @@ export interface GetServiceLanVpnProfileParcelHostMapping {
     listOfIpsVariable: string;
 }
 
-export interface GetServiceLanVpnProfileParcelIpsecRoute {
+export interface GetServiceLanVpnFeatureIpsecRoute {
     /**
      * Variable name
      */
@@ -13432,7 +13358,7 @@ export interface GetServiceLanVpnProfileParcelIpsecRoute {
     subnetMaskVariable: string;
 }
 
-export interface GetServiceLanVpnProfileParcelIpv4ExportRouteTarget {
+export interface GetServiceLanVpnFeatureIpv4ExportRouteTarget {
     /**
      * Route target
      */
@@ -13443,7 +13369,7 @@ export interface GetServiceLanVpnProfileParcelIpv4ExportRouteTarget {
     routeTargetVariable: string;
 }
 
-export interface GetServiceLanVpnProfileParcelIpv4ImportRouteTarget {
+export interface GetServiceLanVpnFeatureIpv4ImportRouteTarget {
     /**
      * Route target
      */
@@ -13454,7 +13380,7 @@ export interface GetServiceLanVpnProfileParcelIpv4ImportRouteTarget {
     routeTargetVariable: string;
 }
 
-export interface GetServiceLanVpnProfileParcelIpv4StaticRoute {
+export interface GetServiceLanVpnFeatureIpv4StaticRoute {
     /**
      * IPv4 Route Gateway DHCP
      */
@@ -13470,11 +13396,11 @@ export interface GetServiceLanVpnProfileParcelIpv4StaticRoute {
     /**
      * IPv4 Route Gateway Next Hop with Tracker
      */
-    nextHopWithTrackers: outputs.GetServiceLanVpnProfileParcelIpv4StaticRouteNextHopWithTracker[];
+    nextHopWithTrackers: outputs.GetServiceLanVpnFeatureIpv4StaticRouteNextHopWithTracker[];
     /**
      * IPv4 Route Gateway Next Hop
      */
-    nextHops: outputs.GetServiceLanVpnProfileParcelIpv4StaticRouteNextHop[];
+    nextHops: outputs.GetServiceLanVpnFeatureIpv4StaticRouteNextHop[];
     /**
      * IPv4 Route Gateway Next Hop
      */
@@ -13493,7 +13419,7 @@ export interface GetServiceLanVpnProfileParcelIpv4StaticRoute {
     vpn: boolean;
 }
 
-export interface GetServiceLanVpnProfileParcelIpv4StaticRouteNextHop {
+export interface GetServiceLanVpnFeatureIpv4StaticRouteNextHop {
     /**
      * Address
      */
@@ -13512,7 +13438,7 @@ export interface GetServiceLanVpnProfileParcelIpv4StaticRouteNextHop {
     administrativeDistanceVariable: string;
 }
 
-export interface GetServiceLanVpnProfileParcelIpv4StaticRouteNextHopWithTracker {
+export interface GetServiceLanVpnFeatureIpv4StaticRouteNextHopWithTracker {
     /**
      * Address
      */
@@ -13532,7 +13458,7 @@ export interface GetServiceLanVpnProfileParcelIpv4StaticRouteNextHopWithTracker 
     trackerId: string;
 }
 
-export interface GetServiceLanVpnProfileParcelIpv6ExportRouteTarget {
+export interface GetServiceLanVpnFeatureIpv6ExportRouteTarget {
     /**
      * Route target
      */
@@ -13543,7 +13469,7 @@ export interface GetServiceLanVpnProfileParcelIpv6ExportRouteTarget {
     routeTargetVariable: string;
 }
 
-export interface GetServiceLanVpnProfileParcelIpv6ImportRouteTarget {
+export interface GetServiceLanVpnFeatureIpv6ImportRouteTarget {
     /**
      * Route target
      */
@@ -13554,7 +13480,7 @@ export interface GetServiceLanVpnProfileParcelIpv6ImportRouteTarget {
     routeTargetVariable: string;
 }
 
-export interface GetServiceLanVpnProfileParcelIpv6StaticRoute {
+export interface GetServiceLanVpnFeatureIpv6StaticRoute {
     /**
      * IPv6 Nat
      */
@@ -13566,7 +13492,7 @@ export interface GetServiceLanVpnProfileParcelIpv6StaticRoute {
     /**
      * IPv6 Route Gateway Next Hop
      */
-    nextHops: outputs.GetServiceLanVpnProfileParcelIpv6StaticRouteNextHop[];
+    nextHops: outputs.GetServiceLanVpnFeatureIpv6StaticRouteNextHop[];
     /**
      * IPv6 Route Gateway Next Hop
      */
@@ -13581,7 +13507,7 @@ export interface GetServiceLanVpnProfileParcelIpv6StaticRoute {
     prefixVariable: string;
 }
 
-export interface GetServiceLanVpnProfileParcelIpv6StaticRouteNextHop {
+export interface GetServiceLanVpnFeatureIpv6StaticRouteNextHop {
     /**
      * Address
      */
@@ -13600,7 +13526,7 @@ export interface GetServiceLanVpnProfileParcelIpv6StaticRouteNextHop {
     administrativeDistanceVariable: string;
 }
 
-export interface GetServiceLanVpnProfileParcelNat64V4Pool {
+export interface GetServiceLanVpnFeatureNat64V4Pool {
     /**
      * NAT64 v4 Pool Name
      */
@@ -13635,7 +13561,7 @@ export interface GetServiceLanVpnProfileParcelNat64V4Pool {
     rangeStartVariable: string;
 }
 
-export interface GetServiceLanVpnProfileParcelNatPool {
+export interface GetServiceLanVpnFeatureNatPool {
     /**
      * NAT Direction
      */
@@ -13687,7 +13613,7 @@ export interface GetServiceLanVpnProfileParcelNatPool {
     trackerObjectId: string;
 }
 
-export interface GetServiceLanVpnProfileParcelNatPortForward {
+export interface GetServiceLanVpnFeatureNatPortForward {
     /**
      * NAT Pool Name
      */
@@ -13738,11 +13664,11 @@ export interface GetServiceLanVpnProfileParcelNatPortForward {
     translatedSourceIpVariable: string;
 }
 
-export interface GetServiceLanVpnProfileParcelRouteLeakFromGlobalVpn {
+export interface GetServiceLanVpnFeatureRouteLeakFromGlobalVpn {
     /**
      * Redistribute Routes to specific Protocol on Service VPN
      */
-    redistributions: outputs.GetServiceLanVpnProfileParcelRouteLeakFromGlobalVpnRedistribution[];
+    redistributions: outputs.GetServiceLanVpnFeatureRouteLeakFromGlobalVpnRedistribution[];
     routePolicyId: string;
     /**
      * Leak Routes of particular protocol from Global to Service VPN
@@ -13754,7 +13680,7 @@ export interface GetServiceLanVpnProfileParcelRouteLeakFromGlobalVpn {
     routeProtocolVariable: string;
 }
 
-export interface GetServiceLanVpnProfileParcelRouteLeakFromGlobalVpnRedistribution {
+export interface GetServiceLanVpnFeatureRouteLeakFromGlobalVpnRedistribution {
     /**
      * Protocol to restributed leaked routes
      */
@@ -13766,11 +13692,11 @@ export interface GetServiceLanVpnProfileParcelRouteLeakFromGlobalVpnRedistributi
     redistributionPolicyId: string;
 }
 
-export interface GetServiceLanVpnProfileParcelRouteLeakFromOtherService {
+export interface GetServiceLanVpnFeatureRouteLeakFromOtherService {
     /**
      * Redistribute Route to specific Protocol on Current Service VPN
      */
-    redistributions: outputs.GetServiceLanVpnProfileParcelRouteLeakFromOtherServiceRedistribution[];
+    redistributions: outputs.GetServiceLanVpnFeatureRouteLeakFromOtherServiceRedistribution[];
     routePolicyId: string;
     /**
      * Leak Route of particular protocol from Source Service VPN
@@ -13790,7 +13716,7 @@ export interface GetServiceLanVpnProfileParcelRouteLeakFromOtherService {
     sourceVpnVariable: string;
 }
 
-export interface GetServiceLanVpnProfileParcelRouteLeakFromOtherServiceRedistribution {
+export interface GetServiceLanVpnFeatureRouteLeakFromOtherServiceRedistribution {
     /**
      * Protocol to restributed leaked routes
      */
@@ -13802,11 +13728,11 @@ export interface GetServiceLanVpnProfileParcelRouteLeakFromOtherServiceRedistrib
     redistributionPolicyId: string;
 }
 
-export interface GetServiceLanVpnProfileParcelRouteLeakToGlobalVpn {
+export interface GetServiceLanVpnFeatureRouteLeakToGlobalVpn {
     /**
      * Redistribute Routes to specific Protocol on Global VPN
      */
-    redistributions: outputs.GetServiceLanVpnProfileParcelRouteLeakToGlobalVpnRedistribution[];
+    redistributions: outputs.GetServiceLanVpnFeatureRouteLeakToGlobalVpnRedistribution[];
     routePolicyId: string;
     /**
      * Leak Routes of particular protocol from Service to Global VPN
@@ -13818,7 +13744,7 @@ export interface GetServiceLanVpnProfileParcelRouteLeakToGlobalVpn {
     routeProtocolVariable: string;
 }
 
-export interface GetServiceLanVpnProfileParcelRouteLeakToGlobalVpnRedistribution {
+export interface GetServiceLanVpnFeatureRouteLeakToGlobalVpnRedistribution {
     /**
      * Protocol to restributed leaked routes
      */
@@ -13830,7 +13756,7 @@ export interface GetServiceLanVpnProfileParcelRouteLeakToGlobalVpnRedistribution
     redistributionPolicyId: string;
 }
 
-export interface GetServiceLanVpnProfileParcelService {
+export interface GetServiceLanVpnFeatureService {
     /**
      * IPv4 Addresses (Maximum: 4)
      */
@@ -13857,7 +13783,7 @@ export interface GetServiceLanVpnProfileParcelService {
     trackingVariable: string;
 }
 
-export interface GetServiceLanVpnProfileParcelServiceRoute {
+export interface GetServiceLanVpnFeatureServiceRoute {
     /**
      * IP Address
      */
@@ -13888,7 +13814,7 @@ export interface GetServiceLanVpnProfileParcelServiceRoute {
     vpn: number;
 }
 
-export interface GetServiceLanVpnProfileParcelStaticNat {
+export interface GetServiceLanVpnFeatureStaticNat {
     /**
      * NAT Pool Name
      */
@@ -13922,6 +13848,1736 @@ export interface GetServiceLanVpnProfileParcelStaticNat {
      * Variable name
      */
     translatedSourceIpVariable: string;
+}
+
+export interface GetServiceLanVpnInterfaceEthernetFeatureArp {
+    /**
+     * IPV4 Address
+     */
+    ipAddress: string;
+    /**
+     * Variable name
+     */
+    ipAddressVariable: string;
+    /**
+     * MAC Address
+     */
+    macAddress: string;
+    /**
+     * Variable name
+     */
+    macAddressVariable: string;
+}
+
+export interface GetServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddress {
+    /**
+     * IpV4 Address
+     */
+    address: string;
+    /**
+     * Variable name
+     */
+    addressVariable: string;
+    /**
+     * Subnet Mask
+     */
+    subnetMask: string;
+    /**
+     * Variable name
+     */
+    subnetMaskVariable: string;
+}
+
+export interface GetServiceLanVpnInterfaceEthernetFeatureIpv4Vrrp {
+    /**
+     * VRRP Ip Address
+     */
+    address: string;
+    /**
+     * Variable name
+     */
+    addressVariable: string;
+    /**
+     * Group ID
+     */
+    groupId: number;
+    /**
+     * Variable name
+     */
+    groupIdVariable: string;
+    /**
+     * Set priority
+     */
+    priority: number;
+    /**
+     * Variable name
+     */
+    priorityVariable: string;
+    /**
+     * VRRP Secondary Ip Addresses
+     */
+    secondaryAddresses: outputs.GetServiceLanVpnInterfaceEthernetFeatureIpv4VrrpSecondaryAddress[];
+    /**
+     * Timer interval for successive advertisements, in milliseconds
+     */
+    timer: number;
+    /**
+     * Variable name
+     */
+    timerVariable: string;
+    /**
+     * Timer interval for successive advertisements, in milliseconds
+     */
+    tlocPrefChangeValue: number;
+    /**
+     * Timer interval for successive advertisements, in milliseconds
+     */
+    tlocPrefixChange: boolean;
+    /**
+     * Track OMP status
+     */
+    trackOmp: boolean;
+}
+
+export interface GetServiceLanVpnInterfaceEthernetFeatureIpv4VrrpSecondaryAddress {
+    /**
+     * Ip Address
+     */
+    address: string;
+    /**
+     * Variable name
+     */
+    addressVariable: string;
+    /**
+     * Subnet Mask
+     */
+    subnetMask: string;
+    /**
+     * Variable name
+     */
+    subnetMaskVariable: string;
+}
+
+export interface GetServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelper {
+    /**
+     * DHCPv6 Helper address
+     */
+    address: string;
+    /**
+     * Variable name
+     */
+    addressVariable: string;
+    /**
+     * DHCPv6 Helper VPN
+     */
+    dhcpv6HelperVpn: number;
+    /**
+     * Variable name
+     */
+    dhcpv6HelperVpnVariable: string;
+}
+
+export interface GetServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress {
+    /**
+     * IPv6 Address Secondary
+     */
+    address: string;
+    /**
+     * Variable name
+     */
+    addressVariable: string;
+}
+
+export interface GetServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddress {
+    /**
+     * IPv6 Address Secondary
+     */
+    address: string;
+    /**
+     * Variable name
+     */
+    addressVariable: string;
+}
+
+export interface GetServiceLanVpnInterfaceEthernetFeatureIpv6Vrrp {
+    /**
+     * Group ID
+     */
+    groupId: number;
+    /**
+     * Variable name
+     */
+    groupIdVariable: string;
+    /**
+     * IPv6 VRRP
+     */
+    ipv6Addresses: outputs.GetServiceLanVpnInterfaceEthernetFeatureIpv6VrrpIpv6Address[];
+    /**
+     * Set priority
+     */
+    priority: number;
+    /**
+     * Variable name
+     */
+    priorityVariable: string;
+    /**
+     * Timer interval for successive advertisements, in milliseconds
+     */
+    timer: number;
+    /**
+     * Variable name
+     */
+    timerVariable: string;
+    /**
+     * Track OMP status
+     */
+    trackOmp: boolean;
+}
+
+export interface GetServiceLanVpnInterfaceEthernetFeatureIpv6VrrpIpv6Address {
+    /**
+     * Assign Global IPv6 Prefix
+     */
+    globalAddress: string;
+    /**
+     * Variable name
+     */
+    globalAddressVariable: string;
+    /**
+     * Use link-local IPv6 Address
+     */
+    linkLocalAddress: string;
+    /**
+     * Variable name
+     */
+    linkLocalAddressVariable: string;
+}
+
+export interface GetServiceLanVpnInterfaceEthernetFeatureStaticNat {
+    /**
+     * Direction of static NAT translation
+     */
+    direction: string;
+    /**
+     * Source IP address to be translated
+     */
+    sourceIp: string;
+    /**
+     * Variable name
+     */
+    sourceIpVariable: string;
+    /**
+     * Source VPN ID
+     */
+    sourceVpn: number;
+    /**
+     * Variable name
+     */
+    sourceVpnVariable: string;
+    /**
+     * Statically translated source IP address
+     */
+    translateIp: string;
+    /**
+     * Variable name
+     */
+    translateIpVariable: string;
+}
+
+export interface GetServiceLanVpnInterfaceSviFeatureArp {
+    /**
+     * IP Address
+     */
+    ipAddress: string;
+    /**
+     * Variable name
+     */
+    ipAddressVariable: string;
+    /**
+     * MAC address
+     */
+    macAddress: string;
+    /**
+     * Variable name
+     */
+    macAddressVariable: string;
+}
+
+export interface GetServiceLanVpnInterfaceSviFeatureIpv4SecondaryAddress {
+    /**
+     * IpV4 Address
+     */
+    address: string;
+    /**
+     * Variable name
+     */
+    addressVariable: string;
+    /**
+     * Subnet Mask
+     */
+    ipv4SubnetMask: string;
+    /**
+     * Variable name
+     */
+    ipv4SubnetMaskVariable: string;
+}
+
+export interface GetServiceLanVpnInterfaceSviFeatureIpv4Vrrp {
+    /**
+     * Assign IPV4 Address
+     */
+    address: string;
+    /**
+     * Variable name
+     */
+    addressVariable: string;
+    /**
+     * Group ID
+     */
+    groupId: number;
+    /**
+     * Variable name
+     */
+    groupIdVariable: string;
+    /**
+     * Track Prefix List
+     */
+    prefixList: string;
+    /**
+     * Variable name
+     */
+    prefixListVariable: string;
+    /**
+     * Set priority
+     */
+    priority: number;
+    /**
+     * Variable name
+     */
+    priorityVariable: string;
+    /**
+     * VRRP Secondary IPV4 address
+     */
+    secondaryAddresses: outputs.GetServiceLanVpnInterfaceSviFeatureIpv4VrrpSecondaryAddress[];
+    /**
+     * Timer interval for successive advertisements, in milliseconds
+     */
+    timer: number;
+    /**
+     * Variable name
+     */
+    timerVariable: string;
+    /**
+     * change TLOC preference
+     */
+    tlocPrefixChange: boolean;
+    /**
+     * Set tloc preference change value
+     */
+    tlocPrefixChangeValue: number;
+    /**
+     * Variable name
+     */
+    tlocPrefixChangeValueVariable: string;
+    /**
+     * Track OMP status
+     */
+    trackOmp: boolean;
+    /**
+     * Variable name
+     */
+    trackOmpVariable: string;
+}
+
+export interface GetServiceLanVpnInterfaceSviFeatureIpv4VrrpSecondaryAddress {
+    /**
+     * VRRP Secondary IPV4 address
+     */
+    address: string;
+    /**
+     * Variable name
+     */
+    addressVariable: string;
+}
+
+export interface GetServiceLanVpnInterfaceSviFeatureIpv6DhcpHelper {
+    /**
+     * DHCPv6 Helper address
+     */
+    address: string;
+    /**
+     * Variable name
+     */
+    addressVariable: string;
+    /**
+     * DHCPv6 Helper VPN
+     */
+    vpn: number;
+    /**
+     * Variable name
+     */
+    vpnVariable: string;
+}
+
+export interface GetServiceLanVpnInterfaceSviFeatureIpv6SecondaryAddress {
+    /**
+     * IPv6 Address
+     */
+    address: string;
+    /**
+     * Variable name
+     */
+    addressVariable: string;
+}
+
+export interface GetServiceLanVpnInterfaceSviFeatureIpv6Vrrp {
+    /**
+     * IPv6 VRRP
+     */
+    addresses: outputs.GetServiceLanVpnInterfaceSviFeatureIpv6VrrpAddress[];
+    /**
+     * Group ID
+     */
+    groupId: number;
+    /**
+     * Variable name
+     */
+    groupIdVariable: string;
+    /**
+     * Set priority
+     */
+    priority: number;
+    /**
+     * Variable name
+     */
+    priorityVariable: string;
+    /**
+     * IPv6 Secondary IP address
+     */
+    secondaryAddresses: outputs.GetServiceLanVpnInterfaceSviFeatureIpv6VrrpSecondaryAddress[];
+    /**
+     * Timer interval for successive advertisements, in milliseconds
+     */
+    timer: number;
+    /**
+     * Variable name
+     */
+    timerVariable: string;
+    /**
+     * Track OMP status
+     */
+    trackOmp: boolean;
+    /**
+     * Variable name
+     */
+    trackOmpVariable: string;
+    /**
+     * Track Prefix List
+     */
+    trackPrefixList: string;
+    /**
+     * Variable name
+     */
+    trackPrefixListVariable: string;
+}
+
+export interface GetServiceLanVpnInterfaceSviFeatureIpv6VrrpAddress {
+    /**
+     * Assign Global IPv6 Prefix
+     */
+    globalAddress: string;
+    /**
+     * Variable name
+     */
+    globalAddressVariable: string;
+    /**
+     * Use link-local IPv6 Address
+     */
+    linkLocalAddress: string;
+    /**
+     * Variable name
+     */
+    linkLocalAddressVariable: string;
+}
+
+export interface GetServiceLanVpnInterfaceSviFeatureIpv6VrrpSecondaryAddress {
+    /**
+     * IPv6 Secondary IP address
+     */
+    prefix: string;
+    /**
+     * Variable name
+     */
+    prefixVariable: string;
+}
+
+export interface GetServiceObjectTrackerGroupFeatureTrackerElement {
+    objectTrackerId: string;
+}
+
+export interface GetServiceRoutePolicyFeatureSequence {
+    /**
+     * Define list of actions
+     */
+    actions: outputs.GetServiceRoutePolicyFeatureSequenceAction[];
+    /**
+     * Base Action
+     */
+    baseAction: string;
+    /**
+     * Sequence Id
+     */
+    id: number;
+    /**
+     * Define match conditions
+     */
+    matchEntries: outputs.GetServiceRoutePolicyFeatureSequenceMatchEntry[];
+    /**
+     * Sequence Name
+     */
+    name: string;
+    /**
+     * protocol such as IPV4, IPV6, or BOTH
+     */
+    protocol: string;
+}
+
+export interface GetServiceRoutePolicyFeatureSequenceAction {
+    asPathPrepends: number[];
+    communities: string[];
+    communityAdditive: boolean;
+    /**
+     * Variable name
+     */
+    communityVariable: string;
+    /**
+     * Set Ipv4 Next Hop
+     */
+    ipv4NextHop: string;
+    /**
+     * Set Ipv6 Next Hop
+     */
+    ipv6NextHop: string;
+    /**
+     * Set Local Preference
+     */
+    localPreference: number;
+    /**
+     * Set Metric
+     */
+    metric: number;
+    /**
+     * Set Metric Type
+     */
+    metricType: string;
+    /**
+     * Set OMP Tag
+     */
+    ompTag: number;
+    /**
+     * Set Origin
+     */
+    origin: string;
+    /**
+     * Set OSPF Tag
+     */
+    ospfTag: number;
+    /**
+     * Set Weight
+     */
+    weight: number;
+}
+
+export interface GetServiceRoutePolicyFeatureSequenceMatchEntry {
+    asPathListId: string;
+    /**
+     * BGP Local Preference
+     */
+    bgpLocalPreference: number;
+    expandedCommunityListId: string;
+    extendedCommunityListId: string;
+    ipv4AddressPrefixListId: string;
+    ipv4NextHopPrefixListId: string;
+    ipv6AddressPrefixListId: string;
+    ipv6NextHopPrefixListId: string;
+    /**
+     * Select Metric
+     */
+    metric: number;
+    /**
+     * Select OMP Tag
+     */
+    ompTag: number;
+    /**
+     * Select OSPF Tag
+     */
+    ospfTag: number;
+    /**
+     * Select a condition such as OR, AND or EXACT
+     */
+    standardCommunityListCriteria: string;
+    /**
+     * Select a standard community list
+     */
+    standardCommunityLists: outputs.GetServiceRoutePolicyFeatureSequenceMatchEntryStandardCommunityList[];
+}
+
+export interface GetServiceRoutePolicyFeatureSequenceMatchEntryStandardCommunityList {
+    id: string;
+}
+
+export interface GetServiceRoutingBgpFeatureIpv4AggregateAddress {
+    /**
+     * Set AS set path information
+     */
+    asSetPath: boolean;
+    /**
+     * Variable name
+     */
+    asSetPathVariable: string;
+    networkAddress: string;
+    /**
+     * Variable name
+     */
+    networkAddressVariable: string;
+    subnetMask: string;
+    /**
+     * Variable name
+     */
+    subnetMaskVariable: string;
+    /**
+     * Filter out more specific routes from updates
+     */
+    summaryOnly: boolean;
+    /**
+     * Variable name
+     */
+    summaryOnlyVariable: string;
+}
+
+export interface GetServiceRoutingBgpFeatureIpv4Neighbor {
+    /**
+     * Set neighbor address
+     */
+    address: string;
+    /**
+     * Set BGP address family
+     */
+    addressFamilies: outputs.GetServiceRoutingBgpFeatureIpv4NeighborAddressFamily[];
+    /**
+     * Variable name
+     */
+    addressVariable: string;
+    /**
+     * The number of accept as-path with my AS present in it
+     */
+    allowasInNumber: number;
+    /**
+     * Variable name
+     */
+    allowasInNumberVariable: string;
+    /**
+     * Override matching AS-number while sending update
+     */
+    asOverride: boolean;
+    /**
+     * Variable name
+     */
+    asOverrideVariable: string;
+    /**
+     * Set description
+     */
+    description: string;
+    /**
+     * Variable name
+     */
+    descriptionVariable: string;
+    /**
+     * Set TTL value for peers that are not directly connected
+     */
+    ebgpMultihop: number;
+    /**
+     * Variable name
+     */
+    ebgpMultihopVariable: string;
+    /**
+     * Interval (seconds) not receiving a keepalive message declares a BGP peer down
+     */
+    holdTime: number;
+    /**
+     * Variable name
+     */
+    holdTimeVariable: string;
+    /**
+     * Interval (seconds) of keepalive messages sent to its BGP peer
+     */
+    keepaliveTime: number;
+    /**
+     * Variable name
+     */
+    keepaliveTimeVariable: string;
+    /**
+     * Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
+     */
+    localAs: number;
+    /**
+     * Variable name
+     */
+    localAsVariable: string;
+    /**
+     * Set router to be next hop for routes advertised to neighbor
+     */
+    nextHopSelf: boolean;
+    /**
+     * Variable name
+     */
+    nextHopSelfVariable: string;
+    /**
+     * Set MD5 password on TCP connection with BGP peer
+     */
+    password: string;
+    /**
+     * Variable name
+     */
+    passwordVariable: string;
+    /**
+     * Set remote autonomous system number
+     */
+    remoteAs: number;
+    /**
+     * Variable name
+     */
+    remoteAsVariable: string;
+    /**
+     * Send community attribute
+     */
+    sendCommunity: boolean;
+    /**
+     * Variable name
+     */
+    sendCommunityVariable: string;
+    /**
+     * Send extended community attribute
+     */
+    sendExtendedCommunity: boolean;
+    /**
+     * Variable name
+     */
+    sendExtendedCommunityVariable: string;
+    /**
+     * Send label
+     */
+    sendLabel: boolean;
+    /**
+     * Variable name
+     */
+    sendLabelVariable: string;
+    /**
+     * Enable or disable a BGP neighbor
+     */
+    shutdown: boolean;
+    /**
+     * Variable name
+     */
+    shutdownVariable: string;
+    /**
+     * Source interface name for BGP neighbor
+     */
+    updateSourceInterface: string;
+    /**
+     * Variable name
+     */
+    updateSourceInterfaceVariable: string;
+}
+
+export interface GetServiceRoutingBgpFeatureIpv4NeighborAddressFamily {
+    /**
+     * Set IPv4 unicast address family
+     */
+    familyType: string;
+    inRoutePolicyId: string;
+    /**
+     * Set maximum number of prefixes accepted from BGP peer
+     */
+    maxNumberOfPrefixes: number;
+    /**
+     * Variable name
+     */
+    maxNumberOfPrefixesVariable: string;
+    outRoutePolicyId: string;
+    /**
+     * Neighbor received maximum prefix policy is disabled.
+     */
+    policyType: string;
+    /**
+     * Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded
+     */
+    restartInterval: number;
+    /**
+     * Variable name
+     */
+    restartIntervalVariable: string;
+    /**
+     * Set threshold(1 to 100) at which to generate a warning message
+     */
+    threshold: number;
+    /**
+     * Variable name
+     */
+    thresholdVariable: string;
+}
+
+export interface GetServiceRoutingBgpFeatureIpv4Network {
+    networkAddress: string;
+    /**
+     * Variable name
+     */
+    networkAddressVariable: string;
+    subnetMask: string;
+    /**
+     * Variable name
+     */
+    subnetMaskVariable: string;
+}
+
+export interface GetServiceRoutingBgpFeatureIpv4Redistribute {
+    /**
+     * Set the protocol to redistribute routes from
+     */
+    protocol: string;
+    /**
+     * Variable name
+     */
+    protocolVariable: string;
+    routePolicyId: string;
+}
+
+export interface GetServiceRoutingBgpFeatureIpv6AggregateAddress {
+    /**
+     * Configure the IPv6 prefixes to aggregate
+     */
+    aggregatePrefix: string;
+    /**
+     * Variable name
+     */
+    aggregatePrefixVariable: string;
+    /**
+     * Set AS set path information
+     */
+    asSetPath: boolean;
+    /**
+     * Variable name
+     */
+    asSetPathVariable: string;
+    /**
+     * Filter out more specific routes from updates
+     */
+    summaryOnly: boolean;
+    /**
+     * Variable name
+     */
+    summaryOnlyVariable: string;
+}
+
+export interface GetServiceRoutingBgpFeatureIpv6Neighbor {
+    /**
+     * Set IPv6 neighbor address
+     */
+    address: string;
+    /**
+     * Set IPv6 BGP address family
+     */
+    addressFamilies: outputs.GetServiceRoutingBgpFeatureIpv6NeighborAddressFamily[];
+    /**
+     * Variable name
+     */
+    addressVariable: string;
+    /**
+     * The number of accept as-path with my AS present in it
+     */
+    allowasInNumber: number;
+    /**
+     * Variable name
+     */
+    allowasInNumberVariable: string;
+    /**
+     * Override matching AS-number while sending update
+     */
+    asOverride: boolean;
+    /**
+     * Variable name
+     */
+    asOverrideVariable: string;
+    /**
+     * Set description
+     */
+    description: string;
+    /**
+     * Variable name
+     */
+    descriptionVariable: string;
+    /**
+     * Set TTL value for peers that are not directly connected
+     */
+    ebgpMultihop: number;
+    /**
+     * Variable name
+     */
+    ebgpMultihopVariable: string;
+    /**
+     * Set how long to wait since receiving a keepalive message to consider BGP peer unavailable
+     */
+    holdTime: number;
+    /**
+     * Variable name
+     */
+    holdTimeVariable: string;
+    /**
+     * Set how often to advertise keepalive messages to BGP peer
+     */
+    keepaliveTime: number;
+    /**
+     * Variable name
+     */
+    keepaliveTimeVariable: string;
+    /**
+     * Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
+     */
+    localAs: number;
+    /**
+     * Variable name
+     */
+    localAsVariable: string;
+    /**
+     * Set router to be next hop for routes advertised to neighbor
+     */
+    nextHopSelf: boolean;
+    /**
+     * Variable name
+     */
+    nextHopSelfVariable: string;
+    /**
+     * Set MD5 password on TCP connection with BGP peer
+     */
+    password: string;
+    /**
+     * Variable name
+     */
+    passwordVariable: string;
+    /**
+     * Set remote autonomous system number
+     */
+    remoteAs: number;
+    /**
+     * Variable name
+     */
+    remoteAsVariable: string;
+    /**
+     * Send community attribute
+     */
+    sendCommunity: boolean;
+    /**
+     * Variable name
+     */
+    sendCommunityVariable: string;
+    /**
+     * Send extended community attribute
+     */
+    sendExtendedCommunity: boolean;
+    /**
+     * Variable name
+     */
+    sendExtendedCommunityVariable: string;
+    /**
+     * Enable or disable a BGP neighbor
+     */
+    shutdown: boolean;
+    /**
+     * Variable name
+     */
+    shutdownVariable: string;
+    /**
+     * Source interface name for BGP neighbor
+     */
+    updateSourceInterface: string;
+    /**
+     * Variable name
+     */
+    updateSourceInterfaceVariable: string;
+}
+
+export interface GetServiceRoutingBgpFeatureIpv6NeighborAddressFamily {
+    /**
+     * Set IPv6 unicast address family
+     */
+    familyType: string;
+    inRoutePolicyId: string;
+    /**
+     * Set maximum number of prefixes accepted from BGP peer
+     */
+    maxNumberOfPrefixes: number;
+    /**
+     * Variable name
+     */
+    maxNumberOfPrefixesVariable: string;
+    outRoutePolicyId: string;
+    /**
+     * Neighbor received maximum prefix policy is disabled.
+     */
+    policyType: string;
+    /**
+     * Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded
+     */
+    restartInterval: number;
+    /**
+     * Variable name
+     */
+    restartIntervalVariable: string;
+    /**
+     * Set threshold(1 to 100) at which to generate a warning message
+     */
+    threshold: number;
+    /**
+     * Variable name
+     */
+    thresholdVariable: string;
+}
+
+export interface GetServiceRoutingBgpFeatureIpv6Network {
+    /**
+     * Configure the prefixes for BGP to announce
+     */
+    networkPrefix: string;
+    /**
+     * Variable name
+     */
+    networkPrefixVariable: string;
+}
+
+export interface GetServiceRoutingBgpFeatureIpv6Redistribute {
+    /**
+     * Set the protocol to redistribute routes from
+     */
+    protocol: string;
+    /**
+     * Variable name
+     */
+    protocolVariable: string;
+    routePolicyId: string;
+}
+
+export interface GetServiceRoutingOspfFeatureArea {
+    /**
+     * Set OSPF area number
+     */
+    areaNumber: number;
+    /**
+     * Variable name
+     */
+    areaNumberVariable: string;
+    /**
+     * set the area type
+     */
+    areaType: string;
+    /**
+     * Set OSPF interface parameters
+     */
+    interfaces: outputs.GetServiceRoutingOspfFeatureAreaInterface[];
+    /**
+     * Do not inject interarea routes into STUB or NSSA
+     */
+    noSummary: boolean;
+    /**
+     * Variable name
+     */
+    noSummaryVariable: string;
+    /**
+     * Summarize OSPF routes at an area boundary
+     */
+    ranges: outputs.GetServiceRoutingOspfFeatureAreaRange[];
+}
+
+export interface GetServiceRoutingOspfFeatureAreaInterface {
+    /**
+     * Set OSPF interface authentication type
+     */
+    authenticationType: string;
+    /**
+     * Variable name
+     */
+    authenticationTypeVariable: string;
+    /**
+     * Set cost of OSPF interface
+     */
+    cost: number;
+    /**
+     * Variable name
+     */
+    costVariable: string;
+    /**
+     * Set interval after which neighbor is declared to be down
+     */
+    deadInterval: number;
+    /**
+     * Variable name
+     */
+    deadIntervalVariable: string;
+    /**
+     * Set router’s priority to be elected as designated router
+     */
+    designatedRouterPriority: number;
+    /**
+     * Variable name
+     */
+    designatedRouterPriorityVariable: string;
+    /**
+     * Set interval between OSPF hello packets
+     */
+    helloInterval: number;
+    /**
+     * Variable name
+     */
+    helloIntervalVariable: string;
+    /**
+     * Set time between retransmitting LSAs
+     */
+    lsaRetransmitInterval: number;
+    /**
+     * Variable name
+     */
+    lsaRetransmitIntervalVariable: string;
+    /**
+     * Set MD5 authentication key
+     */
+    messageDigestKey: string;
+    /**
+     * Set MD5 message digest key
+     */
+    messageDigestKeyId: number;
+    /**
+     * Variable name
+     */
+    messageDigestKeyIdVariable: string;
+    /**
+     * Variable name
+     */
+    messageDigestKeyVariable: string;
+    /**
+     * Set interface name
+     */
+    name: string;
+    /**
+     * Variable name
+     */
+    nameVariable: string;
+    /**
+     * Set the OSPF network type
+     */
+    networkType: string;
+    /**
+     * Variable name
+     */
+    networkTypeVariable: string;
+    /**
+     * Set the interface to advertise its address, but not to actively run OSPF
+     */
+    passiveInterface: boolean;
+    /**
+     * Variable name
+     */
+    passiveInterfaceVariable: string;
+}
+
+export interface GetServiceRoutingOspfFeatureAreaRange {
+    /**
+     * Set cost for this range
+     */
+    cost: number;
+    /**
+     * Variable name
+     */
+    costVariable: string;
+    /**
+     * IP Address
+     */
+    ipAddress: string;
+    /**
+     * Variable name
+     */
+    ipAddressVariable: string;
+    /**
+     * Do not advertise this range
+     */
+    noAdvertise: boolean;
+    /**
+     * Variable name
+     */
+    noAdvertiseVariable: string;
+    /**
+     * Subnet Mask
+     */
+    subnetMask: string;
+    /**
+     * Variable name
+     */
+    subnetMaskVariable: string;
+}
+
+export interface GetServiceRoutingOspfFeatureRedistribute {
+    /**
+     * Enable NAT DIA for redistributed routes
+     */
+    natDia: boolean;
+    /**
+     * Variable name
+     */
+    natDiaVariable: string;
+    /**
+     * Set the protocol
+     */
+    protocol: string;
+    /**
+     * Variable name
+     */
+    protocolVariable: string;
+    routePolicyId: string;
+}
+
+export interface GetServiceRoutingOspfFeatureRouterLsa {
+    /**
+     * Set how long to advertise maximum metric after router starts up
+     */
+    time: number;
+    /**
+     * Variable name
+     */
+    timeVariable: string;
+    /**
+     * Set the router LSA advertisement type
+     */
+    type: string;
+}
+
+export interface GetServiceRoutingOspfv3Ipv4FeatureArea {
+    /**
+     * Always translate type7 LSAs
+     */
+    alwaysTranslate: boolean;
+    /**
+     * Variable name
+     */
+    alwaysTranslateVariable: string;
+    /**
+     * Set OSPF area number
+     */
+    areaNumber: number;
+    /**
+     * Variable name
+     */
+    areaNumberVariable: string;
+    /**
+     * stub area type
+     */
+    areaType: string;
+    /**
+     * Set OSPF interface parameters
+     */
+    interfaces: outputs.GetServiceRoutingOspfv3Ipv4FeatureAreaInterface[];
+    /**
+     * Do not inject inter-area routes
+     */
+    noSummary: boolean;
+    /**
+     * Variable name
+     */
+    noSummaryVariable: string;
+    /**
+     * Summarize OSPF routes at an area boundary
+     */
+    ranges: outputs.GetServiceRoutingOspfv3Ipv4FeatureAreaRange[];
+}
+
+export interface GetServiceRoutingOspfv3Ipv4FeatureAreaInterface {
+    /**
+     * Set OSPF interface authentication IPSEC key
+     */
+    authenticationKey: string;
+    /**
+     * Variable name
+     */
+    authenticationKeyVariable: string;
+    /**
+     * Set OSPF interface authentication IPSec SPI, range 256..4294967295
+     */
+    authenticationSpi: number;
+    /**
+     * Variable name
+     */
+    authenticationSpiVariable: string;
+    /**
+     * No Authentication by default
+     */
+    authenticationType: string;
+    /**
+     * Set cost of OSPF interface
+     */
+    cost: number;
+    /**
+     * Variable name
+     */
+    costVariable: string;
+    /**
+     * Set interval after which neighbor is declared to be down
+     */
+    deadInterval: number;
+    /**
+     * Variable name
+     */
+    deadIntervalVariable: string;
+    /**
+     * Set interval between OSPF hello packets
+     */
+    helloInterval: number;
+    /**
+     * Variable name
+     */
+    helloIntervalVariable: string;
+    /**
+     * Set time between retransmitting LSAs
+     */
+    lsaRetransmitInterval: number;
+    /**
+     * Variable name
+     */
+    lsaRetransmitIntervalVariable: string;
+    /**
+     * Set interface name
+     */
+    name: string;
+    /**
+     * Variable name
+     */
+    nameVariable: string;
+    /**
+     * Set the OSPF network type
+     */
+    networkType: string;
+    /**
+     * Variable name
+     */
+    networkTypeVariable: string;
+    /**
+     * Set the interface to advertise its address, but not to actively run OSPF
+     */
+    passiveInterface: boolean;
+    /**
+     * Variable name
+     */
+    passiveInterfaceVariable: string;
+}
+
+export interface GetServiceRoutingOspfv3Ipv4FeatureAreaRange {
+    /**
+     * Set cost for this range
+     */
+    cost: number;
+    /**
+     * Variable name
+     */
+    costVariable: string;
+    ipAddress: string;
+    /**
+     * Variable name
+     */
+    ipAddressVariable: string;
+    /**
+     * Do not advertise this range
+     */
+    noAdvertise: boolean;
+    /**
+     * Variable name
+     */
+    noAdvertiseVariable: string;
+    subnetMask: string;
+    /**
+     * Variable name
+     */
+    subnetMaskVariable: string;
+}
+
+export interface GetServiceRoutingOspfv3Ipv4FeatureRedistribute {
+    /**
+     * Enable NAT DIA for redistributed routes
+     */
+    natDia: boolean;
+    /**
+     * Variable name
+     */
+    natDiaVariable: string;
+    /**
+     * Set the protocol
+     */
+    protocol: string;
+    /**
+     * Variable name
+     */
+    protocolVariable: string;
+    routePolicyId: string;
+}
+
+export interface GetServiceRoutingOspfv3Ipv6FeatureArea {
+    /**
+     * Always translate type7 LSAs
+     */
+    alwaysTranslate: boolean;
+    /**
+     * Variable name
+     */
+    alwaysTranslateVariable: string;
+    /**
+     * Set OSPF area number
+     */
+    areaNumber: number;
+    /**
+     * Variable name
+     */
+    areaNumberVariable: string;
+    /**
+     * stub area type
+     */
+    areaType: string;
+    /**
+     * Set OSPF interface parameters
+     */
+    interfaces: outputs.GetServiceRoutingOspfv3Ipv6FeatureAreaInterface[];
+    /**
+     * Do not inject inter-area routes
+     */
+    noSummary: boolean;
+    /**
+     * Variable name
+     */
+    noSummaryVariable: string;
+    /**
+     * Summarize OSPF routes at an area boundary
+     */
+    ranges: outputs.GetServiceRoutingOspfv3Ipv6FeatureAreaRange[];
+}
+
+export interface GetServiceRoutingOspfv3Ipv6FeatureAreaInterface {
+    /**
+     * Set OSPF interface authentication IPSEC key
+     */
+    authenticationKey: string;
+    /**
+     * Variable name
+     */
+    authenticationKeyVariable: string;
+    /**
+     * Set OSPF interface authentication IPSec SPI, range 256..4294967295
+     */
+    authenticationSpi: number;
+    /**
+     * Variable name
+     */
+    authenticationSpiVariable: string;
+    /**
+     * No Authentication by default
+     */
+    authenticationType: string;
+    /**
+     * Set cost of OSPF interface
+     */
+    cost: number;
+    /**
+     * Variable name
+     */
+    costVariable: string;
+    /**
+     * Set interval after which neighbor is declared to be down
+     */
+    deadInterval: number;
+    /**
+     * Variable name
+     */
+    deadIntervalVariable: string;
+    /**
+     * Set interval between OSPF hello packets
+     */
+    helloInterval: number;
+    /**
+     * Variable name
+     */
+    helloIntervalVariable: string;
+    /**
+     * Set time between retransmitting LSAs
+     */
+    lsaRetransmitInterval: number;
+    /**
+     * Variable name
+     */
+    lsaRetransmitIntervalVariable: string;
+    /**
+     * Set interface name
+     */
+    name: string;
+    /**
+     * Variable name
+     */
+    nameVariable: string;
+    /**
+     * Set the OSPF network type
+     */
+    networkType: string;
+    /**
+     * Variable name
+     */
+    networkTypeVariable: string;
+    /**
+     * Set the interface to advertise its address, but not to actively run OSPF
+     */
+    passiveInterface: boolean;
+    /**
+     * Variable name
+     */
+    passiveInterfaceVariable: string;
+}
+
+export interface GetServiceRoutingOspfv3Ipv6FeatureAreaRange {
+    /**
+     * Set cost for this range
+     */
+    cost: number;
+    /**
+     * Variable name
+     */
+    costVariable: string;
+    /**
+     * Do not advertise this range
+     */
+    noAdvertise: boolean;
+    /**
+     * Variable name
+     */
+    noAdvertiseVariable: string;
+    /**
+     * IPv6 prefix,for example 2001::/64
+     */
+    prefix: string;
+    /**
+     * Variable name
+     */
+    prefixVariable: string;
+}
+
+export interface GetServiceRoutingOspfv3Ipv6FeatureRedistribute {
+    /**
+     * Set the protocol
+     */
+    protocol: string;
+    /**
+     * Variable name
+     */
+    protocolVariable: string;
+    routePolicyId: string;
+}
+
+export interface GetServiceSwitchportFeatureInterface {
+    /**
+     * Set uni or bi directional authorization mode
+     */
+    controlDirection: string;
+    /**
+     * Variable name
+     */
+    controlDirectionVariable: string;
+    /**
+     * Set Critical VLAN
+     */
+    criticalVlan: number;
+    /**
+     * Variable name
+     */
+    criticalVlanVariable: string;
+    /**
+     * Duplex mode
+     */
+    duplex: string;
+    /**
+     * Variable name
+     */
+    duplexVariable: string;
+    /**
+     * Enable Periodic Reauthentication
+     */
+    enablePeriodicReauth: boolean;
+    /**
+     * Variable name
+     */
+    enablePeriodicReauthVariable: string;
+    /**
+     * Enable Critical Voice VLAN
+     */
+    enableVoice: boolean;
+    /**
+     * Variable name
+     */
+    enableVoiceVariable: string;
+    /**
+     * Set vlan to drop non-802.1x enabled clients into if client is not in MAB list
+     */
+    guestVlan: number;
+    /**
+     * Variable name
+     */
+    guestVlanVariable: string;
+    /**
+     * Set host mode
+     */
+    hostMode: string;
+    /**
+     * Variable name
+     */
+    hostModeVariable: string;
+    /**
+     * Periodic Reauthentication Inactivity Timeout (in seconds)
+     */
+    inactivity: number;
+    /**
+     * Variable name
+     */
+    inactivityVariable: string;
+    /**
+     * Set Interface name
+     */
+    interfaceName: string;
+    /**
+     * Variable name
+     */
+    interfaceNameVariable: string;
+    /**
+     * MAC Authentication Bypass
+     */
+    macAuthenticationBypass: boolean;
+    /**
+     * Variable name
+     */
+    macAuthenticationBypassVariable: string;
+    /**
+     * Set type of switch port: access/trunk
+     */
+    mode: string;
+    /**
+     * Set 802.1x Interface Pae Type
+     */
+    paeEnable: boolean;
+    /**
+     * Variable name
+     */
+    paeEnableVariable: string;
+    /**
+     * Set Port-Control Mode
+     */
+    portControl: string;
+    /**
+     * Variable name
+     */
+    portControlVariable: string;
+    /**
+     * Periodic Reauthentication Interval (in seconds)
+     */
+    reauthentication: number;
+    /**
+     * Variable name
+     */
+    reauthenticationVariable: string;
+    /**
+     * Set Restricted VLAN ID
+     */
+    restrictedVlan: number;
+    /**
+     * Variable name
+     */
+    restrictedVlanVariable: string;
+    /**
+     * Administrative state
+     */
+    shutdown: boolean;
+    /**
+     * Variable name
+     */
+    shutdownVariable: string;
+    /**
+     * Set interface speed
+     */
+    speed: string;
+    /**
+     * Variable name
+     */
+    speedVariable: string;
+    /**
+     * Set VLAN identifier associated with bridging domain
+     */
+    switchportAccessVlan: number;
+    /**
+     * Variable name
+     */
+    switchportAccessVlanVariable: string;
+    /**
+     * Configure VLAN IDs used with the trunk
+     */
+    switchportTrunkAllowedVlans: string;
+    /**
+     * Variable name
+     */
+    switchportTrunkAllowedVlansVariable: string;
+    /**
+     * Configure VLAN ID used for native VLAN
+     */
+    switchportTrunkNativeVlan: number;
+    /**
+     * Variable name
+     */
+    switchportTrunkNativeVlanVariable: string;
+    /**
+     * Configure Voice Vlan
+     */
+    voiceVlan: number;
+    /**
+     * Variable name
+     */
+    voiceVlanVariable: string;
+}
+
+export interface GetServiceSwitchportFeatureStaticMacAddress {
+    /**
+     * Interface name: GigabitEthernet0/<>/<>
+     */
+    interfaceName: string;
+    /**
+     * Variable name
+     */
+    interfaceNameVariable: string;
+    /**
+     * Set MAC address in xxxx.xxxx.xxxx format
+     */
+    macAddress: string;
+    /**
+     * Variable name
+     */
+    macAddressVariable: string;
+    /**
+     * Configure VLAN ID used with the mac and interface
+     */
+    vlanId: number;
+    /**
+     * Variable name
+     */
+    vlanIdVariable: string;
+}
+
+export interface GetServiceTrackerGroupFeatureTrackerElement {
+    trackerId: string;
 }
 
 export interface GetSiteListPolicyObjectEntry {
@@ -14156,7 +15812,7 @@ export interface GetSwitchportFeatureTemplateStaticMacAddress {
     vlanVariable: string;
 }
 
-export interface GetSystemAaaProfileParcelAccountingRule {
+export interface GetSystemAaaFeatureAccountingRule {
     /**
      * Use Server-group
      */
@@ -14183,7 +15839,7 @@ export interface GetSystemAaaProfileParcelAccountingRule {
     startStopVariable: string;
 }
 
-export interface GetSystemAaaProfileParcelAuthorizationRule {
+export interface GetSystemAaaFeatureAuthorizationRule {
     /**
      * Use Server-group
      */
@@ -14206,7 +15862,7 @@ export interface GetSystemAaaProfileParcelAuthorizationRule {
     ruleId: string;
 }
 
-export interface GetSystemAaaProfileParcelRadiusGroup {
+export interface GetSystemAaaFeatureRadiusGroup {
     /**
      * Set Radius server Group Name
      */
@@ -14214,7 +15870,7 @@ export interface GetSystemAaaProfileParcelRadiusGroup {
     /**
      * Configure the Radius server
      */
-    servers: outputs.GetSystemAaaProfileParcelRadiusGroupServer[];
+    servers: outputs.GetSystemAaaFeatureRadiusGroupServer[];
     /**
      * Set interface to use to reach Radius server
      */
@@ -14229,7 +15885,7 @@ export interface GetSystemAaaProfileParcelRadiusGroup {
     vpn: number;
 }
 
-export interface GetSystemAaaProfileParcelRadiusGroupServer {
+export interface GetSystemAaaFeatureRadiusGroupServer {
     /**
      * Set Accounting port to use to connect to Radius server
      */
@@ -14292,7 +15948,7 @@ export interface GetSystemAaaProfileParcelRadiusGroupServer {
     timeoutVariable: string;
 }
 
-export interface GetSystemAaaProfileParcelTacacsGroup {
+export interface GetSystemAaaFeatureTacacsGroup {
     /**
      * Set TACACS server Group Name
      */
@@ -14300,7 +15956,7 @@ export interface GetSystemAaaProfileParcelTacacsGroup {
     /**
      * Configure the TACACS server
      */
-    servers: outputs.GetSystemAaaProfileParcelTacacsGroupServer[];
+    servers: outputs.GetSystemAaaFeatureTacacsGroupServer[];
     /**
      * Set interface to use to reach TACACS server
      */
@@ -14315,7 +15971,7 @@ export interface GetSystemAaaProfileParcelTacacsGroup {
     vpn: number;
 }
 
-export interface GetSystemAaaProfileParcelTacacsGroupServer {
+export interface GetSystemAaaFeatureTacacsGroupServer {
     /**
      * Set IP address of TACACS server
      */
@@ -14354,7 +16010,7 @@ export interface GetSystemAaaProfileParcelTacacsGroupServer {
     timeoutVariable: string;
 }
 
-export interface GetSystemAaaProfileParcelUser {
+export interface GetSystemAaaFeatureUser {
     /**
      * Set the username
      */
@@ -14382,10 +16038,10 @@ export interface GetSystemAaaProfileParcelUser {
     /**
      * List of RSA public-keys per user
      */
-    publicKeys: outputs.GetSystemAaaProfileParcelUserPublicKey[];
+    publicKeys: outputs.GetSystemAaaFeatureUserPublicKey[];
 }
 
-export interface GetSystemAaaProfileParcelUserPublicKey {
+export interface GetSystemAaaFeatureUserPublicKey {
     /**
      * Set the RSA key string
      */
@@ -14400,7 +16056,7 @@ export interface GetSystemAaaProfileParcelUserPublicKey {
     keyTypeVariable: string;
 }
 
-export interface GetSystemBasicProfileParcelAffinityPerVrf {
+export interface GetSystemBasicFeatureAffinityPerVrf {
     /**
      * Affinity Group Number
      */
@@ -14419,7 +16075,7 @@ export interface GetSystemBasicProfileParcelAffinityPerVrf {
     vrfRangeVariable: string;
 }
 
-export interface GetSystemBasicProfileParcelGpsSmsMobileNumber {
+export interface GetSystemBasicFeatureGpsSmsMobileNumber {
     /**
      * Mobile number, ex: 1231234414
      */
@@ -14430,7 +16086,7 @@ export interface GetSystemBasicProfileParcelGpsSmsMobileNumber {
     numberVariable: string;
 }
 
-export interface GetSystemBfdProfileParcelColor {
+export interface GetSystemBfdFeatureColor {
     /**
      * Color that identifies the WAN transport tunnel
      */
@@ -14473,7 +16129,89 @@ export interface GetSystemBfdProfileParcelColor {
     pmtuDiscoveryVariable: string;
 }
 
-export interface GetSystemLoggingProfileParcelIpv4Server {
+export interface GetSystemIpv4DeviceAccessFeatureSequence {
+    /**
+     * Base Action
+     */
+    baseAction: string;
+    destinationDataPrefixListId: string;
+    /**
+     * Variable name
+     */
+    destinationIpPrefixListVariable: string;
+    /**
+     * Destination Data IP Prefix List
+     */
+    destinationIpPrefixLists: string[];
+    /**
+     * device access protocol
+     */
+    deviceAccessPort: number;
+    /**
+     * Sequence Id
+     */
+    id: number;
+    /**
+     * Sequence Name
+     */
+    name: string;
+    sourceDataPrefixListId: string;
+    /**
+     * Variable name
+     */
+    sourceIpPrefixListVariable: string;
+    /**
+     * Source Data IP Prefix List
+     */
+    sourceIpPrefixLists: string[];
+    /**
+     * Source Port List
+     */
+    sourcePorts: number[];
+}
+
+export interface GetSystemIpv6DeviceAccessFeatureSequence {
+    /**
+     * Base Action
+     */
+    baseAction: string;
+    destinationDataPrefixListId: string;
+    /**
+     * Variable name
+     */
+    destinationIpPrefixListVariable: string;
+    /**
+     * Destination Data IP Prefix List
+     */
+    destinationIpPrefixLists: string[];
+    /**
+     * device access protocol
+     */
+    deviceAccessPort: number;
+    /**
+     * Sequence Id
+     */
+    id: number;
+    /**
+     * Sequence Name
+     */
+    name: string;
+    sourceDataPrefixListId: string;
+    /**
+     * Variable name
+     */
+    sourceIpPrefixListVariable: string;
+    /**
+     * Source Data IP Prefix List
+     */
+    sourceIpPrefixLists: string[];
+    /**
+     * Source Port List
+     */
+    sourcePorts: number[];
+}
+
+export interface GetSystemLoggingFeatureIpv4Server {
     /**
      * Set hostname or IPv4 address of server
      */
@@ -14532,7 +16270,7 @@ export interface GetSystemLoggingProfileParcelIpv4Server {
     vpnVariable: string;
 }
 
-export interface GetSystemLoggingProfileParcelIpv6Server {
+export interface GetSystemLoggingFeatureIpv6Server {
     /**
      * Set IPv6 hostname or IPv6 address of server
      */
@@ -14591,7 +16329,7 @@ export interface GetSystemLoggingProfileParcelIpv6Server {
     vpnVariable: string;
 }
 
-export interface GetSystemLoggingProfileParcelTlsProfile {
+export interface GetSystemLoggingFeatureTlsProfile {
     /**
      * Syslog secure server ciphersuites
      */
@@ -14618,7 +16356,7 @@ export interface GetSystemLoggingProfileParcelTlsProfile {
     tlsVersionVariable: string;
 }
 
-export interface GetSystemNtpProfileParcelAuthenticationKey {
+export interface GetSystemNtpFeatureAuthenticationKey {
     /**
      * MD5 authentication key ID
      */
@@ -14637,7 +16375,7 @@ export interface GetSystemNtpProfileParcelAuthenticationKey {
     md5ValueVariable: string;
 }
 
-export interface GetSystemNtpProfileParcelServer {
+export interface GetSystemNtpFeatureServer {
     /**
      * Set authentication key for the server
      */
@@ -14688,7 +16426,7 @@ export interface GetSystemNtpProfileParcelServer {
     vpnVariable: string;
 }
 
-export interface GetSystemSecurityProfileParcelKey {
+export interface GetSystemSecurityFeatureKey {
     /**
      * Configure Accept AO Mismatch
      */
@@ -14807,7 +16545,7 @@ export interface GetSystemSecurityProfileParcelKey {
     sendLifeTimeStartEpoch: number;
 }
 
-export interface GetSystemSecurityProfileParcelKeychain {
+export interface GetSystemSecurityFeatureKeychain {
     /**
      * Specify the name of the Keychain
      */
@@ -14818,7 +16556,7 @@ export interface GetSystemSecurityProfileParcelKeychain {
     keyId: number;
 }
 
-export interface GetSystemSnmpProfileParcelCommunity {
+export interface GetSystemSnmpFeatureCommunity {
     /**
      * Configure access permissions
      */
@@ -14845,7 +16583,7 @@ export interface GetSystemSnmpProfileParcelCommunity {
     viewVariable: string;
 }
 
-export interface GetSystemSnmpProfileParcelGroup {
+export interface GetSystemSnmpFeatureGroup {
     /**
      * Name of the SNMP group
      */
@@ -14864,7 +16602,7 @@ export interface GetSystemSnmpProfileParcelGroup {
     viewVariable: string;
 }
 
-export interface GetSystemSnmpProfileParcelTrapTargetServer {
+export interface GetSystemSnmpFeatureTrapTargetServer {
     /**
      * Set IPv4/IPv6 address of SNMP server
      */
@@ -14911,7 +16649,7 @@ export interface GetSystemSnmpProfileParcelTrapTargetServer {
     vpnIdVariable: string;
 }
 
-export interface GetSystemSnmpProfileParcelUser {
+export interface GetSystemSnmpFeatureUser {
     /**
      * Specify authentication protocol password
      */
@@ -14958,7 +16696,7 @@ export interface GetSystemSnmpProfileParcelUser {
     privacyProtocolVariable: string;
 }
 
-export interface GetSystemSnmpProfileParcelView {
+export interface GetSystemSnmpFeatureView {
     /**
      * Set the name of the SNMP view
      */
@@ -14966,10 +16704,10 @@ export interface GetSystemSnmpProfileParcelView {
     /**
      * Configure SNMP object identifier
      */
-    oids: outputs.GetSystemSnmpProfileParcelViewOid[];
+    oids: outputs.GetSystemSnmpFeatureViewOid[];
 }
 
-export interface GetSystemSnmpProfileParcelViewOid {
+export interface GetSystemSnmpFeatureViewOid {
     /**
      * Exclude the OID
      */
@@ -15123,7 +16861,11 @@ export interface GetTrafficDataPolicyDefinitionSequenceActionEntry {
     /**
      * Loss correction FEC threshold
      */
-    lossCorrectionFecThreshold: number;
+    lossCorrectionFecThreshold: string;
+    /**
+     * Loss correction packet duplication
+     */
+    lossCorrectionPacketDuplication: string;
     /**
      * List of NAT parameters
      */
@@ -15342,6 +17084,10 @@ export interface GetTrafficDataPolicyDefinitionSequenceMatchEntry {
      */
     dscp: number;
     /**
+     * ICMP Message
+     */
+    icmpMessage: string;
+    /**
      * Packet length
      */
     packetLength: number;
@@ -15383,45 +17129,11 @@ export interface GetTrafficDataPolicyDefinitionSequenceMatchEntry {
     type: string;
 }
 
-export interface GetTransportManagementVpnInterfaceEthernetProfileParcelArpEntry {
-    /**
-     * IPV4 Address
-     */
-    ipAddress: string;
-    /**
-     * Variable name
-     */
-    ipAddressVariable: string;
-    /**
-     * MAC Address
-     */
-    macAddress: string;
-    /**
-     * Variable name
-     */
-    macAddressVariable: string;
+export interface GetTransportIpv6TrackerGroupFeatureTrackerElement {
+    trackerId: string;
 }
 
-export interface GetTransportManagementVpnInterfaceEthernetProfileParcelIpv4SecondaryAddress {
-    /**
-     * IpV4 Address
-     */
-    address: string;
-    /**
-     * Variable name
-     */
-    addressVariable: string;
-    /**
-     * Subnet Mask
-     */
-    subnetMask: string;
-    /**
-     * Variable name
-     */
-    subnetMaskVariable: string;
-}
-
-export interface GetTransportManagementVpnProfileParcelIpv4StaticRoute {
+export interface GetTransportManagementVpnFeatureIpv4StaticRoute {
     /**
      * Administrative distance
      */
@@ -15435,10 +17147,6 @@ export interface GetTransportManagementVpnProfileParcelIpv4StaticRoute {
      */
     gateway: string;
     /**
-     * IPv4 Route Gateway Next Hop
-     */
-    ipv4RouteGatewayNextHos: outputs.GetTransportManagementVpnProfileParcelIpv4StaticRouteIpv4RouteGatewayNextHo[];
-    /**
      * IP Address
      */
     networkAddress: string;
@@ -15446,6 +17154,10 @@ export interface GetTransportManagementVpnProfileParcelIpv4StaticRoute {
      * Variable name
      */
     networkAddressVariable: string;
+    /**
+     * IPv4 Route Gateway Next Hop
+     */
+    nextHops: outputs.GetTransportManagementVpnFeatureIpv4StaticRouteNextHop[];
     /**
      * Subnet Mask
      */
@@ -15456,7 +17168,7 @@ export interface GetTransportManagementVpnProfileParcelIpv4StaticRoute {
     subnetMaskVariable: string;
 }
 
-export interface GetTransportManagementVpnProfileParcelIpv4StaticRouteIpv4RouteGatewayNextHo {
+export interface GetTransportManagementVpnFeatureIpv4StaticRouteNextHop {
     /**
      * Address
      */
@@ -15475,7 +17187,7 @@ export interface GetTransportManagementVpnProfileParcelIpv4StaticRouteIpv4RouteG
     administrativeDistanceVariable: string;
 }
 
-export interface GetTransportManagementVpnProfileParcelIpv6StaticRoute {
+export interface GetTransportManagementVpnFeatureIpv6StaticRoute {
     /**
      * IPv6 Nat
      */
@@ -15487,7 +17199,7 @@ export interface GetTransportManagementVpnProfileParcelIpv6StaticRoute {
     /**
      * IPv6 Route Gateway Next Hop
      */
-    nextHops: outputs.GetTransportManagementVpnProfileParcelIpv6StaticRouteNextHop[];
+    nextHops: outputs.GetTransportManagementVpnFeatureIpv6StaticRouteNextHop[];
     /**
      * IPv6 Route Gateway Next Hop
      */
@@ -15502,7 +17214,7 @@ export interface GetTransportManagementVpnProfileParcelIpv6StaticRoute {
     prefixVariable: string;
 }
 
-export interface GetTransportManagementVpnProfileParcelIpv6StaticRouteNextHop {
+export interface GetTransportManagementVpnFeatureIpv6StaticRouteNextHop {
     /**
      * Address
      */
@@ -15521,7 +17233,7 @@ export interface GetTransportManagementVpnProfileParcelIpv6StaticRouteNextHop {
     administrativeDistanceVariable: string;
 }
 
-export interface GetTransportManagementVpnProfileParcelNewHostMapping {
+export interface GetTransportManagementVpnFeatureNewHostMapping {
     /**
      * Hostname
      */
@@ -15540,7 +17252,156 @@ export interface GetTransportManagementVpnProfileParcelNewHostMapping {
     listOfIpAddressesVariable: string;
 }
 
-export interface GetTransportRoutingBgpProfileParcelIpv4AggregateAddress {
+export interface GetTransportManagementVpnInterfaceEthernetFeatureArpEntry {
+    /**
+     * IPV4 Address
+     */
+    ipAddress: string;
+    /**
+     * Variable name
+     */
+    ipAddressVariable: string;
+    /**
+     * MAC Address
+     */
+    macAddress: string;
+    /**
+     * Variable name
+     */
+    macAddressVariable: string;
+}
+
+export interface GetTransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddress {
+    /**
+     * IpV4 Address
+     */
+    address: string;
+    /**
+     * Variable name
+     */
+    addressVariable: string;
+    /**
+     * Subnet Mask
+     */
+    subnetMask: string;
+    /**
+     * Variable name
+     */
+    subnetMaskVariable: string;
+}
+
+export interface GetTransportRoutePolicyFeatureSequence {
+    /**
+     * Define list of actions
+     */
+    actions: outputs.GetTransportRoutePolicyFeatureSequenceAction[];
+    /**
+     * Base Action
+     */
+    baseAction: string;
+    /**
+     * Sequence Id
+     */
+    id: number;
+    /**
+     * Define match conditions
+     */
+    matchEntries: outputs.GetTransportRoutePolicyFeatureSequenceMatchEntry[];
+    /**
+     * Sequence Name
+     */
+    name: string;
+    /**
+     * protocol such as IPV4, IPV6, or BOTH
+     */
+    protocol: string;
+}
+
+export interface GetTransportRoutePolicyFeatureSequenceAction {
+    asPathPrepends: number[];
+    communities: string[];
+    communityAdditive: boolean;
+    /**
+     * Variable name
+     */
+    communityVariable: string;
+    /**
+     * Set Ipv4 Next Hop
+     */
+    ipv4NextHop: string;
+    /**
+     * Set Ipv6 Next Hop
+     */
+    ipv6NextHop: string;
+    /**
+     * Set Local Preference
+     */
+    localPreference: number;
+    /**
+     * Set Metric
+     */
+    metric: number;
+    /**
+     * Set Metric Type
+     */
+    metricType: string;
+    /**
+     * Set OMP Tag
+     */
+    ompTag: number;
+    /**
+     * Set Origin
+     */
+    origin: string;
+    /**
+     * Set OSPF Tag
+     */
+    ospfTag: number;
+    /**
+     * Set Weight
+     */
+    weight: number;
+}
+
+export interface GetTransportRoutePolicyFeatureSequenceMatchEntry {
+    asPathListId: string;
+    /**
+     * BGP Local Preference
+     */
+    bgpLocalPreference: number;
+    expandedCommunityListId: string;
+    extendedCommunityListId: string;
+    ipv4AddressPrefixListId: string;
+    ipv4NextHopPrefixListId: string;
+    ipv6AddressPrefixListId: string;
+    ipv6NextHopPrefixListId: string;
+    /**
+     * Select Metric
+     */
+    metric: number;
+    /**
+     * Select OMP Tag
+     */
+    ompTag: number;
+    /**
+     * Select OSPF Tag
+     */
+    ospfTag: number;
+    /**
+     * Select a condition such as OR, AND or EXACT
+     */
+    standardCommunityListCriteria: string;
+    /**
+     * Select a standard community list
+     */
+    standardCommunityLists: outputs.GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityList[];
+}
+
+export interface GetTransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityList {
+    id: string;
+}
+
+export interface GetTransportRoutingBgpFeatureIpv4AggregateAddress {
     /**
      * Set AS set path information
      */
@@ -15569,7 +17430,7 @@ export interface GetTransportRoutingBgpProfileParcelIpv4AggregateAddress {
     summaryOnlyVariable: string;
 }
 
-export interface GetTransportRoutingBgpProfileParcelIpv4Neighbor {
+export interface GetTransportRoutingBgpFeatureIpv4Neighbor {
     /**
      * Set neighbor address
      */
@@ -15577,7 +17438,7 @@ export interface GetTransportRoutingBgpProfileParcelIpv4Neighbor {
     /**
      * Set BGP address family
      */
-    addressFamilies: outputs.GetTransportRoutingBgpProfileParcelIpv4NeighborAddressFamily[];
+    addressFamilies: outputs.GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily[];
     /**
      * Variable name
      */
@@ -15708,7 +17569,7 @@ export interface GetTransportRoutingBgpProfileParcelIpv4Neighbor {
     updateSourceInterfaceVariable: string;
 }
 
-export interface GetTransportRoutingBgpProfileParcelIpv4NeighborAddressFamily {
+export interface GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily {
     /**
      * Set IPv4 unicast address family
      */
@@ -15745,7 +17606,7 @@ export interface GetTransportRoutingBgpProfileParcelIpv4NeighborAddressFamily {
     thresholdVariable: string;
 }
 
-export interface GetTransportRoutingBgpProfileParcelIpv4Network {
+export interface GetTransportRoutingBgpFeatureIpv4Network {
     networkAddress: string;
     /**
      * Variable name
@@ -15758,7 +17619,7 @@ export interface GetTransportRoutingBgpProfileParcelIpv4Network {
     subnetMaskVariable: string;
 }
 
-export interface GetTransportRoutingBgpProfileParcelIpv4Redistribute {
+export interface GetTransportRoutingBgpFeatureIpv4Redistribute {
     /**
      * Set the protocol to redistribute routes from
      */
@@ -15770,7 +17631,7 @@ export interface GetTransportRoutingBgpProfileParcelIpv4Redistribute {
     routePolicyId: string;
 }
 
-export interface GetTransportRoutingBgpProfileParcelIpv6AggregateAddress {
+export interface GetTransportRoutingBgpFeatureIpv6AggregateAddress {
     /**
      * Configure the IPv6 prefixes to aggregate
      */
@@ -15797,7 +17658,7 @@ export interface GetTransportRoutingBgpProfileParcelIpv6AggregateAddress {
     summaryOnlyVariable: string;
 }
 
-export interface GetTransportRoutingBgpProfileParcelIpv6Neighbor {
+export interface GetTransportRoutingBgpFeatureIpv6Neighbor {
     /**
      * Set IPv6 neighbor address
      */
@@ -15805,7 +17666,7 @@ export interface GetTransportRoutingBgpProfileParcelIpv6Neighbor {
     /**
      * Set IPv6 BGP address family
      */
-    addressFamilies: outputs.GetTransportRoutingBgpProfileParcelIpv6NeighborAddressFamily[];
+    addressFamilies: outputs.GetTransportRoutingBgpFeatureIpv6NeighborAddressFamily[];
     /**
      * Variable name
      */
@@ -15924,7 +17785,7 @@ export interface GetTransportRoutingBgpProfileParcelIpv6Neighbor {
     updateSourceInterfaceVariable: string;
 }
 
-export interface GetTransportRoutingBgpProfileParcelIpv6NeighborAddressFamily {
+export interface GetTransportRoutingBgpFeatureIpv6NeighborAddressFamily {
     /**
      * Set IPv6 unicast address family
      */
@@ -15961,7 +17822,7 @@ export interface GetTransportRoutingBgpProfileParcelIpv6NeighborAddressFamily {
     thresholdVariable: string;
 }
 
-export interface GetTransportRoutingBgpProfileParcelIpv6Network {
+export interface GetTransportRoutingBgpFeatureIpv6Network {
     /**
      * Configure the prefixes for BGP to announce
      */
@@ -15972,7 +17833,7 @@ export interface GetTransportRoutingBgpProfileParcelIpv6Network {
     networkPrefixVariable: string;
 }
 
-export interface GetTransportRoutingBgpProfileParcelIpv6Redistribute {
+export interface GetTransportRoutingBgpFeatureIpv6Redistribute {
     /**
      * Set the protocol to redistribute routes from
      */
@@ -15984,7 +17845,7 @@ export interface GetTransportRoutingBgpProfileParcelIpv6Redistribute {
     routePolicyId: string;
 }
 
-export interface GetTransportRoutingBgpProfileParcelMplsInterface {
+export interface GetTransportRoutingBgpFeatureMplsInterface {
     /**
      * Interface Name
      */
@@ -15995,9 +17856,139 @@ export interface GetTransportRoutingBgpProfileParcelMplsInterface {
     interfaceNameVariable: string;
 }
 
-export interface GetTransportWanVpnInterfaceEthernetProfileParcelArp {
+export interface GetTransportRoutingOspfFeatureArea {
     /**
-     * IP V4 Address
+     * Set OSPF area number
+     */
+    areaNumber: number;
+    /**
+     * Variable name
+     */
+    areaNumberVariable: string;
+    /**
+     * set the area type
+     */
+    areaType: string;
+    /**
+     * Set OSPF interface parameters
+     */
+    interfaces: outputs.GetTransportRoutingOspfFeatureAreaInterface[];
+    /**
+     * Do not inject interarea routes into STUB or NSSA
+     */
+    noSummary: boolean;
+    /**
+     * Variable name
+     */
+    noSummaryVariable: string;
+    /**
+     * Summarize OSPF routes at an area boundary
+     */
+    ranges: outputs.GetTransportRoutingOspfFeatureAreaRange[];
+}
+
+export interface GetTransportRoutingOspfFeatureAreaInterface {
+    /**
+     * Set OSPF interface authentication type
+     */
+    authenticationType: string;
+    /**
+     * Variable name
+     */
+    authenticationTypeVariable: string;
+    /**
+     * Set cost of OSPF interface
+     */
+    cost: number;
+    /**
+     * Variable name
+     */
+    costVariable: string;
+    /**
+     * Set interval after which neighbor is declared to be down
+     */
+    deadInterval: number;
+    /**
+     * Variable name
+     */
+    deadIntervalVariable: string;
+    /**
+     * Set router’s priority to be elected as designated router
+     */
+    designatedRouterPriority: number;
+    /**
+     * Variable name
+     */
+    designatedRouterPriorityVariable: string;
+    /**
+     * Set interval between OSPF hello packets
+     */
+    helloInterval: number;
+    /**
+     * Variable name
+     */
+    helloIntervalVariable: string;
+    /**
+     * Set time between retransmitting LSAs
+     */
+    lsaRetransmitInterval: number;
+    /**
+     * Variable name
+     */
+    lsaRetransmitIntervalVariable: string;
+    /**
+     * Set MD5 authentication key
+     */
+    messageDigestKey: string;
+    /**
+     * Set MD5 message digest key
+     */
+    messageDigestKeyId: number;
+    /**
+     * Variable name
+     */
+    messageDigestKeyIdVariable: string;
+    /**
+     * Variable name
+     */
+    messageDigestKeyVariable: string;
+    /**
+     * Set interface name
+     */
+    name: string;
+    /**
+     * Variable name
+     */
+    nameVariable: string;
+    /**
+     * Set the OSPF network type
+     */
+    networkType: string;
+    /**
+     * Variable name
+     */
+    networkTypeVariable: string;
+    /**
+     * Set the interface to advertise its address, but not to actively run OSPF
+     */
+    passiveInterface: boolean;
+    /**
+     * Variable name
+     */
+    passiveInterfaceVariable: string;
+}
+
+export interface GetTransportRoutingOspfFeatureAreaRange {
+    /**
+     * Set cost for this range
+     */
+    cost: number;
+    /**
+     * Variable name
+     */
+    costVariable: string;
+    /**
+     * IP Address
      */
     ipAddress: string;
     /**
@@ -16005,24 +17996,13 @@ export interface GetTransportWanVpnInterfaceEthernetProfileParcelArp {
      */
     ipAddressVariable: string;
     /**
-     * MAC Address
+     * Do not advertise this range
      */
-    macAddress: string;
+    noAdvertise: boolean;
     /**
      * Variable name
      */
-    macAddressVariable: string;
-}
-
-export interface GetTransportWanVpnInterfaceEthernetProfileParcelIpv4SecondaryAddress {
-    /**
-     * IpV4 Address
-     */
-    address: string;
-    /**
-     * Variable name
-     */
-    addressVariable: string;
+    noAdvertiseVariable: string;
     /**
      * Subnet Mask
      */
@@ -16033,110 +18013,370 @@ export interface GetTransportWanVpnInterfaceEthernetProfileParcelIpv4SecondaryAd
     subnetMaskVariable: string;
 }
 
-export interface GetTransportWanVpnInterfaceEthernetProfileParcelIpv6DhcpSecondaryAddress {
+export interface GetTransportRoutingOspfFeatureRedistribute {
     /**
-     * IPv6 Address Secondary
+     * Enable NAT DIA for redistributed routes
      */
-    address: string;
+    natDia: boolean;
     /**
      * Variable name
      */
-    addressVariable: string;
+    natDiaVariable: string;
+    /**
+     * Set the protocol
+     */
+    protocol: string;
+    /**
+     * Variable name
+     */
+    protocolVariable: string;
+    routePolicyId: string;
 }
 
-export interface GetTransportWanVpnInterfaceEthernetProfileParcelIpv6SecondaryAddress {
+export interface GetTransportRoutingOspfFeatureRouterLsa {
     /**
-     * IPv6 Address Secondary
+     * Set how long to advertise maximum metric after router starts up
      */
-    address: string;
+    time: number;
     /**
      * Variable name
      */
-    addressVariable: string;
+    timeVariable: string;
+    /**
+     * Set the router LSA advertisement type
+     */
+    type: string;
 }
 
-export interface GetTransportWanVpnInterfaceEthernetProfileParcelNewStaticNat {
+export interface GetTransportRoutingOspfv3Ipv4FeatureArea {
     /**
-     * Direction of static NAT translation
+     * Always translate type7 LSAs
      */
-    direction: string;
-    /**
-     * Source IP address to be translated
-     */
-    sourceIp: string;
+    alwaysTranslate: boolean;
     /**
      * Variable name
      */
-    sourceIpVariable: string;
+    alwaysTranslateVariable: string;
     /**
-     * Source VPN ID
+     * Set OSPF area number
      */
-    sourceVpn: number;
-    /**
-     * Variable name
-     */
-    sourceVpnVariable: string;
-    /**
-     * Statically translated source IP address
-     */
-    translatedIp: string;
+    areaNumber: number;
     /**
      * Variable name
      */
-    translatedIpVariable: string;
+    areaNumberVariable: string;
+    /**
+     * stub area type
+     */
+    areaType: string;
+    /**
+     * Set OSPF interface parameters
+     */
+    interfaces: outputs.GetTransportRoutingOspfv3Ipv4FeatureAreaInterface[];
+    /**
+     * Do not inject inter-area routes
+     */
+    noSummary: boolean;
+    /**
+     * Variable name
+     */
+    noSummaryVariable: string;
+    /**
+     * Summarize OSPF routes at an area boundary
+     */
+    ranges: outputs.GetTransportRoutingOspfv3Ipv4FeatureAreaRange[];
 }
 
-export interface GetTransportWanVpnInterfaceEthernetProfileParcelStaticNat66 {
+export interface GetTransportRoutingOspfv3Ipv4FeatureAreaInterface {
     /**
-     * Source Prefix
+     * Set OSPF interface authentication IPSEC key
      */
-    sourcePrefix: string;
-    /**
-     * Variable name
-     */
-    sourcePrefixVariable: string;
-    /**
-     * Source VPN ID
-     */
-    sourceVpnId: number;
+    authenticationKey: string;
     /**
      * Variable name
      */
-    sourceVpnIdVariable: string;
+    authenticationKeyVariable: string;
     /**
-     * Translated Source Prefix
+     * Set OSPF interface authentication IPSec SPI, range 256..4294967295
      */
-    translatedSourcePrefix: string;
+    authenticationSpi: number;
     /**
      * Variable name
      */
-    translatedSourcePrefixVariable: string;
+    authenticationSpiVariable: string;
+    /**
+     * No Authentication by default
+     */
+    authenticationType: string;
+    /**
+     * Set cost of OSPF interface
+     */
+    cost: number;
+    /**
+     * Variable name
+     */
+    costVariable: string;
+    /**
+     * Set interval after which neighbor is declared to be down
+     */
+    deadInterval: number;
+    /**
+     * Variable name
+     */
+    deadIntervalVariable: string;
+    /**
+     * Set interval between OSPF hello packets
+     */
+    helloInterval: number;
+    /**
+     * Variable name
+     */
+    helloIntervalVariable: string;
+    /**
+     * Set time between retransmitting LSAs
+     */
+    lsaRetransmitInterval: number;
+    /**
+     * Variable name
+     */
+    lsaRetransmitIntervalVariable: string;
+    /**
+     * Set interface name
+     */
+    name: string;
+    /**
+     * Variable name
+     */
+    nameVariable: string;
+    /**
+     * Set the OSPF network type
+     */
+    networkType: string;
+    /**
+     * Variable name
+     */
+    networkTypeVariable: string;
+    /**
+     * Set the interface to advertise its address, but not to actively run OSPF
+     */
+    passiveInterface: boolean;
+    /**
+     * Variable name
+     */
+    passiveInterfaceVariable: string;
 }
 
-export interface GetTransportWanVpnInterfaceEthernetProfileParcelTunnelInterfaceEncapsulation {
+export interface GetTransportRoutingOspfv3Ipv4FeatureAreaRange {
     /**
-     * Encapsulation
+     * Set cost for this range
      */
-    encapsulation: string;
-    /**
-     * Set preference for TLOC
-     */
-    preference: number;
+    cost: number;
     /**
      * Variable name
      */
-    preferenceVariable: string;
-    /**
-     * Set weight for TLOC
-     */
-    weight: number;
+    costVariable: string;
+    ipAddress: string;
     /**
      * Variable name
      */
-    weightVariable: string;
+    ipAddressVariable: string;
+    /**
+     * Do not advertise this range
+     */
+    noAdvertise: boolean;
+    /**
+     * Variable name
+     */
+    noAdvertiseVariable: string;
+    subnetMask: string;
+    /**
+     * Variable name
+     */
+    subnetMaskVariable: string;
 }
 
-export interface GetTransportWanVpnProfileParcelIpv4StaticRoute {
+export interface GetTransportRoutingOspfv3Ipv4FeatureRedistribute {
+    /**
+     * Enable NAT DIA for redistributed routes
+     */
+    natDia: boolean;
+    /**
+     * Variable name
+     */
+    natDiaVariable: string;
+    /**
+     * Set the protocol
+     */
+    protocol: string;
+    /**
+     * Variable name
+     */
+    protocolVariable: string;
+    routePolicyId: string;
+}
+
+export interface GetTransportRoutingOspfv3Ipv6FeatureArea {
+    /**
+     * Always translate type7 LSAs
+     */
+    alwaysTranslate: boolean;
+    /**
+     * Variable name
+     */
+    alwaysTranslateVariable: string;
+    /**
+     * Set OSPF area number
+     */
+    areaNumber: number;
+    /**
+     * Variable name
+     */
+    areaNumberVariable: string;
+    /**
+     * stub area type
+     */
+    areaType: string;
+    /**
+     * Set OSPF interface parameters
+     */
+    interfaces: outputs.GetTransportRoutingOspfv3Ipv6FeatureAreaInterface[];
+    /**
+     * Do not inject inter-area routes
+     */
+    noSummary: boolean;
+    /**
+     * Variable name
+     */
+    noSummaryVariable: string;
+    /**
+     * Summarize OSPF routes at an area boundary
+     */
+    ranges: outputs.GetTransportRoutingOspfv3Ipv6FeatureAreaRange[];
+}
+
+export interface GetTransportRoutingOspfv3Ipv6FeatureAreaInterface {
+    /**
+     * Set OSPF interface authentication IPSEC key
+     */
+    authenticationKey: string;
+    /**
+     * Variable name
+     */
+    authenticationKeyVariable: string;
+    /**
+     * Set OSPF interface authentication IPSec SPI, range 256..4294967295
+     */
+    authenticationSpi: number;
+    /**
+     * Variable name
+     */
+    authenticationSpiVariable: string;
+    /**
+     * No Authentication by default
+     */
+    authenticationType: string;
+    /**
+     * Set cost of OSPF interface
+     */
+    cost: number;
+    /**
+     * Variable name
+     */
+    costVariable: string;
+    /**
+     * Set interval after which neighbor is declared to be down
+     */
+    deadInterval: number;
+    /**
+     * Variable name
+     */
+    deadIntervalVariable: string;
+    /**
+     * Set interval between OSPF hello packets
+     */
+    helloInterval: number;
+    /**
+     * Variable name
+     */
+    helloIntervalVariable: string;
+    /**
+     * Set time between retransmitting LSAs
+     */
+    lsaRetransmitInterval: number;
+    /**
+     * Variable name
+     */
+    lsaRetransmitIntervalVariable: string;
+    /**
+     * Set interface name
+     */
+    name: string;
+    /**
+     * Variable name
+     */
+    nameVariable: string;
+    /**
+     * Set the OSPF network type
+     */
+    networkType: string;
+    /**
+     * Variable name
+     */
+    networkTypeVariable: string;
+    /**
+     * Set the interface to advertise its address, but not to actively run OSPF
+     */
+    passiveInterface: boolean;
+    /**
+     * Variable name
+     */
+    passiveInterfaceVariable: string;
+}
+
+export interface GetTransportRoutingOspfv3Ipv6FeatureAreaRange {
+    /**
+     * Set cost for this range
+     */
+    cost: number;
+    /**
+     * Variable name
+     */
+    costVariable: string;
+    /**
+     * Do not advertise this range
+     */
+    noAdvertise: boolean;
+    /**
+     * Variable name
+     */
+    noAdvertiseVariable: string;
+    /**
+     * IPv6 prefix,for example 2001::/64
+     */
+    prefix: string;
+    /**
+     * Variable name
+     */
+    prefixVariable: string;
+}
+
+export interface GetTransportRoutingOspfv3Ipv6FeatureRedistribute {
+    /**
+     * Set the protocol
+     */
+    protocol: string;
+    /**
+     * Variable name
+     */
+    protocolVariable: string;
+    routePolicyId: string;
+}
+
+export interface GetTransportTrackerGroupFeatureTrackerElement {
+    trackerId: string;
+}
+
+export interface GetTransportWanVpnFeatureIpv4StaticRoute {
     /**
      * Administrative distance
      */
@@ -16160,7 +18400,7 @@ export interface GetTransportWanVpnProfileParcelIpv4StaticRoute {
     /**
      * IPv4 Route Gateway Next Hop
      */
-    nextHops: outputs.GetTransportWanVpnProfileParcelIpv4StaticRouteNextHop[];
+    nextHops: outputs.GetTransportWanVpnFeatureIpv4StaticRouteNextHop[];
     /**
      * Subnet Mask
      */
@@ -16171,7 +18411,7 @@ export interface GetTransportWanVpnProfileParcelIpv4StaticRoute {
     subnetMaskVariable: string;
 }
 
-export interface GetTransportWanVpnProfileParcelIpv4StaticRouteNextHop {
+export interface GetTransportWanVpnFeatureIpv4StaticRouteNextHop {
     /**
      * Address
      */
@@ -16190,7 +18430,7 @@ export interface GetTransportWanVpnProfileParcelIpv4StaticRouteNextHop {
     administrativeDistanceVariable: string;
 }
 
-export interface GetTransportWanVpnProfileParcelIpv6StaticRoute {
+export interface GetTransportWanVpnFeatureIpv6StaticRoute {
     /**
      * IPv6 Nat
      */
@@ -16202,7 +18442,7 @@ export interface GetTransportWanVpnProfileParcelIpv6StaticRoute {
     /**
      * IPv6 Route Gateway Next Hop
      */
-    nextHops: outputs.GetTransportWanVpnProfileParcelIpv6StaticRouteNextHop[];
+    nextHops: outputs.GetTransportWanVpnFeatureIpv6StaticRouteNextHop[];
     /**
      * IPv6 Route Gateway Next Hop
      */
@@ -16217,7 +18457,7 @@ export interface GetTransportWanVpnProfileParcelIpv6StaticRoute {
     prefixVariable: string;
 }
 
-export interface GetTransportWanVpnProfileParcelIpv6StaticRouteNextHop {
+export interface GetTransportWanVpnFeatureIpv6StaticRouteNextHop {
     /**
      * Address
      */
@@ -16236,7 +18476,7 @@ export interface GetTransportWanVpnProfileParcelIpv6StaticRouteNextHop {
     administrativeDistanceVariable: string;
 }
 
-export interface GetTransportWanVpnProfileParcelNat64V4Pool {
+export interface GetTransportWanVpnFeatureNat64V4Pool {
     /**
      * NAT64 v4 Pool Name
      */
@@ -16271,7 +18511,7 @@ export interface GetTransportWanVpnProfileParcelNat64V4Pool {
     nat64V4PoolRangeStartVariable: string;
 }
 
-export interface GetTransportWanVpnProfileParcelNewHostMapping {
+export interface GetTransportWanVpnFeatureNewHostMapping {
     /**
      * Hostname
      */
@@ -16290,11 +18530,217 @@ export interface GetTransportWanVpnProfileParcelNewHostMapping {
     listOfIpAddressesVariable: string;
 }
 
-export interface GetTransportWanVpnProfileParcelService {
+export interface GetTransportWanVpnFeatureService {
     /**
      * Service Type
      */
     serviceType: string;
+}
+
+export interface GetTransportWanVpnInterfaceCellularFeatureArp {
+    /**
+     * IP V4 Address
+     */
+    ipAddress: string;
+    /**
+     * Variable name
+     */
+    ipAddressVariable: string;
+    /**
+     * MAC Address
+     */
+    macAddress: string;
+    /**
+     * Variable name
+     */
+    macAddressVariable: string;
+}
+
+export interface GetTransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation {
+    /**
+     * Encapsulation
+     */
+    encapsulation: string;
+    /**
+     * Set preference for TLOC
+     */
+    preference: number;
+    /**
+     * Variable name
+     */
+    preferenceVariable: string;
+    /**
+     * Set weight for TLOC
+     */
+    weight: number;
+    /**
+     * Variable name
+     */
+    weightVariable: string;
+}
+
+export interface GetTransportWanVpnInterfaceEthernetFeatureArp {
+    /**
+     * IP V4 Address
+     */
+    ipAddress: string;
+    /**
+     * Variable name
+     */
+    ipAddressVariable: string;
+    /**
+     * MAC Address
+     */
+    macAddress: string;
+    /**
+     * Variable name
+     */
+    macAddressVariable: string;
+}
+
+export interface GetTransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress {
+    /**
+     * IpV4 Address
+     */
+    address: string;
+    /**
+     * Variable name
+     */
+    addressVariable: string;
+    /**
+     * Subnet Mask
+     */
+    subnetMask: string;
+    /**
+     * Variable name
+     */
+    subnetMaskVariable: string;
+}
+
+export interface GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress {
+    /**
+     * IPv6 Address Secondary
+     */
+    address: string;
+    /**
+     * Variable name
+     */
+    addressVariable: string;
+}
+
+export interface GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress {
+    /**
+     * IPv6 Address Secondary
+     */
+    address: string;
+    /**
+     * Variable name
+     */
+    addressVariable: string;
+}
+
+export interface GetTransportWanVpnInterfaceEthernetFeatureNewStaticNat {
+    /**
+     * Direction of static NAT translation
+     */
+    direction: string;
+    /**
+     * Source IP address to be translated
+     */
+    sourceIp: string;
+    /**
+     * Variable name
+     */
+    sourceIpVariable: string;
+    /**
+     * Source VPN ID
+     */
+    sourceVpn: number;
+    /**
+     * Variable name
+     */
+    sourceVpnVariable: string;
+    /**
+     * Statically translated source IP address
+     */
+    translatedIp: string;
+    /**
+     * Variable name
+     */
+    translatedIpVariable: string;
+}
+
+export interface GetTransportWanVpnInterfaceEthernetFeatureStaticNat66 {
+    /**
+     * Source Prefix
+     */
+    sourcePrefix: string;
+    /**
+     * Variable name
+     */
+    sourcePrefixVariable: string;
+    /**
+     * Source VPN ID
+     */
+    sourceVpnId: number;
+    /**
+     * Variable name
+     */
+    sourceVpnIdVariable: string;
+    /**
+     * Translated Source Prefix
+     */
+    translatedSourcePrefix: string;
+    /**
+     * Variable name
+     */
+    translatedSourcePrefixVariable: string;
+}
+
+export interface GetTransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulation {
+    /**
+     * Encapsulation
+     */
+    encapsulation: string;
+    /**
+     * Set preference for TLOC
+     */
+    preference: number;
+    /**
+     * Variable name
+     */
+    preferenceVariable: string;
+    /**
+     * Set weight for TLOC
+     */
+    weight: number;
+    /**
+     * Variable name
+     */
+    weightVariable: string;
+}
+
+export interface GetTransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulation {
+    /**
+     * Encapsulation
+     */
+    encapsulation: string;
+    /**
+     * Set preference for TLOC
+     */
+    preference: number;
+    /**
+     * Variable name
+     */
+    preferenceVariable: string;
+    /**
+     * Set weight for TLOC
+     */
+    weight: number;
+    /**
+     * Variable name
+     */
+    weightVariable: string;
 }
 
 export interface GetVedgeInventoryDevice {
@@ -17710,6 +20156,70 @@ export interface GetVpnMembershipPolicyDefinitionSite {
     vpnListVersions: string[];
 }
 
+export interface GetZoneBasedFirewallPolicyDefinitionApplyZonePair {
+    /**
+     * Destination Zone
+     */
+    destinationZone: string;
+    /**
+     * Source Zone
+     */
+    sourceZone: string;
+}
+
+export interface GetZoneBasedFirewallPolicyDefinitionRule {
+    /**
+     * List of actions entries
+     */
+    actionEntries: outputs.GetZoneBasedFirewallPolicyDefinitionRuleActionEntry[];
+    /**
+     * Base action
+     */
+    baseAction: string;
+    /**
+     * List of match entries
+     */
+    matchEntries: outputs.GetZoneBasedFirewallPolicyDefinitionRuleMatchEntry[];
+    /**
+     * Rule name
+     */
+    ruleName: string;
+    /**
+     * Rule
+     */
+    ruleOrder: number;
+}
+
+export interface GetZoneBasedFirewallPolicyDefinitionRuleActionEntry {
+    /**
+     * Type of action entry
+     */
+    type: string;
+}
+
+export interface GetZoneBasedFirewallPolicyDefinitionRuleMatchEntry {
+    /**
+     * policy id for selected match entry
+     */
+    policyId: string;
+    /**
+     * Should be included with additionally entries for `destinationPort` and `protocol` whenever the type `protocolName` is used.
+     */
+    protocolType: string;
+    /**
+     * Type of match entry
+     */
+    type: string;
+    /**
+     * value for selected match entry
+     */
+    value: string;
+    /**
+     * variable value for selected match entry if it has variable option (sourceIp & destinationIp)
+     */
+    valueVariable: string;
+}
+
 export interface GetZoneListPolicyObjectEntry {
     /**
      * Interface name
@@ -17912,6 +20422,10 @@ export interface Ipv4AclPolicyDefinitionSequenceMatchEntry {
      */
     dscp?: number;
     /**
+     * ICMP Message
+     */
+    icmpMessage?: string;
+    /**
      * Packet length
      *   - Range: `0`-`65535`
      */
@@ -17948,7 +20462,7 @@ export interface Ipv4AclPolicyDefinitionSequenceMatchEntry {
     tcp?: string;
     /**
      * Type of match entry
-     *   - Choices: `dscp`, `sourceIp`, `destinationIp`, `class`, `packetLength`, `plp`, `sourcePort`, `destinationPort`, `sourceDataPrefixList`, `destinationDataPrefixList`, `protocol`, `tcp`
+     *   - Choices: `dscp`, `sourceIp`, `destinationIp`, `class`, `packetLength`, `plp`, `sourcePort`, `destinationPort`, `sourceDataPrefixList`, `destinationDataPrefixList`, `protocol`, `tcp`, `icmpMessage`
      */
     type: string;
 }
@@ -18303,6 +20817,10 @@ export interface LocalApplicationListPolicyObjectEntry {
      * Application name
      */
     application?: string;
+    /**
+     * Application family name
+     */
+    applicationFamily?: string;
 }
 
 export interface LocalizedPolicyDefinition {
@@ -18334,6 +20852,264 @@ export interface MeshTopologyPolicyDefinitionRegion {
      * Site list versions
      */
     siteListVersions?: string[];
+}
+
+export interface OtherThousandeyesFeatureVirtualApplication {
+    /**
+     * Set the Account Group Token
+     */
+    accountGroupToken?: string;
+    /**
+     * Variable name
+     */
+    accountGroupTokenVariable?: string;
+    /**
+     * Set the Agent default gateway
+     */
+    agentDefaultGateway?: string;
+    /**
+     * Variable name
+     */
+    agentDefaultGatewayVariable?: string;
+    /**
+     * Set the host name
+     */
+    hostname?: string;
+    /**
+     * Variable name
+     */
+    hostnameVariable?: string;
+    /**
+     * Set the Agent IP Address
+     */
+    managementIp?: string;
+    /**
+     * Variable name
+     */
+    managementIpVariable?: string;
+    /**
+     * Set the Agent SubnetMask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     */
+    managementSubnetMask?: string;
+    /**
+     * Variable name
+     */
+    managementSubnetMaskVariable?: string;
+    /**
+     * Set the name server
+     */
+    nameServerIp?: string;
+    /**
+     * Variable name
+     */
+    nameServerIpVariable?: string;
+    /**
+     * Set the proxy PAC url
+     */
+    pacUrl?: string;
+    /**
+     * Variable name
+     */
+    pacUrlVariable?: string;
+    /**
+     * Set the Proxy Host
+     */
+    proxyHost?: string;
+    /**
+     * Variable name
+     */
+    proxyHostVariable?: string;
+    /**
+     * Set the Proxy Port
+     *   - Range: `1`-`65535`
+     */
+    proxyPort?: number;
+    /**
+     * Variable name
+     */
+    proxyPortVariable?: string;
+    /**
+     * Select Web Proxy Type
+     */
+    proxyType?: string;
+    /**
+     * VPN number
+     *   - Range: `0`-`65530`
+     */
+    vpn?: number;
+    /**
+     * Variable name
+     */
+    vpnVariable?: string;
+}
+
+export interface OtherUcseFeatureInterface {
+    /**
+     * Set Inteface name
+     */
+    interfaceName?: string;
+    /**
+     * Variable name
+     */
+    interfaceNameVariable?: string;
+    /**
+     * Assign IPv4 address
+     */
+    ipv4Address?: string;
+    /**
+     * Variable name
+     */
+    ipv4AddressVariable?: string;
+    /**
+     * UCSE Interface VPN
+     *   - Range: `1`-`65527`
+     */
+    ucseInterfaceVpn?: number;
+    /**
+     * Variable name
+     */
+    ucseInterfaceVpnVariable?: string;
+}
+
+export interface PolicyObjectClassMapEntry {
+    /**
+     * select a queue
+     *   - Choices: `0`, `1`, `2`, `3`, `4`, `5`, `6`, `7`
+     */
+    queue?: string;
+}
+
+export interface PolicyObjectColorListEntry {
+    /**
+     * - Choices: `3g`, `biz-internet`, `blue`, `bronze`, `custom1`, `custom2`, `custom3`, `default`, `gold`, `green`, `lte`, `metro-ethernet`, `mpls`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`, `public-internet`, `red`, `silver`
+     */
+    color?: string;
+}
+
+export interface PolicyObjectDataIpv4PrefixListEntry {
+    /**
+     * IPv4 address
+     */
+    ipv4Address?: string;
+    /**
+     * IPv4 prefix Length
+     *   - Range: `0`-`32`
+     */
+    ipv4PrefixLength?: number;
+}
+
+export interface PolicyObjectDataIpv6PrefixListEntry {
+    /**
+     * IPv6 address
+     */
+    ipv6Address?: string;
+    /**
+     * IPv6 prefix
+     *   - Range: `0`-`128`
+     */
+    ipv6PrefixLength?: number;
+}
+
+export interface PolicyObjectExtendedCommunityListEntry {
+    /**
+     * can be soo 10.0.0.1:30 or rt 500:50 etc.
+     */
+    extendedCommunity?: string;
+}
+
+export interface PolicyObjectIpv4PrefixListEntry {
+    /**
+     * IPv4 prefix length with ge range operator
+     *   - Range: `1`-`32`
+     */
+    ge?: number;
+    /**
+     * IPv4 address
+     */
+    ipv4Address?: string;
+    /**
+     * IPv4 prefix length
+     *   - Range: `0`-`32`
+     */
+    ipv4PrefixLength?: number;
+    /**
+     * IPv4 prefix length with le range operator
+     *   - Range: `1`-`32`
+     */
+    le?: number;
+}
+
+export interface PolicyObjectIpv6PrefixListEntry {
+    /**
+     * IPv6 prefix length with ge range operator
+     *   - Range: `1`-`128`
+     */
+    ge?: number;
+    /**
+     * IPv6 address
+     */
+    ipv6Address?: string;
+    /**
+     * IPv6 prefix length
+     *   - Range: `0`-`128`
+     */
+    ipv6PrefixLength?: number;
+    /**
+     * IPv6 prefix length with le range operator
+     *   - Range: `1`-`128`
+     */
+    le?: number;
+}
+
+export interface PolicyObjectMirrorEntry {
+    /**
+     * remote destination ip address
+     */
+    remoteDestinationIp?: string;
+    /**
+     * source ip address
+     */
+    sourceIp?: string;
+}
+
+export interface PolicyObjectPolicerEntry {
+    /**
+     * Burst (Bytes)
+     *   - Range: `15000`-`10000000`
+     */
+    burstBytes?: number;
+    /**
+     * Exceed options such as Drop or Remark
+     *   - Choices: `drop`, `remark`
+     */
+    exceedAction?: string;
+    /**
+     * Rate (bps)
+     *   - Range: `8`-`100000000000`
+     */
+    rateBps?: number;
+}
+
+export interface PolicyObjectTlocListEntry {
+    /**
+     * color
+     *   - Choices: `3g`, `biz-internet`, `blue`, `bronze`, `custom1`, `custom2`, `custom3`, `default`, `gold`, `green`, `lte`, `metro-ethernet`, `mpls`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`, `public-internet`, `red`, `silver`
+     */
+    color?: string;
+    /**
+     * encapsulation
+     *   - Choices: `ipsec`, `gre`
+     */
+    encapsulation?: string;
+    /**
+     * Preference
+     */
+    preference?: string;
+    /**
+     * tloc
+     */
+    tlocIp?: string;
 }
 
 export interface PortListPolicyObjectEntry {
@@ -18876,266 +21652,11 @@ export interface SecurityPolicyLogging {
     externalSyslogServerVpn?: string;
 }
 
-export interface ServiceLanVpnInterfaceEthernetProfileParcelArp {
-    /**
-     * IPV4 Address
-     */
-    ipAddress?: string;
-    /**
-     * Variable name
-     */
-    ipAddressVariable?: string;
-    /**
-     * MAC Address
-     */
-    macAddress?: string;
-    /**
-     * Variable name
-     */
-    macAddressVariable?: string;
-}
-
-export interface ServiceLanVpnInterfaceEthernetProfileParcelIpv4SecondaryAddress {
-    /**
-     * IpV4 Address
-     */
-    address?: string;
-    /**
-     * Variable name
-     */
-    addressVariable?: string;
-    /**
-     * Subnet Mask
-     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
-     */
-    subnetMask?: string;
-    /**
-     * Variable name
-     */
-    subnetMaskVariable?: string;
-}
-
-export interface ServiceLanVpnInterfaceEthernetProfileParcelIpv4Vrrp {
-    /**
-     * Group ID
-     *   - Range: `1`-`255`
-     */
-    groupId?: number;
-    /**
-     * Variable name
-     */
-    groupIdVariable?: string;
-    /**
-     * VRRP Ip Address
-     */
-    ipAddress?: string;
-    /**
-     * Variable name
-     */
-    ipAddressVariable?: string;
-    /**
-     * Set priority
-     *   - Range: `1`-`254`
-     *   - Default value: `100`
-     */
-    priority?: number;
-    /**
-     * Variable name
-     */
-    priorityVariable?: string;
-    /**
-     * VRRP Secondary Ip Addresses
-     */
-    secondaryAddresses?: outputs.ServiceLanVpnInterfaceEthernetProfileParcelIpv4VrrpSecondaryAddress[];
-    /**
-     * Timer interval for successive advertisements, in milliseconds
-     *   - Range: `100`-`40950`
-     *   - Default value: `1000`
-     */
-    timer?: number;
-    /**
-     * Variable name
-     */
-    timerVariable?: string;
-    /**
-     * Timer interval for successive advertisements, in milliseconds
-     *   - Range: `100`-`4294967295`
-     */
-    tlocPrefChangeValue?: number;
-    /**
-     * Timer interval for successive advertisements, in milliseconds
-     *   - Default value: `false`
-     */
-    tlocPrefixChange?: boolean;
-    /**
-     * Track OMP status
-     *   - Default value: `false`
-     */
-    trackOmp?: boolean;
-}
-
-export interface ServiceLanVpnInterfaceEthernetProfileParcelIpv4VrrpSecondaryAddress {
-    /**
-     * Ip Address
-     */
-    address?: string;
-    /**
-     * Variable name
-     */
-    addressVariable?: string;
-    /**
-     * Subnet Mask
-     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
-     */
-    subnetMask?: string;
-    /**
-     * Variable name
-     */
-    subnetMaskVariable?: string;
-}
-
-export interface ServiceLanVpnInterfaceEthernetProfileParcelIpv6DhcpHelper {
-    /**
-     * DHCPv6 Helper address
-     */
-    address?: string;
-    /**
-     * Variable name
-     */
-    addressVariable?: string;
-    /**
-     * DHCPv6 Helper VPN
-     *   - Range: `1`-`65536`
-     */
-    dhcpv6HelperVpn?: number;
-    /**
-     * Variable name
-     */
-    dhcpv6HelperVpnVariable?: string;
-}
-
-export interface ServiceLanVpnInterfaceEthernetProfileParcelIpv6DhcpSecondaryAddress {
-    /**
-     * IPv6 Address Secondary
-     */
-    address?: string;
-    /**
-     * Variable name
-     */
-    addressVariable?: string;
-}
-
-export interface ServiceLanVpnInterfaceEthernetProfileParcelIpv6SecondaryAddress {
-    /**
-     * IPv6 Address Secondary
-     */
-    address?: string;
-    /**
-     * Variable name
-     */
-    addressVariable?: string;
-}
-
-export interface ServiceLanVpnInterfaceEthernetProfileParcelIpv6Vrrp {
-    /**
-     * IPv6 VRRP
-     */
-    addresses?: outputs.ServiceLanVpnInterfaceEthernetProfileParcelIpv6VrrpAddress[];
-    /**
-     * Group ID
-     *   - Range: `1`-`255`
-     */
-    groupId?: number;
-    /**
-     * Variable name
-     */
-    groupIdVariable?: string;
-    /**
-     * Set priority
-     *   - Range: `1`-`254`
-     *   - Default value: `100`
-     */
-    priority?: number;
-    /**
-     * Variable name
-     */
-    priorityVariable?: string;
-    /**
-     * Timer interval for successive advertisements, in milliseconds
-     *   - Range: `100`-`40950`
-     *   - Default value: `1000`
-     */
-    timer?: number;
-    /**
-     * Variable name
-     */
-    timerVariable?: string;
-    /**
-     * Track OMP status
-     *   - Default value: `false`
-     */
-    trackOmp?: boolean;
-}
-
-export interface ServiceLanVpnInterfaceEthernetProfileParcelIpv6VrrpAddress {
-    /**
-     * Assign Global IPv6 Prefix
-     */
-    globalAddress?: string;
-    /**
-     * Variable name
-     */
-    globalAddressVariable?: string;
-    /**
-     * Use link-local IPv6 Address
-     */
-    linkLocalAddress?: string;
-    /**
-     * Variable name
-     */
-    linkLocalAddressVariable?: string;
-}
-
-export interface ServiceLanVpnInterfaceEthernetProfileParcelStaticNat {
-    /**
-     * Direction of static NAT translation
-     *   - Choices: `inside`, `outside`
-     *   - Default value: `inside`
-     */
-    direction?: string;
-    /**
-     * Source IP address to be translated
-     */
-    sourceIp?: string;
-    /**
-     * Variable name
-     */
-    sourceIpVariable?: string;
-    /**
-     * Source VPN ID
-     *   - Range: `0`-`65530`
-     *   - Default value: `0`
-     */
-    sourceVpn?: number;
-    /**
-     * Variable name
-     */
-    sourceVpnVariable?: string;
-    /**
-     * Statically translated source IP address
-     */
-    translateIp?: string;
-    /**
-     * Variable name
-     */
-    translateIpVariable?: string;
-}
-
-export interface ServiceLanVpnProfileParcelAdvertiseOmpIpv4 {
+export interface ServiceLanVpnFeatureAdvertiseOmpIpv4 {
     /**
      * IPv4 Prefix List
      */
-    prefixes?: outputs.ServiceLanVpnProfileParcelAdvertiseOmpIpv4Prefix[];
+    prefixes?: outputs.ServiceLanVpnFeatureAdvertiseOmpIpv4Prefix[];
     /**
      * Protocol
      *   - Choices: `bgp`, `ospf`, `ospfv3`, `connected`, `static`, `network`, `aggregate`, `eigrp`, `lisp`, `isis`
@@ -19148,7 +21669,7 @@ export interface ServiceLanVpnProfileParcelAdvertiseOmpIpv4 {
     routePolicyId?: string;
 }
 
-export interface ServiceLanVpnProfileParcelAdvertiseOmpIpv4Prefix {
+export interface ServiceLanVpnFeatureAdvertiseOmpIpv4Prefix {
     /**
      * Aggregate Only
      *   - Default value: `false`
@@ -19179,11 +21700,11 @@ export interface ServiceLanVpnProfileParcelAdvertiseOmpIpv4Prefix {
     subnetMaskVariable?: string;
 }
 
-export interface ServiceLanVpnProfileParcelAdvertiseOmpIpv6 {
+export interface ServiceLanVpnFeatureAdvertiseOmpIpv6 {
     /**
      * IPv6 Prefix List
      */
-    prefixes?: outputs.ServiceLanVpnProfileParcelAdvertiseOmpIpv6Prefix[];
+    prefixes?: outputs.ServiceLanVpnFeatureAdvertiseOmpIpv6Prefix[];
     /**
      * Protocol
      *   - Choices: `BGP`, `OSPF`, `Connected`, `Static`, `Network`, `Aggregate`
@@ -19205,7 +21726,7 @@ export interface ServiceLanVpnProfileParcelAdvertiseOmpIpv6 {
     routePolicyId?: string;
 }
 
-export interface ServiceLanVpnProfileParcelAdvertiseOmpIpv6Prefix {
+export interface ServiceLanVpnFeatureAdvertiseOmpIpv6Prefix {
     /**
      * Aggregate Only
      *   - Default value: `false`
@@ -19221,7 +21742,7 @@ export interface ServiceLanVpnProfileParcelAdvertiseOmpIpv6Prefix {
     prefixVariable?: string;
 }
 
-export interface ServiceLanVpnProfileParcelGreRoute {
+export interface ServiceLanVpnFeatureGreRoute {
     /**
      * Variable name
      */
@@ -19253,7 +21774,7 @@ export interface ServiceLanVpnProfileParcelGreRoute {
     vpn?: number;
 }
 
-export interface ServiceLanVpnProfileParcelHostMapping {
+export interface ServiceLanVpnFeatureHostMapping {
     /**
      * Hostname
      */
@@ -19272,7 +21793,7 @@ export interface ServiceLanVpnProfileParcelHostMapping {
     listOfIpsVariable?: string;
 }
 
-export interface ServiceLanVpnProfileParcelIpsecRoute {
+export interface ServiceLanVpnFeatureIpsecRoute {
     /**
      * Variable name
      */
@@ -19300,7 +21821,7 @@ export interface ServiceLanVpnProfileParcelIpsecRoute {
     subnetMaskVariable?: string;
 }
 
-export interface ServiceLanVpnProfileParcelIpv4ExportRouteTarget {
+export interface ServiceLanVpnFeatureIpv4ExportRouteTarget {
     /**
      * Route target
      */
@@ -19311,7 +21832,7 @@ export interface ServiceLanVpnProfileParcelIpv4ExportRouteTarget {
     routeTargetVariable?: string;
 }
 
-export interface ServiceLanVpnProfileParcelIpv4ImportRouteTarget {
+export interface ServiceLanVpnFeatureIpv4ImportRouteTarget {
     /**
      * Route target
      */
@@ -19322,7 +21843,7 @@ export interface ServiceLanVpnProfileParcelIpv4ImportRouteTarget {
     routeTargetVariable?: string;
 }
 
-export interface ServiceLanVpnProfileParcelIpv4StaticRoute {
+export interface ServiceLanVpnFeatureIpv4StaticRoute {
     /**
      * IPv4 Route Gateway DHCP
      */
@@ -19338,11 +21859,11 @@ export interface ServiceLanVpnProfileParcelIpv4StaticRoute {
     /**
      * IPv4 Route Gateway Next Hop with Tracker
      */
-    nextHopWithTrackers?: outputs.ServiceLanVpnProfileParcelIpv4StaticRouteNextHopWithTracker[];
+    nextHopWithTrackers?: outputs.ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTracker[];
     /**
      * IPv4 Route Gateway Next Hop
      */
-    nextHops?: outputs.ServiceLanVpnProfileParcelIpv4StaticRouteNextHop[];
+    nextHops?: outputs.ServiceLanVpnFeatureIpv4StaticRouteNextHop[];
     /**
      * IPv4 Route Gateway Next Hop
      */
@@ -19362,7 +21883,7 @@ export interface ServiceLanVpnProfileParcelIpv4StaticRoute {
     vpn?: boolean;
 }
 
-export interface ServiceLanVpnProfileParcelIpv4StaticRouteNextHop {
+export interface ServiceLanVpnFeatureIpv4StaticRouteNextHop {
     /**
      * Address
      */
@@ -19382,7 +21903,7 @@ export interface ServiceLanVpnProfileParcelIpv4StaticRouteNextHop {
     administrativeDistanceVariable?: string;
 }
 
-export interface ServiceLanVpnProfileParcelIpv4StaticRouteNextHopWithTracker {
+export interface ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTracker {
     /**
      * Address
      */
@@ -19403,7 +21924,7 @@ export interface ServiceLanVpnProfileParcelIpv4StaticRouteNextHopWithTracker {
     trackerId?: string;
 }
 
-export interface ServiceLanVpnProfileParcelIpv6ExportRouteTarget {
+export interface ServiceLanVpnFeatureIpv6ExportRouteTarget {
     /**
      * Route target
      */
@@ -19414,7 +21935,7 @@ export interface ServiceLanVpnProfileParcelIpv6ExportRouteTarget {
     routeTargetVariable?: string;
 }
 
-export interface ServiceLanVpnProfileParcelIpv6ImportRouteTarget {
+export interface ServiceLanVpnFeatureIpv6ImportRouteTarget {
     /**
      * Route target
      */
@@ -19425,7 +21946,7 @@ export interface ServiceLanVpnProfileParcelIpv6ImportRouteTarget {
     routeTargetVariable?: string;
 }
 
-export interface ServiceLanVpnProfileParcelIpv6StaticRoute {
+export interface ServiceLanVpnFeatureIpv6StaticRoute {
     /**
      * IPv6 Nat
      *   - Choices: `NAT64`, `NAT66`
@@ -19438,7 +21959,7 @@ export interface ServiceLanVpnProfileParcelIpv6StaticRoute {
     /**
      * IPv6 Route Gateway Next Hop
      */
-    nextHops?: outputs.ServiceLanVpnProfileParcelIpv6StaticRouteNextHop[];
+    nextHops?: outputs.ServiceLanVpnFeatureIpv6StaticRouteNextHop[];
     /**
      * IPv6 Route Gateway Next Hop
      */
@@ -19453,7 +21974,7 @@ export interface ServiceLanVpnProfileParcelIpv6StaticRoute {
     prefixVariable?: string;
 }
 
-export interface ServiceLanVpnProfileParcelIpv6StaticRouteNextHop {
+export interface ServiceLanVpnFeatureIpv6StaticRouteNextHop {
     /**
      * Address
      */
@@ -19473,7 +21994,7 @@ export interface ServiceLanVpnProfileParcelIpv6StaticRouteNextHop {
     administrativeDistanceVariable?: string;
 }
 
-export interface ServiceLanVpnProfileParcelNat64V4Pool {
+export interface ServiceLanVpnFeatureNat64V4Pool {
     /**
      * NAT64 v4 Pool Name
      */
@@ -19509,7 +22030,7 @@ export interface ServiceLanVpnProfileParcelNat64V4Pool {
     rangeStartVariable?: string;
 }
 
-export interface ServiceLanVpnProfileParcelNatPool {
+export interface ServiceLanVpnFeatureNatPool {
     /**
      * NAT Direction
      *   - Choices: `inside`, `outside`
@@ -19565,7 +22086,7 @@ export interface ServiceLanVpnProfileParcelNatPool {
     trackerObjectId?: string;
 }
 
-export interface ServiceLanVpnProfileParcelNatPortForward {
+export interface ServiceLanVpnFeatureNatPortForward {
     /**
      * NAT Pool Name
      *   - Range: `1`-`32`
@@ -19618,11 +22139,11 @@ export interface ServiceLanVpnProfileParcelNatPortForward {
     translatedSourceIpVariable?: string;
 }
 
-export interface ServiceLanVpnProfileParcelRouteLeakFromGlobalVpn {
+export interface ServiceLanVpnFeatureRouteLeakFromGlobalVpn {
     /**
      * Redistribute Routes to specific Protocol on Service VPN
      */
-    redistributions?: outputs.ServiceLanVpnProfileParcelRouteLeakFromGlobalVpnRedistribution[];
+    redistributions?: outputs.ServiceLanVpnFeatureRouteLeakFromGlobalVpnRedistribution[];
     routePolicyId?: string;
     /**
      * Leak Routes of particular protocol from Global to Service VPN
@@ -19635,7 +22156,7 @@ export interface ServiceLanVpnProfileParcelRouteLeakFromGlobalVpn {
     routeProtocolVariable?: string;
 }
 
-export interface ServiceLanVpnProfileParcelRouteLeakFromGlobalVpnRedistribution {
+export interface ServiceLanVpnFeatureRouteLeakFromGlobalVpnRedistribution {
     /**
      * Protocol to restributed leaked routes
      *   - Choices: `bgp`, `ospf`
@@ -19648,11 +22169,11 @@ export interface ServiceLanVpnProfileParcelRouteLeakFromGlobalVpnRedistribution 
     redistributionPolicyId?: string;
 }
 
-export interface ServiceLanVpnProfileParcelRouteLeakFromOtherService {
+export interface ServiceLanVpnFeatureRouteLeakFromOtherService {
     /**
      * Redistribute Route to specific Protocol on Current Service VPN
      */
-    redistributions?: outputs.ServiceLanVpnProfileParcelRouteLeakFromOtherServiceRedistribution[];
+    redistributions?: outputs.ServiceLanVpnFeatureRouteLeakFromOtherServiceRedistribution[];
     routePolicyId?: string;
     /**
      * Leak Route of particular protocol from Source Service VPN
@@ -19674,7 +22195,7 @@ export interface ServiceLanVpnProfileParcelRouteLeakFromOtherService {
     sourceVpnVariable?: string;
 }
 
-export interface ServiceLanVpnProfileParcelRouteLeakFromOtherServiceRedistribution {
+export interface ServiceLanVpnFeatureRouteLeakFromOtherServiceRedistribution {
     /**
      * Protocol to restributed leaked routes
      *   - Choices: `bgp`, `ospf`
@@ -19687,11 +22208,11 @@ export interface ServiceLanVpnProfileParcelRouteLeakFromOtherServiceRedistributi
     redistributionPolicyId?: string;
 }
 
-export interface ServiceLanVpnProfileParcelRouteLeakToGlobalVpn {
+export interface ServiceLanVpnFeatureRouteLeakToGlobalVpn {
     /**
      * Redistribute Routes to specific Protocol on Global VPN
      */
-    redistributions?: outputs.ServiceLanVpnProfileParcelRouteLeakToGlobalVpnRedistribution[];
+    redistributions?: outputs.ServiceLanVpnFeatureRouteLeakToGlobalVpnRedistribution[];
     routePolicyId?: string;
     /**
      * Leak Routes of particular protocol from Service to Global VPN
@@ -19704,7 +22225,7 @@ export interface ServiceLanVpnProfileParcelRouteLeakToGlobalVpn {
     routeProtocolVariable?: string;
 }
 
-export interface ServiceLanVpnProfileParcelRouteLeakToGlobalVpnRedistribution {
+export interface ServiceLanVpnFeatureRouteLeakToGlobalVpnRedistribution {
     /**
      * Protocol to restributed leaked routes
      *   - Choices: `bgp`, `ospf`
@@ -19717,7 +22238,7 @@ export interface ServiceLanVpnProfileParcelRouteLeakToGlobalVpnRedistribution {
     redistributionPolicyId?: string;
 }
 
-export interface ServiceLanVpnProfileParcelService {
+export interface ServiceLanVpnFeatureService {
     /**
      * IPv4 Addresses (Maximum: 4)
      */
@@ -19746,7 +22267,7 @@ export interface ServiceLanVpnProfileParcelService {
     trackingVariable?: string;
 }
 
-export interface ServiceLanVpnProfileParcelServiceRoute {
+export interface ServiceLanVpnFeatureServiceRoute {
     /**
      * IP Address
      */
@@ -19780,7 +22301,7 @@ export interface ServiceLanVpnProfileParcelServiceRoute {
     vpn?: number;
 }
 
-export interface ServiceLanVpnProfileParcelStaticNat {
+export interface ServiceLanVpnFeatureStaticNat {
     /**
      * NAT Pool Name
      *   - Range: `1`-`32`
@@ -19816,6 +22337,1915 @@ export interface ServiceLanVpnProfileParcelStaticNat {
      * Variable name
      */
     translatedSourceIpVariable?: string;
+}
+
+export interface ServiceLanVpnInterfaceEthernetFeatureArp {
+    /**
+     * IPV4 Address
+     */
+    ipAddress?: string;
+    /**
+     * Variable name
+     */
+    ipAddressVariable?: string;
+    /**
+     * MAC Address
+     */
+    macAddress?: string;
+    /**
+     * Variable name
+     */
+    macAddressVariable?: string;
+}
+
+export interface ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddress {
+    /**
+     * IpV4 Address
+     */
+    address?: string;
+    /**
+     * Variable name
+     */
+    addressVariable?: string;
+    /**
+     * Subnet Mask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     */
+    subnetMask?: string;
+    /**
+     * Variable name
+     */
+    subnetMaskVariable?: string;
+}
+
+export interface ServiceLanVpnInterfaceEthernetFeatureIpv4Vrrp {
+    /**
+     * VRRP Ip Address
+     */
+    address?: string;
+    /**
+     * Variable name
+     */
+    addressVariable?: string;
+    /**
+     * Group ID
+     *   - Range: `1`-`255`
+     */
+    groupId?: number;
+    /**
+     * Variable name
+     */
+    groupIdVariable?: string;
+    /**
+     * Set priority
+     *   - Range: `1`-`254`
+     *   - Default value: `100`
+     */
+    priority?: number;
+    /**
+     * Variable name
+     */
+    priorityVariable?: string;
+    /**
+     * VRRP Secondary Ip Addresses
+     */
+    secondaryAddresses?: outputs.ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpSecondaryAddress[];
+    /**
+     * Timer interval for successive advertisements, in milliseconds
+     *   - Range: `100`-`40950`
+     *   - Default value: `1000`
+     */
+    timer?: number;
+    /**
+     * Variable name
+     */
+    timerVariable?: string;
+    /**
+     * Timer interval for successive advertisements, in milliseconds
+     *   - Range: `100`-`4294967295`
+     */
+    tlocPrefChangeValue?: number;
+    /**
+     * Timer interval for successive advertisements, in milliseconds
+     *   - Default value: `false`
+     */
+    tlocPrefixChange?: boolean;
+    /**
+     * Track OMP status
+     *   - Default value: `false`
+     */
+    trackOmp?: boolean;
+}
+
+export interface ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpSecondaryAddress {
+    /**
+     * Ip Address
+     */
+    address?: string;
+    /**
+     * Variable name
+     */
+    addressVariable?: string;
+    /**
+     * Subnet Mask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     */
+    subnetMask?: string;
+    /**
+     * Variable name
+     */
+    subnetMaskVariable?: string;
+}
+
+export interface ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelper {
+    /**
+     * DHCPv6 Helper address
+     */
+    address?: string;
+    /**
+     * Variable name
+     */
+    addressVariable?: string;
+    /**
+     * DHCPv6 Helper VPN
+     *   - Range: `1`-`65536`
+     */
+    dhcpv6HelperVpn?: number;
+    /**
+     * Variable name
+     */
+    dhcpv6HelperVpnVariable?: string;
+}
+
+export interface ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress {
+    /**
+     * IPv6 Address Secondary
+     */
+    address?: string;
+    /**
+     * Variable name
+     */
+    addressVariable?: string;
+}
+
+export interface ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddress {
+    /**
+     * IPv6 Address Secondary
+     */
+    address?: string;
+    /**
+     * Variable name
+     */
+    addressVariable?: string;
+}
+
+export interface ServiceLanVpnInterfaceEthernetFeatureIpv6Vrrp {
+    /**
+     * Group ID
+     *   - Range: `1`-`255`
+     */
+    groupId?: number;
+    /**
+     * Variable name
+     */
+    groupIdVariable?: string;
+    /**
+     * IPv6 VRRP
+     */
+    ipv6Addresses?: outputs.ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpIpv6Address[];
+    /**
+     * Set priority
+     *   - Range: `1`-`254`
+     *   - Default value: `100`
+     */
+    priority?: number;
+    /**
+     * Variable name
+     */
+    priorityVariable?: string;
+    /**
+     * Timer interval for successive advertisements, in milliseconds
+     *   - Range: `100`-`40950`
+     *   - Default value: `1000`
+     */
+    timer?: number;
+    /**
+     * Variable name
+     */
+    timerVariable?: string;
+    /**
+     * Track OMP status
+     *   - Default value: `false`
+     */
+    trackOmp?: boolean;
+}
+
+export interface ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpIpv6Address {
+    /**
+     * Assign Global IPv6 Prefix
+     */
+    globalAddress?: string;
+    /**
+     * Variable name
+     */
+    globalAddressVariable?: string;
+    /**
+     * Use link-local IPv6 Address
+     */
+    linkLocalAddress?: string;
+    /**
+     * Variable name
+     */
+    linkLocalAddressVariable?: string;
+}
+
+export interface ServiceLanVpnInterfaceEthernetFeatureStaticNat {
+    /**
+     * Direction of static NAT translation
+     *   - Choices: `inside`, `outside`
+     *   - Default value: `inside`
+     */
+    direction?: string;
+    /**
+     * Source IP address to be translated
+     */
+    sourceIp?: string;
+    /**
+     * Variable name
+     */
+    sourceIpVariable?: string;
+    /**
+     * Source VPN ID
+     *   - Range: `0`-`65530`
+     *   - Default value: `0`
+     */
+    sourceVpn?: number;
+    /**
+     * Variable name
+     */
+    sourceVpnVariable?: string;
+    /**
+     * Statically translated source IP address
+     */
+    translateIp?: string;
+    /**
+     * Variable name
+     */
+    translateIpVariable?: string;
+}
+
+export interface ServiceLanVpnInterfaceSviFeatureArp {
+    /**
+     * IP Address
+     */
+    ipAddress?: string;
+    /**
+     * Variable name
+     */
+    ipAddressVariable?: string;
+    /**
+     * MAC address
+     */
+    macAddress?: string;
+    /**
+     * Variable name
+     */
+    macAddressVariable?: string;
+}
+
+export interface ServiceLanVpnInterfaceSviFeatureIpv4SecondaryAddress {
+    /**
+     * IpV4 Address
+     */
+    address?: string;
+    /**
+     * Variable name
+     */
+    addressVariable?: string;
+    /**
+     * Subnet Mask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     */
+    ipv4SubnetMask?: string;
+    /**
+     * Variable name
+     */
+    ipv4SubnetMaskVariable?: string;
+}
+
+export interface ServiceLanVpnInterfaceSviFeatureIpv4Vrrp {
+    /**
+     * Assign IPV4 Address
+     */
+    address?: string;
+    /**
+     * Variable name
+     */
+    addressVariable?: string;
+    /**
+     * Group ID
+     *   - Range: `1`-`255`
+     */
+    groupId?: number;
+    /**
+     * Variable name
+     */
+    groupIdVariable?: string;
+    /**
+     * Track Prefix List
+     */
+    prefixList?: string;
+    /**
+     * Variable name
+     */
+    prefixListVariable?: string;
+    /**
+     * Set priority
+     *   - Range: `1`-`254`
+     *   - Default value: `100`
+     */
+    priority?: number;
+    /**
+     * Variable name
+     */
+    priorityVariable?: string;
+    /**
+     * VRRP Secondary IPV4 address
+     */
+    secondaryAddresses?: outputs.ServiceLanVpnInterfaceSviFeatureIpv4VrrpSecondaryAddress[];
+    /**
+     * Timer interval for successive advertisements, in milliseconds
+     *   - Range: `100`-`40950`
+     *   - Default value: `1000`
+     */
+    timer?: number;
+    /**
+     * Variable name
+     */
+    timerVariable?: string;
+    /**
+     * change TLOC preference
+     *   - Default value: `false`
+     */
+    tlocPrefixChange?: boolean;
+    /**
+     * Set tloc preference change value
+     *   - Range: `1`-`4294967295`
+     */
+    tlocPrefixChangeValue?: number;
+    /**
+     * Variable name
+     */
+    tlocPrefixChangeValueVariable?: string;
+    /**
+     * Track OMP status
+     *   - Default value: `false`
+     */
+    trackOmp?: boolean;
+    /**
+     * Variable name
+     */
+    trackOmpVariable?: string;
+}
+
+export interface ServiceLanVpnInterfaceSviFeatureIpv4VrrpSecondaryAddress {
+    /**
+     * VRRP Secondary IPV4 address
+     */
+    address?: string;
+    /**
+     * Variable name
+     */
+    addressVariable?: string;
+}
+
+export interface ServiceLanVpnInterfaceSviFeatureIpv6DhcpHelper {
+    /**
+     * DHCPv6 Helper address
+     */
+    address?: string;
+    /**
+     * Variable name
+     */
+    addressVariable?: string;
+    /**
+     * DHCPv6 Helper VPN
+     *   - Range: `1`-`65536`
+     */
+    vpn?: number;
+    /**
+     * Variable name
+     */
+    vpnVariable?: string;
+}
+
+export interface ServiceLanVpnInterfaceSviFeatureIpv6SecondaryAddress {
+    /**
+     * IPv6 Address
+     */
+    address?: string;
+    /**
+     * Variable name
+     */
+    addressVariable?: string;
+}
+
+export interface ServiceLanVpnInterfaceSviFeatureIpv6Vrrp {
+    /**
+     * IPv6 VRRP
+     */
+    addresses?: outputs.ServiceLanVpnInterfaceSviFeatureIpv6VrrpAddress[];
+    /**
+     * Group ID
+     *   - Range: `1`-`255`
+     */
+    groupId?: number;
+    /**
+     * Variable name
+     */
+    groupIdVariable?: string;
+    /**
+     * Set priority
+     *   - Range: `1`-`254`
+     *   - Default value: `100`
+     */
+    priority?: number;
+    /**
+     * Variable name
+     */
+    priorityVariable?: string;
+    /**
+     * IPv6 Secondary IP address
+     */
+    secondaryAddresses?: outputs.ServiceLanVpnInterfaceSviFeatureIpv6VrrpSecondaryAddress[];
+    /**
+     * Timer interval for successive advertisements, in milliseconds
+     *   - Range: `100`-`40950`
+     *   - Default value: `1000`
+     */
+    timer?: number;
+    /**
+     * Variable name
+     */
+    timerVariable?: string;
+    /**
+     * Track OMP status
+     *   - Default value: `false`
+     */
+    trackOmp?: boolean;
+    /**
+     * Variable name
+     */
+    trackOmpVariable?: string;
+    /**
+     * Track Prefix List
+     */
+    trackPrefixList?: string;
+    /**
+     * Variable name
+     */
+    trackPrefixListVariable?: string;
+}
+
+export interface ServiceLanVpnInterfaceSviFeatureIpv6VrrpAddress {
+    /**
+     * Assign Global IPv6 Prefix
+     */
+    globalAddress?: string;
+    /**
+     * Variable name
+     */
+    globalAddressVariable?: string;
+    /**
+     * Use link-local IPv6 Address
+     */
+    linkLocalAddress?: string;
+    /**
+     * Variable name
+     */
+    linkLocalAddressVariable?: string;
+}
+
+export interface ServiceLanVpnInterfaceSviFeatureIpv6VrrpSecondaryAddress {
+    /**
+     * IPv6 Secondary IP address
+     */
+    prefix?: string;
+    /**
+     * Variable name
+     */
+    prefixVariable?: string;
+}
+
+export interface ServiceObjectTrackerGroupFeatureTrackerElement {
+    objectTrackerId?: string;
+}
+
+export interface ServiceRoutePolicyFeatureSequence {
+    /**
+     * Define list of actions
+     */
+    actions?: outputs.ServiceRoutePolicyFeatureSequenceAction[];
+    /**
+     * Base Action
+     *   - Choices: `reject`, `accept`
+     *   - Default value: `reject`
+     */
+    baseAction?: string;
+    /**
+     * Sequence Id
+     *   - Range: `1`-`65536`
+     */
+    id?: number;
+    /**
+     * Define match conditions
+     */
+    matchEntries?: outputs.ServiceRoutePolicyFeatureSequenceMatchEntry[];
+    /**
+     * Sequence Name
+     */
+    name?: string;
+    /**
+     * protocol such as IPV4, IPV6, or BOTH
+     *   - Choices: `IPV4`, `IPV6`, `BOTH`
+     *   - Default value: `IPV4`
+     */
+    protocol?: string;
+}
+
+export interface ServiceRoutePolicyFeatureSequenceAction {
+    asPathPrepends?: number[];
+    communities?: string[];
+    /**
+     * - Default value: `false`
+     */
+    communityAdditive?: boolean;
+    /**
+     * Variable name
+     */
+    communityVariable?: string;
+    /**
+     * Set Ipv4 Next Hop
+     */
+    ipv4NextHop?: string;
+    /**
+     * Set Ipv6 Next Hop
+     */
+    ipv6NextHop?: string;
+    /**
+     * Set Local Preference
+     *   - Range: `0`-`4294967295`
+     */
+    localPreference?: number;
+    /**
+     * Set Metric
+     *   - Range: `0`-`4294967295`
+     */
+    metric?: number;
+    /**
+     * Set Metric Type
+     *   - Choices: `type1`, `type2`
+     */
+    metricType?: string;
+    /**
+     * Set OMP Tag
+     *   - Range: `0`-`4294967295`
+     */
+    ompTag?: number;
+    /**
+     * Set Origin
+     *   - Choices: `EGP`, `IGP`, `Incomplete`
+     */
+    origin?: string;
+    /**
+     * Set OSPF Tag
+     *   - Range: `0`-`4294967295`
+     */
+    ospfTag?: number;
+    /**
+     * Set Weight
+     *   - Range: `0`-`65535`
+     */
+    weight?: number;
+}
+
+export interface ServiceRoutePolicyFeatureSequenceMatchEntry {
+    asPathListId?: string;
+    /**
+     * BGP Local Preference
+     *   - Range: `0`-`4294967295`
+     */
+    bgpLocalPreference?: number;
+    expandedCommunityListId?: string;
+    extendedCommunityListId?: string;
+    ipv4AddressPrefixListId?: string;
+    ipv4NextHopPrefixListId?: string;
+    ipv6AddressPrefixListId?: string;
+    ipv6NextHopPrefixListId?: string;
+    /**
+     * Select Metric
+     *   - Range: `0`-`4294967295`
+     */
+    metric?: number;
+    /**
+     * Select OMP Tag
+     *   - Range: `0`-`4294967295`
+     */
+    ompTag?: number;
+    /**
+     * Select OSPF Tag
+     *   - Range: `0`-`4294967295`
+     */
+    ospfTag?: number;
+    /**
+     * Select a condition such as OR, AND or EXACT
+     *   - Choices: `OR`, `AND`, `EXACT`
+     */
+    standardCommunityListCriteria?: string;
+    /**
+     * Select a standard community list
+     */
+    standardCommunityLists?: outputs.ServiceRoutePolicyFeatureSequenceMatchEntryStandardCommunityList[];
+}
+
+export interface ServiceRoutePolicyFeatureSequenceMatchEntryStandardCommunityList {
+    id?: string;
+}
+
+export interface ServiceRoutingBgpFeatureIpv4AggregateAddress {
+    /**
+     * Set AS set path information
+     *   - Default value: `false`
+     */
+    asSetPath?: boolean;
+    /**
+     * Variable name
+     */
+    asSetPathVariable?: string;
+    networkAddress?: string;
+    /**
+     * Variable name
+     */
+    networkAddressVariable?: string;
+    /**
+     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     */
+    subnetMask?: string;
+    /**
+     * Variable name
+     */
+    subnetMaskVariable?: string;
+    /**
+     * Filter out more specific routes from updates
+     *   - Default value: `false`
+     */
+    summaryOnly?: boolean;
+    /**
+     * Variable name
+     */
+    summaryOnlyVariable?: string;
+}
+
+export interface ServiceRoutingBgpFeatureIpv4Neighbor {
+    /**
+     * Set neighbor address
+     */
+    address?: string;
+    /**
+     * Set BGP address family
+     */
+    addressFamilies?: outputs.ServiceRoutingBgpFeatureIpv4NeighborAddressFamily[];
+    /**
+     * Variable name
+     */
+    addressVariable?: string;
+    /**
+     * The number of accept as-path with my AS present in it
+     *   - Range: `1`-`10`
+     */
+    allowasInNumber?: number;
+    /**
+     * Variable name
+     */
+    allowasInNumberVariable?: string;
+    /**
+     * Override matching AS-number while sending update
+     *   - Default value: `false`
+     */
+    asOverride?: boolean;
+    /**
+     * Variable name
+     */
+    asOverrideVariable?: string;
+    /**
+     * Set description
+     */
+    description?: string;
+    /**
+     * Variable name
+     */
+    descriptionVariable?: string;
+    /**
+     * Set TTL value for peers that are not directly connected
+     *   - Range: `1`-`255`
+     *   - Default value: `1`
+     */
+    ebgpMultihop?: number;
+    /**
+     * Variable name
+     */
+    ebgpMultihopVariable?: string;
+    /**
+     * Interval (seconds) not receiving a keepalive message declares a BGP peer down
+     *   - Range: `0`-`65535`
+     *   - Default value: `180`
+     */
+    holdTime?: number;
+    /**
+     * Variable name
+     */
+    holdTimeVariable?: string;
+    /**
+     * Interval (seconds) of keepalive messages sent to its BGP peer
+     *   - Range: `0`-`65535`
+     *   - Default value: `60`
+     */
+    keepaliveTime?: number;
+    /**
+     * Variable name
+     */
+    keepaliveTimeVariable?: string;
+    /**
+     * Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
+     */
+    localAs?: number;
+    /**
+     * Variable name
+     */
+    localAsVariable?: string;
+    /**
+     * Set router to be next hop for routes advertised to neighbor
+     *   - Default value: `false`
+     */
+    nextHopSelf?: boolean;
+    /**
+     * Variable name
+     */
+    nextHopSelfVariable?: string;
+    /**
+     * Set MD5 password on TCP connection with BGP peer
+     */
+    password?: string;
+    /**
+     * Variable name
+     */
+    passwordVariable?: string;
+    /**
+     * Set remote autonomous system number
+     */
+    remoteAs?: number;
+    /**
+     * Variable name
+     */
+    remoteAsVariable?: string;
+    /**
+     * Send community attribute
+     *   - Default value: `true`
+     */
+    sendCommunity?: boolean;
+    /**
+     * Variable name
+     */
+    sendCommunityVariable?: string;
+    /**
+     * Send extended community attribute
+     *   - Default value: `true`
+     */
+    sendExtendedCommunity?: boolean;
+    /**
+     * Variable name
+     */
+    sendExtendedCommunityVariable?: string;
+    /**
+     * Send label
+     *   - Default value: `false`
+     */
+    sendLabel?: boolean;
+    /**
+     * Variable name
+     */
+    sendLabelVariable?: string;
+    /**
+     * Enable or disable a BGP neighbor
+     *   - Default value: `false`
+     */
+    shutdown?: boolean;
+    /**
+     * Variable name
+     */
+    shutdownVariable?: string;
+    /**
+     * Source interface name for BGP neighbor
+     */
+    updateSourceInterface?: string;
+    /**
+     * Variable name
+     */
+    updateSourceInterfaceVariable?: string;
+}
+
+export interface ServiceRoutingBgpFeatureIpv4NeighborAddressFamily {
+    /**
+     * Set IPv4 unicast address family
+     */
+    familyType?: string;
+    inRoutePolicyId?: string;
+    /**
+     * Set maximum number of prefixes accepted from BGP peer
+     *   - Range: `1`-`4294967295`
+     */
+    maxNumberOfPrefixes?: number;
+    /**
+     * Variable name
+     */
+    maxNumberOfPrefixesVariable?: string;
+    outRoutePolicyId?: string;
+    /**
+     * Neighbor received maximum prefix policy is disabled.
+     */
+    policyType?: string;
+    /**
+     * Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded
+     *   - Range: `1`-`65535`
+     */
+    restartInterval?: number;
+    /**
+     * Variable name
+     */
+    restartIntervalVariable?: string;
+    /**
+     * Set threshold(1 to 100) at which to generate a warning message
+     *   - Range: `1`-`100`
+     *   - Default value: `75`
+     */
+    threshold?: number;
+    /**
+     * Variable name
+     */
+    thresholdVariable?: string;
+}
+
+export interface ServiceRoutingBgpFeatureIpv4Network {
+    networkAddress?: string;
+    /**
+     * Variable name
+     */
+    networkAddressVariable?: string;
+    /**
+     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     */
+    subnetMask?: string;
+    /**
+     * Variable name
+     */
+    subnetMaskVariable?: string;
+}
+
+export interface ServiceRoutingBgpFeatureIpv4Redistribute {
+    /**
+     * Set the protocol to redistribute routes from
+     *   - Choices: `static`, `connected`, `omp`, `nat`, `ospf`, `ospfv3`, `eigrp`
+     */
+    protocol?: string;
+    /**
+     * Variable name
+     */
+    protocolVariable?: string;
+    routePolicyId?: string;
+}
+
+export interface ServiceRoutingBgpFeatureIpv6AggregateAddress {
+    /**
+     * Configure the IPv6 prefixes to aggregate
+     */
+    aggregatePrefix?: string;
+    /**
+     * Variable name
+     */
+    aggregatePrefixVariable?: string;
+    /**
+     * Set AS set path information
+     *   - Default value: `false`
+     */
+    asSetPath?: boolean;
+    /**
+     * Variable name
+     */
+    asSetPathVariable?: string;
+    /**
+     * Filter out more specific routes from updates
+     *   - Default value: `false`
+     */
+    summaryOnly?: boolean;
+    /**
+     * Variable name
+     */
+    summaryOnlyVariable?: string;
+}
+
+export interface ServiceRoutingBgpFeatureIpv6Neighbor {
+    /**
+     * Set IPv6 neighbor address
+     */
+    address?: string;
+    /**
+     * Set IPv6 BGP address family
+     */
+    addressFamilies?: outputs.ServiceRoutingBgpFeatureIpv6NeighborAddressFamily[];
+    /**
+     * Variable name
+     */
+    addressVariable?: string;
+    /**
+     * The number of accept as-path with my AS present in it
+     *   - Range: `1`-`10`
+     */
+    allowasInNumber?: number;
+    /**
+     * Variable name
+     */
+    allowasInNumberVariable?: string;
+    /**
+     * Override matching AS-number while sending update
+     *   - Default value: `false`
+     */
+    asOverride?: boolean;
+    /**
+     * Variable name
+     */
+    asOverrideVariable?: string;
+    /**
+     * Set description
+     */
+    description?: string;
+    /**
+     * Variable name
+     */
+    descriptionVariable?: string;
+    /**
+     * Set TTL value for peers that are not directly connected
+     *   - Range: `1`-`255`
+     *   - Default value: `1`
+     */
+    ebgpMultihop?: number;
+    /**
+     * Variable name
+     */
+    ebgpMultihopVariable?: string;
+    /**
+     * Set how long to wait since receiving a keepalive message to consider BGP peer unavailable
+     *   - Range: `0`-`65535`
+     *   - Default value: `180`
+     */
+    holdTime?: number;
+    /**
+     * Variable name
+     */
+    holdTimeVariable?: string;
+    /**
+     * Set how often to advertise keepalive messages to BGP peer
+     *   - Range: `0`-`65535`
+     *   - Default value: `60`
+     */
+    keepaliveTime?: number;
+    /**
+     * Variable name
+     */
+    keepaliveTimeVariable?: string;
+    /**
+     * Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
+     */
+    localAs?: number;
+    /**
+     * Variable name
+     */
+    localAsVariable?: string;
+    /**
+     * Set router to be next hop for routes advertised to neighbor
+     *   - Default value: `false`
+     */
+    nextHopSelf?: boolean;
+    /**
+     * Variable name
+     */
+    nextHopSelfVariable?: string;
+    /**
+     * Set MD5 password on TCP connection with BGP peer
+     */
+    password?: string;
+    /**
+     * Variable name
+     */
+    passwordVariable?: string;
+    /**
+     * Set remote autonomous system number
+     */
+    remoteAs?: number;
+    /**
+     * Variable name
+     */
+    remoteAsVariable?: string;
+    /**
+     * Send community attribute
+     *   - Default value: `true`
+     */
+    sendCommunity?: boolean;
+    /**
+     * Variable name
+     */
+    sendCommunityVariable?: string;
+    /**
+     * Send extended community attribute
+     *   - Default value: `true`
+     */
+    sendExtendedCommunity?: boolean;
+    /**
+     * Variable name
+     */
+    sendExtendedCommunityVariable?: string;
+    /**
+     * Enable or disable a BGP neighbor
+     *   - Default value: `false`
+     */
+    shutdown?: boolean;
+    /**
+     * Variable name
+     */
+    shutdownVariable?: string;
+    /**
+     * Source interface name for BGP neighbor
+     */
+    updateSourceInterface?: string;
+    /**
+     * Variable name
+     */
+    updateSourceInterfaceVariable?: string;
+}
+
+export interface ServiceRoutingBgpFeatureIpv6NeighborAddressFamily {
+    /**
+     * Set IPv6 unicast address family
+     */
+    familyType?: string;
+    inRoutePolicyId?: string;
+    /**
+     * Set maximum number of prefixes accepted from BGP peer
+     *   - Range: `1`-`4294967295`
+     */
+    maxNumberOfPrefixes?: number;
+    /**
+     * Variable name
+     */
+    maxNumberOfPrefixesVariable?: string;
+    outRoutePolicyId?: string;
+    /**
+     * Neighbor received maximum prefix policy is disabled.
+     */
+    policyType?: string;
+    /**
+     * Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded
+     *   - Range: `1`-`65535`
+     */
+    restartInterval?: number;
+    /**
+     * Variable name
+     */
+    restartIntervalVariable?: string;
+    /**
+     * Set threshold(1 to 100) at which to generate a warning message
+     *   - Range: `1`-`100`
+     *   - Default value: `75`
+     */
+    threshold?: number;
+    /**
+     * Variable name
+     */
+    thresholdVariable?: string;
+}
+
+export interface ServiceRoutingBgpFeatureIpv6Network {
+    /**
+     * Configure the prefixes for BGP to announce
+     */
+    networkPrefix?: string;
+    /**
+     * Variable name
+     */
+    networkPrefixVariable?: string;
+}
+
+export interface ServiceRoutingBgpFeatureIpv6Redistribute {
+    /**
+     * Set the protocol to redistribute routes from
+     *   - Choices: `static`, `connected`, `ospf`, `omp`
+     */
+    protocol?: string;
+    /**
+     * Variable name
+     */
+    protocolVariable?: string;
+    routePolicyId?: string;
+}
+
+export interface ServiceRoutingOspfFeatureArea {
+    /**
+     * Set OSPF area number
+     *   - Range: `0`-`4294967295`
+     */
+    areaNumber?: number;
+    /**
+     * Variable name
+     */
+    areaNumberVariable?: string;
+    /**
+     * set the area type
+     *   - Choices: `stub`, `nssa`
+     */
+    areaType?: string;
+    /**
+     * Set OSPF interface parameters
+     */
+    interfaces?: outputs.ServiceRoutingOspfFeatureAreaInterface[];
+    /**
+     * Do not inject interarea routes into STUB or NSSA
+     *   - Default value: `false`
+     */
+    noSummary?: boolean;
+    /**
+     * Variable name
+     */
+    noSummaryVariable?: string;
+    /**
+     * Summarize OSPF routes at an area boundary
+     */
+    ranges?: outputs.ServiceRoutingOspfFeatureAreaRange[];
+}
+
+export interface ServiceRoutingOspfFeatureAreaInterface {
+    /**
+     * Set OSPF interface authentication type
+     *   - Choices: `message-digest`
+     */
+    authenticationType?: string;
+    /**
+     * Variable name
+     */
+    authenticationTypeVariable?: string;
+    /**
+     * Set cost of OSPF interface
+     *   - Range: `1`-`65535`
+     */
+    cost?: number;
+    /**
+     * Variable name
+     */
+    costVariable?: string;
+    /**
+     * Set interval after which neighbor is declared to be down
+     *   - Range: `1`-`65535`
+     *   - Default value: `40`
+     */
+    deadInterval?: number;
+    /**
+     * Variable name
+     */
+    deadIntervalVariable?: string;
+    /**
+     * Set router’s priority to be elected as designated router
+     *   - Range: `0`-`255`
+     *   - Default value: `1`
+     */
+    designatedRouterPriority?: number;
+    /**
+     * Variable name
+     */
+    designatedRouterPriorityVariable?: string;
+    /**
+     * Set interval between OSPF hello packets
+     *   - Range: `1`-`65535`
+     *   - Default value: `10`
+     */
+    helloInterval?: number;
+    /**
+     * Variable name
+     */
+    helloIntervalVariable?: string;
+    /**
+     * Set time between retransmitting LSAs
+     *   - Range: `1`-`65535`
+     *   - Default value: `5`
+     */
+    lsaRetransmitInterval?: number;
+    /**
+     * Variable name
+     */
+    lsaRetransmitIntervalVariable?: string;
+    /**
+     * Set MD5 authentication key
+     */
+    messageDigestKey?: string;
+    /**
+     * Set MD5 message digest key
+     *   - Range: `1`-`255`
+     */
+    messageDigestKeyId?: number;
+    /**
+     * Variable name
+     */
+    messageDigestKeyIdVariable?: string;
+    /**
+     * Variable name
+     */
+    messageDigestKeyVariable?: string;
+    /**
+     * Set interface name
+     */
+    name?: string;
+    /**
+     * Variable name
+     */
+    nameVariable?: string;
+    /**
+     * Set the OSPF network type
+     *   - Choices: `broadcast`, `point-to-point`, `non-broadcast`, `point-to-multipoint`
+     *   - Default value: `broadcast`
+     */
+    networkType?: string;
+    /**
+     * Variable name
+     */
+    networkTypeVariable?: string;
+    /**
+     * Set the interface to advertise its address, but not to actively run OSPF
+     *   - Default value: `false`
+     */
+    passiveInterface?: boolean;
+    /**
+     * Variable name
+     */
+    passiveInterfaceVariable?: string;
+}
+
+export interface ServiceRoutingOspfFeatureAreaRange {
+    /**
+     * Set cost for this range
+     *   - Range: `0`-`16777214`
+     */
+    cost?: number;
+    /**
+     * Variable name
+     */
+    costVariable?: string;
+    /**
+     * IP Address
+     */
+    ipAddress?: string;
+    /**
+     * Variable name
+     */
+    ipAddressVariable?: string;
+    /**
+     * Do not advertise this range
+     *   - Default value: `false`
+     */
+    noAdvertise?: boolean;
+    /**
+     * Variable name
+     */
+    noAdvertiseVariable?: string;
+    /**
+     * Subnet Mask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     */
+    subnetMask?: string;
+    /**
+     * Variable name
+     */
+    subnetMaskVariable?: string;
+}
+
+export interface ServiceRoutingOspfFeatureRedistribute {
+    /**
+     * Enable NAT DIA for redistributed routes
+     *   - Default value: `true`
+     */
+    natDia?: boolean;
+    /**
+     * Variable name
+     */
+    natDiaVariable?: string;
+    /**
+     * Set the protocol
+     *   - Choices: `static`, `connected`, `bgp`, `omp`, `nat`, `eigrp`
+     */
+    protocol?: string;
+    /**
+     * Variable name
+     */
+    protocolVariable?: string;
+    routePolicyId?: string;
+}
+
+export interface ServiceRoutingOspfFeatureRouterLsa {
+    /**
+     * Set how long to advertise maximum metric after router starts up
+     *   - Range: `5`-`86400`
+     */
+    time?: number;
+    /**
+     * Variable name
+     */
+    timeVariable?: string;
+    /**
+     * Set the router LSA advertisement type
+     *   - Choices: `administrative`, `on-startup`
+     */
+    type?: string;
+}
+
+export interface ServiceRoutingOspfv3Ipv4FeatureArea {
+    /**
+     * Always translate type7 LSAs
+     */
+    alwaysTranslate?: boolean;
+    /**
+     * Variable name
+     */
+    alwaysTranslateVariable?: string;
+    /**
+     * Set OSPF area number
+     *   - Range: `0`-`4294967295`
+     */
+    areaNumber?: number;
+    /**
+     * Variable name
+     */
+    areaNumberVariable?: string;
+    /**
+     * stub area type
+     *   - Choices: `stub`
+     */
+    areaType?: string;
+    /**
+     * Set OSPF interface parameters
+     */
+    interfaces?: outputs.ServiceRoutingOspfv3Ipv4FeatureAreaInterface[];
+    /**
+     * Do not inject inter-area routes
+     */
+    noSummary?: boolean;
+    /**
+     * Variable name
+     */
+    noSummaryVariable?: string;
+    /**
+     * Summarize OSPF routes at an area boundary
+     */
+    ranges?: outputs.ServiceRoutingOspfv3Ipv4FeatureAreaRange[];
+}
+
+export interface ServiceRoutingOspfv3Ipv4FeatureAreaInterface {
+    /**
+     * Set OSPF interface authentication IPSEC key
+     */
+    authenticationKey?: string;
+    /**
+     * Variable name
+     */
+    authenticationKeyVariable?: string;
+    /**
+     * Set OSPF interface authentication IPSec SPI, range 256..4294967295
+     *   - Range: `256`-`4294967295`
+     */
+    authenticationSpi?: number;
+    /**
+     * Variable name
+     */
+    authenticationSpiVariable?: string;
+    /**
+     * No Authentication by default
+     *   - Choices: `no-auth`
+     */
+    authenticationType?: string;
+    /**
+     * Set cost of OSPF interface
+     *   - Range: `1`-`65535`
+     */
+    cost?: number;
+    /**
+     * Variable name
+     */
+    costVariable?: string;
+    /**
+     * Set interval after which neighbor is declared to be down
+     *   - Range: `1`-`65535`
+     *   - Default value: `40`
+     */
+    deadInterval?: number;
+    /**
+     * Variable name
+     */
+    deadIntervalVariable?: string;
+    /**
+     * Set interval between OSPF hello packets
+     *   - Range: `1`-`65535`
+     *   - Default value: `10`
+     */
+    helloInterval?: number;
+    /**
+     * Variable name
+     */
+    helloIntervalVariable?: string;
+    /**
+     * Set time between retransmitting LSAs
+     *   - Range: `1`-`65535`
+     *   - Default value: `5`
+     */
+    lsaRetransmitInterval?: number;
+    /**
+     * Variable name
+     */
+    lsaRetransmitIntervalVariable?: string;
+    /**
+     * Set interface name
+     */
+    name?: string;
+    /**
+     * Variable name
+     */
+    nameVariable?: string;
+    /**
+     * Set the OSPF network type
+     *   - Choices: `broadcast`, `point-to-point`, `non-broadcast`, `point-to-multipoint`
+     */
+    networkType?: string;
+    /**
+     * Variable name
+     */
+    networkTypeVariable?: string;
+    /**
+     * Set the interface to advertise its address, but not to actively run OSPF
+     *   - Default value: `false`
+     */
+    passiveInterface?: boolean;
+    /**
+     * Variable name
+     */
+    passiveInterfaceVariable?: string;
+}
+
+export interface ServiceRoutingOspfv3Ipv4FeatureAreaRange {
+    /**
+     * Set cost for this range
+     *   - Range: `0`-`16777214`
+     */
+    cost?: number;
+    /**
+     * Variable name
+     */
+    costVariable?: string;
+    ipAddress?: string;
+    /**
+     * Variable name
+     */
+    ipAddressVariable?: string;
+    /**
+     * Do not advertise this range
+     *   - Default value: `false`
+     */
+    noAdvertise?: boolean;
+    /**
+     * Variable name
+     */
+    noAdvertiseVariable?: string;
+    /**
+     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     */
+    subnetMask?: string;
+    /**
+     * Variable name
+     */
+    subnetMaskVariable?: string;
+}
+
+export interface ServiceRoutingOspfv3Ipv4FeatureRedistribute {
+    /**
+     * Enable NAT DIA for redistributed routes
+     *   - Default value: `true`
+     */
+    natDia?: boolean;
+    /**
+     * Variable name
+     */
+    natDiaVariable?: string;
+    /**
+     * Set the protocol
+     *   - Choices: `connected`, `static`, `omp`, `nat-route`, `bgp`, `eigrp`
+     */
+    protocol?: string;
+    /**
+     * Variable name
+     */
+    protocolVariable?: string;
+    routePolicyId?: string;
+}
+
+export interface ServiceRoutingOspfv3Ipv6FeatureArea {
+    /**
+     * Always translate type7 LSAs
+     */
+    alwaysTranslate?: boolean;
+    /**
+     * Variable name
+     */
+    alwaysTranslateVariable?: string;
+    /**
+     * Set OSPF area number
+     *   - Range: `0`-`4294967295`
+     */
+    areaNumber?: number;
+    /**
+     * Variable name
+     */
+    areaNumberVariable?: string;
+    /**
+     * stub area type
+     *   - Choices: `stub`
+     */
+    areaType?: string;
+    /**
+     * Set OSPF interface parameters
+     */
+    interfaces?: outputs.ServiceRoutingOspfv3Ipv6FeatureAreaInterface[];
+    /**
+     * Do not inject inter-area routes
+     */
+    noSummary?: boolean;
+    /**
+     * Variable name
+     */
+    noSummaryVariable?: string;
+    /**
+     * Summarize OSPF routes at an area boundary
+     */
+    ranges?: outputs.ServiceRoutingOspfv3Ipv6FeatureAreaRange[];
+}
+
+export interface ServiceRoutingOspfv3Ipv6FeatureAreaInterface {
+    /**
+     * Set OSPF interface authentication IPSEC key
+     */
+    authenticationKey?: string;
+    /**
+     * Variable name
+     */
+    authenticationKeyVariable?: string;
+    /**
+     * Set OSPF interface authentication IPSec SPI, range 256..4294967295
+     *   - Range: `256`-`4294967295`
+     */
+    authenticationSpi?: number;
+    /**
+     * Variable name
+     */
+    authenticationSpiVariable?: string;
+    /**
+     * No Authentication by default
+     *   - Choices: `no-auth`
+     */
+    authenticationType?: string;
+    /**
+     * Set cost of OSPF interface
+     *   - Range: `1`-`65535`
+     */
+    cost?: number;
+    /**
+     * Variable name
+     */
+    costVariable?: string;
+    /**
+     * Set interval after which neighbor is declared to be down
+     *   - Range: `1`-`65535`
+     *   - Default value: `40`
+     */
+    deadInterval?: number;
+    /**
+     * Variable name
+     */
+    deadIntervalVariable?: string;
+    /**
+     * Set interval between OSPF hello packets
+     *   - Range: `1`-`65535`
+     *   - Default value: `10`
+     */
+    helloInterval?: number;
+    /**
+     * Variable name
+     */
+    helloIntervalVariable?: string;
+    /**
+     * Set time between retransmitting LSAs
+     *   - Range: `1`-`65535`
+     *   - Default value: `5`
+     */
+    lsaRetransmitInterval?: number;
+    /**
+     * Variable name
+     */
+    lsaRetransmitIntervalVariable?: string;
+    /**
+     * Set interface name
+     */
+    name?: string;
+    /**
+     * Variable name
+     */
+    nameVariable?: string;
+    /**
+     * Set the OSPF network type
+     *   - Choices: `broadcast`, `point-to-point`, `non-broadcast`, `point-to-multipoint`
+     */
+    networkType?: string;
+    /**
+     * Variable name
+     */
+    networkTypeVariable?: string;
+    /**
+     * Set the interface to advertise its address, but not to actively run OSPF
+     *   - Default value: `false`
+     */
+    passiveInterface?: boolean;
+    /**
+     * Variable name
+     */
+    passiveInterfaceVariable?: string;
+}
+
+export interface ServiceRoutingOspfv3Ipv6FeatureAreaRange {
+    /**
+     * Set cost for this range
+     *   - Range: `0`-`16777214`
+     */
+    cost?: number;
+    /**
+     * Variable name
+     */
+    costVariable?: string;
+    /**
+     * Do not advertise this range
+     *   - Default value: `false`
+     */
+    noAdvertise?: boolean;
+    /**
+     * Variable name
+     */
+    noAdvertiseVariable?: string;
+    /**
+     * IPv6 prefix,for example 2001::/64
+     */
+    prefix?: string;
+    /**
+     * Variable name
+     */
+    prefixVariable?: string;
+}
+
+export interface ServiceRoutingOspfv3Ipv6FeatureRedistribute {
+    /**
+     * Set the protocol
+     *   - Choices: `connected`, `static`, `omp`, `bgp`, `eigrp`
+     */
+    protocol?: string;
+    /**
+     * Variable name
+     */
+    protocolVariable?: string;
+    routePolicyId?: string;
+}
+
+export interface ServiceSwitchportFeatureInterface {
+    /**
+     * Set uni or bi directional authorization mode
+     *   - Choices: `both`, `in`
+     */
+    controlDirection?: string;
+    /**
+     * Variable name
+     */
+    controlDirectionVariable?: string;
+    /**
+     * Set Critical VLAN
+     *   - Range: `1`-`4094`
+     */
+    criticalVlan?: number;
+    /**
+     * Variable name
+     */
+    criticalVlanVariable?: string;
+    /**
+     * Duplex mode
+     *   - Choices: `full`, `half`
+     */
+    duplex?: string;
+    /**
+     * Variable name
+     */
+    duplexVariable?: string;
+    /**
+     * Enable Periodic Reauthentication
+     */
+    enablePeriodicReauth?: boolean;
+    /**
+     * Variable name
+     */
+    enablePeriodicReauthVariable?: string;
+    /**
+     * Enable Critical Voice VLAN
+     */
+    enableVoice?: boolean;
+    /**
+     * Variable name
+     */
+    enableVoiceVariable?: string;
+    /**
+     * Set vlan to drop non-802.1x enabled clients into if client is not in MAB list
+     *   - Range: `1`-`4094`
+     */
+    guestVlan?: number;
+    /**
+     * Variable name
+     */
+    guestVlanVariable?: string;
+    /**
+     * Set host mode
+     *   - Choices: `single-host`, `multi-auth`, `multi-host`, `multi-domain`
+     */
+    hostMode?: string;
+    /**
+     * Variable name
+     */
+    hostModeVariable?: string;
+    /**
+     * Periodic Reauthentication Inactivity Timeout (in seconds)
+     *   - Range: `1`-`65535`
+     */
+    inactivity?: number;
+    /**
+     * Variable name
+     */
+    inactivityVariable?: string;
+    /**
+     * Set Interface name
+     */
+    interfaceName?: string;
+    /**
+     * Variable name
+     */
+    interfaceNameVariable?: string;
+    /**
+     * MAC Authentication Bypass
+     */
+    macAuthenticationBypass?: boolean;
+    /**
+     * Variable name
+     */
+    macAuthenticationBypassVariable?: string;
+    /**
+     * Set type of switch port: access/trunk
+     *   - Choices: `access`, `trunk`
+     */
+    mode?: string;
+    /**
+     * Set 802.1x Interface Pae Type
+     */
+    paeEnable?: boolean;
+    /**
+     * Variable name
+     */
+    paeEnableVariable?: string;
+    /**
+     * Set Port-Control Mode
+     *   - Choices: `auto`, `force-unauthorized`, `force-authorized`
+     */
+    portControl?: string;
+    /**
+     * Variable name
+     */
+    portControlVariable?: string;
+    /**
+     * Periodic Reauthentication Interval (in seconds)
+     *   - Range: `1`-`1073741823`
+     *   - Default value: `3600`
+     */
+    reauthentication?: number;
+    /**
+     * Variable name
+     */
+    reauthenticationVariable?: string;
+    /**
+     * Set Restricted VLAN ID
+     *   - Range: `1`-`4094`
+     */
+    restrictedVlan?: number;
+    /**
+     * Variable name
+     */
+    restrictedVlanVariable?: string;
+    /**
+     * Administrative state
+     *   - Default value: `true`
+     */
+    shutdown?: boolean;
+    /**
+     * Variable name
+     */
+    shutdownVariable?: string;
+    /**
+     * Set interface speed
+     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
+     */
+    speed?: string;
+    /**
+     * Variable name
+     */
+    speedVariable?: string;
+    /**
+     * Set VLAN identifier associated with bridging domain
+     *   - Range: `1`-`4094`
+     */
+    switchportAccessVlan?: number;
+    /**
+     * Variable name
+     */
+    switchportAccessVlanVariable?: string;
+    /**
+     * Configure VLAN IDs used with the trunk
+     */
+    switchportTrunkAllowedVlans?: string;
+    /**
+     * Variable name
+     */
+    switchportTrunkAllowedVlansVariable?: string;
+    /**
+     * Configure VLAN ID used for native VLAN
+     *   - Range: `1`-`4094`
+     */
+    switchportTrunkNativeVlan?: number;
+    /**
+     * Variable name
+     */
+    switchportTrunkNativeVlanVariable?: string;
+    /**
+     * Configure Voice Vlan
+     *   - Range: `1`-`4094`
+     */
+    voiceVlan?: number;
+    /**
+     * Variable name
+     */
+    voiceVlanVariable?: string;
+}
+
+export interface ServiceSwitchportFeatureStaticMacAddress {
+    /**
+     * Interface name: GigabitEthernet0/<>/<>
+     */
+    interfaceName?: string;
+    /**
+     * Variable name
+     */
+    interfaceNameVariable?: string;
+    /**
+     * Set MAC address in xxxx.xxxx.xxxx format
+     */
+    macAddress?: string;
+    /**
+     * Variable name
+     */
+    macAddressVariable?: string;
+    /**
+     * Configure VLAN ID used with the mac and interface
+     *   - Range: `1`-`4094`
+     */
+    vlanId?: number;
+    /**
+     * Variable name
+     */
+    vlanIdVariable?: string;
+}
+
+export interface ServiceTrackerGroupFeatureTrackerElement {
+    trackerId?: string;
 }
 
 export interface SiteListPolicyObjectEntry {
@@ -20076,7 +24506,7 @@ export interface SwitchportFeatureTemplateStaticMacAddress {
     vlanVariable?: string;
 }
 
-export interface SystemAaaProfileParcelAccountingRule {
+export interface SystemAaaFeatureAccountingRule {
     /**
      * Use Server-group
      */
@@ -20106,7 +24536,7 @@ export interface SystemAaaProfileParcelAccountingRule {
     startStopVariable?: string;
 }
 
-export interface SystemAaaProfileParcelAuthorizationRule {
+export interface SystemAaaFeatureAuthorizationRule {
     /**
      * Use Server-group
      */
@@ -20132,7 +24562,7 @@ export interface SystemAaaProfileParcelAuthorizationRule {
     ruleId?: string;
 }
 
-export interface SystemAaaProfileParcelRadiusGroup {
+export interface SystemAaaFeatureRadiusGroup {
     /**
      * Set Radius server Group Name
      */
@@ -20140,7 +24570,7 @@ export interface SystemAaaProfileParcelRadiusGroup {
     /**
      * Configure the Radius server
      */
-    servers?: outputs.SystemAaaProfileParcelRadiusGroupServer[];
+    servers?: outputs.SystemAaaFeatureRadiusGroupServer[];
     /**
      * Set interface to use to reach Radius server
      */
@@ -20157,7 +24587,7 @@ export interface SystemAaaProfileParcelRadiusGroup {
     vpn?: number;
 }
 
-export interface SystemAaaProfileParcelRadiusGroupServer {
+export interface SystemAaaFeatureRadiusGroupServer {
     /**
      * Set Accounting port to use to connect to Radius server
      *   - Range: `1`-`65534`
@@ -20231,7 +24661,7 @@ export interface SystemAaaProfileParcelRadiusGroupServer {
     timeoutVariable?: string;
 }
 
-export interface SystemAaaProfileParcelTacacsGroup {
+export interface SystemAaaFeatureTacacsGroup {
     /**
      * Set TACACS server Group Name
      */
@@ -20239,7 +24669,7 @@ export interface SystemAaaProfileParcelTacacsGroup {
     /**
      * Configure the TACACS server
      */
-    servers?: outputs.SystemAaaProfileParcelTacacsGroupServer[];
+    servers?: outputs.SystemAaaFeatureTacacsGroupServer[];
     /**
      * Set interface to use to reach TACACS server
      */
@@ -20256,7 +24686,7 @@ export interface SystemAaaProfileParcelTacacsGroup {
     vpn?: number;
 }
 
-export interface SystemAaaProfileParcelTacacsGroupServer {
+export interface SystemAaaFeatureTacacsGroupServer {
     /**
      * Set IP address of TACACS server
      */
@@ -20300,7 +24730,7 @@ export interface SystemAaaProfileParcelTacacsGroupServer {
     timeoutVariable?: string;
 }
 
-export interface SystemAaaProfileParcelUser {
+export interface SystemAaaFeatureUser {
     /**
      * Set the username
      */
@@ -20330,10 +24760,10 @@ export interface SystemAaaProfileParcelUser {
     /**
      * List of RSA public-keys per user
      */
-    publicKeys?: outputs.SystemAaaProfileParcelUserPublicKey[];
+    publicKeys?: outputs.SystemAaaFeatureUserPublicKey[];
 }
 
-export interface SystemAaaProfileParcelUserPublicKey {
+export interface SystemAaaFeatureUserPublicKey {
     /**
      * Set the RSA key string
      */
@@ -20348,7 +24778,7 @@ export interface SystemAaaProfileParcelUserPublicKey {
     keyTypeVariable?: string;
 }
 
-export interface SystemBasicProfileParcelAffinityPerVrf {
+export interface SystemBasicFeatureAffinityPerVrf {
     /**
      * Affinity Group Number
      *   - Range: `1`-`63`
@@ -20368,7 +24798,7 @@ export interface SystemBasicProfileParcelAffinityPerVrf {
     vrfRangeVariable?: string;
 }
 
-export interface SystemBasicProfileParcelGpsSmsMobileNumber {
+export interface SystemBasicFeatureGpsSmsMobileNumber {
     /**
      * Mobile number, ex: 1231234414
      */
@@ -20379,7 +24809,7 @@ export interface SystemBasicProfileParcelGpsSmsMobileNumber {
     numberVariable?: string;
 }
 
-export interface SystemBfdProfileParcelColor {
+export interface SystemBfdFeatureColor {
     /**
      * Color that identifies the WAN transport tunnel
      *   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
@@ -20430,7 +24860,94 @@ export interface SystemBfdProfileParcelColor {
     pmtuDiscoveryVariable?: string;
 }
 
-export interface SystemLoggingProfileParcelIpv4Server {
+export interface SystemIpv4DeviceAccessFeatureSequence {
+    /**
+     * Base Action
+     *   - Choices: `drop`, `accept`
+     */
+    baseAction?: string;
+    destinationDataPrefixListId?: string;
+    /**
+     * Variable name
+     */
+    destinationIpPrefixListVariable?: string;
+    /**
+     * Destination Data IP Prefix List
+     */
+    destinationIpPrefixLists?: string[];
+    /**
+     * device access protocol
+     */
+    deviceAccessPort?: number;
+    /**
+     * Sequence Id
+     *   - Range: `1`-`65536`
+     */
+    id?: number;
+    /**
+     * Sequence Name
+     */
+    name?: string;
+    sourceDataPrefixListId?: string;
+    /**
+     * Variable name
+     */
+    sourceIpPrefixListVariable?: string;
+    /**
+     * Source Data IP Prefix List
+     */
+    sourceIpPrefixLists?: string[];
+    /**
+     * Source Port List
+     */
+    sourcePorts?: number[];
+}
+
+export interface SystemIpv6DeviceAccessFeatureSequence {
+    /**
+     * Base Action
+     *   - Choices: `drop`, `accept`
+     *   - Default value: `accept`
+     */
+    baseAction?: string;
+    destinationDataPrefixListId?: string;
+    /**
+     * Variable name
+     */
+    destinationIpPrefixListVariable?: string;
+    /**
+     * Destination Data IP Prefix List
+     */
+    destinationIpPrefixLists?: string[];
+    /**
+     * device access protocol
+     */
+    deviceAccessPort?: number;
+    /**
+     * Sequence Id
+     *   - Range: `1`-`65536`
+     */
+    id?: number;
+    /**
+     * Sequence Name
+     */
+    name?: string;
+    sourceDataPrefixListId?: string;
+    /**
+     * Variable name
+     */
+    sourceIpPrefixListVariable?: string;
+    /**
+     * Source Data IP Prefix List
+     */
+    sourceIpPrefixLists?: string[];
+    /**
+     * Source Port List
+     */
+    sourcePorts?: number[];
+}
+
+export interface SystemLoggingFeatureIpv4Server {
     /**
      * Set hostname or IPv4 address of server
      */
@@ -20495,7 +25012,7 @@ export interface SystemLoggingProfileParcelIpv4Server {
     vpnVariable?: string;
 }
 
-export interface SystemLoggingProfileParcelIpv6Server {
+export interface SystemLoggingFeatureIpv6Server {
     /**
      * Set IPv6 hostname or IPv6 address of server
      */
@@ -20560,7 +25077,7 @@ export interface SystemLoggingProfileParcelIpv6Server {
     vpnVariable?: string;
 }
 
-export interface SystemLoggingProfileParcelTlsProfile {
+export interface SystemLoggingFeatureTlsProfile {
     /**
      * Syslog secure server ciphersuites
      */
@@ -20589,7 +25106,7 @@ export interface SystemLoggingProfileParcelTlsProfile {
     tlsVersionVariable?: string;
 }
 
-export interface SystemNtpProfileParcelAuthenticationKey {
+export interface SystemNtpFeatureAuthenticationKey {
     /**
      * MD5 authentication key ID
      *   - Range: `1`-`65535`
@@ -20609,7 +25126,7 @@ export interface SystemNtpProfileParcelAuthenticationKey {
     md5ValueVariable?: string;
 }
 
-export interface SystemNtpProfileParcelServer {
+export interface SystemNtpFeatureServer {
     /**
      * Set authentication key for the server
      *   - Range: `1`-`65535`
@@ -20666,7 +25183,7 @@ export interface SystemNtpProfileParcelServer {
     vpnVariable?: string;
 }
 
-export interface SystemSecurityProfileParcelKey {
+export interface SystemSecurityFeatureKey {
     /**
      * Configure Accept AO Mismatch
      *   - Default value: `false`
@@ -20794,7 +25311,7 @@ export interface SystemSecurityProfileParcelKey {
     sendLifeTimeStartEpoch?: number;
 }
 
-export interface SystemSecurityProfileParcelKeychain {
+export interface SystemSecurityFeatureKeychain {
     /**
      * Specify the name of the Keychain
      */
@@ -20806,7 +25323,7 @@ export interface SystemSecurityProfileParcelKeychain {
     keyId?: number;
 }
 
-export interface SystemSnmpProfileParcelCommunity {
+export interface SystemSnmpFeatureCommunity {
     /**
      * Configure access permissions
      *   - Choices: `read-only`, `read-write`
@@ -20834,7 +25351,7 @@ export interface SystemSnmpProfileParcelCommunity {
     viewVariable?: string;
 }
 
-export interface SystemSnmpProfileParcelGroup {
+export interface SystemSnmpFeatureGroup {
     /**
      * Name of the SNMP group
      */
@@ -20854,7 +25371,7 @@ export interface SystemSnmpProfileParcelGroup {
     viewVariable?: string;
 }
 
-export interface SystemSnmpProfileParcelTrapTargetServer {
+export interface SystemSnmpFeatureTrapTargetServer {
     /**
      * Set IPv4/IPv6 address of SNMP server
      */
@@ -20903,7 +25420,7 @@ export interface SystemSnmpProfileParcelTrapTargetServer {
     vpnIdVariable?: string;
 }
 
-export interface SystemSnmpProfileParcelUser {
+export interface SystemSnmpFeatureUser {
     /**
      * Specify authentication protocol password
      */
@@ -20952,7 +25469,7 @@ export interface SystemSnmpProfileParcelUser {
     privacyProtocolVariable?: string;
 }
 
-export interface SystemSnmpProfileParcelView {
+export interface SystemSnmpFeatureView {
     /**
      * Set the name of the SNMP view
      */
@@ -20960,10 +25477,10 @@ export interface SystemSnmpProfileParcelView {
     /**
      * Configure SNMP object identifier
      */
-    oids?: outputs.SystemSnmpProfileParcelViewOid[];
+    oids?: outputs.SystemSnmpFeatureViewOid[];
 }
 
-export interface SystemSnmpProfileParcelViewOid {
+export interface SystemSnmpFeatureViewOid {
     /**
      * Exclude the OID
      *   - Default value: `false`
@@ -21127,9 +25644,13 @@ export interface TrafficDataPolicyDefinitionSequenceActionEntry {
     lossCorrectionFec?: string;
     /**
      * Loss correction FEC threshold
-     *   - Range: `1`-`5`
      */
-    lossCorrectionFecThreshold?: number;
+    lossCorrectionFecThreshold?: string;
+    /**
+     * Loss correction packet duplication
+     *   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
+     */
+    lossCorrectionPacketDuplication?: string;
     /**
      * List of NAT parameters
      */
@@ -21176,7 +25697,7 @@ export interface TrafficDataPolicyDefinitionSequenceActionEntry {
     tcpOptimization?: boolean;
     /**
      * Type of action entry
-     *   - Choices: `cflowd`, `count`, `dreOptimization`, `fallbackToRouting`, `log`, `lossProtect`, `lossProtectFec`, `nat`, `redirectDns`, `serviceNodeGroup`, `set`, `sig`, `tcpOptimization`
+     *   - Choices: `cflowd`, `count`, `dreOptimization`, `fallbackToRouting`, `log`, `lossProtect`, `lossProtectPktDup`, `lossProtectFec`, `nat`, `redirectDns`, `serviceNodeGroup`, `set`, `sig`, `tcpOptimization`
      */
     type: string;
 }
@@ -21365,6 +25886,10 @@ export interface TrafficDataPolicyDefinitionSequenceMatchEntry {
      */
     dscp?: number;
     /**
+     * ICMP Message
+     */
+    icmpMessage?: string;
+    /**
      * Packet length
      *   - Range: `0`-`65535`
      */
@@ -21406,53 +25931,18 @@ export interface TrafficDataPolicyDefinitionSequenceMatchEntry {
     trafficTo?: string;
     /**
      * Type of match entry
-     *   - Choices: `appList`, `dnsAppList`, `dns`, `dscp`, `packetLength`, `plp`, `protocol`, `sourceDataPrefixList`, `sourceIp`, `sourcePort`, `destinationDataPrefixList`, `destinationIp`, `destinationRegion`, `destinationPort`, `tcp`, `trafficTo`
+     *   - Choices: `appList`, `dnsAppList`, `dns`, `dscp`, `packetLength`, `plp`, `protocol`, `sourceDataPrefixList`, `sourceIp`, `sourcePort`, `destinationDataPrefixList`, `destinationIp`, `destinationRegion`, `destinationPort`, `tcp`, `trafficTo`, `icmpMessage`
      */
     type: string;
 }
 
-export interface TransportManagementVpnInterfaceEthernetProfileParcelArpEntry {
-    /**
-     * IPV4 Address
-     */
-    ipAddress?: string;
-    /**
-     * Variable name
-     */
-    ipAddressVariable?: string;
-    /**
-     * MAC Address
-     */
-    macAddress?: string;
-    /**
-     * Variable name
-     */
-    macAddressVariable?: string;
+export interface TransportIpv6TrackerGroupFeatureTrackerElement {
+    trackerId?: string;
 }
 
-export interface TransportManagementVpnInterfaceEthernetProfileParcelIpv4SecondaryAddress {
+export interface TransportManagementVpnFeatureIpv4StaticRoute {
     /**
-     * IpV4 Address
-     */
-    address?: string;
-    /**
-     * Variable name
-     */
-    addressVariable?: string;
-    /**
-     * Subnet Mask
-     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
-     */
-    subnetMask?: string;
-    /**
-     * Variable name
-     */
-    subnetMaskVariable?: string;
-}
-
-export interface TransportManagementVpnProfileParcelIpv4StaticRoute {
-    /**
-     * Administrative distance
+     * Administrative distance, Attribute conditional on `gateway` being equal to `null0`
      *   - Range: `1`-`255`
      *   - Default value: `1`
      */
@@ -21468,10 +25958,6 @@ export interface TransportManagementVpnProfileParcelIpv4StaticRoute {
      */
     gateway?: string;
     /**
-     * IPv4 Route Gateway Next Hop
-     */
-    ipv4RouteGatewayNextHos?: outputs.TransportManagementVpnProfileParcelIpv4StaticRouteIpv4RouteGatewayNextHo[];
-    /**
      * IP Address
      */
     networkAddress?: string;
@@ -21479,6 +25965,10 @@ export interface TransportManagementVpnProfileParcelIpv4StaticRoute {
      * Variable name
      */
     networkAddressVariable?: string;
+    /**
+     * IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
+     */
+    nextHops?: outputs.TransportManagementVpnFeatureIpv4StaticRouteNextHop[];
     /**
      * Subnet Mask
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
@@ -21490,7 +25980,7 @@ export interface TransportManagementVpnProfileParcelIpv4StaticRoute {
     subnetMaskVariable?: string;
 }
 
-export interface TransportManagementVpnProfileParcelIpv4StaticRouteIpv4RouteGatewayNextHo {
+export interface TransportManagementVpnFeatureIpv4StaticRouteNextHop {
     /**
      * Address
      */
@@ -21511,7 +26001,7 @@ export interface TransportManagementVpnProfileParcelIpv4StaticRouteIpv4RouteGate
     administrativeDistanceVariable?: string;
 }
 
-export interface TransportManagementVpnProfileParcelIpv6StaticRoute {
+export interface TransportManagementVpnFeatureIpv6StaticRoute {
     /**
      * IPv6 Nat
      *   - Choices: `NAT64`, `NAT66`
@@ -21524,7 +26014,7 @@ export interface TransportManagementVpnProfileParcelIpv6StaticRoute {
     /**
      * IPv6 Route Gateway Next Hop
      */
-    nextHops?: outputs.TransportManagementVpnProfileParcelIpv6StaticRouteNextHop[];
+    nextHops?: outputs.TransportManagementVpnFeatureIpv6StaticRouteNextHop[];
     /**
      * IPv6 Route Gateway Next Hop
      */
@@ -21539,7 +26029,7 @@ export interface TransportManagementVpnProfileParcelIpv6StaticRoute {
     prefixVariable?: string;
 }
 
-export interface TransportManagementVpnProfileParcelIpv6StaticRouteNextHop {
+export interface TransportManagementVpnFeatureIpv6StaticRouteNextHop {
     /**
      * Address
      */
@@ -21559,7 +26049,7 @@ export interface TransportManagementVpnProfileParcelIpv6StaticRouteNextHop {
     administrativeDistanceVariable?: string;
 }
 
-export interface TransportManagementVpnProfileParcelNewHostMapping {
+export interface TransportManagementVpnFeatureNewHostMapping {
     /**
      * Hostname
      */
@@ -21578,7 +26068,177 @@ export interface TransportManagementVpnProfileParcelNewHostMapping {
     listOfIpAddressesVariable?: string;
 }
 
-export interface TransportRoutingBgpProfileParcelIpv4AggregateAddress {
+export interface TransportManagementVpnInterfaceEthernetFeatureArpEntry {
+    /**
+     * IPV4 Address
+     */
+    ipAddress?: string;
+    /**
+     * Variable name
+     */
+    ipAddressVariable?: string;
+    /**
+     * MAC Address
+     */
+    macAddress?: string;
+    /**
+     * Variable name
+     */
+    macAddressVariable?: string;
+}
+
+export interface TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddress {
+    /**
+     * IpV4 Address
+     */
+    address?: string;
+    /**
+     * Variable name
+     */
+    addressVariable?: string;
+    /**
+     * Subnet Mask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     */
+    subnetMask?: string;
+    /**
+     * Variable name
+     */
+    subnetMaskVariable?: string;
+}
+
+export interface TransportRoutePolicyFeatureSequence {
+    /**
+     * Define list of actions
+     */
+    actions?: outputs.TransportRoutePolicyFeatureSequenceAction[];
+    /**
+     * Base Action
+     *   - Choices: `reject`, `accept`
+     *   - Default value: `reject`
+     */
+    baseAction?: string;
+    /**
+     * Sequence Id
+     *   - Range: `1`-`65536`
+     */
+    id?: number;
+    /**
+     * Define match conditions
+     */
+    matchEntries?: outputs.TransportRoutePolicyFeatureSequenceMatchEntry[];
+    /**
+     * Sequence Name
+     */
+    name?: string;
+    /**
+     * protocol such as IPV4, IPV6, or BOTH
+     *   - Choices: `IPV4`, `IPV6`, `BOTH`
+     *   - Default value: `IPV4`
+     */
+    protocol?: string;
+}
+
+export interface TransportRoutePolicyFeatureSequenceAction {
+    asPathPrepends?: number[];
+    communities?: string[];
+    /**
+     * - Default value: `false`
+     */
+    communityAdditive?: boolean;
+    /**
+     * Variable name
+     */
+    communityVariable?: string;
+    /**
+     * Set Ipv4 Next Hop
+     */
+    ipv4NextHop?: string;
+    /**
+     * Set Ipv6 Next Hop
+     */
+    ipv6NextHop?: string;
+    /**
+     * Set Local Preference
+     *   - Range: `0`-`4294967295`
+     */
+    localPreference?: number;
+    /**
+     * Set Metric
+     *   - Range: `0`-`4294967295`
+     */
+    metric?: number;
+    /**
+     * Set Metric Type
+     *   - Choices: `type1`, `type2`
+     */
+    metricType?: string;
+    /**
+     * Set OMP Tag
+     *   - Range: `0`-`4294967295`
+     */
+    ompTag?: number;
+    /**
+     * Set Origin
+     *   - Choices: `EGP`, `IGP`, `Incomplete`
+     */
+    origin?: string;
+    /**
+     * Set OSPF Tag
+     *   - Range: `0`-`4294967295`
+     */
+    ospfTag?: number;
+    /**
+     * Set Weight
+     *   - Range: `0`-`65535`
+     */
+    weight?: number;
+}
+
+export interface TransportRoutePolicyFeatureSequenceMatchEntry {
+    asPathListId?: string;
+    /**
+     * BGP Local Preference
+     *   - Range: `0`-`4294967295`
+     */
+    bgpLocalPreference?: number;
+    expandedCommunityListId?: string;
+    extendedCommunityListId?: string;
+    ipv4AddressPrefixListId?: string;
+    ipv4NextHopPrefixListId?: string;
+    ipv6AddressPrefixListId?: string;
+    ipv6NextHopPrefixListId?: string;
+    /**
+     * Select Metric
+     *   - Range: `0`-`4294967295`
+     */
+    metric?: number;
+    /**
+     * Select OMP Tag
+     *   - Range: `0`-`4294967295`
+     */
+    ompTag?: number;
+    /**
+     * Select OSPF Tag
+     *   - Range: `0`-`4294967295`
+     */
+    ospfTag?: number;
+    /**
+     * Select a condition such as OR, AND or EXACT
+     *   - Choices: `OR`, `AND`, `EXACT`
+     */
+    standardCommunityListCriteria?: string;
+    /**
+     * Select a standard community list
+     */
+    standardCommunityLists?: outputs.TransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityList[];
+}
+
+export interface TransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityList {
+    id?: string;
+}
+
+export interface TransportRoutingBgpFeatureIpv4AggregateAddress {
     /**
      * Set AS set path information
      *   - Default value: `false`
@@ -21612,7 +26272,7 @@ export interface TransportRoutingBgpProfileParcelIpv4AggregateAddress {
     summaryOnlyVariable?: string;
 }
 
-export interface TransportRoutingBgpProfileParcelIpv4Neighbor {
+export interface TransportRoutingBgpFeatureIpv4Neighbor {
     /**
      * Set neighbor address
      */
@@ -21620,7 +26280,7 @@ export interface TransportRoutingBgpProfileParcelIpv4Neighbor {
     /**
      * Set BGP address family
      */
-    addressFamilies?: outputs.TransportRoutingBgpProfileParcelIpv4NeighborAddressFamily[];
+    addressFamilies?: outputs.TransportRoutingBgpFeatureIpv4NeighborAddressFamily[];
     /**
      * Variable name
      */
@@ -21765,7 +26425,7 @@ export interface TransportRoutingBgpProfileParcelIpv4Neighbor {
     updateSourceInterfaceVariable?: string;
 }
 
-export interface TransportRoutingBgpProfileParcelIpv4NeighborAddressFamily {
+export interface TransportRoutingBgpFeatureIpv4NeighborAddressFamily {
     /**
      * Set IPv4 unicast address family
      *   - Choices: `ipv4-unicast`, `vpnv4-unicast`, `vpnv6-unicast`
@@ -21798,6 +26458,7 @@ export interface TransportRoutingBgpProfileParcelIpv4NeighborAddressFamily {
     /**
      * Set threshold(1 to 100) at which to generate a warning message
      *   - Range: `1`-`100`
+     *   - Default value: `75`
      */
     threshold?: number;
     /**
@@ -21806,7 +26467,7 @@ export interface TransportRoutingBgpProfileParcelIpv4NeighborAddressFamily {
     thresholdVariable?: string;
 }
 
-export interface TransportRoutingBgpProfileParcelIpv4Network {
+export interface TransportRoutingBgpFeatureIpv4Network {
     networkAddress?: string;
     /**
      * Variable name
@@ -21822,7 +26483,7 @@ export interface TransportRoutingBgpProfileParcelIpv4Network {
     subnetMaskVariable?: string;
 }
 
-export interface TransportRoutingBgpProfileParcelIpv4Redistribute {
+export interface TransportRoutingBgpFeatureIpv4Redistribute {
     /**
      * Set the protocol to redistribute routes from
      *   - Choices: `static`, `connected`, `ospf`, `ospfv3`, `nat`
@@ -21835,7 +26496,7 @@ export interface TransportRoutingBgpProfileParcelIpv4Redistribute {
     routePolicyId?: string;
 }
 
-export interface TransportRoutingBgpProfileParcelIpv6AggregateAddress {
+export interface TransportRoutingBgpFeatureIpv6AggregateAddress {
     /**
      * Configure the IPv6 prefixes to aggregate
      */
@@ -21864,7 +26525,7 @@ export interface TransportRoutingBgpProfileParcelIpv6AggregateAddress {
     summaryOnlyVariable?: string;
 }
 
-export interface TransportRoutingBgpProfileParcelIpv6Neighbor {
+export interface TransportRoutingBgpFeatureIpv6Neighbor {
     /**
      * Set IPv6 neighbor address
      */
@@ -21872,7 +26533,7 @@ export interface TransportRoutingBgpProfileParcelIpv6Neighbor {
     /**
      * Set IPv6 BGP address family
      */
-    addressFamilies?: outputs.TransportRoutingBgpProfileParcelIpv6NeighborAddressFamily[];
+    addressFamilies?: outputs.TransportRoutingBgpFeatureIpv6NeighborAddressFamily[];
     /**
      * Variable name
      */
@@ -22003,7 +26664,7 @@ export interface TransportRoutingBgpProfileParcelIpv6Neighbor {
     updateSourceInterfaceVariable?: string;
 }
 
-export interface TransportRoutingBgpProfileParcelIpv6NeighborAddressFamily {
+export interface TransportRoutingBgpFeatureIpv6NeighborAddressFamily {
     /**
      * Set IPv6 unicast address family
      *   - Choices: `ipv6-unicast`, `vpnv6-unicast`
@@ -22036,6 +26697,7 @@ export interface TransportRoutingBgpProfileParcelIpv6NeighborAddressFamily {
     /**
      * Set threshold(1 to 100) at which to generate a warning message
      *   - Range: `1`-`100`
+     *   - Default value: `75`
      */
     threshold?: number;
     /**
@@ -22044,7 +26706,7 @@ export interface TransportRoutingBgpProfileParcelIpv6NeighborAddressFamily {
     thresholdVariable?: string;
 }
 
-export interface TransportRoutingBgpProfileParcelIpv6Network {
+export interface TransportRoutingBgpFeatureIpv6Network {
     /**
      * Configure the prefixes for BGP to announce
      */
@@ -22055,7 +26717,7 @@ export interface TransportRoutingBgpProfileParcelIpv6Network {
     networkPrefixVariable?: string;
 }
 
-export interface TransportRoutingBgpProfileParcelIpv6Redistribute {
+export interface TransportRoutingBgpFeatureIpv6Redistribute {
     /**
      * Set the protocol to redistribute routes from
      *   - Choices: `static`, `connected`, `ospf`
@@ -22068,7 +26730,7 @@ export interface TransportRoutingBgpProfileParcelIpv6Redistribute {
     routePolicyId?: string;
 }
 
-export interface TransportRoutingBgpProfileParcelMplsInterface {
+export interface TransportRoutingBgpFeatureMplsInterface {
     /**
      * Interface Name
      */
@@ -22079,9 +26741,157 @@ export interface TransportRoutingBgpProfileParcelMplsInterface {
     interfaceNameVariable?: string;
 }
 
-export interface TransportWanVpnInterfaceEthernetProfileParcelArp {
+export interface TransportRoutingOspfFeatureArea {
     /**
-     * IP V4 Address
+     * Set OSPF area number
+     *   - Range: `0`-`4294967295`
+     */
+    areaNumber?: number;
+    /**
+     * Variable name
+     */
+    areaNumberVariable?: string;
+    /**
+     * set the area type
+     *   - Choices: `stub`, `nssa`
+     */
+    areaType?: string;
+    /**
+     * Set OSPF interface parameters
+     */
+    interfaces?: outputs.TransportRoutingOspfFeatureAreaInterface[];
+    /**
+     * Do not inject interarea routes into STUB or NSSA
+     *   - Default value: `false`
+     */
+    noSummary?: boolean;
+    /**
+     * Variable name
+     */
+    noSummaryVariable?: string;
+    /**
+     * Summarize OSPF routes at an area boundary
+     */
+    ranges?: outputs.TransportRoutingOspfFeatureAreaRange[];
+}
+
+export interface TransportRoutingOspfFeatureAreaInterface {
+    /**
+     * Set OSPF interface authentication type
+     *   - Choices: `message-digest`
+     */
+    authenticationType?: string;
+    /**
+     * Variable name
+     */
+    authenticationTypeVariable?: string;
+    /**
+     * Set cost of OSPF interface
+     *   - Range: `1`-`65535`
+     */
+    cost?: number;
+    /**
+     * Variable name
+     */
+    costVariable?: string;
+    /**
+     * Set interval after which neighbor is declared to be down
+     *   - Range: `1`-`65535`
+     *   - Default value: `40`
+     */
+    deadInterval?: number;
+    /**
+     * Variable name
+     */
+    deadIntervalVariable?: string;
+    /**
+     * Set router’s priority to be elected as designated router
+     *   - Range: `0`-`255`
+     *   - Default value: `1`
+     */
+    designatedRouterPriority?: number;
+    /**
+     * Variable name
+     */
+    designatedRouterPriorityVariable?: string;
+    /**
+     * Set interval between OSPF hello packets
+     *   - Range: `1`-`65535`
+     *   - Default value: `10`
+     */
+    helloInterval?: number;
+    /**
+     * Variable name
+     */
+    helloIntervalVariable?: string;
+    /**
+     * Set time between retransmitting LSAs
+     *   - Range: `1`-`65535`
+     *   - Default value: `5`
+     */
+    lsaRetransmitInterval?: number;
+    /**
+     * Variable name
+     */
+    lsaRetransmitIntervalVariable?: string;
+    /**
+     * Set MD5 authentication key
+     */
+    messageDigestKey?: string;
+    /**
+     * Set MD5 message digest key
+     *   - Range: `1`-`255`
+     */
+    messageDigestKeyId?: number;
+    /**
+     * Variable name
+     */
+    messageDigestKeyIdVariable?: string;
+    /**
+     * Variable name
+     */
+    messageDigestKeyVariable?: string;
+    /**
+     * Set interface name
+     */
+    name?: string;
+    /**
+     * Variable name
+     */
+    nameVariable?: string;
+    /**
+     * Set the OSPF network type
+     *   - Choices: `broadcast`, `point-to-point`, `non-broadcast`, `point-to-multipoint`
+     *   - Default value: `broadcast`
+     */
+    networkType?: string;
+    /**
+     * Variable name
+     */
+    networkTypeVariable?: string;
+    /**
+     * Set the interface to advertise its address, but not to actively run OSPF
+     *   - Default value: `false`
+     */
+    passiveInterface?: boolean;
+    /**
+     * Variable name
+     */
+    passiveInterfaceVariable?: string;
+}
+
+export interface TransportRoutingOspfFeatureAreaRange {
+    /**
+     * Set cost for this range
+     *   - Range: `0`-`16777214`
+     */
+    cost?: number;
+    /**
+     * Variable name
+     */
+    costVariable?: string;
+    /**
+     * IP Address
      */
     ipAddress?: string;
     /**
@@ -22089,24 +26899,14 @@ export interface TransportWanVpnInterfaceEthernetProfileParcelArp {
      */
     ipAddressVariable?: string;
     /**
-     * MAC Address
+     * Do not advertise this range
+     *   - Default value: `false`
      */
-    macAddress?: string;
+    noAdvertise?: boolean;
     /**
      * Variable name
      */
-    macAddressVariable?: string;
-}
-
-export interface TransportWanVpnInterfaceEthernetProfileParcelIpv4SecondaryAddress {
-    /**
-     * IpV4 Address
-     */
-    address?: string;
-    /**
-     * Variable name
-     */
-    addressVariable?: string;
+    noAdvertiseVariable?: string;
     /**
      * Subnet Mask
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
@@ -22118,121 +26918,412 @@ export interface TransportWanVpnInterfaceEthernetProfileParcelIpv4SecondaryAddre
     subnetMaskVariable?: string;
 }
 
-export interface TransportWanVpnInterfaceEthernetProfileParcelIpv6DhcpSecondaryAddress {
+export interface TransportRoutingOspfFeatureRedistribute {
     /**
-     * IPv6 Address Secondary
+     * Enable NAT DIA for redistributed routes
+     *   - Default value: `true`
      */
-    address?: string;
+    natDia?: boolean;
     /**
      * Variable name
      */
-    addressVariable?: string;
+    natDiaVariable?: string;
+    /**
+     * Set the protocol
+     *   - Choices: `static`, `connected`, `bgp`, `omp`, `nat`, `eigrp`
+     */
+    protocol?: string;
+    /**
+     * Variable name
+     */
+    protocolVariable?: string;
+    routePolicyId?: string;
 }
 
-export interface TransportWanVpnInterfaceEthernetProfileParcelIpv6SecondaryAddress {
+export interface TransportRoutingOspfFeatureRouterLsa {
     /**
-     * IPv6 Address Secondary
+     * Set how long to advertise maximum metric after router starts up
+     *   - Range: `5`-`86400`
      */
-    address?: string;
+    time?: number;
     /**
      * Variable name
      */
-    addressVariable?: string;
+    timeVariable?: string;
+    /**
+     * Set the router LSA advertisement type
+     *   - Choices: `administrative`, `on-startup`
+     */
+    type?: string;
 }
 
-export interface TransportWanVpnInterfaceEthernetProfileParcelNewStaticNat {
+export interface TransportRoutingOspfv3Ipv4FeatureArea {
     /**
-     * Direction of static NAT translation
-     *   - Choices: `inside`, `outside`
-     *   - Default value: `inside`
+     * Always translate type7 LSAs
      */
-    direction?: string;
-    /**
-     * Source IP address to be translated
-     */
-    sourceIp?: string;
+    alwaysTranslate?: boolean;
     /**
      * Variable name
      */
-    sourceIpVariable?: string;
+    alwaysTranslateVariable?: string;
     /**
-     * Source VPN ID
-     *   - Range: `0`-`65530`
-     *   - Default value: `0`
-     */
-    sourceVpn?: number;
-    /**
-     * Variable name
-     */
-    sourceVpnVariable?: string;
-    /**
-     * Statically translated source IP address
-     */
-    translatedIp?: string;
-    /**
-     * Variable name
-     */
-    translatedIpVariable?: string;
-}
-
-export interface TransportWanVpnInterfaceEthernetProfileParcelStaticNat66 {
-    /**
-     * Source Prefix
-     */
-    sourcePrefix?: string;
-    /**
-     * Variable name
-     */
-    sourcePrefixVariable?: string;
-    /**
-     * Source VPN ID
-     *   - Range: `0`-`65530`
-     */
-    sourceVpnId?: number;
-    /**
-     * Variable name
-     */
-    sourceVpnIdVariable?: string;
-    /**
-     * Translated Source Prefix
-     */
-    translatedSourcePrefix?: string;
-    /**
-     * Variable name
-     */
-    translatedSourcePrefixVariable?: string;
-}
-
-export interface TransportWanVpnInterfaceEthernetProfileParcelTunnelInterfaceEncapsulation {
-    /**
-     * Encapsulation
-     *   - Choices: `gre`, `ipsec`
-     */
-    encapsulation?: string;
-    /**
-     * Set preference for TLOC
+     * Set OSPF area number
      *   - Range: `0`-`4294967295`
      */
-    preference?: number;
+    areaNumber?: number;
     /**
      * Variable name
      */
-    preferenceVariable?: string;
+    areaNumberVariable?: string;
     /**
-     * Set weight for TLOC
-     *   - Range: `1`-`255`
-     *   - Default value: `1`
+     * stub area type
+     *   - Choices: `stub`
      */
-    weight?: number;
+    areaType?: string;
+    /**
+     * Set OSPF interface parameters
+     */
+    interfaces?: outputs.TransportRoutingOspfv3Ipv4FeatureAreaInterface[];
+    /**
+     * Do not inject inter-area routes
+     */
+    noSummary?: boolean;
     /**
      * Variable name
      */
-    weightVariable?: string;
+    noSummaryVariable?: string;
+    /**
+     * Summarize OSPF routes at an area boundary
+     */
+    ranges?: outputs.TransportRoutingOspfv3Ipv4FeatureAreaRange[];
 }
 
-export interface TransportWanVpnProfileParcelIpv4StaticRoute {
+export interface TransportRoutingOspfv3Ipv4FeatureAreaInterface {
     /**
-     * Administrative distance
+     * Set OSPF interface authentication IPSEC key
+     */
+    authenticationKey?: string;
+    /**
+     * Variable name
+     */
+    authenticationKeyVariable?: string;
+    /**
+     * Set OSPF interface authentication IPSec SPI, range 256..4294967295
+     *   - Range: `256`-`4294967295`
+     */
+    authenticationSpi?: number;
+    /**
+     * Variable name
+     */
+    authenticationSpiVariable?: string;
+    /**
+     * No Authentication by default
+     *   - Choices: `no-auth`
+     */
+    authenticationType?: string;
+    /**
+     * Set cost of OSPF interface
+     *   - Range: `1`-`65535`
+     */
+    cost?: number;
+    /**
+     * Variable name
+     */
+    costVariable?: string;
+    /**
+     * Set interval after which neighbor is declared to be down
+     *   - Range: `1`-`65535`
+     *   - Default value: `40`
+     */
+    deadInterval?: number;
+    /**
+     * Variable name
+     */
+    deadIntervalVariable?: string;
+    /**
+     * Set interval between OSPF hello packets
+     *   - Range: `1`-`65535`
+     *   - Default value: `10`
+     */
+    helloInterval?: number;
+    /**
+     * Variable name
+     */
+    helloIntervalVariable?: string;
+    /**
+     * Set time between retransmitting LSAs
+     *   - Range: `1`-`65535`
+     *   - Default value: `5`
+     */
+    lsaRetransmitInterval?: number;
+    /**
+     * Variable name
+     */
+    lsaRetransmitIntervalVariable?: string;
+    /**
+     * Set interface name
+     */
+    name?: string;
+    /**
+     * Variable name
+     */
+    nameVariable?: string;
+    /**
+     * Set the OSPF network type
+     *   - Choices: `broadcast`, `point-to-point`, `non-broadcast`, `point-to-multipoint`
+     */
+    networkType?: string;
+    /**
+     * Variable name
+     */
+    networkTypeVariable?: string;
+    /**
+     * Set the interface to advertise its address, but not to actively run OSPF
+     *   - Default value: `false`
+     */
+    passiveInterface?: boolean;
+    /**
+     * Variable name
+     */
+    passiveInterfaceVariable?: string;
+}
+
+export interface TransportRoutingOspfv3Ipv4FeatureAreaRange {
+    /**
+     * Set cost for this range
+     *   - Range: `0`-`16777214`
+     */
+    cost?: number;
+    /**
+     * Variable name
+     */
+    costVariable?: string;
+    ipAddress?: string;
+    /**
+     * Variable name
+     */
+    ipAddressVariable?: string;
+    /**
+     * Do not advertise this range
+     *   - Default value: `false`
+     */
+    noAdvertise?: boolean;
+    /**
+     * Variable name
+     */
+    noAdvertiseVariable?: string;
+    /**
+     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     */
+    subnetMask?: string;
+    /**
+     * Variable name
+     */
+    subnetMaskVariable?: string;
+}
+
+export interface TransportRoutingOspfv3Ipv4FeatureRedistribute {
+    /**
+     * Enable NAT DIA for redistributed routes
+     *   - Default value: `true`
+     */
+    natDia?: boolean;
+    /**
+     * Variable name
+     */
+    natDiaVariable?: string;
+    /**
+     * Set the protocol
+     *   - Choices: `connected`, `static`, `omp`, `nat-route`, `bgp`, `eigrp`
+     */
+    protocol?: string;
+    /**
+     * Variable name
+     */
+    protocolVariable?: string;
+    routePolicyId?: string;
+}
+
+export interface TransportRoutingOspfv3Ipv6FeatureArea {
+    /**
+     * Always translate type7 LSAs
+     */
+    alwaysTranslate?: boolean;
+    /**
+     * Variable name
+     */
+    alwaysTranslateVariable?: string;
+    /**
+     * Set OSPF area number
+     *   - Range: `0`-`4294967295`
+     */
+    areaNumber?: number;
+    /**
+     * Variable name
+     */
+    areaNumberVariable?: string;
+    /**
+     * stub area type
+     *   - Choices: `stub`
+     */
+    areaType?: string;
+    /**
+     * Set OSPF interface parameters
+     */
+    interfaces?: outputs.TransportRoutingOspfv3Ipv6FeatureAreaInterface[];
+    /**
+     * Do not inject inter-area routes
+     */
+    noSummary?: boolean;
+    /**
+     * Variable name
+     */
+    noSummaryVariable?: string;
+    /**
+     * Summarize OSPF routes at an area boundary
+     */
+    ranges?: outputs.TransportRoutingOspfv3Ipv6FeatureAreaRange[];
+}
+
+export interface TransportRoutingOspfv3Ipv6FeatureAreaInterface {
+    /**
+     * Set OSPF interface authentication IPSEC key
+     */
+    authenticationKey?: string;
+    /**
+     * Variable name
+     */
+    authenticationKeyVariable?: string;
+    /**
+     * Set OSPF interface authentication IPSec SPI, range 256..4294967295
+     *   - Range: `256`-`4294967295`
+     */
+    authenticationSpi?: number;
+    /**
+     * Variable name
+     */
+    authenticationSpiVariable?: string;
+    /**
+     * No Authentication by default
+     *   - Choices: `no-auth`
+     */
+    authenticationType?: string;
+    /**
+     * Set cost of OSPF interface
+     *   - Range: `1`-`65535`
+     */
+    cost?: number;
+    /**
+     * Variable name
+     */
+    costVariable?: string;
+    /**
+     * Set interval after which neighbor is declared to be down
+     *   - Range: `1`-`65535`
+     *   - Default value: `40`
+     */
+    deadInterval?: number;
+    /**
+     * Variable name
+     */
+    deadIntervalVariable?: string;
+    /**
+     * Set interval between OSPF hello packets
+     *   - Range: `1`-`65535`
+     *   - Default value: `10`
+     */
+    helloInterval?: number;
+    /**
+     * Variable name
+     */
+    helloIntervalVariable?: string;
+    /**
+     * Set time between retransmitting LSAs
+     *   - Range: `1`-`65535`
+     *   - Default value: `5`
+     */
+    lsaRetransmitInterval?: number;
+    /**
+     * Variable name
+     */
+    lsaRetransmitIntervalVariable?: string;
+    /**
+     * Set interface name
+     */
+    name?: string;
+    /**
+     * Variable name
+     */
+    nameVariable?: string;
+    /**
+     * Set the OSPF network type
+     *   - Choices: `broadcast`, `point-to-point`, `non-broadcast`, `point-to-multipoint`
+     */
+    networkType?: string;
+    /**
+     * Variable name
+     */
+    networkTypeVariable?: string;
+    /**
+     * Set the interface to advertise its address, but not to actively run OSPF
+     *   - Default value: `false`
+     */
+    passiveInterface?: boolean;
+    /**
+     * Variable name
+     */
+    passiveInterfaceVariable?: string;
+}
+
+export interface TransportRoutingOspfv3Ipv6FeatureAreaRange {
+    /**
+     * Set cost for this range
+     *   - Range: `0`-`16777214`
+     */
+    cost?: number;
+    /**
+     * Variable name
+     */
+    costVariable?: string;
+    /**
+     * Do not advertise this range
+     *   - Default value: `false`
+     */
+    noAdvertise?: boolean;
+    /**
+     * Variable name
+     */
+    noAdvertiseVariable?: string;
+    /**
+     * IPv6 prefix,for example 2001::/64
+     */
+    prefix?: string;
+    /**
+     * Variable name
+     */
+    prefixVariable?: string;
+}
+
+export interface TransportRoutingOspfv3Ipv6FeatureRedistribute {
+    /**
+     * Set the protocol
+     *   - Choices: `connected`, `static`, `omp`, `bgp`, `eigrp`
+     */
+    protocol?: string;
+    /**
+     * Variable name
+     */
+    protocolVariable?: string;
+    routePolicyId?: string;
+}
+
+export interface TransportTrackerGroupFeatureTrackerElement {
+    trackerId?: string;
+}
+
+export interface TransportWanVpnFeatureIpv4StaticRoute {
+    /**
+     * Administrative distance, Attribute conditional on `gateway` being equal to `null0`
      *   - Range: `1`-`255`
      *   - Default value: `1`
      */
@@ -22256,9 +27347,9 @@ export interface TransportWanVpnProfileParcelIpv4StaticRoute {
      */
     networkAddressVariable?: string;
     /**
-     * IPv4 Route Gateway Next Hop
+     * IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
      */
-    nextHops?: outputs.TransportWanVpnProfileParcelIpv4StaticRouteNextHop[];
+    nextHops?: outputs.TransportWanVpnFeatureIpv4StaticRouteNextHop[];
     /**
      * Subnet Mask
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
@@ -22270,7 +27361,7 @@ export interface TransportWanVpnProfileParcelIpv4StaticRoute {
     subnetMaskVariable?: string;
 }
 
-export interface TransportWanVpnProfileParcelIpv4StaticRouteNextHop {
+export interface TransportWanVpnFeatureIpv4StaticRouteNextHop {
     /**
      * Address
      */
@@ -22291,7 +27382,7 @@ export interface TransportWanVpnProfileParcelIpv4StaticRouteNextHop {
     administrativeDistanceVariable?: string;
 }
 
-export interface TransportWanVpnProfileParcelIpv6StaticRoute {
+export interface TransportWanVpnFeatureIpv6StaticRoute {
     /**
      * IPv6 Nat
      *   - Choices: `NAT64`, `NAT66`
@@ -22304,7 +27395,7 @@ export interface TransportWanVpnProfileParcelIpv6StaticRoute {
     /**
      * IPv6 Route Gateway Next Hop
      */
-    nextHops?: outputs.TransportWanVpnProfileParcelIpv6StaticRouteNextHop[];
+    nextHops?: outputs.TransportWanVpnFeatureIpv6StaticRouteNextHop[];
     /**
      * IPv6 Route Gateway Next Hop
      */
@@ -22319,7 +27410,7 @@ export interface TransportWanVpnProfileParcelIpv6StaticRoute {
     prefixVariable?: string;
 }
 
-export interface TransportWanVpnProfileParcelIpv6StaticRouteNextHop {
+export interface TransportWanVpnFeatureIpv6StaticRouteNextHop {
     /**
      * Address
      */
@@ -22339,7 +27430,7 @@ export interface TransportWanVpnProfileParcelIpv6StaticRouteNextHop {
     administrativeDistanceVariable?: string;
 }
 
-export interface TransportWanVpnProfileParcelNat64V4Pool {
+export interface TransportWanVpnFeatureNat64V4Pool {
     /**
      * NAT64 v4 Pool Name
      */
@@ -22375,7 +27466,7 @@ export interface TransportWanVpnProfileParcelNat64V4Pool {
     nat64V4PoolRangeStartVariable?: string;
 }
 
-export interface TransportWanVpnProfileParcelNewHostMapping {
+export interface TransportWanVpnFeatureNewHostMapping {
     /**
      * Hostname
      */
@@ -22394,12 +27485,236 @@ export interface TransportWanVpnProfileParcelNewHostMapping {
     listOfIpAddressesVariable?: string;
 }
 
-export interface TransportWanVpnProfileParcelService {
+export interface TransportWanVpnFeatureService {
     /**
      * Service Type
      *   - Choices: `TE`
      */
     serviceType?: string;
+}
+
+export interface TransportWanVpnInterfaceCellularFeatureArp {
+    /**
+     * IP V4 Address
+     */
+    ipAddress?: string;
+    /**
+     * Variable name
+     */
+    ipAddressVariable?: string;
+    /**
+     * MAC Address
+     */
+    macAddress?: string;
+    /**
+     * Variable name
+     */
+    macAddressVariable?: string;
+}
+
+export interface TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulation {
+    /**
+     * Encapsulation
+     *   - Choices: `gre`, `ipsec`
+     */
+    encapsulation?: string;
+    /**
+     * Set preference for TLOC
+     *   - Range: `0`-`4294967295`
+     */
+    preference?: number;
+    /**
+     * Variable name
+     */
+    preferenceVariable?: string;
+    /**
+     * Set weight for TLOC
+     *   - Range: `1`-`255`
+     *   - Default value: `1`
+     */
+    weight?: number;
+    /**
+     * Variable name
+     */
+    weightVariable?: string;
+}
+
+export interface TransportWanVpnInterfaceEthernetFeatureArp {
+    /**
+     * IP V4 Address
+     */
+    ipAddress?: string;
+    /**
+     * Variable name
+     */
+    ipAddressVariable?: string;
+    /**
+     * MAC Address
+     */
+    macAddress?: string;
+    /**
+     * Variable name
+     */
+    macAddressVariable?: string;
+}
+
+export interface TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress {
+    /**
+     * IpV4 Address
+     */
+    address?: string;
+    /**
+     * Variable name
+     */
+    addressVariable?: string;
+    /**
+     * Subnet Mask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     */
+    subnetMask?: string;
+    /**
+     * Variable name
+     */
+    subnetMaskVariable?: string;
+}
+
+export interface TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress {
+    /**
+     * IPv6 Address Secondary
+     */
+    address?: string;
+    /**
+     * Variable name
+     */
+    addressVariable?: string;
+}
+
+export interface TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress {
+    /**
+     * IPv6 Address Secondary
+     */
+    address?: string;
+    /**
+     * Variable name
+     */
+    addressVariable?: string;
+}
+
+export interface TransportWanVpnInterfaceEthernetFeatureNewStaticNat {
+    /**
+     * Direction of static NAT translation
+     *   - Choices: `inside`, `outside`
+     *   - Default value: `inside`
+     */
+    direction?: string;
+    /**
+     * Source IP address to be translated
+     */
+    sourceIp?: string;
+    /**
+     * Variable name
+     */
+    sourceIpVariable?: string;
+    /**
+     * Source VPN ID
+     *   - Range: `0`-`65530`
+     *   - Default value: `0`
+     */
+    sourceVpn?: number;
+    /**
+     * Variable name
+     */
+    sourceVpnVariable?: string;
+    /**
+     * Statically translated source IP address
+     */
+    translatedIp?: string;
+    /**
+     * Variable name
+     */
+    translatedIpVariable?: string;
+}
+
+export interface TransportWanVpnInterfaceEthernetFeatureStaticNat66 {
+    /**
+     * Source Prefix
+     */
+    sourcePrefix?: string;
+    /**
+     * Variable name
+     */
+    sourcePrefixVariable?: string;
+    /**
+     * Source VPN ID
+     *   - Range: `0`-`65530`
+     */
+    sourceVpnId?: number;
+    /**
+     * Variable name
+     */
+    sourceVpnIdVariable?: string;
+    /**
+     * Translated Source Prefix
+     */
+    translatedSourcePrefix?: string;
+    /**
+     * Variable name
+     */
+    translatedSourcePrefixVariable?: string;
+}
+
+export interface TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulation {
+    /**
+     * Encapsulation
+     *   - Choices: `gre`, `ipsec`
+     */
+    encapsulation?: string;
+    /**
+     * Set preference for TLOC
+     *   - Range: `0`-`4294967295`
+     */
+    preference?: number;
+    /**
+     * Variable name
+     */
+    preferenceVariable?: string;
+    /**
+     * Set weight for TLOC
+     *   - Range: `1`-`255`
+     *   - Default value: `1`
+     */
+    weight?: number;
+    /**
+     * Variable name
+     */
+    weightVariable?: string;
+}
+
+export interface TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulation {
+    /**
+     * Encapsulation
+     *   - Choices: `gre`, `ipsec`
+     */
+    encapsulation?: string;
+    /**
+     * Set preference for TLOC
+     *   - Range: `0`-`4294967295`
+     */
+    preference?: number;
+    /**
+     * Variable name
+     */
+    preferenceVariable?: string;
+    /**
+     * Set weight for TLOC
+     *   - Range: `1`-`255`
+     *   - Default value: `1`
+     */
+    weight?: number;
+    /**
+     * Variable name
+     */
+    weightVariable?: string;
 }
 
 export interface VpnInterfaceCellularFeatureTemplateIpv4AccessList {
@@ -23903,6 +29218,73 @@ export interface VpnMembershipPolicyDefinitionSite {
      * VPN list versions
      */
     vpnListVersions?: string[];
+}
+
+export interface ZoneBasedFirewallPolicyDefinitionApplyZonePair {
+    /**
+     * Destination Zone
+     */
+    destinationZone?: string;
+    /**
+     * Source Zone
+     */
+    sourceZone?: string;
+}
+
+export interface ZoneBasedFirewallPolicyDefinitionRule {
+    /**
+     * List of actions entries
+     */
+    actionEntries?: outputs.ZoneBasedFirewallPolicyDefinitionRuleActionEntry[];
+    /**
+     * Base action
+     *   - Choices: `pass`, `drop`, `inspect`
+     */
+    baseAction: string;
+    /**
+     * List of match entries
+     */
+    matchEntries?: outputs.ZoneBasedFirewallPolicyDefinitionRuleMatchEntry[];
+    /**
+     * Rule name
+     */
+    ruleName: string;
+    /**
+     * Rule
+     */
+    ruleOrder: number;
+}
+
+export interface ZoneBasedFirewallPolicyDefinitionRuleActionEntry {
+    /**
+     * Type of action entry
+     *   - Choices: `log`, `connectionEvents`
+     */
+    type?: string;
+}
+
+export interface ZoneBasedFirewallPolicyDefinitionRuleMatchEntry {
+    /**
+     * policy id for selected match entry
+     */
+    policyId?: string;
+    /**
+     * Should be included with additionally entries for `destinationPort` and `protocol` whenever the type `protocolName` is used.
+     */
+    protocolType?: string;
+    /**
+     * Type of match entry
+     *   - Choices: `sourceFqdnList`, `sourceDataPrefixList`, `sourceGeoLocationList`, `sourcePortList`, `destinationFqdnList`, `destinationDataPrefixList`, `destinationGeoLocationList`, `destinationPortList`, `appList`, `protocolNameList`, `sourceIp`, `sourcePort`, `sourceFqdn`, `destinationIp`, `destinationFqdn`, `destinationPort`, `sourceGeoLocation`, `destinationGeoLocation`, `protocolName`, `protocol`, `app`, `ruleSetList`
+     */
+    type: string;
+    /**
+     * value for selected match entry
+     */
+    value?: string;
+    /**
+     * variable value for selected match entry if it has variable option (sourceIp & destinationIp)
+     */
+    valueVariable?: string;
 }
 
 export interface ZoneListPolicyObjectEntry {

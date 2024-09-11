@@ -4,6 +4,7 @@
 package com.pulumi.sdwan.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -13,11 +14,21 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CflowdPolicyDefinitionCollector {
     /**
+     * @return BFD metrics exporting
+     * 
+     */
+    private @Nullable Boolean bfdMetricsExporting;
+    /**
      * @return Export spreading
      *   - Choices: `enable`, `disable`
      * 
      */
     private @Nullable String exportSpreading;
+    /**
+     * @return Exporting interval
+     * 
+     */
+    private @Nullable Integer exportingInterval;
     /**
      * @return IP address
      * 
@@ -49,12 +60,26 @@ public final class CflowdPolicyDefinitionCollector {
 
     private CflowdPolicyDefinitionCollector() {}
     /**
+     * @return BFD metrics exporting
+     * 
+     */
+    public Optional<Boolean> bfdMetricsExporting() {
+        return Optional.ofNullable(this.bfdMetricsExporting);
+    }
+    /**
      * @return Export spreading
      *   - Choices: `enable`, `disable`
      * 
      */
     public Optional<String> exportSpreading() {
         return Optional.ofNullable(this.exportSpreading);
+    }
+    /**
+     * @return Exporting interval
+     * 
+     */
+    public Optional<Integer> exportingInterval() {
+        return Optional.ofNullable(this.exportingInterval);
     }
     /**
      * @return IP address
@@ -104,7 +129,9 @@ public final class CflowdPolicyDefinitionCollector {
     }
     @CustomType.Builder
     public static final class Builder {
+        private @Nullable Boolean bfdMetricsExporting;
         private @Nullable String exportSpreading;
+        private @Nullable Integer exportingInterval;
         private @Nullable String ipAddress;
         private @Nullable Integer port;
         private @Nullable String sourceInterface;
@@ -113,7 +140,9 @@ public final class CflowdPolicyDefinitionCollector {
         public Builder() {}
         public Builder(CflowdPolicyDefinitionCollector defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.bfdMetricsExporting = defaults.bfdMetricsExporting;
     	      this.exportSpreading = defaults.exportSpreading;
+    	      this.exportingInterval = defaults.exportingInterval;
     	      this.ipAddress = defaults.ipAddress;
     	      this.port = defaults.port;
     	      this.sourceInterface = defaults.sourceInterface;
@@ -122,9 +151,21 @@ public final class CflowdPolicyDefinitionCollector {
         }
 
         @CustomType.Setter
+        public Builder bfdMetricsExporting(@Nullable Boolean bfdMetricsExporting) {
+
+            this.bfdMetricsExporting = bfdMetricsExporting;
+            return this;
+        }
+        @CustomType.Setter
         public Builder exportSpreading(@Nullable String exportSpreading) {
 
             this.exportSpreading = exportSpreading;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder exportingInterval(@Nullable Integer exportingInterval) {
+
+            this.exportingInterval = exportingInterval;
             return this;
         }
         @CustomType.Setter
@@ -159,7 +200,9 @@ public final class CflowdPolicyDefinitionCollector {
         }
         public CflowdPolicyDefinitionCollector build() {
             final var _resultValue = new CflowdPolicyDefinitionCollector();
+            _resultValue.bfdMetricsExporting = bfdMetricsExporting;
             _resultValue.exportSpreading = exportSpreading;
+            _resultValue.exportingInterval = exportingInterval;
             _resultValue.ipAddress = ipAddress;
             _resultValue.port = port;
             _resultValue.sourceInterface = sourceInterface;

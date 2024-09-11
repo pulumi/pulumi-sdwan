@@ -18,6 +18,12 @@ namespace Pulumi.Sdwan.Inputs
         [Input("application")]
         public Input<string>? Application { get; set; }
 
+        /// <summary>
+        /// Application family name
+        /// </summary>
+        [Input("applicationFamily")]
+        public Input<string>? ApplicationFamily { get; set; }
+
         public LocalApplicationListPolicyObjectEntryArgs()
         {
         }

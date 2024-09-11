@@ -60,9 +60,9 @@ export class SecurityPolicy extends pulumi.CustomResource {
      */
     public readonly directInternetApplications!: pulumi.Output<string | undefined>;
     /**
-     * Failure mode - Choices: `open`, `close` - Default value: `open`
+     * Failure mode - Choices: `open`, `close`
      */
-    public readonly failureMode!: pulumi.Output<string>;
+    public readonly failureMode!: pulumi.Output<string | undefined>;
     /**
      * High Speed Logging Server IP
      */
@@ -180,7 +180,7 @@ export interface SecurityPolicyState {
      */
     directInternetApplications?: pulumi.Input<string>;
     /**
-     * Failure mode - Choices: `open`, `close` - Default value: `open`
+     * Failure mode - Choices: `open`, `close`
      */
     failureMode?: pulumi.Input<string>;
     /**
@@ -244,7 +244,7 @@ export interface SecurityPolicyArgs {
      */
     directInternetApplications?: pulumi.Input<string>;
     /**
-     * Failure mode - Choices: `open`, `close` - Default value: `open`
+     * Failure mode - Choices: `open`, `close`
      */
     failureMode?: pulumi.Input<string>;
     /**

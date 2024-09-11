@@ -42,6 +42,10 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int Dscp;
         /// <summary>
+        /// ICMP Message
+        /// </summary>
+        public readonly string IcmpMessage;
+        /// <summary>
         /// Packet length
         /// </summary>
         public readonly int PacketLength;
@@ -94,6 +98,8 @@ namespace Pulumi.Sdwan.Outputs
 
             int dscp,
 
+            string icmpMessage,
+
             int packetLength,
 
             string priority,
@@ -119,6 +125,7 @@ namespace Pulumi.Sdwan.Outputs
             DestinationIp = destinationIp;
             DestinationPorts = destinationPorts;
             Dscp = dscp;
+            IcmpMessage = icmpMessage;
             PacketLength = packetLength;
             Priority = priority;
             Protocol = protocol;

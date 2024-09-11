@@ -136,18 +136,18 @@ public class SecurityPolicy extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.directInternetApplications);
     }
     /**
-     * Failure mode - Choices: `open`, `close` - Default value: `open`
+     * Failure mode - Choices: `open`, `close`
      * 
      */
     @Export(name="failureMode", refs={String.class}, tree="[0]")
-    private Output<String> failureMode;
+    private Output</* @Nullable */ String> failureMode;
 
     /**
-     * @return Failure mode - Choices: `open`, `close` - Default value: `open`
+     * @return Failure mode - Choices: `open`, `close`
      * 
      */
-    public Output<String> failureMode() {
-        return this.failureMode;
+    public Output<Optional<String>> failureMode() {
+        return Codegen.optional(this.failureMode);
     }
     /**
      * High Speed Logging Server IP

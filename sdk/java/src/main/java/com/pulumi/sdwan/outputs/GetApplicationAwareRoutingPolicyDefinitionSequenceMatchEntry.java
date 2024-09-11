@@ -67,6 +67,11 @@ public final class GetApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry 
      */
     private Integer dscp;
     /**
+     * @return ICMP Message
+     * 
+     */
+    private String icmpMessage;
+    /**
      * @return PLP
      * 
      */
@@ -186,6 +191,13 @@ public final class GetApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry 
         return this.dscp;
     }
     /**
+     * @return ICMP Message
+     * 
+     */
+    public String icmpMessage() {
+        return this.icmpMessage;
+    }
+    /**
      * @return PLP
      * 
      */
@@ -262,6 +274,7 @@ public final class GetApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry 
         private String dnsApplicationListId;
         private Integer dnsApplicationListVersion;
         private Integer dscp;
+        private String icmpMessage;
         private String plp;
         private String protocol;
         private String sourceDataPrefixListId;
@@ -284,6 +297,7 @@ public final class GetApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry 
     	      this.dnsApplicationListId = defaults.dnsApplicationListId;
     	      this.dnsApplicationListVersion = defaults.dnsApplicationListVersion;
     	      this.dscp = defaults.dscp;
+    	      this.icmpMessage = defaults.icmpMessage;
     	      this.plp = defaults.plp;
     	      this.protocol = defaults.protocol;
     	      this.sourceDataPrefixListId = defaults.sourceDataPrefixListId;
@@ -383,6 +397,14 @@ public final class GetApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry 
             return this;
         }
         @CustomType.Setter
+        public Builder icmpMessage(String icmpMessage) {
+            if (icmpMessage == null) {
+              throw new MissingRequiredPropertyException("GetApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry", "icmpMessage");
+            }
+            this.icmpMessage = icmpMessage;
+            return this;
+        }
+        @CustomType.Setter
         public Builder plp(String plp) {
             if (plp == null) {
               throw new MissingRequiredPropertyException("GetApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry", "plp");
@@ -459,6 +481,7 @@ public final class GetApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry 
             _resultValue.dnsApplicationListId = dnsApplicationListId;
             _resultValue.dnsApplicationListVersion = dnsApplicationListVersion;
             _resultValue.dscp = dscp;
+            _resultValue.icmpMessage = icmpMessage;
             _resultValue.plp = plp;
             _resultValue.protocol = protocol;
             _resultValue.sourceDataPrefixListId = sourceDataPrefixListId;

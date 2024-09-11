@@ -58,6 +58,10 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int Dscp;
         /// <summary>
+        /// ICMP Message
+        /// </summary>
+        public readonly string IcmpMessage;
+        /// <summary>
         /// PLP
         /// </summary>
         public readonly string Plp;
@@ -114,6 +118,8 @@ namespace Pulumi.Sdwan.Outputs
 
             int dscp,
 
+            string icmpMessage,
+
             string plp,
 
             string protocol,
@@ -141,6 +147,7 @@ namespace Pulumi.Sdwan.Outputs
             DnsApplicationListId = dnsApplicationListId;
             DnsApplicationListVersion = dnsApplicationListVersion;
             Dscp = dscp;
+            IcmpMessage = icmpMessage;
             Plp = plp;
             Protocol = protocol;
             SourceDataPrefixListId = sourceDataPrefixListId;

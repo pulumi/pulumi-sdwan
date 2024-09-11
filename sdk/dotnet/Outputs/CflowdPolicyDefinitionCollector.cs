@@ -14,10 +14,18 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class CflowdPolicyDefinitionCollector
     {
         /// <summary>
+        /// BFD metrics exporting
+        /// </summary>
+        public readonly bool? BfdMetricsExporting;
+        /// <summary>
         /// Export spreading
         ///   - Choices: `enable`, `disable`
         /// </summary>
         public readonly string? ExportSpreading;
+        /// <summary>
+        /// Exporting interval
+        /// </summary>
+        public readonly int? ExportingInterval;
         /// <summary>
         /// IP address
         /// </summary>
@@ -44,7 +52,11 @@ namespace Pulumi.Sdwan.Outputs
 
         [OutputConstructor]
         private CflowdPolicyDefinitionCollector(
+            bool? bfdMetricsExporting,
+
             string? exportSpreading,
+
+            int? exportingInterval,
 
             string? ipAddress,
 
@@ -56,7 +68,9 @@ namespace Pulumi.Sdwan.Outputs
 
             int? vpnId)
         {
+            BfdMetricsExporting = bfdMetricsExporting;
             ExportSpreading = exportSpreading;
+            ExportingInterval = exportingInterval;
             IpAddress = ipAddress;
             Port = port;
             SourceInterface = sourceInterface;

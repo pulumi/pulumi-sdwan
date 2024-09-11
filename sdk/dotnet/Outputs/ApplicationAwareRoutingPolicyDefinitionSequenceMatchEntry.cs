@@ -61,6 +61,10 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? Dscp;
         /// <summary>
+        /// ICMP Message
+        /// </summary>
+        public readonly string? IcmpMessage;
+        /// <summary>
         /// PLP
         ///   - Choices: `low`, `high`
         /// </summary>
@@ -92,7 +96,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? TrafficTo;
         /// <summary>
         /// Type of match entry
-        ///   - Choices: `appList`, `dnsAppList`, `dns`, `dscp`, `plp`, `protocol`, `sourceDataPrefixList`, `sourceIp`, `sourcePort`, `destinationDataPrefixList`, `destinationIp`, `destinationRegion`, `destinationPort`, `trafficTo`
+        ///   - Choices: `appList`, `dnsAppList`, `dns`, `dscp`, `plp`, `protocol`, `sourceDataPrefixList`, `sourceIp`, `sourcePort`, `destinationDataPrefixList`, `destinationIp`, `destinationRegion`, `destinationPort`, `trafficTo`, `icmpMessage`
         /// </summary>
         public readonly string Type;
 
@@ -119,6 +123,8 @@ namespace Pulumi.Sdwan.Outputs
             int? dnsApplicationListVersion,
 
             int? dscp,
+
+            string? icmpMessage,
 
             string? plp,
 
@@ -147,6 +153,7 @@ namespace Pulumi.Sdwan.Outputs
             DnsApplicationListId = dnsApplicationListId;
             DnsApplicationListVersion = dnsApplicationListVersion;
             Dscp = dscp;
+            IcmpMessage = icmpMessage;
             Plp = plp;
             Protocol = protocol;
             SourceDataPrefixListId = sourceDataPrefixListId;

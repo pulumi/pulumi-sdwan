@@ -123,14 +123,14 @@ public class CustomControlTopologyPolicyDefinition extends com.pulumi.resources.
      * 
      */
     @Export(name="sequences", refs={List.class,CustomControlTopologyPolicyDefinitionSequence.class}, tree="[0,1]")
-    private Output<List<CustomControlTopologyPolicyDefinitionSequence>> sequences;
+    private Output</* @Nullable */ List<CustomControlTopologyPolicyDefinitionSequence>> sequences;
 
     /**
      * @return List of sequences
      * 
      */
-    public Output<List<CustomControlTopologyPolicyDefinitionSequence>> sequences() {
-        return this.sequences;
+    public Output<Optional<List<CustomControlTopologyPolicyDefinitionSequence>>> sequences() {
+        return Codegen.optional(this.sequences);
     }
     /**
      * Type

@@ -58,7 +58,7 @@ export class CustomControlTopologyPolicyDefinition extends pulumi.CustomResource
     /**
      * List of sequences
      */
-    public readonly sequences!: pulumi.Output<outputs.CustomControlTopologyPolicyDefinitionSequence[]>;
+    public readonly sequences!: pulumi.Output<outputs.CustomControlTopologyPolicyDefinitionSequence[] | undefined>;
     /**
      * Type
      */
@@ -91,9 +91,6 @@ export class CustomControlTopologyPolicyDefinition extends pulumi.CustomResource
             const args = argsOrState as CustomControlTopologyPolicyDefinitionArgs | undefined;
             if ((!args || args.description === undefined) && !opts.urn) {
                 throw new Error("Missing required property 'description'");
-            }
-            if ((!args || args.sequences === undefined) && !opts.urn) {
-                throw new Error("Missing required property 'sequences'");
             }
             resourceInputs["defaultAction"] = args ? args.defaultAction : undefined;
             resourceInputs["description"] = args ? args.description : undefined;
@@ -156,5 +153,5 @@ export interface CustomControlTopologyPolicyDefinitionArgs {
     /**
      * List of sequences
      */
-    sequences: pulumi.Input<pulumi.Input<inputs.CustomControlTopologyPolicyDefinitionSequence>[]>;
+    sequences?: pulumi.Input<pulumi.Input<inputs.CustomControlTopologyPolicyDefinitionSequence>[]>;
 }

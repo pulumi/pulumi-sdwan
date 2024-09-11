@@ -460,7 +460,7 @@ class DnsSecurityPolicyDefinition(pulumi.CustomResource):
             match_all_vpn=True,
             dnscrypt=True,
             umbrella_dns_default=True,
-            cisco_sig_credentials_feature_template_id="885c3bce-eab6-4d45-8ff3-488f0df4072a")
+            cisco_sig_credentials_feature_template_id="3ac6eef9-bd8f-458d-96a7-a932c90b1e75")
         ```
 
         ## Import
@@ -507,7 +507,7 @@ class DnsSecurityPolicyDefinition(pulumi.CustomResource):
             match_all_vpn=True,
             dnscrypt=True,
             umbrella_dns_default=True,
-            cisco_sig_credentials_feature_template_id="885c3bce-eab6-4d45-8ff3-488f0df4072a")
+            cisco_sig_credentials_feature_template_id="3ac6eef9-bd8f-458d-96a7-a932c90b1e75")
         ```
 
         ## Import

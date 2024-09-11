@@ -56,6 +56,12 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? Dscp { get; set; }
 
         /// <summary>
+        /// ICMP Message
+        /// </summary>
+        [Input("icmpMessage")]
+        public Input<string>? IcmpMessage { get; set; }
+
+        /// <summary>
         /// Packet length
         ///   - Range: `0`-`65535`
         /// </summary>
@@ -108,7 +114,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Type of match entry
-        ///   - Choices: `dscp`, `sourceIp`, `destinationIp`, `class`, `packetLength`, `plp`, `sourcePort`, `destinationPort`, `sourceDataPrefixList`, `destinationDataPrefixList`, `protocol`, `tcp`
+        ///   - Choices: `dscp`, `sourceIp`, `destinationIp`, `class`, `packetLength`, `plp`, `sourcePort`, `destinationPort`, `sourceDataPrefixList`, `destinationDataPrefixList`, `protocol`, `tcp`, `icmpMessage`
         /// </summary>
         [Input("type", required: true)]
         public Input<string> Type { get; set; } = null!;

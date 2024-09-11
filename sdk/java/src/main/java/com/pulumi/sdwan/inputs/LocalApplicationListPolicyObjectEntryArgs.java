@@ -30,10 +30,26 @@ public final class LocalApplicationListPolicyObjectEntryArgs extends com.pulumi.
         return Optional.ofNullable(this.application);
     }
 
+    /**
+     * Application family name
+     * 
+     */
+    @Import(name="applicationFamily")
+    private @Nullable Output<String> applicationFamily;
+
+    /**
+     * @return Application family name
+     * 
+     */
+    public Optional<Output<String>> applicationFamily() {
+        return Optional.ofNullable(this.applicationFamily);
+    }
+
     private LocalApplicationListPolicyObjectEntryArgs() {}
 
     private LocalApplicationListPolicyObjectEntryArgs(LocalApplicationListPolicyObjectEntryArgs $) {
         this.application = $.application;
+        this.applicationFamily = $.applicationFamily;
     }
 
     public static Builder builder() {
@@ -73,6 +89,27 @@ public final class LocalApplicationListPolicyObjectEntryArgs extends com.pulumi.
          */
         public Builder application(String application) {
             return application(Output.of(application));
+        }
+
+        /**
+         * @param applicationFamily Application family name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder applicationFamily(@Nullable Output<String> applicationFamily) {
+            $.applicationFamily = applicationFamily;
+            return this;
+        }
+
+        /**
+         * @param applicationFamily Application family name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder applicationFamily(String applicationFamily) {
+            return applicationFamily(Output.of(applicationFamily));
         }
 
         public LocalApplicationListPolicyObjectEntryArgs build() {

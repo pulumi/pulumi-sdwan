@@ -67,15 +67,15 @@ public final class CustomControlTopologyPolicyDefinitionArgs extends com.pulumi.
      * List of sequences
      * 
      */
-    @Import(name="sequences", required=true)
-    private Output<List<CustomControlTopologyPolicyDefinitionSequenceArgs>> sequences;
+    @Import(name="sequences")
+    private @Nullable Output<List<CustomControlTopologyPolicyDefinitionSequenceArgs>> sequences;
 
     /**
      * @return List of sequences
      * 
      */
-    public Output<List<CustomControlTopologyPolicyDefinitionSequenceArgs>> sequences() {
-        return this.sequences;
+    public Optional<Output<List<CustomControlTopologyPolicyDefinitionSequenceArgs>>> sequences() {
+        return Optional.ofNullable(this.sequences);
     }
 
     private CustomControlTopologyPolicyDefinitionArgs() {}
@@ -174,7 +174,7 @@ public final class CustomControlTopologyPolicyDefinitionArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder sequences(Output<List<CustomControlTopologyPolicyDefinitionSequenceArgs>> sequences) {
+        public Builder sequences(@Nullable Output<List<CustomControlTopologyPolicyDefinitionSequenceArgs>> sequences) {
             $.sequences = sequences;
             return this;
         }
@@ -202,9 +202,6 @@ public final class CustomControlTopologyPolicyDefinitionArgs extends com.pulumi.
         public CustomControlTopologyPolicyDefinitionArgs build() {
             if ($.description == null) {
                 throw new MissingRequiredPropertyException("CustomControlTopologyPolicyDefinitionArgs", "description");
-            }
-            if ($.sequences == null) {
-                throw new MissingRequiredPropertyException("CustomControlTopologyPolicyDefinitionArgs", "sequences");
             }
             return $;
         }

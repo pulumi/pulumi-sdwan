@@ -45,10 +45,10 @@ export type ApplicationPriorityFeatureProfile = import("./applicationPriorityFea
 export const ApplicationPriorityFeatureProfile: typeof import("./applicationPriorityFeatureProfile").ApplicationPriorityFeatureProfile = null as any;
 utilities.lazyLoad(exports, ["ApplicationPriorityFeatureProfile"], () => require("./applicationPriorityFeatureProfile"));
 
-export { ApplicationPriorityQosPolicyProfileParcelArgs, ApplicationPriorityQosPolicyProfileParcelState } from "./applicationPriorityQosPolicyProfileParcel";
-export type ApplicationPriorityQosPolicyProfileParcel = import("./applicationPriorityQosPolicyProfileParcel").ApplicationPriorityQosPolicyProfileParcel;
-export const ApplicationPriorityQosPolicyProfileParcel: typeof import("./applicationPriorityQosPolicyProfileParcel").ApplicationPriorityQosPolicyProfileParcel = null as any;
-utilities.lazyLoad(exports, ["ApplicationPriorityQosPolicyProfileParcel"], () => require("./applicationPriorityQosPolicyProfileParcel"));
+export { ApplicationPriorityQosPolicyArgs, ApplicationPriorityQosPolicyState } from "./applicationPriorityQosPolicy";
+export type ApplicationPriorityQosPolicy = import("./applicationPriorityQosPolicy").ApplicationPriorityQosPolicy;
+export const ApplicationPriorityQosPolicy: typeof import("./applicationPriorityQosPolicy").ApplicationPriorityQosPolicy = null as any;
+utilities.lazyLoad(exports, ["ApplicationPriorityQosPolicy"], () => require("./applicationPriorityQosPolicy"));
 
 export { AsPathListPolicyObjectArgs, AsPathListPolicyObjectState } from "./asPathListPolicyObject";
 export type AsPathListPolicyObject = import("./asPathListPolicyObject").AsPathListPolicyObject;
@@ -225,10 +225,10 @@ export type ClassMapPolicyObject = import("./classMapPolicyObject").ClassMapPoli
 export const ClassMapPolicyObject: typeof import("./classMapPolicyObject").ClassMapPolicyObject = null as any;
 utilities.lazyLoad(exports, ["ClassMapPolicyObject"], () => require("./classMapPolicyObject"));
 
-export { CliConfigProfileParcelArgs, CliConfigProfileParcelState } from "./cliConfigProfileParcel";
-export type CliConfigProfileParcel = import("./cliConfigProfileParcel").CliConfigProfileParcel;
-export const CliConfigProfileParcel: typeof import("./cliConfigProfileParcel").CliConfigProfileParcel = null as any;
-utilities.lazyLoad(exports, ["CliConfigProfileParcel"], () => require("./cliConfigProfileParcel"));
+export { CliConfigFeatureArgs, CliConfigFeatureState } from "./cliConfigFeature";
+export type CliConfigFeature = import("./cliConfigFeature").CliConfigFeature;
+export const CliConfigFeature: typeof import("./cliConfigFeature").CliConfigFeature = null as any;
+utilities.lazyLoad(exports, ["CliConfigFeature"], () => require("./cliConfigFeature"));
 
 export { CliDeviceTemplateArgs, CliDeviceTemplateState } from "./cliDeviceTemplate";
 export type CliDeviceTemplate = import("./cliDeviceTemplate").CliDeviceTemplate;
@@ -254,21 +254,6 @@ export { ConfigurationGroupArgs, ConfigurationGroupState } from "./configuration
 export type ConfigurationGroup = import("./configurationGroup").ConfigurationGroup;
 export const ConfigurationGroup: typeof import("./configurationGroup").ConfigurationGroup = null as any;
 utilities.lazyLoad(exports, ["ConfigurationGroup"], () => require("./configurationGroup"));
-
-export { ConfigurationGroupDeployArgs, ConfigurationGroupDeployState } from "./configurationGroupDeploy";
-export type ConfigurationGroupDeploy = import("./configurationGroupDeploy").ConfigurationGroupDeploy;
-export const ConfigurationGroupDeploy: typeof import("./configurationGroupDeploy").ConfigurationGroupDeploy = null as any;
-utilities.lazyLoad(exports, ["ConfigurationGroupDeploy"], () => require("./configurationGroupDeploy"));
-
-export { ConfigurationGroupDeviceVariablesArgs, ConfigurationGroupDeviceVariablesState } from "./configurationGroupDeviceVariables";
-export type ConfigurationGroupDeviceVariables = import("./configurationGroupDeviceVariables").ConfigurationGroupDeviceVariables;
-export const ConfigurationGroupDeviceVariables: typeof import("./configurationGroupDeviceVariables").ConfigurationGroupDeviceVariables = null as any;
-utilities.lazyLoad(exports, ["ConfigurationGroupDeviceVariables"], () => require("./configurationGroupDeviceVariables"));
-
-export { ConfigurationGroupDevicesArgs, ConfigurationGroupDevicesState } from "./configurationGroupDevices";
-export type ConfigurationGroupDevices = import("./configurationGroupDevices").ConfigurationGroupDevices;
-export const ConfigurationGroupDevices: typeof import("./configurationGroupDevices").ConfigurationGroupDevices = null as any;
-utilities.lazyLoad(exports, ["ConfigurationGroupDevices"], () => require("./configurationGroupDevices"));
 
 export { CustomControlTopologyPolicyDefinitionArgs, CustomControlTopologyPolicyDefinitionState } from "./customControlTopologyPolicyDefinition";
 export type CustomControlTopologyPolicyDefinition = import("./customControlTopologyPolicyDefinition").CustomControlTopologyPolicyDefinition;
@@ -360,10 +345,10 @@ export const getApplicationPriorityFeatureProfile: typeof import("./getApplicati
 export const getApplicationPriorityFeatureProfileOutput: typeof import("./getApplicationPriorityFeatureProfile").getApplicationPriorityFeatureProfileOutput = null as any;
 utilities.lazyLoad(exports, ["getApplicationPriorityFeatureProfile","getApplicationPriorityFeatureProfileOutput"], () => require("./getApplicationPriorityFeatureProfile"));
 
-export { GetApplicationPriorityQosPolicyProfileParcelArgs, GetApplicationPriorityQosPolicyProfileParcelResult, GetApplicationPriorityQosPolicyProfileParcelOutputArgs } from "./getApplicationPriorityQosPolicyProfileParcel";
-export const getApplicationPriorityQosPolicyProfileParcel: typeof import("./getApplicationPriorityQosPolicyProfileParcel").getApplicationPriorityQosPolicyProfileParcel = null as any;
-export const getApplicationPriorityQosPolicyProfileParcelOutput: typeof import("./getApplicationPriorityQosPolicyProfileParcel").getApplicationPriorityQosPolicyProfileParcelOutput = null as any;
-utilities.lazyLoad(exports, ["getApplicationPriorityQosPolicyProfileParcel","getApplicationPriorityQosPolicyProfileParcelOutput"], () => require("./getApplicationPriorityQosPolicyProfileParcel"));
+export { GetApplicationPriorityQosPolicyArgs, GetApplicationPriorityQosPolicyResult, GetApplicationPriorityQosPolicyOutputArgs } from "./getApplicationPriorityQosPolicy";
+export const getApplicationPriorityQosPolicy: typeof import("./getApplicationPriorityQosPolicy").getApplicationPriorityQosPolicy = null as any;
+export const getApplicationPriorityQosPolicyOutput: typeof import("./getApplicationPriorityQosPolicy").getApplicationPriorityQosPolicyOutput = null as any;
+utilities.lazyLoad(exports, ["getApplicationPriorityQosPolicy","getApplicationPriorityQosPolicyOutput"], () => require("./getApplicationPriorityQosPolicy"));
 
 export { GetAsPathListPolicyObjectArgs, GetAsPathListPolicyObjectResult, GetAsPathListPolicyObjectOutputArgs } from "./getAsPathListPolicyObject";
 export const getAsPathListPolicyObject: typeof import("./getAsPathListPolicyObject").getAsPathListPolicyObject = null as any;
@@ -535,10 +520,10 @@ export const getClassMapPolicyObject: typeof import("./getClassMapPolicyObject")
 export const getClassMapPolicyObjectOutput: typeof import("./getClassMapPolicyObject").getClassMapPolicyObjectOutput = null as any;
 utilities.lazyLoad(exports, ["getClassMapPolicyObject","getClassMapPolicyObjectOutput"], () => require("./getClassMapPolicyObject"));
 
-export { GetCliConfigProfileParcelArgs, GetCliConfigProfileParcelResult, GetCliConfigProfileParcelOutputArgs } from "./getCliConfigProfileParcel";
-export const getCliConfigProfileParcel: typeof import("./getCliConfigProfileParcel").getCliConfigProfileParcel = null as any;
-export const getCliConfigProfileParcelOutput: typeof import("./getCliConfigProfileParcel").getCliConfigProfileParcelOutput = null as any;
-utilities.lazyLoad(exports, ["getCliConfigProfileParcel","getCliConfigProfileParcelOutput"], () => require("./getCliConfigProfileParcel"));
+export { GetCliConfigFeatureArgs, GetCliConfigFeatureResult, GetCliConfigFeatureOutputArgs } from "./getCliConfigFeature";
+export const getCliConfigFeature: typeof import("./getCliConfigFeature").getCliConfigFeature = null as any;
+export const getCliConfigFeatureOutput: typeof import("./getCliConfigFeature").getCliConfigFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getCliConfigFeature","getCliConfigFeatureOutput"], () => require("./getCliConfigFeature"));
 
 export { GetCliDeviceTemplateArgs, GetCliDeviceTemplateResult, GetCliDeviceTemplateOutputArgs } from "./getCliDeviceTemplate";
 export const getCliDeviceTemplate: typeof import("./getCliDeviceTemplate").getCliDeviceTemplate = null as any;
@@ -564,16 +549,6 @@ export { GetConfigurationGroupArgs, GetConfigurationGroupResult, GetConfiguratio
 export const getConfigurationGroup: typeof import("./getConfigurationGroup").getConfigurationGroup = null as any;
 export const getConfigurationGroupOutput: typeof import("./getConfigurationGroup").getConfigurationGroupOutput = null as any;
 utilities.lazyLoad(exports, ["getConfigurationGroup","getConfigurationGroupOutput"], () => require("./getConfigurationGroup"));
-
-export { GetConfigurationGroupDeviceVariablesArgs, GetConfigurationGroupDeviceVariablesResult, GetConfigurationGroupDeviceVariablesOutputArgs } from "./getConfigurationGroupDeviceVariables";
-export const getConfigurationGroupDeviceVariables: typeof import("./getConfigurationGroupDeviceVariables").getConfigurationGroupDeviceVariables = null as any;
-export const getConfigurationGroupDeviceVariablesOutput: typeof import("./getConfigurationGroupDeviceVariables").getConfigurationGroupDeviceVariablesOutput = null as any;
-utilities.lazyLoad(exports, ["getConfigurationGroupDeviceVariables","getConfigurationGroupDeviceVariablesOutput"], () => require("./getConfigurationGroupDeviceVariables"));
-
-export { GetConfigurationGroupDevicesArgs, GetConfigurationGroupDevicesResult, GetConfigurationGroupDevicesOutputArgs } from "./getConfigurationGroupDevices";
-export const getConfigurationGroupDevices: typeof import("./getConfigurationGroupDevices").getConfigurationGroupDevices = null as any;
-export const getConfigurationGroupDevicesOutput: typeof import("./getConfigurationGroupDevices").getConfigurationGroupDevicesOutput = null as any;
-utilities.lazyLoad(exports, ["getConfigurationGroupDevices","getConfigurationGroupDevicesOutput"], () => require("./getConfigurationGroupDevices"));
 
 export { GetCustomControlTopologyPolicyDefinitionArgs, GetCustomControlTopologyPolicyDefinitionResult, GetCustomControlTopologyPolicyDefinitionOutputArgs } from "./getCustomControlTopologyPolicyDefinition";
 export const getCustomControlTopologyPolicyDefinition: typeof import("./getCustomControlTopologyPolicyDefinition").getCustomControlTopologyPolicyDefinition = null as any;
@@ -710,10 +685,85 @@ export const getObjectGroupPolicyDefinition: typeof import("./getObjectGroupPoli
 export const getObjectGroupPolicyDefinitionOutput: typeof import("./getObjectGroupPolicyDefinition").getObjectGroupPolicyDefinitionOutput = null as any;
 utilities.lazyLoad(exports, ["getObjectGroupPolicyDefinition","getObjectGroupPolicyDefinitionOutput"], () => require("./getObjectGroupPolicyDefinition"));
 
+export { GetOtherFeatureProfileArgs, GetOtherFeatureProfileResult, GetOtherFeatureProfileOutputArgs } from "./getOtherFeatureProfile";
+export const getOtherFeatureProfile: typeof import("./getOtherFeatureProfile").getOtherFeatureProfile = null as any;
+export const getOtherFeatureProfileOutput: typeof import("./getOtherFeatureProfile").getOtherFeatureProfileOutput = null as any;
+utilities.lazyLoad(exports, ["getOtherFeatureProfile","getOtherFeatureProfileOutput"], () => require("./getOtherFeatureProfile"));
+
+export { GetOtherThousandeyesFeatureArgs, GetOtherThousandeyesFeatureResult, GetOtherThousandeyesFeatureOutputArgs } from "./getOtherThousandeyesFeature";
+export const getOtherThousandeyesFeature: typeof import("./getOtherThousandeyesFeature").getOtherThousandeyesFeature = null as any;
+export const getOtherThousandeyesFeatureOutput: typeof import("./getOtherThousandeyesFeature").getOtherThousandeyesFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getOtherThousandeyesFeature","getOtherThousandeyesFeatureOutput"], () => require("./getOtherThousandeyesFeature"));
+
+export { GetOtherUcseFeatureArgs, GetOtherUcseFeatureResult, GetOtherUcseFeatureOutputArgs } from "./getOtherUcseFeature";
+export const getOtherUcseFeature: typeof import("./getOtherUcseFeature").getOtherUcseFeature = null as any;
+export const getOtherUcseFeatureOutput: typeof import("./getOtherUcseFeature").getOtherUcseFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getOtherUcseFeature","getOtherUcseFeatureOutput"], () => require("./getOtherUcseFeature"));
+
 export { GetPolicerPolicyObjectArgs, GetPolicerPolicyObjectResult, GetPolicerPolicyObjectOutputArgs } from "./getPolicerPolicyObject";
 export const getPolicerPolicyObject: typeof import("./getPolicerPolicyObject").getPolicerPolicyObject = null as any;
 export const getPolicerPolicyObjectOutput: typeof import("./getPolicerPolicyObject").getPolicerPolicyObjectOutput = null as any;
 utilities.lazyLoad(exports, ["getPolicerPolicyObject","getPolicerPolicyObjectOutput"], () => require("./getPolicerPolicyObject"));
+
+export { GetPolicyObjectClassMapArgs, GetPolicyObjectClassMapResult, GetPolicyObjectClassMapOutputArgs } from "./getPolicyObjectClassMap";
+export const getPolicyObjectClassMap: typeof import("./getPolicyObjectClassMap").getPolicyObjectClassMap = null as any;
+export const getPolicyObjectClassMapOutput: typeof import("./getPolicyObjectClassMap").getPolicyObjectClassMapOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectClassMap","getPolicyObjectClassMapOutput"], () => require("./getPolicyObjectClassMap"));
+
+export { GetPolicyObjectColorListArgs, GetPolicyObjectColorListResult, GetPolicyObjectColorListOutputArgs } from "./getPolicyObjectColorList";
+export const getPolicyObjectColorList: typeof import("./getPolicyObjectColorList").getPolicyObjectColorList = null as any;
+export const getPolicyObjectColorListOutput: typeof import("./getPolicyObjectColorList").getPolicyObjectColorListOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectColorList","getPolicyObjectColorListOutput"], () => require("./getPolicyObjectColorList"));
+
+export { GetPolicyObjectDataIpv4PrefixListArgs, GetPolicyObjectDataIpv4PrefixListResult, GetPolicyObjectDataIpv4PrefixListOutputArgs } from "./getPolicyObjectDataIpv4PrefixList";
+export const getPolicyObjectDataIpv4PrefixList: typeof import("./getPolicyObjectDataIpv4PrefixList").getPolicyObjectDataIpv4PrefixList = null as any;
+export const getPolicyObjectDataIpv4PrefixListOutput: typeof import("./getPolicyObjectDataIpv4PrefixList").getPolicyObjectDataIpv4PrefixListOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectDataIpv4PrefixList","getPolicyObjectDataIpv4PrefixListOutput"], () => require("./getPolicyObjectDataIpv4PrefixList"));
+
+export { GetPolicyObjectDataIpv6PrefixListArgs, GetPolicyObjectDataIpv6PrefixListResult, GetPolicyObjectDataIpv6PrefixListOutputArgs } from "./getPolicyObjectDataIpv6PrefixList";
+export const getPolicyObjectDataIpv6PrefixList: typeof import("./getPolicyObjectDataIpv6PrefixList").getPolicyObjectDataIpv6PrefixList = null as any;
+export const getPolicyObjectDataIpv6PrefixListOutput: typeof import("./getPolicyObjectDataIpv6PrefixList").getPolicyObjectDataIpv6PrefixListOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectDataIpv6PrefixList","getPolicyObjectDataIpv6PrefixListOutput"], () => require("./getPolicyObjectDataIpv6PrefixList"));
+
+export { GetPolicyObjectExpandedCommunityListArgs, GetPolicyObjectExpandedCommunityListResult, GetPolicyObjectExpandedCommunityListOutputArgs } from "./getPolicyObjectExpandedCommunityList";
+export const getPolicyObjectExpandedCommunityList: typeof import("./getPolicyObjectExpandedCommunityList").getPolicyObjectExpandedCommunityList = null as any;
+export const getPolicyObjectExpandedCommunityListOutput: typeof import("./getPolicyObjectExpandedCommunityList").getPolicyObjectExpandedCommunityListOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectExpandedCommunityList","getPolicyObjectExpandedCommunityListOutput"], () => require("./getPolicyObjectExpandedCommunityList"));
+
+export { GetPolicyObjectExtendedCommunityListArgs, GetPolicyObjectExtendedCommunityListResult, GetPolicyObjectExtendedCommunityListOutputArgs } from "./getPolicyObjectExtendedCommunityList";
+export const getPolicyObjectExtendedCommunityList: typeof import("./getPolicyObjectExtendedCommunityList").getPolicyObjectExtendedCommunityList = null as any;
+export const getPolicyObjectExtendedCommunityListOutput: typeof import("./getPolicyObjectExtendedCommunityList").getPolicyObjectExtendedCommunityListOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectExtendedCommunityList","getPolicyObjectExtendedCommunityListOutput"], () => require("./getPolicyObjectExtendedCommunityList"));
+
+export { GetPolicyObjectFeatureProfileResult } from "./getPolicyObjectFeatureProfile";
+export const getPolicyObjectFeatureProfile: typeof import("./getPolicyObjectFeatureProfile").getPolicyObjectFeatureProfile = null as any;
+export const getPolicyObjectFeatureProfileOutput: typeof import("./getPolicyObjectFeatureProfile").getPolicyObjectFeatureProfileOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectFeatureProfile","getPolicyObjectFeatureProfileOutput"], () => require("./getPolicyObjectFeatureProfile"));
+
+export { GetPolicyObjectIpv4PrefixListArgs, GetPolicyObjectIpv4PrefixListResult, GetPolicyObjectIpv4PrefixListOutputArgs } from "./getPolicyObjectIpv4PrefixList";
+export const getPolicyObjectIpv4PrefixList: typeof import("./getPolicyObjectIpv4PrefixList").getPolicyObjectIpv4PrefixList = null as any;
+export const getPolicyObjectIpv4PrefixListOutput: typeof import("./getPolicyObjectIpv4PrefixList").getPolicyObjectIpv4PrefixListOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectIpv4PrefixList","getPolicyObjectIpv4PrefixListOutput"], () => require("./getPolicyObjectIpv4PrefixList"));
+
+export { GetPolicyObjectIpv6PrefixListArgs, GetPolicyObjectIpv6PrefixListResult, GetPolicyObjectIpv6PrefixListOutputArgs } from "./getPolicyObjectIpv6PrefixList";
+export const getPolicyObjectIpv6PrefixList: typeof import("./getPolicyObjectIpv6PrefixList").getPolicyObjectIpv6PrefixList = null as any;
+export const getPolicyObjectIpv6PrefixListOutput: typeof import("./getPolicyObjectIpv6PrefixList").getPolicyObjectIpv6PrefixListOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectIpv6PrefixList","getPolicyObjectIpv6PrefixListOutput"], () => require("./getPolicyObjectIpv6PrefixList"));
+
+export { GetPolicyObjectMirrorArgs, GetPolicyObjectMirrorResult, GetPolicyObjectMirrorOutputArgs } from "./getPolicyObjectMirror";
+export const getPolicyObjectMirror: typeof import("./getPolicyObjectMirror").getPolicyObjectMirror = null as any;
+export const getPolicyObjectMirrorOutput: typeof import("./getPolicyObjectMirror").getPolicyObjectMirrorOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectMirror","getPolicyObjectMirrorOutput"], () => require("./getPolicyObjectMirror"));
+
+export { GetPolicyObjectPolicerArgs, GetPolicyObjectPolicerResult, GetPolicyObjectPolicerOutputArgs } from "./getPolicyObjectPolicer";
+export const getPolicyObjectPolicer: typeof import("./getPolicyObjectPolicer").getPolicyObjectPolicer = null as any;
+export const getPolicyObjectPolicerOutput: typeof import("./getPolicyObjectPolicer").getPolicyObjectPolicerOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectPolicer","getPolicyObjectPolicerOutput"], () => require("./getPolicyObjectPolicer"));
+
+export { GetPolicyObjectTlocListArgs, GetPolicyObjectTlocListResult, GetPolicyObjectTlocListOutputArgs } from "./getPolicyObjectTlocList";
+export const getPolicyObjectTlocList: typeof import("./getPolicyObjectTlocList").getPolicyObjectTlocList = null as any;
+export const getPolicyObjectTlocListOutput: typeof import("./getPolicyObjectTlocList").getPolicyObjectTlocListOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectTlocList","getPolicyObjectTlocListOutput"], () => require("./getPolicyObjectTlocList"));
 
 export { GetPortListPolicyObjectArgs, GetPortListPolicyObjectResult, GetPortListPolicyObjectOutputArgs } from "./getPortListPolicyObject";
 export const getPortListPolicyObject: typeof import("./getPortListPolicyObject").getPortListPolicyObject = null as any;
@@ -770,20 +820,80 @@ export const getServiceFeatureProfile: typeof import("./getServiceFeatureProfile
 export const getServiceFeatureProfileOutput: typeof import("./getServiceFeatureProfile").getServiceFeatureProfileOutput = null as any;
 utilities.lazyLoad(exports, ["getServiceFeatureProfile","getServiceFeatureProfileOutput"], () => require("./getServiceFeatureProfile"));
 
-export { GetServiceLanVpnInterfaceEthernetProfileParcelArgs, GetServiceLanVpnInterfaceEthernetProfileParcelResult, GetServiceLanVpnInterfaceEthernetProfileParcelOutputArgs } from "./getServiceLanVpnInterfaceEthernetProfileParcel";
-export const getServiceLanVpnInterfaceEthernetProfileParcel: typeof import("./getServiceLanVpnInterfaceEthernetProfileParcel").getServiceLanVpnInterfaceEthernetProfileParcel = null as any;
-export const getServiceLanVpnInterfaceEthernetProfileParcelOutput: typeof import("./getServiceLanVpnInterfaceEthernetProfileParcel").getServiceLanVpnInterfaceEthernetProfileParcelOutput = null as any;
-utilities.lazyLoad(exports, ["getServiceLanVpnInterfaceEthernetProfileParcel","getServiceLanVpnInterfaceEthernetProfileParcelOutput"], () => require("./getServiceLanVpnInterfaceEthernetProfileParcel"));
+export { GetServiceLanVpnFeatureArgs, GetServiceLanVpnFeatureResult, GetServiceLanVpnFeatureOutputArgs } from "./getServiceLanVpnFeature";
+export const getServiceLanVpnFeature: typeof import("./getServiceLanVpnFeature").getServiceLanVpnFeature = null as any;
+export const getServiceLanVpnFeatureOutput: typeof import("./getServiceLanVpnFeature").getServiceLanVpnFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getServiceLanVpnFeature","getServiceLanVpnFeatureOutput"], () => require("./getServiceLanVpnFeature"));
 
-export { GetServiceLanVpnProfileParcelArgs, GetServiceLanVpnProfileParcelResult, GetServiceLanVpnProfileParcelOutputArgs } from "./getServiceLanVpnProfileParcel";
-export const getServiceLanVpnProfileParcel: typeof import("./getServiceLanVpnProfileParcel").getServiceLanVpnProfileParcel = null as any;
-export const getServiceLanVpnProfileParcelOutput: typeof import("./getServiceLanVpnProfileParcel").getServiceLanVpnProfileParcelOutput = null as any;
-utilities.lazyLoad(exports, ["getServiceLanVpnProfileParcel","getServiceLanVpnProfileParcelOutput"], () => require("./getServiceLanVpnProfileParcel"));
+export { GetServiceLanVpnInterfaceEthernetFeatureArgs, GetServiceLanVpnInterfaceEthernetFeatureResult, GetServiceLanVpnInterfaceEthernetFeatureOutputArgs } from "./getServiceLanVpnInterfaceEthernetFeature";
+export const getServiceLanVpnInterfaceEthernetFeature: typeof import("./getServiceLanVpnInterfaceEthernetFeature").getServiceLanVpnInterfaceEthernetFeature = null as any;
+export const getServiceLanVpnInterfaceEthernetFeatureOutput: typeof import("./getServiceLanVpnInterfaceEthernetFeature").getServiceLanVpnInterfaceEthernetFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getServiceLanVpnInterfaceEthernetFeature","getServiceLanVpnInterfaceEthernetFeatureOutput"], () => require("./getServiceLanVpnInterfaceEthernetFeature"));
 
-export { GetServiceTrackerProfileParcelArgs, GetServiceTrackerProfileParcelResult, GetServiceTrackerProfileParcelOutputArgs } from "./getServiceTrackerProfileParcel";
-export const getServiceTrackerProfileParcel: typeof import("./getServiceTrackerProfileParcel").getServiceTrackerProfileParcel = null as any;
-export const getServiceTrackerProfileParcelOutput: typeof import("./getServiceTrackerProfileParcel").getServiceTrackerProfileParcelOutput = null as any;
-utilities.lazyLoad(exports, ["getServiceTrackerProfileParcel","getServiceTrackerProfileParcelOutput"], () => require("./getServiceTrackerProfileParcel"));
+export { GetServiceLanVpnInterfaceGreFeatureArgs, GetServiceLanVpnInterfaceGreFeatureResult, GetServiceLanVpnInterfaceGreFeatureOutputArgs } from "./getServiceLanVpnInterfaceGreFeature";
+export const getServiceLanVpnInterfaceGreFeature: typeof import("./getServiceLanVpnInterfaceGreFeature").getServiceLanVpnInterfaceGreFeature = null as any;
+export const getServiceLanVpnInterfaceGreFeatureOutput: typeof import("./getServiceLanVpnInterfaceGreFeature").getServiceLanVpnInterfaceGreFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getServiceLanVpnInterfaceGreFeature","getServiceLanVpnInterfaceGreFeatureOutput"], () => require("./getServiceLanVpnInterfaceGreFeature"));
+
+export { GetServiceLanVpnInterfaceIpsecFeatureArgs, GetServiceLanVpnInterfaceIpsecFeatureResult, GetServiceLanVpnInterfaceIpsecFeatureOutputArgs } from "./getServiceLanVpnInterfaceIpsecFeature";
+export const getServiceLanVpnInterfaceIpsecFeature: typeof import("./getServiceLanVpnInterfaceIpsecFeature").getServiceLanVpnInterfaceIpsecFeature = null as any;
+export const getServiceLanVpnInterfaceIpsecFeatureOutput: typeof import("./getServiceLanVpnInterfaceIpsecFeature").getServiceLanVpnInterfaceIpsecFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getServiceLanVpnInterfaceIpsecFeature","getServiceLanVpnInterfaceIpsecFeatureOutput"], () => require("./getServiceLanVpnInterfaceIpsecFeature"));
+
+export { GetServiceLanVpnInterfaceSviFeatureArgs, GetServiceLanVpnInterfaceSviFeatureResult, GetServiceLanVpnInterfaceSviFeatureOutputArgs } from "./getServiceLanVpnInterfaceSviFeature";
+export const getServiceLanVpnInterfaceSviFeature: typeof import("./getServiceLanVpnInterfaceSviFeature").getServiceLanVpnInterfaceSviFeature = null as any;
+export const getServiceLanVpnInterfaceSviFeatureOutput: typeof import("./getServiceLanVpnInterfaceSviFeature").getServiceLanVpnInterfaceSviFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getServiceLanVpnInterfaceSviFeature","getServiceLanVpnInterfaceSviFeatureOutput"], () => require("./getServiceLanVpnInterfaceSviFeature"));
+
+export { GetServiceObjectTrackerFeatureArgs, GetServiceObjectTrackerFeatureResult, GetServiceObjectTrackerFeatureOutputArgs } from "./getServiceObjectTrackerFeature";
+export const getServiceObjectTrackerFeature: typeof import("./getServiceObjectTrackerFeature").getServiceObjectTrackerFeature = null as any;
+export const getServiceObjectTrackerFeatureOutput: typeof import("./getServiceObjectTrackerFeature").getServiceObjectTrackerFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getServiceObjectTrackerFeature","getServiceObjectTrackerFeatureOutput"], () => require("./getServiceObjectTrackerFeature"));
+
+export { GetServiceObjectTrackerGroupFeatureArgs, GetServiceObjectTrackerGroupFeatureResult, GetServiceObjectTrackerGroupFeatureOutputArgs } from "./getServiceObjectTrackerGroupFeature";
+export const getServiceObjectTrackerGroupFeature: typeof import("./getServiceObjectTrackerGroupFeature").getServiceObjectTrackerGroupFeature = null as any;
+export const getServiceObjectTrackerGroupFeatureOutput: typeof import("./getServiceObjectTrackerGroupFeature").getServiceObjectTrackerGroupFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getServiceObjectTrackerGroupFeature","getServiceObjectTrackerGroupFeatureOutput"], () => require("./getServiceObjectTrackerGroupFeature"));
+
+export { GetServiceRoutePolicyFeatureArgs, GetServiceRoutePolicyFeatureResult, GetServiceRoutePolicyFeatureOutputArgs } from "./getServiceRoutePolicyFeature";
+export const getServiceRoutePolicyFeature: typeof import("./getServiceRoutePolicyFeature").getServiceRoutePolicyFeature = null as any;
+export const getServiceRoutePolicyFeatureOutput: typeof import("./getServiceRoutePolicyFeature").getServiceRoutePolicyFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getServiceRoutePolicyFeature","getServiceRoutePolicyFeatureOutput"], () => require("./getServiceRoutePolicyFeature"));
+
+export { GetServiceRoutingBgpFeatureArgs, GetServiceRoutingBgpFeatureResult, GetServiceRoutingBgpFeatureOutputArgs } from "./getServiceRoutingBgpFeature";
+export const getServiceRoutingBgpFeature: typeof import("./getServiceRoutingBgpFeature").getServiceRoutingBgpFeature = null as any;
+export const getServiceRoutingBgpFeatureOutput: typeof import("./getServiceRoutingBgpFeature").getServiceRoutingBgpFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getServiceRoutingBgpFeature","getServiceRoutingBgpFeatureOutput"], () => require("./getServiceRoutingBgpFeature"));
+
+export { GetServiceRoutingOspfFeatureArgs, GetServiceRoutingOspfFeatureResult, GetServiceRoutingOspfFeatureOutputArgs } from "./getServiceRoutingOspfFeature";
+export const getServiceRoutingOspfFeature: typeof import("./getServiceRoutingOspfFeature").getServiceRoutingOspfFeature = null as any;
+export const getServiceRoutingOspfFeatureOutput: typeof import("./getServiceRoutingOspfFeature").getServiceRoutingOspfFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getServiceRoutingOspfFeature","getServiceRoutingOspfFeatureOutput"], () => require("./getServiceRoutingOspfFeature"));
+
+export { GetServiceRoutingOspfv3Ipv4FeatureArgs, GetServiceRoutingOspfv3Ipv4FeatureResult, GetServiceRoutingOspfv3Ipv4FeatureOutputArgs } from "./getServiceRoutingOspfv3Ipv4Feature";
+export const getServiceRoutingOspfv3Ipv4Feature: typeof import("./getServiceRoutingOspfv3Ipv4Feature").getServiceRoutingOspfv3Ipv4Feature = null as any;
+export const getServiceRoutingOspfv3Ipv4FeatureOutput: typeof import("./getServiceRoutingOspfv3Ipv4Feature").getServiceRoutingOspfv3Ipv4FeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getServiceRoutingOspfv3Ipv4Feature","getServiceRoutingOspfv3Ipv4FeatureOutput"], () => require("./getServiceRoutingOspfv3Ipv4Feature"));
+
+export { GetServiceRoutingOspfv3Ipv6FeatureArgs, GetServiceRoutingOspfv3Ipv6FeatureResult, GetServiceRoutingOspfv3Ipv6FeatureOutputArgs } from "./getServiceRoutingOspfv3Ipv6Feature";
+export const getServiceRoutingOspfv3Ipv6Feature: typeof import("./getServiceRoutingOspfv3Ipv6Feature").getServiceRoutingOspfv3Ipv6Feature = null as any;
+export const getServiceRoutingOspfv3Ipv6FeatureOutput: typeof import("./getServiceRoutingOspfv3Ipv6Feature").getServiceRoutingOspfv3Ipv6FeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getServiceRoutingOspfv3Ipv6Feature","getServiceRoutingOspfv3Ipv6FeatureOutput"], () => require("./getServiceRoutingOspfv3Ipv6Feature"));
+
+export { GetServiceSwitchportFeatureArgs, GetServiceSwitchportFeatureResult, GetServiceSwitchportFeatureOutputArgs } from "./getServiceSwitchportFeature";
+export const getServiceSwitchportFeature: typeof import("./getServiceSwitchportFeature").getServiceSwitchportFeature = null as any;
+export const getServiceSwitchportFeatureOutput: typeof import("./getServiceSwitchportFeature").getServiceSwitchportFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getServiceSwitchportFeature","getServiceSwitchportFeatureOutput"], () => require("./getServiceSwitchportFeature"));
+
+export { GetServiceTrackerFeatureArgs, GetServiceTrackerFeatureResult, GetServiceTrackerFeatureOutputArgs } from "./getServiceTrackerFeature";
+export const getServiceTrackerFeature: typeof import("./getServiceTrackerFeature").getServiceTrackerFeature = null as any;
+export const getServiceTrackerFeatureOutput: typeof import("./getServiceTrackerFeature").getServiceTrackerFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getServiceTrackerFeature","getServiceTrackerFeatureOutput"], () => require("./getServiceTrackerFeature"));
+
+export { GetServiceTrackerGroupFeatureArgs, GetServiceTrackerGroupFeatureResult, GetServiceTrackerGroupFeatureOutputArgs } from "./getServiceTrackerGroupFeature";
+export const getServiceTrackerGroupFeature: typeof import("./getServiceTrackerGroupFeature").getServiceTrackerGroupFeature = null as any;
+export const getServiceTrackerGroupFeatureOutput: typeof import("./getServiceTrackerGroupFeature").getServiceTrackerGroupFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getServiceTrackerGroupFeature","getServiceTrackerGroupFeatureOutput"], () => require("./getServiceTrackerGroupFeature"));
 
 export { GetSiteListPolicyObjectArgs, GetSiteListPolicyObjectResult, GetSiteListPolicyObjectOutputArgs } from "./getSiteListPolicyObject";
 export const getSiteListPolicyObject: typeof import("./getSiteListPolicyObject").getSiteListPolicyObject = null as any;
@@ -805,80 +915,90 @@ export const getSwitchportFeatureTemplate: typeof import("./getSwitchportFeature
 export const getSwitchportFeatureTemplateOutput: typeof import("./getSwitchportFeatureTemplate").getSwitchportFeatureTemplateOutput = null as any;
 utilities.lazyLoad(exports, ["getSwitchportFeatureTemplate","getSwitchportFeatureTemplateOutput"], () => require("./getSwitchportFeatureTemplate"));
 
-export { GetSystemAaaProfileParcelArgs, GetSystemAaaProfileParcelResult, GetSystemAaaProfileParcelOutputArgs } from "./getSystemAaaProfileParcel";
-export const getSystemAaaProfileParcel: typeof import("./getSystemAaaProfileParcel").getSystemAaaProfileParcel = null as any;
-export const getSystemAaaProfileParcelOutput: typeof import("./getSystemAaaProfileParcel").getSystemAaaProfileParcelOutput = null as any;
-utilities.lazyLoad(exports, ["getSystemAaaProfileParcel","getSystemAaaProfileParcelOutput"], () => require("./getSystemAaaProfileParcel"));
+export { GetSystemAaaFeatureArgs, GetSystemAaaFeatureResult, GetSystemAaaFeatureOutputArgs } from "./getSystemAaaFeature";
+export const getSystemAaaFeature: typeof import("./getSystemAaaFeature").getSystemAaaFeature = null as any;
+export const getSystemAaaFeatureOutput: typeof import("./getSystemAaaFeature").getSystemAaaFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getSystemAaaFeature","getSystemAaaFeatureOutput"], () => require("./getSystemAaaFeature"));
 
-export { GetSystemBannerProfileParcelArgs, GetSystemBannerProfileParcelResult, GetSystemBannerProfileParcelOutputArgs } from "./getSystemBannerProfileParcel";
-export const getSystemBannerProfileParcel: typeof import("./getSystemBannerProfileParcel").getSystemBannerProfileParcel = null as any;
-export const getSystemBannerProfileParcelOutput: typeof import("./getSystemBannerProfileParcel").getSystemBannerProfileParcelOutput = null as any;
-utilities.lazyLoad(exports, ["getSystemBannerProfileParcel","getSystemBannerProfileParcelOutput"], () => require("./getSystemBannerProfileParcel"));
+export { GetSystemBannerFeatureArgs, GetSystemBannerFeatureResult, GetSystemBannerFeatureOutputArgs } from "./getSystemBannerFeature";
+export const getSystemBannerFeature: typeof import("./getSystemBannerFeature").getSystemBannerFeature = null as any;
+export const getSystemBannerFeatureOutput: typeof import("./getSystemBannerFeature").getSystemBannerFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getSystemBannerFeature","getSystemBannerFeatureOutput"], () => require("./getSystemBannerFeature"));
 
-export { GetSystemBasicProfileParcelArgs, GetSystemBasicProfileParcelResult, GetSystemBasicProfileParcelOutputArgs } from "./getSystemBasicProfileParcel";
-export const getSystemBasicProfileParcel: typeof import("./getSystemBasicProfileParcel").getSystemBasicProfileParcel = null as any;
-export const getSystemBasicProfileParcelOutput: typeof import("./getSystemBasicProfileParcel").getSystemBasicProfileParcelOutput = null as any;
-utilities.lazyLoad(exports, ["getSystemBasicProfileParcel","getSystemBasicProfileParcelOutput"], () => require("./getSystemBasicProfileParcel"));
+export { GetSystemBasicFeatureArgs, GetSystemBasicFeatureResult, GetSystemBasicFeatureOutputArgs } from "./getSystemBasicFeature";
+export const getSystemBasicFeature: typeof import("./getSystemBasicFeature").getSystemBasicFeature = null as any;
+export const getSystemBasicFeatureOutput: typeof import("./getSystemBasicFeature").getSystemBasicFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getSystemBasicFeature","getSystemBasicFeatureOutput"], () => require("./getSystemBasicFeature"));
 
-export { GetSystemBfdProfileParcelArgs, GetSystemBfdProfileParcelResult, GetSystemBfdProfileParcelOutputArgs } from "./getSystemBfdProfileParcel";
-export const getSystemBfdProfileParcel: typeof import("./getSystemBfdProfileParcel").getSystemBfdProfileParcel = null as any;
-export const getSystemBfdProfileParcelOutput: typeof import("./getSystemBfdProfileParcel").getSystemBfdProfileParcelOutput = null as any;
-utilities.lazyLoad(exports, ["getSystemBfdProfileParcel","getSystemBfdProfileParcelOutput"], () => require("./getSystemBfdProfileParcel"));
+export { GetSystemBfdFeatureArgs, GetSystemBfdFeatureResult, GetSystemBfdFeatureOutputArgs } from "./getSystemBfdFeature";
+export const getSystemBfdFeature: typeof import("./getSystemBfdFeature").getSystemBfdFeature = null as any;
+export const getSystemBfdFeatureOutput: typeof import("./getSystemBfdFeature").getSystemBfdFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getSystemBfdFeature","getSystemBfdFeatureOutput"], () => require("./getSystemBfdFeature"));
 
 export { GetSystemFeatureProfileArgs, GetSystemFeatureProfileResult, GetSystemFeatureProfileOutputArgs } from "./getSystemFeatureProfile";
 export const getSystemFeatureProfile: typeof import("./getSystemFeatureProfile").getSystemFeatureProfile = null as any;
 export const getSystemFeatureProfileOutput: typeof import("./getSystemFeatureProfile").getSystemFeatureProfileOutput = null as any;
 utilities.lazyLoad(exports, ["getSystemFeatureProfile","getSystemFeatureProfileOutput"], () => require("./getSystemFeatureProfile"));
 
-export { GetSystemFlexiblePortSpeedProfileParcelArgs, GetSystemFlexiblePortSpeedProfileParcelResult, GetSystemFlexiblePortSpeedProfileParcelOutputArgs } from "./getSystemFlexiblePortSpeedProfileParcel";
-export const getSystemFlexiblePortSpeedProfileParcel: typeof import("./getSystemFlexiblePortSpeedProfileParcel").getSystemFlexiblePortSpeedProfileParcel = null as any;
-export const getSystemFlexiblePortSpeedProfileParcelOutput: typeof import("./getSystemFlexiblePortSpeedProfileParcel").getSystemFlexiblePortSpeedProfileParcelOutput = null as any;
-utilities.lazyLoad(exports, ["getSystemFlexiblePortSpeedProfileParcel","getSystemFlexiblePortSpeedProfileParcelOutput"], () => require("./getSystemFlexiblePortSpeedProfileParcel"));
+export { GetSystemFlexiblePortSpeedFeatureArgs, GetSystemFlexiblePortSpeedFeatureResult, GetSystemFlexiblePortSpeedFeatureOutputArgs } from "./getSystemFlexiblePortSpeedFeature";
+export const getSystemFlexiblePortSpeedFeature: typeof import("./getSystemFlexiblePortSpeedFeature").getSystemFlexiblePortSpeedFeature = null as any;
+export const getSystemFlexiblePortSpeedFeatureOutput: typeof import("./getSystemFlexiblePortSpeedFeature").getSystemFlexiblePortSpeedFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getSystemFlexiblePortSpeedFeature","getSystemFlexiblePortSpeedFeatureOutput"], () => require("./getSystemFlexiblePortSpeedFeature"));
 
-export { GetSystemGlobalProfileParcelArgs, GetSystemGlobalProfileParcelResult, GetSystemGlobalProfileParcelOutputArgs } from "./getSystemGlobalProfileParcel";
-export const getSystemGlobalProfileParcel: typeof import("./getSystemGlobalProfileParcel").getSystemGlobalProfileParcel = null as any;
-export const getSystemGlobalProfileParcelOutput: typeof import("./getSystemGlobalProfileParcel").getSystemGlobalProfileParcelOutput = null as any;
-utilities.lazyLoad(exports, ["getSystemGlobalProfileParcel","getSystemGlobalProfileParcelOutput"], () => require("./getSystemGlobalProfileParcel"));
+export { GetSystemGlobalFeatureArgs, GetSystemGlobalFeatureResult, GetSystemGlobalFeatureOutputArgs } from "./getSystemGlobalFeature";
+export const getSystemGlobalFeature: typeof import("./getSystemGlobalFeature").getSystemGlobalFeature = null as any;
+export const getSystemGlobalFeatureOutput: typeof import("./getSystemGlobalFeature").getSystemGlobalFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getSystemGlobalFeature","getSystemGlobalFeatureOutput"], () => require("./getSystemGlobalFeature"));
 
-export { GetSystemLoggingProfileParcelArgs, GetSystemLoggingProfileParcelResult, GetSystemLoggingProfileParcelOutputArgs } from "./getSystemLoggingProfileParcel";
-export const getSystemLoggingProfileParcel: typeof import("./getSystemLoggingProfileParcel").getSystemLoggingProfileParcel = null as any;
-export const getSystemLoggingProfileParcelOutput: typeof import("./getSystemLoggingProfileParcel").getSystemLoggingProfileParcelOutput = null as any;
-utilities.lazyLoad(exports, ["getSystemLoggingProfileParcel","getSystemLoggingProfileParcelOutput"], () => require("./getSystemLoggingProfileParcel"));
+export { GetSystemIpv4DeviceAccessFeatureArgs, GetSystemIpv4DeviceAccessFeatureResult, GetSystemIpv4DeviceAccessFeatureOutputArgs } from "./getSystemIpv4DeviceAccessFeature";
+export const getSystemIpv4DeviceAccessFeature: typeof import("./getSystemIpv4DeviceAccessFeature").getSystemIpv4DeviceAccessFeature = null as any;
+export const getSystemIpv4DeviceAccessFeatureOutput: typeof import("./getSystemIpv4DeviceAccessFeature").getSystemIpv4DeviceAccessFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getSystemIpv4DeviceAccessFeature","getSystemIpv4DeviceAccessFeatureOutput"], () => require("./getSystemIpv4DeviceAccessFeature"));
 
-export { GetSystemMrfProfileParcelArgs, GetSystemMrfProfileParcelResult, GetSystemMrfProfileParcelOutputArgs } from "./getSystemMrfProfileParcel";
-export const getSystemMrfProfileParcel: typeof import("./getSystemMrfProfileParcel").getSystemMrfProfileParcel = null as any;
-export const getSystemMrfProfileParcelOutput: typeof import("./getSystemMrfProfileParcel").getSystemMrfProfileParcelOutput = null as any;
-utilities.lazyLoad(exports, ["getSystemMrfProfileParcel","getSystemMrfProfileParcelOutput"], () => require("./getSystemMrfProfileParcel"));
+export { GetSystemIpv6DeviceAccessFeatureArgs, GetSystemIpv6DeviceAccessFeatureResult, GetSystemIpv6DeviceAccessFeatureOutputArgs } from "./getSystemIpv6DeviceAccessFeature";
+export const getSystemIpv6DeviceAccessFeature: typeof import("./getSystemIpv6DeviceAccessFeature").getSystemIpv6DeviceAccessFeature = null as any;
+export const getSystemIpv6DeviceAccessFeatureOutput: typeof import("./getSystemIpv6DeviceAccessFeature").getSystemIpv6DeviceAccessFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getSystemIpv6DeviceAccessFeature","getSystemIpv6DeviceAccessFeatureOutput"], () => require("./getSystemIpv6DeviceAccessFeature"));
 
-export { GetSystemNtpProfileParcelArgs, GetSystemNtpProfileParcelResult, GetSystemNtpProfileParcelOutputArgs } from "./getSystemNtpProfileParcel";
-export const getSystemNtpProfileParcel: typeof import("./getSystemNtpProfileParcel").getSystemNtpProfileParcel = null as any;
-export const getSystemNtpProfileParcelOutput: typeof import("./getSystemNtpProfileParcel").getSystemNtpProfileParcelOutput = null as any;
-utilities.lazyLoad(exports, ["getSystemNtpProfileParcel","getSystemNtpProfileParcelOutput"], () => require("./getSystemNtpProfileParcel"));
+export { GetSystemLoggingFeatureArgs, GetSystemLoggingFeatureResult, GetSystemLoggingFeatureOutputArgs } from "./getSystemLoggingFeature";
+export const getSystemLoggingFeature: typeof import("./getSystemLoggingFeature").getSystemLoggingFeature = null as any;
+export const getSystemLoggingFeatureOutput: typeof import("./getSystemLoggingFeature").getSystemLoggingFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getSystemLoggingFeature","getSystemLoggingFeatureOutput"], () => require("./getSystemLoggingFeature"));
 
-export { GetSystemOmpProfileParcelArgs, GetSystemOmpProfileParcelResult, GetSystemOmpProfileParcelOutputArgs } from "./getSystemOmpProfileParcel";
-export const getSystemOmpProfileParcel: typeof import("./getSystemOmpProfileParcel").getSystemOmpProfileParcel = null as any;
-export const getSystemOmpProfileParcelOutput: typeof import("./getSystemOmpProfileParcel").getSystemOmpProfileParcelOutput = null as any;
-utilities.lazyLoad(exports, ["getSystemOmpProfileParcel","getSystemOmpProfileParcelOutput"], () => require("./getSystemOmpProfileParcel"));
+export { GetSystemMrfFeatureArgs, GetSystemMrfFeatureResult, GetSystemMrfFeatureOutputArgs } from "./getSystemMrfFeature";
+export const getSystemMrfFeature: typeof import("./getSystemMrfFeature").getSystemMrfFeature = null as any;
+export const getSystemMrfFeatureOutput: typeof import("./getSystemMrfFeature").getSystemMrfFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getSystemMrfFeature","getSystemMrfFeatureOutput"], () => require("./getSystemMrfFeature"));
 
-export { GetSystemPerformanceMonitoringProfileParcelArgs, GetSystemPerformanceMonitoringProfileParcelResult, GetSystemPerformanceMonitoringProfileParcelOutputArgs } from "./getSystemPerformanceMonitoringProfileParcel";
-export const getSystemPerformanceMonitoringProfileParcel: typeof import("./getSystemPerformanceMonitoringProfileParcel").getSystemPerformanceMonitoringProfileParcel = null as any;
-export const getSystemPerformanceMonitoringProfileParcelOutput: typeof import("./getSystemPerformanceMonitoringProfileParcel").getSystemPerformanceMonitoringProfileParcelOutput = null as any;
-utilities.lazyLoad(exports, ["getSystemPerformanceMonitoringProfileParcel","getSystemPerformanceMonitoringProfileParcelOutput"], () => require("./getSystemPerformanceMonitoringProfileParcel"));
+export { GetSystemNtpFeatureArgs, GetSystemNtpFeatureResult, GetSystemNtpFeatureOutputArgs } from "./getSystemNtpFeature";
+export const getSystemNtpFeature: typeof import("./getSystemNtpFeature").getSystemNtpFeature = null as any;
+export const getSystemNtpFeatureOutput: typeof import("./getSystemNtpFeature").getSystemNtpFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getSystemNtpFeature","getSystemNtpFeatureOutput"], () => require("./getSystemNtpFeature"));
 
-export { GetSystemRemoteAccessProfileParcelArgs, GetSystemRemoteAccessProfileParcelResult, GetSystemRemoteAccessProfileParcelOutputArgs } from "./getSystemRemoteAccessProfileParcel";
-export const getSystemRemoteAccessProfileParcel: typeof import("./getSystemRemoteAccessProfileParcel").getSystemRemoteAccessProfileParcel = null as any;
-export const getSystemRemoteAccessProfileParcelOutput: typeof import("./getSystemRemoteAccessProfileParcel").getSystemRemoteAccessProfileParcelOutput = null as any;
-utilities.lazyLoad(exports, ["getSystemRemoteAccessProfileParcel","getSystemRemoteAccessProfileParcelOutput"], () => require("./getSystemRemoteAccessProfileParcel"));
+export { GetSystemOmpFeatureArgs, GetSystemOmpFeatureResult, GetSystemOmpFeatureOutputArgs } from "./getSystemOmpFeature";
+export const getSystemOmpFeature: typeof import("./getSystemOmpFeature").getSystemOmpFeature = null as any;
+export const getSystemOmpFeatureOutput: typeof import("./getSystemOmpFeature").getSystemOmpFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getSystemOmpFeature","getSystemOmpFeatureOutput"], () => require("./getSystemOmpFeature"));
 
-export { GetSystemSecurityProfileParcelArgs, GetSystemSecurityProfileParcelResult, GetSystemSecurityProfileParcelOutputArgs } from "./getSystemSecurityProfileParcel";
-export const getSystemSecurityProfileParcel: typeof import("./getSystemSecurityProfileParcel").getSystemSecurityProfileParcel = null as any;
-export const getSystemSecurityProfileParcelOutput: typeof import("./getSystemSecurityProfileParcel").getSystemSecurityProfileParcelOutput = null as any;
-utilities.lazyLoad(exports, ["getSystemSecurityProfileParcel","getSystemSecurityProfileParcelOutput"], () => require("./getSystemSecurityProfileParcel"));
+export { GetSystemPerformanceMonitoringFeatureArgs, GetSystemPerformanceMonitoringFeatureResult, GetSystemPerformanceMonitoringFeatureOutputArgs } from "./getSystemPerformanceMonitoringFeature";
+export const getSystemPerformanceMonitoringFeature: typeof import("./getSystemPerformanceMonitoringFeature").getSystemPerformanceMonitoringFeature = null as any;
+export const getSystemPerformanceMonitoringFeatureOutput: typeof import("./getSystemPerformanceMonitoringFeature").getSystemPerformanceMonitoringFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getSystemPerformanceMonitoringFeature","getSystemPerformanceMonitoringFeatureOutput"], () => require("./getSystemPerformanceMonitoringFeature"));
 
-export { GetSystemSnmpProfileParcelArgs, GetSystemSnmpProfileParcelResult, GetSystemSnmpProfileParcelOutputArgs } from "./getSystemSnmpProfileParcel";
-export const getSystemSnmpProfileParcel: typeof import("./getSystemSnmpProfileParcel").getSystemSnmpProfileParcel = null as any;
-export const getSystemSnmpProfileParcelOutput: typeof import("./getSystemSnmpProfileParcel").getSystemSnmpProfileParcelOutput = null as any;
-utilities.lazyLoad(exports, ["getSystemSnmpProfileParcel","getSystemSnmpProfileParcelOutput"], () => require("./getSystemSnmpProfileParcel"));
+export { GetSystemRemoteAccessFeatureArgs, GetSystemRemoteAccessFeatureResult, GetSystemRemoteAccessFeatureOutputArgs } from "./getSystemRemoteAccessFeature";
+export const getSystemRemoteAccessFeature: typeof import("./getSystemRemoteAccessFeature").getSystemRemoteAccessFeature = null as any;
+export const getSystemRemoteAccessFeatureOutput: typeof import("./getSystemRemoteAccessFeature").getSystemRemoteAccessFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getSystemRemoteAccessFeature","getSystemRemoteAccessFeatureOutput"], () => require("./getSystemRemoteAccessFeature"));
+
+export { GetSystemSecurityFeatureArgs, GetSystemSecurityFeatureResult, GetSystemSecurityFeatureOutputArgs } from "./getSystemSecurityFeature";
+export const getSystemSecurityFeature: typeof import("./getSystemSecurityFeature").getSystemSecurityFeature = null as any;
+export const getSystemSecurityFeatureOutput: typeof import("./getSystemSecurityFeature").getSystemSecurityFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getSystemSecurityFeature","getSystemSecurityFeatureOutput"], () => require("./getSystemSecurityFeature"));
+
+export { GetSystemSnmpFeatureArgs, GetSystemSnmpFeatureResult, GetSystemSnmpFeatureOutputArgs } from "./getSystemSnmpFeature";
+export const getSystemSnmpFeature: typeof import("./getSystemSnmpFeature").getSystemSnmpFeature = null as any;
+export const getSystemSnmpFeatureOutput: typeof import("./getSystemSnmpFeature").getSystemSnmpFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getSystemSnmpFeature","getSystemSnmpFeatureOutput"], () => require("./getSystemSnmpFeature"));
 
 export { GetTlocListPolicyObjectArgs, GetTlocListPolicyObjectResult, GetTlocListPolicyObjectOutputArgs } from "./getTlocListPolicyObject";
 export const getTlocListPolicyObject: typeof import("./getTlocListPolicyObject").getTlocListPolicyObject = null as any;
@@ -905,35 +1025,95 @@ export const getTransportFeatureProfile: typeof import("./getTransportFeaturePro
 export const getTransportFeatureProfileOutput: typeof import("./getTransportFeatureProfile").getTransportFeatureProfileOutput = null as any;
 utilities.lazyLoad(exports, ["getTransportFeatureProfile","getTransportFeatureProfileOutput"], () => require("./getTransportFeatureProfile"));
 
-export { GetTransportIpv6TrackerProfileParcelArgs, GetTransportIpv6TrackerProfileParcelResult, GetTransportIpv6TrackerProfileParcelOutputArgs } from "./getTransportIpv6TrackerProfileParcel";
-export const getTransportIpv6TrackerProfileParcel: typeof import("./getTransportIpv6TrackerProfileParcel").getTransportIpv6TrackerProfileParcel = null as any;
-export const getTransportIpv6TrackerProfileParcelOutput: typeof import("./getTransportIpv6TrackerProfileParcel").getTransportIpv6TrackerProfileParcelOutput = null as any;
-utilities.lazyLoad(exports, ["getTransportIpv6TrackerProfileParcel","getTransportIpv6TrackerProfileParcelOutput"], () => require("./getTransportIpv6TrackerProfileParcel"));
+export { GetTransportGpsFeatureArgs, GetTransportGpsFeatureResult, GetTransportGpsFeatureOutputArgs } from "./getTransportGpsFeature";
+export const getTransportGpsFeature: typeof import("./getTransportGpsFeature").getTransportGpsFeature = null as any;
+export const getTransportGpsFeatureOutput: typeof import("./getTransportGpsFeature").getTransportGpsFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getTransportGpsFeature","getTransportGpsFeatureOutput"], () => require("./getTransportGpsFeature"));
 
-export { GetTransportManagementVpnInterfaceEthernetProfileParcelArgs, GetTransportManagementVpnInterfaceEthernetProfileParcelResult, GetTransportManagementVpnInterfaceEthernetProfileParcelOutputArgs } from "./getTransportManagementVpnInterfaceEthernetProfileParcel";
-export const getTransportManagementVpnInterfaceEthernetProfileParcel: typeof import("./getTransportManagementVpnInterfaceEthernetProfileParcel").getTransportManagementVpnInterfaceEthernetProfileParcel = null as any;
-export const getTransportManagementVpnInterfaceEthernetProfileParcelOutput: typeof import("./getTransportManagementVpnInterfaceEthernetProfileParcel").getTransportManagementVpnInterfaceEthernetProfileParcelOutput = null as any;
-utilities.lazyLoad(exports, ["getTransportManagementVpnInterfaceEthernetProfileParcel","getTransportManagementVpnInterfaceEthernetProfileParcelOutput"], () => require("./getTransportManagementVpnInterfaceEthernetProfileParcel"));
+export { GetTransportIpv6TrackerFeatureArgs, GetTransportIpv6TrackerFeatureResult, GetTransportIpv6TrackerFeatureOutputArgs } from "./getTransportIpv6TrackerFeature";
+export const getTransportIpv6TrackerFeature: typeof import("./getTransportIpv6TrackerFeature").getTransportIpv6TrackerFeature = null as any;
+export const getTransportIpv6TrackerFeatureOutput: typeof import("./getTransportIpv6TrackerFeature").getTransportIpv6TrackerFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getTransportIpv6TrackerFeature","getTransportIpv6TrackerFeatureOutput"], () => require("./getTransportIpv6TrackerFeature"));
 
-export { GetTransportManagementVpnProfileParcelArgs, GetTransportManagementVpnProfileParcelResult, GetTransportManagementVpnProfileParcelOutputArgs } from "./getTransportManagementVpnProfileParcel";
-export const getTransportManagementVpnProfileParcel: typeof import("./getTransportManagementVpnProfileParcel").getTransportManagementVpnProfileParcel = null as any;
-export const getTransportManagementVpnProfileParcelOutput: typeof import("./getTransportManagementVpnProfileParcel").getTransportManagementVpnProfileParcelOutput = null as any;
-utilities.lazyLoad(exports, ["getTransportManagementVpnProfileParcel","getTransportManagementVpnProfileParcelOutput"], () => require("./getTransportManagementVpnProfileParcel"));
+export { GetTransportIpv6TrackerGroupFeatureArgs, GetTransportIpv6TrackerGroupFeatureResult, GetTransportIpv6TrackerGroupFeatureOutputArgs } from "./getTransportIpv6TrackerGroupFeature";
+export const getTransportIpv6TrackerGroupFeature: typeof import("./getTransportIpv6TrackerGroupFeature").getTransportIpv6TrackerGroupFeature = null as any;
+export const getTransportIpv6TrackerGroupFeatureOutput: typeof import("./getTransportIpv6TrackerGroupFeature").getTransportIpv6TrackerGroupFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getTransportIpv6TrackerGroupFeature","getTransportIpv6TrackerGroupFeatureOutput"], () => require("./getTransportIpv6TrackerGroupFeature"));
 
-export { GetTransportRoutingBgpProfileParcelArgs, GetTransportRoutingBgpProfileParcelResult, GetTransportRoutingBgpProfileParcelOutputArgs } from "./getTransportRoutingBgpProfileParcel";
-export const getTransportRoutingBgpProfileParcel: typeof import("./getTransportRoutingBgpProfileParcel").getTransportRoutingBgpProfileParcel = null as any;
-export const getTransportRoutingBgpProfileParcelOutput: typeof import("./getTransportRoutingBgpProfileParcel").getTransportRoutingBgpProfileParcelOutput = null as any;
-utilities.lazyLoad(exports, ["getTransportRoutingBgpProfileParcel","getTransportRoutingBgpProfileParcelOutput"], () => require("./getTransportRoutingBgpProfileParcel"));
+export { GetTransportManagementVpnFeatureArgs, GetTransportManagementVpnFeatureResult, GetTransportManagementVpnFeatureOutputArgs } from "./getTransportManagementVpnFeature";
+export const getTransportManagementVpnFeature: typeof import("./getTransportManagementVpnFeature").getTransportManagementVpnFeature = null as any;
+export const getTransportManagementVpnFeatureOutput: typeof import("./getTransportManagementVpnFeature").getTransportManagementVpnFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getTransportManagementVpnFeature","getTransportManagementVpnFeatureOutput"], () => require("./getTransportManagementVpnFeature"));
 
-export { GetTransportWanVpnInterfaceEthernetProfileParcelArgs, GetTransportWanVpnInterfaceEthernetProfileParcelResult, GetTransportWanVpnInterfaceEthernetProfileParcelOutputArgs } from "./getTransportWanVpnInterfaceEthernetProfileParcel";
-export const getTransportWanVpnInterfaceEthernetProfileParcel: typeof import("./getTransportWanVpnInterfaceEthernetProfileParcel").getTransportWanVpnInterfaceEthernetProfileParcel = null as any;
-export const getTransportWanVpnInterfaceEthernetProfileParcelOutput: typeof import("./getTransportWanVpnInterfaceEthernetProfileParcel").getTransportWanVpnInterfaceEthernetProfileParcelOutput = null as any;
-utilities.lazyLoad(exports, ["getTransportWanVpnInterfaceEthernetProfileParcel","getTransportWanVpnInterfaceEthernetProfileParcelOutput"], () => require("./getTransportWanVpnInterfaceEthernetProfileParcel"));
+export { GetTransportManagementVpnInterfaceEthernetFeatureArgs, GetTransportManagementVpnInterfaceEthernetFeatureResult, GetTransportManagementVpnInterfaceEthernetFeatureOutputArgs } from "./getTransportManagementVpnInterfaceEthernetFeature";
+export const getTransportManagementVpnInterfaceEthernetFeature: typeof import("./getTransportManagementVpnInterfaceEthernetFeature").getTransportManagementVpnInterfaceEthernetFeature = null as any;
+export const getTransportManagementVpnInterfaceEthernetFeatureOutput: typeof import("./getTransportManagementVpnInterfaceEthernetFeature").getTransportManagementVpnInterfaceEthernetFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getTransportManagementVpnInterfaceEthernetFeature","getTransportManagementVpnInterfaceEthernetFeatureOutput"], () => require("./getTransportManagementVpnInterfaceEthernetFeature"));
 
-export { GetTransportWanVpnProfileParcelArgs, GetTransportWanVpnProfileParcelResult, GetTransportWanVpnProfileParcelOutputArgs } from "./getTransportWanVpnProfileParcel";
-export const getTransportWanVpnProfileParcel: typeof import("./getTransportWanVpnProfileParcel").getTransportWanVpnProfileParcel = null as any;
-export const getTransportWanVpnProfileParcelOutput: typeof import("./getTransportWanVpnProfileParcel").getTransportWanVpnProfileParcelOutput = null as any;
-utilities.lazyLoad(exports, ["getTransportWanVpnProfileParcel","getTransportWanVpnProfileParcelOutput"], () => require("./getTransportWanVpnProfileParcel"));
+export { GetTransportRoutePolicyFeatureArgs, GetTransportRoutePolicyFeatureResult, GetTransportRoutePolicyFeatureOutputArgs } from "./getTransportRoutePolicyFeature";
+export const getTransportRoutePolicyFeature: typeof import("./getTransportRoutePolicyFeature").getTransportRoutePolicyFeature = null as any;
+export const getTransportRoutePolicyFeatureOutput: typeof import("./getTransportRoutePolicyFeature").getTransportRoutePolicyFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getTransportRoutePolicyFeature","getTransportRoutePolicyFeatureOutput"], () => require("./getTransportRoutePolicyFeature"));
+
+export { GetTransportRoutingBgpFeatureArgs, GetTransportRoutingBgpFeatureResult, GetTransportRoutingBgpFeatureOutputArgs } from "./getTransportRoutingBgpFeature";
+export const getTransportRoutingBgpFeature: typeof import("./getTransportRoutingBgpFeature").getTransportRoutingBgpFeature = null as any;
+export const getTransportRoutingBgpFeatureOutput: typeof import("./getTransportRoutingBgpFeature").getTransportRoutingBgpFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getTransportRoutingBgpFeature","getTransportRoutingBgpFeatureOutput"], () => require("./getTransportRoutingBgpFeature"));
+
+export { GetTransportRoutingOspfFeatureArgs, GetTransportRoutingOspfFeatureResult, GetTransportRoutingOspfFeatureOutputArgs } from "./getTransportRoutingOspfFeature";
+export const getTransportRoutingOspfFeature: typeof import("./getTransportRoutingOspfFeature").getTransportRoutingOspfFeature = null as any;
+export const getTransportRoutingOspfFeatureOutput: typeof import("./getTransportRoutingOspfFeature").getTransportRoutingOspfFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getTransportRoutingOspfFeature","getTransportRoutingOspfFeatureOutput"], () => require("./getTransportRoutingOspfFeature"));
+
+export { GetTransportRoutingOspfv3Ipv4FeatureArgs, GetTransportRoutingOspfv3Ipv4FeatureResult, GetTransportRoutingOspfv3Ipv4FeatureOutputArgs } from "./getTransportRoutingOspfv3Ipv4Feature";
+export const getTransportRoutingOspfv3Ipv4Feature: typeof import("./getTransportRoutingOspfv3Ipv4Feature").getTransportRoutingOspfv3Ipv4Feature = null as any;
+export const getTransportRoutingOspfv3Ipv4FeatureOutput: typeof import("./getTransportRoutingOspfv3Ipv4Feature").getTransportRoutingOspfv3Ipv4FeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getTransportRoutingOspfv3Ipv4Feature","getTransportRoutingOspfv3Ipv4FeatureOutput"], () => require("./getTransportRoutingOspfv3Ipv4Feature"));
+
+export { GetTransportRoutingOspfv3Ipv6FeatureArgs, GetTransportRoutingOspfv3Ipv6FeatureResult, GetTransportRoutingOspfv3Ipv6FeatureOutputArgs } from "./getTransportRoutingOspfv3Ipv6Feature";
+export const getTransportRoutingOspfv3Ipv6Feature: typeof import("./getTransportRoutingOspfv3Ipv6Feature").getTransportRoutingOspfv3Ipv6Feature = null as any;
+export const getTransportRoutingOspfv3Ipv6FeatureOutput: typeof import("./getTransportRoutingOspfv3Ipv6Feature").getTransportRoutingOspfv3Ipv6FeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getTransportRoutingOspfv3Ipv6Feature","getTransportRoutingOspfv3Ipv6FeatureOutput"], () => require("./getTransportRoutingOspfv3Ipv6Feature"));
+
+export { GetTransportTrackerFeatureArgs, GetTransportTrackerFeatureResult, GetTransportTrackerFeatureOutputArgs } from "./getTransportTrackerFeature";
+export const getTransportTrackerFeature: typeof import("./getTransportTrackerFeature").getTransportTrackerFeature = null as any;
+export const getTransportTrackerFeatureOutput: typeof import("./getTransportTrackerFeature").getTransportTrackerFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getTransportTrackerFeature","getTransportTrackerFeatureOutput"], () => require("./getTransportTrackerFeature"));
+
+export { GetTransportTrackerGroupFeatureArgs, GetTransportTrackerGroupFeatureResult, GetTransportTrackerGroupFeatureOutputArgs } from "./getTransportTrackerGroupFeature";
+export const getTransportTrackerGroupFeature: typeof import("./getTransportTrackerGroupFeature").getTransportTrackerGroupFeature = null as any;
+export const getTransportTrackerGroupFeatureOutput: typeof import("./getTransportTrackerGroupFeature").getTransportTrackerGroupFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getTransportTrackerGroupFeature","getTransportTrackerGroupFeatureOutput"], () => require("./getTransportTrackerGroupFeature"));
+
+export { GetTransportWanVpnFeatureArgs, GetTransportWanVpnFeatureResult, GetTransportWanVpnFeatureOutputArgs } from "./getTransportWanVpnFeature";
+export const getTransportWanVpnFeature: typeof import("./getTransportWanVpnFeature").getTransportWanVpnFeature = null as any;
+export const getTransportWanVpnFeatureOutput: typeof import("./getTransportWanVpnFeature").getTransportWanVpnFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getTransportWanVpnFeature","getTransportWanVpnFeatureOutput"], () => require("./getTransportWanVpnFeature"));
+
+export { GetTransportWanVpnInterfaceCellularFeatureArgs, GetTransportWanVpnInterfaceCellularFeatureResult, GetTransportWanVpnInterfaceCellularFeatureOutputArgs } from "./getTransportWanVpnInterfaceCellularFeature";
+export const getTransportWanVpnInterfaceCellularFeature: typeof import("./getTransportWanVpnInterfaceCellularFeature").getTransportWanVpnInterfaceCellularFeature = null as any;
+export const getTransportWanVpnInterfaceCellularFeatureOutput: typeof import("./getTransportWanVpnInterfaceCellularFeature").getTransportWanVpnInterfaceCellularFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getTransportWanVpnInterfaceCellularFeature","getTransportWanVpnInterfaceCellularFeatureOutput"], () => require("./getTransportWanVpnInterfaceCellularFeature"));
+
+export { GetTransportWanVpnInterfaceEthernetFeatureArgs, GetTransportWanVpnInterfaceEthernetFeatureResult, GetTransportWanVpnInterfaceEthernetFeatureOutputArgs } from "./getTransportWanVpnInterfaceEthernetFeature";
+export const getTransportWanVpnInterfaceEthernetFeature: typeof import("./getTransportWanVpnInterfaceEthernetFeature").getTransportWanVpnInterfaceEthernetFeature = null as any;
+export const getTransportWanVpnInterfaceEthernetFeatureOutput: typeof import("./getTransportWanVpnInterfaceEthernetFeature").getTransportWanVpnInterfaceEthernetFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getTransportWanVpnInterfaceEthernetFeature","getTransportWanVpnInterfaceEthernetFeatureOutput"], () => require("./getTransportWanVpnInterfaceEthernetFeature"));
+
+export { GetTransportWanVpnInterfaceGreFeatureArgs, GetTransportWanVpnInterfaceGreFeatureResult, GetTransportWanVpnInterfaceGreFeatureOutputArgs } from "./getTransportWanVpnInterfaceGreFeature";
+export const getTransportWanVpnInterfaceGreFeature: typeof import("./getTransportWanVpnInterfaceGreFeature").getTransportWanVpnInterfaceGreFeature = null as any;
+export const getTransportWanVpnInterfaceGreFeatureOutput: typeof import("./getTransportWanVpnInterfaceGreFeature").getTransportWanVpnInterfaceGreFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getTransportWanVpnInterfaceGreFeature","getTransportWanVpnInterfaceGreFeatureOutput"], () => require("./getTransportWanVpnInterfaceGreFeature"));
+
+export { GetTransportWanVpnInterfaceIpsecFeatureArgs, GetTransportWanVpnInterfaceIpsecFeatureResult, GetTransportWanVpnInterfaceIpsecFeatureOutputArgs } from "./getTransportWanVpnInterfaceIpsecFeature";
+export const getTransportWanVpnInterfaceIpsecFeature: typeof import("./getTransportWanVpnInterfaceIpsecFeature").getTransportWanVpnInterfaceIpsecFeature = null as any;
+export const getTransportWanVpnInterfaceIpsecFeatureOutput: typeof import("./getTransportWanVpnInterfaceIpsecFeature").getTransportWanVpnInterfaceIpsecFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getTransportWanVpnInterfaceIpsecFeature","getTransportWanVpnInterfaceIpsecFeatureOutput"], () => require("./getTransportWanVpnInterfaceIpsecFeature"));
+
+export { GetTransportWanVpnInterfaceT1E1SerialFeatureArgs, GetTransportWanVpnInterfaceT1E1SerialFeatureResult, GetTransportWanVpnInterfaceT1E1SerialFeatureOutputArgs } from "./getTransportWanVpnInterfaceT1E1SerialFeature";
+export const getTransportWanVpnInterfaceT1E1SerialFeature: typeof import("./getTransportWanVpnInterfaceT1E1SerialFeature").getTransportWanVpnInterfaceT1E1SerialFeature = null as any;
+export const getTransportWanVpnInterfaceT1E1SerialFeatureOutput: typeof import("./getTransportWanVpnInterfaceT1E1SerialFeature").getTransportWanVpnInterfaceT1E1SerialFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getTransportWanVpnInterfaceT1E1SerialFeature","getTransportWanVpnInterfaceT1E1SerialFeatureOutput"], () => require("./getTransportWanVpnInterfaceT1E1SerialFeature"));
 
 export { GetUrlFilteringPolicyDefinitionArgs, GetUrlFilteringPolicyDefinitionResult, GetUrlFilteringPolicyDefinitionOutputArgs } from "./getUrlFilteringPolicyDefinition";
 export const getUrlFilteringPolicyDefinition: typeof import("./getUrlFilteringPolicyDefinition").getUrlFilteringPolicyDefinition = null as any;
@@ -994,6 +1174,11 @@ export { GetVpnMembershipPolicyDefinitionArgs, GetVpnMembershipPolicyDefinitionR
 export const getVpnMembershipPolicyDefinition: typeof import("./getVpnMembershipPolicyDefinition").getVpnMembershipPolicyDefinition = null as any;
 export const getVpnMembershipPolicyDefinitionOutput: typeof import("./getVpnMembershipPolicyDefinition").getVpnMembershipPolicyDefinitionOutput = null as any;
 utilities.lazyLoad(exports, ["getVpnMembershipPolicyDefinition","getVpnMembershipPolicyDefinitionOutput"], () => require("./getVpnMembershipPolicyDefinition"));
+
+export { GetZoneBasedFirewallPolicyDefinitionArgs, GetZoneBasedFirewallPolicyDefinitionResult, GetZoneBasedFirewallPolicyDefinitionOutputArgs } from "./getZoneBasedFirewallPolicyDefinition";
+export const getZoneBasedFirewallPolicyDefinition: typeof import("./getZoneBasedFirewallPolicyDefinition").getZoneBasedFirewallPolicyDefinition = null as any;
+export const getZoneBasedFirewallPolicyDefinitionOutput: typeof import("./getZoneBasedFirewallPolicyDefinition").getZoneBasedFirewallPolicyDefinitionOutput = null as any;
+utilities.lazyLoad(exports, ["getZoneBasedFirewallPolicyDefinition","getZoneBasedFirewallPolicyDefinitionOutput"], () => require("./getZoneBasedFirewallPolicyDefinition"));
 
 export { GetZoneListPolicyObjectArgs, GetZoneListPolicyObjectResult, GetZoneListPolicyObjectOutputArgs } from "./getZoneListPolicyObject";
 export const getZoneListPolicyObject: typeof import("./getZoneListPolicyObject").getZoneListPolicyObject = null as any;
@@ -1075,10 +1260,85 @@ export type ObjectGroupPolicyDefinition = import("./objectGroupPolicyDefinition"
 export const ObjectGroupPolicyDefinition: typeof import("./objectGroupPolicyDefinition").ObjectGroupPolicyDefinition = null as any;
 utilities.lazyLoad(exports, ["ObjectGroupPolicyDefinition"], () => require("./objectGroupPolicyDefinition"));
 
+export { OtherFeatureProfileArgs, OtherFeatureProfileState } from "./otherFeatureProfile";
+export type OtherFeatureProfile = import("./otherFeatureProfile").OtherFeatureProfile;
+export const OtherFeatureProfile: typeof import("./otherFeatureProfile").OtherFeatureProfile = null as any;
+utilities.lazyLoad(exports, ["OtherFeatureProfile"], () => require("./otherFeatureProfile"));
+
+export { OtherThousandeyesFeatureArgs, OtherThousandeyesFeatureState } from "./otherThousandeyesFeature";
+export type OtherThousandeyesFeature = import("./otherThousandeyesFeature").OtherThousandeyesFeature;
+export const OtherThousandeyesFeature: typeof import("./otherThousandeyesFeature").OtherThousandeyesFeature = null as any;
+utilities.lazyLoad(exports, ["OtherThousandeyesFeature"], () => require("./otherThousandeyesFeature"));
+
+export { OtherUcseFeatureArgs, OtherUcseFeatureState } from "./otherUcseFeature";
+export type OtherUcseFeature = import("./otherUcseFeature").OtherUcseFeature;
+export const OtherUcseFeature: typeof import("./otherUcseFeature").OtherUcseFeature = null as any;
+utilities.lazyLoad(exports, ["OtherUcseFeature"], () => require("./otherUcseFeature"));
+
 export { PolicerPolicyObjectArgs, PolicerPolicyObjectState } from "./policerPolicyObject";
 export type PolicerPolicyObject = import("./policerPolicyObject").PolicerPolicyObject;
 export const PolicerPolicyObject: typeof import("./policerPolicyObject").PolicerPolicyObject = null as any;
 utilities.lazyLoad(exports, ["PolicerPolicyObject"], () => require("./policerPolicyObject"));
+
+export { PolicyObjectClassMapArgs, PolicyObjectClassMapState } from "./policyObjectClassMap";
+export type PolicyObjectClassMap = import("./policyObjectClassMap").PolicyObjectClassMap;
+export const PolicyObjectClassMap: typeof import("./policyObjectClassMap").PolicyObjectClassMap = null as any;
+utilities.lazyLoad(exports, ["PolicyObjectClassMap"], () => require("./policyObjectClassMap"));
+
+export { PolicyObjectColorListArgs, PolicyObjectColorListState } from "./policyObjectColorList";
+export type PolicyObjectColorList = import("./policyObjectColorList").PolicyObjectColorList;
+export const PolicyObjectColorList: typeof import("./policyObjectColorList").PolicyObjectColorList = null as any;
+utilities.lazyLoad(exports, ["PolicyObjectColorList"], () => require("./policyObjectColorList"));
+
+export { PolicyObjectDataIpv4PrefixListArgs, PolicyObjectDataIpv4PrefixListState } from "./policyObjectDataIpv4PrefixList";
+export type PolicyObjectDataIpv4PrefixList = import("./policyObjectDataIpv4PrefixList").PolicyObjectDataIpv4PrefixList;
+export const PolicyObjectDataIpv4PrefixList: typeof import("./policyObjectDataIpv4PrefixList").PolicyObjectDataIpv4PrefixList = null as any;
+utilities.lazyLoad(exports, ["PolicyObjectDataIpv4PrefixList"], () => require("./policyObjectDataIpv4PrefixList"));
+
+export { PolicyObjectDataIpv6PrefixListArgs, PolicyObjectDataIpv6PrefixListState } from "./policyObjectDataIpv6PrefixList";
+export type PolicyObjectDataIpv6PrefixList = import("./policyObjectDataIpv6PrefixList").PolicyObjectDataIpv6PrefixList;
+export const PolicyObjectDataIpv6PrefixList: typeof import("./policyObjectDataIpv6PrefixList").PolicyObjectDataIpv6PrefixList = null as any;
+utilities.lazyLoad(exports, ["PolicyObjectDataIpv6PrefixList"], () => require("./policyObjectDataIpv6PrefixList"));
+
+export { PolicyObjectExpandedCommunityListArgs, PolicyObjectExpandedCommunityListState } from "./policyObjectExpandedCommunityList";
+export type PolicyObjectExpandedCommunityList = import("./policyObjectExpandedCommunityList").PolicyObjectExpandedCommunityList;
+export const PolicyObjectExpandedCommunityList: typeof import("./policyObjectExpandedCommunityList").PolicyObjectExpandedCommunityList = null as any;
+utilities.lazyLoad(exports, ["PolicyObjectExpandedCommunityList"], () => require("./policyObjectExpandedCommunityList"));
+
+export { PolicyObjectExtendedCommunityListArgs, PolicyObjectExtendedCommunityListState } from "./policyObjectExtendedCommunityList";
+export type PolicyObjectExtendedCommunityList = import("./policyObjectExtendedCommunityList").PolicyObjectExtendedCommunityList;
+export const PolicyObjectExtendedCommunityList: typeof import("./policyObjectExtendedCommunityList").PolicyObjectExtendedCommunityList = null as any;
+utilities.lazyLoad(exports, ["PolicyObjectExtendedCommunityList"], () => require("./policyObjectExtendedCommunityList"));
+
+export { PolicyObjectFeatureProfileArgs, PolicyObjectFeatureProfileState } from "./policyObjectFeatureProfile";
+export type PolicyObjectFeatureProfile = import("./policyObjectFeatureProfile").PolicyObjectFeatureProfile;
+export const PolicyObjectFeatureProfile: typeof import("./policyObjectFeatureProfile").PolicyObjectFeatureProfile = null as any;
+utilities.lazyLoad(exports, ["PolicyObjectFeatureProfile"], () => require("./policyObjectFeatureProfile"));
+
+export { PolicyObjectIpv4PrefixListArgs, PolicyObjectIpv4PrefixListState } from "./policyObjectIpv4PrefixList";
+export type PolicyObjectIpv4PrefixList = import("./policyObjectIpv4PrefixList").PolicyObjectIpv4PrefixList;
+export const PolicyObjectIpv4PrefixList: typeof import("./policyObjectIpv4PrefixList").PolicyObjectIpv4PrefixList = null as any;
+utilities.lazyLoad(exports, ["PolicyObjectIpv4PrefixList"], () => require("./policyObjectIpv4PrefixList"));
+
+export { PolicyObjectIpv6PrefixListArgs, PolicyObjectIpv6PrefixListState } from "./policyObjectIpv6PrefixList";
+export type PolicyObjectIpv6PrefixList = import("./policyObjectIpv6PrefixList").PolicyObjectIpv6PrefixList;
+export const PolicyObjectIpv6PrefixList: typeof import("./policyObjectIpv6PrefixList").PolicyObjectIpv6PrefixList = null as any;
+utilities.lazyLoad(exports, ["PolicyObjectIpv6PrefixList"], () => require("./policyObjectIpv6PrefixList"));
+
+export { PolicyObjectMirrorArgs, PolicyObjectMirrorState } from "./policyObjectMirror";
+export type PolicyObjectMirror = import("./policyObjectMirror").PolicyObjectMirror;
+export const PolicyObjectMirror: typeof import("./policyObjectMirror").PolicyObjectMirror = null as any;
+utilities.lazyLoad(exports, ["PolicyObjectMirror"], () => require("./policyObjectMirror"));
+
+export { PolicyObjectPolicerArgs, PolicyObjectPolicerState } from "./policyObjectPolicer";
+export type PolicyObjectPolicer = import("./policyObjectPolicer").PolicyObjectPolicer;
+export const PolicyObjectPolicer: typeof import("./policyObjectPolicer").PolicyObjectPolicer = null as any;
+utilities.lazyLoad(exports, ["PolicyObjectPolicer"], () => require("./policyObjectPolicer"));
+
+export { PolicyObjectTlocListArgs, PolicyObjectTlocListState } from "./policyObjectTlocList";
+export type PolicyObjectTlocList = import("./policyObjectTlocList").PolicyObjectTlocList;
+export const PolicyObjectTlocList: typeof import("./policyObjectTlocList").PolicyObjectTlocList = null as any;
+utilities.lazyLoad(exports, ["PolicyObjectTlocList"], () => require("./policyObjectTlocList"));
 
 export { PortListPolicyObjectArgs, PortListPolicyObjectState } from "./portListPolicyObject";
 export type PortListPolicyObject = import("./portListPolicyObject").PortListPolicyObject;
@@ -1140,20 +1400,80 @@ export type ServiceFeatureProfile = import("./serviceFeatureProfile").ServiceFea
 export const ServiceFeatureProfile: typeof import("./serviceFeatureProfile").ServiceFeatureProfile = null as any;
 utilities.lazyLoad(exports, ["ServiceFeatureProfile"], () => require("./serviceFeatureProfile"));
 
-export { ServiceLanVpnInterfaceEthernetProfileParcelArgs, ServiceLanVpnInterfaceEthernetProfileParcelState } from "./serviceLanVpnInterfaceEthernetProfileParcel";
-export type ServiceLanVpnInterfaceEthernetProfileParcel = import("./serviceLanVpnInterfaceEthernetProfileParcel").ServiceLanVpnInterfaceEthernetProfileParcel;
-export const ServiceLanVpnInterfaceEthernetProfileParcel: typeof import("./serviceLanVpnInterfaceEthernetProfileParcel").ServiceLanVpnInterfaceEthernetProfileParcel = null as any;
-utilities.lazyLoad(exports, ["ServiceLanVpnInterfaceEthernetProfileParcel"], () => require("./serviceLanVpnInterfaceEthernetProfileParcel"));
+export { ServiceLanVpnFeatureArgs, ServiceLanVpnFeatureState } from "./serviceLanVpnFeature";
+export type ServiceLanVpnFeature = import("./serviceLanVpnFeature").ServiceLanVpnFeature;
+export const ServiceLanVpnFeature: typeof import("./serviceLanVpnFeature").ServiceLanVpnFeature = null as any;
+utilities.lazyLoad(exports, ["ServiceLanVpnFeature"], () => require("./serviceLanVpnFeature"));
 
-export { ServiceLanVpnProfileParcelArgs, ServiceLanVpnProfileParcelState } from "./serviceLanVpnProfileParcel";
-export type ServiceLanVpnProfileParcel = import("./serviceLanVpnProfileParcel").ServiceLanVpnProfileParcel;
-export const ServiceLanVpnProfileParcel: typeof import("./serviceLanVpnProfileParcel").ServiceLanVpnProfileParcel = null as any;
-utilities.lazyLoad(exports, ["ServiceLanVpnProfileParcel"], () => require("./serviceLanVpnProfileParcel"));
+export { ServiceLanVpnInterfaceEthernetFeatureArgs, ServiceLanVpnInterfaceEthernetFeatureState } from "./serviceLanVpnInterfaceEthernetFeature";
+export type ServiceLanVpnInterfaceEthernetFeature = import("./serviceLanVpnInterfaceEthernetFeature").ServiceLanVpnInterfaceEthernetFeature;
+export const ServiceLanVpnInterfaceEthernetFeature: typeof import("./serviceLanVpnInterfaceEthernetFeature").ServiceLanVpnInterfaceEthernetFeature = null as any;
+utilities.lazyLoad(exports, ["ServiceLanVpnInterfaceEthernetFeature"], () => require("./serviceLanVpnInterfaceEthernetFeature"));
 
-export { ServiceTrackerProfileParcelArgs, ServiceTrackerProfileParcelState } from "./serviceTrackerProfileParcel";
-export type ServiceTrackerProfileParcel = import("./serviceTrackerProfileParcel").ServiceTrackerProfileParcel;
-export const ServiceTrackerProfileParcel: typeof import("./serviceTrackerProfileParcel").ServiceTrackerProfileParcel = null as any;
-utilities.lazyLoad(exports, ["ServiceTrackerProfileParcel"], () => require("./serviceTrackerProfileParcel"));
+export { ServiceLanVpnInterfaceGreFeatureArgs, ServiceLanVpnInterfaceGreFeatureState } from "./serviceLanVpnInterfaceGreFeature";
+export type ServiceLanVpnInterfaceGreFeature = import("./serviceLanVpnInterfaceGreFeature").ServiceLanVpnInterfaceGreFeature;
+export const ServiceLanVpnInterfaceGreFeature: typeof import("./serviceLanVpnInterfaceGreFeature").ServiceLanVpnInterfaceGreFeature = null as any;
+utilities.lazyLoad(exports, ["ServiceLanVpnInterfaceGreFeature"], () => require("./serviceLanVpnInterfaceGreFeature"));
+
+export { ServiceLanVpnInterfaceIpsecFeatureArgs, ServiceLanVpnInterfaceIpsecFeatureState } from "./serviceLanVpnInterfaceIpsecFeature";
+export type ServiceLanVpnInterfaceIpsecFeature = import("./serviceLanVpnInterfaceIpsecFeature").ServiceLanVpnInterfaceIpsecFeature;
+export const ServiceLanVpnInterfaceIpsecFeature: typeof import("./serviceLanVpnInterfaceIpsecFeature").ServiceLanVpnInterfaceIpsecFeature = null as any;
+utilities.lazyLoad(exports, ["ServiceLanVpnInterfaceIpsecFeature"], () => require("./serviceLanVpnInterfaceIpsecFeature"));
+
+export { ServiceLanVpnInterfaceSviFeatureArgs, ServiceLanVpnInterfaceSviFeatureState } from "./serviceLanVpnInterfaceSviFeature";
+export type ServiceLanVpnInterfaceSviFeature = import("./serviceLanVpnInterfaceSviFeature").ServiceLanVpnInterfaceSviFeature;
+export const ServiceLanVpnInterfaceSviFeature: typeof import("./serviceLanVpnInterfaceSviFeature").ServiceLanVpnInterfaceSviFeature = null as any;
+utilities.lazyLoad(exports, ["ServiceLanVpnInterfaceSviFeature"], () => require("./serviceLanVpnInterfaceSviFeature"));
+
+export { ServiceObjectTrackerFeatureArgs, ServiceObjectTrackerFeatureState } from "./serviceObjectTrackerFeature";
+export type ServiceObjectTrackerFeature = import("./serviceObjectTrackerFeature").ServiceObjectTrackerFeature;
+export const ServiceObjectTrackerFeature: typeof import("./serviceObjectTrackerFeature").ServiceObjectTrackerFeature = null as any;
+utilities.lazyLoad(exports, ["ServiceObjectTrackerFeature"], () => require("./serviceObjectTrackerFeature"));
+
+export { ServiceObjectTrackerGroupFeatureArgs, ServiceObjectTrackerGroupFeatureState } from "./serviceObjectTrackerGroupFeature";
+export type ServiceObjectTrackerGroupFeature = import("./serviceObjectTrackerGroupFeature").ServiceObjectTrackerGroupFeature;
+export const ServiceObjectTrackerGroupFeature: typeof import("./serviceObjectTrackerGroupFeature").ServiceObjectTrackerGroupFeature = null as any;
+utilities.lazyLoad(exports, ["ServiceObjectTrackerGroupFeature"], () => require("./serviceObjectTrackerGroupFeature"));
+
+export { ServiceRoutePolicyFeatureArgs, ServiceRoutePolicyFeatureState } from "./serviceRoutePolicyFeature";
+export type ServiceRoutePolicyFeature = import("./serviceRoutePolicyFeature").ServiceRoutePolicyFeature;
+export const ServiceRoutePolicyFeature: typeof import("./serviceRoutePolicyFeature").ServiceRoutePolicyFeature = null as any;
+utilities.lazyLoad(exports, ["ServiceRoutePolicyFeature"], () => require("./serviceRoutePolicyFeature"));
+
+export { ServiceRoutingBgpFeatureArgs, ServiceRoutingBgpFeatureState } from "./serviceRoutingBgpFeature";
+export type ServiceRoutingBgpFeature = import("./serviceRoutingBgpFeature").ServiceRoutingBgpFeature;
+export const ServiceRoutingBgpFeature: typeof import("./serviceRoutingBgpFeature").ServiceRoutingBgpFeature = null as any;
+utilities.lazyLoad(exports, ["ServiceRoutingBgpFeature"], () => require("./serviceRoutingBgpFeature"));
+
+export { ServiceRoutingOspfFeatureArgs, ServiceRoutingOspfFeatureState } from "./serviceRoutingOspfFeature";
+export type ServiceRoutingOspfFeature = import("./serviceRoutingOspfFeature").ServiceRoutingOspfFeature;
+export const ServiceRoutingOspfFeature: typeof import("./serviceRoutingOspfFeature").ServiceRoutingOspfFeature = null as any;
+utilities.lazyLoad(exports, ["ServiceRoutingOspfFeature"], () => require("./serviceRoutingOspfFeature"));
+
+export { ServiceRoutingOspfv3Ipv4FeatureArgs, ServiceRoutingOspfv3Ipv4FeatureState } from "./serviceRoutingOspfv3Ipv4Feature";
+export type ServiceRoutingOspfv3Ipv4Feature = import("./serviceRoutingOspfv3Ipv4Feature").ServiceRoutingOspfv3Ipv4Feature;
+export const ServiceRoutingOspfv3Ipv4Feature: typeof import("./serviceRoutingOspfv3Ipv4Feature").ServiceRoutingOspfv3Ipv4Feature = null as any;
+utilities.lazyLoad(exports, ["ServiceRoutingOspfv3Ipv4Feature"], () => require("./serviceRoutingOspfv3Ipv4Feature"));
+
+export { ServiceRoutingOspfv3Ipv6FeatureArgs, ServiceRoutingOspfv3Ipv6FeatureState } from "./serviceRoutingOspfv3Ipv6Feature";
+export type ServiceRoutingOspfv3Ipv6Feature = import("./serviceRoutingOspfv3Ipv6Feature").ServiceRoutingOspfv3Ipv6Feature;
+export const ServiceRoutingOspfv3Ipv6Feature: typeof import("./serviceRoutingOspfv3Ipv6Feature").ServiceRoutingOspfv3Ipv6Feature = null as any;
+utilities.lazyLoad(exports, ["ServiceRoutingOspfv3Ipv6Feature"], () => require("./serviceRoutingOspfv3Ipv6Feature"));
+
+export { ServiceSwitchportFeatureArgs, ServiceSwitchportFeatureState } from "./serviceSwitchportFeature";
+export type ServiceSwitchportFeature = import("./serviceSwitchportFeature").ServiceSwitchportFeature;
+export const ServiceSwitchportFeature: typeof import("./serviceSwitchportFeature").ServiceSwitchportFeature = null as any;
+utilities.lazyLoad(exports, ["ServiceSwitchportFeature"], () => require("./serviceSwitchportFeature"));
+
+export { ServiceTrackerFeatureArgs, ServiceTrackerFeatureState } from "./serviceTrackerFeature";
+export type ServiceTrackerFeature = import("./serviceTrackerFeature").ServiceTrackerFeature;
+export const ServiceTrackerFeature: typeof import("./serviceTrackerFeature").ServiceTrackerFeature = null as any;
+utilities.lazyLoad(exports, ["ServiceTrackerFeature"], () => require("./serviceTrackerFeature"));
+
+export { ServiceTrackerGroupFeatureArgs, ServiceTrackerGroupFeatureState } from "./serviceTrackerGroupFeature";
+export type ServiceTrackerGroupFeature = import("./serviceTrackerGroupFeature").ServiceTrackerGroupFeature;
+export const ServiceTrackerGroupFeature: typeof import("./serviceTrackerGroupFeature").ServiceTrackerGroupFeature = null as any;
+utilities.lazyLoad(exports, ["ServiceTrackerGroupFeature"], () => require("./serviceTrackerGroupFeature"));
 
 export { SiteListPolicyObjectArgs, SiteListPolicyObjectState } from "./siteListPolicyObject";
 export type SiteListPolicyObject = import("./siteListPolicyObject").SiteListPolicyObject;
@@ -1175,80 +1495,90 @@ export type SwitchportFeatureTemplate = import("./switchportFeatureTemplate").Sw
 export const SwitchportFeatureTemplate: typeof import("./switchportFeatureTemplate").SwitchportFeatureTemplate = null as any;
 utilities.lazyLoad(exports, ["SwitchportFeatureTemplate"], () => require("./switchportFeatureTemplate"));
 
-export { SystemAaaProfileParcelArgs, SystemAaaProfileParcelState } from "./systemAaaProfileParcel";
-export type SystemAaaProfileParcel = import("./systemAaaProfileParcel").SystemAaaProfileParcel;
-export const SystemAaaProfileParcel: typeof import("./systemAaaProfileParcel").SystemAaaProfileParcel = null as any;
-utilities.lazyLoad(exports, ["SystemAaaProfileParcel"], () => require("./systemAaaProfileParcel"));
+export { SystemAaaFeatureArgs, SystemAaaFeatureState } from "./systemAaaFeature";
+export type SystemAaaFeature = import("./systemAaaFeature").SystemAaaFeature;
+export const SystemAaaFeature: typeof import("./systemAaaFeature").SystemAaaFeature = null as any;
+utilities.lazyLoad(exports, ["SystemAaaFeature"], () => require("./systemAaaFeature"));
 
-export { SystemBannerProfileParcelArgs, SystemBannerProfileParcelState } from "./systemBannerProfileParcel";
-export type SystemBannerProfileParcel = import("./systemBannerProfileParcel").SystemBannerProfileParcel;
-export const SystemBannerProfileParcel: typeof import("./systemBannerProfileParcel").SystemBannerProfileParcel = null as any;
-utilities.lazyLoad(exports, ["SystemBannerProfileParcel"], () => require("./systemBannerProfileParcel"));
+export { SystemBannerFeatureArgs, SystemBannerFeatureState } from "./systemBannerFeature";
+export type SystemBannerFeature = import("./systemBannerFeature").SystemBannerFeature;
+export const SystemBannerFeature: typeof import("./systemBannerFeature").SystemBannerFeature = null as any;
+utilities.lazyLoad(exports, ["SystemBannerFeature"], () => require("./systemBannerFeature"));
 
-export { SystemBasicProfileParcelArgs, SystemBasicProfileParcelState } from "./systemBasicProfileParcel";
-export type SystemBasicProfileParcel = import("./systemBasicProfileParcel").SystemBasicProfileParcel;
-export const SystemBasicProfileParcel: typeof import("./systemBasicProfileParcel").SystemBasicProfileParcel = null as any;
-utilities.lazyLoad(exports, ["SystemBasicProfileParcel"], () => require("./systemBasicProfileParcel"));
+export { SystemBasicFeatureArgs, SystemBasicFeatureState } from "./systemBasicFeature";
+export type SystemBasicFeature = import("./systemBasicFeature").SystemBasicFeature;
+export const SystemBasicFeature: typeof import("./systemBasicFeature").SystemBasicFeature = null as any;
+utilities.lazyLoad(exports, ["SystemBasicFeature"], () => require("./systemBasicFeature"));
 
-export { SystemBfdProfileParcelArgs, SystemBfdProfileParcelState } from "./systemBfdProfileParcel";
-export type SystemBfdProfileParcel = import("./systemBfdProfileParcel").SystemBfdProfileParcel;
-export const SystemBfdProfileParcel: typeof import("./systemBfdProfileParcel").SystemBfdProfileParcel = null as any;
-utilities.lazyLoad(exports, ["SystemBfdProfileParcel"], () => require("./systemBfdProfileParcel"));
+export { SystemBfdFeatureArgs, SystemBfdFeatureState } from "./systemBfdFeature";
+export type SystemBfdFeature = import("./systemBfdFeature").SystemBfdFeature;
+export const SystemBfdFeature: typeof import("./systemBfdFeature").SystemBfdFeature = null as any;
+utilities.lazyLoad(exports, ["SystemBfdFeature"], () => require("./systemBfdFeature"));
 
 export { SystemFeatureProfileArgs, SystemFeatureProfileState } from "./systemFeatureProfile";
 export type SystemFeatureProfile = import("./systemFeatureProfile").SystemFeatureProfile;
 export const SystemFeatureProfile: typeof import("./systemFeatureProfile").SystemFeatureProfile = null as any;
 utilities.lazyLoad(exports, ["SystemFeatureProfile"], () => require("./systemFeatureProfile"));
 
-export { SystemFlexiblePortSpeedProfileParcelArgs, SystemFlexiblePortSpeedProfileParcelState } from "./systemFlexiblePortSpeedProfileParcel";
-export type SystemFlexiblePortSpeedProfileParcel = import("./systemFlexiblePortSpeedProfileParcel").SystemFlexiblePortSpeedProfileParcel;
-export const SystemFlexiblePortSpeedProfileParcel: typeof import("./systemFlexiblePortSpeedProfileParcel").SystemFlexiblePortSpeedProfileParcel = null as any;
-utilities.lazyLoad(exports, ["SystemFlexiblePortSpeedProfileParcel"], () => require("./systemFlexiblePortSpeedProfileParcel"));
+export { SystemFlexiblePortSpeedFeatureArgs, SystemFlexiblePortSpeedFeatureState } from "./systemFlexiblePortSpeedFeature";
+export type SystemFlexiblePortSpeedFeature = import("./systemFlexiblePortSpeedFeature").SystemFlexiblePortSpeedFeature;
+export const SystemFlexiblePortSpeedFeature: typeof import("./systemFlexiblePortSpeedFeature").SystemFlexiblePortSpeedFeature = null as any;
+utilities.lazyLoad(exports, ["SystemFlexiblePortSpeedFeature"], () => require("./systemFlexiblePortSpeedFeature"));
 
-export { SystemGlobalProfileParcelArgs, SystemGlobalProfileParcelState } from "./systemGlobalProfileParcel";
-export type SystemGlobalProfileParcel = import("./systemGlobalProfileParcel").SystemGlobalProfileParcel;
-export const SystemGlobalProfileParcel: typeof import("./systemGlobalProfileParcel").SystemGlobalProfileParcel = null as any;
-utilities.lazyLoad(exports, ["SystemGlobalProfileParcel"], () => require("./systemGlobalProfileParcel"));
+export { SystemGlobalFeatureArgs, SystemGlobalFeatureState } from "./systemGlobalFeature";
+export type SystemGlobalFeature = import("./systemGlobalFeature").SystemGlobalFeature;
+export const SystemGlobalFeature: typeof import("./systemGlobalFeature").SystemGlobalFeature = null as any;
+utilities.lazyLoad(exports, ["SystemGlobalFeature"], () => require("./systemGlobalFeature"));
 
-export { SystemLoggingProfileParcelArgs, SystemLoggingProfileParcelState } from "./systemLoggingProfileParcel";
-export type SystemLoggingProfileParcel = import("./systemLoggingProfileParcel").SystemLoggingProfileParcel;
-export const SystemLoggingProfileParcel: typeof import("./systemLoggingProfileParcel").SystemLoggingProfileParcel = null as any;
-utilities.lazyLoad(exports, ["SystemLoggingProfileParcel"], () => require("./systemLoggingProfileParcel"));
+export { SystemIpv4DeviceAccessFeatureArgs, SystemIpv4DeviceAccessFeatureState } from "./systemIpv4DeviceAccessFeature";
+export type SystemIpv4DeviceAccessFeature = import("./systemIpv4DeviceAccessFeature").SystemIpv4DeviceAccessFeature;
+export const SystemIpv4DeviceAccessFeature: typeof import("./systemIpv4DeviceAccessFeature").SystemIpv4DeviceAccessFeature = null as any;
+utilities.lazyLoad(exports, ["SystemIpv4DeviceAccessFeature"], () => require("./systemIpv4DeviceAccessFeature"));
 
-export { SystemMrfProfileParcelArgs, SystemMrfProfileParcelState } from "./systemMrfProfileParcel";
-export type SystemMrfProfileParcel = import("./systemMrfProfileParcel").SystemMrfProfileParcel;
-export const SystemMrfProfileParcel: typeof import("./systemMrfProfileParcel").SystemMrfProfileParcel = null as any;
-utilities.lazyLoad(exports, ["SystemMrfProfileParcel"], () => require("./systemMrfProfileParcel"));
+export { SystemIpv6DeviceAccessFeatureArgs, SystemIpv6DeviceAccessFeatureState } from "./systemIpv6DeviceAccessFeature";
+export type SystemIpv6DeviceAccessFeature = import("./systemIpv6DeviceAccessFeature").SystemIpv6DeviceAccessFeature;
+export const SystemIpv6DeviceAccessFeature: typeof import("./systemIpv6DeviceAccessFeature").SystemIpv6DeviceAccessFeature = null as any;
+utilities.lazyLoad(exports, ["SystemIpv6DeviceAccessFeature"], () => require("./systemIpv6DeviceAccessFeature"));
 
-export { SystemNtpProfileParcelArgs, SystemNtpProfileParcelState } from "./systemNtpProfileParcel";
-export type SystemNtpProfileParcel = import("./systemNtpProfileParcel").SystemNtpProfileParcel;
-export const SystemNtpProfileParcel: typeof import("./systemNtpProfileParcel").SystemNtpProfileParcel = null as any;
-utilities.lazyLoad(exports, ["SystemNtpProfileParcel"], () => require("./systemNtpProfileParcel"));
+export { SystemLoggingFeatureArgs, SystemLoggingFeatureState } from "./systemLoggingFeature";
+export type SystemLoggingFeature = import("./systemLoggingFeature").SystemLoggingFeature;
+export const SystemLoggingFeature: typeof import("./systemLoggingFeature").SystemLoggingFeature = null as any;
+utilities.lazyLoad(exports, ["SystemLoggingFeature"], () => require("./systemLoggingFeature"));
 
-export { SystemOmpProfileParcelArgs, SystemOmpProfileParcelState } from "./systemOmpProfileParcel";
-export type SystemOmpProfileParcel = import("./systemOmpProfileParcel").SystemOmpProfileParcel;
-export const SystemOmpProfileParcel: typeof import("./systemOmpProfileParcel").SystemOmpProfileParcel = null as any;
-utilities.lazyLoad(exports, ["SystemOmpProfileParcel"], () => require("./systemOmpProfileParcel"));
+export { SystemMrfFeatureArgs, SystemMrfFeatureState } from "./systemMrfFeature";
+export type SystemMrfFeature = import("./systemMrfFeature").SystemMrfFeature;
+export const SystemMrfFeature: typeof import("./systemMrfFeature").SystemMrfFeature = null as any;
+utilities.lazyLoad(exports, ["SystemMrfFeature"], () => require("./systemMrfFeature"));
 
-export { SystemPerformanceMonitoringProfileParcelArgs, SystemPerformanceMonitoringProfileParcelState } from "./systemPerformanceMonitoringProfileParcel";
-export type SystemPerformanceMonitoringProfileParcel = import("./systemPerformanceMonitoringProfileParcel").SystemPerformanceMonitoringProfileParcel;
-export const SystemPerformanceMonitoringProfileParcel: typeof import("./systemPerformanceMonitoringProfileParcel").SystemPerformanceMonitoringProfileParcel = null as any;
-utilities.lazyLoad(exports, ["SystemPerformanceMonitoringProfileParcel"], () => require("./systemPerformanceMonitoringProfileParcel"));
+export { SystemNtpFeatureArgs, SystemNtpFeatureState } from "./systemNtpFeature";
+export type SystemNtpFeature = import("./systemNtpFeature").SystemNtpFeature;
+export const SystemNtpFeature: typeof import("./systemNtpFeature").SystemNtpFeature = null as any;
+utilities.lazyLoad(exports, ["SystemNtpFeature"], () => require("./systemNtpFeature"));
 
-export { SystemRemoteAccessProfileParcelArgs, SystemRemoteAccessProfileParcelState } from "./systemRemoteAccessProfileParcel";
-export type SystemRemoteAccessProfileParcel = import("./systemRemoteAccessProfileParcel").SystemRemoteAccessProfileParcel;
-export const SystemRemoteAccessProfileParcel: typeof import("./systemRemoteAccessProfileParcel").SystemRemoteAccessProfileParcel = null as any;
-utilities.lazyLoad(exports, ["SystemRemoteAccessProfileParcel"], () => require("./systemRemoteAccessProfileParcel"));
+export { SystemOmpFeatureArgs, SystemOmpFeatureState } from "./systemOmpFeature";
+export type SystemOmpFeature = import("./systemOmpFeature").SystemOmpFeature;
+export const SystemOmpFeature: typeof import("./systemOmpFeature").SystemOmpFeature = null as any;
+utilities.lazyLoad(exports, ["SystemOmpFeature"], () => require("./systemOmpFeature"));
 
-export { SystemSecurityProfileParcelArgs, SystemSecurityProfileParcelState } from "./systemSecurityProfileParcel";
-export type SystemSecurityProfileParcel = import("./systemSecurityProfileParcel").SystemSecurityProfileParcel;
-export const SystemSecurityProfileParcel: typeof import("./systemSecurityProfileParcel").SystemSecurityProfileParcel = null as any;
-utilities.lazyLoad(exports, ["SystemSecurityProfileParcel"], () => require("./systemSecurityProfileParcel"));
+export { SystemPerformanceMonitoringFeatureArgs, SystemPerformanceMonitoringFeatureState } from "./systemPerformanceMonitoringFeature";
+export type SystemPerformanceMonitoringFeature = import("./systemPerformanceMonitoringFeature").SystemPerformanceMonitoringFeature;
+export const SystemPerformanceMonitoringFeature: typeof import("./systemPerformanceMonitoringFeature").SystemPerformanceMonitoringFeature = null as any;
+utilities.lazyLoad(exports, ["SystemPerformanceMonitoringFeature"], () => require("./systemPerformanceMonitoringFeature"));
 
-export { SystemSnmpProfileParcelArgs, SystemSnmpProfileParcelState } from "./systemSnmpProfileParcel";
-export type SystemSnmpProfileParcel = import("./systemSnmpProfileParcel").SystemSnmpProfileParcel;
-export const SystemSnmpProfileParcel: typeof import("./systemSnmpProfileParcel").SystemSnmpProfileParcel = null as any;
-utilities.lazyLoad(exports, ["SystemSnmpProfileParcel"], () => require("./systemSnmpProfileParcel"));
+export { SystemRemoteAccessFeatureArgs, SystemRemoteAccessFeatureState } from "./systemRemoteAccessFeature";
+export type SystemRemoteAccessFeature = import("./systemRemoteAccessFeature").SystemRemoteAccessFeature;
+export const SystemRemoteAccessFeature: typeof import("./systemRemoteAccessFeature").SystemRemoteAccessFeature = null as any;
+utilities.lazyLoad(exports, ["SystemRemoteAccessFeature"], () => require("./systemRemoteAccessFeature"));
+
+export { SystemSecurityFeatureArgs, SystemSecurityFeatureState } from "./systemSecurityFeature";
+export type SystemSecurityFeature = import("./systemSecurityFeature").SystemSecurityFeature;
+export const SystemSecurityFeature: typeof import("./systemSecurityFeature").SystemSecurityFeature = null as any;
+utilities.lazyLoad(exports, ["SystemSecurityFeature"], () => require("./systemSecurityFeature"));
+
+export { SystemSnmpFeatureArgs, SystemSnmpFeatureState } from "./systemSnmpFeature";
+export type SystemSnmpFeature = import("./systemSnmpFeature").SystemSnmpFeature;
+export const SystemSnmpFeature: typeof import("./systemSnmpFeature").SystemSnmpFeature = null as any;
+utilities.lazyLoad(exports, ["SystemSnmpFeature"], () => require("./systemSnmpFeature"));
 
 export { TlocListPolicyObjectArgs, TlocListPolicyObjectState } from "./tlocListPolicyObject";
 export type TlocListPolicyObject = import("./tlocListPolicyObject").TlocListPolicyObject;
@@ -1275,35 +1605,95 @@ export type TransportFeatureProfile = import("./transportFeatureProfile").Transp
 export const TransportFeatureProfile: typeof import("./transportFeatureProfile").TransportFeatureProfile = null as any;
 utilities.lazyLoad(exports, ["TransportFeatureProfile"], () => require("./transportFeatureProfile"));
 
-export { TransportIpv6TrackerProfileParcelArgs, TransportIpv6TrackerProfileParcelState } from "./transportIpv6TrackerProfileParcel";
-export type TransportIpv6TrackerProfileParcel = import("./transportIpv6TrackerProfileParcel").TransportIpv6TrackerProfileParcel;
-export const TransportIpv6TrackerProfileParcel: typeof import("./transportIpv6TrackerProfileParcel").TransportIpv6TrackerProfileParcel = null as any;
-utilities.lazyLoad(exports, ["TransportIpv6TrackerProfileParcel"], () => require("./transportIpv6TrackerProfileParcel"));
+export { TransportGpsFeatureArgs, TransportGpsFeatureState } from "./transportGpsFeature";
+export type TransportGpsFeature = import("./transportGpsFeature").TransportGpsFeature;
+export const TransportGpsFeature: typeof import("./transportGpsFeature").TransportGpsFeature = null as any;
+utilities.lazyLoad(exports, ["TransportGpsFeature"], () => require("./transportGpsFeature"));
 
-export { TransportManagementVpnInterfaceEthernetProfileParcelArgs, TransportManagementVpnInterfaceEthernetProfileParcelState } from "./transportManagementVpnInterfaceEthernetProfileParcel";
-export type TransportManagementVpnInterfaceEthernetProfileParcel = import("./transportManagementVpnInterfaceEthernetProfileParcel").TransportManagementVpnInterfaceEthernetProfileParcel;
-export const TransportManagementVpnInterfaceEthernetProfileParcel: typeof import("./transportManagementVpnInterfaceEthernetProfileParcel").TransportManagementVpnInterfaceEthernetProfileParcel = null as any;
-utilities.lazyLoad(exports, ["TransportManagementVpnInterfaceEthernetProfileParcel"], () => require("./transportManagementVpnInterfaceEthernetProfileParcel"));
+export { TransportIpv6TrackerFeatureArgs, TransportIpv6TrackerFeatureState } from "./transportIpv6TrackerFeature";
+export type TransportIpv6TrackerFeature = import("./transportIpv6TrackerFeature").TransportIpv6TrackerFeature;
+export const TransportIpv6TrackerFeature: typeof import("./transportIpv6TrackerFeature").TransportIpv6TrackerFeature = null as any;
+utilities.lazyLoad(exports, ["TransportIpv6TrackerFeature"], () => require("./transportIpv6TrackerFeature"));
 
-export { TransportManagementVpnProfileParcelArgs, TransportManagementVpnProfileParcelState } from "./transportManagementVpnProfileParcel";
-export type TransportManagementVpnProfileParcel = import("./transportManagementVpnProfileParcel").TransportManagementVpnProfileParcel;
-export const TransportManagementVpnProfileParcel: typeof import("./transportManagementVpnProfileParcel").TransportManagementVpnProfileParcel = null as any;
-utilities.lazyLoad(exports, ["TransportManagementVpnProfileParcel"], () => require("./transportManagementVpnProfileParcel"));
+export { TransportIpv6TrackerGroupFeatureArgs, TransportIpv6TrackerGroupFeatureState } from "./transportIpv6TrackerGroupFeature";
+export type TransportIpv6TrackerGroupFeature = import("./transportIpv6TrackerGroupFeature").TransportIpv6TrackerGroupFeature;
+export const TransportIpv6TrackerGroupFeature: typeof import("./transportIpv6TrackerGroupFeature").TransportIpv6TrackerGroupFeature = null as any;
+utilities.lazyLoad(exports, ["TransportIpv6TrackerGroupFeature"], () => require("./transportIpv6TrackerGroupFeature"));
 
-export { TransportRoutingBgpProfileParcelArgs, TransportRoutingBgpProfileParcelState } from "./transportRoutingBgpProfileParcel";
-export type TransportRoutingBgpProfileParcel = import("./transportRoutingBgpProfileParcel").TransportRoutingBgpProfileParcel;
-export const TransportRoutingBgpProfileParcel: typeof import("./transportRoutingBgpProfileParcel").TransportRoutingBgpProfileParcel = null as any;
-utilities.lazyLoad(exports, ["TransportRoutingBgpProfileParcel"], () => require("./transportRoutingBgpProfileParcel"));
+export { TransportManagementVpnFeatureArgs, TransportManagementVpnFeatureState } from "./transportManagementVpnFeature";
+export type TransportManagementVpnFeature = import("./transportManagementVpnFeature").TransportManagementVpnFeature;
+export const TransportManagementVpnFeature: typeof import("./transportManagementVpnFeature").TransportManagementVpnFeature = null as any;
+utilities.lazyLoad(exports, ["TransportManagementVpnFeature"], () => require("./transportManagementVpnFeature"));
 
-export { TransportWanVpnInterfaceEthernetProfileParcelArgs, TransportWanVpnInterfaceEthernetProfileParcelState } from "./transportWanVpnInterfaceEthernetProfileParcel";
-export type TransportWanVpnInterfaceEthernetProfileParcel = import("./transportWanVpnInterfaceEthernetProfileParcel").TransportWanVpnInterfaceEthernetProfileParcel;
-export const TransportWanVpnInterfaceEthernetProfileParcel: typeof import("./transportWanVpnInterfaceEthernetProfileParcel").TransportWanVpnInterfaceEthernetProfileParcel = null as any;
-utilities.lazyLoad(exports, ["TransportWanVpnInterfaceEthernetProfileParcel"], () => require("./transportWanVpnInterfaceEthernetProfileParcel"));
+export { TransportManagementVpnInterfaceEthernetFeatureArgs, TransportManagementVpnInterfaceEthernetFeatureState } from "./transportManagementVpnInterfaceEthernetFeature";
+export type TransportManagementVpnInterfaceEthernetFeature = import("./transportManagementVpnInterfaceEthernetFeature").TransportManagementVpnInterfaceEthernetFeature;
+export const TransportManagementVpnInterfaceEthernetFeature: typeof import("./transportManagementVpnInterfaceEthernetFeature").TransportManagementVpnInterfaceEthernetFeature = null as any;
+utilities.lazyLoad(exports, ["TransportManagementVpnInterfaceEthernetFeature"], () => require("./transportManagementVpnInterfaceEthernetFeature"));
 
-export { TransportWanVpnProfileParcelArgs, TransportWanVpnProfileParcelState } from "./transportWanVpnProfileParcel";
-export type TransportWanVpnProfileParcel = import("./transportWanVpnProfileParcel").TransportWanVpnProfileParcel;
-export const TransportWanVpnProfileParcel: typeof import("./transportWanVpnProfileParcel").TransportWanVpnProfileParcel = null as any;
-utilities.lazyLoad(exports, ["TransportWanVpnProfileParcel"], () => require("./transportWanVpnProfileParcel"));
+export { TransportRoutePolicyFeatureArgs, TransportRoutePolicyFeatureState } from "./transportRoutePolicyFeature";
+export type TransportRoutePolicyFeature = import("./transportRoutePolicyFeature").TransportRoutePolicyFeature;
+export const TransportRoutePolicyFeature: typeof import("./transportRoutePolicyFeature").TransportRoutePolicyFeature = null as any;
+utilities.lazyLoad(exports, ["TransportRoutePolicyFeature"], () => require("./transportRoutePolicyFeature"));
+
+export { TransportRoutingBgpFeatureArgs, TransportRoutingBgpFeatureState } from "./transportRoutingBgpFeature";
+export type TransportRoutingBgpFeature = import("./transportRoutingBgpFeature").TransportRoutingBgpFeature;
+export const TransportRoutingBgpFeature: typeof import("./transportRoutingBgpFeature").TransportRoutingBgpFeature = null as any;
+utilities.lazyLoad(exports, ["TransportRoutingBgpFeature"], () => require("./transportRoutingBgpFeature"));
+
+export { TransportRoutingOspfFeatureArgs, TransportRoutingOspfFeatureState } from "./transportRoutingOspfFeature";
+export type TransportRoutingOspfFeature = import("./transportRoutingOspfFeature").TransportRoutingOspfFeature;
+export const TransportRoutingOspfFeature: typeof import("./transportRoutingOspfFeature").TransportRoutingOspfFeature = null as any;
+utilities.lazyLoad(exports, ["TransportRoutingOspfFeature"], () => require("./transportRoutingOspfFeature"));
+
+export { TransportRoutingOspfv3Ipv4FeatureArgs, TransportRoutingOspfv3Ipv4FeatureState } from "./transportRoutingOspfv3Ipv4Feature";
+export type TransportRoutingOspfv3Ipv4Feature = import("./transportRoutingOspfv3Ipv4Feature").TransportRoutingOspfv3Ipv4Feature;
+export const TransportRoutingOspfv3Ipv4Feature: typeof import("./transportRoutingOspfv3Ipv4Feature").TransportRoutingOspfv3Ipv4Feature = null as any;
+utilities.lazyLoad(exports, ["TransportRoutingOspfv3Ipv4Feature"], () => require("./transportRoutingOspfv3Ipv4Feature"));
+
+export { TransportRoutingOspfv3Ipv6FeatureArgs, TransportRoutingOspfv3Ipv6FeatureState } from "./transportRoutingOspfv3Ipv6Feature";
+export type TransportRoutingOspfv3Ipv6Feature = import("./transportRoutingOspfv3Ipv6Feature").TransportRoutingOspfv3Ipv6Feature;
+export const TransportRoutingOspfv3Ipv6Feature: typeof import("./transportRoutingOspfv3Ipv6Feature").TransportRoutingOspfv3Ipv6Feature = null as any;
+utilities.lazyLoad(exports, ["TransportRoutingOspfv3Ipv6Feature"], () => require("./transportRoutingOspfv3Ipv6Feature"));
+
+export { TransportTrackerFeatureArgs, TransportTrackerFeatureState } from "./transportTrackerFeature";
+export type TransportTrackerFeature = import("./transportTrackerFeature").TransportTrackerFeature;
+export const TransportTrackerFeature: typeof import("./transportTrackerFeature").TransportTrackerFeature = null as any;
+utilities.lazyLoad(exports, ["TransportTrackerFeature"], () => require("./transportTrackerFeature"));
+
+export { TransportTrackerGroupFeatureArgs, TransportTrackerGroupFeatureState } from "./transportTrackerGroupFeature";
+export type TransportTrackerGroupFeature = import("./transportTrackerGroupFeature").TransportTrackerGroupFeature;
+export const TransportTrackerGroupFeature: typeof import("./transportTrackerGroupFeature").TransportTrackerGroupFeature = null as any;
+utilities.lazyLoad(exports, ["TransportTrackerGroupFeature"], () => require("./transportTrackerGroupFeature"));
+
+export { TransportWanVpnFeatureArgs, TransportWanVpnFeatureState } from "./transportWanVpnFeature";
+export type TransportWanVpnFeature = import("./transportWanVpnFeature").TransportWanVpnFeature;
+export const TransportWanVpnFeature: typeof import("./transportWanVpnFeature").TransportWanVpnFeature = null as any;
+utilities.lazyLoad(exports, ["TransportWanVpnFeature"], () => require("./transportWanVpnFeature"));
+
+export { TransportWanVpnInterfaceCellularFeatureArgs, TransportWanVpnInterfaceCellularFeatureState } from "./transportWanVpnInterfaceCellularFeature";
+export type TransportWanVpnInterfaceCellularFeature = import("./transportWanVpnInterfaceCellularFeature").TransportWanVpnInterfaceCellularFeature;
+export const TransportWanVpnInterfaceCellularFeature: typeof import("./transportWanVpnInterfaceCellularFeature").TransportWanVpnInterfaceCellularFeature = null as any;
+utilities.lazyLoad(exports, ["TransportWanVpnInterfaceCellularFeature"], () => require("./transportWanVpnInterfaceCellularFeature"));
+
+export { TransportWanVpnInterfaceEthernetFeatureArgs, TransportWanVpnInterfaceEthernetFeatureState } from "./transportWanVpnInterfaceEthernetFeature";
+export type TransportWanVpnInterfaceEthernetFeature = import("./transportWanVpnInterfaceEthernetFeature").TransportWanVpnInterfaceEthernetFeature;
+export const TransportWanVpnInterfaceEthernetFeature: typeof import("./transportWanVpnInterfaceEthernetFeature").TransportWanVpnInterfaceEthernetFeature = null as any;
+utilities.lazyLoad(exports, ["TransportWanVpnInterfaceEthernetFeature"], () => require("./transportWanVpnInterfaceEthernetFeature"));
+
+export { TransportWanVpnInterfaceGreFeatureArgs, TransportWanVpnInterfaceGreFeatureState } from "./transportWanVpnInterfaceGreFeature";
+export type TransportWanVpnInterfaceGreFeature = import("./transportWanVpnInterfaceGreFeature").TransportWanVpnInterfaceGreFeature;
+export const TransportWanVpnInterfaceGreFeature: typeof import("./transportWanVpnInterfaceGreFeature").TransportWanVpnInterfaceGreFeature = null as any;
+utilities.lazyLoad(exports, ["TransportWanVpnInterfaceGreFeature"], () => require("./transportWanVpnInterfaceGreFeature"));
+
+export { TransportWanVpnInterfaceIpsecFeatureArgs, TransportWanVpnInterfaceIpsecFeatureState } from "./transportWanVpnInterfaceIpsecFeature";
+export type TransportWanVpnInterfaceIpsecFeature = import("./transportWanVpnInterfaceIpsecFeature").TransportWanVpnInterfaceIpsecFeature;
+export const TransportWanVpnInterfaceIpsecFeature: typeof import("./transportWanVpnInterfaceIpsecFeature").TransportWanVpnInterfaceIpsecFeature = null as any;
+utilities.lazyLoad(exports, ["TransportWanVpnInterfaceIpsecFeature"], () => require("./transportWanVpnInterfaceIpsecFeature"));
+
+export { TransportWanVpnInterfaceT1E1SerialFeatureArgs, TransportWanVpnInterfaceT1E1SerialFeatureState } from "./transportWanVpnInterfaceT1E1SerialFeature";
+export type TransportWanVpnInterfaceT1E1SerialFeature = import("./transportWanVpnInterfaceT1E1SerialFeature").TransportWanVpnInterfaceT1E1SerialFeature;
+export const TransportWanVpnInterfaceT1E1SerialFeature: typeof import("./transportWanVpnInterfaceT1E1SerialFeature").TransportWanVpnInterfaceT1E1SerialFeature = null as any;
+utilities.lazyLoad(exports, ["TransportWanVpnInterfaceT1E1SerialFeature"], () => require("./transportWanVpnInterfaceT1E1SerialFeature"));
 
 export { UrlFilteringPolicyDefinitionArgs, UrlFilteringPolicyDefinitionState } from "./urlFilteringPolicyDefinition";
 export type UrlFilteringPolicyDefinition = import("./urlFilteringPolicyDefinition").UrlFilteringPolicyDefinition;
@@ -1360,6 +1750,11 @@ export type VpnMembershipPolicyDefinition = import("./vpnMembershipPolicyDefinit
 export const VpnMembershipPolicyDefinition: typeof import("./vpnMembershipPolicyDefinition").VpnMembershipPolicyDefinition = null as any;
 utilities.lazyLoad(exports, ["VpnMembershipPolicyDefinition"], () => require("./vpnMembershipPolicyDefinition"));
 
+export { ZoneBasedFirewallPolicyDefinitionArgs, ZoneBasedFirewallPolicyDefinitionState } from "./zoneBasedFirewallPolicyDefinition";
+export type ZoneBasedFirewallPolicyDefinition = import("./zoneBasedFirewallPolicyDefinition").ZoneBasedFirewallPolicyDefinition;
+export const ZoneBasedFirewallPolicyDefinition: typeof import("./zoneBasedFirewallPolicyDefinition").ZoneBasedFirewallPolicyDefinition = null as any;
+utilities.lazyLoad(exports, ["ZoneBasedFirewallPolicyDefinition"], () => require("./zoneBasedFirewallPolicyDefinition"));
+
 export { ZoneListPolicyObjectArgs, ZoneListPolicyObjectState } from "./zoneListPolicyObject";
 export type ZoneListPolicyObject = import("./zoneListPolicyObject").ZoneListPolicyObject;
 export const ZoneListPolicyObject: typeof import("./zoneListPolicyObject").ZoneListPolicyObject = null as any;
@@ -1395,8 +1790,8 @@ const _module = {
                 return new ApplicationListPolicyObject(name, <any>undefined, { urn })
             case "sdwan:index/applicationPriorityFeatureProfile:ApplicationPriorityFeatureProfile":
                 return new ApplicationPriorityFeatureProfile(name, <any>undefined, { urn })
-            case "sdwan:index/applicationPriorityQosPolicyProfileParcel:ApplicationPriorityQosPolicyProfileParcel":
-                return new ApplicationPriorityQosPolicyProfileParcel(name, <any>undefined, { urn })
+            case "sdwan:index/applicationPriorityQosPolicy:ApplicationPriorityQosPolicy":
+                return new ApplicationPriorityQosPolicy(name, <any>undefined, { urn })
             case "sdwan:index/asPathListPolicyObject:AsPathListPolicyObject":
                 return new AsPathListPolicyObject(name, <any>undefined, { urn })
             case "sdwan:index/attachFeatureDeviceTemplate:AttachFeatureDeviceTemplate":
@@ -1467,8 +1862,8 @@ const _module = {
                 return new CiscoWirelessLanFeatureTemplate(name, <any>undefined, { urn })
             case "sdwan:index/classMapPolicyObject:ClassMapPolicyObject":
                 return new ClassMapPolicyObject(name, <any>undefined, { urn })
-            case "sdwan:index/cliConfigProfileParcel:CliConfigProfileParcel":
-                return new CliConfigProfileParcel(name, <any>undefined, { urn })
+            case "sdwan:index/cliConfigFeature:CliConfigFeature":
+                return new CliConfigFeature(name, <any>undefined, { urn })
             case "sdwan:index/cliDeviceTemplate:CliDeviceTemplate":
                 return new CliDeviceTemplate(name, <any>undefined, { urn })
             case "sdwan:index/cliFeatureProfile:CliFeatureProfile":
@@ -1479,12 +1874,6 @@ const _module = {
                 return new ColorListPolicyObject(name, <any>undefined, { urn })
             case "sdwan:index/configurationGroup:ConfigurationGroup":
                 return new ConfigurationGroup(name, <any>undefined, { urn })
-            case "sdwan:index/configurationGroupDeploy:ConfigurationGroupDeploy":
-                return new ConfigurationGroupDeploy(name, <any>undefined, { urn })
-            case "sdwan:index/configurationGroupDeviceVariables:ConfigurationGroupDeviceVariables":
-                return new ConfigurationGroupDeviceVariables(name, <any>undefined, { urn })
-            case "sdwan:index/configurationGroupDevices:ConfigurationGroupDevices":
-                return new ConfigurationGroupDevices(name, <any>undefined, { urn })
             case "sdwan:index/customControlTopologyPolicyDefinition:CustomControlTopologyPolicyDefinition":
                 return new CustomControlTopologyPolicyDefinition(name, <any>undefined, { urn })
             case "sdwan:index/dataFqdnPrefixListPolicyObject:DataFqdnPrefixListPolicyObject":
@@ -1537,8 +1926,38 @@ const _module = {
                 return new MirrorPolicyObject(name, <any>undefined, { urn })
             case "sdwan:index/objectGroupPolicyDefinition:ObjectGroupPolicyDefinition":
                 return new ObjectGroupPolicyDefinition(name, <any>undefined, { urn })
+            case "sdwan:index/otherFeatureProfile:OtherFeatureProfile":
+                return new OtherFeatureProfile(name, <any>undefined, { urn })
+            case "sdwan:index/otherThousandeyesFeature:OtherThousandeyesFeature":
+                return new OtherThousandeyesFeature(name, <any>undefined, { urn })
+            case "sdwan:index/otherUcseFeature:OtherUcseFeature":
+                return new OtherUcseFeature(name, <any>undefined, { urn })
             case "sdwan:index/policerPolicyObject:PolicerPolicyObject":
                 return new PolicerPolicyObject(name, <any>undefined, { urn })
+            case "sdwan:index/policyObjectClassMap:PolicyObjectClassMap":
+                return new PolicyObjectClassMap(name, <any>undefined, { urn })
+            case "sdwan:index/policyObjectColorList:PolicyObjectColorList":
+                return new PolicyObjectColorList(name, <any>undefined, { urn })
+            case "sdwan:index/policyObjectDataIpv4PrefixList:PolicyObjectDataIpv4PrefixList":
+                return new PolicyObjectDataIpv4PrefixList(name, <any>undefined, { urn })
+            case "sdwan:index/policyObjectDataIpv6PrefixList:PolicyObjectDataIpv6PrefixList":
+                return new PolicyObjectDataIpv6PrefixList(name, <any>undefined, { urn })
+            case "sdwan:index/policyObjectExpandedCommunityList:PolicyObjectExpandedCommunityList":
+                return new PolicyObjectExpandedCommunityList(name, <any>undefined, { urn })
+            case "sdwan:index/policyObjectExtendedCommunityList:PolicyObjectExtendedCommunityList":
+                return new PolicyObjectExtendedCommunityList(name, <any>undefined, { urn })
+            case "sdwan:index/policyObjectFeatureProfile:PolicyObjectFeatureProfile":
+                return new PolicyObjectFeatureProfile(name, <any>undefined, { urn })
+            case "sdwan:index/policyObjectIpv4PrefixList:PolicyObjectIpv4PrefixList":
+                return new PolicyObjectIpv4PrefixList(name, <any>undefined, { urn })
+            case "sdwan:index/policyObjectIpv6PrefixList:PolicyObjectIpv6PrefixList":
+                return new PolicyObjectIpv6PrefixList(name, <any>undefined, { urn })
+            case "sdwan:index/policyObjectMirror:PolicyObjectMirror":
+                return new PolicyObjectMirror(name, <any>undefined, { urn })
+            case "sdwan:index/policyObjectPolicer:PolicyObjectPolicer":
+                return new PolicyObjectPolicer(name, <any>undefined, { urn })
+            case "sdwan:index/policyObjectTlocList:PolicyObjectTlocList":
+                return new PolicyObjectTlocList(name, <any>undefined, { urn })
             case "sdwan:index/portListPolicyObject:PortListPolicyObject":
                 return new PortListPolicyObject(name, <any>undefined, { urn })
             case "sdwan:index/preferredColorGroupPolicyObject:PreferredColorGroupPolicyObject":
@@ -1561,12 +1980,36 @@ const _module = {
                 return new SecurityPolicy(name, <any>undefined, { urn })
             case "sdwan:index/serviceFeatureProfile:ServiceFeatureProfile":
                 return new ServiceFeatureProfile(name, <any>undefined, { urn })
-            case "sdwan:index/serviceLanVpnInterfaceEthernetProfileParcel:ServiceLanVpnInterfaceEthernetProfileParcel":
-                return new ServiceLanVpnInterfaceEthernetProfileParcel(name, <any>undefined, { urn })
-            case "sdwan:index/serviceLanVpnProfileParcel:ServiceLanVpnProfileParcel":
-                return new ServiceLanVpnProfileParcel(name, <any>undefined, { urn })
-            case "sdwan:index/serviceTrackerProfileParcel:ServiceTrackerProfileParcel":
-                return new ServiceTrackerProfileParcel(name, <any>undefined, { urn })
+            case "sdwan:index/serviceLanVpnFeature:ServiceLanVpnFeature":
+                return new ServiceLanVpnFeature(name, <any>undefined, { urn })
+            case "sdwan:index/serviceLanVpnInterfaceEthernetFeature:ServiceLanVpnInterfaceEthernetFeature":
+                return new ServiceLanVpnInterfaceEthernetFeature(name, <any>undefined, { urn })
+            case "sdwan:index/serviceLanVpnInterfaceGreFeature:ServiceLanVpnInterfaceGreFeature":
+                return new ServiceLanVpnInterfaceGreFeature(name, <any>undefined, { urn })
+            case "sdwan:index/serviceLanVpnInterfaceIpsecFeature:ServiceLanVpnInterfaceIpsecFeature":
+                return new ServiceLanVpnInterfaceIpsecFeature(name, <any>undefined, { urn })
+            case "sdwan:index/serviceLanVpnInterfaceSviFeature:ServiceLanVpnInterfaceSviFeature":
+                return new ServiceLanVpnInterfaceSviFeature(name, <any>undefined, { urn })
+            case "sdwan:index/serviceObjectTrackerFeature:ServiceObjectTrackerFeature":
+                return new ServiceObjectTrackerFeature(name, <any>undefined, { urn })
+            case "sdwan:index/serviceObjectTrackerGroupFeature:ServiceObjectTrackerGroupFeature":
+                return new ServiceObjectTrackerGroupFeature(name, <any>undefined, { urn })
+            case "sdwan:index/serviceRoutePolicyFeature:ServiceRoutePolicyFeature":
+                return new ServiceRoutePolicyFeature(name, <any>undefined, { urn })
+            case "sdwan:index/serviceRoutingBgpFeature:ServiceRoutingBgpFeature":
+                return new ServiceRoutingBgpFeature(name, <any>undefined, { urn })
+            case "sdwan:index/serviceRoutingOspfFeature:ServiceRoutingOspfFeature":
+                return new ServiceRoutingOspfFeature(name, <any>undefined, { urn })
+            case "sdwan:index/serviceRoutingOspfv3Ipv4Feature:ServiceRoutingOspfv3Ipv4Feature":
+                return new ServiceRoutingOspfv3Ipv4Feature(name, <any>undefined, { urn })
+            case "sdwan:index/serviceRoutingOspfv3Ipv6Feature:ServiceRoutingOspfv3Ipv6Feature":
+                return new ServiceRoutingOspfv3Ipv6Feature(name, <any>undefined, { urn })
+            case "sdwan:index/serviceSwitchportFeature:ServiceSwitchportFeature":
+                return new ServiceSwitchportFeature(name, <any>undefined, { urn })
+            case "sdwan:index/serviceTrackerFeature:ServiceTrackerFeature":
+                return new ServiceTrackerFeature(name, <any>undefined, { urn })
+            case "sdwan:index/serviceTrackerGroupFeature:ServiceTrackerGroupFeature":
+                return new ServiceTrackerGroupFeature(name, <any>undefined, { urn })
             case "sdwan:index/siteListPolicyObject:SiteListPolicyObject":
                 return new SiteListPolicyObject(name, <any>undefined, { urn })
             case "sdwan:index/slaClassPolicyObject:SlaClassPolicyObject":
@@ -1575,36 +2018,40 @@ const _module = {
                 return new StandardCommunityListPolicyObject(name, <any>undefined, { urn })
             case "sdwan:index/switchportFeatureTemplate:SwitchportFeatureTemplate":
                 return new SwitchportFeatureTemplate(name, <any>undefined, { urn })
-            case "sdwan:index/systemAaaProfileParcel:SystemAaaProfileParcel":
-                return new SystemAaaProfileParcel(name, <any>undefined, { urn })
-            case "sdwan:index/systemBannerProfileParcel:SystemBannerProfileParcel":
-                return new SystemBannerProfileParcel(name, <any>undefined, { urn })
-            case "sdwan:index/systemBasicProfileParcel:SystemBasicProfileParcel":
-                return new SystemBasicProfileParcel(name, <any>undefined, { urn })
-            case "sdwan:index/systemBfdProfileParcel:SystemBfdProfileParcel":
-                return new SystemBfdProfileParcel(name, <any>undefined, { urn })
+            case "sdwan:index/systemAaaFeature:SystemAaaFeature":
+                return new SystemAaaFeature(name, <any>undefined, { urn })
+            case "sdwan:index/systemBannerFeature:SystemBannerFeature":
+                return new SystemBannerFeature(name, <any>undefined, { urn })
+            case "sdwan:index/systemBasicFeature:SystemBasicFeature":
+                return new SystemBasicFeature(name, <any>undefined, { urn })
+            case "sdwan:index/systemBfdFeature:SystemBfdFeature":
+                return new SystemBfdFeature(name, <any>undefined, { urn })
             case "sdwan:index/systemFeatureProfile:SystemFeatureProfile":
                 return new SystemFeatureProfile(name, <any>undefined, { urn })
-            case "sdwan:index/systemFlexiblePortSpeedProfileParcel:SystemFlexiblePortSpeedProfileParcel":
-                return new SystemFlexiblePortSpeedProfileParcel(name, <any>undefined, { urn })
-            case "sdwan:index/systemGlobalProfileParcel:SystemGlobalProfileParcel":
-                return new SystemGlobalProfileParcel(name, <any>undefined, { urn })
-            case "sdwan:index/systemLoggingProfileParcel:SystemLoggingProfileParcel":
-                return new SystemLoggingProfileParcel(name, <any>undefined, { urn })
-            case "sdwan:index/systemMrfProfileParcel:SystemMrfProfileParcel":
-                return new SystemMrfProfileParcel(name, <any>undefined, { urn })
-            case "sdwan:index/systemNtpProfileParcel:SystemNtpProfileParcel":
-                return new SystemNtpProfileParcel(name, <any>undefined, { urn })
-            case "sdwan:index/systemOmpProfileParcel:SystemOmpProfileParcel":
-                return new SystemOmpProfileParcel(name, <any>undefined, { urn })
-            case "sdwan:index/systemPerformanceMonitoringProfileParcel:SystemPerformanceMonitoringProfileParcel":
-                return new SystemPerformanceMonitoringProfileParcel(name, <any>undefined, { urn })
-            case "sdwan:index/systemRemoteAccessProfileParcel:SystemRemoteAccessProfileParcel":
-                return new SystemRemoteAccessProfileParcel(name, <any>undefined, { urn })
-            case "sdwan:index/systemSecurityProfileParcel:SystemSecurityProfileParcel":
-                return new SystemSecurityProfileParcel(name, <any>undefined, { urn })
-            case "sdwan:index/systemSnmpProfileParcel:SystemSnmpProfileParcel":
-                return new SystemSnmpProfileParcel(name, <any>undefined, { urn })
+            case "sdwan:index/systemFlexiblePortSpeedFeature:SystemFlexiblePortSpeedFeature":
+                return new SystemFlexiblePortSpeedFeature(name, <any>undefined, { urn })
+            case "sdwan:index/systemGlobalFeature:SystemGlobalFeature":
+                return new SystemGlobalFeature(name, <any>undefined, { urn })
+            case "sdwan:index/systemIpv4DeviceAccessFeature:SystemIpv4DeviceAccessFeature":
+                return new SystemIpv4DeviceAccessFeature(name, <any>undefined, { urn })
+            case "sdwan:index/systemIpv6DeviceAccessFeature:SystemIpv6DeviceAccessFeature":
+                return new SystemIpv6DeviceAccessFeature(name, <any>undefined, { urn })
+            case "sdwan:index/systemLoggingFeature:SystemLoggingFeature":
+                return new SystemLoggingFeature(name, <any>undefined, { urn })
+            case "sdwan:index/systemMrfFeature:SystemMrfFeature":
+                return new SystemMrfFeature(name, <any>undefined, { urn })
+            case "sdwan:index/systemNtpFeature:SystemNtpFeature":
+                return new SystemNtpFeature(name, <any>undefined, { urn })
+            case "sdwan:index/systemOmpFeature:SystemOmpFeature":
+                return new SystemOmpFeature(name, <any>undefined, { urn })
+            case "sdwan:index/systemPerformanceMonitoringFeature:SystemPerformanceMonitoringFeature":
+                return new SystemPerformanceMonitoringFeature(name, <any>undefined, { urn })
+            case "sdwan:index/systemRemoteAccessFeature:SystemRemoteAccessFeature":
+                return new SystemRemoteAccessFeature(name, <any>undefined, { urn })
+            case "sdwan:index/systemSecurityFeature:SystemSecurityFeature":
+                return new SystemSecurityFeature(name, <any>undefined, { urn })
+            case "sdwan:index/systemSnmpFeature:SystemSnmpFeature":
+                return new SystemSnmpFeature(name, <any>undefined, { urn })
             case "sdwan:index/tlocListPolicyObject:TlocListPolicyObject":
                 return new TlocListPolicyObject(name, <any>undefined, { urn })
             case "sdwan:index/tlsSslDecryptionPolicyDefinition:TlsSslDecryptionPolicyDefinition":
@@ -1615,18 +2062,42 @@ const _module = {
                 return new TrafficDataPolicyDefinition(name, <any>undefined, { urn })
             case "sdwan:index/transportFeatureProfile:TransportFeatureProfile":
                 return new TransportFeatureProfile(name, <any>undefined, { urn })
-            case "sdwan:index/transportIpv6TrackerProfileParcel:TransportIpv6TrackerProfileParcel":
-                return new TransportIpv6TrackerProfileParcel(name, <any>undefined, { urn })
-            case "sdwan:index/transportManagementVpnInterfaceEthernetProfileParcel:TransportManagementVpnInterfaceEthernetProfileParcel":
-                return new TransportManagementVpnInterfaceEthernetProfileParcel(name, <any>undefined, { urn })
-            case "sdwan:index/transportManagementVpnProfileParcel:TransportManagementVpnProfileParcel":
-                return new TransportManagementVpnProfileParcel(name, <any>undefined, { urn })
-            case "sdwan:index/transportRoutingBgpProfileParcel:TransportRoutingBgpProfileParcel":
-                return new TransportRoutingBgpProfileParcel(name, <any>undefined, { urn })
-            case "sdwan:index/transportWanVpnInterfaceEthernetProfileParcel:TransportWanVpnInterfaceEthernetProfileParcel":
-                return new TransportWanVpnInterfaceEthernetProfileParcel(name, <any>undefined, { urn })
-            case "sdwan:index/transportWanVpnProfileParcel:TransportWanVpnProfileParcel":
-                return new TransportWanVpnProfileParcel(name, <any>undefined, { urn })
+            case "sdwan:index/transportGpsFeature:TransportGpsFeature":
+                return new TransportGpsFeature(name, <any>undefined, { urn })
+            case "sdwan:index/transportIpv6TrackerFeature:TransportIpv6TrackerFeature":
+                return new TransportIpv6TrackerFeature(name, <any>undefined, { urn })
+            case "sdwan:index/transportIpv6TrackerGroupFeature:TransportIpv6TrackerGroupFeature":
+                return new TransportIpv6TrackerGroupFeature(name, <any>undefined, { urn })
+            case "sdwan:index/transportManagementVpnFeature:TransportManagementVpnFeature":
+                return new TransportManagementVpnFeature(name, <any>undefined, { urn })
+            case "sdwan:index/transportManagementVpnInterfaceEthernetFeature:TransportManagementVpnInterfaceEthernetFeature":
+                return new TransportManagementVpnInterfaceEthernetFeature(name, <any>undefined, { urn })
+            case "sdwan:index/transportRoutePolicyFeature:TransportRoutePolicyFeature":
+                return new TransportRoutePolicyFeature(name, <any>undefined, { urn })
+            case "sdwan:index/transportRoutingBgpFeature:TransportRoutingBgpFeature":
+                return new TransportRoutingBgpFeature(name, <any>undefined, { urn })
+            case "sdwan:index/transportRoutingOspfFeature:TransportRoutingOspfFeature":
+                return new TransportRoutingOspfFeature(name, <any>undefined, { urn })
+            case "sdwan:index/transportRoutingOspfv3Ipv4Feature:TransportRoutingOspfv3Ipv4Feature":
+                return new TransportRoutingOspfv3Ipv4Feature(name, <any>undefined, { urn })
+            case "sdwan:index/transportRoutingOspfv3Ipv6Feature:TransportRoutingOspfv3Ipv6Feature":
+                return new TransportRoutingOspfv3Ipv6Feature(name, <any>undefined, { urn })
+            case "sdwan:index/transportTrackerFeature:TransportTrackerFeature":
+                return new TransportTrackerFeature(name, <any>undefined, { urn })
+            case "sdwan:index/transportTrackerGroupFeature:TransportTrackerGroupFeature":
+                return new TransportTrackerGroupFeature(name, <any>undefined, { urn })
+            case "sdwan:index/transportWanVpnFeature:TransportWanVpnFeature":
+                return new TransportWanVpnFeature(name, <any>undefined, { urn })
+            case "sdwan:index/transportWanVpnInterfaceCellularFeature:TransportWanVpnInterfaceCellularFeature":
+                return new TransportWanVpnInterfaceCellularFeature(name, <any>undefined, { urn })
+            case "sdwan:index/transportWanVpnInterfaceEthernetFeature:TransportWanVpnInterfaceEthernetFeature":
+                return new TransportWanVpnInterfaceEthernetFeature(name, <any>undefined, { urn })
+            case "sdwan:index/transportWanVpnInterfaceGreFeature:TransportWanVpnInterfaceGreFeature":
+                return new TransportWanVpnInterfaceGreFeature(name, <any>undefined, { urn })
+            case "sdwan:index/transportWanVpnInterfaceIpsecFeature:TransportWanVpnInterfaceIpsecFeature":
+                return new TransportWanVpnInterfaceIpsecFeature(name, <any>undefined, { urn })
+            case "sdwan:index/transportWanVpnInterfaceT1E1SerialFeature:TransportWanVpnInterfaceT1E1SerialFeature":
+                return new TransportWanVpnInterfaceT1E1SerialFeature(name, <any>undefined, { urn })
             case "sdwan:index/urlFilteringPolicyDefinition:UrlFilteringPolicyDefinition":
                 return new UrlFilteringPolicyDefinition(name, <any>undefined, { urn })
             case "sdwan:index/vpnInterfaceCellularFeatureTemplate:VpnInterfaceCellularFeatureTemplate":
@@ -1649,6 +2120,8 @@ const _module = {
                 return new VpnListPolicyObject(name, <any>undefined, { urn })
             case "sdwan:index/vpnMembershipPolicyDefinition:VpnMembershipPolicyDefinition":
                 return new VpnMembershipPolicyDefinition(name, <any>undefined, { urn })
+            case "sdwan:index/zoneBasedFirewallPolicyDefinition:ZoneBasedFirewallPolicyDefinition":
+                return new ZoneBasedFirewallPolicyDefinition(name, <any>undefined, { urn })
             case "sdwan:index/zoneListPolicyObject:ZoneListPolicyObject":
                 return new ZoneListPolicyObject(name, <any>undefined, { urn })
             default:
@@ -1664,7 +2137,7 @@ pulumi.runtime.registerResourceModule("sdwan", "index/appProbeClassPolicyObject"
 pulumi.runtime.registerResourceModule("sdwan", "index/applicationAwareRoutingPolicyDefinition", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/applicationListPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/applicationPriorityFeatureProfile", _module)
-pulumi.runtime.registerResourceModule("sdwan", "index/applicationPriorityQosPolicyProfileParcel", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/applicationPriorityQosPolicy", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/asPathListPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/attachFeatureDeviceTemplate", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/blockUrlListPolicyObject", _module)
@@ -1700,15 +2173,12 @@ pulumi.runtime.registerResourceModule("sdwan", "index/ciscoVpnInterfaceGreFeatur
 pulumi.runtime.registerResourceModule("sdwan", "index/ciscoVpnInterfaceIpsecFeatureTemplate", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/ciscoWirelessLanFeatureTemplate", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/classMapPolicyObject", _module)
-pulumi.runtime.registerResourceModule("sdwan", "index/cliConfigProfileParcel", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/cliConfigFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/cliDeviceTemplate", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/cliFeatureProfile", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/cliTemplateFeatureTemplate", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/colorListPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/configurationGroup", _module)
-pulumi.runtime.registerResourceModule("sdwan", "index/configurationGroupDeploy", _module)
-pulumi.runtime.registerResourceModule("sdwan", "index/configurationGroupDeviceVariables", _module)
-pulumi.runtime.registerResourceModule("sdwan", "index/configurationGroupDevices", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/customControlTopologyPolicyDefinition", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/dataFqdnPrefixListPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/dataIpv4PrefixListPolicyObject", _module)
@@ -1735,7 +2205,22 @@ pulumi.runtime.registerResourceModule("sdwan", "index/localizedPolicy", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/meshTopologyPolicyDefinition", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/mirrorPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/objectGroupPolicyDefinition", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/otherFeatureProfile", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/otherThousandeyesFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/otherUcseFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policerPolicyObject", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectClassMap", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectColorList", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectDataIpv4PrefixList", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectDataIpv6PrefixList", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectExpandedCommunityList", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectExtendedCommunityList", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectFeatureProfile", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectIpv4PrefixList", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectIpv6PrefixList", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectMirror", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectPolicer", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectTlocList", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/portListPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/preferredColorGroupPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/protocolListPolicyObject", _module)
@@ -1747,39 +2232,65 @@ pulumi.runtime.registerResourceModule("sdwan", "index/ruleSetPolicyDefinition", 
 pulumi.runtime.registerResourceModule("sdwan", "index/securityAppHostingFeatureTemplate", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/securityPolicy", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceFeatureProfile", _module)
-pulumi.runtime.registerResourceModule("sdwan", "index/serviceLanVpnInterfaceEthernetProfileParcel", _module)
-pulumi.runtime.registerResourceModule("sdwan", "index/serviceLanVpnProfileParcel", _module)
-pulumi.runtime.registerResourceModule("sdwan", "index/serviceTrackerProfileParcel", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/serviceLanVpnFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/serviceLanVpnInterfaceEthernetFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/serviceLanVpnInterfaceGreFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/serviceLanVpnInterfaceIpsecFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/serviceLanVpnInterfaceSviFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/serviceObjectTrackerFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/serviceObjectTrackerGroupFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/serviceRoutePolicyFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/serviceRoutingBgpFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/serviceRoutingOspfFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/serviceRoutingOspfv3Ipv4Feature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/serviceRoutingOspfv3Ipv6Feature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/serviceSwitchportFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/serviceTrackerFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/serviceTrackerGroupFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/siteListPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/slaClassPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/standardCommunityListPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/switchportFeatureTemplate", _module)
-pulumi.runtime.registerResourceModule("sdwan", "index/systemAaaProfileParcel", _module)
-pulumi.runtime.registerResourceModule("sdwan", "index/systemBannerProfileParcel", _module)
-pulumi.runtime.registerResourceModule("sdwan", "index/systemBasicProfileParcel", _module)
-pulumi.runtime.registerResourceModule("sdwan", "index/systemBfdProfileParcel", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/systemAaaFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/systemBannerFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/systemBasicFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/systemBfdFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/systemFeatureProfile", _module)
-pulumi.runtime.registerResourceModule("sdwan", "index/systemFlexiblePortSpeedProfileParcel", _module)
-pulumi.runtime.registerResourceModule("sdwan", "index/systemGlobalProfileParcel", _module)
-pulumi.runtime.registerResourceModule("sdwan", "index/systemLoggingProfileParcel", _module)
-pulumi.runtime.registerResourceModule("sdwan", "index/systemMrfProfileParcel", _module)
-pulumi.runtime.registerResourceModule("sdwan", "index/systemNtpProfileParcel", _module)
-pulumi.runtime.registerResourceModule("sdwan", "index/systemOmpProfileParcel", _module)
-pulumi.runtime.registerResourceModule("sdwan", "index/systemPerformanceMonitoringProfileParcel", _module)
-pulumi.runtime.registerResourceModule("sdwan", "index/systemRemoteAccessProfileParcel", _module)
-pulumi.runtime.registerResourceModule("sdwan", "index/systemSecurityProfileParcel", _module)
-pulumi.runtime.registerResourceModule("sdwan", "index/systemSnmpProfileParcel", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/systemFlexiblePortSpeedFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/systemGlobalFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/systemIpv4DeviceAccessFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/systemIpv6DeviceAccessFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/systemLoggingFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/systemMrfFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/systemNtpFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/systemOmpFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/systemPerformanceMonitoringFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/systemRemoteAccessFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/systemSecurityFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/systemSnmpFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/tlocListPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/tlsSslDecryptionPolicyDefinition", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/tlsSslProfilePolicyDefinition", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/trafficDataPolicyDefinition", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/transportFeatureProfile", _module)
-pulumi.runtime.registerResourceModule("sdwan", "index/transportIpv6TrackerProfileParcel", _module)
-pulumi.runtime.registerResourceModule("sdwan", "index/transportManagementVpnInterfaceEthernetProfileParcel", _module)
-pulumi.runtime.registerResourceModule("sdwan", "index/transportManagementVpnProfileParcel", _module)
-pulumi.runtime.registerResourceModule("sdwan", "index/transportRoutingBgpProfileParcel", _module)
-pulumi.runtime.registerResourceModule("sdwan", "index/transportWanVpnInterfaceEthernetProfileParcel", _module)
-pulumi.runtime.registerResourceModule("sdwan", "index/transportWanVpnProfileParcel", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/transportGpsFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/transportIpv6TrackerFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/transportIpv6TrackerGroupFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/transportManagementVpnFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/transportManagementVpnInterfaceEthernetFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/transportRoutePolicyFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/transportRoutingBgpFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/transportRoutingOspfFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/transportRoutingOspfv3Ipv4Feature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/transportRoutingOspfv3Ipv6Feature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/transportTrackerFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/transportTrackerGroupFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/transportWanVpnFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/transportWanVpnInterfaceCellularFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/transportWanVpnInterfaceEthernetFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/transportWanVpnInterfaceGreFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/transportWanVpnInterfaceIpsecFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/transportWanVpnInterfaceT1E1SerialFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/urlFilteringPolicyDefinition", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/vpnInterfaceCellularFeatureTemplate", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/vpnInterfaceDslIpoeFeatureTemplate", _module)
@@ -1791,6 +2302,7 @@ pulumi.runtime.registerResourceModule("sdwan", "index/vpnInterfaceSviFeatureTemp
 pulumi.runtime.registerResourceModule("sdwan", "index/vpnInterfaceT1E1SerialFeatureTemplate", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/vpnListPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/vpnMembershipPolicyDefinition", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/zoneBasedFirewallPolicyDefinition", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/zoneListPolicyObject", _module)
 pulumi.runtime.registerResourcePackage("sdwan", {
     version: utilities.getVersion(),

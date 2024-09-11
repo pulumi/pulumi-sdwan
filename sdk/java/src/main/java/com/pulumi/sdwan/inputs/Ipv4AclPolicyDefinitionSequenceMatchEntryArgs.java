@@ -125,6 +125,21 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
     }
 
     /**
+     * ICMP Message
+     * 
+     */
+    @Import(name="icmpMessage")
+    private @Nullable Output<String> icmpMessage;
+
+    /**
+     * @return ICMP Message
+     * 
+     */
+    public Optional<Output<String>> icmpMessage() {
+        return Optional.ofNullable(this.icmpMessage);
+    }
+
+    /**
      * Packet length
      *   - Range: `0`-`65535`
      * 
@@ -252,7 +267,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
 
     /**
      * Type of match entry
-     *   - Choices: `dscp`, `sourceIp`, `destinationIp`, `class`, `packetLength`, `plp`, `sourcePort`, `destinationPort`, `sourceDataPrefixList`, `destinationDataPrefixList`, `protocol`, `tcp`
+     *   - Choices: `dscp`, `sourceIp`, `destinationIp`, `class`, `packetLength`, `plp`, `sourcePort`, `destinationPort`, `sourceDataPrefixList`, `destinationDataPrefixList`, `protocol`, `tcp`, `icmpMessage`
      * 
      */
     @Import(name="type", required=true)
@@ -260,7 +275,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
 
     /**
      * @return Type of match entry
-     *   - Choices: `dscp`, `sourceIp`, `destinationIp`, `class`, `packetLength`, `plp`, `sourcePort`, `destinationPort`, `sourceDataPrefixList`, `destinationDataPrefixList`, `protocol`, `tcp`
+     *   - Choices: `dscp`, `sourceIp`, `destinationIp`, `class`, `packetLength`, `plp`, `sourcePort`, `destinationPort`, `sourceDataPrefixList`, `destinationDataPrefixList`, `protocol`, `tcp`, `icmpMessage`
      * 
      */
     public Output<String> type() {
@@ -277,6 +292,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         this.destinationIp = $.destinationIp;
         this.destinationPorts = $.destinationPorts;
         this.dscp = $.dscp;
+        this.icmpMessage = $.icmpMessage;
         this.packetLength = $.packetLength;
         this.priority = $.priority;
         this.protocol = $.protocol;
@@ -456,6 +472,27 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
+         * @param icmpMessage ICMP Message
+         * 
+         * @return builder
+         * 
+         */
+        public Builder icmpMessage(@Nullable Output<String> icmpMessage) {
+            $.icmpMessage = icmpMessage;
+            return this;
+        }
+
+        /**
+         * @param icmpMessage ICMP Message
+         * 
+         * @return builder
+         * 
+         */
+        public Builder icmpMessage(String icmpMessage) {
+            return icmpMessage(Output.of(icmpMessage));
+        }
+
+        /**
          * @param packetLength Packet length
          *   - Range: `0`-`65535`
          * 
@@ -631,7 +668,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
 
         /**
          * @param type Type of match entry
-         *   - Choices: `dscp`, `sourceIp`, `destinationIp`, `class`, `packetLength`, `plp`, `sourcePort`, `destinationPort`, `sourceDataPrefixList`, `destinationDataPrefixList`, `protocol`, `tcp`
+         *   - Choices: `dscp`, `sourceIp`, `destinationIp`, `class`, `packetLength`, `plp`, `sourcePort`, `destinationPort`, `sourceDataPrefixList`, `destinationDataPrefixList`, `protocol`, `tcp`, `icmpMessage`
          * 
          * @return builder
          * 
@@ -643,7 +680,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
 
         /**
          * @param type Type of match entry
-         *   - Choices: `dscp`, `sourceIp`, `destinationIp`, `class`, `packetLength`, `plp`, `sourcePort`, `destinationPort`, `sourceDataPrefixList`, `destinationDataPrefixList`, `protocol`, `tcp`
+         *   - Choices: `dscp`, `sourceIp`, `destinationIp`, `class`, `packetLength`, `plp`, `sourcePort`, `destinationPort`, `sourceDataPrefixList`, `destinationDataPrefixList`, `protocol`, `tcp`, `icmpMessage`
          * 
          * @return builder
          * 

@@ -132,19 +132,34 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
 
     /**
      * Loss correction FEC threshold
-     *   - Range: `1`-`5`
      * 
      */
     @Import(name="lossCorrectionFecThreshold")
-    private @Nullable Output<Integer> lossCorrectionFecThreshold;
+    private @Nullable Output<String> lossCorrectionFecThreshold;
 
     /**
      * @return Loss correction FEC threshold
-     *   - Range: `1`-`5`
      * 
      */
-    public Optional<Output<Integer>> lossCorrectionFecThreshold() {
+    public Optional<Output<String>> lossCorrectionFecThreshold() {
         return Optional.ofNullable(this.lossCorrectionFecThreshold);
+    }
+
+    /**
+     * Loss correction packet duplication
+     *   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
+     * 
+     */
+    @Import(name="lossCorrectionPacketDuplication")
+    private @Nullable Output<String> lossCorrectionPacketDuplication;
+
+    /**
+     * @return Loss correction packet duplication
+     *   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
+     * 
+     */
+    public Optional<Output<String>> lossCorrectionPacketDuplication() {
+        return Optional.ofNullable(this.lossCorrectionPacketDuplication);
     }
 
     /**
@@ -307,7 +322,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
 
     /**
      * Type of action entry
-     *   - Choices: `cflowd`, `count`, `dreOptimization`, `fallbackToRouting`, `log`, `lossProtect`, `lossProtectFec`, `nat`, `redirectDns`, `serviceNodeGroup`, `set`, `sig`, `tcpOptimization`
+     *   - Choices: `cflowd`, `count`, `dreOptimization`, `fallbackToRouting`, `log`, `lossProtect`, `lossProtectPktDup`, `lossProtectFec`, `nat`, `redirectDns`, `serviceNodeGroup`, `set`, `sig`, `tcpOptimization`
      * 
      */
     @Import(name="type", required=true)
@@ -315,7 +330,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
 
     /**
      * @return Type of action entry
-     *   - Choices: `cflowd`, `count`, `dreOptimization`, `fallbackToRouting`, `log`, `lossProtect`, `lossProtectFec`, `nat`, `redirectDns`, `serviceNodeGroup`, `set`, `sig`, `tcpOptimization`
+     *   - Choices: `cflowd`, `count`, `dreOptimization`, `fallbackToRouting`, `log`, `lossProtect`, `lossProtectPktDup`, `lossProtectFec`, `nat`, `redirectDns`, `serviceNodeGroup`, `set`, `sig`, `tcpOptimization`
      * 
      */
     public Output<String> type() {
@@ -333,6 +348,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         this.lossCorrection = $.lossCorrection;
         this.lossCorrectionFec = $.lossCorrectionFec;
         this.lossCorrectionFecThreshold = $.lossCorrectionFecThreshold;
+        this.lossCorrectionPacketDuplication = $.lossCorrectionPacketDuplication;
         this.natParameters = $.natParameters;
         this.natPool = $.natPool;
         this.natPoolId = $.natPoolId;
@@ -517,25 +533,46 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
 
         /**
          * @param lossCorrectionFecThreshold Loss correction FEC threshold
-         *   - Range: `1`-`5`
          * 
          * @return builder
          * 
          */
-        public Builder lossCorrectionFecThreshold(@Nullable Output<Integer> lossCorrectionFecThreshold) {
+        public Builder lossCorrectionFecThreshold(@Nullable Output<String> lossCorrectionFecThreshold) {
             $.lossCorrectionFecThreshold = lossCorrectionFecThreshold;
             return this;
         }
 
         /**
          * @param lossCorrectionFecThreshold Loss correction FEC threshold
-         *   - Range: `1`-`5`
          * 
          * @return builder
          * 
          */
-        public Builder lossCorrectionFecThreshold(Integer lossCorrectionFecThreshold) {
+        public Builder lossCorrectionFecThreshold(String lossCorrectionFecThreshold) {
             return lossCorrectionFecThreshold(Output.of(lossCorrectionFecThreshold));
+        }
+
+        /**
+         * @param lossCorrectionPacketDuplication Loss correction packet duplication
+         *   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder lossCorrectionPacketDuplication(@Nullable Output<String> lossCorrectionPacketDuplication) {
+            $.lossCorrectionPacketDuplication = lossCorrectionPacketDuplication;
+            return this;
+        }
+
+        /**
+         * @param lossCorrectionPacketDuplication Loss correction packet duplication
+         *   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder lossCorrectionPacketDuplication(String lossCorrectionPacketDuplication) {
+            return lossCorrectionPacketDuplication(Output.of(lossCorrectionPacketDuplication));
         }
 
         /**
@@ -778,7 +815,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
 
         /**
          * @param type Type of action entry
-         *   - Choices: `cflowd`, `count`, `dreOptimization`, `fallbackToRouting`, `log`, `lossProtect`, `lossProtectFec`, `nat`, `redirectDns`, `serviceNodeGroup`, `set`, `sig`, `tcpOptimization`
+         *   - Choices: `cflowd`, `count`, `dreOptimization`, `fallbackToRouting`, `log`, `lossProtect`, `lossProtectPktDup`, `lossProtectFec`, `nat`, `redirectDns`, `serviceNodeGroup`, `set`, `sig`, `tcpOptimization`
          * 
          * @return builder
          * 
@@ -790,7 +827,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
 
         /**
          * @param type Type of action entry
-         *   - Choices: `cflowd`, `count`, `dreOptimization`, `fallbackToRouting`, `log`, `lossProtect`, `lossProtectFec`, `nat`, `redirectDns`, `serviceNodeGroup`, `set`, `sig`, `tcpOptimization`
+         *   - Choices: `cflowd`, `count`, `dreOptimization`, `fallbackToRouting`, `log`, `lossProtect`, `lossProtectPktDup`, `lossProtectFec`, `nat`, `redirectDns`, `serviceNodeGroup`, `set`, `sig`, `tcpOptimization`
          * 
          * @return builder
          * 

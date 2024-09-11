@@ -46,10 +46,10 @@ namespace Pulumi.Sdwan
         public Output<string?> DirectInternetApplications { get; private set; } = null!;
 
         /// <summary>
-        /// Failure mode - Choices: `open`, `close` - Default value: `open`
+        /// Failure mode - Choices: `open`, `close`
         /// </summary>
         [Output("failureMode")]
-        public Output<string> FailureMode { get; private set; } = null!;
+        public Output<string?> FailureMode { get; private set; } = null!;
 
         /// <summary>
         /// High Speed Logging Server IP
@@ -186,7 +186,7 @@ namespace Pulumi.Sdwan
         public Input<string>? DirectInternetApplications { get; set; }
 
         /// <summary>
-        /// Failure mode - Choices: `open`, `close` - Default value: `open`
+        /// Failure mode - Choices: `open`, `close`
         /// </summary>
         [Input("failureMode")]
         public Input<string>? FailureMode { get; set; }
@@ -287,7 +287,7 @@ namespace Pulumi.Sdwan
         public Input<string>? DirectInternetApplications { get; set; }
 
         /// <summary>
-        /// Failure mode - Choices: `open`, `close` - Default value: `open`
+        /// Failure mode - Choices: `open`, `close`
         /// </summary>
         [Input("failureMode")]
         public Input<string>? FailureMode { get; set; }
