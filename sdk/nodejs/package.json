@@ -1,7 +1,7 @@
 {
     "name": "@pulumi/sdwan",
     "version": "0.0.0-alpha.0+dev",
-    "description": "A Pulumi package for managing resources on Cisco Catalyst SD-WAN.. Based on terraform-provider-sdwan: version v0.2.1",
+    "description": "A Pulumi package for managing resources on Cisco Catalyst SD-WAN.. Based on terraform-provider-sdwan: version v0.4.1",
     "keywords": [
         "pulumi",
         "sdwan",

@@ -17,22 +17,23 @@ __all__ = ['CustomControlTopologyPolicyDefinitionArgs', 'CustomControlTopologyPo
 class CustomControlTopologyPolicyDefinitionArgs:
     def __init__(__self__, *,
                  description: pulumi.Input[str],
-                 sequences: pulumi.Input[Sequence[pulumi.Input['CustomControlTopologyPolicyDefinitionSequenceArgs']]],
                  default_action: Optional[pulumi.Input[str]] = None,
-                 name: Optional[pulumi.Input[str]] = None):
+                 name: Optional[pulumi.Input[str]] = None,
+                 sequences: Optional[pulumi.Input[Sequence[pulumi.Input['CustomControlTopologyPolicyDefinitionSequenceArgs']]]] = None):
         """
         The set of arguments for constructing a CustomControlTopologyPolicyDefinition resource.
         :param pulumi.Input[str] description: The description of the policy definition
-        :param pulumi.Input[Sequence[pulumi.Input['CustomControlTopologyPolicyDefinitionSequenceArgs']]] sequences: List of sequences
         :param pulumi.Input[str] default_action: Default action, either `accept` or `reject` - Choices: `accept`, `reject`
         :param pulumi.Input[str] name: The name of the policy definition
+        :param pulumi.Input[Sequence[pulumi.Input['CustomControlTopologyPolicyDefinitionSequenceArgs']]] sequences: List of sequences
         """
         pulumi.set(__self__, "description", description)
-        pulumi.set(__self__, "sequences", sequences)
         if default_action is not None:
             pulumi.set(__self__, "default_action", default_action)
         if name is not None:
             pulumi.set(__self__, "name", name)
+        if sequences is not None:
+            pulumi.set(__self__, "sequences", sequences)
 
     @property
     @pulumi.getter
@@ -45,18 +46,6 @@ class CustomControlTopologyPolicyDefinitionArgs:
     @description.setter
     def description(self, value: pulumi.Input[str]):
         pulumi.set(self, "description", value)
-
-    @property
-    @pulumi.getter
-    def sequences(self) -> pulumi.Input[Sequence[pulumi.Input['CustomControlTopologyPolicyDefinitionSequenceArgs']]]:
-        """
-        List of sequences
-        """
-        return pulumi.get(self, "sequences")
-
-    @sequences.setter
-    def sequences(self, value: pulumi.Input[Sequence[pulumi.Input['CustomControlTopologyPolicyDefinitionSequenceArgs']]]):
-        pulumi.set(self, "sequences", value)
 
     @property
     @pulumi.getter(name="defaultAction")
@@ -81,6 +70,18 @@ class CustomControlTopologyPolicyDefinitionArgs:
     @name.setter
     def name(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "name", value)
+
+    @property
+    @pulumi.getter
+    def sequences(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['CustomControlTopologyPolicyDefinitionSequenceArgs']]]]:
+        """
+        List of sequences
+        """
+        return pulumi.get(self, "sequences")
+
+    @sequences.setter
+    def sequences(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CustomControlTopologyPolicyDefinitionSequenceArgs']]]]):
+        pulumi.set(self, "sequences", value)
 
 
 @pulumi.input_type
@@ -261,8 +262,6 @@ class CustomControlTopologyPolicyDefinition(pulumi.CustomResource):
                 raise TypeError("Missing required property 'description'")
             __props__.__dict__["description"] = description
             __props__.__dict__["name"] = name
-            if sequences is None and not opts.urn:
-                raise TypeError("Missing required property 'sequences'")
             __props__.__dict__["sequences"] = sequences
             __props__.__dict__["type"] = None
             __props__.__dict__["version"] = None
@@ -334,7 +333,7 @@ class CustomControlTopologyPolicyDefinition(pulumi.CustomResource):
 
     @property
     @pulumi.getter
-    def sequences(self) -> pulumi.Output[Sequence['outputs.CustomControlTopologyPolicyDefinitionSequence']]:
+    def sequences(self) -> pulumi.Output[Optional[Sequence['outputs.CustomControlTopologyPolicyDefinitionSequence']]]:
         """
         List of sequences
         """

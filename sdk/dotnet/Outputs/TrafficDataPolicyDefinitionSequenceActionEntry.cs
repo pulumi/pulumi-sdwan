@@ -45,9 +45,13 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? LossCorrectionFec;
         /// <summary>
         /// Loss correction FEC threshold
-        ///   - Range: `1`-`5`
         /// </summary>
-        public readonly int? LossCorrectionFecThreshold;
+        public readonly string? LossCorrectionFecThreshold;
+        /// <summary>
+        /// Loss correction packet duplication
+        ///   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
+        /// </summary>
+        public readonly string? LossCorrectionPacketDuplication;
         /// <summary>
         /// List of NAT parameters
         /// </summary>
@@ -94,7 +98,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly bool? TcpOptimization;
         /// <summary>
         /// Type of action entry
-        ///   - Choices: `cflowd`, `count`, `dreOptimization`, `fallbackToRouting`, `log`, `lossProtect`, `lossProtectFec`, `nat`, `redirectDns`, `serviceNodeGroup`, `set`, `sig`, `tcpOptimization`
+        ///   - Choices: `cflowd`, `count`, `dreOptimization`, `fallbackToRouting`, `log`, `lossProtect`, `lossProtectPktDup`, `lossProtectFec`, `nat`, `redirectDns`, `serviceNodeGroup`, `set`, `sig`, `tcpOptimization`
         /// </summary>
         public readonly string Type;
 
@@ -114,7 +118,9 @@ namespace Pulumi.Sdwan.Outputs
 
             string? lossCorrectionFec,
 
-            int? lossCorrectionFecThreshold,
+            string? lossCorrectionFecThreshold,
+
+            string? lossCorrectionPacketDuplication,
 
             ImmutableArray<Outputs.TrafficDataPolicyDefinitionSequenceActionEntryNatParameter> natParameters,
 
@@ -146,6 +152,7 @@ namespace Pulumi.Sdwan.Outputs
             LossCorrection = lossCorrection;
             LossCorrectionFec = lossCorrectionFec;
             LossCorrectionFecThreshold = lossCorrectionFecThreshold;
+            LossCorrectionPacketDuplication = lossCorrectionPacketDuplication;
             NatParameters = natParameters;
             NatPool = natPool;
             NatPoolId = natPoolId;

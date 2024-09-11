@@ -80,14 +80,14 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Failure mode - Choices: `open`, `close` - Default value: `open`
+     * Failure mode - Choices: `open`, `close`
      * 
      */
     @Import(name="failureMode")
     private @Nullable Output<String> failureMode;
 
     /**
-     * @return Failure mode - Choices: `open`, `close` - Default value: `open`
+     * @return Failure mode - Choices: `open`, `close`
      * 
      */
     public Optional<Output<String>> failureMode() {
@@ -371,7 +371,7 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param failureMode Failure mode - Choices: `open`, `close` - Default value: `open`
+         * @param failureMode Failure mode - Choices: `open`, `close`
          * 
          * @return builder
          * 
@@ -382,7 +382,7 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param failureMode Failure mode - Choices: `open`, `close` - Default value: `open`
+         * @param failureMode Failure mode - Choices: `open`, `close`
          * 
          * @return builder
          * 

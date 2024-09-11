@@ -5,6 +5,7 @@ package com.pulumi.sdwan.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -12,10 +13,20 @@ import java.util.Objects;
 @CustomType
 public final class GetCflowdPolicyDefinitionCollector {
     /**
+     * @return BFD metrics exporting
+     * 
+     */
+    private Boolean bfdMetricsExporting;
+    /**
      * @return Export spreading
      * 
      */
     private String exportSpreading;
+    /**
+     * @return Exporting interval
+     * 
+     */
+    private Integer exportingInterval;
     /**
      * @return IP address
      * 
@@ -44,11 +55,25 @@ public final class GetCflowdPolicyDefinitionCollector {
 
     private GetCflowdPolicyDefinitionCollector() {}
     /**
+     * @return BFD metrics exporting
+     * 
+     */
+    public Boolean bfdMetricsExporting() {
+        return this.bfdMetricsExporting;
+    }
+    /**
      * @return Export spreading
      * 
      */
     public String exportSpreading() {
         return this.exportSpreading;
+    }
+    /**
+     * @return Exporting interval
+     * 
+     */
+    public Integer exportingInterval() {
+        return this.exportingInterval;
     }
     /**
      * @return IP address
@@ -95,7 +120,9 @@ public final class GetCflowdPolicyDefinitionCollector {
     }
     @CustomType.Builder
     public static final class Builder {
+        private Boolean bfdMetricsExporting;
         private String exportSpreading;
+        private Integer exportingInterval;
         private String ipAddress;
         private Integer port;
         private String sourceInterface;
@@ -104,7 +131,9 @@ public final class GetCflowdPolicyDefinitionCollector {
         public Builder() {}
         public Builder(GetCflowdPolicyDefinitionCollector defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.bfdMetricsExporting = defaults.bfdMetricsExporting;
     	      this.exportSpreading = defaults.exportSpreading;
+    	      this.exportingInterval = defaults.exportingInterval;
     	      this.ipAddress = defaults.ipAddress;
     	      this.port = defaults.port;
     	      this.sourceInterface = defaults.sourceInterface;
@@ -113,11 +142,27 @@ public final class GetCflowdPolicyDefinitionCollector {
         }
 
         @CustomType.Setter
+        public Builder bfdMetricsExporting(Boolean bfdMetricsExporting) {
+            if (bfdMetricsExporting == null) {
+              throw new MissingRequiredPropertyException("GetCflowdPolicyDefinitionCollector", "bfdMetricsExporting");
+            }
+            this.bfdMetricsExporting = bfdMetricsExporting;
+            return this;
+        }
+        @CustomType.Setter
         public Builder exportSpreading(String exportSpreading) {
             if (exportSpreading == null) {
               throw new MissingRequiredPropertyException("GetCflowdPolicyDefinitionCollector", "exportSpreading");
             }
             this.exportSpreading = exportSpreading;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder exportingInterval(Integer exportingInterval) {
+            if (exportingInterval == null) {
+              throw new MissingRequiredPropertyException("GetCflowdPolicyDefinitionCollector", "exportingInterval");
+            }
+            this.exportingInterval = exportingInterval;
             return this;
         }
         @CustomType.Setter
@@ -162,7 +207,9 @@ public final class GetCflowdPolicyDefinitionCollector {
         }
         public GetCflowdPolicyDefinitionCollector build() {
             final var _resultValue = new GetCflowdPolicyDefinitionCollector();
+            _resultValue.bfdMetricsExporting = bfdMetricsExporting;
             _resultValue.exportSpreading = exportSpreading;
+            _resultValue.exportingInterval = exportingInterval;
             _resultValue.ipAddress = ipAddress;
             _resultValue.port = port;
             _resultValue.sourceInterface = sourceInterface;

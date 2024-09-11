@@ -47,6 +47,11 @@ public final class GetIpv4AclPolicyDefinitionSequenceMatchEntry {
      */
     private Integer dscp;
     /**
+     * @return ICMP Message
+     * 
+     */
+    private String icmpMessage;
+    /**
      * @return Packet length
      * 
      */
@@ -143,6 +148,13 @@ public final class GetIpv4AclPolicyDefinitionSequenceMatchEntry {
         return this.dscp;
     }
     /**
+     * @return ICMP Message
+     * 
+     */
+    public String icmpMessage() {
+        return this.icmpMessage;
+    }
+    /**
      * @return Packet length
      * 
      */
@@ -222,6 +234,7 @@ public final class GetIpv4AclPolicyDefinitionSequenceMatchEntry {
         private String destinationIp;
         private String destinationPorts;
         private Integer dscp;
+        private String icmpMessage;
         private Integer packetLength;
         private String priority;
         private String protocol;
@@ -241,6 +254,7 @@ public final class GetIpv4AclPolicyDefinitionSequenceMatchEntry {
     	      this.destinationIp = defaults.destinationIp;
     	      this.destinationPorts = defaults.destinationPorts;
     	      this.dscp = defaults.dscp;
+    	      this.icmpMessage = defaults.icmpMessage;
     	      this.packetLength = defaults.packetLength;
     	      this.priority = defaults.priority;
     	      this.protocol = defaults.protocol;
@@ -306,6 +320,14 @@ public final class GetIpv4AclPolicyDefinitionSequenceMatchEntry {
               throw new MissingRequiredPropertyException("GetIpv4AclPolicyDefinitionSequenceMatchEntry", "dscp");
             }
             this.dscp = dscp;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder icmpMessage(String icmpMessage) {
+            if (icmpMessage == null) {
+              throw new MissingRequiredPropertyException("GetIpv4AclPolicyDefinitionSequenceMatchEntry", "icmpMessage");
+            }
+            this.icmpMessage = icmpMessage;
             return this;
         }
         @CustomType.Setter
@@ -389,6 +411,7 @@ public final class GetIpv4AclPolicyDefinitionSequenceMatchEntry {
             _resultValue.destinationIp = destinationIp;
             _resultValue.destinationPorts = destinationPorts;
             _resultValue.dscp = dscp;
+            _resultValue.icmpMessage = icmpMessage;
             _resultValue.packetLength = packetLength;
             _resultValue.priority = priority;
             _resultValue.protocol = protocol;

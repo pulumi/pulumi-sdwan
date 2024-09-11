@@ -189,6 +189,21 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntryArgs
     }
 
     /**
+     * ICMP Message
+     * 
+     */
+    @Import(name="icmpMessage")
+    private @Nullable Output<String> icmpMessage;
+
+    /**
+     * @return ICMP Message
+     * 
+     */
+    public Optional<Output<String>> icmpMessage() {
+        return Optional.ofNullable(this.icmpMessage);
+    }
+
+    /**
      * PLP
      *   - Choices: `low`, `high`
      * 
@@ -299,7 +314,7 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntryArgs
 
     /**
      * Type of match entry
-     *   - Choices: `appList`, `dnsAppList`, `dns`, `dscp`, `plp`, `protocol`, `sourceDataPrefixList`, `sourceIp`, `sourcePort`, `destinationDataPrefixList`, `destinationIp`, `destinationRegion`, `destinationPort`, `trafficTo`
+     *   - Choices: `appList`, `dnsAppList`, `dns`, `dscp`, `plp`, `protocol`, `sourceDataPrefixList`, `sourceIp`, `sourcePort`, `destinationDataPrefixList`, `destinationIp`, `destinationRegion`, `destinationPort`, `trafficTo`, `icmpMessage`
      * 
      */
     @Import(name="type", required=true)
@@ -307,7 +322,7 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntryArgs
 
     /**
      * @return Type of match entry
-     *   - Choices: `appList`, `dnsAppList`, `dns`, `dscp`, `plp`, `protocol`, `sourceDataPrefixList`, `sourceIp`, `sourcePort`, `destinationDataPrefixList`, `destinationIp`, `destinationRegion`, `destinationPort`, `trafficTo`
+     *   - Choices: `appList`, `dnsAppList`, `dns`, `dscp`, `plp`, `protocol`, `sourceDataPrefixList`, `sourceIp`, `sourcePort`, `destinationDataPrefixList`, `destinationIp`, `destinationRegion`, `destinationPort`, `trafficTo`, `icmpMessage`
      * 
      */
     public Output<String> type() {
@@ -328,6 +343,7 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntryArgs
         this.dnsApplicationListId = $.dnsApplicationListId;
         this.dnsApplicationListVersion = $.dnsApplicationListVersion;
         this.dscp = $.dscp;
+        this.icmpMessage = $.icmpMessage;
         this.plp = $.plp;
         this.protocol = $.protocol;
         this.sourceDataPrefixListId = $.sourceDataPrefixListId;
@@ -594,6 +610,27 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntryArgs
         }
 
         /**
+         * @param icmpMessage ICMP Message
+         * 
+         * @return builder
+         * 
+         */
+        public Builder icmpMessage(@Nullable Output<String> icmpMessage) {
+            $.icmpMessage = icmpMessage;
+            return this;
+        }
+
+        /**
+         * @param icmpMessage ICMP Message
+         * 
+         * @return builder
+         * 
+         */
+        public Builder icmpMessage(String icmpMessage) {
+            return icmpMessage(Output.of(icmpMessage));
+        }
+
+        /**
          * @param plp PLP
          *   - Choices: `low`, `high`
          * 
@@ -746,7 +783,7 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntryArgs
 
         /**
          * @param type Type of match entry
-         *   - Choices: `appList`, `dnsAppList`, `dns`, `dscp`, `plp`, `protocol`, `sourceDataPrefixList`, `sourceIp`, `sourcePort`, `destinationDataPrefixList`, `destinationIp`, `destinationRegion`, `destinationPort`, `trafficTo`
+         *   - Choices: `appList`, `dnsAppList`, `dns`, `dscp`, `plp`, `protocol`, `sourceDataPrefixList`, `sourceIp`, `sourcePort`, `destinationDataPrefixList`, `destinationIp`, `destinationRegion`, `destinationPort`, `trafficTo`, `icmpMessage`
          * 
          * @return builder
          * 
@@ -758,7 +795,7 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntryArgs
 
         /**
          * @param type Type of match entry
-         *   - Choices: `appList`, `dnsAppList`, `dns`, `dscp`, `plp`, `protocol`, `sourceDataPrefixList`, `sourceIp`, `sourcePort`, `destinationDataPrefixList`, `destinationIp`, `destinationRegion`, `destinationPort`, `trafficTo`
+         *   - Choices: `appList`, `dnsAppList`, `dns`, `dscp`, `plp`, `protocol`, `sourceDataPrefixList`, `sourceIp`, `sourcePort`, `destinationDataPrefixList`, `destinationIp`, `destinationRegion`, `destinationPort`, `trafficTo`, `icmpMessage`
          * 
          * @return builder
          * 

@@ -72,6 +72,11 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry {
      */
     private @Nullable Integer dscp;
     /**
+     * @return ICMP Message
+     * 
+     */
+    private @Nullable String icmpMessage;
+    /**
      * @return PLP
      *   - Choices: `low`, `high`
      * 
@@ -110,7 +115,7 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry {
     private @Nullable String trafficTo;
     /**
      * @return Type of match entry
-     *   - Choices: `appList`, `dnsAppList`, `dns`, `dscp`, `plp`, `protocol`, `sourceDataPrefixList`, `sourceIp`, `sourcePort`, `destinationDataPrefixList`, `destinationIp`, `destinationRegion`, `destinationPort`, `trafficTo`
+     *   - Choices: `appList`, `dnsAppList`, `dns`, `dscp`, `plp`, `protocol`, `sourceDataPrefixList`, `sourceIp`, `sourcePort`, `destinationDataPrefixList`, `destinationIp`, `destinationRegion`, `destinationPort`, `trafficTo`, `icmpMessage`
      * 
      */
     private String type;
@@ -197,6 +202,13 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.dscp);
     }
     /**
+     * @return ICMP Message
+     * 
+     */
+    public Optional<String> icmpMessage() {
+        return Optional.ofNullable(this.icmpMessage);
+    }
+    /**
      * @return PLP
      *   - Choices: `low`, `high`
      * 
@@ -249,7 +261,7 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry {
     }
     /**
      * @return Type of match entry
-     *   - Choices: `appList`, `dnsAppList`, `dns`, `dscp`, `plp`, `protocol`, `sourceDataPrefixList`, `sourceIp`, `sourcePort`, `destinationDataPrefixList`, `destinationIp`, `destinationRegion`, `destinationPort`, `trafficTo`
+     *   - Choices: `appList`, `dnsAppList`, `dns`, `dscp`, `plp`, `protocol`, `sourceDataPrefixList`, `sourceIp`, `sourcePort`, `destinationDataPrefixList`, `destinationIp`, `destinationRegion`, `destinationPort`, `trafficTo`, `icmpMessage`
      * 
      */
     public String type() {
@@ -276,6 +288,7 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry {
         private @Nullable String dnsApplicationListId;
         private @Nullable Integer dnsApplicationListVersion;
         private @Nullable Integer dscp;
+        private @Nullable String icmpMessage;
         private @Nullable String plp;
         private @Nullable String protocol;
         private @Nullable String sourceDataPrefixListId;
@@ -298,6 +311,7 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry {
     	      this.dnsApplicationListId = defaults.dnsApplicationListId;
     	      this.dnsApplicationListVersion = defaults.dnsApplicationListVersion;
     	      this.dscp = defaults.dscp;
+    	      this.icmpMessage = defaults.icmpMessage;
     	      this.plp = defaults.plp;
     	      this.protocol = defaults.protocol;
     	      this.sourceDataPrefixListId = defaults.sourceDataPrefixListId;
@@ -375,6 +389,12 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry {
             return this;
         }
         @CustomType.Setter
+        public Builder icmpMessage(@Nullable String icmpMessage) {
+
+            this.icmpMessage = icmpMessage;
+            return this;
+        }
+        @CustomType.Setter
         public Builder plp(@Nullable String plp) {
 
             this.plp = plp;
@@ -437,6 +457,7 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry {
             _resultValue.dnsApplicationListId = dnsApplicationListId;
             _resultValue.dnsApplicationListVersion = dnsApplicationListVersion;
             _resultValue.dscp = dscp;
+            _resultValue.icmpMessage = icmpMessage;
             _resultValue.plp = plp;
             _resultValue.protocol = protocol;
             _resultValue.sourceDataPrefixListId = sourceDataPrefixListId;

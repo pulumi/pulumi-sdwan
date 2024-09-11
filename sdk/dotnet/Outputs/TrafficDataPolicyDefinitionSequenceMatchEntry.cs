@@ -61,6 +61,10 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? Dscp;
         /// <summary>
+        /// ICMP Message
+        /// </summary>
+        public readonly string? IcmpMessage;
+        /// <summary>
         /// Packet length
         ///   - Range: `0`-`65535`
         /// </summary>
@@ -102,7 +106,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? TrafficTo;
         /// <summary>
         /// Type of match entry
-        ///   - Choices: `appList`, `dnsAppList`, `dns`, `dscp`, `packetLength`, `plp`, `protocol`, `sourceDataPrefixList`, `sourceIp`, `sourcePort`, `destinationDataPrefixList`, `destinationIp`, `destinationRegion`, `destinationPort`, `tcp`, `trafficTo`
+        ///   - Choices: `appList`, `dnsAppList`, `dns`, `dscp`, `packetLength`, `plp`, `protocol`, `sourceDataPrefixList`, `sourceIp`, `sourcePort`, `destinationDataPrefixList`, `destinationIp`, `destinationRegion`, `destinationPort`, `tcp`, `trafficTo`, `icmpMessage`
         /// </summary>
         public readonly string Type;
 
@@ -129,6 +133,8 @@ namespace Pulumi.Sdwan.Outputs
             int? dnsApplicationListVersion,
 
             int? dscp,
+
+            string? icmpMessage,
 
             int? packetLength,
 
@@ -161,6 +167,7 @@ namespace Pulumi.Sdwan.Outputs
             DnsApplicationListId = dnsApplicationListId;
             DnsApplicationListVersion = dnsApplicationListVersion;
             Dscp = dscp;
+            IcmpMessage = icmpMessage;
             PacketLength = packetLength;
             Plp = plp;
             Protocol = protocol;

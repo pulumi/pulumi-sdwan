@@ -56,10 +56,15 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntry {
     private @Nullable String lossCorrectionFec;
     /**
      * @return Loss correction FEC threshold
-     *   - Range: `1`-`5`
      * 
      */
-    private @Nullable Integer lossCorrectionFecThreshold;
+    private @Nullable String lossCorrectionFecThreshold;
+    /**
+     * @return Loss correction packet duplication
+     *   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
+     * 
+     */
+    private @Nullable String lossCorrectionPacketDuplication;
     /**
      * @return List of NAT parameters
      * 
@@ -116,7 +121,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntry {
     private @Nullable Boolean tcpOptimization;
     /**
      * @return Type of action entry
-     *   - Choices: `cflowd`, `count`, `dreOptimization`, `fallbackToRouting`, `log`, `lossProtect`, `lossProtectFec`, `nat`, `redirectDns`, `serviceNodeGroup`, `set`, `sig`, `tcpOptimization`
+     *   - Choices: `cflowd`, `count`, `dreOptimization`, `fallbackToRouting`, `log`, `lossProtect`, `lossProtectPktDup`, `lossProtectFec`, `nat`, `redirectDns`, `serviceNodeGroup`, `set`, `sig`, `tcpOptimization`
      * 
      */
     private String type;
@@ -175,11 +180,18 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntry {
     }
     /**
      * @return Loss correction FEC threshold
-     *   - Range: `1`-`5`
      * 
      */
-    public Optional<Integer> lossCorrectionFecThreshold() {
+    public Optional<String> lossCorrectionFecThreshold() {
         return Optional.ofNullable(this.lossCorrectionFecThreshold);
+    }
+    /**
+     * @return Loss correction packet duplication
+     *   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
+     * 
+     */
+    public Optional<String> lossCorrectionPacketDuplication() {
+        return Optional.ofNullable(this.lossCorrectionPacketDuplication);
     }
     /**
      * @return List of NAT parameters
@@ -257,7 +269,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntry {
     }
     /**
      * @return Type of action entry
-     *   - Choices: `cflowd`, `count`, `dreOptimization`, `fallbackToRouting`, `log`, `lossProtect`, `lossProtectFec`, `nat`, `redirectDns`, `serviceNodeGroup`, `set`, `sig`, `tcpOptimization`
+     *   - Choices: `cflowd`, `count`, `dreOptimization`, `fallbackToRouting`, `log`, `lossProtect`, `lossProtectPktDup`, `lossProtectFec`, `nat`, `redirectDns`, `serviceNodeGroup`, `set`, `sig`, `tcpOptimization`
      * 
      */
     public String type() {
@@ -280,7 +292,8 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntry {
         private @Nullable Boolean log;
         private @Nullable String lossCorrection;
         private @Nullable String lossCorrectionFec;
-        private @Nullable Integer lossCorrectionFecThreshold;
+        private @Nullable String lossCorrectionFecThreshold;
+        private @Nullable String lossCorrectionPacketDuplication;
         private @Nullable List<TrafficDataPolicyDefinitionSequenceActionEntryNatParameter> natParameters;
         private @Nullable String natPool;
         private @Nullable Integer natPoolId;
@@ -303,6 +316,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntry {
     	      this.lossCorrection = defaults.lossCorrection;
     	      this.lossCorrectionFec = defaults.lossCorrectionFec;
     	      this.lossCorrectionFecThreshold = defaults.lossCorrectionFecThreshold;
+    	      this.lossCorrectionPacketDuplication = defaults.lossCorrectionPacketDuplication;
     	      this.natParameters = defaults.natParameters;
     	      this.natPool = defaults.natPool;
     	      this.natPoolId = defaults.natPoolId;
@@ -359,9 +373,15 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntry {
             return this;
         }
         @CustomType.Setter
-        public Builder lossCorrectionFecThreshold(@Nullable Integer lossCorrectionFecThreshold) {
+        public Builder lossCorrectionFecThreshold(@Nullable String lossCorrectionFecThreshold) {
 
             this.lossCorrectionFecThreshold = lossCorrectionFecThreshold;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder lossCorrectionPacketDuplication(@Nullable String lossCorrectionPacketDuplication) {
+
+            this.lossCorrectionPacketDuplication = lossCorrectionPacketDuplication;
             return this;
         }
         @CustomType.Setter
@@ -448,6 +468,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntry {
             _resultValue.lossCorrection = lossCorrection;
             _resultValue.lossCorrectionFec = lossCorrectionFec;
             _resultValue.lossCorrectionFecThreshold = lossCorrectionFecThreshold;
+            _resultValue.lossCorrectionPacketDuplication = lossCorrectionPacketDuplication;
             _resultValue.natParameters = natParameters;
             _resultValue.natPool = natPool;
             _resultValue.natPoolId = natPoolId;

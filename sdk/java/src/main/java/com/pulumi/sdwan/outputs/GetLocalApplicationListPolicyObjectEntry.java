@@ -15,6 +15,11 @@ public final class GetLocalApplicationListPolicyObjectEntry {
      * 
      */
     private String application;
+    /**
+     * @return Application family name
+     * 
+     */
+    private String applicationFamily;
 
     private GetLocalApplicationListPolicyObjectEntry() {}
     /**
@@ -23,6 +28,13 @@ public final class GetLocalApplicationListPolicyObjectEntry {
      */
     public String application() {
         return this.application;
+    }
+    /**
+     * @return Application family name
+     * 
+     */
+    public String applicationFamily() {
+        return this.applicationFamily;
     }
 
     public static Builder builder() {
@@ -35,10 +47,12 @@ public final class GetLocalApplicationListPolicyObjectEntry {
     @CustomType.Builder
     public static final class Builder {
         private String application;
+        private String applicationFamily;
         public Builder() {}
         public Builder(GetLocalApplicationListPolicyObjectEntry defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.application = defaults.application;
+    	      this.applicationFamily = defaults.applicationFamily;
         }
 
         @CustomType.Setter
@@ -49,9 +63,18 @@ public final class GetLocalApplicationListPolicyObjectEntry {
             this.application = application;
             return this;
         }
+        @CustomType.Setter
+        public Builder applicationFamily(String applicationFamily) {
+            if (applicationFamily == null) {
+              throw new MissingRequiredPropertyException("GetLocalApplicationListPolicyObjectEntry", "applicationFamily");
+            }
+            this.applicationFamily = applicationFamily;
+            return this;
+        }
         public GetLocalApplicationListPolicyObjectEntry build() {
             final var _resultValue = new GetLocalApplicationListPolicyObjectEntry();
             _resultValue.application = application;
+            _resultValue.applicationFamily = applicationFamily;
             return _resultValue;
         }
     }

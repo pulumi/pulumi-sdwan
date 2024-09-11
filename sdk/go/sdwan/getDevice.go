@@ -28,7 +28,7 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := sdwan.GetDevice(ctx, &sdwan.GetDeviceArgs{
-//				SerialNumber: pulumi.StringRef("3FFEFB37892E415FAF34A95D2328EC4C"),
+//				SerialNumber: pulumi.StringRef("12B53B6E42654E01B98C77C347CE216E"),
 //				Name:         pulumi.StringRef("Controller01"),
 //			}, nil)
 //			if err != nil {

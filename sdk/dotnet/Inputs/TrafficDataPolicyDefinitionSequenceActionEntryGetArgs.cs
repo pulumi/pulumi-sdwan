@@ -58,10 +58,16 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Loss correction FEC threshold
-        ///   - Range: `1`-`5`
         /// </summary>
         [Input("lossCorrectionFecThreshold")]
-        public Input<int>? LossCorrectionFecThreshold { get; set; }
+        public Input<string>? LossCorrectionFecThreshold { get; set; }
+
+        /// <summary>
+        /// Loss correction packet duplication
+        ///   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
+        /// </summary>
+        [Input("lossCorrectionPacketDuplication")]
+        public Input<string>? LossCorrectionPacketDuplication { get; set; }
 
         [Input("natParameters")]
         private InputList<Inputs.TrafficDataPolicyDefinitionSequenceActionEntryNatParameterGetArgs>? _natParameters;
@@ -141,7 +147,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Type of action entry
-        ///   - Choices: `cflowd`, `count`, `dreOptimization`, `fallbackToRouting`, `log`, `lossProtect`, `lossProtectFec`, `nat`, `redirectDns`, `serviceNodeGroup`, `set`, `sig`, `tcpOptimization`
+        ///   - Choices: `cflowd`, `count`, `dreOptimization`, `fallbackToRouting`, `log`, `lossProtect`, `lossProtectPktDup`, `lossProtectFec`, `nat`, `redirectDns`, `serviceNodeGroup`, `set`, `sig`, `tcpOptimization`
         /// </summary>
         [Input("type", required: true)]
         public Input<string> Type { get; set; } = null!;

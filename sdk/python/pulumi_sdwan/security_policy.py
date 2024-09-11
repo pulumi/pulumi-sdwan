@@ -36,7 +36,7 @@ class SecurityPolicyArgs:
         :param pulumi.Input[str] description: The description of the security policy
         :param pulumi.Input[str] audit_trail: Audit trail - Choices: `on`, `off`
         :param pulumi.Input[str] direct_internet_applications: Bypass firewall policy and allow all Internet traffic to/from VPN 0 - Choices: `allow`, `deny`
-        :param pulumi.Input[str] failure_mode: Failure mode - Choices: `open`, `close` - Default value: `open`
+        :param pulumi.Input[str] failure_mode: Failure mode - Choices: `open`, `close`
         :param pulumi.Input[str] high_speed_logging_server_ip: High Speed Logging Server IP
         :param pulumi.Input[str] high_speed_logging_server_port: High Speed Logging Port
         :param pulumi.Input[str] high_speed_logging_vpn: High Speed Logging VPN
@@ -126,7 +126,7 @@ class SecurityPolicyArgs:
     @pulumi.getter(name="failureMode")
     def failure_mode(self) -> Optional[pulumi.Input[str]]:
         """
-        Failure mode - Choices: `open`, `close` - Default value: `open`
+        Failure mode - Choices: `open`, `close`
         """
         return pulumi.get(self, "failure_mode")
 
@@ -265,7 +265,7 @@ class _SecurityPolicyState:
         :param pulumi.Input[Sequence[pulumi.Input['SecurityPolicyDefinitionArgs']]] definitions: List of policy definitions
         :param pulumi.Input[str] description: The description of the security policy
         :param pulumi.Input[str] direct_internet_applications: Bypass firewall policy and allow all Internet traffic to/from VPN 0 - Choices: `allow`, `deny`
-        :param pulumi.Input[str] failure_mode: Failure mode - Choices: `open`, `close` - Default value: `open`
+        :param pulumi.Input[str] failure_mode: Failure mode - Choices: `open`, `close`
         :param pulumi.Input[str] high_speed_logging_server_ip: High Speed Logging Server IP
         :param pulumi.Input[str] high_speed_logging_server_port: High Speed Logging Port
         :param pulumi.Input[str] high_speed_logging_vpn: High Speed Logging VPN
@@ -360,7 +360,7 @@ class _SecurityPolicyState:
     @pulumi.getter(name="failureMode")
     def failure_mode(self) -> Optional[pulumi.Input[str]]:
         """
-        Failure mode - Choices: `open`, `close` - Default value: `open`
+        Failure mode - Choices: `open`, `close`
         """
         return pulumi.get(self, "failure_mode")
 
@@ -522,7 +522,7 @@ class SecurityPolicy(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[Union['SecurityPolicyDefinitionArgs', 'SecurityPolicyDefinitionArgsDict']]]] definitions: List of policy definitions
         :param pulumi.Input[str] description: The description of the security policy
         :param pulumi.Input[str] direct_internet_applications: Bypass firewall policy and allow all Internet traffic to/from VPN 0 - Choices: `allow`, `deny`
-        :param pulumi.Input[str] failure_mode: Failure mode - Choices: `open`, `close` - Default value: `open`
+        :param pulumi.Input[str] failure_mode: Failure mode - Choices: `open`, `close`
         :param pulumi.Input[str] high_speed_logging_server_ip: High Speed Logging Server IP
         :param pulumi.Input[str] high_speed_logging_server_port: High Speed Logging Port
         :param pulumi.Input[str] high_speed_logging_vpn: High Speed Logging VPN
@@ -641,7 +641,7 @@ class SecurityPolicy(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[Union['SecurityPolicyDefinitionArgs', 'SecurityPolicyDefinitionArgsDict']]]] definitions: List of policy definitions
         :param pulumi.Input[str] description: The description of the security policy
         :param pulumi.Input[str] direct_internet_applications: Bypass firewall policy and allow all Internet traffic to/from VPN 0 - Choices: `allow`, `deny`
-        :param pulumi.Input[str] failure_mode: Failure mode - Choices: `open`, `close` - Default value: `open`
+        :param pulumi.Input[str] failure_mode: Failure mode - Choices: `open`, `close`
         :param pulumi.Input[str] high_speed_logging_server_ip: High Speed Logging Server IP
         :param pulumi.Input[str] high_speed_logging_server_port: High Speed Logging Port
         :param pulumi.Input[str] high_speed_logging_vpn: High Speed Logging VPN
@@ -708,9 +708,9 @@ class SecurityPolicy(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="failureMode")
-    def failure_mode(self) -> pulumi.Output[str]:
+    def failure_mode(self) -> pulumi.Output[Optional[str]]:
         """
-        Failure mode - Choices: `open`, `close` - Default value: `open`
+        Failure mode - Choices: `open`, `close`
         """
         return pulumi.get(self, "failure_mode")
 

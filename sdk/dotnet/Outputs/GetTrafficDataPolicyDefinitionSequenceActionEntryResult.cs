@@ -44,7 +44,11 @@ namespace Pulumi.Sdwan.Outputs
         /// <summary>
         /// Loss correction FEC threshold
         /// </summary>
-        public readonly int LossCorrectionFecThreshold;
+        public readonly string LossCorrectionFecThreshold;
+        /// <summary>
+        /// Loss correction packet duplication
+        /// </summary>
+        public readonly string LossCorrectionPacketDuplication;
         /// <summary>
         /// List of NAT parameters
         /// </summary>
@@ -106,7 +110,9 @@ namespace Pulumi.Sdwan.Outputs
 
             string lossCorrectionFec,
 
-            int lossCorrectionFecThreshold,
+            string lossCorrectionFecThreshold,
+
+            string lossCorrectionPacketDuplication,
 
             ImmutableArray<Outputs.GetTrafficDataPolicyDefinitionSequenceActionEntryNatParameterResult> natParameters,
 
@@ -138,6 +144,7 @@ namespace Pulumi.Sdwan.Outputs
             LossCorrection = lossCorrection;
             LossCorrectionFec = lossCorrectionFec;
             LossCorrectionFecThreshold = lossCorrectionFecThreshold;
+            LossCorrectionPacketDuplication = lossCorrectionPacketDuplication;
             NatParameters = natParameters;
             NatPool = natPool;
             NatPoolId = natPoolId;

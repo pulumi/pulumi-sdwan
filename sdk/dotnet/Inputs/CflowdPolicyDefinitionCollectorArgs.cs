@@ -13,11 +13,23 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class CflowdPolicyDefinitionCollectorArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
+        /// BFD metrics exporting
+        /// </summary>
+        [Input("bfdMetricsExporting")]
+        public Input<bool>? BfdMetricsExporting { get; set; }
+
+        /// <summary>
         /// Export spreading
         ///   - Choices: `enable`, `disable`
         /// </summary>
         [Input("exportSpreading")]
         public Input<string>? ExportSpreading { get; set; }
+
+        /// <summary>
+        /// Exporting interval
+        /// </summary>
+        [Input("exportingInterval")]
+        public Input<int>? ExportingInterval { get; set; }
 
         /// <summary>
         /// IP address

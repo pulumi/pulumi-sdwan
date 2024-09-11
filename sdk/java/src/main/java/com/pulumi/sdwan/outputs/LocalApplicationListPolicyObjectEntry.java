@@ -16,6 +16,11 @@ public final class LocalApplicationListPolicyObjectEntry {
      * 
      */
     private @Nullable String application;
+    /**
+     * @return Application family name
+     * 
+     */
+    private @Nullable String applicationFamily;
 
     private LocalApplicationListPolicyObjectEntry() {}
     /**
@@ -24,6 +29,13 @@ public final class LocalApplicationListPolicyObjectEntry {
      */
     public Optional<String> application() {
         return Optional.ofNullable(this.application);
+    }
+    /**
+     * @return Application family name
+     * 
+     */
+    public Optional<String> applicationFamily() {
+        return Optional.ofNullable(this.applicationFamily);
     }
 
     public static Builder builder() {
@@ -36,10 +48,12 @@ public final class LocalApplicationListPolicyObjectEntry {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable String application;
+        private @Nullable String applicationFamily;
         public Builder() {}
         public Builder(LocalApplicationListPolicyObjectEntry defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.application = defaults.application;
+    	      this.applicationFamily = defaults.applicationFamily;
         }
 
         @CustomType.Setter
@@ -48,9 +62,16 @@ public final class LocalApplicationListPolicyObjectEntry {
             this.application = application;
             return this;
         }
+        @CustomType.Setter
+        public Builder applicationFamily(@Nullable String applicationFamily) {
+
+            this.applicationFamily = applicationFamily;
+            return this;
+        }
         public LocalApplicationListPolicyObjectEntry build() {
             final var _resultValue = new LocalApplicationListPolicyObjectEntry();
             _resultValue.application = application;
+            _resultValue.applicationFamily = applicationFamily;
             return _resultValue;
         }
     }

@@ -5,6 +5,7 @@ package com.pulumi.sdwan.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -15,6 +16,21 @@ import javax.annotation.Nullable;
 public final class CflowdPolicyDefinitionCollectorArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final CflowdPolicyDefinitionCollectorArgs Empty = new CflowdPolicyDefinitionCollectorArgs();
+
+    /**
+     * BFD metrics exporting
+     * 
+     */
+    @Import(name="bfdMetricsExporting")
+    private @Nullable Output<Boolean> bfdMetricsExporting;
+
+    /**
+     * @return BFD metrics exporting
+     * 
+     */
+    public Optional<Output<Boolean>> bfdMetricsExporting() {
+        return Optional.ofNullable(this.bfdMetricsExporting);
+    }
 
     /**
      * Export spreading
@@ -31,6 +47,21 @@ public final class CflowdPolicyDefinitionCollectorArgs extends com.pulumi.resour
      */
     public Optional<Output<String>> exportSpreading() {
         return Optional.ofNullable(this.exportSpreading);
+    }
+
+    /**
+     * Exporting interval
+     * 
+     */
+    @Import(name="exportingInterval")
+    private @Nullable Output<Integer> exportingInterval;
+
+    /**
+     * @return Exporting interval
+     * 
+     */
+    public Optional<Output<Integer>> exportingInterval() {
+        return Optional.ofNullable(this.exportingInterval);
     }
 
     /**
@@ -117,7 +148,9 @@ public final class CflowdPolicyDefinitionCollectorArgs extends com.pulumi.resour
     private CflowdPolicyDefinitionCollectorArgs() {}
 
     private CflowdPolicyDefinitionCollectorArgs(CflowdPolicyDefinitionCollectorArgs $) {
+        this.bfdMetricsExporting = $.bfdMetricsExporting;
         this.exportSpreading = $.exportSpreading;
+        this.exportingInterval = $.exportingInterval;
         this.ipAddress = $.ipAddress;
         this.port = $.port;
         this.sourceInterface = $.sourceInterface;
@@ -144,6 +177,27 @@ public final class CflowdPolicyDefinitionCollectorArgs extends com.pulumi.resour
         }
 
         /**
+         * @param bfdMetricsExporting BFD metrics exporting
+         * 
+         * @return builder
+         * 
+         */
+        public Builder bfdMetricsExporting(@Nullable Output<Boolean> bfdMetricsExporting) {
+            $.bfdMetricsExporting = bfdMetricsExporting;
+            return this;
+        }
+
+        /**
+         * @param bfdMetricsExporting BFD metrics exporting
+         * 
+         * @return builder
+         * 
+         */
+        public Builder bfdMetricsExporting(Boolean bfdMetricsExporting) {
+            return bfdMetricsExporting(Output.of(bfdMetricsExporting));
+        }
+
+        /**
          * @param exportSpreading Export spreading
          *   - Choices: `enable`, `disable`
          * 
@@ -164,6 +218,27 @@ public final class CflowdPolicyDefinitionCollectorArgs extends com.pulumi.resour
          */
         public Builder exportSpreading(String exportSpreading) {
             return exportSpreading(Output.of(exportSpreading));
+        }
+
+        /**
+         * @param exportingInterval Exporting interval
+         * 
+         * @return builder
+         * 
+         */
+        public Builder exportingInterval(@Nullable Output<Integer> exportingInterval) {
+            $.exportingInterval = exportingInterval;
+            return this;
+        }
+
+        /**
+         * @param exportingInterval Exporting interval
+         * 
+         * @return builder
+         * 
+         */
+        public Builder exportingInterval(Integer exportingInterval) {
+            return exportingInterval(Output.of(exportingInterval));
         }
 
         /**

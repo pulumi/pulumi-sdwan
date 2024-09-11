@@ -67,6 +67,11 @@ public final class GetTrafficDataPolicyDefinitionSequenceMatchEntry {
      */
     private Integer dscp;
     /**
+     * @return ICMP Message
+     * 
+     */
+    private String icmpMessage;
+    /**
      * @return Packet length
      * 
      */
@@ -196,6 +201,13 @@ public final class GetTrafficDataPolicyDefinitionSequenceMatchEntry {
         return this.dscp;
     }
     /**
+     * @return ICMP Message
+     * 
+     */
+    public String icmpMessage() {
+        return this.icmpMessage;
+    }
+    /**
      * @return Packet length
      * 
      */
@@ -286,6 +298,7 @@ public final class GetTrafficDataPolicyDefinitionSequenceMatchEntry {
         private String dnsApplicationListId;
         private Integer dnsApplicationListVersion;
         private Integer dscp;
+        private String icmpMessage;
         private Integer packetLength;
         private String plp;
         private String protocol;
@@ -310,6 +323,7 @@ public final class GetTrafficDataPolicyDefinitionSequenceMatchEntry {
     	      this.dnsApplicationListId = defaults.dnsApplicationListId;
     	      this.dnsApplicationListVersion = defaults.dnsApplicationListVersion;
     	      this.dscp = defaults.dscp;
+    	      this.icmpMessage = defaults.icmpMessage;
     	      this.packetLength = defaults.packetLength;
     	      this.plp = defaults.plp;
     	      this.protocol = defaults.protocol;
@@ -411,6 +425,14 @@ public final class GetTrafficDataPolicyDefinitionSequenceMatchEntry {
             return this;
         }
         @CustomType.Setter
+        public Builder icmpMessage(String icmpMessage) {
+            if (icmpMessage == null) {
+              throw new MissingRequiredPropertyException("GetTrafficDataPolicyDefinitionSequenceMatchEntry", "icmpMessage");
+            }
+            this.icmpMessage = icmpMessage;
+            return this;
+        }
+        @CustomType.Setter
         public Builder packetLength(Integer packetLength) {
             if (packetLength == null) {
               throw new MissingRequiredPropertyException("GetTrafficDataPolicyDefinitionSequenceMatchEntry", "packetLength");
@@ -503,6 +525,7 @@ public final class GetTrafficDataPolicyDefinitionSequenceMatchEntry {
             _resultValue.dnsApplicationListId = dnsApplicationListId;
             _resultValue.dnsApplicationListVersion = dnsApplicationListVersion;
             _resultValue.dscp = dscp;
+            _resultValue.icmpMessage = icmpMessage;
             _resultValue.packetLength = packetLength;
             _resultValue.plp = plp;
             _resultValue.protocol = protocol;

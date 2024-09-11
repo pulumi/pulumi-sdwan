@@ -80,7 +80,7 @@ func Provider() tfbridge.ProviderInfo {
 		GitHubOrg:         "CiscoDevNet",
 		UpstreamRepoPath:  "./upstream",
 		MetadataInfo:      tfbridge.NewProviderMetadata(bridgeMetadata),
-		TFProviderVersion: "0.2.1",
+		TFProviderVersion: "0.4.1",
 		Version:           version.Version,
 		Config:            map[string]*tfbridge.SchemaInfo{},
 		Resources: map[string]*tfbridge.ResourceInfo{

@@ -43,6 +43,10 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? Dscp;
         /// <summary>
+        /// ICMP Message
+        /// </summary>
+        public readonly string? IcmpMessage;
+        /// <summary>
         /// Packet length
         ///   - Range: `0`-`65535`
         /// </summary>
@@ -79,7 +83,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? Tcp;
         /// <summary>
         /// Type of match entry
-        ///   - Choices: `dscp`, `sourceIp`, `destinationIp`, `class`, `packetLength`, `plp`, `sourcePort`, `destinationPort`, `sourceDataPrefixList`, `destinationDataPrefixList`, `protocol`, `tcp`
+        ///   - Choices: `dscp`, `sourceIp`, `destinationIp`, `class`, `packetLength`, `plp`, `sourcePort`, `destinationPort`, `sourceDataPrefixList`, `destinationDataPrefixList`, `protocol`, `tcp`, `icmpMessage`
         /// </summary>
         public readonly string Type;
 
@@ -98,6 +102,8 @@ namespace Pulumi.Sdwan.Outputs
             string? destinationPorts,
 
             int? dscp,
+
+            string? icmpMessage,
 
             int? packetLength,
 
@@ -124,6 +130,7 @@ namespace Pulumi.Sdwan.Outputs
             DestinationIp = destinationIp;
             DestinationPorts = destinationPorts;
             Dscp = dscp;
+            IcmpMessage = icmpMessage;
             PacketLength = packetLength;
             Priority = priority;
             Protocol = protocol;

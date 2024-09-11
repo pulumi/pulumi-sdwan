@@ -32,7 +32,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Feature template type
-        ///   - Choices: `cisco_system`, `cisco_logging`, `cedge_aaa`, `cisco_bfd`, `cisco_omp`, `cisco_security`, `cisco_banner`, `cisco_snmp`, `cedge_global`, `cli-template`, `cisco_sig_credentials`, `switchport`, `cisco_thousandeyes`, `cisco_vpn`
+        ///   - Choices: `cisco_system`, `cisco_logging`, `cedge_aaa`, `cisco_bfd`, `cisco_omp`, `cisco_security`, `cisco_banner`, `cisco_snmp`, `cedge_global`, `cli-template`, `cisco_sig_credentials`, `switchport`, `cisco_thousandeyes`, `cisco_vpn`, `virtual-application-utd`
         /// </summary>
         [Input("type", required: true)]
         public Input<string> Type { get; set; } = null!;

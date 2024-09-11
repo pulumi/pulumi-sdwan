@@ -50,6 +50,11 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntry {
      */
     private @Nullable Integer dscp;
     /**
+     * @return ICMP Message
+     * 
+     */
+    private @Nullable String icmpMessage;
+    /**
      * @return Packet length
      *   - Range: `0`-`65535`
      * 
@@ -94,7 +99,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntry {
     private @Nullable String tcp;
     /**
      * @return Type of match entry
-     *   - Choices: `dscp`, `sourceIp`, `destinationIp`, `class`, `packetLength`, `plp`, `sourcePort`, `destinationPort`, `sourceDataPrefixList`, `destinationDataPrefixList`, `protocol`, `tcp`
+     *   - Choices: `dscp`, `sourceIp`, `destinationIp`, `class`, `packetLength`, `plp`, `sourcePort`, `destinationPort`, `sourceDataPrefixList`, `destinationDataPrefixList`, `protocol`, `tcp`, `icmpMessage`
      * 
      */
     private String type;
@@ -149,6 +154,13 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntry {
      */
     public Optional<Integer> dscp() {
         return Optional.ofNullable(this.dscp);
+    }
+    /**
+     * @return ICMP Message
+     * 
+     */
+    public Optional<String> icmpMessage() {
+        return Optional.ofNullable(this.icmpMessage);
     }
     /**
      * @return Packet length
@@ -211,7 +223,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntry {
     }
     /**
      * @return Type of match entry
-     *   - Choices: `dscp`, `sourceIp`, `destinationIp`, `class`, `packetLength`, `plp`, `sourcePort`, `destinationPort`, `sourceDataPrefixList`, `destinationDataPrefixList`, `protocol`, `tcp`
+     *   - Choices: `dscp`, `sourceIp`, `destinationIp`, `class`, `packetLength`, `plp`, `sourcePort`, `destinationPort`, `sourceDataPrefixList`, `destinationDataPrefixList`, `protocol`, `tcp`, `icmpMessage`
      * 
      */
     public String type() {
@@ -234,6 +246,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntry {
         private @Nullable String destinationIp;
         private @Nullable String destinationPorts;
         private @Nullable Integer dscp;
+        private @Nullable String icmpMessage;
         private @Nullable Integer packetLength;
         private @Nullable String priority;
         private @Nullable String protocol;
@@ -253,6 +266,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntry {
     	      this.destinationIp = defaults.destinationIp;
     	      this.destinationPorts = defaults.destinationPorts;
     	      this.dscp = defaults.dscp;
+    	      this.icmpMessage = defaults.icmpMessage;
     	      this.packetLength = defaults.packetLength;
     	      this.priority = defaults.priority;
     	      this.protocol = defaults.protocol;
@@ -304,6 +318,12 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntry {
         public Builder dscp(@Nullable Integer dscp) {
 
             this.dscp = dscp;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder icmpMessage(@Nullable String icmpMessage) {
+
+            this.icmpMessage = icmpMessage;
             return this;
         }
         @CustomType.Setter
@@ -371,6 +391,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntry {
             _resultValue.destinationIp = destinationIp;
             _resultValue.destinationPorts = destinationPorts;
             _resultValue.dscp = dscp;
+            _resultValue.icmpMessage = icmpMessage;
             _resultValue.packetLength = packetLength;
             _resultValue.priority = priority;
             _resultValue.protocol = protocol;
