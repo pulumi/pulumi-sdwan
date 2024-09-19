@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getOtherUcseFeature(args: GetOtherUcseFeatureArgs, opts?: pulumi.InvokeOptions): Promise<GetOtherUcseFeatureResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getOtherUcseFeature:getOtherUcseFeature", {
         "featureProfileId": args.featureProfileId,
@@ -135,7 +134,11 @@ export interface GetOtherUcseFeatureResult {
  * ```
  */
 export function getOtherUcseFeatureOutput(args: GetOtherUcseFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetOtherUcseFeatureResult> {
-    return pulumi.output(args).apply((a: any) => getOtherUcseFeature(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getOtherUcseFeature:getOtherUcseFeature", {
+        "featureProfileId": args.featureProfileId,
+        "id": args.id,
+    }, opts);
 }
 
 /**

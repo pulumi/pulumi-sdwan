@@ -74,14 +74,20 @@ type LookupCliDeviceTemplateResult struct {
 
 func LookupCliDeviceTemplateOutput(ctx *pulumi.Context, args LookupCliDeviceTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupCliDeviceTemplateResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupCliDeviceTemplateResult, error) {
+		ApplyT(func(v interface{}) (LookupCliDeviceTemplateResultOutput, error) {
 			args := v.(LookupCliDeviceTemplateArgs)
-			r, err := LookupCliDeviceTemplate(ctx, &args, opts...)
-			var s LookupCliDeviceTemplateResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupCliDeviceTemplateResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getCliDeviceTemplate:getCliDeviceTemplate", args, &rv, "", opts...)
+			if err != nil {
+				return LookupCliDeviceTemplateResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupCliDeviceTemplateResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupCliDeviceTemplateResultOutput), nil
+			}
+			return output, nil
 		}).(LookupCliDeviceTemplateResultOutput)
 }
 

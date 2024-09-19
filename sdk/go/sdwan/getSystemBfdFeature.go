@@ -84,14 +84,20 @@ type LookupSystemBfdFeatureResult struct {
 
 func LookupSystemBfdFeatureOutput(ctx *pulumi.Context, args LookupSystemBfdFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupSystemBfdFeatureResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupSystemBfdFeatureResult, error) {
+		ApplyT(func(v interface{}) (LookupSystemBfdFeatureResultOutput, error) {
 			args := v.(LookupSystemBfdFeatureArgs)
-			r, err := LookupSystemBfdFeature(ctx, &args, opts...)
-			var s LookupSystemBfdFeatureResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupSystemBfdFeatureResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getSystemBfdFeature:getSystemBfdFeature", args, &rv, "", opts...)
+			if err != nil {
+				return LookupSystemBfdFeatureResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupSystemBfdFeatureResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupSystemBfdFeatureResultOutput), nil
+			}
+			return output, nil
 		}).(LookupSystemBfdFeatureResultOutput)
 }
 

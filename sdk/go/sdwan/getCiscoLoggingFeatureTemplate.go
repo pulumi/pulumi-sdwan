@@ -92,14 +92,20 @@ type LookupCiscoLoggingFeatureTemplateResult struct {
 
 func LookupCiscoLoggingFeatureTemplateOutput(ctx *pulumi.Context, args LookupCiscoLoggingFeatureTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupCiscoLoggingFeatureTemplateResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupCiscoLoggingFeatureTemplateResult, error) {
+		ApplyT(func(v interface{}) (LookupCiscoLoggingFeatureTemplateResultOutput, error) {
 			args := v.(LookupCiscoLoggingFeatureTemplateArgs)
-			r, err := LookupCiscoLoggingFeatureTemplate(ctx, &args, opts...)
-			var s LookupCiscoLoggingFeatureTemplateResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupCiscoLoggingFeatureTemplateResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getCiscoLoggingFeatureTemplate:getCiscoLoggingFeatureTemplate", args, &rv, "", opts...)
+			if err != nil {
+				return LookupCiscoLoggingFeatureTemplateResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupCiscoLoggingFeatureTemplateResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupCiscoLoggingFeatureTemplateResultOutput), nil
+			}
+			return output, nil
 		}).(LookupCiscoLoggingFeatureTemplateResultOutput)
 }
 

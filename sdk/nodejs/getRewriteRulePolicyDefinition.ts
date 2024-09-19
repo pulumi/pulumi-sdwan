@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getRewriteRulePolicyDefinition(args: GetRewriteRulePolicyDefinitionArgs, opts?: pulumi.InvokeOptions): Promise<GetRewriteRulePolicyDefinitionResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getRewriteRulePolicyDefinition:getRewriteRulePolicyDefinition", {
         "id": args.id,
@@ -82,7 +81,10 @@ export interface GetRewriteRulePolicyDefinitionResult {
  * ```
  */
 export function getRewriteRulePolicyDefinitionOutput(args: GetRewriteRulePolicyDefinitionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetRewriteRulePolicyDefinitionResult> {
-    return pulumi.output(args).apply((a: any) => getRewriteRulePolicyDefinition(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getRewriteRulePolicyDefinition:getRewriteRulePolicyDefinition", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

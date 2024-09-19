@@ -19,7 +19,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getPolicerPolicyObject(args: GetPolicerPolicyObjectArgs, opts?: pulumi.InvokeOptions): Promise<GetPolicerPolicyObjectResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getPolicerPolicyObject:getPolicerPolicyObject", {
         "id": args.id,
@@ -80,7 +79,10 @@ export interface GetPolicerPolicyObjectResult {
  * ```
  */
 export function getPolicerPolicyObjectOutput(args: GetPolicerPolicyObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetPolicerPolicyObjectResult> {
-    return pulumi.output(args).apply((a: any) => getPolicerPolicyObject(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getPolicerPolicyObject:getPolicerPolicyObject", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

@@ -20,7 +20,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getServiceObjectTrackerFeature(args: GetServiceObjectTrackerFeatureArgs, opts?: pulumi.InvokeOptions): Promise<GetServiceObjectTrackerFeatureResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getServiceObjectTrackerFeature:getServiceObjectTrackerFeature", {
         "featureProfileId": args.featureProfileId,
@@ -127,7 +126,11 @@ export interface GetServiceObjectTrackerFeatureResult {
  * ```
  */
 export function getServiceObjectTrackerFeatureOutput(args: GetServiceObjectTrackerFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetServiceObjectTrackerFeatureResult> {
-    return pulumi.output(args).apply((a: any) => getServiceObjectTrackerFeature(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getServiceObjectTrackerFeature:getServiceObjectTrackerFeature", {
+        "featureProfileId": args.featureProfileId,
+        "id": args.id,
+    }, opts);
 }
 
 /**

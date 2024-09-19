@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getDataIpv6PrefixListPolicyObject(args: GetDataIpv6PrefixListPolicyObjectArgs, opts?: pulumi.InvokeOptions): Promise<GetDataIpv6PrefixListPolicyObjectResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getDataIpv6PrefixListPolicyObject:getDataIpv6PrefixListPolicyObject", {
         "id": args.id,
@@ -74,7 +73,10 @@ export interface GetDataIpv6PrefixListPolicyObjectResult {
  * ```
  */
 export function getDataIpv6PrefixListPolicyObjectOutput(args: GetDataIpv6PrefixListPolicyObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDataIpv6PrefixListPolicyObjectResult> {
-    return pulumi.output(args).apply((a: any) => getDataIpv6PrefixListPolicyObject(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getDataIpv6PrefixListPolicyObject:getDataIpv6PrefixListPolicyObject", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

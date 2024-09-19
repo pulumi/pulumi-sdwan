@@ -23,7 +23,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getTransportWanVpnInterfaceCellularFeature(args: GetTransportWanVpnInterfaceCellularFeatureArgs, opts?: pulumi.InvokeOptions): Promise<GetTransportWanVpnInterfaceCellularFeatureResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getTransportWanVpnInterfaceCellularFeature:getTransportWanVpnInterfaceCellularFeature", {
         "featureProfileId": args.featureProfileId,
@@ -583,7 +582,12 @@ export interface GetTransportWanVpnInterfaceCellularFeatureResult {
  * ```
  */
 export function getTransportWanVpnInterfaceCellularFeatureOutput(args: GetTransportWanVpnInterfaceCellularFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTransportWanVpnInterfaceCellularFeatureResult> {
-    return pulumi.output(args).apply((a: any) => getTransportWanVpnInterfaceCellularFeature(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getTransportWanVpnInterfaceCellularFeature:getTransportWanVpnInterfaceCellularFeature", {
+        "featureProfileId": args.featureProfileId,
+        "id": args.id,
+        "transportWanVpnFeatureId": args.transportWanVpnFeatureId,
+    }, opts);
 }
 
 /**

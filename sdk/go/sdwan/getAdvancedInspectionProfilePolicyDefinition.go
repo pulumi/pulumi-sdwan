@@ -86,14 +86,20 @@ type LookupAdvancedInspectionProfilePolicyDefinitionResult struct {
 
 func LookupAdvancedInspectionProfilePolicyDefinitionOutput(ctx *pulumi.Context, args LookupAdvancedInspectionProfilePolicyDefinitionOutputArgs, opts ...pulumi.InvokeOption) LookupAdvancedInspectionProfilePolicyDefinitionResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupAdvancedInspectionProfilePolicyDefinitionResult, error) {
+		ApplyT(func(v interface{}) (LookupAdvancedInspectionProfilePolicyDefinitionResultOutput, error) {
 			args := v.(LookupAdvancedInspectionProfilePolicyDefinitionArgs)
-			r, err := LookupAdvancedInspectionProfilePolicyDefinition(ctx, &args, opts...)
-			var s LookupAdvancedInspectionProfilePolicyDefinitionResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupAdvancedInspectionProfilePolicyDefinitionResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getAdvancedInspectionProfilePolicyDefinition:getAdvancedInspectionProfilePolicyDefinition", args, &rv, "", opts...)
+			if err != nil {
+				return LookupAdvancedInspectionProfilePolicyDefinitionResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupAdvancedInspectionProfilePolicyDefinitionResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupAdvancedInspectionProfilePolicyDefinitionResultOutput), nil
+			}
+			return output, nil
 		}).(LookupAdvancedInspectionProfilePolicyDefinitionResultOutput)
 }
 

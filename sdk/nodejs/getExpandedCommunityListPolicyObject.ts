@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getExpandedCommunityListPolicyObject(args: GetExpandedCommunityListPolicyObjectArgs, opts?: pulumi.InvokeOptions): Promise<GetExpandedCommunityListPolicyObjectResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getExpandedCommunityListPolicyObject:getExpandedCommunityListPolicyObject", {
         "id": args.id,
@@ -74,7 +73,10 @@ export interface GetExpandedCommunityListPolicyObjectResult {
  * ```
  */
 export function getExpandedCommunityListPolicyObjectOutput(args: GetExpandedCommunityListPolicyObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetExpandedCommunityListPolicyObjectResult> {
-    return pulumi.output(args).apply((a: any) => getExpandedCommunityListPolicyObject(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getExpandedCommunityListPolicyObject:getExpandedCommunityListPolicyObject", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

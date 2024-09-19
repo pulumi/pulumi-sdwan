@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getPolicyObjectColorList(args: GetPolicyObjectColorListArgs, opts?: pulumi.InvokeOptions): Promise<GetPolicyObjectColorListResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getPolicyObjectColorList:getPolicyObjectColorList", {
         "featureProfileId": args.featureProfileId,
@@ -89,7 +88,11 @@ export interface GetPolicyObjectColorListResult {
  * ```
  */
 export function getPolicyObjectColorListOutput(args: GetPolicyObjectColorListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetPolicyObjectColorListResult> {
-    return pulumi.output(args).apply((a: any) => getPolicyObjectColorList(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getPolicyObjectColorList:getPolicyObjectColorList", {
+        "featureProfileId": args.featureProfileId,
+        "id": args.id,
+    }, opts);
 }
 
 /**

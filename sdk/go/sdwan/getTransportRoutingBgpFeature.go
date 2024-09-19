@@ -173,14 +173,20 @@ type LookupTransportRoutingBgpFeatureResult struct {
 
 func LookupTransportRoutingBgpFeatureOutput(ctx *pulumi.Context, args LookupTransportRoutingBgpFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupTransportRoutingBgpFeatureResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupTransportRoutingBgpFeatureResult, error) {
+		ApplyT(func(v interface{}) (LookupTransportRoutingBgpFeatureResultOutput, error) {
 			args := v.(LookupTransportRoutingBgpFeatureArgs)
-			r, err := LookupTransportRoutingBgpFeature(ctx, &args, opts...)
-			var s LookupTransportRoutingBgpFeatureResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupTransportRoutingBgpFeatureResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getTransportRoutingBgpFeature:getTransportRoutingBgpFeature", args, &rv, "", opts...)
+			if err != nil {
+				return LookupTransportRoutingBgpFeatureResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupTransportRoutingBgpFeatureResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupTransportRoutingBgpFeatureResultOutput), nil
+			}
+			return output, nil
 		}).(LookupTransportRoutingBgpFeatureResultOutput)
 }
 

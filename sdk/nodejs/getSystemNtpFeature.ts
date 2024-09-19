@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getSystemNtpFeature(args: GetSystemNtpFeatureArgs, opts?: pulumi.InvokeOptions): Promise<GetSystemNtpFeatureResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getSystemNtpFeature:getSystemNtpFeature", {
         "featureProfileId": args.featureProfileId,
@@ -125,7 +124,11 @@ export interface GetSystemNtpFeatureResult {
  * ```
  */
 export function getSystemNtpFeatureOutput(args: GetSystemNtpFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSystemNtpFeatureResult> {
-    return pulumi.output(args).apply((a: any) => getSystemNtpFeature(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getSystemNtpFeature:getSystemNtpFeature", {
+        "featureProfileId": args.featureProfileId,
+        "id": args.id,
+    }, opts);
 }
 
 /**

@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getAsPathListPolicyObject(args: GetAsPathListPolicyObjectArgs, opts?: pulumi.InvokeOptions): Promise<GetAsPathListPolicyObjectResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getAsPathListPolicyObject:getAsPathListPolicyObject", {
         "id": args.id,
@@ -74,7 +73,10 @@ export interface GetAsPathListPolicyObjectResult {
  * ```
  */
 export function getAsPathListPolicyObjectOutput(args: GetAsPathListPolicyObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAsPathListPolicyObjectResult> {
-    return pulumi.output(args).apply((a: any) => getAsPathListPolicyObject(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getAsPathListPolicyObject:getAsPathListPolicyObject", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

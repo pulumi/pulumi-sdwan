@@ -20,7 +20,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getCliConfigFeature(args: GetCliConfigFeatureArgs, opts?: pulumi.InvokeOptions): Promise<GetCliConfigFeatureResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getCliConfigFeature:getCliConfigFeature", {
         "featureProfileId": args.featureProfileId,
@@ -87,7 +86,11 @@ export interface GetCliConfigFeatureResult {
  * ```
  */
 export function getCliConfigFeatureOutput(args: GetCliConfigFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCliConfigFeatureResult> {
-    return pulumi.output(args).apply((a: any) => getCliConfigFeature(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getCliConfigFeature:getCliConfigFeature", {
+        "featureProfileId": args.featureProfileId,
+        "id": args.id,
+    }, opts);
 }
 
 /**

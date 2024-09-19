@@ -23,7 +23,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getTransportWanVpnInterfaceEthernetFeature(args: GetTransportWanVpnInterfaceEthernetFeatureArgs, opts?: pulumi.InvokeOptions): Promise<GetTransportWanVpnInterfaceEthernetFeatureResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getTransportWanVpnInterfaceEthernetFeature:getTransportWanVpnInterfaceEthernetFeature", {
         "featureProfileId": args.featureProfileId,
@@ -823,7 +822,12 @@ export interface GetTransportWanVpnInterfaceEthernetFeatureResult {
  * ```
  */
 export function getTransportWanVpnInterfaceEthernetFeatureOutput(args: GetTransportWanVpnInterfaceEthernetFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTransportWanVpnInterfaceEthernetFeatureResult> {
-    return pulumi.output(args).apply((a: any) => getTransportWanVpnInterfaceEthernetFeature(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getTransportWanVpnInterfaceEthernetFeature:getTransportWanVpnInterfaceEthernetFeature", {
+        "featureProfileId": args.featureProfileId,
+        "id": args.id,
+        "transportWanVpnFeatureId": args.transportWanVpnFeatureId,
+    }, opts);
 }
 
 /**

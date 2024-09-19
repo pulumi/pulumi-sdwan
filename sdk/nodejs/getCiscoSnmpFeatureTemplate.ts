@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getCiscoSnmpFeatureTemplate(args?: GetCiscoSnmpFeatureTemplateArgs, opts?: pulumi.InvokeOptions): Promise<GetCiscoSnmpFeatureTemplateResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getCiscoSnmpFeatureTemplate:getCiscoSnmpFeatureTemplate", {
         "id": args.id,
@@ -132,7 +131,12 @@ export interface GetCiscoSnmpFeatureTemplateResult {
  * ```
  */
 export function getCiscoSnmpFeatureTemplateOutput(args?: GetCiscoSnmpFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCiscoSnmpFeatureTemplateResult> {
-    return pulumi.output(args).apply((a: any) => getCiscoSnmpFeatureTemplate(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getCiscoSnmpFeatureTemplate:getCiscoSnmpFeatureTemplate", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**

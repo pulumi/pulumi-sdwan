@@ -68,14 +68,20 @@ type LookupBlockUrlListPolicyObjectResult struct {
 
 func LookupBlockUrlListPolicyObjectOutput(ctx *pulumi.Context, args LookupBlockUrlListPolicyObjectOutputArgs, opts ...pulumi.InvokeOption) LookupBlockUrlListPolicyObjectResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupBlockUrlListPolicyObjectResult, error) {
+		ApplyT(func(v interface{}) (LookupBlockUrlListPolicyObjectResultOutput, error) {
 			args := v.(LookupBlockUrlListPolicyObjectArgs)
-			r, err := LookupBlockUrlListPolicyObject(ctx, &args, opts...)
-			var s LookupBlockUrlListPolicyObjectResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupBlockUrlListPolicyObjectResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getBlockUrlListPolicyObject:getBlockUrlListPolicyObject", args, &rv, "", opts...)
+			if err != nil {
+				return LookupBlockUrlListPolicyObjectResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupBlockUrlListPolicyObjectResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupBlockUrlListPolicyObjectResultOutput), nil
+			}
+			return output, nil
 		}).(LookupBlockUrlListPolicyObjectResultOutput)
 }
 

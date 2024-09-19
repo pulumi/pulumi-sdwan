@@ -126,14 +126,20 @@ type LookupCedgeAaaFeatureTemplateResult struct {
 
 func LookupCedgeAaaFeatureTemplateOutput(ctx *pulumi.Context, args LookupCedgeAaaFeatureTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupCedgeAaaFeatureTemplateResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupCedgeAaaFeatureTemplateResult, error) {
+		ApplyT(func(v interface{}) (LookupCedgeAaaFeatureTemplateResultOutput, error) {
 			args := v.(LookupCedgeAaaFeatureTemplateArgs)
-			r, err := LookupCedgeAaaFeatureTemplate(ctx, &args, opts...)
-			var s LookupCedgeAaaFeatureTemplateResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupCedgeAaaFeatureTemplateResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getCedgeAaaFeatureTemplate:getCedgeAaaFeatureTemplate", args, &rv, "", opts...)
+			if err != nil {
+				return LookupCedgeAaaFeatureTemplateResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupCedgeAaaFeatureTemplateResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupCedgeAaaFeatureTemplateResultOutput), nil
+			}
+			return output, nil
 		}).(LookupCedgeAaaFeatureTemplateResultOutput)
 }
 

@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getCiscoOmpFeatureTemplate(args?: GetCiscoOmpFeatureTemplateArgs, opts?: pulumi.InvokeOptions): Promise<GetCiscoOmpFeatureTemplateResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getCiscoOmpFeatureTemplate:getCiscoOmpFeatureTemplate", {
         "id": args.id,
@@ -200,7 +199,12 @@ export interface GetCiscoOmpFeatureTemplateResult {
  * ```
  */
 export function getCiscoOmpFeatureTemplateOutput(args?: GetCiscoOmpFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCiscoOmpFeatureTemplateResult> {
-    return pulumi.output(args).apply((a: any) => getCiscoOmpFeatureTemplate(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getCiscoOmpFeatureTemplate:getCiscoOmpFeatureTemplate", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**

@@ -76,14 +76,20 @@ type LookupSecurityAppHostingFeatureTemplateResult struct {
 
 func LookupSecurityAppHostingFeatureTemplateOutput(ctx *pulumi.Context, args LookupSecurityAppHostingFeatureTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupSecurityAppHostingFeatureTemplateResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupSecurityAppHostingFeatureTemplateResult, error) {
+		ApplyT(func(v interface{}) (LookupSecurityAppHostingFeatureTemplateResultOutput, error) {
 			args := v.(LookupSecurityAppHostingFeatureTemplateArgs)
-			r, err := LookupSecurityAppHostingFeatureTemplate(ctx, &args, opts...)
-			var s LookupSecurityAppHostingFeatureTemplateResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupSecurityAppHostingFeatureTemplateResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getSecurityAppHostingFeatureTemplate:getSecurityAppHostingFeatureTemplate", args, &rv, "", opts...)
+			if err != nil {
+				return LookupSecurityAppHostingFeatureTemplateResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupSecurityAppHostingFeatureTemplateResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupSecurityAppHostingFeatureTemplateResultOutput), nil
+			}
+			return output, nil
 		}).(LookupSecurityAppHostingFeatureTemplateResultOutput)
 }
 

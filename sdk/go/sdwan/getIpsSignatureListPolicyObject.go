@@ -68,14 +68,20 @@ type LookupIpsSignatureListPolicyObjectResult struct {
 
 func LookupIpsSignatureListPolicyObjectOutput(ctx *pulumi.Context, args LookupIpsSignatureListPolicyObjectOutputArgs, opts ...pulumi.InvokeOption) LookupIpsSignatureListPolicyObjectResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupIpsSignatureListPolicyObjectResult, error) {
+		ApplyT(func(v interface{}) (LookupIpsSignatureListPolicyObjectResultOutput, error) {
 			args := v.(LookupIpsSignatureListPolicyObjectArgs)
-			r, err := LookupIpsSignatureListPolicyObject(ctx, &args, opts...)
-			var s LookupIpsSignatureListPolicyObjectResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupIpsSignatureListPolicyObjectResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getIpsSignatureListPolicyObject:getIpsSignatureListPolicyObject", args, &rv, "", opts...)
+			if err != nil {
+				return LookupIpsSignatureListPolicyObjectResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupIpsSignatureListPolicyObjectResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupIpsSignatureListPolicyObjectResultOutput), nil
+			}
+			return output, nil
 		}).(LookupIpsSignatureListPolicyObjectResultOutput)
 }
 

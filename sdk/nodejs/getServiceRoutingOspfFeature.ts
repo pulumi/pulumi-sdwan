@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getServiceRoutingOspfFeature(args: GetServiceRoutingOspfFeatureArgs, opts?: pulumi.InvokeOptions): Promise<GetServiceRoutingOspfFeatureResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getServiceRoutingOspfFeature:getServiceRoutingOspfFeature", {
         "featureProfileId": args.featureProfileId,
@@ -198,7 +197,11 @@ export interface GetServiceRoutingOspfFeatureResult {
  * ```
  */
 export function getServiceRoutingOspfFeatureOutput(args: GetServiceRoutingOspfFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetServiceRoutingOspfFeatureResult> {
-    return pulumi.output(args).apply((a: any) => getServiceRoutingOspfFeature(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getServiceRoutingOspfFeature:getServiceRoutingOspfFeature", {
+        "featureProfileId": args.featureProfileId,
+        "id": args.id,
+    }, opts);
 }
 
 /**

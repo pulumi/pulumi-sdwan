@@ -115,14 +115,20 @@ type LookupServiceTrackerFeatureResult struct {
 
 func LookupServiceTrackerFeatureOutput(ctx *pulumi.Context, args LookupServiceTrackerFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupServiceTrackerFeatureResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupServiceTrackerFeatureResult, error) {
+		ApplyT(func(v interface{}) (LookupServiceTrackerFeatureResultOutput, error) {
 			args := v.(LookupServiceTrackerFeatureArgs)
-			r, err := LookupServiceTrackerFeature(ctx, &args, opts...)
-			var s LookupServiceTrackerFeatureResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupServiceTrackerFeatureResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getServiceTrackerFeature:getServiceTrackerFeature", args, &rv, "", opts...)
+			if err != nil {
+				return LookupServiceTrackerFeatureResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupServiceTrackerFeatureResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupServiceTrackerFeatureResultOutput), nil
+			}
+			return output, nil
 		}).(LookupServiceTrackerFeatureResultOutput)
 }
 

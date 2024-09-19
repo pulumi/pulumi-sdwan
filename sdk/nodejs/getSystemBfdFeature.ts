@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getSystemBfdFeature(args: GetSystemBfdFeatureArgs, opts?: pulumi.InvokeOptions): Promise<GetSystemBfdFeatureResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getSystemBfdFeature:getSystemBfdFeature", {
         "featureProfileId": args.featureProfileId,
@@ -104,7 +103,11 @@ export interface GetSystemBfdFeatureResult {
  * ```
  */
 export function getSystemBfdFeatureOutput(args: GetSystemBfdFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSystemBfdFeatureResult> {
-    return pulumi.output(args).apply((a: any) => getSystemBfdFeature(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getSystemBfdFeature:getSystemBfdFeature", {
+        "featureProfileId": args.featureProfileId,
+        "id": args.id,
+    }, opts);
 }
 
 /**

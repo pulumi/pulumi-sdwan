@@ -66,14 +66,20 @@ type LookupApplicationPriorityFeatureProfileResult struct {
 
 func LookupApplicationPriorityFeatureProfileOutput(ctx *pulumi.Context, args LookupApplicationPriorityFeatureProfileOutputArgs, opts ...pulumi.InvokeOption) LookupApplicationPriorityFeatureProfileResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupApplicationPriorityFeatureProfileResult, error) {
+		ApplyT(func(v interface{}) (LookupApplicationPriorityFeatureProfileResultOutput, error) {
 			args := v.(LookupApplicationPriorityFeatureProfileArgs)
-			r, err := LookupApplicationPriorityFeatureProfile(ctx, &args, opts...)
-			var s LookupApplicationPriorityFeatureProfileResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupApplicationPriorityFeatureProfileResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getApplicationPriorityFeatureProfile:getApplicationPriorityFeatureProfile", args, &rv, "", opts...)
+			if err != nil {
+				return LookupApplicationPriorityFeatureProfileResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupApplicationPriorityFeatureProfileResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupApplicationPriorityFeatureProfileResultOutput), nil
+			}
+			return output, nil
 		}).(LookupApplicationPriorityFeatureProfileResultOutput)
 }
 

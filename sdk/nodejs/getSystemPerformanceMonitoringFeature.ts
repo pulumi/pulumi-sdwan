@@ -20,7 +20,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getSystemPerformanceMonitoringFeature(args: GetSystemPerformanceMonitoringFeatureArgs, opts?: pulumi.InvokeOptions): Promise<GetSystemPerformanceMonitoringFeatureResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getSystemPerformanceMonitoringFeature:getSystemPerformanceMonitoringFeature", {
         "featureProfileId": args.featureProfileId,
@@ -107,7 +106,11 @@ export interface GetSystemPerformanceMonitoringFeatureResult {
  * ```
  */
 export function getSystemPerformanceMonitoringFeatureOutput(args: GetSystemPerformanceMonitoringFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSystemPerformanceMonitoringFeatureResult> {
-    return pulumi.output(args).apply((a: any) => getSystemPerformanceMonitoringFeature(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getSystemPerformanceMonitoringFeature:getSystemPerformanceMonitoringFeature", {
+        "featureProfileId": args.featureProfileId,
+        "id": args.id,
+    }, opts);
 }
 
 /**

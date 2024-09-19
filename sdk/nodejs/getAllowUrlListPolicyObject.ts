@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getAllowUrlListPolicyObject(args: GetAllowUrlListPolicyObjectArgs, opts?: pulumi.InvokeOptions): Promise<GetAllowUrlListPolicyObjectResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getAllowUrlListPolicyObject:getAllowUrlListPolicyObject", {
         "id": args.id,
@@ -74,7 +73,10 @@ export interface GetAllowUrlListPolicyObjectResult {
  * ```
  */
 export function getAllowUrlListPolicyObjectOutput(args: GetAllowUrlListPolicyObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAllowUrlListPolicyObjectResult> {
-    return pulumi.output(args).apply((a: any) => getAllowUrlListPolicyObject(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getAllowUrlListPolicyObject:getAllowUrlListPolicyObject", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

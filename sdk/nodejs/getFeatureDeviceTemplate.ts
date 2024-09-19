@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getFeatureDeviceTemplate(args: GetFeatureDeviceTemplateArgs, opts?: pulumi.InvokeOptions): Promise<GetFeatureDeviceTemplateResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getFeatureDeviceTemplate:getFeatureDeviceTemplate", {
         "id": args.id,
@@ -102,7 +101,10 @@ export interface GetFeatureDeviceTemplateResult {
  * ```
  */
 export function getFeatureDeviceTemplateOutput(args: GetFeatureDeviceTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetFeatureDeviceTemplateResult> {
-    return pulumi.output(args).apply((a: any) => getFeatureDeviceTemplate(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getFeatureDeviceTemplate:getFeatureDeviceTemplate", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

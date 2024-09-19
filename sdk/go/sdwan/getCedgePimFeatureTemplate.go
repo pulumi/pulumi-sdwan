@@ -122,14 +122,20 @@ type LookupCedgePimFeatureTemplateResult struct {
 
 func LookupCedgePimFeatureTemplateOutput(ctx *pulumi.Context, args LookupCedgePimFeatureTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupCedgePimFeatureTemplateResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupCedgePimFeatureTemplateResult, error) {
+		ApplyT(func(v interface{}) (LookupCedgePimFeatureTemplateResultOutput, error) {
 			args := v.(LookupCedgePimFeatureTemplateArgs)
-			r, err := LookupCedgePimFeatureTemplate(ctx, &args, opts...)
-			var s LookupCedgePimFeatureTemplateResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupCedgePimFeatureTemplateResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getCedgePimFeatureTemplate:getCedgePimFeatureTemplate", args, &rv, "", opts...)
+			if err != nil {
+				return LookupCedgePimFeatureTemplateResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupCedgePimFeatureTemplateResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupCedgePimFeatureTemplateResultOutput), nil
+			}
+			return output, nil
 		}).(LookupCedgePimFeatureTemplateResultOutput)
 }
 

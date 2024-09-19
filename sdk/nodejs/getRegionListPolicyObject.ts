@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getRegionListPolicyObject(args: GetRegionListPolicyObjectArgs, opts?: pulumi.InvokeOptions): Promise<GetRegionListPolicyObjectResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getRegionListPolicyObject:getRegionListPolicyObject", {
         "id": args.id,
@@ -74,7 +73,10 @@ export interface GetRegionListPolicyObjectResult {
  * ```
  */
 export function getRegionListPolicyObjectOutput(args: GetRegionListPolicyObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetRegionListPolicyObjectResult> {
-    return pulumi.output(args).apply((a: any) => getRegionListPolicyObject(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getRegionListPolicyObject:getRegionListPolicyObject", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

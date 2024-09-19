@@ -72,14 +72,20 @@ type LookupApplicationAwareRoutingPolicyDefinitionResult struct {
 
 func LookupApplicationAwareRoutingPolicyDefinitionOutput(ctx *pulumi.Context, args LookupApplicationAwareRoutingPolicyDefinitionOutputArgs, opts ...pulumi.InvokeOption) LookupApplicationAwareRoutingPolicyDefinitionResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupApplicationAwareRoutingPolicyDefinitionResult, error) {
+		ApplyT(func(v interface{}) (LookupApplicationAwareRoutingPolicyDefinitionResultOutput, error) {
 			args := v.(LookupApplicationAwareRoutingPolicyDefinitionArgs)
-			r, err := LookupApplicationAwareRoutingPolicyDefinition(ctx, &args, opts...)
-			var s LookupApplicationAwareRoutingPolicyDefinitionResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupApplicationAwareRoutingPolicyDefinitionResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getApplicationAwareRoutingPolicyDefinition:getApplicationAwareRoutingPolicyDefinition", args, &rv, "", opts...)
+			if err != nil {
+				return LookupApplicationAwareRoutingPolicyDefinitionResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupApplicationAwareRoutingPolicyDefinitionResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupApplicationAwareRoutingPolicyDefinitionResultOutput), nil
+			}
+			return output, nil
 		}).(LookupApplicationAwareRoutingPolicyDefinitionResultOutput)
 }
 

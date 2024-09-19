@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getTransportRoutingOspfv3Ipv4Feature(args: GetTransportRoutingOspfv3Ipv4FeatureArgs, opts?: pulumi.InvokeOptions): Promise<GetTransportRoutingOspfv3Ipv4FeatureResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getTransportRoutingOspfv3Ipv4Feature:getTransportRoutingOspfv3Ipv4Feature", {
         "featureProfileId": args.featureProfileId,
@@ -222,7 +221,11 @@ export interface GetTransportRoutingOspfv3Ipv4FeatureResult {
  * ```
  */
 export function getTransportRoutingOspfv3Ipv4FeatureOutput(args: GetTransportRoutingOspfv3Ipv4FeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTransportRoutingOspfv3Ipv4FeatureResult> {
-    return pulumi.output(args).apply((a: any) => getTransportRoutingOspfv3Ipv4Feature(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getTransportRoutingOspfv3Ipv4Feature:getTransportRoutingOspfv3Ipv4Feature", {
+        "featureProfileId": args.featureProfileId,
+        "id": args.id,
+    }, opts);
 }
 
 /**

@@ -19,7 +19,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getSystemFeatureProfile(args: GetSystemFeatureProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetSystemFeatureProfileResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getSystemFeatureProfile:getSystemFeatureProfile", {
         "id": args.id,
@@ -68,7 +67,10 @@ export interface GetSystemFeatureProfileResult {
  * ```
  */
 export function getSystemFeatureProfileOutput(args: GetSystemFeatureProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSystemFeatureProfileResult> {
-    return pulumi.output(args).apply((a: any) => getSystemFeatureProfile(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getSystemFeatureProfile:getSystemFeatureProfile", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

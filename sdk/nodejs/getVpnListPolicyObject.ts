@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getVpnListPolicyObject(args: GetVpnListPolicyObjectArgs, opts?: pulumi.InvokeOptions): Promise<GetVpnListPolicyObjectResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getVpnListPolicyObject:getVpnListPolicyObject", {
         "id": args.id,
@@ -74,7 +73,10 @@ export interface GetVpnListPolicyObjectResult {
  * ```
  */
 export function getVpnListPolicyObjectOutput(args: GetVpnListPolicyObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetVpnListPolicyObjectResult> {
-    return pulumi.output(args).apply((a: any) => getVpnListPolicyObject(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getVpnListPolicyObject:getVpnListPolicyObject", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

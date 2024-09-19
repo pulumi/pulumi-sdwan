@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getIpv4PrefixListPolicyObject(args: GetIpv4PrefixListPolicyObjectArgs, opts?: pulumi.InvokeOptions): Promise<GetIpv4PrefixListPolicyObjectResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getIpv4PrefixListPolicyObject:getIpv4PrefixListPolicyObject", {
         "id": args.id,
@@ -74,7 +73,10 @@ export interface GetIpv4PrefixListPolicyObjectResult {
  * ```
  */
 export function getIpv4PrefixListPolicyObjectOutput(args: GetIpv4PrefixListPolicyObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetIpv4PrefixListPolicyObjectResult> {
-    return pulumi.output(args).apply((a: any) => getIpv4PrefixListPolicyObject(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getIpv4PrefixListPolicyObject:getIpv4PrefixListPolicyObject", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

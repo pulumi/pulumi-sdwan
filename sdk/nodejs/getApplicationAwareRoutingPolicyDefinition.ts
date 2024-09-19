@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getApplicationAwareRoutingPolicyDefinition(args: GetApplicationAwareRoutingPolicyDefinitionArgs, opts?: pulumi.InvokeOptions): Promise<GetApplicationAwareRoutingPolicyDefinitionResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getApplicationAwareRoutingPolicyDefinition:getApplicationAwareRoutingPolicyDefinition", {
         "id": args.id,
@@ -82,7 +81,10 @@ export interface GetApplicationAwareRoutingPolicyDefinitionResult {
  * ```
  */
 export function getApplicationAwareRoutingPolicyDefinitionOutput(args: GetApplicationAwareRoutingPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplicationAwareRoutingPolicyDefinitionResult> {
-    return pulumi.output(args).apply((a: any) => getApplicationAwareRoutingPolicyDefinition(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getApplicationAwareRoutingPolicyDefinition:getApplicationAwareRoutingPolicyDefinition", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

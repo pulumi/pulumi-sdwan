@@ -94,14 +94,20 @@ type LookupObjectGroupPolicyDefinitionResult struct {
 
 func LookupObjectGroupPolicyDefinitionOutput(ctx *pulumi.Context, args LookupObjectGroupPolicyDefinitionOutputArgs, opts ...pulumi.InvokeOption) LookupObjectGroupPolicyDefinitionResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupObjectGroupPolicyDefinitionResult, error) {
+		ApplyT(func(v interface{}) (LookupObjectGroupPolicyDefinitionResultOutput, error) {
 			args := v.(LookupObjectGroupPolicyDefinitionArgs)
-			r, err := LookupObjectGroupPolicyDefinition(ctx, &args, opts...)
-			var s LookupObjectGroupPolicyDefinitionResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupObjectGroupPolicyDefinitionResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getObjectGroupPolicyDefinition:getObjectGroupPolicyDefinition", args, &rv, "", opts...)
+			if err != nil {
+				return LookupObjectGroupPolicyDefinitionResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupObjectGroupPolicyDefinitionResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupObjectGroupPolicyDefinitionResultOutput), nil
+			}
+			return output, nil
 		}).(LookupObjectGroupPolicyDefinitionResultOutput)
 }
 

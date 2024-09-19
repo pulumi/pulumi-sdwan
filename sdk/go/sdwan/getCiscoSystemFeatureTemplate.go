@@ -212,14 +212,20 @@ type LookupCiscoSystemFeatureTemplateResult struct {
 
 func LookupCiscoSystemFeatureTemplateOutput(ctx *pulumi.Context, args LookupCiscoSystemFeatureTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupCiscoSystemFeatureTemplateResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupCiscoSystemFeatureTemplateResult, error) {
+		ApplyT(func(v interface{}) (LookupCiscoSystemFeatureTemplateResultOutput, error) {
 			args := v.(LookupCiscoSystemFeatureTemplateArgs)
-			r, err := LookupCiscoSystemFeatureTemplate(ctx, &args, opts...)
-			var s LookupCiscoSystemFeatureTemplateResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupCiscoSystemFeatureTemplateResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getCiscoSystemFeatureTemplate:getCiscoSystemFeatureTemplate", args, &rv, "", opts...)
+			if err != nil {
+				return LookupCiscoSystemFeatureTemplateResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupCiscoSystemFeatureTemplateResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupCiscoSystemFeatureTemplateResultOutput), nil
+			}
+			return output, nil
 		}).(LookupCiscoSystemFeatureTemplateResultOutput)
 }
 

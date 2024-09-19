@@ -70,14 +70,20 @@ type LookupAppProbeClassPolicyObjectResult struct {
 
 func LookupAppProbeClassPolicyObjectOutput(ctx *pulumi.Context, args LookupAppProbeClassPolicyObjectOutputArgs, opts ...pulumi.InvokeOption) LookupAppProbeClassPolicyObjectResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupAppProbeClassPolicyObjectResult, error) {
+		ApplyT(func(v interface{}) (LookupAppProbeClassPolicyObjectResultOutput, error) {
 			args := v.(LookupAppProbeClassPolicyObjectArgs)
-			r, err := LookupAppProbeClassPolicyObject(ctx, &args, opts...)
-			var s LookupAppProbeClassPolicyObjectResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupAppProbeClassPolicyObjectResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getAppProbeClassPolicyObject:getAppProbeClassPolicyObject", args, &rv, "", opts...)
+			if err != nil {
+				return LookupAppProbeClassPolicyObjectResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupAppProbeClassPolicyObjectResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupAppProbeClassPolicyObjectResultOutput), nil
+			}
+			return output, nil
 		}).(LookupAppProbeClassPolicyObjectResultOutput)
 }
 

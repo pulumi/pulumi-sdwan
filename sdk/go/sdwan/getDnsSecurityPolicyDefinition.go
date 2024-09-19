@@ -88,14 +88,20 @@ type LookupDnsSecurityPolicyDefinitionResult struct {
 
 func LookupDnsSecurityPolicyDefinitionOutput(ctx *pulumi.Context, args LookupDnsSecurityPolicyDefinitionOutputArgs, opts ...pulumi.InvokeOption) LookupDnsSecurityPolicyDefinitionResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupDnsSecurityPolicyDefinitionResult, error) {
+		ApplyT(func(v interface{}) (LookupDnsSecurityPolicyDefinitionResultOutput, error) {
 			args := v.(LookupDnsSecurityPolicyDefinitionArgs)
-			r, err := LookupDnsSecurityPolicyDefinition(ctx, &args, opts...)
-			var s LookupDnsSecurityPolicyDefinitionResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupDnsSecurityPolicyDefinitionResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getDnsSecurityPolicyDefinition:getDnsSecurityPolicyDefinition", args, &rv, "", opts...)
+			if err != nil {
+				return LookupDnsSecurityPolicyDefinitionResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupDnsSecurityPolicyDefinitionResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupDnsSecurityPolicyDefinitionResultOutput), nil
+			}
+			return output, nil
 		}).(LookupDnsSecurityPolicyDefinitionResultOutput)
 }
 

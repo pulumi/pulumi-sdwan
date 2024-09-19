@@ -20,7 +20,6 @@ import * as utilities from "./utilities";
  */
 export function getCliTemplateFeatureTemplate(args?: GetCliTemplateFeatureTemplateArgs, opts?: pulumi.InvokeOptions): Promise<GetCliTemplateFeatureTemplateResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getCliTemplateFeatureTemplate:getCliTemplateFeatureTemplate", {
         "id": args.id,
@@ -90,7 +89,12 @@ export interface GetCliTemplateFeatureTemplateResult {
  * ```
  */
 export function getCliTemplateFeatureTemplateOutput(args?: GetCliTemplateFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCliTemplateFeatureTemplateResult> {
-    return pulumi.output(args).apply((a: any) => getCliTemplateFeatureTemplate(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getCliTemplateFeatureTemplate:getCliTemplateFeatureTemplate", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**

@@ -83,14 +83,20 @@ type LookupTransportIpv6TrackerGroupFeatureResult struct {
 
 func LookupTransportIpv6TrackerGroupFeatureOutput(ctx *pulumi.Context, args LookupTransportIpv6TrackerGroupFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupTransportIpv6TrackerGroupFeatureResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupTransportIpv6TrackerGroupFeatureResult, error) {
+		ApplyT(func(v interface{}) (LookupTransportIpv6TrackerGroupFeatureResultOutput, error) {
 			args := v.(LookupTransportIpv6TrackerGroupFeatureArgs)
-			r, err := LookupTransportIpv6TrackerGroupFeature(ctx, &args, opts...)
-			var s LookupTransportIpv6TrackerGroupFeatureResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupTransportIpv6TrackerGroupFeatureResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getTransportIpv6TrackerGroupFeature:getTransportIpv6TrackerGroupFeature", args, &rv, "", opts...)
+			if err != nil {
+				return LookupTransportIpv6TrackerGroupFeatureResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupTransportIpv6TrackerGroupFeatureResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupTransportIpv6TrackerGroupFeatureResultOutput), nil
+			}
+			return output, nil
 		}).(LookupTransportIpv6TrackerGroupFeatureResultOutput)
 }
 

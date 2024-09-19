@@ -19,7 +19,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getCliDeviceTemplate(args: GetCliDeviceTemplateArgs, opts?: pulumi.InvokeOptions): Promise<GetCliDeviceTemplateResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getCliDeviceTemplate:getCliDeviceTemplate", {
         "id": args.id,
@@ -84,7 +83,10 @@ export interface GetCliDeviceTemplateResult {
  * ```
  */
 export function getCliDeviceTemplateOutput(args: GetCliDeviceTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCliDeviceTemplateResult> {
-    return pulumi.output(args).apply((a: any) => getCliDeviceTemplate(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getCliDeviceTemplate:getCliDeviceTemplate", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

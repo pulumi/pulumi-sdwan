@@ -19,7 +19,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getTlsSslProfilePolicyDefinition(args: GetTlsSslProfilePolicyDefinitionArgs, opts?: pulumi.InvokeOptions): Promise<GetTlsSslProfilePolicyDefinitionResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getTlsSslProfilePolicyDefinition:getTlsSslProfilePolicyDefinition", {
         "id": args.id,
@@ -116,7 +115,10 @@ export interface GetTlsSslProfilePolicyDefinitionResult {
  * ```
  */
 export function getTlsSslProfilePolicyDefinitionOutput(args: GetTlsSslProfilePolicyDefinitionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTlsSslProfilePolicyDefinitionResult> {
-    return pulumi.output(args).apply((a: any) => getTlsSslProfilePolicyDefinition(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getTlsSslProfilePolicyDefinition:getTlsSslProfilePolicyDefinition", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

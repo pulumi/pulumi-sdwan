@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getCiscoNtpFeatureTemplate(args?: GetCiscoNtpFeatureTemplateArgs, opts?: pulumi.InvokeOptions): Promise<GetCiscoNtpFeatureTemplateResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getCiscoNtpFeatureTemplate:getCiscoNtpFeatureTemplate", {
         "id": args.id,
@@ -128,7 +127,12 @@ export interface GetCiscoNtpFeatureTemplateResult {
  * ```
  */
 export function getCiscoNtpFeatureTemplateOutput(args?: GetCiscoNtpFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCiscoNtpFeatureTemplateResult> {
-    return pulumi.output(args).apply((a: any) => getCiscoNtpFeatureTemplate(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getCiscoNtpFeatureTemplate:getCiscoNtpFeatureTemplate", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**

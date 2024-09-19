@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getEigrpFeatureTemplate(args?: GetEigrpFeatureTemplateArgs, opts?: pulumi.InvokeOptions): Promise<GetEigrpFeatureTemplateResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getEigrpFeatureTemplate:getEigrpFeatureTemplate", {
         "id": args.id,
@@ -156,7 +155,12 @@ export interface GetEigrpFeatureTemplateResult {
  * ```
  */
 export function getEigrpFeatureTemplateOutput(args?: GetEigrpFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetEigrpFeatureTemplateResult> {
-    return pulumi.output(args).apply((a: any) => getEigrpFeatureTemplate(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getEigrpFeatureTemplate:getEigrpFeatureTemplate", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**

@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getCellularControllerFeatureTemplate(args?: GetCellularControllerFeatureTemplateArgs, opts?: pulumi.InvokeOptions): Promise<GetCellularControllerFeatureTemplateResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getCellularControllerFeatureTemplate:getCellularControllerFeatureTemplate", {
         "id": args.id,
@@ -132,7 +131,12 @@ export interface GetCellularControllerFeatureTemplateResult {
  * ```
  */
 export function getCellularControllerFeatureTemplateOutput(args?: GetCellularControllerFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCellularControllerFeatureTemplateResult> {
-    return pulumi.output(args).apply((a: any) => getCellularControllerFeatureTemplate(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getCellularControllerFeatureTemplate:getCellularControllerFeatureTemplate", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**

@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getSecurityPolicy(args: GetSecurityPolicyArgs, opts?: pulumi.InvokeOptions): Promise<GetSecurityPolicyResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getSecurityPolicy:getSecurityPolicy", {
         "id": args.id,
@@ -119,7 +118,10 @@ export interface GetSecurityPolicyResult {
  * ```
  */
 export function getSecurityPolicyOutput(args: GetSecurityPolicyOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSecurityPolicyResult> {
-    return pulumi.output(args).apply((a: any) => getSecurityPolicy(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getSecurityPolicy:getSecurityPolicy", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

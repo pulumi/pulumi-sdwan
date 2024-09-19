@@ -55,13 +55,19 @@ type GetVedgeInventoryResult struct {
 }
 
 func GetVedgeInventoryOutput(ctx *pulumi.Context, opts ...pulumi.InvokeOption) GetVedgeInventoryResultOutput {
-	return pulumi.ToOutput(0).ApplyT(func(int) (GetVedgeInventoryResult, error) {
-		r, err := GetVedgeInventory(ctx, opts...)
-		var s GetVedgeInventoryResult
-		if r != nil {
-			s = *r
+	return pulumi.ToOutput(0).ApplyT(func(int) (GetVedgeInventoryResultOutput, error) {
+		opts = internal.PkgInvokeDefaultOpts(opts)
+		var rv GetVedgeInventoryResult
+		secret, err := ctx.InvokePackageRaw("sdwan:index/getVedgeInventory:getVedgeInventory", nil, &rv, "", opts...)
+		if err != nil {
+			return GetVedgeInventoryResultOutput{}, err
 		}
-		return s, err
+
+		output := pulumi.ToOutput(rv).(GetVedgeInventoryResultOutput)
+		if secret {
+			return pulumi.ToSecret(output).(GetVedgeInventoryResultOutput), nil
+		}
+		return output, nil
 	}).(GetVedgeInventoryResultOutput)
 }
 

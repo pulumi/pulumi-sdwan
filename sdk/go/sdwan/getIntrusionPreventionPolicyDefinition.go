@@ -82,14 +82,20 @@ type LookupIntrusionPreventionPolicyDefinitionResult struct {
 
 func LookupIntrusionPreventionPolicyDefinitionOutput(ctx *pulumi.Context, args LookupIntrusionPreventionPolicyDefinitionOutputArgs, opts ...pulumi.InvokeOption) LookupIntrusionPreventionPolicyDefinitionResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupIntrusionPreventionPolicyDefinitionResult, error) {
+		ApplyT(func(v interface{}) (LookupIntrusionPreventionPolicyDefinitionResultOutput, error) {
 			args := v.(LookupIntrusionPreventionPolicyDefinitionArgs)
-			r, err := LookupIntrusionPreventionPolicyDefinition(ctx, &args, opts...)
-			var s LookupIntrusionPreventionPolicyDefinitionResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupIntrusionPreventionPolicyDefinitionResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getIntrusionPreventionPolicyDefinition:getIntrusionPreventionPolicyDefinition", args, &rv, "", opts...)
+			if err != nil {
+				return LookupIntrusionPreventionPolicyDefinitionResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupIntrusionPreventionPolicyDefinitionResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupIntrusionPreventionPolicyDefinitionResultOutput), nil
+			}
+			return output, nil
 		}).(LookupIntrusionPreventionPolicyDefinitionResultOutput)
 }
 

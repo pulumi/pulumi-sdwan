@@ -20,7 +20,6 @@ import * as utilities from "./utilities";
  */
 export function getCellularCedgeProfileFeatureTemplate(args?: GetCellularCedgeProfileFeatureTemplateArgs, opts?: pulumi.InvokeOptions): Promise<GetCellularCedgeProfileFeatureTemplateResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getCellularCedgeProfileFeatureTemplate:getCellularCedgeProfileFeatureTemplate", {
         "id": args.id,
@@ -142,7 +141,12 @@ export interface GetCellularCedgeProfileFeatureTemplateResult {
  * ```
  */
 export function getCellularCedgeProfileFeatureTemplateOutput(args?: GetCellularCedgeProfileFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCellularCedgeProfileFeatureTemplateResult> {
-    return pulumi.output(args).apply((a: any) => getCellularCedgeProfileFeatureTemplate(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getCellularCedgeProfileFeatureTemplate:getCellularCedgeProfileFeatureTemplate", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**

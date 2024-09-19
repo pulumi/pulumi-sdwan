@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getCiscoBfdFeatureTemplate(args?: GetCiscoBfdFeatureTemplateArgs, opts?: pulumi.InvokeOptions): Promise<GetCiscoBfdFeatureTemplateResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getCiscoBfdFeatureTemplate:getCiscoBfdFeatureTemplate", {
         "id": args.id,
@@ -116,7 +115,12 @@ export interface GetCiscoBfdFeatureTemplateResult {
  * ```
  */
 export function getCiscoBfdFeatureTemplateOutput(args?: GetCiscoBfdFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCiscoBfdFeatureTemplateResult> {
-    return pulumi.output(args).apply((a: any) => getCiscoBfdFeatureTemplate(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getCiscoBfdFeatureTemplate:getCiscoBfdFeatureTemplate", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**

@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getServiceLanVpnInterfaceGreFeature(args: GetServiceLanVpnInterfaceGreFeatureArgs, opts?: pulumi.InvokeOptions): Promise<GetServiceLanVpnInterfaceGreFeatureResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getServiceLanVpnInterfaceGreFeature:getServiceLanVpnInterfaceGreFeature", {
         "featureProfileId": args.featureProfileId,
@@ -200,7 +199,12 @@ export interface GetServiceLanVpnInterfaceGreFeatureResult {
  * ```
  */
 export function getServiceLanVpnInterfaceGreFeatureOutput(args: GetServiceLanVpnInterfaceGreFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetServiceLanVpnInterfaceGreFeatureResult> {
-    return pulumi.output(args).apply((a: any) => getServiceLanVpnInterfaceGreFeature(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getServiceLanVpnInterfaceGreFeature:getServiceLanVpnInterfaceGreFeature", {
+        "featureProfileId": args.featureProfileId,
+        "id": args.id,
+        "serviceLanVpnFeatureId": args.serviceLanVpnFeatureId,
+    }, opts);
 }
 
 /**

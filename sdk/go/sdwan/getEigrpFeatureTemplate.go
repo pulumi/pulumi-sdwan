@@ -108,14 +108,20 @@ type LookupEigrpFeatureTemplateResult struct {
 
 func LookupEigrpFeatureTemplateOutput(ctx *pulumi.Context, args LookupEigrpFeatureTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupEigrpFeatureTemplateResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupEigrpFeatureTemplateResult, error) {
+		ApplyT(func(v interface{}) (LookupEigrpFeatureTemplateResultOutput, error) {
 			args := v.(LookupEigrpFeatureTemplateArgs)
-			r, err := LookupEigrpFeatureTemplate(ctx, &args, opts...)
-			var s LookupEigrpFeatureTemplateResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupEigrpFeatureTemplateResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getEigrpFeatureTemplate:getEigrpFeatureTemplate", args, &rv, "", opts...)
+			if err != nil {
+				return LookupEigrpFeatureTemplateResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupEigrpFeatureTemplateResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupEigrpFeatureTemplateResultOutput), nil
+			}
+			return output, nil
 		}).(LookupEigrpFeatureTemplateResultOutput)
 }
 

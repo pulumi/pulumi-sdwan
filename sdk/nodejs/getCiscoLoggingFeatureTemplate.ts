@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getCiscoLoggingFeatureTemplate(args?: GetCiscoLoggingFeatureTemplateArgs, opts?: pulumi.InvokeOptions): Promise<GetCiscoLoggingFeatureTemplateResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getCiscoLoggingFeatureTemplate:getCiscoLoggingFeatureTemplate", {
         "id": args.id,
@@ -124,7 +123,12 @@ export interface GetCiscoLoggingFeatureTemplateResult {
  * ```
  */
 export function getCiscoLoggingFeatureTemplateOutput(args?: GetCiscoLoggingFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCiscoLoggingFeatureTemplateResult> {
-    return pulumi.output(args).apply((a: any) => getCiscoLoggingFeatureTemplate(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getCiscoLoggingFeatureTemplate:getCiscoLoggingFeatureTemplate", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**

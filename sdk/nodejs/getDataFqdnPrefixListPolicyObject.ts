@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getDataFqdnPrefixListPolicyObject(args: GetDataFqdnPrefixListPolicyObjectArgs, opts?: pulumi.InvokeOptions): Promise<GetDataFqdnPrefixListPolicyObjectResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getDataFqdnPrefixListPolicyObject:getDataFqdnPrefixListPolicyObject", {
         "id": args.id,
@@ -74,7 +73,10 @@ export interface GetDataFqdnPrefixListPolicyObjectResult {
  * ```
  */
 export function getDataFqdnPrefixListPolicyObjectOutput(args: GetDataFqdnPrefixListPolicyObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDataFqdnPrefixListPolicyObjectResult> {
-    return pulumi.output(args).apply((a: any) => getDataFqdnPrefixListPolicyObject(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getDataFqdnPrefixListPolicyObject:getDataFqdnPrefixListPolicyObject", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

@@ -144,14 +144,20 @@ type LookupSystemRemoteAccessFeatureResult struct {
 
 func LookupSystemRemoteAccessFeatureOutput(ctx *pulumi.Context, args LookupSystemRemoteAccessFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupSystemRemoteAccessFeatureResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupSystemRemoteAccessFeatureResult, error) {
+		ApplyT(func(v interface{}) (LookupSystemRemoteAccessFeatureResultOutput, error) {
 			args := v.(LookupSystemRemoteAccessFeatureArgs)
-			r, err := LookupSystemRemoteAccessFeature(ctx, &args, opts...)
-			var s LookupSystemRemoteAccessFeatureResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupSystemRemoteAccessFeatureResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getSystemRemoteAccessFeature:getSystemRemoteAccessFeature", args, &rv, "", opts...)
+			if err != nil {
+				return LookupSystemRemoteAccessFeatureResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupSystemRemoteAccessFeatureResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupSystemRemoteAccessFeatureResultOutput), nil
+			}
+			return output, nil
 		}).(LookupSystemRemoteAccessFeatureResultOutput)
 }
 

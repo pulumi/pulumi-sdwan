@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getTrafficDataPolicyDefinition(args: GetTrafficDataPolicyDefinitionArgs, opts?: pulumi.InvokeOptions): Promise<GetTrafficDataPolicyDefinitionResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getTrafficDataPolicyDefinition:getTrafficDataPolicyDefinition", {
         "id": args.id,
@@ -86,7 +85,10 @@ export interface GetTrafficDataPolicyDefinitionResult {
  * ```
  */
 export function getTrafficDataPolicyDefinitionOutput(args: GetTrafficDataPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTrafficDataPolicyDefinitionResult> {
-    return pulumi.output(args).apply((a: any) => getTrafficDataPolicyDefinition(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getTrafficDataPolicyDefinition:getTrafficDataPolicyDefinition", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

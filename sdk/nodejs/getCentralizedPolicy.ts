@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getCentralizedPolicy(args: GetCentralizedPolicyArgs, opts?: pulumi.InvokeOptions): Promise<GetCentralizedPolicyResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getCentralizedPolicy:getCentralizedPolicy", {
         "id": args.id,
@@ -78,7 +77,10 @@ export interface GetCentralizedPolicyResult {
  * ```
  */
 export function getCentralizedPolicyOutput(args: GetCentralizedPolicyOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCentralizedPolicyResult> {
-    return pulumi.output(args).apply((a: any) => getCentralizedPolicy(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getCentralizedPolicy:getCentralizedPolicy", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

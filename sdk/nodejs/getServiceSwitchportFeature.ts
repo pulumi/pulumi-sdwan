@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getServiceSwitchportFeature(args: GetServiceSwitchportFeatureArgs, opts?: pulumi.InvokeOptions): Promise<GetServiceSwitchportFeatureResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getServiceSwitchportFeature:getServiceSwitchportFeature", {
         "featureProfileId": args.featureProfileId,
@@ -101,7 +100,11 @@ export interface GetServiceSwitchportFeatureResult {
  * ```
  */
 export function getServiceSwitchportFeatureOutput(args: GetServiceSwitchportFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetServiceSwitchportFeatureResult> {
-    return pulumi.output(args).apply((a: any) => getServiceSwitchportFeature(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getServiceSwitchportFeature:getServiceSwitchportFeature", {
+        "featureProfileId": args.featureProfileId,
+        "id": args.id,
+    }, opts);
 }
 
 /**

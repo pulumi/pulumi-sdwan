@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getSystemSnmpFeature(args: GetSystemSnmpFeatureArgs, opts?: pulumi.InvokeOptions): Promise<GetSystemSnmpFeatureResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getSystemSnmpFeature:getSystemSnmpFeature", {
         "featureProfileId": args.featureProfileId,
@@ -129,7 +128,11 @@ export interface GetSystemSnmpFeatureResult {
  * ```
  */
 export function getSystemSnmpFeatureOutput(args: GetSystemSnmpFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSystemSnmpFeatureResult> {
-    return pulumi.output(args).apply((a: any) => getSystemSnmpFeature(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getSystemSnmpFeature:getSystemSnmpFeature", {
+        "featureProfileId": args.featureProfileId,
+        "id": args.id,
+    }, opts);
 }
 
 /**

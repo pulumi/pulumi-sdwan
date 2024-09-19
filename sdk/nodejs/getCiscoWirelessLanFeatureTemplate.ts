@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getCiscoWirelessLanFeatureTemplate(args?: GetCiscoWirelessLanFeatureTemplateArgs, opts?: pulumi.InvokeOptions): Promise<GetCiscoWirelessLanFeatureTemplateResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getCiscoWirelessLanFeatureTemplate:getCiscoWirelessLanFeatureTemplate", {
         "id": args.id,
@@ -156,7 +155,12 @@ export interface GetCiscoWirelessLanFeatureTemplateResult {
  * ```
  */
 export function getCiscoWirelessLanFeatureTemplateOutput(args?: GetCiscoWirelessLanFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCiscoWirelessLanFeatureTemplateResult> {
-    return pulumi.output(args).apply((a: any) => getCiscoWirelessLanFeatureTemplate(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getCiscoWirelessLanFeatureTemplate:getCiscoWirelessLanFeatureTemplate", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**

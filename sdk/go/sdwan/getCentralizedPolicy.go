@@ -70,14 +70,20 @@ type LookupCentralizedPolicyResult struct {
 
 func LookupCentralizedPolicyOutput(ctx *pulumi.Context, args LookupCentralizedPolicyOutputArgs, opts ...pulumi.InvokeOption) LookupCentralizedPolicyResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupCentralizedPolicyResult, error) {
+		ApplyT(func(v interface{}) (LookupCentralizedPolicyResultOutput, error) {
 			args := v.(LookupCentralizedPolicyArgs)
-			r, err := LookupCentralizedPolicy(ctx, &args, opts...)
-			var s LookupCentralizedPolicyResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupCentralizedPolicyResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getCentralizedPolicy:getCentralizedPolicy", args, &rv, "", opts...)
+			if err != nil {
+				return LookupCentralizedPolicyResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupCentralizedPolicyResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupCentralizedPolicyResultOutput), nil
+			}
+			return output, nil
 		}).(LookupCentralizedPolicyResultOutput)
 }
 

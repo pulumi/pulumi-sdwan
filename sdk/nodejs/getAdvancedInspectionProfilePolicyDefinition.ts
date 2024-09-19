@@ -19,7 +19,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getAdvancedInspectionProfilePolicyDefinition(args: GetAdvancedInspectionProfilePolicyDefinitionArgs, opts?: pulumi.InvokeOptions): Promise<GetAdvancedInspectionProfilePolicyDefinitionResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getAdvancedInspectionProfilePolicyDefinition:getAdvancedInspectionProfilePolicyDefinition", {
         "id": args.id,
@@ -108,7 +107,10 @@ export interface GetAdvancedInspectionProfilePolicyDefinitionResult {
  * ```
  */
 export function getAdvancedInspectionProfilePolicyDefinitionOutput(args: GetAdvancedInspectionProfilePolicyDefinitionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAdvancedInspectionProfilePolicyDefinitionResult> {
-    return pulumi.output(args).apply((a: any) => getAdvancedInspectionProfilePolicyDefinition(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getAdvancedInspectionProfilePolicyDefinition:getAdvancedInspectionProfilePolicyDefinition", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

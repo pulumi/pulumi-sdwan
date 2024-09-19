@@ -74,14 +74,20 @@ type LookupZoneBasedFirewallPolicyDefinitionResult struct {
 
 func LookupZoneBasedFirewallPolicyDefinitionOutput(ctx *pulumi.Context, args LookupZoneBasedFirewallPolicyDefinitionOutputArgs, opts ...pulumi.InvokeOption) LookupZoneBasedFirewallPolicyDefinitionResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupZoneBasedFirewallPolicyDefinitionResult, error) {
+		ApplyT(func(v interface{}) (LookupZoneBasedFirewallPolicyDefinitionResultOutput, error) {
 			args := v.(LookupZoneBasedFirewallPolicyDefinitionArgs)
-			r, err := LookupZoneBasedFirewallPolicyDefinition(ctx, &args, opts...)
-			var s LookupZoneBasedFirewallPolicyDefinitionResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupZoneBasedFirewallPolicyDefinitionResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getZoneBasedFirewallPolicyDefinition:getZoneBasedFirewallPolicyDefinition", args, &rv, "", opts...)
+			if err != nil {
+				return LookupZoneBasedFirewallPolicyDefinitionResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupZoneBasedFirewallPolicyDefinitionResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupZoneBasedFirewallPolicyDefinitionResultOutput), nil
+			}
+			return output, nil
 		}).(LookupZoneBasedFirewallPolicyDefinitionResultOutput)
 }
 
