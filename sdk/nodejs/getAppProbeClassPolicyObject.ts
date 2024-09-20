@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getAppProbeClassPolicyObject(args: GetAppProbeClassPolicyObjectArgs, opts?: pulumi.InvokeOptions): Promise<GetAppProbeClassPolicyObjectResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getAppProbeClassPolicyObject:getAppProbeClassPolicyObject", {
         "id": args.id,
@@ -78,7 +77,10 @@ export interface GetAppProbeClassPolicyObjectResult {
  * ```
  */
 export function getAppProbeClassPolicyObjectOutput(args: GetAppProbeClassPolicyObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAppProbeClassPolicyObjectResult> {
-    return pulumi.output(args).apply((a: any) => getAppProbeClassPolicyObject(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getAppProbeClassPolicyObject:getAppProbeClassPolicyObject", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

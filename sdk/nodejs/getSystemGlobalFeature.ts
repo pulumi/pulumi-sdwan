@@ -20,7 +20,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getSystemGlobalFeature(args: GetSystemGlobalFeatureArgs, opts?: pulumi.InvokeOptions): Promise<GetSystemGlobalFeatureResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getSystemGlobalFeature:getSystemGlobalFeature", {
         "featureProfileId": args.featureProfileId,
@@ -267,7 +266,11 @@ export interface GetSystemGlobalFeatureResult {
  * ```
  */
 export function getSystemGlobalFeatureOutput(args: GetSystemGlobalFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSystemGlobalFeatureResult> {
-    return pulumi.output(args).apply((a: any) => getSystemGlobalFeature(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getSystemGlobalFeature:getSystemGlobalFeature", {
+        "featureProfileId": args.featureProfileId,
+        "id": args.id,
+    }, opts);
 }
 
 /**

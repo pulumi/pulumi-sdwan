@@ -74,14 +74,20 @@ type LookupIpv6AclPolicyDefinitionResult struct {
 
 func LookupIpv6AclPolicyDefinitionOutput(ctx *pulumi.Context, args LookupIpv6AclPolicyDefinitionOutputArgs, opts ...pulumi.InvokeOption) LookupIpv6AclPolicyDefinitionResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupIpv6AclPolicyDefinitionResult, error) {
+		ApplyT(func(v interface{}) (LookupIpv6AclPolicyDefinitionResultOutput, error) {
 			args := v.(LookupIpv6AclPolicyDefinitionArgs)
-			r, err := LookupIpv6AclPolicyDefinition(ctx, &args, opts...)
-			var s LookupIpv6AclPolicyDefinitionResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupIpv6AclPolicyDefinitionResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getIpv6AclPolicyDefinition:getIpv6AclPolicyDefinition", args, &rv, "", opts...)
+			if err != nil {
+				return LookupIpv6AclPolicyDefinitionResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupIpv6AclPolicyDefinitionResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupIpv6AclPolicyDefinitionResultOutput), nil
+			}
+			return output, nil
 		}).(LookupIpv6AclPolicyDefinitionResultOutput)
 }
 

@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getTransportIpv6TrackerGroupFeature(args: GetTransportIpv6TrackerGroupFeatureArgs, opts?: pulumi.InvokeOptions): Promise<GetTransportIpv6TrackerGroupFeatureResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getTransportIpv6TrackerGroupFeature:getTransportIpv6TrackerGroupFeature", {
         "featureProfileId": args.featureProfileId,
@@ -105,7 +104,11 @@ export interface GetTransportIpv6TrackerGroupFeatureResult {
  * ```
  */
 export function getTransportIpv6TrackerGroupFeatureOutput(args: GetTransportIpv6TrackerGroupFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTransportIpv6TrackerGroupFeatureResult> {
-    return pulumi.output(args).apply((a: any) => getTransportIpv6TrackerGroupFeature(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getTransportIpv6TrackerGroupFeature:getTransportIpv6TrackerGroupFeature", {
+        "featureProfileId": args.featureProfileId,
+        "id": args.id,
+    }, opts);
 }
 
 /**

@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getIpsSignatureListPolicyObject(args: GetIpsSignatureListPolicyObjectArgs, opts?: pulumi.InvokeOptions): Promise<GetIpsSignatureListPolicyObjectResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getIpsSignatureListPolicyObject:getIpsSignatureListPolicyObject", {
         "id": args.id,
@@ -74,7 +73,10 @@ export interface GetIpsSignatureListPolicyObjectResult {
  * ```
  */
 export function getIpsSignatureListPolicyObjectOutput(args: GetIpsSignatureListPolicyObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetIpsSignatureListPolicyObjectResult> {
-    return pulumi.output(args).apply((a: any) => getIpsSignatureListPolicyObject(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getIpsSignatureListPolicyObject:getIpsSignatureListPolicyObject", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

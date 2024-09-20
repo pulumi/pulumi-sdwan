@@ -19,7 +19,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getSlaClassPolicyObject(args: GetSlaClassPolicyObjectArgs, opts?: pulumi.InvokeOptions): Promise<GetSlaClassPolicyObjectResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getSlaClassPolicyObject:getSlaClassPolicyObject", {
         "id": args.id,
@@ -101,7 +100,10 @@ export interface GetSlaClassPolicyObjectResult {
  * ```
  */
 export function getSlaClassPolicyObjectOutput(args: GetSlaClassPolicyObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSlaClassPolicyObjectResult> {
-    return pulumi.output(args).apply((a: any) => getSlaClassPolicyObject(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getSlaClassPolicyObject:getSlaClassPolicyObject", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getSystemAaaFeature(args: GetSystemAaaFeatureArgs, opts?: pulumi.InvokeOptions): Promise<GetSystemAaaFeatureResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getSystemAaaFeature:getSystemAaaFeature", {
         "featureProfileId": args.featureProfileId,
@@ -141,7 +140,11 @@ export interface GetSystemAaaFeatureResult {
  * ```
  */
 export function getSystemAaaFeatureOutput(args: GetSystemAaaFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSystemAaaFeatureResult> {
-    return pulumi.output(args).apply((a: any) => getSystemAaaFeature(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getSystemAaaFeature:getSystemAaaFeature", {
+        "featureProfileId": args.featureProfileId,
+        "id": args.id,
+    }, opts);
 }
 
 /**

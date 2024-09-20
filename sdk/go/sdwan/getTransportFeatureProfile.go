@@ -66,14 +66,20 @@ type LookupTransportFeatureProfileResult struct {
 
 func LookupTransportFeatureProfileOutput(ctx *pulumi.Context, args LookupTransportFeatureProfileOutputArgs, opts ...pulumi.InvokeOption) LookupTransportFeatureProfileResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupTransportFeatureProfileResult, error) {
+		ApplyT(func(v interface{}) (LookupTransportFeatureProfileResultOutput, error) {
 			args := v.(LookupTransportFeatureProfileArgs)
-			r, err := LookupTransportFeatureProfile(ctx, &args, opts...)
-			var s LookupTransportFeatureProfileResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupTransportFeatureProfileResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getTransportFeatureProfile:getTransportFeatureProfile", args, &rv, "", opts...)
+			if err != nil {
+				return LookupTransportFeatureProfileResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupTransportFeatureProfileResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupTransportFeatureProfileResultOutput), nil
+			}
+			return output, nil
 		}).(LookupTransportFeatureProfileResultOutput)
 }
 

@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getRuleSetPolicyDefinition(args: GetRuleSetPolicyDefinitionArgs, opts?: pulumi.InvokeOptions): Promise<GetRuleSetPolicyDefinitionResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getRuleSetPolicyDefinition:getRuleSetPolicyDefinition", {
         "id": args.id,
@@ -78,7 +77,10 @@ export interface GetRuleSetPolicyDefinitionResult {
  * ```
  */
 export function getRuleSetPolicyDefinitionOutput(args: GetRuleSetPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetRuleSetPolicyDefinitionResult> {
-    return pulumi.output(args).apply((a: any) => getRuleSetPolicyDefinition(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getRuleSetPolicyDefinition:getRuleSetPolicyDefinition", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

@@ -142,14 +142,20 @@ type LookupServiceLanVpnFeatureResult struct {
 
 func LookupServiceLanVpnFeatureOutput(ctx *pulumi.Context, args LookupServiceLanVpnFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupServiceLanVpnFeatureResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupServiceLanVpnFeatureResult, error) {
+		ApplyT(func(v interface{}) (LookupServiceLanVpnFeatureResultOutput, error) {
 			args := v.(LookupServiceLanVpnFeatureArgs)
-			r, err := LookupServiceLanVpnFeature(ctx, &args, opts...)
-			var s LookupServiceLanVpnFeatureResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupServiceLanVpnFeatureResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getServiceLanVpnFeature:getServiceLanVpnFeature", args, &rv, "", opts...)
+			if err != nil {
+				return LookupServiceLanVpnFeatureResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupServiceLanVpnFeatureResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupServiceLanVpnFeatureResultOutput), nil
+			}
+			return output, nil
 		}).(LookupServiceLanVpnFeatureResultOutput)
 }
 

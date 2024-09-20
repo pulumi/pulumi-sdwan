@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getMeshTopologyPolicyDefinition(args: GetMeshTopologyPolicyDefinitionArgs, opts?: pulumi.InvokeOptions): Promise<GetMeshTopologyPolicyDefinitionResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getMeshTopologyPolicyDefinition:getMeshTopologyPolicyDefinition", {
         "id": args.id,
@@ -90,7 +89,10 @@ export interface GetMeshTopologyPolicyDefinitionResult {
  * ```
  */
 export function getMeshTopologyPolicyDefinitionOutput(args: GetMeshTopologyPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetMeshTopologyPolicyDefinitionResult> {
-    return pulumi.output(args).apply((a: any) => getMeshTopologyPolicyDefinition(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getMeshTopologyPolicyDefinition:getMeshTopologyPolicyDefinition", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

@@ -75,14 +75,20 @@ type LookupPolicyObjectDataIpv6PrefixListResult struct {
 
 func LookupPolicyObjectDataIpv6PrefixListOutput(ctx *pulumi.Context, args LookupPolicyObjectDataIpv6PrefixListOutputArgs, opts ...pulumi.InvokeOption) LookupPolicyObjectDataIpv6PrefixListResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupPolicyObjectDataIpv6PrefixListResult, error) {
+		ApplyT(func(v interface{}) (LookupPolicyObjectDataIpv6PrefixListResultOutput, error) {
 			args := v.(LookupPolicyObjectDataIpv6PrefixListArgs)
-			r, err := LookupPolicyObjectDataIpv6PrefixList(ctx, &args, opts...)
-			var s LookupPolicyObjectDataIpv6PrefixListResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupPolicyObjectDataIpv6PrefixListResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getPolicyObjectDataIpv6PrefixList:getPolicyObjectDataIpv6PrefixList", args, &rv, "", opts...)
+			if err != nil {
+				return LookupPolicyObjectDataIpv6PrefixListResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupPolicyObjectDataIpv6PrefixListResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupPolicyObjectDataIpv6PrefixListResultOutput), nil
+			}
+			return output, nil
 		}).(LookupPolicyObjectDataIpv6PrefixListResultOutput)
 }
 

@@ -68,14 +68,20 @@ type LookupVpnListPolicyObjectResult struct {
 
 func LookupVpnListPolicyObjectOutput(ctx *pulumi.Context, args LookupVpnListPolicyObjectOutputArgs, opts ...pulumi.InvokeOption) LookupVpnListPolicyObjectResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupVpnListPolicyObjectResult, error) {
+		ApplyT(func(v interface{}) (LookupVpnListPolicyObjectResultOutput, error) {
 			args := v.(LookupVpnListPolicyObjectArgs)
-			r, err := LookupVpnListPolicyObject(ctx, &args, opts...)
-			var s LookupVpnListPolicyObjectResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupVpnListPolicyObjectResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getVpnListPolicyObject:getVpnListPolicyObject", args, &rv, "", opts...)
+			if err != nil {
+				return LookupVpnListPolicyObjectResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupVpnListPolicyObjectResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupVpnListPolicyObjectResultOutput), nil
+			}
+			return output, nil
 		}).(LookupVpnListPolicyObjectResultOutput)
 }
 

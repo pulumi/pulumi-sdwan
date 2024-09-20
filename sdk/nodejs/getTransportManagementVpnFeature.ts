@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getTransportManagementVpnFeature(args: GetTransportManagementVpnFeatureArgs, opts?: pulumi.InvokeOptions): Promise<GetTransportManagementVpnFeatureResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getTransportManagementVpnFeature:getTransportManagementVpnFeature", {
         "featureProfileId": args.featureProfileId,
@@ -134,7 +133,11 @@ export interface GetTransportManagementVpnFeatureResult {
  * ```
  */
 export function getTransportManagementVpnFeatureOutput(args: GetTransportManagementVpnFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTransportManagementVpnFeatureResult> {
-    return pulumi.output(args).apply((a: any) => getTransportManagementVpnFeature(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getTransportManagementVpnFeature:getTransportManagementVpnFeature", {
+        "featureProfileId": args.featureProfileId,
+        "id": args.id,
+    }, opts);
 }
 
 /**

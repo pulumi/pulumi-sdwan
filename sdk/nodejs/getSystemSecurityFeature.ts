@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getSystemSecurityFeature(args: GetSystemSecurityFeatureArgs, opts?: pulumi.InvokeOptions): Promise<GetSystemSecurityFeatureResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getSystemSecurityFeature:getSystemSecurityFeature", {
         "featureProfileId": args.featureProfileId,
@@ -133,7 +132,11 @@ export interface GetSystemSecurityFeatureResult {
  * ```
  */
 export function getSystemSecurityFeatureOutput(args: GetSystemSecurityFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSystemSecurityFeatureResult> {
-    return pulumi.output(args).apply((a: any) => getSystemSecurityFeature(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getSystemSecurityFeature:getSystemSecurityFeature", {
+        "featureProfileId": args.featureProfileId,
+        "id": args.id,
+    }, opts);
 }
 
 /**

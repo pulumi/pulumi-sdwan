@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getSystemBasicFeature(args: GetSystemBasicFeatureArgs, opts?: pulumi.InvokeOptions): Promise<GetSystemBasicFeatureResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getSystemBasicFeature:getSystemBasicFeature", {
         "featureProfileId": args.featureProfileId,
@@ -325,7 +324,11 @@ export interface GetSystemBasicFeatureResult {
  * ```
  */
 export function getSystemBasicFeatureOutput(args: GetSystemBasicFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSystemBasicFeatureResult> {
-    return pulumi.output(args).apply((a: any) => getSystemBasicFeature(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getSystemBasicFeature:getSystemBasicFeature", {
+        "featureProfileId": args.featureProfileId,
+        "id": args.id,
+    }, opts);
 }
 
 /**

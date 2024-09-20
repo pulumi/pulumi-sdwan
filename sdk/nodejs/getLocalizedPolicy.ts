@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getLocalizedPolicy(args: GetLocalizedPolicyArgs, opts?: pulumi.InvokeOptions): Promise<GetLocalizedPolicyResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getLocalizedPolicy:getLocalizedPolicy", {
         "id": args.id,
@@ -118,7 +117,10 @@ export interface GetLocalizedPolicyResult {
  * ```
  */
 export function getLocalizedPolicyOutput(args: GetLocalizedPolicyOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetLocalizedPolicyResult> {
-    return pulumi.output(args).apply((a: any) => getLocalizedPolicy(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getLocalizedPolicy:getLocalizedPolicy", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

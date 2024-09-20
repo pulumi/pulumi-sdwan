@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getSystemIpv4DeviceAccessFeature(args: GetSystemIpv4DeviceAccessFeatureArgs, opts?: pulumi.InvokeOptions): Promise<GetSystemIpv4DeviceAccessFeatureResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getSystemIpv4DeviceAccessFeature:getSystemIpv4DeviceAccessFeature", {
         "featureProfileId": args.featureProfileId,
@@ -93,7 +92,11 @@ export interface GetSystemIpv4DeviceAccessFeatureResult {
  * ```
  */
 export function getSystemIpv4DeviceAccessFeatureOutput(args: GetSystemIpv4DeviceAccessFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSystemIpv4DeviceAccessFeatureResult> {
-    return pulumi.output(args).apply((a: any) => getSystemIpv4DeviceAccessFeature(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getSystemIpv4DeviceAccessFeature:getSystemIpv4DeviceAccessFeature", {
+        "featureProfileId": args.featureProfileId,
+        "id": args.id,
+    }, opts);
 }
 
 /**

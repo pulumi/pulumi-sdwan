@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getServiceTrackerGroupFeature(args: GetServiceTrackerGroupFeatureArgs, opts?: pulumi.InvokeOptions): Promise<GetServiceTrackerGroupFeatureResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getServiceTrackerGroupFeature:getServiceTrackerGroupFeature", {
         "featureProfileId": args.featureProfileId,
@@ -97,7 +96,11 @@ export interface GetServiceTrackerGroupFeatureResult {
  * ```
  */
 export function getServiceTrackerGroupFeatureOutput(args: GetServiceTrackerGroupFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetServiceTrackerGroupFeatureResult> {
-    return pulumi.output(args).apply((a: any) => getServiceTrackerGroupFeature(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getServiceTrackerGroupFeature:getServiceTrackerGroupFeature", {
+        "featureProfileId": args.featureProfileId,
+        "id": args.id,
+    }, opts);
 }
 
 /**

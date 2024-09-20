@@ -118,14 +118,20 @@ type LookupCiscoSigCredentialsFeatureTemplateResult struct {
 
 func LookupCiscoSigCredentialsFeatureTemplateOutput(ctx *pulumi.Context, args LookupCiscoSigCredentialsFeatureTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupCiscoSigCredentialsFeatureTemplateResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupCiscoSigCredentialsFeatureTemplateResult, error) {
+		ApplyT(func(v interface{}) (LookupCiscoSigCredentialsFeatureTemplateResultOutput, error) {
 			args := v.(LookupCiscoSigCredentialsFeatureTemplateArgs)
-			r, err := LookupCiscoSigCredentialsFeatureTemplate(ctx, &args, opts...)
-			var s LookupCiscoSigCredentialsFeatureTemplateResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupCiscoSigCredentialsFeatureTemplateResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getCiscoSigCredentialsFeatureTemplate:getCiscoSigCredentialsFeatureTemplate", args, &rv, "", opts...)
+			if err != nil {
+				return LookupCiscoSigCredentialsFeatureTemplateResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupCiscoSigCredentialsFeatureTemplateResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupCiscoSigCredentialsFeatureTemplateResultOutput), nil
+			}
+			return output, nil
 		}).(LookupCiscoSigCredentialsFeatureTemplateResultOutput)
 }
 

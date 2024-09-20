@@ -79,14 +79,20 @@ type LookupTransportTrackerGroupFeatureResult struct {
 
 func LookupTransportTrackerGroupFeatureOutput(ctx *pulumi.Context, args LookupTransportTrackerGroupFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupTransportTrackerGroupFeatureResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupTransportTrackerGroupFeatureResult, error) {
+		ApplyT(func(v interface{}) (LookupTransportTrackerGroupFeatureResultOutput, error) {
 			args := v.(LookupTransportTrackerGroupFeatureArgs)
-			r, err := LookupTransportTrackerGroupFeature(ctx, &args, opts...)
-			var s LookupTransportTrackerGroupFeatureResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupTransportTrackerGroupFeatureResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getTransportTrackerGroupFeature:getTransportTrackerGroupFeature", args, &rv, "", opts...)
+			if err != nil {
+				return LookupTransportTrackerGroupFeatureResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupTransportTrackerGroupFeatureResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupTransportTrackerGroupFeatureResultOutput), nil
+			}
+			return output, nil
 		}).(LookupTransportTrackerGroupFeatureResultOutput)
 }
 

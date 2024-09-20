@@ -98,14 +98,20 @@ type LookupTransportManagementVpnFeatureResult struct {
 
 func LookupTransportManagementVpnFeatureOutput(ctx *pulumi.Context, args LookupTransportManagementVpnFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupTransportManagementVpnFeatureResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupTransportManagementVpnFeatureResult, error) {
+		ApplyT(func(v interface{}) (LookupTransportManagementVpnFeatureResultOutput, error) {
 			args := v.(LookupTransportManagementVpnFeatureArgs)
-			r, err := LookupTransportManagementVpnFeature(ctx, &args, opts...)
-			var s LookupTransportManagementVpnFeatureResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupTransportManagementVpnFeatureResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getTransportManagementVpnFeature:getTransportManagementVpnFeature", args, &rv, "", opts...)
+			if err != nil {
+				return LookupTransportManagementVpnFeatureResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupTransportManagementVpnFeatureResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupTransportManagementVpnFeatureResultOutput), nil
+			}
+			return output, nil
 		}).(LookupTransportManagementVpnFeatureResultOutput)
 }
 

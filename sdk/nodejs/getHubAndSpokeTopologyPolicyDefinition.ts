@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getHubAndSpokeTopologyPolicyDefinition(args: GetHubAndSpokeTopologyPolicyDefinitionArgs, opts?: pulumi.InvokeOptions): Promise<GetHubAndSpokeTopologyPolicyDefinitionResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getHubAndSpokeTopologyPolicyDefinition:getHubAndSpokeTopologyPolicyDefinition", {
         "id": args.id,
@@ -90,7 +89,10 @@ export interface GetHubAndSpokeTopologyPolicyDefinitionResult {
  * ```
  */
 export function getHubAndSpokeTopologyPolicyDefinitionOutput(args: GetHubAndSpokeTopologyPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetHubAndSpokeTopologyPolicyDefinitionResult> {
-    return pulumi.output(args).apply((a: any) => getHubAndSpokeTopologyPolicyDefinition(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getHubAndSpokeTopologyPolicyDefinition:getHubAndSpokeTopologyPolicyDefinition", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

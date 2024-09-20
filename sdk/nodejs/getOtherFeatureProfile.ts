@@ -19,7 +19,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getOtherFeatureProfile(args: GetOtherFeatureProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetOtherFeatureProfileResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getOtherFeatureProfile:getOtherFeatureProfile", {
         "id": args.id,
@@ -68,7 +67,10 @@ export interface GetOtherFeatureProfileResult {
  * ```
  */
 export function getOtherFeatureProfileOutput(args: GetOtherFeatureProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetOtherFeatureProfileResult> {
-    return pulumi.output(args).apply((a: any) => getOtherFeatureProfile(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getOtherFeatureProfile:getOtherFeatureProfile", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getBlockUrlListPolicyObject(args: GetBlockUrlListPolicyObjectArgs, opts?: pulumi.InvokeOptions): Promise<GetBlockUrlListPolicyObjectResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getBlockUrlListPolicyObject:getBlockUrlListPolicyObject", {
         "id": args.id,
@@ -74,7 +73,10 @@ export interface GetBlockUrlListPolicyObjectResult {
  * ```
  */
 export function getBlockUrlListPolicyObjectOutput(args: GetBlockUrlListPolicyObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetBlockUrlListPolicyObjectResult> {
-    return pulumi.output(args).apply((a: any) => getBlockUrlListPolicyObject(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getBlockUrlListPolicyObject:getBlockUrlListPolicyObject", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

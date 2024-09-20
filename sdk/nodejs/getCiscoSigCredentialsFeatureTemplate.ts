@@ -20,7 +20,6 @@ import * as utilities from "./utilities";
  */
 export function getCiscoSigCredentialsFeatureTemplate(args?: GetCiscoSigCredentialsFeatureTemplateArgs, opts?: pulumi.InvokeOptions): Promise<GetCiscoSigCredentialsFeatureTemplateResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getCiscoSigCredentialsFeatureTemplate:getCiscoSigCredentialsFeatureTemplate", {
         "id": args.id,
@@ -174,7 +173,12 @@ export interface GetCiscoSigCredentialsFeatureTemplateResult {
  * ```
  */
 export function getCiscoSigCredentialsFeatureTemplateOutput(args?: GetCiscoSigCredentialsFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCiscoSigCredentialsFeatureTemplateResult> {
-    return pulumi.output(args).apply((a: any) => getCiscoSigCredentialsFeatureTemplate(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getCiscoSigCredentialsFeatureTemplate:getCiscoSigCredentialsFeatureTemplate", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**

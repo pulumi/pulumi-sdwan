@@ -20,7 +20,6 @@ import * as utilities from "./utilities";
  */
 export function getGpsFeatureTemplate(args?: GetGpsFeatureTemplateArgs, opts?: pulumi.InvokeOptions): Promise<GetGpsFeatureTemplateResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getGpsFeatureTemplate:getGpsFeatureTemplate", {
         "id": args.id,
@@ -134,7 +133,12 @@ export interface GetGpsFeatureTemplateResult {
  * ```
  */
 export function getGpsFeatureTemplateOutput(args?: GetGpsFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetGpsFeatureTemplateResult> {
-    return pulumi.output(args).apply((a: any) => getGpsFeatureTemplate(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getGpsFeatureTemplate:getGpsFeatureTemplate", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**

@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getSiteListPolicyObject(args: GetSiteListPolicyObjectArgs, opts?: pulumi.InvokeOptions): Promise<GetSiteListPolicyObjectResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getSiteListPolicyObject:getSiteListPolicyObject", {
         "id": args.id,
@@ -74,7 +73,10 @@ export interface GetSiteListPolicyObjectResult {
  * ```
  */
 export function getSiteListPolicyObjectOutput(args: GetSiteListPolicyObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSiteListPolicyObjectResult> {
-    return pulumi.output(args).apply((a: any) => getSiteListPolicyObject(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getSiteListPolicyObject:getSiteListPolicyObject", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

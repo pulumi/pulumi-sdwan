@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getVpnInterfaceDslPppoaFeatureTemplate(args?: GetVpnInterfaceDslPppoaFeatureTemplateArgs, opts?: pulumi.InvokeOptions): Promise<GetVpnInterfaceDslPppoaFeatureTemplateResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getVpnInterfaceDslPppoaFeatureTemplate:getVpnInterfaceDslPppoaFeatureTemplate", {
         "id": args.id,
@@ -676,7 +675,12 @@ export interface GetVpnInterfaceDslPppoaFeatureTemplateResult {
  * ```
  */
 export function getVpnInterfaceDslPppoaFeatureTemplateOutput(args?: GetVpnInterfaceDslPppoaFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetVpnInterfaceDslPppoaFeatureTemplateResult> {
-    return pulumi.output(args).apply((a: any) => getVpnInterfaceDslPppoaFeatureTemplate(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getVpnInterfaceDslPppoaFeatureTemplate:getVpnInterfaceDslPppoaFeatureTemplate", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**

@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getCflowdPolicyDefinition(args: GetCflowdPolicyDefinitionArgs, opts?: pulumi.InvokeOptions): Promise<GetCflowdPolicyDefinitionResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getCflowdPolicyDefinition:getCflowdPolicyDefinition", {
         "id": args.id,
@@ -110,7 +109,10 @@ export interface GetCflowdPolicyDefinitionResult {
  * ```
  */
 export function getCflowdPolicyDefinitionOutput(args: GetCflowdPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCflowdPolicyDefinitionResult> {
-    return pulumi.output(args).apply((a: any) => getCflowdPolicyDefinition(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getCflowdPolicyDefinition:getCflowdPolicyDefinition", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getDomainListPolicyObject(args: GetDomainListPolicyObjectArgs, opts?: pulumi.InvokeOptions): Promise<GetDomainListPolicyObjectResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getDomainListPolicyObject:getDomainListPolicyObject", {
         "id": args.id,
@@ -74,7 +73,10 @@ export interface GetDomainListPolicyObjectResult {
  * ```
  */
 export function getDomainListPolicyObjectOutput(args: GetDomainListPolicyObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDomainListPolicyObjectResult> {
-    return pulumi.output(args).apply((a: any) => getDomainListPolicyObject(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getDomainListPolicyObject:getDomainListPolicyObject", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

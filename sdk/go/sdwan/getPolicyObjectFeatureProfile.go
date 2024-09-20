@@ -33,13 +33,19 @@ type LookupPolicyObjectFeatureProfileResult struct {
 }
 
 func LookupPolicyObjectFeatureProfileOutput(ctx *pulumi.Context, opts ...pulumi.InvokeOption) LookupPolicyObjectFeatureProfileResultOutput {
-	return pulumi.ToOutput(0).ApplyT(func(int) (LookupPolicyObjectFeatureProfileResult, error) {
-		r, err := LookupPolicyObjectFeatureProfile(ctx, opts...)
-		var s LookupPolicyObjectFeatureProfileResult
-		if r != nil {
-			s = *r
+	return pulumi.ToOutput(0).ApplyT(func(int) (LookupPolicyObjectFeatureProfileResultOutput, error) {
+		opts = internal.PkgInvokeDefaultOpts(opts)
+		var rv LookupPolicyObjectFeatureProfileResult
+		secret, err := ctx.InvokePackageRaw("sdwan:index/getPolicyObjectFeatureProfile:getPolicyObjectFeatureProfile", nil, &rv, "", opts...)
+		if err != nil {
+			return LookupPolicyObjectFeatureProfileResultOutput{}, err
 		}
-		return s, err
+
+		output := pulumi.ToOutput(rv).(LookupPolicyObjectFeatureProfileResultOutput)
+		if secret {
+			return pulumi.ToSecret(output).(LookupPolicyObjectFeatureProfileResultOutput), nil
+		}
+		return output, nil
 	}).(LookupPolicyObjectFeatureProfileResultOutput)
 }
 

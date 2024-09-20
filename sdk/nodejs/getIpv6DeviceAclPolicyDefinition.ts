@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getIpv6DeviceAclPolicyDefinition(args: GetIpv6DeviceAclPolicyDefinitionArgs, opts?: pulumi.InvokeOptions): Promise<GetIpv6DeviceAclPolicyDefinitionResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getIpv6DeviceAclPolicyDefinition:getIpv6DeviceAclPolicyDefinition", {
         "id": args.id,
@@ -86,7 +85,10 @@ export interface GetIpv6DeviceAclPolicyDefinitionResult {
  * ```
  */
 export function getIpv6DeviceAclPolicyDefinitionOutput(args: GetIpv6DeviceAclPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetIpv6DeviceAclPolicyDefinitionResult> {
-    return pulumi.output(args).apply((a: any) => getIpv6DeviceAclPolicyDefinition(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getIpv6DeviceAclPolicyDefinition:getIpv6DeviceAclPolicyDefinition", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

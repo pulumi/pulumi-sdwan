@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getCiscoSecureInternetGatewayFeatureTemplate(args?: GetCiscoSecureInternetGatewayFeatureTemplateArgs, opts?: pulumi.InvokeOptions): Promise<GetCiscoSecureInternetGatewayFeatureTemplateResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getCiscoSecureInternetGatewayFeatureTemplate:getCiscoSecureInternetGatewayFeatureTemplate", {
         "id": args.id,
@@ -112,7 +111,12 @@ export interface GetCiscoSecureInternetGatewayFeatureTemplateResult {
  * ```
  */
 export function getCiscoSecureInternetGatewayFeatureTemplateOutput(args?: GetCiscoSecureInternetGatewayFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCiscoSecureInternetGatewayFeatureTemplateResult> {
-    return pulumi.output(args).apply((a: any) => getCiscoSecureInternetGatewayFeatureTemplate(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getCiscoSecureInternetGatewayFeatureTemplate:getCiscoSecureInternetGatewayFeatureTemplate", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**

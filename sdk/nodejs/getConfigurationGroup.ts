@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getConfigurationGroup(args: GetConfigurationGroupArgs, opts?: pulumi.InvokeOptions): Promise<GetConfigurationGroupResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getConfigurationGroup:getConfigurationGroup", {
         "id": args.id,
@@ -86,7 +85,10 @@ export interface GetConfigurationGroupResult {
  * ```
  */
 export function getConfigurationGroupOutput(args: GetConfigurationGroupOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetConfigurationGroupResult> {
-    return pulumi.output(args).apply((a: any) => getConfigurationGroup(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getConfigurationGroup:getConfigurationGroup", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

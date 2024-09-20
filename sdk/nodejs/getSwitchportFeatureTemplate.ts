@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getSwitchportFeatureTemplate(args?: GetSwitchportFeatureTemplateArgs, opts?: pulumi.InvokeOptions): Promise<GetSwitchportFeatureTemplateResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getSwitchportFeatureTemplate:getSwitchportFeatureTemplate", {
         "id": args.id,
@@ -116,7 +115,12 @@ export interface GetSwitchportFeatureTemplateResult {
  * ```
  */
 export function getSwitchportFeatureTemplateOutput(args?: GetSwitchportFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchportFeatureTemplateResult> {
-    return pulumi.output(args).apply((a: any) => getSwitchportFeatureTemplate(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getSwitchportFeatureTemplate:getSwitchportFeatureTemplate", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**

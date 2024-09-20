@@ -142,14 +142,20 @@ type LookupTransportRoutingOspfv3Ipv6FeatureResult struct {
 
 func LookupTransportRoutingOspfv3Ipv6FeatureOutput(ctx *pulumi.Context, args LookupTransportRoutingOspfv3Ipv6FeatureOutputArgs, opts ...pulumi.InvokeOption) LookupTransportRoutingOspfv3Ipv6FeatureResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupTransportRoutingOspfv3Ipv6FeatureResult, error) {
+		ApplyT(func(v interface{}) (LookupTransportRoutingOspfv3Ipv6FeatureResultOutput, error) {
 			args := v.(LookupTransportRoutingOspfv3Ipv6FeatureArgs)
-			r, err := LookupTransportRoutingOspfv3Ipv6Feature(ctx, &args, opts...)
-			var s LookupTransportRoutingOspfv3Ipv6FeatureResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupTransportRoutingOspfv3Ipv6FeatureResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getTransportRoutingOspfv3Ipv6Feature:getTransportRoutingOspfv3Ipv6Feature", args, &rv, "", opts...)
+			if err != nil {
+				return LookupTransportRoutingOspfv3Ipv6FeatureResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupTransportRoutingOspfv3Ipv6FeatureResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupTransportRoutingOspfv3Ipv6FeatureResultOutput), nil
+			}
+			return output, nil
 		}).(LookupTransportRoutingOspfv3Ipv6FeatureResultOutput)
 }
 

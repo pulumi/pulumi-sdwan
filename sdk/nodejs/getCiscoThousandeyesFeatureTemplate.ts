@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getCiscoThousandeyesFeatureTemplate(args?: GetCiscoThousandeyesFeatureTemplateArgs, opts?: pulumi.InvokeOptions): Promise<GetCiscoThousandeyesFeatureTemplateResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getCiscoThousandeyesFeatureTemplate:getCiscoThousandeyesFeatureTemplate", {
         "id": args.id,
@@ -92,7 +91,12 @@ export interface GetCiscoThousandeyesFeatureTemplateResult {
  * ```
  */
 export function getCiscoThousandeyesFeatureTemplateOutput(args?: GetCiscoThousandeyesFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCiscoThousandeyesFeatureTemplateResult> {
-    return pulumi.output(args).apply((a: any) => getCiscoThousandeyesFeatureTemplate(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getCiscoThousandeyesFeatureTemplate:getCiscoThousandeyesFeatureTemplate", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**

@@ -75,14 +75,20 @@ type LookupPolicyObjectIpv4PrefixListResult struct {
 
 func LookupPolicyObjectIpv4PrefixListOutput(ctx *pulumi.Context, args LookupPolicyObjectIpv4PrefixListOutputArgs, opts ...pulumi.InvokeOption) LookupPolicyObjectIpv4PrefixListResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupPolicyObjectIpv4PrefixListResult, error) {
+		ApplyT(func(v interface{}) (LookupPolicyObjectIpv4PrefixListResultOutput, error) {
 			args := v.(LookupPolicyObjectIpv4PrefixListArgs)
-			r, err := LookupPolicyObjectIpv4PrefixList(ctx, &args, opts...)
-			var s LookupPolicyObjectIpv4PrefixListResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupPolicyObjectIpv4PrefixListResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getPolicyObjectIpv4PrefixList:getPolicyObjectIpv4PrefixList", args, &rv, "", opts...)
+			if err != nil {
+				return LookupPolicyObjectIpv4PrefixListResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupPolicyObjectIpv4PrefixListResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupPolicyObjectIpv4PrefixListResultOutput), nil
+			}
+			return output, nil
 		}).(LookupPolicyObjectIpv4PrefixListResultOutput)
 }
 

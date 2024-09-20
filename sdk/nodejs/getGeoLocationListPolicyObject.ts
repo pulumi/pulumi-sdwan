@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getGeoLocationListPolicyObject(args: GetGeoLocationListPolicyObjectArgs, opts?: pulumi.InvokeOptions): Promise<GetGeoLocationListPolicyObjectResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getGeoLocationListPolicyObject:getGeoLocationListPolicyObject", {
         "id": args.id,
@@ -74,7 +73,10 @@ export interface GetGeoLocationListPolicyObjectResult {
  * ```
  */
 export function getGeoLocationListPolicyObjectOutput(args: GetGeoLocationListPolicyObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetGeoLocationListPolicyObjectResult> {
-    return pulumi.output(args).apply((a: any) => getGeoLocationListPolicyObject(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getGeoLocationListPolicyObject:getGeoLocationListPolicyObject", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

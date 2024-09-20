@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getIpv4AclPolicyDefinition(args: GetIpv4AclPolicyDefinitionArgs, opts?: pulumi.InvokeOptions): Promise<GetIpv4AclPolicyDefinitionResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getIpv4AclPolicyDefinition:getIpv4AclPolicyDefinition", {
         "id": args.id,
@@ -86,7 +85,10 @@ export interface GetIpv4AclPolicyDefinitionResult {
  * ```
  */
 export function getIpv4AclPolicyDefinitionOutput(args: GetIpv4AclPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetIpv4AclPolicyDefinitionResult> {
-    return pulumi.output(args).apply((a: any) => getIpv4AclPolicyDefinition(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getIpv4AclPolicyDefinition:getIpv4AclPolicyDefinition", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

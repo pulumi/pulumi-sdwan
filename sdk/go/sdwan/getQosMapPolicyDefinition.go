@@ -72,14 +72,20 @@ type LookupQosMapPolicyDefinitionResult struct {
 
 func LookupQosMapPolicyDefinitionOutput(ctx *pulumi.Context, args LookupQosMapPolicyDefinitionOutputArgs, opts ...pulumi.InvokeOption) LookupQosMapPolicyDefinitionResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupQosMapPolicyDefinitionResult, error) {
+		ApplyT(func(v interface{}) (LookupQosMapPolicyDefinitionResultOutput, error) {
 			args := v.(LookupQosMapPolicyDefinitionArgs)
-			r, err := LookupQosMapPolicyDefinition(ctx, &args, opts...)
-			var s LookupQosMapPolicyDefinitionResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupQosMapPolicyDefinitionResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getQosMapPolicyDefinition:getQosMapPolicyDefinition", args, &rv, "", opts...)
+			if err != nil {
+				return LookupQosMapPolicyDefinitionResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupQosMapPolicyDefinitionResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupQosMapPolicyDefinitionResultOutput), nil
+			}
+			return output, nil
 		}).(LookupQosMapPolicyDefinitionResultOutput)
 }
 

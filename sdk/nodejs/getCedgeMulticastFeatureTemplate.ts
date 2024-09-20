@@ -20,7 +20,6 @@ import * as utilities from "./utilities";
  */
 export function getCedgeMulticastFeatureTemplate(args?: GetCedgeMulticastFeatureTemplateArgs, opts?: pulumi.InvokeOptions): Promise<GetCedgeMulticastFeatureTemplateResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getCedgeMulticastFeatureTemplate:getCedgeMulticastFeatureTemplate", {
         "id": args.id,
@@ -110,7 +109,12 @@ export interface GetCedgeMulticastFeatureTemplateResult {
  * ```
  */
 export function getCedgeMulticastFeatureTemplateOutput(args?: GetCedgeMulticastFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCedgeMulticastFeatureTemplateResult> {
-    return pulumi.output(args).apply((a: any) => getCedgeMulticastFeatureTemplate(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getCedgeMulticastFeatureTemplate:getCedgeMulticastFeatureTemplate", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**

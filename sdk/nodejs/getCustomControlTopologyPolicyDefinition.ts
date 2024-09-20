@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getCustomControlTopologyPolicyDefinition(args: GetCustomControlTopologyPolicyDefinitionArgs, opts?: pulumi.InvokeOptions): Promise<GetCustomControlTopologyPolicyDefinitionResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getCustomControlTopologyPolicyDefinition:getCustomControlTopologyPolicyDefinition", {
         "id": args.id,
@@ -86,7 +85,10 @@ export interface GetCustomControlTopologyPolicyDefinitionResult {
  * ```
  */
 export function getCustomControlTopologyPolicyDefinitionOutput(args: GetCustomControlTopologyPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCustomControlTopologyPolicyDefinitionResult> {
-    return pulumi.output(args).apply((a: any) => getCustomControlTopologyPolicyDefinition(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getCustomControlTopologyPolicyDefinition:getCustomControlTopologyPolicyDefinition", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

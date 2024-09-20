@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getProtocolListPolicyObject(args: GetProtocolListPolicyObjectArgs, opts?: pulumi.InvokeOptions): Promise<GetProtocolListPolicyObjectResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getProtocolListPolicyObject:getProtocolListPolicyObject", {
         "id": args.id,
@@ -74,7 +73,10 @@ export interface GetProtocolListPolicyObjectResult {
  * ```
  */
 export function getProtocolListPolicyObjectOutput(args: GetProtocolListPolicyObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetProtocolListPolicyObjectResult> {
-    return pulumi.output(args).apply((a: any) => getProtocolListPolicyObject(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getProtocolListPolicyObject:getProtocolListPolicyObject", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

@@ -68,14 +68,20 @@ type LookupGeoLocationListPolicyObjectResult struct {
 
 func LookupGeoLocationListPolicyObjectOutput(ctx *pulumi.Context, args LookupGeoLocationListPolicyObjectOutputArgs, opts ...pulumi.InvokeOption) LookupGeoLocationListPolicyObjectResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupGeoLocationListPolicyObjectResult, error) {
+		ApplyT(func(v interface{}) (LookupGeoLocationListPolicyObjectResultOutput, error) {
 			args := v.(LookupGeoLocationListPolicyObjectArgs)
-			r, err := LookupGeoLocationListPolicyObject(ctx, &args, opts...)
-			var s LookupGeoLocationListPolicyObjectResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupGeoLocationListPolicyObjectResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getGeoLocationListPolicyObject:getGeoLocationListPolicyObject", args, &rv, "", opts...)
+			if err != nil {
+				return LookupGeoLocationListPolicyObjectResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupGeoLocationListPolicyObjectResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupGeoLocationListPolicyObjectResultOutput), nil
+			}
+			return output, nil
 		}).(LookupGeoLocationListPolicyObjectResultOutput)
 }
 

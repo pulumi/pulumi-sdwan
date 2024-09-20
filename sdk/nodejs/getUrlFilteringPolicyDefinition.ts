@@ -19,7 +19,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getUrlFilteringPolicyDefinition(args: GetUrlFilteringPolicyDefinitionArgs, opts?: pulumi.InvokeOptions): Promise<GetUrlFilteringPolicyDefinitionResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getUrlFilteringPolicyDefinition:getUrlFilteringPolicyDefinition", {
         "id": args.id,
@@ -120,7 +119,10 @@ export interface GetUrlFilteringPolicyDefinitionResult {
  * ```
  */
 export function getUrlFilteringPolicyDefinitionOutput(args: GetUrlFilteringPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetUrlFilteringPolicyDefinitionResult> {
-    return pulumi.output(args).apply((a: any) => getUrlFilteringPolicyDefinition(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getUrlFilteringPolicyDefinition:getUrlFilteringPolicyDefinition", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

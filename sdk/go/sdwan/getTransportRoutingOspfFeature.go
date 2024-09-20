@@ -130,14 +130,20 @@ type LookupTransportRoutingOspfFeatureResult struct {
 
 func LookupTransportRoutingOspfFeatureOutput(ctx *pulumi.Context, args LookupTransportRoutingOspfFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupTransportRoutingOspfFeatureResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupTransportRoutingOspfFeatureResult, error) {
+		ApplyT(func(v interface{}) (LookupTransportRoutingOspfFeatureResultOutput, error) {
 			args := v.(LookupTransportRoutingOspfFeatureArgs)
-			r, err := LookupTransportRoutingOspfFeature(ctx, &args, opts...)
-			var s LookupTransportRoutingOspfFeatureResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupTransportRoutingOspfFeatureResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getTransportRoutingOspfFeature:getTransportRoutingOspfFeature", args, &rv, "", opts...)
+			if err != nil {
+				return LookupTransportRoutingOspfFeatureResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupTransportRoutingOspfFeatureResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupTransportRoutingOspfFeatureResultOutput), nil
+			}
+			return output, nil
 		}).(LookupTransportRoutingOspfFeatureResultOutput)
 }
 

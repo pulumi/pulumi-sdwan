@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getCiscoTrustsecFeatureTemplate(args?: GetCiscoTrustsecFeatureTemplateArgs, opts?: pulumi.InvokeOptions): Promise<GetCiscoTrustsecFeatureTemplateResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getCiscoTrustsecFeatureTemplate:getCiscoTrustsecFeatureTemplate", {
         "id": args.id,
@@ -212,7 +211,12 @@ export interface GetCiscoTrustsecFeatureTemplateResult {
  * ```
  */
 export function getCiscoTrustsecFeatureTemplateOutput(args?: GetCiscoTrustsecFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCiscoTrustsecFeatureTemplateResult> {
-    return pulumi.output(args).apply((a: any) => getCiscoTrustsecFeatureTemplate(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getCiscoTrustsecFeatureTemplate:getCiscoTrustsecFeatureTemplate", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**

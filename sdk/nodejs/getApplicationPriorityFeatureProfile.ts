@@ -19,7 +19,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getApplicationPriorityFeatureProfile(args: GetApplicationPriorityFeatureProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetApplicationPriorityFeatureProfileResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getApplicationPriorityFeatureProfile:getApplicationPriorityFeatureProfile", {
         "id": args.id,
@@ -68,7 +67,10 @@ export interface GetApplicationPriorityFeatureProfileResult {
  * ```
  */
 export function getApplicationPriorityFeatureProfileOutput(args: GetApplicationPriorityFeatureProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplicationPriorityFeatureProfileResult> {
-    return pulumi.output(args).apply((a: any) => getApplicationPriorityFeatureProfile(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getApplicationPriorityFeatureProfile:getApplicationPriorityFeatureProfile", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

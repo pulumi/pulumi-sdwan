@@ -132,14 +132,20 @@ type LookupCiscoOspfFeatureTemplateResult struct {
 
 func LookupCiscoOspfFeatureTemplateOutput(ctx *pulumi.Context, args LookupCiscoOspfFeatureTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupCiscoOspfFeatureTemplateResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupCiscoOspfFeatureTemplateResult, error) {
+		ApplyT(func(v interface{}) (LookupCiscoOspfFeatureTemplateResultOutput, error) {
 			args := v.(LookupCiscoOspfFeatureTemplateArgs)
-			r, err := LookupCiscoOspfFeatureTemplate(ctx, &args, opts...)
-			var s LookupCiscoOspfFeatureTemplateResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupCiscoOspfFeatureTemplateResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getCiscoOspfFeatureTemplate:getCiscoOspfFeatureTemplate", args, &rv, "", opts...)
+			if err != nil {
+				return LookupCiscoOspfFeatureTemplateResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupCiscoOspfFeatureTemplateResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupCiscoOspfFeatureTemplateResultOutput), nil
+			}
+			return output, nil
 		}).(LookupCiscoOspfFeatureTemplateResultOutput)
 }
 

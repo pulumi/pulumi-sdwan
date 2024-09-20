@@ -82,14 +82,20 @@ type LookupFeatureDeviceTemplateResult struct {
 
 func LookupFeatureDeviceTemplateOutput(ctx *pulumi.Context, args LookupFeatureDeviceTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupFeatureDeviceTemplateResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupFeatureDeviceTemplateResult, error) {
+		ApplyT(func(v interface{}) (LookupFeatureDeviceTemplateResultOutput, error) {
 			args := v.(LookupFeatureDeviceTemplateArgs)
-			r, err := LookupFeatureDeviceTemplate(ctx, &args, opts...)
-			var s LookupFeatureDeviceTemplateResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupFeatureDeviceTemplateResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getFeatureDeviceTemplate:getFeatureDeviceTemplate", args, &rv, "", opts...)
+			if err != nil {
+				return LookupFeatureDeviceTemplateResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupFeatureDeviceTemplateResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupFeatureDeviceTemplateResultOutput), nil
+			}
+			return output, nil
 		}).(LookupFeatureDeviceTemplateResultOutput)
 }
 

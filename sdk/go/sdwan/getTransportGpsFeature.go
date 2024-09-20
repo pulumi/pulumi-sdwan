@@ -97,14 +97,20 @@ type LookupTransportGpsFeatureResult struct {
 
 func LookupTransportGpsFeatureOutput(ctx *pulumi.Context, args LookupTransportGpsFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupTransportGpsFeatureResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupTransportGpsFeatureResult, error) {
+		ApplyT(func(v interface{}) (LookupTransportGpsFeatureResultOutput, error) {
 			args := v.(LookupTransportGpsFeatureArgs)
-			r, err := LookupTransportGpsFeature(ctx, &args, opts...)
-			var s LookupTransportGpsFeatureResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupTransportGpsFeatureResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getTransportGpsFeature:getTransportGpsFeature", args, &rv, "", opts...)
+			if err != nil {
+				return LookupTransportGpsFeatureResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupTransportGpsFeatureResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupTransportGpsFeatureResultOutput), nil
+			}
+			return output, nil
 		}).(LookupTransportGpsFeatureResultOutput)
 }
 

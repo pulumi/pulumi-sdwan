@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getPolicyObjectTlocList(args: GetPolicyObjectTlocListArgs, opts?: pulumi.InvokeOptions): Promise<GetPolicyObjectTlocListResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getPolicyObjectTlocList:getPolicyObjectTlocList", {
         "featureProfileId": args.featureProfileId,
@@ -89,7 +88,11 @@ export interface GetPolicyObjectTlocListResult {
  * ```
  */
 export function getPolicyObjectTlocListOutput(args: GetPolicyObjectTlocListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetPolicyObjectTlocListResult> {
-    return pulumi.output(args).apply((a: any) => getPolicyObjectTlocList(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getPolicyObjectTlocList:getPolicyObjectTlocList", {
+        "featureProfileId": args.featureProfileId,
+        "id": args.id,
+    }, opts);
 }
 
 /**

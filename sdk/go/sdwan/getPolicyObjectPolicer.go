@@ -75,14 +75,20 @@ type LookupPolicyObjectPolicerResult struct {
 
 func LookupPolicyObjectPolicerOutput(ctx *pulumi.Context, args LookupPolicyObjectPolicerOutputArgs, opts ...pulumi.InvokeOption) LookupPolicyObjectPolicerResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupPolicyObjectPolicerResult, error) {
+		ApplyT(func(v interface{}) (LookupPolicyObjectPolicerResultOutput, error) {
 			args := v.(LookupPolicyObjectPolicerArgs)
-			r, err := LookupPolicyObjectPolicer(ctx, &args, opts...)
-			var s LookupPolicyObjectPolicerResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupPolicyObjectPolicerResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getPolicyObjectPolicer:getPolicyObjectPolicer", args, &rv, "", opts...)
+			if err != nil {
+				return LookupPolicyObjectPolicerResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupPolicyObjectPolicerResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupPolicyObjectPolicerResultOutput), nil
+			}
+			return output, nil
 		}).(LookupPolicyObjectPolicerResultOutput)
 }
 

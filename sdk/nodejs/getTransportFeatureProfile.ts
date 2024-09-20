@@ -19,7 +19,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getTransportFeatureProfile(args: GetTransportFeatureProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetTransportFeatureProfileResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getTransportFeatureProfile:getTransportFeatureProfile", {
         "id": args.id,
@@ -68,7 +67,10 @@ export interface GetTransportFeatureProfileResult {
  * ```
  */
 export function getTransportFeatureProfileOutput(args: GetTransportFeatureProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTransportFeatureProfileResult> {
-    return pulumi.output(args).apply((a: any) => getTransportFeatureProfile(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getTransportFeatureProfile:getTransportFeatureProfile", {
+        "id": args.id,
+    }, opts);
 }
 
 /**
