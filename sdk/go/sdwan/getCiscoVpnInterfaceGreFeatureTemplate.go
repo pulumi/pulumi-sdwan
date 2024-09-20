@@ -132,14 +132,20 @@ type LookupCiscoVpnInterfaceGreFeatureTemplateResult struct {
 
 func LookupCiscoVpnInterfaceGreFeatureTemplateOutput(ctx *pulumi.Context, args LookupCiscoVpnInterfaceGreFeatureTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupCiscoVpnInterfaceGreFeatureTemplateResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupCiscoVpnInterfaceGreFeatureTemplateResult, error) {
+		ApplyT(func(v interface{}) (LookupCiscoVpnInterfaceGreFeatureTemplateResultOutput, error) {
 			args := v.(LookupCiscoVpnInterfaceGreFeatureTemplateArgs)
-			r, err := LookupCiscoVpnInterfaceGreFeatureTemplate(ctx, &args, opts...)
-			var s LookupCiscoVpnInterfaceGreFeatureTemplateResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupCiscoVpnInterfaceGreFeatureTemplateResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getCiscoVpnInterfaceGreFeatureTemplate:getCiscoVpnInterfaceGreFeatureTemplate", args, &rv, "", opts...)
+			if err != nil {
+				return LookupCiscoVpnInterfaceGreFeatureTemplateResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupCiscoVpnInterfaceGreFeatureTemplateResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupCiscoVpnInterfaceGreFeatureTemplateResultOutput), nil
+			}
+			return output, nil
 		}).(LookupCiscoVpnInterfaceGreFeatureTemplateResultOutput)
 }
 

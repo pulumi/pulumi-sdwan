@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getPortListPolicyObject(args: GetPortListPolicyObjectArgs, opts?: pulumi.InvokeOptions): Promise<GetPortListPolicyObjectResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getPortListPolicyObject:getPortListPolicyObject", {
         "id": args.id,
@@ -74,7 +73,10 @@ export interface GetPortListPolicyObjectResult {
  * ```
  */
 export function getPortListPolicyObjectOutput(args: GetPortListPolicyObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetPortListPolicyObjectResult> {
-    return pulumi.output(args).apply((a: any) => getPortListPolicyObject(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getPortListPolicyObject:getPortListPolicyObject", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

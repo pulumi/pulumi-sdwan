@@ -20,7 +20,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getTransportTrackerFeature(args: GetTransportTrackerFeatureArgs, opts?: pulumi.InvokeOptions): Promise<GetTransportTrackerFeatureResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getTransportTrackerFeature:getTransportTrackerFeature", {
         "featureProfileId": args.featureProfileId,
@@ -155,7 +154,11 @@ export interface GetTransportTrackerFeatureResult {
  * ```
  */
 export function getTransportTrackerFeatureOutput(args: GetTransportTrackerFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTransportTrackerFeatureResult> {
-    return pulumi.output(args).apply((a: any) => getTransportTrackerFeature(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getTransportTrackerFeature:getTransportTrackerFeature", {
+        "featureProfileId": args.featureProfileId,
+        "id": args.id,
+    }, opts);
 }
 
 /**

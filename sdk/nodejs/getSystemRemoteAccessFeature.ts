@@ -20,7 +20,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getSystemRemoteAccessFeature(args: GetSystemRemoteAccessFeatureArgs, opts?: pulumi.InvokeOptions): Promise<GetSystemRemoteAccessFeatureResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getSystemRemoteAccessFeature:getSystemRemoteAccessFeature", {
         "featureProfileId": args.featureProfileId,
@@ -216,7 +215,11 @@ export interface GetSystemRemoteAccessFeatureResult {
  * ```
  */
 export function getSystemRemoteAccessFeatureOutput(args: GetSystemRemoteAccessFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSystemRemoteAccessFeatureResult> {
-    return pulumi.output(args).apply((a: any) => getSystemRemoteAccessFeature(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getSystemRemoteAccessFeature:getSystemRemoteAccessFeature", {
+        "featureProfileId": args.featureProfileId,
+        "id": args.id,
+    }, opts);
 }
 
 /**

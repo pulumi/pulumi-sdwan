@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getZoneBasedFirewallPolicyDefinition(args: GetZoneBasedFirewallPolicyDefinitionArgs, opts?: pulumi.InvokeOptions): Promise<GetZoneBasedFirewallPolicyDefinitionResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getZoneBasedFirewallPolicyDefinition:getZoneBasedFirewallPolicyDefinition", {
         "id": args.id,
@@ -84,7 +83,10 @@ export interface GetZoneBasedFirewallPolicyDefinitionResult {
  * ```
  */
 export function getZoneBasedFirewallPolicyDefinitionOutput(args: GetZoneBasedFirewallPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetZoneBasedFirewallPolicyDefinitionResult> {
-    return pulumi.output(args).apply((a: any) => getZoneBasedFirewallPolicyDefinition(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getZoneBasedFirewallPolicyDefinition:getZoneBasedFirewallPolicyDefinition", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getCiscoSecurityFeatureTemplate(args?: GetCiscoSecurityFeatureTemplateArgs, opts?: pulumi.InvokeOptions): Promise<GetCiscoSecurityFeatureTemplateResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getCiscoSecurityFeatureTemplate:getCiscoSecurityFeatureTemplate", {
         "id": args.id,
@@ -144,7 +143,12 @@ export interface GetCiscoSecurityFeatureTemplateResult {
  * ```
  */
 export function getCiscoSecurityFeatureTemplateOutput(args?: GetCiscoSecurityFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCiscoSecurityFeatureTemplateResult> {
-    return pulumi.output(args).apply((a: any) => getCiscoSecurityFeatureTemplate(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getCiscoSecurityFeatureTemplate:getCiscoSecurityFeatureTemplate", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**

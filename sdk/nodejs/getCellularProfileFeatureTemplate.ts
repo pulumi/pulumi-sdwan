@@ -20,7 +20,6 @@ import * as utilities from "./utilities";
  */
 export function getCellularProfileFeatureTemplate(args?: GetCellularProfileFeatureTemplateArgs, opts?: pulumi.InvokeOptions): Promise<GetCellularProfileFeatureTemplateResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getCellularProfileFeatureTemplate:getCellularProfileFeatureTemplate", {
         "id": args.id,
@@ -174,7 +173,12 @@ export interface GetCellularProfileFeatureTemplateResult {
  * ```
  */
 export function getCellularProfileFeatureTemplateOutput(args?: GetCellularProfileFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCellularProfileFeatureTemplateResult> {
-    return pulumi.output(args).apply((a: any) => getCellularProfileFeatureTemplate(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getCellularProfileFeatureTemplate:getCellularProfileFeatureTemplate", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**

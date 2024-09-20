@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getSecurityAppHostingFeatureTemplate(args?: GetSecurityAppHostingFeatureTemplateArgs, opts?: pulumi.InvokeOptions): Promise<GetSecurityAppHostingFeatureTemplateResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getSecurityAppHostingFeatureTemplate:getSecurityAppHostingFeatureTemplate", {
         "id": args.id,
@@ -92,7 +91,12 @@ export interface GetSecurityAppHostingFeatureTemplateResult {
  * ```
  */
 export function getSecurityAppHostingFeatureTemplateOutput(args?: GetSecurityAppHostingFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSecurityAppHostingFeatureTemplateResult> {
-    return pulumi.output(args).apply((a: any) => getSecurityAppHostingFeatureTemplate(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getSecurityAppHostingFeatureTemplate:getSecurityAppHostingFeatureTemplate", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**

@@ -20,7 +20,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getSystemOmpFeature(args: GetSystemOmpFeatureArgs, opts?: pulumi.InvokeOptions): Promise<GetSystemOmpFeatureResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getSystemOmpFeature:getSystemOmpFeature", {
         "featureProfileId": args.featureProfileId,
@@ -315,7 +314,11 @@ export interface GetSystemOmpFeatureResult {
  * ```
  */
 export function getSystemOmpFeatureOutput(args: GetSystemOmpFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSystemOmpFeatureResult> {
-    return pulumi.output(args).apply((a: any) => getSystemOmpFeature(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getSystemOmpFeature:getSystemOmpFeature", {
+        "featureProfileId": args.featureProfileId,
+        "id": args.id,
+    }, opts);
 }
 
 /**

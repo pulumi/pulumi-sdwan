@@ -77,14 +77,20 @@ type LookupTransportRoutePolicyFeatureResult struct {
 
 func LookupTransportRoutePolicyFeatureOutput(ctx *pulumi.Context, args LookupTransportRoutePolicyFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupTransportRoutePolicyFeatureResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupTransportRoutePolicyFeatureResult, error) {
+		ApplyT(func(v interface{}) (LookupTransportRoutePolicyFeatureResultOutput, error) {
 			args := v.(LookupTransportRoutePolicyFeatureArgs)
-			r, err := LookupTransportRoutePolicyFeature(ctx, &args, opts...)
-			var s LookupTransportRoutePolicyFeatureResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupTransportRoutePolicyFeatureResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getTransportRoutePolicyFeature:getTransportRoutePolicyFeature", args, &rv, "", opts...)
+			if err != nil {
+				return LookupTransportRoutePolicyFeatureResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupTransportRoutePolicyFeatureResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupTransportRoutePolicyFeatureResultOutput), nil
+			}
+			return output, nil
 		}).(LookupTransportRoutePolicyFeatureResultOutput)
 }
 

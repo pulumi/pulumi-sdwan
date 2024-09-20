@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getPolicyObjectExtendedCommunityList(args: GetPolicyObjectExtendedCommunityListArgs, opts?: pulumi.InvokeOptions): Promise<GetPolicyObjectExtendedCommunityListResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getPolicyObjectExtendedCommunityList:getPolicyObjectExtendedCommunityList", {
         "featureProfileId": args.featureProfileId,
@@ -89,7 +88,11 @@ export interface GetPolicyObjectExtendedCommunityListResult {
  * ```
  */
 export function getPolicyObjectExtendedCommunityListOutput(args: GetPolicyObjectExtendedCommunityListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetPolicyObjectExtendedCommunityListResult> {
-    return pulumi.output(args).apply((a: any) => getPolicyObjectExtendedCommunityList(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getPolicyObjectExtendedCommunityList:getPolicyObjectExtendedCommunityList", {
+        "featureProfileId": args.featureProfileId,
+        "id": args.id,
+    }, opts);
 }
 
 /**

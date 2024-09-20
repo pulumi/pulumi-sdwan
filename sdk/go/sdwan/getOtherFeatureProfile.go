@@ -66,14 +66,20 @@ type LookupOtherFeatureProfileResult struct {
 
 func LookupOtherFeatureProfileOutput(ctx *pulumi.Context, args LookupOtherFeatureProfileOutputArgs, opts ...pulumi.InvokeOption) LookupOtherFeatureProfileResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupOtherFeatureProfileResult, error) {
+		ApplyT(func(v interface{}) (LookupOtherFeatureProfileResultOutput, error) {
 			args := v.(LookupOtherFeatureProfileArgs)
-			r, err := LookupOtherFeatureProfile(ctx, &args, opts...)
-			var s LookupOtherFeatureProfileResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupOtherFeatureProfileResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getOtherFeatureProfile:getOtherFeatureProfile", args, &rv, "", opts...)
+			if err != nil {
+				return LookupOtherFeatureProfileResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupOtherFeatureProfileResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupOtherFeatureProfileResultOutput), nil
+			}
+			return output, nil
 		}).(LookupOtherFeatureProfileResultOutput)
 }
 

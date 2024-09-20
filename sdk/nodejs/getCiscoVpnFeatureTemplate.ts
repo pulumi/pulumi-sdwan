@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getCiscoVpnFeatureTemplate(args?: GetCiscoVpnFeatureTemplateArgs, opts?: pulumi.InvokeOptions): Promise<GetCiscoVpnFeatureTemplateResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getCiscoVpnFeatureTemplate:getCiscoVpnFeatureTemplate", {
         "id": args.id,
@@ -208,7 +207,12 @@ export interface GetCiscoVpnFeatureTemplateResult {
  * ```
  */
 export function getCiscoVpnFeatureTemplateOutput(args?: GetCiscoVpnFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCiscoVpnFeatureTemplateResult> {
-    return pulumi.output(args).apply((a: any) => getCiscoVpnFeatureTemplate(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getCiscoVpnFeatureTemplate:getCiscoVpnFeatureTemplate", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**

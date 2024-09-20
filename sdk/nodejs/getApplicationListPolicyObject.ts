@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getApplicationListPolicyObject(args: GetApplicationListPolicyObjectArgs, opts?: pulumi.InvokeOptions): Promise<GetApplicationListPolicyObjectResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getApplicationListPolicyObject:getApplicationListPolicyObject", {
         "id": args.id,
@@ -74,7 +73,10 @@ export interface GetApplicationListPolicyObjectResult {
  * ```
  */
 export function getApplicationListPolicyObjectOutput(args: GetApplicationListPolicyObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplicationListPolicyObjectResult> {
-    return pulumi.output(args).apply((a: any) => getApplicationListPolicyObject(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getApplicationListPolicyObject:getApplicationListPolicyObject", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getCiscoOspfFeatureTemplate(args?: GetCiscoOspfFeatureTemplateArgs, opts?: pulumi.InvokeOptions): Promise<GetCiscoOspfFeatureTemplateResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getCiscoOspfFeatureTemplate:getCiscoOspfFeatureTemplate", {
         "id": args.id,
@@ -204,7 +203,12 @@ export interface GetCiscoOspfFeatureTemplateResult {
  * ```
  */
 export function getCiscoOspfFeatureTemplateOutput(args?: GetCiscoOspfFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCiscoOspfFeatureTemplateResult> {
-    return pulumi.output(args).apply((a: any) => getCiscoOspfFeatureTemplate(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getCiscoOspfFeatureTemplate:getCiscoOspfFeatureTemplate", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**

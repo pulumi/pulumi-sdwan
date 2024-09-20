@@ -19,7 +19,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getObjectGroupPolicyDefinition(args: GetObjectGroupPolicyDefinitionArgs, opts?: pulumi.InvokeOptions): Promise<GetObjectGroupPolicyDefinitionResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getObjectGroupPolicyDefinition:getObjectGroupPolicyDefinition", {
         "id": args.id,
@@ -124,7 +123,10 @@ export interface GetObjectGroupPolicyDefinitionResult {
  * ```
  */
 export function getObjectGroupPolicyDefinitionOutput(args: GetObjectGroupPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetObjectGroupPolicyDefinitionResult> {
-    return pulumi.output(args).apply((a: any) => getObjectGroupPolicyDefinition(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getObjectGroupPolicyDefinition:getObjectGroupPolicyDefinition", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

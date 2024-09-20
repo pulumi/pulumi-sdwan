@@ -68,14 +68,20 @@ type LookupRegionListPolicyObjectResult struct {
 
 func LookupRegionListPolicyObjectOutput(ctx *pulumi.Context, args LookupRegionListPolicyObjectOutputArgs, opts ...pulumi.InvokeOption) LookupRegionListPolicyObjectResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupRegionListPolicyObjectResult, error) {
+		ApplyT(func(v interface{}) (LookupRegionListPolicyObjectResultOutput, error) {
 			args := v.(LookupRegionListPolicyObjectArgs)
-			r, err := LookupRegionListPolicyObject(ctx, &args, opts...)
-			var s LookupRegionListPolicyObjectResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupRegionListPolicyObjectResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getRegionListPolicyObject:getRegionListPolicyObject", args, &rv, "", opts...)
+			if err != nil {
+				return LookupRegionListPolicyObjectResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupRegionListPolicyObjectResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupRegionListPolicyObjectResultOutput), nil
+			}
+			return output, nil
 		}).(LookupRegionListPolicyObjectResultOutput)
 }
 

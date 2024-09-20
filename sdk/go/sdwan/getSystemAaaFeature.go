@@ -101,14 +101,20 @@ type LookupSystemAaaFeatureResult struct {
 
 func LookupSystemAaaFeatureOutput(ctx *pulumi.Context, args LookupSystemAaaFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupSystemAaaFeatureResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupSystemAaaFeatureResult, error) {
+		ApplyT(func(v interface{}) (LookupSystemAaaFeatureResultOutput, error) {
 			args := v.(LookupSystemAaaFeatureArgs)
-			r, err := LookupSystemAaaFeature(ctx, &args, opts...)
-			var s LookupSystemAaaFeatureResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupSystemAaaFeatureResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getSystemAaaFeature:getSystemAaaFeature", args, &rv, "", opts...)
+			if err != nil {
+				return LookupSystemAaaFeatureResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupSystemAaaFeatureResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupSystemAaaFeatureResultOutput), nil
+			}
+			return output, nil
 		}).(LookupSystemAaaFeatureResultOutput)
 }
 

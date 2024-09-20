@@ -75,14 +75,20 @@ type LookupPolicyObjectColorListResult struct {
 
 func LookupPolicyObjectColorListOutput(ctx *pulumi.Context, args LookupPolicyObjectColorListOutputArgs, opts ...pulumi.InvokeOption) LookupPolicyObjectColorListResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupPolicyObjectColorListResult, error) {
+		ApplyT(func(v interface{}) (LookupPolicyObjectColorListResultOutput, error) {
 			args := v.(LookupPolicyObjectColorListArgs)
-			r, err := LookupPolicyObjectColorList(ctx, &args, opts...)
-			var s LookupPolicyObjectColorListResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupPolicyObjectColorListResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getPolicyObjectColorList:getPolicyObjectColorList", args, &rv, "", opts...)
+			if err != nil {
+				return LookupPolicyObjectColorListResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupPolicyObjectColorListResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupPolicyObjectColorListResultOutput), nil
+			}
+			return output, nil
 		}).(LookupPolicyObjectColorListResultOutput)
 }
 

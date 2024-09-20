@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getRoutePolicyDefinition(args: GetRoutePolicyDefinitionArgs, opts?: pulumi.InvokeOptions): Promise<GetRoutePolicyDefinitionResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getRoutePolicyDefinition:getRoutePolicyDefinition", {
         "id": args.id,
@@ -86,7 +85,10 @@ export interface GetRoutePolicyDefinitionResult {
  * ```
  */
 export function getRoutePolicyDefinitionOutput(args: GetRoutePolicyDefinitionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetRoutePolicyDefinitionResult> {
-    return pulumi.output(args).apply((a: any) => getRoutePolicyDefinition(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getRoutePolicyDefinition:getRoutePolicyDefinition", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

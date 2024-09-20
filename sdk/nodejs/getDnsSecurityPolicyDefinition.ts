@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getDnsSecurityPolicyDefinition(args: GetDnsSecurityPolicyDefinitionArgs, opts?: pulumi.InvokeOptions): Promise<GetDnsSecurityPolicyDefinitionResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getDnsSecurityPolicyDefinition:getDnsSecurityPolicyDefinition", {
         "id": args.id,
@@ -114,7 +113,10 @@ export interface GetDnsSecurityPolicyDefinitionResult {
  * ```
  */
 export function getDnsSecurityPolicyDefinitionOutput(args: GetDnsSecurityPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDnsSecurityPolicyDefinitionResult> {
-    return pulumi.output(args).apply((a: any) => getDnsSecurityPolicyDefinition(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getDnsSecurityPolicyDefinition:getDnsSecurityPolicyDefinition", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

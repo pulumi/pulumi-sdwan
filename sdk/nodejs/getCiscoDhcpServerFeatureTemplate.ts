@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getCiscoDhcpServerFeatureTemplate(args?: GetCiscoDhcpServerFeatureTemplateArgs, opts?: pulumi.InvokeOptions): Promise<GetCiscoDhcpServerFeatureTemplateResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getCiscoDhcpServerFeatureTemplate:getCiscoDhcpServerFeatureTemplate", {
         "id": args.id,
@@ -160,7 +159,12 @@ export interface GetCiscoDhcpServerFeatureTemplateResult {
  * ```
  */
 export function getCiscoDhcpServerFeatureTemplateOutput(args?: GetCiscoDhcpServerFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCiscoDhcpServerFeatureTemplateResult> {
-    return pulumi.output(args).apply((a: any) => getCiscoDhcpServerFeatureTemplate(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getCiscoDhcpServerFeatureTemplate:getCiscoDhcpServerFeatureTemplate", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**

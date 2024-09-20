@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getSystemLoggingFeature(args: GetSystemLoggingFeatureArgs, opts?: pulumi.InvokeOptions): Promise<GetSystemLoggingFeatureResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getSystemLoggingFeature:getSystemLoggingFeature", {
         "featureProfileId": args.featureProfileId,
@@ -121,7 +120,11 @@ export interface GetSystemLoggingFeatureResult {
  * ```
  */
 export function getSystemLoggingFeatureOutput(args: GetSystemLoggingFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSystemLoggingFeatureResult> {
-    return pulumi.output(args).apply((a: any) => getSystemLoggingFeature(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getSystemLoggingFeature:getSystemLoggingFeature", {
+        "featureProfileId": args.featureProfileId,
+        "id": args.id,
+    }, opts);
 }
 
 /**

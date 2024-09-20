@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getApplicationPriorityQosPolicy(args: GetApplicationPriorityQosPolicyArgs, opts?: pulumi.InvokeOptions): Promise<GetApplicationPriorityQosPolicyResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getApplicationPriorityQosPolicy:getApplicationPriorityQosPolicy", {
         "featureProfileId": args.featureProfileId,
@@ -97,7 +96,11 @@ export interface GetApplicationPriorityQosPolicyResult {
  * ```
  */
 export function getApplicationPriorityQosPolicyOutput(args: GetApplicationPriorityQosPolicyOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplicationPriorityQosPolicyResult> {
-    return pulumi.output(args).apply((a: any) => getApplicationPriorityQosPolicy(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getApplicationPriorityQosPolicy:getApplicationPriorityQosPolicy", {
+        "featureProfileId": args.featureProfileId,
+        "id": args.id,
+    }, opts);
 }
 
 /**

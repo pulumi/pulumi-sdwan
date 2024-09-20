@@ -95,14 +95,20 @@ type LookupSystemSnmpFeatureResult struct {
 
 func LookupSystemSnmpFeatureOutput(ctx *pulumi.Context, args LookupSystemSnmpFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupSystemSnmpFeatureResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupSystemSnmpFeatureResult, error) {
+		ApplyT(func(v interface{}) (LookupSystemSnmpFeatureResultOutput, error) {
 			args := v.(LookupSystemSnmpFeatureArgs)
-			r, err := LookupSystemSnmpFeature(ctx, &args, opts...)
-			var s LookupSystemSnmpFeatureResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupSystemSnmpFeatureResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getSystemSnmpFeature:getSystemSnmpFeature", args, &rv, "", opts...)
+			if err != nil {
+				return LookupSystemSnmpFeatureResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupSystemSnmpFeatureResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupSystemSnmpFeatureResultOutput), nil
+			}
+			return output, nil
 		}).(LookupSystemSnmpFeatureResultOutput)
 }
 

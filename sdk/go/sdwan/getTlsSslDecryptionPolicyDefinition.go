@@ -102,14 +102,20 @@ type LookupTlsSslDecryptionPolicyDefinitionResult struct {
 
 func LookupTlsSslDecryptionPolicyDefinitionOutput(ctx *pulumi.Context, args LookupTlsSslDecryptionPolicyDefinitionOutputArgs, opts ...pulumi.InvokeOption) LookupTlsSslDecryptionPolicyDefinitionResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupTlsSslDecryptionPolicyDefinitionResult, error) {
+		ApplyT(func(v interface{}) (LookupTlsSslDecryptionPolicyDefinitionResultOutput, error) {
 			args := v.(LookupTlsSslDecryptionPolicyDefinitionArgs)
-			r, err := LookupTlsSslDecryptionPolicyDefinition(ctx, &args, opts...)
-			var s LookupTlsSslDecryptionPolicyDefinitionResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupTlsSslDecryptionPolicyDefinitionResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getTlsSslDecryptionPolicyDefinition:getTlsSslDecryptionPolicyDefinition", args, &rv, "", opts...)
+			if err != nil {
+				return LookupTlsSslDecryptionPolicyDefinitionResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupTlsSslDecryptionPolicyDefinitionResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupTlsSslDecryptionPolicyDefinitionResultOutput), nil
+			}
+			return output, nil
 		}).(LookupTlsSslDecryptionPolicyDefinitionResultOutput)
 }
 

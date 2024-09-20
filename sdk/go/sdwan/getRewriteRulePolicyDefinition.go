@@ -72,14 +72,20 @@ type LookupRewriteRulePolicyDefinitionResult struct {
 
 func LookupRewriteRulePolicyDefinitionOutput(ctx *pulumi.Context, args LookupRewriteRulePolicyDefinitionOutputArgs, opts ...pulumi.InvokeOption) LookupRewriteRulePolicyDefinitionResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupRewriteRulePolicyDefinitionResult, error) {
+		ApplyT(func(v interface{}) (LookupRewriteRulePolicyDefinitionResultOutput, error) {
 			args := v.(LookupRewriteRulePolicyDefinitionArgs)
-			r, err := LookupRewriteRulePolicyDefinition(ctx, &args, opts...)
-			var s LookupRewriteRulePolicyDefinitionResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupRewriteRulePolicyDefinitionResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getRewriteRulePolicyDefinition:getRewriteRulePolicyDefinition", args, &rv, "", opts...)
+			if err != nil {
+				return LookupRewriteRulePolicyDefinitionResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupRewriteRulePolicyDefinitionResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupRewriteRulePolicyDefinitionResultOutput), nil
+			}
+			return output, nil
 		}).(LookupRewriteRulePolicyDefinitionResultOutput)
 }
 

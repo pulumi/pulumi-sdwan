@@ -77,14 +77,20 @@ type LookupSystemFlexiblePortSpeedFeatureResult struct {
 
 func LookupSystemFlexiblePortSpeedFeatureOutput(ctx *pulumi.Context, args LookupSystemFlexiblePortSpeedFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupSystemFlexiblePortSpeedFeatureResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupSystemFlexiblePortSpeedFeatureResult, error) {
+		ApplyT(func(v interface{}) (LookupSystemFlexiblePortSpeedFeatureResultOutput, error) {
 			args := v.(LookupSystemFlexiblePortSpeedFeatureArgs)
-			r, err := LookupSystemFlexiblePortSpeedFeature(ctx, &args, opts...)
-			var s LookupSystemFlexiblePortSpeedFeatureResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupSystemFlexiblePortSpeedFeatureResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getSystemFlexiblePortSpeedFeature:getSystemFlexiblePortSpeedFeature", args, &rv, "", opts...)
+			if err != nil {
+				return LookupSystemFlexiblePortSpeedFeatureResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupSystemFlexiblePortSpeedFeatureResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupSystemFlexiblePortSpeedFeatureResultOutput), nil
+			}
+			return output, nil
 		}).(LookupSystemFlexiblePortSpeedFeatureResultOutput)
 }
 

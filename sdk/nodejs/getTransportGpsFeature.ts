@@ -20,7 +20,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getTransportGpsFeature(args: GetTransportGpsFeatureArgs, opts?: pulumi.InvokeOptions): Promise<GetTransportGpsFeatureResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getTransportGpsFeature:getTransportGpsFeature", {
         "featureProfileId": args.featureProfileId,
@@ -131,7 +130,11 @@ export interface GetTransportGpsFeatureResult {
  * ```
  */
 export function getTransportGpsFeatureOutput(args: GetTransportGpsFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTransportGpsFeatureResult> {
-    return pulumi.output(args).apply((a: any) => getTransportGpsFeature(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getTransportGpsFeature:getTransportGpsFeature", {
+        "featureProfileId": args.featureProfileId,
+        "id": args.id,
+    }, opts);
 }
 
 /**

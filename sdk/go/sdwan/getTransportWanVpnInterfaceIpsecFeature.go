@@ -190,14 +190,20 @@ type LookupTransportWanVpnInterfaceIpsecFeatureResult struct {
 
 func LookupTransportWanVpnInterfaceIpsecFeatureOutput(ctx *pulumi.Context, args LookupTransportWanVpnInterfaceIpsecFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupTransportWanVpnInterfaceIpsecFeatureResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupTransportWanVpnInterfaceIpsecFeatureResult, error) {
+		ApplyT(func(v interface{}) (LookupTransportWanVpnInterfaceIpsecFeatureResultOutput, error) {
 			args := v.(LookupTransportWanVpnInterfaceIpsecFeatureArgs)
-			r, err := LookupTransportWanVpnInterfaceIpsecFeature(ctx, &args, opts...)
-			var s LookupTransportWanVpnInterfaceIpsecFeatureResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupTransportWanVpnInterfaceIpsecFeatureResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getTransportWanVpnInterfaceIpsecFeature:getTransportWanVpnInterfaceIpsecFeature", args, &rv, "", opts...)
+			if err != nil {
+				return LookupTransportWanVpnInterfaceIpsecFeatureResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupTransportWanVpnInterfaceIpsecFeatureResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupTransportWanVpnInterfaceIpsecFeatureResultOutput), nil
+			}
+			return output, nil
 		}).(LookupTransportWanVpnInterfaceIpsecFeatureResultOutput)
 }
 

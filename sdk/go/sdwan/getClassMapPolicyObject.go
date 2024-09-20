@@ -68,14 +68,20 @@ type LookupClassMapPolicyObjectResult struct {
 
 func LookupClassMapPolicyObjectOutput(ctx *pulumi.Context, args LookupClassMapPolicyObjectOutputArgs, opts ...pulumi.InvokeOption) LookupClassMapPolicyObjectResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupClassMapPolicyObjectResult, error) {
+		ApplyT(func(v interface{}) (LookupClassMapPolicyObjectResultOutput, error) {
 			args := v.(LookupClassMapPolicyObjectArgs)
-			r, err := LookupClassMapPolicyObject(ctx, &args, opts...)
-			var s LookupClassMapPolicyObjectResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupClassMapPolicyObjectResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getClassMapPolicyObject:getClassMapPolicyObject", args, &rv, "", opts...)
+			if err != nil {
+				return LookupClassMapPolicyObjectResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupClassMapPolicyObjectResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupClassMapPolicyObjectResultOutput), nil
+			}
+			return output, nil
 		}).(LookupClassMapPolicyObjectResultOutput)
 }
 

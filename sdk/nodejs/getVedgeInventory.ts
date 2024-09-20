@@ -19,7 +19,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getVedgeInventory(opts?: pulumi.InvokeOptions): Promise<GetVedgeInventoryResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getVedgeInventory:getVedgeInventory", {
     }, opts);
@@ -51,5 +50,7 @@ export interface GetVedgeInventoryResult {
  * ```
  */
 export function getVedgeInventoryOutput(opts?: pulumi.InvokeOptions): pulumi.Output<GetVedgeInventoryResult> {
-    return pulumi.output(getVedgeInventory(opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getVedgeInventory:getVedgeInventory", {
+    }, opts);
 }

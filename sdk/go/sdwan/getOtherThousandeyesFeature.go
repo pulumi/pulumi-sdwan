@@ -75,14 +75,20 @@ type LookupOtherThousandeyesFeatureResult struct {
 
 func LookupOtherThousandeyesFeatureOutput(ctx *pulumi.Context, args LookupOtherThousandeyesFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupOtherThousandeyesFeatureResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupOtherThousandeyesFeatureResult, error) {
+		ApplyT(func(v interface{}) (LookupOtherThousandeyesFeatureResultOutput, error) {
 			args := v.(LookupOtherThousandeyesFeatureArgs)
-			r, err := LookupOtherThousandeyesFeature(ctx, &args, opts...)
-			var s LookupOtherThousandeyesFeatureResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupOtherThousandeyesFeatureResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getOtherThousandeyesFeature:getOtherThousandeyesFeature", args, &rv, "", opts...)
+			if err != nil {
+				return LookupOtherThousandeyesFeatureResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupOtherThousandeyesFeatureResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupOtherThousandeyesFeatureResultOutput), nil
+			}
+			return output, nil
 		}).(LookupOtherThousandeyesFeatureResultOutput)
 }
 

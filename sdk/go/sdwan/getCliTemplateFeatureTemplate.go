@@ -76,14 +76,20 @@ type LookupCliTemplateFeatureTemplateResult struct {
 
 func LookupCliTemplateFeatureTemplateOutput(ctx *pulumi.Context, args LookupCliTemplateFeatureTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupCliTemplateFeatureTemplateResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupCliTemplateFeatureTemplateResult, error) {
+		ApplyT(func(v interface{}) (LookupCliTemplateFeatureTemplateResultOutput, error) {
 			args := v.(LookupCliTemplateFeatureTemplateArgs)
-			r, err := LookupCliTemplateFeatureTemplate(ctx, &args, opts...)
-			var s LookupCliTemplateFeatureTemplateResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupCliTemplateFeatureTemplateResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getCliTemplateFeatureTemplate:getCliTemplateFeatureTemplate", args, &rv, "", opts...)
+			if err != nil {
+				return LookupCliTemplateFeatureTemplateResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupCliTemplateFeatureTemplateResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupCliTemplateFeatureTemplateResultOutput), nil
+			}
+			return output, nil
 		}).(LookupCliTemplateFeatureTemplateResultOutput)
 }
 

@@ -88,14 +88,20 @@ type LookupSwitchportFeatureTemplateResult struct {
 
 func LookupSwitchportFeatureTemplateOutput(ctx *pulumi.Context, args LookupSwitchportFeatureTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupSwitchportFeatureTemplateResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupSwitchportFeatureTemplateResult, error) {
+		ApplyT(func(v interface{}) (LookupSwitchportFeatureTemplateResultOutput, error) {
 			args := v.(LookupSwitchportFeatureTemplateArgs)
-			r, err := LookupSwitchportFeatureTemplate(ctx, &args, opts...)
-			var s LookupSwitchportFeatureTemplateResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupSwitchportFeatureTemplateResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getSwitchportFeatureTemplate:getSwitchportFeatureTemplate", args, &rv, "", opts...)
+			if err != nil {
+				return LookupSwitchportFeatureTemplateResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupSwitchportFeatureTemplateResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupSwitchportFeatureTemplateResultOutput), nil
+			}
+			return output, nil
 		}).(LookupSwitchportFeatureTemplateResultOutput)
 }
 

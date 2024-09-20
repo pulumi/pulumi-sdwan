@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getTransportRoutingBgpFeature(args: GetTransportRoutingBgpFeatureArgs, opts?: pulumi.InvokeOptions): Promise<GetTransportRoutingBgpFeatureResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getTransportRoutingBgpFeature:getTransportRoutingBgpFeature", {
         "featureProfileId": args.featureProfileId,
@@ -283,7 +282,11 @@ export interface GetTransportRoutingBgpFeatureResult {
  * ```
  */
 export function getTransportRoutingBgpFeatureOutput(args: GetTransportRoutingBgpFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTransportRoutingBgpFeatureResult> {
-    return pulumi.output(args).apply((a: any) => getTransportRoutingBgpFeature(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getTransportRoutingBgpFeature:getTransportRoutingBgpFeature", {
+        "featureProfileId": args.featureProfileId,
+        "id": args.id,
+    }, opts);
 }
 
 /**

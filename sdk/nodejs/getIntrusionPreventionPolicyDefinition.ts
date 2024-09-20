@@ -19,7 +19,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getIntrusionPreventionPolicyDefinition(args: GetIntrusionPreventionPolicyDefinitionArgs, opts?: pulumi.InvokeOptions): Promise<GetIntrusionPreventionPolicyDefinitionResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getIntrusionPreventionPolicyDefinition:getIntrusionPreventionPolicyDefinition", {
         "id": args.id,
@@ -100,7 +99,10 @@ export interface GetIntrusionPreventionPolicyDefinitionResult {
  * ```
  */
 export function getIntrusionPreventionPolicyDefinitionOutput(args: GetIntrusionPreventionPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetIntrusionPreventionPolicyDefinitionResult> {
-    return pulumi.output(args).apply((a: any) => getIntrusionPreventionPolicyDefinition(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getIntrusionPreventionPolicyDefinition:getIntrusionPreventionPolicyDefinition", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

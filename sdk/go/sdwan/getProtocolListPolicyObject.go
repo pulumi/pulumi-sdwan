@@ -68,14 +68,20 @@ type LookupProtocolListPolicyObjectResult struct {
 
 func LookupProtocolListPolicyObjectOutput(ctx *pulumi.Context, args LookupProtocolListPolicyObjectOutputArgs, opts ...pulumi.InvokeOption) LookupProtocolListPolicyObjectResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupProtocolListPolicyObjectResult, error) {
+		ApplyT(func(v interface{}) (LookupProtocolListPolicyObjectResultOutput, error) {
 			args := v.(LookupProtocolListPolicyObjectArgs)
-			r, err := LookupProtocolListPolicyObject(ctx, &args, opts...)
-			var s LookupProtocolListPolicyObjectResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupProtocolListPolicyObjectResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getProtocolListPolicyObject:getProtocolListPolicyObject", args, &rv, "", opts...)
+			if err != nil {
+				return LookupProtocolListPolicyObjectResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupProtocolListPolicyObjectResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupProtocolListPolicyObjectResultOutput), nil
+			}
+			return output, nil
 		}).(LookupProtocolListPolicyObjectResultOutput)
 }
 

@@ -19,7 +19,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getMirrorPolicyObject(args: GetMirrorPolicyObjectArgs, opts?: pulumi.InvokeOptions): Promise<GetMirrorPolicyObjectResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getMirrorPolicyObject:getMirrorPolicyObject", {
         "id": args.id,
@@ -76,7 +75,10 @@ export interface GetMirrorPolicyObjectResult {
  * ```
  */
 export function getMirrorPolicyObjectOutput(args: GetMirrorPolicyObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetMirrorPolicyObjectResult> {
-    return pulumi.output(args).apply((a: any) => getMirrorPolicyObject(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getMirrorPolicyObject:getMirrorPolicyObject", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getServiceLanVpnFeature(args: GetServiceLanVpnFeatureArgs, opts?: pulumi.InvokeOptions): Promise<GetServiceLanVpnFeatureResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getServiceLanVpnFeature:getServiceLanVpnFeature", {
         "featureProfileId": args.featureProfileId,
@@ -218,7 +217,11 @@ export interface GetServiceLanVpnFeatureResult {
  * ```
  */
 export function getServiceLanVpnFeatureOutput(args: GetServiceLanVpnFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetServiceLanVpnFeatureResult> {
-    return pulumi.output(args).apply((a: any) => getServiceLanVpnFeature(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getServiceLanVpnFeature:getServiceLanVpnFeature", {
+        "featureProfileId": args.featureProfileId,
+        "id": args.id,
+    }, opts);
 }
 
 /**

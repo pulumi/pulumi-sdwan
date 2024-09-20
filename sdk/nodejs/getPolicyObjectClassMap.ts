@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getPolicyObjectClassMap(args: GetPolicyObjectClassMapArgs, opts?: pulumi.InvokeOptions): Promise<GetPolicyObjectClassMapResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getPolicyObjectClassMap:getPolicyObjectClassMap", {
         "featureProfileId": args.featureProfileId,
@@ -89,7 +88,11 @@ export interface GetPolicyObjectClassMapResult {
  * ```
  */
 export function getPolicyObjectClassMapOutput(args: GetPolicyObjectClassMapOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetPolicyObjectClassMapResult> {
-    return pulumi.output(args).apply((a: any) => getPolicyObjectClassMap(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getPolicyObjectClassMap:getPolicyObjectClassMap", {
+        "featureProfileId": args.featureProfileId,
+        "id": args.id,
+    }, opts);
 }
 
 /**

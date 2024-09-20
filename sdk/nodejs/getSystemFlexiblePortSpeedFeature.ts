@@ -20,7 +20,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getSystemFlexiblePortSpeedFeature(args: GetSystemFlexiblePortSpeedFeatureArgs, opts?: pulumi.InvokeOptions): Promise<GetSystemFlexiblePortSpeedFeatureResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getSystemFlexiblePortSpeedFeature:getSystemFlexiblePortSpeedFeature", {
         "featureProfileId": args.featureProfileId,
@@ -91,7 +90,11 @@ export interface GetSystemFlexiblePortSpeedFeatureResult {
  * ```
  */
 export function getSystemFlexiblePortSpeedFeatureOutput(args: GetSystemFlexiblePortSpeedFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSystemFlexiblePortSpeedFeatureResult> {
-    return pulumi.output(args).apply((a: any) => getSystemFlexiblePortSpeedFeature(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getSystemFlexiblePortSpeedFeature:getSystemFlexiblePortSpeedFeature", {
+        "featureProfileId": args.featureProfileId,
+        "id": args.id,
+    }, opts);
 }
 
 /**

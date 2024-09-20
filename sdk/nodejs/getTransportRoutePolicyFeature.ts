@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getTransportRoutePolicyFeature(args: GetTransportRoutePolicyFeatureArgs, opts?: pulumi.InvokeOptions): Promise<GetTransportRoutePolicyFeatureResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getTransportRoutePolicyFeature:getTransportRoutePolicyFeature", {
         "featureProfileId": args.featureProfileId,
@@ -93,7 +92,11 @@ export interface GetTransportRoutePolicyFeatureResult {
  * ```
  */
 export function getTransportRoutePolicyFeatureOutput(args: GetTransportRoutePolicyFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTransportRoutePolicyFeatureResult> {
-    return pulumi.output(args).apply((a: any) => getTransportRoutePolicyFeature(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getTransportRoutePolicyFeature:getTransportRoutePolicyFeature", {
+        "featureProfileId": args.featureProfileId,
+        "id": args.id,
+    }, opts);
 }
 
 /**

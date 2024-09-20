@@ -92,14 +92,20 @@ type LookupUrlFilteringPolicyDefinitionResult struct {
 
 func LookupUrlFilteringPolicyDefinitionOutput(ctx *pulumi.Context, args LookupUrlFilteringPolicyDefinitionOutputArgs, opts ...pulumi.InvokeOption) LookupUrlFilteringPolicyDefinitionResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupUrlFilteringPolicyDefinitionResult, error) {
+		ApplyT(func(v interface{}) (LookupUrlFilteringPolicyDefinitionResultOutput, error) {
 			args := v.(LookupUrlFilteringPolicyDefinitionArgs)
-			r, err := LookupUrlFilteringPolicyDefinition(ctx, &args, opts...)
-			var s LookupUrlFilteringPolicyDefinitionResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupUrlFilteringPolicyDefinitionResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getUrlFilteringPolicyDefinition:getUrlFilteringPolicyDefinition", args, &rv, "", opts...)
+			if err != nil {
+				return LookupUrlFilteringPolicyDefinitionResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupUrlFilteringPolicyDefinitionResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupUrlFilteringPolicyDefinitionResultOutput), nil
+			}
+			return output, nil
 		}).(LookupUrlFilteringPolicyDefinitionResultOutput)
 }
 

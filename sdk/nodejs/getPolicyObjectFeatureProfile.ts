@@ -8,7 +8,6 @@ import * as utilities from "./utilities";
  * This data source can read the Policy Object Feature Profile .
  */
 export function getPolicyObjectFeatureProfile(opts?: pulumi.InvokeOptions): Promise<GetPolicyObjectFeatureProfileResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getPolicyObjectFeatureProfile:getPolicyObjectFeatureProfile", {
     }, opts);
@@ -35,5 +34,7 @@ export interface GetPolicyObjectFeatureProfileResult {
  * This data source can read the Policy Object Feature Profile .
  */
 export function getPolicyObjectFeatureProfileOutput(opts?: pulumi.InvokeOptions): pulumi.Output<GetPolicyObjectFeatureProfileResult> {
-    return pulumi.output(getPolicyObjectFeatureProfile(opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getPolicyObjectFeatureProfile:getPolicyObjectFeatureProfile", {
+    }, opts);
 }

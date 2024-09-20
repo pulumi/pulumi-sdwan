@@ -20,7 +20,6 @@ import * as utilities from "./utilities";
  */
 export function getCiscoBannerFeatureTemplate(args?: GetCiscoBannerFeatureTemplateArgs, opts?: pulumi.InvokeOptions): Promise<GetCiscoBannerFeatureTemplateResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getCiscoBannerFeatureTemplate:getCiscoBannerFeatureTemplate", {
         "id": args.id,
@@ -102,7 +101,12 @@ export interface GetCiscoBannerFeatureTemplateResult {
  * ```
  */
 export function getCiscoBannerFeatureTemplateOutput(args?: GetCiscoBannerFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCiscoBannerFeatureTemplateResult> {
-    return pulumi.output(args).apply((a: any) => getCiscoBannerFeatureTemplate(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getCiscoBannerFeatureTemplate:getCiscoBannerFeatureTemplate", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**

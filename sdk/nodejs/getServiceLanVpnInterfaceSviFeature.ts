@@ -23,7 +23,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getServiceLanVpnInterfaceSviFeature(args: GetServiceLanVpnInterfaceSviFeatureArgs, opts?: pulumi.InvokeOptions): Promise<GetServiceLanVpnInterfaceSviFeatureResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getServiceLanVpnInterfaceSviFeature:getServiceLanVpnInterfaceSviFeature", {
         "featureProfileId": args.featureProfileId,
@@ -232,7 +231,12 @@ export interface GetServiceLanVpnInterfaceSviFeatureResult {
  * ```
  */
 export function getServiceLanVpnInterfaceSviFeatureOutput(args: GetServiceLanVpnInterfaceSviFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetServiceLanVpnInterfaceSviFeatureResult> {
-    return pulumi.output(args).apply((a: any) => getServiceLanVpnInterfaceSviFeature(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getServiceLanVpnInterfaceSviFeature:getServiceLanVpnInterfaceSviFeature", {
+        "featureProfileId": args.featureProfileId,
+        "id": args.id,
+        "serviceLanVpnFeatureId": args.serviceLanVpnFeatureId,
+    }, opts);
 }
 
 /**

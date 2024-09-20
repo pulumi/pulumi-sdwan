@@ -70,14 +70,20 @@ type LookupRuleSetPolicyDefinitionResult struct {
 
 func LookupRuleSetPolicyDefinitionOutput(ctx *pulumi.Context, args LookupRuleSetPolicyDefinitionOutputArgs, opts ...pulumi.InvokeOption) LookupRuleSetPolicyDefinitionResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupRuleSetPolicyDefinitionResult, error) {
+		ApplyT(func(v interface{}) (LookupRuleSetPolicyDefinitionResultOutput, error) {
 			args := v.(LookupRuleSetPolicyDefinitionArgs)
-			r, err := LookupRuleSetPolicyDefinition(ctx, &args, opts...)
-			var s LookupRuleSetPolicyDefinitionResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupRuleSetPolicyDefinitionResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getRuleSetPolicyDefinition:getRuleSetPolicyDefinition", args, &rv, "", opts...)
+			if err != nil {
+				return LookupRuleSetPolicyDefinitionResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupRuleSetPolicyDefinitionResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupRuleSetPolicyDefinitionResultOutput), nil
+			}
+			return output, nil
 		}).(LookupRuleSetPolicyDefinitionResultOutput)
 }
 

@@ -20,7 +20,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getSystemBannerFeature(args: GetSystemBannerFeatureArgs, opts?: pulumi.InvokeOptions): Promise<GetSystemBannerFeatureResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getSystemBannerFeature:getSystemBannerFeature", {
         "featureProfileId": args.featureProfileId,
@@ -93,7 +92,11 @@ export interface GetSystemBannerFeatureResult {
  * ```
  */
 export function getSystemBannerFeatureOutput(args: GetSystemBannerFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSystemBannerFeatureResult> {
-    return pulumi.output(args).apply((a: any) => getSystemBannerFeature(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getSystemBannerFeature:getSystemBannerFeature", {
+        "featureProfileId": args.featureProfileId,
+        "id": args.id,
+    }, opts);
 }
 
 /**

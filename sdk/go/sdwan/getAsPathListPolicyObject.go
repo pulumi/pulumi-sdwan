@@ -68,14 +68,20 @@ type LookupAsPathListPolicyObjectResult struct {
 
 func LookupAsPathListPolicyObjectOutput(ctx *pulumi.Context, args LookupAsPathListPolicyObjectOutputArgs, opts ...pulumi.InvokeOption) LookupAsPathListPolicyObjectResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupAsPathListPolicyObjectResult, error) {
+		ApplyT(func(v interface{}) (LookupAsPathListPolicyObjectResultOutput, error) {
 			args := v.(LookupAsPathListPolicyObjectArgs)
-			r, err := LookupAsPathListPolicyObject(ctx, &args, opts...)
-			var s LookupAsPathListPolicyObjectResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupAsPathListPolicyObjectResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getAsPathListPolicyObject:getAsPathListPolicyObject", args, &rv, "", opts...)
+			if err != nil {
+				return LookupAsPathListPolicyObjectResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupAsPathListPolicyObjectResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupAsPathListPolicyObjectResultOutput), nil
+			}
+			return output, nil
 		}).(LookupAsPathListPolicyObjectResultOutput)
 }
 

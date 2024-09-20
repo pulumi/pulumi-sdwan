@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  */
 export function getCiscoBgpFeatureTemplate(args?: GetCiscoBgpFeatureTemplateArgs, opts?: pulumi.InvokeOptions): Promise<GetCiscoBgpFeatureTemplateResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getCiscoBgpFeatureTemplate:getCiscoBgpFeatureTemplate", {
         "id": args.id,
@@ -232,7 +231,12 @@ export interface GetCiscoBgpFeatureTemplateResult {
  * ```
  */
 export function getCiscoBgpFeatureTemplateOutput(args?: GetCiscoBgpFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCiscoBgpFeatureTemplateResult> {
-    return pulumi.output(args).apply((a: any) => getCiscoBgpFeatureTemplate(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getCiscoBgpFeatureTemplate:getCiscoBgpFeatureTemplate", {
+        "id": args.id,
+        "name": args.name,
+    }, opts);
 }
 
 /**

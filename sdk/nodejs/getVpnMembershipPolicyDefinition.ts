@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getVpnMembershipPolicyDefinition(args: GetVpnMembershipPolicyDefinitionArgs, opts?: pulumi.InvokeOptions): Promise<GetVpnMembershipPolicyDefinitionResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getVpnMembershipPolicyDefinition:getVpnMembershipPolicyDefinition", {
         "id": args.id,
@@ -82,7 +81,10 @@ export interface GetVpnMembershipPolicyDefinitionResult {
  * ```
  */
 export function getVpnMembershipPolicyDefinitionOutput(args: GetVpnMembershipPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetVpnMembershipPolicyDefinitionResult> {
-    return pulumi.output(args).apply((a: any) => getVpnMembershipPolicyDefinition(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getVpnMembershipPolicyDefinition:getVpnMembershipPolicyDefinition", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

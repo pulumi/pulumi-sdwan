@@ -21,7 +21,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getQosMapPolicyDefinition(args: GetQosMapPolicyDefinitionArgs, opts?: pulumi.InvokeOptions): Promise<GetQosMapPolicyDefinitionResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getQosMapPolicyDefinition:getQosMapPolicyDefinition", {
         "id": args.id,
@@ -82,7 +81,10 @@ export interface GetQosMapPolicyDefinitionResult {
  * ```
  */
 export function getQosMapPolicyDefinitionOutput(args: GetQosMapPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetQosMapPolicyDefinitionResult> {
-    return pulumi.output(args).apply((a: any) => getQosMapPolicyDefinition(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getQosMapPolicyDefinition:getQosMapPolicyDefinition", {
+        "id": args.id,
+    }, opts);
 }
 
 /**

@@ -22,7 +22,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getOtherThousandeyesFeature(args: GetOtherThousandeyesFeatureArgs, opts?: pulumi.InvokeOptions): Promise<GetOtherThousandeyesFeatureResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getOtherThousandeyesFeature:getOtherThousandeyesFeature", {
         "featureProfileId": args.featureProfileId,
@@ -89,7 +88,11 @@ export interface GetOtherThousandeyesFeatureResult {
  * ```
  */
 export function getOtherThousandeyesFeatureOutput(args: GetOtherThousandeyesFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetOtherThousandeyesFeatureResult> {
-    return pulumi.output(args).apply((a: any) => getOtherThousandeyesFeature(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getOtherThousandeyesFeature:getOtherThousandeyesFeature", {
+        "featureProfileId": args.featureProfileId,
+        "id": args.id,
+    }, opts);
 }
 
 /**

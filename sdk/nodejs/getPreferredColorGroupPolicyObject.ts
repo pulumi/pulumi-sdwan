@@ -19,7 +19,6 @@ import * as utilities from "./utilities";
  * ```
  */
 export function getPreferredColorGroupPolicyObject(args: GetPreferredColorGroupPolicyObjectArgs, opts?: pulumi.InvokeOptions): Promise<GetPreferredColorGroupPolicyObjectResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getPreferredColorGroupPolicyObject:getPreferredColorGroupPolicyObject", {
         "id": args.id,
@@ -92,7 +91,10 @@ export interface GetPreferredColorGroupPolicyObjectResult {
  * ```
  */
 export function getPreferredColorGroupPolicyObjectOutput(args: GetPreferredColorGroupPolicyObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetPreferredColorGroupPolicyObjectResult> {
-    return pulumi.output(args).apply((a: any) => getPreferredColorGroupPolicyObject(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("sdwan:index/getPreferredColorGroupPolicyObject:getPreferredColorGroupPolicyObject", {
+        "id": args.id,
+    }, opts);
 }
 
 /**
