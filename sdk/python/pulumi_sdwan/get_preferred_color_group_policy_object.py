@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 
 __all__ = [
@@ -172,9 +177,6 @@ def get_preferred_color_group_policy_object(id: Optional[str] = None,
         tertiary_color_preference=pulumi.get(__ret__, 'tertiary_color_preference'),
         tertiary_path_preference=pulumi.get(__ret__, 'tertiary_path_preference'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_preferred_color_group_policy_object)
 def get_preferred_color_group_policy_object_output(id: Optional[pulumi.Input[str]] = None,
                                                    opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetPreferredColorGroupPolicyObjectResult]:
     """
@@ -192,4 +194,17 @@ def get_preferred_color_group_policy_object_output(id: Optional[pulumi.Input[str
 
     :param str id: The id of the object
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getPreferredColorGroupPolicyObject:getPreferredColorGroupPolicyObject', __args__, opts=opts, typ=GetPreferredColorGroupPolicyObjectResult)
+    return __ret__.apply(lambda __response__: GetPreferredColorGroupPolicyObjectResult(
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
+        primary_color_preference=pulumi.get(__response__, 'primary_color_preference'),
+        primary_path_preference=pulumi.get(__response__, 'primary_path_preference'),
+        secondary_color_preference=pulumi.get(__response__, 'secondary_color_preference'),
+        secondary_path_preference=pulumi.get(__response__, 'secondary_path_preference'),
+        tertiary_color_preference=pulumi.get(__response__, 'tertiary_color_preference'),
+        tertiary_path_preference=pulumi.get(__response__, 'tertiary_path_preference'),
+        version=pulumi.get(__response__, 'version')))

@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -605,9 +610,6 @@ def get_cisco_bgp_feature_template(id: Optional[str] = None,
         shutdown_variable=pulumi.get(__ret__, 'shutdown_variable'),
         template_type=pulumi.get(__ret__, 'template_type'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_cisco_bgp_feature_template)
 def get_cisco_bgp_feature_template_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                           name: Optional[pulumi.Input[Optional[str]]] = None,
                                           opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCiscoBgpFeatureTemplateResult]:
@@ -627,4 +629,51 @@ def get_cisco_bgp_feature_template_output(id: Optional[pulumi.Input[Optional[str
     :param str id: The id of the feature template
     :param str name: The name of the feature template
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getCiscoBgpFeatureTemplate:getCiscoBgpFeatureTemplate', __args__, opts=opts, typ=GetCiscoBgpFeatureTemplateResult)
+    return __ret__.apply(lambda __response__: GetCiscoBgpFeatureTemplateResult(
+        address_families=pulumi.get(__response__, 'address_families'),
+        always_compare_med=pulumi.get(__response__, 'always_compare_med'),
+        always_compare_med_variable=pulumi.get(__response__, 'always_compare_med_variable'),
+        as_number=pulumi.get(__response__, 'as_number'),
+        as_number_variable=pulumi.get(__response__, 'as_number_variable'),
+        compare_router_id=pulumi.get(__response__, 'compare_router_id'),
+        compare_router_id_variable=pulumi.get(__response__, 'compare_router_id_variable'),
+        description=pulumi.get(__response__, 'description'),
+        deterministic_med=pulumi.get(__response__, 'deterministic_med'),
+        deterministic_med_variable=pulumi.get(__response__, 'deterministic_med_variable'),
+        device_types=pulumi.get(__response__, 'device_types'),
+        distance_external=pulumi.get(__response__, 'distance_external'),
+        distance_external_variable=pulumi.get(__response__, 'distance_external_variable'),
+        distance_internal=pulumi.get(__response__, 'distance_internal'),
+        distance_internal_variable=pulumi.get(__response__, 'distance_internal_variable'),
+        distance_local=pulumi.get(__response__, 'distance_local'),
+        distance_local_variable=pulumi.get(__response__, 'distance_local_variable'),
+        holdtime=pulumi.get(__response__, 'holdtime'),
+        holdtime_variable=pulumi.get(__response__, 'holdtime_variable'),
+        id=pulumi.get(__response__, 'id'),
+        ipv4_neighbors=pulumi.get(__response__, 'ipv4_neighbors'),
+        ipv4_route_targets=pulumi.get(__response__, 'ipv4_route_targets'),
+        ipv6_neighbors=pulumi.get(__response__, 'ipv6_neighbors'),
+        ipv6_route_targets=pulumi.get(__response__, 'ipv6_route_targets'),
+        keepalive=pulumi.get(__response__, 'keepalive'),
+        keepalive_variable=pulumi.get(__response__, 'keepalive_variable'),
+        missing_med_worst=pulumi.get(__response__, 'missing_med_worst'),
+        missing_med_worst_variable=pulumi.get(__response__, 'missing_med_worst_variable'),
+        mpls_interfaces=pulumi.get(__response__, 'mpls_interfaces'),
+        multipath_relax=pulumi.get(__response__, 'multipath_relax'),
+        multipath_relax_variable=pulumi.get(__response__, 'multipath_relax_variable'),
+        name=pulumi.get(__response__, 'name'),
+        propagate_aspath=pulumi.get(__response__, 'propagate_aspath'),
+        propagate_aspath_variable=pulumi.get(__response__, 'propagate_aspath_variable'),
+        propagate_community=pulumi.get(__response__, 'propagate_community'),
+        propagate_community_variable=pulumi.get(__response__, 'propagate_community_variable'),
+        router_id=pulumi.get(__response__, 'router_id'),
+        router_id_variable=pulumi.get(__response__, 'router_id_variable'),
+        shutdown=pulumi.get(__response__, 'shutdown'),
+        shutdown_variable=pulumi.get(__response__, 'shutdown_variable'),
+        template_type=pulumi.get(__response__, 'template_type'),
+        version=pulumi.get(__response__, 'version')))

@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -164,9 +169,6 @@ def get_transport_tracker_group_feature(feature_profile_id: Optional[str] = None
         tracker_boolean_variable=pulumi.get(__ret__, 'tracker_boolean_variable'),
         tracker_elements=pulumi.get(__ret__, 'tracker_elements'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_transport_tracker_group_feature)
 def get_transport_tracker_group_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                                id: Optional[pulumi.Input[str]] = None,
                                                opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetTransportTrackerGroupFeatureResult]:
@@ -187,4 +189,17 @@ def get_transport_tracker_group_feature_output(feature_profile_id: Optional[pulu
     :param str feature_profile_id: Feature Profile ID
     :param str id: The id of the Feature
     """
-    ...
+    __args__ = dict()
+    __args__['featureProfileId'] = feature_profile_id
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getTransportTrackerGroupFeature:getTransportTrackerGroupFeature', __args__, opts=opts, typ=GetTransportTrackerGroupFeatureResult)
+    return __ret__.apply(lambda __response__: GetTransportTrackerGroupFeatureResult(
+        description=pulumi.get(__response__, 'description'),
+        feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
+        tracker_boolean=pulumi.get(__response__, 'tracker_boolean'),
+        tracker_boolean_variable=pulumi.get(__response__, 'tracker_boolean_variable'),
+        tracker_elements=pulumi.get(__response__, 'tracker_elements'),
+        version=pulumi.get(__response__, 'version')))

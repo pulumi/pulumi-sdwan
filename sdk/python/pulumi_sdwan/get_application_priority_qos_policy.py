@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -164,9 +169,6 @@ def get_application_priority_qos_policy(feature_profile_id: Optional[str] = None
         target_interface_variable=pulumi.get(__ret__, 'target_interface_variable'),
         target_interfaces=pulumi.get(__ret__, 'target_interfaces'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_application_priority_qos_policy)
 def get_application_priority_qos_policy_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                                id: Optional[pulumi.Input[str]] = None,
                                                opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetApplicationPriorityQosPolicyResult]:
@@ -187,4 +189,17 @@ def get_application_priority_qos_policy_output(feature_profile_id: Optional[pulu
     :param str feature_profile_id: Feature Profile ID
     :param str id: The id of the Policy
     """
-    ...
+    __args__ = dict()
+    __args__['featureProfileId'] = feature_profile_id
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getApplicationPriorityQosPolicy:getApplicationPriorityQosPolicy', __args__, opts=opts, typ=GetApplicationPriorityQosPolicyResult)
+    return __ret__.apply(lambda __response__: GetApplicationPriorityQosPolicyResult(
+        description=pulumi.get(__response__, 'description'),
+        feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
+        qos_schedulers=pulumi.get(__response__, 'qos_schedulers'),
+        target_interface_variable=pulumi.get(__response__, 'target_interface_variable'),
+        target_interfaces=pulumi.get(__response__, 'target_interfaces'),
+        version=pulumi.get(__response__, 'version')))

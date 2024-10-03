@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 
 __all__ = [
@@ -224,9 +229,6 @@ def get_advanced_inspection_profile_policy_definition(id: Optional[str] = None,
         url_filtering_id=pulumi.get(__ret__, 'url_filtering_id'),
         url_filtering_version=pulumi.get(__ret__, 'url_filtering_version'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_advanced_inspection_profile_policy_definition)
 def get_advanced_inspection_profile_policy_definition_output(id: Optional[pulumi.Input[str]] = None,
                                                              opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetAdvancedInspectionProfilePolicyDefinitionResult]:
     """
@@ -244,4 +246,21 @@ def get_advanced_inspection_profile_policy_definition_output(id: Optional[pulumi
 
     :param str id: The id of the object
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getAdvancedInspectionProfilePolicyDefinition:getAdvancedInspectionProfilePolicyDefinition', __args__, opts=opts, typ=GetAdvancedInspectionProfilePolicyDefinitionResult)
+    return __ret__.apply(lambda __response__: GetAdvancedInspectionProfilePolicyDefinitionResult(
+        advanced_malware_protection_id=pulumi.get(__response__, 'advanced_malware_protection_id'),
+        advanced_malware_protection_version=pulumi.get(__response__, 'advanced_malware_protection_version'),
+        description=pulumi.get(__response__, 'description'),
+        id=pulumi.get(__response__, 'id'),
+        intrusion_prevention_id=pulumi.get(__response__, 'intrusion_prevention_id'),
+        intrusion_prevention_version=pulumi.get(__response__, 'intrusion_prevention_version'),
+        name=pulumi.get(__response__, 'name'),
+        tls_action=pulumi.get(__response__, 'tls_action'),
+        tls_ssl_decryption_id=pulumi.get(__response__, 'tls_ssl_decryption_id'),
+        tls_ssl_decryption_version=pulumi.get(__response__, 'tls_ssl_decryption_version'),
+        url_filtering_id=pulumi.get(__response__, 'url_filtering_id'),
+        url_filtering_version=pulumi.get(__response__, 'url_filtering_version'),
+        version=pulumi.get(__response__, 'version')))

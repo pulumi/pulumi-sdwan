@@ -27,7 +27,7 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := sdwan.GetVedgeInventory(ctx, nil, nil)
+//			_, err := sdwan.GetVedgeInventory(ctx, map[string]interface{}{}, nil)
 //			if err != nil {
 //				return err
 //			}

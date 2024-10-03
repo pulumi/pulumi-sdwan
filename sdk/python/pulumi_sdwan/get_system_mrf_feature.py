@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 
 __all__ = [
@@ -215,9 +220,6 @@ def get_system_mrf_feature(feature_profile_id: Optional[str] = None,
         secondary_region_id=pulumi.get(__ret__, 'secondary_region_id'),
         secondary_region_id_variable=pulumi.get(__ret__, 'secondary_region_id_variable'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_system_mrf_feature)
 def get_system_mrf_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                   id: Optional[pulumi.Input[str]] = None,
                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSystemMrfFeatureResult]:
@@ -238,4 +240,21 @@ def get_system_mrf_feature_output(feature_profile_id: Optional[pulumi.Input[str]
     :param str feature_profile_id: Feature Profile ID
     :param str id: The id of the Feature
     """
-    ...
+    __args__ = dict()
+    __args__['featureProfileId'] = feature_profile_id
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getSystemMrfFeature:getSystemMrfFeature', __args__, opts=opts, typ=GetSystemMrfFeatureResult)
+    return __ret__.apply(lambda __response__: GetSystemMrfFeatureResult(
+        description=pulumi.get(__response__, 'description'),
+        enable_migration_to_mrf=pulumi.get(__response__, 'enable_migration_to_mrf'),
+        feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),
+        id=pulumi.get(__response__, 'id'),
+        migration_bgp_community=pulumi.get(__response__, 'migration_bgp_community'),
+        name=pulumi.get(__response__, 'name'),
+        region_id=pulumi.get(__response__, 'region_id'),
+        role=pulumi.get(__response__, 'role'),
+        role_variable=pulumi.get(__response__, 'role_variable'),
+        secondary_region_id=pulumi.get(__response__, 'secondary_region_id'),
+        secondary_region_id_variable=pulumi.get(__response__, 'secondary_region_id_variable'),
+        version=pulumi.get(__response__, 'version')))

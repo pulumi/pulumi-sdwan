@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -138,9 +143,6 @@ def get_other_thousandeyes_feature(feature_profile_id: Optional[str] = None,
         name=pulumi.get(__ret__, 'name'),
         version=pulumi.get(__ret__, 'version'),
         virtual_applications=pulumi.get(__ret__, 'virtual_applications'))
-
-
-@_utilities.lift_output_func(get_other_thousandeyes_feature)
 def get_other_thousandeyes_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                           id: Optional[pulumi.Input[str]] = None,
                                           opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetOtherThousandeyesFeatureResult]:
@@ -161,4 +163,15 @@ def get_other_thousandeyes_feature_output(feature_profile_id: Optional[pulumi.In
     :param str feature_profile_id: Feature Profile ID
     :param str id: The id of the Feature
     """
-    ...
+    __args__ = dict()
+    __args__['featureProfileId'] = feature_profile_id
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getOtherThousandeyesFeature:getOtherThousandeyesFeature', __args__, opts=opts, typ=GetOtherThousandeyesFeatureResult)
+    return __ret__.apply(lambda __response__: GetOtherThousandeyesFeatureResult(
+        description=pulumi.get(__response__, 'description'),
+        feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
+        version=pulumi.get(__response__, 'version'),
+        virtual_applications=pulumi.get(__response__, 'virtual_applications')))

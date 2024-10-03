@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -251,9 +256,6 @@ def get_localized_policy(id: Optional[str] = None,
         log_frequency=pulumi.get(__ret__, 'log_frequency'),
         name=pulumi.get(__ret__, 'name'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_localized_policy)
 def get_localized_policy_output(id: Optional[pulumi.Input[str]] = None,
                                 opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetLocalizedPolicyResult]:
     """
@@ -271,4 +273,23 @@ def get_localized_policy_output(id: Optional[pulumi.Input[str]] = None,
 
     :param str id: The id of the object
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getLocalizedPolicy:getLocalizedPolicy', __args__, opts=opts, typ=GetLocalizedPolicyResult)
+    return __ret__.apply(lambda __response__: GetLocalizedPolicyResult(
+        application_visibility_ipv4=pulumi.get(__response__, 'application_visibility_ipv4'),
+        application_visibility_ipv6=pulumi.get(__response__, 'application_visibility_ipv6'),
+        cloud_qos=pulumi.get(__response__, 'cloud_qos'),
+        cloud_qos_service_side=pulumi.get(__response__, 'cloud_qos_service_side'),
+        definitions=pulumi.get(__response__, 'definitions'),
+        description=pulumi.get(__response__, 'description'),
+        flow_visibility_ipv4=pulumi.get(__response__, 'flow_visibility_ipv4'),
+        flow_visibility_ipv6=pulumi.get(__response__, 'flow_visibility_ipv6'),
+        id=pulumi.get(__response__, 'id'),
+        implicit_acl_logging=pulumi.get(__response__, 'implicit_acl_logging'),
+        ipv4_visibility_cache_entries=pulumi.get(__response__, 'ipv4_visibility_cache_entries'),
+        ipv6_visibility_cache_entries=pulumi.get(__response__, 'ipv6_visibility_cache_entries'),
+        log_frequency=pulumi.get(__response__, 'log_frequency'),
+        name=pulumi.get(__response__, 'name'),
+        version=pulumi.get(__response__, 'version')))

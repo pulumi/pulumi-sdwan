@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -514,9 +519,6 @@ def get_cisco_ospf_feature_template(id: Optional[str] = None,
         timers_spf_max_hold=pulumi.get(__ret__, 'timers_spf_max_hold'),
         timers_spf_max_hold_variable=pulumi.get(__ret__, 'timers_spf_max_hold_variable'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_cisco_ospf_feature_template)
 def get_cisco_ospf_feature_template_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                            name: Optional[pulumi.Input[Optional[str]]] = None,
                                            opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCiscoOspfFeatureTemplateResult]:
@@ -536,4 +538,44 @@ def get_cisco_ospf_feature_template_output(id: Optional[pulumi.Input[Optional[st
     :param str id: The id of the feature template
     :param str name: The name of the feature template
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getCiscoOspfFeatureTemplate:getCiscoOspfFeatureTemplate', __args__, opts=opts, typ=GetCiscoOspfFeatureTemplateResult)
+    return __ret__.apply(lambda __response__: GetCiscoOspfFeatureTemplateResult(
+        areas=pulumi.get(__response__, 'areas'),
+        auto_cost_reference_bandwidth=pulumi.get(__response__, 'auto_cost_reference_bandwidth'),
+        auto_cost_reference_bandwidth_variable=pulumi.get(__response__, 'auto_cost_reference_bandwidth_variable'),
+        compatible_rfc1583=pulumi.get(__response__, 'compatible_rfc1583'),
+        compatible_rfc1583_variable=pulumi.get(__response__, 'compatible_rfc1583_variable'),
+        default_information_originate=pulumi.get(__response__, 'default_information_originate'),
+        default_information_originate_always=pulumi.get(__response__, 'default_information_originate_always'),
+        default_information_originate_always_variable=pulumi.get(__response__, 'default_information_originate_always_variable'),
+        default_information_originate_metric=pulumi.get(__response__, 'default_information_originate_metric'),
+        default_information_originate_metric_type=pulumi.get(__response__, 'default_information_originate_metric_type'),
+        default_information_originate_metric_type_variable=pulumi.get(__response__, 'default_information_originate_metric_type_variable'),
+        default_information_originate_metric_variable=pulumi.get(__response__, 'default_information_originate_metric_variable'),
+        description=pulumi.get(__response__, 'description'),
+        device_types=pulumi.get(__response__, 'device_types'),
+        distance_external=pulumi.get(__response__, 'distance_external'),
+        distance_external_variable=pulumi.get(__response__, 'distance_external_variable'),
+        distance_inter_area=pulumi.get(__response__, 'distance_inter_area'),
+        distance_inter_area_variable=pulumi.get(__response__, 'distance_inter_area_variable'),
+        distance_intra_area=pulumi.get(__response__, 'distance_intra_area'),
+        distance_intra_area_variable=pulumi.get(__response__, 'distance_intra_area_variable'),
+        id=pulumi.get(__response__, 'id'),
+        max_metric_router_lsas=pulumi.get(__response__, 'max_metric_router_lsas'),
+        name=pulumi.get(__response__, 'name'),
+        redistributes=pulumi.get(__response__, 'redistributes'),
+        route_policies=pulumi.get(__response__, 'route_policies'),
+        router_id=pulumi.get(__response__, 'router_id'),
+        router_id_variable=pulumi.get(__response__, 'router_id_variable'),
+        template_type=pulumi.get(__response__, 'template_type'),
+        timers_spf_delay=pulumi.get(__response__, 'timers_spf_delay'),
+        timers_spf_delay_variable=pulumi.get(__response__, 'timers_spf_delay_variable'),
+        timers_spf_initial_hold=pulumi.get(__response__, 'timers_spf_initial_hold'),
+        timers_spf_initial_hold_variable=pulumi.get(__response__, 'timers_spf_initial_hold_variable'),
+        timers_spf_max_hold=pulumi.get(__response__, 'timers_spf_max_hold'),
+        timers_spf_max_hold_variable=pulumi.get(__response__, 'timers_spf_max_hold_variable'),
+        version=pulumi.get(__response__, 'version')))

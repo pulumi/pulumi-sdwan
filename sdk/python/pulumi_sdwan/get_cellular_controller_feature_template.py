@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -280,9 +285,6 @@ def get_cellular_controller_feature_template(id: Optional[str] = None,
         sim_failover_timeout_variable=pulumi.get(__ret__, 'sim_failover_timeout_variable'),
         template_type=pulumi.get(__ret__, 'template_type'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_cellular_controller_feature_template)
 def get_cellular_controller_feature_template_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                                     name: Optional[pulumi.Input[Optional[str]]] = None,
                                                     opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCellularControllerFeatureTemplateResult]:
@@ -302,4 +304,26 @@ def get_cellular_controller_feature_template_output(id: Optional[pulumi.Input[Op
     :param str id: The id of the feature template
     :param str name: The name of the feature template
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getCellularControllerFeatureTemplate:getCellularControllerFeatureTemplate', __args__, opts=opts, typ=GetCellularControllerFeatureTemplateResult)
+    return __ret__.apply(lambda __response__: GetCellularControllerFeatureTemplateResult(
+        cellular_interface_id=pulumi.get(__response__, 'cellular_interface_id'),
+        cellular_interface_id_variable=pulumi.get(__response__, 'cellular_interface_id_variable'),
+        data_profiles=pulumi.get(__response__, 'data_profiles'),
+        description=pulumi.get(__response__, 'description'),
+        device_types=pulumi.get(__response__, 'device_types'),
+        firmware_auto_sim=pulumi.get(__response__, 'firmware_auto_sim'),
+        firmware_auto_sim_variable=pulumi.get(__response__, 'firmware_auto_sim_variable'),
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
+        primary_sim_slot=pulumi.get(__response__, 'primary_sim_slot'),
+        primary_sim_slot_variable=pulumi.get(__response__, 'primary_sim_slot_variable'),
+        sim_failover_retries=pulumi.get(__response__, 'sim_failover_retries'),
+        sim_failover_retries_variable=pulumi.get(__response__, 'sim_failover_retries_variable'),
+        sim_failover_timeout=pulumi.get(__response__, 'sim_failover_timeout'),
+        sim_failover_timeout_variable=pulumi.get(__response__, 'sim_failover_timeout_variable'),
+        template_type=pulumi.get(__response__, 'template_type'),
+        version=pulumi.get(__response__, 'version')))

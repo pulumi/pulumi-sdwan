@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -449,9 +454,6 @@ def get_cedge_pim_feature_template(id: Optional[str] = None,
         spt_threshold_variable=pulumi.get(__ret__, 'spt_threshold_variable'),
         template_type=pulumi.get(__ret__, 'template_type'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_cedge_pim_feature_template)
 def get_cedge_pim_feature_template_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                           name: Optional[pulumi.Input[Optional[str]]] = None,
                                           opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCedgePimFeatureTemplateResult]:
@@ -471,4 +473,39 @@ def get_cedge_pim_feature_template_output(id: Optional[pulumi.Input[Optional[str
     :param str id: The id of the feature template
     :param str name: The name of the feature template
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getCedgePimFeatureTemplate:getCedgePimFeatureTemplate', __args__, opts=opts, typ=GetCedgePimFeatureTemplateResult)
+    return __ret__.apply(lambda __response__: GetCedgePimFeatureTemplateResult(
+        auto_rp=pulumi.get(__response__, 'auto_rp'),
+        auto_rp_variable=pulumi.get(__response__, 'auto_rp_variable'),
+        bsr_candidate=pulumi.get(__response__, 'bsr_candidate'),
+        bsr_candidate_variable=pulumi.get(__response__, 'bsr_candidate_variable'),
+        default=pulumi.get(__response__, 'default'),
+        default_variable=pulumi.get(__response__, 'default_variable'),
+        description=pulumi.get(__response__, 'description'),
+        device_types=pulumi.get(__response__, 'device_types'),
+        hash_mask_length=pulumi.get(__response__, 'hash_mask_length'),
+        hash_mask_length_variable=pulumi.get(__response__, 'hash_mask_length_variable'),
+        id=pulumi.get(__response__, 'id'),
+        interface_name=pulumi.get(__response__, 'interface_name'),
+        interface_name_variable=pulumi.get(__response__, 'interface_name_variable'),
+        interfaces=pulumi.get(__response__, 'interfaces'),
+        name=pulumi.get(__response__, 'name'),
+        priority=pulumi.get(__response__, 'priority'),
+        priority_variable=pulumi.get(__response__, 'priority_variable'),
+        range=pulumi.get(__response__, 'range'),
+        range_variable=pulumi.get(__response__, 'range_variable'),
+        rp_addresses=pulumi.get(__response__, 'rp_addresses'),
+        rp_announce_fields=pulumi.get(__response__, 'rp_announce_fields'),
+        rp_candidate_access_list=pulumi.get(__response__, 'rp_candidate_access_list'),
+        rp_candidate_access_list_variable=pulumi.get(__response__, 'rp_candidate_access_list_variable'),
+        rp_candidates=pulumi.get(__response__, 'rp_candidates'),
+        scope=pulumi.get(__response__, 'scope'),
+        scope_variable=pulumi.get(__response__, 'scope_variable'),
+        spt_threshold=pulumi.get(__response__, 'spt_threshold'),
+        spt_threshold_variable=pulumi.get(__response__, 'spt_threshold_variable'),
+        template_type=pulumi.get(__response__, 'template_type'),
+        version=pulumi.get(__response__, 'version')))

@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -591,9 +596,6 @@ def get_service_lan_vpn_feature(feature_profile_id: Optional[str] = None,
         version=pulumi.get(__ret__, 'version'),
         vpn=pulumi.get(__ret__, 'vpn'),
         vpn_variable=pulumi.get(__ret__, 'vpn_variable'))
-
-
-@_utilities.lift_output_func(get_service_lan_vpn_feature)
 def get_service_lan_vpn_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                        id: Optional[pulumi.Input[str]] = None,
                                        opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetServiceLanVpnFeatureResult]:
@@ -614,4 +616,51 @@ def get_service_lan_vpn_feature_output(feature_profile_id: Optional[pulumi.Input
     :param str feature_profile_id: Feature Profile ID
     :param str id: The id of the Feature
     """
-    ...
+    __args__ = dict()
+    __args__['featureProfileId'] = feature_profile_id
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getServiceLanVpnFeature:getServiceLanVpnFeature', __args__, opts=opts, typ=GetServiceLanVpnFeatureResult)
+    return __ret__.apply(lambda __response__: GetServiceLanVpnFeatureResult(
+        advertise_omp_ipv4s=pulumi.get(__response__, 'advertise_omp_ipv4s'),
+        advertise_omp_ipv6s=pulumi.get(__response__, 'advertise_omp_ipv6s'),
+        config_description=pulumi.get(__response__, 'config_description'),
+        config_description_variable=pulumi.get(__response__, 'config_description_variable'),
+        description=pulumi.get(__response__, 'description'),
+        enable_sdwan_remote_access=pulumi.get(__response__, 'enable_sdwan_remote_access'),
+        feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),
+        gre_routes=pulumi.get(__response__, 'gre_routes'),
+        host_mappings=pulumi.get(__response__, 'host_mappings'),
+        id=pulumi.get(__response__, 'id'),
+        ipsec_routes=pulumi.get(__response__, 'ipsec_routes'),
+        ipv4_export_route_targets=pulumi.get(__response__, 'ipv4_export_route_targets'),
+        ipv4_import_route_targets=pulumi.get(__response__, 'ipv4_import_route_targets'),
+        ipv4_static_routes=pulumi.get(__response__, 'ipv4_static_routes'),
+        ipv6_export_route_targets=pulumi.get(__response__, 'ipv6_export_route_targets'),
+        ipv6_import_route_targets=pulumi.get(__response__, 'ipv6_import_route_targets'),
+        ipv6_static_routes=pulumi.get(__response__, 'ipv6_static_routes'),
+        name=pulumi.get(__response__, 'name'),
+        nat64_v4_pools=pulumi.get(__response__, 'nat64_v4_pools'),
+        nat_pools=pulumi.get(__response__, 'nat_pools'),
+        nat_port_forwards=pulumi.get(__response__, 'nat_port_forwards'),
+        omp_admin_distance_ipv4=pulumi.get(__response__, 'omp_admin_distance_ipv4'),
+        omp_admin_distance_ipv4_variable=pulumi.get(__response__, 'omp_admin_distance_ipv4_variable'),
+        omp_admin_distance_ipv6=pulumi.get(__response__, 'omp_admin_distance_ipv6'),
+        omp_admin_distance_ipv6_variable=pulumi.get(__response__, 'omp_admin_distance_ipv6_variable'),
+        primary_dns_address_ipv4=pulumi.get(__response__, 'primary_dns_address_ipv4'),
+        primary_dns_address_ipv4_variable=pulumi.get(__response__, 'primary_dns_address_ipv4_variable'),
+        primary_dns_address_ipv6=pulumi.get(__response__, 'primary_dns_address_ipv6'),
+        primary_dns_address_ipv6_variable=pulumi.get(__response__, 'primary_dns_address_ipv6_variable'),
+        route_leak_from_global_vpns=pulumi.get(__response__, 'route_leak_from_global_vpns'),
+        route_leak_from_other_services=pulumi.get(__response__, 'route_leak_from_other_services'),
+        route_leak_to_global_vpns=pulumi.get(__response__, 'route_leak_to_global_vpns'),
+        secondary_dns_address_ipv4=pulumi.get(__response__, 'secondary_dns_address_ipv4'),
+        secondary_dns_address_ipv4_variable=pulumi.get(__response__, 'secondary_dns_address_ipv4_variable'),
+        secondary_dns_address_ipv6=pulumi.get(__response__, 'secondary_dns_address_ipv6'),
+        secondary_dns_address_ipv6_variable=pulumi.get(__response__, 'secondary_dns_address_ipv6_variable'),
+        service_routes=pulumi.get(__response__, 'service_routes'),
+        services=pulumi.get(__response__, 'services'),
+        static_nats=pulumi.get(__response__, 'static_nats'),
+        version=pulumi.get(__response__, 'version'),
+        vpn=pulumi.get(__response__, 'vpn'),
+        vpn_variable=pulumi.get(__response__, 'vpn_variable')))

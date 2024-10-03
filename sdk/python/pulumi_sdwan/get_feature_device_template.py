@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -199,9 +204,6 @@ def get_feature_device_template(id: Optional[str] = None,
         security_policy_id=pulumi.get(__ret__, 'security_policy_id'),
         security_policy_version=pulumi.get(__ret__, 'security_policy_version'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_feature_device_template)
 def get_feature_device_template_output(id: Optional[pulumi.Input[str]] = None,
                                        opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetFeatureDeviceTemplateResult]:
     """
@@ -219,4 +221,19 @@ def get_feature_device_template_output(id: Optional[pulumi.Input[str]] = None,
 
     :param str id: The id of the object
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getFeatureDeviceTemplate:getFeatureDeviceTemplate', __args__, opts=opts, typ=GetFeatureDeviceTemplateResult)
+    return __ret__.apply(lambda __response__: GetFeatureDeviceTemplateResult(
+        description=pulumi.get(__response__, 'description'),
+        device_role=pulumi.get(__response__, 'device_role'),
+        device_type=pulumi.get(__response__, 'device_type'),
+        general_templates=pulumi.get(__response__, 'general_templates'),
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
+        policy_id=pulumi.get(__response__, 'policy_id'),
+        policy_version=pulumi.get(__response__, 'policy_version'),
+        security_policy_id=pulumi.get(__response__, 'security_policy_id'),
+        security_policy_version=pulumi.get(__response__, 'security_policy_version'),
+        version=pulumi.get(__response__, 'version')))

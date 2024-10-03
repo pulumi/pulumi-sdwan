@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -151,9 +156,6 @@ def get_transport_route_policy_feature(feature_profile_id: Optional[str] = None,
         name=pulumi.get(__ret__, 'name'),
         sequences=pulumi.get(__ret__, 'sequences'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_transport_route_policy_feature)
 def get_transport_route_policy_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                               id: Optional[pulumi.Input[str]] = None,
                                               opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetTransportRoutePolicyFeatureResult]:
@@ -174,4 +176,16 @@ def get_transport_route_policy_feature_output(feature_profile_id: Optional[pulum
     :param str feature_profile_id: Feature Profile ID
     :param str id: The id of the Feature
     """
-    ...
+    __args__ = dict()
+    __args__['featureProfileId'] = feature_profile_id
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getTransportRoutePolicyFeature:getTransportRoutePolicyFeature', __args__, opts=opts, typ=GetTransportRoutePolicyFeatureResult)
+    return __ret__.apply(lambda __response__: GetTransportRoutePolicyFeatureResult(
+        default_action=pulumi.get(__response__, 'default_action'),
+        description=pulumi.get(__response__, 'description'),
+        feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
+        sequences=pulumi.get(__response__, 'sequences'),
+        version=pulumi.get(__response__, 'version')))
