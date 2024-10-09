@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -238,9 +243,6 @@ def get_dns_security_policy_definition(id: Optional[str] = None,
         target_vpns=pulumi.get(__ret__, 'target_vpns'),
         umbrella_dns_default=pulumi.get(__ret__, 'umbrella_dns_default'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_dns_security_policy_definition)
 def get_dns_security_policy_definition_output(id: Optional[pulumi.Input[str]] = None,
                                               opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetDnsSecurityPolicyDefinitionResult]:
     """
@@ -258,4 +260,22 @@ def get_dns_security_policy_definition_output(id: Optional[pulumi.Input[str]] = 
 
     :param str id: The id of the object
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getDnsSecurityPolicyDefinition:getDnsSecurityPolicyDefinition', __args__, opts=opts, typ=GetDnsSecurityPolicyDefinitionResult)
+    return __ret__.apply(lambda __response__: GetDnsSecurityPolicyDefinitionResult(
+        cisco_sig_credentials_feature_template_id=pulumi.get(__response__, 'cisco_sig_credentials_feature_template_id'),
+        cisco_sig_credentials_feature_template_version=pulumi.get(__response__, 'cisco_sig_credentials_feature_template_version'),
+        custom_dns_server_ip=pulumi.get(__response__, 'custom_dns_server_ip'),
+        description=pulumi.get(__response__, 'description'),
+        dnscrypt=pulumi.get(__response__, 'dnscrypt'),
+        domain_list_id=pulumi.get(__response__, 'domain_list_id'),
+        domain_list_version=pulumi.get(__response__, 'domain_list_version'),
+        id=pulumi.get(__response__, 'id'),
+        local_domain_bypass_enabled=pulumi.get(__response__, 'local_domain_bypass_enabled'),
+        match_all_vpn=pulumi.get(__response__, 'match_all_vpn'),
+        name=pulumi.get(__response__, 'name'),
+        target_vpns=pulumi.get(__response__, 'target_vpns'),
+        umbrella_dns_default=pulumi.get(__response__, 'umbrella_dns_default'),
+        version=pulumi.get(__response__, 'version')))

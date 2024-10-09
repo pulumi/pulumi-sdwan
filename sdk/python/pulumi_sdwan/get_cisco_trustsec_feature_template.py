@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -540,9 +545,6 @@ def get_cisco_trustsec_feature_template(id: Optional[str] = None,
         sxp_source_ip_variable=pulumi.get(__ret__, 'sxp_source_ip_variable'),
         template_type=pulumi.get(__ret__, 'template_type'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_cisco_trustsec_feature_template)
 def get_cisco_trustsec_feature_template_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                                name: Optional[pulumi.Input[Optional[str]]] = None,
                                                opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCiscoTrustsecFeatureTemplateResult]:
@@ -562,4 +564,46 @@ def get_cisco_trustsec_feature_template_output(id: Optional[pulumi.Input[Optiona
     :param str id: The id of the feature template
     :param str name: The name of the feature template
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getCiscoTrustsecFeatureTemplate:getCiscoTrustsecFeatureTemplate', __args__, opts=opts, typ=GetCiscoTrustsecFeatureTemplateResult)
+    return __ret__.apply(lambda __response__: GetCiscoTrustsecFeatureTemplateResult(
+        credentials_id=pulumi.get(__response__, 'credentials_id'),
+        credentials_id_variable=pulumi.get(__response__, 'credentials_id_variable'),
+        credentials_password=pulumi.get(__response__, 'credentials_password'),
+        credentials_password_variable=pulumi.get(__response__, 'credentials_password_variable'),
+        description=pulumi.get(__response__, 'description'),
+        device_sgt=pulumi.get(__response__, 'device_sgt'),
+        device_sgt_variable=pulumi.get(__response__, 'device_sgt_variable'),
+        device_types=pulumi.get(__response__, 'device_types'),
+        enable_enforcement=pulumi.get(__response__, 'enable_enforcement'),
+        enable_enforcement_variable=pulumi.get(__response__, 'enable_enforcement_variable'),
+        enable_sxp=pulumi.get(__response__, 'enable_sxp'),
+        id=pulumi.get(__response__, 'id'),
+        maximum_listener_hold_time=pulumi.get(__response__, 'maximum_listener_hold_time'),
+        maximum_listener_hold_time_variable=pulumi.get(__response__, 'maximum_listener_hold_time_variable'),
+        minimum_listener_hold_time=pulumi.get(__response__, 'minimum_listener_hold_time'),
+        minimum_listener_hold_time_variable=pulumi.get(__response__, 'minimum_listener_hold_time_variable'),
+        name=pulumi.get(__response__, 'name'),
+        speaker_hold_time=pulumi.get(__response__, 'speaker_hold_time'),
+        speaker_hold_time_variable=pulumi.get(__response__, 'speaker_hold_time_variable'),
+        sxp_connections=pulumi.get(__response__, 'sxp_connections'),
+        sxp_default_password=pulumi.get(__response__, 'sxp_default_password'),
+        sxp_default_password_variable=pulumi.get(__response__, 'sxp_default_password_variable'),
+        sxp_key_chain=pulumi.get(__response__, 'sxp_key_chain'),
+        sxp_key_chain_variable=pulumi.get(__response__, 'sxp_key_chain_variable'),
+        sxp_log_binding_changes=pulumi.get(__response__, 'sxp_log_binding_changes'),
+        sxp_log_binding_changes_variable=pulumi.get(__response__, 'sxp_log_binding_changes_variable'),
+        sxp_node_id=pulumi.get(__response__, 'sxp_node_id'),
+        sxp_node_id_type=pulumi.get(__response__, 'sxp_node_id_type'),
+        sxp_node_id_variable=pulumi.get(__response__, 'sxp_node_id_variable'),
+        sxp_reconciliation_period=pulumi.get(__response__, 'sxp_reconciliation_period'),
+        sxp_reconciliation_period_variable=pulumi.get(__response__, 'sxp_reconciliation_period_variable'),
+        sxp_retry_period=pulumi.get(__response__, 'sxp_retry_period'),
+        sxp_retry_period_variable=pulumi.get(__response__, 'sxp_retry_period_variable'),
+        sxp_source_ip=pulumi.get(__response__, 'sxp_source_ip'),
+        sxp_source_ip_variable=pulumi.get(__response__, 'sxp_source_ip_variable'),
+        template_type=pulumi.get(__response__, 'template_type'),
+        version=pulumi.get(__response__, 'version')))

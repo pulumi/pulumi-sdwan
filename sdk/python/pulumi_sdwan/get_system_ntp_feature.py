@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -255,9 +260,6 @@ def get_system_ntp_feature(feature_profile_id: Optional[str] = None,
         trusted_keys=pulumi.get(__ret__, 'trusted_keys'),
         trusted_keys_variable=pulumi.get(__ret__, 'trusted_keys_variable'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_system_ntp_feature)
 def get_system_ntp_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                   id: Optional[pulumi.Input[str]] = None,
                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSystemNtpFeatureResult]:
@@ -278,4 +280,24 @@ def get_system_ntp_feature_output(feature_profile_id: Optional[pulumi.Input[str]
     :param str feature_profile_id: Feature Profile ID
     :param str id: The id of the Feature
     """
-    ...
+    __args__ = dict()
+    __args__['featureProfileId'] = feature_profile_id
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getSystemNtpFeature:getSystemNtpFeature', __args__, opts=opts, typ=GetSystemNtpFeatureResult)
+    return __ret__.apply(lambda __response__: GetSystemNtpFeatureResult(
+        authentication_keys=pulumi.get(__response__, 'authentication_keys'),
+        authoritative_ntp_server=pulumi.get(__response__, 'authoritative_ntp_server'),
+        authoritative_ntp_server_variable=pulumi.get(__response__, 'authoritative_ntp_server_variable'),
+        description=pulumi.get(__response__, 'description'),
+        feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
+        servers=pulumi.get(__response__, 'servers'),
+        source_interface=pulumi.get(__response__, 'source_interface'),
+        source_interface_variable=pulumi.get(__response__, 'source_interface_variable'),
+        stratum=pulumi.get(__response__, 'stratum'),
+        stratum_variable=pulumi.get(__response__, 'stratum_variable'),
+        trusted_keys=pulumi.get(__response__, 'trusted_keys'),
+        trusted_keys_variable=pulumi.get(__response__, 'trusted_keys_variable'),
+        version=pulumi.get(__response__, 'version')))

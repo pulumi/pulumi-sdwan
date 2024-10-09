@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -527,9 +532,6 @@ def get_cisco_vpn_feature_template(id: Optional[str] = None,
         vpn_id=pulumi.get(__ret__, 'vpn_id'),
         vpn_name=pulumi.get(__ret__, 'vpn_name'),
         vpn_name_variable=pulumi.get(__ret__, 'vpn_name_variable'))
-
-
-@_utilities.lift_output_func(get_cisco_vpn_feature_template)
 def get_cisco_vpn_feature_template_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                           name: Optional[pulumi.Input[Optional[str]]] = None,
                                           opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCiscoVpnFeatureTemplateResult]:
@@ -549,4 +551,45 @@ def get_cisco_vpn_feature_template_output(id: Optional[pulumi.Input[Optional[str
     :param str id: The id of the feature template
     :param str name: The name of the feature template
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getCiscoVpnFeatureTemplate:getCiscoVpnFeatureTemplate', __args__, opts=opts, typ=GetCiscoVpnFeatureTemplateResult)
+    return __ret__.apply(lambda __response__: GetCiscoVpnFeatureTemplateResult(
+        description=pulumi.get(__response__, 'description'),
+        device_types=pulumi.get(__response__, 'device_types'),
+        dns_hosts=pulumi.get(__response__, 'dns_hosts'),
+        dns_ipv4_servers=pulumi.get(__response__, 'dns_ipv4_servers'),
+        dns_ipv6_servers=pulumi.get(__response__, 'dns_ipv6_servers'),
+        enhance_ecmp_keying=pulumi.get(__response__, 'enhance_ecmp_keying'),
+        enhance_ecmp_keying_variable=pulumi.get(__response__, 'enhance_ecmp_keying_variable'),
+        id=pulumi.get(__response__, 'id'),
+        ipv4_static_gre_routes=pulumi.get(__response__, 'ipv4_static_gre_routes'),
+        ipv4_static_ipsec_routes=pulumi.get(__response__, 'ipv4_static_ipsec_routes'),
+        ipv4_static_routes=pulumi.get(__response__, 'ipv4_static_routes'),
+        ipv4_static_service_routes=pulumi.get(__response__, 'ipv4_static_service_routes'),
+        ipv6_static_routes=pulumi.get(__response__, 'ipv6_static_routes'),
+        name=pulumi.get(__response__, 'name'),
+        nat64_pools=pulumi.get(__response__, 'nat64_pools'),
+        nat_pools=pulumi.get(__response__, 'nat_pools'),
+        omp_admin_distance_ipv4=pulumi.get(__response__, 'omp_admin_distance_ipv4'),
+        omp_admin_distance_ipv4_variable=pulumi.get(__response__, 'omp_admin_distance_ipv4_variable'),
+        omp_admin_distance_ipv6=pulumi.get(__response__, 'omp_admin_distance_ipv6'),
+        omp_admin_distance_ipv6_variable=pulumi.get(__response__, 'omp_admin_distance_ipv6_variable'),
+        omp_advertise_ipv4_routes=pulumi.get(__response__, 'omp_advertise_ipv4_routes'),
+        omp_advertise_ipv6_routes=pulumi.get(__response__, 'omp_advertise_ipv6_routes'),
+        organization_name=pulumi.get(__response__, 'organization_name'),
+        port_forward_rules=pulumi.get(__response__, 'port_forward_rules'),
+        route_global_exports=pulumi.get(__response__, 'route_global_exports'),
+        route_global_imports=pulumi.get(__response__, 'route_global_imports'),
+        route_vpn_imports=pulumi.get(__response__, 'route_vpn_imports'),
+        services=pulumi.get(__response__, 'services'),
+        static_nat_rules=pulumi.get(__response__, 'static_nat_rules'),
+        static_nat_subnet_rules=pulumi.get(__response__, 'static_nat_subnet_rules'),
+        template_type=pulumi.get(__response__, 'template_type'),
+        tenant_vpn_id=pulumi.get(__response__, 'tenant_vpn_id'),
+        version=pulumi.get(__response__, 'version'),
+        vpn_id=pulumi.get(__response__, 'vpn_id'),
+        vpn_name=pulumi.get(__response__, 'vpn_name'),
+        vpn_name_variable=pulumi.get(__response__, 'vpn_name_variable')))

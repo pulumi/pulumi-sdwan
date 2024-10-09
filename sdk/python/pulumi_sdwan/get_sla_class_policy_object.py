@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 
 __all__ = [
@@ -208,9 +213,6 @@ def get_sla_class_policy_object(id: Optional[str] = None,
         loss=pulumi.get(__ret__, 'loss'),
         name=pulumi.get(__ret__, 'name'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_sla_class_policy_object)
 def get_sla_class_policy_object_output(id: Optional[pulumi.Input[str]] = None,
                                        opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSlaClassPolicyObjectResult]:
     """
@@ -228,4 +230,20 @@ def get_sla_class_policy_object_output(id: Optional[pulumi.Input[str]] = None,
 
     :param str id: The id of the object
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getSlaClassPolicyObject:getSlaClassPolicyObject', __args__, opts=opts, typ=GetSlaClassPolicyObjectResult)
+    return __ret__.apply(lambda __response__: GetSlaClassPolicyObjectResult(
+        app_probe_class_id=pulumi.get(__response__, 'app_probe_class_id'),
+        app_probe_class_version=pulumi.get(__response__, 'app_probe_class_version'),
+        fallback_best_tunnel_criteria=pulumi.get(__response__, 'fallback_best_tunnel_criteria'),
+        fallback_best_tunnel_jitter=pulumi.get(__response__, 'fallback_best_tunnel_jitter'),
+        fallback_best_tunnel_latency=pulumi.get(__response__, 'fallback_best_tunnel_latency'),
+        fallback_best_tunnel_loss=pulumi.get(__response__, 'fallback_best_tunnel_loss'),
+        id=pulumi.get(__response__, 'id'),
+        jitter=pulumi.get(__response__, 'jitter'),
+        latency=pulumi.get(__response__, 'latency'),
+        loss=pulumi.get(__response__, 'loss'),
+        name=pulumi.get(__response__, 'name'),
+        version=pulumi.get(__response__, 'version')))

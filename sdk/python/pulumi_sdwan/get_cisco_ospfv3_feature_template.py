@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -1021,9 +1026,6 @@ def get_cisco_ospfv3_feature_template(id: Optional[str] = None,
         name=pulumi.get(__ret__, 'name'),
         template_type=pulumi.get(__ret__, 'template_type'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_cisco_ospfv3_feature_template)
 def get_cisco_ospfv3_feature_template_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                              name: Optional[pulumi.Input[Optional[str]]] = None,
                                              opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCiscoOspfv3FeatureTemplateResult]:
@@ -1043,4 +1045,83 @@ def get_cisco_ospfv3_feature_template_output(id: Optional[pulumi.Input[Optional[
     :param str id: The id of the feature template
     :param str name: The name of the feature template
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getCiscoOspfv3FeatureTemplate:getCiscoOspfv3FeatureTemplate', __args__, opts=opts, typ=GetCiscoOspfv3FeatureTemplateResult)
+    return __ret__.apply(lambda __response__: GetCiscoOspfv3FeatureTemplateResult(
+        description=pulumi.get(__response__, 'description'),
+        device_types=pulumi.get(__response__, 'device_types'),
+        id=pulumi.get(__response__, 'id'),
+        ipv4_areas=pulumi.get(__response__, 'ipv4_areas'),
+        ipv4_auto_cost_reference_bandwidth=pulumi.get(__response__, 'ipv4_auto_cost_reference_bandwidth'),
+        ipv4_auto_cost_reference_bandwidth_variable=pulumi.get(__response__, 'ipv4_auto_cost_reference_bandwidth_variable'),
+        ipv4_compatible_rfc1583=pulumi.get(__response__, 'ipv4_compatible_rfc1583'),
+        ipv4_compatible_rfc1583_variable=pulumi.get(__response__, 'ipv4_compatible_rfc1583_variable'),
+        ipv4_default_information_originate=pulumi.get(__response__, 'ipv4_default_information_originate'),
+        ipv4_default_information_originate_always=pulumi.get(__response__, 'ipv4_default_information_originate_always'),
+        ipv4_default_information_originate_always_variable=pulumi.get(__response__, 'ipv4_default_information_originate_always_variable'),
+        ipv4_default_information_originate_metric=pulumi.get(__response__, 'ipv4_default_information_originate_metric'),
+        ipv4_default_information_originate_metric_type=pulumi.get(__response__, 'ipv4_default_information_originate_metric_type'),
+        ipv4_default_information_originate_metric_type_variable=pulumi.get(__response__, 'ipv4_default_information_originate_metric_type_variable'),
+        ipv4_default_information_originate_metric_variable=pulumi.get(__response__, 'ipv4_default_information_originate_metric_variable'),
+        ipv4_distance=pulumi.get(__response__, 'ipv4_distance'),
+        ipv4_distance_external=pulumi.get(__response__, 'ipv4_distance_external'),
+        ipv4_distance_external_variable=pulumi.get(__response__, 'ipv4_distance_external_variable'),
+        ipv4_distance_inter_area=pulumi.get(__response__, 'ipv4_distance_inter_area'),
+        ipv4_distance_inter_area_variable=pulumi.get(__response__, 'ipv4_distance_inter_area_variable'),
+        ipv4_distance_intra_area=pulumi.get(__response__, 'ipv4_distance_intra_area'),
+        ipv4_distance_intra_area_variable=pulumi.get(__response__, 'ipv4_distance_intra_area_variable'),
+        ipv4_distance_variable=pulumi.get(__response__, 'ipv4_distance_variable'),
+        ipv4_filter=pulumi.get(__response__, 'ipv4_filter'),
+        ipv4_filter_variable=pulumi.get(__response__, 'ipv4_filter_variable'),
+        ipv4_max_metric_router_lsas=pulumi.get(__response__, 'ipv4_max_metric_router_lsas'),
+        ipv4_policy_name=pulumi.get(__response__, 'ipv4_policy_name'),
+        ipv4_policy_name_variable=pulumi.get(__response__, 'ipv4_policy_name_variable'),
+        ipv4_redistributes=pulumi.get(__response__, 'ipv4_redistributes'),
+        ipv4_router_id=pulumi.get(__response__, 'ipv4_router_id'),
+        ipv4_router_id_variable=pulumi.get(__response__, 'ipv4_router_id_variable'),
+        ipv4_timers_spf_delay=pulumi.get(__response__, 'ipv4_timers_spf_delay'),
+        ipv4_timers_spf_delay_variable=pulumi.get(__response__, 'ipv4_timers_spf_delay_variable'),
+        ipv4_timers_spf_initial_hold=pulumi.get(__response__, 'ipv4_timers_spf_initial_hold'),
+        ipv4_timers_spf_initial_hold_variable=pulumi.get(__response__, 'ipv4_timers_spf_initial_hold_variable'),
+        ipv4_timers_spf_max_hold=pulumi.get(__response__, 'ipv4_timers_spf_max_hold'),
+        ipv4_timers_spf_max_hold_variable=pulumi.get(__response__, 'ipv4_timers_spf_max_hold_variable'),
+        ipv6_areas=pulumi.get(__response__, 'ipv6_areas'),
+        ipv6_auto_cost_reference_bandwidth=pulumi.get(__response__, 'ipv6_auto_cost_reference_bandwidth'),
+        ipv6_auto_cost_reference_bandwidth_variable=pulumi.get(__response__, 'ipv6_auto_cost_reference_bandwidth_variable'),
+        ipv6_compatible_rfc1583=pulumi.get(__response__, 'ipv6_compatible_rfc1583'),
+        ipv6_compatible_rfc1583_variable=pulumi.get(__response__, 'ipv6_compatible_rfc1583_variable'),
+        ipv6_default_information_originate=pulumi.get(__response__, 'ipv6_default_information_originate'),
+        ipv6_default_information_originate_always=pulumi.get(__response__, 'ipv6_default_information_originate_always'),
+        ipv6_default_information_originate_always_variable=pulumi.get(__response__, 'ipv6_default_information_originate_always_variable'),
+        ipv6_default_information_originate_metric=pulumi.get(__response__, 'ipv6_default_information_originate_metric'),
+        ipv6_default_information_originate_metric_type=pulumi.get(__response__, 'ipv6_default_information_originate_metric_type'),
+        ipv6_default_information_originate_metric_type_variable=pulumi.get(__response__, 'ipv6_default_information_originate_metric_type_variable'),
+        ipv6_default_information_originate_metric_variable=pulumi.get(__response__, 'ipv6_default_information_originate_metric_variable'),
+        ipv6_distance=pulumi.get(__response__, 'ipv6_distance'),
+        ipv6_distance_external=pulumi.get(__response__, 'ipv6_distance_external'),
+        ipv6_distance_external_variable=pulumi.get(__response__, 'ipv6_distance_external_variable'),
+        ipv6_distance_inter_area=pulumi.get(__response__, 'ipv6_distance_inter_area'),
+        ipv6_distance_inter_area_variable=pulumi.get(__response__, 'ipv6_distance_inter_area_variable'),
+        ipv6_distance_intra_area=pulumi.get(__response__, 'ipv6_distance_intra_area'),
+        ipv6_distance_intra_area_variable=pulumi.get(__response__, 'ipv6_distance_intra_area_variable'),
+        ipv6_distance_variable=pulumi.get(__response__, 'ipv6_distance_variable'),
+        ipv6_filter=pulumi.get(__response__, 'ipv6_filter'),
+        ipv6_filter_variable=pulumi.get(__response__, 'ipv6_filter_variable'),
+        ipv6_max_metric_router_lsas=pulumi.get(__response__, 'ipv6_max_metric_router_lsas'),
+        ipv6_policy_name=pulumi.get(__response__, 'ipv6_policy_name'),
+        ipv6_policy_name_variable=pulumi.get(__response__, 'ipv6_policy_name_variable'),
+        ipv6_redistributes=pulumi.get(__response__, 'ipv6_redistributes'),
+        ipv6_router_id=pulumi.get(__response__, 'ipv6_router_id'),
+        ipv6_router_id_variable=pulumi.get(__response__, 'ipv6_router_id_variable'),
+        ipv6_timers_spf_delay=pulumi.get(__response__, 'ipv6_timers_spf_delay'),
+        ipv6_timers_spf_delay_variable=pulumi.get(__response__, 'ipv6_timers_spf_delay_variable'),
+        ipv6_timers_spf_initial_hold=pulumi.get(__response__, 'ipv6_timers_spf_initial_hold'),
+        ipv6_timers_spf_initial_hold_variable=pulumi.get(__response__, 'ipv6_timers_spf_initial_hold_variable'),
+        ipv6_timers_spf_max_hold=pulumi.get(__response__, 'ipv6_timers_spf_max_hold'),
+        ipv6_timers_spf_max_hold_variable=pulumi.get(__response__, 'ipv6_timers_spf_max_hold_variable'),
+        name=pulumi.get(__response__, 'name'),
+        template_type=pulumi.get(__response__, 'template_type'),
+        version=pulumi.get(__response__, 'version')))

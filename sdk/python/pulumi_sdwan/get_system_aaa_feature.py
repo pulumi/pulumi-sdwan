@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -307,9 +312,6 @@ def get_system_aaa_feature(feature_profile_id: Optional[str] = None,
         tacacs_groups=pulumi.get(__ret__, 'tacacs_groups'),
         users=pulumi.get(__ret__, 'users'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_system_aaa_feature)
 def get_system_aaa_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                   id: Optional[pulumi.Input[str]] = None,
                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSystemAaaFeatureResult]:
@@ -330,4 +332,28 @@ def get_system_aaa_feature_output(feature_profile_id: Optional[pulumi.Input[str]
     :param str feature_profile_id: Feature Profile ID
     :param str id: The id of the Feature
     """
-    ...
+    __args__ = dict()
+    __args__['featureProfileId'] = feature_profile_id
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getSystemAaaFeature:getSystemAaaFeature', __args__, opts=opts, typ=GetSystemAaaFeatureResult)
+    return __ret__.apply(lambda __response__: GetSystemAaaFeatureResult(
+        accounting_group=pulumi.get(__response__, 'accounting_group'),
+        accounting_group_variable=pulumi.get(__response__, 'accounting_group_variable'),
+        accounting_rules=pulumi.get(__response__, 'accounting_rules'),
+        authentication_group=pulumi.get(__response__, 'authentication_group'),
+        authentication_group_variable=pulumi.get(__response__, 'authentication_group_variable'),
+        authorization_config_commands=pulumi.get(__response__, 'authorization_config_commands'),
+        authorization_config_commands_variable=pulumi.get(__response__, 'authorization_config_commands_variable'),
+        authorization_console=pulumi.get(__response__, 'authorization_console'),
+        authorization_console_variable=pulumi.get(__response__, 'authorization_console_variable'),
+        authorization_rules=pulumi.get(__response__, 'authorization_rules'),
+        description=pulumi.get(__response__, 'description'),
+        feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
+        radius_groups=pulumi.get(__response__, 'radius_groups'),
+        server_auth_orders=pulumi.get(__response__, 'server_auth_orders'),
+        tacacs_groups=pulumi.get(__response__, 'tacacs_groups'),
+        users=pulumi.get(__response__, 'users'),
+        version=pulumi.get(__response__, 'version')))

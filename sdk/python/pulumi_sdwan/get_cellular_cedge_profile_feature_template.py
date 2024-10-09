@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 
 __all__ = [
@@ -318,9 +323,6 @@ def get_cellular_cedge_profile_feature_template(id: Optional[str] = None,
         profile_username_variable=pulumi.get(__ret__, 'profile_username_variable'),
         template_type=pulumi.get(__ret__, 'template_type'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_cellular_cedge_profile_feature_template)
 def get_cellular_cedge_profile_feature_template_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                                        name: Optional[pulumi.Input[Optional[str]]] = None,
                                                        opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCellularCedgeProfileFeatureTemplateResult]:
@@ -340,4 +342,29 @@ def get_cellular_cedge_profile_feature_template_output(id: Optional[pulumi.Input
     :param str id: The id of the feature template
     :param str name: The name of the feature template
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getCellularCedgeProfileFeatureTemplate:getCellularCedgeProfileFeatureTemplate', __args__, opts=opts, typ=GetCellularCedgeProfileFeatureTemplateResult)
+    return __ret__.apply(lambda __response__: GetCellularCedgeProfileFeatureTemplateResult(
+        access_point_name=pulumi.get(__response__, 'access_point_name'),
+        access_point_name_variable=pulumi.get(__response__, 'access_point_name_variable'),
+        authentication_type=pulumi.get(__response__, 'authentication_type'),
+        authentication_type_variable=pulumi.get(__response__, 'authentication_type_variable'),
+        description=pulumi.get(__response__, 'description'),
+        device_types=pulumi.get(__response__, 'device_types'),
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
+        no_overwrite=pulumi.get(__response__, 'no_overwrite'),
+        no_overwrite_variable=pulumi.get(__response__, 'no_overwrite_variable'),
+        packet_data_network_type=pulumi.get(__response__, 'packet_data_network_type'),
+        packet_data_network_type_variable=pulumi.get(__response__, 'packet_data_network_type_variable'),
+        profile_id=pulumi.get(__response__, 'profile_id'),
+        profile_id_variable=pulumi.get(__response__, 'profile_id_variable'),
+        profile_password=pulumi.get(__response__, 'profile_password'),
+        profile_password_variable=pulumi.get(__response__, 'profile_password_variable'),
+        profile_username=pulumi.get(__response__, 'profile_username'),
+        profile_username_variable=pulumi.get(__response__, 'profile_username_variable'),
+        template_type=pulumi.get(__response__, 'template_type'),
+        version=pulumi.get(__response__, 'version')))

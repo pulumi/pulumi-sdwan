@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -121,9 +126,6 @@ def get_app_probe_class_policy_object(id: Optional[str] = None,
         mappings=pulumi.get(__ret__, 'mappings'),
         name=pulumi.get(__ret__, 'name'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_app_probe_class_policy_object)
 def get_app_probe_class_policy_object_output(id: Optional[pulumi.Input[str]] = None,
                                              opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetAppProbeClassPolicyObjectResult]:
     """
@@ -141,4 +143,13 @@ def get_app_probe_class_policy_object_output(id: Optional[pulumi.Input[str]] = N
 
     :param str id: The id of the object
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getAppProbeClassPolicyObject:getAppProbeClassPolicyObject', __args__, opts=opts, typ=GetAppProbeClassPolicyObjectResult)
+    return __ret__.apply(lambda __response__: GetAppProbeClassPolicyObjectResult(
+        forwarding_class=pulumi.get(__response__, 'forwarding_class'),
+        id=pulumi.get(__response__, 'id'),
+        mappings=pulumi.get(__response__, 'mappings'),
+        name=pulumi.get(__response__, 'name'),
+        version=pulumi.get(__response__, 'version')))

@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -281,9 +286,6 @@ def get_system_security_feature(feature_profile_id: Optional[str] = None,
         rekey=pulumi.get(__ret__, 'rekey'),
         rekey_variable=pulumi.get(__ret__, 'rekey_variable'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_system_security_feature)
 def get_system_security_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                        id: Optional[pulumi.Input[str]] = None,
                                        opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSystemSecurityFeatureResult]:
@@ -304,4 +306,26 @@ def get_system_security_feature_output(feature_profile_id: Optional[pulumi.Input
     :param str feature_profile_id: Feature Profile ID
     :param str id: The id of the Feature
     """
-    ...
+    __args__ = dict()
+    __args__['featureProfileId'] = feature_profile_id
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getSystemSecurityFeature:getSystemSecurityFeature', __args__, opts=opts, typ=GetSystemSecurityFeatureResult)
+    return __ret__.apply(lambda __response__: GetSystemSecurityFeatureResult(
+        anti_replay_window=pulumi.get(__response__, 'anti_replay_window'),
+        anti_replay_window_variable=pulumi.get(__response__, 'anti_replay_window_variable'),
+        description=pulumi.get(__response__, 'description'),
+        extended_anti_replay_window=pulumi.get(__response__, 'extended_anti_replay_window'),
+        extended_anti_replay_window_variable=pulumi.get(__response__, 'extended_anti_replay_window_variable'),
+        feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),
+        id=pulumi.get(__response__, 'id'),
+        integrity_type_variable=pulumi.get(__response__, 'integrity_type_variable'),
+        integrity_types=pulumi.get(__response__, 'integrity_types'),
+        ipsec_pairwise_keying=pulumi.get(__response__, 'ipsec_pairwise_keying'),
+        ipsec_pairwise_keying_variable=pulumi.get(__response__, 'ipsec_pairwise_keying_variable'),
+        keychains=pulumi.get(__response__, 'keychains'),
+        keys=pulumi.get(__response__, 'keys'),
+        name=pulumi.get(__response__, 'name'),
+        rekey=pulumi.get(__response__, 'rekey'),
+        rekey_variable=pulumi.get(__response__, 'rekey_variable'),
+        version=pulumi.get(__response__, 'version')))

@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 
 __all__ = [
@@ -422,9 +427,6 @@ def get_cellular_profile_feature_template(id: Optional[str] = None,
         secondary_dns_address_variable=pulumi.get(__ret__, 'secondary_dns_address_variable'),
         template_type=pulumi.get(__ret__, 'template_type'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_cellular_profile_feature_template)
 def get_cellular_profile_feature_template_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                                  name: Optional[pulumi.Input[Optional[str]]] = None,
                                                  opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCellularProfileFeatureTemplateResult]:
@@ -444,4 +446,37 @@ def get_cellular_profile_feature_template_output(id: Optional[pulumi.Input[Optio
     :param str id: The id of the feature template
     :param str name: The name of the feature template
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getCellularProfileFeatureTemplate:getCellularProfileFeatureTemplate', __args__, opts=opts, typ=GetCellularProfileFeatureTemplateResult)
+    return __ret__.apply(lambda __response__: GetCellularProfileFeatureTemplateResult(
+        access_point_name=pulumi.get(__response__, 'access_point_name'),
+        access_point_name_variable=pulumi.get(__response__, 'access_point_name_variable'),
+        authentication_type=pulumi.get(__response__, 'authentication_type'),
+        authentication_type_variable=pulumi.get(__response__, 'authentication_type_variable'),
+        description=pulumi.get(__response__, 'description'),
+        device_types=pulumi.get(__response__, 'device_types'),
+        id=pulumi.get(__response__, 'id'),
+        if_name=pulumi.get(__response__, 'if_name'),
+        if_name_variable=pulumi.get(__response__, 'if_name_variable'),
+        ip_address=pulumi.get(__response__, 'ip_address'),
+        ip_address_variable=pulumi.get(__response__, 'ip_address_variable'),
+        name=pulumi.get(__response__, 'name'),
+        packet_data_network_type=pulumi.get(__response__, 'packet_data_network_type'),
+        packet_data_network_type_variable=pulumi.get(__response__, 'packet_data_network_type_variable'),
+        primary_dns_address=pulumi.get(__response__, 'primary_dns_address'),
+        primary_dns_address_variable=pulumi.get(__response__, 'primary_dns_address_variable'),
+        profile_id=pulumi.get(__response__, 'profile_id'),
+        profile_id_variable=pulumi.get(__response__, 'profile_id_variable'),
+        profile_name=pulumi.get(__response__, 'profile_name'),
+        profile_name_variable=pulumi.get(__response__, 'profile_name_variable'),
+        profile_password=pulumi.get(__response__, 'profile_password'),
+        profile_password_variable=pulumi.get(__response__, 'profile_password_variable'),
+        profile_username=pulumi.get(__response__, 'profile_username'),
+        profile_username_variable=pulumi.get(__response__, 'profile_username_variable'),
+        secondary_dns_address=pulumi.get(__response__, 'secondary_dns_address'),
+        secondary_dns_address_variable=pulumi.get(__response__, 'secondary_dns_address_variable'),
+        template_type=pulumi.get(__response__, 'template_type'),
+        version=pulumi.get(__response__, 'version')))

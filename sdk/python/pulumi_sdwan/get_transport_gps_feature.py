@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 
 __all__ = [
@@ -280,9 +285,6 @@ def get_transport_gps_feature(feature_profile_id: Optional[str] = None,
         nmea_source_address=pulumi.get(__ret__, 'nmea_source_address'),
         nmea_source_address_variable=pulumi.get(__ret__, 'nmea_source_address_variable'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_transport_gps_feature)
 def get_transport_gps_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                      id: Optional[pulumi.Input[str]] = None,
                                      opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetTransportGpsFeatureResult]:
@@ -303,4 +305,26 @@ def get_transport_gps_feature_output(feature_profile_id: Optional[pulumi.Input[s
     :param str feature_profile_id: Feature Profile ID
     :param str id: The id of the Feature
     """
-    ...
+    __args__ = dict()
+    __args__['featureProfileId'] = feature_profile_id
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getTransportGpsFeature:getTransportGpsFeature', __args__, opts=opts, typ=GetTransportGpsFeatureResult)
+    return __ret__.apply(lambda __response__: GetTransportGpsFeatureResult(
+        description=pulumi.get(__response__, 'description'),
+        feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),
+        gps_enable=pulumi.get(__response__, 'gps_enable'),
+        gps_enable_variable=pulumi.get(__response__, 'gps_enable_variable'),
+        gps_mode=pulumi.get(__response__, 'gps_mode'),
+        gps_mode_variable=pulumi.get(__response__, 'gps_mode_variable'),
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
+        nmea_destination_address=pulumi.get(__response__, 'nmea_destination_address'),
+        nmea_destination_address_variable=pulumi.get(__response__, 'nmea_destination_address_variable'),
+        nmea_destination_port=pulumi.get(__response__, 'nmea_destination_port'),
+        nmea_destination_port_variable=pulumi.get(__response__, 'nmea_destination_port_variable'),
+        nmea_enable=pulumi.get(__response__, 'nmea_enable'),
+        nmea_enable_variable=pulumi.get(__response__, 'nmea_enable_variable'),
+        nmea_source_address=pulumi.get(__response__, 'nmea_source_address'),
+        nmea_source_address_variable=pulumi.get(__response__, 'nmea_source_address_variable'),
+        version=pulumi.get(__response__, 'version')))

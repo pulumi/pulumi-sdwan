@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -268,9 +273,6 @@ def get_system_snmp_feature(feature_profile_id: Optional[str] = None,
         users=pulumi.get(__ret__, 'users'),
         version=pulumi.get(__ret__, 'version'),
         views=pulumi.get(__ret__, 'views'))
-
-
-@_utilities.lift_output_func(get_system_snmp_feature)
 def get_system_snmp_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                    id: Optional[pulumi.Input[str]] = None,
                                    opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSystemSnmpFeatureResult]:
@@ -291,4 +293,25 @@ def get_system_snmp_feature_output(feature_profile_id: Optional[pulumi.Input[str
     :param str feature_profile_id: Feature Profile ID
     :param str id: The id of the Feature
     """
-    ...
+    __args__ = dict()
+    __args__['featureProfileId'] = feature_profile_id
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getSystemSnmpFeature:getSystemSnmpFeature', __args__, opts=opts, typ=GetSystemSnmpFeatureResult)
+    return __ret__.apply(lambda __response__: GetSystemSnmpFeatureResult(
+        communities=pulumi.get(__response__, 'communities'),
+        contact_person=pulumi.get(__response__, 'contact_person'),
+        contact_person_variable=pulumi.get(__response__, 'contact_person_variable'),
+        description=pulumi.get(__response__, 'description'),
+        feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),
+        groups=pulumi.get(__response__, 'groups'),
+        id=pulumi.get(__response__, 'id'),
+        location_of_device=pulumi.get(__response__, 'location_of_device'),
+        location_of_device_variable=pulumi.get(__response__, 'location_of_device_variable'),
+        name=pulumi.get(__response__, 'name'),
+        shutdown=pulumi.get(__response__, 'shutdown'),
+        shutdown_variable=pulumi.get(__response__, 'shutdown_variable'),
+        trap_target_servers=pulumi.get(__response__, 'trap_target_servers'),
+        users=pulumi.get(__response__, 'users'),
+        version=pulumi.get(__response__, 'version'),
+        views=pulumi.get(__response__, 'views')))

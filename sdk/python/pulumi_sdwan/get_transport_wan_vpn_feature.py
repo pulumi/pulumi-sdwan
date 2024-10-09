@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -330,9 +335,6 @@ def get_transport_wan_vpn_feature(feature_profile_id: Optional[str] = None,
         services=pulumi.get(__ret__, 'services'),
         version=pulumi.get(__ret__, 'version'),
         vpn=pulumi.get(__ret__, 'vpn'))
-
-
-@_utilities.lift_output_func(get_transport_wan_vpn_feature)
 def get_transport_wan_vpn_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                          id: Optional[pulumi.Input[str]] = None,
                                          opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetTransportWanVpnFeatureResult]:
@@ -353,4 +355,30 @@ def get_transport_wan_vpn_feature_output(feature_profile_id: Optional[pulumi.Inp
     :param str feature_profile_id: Feature Profile ID
     :param str id: The id of the Feature
     """
-    ...
+    __args__ = dict()
+    __args__['featureProfileId'] = feature_profile_id
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getTransportWanVpnFeature:getTransportWanVpnFeature', __args__, opts=opts, typ=GetTransportWanVpnFeatureResult)
+    return __ret__.apply(lambda __response__: GetTransportWanVpnFeatureResult(
+        description=pulumi.get(__response__, 'description'),
+        enhance_ecmp_keying=pulumi.get(__response__, 'enhance_ecmp_keying'),
+        enhance_ecmp_keying_variable=pulumi.get(__response__, 'enhance_ecmp_keying_variable'),
+        feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),
+        id=pulumi.get(__response__, 'id'),
+        ipv4_static_routes=pulumi.get(__response__, 'ipv4_static_routes'),
+        ipv6_static_routes=pulumi.get(__response__, 'ipv6_static_routes'),
+        name=pulumi.get(__response__, 'name'),
+        nat64_v4_pools=pulumi.get(__response__, 'nat64_v4_pools'),
+        new_host_mappings=pulumi.get(__response__, 'new_host_mappings'),
+        primary_dns_address_ipv4=pulumi.get(__response__, 'primary_dns_address_ipv4'),
+        primary_dns_address_ipv4_variable=pulumi.get(__response__, 'primary_dns_address_ipv4_variable'),
+        primary_dns_address_ipv6=pulumi.get(__response__, 'primary_dns_address_ipv6'),
+        primary_dns_address_ipv6_variable=pulumi.get(__response__, 'primary_dns_address_ipv6_variable'),
+        secondary_dns_address_ipv4=pulumi.get(__response__, 'secondary_dns_address_ipv4'),
+        secondary_dns_address_ipv4_variable=pulumi.get(__response__, 'secondary_dns_address_ipv4_variable'),
+        secondary_dns_address_ipv6=pulumi.get(__response__, 'secondary_dns_address_ipv6'),
+        secondary_dns_address_ipv6_variable=pulumi.get(__response__, 'secondary_dns_address_ipv6_variable'),
+        services=pulumi.get(__response__, 'services'),
+        version=pulumi.get(__response__, 'version'),
+        vpn=pulumi.get(__response__, 'vpn')))

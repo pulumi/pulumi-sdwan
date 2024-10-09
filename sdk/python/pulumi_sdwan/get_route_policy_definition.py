@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -147,9 +152,6 @@ def get_route_policy_definition(id: Optional[str] = None,
         sequences=pulumi.get(__ret__, 'sequences'),
         type=pulumi.get(__ret__, 'type'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_route_policy_definition)
 def get_route_policy_definition_output(id: Optional[pulumi.Input[str]] = None,
                                        opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetRoutePolicyDefinitionResult]:
     """
@@ -167,4 +169,15 @@ def get_route_policy_definition_output(id: Optional[pulumi.Input[str]] = None,
 
     :param str id: The id of the object
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getRoutePolicyDefinition:getRoutePolicyDefinition', __args__, opts=opts, typ=GetRoutePolicyDefinitionResult)
+    return __ret__.apply(lambda __response__: GetRoutePolicyDefinitionResult(
+        default_action=pulumi.get(__response__, 'default_action'),
+        description=pulumi.get(__response__, 'description'),
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
+        sequences=pulumi.get(__response__, 'sequences'),
+        type=pulumi.get(__response__, 'type'),
+        version=pulumi.get(__response__, 'version')))

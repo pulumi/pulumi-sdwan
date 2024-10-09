@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 
 __all__ = [
@@ -263,9 +268,6 @@ def get_url_filtering_policy_definition(id: Optional[str] = None,
         web_categories=pulumi.get(__ret__, 'web_categories'),
         web_categories_action=pulumi.get(__ret__, 'web_categories_action'),
         web_reputation=pulumi.get(__ret__, 'web_reputation'))
-
-
-@_utilities.lift_output_func(get_url_filtering_policy_definition)
 def get_url_filtering_policy_definition_output(id: Optional[pulumi.Input[str]] = None,
                                                opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetUrlFilteringPolicyDefinitionResult]:
     """
@@ -283,4 +285,24 @@ def get_url_filtering_policy_definition_output(id: Optional[pulumi.Input[str]] =
 
     :param str id: The id of the object
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getUrlFilteringPolicyDefinition:getUrlFilteringPolicyDefinition', __args__, opts=opts, typ=GetUrlFilteringPolicyDefinitionResult)
+    return __ret__.apply(lambda __response__: GetUrlFilteringPolicyDefinitionResult(
+        alerts=pulumi.get(__response__, 'alerts'),
+        allow_url_list_id=pulumi.get(__response__, 'allow_url_list_id'),
+        allow_url_list_version=pulumi.get(__response__, 'allow_url_list_version'),
+        block_page_action=pulumi.get(__response__, 'block_page_action'),
+        block_page_contents=pulumi.get(__response__, 'block_page_contents'),
+        block_url_list_id=pulumi.get(__response__, 'block_url_list_id'),
+        block_url_list_version=pulumi.get(__response__, 'block_url_list_version'),
+        description=pulumi.get(__response__, 'description'),
+        id=pulumi.get(__response__, 'id'),
+        mode=pulumi.get(__response__, 'mode'),
+        name=pulumi.get(__response__, 'name'),
+        target_vpns=pulumi.get(__response__, 'target_vpns'),
+        version=pulumi.get(__response__, 'version'),
+        web_categories=pulumi.get(__response__, 'web_categories'),
+        web_categories_action=pulumi.get(__response__, 'web_categories_action'),
+        web_reputation=pulumi.get(__response__, 'web_reputation')))

@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 
 __all__ = [
@@ -422,9 +427,6 @@ def get_cisco_sig_credentials_feature_template(id: Optional[str] = None,
         zscaler_password_variable=pulumi.get(__ret__, 'zscaler_password_variable'),
         zscaler_username=pulumi.get(__ret__, 'zscaler_username'),
         zscaler_username_variable=pulumi.get(__ret__, 'zscaler_username_variable'))
-
-
-@_utilities.lift_output_func(get_cisco_sig_credentials_feature_template)
 def get_cisco_sig_credentials_feature_template_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                                       name: Optional[pulumi.Input[Optional[str]]] = None,
                                                       opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCiscoSigCredentialsFeatureTemplateResult]:
@@ -444,4 +446,37 @@ def get_cisco_sig_credentials_feature_template_output(id: Optional[pulumi.Input[
     :param str id: The id of the feature template
     :param str name: The name of the feature template
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getCiscoSigCredentialsFeatureTemplate:getCiscoSigCredentialsFeatureTemplate', __args__, opts=opts, typ=GetCiscoSigCredentialsFeatureTemplateResult)
+    return __ret__.apply(lambda __response__: GetCiscoSigCredentialsFeatureTemplateResult(
+        description=pulumi.get(__response__, 'description'),
+        device_types=pulumi.get(__response__, 'device_types'),
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
+        template_type=pulumi.get(__response__, 'template_type'),
+        umbrella_api_key=pulumi.get(__response__, 'umbrella_api_key'),
+        umbrella_api_key_variable=pulumi.get(__response__, 'umbrella_api_key_variable'),
+        umbrella_api_secret=pulumi.get(__response__, 'umbrella_api_secret'),
+        umbrella_api_secret_variable=pulumi.get(__response__, 'umbrella_api_secret_variable'),
+        umbrella_organization_id=pulumi.get(__response__, 'umbrella_organization_id'),
+        umbrella_organization_id_variable=pulumi.get(__response__, 'umbrella_organization_id_variable'),
+        version=pulumi.get(__response__, 'version'),
+        zscaler_cloud_name=pulumi.get(__response__, 'zscaler_cloud_name'),
+        zscaler_cloud_name_variable=pulumi.get(__response__, 'zscaler_cloud_name_variable'),
+        zscaler_organization=pulumi.get(__response__, 'zscaler_organization'),
+        zscaler_organization_variable=pulumi.get(__response__, 'zscaler_organization_variable'),
+        zscaler_partner_api_key=pulumi.get(__response__, 'zscaler_partner_api_key'),
+        zscaler_partner_api_key_variable=pulumi.get(__response__, 'zscaler_partner_api_key_variable'),
+        zscaler_partner_base_uri=pulumi.get(__response__, 'zscaler_partner_base_uri'),
+        zscaler_partner_base_uri_variable=pulumi.get(__response__, 'zscaler_partner_base_uri_variable'),
+        zscaler_partner_password=pulumi.get(__response__, 'zscaler_partner_password'),
+        zscaler_partner_password_variable=pulumi.get(__response__, 'zscaler_partner_password_variable'),
+        zscaler_partner_username=pulumi.get(__response__, 'zscaler_partner_username'),
+        zscaler_partner_username_variable=pulumi.get(__response__, 'zscaler_partner_username_variable'),
+        zscaler_password=pulumi.get(__response__, 'zscaler_password'),
+        zscaler_password_variable=pulumi.get(__response__, 'zscaler_password_variable'),
+        zscaler_username=pulumi.get(__response__, 'zscaler_username'),
+        zscaler_username_variable=pulumi.get(__response__, 'zscaler_username_variable')))

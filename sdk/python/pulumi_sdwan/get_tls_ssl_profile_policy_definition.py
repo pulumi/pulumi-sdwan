@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 
 __all__ = [
@@ -250,9 +255,6 @@ def get_tls_ssl_profile_policy_definition(id: Optional[str] = None,
         reputation=pulumi.get(__ret__, 'reputation'),
         skip_decrypt_categories=pulumi.get(__ret__, 'skip_decrypt_categories'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_tls_ssl_profile_policy_definition)
 def get_tls_ssl_profile_policy_definition_output(id: Optional[pulumi.Input[str]] = None,
                                                  opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetTlsSslProfilePolicyDefinitionResult]:
     """
@@ -270,4 +272,23 @@ def get_tls_ssl_profile_policy_definition_output(id: Optional[pulumi.Input[str]]
 
     :param str id: The id of the object
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getTlsSslProfilePolicyDefinition:getTlsSslProfilePolicyDefinition', __args__, opts=opts, typ=GetTlsSslProfilePolicyDefinitionResult)
+    return __ret__.apply(lambda __response__: GetTlsSslProfilePolicyDefinitionResult(
+        allow_url_list_id=pulumi.get(__response__, 'allow_url_list_id'),
+        allow_url_list_version=pulumi.get(__response__, 'allow_url_list_version'),
+        block_url_list_id=pulumi.get(__response__, 'block_url_list_id'),
+        block_url_list_version=pulumi.get(__response__, 'block_url_list_version'),
+        decrypt_categories=pulumi.get(__response__, 'decrypt_categories'),
+        decrypt_threshold=pulumi.get(__response__, 'decrypt_threshold'),
+        description=pulumi.get(__response__, 'description'),
+        fail_decrypt=pulumi.get(__response__, 'fail_decrypt'),
+        id=pulumi.get(__response__, 'id'),
+        mode=pulumi.get(__response__, 'mode'),
+        name=pulumi.get(__response__, 'name'),
+        never_decrypt_categories=pulumi.get(__response__, 'never_decrypt_categories'),
+        reputation=pulumi.get(__response__, 'reputation'),
+        skip_decrypt_categories=pulumi.get(__response__, 'skip_decrypt_categories'),
+        version=pulumi.get(__response__, 'version')))

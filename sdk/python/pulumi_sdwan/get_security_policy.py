@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -261,9 +266,6 @@ def get_security_policy(id: Optional[str] = None,
         tcp_syn_flood_limit=pulumi.get(__ret__, 'tcp_syn_flood_limit'),
         use_case=pulumi.get(__ret__, 'use_case'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_security_policy)
 def get_security_policy_output(id: Optional[pulumi.Input[str]] = None,
                                opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSecurityPolicyResult]:
     """
@@ -281,4 +283,24 @@ def get_security_policy_output(id: Optional[pulumi.Input[str]] = None,
 
     :param str id: The id of the object
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getSecurityPolicy:getSecurityPolicy', __args__, opts=opts, typ=GetSecurityPolicyResult)
+    return __ret__.apply(lambda __response__: GetSecurityPolicyResult(
+        audit_trail=pulumi.get(__response__, 'audit_trail'),
+        definitions=pulumi.get(__response__, 'definitions'),
+        description=pulumi.get(__response__, 'description'),
+        direct_internet_applications=pulumi.get(__response__, 'direct_internet_applications'),
+        failure_mode=pulumi.get(__response__, 'failure_mode'),
+        high_speed_logging_server_ip=pulumi.get(__response__, 'high_speed_logging_server_ip'),
+        high_speed_logging_server_port=pulumi.get(__response__, 'high_speed_logging_server_port'),
+        high_speed_logging_vpn=pulumi.get(__response__, 'high_speed_logging_vpn'),
+        id=pulumi.get(__response__, 'id'),
+        loggings=pulumi.get(__response__, 'loggings'),
+        match_statistics_per_filter=pulumi.get(__response__, 'match_statistics_per_filter'),
+        mode=pulumi.get(__response__, 'mode'),
+        name=pulumi.get(__response__, 'name'),
+        tcp_syn_flood_limit=pulumi.get(__response__, 'tcp_syn_flood_limit'),
+        use_case=pulumi.get(__response__, 'use_case'),
+        version=pulumi.get(__response__, 'version')))
