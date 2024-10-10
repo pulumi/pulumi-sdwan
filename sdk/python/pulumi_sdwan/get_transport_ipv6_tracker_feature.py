@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 
 __all__ = [
@@ -358,9 +363,6 @@ def get_transport_ipv6_tracker_feature(feature_profile_id: Optional[str] = None,
         tracker_type=pulumi.get(__ret__, 'tracker_type'),
         tracker_type_variable=pulumi.get(__ret__, 'tracker_type_variable'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_transport_ipv6_tracker_feature)
 def get_transport_ipv6_tracker_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                               id: Optional[pulumi.Input[str]] = None,
                                               opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetTransportIpv6TrackerFeatureResult]:
@@ -381,4 +383,32 @@ def get_transport_ipv6_tracker_feature_output(feature_profile_id: Optional[pulum
     :param str feature_profile_id: Feature Profile ID
     :param str id: The id of the Feature
     """
-    ...
+    __args__ = dict()
+    __args__['featureProfileId'] = feature_profile_id
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getTransportIpv6TrackerFeature:getTransportIpv6TrackerFeature', __args__, opts=opts, typ=GetTransportIpv6TrackerFeatureResult)
+    return __ret__.apply(lambda __response__: GetTransportIpv6TrackerFeatureResult(
+        description=pulumi.get(__response__, 'description'),
+        endpoint_api_url=pulumi.get(__response__, 'endpoint_api_url'),
+        endpoint_api_url_variable=pulumi.get(__response__, 'endpoint_api_url_variable'),
+        endpoint_dns_name=pulumi.get(__response__, 'endpoint_dns_name'),
+        endpoint_dns_name_variable=pulumi.get(__response__, 'endpoint_dns_name_variable'),
+        endpoint_ip=pulumi.get(__response__, 'endpoint_ip'),
+        endpoint_ip_variable=pulumi.get(__response__, 'endpoint_ip_variable'),
+        endpoint_tracker_type=pulumi.get(__response__, 'endpoint_tracker_type'),
+        endpoint_tracker_type_variable=pulumi.get(__response__, 'endpoint_tracker_type_variable'),
+        feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),
+        id=pulumi.get(__response__, 'id'),
+        interval=pulumi.get(__response__, 'interval'),
+        interval_variable=pulumi.get(__response__, 'interval_variable'),
+        multiplier=pulumi.get(__response__, 'multiplier'),
+        multiplier_variable=pulumi.get(__response__, 'multiplier_variable'),
+        name=pulumi.get(__response__, 'name'),
+        threshold=pulumi.get(__response__, 'threshold'),
+        threshold_variable=pulumi.get(__response__, 'threshold_variable'),
+        tracker_name=pulumi.get(__response__, 'tracker_name'),
+        tracker_name_variable=pulumi.get(__response__, 'tracker_name_variable'),
+        tracker_type=pulumi.get(__response__, 'tracker_type'),
+        tracker_type_variable=pulumi.get(__response__, 'tracker_type_variable'),
+        version=pulumi.get(__response__, 'version')))

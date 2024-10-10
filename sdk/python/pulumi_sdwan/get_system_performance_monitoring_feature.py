@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 
 __all__ = [
@@ -202,9 +207,6 @@ def get_system_performance_monitoring_feature(feature_profile_id: Optional[str] 
         monitoring_config_interval=pulumi.get(__ret__, 'monitoring_config_interval'),
         name=pulumi.get(__ret__, 'name'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_system_performance_monitoring_feature)
 def get_system_performance_monitoring_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                                      id: Optional[pulumi.Input[str]] = None,
                                                      opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSystemPerformanceMonitoringFeatureResult]:
@@ -225,4 +227,20 @@ def get_system_performance_monitoring_feature_output(feature_profile_id: Optiona
     :param str feature_profile_id: Feature Profile ID
     :param str id: The id of the Feature
     """
-    ...
+    __args__ = dict()
+    __args__['featureProfileId'] = feature_profile_id
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getSystemPerformanceMonitoringFeature:getSystemPerformanceMonitoringFeature', __args__, opts=opts, typ=GetSystemPerformanceMonitoringFeatureResult)
+    return __ret__.apply(lambda __response__: GetSystemPerformanceMonitoringFeatureResult(
+        app_perf_monitor_app_groups=pulumi.get(__response__, 'app_perf_monitor_app_groups'),
+        app_perf_monitor_enabled=pulumi.get(__response__, 'app_perf_monitor_enabled'),
+        description=pulumi.get(__response__, 'description'),
+        event_driven_config_enabled=pulumi.get(__response__, 'event_driven_config_enabled'),
+        event_driven_events=pulumi.get(__response__, 'event_driven_events'),
+        feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),
+        id=pulumi.get(__response__, 'id'),
+        monitoring_config_enabled=pulumi.get(__response__, 'monitoring_config_enabled'),
+        monitoring_config_interval=pulumi.get(__response__, 'monitoring_config_interval'),
+        name=pulumi.get(__response__, 'name'),
+        version=pulumi.get(__response__, 'version')))

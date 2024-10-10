@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -138,9 +143,6 @@ def get_policy_object_policer(feature_profile_id: Optional[str] = None,
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_policy_object_policer)
 def get_policy_object_policer_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                      id: Optional[pulumi.Input[str]] = None,
                                      opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetPolicyObjectPolicerResult]:
@@ -161,4 +163,15 @@ def get_policy_object_policer_output(feature_profile_id: Optional[pulumi.Input[s
     :param str feature_profile_id: Feature Profile ID
     :param str id: The id of the Policy_object
     """
-    ...
+    __args__ = dict()
+    __args__['featureProfileId'] = feature_profile_id
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getPolicyObjectPolicer:getPolicyObjectPolicer', __args__, opts=opts, typ=GetPolicyObjectPolicerResult)
+    return __ret__.apply(lambda __response__: GetPolicyObjectPolicerResult(
+        description=pulumi.get(__response__, 'description'),
+        entries=pulumi.get(__response__, 'entries'),
+        feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
+        version=pulumi.get(__response__, 'version')))

@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -228,9 +233,6 @@ def get_switchport_feature_template(id: Optional[str] = None,
         sub_slot=pulumi.get(__ret__, 'sub_slot'),
         template_type=pulumi.get(__ret__, 'template_type'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_switchport_feature_template)
 def get_switchport_feature_template_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                            name: Optional[pulumi.Input[Optional[str]]] = None,
                                            opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSwitchportFeatureTemplateResult]:
@@ -250,4 +252,22 @@ def get_switchport_feature_template_output(id: Optional[pulumi.Input[Optional[st
     :param str id: The id of the feature template
     :param str name: The name of the feature template
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getSwitchportFeatureTemplate:getSwitchportFeatureTemplate', __args__, opts=opts, typ=GetSwitchportFeatureTemplateResult)
+    return __ret__.apply(lambda __response__: GetSwitchportFeatureTemplateResult(
+        age_out_time=pulumi.get(__response__, 'age_out_time'),
+        age_out_time_variable=pulumi.get(__response__, 'age_out_time_variable'),
+        description=pulumi.get(__response__, 'description'),
+        device_types=pulumi.get(__response__, 'device_types'),
+        id=pulumi.get(__response__, 'id'),
+        interfaces=pulumi.get(__response__, 'interfaces'),
+        module_type=pulumi.get(__response__, 'module_type'),
+        name=pulumi.get(__response__, 'name'),
+        slot=pulumi.get(__response__, 'slot'),
+        static_mac_addresses=pulumi.get(__response__, 'static_mac_addresses'),
+        sub_slot=pulumi.get(__response__, 'sub_slot'),
+        template_type=pulumi.get(__response__, 'template_type'),
+        version=pulumi.get(__response__, 'version')))

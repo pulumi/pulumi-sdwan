@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 
 __all__ = [
@@ -617,9 +622,6 @@ def get_system_remote_access_feature(feature_profile_id: Optional[str] = None,
         radius_group_name=pulumi.get(__ret__, 'radius_group_name'),
         radius_group_name_variable=pulumi.get(__ret__, 'radius_group_name_variable'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_system_remote_access_feature)
 def get_system_remote_access_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                             id: Optional[pulumi.Input[str]] = None,
                                             opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSystemRemoteAccessFeatureResult]:
@@ -640,4 +642,54 @@ def get_system_remote_access_feature_output(feature_profile_id: Optional[pulumi.
     :param str feature_profile_id: Feature Profile ID
     :param str id: The id of the Feature
     """
-    ...
+    __args__ = dict()
+    __args__['featureProfileId'] = feature_profile_id
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getSystemRemoteAccessFeature:getSystemRemoteAccessFeature', __args__, opts=opts, typ=GetSystemRemoteAccessFeatureResult)
+    return __ret__.apply(lambda __response__: GetSystemRemoteAccessFeatureResult(
+        aaa_derive_name_from_peer_domain=pulumi.get(__response__, 'aaa_derive_name_from_peer_domain'),
+        aaa_derive_name_from_peer_domain_variable=pulumi.get(__response__, 'aaa_derive_name_from_peer_domain_variable'),
+        aaa_derive_name_from_peer_identity=pulumi.get(__response__, 'aaa_derive_name_from_peer_identity'),
+        aaa_derive_name_from_peer_identity_variable=pulumi.get(__response__, 'aaa_derive_name_from_peer_identity_variable'),
+        aaa_enable_accounting=pulumi.get(__response__, 'aaa_enable_accounting'),
+        aaa_enable_accounting_variable=pulumi.get(__response__, 'aaa_enable_accounting_variable'),
+        aaa_specify_name_policy_name=pulumi.get(__response__, 'aaa_specify_name_policy_name'),
+        aaa_specify_name_policy_name_variable=pulumi.get(__response__, 'aaa_specify_name_policy_name_variable'),
+        aaa_specify_name_policy_password=pulumi.get(__response__, 'aaa_specify_name_policy_password'),
+        aaa_specify_name_policy_password_variable=pulumi.get(__response__, 'aaa_specify_name_policy_password_variable'),
+        any_connect_eap_authentication_type=pulumi.get(__response__, 'any_connect_eap_authentication_type'),
+        connection_type_ssl=pulumi.get(__response__, 'connection_type_ssl'),
+        description=pulumi.get(__response__, 'description'),
+        enable_certificate_list_check=pulumi.get(__response__, 'enable_certificate_list_check'),
+        enable_certificate_list_check_variable=pulumi.get(__response__, 'enable_certificate_list_check_variable'),
+        feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),
+        id=pulumi.get(__response__, 'id'),
+        ikev2_anti_dos_threshold=pulumi.get(__response__, 'ikev2_anti_dos_threshold'),
+        ikev2_anti_dos_threshold_variable=pulumi.get(__response__, 'ikev2_anti_dos_threshold_variable'),
+        ikev2_local_ike_identity_type=pulumi.get(__response__, 'ikev2_local_ike_identity_type'),
+        ikev2_local_ike_identity_type_variable=pulumi.get(__response__, 'ikev2_local_ike_identity_type_variable'),
+        ikev2_local_ike_identity_value=pulumi.get(__response__, 'ikev2_local_ike_identity_value'),
+        ikev2_local_ike_identity_value_variable=pulumi.get(__response__, 'ikev2_local_ike_identity_value_variable'),
+        ikev2_security_association_lifetime=pulumi.get(__response__, 'ikev2_security_association_lifetime'),
+        ikev2_security_association_lifetime_variable=pulumi.get(__response__, 'ikev2_security_association_lifetime_variable'),
+        ipsec_anti_replay_window_size=pulumi.get(__response__, 'ipsec_anti_replay_window_size'),
+        ipsec_anti_replay_window_size_variable=pulumi.get(__response__, 'ipsec_anti_replay_window_size_variable'),
+        ipsec_enable_anti_replay=pulumi.get(__response__, 'ipsec_enable_anti_replay'),
+        ipsec_enable_anti_replay_variable=pulumi.get(__response__, 'ipsec_enable_anti_replay_variable'),
+        ipsec_enable_perfect_foward_secrecy=pulumi.get(__response__, 'ipsec_enable_perfect_foward_secrecy'),
+        ipsec_enable_perfect_foward_secrecy_variable=pulumi.get(__response__, 'ipsec_enable_perfect_foward_secrecy_variable'),
+        ipsec_security_association_lifetime=pulumi.get(__response__, 'ipsec_security_association_lifetime'),
+        ipsec_security_association_lifetime_variable=pulumi.get(__response__, 'ipsec_security_association_lifetime_variable'),
+        ipv4_pool_size=pulumi.get(__response__, 'ipv4_pool_size'),
+        ipv4_pool_size_variable=pulumi.get(__response__, 'ipv4_pool_size_variable'),
+        ipv6_pool_size=pulumi.get(__response__, 'ipv6_pool_size'),
+        ipv6_pool_size_variable=pulumi.get(__response__, 'ipv6_pool_size_variable'),
+        name=pulumi.get(__response__, 'name'),
+        psk_authentication_pre_shared_key=pulumi.get(__response__, 'psk_authentication_pre_shared_key'),
+        psk_authentication_pre_shared_key_variable=pulumi.get(__response__, 'psk_authentication_pre_shared_key_variable'),
+        psk_authentication_type=pulumi.get(__response__, 'psk_authentication_type'),
+        psk_authentication_type_variable=pulumi.get(__response__, 'psk_authentication_type_variable'),
+        radius_group_name=pulumi.get(__response__, 'radius_group_name'),
+        radius_group_name_variable=pulumi.get(__response__, 'radius_group_name_variable'),
+        version=pulumi.get(__response__, 'version')))

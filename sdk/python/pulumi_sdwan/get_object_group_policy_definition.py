@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 
 __all__ = [
@@ -276,9 +281,6 @@ def get_object_group_policy_definition(id: Optional[str] = None,
         port_list_id=pulumi.get(__ret__, 'port_list_id'),
         port_list_version=pulumi.get(__ret__, 'port_list_version'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_object_group_policy_definition)
 def get_object_group_policy_definition_output(id: Optional[pulumi.Input[str]] = None,
                                               opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetObjectGroupPolicyDefinitionResult]:
     """
@@ -296,4 +298,25 @@ def get_object_group_policy_definition_output(id: Optional[pulumi.Input[str]] = 
 
     :param str id: The id of the object
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getObjectGroupPolicyDefinition:getObjectGroupPolicyDefinition', __args__, opts=opts, typ=GetObjectGroupPolicyDefinitionResult)
+    return __ret__.apply(lambda __response__: GetObjectGroupPolicyDefinitionResult(
+        data_fqdn_prefix_list_id=pulumi.get(__response__, 'data_fqdn_prefix_list_id'),
+        data_fqdn_prefix_list_version=pulumi.get(__response__, 'data_fqdn_prefix_list_version'),
+        data_ipv4_prefix_list_id=pulumi.get(__response__, 'data_ipv4_prefix_list_id'),
+        data_ipv4_prefix_list_version=pulumi.get(__response__, 'data_ipv4_prefix_list_version'),
+        description=pulumi.get(__response__, 'description'),
+        fqdn=pulumi.get(__response__, 'fqdn'),
+        geo_location=pulumi.get(__response__, 'geo_location'),
+        geo_location_list_id=pulumi.get(__response__, 'geo_location_list_id'),
+        geo_location_list_version=pulumi.get(__response__, 'geo_location_list_version'),
+        id=pulumi.get(__response__, 'id'),
+        ipv4_prefix=pulumi.get(__response__, 'ipv4_prefix'),
+        ipv4_prefix_variable=pulumi.get(__response__, 'ipv4_prefix_variable'),
+        name=pulumi.get(__response__, 'name'),
+        port=pulumi.get(__response__, 'port'),
+        port_list_id=pulumi.get(__response__, 'port_list_id'),
+        port_list_version=pulumi.get(__response__, 'port_list_version'),
+        version=pulumi.get(__response__, 'version')))

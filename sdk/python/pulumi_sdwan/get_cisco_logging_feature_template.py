@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -254,9 +259,6 @@ def get_cisco_logging_feature_template(id: Optional[str] = None,
         template_type=pulumi.get(__ret__, 'template_type'),
         tls_profiles=pulumi.get(__ret__, 'tls_profiles'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_cisco_logging_feature_template)
 def get_cisco_logging_feature_template_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                               name: Optional[pulumi.Input[Optional[str]]] = None,
                                               opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCiscoLoggingFeatureTemplateResult]:
@@ -276,4 +278,24 @@ def get_cisco_logging_feature_template_output(id: Optional[pulumi.Input[Optional
     :param str id: The id of the feature template
     :param str name: The name of the feature template
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getCiscoLoggingFeatureTemplate:getCiscoLoggingFeatureTemplate', __args__, opts=opts, typ=GetCiscoLoggingFeatureTemplateResult)
+    return __ret__.apply(lambda __response__: GetCiscoLoggingFeatureTemplateResult(
+        description=pulumi.get(__response__, 'description'),
+        device_types=pulumi.get(__response__, 'device_types'),
+        disk_logging=pulumi.get(__response__, 'disk_logging'),
+        disk_logging_variable=pulumi.get(__response__, 'disk_logging_variable'),
+        id=pulumi.get(__response__, 'id'),
+        ipv4_servers=pulumi.get(__response__, 'ipv4_servers'),
+        ipv6_servers=pulumi.get(__response__, 'ipv6_servers'),
+        log_rotations=pulumi.get(__response__, 'log_rotations'),
+        log_rotations_variable=pulumi.get(__response__, 'log_rotations_variable'),
+        max_size=pulumi.get(__response__, 'max_size'),
+        max_size_variable=pulumi.get(__response__, 'max_size_variable'),
+        name=pulumi.get(__response__, 'name'),
+        template_type=pulumi.get(__response__, 'template_type'),
+        tls_profiles=pulumi.get(__response__, 'tls_profiles'),
+        version=pulumi.get(__response__, 'version')))

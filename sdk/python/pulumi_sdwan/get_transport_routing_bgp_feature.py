@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -782,9 +787,6 @@ def get_transport_routing_bgp_feature(feature_profile_id: Optional[str] = None,
         router_id=pulumi.get(__ret__, 'router_id'),
         router_id_variable=pulumi.get(__ret__, 'router_id_variable'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_transport_routing_bgp_feature)
 def get_transport_routing_bgp_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                              id: Optional[pulumi.Input[str]] = None,
                                              opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetTransportRoutingBgpFeatureResult]:
@@ -805,4 +807,65 @@ def get_transport_routing_bgp_feature_output(feature_profile_id: Optional[pulumi
     :param str feature_profile_id: Feature Profile ID
     :param str id: The id of the Feature
     """
-    ...
+    __args__ = dict()
+    __args__['featureProfileId'] = feature_profile_id
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getTransportRoutingBgpFeature:getTransportRoutingBgpFeature', __args__, opts=opts, typ=GetTransportRoutingBgpFeatureResult)
+    return __ret__.apply(lambda __response__: GetTransportRoutingBgpFeatureResult(
+        always_compare_med=pulumi.get(__response__, 'always_compare_med'),
+        always_compare_med_variable=pulumi.get(__response__, 'always_compare_med_variable'),
+        as_number=pulumi.get(__response__, 'as_number'),
+        as_number_variable=pulumi.get(__response__, 'as_number_variable'),
+        compare_router_id=pulumi.get(__response__, 'compare_router_id'),
+        compare_router_id_variable=pulumi.get(__response__, 'compare_router_id_variable'),
+        description=pulumi.get(__response__, 'description'),
+        deterministic_med=pulumi.get(__response__, 'deterministic_med'),
+        deterministic_med_variable=pulumi.get(__response__, 'deterministic_med_variable'),
+        external_routes_distance=pulumi.get(__response__, 'external_routes_distance'),
+        external_routes_distance_variable=pulumi.get(__response__, 'external_routes_distance_variable'),
+        feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),
+        hold_time=pulumi.get(__response__, 'hold_time'),
+        hold_time_variable=pulumi.get(__response__, 'hold_time_variable'),
+        id=pulumi.get(__response__, 'id'),
+        internal_routes_distance=pulumi.get(__response__, 'internal_routes_distance'),
+        internal_routes_distance_variable=pulumi.get(__response__, 'internal_routes_distance_variable'),
+        ipv4_aggregate_addresses=pulumi.get(__response__, 'ipv4_aggregate_addresses'),
+        ipv4_eibgp_maximum_paths=pulumi.get(__response__, 'ipv4_eibgp_maximum_paths'),
+        ipv4_eibgp_maximum_paths_variable=pulumi.get(__response__, 'ipv4_eibgp_maximum_paths_variable'),
+        ipv4_neighbors=pulumi.get(__response__, 'ipv4_neighbors'),
+        ipv4_networks=pulumi.get(__response__, 'ipv4_networks'),
+        ipv4_originate=pulumi.get(__response__, 'ipv4_originate'),
+        ipv4_originate_variable=pulumi.get(__response__, 'ipv4_originate_variable'),
+        ipv4_redistributes=pulumi.get(__response__, 'ipv4_redistributes'),
+        ipv4_table_map_filter=pulumi.get(__response__, 'ipv4_table_map_filter'),
+        ipv4_table_map_filter_variable=pulumi.get(__response__, 'ipv4_table_map_filter_variable'),
+        ipv4_table_map_route_policy_id=pulumi.get(__response__, 'ipv4_table_map_route_policy_id'),
+        ipv6_aggregate_addresses=pulumi.get(__response__, 'ipv6_aggregate_addresses'),
+        ipv6_eibgp_maximum_paths=pulumi.get(__response__, 'ipv6_eibgp_maximum_paths'),
+        ipv6_eibgp_maximum_paths_variable=pulumi.get(__response__, 'ipv6_eibgp_maximum_paths_variable'),
+        ipv6_neighbors=pulumi.get(__response__, 'ipv6_neighbors'),
+        ipv6_networks=pulumi.get(__response__, 'ipv6_networks'),
+        ipv6_originate=pulumi.get(__response__, 'ipv6_originate'),
+        ipv6_originate_variable=pulumi.get(__response__, 'ipv6_originate_variable'),
+        ipv6_redistributes=pulumi.get(__response__, 'ipv6_redistributes'),
+        ipv6_table_map_filter=pulumi.get(__response__, 'ipv6_table_map_filter'),
+        ipv6_table_map_filter_variable=pulumi.get(__response__, 'ipv6_table_map_filter_variable'),
+        ipv6_table_map_route_policy_id=pulumi.get(__response__, 'ipv6_table_map_route_policy_id'),
+        keepalive_time=pulumi.get(__response__, 'keepalive_time'),
+        keepalive_time_variable=pulumi.get(__response__, 'keepalive_time_variable'),
+        local_routes_distance=pulumi.get(__response__, 'local_routes_distance'),
+        local_routes_distance_variable=pulumi.get(__response__, 'local_routes_distance_variable'),
+        missing_med_as_worst=pulumi.get(__response__, 'missing_med_as_worst'),
+        missing_med_as_worst_variable=pulumi.get(__response__, 'missing_med_as_worst_variable'),
+        mpls_interfaces=pulumi.get(__response__, 'mpls_interfaces'),
+        multipath_relax=pulumi.get(__response__, 'multipath_relax'),
+        multipath_relax_variable=pulumi.get(__response__, 'multipath_relax_variable'),
+        name=pulumi.get(__response__, 'name'),
+        propagate_as_path=pulumi.get(__response__, 'propagate_as_path'),
+        propagate_as_path_variable=pulumi.get(__response__, 'propagate_as_path_variable'),
+        propagate_community=pulumi.get(__response__, 'propagate_community'),
+        propagate_community_variable=pulumi.get(__response__, 'propagate_community_variable'),
+        router_id=pulumi.get(__response__, 'router_id'),
+        router_id_variable=pulumi.get(__response__, 'router_id_variable'),
+        version=pulumi.get(__response__, 'version')))

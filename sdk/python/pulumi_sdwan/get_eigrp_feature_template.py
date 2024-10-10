@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -358,9 +363,6 @@ def get_eigrp_feature_template(id: Optional[str] = None,
         route_policy_name_variable=pulumi.get(__ret__, 'route_policy_name_variable'),
         template_type=pulumi.get(__ret__, 'template_type'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_eigrp_feature_template)
 def get_eigrp_feature_template_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                       name: Optional[pulumi.Input[Optional[str]]] = None,
                                       opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetEigrpFeatureTemplateResult]:
@@ -380,4 +382,32 @@ def get_eigrp_feature_template_output(id: Optional[pulumi.Input[Optional[str]]] 
     :param str id: The id of the feature template
     :param str name: The name of the feature template
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getEigrpFeatureTemplate:getEigrpFeatureTemplate', __args__, opts=opts, typ=GetEigrpFeatureTemplateResult)
+    return __ret__.apply(lambda __response__: GetEigrpFeatureTemplateResult(
+        address_families=pulumi.get(__response__, 'address_families'),
+        as_number=pulumi.get(__response__, 'as_number'),
+        as_number_variable=pulumi.get(__response__, 'as_number_variable'),
+        authentication_type=pulumi.get(__response__, 'authentication_type'),
+        authentication_type_variable=pulumi.get(__response__, 'authentication_type_variable'),
+        description=pulumi.get(__response__, 'description'),
+        device_types=pulumi.get(__response__, 'device_types'),
+        filter=pulumi.get(__response__, 'filter'),
+        filter_variable=pulumi.get(__response__, 'filter_variable'),
+        hello_interval=pulumi.get(__response__, 'hello_interval'),
+        hello_interval_variable=pulumi.get(__response__, 'hello_interval_variable'),
+        hmac_authentication_key=pulumi.get(__response__, 'hmac_authentication_key'),
+        hmac_authentication_key_variable=pulumi.get(__response__, 'hmac_authentication_key_variable'),
+        hold_time=pulumi.get(__response__, 'hold_time'),
+        hold_time_variable=pulumi.get(__response__, 'hold_time_variable'),
+        id=pulumi.get(__response__, 'id'),
+        interfaces=pulumi.get(__response__, 'interfaces'),
+        keys=pulumi.get(__response__, 'keys'),
+        name=pulumi.get(__response__, 'name'),
+        route_policy_name=pulumi.get(__response__, 'route_policy_name'),
+        route_policy_name_variable=pulumi.get(__response__, 'route_policy_name_variable'),
+        template_type=pulumi.get(__response__, 'template_type'),
+        version=pulumi.get(__response__, 'version')))

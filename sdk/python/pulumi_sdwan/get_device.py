@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -112,9 +117,6 @@ def get_device(name: Optional[str] = None,
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'),
         serial_number=pulumi.get(__ret__, 'serial_number'))
-
-
-@_utilities.lift_output_func(get_device)
 def get_device_output(name: Optional[pulumi.Input[Optional[str]]] = None,
                       serial_number: Optional[pulumi.Input[Optional[str]]] = None,
                       opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetDeviceResult]:
@@ -135,4 +137,13 @@ def get_device_output(name: Optional[pulumi.Input[Optional[str]]] = None,
     :param str name: The hostname of a device
     :param str serial_number: Serial number for device. Could be board or virtual identifier
     """
-    ...
+    __args__ = dict()
+    __args__['name'] = name
+    __args__['serialNumber'] = serial_number
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getDevice:getDevice', __args__, opts=opts, typ=GetDeviceResult)
+    return __ret__.apply(lambda __response__: GetDeviceResult(
+        devices=pulumi.get(__response__, 'devices'),
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
+        serial_number=pulumi.get(__response__, 'serial_number')))

@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -1034,9 +1039,6 @@ def get_cisco_system_feature_template(id: Optional[str] = None,
         transport_gateway=pulumi.get(__ret__, 'transport_gateway'),
         transport_gateway_variable=pulumi.get(__ret__, 'transport_gateway_variable'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_cisco_system_feature_template)
 def get_cisco_system_feature_template_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                              name: Optional[pulumi.Input[Optional[str]]] = None,
                                              opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCiscoSystemFeatureTemplateResult]:
@@ -1056,4 +1058,84 @@ def get_cisco_system_feature_template_output(id: Optional[pulumi.Input[Optional[
     :param str id: The id of the feature template
     :param str name: The name of the feature template
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getCiscoSystemFeatureTemplate:getCiscoSystemFeatureTemplate', __args__, opts=opts, typ=GetCiscoSystemFeatureTemplateResult)
+    return __ret__.apply(lambda __response__: GetCiscoSystemFeatureTemplateResult(
+        admin_tech_on_failure=pulumi.get(__response__, 'admin_tech_on_failure'),
+        admin_tech_on_failure_variable=pulumi.get(__response__, 'admin_tech_on_failure_variable'),
+        affinity_group_number=pulumi.get(__response__, 'affinity_group_number'),
+        affinity_group_number_variable=pulumi.get(__response__, 'affinity_group_number_variable'),
+        affinity_group_preference_variable=pulumi.get(__response__, 'affinity_group_preference_variable'),
+        affinity_group_preferences=pulumi.get(__response__, 'affinity_group_preferences'),
+        console_baud_rate=pulumi.get(__response__, 'console_baud_rate'),
+        console_baud_rate_variable=pulumi.get(__response__, 'console_baud_rate_variable'),
+        control_session_pps=pulumi.get(__response__, 'control_session_pps'),
+        control_session_pps_variable=pulumi.get(__response__, 'control_session_pps_variable'),
+        controller_group_list_variable=pulumi.get(__response__, 'controller_group_list_variable'),
+        controller_group_lists=pulumi.get(__response__, 'controller_group_lists'),
+        description=pulumi.get(__response__, 'description'),
+        device_groups=pulumi.get(__response__, 'device_groups'),
+        device_groups_variable=pulumi.get(__response__, 'device_groups_variable'),
+        device_types=pulumi.get(__response__, 'device_types'),
+        enable_mrf_migration=pulumi.get(__response__, 'enable_mrf_migration'),
+        geo_fencing=pulumi.get(__response__, 'geo_fencing'),
+        geo_fencing_range=pulumi.get(__response__, 'geo_fencing_range'),
+        geo_fencing_range_variable=pulumi.get(__response__, 'geo_fencing_range_variable'),
+        geo_fencing_sms=pulumi.get(__response__, 'geo_fencing_sms'),
+        geo_fencing_sms_phone_numbers=pulumi.get(__response__, 'geo_fencing_sms_phone_numbers'),
+        hostname=pulumi.get(__response__, 'hostname'),
+        hostname_variable=pulumi.get(__response__, 'hostname_variable'),
+        id=pulumi.get(__response__, 'id'),
+        idle_timeout=pulumi.get(__response__, 'idle_timeout'),
+        idle_timeout_variable=pulumi.get(__response__, 'idle_timeout_variable'),
+        latitude=pulumi.get(__response__, 'latitude'),
+        latitude_variable=pulumi.get(__response__, 'latitude_variable'),
+        location=pulumi.get(__response__, 'location'),
+        location_variable=pulumi.get(__response__, 'location_variable'),
+        longitude=pulumi.get(__response__, 'longitude'),
+        longitude_variable=pulumi.get(__response__, 'longitude_variable'),
+        max_omp_sessions=pulumi.get(__response__, 'max_omp_sessions'),
+        max_omp_sessions_variable=pulumi.get(__response__, 'max_omp_sessions_variable'),
+        migration_bgp_community=pulumi.get(__response__, 'migration_bgp_community'),
+        multi_tenant=pulumi.get(__response__, 'multi_tenant'),
+        multi_tenant_variable=pulumi.get(__response__, 'multi_tenant_variable'),
+        name=pulumi.get(__response__, 'name'),
+        object_trackers=pulumi.get(__response__, 'object_trackers'),
+        on_demand_tunnel=pulumi.get(__response__, 'on_demand_tunnel'),
+        on_demand_tunnel_idle_timeout=pulumi.get(__response__, 'on_demand_tunnel_idle_timeout'),
+        on_demand_tunnel_idle_timeout_variable=pulumi.get(__response__, 'on_demand_tunnel_idle_timeout_variable'),
+        on_demand_tunnel_variable=pulumi.get(__response__, 'on_demand_tunnel_variable'),
+        overlay_id=pulumi.get(__response__, 'overlay_id'),
+        overlay_id_variable=pulumi.get(__response__, 'overlay_id_variable'),
+        port_hopping=pulumi.get(__response__, 'port_hopping'),
+        port_hopping_variable=pulumi.get(__response__, 'port_hopping_variable'),
+        port_offset=pulumi.get(__response__, 'port_offset'),
+        port_offset_variable=pulumi.get(__response__, 'port_offset_variable'),
+        region_id=pulumi.get(__response__, 'region_id'),
+        region_id_variable=pulumi.get(__response__, 'region_id_variable'),
+        role=pulumi.get(__response__, 'role'),
+        role_variable=pulumi.get(__response__, 'role_variable'),
+        secondary_region_id=pulumi.get(__response__, 'secondary_region_id'),
+        secondary_region_id_variable=pulumi.get(__response__, 'secondary_region_id_variable'),
+        site_id=pulumi.get(__response__, 'site_id'),
+        site_id_variable=pulumi.get(__response__, 'site_id_variable'),
+        system_description=pulumi.get(__response__, 'system_description'),
+        system_description_variable=pulumi.get(__response__, 'system_description_variable'),
+        system_ip=pulumi.get(__response__, 'system_ip'),
+        system_ip_variable=pulumi.get(__response__, 'system_ip_variable'),
+        template_type=pulumi.get(__response__, 'template_type'),
+        timezone=pulumi.get(__response__, 'timezone'),
+        timezone_variable=pulumi.get(__response__, 'timezone_variable'),
+        track_default_gateway=pulumi.get(__response__, 'track_default_gateway'),
+        track_default_gateway_variable=pulumi.get(__response__, 'track_default_gateway_variable'),
+        track_interface_tag=pulumi.get(__response__, 'track_interface_tag'),
+        track_interface_tag_variable=pulumi.get(__response__, 'track_interface_tag_variable'),
+        track_transport=pulumi.get(__response__, 'track_transport'),
+        track_transport_variable=pulumi.get(__response__, 'track_transport_variable'),
+        trackers=pulumi.get(__response__, 'trackers'),
+        transport_gateway=pulumi.get(__response__, 'transport_gateway'),
+        transport_gateway_variable=pulumi.get(__response__, 'transport_gateway_variable'),
+        version=pulumi.get(__response__, 'version')))

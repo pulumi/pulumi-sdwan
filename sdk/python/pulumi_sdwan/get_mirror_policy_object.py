@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 
 __all__ = [
@@ -120,9 +125,6 @@ def get_mirror_policy_object(id: Optional[str] = None,
         remote_destination_ip=pulumi.get(__ret__, 'remote_destination_ip'),
         source_ip=pulumi.get(__ret__, 'source_ip'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_mirror_policy_object)
 def get_mirror_policy_object_output(id: Optional[pulumi.Input[str]] = None,
                                     opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetMirrorPolicyObjectResult]:
     """
@@ -140,4 +142,13 @@ def get_mirror_policy_object_output(id: Optional[pulumi.Input[str]] = None,
 
     :param str id: The id of the object
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getMirrorPolicyObject:getMirrorPolicyObject', __args__, opts=opts, typ=GetMirrorPolicyObjectResult)
+    return __ret__.apply(lambda __response__: GetMirrorPolicyObjectResult(
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
+        remote_destination_ip=pulumi.get(__response__, 'remote_destination_ip'),
+        source_ip=pulumi.get(__response__, 'source_ip'),
+        version=pulumi.get(__response__, 'version')))

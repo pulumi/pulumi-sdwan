@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -280,9 +285,6 @@ def get_cisco_snmp_feature_template(id: Optional[str] = None,
         users=pulumi.get(__ret__, 'users'),
         version=pulumi.get(__ret__, 'version'),
         views=pulumi.get(__ret__, 'views'))
-
-
-@_utilities.lift_output_func(get_cisco_snmp_feature_template)
 def get_cisco_snmp_feature_template_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                            name: Optional[pulumi.Input[Optional[str]]] = None,
                                            opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCiscoSnmpFeatureTemplateResult]:
@@ -302,4 +304,26 @@ def get_cisco_snmp_feature_template_output(id: Optional[pulumi.Input[Optional[st
     :param str id: The id of the feature template
     :param str name: The name of the feature template
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getCiscoSnmpFeatureTemplate:getCiscoSnmpFeatureTemplate', __args__, opts=opts, typ=GetCiscoSnmpFeatureTemplateResult)
+    return __ret__.apply(lambda __response__: GetCiscoSnmpFeatureTemplateResult(
+        communities=pulumi.get(__response__, 'communities'),
+        contact=pulumi.get(__response__, 'contact'),
+        contact_variable=pulumi.get(__response__, 'contact_variable'),
+        description=pulumi.get(__response__, 'description'),
+        device_types=pulumi.get(__response__, 'device_types'),
+        groups=pulumi.get(__response__, 'groups'),
+        id=pulumi.get(__response__, 'id'),
+        location=pulumi.get(__response__, 'location'),
+        location_variable=pulumi.get(__response__, 'location_variable'),
+        name=pulumi.get(__response__, 'name'),
+        shutdown=pulumi.get(__response__, 'shutdown'),
+        shutdown_variable=pulumi.get(__response__, 'shutdown_variable'),
+        template_type=pulumi.get(__response__, 'template_type'),
+        trap_targets=pulumi.get(__response__, 'trap_targets'),
+        users=pulumi.get(__response__, 'users'),
+        version=pulumi.get(__response__, 'version'),
+        views=pulumi.get(__response__, 'views')))

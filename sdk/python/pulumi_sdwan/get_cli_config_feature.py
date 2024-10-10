@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 
 __all__ = [
@@ -137,9 +142,6 @@ def get_cli_config_feature(feature_profile_id: Optional[str] = None,
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_cli_config_feature)
 def get_cli_config_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                   id: Optional[pulumi.Input[str]] = None,
                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCliConfigFeatureResult]:
@@ -160,4 +162,15 @@ def get_cli_config_feature_output(feature_profile_id: Optional[pulumi.Input[str]
     :param str feature_profile_id: Feature Profile ID
     :param str id: The id of the object
     """
-    ...
+    __args__ = dict()
+    __args__['featureProfileId'] = feature_profile_id
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getCliConfigFeature:getCliConfigFeature', __args__, opts=opts, typ=GetCliConfigFeatureResult)
+    return __ret__.apply(lambda __response__: GetCliConfigFeatureResult(
+        cli_configuration=pulumi.get(__response__, 'cli_configuration'),
+        description=pulumi.get(__response__, 'description'),
+        feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
+        version=pulumi.get(__response__, 'version')))

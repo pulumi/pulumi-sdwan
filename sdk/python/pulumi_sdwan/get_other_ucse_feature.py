@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -301,9 +306,6 @@ def get_other_ucse_feature(feature_profile_id: Optional[str] = None,
         version=pulumi.get(__ret__, 'version'),
         vlan_id=pulumi.get(__ret__, 'vlan_id'),
         vlan_id_variable=pulumi.get(__ret__, 'vlan_id_variable'))
-
-
-@_utilities.lift_output_func(get_other_ucse_feature)
 def get_other_ucse_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                   id: Optional[pulumi.Input[str]] = None,
                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetOtherUcseFeatureResult]:
@@ -324,4 +326,28 @@ def get_other_ucse_feature_output(feature_profile_id: Optional[pulumi.Input[str]
     :param str feature_profile_id: Feature Profile ID
     :param str id: The id of the Feature
     """
-    ...
+    __args__ = dict()
+    __args__['featureProfileId'] = feature_profile_id
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getOtherUcseFeature:getOtherUcseFeature', __args__, opts=opts, typ=GetOtherUcseFeatureResult)
+    return __ret__.apply(lambda __response__: GetOtherUcseFeatureResult(
+        access_port_dedicated=pulumi.get(__response__, 'access_port_dedicated'),
+        access_port_shared_failover_type=pulumi.get(__response__, 'access_port_shared_failover_type'),
+        access_port_shared_type=pulumi.get(__response__, 'access_port_shared_type'),
+        assign_priority=pulumi.get(__response__, 'assign_priority'),
+        assign_priority_variable=pulumi.get(__response__, 'assign_priority_variable'),
+        bay=pulumi.get(__response__, 'bay'),
+        default_gateway=pulumi.get(__response__, 'default_gateway'),
+        default_gateway_variable=pulumi.get(__response__, 'default_gateway_variable'),
+        description=pulumi.get(__response__, 'description'),
+        feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),
+        id=pulumi.get(__response__, 'id'),
+        interfaces=pulumi.get(__response__, 'interfaces'),
+        ipv4_address=pulumi.get(__response__, 'ipv4_address'),
+        ipv4_address_variable=pulumi.get(__response__, 'ipv4_address_variable'),
+        name=pulumi.get(__response__, 'name'),
+        slot=pulumi.get(__response__, 'slot'),
+        version=pulumi.get(__response__, 'version'),
+        vlan_id=pulumi.get(__response__, 'vlan_id'),
+        vlan_id_variable=pulumi.get(__response__, 'vlan_id_variable')))

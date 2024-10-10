@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -228,9 +233,6 @@ def get_cisco_bfd_feature_template(id: Optional[str] = None,
         poll_interval_variable=pulumi.get(__ret__, 'poll_interval_variable'),
         template_type=pulumi.get(__ret__, 'template_type'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_cisco_bfd_feature_template)
 def get_cisco_bfd_feature_template_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                           name: Optional[pulumi.Input[Optional[str]]] = None,
                                           opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCiscoBfdFeatureTemplateResult]:
@@ -250,4 +252,22 @@ def get_cisco_bfd_feature_template_output(id: Optional[pulumi.Input[Optional[str
     :param str id: The id of the feature template
     :param str name: The name of the feature template
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getCiscoBfdFeatureTemplate:getCiscoBfdFeatureTemplate', __args__, opts=opts, typ=GetCiscoBfdFeatureTemplateResult)
+    return __ret__.apply(lambda __response__: GetCiscoBfdFeatureTemplateResult(
+        colors=pulumi.get(__response__, 'colors'),
+        default_dscp=pulumi.get(__response__, 'default_dscp'),
+        default_dscp_variable=pulumi.get(__response__, 'default_dscp_variable'),
+        description=pulumi.get(__response__, 'description'),
+        device_types=pulumi.get(__response__, 'device_types'),
+        id=pulumi.get(__response__, 'id'),
+        multiplier=pulumi.get(__response__, 'multiplier'),
+        multiplier_variable=pulumi.get(__response__, 'multiplier_variable'),
+        name=pulumi.get(__response__, 'name'),
+        poll_interval=pulumi.get(__response__, 'poll_interval'),
+        poll_interval_variable=pulumi.get(__response__, 'poll_interval_variable'),
+        template_type=pulumi.get(__response__, 'template_type'),
+        version=pulumi.get(__response__, 'version')))

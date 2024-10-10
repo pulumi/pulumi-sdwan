@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 
 __all__ = [
@@ -890,9 +895,6 @@ def get_service_lan_vpn_interface_ipsec_feature(feature_profile_id: Optional[str
         tunnel_source_ipv4_subnet_mask=pulumi.get(__ret__, 'tunnel_source_ipv4_subnet_mask'),
         tunnel_source_ipv4_subnet_mask_variable=pulumi.get(__ret__, 'tunnel_source_ipv4_subnet_mask_variable'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_service_lan_vpn_interface_ipsec_feature)
 def get_service_lan_vpn_interface_ipsec_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                                        id: Optional[pulumi.Input[str]] = None,
                                                        service_lan_vpn_feature_id: Optional[pulumi.Input[str]] = None,
@@ -916,4 +918,75 @@ def get_service_lan_vpn_interface_ipsec_feature_output(feature_profile_id: Optio
     :param str id: The id of the Feature
     :param str service_lan_vpn_feature_id: Service LAN VPN Feature ID
     """
-    ...
+    __args__ = dict()
+    __args__['featureProfileId'] = feature_profile_id
+    __args__['id'] = id
+    __args__['serviceLanVpnFeatureId'] = service_lan_vpn_feature_id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getServiceLanVpnInterfaceIpsecFeature:getServiceLanVpnInterfaceIpsecFeature', __args__, opts=opts, typ=GetServiceLanVpnInterfaceIpsecFeatureResult)
+    return __ret__.apply(lambda __response__: GetServiceLanVpnInterfaceIpsecFeatureResult(
+        application_tunnel_type=pulumi.get(__response__, 'application_tunnel_type'),
+        application_tunnel_type_variable=pulumi.get(__response__, 'application_tunnel_type_variable'),
+        clear_dont_fragment=pulumi.get(__response__, 'clear_dont_fragment'),
+        clear_dont_fragment_variable=pulumi.get(__response__, 'clear_dont_fragment_variable'),
+        description=pulumi.get(__response__, 'description'),
+        dpd_interval=pulumi.get(__response__, 'dpd_interval'),
+        dpd_interval_variable=pulumi.get(__response__, 'dpd_interval_variable'),
+        dpd_retries=pulumi.get(__response__, 'dpd_retries'),
+        dpd_retries_variable=pulumi.get(__response__, 'dpd_retries_variable'),
+        feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),
+        id=pulumi.get(__response__, 'id'),
+        ike_ciphersuite=pulumi.get(__response__, 'ike_ciphersuite'),
+        ike_ciphersuite_variable=pulumi.get(__response__, 'ike_ciphersuite_variable'),
+        ike_diffie_hellman_group=pulumi.get(__response__, 'ike_diffie_hellman_group'),
+        ike_diffie_hellman_group_variable=pulumi.get(__response__, 'ike_diffie_hellman_group_variable'),
+        ike_id_local_end_point=pulumi.get(__response__, 'ike_id_local_end_point'),
+        ike_id_local_end_point_variable=pulumi.get(__response__, 'ike_id_local_end_point_variable'),
+        ike_id_remote_end_point=pulumi.get(__response__, 'ike_id_remote_end_point'),
+        ike_id_remote_end_point_variable=pulumi.get(__response__, 'ike_id_remote_end_point_variable'),
+        ike_integrity_protocol=pulumi.get(__response__, 'ike_integrity_protocol'),
+        ike_integrity_protocol_variable=pulumi.get(__response__, 'ike_integrity_protocol_variable'),
+        ike_preshared_key=pulumi.get(__response__, 'ike_preshared_key'),
+        ike_preshared_key_variable=pulumi.get(__response__, 'ike_preshared_key_variable'),
+        ike_rekey_interval=pulumi.get(__response__, 'ike_rekey_interval'),
+        ike_rekey_interval_variable=pulumi.get(__response__, 'ike_rekey_interval_variable'),
+        ike_version=pulumi.get(__response__, 'ike_version'),
+        interface_description=pulumi.get(__response__, 'interface_description'),
+        interface_description_variable=pulumi.get(__response__, 'interface_description_variable'),
+        interface_name=pulumi.get(__response__, 'interface_name'),
+        interface_name_variable=pulumi.get(__response__, 'interface_name_variable'),
+        ip_mtu=pulumi.get(__response__, 'ip_mtu'),
+        ip_mtu_variable=pulumi.get(__response__, 'ip_mtu_variable'),
+        ipsec_ciphersuite=pulumi.get(__response__, 'ipsec_ciphersuite'),
+        ipsec_ciphersuite_variable=pulumi.get(__response__, 'ipsec_ciphersuite_variable'),
+        ipsec_rekey_interval=pulumi.get(__response__, 'ipsec_rekey_interval'),
+        ipsec_rekey_interval_variable=pulumi.get(__response__, 'ipsec_rekey_interval_variable'),
+        ipsec_replay_window=pulumi.get(__response__, 'ipsec_replay_window'),
+        ipsec_replay_window_variable=pulumi.get(__response__, 'ipsec_replay_window_variable'),
+        ipv4_address=pulumi.get(__response__, 'ipv4_address'),
+        ipv4_address_variable=pulumi.get(__response__, 'ipv4_address_variable'),
+        ipv4_subnet_mask=pulumi.get(__response__, 'ipv4_subnet_mask'),
+        ipv4_subnet_mask_variable=pulumi.get(__response__, 'ipv4_subnet_mask_variable'),
+        name=pulumi.get(__response__, 'name'),
+        perfect_forward_secrecy=pulumi.get(__response__, 'perfect_forward_secrecy'),
+        perfect_forward_secrecy_variable=pulumi.get(__response__, 'perfect_forward_secrecy_variable'),
+        service_lan_vpn_feature_id=pulumi.get(__response__, 'service_lan_vpn_feature_id'),
+        shutdown=pulumi.get(__response__, 'shutdown'),
+        shutdown_variable=pulumi.get(__response__, 'shutdown_variable'),
+        tcp_mss=pulumi.get(__response__, 'tcp_mss'),
+        tcp_mss_variable=pulumi.get(__response__, 'tcp_mss_variable'),
+        tracker_id=pulumi.get(__response__, 'tracker_id'),
+        tracker_id_variable=pulumi.get(__response__, 'tracker_id_variable'),
+        tunnel_destination_ipv4_address=pulumi.get(__response__, 'tunnel_destination_ipv4_address'),
+        tunnel_destination_ipv4_address_variable=pulumi.get(__response__, 'tunnel_destination_ipv4_address_variable'),
+        tunnel_destination_ipv4_subnet_mask=pulumi.get(__response__, 'tunnel_destination_ipv4_subnet_mask'),
+        tunnel_destination_ipv4_subnet_mask_variable=pulumi.get(__response__, 'tunnel_destination_ipv4_subnet_mask_variable'),
+        tunnel_route_via=pulumi.get(__response__, 'tunnel_route_via'),
+        tunnel_route_via_variable=pulumi.get(__response__, 'tunnel_route_via_variable'),
+        tunnel_source_interface=pulumi.get(__response__, 'tunnel_source_interface'),
+        tunnel_source_interface_variable=pulumi.get(__response__, 'tunnel_source_interface_variable'),
+        tunnel_source_ipv4_address=pulumi.get(__response__, 'tunnel_source_ipv4_address'),
+        tunnel_source_ipv4_address_variable=pulumi.get(__response__, 'tunnel_source_ipv4_address_variable'),
+        tunnel_source_ipv4_subnet_mask=pulumi.get(__response__, 'tunnel_source_ipv4_subnet_mask'),
+        tunnel_source_ipv4_subnet_mask_variable=pulumi.get(__response__, 'tunnel_source_ipv4_subnet_mask_variable'),
+        version=pulumi.get(__response__, 'version')))

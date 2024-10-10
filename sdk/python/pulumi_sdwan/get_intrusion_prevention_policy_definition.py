@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 
 __all__ = [
@@ -198,9 +203,6 @@ def get_intrusion_prevention_policy_definition(id: Optional[str] = None,
         signature_set=pulumi.get(__ret__, 'signature_set'),
         target_vpns=pulumi.get(__ret__, 'target_vpns'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_intrusion_prevention_policy_definition)
 def get_intrusion_prevention_policy_definition_output(id: Optional[pulumi.Input[str]] = None,
                                                       opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetIntrusionPreventionPolicyDefinitionResult]:
     """
@@ -218,4 +220,19 @@ def get_intrusion_prevention_policy_definition_output(id: Optional[pulumi.Input[
 
     :param str id: The id of the object
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getIntrusionPreventionPolicyDefinition:getIntrusionPreventionPolicyDefinition', __args__, opts=opts, typ=GetIntrusionPreventionPolicyDefinitionResult)
+    return __ret__.apply(lambda __response__: GetIntrusionPreventionPolicyDefinitionResult(
+        description=pulumi.get(__response__, 'description'),
+        id=pulumi.get(__response__, 'id'),
+        inspection_mode=pulumi.get(__response__, 'inspection_mode'),
+        ips_signature_list_id=pulumi.get(__response__, 'ips_signature_list_id'),
+        ips_signature_list_version=pulumi.get(__response__, 'ips_signature_list_version'),
+        log_level=pulumi.get(__response__, 'log_level'),
+        mode=pulumi.get(__response__, 'mode'),
+        name=pulumi.get(__response__, 'name'),
+        signature_set=pulumi.get(__response__, 'signature_set'),
+        target_vpns=pulumi.get(__response__, 'target_vpns'),
+        version=pulumi.get(__response__, 'version')))

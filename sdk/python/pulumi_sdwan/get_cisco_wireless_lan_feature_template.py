@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -358,9 +363,6 @@ def get_cisco_wireless_lan_feature_template(id: Optional[str] = None,
         username=pulumi.get(__ret__, 'username'),
         username_variable=pulumi.get(__ret__, 'username_variable'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_cisco_wireless_lan_feature_template)
 def get_cisco_wireless_lan_feature_template_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                                    name: Optional[pulumi.Input[Optional[str]]] = None,
                                                    opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCiscoWirelessLanFeatureTemplateResult]:
@@ -380,4 +382,32 @@ def get_cisco_wireless_lan_feature_template_output(id: Optional[pulumi.Input[Opt
     :param str id: The id of the feature template
     :param str name: The name of the feature template
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getCiscoWirelessLanFeatureTemplate:getCiscoWirelessLanFeatureTemplate', __args__, opts=opts, typ=GetCiscoWirelessLanFeatureTemplateResult)
+    return __ret__.apply(lambda __response__: GetCiscoWirelessLanFeatureTemplateResult(
+        controller_default_gateway=pulumi.get(__response__, 'controller_default_gateway'),
+        controller_default_gateway_variable=pulumi.get(__response__, 'controller_default_gateway_variable'),
+        controller_ip_address=pulumi.get(__response__, 'controller_ip_address'),
+        controller_ip_address_variable=pulumi.get(__response__, 'controller_ip_address_variable'),
+        controller_subnet_mask=pulumi.get(__response__, 'controller_subnet_mask'),
+        controller_subnet_mask_variable=pulumi.get(__response__, 'controller_subnet_mask_variable'),
+        country=pulumi.get(__response__, 'country'),
+        country_variable=pulumi.get(__response__, 'country_variable'),
+        description=pulumi.get(__response__, 'description'),
+        device_types=pulumi.get(__response__, 'device_types'),
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
+        password=pulumi.get(__response__, 'password'),
+        password_variable=pulumi.get(__response__, 'password_variable'),
+        shutdown24ghz=pulumi.get(__response__, 'shutdown24ghz'),
+        shutdown24ghz_variable=pulumi.get(__response__, 'shutdown24ghz_variable'),
+        shutdown5ghz=pulumi.get(__response__, 'shutdown5ghz'),
+        shutdown5ghz_variable=pulumi.get(__response__, 'shutdown5ghz_variable'),
+        ssids=pulumi.get(__response__, 'ssids'),
+        template_type=pulumi.get(__response__, 'template_type'),
+        username=pulumi.get(__response__, 'username'),
+        username_variable=pulumi.get(__response__, 'username_variable'),
+        version=pulumi.get(__response__, 'version')))

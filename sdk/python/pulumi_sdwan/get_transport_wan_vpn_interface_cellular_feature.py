@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -1745,9 +1750,6 @@ def get_transport_wan_vpn_interface_cellular_feature(feature_profile_id: Optiona
         tunnel_qos_mode=pulumi.get(__ret__, 'tunnel_qos_mode'),
         tunnel_qos_mode_variable=pulumi.get(__ret__, 'tunnel_qos_mode_variable'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_transport_wan_vpn_interface_cellular_feature)
 def get_transport_wan_vpn_interface_cellular_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                                             id: Optional[pulumi.Input[str]] = None,
                                                             transport_wan_vpn_feature_id: Optional[pulumi.Input[str]] = None,
@@ -1771,4 +1773,140 @@ def get_transport_wan_vpn_interface_cellular_feature_output(feature_profile_id: 
     :param str id: The id of the Feature
     :param str transport_wan_vpn_feature_id: Transport WAN VPN Feature ID
     """
-    ...
+    __args__ = dict()
+    __args__['featureProfileId'] = feature_profile_id
+    __args__['id'] = id
+    __args__['transportWanVpnFeatureId'] = transport_wan_vpn_feature_id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getTransportWanVpnInterfaceCellularFeature:getTransportWanVpnInterfaceCellularFeature', __args__, opts=opts, typ=GetTransportWanVpnInterfaceCellularFeatureResult)
+    return __ret__.apply(lambda __response__: GetTransportWanVpnInterfaceCellularFeatureResult(
+        arps=pulumi.get(__response__, 'arps'),
+        bandwidth_downstream=pulumi.get(__response__, 'bandwidth_downstream'),
+        bandwidth_downstream_variable=pulumi.get(__response__, 'bandwidth_downstream_variable'),
+        bandwidth_upstream=pulumi.get(__response__, 'bandwidth_upstream'),
+        bandwidth_upstream_variable=pulumi.get(__response__, 'bandwidth_upstream_variable'),
+        description=pulumi.get(__response__, 'description'),
+        feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),
+        id=pulumi.get(__response__, 'id'),
+        interface_description=pulumi.get(__response__, 'interface_description'),
+        interface_description_variable=pulumi.get(__response__, 'interface_description_variable'),
+        interface_mtu=pulumi.get(__response__, 'interface_mtu'),
+        interface_mtu_variable=pulumi.get(__response__, 'interface_mtu_variable'),
+        interface_name=pulumi.get(__response__, 'interface_name'),
+        interface_name_variable=pulumi.get(__response__, 'interface_name_variable'),
+        ip_directed_broadcast=pulumi.get(__response__, 'ip_directed_broadcast'),
+        ip_directed_broadcast_variable=pulumi.get(__response__, 'ip_directed_broadcast_variable'),
+        ip_mtu=pulumi.get(__response__, 'ip_mtu'),
+        ip_mtu_variable=pulumi.get(__response__, 'ip_mtu_variable'),
+        ipv4_dhcp_helper_variable=pulumi.get(__response__, 'ipv4_dhcp_helper_variable'),
+        ipv4_dhcp_helpers=pulumi.get(__response__, 'ipv4_dhcp_helpers'),
+        name=pulumi.get(__response__, 'name'),
+        nat_ipv4=pulumi.get(__response__, 'nat_ipv4'),
+        nat_ipv4_variable=pulumi.get(__response__, 'nat_ipv4_variable'),
+        nat_tcp_timeout=pulumi.get(__response__, 'nat_tcp_timeout'),
+        nat_tcp_timeout_variable=pulumi.get(__response__, 'nat_tcp_timeout_variable'),
+        nat_udp_timeout=pulumi.get(__response__, 'nat_udp_timeout'),
+        nat_udp_timeout_variable=pulumi.get(__response__, 'nat_udp_timeout_variable'),
+        per_tunnel_qos=pulumi.get(__response__, 'per_tunnel_qos'),
+        per_tunnel_qos_variable=pulumi.get(__response__, 'per_tunnel_qos_variable'),
+        qos_adaptive=pulumi.get(__response__, 'qos_adaptive'),
+        qos_adaptive_bandwidth_downstream=pulumi.get(__response__, 'qos_adaptive_bandwidth_downstream'),
+        qos_adaptive_bandwidth_upstream=pulumi.get(__response__, 'qos_adaptive_bandwidth_upstream'),
+        qos_adaptive_default_downstream=pulumi.get(__response__, 'qos_adaptive_default_downstream'),
+        qos_adaptive_default_downstream_variable=pulumi.get(__response__, 'qos_adaptive_default_downstream_variable'),
+        qos_adaptive_default_upstream=pulumi.get(__response__, 'qos_adaptive_default_upstream'),
+        qos_adaptive_default_upstream_variable=pulumi.get(__response__, 'qos_adaptive_default_upstream_variable'),
+        qos_adaptive_max_downstream=pulumi.get(__response__, 'qos_adaptive_max_downstream'),
+        qos_adaptive_max_downstream_variable=pulumi.get(__response__, 'qos_adaptive_max_downstream_variable'),
+        qos_adaptive_max_upstream=pulumi.get(__response__, 'qos_adaptive_max_upstream'),
+        qos_adaptive_max_upstream_variable=pulumi.get(__response__, 'qos_adaptive_max_upstream_variable'),
+        qos_adaptive_min_downstream=pulumi.get(__response__, 'qos_adaptive_min_downstream'),
+        qos_adaptive_min_downstream_variable=pulumi.get(__response__, 'qos_adaptive_min_downstream_variable'),
+        qos_adaptive_min_upstream=pulumi.get(__response__, 'qos_adaptive_min_upstream'),
+        qos_adaptive_min_upstream_variable=pulumi.get(__response__, 'qos_adaptive_min_upstream_variable'),
+        qos_adaptive_period=pulumi.get(__response__, 'qos_adaptive_period'),
+        qos_adaptive_period_variable=pulumi.get(__response__, 'qos_adaptive_period_variable'),
+        qos_shaping_rate=pulumi.get(__response__, 'qos_shaping_rate'),
+        qos_shaping_rate_variable=pulumi.get(__response__, 'qos_shaping_rate_variable'),
+        service_provider=pulumi.get(__response__, 'service_provider'),
+        service_provider_variable=pulumi.get(__response__, 'service_provider_variable'),
+        shutdown=pulumi.get(__response__, 'shutdown'),
+        shutdown_variable=pulumi.get(__response__, 'shutdown_variable'),
+        tcp_mss=pulumi.get(__response__, 'tcp_mss'),
+        tcp_mss_variable=pulumi.get(__response__, 'tcp_mss_variable'),
+        tloc_extension=pulumi.get(__response__, 'tloc_extension'),
+        tloc_extension_variable=pulumi.get(__response__, 'tloc_extension_variable'),
+        tracker=pulumi.get(__response__, 'tracker'),
+        tracker_variable=pulumi.get(__response__, 'tracker_variable'),
+        transport_wan_vpn_feature_id=pulumi.get(__response__, 'transport_wan_vpn_feature_id'),
+        tunnel_bandwidth_percent=pulumi.get(__response__, 'tunnel_bandwidth_percent'),
+        tunnel_bandwidth_percent_variable=pulumi.get(__response__, 'tunnel_bandwidth_percent_variable'),
+        tunnel_interface=pulumi.get(__response__, 'tunnel_interface'),
+        tunnel_interface_allow_all=pulumi.get(__response__, 'tunnel_interface_allow_all'),
+        tunnel_interface_allow_all_variable=pulumi.get(__response__, 'tunnel_interface_allow_all_variable'),
+        tunnel_interface_allow_bfd=pulumi.get(__response__, 'tunnel_interface_allow_bfd'),
+        tunnel_interface_allow_bfd_variable=pulumi.get(__response__, 'tunnel_interface_allow_bfd_variable'),
+        tunnel_interface_allow_bgp=pulumi.get(__response__, 'tunnel_interface_allow_bgp'),
+        tunnel_interface_allow_bgp_variable=pulumi.get(__response__, 'tunnel_interface_allow_bgp_variable'),
+        tunnel_interface_allow_dhcp=pulumi.get(__response__, 'tunnel_interface_allow_dhcp'),
+        tunnel_interface_allow_dhcp_variable=pulumi.get(__response__, 'tunnel_interface_allow_dhcp_variable'),
+        tunnel_interface_allow_dns=pulumi.get(__response__, 'tunnel_interface_allow_dns'),
+        tunnel_interface_allow_dns_variable=pulumi.get(__response__, 'tunnel_interface_allow_dns_variable'),
+        tunnel_interface_allow_https=pulumi.get(__response__, 'tunnel_interface_allow_https'),
+        tunnel_interface_allow_https_variable=pulumi.get(__response__, 'tunnel_interface_allow_https_variable'),
+        tunnel_interface_allow_icmp=pulumi.get(__response__, 'tunnel_interface_allow_icmp'),
+        tunnel_interface_allow_icmp_variable=pulumi.get(__response__, 'tunnel_interface_allow_icmp_variable'),
+        tunnel_interface_allow_netconf=pulumi.get(__response__, 'tunnel_interface_allow_netconf'),
+        tunnel_interface_allow_netconf_variable=pulumi.get(__response__, 'tunnel_interface_allow_netconf_variable'),
+        tunnel_interface_allow_ntp=pulumi.get(__response__, 'tunnel_interface_allow_ntp'),
+        tunnel_interface_allow_ntp_variable=pulumi.get(__response__, 'tunnel_interface_allow_ntp_variable'),
+        tunnel_interface_allow_ospf=pulumi.get(__response__, 'tunnel_interface_allow_ospf'),
+        tunnel_interface_allow_ospf_variable=pulumi.get(__response__, 'tunnel_interface_allow_ospf_variable'),
+        tunnel_interface_allow_snmp=pulumi.get(__response__, 'tunnel_interface_allow_snmp'),
+        tunnel_interface_allow_snmp_variable=pulumi.get(__response__, 'tunnel_interface_allow_snmp_variable'),
+        tunnel_interface_allow_ssh=pulumi.get(__response__, 'tunnel_interface_allow_ssh'),
+        tunnel_interface_allow_ssh_variable=pulumi.get(__response__, 'tunnel_interface_allow_ssh_variable'),
+        tunnel_interface_allow_stun=pulumi.get(__response__, 'tunnel_interface_allow_stun'),
+        tunnel_interface_allow_stun_variable=pulumi.get(__response__, 'tunnel_interface_allow_stun_variable'),
+        tunnel_interface_bind_loopback_tunnel=pulumi.get(__response__, 'tunnel_interface_bind_loopback_tunnel'),
+        tunnel_interface_bind_loopback_tunnel_variable=pulumi.get(__response__, 'tunnel_interface_bind_loopback_tunnel_variable'),
+        tunnel_interface_border=pulumi.get(__response__, 'tunnel_interface_border'),
+        tunnel_interface_border_variable=pulumi.get(__response__, 'tunnel_interface_border_variable'),
+        tunnel_interface_carrier=pulumi.get(__response__, 'tunnel_interface_carrier'),
+        tunnel_interface_carrier_variable=pulumi.get(__response__, 'tunnel_interface_carrier_variable'),
+        tunnel_interface_clear_dont_fragment=pulumi.get(__response__, 'tunnel_interface_clear_dont_fragment'),
+        tunnel_interface_clear_dont_fragment_variable=pulumi.get(__response__, 'tunnel_interface_clear_dont_fragment_variable'),
+        tunnel_interface_color=pulumi.get(__response__, 'tunnel_interface_color'),
+        tunnel_interface_color_restrict=pulumi.get(__response__, 'tunnel_interface_color_restrict'),
+        tunnel_interface_color_restrict_variable=pulumi.get(__response__, 'tunnel_interface_color_restrict_variable'),
+        tunnel_interface_color_variable=pulumi.get(__response__, 'tunnel_interface_color_variable'),
+        tunnel_interface_encapsulations=pulumi.get(__response__, 'tunnel_interface_encapsulations'),
+        tunnel_interface_exclude_controller_group_list_variable=pulumi.get(__response__, 'tunnel_interface_exclude_controller_group_list_variable'),
+        tunnel_interface_exclude_controller_group_lists=pulumi.get(__response__, 'tunnel_interface_exclude_controller_group_lists'),
+        tunnel_interface_groups=pulumi.get(__response__, 'tunnel_interface_groups'),
+        tunnel_interface_groups_variable=pulumi.get(__response__, 'tunnel_interface_groups_variable'),
+        tunnel_interface_hello_interval=pulumi.get(__response__, 'tunnel_interface_hello_interval'),
+        tunnel_interface_hello_interval_variable=pulumi.get(__response__, 'tunnel_interface_hello_interval_variable'),
+        tunnel_interface_hello_tolerance=pulumi.get(__response__, 'tunnel_interface_hello_tolerance'),
+        tunnel_interface_hello_tolerance_variable=pulumi.get(__response__, 'tunnel_interface_hello_tolerance_variable'),
+        tunnel_interface_last_resort_circuit=pulumi.get(__response__, 'tunnel_interface_last_resort_circuit'),
+        tunnel_interface_last_resort_circuit_variable=pulumi.get(__response__, 'tunnel_interface_last_resort_circuit_variable'),
+        tunnel_interface_low_bandwidth_link=pulumi.get(__response__, 'tunnel_interface_low_bandwidth_link'),
+        tunnel_interface_low_bandwidth_link_variable=pulumi.get(__response__, 'tunnel_interface_low_bandwidth_link_variable'),
+        tunnel_interface_max_control_connections=pulumi.get(__response__, 'tunnel_interface_max_control_connections'),
+        tunnel_interface_max_control_connections_variable=pulumi.get(__response__, 'tunnel_interface_max_control_connections_variable'),
+        tunnel_interface_nat_refresh_interval=pulumi.get(__response__, 'tunnel_interface_nat_refresh_interval'),
+        tunnel_interface_nat_refresh_interval_variable=pulumi.get(__response__, 'tunnel_interface_nat_refresh_interval_variable'),
+        tunnel_interface_network_broadcast=pulumi.get(__response__, 'tunnel_interface_network_broadcast'),
+        tunnel_interface_network_broadcast_variable=pulumi.get(__response__, 'tunnel_interface_network_broadcast_variable'),
+        tunnel_interface_port_hop=pulumi.get(__response__, 'tunnel_interface_port_hop'),
+        tunnel_interface_port_hop_variable=pulumi.get(__response__, 'tunnel_interface_port_hop_variable'),
+        tunnel_interface_tunnel_tcp_mss=pulumi.get(__response__, 'tunnel_interface_tunnel_tcp_mss'),
+        tunnel_interface_tunnel_tcp_mss_variable=pulumi.get(__response__, 'tunnel_interface_tunnel_tcp_mss_variable'),
+        tunnel_interface_vbond_as_stun_server=pulumi.get(__response__, 'tunnel_interface_vbond_as_stun_server'),
+        tunnel_interface_vbond_as_stun_server_variable=pulumi.get(__response__, 'tunnel_interface_vbond_as_stun_server_variable'),
+        tunnel_interface_vmanage_connection_preference=pulumi.get(__response__, 'tunnel_interface_vmanage_connection_preference'),
+        tunnel_interface_vmanage_connection_preference_variable=pulumi.get(__response__, 'tunnel_interface_vmanage_connection_preference_variable'),
+        tunnel_qos_mode=pulumi.get(__response__, 'tunnel_qos_mode'),
+        tunnel_qos_mode_variable=pulumi.get(__response__, 'tunnel_qos_mode_variable'),
+        version=pulumi.get(__response__, 'version')))

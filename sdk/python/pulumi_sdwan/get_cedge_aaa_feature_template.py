@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -475,9 +480,6 @@ def get_cedge_aaa_feature_template(id: Optional[str] = None,
         template_type=pulumi.get(__ret__, 'template_type'),
         users=pulumi.get(__ret__, 'users'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_cedge_aaa_feature_template)
 def get_cedge_aaa_feature_template_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                           name: Optional[pulumi.Input[Optional[str]]] = None,
                                           opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCedgeAaaFeatureTemplateResult]:
@@ -497,4 +499,41 @@ def get_cedge_aaa_feature_template_output(id: Optional[pulumi.Input[Optional[str
     :param str id: The id of the feature template
     :param str name: The name of the feature template
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getCedgeAaaFeatureTemplate:getCedgeAaaFeatureTemplate', __args__, opts=opts, typ=GetCedgeAaaFeatureTemplateResult)
+    return __ret__.apply(lambda __response__: GetCedgeAaaFeatureTemplateResult(
+        accounting_rules=pulumi.get(__response__, 'accounting_rules'),
+        authorization_config_commands=pulumi.get(__response__, 'authorization_config_commands'),
+        authorization_config_commands_variable=pulumi.get(__response__, 'authorization_config_commands_variable'),
+        authorization_console=pulumi.get(__response__, 'authorization_console'),
+        authorization_console_variable=pulumi.get(__response__, 'authorization_console_variable'),
+        authorization_rules=pulumi.get(__response__, 'authorization_rules'),
+        description=pulumi.get(__response__, 'description'),
+        device_types=pulumi.get(__response__, 'device_types'),
+        dot1x_accounting=pulumi.get(__response__, 'dot1x_accounting'),
+        dot1x_accounting_variable=pulumi.get(__response__, 'dot1x_accounting_variable'),
+        dot1x_authentication=pulumi.get(__response__, 'dot1x_authentication'),
+        dot1x_authentication_variable=pulumi.get(__response__, 'dot1x_authentication_variable'),
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
+        radius_clients=pulumi.get(__response__, 'radius_clients'),
+        radius_dynamic_author_authentication_type=pulumi.get(__response__, 'radius_dynamic_author_authentication_type'),
+        radius_dynamic_author_authentication_type_variable=pulumi.get(__response__, 'radius_dynamic_author_authentication_type_variable'),
+        radius_dynamic_author_domain_stripping=pulumi.get(__response__, 'radius_dynamic_author_domain_stripping'),
+        radius_dynamic_author_domain_stripping_variable=pulumi.get(__response__, 'radius_dynamic_author_domain_stripping_variable'),
+        radius_dynamic_author_port=pulumi.get(__response__, 'radius_dynamic_author_port'),
+        radius_dynamic_author_port_variable=pulumi.get(__response__, 'radius_dynamic_author_port_variable'),
+        radius_dynamic_author_server_key=pulumi.get(__response__, 'radius_dynamic_author_server_key'),
+        radius_dynamic_author_server_key_variable=pulumi.get(__response__, 'radius_dynamic_author_server_key_variable'),
+        radius_server_groups=pulumi.get(__response__, 'radius_server_groups'),
+        radius_trustsec_cts_authorization_list=pulumi.get(__response__, 'radius_trustsec_cts_authorization_list'),
+        radius_trustsec_cts_authorization_list_variable=pulumi.get(__response__, 'radius_trustsec_cts_authorization_list_variable'),
+        radius_trustsec_group=pulumi.get(__response__, 'radius_trustsec_group'),
+        server_groups_priority_order=pulumi.get(__response__, 'server_groups_priority_order'),
+        tacacs_server_groups=pulumi.get(__response__, 'tacacs_server_groups'),
+        template_type=pulumi.get(__response__, 'template_type'),
+        users=pulumi.get(__response__, 'users'),
+        version=pulumi.get(__response__, 'version')))

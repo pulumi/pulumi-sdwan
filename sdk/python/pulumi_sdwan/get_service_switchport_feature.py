@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -177,9 +182,6 @@ def get_service_switchport_feature(feature_profile_id: Optional[str] = None,
         name=pulumi.get(__ret__, 'name'),
         static_mac_addresses=pulumi.get(__ret__, 'static_mac_addresses'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_service_switchport_feature)
 def get_service_switchport_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                           id: Optional[pulumi.Input[str]] = None,
                                           opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetServiceSwitchportFeatureResult]:
@@ -200,4 +202,18 @@ def get_service_switchport_feature_output(feature_profile_id: Optional[pulumi.In
     :param str feature_profile_id: Feature Profile ID
     :param str id: The id of the Feature
     """
-    ...
+    __args__ = dict()
+    __args__['featureProfileId'] = feature_profile_id
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getServiceSwitchportFeature:getServiceSwitchportFeature', __args__, opts=opts, typ=GetServiceSwitchportFeatureResult)
+    return __ret__.apply(lambda __response__: GetServiceSwitchportFeatureResult(
+        age_out_time=pulumi.get(__response__, 'age_out_time'),
+        age_out_time_variable=pulumi.get(__response__, 'age_out_time_variable'),
+        description=pulumi.get(__response__, 'description'),
+        feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),
+        id=pulumi.get(__response__, 'id'),
+        interfaces=pulumi.get(__response__, 'interfaces'),
+        name=pulumi.get(__response__, 'name'),
+        static_mac_addresses=pulumi.get(__response__, 'static_mac_addresses'),
+        version=pulumi.get(__response__, 'version')))

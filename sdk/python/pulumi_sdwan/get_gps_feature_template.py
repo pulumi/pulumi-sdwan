@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 
 __all__ = [
@@ -292,9 +297,6 @@ def get_gps_feature_template(id: Optional[str] = None,
         source_address_variable=pulumi.get(__ret__, 'source_address_variable'),
         template_type=pulumi.get(__ret__, 'template_type'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_gps_feature_template)
 def get_gps_feature_template_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                     name: Optional[pulumi.Input[Optional[str]]] = None,
                                     opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetGpsFeatureTemplateResult]:
@@ -314,4 +316,27 @@ def get_gps_feature_template_output(id: Optional[pulumi.Input[Optional[str]]] = 
     :param str id: The id of the feature template
     :param str name: The name of the feature template
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getGpsFeatureTemplate:getGpsFeatureTemplate', __args__, opts=opts, typ=GetGpsFeatureTemplateResult)
+    return __ret__.apply(lambda __response__: GetGpsFeatureTemplateResult(
+        description=pulumi.get(__response__, 'description'),
+        destination_address=pulumi.get(__response__, 'destination_address'),
+        destination_address_variable=pulumi.get(__response__, 'destination_address_variable'),
+        destination_port=pulumi.get(__response__, 'destination_port'),
+        destination_port_variable=pulumi.get(__response__, 'destination_port_variable'),
+        device_types=pulumi.get(__response__, 'device_types'),
+        enable=pulumi.get(__response__, 'enable'),
+        enable_variable=pulumi.get(__response__, 'enable_variable'),
+        gps_mode=pulumi.get(__response__, 'gps_mode'),
+        gps_mode_variable=pulumi.get(__response__, 'gps_mode_variable'),
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
+        nmea=pulumi.get(__response__, 'nmea'),
+        nmea_variable=pulumi.get(__response__, 'nmea_variable'),
+        source_address=pulumi.get(__response__, 'source_address'),
+        source_address_variable=pulumi.get(__response__, 'source_address_variable'),
+        template_type=pulumi.get(__response__, 'template_type'),
+        version=pulumi.get(__response__, 'version')))

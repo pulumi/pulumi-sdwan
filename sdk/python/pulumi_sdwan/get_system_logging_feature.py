@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -242,9 +247,6 @@ def get_system_logging_feature(feature_profile_id: Optional[str] = None,
         name=pulumi.get(__ret__, 'name'),
         tls_profiles=pulumi.get(__ret__, 'tls_profiles'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_system_logging_feature)
 def get_system_logging_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                       id: Optional[pulumi.Input[str]] = None,
                                       opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSystemLoggingFeatureResult]:
@@ -265,4 +267,23 @@ def get_system_logging_feature_output(feature_profile_id: Optional[pulumi.Input[
     :param str feature_profile_id: Feature Profile ID
     :param str id: The id of the Feature
     """
-    ...
+    __args__ = dict()
+    __args__['featureProfileId'] = feature_profile_id
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getSystemLoggingFeature:getSystemLoggingFeature', __args__, opts=opts, typ=GetSystemLoggingFeatureResult)
+    return __ret__.apply(lambda __response__: GetSystemLoggingFeatureResult(
+        description=pulumi.get(__response__, 'description'),
+        disk_enable=pulumi.get(__response__, 'disk_enable'),
+        disk_enable_variable=pulumi.get(__response__, 'disk_enable_variable'),
+        disk_file_rotate=pulumi.get(__response__, 'disk_file_rotate'),
+        disk_file_rotate_variable=pulumi.get(__response__, 'disk_file_rotate_variable'),
+        disk_file_size=pulumi.get(__response__, 'disk_file_size'),
+        disk_file_size_variable=pulumi.get(__response__, 'disk_file_size_variable'),
+        feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),
+        id=pulumi.get(__response__, 'id'),
+        ipv4_servers=pulumi.get(__response__, 'ipv4_servers'),
+        ipv6_servers=pulumi.get(__response__, 'ipv6_servers'),
+        name=pulumi.get(__response__, 'name'),
+        tls_profiles=pulumi.get(__response__, 'tls_profiles'),
+        version=pulumi.get(__response__, 'version')))

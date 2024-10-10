@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -618,9 +623,6 @@ def get_vpn_interface_svi_feature_template(id: Optional[str] = None,
         tcp_mss_adjust_variable=pulumi.get(__ret__, 'tcp_mss_adjust_variable'),
         template_type=pulumi.get(__ret__, 'template_type'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_vpn_interface_svi_feature_template)
 def get_vpn_interface_svi_feature_template_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                                   name: Optional[pulumi.Input[Optional[str]]] = None,
                                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetVpnInterfaceSviFeatureTemplateResult]:
@@ -640,4 +642,52 @@ def get_vpn_interface_svi_feature_template_output(id: Optional[pulumi.Input[Opti
     :param str id: The id of the feature template
     :param str name: The name of the feature template
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getVpnInterfaceSviFeatureTemplate:getVpnInterfaceSviFeatureTemplate', __args__, opts=opts, typ=GetVpnInterfaceSviFeatureTemplateResult)
+    return __ret__.apply(lambda __response__: GetVpnInterfaceSviFeatureTemplateResult(
+        arp_timeout=pulumi.get(__response__, 'arp_timeout'),
+        arp_timeout_variable=pulumi.get(__response__, 'arp_timeout_variable'),
+        description=pulumi.get(__response__, 'description'),
+        device_types=pulumi.get(__response__, 'device_types'),
+        id=pulumi.get(__response__, 'id'),
+        if_name=pulumi.get(__response__, 'if_name'),
+        if_name_variable=pulumi.get(__response__, 'if_name_variable'),
+        interface_description=pulumi.get(__response__, 'interface_description'),
+        interface_description_variable=pulumi.get(__response__, 'interface_description_variable'),
+        ip_directed_broadcast=pulumi.get(__response__, 'ip_directed_broadcast'),
+        ip_directed_broadcast_variable=pulumi.get(__response__, 'ip_directed_broadcast_variable'),
+        ip_mtu=pulumi.get(__response__, 'ip_mtu'),
+        ip_mtu_variable=pulumi.get(__response__, 'ip_mtu_variable'),
+        ipv4_access_lists=pulumi.get(__response__, 'ipv4_access_lists'),
+        ipv4_address=pulumi.get(__response__, 'ipv4_address'),
+        ipv4_address_variable=pulumi.get(__response__, 'ipv4_address_variable'),
+        ipv4_dhcp_helper_variable=pulumi.get(__response__, 'ipv4_dhcp_helper_variable'),
+        ipv4_dhcp_helpers=pulumi.get(__response__, 'ipv4_dhcp_helpers'),
+        ipv4_secondary_addresses=pulumi.get(__response__, 'ipv4_secondary_addresses'),
+        ipv4_vrrps=pulumi.get(__response__, 'ipv4_vrrps'),
+        ipv6_access_lists=pulumi.get(__response__, 'ipv6_access_lists'),
+        ipv6_address=pulumi.get(__response__, 'ipv6_address'),
+        ipv6_address_variable=pulumi.get(__response__, 'ipv6_address_variable'),
+        ipv6_dhcp_client=pulumi.get(__response__, 'ipv6_dhcp_client'),
+        ipv6_dhcp_client_variable=pulumi.get(__response__, 'ipv6_dhcp_client_variable'),
+        ipv6_dhcp_distance=pulumi.get(__response__, 'ipv6_dhcp_distance'),
+        ipv6_dhcp_distance_variable=pulumi.get(__response__, 'ipv6_dhcp_distance_variable'),
+        ipv6_dhcp_helpers=pulumi.get(__response__, 'ipv6_dhcp_helpers'),
+        ipv6_dhcp_rapid_commit=pulumi.get(__response__, 'ipv6_dhcp_rapid_commit'),
+        ipv6_dhcp_rapid_commit_variable=pulumi.get(__response__, 'ipv6_dhcp_rapid_commit_variable'),
+        ipv6_secondary_addresses=pulumi.get(__response__, 'ipv6_secondary_addresses'),
+        ipv6_vrrps=pulumi.get(__response__, 'ipv6_vrrps'),
+        mtu=pulumi.get(__response__, 'mtu'),
+        mtu_variable=pulumi.get(__response__, 'mtu_variable'),
+        name=pulumi.get(__response__, 'name'),
+        policers=pulumi.get(__response__, 'policers'),
+        shutdown=pulumi.get(__response__, 'shutdown'),
+        shutdown_variable=pulumi.get(__response__, 'shutdown_variable'),
+        static_arp_entries=pulumi.get(__response__, 'static_arp_entries'),
+        tcp_mss_adjust=pulumi.get(__response__, 'tcp_mss_adjust'),
+        tcp_mss_adjust_variable=pulumi.get(__response__, 'tcp_mss_adjust_variable'),
+        template_type=pulumi.get(__response__, 'template_type'),
+        version=pulumi.get(__response__, 'version')))
