@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -77,9 +82,6 @@ def get_vedge_inventory(opts: Optional[pulumi.InvokeOptions] = None) -> Awaitabl
     return AwaitableGetVedgeInventoryResult(
         devices=pulumi.get(__ret__, 'devices'),
         id=pulumi.get(__ret__, 'id'))
-
-
-@_utilities.lift_output_func(get_vedge_inventory)
 def get_vedge_inventory_output(opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetVedgeInventoryResult]:
     """
     This data source can read the VEdge Inventory .
@@ -93,4 +95,9 @@ def get_vedge_inventory_output(opts: Optional[pulumi.InvokeOptions] = None) -> p
     example = sdwan.get_vedge_inventory()
     ```
     """
-    ...
+    __args__ = dict()
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getVedgeInventory:getVedgeInventory', __args__, opts=opts, typ=GetVedgeInventoryResult)
+    return __ret__.apply(lambda __response__: GetVedgeInventoryResult(
+        devices=pulumi.get(__response__, 'devices'),
+        id=pulumi.get(__response__, 'id')))

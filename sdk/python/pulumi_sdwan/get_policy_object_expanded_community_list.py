@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 
 __all__ = [
@@ -150,9 +155,6 @@ def get_policy_object_expanded_community_list(feature_profile_id: Optional[str] 
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_policy_object_expanded_community_list)
 def get_policy_object_expanded_community_list_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                                      id: Optional[pulumi.Input[str]] = None,
                                                      opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetPolicyObjectExpandedCommunityListResult]:
@@ -173,4 +175,16 @@ def get_policy_object_expanded_community_list_output(feature_profile_id: Optiona
     :param str feature_profile_id: Feature Profile ID
     :param str id: The id of the Policy_object
     """
-    ...
+    __args__ = dict()
+    __args__['featureProfileId'] = feature_profile_id
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getPolicyObjectExpandedCommunityList:getPolicyObjectExpandedCommunityList', __args__, opts=opts, typ=GetPolicyObjectExpandedCommunityListResult)
+    return __ret__.apply(lambda __response__: GetPolicyObjectExpandedCommunityListResult(
+        description=pulumi.get(__response__, 'description'),
+        expanded_community_lists=pulumi.get(__response__, 'expanded_community_lists'),
+        expanded_community_lists_variable=pulumi.get(__response__, 'expanded_community_lists_variable'),
+        feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
+        version=pulumi.get(__response__, 'version')))

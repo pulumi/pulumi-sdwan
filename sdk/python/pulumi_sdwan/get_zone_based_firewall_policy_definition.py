@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -154,9 +159,6 @@ def get_zone_based_firewall_policy_definition(id: Optional[str] = None,
         name=pulumi.get(__ret__, 'name'),
         rules=pulumi.get(__ret__, 'rules'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_zone_based_firewall_policy_definition)
 def get_zone_based_firewall_policy_definition_output(id: Optional[pulumi.Input[str]] = None,
                                                      opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetZoneBasedFirewallPolicyDefinitionResult]:
     """
@@ -174,4 +176,16 @@ def get_zone_based_firewall_policy_definition_output(id: Optional[pulumi.Input[s
 
     :param str id: The id of the object
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getZoneBasedFirewallPolicyDefinition:getZoneBasedFirewallPolicyDefinition', __args__, opts=opts, typ=GetZoneBasedFirewallPolicyDefinitionResult)
+    return __ret__.apply(lambda __response__: GetZoneBasedFirewallPolicyDefinitionResult(
+        apply_zone_pairs=pulumi.get(__response__, 'apply_zone_pairs'),
+        default_action=pulumi.get(__response__, 'default_action'),
+        description=pulumi.get(__response__, 'description'),
+        id=pulumi.get(__response__, 'id'),
+        mode=pulumi.get(__response__, 'mode'),
+        name=pulumi.get(__response__, 'name'),
+        rules=pulumi.get(__response__, 'rules'),
+        version=pulumi.get(__response__, 'version')))

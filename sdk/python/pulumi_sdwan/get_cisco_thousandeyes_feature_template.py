@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -150,9 +155,6 @@ def get_cisco_thousandeyes_feature_template(id: Optional[str] = None,
         template_type=pulumi.get(__ret__, 'template_type'),
         version=pulumi.get(__ret__, 'version'),
         virtual_applications=pulumi.get(__ret__, 'virtual_applications'))
-
-
-@_utilities.lift_output_func(get_cisco_thousandeyes_feature_template)
 def get_cisco_thousandeyes_feature_template_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                                    name: Optional[pulumi.Input[Optional[str]]] = None,
                                                    opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCiscoThousandeyesFeatureTemplateResult]:
@@ -172,4 +174,16 @@ def get_cisco_thousandeyes_feature_template_output(id: Optional[pulumi.Input[Opt
     :param str id: The id of the feature template
     :param str name: The name of the feature template
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getCiscoThousandeyesFeatureTemplate:getCiscoThousandeyesFeatureTemplate', __args__, opts=opts, typ=GetCiscoThousandeyesFeatureTemplateResult)
+    return __ret__.apply(lambda __response__: GetCiscoThousandeyesFeatureTemplateResult(
+        description=pulumi.get(__response__, 'description'),
+        device_types=pulumi.get(__response__, 'device_types'),
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
+        template_type=pulumi.get(__response__, 'template_type'),
+        version=pulumi.get(__response__, 'version'),
+        virtual_applications=pulumi.get(__response__, 'virtual_applications')))

@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -319,9 +324,6 @@ def get_cisco_security_feature_template(id: Optional[str] = None,
         replay_window_variable=pulumi.get(__ret__, 'replay_window_variable'),
         template_type=pulumi.get(__ret__, 'template_type'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_cisco_security_feature_template)
 def get_cisco_security_feature_template_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                                name: Optional[pulumi.Input[Optional[str]]] = None,
                                                opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCiscoSecurityFeatureTemplateResult]:
@@ -341,4 +343,29 @@ def get_cisco_security_feature_template_output(id: Optional[pulumi.Input[Optiona
     :param str id: The id of the feature template
     :param str name: The name of the feature template
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getCiscoSecurityFeatureTemplate:getCiscoSecurityFeatureTemplate', __args__, opts=opts, typ=GetCiscoSecurityFeatureTemplateResult)
+    return __ret__.apply(lambda __response__: GetCiscoSecurityFeatureTemplateResult(
+        authentication_type_variable=pulumi.get(__response__, 'authentication_type_variable'),
+        authentication_types=pulumi.get(__response__, 'authentication_types'),
+        description=pulumi.get(__response__, 'description'),
+        device_types=pulumi.get(__response__, 'device_types'),
+        extended_ar_window=pulumi.get(__response__, 'extended_ar_window'),
+        extended_ar_window_variable=pulumi.get(__response__, 'extended_ar_window_variable'),
+        id=pulumi.get(__response__, 'id'),
+        integrity_type_variable=pulumi.get(__response__, 'integrity_type_variable'),
+        integrity_types=pulumi.get(__response__, 'integrity_types'),
+        keychains=pulumi.get(__response__, 'keychains'),
+        keys=pulumi.get(__response__, 'keys'),
+        name=pulumi.get(__response__, 'name'),
+        pairwise_keying=pulumi.get(__response__, 'pairwise_keying'),
+        pairwise_keying_variable=pulumi.get(__response__, 'pairwise_keying_variable'),
+        rekey_interval=pulumi.get(__response__, 'rekey_interval'),
+        rekey_interval_variable=pulumi.get(__response__, 'rekey_interval_variable'),
+        replay_window=pulumi.get(__response__, 'replay_window'),
+        replay_window_variable=pulumi.get(__response__, 'replay_window_variable'),
+        template_type=pulumi.get(__response__, 'template_type'),
+        version=pulumi.get(__response__, 'version')))

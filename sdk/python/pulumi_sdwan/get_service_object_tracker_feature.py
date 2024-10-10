@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 
 __all__ = [
@@ -267,9 +272,6 @@ def get_service_object_tracker_feature(feature_profile_id: Optional[str] = None,
         version=pulumi.get(__ret__, 'version'),
         vpn=pulumi.get(__ret__, 'vpn'),
         vpn_variable=pulumi.get(__ret__, 'vpn_variable'))
-
-
-@_utilities.lift_output_func(get_service_object_tracker_feature)
 def get_service_object_tracker_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                               id: Optional[pulumi.Input[str]] = None,
                                               opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetServiceObjectTrackerFeatureResult]:
@@ -290,4 +292,25 @@ def get_service_object_tracker_feature_output(feature_profile_id: Optional[pulum
     :param str feature_profile_id: Feature Profile ID
     :param str id: The id of the Feature
     """
-    ...
+    __args__ = dict()
+    __args__['featureProfileId'] = feature_profile_id
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getServiceObjectTrackerFeature:getServiceObjectTrackerFeature', __args__, opts=opts, typ=GetServiceObjectTrackerFeatureResult)
+    return __ret__.apply(lambda __response__: GetServiceObjectTrackerFeatureResult(
+        description=pulumi.get(__response__, 'description'),
+        feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),
+        id=pulumi.get(__response__, 'id'),
+        interface=pulumi.get(__response__, 'interface'),
+        interface_variable=pulumi.get(__response__, 'interface_variable'),
+        name=pulumi.get(__response__, 'name'),
+        object_tracker_id=pulumi.get(__response__, 'object_tracker_id'),
+        object_tracker_id_variable=pulumi.get(__response__, 'object_tracker_id_variable'),
+        object_tracker_type=pulumi.get(__response__, 'object_tracker_type'),
+        route_ip=pulumi.get(__response__, 'route_ip'),
+        route_ip_variable=pulumi.get(__response__, 'route_ip_variable'),
+        route_mask=pulumi.get(__response__, 'route_mask'),
+        route_mask_variable=pulumi.get(__response__, 'route_mask_variable'),
+        version=pulumi.get(__response__, 'version'),
+        vpn=pulumi.get(__response__, 'vpn'),
+        vpn_variable=pulumi.get(__response__, 'vpn_variable')))

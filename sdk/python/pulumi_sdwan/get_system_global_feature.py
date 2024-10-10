@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 
 __all__ = [
@@ -722,9 +727,6 @@ def get_system_global_feature(feature_profile_id: Optional[str] = None,
         version=pulumi.get(__ret__, 'version'),
         vty_line_logging=pulumi.get(__ret__, 'vty_line_logging'),
         vty_line_logging_variable=pulumi.get(__ret__, 'vty_line_logging_variable'))
-
-
-@_utilities.lift_output_func(get_system_global_feature)
 def get_system_global_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                      id: Optional[pulumi.Input[str]] = None,
                                      opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSystemGlobalFeatureResult]:
@@ -745,4 +747,60 @@ def get_system_global_feature_output(feature_profile_id: Optional[pulumi.Input[s
     :param str feature_profile_id: Feature Profile ID
     :param str id: The id of the Feature
     """
-    ...
+    __args__ = dict()
+    __args__['featureProfileId'] = feature_profile_id
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getSystemGlobalFeature:getSystemGlobalFeature', __args__, opts=opts, typ=GetSystemGlobalFeatureResult)
+    return __ret__.apply(lambda __response__: GetSystemGlobalFeatureResult(
+        arp_proxy=pulumi.get(__response__, 'arp_proxy'),
+        arp_proxy_variable=pulumi.get(__response__, 'arp_proxy_variable'),
+        cdp=pulumi.get(__response__, 'cdp'),
+        cdp_variable=pulumi.get(__response__, 'cdp_variable'),
+        console_logging=pulumi.get(__response__, 'console_logging'),
+        console_logging_variable=pulumi.get(__response__, 'console_logging_variable'),
+        description=pulumi.get(__response__, 'description'),
+        domain_lookup=pulumi.get(__response__, 'domain_lookup'),
+        domain_lookup_variable=pulumi.get(__response__, 'domain_lookup_variable'),
+        feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),
+        ftp_passive=pulumi.get(__response__, 'ftp_passive'),
+        ftp_passive_variable=pulumi.get(__response__, 'ftp_passive_variable'),
+        http_authentication=pulumi.get(__response__, 'http_authentication'),
+        http_authentication_variable=pulumi.get(__response__, 'http_authentication_variable'),
+        http_server=pulumi.get(__response__, 'http_server'),
+        http_server_variable=pulumi.get(__response__, 'http_server_variable'),
+        https_server=pulumi.get(__response__, 'https_server'),
+        https_server_variable=pulumi.get(__response__, 'https_server_variable'),
+        id=pulumi.get(__response__, 'id'),
+        ignore_bootp=pulumi.get(__response__, 'ignore_bootp'),
+        ignore_bootp_variable=pulumi.get(__response__, 'ignore_bootp_variable'),
+        ip_source_routing=pulumi.get(__response__, 'ip_source_routing'),
+        ip_source_routing_variable=pulumi.get(__response__, 'ip_source_routing_variable'),
+        line_vty=pulumi.get(__response__, 'line_vty'),
+        line_vty_variable=pulumi.get(__response__, 'line_vty_variable'),
+        lldp=pulumi.get(__response__, 'lldp'),
+        lldp_variable=pulumi.get(__response__, 'lldp_variable'),
+        name=pulumi.get(__response__, 'name'),
+        nat64_tcp_timeout=pulumi.get(__response__, 'nat64_tcp_timeout'),
+        nat64_tcp_timeout_variable=pulumi.get(__response__, 'nat64_tcp_timeout_variable'),
+        nat64_udp_timeout=pulumi.get(__response__, 'nat64_udp_timeout'),
+        nat64_udp_timeout_variable=pulumi.get(__response__, 'nat64_udp_timeout_variable'),
+        rsh_rcp=pulumi.get(__response__, 'rsh_rcp'),
+        rsh_rcp_variable=pulumi.get(__response__, 'rsh_rcp_variable'),
+        snmp_ifindex_persist=pulumi.get(__response__, 'snmp_ifindex_persist'),
+        snmp_ifindex_persist_variable=pulumi.get(__response__, 'snmp_ifindex_persist_variable'),
+        source_interface=pulumi.get(__response__, 'source_interface'),
+        source_interface_variable=pulumi.get(__response__, 'source_interface_variable'),
+        ssh_version=pulumi.get(__response__, 'ssh_version'),
+        ssh_version_variable=pulumi.get(__response__, 'ssh_version_variable'),
+        tcp_keepalives_in=pulumi.get(__response__, 'tcp_keepalives_in'),
+        tcp_keepalives_in_variable=pulumi.get(__response__, 'tcp_keepalives_in_variable'),
+        tcp_keepalives_out=pulumi.get(__response__, 'tcp_keepalives_out'),
+        tcp_keepalives_out_variable=pulumi.get(__response__, 'tcp_keepalives_out_variable'),
+        tcp_small_servers=pulumi.get(__response__, 'tcp_small_servers'),
+        tcp_small_servers_variable=pulumi.get(__response__, 'tcp_small_servers_variable'),
+        udp_small_servers=pulumi.get(__response__, 'udp_small_servers'),
+        udp_small_servers_variable=pulumi.get(__response__, 'udp_small_servers_variable'),
+        version=pulumi.get(__response__, 'version'),
+        vty_line_logging=pulumi.get(__response__, 'vty_line_logging'),
+        vty_line_logging_variable=pulumi.get(__response__, 'vty_line_logging_variable')))

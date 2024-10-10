@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -744,9 +749,6 @@ def get_transport_management_vpn_interface_ethernet_feature(feature_profile_id: 
         tcp_mss_variable=pulumi.get(__ret__, 'tcp_mss_variable'),
         transport_management_vpn_feature_id=pulumi.get(__ret__, 'transport_management_vpn_feature_id'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_transport_management_vpn_interface_ethernet_feature)
 def get_transport_management_vpn_interface_ethernet_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                                                    id: Optional[pulumi.Input[str]] = None,
                                                                    transport_management_vpn_feature_id: Optional[pulumi.Input[str]] = None,
@@ -770,4 +772,63 @@ def get_transport_management_vpn_interface_ethernet_feature_output(feature_profi
     :param str id: The id of the Feature
     :param str transport_management_vpn_feature_id: Transport Management VPN Feature ID
     """
-    ...
+    __args__ = dict()
+    __args__['featureProfileId'] = feature_profile_id
+    __args__['id'] = id
+    __args__['transportManagementVpnFeatureId'] = transport_management_vpn_feature_id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getTransportManagementVpnInterfaceEthernetFeature:getTransportManagementVpnInterfaceEthernetFeature', __args__, opts=opts, typ=GetTransportManagementVpnInterfaceEthernetFeatureResult)
+    return __ret__.apply(lambda __response__: GetTransportManagementVpnInterfaceEthernetFeatureResult(
+        arp_entries=pulumi.get(__response__, 'arp_entries'),
+        arp_timeout=pulumi.get(__response__, 'arp_timeout'),
+        arp_timeout_variable=pulumi.get(__response__, 'arp_timeout_variable'),
+        autonegotiate=pulumi.get(__response__, 'autonegotiate'),
+        autonegotiate_variable=pulumi.get(__response__, 'autonegotiate_variable'),
+        description=pulumi.get(__response__, 'description'),
+        duplex=pulumi.get(__response__, 'duplex'),
+        duplex_variable=pulumi.get(__response__, 'duplex_variable'),
+        enable_dhcpv6=pulumi.get(__response__, 'enable_dhcpv6'),
+        feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),
+        icmp_redirect_disable=pulumi.get(__response__, 'icmp_redirect_disable'),
+        icmp_redirect_disable_variable=pulumi.get(__response__, 'icmp_redirect_disable_variable'),
+        id=pulumi.get(__response__, 'id'),
+        interface_description=pulumi.get(__response__, 'interface_description'),
+        interface_description_variable=pulumi.get(__response__, 'interface_description_variable'),
+        interface_mtu=pulumi.get(__response__, 'interface_mtu'),
+        interface_mtu_variable=pulumi.get(__response__, 'interface_mtu_variable'),
+        interface_name=pulumi.get(__response__, 'interface_name'),
+        interface_name_variable=pulumi.get(__response__, 'interface_name_variable'),
+        ip_directed_broadcast=pulumi.get(__response__, 'ip_directed_broadcast'),
+        ip_directed_broadcast_variable=pulumi.get(__response__, 'ip_directed_broadcast_variable'),
+        ip_mtu=pulumi.get(__response__, 'ip_mtu'),
+        ip_mtu_variable=pulumi.get(__response__, 'ip_mtu_variable'),
+        ipv4_address=pulumi.get(__response__, 'ipv4_address'),
+        ipv4_address_variable=pulumi.get(__response__, 'ipv4_address_variable'),
+        ipv4_auto_detect_bandwidth=pulumi.get(__response__, 'ipv4_auto_detect_bandwidth'),
+        ipv4_auto_detect_bandwidth_variable=pulumi.get(__response__, 'ipv4_auto_detect_bandwidth_variable'),
+        ipv4_dhcp_distance=pulumi.get(__response__, 'ipv4_dhcp_distance'),
+        ipv4_dhcp_distance_variable=pulumi.get(__response__, 'ipv4_dhcp_distance_variable'),
+        ipv4_dhcp_helper_variable=pulumi.get(__response__, 'ipv4_dhcp_helper_variable'),
+        ipv4_dhcp_helpers=pulumi.get(__response__, 'ipv4_dhcp_helpers'),
+        ipv4_iperf_server=pulumi.get(__response__, 'ipv4_iperf_server'),
+        ipv4_iperf_server_variable=pulumi.get(__response__, 'ipv4_iperf_server_variable'),
+        ipv4_secondary_addresses=pulumi.get(__response__, 'ipv4_secondary_addresses'),
+        ipv4_subnet_mask=pulumi.get(__response__, 'ipv4_subnet_mask'),
+        ipv4_subnet_mask_variable=pulumi.get(__response__, 'ipv4_subnet_mask_variable'),
+        ipv6_address=pulumi.get(__response__, 'ipv6_address'),
+        ipv6_address_variable=pulumi.get(__response__, 'ipv6_address_variable'),
+        load_interval=pulumi.get(__response__, 'load_interval'),
+        load_interval_variable=pulumi.get(__response__, 'load_interval_variable'),
+        mac_address=pulumi.get(__response__, 'mac_address'),
+        mac_address_variable=pulumi.get(__response__, 'mac_address_variable'),
+        media_type=pulumi.get(__response__, 'media_type'),
+        media_type_variable=pulumi.get(__response__, 'media_type_variable'),
+        name=pulumi.get(__response__, 'name'),
+        shutdown=pulumi.get(__response__, 'shutdown'),
+        shutdown_variable=pulumi.get(__response__, 'shutdown_variable'),
+        speed=pulumi.get(__response__, 'speed'),
+        speed_variable=pulumi.get(__response__, 'speed_variable'),
+        tcp_mss=pulumi.get(__response__, 'tcp_mss'),
+        tcp_mss_variable=pulumi.get(__response__, 'tcp_mss_variable'),
+        transport_management_vpn_feature_id=pulumi.get(__response__, 'transport_management_vpn_feature_id'),
+        version=pulumi.get(__response__, 'version')))

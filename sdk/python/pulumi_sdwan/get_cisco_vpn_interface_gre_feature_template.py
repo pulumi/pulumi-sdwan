@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -514,9 +519,6 @@ def get_cisco_vpn_interface_gre_feature_template(id: Optional[str] = None,
         tunnel_source_interface_variable=pulumi.get(__ret__, 'tunnel_source_interface_variable'),
         tunnel_source_variable=pulumi.get(__ret__, 'tunnel_source_variable'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_cisco_vpn_interface_gre_feature_template)
 def get_cisco_vpn_interface_gre_feature_template_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                                         name: Optional[pulumi.Input[Optional[str]]] = None,
                                                         opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCiscoVpnInterfaceGreFeatureTemplateResult]:
@@ -536,4 +538,44 @@ def get_cisco_vpn_interface_gre_feature_template_output(id: Optional[pulumi.Inpu
     :param str id: The id of the feature template
     :param str name: The name of the feature template
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getCiscoVpnInterfaceGreFeatureTemplate:getCiscoVpnInterfaceGreFeatureTemplate', __args__, opts=opts, typ=GetCiscoVpnInterfaceGreFeatureTemplateResult)
+    return __ret__.apply(lambda __response__: GetCiscoVpnInterfaceGreFeatureTemplateResult(
+        access_lists=pulumi.get(__response__, 'access_lists'),
+        application=pulumi.get(__response__, 'application'),
+        application_variable=pulumi.get(__response__, 'application_variable'),
+        clear_dont_fragment=pulumi.get(__response__, 'clear_dont_fragment'),
+        clear_dont_fragment_variable=pulumi.get(__response__, 'clear_dont_fragment_variable'),
+        description=pulumi.get(__response__, 'description'),
+        device_types=pulumi.get(__response__, 'device_types'),
+        id=pulumi.get(__response__, 'id'),
+        interface_description=pulumi.get(__response__, 'interface_description'),
+        interface_description_variable=pulumi.get(__response__, 'interface_description_variable'),
+        interface_name=pulumi.get(__response__, 'interface_name'),
+        interface_name_variable=pulumi.get(__response__, 'interface_name_variable'),
+        ip_address=pulumi.get(__response__, 'ip_address'),
+        ip_address_variable=pulumi.get(__response__, 'ip_address_variable'),
+        ip_mtu=pulumi.get(__response__, 'ip_mtu'),
+        ip_mtu_variable=pulumi.get(__response__, 'ip_mtu_variable'),
+        name=pulumi.get(__response__, 'name'),
+        rewrite_rule=pulumi.get(__response__, 'rewrite_rule'),
+        rewrite_rule_variable=pulumi.get(__response__, 'rewrite_rule_variable'),
+        shutdown=pulumi.get(__response__, 'shutdown'),
+        shutdown_variable=pulumi.get(__response__, 'shutdown_variable'),
+        tcp_mss_adjust=pulumi.get(__response__, 'tcp_mss_adjust'),
+        tcp_mss_adjust_variable=pulumi.get(__response__, 'tcp_mss_adjust_variable'),
+        template_type=pulumi.get(__response__, 'template_type'),
+        tracker_variable=pulumi.get(__response__, 'tracker_variable'),
+        trackers=pulumi.get(__response__, 'trackers'),
+        tunnel_destination=pulumi.get(__response__, 'tunnel_destination'),
+        tunnel_destination_variable=pulumi.get(__response__, 'tunnel_destination_variable'),
+        tunnel_route_via=pulumi.get(__response__, 'tunnel_route_via'),
+        tunnel_route_via_variable=pulumi.get(__response__, 'tunnel_route_via_variable'),
+        tunnel_source=pulumi.get(__response__, 'tunnel_source'),
+        tunnel_source_interface=pulumi.get(__response__, 'tunnel_source_interface'),
+        tunnel_source_interface_variable=pulumi.get(__response__, 'tunnel_source_interface_variable'),
+        tunnel_source_variable=pulumi.get(__response__, 'tunnel_source_variable'),
+        version=pulumi.get(__response__, 'version')))

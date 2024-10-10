@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -329,9 +334,6 @@ def get_tls_ssl_decryption_policy_definition(id: Optional[str] = None,
         url_rules=pulumi.get(__ret__, 'url_rules'),
         use_default_ca_cert_bundle=pulumi.get(__ret__, 'use_default_ca_cert_bundle'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_tls_ssl_decryption_policy_definition)
 def get_tls_ssl_decryption_policy_definition_output(id: Optional[pulumi.Input[str]] = None,
                                                     opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetTlsSslDecryptionPolicyDefinitionResult]:
     """
@@ -349,4 +351,29 @@ def get_tls_ssl_decryption_policy_definition_output(id: Optional[pulumi.Input[st
 
     :param str id: The id of the object
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getTlsSslDecryptionPolicyDefinition:getTlsSslDecryptionPolicyDefinition', __args__, opts=opts, typ=GetTlsSslDecryptionPolicyDefinitionResult)
+    return __ret__.apply(lambda __response__: GetTlsSslDecryptionPolicyDefinitionResult(
+        certificate_lifetime_in_days=pulumi.get(__response__, 'certificate_lifetime_in_days'),
+        certificate_revocation_status=pulumi.get(__response__, 'certificate_revocation_status'),
+        default_action=pulumi.get(__response__, 'default_action'),
+        description=pulumi.get(__response__, 'description'),
+        ec_key_type=pulumi.get(__response__, 'ec_key_type'),
+        expired_certificate=pulumi.get(__response__, 'expired_certificate'),
+        failure_mode=pulumi.get(__response__, 'failure_mode'),
+        id=pulumi.get(__response__, 'id'),
+        minimal_tls_version=pulumi.get(__response__, 'minimal_tls_version'),
+        mode=pulumi.get(__response__, 'mode'),
+        name=pulumi.get(__response__, 'name'),
+        network_rules=pulumi.get(__response__, 'network_rules'),
+        rsa_key_pair_modulus=pulumi.get(__response__, 'rsa_key_pair_modulus'),
+        ssl_decryption_enabled=pulumi.get(__response__, 'ssl_decryption_enabled'),
+        unknown_revocation_status=pulumi.get(__response__, 'unknown_revocation_status'),
+        unsupported_cipher_suites=pulumi.get(__response__, 'unsupported_cipher_suites'),
+        unsupported_protocol_versions=pulumi.get(__response__, 'unsupported_protocol_versions'),
+        untrusted_certificate=pulumi.get(__response__, 'untrusted_certificate'),
+        url_rules=pulumi.get(__response__, 'url_rules'),
+        use_default_ca_cert_bundle=pulumi.get(__response__, 'use_default_ca_cert_bundle'),
+        version=pulumi.get(__response__, 'version')))

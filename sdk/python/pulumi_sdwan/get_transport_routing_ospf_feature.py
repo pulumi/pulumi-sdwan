@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -499,9 +504,6 @@ def get_transport_routing_ospf_feature(feature_profile_id: Optional[str] = None,
         spf_maximum_hold_time=pulumi.get(__ret__, 'spf_maximum_hold_time'),
         spf_maximum_hold_time_variable=pulumi.get(__ret__, 'spf_maximum_hold_time_variable'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_transport_routing_ospf_feature)
 def get_transport_routing_ospf_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                               id: Optional[pulumi.Input[str]] = None,
                                               opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetTransportRoutingOspfFeatureResult]:
@@ -522,4 +524,43 @@ def get_transport_routing_ospf_feature_output(feature_profile_id: Optional[pulum
     :param str feature_profile_id: Feature Profile ID
     :param str id: The id of the Feature
     """
-    ...
+    __args__ = dict()
+    __args__['featureProfileId'] = feature_profile_id
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getTransportRoutingOspfFeature:getTransportRoutingOspfFeature', __args__, opts=opts, typ=GetTransportRoutingOspfFeatureResult)
+    return __ret__.apply(lambda __response__: GetTransportRoutingOspfFeatureResult(
+        areas=pulumi.get(__response__, 'areas'),
+        default_information_originate=pulumi.get(__response__, 'default_information_originate'),
+        default_information_originate_always=pulumi.get(__response__, 'default_information_originate_always'),
+        default_information_originate_always_variable=pulumi.get(__response__, 'default_information_originate_always_variable'),
+        default_information_originate_metric=pulumi.get(__response__, 'default_information_originate_metric'),
+        default_information_originate_metric_type=pulumi.get(__response__, 'default_information_originate_metric_type'),
+        default_information_originate_metric_type_variable=pulumi.get(__response__, 'default_information_originate_metric_type_variable'),
+        default_information_originate_metric_variable=pulumi.get(__response__, 'default_information_originate_metric_variable'),
+        description=pulumi.get(__response__, 'description'),
+        distance_external=pulumi.get(__response__, 'distance_external'),
+        distance_external_variable=pulumi.get(__response__, 'distance_external_variable'),
+        distance_inter_area=pulumi.get(__response__, 'distance_inter_area'),
+        distance_inter_area_variable=pulumi.get(__response__, 'distance_inter_area_variable'),
+        distance_intra_area=pulumi.get(__response__, 'distance_intra_area'),
+        distance_intra_area_variable=pulumi.get(__response__, 'distance_intra_area_variable'),
+        feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
+        redistributes=pulumi.get(__response__, 'redistributes'),
+        reference_bandwidth=pulumi.get(__response__, 'reference_bandwidth'),
+        reference_bandwidth_variable=pulumi.get(__response__, 'reference_bandwidth_variable'),
+        rfc1583_compatible=pulumi.get(__response__, 'rfc1583_compatible'),
+        rfc1583_compatible_variable=pulumi.get(__response__, 'rfc1583_compatible_variable'),
+        route_policy_id=pulumi.get(__response__, 'route_policy_id'),
+        router_id=pulumi.get(__response__, 'router_id'),
+        router_id_variable=pulumi.get(__response__, 'router_id_variable'),
+        router_lsas=pulumi.get(__response__, 'router_lsas'),
+        spf_calculation_delay=pulumi.get(__response__, 'spf_calculation_delay'),
+        spf_calculation_delay_variable=pulumi.get(__response__, 'spf_calculation_delay_variable'),
+        spf_initial_hold_time=pulumi.get(__response__, 'spf_initial_hold_time'),
+        spf_initial_hold_time_variable=pulumi.get(__response__, 'spf_initial_hold_time_variable'),
+        spf_maximum_hold_time=pulumi.get(__response__, 'spf_maximum_hold_time'),
+        spf_maximum_hold_time_variable=pulumi.get(__response__, 'spf_maximum_hold_time_variable'),
+        version=pulumi.get(__response__, 'version')))

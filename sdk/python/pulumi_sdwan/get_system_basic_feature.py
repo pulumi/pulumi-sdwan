@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -905,9 +910,6 @@ def get_system_basic_feature(feature_profile_id: Optional[str] = None,
         transport_gateway=pulumi.get(__ret__, 'transport_gateway'),
         transport_gateway_variable=pulumi.get(__ret__, 'transport_gateway_variable'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_system_basic_feature)
 def get_system_basic_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                     id: Optional[pulumi.Input[str]] = None,
                                     opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSystemBasicFeatureResult]:
@@ -928,4 +930,74 @@ def get_system_basic_feature_output(feature_profile_id: Optional[pulumi.Input[st
     :param str feature_profile_id: Feature Profile ID
     :param str id: The id of the Feature
     """
-    ...
+    __args__ = dict()
+    __args__['featureProfileId'] = feature_profile_id
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getSystemBasicFeature:getSystemBasicFeature', __args__, opts=opts, typ=GetSystemBasicFeatureResult)
+    return __ret__.apply(lambda __response__: GetSystemBasicFeatureResult(
+        admin_tech_on_failure=pulumi.get(__response__, 'admin_tech_on_failure'),
+        admin_tech_on_failure_variable=pulumi.get(__response__, 'admin_tech_on_failure_variable'),
+        affinity_group_number=pulumi.get(__response__, 'affinity_group_number'),
+        affinity_group_number_variable=pulumi.get(__response__, 'affinity_group_number_variable'),
+        affinity_group_preferences=pulumi.get(__response__, 'affinity_group_preferences'),
+        affinity_group_preferences_variable=pulumi.get(__response__, 'affinity_group_preferences_variable'),
+        affinity_per_vrfs=pulumi.get(__response__, 'affinity_per_vrfs'),
+        affinity_preference_auto=pulumi.get(__response__, 'affinity_preference_auto'),
+        affinity_preference_auto_variable=pulumi.get(__response__, 'affinity_preference_auto_variable'),
+        config_description=pulumi.get(__response__, 'config_description'),
+        config_description_variable=pulumi.get(__response__, 'config_description_variable'),
+        console_baud_rate=pulumi.get(__response__, 'console_baud_rate'),
+        console_baud_rate_variable=pulumi.get(__response__, 'console_baud_rate_variable'),
+        control_session_pps=pulumi.get(__response__, 'control_session_pps'),
+        control_session_pps_variable=pulumi.get(__response__, 'control_session_pps_variable'),
+        controller_groups=pulumi.get(__response__, 'controller_groups'),
+        controller_groups_variable=pulumi.get(__response__, 'controller_groups_variable'),
+        description=pulumi.get(__response__, 'description'),
+        device_groups=pulumi.get(__response__, 'device_groups'),
+        device_groups_variable=pulumi.get(__response__, 'device_groups_variable'),
+        enhanced_app_aware_routing=pulumi.get(__response__, 'enhanced_app_aware_routing'),
+        enhanced_app_aware_routing_variable=pulumi.get(__response__, 'enhanced_app_aware_routing_variable'),
+        feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),
+        gps_geo_fencing_enable=pulumi.get(__response__, 'gps_geo_fencing_enable'),
+        gps_geo_fencing_range=pulumi.get(__response__, 'gps_geo_fencing_range'),
+        gps_geo_fencing_range_variable=pulumi.get(__response__, 'gps_geo_fencing_range_variable'),
+        gps_latitude=pulumi.get(__response__, 'gps_latitude'),
+        gps_latitude_variable=pulumi.get(__response__, 'gps_latitude_variable'),
+        gps_longitude=pulumi.get(__response__, 'gps_longitude'),
+        gps_longitude_variable=pulumi.get(__response__, 'gps_longitude_variable'),
+        gps_sms_enable=pulumi.get(__response__, 'gps_sms_enable'),
+        gps_sms_mobile_numbers=pulumi.get(__response__, 'gps_sms_mobile_numbers'),
+        id=pulumi.get(__response__, 'id'),
+        idle_timeout=pulumi.get(__response__, 'idle_timeout'),
+        idle_timeout_variable=pulumi.get(__response__, 'idle_timeout_variable'),
+        location=pulumi.get(__response__, 'location'),
+        location_variable=pulumi.get(__response__, 'location_variable'),
+        max_omp_sessions=pulumi.get(__response__, 'max_omp_sessions'),
+        max_omp_sessions_variable=pulumi.get(__response__, 'max_omp_sessions_variable'),
+        multi_tenant=pulumi.get(__response__, 'multi_tenant'),
+        multi_tenant_variable=pulumi.get(__response__, 'multi_tenant_variable'),
+        name=pulumi.get(__response__, 'name'),
+        on_demand_enable=pulumi.get(__response__, 'on_demand_enable'),
+        on_demand_enable_variable=pulumi.get(__response__, 'on_demand_enable_variable'),
+        on_demand_idle_timeout=pulumi.get(__response__, 'on_demand_idle_timeout'),
+        on_demand_idle_timeout_variable=pulumi.get(__response__, 'on_demand_idle_timeout_variable'),
+        overlay_id=pulumi.get(__response__, 'overlay_id'),
+        overlay_id_variable=pulumi.get(__response__, 'overlay_id_variable'),
+        port_hopping=pulumi.get(__response__, 'port_hopping'),
+        port_hopping_variable=pulumi.get(__response__, 'port_hopping_variable'),
+        port_offset=pulumi.get(__response__, 'port_offset'),
+        port_offset_variable=pulumi.get(__response__, 'port_offset_variable'),
+        site_types=pulumi.get(__response__, 'site_types'),
+        site_types_variable=pulumi.get(__response__, 'site_types_variable'),
+        timezone=pulumi.get(__response__, 'timezone'),
+        timezone_variable=pulumi.get(__response__, 'timezone_variable'),
+        track_default_gateway=pulumi.get(__response__, 'track_default_gateway'),
+        track_default_gateway_variable=pulumi.get(__response__, 'track_default_gateway_variable'),
+        track_interface_tag=pulumi.get(__response__, 'track_interface_tag'),
+        track_interface_tag_variable=pulumi.get(__response__, 'track_interface_tag_variable'),
+        track_transport=pulumi.get(__response__, 'track_transport'),
+        track_transport_variable=pulumi.get(__response__, 'track_transport_variable'),
+        transport_gateway=pulumi.get(__response__, 'transport_gateway'),
+        transport_gateway_variable=pulumi.get(__response__, 'transport_gateway_variable'),
+        version=pulumi.get(__response__, 'version')))

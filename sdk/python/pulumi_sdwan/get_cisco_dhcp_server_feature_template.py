@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -371,9 +376,6 @@ def get_cisco_dhcp_server_feature_template(id: Optional[str] = None,
         tftp_servers=pulumi.get(__ret__, 'tftp_servers'),
         tftp_servers_variable=pulumi.get(__ret__, 'tftp_servers_variable'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_cisco_dhcp_server_feature_template)
 def get_cisco_dhcp_server_feature_template_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                                   name: Optional[pulumi.Input[Optional[str]]] = None,
                                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCiscoDhcpServerFeatureTemplateResult]:
@@ -393,4 +395,33 @@ def get_cisco_dhcp_server_feature_template_output(id: Optional[pulumi.Input[Opti
     :param str id: The id of the feature template
     :param str name: The name of the feature template
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getCiscoDhcpServerFeatureTemplate:getCiscoDhcpServerFeatureTemplate', __args__, opts=opts, typ=GetCiscoDhcpServerFeatureTemplateResult)
+    return __ret__.apply(lambda __response__: GetCiscoDhcpServerFeatureTemplateResult(
+        address_pool=pulumi.get(__response__, 'address_pool'),
+        address_pool_variable=pulumi.get(__response__, 'address_pool_variable'),
+        default_gateway=pulumi.get(__response__, 'default_gateway'),
+        default_gateway_variable=pulumi.get(__response__, 'default_gateway_variable'),
+        description=pulumi.get(__response__, 'description'),
+        device_types=pulumi.get(__response__, 'device_types'),
+        dns_servers=pulumi.get(__response__, 'dns_servers'),
+        dns_servers_variable=pulumi.get(__response__, 'dns_servers_variable'),
+        domain_name=pulumi.get(__response__, 'domain_name'),
+        domain_name_variable=pulumi.get(__response__, 'domain_name_variable'),
+        exclude_addresses=pulumi.get(__response__, 'exclude_addresses'),
+        exclude_addresses_variable=pulumi.get(__response__, 'exclude_addresses_variable'),
+        id=pulumi.get(__response__, 'id'),
+        interface_mtu=pulumi.get(__response__, 'interface_mtu'),
+        interface_mtu_variable=pulumi.get(__response__, 'interface_mtu_variable'),
+        lease_time=pulumi.get(__response__, 'lease_time'),
+        lease_time_variable=pulumi.get(__response__, 'lease_time_variable'),
+        name=pulumi.get(__response__, 'name'),
+        options=pulumi.get(__response__, 'options'),
+        static_leases=pulumi.get(__response__, 'static_leases'),
+        template_type=pulumi.get(__response__, 'template_type'),
+        tftp_servers=pulumi.get(__response__, 'tftp_servers'),
+        tftp_servers_variable=pulumi.get(__response__, 'tftp_servers_variable'),
+        version=pulumi.get(__response__, 'version')))

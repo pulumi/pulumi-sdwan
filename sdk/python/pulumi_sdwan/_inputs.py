@@ -4,449 +4,901 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 
 __all__ = [
     'AllowUrlListPolicyObjectEntryArgs',
+    'AllowUrlListPolicyObjectEntryArgsDict',
     'AppProbeClassPolicyObjectMappingArgs',
+    'AppProbeClassPolicyObjectMappingArgsDict',
     'ApplicationAwareRoutingPolicyDefinitionSequenceArgs',
+    'ApplicationAwareRoutingPolicyDefinitionSequenceArgsDict',
     'ApplicationAwareRoutingPolicyDefinitionSequenceActionEntryArgs',
+    'ApplicationAwareRoutingPolicyDefinitionSequenceActionEntryArgsDict',
     'ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameterArgs',
+    'ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameterArgsDict',
     'ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntryArgs',
+    'ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntryArgsDict',
     'ApplicationListPolicyObjectEntryArgs',
+    'ApplicationListPolicyObjectEntryArgsDict',
     'ApplicationPriorityQosPolicyQosSchedulerArgs',
+    'ApplicationPriorityQosPolicyQosSchedulerArgsDict',
     'AsPathListPolicyObjectEntryArgs',
+    'AsPathListPolicyObjectEntryArgsDict',
     'AttachFeatureDeviceTemplateDeviceArgs',
+    'AttachFeatureDeviceTemplateDeviceArgsDict',
     'BlockUrlListPolicyObjectEntryArgs',
+    'BlockUrlListPolicyObjectEntryArgsDict',
     'CedgeAaaFeatureTemplateAccountingRuleArgs',
+    'CedgeAaaFeatureTemplateAccountingRuleArgsDict',
     'CedgeAaaFeatureTemplateAuthorizationRuleArgs',
+    'CedgeAaaFeatureTemplateAuthorizationRuleArgsDict',
     'CedgeAaaFeatureTemplateRadiusClientArgs',
+    'CedgeAaaFeatureTemplateRadiusClientArgsDict',
     'CedgeAaaFeatureTemplateRadiusClientVpnConfigurationArgs',
+    'CedgeAaaFeatureTemplateRadiusClientVpnConfigurationArgsDict',
     'CedgeAaaFeatureTemplateRadiusServerGroupArgs',
+    'CedgeAaaFeatureTemplateRadiusServerGroupArgsDict',
     'CedgeAaaFeatureTemplateRadiusServerGroupServerArgs',
+    'CedgeAaaFeatureTemplateRadiusServerGroupServerArgsDict',
     'CedgeAaaFeatureTemplateTacacsServerGroupArgs',
+    'CedgeAaaFeatureTemplateTacacsServerGroupArgsDict',
     'CedgeAaaFeatureTemplateTacacsServerGroupServerArgs',
+    'CedgeAaaFeatureTemplateTacacsServerGroupServerArgsDict',
     'CedgeAaaFeatureTemplateUserArgs',
+    'CedgeAaaFeatureTemplateUserArgsDict',
     'CedgeAaaFeatureTemplateUserSshPubkeyArgs',
+    'CedgeAaaFeatureTemplateUserSshPubkeyArgsDict',
     'CedgeIgmpFeatureTemplateInterfaceArgs',
+    'CedgeIgmpFeatureTemplateInterfaceArgsDict',
     'CedgeIgmpFeatureTemplateInterfaceJoinGroupArgs',
+    'CedgeIgmpFeatureTemplateInterfaceJoinGroupArgsDict',
     'CedgePimFeatureTemplateInterfaceArgs',
+    'CedgePimFeatureTemplateInterfaceArgsDict',
     'CedgePimFeatureTemplateRpAddressArgs',
+    'CedgePimFeatureTemplateRpAddressArgsDict',
     'CedgePimFeatureTemplateRpAnnounceFieldArgs',
+    'CedgePimFeatureTemplateRpAnnounceFieldArgsDict',
     'CedgePimFeatureTemplateRpCandidateArgs',
+    'CedgePimFeatureTemplateRpCandidateArgsDict',
     'CellularControllerFeatureTemplateDataProfileArgs',
+    'CellularControllerFeatureTemplateDataProfileArgsDict',
     'CentralizedPolicyDefinitionArgs',
+    'CentralizedPolicyDefinitionArgsDict',
     'CentralizedPolicyDefinitionEntryArgs',
+    'CentralizedPolicyDefinitionEntryArgsDict',
     'CflowdPolicyDefinitionCollectorArgs',
+    'CflowdPolicyDefinitionCollectorArgsDict',
     'CiscoBfdFeatureTemplateColorArgs',
+    'CiscoBfdFeatureTemplateColorArgsDict',
     'CiscoBgpFeatureTemplateAddressFamilyArgs',
+    'CiscoBgpFeatureTemplateAddressFamilyArgsDict',
     'CiscoBgpFeatureTemplateAddressFamilyIpv4AggregateAddressArgs',
+    'CiscoBgpFeatureTemplateAddressFamilyIpv4AggregateAddressArgsDict',
     'CiscoBgpFeatureTemplateAddressFamilyIpv4NetworkArgs',
+    'CiscoBgpFeatureTemplateAddressFamilyIpv4NetworkArgsDict',
     'CiscoBgpFeatureTemplateAddressFamilyIpv6AggregateAddressArgs',
+    'CiscoBgpFeatureTemplateAddressFamilyIpv6AggregateAddressArgsDict',
     'CiscoBgpFeatureTemplateAddressFamilyIpv6NetworkArgs',
+    'CiscoBgpFeatureTemplateAddressFamilyIpv6NetworkArgsDict',
     'CiscoBgpFeatureTemplateAddressFamilyRedistributeRouteArgs',
+    'CiscoBgpFeatureTemplateAddressFamilyRedistributeRouteArgsDict',
     'CiscoBgpFeatureTemplateIpv4NeighborArgs',
+    'CiscoBgpFeatureTemplateIpv4NeighborArgsDict',
     'CiscoBgpFeatureTemplateIpv4NeighborAddressFamilyArgs',
+    'CiscoBgpFeatureTemplateIpv4NeighborAddressFamilyArgsDict',
     'CiscoBgpFeatureTemplateIpv4NeighborAddressFamilyRoutePolicyArgs',
+    'CiscoBgpFeatureTemplateIpv4NeighborAddressFamilyRoutePolicyArgsDict',
     'CiscoBgpFeatureTemplateIpv4RouteTargetArgs',
+    'CiscoBgpFeatureTemplateIpv4RouteTargetArgsDict',
     'CiscoBgpFeatureTemplateIpv4RouteTargetExportArgs',
+    'CiscoBgpFeatureTemplateIpv4RouteTargetExportArgsDict',
     'CiscoBgpFeatureTemplateIpv4RouteTargetImportArgs',
+    'CiscoBgpFeatureTemplateIpv4RouteTargetImportArgsDict',
     'CiscoBgpFeatureTemplateIpv6NeighborArgs',
+    'CiscoBgpFeatureTemplateIpv6NeighborArgsDict',
     'CiscoBgpFeatureTemplateIpv6NeighborAddressFamilyArgs',
+    'CiscoBgpFeatureTemplateIpv6NeighborAddressFamilyArgsDict',
     'CiscoBgpFeatureTemplateIpv6NeighborAddressFamilyRoutePolicyArgs',
+    'CiscoBgpFeatureTemplateIpv6NeighborAddressFamilyRoutePolicyArgsDict',
     'CiscoBgpFeatureTemplateIpv6RouteTargetArgs',
+    'CiscoBgpFeatureTemplateIpv6RouteTargetArgsDict',
     'CiscoBgpFeatureTemplateIpv6RouteTargetExportArgs',
+    'CiscoBgpFeatureTemplateIpv6RouteTargetExportArgsDict',
     'CiscoBgpFeatureTemplateIpv6RouteTargetImportArgs',
+    'CiscoBgpFeatureTemplateIpv6RouteTargetImportArgsDict',
     'CiscoBgpFeatureTemplateMplsInterfaceArgs',
+    'CiscoBgpFeatureTemplateMplsInterfaceArgsDict',
     'CiscoDhcpServerFeatureTemplateOptionArgs',
+    'CiscoDhcpServerFeatureTemplateOptionArgsDict',
     'CiscoDhcpServerFeatureTemplateStaticLeaseArgs',
+    'CiscoDhcpServerFeatureTemplateStaticLeaseArgsDict',
     'CiscoLoggingFeatureTemplateIpv4ServerArgs',
+    'CiscoLoggingFeatureTemplateIpv4ServerArgsDict',
     'CiscoLoggingFeatureTemplateIpv6ServerArgs',
+    'CiscoLoggingFeatureTemplateIpv6ServerArgsDict',
     'CiscoLoggingFeatureTemplateTlsProfileArgs',
+    'CiscoLoggingFeatureTemplateTlsProfileArgsDict',
     'CiscoNtpFeatureTemplateAuthenticationKeyArgs',
+    'CiscoNtpFeatureTemplateAuthenticationKeyArgsDict',
     'CiscoNtpFeatureTemplateServerArgs',
+    'CiscoNtpFeatureTemplateServerArgsDict',
     'CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs',
+    'CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgsDict',
     'CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs',
+    'CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgsDict',
     'CiscoOspfFeatureTemplateAreaArgs',
+    'CiscoOspfFeatureTemplateAreaArgsDict',
     'CiscoOspfFeatureTemplateAreaInterfaceArgs',
+    'CiscoOspfFeatureTemplateAreaInterfaceArgsDict',
     'CiscoOspfFeatureTemplateAreaRangeArgs',
+    'CiscoOspfFeatureTemplateAreaRangeArgsDict',
     'CiscoOspfFeatureTemplateMaxMetricRouterLsaArgs',
+    'CiscoOspfFeatureTemplateMaxMetricRouterLsaArgsDict',
     'CiscoOspfFeatureTemplateRedistributeArgs',
+    'CiscoOspfFeatureTemplateRedistributeArgsDict',
     'CiscoOspfFeatureTemplateRoutePolicyArgs',
+    'CiscoOspfFeatureTemplateRoutePolicyArgsDict',
     'CiscoOspfv3FeatureTemplateIpv4AreaArgs',
+    'CiscoOspfv3FeatureTemplateIpv4AreaArgsDict',
     'CiscoOspfv3FeatureTemplateIpv4AreaInterfaceArgs',
+    'CiscoOspfv3FeatureTemplateIpv4AreaInterfaceArgsDict',
     'CiscoOspfv3FeatureTemplateIpv4AreaRangeArgs',
+    'CiscoOspfv3FeatureTemplateIpv4AreaRangeArgsDict',
     'CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgs',
+    'CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgsDict',
     'CiscoOspfv3FeatureTemplateIpv4RedistributeArgs',
+    'CiscoOspfv3FeatureTemplateIpv4RedistributeArgsDict',
     'CiscoOspfv3FeatureTemplateIpv6AreaArgs',
+    'CiscoOspfv3FeatureTemplateIpv6AreaArgsDict',
     'CiscoOspfv3FeatureTemplateIpv6AreaInterfaceArgs',
+    'CiscoOspfv3FeatureTemplateIpv6AreaInterfaceArgsDict',
     'CiscoOspfv3FeatureTemplateIpv6AreaRangeArgs',
+    'CiscoOspfv3FeatureTemplateIpv6AreaRangeArgsDict',
     'CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgs',
+    'CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgsDict',
     'CiscoOspfv3FeatureTemplateIpv6RedistributeArgs',
+    'CiscoOspfv3FeatureTemplateIpv6RedistributeArgsDict',
     'CiscoSecureInternetGatewayFeatureTemplateInterfaceArgs',
+    'CiscoSecureInternetGatewayFeatureTemplateInterfaceArgsDict',
     'CiscoSecureInternetGatewayFeatureTemplateServiceArgs',
+    'CiscoSecureInternetGatewayFeatureTemplateServiceArgsDict',
     'CiscoSecureInternetGatewayFeatureTemplateServiceInterfacePairArgs',
+    'CiscoSecureInternetGatewayFeatureTemplateServiceInterfacePairArgsDict',
     'CiscoSecureInternetGatewayFeatureTemplateTrackerArgs',
+    'CiscoSecureInternetGatewayFeatureTemplateTrackerArgsDict',
     'CiscoSecurityFeatureTemplateKeyArgs',
+    'CiscoSecurityFeatureTemplateKeyArgsDict',
     'CiscoSecurityFeatureTemplateKeychainArgs',
+    'CiscoSecurityFeatureTemplateKeychainArgsDict',
     'CiscoSnmpFeatureTemplateCommunityArgs',
+    'CiscoSnmpFeatureTemplateCommunityArgsDict',
     'CiscoSnmpFeatureTemplateGroupArgs',
+    'CiscoSnmpFeatureTemplateGroupArgsDict',
     'CiscoSnmpFeatureTemplateTrapTargetArgs',
+    'CiscoSnmpFeatureTemplateTrapTargetArgsDict',
     'CiscoSnmpFeatureTemplateUserArgs',
+    'CiscoSnmpFeatureTemplateUserArgsDict',
     'CiscoSnmpFeatureTemplateViewArgs',
+    'CiscoSnmpFeatureTemplateViewArgsDict',
     'CiscoSnmpFeatureTemplateViewObjectIdentifierArgs',
+    'CiscoSnmpFeatureTemplateViewObjectIdentifierArgsDict',
     'CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgs',
+    'CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgsDict',
     'CiscoSystemFeatureTemplateObjectTrackerArgs',
+    'CiscoSystemFeatureTemplateObjectTrackerArgsDict',
     'CiscoSystemFeatureTemplateObjectTrackerGroupTracksIdArgs',
+    'CiscoSystemFeatureTemplateObjectTrackerGroupTracksIdArgsDict',
     'CiscoSystemFeatureTemplateTrackerArgs',
+    'CiscoSystemFeatureTemplateTrackerArgsDict',
     'CiscoThousandeyesFeatureTemplateVirtualApplicationArgs',
+    'CiscoThousandeyesFeatureTemplateVirtualApplicationArgsDict',
     'CiscoTrustsecFeatureTemplateSxpConnectionArgs',
+    'CiscoTrustsecFeatureTemplateSxpConnectionArgsDict',
     'CiscoVpnFeatureTemplateDnsHostArgs',
+    'CiscoVpnFeatureTemplateDnsHostArgsDict',
     'CiscoVpnFeatureTemplateDnsIpv4ServerArgs',
+    'CiscoVpnFeatureTemplateDnsIpv4ServerArgsDict',
     'CiscoVpnFeatureTemplateDnsIpv6ServerArgs',
+    'CiscoVpnFeatureTemplateDnsIpv6ServerArgsDict',
     'CiscoVpnFeatureTemplateIpv4StaticGreRouteArgs',
+    'CiscoVpnFeatureTemplateIpv4StaticGreRouteArgsDict',
     'CiscoVpnFeatureTemplateIpv4StaticIpsecRouteArgs',
+    'CiscoVpnFeatureTemplateIpv4StaticIpsecRouteArgsDict',
     'CiscoVpnFeatureTemplateIpv4StaticRouteArgs',
+    'CiscoVpnFeatureTemplateIpv4StaticRouteArgsDict',
     'CiscoVpnFeatureTemplateIpv4StaticRouteNextHopArgs',
+    'CiscoVpnFeatureTemplateIpv4StaticRouteNextHopArgsDict',
     'CiscoVpnFeatureTemplateIpv4StaticRouteTrackNextHopArgs',
+    'CiscoVpnFeatureTemplateIpv4StaticRouteTrackNextHopArgsDict',
     'CiscoVpnFeatureTemplateIpv4StaticServiceRouteArgs',
+    'CiscoVpnFeatureTemplateIpv4StaticServiceRouteArgsDict',
     'CiscoVpnFeatureTemplateIpv6StaticRouteArgs',
+    'CiscoVpnFeatureTemplateIpv6StaticRouteArgsDict',
     'CiscoVpnFeatureTemplateIpv6StaticRouteNextHopArgs',
+    'CiscoVpnFeatureTemplateIpv6StaticRouteNextHopArgsDict',
     'CiscoVpnFeatureTemplateNat64PoolArgs',
+    'CiscoVpnFeatureTemplateNat64PoolArgsDict',
     'CiscoVpnFeatureTemplateNatPoolArgs',
+    'CiscoVpnFeatureTemplateNatPoolArgsDict',
     'CiscoVpnFeatureTemplateOmpAdvertiseIpv4RouteArgs',
+    'CiscoVpnFeatureTemplateOmpAdvertiseIpv4RouteArgsDict',
     'CiscoVpnFeatureTemplateOmpAdvertiseIpv4RoutePrefixArgs',
+    'CiscoVpnFeatureTemplateOmpAdvertiseIpv4RoutePrefixArgsDict',
     'CiscoVpnFeatureTemplateOmpAdvertiseIpv6RouteArgs',
+    'CiscoVpnFeatureTemplateOmpAdvertiseIpv6RouteArgsDict',
     'CiscoVpnFeatureTemplateOmpAdvertiseIpv6RoutePrefixArgs',
+    'CiscoVpnFeatureTemplateOmpAdvertiseIpv6RoutePrefixArgsDict',
     'CiscoVpnFeatureTemplatePortForwardRuleArgs',
+    'CiscoVpnFeatureTemplatePortForwardRuleArgsDict',
     'CiscoVpnFeatureTemplateRouteGlobalExportArgs',
+    'CiscoVpnFeatureTemplateRouteGlobalExportArgsDict',
     'CiscoVpnFeatureTemplateRouteGlobalExportRedistributeArgs',
+    'CiscoVpnFeatureTemplateRouteGlobalExportRedistributeArgsDict',
     'CiscoVpnFeatureTemplateRouteGlobalImportArgs',
+    'CiscoVpnFeatureTemplateRouteGlobalImportArgsDict',
     'CiscoVpnFeatureTemplateRouteGlobalImportRedistributeArgs',
+    'CiscoVpnFeatureTemplateRouteGlobalImportRedistributeArgsDict',
     'CiscoVpnFeatureTemplateRouteVpnImportArgs',
+    'CiscoVpnFeatureTemplateRouteVpnImportArgsDict',
     'CiscoVpnFeatureTemplateRouteVpnImportRedistributeArgs',
+    'CiscoVpnFeatureTemplateRouteVpnImportRedistributeArgsDict',
     'CiscoVpnFeatureTemplateServiceArgs',
+    'CiscoVpnFeatureTemplateServiceArgsDict',
     'CiscoVpnFeatureTemplateStaticNatRuleArgs',
+    'CiscoVpnFeatureTemplateStaticNatRuleArgsDict',
     'CiscoVpnFeatureTemplateStaticNatSubnetRuleArgs',
+    'CiscoVpnFeatureTemplateStaticNatSubnetRuleArgsDict',
     'CiscoVpnInterfaceFeatureTemplateAccessListArgs',
+    'CiscoVpnInterfaceFeatureTemplateAccessListArgsDict',
     'CiscoVpnInterfaceFeatureTemplateIpv4SecondaryAddressArgs',
+    'CiscoVpnInterfaceFeatureTemplateIpv4SecondaryAddressArgsDict',
     'CiscoVpnInterfaceFeatureTemplateIpv4VrrpArgs',
+    'CiscoVpnInterfaceFeatureTemplateIpv4VrrpArgsDict',
     'CiscoVpnInterfaceFeatureTemplateIpv4VrrpIpv4SecondaryAddressArgs',
+    'CiscoVpnInterfaceFeatureTemplateIpv4VrrpIpv4SecondaryAddressArgsDict',
     'CiscoVpnInterfaceFeatureTemplateIpv4VrrpTrackingObjectArgs',
+    'CiscoVpnInterfaceFeatureTemplateIpv4VrrpTrackingObjectArgsDict',
     'CiscoVpnInterfaceFeatureTemplateIpv6AccessListArgs',
+    'CiscoVpnInterfaceFeatureTemplateIpv6AccessListArgsDict',
     'CiscoVpnInterfaceFeatureTemplateIpv6DhcpHelperArgs',
+    'CiscoVpnInterfaceFeatureTemplateIpv6DhcpHelperArgsDict',
     'CiscoVpnInterfaceFeatureTemplateIpv6SecondaryAddressArgs',
+    'CiscoVpnInterfaceFeatureTemplateIpv6SecondaryAddressArgsDict',
     'CiscoVpnInterfaceFeatureTemplateIpv6VrrpArgs',
+    'CiscoVpnInterfaceFeatureTemplateIpv6VrrpArgsDict',
     'CiscoVpnInterfaceFeatureTemplateIpv6VrrpIpv6AddressArgs',
+    'CiscoVpnInterfaceFeatureTemplateIpv6VrrpIpv6AddressArgsDict',
     'CiscoVpnInterfaceFeatureTemplateStaticArpArgs',
+    'CiscoVpnInterfaceFeatureTemplateStaticArpArgsDict',
     'CiscoVpnInterfaceFeatureTemplateStaticNat66EntryArgs',
+    'CiscoVpnInterfaceFeatureTemplateStaticNat66EntryArgsDict',
     'CiscoVpnInterfaceFeatureTemplateStaticNatEntryArgs',
+    'CiscoVpnInterfaceFeatureTemplateStaticNatEntryArgsDict',
     'CiscoVpnInterfaceFeatureTemplateStaticPortForwardEntryArgs',
+    'CiscoVpnInterfaceFeatureTemplateStaticPortForwardEntryArgsDict',
     'CiscoVpnInterfaceFeatureTemplateTunnelInterfaceEncapsulationArgs',
+    'CiscoVpnInterfaceFeatureTemplateTunnelInterfaceEncapsulationArgsDict',
     'CiscoVpnInterfaceGreFeatureTemplateAccessListArgs',
+    'CiscoVpnInterfaceGreFeatureTemplateAccessListArgsDict',
     'CiscoWirelessLanFeatureTemplateSsidArgs',
+    'CiscoWirelessLanFeatureTemplateSsidArgsDict',
     'ColorListPolicyObjectEntryArgs',
+    'ColorListPolicyObjectEntryArgsDict',
     'ConfigurationGroupFeatureProfileArgs',
+    'ConfigurationGroupFeatureProfileArgsDict',
     'ConfigurationGroupTopologyDeviceArgs',
+    'ConfigurationGroupTopologyDeviceArgsDict',
     'ConfigurationGroupTopologyDeviceUnsupportedFeatureArgs',
+    'ConfigurationGroupTopologyDeviceUnsupportedFeatureArgsDict',
     'CustomControlTopologyPolicyDefinitionSequenceArgs',
+    'CustomControlTopologyPolicyDefinitionSequenceArgsDict',
     'CustomControlTopologyPolicyDefinitionSequenceActionEntryArgs',
+    'CustomControlTopologyPolicyDefinitionSequenceActionEntryArgsDict',
     'CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameterArgs',
+    'CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameterArgsDict',
     'CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs',
+    'CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgsDict',
     'DataFqdnPrefixListPolicyObjectEntryArgs',
+    'DataFqdnPrefixListPolicyObjectEntryArgsDict',
     'DataIpv4PrefixListPolicyObjectEntryArgs',
+    'DataIpv4PrefixListPolicyObjectEntryArgsDict',
     'DataIpv6PrefixListPolicyObjectEntryArgs',
+    'DataIpv6PrefixListPolicyObjectEntryArgsDict',
     'DnsSecurityPolicyDefinitionTargetVpnArgs',
+    'DnsSecurityPolicyDefinitionTargetVpnArgsDict',
     'DomainListPolicyObjectEntryArgs',
+    'DomainListPolicyObjectEntryArgsDict',
     'EigrpFeatureTemplateAddressFamilyArgs',
+    'EigrpFeatureTemplateAddressFamilyArgsDict',
     'EigrpFeatureTemplateAddressFamilyNetworkArgs',
+    'EigrpFeatureTemplateAddressFamilyNetworkArgsDict',
     'EigrpFeatureTemplateAddressFamilyRedistributeArgs',
+    'EigrpFeatureTemplateAddressFamilyRedistributeArgsDict',
     'EigrpFeatureTemplateInterfaceArgs',
+    'EigrpFeatureTemplateInterfaceArgsDict',
     'EigrpFeatureTemplateInterfaceSummaryAddressArgs',
+    'EigrpFeatureTemplateInterfaceSummaryAddressArgsDict',
     'EigrpFeatureTemplateKeyArgs',
+    'EigrpFeatureTemplateKeyArgsDict',
     'ExpandedCommunityListPolicyObjectEntryArgs',
+    'ExpandedCommunityListPolicyObjectEntryArgsDict',
     'ExtendedCommunityListPolicyObjectEntryArgs',
+    'ExtendedCommunityListPolicyObjectEntryArgsDict',
     'FeatureDeviceTemplateGeneralTemplateArgs',
+    'FeatureDeviceTemplateGeneralTemplateArgsDict',
     'FeatureDeviceTemplateGeneralTemplateSubTemplateArgs',
+    'FeatureDeviceTemplateGeneralTemplateSubTemplateArgsDict',
     'FeatureDeviceTemplateGeneralTemplateSubTemplateSubTemplateArgs',
+    'FeatureDeviceTemplateGeneralTemplateSubTemplateSubTemplateArgsDict',
     'GeoLocationListPolicyObjectEntryArgs',
+    'GeoLocationListPolicyObjectEntryArgsDict',
     'HubAndSpokeTopologyPolicyDefinitionTopologyArgs',
+    'HubAndSpokeTopologyPolicyDefinitionTopologyArgsDict',
     'HubAndSpokeTopologyPolicyDefinitionTopologySpokeArgs',
+    'HubAndSpokeTopologyPolicyDefinitionTopologySpokeArgsDict',
     'HubAndSpokeTopologyPolicyDefinitionTopologySpokeHubArgs',
+    'HubAndSpokeTopologyPolicyDefinitionTopologySpokeHubArgsDict',
     'IpsSignatureListPolicyObjectEntryArgs',
+    'IpsSignatureListPolicyObjectEntryArgsDict',
     'Ipv4AclPolicyDefinitionSequenceArgs',
+    'Ipv4AclPolicyDefinitionSequenceArgsDict',
     'Ipv4AclPolicyDefinitionSequenceActionEntryArgs',
+    'Ipv4AclPolicyDefinitionSequenceActionEntryArgsDict',
     'Ipv4AclPolicyDefinitionSequenceActionEntrySetParameterArgs',
+    'Ipv4AclPolicyDefinitionSequenceActionEntrySetParameterArgsDict',
     'Ipv4AclPolicyDefinitionSequenceMatchEntryArgs',
+    'Ipv4AclPolicyDefinitionSequenceMatchEntryArgsDict',
     'Ipv4DeviceAclPolicyDefinitionSequenceArgs',
+    'Ipv4DeviceAclPolicyDefinitionSequenceArgsDict',
     'Ipv4DeviceAclPolicyDefinitionSequenceActionEntryArgs',
+    'Ipv4DeviceAclPolicyDefinitionSequenceActionEntryArgsDict',
     'Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgs',
+    'Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgsDict',
     'Ipv4PrefixListPolicyObjectEntryArgs',
+    'Ipv4PrefixListPolicyObjectEntryArgsDict',
     'Ipv6AclPolicyDefinitionSequenceArgs',
+    'Ipv6AclPolicyDefinitionSequenceArgsDict',
     'Ipv6AclPolicyDefinitionSequenceActionEntryArgs',
+    'Ipv6AclPolicyDefinitionSequenceActionEntryArgsDict',
     'Ipv6AclPolicyDefinitionSequenceActionEntrySetParameterArgs',
+    'Ipv6AclPolicyDefinitionSequenceActionEntrySetParameterArgsDict',
     'Ipv6AclPolicyDefinitionSequenceMatchEntryArgs',
+    'Ipv6AclPolicyDefinitionSequenceMatchEntryArgsDict',
     'Ipv6DeviceAclPolicyDefinitionSequenceArgs',
+    'Ipv6DeviceAclPolicyDefinitionSequenceArgsDict',
     'Ipv6DeviceAclPolicyDefinitionSequenceActionEntryArgs',
+    'Ipv6DeviceAclPolicyDefinitionSequenceActionEntryArgsDict',
     'Ipv6DeviceAclPolicyDefinitionSequenceMatchEntryArgs',
+    'Ipv6DeviceAclPolicyDefinitionSequenceMatchEntryArgsDict',
     'Ipv6PrefixListPolicyObjectEntryArgs',
+    'Ipv6PrefixListPolicyObjectEntryArgsDict',
     'LocalApplicationListPolicyObjectEntryArgs',
+    'LocalApplicationListPolicyObjectEntryArgsDict',
     'LocalizedPolicyDefinitionArgs',
+    'LocalizedPolicyDefinitionArgsDict',
     'MeshTopologyPolicyDefinitionRegionArgs',
+    'MeshTopologyPolicyDefinitionRegionArgsDict',
     'OtherThousandeyesFeatureVirtualApplicationArgs',
+    'OtherThousandeyesFeatureVirtualApplicationArgsDict',
     'OtherUcseFeatureInterfaceArgs',
+    'OtherUcseFeatureInterfaceArgsDict',
     'PolicyObjectClassMapEntryArgs',
+    'PolicyObjectClassMapEntryArgsDict',
     'PolicyObjectColorListEntryArgs',
+    'PolicyObjectColorListEntryArgsDict',
     'PolicyObjectDataIpv4PrefixListEntryArgs',
+    'PolicyObjectDataIpv4PrefixListEntryArgsDict',
     'PolicyObjectDataIpv6PrefixListEntryArgs',
+    'PolicyObjectDataIpv6PrefixListEntryArgsDict',
     'PolicyObjectExtendedCommunityListEntryArgs',
+    'PolicyObjectExtendedCommunityListEntryArgsDict',
     'PolicyObjectIpv4PrefixListEntryArgs',
+    'PolicyObjectIpv4PrefixListEntryArgsDict',
     'PolicyObjectIpv6PrefixListEntryArgs',
+    'PolicyObjectIpv6PrefixListEntryArgsDict',
     'PolicyObjectMirrorEntryArgs',
+    'PolicyObjectMirrorEntryArgsDict',
     'PolicyObjectPolicerEntryArgs',
+    'PolicyObjectPolicerEntryArgsDict',
     'PolicyObjectTlocListEntryArgs',
+    'PolicyObjectTlocListEntryArgsDict',
     'PortListPolicyObjectEntryArgs',
+    'PortListPolicyObjectEntryArgsDict',
     'ProtocolListPolicyObjectEntryArgs',
+    'ProtocolListPolicyObjectEntryArgsDict',
     'QosMapPolicyDefinitionQosSchedulerArgs',
+    'QosMapPolicyDefinitionQosSchedulerArgsDict',
     'RegionListPolicyObjectEntryArgs',
+    'RegionListPolicyObjectEntryArgsDict',
     'RewriteRulePolicyDefinitionRuleArgs',
+    'RewriteRulePolicyDefinitionRuleArgsDict',
     'RoutePolicyDefinitionSequenceArgs',
+    'RoutePolicyDefinitionSequenceArgsDict',
     'RoutePolicyDefinitionSequenceActionEntryArgs',
+    'RoutePolicyDefinitionSequenceActionEntryArgsDict',
     'RoutePolicyDefinitionSequenceMatchEntryArgs',
+    'RoutePolicyDefinitionSequenceMatchEntryArgsDict',
     'RuleSetPolicyDefinitionRuleArgs',
+    'RuleSetPolicyDefinitionRuleArgsDict',
     'SecurityAppHostingFeatureTemplateVirtualApplicationArgs',
+    'SecurityAppHostingFeatureTemplateVirtualApplicationArgsDict',
     'SecurityPolicyDefinitionArgs',
+    'SecurityPolicyDefinitionArgsDict',
     'SecurityPolicyLoggingArgs',
+    'SecurityPolicyLoggingArgsDict',
     'ServiceLanVpnFeatureAdvertiseOmpIpv4Args',
+    'ServiceLanVpnFeatureAdvertiseOmpIpv4ArgsDict',
     'ServiceLanVpnFeatureAdvertiseOmpIpv4PrefixArgs',
+    'ServiceLanVpnFeatureAdvertiseOmpIpv4PrefixArgsDict',
     'ServiceLanVpnFeatureAdvertiseOmpIpv6Args',
+    'ServiceLanVpnFeatureAdvertiseOmpIpv6ArgsDict',
     'ServiceLanVpnFeatureAdvertiseOmpIpv6PrefixArgs',
+    'ServiceLanVpnFeatureAdvertiseOmpIpv6PrefixArgsDict',
     'ServiceLanVpnFeatureGreRouteArgs',
+    'ServiceLanVpnFeatureGreRouteArgsDict',
     'ServiceLanVpnFeatureHostMappingArgs',
+    'ServiceLanVpnFeatureHostMappingArgsDict',
     'ServiceLanVpnFeatureIpsecRouteArgs',
+    'ServiceLanVpnFeatureIpsecRouteArgsDict',
     'ServiceLanVpnFeatureIpv4ExportRouteTargetArgs',
+    'ServiceLanVpnFeatureIpv4ExportRouteTargetArgsDict',
     'ServiceLanVpnFeatureIpv4ImportRouteTargetArgs',
+    'ServiceLanVpnFeatureIpv4ImportRouteTargetArgsDict',
     'ServiceLanVpnFeatureIpv4StaticRouteArgs',
+    'ServiceLanVpnFeatureIpv4StaticRouteArgsDict',
     'ServiceLanVpnFeatureIpv4StaticRouteNextHopArgs',
+    'ServiceLanVpnFeatureIpv4StaticRouteNextHopArgsDict',
     'ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTrackerArgs',
+    'ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTrackerArgsDict',
     'ServiceLanVpnFeatureIpv6ExportRouteTargetArgs',
+    'ServiceLanVpnFeatureIpv6ExportRouteTargetArgsDict',
     'ServiceLanVpnFeatureIpv6ImportRouteTargetArgs',
+    'ServiceLanVpnFeatureIpv6ImportRouteTargetArgsDict',
     'ServiceLanVpnFeatureIpv6StaticRouteArgs',
+    'ServiceLanVpnFeatureIpv6StaticRouteArgsDict',
     'ServiceLanVpnFeatureIpv6StaticRouteNextHopArgs',
+    'ServiceLanVpnFeatureIpv6StaticRouteNextHopArgsDict',
     'ServiceLanVpnFeatureNat64V4PoolArgs',
+    'ServiceLanVpnFeatureNat64V4PoolArgsDict',
     'ServiceLanVpnFeatureNatPoolArgs',
+    'ServiceLanVpnFeatureNatPoolArgsDict',
     'ServiceLanVpnFeatureNatPortForwardArgs',
+    'ServiceLanVpnFeatureNatPortForwardArgsDict',
     'ServiceLanVpnFeatureRouteLeakFromGlobalVpnArgs',
+    'ServiceLanVpnFeatureRouteLeakFromGlobalVpnArgsDict',
     'ServiceLanVpnFeatureRouteLeakFromGlobalVpnRedistributionArgs',
+    'ServiceLanVpnFeatureRouteLeakFromGlobalVpnRedistributionArgsDict',
     'ServiceLanVpnFeatureRouteLeakFromOtherServiceArgs',
+    'ServiceLanVpnFeatureRouteLeakFromOtherServiceArgsDict',
     'ServiceLanVpnFeatureRouteLeakFromOtherServiceRedistributionArgs',
+    'ServiceLanVpnFeatureRouteLeakFromOtherServiceRedistributionArgsDict',
     'ServiceLanVpnFeatureRouteLeakToGlobalVpnArgs',
+    'ServiceLanVpnFeatureRouteLeakToGlobalVpnArgsDict',
     'ServiceLanVpnFeatureRouteLeakToGlobalVpnRedistributionArgs',
+    'ServiceLanVpnFeatureRouteLeakToGlobalVpnRedistributionArgsDict',
     'ServiceLanVpnFeatureServiceArgs',
+    'ServiceLanVpnFeatureServiceArgsDict',
     'ServiceLanVpnFeatureServiceRouteArgs',
+    'ServiceLanVpnFeatureServiceRouteArgsDict',
     'ServiceLanVpnFeatureStaticNatArgs',
+    'ServiceLanVpnFeatureStaticNatArgsDict',
     'ServiceLanVpnInterfaceEthernetFeatureArpArgs',
+    'ServiceLanVpnInterfaceEthernetFeatureArpArgsDict',
     'ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs',
+    'ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgsDict',
     'ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArgs',
+    'ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArgsDict',
     'ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpSecondaryAddressArgs',
+    'ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpSecondaryAddressArgsDict',
     'ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperArgs',
+    'ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperArgsDict',
     'ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs',
+    'ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgsDict',
     'ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs',
+    'ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgsDict',
     'ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArgs',
+    'ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArgsDict',
     'ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpIpv6AddressArgs',
+    'ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpIpv6AddressArgsDict',
     'ServiceLanVpnInterfaceEthernetFeatureStaticNatArgs',
+    'ServiceLanVpnInterfaceEthernetFeatureStaticNatArgsDict',
     'ServiceLanVpnInterfaceSviFeatureArpArgs',
+    'ServiceLanVpnInterfaceSviFeatureArpArgsDict',
     'ServiceLanVpnInterfaceSviFeatureIpv4SecondaryAddressArgs',
+    'ServiceLanVpnInterfaceSviFeatureIpv4SecondaryAddressArgsDict',
     'ServiceLanVpnInterfaceSviFeatureIpv4VrrpArgs',
+    'ServiceLanVpnInterfaceSviFeatureIpv4VrrpArgsDict',
     'ServiceLanVpnInterfaceSviFeatureIpv4VrrpSecondaryAddressArgs',
+    'ServiceLanVpnInterfaceSviFeatureIpv4VrrpSecondaryAddressArgsDict',
     'ServiceLanVpnInterfaceSviFeatureIpv6DhcpHelperArgs',
+    'ServiceLanVpnInterfaceSviFeatureIpv6DhcpHelperArgsDict',
     'ServiceLanVpnInterfaceSviFeatureIpv6SecondaryAddressArgs',
+    'ServiceLanVpnInterfaceSviFeatureIpv6SecondaryAddressArgsDict',
     'ServiceLanVpnInterfaceSviFeatureIpv6VrrpArgs',
+    'ServiceLanVpnInterfaceSviFeatureIpv6VrrpArgsDict',
     'ServiceLanVpnInterfaceSviFeatureIpv6VrrpAddressArgs',
+    'ServiceLanVpnInterfaceSviFeatureIpv6VrrpAddressArgsDict',
     'ServiceLanVpnInterfaceSviFeatureIpv6VrrpSecondaryAddressArgs',
+    'ServiceLanVpnInterfaceSviFeatureIpv6VrrpSecondaryAddressArgsDict',
     'ServiceObjectTrackerGroupFeatureTrackerElementArgs',
+    'ServiceObjectTrackerGroupFeatureTrackerElementArgsDict',
     'ServiceRoutePolicyFeatureSequenceArgs',
+    'ServiceRoutePolicyFeatureSequenceArgsDict',
     'ServiceRoutePolicyFeatureSequenceActionArgs',
+    'ServiceRoutePolicyFeatureSequenceActionArgsDict',
     'ServiceRoutePolicyFeatureSequenceMatchEntryArgs',
+    'ServiceRoutePolicyFeatureSequenceMatchEntryArgsDict',
     'ServiceRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArgs',
+    'ServiceRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArgsDict',
     'ServiceRoutingBgpFeatureIpv4AggregateAddressArgs',
+    'ServiceRoutingBgpFeatureIpv4AggregateAddressArgsDict',
     'ServiceRoutingBgpFeatureIpv4NeighborArgs',
+    'ServiceRoutingBgpFeatureIpv4NeighborArgsDict',
     'ServiceRoutingBgpFeatureIpv4NeighborAddressFamilyArgs',
+    'ServiceRoutingBgpFeatureIpv4NeighborAddressFamilyArgsDict',
     'ServiceRoutingBgpFeatureIpv4NetworkArgs',
+    'ServiceRoutingBgpFeatureIpv4NetworkArgsDict',
     'ServiceRoutingBgpFeatureIpv4RedistributeArgs',
+    'ServiceRoutingBgpFeatureIpv4RedistributeArgsDict',
     'ServiceRoutingBgpFeatureIpv6AggregateAddressArgs',
+    'ServiceRoutingBgpFeatureIpv6AggregateAddressArgsDict',
     'ServiceRoutingBgpFeatureIpv6NeighborArgs',
+    'ServiceRoutingBgpFeatureIpv6NeighborArgsDict',
     'ServiceRoutingBgpFeatureIpv6NeighborAddressFamilyArgs',
+    'ServiceRoutingBgpFeatureIpv6NeighborAddressFamilyArgsDict',
     'ServiceRoutingBgpFeatureIpv6NetworkArgs',
+    'ServiceRoutingBgpFeatureIpv6NetworkArgsDict',
     'ServiceRoutingBgpFeatureIpv6RedistributeArgs',
+    'ServiceRoutingBgpFeatureIpv6RedistributeArgsDict',
     'ServiceRoutingOspfFeatureAreaArgs',
+    'ServiceRoutingOspfFeatureAreaArgsDict',
     'ServiceRoutingOspfFeatureAreaInterfaceArgs',
+    'ServiceRoutingOspfFeatureAreaInterfaceArgsDict',
     'ServiceRoutingOspfFeatureAreaRangeArgs',
+    'ServiceRoutingOspfFeatureAreaRangeArgsDict',
     'ServiceRoutingOspfFeatureRedistributeArgs',
+    'ServiceRoutingOspfFeatureRedistributeArgsDict',
     'ServiceRoutingOspfFeatureRouterLsaArgs',
+    'ServiceRoutingOspfFeatureRouterLsaArgsDict',
     'ServiceRoutingOspfv3Ipv4FeatureAreaArgs',
+    'ServiceRoutingOspfv3Ipv4FeatureAreaArgsDict',
     'ServiceRoutingOspfv3Ipv4FeatureAreaInterfaceArgs',
+    'ServiceRoutingOspfv3Ipv4FeatureAreaInterfaceArgsDict',
     'ServiceRoutingOspfv3Ipv4FeatureAreaRangeArgs',
+    'ServiceRoutingOspfv3Ipv4FeatureAreaRangeArgsDict',
     'ServiceRoutingOspfv3Ipv4FeatureRedistributeArgs',
+    'ServiceRoutingOspfv3Ipv4FeatureRedistributeArgsDict',
     'ServiceRoutingOspfv3Ipv6FeatureAreaArgs',
+    'ServiceRoutingOspfv3Ipv6FeatureAreaArgsDict',
     'ServiceRoutingOspfv3Ipv6FeatureAreaInterfaceArgs',
+    'ServiceRoutingOspfv3Ipv6FeatureAreaInterfaceArgsDict',
     'ServiceRoutingOspfv3Ipv6FeatureAreaRangeArgs',
+    'ServiceRoutingOspfv3Ipv6FeatureAreaRangeArgsDict',
     'ServiceRoutingOspfv3Ipv6FeatureRedistributeArgs',
+    'ServiceRoutingOspfv3Ipv6FeatureRedistributeArgsDict',
     'ServiceSwitchportFeatureInterfaceArgs',
+    'ServiceSwitchportFeatureInterfaceArgsDict',
     'ServiceSwitchportFeatureStaticMacAddressArgs',
+    'ServiceSwitchportFeatureStaticMacAddressArgsDict',
     'ServiceTrackerGroupFeatureTrackerElementArgs',
+    'ServiceTrackerGroupFeatureTrackerElementArgsDict',
     'SiteListPolicyObjectEntryArgs',
+    'SiteListPolicyObjectEntryArgsDict',
     'StandardCommunityListPolicyObjectEntryArgs',
+    'StandardCommunityListPolicyObjectEntryArgsDict',
     'SwitchportFeatureTemplateInterfaceArgs',
+    'SwitchportFeatureTemplateInterfaceArgsDict',
     'SwitchportFeatureTemplateStaticMacAddressArgs',
+    'SwitchportFeatureTemplateStaticMacAddressArgsDict',
     'SystemAaaFeatureAccountingRuleArgs',
+    'SystemAaaFeatureAccountingRuleArgsDict',
     'SystemAaaFeatureAuthorizationRuleArgs',
+    'SystemAaaFeatureAuthorizationRuleArgsDict',
     'SystemAaaFeatureRadiusGroupArgs',
+    'SystemAaaFeatureRadiusGroupArgsDict',
     'SystemAaaFeatureRadiusGroupServerArgs',
+    'SystemAaaFeatureRadiusGroupServerArgsDict',
     'SystemAaaFeatureTacacsGroupArgs',
+    'SystemAaaFeatureTacacsGroupArgsDict',
     'SystemAaaFeatureTacacsGroupServerArgs',
+    'SystemAaaFeatureTacacsGroupServerArgsDict',
     'SystemAaaFeatureUserArgs',
+    'SystemAaaFeatureUserArgsDict',
     'SystemAaaFeatureUserPublicKeyArgs',
+    'SystemAaaFeatureUserPublicKeyArgsDict',
     'SystemBasicFeatureAffinityPerVrfArgs',
+    'SystemBasicFeatureAffinityPerVrfArgsDict',
     'SystemBasicFeatureGpsSmsMobileNumberArgs',
+    'SystemBasicFeatureGpsSmsMobileNumberArgsDict',
     'SystemBfdFeatureColorArgs',
+    'SystemBfdFeatureColorArgsDict',
     'SystemIpv4DeviceAccessFeatureSequenceArgs',
+    'SystemIpv4DeviceAccessFeatureSequenceArgsDict',
     'SystemIpv6DeviceAccessFeatureSequenceArgs',
+    'SystemIpv6DeviceAccessFeatureSequenceArgsDict',
     'SystemLoggingFeatureIpv4ServerArgs',
+    'SystemLoggingFeatureIpv4ServerArgsDict',
     'SystemLoggingFeatureIpv6ServerArgs',
+    'SystemLoggingFeatureIpv6ServerArgsDict',
     'SystemLoggingFeatureTlsProfileArgs',
+    'SystemLoggingFeatureTlsProfileArgsDict',
     'SystemNtpFeatureAuthenticationKeyArgs',
+    'SystemNtpFeatureAuthenticationKeyArgsDict',
     'SystemNtpFeatureServerArgs',
+    'SystemNtpFeatureServerArgsDict',
     'SystemSecurityFeatureKeyArgs',
+    'SystemSecurityFeatureKeyArgsDict',
     'SystemSecurityFeatureKeychainArgs',
+    'SystemSecurityFeatureKeychainArgsDict',
     'SystemSnmpFeatureCommunityArgs',
+    'SystemSnmpFeatureCommunityArgsDict',
     'SystemSnmpFeatureGroupArgs',
+    'SystemSnmpFeatureGroupArgsDict',
     'SystemSnmpFeatureTrapTargetServerArgs',
+    'SystemSnmpFeatureTrapTargetServerArgsDict',
     'SystemSnmpFeatureUserArgs',
+    'SystemSnmpFeatureUserArgsDict',
     'SystemSnmpFeatureViewArgs',
+    'SystemSnmpFeatureViewArgsDict',
     'SystemSnmpFeatureViewOidArgs',
+    'SystemSnmpFeatureViewOidArgsDict',
     'TlocListPolicyObjectEntryArgs',
+    'TlocListPolicyObjectEntryArgsDict',
     'TlsSslDecryptionPolicyDefinitionNetworkRuleArgs',
+    'TlsSslDecryptionPolicyDefinitionNetworkRuleArgsDict',
     'TlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArgs',
+    'TlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArgsDict',
     'TlsSslDecryptionPolicyDefinitionUrlRuleArgs',
+    'TlsSslDecryptionPolicyDefinitionUrlRuleArgsDict',
     'TrafficDataPolicyDefinitionSequenceArgs',
+    'TrafficDataPolicyDefinitionSequenceArgsDict',
     'TrafficDataPolicyDefinitionSequenceActionEntryArgs',
+    'TrafficDataPolicyDefinitionSequenceActionEntryArgsDict',
     'TrafficDataPolicyDefinitionSequenceActionEntryNatParameterArgs',
+    'TrafficDataPolicyDefinitionSequenceActionEntryNatParameterArgsDict',
     'TrafficDataPolicyDefinitionSequenceActionEntrySetParameterArgs',
+    'TrafficDataPolicyDefinitionSequenceActionEntrySetParameterArgsDict',
     'TrafficDataPolicyDefinitionSequenceMatchEntryArgs',
+    'TrafficDataPolicyDefinitionSequenceMatchEntryArgsDict',
     'TransportIpv6TrackerGroupFeatureTrackerElementArgs',
+    'TransportIpv6TrackerGroupFeatureTrackerElementArgsDict',
     'TransportManagementVpnFeatureIpv4StaticRouteArgs',
+    'TransportManagementVpnFeatureIpv4StaticRouteArgsDict',
     'TransportManagementVpnFeatureIpv4StaticRouteNextHopArgs',
+    'TransportManagementVpnFeatureIpv4StaticRouteNextHopArgsDict',
     'TransportManagementVpnFeatureIpv6StaticRouteArgs',
+    'TransportManagementVpnFeatureIpv6StaticRouteArgsDict',
     'TransportManagementVpnFeatureIpv6StaticRouteNextHopArgs',
+    'TransportManagementVpnFeatureIpv6StaticRouteNextHopArgsDict',
     'TransportManagementVpnFeatureNewHostMappingArgs',
+    'TransportManagementVpnFeatureNewHostMappingArgsDict',
     'TransportManagementVpnInterfaceEthernetFeatureArpEntryArgs',
+    'TransportManagementVpnInterfaceEthernetFeatureArpEntryArgsDict',
     'TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs',
+    'TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgsDict',
     'TransportRoutePolicyFeatureSequenceArgs',
+    'TransportRoutePolicyFeatureSequenceArgsDict',
     'TransportRoutePolicyFeatureSequenceActionArgs',
+    'TransportRoutePolicyFeatureSequenceActionArgsDict',
     'TransportRoutePolicyFeatureSequenceMatchEntryArgs',
+    'TransportRoutePolicyFeatureSequenceMatchEntryArgsDict',
     'TransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArgs',
+    'TransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArgsDict',
     'TransportRoutingBgpFeatureIpv4AggregateAddressArgs',
+    'TransportRoutingBgpFeatureIpv4AggregateAddressArgsDict',
     'TransportRoutingBgpFeatureIpv4NeighborArgs',
+    'TransportRoutingBgpFeatureIpv4NeighborArgsDict',
     'TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs',
+    'TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgsDict',
     'TransportRoutingBgpFeatureIpv4NetworkArgs',
+    'TransportRoutingBgpFeatureIpv4NetworkArgsDict',
     'TransportRoutingBgpFeatureIpv4RedistributeArgs',
+    'TransportRoutingBgpFeatureIpv4RedistributeArgsDict',
     'TransportRoutingBgpFeatureIpv6AggregateAddressArgs',
+    'TransportRoutingBgpFeatureIpv6AggregateAddressArgsDict',
     'TransportRoutingBgpFeatureIpv6NeighborArgs',
+    'TransportRoutingBgpFeatureIpv6NeighborArgsDict',
     'TransportRoutingBgpFeatureIpv6NeighborAddressFamilyArgs',
+    'TransportRoutingBgpFeatureIpv6NeighborAddressFamilyArgsDict',
     'TransportRoutingBgpFeatureIpv6NetworkArgs',
+    'TransportRoutingBgpFeatureIpv6NetworkArgsDict',
     'TransportRoutingBgpFeatureIpv6RedistributeArgs',
+    'TransportRoutingBgpFeatureIpv6RedistributeArgsDict',
     'TransportRoutingBgpFeatureMplsInterfaceArgs',
+    'TransportRoutingBgpFeatureMplsInterfaceArgsDict',
     'TransportRoutingOspfFeatureAreaArgs',
+    'TransportRoutingOspfFeatureAreaArgsDict',
     'TransportRoutingOspfFeatureAreaInterfaceArgs',
+    'TransportRoutingOspfFeatureAreaInterfaceArgsDict',
     'TransportRoutingOspfFeatureAreaRangeArgs',
+    'TransportRoutingOspfFeatureAreaRangeArgsDict',
     'TransportRoutingOspfFeatureRedistributeArgs',
+    'TransportRoutingOspfFeatureRedistributeArgsDict',
     'TransportRoutingOspfFeatureRouterLsaArgs',
+    'TransportRoutingOspfFeatureRouterLsaArgsDict',
     'TransportRoutingOspfv3Ipv4FeatureAreaArgs',
+    'TransportRoutingOspfv3Ipv4FeatureAreaArgsDict',
     'TransportRoutingOspfv3Ipv4FeatureAreaInterfaceArgs',
+    'TransportRoutingOspfv3Ipv4FeatureAreaInterfaceArgsDict',
     'TransportRoutingOspfv3Ipv4FeatureAreaRangeArgs',
+    'TransportRoutingOspfv3Ipv4FeatureAreaRangeArgsDict',
     'TransportRoutingOspfv3Ipv4FeatureRedistributeArgs',
+    'TransportRoutingOspfv3Ipv4FeatureRedistributeArgsDict',
     'TransportRoutingOspfv3Ipv6FeatureAreaArgs',
+    'TransportRoutingOspfv3Ipv6FeatureAreaArgsDict',
     'TransportRoutingOspfv3Ipv6FeatureAreaInterfaceArgs',
+    'TransportRoutingOspfv3Ipv6FeatureAreaInterfaceArgsDict',
     'TransportRoutingOspfv3Ipv6FeatureAreaRangeArgs',
+    'TransportRoutingOspfv3Ipv6FeatureAreaRangeArgsDict',
     'TransportRoutingOspfv3Ipv6FeatureRedistributeArgs',
+    'TransportRoutingOspfv3Ipv6FeatureRedistributeArgsDict',
     'TransportTrackerGroupFeatureTrackerElementArgs',
+    'TransportTrackerGroupFeatureTrackerElementArgsDict',
     'TransportWanVpnFeatureIpv4StaticRouteArgs',
+    'TransportWanVpnFeatureIpv4StaticRouteArgsDict',
     'TransportWanVpnFeatureIpv4StaticRouteNextHopArgs',
+    'TransportWanVpnFeatureIpv4StaticRouteNextHopArgsDict',
     'TransportWanVpnFeatureIpv6StaticRouteArgs',
+    'TransportWanVpnFeatureIpv6StaticRouteArgsDict',
     'TransportWanVpnFeatureIpv6StaticRouteNextHopArgs',
+    'TransportWanVpnFeatureIpv6StaticRouteNextHopArgsDict',
     'TransportWanVpnFeatureNat64V4PoolArgs',
+    'TransportWanVpnFeatureNat64V4PoolArgsDict',
     'TransportWanVpnFeatureNewHostMappingArgs',
+    'TransportWanVpnFeatureNewHostMappingArgsDict',
     'TransportWanVpnFeatureServiceArgs',
+    'TransportWanVpnFeatureServiceArgsDict',
     'TransportWanVpnInterfaceCellularFeatureArpArgs',
+    'TransportWanVpnInterfaceCellularFeatureArpArgsDict',
     'TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs',
+    'TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgsDict',
     'TransportWanVpnInterfaceEthernetFeatureArpArgs',
+    'TransportWanVpnInterfaceEthernetFeatureArpArgsDict',
     'TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs',
+    'TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgsDict',
     'TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs',
+    'TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgsDict',
     'TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs',
+    'TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgsDict',
     'TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs',
+    'TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgsDict',
     'TransportWanVpnInterfaceEthernetFeatureStaticNat66Args',
+    'TransportWanVpnInterfaceEthernetFeatureStaticNat66ArgsDict',
     'TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgs',
+    'TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgsDict',
     'TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArgs',
+    'TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArgsDict',
     'VpnInterfaceCellularFeatureTemplateIpv4AccessListArgs',
+    'VpnInterfaceCellularFeatureTemplateIpv4AccessListArgsDict',
     'VpnInterfaceCellularFeatureTemplateIpv6AccessListArgs',
+    'VpnInterfaceCellularFeatureTemplateIpv6AccessListArgsDict',
     'VpnInterfaceCellularFeatureTemplateNatPortForwardArgs',
+    'VpnInterfaceCellularFeatureTemplateNatPortForwardArgsDict',
     'VpnInterfaceCellularFeatureTemplatePolicerArgs',
+    'VpnInterfaceCellularFeatureTemplatePolicerArgsDict',
     'VpnInterfaceCellularFeatureTemplateStaticArpArgs',
+    'VpnInterfaceCellularFeatureTemplateStaticArpArgsDict',
     'VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArgs',
+    'VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArgsDict',
     'VpnInterfaceDslIpoeFeatureTemplateAccessListArgs',
+    'VpnInterfaceDslIpoeFeatureTemplateAccessListArgsDict',
     'VpnInterfaceDslIpoeFeatureTemplateNatPortForwardArgs',
+    'VpnInterfaceDslIpoeFeatureTemplateNatPortForwardArgsDict',
     'VpnInterfaceDslIpoeFeatureTemplatePolicerArgs',
+    'VpnInterfaceDslIpoeFeatureTemplatePolicerArgsDict',
     'VpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArgs',
+    'VpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArgsDict',
     'VpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArgs',
+    'VpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArgsDict',
     'VpnInterfaceDslPppoaFeatureTemplateAccessListArgs',
+    'VpnInterfaceDslPppoaFeatureTemplateAccessListArgsDict',
     'VpnInterfaceDslPppoaFeatureTemplateNatPortForwardArgs',
+    'VpnInterfaceDslPppoaFeatureTemplateNatPortForwardArgsDict',
     'VpnInterfaceDslPppoaFeatureTemplatePolicerArgs',
+    'VpnInterfaceDslPppoaFeatureTemplatePolicerArgsDict',
     'VpnInterfaceDslPppoaFeatureTemplatePvcArgs',
+    'VpnInterfaceDslPppoaFeatureTemplatePvcArgsDict',
     'VpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArgs',
+    'VpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArgsDict',
     'VpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArgs',
+    'VpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArgsDict',
     'VpnInterfaceDslPppoeFeatureTemplateAccessListArgs',
+    'VpnInterfaceDslPppoeFeatureTemplateAccessListArgsDict',
     'VpnInterfaceDslPppoeFeatureTemplateNatPortForwardArgs',
+    'VpnInterfaceDslPppoeFeatureTemplateNatPortForwardArgsDict',
     'VpnInterfaceDslPppoeFeatureTemplatePolicerArgs',
+    'VpnInterfaceDslPppoeFeatureTemplatePolicerArgsDict',
     'VpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArgs',
+    'VpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArgsDict',
     'VpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArgs',
+    'VpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArgsDict',
     'VpnInterfaceEthernetPppoeFeatureTemplateAccessListArgs',
+    'VpnInterfaceEthernetPppoeFeatureTemplateAccessListArgsDict',
     'VpnInterfaceEthernetPppoeFeatureTemplateNatPortForwardArgs',
+    'VpnInterfaceEthernetPppoeFeatureTemplateNatPortForwardArgsDict',
     'VpnInterfaceEthernetPppoeFeatureTemplatePolicerArgs',
+    'VpnInterfaceEthernetPppoeFeatureTemplatePolicerArgsDict',
     'VpnInterfaceEthernetPppoeFeatureTemplateTunnelInterfaceEncapsulationArgs',
+    'VpnInterfaceEthernetPppoeFeatureTemplateTunnelInterfaceEncapsulationArgsDict',
     'VpnInterfaceMultilinkFeatureTemplateAccessListArgs',
+    'VpnInterfaceMultilinkFeatureTemplateAccessListArgsDict',
     'VpnInterfaceMultilinkFeatureTemplateIpv6AccessListArgs',
+    'VpnInterfaceMultilinkFeatureTemplateIpv6AccessListArgsDict',
     'VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceArgs',
+    'VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceArgsDict',
     'VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceChannelGroupListArgs',
+    'VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceChannelGroupListArgsDict',
     'VpnInterfaceMultilinkFeatureTemplateNimInterfaceListArgs',
+    'VpnInterfaceMultilinkFeatureTemplateNimInterfaceListArgsDict',
     'VpnInterfaceMultilinkFeatureTemplateTunnelInterfaceEncapsulationArgs',
+    'VpnInterfaceMultilinkFeatureTemplateTunnelInterfaceEncapsulationArgsDict',
     'VpnInterfaceSviFeatureTemplateIpv4AccessListArgs',
+    'VpnInterfaceSviFeatureTemplateIpv4AccessListArgsDict',
     'VpnInterfaceSviFeatureTemplateIpv4SecondaryAddressArgs',
+    'VpnInterfaceSviFeatureTemplateIpv4SecondaryAddressArgsDict',
     'VpnInterfaceSviFeatureTemplateIpv4VrrpArgs',
+    'VpnInterfaceSviFeatureTemplateIpv4VrrpArgsDict',
     'VpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArgs',
+    'VpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArgsDict',
     'VpnInterfaceSviFeatureTemplateIpv4VrrpTrackingObjectArgs',
+    'VpnInterfaceSviFeatureTemplateIpv4VrrpTrackingObjectArgsDict',
     'VpnInterfaceSviFeatureTemplateIpv6AccessListArgs',
+    'VpnInterfaceSviFeatureTemplateIpv6AccessListArgsDict',
     'VpnInterfaceSviFeatureTemplateIpv6DhcpHelperArgs',
+    'VpnInterfaceSviFeatureTemplateIpv6DhcpHelperArgsDict',
     'VpnInterfaceSviFeatureTemplateIpv6SecondaryAddressArgs',
+    'VpnInterfaceSviFeatureTemplateIpv6SecondaryAddressArgsDict',
     'VpnInterfaceSviFeatureTemplateIpv6VrrpArgs',
+    'VpnInterfaceSviFeatureTemplateIpv6VrrpArgsDict',
     'VpnInterfaceSviFeatureTemplateIpv6VrrpIpv6AddressArgs',
+    'VpnInterfaceSviFeatureTemplateIpv6VrrpIpv6AddressArgsDict',
     'VpnInterfaceSviFeatureTemplateIpv6VrrpIpv6SecondaryAddressArgs',
+    'VpnInterfaceSviFeatureTemplateIpv6VrrpIpv6SecondaryAddressArgsDict',
     'VpnInterfaceSviFeatureTemplatePolicerArgs',
+    'VpnInterfaceSviFeatureTemplatePolicerArgsDict',
     'VpnInterfaceSviFeatureTemplateStaticArpEntryArgs',
+    'VpnInterfaceSviFeatureTemplateStaticArpEntryArgsDict',
     'VpnInterfaceT1E1SerialFeatureTemplateIpv4AccessListArgs',
+    'VpnInterfaceT1E1SerialFeatureTemplateIpv4AccessListArgsDict',
     'VpnInterfaceT1E1SerialFeatureTemplateIpv6AccessListArgs',
+    'VpnInterfaceT1E1SerialFeatureTemplateIpv6AccessListArgsDict',
     'VpnInterfaceT1E1SerialFeatureTemplateTunnelInterfaceEncapsulationArgs',
+    'VpnInterfaceT1E1SerialFeatureTemplateTunnelInterfaceEncapsulationArgsDict',
     'VpnListPolicyObjectEntryArgs',
+    'VpnListPolicyObjectEntryArgsDict',
     'VpnMembershipPolicyDefinitionSiteArgs',
+    'VpnMembershipPolicyDefinitionSiteArgsDict',
     'ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs',
+    'ZoneBasedFirewallPolicyDefinitionApplyZonePairArgsDict',
     'ZoneBasedFirewallPolicyDefinitionRuleArgs',
+    'ZoneBasedFirewallPolicyDefinitionRuleArgsDict',
     'ZoneBasedFirewallPolicyDefinitionRuleActionEntryArgs',
+    'ZoneBasedFirewallPolicyDefinitionRuleActionEntryArgsDict',
     'ZoneBasedFirewallPolicyDefinitionRuleMatchEntryArgs',
+    'ZoneBasedFirewallPolicyDefinitionRuleMatchEntryArgsDict',
     'ZoneListPolicyObjectEntryArgs',
+    'ZoneListPolicyObjectEntryArgsDict',
 ]
+
+MYPY = False
+
+if not MYPY:
+    class AllowUrlListPolicyObjectEntryArgsDict(TypedDict):
+        url: NotRequired[pulumi.Input[str]]
+        """
+        URL
+        """
+elif False:
+    AllowUrlListPolicyObjectEntryArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class AllowUrlListPolicyObjectEntryArgs:
@@ -470,6 +922,21 @@ class AllowUrlListPolicyObjectEntryArgs:
     def url(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "url", value)
 
+
+if not MYPY:
+    class AppProbeClassPolicyObjectMappingArgsDict(TypedDict):
+        color: pulumi.Input[str]
+        """
+        Color
+          - Choices: `default`, `3g`, `biz-internet`, `blue`, `bronze`, `custom1`, `custom2`, `custom3`, `gold`, `green`, `lte`, `metro-ethernet`, `mpls`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`, `public-internet`, `red`, `silver`
+        """
+        dscp: NotRequired[pulumi.Input[int]]
+        """
+        DSCP
+          - Range: `0`-`63`
+        """
+elif False:
+    AppProbeClassPolicyObjectMappingArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class AppProbeClassPolicyObjectMappingArgs:
@@ -512,6 +979,32 @@ class AppProbeClassPolicyObjectMappingArgs:
     def dscp(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "dscp", value)
 
+
+if not MYPY:
+    class ApplicationAwareRoutingPolicyDefinitionSequenceArgsDict(TypedDict):
+        id: pulumi.Input[int]
+        """
+        Sequence ID
+        """
+        name: pulumi.Input[str]
+        """
+        Sequence name
+        """
+        action_entries: NotRequired[pulumi.Input[Sequence[pulumi.Input['ApplicationAwareRoutingPolicyDefinitionSequenceActionEntryArgsDict']]]]
+        """
+        List of action entries
+        """
+        ip_type: NotRequired[pulumi.Input[str]]
+        """
+        Sequence IP type, either `ipv4`, `ipv6` or `all`
+          - Choices: `ipv4`, `ipv6`, `all`
+        """
+        match_entries: NotRequired[pulumi.Input[Sequence[pulumi.Input['ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntryArgsDict']]]]
+        """
+        List of match entries
+        """
+elif False:
+    ApplicationAwareRoutingPolicyDefinitionSequenceArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ApplicationAwareRoutingPolicyDefinitionSequenceArgs:
@@ -599,6 +1092,36 @@ class ApplicationAwareRoutingPolicyDefinitionSequenceArgs:
     def match_entries(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntryArgs']]]]):
         pulumi.set(self, "match_entries", value)
 
+
+if not MYPY:
+    class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntryArgsDict(TypedDict):
+        type: pulumi.Input[str]
+        """
+        Type of action entry
+          - Choices: `backupSlaPreferredColor`, `count`, `log`, `slaClass`, `cloudSaas`
+        """
+        backup_sla_preferred_color: NotRequired[pulumi.Input[str]]
+        """
+        Backup SLA preferred color (Single value or multiple values separated by spaces)
+        """
+        cloud_sla: NotRequired[pulumi.Input[bool]]
+        """
+        Cloud SLA
+        """
+        counter: NotRequired[pulumi.Input[str]]
+        """
+        Counter name
+        """
+        log: NotRequired[pulumi.Input[bool]]
+        """
+        Enable logging
+        """
+        sla_class_parameters: NotRequired[pulumi.Input[Sequence[pulumi.Input['ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameterArgsDict']]]]
+        """
+        List of SLA class parameters
+        """
+elif False:
+    ApplicationAwareRoutingPolicyDefinitionSequenceActionEntryArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntryArgs:
@@ -704,6 +1227,36 @@ class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntryArgs:
         pulumi.set(self, "sla_class_parameters", value)
 
 
+if not MYPY:
+    class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameterArgsDict(TypedDict):
+        type: pulumi.Input[str]
+        """
+        Type of SLA class parameter
+          - Choices: `name`, `preferredColor`, `preferredColorGroup`, `strict`, `fallbackToBestPath`
+        """
+        preferred_color: NotRequired[pulumi.Input[str]]
+        """
+        preferred color (Single value or multiple values separated by spaces)
+        """
+        preferred_color_group_list: NotRequired[pulumi.Input[str]]
+        """
+        Preferred color group list ID
+        """
+        preferred_color_group_list_version: NotRequired[pulumi.Input[int]]
+        """
+        Preferred color group list version
+        """
+        sla_class_list: NotRequired[pulumi.Input[str]]
+        """
+        SLA class list ID
+        """
+        sla_class_list_version: NotRequired[pulumi.Input[int]]
+        """
+        SLA class list version
+        """
+elif False:
+    ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameterArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameterArgs:
     def __init__(__self__, *,
@@ -807,6 +1360,97 @@ class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParamete
     def sla_class_list_version(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "sla_class_list_version", value)
 
+
+if not MYPY:
+    class ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntryArgsDict(TypedDict):
+        type: pulumi.Input[str]
+        """
+        Type of match entry
+          - Choices: `appList`, `dnsAppList`, `dns`, `dscp`, `plp`, `protocol`, `sourceDataPrefixList`, `sourceIp`, `sourcePort`, `destinationDataPrefixList`, `destinationIp`, `destinationRegion`, `destinationPort`, `trafficTo`, `icmpMessage`
+        """
+        application_list_id: NotRequired[pulumi.Input[str]]
+        """
+        Application list ID
+        """
+        application_list_version: NotRequired[pulumi.Input[int]]
+        """
+        Application list version
+        """
+        destination_data_prefix_list_id: NotRequired[pulumi.Input[str]]
+        """
+        Destination Data Prefix list ID
+        """
+        destination_data_prefix_list_version: NotRequired[pulumi.Input[int]]
+        """
+        Destination Data Prefix list version
+        """
+        destination_ip: NotRequired[pulumi.Input[str]]
+        """
+        Destination IP
+        """
+        destination_port: NotRequired[pulumi.Input[str]]
+        """
+        Destination port, 0-65535 (Single value, range or multiple values separated by spaces)
+        """
+        destination_region: NotRequired[pulumi.Input[str]]
+        """
+        Destination region
+          - Choices: `primary-region`, `secondary-region`, `other-region`
+        """
+        dns: NotRequired[pulumi.Input[str]]
+        """
+        DNS request or response
+          - Choices: `request`, `response`
+        """
+        dns_application_list_id: NotRequired[pulumi.Input[str]]
+        """
+        DNS Application list ID
+        """
+        dns_application_list_version: NotRequired[pulumi.Input[int]]
+        """
+        DNS Application list version
+        """
+        dscp: NotRequired[pulumi.Input[int]]
+        """
+        DSCP value
+          - Range: `0`-`63`
+        """
+        icmp_message: NotRequired[pulumi.Input[str]]
+        """
+        ICMP Message
+        """
+        plp: NotRequired[pulumi.Input[str]]
+        """
+        PLP
+          - Choices: `low`, `high`
+        """
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        IP Protocol, 0-255 (Single value or multiple values separated by spaces)
+        """
+        source_data_prefix_list_id: NotRequired[pulumi.Input[str]]
+        """
+        Source Data Prefix list ID
+        """
+        source_data_prefix_list_version: NotRequired[pulumi.Input[int]]
+        """
+        Source Data Prefix list version
+        """
+        source_ip: NotRequired[pulumi.Input[str]]
+        """
+        Source IP
+        """
+        source_port: NotRequired[pulumi.Input[str]]
+        """
+        Source port, 0-65535 (Single value, range or multiple values separated by spaces)
+        """
+        traffic_to: NotRequired[pulumi.Input[str]]
+        """
+        Traffic to
+          - Choices: `access`, `core`, `service`
+        """
+elif False:
+    ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntryArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntryArgs:
@@ -1146,6 +1790,19 @@ class ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntryArgs:
         pulumi.set(self, "traffic_to", value)
 
 
+if not MYPY:
+    class ApplicationListPolicyObjectEntryArgsDict(TypedDict):
+        application: NotRequired[pulumi.Input[str]]
+        """
+        Application name
+        """
+        application_family: NotRequired[pulumi.Input[str]]
+        """
+        Application family name
+        """
+elif False:
+    ApplicationListPolicyObjectEntryArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ApplicationListPolicyObjectEntryArgs:
     def __init__(__self__, *,
@@ -1184,6 +1841,28 @@ class ApplicationListPolicyObjectEntryArgs:
     def application_family(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "application_family", value)
 
+
+if not MYPY:
+    class ApplicationPriorityQosPolicyQosSchedulerArgsDict(TypedDict):
+        bandwidth: NotRequired[pulumi.Input[str]]
+        """
+        bandwidthPercent
+        """
+        drops: NotRequired[pulumi.Input[str]]
+        """
+        drops
+        """
+        forwarding_class_id: NotRequired[pulumi.Input[str]]
+        queue: NotRequired[pulumi.Input[str]]
+        """
+        queue
+        """
+        scheduling_type: NotRequired[pulumi.Input[str]]
+        """
+        scheduling
+        """
+elif False:
+    ApplicationPriorityQosPolicyQosSchedulerArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ApplicationPriorityQosPolicyQosSchedulerArgs:
@@ -1268,6 +1947,15 @@ class ApplicationPriorityQosPolicyQosSchedulerArgs:
         pulumi.set(self, "scheduling_type", value)
 
 
+if not MYPY:
+    class AsPathListPolicyObjectEntryArgsDict(TypedDict):
+        as_path: pulumi.Input[str]
+        """
+        Regular expression to match the BGP AS paths e.g., `^1239_[0-9]*$`
+        """
+elif False:
+    AsPathListPolicyObjectEntryArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class AsPathListPolicyObjectEntryArgs:
     def __init__(__self__, *,
@@ -1289,6 +1977,19 @@ class AsPathListPolicyObjectEntryArgs:
     def as_path(self, value: pulumi.Input[str]):
         pulumi.set(self, "as_path", value)
 
+
+if not MYPY:
+    class AttachFeatureDeviceTemplateDeviceArgsDict(TypedDict):
+        id: pulumi.Input[str]
+        """
+        Device ID
+        """
+        variables: pulumi.Input[Mapping[str, pulumi.Input[str]]]
+        """
+        Device variables
+        """
+elif False:
+    AttachFeatureDeviceTemplateDeviceArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class AttachFeatureDeviceTemplateDeviceArgs:
@@ -1327,6 +2028,15 @@ class AttachFeatureDeviceTemplateDeviceArgs:
         pulumi.set(self, "variables", value)
 
 
+if not MYPY:
+    class BlockUrlListPolicyObjectEntryArgsDict(TypedDict):
+        url: NotRequired[pulumi.Input[str]]
+        """
+        URL
+        """
+elif False:
+    BlockUrlListPolicyObjectEntryArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class BlockUrlListPolicyObjectEntryArgs:
     def __init__(__self__, *,
@@ -1349,6 +2059,42 @@ class BlockUrlListPolicyObjectEntryArgs:
     def url(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "url", value)
 
+
+if not MYPY:
+    class CedgeAaaFeatureTemplateAccountingRuleArgsDict(TypedDict):
+        groups: NotRequired[pulumi.Input[str]]
+        """
+        Comma separated list of groups
+        """
+        method: NotRequired[pulumi.Input[str]]
+        """
+        Configure Accounting Method
+          - Choices: `commands`, `exec`, `network`, `system`
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Configure Accounting Rule ID
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        privilege_level: NotRequired[pulumi.Input[str]]
+        """
+        Privilege level when method is commands
+          - Choices: `1`, `15`
+        """
+        start_stop: NotRequired[pulumi.Input[bool]]
+        """
+        Record start and stop without waiting
+          - Default value: `true`
+        """
+        start_stop_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CedgeAaaFeatureTemplateAccountingRuleArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CedgeAaaFeatureTemplateAccountingRuleArgs:
@@ -1475,6 +2221,38 @@ class CedgeAaaFeatureTemplateAccountingRuleArgs:
         pulumi.set(self, "start_stop_variable", value)
 
 
+if not MYPY:
+    class CedgeAaaFeatureTemplateAuthorizationRuleArgsDict(TypedDict):
+        authenticated: NotRequired[pulumi.Input[bool]]
+        """
+        Succeed if user has authenticated
+          - Default value: `false`
+        """
+        groups: NotRequired[pulumi.Input[str]]
+        """
+        Comma separated list of groups
+        """
+        method: NotRequired[pulumi.Input[str]]
+        """
+        Method
+          - Choices: `commands`
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Configure Authorization Rule ID
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        privilege_level: NotRequired[pulumi.Input[str]]
+        """
+        Privilege level when method is commands
+          - Choices: `1`, `15`
+        """
+elif False:
+    CedgeAaaFeatureTemplateAuthorizationRuleArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CedgeAaaFeatureTemplateAuthorizationRuleArgs:
     def __init__(__self__, *,
@@ -1584,6 +2362,27 @@ class CedgeAaaFeatureTemplateAuthorizationRuleArgs:
         pulumi.set(self, "privilege_level", value)
 
 
+if not MYPY:
+    class CedgeAaaFeatureTemplateRadiusClientArgsDict(TypedDict):
+        client_ip: NotRequired[pulumi.Input[str]]
+        """
+        Client IP
+        """
+        client_ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        vpn_configurations: NotRequired[pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateRadiusClientVpnConfigurationArgsDict']]]]
+        """
+        VPN configuration
+        """
+elif False:
+    CedgeAaaFeatureTemplateRadiusClientArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CedgeAaaFeatureTemplateRadiusClientArgs:
     def __init__(__self__, *,
@@ -1654,6 +2453,31 @@ class CedgeAaaFeatureTemplateRadiusClientArgs:
     def vpn_configurations(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateRadiusClientVpnConfigurationArgs']]]]):
         pulumi.set(self, "vpn_configurations", value)
 
+
+if not MYPY:
+    class CedgeAaaFeatureTemplateRadiusClientVpnConfigurationArgsDict(TypedDict):
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        server_key: NotRequired[pulumi.Input[str]]
+        """
+        Specify a RADIUS client server-key
+        """
+        server_key_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        vpn_id: NotRequired[pulumi.Input[int]]
+        """
+        VPN ID
+        """
+        vpn_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CedgeAaaFeatureTemplateRadiusClientVpnConfigurationArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CedgeAaaFeatureTemplateRadiusClientVpnConfigurationArgs:
@@ -1741,6 +2565,37 @@ class CedgeAaaFeatureTemplateRadiusClientVpnConfigurationArgs:
     def vpn_id_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "vpn_id_variable", value)
 
+
+if not MYPY:
+    class CedgeAaaFeatureTemplateRadiusServerGroupArgsDict(TypedDict):
+        group_name: NotRequired[pulumi.Input[str]]
+        """
+        Set Radius server Group Name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        servers: NotRequired[pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateRadiusServerGroupServerArgsDict']]]]
+        """
+        Configure the Radius server
+        """
+        source_interface: NotRequired[pulumi.Input[str]]
+        """
+        Set interface to use to reach Radius server
+        """
+        source_interface_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        vpn_id: NotRequired[pulumi.Input[int]]
+        """
+        Set VPN in which Radius server is located
+          - Range: `0`-`65530`
+          - Default value: `0`
+        """
+elif False:
+    CedgeAaaFeatureTemplateRadiusServerGroupArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CedgeAaaFeatureTemplateRadiusServerGroupArgs:
@@ -1848,6 +2703,86 @@ class CedgeAaaFeatureTemplateRadiusServerGroupArgs:
     def vpn_id(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "vpn_id", value)
 
+
+if not MYPY:
+    class CedgeAaaFeatureTemplateRadiusServerGroupServerArgsDict(TypedDict):
+        accounting_port: NotRequired[pulumi.Input[int]]
+        """
+        Set Accounting port to use to connect to Radius server
+          - Range: `1`-`65534`
+          - Default value: `1813`
+        """
+        accounting_port_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        address: NotRequired[pulumi.Input[str]]
+        """
+        Set IP address of Radius server
+        """
+        authentication_port: NotRequired[pulumi.Input[int]]
+        """
+        Set Authentication port to use to connect to Radius server
+          - Range: `1`-`65534`
+          - Default value: `1812`
+        """
+        authentication_port_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        encryption_type: NotRequired[pulumi.Input[str]]
+        """
+        Type of encyption. To be used for type 6
+          - Choices: `6`, `7`
+        """
+        key: NotRequired[pulumi.Input[str]]
+        """
+        Set the Radius server shared key
+        """
+        key_type: NotRequired[pulumi.Input[str]]
+        """
+        key type
+          - Choices: `key`, `pac`
+          - Default value: `key`
+        """
+        key_type_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        retransmit: NotRequired[pulumi.Input[int]]
+        """
+        Configure how many times to contact this Radius server
+          - Range: `1`-`100`
+          - Default value: `3`
+        """
+        retransmit_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        secret_key: NotRequired[pulumi.Input[str]]
+        """
+        Set the Radius server shared type 7 encrypted key
+        """
+        secret_key_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        timeout: NotRequired[pulumi.Input[int]]
+        """
+        Configure how long to wait for replies from the Radius server
+          - Range: `1`-`1000`
+          - Default value: `5`
+        """
+        timeout_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CedgeAaaFeatureTemplateRadiusServerGroupServerArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CedgeAaaFeatureTemplateRadiusServerGroupServerArgs:
@@ -2134,6 +3069,37 @@ class CedgeAaaFeatureTemplateRadiusServerGroupServerArgs:
         pulumi.set(self, "timeout_variable", value)
 
 
+if not MYPY:
+    class CedgeAaaFeatureTemplateTacacsServerGroupArgsDict(TypedDict):
+        group_name: NotRequired[pulumi.Input[str]]
+        """
+        Set TACACS server Group Name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        servers: NotRequired[pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateTacacsServerGroupServerArgsDict']]]]
+        """
+        Configure the TACACS server
+        """
+        source_interface: NotRequired[pulumi.Input[str]]
+        """
+        Set interface to use to reach TACACS server
+        """
+        source_interface_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        vpn_id: NotRequired[pulumi.Input[int]]
+        """
+        Set VPN in which TACACS server is located
+          - Range: `0`-`65530`
+          - Default value: `0`
+        """
+elif False:
+    CedgeAaaFeatureTemplateTacacsServerGroupArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CedgeAaaFeatureTemplateTacacsServerGroupArgs:
     def __init__(__self__, *,
@@ -2240,6 +3206,56 @@ class CedgeAaaFeatureTemplateTacacsServerGroupArgs:
     def vpn_id(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "vpn_id", value)
 
+
+if not MYPY:
+    class CedgeAaaFeatureTemplateTacacsServerGroupServerArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        Set IP address of TACACS server
+        """
+        encryption_type: NotRequired[pulumi.Input[str]]
+        """
+        Type of encyption. To be used for type 6
+          - Choices: `6`, `7`
+        """
+        key: NotRequired[pulumi.Input[str]]
+        """
+        Set the TACACS server shared key
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        port: NotRequired[pulumi.Input[int]]
+        """
+        TACACS Port
+          - Range: `1`-`65535`
+          - Default value: `49`
+        """
+        port_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        secret_key: NotRequired[pulumi.Input[str]]
+        """
+        Set the TACACS server shared type 7 encrypted key
+        """
+        secret_key_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        timeout: NotRequired[pulumi.Input[int]]
+        """
+        Configure how long to wait for replies from the TACACS server
+          - Range: `1`-`1000`
+          - Default value: `5`
+        """
+        timeout_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CedgeAaaFeatureTemplateTacacsServerGroupServerArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CedgeAaaFeatureTemplateTacacsServerGroupServerArgs:
@@ -2418,6 +3434,45 @@ class CedgeAaaFeatureTemplateTacacsServerGroupServerArgs:
         pulumi.set(self, "timeout_variable", value)
 
 
+if not MYPY:
+    class CedgeAaaFeatureTemplateUserArgsDict(TypedDict):
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Set the username
+        """
+        name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        password: NotRequired[pulumi.Input[str]]
+        """
+        Set the user password
+        """
+        privilege_level: NotRequired[pulumi.Input[str]]
+        """
+        Set Privilege Level for this user
+          - Choices: `1`, `15`
+          - Default value: `15`
+        """
+        privilege_level_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        secret: NotRequired[pulumi.Input[str]]
+        """
+        Set the user scrypt password/hash
+        """
+        ssh_pubkeys: NotRequired[pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateUserSshPubkeyArgsDict']]]]
+        """
+        List of RSA public-keys per user
+        """
+elif False:
+    CedgeAaaFeatureTemplateUserArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CedgeAaaFeatureTemplateUserArgs:
     def __init__(__self__, *,
@@ -2557,6 +3612,27 @@ class CedgeAaaFeatureTemplateUserArgs:
         pulumi.set(self, "ssh_pubkeys", value)
 
 
+if not MYPY:
+    class CedgeAaaFeatureTemplateUserSshPubkeyArgsDict(TypedDict):
+        key_string: NotRequired[pulumi.Input[str]]
+        """
+        Set the RSA key string
+        """
+        key_type: NotRequired[pulumi.Input[str]]
+        """
+        Only RSA is supported
+        """
+        key_type_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    CedgeAaaFeatureTemplateUserSshPubkeyArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CedgeAaaFeatureTemplateUserSshPubkeyArgs:
     def __init__(__self__, *,
@@ -2628,6 +3704,27 @@ class CedgeAaaFeatureTemplateUserSshPubkeyArgs:
         pulumi.set(self, "optional", value)
 
 
+if not MYPY:
+    class CedgeIgmpFeatureTemplateInterfaceArgsDict(TypedDict):
+        join_groups: NotRequired[pulumi.Input[Sequence[pulumi.Input['CedgeIgmpFeatureTemplateInterfaceJoinGroupArgsDict']]]]
+        """
+        Configure static joins
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Set interface name
+        """
+        name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    CedgeIgmpFeatureTemplateInterfaceArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CedgeIgmpFeatureTemplateInterfaceArgs:
     def __init__(__self__, *,
@@ -2698,6 +3795,31 @@ class CedgeIgmpFeatureTemplateInterfaceArgs:
     def optional(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "optional", value)
 
+
+if not MYPY:
+    class CedgeIgmpFeatureTemplateInterfaceJoinGroupArgsDict(TypedDict):
+        group_address: NotRequired[pulumi.Input[str]]
+        """
+        Set group address
+        """
+        group_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        source: NotRequired[pulumi.Input[str]]
+        """
+        Set source address
+        """
+        source_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CedgeIgmpFeatureTemplateInterfaceJoinGroupArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CedgeIgmpFeatureTemplateInterfaceJoinGroupArgs:
@@ -2785,6 +3907,43 @@ class CedgeIgmpFeatureTemplateInterfaceJoinGroupArgs:
     def source_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "source_variable", value)
 
+
+if not MYPY:
+    class CedgePimFeatureTemplateInterfaceArgsDict(TypedDict):
+        interface_name: NotRequired[pulumi.Input[str]]
+        """
+        Set interface name
+        """
+        interface_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        join_prune_interval: NotRequired[pulumi.Input[int]]
+        """
+        Set interval at which PIM multicast traffic can join or be removed from RPT or SPT
+          - Range: `10`-`600`
+          - Default value: `60`
+        """
+        join_prune_interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        query_interval: NotRequired[pulumi.Input[int]]
+        """
+        Set PIM query interval
+          - Range: `1`-`18725`
+          - Default value: `30`
+        """
+        query_interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CedgePimFeatureTemplateInterfaceArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CedgePimFeatureTemplateInterfaceArgs:
@@ -2913,6 +4072,40 @@ class CedgePimFeatureTemplateInterfaceArgs:
         pulumi.set(self, "query_interval_variable", value)
 
 
+if not MYPY:
+    class CedgePimFeatureTemplateRpAddressArgsDict(TypedDict):
+        access_list: NotRequired[pulumi.Input[str]]
+        """
+        Set Static RP Access List
+        """
+        access_list_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ip_address: NotRequired[pulumi.Input[str]]
+        """
+        Set Static RP IP Address
+        """
+        ip_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        override: NotRequired[pulumi.Input[bool]]
+        """
+        Set override flag
+          - Default value: `false`
+        """
+        override_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CedgePimFeatureTemplateRpAddressArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CedgePimFeatureTemplateRpAddressArgs:
     def __init__(__self__, *,
@@ -3034,6 +4227,32 @@ class CedgePimFeatureTemplateRpAddressArgs:
         pulumi.set(self, "override_variable", value)
 
 
+if not MYPY:
+    class CedgePimFeatureTemplateRpAnnounceFieldArgsDict(TypedDict):
+        interface_name: NotRequired[pulumi.Input[str]]
+        """
+        Set RP Announce Interface Name
+        """
+        interface_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        scope: NotRequired[pulumi.Input[int]]
+        """
+        Set RP Announce Scope
+          - Range: `1`-`255`
+        """
+        scope_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CedgePimFeatureTemplateRpAnnounceFieldArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CedgePimFeatureTemplateRpAnnounceFieldArgs:
     def __init__(__self__, *,
@@ -3122,6 +4341,49 @@ class CedgePimFeatureTemplateRpAnnounceFieldArgs:
     def scope_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "scope_variable", value)
 
+
+if not MYPY:
+    class CedgePimFeatureTemplateRpCandidateArgsDict(TypedDict):
+        access_list: NotRequired[pulumi.Input[str]]
+        """
+        Set IP Access List for PIM RP Candidate
+        """
+        access_list_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        interface: NotRequired[pulumi.Input[str]]
+        """
+        Set Autonomic-Networking virtual interface
+        """
+        interface_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        interval: NotRequired[pulumi.Input[int]]
+        """
+        Set RP candidate advertisement interval
+          - Range: `1`-`16383`
+        """
+        interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        priority: NotRequired[pulumi.Input[int]]
+        """
+        Set RP candidate priority
+          - Range: `0`-`255`
+        """
+        priority_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CedgePimFeatureTemplateRpCandidateArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CedgePimFeatureTemplateRpCandidateArgs:
@@ -3278,6 +4540,42 @@ class CedgePimFeatureTemplateRpCandidateArgs:
         pulumi.set(self, "priority_variable", value)
 
 
+if not MYPY:
+    class CellularControllerFeatureTemplateDataProfileArgsDict(TypedDict):
+        attach_profile: NotRequired[pulumi.Input[int]]
+        """
+        Set attach profile
+          - Range: `1`-`16`
+        """
+        attach_profile_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        data_profile: NotRequired[pulumi.Input[int]]
+        """
+        Set data profile
+          - Range: `1`-`16`
+        """
+        data_profile_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        slot_number: NotRequired[pulumi.Input[int]]
+        """
+        Set slot number
+          - Range: `0`-`1`
+        """
+        slot_number_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CellularControllerFeatureTemplateDataProfileArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CellularControllerFeatureTemplateDataProfileArgs:
     def __init__(__self__, *,
@@ -3403,6 +4701,28 @@ class CellularControllerFeatureTemplateDataProfileArgs:
         pulumi.set(self, "slot_number_variable", value)
 
 
+if not MYPY:
+    class CentralizedPolicyDefinitionArgsDict(TypedDict):
+        id: pulumi.Input[str]
+        """
+        Policy definition ID
+        """
+        type: pulumi.Input[str]
+        """
+        Policy definition type
+          - Choices: `hubAndSpoke`, `mesh`, `control`, `vpnMembershipGroup`, `appRoute`, `cflowd`, `data`
+        """
+        entries: NotRequired[pulumi.Input[Sequence[pulumi.Input['CentralizedPolicyDefinitionEntryArgsDict']]]]
+        """
+        List of entries
+        """
+        version: NotRequired[pulumi.Input[int]]
+        """
+        Policy definition version
+        """
+elif False:
+    CentralizedPolicyDefinitionArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CentralizedPolicyDefinitionArgs:
     def __init__(__self__, *,
@@ -3473,6 +4793,44 @@ class CentralizedPolicyDefinitionArgs:
     def version(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "version", value)
 
+
+if not MYPY:
+    class CentralizedPolicyDefinitionEntryArgsDict(TypedDict):
+        direction: NotRequired[pulumi.Input[str]]
+        """
+        Direction
+          - Choices: `service`, `tunnel`, `all`, `in`, `out`
+        """
+        region_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        List of region IDs
+        """
+        region_list_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        List of region list IDs
+        """
+        region_list_versions: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        List of region list versions
+        """
+        site_list_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        List of site list IDs
+        """
+        site_list_versions: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        List of site list versions
+        """
+        vpn_list_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        List of VPN list IDs
+        """
+        vpn_list_versions: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        List of VPN list versions
+        """
+elif False:
+    CentralizedPolicyDefinitionEntryArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CentralizedPolicyDefinitionEntryArgs:
@@ -3610,6 +4968,47 @@ class CentralizedPolicyDefinitionEntryArgs:
     def vpn_list_versions(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
         pulumi.set(self, "vpn_list_versions", value)
 
+
+if not MYPY:
+    class CflowdPolicyDefinitionCollectorArgsDict(TypedDict):
+        bfd_metrics_exporting: NotRequired[pulumi.Input[bool]]
+        """
+        BFD metrics exporting
+        """
+        export_spreading: NotRequired[pulumi.Input[str]]
+        """
+        Export spreading
+          - Choices: `enable`, `disable`
+        """
+        exporting_interval: NotRequired[pulumi.Input[int]]
+        """
+        Exporting interval
+        """
+        ip_address: NotRequired[pulumi.Input[str]]
+        """
+        IP address
+        """
+        port: NotRequired[pulumi.Input[int]]
+        """
+        Port
+          - Range: `1024`-`65535`
+        """
+        source_interface: NotRequired[pulumi.Input[str]]
+        """
+        Source interface
+        """
+        transport: NotRequired[pulumi.Input[str]]
+        """
+        Transport protocol
+          - Choices: `transport_tcp`, `transport_udp`
+        """
+        vpn_id: NotRequired[pulumi.Input[int]]
+        """
+        VPN ID
+          - Range: `1`-`65535`
+        """
+elif False:
+    CflowdPolicyDefinitionCollectorArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CflowdPolicyDefinitionCollectorArgs:
@@ -3753,6 +5152,63 @@ class CflowdPolicyDefinitionCollectorArgs:
     def vpn_id(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "vpn_id", value)
 
+
+if not MYPY:
+    class CiscoBfdFeatureTemplateColorArgsDict(TypedDict):
+        color: NotRequired[pulumi.Input[str]]
+        """
+        Set color that identifies the WAN transport tunnel
+          - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+        """
+        color_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        dscp: NotRequired[pulumi.Input[int]]
+        """
+        Set BFD Default DSCP value for tloc color
+          - Range: `0`-`63`
+          - Default value: `48`
+        """
+        dscp_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        hello_interval: NotRequired[pulumi.Input[int]]
+        """
+        Set how often BFD sends Hello packets
+          - Range: `100`-`300000`
+          - Default value: `1000`
+        """
+        hello_interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        multiplier: NotRequired[pulumi.Input[int]]
+        """
+        Set how many Hello packet intervals to wait before declaring that a tunnel has failed
+          - Range: `1`-`60`
+          - Default value: `7`
+        """
+        multiplier_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        pmtu_discovery: NotRequired[pulumi.Input[bool]]
+        """
+        Control automatic path MTU discovery
+          - Default value: `true`
+        """
+        pmtu_discovery_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoBfdFeatureTemplateColorArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoBfdFeatureTemplateColorArgs:
@@ -3952,6 +5408,75 @@ class CiscoBfdFeatureTemplateColorArgs:
     def pmtu_discovery_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "pmtu_discovery_variable", value)
 
+
+if not MYPY:
+    class CiscoBgpFeatureTemplateAddressFamilyArgsDict(TypedDict):
+        default_information_originate: NotRequired[pulumi.Input[bool]]
+        """
+        BGP Default Information Originate
+          - Default value: `false`
+        """
+        default_information_originate_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        family_type: NotRequired[pulumi.Input[str]]
+        """
+        Set BGP address family
+          - Choices: `ipv4-unicast`, `ipv6-unicast`
+        """
+        ipv4_aggregate_addresses: NotRequired[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateAddressFamilyIpv4AggregateAddressArgsDict']]]]
+        """
+        Aggregate prefixes in specific range
+        """
+        ipv4_networks: NotRequired[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateAddressFamilyIpv4NetworkArgsDict']]]]
+        """
+        Configure the networks for BGP to advertise
+        """
+        ipv6_aggregate_addresses: NotRequired[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateAddressFamilyIpv6AggregateAddressArgsDict']]]]
+        """
+        IPv6 Aggregate prefixes in specific range
+        """
+        ipv6_networks: NotRequired[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateAddressFamilyIpv6NetworkArgsDict']]]]
+        """
+        Configure the networks for BGP to advertise
+        """
+        maximum_paths: NotRequired[pulumi.Input[int]]
+        """
+        Set maximum number of parallel IBGP paths for multipath load sharing
+          - Range: `0`-`32`
+        """
+        maximum_paths_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        redistribute_routes: NotRequired[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateAddressFamilyRedistributeRouteArgsDict']]]]
+        """
+        Redistribute routes into BGP
+        """
+        table_map_filter: NotRequired[pulumi.Input[bool]]
+        """
+        Filter
+          - Default value: `false`
+        """
+        table_map_filter_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        table_map_policy: NotRequired[pulumi.Input[str]]
+        """
+        Map external entry attributes into routing table
+        """
+        table_map_policy_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoBgpFeatureTemplateAddressFamilyArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoBgpFeatureTemplateAddressFamilyArgs:
@@ -4208,6 +5733,41 @@ class CiscoBgpFeatureTemplateAddressFamilyArgs:
         pulumi.set(self, "table_map_policy_variable", value)
 
 
+if not MYPY:
+    class CiscoBgpFeatureTemplateAddressFamilyIpv4AggregateAddressArgsDict(TypedDict):
+        as_set_path: NotRequired[pulumi.Input[bool]]
+        """
+        Set AS set path information
+          - Default value: `false`
+        """
+        as_set_path_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        prefix: NotRequired[pulumi.Input[str]]
+        """
+        Configure the prefixes to aggregate
+        """
+        prefix_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        summary_only: NotRequired[pulumi.Input[bool]]
+        """
+        Filter out more specific routes from updates
+          - Default value: `false`
+        """
+        summary_only_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoBgpFeatureTemplateAddressFamilyIpv4AggregateAddressArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoBgpFeatureTemplateAddressFamilyIpv4AggregateAddressArgs:
     def __init__(__self__, *,
@@ -4331,6 +5891,23 @@ class CiscoBgpFeatureTemplateAddressFamilyIpv4AggregateAddressArgs:
         pulumi.set(self, "summary_only_variable", value)
 
 
+if not MYPY:
+    class CiscoBgpFeatureTemplateAddressFamilyIpv4NetworkArgsDict(TypedDict):
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        prefix: NotRequired[pulumi.Input[str]]
+        """
+        Configure the prefixes for BGP to announce
+        """
+        prefix_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoBgpFeatureTemplateAddressFamilyIpv4NetworkArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoBgpFeatureTemplateAddressFamilyIpv4NetworkArgs:
     def __init__(__self__, *,
@@ -4385,6 +5962,41 @@ class CiscoBgpFeatureTemplateAddressFamilyIpv4NetworkArgs:
     def prefix_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "prefix_variable", value)
 
+
+if not MYPY:
+    class CiscoBgpFeatureTemplateAddressFamilyIpv6AggregateAddressArgsDict(TypedDict):
+        as_set_path: NotRequired[pulumi.Input[bool]]
+        """
+        Set AS set path information
+          - Default value: `false`
+        """
+        as_set_path_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        prefix: NotRequired[pulumi.Input[str]]
+        """
+        Configure the IPv6 prefixes to aggregate
+        """
+        prefix_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        summary_only: NotRequired[pulumi.Input[bool]]
+        """
+        Filter out more specific routes from updates
+          - Default value: `false`
+        """
+        summary_only_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoBgpFeatureTemplateAddressFamilyIpv6AggregateAddressArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoBgpFeatureTemplateAddressFamilyIpv6AggregateAddressArgs:
@@ -4509,6 +6121,23 @@ class CiscoBgpFeatureTemplateAddressFamilyIpv6AggregateAddressArgs:
         pulumi.set(self, "summary_only_variable", value)
 
 
+if not MYPY:
+    class CiscoBgpFeatureTemplateAddressFamilyIpv6NetworkArgsDict(TypedDict):
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        prefix: NotRequired[pulumi.Input[str]]
+        """
+        Configure the prefixes for BGP to announce
+        """
+        prefix_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoBgpFeatureTemplateAddressFamilyIpv6NetworkArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoBgpFeatureTemplateAddressFamilyIpv6NetworkArgs:
     def __init__(__self__, *,
@@ -4563,6 +6192,32 @@ class CiscoBgpFeatureTemplateAddressFamilyIpv6NetworkArgs:
     def prefix_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "prefix_variable", value)
 
+
+if not MYPY:
+    class CiscoBgpFeatureTemplateAddressFamilyRedistributeRouteArgsDict(TypedDict):
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Set the protocol to redistribute routes from
+          - Choices: `static`, `connected`, `ospf`, `ospfv3`, `omp`, `eigrp`, `nat`
+        """
+        protocol_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        route_policy: NotRequired[pulumi.Input[str]]
+        """
+        Configure policy to apply to prefixes received from BGP neighbor
+        """
+        route_policy_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoBgpFeatureTemplateAddressFamilyRedistributeRouteArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoBgpFeatureTemplateAddressFamilyRedistributeRouteArgs:
@@ -4652,6 +6307,159 @@ class CiscoBgpFeatureTemplateAddressFamilyRedistributeRouteArgs:
     def route_policy_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "route_policy_variable", value)
 
+
+if not MYPY:
+    class CiscoBgpFeatureTemplateIpv4NeighborArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        Set neighbor address
+        """
+        address_families: NotRequired[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv4NeighborAddressFamilyArgsDict']]]]
+        """
+        Set BGP address family
+        """
+        address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        allow_as_in: NotRequired[pulumi.Input[int]]
+        """
+        As Number
+          - Range: `1`-`10`
+        """
+        allow_as_in_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        as_override: NotRequired[pulumi.Input[bool]]
+        """
+        As Override
+          - Default value: `false`
+        """
+        as_override_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        description: NotRequired[pulumi.Input[str]]
+        """
+        Set description
+        """
+        description_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ebgp_multihop: NotRequired[pulumi.Input[int]]
+        """
+        Set TTL value for peers that are not directly connected
+          - Range: `1`-`255`
+          - Default value: `1`
+        """
+        ebgp_multihop_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        holdtime: NotRequired[pulumi.Input[int]]
+        """
+        Set how long to wait since receiving a keepalive message to consider BGP peer unavailable
+          - Range: `0`-`65535`
+        """
+        holdtime_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        keepalive: NotRequired[pulumi.Input[int]]
+        """
+        Set how often to advertise keepalive messages to BGP peer
+          - Range: `0`-`65535`
+        """
+        keepalive_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        next_hop_self: NotRequired[pulumi.Input[bool]]
+        """
+        Set router to be next hop for routes advertised to neighbor
+          - Default value: `false`
+        """
+        next_hop_self_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        password: NotRequired[pulumi.Input[str]]
+        """
+        Set MD5 password on TCP connection with BGP peer
+        """
+        password_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        remote_as: NotRequired[pulumi.Input[str]]
+        """
+        Set remote autonomous system number
+        """
+        remote_as_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        send_community: NotRequired[pulumi.Input[bool]]
+        """
+        Send community attribute
+          - Default value: `true`
+        """
+        send_community_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        send_ext_community: NotRequired[pulumi.Input[bool]]
+        """
+        Send extended community attribute
+          - Default value: `true`
+        """
+        send_ext_community_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        send_label: NotRequired[pulumi.Input[bool]]
+        """
+        Send label
+          - Default value: `false`
+        """
+        send_label_explicit: NotRequired[pulumi.Input[bool]]
+        """
+        Send label
+          - Default value: `false`
+        """
+        send_label_explicit_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        send_label_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        shutdown: NotRequired[pulumi.Input[bool]]
+        """
+        Enable or disable a BGP neighbor
+          - Default value: `false`
+        """
+        shutdown_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        source_interface: NotRequired[pulumi.Input[str]]
+        """
+        Set IP address of interface for TCP connection to BGP neighbor
+        """
+        source_interface_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoBgpFeatureTemplateIpv4NeighborArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoBgpFeatureTemplateIpv4NeighborArgs:
@@ -5228,6 +7036,60 @@ class CiscoBgpFeatureTemplateIpv4NeighborArgs:
         pulumi.set(self, "source_interface_variable", value)
 
 
+if not MYPY:
+    class CiscoBgpFeatureTemplateIpv4NeighborAddressFamilyArgsDict(TypedDict):
+        family_type: NotRequired[pulumi.Input[str]]
+        """
+        Set BGP address family
+          - Choices: `ipv4-unicast`, `vpnv4-unicast`, `vpnv6-unicast`
+        """
+        maximum_prefixes: NotRequired[pulumi.Input[int]]
+        """
+        Set maximum number of prefixes accepted from BGP peer
+          - Range: `0`-`4294967295`
+        """
+        maximum_prefixes_restart: NotRequired[pulumi.Input[int]]
+        """
+        Set when to restart BGP connection if threshold is exceeded
+          - Range: `0`-`65535`
+        """
+        maximum_prefixes_restart_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        maximum_prefixes_threshold: NotRequired[pulumi.Input[int]]
+        """
+        Set threshold at which to generate a warning message
+          - Range: `0`-`100`
+        """
+        maximum_prefixes_threshold_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        maximum_prefixes_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        maximum_prefixes_warning_only: NotRequired[pulumi.Input[bool]]
+        """
+        Display only a warning message when threshold is exceeded
+          - Default value: `false`
+        """
+        maximum_prefixes_warning_only_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        route_policies: NotRequired[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv4NeighborAddressFamilyRoutePolicyArgsDict']]]]
+        """
+        Select route policy to apply to prefixes received from BGP neighbor
+        """
+elif False:
+    CiscoBgpFeatureTemplateIpv4NeighborAddressFamilyArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoBgpFeatureTemplateIpv4NeighborAddressFamilyArgs:
     def __init__(__self__, *,
@@ -5421,6 +7283,28 @@ class CiscoBgpFeatureTemplateIpv4NeighborAddressFamilyArgs:
         pulumi.set(self, "route_policies", value)
 
 
+if not MYPY:
+    class CiscoBgpFeatureTemplateIpv4NeighborAddressFamilyRoutePolicyArgsDict(TypedDict):
+        direction: NotRequired[pulumi.Input[str]]
+        """
+        Set direction for applying route policy
+          - Choices: `in`, `out`
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        policy_name: NotRequired[pulumi.Input[str]]
+        """
+        Configure name of route policy
+        """
+        policy_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoBgpFeatureTemplateIpv4NeighborAddressFamilyRoutePolicyArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoBgpFeatureTemplateIpv4NeighborAddressFamilyRoutePolicyArgs:
     def __init__(__self__, *,
@@ -5493,6 +7377,32 @@ class CiscoBgpFeatureTemplateIpv4NeighborAddressFamilyRoutePolicyArgs:
     def policy_name_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "policy_name_variable", value)
 
+
+if not MYPY:
+    class CiscoBgpFeatureTemplateIpv4RouteTargetArgsDict(TypedDict):
+        exports: NotRequired[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv4RouteTargetExportArgsDict']]]]
+        """
+        Export Target-VPN community for IPV4
+        """
+        imports: NotRequired[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv4RouteTargetImportArgsDict']]]]
+        """
+        Import Target-VPN community for IPV4
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        vpn_id: NotRequired[pulumi.Input[int]]
+        """
+        VPN ID for IPv4
+          - Range: `1`-`65527`
+        """
+        vpn_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoBgpFeatureTemplateIpv4RouteTargetArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoBgpFeatureTemplateIpv4RouteTargetArgs:
@@ -5583,6 +7493,23 @@ class CiscoBgpFeatureTemplateIpv4RouteTargetArgs:
         pulumi.set(self, "vpn_id_variable", value)
 
 
+if not MYPY:
+    class CiscoBgpFeatureTemplateIpv4RouteTargetExportArgsDict(TypedDict):
+        asn_ip: NotRequired[pulumi.Input[str]]
+        """
+        asn-ip
+        """
+        asn_ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    CiscoBgpFeatureTemplateIpv4RouteTargetExportArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoBgpFeatureTemplateIpv4RouteTargetExportArgs:
     def __init__(__self__, *,
@@ -5638,6 +7565,23 @@ class CiscoBgpFeatureTemplateIpv4RouteTargetExportArgs:
         pulumi.set(self, "optional", value)
 
 
+if not MYPY:
+    class CiscoBgpFeatureTemplateIpv4RouteTargetImportArgsDict(TypedDict):
+        asn_ip: NotRequired[pulumi.Input[str]]
+        """
+        asn-ip
+        """
+        asn_ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    CiscoBgpFeatureTemplateIpv4RouteTargetImportArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoBgpFeatureTemplateIpv4RouteTargetImportArgs:
     def __init__(__self__, *,
@@ -5692,6 +7636,159 @@ class CiscoBgpFeatureTemplateIpv4RouteTargetImportArgs:
     def optional(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "optional", value)
 
+
+if not MYPY:
+    class CiscoBgpFeatureTemplateIpv6NeighborArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        Set neighbor address
+        """
+        address_families: NotRequired[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv6NeighborAddressFamilyArgsDict']]]]
+        """
+        Set BGP address family
+        """
+        address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        allow_as_in: NotRequired[pulumi.Input[int]]
+        """
+        As Number
+          - Range: `1`-`10`
+        """
+        allow_as_in_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        as_override: NotRequired[pulumi.Input[bool]]
+        """
+        As Override
+          - Default value: `false`
+        """
+        as_override_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        description: NotRequired[pulumi.Input[str]]
+        """
+        Set description
+        """
+        description_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ebgp_multihop: NotRequired[pulumi.Input[int]]
+        """
+        Set TTL value for peers that are not directly connected
+          - Range: `1`-`255`
+          - Default value: `1`
+        """
+        ebgp_multihop_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        holdtime: NotRequired[pulumi.Input[int]]
+        """
+        Set how long to wait since receiving a keepalive message to consider BGP peer unavailable
+          - Range: `0`-`65535`
+        """
+        holdtime_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        keepalive: NotRequired[pulumi.Input[int]]
+        """
+        Set how often to advertise keepalive messages to BGP peer
+          - Range: `0`-`65535`
+        """
+        keepalive_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        next_hop_self: NotRequired[pulumi.Input[bool]]
+        """
+        Set router to be next hop for routes advertised to neighbor
+          - Default value: `false`
+        """
+        next_hop_self_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        password: NotRequired[pulumi.Input[str]]
+        """
+        Set MD5 password on TCP connection with BGP peer
+        """
+        password_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        remote_as: NotRequired[pulumi.Input[str]]
+        """
+        Set remote autonomous system number
+        """
+        remote_as_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        send_community: NotRequired[pulumi.Input[bool]]
+        """
+        Send community attribute
+          - Default value: `true`
+        """
+        send_community_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        send_ext_community: NotRequired[pulumi.Input[bool]]
+        """
+        Send extended community attribute
+          - Default value: `true`
+        """
+        send_ext_community_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        send_label: NotRequired[pulumi.Input[bool]]
+        """
+        Send label
+          - Default value: `false`
+        """
+        send_label_explicit: NotRequired[pulumi.Input[bool]]
+        """
+        Send label Explicit
+          - Default value: `false`
+        """
+        send_label_explicit_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        send_label_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        shutdown: NotRequired[pulumi.Input[bool]]
+        """
+        Enable or disable a BGP neighbor
+          - Default value: `false`
+        """
+        shutdown_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        source_interface: NotRequired[pulumi.Input[str]]
+        """
+        Set IP address of interface for TCP connection to BGP neighbor
+        """
+        source_interface_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoBgpFeatureTemplateIpv6NeighborArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoBgpFeatureTemplateIpv6NeighborArgs:
@@ -6268,6 +8365,62 @@ class CiscoBgpFeatureTemplateIpv6NeighborArgs:
         pulumi.set(self, "source_interface_variable", value)
 
 
+if not MYPY:
+    class CiscoBgpFeatureTemplateIpv6NeighborAddressFamilyArgsDict(TypedDict):
+        family_type: NotRequired[pulumi.Input[str]]
+        """
+        Set BGP address family
+          - Choices: `ipv6-unicast`
+        """
+        maximum_prefixes: NotRequired[pulumi.Input[int]]
+        """
+        Set maximum number of prefixes accepted from BGP peer
+          - Range: `0`-`4294967295`
+          - Default value: `0`
+        """
+        maximum_prefixes_restart: NotRequired[pulumi.Input[int]]
+        """
+        Set when to restart BGP connection if threshold is exceeded
+          - Range: `0`-`65535`
+        """
+        maximum_prefixes_restart_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        maximum_prefixes_threshold: NotRequired[pulumi.Input[int]]
+        """
+        Set threshold at which to generate a warning message
+          - Range: `0`-`100`
+          - Default value: `0`
+        """
+        maximum_prefixes_threshold_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        maximum_prefixes_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        maximum_prefixes_warning_only: NotRequired[pulumi.Input[bool]]
+        """
+        Display only a warning message when threshold is exceeded
+          - Default value: `false`
+        """
+        maximum_prefixes_warning_only_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        route_policies: NotRequired[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv6NeighborAddressFamilyRoutePolicyArgsDict']]]]
+        """
+        Select route policy to apply to prefixes received from BGP neighbor
+        """
+elif False:
+    CiscoBgpFeatureTemplateIpv6NeighborAddressFamilyArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoBgpFeatureTemplateIpv6NeighborAddressFamilyArgs:
     def __init__(__self__, *,
@@ -6465,6 +8618,28 @@ class CiscoBgpFeatureTemplateIpv6NeighborAddressFamilyArgs:
         pulumi.set(self, "route_policies", value)
 
 
+if not MYPY:
+    class CiscoBgpFeatureTemplateIpv6NeighborAddressFamilyRoutePolicyArgsDict(TypedDict):
+        direction: NotRequired[pulumi.Input[str]]
+        """
+        Set direction for applying route policy
+          - Choices: `in`, `out`
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        policy_name: NotRequired[pulumi.Input[str]]
+        """
+        Configure name of route policy
+        """
+        policy_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoBgpFeatureTemplateIpv6NeighborAddressFamilyRoutePolicyArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoBgpFeatureTemplateIpv6NeighborAddressFamilyRoutePolicyArgs:
     def __init__(__self__, *,
@@ -6537,6 +8712,32 @@ class CiscoBgpFeatureTemplateIpv6NeighborAddressFamilyRoutePolicyArgs:
     def policy_name_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "policy_name_variable", value)
 
+
+if not MYPY:
+    class CiscoBgpFeatureTemplateIpv6RouteTargetArgsDict(TypedDict):
+        exports: NotRequired[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv6RouteTargetExportArgsDict']]]]
+        """
+        Export Target-VPN community for IPV6
+        """
+        imports: NotRequired[pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv6RouteTargetImportArgsDict']]]]
+        """
+        Import Target-VPN community for IPV6
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        vpn_id: NotRequired[pulumi.Input[int]]
+        """
+        VPN ID for IPv6
+          - Range: `1`-`65527`
+        """
+        vpn_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoBgpFeatureTemplateIpv6RouteTargetArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoBgpFeatureTemplateIpv6RouteTargetArgs:
@@ -6627,6 +8828,23 @@ class CiscoBgpFeatureTemplateIpv6RouteTargetArgs:
         pulumi.set(self, "vpn_id_variable", value)
 
 
+if not MYPY:
+    class CiscoBgpFeatureTemplateIpv6RouteTargetExportArgsDict(TypedDict):
+        asn_ip: NotRequired[pulumi.Input[str]]
+        """
+        asn-ip
+        """
+        asn_ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    CiscoBgpFeatureTemplateIpv6RouteTargetExportArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoBgpFeatureTemplateIpv6RouteTargetExportArgs:
     def __init__(__self__, *,
@@ -6681,6 +8899,23 @@ class CiscoBgpFeatureTemplateIpv6RouteTargetExportArgs:
     def optional(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "optional", value)
 
+
+if not MYPY:
+    class CiscoBgpFeatureTemplateIpv6RouteTargetImportArgsDict(TypedDict):
+        asn_ip: NotRequired[pulumi.Input[str]]
+        """
+        asn-ip
+        """
+        asn_ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    CiscoBgpFeatureTemplateIpv6RouteTargetImportArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoBgpFeatureTemplateIpv6RouteTargetImportArgs:
@@ -6737,6 +8972,23 @@ class CiscoBgpFeatureTemplateIpv6RouteTargetImportArgs:
         pulumi.set(self, "optional", value)
 
 
+if not MYPY:
+    class CiscoBgpFeatureTemplateMplsInterfaceArgsDict(TypedDict):
+        interface_name: NotRequired[pulumi.Input[str]]
+        """
+        Interface Name
+        """
+        interface_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    CiscoBgpFeatureTemplateMplsInterfaceArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoBgpFeatureTemplateMplsInterfaceArgs:
     def __init__(__self__, *,
@@ -6791,6 +9043,48 @@ class CiscoBgpFeatureTemplateMplsInterfaceArgs:
     def optional(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "optional", value)
 
+
+if not MYPY:
+    class CiscoDhcpServerFeatureTemplateOptionArgsDict(TypedDict):
+        ascii: NotRequired[pulumi.Input[str]]
+        """
+        Set ASCII value
+        """
+        ascii_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        hex: NotRequired[pulumi.Input[str]]
+        """
+        Set HEX value
+        """
+        hex_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ip_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ip_addresses: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        Set ip address
+        """
+        option_code: NotRequired[pulumi.Input[int]]
+        """
+        Set Option Code
+          - Range: `1`-`254`
+        """
+        option_code_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    CiscoDhcpServerFeatureTemplateOptionArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoDhcpServerFeatureTemplateOptionArgs:
@@ -6945,6 +9239,39 @@ class CiscoDhcpServerFeatureTemplateOptionArgs:
         pulumi.set(self, "optional", value)
 
 
+if not MYPY:
+    class CiscoDhcpServerFeatureTemplateStaticLeaseArgsDict(TypedDict):
+        hostname: NotRequired[pulumi.Input[str]]
+        """
+        Set client’s hostname
+        """
+        hostname_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ip_address: NotRequired[pulumi.Input[str]]
+        """
+        Set client’s static IP address
+        """
+        ip_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        mac_address: NotRequired[pulumi.Input[str]]
+        """
+        Set MAC address of client
+        """
+        mac_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    CiscoDhcpServerFeatureTemplateStaticLeaseArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoDhcpServerFeatureTemplateStaticLeaseArgs:
     def __init__(__self__, *,
@@ -7063,6 +9390,77 @@ class CiscoDhcpServerFeatureTemplateStaticLeaseArgs:
     def optional(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "optional", value)
 
+
+if not MYPY:
+    class CiscoLoggingFeatureTemplateIpv4ServerArgsDict(TypedDict):
+        custom_profile: NotRequired[pulumi.Input[bool]]
+        """
+        Define custom profile
+          - Default value: `false`
+        """
+        custom_profile_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        enable_tls: NotRequired[pulumi.Input[bool]]
+        """
+        Enable TLS
+          - Default value: `false`
+        """
+        enable_tls_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        hostname_ip: NotRequired[pulumi.Input[str]]
+        """
+        Set hostname or IPv4 address of server
+        """
+        hostname_ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        logging_level: NotRequired[pulumi.Input[str]]
+        """
+        Set logging level for messages logged to server
+          - Choices: `information`, `debugging`, `notice`, `warn`, `error`, `critical`, `alert`, `emergency`
+          - Default value: `information`
+        """
+        logging_level_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        profile: NotRequired[pulumi.Input[str]]
+        """
+        Configure a TLS profile
+        """
+        profile_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        source_interface: NotRequired[pulumi.Input[str]]
+        """
+        Set interface to use to reach syslog server
+        """
+        source_interface_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        vpn_id: NotRequired[pulumi.Input[int]]
+        """
+        Set VPN in which syslog server is located
+          - Range: `0`-`65530`
+          - Default value: `0`
+        """
+        vpn_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoLoggingFeatureTemplateIpv4ServerArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoLoggingFeatureTemplateIpv4ServerArgs:
@@ -7323,6 +9721,77 @@ class CiscoLoggingFeatureTemplateIpv4ServerArgs:
         pulumi.set(self, "vpn_id_variable", value)
 
 
+if not MYPY:
+    class CiscoLoggingFeatureTemplateIpv6ServerArgsDict(TypedDict):
+        custom_profile: NotRequired[pulumi.Input[bool]]
+        """
+        Define custom profile
+          - Default value: `false`
+        """
+        custom_profile_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        enable_tls: NotRequired[pulumi.Input[bool]]
+        """
+        Enable TLS
+          - Default value: `false`
+        """
+        enable_tls_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        hostname_ip: NotRequired[pulumi.Input[str]]
+        """
+        Set IPv6 hostname or IPv6 address of server
+        """
+        hostname_ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        logging_level: NotRequired[pulumi.Input[str]]
+        """
+        Set logging level for messages logged to server
+          - Choices: `information`, `debugging`, `notification`, `warn`, `error`, `critical`, `alert`, `emergency`
+          - Default value: `information`
+        """
+        logging_level_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        profile: NotRequired[pulumi.Input[str]]
+        """
+        Configure a TLS profile
+        """
+        profile_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        source_interface: NotRequired[pulumi.Input[str]]
+        """
+        Set interface to use to reach syslog server
+        """
+        source_interface_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        vpn_id: NotRequired[pulumi.Input[int]]
+        """
+        Set VPN in which syslog server is located
+          - Range: `0`-`65530`
+          - Default value: `0`
+        """
+        vpn_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoLoggingFeatureTemplateIpv6ServerArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoLoggingFeatureTemplateIpv6ServerArgs:
     def __init__(__self__, *,
@@ -7582,6 +10051,46 @@ class CiscoLoggingFeatureTemplateIpv6ServerArgs:
         pulumi.set(self, "vpn_id_variable", value)
 
 
+if not MYPY:
+    class CiscoLoggingFeatureTemplateTlsProfileArgsDict(TypedDict):
+        authentication_type: NotRequired[pulumi.Input[str]]
+        """
+        Authentication Type
+          - Choices: `Server`, `Mutual`
+        """
+        ciphersuite_list_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ciphersuite_lists: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        Syslog secure server ciphersuites. Possible values: `aes-128-cbc-sha`, `aes-256-cbc-sha`, `dhe-aes-cbc-sha2`, `dhe-aes-gcm-sha2`, `ecdhe-ecdsa-aes-gcm-sha2`, `ecdhe-rsa-aes-cbc-sha2`, `ecdhe-rsa-aes-gcm-sha2`, `rsa-aes-cbc-sha2`, `rsa-aes-gcm-sha2`
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Specify the name of the TLS profile
+        """
+        name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        version: NotRequired[pulumi.Input[str]]
+        """
+        TLS Version
+          - Choices: `TLSv1.1`, `TLSv1.2`
+          - Default value: `TLSv1.1`
+        """
+        version_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoLoggingFeatureTemplateTlsProfileArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoLoggingFeatureTemplateTlsProfileArgs:
     def __init__(__self__, *,
@@ -7723,6 +10232,32 @@ class CiscoLoggingFeatureTemplateTlsProfileArgs:
         pulumi.set(self, "version_variable", value)
 
 
+if not MYPY:
+    class CiscoNtpFeatureTemplateAuthenticationKeyArgsDict(TypedDict):
+        id: NotRequired[pulumi.Input[int]]
+        """
+        MD5 authentication key ID
+          - Range: `1`-`65535`
+        """
+        id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        value: NotRequired[pulumi.Input[str]]
+        """
+        Enter cleartext or AES-encrypted MD5 authentication key
+        """
+        value_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoNtpFeatureTemplateAuthenticationKeyArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoNtpFeatureTemplateAuthenticationKeyArgs:
     def __init__(__self__, *,
@@ -7811,6 +10346,69 @@ class CiscoNtpFeatureTemplateAuthenticationKeyArgs:
     def value_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "value_variable", value)
 
+
+if not MYPY:
+    class CiscoNtpFeatureTemplateServerArgsDict(TypedDict):
+        authentication_key_id: NotRequired[pulumi.Input[int]]
+        """
+        Set authentication key for the server
+          - Range: `1`-`65535`
+        """
+        authentication_key_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        hostname_ip: NotRequired[pulumi.Input[str]]
+        """
+        Set hostname or IP address of server
+        """
+        hostname_ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        prefer: NotRequired[pulumi.Input[bool]]
+        """
+        Prefer this NTP server
+          - Default value: `false`
+        """
+        prefer_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        source_interface: NotRequired[pulumi.Input[str]]
+        """
+        Set interface to use to reach NTP server
+        """
+        source_interface_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        version: NotRequired[pulumi.Input[int]]
+        """
+        Set NTP version
+          - Range: `1`-`4`
+          - Default value: `4`
+        """
+        version_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        vpn_id: NotRequired[pulumi.Input[int]]
+        """
+        Set VPN in which NTP server is located
+          - Range: `0`-`65530`
+          - Default value: `0`
+        """
+        vpn_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoNtpFeatureTemplateServerArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoNtpFeatureTemplateServerArgs:
@@ -8039,6 +10637,29 @@ class CiscoNtpFeatureTemplateServerArgs:
         pulumi.set(self, "vpn_id_variable", value)
 
 
+if not MYPY:
+    class CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgsDict(TypedDict):
+        advertise_external_ospf: NotRequired[pulumi.Input[str]]
+        """
+        Advertise OSPF external routes
+          - Choices: `external`
+        """
+        advertise_external_ospf_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Set routes to advertise
+          - Choices: `bgp`, `ospf`, `ospfv3`, `connected`, `static`, `eigrp`, `lisp`, `isis`
+        """
+elif False:
+    CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs:
     def __init__(__self__, *,
@@ -8114,6 +10735,20 @@ class CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs:
         pulumi.set(self, "protocol", value)
 
 
+if not MYPY:
+    class CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgsDict(TypedDict):
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Set routes to advertise
+          - Choices: `bgp`, `ospf`, `connected`, `static`, `eigrp`, `lisp`, `isis`
+        """
+elif False:
+    CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs:
     def __init__(__self__, *,
@@ -8154,6 +10789,58 @@ class CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs:
     def protocol(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "protocol", value)
 
+
+if not MYPY:
+    class CiscoOspfFeatureTemplateAreaArgsDict(TypedDict):
+        area_number: NotRequired[pulumi.Input[int]]
+        """
+        Set OSPF area number
+          - Range: `0`-`4294967295`
+        """
+        area_number_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        interfaces: NotRequired[pulumi.Input[Sequence[pulumi.Input['CiscoOspfFeatureTemplateAreaInterfaceArgsDict']]]]
+        """
+        Set OSPF interface parameters
+        """
+        nssa: NotRequired[pulumi.Input[bool]]
+        """
+        NSSA area
+        """
+        nssa_no_summary: NotRequired[pulumi.Input[bool]]
+        """
+        Do not inject interarea routes into NSSA
+          - Default value: `false`
+        """
+        nssa_no_summary_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        ranges: NotRequired[pulumi.Input[Sequence[pulumi.Input['CiscoOspfFeatureTemplateAreaRangeArgsDict']]]]
+        """
+        Summarize OSPF routes at an area boundary
+        """
+        stub: NotRequired[pulumi.Input[bool]]
+        """
+        Stub area
+        """
+        stub_no_summary: NotRequired[pulumi.Input[bool]]
+        """
+        Do not inject interarea routes into stub
+          - Default value: `false`
+        """
+        stub_no_summary_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoOspfFeatureTemplateAreaArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoOspfFeatureTemplateAreaArgs:
@@ -8343,6 +11030,117 @@ class CiscoOspfFeatureTemplateAreaArgs:
     def stub_no_summary_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "stub_no_summary_variable", value)
 
+
+if not MYPY:
+    class CiscoOspfFeatureTemplateAreaInterfaceArgsDict(TypedDict):
+        authentication_message_digest_key: NotRequired[pulumi.Input[str]]
+        """
+        Set MD5 authentication key
+        """
+        authentication_message_digest_key_id: NotRequired[pulumi.Input[int]]
+        """
+        Set MD5 message digest key
+          - Range: `1`-`255`
+        """
+        authentication_message_digest_key_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        authentication_message_digest_key_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        authentication_type: NotRequired[pulumi.Input[str]]
+        """
+        Set OSPF interface authentication type
+          - Choices: `simple`, `message-digest`, `null`
+        """
+        authentication_type_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        cost: NotRequired[pulumi.Input[int]]
+        """
+        Set cost of OSPF interface
+          - Range: `1`-`65535`
+        """
+        cost_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        dead_interval: NotRequired[pulumi.Input[int]]
+        """
+        Set interval after which neighbor is declared to be down
+          - Range: `1`-`65535`
+          - Default value: `40`
+        """
+        dead_interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        hello_interval: NotRequired[pulumi.Input[int]]
+        """
+        Set interval between OSPF hello packets
+          - Range: `1`-`65535`
+          - Default value: `10`
+        """
+        hello_interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Set interface name
+        """
+        name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        network: NotRequired[pulumi.Input[str]]
+        """
+        Set the OSPF network type
+          - Choices: `broadcast`, `point-to-point`, `non-broadcast`, `point-to-multipoint`
+          - Default value: `broadcast`
+        """
+        network_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        passive_interface: NotRequired[pulumi.Input[bool]]
+        """
+        Set the interface to advertise its address, but not to actively run OSPF
+          - Default value: `false`
+        """
+        passive_interface_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        priority: NotRequired[pulumi.Input[int]]
+        """
+        Set router’s priority to be elected as designated router
+          - Range: `0`-`255`
+          - Default value: `1`
+        """
+        priority_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        retransmit_interval: NotRequired[pulumi.Input[int]]
+        """
+        Set time between retransmitting LSAs
+          - Range: `1`-`65535`
+          - Default value: `5`
+        """
+        retransmit_interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoOspfFeatureTemplateAreaInterfaceArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoOspfFeatureTemplateAreaInterfaceArgs:
@@ -8747,6 +11545,41 @@ class CiscoOspfFeatureTemplateAreaInterfaceArgs:
         pulumi.set(self, "retransmit_interval_variable", value)
 
 
+if not MYPY:
+    class CiscoOspfFeatureTemplateAreaRangeArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        Set matching prefix
+        """
+        address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        cost: NotRequired[pulumi.Input[int]]
+        """
+        Set cost for this range
+          - Range: `0`-`16777214`
+        """
+        cost_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        no_advertise: NotRequired[pulumi.Input[bool]]
+        """
+        Do not advertise this range
+          - Default value: `false`
+        """
+        no_advertise_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    CiscoOspfFeatureTemplateAreaRangeArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoOspfFeatureTemplateAreaRangeArgs:
     def __init__(__self__, *,
@@ -8870,6 +11703,29 @@ class CiscoOspfFeatureTemplateAreaRangeArgs:
         pulumi.set(self, "optional", value)
 
 
+if not MYPY:
+    class CiscoOspfFeatureTemplateMaxMetricRouterLsaArgsDict(TypedDict):
+        ad_type: NotRequired[pulumi.Input[str]]
+        """
+        Set the router LSA advertisement type
+          - Choices: `administrative`, `on-startup`
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        time: NotRequired[pulumi.Input[int]]
+        """
+        Set how long to advertise maximum metric after router starts up
+          - Range: `5`-`86400`
+        """
+        time_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoOspfFeatureTemplateMaxMetricRouterLsaArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoOspfFeatureTemplateMaxMetricRouterLsaArgs:
     def __init__(__self__, *,
@@ -8944,6 +11800,41 @@ class CiscoOspfFeatureTemplateMaxMetricRouterLsaArgs:
     def time_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "time_variable", value)
 
+
+if not MYPY:
+    class CiscoOspfFeatureTemplateRedistributeArgsDict(TypedDict):
+        nat_dia: NotRequired[pulumi.Input[bool]]
+        """
+        Enable NAT DIA for redistributed routes
+          - Default value: `true`
+        """
+        nat_dia_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Set the protocol
+          - Choices: `static`, `connected`, `bgp`, `omp`, `nat`, `eigrp`
+        """
+        protocol_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        route_policy: NotRequired[pulumi.Input[str]]
+        """
+        Set route policy to apply to redistributed routes
+        """
+        route_policy_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoOspfFeatureTemplateRedistributeArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoOspfFeatureTemplateRedistributeArgs:
@@ -9068,6 +11959,32 @@ class CiscoOspfFeatureTemplateRedistributeArgs:
         pulumi.set(self, "route_policy_variable", value)
 
 
+if not MYPY:
+    class CiscoOspfFeatureTemplateRoutePolicyArgsDict(TypedDict):
+        direction: NotRequired[pulumi.Input[str]]
+        """
+        Set direction to apply policy
+          - Choices: `in`
+        """
+        direction_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        policy_name: NotRequired[pulumi.Input[str]]
+        """
+        Name of route policy
+        """
+        policy_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoOspfFeatureTemplateRoutePolicyArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoOspfFeatureTemplateRoutePolicyArgs:
     def __init__(__self__, *,
@@ -9156,6 +12073,76 @@ class CiscoOspfFeatureTemplateRoutePolicyArgs:
     def policy_name_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "policy_name_variable", value)
 
+
+if not MYPY:
+    class CiscoOspfv3FeatureTemplateIpv4AreaArgsDict(TypedDict):
+        area_number: NotRequired[pulumi.Input[int]]
+        """
+        Set OSPF area number
+          - Range: `0`-`4294967295`
+        """
+        area_number_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        interfaces: NotRequired[pulumi.Input[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv4AreaInterfaceArgsDict']]]]
+        """
+        Set OSPF interface parameters
+        """
+        normal: NotRequired[pulumi.Input[bool]]
+        """
+        Area Type Normal
+          - Default value: `false`
+        """
+        normal_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        nssa: NotRequired[pulumi.Input[bool]]
+        """
+        NSSA area
+        """
+        nssa_no_summary: NotRequired[pulumi.Input[bool]]
+        """
+        Do not inject interarea routes into NSSA
+          - Default value: `false`
+        """
+        nssa_no_summary_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        ranges: NotRequired[pulumi.Input[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv4AreaRangeArgsDict']]]]
+        """
+        Summarize OSPF routes at an area boundary
+        """
+        stub: NotRequired[pulumi.Input[bool]]
+        """
+        Stub area
+        """
+        stub_no_summary: NotRequired[pulumi.Input[bool]]
+        """
+        Do not inject interarea routes into stub
+          - Default value: `false`
+        """
+        stub_no_summary_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        translate: NotRequired[pulumi.Input[str]]
+        """
+        Always Translate LSAs on this ABR
+          - Choices: `always`
+        """
+        translate_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoOspfv3FeatureTemplateIpv4AreaArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoOspfv3FeatureTemplateIpv4AreaArgs:
@@ -9413,6 +12400,107 @@ class CiscoOspfv3FeatureTemplateIpv4AreaArgs:
     def translate_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "translate_variable", value)
 
+
+if not MYPY:
+    class CiscoOspfv3FeatureTemplateIpv4AreaInterfaceArgsDict(TypedDict):
+        authentication_key: NotRequired[pulumi.Input[str]]
+        """
+        Set OSPF interface authentication key
+        """
+        authentication_key_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        authentication_type: NotRequired[pulumi.Input[str]]
+        """
+        Set OSPF interface authentication type
+          - Choices: `md5`, `sha1`
+        """
+        authentication_type_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        cost: NotRequired[pulumi.Input[int]]
+        """
+        Set cost of OSPF interface
+          - Range: `1`-`65535`
+        """
+        cost_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        dead_interval: NotRequired[pulumi.Input[int]]
+        """
+        Set interval after which neighbor is declared to be down
+          - Range: `1`-`65535`
+          - Default value: `40`
+        """
+        dead_interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        hello_interval: NotRequired[pulumi.Input[int]]
+        """
+        Set interval between OSPF hello packets
+          - Range: `1`-`65535`
+          - Default value: `10`
+        """
+        hello_interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ipsec_spi: NotRequired[pulumi.Input[int]]
+        """
+        Set OSPF interface authentication IPSec SPI, range 256..4294967295
+          - Range: `256`-`4294967295`
+        """
+        ipsec_spi_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Set interface name
+        """
+        name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        network: NotRequired[pulumi.Input[str]]
+        """
+        Set the OSPF network type
+          - Choices: `broadcast`, `point-to-point`, `non-broadcast`, `point-to-multipoint`
+          - Default value: `broadcast`
+        """
+        network_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        passive_interface: NotRequired[pulumi.Input[bool]]
+        """
+        Set the interface to advertise its address, but not to actively run OSPF
+          - Default value: `false`
+        """
+        passive_interface_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        retransmit_interval: NotRequired[pulumi.Input[int]]
+        """
+        Set time between retransmitting LSAs
+          - Range: `1`-`65535`
+          - Default value: `5`
+        """
+        retransmit_interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoOspfv3FeatureTemplateIpv4AreaInterfaceArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoOspfv3FeatureTemplateIpv4AreaInterfaceArgs:
@@ -9781,6 +12869,41 @@ class CiscoOspfv3FeatureTemplateIpv4AreaInterfaceArgs:
         pulumi.set(self, "retransmit_interval_variable", value)
 
 
+if not MYPY:
+    class CiscoOspfv3FeatureTemplateIpv4AreaRangeArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        Set Matching Prefix
+        """
+        address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        cost: NotRequired[pulumi.Input[int]]
+        """
+        Set cost for this range
+          - Range: `0`-`16777214`
+        """
+        cost_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        no_advertise: NotRequired[pulumi.Input[bool]]
+        """
+        Do not advertise this range
+          - Default value: `false`
+        """
+        no_advertise_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    CiscoOspfv3FeatureTemplateIpv4AreaRangeArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoOspfv3FeatureTemplateIpv4AreaRangeArgs:
     def __init__(__self__, *,
@@ -9904,6 +13027,29 @@ class CiscoOspfv3FeatureTemplateIpv4AreaRangeArgs:
         pulumi.set(self, "optional", value)
 
 
+if not MYPY:
+    class CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgsDict(TypedDict):
+        ad_type: NotRequired[pulumi.Input[str]]
+        """
+        Set the router LSA advertisement type
+          - Choices: `on-startup`
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        time: NotRequired[pulumi.Input[int]]
+        """
+        Set how long to advertise maximum metric after router starts up
+          - Range: `5`-`86400`
+        """
+        time_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgs:
     def __init__(__self__, *,
@@ -9978,6 +13124,41 @@ class CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgs:
     def time_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "time_variable", value)
 
+
+if not MYPY:
+    class CiscoOspfv3FeatureTemplateIpv4RedistributeArgsDict(TypedDict):
+        nat_dia: NotRequired[pulumi.Input[bool]]
+        """
+        Enable NAT DIA for redistributed routes
+          - Default value: `true`
+        """
+        nat_dia_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Set the protocol
+          - Choices: `bgp`, `connected`, `eigrp`, `isis`, `lisp`, `nat-route`, `omp`, `static`
+        """
+        protocol_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        route_policy: NotRequired[pulumi.Input[str]]
+        """
+        Set route policy to apply to redistributed routes
+        """
+        route_policy_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoOspfv3FeatureTemplateIpv4RedistributeArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoOspfv3FeatureTemplateIpv4RedistributeArgs:
@@ -10101,6 +13282,76 @@ class CiscoOspfv3FeatureTemplateIpv4RedistributeArgs:
     def route_policy_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "route_policy_variable", value)
 
+
+if not MYPY:
+    class CiscoOspfv3FeatureTemplateIpv6AreaArgsDict(TypedDict):
+        area_number: NotRequired[pulumi.Input[int]]
+        """
+        Set OSPF area number
+          - Range: `0`-`4294967295`
+        """
+        area_number_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        interfaces: NotRequired[pulumi.Input[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv6AreaInterfaceArgsDict']]]]
+        """
+        Set OSPF interface parameters
+        """
+        normal: NotRequired[pulumi.Input[bool]]
+        """
+        Area Type Normal
+          - Default value: `false`
+        """
+        normal_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        nssa: NotRequired[pulumi.Input[bool]]
+        """
+        NSSA area
+        """
+        nssa_no_summary: NotRequired[pulumi.Input[bool]]
+        """
+        Do not inject interarea routes into NSSA
+          - Default value: `false`
+        """
+        nssa_no_summary_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        ranges: NotRequired[pulumi.Input[Sequence[pulumi.Input['CiscoOspfv3FeatureTemplateIpv6AreaRangeArgsDict']]]]
+        """
+        Summarize OSPF routes at an area boundary
+        """
+        stub: NotRequired[pulumi.Input[bool]]
+        """
+        Stub area
+        """
+        stub_no_summary: NotRequired[pulumi.Input[bool]]
+        """
+        Do not inject interarea routes into stub
+          - Default value: `false`
+        """
+        stub_no_summary_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        translate: NotRequired[pulumi.Input[str]]
+        """
+        Always translate LSAs on this ABR
+          - Choices: `always`
+        """
+        translate_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoOspfv3FeatureTemplateIpv6AreaArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoOspfv3FeatureTemplateIpv6AreaArgs:
@@ -10358,6 +13609,107 @@ class CiscoOspfv3FeatureTemplateIpv6AreaArgs:
     def translate_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "translate_variable", value)
 
+
+if not MYPY:
+    class CiscoOspfv3FeatureTemplateIpv6AreaInterfaceArgsDict(TypedDict):
+        authentication_key: NotRequired[pulumi.Input[str]]
+        """
+        Set OSPF interface authentication key
+        """
+        authentication_key_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        authentication_type: NotRequired[pulumi.Input[str]]
+        """
+        Set OSPF interface authentication type
+          - Choices: `md5`, `sha1`
+        """
+        authentication_type_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        cost: NotRequired[pulumi.Input[int]]
+        """
+        Set cost of OSPF interface
+          - Range: `1`-`65535`
+        """
+        cost_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        dead_interval: NotRequired[pulumi.Input[int]]
+        """
+        Set interval after which neighbor is declared to be down
+          - Range: `1`-`65535`
+          - Default value: `40`
+        """
+        dead_interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        hello_interval: NotRequired[pulumi.Input[int]]
+        """
+        Set interval between OSPF hello packets
+          - Range: `1`-`65535`
+          - Default value: `10`
+        """
+        hello_interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ipsec_spi: NotRequired[pulumi.Input[int]]
+        """
+        Set OSPF interface authentication IPSec SPI, range 256..4294967295
+          - Range: `256`-`4294967295`
+        """
+        ipsec_spi_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Set interface name
+        """
+        name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        network: NotRequired[pulumi.Input[str]]
+        """
+        Set the OSPF network type
+          - Choices: `broadcast`, `point-to-point`, `non-broadcast`, `point-to-multipoint`
+          - Default value: `broadcast`
+        """
+        network_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        passive_interface: NotRequired[pulumi.Input[bool]]
+        """
+        Set the interface to advertise its address, but not to actively run OSPF
+          - Default value: `false`
+        """
+        passive_interface_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        retransmit_interval: NotRequired[pulumi.Input[int]]
+        """
+        Set time between retransmitting LSAs
+          - Range: `1`-`65535`
+          - Default value: `5`
+        """
+        retransmit_interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoOspfv3FeatureTemplateIpv6AreaInterfaceArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoOspfv3FeatureTemplateIpv6AreaInterfaceArgs:
@@ -10726,6 +14078,41 @@ class CiscoOspfv3FeatureTemplateIpv6AreaInterfaceArgs:
         pulumi.set(self, "retransmit_interval_variable", value)
 
 
+if not MYPY:
+    class CiscoOspfv3FeatureTemplateIpv6AreaRangeArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        Set Matching Prefix
+        """
+        address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        cost: NotRequired[pulumi.Input[int]]
+        """
+        Set cost for this range
+          - Range: `0`-`16777214`
+        """
+        cost_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        no_advertise: NotRequired[pulumi.Input[bool]]
+        """
+        Do not advertise this range
+          - Default value: `false`
+        """
+        no_advertise_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    CiscoOspfv3FeatureTemplateIpv6AreaRangeArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoOspfv3FeatureTemplateIpv6AreaRangeArgs:
     def __init__(__self__, *,
@@ -10849,6 +14236,28 @@ class CiscoOspfv3FeatureTemplateIpv6AreaRangeArgs:
         pulumi.set(self, "optional", value)
 
 
+if not MYPY:
+    class CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgsDict(TypedDict):
+        ad_type: NotRequired[pulumi.Input[str]]
+        """
+        Set the router LSA advertisement type
+          - Choices: `on-startup`
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        time: NotRequired[pulumi.Input[int]]
+        """
+        Set how long to advertise maximum metric after router starts up
+        """
+        time_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgs:
     def __init__(__self__, *,
@@ -10921,6 +14330,32 @@ class CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgs:
     def time_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "time_variable", value)
 
+
+if not MYPY:
+    class CiscoOspfv3FeatureTemplateIpv6RedistributeArgsDict(TypedDict):
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Set the protocol
+          - Choices: `bgp`, `connected`, `eigrp`, `isis`, `lisp`, `nat-route`, `omp`, `static`
+        """
+        protocol_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        route_policy: NotRequired[pulumi.Input[str]]
+        """
+        Set route policy to apply to redistributed routes
+        """
+        route_policy_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoOspfv3FeatureTemplateIpv6RedistributeArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoOspfv3FeatureTemplateIpv6RedistributeArgs:
@@ -11010,6 +14445,270 @@ class CiscoOspfv3FeatureTemplateIpv6RedistributeArgs:
     def route_policy_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "route_policy_variable", value)
 
+
+if not MYPY:
+    class CiscoSecureInternetGatewayFeatureTemplateInterfaceArgsDict(TypedDict):
+        application: NotRequired[pulumi.Input[str]]
+        """
+        Enable Application Tunnel Type
+          - Choices: `sig`
+          - Default value: `sig`
+        """
+        auto_tunnel_mode: NotRequired[pulumi.Input[bool]]
+        """
+        Auto Tunnel Mode
+          - Default value: `false`
+        """
+        dead_peer_detection_interval: NotRequired[pulumi.Input[int]]
+        """
+        IKE keepalive interval (seconds)
+          - Range: `0`-`65535`
+          - Default value: `10`
+        """
+        dead_peer_detection_interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        dead_peer_detection_retries: NotRequired[pulumi.Input[int]]
+        """
+        IKE keepalive retries
+          - Range: `0`-`255`
+          - Default value: `3`
+        """
+        dead_peer_detection_retries_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        description: NotRequired[pulumi.Input[str]]
+        """
+        Interface description
+        """
+        description_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ike_ciphersuite: NotRequired[pulumi.Input[str]]
+        """
+        IKE identity the IKE preshared secret belongs to
+          - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+          - Default value: `aes256-cbc-sha1`
+        """
+        ike_ciphersuite_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ike_group: NotRequired[pulumi.Input[str]]
+        """
+        IKE Diffie Hellman Groups
+          - Choices: `2`, `14`, `15`, `16`
+          - Default value: `14`
+        """
+        ike_group_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ike_pre_shared_key: NotRequired[pulumi.Input[str]]
+        """
+        Use preshared key to authenticate IKE peer
+        """
+        ike_pre_shared_key_dynamic: NotRequired[pulumi.Input[bool]]
+        """
+        Use preshared key to authenticate IKE peer
+          - Default value: `true`
+        """
+        ike_pre_shared_key_local_id: NotRequired[pulumi.Input[str]]
+        """
+        IKE ID for the local endpoint. Input IPv4 address, domain name, or email address
+        """
+        ike_pre_shared_key_local_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ike_pre_shared_key_remote_id: NotRequired[pulumi.Input[str]]
+        """
+        IKE ID for the remote endpoint. Input IPv4 address, domain name, or email address
+        """
+        ike_pre_shared_key_remote_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ike_pre_shared_key_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ike_rekey_interval: NotRequired[pulumi.Input[int]]
+        """
+        IKE rekey interval <300..1209600> seconds
+          - Range: `300`-`1209600`
+          - Default value: `14400`
+        """
+        ike_rekey_interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ike_version: NotRequired[pulumi.Input[int]]
+        """
+        IKE Version <1..2>
+          - Range: `1`-`2`
+          - Default value: `2`
+        """
+        ike_version_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ip_unnumbered: NotRequired[pulumi.Input[bool]]
+        """
+        Unnumbered interface
+          - Default value: `true`
+        """
+        ipsec_ciphersuite: NotRequired[pulumi.Input[str]]
+        """
+        IPsec(ESP) encryption and integrity protocol
+          - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
+          - Default value: `aes256-gcm`
+        """
+        ipsec_ciphersuite_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ipsec_perfect_forward_secrecy: NotRequired[pulumi.Input[str]]
+        """
+        IPsec perfect forward secrecy settings
+          - Choices: `group-2`, `group-14`, `group-15`, `group-16`, `none`
+          - Default value: `none`
+        """
+        ipsec_perfect_forward_secrecy_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ipsec_rekey_interval: NotRequired[pulumi.Input[int]]
+        """
+        IPsec rekey interval <300..1209600> seconds
+          - Range: `300`-`1209600`
+          - Default value: `3600`
+        """
+        ipsec_rekey_interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ipsec_replay_window: NotRequired[pulumi.Input[int]]
+        """
+        Replay window size 32..8192 (must be a power of 2)
+          - Range: `64`-`4096`
+          - Default value: `512`
+        """
+        ipsec_replay_window_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ipv4_address: NotRequired[pulumi.Input[str]]
+        """
+        Assign IPv4 address
+        """
+        ipv4_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        mtu: NotRequired[pulumi.Input[int]]
+        """
+        Interface MTU <576..2000>, in bytes
+          - Range: `576`-`2000`
+          - Default value: `1400`
+        """
+        mtu_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Interface name: IPsec when present
+        """
+        name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        shutdown: NotRequired[pulumi.Input[bool]]
+        """
+        Administrative state
+          - Default value: `false`
+        """
+        sig_provider: NotRequired[pulumi.Input[str]]
+        """
+        SIG Tunnel Provider
+          - Choices: `secure-internet-gateway-umbrella`, `secure-internet-gateway-zscaler`, `secure-internet-gateway-other`
+          - Default value: `secure-internet-gateway-umbrella`
+        """
+        tcp_mss: NotRequired[pulumi.Input[int]]
+        """
+        TCP MSS on SYN packets, in bytes
+          - Range: `500`-`1460`
+        """
+        tcp_mss_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        track_enable: NotRequired[pulumi.Input[bool]]
+        """
+        Enable/disable SIG tracking
+          - Default value: `true`
+        """
+        tracker: NotRequired[pulumi.Input[str]]
+        """
+        Enable tracker for this interface
+        """
+        tunnel_dc_preference: NotRequired[pulumi.Input[str]]
+        """
+        SIG Tunnel Data Center
+          - Choices: `primary-dc`, `secondary-dc`
+          - Default value: `primary-dc`
+        """
+        tunnel_destination: NotRequired[pulumi.Input[str]]
+        """
+        Tunnel destination IP address
+        """
+        tunnel_destination_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        tunnel_public_ip: NotRequired[pulumi.Input[str]]
+        """
+        Public IP required to setup GRE tunnel to Zscaler
+          - Default value: `Auto`
+        """
+        tunnel_public_ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        tunnel_route_via: NotRequired[pulumi.Input[str]]
+        """
+        <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
+        """
+        tunnel_route_via_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        tunnel_source: NotRequired[pulumi.Input[str]]
+        """
+        Tunnel source IP Address
+        """
+        tunnel_source_interface: NotRequired[pulumi.Input[str]]
+        """
+        <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
+        """
+        tunnel_source_interface_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        tunnel_source_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoSecureInternetGatewayFeatureTemplateInterfaceArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoSecureInternetGatewayFeatureTemplateInterfaceArgs:
@@ -11984,6 +15683,147 @@ class CiscoSecureInternetGatewayFeatureTemplateInterfaceArgs:
         pulumi.set(self, "tunnel_source_variable", value)
 
 
+if not MYPY:
+    class CiscoSecureInternetGatewayFeatureTemplateServiceArgsDict(TypedDict):
+        interface_pairs: NotRequired[pulumi.Input[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateServiceInterfacePairArgsDict']]]]
+        """
+        Interface Pair for active and backup
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        service_type: NotRequired[pulumi.Input[str]]
+        """
+        Service Type
+          - Choices: `sig`
+          - Default value: `sig`
+        """
+        umbrella_primary_data_center: NotRequired[pulumi.Input[str]]
+        """
+        Umbrella Primary Datacenter
+          - Default value: `Auto`
+        """
+        umbrella_primary_data_center_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        umbrella_secondary_data_center: NotRequired[pulumi.Input[str]]
+        """
+        Umbrella Secondary Datacenter
+          - Default value: `Auto`
+        """
+        umbrella_secondary_data_center_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        zscaler_aup_block_internet_until_accepted: NotRequired[pulumi.Input[bool]]
+        """
+        For first-time Acceptable User Policy behavior, block Internet access
+          - Default value: `false`
+        """
+        zscaler_aup_enabled: NotRequired[pulumi.Input[bool]]
+        """
+        Enable Acceptable User Policy
+          - Default value: `false`
+        """
+        zscaler_aup_force_ssl_inspection: NotRequired[pulumi.Input[bool]]
+        """
+        For first-time Acceptable User Policy behavior, force SSL inspection
+          - Default value: `false`
+        """
+        zscaler_aup_timeout: NotRequired[pulumi.Input[int]]
+        """
+        Custom Acceptable User Policy frequency in days
+          - Default value: `0`
+        """
+        zscaler_authentication_required: NotRequired[pulumi.Input[bool]]
+        """
+        Enforce Authentication
+          - Default value: `false`
+        """
+        zscaler_caution_enabled: NotRequired[pulumi.Input[bool]]
+        """
+        Enable Caution
+          - Default value: `false`
+        """
+        zscaler_firewall_enabled: NotRequired[pulumi.Input[bool]]
+        """
+        Firewall enabled
+          - Default value: `false`
+        """
+        zscaler_ips_control_enabled: NotRequired[pulumi.Input[bool]]
+        """
+        Enable IPS Control
+          - Default value: `false`
+        """
+        zscaler_location_name: NotRequired[pulumi.Input[str]]
+        """
+        Zscaler location name (optional)
+          - Default value: `Auto`
+        """
+        zscaler_location_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        zscaler_primary_data_center: NotRequired[pulumi.Input[str]]
+        """
+        Custom Primary Datacenter
+          - Default value: `Auto`
+        """
+        zscaler_primary_data_center_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        zscaler_secondary_data_center: NotRequired[pulumi.Input[str]]
+        """
+        Custom Secondary Datacenter
+          - Default value: `Auto`
+        """
+        zscaler_secondary_data_center_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        zscaler_surrogate_display_time_unit: NotRequired[pulumi.Input[str]]
+        """
+        Display time unit
+          - Choices: `MINUTE`, `HOUR`, `DAY`
+          - Default value: `MINUTE`
+        """
+        zscaler_surrogate_idle_time: NotRequired[pulumi.Input[int]]
+        """
+        Idle time to disassociation
+          - Default value: `0`
+        """
+        zscaler_surrogate_ip: NotRequired[pulumi.Input[bool]]
+        """
+        Enable Surrogate IP
+          - Default value: `false`
+        """
+        zscaler_surrogate_ip_enforce_for_known_browsers: NotRequired[pulumi.Input[bool]]
+        """
+        Enforce Surrogate IP for known browsers
+          - Default value: `false`
+        """
+        zscaler_surrogate_refresh_time: NotRequired[pulumi.Input[int]]
+        """
+        Refresh time for re-validation of surrogacy in minutes
+          - Default value: `0`
+        """
+        zscaler_surrogate_refresh_time_unit: NotRequired[pulumi.Input[str]]
+        """
+        Refresh Time unit
+          - Choices: `MINUTE`, `HOUR`, `DAY`
+          - Default value: `MINUTE`
+        """
+        zscaler_xff_forward: NotRequired[pulumi.Input[bool]]
+        """
+        XFF forwarding enabled
+          - Default value: `false`
+        """
+elif False:
+    CiscoSecureInternetGatewayFeatureTemplateServiceArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoSecureInternetGatewayFeatureTemplateServiceArgs:
     def __init__(__self__, *,
@@ -12487,6 +16327,35 @@ class CiscoSecureInternetGatewayFeatureTemplateServiceArgs:
         pulumi.set(self, "zscaler_xff_forward", value)
 
 
+if not MYPY:
+    class CiscoSecureInternetGatewayFeatureTemplateServiceInterfacePairArgsDict(TypedDict):
+        active_interface: NotRequired[pulumi.Input[str]]
+        """
+        Active Tunnel Interface for SIG
+        """
+        active_interface_weight: NotRequired[pulumi.Input[int]]
+        """
+        Active Tunnel Interface Weight
+          - Range: `1`-`255`
+          - Default value: `1`
+        """
+        backup_interface: NotRequired[pulumi.Input[str]]
+        """
+        Backup Tunnel Interface for SIG
+        """
+        backup_interface_weight: NotRequired[pulumi.Input[int]]
+        """
+        Backup Tunnel Interface Weight
+          - Range: `1`-`255`
+          - Default value: `1`
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    CiscoSecureInternetGatewayFeatureTemplateServiceInterfacePairArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoSecureInternetGatewayFeatureTemplateServiceInterfacePairArgs:
     def __init__(__self__, *,
@@ -12581,6 +16450,66 @@ class CiscoSecureInternetGatewayFeatureTemplateServiceInterfacePairArgs:
     def optional(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "optional", value)
 
+
+if not MYPY:
+    class CiscoSecureInternetGatewayFeatureTemplateTrackerArgsDict(TypedDict):
+        endpoint_api_url: NotRequired[pulumi.Input[str]]
+        """
+        API url of endpoint
+        """
+        endpoint_api_url_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        interval: NotRequired[pulumi.Input[int]]
+        """
+        Probe interval <10..600> seconds
+          - Range: `20`-`600`
+          - Default value: `60`
+        """
+        interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        multiplier: NotRequired[pulumi.Input[int]]
+        """
+        Probe failure multiplier <1..10> failed attempts
+          - Range: `1`-`10`
+          - Default value: `3`
+        """
+        multiplier_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Tracker name
+        """
+        name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        threshold: NotRequired[pulumi.Input[int]]
+        """
+        Probe Timeout threshold <100..1000> milliseconds
+          - Range: `100`-`1000`
+          - Default value: `300`
+        """
+        threshold_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        tracker_type: NotRequired[pulumi.Input[str]]
+        """
+        - Choices: `SIG`
+          - Default value: ` SIG`
+        """
+elif False:
+    CiscoSecureInternetGatewayFeatureTemplateTrackerArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoSecureInternetGatewayFeatureTemplateTrackerArgs:
@@ -12794,6 +16723,154 @@ class CiscoSecureInternetGatewayFeatureTemplateTrackerArgs:
     def tracker_type(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "tracker_type", value)
 
+
+if not MYPY:
+    class CiscoSecurityFeatureTemplateKeyArgsDict(TypedDict):
+        accept_ao_mismatch: NotRequired[pulumi.Input[bool]]
+        """
+        Configure Accept AO Mismatch
+          - Default value: `false`
+        """
+        accept_ao_mismatch_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        accept_lifetime_duration: NotRequired[pulumi.Input[int]]
+        """
+        Configure Accept lifetime Duration
+          - Range: `1`-`2147483646`
+        """
+        accept_lifetime_duration_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        accept_lifetime_end_time: NotRequired[pulumi.Input[str]]
+        """
+        Configure Key lifetime end time
+        """
+        accept_lifetime_end_time_format: NotRequired[pulumi.Input[str]]
+        """
+        Configure Key lifetime end time
+          - Choices: `infinite`, `duration`, `end-epoch`
+          - Default value: `infinite`
+        """
+        accept_lifetime_infinite: NotRequired[pulumi.Input[bool]]
+        """
+        Configure Key lifetime end time
+        """
+        accept_lifetime_infinite_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        accept_lifetime_local: NotRequired[pulumi.Input[bool]]
+        """
+        Configure Accept Lifetime Local
+          - Default value: `false`
+        """
+        accept_lifetime_local_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        accept_lifetime_start_time: NotRequired[pulumi.Input[str]]
+        """
+        Configure Key lifetime start time
+        """
+        chain_name: NotRequired[pulumi.Input[str]]
+        """
+        Select the chain name
+        """
+        crypto_algorithm: NotRequired[pulumi.Input[str]]
+        """
+        Crypto Algorithm
+          - Choices: `aes-128-cmac`, `hmac-sha-1`, `hmac-sha-256`
+        """
+        id: NotRequired[pulumi.Input[str]]
+        """
+        Select the Key ID
+        """
+        include_tcp_options: NotRequired[pulumi.Input[bool]]
+        """
+        Configure Include TCP Options
+          - Default value: `false`
+        """
+        include_tcp_options_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        key_string: NotRequired[pulumi.Input[str]]
+        """
+        Specify the Key String
+        """
+        key_string_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        receive_id: NotRequired[pulumi.Input[int]]
+        """
+        Specify the Receiver ID
+          - Range: `0`-`255`
+          - Default value: `0`
+        """
+        receive_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        send_id: NotRequired[pulumi.Input[int]]
+        """
+        Specify the Send ID
+          - Range: `0`-`255`
+          - Default value: `0`
+        """
+        send_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        send_lifetime_duration: NotRequired[pulumi.Input[int]]
+        """
+        Configure Send lifetime Duration
+          - Range: `1`-`2147483646`
+        """
+        send_lifetime_duration_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        send_lifetime_end_time: NotRequired[pulumi.Input[str]]
+        """
+        Configure Key lifetime end time
+        """
+        send_lifetime_end_time_format: NotRequired[pulumi.Input[str]]
+        """
+        Configure Key lifetime end time
+          - Choices: `infinite`, `duration`, `end-epoch`
+          - Default value: `infinite`
+        """
+        send_lifetime_infinite: NotRequired[pulumi.Input[bool]]
+        """
+        Configure Key lifetime end time
+        """
+        send_lifetime_infinite_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        send_lifetime_local: NotRequired[pulumi.Input[bool]]
+        """
+        Configure Send lifetime Local
+          - Default value: `false`
+        """
+        send_lifetime_local_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        send_lifetime_start_time: NotRequired[pulumi.Input[str]]
+        """
+        Configure Key lifetime start time
+        """
+elif False:
+    CiscoSecurityFeatureTemplateKeyArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoSecurityFeatureTemplateKeyArgs:
@@ -13344,6 +17421,24 @@ class CiscoSecurityFeatureTemplateKeyArgs:
         pulumi.set(self, "send_lifetime_start_time", value)
 
 
+if not MYPY:
+    class CiscoSecurityFeatureTemplateKeychainArgsDict(TypedDict):
+        key_id: NotRequired[pulumi.Input[int]]
+        """
+        Specify the Key ID
+          - Range: `0`-`2147483647`
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Specify the name of the Keychain
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    CiscoSecurityFeatureTemplateKeychainArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoSecurityFeatureTemplateKeychainArgs:
     def __init__(__self__, *,
@@ -13400,6 +17495,36 @@ class CiscoSecurityFeatureTemplateKeychainArgs:
     def optional(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "optional", value)
 
+
+if not MYPY:
+    class CiscoSnmpFeatureTemplateCommunityArgsDict(TypedDict):
+        authorization: NotRequired[pulumi.Input[str]]
+        """
+        Configure access permissions
+          - Choices: `read-only`
+        """
+        authorization_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Set name of the SNMP community
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        view: NotRequired[pulumi.Input[str]]
+        """
+        Set name of the SNMP view
+        """
+        view_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoSnmpFeatureTemplateCommunityArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoSnmpFeatureTemplateCommunityArgs:
@@ -13506,6 +17631,32 @@ class CiscoSnmpFeatureTemplateCommunityArgs:
         pulumi.set(self, "view_variable", value)
 
 
+if not MYPY:
+    class CiscoSnmpFeatureTemplateGroupArgsDict(TypedDict):
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Name of the SNMP group
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        security_level: NotRequired[pulumi.Input[str]]
+        """
+        Configure security level
+          - Choices: `no-auth-no-priv`, `auth-no-priv`, `auth-priv`
+        """
+        view: NotRequired[pulumi.Input[str]]
+        """
+        Name of the SNMP view
+        """
+        view_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoSnmpFeatureTemplateGroupArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoSnmpFeatureTemplateGroupArgs:
     def __init__(__self__, *,
@@ -13594,6 +17745,65 @@ class CiscoSnmpFeatureTemplateGroupArgs:
     def view_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "view_variable", value)
 
+
+if not MYPY:
+    class CiscoSnmpFeatureTemplateTrapTargetArgsDict(TypedDict):
+        community_name: NotRequired[pulumi.Input[str]]
+        """
+        Set name of the SNMP community
+        """
+        community_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ip: NotRequired[pulumi.Input[str]]
+        """
+        Set IPv4/IPv6 address of SNMP server
+        """
+        ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        source_interface: NotRequired[pulumi.Input[str]]
+        """
+        Source interface for outgoing SNMP traps
+        """
+        source_interface_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        udp_port: NotRequired[pulumi.Input[int]]
+        """
+        Set UDP port number to connect to SNMP server
+          - Range: `1`-`65535`
+        """
+        udp_port_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        user: NotRequired[pulumi.Input[str]]
+        """
+        Set name of the SNMP user
+        """
+        user_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        vpn_id: NotRequired[pulumi.Input[int]]
+        """
+        Set VPN in which SNMP server is located
+          - Range: `0`-`65530`
+        """
+        vpn_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoSnmpFeatureTemplateTrapTargetArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoSnmpFeatureTemplateTrapTargetArgs:
@@ -13814,6 +18024,61 @@ class CiscoSnmpFeatureTemplateTrapTargetArgs:
         pulumi.set(self, "vpn_id_variable", value)
 
 
+if not MYPY:
+    class CiscoSnmpFeatureTemplateUserArgsDict(TypedDict):
+        authentication_password: NotRequired[pulumi.Input[str]]
+        """
+        Specify authentication protocol password
+        """
+        authentication_password_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        authentication_protocol: NotRequired[pulumi.Input[str]]
+        """
+        Configure authentication protocol
+          - Choices: `md5`, `sha`
+        """
+        authentication_protocol_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        group: NotRequired[pulumi.Input[str]]
+        """
+        Name of the SNMP group
+        """
+        group_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Name of the SNMP user
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        privacy_password: NotRequired[pulumi.Input[str]]
+        """
+        Specify privacy protocol password
+        """
+        privacy_password_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        privacy_protocol: NotRequired[pulumi.Input[str]]
+        """
+        Configure privacy protocol
+          - Choices: `aes-cfb-128`, `aes-256-cfb-128`
+        """
+        privacy_protocol_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoSnmpFeatureTemplateUserArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoSnmpFeatureTemplateUserArgs:
     def __init__(__self__, *,
@@ -14017,6 +18282,23 @@ class CiscoSnmpFeatureTemplateUserArgs:
         pulumi.set(self, "privacy_protocol_variable", value)
 
 
+if not MYPY:
+    class CiscoSnmpFeatureTemplateViewArgsDict(TypedDict):
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Set the name of the SNMP view
+        """
+        object_identifiers: NotRequired[pulumi.Input[Sequence[pulumi.Input['CiscoSnmpFeatureTemplateViewObjectIdentifierArgsDict']]]]
+        """
+        Configure SNMP object identifier
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    CiscoSnmpFeatureTemplateViewArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoSnmpFeatureTemplateViewArgs:
     def __init__(__self__, *,
@@ -14071,6 +18353,32 @@ class CiscoSnmpFeatureTemplateViewArgs:
     def optional(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "optional", value)
 
+
+if not MYPY:
+    class CiscoSnmpFeatureTemplateViewObjectIdentifierArgsDict(TypedDict):
+        exclude: NotRequired[pulumi.Input[bool]]
+        """
+        Exclude the OID
+          - Default value: `false`
+        """
+        exclude_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        id: NotRequired[pulumi.Input[str]]
+        """
+        Configure identifier of subtree of MIB objects
+        """
+        id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    CiscoSnmpFeatureTemplateViewObjectIdentifierArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoSnmpFeatureTemplateViewObjectIdentifierArgs:
@@ -14161,6 +18469,23 @@ class CiscoSnmpFeatureTemplateViewObjectIdentifierArgs:
         pulumi.set(self, "optional", value)
 
 
+if not MYPY:
+    class CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgsDict(TypedDict):
+        number: NotRequired[pulumi.Input[str]]
+        """
+        Mobile number, ex: +1231234414
+        """
+        number_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgs:
     def __init__(__self__, *,
@@ -14215,6 +18540,76 @@ class CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgs:
     def optional(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "optional", value)
 
+
+if not MYPY:
+    class CiscoSystemFeatureTemplateObjectTrackerArgsDict(TypedDict):
+        boolean: NotRequired[pulumi.Input[str]]
+        """
+        Type of grouping to be performed for tracker group
+          - Choices: `and`, `or`
+        """
+        boolean_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        group_tracks_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input['CiscoSystemFeatureTemplateObjectTrackerGroupTracksIdArgsDict']]]]
+        """
+        Tracks id in group configuration
+        """
+        interface: NotRequired[pulumi.Input[str]]
+        """
+        interface name
+        """
+        interface_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ip: NotRequired[pulumi.Input[str]]
+        """
+        IP address of route
+        """
+        ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        mask: NotRequired[pulumi.Input[str]]
+        """
+        Route Ip Mask
+          - Default value: `0.0.0.0`
+        """
+        mask_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        object_number: NotRequired[pulumi.Input[int]]
+        """
+        Object tracker ID
+          - Range: `1`-`1000`
+        """
+        object_number_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        sig: NotRequired[pulumi.Input[str]]
+        """
+        service sig
+        """
+        sig_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        vpn_id: NotRequired[pulumi.Input[int]]
+        """
+        VPN
+          - Range: `0`-`65527`
+          - Default value: `0`
+        """
+elif False:
+    CiscoSystemFeatureTemplateObjectTrackerArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoSystemFeatureTemplateObjectTrackerArgs:
@@ -14473,6 +18868,24 @@ class CiscoSystemFeatureTemplateObjectTrackerArgs:
         pulumi.set(self, "vpn_id", value)
 
 
+if not MYPY:
+    class CiscoSystemFeatureTemplateObjectTrackerGroupTracksIdArgsDict(TypedDict):
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        track_id: NotRequired[pulumi.Input[int]]
+        """
+        Track id
+          - Range: `1`-`1000`
+        """
+        track_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoSystemFeatureTemplateObjectTrackerGroupTracksIdArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoSystemFeatureTemplateObjectTrackerGroupTracksIdArgs:
     def __init__(__self__, *,
@@ -14529,6 +18942,105 @@ class CiscoSystemFeatureTemplateObjectTrackerGroupTracksIdArgs:
     def track_id_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "track_id_variable", value)
 
+
+if not MYPY:
+    class CiscoSystemFeatureTemplateTrackerArgsDict(TypedDict):
+        boolean: NotRequired[pulumi.Input[str]]
+        """
+        Type of grouping to be performed for tracker group
+          - Choices: `or`, `and`
+          - Default value: `or`
+        """
+        boolean_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        elements: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        Tracker member names separated by space
+        """
+        elements_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        endpoint_api_url: NotRequired[pulumi.Input[str]]
+        """
+        API url of endpoint
+        """
+        endpoint_api_url_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        endpoint_dns_name: NotRequired[pulumi.Input[str]]
+        """
+        DNS name of endpoint
+        """
+        endpoint_dns_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        endpoint_ip: NotRequired[pulumi.Input[str]]
+        """
+        IP address of endpoint
+        """
+        endpoint_ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        interval: NotRequired[pulumi.Input[int]]
+        """
+        Probe interval <10..600> seconds
+          - Range: `20`-`600`
+          - Default value: `60`
+        """
+        interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        multiplier: NotRequired[pulumi.Input[int]]
+        """
+        Probe failure multiplier <1..10> failed attempts
+          - Range: `1`-`10`
+          - Default value: `3`
+        """
+        multiplier_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Tracker name
+        """
+        name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        threshold: NotRequired[pulumi.Input[int]]
+        """
+        Probe Timeout threshold <100..1000> milliseconds
+          - Range: `100`-`1000`
+          - Default value: `300`
+        """
+        threshold_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        type: NotRequired[pulumi.Input[str]]
+        """
+        Default(Interface)
+          - Choices: `tracker-group`, `interface`, `static-route`
+          - Default value: `interface`
+        """
+        type_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoSystemFeatureTemplateTrackerArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoSystemFeatureTemplateTrackerArgs:
@@ -14892,6 +19404,105 @@ class CiscoSystemFeatureTemplateTrackerArgs:
     def type_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "type_variable", value)
 
+
+if not MYPY:
+    class CiscoThousandeyesFeatureTemplateVirtualApplicationArgsDict(TypedDict):
+        application_type: NotRequired[pulumi.Input[str]]
+        """
+        List of Virtual applications
+          - Default value: `te`
+        """
+        instance_id: NotRequired[pulumi.Input[str]]
+        """
+        List of Virtual applications
+          - Default value: `1`
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        te_account_group_token: NotRequired[pulumi.Input[str]]
+        """
+        Set the Account Group Token
+        """
+        te_account_group_token_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        te_agent_ip: NotRequired[pulumi.Input[str]]
+        """
+        Set the Agent IP Address
+        """
+        te_agent_ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        te_default_gateway: NotRequired[pulumi.Input[str]]
+        """
+        Set the Agent default gateway
+        """
+        te_default_gateway_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        te_hostname: NotRequired[pulumi.Input[str]]
+        """
+        Set the host name
+        """
+        te_hostname_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        te_name_server: NotRequired[pulumi.Input[str]]
+        """
+        Set the name server
+        """
+        te_name_server_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        te_pac_url: NotRequired[pulumi.Input[str]]
+        """
+        PAC URL
+        """
+        te_pac_url_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        te_proxy_host: NotRequired[pulumi.Input[str]]
+        """
+        Set the proxy host
+        """
+        te_proxy_host_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        te_proxy_port: NotRequired[pulumi.Input[int]]
+        """
+        Set the proxy port
+          - Range: `0`-`65535`
+        """
+        te_proxy_port_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        te_vpn: NotRequired[pulumi.Input[int]]
+        """
+        VPN number
+          - Range: `1`-`65535`
+        """
+        te_vpn_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        te_web_proxy_type: NotRequired[pulumi.Input[str]]
+        """
+        Web Proxy Type
+          - Choices: `none`, `static`, `pac`
+          - Default value: `none`
+        """
+elif False:
+    CiscoThousandeyesFeatureTemplateVirtualApplicationArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoThousandeyesFeatureTemplateVirtualApplicationArgs:
@@ -15264,6 +19875,75 @@ class CiscoThousandeyesFeatureTemplateVirtualApplicationArgs:
         pulumi.set(self, "te_web_proxy_type", value)
 
 
+if not MYPY:
+    class CiscoTrustsecFeatureTemplateSxpConnectionArgsDict(TypedDict):
+        maximum_hold_time: NotRequired[pulumi.Input[int]]
+        """
+        Configure Connection Maximum hold time <0..65535>
+          - Range: `0`-`65535`
+          - Default value: `0`
+        """
+        maximum_hold_time_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        minimum_hold_time: NotRequired[pulumi.Input[int]]
+        """
+        Configure Connection Minimum hold time <0..65535>
+          - Range: `0`-`65535`
+          - Default value: `0`
+        """
+        minimum_hold_time_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        mode: NotRequired[pulumi.Input[str]]
+        """
+        Define Mode of connection
+          - Choices: `local`, `peer`
+          - Default value: `local`
+        """
+        mode_type: NotRequired[pulumi.Input[str]]
+        """
+        Define Role of a device <speaker/listener/both>
+          - Choices: `listener`, `speaker`, `both`
+          - Default value: `speaker`
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        peer_ip: NotRequired[pulumi.Input[str]]
+        """
+        Configure SXP Peer IP address (IPv4)
+        """
+        preshared_key: NotRequired[pulumi.Input[str]]
+        """
+        Define Preshared Key type
+          - Choices: `default`, `key-chain`, `none`
+          - Default value: `none`
+        """
+        source_ip: NotRequired[pulumi.Input[str]]
+        """
+        Configure SXP Source IP address (IPv4)
+        """
+        source_ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        vpn_id: NotRequired[pulumi.Input[int]]
+        """
+        Configure Connection VPN (VRF) ID
+          - Range: `0`-`65527`
+          - Default value: `0`
+        """
+        vpn_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoTrustsecFeatureTemplateSxpConnectionArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoTrustsecFeatureTemplateSxpConnectionArgs:
     def __init__(__self__, *,
@@ -15503,6 +20183,31 @@ class CiscoTrustsecFeatureTemplateSxpConnectionArgs:
         pulumi.set(self, "vpn_id_variable", value)
 
 
+if not MYPY:
+    class CiscoVpnFeatureTemplateDnsHostArgsDict(TypedDict):
+        hostname: NotRequired[pulumi.Input[str]]
+        """
+        Hostname
+        """
+        hostname_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ips: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        List of IP
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    CiscoVpnFeatureTemplateDnsHostArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoVpnFeatureTemplateDnsHostArgs:
     def __init__(__self__, *,
@@ -15589,6 +20294,33 @@ class CiscoVpnFeatureTemplateDnsHostArgs:
     def optional(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "optional", value)
 
+
+if not MYPY:
+    class CiscoVpnFeatureTemplateDnsIpv4ServerArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        DNS Address
+        """
+        address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        role: NotRequired[pulumi.Input[str]]
+        """
+        Role
+          - Choices: `primary`, `secondary`
+          - Default value: `primary`
+        """
+        role_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoVpnFeatureTemplateDnsIpv4ServerArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoVpnFeatureTemplateDnsIpv4ServerArgs:
@@ -15681,6 +20413,29 @@ class CiscoVpnFeatureTemplateDnsIpv4ServerArgs:
         pulumi.set(self, "role_variable", value)
 
 
+if not MYPY:
+    class CiscoVpnFeatureTemplateDnsIpv6ServerArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        DNS Address
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        role: NotRequired[pulumi.Input[str]]
+        """
+        Role
+          - Choices: `primary`, `secondary`
+          - Default value: `primary`
+        """
+        role_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoVpnFeatureTemplateDnsIpv6ServerArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoVpnFeatureTemplateDnsIpv6ServerArgs:
     def __init__(__self__, *,
@@ -15755,6 +20510,36 @@ class CiscoVpnFeatureTemplateDnsIpv6ServerArgs:
     def role_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "role_variable", value)
 
+
+if not MYPY:
+    class CiscoVpnFeatureTemplateIpv4StaticGreRouteArgsDict(TypedDict):
+        interface_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        interfaces: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        List of GRE Interfaces
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        prefix: NotRequired[pulumi.Input[str]]
+        """
+        Prefix
+        """
+        prefix_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        vpn_id: NotRequired[pulumi.Input[int]]
+        """
+        Destination VPN to resolve the prefix
+          - Default value: `0`
+        """
+elif False:
+    CiscoVpnFeatureTemplateIpv4StaticGreRouteArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoVpnFeatureTemplateIpv4StaticGreRouteArgs:
@@ -15861,6 +20646,36 @@ class CiscoVpnFeatureTemplateIpv4StaticGreRouteArgs:
         pulumi.set(self, "vpn_id", value)
 
 
+if not MYPY:
+    class CiscoVpnFeatureTemplateIpv4StaticIpsecRouteArgsDict(TypedDict):
+        interface_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        interfaces: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        List of IPSEC Interfaces (Separated by commas)
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        prefix: NotRequired[pulumi.Input[str]]
+        """
+        Prefix
+        """
+        prefix_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        vpn_id: NotRequired[pulumi.Input[int]]
+        """
+        Destination VPN to resolve the prefix
+          - Default value: `0`
+        """
+elif False:
+    CiscoVpnFeatureTemplateIpv4StaticIpsecRouteArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoVpnFeatureTemplateIpv4StaticIpsecRouteArgs:
     def __init__(__self__, *,
@@ -15965,6 +20780,68 @@ class CiscoVpnFeatureTemplateIpv4StaticIpsecRouteArgs:
     def vpn_id(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "vpn_id", value)
 
+
+if not MYPY:
+    class CiscoVpnFeatureTemplateIpv4StaticRouteArgsDict(TypedDict):
+        dhcp: NotRequired[pulumi.Input[bool]]
+        """
+        Default Gateway obtained from DHCP
+          - Default value: `false`
+        """
+        dhcp_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        distance: NotRequired[pulumi.Input[int]]
+        """
+        Administrative distance
+          - Range: `1`-`255`
+          - Default value: `1`
+        """
+        distance_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        next_hops: NotRequired[pulumi.Input[Sequence[pulumi.Input['CiscoVpnFeatureTemplateIpv4StaticRouteNextHopArgsDict']]]]
+        """
+        IP gateway address
+        """
+        null0: NotRequired[pulumi.Input[bool]]
+        """
+        null0
+          - Default value: `false`
+        """
+        null0_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        prefix: NotRequired[pulumi.Input[str]]
+        """
+        Prefix
+        """
+        prefix_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        track_next_hops: NotRequired[pulumi.Input[Sequence[pulumi.Input['CiscoVpnFeatureTemplateIpv4StaticRouteTrackNextHopArgsDict']]]]
+        """
+        IP gateway address
+        """
+        vpn_id: NotRequired[pulumi.Input[int]]
+        """
+        Destination VPN(!=0 or !=512) to resolve the prefix
+          - Default value: `0`
+        """
+        vpn_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoVpnFeatureTemplateIpv4StaticRouteArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoVpnFeatureTemplateIpv4StaticRouteArgs:
@@ -16191,6 +21068,33 @@ class CiscoVpnFeatureTemplateIpv4StaticRouteArgs:
         pulumi.set(self, "vpn_id_variable", value)
 
 
+if not MYPY:
+    class CiscoVpnFeatureTemplateIpv4StaticRouteNextHopArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        IP Address
+        """
+        address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        distance: NotRequired[pulumi.Input[int]]
+        """
+        Administrative distance
+          - Range: `1`-`255`
+          - Default value: `1`
+        """
+        distance_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    CiscoVpnFeatureTemplateIpv4StaticRouteNextHopArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoVpnFeatureTemplateIpv4StaticRouteNextHopArgs:
     def __init__(__self__, *,
@@ -16281,6 +21185,41 @@ class CiscoVpnFeatureTemplateIpv4StaticRouteNextHopArgs:
     def optional(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "optional", value)
 
+
+if not MYPY:
+    class CiscoVpnFeatureTemplateIpv4StaticRouteTrackNextHopArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        IP Address
+        """
+        address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        distance: NotRequired[pulumi.Input[int]]
+        """
+        Administrative distance
+          - Range: `1`-`255`
+          - Default value: `1`
+        """
+        distance_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        tracker: NotRequired[pulumi.Input[str]]
+        """
+        Static route tracker
+        """
+        tracker_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoVpnFeatureTemplateIpv4StaticRouteTrackNextHopArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoVpnFeatureTemplateIpv4StaticRouteTrackNextHopArgs:
@@ -16405,6 +21344,34 @@ class CiscoVpnFeatureTemplateIpv4StaticRouteTrackNextHopArgs:
         pulumi.set(self, "tracker_variable", value)
 
 
+if not MYPY:
+    class CiscoVpnFeatureTemplateIpv4StaticServiceRouteArgsDict(TypedDict):
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        prefix: NotRequired[pulumi.Input[str]]
+        """
+        Prefix
+        """
+        prefix_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        service: NotRequired[pulumi.Input[str]]
+        """
+        Service
+          - Choices: `sig`
+          - Default value: `sig`
+        """
+        vpn_id: NotRequired[pulumi.Input[int]]
+        """
+        Destination VPN to resolve the prefix
+          - Default value: `0`
+        """
+elif False:
+    CiscoVpnFeatureTemplateIpv4StaticServiceRouteArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoVpnFeatureTemplateIpv4StaticServiceRouteArgs:
     def __init__(__self__, *,
@@ -16497,6 +21464,55 @@ class CiscoVpnFeatureTemplateIpv4StaticServiceRouteArgs:
     def vpn_id(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "vpn_id", value)
 
+
+if not MYPY:
+    class CiscoVpnFeatureTemplateIpv6StaticRouteArgsDict(TypedDict):
+        nat: NotRequired[pulumi.Input[str]]
+        """
+        NAT
+          - Choices: `NAT64`, `NAT66`
+          - Default value: `NAT64`
+        """
+        nat_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        next_hops: NotRequired[pulumi.Input[Sequence[pulumi.Input['CiscoVpnFeatureTemplateIpv6StaticRouteNextHopArgsDict']]]]
+        """
+        IP gateway address
+        """
+        null0: NotRequired[pulumi.Input[bool]]
+        """
+        null0
+          - Default value: `false`
+        """
+        null0_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        prefix: NotRequired[pulumi.Input[str]]
+        """
+        Prefix
+        """
+        prefix_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        vpn_id: NotRequired[pulumi.Input[int]]
+        """
+        Destination VPN(!=0 or !=512) to resolve the prefix
+          - Default value: `0`
+        """
+        vpn_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoVpnFeatureTemplateIpv6StaticRouteArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoVpnFeatureTemplateIpv6StaticRouteArgs:
@@ -16673,6 +21689,33 @@ class CiscoVpnFeatureTemplateIpv6StaticRouteArgs:
         pulumi.set(self, "vpn_id_variable", value)
 
 
+if not MYPY:
+    class CiscoVpnFeatureTemplateIpv6StaticRouteNextHopArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        IP Address
+        """
+        address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        distance: NotRequired[pulumi.Input[int]]
+        """
+        Administrative distance
+          - Range: `1`-`255`
+          - Default value: `1`
+        """
+        distance_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    CiscoVpnFeatureTemplateIpv6StaticRouteNextHopArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoVpnFeatureTemplateIpv6StaticRouteNextHopArgs:
     def __init__(__self__, *,
@@ -16763,6 +21806,59 @@ class CiscoVpnFeatureTemplateIpv6StaticRouteNextHopArgs:
     def optional(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "optional", value)
 
+
+if not MYPY:
+    class CiscoVpnFeatureTemplateNat64PoolArgsDict(TypedDict):
+        end_address: NotRequired[pulumi.Input[str]]
+        """
+        Ending IP address of NAT pool range
+        """
+        end_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        leak_from_global: NotRequired[pulumi.Input[bool]]
+        """
+        Enable Route Leaking from Global VPN to this Service VPN
+          - Default value: `false`
+        """
+        leak_from_global_protocol: NotRequired[pulumi.Input[str]]
+        """
+        Select protocol for route leaking
+          - Choices: `all`, `static`, `mobile`, `connected`, `rip`, `odr`
+        """
+        leak_to_global: NotRequired[pulumi.Input[bool]]
+        """
+        Enable Route Leaking from this Service VPN to Global VPN
+          - Default value: `false`
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        NAT64 Pool name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        overload: NotRequired[pulumi.Input[bool]]
+        """
+        NAT 64 Overload Option
+          - Default value: `false`
+        """
+        overload_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        start_address: NotRequired[pulumi.Input[str]]
+        """
+        Starting IP address of NAT pool range
+        """
+        start_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoVpnFeatureTemplateNat64PoolArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoVpnFeatureTemplateNat64PoolArgs:
@@ -16954,6 +22050,76 @@ class CiscoVpnFeatureTemplateNat64PoolArgs:
     def start_address_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "start_address_variable", value)
 
+
+if not MYPY:
+    class CiscoVpnFeatureTemplateNatPoolArgsDict(TypedDict):
+        direction: NotRequired[pulumi.Input[str]]
+        """
+        Direction of NAT translation
+          - Choices: `inside`, `outside`
+        """
+        direction_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        name: NotRequired[pulumi.Input[int]]
+        """
+        NAT Pool Name, natpool1..31
+          - Range: `1`-`31`
+        """
+        name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        overload: NotRequired[pulumi.Input[bool]]
+        """
+        Enable port translation(PAT)
+          - Default value: `true`
+        """
+        overload_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        prefix_length: NotRequired[pulumi.Input[int]]
+        """
+        Ending IP address of NAT Pool Prefix Length
+          - Range: `1`-`32`
+        """
+        prefix_length_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        range_end: NotRequired[pulumi.Input[str]]
+        """
+        Ending IP address of NAT pool range
+        """
+        range_end_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        range_start: NotRequired[pulumi.Input[str]]
+        """
+        Starting IP address of NAT pool range
+        """
+        range_start_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        tracker_id: NotRequired[pulumi.Input[int]]
+        """
+        Add Object/Object Group Tracker
+          - Range: `1`-`1000`
+        """
+        tracker_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoVpnFeatureTemplateNatPoolArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoVpnFeatureTemplateNatPoolArgs:
@@ -17212,6 +22378,38 @@ class CiscoVpnFeatureTemplateNatPoolArgs:
         pulumi.set(self, "tracker_id_variable", value)
 
 
+if not MYPY:
+    class CiscoVpnFeatureTemplateOmpAdvertiseIpv4RouteArgsDict(TypedDict):
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        prefixes: NotRequired[pulumi.Input[Sequence[pulumi.Input['CiscoVpnFeatureTemplateOmpAdvertiseIpv4RoutePrefixArgsDict']]]]
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Advertised routes protocol
+          - Choices: `bgp`, `ospf`, `ospfv3`, `connected`, `static`, `network`, `aggregate`, `eigrp`, `lisp`, `isis`
+        """
+        protocol_sub_type_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        protocol_sub_types: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        protocol_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        route_policy: NotRequired[pulumi.Input[str]]
+        """
+        Set Route Policy to OMP
+        """
+        route_policy_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoVpnFeatureTemplateOmpAdvertiseIpv4RouteArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoVpnFeatureTemplateOmpAdvertiseIpv4RouteArgs:
     def __init__(__self__, *,
@@ -17341,6 +22539,32 @@ class CiscoVpnFeatureTemplateOmpAdvertiseIpv4RouteArgs:
         pulumi.set(self, "route_policy_variable", value)
 
 
+if not MYPY:
+    class CiscoVpnFeatureTemplateOmpAdvertiseIpv4RoutePrefixArgsDict(TypedDict):
+        aggregate_only: NotRequired[pulumi.Input[bool]]
+        """
+        Aggregate Only
+          - Default value: `false`
+        """
+        aggregate_only_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        prefix_entry: NotRequired[pulumi.Input[str]]
+        """
+        Prefix
+        """
+        prefix_entry_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoVpnFeatureTemplateOmpAdvertiseIpv4RoutePrefixArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoVpnFeatureTemplateOmpAdvertiseIpv4RoutePrefixArgs:
     def __init__(__self__, *,
@@ -17429,6 +22653,35 @@ class CiscoVpnFeatureTemplateOmpAdvertiseIpv4RoutePrefixArgs:
     def prefix_entry_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "prefix_entry_variable", value)
 
+
+if not MYPY:
+    class CiscoVpnFeatureTemplateOmpAdvertiseIpv6RouteArgsDict(TypedDict):
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        prefixes: NotRequired[pulumi.Input[Sequence[pulumi.Input['CiscoVpnFeatureTemplateOmpAdvertiseIpv6RoutePrefixArgsDict']]]]
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Advertised routes protocol
+          - Choices: `bgp`, `ospf`, `connected`, `static`, `network`, `aggregate`
+        """
+        protocol_sub_type_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        protocol_sub_types: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        protocol_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        route_policy: NotRequired[pulumi.Input[str]]
+        route_policy_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoVpnFeatureTemplateOmpAdvertiseIpv6RouteArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoVpnFeatureTemplateOmpAdvertiseIpv6RouteArgs:
@@ -17555,6 +22808,32 @@ class CiscoVpnFeatureTemplateOmpAdvertiseIpv6RouteArgs:
         pulumi.set(self, "route_policy_variable", value)
 
 
+if not MYPY:
+    class CiscoVpnFeatureTemplateOmpAdvertiseIpv6RoutePrefixArgsDict(TypedDict):
+        aggregate_only: NotRequired[pulumi.Input[bool]]
+        """
+        Aggregate Only
+          - Default value: `false`
+        """
+        aggregate_only_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        prefix_entry: NotRequired[pulumi.Input[str]]
+        """
+        Prefix
+        """
+        prefix_entry_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoVpnFeatureTemplateOmpAdvertiseIpv6RoutePrefixArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoVpnFeatureTemplateOmpAdvertiseIpv6RoutePrefixArgs:
     def __init__(__self__, *,
@@ -17643,6 +22922,66 @@ class CiscoVpnFeatureTemplateOmpAdvertiseIpv6RoutePrefixArgs:
     def prefix_entry_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "prefix_entry_variable", value)
 
+
+if not MYPY:
+    class CiscoVpnFeatureTemplatePortForwardRuleArgsDict(TypedDict):
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        pool_name: NotRequired[pulumi.Input[int]]
+        """
+        NAT Pool Name, natpool1..31
+        """
+        pool_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Protocol
+          - Choices: `tcp`, `udp`
+        """
+        protocol_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        source_ip: NotRequired[pulumi.Input[str]]
+        """
+        Source IP address to be translated
+        """
+        source_ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        source_port: NotRequired[pulumi.Input[int]]
+        """
+        Source Port
+          - Default value: `0`
+        """
+        source_port_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        translate_ip: NotRequired[pulumi.Input[str]]
+        """
+        Statically translated source IP address
+        """
+        translate_ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        translate_port: NotRequired[pulumi.Input[int]]
+        """
+        Translate Port
+          - Default value: `0`
+        """
+        translate_port_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoVpnFeatureTemplatePortForwardRuleArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoVpnFeatureTemplatePortForwardRuleArgs:
@@ -17865,6 +23204,40 @@ class CiscoVpnFeatureTemplatePortForwardRuleArgs:
         pulumi.set(self, "translate_port_variable", value)
 
 
+if not MYPY:
+    class CiscoVpnFeatureTemplateRouteGlobalExportArgsDict(TypedDict):
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Select a Route Protocol to enable route leaking from this Service VPN to Global VPN
+          - Choices: `static`, `connected`, `bgp`, `eigrp`, `ospf`
+        """
+        protocol_sub_type_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        protocol_sub_types: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        - Default value: `external`
+        """
+        protocol_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        redistributes: NotRequired[pulumi.Input[Sequence[pulumi.Input['CiscoVpnFeatureTemplateRouteGlobalExportRedistributeArgsDict']]]]
+        """
+        Enable redistribution of replicated route protocol
+        """
+        route_policy: NotRequired[pulumi.Input[str]]
+        """
+        Select a Route Policy to enable route leaking from this Service VPN to Global VPN
+        """
+elif False:
+    CiscoVpnFeatureTemplateRouteGlobalExportArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoVpnFeatureTemplateRouteGlobalExportArgs:
     def __init__(__self__, *,
@@ -17986,6 +23359,28 @@ class CiscoVpnFeatureTemplateRouteGlobalExportArgs:
         pulumi.set(self, "route_policy", value)
 
 
+if not MYPY:
+    class CiscoVpnFeatureTemplateRouteGlobalExportRedistributeArgsDict(TypedDict):
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Select a Route Protocol to enable redistribution
+          - Choices: `bgp`, `ospf`
+        """
+        protocol_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        route_policy: NotRequired[pulumi.Input[str]]
+        """
+        Select a Route Policy to enable redistribution
+        """
+elif False:
+    CiscoVpnFeatureTemplateRouteGlobalExportRedistributeArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoVpnFeatureTemplateRouteGlobalExportRedistributeArgs:
     def __init__(__self__, *,
@@ -18058,6 +23453,40 @@ class CiscoVpnFeatureTemplateRouteGlobalExportRedistributeArgs:
     def route_policy(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "route_policy", value)
 
+
+if not MYPY:
+    class CiscoVpnFeatureTemplateRouteGlobalImportArgsDict(TypedDict):
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Select a Route Protocol to enable route leaking from Global VPN to this Service VPN
+          - Choices: `static`, `connected`, `bgp`, `ospf`
+        """
+        protocol_sub_type_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        protocol_sub_types: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        - Default value: `external`
+        """
+        protocol_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        redistributes: NotRequired[pulumi.Input[Sequence[pulumi.Input['CiscoVpnFeatureTemplateRouteGlobalImportRedistributeArgsDict']]]]
+        """
+        Enable redistribution of replicated route protocol
+        """
+        route_policy: NotRequired[pulumi.Input[str]]
+        """
+        Select a Route Policy to enable route leaking from Global VPN to this Service VPN
+        """
+elif False:
+    CiscoVpnFeatureTemplateRouteGlobalImportArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoVpnFeatureTemplateRouteGlobalImportArgs:
@@ -18180,6 +23609,28 @@ class CiscoVpnFeatureTemplateRouteGlobalImportArgs:
         pulumi.set(self, "route_policy", value)
 
 
+if not MYPY:
+    class CiscoVpnFeatureTemplateRouteGlobalImportRedistributeArgsDict(TypedDict):
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Select a Route Protocol to enable redistribution
+          - Choices: `bgp`, `eigrp`, `ospf`
+        """
+        protocol_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        route_policy: NotRequired[pulumi.Input[str]]
+        """
+        Select a Route Policy to enable redistribution
+        """
+elif False:
+    CiscoVpnFeatureTemplateRouteGlobalImportRedistributeArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoVpnFeatureTemplateRouteGlobalImportRedistributeArgs:
     def __init__(__self__, *,
@@ -18252,6 +23703,54 @@ class CiscoVpnFeatureTemplateRouteGlobalImportRedistributeArgs:
     def route_policy(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "route_policy", value)
 
+
+if not MYPY:
+    class CiscoVpnFeatureTemplateRouteVpnImportArgsDict(TypedDict):
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Select a Route Protocol to enable route leaking to current VPN
+          - Choices: `static`, `connected`, `bgp`, `ospf`, `eigrp`
+        """
+        protocol_sub_type_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        protocol_sub_types: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        - Default value: `external`
+        """
+        protocol_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        redistributes: NotRequired[pulumi.Input[Sequence[pulumi.Input['CiscoVpnFeatureTemplateRouteVpnImportRedistributeArgsDict']]]]
+        """
+        Enable redistribution of replicated route protocol
+        """
+        route_policy: NotRequired[pulumi.Input[str]]
+        """
+        Select a Route Policy to enable route leaking to current VPN
+        """
+        route_policy_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        source_vpn_id: NotRequired[pulumi.Input[int]]
+        """
+        Select a Source VPN where route leaks from
+          - Range: `1`-`65530`
+          - Default value: `1`
+        """
+        source_vpn_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoVpnFeatureTemplateRouteVpnImportArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoVpnFeatureTemplateRouteVpnImportArgs:
@@ -18426,6 +23925,32 @@ class CiscoVpnFeatureTemplateRouteVpnImportArgs:
         pulumi.set(self, "source_vpn_id_variable", value)
 
 
+if not MYPY:
+    class CiscoVpnFeatureTemplateRouteVpnImportRedistributeArgsDict(TypedDict):
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Select a Route Protocol to enable redistribution
+          - Choices: `bgp`, `eigrp`, `ospf`
+        """
+        protocol_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        route_policy: NotRequired[pulumi.Input[str]]
+        """
+        Select a Route Policy to enable redistribution
+        """
+        route_policy_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoVpnFeatureTemplateRouteVpnImportRedistributeArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoVpnFeatureTemplateRouteVpnImportRedistributeArgs:
     def __init__(__self__, *,
@@ -18514,6 +24039,45 @@ class CiscoVpnFeatureTemplateRouteVpnImportRedistributeArgs:
     def route_policy_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "route_policy_variable", value)
 
+
+if not MYPY:
+    class CiscoVpnFeatureTemplateServiceArgsDict(TypedDict):
+        address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        addresses: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        List of IPv4 address
+        """
+        interface: NotRequired[pulumi.Input[str]]
+        """
+        Tracking Service
+        """
+        interface_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        service_types: NotRequired[pulumi.Input[str]]
+        """
+        Service Type
+          - Choices: `FW`, `IDS`, `IDP`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `TE`, `appqoe`
+        """
+        track_enable: NotRequired[pulumi.Input[bool]]
+        """
+        Tracking Service
+          - Default value: `true`
+        """
+        track_enable_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoVpnFeatureTemplateServiceArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoVpnFeatureTemplateServiceArgs:
@@ -18653,6 +24217,57 @@ class CiscoVpnFeatureTemplateServiceArgs:
     def track_enable_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "track_enable_variable", value)
 
+
+if not MYPY:
+    class CiscoVpnFeatureTemplateStaticNatRuleArgsDict(TypedDict):
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        pool_name: NotRequired[pulumi.Input[int]]
+        """
+        NAT Pool Name, natpool1..31
+        """
+        pool_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        source_ip: NotRequired[pulumi.Input[str]]
+        """
+        Source IP address to be translated
+        """
+        source_ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        static_nat_direction: NotRequired[pulumi.Input[str]]
+        """
+        Direction of static NAT translation
+          - Choices: `inside`, `outside`
+        """
+        static_nat_direction_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        tracker_id: NotRequired[pulumi.Input[int]]
+        """
+        Add Object/Object Group Tracker
+          - Range: `1`-`1000`
+        """
+        tracker_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        translate_ip: NotRequired[pulumi.Input[str]]
+        """
+        Statically translated source IP address
+        """
+        translate_ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoVpnFeatureTemplateStaticNatRuleArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoVpnFeatureTemplateStaticNatRuleArgs:
@@ -18840,6 +24455,58 @@ class CiscoVpnFeatureTemplateStaticNatRuleArgs:
     def translate_ip_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "translate_ip_variable", value)
 
+
+if not MYPY:
+    class CiscoVpnFeatureTemplateStaticNatSubnetRuleArgsDict(TypedDict):
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        prefix_length: NotRequired[pulumi.Input[int]]
+        """
+        Network Prefix Length
+          - Range: `1`-`32`
+        """
+        prefix_length_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        source_ip_subnet: NotRequired[pulumi.Input[str]]
+        """
+        Source IP Subnet to be translated
+        """
+        source_ip_subnet_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        static_nat_direction: NotRequired[pulumi.Input[str]]
+        """
+        Direction of static NAT translation
+          - Choices: `inside`, `outside`
+        """
+        static_nat_direction_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        tracker_id: NotRequired[pulumi.Input[int]]
+        """
+        Add Object/Object Group Tracker
+          - Range: `1`-`1000`
+        """
+        tracker_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        translate_ip_subnet: NotRequired[pulumi.Input[str]]
+        """
+        Statically translated source IP Subnet
+        """
+        translate_ip_subnet_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoVpnFeatureTemplateStaticNatSubnetRuleArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoVpnFeatureTemplateStaticNatSubnetRuleArgs:
@@ -19030,6 +24697,28 @@ class CiscoVpnFeatureTemplateStaticNatSubnetRuleArgs:
         pulumi.set(self, "translate_ip_subnet_variable", value)
 
 
+if not MYPY:
+    class CiscoVpnInterfaceFeatureTemplateAccessListArgsDict(TypedDict):
+        acl_name: NotRequired[pulumi.Input[str]]
+        """
+        Name of access list
+        """
+        acl_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        direction: NotRequired[pulumi.Input[str]]
+        """
+        Direction
+          - Choices: `in`, `out`
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    CiscoVpnInterfaceFeatureTemplateAccessListArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoVpnInterfaceFeatureTemplateAccessListArgs:
     def __init__(__self__, *,
@@ -19103,6 +24792,23 @@ class CiscoVpnInterfaceFeatureTemplateAccessListArgs:
         pulumi.set(self, "optional", value)
 
 
+if not MYPY:
+    class CiscoVpnInterfaceFeatureTemplateIpv4SecondaryAddressArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        IP Address
+        """
+        address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    CiscoVpnInterfaceFeatureTemplateIpv4SecondaryAddressArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoVpnInterfaceFeatureTemplateIpv4SecondaryAddressArgs:
     def __init__(__self__, *,
@@ -19157,6 +24863,87 @@ class CiscoVpnInterfaceFeatureTemplateIpv4SecondaryAddressArgs:
     def optional(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "optional", value)
 
+
+if not MYPY:
+    class CiscoVpnInterfaceFeatureTemplateIpv4VrrpArgsDict(TypedDict):
+        group_id: NotRequired[pulumi.Input[int]]
+        """
+        Group ID
+          - Range: `1`-`255`
+        """
+        group_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ip_address: NotRequired[pulumi.Input[str]]
+        """
+        Assign IP Address
+        """
+        ip_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ipv4_secondary_addresses: NotRequired[pulumi.Input[Sequence[pulumi.Input['CiscoVpnInterfaceFeatureTemplateIpv4VrrpIpv4SecondaryAddressArgsDict']]]]
+        """
+        VRRP Secondary IP address
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        priority: NotRequired[pulumi.Input[int]]
+        """
+        Set priority
+          - Range: `1`-`254`
+          - Default value: `100`
+        """
+        priority_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        timer: NotRequired[pulumi.Input[int]]
+        """
+        Timer interval for successive advertisements, in milliseconds
+          - Range: `100`-`40950`
+          - Default value: `100`
+        """
+        timer_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        tloc_preference_change: NotRequired[pulumi.Input[bool]]
+        """
+        change TLOC preference
+          - Default value: `false`
+        """
+        tloc_preference_change_value: NotRequired[pulumi.Input[int]]
+        """
+        Set tloc preference change value
+          - Range: `1`-`4294967295`
+        """
+        tloc_preference_change_value_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        track_omp: NotRequired[pulumi.Input[bool]]
+        """
+        Track OMP status
+          - Default value: `false`
+        """
+        track_prefix_list: NotRequired[pulumi.Input[str]]
+        """
+        Track Prefix List
+        """
+        track_prefix_list_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        tracking_objects: NotRequired[pulumi.Input[Sequence[pulumi.Input['CiscoVpnInterfaceFeatureTemplateIpv4VrrpTrackingObjectArgsDict']]]]
+        """
+        tracking object for VRRP configuration
+        """
+elif False:
+    CiscoVpnInterfaceFeatureTemplateIpv4VrrpArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoVpnInterfaceFeatureTemplateIpv4VrrpArgs:
@@ -19453,6 +25240,23 @@ class CiscoVpnInterfaceFeatureTemplateIpv4VrrpArgs:
         pulumi.set(self, "tracking_objects", value)
 
 
+if not MYPY:
+    class CiscoVpnInterfaceFeatureTemplateIpv4VrrpIpv4SecondaryAddressArgsDict(TypedDict):
+        ip_address: NotRequired[pulumi.Input[str]]
+        """
+        VRRP Secondary IP address
+        """
+        ip_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    CiscoVpnInterfaceFeatureTemplateIpv4VrrpIpv4SecondaryAddressArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoVpnInterfaceFeatureTemplateIpv4VrrpIpv4SecondaryAddressArgs:
     def __init__(__self__, *,
@@ -19507,6 +25311,43 @@ class CiscoVpnInterfaceFeatureTemplateIpv4VrrpIpv4SecondaryAddressArgs:
     def optional(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "optional", value)
 
+
+if not MYPY:
+    class CiscoVpnInterfaceFeatureTemplateIpv4VrrpTrackingObjectArgsDict(TypedDict):
+        decrement_value: NotRequired[pulumi.Input[int]]
+        """
+        Decrement Value for VRRP priority
+          - Range: `1`-`255`
+        """
+        decrement_value_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        track_action: NotRequired[pulumi.Input[str]]
+        """
+        Track Action
+          - Choices: `decrement`, `shutdown`
+          - Default value: `decrement`
+        """
+        track_action_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        tracker_id: NotRequired[pulumi.Input[int]]
+        """
+        Tracker ID
+          - Range: `1`-`1000`
+        """
+        tracker_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoVpnInterfaceFeatureTemplateIpv4VrrpTrackingObjectArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoVpnInterfaceFeatureTemplateIpv4VrrpTrackingObjectArgs:
@@ -19635,6 +25476,28 @@ class CiscoVpnInterfaceFeatureTemplateIpv4VrrpTrackingObjectArgs:
         pulumi.set(self, "tracker_id_variable", value)
 
 
+if not MYPY:
+    class CiscoVpnInterfaceFeatureTemplateIpv6AccessListArgsDict(TypedDict):
+        acl_name: NotRequired[pulumi.Input[str]]
+        """
+        Name of access list
+        """
+        acl_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        direction: NotRequired[pulumi.Input[str]]
+        """
+        Direction
+          - Choices: `in`, `out`
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    CiscoVpnInterfaceFeatureTemplateIpv6AccessListArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoVpnInterfaceFeatureTemplateIpv6AccessListArgs:
     def __init__(__self__, *,
@@ -19707,6 +25570,32 @@ class CiscoVpnInterfaceFeatureTemplateIpv6AccessListArgs:
     def optional(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "optional", value)
 
+
+if not MYPY:
+    class CiscoVpnInterfaceFeatureTemplateIpv6DhcpHelperArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        DHCPv6 Helper address
+        """
+        address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        vpn_id: NotRequired[pulumi.Input[int]]
+        """
+        DHCPv6 Helper VPN
+          - Range: `1`-`65536`
+        """
+        vpn_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoVpnInterfaceFeatureTemplateIpv6DhcpHelperArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoVpnInterfaceFeatureTemplateIpv6DhcpHelperArgs:
@@ -19797,6 +25686,23 @@ class CiscoVpnInterfaceFeatureTemplateIpv6DhcpHelperArgs:
         pulumi.set(self, "vpn_id_variable", value)
 
 
+if not MYPY:
+    class CiscoVpnInterfaceFeatureTemplateIpv6SecondaryAddressArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        IPv6 Address
+        """
+        address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    CiscoVpnInterfaceFeatureTemplateIpv6SecondaryAddressArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoVpnInterfaceFeatureTemplateIpv6SecondaryAddressArgs:
     def __init__(__self__, *,
@@ -19851,6 +25757,65 @@ class CiscoVpnInterfaceFeatureTemplateIpv6SecondaryAddressArgs:
     def optional(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "optional", value)
 
+
+if not MYPY:
+    class CiscoVpnInterfaceFeatureTemplateIpv6VrrpArgsDict(TypedDict):
+        group_id: NotRequired[pulumi.Input[int]]
+        """
+        Group ID
+          - Range: `1`-`255`
+        """
+        group_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ipv6_addresses: NotRequired[pulumi.Input[Sequence[pulumi.Input['CiscoVpnInterfaceFeatureTemplateIpv6VrrpIpv6AddressArgsDict']]]]
+        """
+        IPv6 VRRP
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        priority: NotRequired[pulumi.Input[int]]
+        """
+        Set priority
+          - Range: `1`-`254`
+          - Default value: `100`
+        """
+        priority_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        timer: NotRequired[pulumi.Input[int]]
+        """
+        Timer interval for successive advertisements, in milliseconds
+          - Range: `100`-`40950`
+          - Default value: `100`
+        """
+        timer_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        track_omp: NotRequired[pulumi.Input[bool]]
+        """
+        Track OMP status
+          - Default value: `false`
+        """
+        track_omp_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        track_prefix_list: NotRequired[pulumi.Input[str]]
+        """
+        Track Prefix List
+        """
+        track_prefix_list_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoVpnInterfaceFeatureTemplateIpv6VrrpArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoVpnInterfaceFeatureTemplateIpv6VrrpArgs:
@@ -20063,6 +26028,31 @@ class CiscoVpnInterfaceFeatureTemplateIpv6VrrpArgs:
         pulumi.set(self, "track_prefix_list_variable", value)
 
 
+if not MYPY:
+    class CiscoVpnInterfaceFeatureTemplateIpv6VrrpIpv6AddressArgsDict(TypedDict):
+        ipv6_link_local: NotRequired[pulumi.Input[str]]
+        """
+        Use link-local IPv6 Address
+        """
+        ipv6_link_local_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        prefix: NotRequired[pulumi.Input[str]]
+        """
+        Assign Global IPv6 Prefix
+        """
+        prefix_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoVpnInterfaceFeatureTemplateIpv6VrrpIpv6AddressArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoVpnInterfaceFeatureTemplateIpv6VrrpIpv6AddressArgs:
     def __init__(__self__, *,
@@ -20150,6 +26140,31 @@ class CiscoVpnInterfaceFeatureTemplateIpv6VrrpIpv6AddressArgs:
         pulumi.set(self, "prefix_variable", value)
 
 
+if not MYPY:
+    class CiscoVpnInterfaceFeatureTemplateStaticArpArgsDict(TypedDict):
+        ip_address: NotRequired[pulumi.Input[str]]
+        """
+        IP Address
+        """
+        ip_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        mac: NotRequired[pulumi.Input[str]]
+        """
+        MAC address
+        """
+        mac_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    CiscoVpnInterfaceFeatureTemplateStaticArpArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoVpnInterfaceFeatureTemplateStaticArpArgs:
     def __init__(__self__, *,
@@ -20236,6 +26251,41 @@ class CiscoVpnInterfaceFeatureTemplateStaticArpArgs:
     def optional(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "optional", value)
 
+
+if not MYPY:
+    class CiscoVpnInterfaceFeatureTemplateStaticNat66EntryArgsDict(TypedDict):
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        source_prefix: NotRequired[pulumi.Input[str]]
+        """
+        Source Prefix
+        """
+        source_prefix_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        source_vpn_id: NotRequired[pulumi.Input[int]]
+        """
+        Source VPN ID
+          - Range: `0`-`65530`
+          - Default value: `0`
+        """
+        source_vpn_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        translated_source_prefix: NotRequired[pulumi.Input[str]]
+        """
+        Translated Source Prefix
+        """
+        translated_source_prefix_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoVpnInterfaceFeatureTemplateStaticNat66EntryArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoVpnInterfaceFeatureTemplateStaticNat66EntryArgs:
@@ -20359,6 +26409,51 @@ class CiscoVpnInterfaceFeatureTemplateStaticNat66EntryArgs:
     def translated_source_prefix_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "translated_source_prefix_variable", value)
 
+
+if not MYPY:
+    class CiscoVpnInterfaceFeatureTemplateStaticNatEntryArgsDict(TypedDict):
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        source_ip: NotRequired[pulumi.Input[str]]
+        """
+        Source IP address to be translated
+        """
+        source_ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        source_vpn_id: NotRequired[pulumi.Input[int]]
+        """
+        Configure VPN ID
+          - Range: `0`-`65530`
+          - Default value: `0`
+        """
+        source_vpn_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        static_nat_direction: NotRequired[pulumi.Input[str]]
+        """
+        Direction of static NAT translation
+          - Choices: `inside`, `outside`
+          - Default value: `inside`
+        """
+        static_nat_direction_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        translate_ip: NotRequired[pulumi.Input[str]]
+        """
+        Statically translated source IP address
+        """
+        translate_ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoVpnInterfaceFeatureTemplateStaticNatEntryArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoVpnInterfaceFeatureTemplateStaticNatEntryArgs:
@@ -20518,6 +26613,80 @@ class CiscoVpnInterfaceFeatureTemplateStaticNatEntryArgs:
     def translate_ip_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "translate_ip_variable", value)
 
+
+if not MYPY:
+    class CiscoVpnInterfaceFeatureTemplateStaticPortForwardEntryArgsDict(TypedDict):
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Protocol
+          - Choices: `tcp`, `udp`
+        """
+        protocol_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        source_ip: NotRequired[pulumi.Input[str]]
+        """
+        Source IP address to be translated
+        """
+        source_ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        source_port: NotRequired[pulumi.Input[int]]
+        """
+        Source Port
+          - Range: `0`-`65535`
+          - Default value: `0`
+        """
+        source_port_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        source_vpn_id: NotRequired[pulumi.Input[int]]
+        """
+        Configure VPN ID
+          - Range: `0`-`65530`
+          - Default value: `0`
+        """
+        source_vpn_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        static_nat_direction: NotRequired[pulumi.Input[str]]
+        """
+        Direction of static NAT translation
+          - Choices: `inside`, `outside`
+          - Default value: `inside`
+        """
+        static_nat_direction_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        translate_ip: NotRequired[pulumi.Input[str]]
+        """
+        Statically translated source IP address
+        """
+        translate_ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        translate_port: NotRequired[pulumi.Input[int]]
+        """
+        Translate Port
+          - Range: `0`-`65535`
+          - Default value: `0`
+        """
+        translate_port_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoVpnInterfaceFeatureTemplateStaticPortForwardEntryArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoVpnInterfaceFeatureTemplateStaticPortForwardEntryArgs:
@@ -20784,6 +26953,39 @@ class CiscoVpnInterfaceFeatureTemplateStaticPortForwardEntryArgs:
         pulumi.set(self, "translate_port_variable", value)
 
 
+if not MYPY:
+    class CiscoVpnInterfaceFeatureTemplateTunnelInterfaceEncapsulationArgsDict(TypedDict):
+        encapsulation: NotRequired[pulumi.Input[str]]
+        """
+        Encapsulation
+          - Choices: `gre`, `ipsec`
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        preference: NotRequired[pulumi.Input[int]]
+        """
+        Set preference for TLOC
+          - Range: `0`-`4294967295`
+        """
+        preference_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        weight: NotRequired[pulumi.Input[int]]
+        """
+        Set weight for TLOC
+          - Range: `1`-`255`
+          - Default value: `1`
+        """
+        weight_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    CiscoVpnInterfaceFeatureTemplateTunnelInterfaceEncapsulationArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoVpnInterfaceFeatureTemplateTunnelInterfaceEncapsulationArgs:
     def __init__(__self__, *,
@@ -20895,6 +27097,28 @@ class CiscoVpnInterfaceFeatureTemplateTunnelInterfaceEncapsulationArgs:
         pulumi.set(self, "weight_variable", value)
 
 
+if not MYPY:
+    class CiscoVpnInterfaceGreFeatureTemplateAccessListArgsDict(TypedDict):
+        acl_name: NotRequired[pulumi.Input[str]]
+        """
+        Name of access list
+        """
+        acl_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        direction: NotRequired[pulumi.Input[str]]
+        """
+        Direction
+          - Choices: `in`, `out`
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    CiscoVpnInterfaceGreFeatureTemplateAccessListArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CiscoVpnInterfaceGreFeatureTemplateAccessListArgs:
     def __init__(__self__, *,
@@ -20967,6 +27191,106 @@ class CiscoVpnInterfaceGreFeatureTemplateAccessListArgs:
     def optional(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "optional", value)
 
+
+if not MYPY:
+    class CiscoWirelessLanFeatureTemplateSsidArgsDict(TypedDict):
+        admin_state: NotRequired[pulumi.Input[bool]]
+        """
+        Set admin state
+          - Default value: `true`
+        """
+        admin_state_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        broadcast_ssid: NotRequired[pulumi.Input[bool]]
+        """
+        Enable broadcast SSID
+          - Default value: `true`
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        passphrase: NotRequired[pulumi.Input[str]]
+        """
+        Set passphrase
+        """
+        passphrase_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        qos_profile: NotRequired[pulumi.Input[str]]
+        """
+        Select QoS profile
+          - Choices: `platinum`, `gold`, `silver`, `bronze`
+          - Default value: `silver`
+        """
+        qos_profile_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        radio_type: NotRequired[pulumi.Input[str]]
+        """
+        Select radio type
+          - Choices: `24ghz`, `5ghz`, `all`
+          - Default value: `all`
+        """
+        radio_type_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        radius_server_ip: NotRequired[pulumi.Input[str]]
+        """
+        Set RADIUS server IP
+        """
+        radius_server_ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        radius_server_port: NotRequired[pulumi.Input[int]]
+        """
+        Set RADIUS server authentication port
+          - Range: `1`-`65535`
+          - Default value: `1812`
+        """
+        radius_server_port_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        radius_server_secret: NotRequired[pulumi.Input[str]]
+        """
+        Set RADIUS server shared secret
+        """
+        radius_server_secret_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        security_type: NotRequired[pulumi.Input[str]]
+        """
+        Select security type
+          - Choices: `enterprise`, `personal`, `open`
+          - Default value: `personal`
+        """
+        security_type_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        vlan_id: NotRequired[pulumi.Input[int]]
+        """
+        Set VLAN ID
+          - Range: `1`-`4094`
+        """
+        vlan_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        wireless_network_name: NotRequired[pulumi.Input[str]]
+        """
+        Configure wlan SSID
+        """
+elif False:
+    CiscoWirelessLanFeatureTemplateSsidArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CiscoWirelessLanFeatureTemplateSsidArgs:
@@ -21333,6 +27657,16 @@ class CiscoWirelessLanFeatureTemplateSsidArgs:
         pulumi.set(self, "wireless_network_name", value)
 
 
+if not MYPY:
+    class ColorListPolicyObjectEntryArgsDict(TypedDict):
+        color: pulumi.Input[str]
+        """
+        Color
+          - Choices: `default`, `3g`, `biz-internet`, `blue`, `bronze`, `custom1`, `custom2`, `custom3`, `gold`, `green`, `lte`, `metro-ethernet`, `mpls`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`, `public-internet`, `red`, `silver`
+        """
+elif False:
+    ColorListPolicyObjectEntryArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ColorListPolicyObjectEntryArgs:
     def __init__(__self__, *,
@@ -21357,6 +27691,15 @@ class ColorListPolicyObjectEntryArgs:
         pulumi.set(self, "color", value)
 
 
+if not MYPY:
+    class ConfigurationGroupFeatureProfileArgsDict(TypedDict):
+        id: NotRequired[pulumi.Input[str]]
+        """
+        Feature profile ID
+        """
+elif False:
+    ConfigurationGroupFeatureProfileArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ConfigurationGroupFeatureProfileArgs:
     def __init__(__self__, *,
@@ -21379,6 +27722,24 @@ class ConfigurationGroupFeatureProfileArgs:
     def id(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "id", value)
 
+
+if not MYPY:
+    class ConfigurationGroupTopologyDeviceArgsDict(TypedDict):
+        criteria_attribute: pulumi.Input[str]
+        """
+        Criteria attribute
+          - Choices: `tag`
+        """
+        criteria_value: NotRequired[pulumi.Input[str]]
+        """
+        Criteria value
+        """
+        unsupported_features: NotRequired[pulumi.Input[Sequence[pulumi.Input['ConfigurationGroupTopologyDeviceUnsupportedFeatureArgsDict']]]]
+        """
+        List of unsupported features
+        """
+elif False:
+    ConfigurationGroupTopologyDeviceArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ConfigurationGroupTopologyDeviceArgs:
@@ -21436,6 +27797,20 @@ class ConfigurationGroupTopologyDeviceArgs:
         pulumi.set(self, "unsupported_features", value)
 
 
+if not MYPY:
+    class ConfigurationGroupTopologyDeviceUnsupportedFeatureArgsDict(TypedDict):
+        parcel_id: NotRequired[pulumi.Input[str]]
+        """
+        Parcel ID
+        """
+        parcel_type: NotRequired[pulumi.Input[str]]
+        """
+        Parcel type
+          - Choices: `wan/vpn/interface/gre`, `wan/vpn/interface/ethernet`, `wan/vpn/interface/cellular`, `wan/vpn/interface/ipsec`, `wan/vpn/interface/serial`, `routing/ospf`, `lan/vpn/interface/ethernet`, `lan/vpn/interface/svi`, `lan/vpn/interface/ipsec`, `lan/vpn`
+        """
+elif False:
+    ConfigurationGroupTopologyDeviceUnsupportedFeatureArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ConfigurationGroupTopologyDeviceUnsupportedFeatureArgs:
     def __init__(__self__, *,
@@ -21476,6 +27851,42 @@ class ConfigurationGroupTopologyDeviceUnsupportedFeatureArgs:
     def parcel_type(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "parcel_type", value)
 
+
+if not MYPY:
+    class CustomControlTopologyPolicyDefinitionSequenceArgsDict(TypedDict):
+        id: pulumi.Input[int]
+        """
+        Sequence ID
+        """
+        name: pulumi.Input[str]
+        """
+        Sequence name
+        """
+        action_entries: NotRequired[pulumi.Input[Sequence[pulumi.Input['CustomControlTopologyPolicyDefinitionSequenceActionEntryArgsDict']]]]
+        """
+        List of action entries
+        """
+        base_action: NotRequired[pulumi.Input[str]]
+        """
+        Base action, either `accept` or `reject`
+          - Choices: `accept`, `reject`
+        """
+        ip_type: NotRequired[pulumi.Input[str]]
+        """
+        Sequence IP type, either `ipv4`, `ipv6` or `all`
+          - Choices: `ipv4`, `ipv6`, `all`
+        """
+        match_entries: NotRequired[pulumi.Input[Sequence[pulumi.Input['CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgsDict']]]]
+        """
+        List of match entries
+        """
+        type: NotRequired[pulumi.Input[str]]
+        """
+        Sequence type, either `route` or `tloc`
+          - Choices: `route`, `tloc`
+        """
+elif False:
+    CustomControlTopologyPolicyDefinitionSequenceArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CustomControlTopologyPolicyDefinitionSequenceArgs:
@@ -21600,6 +28011,28 @@ class CustomControlTopologyPolicyDefinitionSequenceArgs:
         pulumi.set(self, "type", value)
 
 
+if not MYPY:
+    class CustomControlTopologyPolicyDefinitionSequenceActionEntryArgsDict(TypedDict):
+        type: pulumi.Input[str]
+        """
+        Type of action entry
+          - Choices: `set`, `exportTo`
+        """
+        export_to_vpn_list_id: NotRequired[pulumi.Input[str]]
+        """
+        Export to VPN list ID
+        """
+        export_to_vpn_list_version: NotRequired[pulumi.Input[int]]
+        """
+        Export to VPN list version
+        """
+        set_parameters: NotRequired[pulumi.Input[Sequence[pulumi.Input['CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameterArgsDict']]]]
+        """
+        List of set parameters
+        """
+elif False:
+    CustomControlTopologyPolicyDefinitionSequenceActionEntryArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CustomControlTopologyPolicyDefinitionSequenceActionEntryArgs:
     def __init__(__self__, *,
@@ -21671,6 +28104,91 @@ class CustomControlTopologyPolicyDefinitionSequenceActionEntryArgs:
     def set_parameters(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameterArgs']]]]):
         pulumi.set(self, "set_parameters", value)
 
+
+if not MYPY:
+    class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameterArgsDict(TypedDict):
+        type: pulumi.Input[str]
+        """
+        Type of set parameter
+          - Choices: `tlocList`, `tloc`, `tlocAction`, `preference`, `ompTag`, `community`, `communityAdditive`, `service`
+        """
+        community: NotRequired[pulumi.Input[str]]
+        """
+        Community value, e.g. `1000:10000` or `internet` or `local-AS`
+        """
+        community_additive: NotRequired[pulumi.Input[bool]]
+        """
+        Community additive
+        """
+        omp_tag: NotRequired[pulumi.Input[int]]
+        """
+        OMP tag
+          - Range: `0`-`4294967295`
+        """
+        preference: NotRequired[pulumi.Input[int]]
+        """
+        Preference
+          - Range: `0`-`4294967295`
+        """
+        service_tloc_color: NotRequired[pulumi.Input[str]]
+        """
+        Service TLOC color
+        """
+        service_tloc_encapsulation: NotRequired[pulumi.Input[str]]
+        """
+        Service TLOC encapsulation
+          - Choices: `ipsec`, `gre`
+        """
+        service_tloc_ip: NotRequired[pulumi.Input[str]]
+        """
+        Service TLOC IP address
+        """
+        service_tloc_list_id: NotRequired[pulumi.Input[str]]
+        """
+        Service TLOC list ID
+        """
+        service_tloc_list_version: NotRequired[pulumi.Input[int]]
+        """
+        Service TLOC list version
+        """
+        service_type: NotRequired[pulumi.Input[str]]
+        """
+        Service type
+          - Choices: `FW`, `IDP`, `IDS`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `netsvc5`
+        """
+        service_vpn_id: NotRequired[pulumi.Input[int]]
+        """
+        Service VPN ID
+          - Range: `0`-`65536`
+        """
+        tloc_action: NotRequired[pulumi.Input[str]]
+        """
+        TLOC action
+          - Choices: `strict`, `primary`, `backup`, `ecmp`
+        """
+        tloc_color: NotRequired[pulumi.Input[str]]
+        """
+        TLOC color
+        """
+        tloc_encapsulation: NotRequired[pulumi.Input[str]]
+        """
+        TLOC encapsulation
+          - Choices: `ipsec`, `gre`
+        """
+        tloc_ip: NotRequired[pulumi.Input[str]]
+        """
+        TLOC IP address
+        """
+        tloc_list_id: NotRequired[pulumi.Input[str]]
+        """
+        TLOC list ID
+        """
+        tloc_list_version: NotRequired[pulumi.Input[int]]
+        """
+        TLOC list version
+        """
+elif False:
+    CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameterArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameterArgs:
@@ -21981,6 +28499,134 @@ class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameterArgs:
     def tloc_list_version(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "tloc_list_version", value)
 
+
+if not MYPY:
+    class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgsDict(TypedDict):
+        type: pulumi.Input[str]
+        """
+        Type of match entry
+          - Choices: `colorList`, `community`, `expandedCommunity`, `ompTag`, `origin`, `originator`, `preference`, `siteList`, `pathType`, `tlocList`, `vpnList`, `prefixList`, `vpn`, `tloc`, `siteId`, `carrier`, `domainId`, `groupId`
+        """
+        carrier: NotRequired[pulumi.Input[str]]
+        """
+        Carrier
+          - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+        """
+        color_list_id: NotRequired[pulumi.Input[str]]
+        """
+        Color list ID
+        """
+        color_list_version: NotRequired[pulumi.Input[int]]
+        """
+        Color list version
+        """
+        community_list_id: NotRequired[pulumi.Input[str]]
+        """
+        Community list ID
+        """
+        community_list_version: NotRequired[pulumi.Input[int]]
+        """
+        Community list version
+        """
+        domain_id: NotRequired[pulumi.Input[int]]
+        """
+        Domain ID
+          - Range: `0`-`4294967295`
+        """
+        expanded_community_list_id: NotRequired[pulumi.Input[str]]
+        """
+        Expanded community list ID
+        """
+        expanded_community_list_version: NotRequired[pulumi.Input[int]]
+        """
+        Expanded community list version
+        """
+        group_id: NotRequired[pulumi.Input[int]]
+        """
+        Group ID
+          - Range: `0`-`4294967295`
+        """
+        omp_tag: NotRequired[pulumi.Input[int]]
+        """
+        OMP tag
+          - Range: `0`-`4294967295`
+        """
+        origin: NotRequired[pulumi.Input[str]]
+        """
+        Origin
+          - Choices: `igp`, `egp`, `incomplete`, `aggregrate`, `bgp`, `bgp-external`, `bgp-internal`, `connected`, `eigrp`, `ospf`, `ospf-inter-area`, `ospf-intra-area`, `ospf-external1`, `ospf-external2`, `rip`, `static`, `eigrp-summary`, `eigrp-internal`, `eigrp-external`, `lisp`, `nat-dia`, `natpool`, `isis`, `isis-level1`, `isis-level2`
+        """
+        originator: NotRequired[pulumi.Input[str]]
+        """
+        Originator IP
+        """
+        path_type: NotRequired[pulumi.Input[str]]
+        """
+        Path type
+          - Choices: `hierarchical-path`, `direct-path`, `transport-gateway-path`
+        """
+        preference: NotRequired[pulumi.Input[int]]
+        """
+        Preference
+          - Range: `0`-`4294967295`
+        """
+        prefix_list_id: NotRequired[pulumi.Input[str]]
+        """
+        Prefix list ID
+        """
+        prefix_list_version: NotRequired[pulumi.Input[int]]
+        """
+        Prefix list version
+        """
+        site_id: NotRequired[pulumi.Input[int]]
+        """
+        Site ID
+          - Range: `0`-`4294967295`
+        """
+        site_list_id: NotRequired[pulumi.Input[str]]
+        """
+        Site list ID
+        """
+        site_list_version: NotRequired[pulumi.Input[int]]
+        """
+        Site list version
+        """
+        tloc_color: NotRequired[pulumi.Input[str]]
+        """
+        TLOC color
+        """
+        tloc_encapsulation: NotRequired[pulumi.Input[str]]
+        """
+        TLOC encapsulation
+          - Choices: `ipsec`, `gre`
+        """
+        tloc_ip: NotRequired[pulumi.Input[str]]
+        """
+        TLOC IP address
+        """
+        tloc_list_id: NotRequired[pulumi.Input[str]]
+        """
+        TLOC list ID
+        """
+        tloc_list_version: NotRequired[pulumi.Input[int]]
+        """
+        TLOC list version
+        """
+        vpn_id: NotRequired[pulumi.Input[int]]
+        """
+        VPN ID
+          - Range: `0`-`65536`
+        """
+        vpn_list_id: NotRequired[pulumi.Input[str]]
+        """
+        VPN list ID
+        """
+        vpn_list_version: NotRequired[pulumi.Input[int]]
+        """
+        VPN list version
+        """
+elif False:
+    CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs:
@@ -22458,6 +29104,15 @@ class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs:
         pulumi.set(self, "vpn_list_version", value)
 
 
+if not MYPY:
+    class DataFqdnPrefixListPolicyObjectEntryArgsDict(TypedDict):
+        fqdn: pulumi.Input[str]
+        """
+        Fully qualified domain name
+        """
+elif False:
+    DataFqdnPrefixListPolicyObjectEntryArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class DataFqdnPrefixListPolicyObjectEntryArgs:
     def __init__(__self__, *,
@@ -22479,6 +29134,15 @@ class DataFqdnPrefixListPolicyObjectEntryArgs:
     def fqdn(self, value: pulumi.Input[str]):
         pulumi.set(self, "fqdn", value)
 
+
+if not MYPY:
+    class DataIpv4PrefixListPolicyObjectEntryArgsDict(TypedDict):
+        prefix: pulumi.Input[str]
+        """
+        IP prefix list entry, e.g. `10.0.0.0/12`
+        """
+elif False:
+    DataIpv4PrefixListPolicyObjectEntryArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class DataIpv4PrefixListPolicyObjectEntryArgs:
@@ -22502,6 +29166,15 @@ class DataIpv4PrefixListPolicyObjectEntryArgs:
         pulumi.set(self, "prefix", value)
 
 
+if not MYPY:
+    class DataIpv6PrefixListPolicyObjectEntryArgsDict(TypedDict):
+        prefix: pulumi.Input[str]
+        """
+        IP prefix list entry, e.g. `2001:0:0:1::/64`
+        """
+elif False:
+    DataIpv6PrefixListPolicyObjectEntryArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class DataIpv6PrefixListPolicyObjectEntryArgs:
     def __init__(__self__, *,
@@ -22523,6 +29196,27 @@ class DataIpv6PrefixListPolicyObjectEntryArgs:
     def prefix(self, value: pulumi.Input[str]):
         pulumi.set(self, "prefix", value)
 
+
+if not MYPY:
+    class DnsSecurityPolicyDefinitionTargetVpnArgsDict(TypedDict):
+        custom_dns_server_ip: NotRequired[pulumi.Input[str]]
+        """
+        Only relevant when `umbrella_dns_default` is `false`
+        """
+        local_domain_bypass_enabled: NotRequired[pulumi.Input[bool]]
+        """
+        Should the local domain bypass list be enabled
+        """
+        umbrella_dns_default: NotRequired[pulumi.Input[bool]]
+        """
+        Should use umbrella as DNS Server
+        """
+        vpn_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        VPN ID's separated by Comma
+        """
+elif False:
+    DnsSecurityPolicyDefinitionTargetVpnArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class DnsSecurityPolicyDefinitionTargetVpnArgs:
@@ -22595,6 +29289,15 @@ class DnsSecurityPolicyDefinitionTargetVpnArgs:
         pulumi.set(self, "vpn_ids", value)
 
 
+if not MYPY:
+    class DomainListPolicyObjectEntryArgsDict(TypedDict):
+        domain: NotRequired[pulumi.Input[str]]
+        """
+        Domain name, must not start with `*`
+        """
+elif False:
+    DomainListPolicyObjectEntryArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class DomainListPolicyObjectEntryArgs:
     def __init__(__self__, *,
@@ -22617,6 +29320,29 @@ class DomainListPolicyObjectEntryArgs:
     def domain(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "domain", value)
 
+
+if not MYPY:
+    class EigrpFeatureTemplateAddressFamilyArgsDict(TypedDict):
+        networks: NotRequired[pulumi.Input[Sequence[pulumi.Input['EigrpFeatureTemplateAddressFamilyNetworkArgsDict']]]]
+        """
+        Configure the networks for EIGRP to advertise
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        redistributes: NotRequired[pulumi.Input[Sequence[pulumi.Input['EigrpFeatureTemplateAddressFamilyRedistributeArgsDict']]]]
+        """
+        Redistribute routes into EIGRP
+        """
+        type: NotRequired[pulumi.Input[str]]
+        """
+        Set EIGRP address family
+          - Choices: `ipv4`
+          - Default value: `ipv4`
+        """
+elif False:
+    EigrpFeatureTemplateAddressFamilyArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class EigrpFeatureTemplateAddressFamilyArgs:
@@ -22693,6 +29419,23 @@ class EigrpFeatureTemplateAddressFamilyArgs:
         pulumi.set(self, "type", value)
 
 
+if not MYPY:
+    class EigrpFeatureTemplateAddressFamilyNetworkArgsDict(TypedDict):
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        prefix: NotRequired[pulumi.Input[str]]
+        """
+        Configure the prefixes for EIGRP to announce
+        """
+        prefix_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    EigrpFeatureTemplateAddressFamilyNetworkArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class EigrpFeatureTemplateAddressFamilyNetworkArgs:
     def __init__(__self__, *,
@@ -22747,6 +29490,32 @@ class EigrpFeatureTemplateAddressFamilyNetworkArgs:
     def prefix_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "prefix_variable", value)
 
+
+if not MYPY:
+    class EigrpFeatureTemplateAddressFamilyRedistributeArgsDict(TypedDict):
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Set the protocol to redistribute routes from
+          - Choices: `bgp`, `connected`, `nat-route`, `omp`, `ospf`, `ospfv3`, `static`
+        """
+        protocol_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        route_policy: NotRequired[pulumi.Input[str]]
+        """
+        Configure policy to apply to prefixes received from EIGRP neighbor
+        """
+        route_policy_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    EigrpFeatureTemplateAddressFamilyRedistributeArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class EigrpFeatureTemplateAddressFamilyRedistributeArgs:
@@ -22836,6 +29605,36 @@ class EigrpFeatureTemplateAddressFamilyRedistributeArgs:
     def route_policy_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "route_policy_variable", value)
 
+
+if not MYPY:
+    class EigrpFeatureTemplateInterfaceArgsDict(TypedDict):
+        interface_name: NotRequired[pulumi.Input[str]]
+        """
+        Set interface name
+        """
+        interface_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        shutdown: NotRequired[pulumi.Input[bool]]
+        """
+        Enable/disable EIGRP
+          - Default value: `false`
+        """
+        shutdown_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        summary_addresses: NotRequired[pulumi.Input[Sequence[pulumi.Input['EigrpFeatureTemplateInterfaceSummaryAddressArgsDict']]]]
+        """
+        Set summary addresses
+        """
+elif False:
+    EigrpFeatureTemplateInterfaceArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class EigrpFeatureTemplateInterfaceArgs:
@@ -22942,6 +29741,23 @@ class EigrpFeatureTemplateInterfaceArgs:
         pulumi.set(self, "summary_addresses", value)
 
 
+if not MYPY:
+    class EigrpFeatureTemplateInterfaceSummaryAddressArgsDict(TypedDict):
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        prefix: NotRequired[pulumi.Input[str]]
+        """
+        Set summary address prefix
+        """
+        prefix_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    EigrpFeatureTemplateInterfaceSummaryAddressArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class EigrpFeatureTemplateInterfaceSummaryAddressArgs:
     def __init__(__self__, *,
@@ -22996,6 +29812,32 @@ class EigrpFeatureTemplateInterfaceSummaryAddressArgs:
     def prefix_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "prefix_variable", value)
 
+
+if not MYPY:
+    class EigrpFeatureTemplateKeyArgsDict(TypedDict):
+        md5_authentication_key: NotRequired[pulumi.Input[str]]
+        """
+        Set MD5 key
+        """
+        md5_authentication_key_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        md5_key_id: NotRequired[pulumi.Input[int]]
+        """
+        Set MD5 key ID
+          - Range: `1`-`255`
+        """
+        md5_key_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    EigrpFeatureTemplateKeyArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class EigrpFeatureTemplateKeyArgs:
@@ -23086,6 +29928,15 @@ class EigrpFeatureTemplateKeyArgs:
         pulumi.set(self, "optional", value)
 
 
+if not MYPY:
+    class ExpandedCommunityListPolicyObjectEntryArgsDict(TypedDict):
+        community: pulumi.Input[str]
+        """
+        Expanded community value, e.g. `100:1000`
+        """
+elif False:
+    ExpandedCommunityListPolicyObjectEntryArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ExpandedCommunityListPolicyObjectEntryArgs:
     def __init__(__self__, *,
@@ -23108,6 +29959,15 @@ class ExpandedCommunityListPolicyObjectEntryArgs:
         pulumi.set(self, "community", value)
 
 
+if not MYPY:
+    class ExtendedCommunityListPolicyObjectEntryArgsDict(TypedDict):
+        community: pulumi.Input[str]
+        """
+        Extended community value, e.g. `community soo 10.0.0.1:30` or `community rt 100:10`
+        """
+elif False:
+    ExtendedCommunityListPolicyObjectEntryArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ExtendedCommunityListPolicyObjectEntryArgs:
     def __init__(__self__, *,
@@ -23129,6 +29989,28 @@ class ExtendedCommunityListPolicyObjectEntryArgs:
     def community(self, value: pulumi.Input[str]):
         pulumi.set(self, "community", value)
 
+
+if not MYPY:
+    class FeatureDeviceTemplateGeneralTemplateArgsDict(TypedDict):
+        id: pulumi.Input[str]
+        """
+        Feature template ID
+        """
+        type: pulumi.Input[str]
+        """
+        Feature template type
+          - Choices: `cisco_system`, `cisco_logging`, `cedge_aaa`, `cisco_bfd`, `cisco_omp`, `cisco_security`, `cisco_banner`, `cisco_snmp`, `cedge_global`, `cli-template`, `cisco_sig_credentials`, `switchport`, `cisco_thousandeyes`, `cisco_vpn`, `virtual-application-utd`
+        """
+        sub_templates: NotRequired[pulumi.Input[Sequence[pulumi.Input['FeatureDeviceTemplateGeneralTemplateSubTemplateArgsDict']]]]
+        """
+        List of sub templates
+        """
+        version: NotRequired[pulumi.Input[int]]
+        """
+        Feature template version
+        """
+elif False:
+    FeatureDeviceTemplateGeneralTemplateArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class FeatureDeviceTemplateGeneralTemplateArgs:
@@ -23201,6 +30083,28 @@ class FeatureDeviceTemplateGeneralTemplateArgs:
         pulumi.set(self, "version", value)
 
 
+if not MYPY:
+    class FeatureDeviceTemplateGeneralTemplateSubTemplateArgsDict(TypedDict):
+        id: pulumi.Input[str]
+        """
+        Feature template ID
+        """
+        type: pulumi.Input[str]
+        """
+        Feature template type
+          - Choices: `cisco_logging`, `cisco_ntp`, `cisco_ospf`, `cisco_bgp`, `cisco_vpn_interface`, `cisco_vpn_interface_ipsec`, `vpn-interface-svi`, `cisco_secure_internet_gateway`
+        """
+        sub_templates: NotRequired[pulumi.Input[Sequence[pulumi.Input['FeatureDeviceTemplateGeneralTemplateSubTemplateSubTemplateArgsDict']]]]
+        """
+        List of sub templates
+        """
+        version: NotRequired[pulumi.Input[int]]
+        """
+        Feature template version
+        """
+elif False:
+    FeatureDeviceTemplateGeneralTemplateSubTemplateArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class FeatureDeviceTemplateGeneralTemplateSubTemplateArgs:
     def __init__(__self__, *,
@@ -23272,6 +30176,24 @@ class FeatureDeviceTemplateGeneralTemplateSubTemplateArgs:
         pulumi.set(self, "version", value)
 
 
+if not MYPY:
+    class FeatureDeviceTemplateGeneralTemplateSubTemplateSubTemplateArgsDict(TypedDict):
+        id: pulumi.Input[str]
+        """
+        Feature template ID
+        """
+        type: pulumi.Input[str]
+        """
+        Feature template type
+          - Choices: `cisco_dhcp_server`
+        """
+        version: NotRequired[pulumi.Input[int]]
+        """
+        Feature template version
+        """
+elif False:
+    FeatureDeviceTemplateGeneralTemplateSubTemplateSubTemplateArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class FeatureDeviceTemplateGeneralTemplateSubTemplateSubTemplateArgs:
     def __init__(__self__, *,
@@ -23327,6 +30249,20 @@ class FeatureDeviceTemplateGeneralTemplateSubTemplateSubTemplateArgs:
         pulumi.set(self, "version", value)
 
 
+if not MYPY:
+    class GeoLocationListPolicyObjectEntryArgsDict(TypedDict):
+        continent: NotRequired[pulumi.Input[str]]
+        """
+        Continent
+          - Choices: `AF`, `AN`, `AS`, `EU`, `NA`, `OC`, `SA`
+        """
+        country: NotRequired[pulumi.Input[str]]
+        """
+        Country
+        """
+elif False:
+    GeoLocationListPolicyObjectEntryArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class GeoLocationListPolicyObjectEntryArgs:
     def __init__(__self__, *,
@@ -23367,6 +30303,31 @@ class GeoLocationListPolicyObjectEntryArgs:
     def country(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "country", value)
 
+
+if not MYPY:
+    class HubAndSpokeTopologyPolicyDefinitionTopologyArgsDict(TypedDict):
+        name: pulumi.Input[str]
+        """
+        Topology name
+        """
+        advertise_hub_tlocs: NotRequired[pulumi.Input[bool]]
+        """
+        Advertise Hub TLOCs
+        """
+        all_hubs_are_equal: NotRequired[pulumi.Input[bool]]
+        """
+        All hubs are equal (All Spokes Sites connect to all Hubs)
+        """
+        spokes: NotRequired[pulumi.Input[Sequence[pulumi.Input['HubAndSpokeTopologyPolicyDefinitionTopologySpokeArgsDict']]]]
+        """
+        List of spokes
+        """
+        tloc_list_id: NotRequired[pulumi.Input[str]]
+        """
+        TLOC list ID (required when `advertise_hub_tlocs` is 'true')
+        """
+elif False:
+    HubAndSpokeTopologyPolicyDefinitionTopologyArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class HubAndSpokeTopologyPolicyDefinitionTopologyArgs:
@@ -23454,6 +30415,23 @@ class HubAndSpokeTopologyPolicyDefinitionTopologyArgs:
         pulumi.set(self, "tloc_list_id", value)
 
 
+if not MYPY:
+    class HubAndSpokeTopologyPolicyDefinitionTopologySpokeArgsDict(TypedDict):
+        hubs: NotRequired[pulumi.Input[Sequence[pulumi.Input['HubAndSpokeTopologyPolicyDefinitionTopologySpokeHubArgsDict']]]]
+        """
+        List of hubs
+        """
+        site_list_id: NotRequired[pulumi.Input[str]]
+        """
+        Site list ID
+        """
+        site_list_version: NotRequired[pulumi.Input[int]]
+        """
+        Site list version
+        """
+elif False:
+    HubAndSpokeTopologyPolicyDefinitionTopologySpokeArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class HubAndSpokeTopologyPolicyDefinitionTopologySpokeArgs:
     def __init__(__self__, *,
@@ -23508,6 +30486,31 @@ class HubAndSpokeTopologyPolicyDefinitionTopologySpokeArgs:
     def site_list_version(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "site_list_version", value)
 
+
+if not MYPY:
+    class HubAndSpokeTopologyPolicyDefinitionTopologySpokeHubArgsDict(TypedDict):
+        ipv4_prefix_list_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        List of IPv4 prefix list IDs
+        """
+        ipv6_prefix_list_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        List of IPv6 prefix list IDs
+        """
+        preference: NotRequired[pulumi.Input[str]]
+        """
+        Preference, multiple of 10 (for example 70, 80, 90, 100). The higher the value the higher the priority of the associated hub (required when `all_hubs_are_equal` is 'false')
+        """
+        site_list_id: NotRequired[pulumi.Input[str]]
+        """
+        Site list ID
+        """
+        site_list_version: NotRequired[pulumi.Input[int]]
+        """
+        Site list version
+        """
+elif False:
+    HubAndSpokeTopologyPolicyDefinitionTopologySpokeHubArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class HubAndSpokeTopologyPolicyDefinitionTopologySpokeHubArgs:
@@ -23596,6 +30599,21 @@ class HubAndSpokeTopologyPolicyDefinitionTopologySpokeHubArgs:
         pulumi.set(self, "site_list_version", value)
 
 
+if not MYPY:
+    class IpsSignatureListPolicyObjectEntryArgsDict(TypedDict):
+        generator_id: NotRequired[pulumi.Input[int]]
+        """
+        Signature generator ID
+          - Range: `0`-`4294967295`
+        """
+        signature_id: NotRequired[pulumi.Input[int]]
+        """
+        Signature ID
+          - Range: `0`-`4294967295`
+        """
+elif False:
+    IpsSignatureListPolicyObjectEntryArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class IpsSignatureListPolicyObjectEntryArgs:
     def __init__(__self__, *,
@@ -23638,6 +30656,33 @@ class IpsSignatureListPolicyObjectEntryArgs:
     def signature_id(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "signature_id", value)
 
+
+if not MYPY:
+    class Ipv4AclPolicyDefinitionSequenceArgsDict(TypedDict):
+        id: pulumi.Input[int]
+        """
+        Sequence ID
+          - Range: `1`-`65534`
+        """
+        name: pulumi.Input[str]
+        """
+        Sequence name
+        """
+        action_entries: NotRequired[pulumi.Input[Sequence[pulumi.Input['Ipv4AclPolicyDefinitionSequenceActionEntryArgsDict']]]]
+        """
+        List of action entries
+        """
+        base_action: NotRequired[pulumi.Input[str]]
+        """
+        Base action, either `accept` or `drop`
+          - Choices: `accept`, `drop`
+        """
+        match_entries: NotRequired[pulumi.Input[Sequence[pulumi.Input['Ipv4AclPolicyDefinitionSequenceMatchEntryArgsDict']]]]
+        """
+        List of match entries
+        """
+elif False:
+    Ipv4AclPolicyDefinitionSequenceArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class Ipv4AclPolicyDefinitionSequenceArgs:
@@ -23727,6 +30772,52 @@ class Ipv4AclPolicyDefinitionSequenceArgs:
     def match_entries(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['Ipv4AclPolicyDefinitionSequenceMatchEntryArgs']]]]):
         pulumi.set(self, "match_entries", value)
 
+
+if not MYPY:
+    class Ipv4AclPolicyDefinitionSequenceActionEntryArgsDict(TypedDict):
+        type: pulumi.Input[str]
+        """
+        Type of action entry
+          - Choices: `class`, `count`, `set`, `log`, `mirror`, `policer`
+        """
+        class_map_id: NotRequired[pulumi.Input[str]]
+        """
+        Class map ID
+        """
+        class_map_version: NotRequired[pulumi.Input[int]]
+        """
+        Class map version
+        """
+        counter_name: NotRequired[pulumi.Input[str]]
+        """
+        Counter name
+        """
+        log: NotRequired[pulumi.Input[bool]]
+        """
+        Enable logging
+        """
+        mirror_id: NotRequired[pulumi.Input[str]]
+        """
+        Mirror ID
+        """
+        mirror_version: NotRequired[pulumi.Input[int]]
+        """
+        Mirror version
+        """
+        policer_id: NotRequired[pulumi.Input[str]]
+        """
+        Policer ID
+        """
+        policer_version: NotRequired[pulumi.Input[int]]
+        """
+        Policer version
+        """
+        set_parameters: NotRequired[pulumi.Input[Sequence[pulumi.Input['Ipv4AclPolicyDefinitionSequenceActionEntrySetParameterArgsDict']]]]
+        """
+        List of set parameters
+        """
+elif False:
+    Ipv4AclPolicyDefinitionSequenceActionEntryArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class Ipv4AclPolicyDefinitionSequenceActionEntryArgs:
@@ -23896,6 +30987,25 @@ class Ipv4AclPolicyDefinitionSequenceActionEntryArgs:
         pulumi.set(self, "set_parameters", value)
 
 
+if not MYPY:
+    class Ipv4AclPolicyDefinitionSequenceActionEntrySetParameterArgsDict(TypedDict):
+        type: pulumi.Input[str]
+        """
+        Type of set parameter
+          - Choices: `dscp`, `nextHop`
+        """
+        dscp: NotRequired[pulumi.Input[int]]
+        """
+        DSCP value
+          - Range: `0`-`63`
+        """
+        next_hop: NotRequired[pulumi.Input[str]]
+        """
+        Next hop IP
+        """
+elif False:
+    Ipv4AclPolicyDefinitionSequenceActionEntrySetParameterArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class Ipv4AclPolicyDefinitionSequenceActionEntrySetParameterArgs:
     def __init__(__self__, *,
@@ -23953,6 +31063,84 @@ class Ipv4AclPolicyDefinitionSequenceActionEntrySetParameterArgs:
     def next_hop(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "next_hop", value)
 
+
+if not MYPY:
+    class Ipv4AclPolicyDefinitionSequenceMatchEntryArgsDict(TypedDict):
+        type: pulumi.Input[str]
+        """
+        Type of match entry
+          - Choices: `dscp`, `sourceIp`, `destinationIp`, `class`, `packetLength`, `plp`, `sourcePort`, `destinationPort`, `sourceDataPrefixList`, `destinationDataPrefixList`, `protocol`, `tcp`, `icmpMessage`
+        """
+        class_map_id: NotRequired[pulumi.Input[str]]
+        """
+        Class map ID
+        """
+        class_map_version: NotRequired[pulumi.Input[int]]
+        """
+        Class map version
+        """
+        destination_data_ipv4_prefix_list_id: NotRequired[pulumi.Input[str]]
+        """
+        Destination data IPv4 prefix list ID
+        """
+        destination_data_ipv4_prefix_list_version: NotRequired[pulumi.Input[int]]
+        """
+        Destination data IPv4 prefix list version
+        """
+        destination_ip: NotRequired[pulumi.Input[str]]
+        """
+        Destination IP prefix
+        """
+        destination_ports: NotRequired[pulumi.Input[str]]
+        """
+        Destination ports. Single value (0-65535) or ranges separated by spaces.
+        """
+        dscp: NotRequired[pulumi.Input[int]]
+        """
+        DSCP value
+          - Range: `0`-`63`
+        """
+        icmp_message: NotRequired[pulumi.Input[str]]
+        """
+        ICMP Message
+        """
+        packet_length: NotRequired[pulumi.Input[int]]
+        """
+        Packet length
+          - Range: `0`-`65535`
+        """
+        priority: NotRequired[pulumi.Input[str]]
+        """
+        PLP - priority
+          - Choices: `high`, `low`
+        """
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Single value (0-255) or multiple values separated by spaces
+        """
+        source_data_ipv4_prefix_list_id: NotRequired[pulumi.Input[str]]
+        """
+        Source data IPv4 prefix list ID
+        """
+        source_data_ipv4_prefix_list_version: NotRequired[pulumi.Input[int]]
+        """
+        Source data IPv4 prefix list version
+        """
+        source_ip: NotRequired[pulumi.Input[str]]
+        """
+        Source IP prefix
+        """
+        source_ports: NotRequired[pulumi.Input[str]]
+        """
+        Source ports. Single value (0-65535) or ranges separated by spaces.
+        """
+        tcp: NotRequired[pulumi.Input[str]]
+        """
+        TCP parameters
+          - Choices: `syn`
+        """
+elif False:
+    Ipv4AclPolicyDefinitionSequenceMatchEntryArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs:
@@ -24242,6 +31430,33 @@ class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs:
         pulumi.set(self, "tcp", value)
 
 
+if not MYPY:
+    class Ipv4DeviceAclPolicyDefinitionSequenceArgsDict(TypedDict):
+        id: pulumi.Input[int]
+        """
+        Sequence ID
+          - Range: `1`-`65534`
+        """
+        name: pulumi.Input[str]
+        """
+        Sequence name
+        """
+        action_entries: NotRequired[pulumi.Input[Sequence[pulumi.Input['Ipv4DeviceAclPolicyDefinitionSequenceActionEntryArgsDict']]]]
+        """
+        List of action entries
+        """
+        base_action: NotRequired[pulumi.Input[str]]
+        """
+        Base action, either `accept` or `drop`
+          - Choices: `accept`, `drop`
+        """
+        match_entries: NotRequired[pulumi.Input[Sequence[pulumi.Input['Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgsDict']]]]
+        """
+        List of match entries
+        """
+elif False:
+    Ipv4DeviceAclPolicyDefinitionSequenceArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class Ipv4DeviceAclPolicyDefinitionSequenceArgs:
     def __init__(__self__, *,
@@ -24331,6 +31546,20 @@ class Ipv4DeviceAclPolicyDefinitionSequenceArgs:
         pulumi.set(self, "match_entries", value)
 
 
+if not MYPY:
+    class Ipv4DeviceAclPolicyDefinitionSequenceActionEntryArgsDict(TypedDict):
+        type: pulumi.Input[str]
+        """
+        Type of action entry
+          - Choices: `count`
+        """
+        counter_name: NotRequired[pulumi.Input[str]]
+        """
+        Counter name
+        """
+elif False:
+    Ipv4DeviceAclPolicyDefinitionSequenceActionEntryArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class Ipv4DeviceAclPolicyDefinitionSequenceActionEntryArgs:
     def __init__(__self__, *,
@@ -24370,6 +31599,49 @@ class Ipv4DeviceAclPolicyDefinitionSequenceActionEntryArgs:
     def counter_name(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "counter_name", value)
 
+
+if not MYPY:
+    class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgsDict(TypedDict):
+        type: pulumi.Input[str]
+        """
+        Type of match entry
+          - Choices: `sourceIp`, `destinationIp`, `sourcePort`, `destinationPort`, `sourceDataPrefixList`, `destinationDataPrefixList`
+        """
+        destination_data_ipv4_prefix_list_id: NotRequired[pulumi.Input[str]]
+        """
+        Destination data IPv4 prefix list ID
+        """
+        destination_data_ipv4_prefix_list_version: NotRequired[pulumi.Input[int]]
+        """
+        Destination data IPv4 prefix list version
+        """
+        destination_ip: NotRequired[pulumi.Input[str]]
+        """
+        Destination IP prefix
+        """
+        destination_port: NotRequired[pulumi.Input[int]]
+        """
+        Destination port, only `22` and `161` supported
+          - Range: `0`-`65535`
+        """
+        source_data_ipv4_prefix_list_id: NotRequired[pulumi.Input[str]]
+        """
+        Source data IPv4 prefix list ID
+        """
+        source_data_ipv4_prefix_list_version: NotRequired[pulumi.Input[int]]
+        """
+        Source data IPv4 prefix list version
+        """
+        source_ip: NotRequired[pulumi.Input[str]]
+        """
+        Source IP prefix
+        """
+        source_ports: NotRequired[pulumi.Input[str]]
+        """
+        Source ports. Single value (0-65535) or ranges separated by spaces.
+        """
+elif False:
+    Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgs:
@@ -24525,6 +31797,23 @@ class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgs:
         pulumi.set(self, "source_ports", value)
 
 
+if not MYPY:
+    class Ipv4PrefixListPolicyObjectEntryArgsDict(TypedDict):
+        prefix: pulumi.Input[str]
+        """
+        IP prefix list entry e.g., `10.0.0.0/12`
+        """
+        ge: NotRequired[pulumi.Input[int]]
+        """
+        Greater equal
+        """
+        le: NotRequired[pulumi.Input[int]]
+        """
+        Lesser equal
+        """
+elif False:
+    Ipv4PrefixListPolicyObjectEntryArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class Ipv4PrefixListPolicyObjectEntryArgs:
     def __init__(__self__, *,
@@ -24578,6 +31867,33 @@ class Ipv4PrefixListPolicyObjectEntryArgs:
     def le(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "le", value)
 
+
+if not MYPY:
+    class Ipv6AclPolicyDefinitionSequenceArgsDict(TypedDict):
+        id: pulumi.Input[int]
+        """
+        Sequence ID
+          - Range: `1`-`65534`
+        """
+        name: pulumi.Input[str]
+        """
+        Sequence name
+        """
+        action_entries: NotRequired[pulumi.Input[Sequence[pulumi.Input['Ipv6AclPolicyDefinitionSequenceActionEntryArgsDict']]]]
+        """
+        List of action entries
+        """
+        base_action: NotRequired[pulumi.Input[str]]
+        """
+        Base action, either `accept` or `drop`
+          - Choices: `accept`, `drop`
+        """
+        match_entries: NotRequired[pulumi.Input[Sequence[pulumi.Input['Ipv6AclPolicyDefinitionSequenceMatchEntryArgsDict']]]]
+        """
+        List of match entries
+        """
+elif False:
+    Ipv6AclPolicyDefinitionSequenceArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class Ipv6AclPolicyDefinitionSequenceArgs:
@@ -24667,6 +31983,52 @@ class Ipv6AclPolicyDefinitionSequenceArgs:
     def match_entries(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['Ipv6AclPolicyDefinitionSequenceMatchEntryArgs']]]]):
         pulumi.set(self, "match_entries", value)
 
+
+if not MYPY:
+    class Ipv6AclPolicyDefinitionSequenceActionEntryArgsDict(TypedDict):
+        type: pulumi.Input[str]
+        """
+        Type of action entry
+          - Choices: `class`, `count`, `set`, `log`, `mirror`, `policer`
+        """
+        class_map_id: NotRequired[pulumi.Input[str]]
+        """
+        Class map ID
+        """
+        class_map_version: NotRequired[pulumi.Input[int]]
+        """
+        Class map version
+        """
+        counter_name: NotRequired[pulumi.Input[str]]
+        """
+        Counter name
+        """
+        log: NotRequired[pulumi.Input[bool]]
+        """
+        Enable logging
+        """
+        mirror_id: NotRequired[pulumi.Input[str]]
+        """
+        Mirror ID
+        """
+        mirror_version: NotRequired[pulumi.Input[int]]
+        """
+        Mirror version
+        """
+        policer_id: NotRequired[pulumi.Input[str]]
+        """
+        Policer ID
+        """
+        policer_version: NotRequired[pulumi.Input[int]]
+        """
+        Policer version
+        """
+        set_parameters: NotRequired[pulumi.Input[Sequence[pulumi.Input['Ipv6AclPolicyDefinitionSequenceActionEntrySetParameterArgsDict']]]]
+        """
+        List of set parameters
+        """
+elif False:
+    Ipv6AclPolicyDefinitionSequenceActionEntryArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class Ipv6AclPolicyDefinitionSequenceActionEntryArgs:
@@ -24836,6 +32198,25 @@ class Ipv6AclPolicyDefinitionSequenceActionEntryArgs:
         pulumi.set(self, "set_parameters", value)
 
 
+if not MYPY:
+    class Ipv6AclPolicyDefinitionSequenceActionEntrySetParameterArgsDict(TypedDict):
+        type: pulumi.Input[str]
+        """
+        Type of set parameter
+          - Choices: `trafficClass`, `nextHop`
+        """
+        next_hop: NotRequired[pulumi.Input[str]]
+        """
+        Next hop IP
+        """
+        traffic_class: NotRequired[pulumi.Input[int]]
+        """
+        Traffic class
+          - Range: `0`-`63`
+        """
+elif False:
+    Ipv6AclPolicyDefinitionSequenceActionEntrySetParameterArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class Ipv6AclPolicyDefinitionSequenceActionEntrySetParameterArgs:
     def __init__(__self__, *,
@@ -24893,6 +32274,81 @@ class Ipv6AclPolicyDefinitionSequenceActionEntrySetParameterArgs:
     def traffic_class(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "traffic_class", value)
 
+
+if not MYPY:
+    class Ipv6AclPolicyDefinitionSequenceMatchEntryArgsDict(TypedDict):
+        type: pulumi.Input[str]
+        """
+        Type of match entry
+          - Choices: `nextHeader`, `sourceIpv6`, `destinationIpv6`, `class`, `packetLength`, `plp`, `sourcePort`, `destinationPort`, `sourceDataIpv6PrefixList`, `destinationDataIpv6PrefixList`, `tcp`, `trafficClass`
+        """
+        class_map_id: NotRequired[pulumi.Input[str]]
+        """
+        Class map ID
+        """
+        class_map_version: NotRequired[pulumi.Input[int]]
+        """
+        Class map version
+        """
+        destination_data_ipv6_prefix_list_id: NotRequired[pulumi.Input[str]]
+        """
+        Destination dataIPv6 prefix list ID
+        """
+        destination_data_ipv6_prefix_list_version: NotRequired[pulumi.Input[int]]
+        """
+        Destination data prefix list version
+        """
+        destination_ip: NotRequired[pulumi.Input[str]]
+        """
+        Destination IPv6 prefix
+        """
+        destination_ports: NotRequired[pulumi.Input[str]]
+        """
+        Destination ports. Single value (0-65535) or ranges separated by spaces.
+        """
+        next_header: NotRequired[pulumi.Input[int]]
+        """
+        Next header
+          - Range: `0`-`255`
+        """
+        packet_length: NotRequired[pulumi.Input[int]]
+        """
+        Packet length
+          - Range: `0`-`65535`
+        """
+        priority: NotRequired[pulumi.Input[str]]
+        """
+        PLP - priority
+          - Choices: `high`, `low`
+        """
+        source_data_ipv6_prefix_list_id: NotRequired[pulumi.Input[str]]
+        """
+        Source data IPv6 prefix list ID
+        """
+        source_data_ipv6_prefix_list_version: NotRequired[pulumi.Input[int]]
+        """
+        Source data IPv6 prefix list version
+        """
+        source_ip: NotRequired[pulumi.Input[str]]
+        """
+        Source IPv6 prefix
+        """
+        source_ports: NotRequired[pulumi.Input[str]]
+        """
+        Source ports. Single value (0-65535) or ranges separated by spaces.
+        """
+        tcp: NotRequired[pulumi.Input[str]]
+        """
+        TCP parameters
+          - Choices: `syn`
+        """
+        traffic_class: NotRequired[pulumi.Input[int]]
+        """
+        Traffic class
+          - Range: `0`-`63`
+        """
+elif False:
+    Ipv6AclPolicyDefinitionSequenceMatchEntryArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs:
@@ -25168,6 +32624,33 @@ class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs:
         pulumi.set(self, "traffic_class", value)
 
 
+if not MYPY:
+    class Ipv6DeviceAclPolicyDefinitionSequenceArgsDict(TypedDict):
+        id: pulumi.Input[int]
+        """
+        Sequence ID
+          - Range: `1`-`65534`
+        """
+        name: pulumi.Input[str]
+        """
+        Sequence name
+        """
+        action_entries: NotRequired[pulumi.Input[Sequence[pulumi.Input['Ipv6DeviceAclPolicyDefinitionSequenceActionEntryArgsDict']]]]
+        """
+        List of action entries
+        """
+        base_action: NotRequired[pulumi.Input[str]]
+        """
+        Base action, either `accept` or `drop`
+          - Choices: `accept`, `drop`
+        """
+        match_entries: NotRequired[pulumi.Input[Sequence[pulumi.Input['Ipv6DeviceAclPolicyDefinitionSequenceMatchEntryArgsDict']]]]
+        """
+        List of match entries
+        """
+elif False:
+    Ipv6DeviceAclPolicyDefinitionSequenceArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class Ipv6DeviceAclPolicyDefinitionSequenceArgs:
     def __init__(__self__, *,
@@ -25257,6 +32740,20 @@ class Ipv6DeviceAclPolicyDefinitionSequenceArgs:
         pulumi.set(self, "match_entries", value)
 
 
+if not MYPY:
+    class Ipv6DeviceAclPolicyDefinitionSequenceActionEntryArgsDict(TypedDict):
+        type: pulumi.Input[str]
+        """
+        Type of action entry
+          - Choices: `count`
+        """
+        counter_name: NotRequired[pulumi.Input[str]]
+        """
+        Counter name
+        """
+elif False:
+    Ipv6DeviceAclPolicyDefinitionSequenceActionEntryArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class Ipv6DeviceAclPolicyDefinitionSequenceActionEntryArgs:
     def __init__(__self__, *,
@@ -25296,6 +32793,49 @@ class Ipv6DeviceAclPolicyDefinitionSequenceActionEntryArgs:
     def counter_name(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "counter_name", value)
 
+
+if not MYPY:
+    class Ipv6DeviceAclPolicyDefinitionSequenceMatchEntryArgsDict(TypedDict):
+        type: pulumi.Input[str]
+        """
+        Type of match entry
+          - Choices: `sourceIpv6`, `destinationIpv6`, `sourcePort`, `destinationPort`, `sourceDataIpv6PrefixList`, `destinationDataIpv6PrefixList`
+        """
+        destination_data_ipv6_prefix_list_id: NotRequired[pulumi.Input[str]]
+        """
+        Destination data IPv6 prefix list ID
+        """
+        destination_data_ipv6_prefix_list_version: NotRequired[pulumi.Input[int]]
+        """
+        Destination data IPv6 prefix list version
+        """
+        destination_ip: NotRequired[pulumi.Input[str]]
+        """
+        Destination IP prefix
+        """
+        destination_port: NotRequired[pulumi.Input[int]]
+        """
+        Destination port, only `22` and `161` supported
+          - Range: `0`-`65535`
+        """
+        source_data_ipv6_prefix_list_id: NotRequired[pulumi.Input[str]]
+        """
+        Source data IPv6 prefix list ID
+        """
+        source_data_ipv6_prefix_list_version: NotRequired[pulumi.Input[int]]
+        """
+        Source data IPv6 prefix list version
+        """
+        source_ip: NotRequired[pulumi.Input[str]]
+        """
+        Source IP prefix
+        """
+        source_ports: NotRequired[pulumi.Input[str]]
+        """
+        Source ports. Single value (0-65535) or ranges separated by spaces.
+        """
+elif False:
+    Ipv6DeviceAclPolicyDefinitionSequenceMatchEntryArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class Ipv6DeviceAclPolicyDefinitionSequenceMatchEntryArgs:
@@ -25451,6 +32991,23 @@ class Ipv6DeviceAclPolicyDefinitionSequenceMatchEntryArgs:
         pulumi.set(self, "source_ports", value)
 
 
+if not MYPY:
+    class Ipv6PrefixListPolicyObjectEntryArgsDict(TypedDict):
+        prefix: pulumi.Input[str]
+        """
+        IP prefix list entry, e.g. `2001:1:1:2::/64`
+        """
+        ge: NotRequired[pulumi.Input[int]]
+        """
+        Greater equal
+        """
+        le: NotRequired[pulumi.Input[int]]
+        """
+        Lesser equal
+        """
+elif False:
+    Ipv6PrefixListPolicyObjectEntryArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class Ipv6PrefixListPolicyObjectEntryArgs:
     def __init__(__self__, *,
@@ -25505,6 +33062,19 @@ class Ipv6PrefixListPolicyObjectEntryArgs:
         pulumi.set(self, "le", value)
 
 
+if not MYPY:
+    class LocalApplicationListPolicyObjectEntryArgsDict(TypedDict):
+        application: NotRequired[pulumi.Input[str]]
+        """
+        Application name
+        """
+        application_family: NotRequired[pulumi.Input[str]]
+        """
+        Application family name
+        """
+elif False:
+    LocalApplicationListPolicyObjectEntryArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LocalApplicationListPolicyObjectEntryArgs:
     def __init__(__self__, *,
@@ -25543,6 +33113,24 @@ class LocalApplicationListPolicyObjectEntryArgs:
     def application_family(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "application_family", value)
 
+
+if not MYPY:
+    class LocalizedPolicyDefinitionArgsDict(TypedDict):
+        id: pulumi.Input[str]
+        """
+        Policy definition ID
+        """
+        type: pulumi.Input[str]
+        """
+        Policy definition type
+          - Choices: `qosMap`, `rewriteRule`, `vedgeRoute`, `acl`, `aclv6`, `deviceAccessPolicy`, `deviceAccessPolicyv6`
+        """
+        version: NotRequired[pulumi.Input[int]]
+        """
+        Policy definition version
+        """
+elif False:
+    LocalizedPolicyDefinitionArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class LocalizedPolicyDefinitionArgs:
@@ -25599,6 +33187,23 @@ class LocalizedPolicyDefinitionArgs:
         pulumi.set(self, "version", value)
 
 
+if not MYPY:
+    class MeshTopologyPolicyDefinitionRegionArgsDict(TypedDict):
+        name: pulumi.Input[str]
+        """
+        Region name
+        """
+        site_list_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        Site list IDs
+        """
+        site_list_versions: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        Site list versions
+        """
+elif False:
+    MeshTopologyPolicyDefinitionRegionArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class MeshTopologyPolicyDefinitionRegionArgs:
     def __init__(__self__, *,
@@ -25652,6 +33257,98 @@ class MeshTopologyPolicyDefinitionRegionArgs:
     def site_list_versions(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
         pulumi.set(self, "site_list_versions", value)
 
+
+if not MYPY:
+    class OtherThousandeyesFeatureVirtualApplicationArgsDict(TypedDict):
+        account_group_token: NotRequired[pulumi.Input[str]]
+        """
+        Set the Account Group Token
+        """
+        account_group_token_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        agent_default_gateway: NotRequired[pulumi.Input[str]]
+        """
+        Set the Agent default gateway
+        """
+        agent_default_gateway_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        hostname: NotRequired[pulumi.Input[str]]
+        """
+        Set the host name
+        """
+        hostname_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        management_ip: NotRequired[pulumi.Input[str]]
+        """
+        Set the Agent IP Address
+        """
+        management_ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        management_subnet_mask: NotRequired[pulumi.Input[str]]
+        """
+        Set the Agent SubnetMask
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        """
+        management_subnet_mask_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        name_server_ip: NotRequired[pulumi.Input[str]]
+        """
+        Set the name server
+        """
+        name_server_ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        pac_url: NotRequired[pulumi.Input[str]]
+        """
+        Set the proxy PAC url
+        """
+        pac_url_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        proxy_host: NotRequired[pulumi.Input[str]]
+        """
+        Set the Proxy Host
+        """
+        proxy_host_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        proxy_port: NotRequired[pulumi.Input[int]]
+        """
+        Set the Proxy Port
+          - Range: `1`-`65535`
+        """
+        proxy_port_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        proxy_type: NotRequired[pulumi.Input[str]]
+        """
+        Select Web Proxy Type
+        """
+        vpn: NotRequired[pulumi.Input[int]]
+        """
+        VPN number
+          - Range: `0`-`65530`
+        """
+        vpn_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    OtherThousandeyesFeatureVirtualApplicationArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class OtherThousandeyesFeatureVirtualApplicationArgs:
@@ -26002,6 +33699,36 @@ class OtherThousandeyesFeatureVirtualApplicationArgs:
         pulumi.set(self, "vpn_variable", value)
 
 
+if not MYPY:
+    class OtherUcseFeatureInterfaceArgsDict(TypedDict):
+        interface_name: NotRequired[pulumi.Input[str]]
+        """
+        Set Inteface name
+        """
+        interface_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ipv4_address: NotRequired[pulumi.Input[str]]
+        """
+        Assign IPv4 address
+        """
+        ipv4_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ucse_interface_vpn: NotRequired[pulumi.Input[int]]
+        """
+        UCSE Interface VPN
+          - Range: `1`-`65527`
+        """
+        ucse_interface_vpn_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    OtherUcseFeatureInterfaceArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class OtherUcseFeatureInterfaceArgs:
     def __init__(__self__, *,
@@ -26107,6 +33834,16 @@ class OtherUcseFeatureInterfaceArgs:
         pulumi.set(self, "ucse_interface_vpn_variable", value)
 
 
+if not MYPY:
+    class PolicyObjectClassMapEntryArgsDict(TypedDict):
+        queue: NotRequired[pulumi.Input[str]]
+        """
+        select a queue
+          - Choices: `0`, `1`, `2`, `3`, `4`, `5`, `6`, `7`
+        """
+elif False:
+    PolicyObjectClassMapEntryArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class PolicyObjectClassMapEntryArgs:
     def __init__(__self__, *,
@@ -26132,6 +33869,15 @@ class PolicyObjectClassMapEntryArgs:
         pulumi.set(self, "queue", value)
 
 
+if not MYPY:
+    class PolicyObjectColorListEntryArgsDict(TypedDict):
+        color: NotRequired[pulumi.Input[str]]
+        """
+        - Choices: `3g`, `biz-internet`, `blue`, `bronze`, `custom1`, `custom2`, `custom3`, `default`, `gold`, `green`, `lte`, `metro-ethernet`, `mpls`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`, `public-internet`, `red`, `silver`
+        """
+elif False:
+    PolicyObjectColorListEntryArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class PolicyObjectColorListEntryArgs:
     def __init__(__self__, *,
@@ -26154,6 +33900,20 @@ class PolicyObjectColorListEntryArgs:
     def color(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "color", value)
 
+
+if not MYPY:
+    class PolicyObjectDataIpv4PrefixListEntryArgsDict(TypedDict):
+        ipv4_address: NotRequired[pulumi.Input[str]]
+        """
+        IPv4 address
+        """
+        ipv4_prefix_length: NotRequired[pulumi.Input[int]]
+        """
+        IPv4 prefix Length
+          - Range: `0`-`32`
+        """
+elif False:
+    PolicyObjectDataIpv4PrefixListEntryArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class PolicyObjectDataIpv4PrefixListEntryArgs:
@@ -26196,6 +33956,20 @@ class PolicyObjectDataIpv4PrefixListEntryArgs:
         pulumi.set(self, "ipv4_prefix_length", value)
 
 
+if not MYPY:
+    class PolicyObjectDataIpv6PrefixListEntryArgsDict(TypedDict):
+        ipv6_address: NotRequired[pulumi.Input[str]]
+        """
+        IPv6 address
+        """
+        ipv6_prefix_length: NotRequired[pulumi.Input[int]]
+        """
+        IPv6 prefix
+          - Range: `0`-`128`
+        """
+elif False:
+    PolicyObjectDataIpv6PrefixListEntryArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class PolicyObjectDataIpv6PrefixListEntryArgs:
     def __init__(__self__, *,
@@ -26237,6 +34011,15 @@ class PolicyObjectDataIpv6PrefixListEntryArgs:
         pulumi.set(self, "ipv6_prefix_length", value)
 
 
+if not MYPY:
+    class PolicyObjectExtendedCommunityListEntryArgsDict(TypedDict):
+        extended_community: NotRequired[pulumi.Input[str]]
+        """
+        can be soo 10.0.0.1:30 or rt 500:50 etc.
+        """
+elif False:
+    PolicyObjectExtendedCommunityListEntryArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class PolicyObjectExtendedCommunityListEntryArgs:
     def __init__(__self__, *,
@@ -26259,6 +34042,30 @@ class PolicyObjectExtendedCommunityListEntryArgs:
     def extended_community(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "extended_community", value)
 
+
+if not MYPY:
+    class PolicyObjectIpv4PrefixListEntryArgsDict(TypedDict):
+        ge: NotRequired[pulumi.Input[int]]
+        """
+        IPv4 prefix length with ge range operator
+          - Range: `1`-`32`
+        """
+        ipv4_address: NotRequired[pulumi.Input[str]]
+        """
+        IPv4 address
+        """
+        ipv4_prefix_length: NotRequired[pulumi.Input[int]]
+        """
+        IPv4 prefix length
+          - Range: `0`-`32`
+        """
+        le: NotRequired[pulumi.Input[int]]
+        """
+        IPv4 prefix length with le range operator
+          - Range: `1`-`32`
+        """
+elif False:
+    PolicyObjectIpv4PrefixListEntryArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class PolicyObjectIpv4PrefixListEntryArgs:
@@ -26337,6 +34144,30 @@ class PolicyObjectIpv4PrefixListEntryArgs:
         pulumi.set(self, "le", value)
 
 
+if not MYPY:
+    class PolicyObjectIpv6PrefixListEntryArgsDict(TypedDict):
+        ge: NotRequired[pulumi.Input[int]]
+        """
+        IPv6 prefix length with ge range operator
+          - Range: `1`-`128`
+        """
+        ipv6_address: NotRequired[pulumi.Input[str]]
+        """
+        IPv6 address
+        """
+        ipv6_prefix_length: NotRequired[pulumi.Input[int]]
+        """
+        IPv6 prefix length
+          - Range: `0`-`128`
+        """
+        le: NotRequired[pulumi.Input[int]]
+        """
+        IPv6 prefix length with le range operator
+          - Range: `1`-`128`
+        """
+elif False:
+    PolicyObjectIpv6PrefixListEntryArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class PolicyObjectIpv6PrefixListEntryArgs:
     def __init__(__self__, *,
@@ -26414,6 +34245,19 @@ class PolicyObjectIpv6PrefixListEntryArgs:
         pulumi.set(self, "le", value)
 
 
+if not MYPY:
+    class PolicyObjectMirrorEntryArgsDict(TypedDict):
+        remote_destination_ip: NotRequired[pulumi.Input[str]]
+        """
+        remote destination ip address
+        """
+        source_ip: NotRequired[pulumi.Input[str]]
+        """
+        source ip address
+        """
+elif False:
+    PolicyObjectMirrorEntryArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class PolicyObjectMirrorEntryArgs:
     def __init__(__self__, *,
@@ -26452,6 +34296,26 @@ class PolicyObjectMirrorEntryArgs:
     def source_ip(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "source_ip", value)
 
+
+if not MYPY:
+    class PolicyObjectPolicerEntryArgsDict(TypedDict):
+        burst_bytes: NotRequired[pulumi.Input[int]]
+        """
+        Burst (Bytes)
+          - Range: `15000`-`10000000`
+        """
+        exceed_action: NotRequired[pulumi.Input[str]]
+        """
+        Exceed options such as Drop or Remark
+          - Choices: `drop`, `remark`
+        """
+        rate_bps: NotRequired[pulumi.Input[int]]
+        """
+        Rate (bps)
+          - Range: `8`-`100000000000`
+        """
+elif False:
+    PolicyObjectPolicerEntryArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class PolicyObjectPolicerEntryArgs:
@@ -26513,6 +34377,29 @@ class PolicyObjectPolicerEntryArgs:
     def rate_bps(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "rate_bps", value)
 
+
+if not MYPY:
+    class PolicyObjectTlocListEntryArgsDict(TypedDict):
+        color: NotRequired[pulumi.Input[str]]
+        """
+        color
+          - Choices: `3g`, `biz-internet`, `blue`, `bronze`, `custom1`, `custom2`, `custom3`, `default`, `gold`, `green`, `lte`, `metro-ethernet`, `mpls`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`, `public-internet`, `red`, `silver`
+        """
+        encapsulation: NotRequired[pulumi.Input[str]]
+        """
+        encapsulation
+          - Choices: `ipsec`, `gre`
+        """
+        preference: NotRequired[pulumi.Input[str]]
+        """
+        Preference
+        """
+        tloc_ip: NotRequired[pulumi.Input[str]]
+        """
+        tloc
+        """
+elif False:
+    PolicyObjectTlocListEntryArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class PolicyObjectTlocListEntryArgs:
@@ -26589,6 +34476,16 @@ class PolicyObjectTlocListEntryArgs:
         pulumi.set(self, "tloc_ip", value)
 
 
+if not MYPY:
+    class PortListPolicyObjectEntryArgsDict(TypedDict):
+        port: NotRequired[pulumi.Input[int]]
+        """
+        Port number
+          - Range: `1`-`65535`
+        """
+elif False:
+    PortListPolicyObjectEntryArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class PortListPolicyObjectEntryArgs:
     def __init__(__self__, *,
@@ -26614,6 +34511,15 @@ class PortListPolicyObjectEntryArgs:
         pulumi.set(self, "port", value)
 
 
+if not MYPY:
+    class ProtocolListPolicyObjectEntryArgsDict(TypedDict):
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Protocol name
+        """
+elif False:
+    ProtocolListPolicyObjectEntryArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ProtocolListPolicyObjectEntryArgs:
     def __init__(__self__, *,
@@ -26636,6 +34542,49 @@ class ProtocolListPolicyObjectEntryArgs:
     def protocol(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "protocol", value)
 
+
+if not MYPY:
+    class QosMapPolicyDefinitionQosSchedulerArgsDict(TypedDict):
+        bandwidth_percent: pulumi.Input[int]
+        """
+        Bandwidth percent
+          - Range: `0`-`100`
+        """
+        buffer_percent: pulumi.Input[int]
+        """
+        Buffer percent
+          - Range: `0`-`100`
+        """
+        class_map_id: pulumi.Input[str]
+        """
+        Class map ID
+        """
+        drop_type: pulumi.Input[str]
+        """
+        Drop type
+          - Choices: `tail-drop`, `red-drop`
+        """
+        queue: pulumi.Input[int]
+        """
+        Queue number
+          - Range: `0`-`7`
+        """
+        scheduling_type: pulumi.Input[str]
+        """
+        Scheduling type
+          - Choices: `llq`, `wrr`
+        """
+        burst: NotRequired[pulumi.Input[int]]
+        """
+        Burst size
+          - Range: `5000`-`10000000`
+        """
+        class_map_version: NotRequired[pulumi.Input[int]]
+        """
+        Class map version
+        """
+elif False:
+    QosMapPolicyDefinitionQosSchedulerArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class QosMapPolicyDefinitionQosSchedulerArgs:
@@ -26778,6 +34727,15 @@ class QosMapPolicyDefinitionQosSchedulerArgs:
         pulumi.set(self, "class_map_version", value)
 
 
+if not MYPY:
+    class RegionListPolicyObjectEntryArgsDict(TypedDict):
+        region_id: pulumi.Input[str]
+        """
+        Region ID or range of Region IDs e.g., `2` or `3-6`
+        """
+elif False:
+    RegionListPolicyObjectEntryArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class RegionListPolicyObjectEntryArgs:
     def __init__(__self__, *,
@@ -26799,6 +34757,34 @@ class RegionListPolicyObjectEntryArgs:
     def region_id(self, value: pulumi.Input[str]):
         pulumi.set(self, "region_id", value)
 
+
+if not MYPY:
+    class RewriteRulePolicyDefinitionRuleArgsDict(TypedDict):
+        class_map_id: pulumi.Input[str]
+        """
+        Class map ID
+        """
+        dscp: pulumi.Input[int]
+        """
+        DSCP
+          - Range: `0`-`63`
+        """
+        priority: pulumi.Input[str]
+        """
+        Priority
+          - Choices: `high`, `low`
+        """
+        class_map_version: NotRequired[pulumi.Input[int]]
+        """
+        Class map version
+        """
+        layer2_cos: NotRequired[pulumi.Input[int]]
+        """
+        Layer2 CoS
+          - Range: `0`-`7`
+        """
+elif False:
+    RewriteRulePolicyDefinitionRuleArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class RewriteRulePolicyDefinitionRuleArgs:
@@ -26889,6 +34875,38 @@ class RewriteRulePolicyDefinitionRuleArgs:
     def layer2_cos(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "layer2_cos", value)
 
+
+if not MYPY:
+    class RoutePolicyDefinitionSequenceArgsDict(TypedDict):
+        id: pulumi.Input[int]
+        """
+        Sequence ID
+          - Range: `1`-`65534`
+        """
+        name: pulumi.Input[str]
+        """
+        Sequence name
+        """
+        action_entries: NotRequired[pulumi.Input[Sequence[pulumi.Input['RoutePolicyDefinitionSequenceActionEntryArgsDict']]]]
+        """
+        List of action entries
+        """
+        base_action: NotRequired[pulumi.Input[str]]
+        """
+        Base action, either `accept` or `reject`
+          - Choices: `accept`, `reject`
+        """
+        ip_type: NotRequired[pulumi.Input[str]]
+        """
+        IP version, either `ipv4` or `ipv6`
+          - Choices: `ipv4`, `ipv6`
+        """
+        match_entries: NotRequired[pulumi.Input[Sequence[pulumi.Input['RoutePolicyDefinitionSequenceMatchEntryArgsDict']]]]
+        """
+        List of match entries
+        """
+elif False:
+    RoutePolicyDefinitionSequenceArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class RoutePolicyDefinitionSequenceArgs:
@@ -26996,6 +35014,88 @@ class RoutePolicyDefinitionSequenceArgs:
     def match_entries(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['RoutePolicyDefinitionSequenceMatchEntryArgs']]]]):
         pulumi.set(self, "match_entries", value)
 
+
+if not MYPY:
+    class RoutePolicyDefinitionSequenceActionEntryArgsDict(TypedDict):
+        type: pulumi.Input[str]
+        """
+        Type of action entry
+          - Choices: `aggregator`, `asPath`, `atomicAggregate`, `community`, `communityAdditive`, `localPreference`, `metric`, `weight`, `metricType`, `nextHop`, `ompTag`, `ospfTag`, `origin`, `originator`
+        """
+        aggregator: NotRequired[pulumi.Input[int]]
+        """
+        Aggregator
+          - Range: `0`-`4294967295`
+        """
+        aggregator_ip_address: NotRequired[pulumi.Input[str]]
+        """
+        IP address
+        """
+        as_path_exclude: NotRequired[pulumi.Input[str]]
+        """
+        Space separated list of ASN to exclude
+        """
+        as_path_prepend: NotRequired[pulumi.Input[str]]
+        """
+        Space separated list of ASN to prepend
+        """
+        atomic_aggregate: NotRequired[pulumi.Input[bool]]
+        """
+        Atomic aggregate
+        """
+        community: NotRequired[pulumi.Input[str]]
+        """
+        Community value, e.g. `1000:10000` or `internet` or `local-AS`
+        """
+        community_additive: NotRequired[pulumi.Input[bool]]
+        """
+        Community additive
+        """
+        local_preference: NotRequired[pulumi.Input[int]]
+        """
+        Local preference
+          - Range: `0`-`4294967295`
+        """
+        metric: NotRequired[pulumi.Input[int]]
+        """
+        Metric
+          - Range: `0`-`4294967295`
+        """
+        metric_type: NotRequired[pulumi.Input[str]]
+        """
+        Metric type
+          - Choices: `type1`, `type2`
+        """
+        next_hop: NotRequired[pulumi.Input[str]]
+        """
+        Next hop IP
+        """
+        omp_tag: NotRequired[pulumi.Input[int]]
+        """
+        OMP tag
+          - Range: `0`-`4294967295`
+        """
+        origin: NotRequired[pulumi.Input[str]]
+        """
+        Origin
+          - Choices: `igp`, `egp`, `incomplete`
+        """
+        originator: NotRequired[pulumi.Input[str]]
+        """
+        Originator IP
+        """
+        ospf_tag: NotRequired[pulumi.Input[int]]
+        """
+        OSPF tag
+          - Range: `0`-`4294967295`
+        """
+        weight: NotRequired[pulumi.Input[int]]
+        """
+        Weight
+          - Range: `0`-`4294967295`
+        """
+elif False:
+    RoutePolicyDefinitionSequenceActionEntryArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class RoutePolicyDefinitionSequenceActionEntryArgs:
@@ -27292,6 +35392,98 @@ class RoutePolicyDefinitionSequenceActionEntryArgs:
     def weight(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "weight", value)
 
+
+if not MYPY:
+    class RoutePolicyDefinitionSequenceMatchEntryArgsDict(TypedDict):
+        type: pulumi.Input[str]
+        """
+        Type of match entry
+          - Choices: `address`, `asPath`, `advancedCommunity`, `expandedCommunity`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
+        """
+        as_path_list_id: NotRequired[pulumi.Input[str]]
+        """
+        AS path list ID
+        """
+        as_path_list_version: NotRequired[pulumi.Input[int]]
+        """
+        AS path list version
+        """
+        community_list_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        Community list IDs
+        """
+        community_list_match_flag: NotRequired[pulumi.Input[str]]
+        """
+        Community list match flag
+          - Choices: `and`, `or`, `exact`
+        """
+        community_list_versions: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        Community list versions
+        """
+        expanded_community_list_id: NotRequired[pulumi.Input[str]]
+        """
+        Expanded community list ID
+        """
+        expanded_community_list_version: NotRequired[pulumi.Input[int]]
+        """
+        Expanded community list version
+        """
+        extended_community_list_id: NotRequired[pulumi.Input[str]]
+        """
+        Extended community list ID
+        """
+        extended_community_list_version: NotRequired[pulumi.Input[int]]
+        """
+        Extended community list version
+        """
+        local_preference: NotRequired[pulumi.Input[int]]
+        """
+        Local preference
+          - Range: `0`-`4294967295`
+        """
+        metric: NotRequired[pulumi.Input[int]]
+        """
+        Metric
+          - Range: `0`-`4294967295`
+        """
+        next_hop_prefix_list_id: NotRequired[pulumi.Input[str]]
+        """
+        Next hop prefix list ID
+        """
+        next_hop_prefix_list_version: NotRequired[pulumi.Input[int]]
+        """
+        Next hop prefix list version
+        """
+        omp_tag: NotRequired[pulumi.Input[int]]
+        """
+        OMP tag
+          - Range: `0`-`4294967295`
+        """
+        origin: NotRequired[pulumi.Input[str]]
+        """
+        Origin
+          - Choices: `igp`, `egp`, `incomplete`
+        """
+        ospf_tag: NotRequired[pulumi.Input[int]]
+        """
+        OSPF tag
+          - Range: `0`-`4294967295`
+        """
+        peer: NotRequired[pulumi.Input[str]]
+        """
+        Peer IP
+        """
+        prefix_list_id: NotRequired[pulumi.Input[str]]
+        """
+        Prefix list ID
+        """
+        prefix_list_version: NotRequired[pulumi.Input[int]]
+        """
+        Prefix list version
+        """
+elif False:
+    RoutePolicyDefinitionSequenceMatchEntryArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class RoutePolicyDefinitionSequenceMatchEntryArgs:
@@ -27632,6 +35824,156 @@ class RoutePolicyDefinitionSequenceMatchEntryArgs:
     def prefix_list_version(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "prefix_list_version", value)
 
+
+if not MYPY:
+    class RuleSetPolicyDefinitionRuleArgsDict(TypedDict):
+        name: pulumi.Input[str]
+        """
+        The name of the rule
+        """
+        order: pulumi.Input[int]
+        """
+        The order of the rule
+        """
+        destination_data_fqdn_prefix_list_id: NotRequired[pulumi.Input[str]]
+        """
+        Destination data FQDN prefix list ID
+        """
+        destination_data_fqdn_prefix_list_version: NotRequired[pulumi.Input[int]]
+        """
+        Destination data FQDN prefix list version
+        """
+        destination_data_ipv4_prefix_list_id: NotRequired[pulumi.Input[str]]
+        """
+        Destination data IPv4 prefix list ID
+        """
+        destination_data_ipv4_prefix_list_version: NotRequired[pulumi.Input[int]]
+        """
+        Destination data IPv4 prefix list version
+        """
+        destination_fqdn: NotRequired[pulumi.Input[str]]
+        """
+        Destination fully qualified domain name
+        """
+        destination_geo_location: NotRequired[pulumi.Input[str]]
+        """
+        Destination geo location
+        """
+        destination_geo_location_list_id: NotRequired[pulumi.Input[str]]
+        """
+        Destination geo location list ID
+        """
+        destination_geo_location_list_version: NotRequired[pulumi.Input[int]]
+        """
+        Destination geo location list version
+        """
+        destination_ipv4_prefix: NotRequired[pulumi.Input[str]]
+        """
+        Destination IPv4 prefix
+        """
+        destination_ipv4_prefix_variable: NotRequired[pulumi.Input[str]]
+        """
+        Destination IPv4 prefix variable name
+        """
+        destination_object_group_id: NotRequired[pulumi.Input[str]]
+        """
+        Destination object group ID
+        """
+        destination_object_group_version: NotRequired[pulumi.Input[int]]
+        """
+        Destination object group version
+        """
+        destination_port: NotRequired[pulumi.Input[str]]
+        """
+        Destination port or range of ports
+        """
+        destination_port_list_id: NotRequired[pulumi.Input[str]]
+        """
+        Destination port list ID
+        """
+        destination_port_list_version: NotRequired[pulumi.Input[int]]
+        """
+        Destination port list version
+        """
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Protocol name
+        """
+        protocol_list_id: NotRequired[pulumi.Input[str]]
+        """
+        Protocol list ID
+        """
+        protocol_list_version: NotRequired[pulumi.Input[int]]
+        """
+        Protocol list version
+        """
+        protocol_number: NotRequired[pulumi.Input[int]]
+        """
+        Protocol number
+          - Range: `0`-`255`
+        """
+        source_data_fqdn_prefix_list_id: NotRequired[pulumi.Input[str]]
+        """
+        Source data FQDN prefix list ID
+        """
+        source_data_fqdn_prefix_list_version: NotRequired[pulumi.Input[int]]
+        """
+        Source data FQDN prefix list version
+        """
+        source_data_ipv4_prefix_list_id: NotRequired[pulumi.Input[str]]
+        """
+        Source data IPv4 prefix list ID
+        """
+        source_data_ipv4_prefix_list_version: NotRequired[pulumi.Input[int]]
+        """
+        Source data IPv4 prefix list version
+        """
+        source_fqdn: NotRequired[pulumi.Input[str]]
+        """
+        Source fully qualified domain name
+        """
+        source_geo_location: NotRequired[pulumi.Input[str]]
+        """
+        Source geo location
+        """
+        source_geo_location_list_id: NotRequired[pulumi.Input[str]]
+        """
+        Source geo location list ID
+        """
+        source_geo_location_list_version: NotRequired[pulumi.Input[int]]
+        """
+        Source geo location list version
+        """
+        source_ipv4_prefix: NotRequired[pulumi.Input[str]]
+        """
+        Source IPv4 prefix
+        """
+        source_ipv4_prefix_variable: NotRequired[pulumi.Input[str]]
+        """
+        Source IPv4 prefix variable name
+        """
+        source_object_group_id: NotRequired[pulumi.Input[str]]
+        """
+        Source object group ID
+        """
+        source_object_group_version: NotRequired[pulumi.Input[int]]
+        """
+        Source object group version
+        """
+        source_port: NotRequired[pulumi.Input[str]]
+        """
+        Source port or range of ports
+        """
+        source_port_list_id: NotRequired[pulumi.Input[str]]
+        """
+        Source port list ID
+        """
+        source_port_list_version: NotRequired[pulumi.Input[int]]
+        """
+        Source port list version
+        """
+elif False:
+    RuleSetPolicyDefinitionRuleArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class RuleSetPolicyDefinitionRuleArgs:
@@ -28216,6 +36558,88 @@ class RuleSetPolicyDefinitionRuleArgs:
         pulumi.set(self, "source_port_list_version", value)
 
 
+if not MYPY:
+    class SecurityAppHostingFeatureTemplateVirtualApplicationArgsDict(TypedDict):
+        application_type: NotRequired[pulumi.Input[str]]
+        """
+        List of Virtual applications
+          - Choices: `utd`
+          - Default value: `utd`
+        """
+        data_gateway_ip: NotRequired[pulumi.Input[str]]
+        """
+        Data Gateway IP 
+          - Default value: `192.0.2.1/24`
+        """
+        data_gateway_ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        data_service_ip: NotRequired[pulumi.Input[str]]
+        """
+        Data Service IP
+          - Default value: `192.0.2.2/24`
+        """
+        data_service_ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        database_url: NotRequired[pulumi.Input[bool]]
+        """
+        Download URL Database on Device
+          - Default value: `false`
+        """
+        database_url_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        instance_id: NotRequired[pulumi.Input[str]]
+        """
+        List of Virtual applications
+          - Default value: `1`
+        """
+        nat: NotRequired[pulumi.Input[bool]]
+        """
+        Is Nat enabled
+          - Default value: `true`
+        """
+        nat_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        resource_profile: NotRequired[pulumi.Input[str]]
+        """
+        Resource Profile
+          - Choices: `low`, `medium`, `high`
+          - Default value: `low`
+        """
+        resource_profile_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        service_gateway_ip: NotRequired[pulumi.Input[str]]
+        """
+        Service Gateway IP (Management interface)
+        """
+        service_gateway_ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        service_ip: NotRequired[pulumi.Input[str]]
+        """
+        Service IP
+        """
+        service_ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    SecurityAppHostingFeatureTemplateVirtualApplicationArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class SecurityAppHostingFeatureTemplateVirtualApplicationArgs:
     def __init__(__self__, *,
@@ -28513,6 +36937,20 @@ class SecurityAppHostingFeatureTemplateVirtualApplicationArgs:
         pulumi.set(self, "service_ip_variable", value)
 
 
+if not MYPY:
+    class SecurityPolicyDefinitionArgsDict(TypedDict):
+        id: pulumi.Input[str]
+        """
+        Policy definition ID
+        """
+        type: pulumi.Input[str]
+        """
+        Policy definition type
+          - Choices: `urlFiltering`, `zoneBasedFW`, `intrusionPrevention`, `sslDecryption`, `advancedMalwareProtection`, `dnsSecurity`
+        """
+elif False:
+    SecurityPolicyDefinitionArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class SecurityPolicyDefinitionArgs:
     def __init__(__self__, *,
@@ -28552,6 +36990,19 @@ class SecurityPolicyDefinitionArgs:
         pulumi.set(self, "type", value)
 
 
+if not MYPY:
+    class SecurityPolicyLoggingArgsDict(TypedDict):
+        external_syslog_server_ip: NotRequired[pulumi.Input[str]]
+        """
+        External Syslog Server IP
+        """
+        external_syslog_server_vpn: NotRequired[pulumi.Input[str]]
+        """
+        External Syslog Server VPN
+        """
+elif False:
+    SecurityPolicyLoggingArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class SecurityPolicyLoggingArgs:
     def __init__(__self__, *,
@@ -28590,6 +37041,25 @@ class SecurityPolicyLoggingArgs:
     def external_syslog_server_vpn(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "external_syslog_server_vpn", value)
 
+
+if not MYPY:
+    class ServiceLanVpnFeatureAdvertiseOmpIpv4ArgsDict(TypedDict):
+        prefixes: NotRequired[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureAdvertiseOmpIpv4PrefixArgsDict']]]]
+        """
+        IPv4 Prefix List
+        """
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Protocol
+          - Choices: `bgp`, `ospf`, `ospfv3`, `connected`, `static`, `network`, `aggregate`, `eigrp`, `lisp`, `isis`
+        """
+        protocol_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        route_policy_id: NotRequired[pulumi.Input[str]]
+elif False:
+    ServiceLanVpnFeatureAdvertiseOmpIpv4ArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ServiceLanVpnFeatureAdvertiseOmpIpv4Args:
@@ -28659,6 +37129,39 @@ class ServiceLanVpnFeatureAdvertiseOmpIpv4Args:
     def route_policy_id(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "route_policy_id", value)
 
+
+if not MYPY:
+    class ServiceLanVpnFeatureAdvertiseOmpIpv4PrefixArgsDict(TypedDict):
+        aggregate_only: NotRequired[pulumi.Input[bool]]
+        """
+        Aggregate Only
+          - Default value: `false`
+        """
+        network_address: NotRequired[pulumi.Input[str]]
+        network_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        region: NotRequired[pulumi.Input[str]]
+        """
+        Applied to Region
+          - Choices: `core-and-access`, `core`, `access`
+          - Default value: `core-and-access`
+        """
+        region_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        subnet_mask: NotRequired[pulumi.Input[str]]
+        """
+        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        """
+        subnet_mask_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceLanVpnFeatureAdvertiseOmpIpv4PrefixArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ServiceLanVpnFeatureAdvertiseOmpIpv4PrefixArgs:
@@ -28781,6 +37284,34 @@ class ServiceLanVpnFeatureAdvertiseOmpIpv4PrefixArgs:
         pulumi.set(self, "subnet_mask_variable", value)
 
 
+if not MYPY:
+    class ServiceLanVpnFeatureAdvertiseOmpIpv6ArgsDict(TypedDict):
+        prefixes: NotRequired[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureAdvertiseOmpIpv6PrefixArgsDict']]]]
+        """
+        IPv6 Prefix List
+        """
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Protocol
+          - Choices: `BGP`, `OSPF`, `Connected`, `Static`, `Network`, `Aggregate`
+        """
+        protocol_sub_type: NotRequired[pulumi.Input[str]]
+        """
+        Protocol Sub Type
+          - Choices: `External`
+        """
+        protocol_sub_type_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        protocol_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        route_policy_id: NotRequired[pulumi.Input[str]]
+elif False:
+    ServiceLanVpnFeatureAdvertiseOmpIpv6ArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceLanVpnFeatureAdvertiseOmpIpv6Args:
     def __init__(__self__, *,
@@ -28884,6 +37415,24 @@ class ServiceLanVpnFeatureAdvertiseOmpIpv6Args:
         pulumi.set(self, "route_policy_id", value)
 
 
+if not MYPY:
+    class ServiceLanVpnFeatureAdvertiseOmpIpv6PrefixArgsDict(TypedDict):
+        aggregate_only: NotRequired[pulumi.Input[bool]]
+        """
+        Aggregate Only
+          - Default value: `false`
+        """
+        prefix: NotRequired[pulumi.Input[str]]
+        """
+        IPv6 Prefix
+        """
+        prefix_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceLanVpnFeatureAdvertiseOmpIpv6PrefixArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceLanVpnFeatureAdvertiseOmpIpv6PrefixArgs:
     def __init__(__self__, *,
@@ -28940,6 +37489,40 @@ class ServiceLanVpnFeatureAdvertiseOmpIpv6PrefixArgs:
     def prefix_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "prefix_variable", value)
 
+
+if not MYPY:
+    class ServiceLanVpnFeatureGreRouteArgsDict(TypedDict):
+        interface_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        interfaces: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        Interface
+        """
+        network_address: NotRequired[pulumi.Input[str]]
+        """
+        IP Address
+        """
+        network_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        subnet_mask: NotRequired[pulumi.Input[str]]
+        """
+        Subnet Mask
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        """
+        subnet_mask_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        vpn: NotRequired[pulumi.Input[int]]
+        """
+        Service
+        """
+elif False:
+    ServiceLanVpnFeatureGreRouteArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ServiceLanVpnFeatureGreRouteArgs:
@@ -29062,6 +37645,27 @@ class ServiceLanVpnFeatureGreRouteArgs:
         pulumi.set(self, "vpn", value)
 
 
+if not MYPY:
+    class ServiceLanVpnFeatureHostMappingArgsDict(TypedDict):
+        host_name: NotRequired[pulumi.Input[str]]
+        """
+        Hostname
+        """
+        host_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        list_of_ips: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        List of IP
+        """
+        list_of_ips_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceLanVpnFeatureHostMappingArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceLanVpnFeatureHostMappingArgs:
     def __init__(__self__, *,
@@ -29132,6 +37736,36 @@ class ServiceLanVpnFeatureHostMappingArgs:
     def list_of_ips_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "list_of_ips_variable", value)
 
+
+if not MYPY:
+    class ServiceLanVpnFeatureIpsecRouteArgsDict(TypedDict):
+        interface_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        interfaces: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        Interface
+        """
+        network_address: NotRequired[pulumi.Input[str]]
+        """
+        IP Address
+        """
+        network_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        subnet_mask: NotRequired[pulumi.Input[str]]
+        """
+        Subnet Mask
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        """
+        subnet_mask_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceLanVpnFeatureIpsecRouteArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ServiceLanVpnFeatureIpsecRouteArgs:
@@ -29238,6 +37872,19 @@ class ServiceLanVpnFeatureIpsecRouteArgs:
         pulumi.set(self, "subnet_mask_variable", value)
 
 
+if not MYPY:
+    class ServiceLanVpnFeatureIpv4ExportRouteTargetArgsDict(TypedDict):
+        route_target: NotRequired[pulumi.Input[str]]
+        """
+        Route target
+        """
+        route_target_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceLanVpnFeatureIpv4ExportRouteTargetArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceLanVpnFeatureIpv4ExportRouteTargetArgs:
     def __init__(__self__, *,
@@ -29277,6 +37924,19 @@ class ServiceLanVpnFeatureIpv4ExportRouteTargetArgs:
         pulumi.set(self, "route_target_variable", value)
 
 
+if not MYPY:
+    class ServiceLanVpnFeatureIpv4ImportRouteTargetArgsDict(TypedDict):
+        route_target: NotRequired[pulumi.Input[str]]
+        """
+        Route target
+        """
+        route_target_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceLanVpnFeatureIpv4ImportRouteTargetArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceLanVpnFeatureIpv4ImportRouteTargetArgs:
     def __init__(__self__, *,
@@ -29315,6 +37975,48 @@ class ServiceLanVpnFeatureIpv4ImportRouteTargetArgs:
     def route_target_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "route_target_variable", value)
 
+
+if not MYPY:
+    class ServiceLanVpnFeatureIpv4StaticRouteArgsDict(TypedDict):
+        gateway_dhcp: NotRequired[pulumi.Input[bool]]
+        """
+        IPv4 Route Gateway DHCP
+        """
+        network_address: NotRequired[pulumi.Input[str]]
+        """
+        IP Address
+        """
+        network_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        next_hop_with_trackers: NotRequired[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTrackerArgsDict']]]]
+        """
+        IPv4 Route Gateway Next Hop with Tracker
+        """
+        next_hops: NotRequired[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureIpv4StaticRouteNextHopArgsDict']]]]
+        """
+        IPv4 Route Gateway Next Hop
+        """
+        null0: NotRequired[pulumi.Input[bool]]
+        """
+        IPv4 Route Gateway Next Hop
+        """
+        subnet_mask: NotRequired[pulumi.Input[str]]
+        """
+        Subnet Mask
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        """
+        subnet_mask_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        vpn: NotRequired[pulumi.Input[bool]]
+        """
+        IPv4 Route Gateway VPN
+        """
+elif False:
+    ServiceLanVpnFeatureIpv4StaticRouteArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ServiceLanVpnFeatureIpv4StaticRouteArgs:
@@ -29469,6 +38171,28 @@ class ServiceLanVpnFeatureIpv4StaticRouteArgs:
         pulumi.set(self, "vpn", value)
 
 
+if not MYPY:
+    class ServiceLanVpnFeatureIpv4StaticRouteNextHopArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        Address
+        """
+        address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        administrative_distance: NotRequired[pulumi.Input[int]]
+        """
+        Administrative distance
+          - Range: `1`-`255`
+        """
+        administrative_distance_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceLanVpnFeatureIpv4StaticRouteNextHopArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceLanVpnFeatureIpv4StaticRouteNextHopArgs:
     def __init__(__self__, *,
@@ -29541,6 +38265,29 @@ class ServiceLanVpnFeatureIpv4StaticRouteNextHopArgs:
     def administrative_distance_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "administrative_distance_variable", value)
 
+
+if not MYPY:
+    class ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTrackerArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        Address
+        """
+        address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        administrative_distance: NotRequired[pulumi.Input[int]]
+        """
+        Administrative distance
+          - Range: `1`-`255`
+        """
+        administrative_distance_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        tracker_id: NotRequired[pulumi.Input[str]]
+elif False:
+    ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTrackerArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTrackerArgs:
@@ -29627,6 +38374,19 @@ class ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTrackerArgs:
         pulumi.set(self, "tracker_id", value)
 
 
+if not MYPY:
+    class ServiceLanVpnFeatureIpv6ExportRouteTargetArgsDict(TypedDict):
+        route_target: NotRequired[pulumi.Input[str]]
+        """
+        Route target
+        """
+        route_target_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceLanVpnFeatureIpv6ExportRouteTargetArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceLanVpnFeatureIpv6ExportRouteTargetArgs:
     def __init__(__self__, *,
@@ -29666,6 +38426,19 @@ class ServiceLanVpnFeatureIpv6ExportRouteTargetArgs:
         pulumi.set(self, "route_target_variable", value)
 
 
+if not MYPY:
+    class ServiceLanVpnFeatureIpv6ImportRouteTargetArgsDict(TypedDict):
+        route_target: NotRequired[pulumi.Input[str]]
+        """
+        Route target
+        """
+        route_target_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceLanVpnFeatureIpv6ImportRouteTargetArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceLanVpnFeatureIpv6ImportRouteTargetArgs:
     def __init__(__self__, *,
@@ -29704,6 +38477,36 @@ class ServiceLanVpnFeatureIpv6ImportRouteTargetArgs:
     def route_target_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "route_target_variable", value)
 
+
+if not MYPY:
+    class ServiceLanVpnFeatureIpv6StaticRouteArgsDict(TypedDict):
+        nat: NotRequired[pulumi.Input[str]]
+        """
+        IPv6 Nat
+          - Choices: `NAT64`, `NAT66`
+        """
+        nat_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        next_hops: NotRequired[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureIpv6StaticRouteNextHopArgsDict']]]]
+        """
+        IPv6 Route Gateway Next Hop
+        """
+        null0: NotRequired[pulumi.Input[bool]]
+        """
+        IPv6 Route Gateway Next Hop
+        """
+        prefix: NotRequired[pulumi.Input[str]]
+        """
+        Prefix
+        """
+        prefix_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceLanVpnFeatureIpv6StaticRouteArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ServiceLanVpnFeatureIpv6StaticRouteArgs:
@@ -29810,6 +38613,28 @@ class ServiceLanVpnFeatureIpv6StaticRouteArgs:
         pulumi.set(self, "prefix_variable", value)
 
 
+if not MYPY:
+    class ServiceLanVpnFeatureIpv6StaticRouteNextHopArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        Address
+        """
+        address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        administrative_distance: NotRequired[pulumi.Input[int]]
+        """
+        Administrative distance
+          - Range: `1`-`254`
+        """
+        administrative_distance_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceLanVpnFeatureIpv6StaticRouteNextHopArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceLanVpnFeatureIpv6StaticRouteNextHopArgs:
     def __init__(__self__, *,
@@ -29882,6 +38707,44 @@ class ServiceLanVpnFeatureIpv6StaticRouteNextHopArgs:
     def administrative_distance_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "administrative_distance_variable", value)
 
+
+if not MYPY:
+    class ServiceLanVpnFeatureNat64V4PoolArgsDict(TypedDict):
+        name: NotRequired[pulumi.Input[str]]
+        """
+        NAT64 v4 Pool Name
+        """
+        name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        overload: NotRequired[pulumi.Input[bool]]
+        """
+        NAT64 Overload
+          - Default value: `false`
+        """
+        overload_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        range_end: NotRequired[pulumi.Input[str]]
+        """
+        NAT64 Pool Range End
+        """
+        range_end_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        range_start: NotRequired[pulumi.Input[str]]
+        """
+        NAT64 Pool Range Start
+        """
+        range_start_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceLanVpnFeatureNat64V4PoolArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ServiceLanVpnFeatureNat64V4PoolArgs:
@@ -30019,6 +38882,64 @@ class ServiceLanVpnFeatureNat64V4PoolArgs:
     def range_start_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "range_start_variable", value)
 
+
+if not MYPY:
+    class ServiceLanVpnFeatureNatPoolArgsDict(TypedDict):
+        direction: NotRequired[pulumi.Input[str]]
+        """
+        NAT Direction
+          - Choices: `inside`, `outside`
+        """
+        direction_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        nat_pool_name: NotRequired[pulumi.Input[int]]
+        """
+        NAT Pool Name
+          - Range: `1`-`32`
+        """
+        nat_pool_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        overload: NotRequired[pulumi.Input[bool]]
+        """
+        NAT Overload
+          - Default value: `true`
+        """
+        overload_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        prefix_length: NotRequired[pulumi.Input[int]]
+        """
+        NAT Pool Prefix Length
+          - Range: `1`-`32`
+        """
+        prefix_length_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        range_end: NotRequired[pulumi.Input[str]]
+        """
+        NAT Pool Range End
+        """
+        range_end_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        range_start: NotRequired[pulumi.Input[str]]
+        """
+        NAT Pool Range Start
+        """
+        range_start_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        tracker_object_id: NotRequired[pulumi.Input[str]]
+elif False:
+    ServiceLanVpnFeatureNatPoolArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ServiceLanVpnFeatureNatPoolArgs:
@@ -30239,6 +39160,61 @@ class ServiceLanVpnFeatureNatPoolArgs:
         pulumi.set(self, "tracker_object_id", value)
 
 
+if not MYPY:
+    class ServiceLanVpnFeatureNatPortForwardArgsDict(TypedDict):
+        nat_pool_name: NotRequired[pulumi.Input[int]]
+        """
+        NAT Pool Name
+          - Range: `1`-`32`
+        """
+        nat_pool_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Protocol
+          - Choices: `TCP`, `UDP`
+        """
+        protocol_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        source_ip: NotRequired[pulumi.Input[str]]
+        """
+        Source IP Address
+        """
+        source_ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        source_port: NotRequired[pulumi.Input[int]]
+        """
+        Source Port
+        """
+        source_port_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        translate_port: NotRequired[pulumi.Input[int]]
+        """
+        Translate Port
+        """
+        translate_port_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        translated_source_ip: NotRequired[pulumi.Input[str]]
+        """
+        Translated Source IP Address
+        """
+        translated_source_ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceLanVpnFeatureNatPortForwardArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceLanVpnFeatureNatPortForwardArgs:
     def __init__(__self__, *,
@@ -30442,6 +39418,25 @@ class ServiceLanVpnFeatureNatPortForwardArgs:
         pulumi.set(self, "translated_source_ip_variable", value)
 
 
+if not MYPY:
+    class ServiceLanVpnFeatureRouteLeakFromGlobalVpnArgsDict(TypedDict):
+        redistributions: NotRequired[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureRouteLeakFromGlobalVpnRedistributionArgsDict']]]]
+        """
+        Redistribute Routes to specific Protocol on Service VPN
+        """
+        route_policy_id: NotRequired[pulumi.Input[str]]
+        route_protocol: NotRequired[pulumi.Input[str]]
+        """
+        Leak Routes of particular protocol from Global to Service VPN
+          - Choices: `static`, `connected`, `bgp`, `ospf`
+        """
+        route_protocol_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceLanVpnFeatureRouteLeakFromGlobalVpnArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceLanVpnFeatureRouteLeakFromGlobalVpnArgs:
     def __init__(__self__, *,
@@ -30511,6 +39506,21 @@ class ServiceLanVpnFeatureRouteLeakFromGlobalVpnArgs:
         pulumi.set(self, "route_protocol_variable", value)
 
 
+if not MYPY:
+    class ServiceLanVpnFeatureRouteLeakFromGlobalVpnRedistributionArgsDict(TypedDict):
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Protocol to restributed leaked routes
+          - Choices: `bgp`, `ospf`
+        """
+        protocol_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        redistribution_policy_id: NotRequired[pulumi.Input[str]]
+elif False:
+    ServiceLanVpnFeatureRouteLeakFromGlobalVpnRedistributionArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceLanVpnFeatureRouteLeakFromGlobalVpnRedistributionArgs:
     def __init__(__self__, *,
@@ -30563,6 +39573,34 @@ class ServiceLanVpnFeatureRouteLeakFromGlobalVpnRedistributionArgs:
     def redistribution_policy_id(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "redistribution_policy_id", value)
 
+
+if not MYPY:
+    class ServiceLanVpnFeatureRouteLeakFromOtherServiceArgsDict(TypedDict):
+        redistributions: NotRequired[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureRouteLeakFromOtherServiceRedistributionArgsDict']]]]
+        """
+        Redistribute Route to specific Protocol on Current Service VPN
+        """
+        route_policy_id: NotRequired[pulumi.Input[str]]
+        route_protocol: NotRequired[pulumi.Input[str]]
+        """
+        Leak Route of particular protocol from Source Service VPN
+          - Choices: `static`, `connected`, `bgp`, `ospf`
+        """
+        route_protocol_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        source_vpn: NotRequired[pulumi.Input[int]]
+        """
+        Source Service VPN from where route are to be leaked
+          - Range: `1`-`65530`
+        """
+        source_vpn_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceLanVpnFeatureRouteLeakFromOtherServiceArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ServiceLanVpnFeatureRouteLeakFromOtherServiceArgs:
@@ -30667,6 +39705,21 @@ class ServiceLanVpnFeatureRouteLeakFromOtherServiceArgs:
         pulumi.set(self, "source_vpn_variable", value)
 
 
+if not MYPY:
+    class ServiceLanVpnFeatureRouteLeakFromOtherServiceRedistributionArgsDict(TypedDict):
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Protocol to restributed leaked routes
+          - Choices: `bgp`, `ospf`
+        """
+        protocol_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        redistribution_policy_id: NotRequired[pulumi.Input[str]]
+elif False:
+    ServiceLanVpnFeatureRouteLeakFromOtherServiceRedistributionArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceLanVpnFeatureRouteLeakFromOtherServiceRedistributionArgs:
     def __init__(__self__, *,
@@ -30719,6 +39772,25 @@ class ServiceLanVpnFeatureRouteLeakFromOtherServiceRedistributionArgs:
     def redistribution_policy_id(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "redistribution_policy_id", value)
 
+
+if not MYPY:
+    class ServiceLanVpnFeatureRouteLeakToGlobalVpnArgsDict(TypedDict):
+        redistributions: NotRequired[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureRouteLeakToGlobalVpnRedistributionArgsDict']]]]
+        """
+        Redistribute Routes to specific Protocol on Global VPN
+        """
+        route_policy_id: NotRequired[pulumi.Input[str]]
+        route_protocol: NotRequired[pulumi.Input[str]]
+        """
+        Leak Routes of particular protocol from Service to Global VPN
+          - Choices: `static`, `connected`, `bgp`, `ospf`
+        """
+        route_protocol_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceLanVpnFeatureRouteLeakToGlobalVpnArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ServiceLanVpnFeatureRouteLeakToGlobalVpnArgs:
@@ -30789,6 +39861,21 @@ class ServiceLanVpnFeatureRouteLeakToGlobalVpnArgs:
         pulumi.set(self, "route_protocol_variable", value)
 
 
+if not MYPY:
+    class ServiceLanVpnFeatureRouteLeakToGlobalVpnRedistributionArgsDict(TypedDict):
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Protocol to restributed leaked routes
+          - Choices: `bgp`, `ospf`
+        """
+        protocol_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        redistribution_policy_id: NotRequired[pulumi.Input[str]]
+elif False:
+    ServiceLanVpnFeatureRouteLeakToGlobalVpnRedistributionArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceLanVpnFeatureRouteLeakToGlobalVpnRedistributionArgs:
     def __init__(__self__, *,
@@ -30841,6 +39928,37 @@ class ServiceLanVpnFeatureRouteLeakToGlobalVpnRedistributionArgs:
     def redistribution_policy_id(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "redistribution_policy_id", value)
 
+
+if not MYPY:
+    class ServiceLanVpnFeatureServiceArgsDict(TypedDict):
+        ipv4_addresses: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        IPv4 Addresses (Maximum: 4)
+        """
+        ipv4_addresses_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        service_type: NotRequired[pulumi.Input[str]]
+        """
+        Service Type
+          - Choices: `FW`, `IDS`, `IDP`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `TE`, `appqoe`
+        """
+        service_type_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        tracking: NotRequired[pulumi.Input[bool]]
+        """
+        Tracking
+          - Default value: `true`
+        """
+        tracking_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceLanVpnFeatureServiceArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ServiceLanVpnFeatureServiceArgs:
@@ -30948,6 +40066,42 @@ class ServiceLanVpnFeatureServiceArgs:
     def tracking_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "tracking_variable", value)
 
+
+if not MYPY:
+    class ServiceLanVpnFeatureServiceRouteArgsDict(TypedDict):
+        network_address: NotRequired[pulumi.Input[str]]
+        """
+        IP Address
+        """
+        network_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        service: NotRequired[pulumi.Input[str]]
+        """
+        Service
+          - Choices: `SIG`
+          - Default value: `SIG`
+        """
+        service_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        subnet_mask: NotRequired[pulumi.Input[str]]
+        """
+        Subnet Mask
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        """
+        subnet_mask_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        vpn: NotRequired[pulumi.Input[int]]
+        """
+        Service
+        """
+elif False:
+    ServiceLanVpnFeatureServiceRouteArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ServiceLanVpnFeatureServiceRouteArgs:
@@ -31073,6 +40227,46 @@ class ServiceLanVpnFeatureServiceRouteArgs:
     def vpn(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "vpn", value)
 
+
+if not MYPY:
+    class ServiceLanVpnFeatureStaticNatArgsDict(TypedDict):
+        nat_pool_name: NotRequired[pulumi.Input[int]]
+        """
+        NAT Pool Name
+          - Range: `1`-`32`
+        """
+        nat_pool_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        source_ip: NotRequired[pulumi.Input[str]]
+        """
+        Source IP Address
+        """
+        source_ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        static_nat_direction: NotRequired[pulumi.Input[str]]
+        """
+        Static NAT Direction
+          - Choices: `inside`, `outside`
+        """
+        static_nat_direction_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        tracker_object_id: NotRequired[pulumi.Input[str]]
+        translated_source_ip: NotRequired[pulumi.Input[str]]
+        """
+        Translated Source IP Address
+        """
+        translated_source_ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceLanVpnFeatureStaticNatArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ServiceLanVpnFeatureStaticNatArgs:
@@ -31225,6 +40419,27 @@ class ServiceLanVpnFeatureStaticNatArgs:
         pulumi.set(self, "translated_source_ip_variable", value)
 
 
+if not MYPY:
+    class ServiceLanVpnInterfaceEthernetFeatureArpArgsDict(TypedDict):
+        ip_address: NotRequired[pulumi.Input[str]]
+        """
+        IPV4 Address
+        """
+        ip_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        mac_address: NotRequired[pulumi.Input[str]]
+        """
+        MAC Address
+        """
+        mac_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceLanVpnInterfaceEthernetFeatureArpArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceLanVpnInterfaceEthernetFeatureArpArgs:
     def __init__(__self__, *,
@@ -31295,6 +40510,28 @@ class ServiceLanVpnInterfaceEthernetFeatureArpArgs:
     def mac_address_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "mac_address_variable", value)
 
+
+if not MYPY:
+    class ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        IpV4 Address
+        """
+        address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        subnet_mask: NotRequired[pulumi.Input[str]]
+        """
+        Subnet Mask
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        """
+        subnet_mask_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs:
@@ -31368,6 +40605,67 @@ class ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs:
     def subnet_mask_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "subnet_mask_variable", value)
 
+
+if not MYPY:
+    class ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        VRRP Ip Address
+        """
+        address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        group_id: NotRequired[pulumi.Input[int]]
+        """
+        Group ID
+          - Range: `1`-`255`
+        """
+        group_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        priority: NotRequired[pulumi.Input[int]]
+        """
+        Set priority
+          - Range: `1`-`254`
+          - Default value: `100`
+        """
+        priority_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        secondary_addresses: NotRequired[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpSecondaryAddressArgsDict']]]]
+        """
+        VRRP Secondary Ip Addresses
+        """
+        timer: NotRequired[pulumi.Input[int]]
+        """
+        Timer interval for successive advertisements, in milliseconds
+          - Range: `100`-`40950`
+          - Default value: `1000`
+        """
+        timer_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        tloc_pref_change_value: NotRequired[pulumi.Input[int]]
+        """
+        Timer interval for successive advertisements, in milliseconds
+          - Range: `100`-`4294967295`
+        """
+        tloc_prefix_change: NotRequired[pulumi.Input[bool]]
+        """
+        Timer interval for successive advertisements, in milliseconds
+          - Default value: `false`
+        """
+        track_omp: NotRequired[pulumi.Input[bool]]
+        """
+        Track OMP status
+          - Default value: `false`
+        """
+elif False:
+    ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArgs:
@@ -31584,6 +40882,28 @@ class ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArgs:
         pulumi.set(self, "track_omp", value)
 
 
+if not MYPY:
+    class ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpSecondaryAddressArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        Ip Address
+        """
+        address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        subnet_mask: NotRequired[pulumi.Input[str]]
+        """
+        Subnet Mask
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        """
+        subnet_mask_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpSecondaryAddressArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpSecondaryAddressArgs:
     def __init__(__self__, *,
@@ -31656,6 +40976,28 @@ class ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpSecondaryAddressArgs:
     def subnet_mask_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "subnet_mask_variable", value)
 
+
+if not MYPY:
+    class ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        DHCPv6 Helper address
+        """
+        address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        dhcpv6_helper_vpn: NotRequired[pulumi.Input[int]]
+        """
+        DHCPv6 Helper VPN
+          - Range: `1`-`65536`
+        """
+        dhcpv6_helper_vpn_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperArgs:
@@ -31730,6 +41072,19 @@ class ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperArgs:
         pulumi.set(self, "dhcpv6_helper_vpn_variable", value)
 
 
+if not MYPY:
+    class ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        IPv6 Address Secondary
+        """
+        address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs:
     def __init__(__self__, *,
@@ -31769,6 +41124,19 @@ class ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs:
         pulumi.set(self, "address_variable", value)
 
 
+if not MYPY:
+    class ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        IPv6 Address Secondary
+        """
+        address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs:
     def __init__(__self__, *,
@@ -31807,6 +41175,49 @@ class ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs:
     def address_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "address_variable", value)
 
+
+if not MYPY:
+    class ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArgsDict(TypedDict):
+        group_id: NotRequired[pulumi.Input[int]]
+        """
+        Group ID
+          - Range: `1`-`255`
+        """
+        group_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ipv6_addresses: NotRequired[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpIpv6AddressArgsDict']]]]
+        """
+        IPv6 VRRP
+        """
+        priority: NotRequired[pulumi.Input[int]]
+        """
+        Set priority
+          - Range: `1`-`254`
+          - Default value: `100`
+        """
+        priority_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        timer: NotRequired[pulumi.Input[int]]
+        """
+        Timer interval for successive advertisements, in milliseconds
+          - Range: `100`-`40950`
+          - Default value: `1000`
+        """
+        timer_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        track_omp: NotRequired[pulumi.Input[bool]]
+        """
+        Track OMP status
+          - Default value: `false`
+        """
+elif False:
+    ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArgs:
@@ -31955,6 +41366,27 @@ class ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArgs:
         pulumi.set(self, "track_omp", value)
 
 
+if not MYPY:
+    class ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpIpv6AddressArgsDict(TypedDict):
+        global_address: NotRequired[pulumi.Input[str]]
+        """
+        Assign Global IPv6 Prefix
+        """
+        global_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        link_local_address: NotRequired[pulumi.Input[str]]
+        """
+        Use link-local IPv6 Address
+        """
+        link_local_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpIpv6AddressArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpIpv6AddressArgs:
     def __init__(__self__, *,
@@ -32025,6 +41457,43 @@ class ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpIpv6AddressArgs:
     def link_local_address_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "link_local_address_variable", value)
 
+
+if not MYPY:
+    class ServiceLanVpnInterfaceEthernetFeatureStaticNatArgsDict(TypedDict):
+        direction: NotRequired[pulumi.Input[str]]
+        """
+        Direction of static NAT translation
+          - Choices: `inside`, `outside`
+          - Default value: `inside`
+        """
+        source_ip: NotRequired[pulumi.Input[str]]
+        """
+        Source IP address to be translated
+        """
+        source_ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        source_vpn: NotRequired[pulumi.Input[int]]
+        """
+        Source VPN ID
+          - Range: `0`-`65530`
+          - Default value: `0`
+        """
+        source_vpn_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        translate_ip: NotRequired[pulumi.Input[str]]
+        """
+        Statically translated source IP address
+        """
+        translate_ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceLanVpnInterfaceEthernetFeatureStaticNatArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ServiceLanVpnInterfaceEthernetFeatureStaticNatArgs:
@@ -32153,6 +41622,27 @@ class ServiceLanVpnInterfaceEthernetFeatureStaticNatArgs:
         pulumi.set(self, "translate_ip_variable", value)
 
 
+if not MYPY:
+    class ServiceLanVpnInterfaceSviFeatureArpArgsDict(TypedDict):
+        ip_address: NotRequired[pulumi.Input[str]]
+        """
+        IP Address
+        """
+        ip_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        mac_address: NotRequired[pulumi.Input[str]]
+        """
+        MAC address
+        """
+        mac_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceLanVpnInterfaceSviFeatureArpArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceLanVpnInterfaceSviFeatureArpArgs:
     def __init__(__self__, *,
@@ -32223,6 +41713,28 @@ class ServiceLanVpnInterfaceSviFeatureArpArgs:
     def mac_address_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "mac_address_variable", value)
 
+
+if not MYPY:
+    class ServiceLanVpnInterfaceSviFeatureIpv4SecondaryAddressArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        IpV4 Address
+        """
+        address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ipv4_subnet_mask: NotRequired[pulumi.Input[str]]
+        """
+        Subnet Mask
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        """
+        ipv4_subnet_mask_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceLanVpnInterfaceSviFeatureIpv4SecondaryAddressArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ServiceLanVpnInterfaceSviFeatureIpv4SecondaryAddressArgs:
@@ -32296,6 +41808,83 @@ class ServiceLanVpnInterfaceSviFeatureIpv4SecondaryAddressArgs:
     def ipv4_subnet_mask_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "ipv4_subnet_mask_variable", value)
 
+
+if not MYPY:
+    class ServiceLanVpnInterfaceSviFeatureIpv4VrrpArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        Assign IPV4 Address
+        """
+        address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        group_id: NotRequired[pulumi.Input[int]]
+        """
+        Group ID
+          - Range: `1`-`255`
+        """
+        group_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        prefix_list: NotRequired[pulumi.Input[str]]
+        """
+        Track Prefix List
+        """
+        prefix_list_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        priority: NotRequired[pulumi.Input[int]]
+        """
+        Set priority
+          - Range: `1`-`254`
+          - Default value: `100`
+        """
+        priority_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        secondary_addresses: NotRequired[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceSviFeatureIpv4VrrpSecondaryAddressArgsDict']]]]
+        """
+        VRRP Secondary IPV4 address
+        """
+        timer: NotRequired[pulumi.Input[int]]
+        """
+        Timer interval for successive advertisements, in milliseconds
+          - Range: `100`-`40950`
+          - Default value: `1000`
+        """
+        timer_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        tloc_prefix_change: NotRequired[pulumi.Input[bool]]
+        """
+        change TLOC preference
+          - Default value: `false`
+        """
+        tloc_prefix_change_value: NotRequired[pulumi.Input[int]]
+        """
+        Set tloc preference change value
+          - Range: `1`-`4294967295`
+        """
+        tloc_prefix_change_value_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        track_omp: NotRequired[pulumi.Input[bool]]
+        """
+        Track OMP status
+          - Default value: `false`
+        """
+        track_omp_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceLanVpnInterfaceSviFeatureIpv4VrrpArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ServiceLanVpnInterfaceSviFeatureIpv4VrrpArgs:
@@ -32576,6 +42165,19 @@ class ServiceLanVpnInterfaceSviFeatureIpv4VrrpArgs:
         pulumi.set(self, "track_omp_variable", value)
 
 
+if not MYPY:
+    class ServiceLanVpnInterfaceSviFeatureIpv4VrrpSecondaryAddressArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        VRRP Secondary IPV4 address
+        """
+        address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceLanVpnInterfaceSviFeatureIpv4VrrpSecondaryAddressArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceLanVpnInterfaceSviFeatureIpv4VrrpSecondaryAddressArgs:
     def __init__(__self__, *,
@@ -32614,6 +42216,28 @@ class ServiceLanVpnInterfaceSviFeatureIpv4VrrpSecondaryAddressArgs:
     def address_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "address_variable", value)
 
+
+if not MYPY:
+    class ServiceLanVpnInterfaceSviFeatureIpv6DhcpHelperArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        DHCPv6 Helper address
+        """
+        address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        vpn: NotRequired[pulumi.Input[int]]
+        """
+        DHCPv6 Helper VPN
+          - Range: `1`-`65536`
+        """
+        vpn_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceLanVpnInterfaceSviFeatureIpv6DhcpHelperArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ServiceLanVpnInterfaceSviFeatureIpv6DhcpHelperArgs:
@@ -32688,6 +42312,19 @@ class ServiceLanVpnInterfaceSviFeatureIpv6DhcpHelperArgs:
         pulumi.set(self, "vpn_variable", value)
 
 
+if not MYPY:
+    class ServiceLanVpnInterfaceSviFeatureIpv6SecondaryAddressArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        IPv6 Address
+        """
+        address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceLanVpnInterfaceSviFeatureIpv6SecondaryAddressArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceLanVpnInterfaceSviFeatureIpv6SecondaryAddressArgs:
     def __init__(__self__, *,
@@ -32726,6 +42363,65 @@ class ServiceLanVpnInterfaceSviFeatureIpv6SecondaryAddressArgs:
     def address_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "address_variable", value)
 
+
+if not MYPY:
+    class ServiceLanVpnInterfaceSviFeatureIpv6VrrpArgsDict(TypedDict):
+        addresses: NotRequired[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceSviFeatureIpv6VrrpAddressArgsDict']]]]
+        """
+        IPv6 VRRP
+        """
+        group_id: NotRequired[pulumi.Input[int]]
+        """
+        Group ID
+          - Range: `1`-`255`
+        """
+        group_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        priority: NotRequired[pulumi.Input[int]]
+        """
+        Set priority
+          - Range: `1`-`254`
+          - Default value: `100`
+        """
+        priority_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        secondary_addresses: NotRequired[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceSviFeatureIpv6VrrpSecondaryAddressArgsDict']]]]
+        """
+        IPv6 Secondary IP address
+        """
+        timer: NotRequired[pulumi.Input[int]]
+        """
+        Timer interval for successive advertisements, in milliseconds
+          - Range: `100`-`40950`
+          - Default value: `1000`
+        """
+        timer_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        track_omp: NotRequired[pulumi.Input[bool]]
+        """
+        Track OMP status
+          - Default value: `false`
+        """
+        track_omp_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        track_prefix_list: NotRequired[pulumi.Input[str]]
+        """
+        Track Prefix List
+        """
+        track_prefix_list_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceLanVpnInterfaceSviFeatureIpv6VrrpArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ServiceLanVpnInterfaceSviFeatureIpv6VrrpArgs:
@@ -32938,6 +42634,27 @@ class ServiceLanVpnInterfaceSviFeatureIpv6VrrpArgs:
         pulumi.set(self, "track_prefix_list_variable", value)
 
 
+if not MYPY:
+    class ServiceLanVpnInterfaceSviFeatureIpv6VrrpAddressArgsDict(TypedDict):
+        global_address: NotRequired[pulumi.Input[str]]
+        """
+        Assign Global IPv6 Prefix
+        """
+        global_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        link_local_address: NotRequired[pulumi.Input[str]]
+        """
+        Use link-local IPv6 Address
+        """
+        link_local_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceLanVpnInterfaceSviFeatureIpv6VrrpAddressArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceLanVpnInterfaceSviFeatureIpv6VrrpAddressArgs:
     def __init__(__self__, *,
@@ -33009,6 +42726,19 @@ class ServiceLanVpnInterfaceSviFeatureIpv6VrrpAddressArgs:
         pulumi.set(self, "link_local_address_variable", value)
 
 
+if not MYPY:
+    class ServiceLanVpnInterfaceSviFeatureIpv6VrrpSecondaryAddressArgsDict(TypedDict):
+        prefix: NotRequired[pulumi.Input[str]]
+        """
+        IPv6 Secondary IP address
+        """
+        prefix_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceLanVpnInterfaceSviFeatureIpv6VrrpSecondaryAddressArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceLanVpnInterfaceSviFeatureIpv6VrrpSecondaryAddressArgs:
     def __init__(__self__, *,
@@ -33048,6 +42778,12 @@ class ServiceLanVpnInterfaceSviFeatureIpv6VrrpSecondaryAddressArgs:
         pulumi.set(self, "prefix_variable", value)
 
 
+if not MYPY:
+    class ServiceObjectTrackerGroupFeatureTrackerElementArgsDict(TypedDict):
+        object_tracker_id: NotRequired[pulumi.Input[str]]
+elif False:
+    ServiceObjectTrackerGroupFeatureTrackerElementArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceObjectTrackerGroupFeatureTrackerElementArgs:
     def __init__(__self__, *,
@@ -33064,6 +42800,40 @@ class ServiceObjectTrackerGroupFeatureTrackerElementArgs:
     def object_tracker_id(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "object_tracker_id", value)
 
+
+if not MYPY:
+    class ServiceRoutePolicyFeatureSequenceArgsDict(TypedDict):
+        actions: NotRequired[pulumi.Input[Sequence[pulumi.Input['ServiceRoutePolicyFeatureSequenceActionArgsDict']]]]
+        """
+        Define list of actions
+        """
+        base_action: NotRequired[pulumi.Input[str]]
+        """
+        Base Action
+          - Choices: `reject`, `accept`
+          - Default value: `reject`
+        """
+        id: NotRequired[pulumi.Input[int]]
+        """
+        Sequence Id
+          - Range: `1`-`65536`
+        """
+        match_entries: NotRequired[pulumi.Input[Sequence[pulumi.Input['ServiceRoutePolicyFeatureSequenceMatchEntryArgsDict']]]]
+        """
+        Define match conditions
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Sequence Name
+        """
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        protocol such as IPV4, IPV6, or BOTH
+          - Choices: `IPV4`, `IPV6`, `BOTH`
+          - Default value: `IPV4`
+        """
+elif False:
+    ServiceRoutePolicyFeatureSequenceArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ServiceRoutePolicyFeatureSequenceArgs:
@@ -33177,6 +42947,64 @@ class ServiceRoutePolicyFeatureSequenceArgs:
     def protocol(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "protocol", value)
 
+
+if not MYPY:
+    class ServiceRoutePolicyFeatureSequenceActionArgsDict(TypedDict):
+        as_path_prepends: NotRequired[pulumi.Input[Sequence[pulumi.Input[int]]]]
+        communities: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        community_additive: NotRequired[pulumi.Input[bool]]
+        """
+        - Default value: `false`
+        """
+        community_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ipv4_next_hop: NotRequired[pulumi.Input[str]]
+        """
+        Set Ipv4 Next Hop
+        """
+        ipv6_next_hop: NotRequired[pulumi.Input[str]]
+        """
+        Set Ipv6 Next Hop
+        """
+        local_preference: NotRequired[pulumi.Input[int]]
+        """
+        Set Local Preference
+          - Range: `0`-`4294967295`
+        """
+        metric: NotRequired[pulumi.Input[int]]
+        """
+        Set Metric
+          - Range: `0`-`4294967295`
+        """
+        metric_type: NotRequired[pulumi.Input[str]]
+        """
+        Set Metric Type
+          - Choices: `type1`, `type2`
+        """
+        omp_tag: NotRequired[pulumi.Input[int]]
+        """
+        Set OMP Tag
+          - Range: `0`-`4294967295`
+        """
+        origin: NotRequired[pulumi.Input[str]]
+        """
+        Set Origin
+          - Choices: `EGP`, `IGP`, `Incomplete`
+        """
+        ospf_tag: NotRequired[pulumi.Input[int]]
+        """
+        Set OSPF Tag
+          - Range: `0`-`4294967295`
+        """
+        weight: NotRequired[pulumi.Input[int]]
+        """
+        Set Weight
+          - Range: `0`-`65535`
+        """
+elif False:
+    ServiceRoutePolicyFeatureSequenceActionArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ServiceRoutePolicyFeatureSequenceActionArgs:
@@ -33399,6 +43227,47 @@ class ServiceRoutePolicyFeatureSequenceActionArgs:
         pulumi.set(self, "weight", value)
 
 
+if not MYPY:
+    class ServiceRoutePolicyFeatureSequenceMatchEntryArgsDict(TypedDict):
+        as_path_list_id: NotRequired[pulumi.Input[str]]
+        bgp_local_preference: NotRequired[pulumi.Input[int]]
+        """
+        BGP Local Preference
+          - Range: `0`-`4294967295`
+        """
+        expanded_community_list_id: NotRequired[pulumi.Input[str]]
+        extended_community_list_id: NotRequired[pulumi.Input[str]]
+        ipv4_address_prefix_list_id: NotRequired[pulumi.Input[str]]
+        ipv4_next_hop_prefix_list_id: NotRequired[pulumi.Input[str]]
+        ipv6_address_prefix_list_id: NotRequired[pulumi.Input[str]]
+        ipv6_next_hop_prefix_list_id: NotRequired[pulumi.Input[str]]
+        metric: NotRequired[pulumi.Input[int]]
+        """
+        Select Metric
+          - Range: `0`-`4294967295`
+        """
+        omp_tag: NotRequired[pulumi.Input[int]]
+        """
+        Select OMP Tag
+          - Range: `0`-`4294967295`
+        """
+        ospf_tag: NotRequired[pulumi.Input[int]]
+        """
+        Select OSPF Tag
+          - Range: `0`-`4294967295`
+        """
+        standard_community_list_criteria: NotRequired[pulumi.Input[str]]
+        """
+        Select a condition such as OR, AND or EXACT
+          - Choices: `OR`, `AND`, `EXACT`
+        """
+        standard_community_lists: NotRequired[pulumi.Input[Sequence[pulumi.Input['ServiceRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArgsDict']]]]
+        """
+        Select a standard community list
+        """
+elif False:
+    ServiceRoutePolicyFeatureSequenceMatchEntryArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceRoutePolicyFeatureSequenceMatchEntryArgs:
     def __init__(__self__, *,
@@ -33596,6 +43465,12 @@ class ServiceRoutePolicyFeatureSequenceMatchEntryArgs:
         pulumi.set(self, "standard_community_lists", value)
 
 
+if not MYPY:
+    class ServiceRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArgsDict(TypedDict):
+        id: NotRequired[pulumi.Input[str]]
+elif False:
+    ServiceRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArgs:
     def __init__(__self__, *,
@@ -33612,6 +43487,42 @@ class ServiceRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArgs:
     def id(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "id", value)
 
+
+if not MYPY:
+    class ServiceRoutingBgpFeatureIpv4AggregateAddressArgsDict(TypedDict):
+        as_set_path: NotRequired[pulumi.Input[bool]]
+        """
+        Set AS set path information
+          - Default value: `false`
+        """
+        as_set_path_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        network_address: NotRequired[pulumi.Input[str]]
+        network_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        subnet_mask: NotRequired[pulumi.Input[str]]
+        """
+        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        """
+        subnet_mask_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        summary_only: NotRequired[pulumi.Input[bool]]
+        """
+        Filter out more specific routes from updates
+          - Default value: `false`
+        """
+        summary_only_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceRoutingBgpFeatureIpv4AggregateAddressArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ServiceRoutingBgpFeatureIpv4AggregateAddressArgs:
@@ -33747,6 +43658,156 @@ class ServiceRoutingBgpFeatureIpv4AggregateAddressArgs:
     def summary_only_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "summary_only_variable", value)
 
+
+if not MYPY:
+    class ServiceRoutingBgpFeatureIpv4NeighborArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        Set neighbor address
+        """
+        address_families: NotRequired[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv4NeighborAddressFamilyArgsDict']]]]
+        """
+        Set BGP address family
+        """
+        address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        allowas_in_number: NotRequired[pulumi.Input[int]]
+        """
+        The number of accept as-path with my AS present in it
+          - Range: `1`-`10`
+        """
+        allowas_in_number_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        as_override: NotRequired[pulumi.Input[bool]]
+        """
+        Override matching AS-number while sending update
+          - Default value: `false`
+        """
+        as_override_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        description: NotRequired[pulumi.Input[str]]
+        """
+        Set description
+        """
+        description_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ebgp_multihop: NotRequired[pulumi.Input[int]]
+        """
+        Set TTL value for peers that are not directly connected
+          - Range: `1`-`255`
+          - Default value: `1`
+        """
+        ebgp_multihop_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        hold_time: NotRequired[pulumi.Input[int]]
+        """
+        Interval (seconds) not receiving a keepalive message declares a BGP peer down
+          - Range: `0`-`65535`
+          - Default value: `180`
+        """
+        hold_time_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        keepalive_time: NotRequired[pulumi.Input[int]]
+        """
+        Interval (seconds) of keepalive messages sent to its BGP peer
+          - Range: `0`-`65535`
+          - Default value: `60`
+        """
+        keepalive_time_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        local_as: NotRequired[pulumi.Input[int]]
+        """
+        Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
+        """
+        local_as_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        next_hop_self: NotRequired[pulumi.Input[bool]]
+        """
+        Set router to be next hop for routes advertised to neighbor
+          - Default value: `false`
+        """
+        next_hop_self_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        password: NotRequired[pulumi.Input[str]]
+        """
+        Set MD5 password on TCP connection with BGP peer
+        """
+        password_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        remote_as: NotRequired[pulumi.Input[int]]
+        """
+        Set remote autonomous system number
+        """
+        remote_as_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        send_community: NotRequired[pulumi.Input[bool]]
+        """
+        Send community attribute
+          - Default value: `true`
+        """
+        send_community_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        send_extended_community: NotRequired[pulumi.Input[bool]]
+        """
+        Send extended community attribute
+          - Default value: `true`
+        """
+        send_extended_community_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        send_label: NotRequired[pulumi.Input[bool]]
+        """
+        Send label
+          - Default value: `false`
+        """
+        send_label_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        shutdown: NotRequired[pulumi.Input[bool]]
+        """
+        Enable or disable a BGP neighbor
+          - Default value: `false`
+        """
+        shutdown_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        update_source_interface: NotRequired[pulumi.Input[str]]
+        """
+        Source interface name for BGP neighbor
+        """
+        update_source_interface_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceRoutingBgpFeatureIpv4NeighborArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ServiceRoutingBgpFeatureIpv4NeighborArgs:
@@ -34309,6 +44370,49 @@ class ServiceRoutingBgpFeatureIpv4NeighborArgs:
         pulumi.set(self, "update_source_interface_variable", value)
 
 
+if not MYPY:
+    class ServiceRoutingBgpFeatureIpv4NeighborAddressFamilyArgsDict(TypedDict):
+        family_type: NotRequired[pulumi.Input[str]]
+        """
+        Set IPv4 unicast address family
+        """
+        in_route_policy_id: NotRequired[pulumi.Input[str]]
+        max_number_of_prefixes: NotRequired[pulumi.Input[int]]
+        """
+        Set maximum number of prefixes accepted from BGP peer
+          - Range: `1`-`4294967295`
+        """
+        max_number_of_prefixes_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        out_route_policy_id: NotRequired[pulumi.Input[str]]
+        policy_type: NotRequired[pulumi.Input[str]]
+        """
+        Neighbor received maximum prefix policy is disabled.
+        """
+        restart_interval: NotRequired[pulumi.Input[int]]
+        """
+        Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded
+          - Range: `1`-`65535`
+        """
+        restart_interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        threshold: NotRequired[pulumi.Input[int]]
+        """
+        Set threshold(1 to 100) at which to generate a warning message
+          - Range: `1`-`100`
+          - Default value: `75`
+        """
+        threshold_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceRoutingBgpFeatureIpv4NeighborAddressFamilyArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceRoutingBgpFeatureIpv4NeighborAddressFamilyArgs:
     def __init__(__self__, *,
@@ -34476,6 +44580,24 @@ class ServiceRoutingBgpFeatureIpv4NeighborAddressFamilyArgs:
         pulumi.set(self, "threshold_variable", value)
 
 
+if not MYPY:
+    class ServiceRoutingBgpFeatureIpv4NetworkArgsDict(TypedDict):
+        network_address: NotRequired[pulumi.Input[str]]
+        network_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        subnet_mask: NotRequired[pulumi.Input[str]]
+        """
+        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        """
+        subnet_mask_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceRoutingBgpFeatureIpv4NetworkArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceRoutingBgpFeatureIpv4NetworkArgs:
     def __init__(__self__, *,
@@ -34543,6 +44665,21 @@ class ServiceRoutingBgpFeatureIpv4NetworkArgs:
         pulumi.set(self, "subnet_mask_variable", value)
 
 
+if not MYPY:
+    class ServiceRoutingBgpFeatureIpv4RedistributeArgsDict(TypedDict):
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Set the protocol to redistribute routes from
+          - Choices: `static`, `connected`, `omp`, `nat`, `ospf`, `ospfv3`, `eigrp`
+        """
+        protocol_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        route_policy_id: NotRequired[pulumi.Input[str]]
+elif False:
+    ServiceRoutingBgpFeatureIpv4RedistributeArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceRoutingBgpFeatureIpv4RedistributeArgs:
     def __init__(__self__, *,
@@ -34595,6 +44732,37 @@ class ServiceRoutingBgpFeatureIpv4RedistributeArgs:
     def route_policy_id(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "route_policy_id", value)
 
+
+if not MYPY:
+    class ServiceRoutingBgpFeatureIpv6AggregateAddressArgsDict(TypedDict):
+        aggregate_prefix: NotRequired[pulumi.Input[str]]
+        """
+        Configure the IPv6 prefixes to aggregate
+        """
+        aggregate_prefix_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        as_set_path: NotRequired[pulumi.Input[bool]]
+        """
+        Set AS set path information
+          - Default value: `false`
+        """
+        as_set_path_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        summary_only: NotRequired[pulumi.Input[bool]]
+        """
+        Filter out more specific routes from updates
+          - Default value: `false`
+        """
+        summary_only_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceRoutingBgpFeatureIpv6AggregateAddressArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ServiceRoutingBgpFeatureIpv6AggregateAddressArgs:
@@ -34702,6 +44870,147 @@ class ServiceRoutingBgpFeatureIpv6AggregateAddressArgs:
     def summary_only_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "summary_only_variable", value)
 
+
+if not MYPY:
+    class ServiceRoutingBgpFeatureIpv6NeighborArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        Set IPv6 neighbor address
+        """
+        address_families: NotRequired[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingBgpFeatureIpv6NeighborAddressFamilyArgsDict']]]]
+        """
+        Set IPv6 BGP address family
+        """
+        address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        allowas_in_number: NotRequired[pulumi.Input[int]]
+        """
+        The number of accept as-path with my AS present in it
+          - Range: `1`-`10`
+        """
+        allowas_in_number_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        as_override: NotRequired[pulumi.Input[bool]]
+        """
+        Override matching AS-number while sending update
+          - Default value: `false`
+        """
+        as_override_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        description: NotRequired[pulumi.Input[str]]
+        """
+        Set description
+        """
+        description_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ebgp_multihop: NotRequired[pulumi.Input[int]]
+        """
+        Set TTL value for peers that are not directly connected
+          - Range: `1`-`255`
+          - Default value: `1`
+        """
+        ebgp_multihop_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        hold_time: NotRequired[pulumi.Input[int]]
+        """
+        Set how long to wait since receiving a keepalive message to consider BGP peer unavailable
+          - Range: `0`-`65535`
+          - Default value: `180`
+        """
+        hold_time_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        keepalive_time: NotRequired[pulumi.Input[int]]
+        """
+        Set how often to advertise keepalive messages to BGP peer
+          - Range: `0`-`65535`
+          - Default value: `60`
+        """
+        keepalive_time_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        local_as: NotRequired[pulumi.Input[int]]
+        """
+        Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
+        """
+        local_as_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        next_hop_self: NotRequired[pulumi.Input[bool]]
+        """
+        Set router to be next hop for routes advertised to neighbor
+          - Default value: `false`
+        """
+        next_hop_self_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        password: NotRequired[pulumi.Input[str]]
+        """
+        Set MD5 password on TCP connection with BGP peer
+        """
+        password_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        remote_as: NotRequired[pulumi.Input[int]]
+        """
+        Set remote autonomous system number
+        """
+        remote_as_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        send_community: NotRequired[pulumi.Input[bool]]
+        """
+        Send community attribute
+          - Default value: `true`
+        """
+        send_community_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        send_extended_community: NotRequired[pulumi.Input[bool]]
+        """
+        Send extended community attribute
+          - Default value: `true`
+        """
+        send_extended_community_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        shutdown: NotRequired[pulumi.Input[bool]]
+        """
+        Enable or disable a BGP neighbor
+          - Default value: `false`
+        """
+        shutdown_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        update_source_interface: NotRequired[pulumi.Input[str]]
+        """
+        Source interface name for BGP neighbor
+        """
+        update_source_interface_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceRoutingBgpFeatureIpv6NeighborArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ServiceRoutingBgpFeatureIpv6NeighborArgs:
@@ -35230,6 +45539,49 @@ class ServiceRoutingBgpFeatureIpv6NeighborArgs:
         pulumi.set(self, "update_source_interface_variable", value)
 
 
+if not MYPY:
+    class ServiceRoutingBgpFeatureIpv6NeighborAddressFamilyArgsDict(TypedDict):
+        family_type: NotRequired[pulumi.Input[str]]
+        """
+        Set IPv6 unicast address family
+        """
+        in_route_policy_id: NotRequired[pulumi.Input[str]]
+        max_number_of_prefixes: NotRequired[pulumi.Input[int]]
+        """
+        Set maximum number of prefixes accepted from BGP peer
+          - Range: `1`-`4294967295`
+        """
+        max_number_of_prefixes_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        out_route_policy_id: NotRequired[pulumi.Input[str]]
+        policy_type: NotRequired[pulumi.Input[str]]
+        """
+        Neighbor received maximum prefix policy is disabled.
+        """
+        restart_interval: NotRequired[pulumi.Input[int]]
+        """
+        Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded
+          - Range: `1`-`65535`
+        """
+        restart_interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        threshold: NotRequired[pulumi.Input[int]]
+        """
+        Set threshold(1 to 100) at which to generate a warning message
+          - Range: `1`-`100`
+          - Default value: `75`
+        """
+        threshold_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceRoutingBgpFeatureIpv6NeighborAddressFamilyArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceRoutingBgpFeatureIpv6NeighborAddressFamilyArgs:
     def __init__(__self__, *,
@@ -35397,6 +45749,19 @@ class ServiceRoutingBgpFeatureIpv6NeighborAddressFamilyArgs:
         pulumi.set(self, "threshold_variable", value)
 
 
+if not MYPY:
+    class ServiceRoutingBgpFeatureIpv6NetworkArgsDict(TypedDict):
+        network_prefix: NotRequired[pulumi.Input[str]]
+        """
+        Configure the prefixes for BGP to announce
+        """
+        network_prefix_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceRoutingBgpFeatureIpv6NetworkArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceRoutingBgpFeatureIpv6NetworkArgs:
     def __init__(__self__, *,
@@ -35435,6 +45800,21 @@ class ServiceRoutingBgpFeatureIpv6NetworkArgs:
     def network_prefix_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "network_prefix_variable", value)
 
+
+if not MYPY:
+    class ServiceRoutingBgpFeatureIpv6RedistributeArgsDict(TypedDict):
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Set the protocol to redistribute routes from
+          - Choices: `static`, `connected`, `ospf`, `omp`
+        """
+        protocol_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        route_policy_id: NotRequired[pulumi.Input[str]]
+elif False:
+    ServiceRoutingBgpFeatureIpv6RedistributeArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ServiceRoutingBgpFeatureIpv6RedistributeArgs:
@@ -35488,6 +45868,42 @@ class ServiceRoutingBgpFeatureIpv6RedistributeArgs:
     def route_policy_id(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "route_policy_id", value)
 
+
+if not MYPY:
+    class ServiceRoutingOspfFeatureAreaArgsDict(TypedDict):
+        area_number: NotRequired[pulumi.Input[int]]
+        """
+        Set OSPF area number
+          - Range: `0`-`4294967295`
+        """
+        area_number_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        area_type: NotRequired[pulumi.Input[str]]
+        """
+        set the area type
+          - Choices: `stub`, `nssa`
+        """
+        interfaces: NotRequired[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingOspfFeatureAreaInterfaceArgsDict']]]]
+        """
+        Set OSPF interface parameters
+        """
+        no_summary: NotRequired[pulumi.Input[bool]]
+        """
+        Do not inject interarea routes into STUB or NSSA
+          - Default value: `false`
+        """
+        no_summary_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ranges: NotRequired[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingOspfFeatureAreaRangeArgsDict']]]]
+        """
+        Summarize OSPF routes at an area boundary
+        """
+elif False:
+    ServiceRoutingOspfFeatureAreaArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ServiceRoutingOspfFeatureAreaArgs:
@@ -35613,6 +46029,113 @@ class ServiceRoutingOspfFeatureAreaArgs:
     def ranges(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingOspfFeatureAreaRangeArgs']]]]):
         pulumi.set(self, "ranges", value)
 
+
+if not MYPY:
+    class ServiceRoutingOspfFeatureAreaInterfaceArgsDict(TypedDict):
+        authentication_type: NotRequired[pulumi.Input[str]]
+        """
+        Set OSPF interface authentication type
+          - Choices: `message-digest`
+        """
+        authentication_type_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        cost: NotRequired[pulumi.Input[int]]
+        """
+        Set cost of OSPF interface
+          - Range: `1`-`65535`
+        """
+        cost_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        dead_interval: NotRequired[pulumi.Input[int]]
+        """
+        Set interval after which neighbor is declared to be down
+          - Range: `1`-`65535`
+          - Default value: `40`
+        """
+        dead_interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        designated_router_priority: NotRequired[pulumi.Input[int]]
+        """
+        Set router’s priority to be elected as designated router
+          - Range: `0`-`255`
+          - Default value: `1`
+        """
+        designated_router_priority_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        hello_interval: NotRequired[pulumi.Input[int]]
+        """
+        Set interval between OSPF hello packets
+          - Range: `1`-`65535`
+          - Default value: `10`
+        """
+        hello_interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        lsa_retransmit_interval: NotRequired[pulumi.Input[int]]
+        """
+        Set time between retransmitting LSAs
+          - Range: `1`-`65535`
+          - Default value: `5`
+        """
+        lsa_retransmit_interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        message_digest_key: NotRequired[pulumi.Input[str]]
+        """
+        Set MD5 authentication key
+        """
+        message_digest_key_id: NotRequired[pulumi.Input[int]]
+        """
+        Set MD5 message digest key
+          - Range: `1`-`255`
+        """
+        message_digest_key_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        message_digest_key_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Set interface name
+        """
+        name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        network_type: NotRequired[pulumi.Input[str]]
+        """
+        Set the OSPF network type
+          - Choices: `broadcast`, `point-to-point`, `non-broadcast`, `point-to-multipoint`
+          - Default value: `broadcast`
+        """
+        network_type_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        passive_interface: NotRequired[pulumi.Input[bool]]
+        """
+        Set the interface to advertise its address, but not to actively run OSPF
+          - Default value: `false`
+        """
+        passive_interface_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceRoutingOspfFeatureAreaInterfaceArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ServiceRoutingOspfFeatureAreaInterfaceArgs:
@@ -36001,6 +46524,46 @@ class ServiceRoutingOspfFeatureAreaInterfaceArgs:
         pulumi.set(self, "passive_interface_variable", value)
 
 
+if not MYPY:
+    class ServiceRoutingOspfFeatureAreaRangeArgsDict(TypedDict):
+        cost: NotRequired[pulumi.Input[int]]
+        """
+        Set cost for this range
+          - Range: `0`-`16777214`
+        """
+        cost_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ip_address: NotRequired[pulumi.Input[str]]
+        """
+        IP Address
+        """
+        ip_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        no_advertise: NotRequired[pulumi.Input[bool]]
+        """
+        Do not advertise this range
+          - Default value: `false`
+        """
+        no_advertise_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        subnet_mask: NotRequired[pulumi.Input[str]]
+        """
+        Subnet Mask
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        """
+        subnet_mask_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceRoutingOspfFeatureAreaRangeArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceRoutingOspfFeatureAreaRangeArgs:
     def __init__(__self__, *,
@@ -36142,6 +46705,30 @@ class ServiceRoutingOspfFeatureAreaRangeArgs:
         pulumi.set(self, "subnet_mask_variable", value)
 
 
+if not MYPY:
+    class ServiceRoutingOspfFeatureRedistributeArgsDict(TypedDict):
+        nat_dia: NotRequired[pulumi.Input[bool]]
+        """
+        Enable NAT DIA for redistributed routes
+          - Default value: `true`
+        """
+        nat_dia_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Set the protocol
+          - Choices: `static`, `connected`, `bgp`, `omp`, `nat`, `eigrp`
+        """
+        protocol_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        route_policy_id: NotRequired[pulumi.Input[str]]
+elif False:
+    ServiceRoutingOspfFeatureRedistributeArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceRoutingOspfFeatureRedistributeArgs:
     def __init__(__self__, *,
@@ -36229,6 +46816,25 @@ class ServiceRoutingOspfFeatureRedistributeArgs:
         pulumi.set(self, "route_policy_id", value)
 
 
+if not MYPY:
+    class ServiceRoutingOspfFeatureRouterLsaArgsDict(TypedDict):
+        time: NotRequired[pulumi.Input[int]]
+        """
+        Set how long to advertise maximum metric after router starts up
+          - Range: `5`-`86400`
+        """
+        time_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        type: NotRequired[pulumi.Input[str]]
+        """
+        Set the router LSA advertisement type
+          - Choices: `administrative`, `on-startup`
+        """
+elif False:
+    ServiceRoutingOspfFeatureRouterLsaArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceRoutingOspfFeatureRouterLsaArgs:
     def __init__(__self__, *,
@@ -36287,6 +46893,49 @@ class ServiceRoutingOspfFeatureRouterLsaArgs:
     def type(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "type", value)
 
+
+if not MYPY:
+    class ServiceRoutingOspfv3Ipv4FeatureAreaArgsDict(TypedDict):
+        always_translate: NotRequired[pulumi.Input[bool]]
+        """
+        Always translate type7 LSAs
+        """
+        always_translate_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        area_number: NotRequired[pulumi.Input[int]]
+        """
+        Set OSPF area number
+          - Range: `0`-`4294967295`
+        """
+        area_number_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        area_type: NotRequired[pulumi.Input[str]]
+        """
+        stub area type
+          - Choices: `stub`
+        """
+        interfaces: NotRequired[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingOspfv3Ipv4FeatureAreaInterfaceArgsDict']]]]
+        """
+        Set OSPF interface parameters
+        """
+        no_summary: NotRequired[pulumi.Input[bool]]
+        """
+        Do not inject inter-area routes
+        """
+        no_summary_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ranges: NotRequired[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingOspfv3Ipv4FeatureAreaRangeArgsDict']]]]
+        """
+        Summarize OSPF routes at an area boundary
+        """
+elif False:
+    ServiceRoutingOspfv3Ipv4FeatureAreaArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ServiceRoutingOspfv3Ipv4FeatureAreaArgs:
@@ -36442,6 +47091,98 @@ class ServiceRoutingOspfv3Ipv4FeatureAreaArgs:
     def ranges(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingOspfv3Ipv4FeatureAreaRangeArgs']]]]):
         pulumi.set(self, "ranges", value)
 
+
+if not MYPY:
+    class ServiceRoutingOspfv3Ipv4FeatureAreaInterfaceArgsDict(TypedDict):
+        authentication_key: NotRequired[pulumi.Input[str]]
+        """
+        Set OSPF interface authentication IPSEC key
+        """
+        authentication_key_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        authentication_spi: NotRequired[pulumi.Input[int]]
+        """
+        Set OSPF interface authentication IPSec SPI, range 256..4294967295
+          - Range: `256`-`4294967295`
+        """
+        authentication_spi_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        authentication_type: NotRequired[pulumi.Input[str]]
+        """
+        No Authentication by default
+          - Choices: `no-auth`
+        """
+        cost: NotRequired[pulumi.Input[int]]
+        """
+        Set cost of OSPF interface
+          - Range: `1`-`65535`
+        """
+        cost_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        dead_interval: NotRequired[pulumi.Input[int]]
+        """
+        Set interval after which neighbor is declared to be down
+          - Range: `1`-`65535`
+          - Default value: `40`
+        """
+        dead_interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        hello_interval: NotRequired[pulumi.Input[int]]
+        """
+        Set interval between OSPF hello packets
+          - Range: `1`-`65535`
+          - Default value: `10`
+        """
+        hello_interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        lsa_retransmit_interval: NotRequired[pulumi.Input[int]]
+        """
+        Set time between retransmitting LSAs
+          - Range: `1`-`65535`
+          - Default value: `5`
+        """
+        lsa_retransmit_interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Set interface name
+        """
+        name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        network_type: NotRequired[pulumi.Input[str]]
+        """
+        Set the OSPF network type
+          - Choices: `broadcast`, `point-to-point`, `non-broadcast`, `point-to-multipoint`
+        """
+        network_type_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        passive_interface: NotRequired[pulumi.Input[bool]]
+        """
+        Set the interface to advertise its address, but not to actively run OSPF
+          - Default value: `false`
+        """
+        passive_interface_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceRoutingOspfv3Ipv4FeatureAreaInterfaceArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ServiceRoutingOspfv3Ipv4FeatureAreaInterfaceArgs:
@@ -36776,6 +47517,42 @@ class ServiceRoutingOspfv3Ipv4FeatureAreaInterfaceArgs:
         pulumi.set(self, "passive_interface_variable", value)
 
 
+if not MYPY:
+    class ServiceRoutingOspfv3Ipv4FeatureAreaRangeArgsDict(TypedDict):
+        cost: NotRequired[pulumi.Input[int]]
+        """
+        Set cost for this range
+          - Range: `0`-`16777214`
+        """
+        cost_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ip_address: NotRequired[pulumi.Input[str]]
+        ip_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        no_advertise: NotRequired[pulumi.Input[bool]]
+        """
+        Do not advertise this range
+          - Default value: `false`
+        """
+        no_advertise_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        subnet_mask: NotRequired[pulumi.Input[str]]
+        """
+        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        """
+        subnet_mask_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceRoutingOspfv3Ipv4FeatureAreaRangeArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceRoutingOspfv3Ipv4FeatureAreaRangeArgs:
     def __init__(__self__, *,
@@ -36911,6 +47688,30 @@ class ServiceRoutingOspfv3Ipv4FeatureAreaRangeArgs:
         pulumi.set(self, "subnet_mask_variable", value)
 
 
+if not MYPY:
+    class ServiceRoutingOspfv3Ipv4FeatureRedistributeArgsDict(TypedDict):
+        nat_dia: NotRequired[pulumi.Input[bool]]
+        """
+        Enable NAT DIA for redistributed routes
+          - Default value: `true`
+        """
+        nat_dia_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Set the protocol
+          - Choices: `connected`, `static`, `omp`, `nat-route`, `bgp`, `eigrp`
+        """
+        protocol_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        route_policy_id: NotRequired[pulumi.Input[str]]
+elif False:
+    ServiceRoutingOspfv3Ipv4FeatureRedistributeArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceRoutingOspfv3Ipv4FeatureRedistributeArgs:
     def __init__(__self__, *,
@@ -36997,6 +47798,49 @@ class ServiceRoutingOspfv3Ipv4FeatureRedistributeArgs:
     def route_policy_id(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "route_policy_id", value)
 
+
+if not MYPY:
+    class ServiceRoutingOspfv3Ipv6FeatureAreaArgsDict(TypedDict):
+        always_translate: NotRequired[pulumi.Input[bool]]
+        """
+        Always translate type7 LSAs
+        """
+        always_translate_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        area_number: NotRequired[pulumi.Input[int]]
+        """
+        Set OSPF area number
+          - Range: `0`-`4294967295`
+        """
+        area_number_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        area_type: NotRequired[pulumi.Input[str]]
+        """
+        stub area type
+          - Choices: `stub`
+        """
+        interfaces: NotRequired[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingOspfv3Ipv6FeatureAreaInterfaceArgsDict']]]]
+        """
+        Set OSPF interface parameters
+        """
+        no_summary: NotRequired[pulumi.Input[bool]]
+        """
+        Do not inject inter-area routes
+        """
+        no_summary_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ranges: NotRequired[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingOspfv3Ipv6FeatureAreaRangeArgsDict']]]]
+        """
+        Summarize OSPF routes at an area boundary
+        """
+elif False:
+    ServiceRoutingOspfv3Ipv6FeatureAreaArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ServiceRoutingOspfv3Ipv6FeatureAreaArgs:
@@ -37152,6 +47996,98 @@ class ServiceRoutingOspfv3Ipv6FeatureAreaArgs:
     def ranges(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingOspfv3Ipv6FeatureAreaRangeArgs']]]]):
         pulumi.set(self, "ranges", value)
 
+
+if not MYPY:
+    class ServiceRoutingOspfv3Ipv6FeatureAreaInterfaceArgsDict(TypedDict):
+        authentication_key: NotRequired[pulumi.Input[str]]
+        """
+        Set OSPF interface authentication IPSEC key
+        """
+        authentication_key_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        authentication_spi: NotRequired[pulumi.Input[int]]
+        """
+        Set OSPF interface authentication IPSec SPI, range 256..4294967295
+          - Range: `256`-`4294967295`
+        """
+        authentication_spi_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        authentication_type: NotRequired[pulumi.Input[str]]
+        """
+        No Authentication by default
+          - Choices: `no-auth`
+        """
+        cost: NotRequired[pulumi.Input[int]]
+        """
+        Set cost of OSPF interface
+          - Range: `1`-`65535`
+        """
+        cost_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        dead_interval: NotRequired[pulumi.Input[int]]
+        """
+        Set interval after which neighbor is declared to be down
+          - Range: `1`-`65535`
+          - Default value: `40`
+        """
+        dead_interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        hello_interval: NotRequired[pulumi.Input[int]]
+        """
+        Set interval between OSPF hello packets
+          - Range: `1`-`65535`
+          - Default value: `10`
+        """
+        hello_interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        lsa_retransmit_interval: NotRequired[pulumi.Input[int]]
+        """
+        Set time between retransmitting LSAs
+          - Range: `1`-`65535`
+          - Default value: `5`
+        """
+        lsa_retransmit_interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Set interface name
+        """
+        name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        network_type: NotRequired[pulumi.Input[str]]
+        """
+        Set the OSPF network type
+          - Choices: `broadcast`, `point-to-point`, `non-broadcast`, `point-to-multipoint`
+        """
+        network_type_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        passive_interface: NotRequired[pulumi.Input[bool]]
+        """
+        Set the interface to advertise its address, but not to actively run OSPF
+          - Default value: `false`
+        """
+        passive_interface_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceRoutingOspfv3Ipv6FeatureAreaInterfaceArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ServiceRoutingOspfv3Ipv6FeatureAreaInterfaceArgs:
@@ -37486,6 +48422,37 @@ class ServiceRoutingOspfv3Ipv6FeatureAreaInterfaceArgs:
         pulumi.set(self, "passive_interface_variable", value)
 
 
+if not MYPY:
+    class ServiceRoutingOspfv3Ipv6FeatureAreaRangeArgsDict(TypedDict):
+        cost: NotRequired[pulumi.Input[int]]
+        """
+        Set cost for this range
+          - Range: `0`-`16777214`
+        """
+        cost_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        no_advertise: NotRequired[pulumi.Input[bool]]
+        """
+        Do not advertise this range
+          - Default value: `false`
+        """
+        no_advertise_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        prefix: NotRequired[pulumi.Input[str]]
+        """
+        IPv6 prefix,for example 2001::/64
+        """
+        prefix_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceRoutingOspfv3Ipv6FeatureAreaRangeArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceRoutingOspfv3Ipv6FeatureAreaRangeArgs:
     def __init__(__self__, *,
@@ -37593,6 +48560,21 @@ class ServiceRoutingOspfv3Ipv6FeatureAreaRangeArgs:
         pulumi.set(self, "prefix_variable", value)
 
 
+if not MYPY:
+    class ServiceRoutingOspfv3Ipv6FeatureRedistributeArgsDict(TypedDict):
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Set the protocol
+          - Choices: `connected`, `static`, `omp`, `bgp`, `eigrp`
+        """
+        protocol_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        route_policy_id: NotRequired[pulumi.Input[str]]
+elif False:
+    ServiceRoutingOspfv3Ipv6FeatureRedistributeArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceRoutingOspfv3Ipv6FeatureRedistributeArgs:
     def __init__(__self__, *,
@@ -37645,6 +48627,191 @@ class ServiceRoutingOspfv3Ipv6FeatureRedistributeArgs:
     def route_policy_id(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "route_policy_id", value)
 
+
+if not MYPY:
+    class ServiceSwitchportFeatureInterfaceArgsDict(TypedDict):
+        control_direction: NotRequired[pulumi.Input[str]]
+        """
+        Set uni or bi directional authorization mode
+          - Choices: `both`, `in`
+        """
+        control_direction_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        critical_vlan: NotRequired[pulumi.Input[int]]
+        """
+        Set Critical VLAN
+          - Range: `1`-`4094`
+        """
+        critical_vlan_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        duplex: NotRequired[pulumi.Input[str]]
+        """
+        Duplex mode
+          - Choices: `full`, `half`
+        """
+        duplex_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        enable_periodic_reauth: NotRequired[pulumi.Input[bool]]
+        """
+        Enable Periodic Reauthentication
+        """
+        enable_periodic_reauth_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        enable_voice: NotRequired[pulumi.Input[bool]]
+        """
+        Enable Critical Voice VLAN
+        """
+        enable_voice_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        guest_vlan: NotRequired[pulumi.Input[int]]
+        """
+        Set vlan to drop non-802.1x enabled clients into if client is not in MAB list
+          - Range: `1`-`4094`
+        """
+        guest_vlan_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        host_mode: NotRequired[pulumi.Input[str]]
+        """
+        Set host mode
+          - Choices: `single-host`, `multi-auth`, `multi-host`, `multi-domain`
+        """
+        host_mode_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        inactivity: NotRequired[pulumi.Input[int]]
+        """
+        Periodic Reauthentication Inactivity Timeout (in seconds)
+          - Range: `1`-`65535`
+        """
+        inactivity_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        interface_name: NotRequired[pulumi.Input[str]]
+        """
+        Set Interface name
+        """
+        interface_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        mac_authentication_bypass: NotRequired[pulumi.Input[bool]]
+        """
+        MAC Authentication Bypass
+        """
+        mac_authentication_bypass_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        mode: NotRequired[pulumi.Input[str]]
+        """
+        Set type of switch port: access/trunk
+          - Choices: `access`, `trunk`
+        """
+        pae_enable: NotRequired[pulumi.Input[bool]]
+        """
+        Set 802.1x Interface Pae Type
+        """
+        pae_enable_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        port_control: NotRequired[pulumi.Input[str]]
+        """
+        Set Port-Control Mode
+          - Choices: `auto`, `force-unauthorized`, `force-authorized`
+        """
+        port_control_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        reauthentication: NotRequired[pulumi.Input[int]]
+        """
+        Periodic Reauthentication Interval (in seconds)
+          - Range: `1`-`1073741823`
+          - Default value: `3600`
+        """
+        reauthentication_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        restricted_vlan: NotRequired[pulumi.Input[int]]
+        """
+        Set Restricted VLAN ID
+          - Range: `1`-`4094`
+        """
+        restricted_vlan_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        shutdown: NotRequired[pulumi.Input[bool]]
+        """
+        Administrative state
+          - Default value: `true`
+        """
+        shutdown_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        speed: NotRequired[pulumi.Input[str]]
+        """
+        Set interface speed
+          - Choices: `10`, `100`, `1000`, `2500`, `10000`
+        """
+        speed_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        switchport_access_vlan: NotRequired[pulumi.Input[int]]
+        """
+        Set VLAN identifier associated with bridging domain
+          - Range: `1`-`4094`
+        """
+        switchport_access_vlan_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        switchport_trunk_allowed_vlans: NotRequired[pulumi.Input[str]]
+        """
+        Configure VLAN IDs used with the trunk
+        """
+        switchport_trunk_allowed_vlans_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        switchport_trunk_native_vlan: NotRequired[pulumi.Input[int]]
+        """
+        Configure VLAN ID used for native VLAN
+          - Range: `1`-`4094`
+        """
+        switchport_trunk_native_vlan_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        voice_vlan: NotRequired[pulumi.Input[int]]
+        """
+        Configure Voice Vlan
+          - Range: `1`-`4094`
+        """
+        voice_vlan_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceSwitchportFeatureInterfaceArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ServiceSwitchportFeatureInterfaceArgs:
@@ -38341,6 +49508,36 @@ class ServiceSwitchportFeatureInterfaceArgs:
         pulumi.set(self, "voice_vlan_variable", value)
 
 
+if not MYPY:
+    class ServiceSwitchportFeatureStaticMacAddressArgsDict(TypedDict):
+        interface_name: NotRequired[pulumi.Input[str]]
+        """
+        Interface name: GigabitEthernet0/<>/<>
+        """
+        interface_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        mac_address: NotRequired[pulumi.Input[str]]
+        """
+        Set MAC address in xxxx.xxxx.xxxx format
+        """
+        mac_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        vlan_id: NotRequired[pulumi.Input[int]]
+        """
+        Configure VLAN ID used with the mac and interface
+          - Range: `1`-`4094`
+        """
+        vlan_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceSwitchportFeatureStaticMacAddressArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceSwitchportFeatureStaticMacAddressArgs:
     def __init__(__self__, *,
@@ -38446,6 +49643,12 @@ class ServiceSwitchportFeatureStaticMacAddressArgs:
         pulumi.set(self, "vlan_id_variable", value)
 
 
+if not MYPY:
+    class ServiceTrackerGroupFeatureTrackerElementArgsDict(TypedDict):
+        tracker_id: NotRequired[pulumi.Input[str]]
+elif False:
+    ServiceTrackerGroupFeatureTrackerElementArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ServiceTrackerGroupFeatureTrackerElementArgs:
     def __init__(__self__, *,
@@ -38462,6 +49665,15 @@ class ServiceTrackerGroupFeatureTrackerElementArgs:
     def tracker_id(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "tracker_id", value)
 
+
+if not MYPY:
+    class SiteListPolicyObjectEntryArgsDict(TypedDict):
+        site_id: pulumi.Input[str]
+        """
+        Site ID or range of Site IDs e.g., `100` or `200-300`
+        """
+elif False:
+    SiteListPolicyObjectEntryArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class SiteListPolicyObjectEntryArgs:
@@ -38485,6 +49697,15 @@ class SiteListPolicyObjectEntryArgs:
         pulumi.set(self, "site_id", value)
 
 
+if not MYPY:
+    class StandardCommunityListPolicyObjectEntryArgsDict(TypedDict):
+        community: pulumi.Input[str]
+        """
+        Standard community value, e.g. `100:1000`, `internet`, `local-AS`, `no-advertise` or `no-export`
+        """
+elif False:
+    StandardCommunityListPolicyObjectEntryArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class StandardCommunityListPolicyObjectEntryArgs:
     def __init__(__self__, *,
@@ -38506,6 +49727,220 @@ class StandardCommunityListPolicyObjectEntryArgs:
     def community(self, value: pulumi.Input[str]):
         pulumi.set(self, "community", value)
 
+
+if not MYPY:
+    class SwitchportFeatureTemplateInterfaceArgsDict(TypedDict):
+        dot1x_authentication_order_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        dot1x_authentication_orders: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        Specify authentication methods in the order of preference
+        """
+        dot1x_control_direction: NotRequired[pulumi.Input[str]]
+        """
+        Set uni or bi directional authorization mode
+          - Choices: `both`, `in`
+          - Default value: `both`
+        """
+        dot1x_control_direction_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        dot1x_critical_vlan: NotRequired[pulumi.Input[int]]
+        """
+        Set Critical VLAN
+          - Range: `1`-`4094`
+        """
+        dot1x_critical_vlan_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        dot1x_enable: NotRequired[pulumi.Input[bool]]
+        """
+        Set 802.1x on off
+          - Default value: `true`
+        """
+        dot1x_enable_criticial_voice_vlan: NotRequired[pulumi.Input[bool]]
+        """
+        Enable Critical Voice VLAN
+          - Default value: `false`
+        """
+        dot1x_enable_criticial_voice_vlan_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        dot1x_enable_periodic_reauth: NotRequired[pulumi.Input[bool]]
+        """
+        Enable Periodic Reauthentication
+          - Default value: `false`
+        """
+        dot1x_enable_periodic_reauth_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        dot1x_enable_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        dot1x_guest_vlan: NotRequired[pulumi.Input[int]]
+        """
+        Set vlan to drop non-802.1x enabled clients into if client is not in MAB list
+          - Range: `1`-`4094`
+        """
+        dot1x_guest_vlan_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        dot1x_host_mode: NotRequired[pulumi.Input[str]]
+        """
+        Set host mode
+          - Choices: `single-host`, `multi-auth`, `multi-host`, `multi-domain`
+          - Default value: `single-host`
+        """
+        dot1x_host_mode_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        dot1x_mac_authentication_bypass: NotRequired[pulumi.Input[bool]]
+        """
+        MAC Authentication Bypass
+          - Default value: `false`
+        """
+        dot1x_mac_authentication_bypass_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        dot1x_pae_enable: NotRequired[pulumi.Input[bool]]
+        """
+        Set 802.1x Interface Pae Type
+          - Default value: `true`
+        """
+        dot1x_pae_enable_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        dot1x_periodic_reauth_inactivity_timeout: NotRequired[pulumi.Input[int]]
+        """
+        Periodic Reauthentication Inactivity Timeout (in seconds)
+          - Range: `1`-`1440`
+          - Default value: `60`
+        """
+        dot1x_periodic_reauth_inactivity_timeout_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        dot1x_periodic_reauth_interval: NotRequired[pulumi.Input[int]]
+        """
+        Periodic Reauthentication Interval (in seconds)
+          - Range: `0`-`1440`
+          - Default value: `0`
+        """
+        dot1x_periodic_reauth_interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        dot1x_port_control: NotRequired[pulumi.Input[str]]
+        """
+        Set Port-Control Mode
+          - Choices: `auto`, `force-unauthorized`, `force-authorized`
+          - Default value: `auto`
+        """
+        dot1x_port_control_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        dot1x_restricted_vlan: NotRequired[pulumi.Input[int]]
+        """
+        Set Restricted VLAN ID
+          - Range: `1`-`4094`
+        """
+        dot1x_restricted_vlan_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        duplex: NotRequired[pulumi.Input[str]]
+        """
+        Duplex mode
+          - Choices: `full`, `half`
+        """
+        duplex_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Set Interface name
+        """
+        name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        shutdown: NotRequired[pulumi.Input[bool]]
+        """
+        Administrative state
+          - Default value: `true`
+        """
+        shutdown_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        speed: NotRequired[pulumi.Input[str]]
+        """
+        Set interface speed
+          - Choices: `10`, `100`, `1000`, `2500`, `10000`
+        """
+        speed_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        switchport_access_vlan: NotRequired[pulumi.Input[int]]
+        """
+        Set VLAN identifier associated with bridging domain
+          - Range: `1`-`4094`
+        """
+        switchport_access_vlan_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        switchport_mode: NotRequired[pulumi.Input[str]]
+        """
+        Set type of switch port: access/trunk
+          - Choices: `access`, `trunk`
+        """
+        switchport_trunk_allowed_vlans: NotRequired[pulumi.Input[str]]
+        """
+        Configure VLAN IDs used with the trunk
+        """
+        switchport_trunk_allowed_vlans_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        switchport_trunk_native_vlan: NotRequired[pulumi.Input[int]]
+        """
+        Configure VLAN ID used for native VLAN
+          - Range: `1`-`4094`
+        """
+        switchport_trunk_native_vlan_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        voice_vlan: NotRequired[pulumi.Input[int]]
+        """
+        Configure Voice Vlan
+          - Range: `1`-`4094`
+        """
+        voice_vlan_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    SwitchportFeatureTemplateInterfaceArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class SwitchportFeatureTemplateInterfaceArgs:
@@ -39300,6 +50735,40 @@ class SwitchportFeatureTemplateInterfaceArgs:
         pulumi.set(self, "voice_vlan_variable", value)
 
 
+if not MYPY:
+    class SwitchportFeatureTemplateStaticMacAddressArgsDict(TypedDict):
+        if_name: NotRequired[pulumi.Input[str]]
+        """
+        Interface name: GigabitEthernet0/<>/<>
+        """
+        if_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        mac_address: NotRequired[pulumi.Input[str]]
+        """
+        Set MAC address in xxxx.xxxx.xxxx format
+        """
+        mac_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        vlan: NotRequired[pulumi.Input[int]]
+        """
+        Configure VLAN ID used with the mac and interface
+          - Range: `1`-`4094`
+        """
+        vlan_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    SwitchportFeatureTemplateStaticMacAddressArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class SwitchportFeatureTemplateStaticMacAddressArgs:
     def __init__(__self__, *,
@@ -39421,6 +50890,38 @@ class SwitchportFeatureTemplateStaticMacAddressArgs:
         pulumi.set(self, "vlan_variable", value)
 
 
+if not MYPY:
+    class SystemAaaFeatureAccountingRuleArgsDict(TypedDict):
+        groups: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        Use Server-group
+        """
+        level: NotRequired[pulumi.Input[str]]
+        """
+        Privilege level when method is commands
+          - Choices: `1`, `15`
+        """
+        method: NotRequired[pulumi.Input[str]]
+        """
+        Configure Accounting Method
+          - Choices: `commands`, `exec`, `network`, `system`
+        """
+        rule_id: NotRequired[pulumi.Input[str]]
+        """
+        Configure Accounting Rule ID
+        """
+        start_stop: NotRequired[pulumi.Input[bool]]
+        """
+        Record start and stop without waiting
+          - Default value: `true`
+        """
+        start_stop_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    SystemAaaFeatureAccountingRuleArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class SystemAaaFeatureAccountingRuleArgs:
     def __init__(__self__, *,
@@ -39530,6 +51031,34 @@ class SystemAaaFeatureAccountingRuleArgs:
         pulumi.set(self, "start_stop_variable", value)
 
 
+if not MYPY:
+    class SystemAaaFeatureAuthorizationRuleArgsDict(TypedDict):
+        groups: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        Use Server-group
+        """
+        if_authenticated: NotRequired[pulumi.Input[bool]]
+        """
+        Succeed if user has authenticated
+          - Default value: `false`
+        """
+        level: NotRequired[pulumi.Input[str]]
+        """
+        Privilege level when method is commands
+          - Choices: `1`, `15`
+        """
+        method: NotRequired[pulumi.Input[str]]
+        """
+        Method
+          - Choices: `commands`
+        """
+        rule_id: NotRequired[pulumi.Input[str]]
+        """
+        Configure Authorization Rule ID
+        """
+elif False:
+    SystemAaaFeatureAuthorizationRuleArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class SystemAaaFeatureAuthorizationRuleArgs:
     def __init__(__self__, *,
@@ -39623,6 +51152,33 @@ class SystemAaaFeatureAuthorizationRuleArgs:
         pulumi.set(self, "rule_id", value)
 
 
+if not MYPY:
+    class SystemAaaFeatureRadiusGroupArgsDict(TypedDict):
+        group_name: NotRequired[pulumi.Input[str]]
+        """
+        Set Radius server Group Name
+        """
+        servers: NotRequired[pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureRadiusGroupServerArgsDict']]]]
+        """
+        Configure the Radius server
+        """
+        source_interface: NotRequired[pulumi.Input[str]]
+        """
+        Set interface to use to reach Radius server
+        """
+        source_interface_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        vpn: NotRequired[pulumi.Input[int]]
+        """
+        Set VPN in which Radius server is located
+          - Range: `0`-`65530`
+          - Default value: `0`
+        """
+elif False:
+    SystemAaaFeatureRadiusGroupArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class SystemAaaFeatureRadiusGroupArgs:
     def __init__(__self__, *,
@@ -39713,6 +51269,82 @@ class SystemAaaFeatureRadiusGroupArgs:
     def vpn(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "vpn", value)
 
+
+if not MYPY:
+    class SystemAaaFeatureRadiusGroupServerArgsDict(TypedDict):
+        acct_port: NotRequired[pulumi.Input[int]]
+        """
+        Set Accounting port to use to connect to Radius server
+          - Range: `1`-`65534`
+          - Default value: `1813`
+        """
+        acct_port_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        address: NotRequired[pulumi.Input[str]]
+        """
+        Set IP address of Radius server
+        """
+        auth_port: NotRequired[pulumi.Input[int]]
+        """
+        Set Authentication port to use to connect to Radius server
+          - Range: `1`-`65534`
+          - Default value: `1812`
+        """
+        auth_port_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        key: NotRequired[pulumi.Input[str]]
+        """
+        Set the Radius server shared key
+        """
+        key_enum: NotRequired[pulumi.Input[str]]
+        """
+        Type of encyption. To be used for type 6
+          - Choices: `6`, `7`
+        """
+        key_type: NotRequired[pulumi.Input[str]]
+        """
+        key type
+          - Choices: `key`, `pac`
+          - Default value: `key`
+        """
+        key_type_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        retransmit: NotRequired[pulumi.Input[int]]
+        """
+        Configure how many times to contact this Radius server
+          - Range: `1`-`100`
+          - Default value: `3`
+        """
+        retransmit_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        secret_key: NotRequired[pulumi.Input[str]]
+        """
+        Set the Radius server shared type 7 encrypted key
+        """
+        secret_key_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        timeout: NotRequired[pulumi.Input[int]]
+        """
+        Configure how long to wait for replies from the Radius server
+          - Range: `1`-`1000`
+          - Default value: `5`
+        """
+        timeout_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    SystemAaaFeatureRadiusGroupServerArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class SystemAaaFeatureRadiusGroupServerArgs:
@@ -39983,6 +51615,33 @@ class SystemAaaFeatureRadiusGroupServerArgs:
         pulumi.set(self, "timeout_variable", value)
 
 
+if not MYPY:
+    class SystemAaaFeatureTacacsGroupArgsDict(TypedDict):
+        group_name: NotRequired[pulumi.Input[str]]
+        """
+        Set TACACS server Group Name
+        """
+        servers: NotRequired[pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureTacacsGroupServerArgsDict']]]]
+        """
+        Configure the TACACS server
+        """
+        source_interface: NotRequired[pulumi.Input[str]]
+        """
+        Set interface to use to reach TACACS server
+        """
+        source_interface_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        vpn: NotRequired[pulumi.Input[int]]
+        """
+        Set VPN in which TACACS server is located
+          - Range: `0`-`65530`
+          - Default value: `0`
+        """
+elif False:
+    SystemAaaFeatureTacacsGroupArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class SystemAaaFeatureTacacsGroupArgs:
     def __init__(__self__, *,
@@ -40073,6 +51732,52 @@ class SystemAaaFeatureTacacsGroupArgs:
     def vpn(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "vpn", value)
 
+
+if not MYPY:
+    class SystemAaaFeatureTacacsGroupServerArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        Set IP address of TACACS server
+        """
+        key: NotRequired[pulumi.Input[str]]
+        """
+        Set the TACACS server shared key
+        """
+        key_enum: NotRequired[pulumi.Input[str]]
+        """
+        Type of encyption. To be used for type 6
+          - Choices: `6`, `7`
+        """
+        port: NotRequired[pulumi.Input[int]]
+        """
+        TACACS Port
+          - Range: `1`-`65535`
+          - Default value: `49`
+        """
+        port_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        secret_key: NotRequired[pulumi.Input[str]]
+        """
+        Set the TACACS server shared type 7 encrypted key
+        """
+        secret_key_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        timeout: NotRequired[pulumi.Input[int]]
+        """
+        Configure how long to wait for replies from the TACACS server
+          - Range: `1`-`1000`
+          - Default value: `5`
+        """
+        timeout_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    SystemAaaFeatureTacacsGroupServerArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class SystemAaaFeatureTacacsGroupServerArgs:
@@ -40235,6 +51940,41 @@ class SystemAaaFeatureTacacsGroupServerArgs:
         pulumi.set(self, "timeout_variable", value)
 
 
+if not MYPY:
+    class SystemAaaFeatureUserArgsDict(TypedDict):
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Set the username
+        """
+        name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        password: NotRequired[pulumi.Input[str]]
+        """
+        Set the user password
+        """
+        password_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        privilege: NotRequired[pulumi.Input[str]]
+        """
+        Set Privilege Level for this user
+          - Choices: `1`, `15`
+          - Default value: `15`
+        """
+        privilege_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        public_keys: NotRequired[pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureUserPublicKeyArgsDict']]]]
+        """
+        List of RSA public-keys per user
+        """
+elif False:
+    SystemAaaFeatureUserArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class SystemAaaFeatureUserArgs:
     def __init__(__self__, *,
@@ -40358,6 +52098,23 @@ class SystemAaaFeatureUserArgs:
         pulumi.set(self, "public_keys", value)
 
 
+if not MYPY:
+    class SystemAaaFeatureUserPublicKeyArgsDict(TypedDict):
+        key_string: NotRequired[pulumi.Input[str]]
+        """
+        Set the RSA key string
+        """
+        key_type: NotRequired[pulumi.Input[str]]
+        """
+        Only RSA is supported
+        """
+        key_type_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    SystemAaaFeatureUserPublicKeyArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class SystemAaaFeatureUserPublicKeyArgs:
     def __init__(__self__, *,
@@ -40412,6 +52169,28 @@ class SystemAaaFeatureUserPublicKeyArgs:
     def key_type_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "key_type_variable", value)
 
+
+if not MYPY:
+    class SystemBasicFeatureAffinityPerVrfArgsDict(TypedDict):
+        affinity_group_number: NotRequired[pulumi.Input[int]]
+        """
+        Affinity Group Number
+          - Range: `1`-`63`
+        """
+        affinity_group_number_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        vrf_range: NotRequired[pulumi.Input[str]]
+        """
+        Range of VRFs
+        """
+        vrf_range_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    SystemBasicFeatureAffinityPerVrfArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class SystemBasicFeatureAffinityPerVrfArgs:
@@ -40486,6 +52265,19 @@ class SystemBasicFeatureAffinityPerVrfArgs:
         pulumi.set(self, "vrf_range_variable", value)
 
 
+if not MYPY:
+    class SystemBasicFeatureGpsSmsMobileNumberArgsDict(TypedDict):
+        number: NotRequired[pulumi.Input[str]]
+        """
+        Mobile number, ex: 1231234414
+        """
+        number_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    SystemBasicFeatureGpsSmsMobileNumberArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class SystemBasicFeatureGpsSmsMobileNumberArgs:
     def __init__(__self__, *,
@@ -40524,6 +52316,59 @@ class SystemBasicFeatureGpsSmsMobileNumberArgs:
     def number_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "number_variable", value)
 
+
+if not MYPY:
+    class SystemBfdFeatureColorArgsDict(TypedDict):
+        color: NotRequired[pulumi.Input[str]]
+        """
+        Color that identifies the WAN transport tunnel
+          - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+        """
+        color_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        dscp: NotRequired[pulumi.Input[int]]
+        """
+        BFD Default DSCP value for tloc color
+          - Range: `0`-`63`
+          - Default value: `48`
+        """
+        dscp_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        hello_interval: NotRequired[pulumi.Input[int]]
+        """
+        Hello Interval (milliseconds)
+          - Range: `100`-`300000`
+          - Default value: `1000`
+        """
+        hello_interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        multiplier: NotRequired[pulumi.Input[int]]
+        """
+        Multiplier
+          - Range: `1`-`60`
+          - Default value: `7`
+        """
+        multiplier_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        pmtu_discovery: NotRequired[pulumi.Input[bool]]
+        """
+        Path MTU Discovery
+          - Default value: `true`
+        """
+        pmtu_discovery_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    SystemBfdFeatureColorArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class SystemBfdFeatureColorArgs:
@@ -40708,6 +52553,51 @@ class SystemBfdFeatureColorArgs:
         pulumi.set(self, "pmtu_discovery_variable", value)
 
 
+if not MYPY:
+    class SystemIpv4DeviceAccessFeatureSequenceArgsDict(TypedDict):
+        base_action: NotRequired[pulumi.Input[str]]
+        """
+        Base Action
+          - Choices: `drop`, `accept`
+        """
+        destination_data_prefix_list_id: NotRequired[pulumi.Input[str]]
+        destination_ip_prefix_list_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        destination_ip_prefix_lists: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        Destination Data IP Prefix List
+        """
+        device_access_port: NotRequired[pulumi.Input[int]]
+        """
+        device access protocol
+        """
+        id: NotRequired[pulumi.Input[int]]
+        """
+        Sequence Id
+          - Range: `1`-`65536`
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Sequence Name
+        """
+        source_data_prefix_list_id: NotRequired[pulumi.Input[str]]
+        source_ip_prefix_list_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        source_ip_prefix_lists: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        Source Data IP Prefix List
+        """
+        source_ports: NotRequired[pulumi.Input[Sequence[pulumi.Input[int]]]]
+        """
+        Source Port List
+        """
+elif False:
+    SystemIpv4DeviceAccessFeatureSequenceArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class SystemIpv4DeviceAccessFeatureSequenceArgs:
     def __init__(__self__, *,
@@ -40886,6 +52776,52 @@ class SystemIpv4DeviceAccessFeatureSequenceArgs:
     def source_ports(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[int]]]]):
         pulumi.set(self, "source_ports", value)
 
+
+if not MYPY:
+    class SystemIpv6DeviceAccessFeatureSequenceArgsDict(TypedDict):
+        base_action: NotRequired[pulumi.Input[str]]
+        """
+        Base Action
+          - Choices: `drop`, `accept`
+          - Default value: `accept`
+        """
+        destination_data_prefix_list_id: NotRequired[pulumi.Input[str]]
+        destination_ip_prefix_list_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        destination_ip_prefix_lists: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        Destination Data IP Prefix List
+        """
+        device_access_port: NotRequired[pulumi.Input[int]]
+        """
+        device access protocol
+        """
+        id: NotRequired[pulumi.Input[int]]
+        """
+        Sequence Id
+          - Range: `1`-`65536`
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Sequence Name
+        """
+        source_data_prefix_list_id: NotRequired[pulumi.Input[str]]
+        source_ip_prefix_list_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        source_ip_prefix_lists: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        Source Data IP Prefix List
+        """
+        source_ports: NotRequired[pulumi.Input[Sequence[pulumi.Input[int]]]]
+        """
+        Source Port List
+        """
+elif False:
+    SystemIpv6DeviceAccessFeatureSequenceArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class SystemIpv6DeviceAccessFeatureSequenceArgs:
@@ -41067,6 +53003,73 @@ class SystemIpv6DeviceAccessFeatureSequenceArgs:
     def source_ports(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[int]]]]):
         pulumi.set(self, "source_ports", value)
 
+
+if not MYPY:
+    class SystemLoggingFeatureIpv4ServerArgsDict(TypedDict):
+        hostname_ip: NotRequired[pulumi.Input[str]]
+        """
+        Set hostname or IPv4 address of server
+        """
+        hostname_ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        priority: NotRequired[pulumi.Input[str]]
+        """
+        Set logging level for messages logged to server
+          - Choices: `informational`, `debugging`, `notice`, `warn`, `error`, `critical`, `alert`, `emergency`
+          - Default value: `informational`
+        """
+        priority_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        source_interface: NotRequired[pulumi.Input[str]]
+        """
+        Set interface to use to reach syslog server
+        """
+        source_interface_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        tls_enable: NotRequired[pulumi.Input[bool]]
+        """
+        Enable TLS Profile
+          - Default value: `false`
+        """
+        tls_enable_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        tls_properties_custom_profile: NotRequired[pulumi.Input[bool]]
+        """
+        Define custom profile
+          - Default value: `false`
+        """
+        tls_properties_custom_profile_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        tls_properties_profile: NotRequired[pulumi.Input[str]]
+        """
+        Configure a TLS profile
+        """
+        tls_properties_profile_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        vpn: NotRequired[pulumi.Input[int]]
+        """
+        Set hostname or IPv4 address of server
+          - Range: `0`-`65530`
+          - Default value: `0`
+        """
+        vpn_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    SystemLoggingFeatureIpv4ServerArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class SystemLoggingFeatureIpv4ServerArgs:
@@ -41311,6 +53314,73 @@ class SystemLoggingFeatureIpv4ServerArgs:
         pulumi.set(self, "vpn_variable", value)
 
 
+if not MYPY:
+    class SystemLoggingFeatureIpv6ServerArgsDict(TypedDict):
+        hostname_ip: NotRequired[pulumi.Input[str]]
+        """
+        Set IPv6 hostname or IPv6 address of server
+        """
+        hostname_ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        priority: NotRequired[pulumi.Input[str]]
+        """
+        Set logging level for messages logged to server
+          - Choices: `informational`, `debugging`, `notice`, `warn`, `error`, `critical`, `alert`, `emergency`
+          - Default value: `informational`
+        """
+        priority_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        source_interface: NotRequired[pulumi.Input[str]]
+        """
+        Set interface to use to reach syslog server
+        """
+        source_interface_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        tls_enable: NotRequired[pulumi.Input[bool]]
+        """
+        Enable TLS Profile
+          - Default value: `false`
+        """
+        tls_enable_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        tls_properties_custom_profile: NotRequired[pulumi.Input[bool]]
+        """
+        Define custom profile
+          - Default value: `false`
+        """
+        tls_properties_custom_profile_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        tls_properties_profile: NotRequired[pulumi.Input[str]]
+        """
+        Configure a TLS profile
+        """
+        tls_properties_profile_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        vpn: NotRequired[pulumi.Input[int]]
+        """
+        Set hostname or IPv4 address of server
+          - Range: `0`-`65530`
+          - Default value: `0`
+        """
+        vpn_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    SystemLoggingFeatureIpv6ServerArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class SystemLoggingFeatureIpv6ServerArgs:
     def __init__(__self__, *,
@@ -41554,6 +53624,37 @@ class SystemLoggingFeatureIpv6ServerArgs:
         pulumi.set(self, "vpn_variable", value)
 
 
+if not MYPY:
+    class SystemLoggingFeatureTlsProfileArgsDict(TypedDict):
+        cipher_suites: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        Syslog secure server ciphersuites
+        """
+        cipher_suites_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        profile: NotRequired[pulumi.Input[str]]
+        """
+        Specify the name of the TLS profile
+        """
+        profile_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        tls_version: NotRequired[pulumi.Input[str]]
+        """
+        TLS Version
+          - Choices: `TLSv1.1`, `TLSv1.2`
+          - Default value: `TLSv1.1`
+        """
+        tls_version_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    SystemLoggingFeatureTlsProfileArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class SystemLoggingFeatureTlsProfileArgs:
     def __init__(__self__, *,
@@ -41661,6 +53762,28 @@ class SystemLoggingFeatureTlsProfileArgs:
         pulumi.set(self, "tls_version_variable", value)
 
 
+if not MYPY:
+    class SystemNtpFeatureAuthenticationKeyArgsDict(TypedDict):
+        key_id: NotRequired[pulumi.Input[int]]
+        """
+        MD5 authentication key ID
+          - Range: `1`-`65535`
+        """
+        key_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        md5_value: NotRequired[pulumi.Input[str]]
+        """
+        Enter cleartext or AES-encrypted MD5 authentication key
+        """
+        md5_value_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    SystemNtpFeatureAuthenticationKeyArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class SystemNtpFeatureAuthenticationKeyArgs:
     def __init__(__self__, *,
@@ -41733,6 +53856,65 @@ class SystemNtpFeatureAuthenticationKeyArgs:
     def md5_value_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "md5_value_variable", value)
 
+
+if not MYPY:
+    class SystemNtpFeatureServerArgsDict(TypedDict):
+        authentication_key: NotRequired[pulumi.Input[int]]
+        """
+        Set authentication key for the server
+          - Range: `1`-`65535`
+        """
+        authentication_key_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        hostname_ip_address: NotRequired[pulumi.Input[str]]
+        """
+        Set hostname or IP address of server
+        """
+        hostname_ip_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ntp_version: NotRequired[pulumi.Input[int]]
+        """
+        Set NTP version
+          - Range: `1`-`4`
+          - Default value: `4`
+        """
+        ntp_version_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        prefer_this_ntp_server: NotRequired[pulumi.Input[bool]]
+        """
+        Prefer this NTP server
+          - Default value: `false`
+        """
+        prefer_this_ntp_server_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        source_interface: NotRequired[pulumi.Input[str]]
+        """
+        Set interface to use to reach NTP server
+        """
+        source_interface_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        vpn: NotRequired[pulumi.Input[int]]
+        """
+        Set VPN in which NTP server is located
+          - Range: `0`-`65530`
+          - Default value: `0`
+        """
+        vpn_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    SystemNtpFeatureServerArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class SystemNtpFeatureServerArgs:
@@ -41944,6 +54126,136 @@ class SystemNtpFeatureServerArgs:
     def vpn_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "vpn_variable", value)
 
+
+if not MYPY:
+    class SystemSecurityFeatureKeyArgsDict(TypedDict):
+        accept_ao_mismatch: NotRequired[pulumi.Input[bool]]
+        """
+        Configure Accept AO Mismatch
+          - Default value: `false`
+        """
+        accept_ao_mismatch_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        accept_life_time_duration: NotRequired[pulumi.Input[int]]
+        """
+        Send lifetime Duration (seconds)
+          - Range: `1`-`2147483646`
+        """
+        accept_life_time_duration_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        accept_life_time_exact: NotRequired[pulumi.Input[int]]
+        """
+        Configure Key lifetime end time
+        """
+        accept_life_time_infinite: NotRequired[pulumi.Input[bool]]
+        """
+        Infinite lifetime
+        """
+        accept_life_time_infinite_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        accept_life_time_local: NotRequired[pulumi.Input[bool]]
+        """
+        Configure Send lifetime Local
+          - Default value: `false`
+        """
+        accept_life_time_local_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        accept_life_time_start_epoch: NotRequired[pulumi.Input[int]]
+        """
+        Configure Key lifetime start time
+        """
+        crypto_algorithm: NotRequired[pulumi.Input[str]]
+        """
+        Crypto Algorithm
+          - Choices: `aes-128-cmac`, `hmac-sha-1`, `hmac-sha-256`
+        """
+        id: NotRequired[pulumi.Input[int]]
+        """
+        Select the Key ID
+        """
+        include_tcp_options: NotRequired[pulumi.Input[bool]]
+        """
+        Configure Include TCP Options
+          - Default value: `false`
+        """
+        include_tcp_options_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        key_string: NotRequired[pulumi.Input[str]]
+        """
+        Specify the Key String
+        """
+        key_string_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Select the chain name
+        """
+        receiver_id: NotRequired[pulumi.Input[int]]
+        """
+        Specify the Receiver ID
+          - Range: `0`-`255`
+        """
+        receiver_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        send_id: NotRequired[pulumi.Input[int]]
+        """
+        Specify the Send ID
+          - Range: `0`-`255`
+        """
+        send_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        send_life_time_duration: NotRequired[pulumi.Input[int]]
+        """
+        Send lifetime Duration (seconds)
+          - Range: `1`-`2147483646`
+        """
+        send_life_time_duration_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        send_life_time_exact: NotRequired[pulumi.Input[int]]
+        """
+        Configure Key lifetime end time
+        """
+        send_life_time_infinite: NotRequired[pulumi.Input[bool]]
+        """
+        Infinite lifetime
+        """
+        send_life_time_infinite_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        send_life_time_local: NotRequired[pulumi.Input[bool]]
+        """
+        Configure Send lifetime Local
+          - Default value: `false`
+        """
+        send_life_time_local_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        send_life_time_start_epoch: NotRequired[pulumi.Input[int]]
+        """
+        Configure Key lifetime start time
+        """
+elif False:
+    SystemSecurityFeatureKeyArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class SystemSecurityFeatureKeyArgs:
@@ -42434,6 +54746,20 @@ class SystemSecurityFeatureKeyArgs:
         pulumi.set(self, "send_life_time_start_epoch", value)
 
 
+if not MYPY:
+    class SystemSecurityFeatureKeychainArgsDict(TypedDict):
+        key_chain_name: NotRequired[pulumi.Input[str]]
+        """
+        Specify the name of the Keychain
+        """
+        key_id: NotRequired[pulumi.Input[int]]
+        """
+        Specify the Key ID
+          - Range: `0`-`2147483647`
+        """
+elif False:
+    SystemSecurityFeatureKeychainArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class SystemSecurityFeatureKeychainArgs:
     def __init__(__self__, *,
@@ -42474,6 +54800,36 @@ class SystemSecurityFeatureKeychainArgs:
     def key_id(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "key_id", value)
 
+
+if not MYPY:
+    class SystemSnmpFeatureCommunityArgsDict(TypedDict):
+        authorization: NotRequired[pulumi.Input[str]]
+        """
+        Configure access permissions
+          - Choices: `read-only`, `read-write`
+        """
+        authorization_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Set name of the SNMP community
+        """
+        user_label: NotRequired[pulumi.Input[str]]
+        """
+        Set user label of the SNMP community
+        """
+        view: NotRequired[pulumi.Input[str]]
+        """
+        Set name of the SNMP view
+        """
+        view_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    SystemSnmpFeatureCommunityArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class SystemSnmpFeatureCommunityArgs:
@@ -42580,6 +54936,28 @@ class SystemSnmpFeatureCommunityArgs:
         pulumi.set(self, "view_variable", value)
 
 
+if not MYPY:
+    class SystemSnmpFeatureGroupArgsDict(TypedDict):
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Name of the SNMP group
+        """
+        security_level: NotRequired[pulumi.Input[str]]
+        """
+        Configure security level
+          - Choices: `no-auth-no-priv`, `auth-no-priv`, `auth-priv`
+        """
+        view: NotRequired[pulumi.Input[str]]
+        """
+        Name of the SNMP view
+        """
+        view_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    SystemSnmpFeatureGroupArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class SystemSnmpFeatureGroupArgs:
     def __init__(__self__, *,
@@ -42652,6 +55030,57 @@ class SystemSnmpFeatureGroupArgs:
     def view_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "view_variable", value)
 
+
+if not MYPY:
+    class SystemSnmpFeatureTrapTargetServerArgsDict(TypedDict):
+        ip: NotRequired[pulumi.Input[str]]
+        """
+        Set IPv4/IPv6 address of SNMP server
+        """
+        ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        port: NotRequired[pulumi.Input[int]]
+        """
+        Set UDP port number to connect to SNMP server
+          - Range: `1`-`65535`
+        """
+        port_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        source_interface: NotRequired[pulumi.Input[str]]
+        """
+        Source interface for outgoing SNMP traps
+        """
+        source_interface_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        user: NotRequired[pulumi.Input[str]]
+        """
+        Set name of the SNMP user
+        """
+        user_label: NotRequired[pulumi.Input[str]]
+        """
+        Set user label of the SNMP community
+        """
+        user_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        vpn_id: NotRequired[pulumi.Input[int]]
+        """
+        Set VPN in which SNMP server is located
+          - Range: `0`-`65530`
+        """
+        vpn_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    SystemSnmpFeatureTrapTargetServerArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class SystemSnmpFeatureTrapTargetServerArgs:
@@ -42840,6 +55269,57 @@ class SystemSnmpFeatureTrapTargetServerArgs:
         pulumi.set(self, "vpn_id_variable", value)
 
 
+if not MYPY:
+    class SystemSnmpFeatureUserArgsDict(TypedDict):
+        authentication_password: NotRequired[pulumi.Input[str]]
+        """
+        Specify authentication protocol password
+        """
+        authentication_password_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        authentication_protocol: NotRequired[pulumi.Input[str]]
+        """
+        Configure authentication protocol
+          - Choices: `sha`
+        """
+        authentication_protocol_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        group: NotRequired[pulumi.Input[str]]
+        """
+        Name of the SNMP group
+        """
+        group_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Name of the SNMP user
+        """
+        privacy_password: NotRequired[pulumi.Input[str]]
+        """
+        Specify privacy protocol password
+        """
+        privacy_password_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        privacy_protocol: NotRequired[pulumi.Input[str]]
+        """
+        Configure privacy protocol
+          - Choices: `aes-cfb-128`, `aes-256-cfb-128`
+        """
+        privacy_protocol_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    SystemSnmpFeatureUserArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class SystemSnmpFeatureUserArgs:
     def __init__(__self__, *,
@@ -43027,6 +55507,19 @@ class SystemSnmpFeatureUserArgs:
         pulumi.set(self, "privacy_protocol_variable", value)
 
 
+if not MYPY:
+    class SystemSnmpFeatureViewArgsDict(TypedDict):
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Set the name of the SNMP view
+        """
+        oids: NotRequired[pulumi.Input[Sequence[pulumi.Input['SystemSnmpFeatureViewOidArgsDict']]]]
+        """
+        Configure SNMP object identifier
+        """
+elif False:
+    SystemSnmpFeatureViewArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class SystemSnmpFeatureViewArgs:
     def __init__(__self__, *,
@@ -43065,6 +55558,28 @@ class SystemSnmpFeatureViewArgs:
     def oids(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SystemSnmpFeatureViewOidArgs']]]]):
         pulumi.set(self, "oids", value)
 
+
+if not MYPY:
+    class SystemSnmpFeatureViewOidArgsDict(TypedDict):
+        exclude: NotRequired[pulumi.Input[bool]]
+        """
+        Exclude the OID
+          - Default value: `false`
+        """
+        exclude_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        id: NotRequired[pulumi.Input[str]]
+        """
+        Configure identifier of subtree of MIB objects
+        """
+        id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    SystemSnmpFeatureViewOidArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class SystemSnmpFeatureViewOidArgs:
@@ -43139,6 +55654,30 @@ class SystemSnmpFeatureViewOidArgs:
         pulumi.set(self, "id_variable", value)
 
 
+if not MYPY:
+    class TlocListPolicyObjectEntryArgsDict(TypedDict):
+        color: pulumi.Input[str]
+        """
+        Color
+          - Choices: `default`, `3g`, `biz-internet`, `blue`, `bronze`, `custom1`, `custom2`, `custom3`, `gold`, `green`, `lte`, `metro-ethernet`, `mpls`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`, `public-internet`, `red`, `silver`
+        """
+        encapsulation: pulumi.Input[str]
+        """
+        Encapsulation
+          - Choices: `ipsec`, `gre`
+        """
+        tloc_ip: pulumi.Input[str]
+        """
+        TLOC IP
+        """
+        preference: NotRequired[pulumi.Input[int]]
+        """
+        Preference
+          - Range: `0`-`4294967295`
+        """
+elif False:
+    TlocListPolicyObjectEntryArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class TlocListPolicyObjectEntryArgs:
     def __init__(__self__, *,
@@ -43212,6 +55751,32 @@ class TlocListPolicyObjectEntryArgs:
     def preference(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "preference", value)
 
+
+if not MYPY:
+    class TlsSslDecryptionPolicyDefinitionNetworkRuleArgsDict(TypedDict):
+        base_action: NotRequired[pulumi.Input[str]]
+        """
+        Rule base action
+          - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
+        """
+        rule_id: NotRequired[pulumi.Input[int]]
+        """
+        Rule ID
+        """
+        rule_name: NotRequired[pulumi.Input[str]]
+        """
+        Rule name
+        """
+        rule_type: NotRequired[pulumi.Input[str]]
+        """
+        Rule type
+        """
+        source_and_destination_configurations: NotRequired[pulumi.Input[Sequence[pulumi.Input['TlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArgsDict']]]]
+        """
+        List of network source / destination configuration
+        """
+elif False:
+    TlsSslDecryptionPolicyDefinitionNetworkRuleArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class TlsSslDecryptionPolicyDefinitionNetworkRuleArgs:
@@ -43302,6 +55867,20 @@ class TlsSslDecryptionPolicyDefinitionNetworkRuleArgs:
         pulumi.set(self, "source_and_destination_configurations", value)
 
 
+if not MYPY:
+    class TlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArgsDict(TypedDict):
+        option: NotRequired[pulumi.Input[str]]
+        """
+        source / destination option
+          - Choices: `sourceIp`, `sourcePort`, `destinationVpn`, `destinationIp`, `destinationPort`
+        """
+        value: NotRequired[pulumi.Input[str]]
+        """
+        source / destination option target
+        """
+elif False:
+    TlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class TlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurationArgs:
     def __init__(__self__, *,
@@ -43342,6 +55921,27 @@ class TlsSslDecryptionPolicyDefinitionNetworkRuleSourceAndDestinationConfigurati
     def value(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "value", value)
 
+
+if not MYPY:
+    class TlsSslDecryptionPolicyDefinitionUrlRuleArgsDict(TypedDict):
+        rule_name: NotRequired[pulumi.Input[str]]
+        """
+        Country
+        """
+        target_vpns: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        List of VPN IDs
+        """
+        tls_ssl_profile_policy_id: NotRequired[pulumi.Input[str]]
+        """
+        TLS SSL Profile Policy ID
+        """
+        tls_ssl_profile_version: NotRequired[pulumi.Input[int]]
+        """
+        TLS SSL Profile Policy version
+        """
+elif False:
+    TlsSslDecryptionPolicyDefinitionUrlRuleArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class TlsSslDecryptionPolicyDefinitionUrlRuleArgs:
@@ -43413,6 +56013,42 @@ class TlsSslDecryptionPolicyDefinitionUrlRuleArgs:
     def tls_ssl_profile_version(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "tls_ssl_profile_version", value)
 
+
+if not MYPY:
+    class TrafficDataPolicyDefinitionSequenceArgsDict(TypedDict):
+        id: pulumi.Input[int]
+        """
+        Sequence ID
+        """
+        name: pulumi.Input[str]
+        """
+        Sequence name
+        """
+        type: pulumi.Input[str]
+        """
+        Sequence type
+          - Choices: `applicationFirewall`, `qos`, `serviceChaining`, `trafficEngineering`, `data`
+        """
+        action_entries: NotRequired[pulumi.Input[Sequence[pulumi.Input['TrafficDataPolicyDefinitionSequenceActionEntryArgsDict']]]]
+        """
+        List of action entries
+        """
+        base_action: NotRequired[pulumi.Input[str]]
+        """
+        Base action, either `accept` or `drop`
+          - Choices: `accept`, `drop`
+        """
+        ip_type: NotRequired[pulumi.Input[str]]
+        """
+        Sequence IP type, either `ipv4`, `ipv6` or `all`
+          - Choices: `ipv4`, `ipv6`, `all`
+        """
+        match_entries: NotRequired[pulumi.Input[Sequence[pulumi.Input['TrafficDataPolicyDefinitionSequenceMatchEntryArgsDict']]]]
+        """
+        List of match entries
+        """
+elif False:
+    TrafficDataPolicyDefinitionSequenceArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class TrafficDataPolicyDefinitionSequenceArgs:
@@ -43535,6 +56171,99 @@ class TrafficDataPolicyDefinitionSequenceArgs:
     def match_entries(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['TrafficDataPolicyDefinitionSequenceMatchEntryArgs']]]]):
         pulumi.set(self, "match_entries", value)
 
+
+if not MYPY:
+    class TrafficDataPolicyDefinitionSequenceActionEntryArgsDict(TypedDict):
+        type: pulumi.Input[str]
+        """
+        Type of action entry
+          - Choices: `cflowd`, `count`, `dreOptimization`, `fallbackToRouting`, `log`, `lossProtect`, `lossProtectPktDup`, `lossProtectFec`, `nat`, `redirectDns`, `serviceNodeGroup`, `set`, `sig`, `tcpOptimization`
+        """
+        cflowd: NotRequired[pulumi.Input[bool]]
+        """
+        Enable cflowd
+        """
+        counter: NotRequired[pulumi.Input[str]]
+        """
+        Counter name
+        """
+        dre_optimization: NotRequired[pulumi.Input[bool]]
+        """
+        Enable DRE optimization
+        """
+        fallback_to_routing: NotRequired[pulumi.Input[bool]]
+        """
+        Enable fallback to routing
+        """
+        log: NotRequired[pulumi.Input[bool]]
+        """
+        Enable logging
+        """
+        loss_correction: NotRequired[pulumi.Input[str]]
+        """
+        Loss correction
+          - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
+        """
+        loss_correction_fec: NotRequired[pulumi.Input[str]]
+        """
+        Loss correction FEC
+          - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
+        """
+        loss_correction_fec_threshold: NotRequired[pulumi.Input[str]]
+        """
+        Loss correction FEC threshold
+        """
+        loss_correction_packet_duplication: NotRequired[pulumi.Input[str]]
+        """
+        Loss correction packet duplication
+          - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
+        """
+        nat_parameters: NotRequired[pulumi.Input[Sequence[pulumi.Input['TrafficDataPolicyDefinitionSequenceActionEntryNatParameterArgsDict']]]]
+        """
+        List of NAT parameters
+        """
+        nat_pool: NotRequired[pulumi.Input[str]]
+        """
+        NAT pool
+          - Choices: `pool`
+        """
+        nat_pool_id: NotRequired[pulumi.Input[int]]
+        """
+        NAT pool ID
+          - Range: `1`-`31`
+        """
+        redirect_dns: NotRequired[pulumi.Input[str]]
+        """
+        Redirect DNS
+          - Choices: `dnsType`, `ipAddress`
+        """
+        redirect_dns_address: NotRequired[pulumi.Input[str]]
+        """
+        Redirect DNS IP address
+        """
+        redirect_dns_type: NotRequired[pulumi.Input[str]]
+        """
+        Redirect DNS type
+          - Choices: `host`, `umbrella`
+        """
+        secure_internet_gateway: NotRequired[pulumi.Input[bool]]
+        """
+        Enable secure internet gateway
+        """
+        service_node_group: NotRequired[pulumi.Input[str]]
+        """
+        Service node group
+        """
+        set_parameters: NotRequired[pulumi.Input[Sequence[pulumi.Input['TrafficDataPolicyDefinitionSequenceActionEntrySetParameterArgsDict']]]]
+        """
+        List of set parameters
+        """
+        tcp_optimization: NotRequired[pulumi.Input[bool]]
+        """
+        Enable TCP optimization
+        """
+elif False:
+    TrafficDataPolicyDefinitionSequenceActionEntryArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class TrafficDataPolicyDefinitionSequenceActionEntryArgs:
@@ -43878,6 +56607,24 @@ class TrafficDataPolicyDefinitionSequenceActionEntryArgs:
         pulumi.set(self, "tcp_optimization", value)
 
 
+if not MYPY:
+    class TrafficDataPolicyDefinitionSequenceActionEntryNatParameterArgsDict(TypedDict):
+        type: pulumi.Input[str]
+        """
+        Type of NAT parameter
+          - Choices: `useVpn`, `fallback`
+        """
+        fallback: NotRequired[pulumi.Input[bool]]
+        """
+        Fallback
+        """
+        vpn_id: NotRequired[pulumi.Input[int]]
+        """
+        DSCP
+        """
+elif False:
+    TrafficDataPolicyDefinitionSequenceActionEntryNatParameterArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class TrafficDataPolicyDefinitionSequenceActionEntryNatParameterArgs:
     def __init__(__self__, *,
@@ -43933,6 +56680,127 @@ class TrafficDataPolicyDefinitionSequenceActionEntryNatParameterArgs:
     def vpn_id(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "vpn_id", value)
 
+
+if not MYPY:
+    class TrafficDataPolicyDefinitionSequenceActionEntrySetParameterArgsDict(TypedDict):
+        type: pulumi.Input[str]
+        """
+        Type of set parameter
+          - Choices: `dscp`, `forwardingClass`, `localTlocList`, `nextHop`, `nextHopLoose`, `policer`, `preferredColorGroup`, `tlocList`, `tloc`, `service`, `vpn`
+        """
+        dscp: NotRequired[pulumi.Input[int]]
+        """
+        DSCP
+          - Range: `0`-`63`
+        """
+        forwarding_class: NotRequired[pulumi.Input[str]]
+        """
+        Forwarding class
+        """
+        local_tloc_list_color: NotRequired[pulumi.Input[str]]
+        """
+        Local TLOC list color. Space separated list of colors.
+        """
+        local_tloc_list_encap: NotRequired[pulumi.Input[str]]
+        """
+        Local TLOC list encapsulation.
+          - Choices: `ipsec`, `gre`, `ipsec gre`
+        """
+        local_tloc_list_restrict: NotRequired[pulumi.Input[bool]]
+        """
+        Local TLOC list restrict
+        """
+        next_hop: NotRequired[pulumi.Input[str]]
+        """
+        Next hop IP
+        """
+        next_hop_loose: NotRequired[pulumi.Input[bool]]
+        """
+        Use routing table entry to forward the packet in case Next-hop is not available
+        """
+        policer_list_id: NotRequired[pulumi.Input[str]]
+        """
+        Policer list ID
+        """
+        policer_list_version: NotRequired[pulumi.Input[int]]
+        """
+        Policer list version
+        """
+        preferred_color_group_list: NotRequired[pulumi.Input[str]]
+        """
+        Preferred color group list ID
+        """
+        preferred_color_group_list_version: NotRequired[pulumi.Input[int]]
+        """
+        Preferred color group list version
+        """
+        service_tloc_color: NotRequired[pulumi.Input[str]]
+        """
+        Service TLOC color
+        """
+        service_tloc_encapsulation: NotRequired[pulumi.Input[str]]
+        """
+        Service TLOC encapsulation
+          - Choices: `ipsec`, `gre`, `ipsec gre`
+        """
+        service_tloc_ip: NotRequired[pulumi.Input[str]]
+        """
+        Service TLOC IP address
+        """
+        service_tloc_list_id: NotRequired[pulumi.Input[str]]
+        """
+        Service TLOC list ID
+        """
+        service_tloc_list_version: NotRequired[pulumi.Input[int]]
+        """
+        Service TLOC list version
+        """
+        service_tloc_local: NotRequired[pulumi.Input[bool]]
+        """
+        Service TLOC Local
+        """
+        service_tloc_restrict: NotRequired[pulumi.Input[bool]]
+        """
+        Service TLOC Restrict
+        """
+        service_type: NotRequired[pulumi.Input[str]]
+        """
+        Service type
+          - Choices: `FW`, `IDP`, `IDS`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `netsvc5`
+        """
+        service_vpn_id: NotRequired[pulumi.Input[int]]
+        """
+        Service VPN ID
+          - Range: `0`-`65536`
+        """
+        tloc_color: NotRequired[pulumi.Input[str]]
+        """
+        TLOC color
+        """
+        tloc_encapsulation: NotRequired[pulumi.Input[str]]
+        """
+        TLOC encapsulation
+          - Choices: `ipsec`, `gre`, `ipsec gre`
+        """
+        tloc_ip: NotRequired[pulumi.Input[str]]
+        """
+        TLOC IP address
+        """
+        tloc_list_id: NotRequired[pulumi.Input[str]]
+        """
+        TLOC list ID
+        """
+        tloc_list_version: NotRequired[pulumi.Input[int]]
+        """
+        TLOC list version
+        """
+        vpn_id: NotRequired[pulumi.Input[int]]
+        """
+        DSCP
+          - Range: `0`-`65530`
+        """
+elif False:
+    TrafficDataPolicyDefinitionSequenceActionEntrySetParameterArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class TrafficDataPolicyDefinitionSequenceActionEntrySetParameterArgs:
@@ -44388,6 +57256,107 @@ class TrafficDataPolicyDefinitionSequenceActionEntrySetParameterArgs:
         pulumi.set(self, "vpn_id", value)
 
 
+if not MYPY:
+    class TrafficDataPolicyDefinitionSequenceMatchEntryArgsDict(TypedDict):
+        type: pulumi.Input[str]
+        """
+        Type of match entry
+          - Choices: `appList`, `dnsAppList`, `dns`, `dscp`, `packetLength`, `plp`, `protocol`, `sourceDataPrefixList`, `sourceIp`, `sourcePort`, `destinationDataPrefixList`, `destinationIp`, `destinationRegion`, `destinationPort`, `tcp`, `trafficTo`, `icmpMessage`
+        """
+        application_list_id: NotRequired[pulumi.Input[str]]
+        """
+        Application list ID
+        """
+        application_list_version: NotRequired[pulumi.Input[int]]
+        """
+        Application list version
+        """
+        destination_data_prefix_list_id: NotRequired[pulumi.Input[str]]
+        """
+        Destination Data Prefix list ID
+        """
+        destination_data_prefix_list_version: NotRequired[pulumi.Input[int]]
+        """
+        Destination Data Prefix list version
+        """
+        destination_ip: NotRequired[pulumi.Input[str]]
+        """
+        Destination IP
+        """
+        destination_port: NotRequired[pulumi.Input[str]]
+        """
+        Destination port, 0-65535 (Single value, range or multiple values separated by spaces)
+        """
+        destination_region: NotRequired[pulumi.Input[str]]
+        """
+        Destination region
+          - Choices: `primary-region`, `secondary-region`, `other-region`
+        """
+        dns: NotRequired[pulumi.Input[str]]
+        """
+        DNS request or response
+          - Choices: `request`, `response`
+        """
+        dns_application_list_id: NotRequired[pulumi.Input[str]]
+        """
+        DNS Application list ID
+        """
+        dns_application_list_version: NotRequired[pulumi.Input[int]]
+        """
+        DNS Application list version
+        """
+        dscp: NotRequired[pulumi.Input[int]]
+        """
+        DSCP value
+          - Range: `0`-`63`
+        """
+        icmp_message: NotRequired[pulumi.Input[str]]
+        """
+        ICMP Message
+        """
+        packet_length: NotRequired[pulumi.Input[int]]
+        """
+        Packet length
+          - Range: `0`-`65535`
+        """
+        plp: NotRequired[pulumi.Input[str]]
+        """
+        PLP
+          - Choices: `low`, `high`
+        """
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        IP Protocol, 0-255 (Single value or multiple values separated by spaces)
+        """
+        source_data_prefix_list_id: NotRequired[pulumi.Input[str]]
+        """
+        Source Data Prefix list ID
+        """
+        source_data_prefix_list_version: NotRequired[pulumi.Input[int]]
+        """
+        Source Data Prefix list version
+        """
+        source_ip: NotRequired[pulumi.Input[str]]
+        """
+        Source IP
+        """
+        source_port: NotRequired[pulumi.Input[str]]
+        """
+        Source port, 0-65535 (Single value, range or multiple values separated by spaces)
+        """
+        tcp: NotRequired[pulumi.Input[str]]
+        """
+        TCP flags
+          - Choices: `syn`
+        """
+        traffic_to: NotRequired[pulumi.Input[str]]
+        """
+        Traffic to
+          - Choices: `access`, `core`, `service`
+        """
+elif False:
+    TrafficDataPolicyDefinitionSequenceMatchEntryArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class TrafficDataPolicyDefinitionSequenceMatchEntryArgs:
     def __init__(__self__, *,
@@ -44762,6 +57731,12 @@ class TrafficDataPolicyDefinitionSequenceMatchEntryArgs:
         pulumi.set(self, "traffic_to", value)
 
 
+if not MYPY:
+    class TransportIpv6TrackerGroupFeatureTrackerElementArgsDict(TypedDict):
+        tracker_id: NotRequired[pulumi.Input[str]]
+elif False:
+    TransportIpv6TrackerGroupFeatureTrackerElementArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class TransportIpv6TrackerGroupFeatureTrackerElementArgs:
     def __init__(__self__, *,
@@ -44778,6 +57753,48 @@ class TransportIpv6TrackerGroupFeatureTrackerElementArgs:
     def tracker_id(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "tracker_id", value)
 
+
+if not MYPY:
+    class TransportManagementVpnFeatureIpv4StaticRouteArgsDict(TypedDict):
+        administrative_distance: NotRequired[pulumi.Input[int]]
+        """
+        Administrative distance, Attribute conditional on `gateway` being equal to `null0`
+          - Range: `1`-`255`
+          - Default value: `1`
+        """
+        administrative_distance_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        gateway: NotRequired[pulumi.Input[str]]
+        """
+        Gateway
+          - Choices: `nextHop`, `dhcp`, `null0`
+          - Default value: `nextHop`
+        """
+        network_address: NotRequired[pulumi.Input[str]]
+        """
+        IP Address
+        """
+        network_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        next_hops: NotRequired[pulumi.Input[Sequence[pulumi.Input['TransportManagementVpnFeatureIpv4StaticRouteNextHopArgsDict']]]]
+        """
+        IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
+        """
+        subnet_mask: NotRequired[pulumi.Input[str]]
+        """
+        Subnet Mask
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        """
+        subnet_mask_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    TransportManagementVpnFeatureIpv4StaticRouteArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class TransportManagementVpnFeatureIpv4StaticRouteArgs:
@@ -44924,6 +57941,29 @@ class TransportManagementVpnFeatureIpv4StaticRouteArgs:
         pulumi.set(self, "subnet_mask_variable", value)
 
 
+if not MYPY:
+    class TransportManagementVpnFeatureIpv4StaticRouteNextHopArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        Address
+        """
+        address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        administrative_distance: NotRequired[pulumi.Input[int]]
+        """
+        Administrative distance
+          - Range: `1`-`255`
+          - Default value: `1`
+        """
+        administrative_distance_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    TransportManagementVpnFeatureIpv4StaticRouteNextHopArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class TransportManagementVpnFeatureIpv4StaticRouteNextHopArgs:
     def __init__(__self__, *,
@@ -44998,6 +58038,36 @@ class TransportManagementVpnFeatureIpv4StaticRouteNextHopArgs:
     def administrative_distance_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "administrative_distance_variable", value)
 
+
+if not MYPY:
+    class TransportManagementVpnFeatureIpv6StaticRouteArgsDict(TypedDict):
+        nat: NotRequired[pulumi.Input[str]]
+        """
+        IPv6 Nat
+          - Choices: `NAT64`, `NAT66`
+        """
+        nat_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        next_hops: NotRequired[pulumi.Input[Sequence[pulumi.Input['TransportManagementVpnFeatureIpv6StaticRouteNextHopArgsDict']]]]
+        """
+        IPv6 Route Gateway Next Hop
+        """
+        null0: NotRequired[pulumi.Input[bool]]
+        """
+        IPv6 Route Gateway Next Hop
+        """
+        prefix: NotRequired[pulumi.Input[str]]
+        """
+        Prefix
+        """
+        prefix_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    TransportManagementVpnFeatureIpv6StaticRouteArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class TransportManagementVpnFeatureIpv6StaticRouteArgs:
@@ -45104,6 +58174,28 @@ class TransportManagementVpnFeatureIpv6StaticRouteArgs:
         pulumi.set(self, "prefix_variable", value)
 
 
+if not MYPY:
+    class TransportManagementVpnFeatureIpv6StaticRouteNextHopArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        Address
+        """
+        address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        administrative_distance: NotRequired[pulumi.Input[int]]
+        """
+        Administrative distance
+          - Range: `1`-`254`
+        """
+        administrative_distance_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    TransportManagementVpnFeatureIpv6StaticRouteNextHopArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class TransportManagementVpnFeatureIpv6StaticRouteNextHopArgs:
     def __init__(__self__, *,
@@ -45177,6 +58269,27 @@ class TransportManagementVpnFeatureIpv6StaticRouteNextHopArgs:
         pulumi.set(self, "administrative_distance_variable", value)
 
 
+if not MYPY:
+    class TransportManagementVpnFeatureNewHostMappingArgsDict(TypedDict):
+        host_name: NotRequired[pulumi.Input[str]]
+        """
+        Hostname
+        """
+        host_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        list_of_ip_addresses: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        List of IP
+        """
+        list_of_ip_addresses_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    TransportManagementVpnFeatureNewHostMappingArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class TransportManagementVpnFeatureNewHostMappingArgs:
     def __init__(__self__, *,
@@ -45248,6 +58361,27 @@ class TransportManagementVpnFeatureNewHostMappingArgs:
         pulumi.set(self, "list_of_ip_addresses_variable", value)
 
 
+if not MYPY:
+    class TransportManagementVpnInterfaceEthernetFeatureArpEntryArgsDict(TypedDict):
+        ip_address: NotRequired[pulumi.Input[str]]
+        """
+        IPV4 Address
+        """
+        ip_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        mac_address: NotRequired[pulumi.Input[str]]
+        """
+        MAC Address
+        """
+        mac_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    TransportManagementVpnInterfaceEthernetFeatureArpEntryArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class TransportManagementVpnInterfaceEthernetFeatureArpEntryArgs:
     def __init__(__self__, *,
@@ -45318,6 +58452,28 @@ class TransportManagementVpnInterfaceEthernetFeatureArpEntryArgs:
     def mac_address_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "mac_address_variable", value)
 
+
+if not MYPY:
+    class TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        IpV4 Address
+        """
+        address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        subnet_mask: NotRequired[pulumi.Input[str]]
+        """
+        Subnet Mask
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        """
+        subnet_mask_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs:
@@ -45391,6 +58547,40 @@ class TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs:
     def subnet_mask_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "subnet_mask_variable", value)
 
+
+if not MYPY:
+    class TransportRoutePolicyFeatureSequenceArgsDict(TypedDict):
+        actions: NotRequired[pulumi.Input[Sequence[pulumi.Input['TransportRoutePolicyFeatureSequenceActionArgsDict']]]]
+        """
+        Define list of actions
+        """
+        base_action: NotRequired[pulumi.Input[str]]
+        """
+        Base Action
+          - Choices: `reject`, `accept`
+          - Default value: `reject`
+        """
+        id: NotRequired[pulumi.Input[int]]
+        """
+        Sequence Id
+          - Range: `1`-`65536`
+        """
+        match_entries: NotRequired[pulumi.Input[Sequence[pulumi.Input['TransportRoutePolicyFeatureSequenceMatchEntryArgsDict']]]]
+        """
+        Define match conditions
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Sequence Name
+        """
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        protocol such as IPV4, IPV6, or BOTH
+          - Choices: `IPV4`, `IPV6`, `BOTH`
+          - Default value: `IPV4`
+        """
+elif False:
+    TransportRoutePolicyFeatureSequenceArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class TransportRoutePolicyFeatureSequenceArgs:
@@ -45504,6 +58694,64 @@ class TransportRoutePolicyFeatureSequenceArgs:
     def protocol(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "protocol", value)
 
+
+if not MYPY:
+    class TransportRoutePolicyFeatureSequenceActionArgsDict(TypedDict):
+        as_path_prepends: NotRequired[pulumi.Input[Sequence[pulumi.Input[int]]]]
+        communities: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        community_additive: NotRequired[pulumi.Input[bool]]
+        """
+        - Default value: `false`
+        """
+        community_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ipv4_next_hop: NotRequired[pulumi.Input[str]]
+        """
+        Set Ipv4 Next Hop
+        """
+        ipv6_next_hop: NotRequired[pulumi.Input[str]]
+        """
+        Set Ipv6 Next Hop
+        """
+        local_preference: NotRequired[pulumi.Input[int]]
+        """
+        Set Local Preference
+          - Range: `0`-`4294967295`
+        """
+        metric: NotRequired[pulumi.Input[int]]
+        """
+        Set Metric
+          - Range: `0`-`4294967295`
+        """
+        metric_type: NotRequired[pulumi.Input[str]]
+        """
+        Set Metric Type
+          - Choices: `type1`, `type2`
+        """
+        omp_tag: NotRequired[pulumi.Input[int]]
+        """
+        Set OMP Tag
+          - Range: `0`-`4294967295`
+        """
+        origin: NotRequired[pulumi.Input[str]]
+        """
+        Set Origin
+          - Choices: `EGP`, `IGP`, `Incomplete`
+        """
+        ospf_tag: NotRequired[pulumi.Input[int]]
+        """
+        Set OSPF Tag
+          - Range: `0`-`4294967295`
+        """
+        weight: NotRequired[pulumi.Input[int]]
+        """
+        Set Weight
+          - Range: `0`-`65535`
+        """
+elif False:
+    TransportRoutePolicyFeatureSequenceActionArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class TransportRoutePolicyFeatureSequenceActionArgs:
@@ -45726,6 +58974,47 @@ class TransportRoutePolicyFeatureSequenceActionArgs:
         pulumi.set(self, "weight", value)
 
 
+if not MYPY:
+    class TransportRoutePolicyFeatureSequenceMatchEntryArgsDict(TypedDict):
+        as_path_list_id: NotRequired[pulumi.Input[str]]
+        bgp_local_preference: NotRequired[pulumi.Input[int]]
+        """
+        BGP Local Preference
+          - Range: `0`-`4294967295`
+        """
+        expanded_community_list_id: NotRequired[pulumi.Input[str]]
+        extended_community_list_id: NotRequired[pulumi.Input[str]]
+        ipv4_address_prefix_list_id: NotRequired[pulumi.Input[str]]
+        ipv4_next_hop_prefix_list_id: NotRequired[pulumi.Input[str]]
+        ipv6_address_prefix_list_id: NotRequired[pulumi.Input[str]]
+        ipv6_next_hop_prefix_list_id: NotRequired[pulumi.Input[str]]
+        metric: NotRequired[pulumi.Input[int]]
+        """
+        Select Metric
+          - Range: `0`-`4294967295`
+        """
+        omp_tag: NotRequired[pulumi.Input[int]]
+        """
+        Select OMP Tag
+          - Range: `0`-`4294967295`
+        """
+        ospf_tag: NotRequired[pulumi.Input[int]]
+        """
+        Select OSPF Tag
+          - Range: `0`-`4294967295`
+        """
+        standard_community_list_criteria: NotRequired[pulumi.Input[str]]
+        """
+        Select a condition such as OR, AND or EXACT
+          - Choices: `OR`, `AND`, `EXACT`
+        """
+        standard_community_lists: NotRequired[pulumi.Input[Sequence[pulumi.Input['TransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArgsDict']]]]
+        """
+        Select a standard community list
+        """
+elif False:
+    TransportRoutePolicyFeatureSequenceMatchEntryArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class TransportRoutePolicyFeatureSequenceMatchEntryArgs:
     def __init__(__self__, *,
@@ -45923,6 +59212,12 @@ class TransportRoutePolicyFeatureSequenceMatchEntryArgs:
         pulumi.set(self, "standard_community_lists", value)
 
 
+if not MYPY:
+    class TransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArgsDict(TypedDict):
+        id: NotRequired[pulumi.Input[str]]
+elif False:
+    TransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class TransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArgs:
     def __init__(__self__, *,
@@ -45939,6 +59234,42 @@ class TransportRoutePolicyFeatureSequenceMatchEntryStandardCommunityListArgs:
     def id(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "id", value)
 
+
+if not MYPY:
+    class TransportRoutingBgpFeatureIpv4AggregateAddressArgsDict(TypedDict):
+        as_set_path: NotRequired[pulumi.Input[bool]]
+        """
+        Set AS set path information
+          - Default value: `false`
+        """
+        as_set_path_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        network_address: NotRequired[pulumi.Input[str]]
+        network_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        subnet_mask: NotRequired[pulumi.Input[str]]
+        """
+        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        """
+        subnet_mask_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        summary_only: NotRequired[pulumi.Input[bool]]
+        """
+        Filter out more specific routes from updates
+          - Default value: `false`
+        """
+        summary_only_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    TransportRoutingBgpFeatureIpv4AggregateAddressArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class TransportRoutingBgpFeatureIpv4AggregateAddressArgs:
@@ -46074,6 +59405,161 @@ class TransportRoutingBgpFeatureIpv4AggregateAddressArgs:
     def summary_only_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "summary_only_variable", value)
 
+
+if not MYPY:
+    class TransportRoutingBgpFeatureIpv4NeighborArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        Set neighbor address
+        """
+        address_families: NotRequired[pulumi.Input[Sequence[pulumi.Input['TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgsDict']]]]
+        """
+        Set BGP address family
+        """
+        address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        allowas_in_number: NotRequired[pulumi.Input[int]]
+        """
+        The number of accept as-path with my AS present in it
+          - Range: `1`-`10`
+        """
+        allowas_in_number_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        as_override: NotRequired[pulumi.Input[bool]]
+        """
+        Override matching AS-number while sending update
+          - Default value: `false`
+        """
+        as_override_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        description: NotRequired[pulumi.Input[str]]
+        """
+        Set description
+        """
+        description_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ebgp_multihop: NotRequired[pulumi.Input[int]]
+        """
+        Set TTL value for peers that are not directly connected
+          - Range: `1`-`255`
+          - Default value: `1`
+        """
+        ebgp_multihop_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        explicit_null: NotRequired[pulumi.Input[bool]]
+        """
+        Send explicit null label
+          - Default value: `false`
+        """
+        explicit_null_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        hold_time: NotRequired[pulumi.Input[int]]
+        """
+        Set how long to wait since receiving a keepalive message to consider BGP peer unavailable
+          - Range: `0`-`65535`
+          - Default value: `180`
+        """
+        hold_time_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        keepalive_time: NotRequired[pulumi.Input[int]]
+        """
+        Set how often to advertise keepalive messages to BGP peer
+          - Range: `0`-`65535`
+          - Default value: `60`
+        """
+        keepalive_time_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        local_as: NotRequired[pulumi.Input[int]]
+        """
+        Set local autonomous number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
+        """
+        local_as_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        next_hop_self: NotRequired[pulumi.Input[bool]]
+        """
+        Set router to be next hop for routes advertised to neighbor
+          - Default value: `false`
+        """
+        next_hop_self_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        password: NotRequired[pulumi.Input[str]]
+        """
+        Set MD5 password on TCP connection with BGP peer
+        """
+        password_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        remote_as: NotRequired[pulumi.Input[int]]
+        """
+        Set remote autonomous system number
+        """
+        remote_as_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        send_community: NotRequired[pulumi.Input[bool]]
+        """
+        Send community attribute
+          - Default value: `true`
+        """
+        send_community_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        send_extended_community: NotRequired[pulumi.Input[bool]]
+        """
+        Send extended community attribute
+          - Default value: `true`
+        """
+        send_extended_community_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        send_label: NotRequired[pulumi.Input[bool]]
+        """
+        Send label
+          - Default value: `false`
+        """
+        shutdown: NotRequired[pulumi.Input[bool]]
+        """
+        Enable or disable a BGP neighbor
+          - Default value: `false`
+        """
+        shutdown_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        update_source_interface: NotRequired[pulumi.Input[str]]
+        """
+        Source interface name for BGP neighbor
+        """
+        update_source_interface_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    TransportRoutingBgpFeatureIpv4NeighborArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class TransportRoutingBgpFeatureIpv4NeighborArgs:
@@ -46654,6 +60140,50 @@ class TransportRoutingBgpFeatureIpv4NeighborArgs:
         pulumi.set(self, "update_source_interface_variable", value)
 
 
+if not MYPY:
+    class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgsDict(TypedDict):
+        family_type: NotRequired[pulumi.Input[str]]
+        """
+        Set IPv4 unicast address family
+          - Choices: `ipv4-unicast`, `vpnv4-unicast`, `vpnv6-unicast`
+        """
+        in_route_policy_id: NotRequired[pulumi.Input[str]]
+        max_number_of_prefixes: NotRequired[pulumi.Input[int]]
+        """
+        Set maximum number of prefixes accepted from BGP peer
+          - Range: `1`-`4294967295`
+        """
+        max_number_of_prefixes_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        out_route_policy_id: NotRequired[pulumi.Input[str]]
+        policy_type: NotRequired[pulumi.Input[str]]
+        """
+        Neighbor received maximum prefix policy is disabled.
+        """
+        restart_interval: NotRequired[pulumi.Input[int]]
+        """
+        Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded
+          - Range: `1`-`65535`
+        """
+        restart_interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        threshold: NotRequired[pulumi.Input[int]]
+        """
+        Set threshold(1 to 100) at which to generate a warning message
+          - Range: `1`-`100`
+          - Default value: `75`
+        """
+        threshold_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs:
     def __init__(__self__, *,
@@ -46823,6 +60353,24 @@ class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs:
         pulumi.set(self, "threshold_variable", value)
 
 
+if not MYPY:
+    class TransportRoutingBgpFeatureIpv4NetworkArgsDict(TypedDict):
+        network_address: NotRequired[pulumi.Input[str]]
+        network_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        subnet_mask: NotRequired[pulumi.Input[str]]
+        """
+        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        """
+        subnet_mask_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    TransportRoutingBgpFeatureIpv4NetworkArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class TransportRoutingBgpFeatureIpv4NetworkArgs:
     def __init__(__self__, *,
@@ -46890,6 +60438,21 @@ class TransportRoutingBgpFeatureIpv4NetworkArgs:
         pulumi.set(self, "subnet_mask_variable", value)
 
 
+if not MYPY:
+    class TransportRoutingBgpFeatureIpv4RedistributeArgsDict(TypedDict):
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Set the protocol to redistribute routes from
+          - Choices: `static`, `connected`, `ospf`, `ospfv3`, `nat`
+        """
+        protocol_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        route_policy_id: NotRequired[pulumi.Input[str]]
+elif False:
+    TransportRoutingBgpFeatureIpv4RedistributeArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class TransportRoutingBgpFeatureIpv4RedistributeArgs:
     def __init__(__self__, *,
@@ -46942,6 +60505,37 @@ class TransportRoutingBgpFeatureIpv4RedistributeArgs:
     def route_policy_id(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "route_policy_id", value)
 
+
+if not MYPY:
+    class TransportRoutingBgpFeatureIpv6AggregateAddressArgsDict(TypedDict):
+        aggregate_prefix: NotRequired[pulumi.Input[str]]
+        """
+        Configure the IPv6 prefixes to aggregate
+        """
+        aggregate_prefix_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        as_set_path: NotRequired[pulumi.Input[bool]]
+        """
+        Set AS set path information
+          - Default value: `false`
+        """
+        as_set_path_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        summary_only: NotRequired[pulumi.Input[bool]]
+        """
+        Filter out more specific routes from updates
+          - Default value: `false`
+        """
+        summary_only_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    TransportRoutingBgpFeatureIpv6AggregateAddressArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class TransportRoutingBgpFeatureIpv6AggregateAddressArgs:
@@ -47049,6 +60643,147 @@ class TransportRoutingBgpFeatureIpv6AggregateAddressArgs:
     def summary_only_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "summary_only_variable", value)
 
+
+if not MYPY:
+    class TransportRoutingBgpFeatureIpv6NeighborArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        Set IPv6 neighbor address
+        """
+        address_families: NotRequired[pulumi.Input[Sequence[pulumi.Input['TransportRoutingBgpFeatureIpv6NeighborAddressFamilyArgsDict']]]]
+        """
+        Set IPv6 BGP address family
+        """
+        address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        allowas_in_number: NotRequired[pulumi.Input[int]]
+        """
+        The number of accept as-path with my AS present in it
+          - Range: `1`-`10`
+        """
+        allowas_in_number_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        as_override: NotRequired[pulumi.Input[bool]]
+        """
+        Override matching AS-number while sending update
+          - Default value: `false`
+        """
+        as_override_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        description: NotRequired[pulumi.Input[str]]
+        """
+        Set description
+        """
+        description_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ebgp_multihop: NotRequired[pulumi.Input[int]]
+        """
+        Set TTL value for peers that are not directly connected
+          - Range: `1`-`255`
+          - Default value: `1`
+        """
+        ebgp_multihop_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        hold_time: NotRequired[pulumi.Input[int]]
+        """
+        Interval (seconds) not receiving a keepalive message declares a BGP peer down
+          - Range: `0`-`65535`
+          - Default value: `180`
+        """
+        hold_time_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        keepalive_time: NotRequired[pulumi.Input[int]]
+        """
+        Interval (seconds) of keepalive messages sent to its BGP peer
+          - Range: `0`-`65535`
+          - Default value: `60`
+        """
+        keepalive_time_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        local_as: NotRequired[pulumi.Input[int]]
+        """
+        Set local autonomous system number,Local-AS cannot have the local BGP protocol AS number or the AS number of the remote peer.The local-as is valid only if the peer is a true eBGP peer. It does not work for two peers in different sub-ASs in a confederation.
+        """
+        local_as_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        next_hop_self: NotRequired[pulumi.Input[bool]]
+        """
+        Set router to be next hop for routes advertised to neighbor
+          - Default value: `false`
+        """
+        next_hop_self_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        password: NotRequired[pulumi.Input[str]]
+        """
+        Set MD5 password on TCP connection with BGP peer
+        """
+        password_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        remote_as: NotRequired[pulumi.Input[int]]
+        """
+        Set remote autonomous system number
+        """
+        remote_as_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        send_community: NotRequired[pulumi.Input[bool]]
+        """
+        Send community attribute
+          - Default value: `true`
+        """
+        send_community_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        send_extended_community: NotRequired[pulumi.Input[bool]]
+        """
+        Send extended community attribute
+          - Default value: `true`
+        """
+        send_extended_community_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        shutdown: NotRequired[pulumi.Input[bool]]
+        """
+        Enable or disable a BGP neighbor
+          - Default value: `false`
+        """
+        shutdown_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        update_source_interface: NotRequired[pulumi.Input[str]]
+        """
+        Source interface name for BGP neighbor
+        """
+        update_source_interface_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    TransportRoutingBgpFeatureIpv6NeighborArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class TransportRoutingBgpFeatureIpv6NeighborArgs:
@@ -47577,6 +61312,50 @@ class TransportRoutingBgpFeatureIpv6NeighborArgs:
         pulumi.set(self, "update_source_interface_variable", value)
 
 
+if not MYPY:
+    class TransportRoutingBgpFeatureIpv6NeighborAddressFamilyArgsDict(TypedDict):
+        family_type: NotRequired[pulumi.Input[str]]
+        """
+        Set IPv6 unicast address family
+          - Choices: `ipv6-unicast`, `vpnv6-unicast`
+        """
+        in_route_policy_id: NotRequired[pulumi.Input[str]]
+        max_number_of_prefixes: NotRequired[pulumi.Input[int]]
+        """
+        Set maximum number of prefixes accepted from BGP peer
+          - Range: `1`-`4294967295`
+        """
+        max_number_of_prefixes_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        out_route_policy_id: NotRequired[pulumi.Input[str]]
+        policy_type: NotRequired[pulumi.Input[str]]
+        """
+        Neighbor received maximum prefix policy is disabled.
+        """
+        restart_interval: NotRequired[pulumi.Input[int]]
+        """
+        Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded
+          - Range: `1`-`65535`
+        """
+        restart_interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        threshold: NotRequired[pulumi.Input[int]]
+        """
+        Set threshold(1 to 100) at which to generate a warning message
+          - Range: `1`-`100`
+          - Default value: `75`
+        """
+        threshold_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    TransportRoutingBgpFeatureIpv6NeighborAddressFamilyArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class TransportRoutingBgpFeatureIpv6NeighborAddressFamilyArgs:
     def __init__(__self__, *,
@@ -47746,6 +61525,19 @@ class TransportRoutingBgpFeatureIpv6NeighborAddressFamilyArgs:
         pulumi.set(self, "threshold_variable", value)
 
 
+if not MYPY:
+    class TransportRoutingBgpFeatureIpv6NetworkArgsDict(TypedDict):
+        network_prefix: NotRequired[pulumi.Input[str]]
+        """
+        Configure the prefixes for BGP to announce
+        """
+        network_prefix_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    TransportRoutingBgpFeatureIpv6NetworkArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class TransportRoutingBgpFeatureIpv6NetworkArgs:
     def __init__(__self__, *,
@@ -47784,6 +61576,21 @@ class TransportRoutingBgpFeatureIpv6NetworkArgs:
     def network_prefix_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "network_prefix_variable", value)
 
+
+if not MYPY:
+    class TransportRoutingBgpFeatureIpv6RedistributeArgsDict(TypedDict):
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Set the protocol to redistribute routes from
+          - Choices: `static`, `connected`, `ospf`
+        """
+        protocol_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        route_policy_id: NotRequired[pulumi.Input[str]]
+elif False:
+    TransportRoutingBgpFeatureIpv6RedistributeArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class TransportRoutingBgpFeatureIpv6RedistributeArgs:
@@ -47838,6 +61645,19 @@ class TransportRoutingBgpFeatureIpv6RedistributeArgs:
         pulumi.set(self, "route_policy_id", value)
 
 
+if not MYPY:
+    class TransportRoutingBgpFeatureMplsInterfaceArgsDict(TypedDict):
+        interface_name: NotRequired[pulumi.Input[str]]
+        """
+        Interface Name
+        """
+        interface_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    TransportRoutingBgpFeatureMplsInterfaceArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class TransportRoutingBgpFeatureMplsInterfaceArgs:
     def __init__(__self__, *,
@@ -47876,6 +61696,42 @@ class TransportRoutingBgpFeatureMplsInterfaceArgs:
     def interface_name_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "interface_name_variable", value)
 
+
+if not MYPY:
+    class TransportRoutingOspfFeatureAreaArgsDict(TypedDict):
+        area_number: NotRequired[pulumi.Input[int]]
+        """
+        Set OSPF area number
+          - Range: `0`-`4294967295`
+        """
+        area_number_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        area_type: NotRequired[pulumi.Input[str]]
+        """
+        set the area type
+          - Choices: `stub`, `nssa`
+        """
+        interfaces: NotRequired[pulumi.Input[Sequence[pulumi.Input['TransportRoutingOspfFeatureAreaInterfaceArgsDict']]]]
+        """
+        Set OSPF interface parameters
+        """
+        no_summary: NotRequired[pulumi.Input[bool]]
+        """
+        Do not inject interarea routes into STUB or NSSA
+          - Default value: `false`
+        """
+        no_summary_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ranges: NotRequired[pulumi.Input[Sequence[pulumi.Input['TransportRoutingOspfFeatureAreaRangeArgsDict']]]]
+        """
+        Summarize OSPF routes at an area boundary
+        """
+elif False:
+    TransportRoutingOspfFeatureAreaArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class TransportRoutingOspfFeatureAreaArgs:
@@ -48001,6 +61857,113 @@ class TransportRoutingOspfFeatureAreaArgs:
     def ranges(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['TransportRoutingOspfFeatureAreaRangeArgs']]]]):
         pulumi.set(self, "ranges", value)
 
+
+if not MYPY:
+    class TransportRoutingOspfFeatureAreaInterfaceArgsDict(TypedDict):
+        authentication_type: NotRequired[pulumi.Input[str]]
+        """
+        Set OSPF interface authentication type
+          - Choices: `message-digest`
+        """
+        authentication_type_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        cost: NotRequired[pulumi.Input[int]]
+        """
+        Set cost of OSPF interface
+          - Range: `1`-`65535`
+        """
+        cost_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        dead_interval: NotRequired[pulumi.Input[int]]
+        """
+        Set interval after which neighbor is declared to be down
+          - Range: `1`-`65535`
+          - Default value: `40`
+        """
+        dead_interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        designated_router_priority: NotRequired[pulumi.Input[int]]
+        """
+        Set router’s priority to be elected as designated router
+          - Range: `0`-`255`
+          - Default value: `1`
+        """
+        designated_router_priority_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        hello_interval: NotRequired[pulumi.Input[int]]
+        """
+        Set interval between OSPF hello packets
+          - Range: `1`-`65535`
+          - Default value: `10`
+        """
+        hello_interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        lsa_retransmit_interval: NotRequired[pulumi.Input[int]]
+        """
+        Set time between retransmitting LSAs
+          - Range: `1`-`65535`
+          - Default value: `5`
+        """
+        lsa_retransmit_interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        message_digest_key: NotRequired[pulumi.Input[str]]
+        """
+        Set MD5 authentication key
+        """
+        message_digest_key_id: NotRequired[pulumi.Input[int]]
+        """
+        Set MD5 message digest key
+          - Range: `1`-`255`
+        """
+        message_digest_key_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        message_digest_key_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Set interface name
+        """
+        name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        network_type: NotRequired[pulumi.Input[str]]
+        """
+        Set the OSPF network type
+          - Choices: `broadcast`, `point-to-point`, `non-broadcast`, `point-to-multipoint`
+          - Default value: `broadcast`
+        """
+        network_type_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        passive_interface: NotRequired[pulumi.Input[bool]]
+        """
+        Set the interface to advertise its address, but not to actively run OSPF
+          - Default value: `false`
+        """
+        passive_interface_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    TransportRoutingOspfFeatureAreaInterfaceArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class TransportRoutingOspfFeatureAreaInterfaceArgs:
@@ -48389,6 +62352,46 @@ class TransportRoutingOspfFeatureAreaInterfaceArgs:
         pulumi.set(self, "passive_interface_variable", value)
 
 
+if not MYPY:
+    class TransportRoutingOspfFeatureAreaRangeArgsDict(TypedDict):
+        cost: NotRequired[pulumi.Input[int]]
+        """
+        Set cost for this range
+          - Range: `0`-`16777214`
+        """
+        cost_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ip_address: NotRequired[pulumi.Input[str]]
+        """
+        IP Address
+        """
+        ip_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        no_advertise: NotRequired[pulumi.Input[bool]]
+        """
+        Do not advertise this range
+          - Default value: `false`
+        """
+        no_advertise_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        subnet_mask: NotRequired[pulumi.Input[str]]
+        """
+        Subnet Mask
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        """
+        subnet_mask_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    TransportRoutingOspfFeatureAreaRangeArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class TransportRoutingOspfFeatureAreaRangeArgs:
     def __init__(__self__, *,
@@ -48530,6 +62533,30 @@ class TransportRoutingOspfFeatureAreaRangeArgs:
         pulumi.set(self, "subnet_mask_variable", value)
 
 
+if not MYPY:
+    class TransportRoutingOspfFeatureRedistributeArgsDict(TypedDict):
+        nat_dia: NotRequired[pulumi.Input[bool]]
+        """
+        Enable NAT DIA for redistributed routes
+          - Default value: `true`
+        """
+        nat_dia_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Set the protocol
+          - Choices: `static`, `connected`, `bgp`, `omp`, `nat`, `eigrp`
+        """
+        protocol_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        route_policy_id: NotRequired[pulumi.Input[str]]
+elif False:
+    TransportRoutingOspfFeatureRedistributeArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class TransportRoutingOspfFeatureRedistributeArgs:
     def __init__(__self__, *,
@@ -48617,6 +62644,25 @@ class TransportRoutingOspfFeatureRedistributeArgs:
         pulumi.set(self, "route_policy_id", value)
 
 
+if not MYPY:
+    class TransportRoutingOspfFeatureRouterLsaArgsDict(TypedDict):
+        time: NotRequired[pulumi.Input[int]]
+        """
+        Set how long to advertise maximum metric after router starts up
+          - Range: `5`-`86400`
+        """
+        time_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        type: NotRequired[pulumi.Input[str]]
+        """
+        Set the router LSA advertisement type
+          - Choices: `administrative`, `on-startup`
+        """
+elif False:
+    TransportRoutingOspfFeatureRouterLsaArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class TransportRoutingOspfFeatureRouterLsaArgs:
     def __init__(__self__, *,
@@ -48675,6 +62721,49 @@ class TransportRoutingOspfFeatureRouterLsaArgs:
     def type(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "type", value)
 
+
+if not MYPY:
+    class TransportRoutingOspfv3Ipv4FeatureAreaArgsDict(TypedDict):
+        always_translate: NotRequired[pulumi.Input[bool]]
+        """
+        Always translate type7 LSAs
+        """
+        always_translate_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        area_number: NotRequired[pulumi.Input[int]]
+        """
+        Set OSPF area number
+          - Range: `0`-`4294967295`
+        """
+        area_number_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        area_type: NotRequired[pulumi.Input[str]]
+        """
+        stub area type
+          - Choices: `stub`
+        """
+        interfaces: NotRequired[pulumi.Input[Sequence[pulumi.Input['TransportRoutingOspfv3Ipv4FeatureAreaInterfaceArgsDict']]]]
+        """
+        Set OSPF interface parameters
+        """
+        no_summary: NotRequired[pulumi.Input[bool]]
+        """
+        Do not inject inter-area routes
+        """
+        no_summary_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ranges: NotRequired[pulumi.Input[Sequence[pulumi.Input['TransportRoutingOspfv3Ipv4FeatureAreaRangeArgsDict']]]]
+        """
+        Summarize OSPF routes at an area boundary
+        """
+elif False:
+    TransportRoutingOspfv3Ipv4FeatureAreaArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class TransportRoutingOspfv3Ipv4FeatureAreaArgs:
@@ -48830,6 +62919,98 @@ class TransportRoutingOspfv3Ipv4FeatureAreaArgs:
     def ranges(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['TransportRoutingOspfv3Ipv4FeatureAreaRangeArgs']]]]):
         pulumi.set(self, "ranges", value)
 
+
+if not MYPY:
+    class TransportRoutingOspfv3Ipv4FeatureAreaInterfaceArgsDict(TypedDict):
+        authentication_key: NotRequired[pulumi.Input[str]]
+        """
+        Set OSPF interface authentication IPSEC key
+        """
+        authentication_key_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        authentication_spi: NotRequired[pulumi.Input[int]]
+        """
+        Set OSPF interface authentication IPSec SPI, range 256..4294967295
+          - Range: `256`-`4294967295`
+        """
+        authentication_spi_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        authentication_type: NotRequired[pulumi.Input[str]]
+        """
+        No Authentication by default
+          - Choices: `no-auth`
+        """
+        cost: NotRequired[pulumi.Input[int]]
+        """
+        Set cost of OSPF interface
+          - Range: `1`-`65535`
+        """
+        cost_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        dead_interval: NotRequired[pulumi.Input[int]]
+        """
+        Set interval after which neighbor is declared to be down
+          - Range: `1`-`65535`
+          - Default value: `40`
+        """
+        dead_interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        hello_interval: NotRequired[pulumi.Input[int]]
+        """
+        Set interval between OSPF hello packets
+          - Range: `1`-`65535`
+          - Default value: `10`
+        """
+        hello_interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        lsa_retransmit_interval: NotRequired[pulumi.Input[int]]
+        """
+        Set time between retransmitting LSAs
+          - Range: `1`-`65535`
+          - Default value: `5`
+        """
+        lsa_retransmit_interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Set interface name
+        """
+        name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        network_type: NotRequired[pulumi.Input[str]]
+        """
+        Set the OSPF network type
+          - Choices: `broadcast`, `point-to-point`, `non-broadcast`, `point-to-multipoint`
+        """
+        network_type_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        passive_interface: NotRequired[pulumi.Input[bool]]
+        """
+        Set the interface to advertise its address, but not to actively run OSPF
+          - Default value: `false`
+        """
+        passive_interface_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    TransportRoutingOspfv3Ipv4FeatureAreaInterfaceArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class TransportRoutingOspfv3Ipv4FeatureAreaInterfaceArgs:
@@ -49164,6 +63345,42 @@ class TransportRoutingOspfv3Ipv4FeatureAreaInterfaceArgs:
         pulumi.set(self, "passive_interface_variable", value)
 
 
+if not MYPY:
+    class TransportRoutingOspfv3Ipv4FeatureAreaRangeArgsDict(TypedDict):
+        cost: NotRequired[pulumi.Input[int]]
+        """
+        Set cost for this range
+          - Range: `0`-`16777214`
+        """
+        cost_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ip_address: NotRequired[pulumi.Input[str]]
+        ip_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        no_advertise: NotRequired[pulumi.Input[bool]]
+        """
+        Do not advertise this range
+          - Default value: `false`
+        """
+        no_advertise_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        subnet_mask: NotRequired[pulumi.Input[str]]
+        """
+        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        """
+        subnet_mask_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    TransportRoutingOspfv3Ipv4FeatureAreaRangeArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class TransportRoutingOspfv3Ipv4FeatureAreaRangeArgs:
     def __init__(__self__, *,
@@ -49299,6 +63516,30 @@ class TransportRoutingOspfv3Ipv4FeatureAreaRangeArgs:
         pulumi.set(self, "subnet_mask_variable", value)
 
 
+if not MYPY:
+    class TransportRoutingOspfv3Ipv4FeatureRedistributeArgsDict(TypedDict):
+        nat_dia: NotRequired[pulumi.Input[bool]]
+        """
+        Enable NAT DIA for redistributed routes
+          - Default value: `true`
+        """
+        nat_dia_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Set the protocol
+          - Choices: `connected`, `static`, `omp`, `nat-route`, `bgp`, `eigrp`
+        """
+        protocol_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        route_policy_id: NotRequired[pulumi.Input[str]]
+elif False:
+    TransportRoutingOspfv3Ipv4FeatureRedistributeArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class TransportRoutingOspfv3Ipv4FeatureRedistributeArgs:
     def __init__(__self__, *,
@@ -49385,6 +63626,49 @@ class TransportRoutingOspfv3Ipv4FeatureRedistributeArgs:
     def route_policy_id(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "route_policy_id", value)
 
+
+if not MYPY:
+    class TransportRoutingOspfv3Ipv6FeatureAreaArgsDict(TypedDict):
+        always_translate: NotRequired[pulumi.Input[bool]]
+        """
+        Always translate type7 LSAs
+        """
+        always_translate_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        area_number: NotRequired[pulumi.Input[int]]
+        """
+        Set OSPF area number
+          - Range: `0`-`4294967295`
+        """
+        area_number_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        area_type: NotRequired[pulumi.Input[str]]
+        """
+        stub area type
+          - Choices: `stub`
+        """
+        interfaces: NotRequired[pulumi.Input[Sequence[pulumi.Input['TransportRoutingOspfv3Ipv6FeatureAreaInterfaceArgsDict']]]]
+        """
+        Set OSPF interface parameters
+        """
+        no_summary: NotRequired[pulumi.Input[bool]]
+        """
+        Do not inject inter-area routes
+        """
+        no_summary_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ranges: NotRequired[pulumi.Input[Sequence[pulumi.Input['TransportRoutingOspfv3Ipv6FeatureAreaRangeArgsDict']]]]
+        """
+        Summarize OSPF routes at an area boundary
+        """
+elif False:
+    TransportRoutingOspfv3Ipv6FeatureAreaArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class TransportRoutingOspfv3Ipv6FeatureAreaArgs:
@@ -49540,6 +63824,98 @@ class TransportRoutingOspfv3Ipv6FeatureAreaArgs:
     def ranges(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['TransportRoutingOspfv3Ipv6FeatureAreaRangeArgs']]]]):
         pulumi.set(self, "ranges", value)
 
+
+if not MYPY:
+    class TransportRoutingOspfv3Ipv6FeatureAreaInterfaceArgsDict(TypedDict):
+        authentication_key: NotRequired[pulumi.Input[str]]
+        """
+        Set OSPF interface authentication IPSEC key
+        """
+        authentication_key_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        authentication_spi: NotRequired[pulumi.Input[int]]
+        """
+        Set OSPF interface authentication IPSec SPI, range 256..4294967295
+          - Range: `256`-`4294967295`
+        """
+        authentication_spi_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        authentication_type: NotRequired[pulumi.Input[str]]
+        """
+        No Authentication by default
+          - Choices: `no-auth`
+        """
+        cost: NotRequired[pulumi.Input[int]]
+        """
+        Set cost of OSPF interface
+          - Range: `1`-`65535`
+        """
+        cost_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        dead_interval: NotRequired[pulumi.Input[int]]
+        """
+        Set interval after which neighbor is declared to be down
+          - Range: `1`-`65535`
+          - Default value: `40`
+        """
+        dead_interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        hello_interval: NotRequired[pulumi.Input[int]]
+        """
+        Set interval between OSPF hello packets
+          - Range: `1`-`65535`
+          - Default value: `10`
+        """
+        hello_interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        lsa_retransmit_interval: NotRequired[pulumi.Input[int]]
+        """
+        Set time between retransmitting LSAs
+          - Range: `1`-`65535`
+          - Default value: `5`
+        """
+        lsa_retransmit_interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Set interface name
+        """
+        name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        network_type: NotRequired[pulumi.Input[str]]
+        """
+        Set the OSPF network type
+          - Choices: `broadcast`, `point-to-point`, `non-broadcast`, `point-to-multipoint`
+        """
+        network_type_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        passive_interface: NotRequired[pulumi.Input[bool]]
+        """
+        Set the interface to advertise its address, but not to actively run OSPF
+          - Default value: `false`
+        """
+        passive_interface_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    TransportRoutingOspfv3Ipv6FeatureAreaInterfaceArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class TransportRoutingOspfv3Ipv6FeatureAreaInterfaceArgs:
@@ -49874,6 +64250,37 @@ class TransportRoutingOspfv3Ipv6FeatureAreaInterfaceArgs:
         pulumi.set(self, "passive_interface_variable", value)
 
 
+if not MYPY:
+    class TransportRoutingOspfv3Ipv6FeatureAreaRangeArgsDict(TypedDict):
+        cost: NotRequired[pulumi.Input[int]]
+        """
+        Set cost for this range
+          - Range: `0`-`16777214`
+        """
+        cost_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        no_advertise: NotRequired[pulumi.Input[bool]]
+        """
+        Do not advertise this range
+          - Default value: `false`
+        """
+        no_advertise_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        prefix: NotRequired[pulumi.Input[str]]
+        """
+        IPv6 prefix,for example 2001::/64
+        """
+        prefix_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    TransportRoutingOspfv3Ipv6FeatureAreaRangeArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class TransportRoutingOspfv3Ipv6FeatureAreaRangeArgs:
     def __init__(__self__, *,
@@ -49981,6 +64388,21 @@ class TransportRoutingOspfv3Ipv6FeatureAreaRangeArgs:
         pulumi.set(self, "prefix_variable", value)
 
 
+if not MYPY:
+    class TransportRoutingOspfv3Ipv6FeatureRedistributeArgsDict(TypedDict):
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Set the protocol
+          - Choices: `connected`, `static`, `omp`, `bgp`, `eigrp`
+        """
+        protocol_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        route_policy_id: NotRequired[pulumi.Input[str]]
+elif False:
+    TransportRoutingOspfv3Ipv6FeatureRedistributeArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class TransportRoutingOspfv3Ipv6FeatureRedistributeArgs:
     def __init__(__self__, *,
@@ -50034,6 +64456,12 @@ class TransportRoutingOspfv3Ipv6FeatureRedistributeArgs:
         pulumi.set(self, "route_policy_id", value)
 
 
+if not MYPY:
+    class TransportTrackerGroupFeatureTrackerElementArgsDict(TypedDict):
+        tracker_id: NotRequired[pulumi.Input[str]]
+elif False:
+    TransportTrackerGroupFeatureTrackerElementArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class TransportTrackerGroupFeatureTrackerElementArgs:
     def __init__(__self__, *,
@@ -50050,6 +64478,48 @@ class TransportTrackerGroupFeatureTrackerElementArgs:
     def tracker_id(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "tracker_id", value)
 
+
+if not MYPY:
+    class TransportWanVpnFeatureIpv4StaticRouteArgsDict(TypedDict):
+        administrative_distance: NotRequired[pulumi.Input[int]]
+        """
+        Administrative distance, Attribute conditional on `gateway` being equal to `null0`
+          - Range: `1`-`255`
+          - Default value: `1`
+        """
+        administrative_distance_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        gateway: NotRequired[pulumi.Input[str]]
+        """
+        Gateway
+          - Choices: `nextHop`, `dhcp`, `null0`
+          - Default value: `nextHop`
+        """
+        network_address: NotRequired[pulumi.Input[str]]
+        """
+        IP Address
+        """
+        network_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        next_hops: NotRequired[pulumi.Input[Sequence[pulumi.Input['TransportWanVpnFeatureIpv4StaticRouteNextHopArgsDict']]]]
+        """
+        IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
+        """
+        subnet_mask: NotRequired[pulumi.Input[str]]
+        """
+        Subnet Mask
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        """
+        subnet_mask_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    TransportWanVpnFeatureIpv4StaticRouteArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class TransportWanVpnFeatureIpv4StaticRouteArgs:
@@ -50196,6 +64666,29 @@ class TransportWanVpnFeatureIpv4StaticRouteArgs:
         pulumi.set(self, "subnet_mask_variable", value)
 
 
+if not MYPY:
+    class TransportWanVpnFeatureIpv4StaticRouteNextHopArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        Address
+        """
+        address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        administrative_distance: NotRequired[pulumi.Input[int]]
+        """
+        Administrative distance
+          - Range: `1`-`255`
+          - Default value: `1`
+        """
+        administrative_distance_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    TransportWanVpnFeatureIpv4StaticRouteNextHopArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class TransportWanVpnFeatureIpv4StaticRouteNextHopArgs:
     def __init__(__self__, *,
@@ -50270,6 +64763,36 @@ class TransportWanVpnFeatureIpv4StaticRouteNextHopArgs:
     def administrative_distance_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "administrative_distance_variable", value)
 
+
+if not MYPY:
+    class TransportWanVpnFeatureIpv6StaticRouteArgsDict(TypedDict):
+        nat: NotRequired[pulumi.Input[str]]
+        """
+        IPv6 Nat
+          - Choices: `NAT64`, `NAT66`
+        """
+        nat_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        next_hops: NotRequired[pulumi.Input[Sequence[pulumi.Input['TransportWanVpnFeatureIpv6StaticRouteNextHopArgsDict']]]]
+        """
+        IPv6 Route Gateway Next Hop
+        """
+        null0: NotRequired[pulumi.Input[bool]]
+        """
+        IPv6 Route Gateway Next Hop
+        """
+        prefix: NotRequired[pulumi.Input[str]]
+        """
+        Prefix
+        """
+        prefix_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    TransportWanVpnFeatureIpv6StaticRouteArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class TransportWanVpnFeatureIpv6StaticRouteArgs:
@@ -50376,6 +64899,28 @@ class TransportWanVpnFeatureIpv6StaticRouteArgs:
         pulumi.set(self, "prefix_variable", value)
 
 
+if not MYPY:
+    class TransportWanVpnFeatureIpv6StaticRouteNextHopArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        Address
+        """
+        address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        administrative_distance: NotRequired[pulumi.Input[int]]
+        """
+        Administrative distance
+          - Range: `1`-`254`
+        """
+        administrative_distance_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    TransportWanVpnFeatureIpv6StaticRouteNextHopArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class TransportWanVpnFeatureIpv6StaticRouteNextHopArgs:
     def __init__(__self__, *,
@@ -50448,6 +64993,44 @@ class TransportWanVpnFeatureIpv6StaticRouteNextHopArgs:
     def administrative_distance_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "administrative_distance_variable", value)
 
+
+if not MYPY:
+    class TransportWanVpnFeatureNat64V4PoolArgsDict(TypedDict):
+        nat64_v4_pool_name: NotRequired[pulumi.Input[str]]
+        """
+        NAT64 v4 Pool Name
+        """
+        nat64_v4_pool_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        nat64_v4_pool_overload: NotRequired[pulumi.Input[bool]]
+        """
+        NAT64 Overload
+          - Default value: `false`
+        """
+        nat64_v4_pool_overload_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        nat64_v4_pool_range_end: NotRequired[pulumi.Input[str]]
+        """
+        NAT64 Pool Range End
+        """
+        nat64_v4_pool_range_end_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        nat64_v4_pool_range_start: NotRequired[pulumi.Input[str]]
+        """
+        NAT64 Pool Range Start
+        """
+        nat64_v4_pool_range_start_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    TransportWanVpnFeatureNat64V4PoolArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class TransportWanVpnFeatureNat64V4PoolArgs:
@@ -50586,6 +65169,27 @@ class TransportWanVpnFeatureNat64V4PoolArgs:
         pulumi.set(self, "nat64_v4_pool_range_start_variable", value)
 
 
+if not MYPY:
+    class TransportWanVpnFeatureNewHostMappingArgsDict(TypedDict):
+        host_name: NotRequired[pulumi.Input[str]]
+        """
+        Hostname
+        """
+        host_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        list_of_ip_addresses: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        List of IP
+        """
+        list_of_ip_addresses_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    TransportWanVpnFeatureNewHostMappingArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class TransportWanVpnFeatureNewHostMappingArgs:
     def __init__(__self__, *,
@@ -50657,6 +65261,16 @@ class TransportWanVpnFeatureNewHostMappingArgs:
         pulumi.set(self, "list_of_ip_addresses_variable", value)
 
 
+if not MYPY:
+    class TransportWanVpnFeatureServiceArgsDict(TypedDict):
+        service_type: NotRequired[pulumi.Input[str]]
+        """
+        Service Type
+          - Choices: `TE`
+        """
+elif False:
+    TransportWanVpnFeatureServiceArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class TransportWanVpnFeatureServiceArgs:
     def __init__(__self__, *,
@@ -50681,6 +65295,27 @@ class TransportWanVpnFeatureServiceArgs:
     def service_type(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "service_type", value)
 
+
+if not MYPY:
+    class TransportWanVpnInterfaceCellularFeatureArpArgsDict(TypedDict):
+        ip_address: NotRequired[pulumi.Input[str]]
+        """
+        IP V4 Address
+        """
+        ip_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        mac_address: NotRequired[pulumi.Input[str]]
+        """
+        MAC Address
+        """
+        mac_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    TransportWanVpnInterfaceCellularFeatureArpArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class TransportWanVpnInterfaceCellularFeatureArpArgs:
@@ -50752,6 +65387,35 @@ class TransportWanVpnInterfaceCellularFeatureArpArgs:
     def mac_address_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "mac_address_variable", value)
 
+
+if not MYPY:
+    class TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgsDict(TypedDict):
+        encapsulation: NotRequired[pulumi.Input[str]]
+        """
+        Encapsulation
+          - Choices: `gre`, `ipsec`
+        """
+        preference: NotRequired[pulumi.Input[int]]
+        """
+        Set preference for TLOC
+          - Range: `0`-`4294967295`
+        """
+        preference_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        weight: NotRequired[pulumi.Input[int]]
+        """
+        Set weight for TLOC
+          - Range: `1`-`255`
+          - Default value: `1`
+        """
+        weight_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs:
@@ -50848,6 +65512,27 @@ class TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs:
         pulumi.set(self, "weight_variable", value)
 
 
+if not MYPY:
+    class TransportWanVpnInterfaceEthernetFeatureArpArgsDict(TypedDict):
+        ip_address: NotRequired[pulumi.Input[str]]
+        """
+        IP V4 Address
+        """
+        ip_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        mac_address: NotRequired[pulumi.Input[str]]
+        """
+        MAC Address
+        """
+        mac_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    TransportWanVpnInterfaceEthernetFeatureArpArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class TransportWanVpnInterfaceEthernetFeatureArpArgs:
     def __init__(__self__, *,
@@ -50918,6 +65603,28 @@ class TransportWanVpnInterfaceEthernetFeatureArpArgs:
     def mac_address_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "mac_address_variable", value)
 
+
+if not MYPY:
+    class TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        IpV4 Address
+        """
+        address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        subnet_mask: NotRequired[pulumi.Input[str]]
+        """
+        Subnet Mask
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        """
+        subnet_mask_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs:
@@ -50992,6 +65699,19 @@ class TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs:
         pulumi.set(self, "subnet_mask_variable", value)
 
 
+if not MYPY:
+    class TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        IPv6 Address Secondary
+        """
+        address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs:
     def __init__(__self__, *,
@@ -51031,6 +65751,19 @@ class TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs:
         pulumi.set(self, "address_variable", value)
 
 
+if not MYPY:
+    class TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        IPv6 Address Secondary
+        """
+        address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs:
     def __init__(__self__, *,
@@ -51069,6 +65802,43 @@ class TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs:
     def address_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "address_variable", value)
 
+
+if not MYPY:
+    class TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgsDict(TypedDict):
+        direction: NotRequired[pulumi.Input[str]]
+        """
+        Direction of static NAT translation
+          - Choices: `inside`, `outside`
+          - Default value: `inside`
+        """
+        source_ip: NotRequired[pulumi.Input[str]]
+        """
+        Source IP address to be translated
+        """
+        source_ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        source_vpn: NotRequired[pulumi.Input[int]]
+        """
+        Source VPN ID
+          - Range: `0`-`65530`
+          - Default value: `0`
+        """
+        source_vpn_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        translated_ip: NotRequired[pulumi.Input[str]]
+        """
+        Statically translated source IP address
+        """
+        translated_ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs:
@@ -51197,6 +65967,36 @@ class TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs:
         pulumi.set(self, "translated_ip_variable", value)
 
 
+if not MYPY:
+    class TransportWanVpnInterfaceEthernetFeatureStaticNat66ArgsDict(TypedDict):
+        source_prefix: NotRequired[pulumi.Input[str]]
+        """
+        Source Prefix
+        """
+        source_prefix_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        source_vpn_id: NotRequired[pulumi.Input[int]]
+        """
+        Source VPN ID
+          - Range: `0`-`65530`
+        """
+        source_vpn_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        translated_source_prefix: NotRequired[pulumi.Input[str]]
+        """
+        Translated Source Prefix
+        """
+        translated_source_prefix_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    TransportWanVpnInterfaceEthernetFeatureStaticNat66ArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class TransportWanVpnInterfaceEthernetFeatureStaticNat66Args:
     def __init__(__self__, *,
@@ -51302,6 +66102,35 @@ class TransportWanVpnInterfaceEthernetFeatureStaticNat66Args:
         pulumi.set(self, "translated_source_prefix_variable", value)
 
 
+if not MYPY:
+    class TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgsDict(TypedDict):
+        encapsulation: NotRequired[pulumi.Input[str]]
+        """
+        Encapsulation
+          - Choices: `gre`, `ipsec`
+        """
+        preference: NotRequired[pulumi.Input[int]]
+        """
+        Set preference for TLOC
+          - Range: `0`-`4294967295`
+        """
+        preference_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        weight: NotRequired[pulumi.Input[int]]
+        """
+        Set weight for TLOC
+          - Range: `1`-`255`
+          - Default value: `1`
+        """
+        weight_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgs:
     def __init__(__self__, *,
@@ -51396,6 +66225,35 @@ class TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgs:
     def weight_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "weight_variable", value)
 
+
+if not MYPY:
+    class TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArgsDict(TypedDict):
+        encapsulation: NotRequired[pulumi.Input[str]]
+        """
+        Encapsulation
+          - Choices: `gre`, `ipsec`
+        """
+        preference: NotRequired[pulumi.Input[int]]
+        """
+        Set preference for TLOC
+          - Range: `0`-`4294967295`
+        """
+        preference_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        weight: NotRequired[pulumi.Input[int]]
+        """
+        Set weight for TLOC
+          - Range: `1`-`255`
+          - Default value: `1`
+        """
+        weight_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArgs:
@@ -51492,6 +66350,28 @@ class TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationArgs:
         pulumi.set(self, "weight_variable", value)
 
 
+if not MYPY:
+    class VpnInterfaceCellularFeatureTemplateIpv4AccessListArgsDict(TypedDict):
+        acl_name: NotRequired[pulumi.Input[str]]
+        """
+        Name of access list
+        """
+        acl_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        direction: NotRequired[pulumi.Input[str]]
+        """
+        Direction
+          - Choices: `in`, `out`
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    VpnInterfaceCellularFeatureTemplateIpv4AccessListArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class VpnInterfaceCellularFeatureTemplateIpv4AccessListArgs:
     def __init__(__self__, *,
@@ -51565,6 +66445,28 @@ class VpnInterfaceCellularFeatureTemplateIpv4AccessListArgs:
         pulumi.set(self, "optional", value)
 
 
+if not MYPY:
+    class VpnInterfaceCellularFeatureTemplateIpv6AccessListArgsDict(TypedDict):
+        acl_name: NotRequired[pulumi.Input[str]]
+        """
+        Name of access list
+        """
+        acl_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        direction: NotRequired[pulumi.Input[str]]
+        """
+        Direction
+          - Choices: `in`, `out`
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    VpnInterfaceCellularFeatureTemplateIpv6AccessListArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class VpnInterfaceCellularFeatureTemplateIpv6AccessListArgs:
     def __init__(__self__, *,
@@ -51637,6 +66539,47 @@ class VpnInterfaceCellularFeatureTemplateIpv6AccessListArgs:
     def optional(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "optional", value)
 
+
+if not MYPY:
+    class VpnInterfaceCellularFeatureTemplateNatPortForwardArgsDict(TypedDict):
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        port_end_range: NotRequired[pulumi.Input[int]]
+        """
+        Ending port of port range
+          - Range: `0`-`65535`
+        """
+        port_start_range: NotRequired[pulumi.Input[int]]
+        """
+        Starting port of port range
+          - Range: `0`-`65535`
+        """
+        private_ip_address: NotRequired[pulumi.Input[str]]
+        """
+        Private IP Address to translate to
+        """
+        private_ip_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        private_vpn: NotRequired[pulumi.Input[int]]
+        """
+        VPN in which private IP Address resides
+          - Range: `0`-`65535`
+        """
+        private_vpn_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Layer 4 protocol to apply port forwarding to
+          - Choices: `tcp`, `udp`
+        """
+elif False:
+    VpnInterfaceCellularFeatureTemplateNatPortForwardArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class VpnInterfaceCellularFeatureTemplateNatPortForwardArgs:
@@ -51781,6 +66724,24 @@ class VpnInterfaceCellularFeatureTemplateNatPortForwardArgs:
         pulumi.set(self, "protocol", value)
 
 
+if not MYPY:
+    class VpnInterfaceCellularFeatureTemplatePolicerArgsDict(TypedDict):
+        direction: NotRequired[pulumi.Input[str]]
+        """
+        Direction
+          - Choices: `in`, `out`
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        policer_name: NotRequired[pulumi.Input[str]]
+        """
+        Name of policer
+        """
+elif False:
+    VpnInterfaceCellularFeatureTemplatePolicerArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class VpnInterfaceCellularFeatureTemplatePolicerArgs:
     def __init__(__self__, *,
@@ -51837,6 +66798,31 @@ class VpnInterfaceCellularFeatureTemplatePolicerArgs:
     def policer_name(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "policer_name", value)
 
+
+if not MYPY:
+    class VpnInterfaceCellularFeatureTemplateStaticArpArgsDict(TypedDict):
+        ip_address: NotRequired[pulumi.Input[str]]
+        """
+        IP Address
+        """
+        ip_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        mac: NotRequired[pulumi.Input[str]]
+        """
+        MAC address
+        """
+        mac_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    VpnInterfaceCellularFeatureTemplateStaticArpArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class VpnInterfaceCellularFeatureTemplateStaticArpArgs:
@@ -51924,6 +66910,39 @@ class VpnInterfaceCellularFeatureTemplateStaticArpArgs:
     def optional(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "optional", value)
 
+
+if not MYPY:
+    class VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArgsDict(TypedDict):
+        encapsulation: NotRequired[pulumi.Input[str]]
+        """
+        Encapsulation
+          - Choices: `gre`, `ipsec`
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        preference: NotRequired[pulumi.Input[int]]
+        """
+        Set preference for TLOC
+          - Range: `0`-`4294967295`
+        """
+        preference_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        weight: NotRequired[pulumi.Input[int]]
+        """
+        Set weight for TLOC
+          - Range: `1`-`255`
+          - Default value: `1`
+        """
+        weight_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArgs:
@@ -52036,6 +67055,28 @@ class VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArgs:
         pulumi.set(self, "weight_variable", value)
 
 
+if not MYPY:
+    class VpnInterfaceDslIpoeFeatureTemplateAccessListArgsDict(TypedDict):
+        acl_name: NotRequired[pulumi.Input[str]]
+        """
+        Name of access list
+        """
+        acl_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        direction: NotRequired[pulumi.Input[str]]
+        """
+        Direction
+          - Choices: `in`, `out`
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    VpnInterfaceDslIpoeFeatureTemplateAccessListArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class VpnInterfaceDslIpoeFeatureTemplateAccessListArgs:
     def __init__(__self__, *,
@@ -52108,6 +67149,47 @@ class VpnInterfaceDslIpoeFeatureTemplateAccessListArgs:
     def optional(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "optional", value)
 
+
+if not MYPY:
+    class VpnInterfaceDslIpoeFeatureTemplateNatPortForwardArgsDict(TypedDict):
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        port_end_range: NotRequired[pulumi.Input[int]]
+        """
+        Ending port of port range
+          - Range: `0`-`65535`
+        """
+        port_start_range: NotRequired[pulumi.Input[int]]
+        """
+        Starting port of port range
+          - Range: `0`-`65535`
+        """
+        private_ip_address: NotRequired[pulumi.Input[str]]
+        """
+        Private IP Address to translate to
+        """
+        private_ip_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        private_vpn: NotRequired[pulumi.Input[int]]
+        """
+        VPN in which private IP Address resides
+          - Range: `0`-`65535`
+        """
+        private_vpn_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Layer 4 protocol to apply port forwarding to
+          - Choices: `tcp`, `udp`
+        """
+elif False:
+    VpnInterfaceDslIpoeFeatureTemplateNatPortForwardArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class VpnInterfaceDslIpoeFeatureTemplateNatPortForwardArgs:
@@ -52252,6 +67334,24 @@ class VpnInterfaceDslIpoeFeatureTemplateNatPortForwardArgs:
         pulumi.set(self, "protocol", value)
 
 
+if not MYPY:
+    class VpnInterfaceDslIpoeFeatureTemplatePolicerArgsDict(TypedDict):
+        direction: NotRequired[pulumi.Input[str]]
+        """
+        Direction
+          - Choices: `in`, `out`
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        policer_name: NotRequired[pulumi.Input[str]]
+        """
+        Name of policer
+        """
+elif False:
+    VpnInterfaceDslIpoeFeatureTemplatePolicerArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class VpnInterfaceDslIpoeFeatureTemplatePolicerArgs:
     def __init__(__self__, *,
@@ -52308,6 +67408,39 @@ class VpnInterfaceDslIpoeFeatureTemplatePolicerArgs:
     def policer_name(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "policer_name", value)
 
+
+if not MYPY:
+    class VpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArgsDict(TypedDict):
+        encapsulation: NotRequired[pulumi.Input[str]]
+        """
+        Encapsulation
+          - Choices: `gre`, `ipsec`
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        preference: NotRequired[pulumi.Input[int]]
+        """
+        Set preference for TLOC
+          - Range: `0`-`4294967295`
+        """
+        preference_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        weight: NotRequired[pulumi.Input[int]]
+        """
+        Set weight for TLOC
+          - Range: `1`-`255`
+          - Default value: `1`
+        """
+        weight_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    VpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class VpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArgs:
@@ -52419,6 +67552,61 @@ class VpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArgs:
     def weight_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "weight_variable", value)
 
+
+if not MYPY:
+    class VpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArgsDict(TypedDict):
+        controller_vdsl_slot: NotRequired[pulumi.Input[str]]
+        """
+        Set module slot/subslot/port number
+        """
+        controller_vdsl_slot_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        mode_adsl1: NotRequired[pulumi.Input[bool]]
+        """
+        Set VDSL operating mode to adsl1
+          - Default value: `false`
+        """
+        mode_adsl2: NotRequired[pulumi.Input[bool]]
+        """
+        Set VDSL operating mode to adsl2
+          - Default value: `false`
+        """
+        mode_adsl2plus: NotRequired[pulumi.Input[bool]]
+        """
+        Set VDSL operating mode to adsl2plus
+          - Default value: `false`
+        """
+        mode_ansi: NotRequired[pulumi.Input[bool]]
+        """
+        Set VDSL operating mode to ansi
+          - Default value: `false`
+        """
+        mode_vdsl2: NotRequired[pulumi.Input[bool]]
+        """
+        Set VDSL operating mode to vdsl2
+          - Default value: `false`
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        sra: NotRequired[pulumi.Input[bool]]
+        """
+        Seamless rate adaption
+          - Default value: `true`
+        """
+        vdsl_modem_configuration: NotRequired[pulumi.Input[str]]
+        """
+        Set module slot/subslot/port number
+        """
+        vdsl_modem_configuration_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    VpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class VpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArgs:
@@ -52615,6 +67803,28 @@ class VpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArgs:
         pulumi.set(self, "vdsl_modem_configuration_variable", value)
 
 
+if not MYPY:
+    class VpnInterfaceDslPppoaFeatureTemplateAccessListArgsDict(TypedDict):
+        acl_name: NotRequired[pulumi.Input[str]]
+        """
+        Name of access list
+        """
+        acl_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        direction: NotRequired[pulumi.Input[str]]
+        """
+        Direction
+          - Choices: `in`, `out`
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    VpnInterfaceDslPppoaFeatureTemplateAccessListArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class VpnInterfaceDslPppoaFeatureTemplateAccessListArgs:
     def __init__(__self__, *,
@@ -52687,6 +67897,47 @@ class VpnInterfaceDslPppoaFeatureTemplateAccessListArgs:
     def optional(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "optional", value)
 
+
+if not MYPY:
+    class VpnInterfaceDslPppoaFeatureTemplateNatPortForwardArgsDict(TypedDict):
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        port_end_range: NotRequired[pulumi.Input[int]]
+        """
+        Ending port of port range
+          - Range: `0`-`65535`
+        """
+        port_start_range: NotRequired[pulumi.Input[int]]
+        """
+        Starting port of port range
+          - Range: `0`-`65535`
+        """
+        private_ip_address: NotRequired[pulumi.Input[str]]
+        """
+        Private IP Address to translate to
+        """
+        private_ip_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        private_vpn: NotRequired[pulumi.Input[int]]
+        """
+        VPN in which private IP Address resides
+          - Range: `0`-`65535`
+        """
+        private_vpn_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Layer 4 protocol to apply port forwarding to
+          - Choices: `tcp`, `udp`
+        """
+elif False:
+    VpnInterfaceDslPppoaFeatureTemplateNatPortForwardArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class VpnInterfaceDslPppoaFeatureTemplateNatPortForwardArgs:
@@ -52831,6 +68082,24 @@ class VpnInterfaceDslPppoaFeatureTemplateNatPortForwardArgs:
         pulumi.set(self, "protocol", value)
 
 
+if not MYPY:
+    class VpnInterfaceDslPppoaFeatureTemplatePolicerArgsDict(TypedDict):
+        direction: NotRequired[pulumi.Input[str]]
+        """
+        Direction
+          - Choices: `in`, `out`
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        policer_name: NotRequired[pulumi.Input[str]]
+        """
+        Name of policer
+        """
+elif False:
+    VpnInterfaceDslPppoaFeatureTemplatePolicerArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class VpnInterfaceDslPppoaFeatureTemplatePolicerArgs:
     def __init__(__self__, *,
@@ -52887,6 +68156,96 @@ class VpnInterfaceDslPppoaFeatureTemplatePolicerArgs:
     def policer_name(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "policer_name", value)
 
+
+if not MYPY:
+    class VpnInterfaceDslPppoaFeatureTemplatePvcArgsDict(TypedDict):
+        atm_dialer_pool_member: NotRequired[pulumi.Input[int]]
+        """
+        Dialer Pool corresponding to this pvc
+          - Range: `1`-`255`
+        """
+        atm_dialer_pool_member_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        atm_encapsulation_aal5mux: NotRequired[pulumi.Input[bool]]
+        """
+        dialer
+        """
+        atm_encapsulation_aal5nlpid: NotRequired[pulumi.Input[bool]]
+        """
+        aal5nlpid
+        """
+        atm_encapsulation_aal5snap: NotRequired[pulumi.Input[bool]]
+        """
+        aal5snap
+        """
+        atm_vbr_nrt_maximum_burst_size: NotRequired[pulumi.Input[int]]
+        """
+        Maximum Burst Size in Cells
+          - Range: `1`-`65535`
+        """
+        atm_vbr_nrt_maximum_burst_size_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        atm_vbr_nrt_peak_cell_rate: NotRequired[pulumi.Input[int]]
+        """
+        Peak Cell Rate in Kbps
+          - Range: `48`-`1015`
+        """
+        atm_vbr_nrt_peak_cell_rate_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        atm_vbr_nrt_sustainable_cell_rate: NotRequired[pulumi.Input[int]]
+        """
+        Peak Cell Rate in Kbps
+        """
+        atm_vbr_nrt_sustainable_cell_rate_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        atm_vbr_rt_average_cell_rate: NotRequired[pulumi.Input[int]]
+        """
+        Average Cell Rate in Kbps
+        """
+        atm_vbr_rt_average_cell_rate_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        atm_vbr_rt_maximum_burst_size: NotRequired[pulumi.Input[int]]
+        """
+        Maximum Burst Size in number of Cells
+          - Range: `1`-`65535`
+        """
+        atm_vbr_rt_maximum_burst_size_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        atm_vbr_rt_peak_cell_rate: NotRequired[pulumi.Input[int]]
+        """
+        Peak Cell Rate in Kbps
+          - Range: `48`-`25000`
+        """
+        atm_vbr_rt_peak_cell_rate_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        atm_vpi_and_vci: NotRequired[pulumi.Input[str]]
+        """
+        VPI/VCI
+        """
+        atm_vpi_and_vci_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    VpnInterfaceDslPppoaFeatureTemplatePvcArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class VpnInterfaceDslPppoaFeatureTemplatePvcArgs:
@@ -53225,6 +68584,39 @@ class VpnInterfaceDslPppoaFeatureTemplatePvcArgs:
         pulumi.set(self, "optional", value)
 
 
+if not MYPY:
+    class VpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArgsDict(TypedDict):
+        encapsulation: NotRequired[pulumi.Input[str]]
+        """
+        Encapsulation
+          - Choices: `gre`, `ipsec`
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        preference: NotRequired[pulumi.Input[int]]
+        """
+        Set preference for TLOC
+          - Range: `0`-`4294967295`
+        """
+        preference_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        weight: NotRequired[pulumi.Input[int]]
+        """
+        Set weight for TLOC
+          - Range: `1`-`255`
+          - Default value: `1`
+        """
+        weight_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    VpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class VpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArgs:
     def __init__(__self__, *,
@@ -53335,6 +68727,61 @@ class VpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArgs:
     def weight_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "weight_variable", value)
 
+
+if not MYPY:
+    class VpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArgsDict(TypedDict):
+        controller_vdsl_slot: NotRequired[pulumi.Input[str]]
+        """
+        Set module slot/subslot/port number
+        """
+        controller_vdsl_slot_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        mode_adsl1: NotRequired[pulumi.Input[bool]]
+        """
+        Set VDSL operating mode to adsl1
+          - Default value: `false`
+        """
+        mode_adsl2: NotRequired[pulumi.Input[bool]]
+        """
+        Set VDSL operating mode to adsl2
+          - Default value: `false`
+        """
+        mode_adsl2plus: NotRequired[pulumi.Input[bool]]
+        """
+        Set VDSL operating mode to adsl2plus
+          - Default value: `false`
+        """
+        mode_ansi: NotRequired[pulumi.Input[bool]]
+        """
+        Set VDSL operating mode to ansi
+          - Default value: `false`
+        """
+        mode_vdsl2: NotRequired[pulumi.Input[bool]]
+        """
+        Set VDSL operating mode to vdsl2
+          - Default value: `false`
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        sra: NotRequired[pulumi.Input[bool]]
+        """
+        Seamless rate adaption
+          - Default value: `true`
+        """
+        vdsl_modem_configuration: NotRequired[pulumi.Input[str]]
+        """
+        Set module slot/subslot/port number
+        """
+        vdsl_modem_configuration_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    VpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class VpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArgs:
@@ -53531,6 +68978,28 @@ class VpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArgs:
         pulumi.set(self, "vdsl_modem_configuration_variable", value)
 
 
+if not MYPY:
+    class VpnInterfaceDslPppoeFeatureTemplateAccessListArgsDict(TypedDict):
+        acl_name: NotRequired[pulumi.Input[str]]
+        """
+        Name of access list
+        """
+        acl_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        direction: NotRequired[pulumi.Input[str]]
+        """
+        Direction
+          - Choices: `in`, `out`
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    VpnInterfaceDslPppoeFeatureTemplateAccessListArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class VpnInterfaceDslPppoeFeatureTemplateAccessListArgs:
     def __init__(__self__, *,
@@ -53603,6 +69072,47 @@ class VpnInterfaceDslPppoeFeatureTemplateAccessListArgs:
     def optional(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "optional", value)
 
+
+if not MYPY:
+    class VpnInterfaceDslPppoeFeatureTemplateNatPortForwardArgsDict(TypedDict):
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        port_end_range: NotRequired[pulumi.Input[int]]
+        """
+        Ending port of port range
+          - Range: `0`-`65535`
+        """
+        port_start_range: NotRequired[pulumi.Input[int]]
+        """
+        Starting port of port range
+          - Range: `0`-`65535`
+        """
+        private_ip_address: NotRequired[pulumi.Input[str]]
+        """
+        Private IP Address to translate to
+        """
+        private_ip_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        private_vpn: NotRequired[pulumi.Input[int]]
+        """
+        VPN in which private IP Address resides
+          - Range: `0`-`65535`
+        """
+        private_vpn_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Layer 4 protocol to apply port forwarding to
+          - Choices: `tcp`, `udp`
+        """
+elif False:
+    VpnInterfaceDslPppoeFeatureTemplateNatPortForwardArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class VpnInterfaceDslPppoeFeatureTemplateNatPortForwardArgs:
@@ -53747,6 +69257,24 @@ class VpnInterfaceDslPppoeFeatureTemplateNatPortForwardArgs:
         pulumi.set(self, "protocol", value)
 
 
+if not MYPY:
+    class VpnInterfaceDslPppoeFeatureTemplatePolicerArgsDict(TypedDict):
+        direction: NotRequired[pulumi.Input[str]]
+        """
+        Direction
+          - Choices: `in`, `out`
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        policer_name: NotRequired[pulumi.Input[str]]
+        """
+        Name of policer
+        """
+elif False:
+    VpnInterfaceDslPppoeFeatureTemplatePolicerArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class VpnInterfaceDslPppoeFeatureTemplatePolicerArgs:
     def __init__(__self__, *,
@@ -53803,6 +69331,39 @@ class VpnInterfaceDslPppoeFeatureTemplatePolicerArgs:
     def policer_name(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "policer_name", value)
 
+
+if not MYPY:
+    class VpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArgsDict(TypedDict):
+        encapsulation: NotRequired[pulumi.Input[str]]
+        """
+        Encapsulation
+          - Choices: `gre`, `ipsec`
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        preference: NotRequired[pulumi.Input[int]]
+        """
+        Set preference for TLOC
+          - Range: `0`-`4294967295`
+        """
+        preference_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        weight: NotRequired[pulumi.Input[int]]
+        """
+        Set weight for TLOC
+          - Range: `1`-`255`
+          - Default value: `1`
+        """
+        weight_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    VpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class VpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArgs:
@@ -53914,6 +69475,61 @@ class VpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArgs:
     def weight_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "weight_variable", value)
 
+
+if not MYPY:
+    class VpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArgsDict(TypedDict):
+        controller_vdsl_slot: NotRequired[pulumi.Input[str]]
+        """
+        Set module slot/subslot/port number
+        """
+        controller_vdsl_slot_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        mode_adsl1: NotRequired[pulumi.Input[bool]]
+        """
+        Set VDSL operating mode to adsl1
+          - Default value: `false`
+        """
+        mode_adsl2: NotRequired[pulumi.Input[bool]]
+        """
+        Set VDSL operating mode to adsl2
+          - Default value: `false`
+        """
+        mode_adsl2plus: NotRequired[pulumi.Input[bool]]
+        """
+        Set VDSL operating mode to adsl2plus
+          - Default value: `false`
+        """
+        mode_ansi: NotRequired[pulumi.Input[bool]]
+        """
+        Set VDSL operating mode to ansi
+          - Default value: `false`
+        """
+        mode_vdsl2: NotRequired[pulumi.Input[bool]]
+        """
+        Set VDSL operating mode to vdsl2
+          - Default value: `false`
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        sra: NotRequired[pulumi.Input[bool]]
+        """
+        Seamless rate adaption
+          - Default value: `true`
+        """
+        vdsl_modem_configuration: NotRequired[pulumi.Input[str]]
+        """
+        Set module slot/subslot/port number
+        """
+        vdsl_modem_configuration_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    VpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class VpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArgs:
@@ -54110,6 +69726,28 @@ class VpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArgs:
         pulumi.set(self, "vdsl_modem_configuration_variable", value)
 
 
+if not MYPY:
+    class VpnInterfaceEthernetPppoeFeatureTemplateAccessListArgsDict(TypedDict):
+        acl_name: NotRequired[pulumi.Input[str]]
+        """
+        Name of access list
+        """
+        acl_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        direction: NotRequired[pulumi.Input[str]]
+        """
+        Direction
+          - Choices: `in`, `out`
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    VpnInterfaceEthernetPppoeFeatureTemplateAccessListArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class VpnInterfaceEthernetPppoeFeatureTemplateAccessListArgs:
     def __init__(__self__, *,
@@ -54182,6 +69820,47 @@ class VpnInterfaceEthernetPppoeFeatureTemplateAccessListArgs:
     def optional(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "optional", value)
 
+
+if not MYPY:
+    class VpnInterfaceEthernetPppoeFeatureTemplateNatPortForwardArgsDict(TypedDict):
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        port_end_range: NotRequired[pulumi.Input[int]]
+        """
+        Ending port of port range
+          - Range: `0`-`65535`
+        """
+        port_start_range: NotRequired[pulumi.Input[int]]
+        """
+        Starting port of port range
+          - Range: `0`-`65535`
+        """
+        private_ip_address: NotRequired[pulumi.Input[str]]
+        """
+        Private IP Address to translate to
+        """
+        private_ip_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        private_vpn: NotRequired[pulumi.Input[int]]
+        """
+        VPN in which private IP Address resides
+          - Range: `0`-`65535`
+        """
+        private_vpn_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Layer 4 protocol to apply port forwarding to
+          - Choices: `tcp`, `udp`
+        """
+elif False:
+    VpnInterfaceEthernetPppoeFeatureTemplateNatPortForwardArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class VpnInterfaceEthernetPppoeFeatureTemplateNatPortForwardArgs:
@@ -54326,6 +70005,24 @@ class VpnInterfaceEthernetPppoeFeatureTemplateNatPortForwardArgs:
         pulumi.set(self, "protocol", value)
 
 
+if not MYPY:
+    class VpnInterfaceEthernetPppoeFeatureTemplatePolicerArgsDict(TypedDict):
+        direction: NotRequired[pulumi.Input[str]]
+        """
+        Direction
+          - Choices: `in`, `out`
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        policer_name: NotRequired[pulumi.Input[str]]
+        """
+        Name of policer
+        """
+elif False:
+    VpnInterfaceEthernetPppoeFeatureTemplatePolicerArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class VpnInterfaceEthernetPppoeFeatureTemplatePolicerArgs:
     def __init__(__self__, *,
@@ -54382,6 +70079,39 @@ class VpnInterfaceEthernetPppoeFeatureTemplatePolicerArgs:
     def policer_name(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "policer_name", value)
 
+
+if not MYPY:
+    class VpnInterfaceEthernetPppoeFeatureTemplateTunnelInterfaceEncapsulationArgsDict(TypedDict):
+        encapsulation: NotRequired[pulumi.Input[str]]
+        """
+        Encapsulation
+          - Choices: `gre`, `ipsec`
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        preference: NotRequired[pulumi.Input[int]]
+        """
+        Set preference for TLOC
+          - Range: `0`-`4294967295`
+        """
+        preference_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        weight: NotRequired[pulumi.Input[int]]
+        """
+        Set weight for TLOC
+          - Range: `1`-`255`
+          - Default value: `1`
+        """
+        weight_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    VpnInterfaceEthernetPppoeFeatureTemplateTunnelInterfaceEncapsulationArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class VpnInterfaceEthernetPppoeFeatureTemplateTunnelInterfaceEncapsulationArgs:
@@ -54494,6 +70224,28 @@ class VpnInterfaceEthernetPppoeFeatureTemplateTunnelInterfaceEncapsulationArgs:
         pulumi.set(self, "weight_variable", value)
 
 
+if not MYPY:
+    class VpnInterfaceMultilinkFeatureTemplateAccessListArgsDict(TypedDict):
+        acl_name: NotRequired[pulumi.Input[str]]
+        """
+        Name of access list
+        """
+        acl_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        direction: NotRequired[pulumi.Input[str]]
+        """
+        Direction
+          - Choices: `in`, `out`
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    VpnInterfaceMultilinkFeatureTemplateAccessListArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class VpnInterfaceMultilinkFeatureTemplateAccessListArgs:
     def __init__(__self__, *,
@@ -54567,6 +70319,28 @@ class VpnInterfaceMultilinkFeatureTemplateAccessListArgs:
         pulumi.set(self, "optional", value)
 
 
+if not MYPY:
+    class VpnInterfaceMultilinkFeatureTemplateIpv6AccessListArgsDict(TypedDict):
+        acl_name: NotRequired[pulumi.Input[str]]
+        """
+        Name of access list
+        """
+        acl_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        direction: NotRequired[pulumi.Input[str]]
+        """
+        Direction
+          - Choices: `in`, `out`
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    VpnInterfaceMultilinkFeatureTemplateIpv6AccessListArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class VpnInterfaceMultilinkFeatureTemplateIpv6AccessListArgs:
     def __init__(__self__, *,
@@ -54639,6 +70413,75 @@ class VpnInterfaceMultilinkFeatureTemplateIpv6AccessListArgs:
     def optional(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "optional", value)
 
+
+if not MYPY:
+    class VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceArgsDict(TypedDict):
+        channel_group_lists: NotRequired[pulumi.Input[Sequence[pulumi.Input['VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceChannelGroupListArgsDict']]]]
+        """
+        Channel Group List
+        """
+        description: NotRequired[pulumi.Input[str]]
+        """
+        Description
+        """
+        description_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        framing: NotRequired[pulumi.Input[str]]
+        """
+        Framing
+        """
+        framing_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        interface_type: NotRequired[pulumi.Input[str]]
+        """
+        Card Type
+          - Choices: `E1`, `T1`, `NIM-2T`, `NIM-4T`
+        """
+        internal: NotRequired[pulumi.Input[bool]]
+        """
+        Internal
+          - Default value: `false`
+        """
+        line_mode: NotRequired[pulumi.Input[str]]
+        """
+        Line Mode
+          - Choices: `secondary`, `primary`
+        """
+        line_mode_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        linecode: NotRequired[pulumi.Input[str]]
+        """
+        LineCode
+          - Choices: `ami`, `b8zs`, `hdb3`
+        """
+        linecode_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        set_length_for_long: NotRequired[pulumi.Input[str]]
+        """
+        Set length for long
+        """
+        set_length_for_short: NotRequired[pulumi.Input[str]]
+        """
+        Set Length for short
+        """
+        slot: NotRequired[pulumi.Input[str]]
+        """
+        Slot number
+        """
+elif False:
+    VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceArgs:
@@ -54895,6 +70738,32 @@ class VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceArgs:
         pulumi.set(self, "slot", value)
 
 
+if not MYPY:
+    class VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceChannelGroupListArgsDict(TypedDict):
+        channel_group: NotRequired[pulumi.Input[int]]
+        """
+        Number
+          - Range: `0`-`30`
+        """
+        channel_group_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        time_slot_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        time_slots: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        Time slots
+        """
+elif False:
+    VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceChannelGroupListArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceChannelGroupListArgs:
     def __init__(__self__, *,
@@ -54983,6 +70852,67 @@ class VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceChannelGroupListArgs
     def time_slots(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
         pulumi.set(self, "time_slots", value)
 
+
+if not MYPY:
+    class VpnInterfaceMultilinkFeatureTemplateNimInterfaceListArgsDict(TypedDict):
+        bandwidth: NotRequired[pulumi.Input[int]]
+        """
+        Interface bandwidth capacity, in kbps
+          - Range: `1`-`2147483647`
+        """
+        bandwidth_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        clock_rate: NotRequired[pulumi.Input[int]]
+        """
+        Set preference for interface Clock speed
+          - Range: `1200`-`8000000`
+        """
+        clock_rate_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        encapsulation_serial: NotRequired[pulumi.Input[str]]
+        """
+        Configure Encapsulation for interface
+          - Choices: `hdlc`, `ppp`
+        """
+        encapsulation_serial_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        interface_description: NotRequired[pulumi.Input[str]]
+        """
+        Interface description
+        """
+        interface_description_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        interface_name: NotRequired[pulumi.Input[str]]
+        """
+        Interface Name
+        """
+        interface_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        nim_serial_interface_type: NotRequired[pulumi.Input[str]]
+        """
+        NIM Serial interface type
+          - Choices: `2t`, `4t`, `2T`, `4T`
+        """
+        nim_serial_interface_type_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    VpnInterfaceMultilinkFeatureTemplateNimInterfaceListArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class VpnInterfaceMultilinkFeatureTemplateNimInterfaceListArgs:
@@ -55207,6 +71137,39 @@ class VpnInterfaceMultilinkFeatureTemplateNimInterfaceListArgs:
         pulumi.set(self, "optional", value)
 
 
+if not MYPY:
+    class VpnInterfaceMultilinkFeatureTemplateTunnelInterfaceEncapsulationArgsDict(TypedDict):
+        encapsulation: NotRequired[pulumi.Input[str]]
+        """
+        Encapsulation
+          - Choices: `gre`, `ipsec`
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        preference: NotRequired[pulumi.Input[int]]
+        """
+        Set preference for TLOC
+          - Range: `0`-`4294967295`
+        """
+        preference_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        weight: NotRequired[pulumi.Input[int]]
+        """
+        Set weight for TLOC
+          - Range: `1`-`255`
+          - Default value: `1`
+        """
+        weight_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    VpnInterfaceMultilinkFeatureTemplateTunnelInterfaceEncapsulationArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class VpnInterfaceMultilinkFeatureTemplateTunnelInterfaceEncapsulationArgs:
     def __init__(__self__, *,
@@ -55318,6 +71281,28 @@ class VpnInterfaceMultilinkFeatureTemplateTunnelInterfaceEncapsulationArgs:
         pulumi.set(self, "weight_variable", value)
 
 
+if not MYPY:
+    class VpnInterfaceSviFeatureTemplateIpv4AccessListArgsDict(TypedDict):
+        acl_name: NotRequired[pulumi.Input[str]]
+        """
+        Name of access list
+        """
+        acl_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        direction: NotRequired[pulumi.Input[str]]
+        """
+        Direction
+          - Choices: `in`, `out`
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    VpnInterfaceSviFeatureTemplateIpv4AccessListArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class VpnInterfaceSviFeatureTemplateIpv4AccessListArgs:
     def __init__(__self__, *,
@@ -55391,6 +71376,23 @@ class VpnInterfaceSviFeatureTemplateIpv4AccessListArgs:
         pulumi.set(self, "optional", value)
 
 
+if not MYPY:
+    class VpnInterfaceSviFeatureTemplateIpv4SecondaryAddressArgsDict(TypedDict):
+        ipv4_address: NotRequired[pulumi.Input[str]]
+        """
+        IP Address
+        """
+        ipv4_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    VpnInterfaceSviFeatureTemplateIpv4SecondaryAddressArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class VpnInterfaceSviFeatureTemplateIpv4SecondaryAddressArgs:
     def __init__(__self__, *,
@@ -55445,6 +71447,91 @@ class VpnInterfaceSviFeatureTemplateIpv4SecondaryAddressArgs:
     def optional(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "optional", value)
 
+
+if not MYPY:
+    class VpnInterfaceSviFeatureTemplateIpv4VrrpArgsDict(TypedDict):
+        group_id: NotRequired[pulumi.Input[int]]
+        """
+        Group ID
+          - Range: `1`-`255`
+        """
+        group_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ipv4_address: NotRequired[pulumi.Input[str]]
+        """
+        Assign IP Address
+        """
+        ipv4_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ipv4_secondary_addresses: NotRequired[pulumi.Input[Sequence[pulumi.Input['VpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArgsDict']]]]
+        """
+        VRRP Secondary IP address
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        priority: NotRequired[pulumi.Input[int]]
+        """
+        Set priority
+          - Range: `1`-`254`
+          - Default value: `100`
+        """
+        priority_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        timer: NotRequired[pulumi.Input[int]]
+        """
+        Timer interval for successive advertisements, in milliseconds
+          - Range: `100`-`40950`
+          - Default value: `100`
+        """
+        timer_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        tloc_preference_change: NotRequired[pulumi.Input[bool]]
+        """
+        change TLOC preference
+          - Default value: `false`
+        """
+        tloc_preference_change_value: NotRequired[pulumi.Input[int]]
+        """
+        Set tloc preference change value
+          - Range: `1`-`4294967295`
+        """
+        tloc_preference_change_value_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        track_omp: NotRequired[pulumi.Input[bool]]
+        """
+        Track OMP status
+          - Default value: `false`
+        """
+        track_omp_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        track_prefix_list: NotRequired[pulumi.Input[str]]
+        """
+        Track Prefix List
+        """
+        track_prefix_list_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        tracking_objects: NotRequired[pulumi.Input[Sequence[pulumi.Input['VpnInterfaceSviFeatureTemplateIpv4VrrpTrackingObjectArgsDict']]]]
+        """
+        tracking object for VRRP configuration
+        """
+elif False:
+    VpnInterfaceSviFeatureTemplateIpv4VrrpArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class VpnInterfaceSviFeatureTemplateIpv4VrrpArgs:
@@ -55757,6 +71844,23 @@ class VpnInterfaceSviFeatureTemplateIpv4VrrpArgs:
         pulumi.set(self, "tracking_objects", value)
 
 
+if not MYPY:
+    class VpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArgsDict(TypedDict):
+        ipv4_address: NotRequired[pulumi.Input[str]]
+        """
+        VRRP Secondary IP address
+        """
+        ipv4_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    VpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class VpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArgs:
     def __init__(__self__, *,
@@ -55811,6 +71915,43 @@ class VpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArgs:
     def optional(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "optional", value)
 
+
+if not MYPY:
+    class VpnInterfaceSviFeatureTemplateIpv4VrrpTrackingObjectArgsDict(TypedDict):
+        decrement_value: NotRequired[pulumi.Input[int]]
+        """
+        Decrement Value for VRRP priority
+          - Range: `1`-`255`
+        """
+        decrement_value_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        name: NotRequired[pulumi.Input[int]]
+        """
+        Tracker ID
+          - Range: `1`-`1000`
+        """
+        name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        track_action: NotRequired[pulumi.Input[str]]
+        """
+        Track Action
+          - Choices: `decrement`, `shutdown`
+          - Default value: `decrement`
+        """
+        track_action_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    VpnInterfaceSviFeatureTemplateIpv4VrrpTrackingObjectArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class VpnInterfaceSviFeatureTemplateIpv4VrrpTrackingObjectArgs:
@@ -55939,6 +72080,28 @@ class VpnInterfaceSviFeatureTemplateIpv4VrrpTrackingObjectArgs:
         pulumi.set(self, "track_action_variable", value)
 
 
+if not MYPY:
+    class VpnInterfaceSviFeatureTemplateIpv6AccessListArgsDict(TypedDict):
+        acl_name: NotRequired[pulumi.Input[str]]
+        """
+        Name of access list
+        """
+        acl_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        direction: NotRequired[pulumi.Input[str]]
+        """
+        Direction
+          - Choices: `in`, `out`
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    VpnInterfaceSviFeatureTemplateIpv6AccessListArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class VpnInterfaceSviFeatureTemplateIpv6AccessListArgs:
     def __init__(__self__, *,
@@ -56011,6 +72174,32 @@ class VpnInterfaceSviFeatureTemplateIpv6AccessListArgs:
     def optional(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "optional", value)
 
+
+if not MYPY:
+    class VpnInterfaceSviFeatureTemplateIpv6DhcpHelperArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        DHCPv6 Helper address
+        """
+        address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        vpn_id: NotRequired[pulumi.Input[int]]
+        """
+        DHCPv6 Helper VPN
+          - Range: `1`-`65536`
+        """
+        vpn_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    VpnInterfaceSviFeatureTemplateIpv6DhcpHelperArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class VpnInterfaceSviFeatureTemplateIpv6DhcpHelperArgs:
@@ -56101,6 +72290,23 @@ class VpnInterfaceSviFeatureTemplateIpv6DhcpHelperArgs:
         pulumi.set(self, "vpn_id_variable", value)
 
 
+if not MYPY:
+    class VpnInterfaceSviFeatureTemplateIpv6SecondaryAddressArgsDict(TypedDict):
+        ipv6_address: NotRequired[pulumi.Input[str]]
+        """
+        IPv6 Address
+        """
+        ipv6_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    VpnInterfaceSviFeatureTemplateIpv6SecondaryAddressArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class VpnInterfaceSviFeatureTemplateIpv6SecondaryAddressArgs:
     def __init__(__self__, *,
@@ -56155,6 +72361,69 @@ class VpnInterfaceSviFeatureTemplateIpv6SecondaryAddressArgs:
     def optional(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "optional", value)
 
+
+if not MYPY:
+    class VpnInterfaceSviFeatureTemplateIpv6VrrpArgsDict(TypedDict):
+        group_id: NotRequired[pulumi.Input[int]]
+        """
+        Group ID
+          - Range: `1`-`255`
+        """
+        group_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ipv6_addresses: NotRequired[pulumi.Input[Sequence[pulumi.Input['VpnInterfaceSviFeatureTemplateIpv6VrrpIpv6AddressArgsDict']]]]
+        """
+        IPv6 VRRP
+        """
+        ipv6_secondary_addresses: NotRequired[pulumi.Input[Sequence[pulumi.Input['VpnInterfaceSviFeatureTemplateIpv6VrrpIpv6SecondaryAddressArgsDict']]]]
+        """
+        IPv6 Secondary IP address
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        priority: NotRequired[pulumi.Input[int]]
+        """
+        Set priority
+          - Range: `1`-`254`
+          - Default value: `100`
+        """
+        priority_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        timer: NotRequired[pulumi.Input[int]]
+        """
+        Timer interval for successive advertisements, in milliseconds
+          - Range: `100`-`40950`
+          - Default value: `100`
+        """
+        timer_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        track_omp: NotRequired[pulumi.Input[bool]]
+        """
+        Track OMP status
+          - Default value: `false`
+        """
+        track_omp_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        track_prefix_list: NotRequired[pulumi.Input[str]]
+        """
+        Track Prefix List
+        """
+        track_prefix_list_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    VpnInterfaceSviFeatureTemplateIpv6VrrpArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class VpnInterfaceSviFeatureTemplateIpv6VrrpArgs:
@@ -56383,6 +72652,31 @@ class VpnInterfaceSviFeatureTemplateIpv6VrrpArgs:
         pulumi.set(self, "track_prefix_list_variable", value)
 
 
+if not MYPY:
+    class VpnInterfaceSviFeatureTemplateIpv6VrrpIpv6AddressArgsDict(TypedDict):
+        link_local_address: NotRequired[pulumi.Input[str]]
+        """
+        Use link-local IPv6 Address
+        """
+        link_local_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        prefix: NotRequired[pulumi.Input[str]]
+        """
+        Assign Global IPv6 Prefix
+        """
+        prefix_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    VpnInterfaceSviFeatureTemplateIpv6VrrpIpv6AddressArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class VpnInterfaceSviFeatureTemplateIpv6VrrpIpv6AddressArgs:
     def __init__(__self__, *,
@@ -56470,6 +72764,23 @@ class VpnInterfaceSviFeatureTemplateIpv6VrrpIpv6AddressArgs:
         pulumi.set(self, "prefix_variable", value)
 
 
+if not MYPY:
+    class VpnInterfaceSviFeatureTemplateIpv6VrrpIpv6SecondaryAddressArgsDict(TypedDict):
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        prefix: NotRequired[pulumi.Input[str]]
+        """
+        IPv6 Secondary IP address
+        """
+        prefix_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    VpnInterfaceSviFeatureTemplateIpv6VrrpIpv6SecondaryAddressArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class VpnInterfaceSviFeatureTemplateIpv6VrrpIpv6SecondaryAddressArgs:
     def __init__(__self__, *,
@@ -56524,6 +72835,24 @@ class VpnInterfaceSviFeatureTemplateIpv6VrrpIpv6SecondaryAddressArgs:
     def prefix_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "prefix_variable", value)
 
+
+if not MYPY:
+    class VpnInterfaceSviFeatureTemplatePolicerArgsDict(TypedDict):
+        direction: NotRequired[pulumi.Input[str]]
+        """
+        Direction
+          - Choices: `in`, `out`
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        policer_name: NotRequired[pulumi.Input[str]]
+        """
+        Name of policer
+        """
+elif False:
+    VpnInterfaceSviFeatureTemplatePolicerArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class VpnInterfaceSviFeatureTemplatePolicerArgs:
@@ -56581,6 +72910,31 @@ class VpnInterfaceSviFeatureTemplatePolicerArgs:
     def policer_name(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "policer_name", value)
 
+
+if not MYPY:
+    class VpnInterfaceSviFeatureTemplateStaticArpEntryArgsDict(TypedDict):
+        ipv4_address: NotRequired[pulumi.Input[str]]
+        """
+        IP Address
+        """
+        ipv4_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        mac_address: NotRequired[pulumi.Input[str]]
+        """
+        MAC address
+        """
+        mac_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    VpnInterfaceSviFeatureTemplateStaticArpEntryArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class VpnInterfaceSviFeatureTemplateStaticArpEntryArgs:
@@ -56669,6 +73023,28 @@ class VpnInterfaceSviFeatureTemplateStaticArpEntryArgs:
         pulumi.set(self, "optional", value)
 
 
+if not MYPY:
+    class VpnInterfaceT1E1SerialFeatureTemplateIpv4AccessListArgsDict(TypedDict):
+        acl_name: NotRequired[pulumi.Input[str]]
+        """
+        Name of access list
+        """
+        acl_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        direction: NotRequired[pulumi.Input[str]]
+        """
+        Direction
+          - Choices: `in`, `out`
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    VpnInterfaceT1E1SerialFeatureTemplateIpv4AccessListArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class VpnInterfaceT1E1SerialFeatureTemplateIpv4AccessListArgs:
     def __init__(__self__, *,
@@ -56742,6 +73118,28 @@ class VpnInterfaceT1E1SerialFeatureTemplateIpv4AccessListArgs:
         pulumi.set(self, "optional", value)
 
 
+if not MYPY:
+    class VpnInterfaceT1E1SerialFeatureTemplateIpv6AccessListArgsDict(TypedDict):
+        acl_name: NotRequired[pulumi.Input[str]]
+        """
+        Name of access list
+        """
+        acl_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        direction: NotRequired[pulumi.Input[str]]
+        """
+        Direction
+          - Choices: `in`, `out`
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+elif False:
+    VpnInterfaceT1E1SerialFeatureTemplateIpv6AccessListArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class VpnInterfaceT1E1SerialFeatureTemplateIpv6AccessListArgs:
     def __init__(__self__, *,
@@ -56814,6 +73212,39 @@ class VpnInterfaceT1E1SerialFeatureTemplateIpv6AccessListArgs:
     def optional(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "optional", value)
 
+
+if not MYPY:
+    class VpnInterfaceT1E1SerialFeatureTemplateTunnelInterfaceEncapsulationArgsDict(TypedDict):
+        encapsulation: NotRequired[pulumi.Input[str]]
+        """
+        Encapsulation
+          - Choices: `gre`, `ipsec`
+        """
+        optional: NotRequired[pulumi.Input[bool]]
+        """
+        Indicates if list item is considered optional.
+        """
+        preference: NotRequired[pulumi.Input[int]]
+        """
+        Set preference for TLOC
+          - Range: `0`-`4294967295`
+        """
+        preference_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        weight: NotRequired[pulumi.Input[int]]
+        """
+        Set weight for TLOC
+          - Range: `1`-`255`
+          - Default value: `1`
+        """
+        weight_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    VpnInterfaceT1E1SerialFeatureTemplateTunnelInterfaceEncapsulationArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class VpnInterfaceT1E1SerialFeatureTemplateTunnelInterfaceEncapsulationArgs:
@@ -56926,6 +73357,15 @@ class VpnInterfaceT1E1SerialFeatureTemplateTunnelInterfaceEncapsulationArgs:
         pulumi.set(self, "weight_variable", value)
 
 
+if not MYPY:
+    class VpnListPolicyObjectEntryArgsDict(TypedDict):
+        vpn_id: pulumi.Input[str]
+        """
+        VPN ID or range of VPN IDs e.g., `100` or `200-300`
+        """
+elif False:
+    VpnListPolicyObjectEntryArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class VpnListPolicyObjectEntryArgs:
     def __init__(__self__, *,
@@ -56947,6 +73387,27 @@ class VpnListPolicyObjectEntryArgs:
     def vpn_id(self, value: pulumi.Input[str]):
         pulumi.set(self, "vpn_id", value)
 
+
+if not MYPY:
+    class VpnMembershipPolicyDefinitionSiteArgsDict(TypedDict):
+        site_list_id: NotRequired[pulumi.Input[str]]
+        """
+        Site list ID
+        """
+        site_list_version: NotRequired[pulumi.Input[int]]
+        """
+        Site list version
+        """
+        vpn_list_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        VPN list IDs
+        """
+        vpn_list_versions: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        VPN list versions
+        """
+elif False:
+    VpnMembershipPolicyDefinitionSiteArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class VpnMembershipPolicyDefinitionSiteArgs:
@@ -57019,6 +73480,19 @@ class VpnMembershipPolicyDefinitionSiteArgs:
         pulumi.set(self, "vpn_list_versions", value)
 
 
+if not MYPY:
+    class ZoneBasedFirewallPolicyDefinitionApplyZonePairArgsDict(TypedDict):
+        destination_zone: NotRequired[pulumi.Input[str]]
+        """
+        Destination Zone
+        """
+        source_zone: NotRequired[pulumi.Input[str]]
+        """
+        Source Zone
+        """
+elif False:
+    ZoneBasedFirewallPolicyDefinitionApplyZonePairArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs:
     def __init__(__self__, *,
@@ -57057,6 +73531,32 @@ class ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs:
     def source_zone(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "source_zone", value)
 
+
+if not MYPY:
+    class ZoneBasedFirewallPolicyDefinitionRuleArgsDict(TypedDict):
+        base_action: pulumi.Input[str]
+        """
+        Base action
+          - Choices: `pass`, `drop`, `inspect`
+        """
+        rule_name: pulumi.Input[str]
+        """
+        Rule name
+        """
+        rule_order: pulumi.Input[int]
+        """
+        Rule
+        """
+        action_entries: NotRequired[pulumi.Input[Sequence[pulumi.Input['ZoneBasedFirewallPolicyDefinitionRuleActionEntryArgsDict']]]]
+        """
+        List of actions entries
+        """
+        match_entries: NotRequired[pulumi.Input[Sequence[pulumi.Input['ZoneBasedFirewallPolicyDefinitionRuleMatchEntryArgsDict']]]]
+        """
+        List of match entries
+        """
+elif False:
+    ZoneBasedFirewallPolicyDefinitionRuleArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ZoneBasedFirewallPolicyDefinitionRuleArgs:
@@ -57144,6 +73644,16 @@ class ZoneBasedFirewallPolicyDefinitionRuleArgs:
         pulumi.set(self, "match_entries", value)
 
 
+if not MYPY:
+    class ZoneBasedFirewallPolicyDefinitionRuleActionEntryArgsDict(TypedDict):
+        type: NotRequired[pulumi.Input[str]]
+        """
+        Type of action entry
+          - Choices: `log`, `connectionEvents`
+        """
+elif False:
+    ZoneBasedFirewallPolicyDefinitionRuleActionEntryArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ZoneBasedFirewallPolicyDefinitionRuleActionEntryArgs:
     def __init__(__self__, *,
@@ -57168,6 +73678,32 @@ class ZoneBasedFirewallPolicyDefinitionRuleActionEntryArgs:
     def type(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "type", value)
 
+
+if not MYPY:
+    class ZoneBasedFirewallPolicyDefinitionRuleMatchEntryArgsDict(TypedDict):
+        type: pulumi.Input[str]
+        """
+        Type of match entry
+          - Choices: `sourceFqdnList`, `sourceDataPrefixList`, `sourceGeoLocationList`, `sourcePortList`, `destinationFqdnList`, `destinationDataPrefixList`, `destinationGeoLocationList`, `destinationPortList`, `appList`, `protocolNameList`, `sourceIp`, `sourcePort`, `sourceFqdn`, `destinationIp`, `destinationFqdn`, `destinationPort`, `sourceGeoLocation`, `destinationGeoLocation`, `protocolName`, `protocol`, `app`, `ruleSetList`
+        """
+        policy_id: NotRequired[pulumi.Input[str]]
+        """
+        policy id for selected match entry
+        """
+        protocol_type: NotRequired[pulumi.Input[str]]
+        """
+        Should be included with additionally entries for `destinationPort` and `protocol` whenever the type `protocolName` is used.
+        """
+        value: NotRequired[pulumi.Input[str]]
+        """
+        value for selected match entry
+        """
+        value_variable: NotRequired[pulumi.Input[str]]
+        """
+        variable value for selected match entry if it has variable option (sourceIp & destinationIp)
+        """
+elif False:
+    ZoneBasedFirewallPolicyDefinitionRuleMatchEntryArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ZoneBasedFirewallPolicyDefinitionRuleMatchEntryArgs:
@@ -57256,6 +73792,19 @@ class ZoneBasedFirewallPolicyDefinitionRuleMatchEntryArgs:
     def value_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "value_variable", value)
 
+
+if not MYPY:
+    class ZoneListPolicyObjectEntryArgsDict(TypedDict):
+        interface: NotRequired[pulumi.Input[str]]
+        """
+        Interface name
+        """
+        vpn: NotRequired[pulumi.Input[str]]
+        """
+        VPN ID
+        """
+elif False:
+    ZoneListPolicyObjectEntryArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ZoneListPolicyObjectEntryArgs:

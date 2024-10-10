@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -225,9 +230,6 @@ def get_cflowd_policy_definition(id: Optional[str] = None,
         tos=pulumi.get(__ret__, 'tos'),
         type=pulumi.get(__ret__, 'type'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_cflowd_policy_definition)
 def get_cflowd_policy_definition_output(id: Optional[pulumi.Input[str]] = None,
                                         opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCflowdPolicyDefinitionResult]:
     """
@@ -245,4 +247,21 @@ def get_cflowd_policy_definition_output(id: Optional[pulumi.Input[str]] = None,
 
     :param str id: The id of the object
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getCflowdPolicyDefinition:getCflowdPolicyDefinition', __args__, opts=opts, typ=GetCflowdPolicyDefinitionResult)
+    return __ret__.apply(lambda __response__: GetCflowdPolicyDefinitionResult(
+        active_flow_timeout=pulumi.get(__response__, 'active_flow_timeout'),
+        collectors=pulumi.get(__response__, 'collectors'),
+        description=pulumi.get(__response__, 'description'),
+        flow_refresh=pulumi.get(__response__, 'flow_refresh'),
+        id=pulumi.get(__response__, 'id'),
+        inactive_flow_timeout=pulumi.get(__response__, 'inactive_flow_timeout'),
+        name=pulumi.get(__response__, 'name'),
+        protocol=pulumi.get(__response__, 'protocol'),
+        remarked_dscp=pulumi.get(__response__, 'remarked_dscp'),
+        sampling_interval=pulumi.get(__response__, 'sampling_interval'),
+        tos=pulumi.get(__response__, 'tos'),
+        type=pulumi.get(__response__, 'type'),
+        version=pulumi.get(__response__, 'version')))

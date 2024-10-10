@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 
 __all__ = [
@@ -214,9 +219,6 @@ def get_cedge_multicast_feature_template(id: Optional[str] = None,
         threshold=pulumi.get(__ret__, 'threshold'),
         threshold_variable=pulumi.get(__ret__, 'threshold_variable'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_cedge_multicast_feature_template)
 def get_cedge_multicast_feature_template_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                                 name: Optional[pulumi.Input[Optional[str]]] = None,
                                                 opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCedgeMulticastFeatureTemplateResult]:
@@ -236,4 +238,21 @@ def get_cedge_multicast_feature_template_output(id: Optional[pulumi.Input[Option
     :param str id: The id of the feature template
     :param str name: The name of the feature template
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getCedgeMulticastFeatureTemplate:getCedgeMulticastFeatureTemplate', __args__, opts=opts, typ=GetCedgeMulticastFeatureTemplateResult)
+    return __ret__.apply(lambda __response__: GetCedgeMulticastFeatureTemplateResult(
+        description=pulumi.get(__response__, 'description'),
+        device_types=pulumi.get(__response__, 'device_types'),
+        id=pulumi.get(__response__, 'id'),
+        local_replicator=pulumi.get(__response__, 'local_replicator'),
+        local_replicator_variable=pulumi.get(__response__, 'local_replicator_variable'),
+        name=pulumi.get(__response__, 'name'),
+        spt_only=pulumi.get(__response__, 'spt_only'),
+        spt_only_variable=pulumi.get(__response__, 'spt_only_variable'),
+        template_type=pulumi.get(__response__, 'template_type'),
+        threshold=pulumi.get(__response__, 'threshold'),
+        threshold_variable=pulumi.get(__response__, 'threshold_variable'),
+        version=pulumi.get(__response__, 'version')))

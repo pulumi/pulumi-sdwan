@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -147,9 +152,6 @@ def get_configuration_group(id: Optional[str] = None,
         solution=pulumi.get(__ret__, 'solution'),
         topology_devices=pulumi.get(__ret__, 'topology_devices'),
         topology_site_devices=pulumi.get(__ret__, 'topology_site_devices'))
-
-
-@_utilities.lift_output_func(get_configuration_group)
 def get_configuration_group_output(id: Optional[pulumi.Input[str]] = None,
                                    opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetConfigurationGroupResult]:
     """
@@ -167,4 +169,15 @@ def get_configuration_group_output(id: Optional[pulumi.Input[str]] = None,
 
     :param str id: The id of the object
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getConfigurationGroup:getConfigurationGroup', __args__, opts=opts, typ=GetConfigurationGroupResult)
+    return __ret__.apply(lambda __response__: GetConfigurationGroupResult(
+        description=pulumi.get(__response__, 'description'),
+        feature_profiles=pulumi.get(__response__, 'feature_profiles'),
+        id=pulumi.get(__response__, 'id'),
+        name=pulumi.get(__response__, 'name'),
+        solution=pulumi.get(__response__, 'solution'),
+        topology_devices=pulumi.get(__response__, 'topology_devices'),
+        topology_site_devices=pulumi.get(__response__, 'topology_site_devices')))

@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 
 __all__ = [
@@ -878,9 +883,6 @@ def get_system_omp_feature(feature_profile_id: Optional[str] = None,
         transport_gateway=pulumi.get(__ret__, 'transport_gateway'),
         transport_gateway_variable=pulumi.get(__ret__, 'transport_gateway_variable'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_system_omp_feature)
 def get_system_omp_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                   id: Optional[pulumi.Input[str]] = None,
                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSystemOmpFeatureResult]:
@@ -901,4 +903,72 @@ def get_system_omp_feature_output(feature_profile_id: Optional[pulumi.Input[str]
     :param str feature_profile_id: Feature Profile ID
     :param str id: The id of the Feature
     """
-    ...
+    __args__ = dict()
+    __args__['featureProfileId'] = feature_profile_id
+    __args__['id'] = id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getSystemOmpFeature:getSystemOmpFeature', __args__, opts=opts, typ=GetSystemOmpFeatureResult)
+    return __ret__.apply(lambda __response__: GetSystemOmpFeatureResult(
+        advertise_ipv4_bgp=pulumi.get(__response__, 'advertise_ipv4_bgp'),
+        advertise_ipv4_bgp_variable=pulumi.get(__response__, 'advertise_ipv4_bgp_variable'),
+        advertise_ipv4_connected=pulumi.get(__response__, 'advertise_ipv4_connected'),
+        advertise_ipv4_connected_variable=pulumi.get(__response__, 'advertise_ipv4_connected_variable'),
+        advertise_ipv4_eigrp=pulumi.get(__response__, 'advertise_ipv4_eigrp'),
+        advertise_ipv4_eigrp_variable=pulumi.get(__response__, 'advertise_ipv4_eigrp_variable'),
+        advertise_ipv4_isis=pulumi.get(__response__, 'advertise_ipv4_isis'),
+        advertise_ipv4_isis_variable=pulumi.get(__response__, 'advertise_ipv4_isis_variable'),
+        advertise_ipv4_lisp=pulumi.get(__response__, 'advertise_ipv4_lisp'),
+        advertise_ipv4_lisp_variable=pulumi.get(__response__, 'advertise_ipv4_lisp_variable'),
+        advertise_ipv4_ospf=pulumi.get(__response__, 'advertise_ipv4_ospf'),
+        advertise_ipv4_ospf_v3=pulumi.get(__response__, 'advertise_ipv4_ospf_v3'),
+        advertise_ipv4_ospf_v3_variable=pulumi.get(__response__, 'advertise_ipv4_ospf_v3_variable'),
+        advertise_ipv4_ospf_variable=pulumi.get(__response__, 'advertise_ipv4_ospf_variable'),
+        advertise_ipv4_static=pulumi.get(__response__, 'advertise_ipv4_static'),
+        advertise_ipv4_static_variable=pulumi.get(__response__, 'advertise_ipv4_static_variable'),
+        advertise_ipv6_bgp=pulumi.get(__response__, 'advertise_ipv6_bgp'),
+        advertise_ipv6_bgp_variable=pulumi.get(__response__, 'advertise_ipv6_bgp_variable'),
+        advertise_ipv6_connected=pulumi.get(__response__, 'advertise_ipv6_connected'),
+        advertise_ipv6_connected_variable=pulumi.get(__response__, 'advertise_ipv6_connected_variable'),
+        advertise_ipv6_eigrp=pulumi.get(__response__, 'advertise_ipv6_eigrp'),
+        advertise_ipv6_eigrp_variable=pulumi.get(__response__, 'advertise_ipv6_eigrp_variable'),
+        advertise_ipv6_isis=pulumi.get(__response__, 'advertise_ipv6_isis'),
+        advertise_ipv6_isis_variable=pulumi.get(__response__, 'advertise_ipv6_isis_variable'),
+        advertise_ipv6_lisp=pulumi.get(__response__, 'advertise_ipv6_lisp'),
+        advertise_ipv6_lisp_variable=pulumi.get(__response__, 'advertise_ipv6_lisp_variable'),
+        advertise_ipv6_ospf=pulumi.get(__response__, 'advertise_ipv6_ospf'),
+        advertise_ipv6_ospf_variable=pulumi.get(__response__, 'advertise_ipv6_ospf_variable'),
+        advertise_ipv6_static=pulumi.get(__response__, 'advertise_ipv6_static'),
+        advertise_ipv6_static_variable=pulumi.get(__response__, 'advertise_ipv6_static_variable'),
+        advertisement_interval=pulumi.get(__response__, 'advertisement_interval'),
+        advertisement_interval_variable=pulumi.get(__response__, 'advertisement_interval_variable'),
+        description=pulumi.get(__response__, 'description'),
+        ecmp_limit=pulumi.get(__response__, 'ecmp_limit'),
+        ecmp_limit_variable=pulumi.get(__response__, 'ecmp_limit_variable'),
+        eor_timer=pulumi.get(__response__, 'eor_timer'),
+        eor_timer_variable=pulumi.get(__response__, 'eor_timer_variable'),
+        feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),
+        graceful_restart=pulumi.get(__response__, 'graceful_restart'),
+        graceful_restart_timer=pulumi.get(__response__, 'graceful_restart_timer'),
+        graceful_restart_timer_variable=pulumi.get(__response__, 'graceful_restart_timer_variable'),
+        graceful_restart_variable=pulumi.get(__response__, 'graceful_restart_variable'),
+        holdtime=pulumi.get(__response__, 'holdtime'),
+        holdtime_variable=pulumi.get(__response__, 'holdtime_variable'),
+        id=pulumi.get(__response__, 'id'),
+        ignore_region_path_length=pulumi.get(__response__, 'ignore_region_path_length'),
+        ignore_region_path_length_variable=pulumi.get(__response__, 'ignore_region_path_length_variable'),
+        name=pulumi.get(__response__, 'name'),
+        omp_admin_distance_ipv4=pulumi.get(__response__, 'omp_admin_distance_ipv4'),
+        omp_admin_distance_ipv4_variable=pulumi.get(__response__, 'omp_admin_distance_ipv4_variable'),
+        omp_admin_distance_ipv6=pulumi.get(__response__, 'omp_admin_distance_ipv6'),
+        omp_admin_distance_ipv6_variable=pulumi.get(__response__, 'omp_admin_distance_ipv6_variable'),
+        overlay_as=pulumi.get(__response__, 'overlay_as'),
+        overlay_as_variable=pulumi.get(__response__, 'overlay_as_variable'),
+        paths_advertised_per_prefix=pulumi.get(__response__, 'paths_advertised_per_prefix'),
+        paths_advertised_per_prefix_variable=pulumi.get(__response__, 'paths_advertised_per_prefix_variable'),
+        shutdown=pulumi.get(__response__, 'shutdown'),
+        shutdown_variable=pulumi.get(__response__, 'shutdown_variable'),
+        site_types=pulumi.get(__response__, 'site_types'),
+        site_types_variable=pulumi.get(__response__, 'site_types_variable'),
+        transport_gateway=pulumi.get(__response__, 'transport_gateway'),
+        transport_gateway_variable=pulumi.get(__response__, 'transport_gateway_variable'),
+        version=pulumi.get(__response__, 'version')))

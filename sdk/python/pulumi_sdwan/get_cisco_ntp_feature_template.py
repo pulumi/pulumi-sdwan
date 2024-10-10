@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -267,9 +272,6 @@ def get_cisco_ntp_feature_template(id: Optional[str] = None,
         trusted_keys=pulumi.get(__ret__, 'trusted_keys'),
         trusted_keys_variable=pulumi.get(__ret__, 'trusted_keys_variable'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_cisco_ntp_feature_template)
 def get_cisco_ntp_feature_template_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                           name: Optional[pulumi.Input[Optional[str]]] = None,
                                           opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCiscoNtpFeatureTemplateResult]:
@@ -289,4 +291,25 @@ def get_cisco_ntp_feature_template_output(id: Optional[pulumi.Input[Optional[str
     :param str id: The id of the feature template
     :param str name: The name of the feature template
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['name'] = name
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('sdwan:index/getCiscoNtpFeatureTemplate:getCiscoNtpFeatureTemplate', __args__, opts=opts, typ=GetCiscoNtpFeatureTemplateResult)
+    return __ret__.apply(lambda __response__: GetCiscoNtpFeatureTemplateResult(
+        authentication_keys=pulumi.get(__response__, 'authentication_keys'),
+        description=pulumi.get(__response__, 'description'),
+        device_types=pulumi.get(__response__, 'device_types'),
+        id=pulumi.get(__response__, 'id'),
+        master=pulumi.get(__response__, 'master'),
+        master_source_interface=pulumi.get(__response__, 'master_source_interface'),
+        master_source_interface_variable=pulumi.get(__response__, 'master_source_interface_variable'),
+        master_stratum=pulumi.get(__response__, 'master_stratum'),
+        master_stratum_variable=pulumi.get(__response__, 'master_stratum_variable'),
+        master_variable=pulumi.get(__response__, 'master_variable'),
+        name=pulumi.get(__response__, 'name'),
+        servers=pulumi.get(__response__, 'servers'),
+        template_type=pulumi.get(__response__, 'template_type'),
+        trusted_keys=pulumi.get(__response__, 'trusted_keys'),
+        trusted_keys_variable=pulumi.get(__response__, 'trusted_keys_variable'),
+        version=pulumi.get(__response__, 'version')))
