@@ -68,8 +68,10 @@ import javax.annotation.Nullable;
  * 
  * ## Import
  * 
+ * Expected import identifier with the format: &#34;system_ipv6_device_access_feature_id,feature_profile_id&#34;
+ * 
  * ```sh
- * $ pulumi import sdwan:index/systemIpv6DeviceAccessFeature:SystemIpv6DeviceAccessFeature example &#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;
+ * $ pulumi import sdwan:index/systemIpv6DeviceAccessFeature:SystemIpv6DeviceAccessFeature example &#34;f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;
  * ```
  * 
  */

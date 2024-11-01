@@ -4,9 +4,10 @@
 package com.pulumi.sdwan.outputs;
 
 import com.pulumi.core.annotations.CustomType;
-import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 @CustomType
 public final class ExpandedCommunityListPolicyObjectEntry {
@@ -14,15 +15,15 @@ public final class ExpandedCommunityListPolicyObjectEntry {
      * @return Expanded community value, e.g. `100:1000`
      * 
      */
-    private String community;
+    private @Nullable String community;
 
     private ExpandedCommunityListPolicyObjectEntry() {}
     /**
      * @return Expanded community value, e.g. `100:1000`
      * 
      */
-    public String community() {
-        return this.community;
+    public Optional<String> community() {
+        return Optional.ofNullable(this.community);
     }
 
     public static Builder builder() {
@@ -34,7 +35,7 @@ public final class ExpandedCommunityListPolicyObjectEntry {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String community;
+        private @Nullable String community;
         public Builder() {}
         public Builder(ExpandedCommunityListPolicyObjectEntry defaults) {
     	      Objects.requireNonNull(defaults);
@@ -42,10 +43,8 @@ public final class ExpandedCommunityListPolicyObjectEntry {
         }
 
         @CustomType.Setter
-        public Builder community(String community) {
-            if (community == null) {
-              throw new MissingRequiredPropertyException("ExpandedCommunityListPolicyObjectEntry", "community");
-            }
+        public Builder community(@Nullable String community) {
+
             this.community = community;
             return this;
         }

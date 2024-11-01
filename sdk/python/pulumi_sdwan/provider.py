@@ -26,11 +26,11 @@ class ProviderArgs:
                  username: Optional[pulumi.Input[str]] = None):
         """
         The set of arguments for constructing a Provider resource.
-        :param pulumi.Input[bool] insecure: Allow insecure HTTPS client. This can also be set as the SDWAN_INSECURE environment variable. Defaults to `true`.
-        :param pulumi.Input[str] password: Password for the SD-WAN Manager account. This can also be set as the SDWAN_PASSWORD environment variable.
-        :param pulumi.Input[int] retries: Number of retries for REST API calls. This can also be set as the SDWAN_RETRIES environment variable. Defaults to `3`.
-        :param pulumi.Input[str] url: URL of the Cisco SD-WAN Manager device. This can also be set as the SDWAN_URL environment variable.
-        :param pulumi.Input[str] username: Username for the SD-WAN Manager account. This can also be set as the SDWAN_USERNAME environment variable.
+        :param pulumi.Input[bool] insecure: Allow insecure HTTPS client. This can also be set as the `SDWAN_INSECURE` environment variable. Defaults to `true`.
+        :param pulumi.Input[str] password: Password for the SD-WAN Manager account. This can also be set as the `SDWAN_PASSWORD` environment variable.
+        :param pulumi.Input[int] retries: Number of retries for REST API calls. This can also be set as the `SDWAN_RETRIES` environment variable. Defaults to `3`.
+        :param pulumi.Input[str] url: URL of the Cisco SD-WAN Manager device. This can also be set as the `SDWAN_URL` environment variable.
+        :param pulumi.Input[str] username: Username for the SD-WAN Manager account. This can also be set as the `SDWAN_USERNAME` environment variable.
         """
         if insecure is not None:
             pulumi.set(__self__, "insecure", insecure)
@@ -47,7 +47,7 @@ class ProviderArgs:
     @pulumi.getter
     def insecure(self) -> Optional[pulumi.Input[bool]]:
         """
-        Allow insecure HTTPS client. This can also be set as the SDWAN_INSECURE environment variable. Defaults to `true`.
+        Allow insecure HTTPS client. This can also be set as the `SDWAN_INSECURE` environment variable. Defaults to `true`.
         """
         return pulumi.get(self, "insecure")
 
@@ -59,7 +59,7 @@ class ProviderArgs:
     @pulumi.getter
     def password(self) -> Optional[pulumi.Input[str]]:
         """
-        Password for the SD-WAN Manager account. This can also be set as the SDWAN_PASSWORD environment variable.
+        Password for the SD-WAN Manager account. This can also be set as the `SDWAN_PASSWORD` environment variable.
         """
         return pulumi.get(self, "password")
 
@@ -71,7 +71,7 @@ class ProviderArgs:
     @pulumi.getter
     def retries(self) -> Optional[pulumi.Input[int]]:
         """
-        Number of retries for REST API calls. This can also be set as the SDWAN_RETRIES environment variable. Defaults to `3`.
+        Number of retries for REST API calls. This can also be set as the `SDWAN_RETRIES` environment variable. Defaults to `3`.
         """
         return pulumi.get(self, "retries")
 
@@ -83,7 +83,7 @@ class ProviderArgs:
     @pulumi.getter
     def url(self) -> Optional[pulumi.Input[str]]:
         """
-        URL of the Cisco SD-WAN Manager device. This can also be set as the SDWAN_URL environment variable.
+        URL of the Cisco SD-WAN Manager device. This can also be set as the `SDWAN_URL` environment variable.
         """
         return pulumi.get(self, "url")
 
@@ -95,7 +95,7 @@ class ProviderArgs:
     @pulumi.getter
     def username(self) -> Optional[pulumi.Input[str]]:
         """
-        Username for the SD-WAN Manager account. This can also be set as the SDWAN_USERNAME environment variable.
+        Username for the SD-WAN Manager account. This can also be set as the `SDWAN_USERNAME` environment variable.
         """
         return pulumi.get(self, "username")
 
@@ -123,11 +123,11 @@ class Provider(pulumi.ProviderResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[bool] insecure: Allow insecure HTTPS client. This can also be set as the SDWAN_INSECURE environment variable. Defaults to `true`.
-        :param pulumi.Input[str] password: Password for the SD-WAN Manager account. This can also be set as the SDWAN_PASSWORD environment variable.
-        :param pulumi.Input[int] retries: Number of retries for REST API calls. This can also be set as the SDWAN_RETRIES environment variable. Defaults to `3`.
-        :param pulumi.Input[str] url: URL of the Cisco SD-WAN Manager device. This can also be set as the SDWAN_URL environment variable.
-        :param pulumi.Input[str] username: Username for the SD-WAN Manager account. This can also be set as the SDWAN_USERNAME environment variable.
+        :param pulumi.Input[bool] insecure: Allow insecure HTTPS client. This can also be set as the `SDWAN_INSECURE` environment variable. Defaults to `true`.
+        :param pulumi.Input[str] password: Password for the SD-WAN Manager account. This can also be set as the `SDWAN_PASSWORD` environment variable.
+        :param pulumi.Input[int] retries: Number of retries for REST API calls. This can also be set as the `SDWAN_RETRIES` environment variable. Defaults to `3`.
+        :param pulumi.Input[str] url: URL of the Cisco SD-WAN Manager device. This can also be set as the `SDWAN_URL` environment variable.
+        :param pulumi.Input[str] username: Username for the SD-WAN Manager account. This can also be set as the `SDWAN_USERNAME` environment variable.
         """
         ...
     @overload
@@ -187,7 +187,7 @@ class Provider(pulumi.ProviderResource):
     @pulumi.getter
     def password(self) -> pulumi.Output[Optional[str]]:
         """
-        Password for the SD-WAN Manager account. This can also be set as the SDWAN_PASSWORD environment variable.
+        Password for the SD-WAN Manager account. This can also be set as the `SDWAN_PASSWORD` environment variable.
         """
         return pulumi.get(self, "password")
 
@@ -195,7 +195,7 @@ class Provider(pulumi.ProviderResource):
     @pulumi.getter
     def url(self) -> pulumi.Output[Optional[str]]:
         """
-        URL of the Cisco SD-WAN Manager device. This can also be set as the SDWAN_URL environment variable.
+        URL of the Cisco SD-WAN Manager device. This can also be set as the `SDWAN_URL` environment variable.
         """
         return pulumi.get(self, "url")
 
@@ -203,7 +203,7 @@ class Provider(pulumi.ProviderResource):
     @pulumi.getter
     def username(self) -> pulumi.Output[Optional[str]]:
         """
-        Username for the SD-WAN Manager account. This can also be set as the SDWAN_USERNAME environment variable.
+        Username for the SD-WAN Manager account. This can also be set as the `SDWAN_USERNAME` environment variable.
         """
         return pulumi.get(self, "username")
 

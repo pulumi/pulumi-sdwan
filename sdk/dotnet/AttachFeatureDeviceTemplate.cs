@@ -11,6 +11,14 @@ namespace Pulumi.Sdwan
 {
     /// <summary>
     /// This resource can attach a feature device template. Due to limitations of the API, once a device template is attached to a device, only one change can be applied per `pulumi up` operation. More information is available here.
+    /// 
+    /// ## Import
+    /// 
+    /// One feature device template ID and a comma separated list containing at least one device ID must be included:
+    /// 
+    /// ```sh
+    /// $ pulumi import sdwan:index/attachFeatureDeviceTemplate:AttachFeatureDeviceTemplate example "f6b2c44c-693c-4763-b010-895aa3d236bd,[C8K-83E4B5EE-52AC-075F-B5E4-0050110680F3,C8K-C38D156C-34E4-909A-15BB-96D0E9D0E808]"
+    /// ```
     /// </summary>
     [SdwanResourceType("sdwan:index/attachFeatureDeviceTemplate:AttachFeatureDeviceTemplate")]
     public partial class AttachFeatureDeviceTemplate : global::Pulumi.CustomResource

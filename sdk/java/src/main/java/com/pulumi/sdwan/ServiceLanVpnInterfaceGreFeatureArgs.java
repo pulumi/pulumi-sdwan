@@ -142,15 +142,15 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
      * Interface name (1..255)
      * 
      */
-    @Import(name="interfaceName", required=true)
-    private Output<String> interfaceName;
+    @Import(name="interfaceName")
+    private @Nullable Output<String> interfaceName;
 
     /**
      * @return Interface name (1..255)
      * 
      */
-    public Output<String> interfaceName() {
-        return this.interfaceName;
+    public Optional<Output<String>> interfaceName() {
+        return Optional.ofNullable(this.interfaceName);
     }
 
     /**
@@ -198,11 +198,11 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         return Optional.ofNullable(this.ipMtuVariable);
     }
 
-    @Import(name="ipv4Address", required=true)
-    private Output<String> ipv4Address;
+    @Import(name="ipv4Address")
+    private @Nullable Output<String> ipv4Address;
 
-    public Output<String> ipv4Address() {
-        return this.ipv4Address;
+    public Optional<Output<String>> ipv4Address() {
+        return Optional.ofNullable(this.ipv4Address);
     }
 
     /**
@@ -228,8 +228,8 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
      *   `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
-    @Import(name="ipv4SubnetMask", required=true)
-    private Output<String> ipv4SubnetMask;
+    @Import(name="ipv4SubnetMask")
+    private @Nullable Output<String> ipv4SubnetMask;
 
     /**
      * @return - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
@@ -239,8 +239,8 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
      * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
-    public Output<String> ipv4SubnetMask() {
-        return this.ipv4SubnetMask;
+    public Optional<Output<String>> ipv4SubnetMask() {
+        return Optional.ofNullable(this.ipv4SubnetMask);
     }
 
     /**
@@ -352,15 +352,15 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
      * Tunnel destination IP Address
      * 
      */
-    @Import(name="tunnelDestinationIpv4Address", required=true)
-    private Output<String> tunnelDestinationIpv4Address;
+    @Import(name="tunnelDestinationIpv4Address")
+    private @Nullable Output<String> tunnelDestinationIpv4Address;
 
     /**
      * @return Tunnel destination IP Address
      * 
      */
-    public Output<String> tunnelDestinationIpv4Address() {
-        return this.tunnelDestinationIpv4Address;
+    public Optional<Output<String>> tunnelDestinationIpv4Address() {
+        return Optional.ofNullable(this.tunnelDestinationIpv4Address);
     }
 
     /**
@@ -727,7 +727,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder interfaceName(Output<String> interfaceName) {
+        public Builder interfaceName(@Nullable Output<String> interfaceName) {
             $.interfaceName = interfaceName;
             return this;
         }
@@ -805,7 +805,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
             return ipMtuVariable(Output.of(ipMtuVariable));
         }
 
-        public Builder ipv4Address(Output<String> ipv4Address) {
+        public Builder ipv4Address(@Nullable Output<String> ipv4Address) {
             $.ipv4Address = ipv4Address;
             return this;
         }
@@ -845,7 +845,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder ipv4SubnetMask(Output<String> ipv4SubnetMask) {
+        public Builder ipv4SubnetMask(@Nullable Output<String> ipv4SubnetMask) {
             $.ipv4SubnetMask = ipv4SubnetMask;
             return this;
         }
@@ -1017,7 +1017,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder tunnelDestinationIpv4Address(Output<String> tunnelDestinationIpv4Address) {
+        public Builder tunnelDestinationIpv4Address(@Nullable Output<String> tunnelDestinationIpv4Address) {
             $.tunnelDestinationIpv4Address = tunnelDestinationIpv4Address;
             return this;
         }
@@ -1224,18 +1224,6 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         public ServiceLanVpnInterfaceGreFeatureArgs build() {
             if ($.featureProfileId == null) {
                 throw new MissingRequiredPropertyException("ServiceLanVpnInterfaceGreFeatureArgs", "featureProfileId");
-            }
-            if ($.interfaceName == null) {
-                throw new MissingRequiredPropertyException("ServiceLanVpnInterfaceGreFeatureArgs", "interfaceName");
-            }
-            if ($.ipv4Address == null) {
-                throw new MissingRequiredPropertyException("ServiceLanVpnInterfaceGreFeatureArgs", "ipv4Address");
-            }
-            if ($.ipv4SubnetMask == null) {
-                throw new MissingRequiredPropertyException("ServiceLanVpnInterfaceGreFeatureArgs", "ipv4SubnetMask");
-            }
-            if ($.tunnelDestinationIpv4Address == null) {
-                throw new MissingRequiredPropertyException("ServiceLanVpnInterfaceGreFeatureArgs", "tunnelDestinationIpv4Address");
             }
             return $;
         }

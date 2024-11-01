@@ -18,14 +18,14 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     public static final ProviderArgs Empty = new ProviderArgs();
 
     /**
-     * Allow insecure HTTPS client. This can also be set as the SDWAN_INSECURE environment variable. Defaults to `true`.
+     * Allow insecure HTTPS client. This can also be set as the `SDWAN_INSECURE` environment variable. Defaults to `true`.
      * 
      */
     @Import(name="insecure", json=true)
     private @Nullable Output<Boolean> insecure;
 
     /**
-     * @return Allow insecure HTTPS client. This can also be set as the SDWAN_INSECURE environment variable. Defaults to `true`.
+     * @return Allow insecure HTTPS client. This can also be set as the `SDWAN_INSECURE` environment variable. Defaults to `true`.
      * 
      */
     public Optional<Output<Boolean>> insecure() {
@@ -33,14 +33,14 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Password for the SD-WAN Manager account. This can also be set as the SDWAN_PASSWORD environment variable.
+     * Password for the SD-WAN Manager account. This can also be set as the `SDWAN_PASSWORD` environment variable.
      * 
      */
     @Import(name="password")
     private @Nullable Output<String> password;
 
     /**
-     * @return Password for the SD-WAN Manager account. This can also be set as the SDWAN_PASSWORD environment variable.
+     * @return Password for the SD-WAN Manager account. This can also be set as the `SDWAN_PASSWORD` environment variable.
      * 
      */
     public Optional<Output<String>> password() {
@@ -48,14 +48,14 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Number of retries for REST API calls. This can also be set as the SDWAN_RETRIES environment variable. Defaults to `3`.
+     * Number of retries for REST API calls. This can also be set as the `SDWAN_RETRIES` environment variable. Defaults to `3`.
      * 
      */
     @Import(name="retries", json=true)
     private @Nullable Output<Integer> retries;
 
     /**
-     * @return Number of retries for REST API calls. This can also be set as the SDWAN_RETRIES environment variable. Defaults to `3`.
+     * @return Number of retries for REST API calls. This can also be set as the `SDWAN_RETRIES` environment variable. Defaults to `3`.
      * 
      */
     public Optional<Output<Integer>> retries() {
@@ -63,14 +63,14 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * URL of the Cisco SD-WAN Manager device. This can also be set as the SDWAN_URL environment variable.
+     * URL of the Cisco SD-WAN Manager device. This can also be set as the `SDWAN_URL` environment variable.
      * 
      */
     @Import(name="url")
     private @Nullable Output<String> url;
 
     /**
-     * @return URL of the Cisco SD-WAN Manager device. This can also be set as the SDWAN_URL environment variable.
+     * @return URL of the Cisco SD-WAN Manager device. This can also be set as the `SDWAN_URL` environment variable.
      * 
      */
     public Optional<Output<String>> url() {
@@ -78,14 +78,14 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Username for the SD-WAN Manager account. This can also be set as the SDWAN_USERNAME environment variable.
+     * Username for the SD-WAN Manager account. This can also be set as the `SDWAN_USERNAME` environment variable.
      * 
      */
     @Import(name="username")
     private @Nullable Output<String> username;
 
     /**
-     * @return Username for the SD-WAN Manager account. This can also be set as the SDWAN_USERNAME environment variable.
+     * @return Username for the SD-WAN Manager account. This can also be set as the `SDWAN_USERNAME` environment variable.
      * 
      */
     public Optional<Output<String>> username() {
@@ -121,7 +121,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param insecure Allow insecure HTTPS client. This can also be set as the SDWAN_INSECURE environment variable. Defaults to `true`.
+         * @param insecure Allow insecure HTTPS client. This can also be set as the `SDWAN_INSECURE` environment variable. Defaults to `true`.
          * 
          * @return builder
          * 
@@ -132,7 +132,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param insecure Allow insecure HTTPS client. This can also be set as the SDWAN_INSECURE environment variable. Defaults to `true`.
+         * @param insecure Allow insecure HTTPS client. This can also be set as the `SDWAN_INSECURE` environment variable. Defaults to `true`.
          * 
          * @return builder
          * 
@@ -142,7 +142,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param password Password for the SD-WAN Manager account. This can also be set as the SDWAN_PASSWORD environment variable.
+         * @param password Password for the SD-WAN Manager account. This can also be set as the `SDWAN_PASSWORD` environment variable.
          * 
          * @return builder
          * 
@@ -153,7 +153,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param password Password for the SD-WAN Manager account. This can also be set as the SDWAN_PASSWORD environment variable.
+         * @param password Password for the SD-WAN Manager account. This can also be set as the `SDWAN_PASSWORD` environment variable.
          * 
          * @return builder
          * 
@@ -163,7 +163,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param retries Number of retries for REST API calls. This can also be set as the SDWAN_RETRIES environment variable. Defaults to `3`.
+         * @param retries Number of retries for REST API calls. This can also be set as the `SDWAN_RETRIES` environment variable. Defaults to `3`.
          * 
          * @return builder
          * 
@@ -174,7 +174,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param retries Number of retries for REST API calls. This can also be set as the SDWAN_RETRIES environment variable. Defaults to `3`.
+         * @param retries Number of retries for REST API calls. This can also be set as the `SDWAN_RETRIES` environment variable. Defaults to `3`.
          * 
          * @return builder
          * 
@@ -184,7 +184,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param url URL of the Cisco SD-WAN Manager device. This can also be set as the SDWAN_URL environment variable.
+         * @param url URL of the Cisco SD-WAN Manager device. This can also be set as the `SDWAN_URL` environment variable.
          * 
          * @return builder
          * 
@@ -195,7 +195,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param url URL of the Cisco SD-WAN Manager device. This can also be set as the SDWAN_URL environment variable.
+         * @param url URL of the Cisco SD-WAN Manager device. This can also be set as the `SDWAN_URL` environment variable.
          * 
          * @return builder
          * 
@@ -205,7 +205,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param username Username for the SD-WAN Manager account. This can also be set as the SDWAN_USERNAME environment variable.
+         * @param username Username for the SD-WAN Manager account. This can also be set as the `SDWAN_USERNAME` environment variable.
          * 
          * @return builder
          * 
@@ -216,7 +216,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param username Username for the SD-WAN Manager account. This can also be set as the SDWAN_USERNAME environment variable.
+         * @param username Username for the SD-WAN Manager account. This can also be set as the `SDWAN_USERNAME` environment variable.
          * 
          * @return builder
          * 

@@ -73,11 +73,25 @@ class AwaitableGetPolicyObjectFeatureProfileResult(GetPolicyObjectFeatureProfile
             name=self.name)
 
 
-def get_policy_object_feature_profile(opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetPolicyObjectFeatureProfileResult:
+def get_policy_object_feature_profile(id: Optional[str] = None,
+                                      opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetPolicyObjectFeatureProfileResult:
     """
     This data source can read the Policy Object Feature Profile .
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_sdwan as sdwan
+
+    example = sdwan.get_policy_object_feature_profile(id="f6b2c44c-693c-4763-b010-895aa3d236bd")
+    ```
+
+
+    :param str id: The id of the object
     """
     __args__ = dict()
+    __args__['id'] = id
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('sdwan:index/getPolicyObjectFeatureProfile:getPolicyObjectFeatureProfile', __args__, opts=opts, typ=GetPolicyObjectFeatureProfileResult).value
 
@@ -85,11 +99,25 @@ def get_policy_object_feature_profile(opts: Optional[pulumi.InvokeOptions] = Non
         description=pulumi.get(__ret__, 'description'),
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'))
-def get_policy_object_feature_profile_output(opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetPolicyObjectFeatureProfileResult]:
+def get_policy_object_feature_profile_output(id: Optional[pulumi.Input[str]] = None,
+                                             opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetPolicyObjectFeatureProfileResult]:
     """
     This data source can read the Policy Object Feature Profile .
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_sdwan as sdwan
+
+    example = sdwan.get_policy_object_feature_profile(id="f6b2c44c-693c-4763-b010-895aa3d236bd")
+    ```
+
+
+    :param str id: The id of the object
     """
     __args__ = dict()
+    __args__['id'] = id
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getPolicyObjectFeatureProfile:getPolicyObjectFeatureProfile', __args__, opts=opts, typ=GetPolicyObjectFeatureProfileResult)
     return __ret__.apply(lambda __response__: GetPolicyObjectFeatureProfileResult(

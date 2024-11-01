@@ -6,6 +6,7 @@ package com.pulumi.sdwan;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import com.pulumi.sdwan.inputs.ConfigurationGroupDeviceArgs;
 import com.pulumi.sdwan.inputs.ConfigurationGroupFeatureProfileArgs;
 import com.pulumi.sdwan.inputs.ConfigurationGroupTopologyDeviceArgs;
 import java.lang.Integer;
@@ -36,6 +37,21 @@ public final class ConfigurationGroupArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
+     * List of devices
+     * 
+     */
+    @Import(name="devices")
+    private @Nullable Output<List<ConfigurationGroupDeviceArgs>> devices;
+
+    /**
+     * @return List of devices
+     * 
+     */
+    public Optional<Output<List<ConfigurationGroupDeviceArgs>>> devices() {
+        return Optional.ofNullable(this.devices);
+    }
+
+    /**
      * List of feature profiles
      * 
      */
@@ -48,6 +64,21 @@ public final class ConfigurationGroupArgs extends com.pulumi.resources.ResourceA
      */
     public Optional<Output<List<ConfigurationGroupFeatureProfileArgs>>> featureProfiles() {
         return Optional.ofNullable(this.featureProfiles);
+    }
+
+    /**
+     * List of all associated feature versions
+     * 
+     */
+    @Import(name="featureVersions")
+    private @Nullable Output<List<String>> featureVersions;
+
+    /**
+     * @return List of all associated feature versions
+     * 
+     */
+    public Optional<Output<List<String>>> featureVersions() {
+        return Optional.ofNullable(this.featureVersions);
     }
 
     /**
@@ -114,7 +145,9 @@ public final class ConfigurationGroupArgs extends com.pulumi.resources.ResourceA
 
     private ConfigurationGroupArgs(ConfigurationGroupArgs $) {
         this.description = $.description;
+        this.devices = $.devices;
         this.featureProfiles = $.featureProfiles;
+        this.featureVersions = $.featureVersions;
         this.name = $.name;
         this.solution = $.solution;
         this.topologyDevices = $.topologyDevices;
@@ -161,6 +194,37 @@ public final class ConfigurationGroupArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
+         * @param devices List of devices
+         * 
+         * @return builder
+         * 
+         */
+        public Builder devices(@Nullable Output<List<ConfigurationGroupDeviceArgs>> devices) {
+            $.devices = devices;
+            return this;
+        }
+
+        /**
+         * @param devices List of devices
+         * 
+         * @return builder
+         * 
+         */
+        public Builder devices(List<ConfigurationGroupDeviceArgs> devices) {
+            return devices(Output.of(devices));
+        }
+
+        /**
+         * @param devices List of devices
+         * 
+         * @return builder
+         * 
+         */
+        public Builder devices(ConfigurationGroupDeviceArgs... devices) {
+            return devices(List.of(devices));
+        }
+
+        /**
          * @param featureProfiles List of feature profiles
          * 
          * @return builder
@@ -189,6 +253,37 @@ public final class ConfigurationGroupArgs extends com.pulumi.resources.ResourceA
          */
         public Builder featureProfiles(ConfigurationGroupFeatureProfileArgs... featureProfiles) {
             return featureProfiles(List.of(featureProfiles));
+        }
+
+        /**
+         * @param featureVersions List of all associated feature versions
+         * 
+         * @return builder
+         * 
+         */
+        public Builder featureVersions(@Nullable Output<List<String>> featureVersions) {
+            $.featureVersions = featureVersions;
+            return this;
+        }
+
+        /**
+         * @param featureVersions List of all associated feature versions
+         * 
+         * @return builder
+         * 
+         */
+        public Builder featureVersions(List<String> featureVersions) {
+            return featureVersions(Output.of(featureVersions));
+        }
+
+        /**
+         * @param featureVersions List of all associated feature versions
+         * 
+         * @return builder
+         * 
+         */
+        public Builder featureVersions(String... featureVersions) {
+            return featureVersions(List.of(featureVersions));
         }
 
         /**

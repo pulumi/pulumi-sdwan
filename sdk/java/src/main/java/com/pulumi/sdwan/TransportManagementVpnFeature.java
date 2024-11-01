@@ -72,6 +72,7 @@ import javax.annotation.Nullable;
  *                 .build())
  *             .ipv6StaticRoutes(TransportManagementVpnFeatureIpv6StaticRouteArgs.builder()
  *                 .prefix("2002::/16")
+ *                 .gateway("next_hop")
  *                 .next_hops(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .build())
  *             .build());
@@ -84,8 +85,10 @@ import javax.annotation.Nullable;
  * 
  * ## Import
  * 
+ * Expected import identifier with the format: &#34;transport_management_vpn_feature_id,feature_profile_id&#34;
+ * 
  * ```sh
- * $ pulumi import sdwan:index/transportManagementVpnFeature:TransportManagementVpnFeature example &#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;
+ * $ pulumi import sdwan:index/transportManagementVpnFeature:TransportManagementVpnFeature example &#34;f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;
  * ```
  * 
  */

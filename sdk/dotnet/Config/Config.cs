@@ -34,7 +34,7 @@ namespace Pulumi.Sdwan
 
         private static readonly __Value<bool?> _insecure = new __Value<bool?>(() => __config.GetBoolean("insecure"));
         /// <summary>
-        /// Allow insecure HTTPS client. This can also be set as the SDWAN_INSECURE environment variable. Defaults to `true`.
+        /// Allow insecure HTTPS client. This can also be set as the `SDWAN_INSECURE` environment variable. Defaults to `true`.
         /// </summary>
         public static bool? Insecure
         {
@@ -44,7 +44,7 @@ namespace Pulumi.Sdwan
 
         private static readonly __Value<string?> _password = new __Value<string?>(() => __config.Get("password"));
         /// <summary>
-        /// Password for the SD-WAN Manager account. This can also be set as the SDWAN_PASSWORD environment variable.
+        /// Password for the SD-WAN Manager account. This can also be set as the `SDWAN_PASSWORD` environment variable.
         /// </summary>
         public static string? Password
         {
@@ -54,7 +54,7 @@ namespace Pulumi.Sdwan
 
         private static readonly __Value<int?> _retries = new __Value<int?>(() => __config.GetInt32("retries"));
         /// <summary>
-        /// Number of retries for REST API calls. This can also be set as the SDWAN_RETRIES environment variable. Defaults to `3`.
+        /// Number of retries for REST API calls. This can also be set as the `SDWAN_RETRIES` environment variable. Defaults to `3`.
         /// </summary>
         public static int? Retries
         {
@@ -64,7 +64,7 @@ namespace Pulumi.Sdwan
 
         private static readonly __Value<string?> _url = new __Value<string?>(() => __config.Get("url"));
         /// <summary>
-        /// URL of the Cisco SD-WAN Manager device. This can also be set as the SDWAN_URL environment variable.
+        /// URL of the Cisco SD-WAN Manager device. This can also be set as the `SDWAN_URL` environment variable.
         /// </summary>
         public static string? Url
         {
@@ -74,7 +74,7 @@ namespace Pulumi.Sdwan
 
         private static readonly __Value<string?> _username = new __Value<string?>(() => __config.Get("username"));
         /// <summary>
-        /// Username for the SD-WAN Manager account. This can also be set as the SDWAN_USERNAME environment variable.
+        /// Username for the SD-WAN Manager account. This can also be set as the `SDWAN_USERNAME` environment variable.
         /// </summary>
         public static string? Username
         {

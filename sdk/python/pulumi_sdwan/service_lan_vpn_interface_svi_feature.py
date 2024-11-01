@@ -22,9 +22,6 @@ __all__ = ['ServiceLanVpnInterfaceSviFeatureArgs', 'ServiceLanVpnInterfaceSviFea
 class ServiceLanVpnInterfaceSviFeatureArgs:
     def __init__(__self__, *,
                  feature_profile_id: pulumi.Input[str],
-                 interface_name: pulumi.Input[str],
-                 ipv4_address: pulumi.Input[str],
-                 ipv4_subnet_mask: pulumi.Input[str],
                  arp_timeout: Optional[pulumi.Input[int]] = None,
                  arp_timeout_variable: Optional[pulumi.Input[str]] = None,
                  arps: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceSviFeatureArpArgs']]]] = None,
@@ -37,15 +34,18 @@ class ServiceLanVpnInterfaceSviFeatureArgs:
                  interface_description_variable: Optional[pulumi.Input[str]] = None,
                  interface_mtu: Optional[pulumi.Input[int]] = None,
                  interface_mtu_variable: Optional[pulumi.Input[str]] = None,
+                 interface_name: Optional[pulumi.Input[str]] = None,
                  interface_name_variable: Optional[pulumi.Input[str]] = None,
                  ip_directed_broadcast: Optional[pulumi.Input[bool]] = None,
                  ip_directed_broadcast_variable: Optional[pulumi.Input[str]] = None,
                  ip_mtu: Optional[pulumi.Input[int]] = None,
                  ip_mtu_variable: Optional[pulumi.Input[str]] = None,
+                 ipv4_address: Optional[pulumi.Input[str]] = None,
                  ipv4_address_variable: Optional[pulumi.Input[str]] = None,
                  ipv4_dhcp_helpers: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  ipv4_dhcp_helpers_variable: Optional[pulumi.Input[str]] = None,
                  ipv4_secondary_addresses: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceSviFeatureIpv4SecondaryAddressArgs']]]] = None,
+                 ipv4_subnet_mask: Optional[pulumi.Input[str]] = None,
                  ipv4_subnet_mask_variable: Optional[pulumi.Input[str]] = None,
                  ipv4_vrrps: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceSviFeatureIpv4VrrpArgs']]]] = None,
                  ipv6_address: Optional[pulumi.Input[str]] = None,
@@ -62,13 +62,6 @@ class ServiceLanVpnInterfaceSviFeatureArgs:
         """
         The set of arguments for constructing a ServiceLanVpnInterfaceSviFeature resource.
         :param pulumi.Input[str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[str] interface_name: Interface name: VLAN 1 - VLAN 4094 when present
-        :param pulumi.Input[str] ipv4_address: IP Address
-        :param pulumi.Input[str] ipv4_subnet_mask: Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-               `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-               `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-               `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-               `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[int] arp_timeout: Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2678400` - Default value: `1200`
         :param pulumi.Input[str] arp_timeout_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceSviFeatureArpArgs']]] arps: Configure static ARP entries
@@ -81,15 +74,22 @@ class ServiceLanVpnInterfaceSviFeatureArgs:
         :param pulumi.Input[str] interface_description_variable: Variable name
         :param pulumi.Input[int] interface_mtu: Interface MTU <1500..9216> in bytes - Range: `1500`-`9216` - Default value: `1500`
         :param pulumi.Input[str] interface_mtu_variable: Variable name
+        :param pulumi.Input[str] interface_name: Interface name: VLAN 1 - VLAN 4094 when present
         :param pulumi.Input[str] interface_name_variable: Variable name
         :param pulumi.Input[bool] ip_directed_broadcast: IP Directed-Broadcast - Default value: `false`
         :param pulumi.Input[str] ip_directed_broadcast_variable: Variable name
         :param pulumi.Input[int] ip_mtu: IP MTU <576..Interface MTU>, in bytes - Range: `576`-`9216` - Default value: `1500`
         :param pulumi.Input[str] ip_mtu_variable: Variable name
+        :param pulumi.Input[str] ipv4_address: IP Address
         :param pulumi.Input[str] ipv4_address_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[str]]] ipv4_dhcp_helpers: List of DHCP helper addresses
         :param pulumi.Input[str] ipv4_dhcp_helpers_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceSviFeatureIpv4SecondaryAddressArgs']]] ipv4_secondary_addresses: Assign secondary IP addresses
+        :param pulumi.Input[str] ipv4_subnet_mask: Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
+               `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
+               `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
+               `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
+               `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[str] ipv4_subnet_mask_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceSviFeatureIpv4VrrpArgs']]] ipv4_vrrps: Enable ipv4 VRRP
         :param pulumi.Input[str] ipv6_address: Assign IPv6 address
@@ -105,9 +105,6 @@ class ServiceLanVpnInterfaceSviFeatureArgs:
         :param pulumi.Input[str] tcp_mss_variable: Variable name
         """
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
-        pulumi.set(__self__, "interface_name", interface_name)
-        pulumi.set(__self__, "ipv4_address", ipv4_address)
-        pulumi.set(__self__, "ipv4_subnet_mask", ipv4_subnet_mask)
         if arp_timeout is not None:
             pulumi.set(__self__, "arp_timeout", arp_timeout)
         if arp_timeout_variable is not None:
@@ -132,6 +129,8 @@ class ServiceLanVpnInterfaceSviFeatureArgs:
             pulumi.set(__self__, "interface_mtu", interface_mtu)
         if interface_mtu_variable is not None:
             pulumi.set(__self__, "interface_mtu_variable", interface_mtu_variable)
+        if interface_name is not None:
+            pulumi.set(__self__, "interface_name", interface_name)
         if interface_name_variable is not None:
             pulumi.set(__self__, "interface_name_variable", interface_name_variable)
         if ip_directed_broadcast is not None:
@@ -142,6 +141,8 @@ class ServiceLanVpnInterfaceSviFeatureArgs:
             pulumi.set(__self__, "ip_mtu", ip_mtu)
         if ip_mtu_variable is not None:
             pulumi.set(__self__, "ip_mtu_variable", ip_mtu_variable)
+        if ipv4_address is not None:
+            pulumi.set(__self__, "ipv4_address", ipv4_address)
         if ipv4_address_variable is not None:
             pulumi.set(__self__, "ipv4_address_variable", ipv4_address_variable)
         if ipv4_dhcp_helpers is not None:
@@ -150,6 +151,8 @@ class ServiceLanVpnInterfaceSviFeatureArgs:
             pulumi.set(__self__, "ipv4_dhcp_helpers_variable", ipv4_dhcp_helpers_variable)
         if ipv4_secondary_addresses is not None:
             pulumi.set(__self__, "ipv4_secondary_addresses", ipv4_secondary_addresses)
+        if ipv4_subnet_mask is not None:
+            pulumi.set(__self__, "ipv4_subnet_mask", ipv4_subnet_mask)
         if ipv4_subnet_mask_variable is not None:
             pulumi.set(__self__, "ipv4_subnet_mask_variable", ipv4_subnet_mask_variable)
         if ipv4_vrrps is not None:
@@ -188,46 +191,6 @@ class ServiceLanVpnInterfaceSviFeatureArgs:
     @feature_profile_id.setter
     def feature_profile_id(self, value: pulumi.Input[str]):
         pulumi.set(self, "feature_profile_id", value)
-
-    @property
-    @pulumi.getter(name="interfaceName")
-    def interface_name(self) -> pulumi.Input[str]:
-        """
-        Interface name: VLAN 1 - VLAN 4094 when present
-        """
-        return pulumi.get(self, "interface_name")
-
-    @interface_name.setter
-    def interface_name(self, value: pulumi.Input[str]):
-        pulumi.set(self, "interface_name", value)
-
-    @property
-    @pulumi.getter(name="ipv4Address")
-    def ipv4_address(self) -> pulumi.Input[str]:
-        """
-        IP Address
-        """
-        return pulumi.get(self, "ipv4_address")
-
-    @ipv4_address.setter
-    def ipv4_address(self, value: pulumi.Input[str]):
-        pulumi.set(self, "ipv4_address", value)
-
-    @property
-    @pulumi.getter(name="ipv4SubnetMask")
-    def ipv4_subnet_mask(self) -> pulumi.Input[str]:
-        """
-        Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
-        """
-        return pulumi.get(self, "ipv4_subnet_mask")
-
-    @ipv4_subnet_mask.setter
-    def ipv4_subnet_mask(self, value: pulumi.Input[str]):
-        pulumi.set(self, "ipv4_subnet_mask", value)
 
     @property
     @pulumi.getter(name="arpTimeout")
@@ -374,6 +337,18 @@ class ServiceLanVpnInterfaceSviFeatureArgs:
         pulumi.set(self, "interface_mtu_variable", value)
 
     @property
+    @pulumi.getter(name="interfaceName")
+    def interface_name(self) -> Optional[pulumi.Input[str]]:
+        """
+        Interface name: VLAN 1 - VLAN 4094 when present
+        """
+        return pulumi.get(self, "interface_name")
+
+    @interface_name.setter
+    def interface_name(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "interface_name", value)
+
+    @property
     @pulumi.getter(name="interfaceNameVariable")
     def interface_name_variable(self) -> Optional[pulumi.Input[str]]:
         """
@@ -434,6 +409,18 @@ class ServiceLanVpnInterfaceSviFeatureArgs:
         pulumi.set(self, "ip_mtu_variable", value)
 
     @property
+    @pulumi.getter(name="ipv4Address")
+    def ipv4_address(self) -> Optional[pulumi.Input[str]]:
+        """
+        IP Address
+        """
+        return pulumi.get(self, "ipv4_address")
+
+    @ipv4_address.setter
+    def ipv4_address(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "ipv4_address", value)
+
+    @property
     @pulumi.getter(name="ipv4AddressVariable")
     def ipv4_address_variable(self) -> Optional[pulumi.Input[str]]:
         """
@@ -480,6 +467,22 @@ class ServiceLanVpnInterfaceSviFeatureArgs:
     @ipv4_secondary_addresses.setter
     def ipv4_secondary_addresses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceSviFeatureIpv4SecondaryAddressArgs']]]]):
         pulumi.set(self, "ipv4_secondary_addresses", value)
+
+    @property
+    @pulumi.getter(name="ipv4SubnetMask")
+    def ipv4_subnet_mask(self) -> Optional[pulumi.Input[str]]:
+        """
+        Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
+        `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
+        `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
+        `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
+        `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        """
+        return pulumi.get(self, "ipv4_subnet_mask")
+
+    @ipv4_subnet_mask.setter
+    def ipv4_subnet_mask(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "ipv4_subnet_mask", value)
 
     @property
     @pulumi.getter(name="ipv4SubnetMaskVariable")
@@ -1328,8 +1331,10 @@ class ServiceLanVpnInterfaceSviFeature(pulumi.CustomResource):
 
         ## Import
 
+        Expected import identifier with the format: "service_lan_vpn_interface_svi_feature_id,feature_profile_id,service_lan_vpn_feature_id"
+
         ```sh
-        $ pulumi import sdwan:index/serviceLanVpnInterfaceSviFeature:ServiceLanVpnInterfaceSviFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+        $ pulumi import sdwan:index/serviceLanVpnInterfaceSviFeature:ServiceLanVpnInterfaceSviFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037"
         ```
 
         :param str resource_name: The name of the resource.
@@ -1389,8 +1394,10 @@ class ServiceLanVpnInterfaceSviFeature(pulumi.CustomResource):
 
         ## Import
 
+        Expected import identifier with the format: "service_lan_vpn_interface_svi_feature_id,feature_profile_id,service_lan_vpn_feature_id"
+
         ```sh
-        $ pulumi import sdwan:index/serviceLanVpnInterfaceSviFeature:ServiceLanVpnInterfaceSviFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+        $ pulumi import sdwan:index/serviceLanVpnInterfaceSviFeature:ServiceLanVpnInterfaceSviFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037"
         ```
 
         :param str resource_name: The name of the resource.
@@ -1470,23 +1477,17 @@ class ServiceLanVpnInterfaceSviFeature(pulumi.CustomResource):
             __props__.__dict__["interface_description_variable"] = interface_description_variable
             __props__.__dict__["interface_mtu"] = interface_mtu
             __props__.__dict__["interface_mtu_variable"] = interface_mtu_variable
-            if interface_name is None and not opts.urn:
-                raise TypeError("Missing required property 'interface_name'")
             __props__.__dict__["interface_name"] = interface_name
             __props__.__dict__["interface_name_variable"] = interface_name_variable
             __props__.__dict__["ip_directed_broadcast"] = ip_directed_broadcast
             __props__.__dict__["ip_directed_broadcast_variable"] = ip_directed_broadcast_variable
             __props__.__dict__["ip_mtu"] = ip_mtu
             __props__.__dict__["ip_mtu_variable"] = ip_mtu_variable
-            if ipv4_address is None and not opts.urn:
-                raise TypeError("Missing required property 'ipv4_address'")
             __props__.__dict__["ipv4_address"] = ipv4_address
             __props__.__dict__["ipv4_address_variable"] = ipv4_address_variable
             __props__.__dict__["ipv4_dhcp_helpers"] = ipv4_dhcp_helpers
             __props__.__dict__["ipv4_dhcp_helpers_variable"] = ipv4_dhcp_helpers_variable
             __props__.__dict__["ipv4_secondary_addresses"] = ipv4_secondary_addresses
-            if ipv4_subnet_mask is None and not opts.urn:
-                raise TypeError("Missing required property 'ipv4_subnet_mask'")
             __props__.__dict__["ipv4_subnet_mask"] = ipv4_subnet_mask
             __props__.__dict__["ipv4_subnet_mask_variable"] = ipv4_subnet_mask_variable
             __props__.__dict__["ipv4_vrrps"] = ipv4_vrrps
@@ -1753,7 +1754,7 @@ class ServiceLanVpnInterfaceSviFeature(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="interfaceName")
-    def interface_name(self) -> pulumi.Output[str]:
+    def interface_name(self) -> pulumi.Output[Optional[str]]:
         """
         Interface name: VLAN 1 - VLAN 4094 when present
         """
@@ -1801,7 +1802,7 @@ class ServiceLanVpnInterfaceSviFeature(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="ipv4Address")
-    def ipv4_address(self) -> pulumi.Output[str]:
+    def ipv4_address(self) -> pulumi.Output[Optional[str]]:
         """
         IP Address
         """
@@ -1841,7 +1842,7 @@ class ServiceLanVpnInterfaceSviFeature(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="ipv4SubnetMask")
-    def ipv4_subnet_mask(self) -> pulumi.Output[str]:
+    def ipv4_subnet_mask(self) -> pulumi.Output[Optional[str]]:
         """
         Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
         `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,

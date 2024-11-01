@@ -13,15 +13,80 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// This data source can read the Policy Object Feature Profile .
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetPolicyObjectFeatureProfile.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///     });
+        /// 
+        /// });
+        /// ```
         /// </summary>
-        public static Task<GetPolicyObjectFeatureProfileResult> InvokeAsync(InvokeOptions? options = null)
-            => global::Pulumi.Deployment.Instance.InvokeAsync<GetPolicyObjectFeatureProfileResult>("sdwan:index/getPolicyObjectFeatureProfile:getPolicyObjectFeatureProfile", InvokeArgs.Empty, options.WithDefaults());
+        public static Task<GetPolicyObjectFeatureProfileResult> InvokeAsync(GetPolicyObjectFeatureProfileArgs args, InvokeOptions? options = null)
+            => global::Pulumi.Deployment.Instance.InvokeAsync<GetPolicyObjectFeatureProfileResult>("sdwan:index/getPolicyObjectFeatureProfile:getPolicyObjectFeatureProfile", args ?? new GetPolicyObjectFeatureProfileArgs(), options.WithDefaults());
 
         /// <summary>
         /// This data source can read the Policy Object Feature Profile .
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetPolicyObjectFeatureProfile.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///     });
+        /// 
+        /// });
+        /// ```
         /// </summary>
-        public static Output<GetPolicyObjectFeatureProfileResult> Invoke(InvokeOptions? options = null)
-            => global::Pulumi.Deployment.Instance.Invoke<GetPolicyObjectFeatureProfileResult>("sdwan:index/getPolicyObjectFeatureProfile:getPolicyObjectFeatureProfile", InvokeArgs.Empty, options.WithDefaults());
+        public static Output<GetPolicyObjectFeatureProfileResult> Invoke(GetPolicyObjectFeatureProfileInvokeArgs args, InvokeOptions? options = null)
+            => global::Pulumi.Deployment.Instance.Invoke<GetPolicyObjectFeatureProfileResult>("sdwan:index/getPolicyObjectFeatureProfile:getPolicyObjectFeatureProfile", args ?? new GetPolicyObjectFeatureProfileInvokeArgs(), options.WithDefaults());
+    }
+
+
+    public sealed class GetPolicyObjectFeatureProfileArgs : global::Pulumi.InvokeArgs
+    {
+        /// <summary>
+        /// The id of the object
+        /// </summary>
+        [Input("id", required: true)]
+        public string Id { get; set; } = null!;
+
+        public GetPolicyObjectFeatureProfileArgs()
+        {
+        }
+        public static new GetPolicyObjectFeatureProfileArgs Empty => new GetPolicyObjectFeatureProfileArgs();
+    }
+
+    public sealed class GetPolicyObjectFeatureProfileInvokeArgs : global::Pulumi.InvokeArgs
+    {
+        /// <summary>
+        /// The id of the object
+        /// </summary>
+        [Input("id", required: true)]
+        public Input<string> Id { get; set; } = null!;
+
+        public GetPolicyObjectFeatureProfileInvokeArgs()
+        {
+        }
+        public static new GetPolicyObjectFeatureProfileInvokeArgs Empty => new GetPolicyObjectFeatureProfileInvokeArgs();
     }
 
 

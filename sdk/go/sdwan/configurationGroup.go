@@ -38,6 +38,17 @@ import (
 //						Id: pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
 //					},
 //				},
+//				Devices: sdwan.ConfigurationGroupDeviceArray{
+//					&sdwan.ConfigurationGroupDeviceArgs{
+//						Id: pulumi.String("C8K-40C0CCFD-9EA8-2B2E-E73B-32C5924EC79B"),
+//						Variables: sdwan.ConfigurationGroupDeviceVariableArray{
+//							&sdwan.ConfigurationGroupDeviceVariableArgs{
+//								Name:  pulumi.String("host_name"),
+//								Value: pulumi.String("edge1"),
+//							},
+//						},
+//					},
+//				},
 //			})
 //			if err != nil {
 //				return err
@@ -58,8 +69,12 @@ type ConfigurationGroup struct {
 
 	// Description
 	Description pulumi.StringOutput `pulumi:"description"`
+	// List of devices
+	Devices ConfigurationGroupDeviceArrayOutput `pulumi:"devices"`
 	// List of feature profiles
 	FeatureProfiles ConfigurationGroupFeatureProfileArrayOutput `pulumi:"featureProfiles"`
+	// List of all associated feature versions
+	FeatureVersions pulumi.StringArrayOutput `pulumi:"featureVersions"`
 	// The name of the configuration group
 	Name pulumi.StringOutput `pulumi:"name"`
 	// Type of solution - Choices: `mobility`, `sdwan`, `nfvirtual`
@@ -108,8 +123,12 @@ func GetConfigurationGroup(ctx *pulumi.Context,
 type configurationGroupState struct {
 	// Description
 	Description *string `pulumi:"description"`
+	// List of devices
+	Devices []ConfigurationGroupDevice `pulumi:"devices"`
 	// List of feature profiles
 	FeatureProfiles []ConfigurationGroupFeatureProfile `pulumi:"featureProfiles"`
+	// List of all associated feature versions
+	FeatureVersions []string `pulumi:"featureVersions"`
 	// The name of the configuration group
 	Name *string `pulumi:"name"`
 	// Type of solution - Choices: `mobility`, `sdwan`, `nfvirtual`
@@ -123,8 +142,12 @@ type configurationGroupState struct {
 type ConfigurationGroupState struct {
 	// Description
 	Description pulumi.StringPtrInput
+	// List of devices
+	Devices ConfigurationGroupDeviceArrayInput
 	// List of feature profiles
 	FeatureProfiles ConfigurationGroupFeatureProfileArrayInput
+	// List of all associated feature versions
+	FeatureVersions pulumi.StringArrayInput
 	// The name of the configuration group
 	Name pulumi.StringPtrInput
 	// Type of solution - Choices: `mobility`, `sdwan`, `nfvirtual`
@@ -142,8 +165,12 @@ func (ConfigurationGroupState) ElementType() reflect.Type {
 type configurationGroupArgs struct {
 	// Description
 	Description string `pulumi:"description"`
+	// List of devices
+	Devices []ConfigurationGroupDevice `pulumi:"devices"`
 	// List of feature profiles
 	FeatureProfiles []ConfigurationGroupFeatureProfile `pulumi:"featureProfiles"`
+	// List of all associated feature versions
+	FeatureVersions []string `pulumi:"featureVersions"`
 	// The name of the configuration group
 	Name *string `pulumi:"name"`
 	// Type of solution - Choices: `mobility`, `sdwan`, `nfvirtual`
@@ -158,8 +185,12 @@ type configurationGroupArgs struct {
 type ConfigurationGroupArgs struct {
 	// Description
 	Description pulumi.StringInput
+	// List of devices
+	Devices ConfigurationGroupDeviceArrayInput
 	// List of feature profiles
 	FeatureProfiles ConfigurationGroupFeatureProfileArrayInput
+	// List of all associated feature versions
+	FeatureVersions pulumi.StringArrayInput
 	// The name of the configuration group
 	Name pulumi.StringPtrInput
 	// Type of solution - Choices: `mobility`, `sdwan`, `nfvirtual`
@@ -262,9 +293,19 @@ func (o ConfigurationGroupOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v *ConfigurationGroup) pulumi.StringOutput { return v.Description }).(pulumi.StringOutput)
 }
 
+// List of devices
+func (o ConfigurationGroupOutput) Devices() ConfigurationGroupDeviceArrayOutput {
+	return o.ApplyT(func(v *ConfigurationGroup) ConfigurationGroupDeviceArrayOutput { return v.Devices }).(ConfigurationGroupDeviceArrayOutput)
+}
+
 // List of feature profiles
 func (o ConfigurationGroupOutput) FeatureProfiles() ConfigurationGroupFeatureProfileArrayOutput {
 	return o.ApplyT(func(v *ConfigurationGroup) ConfigurationGroupFeatureProfileArrayOutput { return v.FeatureProfiles }).(ConfigurationGroupFeatureProfileArrayOutput)
+}
+
+// List of all associated feature versions
+func (o ConfigurationGroupOutput) FeatureVersions() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v *ConfigurationGroup) pulumi.StringArrayOutput { return v.FeatureVersions }).(pulumi.StringArrayOutput)
 }
 
 // The name of the configuration group

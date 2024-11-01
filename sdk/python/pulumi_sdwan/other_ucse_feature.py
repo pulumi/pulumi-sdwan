@@ -24,16 +24,16 @@ class OtherUcseFeatureArgs:
                  access_port_shared_failover_type: pulumi.Input[str],
                  access_port_shared_type: pulumi.Input[str],
                  bay: pulumi.Input[int],
-                 default_gateway: pulumi.Input[str],
                  feature_profile_id: pulumi.Input[str],
-                 ipv4_address: pulumi.Input[str],
                  slot: pulumi.Input[int],
                  access_port_dedicated: Optional[pulumi.Input[bool]] = None,
                  assign_priority: Optional[pulumi.Input[int]] = None,
                  assign_priority_variable: Optional[pulumi.Input[str]] = None,
+                 default_gateway: Optional[pulumi.Input[str]] = None,
                  default_gateway_variable: Optional[pulumi.Input[str]] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  interfaces: Optional[pulumi.Input[Sequence[pulumi.Input['OtherUcseFeatureInterfaceArgs']]]] = None,
+                 ipv4_address: Optional[pulumi.Input[str]] = None,
                  ipv4_address_variable: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  vlan_id: Optional[pulumi.Input[int]] = None,
@@ -43,16 +43,16 @@ class OtherUcseFeatureArgs:
         :param pulumi.Input[str] access_port_shared_failover_type: - Choices: `ge2`, `te2`
         :param pulumi.Input[str] access_port_shared_type: - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
         :param pulumi.Input[int] bay: Bay - Range: `0`-`2`
-        :param pulumi.Input[str] default_gateway: Assign default gateway
         :param pulumi.Input[str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[str] ipv4_address: Assign IPv4 address
         :param pulumi.Input[int] slot: Slot - Range: `0`-`3`
         :param pulumi.Input[bool] access_port_dedicated: Dedicated - Default value: `true`
         :param pulumi.Input[int] assign_priority: Assign priority - Range: `0`-`7`
         :param pulumi.Input[str] assign_priority_variable: Variable name
+        :param pulumi.Input[str] default_gateway: Assign default gateway
         :param pulumi.Input[str] default_gateway_variable: Variable name
         :param pulumi.Input[str] description: The description of the Feature
         :param pulumi.Input[Sequence[pulumi.Input['OtherUcseFeatureInterfaceArgs']]] interfaces: Interface name: GigabitEthernet0/<>/<> when present
+        :param pulumi.Input[str] ipv4_address: Assign IPv4 address
         :param pulumi.Input[str] ipv4_address_variable: Variable name
         :param pulumi.Input[str] name: The name of the Feature
         :param pulumi.Input[int] vlan_id: Assign Vlan Id - Range: `2`-`4095`
@@ -61,9 +61,7 @@ class OtherUcseFeatureArgs:
         pulumi.set(__self__, "access_port_shared_failover_type", access_port_shared_failover_type)
         pulumi.set(__self__, "access_port_shared_type", access_port_shared_type)
         pulumi.set(__self__, "bay", bay)
-        pulumi.set(__self__, "default_gateway", default_gateway)
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
-        pulumi.set(__self__, "ipv4_address", ipv4_address)
         pulumi.set(__self__, "slot", slot)
         if access_port_dedicated is not None:
             pulumi.set(__self__, "access_port_dedicated", access_port_dedicated)
@@ -71,12 +69,16 @@ class OtherUcseFeatureArgs:
             pulumi.set(__self__, "assign_priority", assign_priority)
         if assign_priority_variable is not None:
             pulumi.set(__self__, "assign_priority_variable", assign_priority_variable)
+        if default_gateway is not None:
+            pulumi.set(__self__, "default_gateway", default_gateway)
         if default_gateway_variable is not None:
             pulumi.set(__self__, "default_gateway_variable", default_gateway_variable)
         if description is not None:
             pulumi.set(__self__, "description", description)
         if interfaces is not None:
             pulumi.set(__self__, "interfaces", interfaces)
+        if ipv4_address is not None:
+            pulumi.set(__self__, "ipv4_address", ipv4_address)
         if ipv4_address_variable is not None:
             pulumi.set(__self__, "ipv4_address_variable", ipv4_address_variable)
         if name is not None:
@@ -123,18 +125,6 @@ class OtherUcseFeatureArgs:
         pulumi.set(self, "bay", value)
 
     @property
-    @pulumi.getter(name="defaultGateway")
-    def default_gateway(self) -> pulumi.Input[str]:
-        """
-        Assign default gateway
-        """
-        return pulumi.get(self, "default_gateway")
-
-    @default_gateway.setter
-    def default_gateway(self, value: pulumi.Input[str]):
-        pulumi.set(self, "default_gateway", value)
-
-    @property
     @pulumi.getter(name="featureProfileId")
     def feature_profile_id(self) -> pulumi.Input[str]:
         """
@@ -145,18 +135,6 @@ class OtherUcseFeatureArgs:
     @feature_profile_id.setter
     def feature_profile_id(self, value: pulumi.Input[str]):
         pulumi.set(self, "feature_profile_id", value)
-
-    @property
-    @pulumi.getter(name="ipv4Address")
-    def ipv4_address(self) -> pulumi.Input[str]:
-        """
-        Assign IPv4 address
-        """
-        return pulumi.get(self, "ipv4_address")
-
-    @ipv4_address.setter
-    def ipv4_address(self, value: pulumi.Input[str]):
-        pulumi.set(self, "ipv4_address", value)
 
     @property
     @pulumi.getter
@@ -207,6 +185,18 @@ class OtherUcseFeatureArgs:
         pulumi.set(self, "assign_priority_variable", value)
 
     @property
+    @pulumi.getter(name="defaultGateway")
+    def default_gateway(self) -> Optional[pulumi.Input[str]]:
+        """
+        Assign default gateway
+        """
+        return pulumi.get(self, "default_gateway")
+
+    @default_gateway.setter
+    def default_gateway(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "default_gateway", value)
+
+    @property
     @pulumi.getter(name="defaultGatewayVariable")
     def default_gateway_variable(self) -> Optional[pulumi.Input[str]]:
         """
@@ -241,6 +231,18 @@ class OtherUcseFeatureArgs:
     @interfaces.setter
     def interfaces(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['OtherUcseFeatureInterfaceArgs']]]]):
         pulumi.set(self, "interfaces", value)
+
+    @property
+    @pulumi.getter(name="ipv4Address")
+    def ipv4_address(self) -> Optional[pulumi.Input[str]]:
+        """
+        Assign IPv4 address
+        """
+        return pulumi.get(self, "ipv4_address")
+
+    @ipv4_address.setter
+    def ipv4_address(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "ipv4_address", value)
 
     @property
     @pulumi.getter(name="ipv4AddressVariable")
@@ -616,8 +618,10 @@ class OtherUcseFeature(pulumi.CustomResource):
 
         ## Import
 
+        Expected import identifier with the format: "other_ucse_feature_id,feature_profile_id"
+
         ```sh
-        $ pulumi import sdwan:index/otherUcseFeature:OtherUcseFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+        $ pulumi import sdwan:index/otherUcseFeature:OtherUcseFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
 
         :param str resource_name: The name of the resource.
@@ -652,8 +656,10 @@ class OtherUcseFeature(pulumi.CustomResource):
 
         ## Import
 
+        Expected import identifier with the format: "other_ucse_feature_id,feature_profile_id"
+
         ```sh
-        $ pulumi import sdwan:index/otherUcseFeature:OtherUcseFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+        $ pulumi import sdwan:index/otherUcseFeature:OtherUcseFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
 
         :param str resource_name: The name of the resource.
@@ -709,8 +715,6 @@ class OtherUcseFeature(pulumi.CustomResource):
             if bay is None and not opts.urn:
                 raise TypeError("Missing required property 'bay'")
             __props__.__dict__["bay"] = bay
-            if default_gateway is None and not opts.urn:
-                raise TypeError("Missing required property 'default_gateway'")
             __props__.__dict__["default_gateway"] = default_gateway
             __props__.__dict__["default_gateway_variable"] = default_gateway_variable
             __props__.__dict__["description"] = description
@@ -718,8 +722,6 @@ class OtherUcseFeature(pulumi.CustomResource):
                 raise TypeError("Missing required property 'feature_profile_id'")
             __props__.__dict__["feature_profile_id"] = feature_profile_id
             __props__.__dict__["interfaces"] = interfaces
-            if ipv4_address is None and not opts.urn:
-                raise TypeError("Missing required property 'ipv4_address'")
             __props__.__dict__["ipv4_address"] = ipv4_address
             __props__.__dict__["ipv4_address_variable"] = ipv4_address_variable
             __props__.__dict__["name"] = name
@@ -857,7 +859,7 @@ class OtherUcseFeature(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="defaultGateway")
-    def default_gateway(self) -> pulumi.Output[str]:
+    def default_gateway(self) -> pulumi.Output[Optional[str]]:
         """
         Assign default gateway
         """
@@ -897,7 +899,7 @@ class OtherUcseFeature(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="ipv4Address")
-    def ipv4_address(self) -> pulumi.Output[str]:
+    def ipv4_address(self) -> pulumi.Output[Optional[str]]:
         """
         Assign IPv4 address
         """

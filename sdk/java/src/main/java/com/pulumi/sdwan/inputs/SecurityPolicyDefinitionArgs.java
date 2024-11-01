@@ -6,8 +6,11 @@ package com.pulumi.sdwan.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 
 public final class SecurityPolicyDefinitionArgs extends com.pulumi.resources.ResourceArgs {
@@ -46,11 +49,27 @@ public final class SecurityPolicyDefinitionArgs extends com.pulumi.resources.Res
         return this.type;
     }
 
+    /**
+     * Policy definition version
+     * 
+     */
+    @Import(name="version")
+    private @Nullable Output<Integer> version;
+
+    /**
+     * @return Policy definition version
+     * 
+     */
+    public Optional<Output<Integer>> version() {
+        return Optional.ofNullable(this.version);
+    }
+
     private SecurityPolicyDefinitionArgs() {}
 
     private SecurityPolicyDefinitionArgs(SecurityPolicyDefinitionArgs $) {
         this.id = $.id;
         this.type = $.type;
+        this.version = $.version;
     }
 
     public static Builder builder() {
@@ -113,6 +132,27 @@ public final class SecurityPolicyDefinitionArgs extends com.pulumi.resources.Res
          */
         public Builder type(String type) {
             return type(Output.of(type));
+        }
+
+        /**
+         * @param version Policy definition version
+         * 
+         * @return builder
+         * 
+         */
+        public Builder version(@Nullable Output<Integer> version) {
+            $.version = version;
+            return this;
+        }
+
+        /**
+         * @param version Policy definition version
+         * 
+         * @return builder
+         * 
+         */
+        public Builder version(Integer version) {
+            return version(Output.of(version));
         }
 
         public SecurityPolicyDefinitionArgs build() {

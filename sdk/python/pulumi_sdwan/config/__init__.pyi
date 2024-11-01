@@ -16,26 +16,26 @@ from .. import _utilities
 
 insecure: Optional[bool]
 """
-Allow insecure HTTPS client. This can also be set as the SDWAN_INSECURE environment variable. Defaults to `true`.
+Allow insecure HTTPS client. This can also be set as the `SDWAN_INSECURE` environment variable. Defaults to `true`.
 """
 
 password: Optional[str]
 """
-Password for the SD-WAN Manager account. This can also be set as the SDWAN_PASSWORD environment variable.
+Password for the SD-WAN Manager account. This can also be set as the `SDWAN_PASSWORD` environment variable.
 """
 
 retries: Optional[int]
 """
-Number of retries for REST API calls. This can also be set as the SDWAN_RETRIES environment variable. Defaults to `3`.
+Number of retries for REST API calls. This can also be set as the `SDWAN_RETRIES` environment variable. Defaults to `3`.
 """
 
 url: Optional[str]
 """
-URL of the Cisco SD-WAN Manager device. This can also be set as the SDWAN_URL environment variable.
+URL of the Cisco SD-WAN Manager device. This can also be set as the `SDWAN_URL` environment variable.
 """
 
 username: Optional[str]
 """
-Username for the SD-WAN Manager account. This can also be set as the SDWAN_USERNAME environment variable.
+Username for the SD-WAN Manager account. This can also be set as the `SDWAN_USERNAME` environment variable.
 """
 

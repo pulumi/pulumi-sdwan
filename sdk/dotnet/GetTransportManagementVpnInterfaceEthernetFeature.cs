@@ -224,6 +224,10 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string Ipv4AutoDetectBandwidthVariable;
         /// <summary>
+        /// IPv4 Configuration Type
+        /// </summary>
+        public readonly string Ipv4ConfigurationType;
+        /// <summary>
         /// DHCP Distance
         /// </summary>
         public readonly int Ipv4DhcpDistance;
@@ -267,6 +271,10 @@ namespace Pulumi.Sdwan
         /// Variable name
         /// </summary>
         public readonly string Ipv6AddressVariable;
+        /// <summary>
+        /// IPv6 Configuration Type
+        /// </summary>
+        public readonly string Ipv6ConfigurationType;
         /// <summary>
         /// Interval for interface load calculation
         /// </summary>
@@ -381,6 +389,8 @@ namespace Pulumi.Sdwan
 
             string ipv4AutoDetectBandwidthVariable,
 
+            string ipv4ConfigurationType,
+
             int ipv4DhcpDistance,
 
             string ipv4DhcpDistanceVariable,
@@ -402,6 +412,8 @@ namespace Pulumi.Sdwan
             string ipv6Address,
 
             string ipv6AddressVariable,
+
+            string ipv6ConfigurationType,
 
             int loadInterval,
 
@@ -460,6 +472,7 @@ namespace Pulumi.Sdwan
             Ipv4AddressVariable = ipv4AddressVariable;
             Ipv4AutoDetectBandwidth = ipv4AutoDetectBandwidth;
             Ipv4AutoDetectBandwidthVariable = ipv4AutoDetectBandwidthVariable;
+            Ipv4ConfigurationType = ipv4ConfigurationType;
             Ipv4DhcpDistance = ipv4DhcpDistance;
             Ipv4DhcpDistanceVariable = ipv4DhcpDistanceVariable;
             Ipv4DhcpHelperVariable = ipv4DhcpHelperVariable;
@@ -471,6 +484,7 @@ namespace Pulumi.Sdwan
             Ipv4SubnetMaskVariable = ipv4SubnetMaskVariable;
             Ipv6Address = ipv6Address;
             Ipv6AddressVariable = ipv6AddressVariable;
+            Ipv6ConfigurationType = ipv6ConfigurationType;
             LoadInterval = loadInterval;
             LoadIntervalVariable = loadIntervalVariable;
             MacAddress = macAddress;

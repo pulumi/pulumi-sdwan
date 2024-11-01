@@ -47,8 +47,10 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Import
     /// 
+    /// Expected import identifier with the format: "service_lan_vpn_interface_gre_feature_id,feature_profile_id,service_lan_vpn_feature_id"
+    /// 
     /// ```sh
-    /// $ pulumi import sdwan:index/serviceLanVpnInterfaceGreFeature:ServiceLanVpnInterfaceGreFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+    /// $ pulumi import sdwan:index/serviceLanVpnInterfaceGreFeature:ServiceLanVpnInterfaceGreFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037"
     /// ```
     /// </summary>
     [SdwanResourceType("sdwan:index/serviceLanVpnInterfaceGreFeature:ServiceLanVpnInterfaceGreFeature")]
@@ -106,7 +108,7 @@ namespace Pulumi.Sdwan
         /// Interface name (1..255)
         /// </summary>
         [Output("interfaceName")]
-        public Output<string> InterfaceName { get; private set; } = null!;
+        public Output<string?> InterfaceName { get; private set; } = null!;
 
         /// <summary>
         /// Variable name
@@ -127,7 +129,7 @@ namespace Pulumi.Sdwan
         public Output<string?> IpMtuVariable { get; private set; } = null!;
 
         [Output("ipv4Address")]
-        public Output<string> Ipv4Address { get; private set; } = null!;
+        public Output<string?> Ipv4Address { get; private set; } = null!;
 
         /// <summary>
         /// Variable name
@@ -143,7 +145,7 @@ namespace Pulumi.Sdwan
         /// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         /// </summary>
         [Output("ipv4SubnetMask")]
-        public Output<string> Ipv4SubnetMask { get; private set; } = null!;
+        public Output<string?> Ipv4SubnetMask { get; private set; } = null!;
 
         /// <summary>
         /// Variable name
@@ -191,7 +193,7 @@ namespace Pulumi.Sdwan
         /// Tunnel destination IP Address
         /// </summary>
         [Output("tunnelDestinationIpv4Address")]
-        public Output<string> TunnelDestinationIpv4Address { get; private set; } = null!;
+        public Output<string?> TunnelDestinationIpv4Address { get; private set; } = null!;
 
         /// <summary>
         /// Variable name
@@ -350,8 +352,8 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// Interface name (1..255)
         /// </summary>
-        [Input("interfaceName", required: true)]
-        public Input<string> InterfaceName { get; set; } = null!;
+        [Input("interfaceName")]
+        public Input<string>? InterfaceName { get; set; }
 
         /// <summary>
         /// Variable name
@@ -371,8 +373,8 @@ namespace Pulumi.Sdwan
         [Input("ipMtuVariable")]
         public Input<string>? IpMtuVariable { get; set; }
 
-        [Input("ipv4Address", required: true)]
-        public Input<string> Ipv4Address { get; set; } = null!;
+        [Input("ipv4Address")]
+        public Input<string>? Ipv4Address { get; set; }
 
         /// <summary>
         /// Variable name
@@ -387,8 +389,8 @@ namespace Pulumi.Sdwan
         /// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
         /// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         /// </summary>
-        [Input("ipv4SubnetMask", required: true)]
-        public Input<string> Ipv4SubnetMask { get; set; } = null!;
+        [Input("ipv4SubnetMask")]
+        public Input<string>? Ipv4SubnetMask { get; set; }
 
         /// <summary>
         /// Variable name
@@ -435,8 +437,8 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// Tunnel destination IP Address
         /// </summary>
-        [Input("tunnelDestinationIpv4Address", required: true)]
-        public Input<string> TunnelDestinationIpv4Address { get; set; } = null!;
+        [Input("tunnelDestinationIpv4Address")]
+        public Input<string>? TunnelDestinationIpv4Address { get; set; }
 
         /// <summary>
         /// Variable name

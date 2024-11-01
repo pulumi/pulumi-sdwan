@@ -75,14 +75,16 @@ import (
 //
 // ## Import
 //
+// Expected import identifier with the format: "service_lan_vpn_interface_ipsec_feature_id,feature_profile_id,service_lan_vpn_feature_id"
+//
 // ```sh
-// $ pulumi import sdwan:index/serviceLanVpnInterfaceIpsecFeature:ServiceLanVpnInterfaceIpsecFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+// $ pulumi import sdwan:index/serviceLanVpnInterfaceIpsecFeature:ServiceLanVpnInterfaceIpsecFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037"
 // ```
 type ServiceLanVpnInterfaceIpsecFeature struct {
 	pulumi.CustomResourceState
 
 	// Enable Application Tunnel Type - Choices: `none`, `sig`
-	ApplicationTunnelType pulumi.StringOutput `pulumi:"applicationTunnelType"`
+	ApplicationTunnelType pulumi.StringPtrOutput `pulumi:"applicationTunnelType"`
 	// Variable name
 	ApplicationTunnelTypeVariable pulumi.StringPtrOutput `pulumi:"applicationTunnelTypeVariable"`
 	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
@@ -123,7 +125,7 @@ type ServiceLanVpnInterfaceIpsecFeature struct {
 	// Variable name
 	IkeIntegrityProtocolVariable pulumi.StringPtrOutput `pulumi:"ikeIntegrityProtocolVariable"`
 	// Use preshared key to authenticate IKE peer
-	IkePresharedKey pulumi.StringOutput `pulumi:"ikePresharedKey"`
+	IkePresharedKey pulumi.StringPtrOutput `pulumi:"ikePresharedKey"`
 	// Variable name
 	IkePresharedKeyVariable pulumi.StringPtrOutput `pulumi:"ikePresharedKeyVariable"`
 	// IKE rekey interval <60..86400> seconds - Range: `60`-`86400` - Default value: `14400`
@@ -137,7 +139,7 @@ type ServiceLanVpnInterfaceIpsecFeature struct {
 	// Variable name
 	InterfaceDescriptionVariable pulumi.StringPtrOutput `pulumi:"interfaceDescriptionVariable"`
 	// Interface name: IPsec when present
-	InterfaceName pulumi.StringOutput `pulumi:"interfaceName"`
+	InterfaceName pulumi.StringPtrOutput `pulumi:"interfaceName"`
 	// Variable name
 	InterfaceNameVariable pulumi.StringPtrOutput `pulumi:"interfaceNameVariable"`
 	// Interface MTU <68..9216>, in bytes - Range: `68`-`9216` - Default value: `1500`
@@ -158,7 +160,7 @@ type ServiceLanVpnInterfaceIpsecFeature struct {
 	IpsecReplayWindow pulumi.IntPtrOutput `pulumi:"ipsecReplayWindow"`
 	// Variable name
 	IpsecReplayWindowVariable pulumi.StringPtrOutput `pulumi:"ipsecReplayWindowVariable"`
-	Ipv4Address               pulumi.StringOutput    `pulumi:"ipv4Address"`
+	Ipv4Address               pulumi.StringPtrOutput `pulumi:"ipv4Address"`
 	// Variable name
 	Ipv4AddressVariable pulumi.StringPtrOutput `pulumi:"ipv4AddressVariable"`
 	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
@@ -166,7 +168,7 @@ type ServiceLanVpnInterfaceIpsecFeature struct {
 	//   `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
 	//   `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
 	//   `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
-	Ipv4SubnetMask pulumi.StringOutput `pulumi:"ipv4SubnetMask"`
+	Ipv4SubnetMask pulumi.StringPtrOutput `pulumi:"ipv4SubnetMask"`
 	// Variable name
 	Ipv4SubnetMaskVariable pulumi.StringPtrOutput `pulumi:"ipv4SubnetMaskVariable"`
 	// The name of the Feature
@@ -190,7 +192,7 @@ type ServiceLanVpnInterfaceIpsecFeature struct {
 	TrackerId pulumi.StringPtrOutput `pulumi:"trackerId"`
 	// Variable name
 	TrackerIdVariable            pulumi.StringPtrOutput `pulumi:"trackerIdVariable"`
-	TunnelDestinationIpv4Address pulumi.StringOutput    `pulumi:"tunnelDestinationIpv4Address"`
+	TunnelDestinationIpv4Address pulumi.StringPtrOutput `pulumi:"tunnelDestinationIpv4Address"`
 	// Variable name
 	TunnelDestinationIpv4AddressVariable pulumi.StringPtrOutput `pulumi:"tunnelDestinationIpv4AddressVariable"`
 	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
@@ -206,10 +208,10 @@ type ServiceLanVpnInterfaceIpsecFeature struct {
 	// Variable name
 	TunnelRouteViaVariable pulumi.StringPtrOutput `pulumi:"tunnelRouteViaVariable"`
 	// <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
-	TunnelSourceInterface pulumi.StringOutput `pulumi:"tunnelSourceInterface"`
+	TunnelSourceInterface pulumi.StringPtrOutput `pulumi:"tunnelSourceInterface"`
 	// Variable name
 	TunnelSourceInterfaceVariable pulumi.StringPtrOutput `pulumi:"tunnelSourceInterfaceVariable"`
-	TunnelSourceIpv4Address       pulumi.StringOutput    `pulumi:"tunnelSourceIpv4Address"`
+	TunnelSourceIpv4Address       pulumi.StringPtrOutput `pulumi:"tunnelSourceIpv4Address"`
 	// Variable name
 	TunnelSourceIpv4AddressVariable pulumi.StringPtrOutput `pulumi:"tunnelSourceIpv4AddressVariable"`
 	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
@@ -217,7 +219,7 @@ type ServiceLanVpnInterfaceIpsecFeature struct {
 	//   `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
 	//   `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
 	//   `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
-	TunnelSourceIpv4SubnetMask pulumi.StringOutput `pulumi:"tunnelSourceIpv4SubnetMask"`
+	TunnelSourceIpv4SubnetMask pulumi.StringPtrOutput `pulumi:"tunnelSourceIpv4SubnetMask"`
 	// Variable name
 	TunnelSourceIpv4SubnetMaskVariable pulumi.StringPtrOutput `pulumi:"tunnelSourceIpv4SubnetMaskVariable"`
 	// The version of the Feature
@@ -231,38 +233,11 @@ func NewServiceLanVpnInterfaceIpsecFeature(ctx *pulumi.Context,
 		return nil, errors.New("missing one or more required arguments")
 	}
 
-	if args.ApplicationTunnelType == nil {
-		return nil, errors.New("invalid value for required argument 'ApplicationTunnelType'")
-	}
 	if args.FeatureProfileId == nil {
 		return nil, errors.New("invalid value for required argument 'FeatureProfileId'")
 	}
-	if args.IkePresharedKey == nil {
-		return nil, errors.New("invalid value for required argument 'IkePresharedKey'")
-	}
-	if args.InterfaceName == nil {
-		return nil, errors.New("invalid value for required argument 'InterfaceName'")
-	}
-	if args.Ipv4Address == nil {
-		return nil, errors.New("invalid value for required argument 'Ipv4Address'")
-	}
-	if args.Ipv4SubnetMask == nil {
-		return nil, errors.New("invalid value for required argument 'Ipv4SubnetMask'")
-	}
-	if args.TunnelDestinationIpv4Address == nil {
-		return nil, errors.New("invalid value for required argument 'TunnelDestinationIpv4Address'")
-	}
 	if args.TunnelDestinationIpv4SubnetMask == nil {
 		return nil, errors.New("invalid value for required argument 'TunnelDestinationIpv4SubnetMask'")
-	}
-	if args.TunnelSourceInterface == nil {
-		return nil, errors.New("invalid value for required argument 'TunnelSourceInterface'")
-	}
-	if args.TunnelSourceIpv4Address == nil {
-		return nil, errors.New("invalid value for required argument 'TunnelSourceIpv4Address'")
-	}
-	if args.TunnelSourceIpv4SubnetMask == nil {
-		return nil, errors.New("invalid value for required argument 'TunnelSourceIpv4SubnetMask'")
 	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource ServiceLanVpnInterfaceIpsecFeature
@@ -580,7 +555,7 @@ func (ServiceLanVpnInterfaceIpsecFeatureState) ElementType() reflect.Type {
 
 type serviceLanVpnInterfaceIpsecFeatureArgs struct {
 	// Enable Application Tunnel Type - Choices: `none`, `sig`
-	ApplicationTunnelType string `pulumi:"applicationTunnelType"`
+	ApplicationTunnelType *string `pulumi:"applicationTunnelType"`
 	// Variable name
 	ApplicationTunnelTypeVariable *string `pulumi:"applicationTunnelTypeVariable"`
 	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
@@ -621,7 +596,7 @@ type serviceLanVpnInterfaceIpsecFeatureArgs struct {
 	// Variable name
 	IkeIntegrityProtocolVariable *string `pulumi:"ikeIntegrityProtocolVariable"`
 	// Use preshared key to authenticate IKE peer
-	IkePresharedKey string `pulumi:"ikePresharedKey"`
+	IkePresharedKey *string `pulumi:"ikePresharedKey"`
 	// Variable name
 	IkePresharedKeyVariable *string `pulumi:"ikePresharedKeyVariable"`
 	// IKE rekey interval <60..86400> seconds - Range: `60`-`86400` - Default value: `14400`
@@ -635,7 +610,7 @@ type serviceLanVpnInterfaceIpsecFeatureArgs struct {
 	// Variable name
 	InterfaceDescriptionVariable *string `pulumi:"interfaceDescriptionVariable"`
 	// Interface name: IPsec when present
-	InterfaceName string `pulumi:"interfaceName"`
+	InterfaceName *string `pulumi:"interfaceName"`
 	// Variable name
 	InterfaceNameVariable *string `pulumi:"interfaceNameVariable"`
 	// Interface MTU <68..9216>, in bytes - Range: `68`-`9216` - Default value: `1500`
@@ -656,7 +631,7 @@ type serviceLanVpnInterfaceIpsecFeatureArgs struct {
 	IpsecReplayWindow *int `pulumi:"ipsecReplayWindow"`
 	// Variable name
 	IpsecReplayWindowVariable *string `pulumi:"ipsecReplayWindowVariable"`
-	Ipv4Address               string  `pulumi:"ipv4Address"`
+	Ipv4Address               *string `pulumi:"ipv4Address"`
 	// Variable name
 	Ipv4AddressVariable *string `pulumi:"ipv4AddressVariable"`
 	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
@@ -664,7 +639,7 @@ type serviceLanVpnInterfaceIpsecFeatureArgs struct {
 	//   `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
 	//   `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
 	//   `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
-	Ipv4SubnetMask string `pulumi:"ipv4SubnetMask"`
+	Ipv4SubnetMask *string `pulumi:"ipv4SubnetMask"`
 	// Variable name
 	Ipv4SubnetMaskVariable *string `pulumi:"ipv4SubnetMaskVariable"`
 	// The name of the Feature
@@ -688,7 +663,7 @@ type serviceLanVpnInterfaceIpsecFeatureArgs struct {
 	TrackerId *string `pulumi:"trackerId"`
 	// Variable name
 	TrackerIdVariable            *string `pulumi:"trackerIdVariable"`
-	TunnelDestinationIpv4Address string  `pulumi:"tunnelDestinationIpv4Address"`
+	TunnelDestinationIpv4Address *string `pulumi:"tunnelDestinationIpv4Address"`
 	// Variable name
 	TunnelDestinationIpv4AddressVariable *string `pulumi:"tunnelDestinationIpv4AddressVariable"`
 	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
@@ -704,10 +679,10 @@ type serviceLanVpnInterfaceIpsecFeatureArgs struct {
 	// Variable name
 	TunnelRouteViaVariable *string `pulumi:"tunnelRouteViaVariable"`
 	// <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
-	TunnelSourceInterface string `pulumi:"tunnelSourceInterface"`
+	TunnelSourceInterface *string `pulumi:"tunnelSourceInterface"`
 	// Variable name
 	TunnelSourceInterfaceVariable *string `pulumi:"tunnelSourceInterfaceVariable"`
-	TunnelSourceIpv4Address       string  `pulumi:"tunnelSourceIpv4Address"`
+	TunnelSourceIpv4Address       *string `pulumi:"tunnelSourceIpv4Address"`
 	// Variable name
 	TunnelSourceIpv4AddressVariable *string `pulumi:"tunnelSourceIpv4AddressVariable"`
 	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
@@ -715,7 +690,7 @@ type serviceLanVpnInterfaceIpsecFeatureArgs struct {
 	//   `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
 	//   `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
 	//   `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
-	TunnelSourceIpv4SubnetMask string `pulumi:"tunnelSourceIpv4SubnetMask"`
+	TunnelSourceIpv4SubnetMask *string `pulumi:"tunnelSourceIpv4SubnetMask"`
 	// Variable name
 	TunnelSourceIpv4SubnetMaskVariable *string `pulumi:"tunnelSourceIpv4SubnetMaskVariable"`
 }
@@ -723,7 +698,7 @@ type serviceLanVpnInterfaceIpsecFeatureArgs struct {
 // The set of arguments for constructing a ServiceLanVpnInterfaceIpsecFeature resource.
 type ServiceLanVpnInterfaceIpsecFeatureArgs struct {
 	// Enable Application Tunnel Type - Choices: `none`, `sig`
-	ApplicationTunnelType pulumi.StringInput
+	ApplicationTunnelType pulumi.StringPtrInput
 	// Variable name
 	ApplicationTunnelTypeVariable pulumi.StringPtrInput
 	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
@@ -764,7 +739,7 @@ type ServiceLanVpnInterfaceIpsecFeatureArgs struct {
 	// Variable name
 	IkeIntegrityProtocolVariable pulumi.StringPtrInput
 	// Use preshared key to authenticate IKE peer
-	IkePresharedKey pulumi.StringInput
+	IkePresharedKey pulumi.StringPtrInput
 	// Variable name
 	IkePresharedKeyVariable pulumi.StringPtrInput
 	// IKE rekey interval <60..86400> seconds - Range: `60`-`86400` - Default value: `14400`
@@ -778,7 +753,7 @@ type ServiceLanVpnInterfaceIpsecFeatureArgs struct {
 	// Variable name
 	InterfaceDescriptionVariable pulumi.StringPtrInput
 	// Interface name: IPsec when present
-	InterfaceName pulumi.StringInput
+	InterfaceName pulumi.StringPtrInput
 	// Variable name
 	InterfaceNameVariable pulumi.StringPtrInput
 	// Interface MTU <68..9216>, in bytes - Range: `68`-`9216` - Default value: `1500`
@@ -799,7 +774,7 @@ type ServiceLanVpnInterfaceIpsecFeatureArgs struct {
 	IpsecReplayWindow pulumi.IntPtrInput
 	// Variable name
 	IpsecReplayWindowVariable pulumi.StringPtrInput
-	Ipv4Address               pulumi.StringInput
+	Ipv4Address               pulumi.StringPtrInput
 	// Variable name
 	Ipv4AddressVariable pulumi.StringPtrInput
 	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
@@ -807,7 +782,7 @@ type ServiceLanVpnInterfaceIpsecFeatureArgs struct {
 	//   `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
 	//   `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
 	//   `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
-	Ipv4SubnetMask pulumi.StringInput
+	Ipv4SubnetMask pulumi.StringPtrInput
 	// Variable name
 	Ipv4SubnetMaskVariable pulumi.StringPtrInput
 	// The name of the Feature
@@ -831,7 +806,7 @@ type ServiceLanVpnInterfaceIpsecFeatureArgs struct {
 	TrackerId pulumi.StringPtrInput
 	// Variable name
 	TrackerIdVariable            pulumi.StringPtrInput
-	TunnelDestinationIpv4Address pulumi.StringInput
+	TunnelDestinationIpv4Address pulumi.StringPtrInput
 	// Variable name
 	TunnelDestinationIpv4AddressVariable pulumi.StringPtrInput
 	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
@@ -847,10 +822,10 @@ type ServiceLanVpnInterfaceIpsecFeatureArgs struct {
 	// Variable name
 	TunnelRouteViaVariable pulumi.StringPtrInput
 	// <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
-	TunnelSourceInterface pulumi.StringInput
+	TunnelSourceInterface pulumi.StringPtrInput
 	// Variable name
 	TunnelSourceInterfaceVariable pulumi.StringPtrInput
-	TunnelSourceIpv4Address       pulumi.StringInput
+	TunnelSourceIpv4Address       pulumi.StringPtrInput
 	// Variable name
 	TunnelSourceIpv4AddressVariable pulumi.StringPtrInput
 	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
@@ -858,7 +833,7 @@ type ServiceLanVpnInterfaceIpsecFeatureArgs struct {
 	//   `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
 	//   `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
 	//   `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
-	TunnelSourceIpv4SubnetMask pulumi.StringInput
+	TunnelSourceIpv4SubnetMask pulumi.StringPtrInput
 	// Variable name
 	TunnelSourceIpv4SubnetMaskVariable pulumi.StringPtrInput
 }
@@ -951,8 +926,8 @@ func (o ServiceLanVpnInterfaceIpsecFeatureOutput) ToServiceLanVpnInterfaceIpsecF
 }
 
 // Enable Application Tunnel Type - Choices: `none`, `sig`
-func (o ServiceLanVpnInterfaceIpsecFeatureOutput) ApplicationTunnelType() pulumi.StringOutput {
-	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringOutput { return v.ApplicationTunnelType }).(pulumi.StringOutput)
+func (o ServiceLanVpnInterfaceIpsecFeatureOutput) ApplicationTunnelType() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringPtrOutput { return v.ApplicationTunnelType }).(pulumi.StringPtrOutput)
 }
 
 // Variable name
@@ -1062,8 +1037,8 @@ func (o ServiceLanVpnInterfaceIpsecFeatureOutput) IkeIntegrityProtocolVariable()
 }
 
 // Use preshared key to authenticate IKE peer
-func (o ServiceLanVpnInterfaceIpsecFeatureOutput) IkePresharedKey() pulumi.StringOutput {
-	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringOutput { return v.IkePresharedKey }).(pulumi.StringOutput)
+func (o ServiceLanVpnInterfaceIpsecFeatureOutput) IkePresharedKey() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringPtrOutput { return v.IkePresharedKey }).(pulumi.StringPtrOutput)
 }
 
 // Variable name
@@ -1099,8 +1074,8 @@ func (o ServiceLanVpnInterfaceIpsecFeatureOutput) InterfaceDescriptionVariable()
 }
 
 // Interface name: IPsec when present
-func (o ServiceLanVpnInterfaceIpsecFeatureOutput) InterfaceName() pulumi.StringOutput {
-	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringOutput { return v.InterfaceName }).(pulumi.StringOutput)
+func (o ServiceLanVpnInterfaceIpsecFeatureOutput) InterfaceName() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringPtrOutput { return v.InterfaceName }).(pulumi.StringPtrOutput)
 }
 
 // Variable name
@@ -1152,8 +1127,8 @@ func (o ServiceLanVpnInterfaceIpsecFeatureOutput) IpsecReplayWindowVariable() pu
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringPtrOutput { return v.IpsecReplayWindowVariable }).(pulumi.StringPtrOutput)
 }
 
-func (o ServiceLanVpnInterfaceIpsecFeatureOutput) Ipv4Address() pulumi.StringOutput {
-	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringOutput { return v.Ipv4Address }).(pulumi.StringOutput)
+func (o ServiceLanVpnInterfaceIpsecFeatureOutput) Ipv4Address() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringPtrOutput { return v.Ipv4Address }).(pulumi.StringPtrOutput)
 }
 
 // Variable name
@@ -1166,8 +1141,8 @@ func (o ServiceLanVpnInterfaceIpsecFeatureOutput) Ipv4AddressVariable() pulumi.S
 //     `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
 //     `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
 //     `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
-func (o ServiceLanVpnInterfaceIpsecFeatureOutput) Ipv4SubnetMask() pulumi.StringOutput {
-	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringOutput { return v.Ipv4SubnetMask }).(pulumi.StringOutput)
+func (o ServiceLanVpnInterfaceIpsecFeatureOutput) Ipv4SubnetMask() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringPtrOutput { return v.Ipv4SubnetMask }).(pulumi.StringPtrOutput)
 }
 
 // Variable name
@@ -1228,8 +1203,10 @@ func (o ServiceLanVpnInterfaceIpsecFeatureOutput) TrackerIdVariable() pulumi.Str
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringPtrOutput { return v.TrackerIdVariable }).(pulumi.StringPtrOutput)
 }
 
-func (o ServiceLanVpnInterfaceIpsecFeatureOutput) TunnelDestinationIpv4Address() pulumi.StringOutput {
-	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringOutput { return v.TunnelDestinationIpv4Address }).(pulumi.StringOutput)
+func (o ServiceLanVpnInterfaceIpsecFeatureOutput) TunnelDestinationIpv4Address() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringPtrOutput {
+		return v.TunnelDestinationIpv4Address
+	}).(pulumi.StringPtrOutput)
 }
 
 // Variable name
@@ -1268,8 +1245,8 @@ func (o ServiceLanVpnInterfaceIpsecFeatureOutput) TunnelRouteViaVariable() pulum
 }
 
 // <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
-func (o ServiceLanVpnInterfaceIpsecFeatureOutput) TunnelSourceInterface() pulumi.StringOutput {
-	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringOutput { return v.TunnelSourceInterface }).(pulumi.StringOutput)
+func (o ServiceLanVpnInterfaceIpsecFeatureOutput) TunnelSourceInterface() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringPtrOutput { return v.TunnelSourceInterface }).(pulumi.StringPtrOutput)
 }
 
 // Variable name
@@ -1279,8 +1256,8 @@ func (o ServiceLanVpnInterfaceIpsecFeatureOutput) TunnelSourceInterfaceVariable(
 	}).(pulumi.StringPtrOutput)
 }
 
-func (o ServiceLanVpnInterfaceIpsecFeatureOutput) TunnelSourceIpv4Address() pulumi.StringOutput {
-	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringOutput { return v.TunnelSourceIpv4Address }).(pulumi.StringOutput)
+func (o ServiceLanVpnInterfaceIpsecFeatureOutput) TunnelSourceIpv4Address() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringPtrOutput { return v.TunnelSourceIpv4Address }).(pulumi.StringPtrOutput)
 }
 
 // Variable name
@@ -1295,8 +1272,10 @@ func (o ServiceLanVpnInterfaceIpsecFeatureOutput) TunnelSourceIpv4AddressVariabl
 //     `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
 //     `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
 //     `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
-func (o ServiceLanVpnInterfaceIpsecFeatureOutput) TunnelSourceIpv4SubnetMask() pulumi.StringOutput {
-	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringOutput { return v.TunnelSourceIpv4SubnetMask }).(pulumi.StringOutput)
+func (o ServiceLanVpnInterfaceIpsecFeatureOutput) TunnelSourceIpv4SubnetMask() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringPtrOutput {
+		return v.TunnelSourceIpv4SubnetMask
+	}).(pulumi.StringPtrOutput)
 }
 
 // Variable name

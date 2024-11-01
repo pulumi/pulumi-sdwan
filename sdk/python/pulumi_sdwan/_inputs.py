@@ -31,6 +31,16 @@ __all__ = [
     'ApplicationListPolicyObjectEntryArgsDict',
     'ApplicationPriorityQosPolicyQosSchedulerArgs',
     'ApplicationPriorityQosPolicyQosSchedulerArgsDict',
+    'ApplicationPriorityTrafficPolicyPolicySequenceArgs',
+    'ApplicationPriorityTrafficPolicyPolicySequenceArgsDict',
+    'ApplicationPriorityTrafficPolicyPolicySequenceActionArgs',
+    'ApplicationPriorityTrafficPolicyPolicySequenceActionArgsDict',
+    'ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterArgs',
+    'ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterArgsDict',
+    'ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClassArgs',
+    'ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClassArgsDict',
+    'ApplicationPriorityTrafficPolicyPolicySequenceMatchEntryArgs',
+    'ApplicationPriorityTrafficPolicyPolicySequenceMatchEntryArgsDict',
     'AsPathListPolicyObjectEntryArgs',
     'AsPathListPolicyObjectEntryArgsDict',
     'AttachFeatureDeviceTemplateDeviceArgs',
@@ -293,6 +303,10 @@ __all__ = [
     'CiscoWirelessLanFeatureTemplateSsidArgsDict',
     'ColorListPolicyObjectEntryArgs',
     'ColorListPolicyObjectEntryArgsDict',
+    'ConfigurationGroupDeviceArgs',
+    'ConfigurationGroupDeviceArgsDict',
+    'ConfigurationGroupDeviceVariableArgs',
+    'ConfigurationGroupDeviceVariableArgsDict',
     'ConfigurationGroupFeatureProfileArgs',
     'ConfigurationGroupFeatureProfileArgsDict',
     'ConfigurationGroupTopologyDeviceArgs',
@@ -391,6 +405,14 @@ __all__ = [
     'OtherThousandeyesFeatureVirtualApplicationArgsDict',
     'OtherUcseFeatureInterfaceArgs',
     'OtherUcseFeatureInterfaceArgsDict',
+    'PolicyObjectAppProbeClassEntryArgs',
+    'PolicyObjectAppProbeClassEntryArgsDict',
+    'PolicyObjectAppProbeClassEntryMapArgs',
+    'PolicyObjectAppProbeClassEntryMapArgsDict',
+    'PolicyObjectApplicationListEntryArgs',
+    'PolicyObjectApplicationListEntryArgsDict',
+    'PolicyObjectAsPathListEntryArgs',
+    'PolicyObjectAsPathListEntryArgsDict',
     'PolicyObjectClassMapEntryArgs',
     'PolicyObjectClassMapEntryArgsDict',
     'PolicyObjectColorListEntryArgs',
@@ -409,8 +431,38 @@ __all__ = [
     'PolicyObjectMirrorEntryArgsDict',
     'PolicyObjectPolicerEntryArgs',
     'PolicyObjectPolicerEntryArgsDict',
+    'PolicyObjectPreferredColorGroupEntryArgs',
+    'PolicyObjectPreferredColorGroupEntryArgsDict',
+    'PolicyObjectSecurityDataIpv4PrefixListEntryArgs',
+    'PolicyObjectSecurityDataIpv4PrefixListEntryArgsDict',
+    'PolicyObjectSecurityFqdnListEntryArgs',
+    'PolicyObjectSecurityFqdnListEntryArgsDict',
+    'PolicyObjectSecurityGeolocationListEntryArgs',
+    'PolicyObjectSecurityGeolocationListEntryArgsDict',
+    'PolicyObjectSecurityIdentityListEntryArgs',
+    'PolicyObjectSecurityIdentityListEntryArgsDict',
+    'PolicyObjectSecurityIpsSignatureEntryArgs',
+    'PolicyObjectSecurityIpsSignatureEntryArgsDict',
+    'PolicyObjectSecurityLocalApplicationListEntryArgs',
+    'PolicyObjectSecurityLocalApplicationListEntryArgsDict',
+    'PolicyObjectSecurityLocalDomainListEntryArgs',
+    'PolicyObjectSecurityLocalDomainListEntryArgsDict',
+    'PolicyObjectSecurityPortListEntryArgs',
+    'PolicyObjectSecurityPortListEntryArgsDict',
+    'PolicyObjectSecurityScalableGroupTagListEntryArgs',
+    'PolicyObjectSecurityScalableGroupTagListEntryArgsDict',
+    'PolicyObjectSecurityUrlAllowListEntryArgs',
+    'PolicyObjectSecurityUrlAllowListEntryArgsDict',
+    'PolicyObjectSecurityUrlBlockListEntryArgs',
+    'PolicyObjectSecurityUrlBlockListEntryArgsDict',
+    'PolicyObjectSlaClassListEntryArgs',
+    'PolicyObjectSlaClassListEntryArgsDict',
+    'PolicyObjectStandardCommunityListEntryArgs',
+    'PolicyObjectStandardCommunityListEntryArgsDict',
     'PolicyObjectTlocListEntryArgs',
     'PolicyObjectTlocListEntryArgsDict',
+    'PolicyObjectVpnGroupEntryArgs',
+    'PolicyObjectVpnGroupEntryArgsDict',
     'PortListPolicyObjectEntryArgs',
     'PortListPolicyObjectEntryArgsDict',
     'ProtocolListPolicyObjectEntryArgs',
@@ -435,6 +487,26 @@ __all__ = [
     'SecurityPolicyDefinitionArgsDict',
     'SecurityPolicyLoggingArgs',
     'SecurityPolicyLoggingArgsDict',
+    'ServiceIpv4AclFeatureSequenceArgs',
+    'ServiceIpv4AclFeatureSequenceArgsDict',
+    'ServiceIpv4AclFeatureSequenceActionArgs',
+    'ServiceIpv4AclFeatureSequenceActionArgsDict',
+    'ServiceIpv4AclFeatureSequenceMatchEntryArgs',
+    'ServiceIpv4AclFeatureSequenceMatchEntryArgsDict',
+    'ServiceIpv4AclFeatureSequenceMatchEntryDestinationPortArgs',
+    'ServiceIpv4AclFeatureSequenceMatchEntryDestinationPortArgsDict',
+    'ServiceIpv4AclFeatureSequenceMatchEntrySourcePortArgs',
+    'ServiceIpv4AclFeatureSequenceMatchEntrySourcePortArgsDict',
+    'ServiceIpv6AclFeatureSequenceArgs',
+    'ServiceIpv6AclFeatureSequenceArgsDict',
+    'ServiceIpv6AclFeatureSequenceActionArgs',
+    'ServiceIpv6AclFeatureSequenceActionArgsDict',
+    'ServiceIpv6AclFeatureSequenceMatchEntryArgs',
+    'ServiceIpv6AclFeatureSequenceMatchEntryArgsDict',
+    'ServiceIpv6AclFeatureSequenceMatchEntryDestinationPortArgs',
+    'ServiceIpv6AclFeatureSequenceMatchEntryDestinationPortArgsDict',
+    'ServiceIpv6AclFeatureSequenceMatchEntrySourcePortArgs',
+    'ServiceIpv6AclFeatureSequenceMatchEntrySourcePortArgsDict',
     'ServiceLanVpnFeatureAdvertiseOmpIpv4Args',
     'ServiceLanVpnFeatureAdvertiseOmpIpv4ArgsDict',
     'ServiceLanVpnFeatureAdvertiseOmpIpv4PrefixArgs',
@@ -499,6 +571,8 @@ __all__ = [
     'ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArgsDict',
     'ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpSecondaryAddressArgs',
     'ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpSecondaryAddressArgsDict',
+    'ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpTrackingObjectArgs',
+    'ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpTrackingObjectArgsDict',
     'ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperArgs',
     'ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperArgsDict',
     'ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs',
@@ -519,6 +593,8 @@ __all__ = [
     'ServiceLanVpnInterfaceSviFeatureIpv4VrrpArgsDict',
     'ServiceLanVpnInterfaceSviFeatureIpv4VrrpSecondaryAddressArgs',
     'ServiceLanVpnInterfaceSviFeatureIpv4VrrpSecondaryAddressArgsDict',
+    'ServiceLanVpnInterfaceSviFeatureIpv4VrrpTrackingObjectArgs',
+    'ServiceLanVpnInterfaceSviFeatureIpv4VrrpTrackingObjectArgsDict',
     'ServiceLanVpnInterfaceSviFeatureIpv6DhcpHelperArgs',
     'ServiceLanVpnInterfaceSviFeatureIpv6DhcpHelperArgsDict',
     'ServiceLanVpnInterfaceSviFeatureIpv6SecondaryAddressArgs',
@@ -529,6 +605,26 @@ __all__ = [
     'ServiceLanVpnInterfaceSviFeatureIpv6VrrpAddressArgsDict',
     'ServiceLanVpnInterfaceSviFeatureIpv6VrrpSecondaryAddressArgs',
     'ServiceLanVpnInterfaceSviFeatureIpv6VrrpSecondaryAddressArgsDict',
+    'ServiceMulticastFeatureAutoRpAnnounceArgs',
+    'ServiceMulticastFeatureAutoRpAnnounceArgsDict',
+    'ServiceMulticastFeatureAutoRpDiscoveryArgs',
+    'ServiceMulticastFeatureAutoRpDiscoveryArgsDict',
+    'ServiceMulticastFeatureIgmpInterfaceArgs',
+    'ServiceMulticastFeatureIgmpInterfaceArgsDict',
+    'ServiceMulticastFeatureIgmpInterfaceJoinGroupArgs',
+    'ServiceMulticastFeatureIgmpInterfaceJoinGroupArgsDict',
+    'ServiceMulticastFeatureMsdpGroupArgs',
+    'ServiceMulticastFeatureMsdpGroupArgsDict',
+    'ServiceMulticastFeatureMsdpGroupPeerArgs',
+    'ServiceMulticastFeatureMsdpGroupPeerArgsDict',
+    'ServiceMulticastFeaturePimBsrCandidateArgs',
+    'ServiceMulticastFeaturePimBsrCandidateArgsDict',
+    'ServiceMulticastFeaturePimBsrRpCandidateArgs',
+    'ServiceMulticastFeaturePimBsrRpCandidateArgsDict',
+    'ServiceMulticastFeaturePimInterfaceArgs',
+    'ServiceMulticastFeaturePimInterfaceArgsDict',
+    'ServiceMulticastFeatureStaticRpAddressArgs',
+    'ServiceMulticastFeatureStaticRpAddressArgsDict',
     'ServiceObjectTrackerGroupFeatureTrackerElementArgs',
     'ServiceObjectTrackerGroupFeatureTrackerElementArgsDict',
     'ServiceRoutePolicyFeatureSequenceArgs',
@@ -559,6 +655,16 @@ __all__ = [
     'ServiceRoutingBgpFeatureIpv6NetworkArgsDict',
     'ServiceRoutingBgpFeatureIpv6RedistributeArgs',
     'ServiceRoutingBgpFeatureIpv6RedistributeArgsDict',
+    'ServiceRoutingEigrpFeatureInterfaceArgs',
+    'ServiceRoutingEigrpFeatureInterfaceArgsDict',
+    'ServiceRoutingEigrpFeatureInterfaceSummaryAddressArgs',
+    'ServiceRoutingEigrpFeatureInterfaceSummaryAddressArgsDict',
+    'ServiceRoutingEigrpFeatureMd5KeyArgs',
+    'ServiceRoutingEigrpFeatureMd5KeyArgsDict',
+    'ServiceRoutingEigrpFeatureNetworkArgs',
+    'ServiceRoutingEigrpFeatureNetworkArgsDict',
+    'ServiceRoutingEigrpFeatureRedistributeArgs',
+    'ServiceRoutingEigrpFeatureRedistributeArgsDict',
     'ServiceRoutingOspfFeatureAreaArgs',
     'ServiceRoutingOspfFeatureAreaArgsDict',
     'ServiceRoutingOspfFeatureAreaInterfaceArgs',
@@ -591,6 +697,8 @@ __all__ = [
     'ServiceSwitchportFeatureStaticMacAddressArgsDict',
     'ServiceTrackerGroupFeatureTrackerElementArgs',
     'ServiceTrackerGroupFeatureTrackerElementArgsDict',
+    'ServiceWirelessLanFeatureSsidArgs',
+    'ServiceWirelessLanFeatureSsidArgsDict',
     'SiteListPolicyObjectEntryArgs',
     'SiteListPolicyObjectEntryArgsDict',
     'StandardCommunityListPolicyObjectEntryArgs',
@@ -669,6 +777,26 @@ __all__ = [
     'TrafficDataPolicyDefinitionSequenceActionEntrySetParameterArgsDict',
     'TrafficDataPolicyDefinitionSequenceMatchEntryArgs',
     'TrafficDataPolicyDefinitionSequenceMatchEntryArgsDict',
+    'TransportIpv4AclFeatureSequenceArgs',
+    'TransportIpv4AclFeatureSequenceArgsDict',
+    'TransportIpv4AclFeatureSequenceActionArgs',
+    'TransportIpv4AclFeatureSequenceActionArgsDict',
+    'TransportIpv4AclFeatureSequenceMatchEntryArgs',
+    'TransportIpv4AclFeatureSequenceMatchEntryArgsDict',
+    'TransportIpv4AclFeatureSequenceMatchEntryDestinationPortArgs',
+    'TransportIpv4AclFeatureSequenceMatchEntryDestinationPortArgsDict',
+    'TransportIpv4AclFeatureSequenceMatchEntrySourcePortArgs',
+    'TransportIpv4AclFeatureSequenceMatchEntrySourcePortArgsDict',
+    'TransportIpv6AclFeatureSequenceArgs',
+    'TransportIpv6AclFeatureSequenceArgsDict',
+    'TransportIpv6AclFeatureSequenceActionArgs',
+    'TransportIpv6AclFeatureSequenceActionArgsDict',
+    'TransportIpv6AclFeatureSequenceMatchEntryArgs',
+    'TransportIpv6AclFeatureSequenceMatchEntryArgsDict',
+    'TransportIpv6AclFeatureSequenceMatchEntryDestinationPortArgs',
+    'TransportIpv6AclFeatureSequenceMatchEntryDestinationPortArgsDict',
+    'TransportIpv6AclFeatureSequenceMatchEntrySourcePortArgs',
+    'TransportIpv6AclFeatureSequenceMatchEntrySourcePortArgsDict',
     'TransportIpv6TrackerGroupFeatureTrackerElementArgs',
     'TransportIpv6TrackerGroupFeatureTrackerElementArgsDict',
     'TransportManagementVpnFeatureIpv4StaticRouteArgs',
@@ -741,6 +869,10 @@ __all__ = [
     'TransportRoutingOspfv3Ipv6FeatureAreaRangeArgsDict',
     'TransportRoutingOspfv3Ipv6FeatureRedistributeArgs',
     'TransportRoutingOspfv3Ipv6FeatureRedistributeArgsDict',
+    'TransportT1E1ControllerFeatureEntryArgs',
+    'TransportT1E1ControllerFeatureEntryArgsDict',
+    'TransportT1E1ControllerFeatureEntryChannelGroupArgs',
+    'TransportT1E1ControllerFeatureEntryChannelGroupArgsDict',
     'TransportTrackerGroupFeatureTrackerElementArgs',
     'TransportTrackerGroupFeatureTrackerElementArgsDict',
     'TransportWanVpnFeatureIpv4StaticRouteArgs',
@@ -1945,6 +2077,1490 @@ class ApplicationPriorityQosPolicyQosSchedulerArgs:
     @scheduling_type.setter
     def scheduling_type(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "scheduling_type", value)
+
+
+if not MYPY:
+    class ApplicationPriorityTrafficPolicyPolicySequenceArgsDict(TypedDict):
+        actions: NotRequired[pulumi.Input[Sequence[pulumi.Input['ApplicationPriorityTrafficPolicyPolicySequenceActionArgsDict']]]]
+        base_action: NotRequired[pulumi.Input[str]]
+        """
+        Base Action
+          - Choices: `drop`, `accept`
+        """
+        match_entries: NotRequired[pulumi.Input[Sequence[pulumi.Input['ApplicationPriorityTrafficPolicyPolicySequenceMatchEntryArgsDict']]]]
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Sequence IP Type
+          - Choices: `ipv4`, `ipv6`, `all`
+        """
+        sequence_id: NotRequired[pulumi.Input[int]]
+        """
+        Sequence Id
+          - Range: `1`-`65536`
+        """
+        sequence_name: NotRequired[pulumi.Input[str]]
+        """
+        Sequence Name
+        """
+elif False:
+    ApplicationPriorityTrafficPolicyPolicySequenceArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ApplicationPriorityTrafficPolicyPolicySequenceArgs:
+    def __init__(__self__, *,
+                 actions: Optional[pulumi.Input[Sequence[pulumi.Input['ApplicationPriorityTrafficPolicyPolicySequenceActionArgs']]]] = None,
+                 base_action: Optional[pulumi.Input[str]] = None,
+                 match_entries: Optional[pulumi.Input[Sequence[pulumi.Input['ApplicationPriorityTrafficPolicyPolicySequenceMatchEntryArgs']]]] = None,
+                 protocol: Optional[pulumi.Input[str]] = None,
+                 sequence_id: Optional[pulumi.Input[int]] = None,
+                 sequence_name: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[str] base_action: Base Action
+                 - Choices: `drop`, `accept`
+        :param pulumi.Input[str] protocol: Sequence IP Type
+                 - Choices: `ipv4`, `ipv6`, `all`
+        :param pulumi.Input[int] sequence_id: Sequence Id
+                 - Range: `1`-`65536`
+        :param pulumi.Input[str] sequence_name: Sequence Name
+        """
+        if actions is not None:
+            pulumi.set(__self__, "actions", actions)
+        if base_action is not None:
+            pulumi.set(__self__, "base_action", base_action)
+        if match_entries is not None:
+            pulumi.set(__self__, "match_entries", match_entries)
+        if protocol is not None:
+            pulumi.set(__self__, "protocol", protocol)
+        if sequence_id is not None:
+            pulumi.set(__self__, "sequence_id", sequence_id)
+        if sequence_name is not None:
+            pulumi.set(__self__, "sequence_name", sequence_name)
+
+    @property
+    @pulumi.getter
+    def actions(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplicationPriorityTrafficPolicyPolicySequenceActionArgs']]]]:
+        return pulumi.get(self, "actions")
+
+    @actions.setter
+    def actions(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplicationPriorityTrafficPolicyPolicySequenceActionArgs']]]]):
+        pulumi.set(self, "actions", value)
+
+    @property
+    @pulumi.getter(name="baseAction")
+    def base_action(self) -> Optional[pulumi.Input[str]]:
+        """
+        Base Action
+          - Choices: `drop`, `accept`
+        """
+        return pulumi.get(self, "base_action")
+
+    @base_action.setter
+    def base_action(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "base_action", value)
+
+    @property
+    @pulumi.getter(name="matchEntries")
+    def match_entries(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplicationPriorityTrafficPolicyPolicySequenceMatchEntryArgs']]]]:
+        return pulumi.get(self, "match_entries")
+
+    @match_entries.setter
+    def match_entries(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplicationPriorityTrafficPolicyPolicySequenceMatchEntryArgs']]]]):
+        pulumi.set(self, "match_entries", value)
+
+    @property
+    @pulumi.getter
+    def protocol(self) -> Optional[pulumi.Input[str]]:
+        """
+        Sequence IP Type
+          - Choices: `ipv4`, `ipv6`, `all`
+        """
+        return pulumi.get(self, "protocol")
+
+    @protocol.setter
+    def protocol(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "protocol", value)
+
+    @property
+    @pulumi.getter(name="sequenceId")
+    def sequence_id(self) -> Optional[pulumi.Input[int]]:
+        """
+        Sequence Id
+          - Range: `1`-`65536`
+        """
+        return pulumi.get(self, "sequence_id")
+
+    @sequence_id.setter
+    def sequence_id(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "sequence_id", value)
+
+    @property
+    @pulumi.getter(name="sequenceName")
+    def sequence_name(self) -> Optional[pulumi.Input[str]]:
+        """
+        Sequence Name
+        """
+        return pulumi.get(self, "sequence_name")
+
+    @sequence_name.setter
+    def sequence_name(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "sequence_name", value)
+
+
+if not MYPY:
+    class ApplicationPriorityTrafficPolicyPolicySequenceActionArgsDict(TypedDict):
+        backup_sla_preferred_colors: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        Backup SLA perferred color
+        """
+        cloud_probe: NotRequired[pulumi.Input[bool]]
+        cloud_saas: NotRequired[pulumi.Input[bool]]
+        count: NotRequired[pulumi.Input[str]]
+        fallback_to_routing: NotRequired[pulumi.Input[bool]]
+        log: NotRequired[pulumi.Input[bool]]
+        loss_correct_fec_threshold: NotRequired[pulumi.Input[int]]
+        """
+        - Range: `1`-`5`
+        """
+        loss_correct_type: NotRequired[pulumi.Input[str]]
+        """
+        - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
+        """
+        nat_bypass: NotRequired[pulumi.Input[bool]]
+        nat_dia_interfaces: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        nat_dia_pools: NotRequired[pulumi.Input[Sequence[pulumi.Input[int]]]]
+        nat_fallback: NotRequired[pulumi.Input[bool]]
+        nat_pool: NotRequired[pulumi.Input[int]]
+        """
+        - Range: `1`-`31`
+        """
+        nat_vpn: NotRequired[pulumi.Input[bool]]
+        redirect_dns_field: NotRequired[pulumi.Input[str]]
+        """
+        - Choices: `ipAddress`, `redirectDns`
+        """
+        redirect_dns_value: NotRequired[pulumi.Input[str]]
+        secure_internet_gateway: NotRequired[pulumi.Input[bool]]
+        set_parameters: NotRequired[pulumi.Input[Sequence[pulumi.Input['ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterArgsDict']]]]
+        sla_classes: NotRequired[pulumi.Input[Sequence[pulumi.Input['ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClassArgsDict']]]]
+        """
+        slaClass
+        """
+elif False:
+    ApplicationPriorityTrafficPolicyPolicySequenceActionArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ApplicationPriorityTrafficPolicyPolicySequenceActionArgs:
+    def __init__(__self__, *,
+                 backup_sla_preferred_colors: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
+                 cloud_probe: Optional[pulumi.Input[bool]] = None,
+                 cloud_saas: Optional[pulumi.Input[bool]] = None,
+                 count: Optional[pulumi.Input[str]] = None,
+                 fallback_to_routing: Optional[pulumi.Input[bool]] = None,
+                 log: Optional[pulumi.Input[bool]] = None,
+                 loss_correct_fec_threshold: Optional[pulumi.Input[int]] = None,
+                 loss_correct_type: Optional[pulumi.Input[str]] = None,
+                 nat_bypass: Optional[pulumi.Input[bool]] = None,
+                 nat_dia_interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
+                 nat_dia_pools: Optional[pulumi.Input[Sequence[pulumi.Input[int]]]] = None,
+                 nat_fallback: Optional[pulumi.Input[bool]] = None,
+                 nat_pool: Optional[pulumi.Input[int]] = None,
+                 nat_vpn: Optional[pulumi.Input[bool]] = None,
+                 redirect_dns_field: Optional[pulumi.Input[str]] = None,
+                 redirect_dns_value: Optional[pulumi.Input[str]] = None,
+                 secure_internet_gateway: Optional[pulumi.Input[bool]] = None,
+                 set_parameters: Optional[pulumi.Input[Sequence[pulumi.Input['ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterArgs']]]] = None,
+                 sla_classes: Optional[pulumi.Input[Sequence[pulumi.Input['ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClassArgs']]]] = None):
+        """
+        :param pulumi.Input[Sequence[pulumi.Input[str]]] backup_sla_preferred_colors: Backup SLA perferred color
+        :param pulumi.Input[int] loss_correct_fec_threshold: - Range: `1`-`5`
+        :param pulumi.Input[str] loss_correct_type: - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
+        :param pulumi.Input[int] nat_pool: - Range: `1`-`31`
+        :param pulumi.Input[str] redirect_dns_field: - Choices: `ipAddress`, `redirectDns`
+        :param pulumi.Input[Sequence[pulumi.Input['ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClassArgs']]] sla_classes: slaClass
+        """
+        if backup_sla_preferred_colors is not None:
+            pulumi.set(__self__, "backup_sla_preferred_colors", backup_sla_preferred_colors)
+        if cloud_probe is not None:
+            pulumi.set(__self__, "cloud_probe", cloud_probe)
+        if cloud_saas is not None:
+            pulumi.set(__self__, "cloud_saas", cloud_saas)
+        if count is not None:
+            pulumi.set(__self__, "count", count)
+        if fallback_to_routing is not None:
+            pulumi.set(__self__, "fallback_to_routing", fallback_to_routing)
+        if log is not None:
+            pulumi.set(__self__, "log", log)
+        if loss_correct_fec_threshold is not None:
+            pulumi.set(__self__, "loss_correct_fec_threshold", loss_correct_fec_threshold)
+        if loss_correct_type is not None:
+            pulumi.set(__self__, "loss_correct_type", loss_correct_type)
+        if nat_bypass is not None:
+            pulumi.set(__self__, "nat_bypass", nat_bypass)
+        if nat_dia_interfaces is not None:
+            pulumi.set(__self__, "nat_dia_interfaces", nat_dia_interfaces)
+        if nat_dia_pools is not None:
+            pulumi.set(__self__, "nat_dia_pools", nat_dia_pools)
+        if nat_fallback is not None:
+            pulumi.set(__self__, "nat_fallback", nat_fallback)
+        if nat_pool is not None:
+            pulumi.set(__self__, "nat_pool", nat_pool)
+        if nat_vpn is not None:
+            pulumi.set(__self__, "nat_vpn", nat_vpn)
+        if redirect_dns_field is not None:
+            pulumi.set(__self__, "redirect_dns_field", redirect_dns_field)
+        if redirect_dns_value is not None:
+            pulumi.set(__self__, "redirect_dns_value", redirect_dns_value)
+        if secure_internet_gateway is not None:
+            pulumi.set(__self__, "secure_internet_gateway", secure_internet_gateway)
+        if set_parameters is not None:
+            pulumi.set(__self__, "set_parameters", set_parameters)
+        if sla_classes is not None:
+            pulumi.set(__self__, "sla_classes", sla_classes)
+
+    @property
+    @pulumi.getter(name="backupSlaPreferredColors")
+    def backup_sla_preferred_colors(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]:
+        """
+        Backup SLA perferred color
+        """
+        return pulumi.get(self, "backup_sla_preferred_colors")
+
+    @backup_sla_preferred_colors.setter
+    def backup_sla_preferred_colors(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
+        pulumi.set(self, "backup_sla_preferred_colors", value)
+
+    @property
+    @pulumi.getter(name="cloudProbe")
+    def cloud_probe(self) -> Optional[pulumi.Input[bool]]:
+        return pulumi.get(self, "cloud_probe")
+
+    @cloud_probe.setter
+    def cloud_probe(self, value: Optional[pulumi.Input[bool]]):
+        pulumi.set(self, "cloud_probe", value)
+
+    @property
+    @pulumi.getter(name="cloudSaas")
+    def cloud_saas(self) -> Optional[pulumi.Input[bool]]:
+        return pulumi.get(self, "cloud_saas")
+
+    @cloud_saas.setter
+    def cloud_saas(self, value: Optional[pulumi.Input[bool]]):
+        pulumi.set(self, "cloud_saas", value)
+
+    @property
+    @pulumi.getter
+    def count(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "count")
+
+    @count.setter
+    def count(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "count", value)
+
+    @property
+    @pulumi.getter(name="fallbackToRouting")
+    def fallback_to_routing(self) -> Optional[pulumi.Input[bool]]:
+        return pulumi.get(self, "fallback_to_routing")
+
+    @fallback_to_routing.setter
+    def fallback_to_routing(self, value: Optional[pulumi.Input[bool]]):
+        pulumi.set(self, "fallback_to_routing", value)
+
+    @property
+    @pulumi.getter
+    def log(self) -> Optional[pulumi.Input[bool]]:
+        return pulumi.get(self, "log")
+
+    @log.setter
+    def log(self, value: Optional[pulumi.Input[bool]]):
+        pulumi.set(self, "log", value)
+
+    @property
+    @pulumi.getter(name="lossCorrectFecThreshold")
+    def loss_correct_fec_threshold(self) -> Optional[pulumi.Input[int]]:
+        """
+        - Range: `1`-`5`
+        """
+        return pulumi.get(self, "loss_correct_fec_threshold")
+
+    @loss_correct_fec_threshold.setter
+    def loss_correct_fec_threshold(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "loss_correct_fec_threshold", value)
+
+    @property
+    @pulumi.getter(name="lossCorrectType")
+    def loss_correct_type(self) -> Optional[pulumi.Input[str]]:
+        """
+        - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
+        """
+        return pulumi.get(self, "loss_correct_type")
+
+    @loss_correct_type.setter
+    def loss_correct_type(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "loss_correct_type", value)
+
+    @property
+    @pulumi.getter(name="natBypass")
+    def nat_bypass(self) -> Optional[pulumi.Input[bool]]:
+        return pulumi.get(self, "nat_bypass")
+
+    @nat_bypass.setter
+    def nat_bypass(self, value: Optional[pulumi.Input[bool]]):
+        pulumi.set(self, "nat_bypass", value)
+
+    @property
+    @pulumi.getter(name="natDiaInterfaces")
+    def nat_dia_interfaces(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]:
+        return pulumi.get(self, "nat_dia_interfaces")
+
+    @nat_dia_interfaces.setter
+    def nat_dia_interfaces(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
+        pulumi.set(self, "nat_dia_interfaces", value)
+
+    @property
+    @pulumi.getter(name="natDiaPools")
+    def nat_dia_pools(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[int]]]]:
+        return pulumi.get(self, "nat_dia_pools")
+
+    @nat_dia_pools.setter
+    def nat_dia_pools(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[int]]]]):
+        pulumi.set(self, "nat_dia_pools", value)
+
+    @property
+    @pulumi.getter(name="natFallback")
+    def nat_fallback(self) -> Optional[pulumi.Input[bool]]:
+        return pulumi.get(self, "nat_fallback")
+
+    @nat_fallback.setter
+    def nat_fallback(self, value: Optional[pulumi.Input[bool]]):
+        pulumi.set(self, "nat_fallback", value)
+
+    @property
+    @pulumi.getter(name="natPool")
+    def nat_pool(self) -> Optional[pulumi.Input[int]]:
+        """
+        - Range: `1`-`31`
+        """
+        return pulumi.get(self, "nat_pool")
+
+    @nat_pool.setter
+    def nat_pool(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "nat_pool", value)
+
+    @property
+    @pulumi.getter(name="natVpn")
+    def nat_vpn(self) -> Optional[pulumi.Input[bool]]:
+        return pulumi.get(self, "nat_vpn")
+
+    @nat_vpn.setter
+    def nat_vpn(self, value: Optional[pulumi.Input[bool]]):
+        pulumi.set(self, "nat_vpn", value)
+
+    @property
+    @pulumi.getter(name="redirectDnsField")
+    def redirect_dns_field(self) -> Optional[pulumi.Input[str]]:
+        """
+        - Choices: `ipAddress`, `redirectDns`
+        """
+        return pulumi.get(self, "redirect_dns_field")
+
+    @redirect_dns_field.setter
+    def redirect_dns_field(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "redirect_dns_field", value)
+
+    @property
+    @pulumi.getter(name="redirectDnsValue")
+    def redirect_dns_value(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "redirect_dns_value")
+
+    @redirect_dns_value.setter
+    def redirect_dns_value(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "redirect_dns_value", value)
+
+    @property
+    @pulumi.getter(name="secureInternetGateway")
+    def secure_internet_gateway(self) -> Optional[pulumi.Input[bool]]:
+        return pulumi.get(self, "secure_internet_gateway")
+
+    @secure_internet_gateway.setter
+    def secure_internet_gateway(self, value: Optional[pulumi.Input[bool]]):
+        pulumi.set(self, "secure_internet_gateway", value)
+
+    @property
+    @pulumi.getter(name="setParameters")
+    def set_parameters(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterArgs']]]]:
+        return pulumi.get(self, "set_parameters")
+
+    @set_parameters.setter
+    def set_parameters(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterArgs']]]]):
+        pulumi.set(self, "set_parameters", value)
+
+    @property
+    @pulumi.getter(name="slaClasses")
+    def sla_classes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClassArgs']]]]:
+        """
+        slaClass
+        """
+        return pulumi.get(self, "sla_classes")
+
+    @sla_classes.setter
+    def sla_classes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClassArgs']]]]):
+        pulumi.set(self, "sla_classes", value)
+
+
+if not MYPY:
+    class ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterArgsDict(TypedDict):
+        dscp: NotRequired[pulumi.Input[int]]
+        """
+        - Range: `0`-`63`
+        """
+        forwarding_class_list_id: NotRequired[pulumi.Input[str]]
+        local_tloc_list_colors: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        local_tloc_list_encapsulation: NotRequired[pulumi.Input[str]]
+        """
+        - Choices: `ipsec`, `gre`
+        """
+        local_tloc_list_restrict: NotRequired[pulumi.Input[str]]
+        next_hop_ipv4: NotRequired[pulumi.Input[str]]
+        next_hop_ipv6: NotRequired[pulumi.Input[str]]
+        next_hop_loose: NotRequired[pulumi.Input[bool]]
+        policer_id: NotRequired[pulumi.Input[str]]
+        preferred_color_group_id: NotRequired[pulumi.Input[str]]
+        preferred_remote_color_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        preferred_remote_color_restrict: NotRequired[pulumi.Input[str]]
+        service_chain_fallback_to_routing: NotRequired[pulumi.Input[bool]]
+        service_chain_local: NotRequired[pulumi.Input[bool]]
+        service_chain_tloc_colors: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        service_chain_tloc_encapsulation: NotRequired[pulumi.Input[str]]
+        """
+        - Choices: `ipsec`, `gre`
+        """
+        service_chain_tloc_ip: NotRequired[pulumi.Input[str]]
+        service_chain_tloc_list_id: NotRequired[pulumi.Input[str]]
+        service_chain_type: NotRequired[pulumi.Input[str]]
+        """
+        - Choices: `SC1`, `SC2`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
+        """
+        service_chain_vpn: NotRequired[pulumi.Input[int]]
+        """
+        - Range: `0`-`65530`
+        """
+        service_tloc_colors: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        service_tloc_encapsulation: NotRequired[pulumi.Input[str]]
+        """
+        - Choices: `ipsec`, `gre`
+        """
+        service_tloc_ip: NotRequired[pulumi.Input[str]]
+        service_tloc_list_id: NotRequired[pulumi.Input[str]]
+        service_type: NotRequired[pulumi.Input[str]]
+        """
+        - Choices: `FW`, `IDS`, `IDP`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `appqoe`
+        """
+        service_vpn: NotRequired[pulumi.Input[str]]
+        tloc_colors: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        tloc_encapsulation: NotRequired[pulumi.Input[str]]
+        """
+        - Choices: `ipsec`, `gre`
+        """
+        tloc_ip: NotRequired[pulumi.Input[str]]
+        tloc_list_id: NotRequired[pulumi.Input[str]]
+        vpn: NotRequired[pulumi.Input[str]]
+elif False:
+    ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterArgs:
+    def __init__(__self__, *,
+                 dscp: Optional[pulumi.Input[int]] = None,
+                 forwarding_class_list_id: Optional[pulumi.Input[str]] = None,
+                 local_tloc_list_colors: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
+                 local_tloc_list_encapsulation: Optional[pulumi.Input[str]] = None,
+                 local_tloc_list_restrict: Optional[pulumi.Input[str]] = None,
+                 next_hop_ipv4: Optional[pulumi.Input[str]] = None,
+                 next_hop_ipv6: Optional[pulumi.Input[str]] = None,
+                 next_hop_loose: Optional[pulumi.Input[bool]] = None,
+                 policer_id: Optional[pulumi.Input[str]] = None,
+                 preferred_color_group_id: Optional[pulumi.Input[str]] = None,
+                 preferred_remote_color_ids: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
+                 preferred_remote_color_restrict: Optional[pulumi.Input[str]] = None,
+                 service_chain_fallback_to_routing: Optional[pulumi.Input[bool]] = None,
+                 service_chain_local: Optional[pulumi.Input[bool]] = None,
+                 service_chain_tloc_colors: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
+                 service_chain_tloc_encapsulation: Optional[pulumi.Input[str]] = None,
+                 service_chain_tloc_ip: Optional[pulumi.Input[str]] = None,
+                 service_chain_tloc_list_id: Optional[pulumi.Input[str]] = None,
+                 service_chain_type: Optional[pulumi.Input[str]] = None,
+                 service_chain_vpn: Optional[pulumi.Input[int]] = None,
+                 service_tloc_colors: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
+                 service_tloc_encapsulation: Optional[pulumi.Input[str]] = None,
+                 service_tloc_ip: Optional[pulumi.Input[str]] = None,
+                 service_tloc_list_id: Optional[pulumi.Input[str]] = None,
+                 service_type: Optional[pulumi.Input[str]] = None,
+                 service_vpn: Optional[pulumi.Input[str]] = None,
+                 tloc_colors: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
+                 tloc_encapsulation: Optional[pulumi.Input[str]] = None,
+                 tloc_ip: Optional[pulumi.Input[str]] = None,
+                 tloc_list_id: Optional[pulumi.Input[str]] = None,
+                 vpn: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[int] dscp: - Range: `0`-`63`
+        :param pulumi.Input[str] local_tloc_list_encapsulation: - Choices: `ipsec`, `gre`
+        :param pulumi.Input[str] service_chain_tloc_encapsulation: - Choices: `ipsec`, `gre`
+        :param pulumi.Input[str] service_chain_type: - Choices: `SC1`, `SC2`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
+        :param pulumi.Input[int] service_chain_vpn: - Range: `0`-`65530`
+        :param pulumi.Input[str] service_tloc_encapsulation: - Choices: `ipsec`, `gre`
+        :param pulumi.Input[str] service_type: - Choices: `FW`, `IDS`, `IDP`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `appqoe`
+        :param pulumi.Input[str] tloc_encapsulation: - Choices: `ipsec`, `gre`
+        """
+        if dscp is not None:
+            pulumi.set(__self__, "dscp", dscp)
+        if forwarding_class_list_id is not None:
+            pulumi.set(__self__, "forwarding_class_list_id", forwarding_class_list_id)
+        if local_tloc_list_colors is not None:
+            pulumi.set(__self__, "local_tloc_list_colors", local_tloc_list_colors)
+        if local_tloc_list_encapsulation is not None:
+            pulumi.set(__self__, "local_tloc_list_encapsulation", local_tloc_list_encapsulation)
+        if local_tloc_list_restrict is not None:
+            pulumi.set(__self__, "local_tloc_list_restrict", local_tloc_list_restrict)
+        if next_hop_ipv4 is not None:
+            pulumi.set(__self__, "next_hop_ipv4", next_hop_ipv4)
+        if next_hop_ipv6 is not None:
+            pulumi.set(__self__, "next_hop_ipv6", next_hop_ipv6)
+        if next_hop_loose is not None:
+            pulumi.set(__self__, "next_hop_loose", next_hop_loose)
+        if policer_id is not None:
+            pulumi.set(__self__, "policer_id", policer_id)
+        if preferred_color_group_id is not None:
+            pulumi.set(__self__, "preferred_color_group_id", preferred_color_group_id)
+        if preferred_remote_color_ids is not None:
+            pulumi.set(__self__, "preferred_remote_color_ids", preferred_remote_color_ids)
+        if preferred_remote_color_restrict is not None:
+            pulumi.set(__self__, "preferred_remote_color_restrict", preferred_remote_color_restrict)
+        if service_chain_fallback_to_routing is not None:
+            pulumi.set(__self__, "service_chain_fallback_to_routing", service_chain_fallback_to_routing)
+        if service_chain_local is not None:
+            pulumi.set(__self__, "service_chain_local", service_chain_local)
+        if service_chain_tloc_colors is not None:
+            pulumi.set(__self__, "service_chain_tloc_colors", service_chain_tloc_colors)
+        if service_chain_tloc_encapsulation is not None:
+            pulumi.set(__self__, "service_chain_tloc_encapsulation", service_chain_tloc_encapsulation)
+        if service_chain_tloc_ip is not None:
+            pulumi.set(__self__, "service_chain_tloc_ip", service_chain_tloc_ip)
+        if service_chain_tloc_list_id is not None:
+            pulumi.set(__self__, "service_chain_tloc_list_id", service_chain_tloc_list_id)
+        if service_chain_type is not None:
+            pulumi.set(__self__, "service_chain_type", service_chain_type)
+        if service_chain_vpn is not None:
+            pulumi.set(__self__, "service_chain_vpn", service_chain_vpn)
+        if service_tloc_colors is not None:
+            pulumi.set(__self__, "service_tloc_colors", service_tloc_colors)
+        if service_tloc_encapsulation is not None:
+            pulumi.set(__self__, "service_tloc_encapsulation", service_tloc_encapsulation)
+        if service_tloc_ip is not None:
+            pulumi.set(__self__, "service_tloc_ip", service_tloc_ip)
+        if service_tloc_list_id is not None:
+            pulumi.set(__self__, "service_tloc_list_id", service_tloc_list_id)
+        if service_type is not None:
+            pulumi.set(__self__, "service_type", service_type)
+        if service_vpn is not None:
+            pulumi.set(__self__, "service_vpn", service_vpn)
+        if tloc_colors is not None:
+            pulumi.set(__self__, "tloc_colors", tloc_colors)
+        if tloc_encapsulation is not None:
+            pulumi.set(__self__, "tloc_encapsulation", tloc_encapsulation)
+        if tloc_ip is not None:
+            pulumi.set(__self__, "tloc_ip", tloc_ip)
+        if tloc_list_id is not None:
+            pulumi.set(__self__, "tloc_list_id", tloc_list_id)
+        if vpn is not None:
+            pulumi.set(__self__, "vpn", vpn)
+
+    @property
+    @pulumi.getter
+    def dscp(self) -> Optional[pulumi.Input[int]]:
+        """
+        - Range: `0`-`63`
+        """
+        return pulumi.get(self, "dscp")
+
+    @dscp.setter
+    def dscp(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "dscp", value)
+
+    @property
+    @pulumi.getter(name="forwardingClassListId")
+    def forwarding_class_list_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "forwarding_class_list_id")
+
+    @forwarding_class_list_id.setter
+    def forwarding_class_list_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "forwarding_class_list_id", value)
+
+    @property
+    @pulumi.getter(name="localTlocListColors")
+    def local_tloc_list_colors(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]:
+        return pulumi.get(self, "local_tloc_list_colors")
+
+    @local_tloc_list_colors.setter
+    def local_tloc_list_colors(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
+        pulumi.set(self, "local_tloc_list_colors", value)
+
+    @property
+    @pulumi.getter(name="localTlocListEncapsulation")
+    def local_tloc_list_encapsulation(self) -> Optional[pulumi.Input[str]]:
+        """
+        - Choices: `ipsec`, `gre`
+        """
+        return pulumi.get(self, "local_tloc_list_encapsulation")
+
+    @local_tloc_list_encapsulation.setter
+    def local_tloc_list_encapsulation(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "local_tloc_list_encapsulation", value)
+
+    @property
+    @pulumi.getter(name="localTlocListRestrict")
+    def local_tloc_list_restrict(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "local_tloc_list_restrict")
+
+    @local_tloc_list_restrict.setter
+    def local_tloc_list_restrict(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "local_tloc_list_restrict", value)
+
+    @property
+    @pulumi.getter(name="nextHopIpv4")
+    def next_hop_ipv4(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "next_hop_ipv4")
+
+    @next_hop_ipv4.setter
+    def next_hop_ipv4(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "next_hop_ipv4", value)
+
+    @property
+    @pulumi.getter(name="nextHopIpv6")
+    def next_hop_ipv6(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "next_hop_ipv6")
+
+    @next_hop_ipv6.setter
+    def next_hop_ipv6(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "next_hop_ipv6", value)
+
+    @property
+    @pulumi.getter(name="nextHopLoose")
+    def next_hop_loose(self) -> Optional[pulumi.Input[bool]]:
+        return pulumi.get(self, "next_hop_loose")
+
+    @next_hop_loose.setter
+    def next_hop_loose(self, value: Optional[pulumi.Input[bool]]):
+        pulumi.set(self, "next_hop_loose", value)
+
+    @property
+    @pulumi.getter(name="policerId")
+    def policer_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "policer_id")
+
+    @policer_id.setter
+    def policer_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "policer_id", value)
+
+    @property
+    @pulumi.getter(name="preferredColorGroupId")
+    def preferred_color_group_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "preferred_color_group_id")
+
+    @preferred_color_group_id.setter
+    def preferred_color_group_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "preferred_color_group_id", value)
+
+    @property
+    @pulumi.getter(name="preferredRemoteColorIds")
+    def preferred_remote_color_ids(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]:
+        return pulumi.get(self, "preferred_remote_color_ids")
+
+    @preferred_remote_color_ids.setter
+    def preferred_remote_color_ids(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
+        pulumi.set(self, "preferred_remote_color_ids", value)
+
+    @property
+    @pulumi.getter(name="preferredRemoteColorRestrict")
+    def preferred_remote_color_restrict(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "preferred_remote_color_restrict")
+
+    @preferred_remote_color_restrict.setter
+    def preferred_remote_color_restrict(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "preferred_remote_color_restrict", value)
+
+    @property
+    @pulumi.getter(name="serviceChainFallbackToRouting")
+    def service_chain_fallback_to_routing(self) -> Optional[pulumi.Input[bool]]:
+        return pulumi.get(self, "service_chain_fallback_to_routing")
+
+    @service_chain_fallback_to_routing.setter
+    def service_chain_fallback_to_routing(self, value: Optional[pulumi.Input[bool]]):
+        pulumi.set(self, "service_chain_fallback_to_routing", value)
+
+    @property
+    @pulumi.getter(name="serviceChainLocal")
+    def service_chain_local(self) -> Optional[pulumi.Input[bool]]:
+        return pulumi.get(self, "service_chain_local")
+
+    @service_chain_local.setter
+    def service_chain_local(self, value: Optional[pulumi.Input[bool]]):
+        pulumi.set(self, "service_chain_local", value)
+
+    @property
+    @pulumi.getter(name="serviceChainTlocColors")
+    def service_chain_tloc_colors(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]:
+        return pulumi.get(self, "service_chain_tloc_colors")
+
+    @service_chain_tloc_colors.setter
+    def service_chain_tloc_colors(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
+        pulumi.set(self, "service_chain_tloc_colors", value)
+
+    @property
+    @pulumi.getter(name="serviceChainTlocEncapsulation")
+    def service_chain_tloc_encapsulation(self) -> Optional[pulumi.Input[str]]:
+        """
+        - Choices: `ipsec`, `gre`
+        """
+        return pulumi.get(self, "service_chain_tloc_encapsulation")
+
+    @service_chain_tloc_encapsulation.setter
+    def service_chain_tloc_encapsulation(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "service_chain_tloc_encapsulation", value)
+
+    @property
+    @pulumi.getter(name="serviceChainTlocIp")
+    def service_chain_tloc_ip(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "service_chain_tloc_ip")
+
+    @service_chain_tloc_ip.setter
+    def service_chain_tloc_ip(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "service_chain_tloc_ip", value)
+
+    @property
+    @pulumi.getter(name="serviceChainTlocListId")
+    def service_chain_tloc_list_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "service_chain_tloc_list_id")
+
+    @service_chain_tloc_list_id.setter
+    def service_chain_tloc_list_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "service_chain_tloc_list_id", value)
+
+    @property
+    @pulumi.getter(name="serviceChainType")
+    def service_chain_type(self) -> Optional[pulumi.Input[str]]:
+        """
+        - Choices: `SC1`, `SC2`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
+        """
+        return pulumi.get(self, "service_chain_type")
+
+    @service_chain_type.setter
+    def service_chain_type(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "service_chain_type", value)
+
+    @property
+    @pulumi.getter(name="serviceChainVpn")
+    def service_chain_vpn(self) -> Optional[pulumi.Input[int]]:
+        """
+        - Range: `0`-`65530`
+        """
+        return pulumi.get(self, "service_chain_vpn")
+
+    @service_chain_vpn.setter
+    def service_chain_vpn(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "service_chain_vpn", value)
+
+    @property
+    @pulumi.getter(name="serviceTlocColors")
+    def service_tloc_colors(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]:
+        return pulumi.get(self, "service_tloc_colors")
+
+    @service_tloc_colors.setter
+    def service_tloc_colors(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
+        pulumi.set(self, "service_tloc_colors", value)
+
+    @property
+    @pulumi.getter(name="serviceTlocEncapsulation")
+    def service_tloc_encapsulation(self) -> Optional[pulumi.Input[str]]:
+        """
+        - Choices: `ipsec`, `gre`
+        """
+        return pulumi.get(self, "service_tloc_encapsulation")
+
+    @service_tloc_encapsulation.setter
+    def service_tloc_encapsulation(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "service_tloc_encapsulation", value)
+
+    @property
+    @pulumi.getter(name="serviceTlocIp")
+    def service_tloc_ip(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "service_tloc_ip")
+
+    @service_tloc_ip.setter
+    def service_tloc_ip(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "service_tloc_ip", value)
+
+    @property
+    @pulumi.getter(name="serviceTlocListId")
+    def service_tloc_list_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "service_tloc_list_id")
+
+    @service_tloc_list_id.setter
+    def service_tloc_list_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "service_tloc_list_id", value)
+
+    @property
+    @pulumi.getter(name="serviceType")
+    def service_type(self) -> Optional[pulumi.Input[str]]:
+        """
+        - Choices: `FW`, `IDS`, `IDP`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `appqoe`
+        """
+        return pulumi.get(self, "service_type")
+
+    @service_type.setter
+    def service_type(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "service_type", value)
+
+    @property
+    @pulumi.getter(name="serviceVpn")
+    def service_vpn(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "service_vpn")
+
+    @service_vpn.setter
+    def service_vpn(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "service_vpn", value)
+
+    @property
+    @pulumi.getter(name="tlocColors")
+    def tloc_colors(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]:
+        return pulumi.get(self, "tloc_colors")
+
+    @tloc_colors.setter
+    def tloc_colors(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
+        pulumi.set(self, "tloc_colors", value)
+
+    @property
+    @pulumi.getter(name="tlocEncapsulation")
+    def tloc_encapsulation(self) -> Optional[pulumi.Input[str]]:
+        """
+        - Choices: `ipsec`, `gre`
+        """
+        return pulumi.get(self, "tloc_encapsulation")
+
+    @tloc_encapsulation.setter
+    def tloc_encapsulation(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "tloc_encapsulation", value)
+
+    @property
+    @pulumi.getter(name="tlocIp")
+    def tloc_ip(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "tloc_ip")
+
+    @tloc_ip.setter
+    def tloc_ip(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "tloc_ip", value)
+
+    @property
+    @pulumi.getter(name="tlocListId")
+    def tloc_list_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "tloc_list_id")
+
+    @tloc_list_id.setter
+    def tloc_list_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "tloc_list_id", value)
+
+    @property
+    @pulumi.getter
+    def vpn(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "vpn")
+
+    @vpn.setter
+    def vpn(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "vpn", value)
+
+
+if not MYPY:
+    class ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClassArgsDict(TypedDict):
+        fallback_to_best_path: NotRequired[pulumi.Input[bool]]
+        preferred_color_group_list_id: NotRequired[pulumi.Input[str]]
+        preferred_colors: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        preferred_remote_colors: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        remote_color_restrict: NotRequired[pulumi.Input[bool]]
+        sla_class_list_id: NotRequired[pulumi.Input[str]]
+        strict: NotRequired[pulumi.Input[bool]]
+elif False:
+    ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClassArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClassArgs:
+    def __init__(__self__, *,
+                 fallback_to_best_path: Optional[pulumi.Input[bool]] = None,
+                 preferred_color_group_list_id: Optional[pulumi.Input[str]] = None,
+                 preferred_colors: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
+                 preferred_remote_colors: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
+                 remote_color_restrict: Optional[pulumi.Input[bool]] = None,
+                 sla_class_list_id: Optional[pulumi.Input[str]] = None,
+                 strict: Optional[pulumi.Input[bool]] = None):
+        if fallback_to_best_path is not None:
+            pulumi.set(__self__, "fallback_to_best_path", fallback_to_best_path)
+        if preferred_color_group_list_id is not None:
+            pulumi.set(__self__, "preferred_color_group_list_id", preferred_color_group_list_id)
+        if preferred_colors is not None:
+            pulumi.set(__self__, "preferred_colors", preferred_colors)
+        if preferred_remote_colors is not None:
+            pulumi.set(__self__, "preferred_remote_colors", preferred_remote_colors)
+        if remote_color_restrict is not None:
+            pulumi.set(__self__, "remote_color_restrict", remote_color_restrict)
+        if sla_class_list_id is not None:
+            pulumi.set(__self__, "sla_class_list_id", sla_class_list_id)
+        if strict is not None:
+            pulumi.set(__self__, "strict", strict)
+
+    @property
+    @pulumi.getter(name="fallbackToBestPath")
+    def fallback_to_best_path(self) -> Optional[pulumi.Input[bool]]:
+        return pulumi.get(self, "fallback_to_best_path")
+
+    @fallback_to_best_path.setter
+    def fallback_to_best_path(self, value: Optional[pulumi.Input[bool]]):
+        pulumi.set(self, "fallback_to_best_path", value)
+
+    @property
+    @pulumi.getter(name="preferredColorGroupListId")
+    def preferred_color_group_list_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "preferred_color_group_list_id")
+
+    @preferred_color_group_list_id.setter
+    def preferred_color_group_list_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "preferred_color_group_list_id", value)
+
+    @property
+    @pulumi.getter(name="preferredColors")
+    def preferred_colors(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]:
+        return pulumi.get(self, "preferred_colors")
+
+    @preferred_colors.setter
+    def preferred_colors(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
+        pulumi.set(self, "preferred_colors", value)
+
+    @property
+    @pulumi.getter(name="preferredRemoteColors")
+    def preferred_remote_colors(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]:
+        return pulumi.get(self, "preferred_remote_colors")
+
+    @preferred_remote_colors.setter
+    def preferred_remote_colors(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
+        pulumi.set(self, "preferred_remote_colors", value)
+
+    @property
+    @pulumi.getter(name="remoteColorRestrict")
+    def remote_color_restrict(self) -> Optional[pulumi.Input[bool]]:
+        return pulumi.get(self, "remote_color_restrict")
+
+    @remote_color_restrict.setter
+    def remote_color_restrict(self, value: Optional[pulumi.Input[bool]]):
+        pulumi.set(self, "remote_color_restrict", value)
+
+    @property
+    @pulumi.getter(name="slaClassListId")
+    def sla_class_list_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "sla_class_list_id")
+
+    @sla_class_list_id.setter
+    def sla_class_list_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "sla_class_list_id", value)
+
+    @property
+    @pulumi.getter
+    def strict(self) -> Optional[pulumi.Input[bool]]:
+        return pulumi.get(self, "strict")
+
+    @strict.setter
+    def strict(self, value: Optional[pulumi.Input[bool]]):
+        pulumi.set(self, "strict", value)
+
+
+if not MYPY:
+    class ApplicationPriorityTrafficPolicyPolicySequenceMatchEntryArgsDict(TypedDict):
+        application_list_id: NotRequired[pulumi.Input[str]]
+        destination_data_ipv4_prefix_list_id: NotRequired[pulumi.Input[str]]
+        destination_data_ipv6_prefix_list_id: NotRequired[pulumi.Input[str]]
+        destination_ipv4_prefix: NotRequired[pulumi.Input[str]]
+        """
+        Destination Data IP Prefix
+        """
+        destination_ipv6_prefix: NotRequired[pulumi.Input[str]]
+        """
+        Destination Data IP Prefix
+        """
+        destination_ports: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        Destination Port (0-65535) range or individual number separated by space
+        """
+        destination_region: NotRequired[pulumi.Input[str]]
+        """
+        Destination Region
+          - Choices: `primary-region`, `secondary-region`, `other-region`
+        """
+        dns: NotRequired[pulumi.Input[str]]
+        """
+        Dns
+          - Choices: `request`, `response`
+        """
+        dns_application_list_id: NotRequired[pulumi.Input[str]]
+        dscp: NotRequired[pulumi.Input[int]]
+        """
+        DSCP number
+          - Range: `0`-`63`
+        """
+        icmp6_messages: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        ICMP6 Message
+        """
+        icmp_messages: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        ICMP Message
+        """
+        packet_length: NotRequired[pulumi.Input[str]]
+        """
+        Packet Length
+        """
+        protocols: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        protocol (0-255) range or individual number separated by space
+        """
+        saas_application_list_id: NotRequired[pulumi.Input[str]]
+        service_areas: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        M365 Service Area
+        """
+        source_data_ipv4_prefx_list_id: NotRequired[pulumi.Input[str]]
+        source_data_ipv6_prefx_list_id: NotRequired[pulumi.Input[str]]
+        source_ipv4_prefix: NotRequired[pulumi.Input[str]]
+        """
+        Source Data IP Prefix
+        """
+        source_ipv6_prefix: NotRequired[pulumi.Input[str]]
+        """
+        Source Data IP Prefix
+        """
+        source_ports: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        Source Port (0-65535) range or individual number separated by space
+        """
+        tcp: NotRequired[pulumi.Input[str]]
+        """
+        TCP States
+          - Choices: `syn`
+        """
+        traffic_category: NotRequired[pulumi.Input[str]]
+        """
+        M365 Traffic Category
+          - Choices: `optimize-allow`, `optimize`, `all`
+        """
+        traffic_class: NotRequired[pulumi.Input[str]]
+        """
+        Traffic Class
+          - Choices: `gold-voip-telephony`, `gold-broadcast-video`, `gold-real-time-interactive`, `gold-multimedia-conferencing`, `gold-multimedia-streaming`, `gold-network-control`, `gold-signaling`, `gold-ops-admin-mgmt`, `gold-transactional-data`, `gold-bulk-data`, `silver`, `bronze`
+        """
+        traffic_to: NotRequired[pulumi.Input[str]]
+        """
+        Traffic to
+          - Choices: `core`, `service`, `access`
+        """
+elif False:
+    ApplicationPriorityTrafficPolicyPolicySequenceMatchEntryArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ApplicationPriorityTrafficPolicyPolicySequenceMatchEntryArgs:
+    def __init__(__self__, *,
+                 application_list_id: Optional[pulumi.Input[str]] = None,
+                 destination_data_ipv4_prefix_list_id: Optional[pulumi.Input[str]] = None,
+                 destination_data_ipv6_prefix_list_id: Optional[pulumi.Input[str]] = None,
+                 destination_ipv4_prefix: Optional[pulumi.Input[str]] = None,
+                 destination_ipv6_prefix: Optional[pulumi.Input[str]] = None,
+                 destination_ports: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
+                 destination_region: Optional[pulumi.Input[str]] = None,
+                 dns: Optional[pulumi.Input[str]] = None,
+                 dns_application_list_id: Optional[pulumi.Input[str]] = None,
+                 dscp: Optional[pulumi.Input[int]] = None,
+                 icmp6_messages: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
+                 icmp_messages: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
+                 packet_length: Optional[pulumi.Input[str]] = None,
+                 protocols: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
+                 saas_application_list_id: Optional[pulumi.Input[str]] = None,
+                 service_areas: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
+                 source_data_ipv4_prefx_list_id: Optional[pulumi.Input[str]] = None,
+                 source_data_ipv6_prefx_list_id: Optional[pulumi.Input[str]] = None,
+                 source_ipv4_prefix: Optional[pulumi.Input[str]] = None,
+                 source_ipv6_prefix: Optional[pulumi.Input[str]] = None,
+                 source_ports: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
+                 tcp: Optional[pulumi.Input[str]] = None,
+                 traffic_category: Optional[pulumi.Input[str]] = None,
+                 traffic_class: Optional[pulumi.Input[str]] = None,
+                 traffic_to: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[str] destination_ipv4_prefix: Destination Data IP Prefix
+        :param pulumi.Input[str] destination_ipv6_prefix: Destination Data IP Prefix
+        :param pulumi.Input[Sequence[pulumi.Input[str]]] destination_ports: Destination Port (0-65535) range or individual number separated by space
+        :param pulumi.Input[str] destination_region: Destination Region
+                 - Choices: `primary-region`, `secondary-region`, `other-region`
+        :param pulumi.Input[str] dns: Dns
+                 - Choices: `request`, `response`
+        :param pulumi.Input[int] dscp: DSCP number
+                 - Range: `0`-`63`
+        :param pulumi.Input[Sequence[pulumi.Input[str]]] icmp6_messages: ICMP6 Message
+        :param pulumi.Input[Sequence[pulumi.Input[str]]] icmp_messages: ICMP Message
+        :param pulumi.Input[str] packet_length: Packet Length
+        :param pulumi.Input[Sequence[pulumi.Input[str]]] protocols: protocol (0-255) range or individual number separated by space
+        :param pulumi.Input[Sequence[pulumi.Input[str]]] service_areas: M365 Service Area
+        :param pulumi.Input[str] source_ipv4_prefix: Source Data IP Prefix
+        :param pulumi.Input[str] source_ipv6_prefix: Source Data IP Prefix
+        :param pulumi.Input[Sequence[pulumi.Input[str]]] source_ports: Source Port (0-65535) range or individual number separated by space
+        :param pulumi.Input[str] tcp: TCP States
+                 - Choices: `syn`
+        :param pulumi.Input[str] traffic_category: M365 Traffic Category
+                 - Choices: `optimize-allow`, `optimize`, `all`
+        :param pulumi.Input[str] traffic_class: Traffic Class
+                 - Choices: `gold-voip-telephony`, `gold-broadcast-video`, `gold-real-time-interactive`, `gold-multimedia-conferencing`, `gold-multimedia-streaming`, `gold-network-control`, `gold-signaling`, `gold-ops-admin-mgmt`, `gold-transactional-data`, `gold-bulk-data`, `silver`, `bronze`
+        :param pulumi.Input[str] traffic_to: Traffic to
+                 - Choices: `core`, `service`, `access`
+        """
+        if application_list_id is not None:
+            pulumi.set(__self__, "application_list_id", application_list_id)
+        if destination_data_ipv4_prefix_list_id is not None:
+            pulumi.set(__self__, "destination_data_ipv4_prefix_list_id", destination_data_ipv4_prefix_list_id)
+        if destination_data_ipv6_prefix_list_id is not None:
+            pulumi.set(__self__, "destination_data_ipv6_prefix_list_id", destination_data_ipv6_prefix_list_id)
+        if destination_ipv4_prefix is not None:
+            pulumi.set(__self__, "destination_ipv4_prefix", destination_ipv4_prefix)
+        if destination_ipv6_prefix is not None:
+            pulumi.set(__self__, "destination_ipv6_prefix", destination_ipv6_prefix)
+        if destination_ports is not None:
+            pulumi.set(__self__, "destination_ports", destination_ports)
+        if destination_region is not None:
+            pulumi.set(__self__, "destination_region", destination_region)
+        if dns is not None:
+            pulumi.set(__self__, "dns", dns)
+        if dns_application_list_id is not None:
+            pulumi.set(__self__, "dns_application_list_id", dns_application_list_id)
+        if dscp is not None:
+            pulumi.set(__self__, "dscp", dscp)
+        if icmp6_messages is not None:
+            pulumi.set(__self__, "icmp6_messages", icmp6_messages)
+        if icmp_messages is not None:
+            pulumi.set(__self__, "icmp_messages", icmp_messages)
+        if packet_length is not None:
+            pulumi.set(__self__, "packet_length", packet_length)
+        if protocols is not None:
+            pulumi.set(__self__, "protocols", protocols)
+        if saas_application_list_id is not None:
+            pulumi.set(__self__, "saas_application_list_id", saas_application_list_id)
+        if service_areas is not None:
+            pulumi.set(__self__, "service_areas", service_areas)
+        if source_data_ipv4_prefx_list_id is not None:
+            pulumi.set(__self__, "source_data_ipv4_prefx_list_id", source_data_ipv4_prefx_list_id)
+        if source_data_ipv6_prefx_list_id is not None:
+            pulumi.set(__self__, "source_data_ipv6_prefx_list_id", source_data_ipv6_prefx_list_id)
+        if source_ipv4_prefix is not None:
+            pulumi.set(__self__, "source_ipv4_prefix", source_ipv4_prefix)
+        if source_ipv6_prefix is not None:
+            pulumi.set(__self__, "source_ipv6_prefix", source_ipv6_prefix)
+        if source_ports is not None:
+            pulumi.set(__self__, "source_ports", source_ports)
+        if tcp is not None:
+            pulumi.set(__self__, "tcp", tcp)
+        if traffic_category is not None:
+            pulumi.set(__self__, "traffic_category", traffic_category)
+        if traffic_class is not None:
+            pulumi.set(__self__, "traffic_class", traffic_class)
+        if traffic_to is not None:
+            pulumi.set(__self__, "traffic_to", traffic_to)
+
+    @property
+    @pulumi.getter(name="applicationListId")
+    def application_list_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "application_list_id")
+
+    @application_list_id.setter
+    def application_list_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "application_list_id", value)
+
+    @property
+    @pulumi.getter(name="destinationDataIpv4PrefixListId")
+    def destination_data_ipv4_prefix_list_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "destination_data_ipv4_prefix_list_id")
+
+    @destination_data_ipv4_prefix_list_id.setter
+    def destination_data_ipv4_prefix_list_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "destination_data_ipv4_prefix_list_id", value)
+
+    @property
+    @pulumi.getter(name="destinationDataIpv6PrefixListId")
+    def destination_data_ipv6_prefix_list_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "destination_data_ipv6_prefix_list_id")
+
+    @destination_data_ipv6_prefix_list_id.setter
+    def destination_data_ipv6_prefix_list_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "destination_data_ipv6_prefix_list_id", value)
+
+    @property
+    @pulumi.getter(name="destinationIpv4Prefix")
+    def destination_ipv4_prefix(self) -> Optional[pulumi.Input[str]]:
+        """
+        Destination Data IP Prefix
+        """
+        return pulumi.get(self, "destination_ipv4_prefix")
+
+    @destination_ipv4_prefix.setter
+    def destination_ipv4_prefix(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "destination_ipv4_prefix", value)
+
+    @property
+    @pulumi.getter(name="destinationIpv6Prefix")
+    def destination_ipv6_prefix(self) -> Optional[pulumi.Input[str]]:
+        """
+        Destination Data IP Prefix
+        """
+        return pulumi.get(self, "destination_ipv6_prefix")
+
+    @destination_ipv6_prefix.setter
+    def destination_ipv6_prefix(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "destination_ipv6_prefix", value)
+
+    @property
+    @pulumi.getter(name="destinationPorts")
+    def destination_ports(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]:
+        """
+        Destination Port (0-65535) range or individual number separated by space
+        """
+        return pulumi.get(self, "destination_ports")
+
+    @destination_ports.setter
+    def destination_ports(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
+        pulumi.set(self, "destination_ports", value)
+
+    @property
+    @pulumi.getter(name="destinationRegion")
+    def destination_region(self) -> Optional[pulumi.Input[str]]:
+        """
+        Destination Region
+          - Choices: `primary-region`, `secondary-region`, `other-region`
+        """
+        return pulumi.get(self, "destination_region")
+
+    @destination_region.setter
+    def destination_region(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "destination_region", value)
+
+    @property
+    @pulumi.getter
+    def dns(self) -> Optional[pulumi.Input[str]]:
+        """
+        Dns
+          - Choices: `request`, `response`
+        """
+        return pulumi.get(self, "dns")
+
+    @dns.setter
+    def dns(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "dns", value)
+
+    @property
+    @pulumi.getter(name="dnsApplicationListId")
+    def dns_application_list_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "dns_application_list_id")
+
+    @dns_application_list_id.setter
+    def dns_application_list_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "dns_application_list_id", value)
+
+    @property
+    @pulumi.getter
+    def dscp(self) -> Optional[pulumi.Input[int]]:
+        """
+        DSCP number
+          - Range: `0`-`63`
+        """
+        return pulumi.get(self, "dscp")
+
+    @dscp.setter
+    def dscp(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "dscp", value)
+
+    @property
+    @pulumi.getter(name="icmp6Messages")
+    def icmp6_messages(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]:
+        """
+        ICMP6 Message
+        """
+        return pulumi.get(self, "icmp6_messages")
+
+    @icmp6_messages.setter
+    def icmp6_messages(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
+        pulumi.set(self, "icmp6_messages", value)
+
+    @property
+    @pulumi.getter(name="icmpMessages")
+    def icmp_messages(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]:
+        """
+        ICMP Message
+        """
+        return pulumi.get(self, "icmp_messages")
+
+    @icmp_messages.setter
+    def icmp_messages(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
+        pulumi.set(self, "icmp_messages", value)
+
+    @property
+    @pulumi.getter(name="packetLength")
+    def packet_length(self) -> Optional[pulumi.Input[str]]:
+        """
+        Packet Length
+        """
+        return pulumi.get(self, "packet_length")
+
+    @packet_length.setter
+    def packet_length(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "packet_length", value)
+
+    @property
+    @pulumi.getter
+    def protocols(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]:
+        """
+        protocol (0-255) range or individual number separated by space
+        """
+        return pulumi.get(self, "protocols")
+
+    @protocols.setter
+    def protocols(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
+        pulumi.set(self, "protocols", value)
+
+    @property
+    @pulumi.getter(name="saasApplicationListId")
+    def saas_application_list_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "saas_application_list_id")
+
+    @saas_application_list_id.setter
+    def saas_application_list_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "saas_application_list_id", value)
+
+    @property
+    @pulumi.getter(name="serviceAreas")
+    def service_areas(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]:
+        """
+        M365 Service Area
+        """
+        return pulumi.get(self, "service_areas")
+
+    @service_areas.setter
+    def service_areas(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
+        pulumi.set(self, "service_areas", value)
+
+    @property
+    @pulumi.getter(name="sourceDataIpv4PrefxListId")
+    def source_data_ipv4_prefx_list_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "source_data_ipv4_prefx_list_id")
+
+    @source_data_ipv4_prefx_list_id.setter
+    def source_data_ipv4_prefx_list_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "source_data_ipv4_prefx_list_id", value)
+
+    @property
+    @pulumi.getter(name="sourceDataIpv6PrefxListId")
+    def source_data_ipv6_prefx_list_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "source_data_ipv6_prefx_list_id")
+
+    @source_data_ipv6_prefx_list_id.setter
+    def source_data_ipv6_prefx_list_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "source_data_ipv6_prefx_list_id", value)
+
+    @property
+    @pulumi.getter(name="sourceIpv4Prefix")
+    def source_ipv4_prefix(self) -> Optional[pulumi.Input[str]]:
+        """
+        Source Data IP Prefix
+        """
+        return pulumi.get(self, "source_ipv4_prefix")
+
+    @source_ipv4_prefix.setter
+    def source_ipv4_prefix(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "source_ipv4_prefix", value)
+
+    @property
+    @pulumi.getter(name="sourceIpv6Prefix")
+    def source_ipv6_prefix(self) -> Optional[pulumi.Input[str]]:
+        """
+        Source Data IP Prefix
+        """
+        return pulumi.get(self, "source_ipv6_prefix")
+
+    @source_ipv6_prefix.setter
+    def source_ipv6_prefix(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "source_ipv6_prefix", value)
+
+    @property
+    @pulumi.getter(name="sourcePorts")
+    def source_ports(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]:
+        """
+        Source Port (0-65535) range or individual number separated by space
+        """
+        return pulumi.get(self, "source_ports")
+
+    @source_ports.setter
+    def source_ports(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
+        pulumi.set(self, "source_ports", value)
+
+    @property
+    @pulumi.getter
+    def tcp(self) -> Optional[pulumi.Input[str]]:
+        """
+        TCP States
+          - Choices: `syn`
+        """
+        return pulumi.get(self, "tcp")
+
+    @tcp.setter
+    def tcp(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "tcp", value)
+
+    @property
+    @pulumi.getter(name="trafficCategory")
+    def traffic_category(self) -> Optional[pulumi.Input[str]]:
+        """
+        M365 Traffic Category
+          - Choices: `optimize-allow`, `optimize`, `all`
+        """
+        return pulumi.get(self, "traffic_category")
+
+    @traffic_category.setter
+    def traffic_category(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "traffic_category", value)
+
+    @property
+    @pulumi.getter(name="trafficClass")
+    def traffic_class(self) -> Optional[pulumi.Input[str]]:
+        """
+        Traffic Class
+          - Choices: `gold-voip-telephony`, `gold-broadcast-video`, `gold-real-time-interactive`, `gold-multimedia-conferencing`, `gold-multimedia-streaming`, `gold-network-control`, `gold-signaling`, `gold-ops-admin-mgmt`, `gold-transactional-data`, `gold-bulk-data`, `silver`, `bronze`
+        """
+        return pulumi.get(self, "traffic_class")
+
+    @traffic_class.setter
+    def traffic_class(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "traffic_class", value)
+
+    @property
+    @pulumi.getter(name="trafficTo")
+    def traffic_to(self) -> Optional[pulumi.Input[str]]:
+        """
+        Traffic to
+          - Choices: `core`, `service`, `access`
+        """
+        return pulumi.get(self, "traffic_to")
+
+    @traffic_to.setter
+    def traffic_to(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "traffic_to", value)
 
 
 if not MYPY:
@@ -27692,6 +29308,152 @@ class ColorListPolicyObjectEntryArgs:
 
 
 if not MYPY:
+    class ConfigurationGroupDeviceArgsDict(TypedDict):
+        deploy: NotRequired[pulumi.Input[bool]]
+        """
+        Deploy to device if enabled.
+          - Default value: `false`
+        """
+        id: NotRequired[pulumi.Input[str]]
+        """
+        Device ID
+        """
+        variables: NotRequired[pulumi.Input[Sequence[pulumi.Input['ConfigurationGroupDeviceVariableArgsDict']]]]
+        """
+        List of variables
+        """
+elif False:
+    ConfigurationGroupDeviceArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ConfigurationGroupDeviceArgs:
+    def __init__(__self__, *,
+                 deploy: Optional[pulumi.Input[bool]] = None,
+                 id: Optional[pulumi.Input[str]] = None,
+                 variables: Optional[pulumi.Input[Sequence[pulumi.Input['ConfigurationGroupDeviceVariableArgs']]]] = None):
+        """
+        :param pulumi.Input[bool] deploy: Deploy to device if enabled.
+                 - Default value: `false`
+        :param pulumi.Input[str] id: Device ID
+        :param pulumi.Input[Sequence[pulumi.Input['ConfigurationGroupDeviceVariableArgs']]] variables: List of variables
+        """
+        if deploy is not None:
+            pulumi.set(__self__, "deploy", deploy)
+        if id is not None:
+            pulumi.set(__self__, "id", id)
+        if variables is not None:
+            pulumi.set(__self__, "variables", variables)
+
+    @property
+    @pulumi.getter
+    def deploy(self) -> Optional[pulumi.Input[bool]]:
+        """
+        Deploy to device if enabled.
+          - Default value: `false`
+        """
+        return pulumi.get(self, "deploy")
+
+    @deploy.setter
+    def deploy(self, value: Optional[pulumi.Input[bool]]):
+        pulumi.set(self, "deploy", value)
+
+    @property
+    @pulumi.getter
+    def id(self) -> Optional[pulumi.Input[str]]:
+        """
+        Device ID
+        """
+        return pulumi.get(self, "id")
+
+    @id.setter
+    def id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "id", value)
+
+    @property
+    @pulumi.getter
+    def variables(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ConfigurationGroupDeviceVariableArgs']]]]:
+        """
+        List of variables
+        """
+        return pulumi.get(self, "variables")
+
+    @variables.setter
+    def variables(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ConfigurationGroupDeviceVariableArgs']]]]):
+        pulumi.set(self, "variables", value)
+
+
+if not MYPY:
+    class ConfigurationGroupDeviceVariableArgsDict(TypedDict):
+        name: pulumi.Input[str]
+        """
+        Variable name
+        """
+        list_values: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        Use this instead of `value` in case value is of type `List`.
+        """
+        value: NotRequired[pulumi.Input[str]]
+        """
+        Variable value
+        """
+elif False:
+    ConfigurationGroupDeviceVariableArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ConfigurationGroupDeviceVariableArgs:
+    def __init__(__self__, *,
+                 name: pulumi.Input[str],
+                 list_values: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
+                 value: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[str] name: Variable name
+        :param pulumi.Input[Sequence[pulumi.Input[str]]] list_values: Use this instead of `value` in case value is of type `List`.
+        :param pulumi.Input[str] value: Variable value
+        """
+        pulumi.set(__self__, "name", name)
+        if list_values is not None:
+            pulumi.set(__self__, "list_values", list_values)
+        if value is not None:
+            pulumi.set(__self__, "value", value)
+
+    @property
+    @pulumi.getter
+    def name(self) -> pulumi.Input[str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "name")
+
+    @name.setter
+    def name(self, value: pulumi.Input[str]):
+        pulumi.set(self, "name", value)
+
+    @property
+    @pulumi.getter(name="listValues")
+    def list_values(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]:
+        """
+        Use this instead of `value` in case value is of type `List`.
+        """
+        return pulumi.get(self, "list_values")
+
+    @list_values.setter
+    def list_values(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
+        pulumi.set(self, "list_values", value)
+
+    @property
+    @pulumi.getter
+    def value(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable value
+        """
+        return pulumi.get(self, "value")
+
+    @value.setter
+    def value(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "value", value)
+
+
+if not MYPY:
     class ConfigurationGroupFeatureProfileArgsDict(TypedDict):
         id: NotRequired[pulumi.Input[str]]
         """
@@ -29930,7 +31692,7 @@ class EigrpFeatureTemplateKeyArgs:
 
 if not MYPY:
     class ExpandedCommunityListPolicyObjectEntryArgsDict(TypedDict):
-        community: pulumi.Input[str]
+        community: NotRequired[pulumi.Input[str]]
         """
         Expanded community value, e.g. `100:1000`
         """
@@ -29940,22 +31702,23 @@ elif False:
 @pulumi.input_type
 class ExpandedCommunityListPolicyObjectEntryArgs:
     def __init__(__self__, *,
-                 community: pulumi.Input[str]):
+                 community: Optional[pulumi.Input[str]] = None):
         """
         :param pulumi.Input[str] community: Expanded community value, e.g. `100:1000`
         """
-        pulumi.set(__self__, "community", community)
+        if community is not None:
+            pulumi.set(__self__, "community", community)
 
     @property
     @pulumi.getter
-    def community(self) -> pulumi.Input[str]:
+    def community(self) -> Optional[pulumi.Input[str]]:
         """
         Expanded community value, e.g. `100:1000`
         """
         return pulumi.get(self, "community")
 
     @community.setter
-    def community(self, value: pulumi.Input[str]):
+    def community(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "community", value)
 
 
@@ -33835,6 +35598,175 @@ class OtherUcseFeatureInterfaceArgs:
 
 
 if not MYPY:
+    class PolicyObjectAppProbeClassEntryArgsDict(TypedDict):
+        forwarding_class: NotRequired[pulumi.Input[str]]
+        """
+        Forwarding Class Name
+        """
+        maps: NotRequired[pulumi.Input[Sequence[pulumi.Input['PolicyObjectAppProbeClassEntryMapArgsDict']]]]
+        """
+        Map
+        """
+elif False:
+    PolicyObjectAppProbeClassEntryArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class PolicyObjectAppProbeClassEntryArgs:
+    def __init__(__self__, *,
+                 forwarding_class: Optional[pulumi.Input[str]] = None,
+                 maps: Optional[pulumi.Input[Sequence[pulumi.Input['PolicyObjectAppProbeClassEntryMapArgs']]]] = None):
+        """
+        :param pulumi.Input[str] forwarding_class: Forwarding Class Name
+        :param pulumi.Input[Sequence[pulumi.Input['PolicyObjectAppProbeClassEntryMapArgs']]] maps: Map
+        """
+        if forwarding_class is not None:
+            pulumi.set(__self__, "forwarding_class", forwarding_class)
+        if maps is not None:
+            pulumi.set(__self__, "maps", maps)
+
+    @property
+    @pulumi.getter(name="forwardingClass")
+    def forwarding_class(self) -> Optional[pulumi.Input[str]]:
+        """
+        Forwarding Class Name
+        """
+        return pulumi.get(self, "forwarding_class")
+
+    @forwarding_class.setter
+    def forwarding_class(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "forwarding_class", value)
+
+    @property
+    @pulumi.getter
+    def maps(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['PolicyObjectAppProbeClassEntryMapArgs']]]]:
+        """
+        Map
+        """
+        return pulumi.get(self, "maps")
+
+    @maps.setter
+    def maps(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['PolicyObjectAppProbeClassEntryMapArgs']]]]):
+        pulumi.set(self, "maps", value)
+
+
+if not MYPY:
+    class PolicyObjectAppProbeClassEntryMapArgsDict(TypedDict):
+        color: NotRequired[pulumi.Input[str]]
+        """
+        Color
+          - Choices: `3g`, `biz-internet`, `blue`, `bronze`, `custom1`, `custom2`, `custom3`, `default`, `gold`, `green`, `lte`, `metro-ethernet`, `mpls`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`, `public-internet`, `red`, `silver`
+        """
+        dscp: NotRequired[pulumi.Input[int]]
+        """
+        DSCP number
+          - Range: `0`-`63`
+        """
+elif False:
+    PolicyObjectAppProbeClassEntryMapArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class PolicyObjectAppProbeClassEntryMapArgs:
+    def __init__(__self__, *,
+                 color: Optional[pulumi.Input[str]] = None,
+                 dscp: Optional[pulumi.Input[int]] = None):
+        """
+        :param pulumi.Input[str] color: Color
+                 - Choices: `3g`, `biz-internet`, `blue`, `bronze`, `custom1`, `custom2`, `custom3`, `default`, `gold`, `green`, `lte`, `metro-ethernet`, `mpls`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`, `public-internet`, `red`, `silver`
+        :param pulumi.Input[int] dscp: DSCP number
+                 - Range: `0`-`63`
+        """
+        if color is not None:
+            pulumi.set(__self__, "color", color)
+        if dscp is not None:
+            pulumi.set(__self__, "dscp", dscp)
+
+    @property
+    @pulumi.getter
+    def color(self) -> Optional[pulumi.Input[str]]:
+        """
+        Color
+          - Choices: `3g`, `biz-internet`, `blue`, `bronze`, `custom1`, `custom2`, `custom3`, `default`, `gold`, `green`, `lte`, `metro-ethernet`, `mpls`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`, `public-internet`, `red`, `silver`
+        """
+        return pulumi.get(self, "color")
+
+    @color.setter
+    def color(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "color", value)
+
+    @property
+    @pulumi.getter
+    def dscp(self) -> Optional[pulumi.Input[int]]:
+        """
+        DSCP number
+          - Range: `0`-`63`
+        """
+        return pulumi.get(self, "dscp")
+
+    @dscp.setter
+    def dscp(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "dscp", value)
+
+
+if not MYPY:
+    class PolicyObjectApplicationListEntryArgsDict(TypedDict):
+        application: NotRequired[pulumi.Input[str]]
+        application_family: NotRequired[pulumi.Input[str]]
+elif False:
+    PolicyObjectApplicationListEntryArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class PolicyObjectApplicationListEntryArgs:
+    def __init__(__self__, *,
+                 application: Optional[pulumi.Input[str]] = None,
+                 application_family: Optional[pulumi.Input[str]] = None):
+        if application is not None:
+            pulumi.set(__self__, "application", application)
+        if application_family is not None:
+            pulumi.set(__self__, "application_family", application_family)
+
+    @property
+    @pulumi.getter
+    def application(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "application")
+
+    @application.setter
+    def application(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "application", value)
+
+    @property
+    @pulumi.getter(name="applicationFamily")
+    def application_family(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "application_family")
+
+    @application_family.setter
+    def application_family(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "application_family", value)
+
+
+if not MYPY:
+    class PolicyObjectAsPathListEntryArgsDict(TypedDict):
+        as_path_list: NotRequired[pulumi.Input[str]]
+elif False:
+    PolicyObjectAsPathListEntryArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class PolicyObjectAsPathListEntryArgs:
+    def __init__(__self__, *,
+                 as_path_list: Optional[pulumi.Input[str]] = None):
+        if as_path_list is not None:
+            pulumi.set(__self__, "as_path_list", as_path_list)
+
+    @property
+    @pulumi.getter(name="asPathList")
+    def as_path_list(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "as_path_list")
+
+    @as_path_list.setter
+    def as_path_list(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "as_path_list", value)
+
+
+if not MYPY:
     class PolicyObjectClassMapEntryArgsDict(TypedDict):
         queue: NotRequired[pulumi.Input[str]]
         """
@@ -34379,6 +36311,703 @@ class PolicyObjectPolicerEntryArgs:
 
 
 if not MYPY:
+    class PolicyObjectPreferredColorGroupEntryArgsDict(TypedDict):
+        primary_color_preferences: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        primary_path_preference: NotRequired[pulumi.Input[str]]
+        """
+        - Choices: `all-paths`, `direct-path`, `multi-hop-path`
+        """
+        secondary_color_preferences: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        secondary_path_preference: NotRequired[pulumi.Input[str]]
+        """
+        - Choices: `all-paths`, `direct-path`, `multi-hop-path`
+        """
+        tertiary_color_preferences: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        tertiary_path_preference: NotRequired[pulumi.Input[str]]
+        """
+        - Choices: `all-paths`, `direct-path`, `multi-hop-path`
+        """
+elif False:
+    PolicyObjectPreferredColorGroupEntryArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class PolicyObjectPreferredColorGroupEntryArgs:
+    def __init__(__self__, *,
+                 primary_color_preferences: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
+                 primary_path_preference: Optional[pulumi.Input[str]] = None,
+                 secondary_color_preferences: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
+                 secondary_path_preference: Optional[pulumi.Input[str]] = None,
+                 tertiary_color_preferences: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
+                 tertiary_path_preference: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[str] primary_path_preference: - Choices: `all-paths`, `direct-path`, `multi-hop-path`
+        :param pulumi.Input[str] secondary_path_preference: - Choices: `all-paths`, `direct-path`, `multi-hop-path`
+        :param pulumi.Input[str] tertiary_path_preference: - Choices: `all-paths`, `direct-path`, `multi-hop-path`
+        """
+        if primary_color_preferences is not None:
+            pulumi.set(__self__, "primary_color_preferences", primary_color_preferences)
+        if primary_path_preference is not None:
+            pulumi.set(__self__, "primary_path_preference", primary_path_preference)
+        if secondary_color_preferences is not None:
+            pulumi.set(__self__, "secondary_color_preferences", secondary_color_preferences)
+        if secondary_path_preference is not None:
+            pulumi.set(__self__, "secondary_path_preference", secondary_path_preference)
+        if tertiary_color_preferences is not None:
+            pulumi.set(__self__, "tertiary_color_preferences", tertiary_color_preferences)
+        if tertiary_path_preference is not None:
+            pulumi.set(__self__, "tertiary_path_preference", tertiary_path_preference)
+
+    @property
+    @pulumi.getter(name="primaryColorPreferences")
+    def primary_color_preferences(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]:
+        return pulumi.get(self, "primary_color_preferences")
+
+    @primary_color_preferences.setter
+    def primary_color_preferences(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
+        pulumi.set(self, "primary_color_preferences", value)
+
+    @property
+    @pulumi.getter(name="primaryPathPreference")
+    def primary_path_preference(self) -> Optional[pulumi.Input[str]]:
+        """
+        - Choices: `all-paths`, `direct-path`, `multi-hop-path`
+        """
+        return pulumi.get(self, "primary_path_preference")
+
+    @primary_path_preference.setter
+    def primary_path_preference(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "primary_path_preference", value)
+
+    @property
+    @pulumi.getter(name="secondaryColorPreferences")
+    def secondary_color_preferences(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]:
+        return pulumi.get(self, "secondary_color_preferences")
+
+    @secondary_color_preferences.setter
+    def secondary_color_preferences(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
+        pulumi.set(self, "secondary_color_preferences", value)
+
+    @property
+    @pulumi.getter(name="secondaryPathPreference")
+    def secondary_path_preference(self) -> Optional[pulumi.Input[str]]:
+        """
+        - Choices: `all-paths`, `direct-path`, `multi-hop-path`
+        """
+        return pulumi.get(self, "secondary_path_preference")
+
+    @secondary_path_preference.setter
+    def secondary_path_preference(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "secondary_path_preference", value)
+
+    @property
+    @pulumi.getter(name="tertiaryColorPreferences")
+    def tertiary_color_preferences(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]:
+        return pulumi.get(self, "tertiary_color_preferences")
+
+    @tertiary_color_preferences.setter
+    def tertiary_color_preferences(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
+        pulumi.set(self, "tertiary_color_preferences", value)
+
+    @property
+    @pulumi.getter(name="tertiaryPathPreference")
+    def tertiary_path_preference(self) -> Optional[pulumi.Input[str]]:
+        """
+        - Choices: `all-paths`, `direct-path`, `multi-hop-path`
+        """
+        return pulumi.get(self, "tertiary_path_preference")
+
+    @tertiary_path_preference.setter
+    def tertiary_path_preference(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "tertiary_path_preference", value)
+
+
+if not MYPY:
+    class PolicyObjectSecurityDataIpv4PrefixListEntryArgsDict(TypedDict):
+        ip_prefix: NotRequired[pulumi.Input[str]]
+        ip_prefix_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    PolicyObjectSecurityDataIpv4PrefixListEntryArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class PolicyObjectSecurityDataIpv4PrefixListEntryArgs:
+    def __init__(__self__, *,
+                 ip_prefix: Optional[pulumi.Input[str]] = None,
+                 ip_prefix_variable: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[str] ip_prefix_variable: Variable name
+        """
+        if ip_prefix is not None:
+            pulumi.set(__self__, "ip_prefix", ip_prefix)
+        if ip_prefix_variable is not None:
+            pulumi.set(__self__, "ip_prefix_variable", ip_prefix_variable)
+
+    @property
+    @pulumi.getter(name="ipPrefix")
+    def ip_prefix(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "ip_prefix")
+
+    @ip_prefix.setter
+    def ip_prefix(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "ip_prefix", value)
+
+    @property
+    @pulumi.getter(name="ipPrefixVariable")
+    def ip_prefix_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ip_prefix_variable")
+
+    @ip_prefix_variable.setter
+    def ip_prefix_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "ip_prefix_variable", value)
+
+
+if not MYPY:
+    class PolicyObjectSecurityFqdnListEntryArgsDict(TypedDict):
+        pattern: NotRequired[pulumi.Input[str]]
+elif False:
+    PolicyObjectSecurityFqdnListEntryArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class PolicyObjectSecurityFqdnListEntryArgs:
+    def __init__(__self__, *,
+                 pattern: Optional[pulumi.Input[str]] = None):
+        if pattern is not None:
+            pulumi.set(__self__, "pattern", pattern)
+
+    @property
+    @pulumi.getter
+    def pattern(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "pattern")
+
+    @pattern.setter
+    def pattern(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "pattern", value)
+
+
+if not MYPY:
+    class PolicyObjectSecurityGeolocationListEntryArgsDict(TypedDict):
+        continent: NotRequired[pulumi.Input[str]]
+        """
+        continent name
+          - Choices: `AF`, `AN`, `AS`, `EU`, `NA`, `OC`, `SA`
+        """
+        country: NotRequired[pulumi.Input[str]]
+        """
+        country names
+          - Choices: `AFG`, `ALB`, `ATA`, `DZA`, `ASM`, `AND`, `AGO`, `ATG`, `AZE`, `ARG`, `AUS`, `AUT`, `BHS`, `BHR`, `BGD`, `ARM`, `BRB`, `BEL`, `BMU`, `BTN`, `BOL`, `BIH`, `BWA`, `BVT`, `BRA`, `BLZ`, `IOT`, `SLB`, `VGB`, `BRN`, `BGR`, `MMR`, `BDI`, `BLR`, `KHM`, `CMR`, `CAN`, `CPV`, `CYM`, `CAF`, `LKA`, `TCD`, `CHL`, `CHN`, `TWN`, `CXR`, `CCK`, `COL`, `COM`, `MYT`, `COG`, `COD`, `COK`, `CRI`, `HRV`, `CUB`, `CYP`, `CZE`, `BEN`, `DNK`, `DMA`, `DOM`, `ECU`, `SLV`, `GNQ`, `ETH`, `ERI`, `EST`, `FRO`, `FLK`, `SGS`, `FJI`, `FIN`, `ALA`, `FRA`, `GUF`, `PYF`, `ATF`, `DJI`, `GAB`, `GEO`, `GMB`, `PSE`, `DEU`, `GHA`, `GIB`, `KIR`, `GRC`, `GRL`, `GRD`, `GLP`, `GUM`, `GTM`, `GIN`, `GUY`, `HTI`, `HMD`, `VAT`, `HND`, `HKG`, `HUN`, `ISL`, `IND`, `IDN`, `IRN`, `IRQ`, `IRL`, `ISR`, `ITA`, `CIV`, `JAM`, `JPN`, `KAZ`, `JOR`, `KEN`, `PRK`, `KOR`, `KWT`, `KGZ`, `LAO`, `LBN`, `LSO`, `LVA`, `LBR`, `LBY`, `LIE`, `LTU`, `LUX`, `MAC`, `MDG`, `MWI`, `MYS`, `MDV`, `MLI`, `MLT`, `MTQ`, `MRT`, `MUS`, `MEX`, `MCO`, `MNG`, `MDA`, `MNE`, `MSR`, `MAR`, `MOZ`, `OMN`, `NAM`, `NRU`, `NPL`, `NLD`, `ANT`, `CUW`, `ABW`, `SXM`, `BES`, `NCL`, `VUT`, `NZL`, `NIC`, `NER`, `NGA`, `NIU`, `NFK`, `NOR`, `MNP`, `UMI`, `FSM`, `MHL`, `PLW`, `PAK`, `PAN`, `PNG`, `PRY`, `PER`, `PHL`, `PCN`, `POL`, `PRT`, `GNB`, `TLS`, `PRI`, `QAT`, `REU`, `ROU`, `RUS`, `RWA`, `BLM`, `SHN`, `KNA`, `AIA`, `LCA`, `MAF`, `SPM`, `VCT`, `SMR`, `STP`, `SAU`, `SEN`, `SRB`, `SYC`, `SLE`, `SGP`, `SVK`, `VNM`, `SVN`, `SOM`, `ZAF`, `ZWE`, `ESP`, `SSD`, `ESH`, `SDN`, `SUR`, `SJM`, `SWZ`, `SWE`, `CHE`, `SYR`, `TJK`, `THA`, `TGO`, `TKL`, `TON`, `TTO`, `ARE`, `TUN`, `TUR`, `TKM`, `TCA`, `TUV`, `UGA`, `UKR`, `MKD`, `EGY`, `GBR`, `GGY`, `JEY`, `IMN`, `TZA`, `USA`, `VIR`, `BFA`, `URY`, `UZB`, `VEN`, `WLF`, `WSM`, `YEM`, `ZMB`
+        """
+elif False:
+    PolicyObjectSecurityGeolocationListEntryArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class PolicyObjectSecurityGeolocationListEntryArgs:
+    def __init__(__self__, *,
+                 continent: Optional[pulumi.Input[str]] = None,
+                 country: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[str] continent: continent name
+                 - Choices: `AF`, `AN`, `AS`, `EU`, `NA`, `OC`, `SA`
+        :param pulumi.Input[str] country: country names
+                 - Choices: `AFG`, `ALB`, `ATA`, `DZA`, `ASM`, `AND`, `AGO`, `ATG`, `AZE`, `ARG`, `AUS`, `AUT`, `BHS`, `BHR`, `BGD`, `ARM`, `BRB`, `BEL`, `BMU`, `BTN`, `BOL`, `BIH`, `BWA`, `BVT`, `BRA`, `BLZ`, `IOT`, `SLB`, `VGB`, `BRN`, `BGR`, `MMR`, `BDI`, `BLR`, `KHM`, `CMR`, `CAN`, `CPV`, `CYM`, `CAF`, `LKA`, `TCD`, `CHL`, `CHN`, `TWN`, `CXR`, `CCK`, `COL`, `COM`, `MYT`, `COG`, `COD`, `COK`, `CRI`, `HRV`, `CUB`, `CYP`, `CZE`, `BEN`, `DNK`, `DMA`, `DOM`, `ECU`, `SLV`, `GNQ`, `ETH`, `ERI`, `EST`, `FRO`, `FLK`, `SGS`, `FJI`, `FIN`, `ALA`, `FRA`, `GUF`, `PYF`, `ATF`, `DJI`, `GAB`, `GEO`, `GMB`, `PSE`, `DEU`, `GHA`, `GIB`, `KIR`, `GRC`, `GRL`, `GRD`, `GLP`, `GUM`, `GTM`, `GIN`, `GUY`, `HTI`, `HMD`, `VAT`, `HND`, `HKG`, `HUN`, `ISL`, `IND`, `IDN`, `IRN`, `IRQ`, `IRL`, `ISR`, `ITA`, `CIV`, `JAM`, `JPN`, `KAZ`, `JOR`, `KEN`, `PRK`, `KOR`, `KWT`, `KGZ`, `LAO`, `LBN`, `LSO`, `LVA`, `LBR`, `LBY`, `LIE`, `LTU`, `LUX`, `MAC`, `MDG`, `MWI`, `MYS`, `MDV`, `MLI`, `MLT`, `MTQ`, `MRT`, `MUS`, `MEX`, `MCO`, `MNG`, `MDA`, `MNE`, `MSR`, `MAR`, `MOZ`, `OMN`, `NAM`, `NRU`, `NPL`, `NLD`, `ANT`, `CUW`, `ABW`, `SXM`, `BES`, `NCL`, `VUT`, `NZL`, `NIC`, `NER`, `NGA`, `NIU`, `NFK`, `NOR`, `MNP`, `UMI`, `FSM`, `MHL`, `PLW`, `PAK`, `PAN`, `PNG`, `PRY`, `PER`, `PHL`, `PCN`, `POL`, `PRT`, `GNB`, `TLS`, `PRI`, `QAT`, `REU`, `ROU`, `RUS`, `RWA`, `BLM`, `SHN`, `KNA`, `AIA`, `LCA`, `MAF`, `SPM`, `VCT`, `SMR`, `STP`, `SAU`, `SEN`, `SRB`, `SYC`, `SLE`, `SGP`, `SVK`, `VNM`, `SVN`, `SOM`, `ZAF`, `ZWE`, `ESP`, `SSD`, `ESH`, `SDN`, `SUR`, `SJM`, `SWZ`, `SWE`, `CHE`, `SYR`, `TJK`, `THA`, `TGO`, `TKL`, `TON`, `TTO`, `ARE`, `TUN`, `TUR`, `TKM`, `TCA`, `TUV`, `UGA`, `UKR`, `MKD`, `EGY`, `GBR`, `GGY`, `JEY`, `IMN`, `TZA`, `USA`, `VIR`, `BFA`, `URY`, `UZB`, `VEN`, `WLF`, `WSM`, `YEM`, `ZMB`
+        """
+        if continent is not None:
+            pulumi.set(__self__, "continent", continent)
+        if country is not None:
+            pulumi.set(__self__, "country", country)
+
+    @property
+    @pulumi.getter
+    def continent(self) -> Optional[pulumi.Input[str]]:
+        """
+        continent name
+          - Choices: `AF`, `AN`, `AS`, `EU`, `NA`, `OC`, `SA`
+        """
+        return pulumi.get(self, "continent")
+
+    @continent.setter
+    def continent(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "continent", value)
+
+    @property
+    @pulumi.getter
+    def country(self) -> Optional[pulumi.Input[str]]:
+        """
+        country names
+          - Choices: `AFG`, `ALB`, `ATA`, `DZA`, `ASM`, `AND`, `AGO`, `ATG`, `AZE`, `ARG`, `AUS`, `AUT`, `BHS`, `BHR`, `BGD`, `ARM`, `BRB`, `BEL`, `BMU`, `BTN`, `BOL`, `BIH`, `BWA`, `BVT`, `BRA`, `BLZ`, `IOT`, `SLB`, `VGB`, `BRN`, `BGR`, `MMR`, `BDI`, `BLR`, `KHM`, `CMR`, `CAN`, `CPV`, `CYM`, `CAF`, `LKA`, `TCD`, `CHL`, `CHN`, `TWN`, `CXR`, `CCK`, `COL`, `COM`, `MYT`, `COG`, `COD`, `COK`, `CRI`, `HRV`, `CUB`, `CYP`, `CZE`, `BEN`, `DNK`, `DMA`, `DOM`, `ECU`, `SLV`, `GNQ`, `ETH`, `ERI`, `EST`, `FRO`, `FLK`, `SGS`, `FJI`, `FIN`, `ALA`, `FRA`, `GUF`, `PYF`, `ATF`, `DJI`, `GAB`, `GEO`, `GMB`, `PSE`, `DEU`, `GHA`, `GIB`, `KIR`, `GRC`, `GRL`, `GRD`, `GLP`, `GUM`, `GTM`, `GIN`, `GUY`, `HTI`, `HMD`, `VAT`, `HND`, `HKG`, `HUN`, `ISL`, `IND`, `IDN`, `IRN`, `IRQ`, `IRL`, `ISR`, `ITA`, `CIV`, `JAM`, `JPN`, `KAZ`, `JOR`, `KEN`, `PRK`, `KOR`, `KWT`, `KGZ`, `LAO`, `LBN`, `LSO`, `LVA`, `LBR`, `LBY`, `LIE`, `LTU`, `LUX`, `MAC`, `MDG`, `MWI`, `MYS`, `MDV`, `MLI`, `MLT`, `MTQ`, `MRT`, `MUS`, `MEX`, `MCO`, `MNG`, `MDA`, `MNE`, `MSR`, `MAR`, `MOZ`, `OMN`, `NAM`, `NRU`, `NPL`, `NLD`, `ANT`, `CUW`, `ABW`, `SXM`, `BES`, `NCL`, `VUT`, `NZL`, `NIC`, `NER`, `NGA`, `NIU`, `NFK`, `NOR`, `MNP`, `UMI`, `FSM`, `MHL`, `PLW`, `PAK`, `PAN`, `PNG`, `PRY`, `PER`, `PHL`, `PCN`, `POL`, `PRT`, `GNB`, `TLS`, `PRI`, `QAT`, `REU`, `ROU`, `RUS`, `RWA`, `BLM`, `SHN`, `KNA`, `AIA`, `LCA`, `MAF`, `SPM`, `VCT`, `SMR`, `STP`, `SAU`, `SEN`, `SRB`, `SYC`, `SLE`, `SGP`, `SVK`, `VNM`, `SVN`, `SOM`, `ZAF`, `ZWE`, `ESP`, `SSD`, `ESH`, `SDN`, `SUR`, `SJM`, `SWZ`, `SWE`, `CHE`, `SYR`, `TJK`, `THA`, `TGO`, `TKL`, `TON`, `TTO`, `ARE`, `TUN`, `TUR`, `TKM`, `TCA`, `TUV`, `UGA`, `UKR`, `MKD`, `EGY`, `GBR`, `GGY`, `JEY`, `IMN`, `TZA`, `USA`, `VIR`, `BFA`, `URY`, `UZB`, `VEN`, `WLF`, `WSM`, `YEM`, `ZMB`
+        """
+        return pulumi.get(self, "country")
+
+    @country.setter
+    def country(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "country", value)
+
+
+if not MYPY:
+    class PolicyObjectSecurityIdentityListEntryArgsDict(TypedDict):
+        user: NotRequired[pulumi.Input[str]]
+        user_group: NotRequired[pulumi.Input[str]]
+elif False:
+    PolicyObjectSecurityIdentityListEntryArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class PolicyObjectSecurityIdentityListEntryArgs:
+    def __init__(__self__, *,
+                 user: Optional[pulumi.Input[str]] = None,
+                 user_group: Optional[pulumi.Input[str]] = None):
+        if user is not None:
+            pulumi.set(__self__, "user", user)
+        if user_group is not None:
+            pulumi.set(__self__, "user_group", user_group)
+
+    @property
+    @pulumi.getter
+    def user(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "user")
+
+    @user.setter
+    def user(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "user", value)
+
+    @property
+    @pulumi.getter(name="userGroup")
+    def user_group(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "user_group")
+
+    @user_group.setter
+    def user_group(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "user_group", value)
+
+
+if not MYPY:
+    class PolicyObjectSecurityIpsSignatureEntryArgsDict(TypedDict):
+        generator_id: NotRequired[pulumi.Input[str]]
+        signature_id: NotRequired[pulumi.Input[str]]
+elif False:
+    PolicyObjectSecurityIpsSignatureEntryArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class PolicyObjectSecurityIpsSignatureEntryArgs:
+    def __init__(__self__, *,
+                 generator_id: Optional[pulumi.Input[str]] = None,
+                 signature_id: Optional[pulumi.Input[str]] = None):
+        if generator_id is not None:
+            pulumi.set(__self__, "generator_id", generator_id)
+        if signature_id is not None:
+            pulumi.set(__self__, "signature_id", signature_id)
+
+    @property
+    @pulumi.getter(name="generatorId")
+    def generator_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "generator_id")
+
+    @generator_id.setter
+    def generator_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "generator_id", value)
+
+    @property
+    @pulumi.getter(name="signatureId")
+    def signature_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "signature_id")
+
+    @signature_id.setter
+    def signature_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "signature_id", value)
+
+
+if not MYPY:
+    class PolicyObjectSecurityLocalApplicationListEntryArgsDict(TypedDict):
+        app: NotRequired[pulumi.Input[str]]
+        app_family: NotRequired[pulumi.Input[str]]
+elif False:
+    PolicyObjectSecurityLocalApplicationListEntryArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class PolicyObjectSecurityLocalApplicationListEntryArgs:
+    def __init__(__self__, *,
+                 app: Optional[pulumi.Input[str]] = None,
+                 app_family: Optional[pulumi.Input[str]] = None):
+        if app is not None:
+            pulumi.set(__self__, "app", app)
+        if app_family is not None:
+            pulumi.set(__self__, "app_family", app_family)
+
+    @property
+    @pulumi.getter
+    def app(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "app")
+
+    @app.setter
+    def app(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "app", value)
+
+    @property
+    @pulumi.getter(name="appFamily")
+    def app_family(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "app_family")
+
+    @app_family.setter
+    def app_family(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "app_family", value)
+
+
+if not MYPY:
+    class PolicyObjectSecurityLocalDomainListEntryArgsDict(TypedDict):
+        local_domain: NotRequired[pulumi.Input[str]]
+elif False:
+    PolicyObjectSecurityLocalDomainListEntryArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class PolicyObjectSecurityLocalDomainListEntryArgs:
+    def __init__(__self__, *,
+                 local_domain: Optional[pulumi.Input[str]] = None):
+        if local_domain is not None:
+            pulumi.set(__self__, "local_domain", local_domain)
+
+    @property
+    @pulumi.getter(name="localDomain")
+    def local_domain(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "local_domain")
+
+    @local_domain.setter
+    def local_domain(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "local_domain", value)
+
+
+if not MYPY:
+    class PolicyObjectSecurityPortListEntryArgsDict(TypedDict):
+        port: NotRequired[pulumi.Input[str]]
+        """
+        can be single port or port range
+        """
+elif False:
+    PolicyObjectSecurityPortListEntryArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class PolicyObjectSecurityPortListEntryArgs:
+    def __init__(__self__, *,
+                 port: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[str] port: can be single port or port range
+        """
+        if port is not None:
+            pulumi.set(__self__, "port", port)
+
+    @property
+    @pulumi.getter
+    def port(self) -> Optional[pulumi.Input[str]]:
+        """
+        can be single port or port range
+        """
+        return pulumi.get(self, "port")
+
+    @port.setter
+    def port(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "port", value)
+
+
+if not MYPY:
+    class PolicyObjectSecurityScalableGroupTagListEntryArgsDict(TypedDict):
+        sgt_name: NotRequired[pulumi.Input[str]]
+        tag: NotRequired[pulumi.Input[str]]
+elif False:
+    PolicyObjectSecurityScalableGroupTagListEntryArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class PolicyObjectSecurityScalableGroupTagListEntryArgs:
+    def __init__(__self__, *,
+                 sgt_name: Optional[pulumi.Input[str]] = None,
+                 tag: Optional[pulumi.Input[str]] = None):
+        if sgt_name is not None:
+            pulumi.set(__self__, "sgt_name", sgt_name)
+        if tag is not None:
+            pulumi.set(__self__, "tag", tag)
+
+    @property
+    @pulumi.getter(name="sgtName")
+    def sgt_name(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "sgt_name")
+
+    @sgt_name.setter
+    def sgt_name(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "sgt_name", value)
+
+    @property
+    @pulumi.getter
+    def tag(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "tag")
+
+    @tag.setter
+    def tag(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "tag", value)
+
+
+if not MYPY:
+    class PolicyObjectSecurityUrlAllowListEntryArgsDict(TypedDict):
+        pattern: NotRequired[pulumi.Input[str]]
+        """
+        valid url pattern
+        """
+elif False:
+    PolicyObjectSecurityUrlAllowListEntryArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class PolicyObjectSecurityUrlAllowListEntryArgs:
+    def __init__(__self__, *,
+                 pattern: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[str] pattern: valid url pattern
+        """
+        if pattern is not None:
+            pulumi.set(__self__, "pattern", pattern)
+
+    @property
+    @pulumi.getter
+    def pattern(self) -> Optional[pulumi.Input[str]]:
+        """
+        valid url pattern
+        """
+        return pulumi.get(self, "pattern")
+
+    @pattern.setter
+    def pattern(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "pattern", value)
+
+
+if not MYPY:
+    class PolicyObjectSecurityUrlBlockListEntryArgsDict(TypedDict):
+        pattern: NotRequired[pulumi.Input[str]]
+        """
+        valid url pattern
+        """
+elif False:
+    PolicyObjectSecurityUrlBlockListEntryArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class PolicyObjectSecurityUrlBlockListEntryArgs:
+    def __init__(__self__, *,
+                 pattern: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[str] pattern: valid url pattern
+        """
+        if pattern is not None:
+            pulumi.set(__self__, "pattern", pattern)
+
+    @property
+    @pulumi.getter
+    def pattern(self) -> Optional[pulumi.Input[str]]:
+        """
+        valid url pattern
+        """
+        return pulumi.get(self, "pattern")
+
+    @pattern.setter
+    def pattern(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "pattern", value)
+
+
+if not MYPY:
+    class PolicyObjectSlaClassListEntryArgsDict(TypedDict):
+        app_probe_class_list_id: NotRequired[pulumi.Input[str]]
+        fallback_best_tunnel_criteria: NotRequired[pulumi.Input[str]]
+        """
+        - Choices: `jitter`, `latency`, `loss`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
+        """
+        fallback_best_tunnel_jitter_variance: NotRequired[pulumi.Input[int]]
+        """
+        - Range: `1`-`1000`
+        """
+        fallback_best_tunnel_latency_variance: NotRequired[pulumi.Input[int]]
+        """
+        - Range: `1`-`1000`
+        """
+        fallback_best_tunnel_loss_variance: NotRequired[pulumi.Input[int]]
+        """
+        - Range: `0`-`100`
+        """
+        jitter: NotRequired[pulumi.Input[int]]
+        """
+        - Range: `1`-`1000`
+        """
+        latency: NotRequired[pulumi.Input[int]]
+        """
+        - Range: `1`-`1000`
+        """
+        loss: NotRequired[pulumi.Input[int]]
+        """
+        - Range: `0`-`100`
+        """
+elif False:
+    PolicyObjectSlaClassListEntryArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class PolicyObjectSlaClassListEntryArgs:
+    def __init__(__self__, *,
+                 app_probe_class_list_id: Optional[pulumi.Input[str]] = None,
+                 fallback_best_tunnel_criteria: Optional[pulumi.Input[str]] = None,
+                 fallback_best_tunnel_jitter_variance: Optional[pulumi.Input[int]] = None,
+                 fallback_best_tunnel_latency_variance: Optional[pulumi.Input[int]] = None,
+                 fallback_best_tunnel_loss_variance: Optional[pulumi.Input[int]] = None,
+                 jitter: Optional[pulumi.Input[int]] = None,
+                 latency: Optional[pulumi.Input[int]] = None,
+                 loss: Optional[pulumi.Input[int]] = None):
+        """
+        :param pulumi.Input[str] fallback_best_tunnel_criteria: - Choices: `jitter`, `latency`, `loss`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
+        :param pulumi.Input[int] fallback_best_tunnel_jitter_variance: - Range: `1`-`1000`
+        :param pulumi.Input[int] fallback_best_tunnel_latency_variance: - Range: `1`-`1000`
+        :param pulumi.Input[int] fallback_best_tunnel_loss_variance: - Range: `0`-`100`
+        :param pulumi.Input[int] jitter: - Range: `1`-`1000`
+        :param pulumi.Input[int] latency: - Range: `1`-`1000`
+        :param pulumi.Input[int] loss: - Range: `0`-`100`
+        """
+        if app_probe_class_list_id is not None:
+            pulumi.set(__self__, "app_probe_class_list_id", app_probe_class_list_id)
+        if fallback_best_tunnel_criteria is not None:
+            pulumi.set(__self__, "fallback_best_tunnel_criteria", fallback_best_tunnel_criteria)
+        if fallback_best_tunnel_jitter_variance is not None:
+            pulumi.set(__self__, "fallback_best_tunnel_jitter_variance", fallback_best_tunnel_jitter_variance)
+        if fallback_best_tunnel_latency_variance is not None:
+            pulumi.set(__self__, "fallback_best_tunnel_latency_variance", fallback_best_tunnel_latency_variance)
+        if fallback_best_tunnel_loss_variance is not None:
+            pulumi.set(__self__, "fallback_best_tunnel_loss_variance", fallback_best_tunnel_loss_variance)
+        if jitter is not None:
+            pulumi.set(__self__, "jitter", jitter)
+        if latency is not None:
+            pulumi.set(__self__, "latency", latency)
+        if loss is not None:
+            pulumi.set(__self__, "loss", loss)
+
+    @property
+    @pulumi.getter(name="appProbeClassListId")
+    def app_probe_class_list_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "app_probe_class_list_id")
+
+    @app_probe_class_list_id.setter
+    def app_probe_class_list_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "app_probe_class_list_id", value)
+
+    @property
+    @pulumi.getter(name="fallbackBestTunnelCriteria")
+    def fallback_best_tunnel_criteria(self) -> Optional[pulumi.Input[str]]:
+        """
+        - Choices: `jitter`, `latency`, `loss`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
+        """
+        return pulumi.get(self, "fallback_best_tunnel_criteria")
+
+    @fallback_best_tunnel_criteria.setter
+    def fallback_best_tunnel_criteria(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "fallback_best_tunnel_criteria", value)
+
+    @property
+    @pulumi.getter(name="fallbackBestTunnelJitterVariance")
+    def fallback_best_tunnel_jitter_variance(self) -> Optional[pulumi.Input[int]]:
+        """
+        - Range: `1`-`1000`
+        """
+        return pulumi.get(self, "fallback_best_tunnel_jitter_variance")
+
+    @fallback_best_tunnel_jitter_variance.setter
+    def fallback_best_tunnel_jitter_variance(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "fallback_best_tunnel_jitter_variance", value)
+
+    @property
+    @pulumi.getter(name="fallbackBestTunnelLatencyVariance")
+    def fallback_best_tunnel_latency_variance(self) -> Optional[pulumi.Input[int]]:
+        """
+        - Range: `1`-`1000`
+        """
+        return pulumi.get(self, "fallback_best_tunnel_latency_variance")
+
+    @fallback_best_tunnel_latency_variance.setter
+    def fallback_best_tunnel_latency_variance(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "fallback_best_tunnel_latency_variance", value)
+
+    @property
+    @pulumi.getter(name="fallbackBestTunnelLossVariance")
+    def fallback_best_tunnel_loss_variance(self) -> Optional[pulumi.Input[int]]:
+        """
+        - Range: `0`-`100`
+        """
+        return pulumi.get(self, "fallback_best_tunnel_loss_variance")
+
+    @fallback_best_tunnel_loss_variance.setter
+    def fallback_best_tunnel_loss_variance(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "fallback_best_tunnel_loss_variance", value)
+
+    @property
+    @pulumi.getter
+    def jitter(self) -> Optional[pulumi.Input[int]]:
+        """
+        - Range: `1`-`1000`
+        """
+        return pulumi.get(self, "jitter")
+
+    @jitter.setter
+    def jitter(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "jitter", value)
+
+    @property
+    @pulumi.getter
+    def latency(self) -> Optional[pulumi.Input[int]]:
+        """
+        - Range: `1`-`1000`
+        """
+        return pulumi.get(self, "latency")
+
+    @latency.setter
+    def latency(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "latency", value)
+
+    @property
+    @pulumi.getter
+    def loss(self) -> Optional[pulumi.Input[int]]:
+        """
+        - Range: `0`-`100`
+        """
+        return pulumi.get(self, "loss")
+
+    @loss.setter
+    def loss(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "loss", value)
+
+
+if not MYPY:
+    class PolicyObjectStandardCommunityListEntryArgsDict(TypedDict):
+        standard_community: NotRequired[pulumi.Input[str]]
+        """
+        Standard Community
+        """
+elif False:
+    PolicyObjectStandardCommunityListEntryArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class PolicyObjectStandardCommunityListEntryArgs:
+    def __init__(__self__, *,
+                 standard_community: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[str] standard_community: Standard Community
+        """
+        if standard_community is not None:
+            pulumi.set(__self__, "standard_community", standard_community)
+
+    @property
+    @pulumi.getter(name="standardCommunity")
+    def standard_community(self) -> Optional[pulumi.Input[str]]:
+        """
+        Standard Community
+        """
+        return pulumi.get(self, "standard_community")
+
+    @standard_community.setter
+    def standard_community(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "standard_community", value)
+
+
+if not MYPY:
     class PolicyObjectTlocListEntryArgsDict(TypedDict):
         color: NotRequired[pulumi.Input[str]]
         """
@@ -34474,6 +37103,38 @@ class PolicyObjectTlocListEntryArgs:
     @tloc_ip.setter
     def tloc_ip(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "tloc_ip", value)
+
+
+if not MYPY:
+    class PolicyObjectVpnGroupEntryArgsDict(TypedDict):
+        vpn: NotRequired[pulumi.Input[int]]
+        """
+        can be single vpn id or vpn id range
+        """
+elif False:
+    PolicyObjectVpnGroupEntryArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class PolicyObjectVpnGroupEntryArgs:
+    def __init__(__self__, *,
+                 vpn: Optional[pulumi.Input[int]] = None):
+        """
+        :param pulumi.Input[int] vpn: can be single vpn id or vpn id range
+        """
+        if vpn is not None:
+            pulumi.set(__self__, "vpn", vpn)
+
+    @property
+    @pulumi.getter
+    def vpn(self) -> Optional[pulumi.Input[int]]:
+        """
+        can be single vpn id or vpn id range
+        """
+        return pulumi.get(self, "vpn")
+
+    @vpn.setter
+    def vpn(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "vpn", value)
 
 
 if not MYPY:
@@ -36948,6 +39609,10 @@ if not MYPY:
         Policy definition type
           - Choices: `urlFiltering`, `zoneBasedFW`, `intrusionPrevention`, `sslDecryption`, `advancedMalwareProtection`, `dnsSecurity`
         """
+        version: NotRequired[pulumi.Input[int]]
+        """
+        Policy definition version
+        """
 elif False:
     SecurityPolicyDefinitionArgsDict: TypeAlias = Mapping[str, Any]
 
@@ -36955,14 +39620,18 @@ elif False:
 class SecurityPolicyDefinitionArgs:
     def __init__(__self__, *,
                  id: pulumi.Input[str],
-                 type: pulumi.Input[str]):
+                 type: pulumi.Input[str],
+                 version: Optional[pulumi.Input[int]] = None):
         """
         :param pulumi.Input[str] id: Policy definition ID
         :param pulumi.Input[str] type: Policy definition type
                  - Choices: `urlFiltering`, `zoneBasedFW`, `intrusionPrevention`, `sslDecryption`, `advancedMalwareProtection`, `dnsSecurity`
+        :param pulumi.Input[int] version: Policy definition version
         """
         pulumi.set(__self__, "id", id)
         pulumi.set(__self__, "type", type)
+        if version is not None:
+            pulumi.set(__self__, "version", version)
 
     @property
     @pulumi.getter
@@ -36988,6 +39657,18 @@ class SecurityPolicyDefinitionArgs:
     @type.setter
     def type(self, value: pulumi.Input[str]):
         pulumi.set(self, "type", value)
+
+    @property
+    @pulumi.getter
+    def version(self) -> Optional[pulumi.Input[int]]:
+        """
+        Policy definition version
+        """
+        return pulumi.get(self, "version")
+
+    @version.setter
+    def version(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "version", value)
 
 
 if not MYPY:
@@ -37040,6 +39721,1195 @@ class SecurityPolicyLoggingArgs:
     @external_syslog_server_vpn.setter
     def external_syslog_server_vpn(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "external_syslog_server_vpn", value)
+
+
+if not MYPY:
+    class ServiceIpv4AclFeatureSequenceArgsDict(TypedDict):
+        actions: NotRequired[pulumi.Input[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceActionArgsDict']]]]
+        """
+        Define list of actions
+        """
+        base_action: NotRequired[pulumi.Input[str]]
+        """
+        Base Action
+          - Choices: `drop`, `accept`
+          - Default value: `accept`
+        """
+        match_entries: NotRequired[pulumi.Input[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceMatchEntryArgsDict']]]]
+        """
+        Define match conditions
+        """
+        sequence_id: NotRequired[pulumi.Input[int]]
+        """
+        Sequence Id
+          - Range: `1`-`65536`
+        """
+        sequence_name: NotRequired[pulumi.Input[str]]
+        """
+        Sequence Name
+        """
+elif False:
+    ServiceIpv4AclFeatureSequenceArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ServiceIpv4AclFeatureSequenceArgs:
+    def __init__(__self__, *,
+                 actions: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceActionArgs']]]] = None,
+                 base_action: Optional[pulumi.Input[str]] = None,
+                 match_entries: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceMatchEntryArgs']]]] = None,
+                 sequence_id: Optional[pulumi.Input[int]] = None,
+                 sequence_name: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceActionArgs']]] actions: Define list of actions
+        :param pulumi.Input[str] base_action: Base Action
+                 - Choices: `drop`, `accept`
+                 - Default value: `accept`
+        :param pulumi.Input[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceMatchEntryArgs']]] match_entries: Define match conditions
+        :param pulumi.Input[int] sequence_id: Sequence Id
+                 - Range: `1`-`65536`
+        :param pulumi.Input[str] sequence_name: Sequence Name
+        """
+        if actions is not None:
+            pulumi.set(__self__, "actions", actions)
+        if base_action is not None:
+            pulumi.set(__self__, "base_action", base_action)
+        if match_entries is not None:
+            pulumi.set(__self__, "match_entries", match_entries)
+        if sequence_id is not None:
+            pulumi.set(__self__, "sequence_id", sequence_id)
+        if sequence_name is not None:
+            pulumi.set(__self__, "sequence_name", sequence_name)
+
+    @property
+    @pulumi.getter
+    def actions(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceActionArgs']]]]:
+        """
+        Define list of actions
+        """
+        return pulumi.get(self, "actions")
+
+    @actions.setter
+    def actions(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceActionArgs']]]]):
+        pulumi.set(self, "actions", value)
+
+    @property
+    @pulumi.getter(name="baseAction")
+    def base_action(self) -> Optional[pulumi.Input[str]]:
+        """
+        Base Action
+          - Choices: `drop`, `accept`
+          - Default value: `accept`
+        """
+        return pulumi.get(self, "base_action")
+
+    @base_action.setter
+    def base_action(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "base_action", value)
+
+    @property
+    @pulumi.getter(name="matchEntries")
+    def match_entries(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceMatchEntryArgs']]]]:
+        """
+        Define match conditions
+        """
+        return pulumi.get(self, "match_entries")
+
+    @match_entries.setter
+    def match_entries(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceMatchEntryArgs']]]]):
+        pulumi.set(self, "match_entries", value)
+
+    @property
+    @pulumi.getter(name="sequenceId")
+    def sequence_id(self) -> Optional[pulumi.Input[int]]:
+        """
+        Sequence Id
+          - Range: `1`-`65536`
+        """
+        return pulumi.get(self, "sequence_id")
+
+    @sequence_id.setter
+    def sequence_id(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "sequence_id", value)
+
+    @property
+    @pulumi.getter(name="sequenceName")
+    def sequence_name(self) -> Optional[pulumi.Input[str]]:
+        """
+        Sequence Name
+        """
+        return pulumi.get(self, "sequence_name")
+
+    @sequence_name.setter
+    def sequence_name(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "sequence_name", value)
+
+
+if not MYPY:
+    class ServiceIpv4AclFeatureSequenceActionArgsDict(TypedDict):
+        accept_counter_name: NotRequired[pulumi.Input[str]]
+        """
+        Counter Name
+        """
+        accept_log: NotRequired[pulumi.Input[bool]]
+        """
+        Enable Log
+          - Default value: `false`
+        """
+        accept_mirror_list_id: NotRequired[pulumi.Input[str]]
+        accept_policer_id: NotRequired[pulumi.Input[str]]
+        accept_set_dscp: NotRequired[pulumi.Input[int]]
+        """
+        DSCP number
+          - Range: `0`-`63`
+        """
+        accept_set_next_hop: NotRequired[pulumi.Input[str]]
+        """
+        Set Next Hop (IPV4 address)
+        """
+        drop_counter_name: NotRequired[pulumi.Input[str]]
+        """
+        Counter Name
+        """
+        drop_log: NotRequired[pulumi.Input[bool]]
+        """
+        Enable Log
+          - Default value: `false`
+        """
+elif False:
+    ServiceIpv4AclFeatureSequenceActionArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ServiceIpv4AclFeatureSequenceActionArgs:
+    def __init__(__self__, *,
+                 accept_counter_name: Optional[pulumi.Input[str]] = None,
+                 accept_log: Optional[pulumi.Input[bool]] = None,
+                 accept_mirror_list_id: Optional[pulumi.Input[str]] = None,
+                 accept_policer_id: Optional[pulumi.Input[str]] = None,
+                 accept_set_dscp: Optional[pulumi.Input[int]] = None,
+                 accept_set_next_hop: Optional[pulumi.Input[str]] = None,
+                 drop_counter_name: Optional[pulumi.Input[str]] = None,
+                 drop_log: Optional[pulumi.Input[bool]] = None):
+        """
+        :param pulumi.Input[str] accept_counter_name: Counter Name
+        :param pulumi.Input[bool] accept_log: Enable Log
+                 - Default value: `false`
+        :param pulumi.Input[int] accept_set_dscp: DSCP number
+                 - Range: `0`-`63`
+        :param pulumi.Input[str] accept_set_next_hop: Set Next Hop (IPV4 address)
+        :param pulumi.Input[str] drop_counter_name: Counter Name
+        :param pulumi.Input[bool] drop_log: Enable Log
+                 - Default value: `false`
+        """
+        if accept_counter_name is not None:
+            pulumi.set(__self__, "accept_counter_name", accept_counter_name)
+        if accept_log is not None:
+            pulumi.set(__self__, "accept_log", accept_log)
+        if accept_mirror_list_id is not None:
+            pulumi.set(__self__, "accept_mirror_list_id", accept_mirror_list_id)
+        if accept_policer_id is not None:
+            pulumi.set(__self__, "accept_policer_id", accept_policer_id)
+        if accept_set_dscp is not None:
+            pulumi.set(__self__, "accept_set_dscp", accept_set_dscp)
+        if accept_set_next_hop is not None:
+            pulumi.set(__self__, "accept_set_next_hop", accept_set_next_hop)
+        if drop_counter_name is not None:
+            pulumi.set(__self__, "drop_counter_name", drop_counter_name)
+        if drop_log is not None:
+            pulumi.set(__self__, "drop_log", drop_log)
+
+    @property
+    @pulumi.getter(name="acceptCounterName")
+    def accept_counter_name(self) -> Optional[pulumi.Input[str]]:
+        """
+        Counter Name
+        """
+        return pulumi.get(self, "accept_counter_name")
+
+    @accept_counter_name.setter
+    def accept_counter_name(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "accept_counter_name", value)
+
+    @property
+    @pulumi.getter(name="acceptLog")
+    def accept_log(self) -> Optional[pulumi.Input[bool]]:
+        """
+        Enable Log
+          - Default value: `false`
+        """
+        return pulumi.get(self, "accept_log")
+
+    @accept_log.setter
+    def accept_log(self, value: Optional[pulumi.Input[bool]]):
+        pulumi.set(self, "accept_log", value)
+
+    @property
+    @pulumi.getter(name="acceptMirrorListId")
+    def accept_mirror_list_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "accept_mirror_list_id")
+
+    @accept_mirror_list_id.setter
+    def accept_mirror_list_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "accept_mirror_list_id", value)
+
+    @property
+    @pulumi.getter(name="acceptPolicerId")
+    def accept_policer_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "accept_policer_id")
+
+    @accept_policer_id.setter
+    def accept_policer_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "accept_policer_id", value)
+
+    @property
+    @pulumi.getter(name="acceptSetDscp")
+    def accept_set_dscp(self) -> Optional[pulumi.Input[int]]:
+        """
+        DSCP number
+          - Range: `0`-`63`
+        """
+        return pulumi.get(self, "accept_set_dscp")
+
+    @accept_set_dscp.setter
+    def accept_set_dscp(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "accept_set_dscp", value)
+
+    @property
+    @pulumi.getter(name="acceptSetNextHop")
+    def accept_set_next_hop(self) -> Optional[pulumi.Input[str]]:
+        """
+        Set Next Hop (IPV4 address)
+        """
+        return pulumi.get(self, "accept_set_next_hop")
+
+    @accept_set_next_hop.setter
+    def accept_set_next_hop(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "accept_set_next_hop", value)
+
+    @property
+    @pulumi.getter(name="dropCounterName")
+    def drop_counter_name(self) -> Optional[pulumi.Input[str]]:
+        """
+        Counter Name
+        """
+        return pulumi.get(self, "drop_counter_name")
+
+    @drop_counter_name.setter
+    def drop_counter_name(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "drop_counter_name", value)
+
+    @property
+    @pulumi.getter(name="dropLog")
+    def drop_log(self) -> Optional[pulumi.Input[bool]]:
+        """
+        Enable Log
+          - Default value: `false`
+        """
+        return pulumi.get(self, "drop_log")
+
+    @drop_log.setter
+    def drop_log(self, value: Optional[pulumi.Input[bool]]):
+        pulumi.set(self, "drop_log", value)
+
+
+if not MYPY:
+    class ServiceIpv4AclFeatureSequenceMatchEntryArgsDict(TypedDict):
+        destination_data_prefix: NotRequired[pulumi.Input[str]]
+        """
+        Destination Data IP Prefix
+        """
+        destination_data_prefix_list_id: NotRequired[pulumi.Input[str]]
+        destination_data_prefix_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        destination_ports: NotRequired[pulumi.Input[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceMatchEntryDestinationPortArgsDict']]]]
+        """
+        Destination Port List
+        """
+        dscps: NotRequired[pulumi.Input[Sequence[pulumi.Input[int]]]]
+        """
+        DSCP number
+        """
+        icmp_messages: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        ICMP Message
+        """
+        packet_length: NotRequired[pulumi.Input[int]]
+        """
+        Packet Length
+        """
+        protocols: NotRequired[pulumi.Input[Sequence[pulumi.Input[int]]]]
+        """
+        protocol number list with at least one item
+        """
+        source_data_prefix: NotRequired[pulumi.Input[str]]
+        """
+        Source Data IP Prefix
+        """
+        source_data_prefix_list_id: NotRequired[pulumi.Input[str]]
+        source_data_prefix_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        source_ports: NotRequired[pulumi.Input[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceMatchEntrySourcePortArgsDict']]]]
+        """
+        Source Port List
+        """
+        tcp_state: NotRequired[pulumi.Input[str]]
+        """
+        TCP States
+          - Choices: `syn`
+        """
+elif False:
+    ServiceIpv4AclFeatureSequenceMatchEntryArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ServiceIpv4AclFeatureSequenceMatchEntryArgs:
+    def __init__(__self__, *,
+                 destination_data_prefix: Optional[pulumi.Input[str]] = None,
+                 destination_data_prefix_list_id: Optional[pulumi.Input[str]] = None,
+                 destination_data_prefix_variable: Optional[pulumi.Input[str]] = None,
+                 destination_ports: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceMatchEntryDestinationPortArgs']]]] = None,
+                 dscps: Optional[pulumi.Input[Sequence[pulumi.Input[int]]]] = None,
+                 icmp_messages: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
+                 packet_length: Optional[pulumi.Input[int]] = None,
+                 protocols: Optional[pulumi.Input[Sequence[pulumi.Input[int]]]] = None,
+                 source_data_prefix: Optional[pulumi.Input[str]] = None,
+                 source_data_prefix_list_id: Optional[pulumi.Input[str]] = None,
+                 source_data_prefix_variable: Optional[pulumi.Input[str]] = None,
+                 source_ports: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceMatchEntrySourcePortArgs']]]] = None,
+                 tcp_state: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[str] destination_data_prefix: Destination Data IP Prefix
+        :param pulumi.Input[str] destination_data_prefix_variable: Variable name
+        :param pulumi.Input[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceMatchEntryDestinationPortArgs']]] destination_ports: Destination Port List
+        :param pulumi.Input[Sequence[pulumi.Input[int]]] dscps: DSCP number
+        :param pulumi.Input[Sequence[pulumi.Input[str]]] icmp_messages: ICMP Message
+        :param pulumi.Input[int] packet_length: Packet Length
+        :param pulumi.Input[Sequence[pulumi.Input[int]]] protocols: protocol number list with at least one item
+        :param pulumi.Input[str] source_data_prefix: Source Data IP Prefix
+        :param pulumi.Input[str] source_data_prefix_variable: Variable name
+        :param pulumi.Input[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceMatchEntrySourcePortArgs']]] source_ports: Source Port List
+        :param pulumi.Input[str] tcp_state: TCP States
+                 - Choices: `syn`
+        """
+        if destination_data_prefix is not None:
+            pulumi.set(__self__, "destination_data_prefix", destination_data_prefix)
+        if destination_data_prefix_list_id is not None:
+            pulumi.set(__self__, "destination_data_prefix_list_id", destination_data_prefix_list_id)
+        if destination_data_prefix_variable is not None:
+            pulumi.set(__self__, "destination_data_prefix_variable", destination_data_prefix_variable)
+        if destination_ports is not None:
+            pulumi.set(__self__, "destination_ports", destination_ports)
+        if dscps is not None:
+            pulumi.set(__self__, "dscps", dscps)
+        if icmp_messages is not None:
+            pulumi.set(__self__, "icmp_messages", icmp_messages)
+        if packet_length is not None:
+            pulumi.set(__self__, "packet_length", packet_length)
+        if protocols is not None:
+            pulumi.set(__self__, "protocols", protocols)
+        if source_data_prefix is not None:
+            pulumi.set(__self__, "source_data_prefix", source_data_prefix)
+        if source_data_prefix_list_id is not None:
+            pulumi.set(__self__, "source_data_prefix_list_id", source_data_prefix_list_id)
+        if source_data_prefix_variable is not None:
+            pulumi.set(__self__, "source_data_prefix_variable", source_data_prefix_variable)
+        if source_ports is not None:
+            pulumi.set(__self__, "source_ports", source_ports)
+        if tcp_state is not None:
+            pulumi.set(__self__, "tcp_state", tcp_state)
+
+    @property
+    @pulumi.getter(name="destinationDataPrefix")
+    def destination_data_prefix(self) -> Optional[pulumi.Input[str]]:
+        """
+        Destination Data IP Prefix
+        """
+        return pulumi.get(self, "destination_data_prefix")
+
+    @destination_data_prefix.setter
+    def destination_data_prefix(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "destination_data_prefix", value)
+
+    @property
+    @pulumi.getter(name="destinationDataPrefixListId")
+    def destination_data_prefix_list_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "destination_data_prefix_list_id")
+
+    @destination_data_prefix_list_id.setter
+    def destination_data_prefix_list_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "destination_data_prefix_list_id", value)
+
+    @property
+    @pulumi.getter(name="destinationDataPrefixVariable")
+    def destination_data_prefix_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "destination_data_prefix_variable")
+
+    @destination_data_prefix_variable.setter
+    def destination_data_prefix_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "destination_data_prefix_variable", value)
+
+    @property
+    @pulumi.getter(name="destinationPorts")
+    def destination_ports(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceMatchEntryDestinationPortArgs']]]]:
+        """
+        Destination Port List
+        """
+        return pulumi.get(self, "destination_ports")
+
+    @destination_ports.setter
+    def destination_ports(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceMatchEntryDestinationPortArgs']]]]):
+        pulumi.set(self, "destination_ports", value)
+
+    @property
+    @pulumi.getter
+    def dscps(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[int]]]]:
+        """
+        DSCP number
+        """
+        return pulumi.get(self, "dscps")
+
+    @dscps.setter
+    def dscps(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[int]]]]):
+        pulumi.set(self, "dscps", value)
+
+    @property
+    @pulumi.getter(name="icmpMessages")
+    def icmp_messages(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]:
+        """
+        ICMP Message
+        """
+        return pulumi.get(self, "icmp_messages")
+
+    @icmp_messages.setter
+    def icmp_messages(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
+        pulumi.set(self, "icmp_messages", value)
+
+    @property
+    @pulumi.getter(name="packetLength")
+    def packet_length(self) -> Optional[pulumi.Input[int]]:
+        """
+        Packet Length
+        """
+        return pulumi.get(self, "packet_length")
+
+    @packet_length.setter
+    def packet_length(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "packet_length", value)
+
+    @property
+    @pulumi.getter
+    def protocols(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[int]]]]:
+        """
+        protocol number list with at least one item
+        """
+        return pulumi.get(self, "protocols")
+
+    @protocols.setter
+    def protocols(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[int]]]]):
+        pulumi.set(self, "protocols", value)
+
+    @property
+    @pulumi.getter(name="sourceDataPrefix")
+    def source_data_prefix(self) -> Optional[pulumi.Input[str]]:
+        """
+        Source Data IP Prefix
+        """
+        return pulumi.get(self, "source_data_prefix")
+
+    @source_data_prefix.setter
+    def source_data_prefix(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "source_data_prefix", value)
+
+    @property
+    @pulumi.getter(name="sourceDataPrefixListId")
+    def source_data_prefix_list_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "source_data_prefix_list_id")
+
+    @source_data_prefix_list_id.setter
+    def source_data_prefix_list_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "source_data_prefix_list_id", value)
+
+    @property
+    @pulumi.getter(name="sourceDataPrefixVariable")
+    def source_data_prefix_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "source_data_prefix_variable")
+
+    @source_data_prefix_variable.setter
+    def source_data_prefix_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "source_data_prefix_variable", value)
+
+    @property
+    @pulumi.getter(name="sourcePorts")
+    def source_ports(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceMatchEntrySourcePortArgs']]]]:
+        """
+        Source Port List
+        """
+        return pulumi.get(self, "source_ports")
+
+    @source_ports.setter
+    def source_ports(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceMatchEntrySourcePortArgs']]]]):
+        pulumi.set(self, "source_ports", value)
+
+    @property
+    @pulumi.getter(name="tcpState")
+    def tcp_state(self) -> Optional[pulumi.Input[str]]:
+        """
+        TCP States
+          - Choices: `syn`
+        """
+        return pulumi.get(self, "tcp_state")
+
+    @tcp_state.setter
+    def tcp_state(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "tcp_state", value)
+
+
+if not MYPY:
+    class ServiceIpv4AclFeatureSequenceMatchEntryDestinationPortArgsDict(TypedDict):
+        port: NotRequired[pulumi.Input[int]]
+        """
+        destination port range or individual port number
+        """
+elif False:
+    ServiceIpv4AclFeatureSequenceMatchEntryDestinationPortArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ServiceIpv4AclFeatureSequenceMatchEntryDestinationPortArgs:
+    def __init__(__self__, *,
+                 port: Optional[pulumi.Input[int]] = None):
+        """
+        :param pulumi.Input[int] port: destination port range or individual port number
+        """
+        if port is not None:
+            pulumi.set(__self__, "port", port)
+
+    @property
+    @pulumi.getter
+    def port(self) -> Optional[pulumi.Input[int]]:
+        """
+        destination port range or individual port number
+        """
+        return pulumi.get(self, "port")
+
+    @port.setter
+    def port(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "port", value)
+
+
+if not MYPY:
+    class ServiceIpv4AclFeatureSequenceMatchEntrySourcePortArgsDict(TypedDict):
+        port: NotRequired[pulumi.Input[int]]
+        """
+        source port range or individual port number
+        """
+elif False:
+    ServiceIpv4AclFeatureSequenceMatchEntrySourcePortArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ServiceIpv4AclFeatureSequenceMatchEntrySourcePortArgs:
+    def __init__(__self__, *,
+                 port: Optional[pulumi.Input[int]] = None):
+        """
+        :param pulumi.Input[int] port: source port range or individual port number
+        """
+        if port is not None:
+            pulumi.set(__self__, "port", port)
+
+    @property
+    @pulumi.getter
+    def port(self) -> Optional[pulumi.Input[int]]:
+        """
+        source port range or individual port number
+        """
+        return pulumi.get(self, "port")
+
+    @port.setter
+    def port(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "port", value)
+
+
+if not MYPY:
+    class ServiceIpv6AclFeatureSequenceArgsDict(TypedDict):
+        actions: NotRequired[pulumi.Input[Sequence[pulumi.Input['ServiceIpv6AclFeatureSequenceActionArgsDict']]]]
+        """
+        Define list of actions
+        """
+        base_action: NotRequired[pulumi.Input[str]]
+        """
+        Base Action
+          - Choices: `drop`, `accept`
+          - Default value: `accept`
+        """
+        match_entries: NotRequired[pulumi.Input[Sequence[pulumi.Input['ServiceIpv6AclFeatureSequenceMatchEntryArgsDict']]]]
+        """
+        Define match conditions
+        """
+        sequence_id: NotRequired[pulumi.Input[int]]
+        """
+        Sequence Id
+          - Range: `1`-`65536`
+        """
+        sequence_name: NotRequired[pulumi.Input[str]]
+        """
+        Sequence Name
+        """
+elif False:
+    ServiceIpv6AclFeatureSequenceArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ServiceIpv6AclFeatureSequenceArgs:
+    def __init__(__self__, *,
+                 actions: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceIpv6AclFeatureSequenceActionArgs']]]] = None,
+                 base_action: Optional[pulumi.Input[str]] = None,
+                 match_entries: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceIpv6AclFeatureSequenceMatchEntryArgs']]]] = None,
+                 sequence_id: Optional[pulumi.Input[int]] = None,
+                 sequence_name: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[Sequence[pulumi.Input['ServiceIpv6AclFeatureSequenceActionArgs']]] actions: Define list of actions
+        :param pulumi.Input[str] base_action: Base Action
+                 - Choices: `drop`, `accept`
+                 - Default value: `accept`
+        :param pulumi.Input[Sequence[pulumi.Input['ServiceIpv6AclFeatureSequenceMatchEntryArgs']]] match_entries: Define match conditions
+        :param pulumi.Input[int] sequence_id: Sequence Id
+                 - Range: `1`-`65536`
+        :param pulumi.Input[str] sequence_name: Sequence Name
+        """
+        if actions is not None:
+            pulumi.set(__self__, "actions", actions)
+        if base_action is not None:
+            pulumi.set(__self__, "base_action", base_action)
+        if match_entries is not None:
+            pulumi.set(__self__, "match_entries", match_entries)
+        if sequence_id is not None:
+            pulumi.set(__self__, "sequence_id", sequence_id)
+        if sequence_name is not None:
+            pulumi.set(__self__, "sequence_name", sequence_name)
+
+    @property
+    @pulumi.getter
+    def actions(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceIpv6AclFeatureSequenceActionArgs']]]]:
+        """
+        Define list of actions
+        """
+        return pulumi.get(self, "actions")
+
+    @actions.setter
+    def actions(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceIpv6AclFeatureSequenceActionArgs']]]]):
+        pulumi.set(self, "actions", value)
+
+    @property
+    @pulumi.getter(name="baseAction")
+    def base_action(self) -> Optional[pulumi.Input[str]]:
+        """
+        Base Action
+          - Choices: `drop`, `accept`
+          - Default value: `accept`
+        """
+        return pulumi.get(self, "base_action")
+
+    @base_action.setter
+    def base_action(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "base_action", value)
+
+    @property
+    @pulumi.getter(name="matchEntries")
+    def match_entries(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceIpv6AclFeatureSequenceMatchEntryArgs']]]]:
+        """
+        Define match conditions
+        """
+        return pulumi.get(self, "match_entries")
+
+    @match_entries.setter
+    def match_entries(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceIpv6AclFeatureSequenceMatchEntryArgs']]]]):
+        pulumi.set(self, "match_entries", value)
+
+    @property
+    @pulumi.getter(name="sequenceId")
+    def sequence_id(self) -> Optional[pulumi.Input[int]]:
+        """
+        Sequence Id
+          - Range: `1`-`65536`
+        """
+        return pulumi.get(self, "sequence_id")
+
+    @sequence_id.setter
+    def sequence_id(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "sequence_id", value)
+
+    @property
+    @pulumi.getter(name="sequenceName")
+    def sequence_name(self) -> Optional[pulumi.Input[str]]:
+        """
+        Sequence Name
+        """
+        return pulumi.get(self, "sequence_name")
+
+    @sequence_name.setter
+    def sequence_name(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "sequence_name", value)
+
+
+if not MYPY:
+    class ServiceIpv6AclFeatureSequenceActionArgsDict(TypedDict):
+        accept_counter_name: NotRequired[pulumi.Input[str]]
+        """
+        Counter Name
+        """
+        accept_log: NotRequired[pulumi.Input[bool]]
+        """
+        Enable Log
+          - Default value: `false`
+        """
+        accept_mirror_list_id: NotRequired[pulumi.Input[str]]
+        accept_policer_id: NotRequired[pulumi.Input[str]]
+        accept_set_next_hop: NotRequired[pulumi.Input[str]]
+        """
+        Set Next Hop (IPV6 address)
+        """
+        accept_traffic_class: NotRequired[pulumi.Input[int]]
+        """
+        set traffic class number
+          - Range: `0`-`63`
+        """
+        drop_counter_name: NotRequired[pulumi.Input[str]]
+        """
+        Counter Name
+        """
+        drop_log: NotRequired[pulumi.Input[bool]]
+        """
+        Enable Log
+          - Default value: `false`
+        """
+elif False:
+    ServiceIpv6AclFeatureSequenceActionArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ServiceIpv6AclFeatureSequenceActionArgs:
+    def __init__(__self__, *,
+                 accept_counter_name: Optional[pulumi.Input[str]] = None,
+                 accept_log: Optional[pulumi.Input[bool]] = None,
+                 accept_mirror_list_id: Optional[pulumi.Input[str]] = None,
+                 accept_policer_id: Optional[pulumi.Input[str]] = None,
+                 accept_set_next_hop: Optional[pulumi.Input[str]] = None,
+                 accept_traffic_class: Optional[pulumi.Input[int]] = None,
+                 drop_counter_name: Optional[pulumi.Input[str]] = None,
+                 drop_log: Optional[pulumi.Input[bool]] = None):
+        """
+        :param pulumi.Input[str] accept_counter_name: Counter Name
+        :param pulumi.Input[bool] accept_log: Enable Log
+                 - Default value: `false`
+        :param pulumi.Input[str] accept_set_next_hop: Set Next Hop (IPV6 address)
+        :param pulumi.Input[int] accept_traffic_class: set traffic class number
+                 - Range: `0`-`63`
+        :param pulumi.Input[str] drop_counter_name: Counter Name
+        :param pulumi.Input[bool] drop_log: Enable Log
+                 - Default value: `false`
+        """
+        if accept_counter_name is not None:
+            pulumi.set(__self__, "accept_counter_name", accept_counter_name)
+        if accept_log is not None:
+            pulumi.set(__self__, "accept_log", accept_log)
+        if accept_mirror_list_id is not None:
+            pulumi.set(__self__, "accept_mirror_list_id", accept_mirror_list_id)
+        if accept_policer_id is not None:
+            pulumi.set(__self__, "accept_policer_id", accept_policer_id)
+        if accept_set_next_hop is not None:
+            pulumi.set(__self__, "accept_set_next_hop", accept_set_next_hop)
+        if accept_traffic_class is not None:
+            pulumi.set(__self__, "accept_traffic_class", accept_traffic_class)
+        if drop_counter_name is not None:
+            pulumi.set(__self__, "drop_counter_name", drop_counter_name)
+        if drop_log is not None:
+            pulumi.set(__self__, "drop_log", drop_log)
+
+    @property
+    @pulumi.getter(name="acceptCounterName")
+    def accept_counter_name(self) -> Optional[pulumi.Input[str]]:
+        """
+        Counter Name
+        """
+        return pulumi.get(self, "accept_counter_name")
+
+    @accept_counter_name.setter
+    def accept_counter_name(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "accept_counter_name", value)
+
+    @property
+    @pulumi.getter(name="acceptLog")
+    def accept_log(self) -> Optional[pulumi.Input[bool]]:
+        """
+        Enable Log
+          - Default value: `false`
+        """
+        return pulumi.get(self, "accept_log")
+
+    @accept_log.setter
+    def accept_log(self, value: Optional[pulumi.Input[bool]]):
+        pulumi.set(self, "accept_log", value)
+
+    @property
+    @pulumi.getter(name="acceptMirrorListId")
+    def accept_mirror_list_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "accept_mirror_list_id")
+
+    @accept_mirror_list_id.setter
+    def accept_mirror_list_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "accept_mirror_list_id", value)
+
+    @property
+    @pulumi.getter(name="acceptPolicerId")
+    def accept_policer_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "accept_policer_id")
+
+    @accept_policer_id.setter
+    def accept_policer_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "accept_policer_id", value)
+
+    @property
+    @pulumi.getter(name="acceptSetNextHop")
+    def accept_set_next_hop(self) -> Optional[pulumi.Input[str]]:
+        """
+        Set Next Hop (IPV6 address)
+        """
+        return pulumi.get(self, "accept_set_next_hop")
+
+    @accept_set_next_hop.setter
+    def accept_set_next_hop(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "accept_set_next_hop", value)
+
+    @property
+    @pulumi.getter(name="acceptTrafficClass")
+    def accept_traffic_class(self) -> Optional[pulumi.Input[int]]:
+        """
+        set traffic class number
+          - Range: `0`-`63`
+        """
+        return pulumi.get(self, "accept_traffic_class")
+
+    @accept_traffic_class.setter
+    def accept_traffic_class(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "accept_traffic_class", value)
+
+    @property
+    @pulumi.getter(name="dropCounterName")
+    def drop_counter_name(self) -> Optional[pulumi.Input[str]]:
+        """
+        Counter Name
+        """
+        return pulumi.get(self, "drop_counter_name")
+
+    @drop_counter_name.setter
+    def drop_counter_name(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "drop_counter_name", value)
+
+    @property
+    @pulumi.getter(name="dropLog")
+    def drop_log(self) -> Optional[pulumi.Input[bool]]:
+        """
+        Enable Log
+          - Default value: `false`
+        """
+        return pulumi.get(self, "drop_log")
+
+    @drop_log.setter
+    def drop_log(self, value: Optional[pulumi.Input[bool]]):
+        pulumi.set(self, "drop_log", value)
+
+
+if not MYPY:
+    class ServiceIpv6AclFeatureSequenceMatchEntryArgsDict(TypedDict):
+        destination_data_prefix: NotRequired[pulumi.Input[str]]
+        """
+        Destination Data IP Prefix
+        """
+        destination_data_prefix_list_id: NotRequired[pulumi.Input[str]]
+        destination_ports: NotRequired[pulumi.Input[Sequence[pulumi.Input['ServiceIpv6AclFeatureSequenceMatchEntryDestinationPortArgsDict']]]]
+        """
+        Destination Port List
+        """
+        icmp_messages: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        ICMP6 Message
+        """
+        next_header: NotRequired[pulumi.Input[int]]
+        """
+        next header number
+          - Range: `0`-`255`
+        """
+        packet_length: NotRequired[pulumi.Input[int]]
+        """
+        Packet Length
+        """
+        source_data_prefix: NotRequired[pulumi.Input[str]]
+        """
+        Source Data IP Prefix
+        """
+        source_data_prefix_list_id: NotRequired[pulumi.Input[str]]
+        source_ports: NotRequired[pulumi.Input[Sequence[pulumi.Input['ServiceIpv6AclFeatureSequenceMatchEntrySourcePortArgsDict']]]]
+        """
+        Source Port List
+        """
+        tcp_state: NotRequired[pulumi.Input[str]]
+        """
+        TCP States
+          - Choices: `syn`
+        """
+        traffic_classes: NotRequired[pulumi.Input[Sequence[pulumi.Input[int]]]]
+        """
+        Select Traffic Class
+        """
+elif False:
+    ServiceIpv6AclFeatureSequenceMatchEntryArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ServiceIpv6AclFeatureSequenceMatchEntryArgs:
+    def __init__(__self__, *,
+                 destination_data_prefix: Optional[pulumi.Input[str]] = None,
+                 destination_data_prefix_list_id: Optional[pulumi.Input[str]] = None,
+                 destination_ports: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceIpv6AclFeatureSequenceMatchEntryDestinationPortArgs']]]] = None,
+                 icmp_messages: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
+                 next_header: Optional[pulumi.Input[int]] = None,
+                 packet_length: Optional[pulumi.Input[int]] = None,
+                 source_data_prefix: Optional[pulumi.Input[str]] = None,
+                 source_data_prefix_list_id: Optional[pulumi.Input[str]] = None,
+                 source_ports: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceIpv6AclFeatureSequenceMatchEntrySourcePortArgs']]]] = None,
+                 tcp_state: Optional[pulumi.Input[str]] = None,
+                 traffic_classes: Optional[pulumi.Input[Sequence[pulumi.Input[int]]]] = None):
+        """
+        :param pulumi.Input[str] destination_data_prefix: Destination Data IP Prefix
+        :param pulumi.Input[Sequence[pulumi.Input['ServiceIpv6AclFeatureSequenceMatchEntryDestinationPortArgs']]] destination_ports: Destination Port List
+        :param pulumi.Input[Sequence[pulumi.Input[str]]] icmp_messages: ICMP6 Message
+        :param pulumi.Input[int] next_header: next header number
+                 - Range: `0`-`255`
+        :param pulumi.Input[int] packet_length: Packet Length
+        :param pulumi.Input[str] source_data_prefix: Source Data IP Prefix
+        :param pulumi.Input[Sequence[pulumi.Input['ServiceIpv6AclFeatureSequenceMatchEntrySourcePortArgs']]] source_ports: Source Port List
+        :param pulumi.Input[str] tcp_state: TCP States
+                 - Choices: `syn`
+        :param pulumi.Input[Sequence[pulumi.Input[int]]] traffic_classes: Select Traffic Class
+        """
+        if destination_data_prefix is not None:
+            pulumi.set(__self__, "destination_data_prefix", destination_data_prefix)
+        if destination_data_prefix_list_id is not None:
+            pulumi.set(__self__, "destination_data_prefix_list_id", destination_data_prefix_list_id)
+        if destination_ports is not None:
+            pulumi.set(__self__, "destination_ports", destination_ports)
+        if icmp_messages is not None:
+            pulumi.set(__self__, "icmp_messages", icmp_messages)
+        if next_header is not None:
+            pulumi.set(__self__, "next_header", next_header)
+        if packet_length is not None:
+            pulumi.set(__self__, "packet_length", packet_length)
+        if source_data_prefix is not None:
+            pulumi.set(__self__, "source_data_prefix", source_data_prefix)
+        if source_data_prefix_list_id is not None:
+            pulumi.set(__self__, "source_data_prefix_list_id", source_data_prefix_list_id)
+        if source_ports is not None:
+            pulumi.set(__self__, "source_ports", source_ports)
+        if tcp_state is not None:
+            pulumi.set(__self__, "tcp_state", tcp_state)
+        if traffic_classes is not None:
+            pulumi.set(__self__, "traffic_classes", traffic_classes)
+
+    @property
+    @pulumi.getter(name="destinationDataPrefix")
+    def destination_data_prefix(self) -> Optional[pulumi.Input[str]]:
+        """
+        Destination Data IP Prefix
+        """
+        return pulumi.get(self, "destination_data_prefix")
+
+    @destination_data_prefix.setter
+    def destination_data_prefix(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "destination_data_prefix", value)
+
+    @property
+    @pulumi.getter(name="destinationDataPrefixListId")
+    def destination_data_prefix_list_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "destination_data_prefix_list_id")
+
+    @destination_data_prefix_list_id.setter
+    def destination_data_prefix_list_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "destination_data_prefix_list_id", value)
+
+    @property
+    @pulumi.getter(name="destinationPorts")
+    def destination_ports(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceIpv6AclFeatureSequenceMatchEntryDestinationPortArgs']]]]:
+        """
+        Destination Port List
+        """
+        return pulumi.get(self, "destination_ports")
+
+    @destination_ports.setter
+    def destination_ports(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceIpv6AclFeatureSequenceMatchEntryDestinationPortArgs']]]]):
+        pulumi.set(self, "destination_ports", value)
+
+    @property
+    @pulumi.getter(name="icmpMessages")
+    def icmp_messages(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]:
+        """
+        ICMP6 Message
+        """
+        return pulumi.get(self, "icmp_messages")
+
+    @icmp_messages.setter
+    def icmp_messages(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
+        pulumi.set(self, "icmp_messages", value)
+
+    @property
+    @pulumi.getter(name="nextHeader")
+    def next_header(self) -> Optional[pulumi.Input[int]]:
+        """
+        next header number
+          - Range: `0`-`255`
+        """
+        return pulumi.get(self, "next_header")
+
+    @next_header.setter
+    def next_header(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "next_header", value)
+
+    @property
+    @pulumi.getter(name="packetLength")
+    def packet_length(self) -> Optional[pulumi.Input[int]]:
+        """
+        Packet Length
+        """
+        return pulumi.get(self, "packet_length")
+
+    @packet_length.setter
+    def packet_length(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "packet_length", value)
+
+    @property
+    @pulumi.getter(name="sourceDataPrefix")
+    def source_data_prefix(self) -> Optional[pulumi.Input[str]]:
+        """
+        Source Data IP Prefix
+        """
+        return pulumi.get(self, "source_data_prefix")
+
+    @source_data_prefix.setter
+    def source_data_prefix(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "source_data_prefix", value)
+
+    @property
+    @pulumi.getter(name="sourceDataPrefixListId")
+    def source_data_prefix_list_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "source_data_prefix_list_id")
+
+    @source_data_prefix_list_id.setter
+    def source_data_prefix_list_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "source_data_prefix_list_id", value)
+
+    @property
+    @pulumi.getter(name="sourcePorts")
+    def source_ports(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceIpv6AclFeatureSequenceMatchEntrySourcePortArgs']]]]:
+        """
+        Source Port List
+        """
+        return pulumi.get(self, "source_ports")
+
+    @source_ports.setter
+    def source_ports(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceIpv6AclFeatureSequenceMatchEntrySourcePortArgs']]]]):
+        pulumi.set(self, "source_ports", value)
+
+    @property
+    @pulumi.getter(name="tcpState")
+    def tcp_state(self) -> Optional[pulumi.Input[str]]:
+        """
+        TCP States
+          - Choices: `syn`
+        """
+        return pulumi.get(self, "tcp_state")
+
+    @tcp_state.setter
+    def tcp_state(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "tcp_state", value)
+
+    @property
+    @pulumi.getter(name="trafficClasses")
+    def traffic_classes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[int]]]]:
+        """
+        Select Traffic Class
+        """
+        return pulumi.get(self, "traffic_classes")
+
+    @traffic_classes.setter
+    def traffic_classes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[int]]]]):
+        pulumi.set(self, "traffic_classes", value)
+
+
+if not MYPY:
+    class ServiceIpv6AclFeatureSequenceMatchEntryDestinationPortArgsDict(TypedDict):
+        port: NotRequired[pulumi.Input[int]]
+        """
+        destination port range or individual port number
+        """
+elif False:
+    ServiceIpv6AclFeatureSequenceMatchEntryDestinationPortArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ServiceIpv6AclFeatureSequenceMatchEntryDestinationPortArgs:
+    def __init__(__self__, *,
+                 port: Optional[pulumi.Input[int]] = None):
+        """
+        :param pulumi.Input[int] port: destination port range or individual port number
+        """
+        if port is not None:
+            pulumi.set(__self__, "port", port)
+
+    @property
+    @pulumi.getter
+    def port(self) -> Optional[pulumi.Input[int]]:
+        """
+        destination port range or individual port number
+        """
+        return pulumi.get(self, "port")
+
+    @port.setter
+    def port(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "port", value)
+
+
+if not MYPY:
+    class ServiceIpv6AclFeatureSequenceMatchEntrySourcePortArgsDict(TypedDict):
+        port: NotRequired[pulumi.Input[int]]
+        """
+        source port range or individual port number
+        """
+elif False:
+    ServiceIpv6AclFeatureSequenceMatchEntrySourcePortArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ServiceIpv6AclFeatureSequenceMatchEntrySourcePortArgs:
+    def __init__(__self__, *,
+                 port: Optional[pulumi.Input[int]] = None):
+        """
+        :param pulumi.Input[int] port: source port range or individual port number
+        """
+        if port is not None:
+            pulumi.set(__self__, "port", port)
+
+    @property
+    @pulumi.getter
+    def port(self) -> Optional[pulumi.Input[int]]:
+        """
+        source port range or individual port number
+        """
+        return pulumi.get(self, "port")
+
+    @port.setter
+    def port(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "port", value)
 
 
 if not MYPY:
@@ -40664,6 +44534,10 @@ if not MYPY:
         Track OMP status
           - Default value: `false`
         """
+        tracking_objects: NotRequired[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpTrackingObjectArgsDict']]]]
+        """
+        Tracking object for VRRP configuration
+        """
 elif False:
     ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArgsDict: TypeAlias = Mapping[str, Any]
 
@@ -40681,7 +44555,8 @@ class ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArgs:
                  timer_variable: Optional[pulumi.Input[str]] = None,
                  tloc_pref_change_value: Optional[pulumi.Input[int]] = None,
                  tloc_prefix_change: Optional[pulumi.Input[bool]] = None,
-                 track_omp: Optional[pulumi.Input[bool]] = None):
+                 track_omp: Optional[pulumi.Input[bool]] = None,
+                 tracking_objects: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpTrackingObjectArgs']]]] = None):
         """
         :param pulumi.Input[str] address: VRRP Ip Address
         :param pulumi.Input[str] address_variable: Variable name
@@ -40703,6 +44578,7 @@ class ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArgs:
                  - Default value: `false`
         :param pulumi.Input[bool] track_omp: Track OMP status
                  - Default value: `false`
+        :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpTrackingObjectArgs']]] tracking_objects: Tracking object for VRRP configuration
         """
         if address is not None:
             pulumi.set(__self__, "address", address)
@@ -40728,6 +44604,8 @@ class ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArgs:
             pulumi.set(__self__, "tloc_prefix_change", tloc_prefix_change)
         if track_omp is not None:
             pulumi.set(__self__, "track_omp", track_omp)
+        if tracking_objects is not None:
+            pulumi.set(__self__, "tracking_objects", tracking_objects)
 
     @property
     @pulumi.getter
@@ -40881,6 +44759,18 @@ class ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArgs:
     def track_omp(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "track_omp", value)
 
+    @property
+    @pulumi.getter(name="trackingObjects")
+    def tracking_objects(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpTrackingObjectArgs']]]]:
+        """
+        Tracking object for VRRP configuration
+        """
+        return pulumi.get(self, "tracking_objects")
+
+    @tracking_objects.setter
+    def tracking_objects(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpTrackingObjectArgs']]]]):
+        pulumi.set(self, "tracking_objects", value)
+
 
 if not MYPY:
     class ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpSecondaryAddressArgsDict(TypedDict):
@@ -40975,6 +44865,117 @@ class ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpSecondaryAddressArgs:
     @subnet_mask_variable.setter
     def subnet_mask_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "subnet_mask_variable", value)
+
+
+if not MYPY:
+    class ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpTrackingObjectArgsDict(TypedDict):
+        decrement_value: NotRequired[pulumi.Input[int]]
+        """
+        Decrement Value for VRRP priority
+          - Range: `1`-`255`
+        """
+        decrement_value_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        tracker_action: NotRequired[pulumi.Input[str]]
+        """
+        Track Action
+          - Choices: `Decrement`, `Shutdown`
+        """
+        tracker_action_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        tracker_id: NotRequired[pulumi.Input[str]]
+elif False:
+    ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpTrackingObjectArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpTrackingObjectArgs:
+    def __init__(__self__, *,
+                 decrement_value: Optional[pulumi.Input[int]] = None,
+                 decrement_value_variable: Optional[pulumi.Input[str]] = None,
+                 tracker_action: Optional[pulumi.Input[str]] = None,
+                 tracker_action_variable: Optional[pulumi.Input[str]] = None,
+                 tracker_id: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[int] decrement_value: Decrement Value for VRRP priority
+                 - Range: `1`-`255`
+        :param pulumi.Input[str] decrement_value_variable: Variable name
+        :param pulumi.Input[str] tracker_action: Track Action
+                 - Choices: `Decrement`, `Shutdown`
+        :param pulumi.Input[str] tracker_action_variable: Variable name
+        """
+        if decrement_value is not None:
+            pulumi.set(__self__, "decrement_value", decrement_value)
+        if decrement_value_variable is not None:
+            pulumi.set(__self__, "decrement_value_variable", decrement_value_variable)
+        if tracker_action is not None:
+            pulumi.set(__self__, "tracker_action", tracker_action)
+        if tracker_action_variable is not None:
+            pulumi.set(__self__, "tracker_action_variable", tracker_action_variable)
+        if tracker_id is not None:
+            pulumi.set(__self__, "tracker_id", tracker_id)
+
+    @property
+    @pulumi.getter(name="decrementValue")
+    def decrement_value(self) -> Optional[pulumi.Input[int]]:
+        """
+        Decrement Value for VRRP priority
+          - Range: `1`-`255`
+        """
+        return pulumi.get(self, "decrement_value")
+
+    @decrement_value.setter
+    def decrement_value(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "decrement_value", value)
+
+    @property
+    @pulumi.getter(name="decrementValueVariable")
+    def decrement_value_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "decrement_value_variable")
+
+    @decrement_value_variable.setter
+    def decrement_value_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "decrement_value_variable", value)
+
+    @property
+    @pulumi.getter(name="trackerAction")
+    def tracker_action(self) -> Optional[pulumi.Input[str]]:
+        """
+        Track Action
+          - Choices: `Decrement`, `Shutdown`
+        """
+        return pulumi.get(self, "tracker_action")
+
+    @tracker_action.setter
+    def tracker_action(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "tracker_action", value)
+
+    @property
+    @pulumi.getter(name="trackerActionVariable")
+    def tracker_action_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "tracker_action_variable")
+
+    @tracker_action_variable.setter
+    def tracker_action_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "tracker_action_variable", value)
+
+    @property
+    @pulumi.getter(name="trackerId")
+    def tracker_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "tracker_id")
+
+    @tracker_id.setter
+    def tracker_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "tracker_id", value)
 
 
 if not MYPY:
@@ -41883,6 +45884,10 @@ if not MYPY:
         """
         Variable name
         """
+        tracking_objects: NotRequired[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceSviFeatureIpv4VrrpTrackingObjectArgsDict']]]]
+        """
+        tracking object for VRRP configuration
+        """
 elif False:
     ServiceLanVpnInterfaceSviFeatureIpv4VrrpArgsDict: TypeAlias = Mapping[str, Any]
 
@@ -41904,7 +45909,8 @@ class ServiceLanVpnInterfaceSviFeatureIpv4VrrpArgs:
                  tloc_prefix_change_value: Optional[pulumi.Input[int]] = None,
                  tloc_prefix_change_value_variable: Optional[pulumi.Input[str]] = None,
                  track_omp: Optional[pulumi.Input[bool]] = None,
-                 track_omp_variable: Optional[pulumi.Input[str]] = None):
+                 track_omp_variable: Optional[pulumi.Input[str]] = None,
+                 tracking_objects: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceSviFeatureIpv4VrrpTrackingObjectArgs']]]] = None):
         """
         :param pulumi.Input[str] address: Assign IPV4 Address
         :param pulumi.Input[str] address_variable: Variable name
@@ -41930,6 +45936,7 @@ class ServiceLanVpnInterfaceSviFeatureIpv4VrrpArgs:
         :param pulumi.Input[bool] track_omp: Track OMP status
                  - Default value: `false`
         :param pulumi.Input[str] track_omp_variable: Variable name
+        :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceSviFeatureIpv4VrrpTrackingObjectArgs']]] tracking_objects: tracking object for VRRP configuration
         """
         if address is not None:
             pulumi.set(__self__, "address", address)
@@ -41963,6 +45970,8 @@ class ServiceLanVpnInterfaceSviFeatureIpv4VrrpArgs:
             pulumi.set(__self__, "track_omp", track_omp)
         if track_omp_variable is not None:
             pulumi.set(__self__, "track_omp_variable", track_omp_variable)
+        if tracking_objects is not None:
+            pulumi.set(__self__, "tracking_objects", tracking_objects)
 
     @property
     @pulumi.getter
@@ -42164,6 +46173,18 @@ class ServiceLanVpnInterfaceSviFeatureIpv4VrrpArgs:
     def track_omp_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "track_omp_variable", value)
 
+    @property
+    @pulumi.getter(name="trackingObjects")
+    def tracking_objects(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceSviFeatureIpv4VrrpTrackingObjectArgs']]]]:
+        """
+        tracking object for VRRP configuration
+        """
+        return pulumi.get(self, "tracking_objects")
+
+    @tracking_objects.setter
+    def tracking_objects(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceSviFeatureIpv4VrrpTrackingObjectArgs']]]]):
+        pulumi.set(self, "tracking_objects", value)
+
 
 if not MYPY:
     class ServiceLanVpnInterfaceSviFeatureIpv4VrrpSecondaryAddressArgsDict(TypedDict):
@@ -42215,6 +46236,117 @@ class ServiceLanVpnInterfaceSviFeatureIpv4VrrpSecondaryAddressArgs:
     @address_variable.setter
     def address_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "address_variable", value)
+
+
+if not MYPY:
+    class ServiceLanVpnInterfaceSviFeatureIpv4VrrpTrackingObjectArgsDict(TypedDict):
+        decrement_value: NotRequired[pulumi.Input[int]]
+        """
+        Decrement Value for VRRP priority
+          - Range: `1`-`255`
+        """
+        decrement_value_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        track_action: NotRequired[pulumi.Input[str]]
+        """
+        Track Action
+          - Choices: `decrement`, `shutdown`
+        """
+        track_action_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        tracker_id: NotRequired[pulumi.Input[str]]
+elif False:
+    ServiceLanVpnInterfaceSviFeatureIpv4VrrpTrackingObjectArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ServiceLanVpnInterfaceSviFeatureIpv4VrrpTrackingObjectArgs:
+    def __init__(__self__, *,
+                 decrement_value: Optional[pulumi.Input[int]] = None,
+                 decrement_value_variable: Optional[pulumi.Input[str]] = None,
+                 track_action: Optional[pulumi.Input[str]] = None,
+                 track_action_variable: Optional[pulumi.Input[str]] = None,
+                 tracker_id: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[int] decrement_value: Decrement Value for VRRP priority
+                 - Range: `1`-`255`
+        :param pulumi.Input[str] decrement_value_variable: Variable name
+        :param pulumi.Input[str] track_action: Track Action
+                 - Choices: `decrement`, `shutdown`
+        :param pulumi.Input[str] track_action_variable: Variable name
+        """
+        if decrement_value is not None:
+            pulumi.set(__self__, "decrement_value", decrement_value)
+        if decrement_value_variable is not None:
+            pulumi.set(__self__, "decrement_value_variable", decrement_value_variable)
+        if track_action is not None:
+            pulumi.set(__self__, "track_action", track_action)
+        if track_action_variable is not None:
+            pulumi.set(__self__, "track_action_variable", track_action_variable)
+        if tracker_id is not None:
+            pulumi.set(__self__, "tracker_id", tracker_id)
+
+    @property
+    @pulumi.getter(name="decrementValue")
+    def decrement_value(self) -> Optional[pulumi.Input[int]]:
+        """
+        Decrement Value for VRRP priority
+          - Range: `1`-`255`
+        """
+        return pulumi.get(self, "decrement_value")
+
+    @decrement_value.setter
+    def decrement_value(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "decrement_value", value)
+
+    @property
+    @pulumi.getter(name="decrementValueVariable")
+    def decrement_value_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "decrement_value_variable")
+
+    @decrement_value_variable.setter
+    def decrement_value_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "decrement_value_variable", value)
+
+    @property
+    @pulumi.getter(name="trackAction")
+    def track_action(self) -> Optional[pulumi.Input[str]]:
+        """
+        Track Action
+          - Choices: `decrement`, `shutdown`
+        """
+        return pulumi.get(self, "track_action")
+
+    @track_action.setter
+    def track_action(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "track_action", value)
+
+    @property
+    @pulumi.getter(name="trackActionVariable")
+    def track_action_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "track_action_variable")
+
+    @track_action_variable.setter
+    def track_action_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "track_action_variable", value)
+
+    @property
+    @pulumi.getter(name="trackerId")
+    def tracker_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "tracker_id")
+
+    @tracker_id.setter
+    def tracker_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "tracker_id", value)
 
 
 if not MYPY:
@@ -42776,6 +46908,1430 @@ class ServiceLanVpnInterfaceSviFeatureIpv6VrrpSecondaryAddressArgs:
     @prefix_variable.setter
     def prefix_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "prefix_variable", value)
+
+
+if not MYPY:
+    class ServiceMulticastFeatureAutoRpAnnounceArgsDict(TypedDict):
+        interface_name: NotRequired[pulumi.Input[str]]
+        """
+        Set RP Announce Interface Name
+        """
+        interface_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        scope: NotRequired[pulumi.Input[int]]
+        """
+        Set RP Announce Scope
+          - Range: `1`-`255`
+        """
+        scope_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceMulticastFeatureAutoRpAnnounceArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ServiceMulticastFeatureAutoRpAnnounceArgs:
+    def __init__(__self__, *,
+                 interface_name: Optional[pulumi.Input[str]] = None,
+                 interface_name_variable: Optional[pulumi.Input[str]] = None,
+                 scope: Optional[pulumi.Input[int]] = None,
+                 scope_variable: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[str] interface_name: Set RP Announce Interface Name
+        :param pulumi.Input[str] interface_name_variable: Variable name
+        :param pulumi.Input[int] scope: Set RP Announce Scope
+                 - Range: `1`-`255`
+        :param pulumi.Input[str] scope_variable: Variable name
+        """
+        if interface_name is not None:
+            pulumi.set(__self__, "interface_name", interface_name)
+        if interface_name_variable is not None:
+            pulumi.set(__self__, "interface_name_variable", interface_name_variable)
+        if scope is not None:
+            pulumi.set(__self__, "scope", scope)
+        if scope_variable is not None:
+            pulumi.set(__self__, "scope_variable", scope_variable)
+
+    @property
+    @pulumi.getter(name="interfaceName")
+    def interface_name(self) -> Optional[pulumi.Input[str]]:
+        """
+        Set RP Announce Interface Name
+        """
+        return pulumi.get(self, "interface_name")
+
+    @interface_name.setter
+    def interface_name(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "interface_name", value)
+
+    @property
+    @pulumi.getter(name="interfaceNameVariable")
+    def interface_name_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "interface_name_variable")
+
+    @interface_name_variable.setter
+    def interface_name_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "interface_name_variable", value)
+
+    @property
+    @pulumi.getter
+    def scope(self) -> Optional[pulumi.Input[int]]:
+        """
+        Set RP Announce Scope
+          - Range: `1`-`255`
+        """
+        return pulumi.get(self, "scope")
+
+    @scope.setter
+    def scope(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "scope", value)
+
+    @property
+    @pulumi.getter(name="scopeVariable")
+    def scope_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "scope_variable")
+
+    @scope_variable.setter
+    def scope_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "scope_variable", value)
+
+
+if not MYPY:
+    class ServiceMulticastFeatureAutoRpDiscoveryArgsDict(TypedDict):
+        interface_name: NotRequired[pulumi.Input[str]]
+        """
+        Set RP Discovery Interface Name
+        """
+        interface_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        scope: NotRequired[pulumi.Input[int]]
+        """
+        Set RP Discovery Scope
+          - Range: `1`-`255`
+        """
+        scope_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceMulticastFeatureAutoRpDiscoveryArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ServiceMulticastFeatureAutoRpDiscoveryArgs:
+    def __init__(__self__, *,
+                 interface_name: Optional[pulumi.Input[str]] = None,
+                 interface_name_variable: Optional[pulumi.Input[str]] = None,
+                 scope: Optional[pulumi.Input[int]] = None,
+                 scope_variable: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[str] interface_name: Set RP Discovery Interface Name
+        :param pulumi.Input[str] interface_name_variable: Variable name
+        :param pulumi.Input[int] scope: Set RP Discovery Scope
+                 - Range: `1`-`255`
+        :param pulumi.Input[str] scope_variable: Variable name
+        """
+        if interface_name is not None:
+            pulumi.set(__self__, "interface_name", interface_name)
+        if interface_name_variable is not None:
+            pulumi.set(__self__, "interface_name_variable", interface_name_variable)
+        if scope is not None:
+            pulumi.set(__self__, "scope", scope)
+        if scope_variable is not None:
+            pulumi.set(__self__, "scope_variable", scope_variable)
+
+    @property
+    @pulumi.getter(name="interfaceName")
+    def interface_name(self) -> Optional[pulumi.Input[str]]:
+        """
+        Set RP Discovery Interface Name
+        """
+        return pulumi.get(self, "interface_name")
+
+    @interface_name.setter
+    def interface_name(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "interface_name", value)
+
+    @property
+    @pulumi.getter(name="interfaceNameVariable")
+    def interface_name_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "interface_name_variable")
+
+    @interface_name_variable.setter
+    def interface_name_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "interface_name_variable", value)
+
+    @property
+    @pulumi.getter
+    def scope(self) -> Optional[pulumi.Input[int]]:
+        """
+        Set RP Discovery Scope
+          - Range: `1`-`255`
+        """
+        return pulumi.get(self, "scope")
+
+    @scope.setter
+    def scope(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "scope", value)
+
+    @property
+    @pulumi.getter(name="scopeVariable")
+    def scope_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "scope_variable")
+
+    @scope_variable.setter
+    def scope_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "scope_variable", value)
+
+
+if not MYPY:
+    class ServiceMulticastFeatureIgmpInterfaceArgsDict(TypedDict):
+        interface_name: NotRequired[pulumi.Input[str]]
+        """
+        Set interface name
+        """
+        interface_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        join_groups: NotRequired[pulumi.Input[Sequence[pulumi.Input['ServiceMulticastFeatureIgmpInterfaceJoinGroupArgsDict']]]]
+        """
+        Configure static joins
+        """
+        version: NotRequired[pulumi.Input[int]]
+        """
+        igmp Version <1..3>
+          - Range: `1`-`3`
+          - Default value: `2`
+        """
+elif False:
+    ServiceMulticastFeatureIgmpInterfaceArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ServiceMulticastFeatureIgmpInterfaceArgs:
+    def __init__(__self__, *,
+                 interface_name: Optional[pulumi.Input[str]] = None,
+                 interface_name_variable: Optional[pulumi.Input[str]] = None,
+                 join_groups: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceMulticastFeatureIgmpInterfaceJoinGroupArgs']]]] = None,
+                 version: Optional[pulumi.Input[int]] = None):
+        """
+        :param pulumi.Input[str] interface_name: Set interface name
+        :param pulumi.Input[str] interface_name_variable: Variable name
+        :param pulumi.Input[Sequence[pulumi.Input['ServiceMulticastFeatureIgmpInterfaceJoinGroupArgs']]] join_groups: Configure static joins
+        :param pulumi.Input[int] version: igmp Version <1..3>
+                 - Range: `1`-`3`
+                 - Default value: `2`
+        """
+        if interface_name is not None:
+            pulumi.set(__self__, "interface_name", interface_name)
+        if interface_name_variable is not None:
+            pulumi.set(__self__, "interface_name_variable", interface_name_variable)
+        if join_groups is not None:
+            pulumi.set(__self__, "join_groups", join_groups)
+        if version is not None:
+            pulumi.set(__self__, "version", version)
+
+    @property
+    @pulumi.getter(name="interfaceName")
+    def interface_name(self) -> Optional[pulumi.Input[str]]:
+        """
+        Set interface name
+        """
+        return pulumi.get(self, "interface_name")
+
+    @interface_name.setter
+    def interface_name(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "interface_name", value)
+
+    @property
+    @pulumi.getter(name="interfaceNameVariable")
+    def interface_name_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "interface_name_variable")
+
+    @interface_name_variable.setter
+    def interface_name_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "interface_name_variable", value)
+
+    @property
+    @pulumi.getter(name="joinGroups")
+    def join_groups(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceMulticastFeatureIgmpInterfaceJoinGroupArgs']]]]:
+        """
+        Configure static joins
+        """
+        return pulumi.get(self, "join_groups")
+
+    @join_groups.setter
+    def join_groups(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceMulticastFeatureIgmpInterfaceJoinGroupArgs']]]]):
+        pulumi.set(self, "join_groups", value)
+
+    @property
+    @pulumi.getter
+    def version(self) -> Optional[pulumi.Input[int]]:
+        """
+        igmp Version <1..3>
+          - Range: `1`-`3`
+          - Default value: `2`
+        """
+        return pulumi.get(self, "version")
+
+    @version.setter
+    def version(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "version", value)
+
+
+if not MYPY:
+    class ServiceMulticastFeatureIgmpInterfaceJoinGroupArgsDict(TypedDict):
+        group_address: NotRequired[pulumi.Input[str]]
+        """
+        Set group address
+        """
+        group_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        source_address: NotRequired[pulumi.Input[str]]
+        """
+        Set source address
+        """
+        source_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceMulticastFeatureIgmpInterfaceJoinGroupArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ServiceMulticastFeatureIgmpInterfaceJoinGroupArgs:
+    def __init__(__self__, *,
+                 group_address: Optional[pulumi.Input[str]] = None,
+                 group_address_variable: Optional[pulumi.Input[str]] = None,
+                 source_address: Optional[pulumi.Input[str]] = None,
+                 source_address_variable: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[str] group_address: Set group address
+        :param pulumi.Input[str] group_address_variable: Variable name
+        :param pulumi.Input[str] source_address: Set source address
+        :param pulumi.Input[str] source_address_variable: Variable name
+        """
+        if group_address is not None:
+            pulumi.set(__self__, "group_address", group_address)
+        if group_address_variable is not None:
+            pulumi.set(__self__, "group_address_variable", group_address_variable)
+        if source_address is not None:
+            pulumi.set(__self__, "source_address", source_address)
+        if source_address_variable is not None:
+            pulumi.set(__self__, "source_address_variable", source_address_variable)
+
+    @property
+    @pulumi.getter(name="groupAddress")
+    def group_address(self) -> Optional[pulumi.Input[str]]:
+        """
+        Set group address
+        """
+        return pulumi.get(self, "group_address")
+
+    @group_address.setter
+    def group_address(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "group_address", value)
+
+    @property
+    @pulumi.getter(name="groupAddressVariable")
+    def group_address_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "group_address_variable")
+
+    @group_address_variable.setter
+    def group_address_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "group_address_variable", value)
+
+    @property
+    @pulumi.getter(name="sourceAddress")
+    def source_address(self) -> Optional[pulumi.Input[str]]:
+        """
+        Set source address
+        """
+        return pulumi.get(self, "source_address")
+
+    @source_address.setter
+    def source_address(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "source_address", value)
+
+    @property
+    @pulumi.getter(name="sourceAddressVariable")
+    def source_address_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "source_address_variable")
+
+    @source_address_variable.setter
+    def source_address_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "source_address_variable", value)
+
+
+if not MYPY:
+    class ServiceMulticastFeatureMsdpGroupArgsDict(TypedDict):
+        mesh_group_name: NotRequired[pulumi.Input[str]]
+        """
+        Set MSDP mesh group
+        """
+        mesh_group_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        peers: NotRequired[pulumi.Input[Sequence[pulumi.Input['ServiceMulticastFeatureMsdpGroupPeerArgsDict']]]]
+        """
+        Configure peer
+        """
+elif False:
+    ServiceMulticastFeatureMsdpGroupArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ServiceMulticastFeatureMsdpGroupArgs:
+    def __init__(__self__, *,
+                 mesh_group_name: Optional[pulumi.Input[str]] = None,
+                 mesh_group_name_variable: Optional[pulumi.Input[str]] = None,
+                 peers: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceMulticastFeatureMsdpGroupPeerArgs']]]] = None):
+        """
+        :param pulumi.Input[str] mesh_group_name: Set MSDP mesh group
+        :param pulumi.Input[str] mesh_group_name_variable: Variable name
+        :param pulumi.Input[Sequence[pulumi.Input['ServiceMulticastFeatureMsdpGroupPeerArgs']]] peers: Configure peer
+        """
+        if mesh_group_name is not None:
+            pulumi.set(__self__, "mesh_group_name", mesh_group_name)
+        if mesh_group_name_variable is not None:
+            pulumi.set(__self__, "mesh_group_name_variable", mesh_group_name_variable)
+        if peers is not None:
+            pulumi.set(__self__, "peers", peers)
+
+    @property
+    @pulumi.getter(name="meshGroupName")
+    def mesh_group_name(self) -> Optional[pulumi.Input[str]]:
+        """
+        Set MSDP mesh group
+        """
+        return pulumi.get(self, "mesh_group_name")
+
+    @mesh_group_name.setter
+    def mesh_group_name(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "mesh_group_name", value)
+
+    @property
+    @pulumi.getter(name="meshGroupNameVariable")
+    def mesh_group_name_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "mesh_group_name_variable")
+
+    @mesh_group_name_variable.setter
+    def mesh_group_name_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "mesh_group_name_variable", value)
+
+    @property
+    @pulumi.getter
+    def peers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceMulticastFeatureMsdpGroupPeerArgs']]]]:
+        """
+        Configure peer
+        """
+        return pulumi.get(self, "peers")
+
+    @peers.setter
+    def peers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceMulticastFeatureMsdpGroupPeerArgs']]]]):
+        pulumi.set(self, "peers", value)
+
+
+if not MYPY:
+    class ServiceMulticastFeatureMsdpGroupPeerArgsDict(TypedDict):
+        connection_source_interface: NotRequired[pulumi.Input[str]]
+        """
+        Set MSDP peer ip connect-source interface
+        """
+        connection_source_interface_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        default_peer: NotRequired[pulumi.Input[bool]]
+        """
+        Set MSDP default peer
+        """
+        keepalive_hold_time: NotRequired[pulumi.Input[int]]
+        """
+        Set MSDP peer ip keepalive hold time
+          - Range: `1`-`75`
+        """
+        keepalive_hold_time_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        keepalive_interval: NotRequired[pulumi.Input[int]]
+        """
+        Set MSDP peer ip keepalive interval
+          - Range: `1`-`60`
+        """
+        keepalive_interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        peer_authentication_password: NotRequired[pulumi.Input[str]]
+        """
+        Set MSDP peer ip password
+        """
+        peer_authentication_password_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        peer_ip: NotRequired[pulumi.Input[str]]
+        """
+        Set MSDP peer ip
+        """
+        peer_ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        prefix_list_id: NotRequired[pulumi.Input[str]]
+        remote_as: NotRequired[pulumi.Input[int]]
+        """
+        Set MSDP peer ip remote autonomous system number
+          - Range: `1`-`65535`
+        """
+        remote_as_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        sa_limit: NotRequired[pulumi.Input[int]]
+        """
+        Set MSDP peer ip SA limit message number
+          - Range: `1`-`2147483646`
+        """
+        sa_limit_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceMulticastFeatureMsdpGroupPeerArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ServiceMulticastFeatureMsdpGroupPeerArgs:
+    def __init__(__self__, *,
+                 connection_source_interface: Optional[pulumi.Input[str]] = None,
+                 connection_source_interface_variable: Optional[pulumi.Input[str]] = None,
+                 default_peer: Optional[pulumi.Input[bool]] = None,
+                 keepalive_hold_time: Optional[pulumi.Input[int]] = None,
+                 keepalive_hold_time_variable: Optional[pulumi.Input[str]] = None,
+                 keepalive_interval: Optional[pulumi.Input[int]] = None,
+                 keepalive_interval_variable: Optional[pulumi.Input[str]] = None,
+                 peer_authentication_password: Optional[pulumi.Input[str]] = None,
+                 peer_authentication_password_variable: Optional[pulumi.Input[str]] = None,
+                 peer_ip: Optional[pulumi.Input[str]] = None,
+                 peer_ip_variable: Optional[pulumi.Input[str]] = None,
+                 prefix_list_id: Optional[pulumi.Input[str]] = None,
+                 remote_as: Optional[pulumi.Input[int]] = None,
+                 remote_as_variable: Optional[pulumi.Input[str]] = None,
+                 sa_limit: Optional[pulumi.Input[int]] = None,
+                 sa_limit_variable: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[str] connection_source_interface: Set MSDP peer ip connect-source interface
+        :param pulumi.Input[str] connection_source_interface_variable: Variable name
+        :param pulumi.Input[bool] default_peer: Set MSDP default peer
+        :param pulumi.Input[int] keepalive_hold_time: Set MSDP peer ip keepalive hold time
+                 - Range: `1`-`75`
+        :param pulumi.Input[str] keepalive_hold_time_variable: Variable name
+        :param pulumi.Input[int] keepalive_interval: Set MSDP peer ip keepalive interval
+                 - Range: `1`-`60`
+        :param pulumi.Input[str] keepalive_interval_variable: Variable name
+        :param pulumi.Input[str] peer_authentication_password: Set MSDP peer ip password
+        :param pulumi.Input[str] peer_authentication_password_variable: Variable name
+        :param pulumi.Input[str] peer_ip: Set MSDP peer ip
+        :param pulumi.Input[str] peer_ip_variable: Variable name
+        :param pulumi.Input[int] remote_as: Set MSDP peer ip remote autonomous system number
+                 - Range: `1`-`65535`
+        :param pulumi.Input[str] remote_as_variable: Variable name
+        :param pulumi.Input[int] sa_limit: Set MSDP peer ip SA limit message number
+                 - Range: `1`-`2147483646`
+        :param pulumi.Input[str] sa_limit_variable: Variable name
+        """
+        if connection_source_interface is not None:
+            pulumi.set(__self__, "connection_source_interface", connection_source_interface)
+        if connection_source_interface_variable is not None:
+            pulumi.set(__self__, "connection_source_interface_variable", connection_source_interface_variable)
+        if default_peer is not None:
+            pulumi.set(__self__, "default_peer", default_peer)
+        if keepalive_hold_time is not None:
+            pulumi.set(__self__, "keepalive_hold_time", keepalive_hold_time)
+        if keepalive_hold_time_variable is not None:
+            pulumi.set(__self__, "keepalive_hold_time_variable", keepalive_hold_time_variable)
+        if keepalive_interval is not None:
+            pulumi.set(__self__, "keepalive_interval", keepalive_interval)
+        if keepalive_interval_variable is not None:
+            pulumi.set(__self__, "keepalive_interval_variable", keepalive_interval_variable)
+        if peer_authentication_password is not None:
+            pulumi.set(__self__, "peer_authentication_password", peer_authentication_password)
+        if peer_authentication_password_variable is not None:
+            pulumi.set(__self__, "peer_authentication_password_variable", peer_authentication_password_variable)
+        if peer_ip is not None:
+            pulumi.set(__self__, "peer_ip", peer_ip)
+        if peer_ip_variable is not None:
+            pulumi.set(__self__, "peer_ip_variable", peer_ip_variable)
+        if prefix_list_id is not None:
+            pulumi.set(__self__, "prefix_list_id", prefix_list_id)
+        if remote_as is not None:
+            pulumi.set(__self__, "remote_as", remote_as)
+        if remote_as_variable is not None:
+            pulumi.set(__self__, "remote_as_variable", remote_as_variable)
+        if sa_limit is not None:
+            pulumi.set(__self__, "sa_limit", sa_limit)
+        if sa_limit_variable is not None:
+            pulumi.set(__self__, "sa_limit_variable", sa_limit_variable)
+
+    @property
+    @pulumi.getter(name="connectionSourceInterface")
+    def connection_source_interface(self) -> Optional[pulumi.Input[str]]:
+        """
+        Set MSDP peer ip connect-source interface
+        """
+        return pulumi.get(self, "connection_source_interface")
+
+    @connection_source_interface.setter
+    def connection_source_interface(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "connection_source_interface", value)
+
+    @property
+    @pulumi.getter(name="connectionSourceInterfaceVariable")
+    def connection_source_interface_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "connection_source_interface_variable")
+
+    @connection_source_interface_variable.setter
+    def connection_source_interface_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "connection_source_interface_variable", value)
+
+    @property
+    @pulumi.getter(name="defaultPeer")
+    def default_peer(self) -> Optional[pulumi.Input[bool]]:
+        """
+        Set MSDP default peer
+        """
+        return pulumi.get(self, "default_peer")
+
+    @default_peer.setter
+    def default_peer(self, value: Optional[pulumi.Input[bool]]):
+        pulumi.set(self, "default_peer", value)
+
+    @property
+    @pulumi.getter(name="keepaliveHoldTime")
+    def keepalive_hold_time(self) -> Optional[pulumi.Input[int]]:
+        """
+        Set MSDP peer ip keepalive hold time
+          - Range: `1`-`75`
+        """
+        return pulumi.get(self, "keepalive_hold_time")
+
+    @keepalive_hold_time.setter
+    def keepalive_hold_time(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "keepalive_hold_time", value)
+
+    @property
+    @pulumi.getter(name="keepaliveHoldTimeVariable")
+    def keepalive_hold_time_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "keepalive_hold_time_variable")
+
+    @keepalive_hold_time_variable.setter
+    def keepalive_hold_time_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "keepalive_hold_time_variable", value)
+
+    @property
+    @pulumi.getter(name="keepaliveInterval")
+    def keepalive_interval(self) -> Optional[pulumi.Input[int]]:
+        """
+        Set MSDP peer ip keepalive interval
+          - Range: `1`-`60`
+        """
+        return pulumi.get(self, "keepalive_interval")
+
+    @keepalive_interval.setter
+    def keepalive_interval(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "keepalive_interval", value)
+
+    @property
+    @pulumi.getter(name="keepaliveIntervalVariable")
+    def keepalive_interval_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "keepalive_interval_variable")
+
+    @keepalive_interval_variable.setter
+    def keepalive_interval_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "keepalive_interval_variable", value)
+
+    @property
+    @pulumi.getter(name="peerAuthenticationPassword")
+    def peer_authentication_password(self) -> Optional[pulumi.Input[str]]:
+        """
+        Set MSDP peer ip password
+        """
+        return pulumi.get(self, "peer_authentication_password")
+
+    @peer_authentication_password.setter
+    def peer_authentication_password(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "peer_authentication_password", value)
+
+    @property
+    @pulumi.getter(name="peerAuthenticationPasswordVariable")
+    def peer_authentication_password_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "peer_authentication_password_variable")
+
+    @peer_authentication_password_variable.setter
+    def peer_authentication_password_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "peer_authentication_password_variable", value)
+
+    @property
+    @pulumi.getter(name="peerIp")
+    def peer_ip(self) -> Optional[pulumi.Input[str]]:
+        """
+        Set MSDP peer ip
+        """
+        return pulumi.get(self, "peer_ip")
+
+    @peer_ip.setter
+    def peer_ip(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "peer_ip", value)
+
+    @property
+    @pulumi.getter(name="peerIpVariable")
+    def peer_ip_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "peer_ip_variable")
+
+    @peer_ip_variable.setter
+    def peer_ip_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "peer_ip_variable", value)
+
+    @property
+    @pulumi.getter(name="prefixListId")
+    def prefix_list_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "prefix_list_id")
+
+    @prefix_list_id.setter
+    def prefix_list_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "prefix_list_id", value)
+
+    @property
+    @pulumi.getter(name="remoteAs")
+    def remote_as(self) -> Optional[pulumi.Input[int]]:
+        """
+        Set MSDP peer ip remote autonomous system number
+          - Range: `1`-`65535`
+        """
+        return pulumi.get(self, "remote_as")
+
+    @remote_as.setter
+    def remote_as(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "remote_as", value)
+
+    @property
+    @pulumi.getter(name="remoteAsVariable")
+    def remote_as_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "remote_as_variable")
+
+    @remote_as_variable.setter
+    def remote_as_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "remote_as_variable", value)
+
+    @property
+    @pulumi.getter(name="saLimit")
+    def sa_limit(self) -> Optional[pulumi.Input[int]]:
+        """
+        Set MSDP peer ip SA limit message number
+          - Range: `1`-`2147483646`
+        """
+        return pulumi.get(self, "sa_limit")
+
+    @sa_limit.setter
+    def sa_limit(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "sa_limit", value)
+
+    @property
+    @pulumi.getter(name="saLimitVariable")
+    def sa_limit_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "sa_limit_variable")
+
+    @sa_limit_variable.setter
+    def sa_limit_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "sa_limit_variable", value)
+
+
+if not MYPY:
+    class ServiceMulticastFeaturePimBsrCandidateArgsDict(TypedDict):
+        accept_candidate_access_list: NotRequired[pulumi.Input[str]]
+        """
+        Set BSR RP candidate filter
+        """
+        accept_candidate_access_list_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        hash_mask_length: NotRequired[pulumi.Input[int]]
+        """
+        Hash Mask length for RP selection
+          - Range: `0`-`32`
+        """
+        hash_mask_length_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        interface_name: NotRequired[pulumi.Input[str]]
+        """
+        Set Autonomic-Networking virtual interface
+        """
+        interface_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        priority: NotRequired[pulumi.Input[int]]
+        """
+        Set RP candidate priority
+          - Range: `0`-`255`
+        """
+        priority_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceMulticastFeaturePimBsrCandidateArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ServiceMulticastFeaturePimBsrCandidateArgs:
+    def __init__(__self__, *,
+                 accept_candidate_access_list: Optional[pulumi.Input[str]] = None,
+                 accept_candidate_access_list_variable: Optional[pulumi.Input[str]] = None,
+                 hash_mask_length: Optional[pulumi.Input[int]] = None,
+                 hash_mask_length_variable: Optional[pulumi.Input[str]] = None,
+                 interface_name: Optional[pulumi.Input[str]] = None,
+                 interface_name_variable: Optional[pulumi.Input[str]] = None,
+                 priority: Optional[pulumi.Input[int]] = None,
+                 priority_variable: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[str] accept_candidate_access_list: Set BSR RP candidate filter
+        :param pulumi.Input[str] accept_candidate_access_list_variable: Variable name
+        :param pulumi.Input[int] hash_mask_length: Hash Mask length for RP selection
+                 - Range: `0`-`32`
+        :param pulumi.Input[str] hash_mask_length_variable: Variable name
+        :param pulumi.Input[str] interface_name: Set Autonomic-Networking virtual interface
+        :param pulumi.Input[str] interface_name_variable: Variable name
+        :param pulumi.Input[int] priority: Set RP candidate priority
+                 - Range: `0`-`255`
+        :param pulumi.Input[str] priority_variable: Variable name
+        """
+        if accept_candidate_access_list is not None:
+            pulumi.set(__self__, "accept_candidate_access_list", accept_candidate_access_list)
+        if accept_candidate_access_list_variable is not None:
+            pulumi.set(__self__, "accept_candidate_access_list_variable", accept_candidate_access_list_variable)
+        if hash_mask_length is not None:
+            pulumi.set(__self__, "hash_mask_length", hash_mask_length)
+        if hash_mask_length_variable is not None:
+            pulumi.set(__self__, "hash_mask_length_variable", hash_mask_length_variable)
+        if interface_name is not None:
+            pulumi.set(__self__, "interface_name", interface_name)
+        if interface_name_variable is not None:
+            pulumi.set(__self__, "interface_name_variable", interface_name_variable)
+        if priority is not None:
+            pulumi.set(__self__, "priority", priority)
+        if priority_variable is not None:
+            pulumi.set(__self__, "priority_variable", priority_variable)
+
+    @property
+    @pulumi.getter(name="acceptCandidateAccessList")
+    def accept_candidate_access_list(self) -> Optional[pulumi.Input[str]]:
+        """
+        Set BSR RP candidate filter
+        """
+        return pulumi.get(self, "accept_candidate_access_list")
+
+    @accept_candidate_access_list.setter
+    def accept_candidate_access_list(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "accept_candidate_access_list", value)
+
+    @property
+    @pulumi.getter(name="acceptCandidateAccessListVariable")
+    def accept_candidate_access_list_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "accept_candidate_access_list_variable")
+
+    @accept_candidate_access_list_variable.setter
+    def accept_candidate_access_list_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "accept_candidate_access_list_variable", value)
+
+    @property
+    @pulumi.getter(name="hashMaskLength")
+    def hash_mask_length(self) -> Optional[pulumi.Input[int]]:
+        """
+        Hash Mask length for RP selection
+          - Range: `0`-`32`
+        """
+        return pulumi.get(self, "hash_mask_length")
+
+    @hash_mask_length.setter
+    def hash_mask_length(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "hash_mask_length", value)
+
+    @property
+    @pulumi.getter(name="hashMaskLengthVariable")
+    def hash_mask_length_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "hash_mask_length_variable")
+
+    @hash_mask_length_variable.setter
+    def hash_mask_length_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "hash_mask_length_variable", value)
+
+    @property
+    @pulumi.getter(name="interfaceName")
+    def interface_name(self) -> Optional[pulumi.Input[str]]:
+        """
+        Set Autonomic-Networking virtual interface
+        """
+        return pulumi.get(self, "interface_name")
+
+    @interface_name.setter
+    def interface_name(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "interface_name", value)
+
+    @property
+    @pulumi.getter(name="interfaceNameVariable")
+    def interface_name_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "interface_name_variable")
+
+    @interface_name_variable.setter
+    def interface_name_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "interface_name_variable", value)
+
+    @property
+    @pulumi.getter
+    def priority(self) -> Optional[pulumi.Input[int]]:
+        """
+        Set RP candidate priority
+          - Range: `0`-`255`
+        """
+        return pulumi.get(self, "priority")
+
+    @priority.setter
+    def priority(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "priority", value)
+
+    @property
+    @pulumi.getter(name="priorityVariable")
+    def priority_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "priority_variable")
+
+    @priority_variable.setter
+    def priority_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "priority_variable", value)
+
+
+if not MYPY:
+    class ServiceMulticastFeaturePimBsrRpCandidateArgsDict(TypedDict):
+        access_list_id: NotRequired[pulumi.Input[str]]
+        """
+        Set IP Access List for PIM RP Candidate
+        """
+        access_list_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        interface_name: NotRequired[pulumi.Input[str]]
+        """
+        Set Autonomic-Networking virtual interface
+        """
+        interface_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        interval: NotRequired[pulumi.Input[int]]
+        """
+        Set RP candidate advertisement interval
+          - Range: `1`-`16383`
+        """
+        interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        priority: NotRequired[pulumi.Input[int]]
+        """
+        Set RP candidate priority
+          - Range: `0`-`255`
+        """
+        priority_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceMulticastFeaturePimBsrRpCandidateArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ServiceMulticastFeaturePimBsrRpCandidateArgs:
+    def __init__(__self__, *,
+                 access_list_id: Optional[pulumi.Input[str]] = None,
+                 access_list_id_variable: Optional[pulumi.Input[str]] = None,
+                 interface_name: Optional[pulumi.Input[str]] = None,
+                 interface_name_variable: Optional[pulumi.Input[str]] = None,
+                 interval: Optional[pulumi.Input[int]] = None,
+                 interval_variable: Optional[pulumi.Input[str]] = None,
+                 priority: Optional[pulumi.Input[int]] = None,
+                 priority_variable: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[str] access_list_id: Set IP Access List for PIM RP Candidate
+        :param pulumi.Input[str] access_list_id_variable: Variable name
+        :param pulumi.Input[str] interface_name: Set Autonomic-Networking virtual interface
+        :param pulumi.Input[str] interface_name_variable: Variable name
+        :param pulumi.Input[int] interval: Set RP candidate advertisement interval
+                 - Range: `1`-`16383`
+        :param pulumi.Input[str] interval_variable: Variable name
+        :param pulumi.Input[int] priority: Set RP candidate priority
+                 - Range: `0`-`255`
+        :param pulumi.Input[str] priority_variable: Variable name
+        """
+        if access_list_id is not None:
+            pulumi.set(__self__, "access_list_id", access_list_id)
+        if access_list_id_variable is not None:
+            pulumi.set(__self__, "access_list_id_variable", access_list_id_variable)
+        if interface_name is not None:
+            pulumi.set(__self__, "interface_name", interface_name)
+        if interface_name_variable is not None:
+            pulumi.set(__self__, "interface_name_variable", interface_name_variable)
+        if interval is not None:
+            pulumi.set(__self__, "interval", interval)
+        if interval_variable is not None:
+            pulumi.set(__self__, "interval_variable", interval_variable)
+        if priority is not None:
+            pulumi.set(__self__, "priority", priority)
+        if priority_variable is not None:
+            pulumi.set(__self__, "priority_variable", priority_variable)
+
+    @property
+    @pulumi.getter(name="accessListId")
+    def access_list_id(self) -> Optional[pulumi.Input[str]]:
+        """
+        Set IP Access List for PIM RP Candidate
+        """
+        return pulumi.get(self, "access_list_id")
+
+    @access_list_id.setter
+    def access_list_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "access_list_id", value)
+
+    @property
+    @pulumi.getter(name="accessListIdVariable")
+    def access_list_id_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "access_list_id_variable")
+
+    @access_list_id_variable.setter
+    def access_list_id_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "access_list_id_variable", value)
+
+    @property
+    @pulumi.getter(name="interfaceName")
+    def interface_name(self) -> Optional[pulumi.Input[str]]:
+        """
+        Set Autonomic-Networking virtual interface
+        """
+        return pulumi.get(self, "interface_name")
+
+    @interface_name.setter
+    def interface_name(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "interface_name", value)
+
+    @property
+    @pulumi.getter(name="interfaceNameVariable")
+    def interface_name_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "interface_name_variable")
+
+    @interface_name_variable.setter
+    def interface_name_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "interface_name_variable", value)
+
+    @property
+    @pulumi.getter
+    def interval(self) -> Optional[pulumi.Input[int]]:
+        """
+        Set RP candidate advertisement interval
+          - Range: `1`-`16383`
+        """
+        return pulumi.get(self, "interval")
+
+    @interval.setter
+    def interval(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "interval", value)
+
+    @property
+    @pulumi.getter(name="intervalVariable")
+    def interval_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "interval_variable")
+
+    @interval_variable.setter
+    def interval_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "interval_variable", value)
+
+    @property
+    @pulumi.getter
+    def priority(self) -> Optional[pulumi.Input[int]]:
+        """
+        Set RP candidate priority
+          - Range: `0`-`255`
+        """
+        return pulumi.get(self, "priority")
+
+    @priority.setter
+    def priority(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "priority", value)
+
+    @property
+    @pulumi.getter(name="priorityVariable")
+    def priority_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "priority_variable")
+
+    @priority_variable.setter
+    def priority_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "priority_variable", value)
+
+
+if not MYPY:
+    class ServiceMulticastFeaturePimInterfaceArgsDict(TypedDict):
+        interface_name: NotRequired[pulumi.Input[str]]
+        """
+        Set interface name
+        """
+        interface_name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        join_prune_interval: NotRequired[pulumi.Input[int]]
+        """
+        Set interval at which PIM multicast traffic can join or be removed from RPT or SPT
+          - Range: `10`-`600`
+          - Default value: `60`
+        """
+        join_prune_interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        query_interval: NotRequired[pulumi.Input[int]]
+        """
+        Set PIM query interval
+          - Range: `1`-`18725`
+          - Default value: `30`
+        """
+        query_interval_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceMulticastFeaturePimInterfaceArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ServiceMulticastFeaturePimInterfaceArgs:
+    def __init__(__self__, *,
+                 interface_name: Optional[pulumi.Input[str]] = None,
+                 interface_name_variable: Optional[pulumi.Input[str]] = None,
+                 join_prune_interval: Optional[pulumi.Input[int]] = None,
+                 join_prune_interval_variable: Optional[pulumi.Input[str]] = None,
+                 query_interval: Optional[pulumi.Input[int]] = None,
+                 query_interval_variable: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[str] interface_name: Set interface name
+        :param pulumi.Input[str] interface_name_variable: Variable name
+        :param pulumi.Input[int] join_prune_interval: Set interval at which PIM multicast traffic can join or be removed from RPT or SPT
+                 - Range: `10`-`600`
+                 - Default value: `60`
+        :param pulumi.Input[str] join_prune_interval_variable: Variable name
+        :param pulumi.Input[int] query_interval: Set PIM query interval
+                 - Range: `1`-`18725`
+                 - Default value: `30`
+        :param pulumi.Input[str] query_interval_variable: Variable name
+        """
+        if interface_name is not None:
+            pulumi.set(__self__, "interface_name", interface_name)
+        if interface_name_variable is not None:
+            pulumi.set(__self__, "interface_name_variable", interface_name_variable)
+        if join_prune_interval is not None:
+            pulumi.set(__self__, "join_prune_interval", join_prune_interval)
+        if join_prune_interval_variable is not None:
+            pulumi.set(__self__, "join_prune_interval_variable", join_prune_interval_variable)
+        if query_interval is not None:
+            pulumi.set(__self__, "query_interval", query_interval)
+        if query_interval_variable is not None:
+            pulumi.set(__self__, "query_interval_variable", query_interval_variable)
+
+    @property
+    @pulumi.getter(name="interfaceName")
+    def interface_name(self) -> Optional[pulumi.Input[str]]:
+        """
+        Set interface name
+        """
+        return pulumi.get(self, "interface_name")
+
+    @interface_name.setter
+    def interface_name(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "interface_name", value)
+
+    @property
+    @pulumi.getter(name="interfaceNameVariable")
+    def interface_name_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "interface_name_variable")
+
+    @interface_name_variable.setter
+    def interface_name_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "interface_name_variable", value)
+
+    @property
+    @pulumi.getter(name="joinPruneInterval")
+    def join_prune_interval(self) -> Optional[pulumi.Input[int]]:
+        """
+        Set interval at which PIM multicast traffic can join or be removed from RPT or SPT
+          - Range: `10`-`600`
+          - Default value: `60`
+        """
+        return pulumi.get(self, "join_prune_interval")
+
+    @join_prune_interval.setter
+    def join_prune_interval(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "join_prune_interval", value)
+
+    @property
+    @pulumi.getter(name="joinPruneIntervalVariable")
+    def join_prune_interval_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "join_prune_interval_variable")
+
+    @join_prune_interval_variable.setter
+    def join_prune_interval_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "join_prune_interval_variable", value)
+
+    @property
+    @pulumi.getter(name="queryInterval")
+    def query_interval(self) -> Optional[pulumi.Input[int]]:
+        """
+        Set PIM query interval
+          - Range: `1`-`18725`
+          - Default value: `30`
+        """
+        return pulumi.get(self, "query_interval")
+
+    @query_interval.setter
+    def query_interval(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "query_interval", value)
+
+    @property
+    @pulumi.getter(name="queryIntervalVariable")
+    def query_interval_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "query_interval_variable")
+
+    @query_interval_variable.setter
+    def query_interval_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "query_interval_variable", value)
+
+
+if not MYPY:
+    class ServiceMulticastFeatureStaticRpAddressArgsDict(TypedDict):
+        access_list: NotRequired[pulumi.Input[str]]
+        """
+        Set Static RP Access List
+        """
+        access_list_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ip_address: NotRequired[pulumi.Input[str]]
+        """
+        Set Static RP IP Address
+        """
+        ip_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        override: NotRequired[pulumi.Input[bool]]
+        """
+        Set override flag
+          - Default value: `false`
+        """
+        override_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceMulticastFeatureStaticRpAddressArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ServiceMulticastFeatureStaticRpAddressArgs:
+    def __init__(__self__, *,
+                 access_list: Optional[pulumi.Input[str]] = None,
+                 access_list_variable: Optional[pulumi.Input[str]] = None,
+                 ip_address: Optional[pulumi.Input[str]] = None,
+                 ip_address_variable: Optional[pulumi.Input[str]] = None,
+                 override: Optional[pulumi.Input[bool]] = None,
+                 override_variable: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[str] access_list: Set Static RP Access List
+        :param pulumi.Input[str] access_list_variable: Variable name
+        :param pulumi.Input[str] ip_address: Set Static RP IP Address
+        :param pulumi.Input[str] ip_address_variable: Variable name
+        :param pulumi.Input[bool] override: Set override flag
+                 - Default value: `false`
+        :param pulumi.Input[str] override_variable: Variable name
+        """
+        if access_list is not None:
+            pulumi.set(__self__, "access_list", access_list)
+        if access_list_variable is not None:
+            pulumi.set(__self__, "access_list_variable", access_list_variable)
+        if ip_address is not None:
+            pulumi.set(__self__, "ip_address", ip_address)
+        if ip_address_variable is not None:
+            pulumi.set(__self__, "ip_address_variable", ip_address_variable)
+        if override is not None:
+            pulumi.set(__self__, "override", override)
+        if override_variable is not None:
+            pulumi.set(__self__, "override_variable", override_variable)
+
+    @property
+    @pulumi.getter(name="accessList")
+    def access_list(self) -> Optional[pulumi.Input[str]]:
+        """
+        Set Static RP Access List
+        """
+        return pulumi.get(self, "access_list")
+
+    @access_list.setter
+    def access_list(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "access_list", value)
+
+    @property
+    @pulumi.getter(name="accessListVariable")
+    def access_list_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "access_list_variable")
+
+    @access_list_variable.setter
+    def access_list_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "access_list_variable", value)
+
+    @property
+    @pulumi.getter(name="ipAddress")
+    def ip_address(self) -> Optional[pulumi.Input[str]]:
+        """
+        Set Static RP IP Address
+        """
+        return pulumi.get(self, "ip_address")
+
+    @ip_address.setter
+    def ip_address(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "ip_address", value)
+
+    @property
+    @pulumi.getter(name="ipAddressVariable")
+    def ip_address_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ip_address_variable")
+
+    @ip_address_variable.setter
+    def ip_address_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "ip_address_variable", value)
+
+    @property
+    @pulumi.getter
+    def override(self) -> Optional[pulumi.Input[bool]]:
+        """
+        Set override flag
+          - Default value: `false`
+        """
+        return pulumi.get(self, "override")
+
+    @override.setter
+    def override(self, value: Optional[pulumi.Input[bool]]):
+        pulumi.set(self, "override", value)
+
+    @property
+    @pulumi.getter(name="overrideVariable")
+    def override_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "override_variable")
+
+    @override_variable.setter
+    def override_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "override_variable", value)
 
 
 if not MYPY:
@@ -45840,6 +51396,454 @@ class ServiceRoutingBgpFeatureIpv6RedistributeArgs:
         """
         Set the protocol to redistribute routes from
           - Choices: `static`, `connected`, `ospf`, `omp`
+        """
+        return pulumi.get(self, "protocol")
+
+    @protocol.setter
+    def protocol(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "protocol", value)
+
+    @property
+    @pulumi.getter(name="protocolVariable")
+    def protocol_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "protocol_variable")
+
+    @protocol_variable.setter
+    def protocol_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "protocol_variable", value)
+
+    @property
+    @pulumi.getter(name="routePolicyId")
+    def route_policy_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "route_policy_id")
+
+    @route_policy_id.setter
+    def route_policy_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "route_policy_id", value)
+
+
+if not MYPY:
+    class ServiceRoutingEigrpFeatureInterfaceArgsDict(TypedDict):
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Set interface name
+        """
+        name_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        shutdown: NotRequired[pulumi.Input[bool]]
+        """
+        Enable/disable EIGRP
+          - Default value: `false`
+        """
+        shutdown_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        summary_addresses: NotRequired[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureInterfaceSummaryAddressArgsDict']]]]
+        """
+        Set summary addresses
+        """
+elif False:
+    ServiceRoutingEigrpFeatureInterfaceArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ServiceRoutingEigrpFeatureInterfaceArgs:
+    def __init__(__self__, *,
+                 name: Optional[pulumi.Input[str]] = None,
+                 name_variable: Optional[pulumi.Input[str]] = None,
+                 shutdown: Optional[pulumi.Input[bool]] = None,
+                 shutdown_variable: Optional[pulumi.Input[str]] = None,
+                 summary_addresses: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureInterfaceSummaryAddressArgs']]]] = None):
+        """
+        :param pulumi.Input[str] name: Set interface name
+        :param pulumi.Input[str] name_variable: Variable name
+        :param pulumi.Input[bool] shutdown: Enable/disable EIGRP
+                 - Default value: `false`
+        :param pulumi.Input[str] shutdown_variable: Variable name
+        :param pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureInterfaceSummaryAddressArgs']]] summary_addresses: Set summary addresses
+        """
+        if name is not None:
+            pulumi.set(__self__, "name", name)
+        if name_variable is not None:
+            pulumi.set(__self__, "name_variable", name_variable)
+        if shutdown is not None:
+            pulumi.set(__self__, "shutdown", shutdown)
+        if shutdown_variable is not None:
+            pulumi.set(__self__, "shutdown_variable", shutdown_variable)
+        if summary_addresses is not None:
+            pulumi.set(__self__, "summary_addresses", summary_addresses)
+
+    @property
+    @pulumi.getter
+    def name(self) -> Optional[pulumi.Input[str]]:
+        """
+        Set interface name
+        """
+        return pulumi.get(self, "name")
+
+    @name.setter
+    def name(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "name", value)
+
+    @property
+    @pulumi.getter(name="nameVariable")
+    def name_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "name_variable")
+
+    @name_variable.setter
+    def name_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "name_variable", value)
+
+    @property
+    @pulumi.getter
+    def shutdown(self) -> Optional[pulumi.Input[bool]]:
+        """
+        Enable/disable EIGRP
+          - Default value: `false`
+        """
+        return pulumi.get(self, "shutdown")
+
+    @shutdown.setter
+    def shutdown(self, value: Optional[pulumi.Input[bool]]):
+        pulumi.set(self, "shutdown", value)
+
+    @property
+    @pulumi.getter(name="shutdownVariable")
+    def shutdown_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "shutdown_variable")
+
+    @shutdown_variable.setter
+    def shutdown_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "shutdown_variable", value)
+
+    @property
+    @pulumi.getter(name="summaryAddresses")
+    def summary_addresses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureInterfaceSummaryAddressArgs']]]]:
+        """
+        Set summary addresses
+        """
+        return pulumi.get(self, "summary_addresses")
+
+    @summary_addresses.setter
+    def summary_addresses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureInterfaceSummaryAddressArgs']]]]):
+        pulumi.set(self, "summary_addresses", value)
+
+
+if not MYPY:
+    class ServiceRoutingEigrpFeatureInterfaceSummaryAddressArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        mask: NotRequired[pulumi.Input[str]]
+        """
+        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        """
+        mask_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceRoutingEigrpFeatureInterfaceSummaryAddressArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ServiceRoutingEigrpFeatureInterfaceSummaryAddressArgs:
+    def __init__(__self__, *,
+                 address: Optional[pulumi.Input[str]] = None,
+                 address_variable: Optional[pulumi.Input[str]] = None,
+                 mask: Optional[pulumi.Input[str]] = None,
+                 mask_variable: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[str] address_variable: Variable name
+        :param pulumi.Input[str] mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[str] mask_variable: Variable name
+        """
+        if address is not None:
+            pulumi.set(__self__, "address", address)
+        if address_variable is not None:
+            pulumi.set(__self__, "address_variable", address_variable)
+        if mask is not None:
+            pulumi.set(__self__, "mask", mask)
+        if mask_variable is not None:
+            pulumi.set(__self__, "mask_variable", mask_variable)
+
+    @property
+    @pulumi.getter
+    def address(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "address")
+
+    @address.setter
+    def address(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "address", value)
+
+    @property
+    @pulumi.getter(name="addressVariable")
+    def address_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "address_variable")
+
+    @address_variable.setter
+    def address_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "address_variable", value)
+
+    @property
+    @pulumi.getter
+    def mask(self) -> Optional[pulumi.Input[str]]:
+        """
+        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        """
+        return pulumi.get(self, "mask")
+
+    @mask.setter
+    def mask(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "mask", value)
+
+    @property
+    @pulumi.getter(name="maskVariable")
+    def mask_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "mask_variable")
+
+    @mask_variable.setter
+    def mask_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "mask_variable", value)
+
+
+if not MYPY:
+    class ServiceRoutingEigrpFeatureMd5KeyArgsDict(TypedDict):
+        key_id: NotRequired[pulumi.Input[int]]
+        """
+        Set MD5 key ID
+          - Range: `1`-`255`
+        """
+        key_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        key_string: NotRequired[pulumi.Input[str]]
+        """
+        Set MD5 key
+        """
+        key_string_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceRoutingEigrpFeatureMd5KeyArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ServiceRoutingEigrpFeatureMd5KeyArgs:
+    def __init__(__self__, *,
+                 key_id: Optional[pulumi.Input[int]] = None,
+                 key_id_variable: Optional[pulumi.Input[str]] = None,
+                 key_string: Optional[pulumi.Input[str]] = None,
+                 key_string_variable: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[int] key_id: Set MD5 key ID
+                 - Range: `1`-`255`
+        :param pulumi.Input[str] key_id_variable: Variable name
+        :param pulumi.Input[str] key_string: Set MD5 key
+        :param pulumi.Input[str] key_string_variable: Variable name
+        """
+        if key_id is not None:
+            pulumi.set(__self__, "key_id", key_id)
+        if key_id_variable is not None:
+            pulumi.set(__self__, "key_id_variable", key_id_variable)
+        if key_string is not None:
+            pulumi.set(__self__, "key_string", key_string)
+        if key_string_variable is not None:
+            pulumi.set(__self__, "key_string_variable", key_string_variable)
+
+    @property
+    @pulumi.getter(name="keyId")
+    def key_id(self) -> Optional[pulumi.Input[int]]:
+        """
+        Set MD5 key ID
+          - Range: `1`-`255`
+        """
+        return pulumi.get(self, "key_id")
+
+    @key_id.setter
+    def key_id(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "key_id", value)
+
+    @property
+    @pulumi.getter(name="keyIdVariable")
+    def key_id_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "key_id_variable")
+
+    @key_id_variable.setter
+    def key_id_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "key_id_variable", value)
+
+    @property
+    @pulumi.getter(name="keyString")
+    def key_string(self) -> Optional[pulumi.Input[str]]:
+        """
+        Set MD5 key
+        """
+        return pulumi.get(self, "key_string")
+
+    @key_string.setter
+    def key_string(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "key_string", value)
+
+    @property
+    @pulumi.getter(name="keyStringVariable")
+    def key_string_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "key_string_variable")
+
+    @key_string_variable.setter
+    def key_string_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "key_string_variable", value)
+
+
+if not MYPY:
+    class ServiceRoutingEigrpFeatureNetworkArgsDict(TypedDict):
+        ip_address: NotRequired[pulumi.Input[str]]
+        ip_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        mask: NotRequired[pulumi.Input[str]]
+        """
+        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        """
+        mask_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceRoutingEigrpFeatureNetworkArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ServiceRoutingEigrpFeatureNetworkArgs:
+    def __init__(__self__, *,
+                 ip_address: Optional[pulumi.Input[str]] = None,
+                 ip_address_variable: Optional[pulumi.Input[str]] = None,
+                 mask: Optional[pulumi.Input[str]] = None,
+                 mask_variable: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[str] ip_address_variable: Variable name
+        :param pulumi.Input[str] mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[str] mask_variable: Variable name
+        """
+        if ip_address is not None:
+            pulumi.set(__self__, "ip_address", ip_address)
+        if ip_address_variable is not None:
+            pulumi.set(__self__, "ip_address_variable", ip_address_variable)
+        if mask is not None:
+            pulumi.set(__self__, "mask", mask)
+        if mask_variable is not None:
+            pulumi.set(__self__, "mask_variable", mask_variable)
+
+    @property
+    @pulumi.getter(name="ipAddress")
+    def ip_address(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "ip_address")
+
+    @ip_address.setter
+    def ip_address(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "ip_address", value)
+
+    @property
+    @pulumi.getter(name="ipAddressVariable")
+    def ip_address_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ip_address_variable")
+
+    @ip_address_variable.setter
+    def ip_address_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "ip_address_variable", value)
+
+    @property
+    @pulumi.getter
+    def mask(self) -> Optional[pulumi.Input[str]]:
+        """
+        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        """
+        return pulumi.get(self, "mask")
+
+    @mask.setter
+    def mask(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "mask", value)
+
+    @property
+    @pulumi.getter(name="maskVariable")
+    def mask_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "mask_variable")
+
+    @mask_variable.setter
+    def mask_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "mask_variable", value)
+
+
+if not MYPY:
+    class ServiceRoutingEigrpFeatureRedistributeArgsDict(TypedDict):
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        Set the protocol to redistribute routes from
+          - Choices: `bgp`, `connected`, `nat-route`, `omp`, `ospf`, `ospfv3`, `static`
+        """
+        protocol_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        route_policy_id: NotRequired[pulumi.Input[str]]
+elif False:
+    ServiceRoutingEigrpFeatureRedistributeArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ServiceRoutingEigrpFeatureRedistributeArgs:
+    def __init__(__self__, *,
+                 protocol: Optional[pulumi.Input[str]] = None,
+                 protocol_variable: Optional[pulumi.Input[str]] = None,
+                 route_policy_id: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[str] protocol: Set the protocol to redistribute routes from
+                 - Choices: `bgp`, `connected`, `nat-route`, `omp`, `ospf`, `ospfv3`, `static`
+        :param pulumi.Input[str] protocol_variable: Variable name
+        """
+        if protocol is not None:
+            pulumi.set(__self__, "protocol", protocol)
+        if protocol_variable is not None:
+            pulumi.set(__self__, "protocol_variable", protocol_variable)
+        if route_policy_id is not None:
+            pulumi.set(__self__, "route_policy_id", route_policy_id)
+
+    @property
+    @pulumi.getter
+    def protocol(self) -> Optional[pulumi.Input[str]]:
+        """
+        Set the protocol to redistribute routes from
+          - Choices: `bgp`, `connected`, `nat-route`, `omp`, `ospf`, `ospfv3`, `static`
         """
         return pulumi.get(self, "protocol")
 
@@ -49664,6 +55668,448 @@ class ServiceTrackerGroupFeatureTrackerElementArgs:
     @tracker_id.setter
     def tracker_id(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "tracker_id", value)
+
+
+if not MYPY:
+    class ServiceWirelessLanFeatureSsidArgsDict(TypedDict):
+        admin_state: NotRequired[pulumi.Input[bool]]
+        """
+        Set admin state
+          - Default value: `true`
+        """
+        admin_state_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        broadcast_ssid: NotRequired[pulumi.Input[bool]]
+        """
+        Enable broadcast SSID
+          - Default value: `true`
+        """
+        broadcast_ssid_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        passphrase: NotRequired[pulumi.Input[str]]
+        """
+        Set passphrase, Attribute conditional on `security_type` being equal to `personal`
+        """
+        passphrase_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        qos_profile: NotRequired[pulumi.Input[str]]
+        """
+        Select QoS profile
+          - Choices: `platinum`, `gold`, `silver`, `bronze`
+          - Default value: `silver`
+        """
+        qos_profile_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        radio_type: NotRequired[pulumi.Input[str]]
+        """
+        Select radio type
+          - Choices: `24ghz`, `5ghz`, `all`
+          - Default value: `all`
+        """
+        radio_type_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        radius_server_ip: NotRequired[pulumi.Input[str]]
+        """
+        Set RADIUS server IP, Attribute conditional on `security_type` being equal to `enterprise`
+        """
+        radius_server_ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        radius_server_port: NotRequired[pulumi.Input[int]]
+        """
+        Set RADIUS server authentication port, Attribute conditional on `security_type` being equal to `enterprise`
+          - Range: `1`-`65535`
+          - Default value: `1812`
+        """
+        radius_server_port_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        radius_server_secret: NotRequired[pulumi.Input[str]]
+        """
+        Set RADIUS server shared secret, Attribute conditional on `security_type` being equal to `enterprise`
+        """
+        radius_server_secret_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        security_type: NotRequired[pulumi.Input[str]]
+        """
+        Select security type
+          - Choices: `enterprise`, `personal`, `open`
+        """
+        ssid_name: NotRequired[pulumi.Input[str]]
+        """
+        Configure wlan SSID
+        """
+        vlan_id: NotRequired[pulumi.Input[int]]
+        """
+        Set VLAN ID
+          - Range: `1`-`4094`
+        """
+        vlan_id_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceWirelessLanFeatureSsidArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ServiceWirelessLanFeatureSsidArgs:
+    def __init__(__self__, *,
+                 admin_state: Optional[pulumi.Input[bool]] = None,
+                 admin_state_variable: Optional[pulumi.Input[str]] = None,
+                 broadcast_ssid: Optional[pulumi.Input[bool]] = None,
+                 broadcast_ssid_variable: Optional[pulumi.Input[str]] = None,
+                 passphrase: Optional[pulumi.Input[str]] = None,
+                 passphrase_variable: Optional[pulumi.Input[str]] = None,
+                 qos_profile: Optional[pulumi.Input[str]] = None,
+                 qos_profile_variable: Optional[pulumi.Input[str]] = None,
+                 radio_type: Optional[pulumi.Input[str]] = None,
+                 radio_type_variable: Optional[pulumi.Input[str]] = None,
+                 radius_server_ip: Optional[pulumi.Input[str]] = None,
+                 radius_server_ip_variable: Optional[pulumi.Input[str]] = None,
+                 radius_server_port: Optional[pulumi.Input[int]] = None,
+                 radius_server_port_variable: Optional[pulumi.Input[str]] = None,
+                 radius_server_secret: Optional[pulumi.Input[str]] = None,
+                 radius_server_secret_variable: Optional[pulumi.Input[str]] = None,
+                 security_type: Optional[pulumi.Input[str]] = None,
+                 ssid_name: Optional[pulumi.Input[str]] = None,
+                 vlan_id: Optional[pulumi.Input[int]] = None,
+                 vlan_id_variable: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[bool] admin_state: Set admin state
+                 - Default value: `true`
+        :param pulumi.Input[str] admin_state_variable: Variable name
+        :param pulumi.Input[bool] broadcast_ssid: Enable broadcast SSID
+                 - Default value: `true`
+        :param pulumi.Input[str] broadcast_ssid_variable: Variable name
+        :param pulumi.Input[str] passphrase: Set passphrase, Attribute conditional on `security_type` being equal to `personal`
+        :param pulumi.Input[str] passphrase_variable: Variable name
+        :param pulumi.Input[str] qos_profile: Select QoS profile
+                 - Choices: `platinum`, `gold`, `silver`, `bronze`
+                 - Default value: `silver`
+        :param pulumi.Input[str] qos_profile_variable: Variable name
+        :param pulumi.Input[str] radio_type: Select radio type
+                 - Choices: `24ghz`, `5ghz`, `all`
+                 - Default value: `all`
+        :param pulumi.Input[str] radio_type_variable: Variable name
+        :param pulumi.Input[str] radius_server_ip: Set RADIUS server IP, Attribute conditional on `security_type` being equal to `enterprise`
+        :param pulumi.Input[str] radius_server_ip_variable: Variable name
+        :param pulumi.Input[int] radius_server_port: Set RADIUS server authentication port, Attribute conditional on `security_type` being equal to `enterprise`
+                 - Range: `1`-`65535`
+                 - Default value: `1812`
+        :param pulumi.Input[str] radius_server_port_variable: Variable name
+        :param pulumi.Input[str] radius_server_secret: Set RADIUS server shared secret, Attribute conditional on `security_type` being equal to `enterprise`
+        :param pulumi.Input[str] radius_server_secret_variable: Variable name
+        :param pulumi.Input[str] security_type: Select security type
+                 - Choices: `enterprise`, `personal`, `open`
+        :param pulumi.Input[str] ssid_name: Configure wlan SSID
+        :param pulumi.Input[int] vlan_id: Set VLAN ID
+                 - Range: `1`-`4094`
+        :param pulumi.Input[str] vlan_id_variable: Variable name
+        """
+        if admin_state is not None:
+            pulumi.set(__self__, "admin_state", admin_state)
+        if admin_state_variable is not None:
+            pulumi.set(__self__, "admin_state_variable", admin_state_variable)
+        if broadcast_ssid is not None:
+            pulumi.set(__self__, "broadcast_ssid", broadcast_ssid)
+        if broadcast_ssid_variable is not None:
+            pulumi.set(__self__, "broadcast_ssid_variable", broadcast_ssid_variable)
+        if passphrase is not None:
+            pulumi.set(__self__, "passphrase", passphrase)
+        if passphrase_variable is not None:
+            pulumi.set(__self__, "passphrase_variable", passphrase_variable)
+        if qos_profile is not None:
+            pulumi.set(__self__, "qos_profile", qos_profile)
+        if qos_profile_variable is not None:
+            pulumi.set(__self__, "qos_profile_variable", qos_profile_variable)
+        if radio_type is not None:
+            pulumi.set(__self__, "radio_type", radio_type)
+        if radio_type_variable is not None:
+            pulumi.set(__self__, "radio_type_variable", radio_type_variable)
+        if radius_server_ip is not None:
+            pulumi.set(__self__, "radius_server_ip", radius_server_ip)
+        if radius_server_ip_variable is not None:
+            pulumi.set(__self__, "radius_server_ip_variable", radius_server_ip_variable)
+        if radius_server_port is not None:
+            pulumi.set(__self__, "radius_server_port", radius_server_port)
+        if radius_server_port_variable is not None:
+            pulumi.set(__self__, "radius_server_port_variable", radius_server_port_variable)
+        if radius_server_secret is not None:
+            pulumi.set(__self__, "radius_server_secret", radius_server_secret)
+        if radius_server_secret_variable is not None:
+            pulumi.set(__self__, "radius_server_secret_variable", radius_server_secret_variable)
+        if security_type is not None:
+            pulumi.set(__self__, "security_type", security_type)
+        if ssid_name is not None:
+            pulumi.set(__self__, "ssid_name", ssid_name)
+        if vlan_id is not None:
+            pulumi.set(__self__, "vlan_id", vlan_id)
+        if vlan_id_variable is not None:
+            pulumi.set(__self__, "vlan_id_variable", vlan_id_variable)
+
+    @property
+    @pulumi.getter(name="adminState")
+    def admin_state(self) -> Optional[pulumi.Input[bool]]:
+        """
+        Set admin state
+          - Default value: `true`
+        """
+        return pulumi.get(self, "admin_state")
+
+    @admin_state.setter
+    def admin_state(self, value: Optional[pulumi.Input[bool]]):
+        pulumi.set(self, "admin_state", value)
+
+    @property
+    @pulumi.getter(name="adminStateVariable")
+    def admin_state_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "admin_state_variable")
+
+    @admin_state_variable.setter
+    def admin_state_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "admin_state_variable", value)
+
+    @property
+    @pulumi.getter(name="broadcastSsid")
+    def broadcast_ssid(self) -> Optional[pulumi.Input[bool]]:
+        """
+        Enable broadcast SSID
+          - Default value: `true`
+        """
+        return pulumi.get(self, "broadcast_ssid")
+
+    @broadcast_ssid.setter
+    def broadcast_ssid(self, value: Optional[pulumi.Input[bool]]):
+        pulumi.set(self, "broadcast_ssid", value)
+
+    @property
+    @pulumi.getter(name="broadcastSsidVariable")
+    def broadcast_ssid_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "broadcast_ssid_variable")
+
+    @broadcast_ssid_variable.setter
+    def broadcast_ssid_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "broadcast_ssid_variable", value)
+
+    @property
+    @pulumi.getter
+    def passphrase(self) -> Optional[pulumi.Input[str]]:
+        """
+        Set passphrase, Attribute conditional on `security_type` being equal to `personal`
+        """
+        return pulumi.get(self, "passphrase")
+
+    @passphrase.setter
+    def passphrase(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "passphrase", value)
+
+    @property
+    @pulumi.getter(name="passphraseVariable")
+    def passphrase_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "passphrase_variable")
+
+    @passphrase_variable.setter
+    def passphrase_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "passphrase_variable", value)
+
+    @property
+    @pulumi.getter(name="qosProfile")
+    def qos_profile(self) -> Optional[pulumi.Input[str]]:
+        """
+        Select QoS profile
+          - Choices: `platinum`, `gold`, `silver`, `bronze`
+          - Default value: `silver`
+        """
+        return pulumi.get(self, "qos_profile")
+
+    @qos_profile.setter
+    def qos_profile(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "qos_profile", value)
+
+    @property
+    @pulumi.getter(name="qosProfileVariable")
+    def qos_profile_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "qos_profile_variable")
+
+    @qos_profile_variable.setter
+    def qos_profile_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "qos_profile_variable", value)
+
+    @property
+    @pulumi.getter(name="radioType")
+    def radio_type(self) -> Optional[pulumi.Input[str]]:
+        """
+        Select radio type
+          - Choices: `24ghz`, `5ghz`, `all`
+          - Default value: `all`
+        """
+        return pulumi.get(self, "radio_type")
+
+    @radio_type.setter
+    def radio_type(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "radio_type", value)
+
+    @property
+    @pulumi.getter(name="radioTypeVariable")
+    def radio_type_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "radio_type_variable")
+
+    @radio_type_variable.setter
+    def radio_type_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "radio_type_variable", value)
+
+    @property
+    @pulumi.getter(name="radiusServerIp")
+    def radius_server_ip(self) -> Optional[pulumi.Input[str]]:
+        """
+        Set RADIUS server IP, Attribute conditional on `security_type` being equal to `enterprise`
+        """
+        return pulumi.get(self, "radius_server_ip")
+
+    @radius_server_ip.setter
+    def radius_server_ip(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "radius_server_ip", value)
+
+    @property
+    @pulumi.getter(name="radiusServerIpVariable")
+    def radius_server_ip_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "radius_server_ip_variable")
+
+    @radius_server_ip_variable.setter
+    def radius_server_ip_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "radius_server_ip_variable", value)
+
+    @property
+    @pulumi.getter(name="radiusServerPort")
+    def radius_server_port(self) -> Optional[pulumi.Input[int]]:
+        """
+        Set RADIUS server authentication port, Attribute conditional on `security_type` being equal to `enterprise`
+          - Range: `1`-`65535`
+          - Default value: `1812`
+        """
+        return pulumi.get(self, "radius_server_port")
+
+    @radius_server_port.setter
+    def radius_server_port(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "radius_server_port", value)
+
+    @property
+    @pulumi.getter(name="radiusServerPortVariable")
+    def radius_server_port_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "radius_server_port_variable")
+
+    @radius_server_port_variable.setter
+    def radius_server_port_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "radius_server_port_variable", value)
+
+    @property
+    @pulumi.getter(name="radiusServerSecret")
+    def radius_server_secret(self) -> Optional[pulumi.Input[str]]:
+        """
+        Set RADIUS server shared secret, Attribute conditional on `security_type` being equal to `enterprise`
+        """
+        return pulumi.get(self, "radius_server_secret")
+
+    @radius_server_secret.setter
+    def radius_server_secret(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "radius_server_secret", value)
+
+    @property
+    @pulumi.getter(name="radiusServerSecretVariable")
+    def radius_server_secret_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "radius_server_secret_variable")
+
+    @radius_server_secret_variable.setter
+    def radius_server_secret_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "radius_server_secret_variable", value)
+
+    @property
+    @pulumi.getter(name="securityType")
+    def security_type(self) -> Optional[pulumi.Input[str]]:
+        """
+        Select security type
+          - Choices: `enterprise`, `personal`, `open`
+        """
+        return pulumi.get(self, "security_type")
+
+    @security_type.setter
+    def security_type(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "security_type", value)
+
+    @property
+    @pulumi.getter(name="ssidName")
+    def ssid_name(self) -> Optional[pulumi.Input[str]]:
+        """
+        Configure wlan SSID
+        """
+        return pulumi.get(self, "ssid_name")
+
+    @ssid_name.setter
+    def ssid_name(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "ssid_name", value)
+
+    @property
+    @pulumi.getter(name="vlanId")
+    def vlan_id(self) -> Optional[pulumi.Input[int]]:
+        """
+        Set VLAN ID
+          - Range: `1`-`4094`
+        """
+        return pulumi.get(self, "vlan_id")
+
+    @vlan_id.setter
+    def vlan_id(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "vlan_id", value)
+
+    @property
+    @pulumi.getter(name="vlanIdVariable")
+    def vlan_id_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "vlan_id_variable")
+
+    @vlan_id_variable.setter
+    def vlan_id_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "vlan_id_variable", value)
 
 
 if not MYPY:
@@ -57732,6 +64178,1195 @@ class TrafficDataPolicyDefinitionSequenceMatchEntryArgs:
 
 
 if not MYPY:
+    class TransportIpv4AclFeatureSequenceArgsDict(TypedDict):
+        actions: NotRequired[pulumi.Input[Sequence[pulumi.Input['TransportIpv4AclFeatureSequenceActionArgsDict']]]]
+        """
+        Define list of actions
+        """
+        base_action: NotRequired[pulumi.Input[str]]
+        """
+        Base Action
+          - Choices: `drop`, `accept`
+          - Default value: `accept`
+        """
+        match_entries: NotRequired[pulumi.Input[Sequence[pulumi.Input['TransportIpv4AclFeatureSequenceMatchEntryArgsDict']]]]
+        """
+        Define match conditions
+        """
+        sequence_id: NotRequired[pulumi.Input[int]]
+        """
+        Sequence Id
+          - Range: `1`-`65536`
+        """
+        sequence_name: NotRequired[pulumi.Input[str]]
+        """
+        Sequence Name
+        """
+elif False:
+    TransportIpv4AclFeatureSequenceArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class TransportIpv4AclFeatureSequenceArgs:
+    def __init__(__self__, *,
+                 actions: Optional[pulumi.Input[Sequence[pulumi.Input['TransportIpv4AclFeatureSequenceActionArgs']]]] = None,
+                 base_action: Optional[pulumi.Input[str]] = None,
+                 match_entries: Optional[pulumi.Input[Sequence[pulumi.Input['TransportIpv4AclFeatureSequenceMatchEntryArgs']]]] = None,
+                 sequence_id: Optional[pulumi.Input[int]] = None,
+                 sequence_name: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[Sequence[pulumi.Input['TransportIpv4AclFeatureSequenceActionArgs']]] actions: Define list of actions
+        :param pulumi.Input[str] base_action: Base Action
+                 - Choices: `drop`, `accept`
+                 - Default value: `accept`
+        :param pulumi.Input[Sequence[pulumi.Input['TransportIpv4AclFeatureSequenceMatchEntryArgs']]] match_entries: Define match conditions
+        :param pulumi.Input[int] sequence_id: Sequence Id
+                 - Range: `1`-`65536`
+        :param pulumi.Input[str] sequence_name: Sequence Name
+        """
+        if actions is not None:
+            pulumi.set(__self__, "actions", actions)
+        if base_action is not None:
+            pulumi.set(__self__, "base_action", base_action)
+        if match_entries is not None:
+            pulumi.set(__self__, "match_entries", match_entries)
+        if sequence_id is not None:
+            pulumi.set(__self__, "sequence_id", sequence_id)
+        if sequence_name is not None:
+            pulumi.set(__self__, "sequence_name", sequence_name)
+
+    @property
+    @pulumi.getter
+    def actions(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['TransportIpv4AclFeatureSequenceActionArgs']]]]:
+        """
+        Define list of actions
+        """
+        return pulumi.get(self, "actions")
+
+    @actions.setter
+    def actions(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['TransportIpv4AclFeatureSequenceActionArgs']]]]):
+        pulumi.set(self, "actions", value)
+
+    @property
+    @pulumi.getter(name="baseAction")
+    def base_action(self) -> Optional[pulumi.Input[str]]:
+        """
+        Base Action
+          - Choices: `drop`, `accept`
+          - Default value: `accept`
+        """
+        return pulumi.get(self, "base_action")
+
+    @base_action.setter
+    def base_action(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "base_action", value)
+
+    @property
+    @pulumi.getter(name="matchEntries")
+    def match_entries(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['TransportIpv4AclFeatureSequenceMatchEntryArgs']]]]:
+        """
+        Define match conditions
+        """
+        return pulumi.get(self, "match_entries")
+
+    @match_entries.setter
+    def match_entries(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['TransportIpv4AclFeatureSequenceMatchEntryArgs']]]]):
+        pulumi.set(self, "match_entries", value)
+
+    @property
+    @pulumi.getter(name="sequenceId")
+    def sequence_id(self) -> Optional[pulumi.Input[int]]:
+        """
+        Sequence Id
+          - Range: `1`-`65536`
+        """
+        return pulumi.get(self, "sequence_id")
+
+    @sequence_id.setter
+    def sequence_id(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "sequence_id", value)
+
+    @property
+    @pulumi.getter(name="sequenceName")
+    def sequence_name(self) -> Optional[pulumi.Input[str]]:
+        """
+        Sequence Name
+        """
+        return pulumi.get(self, "sequence_name")
+
+    @sequence_name.setter
+    def sequence_name(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "sequence_name", value)
+
+
+if not MYPY:
+    class TransportIpv4AclFeatureSequenceActionArgsDict(TypedDict):
+        accept_counter_name: NotRequired[pulumi.Input[str]]
+        """
+        Counter Name
+        """
+        accept_log: NotRequired[pulumi.Input[bool]]
+        """
+        Enable Log
+          - Default value: `false`
+        """
+        accept_mirror_list_id: NotRequired[pulumi.Input[str]]
+        accept_policer_id: NotRequired[pulumi.Input[str]]
+        accept_set_dscp: NotRequired[pulumi.Input[int]]
+        """
+        DSCP number
+          - Range: `0`-`63`
+        """
+        accept_set_next_hop: NotRequired[pulumi.Input[str]]
+        """
+        Set Next Hop (IPV4 address)
+        """
+        drop_counter_name: NotRequired[pulumi.Input[str]]
+        """
+        Counter Name
+        """
+        drop_log: NotRequired[pulumi.Input[bool]]
+        """
+        Enable Log
+          - Default value: `false`
+        """
+elif False:
+    TransportIpv4AclFeatureSequenceActionArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class TransportIpv4AclFeatureSequenceActionArgs:
+    def __init__(__self__, *,
+                 accept_counter_name: Optional[pulumi.Input[str]] = None,
+                 accept_log: Optional[pulumi.Input[bool]] = None,
+                 accept_mirror_list_id: Optional[pulumi.Input[str]] = None,
+                 accept_policer_id: Optional[pulumi.Input[str]] = None,
+                 accept_set_dscp: Optional[pulumi.Input[int]] = None,
+                 accept_set_next_hop: Optional[pulumi.Input[str]] = None,
+                 drop_counter_name: Optional[pulumi.Input[str]] = None,
+                 drop_log: Optional[pulumi.Input[bool]] = None):
+        """
+        :param pulumi.Input[str] accept_counter_name: Counter Name
+        :param pulumi.Input[bool] accept_log: Enable Log
+                 - Default value: `false`
+        :param pulumi.Input[int] accept_set_dscp: DSCP number
+                 - Range: `0`-`63`
+        :param pulumi.Input[str] accept_set_next_hop: Set Next Hop (IPV4 address)
+        :param pulumi.Input[str] drop_counter_name: Counter Name
+        :param pulumi.Input[bool] drop_log: Enable Log
+                 - Default value: `false`
+        """
+        if accept_counter_name is not None:
+            pulumi.set(__self__, "accept_counter_name", accept_counter_name)
+        if accept_log is not None:
+            pulumi.set(__self__, "accept_log", accept_log)
+        if accept_mirror_list_id is not None:
+            pulumi.set(__self__, "accept_mirror_list_id", accept_mirror_list_id)
+        if accept_policer_id is not None:
+            pulumi.set(__self__, "accept_policer_id", accept_policer_id)
+        if accept_set_dscp is not None:
+            pulumi.set(__self__, "accept_set_dscp", accept_set_dscp)
+        if accept_set_next_hop is not None:
+            pulumi.set(__self__, "accept_set_next_hop", accept_set_next_hop)
+        if drop_counter_name is not None:
+            pulumi.set(__self__, "drop_counter_name", drop_counter_name)
+        if drop_log is not None:
+            pulumi.set(__self__, "drop_log", drop_log)
+
+    @property
+    @pulumi.getter(name="acceptCounterName")
+    def accept_counter_name(self) -> Optional[pulumi.Input[str]]:
+        """
+        Counter Name
+        """
+        return pulumi.get(self, "accept_counter_name")
+
+    @accept_counter_name.setter
+    def accept_counter_name(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "accept_counter_name", value)
+
+    @property
+    @pulumi.getter(name="acceptLog")
+    def accept_log(self) -> Optional[pulumi.Input[bool]]:
+        """
+        Enable Log
+          - Default value: `false`
+        """
+        return pulumi.get(self, "accept_log")
+
+    @accept_log.setter
+    def accept_log(self, value: Optional[pulumi.Input[bool]]):
+        pulumi.set(self, "accept_log", value)
+
+    @property
+    @pulumi.getter(name="acceptMirrorListId")
+    def accept_mirror_list_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "accept_mirror_list_id")
+
+    @accept_mirror_list_id.setter
+    def accept_mirror_list_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "accept_mirror_list_id", value)
+
+    @property
+    @pulumi.getter(name="acceptPolicerId")
+    def accept_policer_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "accept_policer_id")
+
+    @accept_policer_id.setter
+    def accept_policer_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "accept_policer_id", value)
+
+    @property
+    @pulumi.getter(name="acceptSetDscp")
+    def accept_set_dscp(self) -> Optional[pulumi.Input[int]]:
+        """
+        DSCP number
+          - Range: `0`-`63`
+        """
+        return pulumi.get(self, "accept_set_dscp")
+
+    @accept_set_dscp.setter
+    def accept_set_dscp(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "accept_set_dscp", value)
+
+    @property
+    @pulumi.getter(name="acceptSetNextHop")
+    def accept_set_next_hop(self) -> Optional[pulumi.Input[str]]:
+        """
+        Set Next Hop (IPV4 address)
+        """
+        return pulumi.get(self, "accept_set_next_hop")
+
+    @accept_set_next_hop.setter
+    def accept_set_next_hop(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "accept_set_next_hop", value)
+
+    @property
+    @pulumi.getter(name="dropCounterName")
+    def drop_counter_name(self) -> Optional[pulumi.Input[str]]:
+        """
+        Counter Name
+        """
+        return pulumi.get(self, "drop_counter_name")
+
+    @drop_counter_name.setter
+    def drop_counter_name(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "drop_counter_name", value)
+
+    @property
+    @pulumi.getter(name="dropLog")
+    def drop_log(self) -> Optional[pulumi.Input[bool]]:
+        """
+        Enable Log
+          - Default value: `false`
+        """
+        return pulumi.get(self, "drop_log")
+
+    @drop_log.setter
+    def drop_log(self, value: Optional[pulumi.Input[bool]]):
+        pulumi.set(self, "drop_log", value)
+
+
+if not MYPY:
+    class TransportIpv4AclFeatureSequenceMatchEntryArgsDict(TypedDict):
+        destination_data_prefix: NotRequired[pulumi.Input[str]]
+        """
+        Destination Data IP Prefix
+        """
+        destination_data_prefix_list_id: NotRequired[pulumi.Input[str]]
+        destination_data_prefix_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        destination_ports: NotRequired[pulumi.Input[Sequence[pulumi.Input['TransportIpv4AclFeatureSequenceMatchEntryDestinationPortArgsDict']]]]
+        """
+        Destination Port List
+        """
+        dscps: NotRequired[pulumi.Input[Sequence[pulumi.Input[int]]]]
+        """
+        DSCP number
+        """
+        icmp_messages: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        ICMP Message
+        """
+        packet_length: NotRequired[pulumi.Input[int]]
+        """
+        Packet Length
+        """
+        protocols: NotRequired[pulumi.Input[Sequence[pulumi.Input[int]]]]
+        """
+        protocol number list with at least one item
+        """
+        source_data_prefix: NotRequired[pulumi.Input[str]]
+        """
+        Source Data IP Prefix
+        """
+        source_data_prefix_list_id: NotRequired[pulumi.Input[str]]
+        source_data_prefix_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        source_ports: NotRequired[pulumi.Input[Sequence[pulumi.Input['TransportIpv4AclFeatureSequenceMatchEntrySourcePortArgsDict']]]]
+        """
+        Source Port List
+        """
+        tcp_state: NotRequired[pulumi.Input[str]]
+        """
+        TCP States
+          - Choices: `syn`
+        """
+elif False:
+    TransportIpv4AclFeatureSequenceMatchEntryArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class TransportIpv4AclFeatureSequenceMatchEntryArgs:
+    def __init__(__self__, *,
+                 destination_data_prefix: Optional[pulumi.Input[str]] = None,
+                 destination_data_prefix_list_id: Optional[pulumi.Input[str]] = None,
+                 destination_data_prefix_variable: Optional[pulumi.Input[str]] = None,
+                 destination_ports: Optional[pulumi.Input[Sequence[pulumi.Input['TransportIpv4AclFeatureSequenceMatchEntryDestinationPortArgs']]]] = None,
+                 dscps: Optional[pulumi.Input[Sequence[pulumi.Input[int]]]] = None,
+                 icmp_messages: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
+                 packet_length: Optional[pulumi.Input[int]] = None,
+                 protocols: Optional[pulumi.Input[Sequence[pulumi.Input[int]]]] = None,
+                 source_data_prefix: Optional[pulumi.Input[str]] = None,
+                 source_data_prefix_list_id: Optional[pulumi.Input[str]] = None,
+                 source_data_prefix_variable: Optional[pulumi.Input[str]] = None,
+                 source_ports: Optional[pulumi.Input[Sequence[pulumi.Input['TransportIpv4AclFeatureSequenceMatchEntrySourcePortArgs']]]] = None,
+                 tcp_state: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[str] destination_data_prefix: Destination Data IP Prefix
+        :param pulumi.Input[str] destination_data_prefix_variable: Variable name
+        :param pulumi.Input[Sequence[pulumi.Input['TransportIpv4AclFeatureSequenceMatchEntryDestinationPortArgs']]] destination_ports: Destination Port List
+        :param pulumi.Input[Sequence[pulumi.Input[int]]] dscps: DSCP number
+        :param pulumi.Input[Sequence[pulumi.Input[str]]] icmp_messages: ICMP Message
+        :param pulumi.Input[int] packet_length: Packet Length
+        :param pulumi.Input[Sequence[pulumi.Input[int]]] protocols: protocol number list with at least one item
+        :param pulumi.Input[str] source_data_prefix: Source Data IP Prefix
+        :param pulumi.Input[str] source_data_prefix_variable: Variable name
+        :param pulumi.Input[Sequence[pulumi.Input['TransportIpv4AclFeatureSequenceMatchEntrySourcePortArgs']]] source_ports: Source Port List
+        :param pulumi.Input[str] tcp_state: TCP States
+                 - Choices: `syn`
+        """
+        if destination_data_prefix is not None:
+            pulumi.set(__self__, "destination_data_prefix", destination_data_prefix)
+        if destination_data_prefix_list_id is not None:
+            pulumi.set(__self__, "destination_data_prefix_list_id", destination_data_prefix_list_id)
+        if destination_data_prefix_variable is not None:
+            pulumi.set(__self__, "destination_data_prefix_variable", destination_data_prefix_variable)
+        if destination_ports is not None:
+            pulumi.set(__self__, "destination_ports", destination_ports)
+        if dscps is not None:
+            pulumi.set(__self__, "dscps", dscps)
+        if icmp_messages is not None:
+            pulumi.set(__self__, "icmp_messages", icmp_messages)
+        if packet_length is not None:
+            pulumi.set(__self__, "packet_length", packet_length)
+        if protocols is not None:
+            pulumi.set(__self__, "protocols", protocols)
+        if source_data_prefix is not None:
+            pulumi.set(__self__, "source_data_prefix", source_data_prefix)
+        if source_data_prefix_list_id is not None:
+            pulumi.set(__self__, "source_data_prefix_list_id", source_data_prefix_list_id)
+        if source_data_prefix_variable is not None:
+            pulumi.set(__self__, "source_data_prefix_variable", source_data_prefix_variable)
+        if source_ports is not None:
+            pulumi.set(__self__, "source_ports", source_ports)
+        if tcp_state is not None:
+            pulumi.set(__self__, "tcp_state", tcp_state)
+
+    @property
+    @pulumi.getter(name="destinationDataPrefix")
+    def destination_data_prefix(self) -> Optional[pulumi.Input[str]]:
+        """
+        Destination Data IP Prefix
+        """
+        return pulumi.get(self, "destination_data_prefix")
+
+    @destination_data_prefix.setter
+    def destination_data_prefix(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "destination_data_prefix", value)
+
+    @property
+    @pulumi.getter(name="destinationDataPrefixListId")
+    def destination_data_prefix_list_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "destination_data_prefix_list_id")
+
+    @destination_data_prefix_list_id.setter
+    def destination_data_prefix_list_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "destination_data_prefix_list_id", value)
+
+    @property
+    @pulumi.getter(name="destinationDataPrefixVariable")
+    def destination_data_prefix_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "destination_data_prefix_variable")
+
+    @destination_data_prefix_variable.setter
+    def destination_data_prefix_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "destination_data_prefix_variable", value)
+
+    @property
+    @pulumi.getter(name="destinationPorts")
+    def destination_ports(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['TransportIpv4AclFeatureSequenceMatchEntryDestinationPortArgs']]]]:
+        """
+        Destination Port List
+        """
+        return pulumi.get(self, "destination_ports")
+
+    @destination_ports.setter
+    def destination_ports(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['TransportIpv4AclFeatureSequenceMatchEntryDestinationPortArgs']]]]):
+        pulumi.set(self, "destination_ports", value)
+
+    @property
+    @pulumi.getter
+    def dscps(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[int]]]]:
+        """
+        DSCP number
+        """
+        return pulumi.get(self, "dscps")
+
+    @dscps.setter
+    def dscps(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[int]]]]):
+        pulumi.set(self, "dscps", value)
+
+    @property
+    @pulumi.getter(name="icmpMessages")
+    def icmp_messages(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]:
+        """
+        ICMP Message
+        """
+        return pulumi.get(self, "icmp_messages")
+
+    @icmp_messages.setter
+    def icmp_messages(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
+        pulumi.set(self, "icmp_messages", value)
+
+    @property
+    @pulumi.getter(name="packetLength")
+    def packet_length(self) -> Optional[pulumi.Input[int]]:
+        """
+        Packet Length
+        """
+        return pulumi.get(self, "packet_length")
+
+    @packet_length.setter
+    def packet_length(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "packet_length", value)
+
+    @property
+    @pulumi.getter
+    def protocols(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[int]]]]:
+        """
+        protocol number list with at least one item
+        """
+        return pulumi.get(self, "protocols")
+
+    @protocols.setter
+    def protocols(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[int]]]]):
+        pulumi.set(self, "protocols", value)
+
+    @property
+    @pulumi.getter(name="sourceDataPrefix")
+    def source_data_prefix(self) -> Optional[pulumi.Input[str]]:
+        """
+        Source Data IP Prefix
+        """
+        return pulumi.get(self, "source_data_prefix")
+
+    @source_data_prefix.setter
+    def source_data_prefix(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "source_data_prefix", value)
+
+    @property
+    @pulumi.getter(name="sourceDataPrefixListId")
+    def source_data_prefix_list_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "source_data_prefix_list_id")
+
+    @source_data_prefix_list_id.setter
+    def source_data_prefix_list_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "source_data_prefix_list_id", value)
+
+    @property
+    @pulumi.getter(name="sourceDataPrefixVariable")
+    def source_data_prefix_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "source_data_prefix_variable")
+
+    @source_data_prefix_variable.setter
+    def source_data_prefix_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "source_data_prefix_variable", value)
+
+    @property
+    @pulumi.getter(name="sourcePorts")
+    def source_ports(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['TransportIpv4AclFeatureSequenceMatchEntrySourcePortArgs']]]]:
+        """
+        Source Port List
+        """
+        return pulumi.get(self, "source_ports")
+
+    @source_ports.setter
+    def source_ports(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['TransportIpv4AclFeatureSequenceMatchEntrySourcePortArgs']]]]):
+        pulumi.set(self, "source_ports", value)
+
+    @property
+    @pulumi.getter(name="tcpState")
+    def tcp_state(self) -> Optional[pulumi.Input[str]]:
+        """
+        TCP States
+          - Choices: `syn`
+        """
+        return pulumi.get(self, "tcp_state")
+
+    @tcp_state.setter
+    def tcp_state(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "tcp_state", value)
+
+
+if not MYPY:
+    class TransportIpv4AclFeatureSequenceMatchEntryDestinationPortArgsDict(TypedDict):
+        port: NotRequired[pulumi.Input[int]]
+        """
+        destination port range or individual port number
+        """
+elif False:
+    TransportIpv4AclFeatureSequenceMatchEntryDestinationPortArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class TransportIpv4AclFeatureSequenceMatchEntryDestinationPortArgs:
+    def __init__(__self__, *,
+                 port: Optional[pulumi.Input[int]] = None):
+        """
+        :param pulumi.Input[int] port: destination port range or individual port number
+        """
+        if port is not None:
+            pulumi.set(__self__, "port", port)
+
+    @property
+    @pulumi.getter
+    def port(self) -> Optional[pulumi.Input[int]]:
+        """
+        destination port range or individual port number
+        """
+        return pulumi.get(self, "port")
+
+    @port.setter
+    def port(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "port", value)
+
+
+if not MYPY:
+    class TransportIpv4AclFeatureSequenceMatchEntrySourcePortArgsDict(TypedDict):
+        port: NotRequired[pulumi.Input[int]]
+        """
+        source port range or individual port number
+        """
+elif False:
+    TransportIpv4AclFeatureSequenceMatchEntrySourcePortArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class TransportIpv4AclFeatureSequenceMatchEntrySourcePortArgs:
+    def __init__(__self__, *,
+                 port: Optional[pulumi.Input[int]] = None):
+        """
+        :param pulumi.Input[int] port: source port range or individual port number
+        """
+        if port is not None:
+            pulumi.set(__self__, "port", port)
+
+    @property
+    @pulumi.getter
+    def port(self) -> Optional[pulumi.Input[int]]:
+        """
+        source port range or individual port number
+        """
+        return pulumi.get(self, "port")
+
+    @port.setter
+    def port(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "port", value)
+
+
+if not MYPY:
+    class TransportIpv6AclFeatureSequenceArgsDict(TypedDict):
+        actions: NotRequired[pulumi.Input[Sequence[pulumi.Input['TransportIpv6AclFeatureSequenceActionArgsDict']]]]
+        """
+        Define list of actions
+        """
+        base_action: NotRequired[pulumi.Input[str]]
+        """
+        Base Action
+          - Choices: `drop`, `accept`
+          - Default value: `accept`
+        """
+        match_entries: NotRequired[pulumi.Input[Sequence[pulumi.Input['TransportIpv6AclFeatureSequenceMatchEntryArgsDict']]]]
+        """
+        Define match conditions
+        """
+        sequence_id: NotRequired[pulumi.Input[int]]
+        """
+        Sequence Id
+          - Range: `1`-`65536`
+        """
+        sequence_name: NotRequired[pulumi.Input[str]]
+        """
+        Sequence Name
+        """
+elif False:
+    TransportIpv6AclFeatureSequenceArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class TransportIpv6AclFeatureSequenceArgs:
+    def __init__(__self__, *,
+                 actions: Optional[pulumi.Input[Sequence[pulumi.Input['TransportIpv6AclFeatureSequenceActionArgs']]]] = None,
+                 base_action: Optional[pulumi.Input[str]] = None,
+                 match_entries: Optional[pulumi.Input[Sequence[pulumi.Input['TransportIpv6AclFeatureSequenceMatchEntryArgs']]]] = None,
+                 sequence_id: Optional[pulumi.Input[int]] = None,
+                 sequence_name: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[Sequence[pulumi.Input['TransportIpv6AclFeatureSequenceActionArgs']]] actions: Define list of actions
+        :param pulumi.Input[str] base_action: Base Action
+                 - Choices: `drop`, `accept`
+                 - Default value: `accept`
+        :param pulumi.Input[Sequence[pulumi.Input['TransportIpv6AclFeatureSequenceMatchEntryArgs']]] match_entries: Define match conditions
+        :param pulumi.Input[int] sequence_id: Sequence Id
+                 - Range: `1`-`65536`
+        :param pulumi.Input[str] sequence_name: Sequence Name
+        """
+        if actions is not None:
+            pulumi.set(__self__, "actions", actions)
+        if base_action is not None:
+            pulumi.set(__self__, "base_action", base_action)
+        if match_entries is not None:
+            pulumi.set(__self__, "match_entries", match_entries)
+        if sequence_id is not None:
+            pulumi.set(__self__, "sequence_id", sequence_id)
+        if sequence_name is not None:
+            pulumi.set(__self__, "sequence_name", sequence_name)
+
+    @property
+    @pulumi.getter
+    def actions(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['TransportIpv6AclFeatureSequenceActionArgs']]]]:
+        """
+        Define list of actions
+        """
+        return pulumi.get(self, "actions")
+
+    @actions.setter
+    def actions(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['TransportIpv6AclFeatureSequenceActionArgs']]]]):
+        pulumi.set(self, "actions", value)
+
+    @property
+    @pulumi.getter(name="baseAction")
+    def base_action(self) -> Optional[pulumi.Input[str]]:
+        """
+        Base Action
+          - Choices: `drop`, `accept`
+          - Default value: `accept`
+        """
+        return pulumi.get(self, "base_action")
+
+    @base_action.setter
+    def base_action(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "base_action", value)
+
+    @property
+    @pulumi.getter(name="matchEntries")
+    def match_entries(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['TransportIpv6AclFeatureSequenceMatchEntryArgs']]]]:
+        """
+        Define match conditions
+        """
+        return pulumi.get(self, "match_entries")
+
+    @match_entries.setter
+    def match_entries(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['TransportIpv6AclFeatureSequenceMatchEntryArgs']]]]):
+        pulumi.set(self, "match_entries", value)
+
+    @property
+    @pulumi.getter(name="sequenceId")
+    def sequence_id(self) -> Optional[pulumi.Input[int]]:
+        """
+        Sequence Id
+          - Range: `1`-`65536`
+        """
+        return pulumi.get(self, "sequence_id")
+
+    @sequence_id.setter
+    def sequence_id(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "sequence_id", value)
+
+    @property
+    @pulumi.getter(name="sequenceName")
+    def sequence_name(self) -> Optional[pulumi.Input[str]]:
+        """
+        Sequence Name
+        """
+        return pulumi.get(self, "sequence_name")
+
+    @sequence_name.setter
+    def sequence_name(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "sequence_name", value)
+
+
+if not MYPY:
+    class TransportIpv6AclFeatureSequenceActionArgsDict(TypedDict):
+        accept_counter_name: NotRequired[pulumi.Input[str]]
+        """
+        Counter Name
+        """
+        accept_log: NotRequired[pulumi.Input[bool]]
+        """
+        Enable Log
+          - Default value: `false`
+        """
+        accept_mirror_list_id: NotRequired[pulumi.Input[str]]
+        accept_policer_id: NotRequired[pulumi.Input[str]]
+        accept_set_next_hop: NotRequired[pulumi.Input[str]]
+        """
+        Set Next Hop (IPV6 address)
+        """
+        accept_traffic_class: NotRequired[pulumi.Input[int]]
+        """
+        set traffic class number
+          - Range: `0`-`63`
+        """
+        drop_counter_name: NotRequired[pulumi.Input[str]]
+        """
+        Counter Name
+        """
+        drop_log: NotRequired[pulumi.Input[bool]]
+        """
+        Enable Log
+          - Default value: `false`
+        """
+elif False:
+    TransportIpv6AclFeatureSequenceActionArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class TransportIpv6AclFeatureSequenceActionArgs:
+    def __init__(__self__, *,
+                 accept_counter_name: Optional[pulumi.Input[str]] = None,
+                 accept_log: Optional[pulumi.Input[bool]] = None,
+                 accept_mirror_list_id: Optional[pulumi.Input[str]] = None,
+                 accept_policer_id: Optional[pulumi.Input[str]] = None,
+                 accept_set_next_hop: Optional[pulumi.Input[str]] = None,
+                 accept_traffic_class: Optional[pulumi.Input[int]] = None,
+                 drop_counter_name: Optional[pulumi.Input[str]] = None,
+                 drop_log: Optional[pulumi.Input[bool]] = None):
+        """
+        :param pulumi.Input[str] accept_counter_name: Counter Name
+        :param pulumi.Input[bool] accept_log: Enable Log
+                 - Default value: `false`
+        :param pulumi.Input[str] accept_set_next_hop: Set Next Hop (IPV6 address)
+        :param pulumi.Input[int] accept_traffic_class: set traffic class number
+                 - Range: `0`-`63`
+        :param pulumi.Input[str] drop_counter_name: Counter Name
+        :param pulumi.Input[bool] drop_log: Enable Log
+                 - Default value: `false`
+        """
+        if accept_counter_name is not None:
+            pulumi.set(__self__, "accept_counter_name", accept_counter_name)
+        if accept_log is not None:
+            pulumi.set(__self__, "accept_log", accept_log)
+        if accept_mirror_list_id is not None:
+            pulumi.set(__self__, "accept_mirror_list_id", accept_mirror_list_id)
+        if accept_policer_id is not None:
+            pulumi.set(__self__, "accept_policer_id", accept_policer_id)
+        if accept_set_next_hop is not None:
+            pulumi.set(__self__, "accept_set_next_hop", accept_set_next_hop)
+        if accept_traffic_class is not None:
+            pulumi.set(__self__, "accept_traffic_class", accept_traffic_class)
+        if drop_counter_name is not None:
+            pulumi.set(__self__, "drop_counter_name", drop_counter_name)
+        if drop_log is not None:
+            pulumi.set(__self__, "drop_log", drop_log)
+
+    @property
+    @pulumi.getter(name="acceptCounterName")
+    def accept_counter_name(self) -> Optional[pulumi.Input[str]]:
+        """
+        Counter Name
+        """
+        return pulumi.get(self, "accept_counter_name")
+
+    @accept_counter_name.setter
+    def accept_counter_name(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "accept_counter_name", value)
+
+    @property
+    @pulumi.getter(name="acceptLog")
+    def accept_log(self) -> Optional[pulumi.Input[bool]]:
+        """
+        Enable Log
+          - Default value: `false`
+        """
+        return pulumi.get(self, "accept_log")
+
+    @accept_log.setter
+    def accept_log(self, value: Optional[pulumi.Input[bool]]):
+        pulumi.set(self, "accept_log", value)
+
+    @property
+    @pulumi.getter(name="acceptMirrorListId")
+    def accept_mirror_list_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "accept_mirror_list_id")
+
+    @accept_mirror_list_id.setter
+    def accept_mirror_list_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "accept_mirror_list_id", value)
+
+    @property
+    @pulumi.getter(name="acceptPolicerId")
+    def accept_policer_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "accept_policer_id")
+
+    @accept_policer_id.setter
+    def accept_policer_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "accept_policer_id", value)
+
+    @property
+    @pulumi.getter(name="acceptSetNextHop")
+    def accept_set_next_hop(self) -> Optional[pulumi.Input[str]]:
+        """
+        Set Next Hop (IPV6 address)
+        """
+        return pulumi.get(self, "accept_set_next_hop")
+
+    @accept_set_next_hop.setter
+    def accept_set_next_hop(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "accept_set_next_hop", value)
+
+    @property
+    @pulumi.getter(name="acceptTrafficClass")
+    def accept_traffic_class(self) -> Optional[pulumi.Input[int]]:
+        """
+        set traffic class number
+          - Range: `0`-`63`
+        """
+        return pulumi.get(self, "accept_traffic_class")
+
+    @accept_traffic_class.setter
+    def accept_traffic_class(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "accept_traffic_class", value)
+
+    @property
+    @pulumi.getter(name="dropCounterName")
+    def drop_counter_name(self) -> Optional[pulumi.Input[str]]:
+        """
+        Counter Name
+        """
+        return pulumi.get(self, "drop_counter_name")
+
+    @drop_counter_name.setter
+    def drop_counter_name(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "drop_counter_name", value)
+
+    @property
+    @pulumi.getter(name="dropLog")
+    def drop_log(self) -> Optional[pulumi.Input[bool]]:
+        """
+        Enable Log
+          - Default value: `false`
+        """
+        return pulumi.get(self, "drop_log")
+
+    @drop_log.setter
+    def drop_log(self, value: Optional[pulumi.Input[bool]]):
+        pulumi.set(self, "drop_log", value)
+
+
+if not MYPY:
+    class TransportIpv6AclFeatureSequenceMatchEntryArgsDict(TypedDict):
+        destination_data_prefix: NotRequired[pulumi.Input[str]]
+        """
+        Destination Data IP Prefix
+        """
+        destination_data_prefix_list_id: NotRequired[pulumi.Input[str]]
+        destination_ports: NotRequired[pulumi.Input[Sequence[pulumi.Input['TransportIpv6AclFeatureSequenceMatchEntryDestinationPortArgsDict']]]]
+        """
+        Destination Port List
+        """
+        icmp_messages: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        ICMP6 Message
+        """
+        next_header: NotRequired[pulumi.Input[int]]
+        """
+        next header number
+          - Range: `0`-`255`
+        """
+        packet_length: NotRequired[pulumi.Input[int]]
+        """
+        Packet Length
+        """
+        source_data_prefix: NotRequired[pulumi.Input[str]]
+        """
+        Source Data IP Prefix
+        """
+        source_data_prefix_list_id: NotRequired[pulumi.Input[str]]
+        source_ports: NotRequired[pulumi.Input[Sequence[pulumi.Input['TransportIpv6AclFeatureSequenceMatchEntrySourcePortArgsDict']]]]
+        """
+        Source Port List
+        """
+        tcp_state: NotRequired[pulumi.Input[str]]
+        """
+        TCP States
+          - Choices: `syn`
+        """
+        traffic_classes: NotRequired[pulumi.Input[Sequence[pulumi.Input[int]]]]
+        """
+        Select Traffic Class
+        """
+elif False:
+    TransportIpv6AclFeatureSequenceMatchEntryArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class TransportIpv6AclFeatureSequenceMatchEntryArgs:
+    def __init__(__self__, *,
+                 destination_data_prefix: Optional[pulumi.Input[str]] = None,
+                 destination_data_prefix_list_id: Optional[pulumi.Input[str]] = None,
+                 destination_ports: Optional[pulumi.Input[Sequence[pulumi.Input['TransportIpv6AclFeatureSequenceMatchEntryDestinationPortArgs']]]] = None,
+                 icmp_messages: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
+                 next_header: Optional[pulumi.Input[int]] = None,
+                 packet_length: Optional[pulumi.Input[int]] = None,
+                 source_data_prefix: Optional[pulumi.Input[str]] = None,
+                 source_data_prefix_list_id: Optional[pulumi.Input[str]] = None,
+                 source_ports: Optional[pulumi.Input[Sequence[pulumi.Input['TransportIpv6AclFeatureSequenceMatchEntrySourcePortArgs']]]] = None,
+                 tcp_state: Optional[pulumi.Input[str]] = None,
+                 traffic_classes: Optional[pulumi.Input[Sequence[pulumi.Input[int]]]] = None):
+        """
+        :param pulumi.Input[str] destination_data_prefix: Destination Data IP Prefix
+        :param pulumi.Input[Sequence[pulumi.Input['TransportIpv6AclFeatureSequenceMatchEntryDestinationPortArgs']]] destination_ports: Destination Port List
+        :param pulumi.Input[Sequence[pulumi.Input[str]]] icmp_messages: ICMP6 Message
+        :param pulumi.Input[int] next_header: next header number
+                 - Range: `0`-`255`
+        :param pulumi.Input[int] packet_length: Packet Length
+        :param pulumi.Input[str] source_data_prefix: Source Data IP Prefix
+        :param pulumi.Input[Sequence[pulumi.Input['TransportIpv6AclFeatureSequenceMatchEntrySourcePortArgs']]] source_ports: Source Port List
+        :param pulumi.Input[str] tcp_state: TCP States
+                 - Choices: `syn`
+        :param pulumi.Input[Sequence[pulumi.Input[int]]] traffic_classes: Select Traffic Class
+        """
+        if destination_data_prefix is not None:
+            pulumi.set(__self__, "destination_data_prefix", destination_data_prefix)
+        if destination_data_prefix_list_id is not None:
+            pulumi.set(__self__, "destination_data_prefix_list_id", destination_data_prefix_list_id)
+        if destination_ports is not None:
+            pulumi.set(__self__, "destination_ports", destination_ports)
+        if icmp_messages is not None:
+            pulumi.set(__self__, "icmp_messages", icmp_messages)
+        if next_header is not None:
+            pulumi.set(__self__, "next_header", next_header)
+        if packet_length is not None:
+            pulumi.set(__self__, "packet_length", packet_length)
+        if source_data_prefix is not None:
+            pulumi.set(__self__, "source_data_prefix", source_data_prefix)
+        if source_data_prefix_list_id is not None:
+            pulumi.set(__self__, "source_data_prefix_list_id", source_data_prefix_list_id)
+        if source_ports is not None:
+            pulumi.set(__self__, "source_ports", source_ports)
+        if tcp_state is not None:
+            pulumi.set(__self__, "tcp_state", tcp_state)
+        if traffic_classes is not None:
+            pulumi.set(__self__, "traffic_classes", traffic_classes)
+
+    @property
+    @pulumi.getter(name="destinationDataPrefix")
+    def destination_data_prefix(self) -> Optional[pulumi.Input[str]]:
+        """
+        Destination Data IP Prefix
+        """
+        return pulumi.get(self, "destination_data_prefix")
+
+    @destination_data_prefix.setter
+    def destination_data_prefix(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "destination_data_prefix", value)
+
+    @property
+    @pulumi.getter(name="destinationDataPrefixListId")
+    def destination_data_prefix_list_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "destination_data_prefix_list_id")
+
+    @destination_data_prefix_list_id.setter
+    def destination_data_prefix_list_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "destination_data_prefix_list_id", value)
+
+    @property
+    @pulumi.getter(name="destinationPorts")
+    def destination_ports(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['TransportIpv6AclFeatureSequenceMatchEntryDestinationPortArgs']]]]:
+        """
+        Destination Port List
+        """
+        return pulumi.get(self, "destination_ports")
+
+    @destination_ports.setter
+    def destination_ports(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['TransportIpv6AclFeatureSequenceMatchEntryDestinationPortArgs']]]]):
+        pulumi.set(self, "destination_ports", value)
+
+    @property
+    @pulumi.getter(name="icmpMessages")
+    def icmp_messages(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]:
+        """
+        ICMP6 Message
+        """
+        return pulumi.get(self, "icmp_messages")
+
+    @icmp_messages.setter
+    def icmp_messages(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
+        pulumi.set(self, "icmp_messages", value)
+
+    @property
+    @pulumi.getter(name="nextHeader")
+    def next_header(self) -> Optional[pulumi.Input[int]]:
+        """
+        next header number
+          - Range: `0`-`255`
+        """
+        return pulumi.get(self, "next_header")
+
+    @next_header.setter
+    def next_header(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "next_header", value)
+
+    @property
+    @pulumi.getter(name="packetLength")
+    def packet_length(self) -> Optional[pulumi.Input[int]]:
+        """
+        Packet Length
+        """
+        return pulumi.get(self, "packet_length")
+
+    @packet_length.setter
+    def packet_length(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "packet_length", value)
+
+    @property
+    @pulumi.getter(name="sourceDataPrefix")
+    def source_data_prefix(self) -> Optional[pulumi.Input[str]]:
+        """
+        Source Data IP Prefix
+        """
+        return pulumi.get(self, "source_data_prefix")
+
+    @source_data_prefix.setter
+    def source_data_prefix(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "source_data_prefix", value)
+
+    @property
+    @pulumi.getter(name="sourceDataPrefixListId")
+    def source_data_prefix_list_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "source_data_prefix_list_id")
+
+    @source_data_prefix_list_id.setter
+    def source_data_prefix_list_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "source_data_prefix_list_id", value)
+
+    @property
+    @pulumi.getter(name="sourcePorts")
+    def source_ports(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['TransportIpv6AclFeatureSequenceMatchEntrySourcePortArgs']]]]:
+        """
+        Source Port List
+        """
+        return pulumi.get(self, "source_ports")
+
+    @source_ports.setter
+    def source_ports(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['TransportIpv6AclFeatureSequenceMatchEntrySourcePortArgs']]]]):
+        pulumi.set(self, "source_ports", value)
+
+    @property
+    @pulumi.getter(name="tcpState")
+    def tcp_state(self) -> Optional[pulumi.Input[str]]:
+        """
+        TCP States
+          - Choices: `syn`
+        """
+        return pulumi.get(self, "tcp_state")
+
+    @tcp_state.setter
+    def tcp_state(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "tcp_state", value)
+
+    @property
+    @pulumi.getter(name="trafficClasses")
+    def traffic_classes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[int]]]]:
+        """
+        Select Traffic Class
+        """
+        return pulumi.get(self, "traffic_classes")
+
+    @traffic_classes.setter
+    def traffic_classes(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[int]]]]):
+        pulumi.set(self, "traffic_classes", value)
+
+
+if not MYPY:
+    class TransportIpv6AclFeatureSequenceMatchEntryDestinationPortArgsDict(TypedDict):
+        port: NotRequired[pulumi.Input[int]]
+        """
+        destination port range or individual port number
+        """
+elif False:
+    TransportIpv6AclFeatureSequenceMatchEntryDestinationPortArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class TransportIpv6AclFeatureSequenceMatchEntryDestinationPortArgs:
+    def __init__(__self__, *,
+                 port: Optional[pulumi.Input[int]] = None):
+        """
+        :param pulumi.Input[int] port: destination port range or individual port number
+        """
+        if port is not None:
+            pulumi.set(__self__, "port", port)
+
+    @property
+    @pulumi.getter
+    def port(self) -> Optional[pulumi.Input[int]]:
+        """
+        destination port range or individual port number
+        """
+        return pulumi.get(self, "port")
+
+    @port.setter
+    def port(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "port", value)
+
+
+if not MYPY:
+    class TransportIpv6AclFeatureSequenceMatchEntrySourcePortArgsDict(TypedDict):
+        port: NotRequired[pulumi.Input[int]]
+        """
+        source port range or individual port number
+        """
+elif False:
+    TransportIpv6AclFeatureSequenceMatchEntrySourcePortArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class TransportIpv6AclFeatureSequenceMatchEntrySourcePortArgs:
+    def __init__(__self__, *,
+                 port: Optional[pulumi.Input[int]] = None):
+        """
+        :param pulumi.Input[int] port: source port range or individual port number
+        """
+        if port is not None:
+            pulumi.set(__self__, "port", port)
+
+    @property
+    @pulumi.getter
+    def port(self) -> Optional[pulumi.Input[int]]:
+        """
+        source port range or individual port number
+        """
+        return pulumi.get(self, "port")
+
+    @port.setter
+    def port(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "port", value)
+
+
+if not MYPY:
     class TransportIpv6TrackerGroupFeatureTrackerElementArgsDict(TypedDict):
         tracker_id: NotRequired[pulumi.Input[str]]
 elif False:
@@ -58041,9 +65676,14 @@ class TransportManagementVpnFeatureIpv4StaticRouteNextHopArgs:
 
 if not MYPY:
     class TransportManagementVpnFeatureIpv6StaticRouteArgsDict(TypedDict):
+        gateway: NotRequired[pulumi.Input[str]]
+        """
+        Gateway
+          - Choices: `next_hop`, `null0`, `nat`
+        """
         nat: NotRequired[pulumi.Input[str]]
         """
-        IPv6 Nat
+        IPv6 Nat, Attribute conditional on `gateway` being equal to `nat`
           - Choices: `NAT64`, `NAT66`
         """
         nat_variable: NotRequired[pulumi.Input[str]]
@@ -58052,11 +65692,11 @@ if not MYPY:
         """
         next_hops: NotRequired[pulumi.Input[Sequence[pulumi.Input['TransportManagementVpnFeatureIpv6StaticRouteNextHopArgsDict']]]]
         """
-        IPv6 Route Gateway Next Hop
+        IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `next_hop`
         """
         null0: NotRequired[pulumi.Input[bool]]
         """
-        IPv6 Route Gateway Next Hop
+        IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `null0`
         """
         prefix: NotRequired[pulumi.Input[str]]
         """
@@ -58072,6 +65712,7 @@ elif False:
 @pulumi.input_type
 class TransportManagementVpnFeatureIpv6StaticRouteArgs:
     def __init__(__self__, *,
+                 gateway: Optional[pulumi.Input[str]] = None,
                  nat: Optional[pulumi.Input[str]] = None,
                  nat_variable: Optional[pulumi.Input[str]] = None,
                  next_hops: Optional[pulumi.Input[Sequence[pulumi.Input['TransportManagementVpnFeatureIpv6StaticRouteNextHopArgs']]]] = None,
@@ -58079,14 +65720,18 @@ class TransportManagementVpnFeatureIpv6StaticRouteArgs:
                  prefix: Optional[pulumi.Input[str]] = None,
                  prefix_variable: Optional[pulumi.Input[str]] = None):
         """
-        :param pulumi.Input[str] nat: IPv6 Nat
+        :param pulumi.Input[str] gateway: Gateway
+                 - Choices: `next_hop`, `null0`, `nat`
+        :param pulumi.Input[str] nat: IPv6 Nat, Attribute conditional on `gateway` being equal to `nat`
                  - Choices: `NAT64`, `NAT66`
         :param pulumi.Input[str] nat_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input['TransportManagementVpnFeatureIpv6StaticRouteNextHopArgs']]] next_hops: IPv6 Route Gateway Next Hop
-        :param pulumi.Input[bool] null0: IPv6 Route Gateway Next Hop
+        :param pulumi.Input[Sequence[pulumi.Input['TransportManagementVpnFeatureIpv6StaticRouteNextHopArgs']]] next_hops: IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `next_hop`
+        :param pulumi.Input[bool] null0: IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `null0`
         :param pulumi.Input[str] prefix: Prefix
         :param pulumi.Input[str] prefix_variable: Variable name
         """
+        if gateway is not None:
+            pulumi.set(__self__, "gateway", gateway)
         if nat is not None:
             pulumi.set(__self__, "nat", nat)
         if nat_variable is not None:
@@ -58102,9 +65747,22 @@ class TransportManagementVpnFeatureIpv6StaticRouteArgs:
 
     @property
     @pulumi.getter
+    def gateway(self) -> Optional[pulumi.Input[str]]:
+        """
+        Gateway
+          - Choices: `next_hop`, `null0`, `nat`
+        """
+        return pulumi.get(self, "gateway")
+
+    @gateway.setter
+    def gateway(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "gateway", value)
+
+    @property
+    @pulumi.getter
     def nat(self) -> Optional[pulumi.Input[str]]:
         """
-        IPv6 Nat
+        IPv6 Nat, Attribute conditional on `gateway` being equal to `nat`
           - Choices: `NAT64`, `NAT66`
         """
         return pulumi.get(self, "nat")
@@ -58129,7 +65787,7 @@ class TransportManagementVpnFeatureIpv6StaticRouteArgs:
     @pulumi.getter(name="nextHops")
     def next_hops(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['TransportManagementVpnFeatureIpv6StaticRouteNextHopArgs']]]]:
         """
-        IPv6 Route Gateway Next Hop
+        IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `next_hop`
         """
         return pulumi.get(self, "next_hops")
 
@@ -58141,7 +65799,7 @@ class TransportManagementVpnFeatureIpv6StaticRouteArgs:
     @pulumi.getter
     def null0(self) -> Optional[pulumi.Input[bool]]:
         """
-        IPv6 Route Gateway Next Hop
+        IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `null0`
         """
         return pulumi.get(self, "null0")
 
@@ -58188,6 +65846,7 @@ if not MYPY:
         """
         Administrative distance
           - Range: `1`-`254`
+          - Default value: `1`
         """
         administrative_distance_variable: NotRequired[pulumi.Input[str]]
         """
@@ -58208,6 +65867,7 @@ class TransportManagementVpnFeatureIpv6StaticRouteNextHopArgs:
         :param pulumi.Input[str] address_variable: Variable name
         :param pulumi.Input[int] administrative_distance: Administrative distance
                  - Range: `1`-`254`
+                 - Default value: `1`
         :param pulumi.Input[str] administrative_distance_variable: Variable name
         """
         if address is not None:
@@ -58249,6 +65909,7 @@ class TransportManagementVpnFeatureIpv6StaticRouteNextHopArgs:
         """
         Administrative distance
           - Range: `1`-`254`
+          - Default value: `1`
         """
         return pulumi.get(self, "administrative_distance")
 
@@ -64454,6 +72115,566 @@ class TransportRoutingOspfv3Ipv6FeatureRedistributeArgs:
     @route_policy_id.setter
     def route_policy_id(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "route_policy_id", value)
+
+
+if not MYPY:
+    class TransportT1E1ControllerFeatureEntryArgsDict(TypedDict):
+        cable_length: NotRequired[pulumi.Input[str]]
+        """
+        Cable Config
+          - Choices: `short`, `long`
+        """
+        channel_groups: NotRequired[pulumi.Input[Sequence[pulumi.Input['TransportT1E1ControllerFeatureEntryChannelGroupArgsDict']]]]
+        """
+        Channel Group List
+        """
+        clock_source: NotRequired[pulumi.Input[str]]
+        """
+        Clock Source
+          - Choices: `line`, `internal`, `loop-timed`, `network`
+        """
+        description: NotRequired[pulumi.Input[str]]
+        """
+        Description
+        """
+        description_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        e1_description: NotRequired[pulumi.Input[str]]
+        """
+        Card Type
+          - Choices: `E1`
+        """
+        e1_framing: NotRequired[pulumi.Input[str]]
+        """
+        Framing
+          - Choices: `crc4`, `no-crc4`
+        """
+        e1_framing_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        e1_linecode: NotRequired[pulumi.Input[str]]
+        """
+        LineCode
+          - Choices: `ami`, `hdb3`
+        """
+        e1_linecode_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        length_long: NotRequired[pulumi.Input[str]]
+        """
+        length, Attribute conditional on `cable_length` being equal to `long`
+          - Choices: `-15db`, `-22.5db`, `-7.5db`, `0db`
+        """
+        length_long_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        length_short: NotRequired[pulumi.Input[str]]
+        """
+        length, Attribute conditional on `cable_length` being equal to `short`
+          - Choices: `110ft`, `220ft`, `330ft`, `440ft`, `550ft`, `660ft`
+        """
+        length_short_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        line_mode: NotRequired[pulumi.Input[str]]
+        """
+        Line Mode
+          - Choices: `secondary`, `primary`
+        """
+        line_mode_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        t1_description: NotRequired[pulumi.Input[str]]
+        """
+        Card Type
+          - Choices: `T1`
+        """
+        t1_framing: NotRequired[pulumi.Input[str]]
+        """
+        Framing
+          - Choices: `esf`, `sf`
+        """
+        t1_framing_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        t1_linecode: NotRequired[pulumi.Input[str]]
+        """
+        LineCode
+          - Choices: `ami`, `b8zs`
+        """
+        t1_linecode_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    TransportT1E1ControllerFeatureEntryArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class TransportT1E1ControllerFeatureEntryArgs:
+    def __init__(__self__, *,
+                 cable_length: Optional[pulumi.Input[str]] = None,
+                 channel_groups: Optional[pulumi.Input[Sequence[pulumi.Input['TransportT1E1ControllerFeatureEntryChannelGroupArgs']]]] = None,
+                 clock_source: Optional[pulumi.Input[str]] = None,
+                 description: Optional[pulumi.Input[str]] = None,
+                 description_variable: Optional[pulumi.Input[str]] = None,
+                 e1_description: Optional[pulumi.Input[str]] = None,
+                 e1_framing: Optional[pulumi.Input[str]] = None,
+                 e1_framing_variable: Optional[pulumi.Input[str]] = None,
+                 e1_linecode: Optional[pulumi.Input[str]] = None,
+                 e1_linecode_variable: Optional[pulumi.Input[str]] = None,
+                 length_long: Optional[pulumi.Input[str]] = None,
+                 length_long_variable: Optional[pulumi.Input[str]] = None,
+                 length_short: Optional[pulumi.Input[str]] = None,
+                 length_short_variable: Optional[pulumi.Input[str]] = None,
+                 line_mode: Optional[pulumi.Input[str]] = None,
+                 line_mode_variable: Optional[pulumi.Input[str]] = None,
+                 t1_description: Optional[pulumi.Input[str]] = None,
+                 t1_framing: Optional[pulumi.Input[str]] = None,
+                 t1_framing_variable: Optional[pulumi.Input[str]] = None,
+                 t1_linecode: Optional[pulumi.Input[str]] = None,
+                 t1_linecode_variable: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[str] cable_length: Cable Config
+                 - Choices: `short`, `long`
+        :param pulumi.Input[Sequence[pulumi.Input['TransportT1E1ControllerFeatureEntryChannelGroupArgs']]] channel_groups: Channel Group List
+        :param pulumi.Input[str] clock_source: Clock Source
+                 - Choices: `line`, `internal`, `loop-timed`, `network`
+        :param pulumi.Input[str] description: Description
+        :param pulumi.Input[str] description_variable: Variable name
+        :param pulumi.Input[str] e1_description: Card Type
+                 - Choices: `E1`
+        :param pulumi.Input[str] e1_framing: Framing
+                 - Choices: `crc4`, `no-crc4`
+        :param pulumi.Input[str] e1_framing_variable: Variable name
+        :param pulumi.Input[str] e1_linecode: LineCode
+                 - Choices: `ami`, `hdb3`
+        :param pulumi.Input[str] e1_linecode_variable: Variable name
+        :param pulumi.Input[str] length_long: length, Attribute conditional on `cable_length` being equal to `long`
+                 - Choices: `-15db`, `-22.5db`, `-7.5db`, `0db`
+        :param pulumi.Input[str] length_long_variable: Variable name
+        :param pulumi.Input[str] length_short: length, Attribute conditional on `cable_length` being equal to `short`
+                 - Choices: `110ft`, `220ft`, `330ft`, `440ft`, `550ft`, `660ft`
+        :param pulumi.Input[str] length_short_variable: Variable name
+        :param pulumi.Input[str] line_mode: Line Mode
+                 - Choices: `secondary`, `primary`
+        :param pulumi.Input[str] line_mode_variable: Variable name
+        :param pulumi.Input[str] t1_description: Card Type
+                 - Choices: `T1`
+        :param pulumi.Input[str] t1_framing: Framing
+                 - Choices: `esf`, `sf`
+        :param pulumi.Input[str] t1_framing_variable: Variable name
+        :param pulumi.Input[str] t1_linecode: LineCode
+                 - Choices: `ami`, `b8zs`
+        :param pulumi.Input[str] t1_linecode_variable: Variable name
+        """
+        if cable_length is not None:
+            pulumi.set(__self__, "cable_length", cable_length)
+        if channel_groups is not None:
+            pulumi.set(__self__, "channel_groups", channel_groups)
+        if clock_source is not None:
+            pulumi.set(__self__, "clock_source", clock_source)
+        if description is not None:
+            pulumi.set(__self__, "description", description)
+        if description_variable is not None:
+            pulumi.set(__self__, "description_variable", description_variable)
+        if e1_description is not None:
+            pulumi.set(__self__, "e1_description", e1_description)
+        if e1_framing is not None:
+            pulumi.set(__self__, "e1_framing", e1_framing)
+        if e1_framing_variable is not None:
+            pulumi.set(__self__, "e1_framing_variable", e1_framing_variable)
+        if e1_linecode is not None:
+            pulumi.set(__self__, "e1_linecode", e1_linecode)
+        if e1_linecode_variable is not None:
+            pulumi.set(__self__, "e1_linecode_variable", e1_linecode_variable)
+        if length_long is not None:
+            pulumi.set(__self__, "length_long", length_long)
+        if length_long_variable is not None:
+            pulumi.set(__self__, "length_long_variable", length_long_variable)
+        if length_short is not None:
+            pulumi.set(__self__, "length_short", length_short)
+        if length_short_variable is not None:
+            pulumi.set(__self__, "length_short_variable", length_short_variable)
+        if line_mode is not None:
+            pulumi.set(__self__, "line_mode", line_mode)
+        if line_mode_variable is not None:
+            pulumi.set(__self__, "line_mode_variable", line_mode_variable)
+        if t1_description is not None:
+            pulumi.set(__self__, "t1_description", t1_description)
+        if t1_framing is not None:
+            pulumi.set(__self__, "t1_framing", t1_framing)
+        if t1_framing_variable is not None:
+            pulumi.set(__self__, "t1_framing_variable", t1_framing_variable)
+        if t1_linecode is not None:
+            pulumi.set(__self__, "t1_linecode", t1_linecode)
+        if t1_linecode_variable is not None:
+            pulumi.set(__self__, "t1_linecode_variable", t1_linecode_variable)
+
+    @property
+    @pulumi.getter(name="cableLength")
+    def cable_length(self) -> Optional[pulumi.Input[str]]:
+        """
+        Cable Config
+          - Choices: `short`, `long`
+        """
+        return pulumi.get(self, "cable_length")
+
+    @cable_length.setter
+    def cable_length(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "cable_length", value)
+
+    @property
+    @pulumi.getter(name="channelGroups")
+    def channel_groups(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['TransportT1E1ControllerFeatureEntryChannelGroupArgs']]]]:
+        """
+        Channel Group List
+        """
+        return pulumi.get(self, "channel_groups")
+
+    @channel_groups.setter
+    def channel_groups(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['TransportT1E1ControllerFeatureEntryChannelGroupArgs']]]]):
+        pulumi.set(self, "channel_groups", value)
+
+    @property
+    @pulumi.getter(name="clockSource")
+    def clock_source(self) -> Optional[pulumi.Input[str]]:
+        """
+        Clock Source
+          - Choices: `line`, `internal`, `loop-timed`, `network`
+        """
+        return pulumi.get(self, "clock_source")
+
+    @clock_source.setter
+    def clock_source(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "clock_source", value)
+
+    @property
+    @pulumi.getter
+    def description(self) -> Optional[pulumi.Input[str]]:
+        """
+        Description
+        """
+        return pulumi.get(self, "description")
+
+    @description.setter
+    def description(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "description", value)
+
+    @property
+    @pulumi.getter(name="descriptionVariable")
+    def description_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "description_variable")
+
+    @description_variable.setter
+    def description_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "description_variable", value)
+
+    @property
+    @pulumi.getter(name="e1Description")
+    def e1_description(self) -> Optional[pulumi.Input[str]]:
+        """
+        Card Type
+          - Choices: `E1`
+        """
+        return pulumi.get(self, "e1_description")
+
+    @e1_description.setter
+    def e1_description(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "e1_description", value)
+
+    @property
+    @pulumi.getter(name="e1Framing")
+    def e1_framing(self) -> Optional[pulumi.Input[str]]:
+        """
+        Framing
+          - Choices: `crc4`, `no-crc4`
+        """
+        return pulumi.get(self, "e1_framing")
+
+    @e1_framing.setter
+    def e1_framing(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "e1_framing", value)
+
+    @property
+    @pulumi.getter(name="e1FramingVariable")
+    def e1_framing_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "e1_framing_variable")
+
+    @e1_framing_variable.setter
+    def e1_framing_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "e1_framing_variable", value)
+
+    @property
+    @pulumi.getter(name="e1Linecode")
+    def e1_linecode(self) -> Optional[pulumi.Input[str]]:
+        """
+        LineCode
+          - Choices: `ami`, `hdb3`
+        """
+        return pulumi.get(self, "e1_linecode")
+
+    @e1_linecode.setter
+    def e1_linecode(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "e1_linecode", value)
+
+    @property
+    @pulumi.getter(name="e1LinecodeVariable")
+    def e1_linecode_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "e1_linecode_variable")
+
+    @e1_linecode_variable.setter
+    def e1_linecode_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "e1_linecode_variable", value)
+
+    @property
+    @pulumi.getter(name="lengthLong")
+    def length_long(self) -> Optional[pulumi.Input[str]]:
+        """
+        length, Attribute conditional on `cable_length` being equal to `long`
+          - Choices: `-15db`, `-22.5db`, `-7.5db`, `0db`
+        """
+        return pulumi.get(self, "length_long")
+
+    @length_long.setter
+    def length_long(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "length_long", value)
+
+    @property
+    @pulumi.getter(name="lengthLongVariable")
+    def length_long_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "length_long_variable")
+
+    @length_long_variable.setter
+    def length_long_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "length_long_variable", value)
+
+    @property
+    @pulumi.getter(name="lengthShort")
+    def length_short(self) -> Optional[pulumi.Input[str]]:
+        """
+        length, Attribute conditional on `cable_length` being equal to `short`
+          - Choices: `110ft`, `220ft`, `330ft`, `440ft`, `550ft`, `660ft`
+        """
+        return pulumi.get(self, "length_short")
+
+    @length_short.setter
+    def length_short(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "length_short", value)
+
+    @property
+    @pulumi.getter(name="lengthShortVariable")
+    def length_short_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "length_short_variable")
+
+    @length_short_variable.setter
+    def length_short_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "length_short_variable", value)
+
+    @property
+    @pulumi.getter(name="lineMode")
+    def line_mode(self) -> Optional[pulumi.Input[str]]:
+        """
+        Line Mode
+          - Choices: `secondary`, `primary`
+        """
+        return pulumi.get(self, "line_mode")
+
+    @line_mode.setter
+    def line_mode(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "line_mode", value)
+
+    @property
+    @pulumi.getter(name="lineModeVariable")
+    def line_mode_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "line_mode_variable")
+
+    @line_mode_variable.setter
+    def line_mode_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "line_mode_variable", value)
+
+    @property
+    @pulumi.getter(name="t1Description")
+    def t1_description(self) -> Optional[pulumi.Input[str]]:
+        """
+        Card Type
+          - Choices: `T1`
+        """
+        return pulumi.get(self, "t1_description")
+
+    @t1_description.setter
+    def t1_description(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "t1_description", value)
+
+    @property
+    @pulumi.getter(name="t1Framing")
+    def t1_framing(self) -> Optional[pulumi.Input[str]]:
+        """
+        Framing
+          - Choices: `esf`, `sf`
+        """
+        return pulumi.get(self, "t1_framing")
+
+    @t1_framing.setter
+    def t1_framing(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "t1_framing", value)
+
+    @property
+    @pulumi.getter(name="t1FramingVariable")
+    def t1_framing_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "t1_framing_variable")
+
+    @t1_framing_variable.setter
+    def t1_framing_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "t1_framing_variable", value)
+
+    @property
+    @pulumi.getter(name="t1Linecode")
+    def t1_linecode(self) -> Optional[pulumi.Input[str]]:
+        """
+        LineCode
+          - Choices: `ami`, `b8zs`
+        """
+        return pulumi.get(self, "t1_linecode")
+
+    @t1_linecode.setter
+    def t1_linecode(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "t1_linecode", value)
+
+    @property
+    @pulumi.getter(name="t1LinecodeVariable")
+    def t1_linecode_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "t1_linecode_variable")
+
+    @t1_linecode_variable.setter
+    def t1_linecode_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "t1_linecode_variable", value)
+
+
+if not MYPY:
+    class TransportT1E1ControllerFeatureEntryChannelGroupArgsDict(TypedDict):
+        channel_group: NotRequired[pulumi.Input[int]]
+        """
+        Number
+          - Range: `0`-`23`
+        """
+        channel_group_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        time_slot: NotRequired[pulumi.Input[str]]
+        """
+        Time slots
+        """
+        time_slot_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    TransportT1E1ControllerFeatureEntryChannelGroupArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class TransportT1E1ControllerFeatureEntryChannelGroupArgs:
+    def __init__(__self__, *,
+                 channel_group: Optional[pulumi.Input[int]] = None,
+                 channel_group_variable: Optional[pulumi.Input[str]] = None,
+                 time_slot: Optional[pulumi.Input[str]] = None,
+                 time_slot_variable: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[int] channel_group: Number
+                 - Range: `0`-`23`
+        :param pulumi.Input[str] channel_group_variable: Variable name
+        :param pulumi.Input[str] time_slot: Time slots
+        :param pulumi.Input[str] time_slot_variable: Variable name
+        """
+        if channel_group is not None:
+            pulumi.set(__self__, "channel_group", channel_group)
+        if channel_group_variable is not None:
+            pulumi.set(__self__, "channel_group_variable", channel_group_variable)
+        if time_slot is not None:
+            pulumi.set(__self__, "time_slot", time_slot)
+        if time_slot_variable is not None:
+            pulumi.set(__self__, "time_slot_variable", time_slot_variable)
+
+    @property
+    @pulumi.getter(name="channelGroup")
+    def channel_group(self) -> Optional[pulumi.Input[int]]:
+        """
+        Number
+          - Range: `0`-`23`
+        """
+        return pulumi.get(self, "channel_group")
+
+    @channel_group.setter
+    def channel_group(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "channel_group", value)
+
+    @property
+    @pulumi.getter(name="channelGroupVariable")
+    def channel_group_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "channel_group_variable")
+
+    @channel_group_variable.setter
+    def channel_group_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "channel_group_variable", value)
+
+    @property
+    @pulumi.getter(name="timeSlot")
+    def time_slot(self) -> Optional[pulumi.Input[str]]:
+        """
+        Time slots
+        """
+        return pulumi.get(self, "time_slot")
+
+    @time_slot.setter
+    def time_slot(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "time_slot", value)
+
+    @property
+    @pulumi.getter(name="timeSlotVariable")
+    def time_slot_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "time_slot_variable")
+
+    @time_slot_variable.setter
+    def time_slot_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "time_slot_variable", value)
 
 
 if not MYPY:

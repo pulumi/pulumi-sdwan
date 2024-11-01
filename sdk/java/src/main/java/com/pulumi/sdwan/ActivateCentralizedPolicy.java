@@ -22,6 +22,12 @@ import javax.annotation.Nullable;
  * &lt;!--Start PulumiCodeChooser --&gt;
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
+ * ## Import
+ * 
+ * ```sh
+ * $ pulumi import sdwan:index/activateCentralizedPolicy:ActivateCentralizedPolicy example &#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;
+ * ```
+ * 
  */
 @ResourceType(type="sdwan:index/activateCentralizedPolicy:ActivateCentralizedPolicy")
 public class ActivateCentralizedPolicy extends com.pulumi.resources.CustomResource {

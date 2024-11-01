@@ -14,6 +14,7 @@ from .application_aware_routing_policy_definition import *
 from .application_list_policy_object import *
 from .application_priority_feature_profile import *
 from .application_priority_qos_policy import *
+from .application_priority_traffic_policy_policy import *
 from .as_path_list_policy_object import *
 from .attach_feature_device_template import *
 from .block_url_list_policy_object import *
@@ -59,9 +60,11 @@ from .custom_control_topology_policy_definition import *
 from .data_fqdn_prefix_list_policy_object import *
 from .data_ipv4_prefix_list_policy_object import *
 from .data_ipv6_prefix_list_policy_object import *
+from .dns_security_feature_profile import *
 from .dns_security_policy_definition import *
 from .domain_list_policy_object import *
 from .eigrp_feature_template import *
+from .embedded_security_feature_profile import *
 from .expanded_community_list_policy_object import *
 from .extended_community_list_policy_object import *
 from .feature_device_template import *
@@ -74,6 +77,7 @@ from .get_application_aware_routing_policy_definition import *
 from .get_application_list_policy_object import *
 from .get_application_priority_feature_profile import *
 from .get_application_priority_qos_policy import *
+from .get_application_priority_traffic_policy_policy import *
 from .get_as_path_list_policy_object import *
 from .get_block_url_list_policy_object import *
 from .get_cedge_aaa_feature_template import *
@@ -119,9 +123,11 @@ from .get_data_fqdn_prefix_list_policy_object import *
 from .get_data_ipv4_prefix_list_policy_object import *
 from .get_data_ipv6_prefix_list_policy_object import *
 from .get_device import *
+from .get_dns_security_feature_profile import *
 from .get_dns_security_policy_definition import *
 from .get_domain_list_policy_object import *
 from .get_eigrp_feature_template import *
+from .get_embedded_security_feature_profile import *
 from .get_expanded_community_list_policy_object import *
 from .get_extended_community_list_policy_object import *
 from .get_feature_device_template import *
@@ -145,6 +151,9 @@ from .get_other_feature_profile import *
 from .get_other_thousandeyes_feature import *
 from .get_other_ucse_feature import *
 from .get_policer_policy_object import *
+from .get_policy_object_app_probe_class import *
+from .get_policy_object_application_list import *
+from .get_policy_object_as_path_list import *
 from .get_policy_object_class_map import *
 from .get_policy_object_color_list import *
 from .get_policy_object_data_ipv4_prefix_list import *
@@ -156,7 +165,22 @@ from .get_policy_object_ipv4_prefix_list import *
 from .get_policy_object_ipv6_prefix_list import *
 from .get_policy_object_mirror import *
 from .get_policy_object_policer import *
+from .get_policy_object_preferred_color_group import *
+from .get_policy_object_security_data_ipv4_prefix_list import *
+from .get_policy_object_security_fqdn_list import *
+from .get_policy_object_security_geolocation_list import *
+from .get_policy_object_security_identity_list import *
+from .get_policy_object_security_ips_signature import *
+from .get_policy_object_security_local_application_list import *
+from .get_policy_object_security_local_domain_list import *
+from .get_policy_object_security_port_list import *
+from .get_policy_object_security_scalable_group_tag_list import *
+from .get_policy_object_security_url_allow_list import *
+from .get_policy_object_security_url_block_list import *
+from .get_policy_object_sla_class_list import *
+from .get_policy_object_standard_community_list import *
 from .get_policy_object_tloc_list import *
+from .get_policy_object_vpn_group import *
 from .get_port_list_policy_object import *
 from .get_preferred_color_group_policy_object import *
 from .get_protocol_list_policy_object import *
@@ -168,21 +192,27 @@ from .get_rule_set_policy_definition import *
 from .get_security_app_hosting_feature_template import *
 from .get_security_policy import *
 from .get_service_feature_profile import *
+from .get_service_ipv4_acl_feature import *
+from .get_service_ipv6_acl_feature import *
 from .get_service_lan_vpn_feature import *
 from .get_service_lan_vpn_interface_ethernet_feature import *
 from .get_service_lan_vpn_interface_gre_feature import *
 from .get_service_lan_vpn_interface_ipsec_feature import *
 from .get_service_lan_vpn_interface_svi_feature import *
+from .get_service_multicast_feature import *
 from .get_service_object_tracker_feature import *
 from .get_service_object_tracker_group_feature import *
 from .get_service_route_policy_feature import *
 from .get_service_routing_bgp_feature import *
+from .get_service_routing_eigrp_feature import *
 from .get_service_routing_ospf_feature import *
 from .get_service_routing_ospfv3_ipv4_feature import *
 from .get_service_routing_ospfv3_ipv6_feature import *
 from .get_service_switchport_feature import *
 from .get_service_tracker_feature import *
 from .get_service_tracker_group_feature import *
+from .get_service_wireless_lan_feature import *
+from .get_sig_security_feature_profile import *
 from .get_site_list_policy_object import *
 from .get_sla_class_policy_object import *
 from .get_standard_community_list_policy_object import *
@@ -210,6 +240,8 @@ from .get_tls_ssl_profile_policy_definition import *
 from .get_traffic_data_policy_definition import *
 from .get_transport_feature_profile import *
 from .get_transport_gps_feature import *
+from .get_transport_ipv4_acl_feature import *
+from .get_transport_ipv6_acl_feature import *
 from .get_transport_ipv6_tracker_feature import *
 from .get_transport_ipv6_tracker_group_feature import *
 from .get_transport_management_vpn_feature import *
@@ -219,6 +251,7 @@ from .get_transport_routing_bgp_feature import *
 from .get_transport_routing_ospf_feature import *
 from .get_transport_routing_ospfv3_ipv4_feature import *
 from .get_transport_routing_ospfv3_ipv6_feature import *
+from .get_transport_t1_e1_controller_feature import *
 from .get_transport_tracker_feature import *
 from .get_transport_tracker_group_feature import *
 from .get_transport_wan_vpn_feature import *
@@ -260,6 +293,9 @@ from .other_feature_profile import *
 from .other_thousandeyes_feature import *
 from .other_ucse_feature import *
 from .policer_policy_object import *
+from .policy_object_app_probe_class import *
+from .policy_object_application_list import *
+from .policy_object_as_path_list import *
 from .policy_object_class_map import *
 from .policy_object_color_list import *
 from .policy_object_data_ipv4_prefix_list import *
@@ -271,7 +307,22 @@ from .policy_object_ipv4_prefix_list import *
 from .policy_object_ipv6_prefix_list import *
 from .policy_object_mirror import *
 from .policy_object_policer import *
+from .policy_object_preferred_color_group import *
+from .policy_object_security_data_ipv4_prefix_list import *
+from .policy_object_security_fqdn_list import *
+from .policy_object_security_geolocation_list import *
+from .policy_object_security_identity_list import *
+from .policy_object_security_ips_signature import *
+from .policy_object_security_local_application_list import *
+from .policy_object_security_local_domain_list import *
+from .policy_object_security_port_list import *
+from .policy_object_security_scalable_group_tag_list import *
+from .policy_object_security_url_allow_list import *
+from .policy_object_security_url_block_list import *
+from .policy_object_sla_class_list import *
+from .policy_object_standard_community_list import *
 from .policy_object_tloc_list import *
+from .policy_object_vpn_group import *
 from .port_list_policy_object import *
 from .preferred_color_group_policy_object import *
 from .protocol_list_policy_object import *
@@ -284,21 +335,27 @@ from .rule_set_policy_definition import *
 from .security_app_hosting_feature_template import *
 from .security_policy import *
 from .service_feature_profile import *
+from .service_ipv4_acl_feature import *
+from .service_ipv6_acl_feature import *
 from .service_lan_vpn_feature import *
 from .service_lan_vpn_interface_ethernet_feature import *
 from .service_lan_vpn_interface_gre_feature import *
 from .service_lan_vpn_interface_ipsec_feature import *
 from .service_lan_vpn_interface_svi_feature import *
+from .service_multicast_feature import *
 from .service_object_tracker_feature import *
 from .service_object_tracker_group_feature import *
 from .service_route_policy_feature import *
 from .service_routing_bgp_feature import *
+from .service_routing_eigrp_feature import *
 from .service_routing_ospf_feature import *
 from .service_routing_ospfv3_ipv4_feature import *
 from .service_routing_ospfv3_ipv6_feature import *
 from .service_switchport_feature import *
 from .service_tracker_feature import *
 from .service_tracker_group_feature import *
+from .service_wireless_lan_feature import *
+from .sig_security_feature_profile import *
 from .site_list_policy_object import *
 from .sla_class_policy_object import *
 from .standard_community_list_policy_object import *
@@ -326,6 +383,8 @@ from .tls_ssl_profile_policy_definition import *
 from .traffic_data_policy_definition import *
 from .transport_feature_profile import *
 from .transport_gps_feature import *
+from .transport_ipv4_acl_feature import *
+from .transport_ipv6_acl_feature import *
 from .transport_ipv6_tracker_feature import *
 from .transport_ipv6_tracker_group_feature import *
 from .transport_management_vpn_feature import *
@@ -335,6 +394,7 @@ from .transport_routing_bgp_feature import *
 from .transport_routing_ospf_feature import *
 from .transport_routing_ospfv3_ipv4_feature import *
 from .transport_routing_ospfv3_ipv6_feature import *
+from .transport_t1_e1_controller_feature import *
 from .transport_tracker_feature import *
 from .transport_tracker_group_feature import *
 from .transport_wan_vpn_feature import *
@@ -439,6 +499,14 @@ _utilities.register(
   "fqn": "pulumi_sdwan",
   "classes": {
    "sdwan:index/applicationPriorityQosPolicy:ApplicationPriorityQosPolicy": "ApplicationPriorityQosPolicy"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/applicationPriorityTrafficPolicyPolicy",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/applicationPriorityTrafficPolicyPolicy:ApplicationPriorityTrafficPolicyPolicy": "ApplicationPriorityTrafficPolicyPolicy"
   }
  },
  {
@@ -803,6 +871,14 @@ _utilities.register(
  },
  {
   "pkg": "sdwan",
+  "mod": "index/dnsSecurityFeatureProfile",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/dnsSecurityFeatureProfile:DnsSecurityFeatureProfile": "DnsSecurityFeatureProfile"
+  }
+ },
+ {
+  "pkg": "sdwan",
   "mod": "index/dnsSecurityPolicyDefinition",
   "fqn": "pulumi_sdwan",
   "classes": {
@@ -823,6 +899,14 @@ _utilities.register(
   "fqn": "pulumi_sdwan",
   "classes": {
    "sdwan:index/eigrpFeatureTemplate:EigrpFeatureTemplate": "EigrpFeatureTemplate"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/embeddedSecurityFeatureProfile",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/embeddedSecurityFeatureProfile:EmbeddedSecurityFeatureProfile": "EmbeddedSecurityFeatureProfile"
   }
  },
  {
@@ -1011,6 +1095,30 @@ _utilities.register(
  },
  {
   "pkg": "sdwan",
+  "mod": "index/policyObjectAppProbeClass",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/policyObjectAppProbeClass:PolicyObjectAppProbeClass": "PolicyObjectAppProbeClass"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/policyObjectApplicationList",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/policyObjectApplicationList:PolicyObjectApplicationList": "PolicyObjectApplicationList"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/policyObjectAsPathList",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/policyObjectAsPathList:PolicyObjectAsPathList": "PolicyObjectAsPathList"
+  }
+ },
+ {
+  "pkg": "sdwan",
   "mod": "index/policyObjectClassMap",
   "fqn": "pulumi_sdwan",
   "classes": {
@@ -1099,10 +1207,130 @@ _utilities.register(
  },
  {
   "pkg": "sdwan",
+  "mod": "index/policyObjectPreferredColorGroup",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/policyObjectPreferredColorGroup:PolicyObjectPreferredColorGroup": "PolicyObjectPreferredColorGroup"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/policyObjectSecurityDataIpv4PrefixList",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/policyObjectSecurityDataIpv4PrefixList:PolicyObjectSecurityDataIpv4PrefixList": "PolicyObjectSecurityDataIpv4PrefixList"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/policyObjectSecurityFqdnList",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/policyObjectSecurityFqdnList:PolicyObjectSecurityFqdnList": "PolicyObjectSecurityFqdnList"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/policyObjectSecurityGeolocationList",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/policyObjectSecurityGeolocationList:PolicyObjectSecurityGeolocationList": "PolicyObjectSecurityGeolocationList"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/policyObjectSecurityIdentityList",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/policyObjectSecurityIdentityList:PolicyObjectSecurityIdentityList": "PolicyObjectSecurityIdentityList"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/policyObjectSecurityIpsSignature",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/policyObjectSecurityIpsSignature:PolicyObjectSecurityIpsSignature": "PolicyObjectSecurityIpsSignature"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/policyObjectSecurityLocalApplicationList",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/policyObjectSecurityLocalApplicationList:PolicyObjectSecurityLocalApplicationList": "PolicyObjectSecurityLocalApplicationList"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/policyObjectSecurityLocalDomainList",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/policyObjectSecurityLocalDomainList:PolicyObjectSecurityLocalDomainList": "PolicyObjectSecurityLocalDomainList"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/policyObjectSecurityPortList",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/policyObjectSecurityPortList:PolicyObjectSecurityPortList": "PolicyObjectSecurityPortList"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/policyObjectSecurityScalableGroupTagList",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/policyObjectSecurityScalableGroupTagList:PolicyObjectSecurityScalableGroupTagList": "PolicyObjectSecurityScalableGroupTagList"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/policyObjectSecurityUrlAllowList",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/policyObjectSecurityUrlAllowList:PolicyObjectSecurityUrlAllowList": "PolicyObjectSecurityUrlAllowList"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/policyObjectSecurityUrlBlockList",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/policyObjectSecurityUrlBlockList:PolicyObjectSecurityUrlBlockList": "PolicyObjectSecurityUrlBlockList"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/policyObjectSlaClassList",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/policyObjectSlaClassList:PolicyObjectSlaClassList": "PolicyObjectSlaClassList"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/policyObjectStandardCommunityList",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/policyObjectStandardCommunityList:PolicyObjectStandardCommunityList": "PolicyObjectStandardCommunityList"
+  }
+ },
+ {
+  "pkg": "sdwan",
   "mod": "index/policyObjectTlocList",
   "fqn": "pulumi_sdwan",
   "classes": {
    "sdwan:index/policyObjectTlocList:PolicyObjectTlocList": "PolicyObjectTlocList"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/policyObjectVpnGroup",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/policyObjectVpnGroup:PolicyObjectVpnGroup": "PolicyObjectVpnGroup"
   }
  },
  {
@@ -1195,6 +1423,22 @@ _utilities.register(
  },
  {
   "pkg": "sdwan",
+  "mod": "index/serviceIpv4AclFeature",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/serviceIpv4AclFeature:ServiceIpv4AclFeature": "ServiceIpv4AclFeature"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/serviceIpv6AclFeature",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/serviceIpv6AclFeature:ServiceIpv6AclFeature": "ServiceIpv6AclFeature"
+  }
+ },
+ {
+  "pkg": "sdwan",
   "mod": "index/serviceLanVpnFeature",
   "fqn": "pulumi_sdwan",
   "classes": {
@@ -1235,6 +1479,14 @@ _utilities.register(
  },
  {
   "pkg": "sdwan",
+  "mod": "index/serviceMulticastFeature",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/serviceMulticastFeature:ServiceMulticastFeature": "ServiceMulticastFeature"
+  }
+ },
+ {
+  "pkg": "sdwan",
   "mod": "index/serviceObjectTrackerFeature",
   "fqn": "pulumi_sdwan",
   "classes": {
@@ -1263,6 +1515,14 @@ _utilities.register(
   "fqn": "pulumi_sdwan",
   "classes": {
    "sdwan:index/serviceRoutingBgpFeature:ServiceRoutingBgpFeature": "ServiceRoutingBgpFeature"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/serviceRoutingEigrpFeature",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/serviceRoutingEigrpFeature:ServiceRoutingEigrpFeature": "ServiceRoutingEigrpFeature"
   }
  },
  {
@@ -1311,6 +1571,22 @@ _utilities.register(
   "fqn": "pulumi_sdwan",
   "classes": {
    "sdwan:index/serviceTrackerGroupFeature:ServiceTrackerGroupFeature": "ServiceTrackerGroupFeature"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/serviceWirelessLanFeature",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/serviceWirelessLanFeature:ServiceWirelessLanFeature": "ServiceWirelessLanFeature"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/sigSecurityFeatureProfile",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/sigSecurityFeatureProfile:SigSecurityFeatureProfile": "SigSecurityFeatureProfile"
   }
  },
  {
@@ -1531,6 +1807,22 @@ _utilities.register(
  },
  {
   "pkg": "sdwan",
+  "mod": "index/transportIpv4AclFeature",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/transportIpv4AclFeature:TransportIpv4AclFeature": "TransportIpv4AclFeature"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/transportIpv6AclFeature",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/transportIpv6AclFeature:TransportIpv6AclFeature": "TransportIpv6AclFeature"
+  }
+ },
+ {
+  "pkg": "sdwan",
   "mod": "index/transportIpv6TrackerFeature",
   "fqn": "pulumi_sdwan",
   "classes": {
@@ -1599,6 +1891,14 @@ _utilities.register(
   "fqn": "pulumi_sdwan",
   "classes": {
    "sdwan:index/transportRoutingOspfv3Ipv6Feature:TransportRoutingOspfv3Ipv6Feature": "TransportRoutingOspfv3Ipv6Feature"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/transportT1E1ControllerFeature",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/transportT1E1ControllerFeature:TransportT1E1ControllerFeature": "TransportT1E1ControllerFeature"
   }
  },
  {

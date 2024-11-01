@@ -19,17 +19,9 @@ __all__ = ['ServiceLanVpnInterfaceIpsecFeatureArgs', 'ServiceLanVpnInterfaceIpse
 @pulumi.input_type
 class ServiceLanVpnInterfaceIpsecFeatureArgs:
     def __init__(__self__, *,
-                 application_tunnel_type: pulumi.Input[str],
                  feature_profile_id: pulumi.Input[str],
-                 ike_preshared_key: pulumi.Input[str],
-                 interface_name: pulumi.Input[str],
-                 ipv4_address: pulumi.Input[str],
-                 ipv4_subnet_mask: pulumi.Input[str],
-                 tunnel_destination_ipv4_address: pulumi.Input[str],
                  tunnel_destination_ipv4_subnet_mask: pulumi.Input[str],
-                 tunnel_source_interface: pulumi.Input[str],
-                 tunnel_source_ipv4_address: pulumi.Input[str],
-                 tunnel_source_ipv4_subnet_mask: pulumi.Input[str],
+                 application_tunnel_type: Optional[pulumi.Input[str]] = None,
                  application_tunnel_type_variable: Optional[pulumi.Input[str]] = None,
                  clear_dont_fragment: Optional[pulumi.Input[bool]] = None,
                  clear_dont_fragment_variable: Optional[pulumi.Input[str]] = None,
@@ -48,12 +40,14 @@ class ServiceLanVpnInterfaceIpsecFeatureArgs:
                  ike_id_remote_end_point_variable: Optional[pulumi.Input[str]] = None,
                  ike_integrity_protocol: Optional[pulumi.Input[str]] = None,
                  ike_integrity_protocol_variable: Optional[pulumi.Input[str]] = None,
+                 ike_preshared_key: Optional[pulumi.Input[str]] = None,
                  ike_preshared_key_variable: Optional[pulumi.Input[str]] = None,
                  ike_rekey_interval: Optional[pulumi.Input[int]] = None,
                  ike_rekey_interval_variable: Optional[pulumi.Input[str]] = None,
                  ike_version: Optional[pulumi.Input[int]] = None,
                  interface_description: Optional[pulumi.Input[str]] = None,
                  interface_description_variable: Optional[pulumi.Input[str]] = None,
+                 interface_name: Optional[pulumi.Input[str]] = None,
                  interface_name_variable: Optional[pulumi.Input[str]] = None,
                  ip_mtu: Optional[pulumi.Input[int]] = None,
                  ip_mtu_variable: Optional[pulumi.Input[str]] = None,
@@ -63,7 +57,9 @@ class ServiceLanVpnInterfaceIpsecFeatureArgs:
                  ipsec_rekey_interval_variable: Optional[pulumi.Input[str]] = None,
                  ipsec_replay_window: Optional[pulumi.Input[int]] = None,
                  ipsec_replay_window_variable: Optional[pulumi.Input[str]] = None,
+                 ipv4_address: Optional[pulumi.Input[str]] = None,
                  ipv4_address_variable: Optional[pulumi.Input[str]] = None,
+                 ipv4_subnet_mask: Optional[pulumi.Input[str]] = None,
                  ipv4_subnet_mask_variable: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  perfect_forward_secrecy: Optional[pulumi.Input[str]] = None,
@@ -75,35 +71,26 @@ class ServiceLanVpnInterfaceIpsecFeatureArgs:
                  tcp_mss_variable: Optional[pulumi.Input[str]] = None,
                  tracker_id: Optional[pulumi.Input[str]] = None,
                  tracker_id_variable: Optional[pulumi.Input[str]] = None,
+                 tunnel_destination_ipv4_address: Optional[pulumi.Input[str]] = None,
                  tunnel_destination_ipv4_address_variable: Optional[pulumi.Input[str]] = None,
                  tunnel_destination_ipv4_subnet_mask_variable: Optional[pulumi.Input[str]] = None,
                  tunnel_route_via: Optional[pulumi.Input[str]] = None,
                  tunnel_route_via_variable: Optional[pulumi.Input[str]] = None,
+                 tunnel_source_interface: Optional[pulumi.Input[str]] = None,
                  tunnel_source_interface_variable: Optional[pulumi.Input[str]] = None,
+                 tunnel_source_ipv4_address: Optional[pulumi.Input[str]] = None,
                  tunnel_source_ipv4_address_variable: Optional[pulumi.Input[str]] = None,
+                 tunnel_source_ipv4_subnet_mask: Optional[pulumi.Input[str]] = None,
                  tunnel_source_ipv4_subnet_mask_variable: Optional[pulumi.Input[str]] = None):
         """
         The set of arguments for constructing a ServiceLanVpnInterfaceIpsecFeature resource.
-        :param pulumi.Input[str] application_tunnel_type: Enable Application Tunnel Type - Choices: `none`, `sig`
         :param pulumi.Input[str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[str] ike_preshared_key: Use preshared key to authenticate IKE peer
-        :param pulumi.Input[str] interface_name: Interface name: IPsec when present
-        :param pulumi.Input[str] ipv4_subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-               `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-               `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-               `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-               `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[str] tunnel_destination_ipv4_subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
                `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
                `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
                `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
                `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
-        :param pulumi.Input[str] tunnel_source_interface: <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
-        :param pulumi.Input[str] tunnel_source_ipv4_subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-               `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-               `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-               `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-               `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[str] application_tunnel_type: Enable Application Tunnel Type - Choices: `none`, `sig`
         :param pulumi.Input[str] application_tunnel_type_variable: Variable name
         :param pulumi.Input[bool] clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
         :param pulumi.Input[str] clear_dont_fragment_variable: Variable name
@@ -123,12 +110,14 @@ class ServiceLanVpnInterfaceIpsecFeatureArgs:
         :param pulumi.Input[str] ike_id_remote_end_point_variable: Variable name
         :param pulumi.Input[str] ike_integrity_protocol: IKE integrity protocol - Choices: `main`, `aggressive` - Default value: `main`
         :param pulumi.Input[str] ike_integrity_protocol_variable: Variable name
+        :param pulumi.Input[str] ike_preshared_key: Use preshared key to authenticate IKE peer
         :param pulumi.Input[str] ike_preshared_key_variable: Variable name
         :param pulumi.Input[int] ike_rekey_interval: IKE rekey interval <60..86400> seconds - Range: `60`-`86400` - Default value: `14400`
         :param pulumi.Input[str] ike_rekey_interval_variable: Variable name
         :param pulumi.Input[int] ike_version: IKE Version <1..2> - Range: `1`-`2` - Default value: `1`
         :param pulumi.Input[str] interface_description: Interface description
         :param pulumi.Input[str] interface_description_variable: Variable name
+        :param pulumi.Input[str] interface_name: Interface name: IPsec when present
         :param pulumi.Input[str] interface_name_variable: Variable name
         :param pulumi.Input[int] ip_mtu: Interface MTU <68..9216>, in bytes - Range: `68`-`9216` - Default value: `1500`
         :param pulumi.Input[str] ip_mtu_variable: Variable name
@@ -141,6 +130,11 @@ class ServiceLanVpnInterfaceIpsecFeatureArgs:
         :param pulumi.Input[int] ipsec_replay_window: Replay window size 32..8192 (must be a power of 2) - Range: `64`-`4096` - Default value: `512`
         :param pulumi.Input[str] ipsec_replay_window_variable: Variable name
         :param pulumi.Input[str] ipv4_address_variable: Variable name
+        :param pulumi.Input[str] ipv4_subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
+               `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
+               `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
+               `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
+               `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[str] ipv4_subnet_mask_variable: Variable name
         :param pulumi.Input[str] name: The name of the Feature
         :param pulumi.Input[str] perfect_forward_secrecy: IPsec perfect forward secrecy settings - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`,
@@ -157,21 +151,20 @@ class ServiceLanVpnInterfaceIpsecFeatureArgs:
         :param pulumi.Input[str] tunnel_destination_ipv4_subnet_mask_variable: Variable name
         :param pulumi.Input[str] tunnel_route_via: <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
         :param pulumi.Input[str] tunnel_route_via_variable: Variable name
+        :param pulumi.Input[str] tunnel_source_interface: <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
         :param pulumi.Input[str] tunnel_source_interface_variable: Variable name
         :param pulumi.Input[str] tunnel_source_ipv4_address_variable: Variable name
+        :param pulumi.Input[str] tunnel_source_ipv4_subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
+               `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
+               `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
+               `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
+               `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[str] tunnel_source_ipv4_subnet_mask_variable: Variable name
         """
-        pulumi.set(__self__, "application_tunnel_type", application_tunnel_type)
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
-        pulumi.set(__self__, "ike_preshared_key", ike_preshared_key)
-        pulumi.set(__self__, "interface_name", interface_name)
-        pulumi.set(__self__, "ipv4_address", ipv4_address)
-        pulumi.set(__self__, "ipv4_subnet_mask", ipv4_subnet_mask)
-        pulumi.set(__self__, "tunnel_destination_ipv4_address", tunnel_destination_ipv4_address)
         pulumi.set(__self__, "tunnel_destination_ipv4_subnet_mask", tunnel_destination_ipv4_subnet_mask)
-        pulumi.set(__self__, "tunnel_source_interface", tunnel_source_interface)
-        pulumi.set(__self__, "tunnel_source_ipv4_address", tunnel_source_ipv4_address)
-        pulumi.set(__self__, "tunnel_source_ipv4_subnet_mask", tunnel_source_ipv4_subnet_mask)
+        if application_tunnel_type is not None:
+            pulumi.set(__self__, "application_tunnel_type", application_tunnel_type)
         if application_tunnel_type_variable is not None:
             pulumi.set(__self__, "application_tunnel_type_variable", application_tunnel_type_variable)
         if clear_dont_fragment is not None:
@@ -208,6 +201,8 @@ class ServiceLanVpnInterfaceIpsecFeatureArgs:
             pulumi.set(__self__, "ike_integrity_protocol", ike_integrity_protocol)
         if ike_integrity_protocol_variable is not None:
             pulumi.set(__self__, "ike_integrity_protocol_variable", ike_integrity_protocol_variable)
+        if ike_preshared_key is not None:
+            pulumi.set(__self__, "ike_preshared_key", ike_preshared_key)
         if ike_preshared_key_variable is not None:
             pulumi.set(__self__, "ike_preshared_key_variable", ike_preshared_key_variable)
         if ike_rekey_interval is not None:
@@ -220,6 +215,8 @@ class ServiceLanVpnInterfaceIpsecFeatureArgs:
             pulumi.set(__self__, "interface_description", interface_description)
         if interface_description_variable is not None:
             pulumi.set(__self__, "interface_description_variable", interface_description_variable)
+        if interface_name is not None:
+            pulumi.set(__self__, "interface_name", interface_name)
         if interface_name_variable is not None:
             pulumi.set(__self__, "interface_name_variable", interface_name_variable)
         if ip_mtu is not None:
@@ -238,8 +235,12 @@ class ServiceLanVpnInterfaceIpsecFeatureArgs:
             pulumi.set(__self__, "ipsec_replay_window", ipsec_replay_window)
         if ipsec_replay_window_variable is not None:
             pulumi.set(__self__, "ipsec_replay_window_variable", ipsec_replay_window_variable)
+        if ipv4_address is not None:
+            pulumi.set(__self__, "ipv4_address", ipv4_address)
         if ipv4_address_variable is not None:
             pulumi.set(__self__, "ipv4_address_variable", ipv4_address_variable)
+        if ipv4_subnet_mask is not None:
+            pulumi.set(__self__, "ipv4_subnet_mask", ipv4_subnet_mask)
         if ipv4_subnet_mask_variable is not None:
             pulumi.set(__self__, "ipv4_subnet_mask_variable", ipv4_subnet_mask_variable)
         if name is not None:
@@ -262,6 +263,8 @@ class ServiceLanVpnInterfaceIpsecFeatureArgs:
             pulumi.set(__self__, "tracker_id", tracker_id)
         if tracker_id_variable is not None:
             pulumi.set(__self__, "tracker_id_variable", tracker_id_variable)
+        if tunnel_destination_ipv4_address is not None:
+            pulumi.set(__self__, "tunnel_destination_ipv4_address", tunnel_destination_ipv4_address)
         if tunnel_destination_ipv4_address_variable is not None:
             pulumi.set(__self__, "tunnel_destination_ipv4_address_variable", tunnel_destination_ipv4_address_variable)
         if tunnel_destination_ipv4_subnet_mask_variable is not None:
@@ -270,24 +273,18 @@ class ServiceLanVpnInterfaceIpsecFeatureArgs:
             pulumi.set(__self__, "tunnel_route_via", tunnel_route_via)
         if tunnel_route_via_variable is not None:
             pulumi.set(__self__, "tunnel_route_via_variable", tunnel_route_via_variable)
+        if tunnel_source_interface is not None:
+            pulumi.set(__self__, "tunnel_source_interface", tunnel_source_interface)
         if tunnel_source_interface_variable is not None:
             pulumi.set(__self__, "tunnel_source_interface_variable", tunnel_source_interface_variable)
+        if tunnel_source_ipv4_address is not None:
+            pulumi.set(__self__, "tunnel_source_ipv4_address", tunnel_source_ipv4_address)
         if tunnel_source_ipv4_address_variable is not None:
             pulumi.set(__self__, "tunnel_source_ipv4_address_variable", tunnel_source_ipv4_address_variable)
+        if tunnel_source_ipv4_subnet_mask is not None:
+            pulumi.set(__self__, "tunnel_source_ipv4_subnet_mask", tunnel_source_ipv4_subnet_mask)
         if tunnel_source_ipv4_subnet_mask_variable is not None:
             pulumi.set(__self__, "tunnel_source_ipv4_subnet_mask_variable", tunnel_source_ipv4_subnet_mask_variable)
-
-    @property
-    @pulumi.getter(name="applicationTunnelType")
-    def application_tunnel_type(self) -> pulumi.Input[str]:
-        """
-        Enable Application Tunnel Type - Choices: `none`, `sig`
-        """
-        return pulumi.get(self, "application_tunnel_type")
-
-    @application_tunnel_type.setter
-    def application_tunnel_type(self, value: pulumi.Input[str]):
-        pulumi.set(self, "application_tunnel_type", value)
 
     @property
     @pulumi.getter(name="featureProfileId")
@@ -300,64 +297,6 @@ class ServiceLanVpnInterfaceIpsecFeatureArgs:
     @feature_profile_id.setter
     def feature_profile_id(self, value: pulumi.Input[str]):
         pulumi.set(self, "feature_profile_id", value)
-
-    @property
-    @pulumi.getter(name="ikePresharedKey")
-    def ike_preshared_key(self) -> pulumi.Input[str]:
-        """
-        Use preshared key to authenticate IKE peer
-        """
-        return pulumi.get(self, "ike_preshared_key")
-
-    @ike_preshared_key.setter
-    def ike_preshared_key(self, value: pulumi.Input[str]):
-        pulumi.set(self, "ike_preshared_key", value)
-
-    @property
-    @pulumi.getter(name="interfaceName")
-    def interface_name(self) -> pulumi.Input[str]:
-        """
-        Interface name: IPsec when present
-        """
-        return pulumi.get(self, "interface_name")
-
-    @interface_name.setter
-    def interface_name(self, value: pulumi.Input[str]):
-        pulumi.set(self, "interface_name", value)
-
-    @property
-    @pulumi.getter(name="ipv4Address")
-    def ipv4_address(self) -> pulumi.Input[str]:
-        return pulumi.get(self, "ipv4_address")
-
-    @ipv4_address.setter
-    def ipv4_address(self, value: pulumi.Input[str]):
-        pulumi.set(self, "ipv4_address", value)
-
-    @property
-    @pulumi.getter(name="ipv4SubnetMask")
-    def ipv4_subnet_mask(self) -> pulumi.Input[str]:
-        """
-        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
-        """
-        return pulumi.get(self, "ipv4_subnet_mask")
-
-    @ipv4_subnet_mask.setter
-    def ipv4_subnet_mask(self, value: pulumi.Input[str]):
-        pulumi.set(self, "ipv4_subnet_mask", value)
-
-    @property
-    @pulumi.getter(name="tunnelDestinationIpv4Address")
-    def tunnel_destination_ipv4_address(self) -> pulumi.Input[str]:
-        return pulumi.get(self, "tunnel_destination_ipv4_address")
-
-    @tunnel_destination_ipv4_address.setter
-    def tunnel_destination_ipv4_address(self, value: pulumi.Input[str]):
-        pulumi.set(self, "tunnel_destination_ipv4_address", value)
 
     @property
     @pulumi.getter(name="tunnelDestinationIpv4SubnetMask")
@@ -376,41 +315,16 @@ class ServiceLanVpnInterfaceIpsecFeatureArgs:
         pulumi.set(self, "tunnel_destination_ipv4_subnet_mask", value)
 
     @property
-    @pulumi.getter(name="tunnelSourceInterface")
-    def tunnel_source_interface(self) -> pulumi.Input[str]:
+    @pulumi.getter(name="applicationTunnelType")
+    def application_tunnel_type(self) -> Optional[pulumi.Input[str]]:
         """
-        <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
+        Enable Application Tunnel Type - Choices: `none`, `sig`
         """
-        return pulumi.get(self, "tunnel_source_interface")
+        return pulumi.get(self, "application_tunnel_type")
 
-    @tunnel_source_interface.setter
-    def tunnel_source_interface(self, value: pulumi.Input[str]):
-        pulumi.set(self, "tunnel_source_interface", value)
-
-    @property
-    @pulumi.getter(name="tunnelSourceIpv4Address")
-    def tunnel_source_ipv4_address(self) -> pulumi.Input[str]:
-        return pulumi.get(self, "tunnel_source_ipv4_address")
-
-    @tunnel_source_ipv4_address.setter
-    def tunnel_source_ipv4_address(self, value: pulumi.Input[str]):
-        pulumi.set(self, "tunnel_source_ipv4_address", value)
-
-    @property
-    @pulumi.getter(name="tunnelSourceIpv4SubnetMask")
-    def tunnel_source_ipv4_subnet_mask(self) -> pulumi.Input[str]:
-        """
-        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
-        """
-        return pulumi.get(self, "tunnel_source_ipv4_subnet_mask")
-
-    @tunnel_source_ipv4_subnet_mask.setter
-    def tunnel_source_ipv4_subnet_mask(self, value: pulumi.Input[str]):
-        pulumi.set(self, "tunnel_source_ipv4_subnet_mask", value)
+    @application_tunnel_type.setter
+    def application_tunnel_type(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "application_tunnel_type", value)
 
     @property
     @pulumi.getter(name="applicationTunnelTypeVariable")
@@ -630,6 +544,18 @@ class ServiceLanVpnInterfaceIpsecFeatureArgs:
         pulumi.set(self, "ike_integrity_protocol_variable", value)
 
     @property
+    @pulumi.getter(name="ikePresharedKey")
+    def ike_preshared_key(self) -> Optional[pulumi.Input[str]]:
+        """
+        Use preshared key to authenticate IKE peer
+        """
+        return pulumi.get(self, "ike_preshared_key")
+
+    @ike_preshared_key.setter
+    def ike_preshared_key(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "ike_preshared_key", value)
+
+    @property
     @pulumi.getter(name="ikePresharedKeyVariable")
     def ike_preshared_key_variable(self) -> Optional[pulumi.Input[str]]:
         """
@@ -700,6 +626,18 @@ class ServiceLanVpnInterfaceIpsecFeatureArgs:
     @interface_description_variable.setter
     def interface_description_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "interface_description_variable", value)
+
+    @property
+    @pulumi.getter(name="interfaceName")
+    def interface_name(self) -> Optional[pulumi.Input[str]]:
+        """
+        Interface name: IPsec when present
+        """
+        return pulumi.get(self, "interface_name")
+
+    @interface_name.setter
+    def interface_name(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "interface_name", value)
 
     @property
     @pulumi.getter(name="interfaceNameVariable")
@@ -812,6 +750,15 @@ class ServiceLanVpnInterfaceIpsecFeatureArgs:
         pulumi.set(self, "ipsec_replay_window_variable", value)
 
     @property
+    @pulumi.getter(name="ipv4Address")
+    def ipv4_address(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "ipv4_address")
+
+    @ipv4_address.setter
+    def ipv4_address(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "ipv4_address", value)
+
+    @property
     @pulumi.getter(name="ipv4AddressVariable")
     def ipv4_address_variable(self) -> Optional[pulumi.Input[str]]:
         """
@@ -822,6 +769,22 @@ class ServiceLanVpnInterfaceIpsecFeatureArgs:
     @ipv4_address_variable.setter
     def ipv4_address_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "ipv4_address_variable", value)
+
+    @property
+    @pulumi.getter(name="ipv4SubnetMask")
+    def ipv4_subnet_mask(self) -> Optional[pulumi.Input[str]]:
+        """
+        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
+        `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
+        `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
+        `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
+        `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        """
+        return pulumi.get(self, "ipv4_subnet_mask")
+
+    @ipv4_subnet_mask.setter
+    def ipv4_subnet_mask(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "ipv4_subnet_mask", value)
 
     @property
     @pulumi.getter(name="ipv4SubnetMaskVariable")
@@ -957,6 +920,15 @@ class ServiceLanVpnInterfaceIpsecFeatureArgs:
         pulumi.set(self, "tracker_id_variable", value)
 
     @property
+    @pulumi.getter(name="tunnelDestinationIpv4Address")
+    def tunnel_destination_ipv4_address(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "tunnel_destination_ipv4_address")
+
+    @tunnel_destination_ipv4_address.setter
+    def tunnel_destination_ipv4_address(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "tunnel_destination_ipv4_address", value)
+
+    @property
     @pulumi.getter(name="tunnelDestinationIpv4AddressVariable")
     def tunnel_destination_ipv4_address_variable(self) -> Optional[pulumi.Input[str]]:
         """
@@ -1005,6 +977,18 @@ class ServiceLanVpnInterfaceIpsecFeatureArgs:
         pulumi.set(self, "tunnel_route_via_variable", value)
 
     @property
+    @pulumi.getter(name="tunnelSourceInterface")
+    def tunnel_source_interface(self) -> Optional[pulumi.Input[str]]:
+        """
+        <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
+        """
+        return pulumi.get(self, "tunnel_source_interface")
+
+    @tunnel_source_interface.setter
+    def tunnel_source_interface(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "tunnel_source_interface", value)
+
+    @property
     @pulumi.getter(name="tunnelSourceInterfaceVariable")
     def tunnel_source_interface_variable(self) -> Optional[pulumi.Input[str]]:
         """
@@ -1017,6 +1001,15 @@ class ServiceLanVpnInterfaceIpsecFeatureArgs:
         pulumi.set(self, "tunnel_source_interface_variable", value)
 
     @property
+    @pulumi.getter(name="tunnelSourceIpv4Address")
+    def tunnel_source_ipv4_address(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "tunnel_source_ipv4_address")
+
+    @tunnel_source_ipv4_address.setter
+    def tunnel_source_ipv4_address(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "tunnel_source_ipv4_address", value)
+
+    @property
     @pulumi.getter(name="tunnelSourceIpv4AddressVariable")
     def tunnel_source_ipv4_address_variable(self) -> Optional[pulumi.Input[str]]:
         """
@@ -1027,6 +1020,22 @@ class ServiceLanVpnInterfaceIpsecFeatureArgs:
     @tunnel_source_ipv4_address_variable.setter
     def tunnel_source_ipv4_address_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "tunnel_source_ipv4_address_variable", value)
+
+    @property
+    @pulumi.getter(name="tunnelSourceIpv4SubnetMask")
+    def tunnel_source_ipv4_subnet_mask(self) -> Optional[pulumi.Input[str]]:
+        """
+        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
+        `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
+        `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
+        `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
+        `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        """
+        return pulumi.get(self, "tunnel_source_ipv4_subnet_mask")
+
+    @tunnel_source_ipv4_subnet_mask.setter
+    def tunnel_source_ipv4_subnet_mask(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "tunnel_source_ipv4_subnet_mask", value)
 
     @property
     @pulumi.getter(name="tunnelSourceIpv4SubnetMaskVariable")
@@ -2210,8 +2219,10 @@ class ServiceLanVpnInterfaceIpsecFeature(pulumi.CustomResource):
 
         ## Import
 
+        Expected import identifier with the format: "service_lan_vpn_interface_ipsec_feature_id,feature_profile_id,service_lan_vpn_feature_id"
+
         ```sh
-        $ pulumi import sdwan:index/serviceLanVpnInterfaceIpsecFeature:ServiceLanVpnInterfaceIpsecFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+        $ pulumi import sdwan:index/serviceLanVpnInterfaceIpsecFeature:ServiceLanVpnInterfaceIpsecFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037"
         ```
 
         :param str resource_name: The name of the resource.
@@ -2347,8 +2358,10 @@ class ServiceLanVpnInterfaceIpsecFeature(pulumi.CustomResource):
 
         ## Import
 
+        Expected import identifier with the format: "service_lan_vpn_interface_ipsec_feature_id,feature_profile_id,service_lan_vpn_feature_id"
+
         ```sh
-        $ pulumi import sdwan:index/serviceLanVpnInterfaceIpsecFeature:ServiceLanVpnInterfaceIpsecFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+        $ pulumi import sdwan:index/serviceLanVpnInterfaceIpsecFeature:ServiceLanVpnInterfaceIpsecFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037"
         ```
 
         :param str resource_name: The name of the resource.
@@ -2438,8 +2451,6 @@ class ServiceLanVpnInterfaceIpsecFeature(pulumi.CustomResource):
                 raise TypeError('__props__ is only valid when passed in combination with a valid opts.id to get an existing resource')
             __props__ = ServiceLanVpnInterfaceIpsecFeatureArgs.__new__(ServiceLanVpnInterfaceIpsecFeatureArgs)
 
-            if application_tunnel_type is None and not opts.urn:
-                raise TypeError("Missing required property 'application_tunnel_type'")
             __props__.__dict__["application_tunnel_type"] = application_tunnel_type
             __props__.__dict__["application_tunnel_type_variable"] = application_tunnel_type_variable
             __props__.__dict__["clear_dont_fragment"] = clear_dont_fragment
@@ -2462,8 +2473,6 @@ class ServiceLanVpnInterfaceIpsecFeature(pulumi.CustomResource):
             __props__.__dict__["ike_id_remote_end_point_variable"] = ike_id_remote_end_point_variable
             __props__.__dict__["ike_integrity_protocol"] = ike_integrity_protocol
             __props__.__dict__["ike_integrity_protocol_variable"] = ike_integrity_protocol_variable
-            if ike_preshared_key is None and not opts.urn:
-                raise TypeError("Missing required property 'ike_preshared_key'")
             __props__.__dict__["ike_preshared_key"] = ike_preshared_key
             __props__.__dict__["ike_preshared_key_variable"] = ike_preshared_key_variable
             __props__.__dict__["ike_rekey_interval"] = ike_rekey_interval
@@ -2471,8 +2480,6 @@ class ServiceLanVpnInterfaceIpsecFeature(pulumi.CustomResource):
             __props__.__dict__["ike_version"] = ike_version
             __props__.__dict__["interface_description"] = interface_description
             __props__.__dict__["interface_description_variable"] = interface_description_variable
-            if interface_name is None and not opts.urn:
-                raise TypeError("Missing required property 'interface_name'")
             __props__.__dict__["interface_name"] = interface_name
             __props__.__dict__["interface_name_variable"] = interface_name_variable
             __props__.__dict__["ip_mtu"] = ip_mtu
@@ -2483,12 +2490,8 @@ class ServiceLanVpnInterfaceIpsecFeature(pulumi.CustomResource):
             __props__.__dict__["ipsec_rekey_interval_variable"] = ipsec_rekey_interval_variable
             __props__.__dict__["ipsec_replay_window"] = ipsec_replay_window
             __props__.__dict__["ipsec_replay_window_variable"] = ipsec_replay_window_variable
-            if ipv4_address is None and not opts.urn:
-                raise TypeError("Missing required property 'ipv4_address'")
             __props__.__dict__["ipv4_address"] = ipv4_address
             __props__.__dict__["ipv4_address_variable"] = ipv4_address_variable
-            if ipv4_subnet_mask is None and not opts.urn:
-                raise TypeError("Missing required property 'ipv4_subnet_mask'")
             __props__.__dict__["ipv4_subnet_mask"] = ipv4_subnet_mask
             __props__.__dict__["ipv4_subnet_mask_variable"] = ipv4_subnet_mask_variable
             __props__.__dict__["name"] = name
@@ -2501,8 +2504,6 @@ class ServiceLanVpnInterfaceIpsecFeature(pulumi.CustomResource):
             __props__.__dict__["tcp_mss_variable"] = tcp_mss_variable
             __props__.__dict__["tracker_id"] = tracker_id
             __props__.__dict__["tracker_id_variable"] = tracker_id_variable
-            if tunnel_destination_ipv4_address is None and not opts.urn:
-                raise TypeError("Missing required property 'tunnel_destination_ipv4_address'")
             __props__.__dict__["tunnel_destination_ipv4_address"] = tunnel_destination_ipv4_address
             __props__.__dict__["tunnel_destination_ipv4_address_variable"] = tunnel_destination_ipv4_address_variable
             if tunnel_destination_ipv4_subnet_mask is None and not opts.urn:
@@ -2511,16 +2512,10 @@ class ServiceLanVpnInterfaceIpsecFeature(pulumi.CustomResource):
             __props__.__dict__["tunnel_destination_ipv4_subnet_mask_variable"] = tunnel_destination_ipv4_subnet_mask_variable
             __props__.__dict__["tunnel_route_via"] = tunnel_route_via
             __props__.__dict__["tunnel_route_via_variable"] = tunnel_route_via_variable
-            if tunnel_source_interface is None and not opts.urn:
-                raise TypeError("Missing required property 'tunnel_source_interface'")
             __props__.__dict__["tunnel_source_interface"] = tunnel_source_interface
             __props__.__dict__["tunnel_source_interface_variable"] = tunnel_source_interface_variable
-            if tunnel_source_ipv4_address is None and not opts.urn:
-                raise TypeError("Missing required property 'tunnel_source_ipv4_address'")
             __props__.__dict__["tunnel_source_ipv4_address"] = tunnel_source_ipv4_address
             __props__.__dict__["tunnel_source_ipv4_address_variable"] = tunnel_source_ipv4_address_variable
-            if tunnel_source_ipv4_subnet_mask is None and not opts.urn:
-                raise TypeError("Missing required property 'tunnel_source_ipv4_subnet_mask'")
             __props__.__dict__["tunnel_source_ipv4_subnet_mask"] = tunnel_source_ipv4_subnet_mask
             __props__.__dict__["tunnel_source_ipv4_subnet_mask_variable"] = tunnel_source_ipv4_subnet_mask_variable
             __props__.__dict__["version"] = None
@@ -2755,7 +2750,7 @@ class ServiceLanVpnInterfaceIpsecFeature(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="applicationTunnelType")
-    def application_tunnel_type(self) -> pulumi.Output[str]:
+    def application_tunnel_type(self) -> pulumi.Output[Optional[str]]:
         """
         Enable Application Tunnel Type - Choices: `none`, `sig`
         """
@@ -2916,7 +2911,7 @@ class ServiceLanVpnInterfaceIpsecFeature(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="ikePresharedKey")
-    def ike_preshared_key(self) -> pulumi.Output[str]:
+    def ike_preshared_key(self) -> pulumi.Output[Optional[str]]:
         """
         Use preshared key to authenticate IKE peer
         """
@@ -2972,7 +2967,7 @@ class ServiceLanVpnInterfaceIpsecFeature(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="interfaceName")
-    def interface_name(self) -> pulumi.Output[str]:
+    def interface_name(self) -> pulumi.Output[Optional[str]]:
         """
         Interface name: IPsec when present
         """
@@ -3054,7 +3049,7 @@ class ServiceLanVpnInterfaceIpsecFeature(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="ipv4Address")
-    def ipv4_address(self) -> pulumi.Output[str]:
+    def ipv4_address(self) -> pulumi.Output[Optional[str]]:
         return pulumi.get(self, "ipv4_address")
 
     @property
@@ -3067,7 +3062,7 @@ class ServiceLanVpnInterfaceIpsecFeature(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="ipv4SubnetMask")
-    def ipv4_subnet_mask(self) -> pulumi.Output[str]:
+    def ipv4_subnet_mask(self) -> pulumi.Output[Optional[str]]:
         """
         - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
         `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
@@ -3168,7 +3163,7 @@ class ServiceLanVpnInterfaceIpsecFeature(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="tunnelDestinationIpv4Address")
-    def tunnel_destination_ipv4_address(self) -> pulumi.Output[str]:
+    def tunnel_destination_ipv4_address(self) -> pulumi.Output[Optional[str]]:
         return pulumi.get(self, "tunnel_destination_ipv4_address")
 
     @property
@@ -3217,7 +3212,7 @@ class ServiceLanVpnInterfaceIpsecFeature(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="tunnelSourceInterface")
-    def tunnel_source_interface(self) -> pulumi.Output[str]:
+    def tunnel_source_interface(self) -> pulumi.Output[Optional[str]]:
         """
         <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
         """
@@ -3233,7 +3228,7 @@ class ServiceLanVpnInterfaceIpsecFeature(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="tunnelSourceIpv4Address")
-    def tunnel_source_ipv4_address(self) -> pulumi.Output[str]:
+    def tunnel_source_ipv4_address(self) -> pulumi.Output[Optional[str]]:
         return pulumi.get(self, "tunnel_source_ipv4_address")
 
     @property
@@ -3246,7 +3241,7 @@ class ServiceLanVpnInterfaceIpsecFeature(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="tunnelSourceIpv4SubnetMask")
-    def tunnel_source_ipv4_subnet_mask(self) -> pulumi.Output[str]:
+    def tunnel_source_ipv4_subnet_mask(self) -> pulumi.Output[Optional[str]]:
         """
         - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
         `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,

@@ -15,8 +15,10 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Import
     /// 
+    /// Expected import identifier with the format: "other_ucse_feature_id,feature_profile_id"
+    /// 
     /// ```sh
-    /// $ pulumi import sdwan:index/otherUcseFeature:OtherUcseFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+    /// $ pulumi import sdwan:index/otherUcseFeature:OtherUcseFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
     /// ```
     /// </summary>
     [SdwanResourceType("sdwan:index/otherUcseFeature:OtherUcseFeature")]
@@ -62,7 +64,7 @@ namespace Pulumi.Sdwan
         /// Assign default gateway
         /// </summary>
         [Output("defaultGateway")]
-        public Output<string> DefaultGateway { get; private set; } = null!;
+        public Output<string?> DefaultGateway { get; private set; } = null!;
 
         /// <summary>
         /// Variable name
@@ -92,7 +94,7 @@ namespace Pulumi.Sdwan
         /// Assign IPv4 address
         /// </summary>
         [Output("ipv4Address")]
-        public Output<string> Ipv4Address { get; private set; } = null!;
+        public Output<string?> Ipv4Address { get; private set; } = null!;
 
         /// <summary>
         /// Variable name
@@ -215,8 +217,8 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// Assign default gateway
         /// </summary>
-        [Input("defaultGateway", required: true)]
-        public Input<string> DefaultGateway { get; set; } = null!;
+        [Input("defaultGateway")]
+        public Input<string>? DefaultGateway { get; set; }
 
         /// <summary>
         /// Variable name
@@ -251,8 +253,8 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// Assign IPv4 address
         /// </summary>
-        [Input("ipv4Address", required: true)]
-        public Input<string> Ipv4Address { get; set; } = null!;
+        [Input("ipv4Address")]
+        public Input<string>? Ipv4Address { get; set; }
 
         /// <summary>
         /// Variable name

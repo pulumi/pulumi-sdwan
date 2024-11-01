@@ -5,9 +5,10 @@ package com.pulumi.sdwan.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 
 public final class ExpandedCommunityListPolicyObjectEntryArgs extends com.pulumi.resources.ResourceArgs {
@@ -18,15 +19,15 @@ public final class ExpandedCommunityListPolicyObjectEntryArgs extends com.pulumi
      * Expanded community value, e.g. `100:1000`
      * 
      */
-    @Import(name="community", required=true)
-    private Output<String> community;
+    @Import(name="community")
+    private @Nullable Output<String> community;
 
     /**
      * @return Expanded community value, e.g. `100:1000`
      * 
      */
-    public Output<String> community() {
-        return this.community;
+    public Optional<Output<String>> community() {
+        return Optional.ofNullable(this.community);
     }
 
     private ExpandedCommunityListPolicyObjectEntryArgs() {}
@@ -59,7 +60,7 @@ public final class ExpandedCommunityListPolicyObjectEntryArgs extends com.pulumi
          * @return builder
          * 
          */
-        public Builder community(Output<String> community) {
+        public Builder community(@Nullable Output<String> community) {
             $.community = community;
             return this;
         }
@@ -75,9 +76,6 @@ public final class ExpandedCommunityListPolicyObjectEntryArgs extends com.pulumi
         }
 
         public ExpandedCommunityListPolicyObjectEntryArgs build() {
-            if ($.community == null) {
-                throw new MissingRequiredPropertyException("ExpandedCommunityListPolicyObjectEntryArgs", "community");
-            }
             return $;
         }
     }

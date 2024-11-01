@@ -11,27 +11,27 @@ import (
 
 var _ = internal.GetEnvOrDefault
 
-// Allow insecure HTTPS client. This can also be set as the SDWAN_INSECURE environment variable. Defaults to `true`.
+// Allow insecure HTTPS client. This can also be set as the `SDWAN_INSECURE` environment variable. Defaults to `true`.
 func GetInsecure(ctx *pulumi.Context) bool {
 	return config.GetBool(ctx, "sdwan:insecure")
 }
 
-// Password for the SD-WAN Manager account. This can also be set as the SDWAN_PASSWORD environment variable.
+// Password for the SD-WAN Manager account. This can also be set as the `SDWAN_PASSWORD` environment variable.
 func GetPassword(ctx *pulumi.Context) string {
 	return config.Get(ctx, "sdwan:password")
 }
 
-// Number of retries for REST API calls. This can also be set as the SDWAN_RETRIES environment variable. Defaults to `3`.
+// Number of retries for REST API calls. This can also be set as the `SDWAN_RETRIES` environment variable. Defaults to `3`.
 func GetRetries(ctx *pulumi.Context) int {
 	return config.GetInt(ctx, "sdwan:retries")
 }
 
-// URL of the Cisco SD-WAN Manager device. This can also be set as the SDWAN_URL environment variable.
+// URL of the Cisco SD-WAN Manager device. This can also be set as the `SDWAN_URL` environment variable.
 func GetUrl(ctx *pulumi.Context) string {
 	return config.Get(ctx, "sdwan:url")
 }
 
-// Username for the SD-WAN Manager account. This can also be set as the SDWAN_USERNAME environment variable.
+// Username for the SD-WAN Manager account. This can also be set as the `SDWAN_USERNAME` environment variable.
 func GetUsername(ctx *pulumi.Context) string {
 	return config.Get(ctx, "sdwan:username")
 }

@@ -5,8 +5,11 @@ package com.pulumi.sdwan.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 @CustomType
 public final class SecurityPolicyDefinition {
@@ -21,6 +24,11 @@ public final class SecurityPolicyDefinition {
      * 
      */
     private String type;
+    /**
+     * @return Policy definition version
+     * 
+     */
+    private @Nullable Integer version;
 
     private SecurityPolicyDefinition() {}
     /**
@@ -38,6 +46,13 @@ public final class SecurityPolicyDefinition {
     public String type() {
         return this.type;
     }
+    /**
+     * @return Policy definition version
+     * 
+     */
+    public Optional<Integer> version() {
+        return Optional.ofNullable(this.version);
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -50,11 +65,13 @@ public final class SecurityPolicyDefinition {
     public static final class Builder {
         private String id;
         private String type;
+        private @Nullable Integer version;
         public Builder() {}
         public Builder(SecurityPolicyDefinition defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.id = defaults.id;
     	      this.type = defaults.type;
+    	      this.version = defaults.version;
         }
 
         @CustomType.Setter
@@ -73,10 +90,17 @@ public final class SecurityPolicyDefinition {
             this.type = type;
             return this;
         }
+        @CustomType.Setter
+        public Builder version(@Nullable Integer version) {
+
+            this.version = version;
+            return this;
+        }
         public SecurityPolicyDefinition build() {
             final var _resultValue = new SecurityPolicyDefinition();
             _resultValue.id = id;
             _resultValue.type = type;
+            _resultValue.version = version;
             return _resultValue;
         }
     }

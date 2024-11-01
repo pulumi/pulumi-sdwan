@@ -12,14 +12,46 @@ import (
 )
 
 // This data source can read the Policy Object Feature Profile .
-func LookupPolicyObjectFeatureProfile(ctx *pulumi.Context, opts ...pulumi.InvokeOption) (*LookupPolicyObjectFeatureProfileResult, error) {
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.LookupPolicyObjectFeatureProfile(ctx, &sdwan.LookupPolicyObjectFeatureProfileArgs{
+//				Id: "f6b2c44c-693c-4763-b010-895aa3d236bd",
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+func LookupPolicyObjectFeatureProfile(ctx *pulumi.Context, args *LookupPolicyObjectFeatureProfileArgs, opts ...pulumi.InvokeOption) (*LookupPolicyObjectFeatureProfileResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupPolicyObjectFeatureProfileResult
-	err := ctx.Invoke("sdwan:index/getPolicyObjectFeatureProfile:getPolicyObjectFeatureProfile", nil, &rv, opts...)
+	err := ctx.Invoke("sdwan:index/getPolicyObjectFeatureProfile:getPolicyObjectFeatureProfile", args, &rv, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return &rv, nil
+}
+
+// A collection of arguments for invoking getPolicyObjectFeatureProfile.
+type LookupPolicyObjectFeatureProfileArgs struct {
+	// The id of the object
+	Id string `pulumi:"id"`
 }
 
 // A collection of values returned by getPolicyObjectFeatureProfile.
@@ -32,21 +64,33 @@ type LookupPolicyObjectFeatureProfileResult struct {
 	Name string `pulumi:"name"`
 }
 
-func LookupPolicyObjectFeatureProfileOutput(ctx *pulumi.Context, opts ...pulumi.InvokeOption) LookupPolicyObjectFeatureProfileResultOutput {
-	return pulumi.ToOutput(0).ApplyT(func(int) (LookupPolicyObjectFeatureProfileResultOutput, error) {
-		opts = internal.PkgInvokeDefaultOpts(opts)
-		var rv LookupPolicyObjectFeatureProfileResult
-		secret, err := ctx.InvokePackageRaw("sdwan:index/getPolicyObjectFeatureProfile:getPolicyObjectFeatureProfile", nil, &rv, "", opts...)
-		if err != nil {
-			return LookupPolicyObjectFeatureProfileResultOutput{}, err
-		}
+func LookupPolicyObjectFeatureProfileOutput(ctx *pulumi.Context, args LookupPolicyObjectFeatureProfileOutputArgs, opts ...pulumi.InvokeOption) LookupPolicyObjectFeatureProfileResultOutput {
+	return pulumi.ToOutputWithContext(context.Background(), args).
+		ApplyT(func(v interface{}) (LookupPolicyObjectFeatureProfileResultOutput, error) {
+			args := v.(LookupPolicyObjectFeatureProfileArgs)
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupPolicyObjectFeatureProfileResult
+			secret, err := ctx.InvokePackageRaw("sdwan:index/getPolicyObjectFeatureProfile:getPolicyObjectFeatureProfile", args, &rv, "", opts...)
+			if err != nil {
+				return LookupPolicyObjectFeatureProfileResultOutput{}, err
+			}
 
-		output := pulumi.ToOutput(rv).(LookupPolicyObjectFeatureProfileResultOutput)
-		if secret {
-			return pulumi.ToSecret(output).(LookupPolicyObjectFeatureProfileResultOutput), nil
-		}
-		return output, nil
-	}).(LookupPolicyObjectFeatureProfileResultOutput)
+			output := pulumi.ToOutput(rv).(LookupPolicyObjectFeatureProfileResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupPolicyObjectFeatureProfileResultOutput), nil
+			}
+			return output, nil
+		}).(LookupPolicyObjectFeatureProfileResultOutput)
+}
+
+// A collection of arguments for invoking getPolicyObjectFeatureProfile.
+type LookupPolicyObjectFeatureProfileOutputArgs struct {
+	// The id of the object
+	Id pulumi.StringInput `pulumi:"id"`
+}
+
+func (LookupPolicyObjectFeatureProfileOutputArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*LookupPolicyObjectFeatureProfileArgs)(nil)).Elem()
 }
 
 // A collection of values returned by getPolicyObjectFeatureProfile.

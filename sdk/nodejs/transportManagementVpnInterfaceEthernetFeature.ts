@@ -12,8 +12,10 @@ import * as utilities from "./utilities";
  *
  * ## Import
  *
+ * Expected import identifier with the format: "transport_management_vpn_interface_ethernet_feature_id,feature_profile_id,transport_management_vpn_feature_id"
+ *
  * ```sh
- * $ pulumi import sdwan:index/transportManagementVpnInterfaceEthernetFeature:TransportManagementVpnInterfaceEthernetFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+ * $ pulumi import sdwan:index/transportManagementVpnInterfaceEthernetFeature:TransportManagementVpnInterfaceEthernetFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037"
  * ```
  */
 export class TransportManagementVpnInterfaceEthernetFeature extends pulumi.CustomResource {
@@ -77,7 +79,7 @@ export class TransportManagementVpnInterfaceEthernetFeature extends pulumi.Custo
      */
     public readonly duplexVariable!: pulumi.Output<string | undefined>;
     /**
-     * Enable DHCPv6
+     * Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
      */
     public readonly enableDhcpv6!: pulumi.Output<boolean | undefined>;
     /**
@@ -128,7 +130,7 @@ export class TransportManagementVpnInterfaceEthernetFeature extends pulumi.Custo
      */
     public readonly ipMtuVariable!: pulumi.Output<string | undefined>;
     /**
-     * IP Address
+     * IP Address, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      */
     public readonly ipv4Address!: pulumi.Output<string | undefined>;
     /**
@@ -144,7 +146,12 @@ export class TransportManagementVpnInterfaceEthernetFeature extends pulumi.Custo
      */
     public readonly ipv4AutoDetectBandwidthVariable!: pulumi.Output<string | undefined>;
     /**
-     * DHCP Distance - Range: `1`-`65536`
+     * IPv4 Configuration Type - Choices: `dynamic`, `static` - Default value: `dynamic`
+     */
+    public readonly ipv4ConfigurationType!: pulumi.Output<string | undefined>;
+    /**
+     * DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic` - Range: `1`-`65536` - Default
+     * value: `1`
      */
     public readonly ipv4DhcpDistance!: pulumi.Output<number | undefined>;
     /**
@@ -168,15 +175,16 @@ export class TransportManagementVpnInterfaceEthernetFeature extends pulumi.Custo
      */
     public readonly ipv4IperfServerVariable!: pulumi.Output<string | undefined>;
     /**
-     * Secondary IpV4 Addresses
+     * Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      */
     public readonly ipv4SecondaryAddresses!: pulumi.Output<outputs.TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddress[] | undefined>;
     /**
-     * Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static` - Choices: `255.255.255.255`,
+     * `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`,
+     * `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`,
+     * `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`,
+     * `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`,
+     * `128.0.0.0`, `0.0.0.0`
      */
     public readonly ipv4SubnetMask!: pulumi.Output<string | undefined>;
     /**
@@ -184,13 +192,17 @@ export class TransportManagementVpnInterfaceEthernetFeature extends pulumi.Custo
      */
     public readonly ipv4SubnetMaskVariable!: pulumi.Output<string | undefined>;
     /**
-     * IPv6 Address Secondary
+     * IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
      */
     public readonly ipv6Address!: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
     public readonly ipv6AddressVariable!: pulumi.Output<string | undefined>;
+    /**
+     * IPv6 Configuration Type - Choices: `dynamic`, `static`, `none` - Default value: `none`
+     */
+    public readonly ipv6ConfigurationType!: pulumi.Output<string | undefined>;
     /**
      * Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
      */
@@ -291,6 +303,7 @@ export class TransportManagementVpnInterfaceEthernetFeature extends pulumi.Custo
             resourceInputs["ipv4AddressVariable"] = state ? state.ipv4AddressVariable : undefined;
             resourceInputs["ipv4AutoDetectBandwidth"] = state ? state.ipv4AutoDetectBandwidth : undefined;
             resourceInputs["ipv4AutoDetectBandwidthVariable"] = state ? state.ipv4AutoDetectBandwidthVariable : undefined;
+            resourceInputs["ipv4ConfigurationType"] = state ? state.ipv4ConfigurationType : undefined;
             resourceInputs["ipv4DhcpDistance"] = state ? state.ipv4DhcpDistance : undefined;
             resourceInputs["ipv4DhcpDistanceVariable"] = state ? state.ipv4DhcpDistanceVariable : undefined;
             resourceInputs["ipv4DhcpHelperVariable"] = state ? state.ipv4DhcpHelperVariable : undefined;
@@ -302,6 +315,7 @@ export class TransportManagementVpnInterfaceEthernetFeature extends pulumi.Custo
             resourceInputs["ipv4SubnetMaskVariable"] = state ? state.ipv4SubnetMaskVariable : undefined;
             resourceInputs["ipv6Address"] = state ? state.ipv6Address : undefined;
             resourceInputs["ipv6AddressVariable"] = state ? state.ipv6AddressVariable : undefined;
+            resourceInputs["ipv6ConfigurationType"] = state ? state.ipv6ConfigurationType : undefined;
             resourceInputs["loadInterval"] = state ? state.loadInterval : undefined;
             resourceInputs["loadIntervalVariable"] = state ? state.loadIntervalVariable : undefined;
             resourceInputs["macAddress"] = state ? state.macAddress : undefined;
@@ -345,6 +359,7 @@ export class TransportManagementVpnInterfaceEthernetFeature extends pulumi.Custo
             resourceInputs["ipv4AddressVariable"] = args ? args.ipv4AddressVariable : undefined;
             resourceInputs["ipv4AutoDetectBandwidth"] = args ? args.ipv4AutoDetectBandwidth : undefined;
             resourceInputs["ipv4AutoDetectBandwidthVariable"] = args ? args.ipv4AutoDetectBandwidthVariable : undefined;
+            resourceInputs["ipv4ConfigurationType"] = args ? args.ipv4ConfigurationType : undefined;
             resourceInputs["ipv4DhcpDistance"] = args ? args.ipv4DhcpDistance : undefined;
             resourceInputs["ipv4DhcpDistanceVariable"] = args ? args.ipv4DhcpDistanceVariable : undefined;
             resourceInputs["ipv4DhcpHelperVariable"] = args ? args.ipv4DhcpHelperVariable : undefined;
@@ -356,6 +371,7 @@ export class TransportManagementVpnInterfaceEthernetFeature extends pulumi.Custo
             resourceInputs["ipv4SubnetMaskVariable"] = args ? args.ipv4SubnetMaskVariable : undefined;
             resourceInputs["ipv6Address"] = args ? args.ipv6Address : undefined;
             resourceInputs["ipv6AddressVariable"] = args ? args.ipv6AddressVariable : undefined;
+            resourceInputs["ipv6ConfigurationType"] = args ? args.ipv6ConfigurationType : undefined;
             resourceInputs["loadInterval"] = args ? args.loadInterval : undefined;
             resourceInputs["loadIntervalVariable"] = args ? args.loadIntervalVariable : undefined;
             resourceInputs["macAddress"] = args ? args.macAddress : undefined;
@@ -414,7 +430,7 @@ export interface TransportManagementVpnInterfaceEthernetFeatureState {
      */
     duplexVariable?: pulumi.Input<string>;
     /**
-     * Enable DHCPv6
+     * Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
      */
     enableDhcpv6?: pulumi.Input<boolean>;
     /**
@@ -465,7 +481,7 @@ export interface TransportManagementVpnInterfaceEthernetFeatureState {
      */
     ipMtuVariable?: pulumi.Input<string>;
     /**
-     * IP Address
+     * IP Address, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      */
     ipv4Address?: pulumi.Input<string>;
     /**
@@ -481,7 +497,12 @@ export interface TransportManagementVpnInterfaceEthernetFeatureState {
      */
     ipv4AutoDetectBandwidthVariable?: pulumi.Input<string>;
     /**
-     * DHCP Distance - Range: `1`-`65536`
+     * IPv4 Configuration Type - Choices: `dynamic`, `static` - Default value: `dynamic`
+     */
+    ipv4ConfigurationType?: pulumi.Input<string>;
+    /**
+     * DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic` - Range: `1`-`65536` - Default
+     * value: `1`
      */
     ipv4DhcpDistance?: pulumi.Input<number>;
     /**
@@ -505,15 +526,16 @@ export interface TransportManagementVpnInterfaceEthernetFeatureState {
      */
     ipv4IperfServerVariable?: pulumi.Input<string>;
     /**
-     * Secondary IpV4 Addresses
+     * Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      */
     ipv4SecondaryAddresses?: pulumi.Input<pulumi.Input<inputs.TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddress>[]>;
     /**
-     * Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static` - Choices: `255.255.255.255`,
+     * `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`,
+     * `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`,
+     * `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`,
+     * `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`,
+     * `128.0.0.0`, `0.0.0.0`
      */
     ipv4SubnetMask?: pulumi.Input<string>;
     /**
@@ -521,13 +543,17 @@ export interface TransportManagementVpnInterfaceEthernetFeatureState {
      */
     ipv4SubnetMaskVariable?: pulumi.Input<string>;
     /**
-     * IPv6 Address Secondary
+     * IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
      */
     ipv6Address?: pulumi.Input<string>;
     /**
      * Variable name
      */
     ipv6AddressVariable?: pulumi.Input<string>;
+    /**
+     * IPv6 Configuration Type - Choices: `dynamic`, `static`, `none` - Default value: `none`
+     */
+    ipv6ConfigurationType?: pulumi.Input<string>;
     /**
      * Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
      */
@@ -627,7 +653,7 @@ export interface TransportManagementVpnInterfaceEthernetFeatureArgs {
      */
     duplexVariable?: pulumi.Input<string>;
     /**
-     * Enable DHCPv6
+     * Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
      */
     enableDhcpv6?: pulumi.Input<boolean>;
     /**
@@ -678,7 +704,7 @@ export interface TransportManagementVpnInterfaceEthernetFeatureArgs {
      */
     ipMtuVariable?: pulumi.Input<string>;
     /**
-     * IP Address
+     * IP Address, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      */
     ipv4Address?: pulumi.Input<string>;
     /**
@@ -694,7 +720,12 @@ export interface TransportManagementVpnInterfaceEthernetFeatureArgs {
      */
     ipv4AutoDetectBandwidthVariable?: pulumi.Input<string>;
     /**
-     * DHCP Distance - Range: `1`-`65536`
+     * IPv4 Configuration Type - Choices: `dynamic`, `static` - Default value: `dynamic`
+     */
+    ipv4ConfigurationType?: pulumi.Input<string>;
+    /**
+     * DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic` - Range: `1`-`65536` - Default
+     * value: `1`
      */
     ipv4DhcpDistance?: pulumi.Input<number>;
     /**
@@ -718,15 +749,16 @@ export interface TransportManagementVpnInterfaceEthernetFeatureArgs {
      */
     ipv4IperfServerVariable?: pulumi.Input<string>;
     /**
-     * Secondary IpV4 Addresses
+     * Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      */
     ipv4SecondaryAddresses?: pulumi.Input<pulumi.Input<inputs.TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddress>[]>;
     /**
-     * Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static` - Choices: `255.255.255.255`,
+     * `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`,
+     * `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`,
+     * `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`,
+     * `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`,
+     * `128.0.0.0`, `0.0.0.0`
      */
     ipv4SubnetMask?: pulumi.Input<string>;
     /**
@@ -734,13 +766,17 @@ export interface TransportManagementVpnInterfaceEthernetFeatureArgs {
      */
     ipv4SubnetMaskVariable?: pulumi.Input<string>;
     /**
-     * IPv6 Address Secondary
+     * IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
      */
     ipv6Address?: pulumi.Input<string>;
     /**
      * Variable name
      */
     ipv6AddressVariable?: pulumi.Input<string>;
+    /**
+     * IPv6 Configuration Type - Choices: `dynamic`, `static`, `none` - Default value: `none`
+     */
+    ipv6ConfigurationType?: pulumi.Input<string>;
     /**
      * Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
      */

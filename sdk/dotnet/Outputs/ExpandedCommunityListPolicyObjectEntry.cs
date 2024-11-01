@@ -16,10 +16,10 @@ namespace Pulumi.Sdwan.Outputs
         /// <summary>
         /// Expanded community value, e.g. `100:1000`
         /// </summary>
-        public readonly string Community;
+        public readonly string? Community;
 
         [OutputConstructor]
-        private ExpandedCommunityListPolicyObjectEntry(string community)
+        private ExpandedCommunityListPolicyObjectEntry(string? community)
         {
             Community = community;
         }

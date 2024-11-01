@@ -17,8 +17,10 @@ import (
 //
 // ## Import
 //
+// Expected import identifier with the format: "transport_routing_ospfv3_ipv6_feature_id,feature_profile_id"
+//
 // ```sh
-// $ pulumi import sdwan:index/transportRoutingOspfv3Ipv6Feature:TransportRoutingOspfv3Ipv6Feature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+// $ pulumi import sdwan:index/transportRoutingOspfv3Ipv6Feature:TransportRoutingOspfv3Ipv6Feature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
 // ```
 type TransportRoutingOspfv3Ipv6Feature struct {
 	pulumi.CustomResourceState

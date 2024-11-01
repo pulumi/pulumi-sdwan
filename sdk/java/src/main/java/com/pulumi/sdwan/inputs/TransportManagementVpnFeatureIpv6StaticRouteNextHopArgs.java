@@ -49,6 +49,7 @@ public final class TransportManagementVpnFeatureIpv6StaticRouteNextHopArgs exten
     /**
      * Administrative distance
      *   - Range: `1`-`254`
+     *   - Default value: `1`
      * 
      */
     @Import(name="administrativeDistance")
@@ -57,6 +58,7 @@ public final class TransportManagementVpnFeatureIpv6StaticRouteNextHopArgs exten
     /**
      * @return Administrative distance
      *   - Range: `1`-`254`
+     *   - Default value: `1`
      * 
      */
     public Optional<Output<Integer>> administrativeDistance() {
@@ -150,6 +152,7 @@ public final class TransportManagementVpnFeatureIpv6StaticRouteNextHopArgs exten
         /**
          * @param administrativeDistance Administrative distance
          *   - Range: `1`-`254`
+         *   - Default value: `1`
          * 
          * @return builder
          * 
@@ -162,6 +165,7 @@ public final class TransportManagementVpnFeatureIpv6StaticRouteNextHopArgs exten
         /**
          * @param administrativeDistance Administrative distance
          *   - Range: `1`-`254`
+         *   - Default value: `1`
          * 
          * @return builder
          * 

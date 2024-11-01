@@ -23,35 +23,35 @@ class _ExportableConfig(types.ModuleType):
     @property
     def insecure(self) -> Optional[bool]:
         """
-        Allow insecure HTTPS client. This can also be set as the SDWAN_INSECURE environment variable. Defaults to `true`.
+        Allow insecure HTTPS client. This can also be set as the `SDWAN_INSECURE` environment variable. Defaults to `true`.
         """
         return __config__.get_bool('insecure')
 
     @property
     def password(self) -> Optional[str]:
         """
-        Password for the SD-WAN Manager account. This can also be set as the SDWAN_PASSWORD environment variable.
+        Password for the SD-WAN Manager account. This can also be set as the `SDWAN_PASSWORD` environment variable.
         """
         return __config__.get('password')
 
     @property
     def retries(self) -> Optional[int]:
         """
-        Number of retries for REST API calls. This can also be set as the SDWAN_RETRIES environment variable. Defaults to `3`.
+        Number of retries for REST API calls. This can also be set as the `SDWAN_RETRIES` environment variable. Defaults to `3`.
         """
         return __config__.get_int('retries')
 
     @property
     def url(self) -> Optional[str]:
         """
-        URL of the Cisco SD-WAN Manager device. This can also be set as the SDWAN_URL environment variable.
+        URL of the Cisco SD-WAN Manager device. This can also be set as the `SDWAN_URL` environment variable.
         """
         return __config__.get('url')
 
     @property
     def username(self) -> Optional[str]:
         """
-        Username for the SD-WAN Manager account. This can also be set as the SDWAN_USERNAME environment variable.
+        Username for the SD-WAN Manager account. This can also be set as the `SDWAN_USERNAME` environment variable.
         """
         return __config__.get('username')
 

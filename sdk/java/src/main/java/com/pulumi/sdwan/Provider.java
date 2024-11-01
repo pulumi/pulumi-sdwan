@@ -24,42 +24,42 @@ import javax.annotation.Nullable;
 @ResourceType(type="pulumi:providers:sdwan")
 public class Provider extends com.pulumi.resources.ProviderResource {
     /**
-     * Password for the SD-WAN Manager account. This can also be set as the SDWAN_PASSWORD environment variable.
+     * Password for the SD-WAN Manager account. This can also be set as the `SDWAN_PASSWORD` environment variable.
      * 
      */
     @Export(name="password", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> password;
 
     /**
-     * @return Password for the SD-WAN Manager account. This can also be set as the SDWAN_PASSWORD environment variable.
+     * @return Password for the SD-WAN Manager account. This can also be set as the `SDWAN_PASSWORD` environment variable.
      * 
      */
     public Output<Optional<String>> password() {
         return Codegen.optional(this.password);
     }
     /**
-     * URL of the Cisco SD-WAN Manager device. This can also be set as the SDWAN_URL environment variable.
+     * URL of the Cisco SD-WAN Manager device. This can also be set as the `SDWAN_URL` environment variable.
      * 
      */
     @Export(name="url", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> url;
 
     /**
-     * @return URL of the Cisco SD-WAN Manager device. This can also be set as the SDWAN_URL environment variable.
+     * @return URL of the Cisco SD-WAN Manager device. This can also be set as the `SDWAN_URL` environment variable.
      * 
      */
     public Output<Optional<String>> url() {
         return Codegen.optional(this.url);
     }
     /**
-     * Username for the SD-WAN Manager account. This can also be set as the SDWAN_USERNAME environment variable.
+     * Username for the SD-WAN Manager account. This can also be set as the `SDWAN_USERNAME` environment variable.
      * 
      */
     @Export(name="username", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> username;
 
     /**
-     * @return Username for the SD-WAN Manager account. This can also be set as the SDWAN_USERNAME environment variable.
+     * @return Username for the SD-WAN Manager account. This can also be set as the `SDWAN_USERNAME` environment variable.
      * 
      */
     public Output<Optional<String>> username() {

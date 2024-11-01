@@ -19,19 +19,19 @@ namespace Pulumi.Sdwan
     public partial class Provider : global::Pulumi.ProviderResource
     {
         /// <summary>
-        /// Password for the SD-WAN Manager account. This can also be set as the SDWAN_PASSWORD environment variable.
+        /// Password for the SD-WAN Manager account. This can also be set as the `SDWAN_PASSWORD` environment variable.
         /// </summary>
         [Output("password")]
         public Output<string?> Password { get; private set; } = null!;
 
         /// <summary>
-        /// URL of the Cisco SD-WAN Manager device. This can also be set as the SDWAN_URL environment variable.
+        /// URL of the Cisco SD-WAN Manager device. This can also be set as the `SDWAN_URL` environment variable.
         /// </summary>
         [Output("url")]
         public Output<string?> Url { get; private set; } = null!;
 
         /// <summary>
-        /// Username for the SD-WAN Manager account. This can also be set as the SDWAN_USERNAME environment variable.
+        /// Username for the SD-WAN Manager account. This can also be set as the `SDWAN_USERNAME` environment variable.
         /// </summary>
         [Output("username")]
         public Output<string?> Username { get; private set; } = null!;
@@ -69,7 +69,7 @@ namespace Pulumi.Sdwan
     public sealed class ProviderArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Allow insecure HTTPS client. This can also be set as the SDWAN_INSECURE environment variable. Defaults to `true`.
+        /// Allow insecure HTTPS client. This can also be set as the `SDWAN_INSECURE` environment variable. Defaults to `true`.
         /// </summary>
         [Input("insecure", json: true)]
         public Input<bool>? Insecure { get; set; }
@@ -78,7 +78,7 @@ namespace Pulumi.Sdwan
         private Input<string>? _password;
 
         /// <summary>
-        /// Password for the SD-WAN Manager account. This can also be set as the SDWAN_PASSWORD environment variable.
+        /// Password for the SD-WAN Manager account. This can also be set as the `SDWAN_PASSWORD` environment variable.
         /// </summary>
         public Input<string>? Password
         {
@@ -91,19 +91,19 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Number of retries for REST API calls. This can also be set as the SDWAN_RETRIES environment variable. Defaults to `3`.
+        /// Number of retries for REST API calls. This can also be set as the `SDWAN_RETRIES` environment variable. Defaults to `3`.
         /// </summary>
         [Input("retries", json: true)]
         public Input<int>? Retries { get; set; }
 
         /// <summary>
-        /// URL of the Cisco SD-WAN Manager device. This can also be set as the SDWAN_URL environment variable.
+        /// URL of the Cisco SD-WAN Manager device. This can also be set as the `SDWAN_URL` environment variable.
         /// </summary>
         [Input("url")]
         public Input<string>? Url { get; set; }
 
         /// <summary>
-        /// Username for the SD-WAN Manager account. This can also be set as the SDWAN_USERNAME environment variable.
+        /// Username for the SD-WAN Manager account. This can also be set as the `SDWAN_USERNAME` environment variable.
         /// </summary>
         [Input("username")]
         public Input<string>? Username { get; set; }

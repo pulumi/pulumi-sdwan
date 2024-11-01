@@ -13,6 +13,7 @@ import (
 )
 
 // This resource can manage a Transport Feature Profile .
+//   - Minimum SD-WAN Manager version: `20.12.0`
 //
 // ## Example Usage
 //

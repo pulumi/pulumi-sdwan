@@ -27,7 +27,7 @@ class GetTransportManagementVpnInterfaceEthernetFeatureResult:
     """
     A collection of values returned by getTransportManagementVpnInterfaceEthernetFeature.
     """
-    def __init__(__self__, arp_entries=None, arp_timeout=None, arp_timeout_variable=None, autonegotiate=None, autonegotiate_variable=None, description=None, duplex=None, duplex_variable=None, enable_dhcpv6=None, feature_profile_id=None, icmp_redirect_disable=None, icmp_redirect_disable_variable=None, id=None, interface_description=None, interface_description_variable=None, interface_mtu=None, interface_mtu_variable=None, interface_name=None, interface_name_variable=None, ip_directed_broadcast=None, ip_directed_broadcast_variable=None, ip_mtu=None, ip_mtu_variable=None, ipv4_address=None, ipv4_address_variable=None, ipv4_auto_detect_bandwidth=None, ipv4_auto_detect_bandwidth_variable=None, ipv4_dhcp_distance=None, ipv4_dhcp_distance_variable=None, ipv4_dhcp_helper_variable=None, ipv4_dhcp_helpers=None, ipv4_iperf_server=None, ipv4_iperf_server_variable=None, ipv4_secondary_addresses=None, ipv4_subnet_mask=None, ipv4_subnet_mask_variable=None, ipv6_address=None, ipv6_address_variable=None, load_interval=None, load_interval_variable=None, mac_address=None, mac_address_variable=None, media_type=None, media_type_variable=None, name=None, shutdown=None, shutdown_variable=None, speed=None, speed_variable=None, tcp_mss=None, tcp_mss_variable=None, transport_management_vpn_feature_id=None, version=None):
+    def __init__(__self__, arp_entries=None, arp_timeout=None, arp_timeout_variable=None, autonegotiate=None, autonegotiate_variable=None, description=None, duplex=None, duplex_variable=None, enable_dhcpv6=None, feature_profile_id=None, icmp_redirect_disable=None, icmp_redirect_disable_variable=None, id=None, interface_description=None, interface_description_variable=None, interface_mtu=None, interface_mtu_variable=None, interface_name=None, interface_name_variable=None, ip_directed_broadcast=None, ip_directed_broadcast_variable=None, ip_mtu=None, ip_mtu_variable=None, ipv4_address=None, ipv4_address_variable=None, ipv4_auto_detect_bandwidth=None, ipv4_auto_detect_bandwidth_variable=None, ipv4_configuration_type=None, ipv4_dhcp_distance=None, ipv4_dhcp_distance_variable=None, ipv4_dhcp_helper_variable=None, ipv4_dhcp_helpers=None, ipv4_iperf_server=None, ipv4_iperf_server_variable=None, ipv4_secondary_addresses=None, ipv4_subnet_mask=None, ipv4_subnet_mask_variable=None, ipv6_address=None, ipv6_address_variable=None, ipv6_configuration_type=None, load_interval=None, load_interval_variable=None, mac_address=None, mac_address_variable=None, media_type=None, media_type_variable=None, name=None, shutdown=None, shutdown_variable=None, speed=None, speed_variable=None, tcp_mss=None, tcp_mss_variable=None, transport_management_vpn_feature_id=None, version=None):
         if arp_entries and not isinstance(arp_entries, list):
             raise TypeError("Expected argument 'arp_entries' to be a list")
         pulumi.set(__self__, "arp_entries", arp_entries)
@@ -109,6 +109,9 @@ class GetTransportManagementVpnInterfaceEthernetFeatureResult:
         if ipv4_auto_detect_bandwidth_variable and not isinstance(ipv4_auto_detect_bandwidth_variable, str):
             raise TypeError("Expected argument 'ipv4_auto_detect_bandwidth_variable' to be a str")
         pulumi.set(__self__, "ipv4_auto_detect_bandwidth_variable", ipv4_auto_detect_bandwidth_variable)
+        if ipv4_configuration_type and not isinstance(ipv4_configuration_type, str):
+            raise TypeError("Expected argument 'ipv4_configuration_type' to be a str")
+        pulumi.set(__self__, "ipv4_configuration_type", ipv4_configuration_type)
         if ipv4_dhcp_distance and not isinstance(ipv4_dhcp_distance, int):
             raise TypeError("Expected argument 'ipv4_dhcp_distance' to be a int")
         pulumi.set(__self__, "ipv4_dhcp_distance", ipv4_dhcp_distance)
@@ -142,6 +145,9 @@ class GetTransportManagementVpnInterfaceEthernetFeatureResult:
         if ipv6_address_variable and not isinstance(ipv6_address_variable, str):
             raise TypeError("Expected argument 'ipv6_address_variable' to be a str")
         pulumi.set(__self__, "ipv6_address_variable", ipv6_address_variable)
+        if ipv6_configuration_type and not isinstance(ipv6_configuration_type, str):
+            raise TypeError("Expected argument 'ipv6_configuration_type' to be a str")
+        pulumi.set(__self__, "ipv6_configuration_type", ipv6_configuration_type)
         if load_interval and not isinstance(load_interval, int):
             raise TypeError("Expected argument 'load_interval' to be a int")
         pulumi.set(__self__, "load_interval", load_interval)
@@ -399,6 +405,14 @@ class GetTransportManagementVpnInterfaceEthernetFeatureResult:
         return pulumi.get(self, "ipv4_auto_detect_bandwidth_variable")
 
     @property
+    @pulumi.getter(name="ipv4ConfigurationType")
+    def ipv4_configuration_type(self) -> str:
+        """
+        IPv4 Configuration Type
+        """
+        return pulumi.get(self, "ipv4_configuration_type")
+
+    @property
     @pulumi.getter(name="ipv4DhcpDistance")
     def ipv4_dhcp_distance(self) -> int:
         """
@@ -485,6 +499,14 @@ class GetTransportManagementVpnInterfaceEthernetFeatureResult:
         Variable name
         """
         return pulumi.get(self, "ipv6_address_variable")
+
+    @property
+    @pulumi.getter(name="ipv6ConfigurationType")
+    def ipv6_configuration_type(self) -> str:
+        """
+        IPv6 Configuration Type
+        """
+        return pulumi.get(self, "ipv6_configuration_type")
 
     @property
     @pulumi.getter(name="loadInterval")
@@ -637,6 +659,7 @@ class AwaitableGetTransportManagementVpnInterfaceEthernetFeatureResult(GetTransp
             ipv4_address_variable=self.ipv4_address_variable,
             ipv4_auto_detect_bandwidth=self.ipv4_auto_detect_bandwidth,
             ipv4_auto_detect_bandwidth_variable=self.ipv4_auto_detect_bandwidth_variable,
+            ipv4_configuration_type=self.ipv4_configuration_type,
             ipv4_dhcp_distance=self.ipv4_dhcp_distance,
             ipv4_dhcp_distance_variable=self.ipv4_dhcp_distance_variable,
             ipv4_dhcp_helper_variable=self.ipv4_dhcp_helper_variable,
@@ -648,6 +671,7 @@ class AwaitableGetTransportManagementVpnInterfaceEthernetFeatureResult(GetTransp
             ipv4_subnet_mask_variable=self.ipv4_subnet_mask_variable,
             ipv6_address=self.ipv6_address,
             ipv6_address_variable=self.ipv6_address_variable,
+            ipv6_configuration_type=self.ipv6_configuration_type,
             load_interval=self.load_interval,
             load_interval_variable=self.load_interval_variable,
             mac_address=self.mac_address,
@@ -723,6 +747,7 @@ def get_transport_management_vpn_interface_ethernet_feature(feature_profile_id: 
         ipv4_address_variable=pulumi.get(__ret__, 'ipv4_address_variable'),
         ipv4_auto_detect_bandwidth=pulumi.get(__ret__, 'ipv4_auto_detect_bandwidth'),
         ipv4_auto_detect_bandwidth_variable=pulumi.get(__ret__, 'ipv4_auto_detect_bandwidth_variable'),
+        ipv4_configuration_type=pulumi.get(__ret__, 'ipv4_configuration_type'),
         ipv4_dhcp_distance=pulumi.get(__ret__, 'ipv4_dhcp_distance'),
         ipv4_dhcp_distance_variable=pulumi.get(__ret__, 'ipv4_dhcp_distance_variable'),
         ipv4_dhcp_helper_variable=pulumi.get(__ret__, 'ipv4_dhcp_helper_variable'),
@@ -734,6 +759,7 @@ def get_transport_management_vpn_interface_ethernet_feature(feature_profile_id: 
         ipv4_subnet_mask_variable=pulumi.get(__ret__, 'ipv4_subnet_mask_variable'),
         ipv6_address=pulumi.get(__ret__, 'ipv6_address'),
         ipv6_address_variable=pulumi.get(__ret__, 'ipv6_address_variable'),
+        ipv6_configuration_type=pulumi.get(__ret__, 'ipv6_configuration_type'),
         load_interval=pulumi.get(__ret__, 'load_interval'),
         load_interval_variable=pulumi.get(__ret__, 'load_interval_variable'),
         mac_address=pulumi.get(__ret__, 'mac_address'),
@@ -806,6 +832,7 @@ def get_transport_management_vpn_interface_ethernet_feature_output(feature_profi
         ipv4_address_variable=pulumi.get(__response__, 'ipv4_address_variable'),
         ipv4_auto_detect_bandwidth=pulumi.get(__response__, 'ipv4_auto_detect_bandwidth'),
         ipv4_auto_detect_bandwidth_variable=pulumi.get(__response__, 'ipv4_auto_detect_bandwidth_variable'),
+        ipv4_configuration_type=pulumi.get(__response__, 'ipv4_configuration_type'),
         ipv4_dhcp_distance=pulumi.get(__response__, 'ipv4_dhcp_distance'),
         ipv4_dhcp_distance_variable=pulumi.get(__response__, 'ipv4_dhcp_distance_variable'),
         ipv4_dhcp_helper_variable=pulumi.get(__response__, 'ipv4_dhcp_helper_variable'),
@@ -817,6 +844,7 @@ def get_transport_management_vpn_interface_ethernet_feature_output(feature_profi
         ipv4_subnet_mask_variable=pulumi.get(__response__, 'ipv4_subnet_mask_variable'),
         ipv6_address=pulumi.get(__response__, 'ipv6_address'),
         ipv6_address_variable=pulumi.get(__response__, 'ipv6_address_variable'),
+        ipv6_configuration_type=pulumi.get(__response__, 'ipv6_configuration_type'),
         load_interval=pulumi.get(__response__, 'load_interval'),
         load_interval_variable=pulumi.get(__response__, 'load_interval_variable'),
         mac_address=pulumi.get(__response__, 'mac_address'),

@@ -24,6 +24,14 @@ import javax.annotation.Nullable;
  * &lt;!--Start PulumiCodeChooser --&gt;
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
+ * ## Import
+ * 
+ * One feature device template ID and a comma separated list containing at least one device ID must be included:
+ * 
+ * ```sh
+ * $ pulumi import sdwan:index/attachFeatureDeviceTemplate:AttachFeatureDeviceTemplate example &#34;f6b2c44c-693c-4763-b010-895aa3d236bd,[C8K-83E4B5EE-52AC-075F-B5E4-0050110680F3,C8K-C38D156C-34E4-909A-15BB-96D0E9D0E808]&#34;
+ * ```
+ * 
  */
 @ResourceType(type="sdwan:index/attachFeatureDeviceTemplate:AttachFeatureDeviceTemplate")
 public class AttachFeatureDeviceTemplate extends com.pulumi.resources.CustomResource {

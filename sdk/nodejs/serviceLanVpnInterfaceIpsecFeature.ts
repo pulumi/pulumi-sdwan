@@ -53,8 +53,10 @@ import * as utilities from "./utilities";
  *
  * ## Import
  *
+ * Expected import identifier with the format: "service_lan_vpn_interface_ipsec_feature_id,feature_profile_id,service_lan_vpn_feature_id"
+ *
  * ```sh
- * $ pulumi import sdwan:index/serviceLanVpnInterfaceIpsecFeature:ServiceLanVpnInterfaceIpsecFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+ * $ pulumi import sdwan:index/serviceLanVpnInterfaceIpsecFeature:ServiceLanVpnInterfaceIpsecFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037"
  * ```
  */
 export class ServiceLanVpnInterfaceIpsecFeature extends pulumi.CustomResource {
@@ -88,7 +90,7 @@ export class ServiceLanVpnInterfaceIpsecFeature extends pulumi.CustomResource {
     /**
      * Enable Application Tunnel Type - Choices: `none`, `sig`
      */
-    public readonly applicationTunnelType!: pulumi.Output<string>;
+    public readonly applicationTunnelType!: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
@@ -169,7 +171,7 @@ export class ServiceLanVpnInterfaceIpsecFeature extends pulumi.CustomResource {
     /**
      * Use preshared key to authenticate IKE peer
      */
-    public readonly ikePresharedKey!: pulumi.Output<string>;
+    public readonly ikePresharedKey!: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
@@ -197,7 +199,7 @@ export class ServiceLanVpnInterfaceIpsecFeature extends pulumi.CustomResource {
     /**
      * Interface name: IPsec when present
      */
-    public readonly interfaceName!: pulumi.Output<string>;
+    public readonly interfaceName!: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
@@ -236,7 +238,7 @@ export class ServiceLanVpnInterfaceIpsecFeature extends pulumi.CustomResource {
      * Variable name
      */
     public readonly ipsecReplayWindowVariable!: pulumi.Output<string | undefined>;
-    public readonly ipv4Address!: pulumi.Output<string>;
+    public readonly ipv4Address!: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
@@ -248,7 +250,7 @@ export class ServiceLanVpnInterfaceIpsecFeature extends pulumi.CustomResource {
      * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
      * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
-    public readonly ipv4SubnetMask!: pulumi.Output<string>;
+    public readonly ipv4SubnetMask!: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
@@ -294,7 +296,7 @@ export class ServiceLanVpnInterfaceIpsecFeature extends pulumi.CustomResource {
      * Variable name
      */
     public readonly trackerIdVariable!: pulumi.Output<string | undefined>;
-    public readonly tunnelDestinationIpv4Address!: pulumi.Output<string>;
+    public readonly tunnelDestinationIpv4Address!: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
@@ -322,12 +324,12 @@ export class ServiceLanVpnInterfaceIpsecFeature extends pulumi.CustomResource {
     /**
      * <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
      */
-    public readonly tunnelSourceInterface!: pulumi.Output<string>;
+    public readonly tunnelSourceInterface!: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
     public readonly tunnelSourceInterfaceVariable!: pulumi.Output<string | undefined>;
-    public readonly tunnelSourceIpv4Address!: pulumi.Output<string>;
+    public readonly tunnelSourceIpv4Address!: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
@@ -339,7 +341,7 @@ export class ServiceLanVpnInterfaceIpsecFeature extends pulumi.CustomResource {
      * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
      * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
-    public readonly tunnelSourceIpv4SubnetMask!: pulumi.Output<string>;
+    public readonly tunnelSourceIpv4SubnetMask!: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
@@ -428,38 +430,11 @@ export class ServiceLanVpnInterfaceIpsecFeature extends pulumi.CustomResource {
             resourceInputs["version"] = state ? state.version : undefined;
         } else {
             const args = argsOrState as ServiceLanVpnInterfaceIpsecFeatureArgs | undefined;
-            if ((!args || args.applicationTunnelType === undefined) && !opts.urn) {
-                throw new Error("Missing required property 'applicationTunnelType'");
-            }
             if ((!args || args.featureProfileId === undefined) && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            if ((!args || args.ikePresharedKey === undefined) && !opts.urn) {
-                throw new Error("Missing required property 'ikePresharedKey'");
-            }
-            if ((!args || args.interfaceName === undefined) && !opts.urn) {
-                throw new Error("Missing required property 'interfaceName'");
-            }
-            if ((!args || args.ipv4Address === undefined) && !opts.urn) {
-                throw new Error("Missing required property 'ipv4Address'");
-            }
-            if ((!args || args.ipv4SubnetMask === undefined) && !opts.urn) {
-                throw new Error("Missing required property 'ipv4SubnetMask'");
-            }
-            if ((!args || args.tunnelDestinationIpv4Address === undefined) && !opts.urn) {
-                throw new Error("Missing required property 'tunnelDestinationIpv4Address'");
-            }
             if ((!args || args.tunnelDestinationIpv4SubnetMask === undefined) && !opts.urn) {
                 throw new Error("Missing required property 'tunnelDestinationIpv4SubnetMask'");
-            }
-            if ((!args || args.tunnelSourceInterface === undefined) && !opts.urn) {
-                throw new Error("Missing required property 'tunnelSourceInterface'");
-            }
-            if ((!args || args.tunnelSourceIpv4Address === undefined) && !opts.urn) {
-                throw new Error("Missing required property 'tunnelSourceIpv4Address'");
-            }
-            if ((!args || args.tunnelSourceIpv4SubnetMask === undefined) && !opts.urn) {
-                throw new Error("Missing required property 'tunnelSourceIpv4SubnetMask'");
             }
             resourceInputs["applicationTunnelType"] = args ? args.applicationTunnelType : undefined;
             resourceInputs["applicationTunnelTypeVariable"] = args ? args.applicationTunnelTypeVariable : undefined;
@@ -807,7 +782,7 @@ export interface ServiceLanVpnInterfaceIpsecFeatureArgs {
     /**
      * Enable Application Tunnel Type - Choices: `none`, `sig`
      */
-    applicationTunnelType: pulumi.Input<string>;
+    applicationTunnelType?: pulumi.Input<string>;
     /**
      * Variable name
      */
@@ -888,7 +863,7 @@ export interface ServiceLanVpnInterfaceIpsecFeatureArgs {
     /**
      * Use preshared key to authenticate IKE peer
      */
-    ikePresharedKey: pulumi.Input<string>;
+    ikePresharedKey?: pulumi.Input<string>;
     /**
      * Variable name
      */
@@ -916,7 +891,7 @@ export interface ServiceLanVpnInterfaceIpsecFeatureArgs {
     /**
      * Interface name: IPsec when present
      */
-    interfaceName: pulumi.Input<string>;
+    interfaceName?: pulumi.Input<string>;
     /**
      * Variable name
      */
@@ -955,7 +930,7 @@ export interface ServiceLanVpnInterfaceIpsecFeatureArgs {
      * Variable name
      */
     ipsecReplayWindowVariable?: pulumi.Input<string>;
-    ipv4Address: pulumi.Input<string>;
+    ipv4Address?: pulumi.Input<string>;
     /**
      * Variable name
      */
@@ -967,7 +942,7 @@ export interface ServiceLanVpnInterfaceIpsecFeatureArgs {
      * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
      * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
-    ipv4SubnetMask: pulumi.Input<string>;
+    ipv4SubnetMask?: pulumi.Input<string>;
     /**
      * Variable name
      */
@@ -1013,7 +988,7 @@ export interface ServiceLanVpnInterfaceIpsecFeatureArgs {
      * Variable name
      */
     trackerIdVariable?: pulumi.Input<string>;
-    tunnelDestinationIpv4Address: pulumi.Input<string>;
+    tunnelDestinationIpv4Address?: pulumi.Input<string>;
     /**
      * Variable name
      */
@@ -1041,12 +1016,12 @@ export interface ServiceLanVpnInterfaceIpsecFeatureArgs {
     /**
      * <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
      */
-    tunnelSourceInterface: pulumi.Input<string>;
+    tunnelSourceInterface?: pulumi.Input<string>;
     /**
      * Variable name
      */
     tunnelSourceInterfaceVariable?: pulumi.Input<string>;
-    tunnelSourceIpv4Address: pulumi.Input<string>;
+    tunnelSourceIpv4Address?: pulumi.Input<string>;
     /**
      * Variable name
      */
@@ -1058,7 +1033,7 @@ export interface ServiceLanVpnInterfaceIpsecFeatureArgs {
      * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
      * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
-    tunnelSourceIpv4SubnetMask: pulumi.Input<string>;
+    tunnelSourceIpv4SubnetMask?: pulumi.Input<string>;
     /**
      * Variable name
      */

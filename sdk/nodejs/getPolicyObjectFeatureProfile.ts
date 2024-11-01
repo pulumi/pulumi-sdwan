@@ -6,11 +6,33 @@ import * as utilities from "./utilities";
 
 /**
  * This data source can read the Policy Object Feature Profile .
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = sdwan.getPolicyObjectFeatureProfile({
+ *     id: "f6b2c44c-693c-4763-b010-895aa3d236bd",
+ * });
+ * ```
  */
-export function getPolicyObjectFeatureProfile(opts?: pulumi.InvokeOptions): Promise<GetPolicyObjectFeatureProfileResult> {
+export function getPolicyObjectFeatureProfile(args: GetPolicyObjectFeatureProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetPolicyObjectFeatureProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("sdwan:index/getPolicyObjectFeatureProfile:getPolicyObjectFeatureProfile", {
+        "id": args.id,
     }, opts);
+}
+
+/**
+ * A collection of arguments for invoking getPolicyObjectFeatureProfile.
+ */
+export interface GetPolicyObjectFeatureProfileArgs {
+    /**
+     * The id of the object
+     */
+    id: string;
 }
 
 /**
@@ -32,9 +54,31 @@ export interface GetPolicyObjectFeatureProfileResult {
 }
 /**
  * This data source can read the Policy Object Feature Profile .
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = sdwan.getPolicyObjectFeatureProfile({
+ *     id: "f6b2c44c-693c-4763-b010-895aa3d236bd",
+ * });
+ * ```
  */
-export function getPolicyObjectFeatureProfileOutput(opts?: pulumi.InvokeOptions): pulumi.Output<GetPolicyObjectFeatureProfileResult> {
+export function getPolicyObjectFeatureProfileOutput(args: GetPolicyObjectFeatureProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetPolicyObjectFeatureProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getPolicyObjectFeatureProfile:getPolicyObjectFeatureProfile", {
+        "id": args.id,
     }, opts);
+}
+
+/**
+ * A collection of arguments for invoking getPolicyObjectFeatureProfile.
+ */
+export interface GetPolicyObjectFeatureProfileOutputArgs {
+    /**
+     * The id of the object
+     */
+    id: pulumi.Input<string>;
 }

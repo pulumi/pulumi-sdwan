@@ -17,8 +17,10 @@ import (
 //
 // ## Import
 //
+// Expected import identifier with the format: "other_ucse_feature_id,feature_profile_id"
+//
 // ```sh
-// $ pulumi import sdwan:index/otherUcseFeature:OtherUcseFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+// $ pulumi import sdwan:index/otherUcseFeature:OtherUcseFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
 // ```
 type OtherUcseFeature struct {
 	pulumi.CustomResourceState
@@ -36,7 +38,7 @@ type OtherUcseFeature struct {
 	// Bay - Range: `0`-`2`
 	Bay pulumi.IntOutput `pulumi:"bay"`
 	// Assign default gateway
-	DefaultGateway pulumi.StringOutput `pulumi:"defaultGateway"`
+	DefaultGateway pulumi.StringPtrOutput `pulumi:"defaultGateway"`
 	// Variable name
 	DefaultGatewayVariable pulumi.StringPtrOutput `pulumi:"defaultGatewayVariable"`
 	// The description of the Feature
@@ -46,7 +48,7 @@ type OtherUcseFeature struct {
 	// Interface name: GigabitEthernet0/<>/<> when present
 	Interfaces OtherUcseFeatureInterfaceArrayOutput `pulumi:"interfaces"`
 	// Assign IPv4 address
-	Ipv4Address pulumi.StringOutput `pulumi:"ipv4Address"`
+	Ipv4Address pulumi.StringPtrOutput `pulumi:"ipv4Address"`
 	// Variable name
 	Ipv4AddressVariable pulumi.StringPtrOutput `pulumi:"ipv4AddressVariable"`
 	// The name of the Feature
@@ -77,14 +79,8 @@ func NewOtherUcseFeature(ctx *pulumi.Context,
 	if args.Bay == nil {
 		return nil, errors.New("invalid value for required argument 'Bay'")
 	}
-	if args.DefaultGateway == nil {
-		return nil, errors.New("invalid value for required argument 'DefaultGateway'")
-	}
 	if args.FeatureProfileId == nil {
 		return nil, errors.New("invalid value for required argument 'FeatureProfileId'")
-	}
-	if args.Ipv4Address == nil {
-		return nil, errors.New("invalid value for required argument 'Ipv4Address'")
 	}
 	if args.Slot == nil {
 		return nil, errors.New("invalid value for required argument 'Slot'")
@@ -207,7 +203,7 @@ type otherUcseFeatureArgs struct {
 	// Bay - Range: `0`-`2`
 	Bay int `pulumi:"bay"`
 	// Assign default gateway
-	DefaultGateway string `pulumi:"defaultGateway"`
+	DefaultGateway *string `pulumi:"defaultGateway"`
 	// Variable name
 	DefaultGatewayVariable *string `pulumi:"defaultGatewayVariable"`
 	// The description of the Feature
@@ -217,7 +213,7 @@ type otherUcseFeatureArgs struct {
 	// Interface name: GigabitEthernet0/<>/<> when present
 	Interfaces []OtherUcseFeatureInterface `pulumi:"interfaces"`
 	// Assign IPv4 address
-	Ipv4Address string `pulumi:"ipv4Address"`
+	Ipv4Address *string `pulumi:"ipv4Address"`
 	// Variable name
 	Ipv4AddressVariable *string `pulumi:"ipv4AddressVariable"`
 	// The name of the Feature
@@ -245,7 +241,7 @@ type OtherUcseFeatureArgs struct {
 	// Bay - Range: `0`-`2`
 	Bay pulumi.IntInput
 	// Assign default gateway
-	DefaultGateway pulumi.StringInput
+	DefaultGateway pulumi.StringPtrInput
 	// Variable name
 	DefaultGatewayVariable pulumi.StringPtrInput
 	// The description of the Feature
@@ -255,7 +251,7 @@ type OtherUcseFeatureArgs struct {
 	// Interface name: GigabitEthernet0/<>/<> when present
 	Interfaces OtherUcseFeatureInterfaceArrayInput
 	// Assign IPv4 address
-	Ipv4Address pulumi.StringInput
+	Ipv4Address pulumi.StringPtrInput
 	// Variable name
 	Ipv4AddressVariable pulumi.StringPtrInput
 	// The name of the Feature
@@ -386,8 +382,8 @@ func (o OtherUcseFeatureOutput) Bay() pulumi.IntOutput {
 }
 
 // Assign default gateway
-func (o OtherUcseFeatureOutput) DefaultGateway() pulumi.StringOutput {
-	return o.ApplyT(func(v *OtherUcseFeature) pulumi.StringOutput { return v.DefaultGateway }).(pulumi.StringOutput)
+func (o OtherUcseFeatureOutput) DefaultGateway() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *OtherUcseFeature) pulumi.StringPtrOutput { return v.DefaultGateway }).(pulumi.StringPtrOutput)
 }
 
 // Variable name
@@ -411,8 +407,8 @@ func (o OtherUcseFeatureOutput) Interfaces() OtherUcseFeatureInterfaceArrayOutpu
 }
 
 // Assign IPv4 address
-func (o OtherUcseFeatureOutput) Ipv4Address() pulumi.StringOutput {
-	return o.ApplyT(func(v *OtherUcseFeature) pulumi.StringOutput { return v.Ipv4Address }).(pulumi.StringOutput)
+func (o OtherUcseFeatureOutput) Ipv4Address() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *OtherUcseFeature) pulumi.StringPtrOutput { return v.Ipv4Address }).(pulumi.StringPtrOutput)
 }
 
 // Variable name
