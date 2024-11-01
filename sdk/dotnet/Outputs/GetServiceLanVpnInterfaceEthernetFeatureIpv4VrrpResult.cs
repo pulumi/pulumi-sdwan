@@ -61,6 +61,10 @@ namespace Pulumi.Sdwan.Outputs
         /// Track OMP status
         /// </summary>
         public readonly bool TrackOmp;
+        /// <summary>
+        /// Tracking object for VRRP configuration
+        /// </summary>
+        public readonly ImmutableArray<Outputs.GetServiceLanVpnInterfaceEthernetFeatureIpv4VrrpTrackingObjectResult> TrackingObjects;
 
         [OutputConstructor]
         private GetServiceLanVpnInterfaceEthernetFeatureIpv4VrrpResult(
@@ -86,7 +90,9 @@ namespace Pulumi.Sdwan.Outputs
 
             bool tlocPrefixChange,
 
-            bool trackOmp)
+            bool trackOmp,
+
+            ImmutableArray<Outputs.GetServiceLanVpnInterfaceEthernetFeatureIpv4VrrpTrackingObjectResult> trackingObjects)
         {
             Address = address;
             AddressVariable = addressVariable;
@@ -100,6 +106,7 @@ namespace Pulumi.Sdwan.Outputs
             TlocPrefChangeValue = tlocPrefChangeValue;
             TlocPrefixChange = tlocPrefixChange;
             TrackOmp = trackOmp;
+            TrackingObjects = trackingObjects;
         }
     }
 }

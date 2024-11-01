@@ -46,9 +46,17 @@ export interface GetConfigurationGroupResult {
      */
     readonly description: string;
     /**
+     * List of devices
+     */
+    readonly devices: outputs.GetConfigurationGroupDevice[];
+    /**
      * List of feature profiles
      */
     readonly featureProfiles: outputs.GetConfigurationGroupFeatureProfile[];
+    /**
+     * List of all associated feature versions
+     */
+    readonly featureVersions: string[];
     /**
      * The id of the object
      */

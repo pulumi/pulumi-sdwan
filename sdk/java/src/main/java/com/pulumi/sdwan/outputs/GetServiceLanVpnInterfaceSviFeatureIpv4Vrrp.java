@@ -6,6 +6,7 @@ package com.pulumi.sdwan.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.sdwan.outputs.GetServiceLanVpnInterfaceSviFeatureIpv4VrrpSecondaryAddress;
+import com.pulumi.sdwan.outputs.GetServiceLanVpnInterfaceSviFeatureIpv4VrrpTrackingObject;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -94,6 +95,11 @@ public final class GetServiceLanVpnInterfaceSviFeatureIpv4Vrrp {
      * 
      */
     private String trackOmpVariable;
+    /**
+     * @return tracking object for VRRP configuration
+     * 
+     */
+    private List<GetServiceLanVpnInterfaceSviFeatureIpv4VrrpTrackingObject> trackingObjects;
 
     private GetServiceLanVpnInterfaceSviFeatureIpv4Vrrp() {}
     /**
@@ -208,6 +214,13 @@ public final class GetServiceLanVpnInterfaceSviFeatureIpv4Vrrp {
     public String trackOmpVariable() {
         return this.trackOmpVariable;
     }
+    /**
+     * @return tracking object for VRRP configuration
+     * 
+     */
+    public List<GetServiceLanVpnInterfaceSviFeatureIpv4VrrpTrackingObject> trackingObjects() {
+        return this.trackingObjects;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -234,6 +247,7 @@ public final class GetServiceLanVpnInterfaceSviFeatureIpv4Vrrp {
         private String tlocPrefixChangeValueVariable;
         private Boolean trackOmp;
         private String trackOmpVariable;
+        private List<GetServiceLanVpnInterfaceSviFeatureIpv4VrrpTrackingObject> trackingObjects;
         public Builder() {}
         public Builder(GetServiceLanVpnInterfaceSviFeatureIpv4Vrrp defaults) {
     	      Objects.requireNonNull(defaults);
@@ -253,6 +267,7 @@ public final class GetServiceLanVpnInterfaceSviFeatureIpv4Vrrp {
     	      this.tlocPrefixChangeValueVariable = defaults.tlocPrefixChangeValueVariable;
     	      this.trackOmp = defaults.trackOmp;
     	      this.trackOmpVariable = defaults.trackOmpVariable;
+    	      this.trackingObjects = defaults.trackingObjects;
         }
 
         @CustomType.Setter
@@ -386,6 +401,17 @@ public final class GetServiceLanVpnInterfaceSviFeatureIpv4Vrrp {
             this.trackOmpVariable = trackOmpVariable;
             return this;
         }
+        @CustomType.Setter
+        public Builder trackingObjects(List<GetServiceLanVpnInterfaceSviFeatureIpv4VrrpTrackingObject> trackingObjects) {
+            if (trackingObjects == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceSviFeatureIpv4Vrrp", "trackingObjects");
+            }
+            this.trackingObjects = trackingObjects;
+            return this;
+        }
+        public Builder trackingObjects(GetServiceLanVpnInterfaceSviFeatureIpv4VrrpTrackingObject... trackingObjects) {
+            return trackingObjects(List.of(trackingObjects));
+        }
         public GetServiceLanVpnInterfaceSviFeatureIpv4Vrrp build() {
             final var _resultValue = new GetServiceLanVpnInterfaceSviFeatureIpv4Vrrp();
             _resultValue.address = address;
@@ -404,6 +430,7 @@ public final class GetServiceLanVpnInterfaceSviFeatureIpv4Vrrp {
             _resultValue.tlocPrefixChangeValueVariable = tlocPrefixChangeValueVariable;
             _resultValue.trackOmp = trackOmp;
             _resultValue.trackOmpVariable = trackOmpVariable;
+            _resultValue.trackingObjects = trackingObjects;
             return _resultValue;
         }
     }

@@ -196,6 +196,10 @@ export interface GetTransportWanVpnInterfaceEthernetFeatureResult {
      */
     readonly ipv4AddressVariable: string;
     /**
+     * IPv4 Configuration Type
+     */
+    readonly ipv4ConfigurationType: string;
+    /**
      * DHCP Distance
      */
     readonly ipv4DhcpDistance: number;
@@ -231,6 +235,10 @@ export interface GetTransportWanVpnInterfaceEthernetFeatureResult {
      * Variable name
      */
     readonly ipv6AddressVariable: string;
+    /**
+     * IPv6 Configuration Type
+     */
+    readonly ipv6ConfigurationType: string;
     /**
      * secondary IPv6 addresses
      */

@@ -71,8 +71,10 @@ import javax.annotation.Nullable;
  * 
  * ## Import
  * 
+ * Expected import identifier with the format: &#34;service_lan_vpn_interface_gre_feature_id,feature_profile_id,service_lan_vpn_feature_id&#34;
+ * 
  * ```sh
- * $ pulumi import sdwan:index/serviceLanVpnInterfaceGreFeature:ServiceLanVpnInterfaceGreFeature example &#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;
+ * $ pulumi import sdwan:index/serviceLanVpnInterfaceGreFeature:ServiceLanVpnInterfaceGreFeature example &#34;f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037&#34;
  * ```
  * 
  */
@@ -195,14 +197,14 @@ public class ServiceLanVpnInterfaceGreFeature extends com.pulumi.resources.Custo
      * 
      */
     @Export(name="interfaceName", refs={String.class}, tree="[0]")
-    private Output<String> interfaceName;
+    private Output</* @Nullable */ String> interfaceName;
 
     /**
      * @return Interface name (1..255)
      * 
      */
-    public Output<String> interfaceName() {
-        return this.interfaceName;
+    public Output<Optional<String>> interfaceName() {
+        return Codegen.optional(this.interfaceName);
     }
     /**
      * Variable name
@@ -247,10 +249,10 @@ public class ServiceLanVpnInterfaceGreFeature extends com.pulumi.resources.Custo
         return Codegen.optional(this.ipMtuVariable);
     }
     @Export(name="ipv4Address", refs={String.class}, tree="[0]")
-    private Output<String> ipv4Address;
+    private Output</* @Nullable */ String> ipv4Address;
 
-    public Output<String> ipv4Address() {
-        return this.ipv4Address;
+    public Output<Optional<String>> ipv4Address() {
+        return Codegen.optional(this.ipv4Address);
     }
     /**
      * Variable name
@@ -275,7 +277,7 @@ public class ServiceLanVpnInterfaceGreFeature extends com.pulumi.resources.Custo
      * 
      */
     @Export(name="ipv4SubnetMask", refs={String.class}, tree="[0]")
-    private Output<String> ipv4SubnetMask;
+    private Output</* @Nullable */ String> ipv4SubnetMask;
 
     /**
      * @return - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
@@ -285,8 +287,8 @@ public class ServiceLanVpnInterfaceGreFeature extends com.pulumi.resources.Custo
      * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
-    public Output<String> ipv4SubnetMask() {
-        return this.ipv4SubnetMask;
+    public Output<Optional<String>> ipv4SubnetMask() {
+        return Codegen.optional(this.ipv4SubnetMask);
     }
     /**
      * Variable name
@@ -391,14 +393,14 @@ public class ServiceLanVpnInterfaceGreFeature extends com.pulumi.resources.Custo
      * 
      */
     @Export(name="tunnelDestinationIpv4Address", refs={String.class}, tree="[0]")
-    private Output<String> tunnelDestinationIpv4Address;
+    private Output</* @Nullable */ String> tunnelDestinationIpv4Address;
 
     /**
      * @return Tunnel destination IP Address
      * 
      */
-    public Output<String> tunnelDestinationIpv4Address() {
-        return this.tunnelDestinationIpv4Address;
+    public Output<Optional<String>> tunnelDestinationIpv4Address() {
+        return Codegen.optional(this.tunnelDestinationIpv4Address);
     }
     /**
      * Variable name

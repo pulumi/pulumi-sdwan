@@ -5,6 +5,7 @@ package com.pulumi.sdwan.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,6 +21,11 @@ public final class GetSecurityPolicyDefinition {
      * 
      */
     private String type;
+    /**
+     * @return Policy definition version
+     * 
+     */
+    private Integer version;
 
     private GetSecurityPolicyDefinition() {}
     /**
@@ -36,6 +42,13 @@ public final class GetSecurityPolicyDefinition {
     public String type() {
         return this.type;
     }
+    /**
+     * @return Policy definition version
+     * 
+     */
+    public Integer version() {
+        return this.version;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -48,11 +61,13 @@ public final class GetSecurityPolicyDefinition {
     public static final class Builder {
         private String id;
         private String type;
+        private Integer version;
         public Builder() {}
         public Builder(GetSecurityPolicyDefinition defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.id = defaults.id;
     	      this.type = defaults.type;
+    	      this.version = defaults.version;
         }
 
         @CustomType.Setter
@@ -71,10 +86,19 @@ public final class GetSecurityPolicyDefinition {
             this.type = type;
             return this;
         }
+        @CustomType.Setter
+        public Builder version(Integer version) {
+            if (version == null) {
+              throw new MissingRequiredPropertyException("GetSecurityPolicyDefinition", "version");
+            }
+            this.version = version;
+            return this;
+        }
         public GetSecurityPolicyDefinition build() {
             final var _resultValue = new GetSecurityPolicyDefinition();
             _resultValue.id = id;
             _resultValue.type = type;
+            _resultValue.version = version;
             return _resultValue;
         }
     }

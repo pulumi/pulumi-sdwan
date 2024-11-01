@@ -25,6 +25,12 @@ namespace Pulumi.Sdwan.Inputs
         [Input("type", required: true)]
         public Input<string> Type { get; set; } = null!;
 
+        /// <summary>
+        /// Policy definition version
+        /// </summary>
+        [Input("version")]
+        public Input<int>? Version { get; set; }
+
         public SecurityPolicyDefinitionArgs()
         {
         }

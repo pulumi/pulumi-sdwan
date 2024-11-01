@@ -58,8 +58,12 @@ type LookupConfigurationGroupArgs struct {
 type LookupConfigurationGroupResult struct {
 	// Description
 	Description string `pulumi:"description"`
+	// List of devices
+	Devices []GetConfigurationGroupDevice `pulumi:"devices"`
 	// List of feature profiles
 	FeatureProfiles []GetConfigurationGroupFeatureProfile `pulumi:"featureProfiles"`
+	// List of all associated feature versions
+	FeatureVersions []string `pulumi:"featureVersions"`
 	// The id of the object
 	Id string `pulumi:"id"`
 	// The name of the configuration group
@@ -121,9 +125,19 @@ func (o LookupConfigurationGroupResultOutput) Description() pulumi.StringOutput 
 	return o.ApplyT(func(v LookupConfigurationGroupResult) string { return v.Description }).(pulumi.StringOutput)
 }
 
+// List of devices
+func (o LookupConfigurationGroupResultOutput) Devices() GetConfigurationGroupDeviceArrayOutput {
+	return o.ApplyT(func(v LookupConfigurationGroupResult) []GetConfigurationGroupDevice { return v.Devices }).(GetConfigurationGroupDeviceArrayOutput)
+}
+
 // List of feature profiles
 func (o LookupConfigurationGroupResultOutput) FeatureProfiles() GetConfigurationGroupFeatureProfileArrayOutput {
 	return o.ApplyT(func(v LookupConfigurationGroupResult) []GetConfigurationGroupFeatureProfile { return v.FeatureProfiles }).(GetConfigurationGroupFeatureProfileArrayOutput)
+}
+
+// List of all associated feature versions
+func (o LookupConfigurationGroupResultOutput) FeatureVersions() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v LookupConfigurationGroupResult) []string { return v.FeatureVersions }).(pulumi.StringArrayOutput)
 }
 
 // The id of the object

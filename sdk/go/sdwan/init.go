@@ -39,6 +39,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &ApplicationPriorityFeatureProfile{}
 	case "sdwan:index/applicationPriorityQosPolicy:ApplicationPriorityQosPolicy":
 		r = &ApplicationPriorityQosPolicy{}
+	case "sdwan:index/applicationPriorityTrafficPolicyPolicy:ApplicationPriorityTrafficPolicyPolicy":
+		r = &ApplicationPriorityTrafficPolicyPolicy{}
 	case "sdwan:index/asPathListPolicyObject:AsPathListPolicyObject":
 		r = &AsPathListPolicyObject{}
 	case "sdwan:index/attachFeatureDeviceTemplate:AttachFeatureDeviceTemplate":
@@ -129,12 +131,16 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &DataIpv4PrefixListPolicyObject{}
 	case "sdwan:index/dataIpv6PrefixListPolicyObject:DataIpv6PrefixListPolicyObject":
 		r = &DataIpv6PrefixListPolicyObject{}
+	case "sdwan:index/dnsSecurityFeatureProfile:DnsSecurityFeatureProfile":
+		r = &DnsSecurityFeatureProfile{}
 	case "sdwan:index/dnsSecurityPolicyDefinition:DnsSecurityPolicyDefinition":
 		r = &DnsSecurityPolicyDefinition{}
 	case "sdwan:index/domainListPolicyObject:DomainListPolicyObject":
 		r = &DomainListPolicyObject{}
 	case "sdwan:index/eigrpFeatureTemplate:EigrpFeatureTemplate":
 		r = &EigrpFeatureTemplate{}
+	case "sdwan:index/embeddedSecurityFeatureProfile:EmbeddedSecurityFeatureProfile":
+		r = &EmbeddedSecurityFeatureProfile{}
 	case "sdwan:index/expandedCommunityListPolicyObject:ExpandedCommunityListPolicyObject":
 		r = &ExpandedCommunityListPolicyObject{}
 	case "sdwan:index/extendedCommunityListPolicyObject:ExtendedCommunityListPolicyObject":
@@ -181,6 +187,12 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &OtherUcseFeature{}
 	case "sdwan:index/policerPolicyObject:PolicerPolicyObject":
 		r = &PolicerPolicyObject{}
+	case "sdwan:index/policyObjectAppProbeClass:PolicyObjectAppProbeClass":
+		r = &PolicyObjectAppProbeClass{}
+	case "sdwan:index/policyObjectApplicationList:PolicyObjectApplicationList":
+		r = &PolicyObjectApplicationList{}
+	case "sdwan:index/policyObjectAsPathList:PolicyObjectAsPathList":
+		r = &PolicyObjectAsPathList{}
 	case "sdwan:index/policyObjectClassMap:PolicyObjectClassMap":
 		r = &PolicyObjectClassMap{}
 	case "sdwan:index/policyObjectColorList:PolicyObjectColorList":
@@ -203,8 +215,38 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &PolicyObjectMirror{}
 	case "sdwan:index/policyObjectPolicer:PolicyObjectPolicer":
 		r = &PolicyObjectPolicer{}
+	case "sdwan:index/policyObjectPreferredColorGroup:PolicyObjectPreferredColorGroup":
+		r = &PolicyObjectPreferredColorGroup{}
+	case "sdwan:index/policyObjectSecurityDataIpv4PrefixList:PolicyObjectSecurityDataIpv4PrefixList":
+		r = &PolicyObjectSecurityDataIpv4PrefixList{}
+	case "sdwan:index/policyObjectSecurityFqdnList:PolicyObjectSecurityFqdnList":
+		r = &PolicyObjectSecurityFqdnList{}
+	case "sdwan:index/policyObjectSecurityGeolocationList:PolicyObjectSecurityGeolocationList":
+		r = &PolicyObjectSecurityGeolocationList{}
+	case "sdwan:index/policyObjectSecurityIdentityList:PolicyObjectSecurityIdentityList":
+		r = &PolicyObjectSecurityIdentityList{}
+	case "sdwan:index/policyObjectSecurityIpsSignature:PolicyObjectSecurityIpsSignature":
+		r = &PolicyObjectSecurityIpsSignature{}
+	case "sdwan:index/policyObjectSecurityLocalApplicationList:PolicyObjectSecurityLocalApplicationList":
+		r = &PolicyObjectSecurityLocalApplicationList{}
+	case "sdwan:index/policyObjectSecurityLocalDomainList:PolicyObjectSecurityLocalDomainList":
+		r = &PolicyObjectSecurityLocalDomainList{}
+	case "sdwan:index/policyObjectSecurityPortList:PolicyObjectSecurityPortList":
+		r = &PolicyObjectSecurityPortList{}
+	case "sdwan:index/policyObjectSecurityScalableGroupTagList:PolicyObjectSecurityScalableGroupTagList":
+		r = &PolicyObjectSecurityScalableGroupTagList{}
+	case "sdwan:index/policyObjectSecurityUrlAllowList:PolicyObjectSecurityUrlAllowList":
+		r = &PolicyObjectSecurityUrlAllowList{}
+	case "sdwan:index/policyObjectSecurityUrlBlockList:PolicyObjectSecurityUrlBlockList":
+		r = &PolicyObjectSecurityUrlBlockList{}
+	case "sdwan:index/policyObjectSlaClassList:PolicyObjectSlaClassList":
+		r = &PolicyObjectSlaClassList{}
+	case "sdwan:index/policyObjectStandardCommunityList:PolicyObjectStandardCommunityList":
+		r = &PolicyObjectStandardCommunityList{}
 	case "sdwan:index/policyObjectTlocList:PolicyObjectTlocList":
 		r = &PolicyObjectTlocList{}
+	case "sdwan:index/policyObjectVpnGroup:PolicyObjectVpnGroup":
+		r = &PolicyObjectVpnGroup{}
 	case "sdwan:index/portListPolicyObject:PortListPolicyObject":
 		r = &PortListPolicyObject{}
 	case "sdwan:index/preferredColorGroupPolicyObject:PreferredColorGroupPolicyObject":
@@ -227,6 +269,10 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &SecurityPolicy{}
 	case "sdwan:index/serviceFeatureProfile:ServiceFeatureProfile":
 		r = &ServiceFeatureProfile{}
+	case "sdwan:index/serviceIpv4AclFeature:ServiceIpv4AclFeature":
+		r = &ServiceIpv4AclFeature{}
+	case "sdwan:index/serviceIpv6AclFeature:ServiceIpv6AclFeature":
+		r = &ServiceIpv6AclFeature{}
 	case "sdwan:index/serviceLanVpnFeature:ServiceLanVpnFeature":
 		r = &ServiceLanVpnFeature{}
 	case "sdwan:index/serviceLanVpnInterfaceEthernetFeature:ServiceLanVpnInterfaceEthernetFeature":
@@ -237,6 +283,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &ServiceLanVpnInterfaceIpsecFeature{}
 	case "sdwan:index/serviceLanVpnInterfaceSviFeature:ServiceLanVpnInterfaceSviFeature":
 		r = &ServiceLanVpnInterfaceSviFeature{}
+	case "sdwan:index/serviceMulticastFeature:ServiceMulticastFeature":
+		r = &ServiceMulticastFeature{}
 	case "sdwan:index/serviceObjectTrackerFeature:ServiceObjectTrackerFeature":
 		r = &ServiceObjectTrackerFeature{}
 	case "sdwan:index/serviceObjectTrackerGroupFeature:ServiceObjectTrackerGroupFeature":
@@ -245,6 +293,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &ServiceRoutePolicyFeature{}
 	case "sdwan:index/serviceRoutingBgpFeature:ServiceRoutingBgpFeature":
 		r = &ServiceRoutingBgpFeature{}
+	case "sdwan:index/serviceRoutingEigrpFeature:ServiceRoutingEigrpFeature":
+		r = &ServiceRoutingEigrpFeature{}
 	case "sdwan:index/serviceRoutingOspfFeature:ServiceRoutingOspfFeature":
 		r = &ServiceRoutingOspfFeature{}
 	case "sdwan:index/serviceRoutingOspfv3Ipv4Feature:ServiceRoutingOspfv3Ipv4Feature":
@@ -257,6 +307,10 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &ServiceTrackerFeature{}
 	case "sdwan:index/serviceTrackerGroupFeature:ServiceTrackerGroupFeature":
 		r = &ServiceTrackerGroupFeature{}
+	case "sdwan:index/serviceWirelessLanFeature:ServiceWirelessLanFeature":
+		r = &ServiceWirelessLanFeature{}
+	case "sdwan:index/sigSecurityFeatureProfile:SigSecurityFeatureProfile":
+		r = &SigSecurityFeatureProfile{}
 	case "sdwan:index/siteListPolicyObject:SiteListPolicyObject":
 		r = &SiteListPolicyObject{}
 	case "sdwan:index/slaClassPolicyObject:SlaClassPolicyObject":
@@ -311,6 +365,10 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &TransportFeatureProfile{}
 	case "sdwan:index/transportGpsFeature:TransportGpsFeature":
 		r = &TransportGpsFeature{}
+	case "sdwan:index/transportIpv4AclFeature:TransportIpv4AclFeature":
+		r = &TransportIpv4AclFeature{}
+	case "sdwan:index/transportIpv6AclFeature:TransportIpv6AclFeature":
+		r = &TransportIpv6AclFeature{}
 	case "sdwan:index/transportIpv6TrackerFeature:TransportIpv6TrackerFeature":
 		r = &TransportIpv6TrackerFeature{}
 	case "sdwan:index/transportIpv6TrackerGroupFeature:TransportIpv6TrackerGroupFeature":
@@ -329,6 +387,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &TransportRoutingOspfv3Ipv4Feature{}
 	case "sdwan:index/transportRoutingOspfv3Ipv6Feature:TransportRoutingOspfv3Ipv6Feature":
 		r = &TransportRoutingOspfv3Ipv6Feature{}
+	case "sdwan:index/transportT1E1ControllerFeature:TransportT1E1ControllerFeature":
+		r = &TransportT1E1ControllerFeature{}
 	case "sdwan:index/transportTrackerFeature:TransportTrackerFeature":
 		r = &TransportTrackerFeature{}
 	case "sdwan:index/transportTrackerGroupFeature:TransportTrackerGroupFeature":
@@ -445,6 +505,11 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"sdwan",
 		"index/applicationPriorityQosPolicy",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/applicationPriorityTrafficPolicyPolicy",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
@@ -674,6 +739,11 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"sdwan",
+		"index/dnsSecurityFeatureProfile",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
 		"index/dnsSecurityPolicyDefinition",
 		&module{version},
 	)
@@ -685,6 +755,11 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"sdwan",
 		"index/eigrpFeatureTemplate",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/embeddedSecurityFeatureProfile",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
@@ -804,6 +879,21 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"sdwan",
+		"index/policyObjectAppProbeClass",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/policyObjectApplicationList",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/policyObjectAsPathList",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
 		"index/policyObjectClassMap",
 		&module{version},
 	)
@@ -859,7 +949,82 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"sdwan",
+		"index/policyObjectPreferredColorGroup",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/policyObjectSecurityDataIpv4PrefixList",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/policyObjectSecurityFqdnList",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/policyObjectSecurityGeolocationList",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/policyObjectSecurityIdentityList",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/policyObjectSecurityIpsSignature",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/policyObjectSecurityLocalApplicationList",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/policyObjectSecurityLocalDomainList",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/policyObjectSecurityPortList",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/policyObjectSecurityScalableGroupTagList",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/policyObjectSecurityUrlAllowList",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/policyObjectSecurityUrlBlockList",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/policyObjectSlaClassList",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/policyObjectStandardCommunityList",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
 		"index/policyObjectTlocList",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/policyObjectVpnGroup",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
@@ -919,6 +1084,16 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"sdwan",
+		"index/serviceIpv4AclFeature",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/serviceIpv6AclFeature",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
 		"index/serviceLanVpnFeature",
 		&module{version},
 	)
@@ -944,6 +1119,11 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"sdwan",
+		"index/serviceMulticastFeature",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
 		"index/serviceObjectTrackerFeature",
 		&module{version},
 	)
@@ -960,6 +1140,11 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"sdwan",
 		"index/serviceRoutingBgpFeature",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/serviceRoutingEigrpFeature",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
@@ -990,6 +1175,16 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"sdwan",
 		"index/serviceTrackerGroupFeature",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/serviceWirelessLanFeature",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/sigSecurityFeatureProfile",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
@@ -1129,6 +1324,16 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"sdwan",
+		"index/transportIpv4AclFeature",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/transportIpv6AclFeature",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
 		"index/transportIpv6TrackerFeature",
 		&module{version},
 	)
@@ -1170,6 +1375,11 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"sdwan",
 		"index/transportRoutingOspfv3Ipv6Feature",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/transportT1E1ControllerFeature",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(

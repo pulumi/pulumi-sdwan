@@ -13,35 +13,35 @@ public final class Config {
 
     private static final com.pulumi.Config config = com.pulumi.Config.of("sdwan");
 /**
- * Allow insecure HTTPS client. This can also be set as the SDWAN_INSECURE environment variable. Defaults to `true`.
+ * Allow insecure HTTPS client. This can also be set as the `SDWAN_INSECURE` environment variable. Defaults to `true`.
  * 
  */
     public Optional<Boolean> insecure() {
         return Codegen.booleanProp("insecure").config(config).get();
     }
 /**
- * Password for the SD-WAN Manager account. This can also be set as the SDWAN_PASSWORD environment variable.
+ * Password for the SD-WAN Manager account. This can also be set as the `SDWAN_PASSWORD` environment variable.
  * 
  */
     public Optional<String> password() {
         return Codegen.stringProp("password").config(config).get();
     }
 /**
- * Number of retries for REST API calls. This can also be set as the SDWAN_RETRIES environment variable. Defaults to `3`.
+ * Number of retries for REST API calls. This can also be set as the `SDWAN_RETRIES` environment variable. Defaults to `3`.
  * 
  */
     public Optional<Integer> retries() {
         return Codegen.integerProp("retries").config(config).get();
     }
 /**
- * URL of the Cisco SD-WAN Manager device. This can also be set as the SDWAN_URL environment variable.
+ * URL of the Cisco SD-WAN Manager device. This can also be set as the `SDWAN_URL` environment variable.
  * 
  */
     public Optional<String> url() {
         return Codegen.stringProp("url").config(config).get();
     }
 /**
- * Username for the SD-WAN Manager account. This can also be set as the SDWAN_USERNAME environment variable.
+ * Username for the SD-WAN Manager account. This can also be set as the `SDWAN_USERNAME` environment variable.
  * 
  */
     public Optional<String> username() {

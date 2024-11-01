@@ -105,6 +105,7 @@ class PolicyObjectFeatureProfile(pulumi.CustomResource):
                  __props__=None):
         """
         SD-WAN manager supports only a single policy object feature profile to be configured. This resource will therefore either create a new one if none exists or update the existing one.
+          - Minimum SD-WAN Manager version: `20.12.0`
 
         ## Example Usage
 
@@ -136,6 +137,7 @@ class PolicyObjectFeatureProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         SD-WAN manager supports only a single policy object feature profile to be configured. This resource will therefore either create a new one if none exists or update the existing one.
+          - Minimum SD-WAN Manager version: `20.12.0`
 
         ## Example Usage
 

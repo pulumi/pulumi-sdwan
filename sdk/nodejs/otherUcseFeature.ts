@@ -12,8 +12,10 @@ import * as utilities from "./utilities";
  *
  * ## Import
  *
+ * Expected import identifier with the format: "other_ucse_feature_id,feature_profile_id"
+ *
  * ```sh
- * $ pulumi import sdwan:index/otherUcseFeature:OtherUcseFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+ * $ pulumi import sdwan:index/otherUcseFeature:OtherUcseFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
  * ```
  */
 export class OtherUcseFeature extends pulumi.CustomResource {
@@ -71,7 +73,7 @@ export class OtherUcseFeature extends pulumi.CustomResource {
     /**
      * Assign default gateway
      */
-    public readonly defaultGateway!: pulumi.Output<string>;
+    public readonly defaultGateway!: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
@@ -91,7 +93,7 @@ export class OtherUcseFeature extends pulumi.CustomResource {
     /**
      * Assign IPv4 address
      */
-    public readonly ipv4Address!: pulumi.Output<string>;
+    public readonly ipv4Address!: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
@@ -159,14 +161,8 @@ export class OtherUcseFeature extends pulumi.CustomResource {
             if ((!args || args.bay === undefined) && !opts.urn) {
                 throw new Error("Missing required property 'bay'");
             }
-            if ((!args || args.defaultGateway === undefined) && !opts.urn) {
-                throw new Error("Missing required property 'defaultGateway'");
-            }
             if ((!args || args.featureProfileId === undefined) && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
-            }
-            if ((!args || args.ipv4Address === undefined) && !opts.urn) {
-                throw new Error("Missing required property 'ipv4Address'");
             }
             if ((!args || args.slot === undefined) && !opts.urn) {
                 throw new Error("Missing required property 'slot'");
@@ -304,7 +300,7 @@ export interface OtherUcseFeatureArgs {
     /**
      * Assign default gateway
      */
-    defaultGateway: pulumi.Input<string>;
+    defaultGateway?: pulumi.Input<string>;
     /**
      * Variable name
      */
@@ -324,7 +320,7 @@ export interface OtherUcseFeatureArgs {
     /**
      * Assign IPv4 address
      */
-    ipv4Address: pulumi.Input<string>;
+    ipv4Address?: pulumi.Input<string>;
     /**
      * Variable name
      */

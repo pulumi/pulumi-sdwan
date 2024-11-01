@@ -23,7 +23,9 @@ class ConfigurationGroupArgs:
     def __init__(__self__, *,
                  description: pulumi.Input[str],
                  solution: pulumi.Input[str],
+                 devices: Optional[pulumi.Input[Sequence[pulumi.Input['ConfigurationGroupDeviceArgs']]]] = None,
                  feature_profiles: Optional[pulumi.Input[Sequence[pulumi.Input['ConfigurationGroupFeatureProfileArgs']]]] = None,
+                 feature_versions: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  topology_devices: Optional[pulumi.Input[Sequence[pulumi.Input['ConfigurationGroupTopologyDeviceArgs']]]] = None,
                  topology_site_devices: Optional[pulumi.Input[int]] = None):
@@ -31,15 +33,21 @@ class ConfigurationGroupArgs:
         The set of arguments for constructing a ConfigurationGroup resource.
         :param pulumi.Input[str] description: Description
         :param pulumi.Input[str] solution: Type of solution - Choices: `mobility`, `sdwan`, `nfvirtual`
+        :param pulumi.Input[Sequence[pulumi.Input['ConfigurationGroupDeviceArgs']]] devices: List of devices
         :param pulumi.Input[Sequence[pulumi.Input['ConfigurationGroupFeatureProfileArgs']]] feature_profiles: List of feature profiles
+        :param pulumi.Input[Sequence[pulumi.Input[str]]] feature_versions: List of all associated feature versions
         :param pulumi.Input[str] name: The name of the configuration group
         :param pulumi.Input[Sequence[pulumi.Input['ConfigurationGroupTopologyDeviceArgs']]] topology_devices: List of topology device types
         :param pulumi.Input[int] topology_site_devices: Number of devices per site - Range: `1`-`20`
         """
         pulumi.set(__self__, "description", description)
         pulumi.set(__self__, "solution", solution)
+        if devices is not None:
+            pulumi.set(__self__, "devices", devices)
         if feature_profiles is not None:
             pulumi.set(__self__, "feature_profiles", feature_profiles)
+        if feature_versions is not None:
+            pulumi.set(__self__, "feature_versions", feature_versions)
         if name is not None:
             pulumi.set(__self__, "name", name)
         if topology_devices is not None:
@@ -72,6 +80,18 @@ class ConfigurationGroupArgs:
         pulumi.set(self, "solution", value)
 
     @property
+    @pulumi.getter
+    def devices(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ConfigurationGroupDeviceArgs']]]]:
+        """
+        List of devices
+        """
+        return pulumi.get(self, "devices")
+
+    @devices.setter
+    def devices(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ConfigurationGroupDeviceArgs']]]]):
+        pulumi.set(self, "devices", value)
+
+    @property
     @pulumi.getter(name="featureProfiles")
     def feature_profiles(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ConfigurationGroupFeatureProfileArgs']]]]:
         """
@@ -82,6 +102,18 @@ class ConfigurationGroupArgs:
     @feature_profiles.setter
     def feature_profiles(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ConfigurationGroupFeatureProfileArgs']]]]):
         pulumi.set(self, "feature_profiles", value)
+
+    @property
+    @pulumi.getter(name="featureVersions")
+    def feature_versions(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]:
+        """
+        List of all associated feature versions
+        """
+        return pulumi.get(self, "feature_versions")
+
+    @feature_versions.setter
+    def feature_versions(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
+        pulumi.set(self, "feature_versions", value)
 
     @property
     @pulumi.getter
@@ -124,7 +156,9 @@ class ConfigurationGroupArgs:
 class _ConfigurationGroupState:
     def __init__(__self__, *,
                  description: Optional[pulumi.Input[str]] = None,
+                 devices: Optional[pulumi.Input[Sequence[pulumi.Input['ConfigurationGroupDeviceArgs']]]] = None,
                  feature_profiles: Optional[pulumi.Input[Sequence[pulumi.Input['ConfigurationGroupFeatureProfileArgs']]]] = None,
+                 feature_versions: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  solution: Optional[pulumi.Input[str]] = None,
                  topology_devices: Optional[pulumi.Input[Sequence[pulumi.Input['ConfigurationGroupTopologyDeviceArgs']]]] = None,
@@ -132,7 +166,9 @@ class _ConfigurationGroupState:
         """
         Input properties used for looking up and filtering ConfigurationGroup resources.
         :param pulumi.Input[str] description: Description
+        :param pulumi.Input[Sequence[pulumi.Input['ConfigurationGroupDeviceArgs']]] devices: List of devices
         :param pulumi.Input[Sequence[pulumi.Input['ConfigurationGroupFeatureProfileArgs']]] feature_profiles: List of feature profiles
+        :param pulumi.Input[Sequence[pulumi.Input[str]]] feature_versions: List of all associated feature versions
         :param pulumi.Input[str] name: The name of the configuration group
         :param pulumi.Input[str] solution: Type of solution - Choices: `mobility`, `sdwan`, `nfvirtual`
         :param pulumi.Input[Sequence[pulumi.Input['ConfigurationGroupTopologyDeviceArgs']]] topology_devices: List of topology device types
@@ -140,8 +176,12 @@ class _ConfigurationGroupState:
         """
         if description is not None:
             pulumi.set(__self__, "description", description)
+        if devices is not None:
+            pulumi.set(__self__, "devices", devices)
         if feature_profiles is not None:
             pulumi.set(__self__, "feature_profiles", feature_profiles)
+        if feature_versions is not None:
+            pulumi.set(__self__, "feature_versions", feature_versions)
         if name is not None:
             pulumi.set(__self__, "name", name)
         if solution is not None:
@@ -164,6 +204,18 @@ class _ConfigurationGroupState:
         pulumi.set(self, "description", value)
 
     @property
+    @pulumi.getter
+    def devices(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ConfigurationGroupDeviceArgs']]]]:
+        """
+        List of devices
+        """
+        return pulumi.get(self, "devices")
+
+    @devices.setter
+    def devices(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ConfigurationGroupDeviceArgs']]]]):
+        pulumi.set(self, "devices", value)
+
+    @property
     @pulumi.getter(name="featureProfiles")
     def feature_profiles(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ConfigurationGroupFeatureProfileArgs']]]]:
         """
@@ -174,6 +226,18 @@ class _ConfigurationGroupState:
     @feature_profiles.setter
     def feature_profiles(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ConfigurationGroupFeatureProfileArgs']]]]):
         pulumi.set(self, "feature_profiles", value)
+
+    @property
+    @pulumi.getter(name="featureVersions")
+    def feature_versions(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]:
+        """
+        List of all associated feature versions
+        """
+        return pulumi.get(self, "feature_versions")
+
+    @feature_versions.setter
+    def feature_versions(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
+        pulumi.set(self, "feature_versions", value)
 
     @property
     @pulumi.getter
@@ -230,7 +294,9 @@ class ConfigurationGroup(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: Optional[pulumi.Input[str]] = None,
+                 devices: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupDeviceArgs', 'ConfigurationGroupDeviceArgsDict']]]]] = None,
                  feature_profiles: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupFeatureProfileArgs', 'ConfigurationGroupFeatureProfileArgsDict']]]]] = None,
+                 feature_versions: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  solution: Optional[pulumi.Input[str]] = None,
                  topology_devices: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupTopologyDeviceArgs', 'ConfigurationGroupTopologyDeviceArgsDict']]]]] = None,
@@ -252,6 +318,13 @@ class ConfigurationGroup(pulumi.CustomResource):
             solution="sdwan",
             feature_profiles=[{
                 "id": "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+            }],
+            devices=[{
+                "id": "C8K-40C0CCFD-9EA8-2B2E-E73B-32C5924EC79B",
+                "variables": [{
+                    "name": "host_name",
+                    "value": "edge1",
+                }],
             }])
         ```
 
@@ -264,7 +337,9 @@ class ConfigurationGroup(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] description: Description
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupDeviceArgs', 'ConfigurationGroupDeviceArgsDict']]]] devices: List of devices
         :param pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupFeatureProfileArgs', 'ConfigurationGroupFeatureProfileArgsDict']]]] feature_profiles: List of feature profiles
+        :param pulumi.Input[Sequence[pulumi.Input[str]]] feature_versions: List of all associated feature versions
         :param pulumi.Input[str] name: The name of the configuration group
         :param pulumi.Input[str] solution: Type of solution - Choices: `mobility`, `sdwan`, `nfvirtual`
         :param pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupTopologyDeviceArgs', 'ConfigurationGroupTopologyDeviceArgsDict']]]] topology_devices: List of topology device types
@@ -292,6 +367,13 @@ class ConfigurationGroup(pulumi.CustomResource):
             solution="sdwan",
             feature_profiles=[{
                 "id": "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+            }],
+            devices=[{
+                "id": "C8K-40C0CCFD-9EA8-2B2E-E73B-32C5924EC79B",
+                "variables": [{
+                    "name": "host_name",
+                    "value": "edge1",
+                }],
             }])
         ```
 
@@ -317,7 +399,9 @@ class ConfigurationGroup(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: Optional[pulumi.Input[str]] = None,
+                 devices: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupDeviceArgs', 'ConfigurationGroupDeviceArgsDict']]]]] = None,
                  feature_profiles: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupFeatureProfileArgs', 'ConfigurationGroupFeatureProfileArgsDict']]]]] = None,
+                 feature_versions: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  solution: Optional[pulumi.Input[str]] = None,
                  topology_devices: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupTopologyDeviceArgs', 'ConfigurationGroupTopologyDeviceArgsDict']]]]] = None,
@@ -334,7 +418,9 @@ class ConfigurationGroup(pulumi.CustomResource):
             if description is None and not opts.urn:
                 raise TypeError("Missing required property 'description'")
             __props__.__dict__["description"] = description
+            __props__.__dict__["devices"] = devices
             __props__.__dict__["feature_profiles"] = feature_profiles
+            __props__.__dict__["feature_versions"] = feature_versions
             __props__.__dict__["name"] = name
             if solution is None and not opts.urn:
                 raise TypeError("Missing required property 'solution'")
@@ -352,7 +438,9 @@ class ConfigurationGroup(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             description: Optional[pulumi.Input[str]] = None,
+            devices: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupDeviceArgs', 'ConfigurationGroupDeviceArgsDict']]]]] = None,
             feature_profiles: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupFeatureProfileArgs', 'ConfigurationGroupFeatureProfileArgsDict']]]]] = None,
+            feature_versions: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
             name: Optional[pulumi.Input[str]] = None,
             solution: Optional[pulumi.Input[str]] = None,
             topology_devices: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupTopologyDeviceArgs', 'ConfigurationGroupTopologyDeviceArgsDict']]]]] = None,
@@ -365,7 +453,9 @@ class ConfigurationGroup(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] description: Description
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupDeviceArgs', 'ConfigurationGroupDeviceArgsDict']]]] devices: List of devices
         :param pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupFeatureProfileArgs', 'ConfigurationGroupFeatureProfileArgsDict']]]] feature_profiles: List of feature profiles
+        :param pulumi.Input[Sequence[pulumi.Input[str]]] feature_versions: List of all associated feature versions
         :param pulumi.Input[str] name: The name of the configuration group
         :param pulumi.Input[str] solution: Type of solution - Choices: `mobility`, `sdwan`, `nfvirtual`
         :param pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupTopologyDeviceArgs', 'ConfigurationGroupTopologyDeviceArgsDict']]]] topology_devices: List of topology device types
@@ -376,7 +466,9 @@ class ConfigurationGroup(pulumi.CustomResource):
         __props__ = _ConfigurationGroupState.__new__(_ConfigurationGroupState)
 
         __props__.__dict__["description"] = description
+        __props__.__dict__["devices"] = devices
         __props__.__dict__["feature_profiles"] = feature_profiles
+        __props__.__dict__["feature_versions"] = feature_versions
         __props__.__dict__["name"] = name
         __props__.__dict__["solution"] = solution
         __props__.__dict__["topology_devices"] = topology_devices
@@ -392,12 +484,28 @@ class ConfigurationGroup(pulumi.CustomResource):
         return pulumi.get(self, "description")
 
     @property
+    @pulumi.getter
+    def devices(self) -> pulumi.Output[Optional[Sequence['outputs.ConfigurationGroupDevice']]]:
+        """
+        List of devices
+        """
+        return pulumi.get(self, "devices")
+
+    @property
     @pulumi.getter(name="featureProfiles")
     def feature_profiles(self) -> pulumi.Output[Optional[Sequence['outputs.ConfigurationGroupFeatureProfile']]]:
         """
         List of feature profiles
         """
         return pulumi.get(self, "feature_profiles")
+
+    @property
+    @pulumi.getter(name="featureVersions")
+    def feature_versions(self) -> pulumi.Output[Optional[Sequence[str]]]:
+        """
+        List of all associated feature versions
+        """
+        return pulumi.get(self, "feature_versions")
 
     @property
     @pulumi.getter

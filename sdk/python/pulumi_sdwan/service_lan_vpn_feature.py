@@ -1341,8 +1341,10 @@ class ServiceLanVpnFeature(pulumi.CustomResource):
 
         ## Import
 
+        Expected import identifier with the format: "service_lan_vpn_feature_id,feature_profile_id"
+
         ```sh
-        $ pulumi import sdwan:index/serviceLanVpnFeature:ServiceLanVpnFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+        $ pulumi import sdwan:index/serviceLanVpnFeature:ServiceLanVpnFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
 
         :param str resource_name: The name of the resource.
@@ -1395,8 +1397,10 @@ class ServiceLanVpnFeature(pulumi.CustomResource):
 
         ## Import
 
+        Expected import identifier with the format: "service_lan_vpn_feature_id,feature_profile_id"
+
         ```sh
-        $ pulumi import sdwan:index/serviceLanVpnFeature:ServiceLanVpnFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+        $ pulumi import sdwan:index/serviceLanVpnFeature:ServiceLanVpnFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
         ```
 
         :param str resource_name: The name of the resource.

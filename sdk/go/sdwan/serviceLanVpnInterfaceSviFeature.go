@@ -17,8 +17,10 @@ import (
 //
 // ## Import
 //
+// Expected import identifier with the format: "service_lan_vpn_interface_svi_feature_id,feature_profile_id,service_lan_vpn_feature_id"
+//
 // ```sh
-// $ pulumi import sdwan:index/serviceLanVpnInterfaceSviFeature:ServiceLanVpnInterfaceSviFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+// $ pulumi import sdwan:index/serviceLanVpnInterfaceSviFeature:ServiceLanVpnInterfaceSviFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037"
 // ```
 type ServiceLanVpnInterfaceSviFeature struct {
 	pulumi.CustomResourceState
@@ -50,7 +52,7 @@ type ServiceLanVpnInterfaceSviFeature struct {
 	// Variable name
 	InterfaceMtuVariable pulumi.StringPtrOutput `pulumi:"interfaceMtuVariable"`
 	// Interface name: VLAN 1 - VLAN 4094 when present
-	InterfaceName pulumi.StringOutput `pulumi:"interfaceName"`
+	InterfaceName pulumi.StringPtrOutput `pulumi:"interfaceName"`
 	// Variable name
 	InterfaceNameVariable pulumi.StringPtrOutput `pulumi:"interfaceNameVariable"`
 	// IP Directed-Broadcast - Default value: `false`
@@ -62,7 +64,7 @@ type ServiceLanVpnInterfaceSviFeature struct {
 	// Variable name
 	IpMtuVariable pulumi.StringPtrOutput `pulumi:"ipMtuVariable"`
 	// IP Address
-	Ipv4Address pulumi.StringOutput `pulumi:"ipv4Address"`
+	Ipv4Address pulumi.StringPtrOutput `pulumi:"ipv4Address"`
 	// Variable name
 	Ipv4AddressVariable pulumi.StringPtrOutput `pulumi:"ipv4AddressVariable"`
 	// List of DHCP helper addresses
@@ -76,7 +78,7 @@ type ServiceLanVpnInterfaceSviFeature struct {
 	// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
 	// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
 	// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
-	Ipv4SubnetMask pulumi.StringOutput `pulumi:"ipv4SubnetMask"`
+	Ipv4SubnetMask pulumi.StringPtrOutput `pulumi:"ipv4SubnetMask"`
 	// Variable name
 	Ipv4SubnetMaskVariable pulumi.StringPtrOutput `pulumi:"ipv4SubnetMaskVariable"`
 	// Enable ipv4 VRRP
@@ -116,15 +118,6 @@ func NewServiceLanVpnInterfaceSviFeature(ctx *pulumi.Context,
 
 	if args.FeatureProfileId == nil {
 		return nil, errors.New("invalid value for required argument 'FeatureProfileId'")
-	}
-	if args.InterfaceName == nil {
-		return nil, errors.New("invalid value for required argument 'InterfaceName'")
-	}
-	if args.Ipv4Address == nil {
-		return nil, errors.New("invalid value for required argument 'Ipv4Address'")
-	}
-	if args.Ipv4SubnetMask == nil {
-		return nil, errors.New("invalid value for required argument 'Ipv4SubnetMask'")
 	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource ServiceLanVpnInterfaceSviFeature
@@ -350,7 +343,7 @@ type serviceLanVpnInterfaceSviFeatureArgs struct {
 	// Variable name
 	InterfaceMtuVariable *string `pulumi:"interfaceMtuVariable"`
 	// Interface name: VLAN 1 - VLAN 4094 when present
-	InterfaceName string `pulumi:"interfaceName"`
+	InterfaceName *string `pulumi:"interfaceName"`
 	// Variable name
 	InterfaceNameVariable *string `pulumi:"interfaceNameVariable"`
 	// IP Directed-Broadcast - Default value: `false`
@@ -362,7 +355,7 @@ type serviceLanVpnInterfaceSviFeatureArgs struct {
 	// Variable name
 	IpMtuVariable *string `pulumi:"ipMtuVariable"`
 	// IP Address
-	Ipv4Address string `pulumi:"ipv4Address"`
+	Ipv4Address *string `pulumi:"ipv4Address"`
 	// Variable name
 	Ipv4AddressVariable *string `pulumi:"ipv4AddressVariable"`
 	// List of DHCP helper addresses
@@ -376,7 +369,7 @@ type serviceLanVpnInterfaceSviFeatureArgs struct {
 	// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
 	// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
 	// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
-	Ipv4SubnetMask string `pulumi:"ipv4SubnetMask"`
+	Ipv4SubnetMask *string `pulumi:"ipv4SubnetMask"`
 	// Variable name
 	Ipv4SubnetMaskVariable *string `pulumi:"ipv4SubnetMaskVariable"`
 	// Enable ipv4 VRRP
@@ -434,7 +427,7 @@ type ServiceLanVpnInterfaceSviFeatureArgs struct {
 	// Variable name
 	InterfaceMtuVariable pulumi.StringPtrInput
 	// Interface name: VLAN 1 - VLAN 4094 when present
-	InterfaceName pulumi.StringInput
+	InterfaceName pulumi.StringPtrInput
 	// Variable name
 	InterfaceNameVariable pulumi.StringPtrInput
 	// IP Directed-Broadcast - Default value: `false`
@@ -446,7 +439,7 @@ type ServiceLanVpnInterfaceSviFeatureArgs struct {
 	// Variable name
 	IpMtuVariable pulumi.StringPtrInput
 	// IP Address
-	Ipv4Address pulumi.StringInput
+	Ipv4Address pulumi.StringPtrInput
 	// Variable name
 	Ipv4AddressVariable pulumi.StringPtrInput
 	// List of DHCP helper addresses
@@ -460,7 +453,7 @@ type ServiceLanVpnInterfaceSviFeatureArgs struct {
 	// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
 	// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
 	// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
-	Ipv4SubnetMask pulumi.StringInput
+	Ipv4SubnetMask pulumi.StringPtrInput
 	// Variable name
 	Ipv4SubnetMaskVariable pulumi.StringPtrInput
 	// Enable ipv4 VRRP
@@ -646,8 +639,8 @@ func (o ServiceLanVpnInterfaceSviFeatureOutput) InterfaceMtuVariable() pulumi.St
 }
 
 // Interface name: VLAN 1 - VLAN 4094 when present
-func (o ServiceLanVpnInterfaceSviFeatureOutput) InterfaceName() pulumi.StringOutput {
-	return o.ApplyT(func(v *ServiceLanVpnInterfaceSviFeature) pulumi.StringOutput { return v.InterfaceName }).(pulumi.StringOutput)
+func (o ServiceLanVpnInterfaceSviFeatureOutput) InterfaceName() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *ServiceLanVpnInterfaceSviFeature) pulumi.StringPtrOutput { return v.InterfaceName }).(pulumi.StringPtrOutput)
 }
 
 // Variable name
@@ -676,8 +669,8 @@ func (o ServiceLanVpnInterfaceSviFeatureOutput) IpMtuVariable() pulumi.StringPtr
 }
 
 // IP Address
-func (o ServiceLanVpnInterfaceSviFeatureOutput) Ipv4Address() pulumi.StringOutput {
-	return o.ApplyT(func(v *ServiceLanVpnInterfaceSviFeature) pulumi.StringOutput { return v.Ipv4Address }).(pulumi.StringOutput)
+func (o ServiceLanVpnInterfaceSviFeatureOutput) Ipv4Address() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *ServiceLanVpnInterfaceSviFeature) pulumi.StringPtrOutput { return v.Ipv4Address }).(pulumi.StringPtrOutput)
 }
 
 // Variable name
@@ -707,8 +700,8 @@ func (o ServiceLanVpnInterfaceSviFeatureOutput) Ipv4SecondaryAddresses() Service
 // `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
 // `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
 // `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
-func (o ServiceLanVpnInterfaceSviFeatureOutput) Ipv4SubnetMask() pulumi.StringOutput {
-	return o.ApplyT(func(v *ServiceLanVpnInterfaceSviFeature) pulumi.StringOutput { return v.Ipv4SubnetMask }).(pulumi.StringOutput)
+func (o ServiceLanVpnInterfaceSviFeatureOutput) Ipv4SubnetMask() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *ServiceLanVpnInterfaceSviFeature) pulumi.StringPtrOutput { return v.Ipv4SubnetMask }).(pulumi.StringPtrOutput)
 }
 
 // Variable name

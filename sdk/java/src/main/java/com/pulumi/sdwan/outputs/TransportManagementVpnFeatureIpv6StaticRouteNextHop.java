@@ -25,6 +25,7 @@ public final class TransportManagementVpnFeatureIpv6StaticRouteNextHop {
     /**
      * @return Administrative distance
      *   - Range: `1`-`254`
+     *   - Default value: `1`
      * 
      */
     private @Nullable Integer administrativeDistance;
@@ -52,6 +53,7 @@ public final class TransportManagementVpnFeatureIpv6StaticRouteNextHop {
     /**
      * @return Administrative distance
      *   - Range: `1`-`254`
+     *   - Default value: `1`
      * 
      */
     public Optional<Integer> administrativeDistance() {

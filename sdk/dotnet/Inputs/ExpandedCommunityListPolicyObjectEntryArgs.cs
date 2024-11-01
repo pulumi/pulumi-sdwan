@@ -15,8 +15,8 @@ namespace Pulumi.Sdwan.Inputs
         /// <summary>
         /// Expanded community value, e.g. `100:1000`
         /// </summary>
-        [Input("community", required: true)]
-        public Input<string> Community { get; set; } = null!;
+        [Input("community")]
+        public Input<string>? Community { get; set; }
 
         public ExpandedCommunityListPolicyObjectEntryArgs()
         {

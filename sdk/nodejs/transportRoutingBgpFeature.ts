@@ -12,8 +12,10 @@ import * as utilities from "./utilities";
  *
  * ## Import
  *
+ * Expected import identifier with the format: "transport_routing_bgp_feature_id,feature_profile_id"
+ *
  * ```sh
- * $ pulumi import sdwan:index/transportRoutingBgpFeature:TransportRoutingBgpFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+ * $ pulumi import sdwan:index/transportRoutingBgpFeature:TransportRoutingBgpFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"
  * ```
  */
 export class TransportRoutingBgpFeature extends pulumi.CustomResource {

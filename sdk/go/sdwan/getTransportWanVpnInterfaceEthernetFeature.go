@@ -134,6 +134,8 @@ type LookupTransportWanVpnInterfaceEthernetFeatureResult struct {
 	Ipv4Address string `pulumi:"ipv4Address"`
 	// Variable name
 	Ipv4AddressVariable string `pulumi:"ipv4AddressVariable"`
+	// IPv4 Configuration Type
+	Ipv4ConfigurationType string `pulumi:"ipv4ConfigurationType"`
 	// DHCP Distance
 	Ipv4DhcpDistance int `pulumi:"ipv4DhcpDistance"`
 	// Variable name
@@ -152,6 +154,8 @@ type LookupTransportWanVpnInterfaceEthernetFeatureResult struct {
 	Ipv6Address string `pulumi:"ipv6Address"`
 	// Variable name
 	Ipv6AddressVariable string `pulumi:"ipv6AddressVariable"`
+	// IPv6 Configuration Type
+	Ipv6ConfigurationType string `pulumi:"ipv6ConfigurationType"`
 	// secondary IPv6 addresses
 	Ipv6DhcpSecondaryAddresses []GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress `pulumi:"ipv6DhcpSecondaryAddresses"`
 	// Static secondary IPv6 addresses
@@ -684,6 +688,11 @@ func (o LookupTransportWanVpnInterfaceEthernetFeatureResultOutput) Ipv4AddressVa
 	return o.ApplyT(func(v LookupTransportWanVpnInterfaceEthernetFeatureResult) string { return v.Ipv4AddressVariable }).(pulumi.StringOutput)
 }
 
+// IPv4 Configuration Type
+func (o LookupTransportWanVpnInterfaceEthernetFeatureResultOutput) Ipv4ConfigurationType() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceEthernetFeatureResult) string { return v.Ipv4ConfigurationType }).(pulumi.StringOutput)
+}
+
 // DHCP Distance
 func (o LookupTransportWanVpnInterfaceEthernetFeatureResultOutput) Ipv4DhcpDistance() pulumi.IntOutput {
 	return o.ApplyT(func(v LookupTransportWanVpnInterfaceEthernetFeatureResult) int { return v.Ipv4DhcpDistance }).(pulumi.IntOutput)
@@ -729,6 +738,11 @@ func (o LookupTransportWanVpnInterfaceEthernetFeatureResultOutput) Ipv6Address()
 // Variable name
 func (o LookupTransportWanVpnInterfaceEthernetFeatureResultOutput) Ipv6AddressVariable() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTransportWanVpnInterfaceEthernetFeatureResult) string { return v.Ipv6AddressVariable }).(pulumi.StringOutput)
+}
+
+// IPv6 Configuration Type
+func (o LookupTransportWanVpnInterfaceEthernetFeatureResultOutput) Ipv6ConfigurationType() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceEthernetFeatureResult) string { return v.Ipv6ConfigurationType }).(pulumi.StringOutput)
 }
 
 // secondary IPv6 addresses

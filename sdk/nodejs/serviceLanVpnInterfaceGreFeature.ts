@@ -35,8 +35,10 @@ import * as utilities from "./utilities";
  *
  * ## Import
  *
+ * Expected import identifier with the format: "service_lan_vpn_interface_gre_feature_id,feature_profile_id,service_lan_vpn_feature_id"
+ *
  * ```sh
- * $ pulumi import sdwan:index/serviceLanVpnInterfaceGreFeature:ServiceLanVpnInterfaceGreFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+ * $ pulumi import sdwan:index/serviceLanVpnInterfaceGreFeature:ServiceLanVpnInterfaceGreFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037"
  * ```
  */
 export class ServiceLanVpnInterfaceGreFeature extends pulumi.CustomResource {
@@ -102,7 +104,7 @@ export class ServiceLanVpnInterfaceGreFeature extends pulumi.CustomResource {
     /**
      * Interface name (1..255)
      */
-    public readonly interfaceName!: pulumi.Output<string>;
+    public readonly interfaceName!: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
@@ -115,7 +117,7 @@ export class ServiceLanVpnInterfaceGreFeature extends pulumi.CustomResource {
      * Variable name
      */
     public readonly ipMtuVariable!: pulumi.Output<string | undefined>;
-    public readonly ipv4Address!: pulumi.Output<string>;
+    public readonly ipv4Address!: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
@@ -127,7 +129,7 @@ export class ServiceLanVpnInterfaceGreFeature extends pulumi.CustomResource {
      * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
      * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
-    public readonly ipv4SubnetMask!: pulumi.Output<string>;
+    public readonly ipv4SubnetMask!: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
@@ -159,7 +161,7 @@ export class ServiceLanVpnInterfaceGreFeature extends pulumi.CustomResource {
     /**
      * Tunnel destination IP Address
      */
-    public readonly tunnelDestinationIpv4Address!: pulumi.Output<string>;
+    public readonly tunnelDestinationIpv4Address!: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
@@ -251,18 +253,6 @@ export class ServiceLanVpnInterfaceGreFeature extends pulumi.CustomResource {
             const args = argsOrState as ServiceLanVpnInterfaceGreFeatureArgs | undefined;
             if ((!args || args.featureProfileId === undefined) && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
-            }
-            if ((!args || args.interfaceName === undefined) && !opts.urn) {
-                throw new Error("Missing required property 'interfaceName'");
-            }
-            if ((!args || args.ipv4Address === undefined) && !opts.urn) {
-                throw new Error("Missing required property 'ipv4Address'");
-            }
-            if ((!args || args.ipv4SubnetMask === undefined) && !opts.urn) {
-                throw new Error("Missing required property 'ipv4SubnetMask'");
-            }
-            if ((!args || args.tunnelDestinationIpv4Address === undefined) && !opts.urn) {
-                throw new Error("Missing required property 'tunnelDestinationIpv4Address'");
             }
             resourceInputs["applicationTunnelType"] = args ? args.applicationTunnelType : undefined;
             resourceInputs["applicationTunnelTypeVariable"] = args ? args.applicationTunnelTypeVariable : undefined;
@@ -481,7 +471,7 @@ export interface ServiceLanVpnInterfaceGreFeatureArgs {
     /**
      * Interface name (1..255)
      */
-    interfaceName: pulumi.Input<string>;
+    interfaceName?: pulumi.Input<string>;
     /**
      * Variable name
      */
@@ -494,7 +484,7 @@ export interface ServiceLanVpnInterfaceGreFeatureArgs {
      * Variable name
      */
     ipMtuVariable?: pulumi.Input<string>;
-    ipv4Address: pulumi.Input<string>;
+    ipv4Address?: pulumi.Input<string>;
     /**
      * Variable name
      */
@@ -506,7 +496,7 @@ export interface ServiceLanVpnInterfaceGreFeatureArgs {
      * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
      * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
-    ipv4SubnetMask: pulumi.Input<string>;
+    ipv4SubnetMask?: pulumi.Input<string>;
     /**
      * Variable name
      */
@@ -538,7 +528,7 @@ export interface ServiceLanVpnInterfaceGreFeatureArgs {
     /**
      * Tunnel destination IP Address
      */
-    tunnelDestinationIpv4Address: pulumi.Input<string>;
+    tunnelDestinationIpv4Address?: pulumi.Input<string>;
     /**
      * Variable name
      */

@@ -98,6 +98,18 @@ namespace Pulumi.Sdwan.Inputs
         [Input("trackOmp")]
         public Input<bool>? TrackOmp { get; set; }
 
+        [Input("trackingObjects")]
+        private InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpTrackingObjectGetArgs>? _trackingObjects;
+
+        /// <summary>
+        /// Tracking object for VRRP configuration
+        /// </summary>
+        public InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpTrackingObjectGetArgs> TrackingObjects
+        {
+            get => _trackingObjects ?? (_trackingObjects = new InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpTrackingObjectGetArgs>());
+            set => _trackingObjects = value;
+        }
+
         public ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpGetArgs()
         {
         }

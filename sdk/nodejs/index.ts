@@ -50,6 +50,11 @@ export type ApplicationPriorityQosPolicy = import("./applicationPriorityQosPolic
 export const ApplicationPriorityQosPolicy: typeof import("./applicationPriorityQosPolicy").ApplicationPriorityQosPolicy = null as any;
 utilities.lazyLoad(exports, ["ApplicationPriorityQosPolicy"], () => require("./applicationPriorityQosPolicy"));
 
+export { ApplicationPriorityTrafficPolicyPolicyArgs, ApplicationPriorityTrafficPolicyPolicyState } from "./applicationPriorityTrafficPolicyPolicy";
+export type ApplicationPriorityTrafficPolicyPolicy = import("./applicationPriorityTrafficPolicyPolicy").ApplicationPriorityTrafficPolicyPolicy;
+export const ApplicationPriorityTrafficPolicyPolicy: typeof import("./applicationPriorityTrafficPolicyPolicy").ApplicationPriorityTrafficPolicyPolicy = null as any;
+utilities.lazyLoad(exports, ["ApplicationPriorityTrafficPolicyPolicy"], () => require("./applicationPriorityTrafficPolicyPolicy"));
+
 export { AsPathListPolicyObjectArgs, AsPathListPolicyObjectState } from "./asPathListPolicyObject";
 export type AsPathListPolicyObject = import("./asPathListPolicyObject").AsPathListPolicyObject;
 export const AsPathListPolicyObject: typeof import("./asPathListPolicyObject").AsPathListPolicyObject = null as any;
@@ -275,6 +280,11 @@ export type DataIpv6PrefixListPolicyObject = import("./dataIpv6PrefixListPolicyO
 export const DataIpv6PrefixListPolicyObject: typeof import("./dataIpv6PrefixListPolicyObject").DataIpv6PrefixListPolicyObject = null as any;
 utilities.lazyLoad(exports, ["DataIpv6PrefixListPolicyObject"], () => require("./dataIpv6PrefixListPolicyObject"));
 
+export { DnsSecurityFeatureProfileArgs, DnsSecurityFeatureProfileState } from "./dnsSecurityFeatureProfile";
+export type DnsSecurityFeatureProfile = import("./dnsSecurityFeatureProfile").DnsSecurityFeatureProfile;
+export const DnsSecurityFeatureProfile: typeof import("./dnsSecurityFeatureProfile").DnsSecurityFeatureProfile = null as any;
+utilities.lazyLoad(exports, ["DnsSecurityFeatureProfile"], () => require("./dnsSecurityFeatureProfile"));
+
 export { DnsSecurityPolicyDefinitionArgs, DnsSecurityPolicyDefinitionState } from "./dnsSecurityPolicyDefinition";
 export type DnsSecurityPolicyDefinition = import("./dnsSecurityPolicyDefinition").DnsSecurityPolicyDefinition;
 export const DnsSecurityPolicyDefinition: typeof import("./dnsSecurityPolicyDefinition").DnsSecurityPolicyDefinition = null as any;
@@ -289,6 +299,11 @@ export { EigrpFeatureTemplateArgs, EigrpFeatureTemplateState } from "./eigrpFeat
 export type EigrpFeatureTemplate = import("./eigrpFeatureTemplate").EigrpFeatureTemplate;
 export const EigrpFeatureTemplate: typeof import("./eigrpFeatureTemplate").EigrpFeatureTemplate = null as any;
 utilities.lazyLoad(exports, ["EigrpFeatureTemplate"], () => require("./eigrpFeatureTemplate"));
+
+export { EmbeddedSecurityFeatureProfileArgs, EmbeddedSecurityFeatureProfileState } from "./embeddedSecurityFeatureProfile";
+export type EmbeddedSecurityFeatureProfile = import("./embeddedSecurityFeatureProfile").EmbeddedSecurityFeatureProfile;
+export const EmbeddedSecurityFeatureProfile: typeof import("./embeddedSecurityFeatureProfile").EmbeddedSecurityFeatureProfile = null as any;
+utilities.lazyLoad(exports, ["EmbeddedSecurityFeatureProfile"], () => require("./embeddedSecurityFeatureProfile"));
 
 export { ExpandedCommunityListPolicyObjectArgs, ExpandedCommunityListPolicyObjectState } from "./expandedCommunityListPolicyObject";
 export type ExpandedCommunityListPolicyObject = import("./expandedCommunityListPolicyObject").ExpandedCommunityListPolicyObject;
@@ -349,6 +364,11 @@ export { GetApplicationPriorityQosPolicyArgs, GetApplicationPriorityQosPolicyRes
 export const getApplicationPriorityQosPolicy: typeof import("./getApplicationPriorityQosPolicy").getApplicationPriorityQosPolicy = null as any;
 export const getApplicationPriorityQosPolicyOutput: typeof import("./getApplicationPriorityQosPolicy").getApplicationPriorityQosPolicyOutput = null as any;
 utilities.lazyLoad(exports, ["getApplicationPriorityQosPolicy","getApplicationPriorityQosPolicyOutput"], () => require("./getApplicationPriorityQosPolicy"));
+
+export { GetApplicationPriorityTrafficPolicyPolicyArgs, GetApplicationPriorityTrafficPolicyPolicyResult, GetApplicationPriorityTrafficPolicyPolicyOutputArgs } from "./getApplicationPriorityTrafficPolicyPolicy";
+export const getApplicationPriorityTrafficPolicyPolicy: typeof import("./getApplicationPriorityTrafficPolicyPolicy").getApplicationPriorityTrafficPolicyPolicy = null as any;
+export const getApplicationPriorityTrafficPolicyPolicyOutput: typeof import("./getApplicationPriorityTrafficPolicyPolicy").getApplicationPriorityTrafficPolicyPolicyOutput = null as any;
+utilities.lazyLoad(exports, ["getApplicationPriorityTrafficPolicyPolicy","getApplicationPriorityTrafficPolicyPolicyOutput"], () => require("./getApplicationPriorityTrafficPolicyPolicy"));
 
 export { GetAsPathListPolicyObjectArgs, GetAsPathListPolicyObjectResult, GetAsPathListPolicyObjectOutputArgs } from "./getAsPathListPolicyObject";
 export const getAsPathListPolicyObject: typeof import("./getAsPathListPolicyObject").getAsPathListPolicyObject = null as any;
@@ -575,6 +595,11 @@ export const getDevice: typeof import("./getDevice").getDevice = null as any;
 export const getDeviceOutput: typeof import("./getDevice").getDeviceOutput = null as any;
 utilities.lazyLoad(exports, ["getDevice","getDeviceOutput"], () => require("./getDevice"));
 
+export { GetDnsSecurityFeatureProfileArgs, GetDnsSecurityFeatureProfileResult, GetDnsSecurityFeatureProfileOutputArgs } from "./getDnsSecurityFeatureProfile";
+export const getDnsSecurityFeatureProfile: typeof import("./getDnsSecurityFeatureProfile").getDnsSecurityFeatureProfile = null as any;
+export const getDnsSecurityFeatureProfileOutput: typeof import("./getDnsSecurityFeatureProfile").getDnsSecurityFeatureProfileOutput = null as any;
+utilities.lazyLoad(exports, ["getDnsSecurityFeatureProfile","getDnsSecurityFeatureProfileOutput"], () => require("./getDnsSecurityFeatureProfile"));
+
 export { GetDnsSecurityPolicyDefinitionArgs, GetDnsSecurityPolicyDefinitionResult, GetDnsSecurityPolicyDefinitionOutputArgs } from "./getDnsSecurityPolicyDefinition";
 export const getDnsSecurityPolicyDefinition: typeof import("./getDnsSecurityPolicyDefinition").getDnsSecurityPolicyDefinition = null as any;
 export const getDnsSecurityPolicyDefinitionOutput: typeof import("./getDnsSecurityPolicyDefinition").getDnsSecurityPolicyDefinitionOutput = null as any;
@@ -589,6 +614,11 @@ export { GetEigrpFeatureTemplateArgs, GetEigrpFeatureTemplateResult, GetEigrpFea
 export const getEigrpFeatureTemplate: typeof import("./getEigrpFeatureTemplate").getEigrpFeatureTemplate = null as any;
 export const getEigrpFeatureTemplateOutput: typeof import("./getEigrpFeatureTemplate").getEigrpFeatureTemplateOutput = null as any;
 utilities.lazyLoad(exports, ["getEigrpFeatureTemplate","getEigrpFeatureTemplateOutput"], () => require("./getEigrpFeatureTemplate"));
+
+export { GetEmbeddedSecurityFeatureProfileArgs, GetEmbeddedSecurityFeatureProfileResult, GetEmbeddedSecurityFeatureProfileOutputArgs } from "./getEmbeddedSecurityFeatureProfile";
+export const getEmbeddedSecurityFeatureProfile: typeof import("./getEmbeddedSecurityFeatureProfile").getEmbeddedSecurityFeatureProfile = null as any;
+export const getEmbeddedSecurityFeatureProfileOutput: typeof import("./getEmbeddedSecurityFeatureProfile").getEmbeddedSecurityFeatureProfileOutput = null as any;
+utilities.lazyLoad(exports, ["getEmbeddedSecurityFeatureProfile","getEmbeddedSecurityFeatureProfileOutput"], () => require("./getEmbeddedSecurityFeatureProfile"));
 
 export { GetExpandedCommunityListPolicyObjectArgs, GetExpandedCommunityListPolicyObjectResult, GetExpandedCommunityListPolicyObjectOutputArgs } from "./getExpandedCommunityListPolicyObject";
 export const getExpandedCommunityListPolicyObject: typeof import("./getExpandedCommunityListPolicyObject").getExpandedCommunityListPolicyObject = null as any;
@@ -705,6 +735,21 @@ export const getPolicerPolicyObject: typeof import("./getPolicerPolicyObject").g
 export const getPolicerPolicyObjectOutput: typeof import("./getPolicerPolicyObject").getPolicerPolicyObjectOutput = null as any;
 utilities.lazyLoad(exports, ["getPolicerPolicyObject","getPolicerPolicyObjectOutput"], () => require("./getPolicerPolicyObject"));
 
+export { GetPolicyObjectAppProbeClassArgs, GetPolicyObjectAppProbeClassResult, GetPolicyObjectAppProbeClassOutputArgs } from "./getPolicyObjectAppProbeClass";
+export const getPolicyObjectAppProbeClass: typeof import("./getPolicyObjectAppProbeClass").getPolicyObjectAppProbeClass = null as any;
+export const getPolicyObjectAppProbeClassOutput: typeof import("./getPolicyObjectAppProbeClass").getPolicyObjectAppProbeClassOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectAppProbeClass","getPolicyObjectAppProbeClassOutput"], () => require("./getPolicyObjectAppProbeClass"));
+
+export { GetPolicyObjectApplicationListArgs, GetPolicyObjectApplicationListResult, GetPolicyObjectApplicationListOutputArgs } from "./getPolicyObjectApplicationList";
+export const getPolicyObjectApplicationList: typeof import("./getPolicyObjectApplicationList").getPolicyObjectApplicationList = null as any;
+export const getPolicyObjectApplicationListOutput: typeof import("./getPolicyObjectApplicationList").getPolicyObjectApplicationListOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectApplicationList","getPolicyObjectApplicationListOutput"], () => require("./getPolicyObjectApplicationList"));
+
+export { GetPolicyObjectAsPathListArgs, GetPolicyObjectAsPathListResult, GetPolicyObjectAsPathListOutputArgs } from "./getPolicyObjectAsPathList";
+export const getPolicyObjectAsPathList: typeof import("./getPolicyObjectAsPathList").getPolicyObjectAsPathList = null as any;
+export const getPolicyObjectAsPathListOutput: typeof import("./getPolicyObjectAsPathList").getPolicyObjectAsPathListOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectAsPathList","getPolicyObjectAsPathListOutput"], () => require("./getPolicyObjectAsPathList"));
+
 export { GetPolicyObjectClassMapArgs, GetPolicyObjectClassMapResult, GetPolicyObjectClassMapOutputArgs } from "./getPolicyObjectClassMap";
 export const getPolicyObjectClassMap: typeof import("./getPolicyObjectClassMap").getPolicyObjectClassMap = null as any;
 export const getPolicyObjectClassMapOutput: typeof import("./getPolicyObjectClassMap").getPolicyObjectClassMapOutput = null as any;
@@ -735,7 +780,7 @@ export const getPolicyObjectExtendedCommunityList: typeof import("./getPolicyObj
 export const getPolicyObjectExtendedCommunityListOutput: typeof import("./getPolicyObjectExtendedCommunityList").getPolicyObjectExtendedCommunityListOutput = null as any;
 utilities.lazyLoad(exports, ["getPolicyObjectExtendedCommunityList","getPolicyObjectExtendedCommunityListOutput"], () => require("./getPolicyObjectExtendedCommunityList"));
 
-export { GetPolicyObjectFeatureProfileResult } from "./getPolicyObjectFeatureProfile";
+export { GetPolicyObjectFeatureProfileArgs, GetPolicyObjectFeatureProfileResult, GetPolicyObjectFeatureProfileOutputArgs } from "./getPolicyObjectFeatureProfile";
 export const getPolicyObjectFeatureProfile: typeof import("./getPolicyObjectFeatureProfile").getPolicyObjectFeatureProfile = null as any;
 export const getPolicyObjectFeatureProfileOutput: typeof import("./getPolicyObjectFeatureProfile").getPolicyObjectFeatureProfileOutput = null as any;
 utilities.lazyLoad(exports, ["getPolicyObjectFeatureProfile","getPolicyObjectFeatureProfileOutput"], () => require("./getPolicyObjectFeatureProfile"));
@@ -760,10 +805,85 @@ export const getPolicyObjectPolicer: typeof import("./getPolicyObjectPolicer").g
 export const getPolicyObjectPolicerOutput: typeof import("./getPolicyObjectPolicer").getPolicyObjectPolicerOutput = null as any;
 utilities.lazyLoad(exports, ["getPolicyObjectPolicer","getPolicyObjectPolicerOutput"], () => require("./getPolicyObjectPolicer"));
 
+export { GetPolicyObjectPreferredColorGroupArgs, GetPolicyObjectPreferredColorGroupResult, GetPolicyObjectPreferredColorGroupOutputArgs } from "./getPolicyObjectPreferredColorGroup";
+export const getPolicyObjectPreferredColorGroup: typeof import("./getPolicyObjectPreferredColorGroup").getPolicyObjectPreferredColorGroup = null as any;
+export const getPolicyObjectPreferredColorGroupOutput: typeof import("./getPolicyObjectPreferredColorGroup").getPolicyObjectPreferredColorGroupOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectPreferredColorGroup","getPolicyObjectPreferredColorGroupOutput"], () => require("./getPolicyObjectPreferredColorGroup"));
+
+export { GetPolicyObjectSecurityDataIpv4PrefixListArgs, GetPolicyObjectSecurityDataIpv4PrefixListResult, GetPolicyObjectSecurityDataIpv4PrefixListOutputArgs } from "./getPolicyObjectSecurityDataIpv4PrefixList";
+export const getPolicyObjectSecurityDataIpv4PrefixList: typeof import("./getPolicyObjectSecurityDataIpv4PrefixList").getPolicyObjectSecurityDataIpv4PrefixList = null as any;
+export const getPolicyObjectSecurityDataIpv4PrefixListOutput: typeof import("./getPolicyObjectSecurityDataIpv4PrefixList").getPolicyObjectSecurityDataIpv4PrefixListOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectSecurityDataIpv4PrefixList","getPolicyObjectSecurityDataIpv4PrefixListOutput"], () => require("./getPolicyObjectSecurityDataIpv4PrefixList"));
+
+export { GetPolicyObjectSecurityFqdnListArgs, GetPolicyObjectSecurityFqdnListResult, GetPolicyObjectSecurityFqdnListOutputArgs } from "./getPolicyObjectSecurityFqdnList";
+export const getPolicyObjectSecurityFqdnList: typeof import("./getPolicyObjectSecurityFqdnList").getPolicyObjectSecurityFqdnList = null as any;
+export const getPolicyObjectSecurityFqdnListOutput: typeof import("./getPolicyObjectSecurityFqdnList").getPolicyObjectSecurityFqdnListOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectSecurityFqdnList","getPolicyObjectSecurityFqdnListOutput"], () => require("./getPolicyObjectSecurityFqdnList"));
+
+export { GetPolicyObjectSecurityGeolocationListArgs, GetPolicyObjectSecurityGeolocationListResult, GetPolicyObjectSecurityGeolocationListOutputArgs } from "./getPolicyObjectSecurityGeolocationList";
+export const getPolicyObjectSecurityGeolocationList: typeof import("./getPolicyObjectSecurityGeolocationList").getPolicyObjectSecurityGeolocationList = null as any;
+export const getPolicyObjectSecurityGeolocationListOutput: typeof import("./getPolicyObjectSecurityGeolocationList").getPolicyObjectSecurityGeolocationListOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectSecurityGeolocationList","getPolicyObjectSecurityGeolocationListOutput"], () => require("./getPolicyObjectSecurityGeolocationList"));
+
+export { GetPolicyObjectSecurityIdentityListArgs, GetPolicyObjectSecurityIdentityListResult, GetPolicyObjectSecurityIdentityListOutputArgs } from "./getPolicyObjectSecurityIdentityList";
+export const getPolicyObjectSecurityIdentityList: typeof import("./getPolicyObjectSecurityIdentityList").getPolicyObjectSecurityIdentityList = null as any;
+export const getPolicyObjectSecurityIdentityListOutput: typeof import("./getPolicyObjectSecurityIdentityList").getPolicyObjectSecurityIdentityListOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectSecurityIdentityList","getPolicyObjectSecurityIdentityListOutput"], () => require("./getPolicyObjectSecurityIdentityList"));
+
+export { GetPolicyObjectSecurityIpsSignatureArgs, GetPolicyObjectSecurityIpsSignatureResult, GetPolicyObjectSecurityIpsSignatureOutputArgs } from "./getPolicyObjectSecurityIpsSignature";
+export const getPolicyObjectSecurityIpsSignature: typeof import("./getPolicyObjectSecurityIpsSignature").getPolicyObjectSecurityIpsSignature = null as any;
+export const getPolicyObjectSecurityIpsSignatureOutput: typeof import("./getPolicyObjectSecurityIpsSignature").getPolicyObjectSecurityIpsSignatureOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectSecurityIpsSignature","getPolicyObjectSecurityIpsSignatureOutput"], () => require("./getPolicyObjectSecurityIpsSignature"));
+
+export { GetPolicyObjectSecurityLocalApplicationListArgs, GetPolicyObjectSecurityLocalApplicationListResult, GetPolicyObjectSecurityLocalApplicationListOutputArgs } from "./getPolicyObjectSecurityLocalApplicationList";
+export const getPolicyObjectSecurityLocalApplicationList: typeof import("./getPolicyObjectSecurityLocalApplicationList").getPolicyObjectSecurityLocalApplicationList = null as any;
+export const getPolicyObjectSecurityLocalApplicationListOutput: typeof import("./getPolicyObjectSecurityLocalApplicationList").getPolicyObjectSecurityLocalApplicationListOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectSecurityLocalApplicationList","getPolicyObjectSecurityLocalApplicationListOutput"], () => require("./getPolicyObjectSecurityLocalApplicationList"));
+
+export { GetPolicyObjectSecurityLocalDomainListArgs, GetPolicyObjectSecurityLocalDomainListResult, GetPolicyObjectSecurityLocalDomainListOutputArgs } from "./getPolicyObjectSecurityLocalDomainList";
+export const getPolicyObjectSecurityLocalDomainList: typeof import("./getPolicyObjectSecurityLocalDomainList").getPolicyObjectSecurityLocalDomainList = null as any;
+export const getPolicyObjectSecurityLocalDomainListOutput: typeof import("./getPolicyObjectSecurityLocalDomainList").getPolicyObjectSecurityLocalDomainListOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectSecurityLocalDomainList","getPolicyObjectSecurityLocalDomainListOutput"], () => require("./getPolicyObjectSecurityLocalDomainList"));
+
+export { GetPolicyObjectSecurityPortListArgs, GetPolicyObjectSecurityPortListResult, GetPolicyObjectSecurityPortListOutputArgs } from "./getPolicyObjectSecurityPortList";
+export const getPolicyObjectSecurityPortList: typeof import("./getPolicyObjectSecurityPortList").getPolicyObjectSecurityPortList = null as any;
+export const getPolicyObjectSecurityPortListOutput: typeof import("./getPolicyObjectSecurityPortList").getPolicyObjectSecurityPortListOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectSecurityPortList","getPolicyObjectSecurityPortListOutput"], () => require("./getPolicyObjectSecurityPortList"));
+
+export { GetPolicyObjectSecurityScalableGroupTagListArgs, GetPolicyObjectSecurityScalableGroupTagListResult, GetPolicyObjectSecurityScalableGroupTagListOutputArgs } from "./getPolicyObjectSecurityScalableGroupTagList";
+export const getPolicyObjectSecurityScalableGroupTagList: typeof import("./getPolicyObjectSecurityScalableGroupTagList").getPolicyObjectSecurityScalableGroupTagList = null as any;
+export const getPolicyObjectSecurityScalableGroupTagListOutput: typeof import("./getPolicyObjectSecurityScalableGroupTagList").getPolicyObjectSecurityScalableGroupTagListOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectSecurityScalableGroupTagList","getPolicyObjectSecurityScalableGroupTagListOutput"], () => require("./getPolicyObjectSecurityScalableGroupTagList"));
+
+export { GetPolicyObjectSecurityUrlAllowListArgs, GetPolicyObjectSecurityUrlAllowListResult, GetPolicyObjectSecurityUrlAllowListOutputArgs } from "./getPolicyObjectSecurityUrlAllowList";
+export const getPolicyObjectSecurityUrlAllowList: typeof import("./getPolicyObjectSecurityUrlAllowList").getPolicyObjectSecurityUrlAllowList = null as any;
+export const getPolicyObjectSecurityUrlAllowListOutput: typeof import("./getPolicyObjectSecurityUrlAllowList").getPolicyObjectSecurityUrlAllowListOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectSecurityUrlAllowList","getPolicyObjectSecurityUrlAllowListOutput"], () => require("./getPolicyObjectSecurityUrlAllowList"));
+
+export { GetPolicyObjectSecurityUrlBlockListArgs, GetPolicyObjectSecurityUrlBlockListResult, GetPolicyObjectSecurityUrlBlockListOutputArgs } from "./getPolicyObjectSecurityUrlBlockList";
+export const getPolicyObjectSecurityUrlBlockList: typeof import("./getPolicyObjectSecurityUrlBlockList").getPolicyObjectSecurityUrlBlockList = null as any;
+export const getPolicyObjectSecurityUrlBlockListOutput: typeof import("./getPolicyObjectSecurityUrlBlockList").getPolicyObjectSecurityUrlBlockListOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectSecurityUrlBlockList","getPolicyObjectSecurityUrlBlockListOutput"], () => require("./getPolicyObjectSecurityUrlBlockList"));
+
+export { GetPolicyObjectSlaClassListArgs, GetPolicyObjectSlaClassListResult, GetPolicyObjectSlaClassListOutputArgs } from "./getPolicyObjectSlaClassList";
+export const getPolicyObjectSlaClassList: typeof import("./getPolicyObjectSlaClassList").getPolicyObjectSlaClassList = null as any;
+export const getPolicyObjectSlaClassListOutput: typeof import("./getPolicyObjectSlaClassList").getPolicyObjectSlaClassListOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectSlaClassList","getPolicyObjectSlaClassListOutput"], () => require("./getPolicyObjectSlaClassList"));
+
+export { GetPolicyObjectStandardCommunityListArgs, GetPolicyObjectStandardCommunityListResult, GetPolicyObjectStandardCommunityListOutputArgs } from "./getPolicyObjectStandardCommunityList";
+export const getPolicyObjectStandardCommunityList: typeof import("./getPolicyObjectStandardCommunityList").getPolicyObjectStandardCommunityList = null as any;
+export const getPolicyObjectStandardCommunityListOutput: typeof import("./getPolicyObjectStandardCommunityList").getPolicyObjectStandardCommunityListOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectStandardCommunityList","getPolicyObjectStandardCommunityListOutput"], () => require("./getPolicyObjectStandardCommunityList"));
+
 export { GetPolicyObjectTlocListArgs, GetPolicyObjectTlocListResult, GetPolicyObjectTlocListOutputArgs } from "./getPolicyObjectTlocList";
 export const getPolicyObjectTlocList: typeof import("./getPolicyObjectTlocList").getPolicyObjectTlocList = null as any;
 export const getPolicyObjectTlocListOutput: typeof import("./getPolicyObjectTlocList").getPolicyObjectTlocListOutput = null as any;
 utilities.lazyLoad(exports, ["getPolicyObjectTlocList","getPolicyObjectTlocListOutput"], () => require("./getPolicyObjectTlocList"));
+
+export { GetPolicyObjectVpnGroupArgs, GetPolicyObjectVpnGroupResult, GetPolicyObjectVpnGroupOutputArgs } from "./getPolicyObjectVpnGroup";
+export const getPolicyObjectVpnGroup: typeof import("./getPolicyObjectVpnGroup").getPolicyObjectVpnGroup = null as any;
+export const getPolicyObjectVpnGroupOutput: typeof import("./getPolicyObjectVpnGroup").getPolicyObjectVpnGroupOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectVpnGroup","getPolicyObjectVpnGroupOutput"], () => require("./getPolicyObjectVpnGroup"));
 
 export { GetPortListPolicyObjectArgs, GetPortListPolicyObjectResult, GetPortListPolicyObjectOutputArgs } from "./getPortListPolicyObject";
 export const getPortListPolicyObject: typeof import("./getPortListPolicyObject").getPortListPolicyObject = null as any;
@@ -820,6 +940,16 @@ export const getServiceFeatureProfile: typeof import("./getServiceFeatureProfile
 export const getServiceFeatureProfileOutput: typeof import("./getServiceFeatureProfile").getServiceFeatureProfileOutput = null as any;
 utilities.lazyLoad(exports, ["getServiceFeatureProfile","getServiceFeatureProfileOutput"], () => require("./getServiceFeatureProfile"));
 
+export { GetServiceIpv4AclFeatureArgs, GetServiceIpv4AclFeatureResult, GetServiceIpv4AclFeatureOutputArgs } from "./getServiceIpv4AclFeature";
+export const getServiceIpv4AclFeature: typeof import("./getServiceIpv4AclFeature").getServiceIpv4AclFeature = null as any;
+export const getServiceIpv4AclFeatureOutput: typeof import("./getServiceIpv4AclFeature").getServiceIpv4AclFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getServiceIpv4AclFeature","getServiceIpv4AclFeatureOutput"], () => require("./getServiceIpv4AclFeature"));
+
+export { GetServiceIpv6AclFeatureArgs, GetServiceIpv6AclFeatureResult, GetServiceIpv6AclFeatureOutputArgs } from "./getServiceIpv6AclFeature";
+export const getServiceIpv6AclFeature: typeof import("./getServiceIpv6AclFeature").getServiceIpv6AclFeature = null as any;
+export const getServiceIpv6AclFeatureOutput: typeof import("./getServiceIpv6AclFeature").getServiceIpv6AclFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getServiceIpv6AclFeature","getServiceIpv6AclFeatureOutput"], () => require("./getServiceIpv6AclFeature"));
+
 export { GetServiceLanVpnFeatureArgs, GetServiceLanVpnFeatureResult, GetServiceLanVpnFeatureOutputArgs } from "./getServiceLanVpnFeature";
 export const getServiceLanVpnFeature: typeof import("./getServiceLanVpnFeature").getServiceLanVpnFeature = null as any;
 export const getServiceLanVpnFeatureOutput: typeof import("./getServiceLanVpnFeature").getServiceLanVpnFeatureOutput = null as any;
@@ -845,6 +975,11 @@ export const getServiceLanVpnInterfaceSviFeature: typeof import("./getServiceLan
 export const getServiceLanVpnInterfaceSviFeatureOutput: typeof import("./getServiceLanVpnInterfaceSviFeature").getServiceLanVpnInterfaceSviFeatureOutput = null as any;
 utilities.lazyLoad(exports, ["getServiceLanVpnInterfaceSviFeature","getServiceLanVpnInterfaceSviFeatureOutput"], () => require("./getServiceLanVpnInterfaceSviFeature"));
 
+export { GetServiceMulticastFeatureArgs, GetServiceMulticastFeatureResult, GetServiceMulticastFeatureOutputArgs } from "./getServiceMulticastFeature";
+export const getServiceMulticastFeature: typeof import("./getServiceMulticastFeature").getServiceMulticastFeature = null as any;
+export const getServiceMulticastFeatureOutput: typeof import("./getServiceMulticastFeature").getServiceMulticastFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getServiceMulticastFeature","getServiceMulticastFeatureOutput"], () => require("./getServiceMulticastFeature"));
+
 export { GetServiceObjectTrackerFeatureArgs, GetServiceObjectTrackerFeatureResult, GetServiceObjectTrackerFeatureOutputArgs } from "./getServiceObjectTrackerFeature";
 export const getServiceObjectTrackerFeature: typeof import("./getServiceObjectTrackerFeature").getServiceObjectTrackerFeature = null as any;
 export const getServiceObjectTrackerFeatureOutput: typeof import("./getServiceObjectTrackerFeature").getServiceObjectTrackerFeatureOutput = null as any;
@@ -864,6 +999,11 @@ export { GetServiceRoutingBgpFeatureArgs, GetServiceRoutingBgpFeatureResult, Get
 export const getServiceRoutingBgpFeature: typeof import("./getServiceRoutingBgpFeature").getServiceRoutingBgpFeature = null as any;
 export const getServiceRoutingBgpFeatureOutput: typeof import("./getServiceRoutingBgpFeature").getServiceRoutingBgpFeatureOutput = null as any;
 utilities.lazyLoad(exports, ["getServiceRoutingBgpFeature","getServiceRoutingBgpFeatureOutput"], () => require("./getServiceRoutingBgpFeature"));
+
+export { GetServiceRoutingEigrpFeatureArgs, GetServiceRoutingEigrpFeatureResult, GetServiceRoutingEigrpFeatureOutputArgs } from "./getServiceRoutingEigrpFeature";
+export const getServiceRoutingEigrpFeature: typeof import("./getServiceRoutingEigrpFeature").getServiceRoutingEigrpFeature = null as any;
+export const getServiceRoutingEigrpFeatureOutput: typeof import("./getServiceRoutingEigrpFeature").getServiceRoutingEigrpFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getServiceRoutingEigrpFeature","getServiceRoutingEigrpFeatureOutput"], () => require("./getServiceRoutingEigrpFeature"));
 
 export { GetServiceRoutingOspfFeatureArgs, GetServiceRoutingOspfFeatureResult, GetServiceRoutingOspfFeatureOutputArgs } from "./getServiceRoutingOspfFeature";
 export const getServiceRoutingOspfFeature: typeof import("./getServiceRoutingOspfFeature").getServiceRoutingOspfFeature = null as any;
@@ -894,6 +1034,16 @@ export { GetServiceTrackerGroupFeatureArgs, GetServiceTrackerGroupFeatureResult,
 export const getServiceTrackerGroupFeature: typeof import("./getServiceTrackerGroupFeature").getServiceTrackerGroupFeature = null as any;
 export const getServiceTrackerGroupFeatureOutput: typeof import("./getServiceTrackerGroupFeature").getServiceTrackerGroupFeatureOutput = null as any;
 utilities.lazyLoad(exports, ["getServiceTrackerGroupFeature","getServiceTrackerGroupFeatureOutput"], () => require("./getServiceTrackerGroupFeature"));
+
+export { GetServiceWirelessLanFeatureArgs, GetServiceWirelessLanFeatureResult, GetServiceWirelessLanFeatureOutputArgs } from "./getServiceWirelessLanFeature";
+export const getServiceWirelessLanFeature: typeof import("./getServiceWirelessLanFeature").getServiceWirelessLanFeature = null as any;
+export const getServiceWirelessLanFeatureOutput: typeof import("./getServiceWirelessLanFeature").getServiceWirelessLanFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getServiceWirelessLanFeature","getServiceWirelessLanFeatureOutput"], () => require("./getServiceWirelessLanFeature"));
+
+export { GetSigSecurityFeatureProfileArgs, GetSigSecurityFeatureProfileResult, GetSigSecurityFeatureProfileOutputArgs } from "./getSigSecurityFeatureProfile";
+export const getSigSecurityFeatureProfile: typeof import("./getSigSecurityFeatureProfile").getSigSecurityFeatureProfile = null as any;
+export const getSigSecurityFeatureProfileOutput: typeof import("./getSigSecurityFeatureProfile").getSigSecurityFeatureProfileOutput = null as any;
+utilities.lazyLoad(exports, ["getSigSecurityFeatureProfile","getSigSecurityFeatureProfileOutput"], () => require("./getSigSecurityFeatureProfile"));
 
 export { GetSiteListPolicyObjectArgs, GetSiteListPolicyObjectResult, GetSiteListPolicyObjectOutputArgs } from "./getSiteListPolicyObject";
 export const getSiteListPolicyObject: typeof import("./getSiteListPolicyObject").getSiteListPolicyObject = null as any;
@@ -1030,6 +1180,16 @@ export const getTransportGpsFeature: typeof import("./getTransportGpsFeature").g
 export const getTransportGpsFeatureOutput: typeof import("./getTransportGpsFeature").getTransportGpsFeatureOutput = null as any;
 utilities.lazyLoad(exports, ["getTransportGpsFeature","getTransportGpsFeatureOutput"], () => require("./getTransportGpsFeature"));
 
+export { GetTransportIpv4AclFeatureArgs, GetTransportIpv4AclFeatureResult, GetTransportIpv4AclFeatureOutputArgs } from "./getTransportIpv4AclFeature";
+export const getTransportIpv4AclFeature: typeof import("./getTransportIpv4AclFeature").getTransportIpv4AclFeature = null as any;
+export const getTransportIpv4AclFeatureOutput: typeof import("./getTransportIpv4AclFeature").getTransportIpv4AclFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getTransportIpv4AclFeature","getTransportIpv4AclFeatureOutput"], () => require("./getTransportIpv4AclFeature"));
+
+export { GetTransportIpv6AclFeatureArgs, GetTransportIpv6AclFeatureResult, GetTransportIpv6AclFeatureOutputArgs } from "./getTransportIpv6AclFeature";
+export const getTransportIpv6AclFeature: typeof import("./getTransportIpv6AclFeature").getTransportIpv6AclFeature = null as any;
+export const getTransportIpv6AclFeatureOutput: typeof import("./getTransportIpv6AclFeature").getTransportIpv6AclFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getTransportIpv6AclFeature","getTransportIpv6AclFeatureOutput"], () => require("./getTransportIpv6AclFeature"));
+
 export { GetTransportIpv6TrackerFeatureArgs, GetTransportIpv6TrackerFeatureResult, GetTransportIpv6TrackerFeatureOutputArgs } from "./getTransportIpv6TrackerFeature";
 export const getTransportIpv6TrackerFeature: typeof import("./getTransportIpv6TrackerFeature").getTransportIpv6TrackerFeature = null as any;
 export const getTransportIpv6TrackerFeatureOutput: typeof import("./getTransportIpv6TrackerFeature").getTransportIpv6TrackerFeatureOutput = null as any;
@@ -1074,6 +1234,11 @@ export { GetTransportRoutingOspfv3Ipv6FeatureArgs, GetTransportRoutingOspfv3Ipv6
 export const getTransportRoutingOspfv3Ipv6Feature: typeof import("./getTransportRoutingOspfv3Ipv6Feature").getTransportRoutingOspfv3Ipv6Feature = null as any;
 export const getTransportRoutingOspfv3Ipv6FeatureOutput: typeof import("./getTransportRoutingOspfv3Ipv6Feature").getTransportRoutingOspfv3Ipv6FeatureOutput = null as any;
 utilities.lazyLoad(exports, ["getTransportRoutingOspfv3Ipv6Feature","getTransportRoutingOspfv3Ipv6FeatureOutput"], () => require("./getTransportRoutingOspfv3Ipv6Feature"));
+
+export { GetTransportT1E1ControllerFeatureArgs, GetTransportT1E1ControllerFeatureResult, GetTransportT1E1ControllerFeatureOutputArgs } from "./getTransportT1E1ControllerFeature";
+export const getTransportT1E1ControllerFeature: typeof import("./getTransportT1E1ControllerFeature").getTransportT1E1ControllerFeature = null as any;
+export const getTransportT1E1ControllerFeatureOutput: typeof import("./getTransportT1E1ControllerFeature").getTransportT1E1ControllerFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getTransportT1E1ControllerFeature","getTransportT1E1ControllerFeatureOutput"], () => require("./getTransportT1E1ControllerFeature"));
 
 export { GetTransportTrackerFeatureArgs, GetTransportTrackerFeatureResult, GetTransportTrackerFeatureOutputArgs } from "./getTransportTrackerFeature";
 export const getTransportTrackerFeature: typeof import("./getTransportTrackerFeature").getTransportTrackerFeature = null as any;
@@ -1280,6 +1445,21 @@ export type PolicerPolicyObject = import("./policerPolicyObject").PolicerPolicyO
 export const PolicerPolicyObject: typeof import("./policerPolicyObject").PolicerPolicyObject = null as any;
 utilities.lazyLoad(exports, ["PolicerPolicyObject"], () => require("./policerPolicyObject"));
 
+export { PolicyObjectAppProbeClassArgs, PolicyObjectAppProbeClassState } from "./policyObjectAppProbeClass";
+export type PolicyObjectAppProbeClass = import("./policyObjectAppProbeClass").PolicyObjectAppProbeClass;
+export const PolicyObjectAppProbeClass: typeof import("./policyObjectAppProbeClass").PolicyObjectAppProbeClass = null as any;
+utilities.lazyLoad(exports, ["PolicyObjectAppProbeClass"], () => require("./policyObjectAppProbeClass"));
+
+export { PolicyObjectApplicationListArgs, PolicyObjectApplicationListState } from "./policyObjectApplicationList";
+export type PolicyObjectApplicationList = import("./policyObjectApplicationList").PolicyObjectApplicationList;
+export const PolicyObjectApplicationList: typeof import("./policyObjectApplicationList").PolicyObjectApplicationList = null as any;
+utilities.lazyLoad(exports, ["PolicyObjectApplicationList"], () => require("./policyObjectApplicationList"));
+
+export { PolicyObjectAsPathListArgs, PolicyObjectAsPathListState } from "./policyObjectAsPathList";
+export type PolicyObjectAsPathList = import("./policyObjectAsPathList").PolicyObjectAsPathList;
+export const PolicyObjectAsPathList: typeof import("./policyObjectAsPathList").PolicyObjectAsPathList = null as any;
+utilities.lazyLoad(exports, ["PolicyObjectAsPathList"], () => require("./policyObjectAsPathList"));
+
 export { PolicyObjectClassMapArgs, PolicyObjectClassMapState } from "./policyObjectClassMap";
 export type PolicyObjectClassMap = import("./policyObjectClassMap").PolicyObjectClassMap;
 export const PolicyObjectClassMap: typeof import("./policyObjectClassMap").PolicyObjectClassMap = null as any;
@@ -1335,10 +1515,85 @@ export type PolicyObjectPolicer = import("./policyObjectPolicer").PolicyObjectPo
 export const PolicyObjectPolicer: typeof import("./policyObjectPolicer").PolicyObjectPolicer = null as any;
 utilities.lazyLoad(exports, ["PolicyObjectPolicer"], () => require("./policyObjectPolicer"));
 
+export { PolicyObjectPreferredColorGroupArgs, PolicyObjectPreferredColorGroupState } from "./policyObjectPreferredColorGroup";
+export type PolicyObjectPreferredColorGroup = import("./policyObjectPreferredColorGroup").PolicyObjectPreferredColorGroup;
+export const PolicyObjectPreferredColorGroup: typeof import("./policyObjectPreferredColorGroup").PolicyObjectPreferredColorGroup = null as any;
+utilities.lazyLoad(exports, ["PolicyObjectPreferredColorGroup"], () => require("./policyObjectPreferredColorGroup"));
+
+export { PolicyObjectSecurityDataIpv4PrefixListArgs, PolicyObjectSecurityDataIpv4PrefixListState } from "./policyObjectSecurityDataIpv4PrefixList";
+export type PolicyObjectSecurityDataIpv4PrefixList = import("./policyObjectSecurityDataIpv4PrefixList").PolicyObjectSecurityDataIpv4PrefixList;
+export const PolicyObjectSecurityDataIpv4PrefixList: typeof import("./policyObjectSecurityDataIpv4PrefixList").PolicyObjectSecurityDataIpv4PrefixList = null as any;
+utilities.lazyLoad(exports, ["PolicyObjectSecurityDataIpv4PrefixList"], () => require("./policyObjectSecurityDataIpv4PrefixList"));
+
+export { PolicyObjectSecurityFqdnListArgs, PolicyObjectSecurityFqdnListState } from "./policyObjectSecurityFqdnList";
+export type PolicyObjectSecurityFqdnList = import("./policyObjectSecurityFqdnList").PolicyObjectSecurityFqdnList;
+export const PolicyObjectSecurityFqdnList: typeof import("./policyObjectSecurityFqdnList").PolicyObjectSecurityFqdnList = null as any;
+utilities.lazyLoad(exports, ["PolicyObjectSecurityFqdnList"], () => require("./policyObjectSecurityFqdnList"));
+
+export { PolicyObjectSecurityGeolocationListArgs, PolicyObjectSecurityGeolocationListState } from "./policyObjectSecurityGeolocationList";
+export type PolicyObjectSecurityGeolocationList = import("./policyObjectSecurityGeolocationList").PolicyObjectSecurityGeolocationList;
+export const PolicyObjectSecurityGeolocationList: typeof import("./policyObjectSecurityGeolocationList").PolicyObjectSecurityGeolocationList = null as any;
+utilities.lazyLoad(exports, ["PolicyObjectSecurityGeolocationList"], () => require("./policyObjectSecurityGeolocationList"));
+
+export { PolicyObjectSecurityIdentityListArgs, PolicyObjectSecurityIdentityListState } from "./policyObjectSecurityIdentityList";
+export type PolicyObjectSecurityIdentityList = import("./policyObjectSecurityIdentityList").PolicyObjectSecurityIdentityList;
+export const PolicyObjectSecurityIdentityList: typeof import("./policyObjectSecurityIdentityList").PolicyObjectSecurityIdentityList = null as any;
+utilities.lazyLoad(exports, ["PolicyObjectSecurityIdentityList"], () => require("./policyObjectSecurityIdentityList"));
+
+export { PolicyObjectSecurityIpsSignatureArgs, PolicyObjectSecurityIpsSignatureState } from "./policyObjectSecurityIpsSignature";
+export type PolicyObjectSecurityIpsSignature = import("./policyObjectSecurityIpsSignature").PolicyObjectSecurityIpsSignature;
+export const PolicyObjectSecurityIpsSignature: typeof import("./policyObjectSecurityIpsSignature").PolicyObjectSecurityIpsSignature = null as any;
+utilities.lazyLoad(exports, ["PolicyObjectSecurityIpsSignature"], () => require("./policyObjectSecurityIpsSignature"));
+
+export { PolicyObjectSecurityLocalApplicationListArgs, PolicyObjectSecurityLocalApplicationListState } from "./policyObjectSecurityLocalApplicationList";
+export type PolicyObjectSecurityLocalApplicationList = import("./policyObjectSecurityLocalApplicationList").PolicyObjectSecurityLocalApplicationList;
+export const PolicyObjectSecurityLocalApplicationList: typeof import("./policyObjectSecurityLocalApplicationList").PolicyObjectSecurityLocalApplicationList = null as any;
+utilities.lazyLoad(exports, ["PolicyObjectSecurityLocalApplicationList"], () => require("./policyObjectSecurityLocalApplicationList"));
+
+export { PolicyObjectSecurityLocalDomainListArgs, PolicyObjectSecurityLocalDomainListState } from "./policyObjectSecurityLocalDomainList";
+export type PolicyObjectSecurityLocalDomainList = import("./policyObjectSecurityLocalDomainList").PolicyObjectSecurityLocalDomainList;
+export const PolicyObjectSecurityLocalDomainList: typeof import("./policyObjectSecurityLocalDomainList").PolicyObjectSecurityLocalDomainList = null as any;
+utilities.lazyLoad(exports, ["PolicyObjectSecurityLocalDomainList"], () => require("./policyObjectSecurityLocalDomainList"));
+
+export { PolicyObjectSecurityPortListArgs, PolicyObjectSecurityPortListState } from "./policyObjectSecurityPortList";
+export type PolicyObjectSecurityPortList = import("./policyObjectSecurityPortList").PolicyObjectSecurityPortList;
+export const PolicyObjectSecurityPortList: typeof import("./policyObjectSecurityPortList").PolicyObjectSecurityPortList = null as any;
+utilities.lazyLoad(exports, ["PolicyObjectSecurityPortList"], () => require("./policyObjectSecurityPortList"));
+
+export { PolicyObjectSecurityScalableGroupTagListArgs, PolicyObjectSecurityScalableGroupTagListState } from "./policyObjectSecurityScalableGroupTagList";
+export type PolicyObjectSecurityScalableGroupTagList = import("./policyObjectSecurityScalableGroupTagList").PolicyObjectSecurityScalableGroupTagList;
+export const PolicyObjectSecurityScalableGroupTagList: typeof import("./policyObjectSecurityScalableGroupTagList").PolicyObjectSecurityScalableGroupTagList = null as any;
+utilities.lazyLoad(exports, ["PolicyObjectSecurityScalableGroupTagList"], () => require("./policyObjectSecurityScalableGroupTagList"));
+
+export { PolicyObjectSecurityUrlAllowListArgs, PolicyObjectSecurityUrlAllowListState } from "./policyObjectSecurityUrlAllowList";
+export type PolicyObjectSecurityUrlAllowList = import("./policyObjectSecurityUrlAllowList").PolicyObjectSecurityUrlAllowList;
+export const PolicyObjectSecurityUrlAllowList: typeof import("./policyObjectSecurityUrlAllowList").PolicyObjectSecurityUrlAllowList = null as any;
+utilities.lazyLoad(exports, ["PolicyObjectSecurityUrlAllowList"], () => require("./policyObjectSecurityUrlAllowList"));
+
+export { PolicyObjectSecurityUrlBlockListArgs, PolicyObjectSecurityUrlBlockListState } from "./policyObjectSecurityUrlBlockList";
+export type PolicyObjectSecurityUrlBlockList = import("./policyObjectSecurityUrlBlockList").PolicyObjectSecurityUrlBlockList;
+export const PolicyObjectSecurityUrlBlockList: typeof import("./policyObjectSecurityUrlBlockList").PolicyObjectSecurityUrlBlockList = null as any;
+utilities.lazyLoad(exports, ["PolicyObjectSecurityUrlBlockList"], () => require("./policyObjectSecurityUrlBlockList"));
+
+export { PolicyObjectSlaClassListArgs, PolicyObjectSlaClassListState } from "./policyObjectSlaClassList";
+export type PolicyObjectSlaClassList = import("./policyObjectSlaClassList").PolicyObjectSlaClassList;
+export const PolicyObjectSlaClassList: typeof import("./policyObjectSlaClassList").PolicyObjectSlaClassList = null as any;
+utilities.lazyLoad(exports, ["PolicyObjectSlaClassList"], () => require("./policyObjectSlaClassList"));
+
+export { PolicyObjectStandardCommunityListArgs, PolicyObjectStandardCommunityListState } from "./policyObjectStandardCommunityList";
+export type PolicyObjectStandardCommunityList = import("./policyObjectStandardCommunityList").PolicyObjectStandardCommunityList;
+export const PolicyObjectStandardCommunityList: typeof import("./policyObjectStandardCommunityList").PolicyObjectStandardCommunityList = null as any;
+utilities.lazyLoad(exports, ["PolicyObjectStandardCommunityList"], () => require("./policyObjectStandardCommunityList"));
+
 export { PolicyObjectTlocListArgs, PolicyObjectTlocListState } from "./policyObjectTlocList";
 export type PolicyObjectTlocList = import("./policyObjectTlocList").PolicyObjectTlocList;
 export const PolicyObjectTlocList: typeof import("./policyObjectTlocList").PolicyObjectTlocList = null as any;
 utilities.lazyLoad(exports, ["PolicyObjectTlocList"], () => require("./policyObjectTlocList"));
+
+export { PolicyObjectVpnGroupArgs, PolicyObjectVpnGroupState } from "./policyObjectVpnGroup";
+export type PolicyObjectVpnGroup = import("./policyObjectVpnGroup").PolicyObjectVpnGroup;
+export const PolicyObjectVpnGroup: typeof import("./policyObjectVpnGroup").PolicyObjectVpnGroup = null as any;
+utilities.lazyLoad(exports, ["PolicyObjectVpnGroup"], () => require("./policyObjectVpnGroup"));
 
 export { PortListPolicyObjectArgs, PortListPolicyObjectState } from "./portListPolicyObject";
 export type PortListPolicyObject = import("./portListPolicyObject").PortListPolicyObject;
@@ -1400,6 +1655,16 @@ export type ServiceFeatureProfile = import("./serviceFeatureProfile").ServiceFea
 export const ServiceFeatureProfile: typeof import("./serviceFeatureProfile").ServiceFeatureProfile = null as any;
 utilities.lazyLoad(exports, ["ServiceFeatureProfile"], () => require("./serviceFeatureProfile"));
 
+export { ServiceIpv4AclFeatureArgs, ServiceIpv4AclFeatureState } from "./serviceIpv4AclFeature";
+export type ServiceIpv4AclFeature = import("./serviceIpv4AclFeature").ServiceIpv4AclFeature;
+export const ServiceIpv4AclFeature: typeof import("./serviceIpv4AclFeature").ServiceIpv4AclFeature = null as any;
+utilities.lazyLoad(exports, ["ServiceIpv4AclFeature"], () => require("./serviceIpv4AclFeature"));
+
+export { ServiceIpv6AclFeatureArgs, ServiceIpv6AclFeatureState } from "./serviceIpv6AclFeature";
+export type ServiceIpv6AclFeature = import("./serviceIpv6AclFeature").ServiceIpv6AclFeature;
+export const ServiceIpv6AclFeature: typeof import("./serviceIpv6AclFeature").ServiceIpv6AclFeature = null as any;
+utilities.lazyLoad(exports, ["ServiceIpv6AclFeature"], () => require("./serviceIpv6AclFeature"));
+
 export { ServiceLanVpnFeatureArgs, ServiceLanVpnFeatureState } from "./serviceLanVpnFeature";
 export type ServiceLanVpnFeature = import("./serviceLanVpnFeature").ServiceLanVpnFeature;
 export const ServiceLanVpnFeature: typeof import("./serviceLanVpnFeature").ServiceLanVpnFeature = null as any;
@@ -1425,6 +1690,11 @@ export type ServiceLanVpnInterfaceSviFeature = import("./serviceLanVpnInterfaceS
 export const ServiceLanVpnInterfaceSviFeature: typeof import("./serviceLanVpnInterfaceSviFeature").ServiceLanVpnInterfaceSviFeature = null as any;
 utilities.lazyLoad(exports, ["ServiceLanVpnInterfaceSviFeature"], () => require("./serviceLanVpnInterfaceSviFeature"));
 
+export { ServiceMulticastFeatureArgs, ServiceMulticastFeatureState } from "./serviceMulticastFeature";
+export type ServiceMulticastFeature = import("./serviceMulticastFeature").ServiceMulticastFeature;
+export const ServiceMulticastFeature: typeof import("./serviceMulticastFeature").ServiceMulticastFeature = null as any;
+utilities.lazyLoad(exports, ["ServiceMulticastFeature"], () => require("./serviceMulticastFeature"));
+
 export { ServiceObjectTrackerFeatureArgs, ServiceObjectTrackerFeatureState } from "./serviceObjectTrackerFeature";
 export type ServiceObjectTrackerFeature = import("./serviceObjectTrackerFeature").ServiceObjectTrackerFeature;
 export const ServiceObjectTrackerFeature: typeof import("./serviceObjectTrackerFeature").ServiceObjectTrackerFeature = null as any;
@@ -1444,6 +1714,11 @@ export { ServiceRoutingBgpFeatureArgs, ServiceRoutingBgpFeatureState } from "./s
 export type ServiceRoutingBgpFeature = import("./serviceRoutingBgpFeature").ServiceRoutingBgpFeature;
 export const ServiceRoutingBgpFeature: typeof import("./serviceRoutingBgpFeature").ServiceRoutingBgpFeature = null as any;
 utilities.lazyLoad(exports, ["ServiceRoutingBgpFeature"], () => require("./serviceRoutingBgpFeature"));
+
+export { ServiceRoutingEigrpFeatureArgs, ServiceRoutingEigrpFeatureState } from "./serviceRoutingEigrpFeature";
+export type ServiceRoutingEigrpFeature = import("./serviceRoutingEigrpFeature").ServiceRoutingEigrpFeature;
+export const ServiceRoutingEigrpFeature: typeof import("./serviceRoutingEigrpFeature").ServiceRoutingEigrpFeature = null as any;
+utilities.lazyLoad(exports, ["ServiceRoutingEigrpFeature"], () => require("./serviceRoutingEigrpFeature"));
 
 export { ServiceRoutingOspfFeatureArgs, ServiceRoutingOspfFeatureState } from "./serviceRoutingOspfFeature";
 export type ServiceRoutingOspfFeature = import("./serviceRoutingOspfFeature").ServiceRoutingOspfFeature;
@@ -1474,6 +1749,16 @@ export { ServiceTrackerGroupFeatureArgs, ServiceTrackerGroupFeatureState } from 
 export type ServiceTrackerGroupFeature = import("./serviceTrackerGroupFeature").ServiceTrackerGroupFeature;
 export const ServiceTrackerGroupFeature: typeof import("./serviceTrackerGroupFeature").ServiceTrackerGroupFeature = null as any;
 utilities.lazyLoad(exports, ["ServiceTrackerGroupFeature"], () => require("./serviceTrackerGroupFeature"));
+
+export { ServiceWirelessLanFeatureArgs, ServiceWirelessLanFeatureState } from "./serviceWirelessLanFeature";
+export type ServiceWirelessLanFeature = import("./serviceWirelessLanFeature").ServiceWirelessLanFeature;
+export const ServiceWirelessLanFeature: typeof import("./serviceWirelessLanFeature").ServiceWirelessLanFeature = null as any;
+utilities.lazyLoad(exports, ["ServiceWirelessLanFeature"], () => require("./serviceWirelessLanFeature"));
+
+export { SigSecurityFeatureProfileArgs, SigSecurityFeatureProfileState } from "./sigSecurityFeatureProfile";
+export type SigSecurityFeatureProfile = import("./sigSecurityFeatureProfile").SigSecurityFeatureProfile;
+export const SigSecurityFeatureProfile: typeof import("./sigSecurityFeatureProfile").SigSecurityFeatureProfile = null as any;
+utilities.lazyLoad(exports, ["SigSecurityFeatureProfile"], () => require("./sigSecurityFeatureProfile"));
 
 export { SiteListPolicyObjectArgs, SiteListPolicyObjectState } from "./siteListPolicyObject";
 export type SiteListPolicyObject = import("./siteListPolicyObject").SiteListPolicyObject;
@@ -1610,6 +1895,16 @@ export type TransportGpsFeature = import("./transportGpsFeature").TransportGpsFe
 export const TransportGpsFeature: typeof import("./transportGpsFeature").TransportGpsFeature = null as any;
 utilities.lazyLoad(exports, ["TransportGpsFeature"], () => require("./transportGpsFeature"));
 
+export { TransportIpv4AclFeatureArgs, TransportIpv4AclFeatureState } from "./transportIpv4AclFeature";
+export type TransportIpv4AclFeature = import("./transportIpv4AclFeature").TransportIpv4AclFeature;
+export const TransportIpv4AclFeature: typeof import("./transportIpv4AclFeature").TransportIpv4AclFeature = null as any;
+utilities.lazyLoad(exports, ["TransportIpv4AclFeature"], () => require("./transportIpv4AclFeature"));
+
+export { TransportIpv6AclFeatureArgs, TransportIpv6AclFeatureState } from "./transportIpv6AclFeature";
+export type TransportIpv6AclFeature = import("./transportIpv6AclFeature").TransportIpv6AclFeature;
+export const TransportIpv6AclFeature: typeof import("./transportIpv6AclFeature").TransportIpv6AclFeature = null as any;
+utilities.lazyLoad(exports, ["TransportIpv6AclFeature"], () => require("./transportIpv6AclFeature"));
+
 export { TransportIpv6TrackerFeatureArgs, TransportIpv6TrackerFeatureState } from "./transportIpv6TrackerFeature";
 export type TransportIpv6TrackerFeature = import("./transportIpv6TrackerFeature").TransportIpv6TrackerFeature;
 export const TransportIpv6TrackerFeature: typeof import("./transportIpv6TrackerFeature").TransportIpv6TrackerFeature = null as any;
@@ -1654,6 +1949,11 @@ export { TransportRoutingOspfv3Ipv6FeatureArgs, TransportRoutingOspfv3Ipv6Featur
 export type TransportRoutingOspfv3Ipv6Feature = import("./transportRoutingOspfv3Ipv6Feature").TransportRoutingOspfv3Ipv6Feature;
 export const TransportRoutingOspfv3Ipv6Feature: typeof import("./transportRoutingOspfv3Ipv6Feature").TransportRoutingOspfv3Ipv6Feature = null as any;
 utilities.lazyLoad(exports, ["TransportRoutingOspfv3Ipv6Feature"], () => require("./transportRoutingOspfv3Ipv6Feature"));
+
+export { TransportT1E1ControllerFeatureArgs, TransportT1E1ControllerFeatureState } from "./transportT1E1ControllerFeature";
+export type TransportT1E1ControllerFeature = import("./transportT1E1ControllerFeature").TransportT1E1ControllerFeature;
+export const TransportT1E1ControllerFeature: typeof import("./transportT1E1ControllerFeature").TransportT1E1ControllerFeature = null as any;
+utilities.lazyLoad(exports, ["TransportT1E1ControllerFeature"], () => require("./transportT1E1ControllerFeature"));
 
 export { TransportTrackerFeatureArgs, TransportTrackerFeatureState } from "./transportTrackerFeature";
 export type TransportTrackerFeature = import("./transportTrackerFeature").TransportTrackerFeature;
@@ -1792,6 +2092,8 @@ const _module = {
                 return new ApplicationPriorityFeatureProfile(name, <any>undefined, { urn })
             case "sdwan:index/applicationPriorityQosPolicy:ApplicationPriorityQosPolicy":
                 return new ApplicationPriorityQosPolicy(name, <any>undefined, { urn })
+            case "sdwan:index/applicationPriorityTrafficPolicyPolicy:ApplicationPriorityTrafficPolicyPolicy":
+                return new ApplicationPriorityTrafficPolicyPolicy(name, <any>undefined, { urn })
             case "sdwan:index/asPathListPolicyObject:AsPathListPolicyObject":
                 return new AsPathListPolicyObject(name, <any>undefined, { urn })
             case "sdwan:index/attachFeatureDeviceTemplate:AttachFeatureDeviceTemplate":
@@ -1882,12 +2184,16 @@ const _module = {
                 return new DataIpv4PrefixListPolicyObject(name, <any>undefined, { urn })
             case "sdwan:index/dataIpv6PrefixListPolicyObject:DataIpv6PrefixListPolicyObject":
                 return new DataIpv6PrefixListPolicyObject(name, <any>undefined, { urn })
+            case "sdwan:index/dnsSecurityFeatureProfile:DnsSecurityFeatureProfile":
+                return new DnsSecurityFeatureProfile(name, <any>undefined, { urn })
             case "sdwan:index/dnsSecurityPolicyDefinition:DnsSecurityPolicyDefinition":
                 return new DnsSecurityPolicyDefinition(name, <any>undefined, { urn })
             case "sdwan:index/domainListPolicyObject:DomainListPolicyObject":
                 return new DomainListPolicyObject(name, <any>undefined, { urn })
             case "sdwan:index/eigrpFeatureTemplate:EigrpFeatureTemplate":
                 return new EigrpFeatureTemplate(name, <any>undefined, { urn })
+            case "sdwan:index/embeddedSecurityFeatureProfile:EmbeddedSecurityFeatureProfile":
+                return new EmbeddedSecurityFeatureProfile(name, <any>undefined, { urn })
             case "sdwan:index/expandedCommunityListPolicyObject:ExpandedCommunityListPolicyObject":
                 return new ExpandedCommunityListPolicyObject(name, <any>undefined, { urn })
             case "sdwan:index/extendedCommunityListPolicyObject:ExtendedCommunityListPolicyObject":
@@ -1934,6 +2240,12 @@ const _module = {
                 return new OtherUcseFeature(name, <any>undefined, { urn })
             case "sdwan:index/policerPolicyObject:PolicerPolicyObject":
                 return new PolicerPolicyObject(name, <any>undefined, { urn })
+            case "sdwan:index/policyObjectAppProbeClass:PolicyObjectAppProbeClass":
+                return new PolicyObjectAppProbeClass(name, <any>undefined, { urn })
+            case "sdwan:index/policyObjectApplicationList:PolicyObjectApplicationList":
+                return new PolicyObjectApplicationList(name, <any>undefined, { urn })
+            case "sdwan:index/policyObjectAsPathList:PolicyObjectAsPathList":
+                return new PolicyObjectAsPathList(name, <any>undefined, { urn })
             case "sdwan:index/policyObjectClassMap:PolicyObjectClassMap":
                 return new PolicyObjectClassMap(name, <any>undefined, { urn })
             case "sdwan:index/policyObjectColorList:PolicyObjectColorList":
@@ -1956,8 +2268,38 @@ const _module = {
                 return new PolicyObjectMirror(name, <any>undefined, { urn })
             case "sdwan:index/policyObjectPolicer:PolicyObjectPolicer":
                 return new PolicyObjectPolicer(name, <any>undefined, { urn })
+            case "sdwan:index/policyObjectPreferredColorGroup:PolicyObjectPreferredColorGroup":
+                return new PolicyObjectPreferredColorGroup(name, <any>undefined, { urn })
+            case "sdwan:index/policyObjectSecurityDataIpv4PrefixList:PolicyObjectSecurityDataIpv4PrefixList":
+                return new PolicyObjectSecurityDataIpv4PrefixList(name, <any>undefined, { urn })
+            case "sdwan:index/policyObjectSecurityFqdnList:PolicyObjectSecurityFqdnList":
+                return new PolicyObjectSecurityFqdnList(name, <any>undefined, { urn })
+            case "sdwan:index/policyObjectSecurityGeolocationList:PolicyObjectSecurityGeolocationList":
+                return new PolicyObjectSecurityGeolocationList(name, <any>undefined, { urn })
+            case "sdwan:index/policyObjectSecurityIdentityList:PolicyObjectSecurityIdentityList":
+                return new PolicyObjectSecurityIdentityList(name, <any>undefined, { urn })
+            case "sdwan:index/policyObjectSecurityIpsSignature:PolicyObjectSecurityIpsSignature":
+                return new PolicyObjectSecurityIpsSignature(name, <any>undefined, { urn })
+            case "sdwan:index/policyObjectSecurityLocalApplicationList:PolicyObjectSecurityLocalApplicationList":
+                return new PolicyObjectSecurityLocalApplicationList(name, <any>undefined, { urn })
+            case "sdwan:index/policyObjectSecurityLocalDomainList:PolicyObjectSecurityLocalDomainList":
+                return new PolicyObjectSecurityLocalDomainList(name, <any>undefined, { urn })
+            case "sdwan:index/policyObjectSecurityPortList:PolicyObjectSecurityPortList":
+                return new PolicyObjectSecurityPortList(name, <any>undefined, { urn })
+            case "sdwan:index/policyObjectSecurityScalableGroupTagList:PolicyObjectSecurityScalableGroupTagList":
+                return new PolicyObjectSecurityScalableGroupTagList(name, <any>undefined, { urn })
+            case "sdwan:index/policyObjectSecurityUrlAllowList:PolicyObjectSecurityUrlAllowList":
+                return new PolicyObjectSecurityUrlAllowList(name, <any>undefined, { urn })
+            case "sdwan:index/policyObjectSecurityUrlBlockList:PolicyObjectSecurityUrlBlockList":
+                return new PolicyObjectSecurityUrlBlockList(name, <any>undefined, { urn })
+            case "sdwan:index/policyObjectSlaClassList:PolicyObjectSlaClassList":
+                return new PolicyObjectSlaClassList(name, <any>undefined, { urn })
+            case "sdwan:index/policyObjectStandardCommunityList:PolicyObjectStandardCommunityList":
+                return new PolicyObjectStandardCommunityList(name, <any>undefined, { urn })
             case "sdwan:index/policyObjectTlocList:PolicyObjectTlocList":
                 return new PolicyObjectTlocList(name, <any>undefined, { urn })
+            case "sdwan:index/policyObjectVpnGroup:PolicyObjectVpnGroup":
+                return new PolicyObjectVpnGroup(name, <any>undefined, { urn })
             case "sdwan:index/portListPolicyObject:PortListPolicyObject":
                 return new PortListPolicyObject(name, <any>undefined, { urn })
             case "sdwan:index/preferredColorGroupPolicyObject:PreferredColorGroupPolicyObject":
@@ -1980,6 +2322,10 @@ const _module = {
                 return new SecurityPolicy(name, <any>undefined, { urn })
             case "sdwan:index/serviceFeatureProfile:ServiceFeatureProfile":
                 return new ServiceFeatureProfile(name, <any>undefined, { urn })
+            case "sdwan:index/serviceIpv4AclFeature:ServiceIpv4AclFeature":
+                return new ServiceIpv4AclFeature(name, <any>undefined, { urn })
+            case "sdwan:index/serviceIpv6AclFeature:ServiceIpv6AclFeature":
+                return new ServiceIpv6AclFeature(name, <any>undefined, { urn })
             case "sdwan:index/serviceLanVpnFeature:ServiceLanVpnFeature":
                 return new ServiceLanVpnFeature(name, <any>undefined, { urn })
             case "sdwan:index/serviceLanVpnInterfaceEthernetFeature:ServiceLanVpnInterfaceEthernetFeature":
@@ -1990,6 +2336,8 @@ const _module = {
                 return new ServiceLanVpnInterfaceIpsecFeature(name, <any>undefined, { urn })
             case "sdwan:index/serviceLanVpnInterfaceSviFeature:ServiceLanVpnInterfaceSviFeature":
                 return new ServiceLanVpnInterfaceSviFeature(name, <any>undefined, { urn })
+            case "sdwan:index/serviceMulticastFeature:ServiceMulticastFeature":
+                return new ServiceMulticastFeature(name, <any>undefined, { urn })
             case "sdwan:index/serviceObjectTrackerFeature:ServiceObjectTrackerFeature":
                 return new ServiceObjectTrackerFeature(name, <any>undefined, { urn })
             case "sdwan:index/serviceObjectTrackerGroupFeature:ServiceObjectTrackerGroupFeature":
@@ -1998,6 +2346,8 @@ const _module = {
                 return new ServiceRoutePolicyFeature(name, <any>undefined, { urn })
             case "sdwan:index/serviceRoutingBgpFeature:ServiceRoutingBgpFeature":
                 return new ServiceRoutingBgpFeature(name, <any>undefined, { urn })
+            case "sdwan:index/serviceRoutingEigrpFeature:ServiceRoutingEigrpFeature":
+                return new ServiceRoutingEigrpFeature(name, <any>undefined, { urn })
             case "sdwan:index/serviceRoutingOspfFeature:ServiceRoutingOspfFeature":
                 return new ServiceRoutingOspfFeature(name, <any>undefined, { urn })
             case "sdwan:index/serviceRoutingOspfv3Ipv4Feature:ServiceRoutingOspfv3Ipv4Feature":
@@ -2010,6 +2360,10 @@ const _module = {
                 return new ServiceTrackerFeature(name, <any>undefined, { urn })
             case "sdwan:index/serviceTrackerGroupFeature:ServiceTrackerGroupFeature":
                 return new ServiceTrackerGroupFeature(name, <any>undefined, { urn })
+            case "sdwan:index/serviceWirelessLanFeature:ServiceWirelessLanFeature":
+                return new ServiceWirelessLanFeature(name, <any>undefined, { urn })
+            case "sdwan:index/sigSecurityFeatureProfile:SigSecurityFeatureProfile":
+                return new SigSecurityFeatureProfile(name, <any>undefined, { urn })
             case "sdwan:index/siteListPolicyObject:SiteListPolicyObject":
                 return new SiteListPolicyObject(name, <any>undefined, { urn })
             case "sdwan:index/slaClassPolicyObject:SlaClassPolicyObject":
@@ -2064,6 +2418,10 @@ const _module = {
                 return new TransportFeatureProfile(name, <any>undefined, { urn })
             case "sdwan:index/transportGpsFeature:TransportGpsFeature":
                 return new TransportGpsFeature(name, <any>undefined, { urn })
+            case "sdwan:index/transportIpv4AclFeature:TransportIpv4AclFeature":
+                return new TransportIpv4AclFeature(name, <any>undefined, { urn })
+            case "sdwan:index/transportIpv6AclFeature:TransportIpv6AclFeature":
+                return new TransportIpv6AclFeature(name, <any>undefined, { urn })
             case "sdwan:index/transportIpv6TrackerFeature:TransportIpv6TrackerFeature":
                 return new TransportIpv6TrackerFeature(name, <any>undefined, { urn })
             case "sdwan:index/transportIpv6TrackerGroupFeature:TransportIpv6TrackerGroupFeature":
@@ -2082,6 +2440,8 @@ const _module = {
                 return new TransportRoutingOspfv3Ipv4Feature(name, <any>undefined, { urn })
             case "sdwan:index/transportRoutingOspfv3Ipv6Feature:TransportRoutingOspfv3Ipv6Feature":
                 return new TransportRoutingOspfv3Ipv6Feature(name, <any>undefined, { urn })
+            case "sdwan:index/transportT1E1ControllerFeature:TransportT1E1ControllerFeature":
+                return new TransportT1E1ControllerFeature(name, <any>undefined, { urn })
             case "sdwan:index/transportTrackerFeature:TransportTrackerFeature":
                 return new TransportTrackerFeature(name, <any>undefined, { urn })
             case "sdwan:index/transportTrackerGroupFeature:TransportTrackerGroupFeature":
@@ -2138,6 +2498,7 @@ pulumi.runtime.registerResourceModule("sdwan", "index/applicationAwareRoutingPol
 pulumi.runtime.registerResourceModule("sdwan", "index/applicationListPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/applicationPriorityFeatureProfile", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/applicationPriorityQosPolicy", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/applicationPriorityTrafficPolicyPolicy", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/asPathListPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/attachFeatureDeviceTemplate", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/blockUrlListPolicyObject", _module)
@@ -2183,9 +2544,11 @@ pulumi.runtime.registerResourceModule("sdwan", "index/customControlTopologyPolic
 pulumi.runtime.registerResourceModule("sdwan", "index/dataFqdnPrefixListPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/dataIpv4PrefixListPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/dataIpv6PrefixListPolicyObject", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/dnsSecurityFeatureProfile", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/dnsSecurityPolicyDefinition", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/domainListPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/eigrpFeatureTemplate", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/embeddedSecurityFeatureProfile", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/expandedCommunityListPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/extendedCommunityListPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/featureDeviceTemplate", _module)
@@ -2209,6 +2572,9 @@ pulumi.runtime.registerResourceModule("sdwan", "index/otherFeatureProfile", _mod
 pulumi.runtime.registerResourceModule("sdwan", "index/otherThousandeyesFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/otherUcseFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policerPolicyObject", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectAppProbeClass", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectApplicationList", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectAsPathList", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectClassMap", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectColorList", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectDataIpv4PrefixList", _module)
@@ -2220,7 +2586,22 @@ pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectIpv4PrefixList
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectIpv6PrefixList", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectMirror", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectPolicer", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectPreferredColorGroup", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityDataIpv4PrefixList", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityFqdnList", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityGeolocationList", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityIdentityList", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityIpsSignature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityLocalApplicationList", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityLocalDomainList", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityPortList", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityScalableGroupTagList", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityUrlAllowList", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityUrlBlockList", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSlaClassList", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectStandardCommunityList", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectTlocList", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectVpnGroup", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/portListPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/preferredColorGroupPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/protocolListPolicyObject", _module)
@@ -2232,21 +2613,27 @@ pulumi.runtime.registerResourceModule("sdwan", "index/ruleSetPolicyDefinition", 
 pulumi.runtime.registerResourceModule("sdwan", "index/securityAppHostingFeatureTemplate", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/securityPolicy", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceFeatureProfile", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/serviceIpv4AclFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/serviceIpv6AclFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceLanVpnFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceLanVpnInterfaceEthernetFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceLanVpnInterfaceGreFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceLanVpnInterfaceIpsecFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceLanVpnInterfaceSviFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/serviceMulticastFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceObjectTrackerFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceObjectTrackerGroupFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceRoutePolicyFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceRoutingBgpFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/serviceRoutingEigrpFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceRoutingOspfFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceRoutingOspfv3Ipv4Feature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceRoutingOspfv3Ipv6Feature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceSwitchportFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceTrackerFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceTrackerGroupFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/serviceWirelessLanFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/sigSecurityFeatureProfile", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/siteListPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/slaClassPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/standardCommunityListPolicyObject", _module)
@@ -2274,6 +2661,8 @@ pulumi.runtime.registerResourceModule("sdwan", "index/tlsSslProfilePolicyDefinit
 pulumi.runtime.registerResourceModule("sdwan", "index/trafficDataPolicyDefinition", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/transportFeatureProfile", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/transportGpsFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/transportIpv4AclFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/transportIpv6AclFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/transportIpv6TrackerFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/transportIpv6TrackerGroupFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/transportManagementVpnFeature", _module)
@@ -2283,6 +2672,7 @@ pulumi.runtime.registerResourceModule("sdwan", "index/transportRoutingBgpFeature
 pulumi.runtime.registerResourceModule("sdwan", "index/transportRoutingOspfFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/transportRoutingOspfv3Ipv4Feature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/transportRoutingOspfv3Ipv6Feature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/transportT1E1ControllerFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/transportTrackerFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/transportTrackerGroupFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/transportWanVpnFeature", _module)

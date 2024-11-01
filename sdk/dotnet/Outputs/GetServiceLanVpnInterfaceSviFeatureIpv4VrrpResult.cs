@@ -77,6 +77,10 @@ namespace Pulumi.Sdwan.Outputs
         /// Variable name
         /// </summary>
         public readonly string TrackOmpVariable;
+        /// <summary>
+        /// tracking object for VRRP configuration
+        /// </summary>
+        public readonly ImmutableArray<Outputs.GetServiceLanVpnInterfaceSviFeatureIpv4VrrpTrackingObjectResult> TrackingObjects;
 
         [OutputConstructor]
         private GetServiceLanVpnInterfaceSviFeatureIpv4VrrpResult(
@@ -110,7 +114,9 @@ namespace Pulumi.Sdwan.Outputs
 
             bool trackOmp,
 
-            string trackOmpVariable)
+            string trackOmpVariable,
+
+            ImmutableArray<Outputs.GetServiceLanVpnInterfaceSviFeatureIpv4VrrpTrackingObjectResult> trackingObjects)
         {
             Address = address;
             AddressVariable = addressVariable;
@@ -128,6 +134,7 @@ namespace Pulumi.Sdwan.Outputs
             TlocPrefixChangeValueVariable = tlocPrefixChangeValueVariable;
             TrackOmp = trackOmp;
             TrackOmpVariable = trackOmpVariable;
+            TrackingObjects = trackingObjects;
         }
     }
 }

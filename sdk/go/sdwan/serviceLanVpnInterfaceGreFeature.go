@@ -57,8 +57,10 @@ import (
 //
 // ## Import
 //
+// Expected import identifier with the format: "service_lan_vpn_interface_gre_feature_id,feature_profile_id,service_lan_vpn_feature_id"
+//
 // ```sh
-// $ pulumi import sdwan:index/serviceLanVpnInterfaceGreFeature:ServiceLanVpnInterfaceGreFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+// $ pulumi import sdwan:index/serviceLanVpnInterfaceGreFeature:ServiceLanVpnInterfaceGreFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037"
 // ```
 type ServiceLanVpnInterfaceGreFeature struct {
 	pulumi.CustomResourceState
@@ -80,14 +82,14 @@ type ServiceLanVpnInterfaceGreFeature struct {
 	// Variable name
 	InterfaceDescriptionVariable pulumi.StringPtrOutput `pulumi:"interfaceDescriptionVariable"`
 	// Interface name (1..255)
-	InterfaceName pulumi.StringOutput `pulumi:"interfaceName"`
+	InterfaceName pulumi.StringPtrOutput `pulumi:"interfaceName"`
 	// Variable name
 	InterfaceNameVariable pulumi.StringPtrOutput `pulumi:"interfaceNameVariable"`
 	// Interface MTU <576..9976>, in bytes - Range: `576`-`9976` - Default value: `1500`
 	IpMtu pulumi.IntPtrOutput `pulumi:"ipMtu"`
 	// Variable name
 	IpMtuVariable pulumi.StringPtrOutput `pulumi:"ipMtuVariable"`
-	Ipv4Address   pulumi.StringOutput    `pulumi:"ipv4Address"`
+	Ipv4Address   pulumi.StringPtrOutput `pulumi:"ipv4Address"`
 	// Variable name
 	Ipv4AddressVariable pulumi.StringPtrOutput `pulumi:"ipv4AddressVariable"`
 	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
@@ -95,7 +97,7 @@ type ServiceLanVpnInterfaceGreFeature struct {
 	//   `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
 	//   `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
 	//   `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
-	Ipv4SubnetMask pulumi.StringOutput `pulumi:"ipv4SubnetMask"`
+	Ipv4SubnetMask pulumi.StringPtrOutput `pulumi:"ipv4SubnetMask"`
 	// Variable name
 	Ipv4SubnetMaskVariable pulumi.StringPtrOutput `pulumi:"ipv4SubnetMaskVariable"`
 	// The name of the Feature
@@ -111,7 +113,7 @@ type ServiceLanVpnInterfaceGreFeature struct {
 	// Variable name
 	TcpMssVariable pulumi.StringPtrOutput `pulumi:"tcpMssVariable"`
 	// Tunnel destination IP Address
-	TunnelDestinationIpv4Address pulumi.StringOutput `pulumi:"tunnelDestinationIpv4Address"`
+	TunnelDestinationIpv4Address pulumi.StringPtrOutput `pulumi:"tunnelDestinationIpv4Address"`
 	// Variable name
 	TunnelDestinationIpv4AddressVariable pulumi.StringPtrOutput `pulumi:"tunnelDestinationIpv4AddressVariable"`
 	// <1..32 characters> Interface name, can't be Loopback interface
@@ -143,18 +145,6 @@ func NewServiceLanVpnInterfaceGreFeature(ctx *pulumi.Context,
 
 	if args.FeatureProfileId == nil {
 		return nil, errors.New("invalid value for required argument 'FeatureProfileId'")
-	}
-	if args.InterfaceName == nil {
-		return nil, errors.New("invalid value for required argument 'InterfaceName'")
-	}
-	if args.Ipv4Address == nil {
-		return nil, errors.New("invalid value for required argument 'Ipv4Address'")
-	}
-	if args.Ipv4SubnetMask == nil {
-		return nil, errors.New("invalid value for required argument 'Ipv4SubnetMask'")
-	}
-	if args.TunnelDestinationIpv4Address == nil {
-		return nil, errors.New("invalid value for required argument 'TunnelDestinationIpv4Address'")
 	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource ServiceLanVpnInterfaceGreFeature
@@ -344,14 +334,14 @@ type serviceLanVpnInterfaceGreFeatureArgs struct {
 	// Variable name
 	InterfaceDescriptionVariable *string `pulumi:"interfaceDescriptionVariable"`
 	// Interface name (1..255)
-	InterfaceName string `pulumi:"interfaceName"`
+	InterfaceName *string `pulumi:"interfaceName"`
 	// Variable name
 	InterfaceNameVariable *string `pulumi:"interfaceNameVariable"`
 	// Interface MTU <576..9976>, in bytes - Range: `576`-`9976` - Default value: `1500`
 	IpMtu *int `pulumi:"ipMtu"`
 	// Variable name
 	IpMtuVariable *string `pulumi:"ipMtuVariable"`
-	Ipv4Address   string  `pulumi:"ipv4Address"`
+	Ipv4Address   *string `pulumi:"ipv4Address"`
 	// Variable name
 	Ipv4AddressVariable *string `pulumi:"ipv4AddressVariable"`
 	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
@@ -359,7 +349,7 @@ type serviceLanVpnInterfaceGreFeatureArgs struct {
 	//   `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
 	//   `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
 	//   `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
-	Ipv4SubnetMask string `pulumi:"ipv4SubnetMask"`
+	Ipv4SubnetMask *string `pulumi:"ipv4SubnetMask"`
 	// Variable name
 	Ipv4SubnetMaskVariable *string `pulumi:"ipv4SubnetMaskVariable"`
 	// The name of the Feature
@@ -375,7 +365,7 @@ type serviceLanVpnInterfaceGreFeatureArgs struct {
 	// Variable name
 	TcpMssVariable *string `pulumi:"tcpMssVariable"`
 	// Tunnel destination IP Address
-	TunnelDestinationIpv4Address string `pulumi:"tunnelDestinationIpv4Address"`
+	TunnelDestinationIpv4Address *string `pulumi:"tunnelDestinationIpv4Address"`
 	// Variable name
 	TunnelDestinationIpv4AddressVariable *string `pulumi:"tunnelDestinationIpv4AddressVariable"`
 	// <1..32 characters> Interface name, can't be Loopback interface
@@ -415,14 +405,14 @@ type ServiceLanVpnInterfaceGreFeatureArgs struct {
 	// Variable name
 	InterfaceDescriptionVariable pulumi.StringPtrInput
 	// Interface name (1..255)
-	InterfaceName pulumi.StringInput
+	InterfaceName pulumi.StringPtrInput
 	// Variable name
 	InterfaceNameVariable pulumi.StringPtrInput
 	// Interface MTU <576..9976>, in bytes - Range: `576`-`9976` - Default value: `1500`
 	IpMtu pulumi.IntPtrInput
 	// Variable name
 	IpMtuVariable pulumi.StringPtrInput
-	Ipv4Address   pulumi.StringInput
+	Ipv4Address   pulumi.StringPtrInput
 	// Variable name
 	Ipv4AddressVariable pulumi.StringPtrInput
 	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
@@ -430,7 +420,7 @@ type ServiceLanVpnInterfaceGreFeatureArgs struct {
 	//   `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
 	//   `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
 	//   `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
-	Ipv4SubnetMask pulumi.StringInput
+	Ipv4SubnetMask pulumi.StringPtrInput
 	// Variable name
 	Ipv4SubnetMaskVariable pulumi.StringPtrInput
 	// The name of the Feature
@@ -446,7 +436,7 @@ type ServiceLanVpnInterfaceGreFeatureArgs struct {
 	// Variable name
 	TcpMssVariable pulumi.StringPtrInput
 	// Tunnel destination IP Address
-	TunnelDestinationIpv4Address pulumi.StringInput
+	TunnelDestinationIpv4Address pulumi.StringPtrInput
 	// Variable name
 	TunnelDestinationIpv4AddressVariable pulumi.StringPtrInput
 	// <1..32 characters> Interface name, can't be Loopback interface
@@ -599,8 +589,8 @@ func (o ServiceLanVpnInterfaceGreFeatureOutput) InterfaceDescriptionVariable() p
 }
 
 // Interface name (1..255)
-func (o ServiceLanVpnInterfaceGreFeatureOutput) InterfaceName() pulumi.StringOutput {
-	return o.ApplyT(func(v *ServiceLanVpnInterfaceGreFeature) pulumi.StringOutput { return v.InterfaceName }).(pulumi.StringOutput)
+func (o ServiceLanVpnInterfaceGreFeatureOutput) InterfaceName() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *ServiceLanVpnInterfaceGreFeature) pulumi.StringPtrOutput { return v.InterfaceName }).(pulumi.StringPtrOutput)
 }
 
 // Variable name
@@ -618,8 +608,8 @@ func (o ServiceLanVpnInterfaceGreFeatureOutput) IpMtuVariable() pulumi.StringPtr
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceGreFeature) pulumi.StringPtrOutput { return v.IpMtuVariable }).(pulumi.StringPtrOutput)
 }
 
-func (o ServiceLanVpnInterfaceGreFeatureOutput) Ipv4Address() pulumi.StringOutput {
-	return o.ApplyT(func(v *ServiceLanVpnInterfaceGreFeature) pulumi.StringOutput { return v.Ipv4Address }).(pulumi.StringOutput)
+func (o ServiceLanVpnInterfaceGreFeatureOutput) Ipv4Address() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *ServiceLanVpnInterfaceGreFeature) pulumi.StringPtrOutput { return v.Ipv4Address }).(pulumi.StringPtrOutput)
 }
 
 // Variable name
@@ -632,8 +622,8 @@ func (o ServiceLanVpnInterfaceGreFeatureOutput) Ipv4AddressVariable() pulumi.Str
 //     `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
 //     `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
 //     `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
-func (o ServiceLanVpnInterfaceGreFeatureOutput) Ipv4SubnetMask() pulumi.StringOutput {
-	return o.ApplyT(func(v *ServiceLanVpnInterfaceGreFeature) pulumi.StringOutput { return v.Ipv4SubnetMask }).(pulumi.StringOutput)
+func (o ServiceLanVpnInterfaceGreFeatureOutput) Ipv4SubnetMask() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *ServiceLanVpnInterfaceGreFeature) pulumi.StringPtrOutput { return v.Ipv4SubnetMask }).(pulumi.StringPtrOutput)
 }
 
 // Variable name
@@ -672,8 +662,10 @@ func (o ServiceLanVpnInterfaceGreFeatureOutput) TcpMssVariable() pulumi.StringPt
 }
 
 // Tunnel destination IP Address
-func (o ServiceLanVpnInterfaceGreFeatureOutput) TunnelDestinationIpv4Address() pulumi.StringOutput {
-	return o.ApplyT(func(v *ServiceLanVpnInterfaceGreFeature) pulumi.StringOutput { return v.TunnelDestinationIpv4Address }).(pulumi.StringOutput)
+func (o ServiceLanVpnInterfaceGreFeatureOutput) TunnelDestinationIpv4Address() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *ServiceLanVpnInterfaceGreFeature) pulumi.StringPtrOutput {
+		return v.TunnelDestinationIpv4Address
+	}).(pulumi.StringPtrOutput)
 }
 
 // Variable name

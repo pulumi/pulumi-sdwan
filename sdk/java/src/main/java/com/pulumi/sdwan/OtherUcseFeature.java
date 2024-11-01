@@ -76,8 +76,10 @@ import javax.annotation.Nullable;
  * 
  * ## Import
  * 
+ * Expected import identifier with the format: &#34;other_ucse_feature_id,feature_profile_id&#34;
+ * 
  * ```sh
- * $ pulumi import sdwan:index/otherUcseFeature:OtherUcseFeature example &#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;
+ * $ pulumi import sdwan:index/otherUcseFeature:OtherUcseFeature example &#34;f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac&#34;
  * ```
  * 
  */
@@ -172,14 +174,14 @@ public class OtherUcseFeature extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="defaultGateway", refs={String.class}, tree="[0]")
-    private Output<String> defaultGateway;
+    private Output</* @Nullable */ String> defaultGateway;
 
     /**
      * @return Assign default gateway
      * 
      */
-    public Output<String> defaultGateway() {
-        return this.defaultGateway;
+    public Output<Optional<String>> defaultGateway() {
+        return Codegen.optional(this.defaultGateway);
     }
     /**
      * Variable name
@@ -242,14 +244,14 @@ public class OtherUcseFeature extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="ipv4Address", refs={String.class}, tree="[0]")
-    private Output<String> ipv4Address;
+    private Output</* @Nullable */ String> ipv4Address;
 
     /**
      * @return Assign IPv4 address
      * 
      */
-    public Output<String> ipv4Address() {
-        return this.ipv4Address;
+    public Output<Optional<String>> ipv4Address() {
+        return Codegen.optional(this.ipv4Address);
     }
     /**
      * Variable name

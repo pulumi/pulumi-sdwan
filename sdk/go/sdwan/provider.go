@@ -18,11 +18,11 @@ import (
 type Provider struct {
 	pulumi.ProviderResourceState
 
-	// Password for the SD-WAN Manager account. This can also be set as the SDWAN_PASSWORD environment variable.
+	// Password for the SD-WAN Manager account. This can also be set as the `SDWAN_PASSWORD` environment variable.
 	Password pulumi.StringPtrOutput `pulumi:"password"`
-	// URL of the Cisco SD-WAN Manager device. This can also be set as the SDWAN_URL environment variable.
+	// URL of the Cisco SD-WAN Manager device. This can also be set as the `SDWAN_URL` environment variable.
 	Url pulumi.StringPtrOutput `pulumi:"url"`
-	// Username for the SD-WAN Manager account. This can also be set as the SDWAN_USERNAME environment variable.
+	// Username for the SD-WAN Manager account. This can also be set as the `SDWAN_USERNAME` environment variable.
 	Username pulumi.StringPtrOutput `pulumi:"username"`
 }
 
@@ -50,29 +50,29 @@ func NewProvider(ctx *pulumi.Context,
 }
 
 type providerArgs struct {
-	// Allow insecure HTTPS client. This can also be set as the SDWAN_INSECURE environment variable. Defaults to `true`.
+	// Allow insecure HTTPS client. This can also be set as the `SDWAN_INSECURE` environment variable. Defaults to `true`.
 	Insecure *bool `pulumi:"insecure"`
-	// Password for the SD-WAN Manager account. This can also be set as the SDWAN_PASSWORD environment variable.
+	// Password for the SD-WAN Manager account. This can also be set as the `SDWAN_PASSWORD` environment variable.
 	Password *string `pulumi:"password"`
-	// Number of retries for REST API calls. This can also be set as the SDWAN_RETRIES environment variable. Defaults to `3`.
+	// Number of retries for REST API calls. This can also be set as the `SDWAN_RETRIES` environment variable. Defaults to `3`.
 	Retries *int `pulumi:"retries"`
-	// URL of the Cisco SD-WAN Manager device. This can also be set as the SDWAN_URL environment variable.
+	// URL of the Cisco SD-WAN Manager device. This can also be set as the `SDWAN_URL` environment variable.
 	Url *string `pulumi:"url"`
-	// Username for the SD-WAN Manager account. This can also be set as the SDWAN_USERNAME environment variable.
+	// Username for the SD-WAN Manager account. This can also be set as the `SDWAN_USERNAME` environment variable.
 	Username *string `pulumi:"username"`
 }
 
 // The set of arguments for constructing a Provider resource.
 type ProviderArgs struct {
-	// Allow insecure HTTPS client. This can also be set as the SDWAN_INSECURE environment variable. Defaults to `true`.
+	// Allow insecure HTTPS client. This can also be set as the `SDWAN_INSECURE` environment variable. Defaults to `true`.
 	Insecure pulumi.BoolPtrInput
-	// Password for the SD-WAN Manager account. This can also be set as the SDWAN_PASSWORD environment variable.
+	// Password for the SD-WAN Manager account. This can also be set as the `SDWAN_PASSWORD` environment variable.
 	Password pulumi.StringPtrInput
-	// Number of retries for REST API calls. This can also be set as the SDWAN_RETRIES environment variable. Defaults to `3`.
+	// Number of retries for REST API calls. This can also be set as the `SDWAN_RETRIES` environment variable. Defaults to `3`.
 	Retries pulumi.IntPtrInput
-	// URL of the Cisco SD-WAN Manager device. This can also be set as the SDWAN_URL environment variable.
+	// URL of the Cisco SD-WAN Manager device. This can also be set as the `SDWAN_URL` environment variable.
 	Url pulumi.StringPtrInput
-	// Username for the SD-WAN Manager account. This can also be set as the SDWAN_USERNAME environment variable.
+	// Username for the SD-WAN Manager account. This can also be set as the `SDWAN_USERNAME` environment variable.
 	Username pulumi.StringPtrInput
 }
 
@@ -113,17 +113,17 @@ func (o ProviderOutput) ToProviderOutputWithContext(ctx context.Context) Provide
 	return o
 }
 
-// Password for the SD-WAN Manager account. This can also be set as the SDWAN_PASSWORD environment variable.
+// Password for the SD-WAN Manager account. This can also be set as the `SDWAN_PASSWORD` environment variable.
 func (o ProviderOutput) Password() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Provider) pulumi.StringPtrOutput { return v.Password }).(pulumi.StringPtrOutput)
 }
 
-// URL of the Cisco SD-WAN Manager device. This can also be set as the SDWAN_URL environment variable.
+// URL of the Cisco SD-WAN Manager device. This can also be set as the `SDWAN_URL` environment variable.
 func (o ProviderOutput) Url() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Provider) pulumi.StringPtrOutput { return v.Url }).(pulumi.StringPtrOutput)
 }
 
-// Username for the SD-WAN Manager account. This can also be set as the SDWAN_USERNAME environment variable.
+// Username for the SD-WAN Manager account. This can also be set as the `SDWAN_USERNAME` environment variable.
 func (o ProviderOutput) Username() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Provider) pulumi.StringPtrOutput { return v.Username }).(pulumi.StringPtrOutput)
 }

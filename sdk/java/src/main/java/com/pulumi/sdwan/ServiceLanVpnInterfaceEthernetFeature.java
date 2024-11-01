@@ -113,6 +113,7 @@ import javax.annotation.Nullable;
  *                 .secondary_addresses(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .tloc_prefix_change(true)
  *                 .tloc_pref_change_value(100)
+ *                 .tracking_objects(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .build())
  *             .arps(ServiceLanVpnInterfaceEthernetFeatureArpArgs.builder()
  *                 .ip_address("1.2.3.4")
@@ -147,8 +148,10 @@ import javax.annotation.Nullable;
  * 
  * ## Import
  * 
+ * Expected import identifier with the format: &#34;service_lan_vpn_interface_ethernet_feature_id,feature_profile_id,service_lan_vpn_feature_id&#34;
+ * 
  * ```sh
- * $ pulumi import sdwan:index/serviceLanVpnInterfaceEthernetFeature:ServiceLanVpnInterfaceEthernetFeature example &#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;
+ * $ pulumi import sdwan:index/serviceLanVpnInterfaceEthernetFeature:ServiceLanVpnInterfaceEthernetFeature example &#34;f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037&#34;
  * ```
  * 
  */

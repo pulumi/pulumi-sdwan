@@ -23,6 +23,13 @@ import * as utilities from "./utilities";
  *     featureProfiles: [{
  *         id: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
  *     }],
+ *     devices: [{
+ *         id: "C8K-40C0CCFD-9EA8-2B2E-E73B-32C5924EC79B",
+ *         variables: [{
+ *             name: "host_name",
+ *             value: "edge1",
+ *         }],
+ *     }],
  * });
  * ```
  *
@@ -65,9 +72,17 @@ export class ConfigurationGroup extends pulumi.CustomResource {
      */
     public readonly description!: pulumi.Output<string>;
     /**
+     * List of devices
+     */
+    public readonly devices!: pulumi.Output<outputs.ConfigurationGroupDevice[] | undefined>;
+    /**
      * List of feature profiles
      */
     public readonly featureProfiles!: pulumi.Output<outputs.ConfigurationGroupFeatureProfile[] | undefined>;
+    /**
+     * List of all associated feature versions
+     */
+    public readonly featureVersions!: pulumi.Output<string[] | undefined>;
     /**
      * The name of the configuration group
      */
@@ -99,7 +114,9 @@ export class ConfigurationGroup extends pulumi.CustomResource {
         if (opts.id) {
             const state = argsOrState as ConfigurationGroupState | undefined;
             resourceInputs["description"] = state ? state.description : undefined;
+            resourceInputs["devices"] = state ? state.devices : undefined;
             resourceInputs["featureProfiles"] = state ? state.featureProfiles : undefined;
+            resourceInputs["featureVersions"] = state ? state.featureVersions : undefined;
             resourceInputs["name"] = state ? state.name : undefined;
             resourceInputs["solution"] = state ? state.solution : undefined;
             resourceInputs["topologyDevices"] = state ? state.topologyDevices : undefined;
@@ -113,7 +130,9 @@ export class ConfigurationGroup extends pulumi.CustomResource {
                 throw new Error("Missing required property 'solution'");
             }
             resourceInputs["description"] = args ? args.description : undefined;
+            resourceInputs["devices"] = args ? args.devices : undefined;
             resourceInputs["featureProfiles"] = args ? args.featureProfiles : undefined;
+            resourceInputs["featureVersions"] = args ? args.featureVersions : undefined;
             resourceInputs["name"] = args ? args.name : undefined;
             resourceInputs["solution"] = args ? args.solution : undefined;
             resourceInputs["topologyDevices"] = args ? args.topologyDevices : undefined;
@@ -133,9 +152,17 @@ export interface ConfigurationGroupState {
      */
     description?: pulumi.Input<string>;
     /**
+     * List of devices
+     */
+    devices?: pulumi.Input<pulumi.Input<inputs.ConfigurationGroupDevice>[]>;
+    /**
      * List of feature profiles
      */
     featureProfiles?: pulumi.Input<pulumi.Input<inputs.ConfigurationGroupFeatureProfile>[]>;
+    /**
+     * List of all associated feature versions
+     */
+    featureVersions?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * The name of the configuration group
      */
@@ -163,9 +190,17 @@ export interface ConfigurationGroupArgs {
      */
     description: pulumi.Input<string>;
     /**
+     * List of devices
+     */
+    devices?: pulumi.Input<pulumi.Input<inputs.ConfigurationGroupDevice>[]>;
+    /**
      * List of feature profiles
      */
     featureProfiles?: pulumi.Input<pulumi.Input<inputs.ConfigurationGroupFeatureProfile>[]>;
+    /**
+     * List of all associated feature versions
+     */
+    featureVersions?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * The name of the configuration group
      */

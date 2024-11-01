@@ -47,6 +47,7 @@ class TransportManagementVpnInterfaceEthernetFeatureArgs:
                  ipv4_address_variable: Optional[pulumi.Input[str]] = None,
                  ipv4_auto_detect_bandwidth: Optional[pulumi.Input[bool]] = None,
                  ipv4_auto_detect_bandwidth_variable: Optional[pulumi.Input[str]] = None,
+                 ipv4_configuration_type: Optional[pulumi.Input[str]] = None,
                  ipv4_dhcp_distance: Optional[pulumi.Input[int]] = None,
                  ipv4_dhcp_distance_variable: Optional[pulumi.Input[str]] = None,
                  ipv4_dhcp_helper_variable: Optional[pulumi.Input[str]] = None,
@@ -58,6 +59,7 @@ class TransportManagementVpnInterfaceEthernetFeatureArgs:
                  ipv4_subnet_mask_variable: Optional[pulumi.Input[str]] = None,
                  ipv6_address: Optional[pulumi.Input[str]] = None,
                  ipv6_address_variable: Optional[pulumi.Input[str]] = None,
+                 ipv6_configuration_type: Optional[pulumi.Input[str]] = None,
                  load_interval: Optional[pulumi.Input[int]] = None,
                  load_interval_variable: Optional[pulumi.Input[str]] = None,
                  mac_address: Optional[pulumi.Input[str]] = None,
@@ -82,7 +84,7 @@ class TransportManagementVpnInterfaceEthernetFeatureArgs:
         :param pulumi.Input[str] description: The description of the Feature
         :param pulumi.Input[str] duplex: Duplex mode - Choices: `full`, `half`, `auto`
         :param pulumi.Input[str] duplex_variable: Variable name
-        :param pulumi.Input[bool] enable_dhcpv6: Enable DHCPv6
+        :param pulumi.Input[bool] enable_dhcpv6: Enable DHCPv6, Attribute conditional on `ipv6_configuration_type` being equal to `dynamic`
         :param pulumi.Input[str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[bool] icmp_redirect_disable: ICMP/ICMPv6 Redirect Disable - Default value: `true`
         :param pulumi.Input[str] icmp_redirect_disable_variable: Variable name
@@ -95,25 +97,29 @@ class TransportManagementVpnInterfaceEthernetFeatureArgs:
         :param pulumi.Input[int] ip_mtu: IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces
                <576..2000> in bytes - Range: `576`-`9216` - Default value: `1500`
         :param pulumi.Input[str] ip_mtu_variable: Variable name
-        :param pulumi.Input[str] ipv4_address: IP Address
+        :param pulumi.Input[str] ipv4_address: IP Address, Attribute conditional on `ipv4_configuration_type` being equal to `static`
         :param pulumi.Input[str] ipv4_address_variable: Variable name
         :param pulumi.Input[bool] ipv4_auto_detect_bandwidth: Interface auto detect bandwidth - Default value: `false`
         :param pulumi.Input[str] ipv4_auto_detect_bandwidth_variable: Variable name
-        :param pulumi.Input[int] ipv4_dhcp_distance: DHCP Distance - Range: `1`-`65536`
+        :param pulumi.Input[str] ipv4_configuration_type: IPv4 Configuration Type - Choices: `dynamic`, `static` - Default value: `dynamic`
+        :param pulumi.Input[int] ipv4_dhcp_distance: DHCP Distance, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic` - Range: `1`-`65536` -
+               Default value: `1`
         :param pulumi.Input[str] ipv4_dhcp_distance_variable: Variable name
         :param pulumi.Input[str] ipv4_dhcp_helper_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[str]]] ipv4_dhcp_helpers: List of DHCP IPv4 helper addresses (min 1, max 8)
         :param pulumi.Input[str] ipv4_iperf_server: Iperf server for auto bandwidth detect
         :param pulumi.Input[str] ipv4_iperf_server_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input['TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs']]] ipv4_secondary_addresses: Secondary IpV4 Addresses
-        :param pulumi.Input[str] ipv4_subnet_mask: Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-               `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-               `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-               `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-               `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[Sequence[pulumi.Input['TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs']]] ipv4_secondary_addresses: Secondary IpV4 Addresses, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+        :param pulumi.Input[str] ipv4_subnet_mask: Subnet Mask, Attribute conditional on `ipv4_configuration_type` being equal to `static` - Choices: `255.255.255.255`,
+               `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`,
+               `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`,
+               `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`,
+               `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`,
+               `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[str] ipv4_subnet_mask_variable: Variable name
-        :param pulumi.Input[str] ipv6_address: IPv6 Address Secondary
+        :param pulumi.Input[str] ipv6_address: IPv6 Address Secondary, Attribute conditional on `ipv6_configuration_type` being equal to `static`
         :param pulumi.Input[str] ipv6_address_variable: Variable name
+        :param pulumi.Input[str] ipv6_configuration_type: IPv6 Configuration Type - Choices: `dynamic`, `static`, `none` - Default value: `none`
         :param pulumi.Input[int] load_interval: Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
         :param pulumi.Input[str] load_interval_variable: Variable name
         :param pulumi.Input[str] mac_address: MAC Address
@@ -181,6 +187,8 @@ class TransportManagementVpnInterfaceEthernetFeatureArgs:
             pulumi.set(__self__, "ipv4_auto_detect_bandwidth", ipv4_auto_detect_bandwidth)
         if ipv4_auto_detect_bandwidth_variable is not None:
             pulumi.set(__self__, "ipv4_auto_detect_bandwidth_variable", ipv4_auto_detect_bandwidth_variable)
+        if ipv4_configuration_type is not None:
+            pulumi.set(__self__, "ipv4_configuration_type", ipv4_configuration_type)
         if ipv4_dhcp_distance is not None:
             pulumi.set(__self__, "ipv4_dhcp_distance", ipv4_dhcp_distance)
         if ipv4_dhcp_distance_variable is not None:
@@ -203,6 +211,8 @@ class TransportManagementVpnInterfaceEthernetFeatureArgs:
             pulumi.set(__self__, "ipv6_address", ipv6_address)
         if ipv6_address_variable is not None:
             pulumi.set(__self__, "ipv6_address_variable", ipv6_address_variable)
+        if ipv6_configuration_type is not None:
+            pulumi.set(__self__, "ipv6_configuration_type", ipv6_configuration_type)
         if load_interval is not None:
             pulumi.set(__self__, "load_interval", load_interval)
         if load_interval_variable is not None:
@@ -332,7 +342,7 @@ class TransportManagementVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="enableDhcpv6")
     def enable_dhcpv6(self) -> Optional[pulumi.Input[bool]]:
         """
-        Enable DHCPv6
+        Enable DHCPv6, Attribute conditional on `ipv6_configuration_type` being equal to `dynamic`
         """
         return pulumi.get(self, "enable_dhcpv6")
 
@@ -495,7 +505,7 @@ class TransportManagementVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="ipv4Address")
     def ipv4_address(self) -> Optional[pulumi.Input[str]]:
         """
-        IP Address
+        IP Address, Attribute conditional on `ipv4_configuration_type` being equal to `static`
         """
         return pulumi.get(self, "ipv4_address")
 
@@ -540,10 +550,23 @@ class TransportManagementVpnInterfaceEthernetFeatureArgs:
         pulumi.set(self, "ipv4_auto_detect_bandwidth_variable", value)
 
     @property
+    @pulumi.getter(name="ipv4ConfigurationType")
+    def ipv4_configuration_type(self) -> Optional[pulumi.Input[str]]:
+        """
+        IPv4 Configuration Type - Choices: `dynamic`, `static` - Default value: `dynamic`
+        """
+        return pulumi.get(self, "ipv4_configuration_type")
+
+    @ipv4_configuration_type.setter
+    def ipv4_configuration_type(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "ipv4_configuration_type", value)
+
+    @property
     @pulumi.getter(name="ipv4DhcpDistance")
     def ipv4_dhcp_distance(self) -> Optional[pulumi.Input[int]]:
         """
-        DHCP Distance - Range: `1`-`65536`
+        DHCP Distance, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic` - Range: `1`-`65536` -
+        Default value: `1`
         """
         return pulumi.get(self, "ipv4_dhcp_distance")
 
@@ -615,7 +638,7 @@ class TransportManagementVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="ipv4SecondaryAddresses")
     def ipv4_secondary_addresses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs']]]]:
         """
-        Secondary IpV4 Addresses
+        Secondary IpV4 Addresses, Attribute conditional on `ipv4_configuration_type` being equal to `static`
         """
         return pulumi.get(self, "ipv4_secondary_addresses")
 
@@ -627,11 +650,12 @@ class TransportManagementVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="ipv4SubnetMask")
     def ipv4_subnet_mask(self) -> Optional[pulumi.Input[str]]:
         """
-        Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        Subnet Mask, Attribute conditional on `ipv4_configuration_type` being equal to `static` - Choices: `255.255.255.255`,
+        `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`,
+        `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`,
+        `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`,
+        `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`,
+        `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "ipv4_subnet_mask")
 
@@ -655,7 +679,7 @@ class TransportManagementVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="ipv6Address")
     def ipv6_address(self) -> Optional[pulumi.Input[str]]:
         """
-        IPv6 Address Secondary
+        IPv6 Address Secondary, Attribute conditional on `ipv6_configuration_type` being equal to `static`
         """
         return pulumi.get(self, "ipv6_address")
 
@@ -674,6 +698,18 @@ class TransportManagementVpnInterfaceEthernetFeatureArgs:
     @ipv6_address_variable.setter
     def ipv6_address_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "ipv6_address_variable", value)
+
+    @property
+    @pulumi.getter(name="ipv6ConfigurationType")
+    def ipv6_configuration_type(self) -> Optional[pulumi.Input[str]]:
+        """
+        IPv6 Configuration Type - Choices: `dynamic`, `static`, `none` - Default value: `none`
+        """
+        return pulumi.get(self, "ipv6_configuration_type")
+
+    @ipv6_configuration_type.setter
+    def ipv6_configuration_type(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "ipv6_configuration_type", value)
 
     @property
     @pulumi.getter(name="loadInterval")
@@ -873,6 +909,7 @@ class _TransportManagementVpnInterfaceEthernetFeatureState:
                  ipv4_address_variable: Optional[pulumi.Input[str]] = None,
                  ipv4_auto_detect_bandwidth: Optional[pulumi.Input[bool]] = None,
                  ipv4_auto_detect_bandwidth_variable: Optional[pulumi.Input[str]] = None,
+                 ipv4_configuration_type: Optional[pulumi.Input[str]] = None,
                  ipv4_dhcp_distance: Optional[pulumi.Input[int]] = None,
                  ipv4_dhcp_distance_variable: Optional[pulumi.Input[str]] = None,
                  ipv4_dhcp_helper_variable: Optional[pulumi.Input[str]] = None,
@@ -884,6 +921,7 @@ class _TransportManagementVpnInterfaceEthernetFeatureState:
                  ipv4_subnet_mask_variable: Optional[pulumi.Input[str]] = None,
                  ipv6_address: Optional[pulumi.Input[str]] = None,
                  ipv6_address_variable: Optional[pulumi.Input[str]] = None,
+                 ipv6_configuration_type: Optional[pulumi.Input[str]] = None,
                  load_interval: Optional[pulumi.Input[int]] = None,
                  load_interval_variable: Optional[pulumi.Input[str]] = None,
                  mac_address: Optional[pulumi.Input[str]] = None,
@@ -909,7 +947,7 @@ class _TransportManagementVpnInterfaceEthernetFeatureState:
         :param pulumi.Input[str] description: The description of the Feature
         :param pulumi.Input[str] duplex: Duplex mode - Choices: `full`, `half`, `auto`
         :param pulumi.Input[str] duplex_variable: Variable name
-        :param pulumi.Input[bool] enable_dhcpv6: Enable DHCPv6
+        :param pulumi.Input[bool] enable_dhcpv6: Enable DHCPv6, Attribute conditional on `ipv6_configuration_type` being equal to `dynamic`
         :param pulumi.Input[str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[bool] icmp_redirect_disable: ICMP/ICMPv6 Redirect Disable - Default value: `true`
         :param pulumi.Input[str] icmp_redirect_disable_variable: Variable name
@@ -922,25 +960,29 @@ class _TransportManagementVpnInterfaceEthernetFeatureState:
         :param pulumi.Input[int] ip_mtu: IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces
                <576..2000> in bytes - Range: `576`-`9216` - Default value: `1500`
         :param pulumi.Input[str] ip_mtu_variable: Variable name
-        :param pulumi.Input[str] ipv4_address: IP Address
+        :param pulumi.Input[str] ipv4_address: IP Address, Attribute conditional on `ipv4_configuration_type` being equal to `static`
         :param pulumi.Input[str] ipv4_address_variable: Variable name
         :param pulumi.Input[bool] ipv4_auto_detect_bandwidth: Interface auto detect bandwidth - Default value: `false`
         :param pulumi.Input[str] ipv4_auto_detect_bandwidth_variable: Variable name
-        :param pulumi.Input[int] ipv4_dhcp_distance: DHCP Distance - Range: `1`-`65536`
+        :param pulumi.Input[str] ipv4_configuration_type: IPv4 Configuration Type - Choices: `dynamic`, `static` - Default value: `dynamic`
+        :param pulumi.Input[int] ipv4_dhcp_distance: DHCP Distance, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic` - Range: `1`-`65536` -
+               Default value: `1`
         :param pulumi.Input[str] ipv4_dhcp_distance_variable: Variable name
         :param pulumi.Input[str] ipv4_dhcp_helper_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[str]]] ipv4_dhcp_helpers: List of DHCP IPv4 helper addresses (min 1, max 8)
         :param pulumi.Input[str] ipv4_iperf_server: Iperf server for auto bandwidth detect
         :param pulumi.Input[str] ipv4_iperf_server_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input['TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs']]] ipv4_secondary_addresses: Secondary IpV4 Addresses
-        :param pulumi.Input[str] ipv4_subnet_mask: Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-               `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-               `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-               `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-               `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[Sequence[pulumi.Input['TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs']]] ipv4_secondary_addresses: Secondary IpV4 Addresses, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+        :param pulumi.Input[str] ipv4_subnet_mask: Subnet Mask, Attribute conditional on `ipv4_configuration_type` being equal to `static` - Choices: `255.255.255.255`,
+               `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`,
+               `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`,
+               `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`,
+               `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`,
+               `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[str] ipv4_subnet_mask_variable: Variable name
-        :param pulumi.Input[str] ipv6_address: IPv6 Address Secondary
+        :param pulumi.Input[str] ipv6_address: IPv6 Address Secondary, Attribute conditional on `ipv6_configuration_type` being equal to `static`
         :param pulumi.Input[str] ipv6_address_variable: Variable name
+        :param pulumi.Input[str] ipv6_configuration_type: IPv6 Configuration Type - Choices: `dynamic`, `static`, `none` - Default value: `none`
         :param pulumi.Input[int] load_interval: Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
         :param pulumi.Input[str] load_interval_variable: Variable name
         :param pulumi.Input[str] mac_address: MAC Address
@@ -1009,6 +1051,8 @@ class _TransportManagementVpnInterfaceEthernetFeatureState:
             pulumi.set(__self__, "ipv4_auto_detect_bandwidth", ipv4_auto_detect_bandwidth)
         if ipv4_auto_detect_bandwidth_variable is not None:
             pulumi.set(__self__, "ipv4_auto_detect_bandwidth_variable", ipv4_auto_detect_bandwidth_variable)
+        if ipv4_configuration_type is not None:
+            pulumi.set(__self__, "ipv4_configuration_type", ipv4_configuration_type)
         if ipv4_dhcp_distance is not None:
             pulumi.set(__self__, "ipv4_dhcp_distance", ipv4_dhcp_distance)
         if ipv4_dhcp_distance_variable is not None:
@@ -1031,6 +1075,8 @@ class _TransportManagementVpnInterfaceEthernetFeatureState:
             pulumi.set(__self__, "ipv6_address", ipv6_address)
         if ipv6_address_variable is not None:
             pulumi.set(__self__, "ipv6_address_variable", ipv6_address_variable)
+        if ipv6_configuration_type is not None:
+            pulumi.set(__self__, "ipv6_configuration_type", ipv6_configuration_type)
         if load_interval is not None:
             pulumi.set(__self__, "load_interval", load_interval)
         if load_interval_variable is not None:
@@ -1162,7 +1208,7 @@ class _TransportManagementVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="enableDhcpv6")
     def enable_dhcpv6(self) -> Optional[pulumi.Input[bool]]:
         """
-        Enable DHCPv6
+        Enable DHCPv6, Attribute conditional on `ipv6_configuration_type` being equal to `dynamic`
         """
         return pulumi.get(self, "enable_dhcpv6")
 
@@ -1325,7 +1371,7 @@ class _TransportManagementVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="ipv4Address")
     def ipv4_address(self) -> Optional[pulumi.Input[str]]:
         """
-        IP Address
+        IP Address, Attribute conditional on `ipv4_configuration_type` being equal to `static`
         """
         return pulumi.get(self, "ipv4_address")
 
@@ -1370,10 +1416,23 @@ class _TransportManagementVpnInterfaceEthernetFeatureState:
         pulumi.set(self, "ipv4_auto_detect_bandwidth_variable", value)
 
     @property
+    @pulumi.getter(name="ipv4ConfigurationType")
+    def ipv4_configuration_type(self) -> Optional[pulumi.Input[str]]:
+        """
+        IPv4 Configuration Type - Choices: `dynamic`, `static` - Default value: `dynamic`
+        """
+        return pulumi.get(self, "ipv4_configuration_type")
+
+    @ipv4_configuration_type.setter
+    def ipv4_configuration_type(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "ipv4_configuration_type", value)
+
+    @property
     @pulumi.getter(name="ipv4DhcpDistance")
     def ipv4_dhcp_distance(self) -> Optional[pulumi.Input[int]]:
         """
-        DHCP Distance - Range: `1`-`65536`
+        DHCP Distance, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic` - Range: `1`-`65536` -
+        Default value: `1`
         """
         return pulumi.get(self, "ipv4_dhcp_distance")
 
@@ -1445,7 +1504,7 @@ class _TransportManagementVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="ipv4SecondaryAddresses")
     def ipv4_secondary_addresses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs']]]]:
         """
-        Secondary IpV4 Addresses
+        Secondary IpV4 Addresses, Attribute conditional on `ipv4_configuration_type` being equal to `static`
         """
         return pulumi.get(self, "ipv4_secondary_addresses")
 
@@ -1457,11 +1516,12 @@ class _TransportManagementVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="ipv4SubnetMask")
     def ipv4_subnet_mask(self) -> Optional[pulumi.Input[str]]:
         """
-        Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        Subnet Mask, Attribute conditional on `ipv4_configuration_type` being equal to `static` - Choices: `255.255.255.255`,
+        `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`,
+        `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`,
+        `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`,
+        `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`,
+        `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "ipv4_subnet_mask")
 
@@ -1485,7 +1545,7 @@ class _TransportManagementVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="ipv6Address")
     def ipv6_address(self) -> Optional[pulumi.Input[str]]:
         """
-        IPv6 Address Secondary
+        IPv6 Address Secondary, Attribute conditional on `ipv6_configuration_type` being equal to `static`
         """
         return pulumi.get(self, "ipv6_address")
 
@@ -1504,6 +1564,18 @@ class _TransportManagementVpnInterfaceEthernetFeatureState:
     @ipv6_address_variable.setter
     def ipv6_address_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "ipv6_address_variable", value)
+
+    @property
+    @pulumi.getter(name="ipv6ConfigurationType")
+    def ipv6_configuration_type(self) -> Optional[pulumi.Input[str]]:
+        """
+        IPv6 Configuration Type - Choices: `dynamic`, `static`, `none` - Default value: `none`
+        """
+        return pulumi.get(self, "ipv6_configuration_type")
+
+    @ipv6_configuration_type.setter
+    def ipv6_configuration_type(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "ipv6_configuration_type", value)
 
     @property
     @pulumi.getter(name="loadInterval")
@@ -1717,6 +1789,7 @@ class TransportManagementVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  ipv4_address_variable: Optional[pulumi.Input[str]] = None,
                  ipv4_auto_detect_bandwidth: Optional[pulumi.Input[bool]] = None,
                  ipv4_auto_detect_bandwidth_variable: Optional[pulumi.Input[str]] = None,
+                 ipv4_configuration_type: Optional[pulumi.Input[str]] = None,
                  ipv4_dhcp_distance: Optional[pulumi.Input[int]] = None,
                  ipv4_dhcp_distance_variable: Optional[pulumi.Input[str]] = None,
                  ipv4_dhcp_helper_variable: Optional[pulumi.Input[str]] = None,
@@ -1728,6 +1801,7 @@ class TransportManagementVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  ipv4_subnet_mask_variable: Optional[pulumi.Input[str]] = None,
                  ipv6_address: Optional[pulumi.Input[str]] = None,
                  ipv6_address_variable: Optional[pulumi.Input[str]] = None,
+                 ipv6_configuration_type: Optional[pulumi.Input[str]] = None,
                  load_interval: Optional[pulumi.Input[int]] = None,
                  load_interval_variable: Optional[pulumi.Input[str]] = None,
                  mac_address: Optional[pulumi.Input[str]] = None,
@@ -1749,8 +1823,10 @@ class TransportManagementVpnInterfaceEthernetFeature(pulumi.CustomResource):
 
         ## Import
 
+        Expected import identifier with the format: "transport_management_vpn_interface_ethernet_feature_id,feature_profile_id,transport_management_vpn_feature_id"
+
         ```sh
-        $ pulumi import sdwan:index/transportManagementVpnInterfaceEthernetFeature:TransportManagementVpnInterfaceEthernetFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+        $ pulumi import sdwan:index/transportManagementVpnInterfaceEthernetFeature:TransportManagementVpnInterfaceEthernetFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037"
         ```
 
         :param str resource_name: The name of the resource.
@@ -1763,7 +1839,7 @@ class TransportManagementVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[str] description: The description of the Feature
         :param pulumi.Input[str] duplex: Duplex mode - Choices: `full`, `half`, `auto`
         :param pulumi.Input[str] duplex_variable: Variable name
-        :param pulumi.Input[bool] enable_dhcpv6: Enable DHCPv6
+        :param pulumi.Input[bool] enable_dhcpv6: Enable DHCPv6, Attribute conditional on `ipv6_configuration_type` being equal to `dynamic`
         :param pulumi.Input[str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[bool] icmp_redirect_disable: ICMP/ICMPv6 Redirect Disable - Default value: `true`
         :param pulumi.Input[str] icmp_redirect_disable_variable: Variable name
@@ -1776,25 +1852,29 @@ class TransportManagementVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[int] ip_mtu: IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces
                <576..2000> in bytes - Range: `576`-`9216` - Default value: `1500`
         :param pulumi.Input[str] ip_mtu_variable: Variable name
-        :param pulumi.Input[str] ipv4_address: IP Address
+        :param pulumi.Input[str] ipv4_address: IP Address, Attribute conditional on `ipv4_configuration_type` being equal to `static`
         :param pulumi.Input[str] ipv4_address_variable: Variable name
         :param pulumi.Input[bool] ipv4_auto_detect_bandwidth: Interface auto detect bandwidth - Default value: `false`
         :param pulumi.Input[str] ipv4_auto_detect_bandwidth_variable: Variable name
-        :param pulumi.Input[int] ipv4_dhcp_distance: DHCP Distance - Range: `1`-`65536`
+        :param pulumi.Input[str] ipv4_configuration_type: IPv4 Configuration Type - Choices: `dynamic`, `static` - Default value: `dynamic`
+        :param pulumi.Input[int] ipv4_dhcp_distance: DHCP Distance, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic` - Range: `1`-`65536` -
+               Default value: `1`
         :param pulumi.Input[str] ipv4_dhcp_distance_variable: Variable name
         :param pulumi.Input[str] ipv4_dhcp_helper_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[str]]] ipv4_dhcp_helpers: List of DHCP IPv4 helper addresses (min 1, max 8)
         :param pulumi.Input[str] ipv4_iperf_server: Iperf server for auto bandwidth detect
         :param pulumi.Input[str] ipv4_iperf_server_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs', 'TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgsDict']]]] ipv4_secondary_addresses: Secondary IpV4 Addresses
-        :param pulumi.Input[str] ipv4_subnet_mask: Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-               `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-               `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-               `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-               `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs', 'TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgsDict']]]] ipv4_secondary_addresses: Secondary IpV4 Addresses, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+        :param pulumi.Input[str] ipv4_subnet_mask: Subnet Mask, Attribute conditional on `ipv4_configuration_type` being equal to `static` - Choices: `255.255.255.255`,
+               `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`,
+               `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`,
+               `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`,
+               `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`,
+               `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[str] ipv4_subnet_mask_variable: Variable name
-        :param pulumi.Input[str] ipv6_address: IPv6 Address Secondary
+        :param pulumi.Input[str] ipv6_address: IPv6 Address Secondary, Attribute conditional on `ipv6_configuration_type` being equal to `static`
         :param pulumi.Input[str] ipv6_address_variable: Variable name
+        :param pulumi.Input[str] ipv6_configuration_type: IPv6 Configuration Type - Choices: `dynamic`, `static`, `none` - Default value: `none`
         :param pulumi.Input[int] load_interval: Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
         :param pulumi.Input[str] load_interval_variable: Variable name
         :param pulumi.Input[str] mac_address: MAC Address
@@ -1822,8 +1902,10 @@ class TransportManagementVpnInterfaceEthernetFeature(pulumi.CustomResource):
 
         ## Import
 
+        Expected import identifier with the format: "transport_management_vpn_interface_ethernet_feature_id,feature_profile_id,transport_management_vpn_feature_id"
+
         ```sh
-        $ pulumi import sdwan:index/transportManagementVpnInterfaceEthernetFeature:TransportManagementVpnInterfaceEthernetFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+        $ pulumi import sdwan:index/transportManagementVpnInterfaceEthernetFeature:TransportManagementVpnInterfaceEthernetFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037"
         ```
 
         :param str resource_name: The name of the resource.
@@ -1867,6 +1949,7 @@ class TransportManagementVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  ipv4_address_variable: Optional[pulumi.Input[str]] = None,
                  ipv4_auto_detect_bandwidth: Optional[pulumi.Input[bool]] = None,
                  ipv4_auto_detect_bandwidth_variable: Optional[pulumi.Input[str]] = None,
+                 ipv4_configuration_type: Optional[pulumi.Input[str]] = None,
                  ipv4_dhcp_distance: Optional[pulumi.Input[int]] = None,
                  ipv4_dhcp_distance_variable: Optional[pulumi.Input[str]] = None,
                  ipv4_dhcp_helper_variable: Optional[pulumi.Input[str]] = None,
@@ -1878,6 +1961,7 @@ class TransportManagementVpnInterfaceEthernetFeature(pulumi.CustomResource):
                  ipv4_subnet_mask_variable: Optional[pulumi.Input[str]] = None,
                  ipv6_address: Optional[pulumi.Input[str]] = None,
                  ipv6_address_variable: Optional[pulumi.Input[str]] = None,
+                 ipv6_configuration_type: Optional[pulumi.Input[str]] = None,
                  load_interval: Optional[pulumi.Input[int]] = None,
                  load_interval_variable: Optional[pulumi.Input[str]] = None,
                  mac_address: Optional[pulumi.Input[str]] = None,
@@ -1927,6 +2011,7 @@ class TransportManagementVpnInterfaceEthernetFeature(pulumi.CustomResource):
             __props__.__dict__["ipv4_address_variable"] = ipv4_address_variable
             __props__.__dict__["ipv4_auto_detect_bandwidth"] = ipv4_auto_detect_bandwidth
             __props__.__dict__["ipv4_auto_detect_bandwidth_variable"] = ipv4_auto_detect_bandwidth_variable
+            __props__.__dict__["ipv4_configuration_type"] = ipv4_configuration_type
             __props__.__dict__["ipv4_dhcp_distance"] = ipv4_dhcp_distance
             __props__.__dict__["ipv4_dhcp_distance_variable"] = ipv4_dhcp_distance_variable
             __props__.__dict__["ipv4_dhcp_helper_variable"] = ipv4_dhcp_helper_variable
@@ -1938,6 +2023,7 @@ class TransportManagementVpnInterfaceEthernetFeature(pulumi.CustomResource):
             __props__.__dict__["ipv4_subnet_mask_variable"] = ipv4_subnet_mask_variable
             __props__.__dict__["ipv6_address"] = ipv6_address
             __props__.__dict__["ipv6_address_variable"] = ipv6_address_variable
+            __props__.__dict__["ipv6_configuration_type"] = ipv6_configuration_type
             __props__.__dict__["load_interval"] = load_interval
             __props__.__dict__["load_interval_variable"] = load_interval_variable
             __props__.__dict__["mac_address"] = mac_address
@@ -1989,6 +2075,7 @@ class TransportManagementVpnInterfaceEthernetFeature(pulumi.CustomResource):
             ipv4_address_variable: Optional[pulumi.Input[str]] = None,
             ipv4_auto_detect_bandwidth: Optional[pulumi.Input[bool]] = None,
             ipv4_auto_detect_bandwidth_variable: Optional[pulumi.Input[str]] = None,
+            ipv4_configuration_type: Optional[pulumi.Input[str]] = None,
             ipv4_dhcp_distance: Optional[pulumi.Input[int]] = None,
             ipv4_dhcp_distance_variable: Optional[pulumi.Input[str]] = None,
             ipv4_dhcp_helper_variable: Optional[pulumi.Input[str]] = None,
@@ -2000,6 +2087,7 @@ class TransportManagementVpnInterfaceEthernetFeature(pulumi.CustomResource):
             ipv4_subnet_mask_variable: Optional[pulumi.Input[str]] = None,
             ipv6_address: Optional[pulumi.Input[str]] = None,
             ipv6_address_variable: Optional[pulumi.Input[str]] = None,
+            ipv6_configuration_type: Optional[pulumi.Input[str]] = None,
             load_interval: Optional[pulumi.Input[int]] = None,
             load_interval_variable: Optional[pulumi.Input[str]] = None,
             mac_address: Optional[pulumi.Input[str]] = None,
@@ -2030,7 +2118,7 @@ class TransportManagementVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[str] description: The description of the Feature
         :param pulumi.Input[str] duplex: Duplex mode - Choices: `full`, `half`, `auto`
         :param pulumi.Input[str] duplex_variable: Variable name
-        :param pulumi.Input[bool] enable_dhcpv6: Enable DHCPv6
+        :param pulumi.Input[bool] enable_dhcpv6: Enable DHCPv6, Attribute conditional on `ipv6_configuration_type` being equal to `dynamic`
         :param pulumi.Input[str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[bool] icmp_redirect_disable: ICMP/ICMPv6 Redirect Disable - Default value: `true`
         :param pulumi.Input[str] icmp_redirect_disable_variable: Variable name
@@ -2043,25 +2131,29 @@ class TransportManagementVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[int] ip_mtu: IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces
                <576..2000> in bytes - Range: `576`-`9216` - Default value: `1500`
         :param pulumi.Input[str] ip_mtu_variable: Variable name
-        :param pulumi.Input[str] ipv4_address: IP Address
+        :param pulumi.Input[str] ipv4_address: IP Address, Attribute conditional on `ipv4_configuration_type` being equal to `static`
         :param pulumi.Input[str] ipv4_address_variable: Variable name
         :param pulumi.Input[bool] ipv4_auto_detect_bandwidth: Interface auto detect bandwidth - Default value: `false`
         :param pulumi.Input[str] ipv4_auto_detect_bandwidth_variable: Variable name
-        :param pulumi.Input[int] ipv4_dhcp_distance: DHCP Distance - Range: `1`-`65536`
+        :param pulumi.Input[str] ipv4_configuration_type: IPv4 Configuration Type - Choices: `dynamic`, `static` - Default value: `dynamic`
+        :param pulumi.Input[int] ipv4_dhcp_distance: DHCP Distance, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic` - Range: `1`-`65536` -
+               Default value: `1`
         :param pulumi.Input[str] ipv4_dhcp_distance_variable: Variable name
         :param pulumi.Input[str] ipv4_dhcp_helper_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[str]]] ipv4_dhcp_helpers: List of DHCP IPv4 helper addresses (min 1, max 8)
         :param pulumi.Input[str] ipv4_iperf_server: Iperf server for auto bandwidth detect
         :param pulumi.Input[str] ipv4_iperf_server_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs', 'TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgsDict']]]] ipv4_secondary_addresses: Secondary IpV4 Addresses
-        :param pulumi.Input[str] ipv4_subnet_mask: Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-               `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-               `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-               `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-               `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs', 'TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgsDict']]]] ipv4_secondary_addresses: Secondary IpV4 Addresses, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+        :param pulumi.Input[str] ipv4_subnet_mask: Subnet Mask, Attribute conditional on `ipv4_configuration_type` being equal to `static` - Choices: `255.255.255.255`,
+               `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`,
+               `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`,
+               `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`,
+               `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`,
+               `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[str] ipv4_subnet_mask_variable: Variable name
-        :param pulumi.Input[str] ipv6_address: IPv6 Address Secondary
+        :param pulumi.Input[str] ipv6_address: IPv6 Address Secondary, Attribute conditional on `ipv6_configuration_type` being equal to `static`
         :param pulumi.Input[str] ipv6_address_variable: Variable name
+        :param pulumi.Input[str] ipv6_configuration_type: IPv6 Configuration Type - Choices: `dynamic`, `static`, `none` - Default value: `none`
         :param pulumi.Input[int] load_interval: Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
         :param pulumi.Input[str] load_interval_variable: Variable name
         :param pulumi.Input[str] mac_address: MAC Address
@@ -2108,6 +2200,7 @@ class TransportManagementVpnInterfaceEthernetFeature(pulumi.CustomResource):
         __props__.__dict__["ipv4_address_variable"] = ipv4_address_variable
         __props__.__dict__["ipv4_auto_detect_bandwidth"] = ipv4_auto_detect_bandwidth
         __props__.__dict__["ipv4_auto_detect_bandwidth_variable"] = ipv4_auto_detect_bandwidth_variable
+        __props__.__dict__["ipv4_configuration_type"] = ipv4_configuration_type
         __props__.__dict__["ipv4_dhcp_distance"] = ipv4_dhcp_distance
         __props__.__dict__["ipv4_dhcp_distance_variable"] = ipv4_dhcp_distance_variable
         __props__.__dict__["ipv4_dhcp_helper_variable"] = ipv4_dhcp_helper_variable
@@ -2119,6 +2212,7 @@ class TransportManagementVpnInterfaceEthernetFeature(pulumi.CustomResource):
         __props__.__dict__["ipv4_subnet_mask_variable"] = ipv4_subnet_mask_variable
         __props__.__dict__["ipv6_address"] = ipv6_address
         __props__.__dict__["ipv6_address_variable"] = ipv6_address_variable
+        __props__.__dict__["ipv6_configuration_type"] = ipv6_configuration_type
         __props__.__dict__["load_interval"] = load_interval
         __props__.__dict__["load_interval_variable"] = load_interval_variable
         __props__.__dict__["mac_address"] = mac_address
@@ -2204,7 +2298,7 @@ class TransportManagementVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="enableDhcpv6")
     def enable_dhcpv6(self) -> pulumi.Output[Optional[bool]]:
         """
-        Enable DHCPv6
+        Enable DHCPv6, Attribute conditional on `ipv6_configuration_type` being equal to `dynamic`
         """
         return pulumi.get(self, "enable_dhcpv6")
 
@@ -2311,7 +2405,7 @@ class TransportManagementVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipv4Address")
     def ipv4_address(self) -> pulumi.Output[Optional[str]]:
         """
-        IP Address
+        IP Address, Attribute conditional on `ipv4_configuration_type` being equal to `static`
         """
         return pulumi.get(self, "ipv4_address")
 
@@ -2340,10 +2434,19 @@ class TransportManagementVpnInterfaceEthernetFeature(pulumi.CustomResource):
         return pulumi.get(self, "ipv4_auto_detect_bandwidth_variable")
 
     @property
+    @pulumi.getter(name="ipv4ConfigurationType")
+    def ipv4_configuration_type(self) -> pulumi.Output[Optional[str]]:
+        """
+        IPv4 Configuration Type - Choices: `dynamic`, `static` - Default value: `dynamic`
+        """
+        return pulumi.get(self, "ipv4_configuration_type")
+
+    @property
     @pulumi.getter(name="ipv4DhcpDistance")
     def ipv4_dhcp_distance(self) -> pulumi.Output[Optional[int]]:
         """
-        DHCP Distance - Range: `1`-`65536`
+        DHCP Distance, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic` - Range: `1`-`65536` -
+        Default value: `1`
         """
         return pulumi.get(self, "ipv4_dhcp_distance")
 
@@ -2391,7 +2494,7 @@ class TransportManagementVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipv4SecondaryAddresses")
     def ipv4_secondary_addresses(self) -> pulumi.Output[Optional[Sequence['outputs.TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddress']]]:
         """
-        Secondary IpV4 Addresses
+        Secondary IpV4 Addresses, Attribute conditional on `ipv4_configuration_type` being equal to `static`
         """
         return pulumi.get(self, "ipv4_secondary_addresses")
 
@@ -2399,11 +2502,12 @@ class TransportManagementVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipv4SubnetMask")
     def ipv4_subnet_mask(self) -> pulumi.Output[Optional[str]]:
         """
-        Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        Subnet Mask, Attribute conditional on `ipv4_configuration_type` being equal to `static` - Choices: `255.255.255.255`,
+        `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`,
+        `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`,
+        `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`,
+        `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`,
+        `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "ipv4_subnet_mask")
 
@@ -2419,7 +2523,7 @@ class TransportManagementVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipv6Address")
     def ipv6_address(self) -> pulumi.Output[Optional[str]]:
         """
-        IPv6 Address Secondary
+        IPv6 Address Secondary, Attribute conditional on `ipv6_configuration_type` being equal to `static`
         """
         return pulumi.get(self, "ipv6_address")
 
@@ -2430,6 +2534,14 @@ class TransportManagementVpnInterfaceEthernetFeature(pulumi.CustomResource):
         Variable name
         """
         return pulumi.get(self, "ipv6_address_variable")
+
+    @property
+    @pulumi.getter(name="ipv6ConfigurationType")
+    def ipv6_configuration_type(self) -> pulumi.Output[Optional[str]]:
+        """
+        IPv6 Configuration Type - Choices: `dynamic`, `static`, `none` - Default value: `none`
+        """
+        return pulumi.get(self, "ipv6_configuration_type")
 
     @property
     @pulumi.getter(name="loadInterval")

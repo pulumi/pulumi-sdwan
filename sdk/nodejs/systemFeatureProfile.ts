@@ -6,6 +6,7 @@ import * as utilities from "./utilities";
 
 /**
  * This resource can manage a System Feature Profile .
+ *   - Minimum SD-WAN Manager version: `20.12.0`
  *
  * ## Example Usage
  *

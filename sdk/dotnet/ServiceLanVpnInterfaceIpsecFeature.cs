@@ -65,8 +65,10 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Import
     /// 
+    /// Expected import identifier with the format: "service_lan_vpn_interface_ipsec_feature_id,feature_profile_id,service_lan_vpn_feature_id"
+    /// 
     /// ```sh
-    /// $ pulumi import sdwan:index/serviceLanVpnInterfaceIpsecFeature:ServiceLanVpnInterfaceIpsecFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+    /// $ pulumi import sdwan:index/serviceLanVpnInterfaceIpsecFeature:ServiceLanVpnInterfaceIpsecFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037"
     /// ```
     /// </summary>
     [SdwanResourceType("sdwan:index/serviceLanVpnInterfaceIpsecFeature:ServiceLanVpnInterfaceIpsecFeature")]
@@ -76,7 +78,7 @@ namespace Pulumi.Sdwan
         /// Enable Application Tunnel Type - Choices: `none`, `sig`
         /// </summary>
         [Output("applicationTunnelType")]
-        public Output<string> ApplicationTunnelType { get; private set; } = null!;
+        public Output<string?> ApplicationTunnelType { get; private set; } = null!;
 
         /// <summary>
         /// Variable name
@@ -197,7 +199,7 @@ namespace Pulumi.Sdwan
         /// Use preshared key to authenticate IKE peer
         /// </summary>
         [Output("ikePresharedKey")]
-        public Output<string> IkePresharedKey { get; private set; } = null!;
+        public Output<string?> IkePresharedKey { get; private set; } = null!;
 
         /// <summary>
         /// Variable name
@@ -239,7 +241,7 @@ namespace Pulumi.Sdwan
         /// Interface name: IPsec when present
         /// </summary>
         [Output("interfaceName")]
-        public Output<string> InterfaceName { get; private set; } = null!;
+        public Output<string?> InterfaceName { get; private set; } = null!;
 
         /// <summary>
         /// Variable name
@@ -298,7 +300,7 @@ namespace Pulumi.Sdwan
         public Output<string?> IpsecReplayWindowVariable { get; private set; } = null!;
 
         [Output("ipv4Address")]
-        public Output<string> Ipv4Address { get; private set; } = null!;
+        public Output<string?> Ipv4Address { get; private set; } = null!;
 
         /// <summary>
         /// Variable name
@@ -314,7 +316,7 @@ namespace Pulumi.Sdwan
         /// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         /// </summary>
         [Output("ipv4SubnetMask")]
-        public Output<string> Ipv4SubnetMask { get; private set; } = null!;
+        public Output<string?> Ipv4SubnetMask { get; private set; } = null!;
 
         /// <summary>
         /// Variable name
@@ -384,7 +386,7 @@ namespace Pulumi.Sdwan
         public Output<string?> TrackerIdVariable { get; private set; } = null!;
 
         [Output("tunnelDestinationIpv4Address")]
-        public Output<string> TunnelDestinationIpv4Address { get; private set; } = null!;
+        public Output<string?> TunnelDestinationIpv4Address { get; private set; } = null!;
 
         /// <summary>
         /// Variable name
@@ -424,7 +426,7 @@ namespace Pulumi.Sdwan
         /// &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid
         /// </summary>
         [Output("tunnelSourceInterface")]
-        public Output<string> TunnelSourceInterface { get; private set; } = null!;
+        public Output<string?> TunnelSourceInterface { get; private set; } = null!;
 
         /// <summary>
         /// Variable name
@@ -433,7 +435,7 @@ namespace Pulumi.Sdwan
         public Output<string?> TunnelSourceInterfaceVariable { get; private set; } = null!;
 
         [Output("tunnelSourceIpv4Address")]
-        public Output<string> TunnelSourceIpv4Address { get; private set; } = null!;
+        public Output<string?> TunnelSourceIpv4Address { get; private set; } = null!;
 
         /// <summary>
         /// Variable name
@@ -449,7 +451,7 @@ namespace Pulumi.Sdwan
         /// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         /// </summary>
         [Output("tunnelSourceIpv4SubnetMask")]
-        public Output<string> TunnelSourceIpv4SubnetMask { get; private set; } = null!;
+        public Output<string?> TunnelSourceIpv4SubnetMask { get; private set; } = null!;
 
         /// <summary>
         /// Variable name
@@ -512,8 +514,8 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// Enable Application Tunnel Type - Choices: `none`, `sig`
         /// </summary>
-        [Input("applicationTunnelType", required: true)]
-        public Input<string> ApplicationTunnelType { get; set; } = null!;
+        [Input("applicationTunnelType")]
+        public Input<string>? ApplicationTunnelType { get; set; }
 
         /// <summary>
         /// Variable name
@@ -633,8 +635,8 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// Use preshared key to authenticate IKE peer
         /// </summary>
-        [Input("ikePresharedKey", required: true)]
-        public Input<string> IkePresharedKey { get; set; } = null!;
+        [Input("ikePresharedKey")]
+        public Input<string>? IkePresharedKey { get; set; }
 
         /// <summary>
         /// Variable name
@@ -675,8 +677,8 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// Interface name: IPsec when present
         /// </summary>
-        [Input("interfaceName", required: true)]
-        public Input<string> InterfaceName { get; set; } = null!;
+        [Input("interfaceName")]
+        public Input<string>? InterfaceName { get; set; }
 
         /// <summary>
         /// Variable name
@@ -734,8 +736,8 @@ namespace Pulumi.Sdwan
         [Input("ipsecReplayWindowVariable")]
         public Input<string>? IpsecReplayWindowVariable { get; set; }
 
-        [Input("ipv4Address", required: true)]
-        public Input<string> Ipv4Address { get; set; } = null!;
+        [Input("ipv4Address")]
+        public Input<string>? Ipv4Address { get; set; }
 
         /// <summary>
         /// Variable name
@@ -750,8 +752,8 @@ namespace Pulumi.Sdwan
         /// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
         /// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         /// </summary>
-        [Input("ipv4SubnetMask", required: true)]
-        public Input<string> Ipv4SubnetMask { get; set; } = null!;
+        [Input("ipv4SubnetMask")]
+        public Input<string>? Ipv4SubnetMask { get; set; }
 
         /// <summary>
         /// Variable name
@@ -820,8 +822,8 @@ namespace Pulumi.Sdwan
         [Input("trackerIdVariable")]
         public Input<string>? TrackerIdVariable { get; set; }
 
-        [Input("tunnelDestinationIpv4Address", required: true)]
-        public Input<string> TunnelDestinationIpv4Address { get; set; } = null!;
+        [Input("tunnelDestinationIpv4Address")]
+        public Input<string>? TunnelDestinationIpv4Address { get; set; }
 
         /// <summary>
         /// Variable name
@@ -860,8 +862,8 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// &lt;1..32 characters&gt; Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid
         /// </summary>
-        [Input("tunnelSourceInterface", required: true)]
-        public Input<string> TunnelSourceInterface { get; set; } = null!;
+        [Input("tunnelSourceInterface")]
+        public Input<string>? TunnelSourceInterface { get; set; }
 
         /// <summary>
         /// Variable name
@@ -869,8 +871,8 @@ namespace Pulumi.Sdwan
         [Input("tunnelSourceInterfaceVariable")]
         public Input<string>? TunnelSourceInterfaceVariable { get; set; }
 
-        [Input("tunnelSourceIpv4Address", required: true)]
-        public Input<string> TunnelSourceIpv4Address { get; set; } = null!;
+        [Input("tunnelSourceIpv4Address")]
+        public Input<string>? TunnelSourceIpv4Address { get; set; }
 
         /// <summary>
         /// Variable name
@@ -885,8 +887,8 @@ namespace Pulumi.Sdwan
         /// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
         /// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         /// </summary>
-        [Input("tunnelSourceIpv4SubnetMask", required: true)]
-        public Input<string> TunnelSourceIpv4SubnetMask { get; set; } = null!;
+        [Input("tunnelSourceIpv4SubnetMask")]
+        public Input<string>? TunnelSourceIpv4SubnetMask { get; set; }
 
         /// <summary>
         /// Variable name

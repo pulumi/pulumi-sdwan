@@ -21,15 +21,22 @@ namespace Pulumi.Sdwan.Outputs
         /// Policy definition type
         /// </summary>
         public readonly string Type;
+        /// <summary>
+        /// Policy definition version
+        /// </summary>
+        public readonly int Version;
 
         [OutputConstructor]
         private GetSecurityPolicyDefinitionResult(
             string id,
 
-            string type)
+            string type,
+
+            int version)
         {
             Id = id;
             Type = type;
+            Version = version;
         }
     }
 }

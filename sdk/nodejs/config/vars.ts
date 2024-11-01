@@ -8,7 +8,7 @@ declare var exports: any;
 const __config = new pulumi.Config("sdwan");
 
 /**
- * Allow insecure HTTPS client. This can also be set as the SDWAN_INSECURE environment variable. Defaults to `true`.
+ * Allow insecure HTTPS client. This can also be set as the `SDWAN_INSECURE` environment variable. Defaults to `true`.
  */
 export declare const insecure: boolean | undefined;
 Object.defineProperty(exports, "insecure", {
@@ -19,7 +19,7 @@ Object.defineProperty(exports, "insecure", {
 });
 
 /**
- * Password for the SD-WAN Manager account. This can also be set as the SDWAN_PASSWORD environment variable.
+ * Password for the SD-WAN Manager account. This can also be set as the `SDWAN_PASSWORD` environment variable.
  */
 export declare const password: string | undefined;
 Object.defineProperty(exports, "password", {
@@ -30,7 +30,7 @@ Object.defineProperty(exports, "password", {
 });
 
 /**
- * Number of retries for REST API calls. This can also be set as the SDWAN_RETRIES environment variable. Defaults to `3`.
+ * Number of retries for REST API calls. This can also be set as the `SDWAN_RETRIES` environment variable. Defaults to `3`.
  */
 export declare const retries: number | undefined;
 Object.defineProperty(exports, "retries", {
@@ -41,7 +41,7 @@ Object.defineProperty(exports, "retries", {
 });
 
 /**
- * URL of the Cisco SD-WAN Manager device. This can also be set as the SDWAN_URL environment variable.
+ * URL of the Cisco SD-WAN Manager device. This can also be set as the `SDWAN_URL` environment variable.
  */
 export declare const url: string | undefined;
 Object.defineProperty(exports, "url", {
@@ -52,7 +52,7 @@ Object.defineProperty(exports, "url", {
 });
 
 /**
- * Username for the SD-WAN Manager account. This can also be set as the SDWAN_USERNAME environment variable.
+ * Username for the SD-WAN Manager account. This can also be set as the `SDWAN_USERNAME` environment variable.
  */
 export declare const username: string | undefined;
 Object.defineProperty(exports, "username", {

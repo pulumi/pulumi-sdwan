@@ -74,6 +74,12 @@ class ActivateCentralizedPolicy(pulumi.CustomResource):
         """
         This resource can activate a centralized policy.
 
+        ## Import
+
+        ```sh
+        $ pulumi import sdwan:index/activateCentralizedPolicy:ActivateCentralizedPolicy example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[int] version: The version of the centralized policy
@@ -86,6 +92,12 @@ class ActivateCentralizedPolicy(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can activate a centralized policy.
+
+        ## Import
+
+        ```sh
+        $ pulumi import sdwan:index/activateCentralizedPolicy:ActivateCentralizedPolicy example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+        ```
 
         :param str resource_name: The name of the resource.
         :param ActivateCentralizedPolicyArgs args: The arguments to use to populate this resource's properties.

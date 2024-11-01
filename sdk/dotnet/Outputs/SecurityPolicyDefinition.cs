@@ -22,15 +22,22 @@ namespace Pulumi.Sdwan.Outputs
         ///   - Choices: `urlFiltering`, `zoneBasedFW`, `intrusionPrevention`, `sslDecryption`, `advancedMalwareProtection`, `dnsSecurity`
         /// </summary>
         public readonly string Type;
+        /// <summary>
+        /// Policy definition version
+        /// </summary>
+        public readonly int? Version;
 
         [OutputConstructor]
         private SecurityPolicyDefinition(
             string id,
 
-            string type)
+            string type,
+
+            int? version)
         {
             Id = id;
             Type = type;
+            Version = version;
         }
     }
 }

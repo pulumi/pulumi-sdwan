@@ -114,15 +114,15 @@ public final class OtherUcseFeatureArgs extends com.pulumi.resources.ResourceArg
      * Assign default gateway
      * 
      */
-    @Import(name="defaultGateway", required=true)
-    private Output<String> defaultGateway;
+    @Import(name="defaultGateway")
+    private @Nullable Output<String> defaultGateway;
 
     /**
      * @return Assign default gateway
      * 
      */
-    public Output<String> defaultGateway() {
-        return this.defaultGateway;
+    public Optional<Output<String>> defaultGateway() {
+        return Optional.ofNullable(this.defaultGateway);
     }
 
     /**
@@ -189,15 +189,15 @@ public final class OtherUcseFeatureArgs extends com.pulumi.resources.ResourceArg
      * Assign IPv4 address
      * 
      */
-    @Import(name="ipv4Address", required=true)
-    private Output<String> ipv4Address;
+    @Import(name="ipv4Address")
+    private @Nullable Output<String> ipv4Address;
 
     /**
      * @return Assign IPv4 address
      * 
      */
-    public Output<String> ipv4Address() {
-        return this.ipv4Address;
+    public Optional<Output<String>> ipv4Address() {
+        return Optional.ofNullable(this.ipv4Address);
     }
 
     /**
@@ -447,7 +447,7 @@ public final class OtherUcseFeatureArgs extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder defaultGateway(Output<String> defaultGateway) {
+        public Builder defaultGateway(@Nullable Output<String> defaultGateway) {
             $.defaultGateway = defaultGateway;
             return this;
         }
@@ -562,7 +562,7 @@ public final class OtherUcseFeatureArgs extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder ipv4Address(Output<String> ipv4Address) {
+        public Builder ipv4Address(@Nullable Output<String> ipv4Address) {
             $.ipv4Address = ipv4Address;
             return this;
         }
@@ -692,14 +692,8 @@ public final class OtherUcseFeatureArgs extends com.pulumi.resources.ResourceArg
             if ($.bay == null) {
                 throw new MissingRequiredPropertyException("OtherUcseFeatureArgs", "bay");
             }
-            if ($.defaultGateway == null) {
-                throw new MissingRequiredPropertyException("OtherUcseFeatureArgs", "defaultGateway");
-            }
             if ($.featureProfileId == null) {
                 throw new MissingRequiredPropertyException("OtherUcseFeatureArgs", "featureProfileId");
-            }
-            if ($.ipv4Address == null) {
-                throw new MissingRequiredPropertyException("OtherUcseFeatureArgs", "ipv4Address");
             }
             if ($.slot == null) {
                 throw new MissingRequiredPropertyException("OtherUcseFeatureArgs", "slot");

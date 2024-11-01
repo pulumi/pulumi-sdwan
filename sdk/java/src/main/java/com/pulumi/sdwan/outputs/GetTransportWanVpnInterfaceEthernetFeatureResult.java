@@ -198,6 +198,11 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
      */
     private String ipv4AddressVariable;
     /**
+     * @return IPv4 Configuration Type
+     * 
+     */
+    private String ipv4ConfigurationType;
+    /**
      * @return DHCP Distance
      * 
      */
@@ -242,6 +247,11 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
      * 
      */
     private String ipv6AddressVariable;
+    /**
+     * @return IPv6 Configuration Type
+     * 
+     */
+    private String ipv6ConfigurationType;
     /**
      * @return secondary IPv6 addresses
      * 
@@ -1212,6 +1222,13 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
         return this.ipv4AddressVariable;
     }
     /**
+     * @return IPv4 Configuration Type
+     * 
+     */
+    public String ipv4ConfigurationType() {
+        return this.ipv4ConfigurationType;
+    }
+    /**
      * @return DHCP Distance
      * 
      */
@@ -1273,6 +1290,13 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
      */
     public String ipv6AddressVariable() {
         return this.ipv6AddressVariable;
+    }
+    /**
+     * @return IPv6 Configuration Type
+     * 
+     */
+    public String ipv6ConfigurationType() {
+        return this.ipv6ConfigurationType;
     }
     /**
      * @return secondary IPv6 addresses
@@ -2325,6 +2349,7 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
         private String iperfServerVariable;
         private String ipv4Address;
         private String ipv4AddressVariable;
+        private String ipv4ConfigurationType;
         private Integer ipv4DhcpDistance;
         private String ipv4DhcpDistanceVariable;
         private String ipv4DhcpHelperVariable;
@@ -2334,6 +2359,7 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
         private String ipv4SubnetMaskVariable;
         private String ipv6Address;
         private String ipv6AddressVariable;
+        private String ipv6ConfigurationType;
         private List<GetTransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress> ipv6DhcpSecondaryAddresses;
         private List<GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress> ipv6SecondaryAddresses;
         private Integer loadInterval;
@@ -2518,6 +2544,7 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
     	      this.iperfServerVariable = defaults.iperfServerVariable;
     	      this.ipv4Address = defaults.ipv4Address;
     	      this.ipv4AddressVariable = defaults.ipv4AddressVariable;
+    	      this.ipv4ConfigurationType = defaults.ipv4ConfigurationType;
     	      this.ipv4DhcpDistance = defaults.ipv4DhcpDistance;
     	      this.ipv4DhcpDistanceVariable = defaults.ipv4DhcpDistanceVariable;
     	      this.ipv4DhcpHelperVariable = defaults.ipv4DhcpHelperVariable;
@@ -2527,6 +2554,7 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
     	      this.ipv4SubnetMaskVariable = defaults.ipv4SubnetMaskVariable;
     	      this.ipv6Address = defaults.ipv6Address;
     	      this.ipv6AddressVariable = defaults.ipv6AddressVariable;
+    	      this.ipv6ConfigurationType = defaults.ipv6ConfigurationType;
     	      this.ipv6DhcpSecondaryAddresses = defaults.ipv6DhcpSecondaryAddresses;
     	      this.ipv6SecondaryAddresses = defaults.ipv6SecondaryAddresses;
     	      this.loadInterval = defaults.loadInterval;
@@ -2973,6 +3001,14 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
             return this;
         }
         @CustomType.Setter
+        public Builder ipv4ConfigurationType(String ipv4ConfigurationType) {
+            if (ipv4ConfigurationType == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "ipv4ConfigurationType");
+            }
+            this.ipv4ConfigurationType = ipv4ConfigurationType;
+            return this;
+        }
+        @CustomType.Setter
         public Builder ipv4DhcpDistance(Integer ipv4DhcpDistance) {
             if (ipv4DhcpDistance == null) {
               throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "ipv4DhcpDistance");
@@ -3048,6 +3084,14 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
               throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "ipv6AddressVariable");
             }
             this.ipv6AddressVariable = ipv6AddressVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ipv6ConfigurationType(String ipv6ConfigurationType) {
+            if (ipv6ConfigurationType == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureResult", "ipv6ConfigurationType");
+            }
+            this.ipv6ConfigurationType = ipv6ConfigurationType;
             return this;
         }
         @CustomType.Setter
@@ -4259,6 +4303,7 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
             _resultValue.iperfServerVariable = iperfServerVariable;
             _resultValue.ipv4Address = ipv4Address;
             _resultValue.ipv4AddressVariable = ipv4AddressVariable;
+            _resultValue.ipv4ConfigurationType = ipv4ConfigurationType;
             _resultValue.ipv4DhcpDistance = ipv4DhcpDistance;
             _resultValue.ipv4DhcpDistanceVariable = ipv4DhcpDistanceVariable;
             _resultValue.ipv4DhcpHelperVariable = ipv4DhcpHelperVariable;
@@ -4268,6 +4313,7 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureResult {
             _resultValue.ipv4SubnetMaskVariable = ipv4SubnetMaskVariable;
             _resultValue.ipv6Address = ipv6Address;
             _resultValue.ipv6AddressVariable = ipv6AddressVariable;
+            _resultValue.ipv6ConfigurationType = ipv6ConfigurationType;
             _resultValue.ipv6DhcpSecondaryAddresses = ipv6DhcpSecondaryAddresses;
             _resultValue.ipv6SecondaryAddresses = ipv6SecondaryAddresses;
             _resultValue.loadInterval = loadInterval;

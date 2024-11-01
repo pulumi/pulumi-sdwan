@@ -114,6 +114,8 @@ type LookupTransportManagementVpnInterfaceEthernetFeatureResult struct {
 	Ipv4AutoDetectBandwidth bool `pulumi:"ipv4AutoDetectBandwidth"`
 	// Variable name
 	Ipv4AutoDetectBandwidthVariable string `pulumi:"ipv4AutoDetectBandwidthVariable"`
+	// IPv4 Configuration Type
+	Ipv4ConfigurationType string `pulumi:"ipv4ConfigurationType"`
 	// DHCP Distance
 	Ipv4DhcpDistance int `pulumi:"ipv4DhcpDistance"`
 	// Variable name
@@ -136,6 +138,8 @@ type LookupTransportManagementVpnInterfaceEthernetFeatureResult struct {
 	Ipv6Address string `pulumi:"ipv6Address"`
 	// Variable name
 	Ipv6AddressVariable string `pulumi:"ipv6AddressVariable"`
+	// IPv6 Configuration Type
+	Ipv6ConfigurationType string `pulumi:"ipv6ConfigurationType"`
 	// Interval for interface load calculation
 	LoadInterval int `pulumi:"loadInterval"`
 	// Variable name
@@ -370,6 +374,13 @@ func (o LookupTransportManagementVpnInterfaceEthernetFeatureResultOutput) Ipv4Au
 	}).(pulumi.StringOutput)
 }
 
+// IPv4 Configuration Type
+func (o LookupTransportManagementVpnInterfaceEthernetFeatureResultOutput) Ipv4ConfigurationType() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportManagementVpnInterfaceEthernetFeatureResult) string {
+		return v.Ipv4ConfigurationType
+	}).(pulumi.StringOutput)
+}
+
 // DHCP Distance
 func (o LookupTransportManagementVpnInterfaceEthernetFeatureResultOutput) Ipv4DhcpDistance() pulumi.IntOutput {
 	return o.ApplyT(func(v LookupTransportManagementVpnInterfaceEthernetFeatureResult) int { return v.Ipv4DhcpDistance }).(pulumi.IntOutput)
@@ -434,6 +445,13 @@ func (o LookupTransportManagementVpnInterfaceEthernetFeatureResultOutput) Ipv6Ad
 func (o LookupTransportManagementVpnInterfaceEthernetFeatureResultOutput) Ipv6AddressVariable() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTransportManagementVpnInterfaceEthernetFeatureResult) string {
 		return v.Ipv6AddressVariable
+	}).(pulumi.StringOutput)
+}
+
+// IPv6 Configuration Type
+func (o LookupTransportManagementVpnInterfaceEthernetFeatureResultOutput) Ipv6ConfigurationType() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportManagementVpnInterfaceEthernetFeatureResult) string {
+		return v.Ipv6ConfigurationType
 	}).(pulumi.StringOutput)
 }
 

@@ -225,6 +225,227 @@ export interface ApplicationPriorityQosPolicyQosScheduler {
     schedulingType?: pulumi.Input<string>;
 }
 
+export interface ApplicationPriorityTrafficPolicyPolicySequence {
+    actions?: pulumi.Input<pulumi.Input<inputs.ApplicationPriorityTrafficPolicyPolicySequenceAction>[]>;
+    /**
+     * Base Action
+     *   - Choices: `drop`, `accept`
+     */
+    baseAction?: pulumi.Input<string>;
+    matchEntries?: pulumi.Input<pulumi.Input<inputs.ApplicationPriorityTrafficPolicyPolicySequenceMatchEntry>[]>;
+    /**
+     * Sequence IP Type
+     *   - Choices: `ipv4`, `ipv6`, `all`
+     */
+    protocol?: pulumi.Input<string>;
+    /**
+     * Sequence Id
+     *   - Range: `1`-`65536`
+     */
+    sequenceId?: pulumi.Input<number>;
+    /**
+     * Sequence Name
+     */
+    sequenceName?: pulumi.Input<string>;
+}
+
+export interface ApplicationPriorityTrafficPolicyPolicySequenceAction {
+    /**
+     * Backup SLA perferred color
+     */
+    backupSlaPreferredColors?: pulumi.Input<pulumi.Input<string>[]>;
+    cloudProbe?: pulumi.Input<boolean>;
+    cloudSaas?: pulumi.Input<boolean>;
+    count?: pulumi.Input<string>;
+    fallbackToRouting?: pulumi.Input<boolean>;
+    log?: pulumi.Input<boolean>;
+    /**
+     * - Range: `1`-`5`
+     */
+    lossCorrectFecThreshold?: pulumi.Input<number>;
+    /**
+     * - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
+     */
+    lossCorrectType?: pulumi.Input<string>;
+    natBypass?: pulumi.Input<boolean>;
+    natDiaInterfaces?: pulumi.Input<pulumi.Input<string>[]>;
+    natDiaPools?: pulumi.Input<pulumi.Input<number>[]>;
+    natFallback?: pulumi.Input<boolean>;
+    /**
+     * - Range: `1`-`31`
+     */
+    natPool?: pulumi.Input<number>;
+    natVpn?: pulumi.Input<boolean>;
+    /**
+     * - Choices: `ipAddress`, `redirectDns`
+     */
+    redirectDnsField?: pulumi.Input<string>;
+    redirectDnsValue?: pulumi.Input<string>;
+    secureInternetGateway?: pulumi.Input<boolean>;
+    setParameters?: pulumi.Input<pulumi.Input<inputs.ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameter>[]>;
+    /**
+     * slaClass
+     */
+    slaClasses?: pulumi.Input<pulumi.Input<inputs.ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClass>[]>;
+}
+
+export interface ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameter {
+    /**
+     * - Range: `0`-`63`
+     */
+    dscp?: pulumi.Input<number>;
+    forwardingClassListId?: pulumi.Input<string>;
+    localTlocListColors?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * - Choices: `ipsec`, `gre`
+     */
+    localTlocListEncapsulation?: pulumi.Input<string>;
+    localTlocListRestrict?: pulumi.Input<string>;
+    nextHopIpv4?: pulumi.Input<string>;
+    nextHopIpv6?: pulumi.Input<string>;
+    nextHopLoose?: pulumi.Input<boolean>;
+    policerId?: pulumi.Input<string>;
+    preferredColorGroupId?: pulumi.Input<string>;
+    preferredRemoteColorIds?: pulumi.Input<pulumi.Input<string>[]>;
+    preferredRemoteColorRestrict?: pulumi.Input<string>;
+    serviceChainFallbackToRouting?: pulumi.Input<boolean>;
+    serviceChainLocal?: pulumi.Input<boolean>;
+    serviceChainTlocColors?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * - Choices: `ipsec`, `gre`
+     */
+    serviceChainTlocEncapsulation?: pulumi.Input<string>;
+    serviceChainTlocIp?: pulumi.Input<string>;
+    serviceChainTlocListId?: pulumi.Input<string>;
+    /**
+     * - Choices: `SC1`, `SC2`, `SC4`, `SC5`, `SC6`, `SC7`, `SC8`, `SC9`, `SC10`, `SC11`, `SC12`, `SC13`, `SC14`, `SC15`, `SC16`
+     */
+    serviceChainType?: pulumi.Input<string>;
+    /**
+     * - Range: `0`-`65530`
+     */
+    serviceChainVpn?: pulumi.Input<number>;
+    serviceTlocColors?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * - Choices: `ipsec`, `gre`
+     */
+    serviceTlocEncapsulation?: pulumi.Input<string>;
+    serviceTlocIp?: pulumi.Input<string>;
+    serviceTlocListId?: pulumi.Input<string>;
+    /**
+     * - Choices: `FW`, `IDS`, `IDP`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `appqoe`
+     */
+    serviceType?: pulumi.Input<string>;
+    serviceVpn?: pulumi.Input<string>;
+    tlocColors?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * - Choices: `ipsec`, `gre`
+     */
+    tlocEncapsulation?: pulumi.Input<string>;
+    tlocIp?: pulumi.Input<string>;
+    tlocListId?: pulumi.Input<string>;
+    vpn?: pulumi.Input<string>;
+}
+
+export interface ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClass {
+    fallbackToBestPath?: pulumi.Input<boolean>;
+    preferredColorGroupListId?: pulumi.Input<string>;
+    preferredColors?: pulumi.Input<pulumi.Input<string>[]>;
+    preferredRemoteColors?: pulumi.Input<pulumi.Input<string>[]>;
+    remoteColorRestrict?: pulumi.Input<boolean>;
+    slaClassListId?: pulumi.Input<string>;
+    strict?: pulumi.Input<boolean>;
+}
+
+export interface ApplicationPriorityTrafficPolicyPolicySequenceMatchEntry {
+    applicationListId?: pulumi.Input<string>;
+    destinationDataIpv4PrefixListId?: pulumi.Input<string>;
+    destinationDataIpv6PrefixListId?: pulumi.Input<string>;
+    /**
+     * Destination Data IP Prefix
+     */
+    destinationIpv4Prefix?: pulumi.Input<string>;
+    /**
+     * Destination Data IP Prefix
+     */
+    destinationIpv6Prefix?: pulumi.Input<string>;
+    /**
+     * Destination Port (0-65535) range or individual number separated by space
+     */
+    destinationPorts?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Destination Region
+     *   - Choices: `primary-region`, `secondary-region`, `other-region`
+     */
+    destinationRegion?: pulumi.Input<string>;
+    /**
+     * Dns
+     *   - Choices: `request`, `response`
+     */
+    dns?: pulumi.Input<string>;
+    dnsApplicationListId?: pulumi.Input<string>;
+    /**
+     * DSCP number
+     *   - Range: `0`-`63`
+     */
+    dscp?: pulumi.Input<number>;
+    /**
+     * ICMP6 Message
+     */
+    icmp6Messages?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * ICMP Message
+     */
+    icmpMessages?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Packet Length
+     */
+    packetLength?: pulumi.Input<string>;
+    /**
+     * protocol (0-255) range or individual number separated by space
+     */
+    protocols?: pulumi.Input<pulumi.Input<string>[]>;
+    saasApplicationListId?: pulumi.Input<string>;
+    /**
+     * M365 Service Area
+     */
+    serviceAreas?: pulumi.Input<pulumi.Input<string>[]>;
+    sourceDataIpv4PrefxListId?: pulumi.Input<string>;
+    sourceDataIpv6PrefxListId?: pulumi.Input<string>;
+    /**
+     * Source Data IP Prefix
+     */
+    sourceIpv4Prefix?: pulumi.Input<string>;
+    /**
+     * Source Data IP Prefix
+     */
+    sourceIpv6Prefix?: pulumi.Input<string>;
+    /**
+     * Source Port (0-65535) range or individual number separated by space
+     */
+    sourcePorts?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * TCP States
+     *   - Choices: `syn`
+     */
+    tcp?: pulumi.Input<string>;
+    /**
+     * M365 Traffic Category
+     *   - Choices: `optimize-allow`, `optimize`, `all`
+     */
+    trafficCategory?: pulumi.Input<string>;
+    /**
+     * Traffic Class
+     *   - Choices: `gold-voip-telephony`, `gold-broadcast-video`, `gold-real-time-interactive`, `gold-multimedia-conferencing`, `gold-multimedia-streaming`, `gold-network-control`, `gold-signaling`, `gold-ops-admin-mgmt`, `gold-transactional-data`, `gold-bulk-data`, `silver`, `bronze`
+     */
+    trafficClass?: pulumi.Input<string>;
+    /**
+     * Traffic to
+     *   - Choices: `core`, `service`, `access`
+     */
+    trafficTo?: pulumi.Input<string>;
+}
+
 export interface AsPathListPolicyObjectEntry {
     /**
      * Regular expression to match the BGP AS paths e.g., `^1239_[0-9]*$`
@@ -5618,6 +5839,37 @@ export interface ColorListPolicyObjectEntry {
     color: pulumi.Input<string>;
 }
 
+export interface ConfigurationGroupDevice {
+    /**
+     * Deploy to device if enabled.
+     *   - Default value: `false`
+     */
+    deploy?: pulumi.Input<boolean>;
+    /**
+     * Device ID
+     */
+    id?: pulumi.Input<string>;
+    /**
+     * List of variables
+     */
+    variables?: pulumi.Input<pulumi.Input<inputs.ConfigurationGroupDeviceVariable>[]>;
+}
+
+export interface ConfigurationGroupDeviceVariable {
+    /**
+     * Use this instead of `value` in case value is of type `List`.
+     */
+    listValues?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Variable name
+     */
+    name: pulumi.Input<string>;
+    /**
+     * Variable value
+     */
+    value?: pulumi.Input<string>;
+}
+
 export interface ConfigurationGroupFeatureProfile {
     /**
      * Feature profile ID
@@ -6094,7 +6346,7 @@ export interface ExpandedCommunityListPolicyObjectEntry {
     /**
      * Expanded community value, e.g. `100:1000`
      */
-    community: pulumi.Input<string>;
+    community?: pulumi.Input<string>;
 }
 
 export interface ExtendedCommunityListPolicyObjectEntry {
@@ -6913,6 +7165,39 @@ export interface OtherUcseFeatureInterface {
     ucseInterfaceVpnVariable?: pulumi.Input<string>;
 }
 
+export interface PolicyObjectAppProbeClassEntry {
+    /**
+     * Forwarding Class Name
+     */
+    forwardingClass?: pulumi.Input<string>;
+    /**
+     * Map
+     */
+    maps?: pulumi.Input<pulumi.Input<inputs.PolicyObjectAppProbeClassEntryMap>[]>;
+}
+
+export interface PolicyObjectAppProbeClassEntryMap {
+    /**
+     * Color
+     *   - Choices: `3g`, `biz-internet`, `blue`, `bronze`, `custom1`, `custom2`, `custom3`, `default`, `gold`, `green`, `lte`, `metro-ethernet`, `mpls`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`, `public-internet`, `red`, `silver`
+     */
+    color?: pulumi.Input<string>;
+    /**
+     * DSCP number
+     *   - Range: `0`-`63`
+     */
+    dscp?: pulumi.Input<number>;
+}
+
+export interface PolicyObjectApplicationListEntry {
+    application?: pulumi.Input<string>;
+    applicationFamily?: pulumi.Input<string>;
+}
+
+export interface PolicyObjectAsPathListEntry {
+    asPathList?: pulumi.Input<string>;
+}
+
 export interface PolicyObjectClassMapEntry {
     /**
      * select a queue
@@ -7032,6 +7317,133 @@ export interface PolicyObjectPolicerEntry {
     rateBps?: pulumi.Input<number>;
 }
 
+export interface PolicyObjectPreferredColorGroupEntry {
+    primaryColorPreferences?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * - Choices: `all-paths`, `direct-path`, `multi-hop-path`
+     */
+    primaryPathPreference?: pulumi.Input<string>;
+    secondaryColorPreferences?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * - Choices: `all-paths`, `direct-path`, `multi-hop-path`
+     */
+    secondaryPathPreference?: pulumi.Input<string>;
+    tertiaryColorPreferences?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * - Choices: `all-paths`, `direct-path`, `multi-hop-path`
+     */
+    tertiaryPathPreference?: pulumi.Input<string>;
+}
+
+export interface PolicyObjectSecurityDataIpv4PrefixListEntry {
+    ipPrefix?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    ipPrefixVariable?: pulumi.Input<string>;
+}
+
+export interface PolicyObjectSecurityFqdnListEntry {
+    pattern?: pulumi.Input<string>;
+}
+
+export interface PolicyObjectSecurityGeolocationListEntry {
+    /**
+     * continent name
+     *   - Choices: `AF`, `AN`, `AS`, `EU`, `NA`, `OC`, `SA`
+     */
+    continent?: pulumi.Input<string>;
+    /**
+     * country names
+     *   - Choices: `AFG`, `ALB`, `ATA`, `DZA`, `ASM`, `AND`, `AGO`, `ATG`, `AZE`, `ARG`, `AUS`, `AUT`, `BHS`, `BHR`, `BGD`, `ARM`, `BRB`, `BEL`, `BMU`, `BTN`, `BOL`, `BIH`, `BWA`, `BVT`, `BRA`, `BLZ`, `IOT`, `SLB`, `VGB`, `BRN`, `BGR`, `MMR`, `BDI`, `BLR`, `KHM`, `CMR`, `CAN`, `CPV`, `CYM`, `CAF`, `LKA`, `TCD`, `CHL`, `CHN`, `TWN`, `CXR`, `CCK`, `COL`, `COM`, `MYT`, `COG`, `COD`, `COK`, `CRI`, `HRV`, `CUB`, `CYP`, `CZE`, `BEN`, `DNK`, `DMA`, `DOM`, `ECU`, `SLV`, `GNQ`, `ETH`, `ERI`, `EST`, `FRO`, `FLK`, `SGS`, `FJI`, `FIN`, `ALA`, `FRA`, `GUF`, `PYF`, `ATF`, `DJI`, `GAB`, `GEO`, `GMB`, `PSE`, `DEU`, `GHA`, `GIB`, `KIR`, `GRC`, `GRL`, `GRD`, `GLP`, `GUM`, `GTM`, `GIN`, `GUY`, `HTI`, `HMD`, `VAT`, `HND`, `HKG`, `HUN`, `ISL`, `IND`, `IDN`, `IRN`, `IRQ`, `IRL`, `ISR`, `ITA`, `CIV`, `JAM`, `JPN`, `KAZ`, `JOR`, `KEN`, `PRK`, `KOR`, `KWT`, `KGZ`, `LAO`, `LBN`, `LSO`, `LVA`, `LBR`, `LBY`, `LIE`, `LTU`, `LUX`, `MAC`, `MDG`, `MWI`, `MYS`, `MDV`, `MLI`, `MLT`, `MTQ`, `MRT`, `MUS`, `MEX`, `MCO`, `MNG`, `MDA`, `MNE`, `MSR`, `MAR`, `MOZ`, `OMN`, `NAM`, `NRU`, `NPL`, `NLD`, `ANT`, `CUW`, `ABW`, `SXM`, `BES`, `NCL`, `VUT`, `NZL`, `NIC`, `NER`, `NGA`, `NIU`, `NFK`, `NOR`, `MNP`, `UMI`, `FSM`, `MHL`, `PLW`, `PAK`, `PAN`, `PNG`, `PRY`, `PER`, `PHL`, `PCN`, `POL`, `PRT`, `GNB`, `TLS`, `PRI`, `QAT`, `REU`, `ROU`, `RUS`, `RWA`, `BLM`, `SHN`, `KNA`, `AIA`, `LCA`, `MAF`, `SPM`, `VCT`, `SMR`, `STP`, `SAU`, `SEN`, `SRB`, `SYC`, `SLE`, `SGP`, `SVK`, `VNM`, `SVN`, `SOM`, `ZAF`, `ZWE`, `ESP`, `SSD`, `ESH`, `SDN`, `SUR`, `SJM`, `SWZ`, `SWE`, `CHE`, `SYR`, `TJK`, `THA`, `TGO`, `TKL`, `TON`, `TTO`, `ARE`, `TUN`, `TUR`, `TKM`, `TCA`, `TUV`, `UGA`, `UKR`, `MKD`, `EGY`, `GBR`, `GGY`, `JEY`, `IMN`, `TZA`, `USA`, `VIR`, `BFA`, `URY`, `UZB`, `VEN`, `WLF`, `WSM`, `YEM`, `ZMB`
+     */
+    country?: pulumi.Input<string>;
+}
+
+export interface PolicyObjectSecurityIdentityListEntry {
+    user?: pulumi.Input<string>;
+    userGroup?: pulumi.Input<string>;
+}
+
+export interface PolicyObjectSecurityIpsSignatureEntry {
+    generatorId?: pulumi.Input<string>;
+    signatureId?: pulumi.Input<string>;
+}
+
+export interface PolicyObjectSecurityLocalApplicationListEntry {
+    app?: pulumi.Input<string>;
+    appFamily?: pulumi.Input<string>;
+}
+
+export interface PolicyObjectSecurityLocalDomainListEntry {
+    localDomain?: pulumi.Input<string>;
+}
+
+export interface PolicyObjectSecurityPortListEntry {
+    /**
+     * can be single port or port range
+     */
+    port?: pulumi.Input<string>;
+}
+
+export interface PolicyObjectSecurityScalableGroupTagListEntry {
+    sgtName?: pulumi.Input<string>;
+    tag?: pulumi.Input<string>;
+}
+
+export interface PolicyObjectSecurityUrlAllowListEntry {
+    /**
+     * valid url pattern
+     */
+    pattern?: pulumi.Input<string>;
+}
+
+export interface PolicyObjectSecurityUrlBlockListEntry {
+    /**
+     * valid url pattern
+     */
+    pattern?: pulumi.Input<string>;
+}
+
+export interface PolicyObjectSlaClassListEntry {
+    appProbeClassListId?: pulumi.Input<string>;
+    /**
+     * - Choices: `jitter`, `latency`, `loss`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
+     */
+    fallbackBestTunnelCriteria?: pulumi.Input<string>;
+    /**
+     * - Range: `1`-`1000`
+     */
+    fallbackBestTunnelJitterVariance?: pulumi.Input<number>;
+    /**
+     * - Range: `1`-`1000`
+     */
+    fallbackBestTunnelLatencyVariance?: pulumi.Input<number>;
+    /**
+     * - Range: `0`-`100`
+     */
+    fallbackBestTunnelLossVariance?: pulumi.Input<number>;
+    /**
+     * - Range: `1`-`1000`
+     */
+    jitter?: pulumi.Input<number>;
+    /**
+     * - Range: `1`-`1000`
+     */
+    latency?: pulumi.Input<number>;
+    /**
+     * - Range: `0`-`100`
+     */
+    loss?: pulumi.Input<number>;
+}
+
+export interface PolicyObjectStandardCommunityListEntry {
+    /**
+     * Standard Community
+     */
+    standardCommunity?: pulumi.Input<string>;
+}
+
 export interface PolicyObjectTlocListEntry {
     /**
      * color
@@ -7051,6 +7463,13 @@ export interface PolicyObjectTlocListEntry {
      * tloc
      */
     tlocIp?: pulumi.Input<string>;
+}
+
+export interface PolicyObjectVpnGroupEntry {
+    /**
+     * can be single vpn id or vpn id range
+     */
+    vpn?: pulumi.Input<number>;
 }
 
 export interface PortListPolicyObjectEntry {
@@ -7580,6 +7999,10 @@ export interface SecurityPolicyDefinition {
      *   - Choices: `urlFiltering`, `zoneBasedFW`, `intrusionPrevention`, `sslDecryption`, `advancedMalwareProtection`, `dnsSecurity`
      */
     type: pulumi.Input<string>;
+    /**
+     * Policy definition version
+     */
+    version?: pulumi.Input<number>;
 }
 
 export interface SecurityPolicyLogging {
@@ -7591,6 +8014,243 @@ export interface SecurityPolicyLogging {
      * External Syslog Server VPN
      */
     externalSyslogServerVpn?: pulumi.Input<string>;
+}
+
+export interface ServiceIpv4AclFeatureSequence {
+    /**
+     * Define list of actions
+     */
+    actions?: pulumi.Input<pulumi.Input<inputs.ServiceIpv4AclFeatureSequenceAction>[]>;
+    /**
+     * Base Action
+     *   - Choices: `drop`, `accept`
+     *   - Default value: `accept`
+     */
+    baseAction?: pulumi.Input<string>;
+    /**
+     * Define match conditions
+     */
+    matchEntries?: pulumi.Input<pulumi.Input<inputs.ServiceIpv4AclFeatureSequenceMatchEntry>[]>;
+    /**
+     * Sequence Id
+     *   - Range: `1`-`65536`
+     */
+    sequenceId?: pulumi.Input<number>;
+    /**
+     * Sequence Name
+     */
+    sequenceName?: pulumi.Input<string>;
+}
+
+export interface ServiceIpv4AclFeatureSequenceAction {
+    /**
+     * Counter Name
+     */
+    acceptCounterName?: pulumi.Input<string>;
+    /**
+     * Enable Log
+     *   - Default value: `false`
+     */
+    acceptLog?: pulumi.Input<boolean>;
+    acceptMirrorListId?: pulumi.Input<string>;
+    acceptPolicerId?: pulumi.Input<string>;
+    /**
+     * DSCP number
+     *   - Range: `0`-`63`
+     */
+    acceptSetDscp?: pulumi.Input<number>;
+    /**
+     * Set Next Hop (IPV4 address)
+     */
+    acceptSetNextHop?: pulumi.Input<string>;
+    /**
+     * Counter Name
+     */
+    dropCounterName?: pulumi.Input<string>;
+    /**
+     * Enable Log
+     *   - Default value: `false`
+     */
+    dropLog?: pulumi.Input<boolean>;
+}
+
+export interface ServiceIpv4AclFeatureSequenceMatchEntry {
+    /**
+     * Destination Data IP Prefix
+     */
+    destinationDataPrefix?: pulumi.Input<string>;
+    destinationDataPrefixListId?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    destinationDataPrefixVariable?: pulumi.Input<string>;
+    /**
+     * Destination Port List
+     */
+    destinationPorts?: pulumi.Input<pulumi.Input<inputs.ServiceIpv4AclFeatureSequenceMatchEntryDestinationPort>[]>;
+    /**
+     * DSCP number
+     */
+    dscps?: pulumi.Input<pulumi.Input<number>[]>;
+    /**
+     * ICMP Message
+     */
+    icmpMessages?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Packet Length
+     */
+    packetLength?: pulumi.Input<number>;
+    /**
+     * protocol number list with at least one item
+     */
+    protocols?: pulumi.Input<pulumi.Input<number>[]>;
+    /**
+     * Source Data IP Prefix
+     */
+    sourceDataPrefix?: pulumi.Input<string>;
+    sourceDataPrefixListId?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    sourceDataPrefixVariable?: pulumi.Input<string>;
+    /**
+     * Source Port List
+     */
+    sourcePorts?: pulumi.Input<pulumi.Input<inputs.ServiceIpv4AclFeatureSequenceMatchEntrySourcePort>[]>;
+    /**
+     * TCP States
+     *   - Choices: `syn`
+     */
+    tcpState?: pulumi.Input<string>;
+}
+
+export interface ServiceIpv4AclFeatureSequenceMatchEntryDestinationPort {
+    /**
+     * destination port range or individual port number
+     */
+    port?: pulumi.Input<number>;
+}
+
+export interface ServiceIpv4AclFeatureSequenceMatchEntrySourcePort {
+    /**
+     * source port range or individual port number
+     */
+    port?: pulumi.Input<number>;
+}
+
+export interface ServiceIpv6AclFeatureSequence {
+    /**
+     * Define list of actions
+     */
+    actions?: pulumi.Input<pulumi.Input<inputs.ServiceIpv6AclFeatureSequenceAction>[]>;
+    /**
+     * Base Action
+     *   - Choices: `drop`, `accept`
+     *   - Default value: `accept`
+     */
+    baseAction?: pulumi.Input<string>;
+    /**
+     * Define match conditions
+     */
+    matchEntries?: pulumi.Input<pulumi.Input<inputs.ServiceIpv6AclFeatureSequenceMatchEntry>[]>;
+    /**
+     * Sequence Id
+     *   - Range: `1`-`65536`
+     */
+    sequenceId?: pulumi.Input<number>;
+    /**
+     * Sequence Name
+     */
+    sequenceName?: pulumi.Input<string>;
+}
+
+export interface ServiceIpv6AclFeatureSequenceAction {
+    /**
+     * Counter Name
+     */
+    acceptCounterName?: pulumi.Input<string>;
+    /**
+     * Enable Log
+     *   - Default value: `false`
+     */
+    acceptLog?: pulumi.Input<boolean>;
+    acceptMirrorListId?: pulumi.Input<string>;
+    acceptPolicerId?: pulumi.Input<string>;
+    /**
+     * Set Next Hop (IPV6 address)
+     */
+    acceptSetNextHop?: pulumi.Input<string>;
+    /**
+     * set traffic class number
+     *   - Range: `0`-`63`
+     */
+    acceptTrafficClass?: pulumi.Input<number>;
+    /**
+     * Counter Name
+     */
+    dropCounterName?: pulumi.Input<string>;
+    /**
+     * Enable Log
+     *   - Default value: `false`
+     */
+    dropLog?: pulumi.Input<boolean>;
+}
+
+export interface ServiceIpv6AclFeatureSequenceMatchEntry {
+    /**
+     * Destination Data IP Prefix
+     */
+    destinationDataPrefix?: pulumi.Input<string>;
+    destinationDataPrefixListId?: pulumi.Input<string>;
+    /**
+     * Destination Port List
+     */
+    destinationPorts?: pulumi.Input<pulumi.Input<inputs.ServiceIpv6AclFeatureSequenceMatchEntryDestinationPort>[]>;
+    /**
+     * ICMP6 Message
+     */
+    icmpMessages?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * next header number
+     *   - Range: `0`-`255`
+     */
+    nextHeader?: pulumi.Input<number>;
+    /**
+     * Packet Length
+     */
+    packetLength?: pulumi.Input<number>;
+    /**
+     * Source Data IP Prefix
+     */
+    sourceDataPrefix?: pulumi.Input<string>;
+    sourceDataPrefixListId?: pulumi.Input<string>;
+    /**
+     * Source Port List
+     */
+    sourcePorts?: pulumi.Input<pulumi.Input<inputs.ServiceIpv6AclFeatureSequenceMatchEntrySourcePort>[]>;
+    /**
+     * TCP States
+     *   - Choices: `syn`
+     */
+    tcpState?: pulumi.Input<string>;
+    /**
+     * Select Traffic Class
+     */
+    trafficClasses?: pulumi.Input<pulumi.Input<number>[]>;
+}
+
+export interface ServiceIpv6AclFeatureSequenceMatchEntryDestinationPort {
+    /**
+     * destination port range or individual port number
+     */
+    port?: pulumi.Input<number>;
+}
+
+export interface ServiceIpv6AclFeatureSequenceMatchEntrySourcePort {
+    /**
+     * source port range or individual port number
+     */
+    port?: pulumi.Input<number>;
 }
 
 export interface ServiceLanVpnFeatureAdvertiseOmpIpv4 {
@@ -8376,6 +9036,10 @@ export interface ServiceLanVpnInterfaceEthernetFeatureIpv4Vrrp {
      *   - Default value: `false`
      */
     trackOmp?: pulumi.Input<boolean>;
+    /**
+     * Tracking object for VRRP configuration
+     */
+    trackingObjects?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpTrackingObject>[]>;
 }
 
 export interface ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpSecondaryAddress {
@@ -8396,6 +9060,28 @@ export interface ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpSecondaryAddress {
      * Variable name
      */
     subnetMaskVariable?: pulumi.Input<string>;
+}
+
+export interface ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpTrackingObject {
+    /**
+     * Decrement Value for VRRP priority
+     *   - Range: `1`-`255`
+     */
+    decrementValue?: pulumi.Input<number>;
+    /**
+     * Variable name
+     */
+    decrementValueVariable?: pulumi.Input<string>;
+    /**
+     * Track Action
+     *   - Choices: `Decrement`, `Shutdown`
+     */
+    trackerAction?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    trackerActionVariable?: pulumi.Input<string>;
+    trackerId?: pulumi.Input<string>;
 }
 
 export interface ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelper {
@@ -8647,6 +9333,10 @@ export interface ServiceLanVpnInterfaceSviFeatureIpv4Vrrp {
      * Variable name
      */
     trackOmpVariable?: pulumi.Input<string>;
+    /**
+     * tracking object for VRRP configuration
+     */
+    trackingObjects?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceSviFeatureIpv4VrrpTrackingObject>[]>;
 }
 
 export interface ServiceLanVpnInterfaceSviFeatureIpv4VrrpSecondaryAddress {
@@ -8658,6 +9348,28 @@ export interface ServiceLanVpnInterfaceSviFeatureIpv4VrrpSecondaryAddress {
      * Variable name
      */
     addressVariable?: pulumi.Input<string>;
+}
+
+export interface ServiceLanVpnInterfaceSviFeatureIpv4VrrpTrackingObject {
+    /**
+     * Decrement Value for VRRP priority
+     *   - Range: `1`-`255`
+     */
+    decrementValue?: pulumi.Input<number>;
+    /**
+     * Variable name
+     */
+    decrementValueVariable?: pulumi.Input<string>;
+    /**
+     * Track Action
+     *   - Choices: `decrement`, `shutdown`
+     */
+    trackAction?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    trackActionVariable?: pulumi.Input<string>;
+    trackerId?: pulumi.Input<string>;
 }
 
 export interface ServiceLanVpnInterfaceSviFeatureIpv6DhcpHelper {
@@ -8776,6 +9488,302 @@ export interface ServiceLanVpnInterfaceSviFeatureIpv6VrrpSecondaryAddress {
      * Variable name
      */
     prefixVariable?: pulumi.Input<string>;
+}
+
+export interface ServiceMulticastFeatureAutoRpAnnounce {
+    /**
+     * Set RP Announce Interface Name
+     */
+    interfaceName?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    interfaceNameVariable?: pulumi.Input<string>;
+    /**
+     * Set RP Announce Scope
+     *   - Range: `1`-`255`
+     */
+    scope?: pulumi.Input<number>;
+    /**
+     * Variable name
+     */
+    scopeVariable?: pulumi.Input<string>;
+}
+
+export interface ServiceMulticastFeatureAutoRpDiscovery {
+    /**
+     * Set RP Discovery Interface Name
+     */
+    interfaceName?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    interfaceNameVariable?: pulumi.Input<string>;
+    /**
+     * Set RP Discovery Scope
+     *   - Range: `1`-`255`
+     */
+    scope?: pulumi.Input<number>;
+    /**
+     * Variable name
+     */
+    scopeVariable?: pulumi.Input<string>;
+}
+
+export interface ServiceMulticastFeatureIgmpInterface {
+    /**
+     * Set interface name
+     */
+    interfaceName?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    interfaceNameVariable?: pulumi.Input<string>;
+    /**
+     * Configure static joins
+     */
+    joinGroups?: pulumi.Input<pulumi.Input<inputs.ServiceMulticastFeatureIgmpInterfaceJoinGroup>[]>;
+    /**
+     * igmp Version <1..3>
+     *   - Range: `1`-`3`
+     *   - Default value: `2`
+     */
+    version?: pulumi.Input<number>;
+}
+
+export interface ServiceMulticastFeatureIgmpInterfaceJoinGroup {
+    /**
+     * Set group address
+     */
+    groupAddress?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    groupAddressVariable?: pulumi.Input<string>;
+    /**
+     * Set source address
+     */
+    sourceAddress?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    sourceAddressVariable?: pulumi.Input<string>;
+}
+
+export interface ServiceMulticastFeatureMsdpGroup {
+    /**
+     * Set MSDP mesh group
+     */
+    meshGroupName?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    meshGroupNameVariable?: pulumi.Input<string>;
+    /**
+     * Configure peer
+     */
+    peers?: pulumi.Input<pulumi.Input<inputs.ServiceMulticastFeatureMsdpGroupPeer>[]>;
+}
+
+export interface ServiceMulticastFeatureMsdpGroupPeer {
+    /**
+     * Set MSDP peer ip connect-source interface
+     */
+    connectionSourceInterface?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    connectionSourceInterfaceVariable?: pulumi.Input<string>;
+    /**
+     * Set MSDP default peer
+     */
+    defaultPeer?: pulumi.Input<boolean>;
+    /**
+     * Set MSDP peer ip keepalive hold time
+     *   - Range: `1`-`75`
+     */
+    keepaliveHoldTime?: pulumi.Input<number>;
+    /**
+     * Variable name
+     */
+    keepaliveHoldTimeVariable?: pulumi.Input<string>;
+    /**
+     * Set MSDP peer ip keepalive interval
+     *   - Range: `1`-`60`
+     */
+    keepaliveInterval?: pulumi.Input<number>;
+    /**
+     * Variable name
+     */
+    keepaliveIntervalVariable?: pulumi.Input<string>;
+    /**
+     * Set MSDP peer ip password
+     */
+    peerAuthenticationPassword?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    peerAuthenticationPasswordVariable?: pulumi.Input<string>;
+    /**
+     * Set MSDP peer ip
+     */
+    peerIp?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    peerIpVariable?: pulumi.Input<string>;
+    prefixListId?: pulumi.Input<string>;
+    /**
+     * Set MSDP peer ip remote autonomous system number
+     *   - Range: `1`-`65535`
+     */
+    remoteAs?: pulumi.Input<number>;
+    /**
+     * Variable name
+     */
+    remoteAsVariable?: pulumi.Input<string>;
+    /**
+     * Set MSDP peer ip SA limit message number
+     *   - Range: `1`-`2147483646`
+     */
+    saLimit?: pulumi.Input<number>;
+    /**
+     * Variable name
+     */
+    saLimitVariable?: pulumi.Input<string>;
+}
+
+export interface ServiceMulticastFeaturePimBsrCandidate {
+    /**
+     * Set BSR RP candidate filter
+     */
+    acceptCandidateAccessList?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    acceptCandidateAccessListVariable?: pulumi.Input<string>;
+    /**
+     * Hash Mask length for RP selection
+     *   - Range: `0`-`32`
+     */
+    hashMaskLength?: pulumi.Input<number>;
+    /**
+     * Variable name
+     */
+    hashMaskLengthVariable?: pulumi.Input<string>;
+    /**
+     * Set Autonomic-Networking virtual interface
+     */
+    interfaceName?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    interfaceNameVariable?: pulumi.Input<string>;
+    /**
+     * Set RP candidate priority
+     *   - Range: `0`-`255`
+     */
+    priority?: pulumi.Input<number>;
+    /**
+     * Variable name
+     */
+    priorityVariable?: pulumi.Input<string>;
+}
+
+export interface ServiceMulticastFeaturePimBsrRpCandidate {
+    /**
+     * Set IP Access List for PIM RP Candidate
+     */
+    accessListId?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    accessListIdVariable?: pulumi.Input<string>;
+    /**
+     * Set Autonomic-Networking virtual interface
+     */
+    interfaceName?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    interfaceNameVariable?: pulumi.Input<string>;
+    /**
+     * Set RP candidate advertisement interval
+     *   - Range: `1`-`16383`
+     */
+    interval?: pulumi.Input<number>;
+    /**
+     * Variable name
+     */
+    intervalVariable?: pulumi.Input<string>;
+    /**
+     * Set RP candidate priority
+     *   - Range: `0`-`255`
+     */
+    priority?: pulumi.Input<number>;
+    /**
+     * Variable name
+     */
+    priorityVariable?: pulumi.Input<string>;
+}
+
+export interface ServiceMulticastFeaturePimInterface {
+    /**
+     * Set interface name
+     */
+    interfaceName?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    interfaceNameVariable?: pulumi.Input<string>;
+    /**
+     * Set interval at which PIM multicast traffic can join or be removed from RPT or SPT
+     *   - Range: `10`-`600`
+     *   - Default value: `60`
+     */
+    joinPruneInterval?: pulumi.Input<number>;
+    /**
+     * Variable name
+     */
+    joinPruneIntervalVariable?: pulumi.Input<string>;
+    /**
+     * Set PIM query interval
+     *   - Range: `1`-`18725`
+     *   - Default value: `30`
+     */
+    queryInterval?: pulumi.Input<number>;
+    /**
+     * Variable name
+     */
+    queryIntervalVariable?: pulumi.Input<string>;
+}
+
+export interface ServiceMulticastFeatureStaticRpAddress {
+    /**
+     * Set Static RP Access List
+     */
+    accessList?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    accessListVariable?: pulumi.Input<string>;
+    /**
+     * Set Static RP IP Address
+     */
+    ipAddress?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    ipAddressVariable?: pulumi.Input<string>;
+    /**
+     * Set override flag
+     *   - Default value: `false`
+     */
+    override?: pulumi.Input<boolean>;
+    /**
+     * Variable name
+     */
+    overrideVariable?: pulumi.Input<string>;
 }
 
 export interface ServiceObjectTrackerGroupFeatureTrackerElement {
@@ -9389,6 +10397,95 @@ export interface ServiceRoutingBgpFeatureIpv6Redistribute {
     /**
      * Set the protocol to redistribute routes from
      *   - Choices: `static`, `connected`, `ospf`, `omp`
+     */
+    protocol?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    protocolVariable?: pulumi.Input<string>;
+    routePolicyId?: pulumi.Input<string>;
+}
+
+export interface ServiceRoutingEigrpFeatureInterface {
+    /**
+     * Set interface name
+     */
+    name?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    nameVariable?: pulumi.Input<string>;
+    /**
+     * Enable/disable EIGRP
+     *   - Default value: `false`
+     */
+    shutdown?: pulumi.Input<boolean>;
+    /**
+     * Variable name
+     */
+    shutdownVariable?: pulumi.Input<string>;
+    /**
+     * Set summary addresses
+     */
+    summaryAddresses?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingEigrpFeatureInterfaceSummaryAddress>[]>;
+}
+
+export interface ServiceRoutingEigrpFeatureInterfaceSummaryAddress {
+    address?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    addressVariable?: pulumi.Input<string>;
+    /**
+     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     */
+    mask?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    maskVariable?: pulumi.Input<string>;
+}
+
+export interface ServiceRoutingEigrpFeatureMd5Key {
+    /**
+     * Set MD5 key ID
+     *   - Range: `1`-`255`
+     */
+    keyId?: pulumi.Input<number>;
+    /**
+     * Variable name
+     */
+    keyIdVariable?: pulumi.Input<string>;
+    /**
+     * Set MD5 key
+     */
+    keyString?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    keyStringVariable?: pulumi.Input<string>;
+}
+
+export interface ServiceRoutingEigrpFeatureNetwork {
+    ipAddress?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    ipAddressVariable?: pulumi.Input<string>;
+    /**
+     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     */
+    mask?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    maskVariable?: pulumi.Input<string>;
+}
+
+export interface ServiceRoutingEigrpFeatureRedistribute {
+    /**
+     * Set the protocol to redistribute routes from
+     *   - Choices: `bgp`, `connected`, `nat-route`, `omp`, `ospf`, `ospfv3`, `static`
      */
     protocol?: pulumi.Input<string>;
     /**
@@ -10187,6 +11284,99 @@ export interface ServiceSwitchportFeatureStaticMacAddress {
 
 export interface ServiceTrackerGroupFeatureTrackerElement {
     trackerId?: pulumi.Input<string>;
+}
+
+export interface ServiceWirelessLanFeatureSsid {
+    /**
+     * Set admin state
+     *   - Default value: `true`
+     */
+    adminState?: pulumi.Input<boolean>;
+    /**
+     * Variable name
+     */
+    adminStateVariable?: pulumi.Input<string>;
+    /**
+     * Enable broadcast SSID
+     *   - Default value: `true`
+     */
+    broadcastSsid?: pulumi.Input<boolean>;
+    /**
+     * Variable name
+     */
+    broadcastSsidVariable?: pulumi.Input<string>;
+    /**
+     * Set passphrase, Attribute conditional on `securityType` being equal to `personal`
+     */
+    passphrase?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    passphraseVariable?: pulumi.Input<string>;
+    /**
+     * Select QoS profile
+     *   - Choices: `platinum`, `gold`, `silver`, `bronze`
+     *   - Default value: `silver`
+     */
+    qosProfile?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    qosProfileVariable?: pulumi.Input<string>;
+    /**
+     * Select radio type
+     *   - Choices: `24ghz`, `5ghz`, `all`
+     *   - Default value: `all`
+     */
+    radioType?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    radioTypeVariable?: pulumi.Input<string>;
+    /**
+     * Set RADIUS server IP, Attribute conditional on `securityType` being equal to `enterprise`
+     */
+    radiusServerIp?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    radiusServerIpVariable?: pulumi.Input<string>;
+    /**
+     * Set RADIUS server authentication port, Attribute conditional on `securityType` being equal to `enterprise`
+     *   - Range: `1`-`65535`
+     *   - Default value: `1812`
+     */
+    radiusServerPort?: pulumi.Input<number>;
+    /**
+     * Variable name
+     */
+    radiusServerPortVariable?: pulumi.Input<string>;
+    /**
+     * Set RADIUS server shared secret, Attribute conditional on `securityType` being equal to `enterprise`
+     */
+    radiusServerSecret?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    radiusServerSecretVariable?: pulumi.Input<string>;
+    /**
+     * Select security type
+     *   - Choices: `enterprise`, `personal`, `open`
+     */
+    securityType?: pulumi.Input<string>;
+    /**
+     * Configure wlan SSID
+     */
+    ssidName?: pulumi.Input<string>;
+    /**
+     * Set VLAN ID
+     *   - Range: `1`-`4094`
+     */
+    vlanId?: pulumi.Input<number>;
+    /**
+     * Variable name
+     */
+    vlanIdVariable?: pulumi.Input<string>;
 }
 
 export interface SiteListPolicyObjectEntry {
@@ -11877,6 +13067,243 @@ export interface TrafficDataPolicyDefinitionSequenceMatchEntry {
     type: pulumi.Input<string>;
 }
 
+export interface TransportIpv4AclFeatureSequence {
+    /**
+     * Define list of actions
+     */
+    actions?: pulumi.Input<pulumi.Input<inputs.TransportIpv4AclFeatureSequenceAction>[]>;
+    /**
+     * Base Action
+     *   - Choices: `drop`, `accept`
+     *   - Default value: `accept`
+     */
+    baseAction?: pulumi.Input<string>;
+    /**
+     * Define match conditions
+     */
+    matchEntries?: pulumi.Input<pulumi.Input<inputs.TransportIpv4AclFeatureSequenceMatchEntry>[]>;
+    /**
+     * Sequence Id
+     *   - Range: `1`-`65536`
+     */
+    sequenceId?: pulumi.Input<number>;
+    /**
+     * Sequence Name
+     */
+    sequenceName?: pulumi.Input<string>;
+}
+
+export interface TransportIpv4AclFeatureSequenceAction {
+    /**
+     * Counter Name
+     */
+    acceptCounterName?: pulumi.Input<string>;
+    /**
+     * Enable Log
+     *   - Default value: `false`
+     */
+    acceptLog?: pulumi.Input<boolean>;
+    acceptMirrorListId?: pulumi.Input<string>;
+    acceptPolicerId?: pulumi.Input<string>;
+    /**
+     * DSCP number
+     *   - Range: `0`-`63`
+     */
+    acceptSetDscp?: pulumi.Input<number>;
+    /**
+     * Set Next Hop (IPV4 address)
+     */
+    acceptSetNextHop?: pulumi.Input<string>;
+    /**
+     * Counter Name
+     */
+    dropCounterName?: pulumi.Input<string>;
+    /**
+     * Enable Log
+     *   - Default value: `false`
+     */
+    dropLog?: pulumi.Input<boolean>;
+}
+
+export interface TransportIpv4AclFeatureSequenceMatchEntry {
+    /**
+     * Destination Data IP Prefix
+     */
+    destinationDataPrefix?: pulumi.Input<string>;
+    destinationDataPrefixListId?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    destinationDataPrefixVariable?: pulumi.Input<string>;
+    /**
+     * Destination Port List
+     */
+    destinationPorts?: pulumi.Input<pulumi.Input<inputs.TransportIpv4AclFeatureSequenceMatchEntryDestinationPort>[]>;
+    /**
+     * DSCP number
+     */
+    dscps?: pulumi.Input<pulumi.Input<number>[]>;
+    /**
+     * ICMP Message
+     */
+    icmpMessages?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Packet Length
+     */
+    packetLength?: pulumi.Input<number>;
+    /**
+     * protocol number list with at least one item
+     */
+    protocols?: pulumi.Input<pulumi.Input<number>[]>;
+    /**
+     * Source Data IP Prefix
+     */
+    sourceDataPrefix?: pulumi.Input<string>;
+    sourceDataPrefixListId?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    sourceDataPrefixVariable?: pulumi.Input<string>;
+    /**
+     * Source Port List
+     */
+    sourcePorts?: pulumi.Input<pulumi.Input<inputs.TransportIpv4AclFeatureSequenceMatchEntrySourcePort>[]>;
+    /**
+     * TCP States
+     *   - Choices: `syn`
+     */
+    tcpState?: pulumi.Input<string>;
+}
+
+export interface TransportIpv4AclFeatureSequenceMatchEntryDestinationPort {
+    /**
+     * destination port range or individual port number
+     */
+    port?: pulumi.Input<number>;
+}
+
+export interface TransportIpv4AclFeatureSequenceMatchEntrySourcePort {
+    /**
+     * source port range or individual port number
+     */
+    port?: pulumi.Input<number>;
+}
+
+export interface TransportIpv6AclFeatureSequence {
+    /**
+     * Define list of actions
+     */
+    actions?: pulumi.Input<pulumi.Input<inputs.TransportIpv6AclFeatureSequenceAction>[]>;
+    /**
+     * Base Action
+     *   - Choices: `drop`, `accept`
+     *   - Default value: `accept`
+     */
+    baseAction?: pulumi.Input<string>;
+    /**
+     * Define match conditions
+     */
+    matchEntries?: pulumi.Input<pulumi.Input<inputs.TransportIpv6AclFeatureSequenceMatchEntry>[]>;
+    /**
+     * Sequence Id
+     *   - Range: `1`-`65536`
+     */
+    sequenceId?: pulumi.Input<number>;
+    /**
+     * Sequence Name
+     */
+    sequenceName?: pulumi.Input<string>;
+}
+
+export interface TransportIpv6AclFeatureSequenceAction {
+    /**
+     * Counter Name
+     */
+    acceptCounterName?: pulumi.Input<string>;
+    /**
+     * Enable Log
+     *   - Default value: `false`
+     */
+    acceptLog?: pulumi.Input<boolean>;
+    acceptMirrorListId?: pulumi.Input<string>;
+    acceptPolicerId?: pulumi.Input<string>;
+    /**
+     * Set Next Hop (IPV6 address)
+     */
+    acceptSetNextHop?: pulumi.Input<string>;
+    /**
+     * set traffic class number
+     *   - Range: `0`-`63`
+     */
+    acceptTrafficClass?: pulumi.Input<number>;
+    /**
+     * Counter Name
+     */
+    dropCounterName?: pulumi.Input<string>;
+    /**
+     * Enable Log
+     *   - Default value: `false`
+     */
+    dropLog?: pulumi.Input<boolean>;
+}
+
+export interface TransportIpv6AclFeatureSequenceMatchEntry {
+    /**
+     * Destination Data IP Prefix
+     */
+    destinationDataPrefix?: pulumi.Input<string>;
+    destinationDataPrefixListId?: pulumi.Input<string>;
+    /**
+     * Destination Port List
+     */
+    destinationPorts?: pulumi.Input<pulumi.Input<inputs.TransportIpv6AclFeatureSequenceMatchEntryDestinationPort>[]>;
+    /**
+     * ICMP6 Message
+     */
+    icmpMessages?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * next header number
+     *   - Range: `0`-`255`
+     */
+    nextHeader?: pulumi.Input<number>;
+    /**
+     * Packet Length
+     */
+    packetLength?: pulumi.Input<number>;
+    /**
+     * Source Data IP Prefix
+     */
+    sourceDataPrefix?: pulumi.Input<string>;
+    sourceDataPrefixListId?: pulumi.Input<string>;
+    /**
+     * Source Port List
+     */
+    sourcePorts?: pulumi.Input<pulumi.Input<inputs.TransportIpv6AclFeatureSequenceMatchEntrySourcePort>[]>;
+    /**
+     * TCP States
+     *   - Choices: `syn`
+     */
+    tcpState?: pulumi.Input<string>;
+    /**
+     * Select Traffic Class
+     */
+    trafficClasses?: pulumi.Input<pulumi.Input<number>[]>;
+}
+
+export interface TransportIpv6AclFeatureSequenceMatchEntryDestinationPort {
+    /**
+     * destination port range or individual port number
+     */
+    port?: pulumi.Input<number>;
+}
+
+export interface TransportIpv6AclFeatureSequenceMatchEntrySourcePort {
+    /**
+     * source port range or individual port number
+     */
+    port?: pulumi.Input<number>;
+}
+
 export interface TransportIpv6TrackerGroupFeatureTrackerElement {
     trackerId?: pulumi.Input<string>;
 }
@@ -11944,7 +13371,12 @@ export interface TransportManagementVpnFeatureIpv4StaticRouteNextHop {
 
 export interface TransportManagementVpnFeatureIpv6StaticRoute {
     /**
-     * IPv6 Nat
+     * Gateway
+     *   - Choices: `nextHop`, `null0`, `nat`
+     */
+    gateway?: pulumi.Input<string>;
+    /**
+     * IPv6 Nat, Attribute conditional on `gateway` being equal to `nat`
      *   - Choices: `NAT64`, `NAT66`
      */
     nat?: pulumi.Input<string>;
@@ -11953,11 +13385,11 @@ export interface TransportManagementVpnFeatureIpv6StaticRoute {
      */
     natVariable?: pulumi.Input<string>;
     /**
-     * IPv6 Route Gateway Next Hop
+     * IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
      */
     nextHops?: pulumi.Input<pulumi.Input<inputs.TransportManagementVpnFeatureIpv6StaticRouteNextHop>[]>;
     /**
-     * IPv6 Route Gateway Next Hop
+     * IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `null0`
      */
     null0?: pulumi.Input<boolean>;
     /**
@@ -11982,6 +13414,7 @@ export interface TransportManagementVpnFeatureIpv6StaticRouteNextHop {
     /**
      * Administrative distance
      *   - Range: `1`-`254`
+     *   - Default value: `1`
      */
     administrativeDistance?: pulumi.Input<number>;
     /**
@@ -13256,6 +14689,124 @@ export interface TransportRoutingOspfv3Ipv6FeatureRedistribute {
      */
     protocolVariable?: pulumi.Input<string>;
     routePolicyId?: pulumi.Input<string>;
+}
+
+export interface TransportT1E1ControllerFeatureEntry {
+    /**
+     * Cable Config
+     *   - Choices: `short`, `long`
+     */
+    cableLength?: pulumi.Input<string>;
+    /**
+     * Channel Group List
+     */
+    channelGroups?: pulumi.Input<pulumi.Input<inputs.TransportT1E1ControllerFeatureEntryChannelGroup>[]>;
+    /**
+     * Clock Source
+     *   - Choices: `line`, `internal`, `loop-timed`, `network`
+     */
+    clockSource?: pulumi.Input<string>;
+    /**
+     * Description
+     */
+    description?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    descriptionVariable?: pulumi.Input<string>;
+    /**
+     * Card Type
+     *   - Choices: `E1`
+     */
+    e1Description?: pulumi.Input<string>;
+    /**
+     * Framing
+     *   - Choices: `crc4`, `no-crc4`
+     */
+    e1Framing?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    e1FramingVariable?: pulumi.Input<string>;
+    /**
+     * LineCode
+     *   - Choices: `ami`, `hdb3`
+     */
+    e1Linecode?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    e1LinecodeVariable?: pulumi.Input<string>;
+    /**
+     * length, Attribute conditional on `cableLength` being equal to `long`
+     *   - Choices: `-15db`, `-22.5db`, `-7.5db`, `0db`
+     */
+    lengthLong?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    lengthLongVariable?: pulumi.Input<string>;
+    /**
+     * length, Attribute conditional on `cableLength` being equal to `short`
+     *   - Choices: `110ft`, `220ft`, `330ft`, `440ft`, `550ft`, `660ft`
+     */
+    lengthShort?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    lengthShortVariable?: pulumi.Input<string>;
+    /**
+     * Line Mode
+     *   - Choices: `secondary`, `primary`
+     */
+    lineMode?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    lineModeVariable?: pulumi.Input<string>;
+    /**
+     * Card Type
+     *   - Choices: `T1`
+     */
+    t1Description?: pulumi.Input<string>;
+    /**
+     * Framing
+     *   - Choices: `esf`, `sf`
+     */
+    t1Framing?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    t1FramingVariable?: pulumi.Input<string>;
+    /**
+     * LineCode
+     *   - Choices: `ami`, `b8zs`
+     */
+    t1Linecode?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    t1LinecodeVariable?: pulumi.Input<string>;
+}
+
+export interface TransportT1E1ControllerFeatureEntryChannelGroup {
+    /**
+     * Number
+     *   - Range: `0`-`23`
+     */
+    channelGroup?: pulumi.Input<number>;
+    /**
+     * Variable name
+     */
+    channelGroupVariable?: pulumi.Input<string>;
+    /**
+     * Time slots
+     */
+    timeSlot?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    timeSlotVariable?: pulumi.Input<string>;
 }
 
 export interface TransportTrackerGroupFeatureTrackerElement {

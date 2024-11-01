@@ -105,6 +105,7 @@ class ServiceFeatureProfile(pulumi.CustomResource):
                  __props__=None):
         """
         This resource can manage a Service Feature Profile .
+          - Minimum SD-WAN Manager version: `20.12.0`
 
         ## Example Usage
 
@@ -136,6 +137,7 @@ class ServiceFeatureProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a Service Feature Profile .
+          - Minimum SD-WAN Manager version: `20.12.0`
 
         ## Example Usage
 

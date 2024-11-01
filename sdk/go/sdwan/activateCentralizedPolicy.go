@@ -12,6 +12,12 @@ import (
 )
 
 // This resource can activate a centralized policy.
+//
+// ## Import
+//
+// ```sh
+// $ pulumi import sdwan:index/activateCentralizedPolicy:ActivateCentralizedPolicy example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+// ```
 type ActivateCentralizedPolicy struct {
 	pulumi.CustomResourceState
 

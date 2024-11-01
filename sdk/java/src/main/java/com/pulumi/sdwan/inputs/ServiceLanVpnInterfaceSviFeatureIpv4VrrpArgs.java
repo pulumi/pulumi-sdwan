@@ -6,6 +6,7 @@ package com.pulumi.sdwan.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.sdwan.inputs.ServiceLanVpnInterfaceSviFeatureIpv4VrrpSecondaryAddressArgs;
+import com.pulumi.sdwan.inputs.ServiceLanVpnInterfaceSviFeatureIpv4VrrpTrackingObjectArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -275,6 +276,21 @@ public final class ServiceLanVpnInterfaceSviFeatureIpv4VrrpArgs extends com.pulu
         return Optional.ofNullable(this.trackOmpVariable);
     }
 
+    /**
+     * tracking object for VRRP configuration
+     * 
+     */
+    @Import(name="trackingObjects")
+    private @Nullable Output<List<ServiceLanVpnInterfaceSviFeatureIpv4VrrpTrackingObjectArgs>> trackingObjects;
+
+    /**
+     * @return tracking object for VRRP configuration
+     * 
+     */
+    public Optional<Output<List<ServiceLanVpnInterfaceSviFeatureIpv4VrrpTrackingObjectArgs>>> trackingObjects() {
+        return Optional.ofNullable(this.trackingObjects);
+    }
+
     private ServiceLanVpnInterfaceSviFeatureIpv4VrrpArgs() {}
 
     private ServiceLanVpnInterfaceSviFeatureIpv4VrrpArgs(ServiceLanVpnInterfaceSviFeatureIpv4VrrpArgs $) {
@@ -294,6 +310,7 @@ public final class ServiceLanVpnInterfaceSviFeatureIpv4VrrpArgs extends com.pulu
         this.tlocPrefixChangeValueVariable = $.tlocPrefixChangeValueVariable;
         this.trackOmp = $.trackOmp;
         this.trackOmpVariable = $.trackOmpVariable;
+        this.trackingObjects = $.trackingObjects;
     }
 
     public static Builder builder() {
@@ -674,6 +691,37 @@ public final class ServiceLanVpnInterfaceSviFeatureIpv4VrrpArgs extends com.pulu
          */
         public Builder trackOmpVariable(String trackOmpVariable) {
             return trackOmpVariable(Output.of(trackOmpVariable));
+        }
+
+        /**
+         * @param trackingObjects tracking object for VRRP configuration
+         * 
+         * @return builder
+         * 
+         */
+        public Builder trackingObjects(@Nullable Output<List<ServiceLanVpnInterfaceSviFeatureIpv4VrrpTrackingObjectArgs>> trackingObjects) {
+            $.trackingObjects = trackingObjects;
+            return this;
+        }
+
+        /**
+         * @param trackingObjects tracking object for VRRP configuration
+         * 
+         * @return builder
+         * 
+         */
+        public Builder trackingObjects(List<ServiceLanVpnInterfaceSviFeatureIpv4VrrpTrackingObjectArgs> trackingObjects) {
+            return trackingObjects(Output.of(trackingObjects));
+        }
+
+        /**
+         * @param trackingObjects tracking object for VRRP configuration
+         * 
+         * @return builder
+         * 
+         */
+        public Builder trackingObjects(ServiceLanVpnInterfaceSviFeatureIpv4VrrpTrackingObjectArgs... trackingObjects) {
+            return trackingObjects(List.of(trackingObjects));
         }
 
         public ServiceLanVpnInterfaceSviFeatureIpv4VrrpArgs build() {

@@ -14,6 +14,10 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class GetTransportManagementVpnFeatureIpv6StaticRouteResult
     {
         /// <summary>
+        /// Gateway
+        /// </summary>
+        public readonly string Gateway;
+        /// <summary>
         /// IPv6 Nat
         /// </summary>
         public readonly string Nat;
@@ -40,6 +44,8 @@ namespace Pulumi.Sdwan.Outputs
 
         [OutputConstructor]
         private GetTransportManagementVpnFeatureIpv6StaticRouteResult(
+            string gateway,
+
             string nat,
 
             string natVariable,
@@ -52,6 +58,7 @@ namespace Pulumi.Sdwan.Outputs
 
             string prefixVariable)
         {
+            Gateway = gateway;
             Nat = nat;
             NatVariable = natVariable;
             NextHops = nextHops;
