@@ -15,12 +15,6 @@ The Cisco Catalyst SD-WAN provider is available as a package in all Pulumi langu
 * Java: [`com.pulumi/sdwan`](https://central.sonatype.com/artifact/com.pulumi/sdwan)
 ## Overview
 
----
-layout: ""
-page_title: "Provider: SDWAN"
-description: |-
-The SDWAN provider provides resources to interact with a Cisco Catalyst SD-WAN environment.
----
 The SDWAN provider provides resources to interact with a Cisco Catalyst SD-WAN environment. It communicates with the SD-WAN Manager via the REST API.
 
 All resources and functions have been tested with the following releases.
