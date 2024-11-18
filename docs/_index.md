@@ -23,3 +23,117 @@ All resources and functions have been tested with the following releases.
 |-----------------|---------|
 | Catalyst SD-WAN |    20.9 |
 | Catalyst SD-WAN |   20.12 |
+## Getting Started
+
+The following guides with examples exist to demonstrate the use of the provider:
+
+- Getting Started
+- Updating Templates
+- Configuration Groups
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{% choosable language typescript %}}
+```yaml
+# Pulumi.yaml provider configuration file
+name: configuration-example
+runtime: nodejs
+config:
+    sdwan:password:
+        value: password
+    sdwan:url:
+        value: https://10.1.1.1
+    sdwan:username:
+        value: admin
+
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+```yaml
+# Pulumi.yaml provider configuration file
+name: configuration-example
+runtime: python
+config:
+    sdwan:password:
+        value: password
+    sdwan:url:
+        value: https://10.1.1.1
+    sdwan:username:
+        value: admin
+
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+```yaml
+# Pulumi.yaml provider configuration file
+name: configuration-example
+runtime: dotnet
+config:
+    sdwan:password:
+        value: password
+    sdwan:url:
+        value: https://10.1.1.1
+    sdwan:username:
+        value: admin
+
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+```yaml
+# Pulumi.yaml provider configuration file
+name: configuration-example
+runtime: go
+config:
+    sdwan:password:
+        value: password
+    sdwan:url:
+        value: https://10.1.1.1
+    sdwan:username:
+        value: admin
+
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+```yaml
+# Pulumi.yaml provider configuration file
+name: configuration-example
+runtime: yaml
+config:
+    sdwan:password:
+        value: password
+    sdwan:url:
+        value: https://10.1.1.1
+    sdwan:username:
+        value: admin
+
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+```yaml
+# Pulumi.yaml provider configuration file
+name: configuration-example
+runtime: java
+config:
+    sdwan:password:
+        value: password
+    sdwan:url:
+        value: https://10.1.1.1
+    sdwan:username:
+        value: admin
+
+```
+
+{{% /choosable %}}
+{{< /chooser >}}
+## Configuration Reference
+
+- `insecure` (Boolean) Allow insecure HTTPS client. This can also be set as the `SDWAN_INSECURE` environment variable. Defaults to `true`.
+- `password` (String, Sensitive) Password for the SD-WAN Manager account. This can also be set as the `SDWAN_PASSWORD` environment variable.
+- `retries` (Number) Number of retries for REST API calls. This can also be set as the `SDWAN_RETRIES` environment variable. Defaults to `3`.
+- `url` (String) URL of the Cisco SD-WAN Manager device. This can also be set as the `SDWAN_URL` environment variable.
+- `username` (String) Username for the SD-WAN Manager account. This can also be set as the `SDWAN_USERNAME` environment variable.
