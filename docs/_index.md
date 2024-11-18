@@ -23,13 +23,6 @@ All resources and functions have been tested with the following releases.
 |-----------------|---------|
 | Catalyst SD-WAN |    20.9 |
 | Catalyst SD-WAN |   20.12 |
-## Getting Started
-
-The following guides with examples exist to demonstrate the use of the provider:
-
-- Getting Started
-- Updating Templates
-- Configuration Groups
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
