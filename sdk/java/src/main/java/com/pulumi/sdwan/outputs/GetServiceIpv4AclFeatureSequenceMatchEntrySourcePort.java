@@ -5,7 +5,7 @@ package com.pulumi.sdwan.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import java.lang.Integer;
+import java.lang.String;
 import java.util.Objects;
 
 @CustomType
@@ -14,14 +14,14 @@ public final class GetServiceIpv4AclFeatureSequenceMatchEntrySourcePort {
      * @return source port range or individual port number
      * 
      */
-    private Integer port;
+    private String port;
 
     private GetServiceIpv4AclFeatureSequenceMatchEntrySourcePort() {}
     /**
      * @return source port range or individual port number
      * 
      */
-    public Integer port() {
+    public String port() {
         return this.port;
     }
 
@@ -34,7 +34,7 @@ public final class GetServiceIpv4AclFeatureSequenceMatchEntrySourcePort {
     }
     @CustomType.Builder
     public static final class Builder {
-        private Integer port;
+        private String port;
         public Builder() {}
         public Builder(GetServiceIpv4AclFeatureSequenceMatchEntrySourcePort defaults) {
     	      Objects.requireNonNull(defaults);
@@ -42,7 +42,7 @@ public final class GetServiceIpv4AclFeatureSequenceMatchEntrySourcePort {
         }
 
         @CustomType.Setter
-        public Builder port(Integer port) {
+        public Builder port(String port) {
             if (port == null) {
               throw new MissingRequiredPropertyException("GetServiceIpv4AclFeatureSequenceMatchEntrySourcePort", "port");
             }

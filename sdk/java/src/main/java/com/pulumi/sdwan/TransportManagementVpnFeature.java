@@ -72,7 +72,7 @@ import javax.annotation.Nullable;
  *                 .build())
  *             .ipv6StaticRoutes(TransportManagementVpnFeatureIpv6StaticRouteArgs.builder()
  *                 .prefix("2002::/16")
- *                 .gateway("next_hop")
+ *                 .gateway("nextHop")
  *                 .next_hops(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .build())
  *             .build());

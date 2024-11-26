@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 public final class TransportManagementVpnFeatureIpv6StaticRoute {
     /**
      * @return Gateway
-     *   - Choices: `next_hop`, `null0`, `nat`
+     *   - Choices: `nextHop`, `null0`, `nat`
      * 
      */
     private @Nullable String gateway;
@@ -32,7 +32,7 @@ public final class TransportManagementVpnFeatureIpv6StaticRoute {
      */
     private @Nullable String natVariable;
     /**
-     * @return IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `next_hop`
+     * @return IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
      * 
      */
     private @Nullable List<TransportManagementVpnFeatureIpv6StaticRouteNextHop> nextHops;
@@ -55,7 +55,7 @@ public final class TransportManagementVpnFeatureIpv6StaticRoute {
     private TransportManagementVpnFeatureIpv6StaticRoute() {}
     /**
      * @return Gateway
-     *   - Choices: `next_hop`, `null0`, `nat`
+     *   - Choices: `nextHop`, `null0`, `nat`
      * 
      */
     public Optional<String> gateway() {
@@ -77,7 +77,7 @@ public final class TransportManagementVpnFeatureIpv6StaticRoute {
         return Optional.ofNullable(this.natVariable);
     }
     /**
-     * @return IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `next_hop`
+     * @return IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
      * 
      */
     public List<TransportManagementVpnFeatureIpv6StaticRouteNextHop> nextHops() {

@@ -53,6 +53,10 @@ export interface GetTransportWanVpnInterfaceEthernetFeatureArgs {
  * A collection of values returned by getTransportWanVpnInterfaceEthernetFeature.
  */
 export interface GetTransportWanVpnInterfaceEthernetFeatureResult {
+    readonly aclIpv4EgressFeatureId: string;
+    readonly aclIpv4IngressFeatureId: string;
+    readonly aclIpv6EgressFeatureId: string;
+    readonly aclIpv6IngressFeatureId: string;
     /**
      * Timeout value for dynamically learned ARP entries, \n\n seconds
      */

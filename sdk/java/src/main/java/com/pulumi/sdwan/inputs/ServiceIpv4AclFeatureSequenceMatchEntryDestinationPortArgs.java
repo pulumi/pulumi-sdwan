@@ -5,7 +5,7 @@ package com.pulumi.sdwan.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import java.lang.Integer;
+import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -20,13 +20,13 @@ public final class ServiceIpv4AclFeatureSequenceMatchEntryDestinationPortArgs ex
      * 
      */
     @Import(name="port")
-    private @Nullable Output<Integer> port;
+    private @Nullable Output<String> port;
 
     /**
      * @return destination port range or individual port number
      * 
      */
-    public Optional<Output<Integer>> port() {
+    public Optional<Output<String>> port() {
         return Optional.ofNullable(this.port);
     }
 
@@ -60,7 +60,7 @@ public final class ServiceIpv4AclFeatureSequenceMatchEntryDestinationPortArgs ex
          * @return builder
          * 
          */
-        public Builder port(@Nullable Output<Integer> port) {
+        public Builder port(@Nullable Output<String> port) {
             $.port = port;
             return this;
         }
@@ -71,7 +71,7 @@ public final class ServiceIpv4AclFeatureSequenceMatchEntryDestinationPortArgs ex
          * @return builder
          * 
          */
-        public Builder port(Integer port) {
+        public Builder port(String port) {
             return port(Output.of(port));
         }
 

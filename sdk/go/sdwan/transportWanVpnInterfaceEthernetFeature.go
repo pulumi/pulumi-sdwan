@@ -25,6 +25,10 @@ import (
 type TransportWanVpnInterfaceEthernetFeature struct {
 	pulumi.CustomResourceState
 
+	AclIpv4EgressFeatureId  pulumi.StringPtrOutput `pulumi:"aclIpv4EgressFeatureId"`
+	AclIpv4IngressFeatureId pulumi.StringPtrOutput `pulumi:"aclIpv4IngressFeatureId"`
+	AclIpv6EgressFeatureId  pulumi.StringPtrOutput `pulumi:"aclIpv6EgressFeatureId"`
+	AclIpv6IngressFeatureId pulumi.StringPtrOutput `pulumi:"aclIpv6IngressFeatureId"`
 	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
 	ArpTimeout pulumi.IntPtrOutput `pulumi:"arpTimeout"`
 	// Variable name
@@ -451,6 +455,10 @@ func GetTransportWanVpnInterfaceEthernetFeature(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering TransportWanVpnInterfaceEthernetFeature resources.
 type transportWanVpnInterfaceEthernetFeatureState struct {
+	AclIpv4EgressFeatureId  *string `pulumi:"aclIpv4EgressFeatureId"`
+	AclIpv4IngressFeatureId *string `pulumi:"aclIpv4IngressFeatureId"`
+	AclIpv6EgressFeatureId  *string `pulumi:"aclIpv6EgressFeatureId"`
+	AclIpv6IngressFeatureId *string `pulumi:"aclIpv6IngressFeatureId"`
 	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
 	ArpTimeout *int `pulumi:"arpTimeout"`
 	// Variable name
@@ -845,6 +853,10 @@ type transportWanVpnInterfaceEthernetFeatureState struct {
 }
 
 type TransportWanVpnInterfaceEthernetFeatureState struct {
+	AclIpv4EgressFeatureId  pulumi.StringPtrInput
+	AclIpv4IngressFeatureId pulumi.StringPtrInput
+	AclIpv6EgressFeatureId  pulumi.StringPtrInput
+	AclIpv6IngressFeatureId pulumi.StringPtrInput
 	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
 	ArpTimeout pulumi.IntPtrInput
 	// Variable name
@@ -1243,6 +1255,10 @@ func (TransportWanVpnInterfaceEthernetFeatureState) ElementType() reflect.Type {
 }
 
 type transportWanVpnInterfaceEthernetFeatureArgs struct {
+	AclIpv4EgressFeatureId  *string `pulumi:"aclIpv4EgressFeatureId"`
+	AclIpv4IngressFeatureId *string `pulumi:"aclIpv4IngressFeatureId"`
+	AclIpv6EgressFeatureId  *string `pulumi:"aclIpv6EgressFeatureId"`
+	AclIpv6IngressFeatureId *string `pulumi:"aclIpv6IngressFeatureId"`
 	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
 	ArpTimeout *int `pulumi:"arpTimeout"`
 	// Variable name
@@ -1636,6 +1652,10 @@ type transportWanVpnInterfaceEthernetFeatureArgs struct {
 
 // The set of arguments for constructing a TransportWanVpnInterfaceEthernetFeature resource.
 type TransportWanVpnInterfaceEthernetFeatureArgs struct {
+	AclIpv4EgressFeatureId  pulumi.StringPtrInput
+	AclIpv4IngressFeatureId pulumi.StringPtrInput
+	AclIpv6EgressFeatureId  pulumi.StringPtrInput
+	AclIpv6IngressFeatureId pulumi.StringPtrInput
 	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
 	ArpTimeout pulumi.IntPtrInput
 	// Variable name
@@ -2112,6 +2132,30 @@ func (o TransportWanVpnInterfaceEthernetFeatureOutput) ToTransportWanVpnInterfac
 
 func (o TransportWanVpnInterfaceEthernetFeatureOutput) ToTransportWanVpnInterfaceEthernetFeatureOutputWithContext(ctx context.Context) TransportWanVpnInterfaceEthernetFeatureOutput {
 	return o
+}
+
+func (o TransportWanVpnInterfaceEthernetFeatureOutput) AclIpv4EgressFeatureId() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
+		return v.AclIpv4EgressFeatureId
+	}).(pulumi.StringPtrOutput)
+}
+
+func (o TransportWanVpnInterfaceEthernetFeatureOutput) AclIpv4IngressFeatureId() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
+		return v.AclIpv4IngressFeatureId
+	}).(pulumi.StringPtrOutput)
+}
+
+func (o TransportWanVpnInterfaceEthernetFeatureOutput) AclIpv6EgressFeatureId() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
+		return v.AclIpv6EgressFeatureId
+	}).(pulumi.StringPtrOutput)
+}
+
+func (o TransportWanVpnInterfaceEthernetFeatureOutput) AclIpv6IngressFeatureId() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
+		return v.AclIpv6IngressFeatureId
+	}).(pulumi.StringPtrOutput)
 }
 
 // Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`

@@ -15,7 +15,7 @@ namespace Pulumi.Sdwan.Outputs
     {
         /// <summary>
         /// Gateway
-        ///   - Choices: `next_hop`, `null0`, `nat`
+        ///   - Choices: `nextHop`, `null0`, `nat`
         /// </summary>
         public readonly string? Gateway;
         /// <summary>
@@ -28,7 +28,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string? NatVariable;
         /// <summary>
-        /// IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `next_hop`
+        /// IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
         /// </summary>
         public readonly ImmutableArray<Outputs.TransportManagementVpnFeatureIpv6StaticRouteNextHop> NextHops;
         /// <summary>

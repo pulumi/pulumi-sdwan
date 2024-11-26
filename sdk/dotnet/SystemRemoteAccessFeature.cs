@@ -118,7 +118,7 @@ namespace Pulumi.Sdwan
         /// , Attribute conditional on `connection_type_ssl` being equal to `false` - Choices: `user`, `device`
         /// </summary>
         [Output("anyConnectEapAuthenticationType")]
-        public Output<string> AnyConnectEapAuthenticationType { get; private set; } = null!;
+        public Output<string?> AnyConnectEapAuthenticationType { get; private set; } = null!;
 
         /// <summary>
         /// Enabled SSL VPN - Default value: `false`
@@ -424,8 +424,8 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// , Attribute conditional on `connection_type_ssl` being equal to `false` - Choices: `user`, `device`
         /// </summary>
-        [Input("anyConnectEapAuthenticationType", required: true)]
-        public Input<string> AnyConnectEapAuthenticationType { get; set; } = null!;
+        [Input("anyConnectEapAuthenticationType")]
+        public Input<string>? AnyConnectEapAuthenticationType { get; set; }
 
         /// <summary>
         /// Enabled SSL VPN - Default value: `false`

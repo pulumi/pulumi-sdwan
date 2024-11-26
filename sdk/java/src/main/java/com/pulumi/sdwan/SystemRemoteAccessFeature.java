@@ -213,14 +213,14 @@ public class SystemRemoteAccessFeature extends com.pulumi.resources.CustomResour
      * 
      */
     @Export(name="anyConnectEapAuthenticationType", refs={String.class}, tree="[0]")
-    private Output<String> anyConnectEapAuthenticationType;
+    private Output</* @Nullable */ String> anyConnectEapAuthenticationType;
 
     /**
      * @return , Attribute conditional on `connection_type_ssl` being equal to `false` - Choices: `user`, `device`
      * 
      */
-    public Output<String> anyConnectEapAuthenticationType() {
-        return this.anyConnectEapAuthenticationType;
+    public Output<Optional<String>> anyConnectEapAuthenticationType() {
+        return Codegen.optional(this.anyConnectEapAuthenticationType);
     }
     /**
      * Enabled SSL VPN - Default value: `false`

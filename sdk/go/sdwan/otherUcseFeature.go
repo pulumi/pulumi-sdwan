@@ -27,10 +27,11 @@ type OtherUcseFeature struct {
 
 	// Dedicated - Default value: `true`
 	AccessPortDedicated pulumi.BoolPtrOutput `pulumi:"accessPortDedicated"`
-	// - Choices: `ge2`, `te2`
-	AccessPortSharedFailoverType pulumi.StringOutput `pulumi:"accessPortSharedFailoverType"`
-	// - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
-	AccessPortSharedType pulumi.StringOutput `pulumi:"accessPortSharedType"`
+	// , Attribute conditional on `accessPortDedicated` being equal to `false` - Choices: `ge2`, `te2`
+	AccessPortSharedFailoverType pulumi.StringPtrOutput `pulumi:"accessPortSharedFailoverType"`
+	// , Attribute conditional on `accessPortDedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
+	// `console`, `failover`
+	AccessPortSharedType pulumi.StringPtrOutput `pulumi:"accessPortSharedType"`
 	// Assign priority - Range: `0`-`7`
 	AssignPriority pulumi.IntPtrOutput `pulumi:"assignPriority"`
 	// Variable name
@@ -70,12 +71,6 @@ func NewOtherUcseFeature(ctx *pulumi.Context,
 		return nil, errors.New("missing one or more required arguments")
 	}
 
-	if args.AccessPortSharedFailoverType == nil {
-		return nil, errors.New("invalid value for required argument 'AccessPortSharedFailoverType'")
-	}
-	if args.AccessPortSharedType == nil {
-		return nil, errors.New("invalid value for required argument 'AccessPortSharedType'")
-	}
 	if args.Bay == nil {
 		return nil, errors.New("invalid value for required argument 'Bay'")
 	}
@@ -110,9 +105,10 @@ func GetOtherUcseFeature(ctx *pulumi.Context,
 type otherUcseFeatureState struct {
 	// Dedicated - Default value: `true`
 	AccessPortDedicated *bool `pulumi:"accessPortDedicated"`
-	// - Choices: `ge2`, `te2`
+	// , Attribute conditional on `accessPortDedicated` being equal to `false` - Choices: `ge2`, `te2`
 	AccessPortSharedFailoverType *string `pulumi:"accessPortSharedFailoverType"`
-	// - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
+	// , Attribute conditional on `accessPortDedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
+	// `console`, `failover`
 	AccessPortSharedType *string `pulumi:"accessPortSharedType"`
 	// Assign priority - Range: `0`-`7`
 	AssignPriority *int `pulumi:"assignPriority"`
@@ -149,9 +145,10 @@ type otherUcseFeatureState struct {
 type OtherUcseFeatureState struct {
 	// Dedicated - Default value: `true`
 	AccessPortDedicated pulumi.BoolPtrInput
-	// - Choices: `ge2`, `te2`
+	// , Attribute conditional on `accessPortDedicated` being equal to `false` - Choices: `ge2`, `te2`
 	AccessPortSharedFailoverType pulumi.StringPtrInput
-	// - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
+	// , Attribute conditional on `accessPortDedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
+	// `console`, `failover`
 	AccessPortSharedType pulumi.StringPtrInput
 	// Assign priority - Range: `0`-`7`
 	AssignPriority pulumi.IntPtrInput
@@ -192,10 +189,11 @@ func (OtherUcseFeatureState) ElementType() reflect.Type {
 type otherUcseFeatureArgs struct {
 	// Dedicated - Default value: `true`
 	AccessPortDedicated *bool `pulumi:"accessPortDedicated"`
-	// - Choices: `ge2`, `te2`
-	AccessPortSharedFailoverType string `pulumi:"accessPortSharedFailoverType"`
-	// - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
-	AccessPortSharedType string `pulumi:"accessPortSharedType"`
+	// , Attribute conditional on `accessPortDedicated` being equal to `false` - Choices: `ge2`, `te2`
+	AccessPortSharedFailoverType *string `pulumi:"accessPortSharedFailoverType"`
+	// , Attribute conditional on `accessPortDedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
+	// `console`, `failover`
+	AccessPortSharedType *string `pulumi:"accessPortSharedType"`
 	// Assign priority - Range: `0`-`7`
 	AssignPriority *int `pulumi:"assignPriority"`
 	// Variable name
@@ -230,10 +228,11 @@ type otherUcseFeatureArgs struct {
 type OtherUcseFeatureArgs struct {
 	// Dedicated - Default value: `true`
 	AccessPortDedicated pulumi.BoolPtrInput
-	// - Choices: `ge2`, `te2`
-	AccessPortSharedFailoverType pulumi.StringInput
-	// - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
-	AccessPortSharedType pulumi.StringInput
+	// , Attribute conditional on `accessPortDedicated` being equal to `false` - Choices: `ge2`, `te2`
+	AccessPortSharedFailoverType pulumi.StringPtrInput
+	// , Attribute conditional on `accessPortDedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
+	// `console`, `failover`
+	AccessPortSharedType pulumi.StringPtrInput
 	// Assign priority - Range: `0`-`7`
 	AssignPriority pulumi.IntPtrInput
 	// Variable name
@@ -356,14 +355,15 @@ func (o OtherUcseFeatureOutput) AccessPortDedicated() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *OtherUcseFeature) pulumi.BoolPtrOutput { return v.AccessPortDedicated }).(pulumi.BoolPtrOutput)
 }
 
-// - Choices: `ge2`, `te2`
-func (o OtherUcseFeatureOutput) AccessPortSharedFailoverType() pulumi.StringOutput {
-	return o.ApplyT(func(v *OtherUcseFeature) pulumi.StringOutput { return v.AccessPortSharedFailoverType }).(pulumi.StringOutput)
+// , Attribute conditional on `accessPortDedicated` being equal to `false` - Choices: `ge2`, `te2`
+func (o OtherUcseFeatureOutput) AccessPortSharedFailoverType() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *OtherUcseFeature) pulumi.StringPtrOutput { return v.AccessPortSharedFailoverType }).(pulumi.StringPtrOutput)
 }
 
-// - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
-func (o OtherUcseFeatureOutput) AccessPortSharedType() pulumi.StringOutput {
-	return o.ApplyT(func(v *OtherUcseFeature) pulumi.StringOutput { return v.AccessPortSharedType }).(pulumi.StringOutput)
+// , Attribute conditional on `accessPortDedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
+// `console`, `failover`
+func (o OtherUcseFeatureOutput) AccessPortSharedType() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *OtherUcseFeature) pulumi.StringPtrOutput { return v.AccessPortSharedType }).(pulumi.StringPtrOutput)
 }
 
 // Assign priority - Range: `0`-`7`

@@ -100,32 +100,34 @@ public class OtherUcseFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.accessPortDedicated);
     }
     /**
-     * - Choices: `ge2`, `te2`
+     * , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge2`, `te2`
      * 
      */
     @Export(name="accessPortSharedFailoverType", refs={String.class}, tree="[0]")
-    private Output<String> accessPortSharedFailoverType;
+    private Output</* @Nullable */ String> accessPortSharedFailoverType;
 
     /**
-     * @return - Choices: `ge2`, `te2`
+     * @return , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge2`, `te2`
      * 
      */
-    public Output<String> accessPortSharedFailoverType() {
-        return this.accessPortSharedFailoverType;
+    public Output<Optional<String>> accessPortSharedFailoverType() {
+        return Codegen.optional(this.accessPortSharedFailoverType);
     }
     /**
-     * - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
+     * , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
+     * `console`, `failover`
      * 
      */
     @Export(name="accessPortSharedType", refs={String.class}, tree="[0]")
-    private Output<String> accessPortSharedType;
+    private Output</* @Nullable */ String> accessPortSharedType;
 
     /**
-     * @return - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
+     * @return , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
+     * `console`, `failover`
      * 
      */
-    public Output<String> accessPortSharedType() {
-        return this.accessPortSharedType;
+    public Output<Optional<String>> accessPortSharedType() {
+        return Codegen.optional(this.accessPortSharedType);
     }
     /**
      * Assign priority - Range: `0`-`7`

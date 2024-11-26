@@ -106,6 +106,10 @@ import javax.annotation.Nullable;
  *             .natIpv4(true)
  *             .natUdpTimeout(1)
  *             .natTcpTimeout(60)
+ *             .qosAdaptive(false)
+ *             .qosShapingRate(16)
+ *             .aclIpv4EgressFeatureId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+ *             .aclIpv6IngressFeatureId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
  *             .arps(TransportWanVpnInterfaceCellularFeatureArpArgs.builder()
  *                 .ip_address("1.2.3.4")
  *                 .mac_address("00-B0-D0-63-C2-26")
@@ -135,6 +139,30 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="sdwan:index/transportWanVpnInterfaceCellularFeature:TransportWanVpnInterfaceCellularFeature")
 public class TransportWanVpnInterfaceCellularFeature extends com.pulumi.resources.CustomResource {
+    @Export(name="aclIpv4EgressFeatureId", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> aclIpv4EgressFeatureId;
+
+    public Output<Optional<String>> aclIpv4EgressFeatureId() {
+        return Codegen.optional(this.aclIpv4EgressFeatureId);
+    }
+    @Export(name="aclIpv4IngressFeatureId", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> aclIpv4IngressFeatureId;
+
+    public Output<Optional<String>> aclIpv4IngressFeatureId() {
+        return Codegen.optional(this.aclIpv4IngressFeatureId);
+    }
+    @Export(name="aclIpv6EgressFeatureId", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> aclIpv6EgressFeatureId;
+
+    public Output<Optional<String>> aclIpv6EgressFeatureId() {
+        return Codegen.optional(this.aclIpv6EgressFeatureId);
+    }
+    @Export(name="aclIpv6IngressFeatureId", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> aclIpv6IngressFeatureId;
+
+    public Output<Optional<String>> aclIpv6IngressFeatureId() {
+        return Codegen.optional(this.aclIpv6IngressFeatureId);
+    }
     /**
      * Configure ARP entries
      * 

@@ -53,6 +53,10 @@ export interface GetTransportWanVpnInterfaceT1E1SerialFeatureArgs {
  * A collection of values returned by getTransportWanVpnInterfaceT1E1SerialFeature.
  */
 export interface GetTransportWanVpnInterfaceT1E1SerialFeatureResult {
+    readonly aclIpv4EgressFeatureId: string;
+    readonly aclIpv4IngressFeatureId: string;
+    readonly aclIpv6EgressFeatureId: string;
+    readonly aclIpv6IngressFeatureId: string;
     /**
      * Interface bandwidth capacity, in kbps
      */

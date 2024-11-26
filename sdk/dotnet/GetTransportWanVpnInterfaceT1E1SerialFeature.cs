@@ -121,6 +121,10 @@ namespace Pulumi.Sdwan
     [OutputType]
     public sealed class GetTransportWanVpnInterfaceT1E1SerialFeatureResult
     {
+        public readonly string AclIpv4EgressFeatureId;
+        public readonly string AclIpv4IngressFeatureId;
+        public readonly string AclIpv6EgressFeatureId;
+        public readonly string AclIpv6IngressFeatureId;
         /// <summary>
         /// Interface bandwidth capacity, in kbps
         /// </summary>
@@ -542,6 +546,14 @@ namespace Pulumi.Sdwan
 
         [OutputConstructor]
         private GetTransportWanVpnInterfaceT1E1SerialFeatureResult(
+            string aclIpv4EgressFeatureId,
+
+            string aclIpv4IngressFeatureId,
+
+            string aclIpv6EgressFeatureId,
+
+            string aclIpv6IngressFeatureId,
+
             int bandwidth,
 
             int bandwidthDownstream,
@@ -754,6 +766,10 @@ namespace Pulumi.Sdwan
 
             int version)
         {
+            AclIpv4EgressFeatureId = aclIpv4EgressFeatureId;
+            AclIpv4IngressFeatureId = aclIpv4IngressFeatureId;
+            AclIpv6EgressFeatureId = aclIpv6EgressFeatureId;
+            AclIpv6IngressFeatureId = aclIpv6IngressFeatureId;
             Bandwidth = bandwidth;
             BandwidthDownstream = bandwidthDownstream;
             BandwidthDownstreamVariable = bandwidthDownstreamVariable;

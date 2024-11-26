@@ -19,7 +19,6 @@ __all__ = ['SystemRemoteAccessFeatureArgs', 'SystemRemoteAccessFeature']
 @pulumi.input_type
 class SystemRemoteAccessFeatureArgs:
     def __init__(__self__, *,
-                 any_connect_eap_authentication_type: pulumi.Input[str],
                  radius_group_name: pulumi.Input[str],
                  aaa_derive_name_from_peer_domain: Optional[pulumi.Input[str]] = None,
                  aaa_derive_name_from_peer_domain_variable: Optional[pulumi.Input[str]] = None,
@@ -31,6 +30,7 @@ class SystemRemoteAccessFeatureArgs:
                  aaa_specify_name_policy_name_variable: Optional[pulumi.Input[str]] = None,
                  aaa_specify_name_policy_password: Optional[pulumi.Input[str]] = None,
                  aaa_specify_name_policy_password_variable: Optional[pulumi.Input[str]] = None,
+                 any_connect_eap_authentication_type: Optional[pulumi.Input[str]] = None,
                  connection_type_ssl: Optional[pulumi.Input[bool]] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  enable_certificate_list_check: Optional[pulumi.Input[bool]] = None,
@@ -64,7 +64,6 @@ class SystemRemoteAccessFeatureArgs:
                  radius_group_name_variable: Optional[pulumi.Input[str]] = None):
         """
         The set of arguments for constructing a SystemRemoteAccessFeature resource.
-        :param pulumi.Input[str] any_connect_eap_authentication_type: , Attribute conditional on `connection_type_ssl` being equal to `false` - Choices: `user`, `device`
         :param pulumi.Input[str] aaa_derive_name_from_peer_domain: , Attribute conditional on `connection_type_ssl` being equal to `false`
         :param pulumi.Input[str] aaa_derive_name_from_peer_domain_variable: Variable name
         :param pulumi.Input[str] aaa_derive_name_from_peer_identity: , Attribute conditional on `connection_type_ssl` being equal to `false`
@@ -73,6 +72,7 @@ class SystemRemoteAccessFeatureArgs:
         :param pulumi.Input[str] aaa_enable_accounting_variable: Variable name
         :param pulumi.Input[str] aaa_specify_name_policy_name_variable: Variable name
         :param pulumi.Input[str] aaa_specify_name_policy_password_variable: Variable name
+        :param pulumi.Input[str] any_connect_eap_authentication_type: , Attribute conditional on `connection_type_ssl` being equal to `false` - Choices: `user`, `device`
         :param pulumi.Input[bool] connection_type_ssl: Enabled SSL VPN - Default value: `false`
         :param pulumi.Input[str] description: The description of the Feature
         :param pulumi.Input[bool] enable_certificate_list_check: - Default value: `false`
@@ -111,7 +111,6 @@ class SystemRemoteAccessFeatureArgs:
         :param pulumi.Input[str] psk_authentication_type_variable: Variable name
         :param pulumi.Input[str] radius_group_name_variable: Variable name
         """
-        pulumi.set(__self__, "any_connect_eap_authentication_type", any_connect_eap_authentication_type)
         pulumi.set(__self__, "radius_group_name", radius_group_name)
         if aaa_derive_name_from_peer_domain is not None:
             pulumi.set(__self__, "aaa_derive_name_from_peer_domain", aaa_derive_name_from_peer_domain)
@@ -133,6 +132,8 @@ class SystemRemoteAccessFeatureArgs:
             pulumi.set(__self__, "aaa_specify_name_policy_password", aaa_specify_name_policy_password)
         if aaa_specify_name_policy_password_variable is not None:
             pulumi.set(__self__, "aaa_specify_name_policy_password_variable", aaa_specify_name_policy_password_variable)
+        if any_connect_eap_authentication_type is not None:
+            pulumi.set(__self__, "any_connect_eap_authentication_type", any_connect_eap_authentication_type)
         if connection_type_ssl is not None:
             pulumi.set(__self__, "connection_type_ssl", connection_type_ssl)
         if description is not None:
@@ -195,18 +196,6 @@ class SystemRemoteAccessFeatureArgs:
             pulumi.set(__self__, "psk_authentication_type_variable", psk_authentication_type_variable)
         if radius_group_name_variable is not None:
             pulumi.set(__self__, "radius_group_name_variable", radius_group_name_variable)
-
-    @property
-    @pulumi.getter(name="anyConnectEapAuthenticationType")
-    def any_connect_eap_authentication_type(self) -> pulumi.Input[str]:
-        """
-        , Attribute conditional on `connection_type_ssl` being equal to `false` - Choices: `user`, `device`
-        """
-        return pulumi.get(self, "any_connect_eap_authentication_type")
-
-    @any_connect_eap_authentication_type.setter
-    def any_connect_eap_authentication_type(self, value: pulumi.Input[str]):
-        pulumi.set(self, "any_connect_eap_authentication_type", value)
 
     @property
     @pulumi.getter(name="radiusGroupName")
@@ -330,6 +319,18 @@ class SystemRemoteAccessFeatureArgs:
     @aaa_specify_name_policy_password_variable.setter
     def aaa_specify_name_policy_password_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "aaa_specify_name_policy_password_variable", value)
+
+    @property
+    @pulumi.getter(name="anyConnectEapAuthenticationType")
+    def any_connect_eap_authentication_type(self) -> Optional[pulumi.Input[str]]:
+        """
+        , Attribute conditional on `connection_type_ssl` being equal to `false` - Choices: `user`, `device`
+        """
+        return pulumi.get(self, "any_connect_eap_authentication_type")
+
+    @any_connect_eap_authentication_type.setter
+    def any_connect_eap_authentication_type(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "any_connect_eap_authentication_type", value)
 
     @property
     @pulumi.getter(name="connectionTypeSsl")
@@ -1683,8 +1684,6 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
             __props__.__dict__["aaa_specify_name_policy_name_variable"] = aaa_specify_name_policy_name_variable
             __props__.__dict__["aaa_specify_name_policy_password"] = aaa_specify_name_policy_password
             __props__.__dict__["aaa_specify_name_policy_password_variable"] = aaa_specify_name_policy_password_variable
-            if any_connect_eap_authentication_type is None and not opts.urn:
-                raise TypeError("Missing required property 'any_connect_eap_authentication_type'")
             __props__.__dict__["any_connect_eap_authentication_type"] = any_connect_eap_authentication_type
             __props__.__dict__["connection_type_ssl"] = connection_type_ssl
             __props__.__dict__["description"] = description
@@ -1956,7 +1955,7 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="anyConnectEapAuthenticationType")
-    def any_connect_eap_authentication_type(self) -> pulumi.Output[str]:
+    def any_connect_eap_authentication_type(self) -> pulumi.Output[Optional[str]]:
         """
         , Attribute conditional on `connection_type_ssl` being equal to `false` - Choices: `user`, `device`
         """

@@ -62,6 +62,10 @@ type LookupTransportWanVpnInterfaceCellularFeatureArgs struct {
 
 // A collection of values returned by getTransportWanVpnInterfaceCellularFeature.
 type LookupTransportWanVpnInterfaceCellularFeatureResult struct {
+	AclIpv4EgressFeatureId  string `pulumi:"aclIpv4EgressFeatureId"`
+	AclIpv4IngressFeatureId string `pulumi:"aclIpv4IngressFeatureId"`
+	AclIpv6EgressFeatureId  string `pulumi:"aclIpv6EgressFeatureId"`
+	AclIpv6IngressFeatureId string `pulumi:"aclIpv6IngressFeatureId"`
 	// Configure ARP entries
 	Arps []GetTransportWanVpnInterfaceCellularFeatureArp `pulumi:"arps"`
 	// Interface downstream bandwidth capacity, in kbps
@@ -367,6 +371,22 @@ func (o LookupTransportWanVpnInterfaceCellularFeatureResultOutput) ToLookupTrans
 
 func (o LookupTransportWanVpnInterfaceCellularFeatureResultOutput) ToLookupTransportWanVpnInterfaceCellularFeatureResultOutputWithContext(ctx context.Context) LookupTransportWanVpnInterfaceCellularFeatureResultOutput {
 	return o
+}
+
+func (o LookupTransportWanVpnInterfaceCellularFeatureResultOutput) AclIpv4EgressFeatureId() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceCellularFeatureResult) string { return v.AclIpv4EgressFeatureId }).(pulumi.StringOutput)
+}
+
+func (o LookupTransportWanVpnInterfaceCellularFeatureResultOutput) AclIpv4IngressFeatureId() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceCellularFeatureResult) string { return v.AclIpv4IngressFeatureId }).(pulumi.StringOutput)
+}
+
+func (o LookupTransportWanVpnInterfaceCellularFeatureResultOutput) AclIpv6EgressFeatureId() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceCellularFeatureResult) string { return v.AclIpv6EgressFeatureId }).(pulumi.StringOutput)
+}
+
+func (o LookupTransportWanVpnInterfaceCellularFeatureResultOutput) AclIpv6IngressFeatureId() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceCellularFeatureResult) string { return v.AclIpv6IngressFeatureId }).(pulumi.StringOutput)
 }
 
 // Configure ARP entries

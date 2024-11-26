@@ -14,7 +14,12 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class TransportWanVpnFeatureIpv6StaticRoute
     {
         /// <summary>
-        /// IPv6 Nat
+        /// Gateway
+        ///   - Choices: `nextHop`, `null0`, `nat`
+        /// </summary>
+        public readonly string? Gateway;
+        /// <summary>
+        /// IPv6 Nat, Attribute conditional on `gateway` being equal to `nat`
         ///   - Choices: `NAT64`, `NAT66`
         /// </summary>
         public readonly string? Nat;
@@ -23,11 +28,11 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string? NatVariable;
         /// <summary>
-        /// IPv6 Route Gateway Next Hop
+        /// IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
         /// </summary>
         public readonly ImmutableArray<Outputs.TransportWanVpnFeatureIpv6StaticRouteNextHop> NextHops;
         /// <summary>
-        /// IPv6 Route Gateway Next Hop
+        /// IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `null0`
         /// </summary>
         public readonly bool? Null0;
         /// <summary>
@@ -41,6 +46,8 @@ namespace Pulumi.Sdwan.Outputs
 
         [OutputConstructor]
         private TransportWanVpnFeatureIpv6StaticRoute(
+            string? gateway,
+
             string? nat,
 
             string? natVariable,
@@ -53,6 +60,7 @@ namespace Pulumi.Sdwan.Outputs
 
             string? prefixVariable)
         {
+            Gateway = gateway;
             Nat = nat;
             NatVariable = natVariable;
             NextHops = nextHops;

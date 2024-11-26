@@ -31,16 +31,17 @@ namespace Pulumi.Sdwan
         public Output<bool?> AccessPortDedicated { get; private set; } = null!;
 
         /// <summary>
-        /// - Choices: `ge2`, `te2`
+        /// , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge2`, `te2`
         /// </summary>
         [Output("accessPortSharedFailoverType")]
-        public Output<string> AccessPortSharedFailoverType { get; private set; } = null!;
+        public Output<string?> AccessPortSharedFailoverType { get; private set; } = null!;
 
         /// <summary>
-        /// - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
+        /// , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
+        /// `console`, `failover`
         /// </summary>
         [Output("accessPortSharedType")]
-        public Output<string> AccessPortSharedType { get; private set; } = null!;
+        public Output<string?> AccessPortSharedType { get; private set; } = null!;
 
         /// <summary>
         /// Assign priority - Range: `0`-`7`
@@ -185,16 +186,17 @@ namespace Pulumi.Sdwan
         public Input<bool>? AccessPortDedicated { get; set; }
 
         /// <summary>
-        /// - Choices: `ge2`, `te2`
+        /// , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge2`, `te2`
         /// </summary>
-        [Input("accessPortSharedFailoverType", required: true)]
-        public Input<string> AccessPortSharedFailoverType { get; set; } = null!;
+        [Input("accessPortSharedFailoverType")]
+        public Input<string>? AccessPortSharedFailoverType { get; set; }
 
         /// <summary>
-        /// - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
+        /// , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
+        /// `console`, `failover`
         /// </summary>
-        [Input("accessPortSharedType", required: true)]
-        public Input<string> AccessPortSharedType { get; set; } = null!;
+        [Input("accessPortSharedType")]
+        public Input<string>? AccessPortSharedType { get; set; }
 
         /// <summary>
         /// Assign priority - Range: `0`-`7`
@@ -301,13 +303,14 @@ namespace Pulumi.Sdwan
         public Input<bool>? AccessPortDedicated { get; set; }
 
         /// <summary>
-        /// - Choices: `ge2`, `te2`
+        /// , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge2`, `te2`
         /// </summary>
         [Input("accessPortSharedFailoverType")]
         public Input<string>? AccessPortSharedFailoverType { get; set; }
 
         /// <summary>
-        /// - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
+        /// , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
+        /// `console`, `failover`
         /// </summary>
         [Input("accessPortSharedType")]
         public Input<string>? AccessPortSharedType { get; set; }

@@ -24,6 +24,18 @@ namespace Pulumi.Sdwan
     [SdwanResourceType("sdwan:index/transportWanVpnInterfaceCellularFeature:TransportWanVpnInterfaceCellularFeature")]
     public partial class TransportWanVpnInterfaceCellularFeature : global::Pulumi.CustomResource
     {
+        [Output("aclIpv4EgressFeatureId")]
+        public Output<string?> AclIpv4EgressFeatureId { get; private set; } = null!;
+
+        [Output("aclIpv4IngressFeatureId")]
+        public Output<string?> AclIpv4IngressFeatureId { get; private set; } = null!;
+
+        [Output("aclIpv6EgressFeatureId")]
+        public Output<string?> AclIpv6EgressFeatureId { get; private set; } = null!;
+
+        [Output("aclIpv6IngressFeatureId")]
+        public Output<string?> AclIpv6IngressFeatureId { get; private set; } = null!;
+
         /// <summary>
         /// Configure ARP entries
         /// </summary>
@@ -843,6 +855,18 @@ namespace Pulumi.Sdwan
 
     public sealed class TransportWanVpnInterfaceCellularFeatureArgs : global::Pulumi.ResourceArgs
     {
+        [Input("aclIpv4EgressFeatureId")]
+        public Input<string>? AclIpv4EgressFeatureId { get; set; }
+
+        [Input("aclIpv4IngressFeatureId")]
+        public Input<string>? AclIpv4IngressFeatureId { get; set; }
+
+        [Input("aclIpv6EgressFeatureId")]
+        public Input<string>? AclIpv6EgressFeatureId { get; set; }
+
+        [Input("aclIpv6IngressFeatureId")]
+        public Input<string>? AclIpv6IngressFeatureId { get; set; }
+
         [Input("arps")]
         private InputList<Inputs.TransportWanVpnInterfaceCellularFeatureArpArgs>? _arps;
 
@@ -1642,6 +1666,18 @@ namespace Pulumi.Sdwan
 
     public sealed class TransportWanVpnInterfaceCellularFeatureState : global::Pulumi.ResourceArgs
     {
+        [Input("aclIpv4EgressFeatureId")]
+        public Input<string>? AclIpv4EgressFeatureId { get; set; }
+
+        [Input("aclIpv4IngressFeatureId")]
+        public Input<string>? AclIpv4IngressFeatureId { get; set; }
+
+        [Input("aclIpv6EgressFeatureId")]
+        public Input<string>? AclIpv6EgressFeatureId { get; set; }
+
+        [Input("aclIpv6IngressFeatureId")]
+        public Input<string>? AclIpv6IngressFeatureId { get; set; }
+
         [Input("arps")]
         private InputList<Inputs.TransportWanVpnInterfaceCellularFeatureArpGetArgs>? _arps;
 

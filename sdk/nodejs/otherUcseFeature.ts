@@ -51,13 +51,14 @@ export class OtherUcseFeature extends pulumi.CustomResource {
      */
     public readonly accessPortDedicated!: pulumi.Output<boolean | undefined>;
     /**
-     * - Choices: `ge2`, `te2`
+     * , Attribute conditional on `accessPortDedicated` being equal to `false` - Choices: `ge2`, `te2`
      */
-    public readonly accessPortSharedFailoverType!: pulumi.Output<string>;
+    public readonly accessPortSharedFailoverType!: pulumi.Output<string | undefined>;
     /**
-     * - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
+     * , Attribute conditional on `accessPortDedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
+     * `console`, `failover`
      */
-    public readonly accessPortSharedType!: pulumi.Output<string>;
+    public readonly accessPortSharedType!: pulumi.Output<string | undefined>;
     /**
      * Assign priority - Range: `0`-`7`
      */
@@ -152,12 +153,6 @@ export class OtherUcseFeature extends pulumi.CustomResource {
             resourceInputs["vlanIdVariable"] = state ? state.vlanIdVariable : undefined;
         } else {
             const args = argsOrState as OtherUcseFeatureArgs | undefined;
-            if ((!args || args.accessPortSharedFailoverType === undefined) && !opts.urn) {
-                throw new Error("Missing required property 'accessPortSharedFailoverType'");
-            }
-            if ((!args || args.accessPortSharedType === undefined) && !opts.urn) {
-                throw new Error("Missing required property 'accessPortSharedType'");
-            }
             if ((!args || args.bay === undefined) && !opts.urn) {
                 throw new Error("Missing required property 'bay'");
             }
@@ -200,11 +195,12 @@ export interface OtherUcseFeatureState {
      */
     accessPortDedicated?: pulumi.Input<boolean>;
     /**
-     * - Choices: `ge2`, `te2`
+     * , Attribute conditional on `accessPortDedicated` being equal to `false` - Choices: `ge2`, `te2`
      */
     accessPortSharedFailoverType?: pulumi.Input<string>;
     /**
-     * - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
+     * , Attribute conditional on `accessPortDedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
+     * `console`, `failover`
      */
     accessPortSharedType?: pulumi.Input<string>;
     /**
@@ -278,13 +274,14 @@ export interface OtherUcseFeatureArgs {
      */
     accessPortDedicated?: pulumi.Input<boolean>;
     /**
-     * - Choices: `ge2`, `te2`
+     * , Attribute conditional on `accessPortDedicated` being equal to `false` - Choices: `ge2`, `te2`
      */
-    accessPortSharedFailoverType: pulumi.Input<string>;
+    accessPortSharedFailoverType?: pulumi.Input<string>;
     /**
-     * - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
+     * , Attribute conditional on `accessPortDedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
+     * `console`, `failover`
      */
-    accessPortSharedType: pulumi.Input<string>;
+    accessPortSharedType?: pulumi.Input<string>;
     /**
      * Assign priority - Range: `0`-`7`
      */

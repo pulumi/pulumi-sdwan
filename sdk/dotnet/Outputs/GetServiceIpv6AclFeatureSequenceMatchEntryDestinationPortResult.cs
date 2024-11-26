@@ -16,10 +16,10 @@ namespace Pulumi.Sdwan.Outputs
         /// <summary>
         /// destination port range or individual port number
         /// </summary>
-        public readonly int Port;
+        public readonly string Port;
 
         [OutputConstructor]
-        private GetServiceIpv6AclFeatureSequenceMatchEntryDestinationPortResult(int port)
+        private GetServiceIpv6AclFeatureSequenceMatchEntryDestinationPortResult(string port)
         {
             Port = port;
         }

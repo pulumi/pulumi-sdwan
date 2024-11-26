@@ -103,6 +103,8 @@ import javax.annotation.Nullable;
  *                 .preference(4294967)
  *                 .weight(250)
  *                 .build())
+ *             .aclIpv4EgressFeatureId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+ *             .aclIpv6IngressFeatureId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
  *             .tcpMss(1460)
  *             .mtu(1500)
  *             .ipMtu(1500)
@@ -126,6 +128,30 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="sdwan:index/transportWanVpnInterfaceT1E1SerialFeature:TransportWanVpnInterfaceT1E1SerialFeature")
 public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resources.CustomResource {
+    @Export(name="aclIpv4EgressFeatureId", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> aclIpv4EgressFeatureId;
+
+    public Output<Optional<String>> aclIpv4EgressFeatureId() {
+        return Codegen.optional(this.aclIpv4EgressFeatureId);
+    }
+    @Export(name="aclIpv4IngressFeatureId", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> aclIpv4IngressFeatureId;
+
+    public Output<Optional<String>> aclIpv4IngressFeatureId() {
+        return Codegen.optional(this.aclIpv4IngressFeatureId);
+    }
+    @Export(name="aclIpv6EgressFeatureId", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> aclIpv6EgressFeatureId;
+
+    public Output<Optional<String>> aclIpv6EgressFeatureId() {
+        return Codegen.optional(this.aclIpv6EgressFeatureId);
+    }
+    @Export(name="aclIpv6IngressFeatureId", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> aclIpv6IngressFeatureId;
+
+    public Output<Optional<String>> aclIpv6IngressFeatureId() {
+        return Codegen.optional(this.aclIpv6IngressFeatureId);
+    }
     /**
      * Interface bandwidth capacity, in kbps - Range: `1`-`200000000`
      * 

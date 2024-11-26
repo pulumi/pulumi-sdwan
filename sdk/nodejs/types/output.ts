@@ -13900,14 +13900,14 @@ export interface GetServiceIpv4AclFeatureSequenceMatchEntryDestinationPort {
     /**
      * destination port range or individual port number
      */
-    port: number;
+    port: string;
 }
 
 export interface GetServiceIpv4AclFeatureSequenceMatchEntrySourcePort {
     /**
      * source port range or individual port number
      */
-    port: number;
+    port: string;
 }
 
 export interface GetServiceIpv6AclFeatureSequence {
@@ -14007,14 +14007,14 @@ export interface GetServiceIpv6AclFeatureSequenceMatchEntryDestinationPort {
     /**
      * destination port range or individual port number
      */
-    port: number;
+    port: string;
 }
 
 export interface GetServiceIpv6AclFeatureSequenceMatchEntrySourcePort {
     /**
      * source port range or individual port number
      */
-    port: number;
+    port: string;
 }
 
 export interface GetServiceLanVpnFeatureAdvertiseOmpIpv4 {
@@ -18540,14 +18540,14 @@ export interface GetTransportIpv4AclFeatureSequenceMatchEntryDestinationPort {
     /**
      * destination port range or individual port number
      */
-    port: number;
+    port: string;
 }
 
 export interface GetTransportIpv4AclFeatureSequenceMatchEntrySourcePort {
     /**
      * source port range or individual port number
      */
-    port: number;
+    port: string;
 }
 
 export interface GetTransportIpv6AclFeatureSequence {
@@ -18647,14 +18647,14 @@ export interface GetTransportIpv6AclFeatureSequenceMatchEntryDestinationPort {
     /**
      * destination port range or individual port number
      */
-    port: number;
+    port: string;
 }
 
 export interface GetTransportIpv6AclFeatureSequenceMatchEntrySourcePort {
     /**
      * source port range or individual port number
      */
-    port: number;
+    port: string;
 }
 
 export interface GetTransportIpv6TrackerGroupFeatureTrackerElement {
@@ -20069,6 +20069,10 @@ export interface GetTransportWanVpnFeatureIpv4StaticRouteNextHop {
 }
 
 export interface GetTransportWanVpnFeatureIpv6StaticRoute {
+    /**
+     * Gateway
+     */
+    gateway: string;
     /**
      * IPv6 Nat
      */
@@ -23573,14 +23577,14 @@ export interface ServiceIpv4AclFeatureSequenceMatchEntryDestinationPort {
     /**
      * destination port range or individual port number
      */
-    port?: number;
+    port?: string;
 }
 
 export interface ServiceIpv4AclFeatureSequenceMatchEntrySourcePort {
     /**
      * source port range or individual port number
      */
-    port?: number;
+    port?: string;
 }
 
 export interface ServiceIpv6AclFeatureSequence {
@@ -23688,14 +23692,14 @@ export interface ServiceIpv6AclFeatureSequenceMatchEntryDestinationPort {
     /**
      * destination port range or individual port number
      */
-    port?: number;
+    port?: string;
 }
 
 export interface ServiceIpv6AclFeatureSequenceMatchEntrySourcePort {
     /**
      * source port range or individual port number
      */
-    port?: number;
+    port?: string;
 }
 
 export interface ServiceLanVpnFeatureAdvertiseOmpIpv4 {
@@ -28624,14 +28628,14 @@ export interface TransportIpv4AclFeatureSequenceMatchEntryDestinationPort {
     /**
      * destination port range or individual port number
      */
-    port?: number;
+    port?: string;
 }
 
 export interface TransportIpv4AclFeatureSequenceMatchEntrySourcePort {
     /**
      * source port range or individual port number
      */
-    port?: number;
+    port?: string;
 }
 
 export interface TransportIpv6AclFeatureSequence {
@@ -28739,14 +28743,14 @@ export interface TransportIpv6AclFeatureSequenceMatchEntryDestinationPort {
     /**
      * destination port range or individual port number
      */
-    port?: number;
+    port?: string;
 }
 
 export interface TransportIpv6AclFeatureSequenceMatchEntrySourcePort {
     /**
      * source port range or individual port number
      */
-    port?: number;
+    port?: string;
 }
 
 export interface TransportIpv6TrackerGroupFeatureTrackerElement {
@@ -30321,7 +30325,12 @@ export interface TransportWanVpnFeatureIpv4StaticRouteNextHop {
 
 export interface TransportWanVpnFeatureIpv6StaticRoute {
     /**
-     * IPv6 Nat
+     * Gateway
+     *   - Choices: `nextHop`, `null0`, `nat`
+     */
+    gateway?: string;
+    /**
+     * IPv6 Nat, Attribute conditional on `gateway` being equal to `nat`
      *   - Choices: `NAT64`, `NAT66`
      */
     nat?: string;
@@ -30330,11 +30339,11 @@ export interface TransportWanVpnFeatureIpv6StaticRoute {
      */
     natVariable?: string;
     /**
-     * IPv6 Route Gateway Next Hop
+     * IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
      */
     nextHops?: outputs.TransportWanVpnFeatureIpv6StaticRouteNextHop[];
     /**
-     * IPv6 Route Gateway Next Hop
+     * IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `null0`
      */
     null0?: boolean;
     /**

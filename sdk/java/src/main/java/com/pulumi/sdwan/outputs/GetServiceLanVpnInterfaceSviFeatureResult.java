@@ -19,6 +19,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GetServiceLanVpnInterfaceSviFeatureResult {
+    private String aclIpv4EgressFeatureId;
+    private String aclIpv4IngressFeatureId;
+    private String aclIpv6EgressFeatureId;
+    private String aclIpv6IngressFeatureId;
     /**
      * @return Timeout value for dynamically learned ARP entries, \n\n seconds
      * 
@@ -221,6 +225,18 @@ public final class GetServiceLanVpnInterfaceSviFeatureResult {
     private Integer version;
 
     private GetServiceLanVpnInterfaceSviFeatureResult() {}
+    public String aclIpv4EgressFeatureId() {
+        return this.aclIpv4EgressFeatureId;
+    }
+    public String aclIpv4IngressFeatureId() {
+        return this.aclIpv4IngressFeatureId;
+    }
+    public String aclIpv6EgressFeatureId() {
+        return this.aclIpv6EgressFeatureId;
+    }
+    public String aclIpv6IngressFeatureId() {
+        return this.aclIpv6IngressFeatureId;
+    }
     /**
      * @return Timeout value for dynamically learned ARP entries, \n\n seconds
      * 
@@ -511,6 +527,10 @@ public final class GetServiceLanVpnInterfaceSviFeatureResult {
     }
     @CustomType.Builder
     public static final class Builder {
+        private String aclIpv4EgressFeatureId;
+        private String aclIpv4IngressFeatureId;
+        private String aclIpv6EgressFeatureId;
+        private String aclIpv6IngressFeatureId;
         private Integer arpTimeout;
         private String arpTimeoutVariable;
         private List<GetServiceLanVpnInterfaceSviFeatureArp> arps;
@@ -554,6 +574,10 @@ public final class GetServiceLanVpnInterfaceSviFeatureResult {
         public Builder() {}
         public Builder(GetServiceLanVpnInterfaceSviFeatureResult defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.aclIpv4EgressFeatureId = defaults.aclIpv4EgressFeatureId;
+    	      this.aclIpv4IngressFeatureId = defaults.aclIpv4IngressFeatureId;
+    	      this.aclIpv6EgressFeatureId = defaults.aclIpv6EgressFeatureId;
+    	      this.aclIpv6IngressFeatureId = defaults.aclIpv6IngressFeatureId;
     	      this.arpTimeout = defaults.arpTimeout;
     	      this.arpTimeoutVariable = defaults.arpTimeoutVariable;
     	      this.arps = defaults.arps;
@@ -596,6 +620,38 @@ public final class GetServiceLanVpnInterfaceSviFeatureResult {
     	      this.version = defaults.version;
         }
 
+        @CustomType.Setter
+        public Builder aclIpv4EgressFeatureId(String aclIpv4EgressFeatureId) {
+            if (aclIpv4EgressFeatureId == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceSviFeatureResult", "aclIpv4EgressFeatureId");
+            }
+            this.aclIpv4EgressFeatureId = aclIpv4EgressFeatureId;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder aclIpv4IngressFeatureId(String aclIpv4IngressFeatureId) {
+            if (aclIpv4IngressFeatureId == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceSviFeatureResult", "aclIpv4IngressFeatureId");
+            }
+            this.aclIpv4IngressFeatureId = aclIpv4IngressFeatureId;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder aclIpv6EgressFeatureId(String aclIpv6EgressFeatureId) {
+            if (aclIpv6EgressFeatureId == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceSviFeatureResult", "aclIpv6EgressFeatureId");
+            }
+            this.aclIpv6EgressFeatureId = aclIpv6EgressFeatureId;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder aclIpv6IngressFeatureId(String aclIpv6IngressFeatureId) {
+            if (aclIpv6IngressFeatureId == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceSviFeatureResult", "aclIpv6IngressFeatureId");
+            }
+            this.aclIpv6IngressFeatureId = aclIpv6IngressFeatureId;
+            return this;
+        }
         @CustomType.Setter
         public Builder arpTimeout(Integer arpTimeout) {
             if (arpTimeout == null) {
@@ -939,6 +995,10 @@ public final class GetServiceLanVpnInterfaceSviFeatureResult {
         }
         public GetServiceLanVpnInterfaceSviFeatureResult build() {
             final var _resultValue = new GetServiceLanVpnInterfaceSviFeatureResult();
+            _resultValue.aclIpv4EgressFeatureId = aclIpv4EgressFeatureId;
+            _resultValue.aclIpv4IngressFeatureId = aclIpv4IngressFeatureId;
+            _resultValue.aclIpv6EgressFeatureId = aclIpv6EgressFeatureId;
+            _resultValue.aclIpv6IngressFeatureId = aclIpv6IngressFeatureId;
             _resultValue.arpTimeout = arpTimeout;
             _resultValue.arpTimeoutVariable = arpTimeoutVariable;
             _resultValue.arps = arps;

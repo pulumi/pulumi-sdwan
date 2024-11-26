@@ -26,6 +26,34 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
 
     public static final TransportWanVpnInterfaceEthernetFeatureArgs Empty = new TransportWanVpnInterfaceEthernetFeatureArgs();
 
+    @Import(name="aclIpv4EgressFeatureId")
+    private @Nullable Output<String> aclIpv4EgressFeatureId;
+
+    public Optional<Output<String>> aclIpv4EgressFeatureId() {
+        return Optional.ofNullable(this.aclIpv4EgressFeatureId);
+    }
+
+    @Import(name="aclIpv4IngressFeatureId")
+    private @Nullable Output<String> aclIpv4IngressFeatureId;
+
+    public Optional<Output<String>> aclIpv4IngressFeatureId() {
+        return Optional.ofNullable(this.aclIpv4IngressFeatureId);
+    }
+
+    @Import(name="aclIpv6EgressFeatureId")
+    private @Nullable Output<String> aclIpv6EgressFeatureId;
+
+    public Optional<Output<String>> aclIpv6EgressFeatureId() {
+        return Optional.ofNullable(this.aclIpv6EgressFeatureId);
+    }
+
+    @Import(name="aclIpv6IngressFeatureId")
+    private @Nullable Output<String> aclIpv6IngressFeatureId;
+
+    public Optional<Output<String>> aclIpv6IngressFeatureId() {
+        return Optional.ofNullable(this.aclIpv6IngressFeatureId);
+    }
+
     /**
      * Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds - Range: `0`-`2147483` - Default value: `1200`
      * 
@@ -2885,6 +2913,10 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private TransportWanVpnInterfaceEthernetFeatureArgs() {}
 
     private TransportWanVpnInterfaceEthernetFeatureArgs(TransportWanVpnInterfaceEthernetFeatureArgs $) {
+        this.aclIpv4EgressFeatureId = $.aclIpv4EgressFeatureId;
+        this.aclIpv4IngressFeatureId = $.aclIpv4IngressFeatureId;
+        this.aclIpv6EgressFeatureId = $.aclIpv6EgressFeatureId;
+        this.aclIpv6IngressFeatureId = $.aclIpv6IngressFeatureId;
         this.arpTimeout = $.arpTimeout;
         this.arpTimeoutVariable = $.arpTimeoutVariable;
         this.arps = $.arps;
@@ -3093,6 +3125,42 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
 
         public Builder(TransportWanVpnInterfaceEthernetFeatureArgs defaults) {
             $ = new TransportWanVpnInterfaceEthernetFeatureArgs(Objects.requireNonNull(defaults));
+        }
+
+        public Builder aclIpv4EgressFeatureId(@Nullable Output<String> aclIpv4EgressFeatureId) {
+            $.aclIpv4EgressFeatureId = aclIpv4EgressFeatureId;
+            return this;
+        }
+
+        public Builder aclIpv4EgressFeatureId(String aclIpv4EgressFeatureId) {
+            return aclIpv4EgressFeatureId(Output.of(aclIpv4EgressFeatureId));
+        }
+
+        public Builder aclIpv4IngressFeatureId(@Nullable Output<String> aclIpv4IngressFeatureId) {
+            $.aclIpv4IngressFeatureId = aclIpv4IngressFeatureId;
+            return this;
+        }
+
+        public Builder aclIpv4IngressFeatureId(String aclIpv4IngressFeatureId) {
+            return aclIpv4IngressFeatureId(Output.of(aclIpv4IngressFeatureId));
+        }
+
+        public Builder aclIpv6EgressFeatureId(@Nullable Output<String> aclIpv6EgressFeatureId) {
+            $.aclIpv6EgressFeatureId = aclIpv6EgressFeatureId;
+            return this;
+        }
+
+        public Builder aclIpv6EgressFeatureId(String aclIpv6EgressFeatureId) {
+            return aclIpv6EgressFeatureId(Output.of(aclIpv6EgressFeatureId));
+        }
+
+        public Builder aclIpv6IngressFeatureId(@Nullable Output<String> aclIpv6IngressFeatureId) {
+            $.aclIpv6IngressFeatureId = aclIpv6IngressFeatureId;
+            return this;
+        }
+
+        public Builder aclIpv6IngressFeatureId(String aclIpv6IngressFeatureId) {
+            return aclIpv6IngressFeatureId(Output.of(aclIpv6IngressFeatureId));
         }
 
         /**

@@ -62,6 +62,10 @@ type LookupTransportWanVpnInterfaceT1E1SerialFeatureArgs struct {
 
 // A collection of values returned by getTransportWanVpnInterfaceT1E1SerialFeature.
 type LookupTransportWanVpnInterfaceT1E1SerialFeatureResult struct {
+	AclIpv4EgressFeatureId  string `pulumi:"aclIpv4EgressFeatureId"`
+	AclIpv4IngressFeatureId string `pulumi:"aclIpv4IngressFeatureId"`
+	AclIpv6EgressFeatureId  string `pulumi:"aclIpv6EgressFeatureId"`
+	AclIpv6IngressFeatureId string `pulumi:"aclIpv6IngressFeatureId"`
 	// Interface bandwidth capacity, in kbps
 	Bandwidth int `pulumi:"bandwidth"`
 	// Interface downstream bandwidth capacity, in kbps
@@ -320,6 +324,22 @@ func (o LookupTransportWanVpnInterfaceT1E1SerialFeatureResultOutput) ToLookupTra
 
 func (o LookupTransportWanVpnInterfaceT1E1SerialFeatureResultOutput) ToLookupTransportWanVpnInterfaceT1E1SerialFeatureResultOutputWithContext(ctx context.Context) LookupTransportWanVpnInterfaceT1E1SerialFeatureResultOutput {
 	return o
+}
+
+func (o LookupTransportWanVpnInterfaceT1E1SerialFeatureResultOutput) AclIpv4EgressFeatureId() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceT1E1SerialFeatureResult) string { return v.AclIpv4EgressFeatureId }).(pulumi.StringOutput)
+}
+
+func (o LookupTransportWanVpnInterfaceT1E1SerialFeatureResultOutput) AclIpv4IngressFeatureId() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceT1E1SerialFeatureResult) string { return v.AclIpv4IngressFeatureId }).(pulumi.StringOutput)
+}
+
+func (o LookupTransportWanVpnInterfaceT1E1SerialFeatureResultOutput) AclIpv6EgressFeatureId() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceT1E1SerialFeatureResult) string { return v.AclIpv6EgressFeatureId }).(pulumi.StringOutput)
+}
+
+func (o LookupTransportWanVpnInterfaceT1E1SerialFeatureResultOutput) AclIpv6IngressFeatureId() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceT1E1SerialFeatureResult) string { return v.AclIpv6IngressFeatureId }).(pulumi.StringOutput)
 }
 
 // Interface bandwidth capacity, in kbps
