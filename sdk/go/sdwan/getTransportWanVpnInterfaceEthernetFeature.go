@@ -62,6 +62,10 @@ type LookupTransportWanVpnInterfaceEthernetFeatureArgs struct {
 
 // A collection of values returned by getTransportWanVpnInterfaceEthernetFeature.
 type LookupTransportWanVpnInterfaceEthernetFeatureResult struct {
+	AclIpv4EgressFeatureId  string `pulumi:"aclIpv4EgressFeatureId"`
+	AclIpv4IngressFeatureId string `pulumi:"aclIpv4IngressFeatureId"`
+	AclIpv6EgressFeatureId  string `pulumi:"aclIpv6EgressFeatureId"`
+	AclIpv6IngressFeatureId string `pulumi:"aclIpv6IngressFeatureId"`
 	// Timeout value for dynamically learned ARP entries, \n\n seconds
 	ArpTimeout int `pulumi:"arpTimeout"`
 	// Variable name
@@ -491,6 +495,22 @@ func (o LookupTransportWanVpnInterfaceEthernetFeatureResultOutput) ToLookupTrans
 
 func (o LookupTransportWanVpnInterfaceEthernetFeatureResultOutput) ToLookupTransportWanVpnInterfaceEthernetFeatureResultOutputWithContext(ctx context.Context) LookupTransportWanVpnInterfaceEthernetFeatureResultOutput {
 	return o
+}
+
+func (o LookupTransportWanVpnInterfaceEthernetFeatureResultOutput) AclIpv4EgressFeatureId() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceEthernetFeatureResult) string { return v.AclIpv4EgressFeatureId }).(pulumi.StringOutput)
+}
+
+func (o LookupTransportWanVpnInterfaceEthernetFeatureResultOutput) AclIpv4IngressFeatureId() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceEthernetFeatureResult) string { return v.AclIpv4IngressFeatureId }).(pulumi.StringOutput)
+}
+
+func (o LookupTransportWanVpnInterfaceEthernetFeatureResultOutput) AclIpv6EgressFeatureId() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceEthernetFeatureResult) string { return v.AclIpv6EgressFeatureId }).(pulumi.StringOutput)
+}
+
+func (o LookupTransportWanVpnInterfaceEthernetFeatureResultOutput) AclIpv6IngressFeatureId() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceEthernetFeatureResult) string { return v.AclIpv6IngressFeatureId }).(pulumi.StringOutput)
 }
 
 // Timeout value for dynamically learned ARP entries, \n\n seconds

@@ -955,6 +955,36 @@ export const getServiceLanVpnFeature: typeof import("./getServiceLanVpnFeature")
 export const getServiceLanVpnFeatureOutput: typeof import("./getServiceLanVpnFeature").getServiceLanVpnFeatureOutput = null as any;
 utilities.lazyLoad(exports, ["getServiceLanVpnFeature","getServiceLanVpnFeatureOutput"], () => require("./getServiceLanVpnFeature"));
 
+export { GetServiceLanVpnFeatureAssociateMulticastFeatureArgs, GetServiceLanVpnFeatureAssociateMulticastFeatureResult, GetServiceLanVpnFeatureAssociateMulticastFeatureOutputArgs } from "./getServiceLanVpnFeatureAssociateMulticastFeature";
+export const getServiceLanVpnFeatureAssociateMulticastFeature: typeof import("./getServiceLanVpnFeatureAssociateMulticastFeature").getServiceLanVpnFeatureAssociateMulticastFeature = null as any;
+export const getServiceLanVpnFeatureAssociateMulticastFeatureOutput: typeof import("./getServiceLanVpnFeatureAssociateMulticastFeature").getServiceLanVpnFeatureAssociateMulticastFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getServiceLanVpnFeatureAssociateMulticastFeature","getServiceLanVpnFeatureAssociateMulticastFeatureOutput"], () => require("./getServiceLanVpnFeatureAssociateMulticastFeature"));
+
+export { GetServiceLanVpnFeatureAssociateRoutingBgpFeatureArgs, GetServiceLanVpnFeatureAssociateRoutingBgpFeatureResult, GetServiceLanVpnFeatureAssociateRoutingBgpFeatureOutputArgs } from "./getServiceLanVpnFeatureAssociateRoutingBgpFeature";
+export const getServiceLanVpnFeatureAssociateRoutingBgpFeature: typeof import("./getServiceLanVpnFeatureAssociateRoutingBgpFeature").getServiceLanVpnFeatureAssociateRoutingBgpFeature = null as any;
+export const getServiceLanVpnFeatureAssociateRoutingBgpFeatureOutput: typeof import("./getServiceLanVpnFeatureAssociateRoutingBgpFeature").getServiceLanVpnFeatureAssociateRoutingBgpFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getServiceLanVpnFeatureAssociateRoutingBgpFeature","getServiceLanVpnFeatureAssociateRoutingBgpFeatureOutput"], () => require("./getServiceLanVpnFeatureAssociateRoutingBgpFeature"));
+
+export { GetServiceLanVpnFeatureAssociateRoutingEigrpFeatureArgs, GetServiceLanVpnFeatureAssociateRoutingEigrpFeatureResult, GetServiceLanVpnFeatureAssociateRoutingEigrpFeatureOutputArgs } from "./getServiceLanVpnFeatureAssociateRoutingEigrpFeature";
+export const getServiceLanVpnFeatureAssociateRoutingEigrpFeature: typeof import("./getServiceLanVpnFeatureAssociateRoutingEigrpFeature").getServiceLanVpnFeatureAssociateRoutingEigrpFeature = null as any;
+export const getServiceLanVpnFeatureAssociateRoutingEigrpFeatureOutput: typeof import("./getServiceLanVpnFeatureAssociateRoutingEigrpFeature").getServiceLanVpnFeatureAssociateRoutingEigrpFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getServiceLanVpnFeatureAssociateRoutingEigrpFeature","getServiceLanVpnFeatureAssociateRoutingEigrpFeatureOutput"], () => require("./getServiceLanVpnFeatureAssociateRoutingEigrpFeature"));
+
+export { GetServiceLanVpnFeatureAssociateRoutingOspfFeatureArgs, GetServiceLanVpnFeatureAssociateRoutingOspfFeatureResult, GetServiceLanVpnFeatureAssociateRoutingOspfFeatureOutputArgs } from "./getServiceLanVpnFeatureAssociateRoutingOspfFeature";
+export const getServiceLanVpnFeatureAssociateRoutingOspfFeature: typeof import("./getServiceLanVpnFeatureAssociateRoutingOspfFeature").getServiceLanVpnFeatureAssociateRoutingOspfFeature = null as any;
+export const getServiceLanVpnFeatureAssociateRoutingOspfFeatureOutput: typeof import("./getServiceLanVpnFeatureAssociateRoutingOspfFeature").getServiceLanVpnFeatureAssociateRoutingOspfFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getServiceLanVpnFeatureAssociateRoutingOspfFeature","getServiceLanVpnFeatureAssociateRoutingOspfFeatureOutput"], () => require("./getServiceLanVpnFeatureAssociateRoutingOspfFeature"));
+
+export { GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureArgs, GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureResult, GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureOutputArgs } from "./getServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature";
+export const getServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature: typeof import("./getServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature").getServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature = null as any;
+export const getServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureOutput: typeof import("./getServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature").getServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature","getServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureOutput"], () => require("./getServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature"));
+
+export { GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureArgs, GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureResult, GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureOutputArgs } from "./getServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6Feature";
+export const getServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6Feature: typeof import("./getServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6Feature").getServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6Feature = null as any;
+export const getServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureOutput: typeof import("./getServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6Feature").getServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6Feature","getServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureOutput"], () => require("./getServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6Feature"));
+
 export { GetServiceLanVpnInterfaceEthernetFeatureArgs, GetServiceLanVpnInterfaceEthernetFeatureResult, GetServiceLanVpnInterfaceEthernetFeatureOutputArgs } from "./getServiceLanVpnInterfaceEthernetFeature";
 export const getServiceLanVpnInterfaceEthernetFeature: typeof import("./getServiceLanVpnInterfaceEthernetFeature").getServiceLanVpnInterfaceEthernetFeature = null as any;
 export const getServiceLanVpnInterfaceEthernetFeatureOutput: typeof import("./getServiceLanVpnInterfaceEthernetFeature").getServiceLanVpnInterfaceEthernetFeatureOutput = null as any;
@@ -1170,6 +1200,16 @@ export const getTrafficDataPolicyDefinition: typeof import("./getTrafficDataPoli
 export const getTrafficDataPolicyDefinitionOutput: typeof import("./getTrafficDataPolicyDefinition").getTrafficDataPolicyDefinitionOutput = null as any;
 utilities.lazyLoad(exports, ["getTrafficDataPolicyDefinition","getTrafficDataPolicyDefinitionOutput"], () => require("./getTrafficDataPolicyDefinition"));
 
+export { GetTransportCellularControllerFeatureArgs, GetTransportCellularControllerFeatureResult, GetTransportCellularControllerFeatureOutputArgs } from "./getTransportCellularControllerFeature";
+export const getTransportCellularControllerFeature: typeof import("./getTransportCellularControllerFeature").getTransportCellularControllerFeature = null as any;
+export const getTransportCellularControllerFeatureOutput: typeof import("./getTransportCellularControllerFeature").getTransportCellularControllerFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getTransportCellularControllerFeature","getTransportCellularControllerFeatureOutput"], () => require("./getTransportCellularControllerFeature"));
+
+export { GetTransportCellularProfileFeatureArgs, GetTransportCellularProfileFeatureResult, GetTransportCellularProfileFeatureOutputArgs } from "./getTransportCellularProfileFeature";
+export const getTransportCellularProfileFeature: typeof import("./getTransportCellularProfileFeature").getTransportCellularProfileFeature = null as any;
+export const getTransportCellularProfileFeatureOutput: typeof import("./getTransportCellularProfileFeature").getTransportCellularProfileFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getTransportCellularProfileFeature","getTransportCellularProfileFeatureOutput"], () => require("./getTransportCellularProfileFeature"));
+
 export { GetTransportFeatureProfileArgs, GetTransportFeatureProfileResult, GetTransportFeatureProfileOutputArgs } from "./getTransportFeatureProfile";
 export const getTransportFeatureProfile: typeof import("./getTransportFeatureProfile").getTransportFeatureProfile = null as any;
 export const getTransportFeatureProfileOutput: typeof import("./getTransportFeatureProfile").getTransportFeatureProfileOutput = null as any;
@@ -1255,6 +1295,26 @@ export const getTransportWanVpnFeature: typeof import("./getTransportWanVpnFeatu
 export const getTransportWanVpnFeatureOutput: typeof import("./getTransportWanVpnFeature").getTransportWanVpnFeatureOutput = null as any;
 utilities.lazyLoad(exports, ["getTransportWanVpnFeature","getTransportWanVpnFeatureOutput"], () => require("./getTransportWanVpnFeature"));
 
+export { GetTransportWanVpnFeatureAssociateRoutingBgpFeatureArgs, GetTransportWanVpnFeatureAssociateRoutingBgpFeatureResult, GetTransportWanVpnFeatureAssociateRoutingBgpFeatureOutputArgs } from "./getTransportWanVpnFeatureAssociateRoutingBgpFeature";
+export const getTransportWanVpnFeatureAssociateRoutingBgpFeature: typeof import("./getTransportWanVpnFeatureAssociateRoutingBgpFeature").getTransportWanVpnFeatureAssociateRoutingBgpFeature = null as any;
+export const getTransportWanVpnFeatureAssociateRoutingBgpFeatureOutput: typeof import("./getTransportWanVpnFeatureAssociateRoutingBgpFeature").getTransportWanVpnFeatureAssociateRoutingBgpFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getTransportWanVpnFeatureAssociateRoutingBgpFeature","getTransportWanVpnFeatureAssociateRoutingBgpFeatureOutput"], () => require("./getTransportWanVpnFeatureAssociateRoutingBgpFeature"));
+
+export { GetTransportWanVpnFeatureAssociateRoutingOspfFeatureArgs, GetTransportWanVpnFeatureAssociateRoutingOspfFeatureResult, GetTransportWanVpnFeatureAssociateRoutingOspfFeatureOutputArgs } from "./getTransportWanVpnFeatureAssociateRoutingOspfFeature";
+export const getTransportWanVpnFeatureAssociateRoutingOspfFeature: typeof import("./getTransportWanVpnFeatureAssociateRoutingOspfFeature").getTransportWanVpnFeatureAssociateRoutingOspfFeature = null as any;
+export const getTransportWanVpnFeatureAssociateRoutingOspfFeatureOutput: typeof import("./getTransportWanVpnFeatureAssociateRoutingOspfFeature").getTransportWanVpnFeatureAssociateRoutingOspfFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getTransportWanVpnFeatureAssociateRoutingOspfFeature","getTransportWanVpnFeatureAssociateRoutingOspfFeatureOutput"], () => require("./getTransportWanVpnFeatureAssociateRoutingOspfFeature"));
+
+export { GetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureArgs, GetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureResult, GetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureOutputArgs } from "./getTransportWanVpnFeatureAssociateRoutingOspfv3Ipv4Feature";
+export const getTransportWanVpnFeatureAssociateRoutingOspfv3Ipv4Feature: typeof import("./getTransportWanVpnFeatureAssociateRoutingOspfv3Ipv4Feature").getTransportWanVpnFeatureAssociateRoutingOspfv3Ipv4Feature = null as any;
+export const getTransportWanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureOutput: typeof import("./getTransportWanVpnFeatureAssociateRoutingOspfv3Ipv4Feature").getTransportWanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getTransportWanVpnFeatureAssociateRoutingOspfv3Ipv4Feature","getTransportWanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureOutput"], () => require("./getTransportWanVpnFeatureAssociateRoutingOspfv3Ipv4Feature"));
+
+export { GetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureArgs, GetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureResult, GetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureOutputArgs } from "./getTransportWanVpnFeatureAssociateRoutingOspfv3Ipv6Feature";
+export const getTransportWanVpnFeatureAssociateRoutingOspfv3Ipv6Feature: typeof import("./getTransportWanVpnFeatureAssociateRoutingOspfv3Ipv6Feature").getTransportWanVpnFeatureAssociateRoutingOspfv3Ipv6Feature = null as any;
+export const getTransportWanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureOutput: typeof import("./getTransportWanVpnFeatureAssociateRoutingOspfv3Ipv6Feature").getTransportWanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getTransportWanVpnFeatureAssociateRoutingOspfv3Ipv6Feature","getTransportWanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureOutput"], () => require("./getTransportWanVpnFeatureAssociateRoutingOspfv3Ipv6Feature"));
+
 export { GetTransportWanVpnInterfaceCellularFeatureArgs, GetTransportWanVpnInterfaceCellularFeatureResult, GetTransportWanVpnInterfaceCellularFeatureOutputArgs } from "./getTransportWanVpnInterfaceCellularFeature";
 export const getTransportWanVpnInterfaceCellularFeature: typeof import("./getTransportWanVpnInterfaceCellularFeature").getTransportWanVpnInterfaceCellularFeature = null as any;
 export const getTransportWanVpnInterfaceCellularFeatureOutput: typeof import("./getTransportWanVpnInterfaceCellularFeature").getTransportWanVpnInterfaceCellularFeatureOutput = null as any;
@@ -1264,6 +1324,26 @@ export { GetTransportWanVpnInterfaceEthernetFeatureArgs, GetTransportWanVpnInter
 export const getTransportWanVpnInterfaceEthernetFeature: typeof import("./getTransportWanVpnInterfaceEthernetFeature").getTransportWanVpnInterfaceEthernetFeature = null as any;
 export const getTransportWanVpnInterfaceEthernetFeatureOutput: typeof import("./getTransportWanVpnInterfaceEthernetFeature").getTransportWanVpnInterfaceEthernetFeatureOutput = null as any;
 utilities.lazyLoad(exports, ["getTransportWanVpnInterfaceEthernetFeature","getTransportWanVpnInterfaceEthernetFeatureOutput"], () => require("./getTransportWanVpnInterfaceEthernetFeature"));
+
+export { GetTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureArgs, GetTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureResult, GetTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureOutputArgs } from "./getTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature";
+export const getTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature: typeof import("./getTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature").getTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature = null as any;
+export const getTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureOutput: typeof import("./getTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature").getTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature","getTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureOutput"], () => require("./getTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature"));
+
+export { GetTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureArgs, GetTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureResult, GetTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureOutputArgs } from "./getTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature";
+export const getTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature: typeof import("./getTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature").getTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature = null as any;
+export const getTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureOutput: typeof import("./getTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature").getTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature","getTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureOutput"], () => require("./getTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature"));
+
+export { GetTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeatureArgs, GetTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeatureResult, GetTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeatureOutputArgs } from "./getTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeature";
+export const getTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeature: typeof import("./getTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeature").getTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeature = null as any;
+export const getTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeatureOutput: typeof import("./getTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeature").getTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeature","getTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeatureOutput"], () => require("./getTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeature"));
+
+export { GetTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureArgs, GetTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureResult, GetTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureOutputArgs } from "./getTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature";
+export const getTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature: typeof import("./getTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature").getTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature = null as any;
+export const getTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureOutput: typeof import("./getTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature").getTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature","getTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureOutput"], () => require("./getTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature"));
 
 export { GetTransportWanVpnInterfaceGreFeatureArgs, GetTransportWanVpnInterfaceGreFeatureResult, GetTransportWanVpnInterfaceGreFeatureOutputArgs } from "./getTransportWanVpnInterfaceGreFeature";
 export const getTransportWanVpnInterfaceGreFeature: typeof import("./getTransportWanVpnInterfaceGreFeature").getTransportWanVpnInterfaceGreFeature = null as any;
@@ -1670,6 +1750,36 @@ export type ServiceLanVpnFeature = import("./serviceLanVpnFeature").ServiceLanVp
 export const ServiceLanVpnFeature: typeof import("./serviceLanVpnFeature").ServiceLanVpnFeature = null as any;
 utilities.lazyLoad(exports, ["ServiceLanVpnFeature"], () => require("./serviceLanVpnFeature"));
 
+export { ServiceLanVpnFeatureAssociateMulticastFeatureArgs, ServiceLanVpnFeatureAssociateMulticastFeatureState } from "./serviceLanVpnFeatureAssociateMulticastFeature";
+export type ServiceLanVpnFeatureAssociateMulticastFeature = import("./serviceLanVpnFeatureAssociateMulticastFeature").ServiceLanVpnFeatureAssociateMulticastFeature;
+export const ServiceLanVpnFeatureAssociateMulticastFeature: typeof import("./serviceLanVpnFeatureAssociateMulticastFeature").ServiceLanVpnFeatureAssociateMulticastFeature = null as any;
+utilities.lazyLoad(exports, ["ServiceLanVpnFeatureAssociateMulticastFeature"], () => require("./serviceLanVpnFeatureAssociateMulticastFeature"));
+
+export { ServiceLanVpnFeatureAssociateRoutingBgpFeatureArgs, ServiceLanVpnFeatureAssociateRoutingBgpFeatureState } from "./serviceLanVpnFeatureAssociateRoutingBgpFeature";
+export type ServiceLanVpnFeatureAssociateRoutingBgpFeature = import("./serviceLanVpnFeatureAssociateRoutingBgpFeature").ServiceLanVpnFeatureAssociateRoutingBgpFeature;
+export const ServiceLanVpnFeatureAssociateRoutingBgpFeature: typeof import("./serviceLanVpnFeatureAssociateRoutingBgpFeature").ServiceLanVpnFeatureAssociateRoutingBgpFeature = null as any;
+utilities.lazyLoad(exports, ["ServiceLanVpnFeatureAssociateRoutingBgpFeature"], () => require("./serviceLanVpnFeatureAssociateRoutingBgpFeature"));
+
+export { ServiceLanVpnFeatureAssociateRoutingEigrpFeatureArgs, ServiceLanVpnFeatureAssociateRoutingEigrpFeatureState } from "./serviceLanVpnFeatureAssociateRoutingEigrpFeature";
+export type ServiceLanVpnFeatureAssociateRoutingEigrpFeature = import("./serviceLanVpnFeatureAssociateRoutingEigrpFeature").ServiceLanVpnFeatureAssociateRoutingEigrpFeature;
+export const ServiceLanVpnFeatureAssociateRoutingEigrpFeature: typeof import("./serviceLanVpnFeatureAssociateRoutingEigrpFeature").ServiceLanVpnFeatureAssociateRoutingEigrpFeature = null as any;
+utilities.lazyLoad(exports, ["ServiceLanVpnFeatureAssociateRoutingEigrpFeature"], () => require("./serviceLanVpnFeatureAssociateRoutingEigrpFeature"));
+
+export { ServiceLanVpnFeatureAssociateRoutingOspfFeatureArgs, ServiceLanVpnFeatureAssociateRoutingOspfFeatureState } from "./serviceLanVpnFeatureAssociateRoutingOspfFeature";
+export type ServiceLanVpnFeatureAssociateRoutingOspfFeature = import("./serviceLanVpnFeatureAssociateRoutingOspfFeature").ServiceLanVpnFeatureAssociateRoutingOspfFeature;
+export const ServiceLanVpnFeatureAssociateRoutingOspfFeature: typeof import("./serviceLanVpnFeatureAssociateRoutingOspfFeature").ServiceLanVpnFeatureAssociateRoutingOspfFeature = null as any;
+utilities.lazyLoad(exports, ["ServiceLanVpnFeatureAssociateRoutingOspfFeature"], () => require("./serviceLanVpnFeatureAssociateRoutingOspfFeature"));
+
+export { ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureArgs, ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureState } from "./serviceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature";
+export type ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature = import("./serviceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature").ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature;
+export const ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature: typeof import("./serviceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature").ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature = null as any;
+utilities.lazyLoad(exports, ["ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature"], () => require("./serviceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature"));
+
+export { ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureArgs, ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureState } from "./serviceLanVpnFeatureAssociateRoutingOspfv3Ipv6Feature";
+export type ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6Feature = import("./serviceLanVpnFeatureAssociateRoutingOspfv3Ipv6Feature").ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6Feature;
+export const ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6Feature: typeof import("./serviceLanVpnFeatureAssociateRoutingOspfv3Ipv6Feature").ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6Feature = null as any;
+utilities.lazyLoad(exports, ["ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6Feature"], () => require("./serviceLanVpnFeatureAssociateRoutingOspfv3Ipv6Feature"));
+
 export { ServiceLanVpnInterfaceEthernetFeatureArgs, ServiceLanVpnInterfaceEthernetFeatureState } from "./serviceLanVpnInterfaceEthernetFeature";
 export type ServiceLanVpnInterfaceEthernetFeature = import("./serviceLanVpnInterfaceEthernetFeature").ServiceLanVpnInterfaceEthernetFeature;
 export const ServiceLanVpnInterfaceEthernetFeature: typeof import("./serviceLanVpnInterfaceEthernetFeature").ServiceLanVpnInterfaceEthernetFeature = null as any;
@@ -1885,6 +1995,16 @@ export type TrafficDataPolicyDefinition = import("./trafficDataPolicyDefinition"
 export const TrafficDataPolicyDefinition: typeof import("./trafficDataPolicyDefinition").TrafficDataPolicyDefinition = null as any;
 utilities.lazyLoad(exports, ["TrafficDataPolicyDefinition"], () => require("./trafficDataPolicyDefinition"));
 
+export { TransportCellularControllerFeatureArgs, TransportCellularControllerFeatureState } from "./transportCellularControllerFeature";
+export type TransportCellularControllerFeature = import("./transportCellularControllerFeature").TransportCellularControllerFeature;
+export const TransportCellularControllerFeature: typeof import("./transportCellularControllerFeature").TransportCellularControllerFeature = null as any;
+utilities.lazyLoad(exports, ["TransportCellularControllerFeature"], () => require("./transportCellularControllerFeature"));
+
+export { TransportCellularProfileFeatureArgs, TransportCellularProfileFeatureState } from "./transportCellularProfileFeature";
+export type TransportCellularProfileFeature = import("./transportCellularProfileFeature").TransportCellularProfileFeature;
+export const TransportCellularProfileFeature: typeof import("./transportCellularProfileFeature").TransportCellularProfileFeature = null as any;
+utilities.lazyLoad(exports, ["TransportCellularProfileFeature"], () => require("./transportCellularProfileFeature"));
+
 export { TransportFeatureProfileArgs, TransportFeatureProfileState } from "./transportFeatureProfile";
 export type TransportFeatureProfile = import("./transportFeatureProfile").TransportFeatureProfile;
 export const TransportFeatureProfile: typeof import("./transportFeatureProfile").TransportFeatureProfile = null as any;
@@ -1970,6 +2090,26 @@ export type TransportWanVpnFeature = import("./transportWanVpnFeature").Transpor
 export const TransportWanVpnFeature: typeof import("./transportWanVpnFeature").TransportWanVpnFeature = null as any;
 utilities.lazyLoad(exports, ["TransportWanVpnFeature"], () => require("./transportWanVpnFeature"));
 
+export { TransportWanVpnFeatureAssociateRoutingBgpFeatureArgs, TransportWanVpnFeatureAssociateRoutingBgpFeatureState } from "./transportWanVpnFeatureAssociateRoutingBgpFeature";
+export type TransportWanVpnFeatureAssociateRoutingBgpFeature = import("./transportWanVpnFeatureAssociateRoutingBgpFeature").TransportWanVpnFeatureAssociateRoutingBgpFeature;
+export const TransportWanVpnFeatureAssociateRoutingBgpFeature: typeof import("./transportWanVpnFeatureAssociateRoutingBgpFeature").TransportWanVpnFeatureAssociateRoutingBgpFeature = null as any;
+utilities.lazyLoad(exports, ["TransportWanVpnFeatureAssociateRoutingBgpFeature"], () => require("./transportWanVpnFeatureAssociateRoutingBgpFeature"));
+
+export { TransportWanVpnFeatureAssociateRoutingOspfFeatureArgs, TransportWanVpnFeatureAssociateRoutingOspfFeatureState } from "./transportWanVpnFeatureAssociateRoutingOspfFeature";
+export type TransportWanVpnFeatureAssociateRoutingOspfFeature = import("./transportWanVpnFeatureAssociateRoutingOspfFeature").TransportWanVpnFeatureAssociateRoutingOspfFeature;
+export const TransportWanVpnFeatureAssociateRoutingOspfFeature: typeof import("./transportWanVpnFeatureAssociateRoutingOspfFeature").TransportWanVpnFeatureAssociateRoutingOspfFeature = null as any;
+utilities.lazyLoad(exports, ["TransportWanVpnFeatureAssociateRoutingOspfFeature"], () => require("./transportWanVpnFeatureAssociateRoutingOspfFeature"));
+
+export { TransportWanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureArgs, TransportWanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureState } from "./transportWanVpnFeatureAssociateRoutingOspfv3Ipv4Feature";
+export type TransportWanVpnFeatureAssociateRoutingOspfv3Ipv4Feature = import("./transportWanVpnFeatureAssociateRoutingOspfv3Ipv4Feature").TransportWanVpnFeatureAssociateRoutingOspfv3Ipv4Feature;
+export const TransportWanVpnFeatureAssociateRoutingOspfv3Ipv4Feature: typeof import("./transportWanVpnFeatureAssociateRoutingOspfv3Ipv4Feature").TransportWanVpnFeatureAssociateRoutingOspfv3Ipv4Feature = null as any;
+utilities.lazyLoad(exports, ["TransportWanVpnFeatureAssociateRoutingOspfv3Ipv4Feature"], () => require("./transportWanVpnFeatureAssociateRoutingOspfv3Ipv4Feature"));
+
+export { TransportWanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureArgs, TransportWanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureState } from "./transportWanVpnFeatureAssociateRoutingOspfv3Ipv6Feature";
+export type TransportWanVpnFeatureAssociateRoutingOspfv3Ipv6Feature = import("./transportWanVpnFeatureAssociateRoutingOspfv3Ipv6Feature").TransportWanVpnFeatureAssociateRoutingOspfv3Ipv6Feature;
+export const TransportWanVpnFeatureAssociateRoutingOspfv3Ipv6Feature: typeof import("./transportWanVpnFeatureAssociateRoutingOspfv3Ipv6Feature").TransportWanVpnFeatureAssociateRoutingOspfv3Ipv6Feature = null as any;
+utilities.lazyLoad(exports, ["TransportWanVpnFeatureAssociateRoutingOspfv3Ipv6Feature"], () => require("./transportWanVpnFeatureAssociateRoutingOspfv3Ipv6Feature"));
+
 export { TransportWanVpnInterfaceCellularFeatureArgs, TransportWanVpnInterfaceCellularFeatureState } from "./transportWanVpnInterfaceCellularFeature";
 export type TransportWanVpnInterfaceCellularFeature = import("./transportWanVpnInterfaceCellularFeature").TransportWanVpnInterfaceCellularFeature;
 export const TransportWanVpnInterfaceCellularFeature: typeof import("./transportWanVpnInterfaceCellularFeature").TransportWanVpnInterfaceCellularFeature = null as any;
@@ -1979,6 +2119,26 @@ export { TransportWanVpnInterfaceEthernetFeatureArgs, TransportWanVpnInterfaceEt
 export type TransportWanVpnInterfaceEthernetFeature = import("./transportWanVpnInterfaceEthernetFeature").TransportWanVpnInterfaceEthernetFeature;
 export const TransportWanVpnInterfaceEthernetFeature: typeof import("./transportWanVpnInterfaceEthernetFeature").TransportWanVpnInterfaceEthernetFeature = null as any;
 utilities.lazyLoad(exports, ["TransportWanVpnInterfaceEthernetFeature"], () => require("./transportWanVpnInterfaceEthernetFeature"));
+
+export { TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureArgs, TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureState } from "./transportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature";
+export type TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature = import("./transportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature").TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature;
+export const TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature: typeof import("./transportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature").TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature = null as any;
+utilities.lazyLoad(exports, ["TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature"], () => require("./transportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature"));
+
+export { TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureArgs, TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureState } from "./transportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature";
+export type TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature = import("./transportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature").TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature;
+export const TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature: typeof import("./transportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature").TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature = null as any;
+utilities.lazyLoad(exports, ["TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature"], () => require("./transportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature"));
+
+export { TransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeatureArgs, TransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeatureState } from "./transportWanVpnInterfaceEthernetFeatureAssociateTrackerFeature";
+export type TransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeature = import("./transportWanVpnInterfaceEthernetFeatureAssociateTrackerFeature").TransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeature;
+export const TransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeature: typeof import("./transportWanVpnInterfaceEthernetFeatureAssociateTrackerFeature").TransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeature = null as any;
+utilities.lazyLoad(exports, ["TransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeature"], () => require("./transportWanVpnInterfaceEthernetFeatureAssociateTrackerFeature"));
+
+export { TransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureArgs, TransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureState } from "./transportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature";
+export type TransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature = import("./transportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature").TransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature;
+export const TransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature: typeof import("./transportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature").TransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature = null as any;
+utilities.lazyLoad(exports, ["TransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature"], () => require("./transportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature"));
 
 export { TransportWanVpnInterfaceGreFeatureArgs, TransportWanVpnInterfaceGreFeatureState } from "./transportWanVpnInterfaceGreFeature";
 export type TransportWanVpnInterfaceGreFeature = import("./transportWanVpnInterfaceGreFeature").TransportWanVpnInterfaceGreFeature;
@@ -2328,6 +2488,18 @@ const _module = {
                 return new ServiceIpv6AclFeature(name, <any>undefined, { urn })
             case "sdwan:index/serviceLanVpnFeature:ServiceLanVpnFeature":
                 return new ServiceLanVpnFeature(name, <any>undefined, { urn })
+            case "sdwan:index/serviceLanVpnFeatureAssociateMulticastFeature:ServiceLanVpnFeatureAssociateMulticastFeature":
+                return new ServiceLanVpnFeatureAssociateMulticastFeature(name, <any>undefined, { urn })
+            case "sdwan:index/serviceLanVpnFeatureAssociateRoutingBgpFeature:ServiceLanVpnFeatureAssociateRoutingBgpFeature":
+                return new ServiceLanVpnFeatureAssociateRoutingBgpFeature(name, <any>undefined, { urn })
+            case "sdwan:index/serviceLanVpnFeatureAssociateRoutingEigrpFeature:ServiceLanVpnFeatureAssociateRoutingEigrpFeature":
+                return new ServiceLanVpnFeatureAssociateRoutingEigrpFeature(name, <any>undefined, { urn })
+            case "sdwan:index/serviceLanVpnFeatureAssociateRoutingOspfFeature:ServiceLanVpnFeatureAssociateRoutingOspfFeature":
+                return new ServiceLanVpnFeatureAssociateRoutingOspfFeature(name, <any>undefined, { urn })
+            case "sdwan:index/serviceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature:ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature":
+                return new ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature(name, <any>undefined, { urn })
+            case "sdwan:index/serviceLanVpnFeatureAssociateRoutingOspfv3Ipv6Feature:ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6Feature":
+                return new ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6Feature(name, <any>undefined, { urn })
             case "sdwan:index/serviceLanVpnInterfaceEthernetFeature:ServiceLanVpnInterfaceEthernetFeature":
                 return new ServiceLanVpnInterfaceEthernetFeature(name, <any>undefined, { urn })
             case "sdwan:index/serviceLanVpnInterfaceGreFeature:ServiceLanVpnInterfaceGreFeature":
@@ -2414,6 +2586,10 @@ const _module = {
                 return new TlsSslProfilePolicyDefinition(name, <any>undefined, { urn })
             case "sdwan:index/trafficDataPolicyDefinition:TrafficDataPolicyDefinition":
                 return new TrafficDataPolicyDefinition(name, <any>undefined, { urn })
+            case "sdwan:index/transportCellularControllerFeature:TransportCellularControllerFeature":
+                return new TransportCellularControllerFeature(name, <any>undefined, { urn })
+            case "sdwan:index/transportCellularProfileFeature:TransportCellularProfileFeature":
+                return new TransportCellularProfileFeature(name, <any>undefined, { urn })
             case "sdwan:index/transportFeatureProfile:TransportFeatureProfile":
                 return new TransportFeatureProfile(name, <any>undefined, { urn })
             case "sdwan:index/transportGpsFeature:TransportGpsFeature":
@@ -2448,10 +2624,26 @@ const _module = {
                 return new TransportTrackerGroupFeature(name, <any>undefined, { urn })
             case "sdwan:index/transportWanVpnFeature:TransportWanVpnFeature":
                 return new TransportWanVpnFeature(name, <any>undefined, { urn })
+            case "sdwan:index/transportWanVpnFeatureAssociateRoutingBgpFeature:TransportWanVpnFeatureAssociateRoutingBgpFeature":
+                return new TransportWanVpnFeatureAssociateRoutingBgpFeature(name, <any>undefined, { urn })
+            case "sdwan:index/transportWanVpnFeatureAssociateRoutingOspfFeature:TransportWanVpnFeatureAssociateRoutingOspfFeature":
+                return new TransportWanVpnFeatureAssociateRoutingOspfFeature(name, <any>undefined, { urn })
+            case "sdwan:index/transportWanVpnFeatureAssociateRoutingOspfv3Ipv4Feature:TransportWanVpnFeatureAssociateRoutingOspfv3Ipv4Feature":
+                return new TransportWanVpnFeatureAssociateRoutingOspfv3Ipv4Feature(name, <any>undefined, { urn })
+            case "sdwan:index/transportWanVpnFeatureAssociateRoutingOspfv3Ipv6Feature:TransportWanVpnFeatureAssociateRoutingOspfv3Ipv6Feature":
+                return new TransportWanVpnFeatureAssociateRoutingOspfv3Ipv6Feature(name, <any>undefined, { urn })
             case "sdwan:index/transportWanVpnInterfaceCellularFeature:TransportWanVpnInterfaceCellularFeature":
                 return new TransportWanVpnInterfaceCellularFeature(name, <any>undefined, { urn })
             case "sdwan:index/transportWanVpnInterfaceEthernetFeature:TransportWanVpnInterfaceEthernetFeature":
                 return new TransportWanVpnInterfaceEthernetFeature(name, <any>undefined, { urn })
+            case "sdwan:index/transportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature:TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature":
+                return new TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature(name, <any>undefined, { urn })
+            case "sdwan:index/transportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature:TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature":
+                return new TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature(name, <any>undefined, { urn })
+            case "sdwan:index/transportWanVpnInterfaceEthernetFeatureAssociateTrackerFeature:TransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeature":
+                return new TransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeature(name, <any>undefined, { urn })
+            case "sdwan:index/transportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature:TransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature":
+                return new TransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature(name, <any>undefined, { urn })
             case "sdwan:index/transportWanVpnInterfaceGreFeature:TransportWanVpnInterfaceGreFeature":
                 return new TransportWanVpnInterfaceGreFeature(name, <any>undefined, { urn })
             case "sdwan:index/transportWanVpnInterfaceIpsecFeature:TransportWanVpnInterfaceIpsecFeature":
@@ -2616,6 +2808,12 @@ pulumi.runtime.registerResourceModule("sdwan", "index/serviceFeatureProfile", _m
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceIpv4AclFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceIpv6AclFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceLanVpnFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/serviceLanVpnFeatureAssociateMulticastFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/serviceLanVpnFeatureAssociateRoutingBgpFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/serviceLanVpnFeatureAssociateRoutingEigrpFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/serviceLanVpnFeatureAssociateRoutingOspfFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/serviceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/serviceLanVpnFeatureAssociateRoutingOspfv3Ipv6Feature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceLanVpnInterfaceEthernetFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceLanVpnInterfaceGreFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceLanVpnInterfaceIpsecFeature", _module)
@@ -2659,6 +2857,8 @@ pulumi.runtime.registerResourceModule("sdwan", "index/tlocListPolicyObject", _mo
 pulumi.runtime.registerResourceModule("sdwan", "index/tlsSslDecryptionPolicyDefinition", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/tlsSslProfilePolicyDefinition", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/trafficDataPolicyDefinition", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/transportCellularControllerFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/transportCellularProfileFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/transportFeatureProfile", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/transportGpsFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/transportIpv4AclFeature", _module)
@@ -2676,8 +2876,16 @@ pulumi.runtime.registerResourceModule("sdwan", "index/transportT1E1ControllerFea
 pulumi.runtime.registerResourceModule("sdwan", "index/transportTrackerFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/transportTrackerGroupFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/transportWanVpnFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/transportWanVpnFeatureAssociateRoutingBgpFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/transportWanVpnFeatureAssociateRoutingOspfFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/transportWanVpnFeatureAssociateRoutingOspfv3Ipv4Feature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/transportWanVpnFeatureAssociateRoutingOspfv3Ipv6Feature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/transportWanVpnInterfaceCellularFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/transportWanVpnInterfaceEthernetFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/transportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/transportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/transportWanVpnInterfaceEthernetFeatureAssociateTrackerFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/transportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/transportWanVpnInterfaceGreFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/transportWanVpnInterfaceIpsecFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/transportWanVpnInterfaceT1E1SerialFeature", _module)

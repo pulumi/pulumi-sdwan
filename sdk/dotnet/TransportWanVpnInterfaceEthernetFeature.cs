@@ -24,6 +24,18 @@ namespace Pulumi.Sdwan
     [SdwanResourceType("sdwan:index/transportWanVpnInterfaceEthernetFeature:TransportWanVpnInterfaceEthernetFeature")]
     public partial class TransportWanVpnInterfaceEthernetFeature : global::Pulumi.CustomResource
     {
+        [Output("aclIpv4EgressFeatureId")]
+        public Output<string?> AclIpv4EgressFeatureId { get; private set; } = null!;
+
+        [Output("aclIpv4IngressFeatureId")]
+        public Output<string?> AclIpv4IngressFeatureId { get; private set; } = null!;
+
+        [Output("aclIpv6EgressFeatureId")]
+        public Output<string?> AclIpv6EgressFeatureId { get; private set; } = null!;
+
+        [Output("aclIpv6IngressFeatureId")]
+        public Output<string?> AclIpv6IngressFeatureId { get; private set; } = null!;
+
         /// <summary>
         /// Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds - Range: `0`-`2147483` - Default value: `1200`
         /// </summary>
@@ -1221,6 +1233,18 @@ namespace Pulumi.Sdwan
 
     public sealed class TransportWanVpnInterfaceEthernetFeatureArgs : global::Pulumi.ResourceArgs
     {
+        [Input("aclIpv4EgressFeatureId")]
+        public Input<string>? AclIpv4EgressFeatureId { get; set; }
+
+        [Input("aclIpv4IngressFeatureId")]
+        public Input<string>? AclIpv4IngressFeatureId { get; set; }
+
+        [Input("aclIpv6EgressFeatureId")]
+        public Input<string>? AclIpv6EgressFeatureId { get; set; }
+
+        [Input("aclIpv6IngressFeatureId")]
+        public Input<string>? AclIpv6IngressFeatureId { get; set; }
+
         /// <summary>
         /// Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds - Range: `0`-`2147483` - Default value: `1200`
         /// </summary>
@@ -2428,6 +2452,18 @@ namespace Pulumi.Sdwan
 
     public sealed class TransportWanVpnInterfaceEthernetFeatureState : global::Pulumi.ResourceArgs
     {
+        [Input("aclIpv4EgressFeatureId")]
+        public Input<string>? AclIpv4EgressFeatureId { get; set; }
+
+        [Input("aclIpv4IngressFeatureId")]
+        public Input<string>? AclIpv4IngressFeatureId { get; set; }
+
+        [Input("aclIpv6EgressFeatureId")]
+        public Input<string>? AclIpv6EgressFeatureId { get; set; }
+
+        [Input("aclIpv6IngressFeatureId")]
+        public Input<string>? AclIpv6IngressFeatureId { get; set; }
+
         /// <summary>
         /// Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds - Range: `0`-`2147483` - Default value: `1200`
         /// </summary>

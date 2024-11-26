@@ -16,7 +16,7 @@ namespace Pulumi.Sdwan.Inputs
         /// source port range or individual port number
         /// </summary>
         [Input("port")]
-        public Input<int>? Port { get; set; }
+        public Input<string>? Port { get; set; }
 
         public ServiceIpv4AclFeatureSequenceMatchEntrySourcePortGetArgs()
         {

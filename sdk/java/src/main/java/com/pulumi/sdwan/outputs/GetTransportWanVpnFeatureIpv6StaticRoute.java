@@ -14,6 +14,11 @@ import java.util.Objects;
 @CustomType
 public final class GetTransportWanVpnFeatureIpv6StaticRoute {
     /**
+     * @return Gateway
+     * 
+     */
+    private String gateway;
+    /**
      * @return IPv6 Nat
      * 
      */
@@ -45,6 +50,13 @@ public final class GetTransportWanVpnFeatureIpv6StaticRoute {
     private String prefixVariable;
 
     private GetTransportWanVpnFeatureIpv6StaticRoute() {}
+    /**
+     * @return Gateway
+     * 
+     */
+    public String gateway() {
+        return this.gateway;
+    }
     /**
      * @return IPv6 Nat
      * 
@@ -97,6 +109,7 @@ public final class GetTransportWanVpnFeatureIpv6StaticRoute {
     }
     @CustomType.Builder
     public static final class Builder {
+        private String gateway;
         private String nat;
         private String natVariable;
         private List<GetTransportWanVpnFeatureIpv6StaticRouteNextHop> nextHops;
@@ -106,6 +119,7 @@ public final class GetTransportWanVpnFeatureIpv6StaticRoute {
         public Builder() {}
         public Builder(GetTransportWanVpnFeatureIpv6StaticRoute defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.gateway = defaults.gateway;
     	      this.nat = defaults.nat;
     	      this.natVariable = defaults.natVariable;
     	      this.nextHops = defaults.nextHops;
@@ -114,6 +128,14 @@ public final class GetTransportWanVpnFeatureIpv6StaticRoute {
     	      this.prefixVariable = defaults.prefixVariable;
         }
 
+        @CustomType.Setter
+        public Builder gateway(String gateway) {
+            if (gateway == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnFeatureIpv6StaticRoute", "gateway");
+            }
+            this.gateway = gateway;
+            return this;
+        }
         @CustomType.Setter
         public Builder nat(String nat) {
             if (nat == null) {
@@ -167,6 +189,7 @@ public final class GetTransportWanVpnFeatureIpv6StaticRoute {
         }
         public GetTransportWanVpnFeatureIpv6StaticRoute build() {
             final var _resultValue = new GetTransportWanVpnFeatureIpv6StaticRoute();
+            _resultValue.gateway = gateway;
             _resultValue.nat = nat;
             _resultValue.natVariable = natVariable;
             _resultValue.nextHops = nextHops;

@@ -20,7 +20,7 @@ public final class TransportManagementVpnFeatureIpv6StaticRouteArgs extends com.
 
     /**
      * Gateway
-     *   - Choices: `next_hop`, `null0`, `nat`
+     *   - Choices: `nextHop`, `null0`, `nat`
      * 
      */
     @Import(name="gateway")
@@ -28,7 +28,7 @@ public final class TransportManagementVpnFeatureIpv6StaticRouteArgs extends com.
 
     /**
      * @return Gateway
-     *   - Choices: `next_hop`, `null0`, `nat`
+     *   - Choices: `nextHop`, `null0`, `nat`
      * 
      */
     public Optional<Output<String>> gateway() {
@@ -68,14 +68,14 @@ public final class TransportManagementVpnFeatureIpv6StaticRouteArgs extends com.
     }
 
     /**
-     * IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `next_hop`
+     * IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
      * 
      */
     @Import(name="nextHops")
     private @Nullable Output<List<TransportManagementVpnFeatureIpv6StaticRouteNextHopArgs>> nextHops;
 
     /**
-     * @return IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `next_hop`
+     * @return IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
      * 
      */
     public Optional<Output<List<TransportManagementVpnFeatureIpv6StaticRouteNextHopArgs>>> nextHops() {
@@ -159,7 +159,7 @@ public final class TransportManagementVpnFeatureIpv6StaticRouteArgs extends com.
 
         /**
          * @param gateway Gateway
-         *   - Choices: `next_hop`, `null0`, `nat`
+         *   - Choices: `nextHop`, `null0`, `nat`
          * 
          * @return builder
          * 
@@ -171,7 +171,7 @@ public final class TransportManagementVpnFeatureIpv6StaticRouteArgs extends com.
 
         /**
          * @param gateway Gateway
-         *   - Choices: `next_hop`, `null0`, `nat`
+         *   - Choices: `nextHop`, `null0`, `nat`
          * 
          * @return builder
          * 
@@ -225,7 +225,7 @@ public final class TransportManagementVpnFeatureIpv6StaticRouteArgs extends com.
         }
 
         /**
-         * @param nextHops IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `next_hop`
+         * @param nextHops IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
          * 
          * @return builder
          * 
@@ -236,7 +236,7 @@ public final class TransportManagementVpnFeatureIpv6StaticRouteArgs extends com.
         }
 
         /**
-         * @param nextHops IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `next_hop`
+         * @param nextHops IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
          * 
          * @return builder
          * 
@@ -246,7 +246,7 @@ public final class TransportManagementVpnFeatureIpv6StaticRouteArgs extends com.
         }
 
         /**
-         * @param nextHops IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `next_hop`
+         * @param nextHops IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
          * 
          * @return builder
          * 

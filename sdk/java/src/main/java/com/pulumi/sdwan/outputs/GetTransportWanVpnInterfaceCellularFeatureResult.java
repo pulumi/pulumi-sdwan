@@ -15,6 +15,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GetTransportWanVpnInterfaceCellularFeatureResult {
+    private String aclIpv4EgressFeatureId;
+    private String aclIpv4IngressFeatureId;
+    private String aclIpv6EgressFeatureId;
+    private String aclIpv6IngressFeatureId;
     /**
      * @return Configure ARP entries
      * 
@@ -655,6 +659,18 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
     private Integer version;
 
     private GetTransportWanVpnInterfaceCellularFeatureResult() {}
+    public String aclIpv4EgressFeatureId() {
+        return this.aclIpv4EgressFeatureId;
+    }
+    public String aclIpv4IngressFeatureId() {
+        return this.aclIpv4IngressFeatureId;
+    }
+    public String aclIpv6EgressFeatureId() {
+        return this.aclIpv6EgressFeatureId;
+    }
+    public String aclIpv6IngressFeatureId() {
+        return this.aclIpv6IngressFeatureId;
+    }
     /**
      * @return Configure ARP entries
      * 
@@ -1563,6 +1579,10 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
     }
     @CustomType.Builder
     public static final class Builder {
+        private String aclIpv4EgressFeatureId;
+        private String aclIpv4IngressFeatureId;
+        private String aclIpv6EgressFeatureId;
+        private String aclIpv6IngressFeatureId;
         private List<GetTransportWanVpnInterfaceCellularFeatureArp> arps;
         private Integer bandwidthDownstream;
         private String bandwidthDownstreamVariable;
@@ -1696,6 +1716,10 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
         public Builder() {}
         public Builder(GetTransportWanVpnInterfaceCellularFeatureResult defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.aclIpv4EgressFeatureId = defaults.aclIpv4EgressFeatureId;
+    	      this.aclIpv4IngressFeatureId = defaults.aclIpv4IngressFeatureId;
+    	      this.aclIpv6EgressFeatureId = defaults.aclIpv6EgressFeatureId;
+    	      this.aclIpv6IngressFeatureId = defaults.aclIpv6IngressFeatureId;
     	      this.arps = defaults.arps;
     	      this.bandwidthDownstream = defaults.bandwidthDownstream;
     	      this.bandwidthDownstreamVariable = defaults.bandwidthDownstreamVariable;
@@ -1828,6 +1852,38 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
     	      this.version = defaults.version;
         }
 
+        @CustomType.Setter
+        public Builder aclIpv4EgressFeatureId(String aclIpv4EgressFeatureId) {
+            if (aclIpv4EgressFeatureId == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceCellularFeatureResult", "aclIpv4EgressFeatureId");
+            }
+            this.aclIpv4EgressFeatureId = aclIpv4EgressFeatureId;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder aclIpv4IngressFeatureId(String aclIpv4IngressFeatureId) {
+            if (aclIpv4IngressFeatureId == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceCellularFeatureResult", "aclIpv4IngressFeatureId");
+            }
+            this.aclIpv4IngressFeatureId = aclIpv4IngressFeatureId;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder aclIpv6EgressFeatureId(String aclIpv6EgressFeatureId) {
+            if (aclIpv6EgressFeatureId == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceCellularFeatureResult", "aclIpv6EgressFeatureId");
+            }
+            this.aclIpv6EgressFeatureId = aclIpv6EgressFeatureId;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder aclIpv6IngressFeatureId(String aclIpv6IngressFeatureId) {
+            if (aclIpv6IngressFeatureId == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceCellularFeatureResult", "aclIpv6IngressFeatureId");
+            }
+            this.aclIpv6IngressFeatureId = aclIpv6IngressFeatureId;
+            return this;
+        }
         @CustomType.Setter
         public Builder arps(List<GetTransportWanVpnInterfaceCellularFeatureArp> arps) {
             if (arps == null) {
@@ -2882,6 +2938,10 @@ public final class GetTransportWanVpnInterfaceCellularFeatureResult {
         }
         public GetTransportWanVpnInterfaceCellularFeatureResult build() {
             final var _resultValue = new GetTransportWanVpnInterfaceCellularFeatureResult();
+            _resultValue.aclIpv4EgressFeatureId = aclIpv4EgressFeatureId;
+            _resultValue.aclIpv4IngressFeatureId = aclIpv4IngressFeatureId;
+            _resultValue.aclIpv6EgressFeatureId = aclIpv6EgressFeatureId;
+            _resultValue.aclIpv6IngressFeatureId = aclIpv6IngressFeatureId;
             _resultValue.arps = arps;
             _resultValue.bandwidthDownstream = bandwidthDownstream;
             _resultValue.bandwidthDownstreamVariable = bandwidthDownstreamVariable;

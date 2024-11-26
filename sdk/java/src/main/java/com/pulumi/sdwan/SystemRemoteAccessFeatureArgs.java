@@ -156,15 +156,15 @@ public final class SystemRemoteAccessFeatureArgs extends com.pulumi.resources.Re
      * , Attribute conditional on `connection_type_ssl` being equal to `false` - Choices: `user`, `device`
      * 
      */
-    @Import(name="anyConnectEapAuthenticationType", required=true)
-    private Output<String> anyConnectEapAuthenticationType;
+    @Import(name="anyConnectEapAuthenticationType")
+    private @Nullable Output<String> anyConnectEapAuthenticationType;
 
     /**
      * @return , Attribute conditional on `connection_type_ssl` being equal to `false` - Choices: `user`, `device`
      * 
      */
-    public Output<String> anyConnectEapAuthenticationType() {
-        return this.anyConnectEapAuthenticationType;
+    public Optional<Output<String>> anyConnectEapAuthenticationType() {
+        return Optional.ofNullable(this.anyConnectEapAuthenticationType);
     }
 
     /**
@@ -909,7 +909,7 @@ public final class SystemRemoteAccessFeatureArgs extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder anyConnectEapAuthenticationType(Output<String> anyConnectEapAuthenticationType) {
+        public Builder anyConnectEapAuthenticationType(@Nullable Output<String> anyConnectEapAuthenticationType) {
             $.anyConnectEapAuthenticationType = anyConnectEapAuthenticationType;
             return this;
         }
@@ -1597,9 +1597,6 @@ public final class SystemRemoteAccessFeatureArgs extends com.pulumi.resources.Re
         }
 
         public SystemRemoteAccessFeatureArgs build() {
-            if ($.anyConnectEapAuthenticationType == null) {
-                throw new MissingRequiredPropertyException("SystemRemoteAccessFeatureArgs", "anyConnectEapAuthenticationType");
-            }
             if ($.radiusGroupName == null) {
                 throw new MissingRequiredPropertyException("SystemRemoteAccessFeatureArgs", "radiusGroupName");
             }

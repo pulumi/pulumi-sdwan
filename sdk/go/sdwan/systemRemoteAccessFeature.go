@@ -88,7 +88,7 @@ type SystemRemoteAccessFeature struct {
 	// Variable name
 	AaaSpecifyNamePolicyPasswordVariable pulumi.StringPtrOutput `pulumi:"aaaSpecifyNamePolicyPasswordVariable"`
 	// , Attribute conditional on `connectionTypeSsl` being equal to `false` - Choices: `user`, `device`
-	AnyConnectEapAuthenticationType pulumi.StringOutput `pulumi:"anyConnectEapAuthenticationType"`
+	AnyConnectEapAuthenticationType pulumi.StringPtrOutput `pulumi:"anyConnectEapAuthenticationType"`
 	// Enabled SSL VPN - Default value: `false`
 	ConnectionTypeSsl pulumi.BoolPtrOutput `pulumi:"connectionTypeSsl"`
 	// The description of the Feature
@@ -169,9 +169,6 @@ func NewSystemRemoteAccessFeature(ctx *pulumi.Context,
 		return nil, errors.New("missing one or more required arguments")
 	}
 
-	if args.AnyConnectEapAuthenticationType == nil {
-		return nil, errors.New("invalid value for required argument 'AnyConnectEapAuthenticationType'")
-	}
 	if args.RadiusGroupName == nil {
 		return nil, errors.New("invalid value for required argument 'RadiusGroupName'")
 	}
@@ -409,7 +406,7 @@ type systemRemoteAccessFeatureArgs struct {
 	// Variable name
 	AaaSpecifyNamePolicyPasswordVariable *string `pulumi:"aaaSpecifyNamePolicyPasswordVariable"`
 	// , Attribute conditional on `connectionTypeSsl` being equal to `false` - Choices: `user`, `device`
-	AnyConnectEapAuthenticationType string `pulumi:"anyConnectEapAuthenticationType"`
+	AnyConnectEapAuthenticationType *string `pulumi:"anyConnectEapAuthenticationType"`
 	// Enabled SSL VPN - Default value: `false`
 	ConnectionTypeSsl *bool `pulumi:"connectionTypeSsl"`
 	// The description of the Feature
@@ -502,7 +499,7 @@ type SystemRemoteAccessFeatureArgs struct {
 	// Variable name
 	AaaSpecifyNamePolicyPasswordVariable pulumi.StringPtrInput
 	// , Attribute conditional on `connectionTypeSsl` being equal to `false` - Choices: `user`, `device`
-	AnyConnectEapAuthenticationType pulumi.StringInput
+	AnyConnectEapAuthenticationType pulumi.StringPtrInput
 	// Enabled SSL VPN - Default value: `false`
 	ConnectionTypeSsl pulumi.BoolPtrInput
 	// The description of the Feature
@@ -716,8 +713,8 @@ func (o SystemRemoteAccessFeatureOutput) AaaSpecifyNamePolicyPasswordVariable() 
 }
 
 // , Attribute conditional on `connectionTypeSsl` being equal to `false` - Choices: `user`, `device`
-func (o SystemRemoteAccessFeatureOutput) AnyConnectEapAuthenticationType() pulumi.StringOutput {
-	return o.ApplyT(func(v *SystemRemoteAccessFeature) pulumi.StringOutput { return v.AnyConnectEapAuthenticationType }).(pulumi.StringOutput)
+func (o SystemRemoteAccessFeatureOutput) AnyConnectEapAuthenticationType() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *SystemRemoteAccessFeature) pulumi.StringPtrOutput { return v.AnyConnectEapAuthenticationType }).(pulumi.StringPtrOutput)
 }
 
 // Enabled SSL VPN - Default value: `false`

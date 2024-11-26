@@ -40274,7 +40274,7 @@ class ServiceIpv4AclFeatureSequenceMatchEntryArgs:
 
 if not MYPY:
     class ServiceIpv4AclFeatureSequenceMatchEntryDestinationPortArgsDict(TypedDict):
-        port: NotRequired[pulumi.Input[int]]
+        port: NotRequired[pulumi.Input[str]]
         """
         destination port range or individual port number
         """
@@ -40284,29 +40284,29 @@ elif False:
 @pulumi.input_type
 class ServiceIpv4AclFeatureSequenceMatchEntryDestinationPortArgs:
     def __init__(__self__, *,
-                 port: Optional[pulumi.Input[int]] = None):
+                 port: Optional[pulumi.Input[str]] = None):
         """
-        :param pulumi.Input[int] port: destination port range or individual port number
+        :param pulumi.Input[str] port: destination port range or individual port number
         """
         if port is not None:
             pulumi.set(__self__, "port", port)
 
     @property
     @pulumi.getter
-    def port(self) -> Optional[pulumi.Input[int]]:
+    def port(self) -> Optional[pulumi.Input[str]]:
         """
         destination port range or individual port number
         """
         return pulumi.get(self, "port")
 
     @port.setter
-    def port(self, value: Optional[pulumi.Input[int]]):
+    def port(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "port", value)
 
 
 if not MYPY:
     class ServiceIpv4AclFeatureSequenceMatchEntrySourcePortArgsDict(TypedDict):
-        port: NotRequired[pulumi.Input[int]]
+        port: NotRequired[pulumi.Input[str]]
         """
         source port range or individual port number
         """
@@ -40316,23 +40316,23 @@ elif False:
 @pulumi.input_type
 class ServiceIpv4AclFeatureSequenceMatchEntrySourcePortArgs:
     def __init__(__self__, *,
-                 port: Optional[pulumi.Input[int]] = None):
+                 port: Optional[pulumi.Input[str]] = None):
         """
-        :param pulumi.Input[int] port: source port range or individual port number
+        :param pulumi.Input[str] port: source port range or individual port number
         """
         if port is not None:
             pulumi.set(__self__, "port", port)
 
     @property
     @pulumi.getter
-    def port(self) -> Optional[pulumi.Input[int]]:
+    def port(self) -> Optional[pulumi.Input[str]]:
         """
         source port range or individual port number
         """
         return pulumi.get(self, "port")
 
     @port.setter
-    def port(self, value: Optional[pulumi.Input[int]]):
+    def port(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "port", value)
 
 
@@ -40850,7 +40850,7 @@ class ServiceIpv6AclFeatureSequenceMatchEntryArgs:
 
 if not MYPY:
     class ServiceIpv6AclFeatureSequenceMatchEntryDestinationPortArgsDict(TypedDict):
-        port: NotRequired[pulumi.Input[int]]
+        port: NotRequired[pulumi.Input[str]]
         """
         destination port range or individual port number
         """
@@ -40860,29 +40860,29 @@ elif False:
 @pulumi.input_type
 class ServiceIpv6AclFeatureSequenceMatchEntryDestinationPortArgs:
     def __init__(__self__, *,
-                 port: Optional[pulumi.Input[int]] = None):
+                 port: Optional[pulumi.Input[str]] = None):
         """
-        :param pulumi.Input[int] port: destination port range or individual port number
+        :param pulumi.Input[str] port: destination port range or individual port number
         """
         if port is not None:
             pulumi.set(__self__, "port", port)
 
     @property
     @pulumi.getter
-    def port(self) -> Optional[pulumi.Input[int]]:
+    def port(self) -> Optional[pulumi.Input[str]]:
         """
         destination port range or individual port number
         """
         return pulumi.get(self, "port")
 
     @port.setter
-    def port(self, value: Optional[pulumi.Input[int]]):
+    def port(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "port", value)
 
 
 if not MYPY:
     class ServiceIpv6AclFeatureSequenceMatchEntrySourcePortArgsDict(TypedDict):
-        port: NotRequired[pulumi.Input[int]]
+        port: NotRequired[pulumi.Input[str]]
         """
         source port range or individual port number
         """
@@ -40892,23 +40892,23 @@ elif False:
 @pulumi.input_type
 class ServiceIpv6AclFeatureSequenceMatchEntrySourcePortArgs:
     def __init__(__self__, *,
-                 port: Optional[pulumi.Input[int]] = None):
+                 port: Optional[pulumi.Input[str]] = None):
         """
-        :param pulumi.Input[int] port: source port range or individual port number
+        :param pulumi.Input[str] port: source port range or individual port number
         """
         if port is not None:
             pulumi.set(__self__, "port", port)
 
     @property
     @pulumi.getter
-    def port(self) -> Optional[pulumi.Input[int]]:
+    def port(self) -> Optional[pulumi.Input[str]]:
         """
         source port range or individual port number
         """
         return pulumi.get(self, "port")
 
     @port.setter
-    def port(self, value: Optional[pulumi.Input[int]]):
+    def port(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "port", value)
 
 
@@ -64728,7 +64728,7 @@ class TransportIpv4AclFeatureSequenceMatchEntryArgs:
 
 if not MYPY:
     class TransportIpv4AclFeatureSequenceMatchEntryDestinationPortArgsDict(TypedDict):
-        port: NotRequired[pulumi.Input[int]]
+        port: NotRequired[pulumi.Input[str]]
         """
         destination port range or individual port number
         """
@@ -64738,29 +64738,29 @@ elif False:
 @pulumi.input_type
 class TransportIpv4AclFeatureSequenceMatchEntryDestinationPortArgs:
     def __init__(__self__, *,
-                 port: Optional[pulumi.Input[int]] = None):
+                 port: Optional[pulumi.Input[str]] = None):
         """
-        :param pulumi.Input[int] port: destination port range or individual port number
+        :param pulumi.Input[str] port: destination port range or individual port number
         """
         if port is not None:
             pulumi.set(__self__, "port", port)
 
     @property
     @pulumi.getter
-    def port(self) -> Optional[pulumi.Input[int]]:
+    def port(self) -> Optional[pulumi.Input[str]]:
         """
         destination port range or individual port number
         """
         return pulumi.get(self, "port")
 
     @port.setter
-    def port(self, value: Optional[pulumi.Input[int]]):
+    def port(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "port", value)
 
 
 if not MYPY:
     class TransportIpv4AclFeatureSequenceMatchEntrySourcePortArgsDict(TypedDict):
-        port: NotRequired[pulumi.Input[int]]
+        port: NotRequired[pulumi.Input[str]]
         """
         source port range or individual port number
         """
@@ -64770,23 +64770,23 @@ elif False:
 @pulumi.input_type
 class TransportIpv4AclFeatureSequenceMatchEntrySourcePortArgs:
     def __init__(__self__, *,
-                 port: Optional[pulumi.Input[int]] = None):
+                 port: Optional[pulumi.Input[str]] = None):
         """
-        :param pulumi.Input[int] port: source port range or individual port number
+        :param pulumi.Input[str] port: source port range or individual port number
         """
         if port is not None:
             pulumi.set(__self__, "port", port)
 
     @property
     @pulumi.getter
-    def port(self) -> Optional[pulumi.Input[int]]:
+    def port(self) -> Optional[pulumi.Input[str]]:
         """
         source port range or individual port number
         """
         return pulumi.get(self, "port")
 
     @port.setter
-    def port(self, value: Optional[pulumi.Input[int]]):
+    def port(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "port", value)
 
 
@@ -65304,7 +65304,7 @@ class TransportIpv6AclFeatureSequenceMatchEntryArgs:
 
 if not MYPY:
     class TransportIpv6AclFeatureSequenceMatchEntryDestinationPortArgsDict(TypedDict):
-        port: NotRequired[pulumi.Input[int]]
+        port: NotRequired[pulumi.Input[str]]
         """
         destination port range or individual port number
         """
@@ -65314,29 +65314,29 @@ elif False:
 @pulumi.input_type
 class TransportIpv6AclFeatureSequenceMatchEntryDestinationPortArgs:
     def __init__(__self__, *,
-                 port: Optional[pulumi.Input[int]] = None):
+                 port: Optional[pulumi.Input[str]] = None):
         """
-        :param pulumi.Input[int] port: destination port range or individual port number
+        :param pulumi.Input[str] port: destination port range or individual port number
         """
         if port is not None:
             pulumi.set(__self__, "port", port)
 
     @property
     @pulumi.getter
-    def port(self) -> Optional[pulumi.Input[int]]:
+    def port(self) -> Optional[pulumi.Input[str]]:
         """
         destination port range or individual port number
         """
         return pulumi.get(self, "port")
 
     @port.setter
-    def port(self, value: Optional[pulumi.Input[int]]):
+    def port(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "port", value)
 
 
 if not MYPY:
     class TransportIpv6AclFeatureSequenceMatchEntrySourcePortArgsDict(TypedDict):
-        port: NotRequired[pulumi.Input[int]]
+        port: NotRequired[pulumi.Input[str]]
         """
         source port range or individual port number
         """
@@ -65346,23 +65346,23 @@ elif False:
 @pulumi.input_type
 class TransportIpv6AclFeatureSequenceMatchEntrySourcePortArgs:
     def __init__(__self__, *,
-                 port: Optional[pulumi.Input[int]] = None):
+                 port: Optional[pulumi.Input[str]] = None):
         """
-        :param pulumi.Input[int] port: source port range or individual port number
+        :param pulumi.Input[str] port: source port range or individual port number
         """
         if port is not None:
             pulumi.set(__self__, "port", port)
 
     @property
     @pulumi.getter
-    def port(self) -> Optional[pulumi.Input[int]]:
+    def port(self) -> Optional[pulumi.Input[str]]:
         """
         source port range or individual port number
         """
         return pulumi.get(self, "port")
 
     @port.setter
-    def port(self, value: Optional[pulumi.Input[int]]):
+    def port(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "port", value)
 
 
@@ -65679,7 +65679,7 @@ if not MYPY:
         gateway: NotRequired[pulumi.Input[str]]
         """
         Gateway
-          - Choices: `next_hop`, `null0`, `nat`
+          - Choices: `nextHop`, `null0`, `nat`
         """
         nat: NotRequired[pulumi.Input[str]]
         """
@@ -65692,7 +65692,7 @@ if not MYPY:
         """
         next_hops: NotRequired[pulumi.Input[Sequence[pulumi.Input['TransportManagementVpnFeatureIpv6StaticRouteNextHopArgsDict']]]]
         """
-        IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `next_hop`
+        IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
         """
         null0: NotRequired[pulumi.Input[bool]]
         """
@@ -65721,11 +65721,11 @@ class TransportManagementVpnFeatureIpv6StaticRouteArgs:
                  prefix_variable: Optional[pulumi.Input[str]] = None):
         """
         :param pulumi.Input[str] gateway: Gateway
-                 - Choices: `next_hop`, `null0`, `nat`
+                 - Choices: `nextHop`, `null0`, `nat`
         :param pulumi.Input[str] nat: IPv6 Nat, Attribute conditional on `gateway` being equal to `nat`
                  - Choices: `NAT64`, `NAT66`
         :param pulumi.Input[str] nat_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input['TransportManagementVpnFeatureIpv6StaticRouteNextHopArgs']]] next_hops: IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `next_hop`
+        :param pulumi.Input[Sequence[pulumi.Input['TransportManagementVpnFeatureIpv6StaticRouteNextHopArgs']]] next_hops: IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
         :param pulumi.Input[bool] null0: IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `null0`
         :param pulumi.Input[str] prefix: Prefix
         :param pulumi.Input[str] prefix_variable: Variable name
@@ -65750,7 +65750,7 @@ class TransportManagementVpnFeatureIpv6StaticRouteArgs:
     def gateway(self) -> Optional[pulumi.Input[str]]:
         """
         Gateway
-          - Choices: `next_hop`, `null0`, `nat`
+          - Choices: `nextHop`, `null0`, `nat`
         """
         return pulumi.get(self, "gateway")
 
@@ -65787,7 +65787,7 @@ class TransportManagementVpnFeatureIpv6StaticRouteArgs:
     @pulumi.getter(name="nextHops")
     def next_hops(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['TransportManagementVpnFeatureIpv6StaticRouteNextHopArgs']]]]:
         """
-        IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `next_hop`
+        IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
         """
         return pulumi.get(self, "next_hops")
 
@@ -72987,9 +72987,14 @@ class TransportWanVpnFeatureIpv4StaticRouteNextHopArgs:
 
 if not MYPY:
     class TransportWanVpnFeatureIpv6StaticRouteArgsDict(TypedDict):
+        gateway: NotRequired[pulumi.Input[str]]
+        """
+        Gateway
+          - Choices: `nextHop`, `null0`, `nat`
+        """
         nat: NotRequired[pulumi.Input[str]]
         """
-        IPv6 Nat
+        IPv6 Nat, Attribute conditional on `gateway` being equal to `nat`
           - Choices: `NAT64`, `NAT66`
         """
         nat_variable: NotRequired[pulumi.Input[str]]
@@ -72998,11 +73003,11 @@ if not MYPY:
         """
         next_hops: NotRequired[pulumi.Input[Sequence[pulumi.Input['TransportWanVpnFeatureIpv6StaticRouteNextHopArgsDict']]]]
         """
-        IPv6 Route Gateway Next Hop
+        IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
         """
         null0: NotRequired[pulumi.Input[bool]]
         """
-        IPv6 Route Gateway Next Hop
+        IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `null0`
         """
         prefix: NotRequired[pulumi.Input[str]]
         """
@@ -73018,6 +73023,7 @@ elif False:
 @pulumi.input_type
 class TransportWanVpnFeatureIpv6StaticRouteArgs:
     def __init__(__self__, *,
+                 gateway: Optional[pulumi.Input[str]] = None,
                  nat: Optional[pulumi.Input[str]] = None,
                  nat_variable: Optional[pulumi.Input[str]] = None,
                  next_hops: Optional[pulumi.Input[Sequence[pulumi.Input['TransportWanVpnFeatureIpv6StaticRouteNextHopArgs']]]] = None,
@@ -73025,14 +73031,18 @@ class TransportWanVpnFeatureIpv6StaticRouteArgs:
                  prefix: Optional[pulumi.Input[str]] = None,
                  prefix_variable: Optional[pulumi.Input[str]] = None):
         """
-        :param pulumi.Input[str] nat: IPv6 Nat
+        :param pulumi.Input[str] gateway: Gateway
+                 - Choices: `nextHop`, `null0`, `nat`
+        :param pulumi.Input[str] nat: IPv6 Nat, Attribute conditional on `gateway` being equal to `nat`
                  - Choices: `NAT64`, `NAT66`
         :param pulumi.Input[str] nat_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input['TransportWanVpnFeatureIpv6StaticRouteNextHopArgs']]] next_hops: IPv6 Route Gateway Next Hop
-        :param pulumi.Input[bool] null0: IPv6 Route Gateway Next Hop
+        :param pulumi.Input[Sequence[pulumi.Input['TransportWanVpnFeatureIpv6StaticRouteNextHopArgs']]] next_hops: IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
+        :param pulumi.Input[bool] null0: IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `null0`
         :param pulumi.Input[str] prefix: Prefix
         :param pulumi.Input[str] prefix_variable: Variable name
         """
+        if gateway is not None:
+            pulumi.set(__self__, "gateway", gateway)
         if nat is not None:
             pulumi.set(__self__, "nat", nat)
         if nat_variable is not None:
@@ -73048,9 +73058,22 @@ class TransportWanVpnFeatureIpv6StaticRouteArgs:
 
     @property
     @pulumi.getter
+    def gateway(self) -> Optional[pulumi.Input[str]]:
+        """
+        Gateway
+          - Choices: `nextHop`, `null0`, `nat`
+        """
+        return pulumi.get(self, "gateway")
+
+    @gateway.setter
+    def gateway(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "gateway", value)
+
+    @property
+    @pulumi.getter
     def nat(self) -> Optional[pulumi.Input[str]]:
         """
-        IPv6 Nat
+        IPv6 Nat, Attribute conditional on `gateway` being equal to `nat`
           - Choices: `NAT64`, `NAT66`
         """
         return pulumi.get(self, "nat")
@@ -73075,7 +73098,7 @@ class TransportWanVpnFeatureIpv6StaticRouteArgs:
     @pulumi.getter(name="nextHops")
     def next_hops(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['TransportWanVpnFeatureIpv6StaticRouteNextHopArgs']]]]:
         """
-        IPv6 Route Gateway Next Hop
+        IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
         """
         return pulumi.get(self, "next_hops")
 
@@ -73087,7 +73110,7 @@ class TransportWanVpnFeatureIpv6StaticRouteArgs:
     @pulumi.getter
     def null0(self) -> Optional[pulumi.Input[bool]]:
         """
-        IPv6 Route Gateway Next Hop
+        IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `null0`
         """
         return pulumi.get(self, "null0")
 

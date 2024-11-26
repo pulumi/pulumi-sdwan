@@ -22,6 +22,10 @@ __all__ = ['TransportWanVpnInterfaceT1E1SerialFeatureArgs', 'TransportWanVpnInte
 class TransportWanVpnInterfaceT1E1SerialFeatureArgs:
     def __init__(__self__, *,
                  feature_profile_id: pulumi.Input[str],
+                 acl_ipv4_egress_feature_id: Optional[pulumi.Input[str]] = None,
+                 acl_ipv4_ingress_feature_id: Optional[pulumi.Input[str]] = None,
+                 acl_ipv6_egress_feature_id: Optional[pulumi.Input[str]] = None,
+                 acl_ipv6_ingress_feature_id: Optional[pulumi.Input[str]] = None,
                  bandwidth: Optional[pulumi.Input[int]] = None,
                  bandwidth_downstream: Optional[pulumi.Input[int]] = None,
                  bandwidth_downstream_variable: Optional[pulumi.Input[str]] = None,
@@ -241,6 +245,14 @@ class TransportWanVpnInterfaceT1E1SerialFeatureArgs:
         :param pulumi.Input[str] tunnel_qos_mode_variable: Variable name
         """
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
+        if acl_ipv4_egress_feature_id is not None:
+            pulumi.set(__self__, "acl_ipv4_egress_feature_id", acl_ipv4_egress_feature_id)
+        if acl_ipv4_ingress_feature_id is not None:
+            pulumi.set(__self__, "acl_ipv4_ingress_feature_id", acl_ipv4_ingress_feature_id)
+        if acl_ipv6_egress_feature_id is not None:
+            pulumi.set(__self__, "acl_ipv6_egress_feature_id", acl_ipv6_egress_feature_id)
+        if acl_ipv6_ingress_feature_id is not None:
+            pulumi.set(__self__, "acl_ipv6_ingress_feature_id", acl_ipv6_ingress_feature_id)
         if bandwidth is not None:
             pulumi.set(__self__, "bandwidth", bandwidth)
         if bandwidth_downstream is not None:
@@ -459,6 +471,42 @@ class TransportWanVpnInterfaceT1E1SerialFeatureArgs:
     @feature_profile_id.setter
     def feature_profile_id(self, value: pulumi.Input[str]):
         pulumi.set(self, "feature_profile_id", value)
+
+    @property
+    @pulumi.getter(name="aclIpv4EgressFeatureId")
+    def acl_ipv4_egress_feature_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "acl_ipv4_egress_feature_id")
+
+    @acl_ipv4_egress_feature_id.setter
+    def acl_ipv4_egress_feature_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "acl_ipv4_egress_feature_id", value)
+
+    @property
+    @pulumi.getter(name="aclIpv4IngressFeatureId")
+    def acl_ipv4_ingress_feature_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "acl_ipv4_ingress_feature_id")
+
+    @acl_ipv4_ingress_feature_id.setter
+    def acl_ipv4_ingress_feature_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "acl_ipv4_ingress_feature_id", value)
+
+    @property
+    @pulumi.getter(name="aclIpv6EgressFeatureId")
+    def acl_ipv6_egress_feature_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "acl_ipv6_egress_feature_id")
+
+    @acl_ipv6_egress_feature_id.setter
+    def acl_ipv6_egress_feature_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "acl_ipv6_egress_feature_id", value)
+
+    @property
+    @pulumi.getter(name="aclIpv6IngressFeatureId")
+    def acl_ipv6_ingress_feature_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "acl_ipv6_ingress_feature_id")
+
+    @acl_ipv6_ingress_feature_id.setter
+    def acl_ipv6_ingress_feature_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "acl_ipv6_ingress_feature_id", value)
 
     @property
     @pulumi.getter
@@ -1706,6 +1754,10 @@ class TransportWanVpnInterfaceT1E1SerialFeatureArgs:
 @pulumi.input_type
 class _TransportWanVpnInterfaceT1E1SerialFeatureState:
     def __init__(__self__, *,
+                 acl_ipv4_egress_feature_id: Optional[pulumi.Input[str]] = None,
+                 acl_ipv4_ingress_feature_id: Optional[pulumi.Input[str]] = None,
+                 acl_ipv6_egress_feature_id: Optional[pulumi.Input[str]] = None,
+                 acl_ipv6_ingress_feature_id: Optional[pulumi.Input[str]] = None,
                  bandwidth: Optional[pulumi.Input[int]] = None,
                  bandwidth_downstream: Optional[pulumi.Input[int]] = None,
                  bandwidth_downstream_variable: Optional[pulumi.Input[str]] = None,
@@ -1927,6 +1979,14 @@ class _TransportWanVpnInterfaceT1E1SerialFeatureState:
         :param pulumi.Input[str] tunnel_qos_mode_variable: Variable name
         :param pulumi.Input[int] version: The version of the Feature
         """
+        if acl_ipv4_egress_feature_id is not None:
+            pulumi.set(__self__, "acl_ipv4_egress_feature_id", acl_ipv4_egress_feature_id)
+        if acl_ipv4_ingress_feature_id is not None:
+            pulumi.set(__self__, "acl_ipv4_ingress_feature_id", acl_ipv4_ingress_feature_id)
+        if acl_ipv6_egress_feature_id is not None:
+            pulumi.set(__self__, "acl_ipv6_egress_feature_id", acl_ipv6_egress_feature_id)
+        if acl_ipv6_ingress_feature_id is not None:
+            pulumi.set(__self__, "acl_ipv6_ingress_feature_id", acl_ipv6_ingress_feature_id)
         if bandwidth is not None:
             pulumi.set(__self__, "bandwidth", bandwidth)
         if bandwidth_downstream is not None:
@@ -2137,6 +2197,42 @@ class _TransportWanVpnInterfaceT1E1SerialFeatureState:
             pulumi.set(__self__, "tunnel_qos_mode_variable", tunnel_qos_mode_variable)
         if version is not None:
             pulumi.set(__self__, "version", version)
+
+    @property
+    @pulumi.getter(name="aclIpv4EgressFeatureId")
+    def acl_ipv4_egress_feature_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "acl_ipv4_egress_feature_id")
+
+    @acl_ipv4_egress_feature_id.setter
+    def acl_ipv4_egress_feature_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "acl_ipv4_egress_feature_id", value)
+
+    @property
+    @pulumi.getter(name="aclIpv4IngressFeatureId")
+    def acl_ipv4_ingress_feature_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "acl_ipv4_ingress_feature_id")
+
+    @acl_ipv4_ingress_feature_id.setter
+    def acl_ipv4_ingress_feature_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "acl_ipv4_ingress_feature_id", value)
+
+    @property
+    @pulumi.getter(name="aclIpv6EgressFeatureId")
+    def acl_ipv6_egress_feature_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "acl_ipv6_egress_feature_id")
+
+    @acl_ipv6_egress_feature_id.setter
+    def acl_ipv6_egress_feature_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "acl_ipv6_egress_feature_id", value)
+
+    @property
+    @pulumi.getter(name="aclIpv6IngressFeatureId")
+    def acl_ipv6_ingress_feature_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "acl_ipv6_ingress_feature_id")
+
+    @acl_ipv6_ingress_feature_id.setter
+    def acl_ipv6_ingress_feature_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "acl_ipv6_ingress_feature_id", value)
 
     @property
     @pulumi.getter
@@ -3410,6 +3506,10 @@ class TransportWanVpnInterfaceT1E1SerialFeature(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
+                 acl_ipv4_egress_feature_id: Optional[pulumi.Input[str]] = None,
+                 acl_ipv4_ingress_feature_id: Optional[pulumi.Input[str]] = None,
+                 acl_ipv6_egress_feature_id: Optional[pulumi.Input[str]] = None,
+                 acl_ipv6_ingress_feature_id: Optional[pulumi.Input[str]] = None,
                  bandwidth: Optional[pulumi.Input[int]] = None,
                  bandwidth_downstream: Optional[pulumi.Input[int]] = None,
                  bandwidth_downstream_variable: Optional[pulumi.Input[str]] = None,
@@ -3580,6 +3680,8 @@ class TransportWanVpnInterfaceT1E1SerialFeature(pulumi.CustomResource):
                 "preference": 4294967,
                 "weight": 250,
             }],
+            acl_ipv4_egress_feature_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+            acl_ipv6_ingress_feature_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
             tcp_mss=1460,
             mtu=1500,
             ip_mtu=1500,
@@ -3780,6 +3882,8 @@ class TransportWanVpnInterfaceT1E1SerialFeature(pulumi.CustomResource):
                 "preference": 4294967,
                 "weight": 250,
             }],
+            acl_ipv4_egress_feature_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+            acl_ipv6_ingress_feature_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
             tcp_mss=1460,
             mtu=1500,
             ip_mtu=1500,
@@ -3809,6 +3913,10 @@ class TransportWanVpnInterfaceT1E1SerialFeature(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
+                 acl_ipv4_egress_feature_id: Optional[pulumi.Input[str]] = None,
+                 acl_ipv4_ingress_feature_id: Optional[pulumi.Input[str]] = None,
+                 acl_ipv6_egress_feature_id: Optional[pulumi.Input[str]] = None,
+                 acl_ipv6_ingress_feature_id: Optional[pulumi.Input[str]] = None,
                  bandwidth: Optional[pulumi.Input[int]] = None,
                  bandwidth_downstream: Optional[pulumi.Input[int]] = None,
                  bandwidth_downstream_variable: Optional[pulumi.Input[str]] = None,
@@ -3922,6 +4030,10 @@ class TransportWanVpnInterfaceT1E1SerialFeature(pulumi.CustomResource):
                 raise TypeError('__props__ is only valid when passed in combination with a valid opts.id to get an existing resource')
             __props__ = TransportWanVpnInterfaceT1E1SerialFeatureArgs.__new__(TransportWanVpnInterfaceT1E1SerialFeatureArgs)
 
+            __props__.__dict__["acl_ipv4_egress_feature_id"] = acl_ipv4_egress_feature_id
+            __props__.__dict__["acl_ipv4_ingress_feature_id"] = acl_ipv4_ingress_feature_id
+            __props__.__dict__["acl_ipv6_egress_feature_id"] = acl_ipv6_egress_feature_id
+            __props__.__dict__["acl_ipv6_ingress_feature_id"] = acl_ipv6_ingress_feature_id
             __props__.__dict__["bandwidth"] = bandwidth
             __props__.__dict__["bandwidth_downstream"] = bandwidth_downstream
             __props__.__dict__["bandwidth_downstream_variable"] = bandwidth_downstream_variable
@@ -4039,6 +4151,10 @@ class TransportWanVpnInterfaceT1E1SerialFeature(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
+            acl_ipv4_egress_feature_id: Optional[pulumi.Input[str]] = None,
+            acl_ipv4_ingress_feature_id: Optional[pulumi.Input[str]] = None,
+            acl_ipv6_egress_feature_id: Optional[pulumi.Input[str]] = None,
+            acl_ipv6_ingress_feature_id: Optional[pulumi.Input[str]] = None,
             bandwidth: Optional[pulumi.Input[int]] = None,
             bandwidth_downstream: Optional[pulumi.Input[int]] = None,
             bandwidth_downstream_variable: Optional[pulumi.Input[str]] = None,
@@ -4269,6 +4385,10 @@ class TransportWanVpnInterfaceT1E1SerialFeature(pulumi.CustomResource):
 
         __props__ = _TransportWanVpnInterfaceT1E1SerialFeatureState.__new__(_TransportWanVpnInterfaceT1E1SerialFeatureState)
 
+        __props__.__dict__["acl_ipv4_egress_feature_id"] = acl_ipv4_egress_feature_id
+        __props__.__dict__["acl_ipv4_ingress_feature_id"] = acl_ipv4_ingress_feature_id
+        __props__.__dict__["acl_ipv6_egress_feature_id"] = acl_ipv6_egress_feature_id
+        __props__.__dict__["acl_ipv6_ingress_feature_id"] = acl_ipv6_ingress_feature_id
         __props__.__dict__["bandwidth"] = bandwidth
         __props__.__dict__["bandwidth_downstream"] = bandwidth_downstream
         __props__.__dict__["bandwidth_downstream_variable"] = bandwidth_downstream_variable
@@ -4375,6 +4495,26 @@ class TransportWanVpnInterfaceT1E1SerialFeature(pulumi.CustomResource):
         __props__.__dict__["tunnel_qos_mode_variable"] = tunnel_qos_mode_variable
         __props__.__dict__["version"] = version
         return TransportWanVpnInterfaceT1E1SerialFeature(resource_name, opts=opts, __props__=__props__)
+
+    @property
+    @pulumi.getter(name="aclIpv4EgressFeatureId")
+    def acl_ipv4_egress_feature_id(self) -> pulumi.Output[Optional[str]]:
+        return pulumi.get(self, "acl_ipv4_egress_feature_id")
+
+    @property
+    @pulumi.getter(name="aclIpv4IngressFeatureId")
+    def acl_ipv4_ingress_feature_id(self) -> pulumi.Output[Optional[str]]:
+        return pulumi.get(self, "acl_ipv4_ingress_feature_id")
+
+    @property
+    @pulumi.getter(name="aclIpv6EgressFeatureId")
+    def acl_ipv6_egress_feature_id(self) -> pulumi.Output[Optional[str]]:
+        return pulumi.get(self, "acl_ipv6_egress_feature_id")
+
+    @property
+    @pulumi.getter(name="aclIpv6IngressFeatureId")
+    def acl_ipv6_ingress_feature_id(self) -> pulumi.Output[Optional[str]]:
+        return pulumi.get(self, "acl_ipv6_ingress_feature_id")
 
     @property
     @pulumi.getter

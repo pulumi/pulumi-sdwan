@@ -142,6 +142,10 @@ import javax.annotation.Nullable;
  *                 .translated_source_prefix("abcd:1234:5678::/48")
  *                 .source_vpn_id(4)
  *                 .build())
+ *             .qosAdaptive(false)
+ *             .qosShapingRate(16)
+ *             .aclIpv4EgressFeatureId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+ *             .aclIpv6IngressFeatureId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
  *             .arps(TransportWanVpnInterfaceEthernetFeatureArpArgs.builder()
  *                 .ip_address("1.2.3.4")
  *                 .mac_address("00-B0-D0-63-C2-26")
@@ -181,6 +185,30 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="sdwan:index/transportWanVpnInterfaceEthernetFeature:TransportWanVpnInterfaceEthernetFeature")
 public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resources.CustomResource {
+    @Export(name="aclIpv4EgressFeatureId", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> aclIpv4EgressFeatureId;
+
+    public Output<Optional<String>> aclIpv4EgressFeatureId() {
+        return Codegen.optional(this.aclIpv4EgressFeatureId);
+    }
+    @Export(name="aclIpv4IngressFeatureId", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> aclIpv4IngressFeatureId;
+
+    public Output<Optional<String>> aclIpv4IngressFeatureId() {
+        return Codegen.optional(this.aclIpv4IngressFeatureId);
+    }
+    @Export(name="aclIpv6EgressFeatureId", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> aclIpv6EgressFeatureId;
+
+    public Output<Optional<String>> aclIpv6EgressFeatureId() {
+        return Codegen.optional(this.aclIpv6EgressFeatureId);
+    }
+    @Export(name="aclIpv6IngressFeatureId", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> aclIpv6IngressFeatureId;
+
+    public Output<Optional<String>> aclIpv6IngressFeatureId() {
+        return Codegen.optional(this.aclIpv6IngressFeatureId);
+    }
     /**
      * Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds - Range: `0`-`2147483` - Default value: `1200`
      * 

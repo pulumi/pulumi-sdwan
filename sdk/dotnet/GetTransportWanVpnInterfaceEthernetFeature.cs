@@ -121,6 +121,10 @@ namespace Pulumi.Sdwan
     [OutputType]
     public sealed class GetTransportWanVpnInterfaceEthernetFeatureResult
     {
+        public readonly string AclIpv4EgressFeatureId;
+        public readonly string AclIpv4IngressFeatureId;
+        public readonly string AclIpv6EgressFeatureId;
+        public readonly string AclIpv6IngressFeatureId;
         /// <summary>
         /// Timeout value for dynamically learned ARP entries, \n\n seconds
         /// </summary>
@@ -883,6 +887,14 @@ namespace Pulumi.Sdwan
 
         [OutputConstructor]
         private GetTransportWanVpnInterfaceEthernetFeatureResult(
+            string aclIpv4EgressFeatureId,
+
+            string aclIpv4IngressFeatureId,
+
+            string aclIpv6EgressFeatureId,
+
+            string aclIpv6IngressFeatureId,
+
             int arpTimeout,
 
             string arpTimeoutVariable,
@@ -1267,6 +1279,10 @@ namespace Pulumi.Sdwan
 
             string xconnectVariable)
         {
+            AclIpv4EgressFeatureId = aclIpv4EgressFeatureId;
+            AclIpv4IngressFeatureId = aclIpv4IngressFeatureId;
+            AclIpv6EgressFeatureId = aclIpv6EgressFeatureId;
+            AclIpv6IngressFeatureId = aclIpv6IngressFeatureId;
             ArpTimeout = arpTimeout;
             ArpTimeoutVariable = arpTimeoutVariable;
             Arps = arps;

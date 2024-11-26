@@ -71,6 +71,8 @@ import * as utilities from "./utilities";
  *         preference: 4294967,
  *         weight: 250,
  *     }],
+ *     aclIpv4EgressFeatureId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     aclIpv6IngressFeatureId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
  *     tcpMss: 1460,
  *     mtu: 1500,
  *     ipMtu: 1500,
@@ -114,6 +116,10 @@ export class TransportWanVpnInterfaceT1E1SerialFeature extends pulumi.CustomReso
         return obj['__pulumiType'] === TransportWanVpnInterfaceT1E1SerialFeature.__pulumiType;
     }
 
+    public readonly aclIpv4EgressFeatureId!: pulumi.Output<string | undefined>;
+    public readonly aclIpv4IngressFeatureId!: pulumi.Output<string | undefined>;
+    public readonly aclIpv6EgressFeatureId!: pulumi.Output<string | undefined>;
+    public readonly aclIpv6IngressFeatureId!: pulumi.Output<string | undefined>;
     /**
      * Interface bandwidth capacity, in kbps - Range: `1`-`200000000`
      */
@@ -554,6 +560,10 @@ export class TransportWanVpnInterfaceT1E1SerialFeature extends pulumi.CustomReso
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as TransportWanVpnInterfaceT1E1SerialFeatureState | undefined;
+            resourceInputs["aclIpv4EgressFeatureId"] = state ? state.aclIpv4EgressFeatureId : undefined;
+            resourceInputs["aclIpv4IngressFeatureId"] = state ? state.aclIpv4IngressFeatureId : undefined;
+            resourceInputs["aclIpv6EgressFeatureId"] = state ? state.aclIpv6EgressFeatureId : undefined;
+            resourceInputs["aclIpv6IngressFeatureId"] = state ? state.aclIpv6IngressFeatureId : undefined;
             resourceInputs["bandwidth"] = state ? state.bandwidth : undefined;
             resourceInputs["bandwidthDownstream"] = state ? state.bandwidthDownstream : undefined;
             resourceInputs["bandwidthDownstreamVariable"] = state ? state.bandwidthDownstreamVariable : undefined;
@@ -664,6 +674,10 @@ export class TransportWanVpnInterfaceT1E1SerialFeature extends pulumi.CustomReso
             if ((!args || args.featureProfileId === undefined) && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
+            resourceInputs["aclIpv4EgressFeatureId"] = args ? args.aclIpv4EgressFeatureId : undefined;
+            resourceInputs["aclIpv4IngressFeatureId"] = args ? args.aclIpv4IngressFeatureId : undefined;
+            resourceInputs["aclIpv6EgressFeatureId"] = args ? args.aclIpv6EgressFeatureId : undefined;
+            resourceInputs["aclIpv6IngressFeatureId"] = args ? args.aclIpv6IngressFeatureId : undefined;
             resourceInputs["bandwidth"] = args ? args.bandwidth : undefined;
             resourceInputs["bandwidthDownstream"] = args ? args.bandwidthDownstream : undefined;
             resourceInputs["bandwidthDownstreamVariable"] = args ? args.bandwidthDownstreamVariable : undefined;
@@ -779,6 +793,10 @@ export class TransportWanVpnInterfaceT1E1SerialFeature extends pulumi.CustomReso
  * Input properties used for looking up and filtering TransportWanVpnInterfaceT1E1SerialFeature resources.
  */
 export interface TransportWanVpnInterfaceT1E1SerialFeatureState {
+    aclIpv4EgressFeatureId?: pulumi.Input<string>;
+    aclIpv4IngressFeatureId?: pulumi.Input<string>;
+    aclIpv6EgressFeatureId?: pulumi.Input<string>;
+    aclIpv6IngressFeatureId?: pulumi.Input<string>;
     /**
      * Interface bandwidth capacity, in kbps - Range: `1`-`200000000`
      */
@@ -1211,6 +1229,10 @@ export interface TransportWanVpnInterfaceT1E1SerialFeatureState {
  * The set of arguments for constructing a TransportWanVpnInterfaceT1E1SerialFeature resource.
  */
 export interface TransportWanVpnInterfaceT1E1SerialFeatureArgs {
+    aclIpv4EgressFeatureId?: pulumi.Input<string>;
+    aclIpv4IngressFeatureId?: pulumi.Input<string>;
+    aclIpv6EgressFeatureId?: pulumi.Input<string>;
+    aclIpv6IngressFeatureId?: pulumi.Input<string>;
     /**
      * Interface bandwidth capacity, in kbps - Range: `1`-`200000000`
      */

@@ -78,6 +78,7 @@ import javax.annotation.Nullable;
  *                 .build())
  *             .ipv6StaticRoutes(TransportWanVpnFeatureIpv6StaticRouteArgs.builder()
  *                 .prefix("2002::/16")
+ *                 .gateway("nextHop")
  *                 .next_hops(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .build())
  *             .services(TransportWanVpnFeatureServiceArgs.builder()

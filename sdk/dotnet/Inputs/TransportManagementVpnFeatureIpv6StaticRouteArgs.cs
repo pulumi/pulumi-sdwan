@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Inputs
     {
         /// <summary>
         /// Gateway
-        ///   - Choices: `next_hop`, `null0`, `nat`
+        ///   - Choices: `nextHop`, `null0`, `nat`
         /// </summary>
         [Input("gateway")]
         public Input<string>? Gateway { get; set; }
@@ -36,7 +36,7 @@ namespace Pulumi.Sdwan.Inputs
         private InputList<Inputs.TransportManagementVpnFeatureIpv6StaticRouteNextHopArgs>? _nextHops;
 
         /// <summary>
-        /// IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `next_hop`
+        /// IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
         /// </summary>
         public InputList<Inputs.TransportManagementVpnFeatureIpv6StaticRouteNextHopArgs> NextHops
         {

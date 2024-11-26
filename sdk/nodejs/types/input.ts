@@ -8128,14 +8128,14 @@ export interface ServiceIpv4AclFeatureSequenceMatchEntryDestinationPort {
     /**
      * destination port range or individual port number
      */
-    port?: pulumi.Input<number>;
+    port?: pulumi.Input<string>;
 }
 
 export interface ServiceIpv4AclFeatureSequenceMatchEntrySourcePort {
     /**
      * source port range or individual port number
      */
-    port?: pulumi.Input<number>;
+    port?: pulumi.Input<string>;
 }
 
 export interface ServiceIpv6AclFeatureSequence {
@@ -8243,14 +8243,14 @@ export interface ServiceIpv6AclFeatureSequenceMatchEntryDestinationPort {
     /**
      * destination port range or individual port number
      */
-    port?: pulumi.Input<number>;
+    port?: pulumi.Input<string>;
 }
 
 export interface ServiceIpv6AclFeatureSequenceMatchEntrySourcePort {
     /**
      * source port range or individual port number
      */
-    port?: pulumi.Input<number>;
+    port?: pulumi.Input<string>;
 }
 
 export interface ServiceLanVpnFeatureAdvertiseOmpIpv4 {
@@ -13179,14 +13179,14 @@ export interface TransportIpv4AclFeatureSequenceMatchEntryDestinationPort {
     /**
      * destination port range or individual port number
      */
-    port?: pulumi.Input<number>;
+    port?: pulumi.Input<string>;
 }
 
 export interface TransportIpv4AclFeatureSequenceMatchEntrySourcePort {
     /**
      * source port range or individual port number
      */
-    port?: pulumi.Input<number>;
+    port?: pulumi.Input<string>;
 }
 
 export interface TransportIpv6AclFeatureSequence {
@@ -13294,14 +13294,14 @@ export interface TransportIpv6AclFeatureSequenceMatchEntryDestinationPort {
     /**
      * destination port range or individual port number
      */
-    port?: pulumi.Input<number>;
+    port?: pulumi.Input<string>;
 }
 
 export interface TransportIpv6AclFeatureSequenceMatchEntrySourcePort {
     /**
      * source port range or individual port number
      */
-    port?: pulumi.Input<number>;
+    port?: pulumi.Input<string>;
 }
 
 export interface TransportIpv6TrackerGroupFeatureTrackerElement {
@@ -14876,7 +14876,12 @@ export interface TransportWanVpnFeatureIpv4StaticRouteNextHop {
 
 export interface TransportWanVpnFeatureIpv6StaticRoute {
     /**
-     * IPv6 Nat
+     * Gateway
+     *   - Choices: `nextHop`, `null0`, `nat`
+     */
+    gateway?: pulumi.Input<string>;
+    /**
+     * IPv6 Nat, Attribute conditional on `gateway` being equal to `nat`
      *   - Choices: `NAT64`, `NAT66`
      */
     nat?: pulumi.Input<string>;
@@ -14885,11 +14890,11 @@ export interface TransportWanVpnFeatureIpv6StaticRoute {
      */
     natVariable?: pulumi.Input<string>;
     /**
-     * IPv6 Route Gateway Next Hop
+     * IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
      */
     nextHops?: pulumi.Input<pulumi.Input<inputs.TransportWanVpnFeatureIpv6StaticRouteNextHop>[]>;
     /**
-     * IPv6 Route Gateway Next Hop
+     * IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `null0`
      */
     null0?: pulumi.Input<boolean>;
     /**

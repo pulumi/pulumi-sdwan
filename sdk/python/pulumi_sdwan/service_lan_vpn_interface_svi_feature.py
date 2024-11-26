@@ -22,6 +22,10 @@ __all__ = ['ServiceLanVpnInterfaceSviFeatureArgs', 'ServiceLanVpnInterfaceSviFea
 class ServiceLanVpnInterfaceSviFeatureArgs:
     def __init__(__self__, *,
                  feature_profile_id: pulumi.Input[str],
+                 acl_ipv4_egress_feature_id: Optional[pulumi.Input[str]] = None,
+                 acl_ipv4_ingress_feature_id: Optional[pulumi.Input[str]] = None,
+                 acl_ipv6_egress_feature_id: Optional[pulumi.Input[str]] = None,
+                 acl_ipv6_ingress_feature_id: Optional[pulumi.Input[str]] = None,
                  arp_timeout: Optional[pulumi.Input[int]] = None,
                  arp_timeout_variable: Optional[pulumi.Input[str]] = None,
                  arps: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceSviFeatureArpArgs']]]] = None,
@@ -105,6 +109,14 @@ class ServiceLanVpnInterfaceSviFeatureArgs:
         :param pulumi.Input[str] tcp_mss_variable: Variable name
         """
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
+        if acl_ipv4_egress_feature_id is not None:
+            pulumi.set(__self__, "acl_ipv4_egress_feature_id", acl_ipv4_egress_feature_id)
+        if acl_ipv4_ingress_feature_id is not None:
+            pulumi.set(__self__, "acl_ipv4_ingress_feature_id", acl_ipv4_ingress_feature_id)
+        if acl_ipv6_egress_feature_id is not None:
+            pulumi.set(__self__, "acl_ipv6_egress_feature_id", acl_ipv6_egress_feature_id)
+        if acl_ipv6_ingress_feature_id is not None:
+            pulumi.set(__self__, "acl_ipv6_ingress_feature_id", acl_ipv6_ingress_feature_id)
         if arp_timeout is not None:
             pulumi.set(__self__, "arp_timeout", arp_timeout)
         if arp_timeout_variable is not None:
@@ -191,6 +203,42 @@ class ServiceLanVpnInterfaceSviFeatureArgs:
     @feature_profile_id.setter
     def feature_profile_id(self, value: pulumi.Input[str]):
         pulumi.set(self, "feature_profile_id", value)
+
+    @property
+    @pulumi.getter(name="aclIpv4EgressFeatureId")
+    def acl_ipv4_egress_feature_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "acl_ipv4_egress_feature_id")
+
+    @acl_ipv4_egress_feature_id.setter
+    def acl_ipv4_egress_feature_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "acl_ipv4_egress_feature_id", value)
+
+    @property
+    @pulumi.getter(name="aclIpv4IngressFeatureId")
+    def acl_ipv4_ingress_feature_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "acl_ipv4_ingress_feature_id")
+
+    @acl_ipv4_ingress_feature_id.setter
+    def acl_ipv4_ingress_feature_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "acl_ipv4_ingress_feature_id", value)
+
+    @property
+    @pulumi.getter(name="aclIpv6EgressFeatureId")
+    def acl_ipv6_egress_feature_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "acl_ipv6_egress_feature_id")
+
+    @acl_ipv6_egress_feature_id.setter
+    def acl_ipv6_egress_feature_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "acl_ipv6_egress_feature_id", value)
+
+    @property
+    @pulumi.getter(name="aclIpv6IngressFeatureId")
+    def acl_ipv6_ingress_feature_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "acl_ipv6_ingress_feature_id")
+
+    @acl_ipv6_ingress_feature_id.setter
+    def acl_ipv6_ingress_feature_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "acl_ipv6_ingress_feature_id", value)
 
     @property
     @pulumi.getter(name="arpTimeout")
@@ -644,6 +692,10 @@ class ServiceLanVpnInterfaceSviFeatureArgs:
 @pulumi.input_type
 class _ServiceLanVpnInterfaceSviFeatureState:
     def __init__(__self__, *,
+                 acl_ipv4_egress_feature_id: Optional[pulumi.Input[str]] = None,
+                 acl_ipv4_ingress_feature_id: Optional[pulumi.Input[str]] = None,
+                 acl_ipv6_egress_feature_id: Optional[pulumi.Input[str]] = None,
+                 acl_ipv6_ingress_feature_id: Optional[pulumi.Input[str]] = None,
                  arp_timeout: Optional[pulumi.Input[int]] = None,
                  arp_timeout_variable: Optional[pulumi.Input[str]] = None,
                  arps: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceSviFeatureArpArgs']]]] = None,
@@ -729,6 +781,14 @@ class _ServiceLanVpnInterfaceSviFeatureState:
         :param pulumi.Input[str] tcp_mss_variable: Variable name
         :param pulumi.Input[int] version: The version of the Feature
         """
+        if acl_ipv4_egress_feature_id is not None:
+            pulumi.set(__self__, "acl_ipv4_egress_feature_id", acl_ipv4_egress_feature_id)
+        if acl_ipv4_ingress_feature_id is not None:
+            pulumi.set(__self__, "acl_ipv4_ingress_feature_id", acl_ipv4_ingress_feature_id)
+        if acl_ipv6_egress_feature_id is not None:
+            pulumi.set(__self__, "acl_ipv6_egress_feature_id", acl_ipv6_egress_feature_id)
+        if acl_ipv6_ingress_feature_id is not None:
+            pulumi.set(__self__, "acl_ipv6_ingress_feature_id", acl_ipv6_ingress_feature_id)
         if arp_timeout is not None:
             pulumi.set(__self__, "arp_timeout", arp_timeout)
         if arp_timeout_variable is not None:
@@ -807,6 +867,42 @@ class _ServiceLanVpnInterfaceSviFeatureState:
             pulumi.set(__self__, "tcp_mss_variable", tcp_mss_variable)
         if version is not None:
             pulumi.set(__self__, "version", version)
+
+    @property
+    @pulumi.getter(name="aclIpv4EgressFeatureId")
+    def acl_ipv4_egress_feature_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "acl_ipv4_egress_feature_id")
+
+    @acl_ipv4_egress_feature_id.setter
+    def acl_ipv4_egress_feature_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "acl_ipv4_egress_feature_id", value)
+
+    @property
+    @pulumi.getter(name="aclIpv4IngressFeatureId")
+    def acl_ipv4_ingress_feature_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "acl_ipv4_ingress_feature_id")
+
+    @acl_ipv4_ingress_feature_id.setter
+    def acl_ipv4_ingress_feature_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "acl_ipv4_ingress_feature_id", value)
+
+    @property
+    @pulumi.getter(name="aclIpv6EgressFeatureId")
+    def acl_ipv6_egress_feature_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "acl_ipv6_egress_feature_id")
+
+    @acl_ipv6_egress_feature_id.setter
+    def acl_ipv6_egress_feature_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "acl_ipv6_egress_feature_id", value)
+
+    @property
+    @pulumi.getter(name="aclIpv6IngressFeatureId")
+    def acl_ipv6_ingress_feature_id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "acl_ipv6_ingress_feature_id")
+
+    @acl_ipv6_ingress_feature_id.setter
+    def acl_ipv6_ingress_feature_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "acl_ipv6_ingress_feature_id", value)
 
     @property
     @pulumi.getter(name="arpTimeout")
@@ -1286,6 +1382,10 @@ class ServiceLanVpnInterfaceSviFeature(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
+                 acl_ipv4_egress_feature_id: Optional[pulumi.Input[str]] = None,
+                 acl_ipv4_ingress_feature_id: Optional[pulumi.Input[str]] = None,
+                 acl_ipv6_egress_feature_id: Optional[pulumi.Input[str]] = None,
+                 acl_ipv6_ingress_feature_id: Optional[pulumi.Input[str]] = None,
                  arp_timeout: Optional[pulumi.Input[int]] = None,
                  arp_timeout_variable: Optional[pulumi.Input[str]] = None,
                  arps: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceSviFeatureArpArgs', 'ServiceLanVpnInterfaceSviFeatureArpArgsDict']]]]] = None,
@@ -1415,6 +1515,10 @@ class ServiceLanVpnInterfaceSviFeature(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
+                 acl_ipv4_egress_feature_id: Optional[pulumi.Input[str]] = None,
+                 acl_ipv4_ingress_feature_id: Optional[pulumi.Input[str]] = None,
+                 acl_ipv6_egress_feature_id: Optional[pulumi.Input[str]] = None,
+                 acl_ipv6_ingress_feature_id: Optional[pulumi.Input[str]] = None,
                  arp_timeout: Optional[pulumi.Input[int]] = None,
                  arp_timeout_variable: Optional[pulumi.Input[str]] = None,
                  arps: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceSviFeatureArpArgs', 'ServiceLanVpnInterfaceSviFeatureArpArgsDict']]]]] = None,
@@ -1462,6 +1566,10 @@ class ServiceLanVpnInterfaceSviFeature(pulumi.CustomResource):
                 raise TypeError('__props__ is only valid when passed in combination with a valid opts.id to get an existing resource')
             __props__ = ServiceLanVpnInterfaceSviFeatureArgs.__new__(ServiceLanVpnInterfaceSviFeatureArgs)
 
+            __props__.__dict__["acl_ipv4_egress_feature_id"] = acl_ipv4_egress_feature_id
+            __props__.__dict__["acl_ipv4_ingress_feature_id"] = acl_ipv4_ingress_feature_id
+            __props__.__dict__["acl_ipv6_egress_feature_id"] = acl_ipv6_egress_feature_id
+            __props__.__dict__["acl_ipv6_ingress_feature_id"] = acl_ipv6_ingress_feature_id
             __props__.__dict__["arp_timeout"] = arp_timeout
             __props__.__dict__["arp_timeout_variable"] = arp_timeout_variable
             __props__.__dict__["arps"] = arps
@@ -1513,6 +1621,10 @@ class ServiceLanVpnInterfaceSviFeature(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
+            acl_ipv4_egress_feature_id: Optional[pulumi.Input[str]] = None,
+            acl_ipv4_ingress_feature_id: Optional[pulumi.Input[str]] = None,
+            acl_ipv6_egress_feature_id: Optional[pulumi.Input[str]] = None,
+            acl_ipv6_ingress_feature_id: Optional[pulumi.Input[str]] = None,
             arp_timeout: Optional[pulumi.Input[int]] = None,
             arp_timeout_variable: Optional[pulumi.Input[str]] = None,
             arps: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceSviFeatureArpArgs', 'ServiceLanVpnInterfaceSviFeatureArpArgsDict']]]]] = None,
@@ -1607,6 +1719,10 @@ class ServiceLanVpnInterfaceSviFeature(pulumi.CustomResource):
 
         __props__ = _ServiceLanVpnInterfaceSviFeatureState.__new__(_ServiceLanVpnInterfaceSviFeatureState)
 
+        __props__.__dict__["acl_ipv4_egress_feature_id"] = acl_ipv4_egress_feature_id
+        __props__.__dict__["acl_ipv4_ingress_feature_id"] = acl_ipv4_ingress_feature_id
+        __props__.__dict__["acl_ipv6_egress_feature_id"] = acl_ipv6_egress_feature_id
+        __props__.__dict__["acl_ipv6_ingress_feature_id"] = acl_ipv6_ingress_feature_id
         __props__.__dict__["arp_timeout"] = arp_timeout
         __props__.__dict__["arp_timeout_variable"] = arp_timeout_variable
         __props__.__dict__["arps"] = arps
@@ -1647,6 +1763,26 @@ class ServiceLanVpnInterfaceSviFeature(pulumi.CustomResource):
         __props__.__dict__["tcp_mss_variable"] = tcp_mss_variable
         __props__.__dict__["version"] = version
         return ServiceLanVpnInterfaceSviFeature(resource_name, opts=opts, __props__=__props__)
+
+    @property
+    @pulumi.getter(name="aclIpv4EgressFeatureId")
+    def acl_ipv4_egress_feature_id(self) -> pulumi.Output[Optional[str]]:
+        return pulumi.get(self, "acl_ipv4_egress_feature_id")
+
+    @property
+    @pulumi.getter(name="aclIpv4IngressFeatureId")
+    def acl_ipv4_ingress_feature_id(self) -> pulumi.Output[Optional[str]]:
+        return pulumi.get(self, "acl_ipv4_ingress_feature_id")
+
+    @property
+    @pulumi.getter(name="aclIpv6EgressFeatureId")
+    def acl_ipv6_egress_feature_id(self) -> pulumi.Output[Optional[str]]:
+        return pulumi.get(self, "acl_ipv6_egress_feature_id")
+
+    @property
+    @pulumi.getter(name="aclIpv6IngressFeatureId")
+    def acl_ipv6_ingress_feature_id(self) -> pulumi.Output[Optional[str]]:
+        return pulumi.get(self, "acl_ipv6_ingress_feature_id")
 
     @property
     @pulumi.getter(name="arpTimeout")

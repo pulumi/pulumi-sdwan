@@ -36,33 +36,35 @@ public final class OtherUcseFeatureArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * - Choices: `ge2`, `te2`
+     * , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge2`, `te2`
      * 
      */
-    @Import(name="accessPortSharedFailoverType", required=true)
-    private Output<String> accessPortSharedFailoverType;
+    @Import(name="accessPortSharedFailoverType")
+    private @Nullable Output<String> accessPortSharedFailoverType;
 
     /**
-     * @return - Choices: `ge2`, `te2`
+     * @return , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge2`, `te2`
      * 
      */
-    public Output<String> accessPortSharedFailoverType() {
-        return this.accessPortSharedFailoverType;
+    public Optional<Output<String>> accessPortSharedFailoverType() {
+        return Optional.ofNullable(this.accessPortSharedFailoverType);
     }
 
     /**
-     * - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
+     * , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
+     * `console`, `failover`
      * 
      */
-    @Import(name="accessPortSharedType", required=true)
-    private Output<String> accessPortSharedType;
+    @Import(name="accessPortSharedType")
+    private @Nullable Output<String> accessPortSharedType;
 
     /**
-     * @return - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
+     * @return , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
+     * `console`, `failover`
      * 
      */
-    public Output<String> accessPortSharedType() {
-        return this.accessPortSharedType;
+    public Optional<Output<String>> accessPortSharedType() {
+        return Optional.ofNullable(this.accessPortSharedType);
     }
 
     /**
@@ -337,18 +339,18 @@ public final class OtherUcseFeatureArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param accessPortSharedFailoverType - Choices: `ge2`, `te2`
+         * @param accessPortSharedFailoverType , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge2`, `te2`
          * 
          * @return builder
          * 
          */
-        public Builder accessPortSharedFailoverType(Output<String> accessPortSharedFailoverType) {
+        public Builder accessPortSharedFailoverType(@Nullable Output<String> accessPortSharedFailoverType) {
             $.accessPortSharedFailoverType = accessPortSharedFailoverType;
             return this;
         }
 
         /**
-         * @param accessPortSharedFailoverType - Choices: `ge2`, `te2`
+         * @param accessPortSharedFailoverType , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge2`, `te2`
          * 
          * @return builder
          * 
@@ -358,18 +360,20 @@ public final class OtherUcseFeatureArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param accessPortSharedType - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
+         * @param accessPortSharedType , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
+         * `console`, `failover`
          * 
          * @return builder
          * 
          */
-        public Builder accessPortSharedType(Output<String> accessPortSharedType) {
+        public Builder accessPortSharedType(@Nullable Output<String> accessPortSharedType) {
             $.accessPortSharedType = accessPortSharedType;
             return this;
         }
 
         /**
-         * @param accessPortSharedType - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
+         * @param accessPortSharedType , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
+         * `console`, `failover`
          * 
          * @return builder
          * 
@@ -683,12 +687,6 @@ public final class OtherUcseFeatureArgs extends com.pulumi.resources.ResourceArg
         }
 
         public OtherUcseFeatureArgs build() {
-            if ($.accessPortSharedFailoverType == null) {
-                throw new MissingRequiredPropertyException("OtherUcseFeatureArgs", "accessPortSharedFailoverType");
-            }
-            if ($.accessPortSharedType == null) {
-                throw new MissingRequiredPropertyException("OtherUcseFeatureArgs", "accessPortSharedType");
-            }
             if ($.bay == null) {
                 throw new MissingRequiredPropertyException("OtherUcseFeatureArgs", "bay");
             }

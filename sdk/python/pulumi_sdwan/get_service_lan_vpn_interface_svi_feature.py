@@ -27,7 +27,19 @@ class GetServiceLanVpnInterfaceSviFeatureResult:
     """
     A collection of values returned by getServiceLanVpnInterfaceSviFeature.
     """
-    def __init__(__self__, arp_timeout=None, arp_timeout_variable=None, arps=None, description=None, enable_dhcpv6=None, enable_dhcpv6_variable=None, feature_profile_id=None, icmp_redirect_disable=None, icmp_redirect_disable_variable=None, id=None, interface_description=None, interface_description_variable=None, interface_mtu=None, interface_mtu_variable=None, interface_name=None, interface_name_variable=None, ip_directed_broadcast=None, ip_directed_broadcast_variable=None, ip_mtu=None, ip_mtu_variable=None, ipv4_address=None, ipv4_address_variable=None, ipv4_dhcp_helpers=None, ipv4_dhcp_helpers_variable=None, ipv4_secondary_addresses=None, ipv4_subnet_mask=None, ipv4_subnet_mask_variable=None, ipv4_vrrps=None, ipv6_address=None, ipv6_address_variable=None, ipv6_dhcp_helpers=None, ipv6_secondary_addresses=None, ipv6_vrrps=None, name=None, service_lan_vpn_feature_id=None, shutdown=None, shutdown_variable=None, tcp_mss=None, tcp_mss_variable=None, version=None):
+    def __init__(__self__, acl_ipv4_egress_feature_id=None, acl_ipv4_ingress_feature_id=None, acl_ipv6_egress_feature_id=None, acl_ipv6_ingress_feature_id=None, arp_timeout=None, arp_timeout_variable=None, arps=None, description=None, enable_dhcpv6=None, enable_dhcpv6_variable=None, feature_profile_id=None, icmp_redirect_disable=None, icmp_redirect_disable_variable=None, id=None, interface_description=None, interface_description_variable=None, interface_mtu=None, interface_mtu_variable=None, interface_name=None, interface_name_variable=None, ip_directed_broadcast=None, ip_directed_broadcast_variable=None, ip_mtu=None, ip_mtu_variable=None, ipv4_address=None, ipv4_address_variable=None, ipv4_dhcp_helpers=None, ipv4_dhcp_helpers_variable=None, ipv4_secondary_addresses=None, ipv4_subnet_mask=None, ipv4_subnet_mask_variable=None, ipv4_vrrps=None, ipv6_address=None, ipv6_address_variable=None, ipv6_dhcp_helpers=None, ipv6_secondary_addresses=None, ipv6_vrrps=None, name=None, service_lan_vpn_feature_id=None, shutdown=None, shutdown_variable=None, tcp_mss=None, tcp_mss_variable=None, version=None):
+        if acl_ipv4_egress_feature_id and not isinstance(acl_ipv4_egress_feature_id, str):
+            raise TypeError("Expected argument 'acl_ipv4_egress_feature_id' to be a str")
+        pulumi.set(__self__, "acl_ipv4_egress_feature_id", acl_ipv4_egress_feature_id)
+        if acl_ipv4_ingress_feature_id and not isinstance(acl_ipv4_ingress_feature_id, str):
+            raise TypeError("Expected argument 'acl_ipv4_ingress_feature_id' to be a str")
+        pulumi.set(__self__, "acl_ipv4_ingress_feature_id", acl_ipv4_ingress_feature_id)
+        if acl_ipv6_egress_feature_id and not isinstance(acl_ipv6_egress_feature_id, str):
+            raise TypeError("Expected argument 'acl_ipv6_egress_feature_id' to be a str")
+        pulumi.set(__self__, "acl_ipv6_egress_feature_id", acl_ipv6_egress_feature_id)
+        if acl_ipv6_ingress_feature_id and not isinstance(acl_ipv6_ingress_feature_id, str):
+            raise TypeError("Expected argument 'acl_ipv6_ingress_feature_id' to be a str")
+        pulumi.set(__self__, "acl_ipv6_ingress_feature_id", acl_ipv6_ingress_feature_id)
         if arp_timeout and not isinstance(arp_timeout, int):
             raise TypeError("Expected argument 'arp_timeout' to be a int")
         pulumi.set(__self__, "arp_timeout", arp_timeout)
@@ -148,6 +160,26 @@ class GetServiceLanVpnInterfaceSviFeatureResult:
         if version and not isinstance(version, int):
             raise TypeError("Expected argument 'version' to be a int")
         pulumi.set(__self__, "version", version)
+
+    @property
+    @pulumi.getter(name="aclIpv4EgressFeatureId")
+    def acl_ipv4_egress_feature_id(self) -> str:
+        return pulumi.get(self, "acl_ipv4_egress_feature_id")
+
+    @property
+    @pulumi.getter(name="aclIpv4IngressFeatureId")
+    def acl_ipv4_ingress_feature_id(self) -> str:
+        return pulumi.get(self, "acl_ipv4_ingress_feature_id")
+
+    @property
+    @pulumi.getter(name="aclIpv6EgressFeatureId")
+    def acl_ipv6_egress_feature_id(self) -> str:
+        return pulumi.get(self, "acl_ipv6_egress_feature_id")
+
+    @property
+    @pulumi.getter(name="aclIpv6IngressFeatureId")
+    def acl_ipv6_ingress_feature_id(self) -> str:
+        return pulumi.get(self, "acl_ipv6_ingress_feature_id")
 
     @property
     @pulumi.getter(name="arpTimeout")
@@ -476,6 +508,10 @@ class AwaitableGetServiceLanVpnInterfaceSviFeatureResult(GetServiceLanVpnInterfa
         if False:
             yield self
         return GetServiceLanVpnInterfaceSviFeatureResult(
+            acl_ipv4_egress_feature_id=self.acl_ipv4_egress_feature_id,
+            acl_ipv4_ingress_feature_id=self.acl_ipv4_ingress_feature_id,
+            acl_ipv6_egress_feature_id=self.acl_ipv6_egress_feature_id,
+            acl_ipv6_ingress_feature_id=self.acl_ipv6_ingress_feature_id,
             arp_timeout=self.arp_timeout,
             arp_timeout_variable=self.arp_timeout_variable,
             arps=self.arps,
@@ -549,6 +585,10 @@ def get_service_lan_vpn_interface_svi_feature(feature_profile_id: Optional[str] 
     __ret__ = pulumi.runtime.invoke('sdwan:index/getServiceLanVpnInterfaceSviFeature:getServiceLanVpnInterfaceSviFeature', __args__, opts=opts, typ=GetServiceLanVpnInterfaceSviFeatureResult).value
 
     return AwaitableGetServiceLanVpnInterfaceSviFeatureResult(
+        acl_ipv4_egress_feature_id=pulumi.get(__ret__, 'acl_ipv4_egress_feature_id'),
+        acl_ipv4_ingress_feature_id=pulumi.get(__ret__, 'acl_ipv4_ingress_feature_id'),
+        acl_ipv6_egress_feature_id=pulumi.get(__ret__, 'acl_ipv6_egress_feature_id'),
+        acl_ipv6_ingress_feature_id=pulumi.get(__ret__, 'acl_ipv6_ingress_feature_id'),
         arp_timeout=pulumi.get(__ret__, 'arp_timeout'),
         arp_timeout_variable=pulumi.get(__ret__, 'arp_timeout_variable'),
         arps=pulumi.get(__ret__, 'arps'),
@@ -619,6 +659,10 @@ def get_service_lan_vpn_interface_svi_feature_output(feature_profile_id: Optiona
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getServiceLanVpnInterfaceSviFeature:getServiceLanVpnInterfaceSviFeature', __args__, opts=opts, typ=GetServiceLanVpnInterfaceSviFeatureResult)
     return __ret__.apply(lambda __response__: GetServiceLanVpnInterfaceSviFeatureResult(
+        acl_ipv4_egress_feature_id=pulumi.get(__response__, 'acl_ipv4_egress_feature_id'),
+        acl_ipv4_ingress_feature_id=pulumi.get(__response__, 'acl_ipv4_ingress_feature_id'),
+        acl_ipv6_egress_feature_id=pulumi.get(__response__, 'acl_ipv6_egress_feature_id'),
+        acl_ipv6_ingress_feature_id=pulumi.get(__response__, 'acl_ipv6_ingress_feature_id'),
         arp_timeout=pulumi.get(__response__, 'arp_timeout'),
         arp_timeout_variable=pulumi.get(__response__, 'arp_timeout_variable'),
         arps=pulumi.get(__response__, 'arps'),

@@ -4,7 +4,7 @@
 package com.pulumi.sdwan.outputs;
 
 import com.pulumi.core.annotations.CustomType;
-import java.lang.Integer;
+import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class TransportIpv4AclFeatureSequenceMatchEntryDestinationPort {
      * @return destination port range or individual port number
      * 
      */
-    private @Nullable Integer port;
+    private @Nullable String port;
 
     private TransportIpv4AclFeatureSequenceMatchEntryDestinationPort() {}
     /**
      * @return destination port range or individual port number
      * 
      */
-    public Optional<Integer> port() {
+    public Optional<String> port() {
         return Optional.ofNullable(this.port);
     }
 
@@ -35,7 +35,7 @@ public final class TransportIpv4AclFeatureSequenceMatchEntryDestinationPort {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable Integer port;
+        private @Nullable String port;
         public Builder() {}
         public Builder(TransportIpv4AclFeatureSequenceMatchEntryDestinationPort defaults) {
     	      Objects.requireNonNull(defaults);
@@ -43,7 +43,7 @@ public final class TransportIpv4AclFeatureSequenceMatchEntryDestinationPort {
         }
 
         @CustomType.Setter
-        public Builder port(@Nullable Integer port) {
+        public Builder port(@Nullable String port) {
 
             this.port = port;
             return this;

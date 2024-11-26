@@ -14,6 +14,10 @@ import java.util.Objects;
 
 @CustomType
 public final class GetTransportWanVpnInterfaceT1E1SerialFeatureResult {
+    private String aclIpv4EgressFeatureId;
+    private String aclIpv4IngressFeatureId;
+    private String aclIpv6EgressFeatureId;
+    private String aclIpv6IngressFeatureId;
     /**
      * @return Interface bandwidth capacity, in kbps
      * 
@@ -538,6 +542,18 @@ public final class GetTransportWanVpnInterfaceT1E1SerialFeatureResult {
     private Integer version;
 
     private GetTransportWanVpnInterfaceT1E1SerialFeatureResult() {}
+    public String aclIpv4EgressFeatureId() {
+        return this.aclIpv4EgressFeatureId;
+    }
+    public String aclIpv4IngressFeatureId() {
+        return this.aclIpv4IngressFeatureId;
+    }
+    public String aclIpv6EgressFeatureId() {
+        return this.aclIpv6EgressFeatureId;
+    }
+    public String aclIpv6IngressFeatureId() {
+        return this.aclIpv6IngressFeatureId;
+    }
     /**
      * @return Interface bandwidth capacity, in kbps
      * 
@@ -1282,6 +1298,10 @@ public final class GetTransportWanVpnInterfaceT1E1SerialFeatureResult {
     }
     @CustomType.Builder
     public static final class Builder {
+        private String aclIpv4EgressFeatureId;
+        private String aclIpv4IngressFeatureId;
+        private String aclIpv6EgressFeatureId;
+        private String aclIpv6IngressFeatureId;
         private Integer bandwidth;
         private Integer bandwidthDownstream;
         private String bandwidthDownstreamVariable;
@@ -1391,6 +1411,10 @@ public final class GetTransportWanVpnInterfaceT1E1SerialFeatureResult {
         public Builder() {}
         public Builder(GetTransportWanVpnInterfaceT1E1SerialFeatureResult defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.aclIpv4EgressFeatureId = defaults.aclIpv4EgressFeatureId;
+    	      this.aclIpv4IngressFeatureId = defaults.aclIpv4IngressFeatureId;
+    	      this.aclIpv6EgressFeatureId = defaults.aclIpv6EgressFeatureId;
+    	      this.aclIpv6IngressFeatureId = defaults.aclIpv6IngressFeatureId;
     	      this.bandwidth = defaults.bandwidth;
     	      this.bandwidthDownstream = defaults.bandwidthDownstream;
     	      this.bandwidthDownstreamVariable = defaults.bandwidthDownstreamVariable;
@@ -1499,6 +1523,38 @@ public final class GetTransportWanVpnInterfaceT1E1SerialFeatureResult {
     	      this.version = defaults.version;
         }
 
+        @CustomType.Setter
+        public Builder aclIpv4EgressFeatureId(String aclIpv4EgressFeatureId) {
+            if (aclIpv4EgressFeatureId == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceT1E1SerialFeatureResult", "aclIpv4EgressFeatureId");
+            }
+            this.aclIpv4EgressFeatureId = aclIpv4EgressFeatureId;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder aclIpv4IngressFeatureId(String aclIpv4IngressFeatureId) {
+            if (aclIpv4IngressFeatureId == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceT1E1SerialFeatureResult", "aclIpv4IngressFeatureId");
+            }
+            this.aclIpv4IngressFeatureId = aclIpv4IngressFeatureId;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder aclIpv6EgressFeatureId(String aclIpv6EgressFeatureId) {
+            if (aclIpv6EgressFeatureId == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceT1E1SerialFeatureResult", "aclIpv6EgressFeatureId");
+            }
+            this.aclIpv6EgressFeatureId = aclIpv6EgressFeatureId;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder aclIpv6IngressFeatureId(String aclIpv6IngressFeatureId) {
+            if (aclIpv6IngressFeatureId == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceT1E1SerialFeatureResult", "aclIpv6IngressFeatureId");
+            }
+            this.aclIpv6IngressFeatureId = aclIpv6IngressFeatureId;
+            return this;
+        }
         @CustomType.Setter
         public Builder bandwidth(Integer bandwidth) {
             if (bandwidth == null) {
@@ -2355,6 +2411,10 @@ public final class GetTransportWanVpnInterfaceT1E1SerialFeatureResult {
         }
         public GetTransportWanVpnInterfaceT1E1SerialFeatureResult build() {
             final var _resultValue = new GetTransportWanVpnInterfaceT1E1SerialFeatureResult();
+            _resultValue.aclIpv4EgressFeatureId = aclIpv4EgressFeatureId;
+            _resultValue.aclIpv4IngressFeatureId = aclIpv4IngressFeatureId;
+            _resultValue.aclIpv6EgressFeatureId = aclIpv6EgressFeatureId;
+            _resultValue.aclIpv6IngressFeatureId = aclIpv6IngressFeatureId;
             _resultValue.bandwidth = bandwidth;
             _resultValue.bandwidthDownstream = bandwidthDownstream;
             _resultValue.bandwidthDownstreamVariable = bandwidthDownstreamVariable;

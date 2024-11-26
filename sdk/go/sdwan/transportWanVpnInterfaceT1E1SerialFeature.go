@@ -88,10 +88,12 @@ import (
 //						Weight:        pulumi.Int(250),
 //					},
 //				},
-//				TcpMss:        pulumi.Int(1460),
-//				Mtu:           pulumi.Int(1500),
-//				IpMtu:         pulumi.Int(1500),
-//				TlocExtension: pulumi.String("tloc"),
+//				AclIpv4EgressFeatureId:  pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				AclIpv6IngressFeatureId: pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				TcpMss:                  pulumi.Int(1460),
+//				Mtu:                     pulumi.Int(1500),
+//				IpMtu:                   pulumi.Int(1500),
+//				TlocExtension:           pulumi.String("tloc"),
 //			})
 //			if err != nil {
 //				return err
@@ -112,6 +114,10 @@ import (
 type TransportWanVpnInterfaceT1E1SerialFeature struct {
 	pulumi.CustomResourceState
 
+	AclIpv4EgressFeatureId  pulumi.StringPtrOutput `pulumi:"aclIpv4EgressFeatureId"`
+	AclIpv4IngressFeatureId pulumi.StringPtrOutput `pulumi:"aclIpv4IngressFeatureId"`
+	AclIpv6EgressFeatureId  pulumi.StringPtrOutput `pulumi:"aclIpv6EgressFeatureId"`
+	AclIpv6IngressFeatureId pulumi.StringPtrOutput `pulumi:"aclIpv6IngressFeatureId"`
 	// Interface bandwidth capacity, in kbps - Range: `1`-`200000000`
 	Bandwidth pulumi.IntPtrOutput `pulumi:"bandwidth"`
 	// Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
@@ -365,6 +371,10 @@ func GetTransportWanVpnInterfaceT1E1SerialFeature(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering TransportWanVpnInterfaceT1E1SerialFeature resources.
 type transportWanVpnInterfaceT1E1SerialFeatureState struct {
+	AclIpv4EgressFeatureId  *string `pulumi:"aclIpv4EgressFeatureId"`
+	AclIpv4IngressFeatureId *string `pulumi:"aclIpv4IngressFeatureId"`
+	AclIpv6EgressFeatureId  *string `pulumi:"aclIpv6EgressFeatureId"`
+	AclIpv6IngressFeatureId *string `pulumi:"aclIpv6IngressFeatureId"`
 	// Interface bandwidth capacity, in kbps - Range: `1`-`200000000`
 	Bandwidth *int `pulumi:"bandwidth"`
 	// Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
@@ -586,6 +596,10 @@ type transportWanVpnInterfaceT1E1SerialFeatureState struct {
 }
 
 type TransportWanVpnInterfaceT1E1SerialFeatureState struct {
+	AclIpv4EgressFeatureId  pulumi.StringPtrInput
+	AclIpv4IngressFeatureId pulumi.StringPtrInput
+	AclIpv6EgressFeatureId  pulumi.StringPtrInput
+	AclIpv6IngressFeatureId pulumi.StringPtrInput
 	// Interface bandwidth capacity, in kbps - Range: `1`-`200000000`
 	Bandwidth pulumi.IntPtrInput
 	// Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
@@ -811,6 +825,10 @@ func (TransportWanVpnInterfaceT1E1SerialFeatureState) ElementType() reflect.Type
 }
 
 type transportWanVpnInterfaceT1E1SerialFeatureArgs struct {
+	AclIpv4EgressFeatureId  *string `pulumi:"aclIpv4EgressFeatureId"`
+	AclIpv4IngressFeatureId *string `pulumi:"aclIpv4IngressFeatureId"`
+	AclIpv6EgressFeatureId  *string `pulumi:"aclIpv6EgressFeatureId"`
+	AclIpv6IngressFeatureId *string `pulumi:"aclIpv6IngressFeatureId"`
 	// Interface bandwidth capacity, in kbps - Range: `1`-`200000000`
 	Bandwidth *int `pulumi:"bandwidth"`
 	// Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
@@ -1031,6 +1049,10 @@ type transportWanVpnInterfaceT1E1SerialFeatureArgs struct {
 
 // The set of arguments for constructing a TransportWanVpnInterfaceT1E1SerialFeature resource.
 type TransportWanVpnInterfaceT1E1SerialFeatureArgs struct {
+	AclIpv4EgressFeatureId  pulumi.StringPtrInput
+	AclIpv4IngressFeatureId pulumi.StringPtrInput
+	AclIpv6EgressFeatureId  pulumi.StringPtrInput
+	AclIpv6IngressFeatureId pulumi.StringPtrInput
 	// Interface bandwidth capacity, in kbps - Range: `1`-`200000000`
 	Bandwidth pulumi.IntPtrInput
 	// Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
@@ -1334,6 +1356,30 @@ func (o TransportWanVpnInterfaceT1E1SerialFeatureOutput) ToTransportWanVpnInterf
 
 func (o TransportWanVpnInterfaceT1E1SerialFeatureOutput) ToTransportWanVpnInterfaceT1E1SerialFeatureOutputWithContext(ctx context.Context) TransportWanVpnInterfaceT1E1SerialFeatureOutput {
 	return o
+}
+
+func (o TransportWanVpnInterfaceT1E1SerialFeatureOutput) AclIpv4EgressFeatureId() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceT1E1SerialFeature) pulumi.StringPtrOutput {
+		return v.AclIpv4EgressFeatureId
+	}).(pulumi.StringPtrOutput)
+}
+
+func (o TransportWanVpnInterfaceT1E1SerialFeatureOutput) AclIpv4IngressFeatureId() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceT1E1SerialFeature) pulumi.StringPtrOutput {
+		return v.AclIpv4IngressFeatureId
+	}).(pulumi.StringPtrOutput)
+}
+
+func (o TransportWanVpnInterfaceT1E1SerialFeatureOutput) AclIpv6EgressFeatureId() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceT1E1SerialFeature) pulumi.StringPtrOutput {
+		return v.AclIpv6EgressFeatureId
+	}).(pulumi.StringPtrOutput)
+}
+
+func (o TransportWanVpnInterfaceT1E1SerialFeatureOutput) AclIpv6IngressFeatureId() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceT1E1SerialFeature) pulumi.StringPtrOutput {
+		return v.AclIpv6IngressFeatureId
+	}).(pulumi.StringPtrOutput)
 }
 
 // Interface bandwidth capacity, in kbps - Range: `1`-`200000000`

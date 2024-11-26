@@ -25,6 +25,10 @@ import (
 type TransportWanVpnInterfaceCellularFeature struct {
 	pulumi.CustomResourceState
 
+	AclIpv4EgressFeatureId  pulumi.StringPtrOutput `pulumi:"aclIpv4EgressFeatureId"`
+	AclIpv4IngressFeatureId pulumi.StringPtrOutput `pulumi:"aclIpv4IngressFeatureId"`
+	AclIpv6EgressFeatureId  pulumi.StringPtrOutput `pulumi:"aclIpv6EgressFeatureId"`
+	AclIpv6IngressFeatureId pulumi.StringPtrOutput `pulumi:"aclIpv6IngressFeatureId"`
 	// Configure ARP entries
 	Arps TransportWanVpnInterfaceCellularFeatureArpArrayOutput `pulumi:"arps"`
 	// Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
@@ -321,6 +325,10 @@ func GetTransportWanVpnInterfaceCellularFeature(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering TransportWanVpnInterfaceCellularFeature resources.
 type transportWanVpnInterfaceCellularFeatureState struct {
+	AclIpv4EgressFeatureId  *string `pulumi:"aclIpv4EgressFeatureId"`
+	AclIpv4IngressFeatureId *string `pulumi:"aclIpv4IngressFeatureId"`
+	AclIpv6EgressFeatureId  *string `pulumi:"aclIpv6EgressFeatureId"`
+	AclIpv6IngressFeatureId *string `pulumi:"aclIpv6IngressFeatureId"`
 	// Configure ARP entries
 	Arps []TransportWanVpnInterfaceCellularFeatureArp `pulumi:"arps"`
 	// Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
@@ -585,6 +593,10 @@ type transportWanVpnInterfaceCellularFeatureState struct {
 }
 
 type TransportWanVpnInterfaceCellularFeatureState struct {
+	AclIpv4EgressFeatureId  pulumi.StringPtrInput
+	AclIpv4IngressFeatureId pulumi.StringPtrInput
+	AclIpv6EgressFeatureId  pulumi.StringPtrInput
+	AclIpv6IngressFeatureId pulumi.StringPtrInput
 	// Configure ARP entries
 	Arps TransportWanVpnInterfaceCellularFeatureArpArrayInput
 	// Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
@@ -853,6 +865,10 @@ func (TransportWanVpnInterfaceCellularFeatureState) ElementType() reflect.Type {
 }
 
 type transportWanVpnInterfaceCellularFeatureArgs struct {
+	AclIpv4EgressFeatureId  *string `pulumi:"aclIpv4EgressFeatureId"`
+	AclIpv4IngressFeatureId *string `pulumi:"aclIpv4IngressFeatureId"`
+	AclIpv6EgressFeatureId  *string `pulumi:"aclIpv6EgressFeatureId"`
+	AclIpv6IngressFeatureId *string `pulumi:"aclIpv6IngressFeatureId"`
 	// Configure ARP entries
 	Arps []TransportWanVpnInterfaceCellularFeatureArp `pulumi:"arps"`
 	// Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
@@ -1116,6 +1132,10 @@ type transportWanVpnInterfaceCellularFeatureArgs struct {
 
 // The set of arguments for constructing a TransportWanVpnInterfaceCellularFeature resource.
 type TransportWanVpnInterfaceCellularFeatureArgs struct {
+	AclIpv4EgressFeatureId  pulumi.StringPtrInput
+	AclIpv4IngressFeatureId pulumi.StringPtrInput
+	AclIpv6EgressFeatureId  pulumi.StringPtrInput
+	AclIpv6IngressFeatureId pulumi.StringPtrInput
 	// Configure ARP entries
 	Arps TransportWanVpnInterfaceCellularFeatureArpArrayInput
 	// Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
@@ -1462,6 +1482,30 @@ func (o TransportWanVpnInterfaceCellularFeatureOutput) ToTransportWanVpnInterfac
 
 func (o TransportWanVpnInterfaceCellularFeatureOutput) ToTransportWanVpnInterfaceCellularFeatureOutputWithContext(ctx context.Context) TransportWanVpnInterfaceCellularFeatureOutput {
 	return o
+}
+
+func (o TransportWanVpnInterfaceCellularFeatureOutput) AclIpv4EgressFeatureId() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceCellularFeature) pulumi.StringPtrOutput {
+		return v.AclIpv4EgressFeatureId
+	}).(pulumi.StringPtrOutput)
+}
+
+func (o TransportWanVpnInterfaceCellularFeatureOutput) AclIpv4IngressFeatureId() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceCellularFeature) pulumi.StringPtrOutput {
+		return v.AclIpv4IngressFeatureId
+	}).(pulumi.StringPtrOutput)
+}
+
+func (o TransportWanVpnInterfaceCellularFeatureOutput) AclIpv6EgressFeatureId() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceCellularFeature) pulumi.StringPtrOutput {
+		return v.AclIpv6EgressFeatureId
+	}).(pulumi.StringPtrOutput)
+}
+
+func (o TransportWanVpnInterfaceCellularFeatureOutput) AclIpv6IngressFeatureId() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceCellularFeature) pulumi.StringPtrOutput {
+		return v.AclIpv6IngressFeatureId
+	}).(pulumi.StringPtrOutput)
 }
 
 // Configure ARP entries

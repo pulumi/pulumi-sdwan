@@ -110,7 +110,7 @@ export class SystemRemoteAccessFeature extends pulumi.CustomResource {
     /**
      * , Attribute conditional on `connectionTypeSsl` being equal to `false` - Choices: `user`, `device`
      */
-    public readonly anyConnectEapAuthenticationType!: pulumi.Output<string>;
+    public readonly anyConnectEapAuthenticationType!: pulumi.Output<string | undefined>;
     /**
      * Enabled SSL VPN - Default value: `false`
      */
@@ -306,9 +306,6 @@ export class SystemRemoteAccessFeature extends pulumi.CustomResource {
             resourceInputs["version"] = state ? state.version : undefined;
         } else {
             const args = argsOrState as SystemRemoteAccessFeatureArgs | undefined;
-            if ((!args || args.anyConnectEapAuthenticationType === undefined) && !opts.urn) {
-                throw new Error("Missing required property 'anyConnectEapAuthenticationType'");
-            }
             if ((!args || args.radiusGroupName === undefined) && !opts.urn) {
                 throw new Error("Missing required property 'radiusGroupName'");
             }
@@ -582,7 +579,7 @@ export interface SystemRemoteAccessFeatureArgs {
     /**
      * , Attribute conditional on `connectionTypeSsl` being equal to `false` - Choices: `user`, `device`
      */
-    anyConnectEapAuthenticationType: pulumi.Input<string>;
+    anyConnectEapAuthenticationType?: pulumi.Input<string>;
     /**
      * Enabled SSL VPN - Default value: `false`
      */

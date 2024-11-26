@@ -46,6 +46,10 @@ export class TransportWanVpnInterfaceEthernetFeature extends pulumi.CustomResour
         return obj['__pulumiType'] === TransportWanVpnInterfaceEthernetFeature.__pulumiType;
     }
 
+    public readonly aclIpv4EgressFeatureId!: pulumi.Output<string | undefined>;
+    public readonly aclIpv4IngressFeatureId!: pulumi.Output<string | undefined>;
+    public readonly aclIpv6EgressFeatureId!: pulumi.Output<string | undefined>;
+    public readonly aclIpv6IngressFeatureId!: pulumi.Output<string | undefined>;
     /**
      * Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
      */
@@ -829,6 +833,10 @@ export class TransportWanVpnInterfaceEthernetFeature extends pulumi.CustomResour
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as TransportWanVpnInterfaceEthernetFeatureState | undefined;
+            resourceInputs["aclIpv4EgressFeatureId"] = state ? state.aclIpv4EgressFeatureId : undefined;
+            resourceInputs["aclIpv4IngressFeatureId"] = state ? state.aclIpv4IngressFeatureId : undefined;
+            resourceInputs["aclIpv6EgressFeatureId"] = state ? state.aclIpv6EgressFeatureId : undefined;
+            resourceInputs["aclIpv6IngressFeatureId"] = state ? state.aclIpv6IngressFeatureId : undefined;
             resourceInputs["arpTimeout"] = state ? state.arpTimeout : undefined;
             resourceInputs["arpTimeoutVariable"] = state ? state.arpTimeoutVariable : undefined;
             resourceInputs["arps"] = state ? state.arps : undefined;
@@ -1025,6 +1033,10 @@ export class TransportWanVpnInterfaceEthernetFeature extends pulumi.CustomResour
             if ((!args || args.featureProfileId === undefined) && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
+            resourceInputs["aclIpv4EgressFeatureId"] = args ? args.aclIpv4EgressFeatureId : undefined;
+            resourceInputs["aclIpv4IngressFeatureId"] = args ? args.aclIpv4IngressFeatureId : undefined;
+            resourceInputs["aclIpv6EgressFeatureId"] = args ? args.aclIpv6EgressFeatureId : undefined;
+            resourceInputs["aclIpv6IngressFeatureId"] = args ? args.aclIpv6IngressFeatureId : undefined;
             resourceInputs["arpTimeout"] = args ? args.arpTimeout : undefined;
             resourceInputs["arpTimeoutVariable"] = args ? args.arpTimeoutVariable : undefined;
             resourceInputs["arps"] = args ? args.arps : undefined;
@@ -1226,6 +1238,10 @@ export class TransportWanVpnInterfaceEthernetFeature extends pulumi.CustomResour
  * Input properties used for looking up and filtering TransportWanVpnInterfaceEthernetFeature resources.
  */
 export interface TransportWanVpnInterfaceEthernetFeatureState {
+    aclIpv4EgressFeatureId?: pulumi.Input<string>;
+    aclIpv4IngressFeatureId?: pulumi.Input<string>;
+    aclIpv6EgressFeatureId?: pulumi.Input<string>;
+    aclIpv6IngressFeatureId?: pulumi.Input<string>;
     /**
      * Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
      */
@@ -2001,6 +2017,10 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
  * The set of arguments for constructing a TransportWanVpnInterfaceEthernetFeature resource.
  */
 export interface TransportWanVpnInterfaceEthernetFeatureArgs {
+    aclIpv4EgressFeatureId?: pulumi.Input<string>;
+    aclIpv4IngressFeatureId?: pulumi.Input<string>;
+    aclIpv6EgressFeatureId?: pulumi.Input<string>;
+    aclIpv6IngressFeatureId?: pulumi.Input<string>;
     /**
      * Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
      */

@@ -53,6 +53,10 @@ export interface GetTransportWanVpnInterfaceCellularFeatureArgs {
  * A collection of values returned by getTransportWanVpnInterfaceCellularFeature.
  */
 export interface GetTransportWanVpnInterfaceCellularFeatureResult {
+    readonly aclIpv4EgressFeatureId: string;
+    readonly aclIpv4IngressFeatureId: string;
+    readonly aclIpv6EgressFeatureId: string;
+    readonly aclIpv6IngressFeatureId: string;
     /**
      * Configure ARP entries
      */

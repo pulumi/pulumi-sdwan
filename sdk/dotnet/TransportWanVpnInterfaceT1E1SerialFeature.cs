@@ -86,6 +86,8 @@ namespace Pulumi.Sdwan
     ///                 Weight = 250,
     ///             },
     ///         },
+    ///         AclIpv4EgressFeatureId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         AclIpv6IngressFeatureId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
     ///         TcpMss = 1460,
     ///         Mtu = 1500,
     ///         IpMtu = 1500,
@@ -106,6 +108,18 @@ namespace Pulumi.Sdwan
     [SdwanResourceType("sdwan:index/transportWanVpnInterfaceT1E1SerialFeature:TransportWanVpnInterfaceT1E1SerialFeature")]
     public partial class TransportWanVpnInterfaceT1E1SerialFeature : global::Pulumi.CustomResource
     {
+        [Output("aclIpv4EgressFeatureId")]
+        public Output<string?> AclIpv4EgressFeatureId { get; private set; } = null!;
+
+        [Output("aclIpv4IngressFeatureId")]
+        public Output<string?> AclIpv4IngressFeatureId { get; private set; } = null!;
+
+        [Output("aclIpv6EgressFeatureId")]
+        public Output<string?> AclIpv6EgressFeatureId { get; private set; } = null!;
+
+        [Output("aclIpv6IngressFeatureId")]
+        public Output<string?> AclIpv6IngressFeatureId { get; private set; } = null!;
+
         /// <summary>
         /// Interface bandwidth capacity, in kbps - Range: `1`-`200000000`
         /// </summary>
@@ -788,6 +802,18 @@ namespace Pulumi.Sdwan
 
     public sealed class TransportWanVpnInterfaceT1E1SerialFeatureArgs : global::Pulumi.ResourceArgs
     {
+        [Input("aclIpv4EgressFeatureId")]
+        public Input<string>? AclIpv4EgressFeatureId { get; set; }
+
+        [Input("aclIpv4IngressFeatureId")]
+        public Input<string>? AclIpv4IngressFeatureId { get; set; }
+
+        [Input("aclIpv6EgressFeatureId")]
+        public Input<string>? AclIpv6EgressFeatureId { get; set; }
+
+        [Input("aclIpv6IngressFeatureId")]
+        public Input<string>? AclIpv6IngressFeatureId { get; set; }
+
         /// <summary>
         /// Interface bandwidth capacity, in kbps - Range: `1`-`200000000`
         /// </summary>
@@ -1438,6 +1464,18 @@ namespace Pulumi.Sdwan
 
     public sealed class TransportWanVpnInterfaceT1E1SerialFeatureState : global::Pulumi.ResourceArgs
     {
+        [Input("aclIpv4EgressFeatureId")]
+        public Input<string>? AclIpv4EgressFeatureId { get; set; }
+
+        [Input("aclIpv4IngressFeatureId")]
+        public Input<string>? AclIpv4IngressFeatureId { get; set; }
+
+        [Input("aclIpv6EgressFeatureId")]
+        public Input<string>? AclIpv6EgressFeatureId { get; set; }
+
+        [Input("aclIpv6IngressFeatureId")]
+        public Input<string>? AclIpv6IngressFeatureId { get; set; }
+
         /// <summary>
         /// Interface bandwidth capacity, in kbps - Range: `1`-`200000000`
         /// </summary>
