@@ -1,7 +1,7 @@
 ---
 # *** WARNING: This file was auto-generated. Do not edit by hand unless you're certain you know what you are doing! ***
-title: Cisco Catalyst Sd-Wan Provider
-meta_desc: Provides an overview on how to configure the Pulumi Cisco Catalyst Sd-Wan provider.
+title: Cisco Catalyst SD-WAN Provider
+meta_desc: Provides an overview on how to configure the Pulumi Cisco Catalyst SD-WAN provider.
 layout: package
 ---
 ## Installation
