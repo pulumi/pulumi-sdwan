@@ -15,6 +15,7 @@
 package provider
 
 import (
+	"bytes"
 	"context"
 	"fmt"
 	"path/filepath"
@@ -27,6 +28,7 @@ import (
 	pf "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/pf/tfbridge"
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
 	tfbridgetokens "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge/tokens"
+	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfgen"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/resource"
 
 	"github.com/pulumi/pulumi-sdwan/provider/pkg/version"
@@ -83,6 +85,7 @@ func Provider() tfbridge.ProviderInfo {
 		TFProviderVersion: "0.4.1",
 		Version:           version.Version,
 		Config:            map[string]*tfbridge.SchemaInfo{},
+		DocRules:          &tfbridge.DocRuleInfo{EditRules: docEditRules},
 		Resources: map[string]*tfbridge.ResourceInfo{
 			"sdwan_activate_centralized_policy":    {ComputeID: StaticID("sdwan:activateCentralizedPolicy")},
 			"sdwan_attach_feature_device_template": {ComputeID: StaticID("sdwan:attachFeatureDeviceTemplate")},
@@ -139,4 +142,30 @@ func Provider() tfbridge.ProviderInfo {
 	prov.MustApplyAutoAliases()
 
 	return prov
+}
+
+func docEditRules(defaults []tfbridge.DocsEdit) []tfbridge.DocsEdit {
+	return append(
+		defaults,
+		trimWhitespace,
+		skipGettingStartedSection,
+	)
+}
+
+// Removes a blank line at the beginning of the doc
+var trimWhitespace = tfbridge.DocsEdit{
+	Path: "index.md",
+	Edit: func(_ string, content []byte) ([]byte, error) {
+		return bytes.TrimSpace(content), nil
+	},
+}
+
+// Strips an upstream Getting Started section
+var skipGettingStartedSection = tfbridge.DocsEdit{
+	Path: "index.md",
+	Edit: func(_ string, content []byte) ([]byte, error) {
+		return tfgen.SkipSectionByHeaderContent(content, func(headerText string) bool {
+			return headerText == "Getting Started"
+		})
+	},
 }
