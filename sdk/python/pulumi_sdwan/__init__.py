@@ -191,6 +191,7 @@ from .get_route_policy_definition import *
 from .get_rule_set_policy_definition import *
 from .get_security_app_hosting_feature_template import *
 from .get_security_policy import *
+from .get_service_dhcp_server_feature import *
 from .get_service_feature_profile import *
 from .get_service_ipv4_acl_feature import *
 from .get_service_ipv6_acl_feature import *
@@ -202,9 +203,12 @@ from .get_service_lan_vpn_feature_associate_routing_ospf_feature import *
 from .get_service_lan_vpn_feature_associate_routing_ospfv3_ipv4_feature import *
 from .get_service_lan_vpn_feature_associate_routing_ospfv3_ipv6_feature import *
 from .get_service_lan_vpn_interface_ethernet_feature import *
+from .get_service_lan_vpn_interface_ethernet_feature_associate_dhcp_server_feature import *
 from .get_service_lan_vpn_interface_gre_feature import *
 from .get_service_lan_vpn_interface_ipsec_feature import *
+from .get_service_lan_vpn_interface_ipsec_feature_associate_dhcp_server_feature import *
 from .get_service_lan_vpn_interface_svi_feature import *
+from .get_service_lan_vpn_interface_svi_feature_associate_dhcp_server_feature import *
 from .get_service_multicast_feature import *
 from .get_service_object_tracker_feature import *
 from .get_service_object_tracker_group_feature import *
@@ -350,6 +354,7 @@ from .route_policy_definition import *
 from .rule_set_policy_definition import *
 from .security_app_hosting_feature_template import *
 from .security_policy import *
+from .service_dhcp_server_feature import *
 from .service_feature_profile import *
 from .service_ipv4_acl_feature import *
 from .service_ipv6_acl_feature import *
@@ -361,9 +366,12 @@ from .service_lan_vpn_feature_associate_routing_ospf_feature import *
 from .service_lan_vpn_feature_associate_routing_ospfv3_ipv4_feature import *
 from .service_lan_vpn_feature_associate_routing_ospfv3_ipv6_feature import *
 from .service_lan_vpn_interface_ethernet_feature import *
+from .service_lan_vpn_interface_ethernet_feature_associate_dhcp_server_feature import *
 from .service_lan_vpn_interface_gre_feature import *
 from .service_lan_vpn_interface_ipsec_feature import *
+from .service_lan_vpn_interface_ipsec_feature_associate_dhcp_server_feature import *
 from .service_lan_vpn_interface_svi_feature import *
+from .service_lan_vpn_interface_svi_feature_associate_dhcp_server_feature import *
 from .service_multicast_feature import *
 from .service_object_tracker_feature import *
 from .service_object_tracker_group_feature import *
@@ -1447,6 +1455,14 @@ _utilities.register(
  },
  {
   "pkg": "sdwan",
+  "mod": "index/serviceDhcpServerFeature",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/serviceDhcpServerFeature:ServiceDhcpServerFeature": "ServiceDhcpServerFeature"
+  }
+ },
+ {
+  "pkg": "sdwan",
   "mod": "index/serviceFeatureProfile",
   "fqn": "pulumi_sdwan",
   "classes": {
@@ -1535,6 +1551,14 @@ _utilities.register(
  },
  {
   "pkg": "sdwan",
+  "mod": "index/serviceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/serviceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature:ServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature": "ServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature"
+  }
+ },
+ {
+  "pkg": "sdwan",
   "mod": "index/serviceLanVpnInterfaceGreFeature",
   "fqn": "pulumi_sdwan",
   "classes": {
@@ -1551,10 +1575,26 @@ _utilities.register(
  },
  {
   "pkg": "sdwan",
+  "mod": "index/serviceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/serviceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature:ServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature": "ServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature"
+  }
+ },
+ {
+  "pkg": "sdwan",
   "mod": "index/serviceLanVpnInterfaceSviFeature",
   "fqn": "pulumi_sdwan",
   "classes": {
    "sdwan:index/serviceLanVpnInterfaceSviFeature:ServiceLanVpnInterfaceSviFeature": "ServiceLanVpnInterfaceSviFeature"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/serviceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/serviceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature:ServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature": "ServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature"
   }
  },
  {

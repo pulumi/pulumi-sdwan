@@ -39,7 +39,7 @@ public final class GetServiceIpv6AclFeatureSequenceMatchEntry {
      * @return Packet Length
      * 
      */
-    private Integer packetLength;
+    private String packetLength;
     /**
      * @return Source Data IP Prefix
      * 
@@ -98,7 +98,7 @@ public final class GetServiceIpv6AclFeatureSequenceMatchEntry {
      * @return Packet Length
      * 
      */
-    public Integer packetLength() {
+    public String packetLength() {
         return this.packetLength;
     }
     /**
@@ -147,7 +147,7 @@ public final class GetServiceIpv6AclFeatureSequenceMatchEntry {
         private List<GetServiceIpv6AclFeatureSequenceMatchEntryDestinationPort> destinationPorts;
         private List<String> icmpMessages;
         private Integer nextHeader;
-        private Integer packetLength;
+        private String packetLength;
         private String sourceDataPrefix;
         private String sourceDataPrefixListId;
         private List<GetServiceIpv6AclFeatureSequenceMatchEntrySourcePort> sourcePorts;
@@ -216,7 +216,7 @@ public final class GetServiceIpv6AclFeatureSequenceMatchEntry {
             return this;
         }
         @CustomType.Setter
-        public Builder packetLength(Integer packetLength) {
+        public Builder packetLength(String packetLength) {
             if (packetLength == null) {
               throw new MissingRequiredPropertyException("GetServiceIpv6AclFeatureSequenceMatchEntry", "packetLength");
             }

@@ -6367,7 +6367,7 @@ export interface FeatureDeviceTemplateGeneralTemplate {
     subTemplates?: pulumi.Input<pulumi.Input<inputs.FeatureDeviceTemplateGeneralTemplateSubTemplate>[]>;
     /**
      * Feature template type
-     *   - Choices: `ciscoSystem`, `ciscoLogging`, `cedgeAaa`, `ciscoBfd`, `ciscoOmp`, `ciscoSecurity`, `ciscoBanner`, `ciscoSnmp`, `cedgeGlobal`, `cli-template`, `ciscoSigCredentials`, `switchport`, `ciscoThousandeyes`, `ciscoVpn`, `virtual-application-utd`
+     *   - Choices: `ciscoSystem`, `ciscoLogging`, `cedgeAaa`, `ciscoBfd`, `ciscoOmp`, `ciscoSecurity`, `ciscoBanner`, `ciscoSnmp`, `cedgeGlobal`, `cli-template`, `ciscoSigCredentials`, `switchport`, `ciscoThousandeyes`, `ciscoVpn`, `virtual-application-utd`, `cellular-cedge-controller`
      */
     type: pulumi.Input<string>;
     /**
@@ -6387,7 +6387,7 @@ export interface FeatureDeviceTemplateGeneralTemplateSubTemplate {
     subTemplates?: pulumi.Input<pulumi.Input<inputs.FeatureDeviceTemplateGeneralTemplateSubTemplateSubTemplate>[]>;
     /**
      * Feature template type
-     *   - Choices: `ciscoLogging`, `ciscoNtp`, `ciscoOspf`, `ciscoBgp`, `ciscoVpnInterface`, `ciscoVpnInterfaceIpsec`, `vpn-interface-svi`, `ciscoSecureInternetGateway`
+     *   - Choices: `ciscoLogging`, `ciscoNtp`, `ciscoOspf`, `ciscoBgp`, `ciscoVpnInterface`, `ciscoVpnInterfaceGre`, `ciscoVpnInterfaceIpsec`, `vpn-interface-svi`, `vpn-cedge-interface-cellular`, `ciscoSecureInternetGateway`
      */
     type: pulumi.Input<string>;
     /**
@@ -6403,7 +6403,7 @@ export interface FeatureDeviceTemplateGeneralTemplateSubTemplateSubTemplate {
     id: pulumi.Input<string>;
     /**
      * Feature template type
-     *   - Choices: `ciscoDhcpServer`
+     *   - Choices: `ciscoDhcpServer`, `cellular-cedge-profile`
      */
     type: pulumi.Input<string>;
     /**
@@ -8016,6 +8016,61 @@ export interface SecurityPolicyLogging {
     externalSyslogServerVpn?: pulumi.Input<string>;
 }
 
+export interface ServiceDhcpServerFeatureOptionCode {
+    /**
+     * Set ASCII value
+     */
+    ascii?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    asciiVariable?: pulumi.Input<string>;
+    /**
+     * Set Option Code
+     *   - Range: `1`-`254`
+     */
+    code?: pulumi.Input<number>;
+    /**
+     * Variable name
+     */
+    codeVariable?: pulumi.Input<string>;
+    /**
+     * Set HEX value
+     */
+    hex?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    hexVariable?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    ipVariable?: pulumi.Input<string>;
+    /**
+     * Set ip address
+     */
+    ips?: pulumi.Input<pulumi.Input<string>[]>;
+}
+
+export interface ServiceDhcpServerFeatureStaticLease {
+    /**
+     * Set client’s static IP address
+     */
+    ipAddress?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    ipAddressVariable?: pulumi.Input<string>;
+    /**
+     * Set MAC address of client
+     */
+    macAddress?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    macAddressVariable?: pulumi.Input<string>;
+}
+
 export interface ServiceIpv4AclFeatureSequence {
     /**
      * Define list of actions
@@ -8099,7 +8154,7 @@ export interface ServiceIpv4AclFeatureSequenceMatchEntry {
     /**
      * Packet Length
      */
-    packetLength?: pulumi.Input<number>;
+    packetLength?: pulumi.Input<string>;
     /**
      * protocol number list with at least one item
      */
@@ -8218,7 +8273,7 @@ export interface ServiceIpv6AclFeatureSequenceMatchEntry {
     /**
      * Packet Length
      */
-    packetLength?: pulumi.Input<number>;
+    packetLength?: pulumi.Input<string>;
     /**
      * Source Data IP Prefix
      */
@@ -13150,7 +13205,7 @@ export interface TransportIpv4AclFeatureSequenceMatchEntry {
     /**
      * Packet Length
      */
-    packetLength?: pulumi.Input<number>;
+    packetLength?: pulumi.Input<string>;
     /**
      * protocol number list with at least one item
      */
@@ -13269,7 +13324,7 @@ export interface TransportIpv6AclFeatureSequenceMatchEntry {
     /**
      * Packet Length
      */
-    packetLength?: pulumi.Input<number>;
+    packetLength?: pulumi.Input<string>;
     /**
      * Source Data IP Prefix
      */

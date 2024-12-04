@@ -320,7 +320,7 @@ class VpnInterfaceCellularFeatureTemplateArgs:
         :param pulumi.Input[str] tunnel_interface_vbond_as_stun_server_variable: Variable name
         :param pulumi.Input[int] tunnel_interface_vmanage_connection_preference: Set interface preference for control connection to vManage <0..8> - Range: `0`-`8` - Default value: `5`
         :param pulumi.Input[str] tunnel_interface_vmanage_connection_preference_variable: Variable name
-        :param pulumi.Input[str] tunnel_qos_mode: Set tunnel QoS mode - Choices: `spoke`
+        :param pulumi.Input[str] tunnel_qos_mode: Set tunnel QoS mode - Choices: `hub`, `spoke`
         :param pulumi.Input[str] tunnel_qos_mode_variable: Variable name
         :param pulumi.Input[str] write_rule: Name of rewrite rule
         :param pulumi.Input[str] write_rule_variable: Variable name
@@ -2357,7 +2357,7 @@ class VpnInterfaceCellularFeatureTemplateArgs:
     @pulumi.getter(name="tunnelQosMode")
     def tunnel_qos_mode(self) -> Optional[pulumi.Input[str]]:
         """
-        Set tunnel QoS mode - Choices: `spoke`
+        Set tunnel QoS mode - Choices: `hub`, `spoke`
         """
         return pulumi.get(self, "tunnel_qos_mode")
 
@@ -2707,7 +2707,7 @@ class _VpnInterfaceCellularFeatureTemplateState:
         :param pulumi.Input[str] tunnel_interface_vbond_as_stun_server_variable: Variable name
         :param pulumi.Input[int] tunnel_interface_vmanage_connection_preference: Set interface preference for control connection to vManage <0..8> - Range: `0`-`8` - Default value: `5`
         :param pulumi.Input[str] tunnel_interface_vmanage_connection_preference_variable: Variable name
-        :param pulumi.Input[str] tunnel_qos_mode: Set tunnel QoS mode - Choices: `spoke`
+        :param pulumi.Input[str] tunnel_qos_mode: Set tunnel QoS mode - Choices: `hub`, `spoke`
         :param pulumi.Input[str] tunnel_qos_mode_variable: Variable name
         :param pulumi.Input[int] version: The version of the feature template
         :param pulumi.Input[str] write_rule: Name of rewrite rule
@@ -4763,7 +4763,7 @@ class _VpnInterfaceCellularFeatureTemplateState:
     @pulumi.getter(name="tunnelQosMode")
     def tunnel_qos_mode(self) -> Optional[pulumi.Input[str]]:
         """
-        Set tunnel QoS mode - Choices: `spoke`
+        Set tunnel QoS mode - Choices: `hub`, `spoke`
         """
         return pulumi.get(self, "tunnel_qos_mode")
 
@@ -5135,7 +5135,7 @@ class VpnInterfaceCellularFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] tunnel_interface_vbond_as_stun_server_variable: Variable name
         :param pulumi.Input[int] tunnel_interface_vmanage_connection_preference: Set interface preference for control connection to vManage <0..8> - Range: `0`-`8` - Default value: `5`
         :param pulumi.Input[str] tunnel_interface_vmanage_connection_preference_variable: Variable name
-        :param pulumi.Input[str] tunnel_qos_mode: Set tunnel QoS mode - Choices: `spoke`
+        :param pulumi.Input[str] tunnel_qos_mode: Set tunnel QoS mode - Choices: `hub`, `spoke`
         :param pulumi.Input[str] tunnel_qos_mode_variable: Variable name
         :param pulumi.Input[str] write_rule: Name of rewrite rule
         :param pulumi.Input[str] write_rule_variable: Variable name
@@ -5799,7 +5799,7 @@ class VpnInterfaceCellularFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] tunnel_interface_vbond_as_stun_server_variable: Variable name
         :param pulumi.Input[int] tunnel_interface_vmanage_connection_preference: Set interface preference for control connection to vManage <0..8> - Range: `0`-`8` - Default value: `5`
         :param pulumi.Input[str] tunnel_interface_vmanage_connection_preference_variable: Variable name
-        :param pulumi.Input[str] tunnel_qos_mode: Set tunnel QoS mode - Choices: `spoke`
+        :param pulumi.Input[str] tunnel_qos_mode: Set tunnel QoS mode - Choices: `hub`, `spoke`
         :param pulumi.Input[str] tunnel_qos_mode_variable: Variable name
         :param pulumi.Input[int] version: The version of the feature template
         :param pulumi.Input[str] write_rule: Name of rewrite rule
@@ -7130,7 +7130,7 @@ class VpnInterfaceCellularFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="tunnelQosMode")
     def tunnel_qos_mode(self) -> pulumi.Output[Optional[str]]:
         """
-        Set tunnel QoS mode - Choices: `spoke`
+        Set tunnel QoS mode - Choices: `hub`, `spoke`
         """
         return pulumi.get(self, "tunnel_qos_mode")
 

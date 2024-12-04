@@ -487,6 +487,10 @@ __all__ = [
     'SecurityPolicyDefinitionArgsDict',
     'SecurityPolicyLoggingArgs',
     'SecurityPolicyLoggingArgsDict',
+    'ServiceDhcpServerFeatureOptionCodeArgs',
+    'ServiceDhcpServerFeatureOptionCodeArgsDict',
+    'ServiceDhcpServerFeatureStaticLeaseArgs',
+    'ServiceDhcpServerFeatureStaticLeaseArgsDict',
     'ServiceIpv4AclFeatureSequenceArgs',
     'ServiceIpv4AclFeatureSequenceArgsDict',
     'ServiceIpv4AclFeatureSequenceActionArgs',
@@ -31762,7 +31766,7 @@ if not MYPY:
         type: pulumi.Input[str]
         """
         Feature template type
-          - Choices: `cisco_system`, `cisco_logging`, `cedge_aaa`, `cisco_bfd`, `cisco_omp`, `cisco_security`, `cisco_banner`, `cisco_snmp`, `cedge_global`, `cli-template`, `cisco_sig_credentials`, `switchport`, `cisco_thousandeyes`, `cisco_vpn`, `virtual-application-utd`
+          - Choices: `cisco_system`, `cisco_logging`, `cedge_aaa`, `cisco_bfd`, `cisco_omp`, `cisco_security`, `cisco_banner`, `cisco_snmp`, `cedge_global`, `cli-template`, `cisco_sig_credentials`, `switchport`, `cisco_thousandeyes`, `cisco_vpn`, `virtual-application-utd`, `cellular-cedge-controller`
         """
         sub_templates: NotRequired[pulumi.Input[Sequence[pulumi.Input['FeatureDeviceTemplateGeneralTemplateSubTemplateArgsDict']]]]
         """
@@ -31785,7 +31789,7 @@ class FeatureDeviceTemplateGeneralTemplateArgs:
         """
         :param pulumi.Input[str] id: Feature template ID
         :param pulumi.Input[str] type: Feature template type
-                 - Choices: `cisco_system`, `cisco_logging`, `cedge_aaa`, `cisco_bfd`, `cisco_omp`, `cisco_security`, `cisco_banner`, `cisco_snmp`, `cedge_global`, `cli-template`, `cisco_sig_credentials`, `switchport`, `cisco_thousandeyes`, `cisco_vpn`, `virtual-application-utd`
+                 - Choices: `cisco_system`, `cisco_logging`, `cedge_aaa`, `cisco_bfd`, `cisco_omp`, `cisco_security`, `cisco_banner`, `cisco_snmp`, `cedge_global`, `cli-template`, `cisco_sig_credentials`, `switchport`, `cisco_thousandeyes`, `cisco_vpn`, `virtual-application-utd`, `cellular-cedge-controller`
         :param pulumi.Input[Sequence[pulumi.Input['FeatureDeviceTemplateGeneralTemplateSubTemplateArgs']]] sub_templates: List of sub templates
         :param pulumi.Input[int] version: Feature template version
         """
@@ -31813,7 +31817,7 @@ class FeatureDeviceTemplateGeneralTemplateArgs:
     def type(self) -> pulumi.Input[str]:
         """
         Feature template type
-          - Choices: `cisco_system`, `cisco_logging`, `cedge_aaa`, `cisco_bfd`, `cisco_omp`, `cisco_security`, `cisco_banner`, `cisco_snmp`, `cedge_global`, `cli-template`, `cisco_sig_credentials`, `switchport`, `cisco_thousandeyes`, `cisco_vpn`, `virtual-application-utd`
+          - Choices: `cisco_system`, `cisco_logging`, `cedge_aaa`, `cisco_bfd`, `cisco_omp`, `cisco_security`, `cisco_banner`, `cisco_snmp`, `cedge_global`, `cli-template`, `cisco_sig_credentials`, `switchport`, `cisco_thousandeyes`, `cisco_vpn`, `virtual-application-utd`, `cellular-cedge-controller`
         """
         return pulumi.get(self, "type")
 
@@ -31855,7 +31859,7 @@ if not MYPY:
         type: pulumi.Input[str]
         """
         Feature template type
-          - Choices: `cisco_logging`, `cisco_ntp`, `cisco_ospf`, `cisco_bgp`, `cisco_vpn_interface`, `cisco_vpn_interface_ipsec`, `vpn-interface-svi`, `cisco_secure_internet_gateway`
+          - Choices: `cisco_logging`, `cisco_ntp`, `cisco_ospf`, `cisco_bgp`, `cisco_vpn_interface`, `cisco_vpn_interface_gre`, `cisco_vpn_interface_ipsec`, `vpn-interface-svi`, `vpn-cedge-interface-cellular`, `cisco_secure_internet_gateway`
         """
         sub_templates: NotRequired[pulumi.Input[Sequence[pulumi.Input['FeatureDeviceTemplateGeneralTemplateSubTemplateSubTemplateArgsDict']]]]
         """
@@ -31878,7 +31882,7 @@ class FeatureDeviceTemplateGeneralTemplateSubTemplateArgs:
         """
         :param pulumi.Input[str] id: Feature template ID
         :param pulumi.Input[str] type: Feature template type
-                 - Choices: `cisco_logging`, `cisco_ntp`, `cisco_ospf`, `cisco_bgp`, `cisco_vpn_interface`, `cisco_vpn_interface_ipsec`, `vpn-interface-svi`, `cisco_secure_internet_gateway`
+                 - Choices: `cisco_logging`, `cisco_ntp`, `cisco_ospf`, `cisco_bgp`, `cisco_vpn_interface`, `cisco_vpn_interface_gre`, `cisco_vpn_interface_ipsec`, `vpn-interface-svi`, `vpn-cedge-interface-cellular`, `cisco_secure_internet_gateway`
         :param pulumi.Input[Sequence[pulumi.Input['FeatureDeviceTemplateGeneralTemplateSubTemplateSubTemplateArgs']]] sub_templates: List of sub templates
         :param pulumi.Input[int] version: Feature template version
         """
@@ -31906,7 +31910,7 @@ class FeatureDeviceTemplateGeneralTemplateSubTemplateArgs:
     def type(self) -> pulumi.Input[str]:
         """
         Feature template type
-          - Choices: `cisco_logging`, `cisco_ntp`, `cisco_ospf`, `cisco_bgp`, `cisco_vpn_interface`, `cisco_vpn_interface_ipsec`, `vpn-interface-svi`, `cisco_secure_internet_gateway`
+          - Choices: `cisco_logging`, `cisco_ntp`, `cisco_ospf`, `cisco_bgp`, `cisco_vpn_interface`, `cisco_vpn_interface_gre`, `cisco_vpn_interface_ipsec`, `vpn-interface-svi`, `vpn-cedge-interface-cellular`, `cisco_secure_internet_gateway`
         """
         return pulumi.get(self, "type")
 
@@ -31948,7 +31952,7 @@ if not MYPY:
         type: pulumi.Input[str]
         """
         Feature template type
-          - Choices: `cisco_dhcp_server`
+          - Choices: `cisco_dhcp_server`, `cellular-cedge-profile`
         """
         version: NotRequired[pulumi.Input[int]]
         """
@@ -31966,7 +31970,7 @@ class FeatureDeviceTemplateGeneralTemplateSubTemplateSubTemplateArgs:
         """
         :param pulumi.Input[str] id: Feature template ID
         :param pulumi.Input[str] type: Feature template type
-                 - Choices: `cisco_dhcp_server`
+                 - Choices: `cisco_dhcp_server`, `cellular-cedge-profile`
         :param pulumi.Input[int] version: Feature template version
         """
         pulumi.set(__self__, "id", id)
@@ -31991,7 +31995,7 @@ class FeatureDeviceTemplateGeneralTemplateSubTemplateSubTemplateArgs:
     def type(self) -> pulumi.Input[str]:
         """
         Feature template type
-          - Choices: `cisco_dhcp_server`
+          - Choices: `cisco_dhcp_server`, `cellular-cedge-profile`
         """
         return pulumi.get(self, "type")
 
@@ -39724,6 +39728,273 @@ class SecurityPolicyLoggingArgs:
 
 
 if not MYPY:
+    class ServiceDhcpServerFeatureOptionCodeArgsDict(TypedDict):
+        ascii: NotRequired[pulumi.Input[str]]
+        """
+        Set ASCII value
+        """
+        ascii_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        code: NotRequired[pulumi.Input[int]]
+        """
+        Set Option Code
+          - Range: `1`-`254`
+        """
+        code_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        hex: NotRequired[pulumi.Input[str]]
+        """
+        Set HEX value
+        """
+        hex_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ip_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        ips: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        Set ip address
+        """
+elif False:
+    ServiceDhcpServerFeatureOptionCodeArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ServiceDhcpServerFeatureOptionCodeArgs:
+    def __init__(__self__, *,
+                 ascii: Optional[pulumi.Input[str]] = None,
+                 ascii_variable: Optional[pulumi.Input[str]] = None,
+                 code: Optional[pulumi.Input[int]] = None,
+                 code_variable: Optional[pulumi.Input[str]] = None,
+                 hex: Optional[pulumi.Input[str]] = None,
+                 hex_variable: Optional[pulumi.Input[str]] = None,
+                 ip_variable: Optional[pulumi.Input[str]] = None,
+                 ips: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None):
+        """
+        :param pulumi.Input[str] ascii: Set ASCII value
+        :param pulumi.Input[str] ascii_variable: Variable name
+        :param pulumi.Input[int] code: Set Option Code
+                 - Range: `1`-`254`
+        :param pulumi.Input[str] code_variable: Variable name
+        :param pulumi.Input[str] hex: Set HEX value
+        :param pulumi.Input[str] hex_variable: Variable name
+        :param pulumi.Input[str] ip_variable: Variable name
+        :param pulumi.Input[Sequence[pulumi.Input[str]]] ips: Set ip address
+        """
+        if ascii is not None:
+            pulumi.set(__self__, "ascii", ascii)
+        if ascii_variable is not None:
+            pulumi.set(__self__, "ascii_variable", ascii_variable)
+        if code is not None:
+            pulumi.set(__self__, "code", code)
+        if code_variable is not None:
+            pulumi.set(__self__, "code_variable", code_variable)
+        if hex is not None:
+            pulumi.set(__self__, "hex", hex)
+        if hex_variable is not None:
+            pulumi.set(__self__, "hex_variable", hex_variable)
+        if ip_variable is not None:
+            pulumi.set(__self__, "ip_variable", ip_variable)
+        if ips is not None:
+            pulumi.set(__self__, "ips", ips)
+
+    @property
+    @pulumi.getter
+    def ascii(self) -> Optional[pulumi.Input[str]]:
+        """
+        Set ASCII value
+        """
+        return pulumi.get(self, "ascii")
+
+    @ascii.setter
+    def ascii(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "ascii", value)
+
+    @property
+    @pulumi.getter(name="asciiVariable")
+    def ascii_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ascii_variable")
+
+    @ascii_variable.setter
+    def ascii_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "ascii_variable", value)
+
+    @property
+    @pulumi.getter
+    def code(self) -> Optional[pulumi.Input[int]]:
+        """
+        Set Option Code
+          - Range: `1`-`254`
+        """
+        return pulumi.get(self, "code")
+
+    @code.setter
+    def code(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "code", value)
+
+    @property
+    @pulumi.getter(name="codeVariable")
+    def code_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "code_variable")
+
+    @code_variable.setter
+    def code_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "code_variable", value)
+
+    @property
+    @pulumi.getter
+    def hex(self) -> Optional[pulumi.Input[str]]:
+        """
+        Set HEX value
+        """
+        return pulumi.get(self, "hex")
+
+    @hex.setter
+    def hex(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "hex", value)
+
+    @property
+    @pulumi.getter(name="hexVariable")
+    def hex_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "hex_variable")
+
+    @hex_variable.setter
+    def hex_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "hex_variable", value)
+
+    @property
+    @pulumi.getter(name="ipVariable")
+    def ip_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ip_variable")
+
+    @ip_variable.setter
+    def ip_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "ip_variable", value)
+
+    @property
+    @pulumi.getter
+    def ips(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]:
+        """
+        Set ip address
+        """
+        return pulumi.get(self, "ips")
+
+    @ips.setter
+    def ips(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
+        pulumi.set(self, "ips", value)
+
+
+if not MYPY:
+    class ServiceDhcpServerFeatureStaticLeaseArgsDict(TypedDict):
+        ip_address: NotRequired[pulumi.Input[str]]
+        """
+        Set client’s static IP address
+        """
+        ip_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+        mac_address: NotRequired[pulumi.Input[str]]
+        """
+        Set MAC address of client
+        """
+        mac_address_variable: NotRequired[pulumi.Input[str]]
+        """
+        Variable name
+        """
+elif False:
+    ServiceDhcpServerFeatureStaticLeaseArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ServiceDhcpServerFeatureStaticLeaseArgs:
+    def __init__(__self__, *,
+                 ip_address: Optional[pulumi.Input[str]] = None,
+                 ip_address_variable: Optional[pulumi.Input[str]] = None,
+                 mac_address: Optional[pulumi.Input[str]] = None,
+                 mac_address_variable: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[str] ip_address: Set client’s static IP address
+        :param pulumi.Input[str] ip_address_variable: Variable name
+        :param pulumi.Input[str] mac_address: Set MAC address of client
+        :param pulumi.Input[str] mac_address_variable: Variable name
+        """
+        if ip_address is not None:
+            pulumi.set(__self__, "ip_address", ip_address)
+        if ip_address_variable is not None:
+            pulumi.set(__self__, "ip_address_variable", ip_address_variable)
+        if mac_address is not None:
+            pulumi.set(__self__, "mac_address", mac_address)
+        if mac_address_variable is not None:
+            pulumi.set(__self__, "mac_address_variable", mac_address_variable)
+
+    @property
+    @pulumi.getter(name="ipAddress")
+    def ip_address(self) -> Optional[pulumi.Input[str]]:
+        """
+        Set client’s static IP address
+        """
+        return pulumi.get(self, "ip_address")
+
+    @ip_address.setter
+    def ip_address(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "ip_address", value)
+
+    @property
+    @pulumi.getter(name="ipAddressVariable")
+    def ip_address_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ip_address_variable")
+
+    @ip_address_variable.setter
+    def ip_address_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "ip_address_variable", value)
+
+    @property
+    @pulumi.getter(name="macAddress")
+    def mac_address(self) -> Optional[pulumi.Input[str]]:
+        """
+        Set MAC address of client
+        """
+        return pulumi.get(self, "mac_address")
+
+    @mac_address.setter
+    def mac_address(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "mac_address", value)
+
+    @property
+    @pulumi.getter(name="macAddressVariable")
+    def mac_address_variable(self) -> Optional[pulumi.Input[str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "mac_address_variable")
+
+    @mac_address_variable.setter
+    def mac_address_variable(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "mac_address_variable", value)
+
+
+if not MYPY:
     class ServiceIpv4AclFeatureSequenceArgsDict(TypedDict):
         actions: NotRequired[pulumi.Input[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceActionArgsDict']]]]
         """
@@ -40034,7 +40305,7 @@ if not MYPY:
         """
         ICMP Message
         """
-        packet_length: NotRequired[pulumi.Input[int]]
+        packet_length: NotRequired[pulumi.Input[str]]
         """
         Packet Length
         """
@@ -40072,7 +40343,7 @@ class ServiceIpv4AclFeatureSequenceMatchEntryArgs:
                  destination_ports: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceMatchEntryDestinationPortArgs']]]] = None,
                  dscps: Optional[pulumi.Input[Sequence[pulumi.Input[int]]]] = None,
                  icmp_messages: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-                 packet_length: Optional[pulumi.Input[int]] = None,
+                 packet_length: Optional[pulumi.Input[str]] = None,
                  protocols: Optional[pulumi.Input[Sequence[pulumi.Input[int]]]] = None,
                  source_data_prefix: Optional[pulumi.Input[str]] = None,
                  source_data_prefix_list_id: Optional[pulumi.Input[str]] = None,
@@ -40085,7 +40356,7 @@ class ServiceIpv4AclFeatureSequenceMatchEntryArgs:
         :param pulumi.Input[Sequence[pulumi.Input['ServiceIpv4AclFeatureSequenceMatchEntryDestinationPortArgs']]] destination_ports: Destination Port List
         :param pulumi.Input[Sequence[pulumi.Input[int]]] dscps: DSCP number
         :param pulumi.Input[Sequence[pulumi.Input[str]]] icmp_messages: ICMP Message
-        :param pulumi.Input[int] packet_length: Packet Length
+        :param pulumi.Input[str] packet_length: Packet Length
         :param pulumi.Input[Sequence[pulumi.Input[int]]] protocols: protocol number list with at least one item
         :param pulumi.Input[str] source_data_prefix: Source Data IP Prefix
         :param pulumi.Input[str] source_data_prefix_variable: Variable name
@@ -40191,14 +40462,14 @@ class ServiceIpv4AclFeatureSequenceMatchEntryArgs:
 
     @property
     @pulumi.getter(name="packetLength")
-    def packet_length(self) -> Optional[pulumi.Input[int]]:
+    def packet_length(self) -> Optional[pulumi.Input[str]]:
         """
         Packet Length
         """
         return pulumi.get(self, "packet_length")
 
     @packet_length.setter
-    def packet_length(self, value: Optional[pulumi.Input[int]]):
+    def packet_length(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "packet_length", value)
 
     @property
@@ -40644,7 +40915,7 @@ if not MYPY:
         next header number
           - Range: `0`-`255`
         """
-        packet_length: NotRequired[pulumi.Input[int]]
+        packet_length: NotRequired[pulumi.Input[str]]
         """
         Packet Length
         """
@@ -40677,7 +40948,7 @@ class ServiceIpv6AclFeatureSequenceMatchEntryArgs:
                  destination_ports: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceIpv6AclFeatureSequenceMatchEntryDestinationPortArgs']]]] = None,
                  icmp_messages: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  next_header: Optional[pulumi.Input[int]] = None,
-                 packet_length: Optional[pulumi.Input[int]] = None,
+                 packet_length: Optional[pulumi.Input[str]] = None,
                  source_data_prefix: Optional[pulumi.Input[str]] = None,
                  source_data_prefix_list_id: Optional[pulumi.Input[str]] = None,
                  source_ports: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceIpv6AclFeatureSequenceMatchEntrySourcePortArgs']]]] = None,
@@ -40689,7 +40960,7 @@ class ServiceIpv6AclFeatureSequenceMatchEntryArgs:
         :param pulumi.Input[Sequence[pulumi.Input[str]]] icmp_messages: ICMP6 Message
         :param pulumi.Input[int] next_header: next header number
                  - Range: `0`-`255`
-        :param pulumi.Input[int] packet_length: Packet Length
+        :param pulumi.Input[str] packet_length: Packet Length
         :param pulumi.Input[str] source_data_prefix: Source Data IP Prefix
         :param pulumi.Input[Sequence[pulumi.Input['ServiceIpv6AclFeatureSequenceMatchEntrySourcePortArgs']]] source_ports: Source Port List
         :param pulumi.Input[str] tcp_state: TCP States
@@ -40779,14 +41050,14 @@ class ServiceIpv6AclFeatureSequenceMatchEntryArgs:
 
     @property
     @pulumi.getter(name="packetLength")
-    def packet_length(self) -> Optional[pulumi.Input[int]]:
+    def packet_length(self) -> Optional[pulumi.Input[str]]:
         """
         Packet Length
         """
         return pulumi.get(self, "packet_length")
 
     @packet_length.setter
-    def packet_length(self, value: Optional[pulumi.Input[int]]):
+    def packet_length(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "packet_length", value)
 
     @property
@@ -64488,7 +64759,7 @@ if not MYPY:
         """
         ICMP Message
         """
-        packet_length: NotRequired[pulumi.Input[int]]
+        packet_length: NotRequired[pulumi.Input[str]]
         """
         Packet Length
         """
@@ -64526,7 +64797,7 @@ class TransportIpv4AclFeatureSequenceMatchEntryArgs:
                  destination_ports: Optional[pulumi.Input[Sequence[pulumi.Input['TransportIpv4AclFeatureSequenceMatchEntryDestinationPortArgs']]]] = None,
                  dscps: Optional[pulumi.Input[Sequence[pulumi.Input[int]]]] = None,
                  icmp_messages: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-                 packet_length: Optional[pulumi.Input[int]] = None,
+                 packet_length: Optional[pulumi.Input[str]] = None,
                  protocols: Optional[pulumi.Input[Sequence[pulumi.Input[int]]]] = None,
                  source_data_prefix: Optional[pulumi.Input[str]] = None,
                  source_data_prefix_list_id: Optional[pulumi.Input[str]] = None,
@@ -64539,7 +64810,7 @@ class TransportIpv4AclFeatureSequenceMatchEntryArgs:
         :param pulumi.Input[Sequence[pulumi.Input['TransportIpv4AclFeatureSequenceMatchEntryDestinationPortArgs']]] destination_ports: Destination Port List
         :param pulumi.Input[Sequence[pulumi.Input[int]]] dscps: DSCP number
         :param pulumi.Input[Sequence[pulumi.Input[str]]] icmp_messages: ICMP Message
-        :param pulumi.Input[int] packet_length: Packet Length
+        :param pulumi.Input[str] packet_length: Packet Length
         :param pulumi.Input[Sequence[pulumi.Input[int]]] protocols: protocol number list with at least one item
         :param pulumi.Input[str] source_data_prefix: Source Data IP Prefix
         :param pulumi.Input[str] source_data_prefix_variable: Variable name
@@ -64645,14 +64916,14 @@ class TransportIpv4AclFeatureSequenceMatchEntryArgs:
 
     @property
     @pulumi.getter(name="packetLength")
-    def packet_length(self) -> Optional[pulumi.Input[int]]:
+    def packet_length(self) -> Optional[pulumi.Input[str]]:
         """
         Packet Length
         """
         return pulumi.get(self, "packet_length")
 
     @packet_length.setter
-    def packet_length(self, value: Optional[pulumi.Input[int]]):
+    def packet_length(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "packet_length", value)
 
     @property
@@ -65098,7 +65369,7 @@ if not MYPY:
         next header number
           - Range: `0`-`255`
         """
-        packet_length: NotRequired[pulumi.Input[int]]
+        packet_length: NotRequired[pulumi.Input[str]]
         """
         Packet Length
         """
@@ -65131,7 +65402,7 @@ class TransportIpv6AclFeatureSequenceMatchEntryArgs:
                  destination_ports: Optional[pulumi.Input[Sequence[pulumi.Input['TransportIpv6AclFeatureSequenceMatchEntryDestinationPortArgs']]]] = None,
                  icmp_messages: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  next_header: Optional[pulumi.Input[int]] = None,
-                 packet_length: Optional[pulumi.Input[int]] = None,
+                 packet_length: Optional[pulumi.Input[str]] = None,
                  source_data_prefix: Optional[pulumi.Input[str]] = None,
                  source_data_prefix_list_id: Optional[pulumi.Input[str]] = None,
                  source_ports: Optional[pulumi.Input[Sequence[pulumi.Input['TransportIpv6AclFeatureSequenceMatchEntrySourcePortArgs']]]] = None,
@@ -65143,7 +65414,7 @@ class TransportIpv6AclFeatureSequenceMatchEntryArgs:
         :param pulumi.Input[Sequence[pulumi.Input[str]]] icmp_messages: ICMP6 Message
         :param pulumi.Input[int] next_header: next header number
                  - Range: `0`-`255`
-        :param pulumi.Input[int] packet_length: Packet Length
+        :param pulumi.Input[str] packet_length: Packet Length
         :param pulumi.Input[str] source_data_prefix: Source Data IP Prefix
         :param pulumi.Input[Sequence[pulumi.Input['TransportIpv6AclFeatureSequenceMatchEntrySourcePortArgs']]] source_ports: Source Port List
         :param pulumi.Input[str] tcp_state: TCP States
@@ -65233,14 +65504,14 @@ class TransportIpv6AclFeatureSequenceMatchEntryArgs:
 
     @property
     @pulumi.getter(name="packetLength")
-    def packet_length(self) -> Optional[pulumi.Input[int]]:
+    def packet_length(self) -> Optional[pulumi.Input[str]]:
         """
         Packet Length
         """
         return pulumi.get(self, "packet_length")
 
     @packet_length.setter
-    def packet_length(self, value: Optional[pulumi.Input[int]]):
+    def packet_length(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "packet_length", value)
 
     @property

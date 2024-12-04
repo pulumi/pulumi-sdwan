@@ -51,7 +51,7 @@ public final class FeatureDeviceTemplateGeneralTemplateArgs extends com.pulumi.r
 
     /**
      * Feature template type
-     *   - Choices: `cisco_system`, `cisco_logging`, `cedge_aaa`, `cisco_bfd`, `cisco_omp`, `cisco_security`, `cisco_banner`, `cisco_snmp`, `cedge_global`, `cli-template`, `cisco_sig_credentials`, `switchport`, `cisco_thousandeyes`, `cisco_vpn`, `virtual-application-utd`
+     *   - Choices: `cisco_system`, `cisco_logging`, `cedge_aaa`, `cisco_bfd`, `cisco_omp`, `cisco_security`, `cisco_banner`, `cisco_snmp`, `cedge_global`, `cli-template`, `cisco_sig_credentials`, `switchport`, `cisco_thousandeyes`, `cisco_vpn`, `virtual-application-utd`, `cellular-cedge-controller`
      * 
      */
     @Import(name="type", required=true)
@@ -59,7 +59,7 @@ public final class FeatureDeviceTemplateGeneralTemplateArgs extends com.pulumi.r
 
     /**
      * @return Feature template type
-     *   - Choices: `cisco_system`, `cisco_logging`, `cedge_aaa`, `cisco_bfd`, `cisco_omp`, `cisco_security`, `cisco_banner`, `cisco_snmp`, `cedge_global`, `cli-template`, `cisco_sig_credentials`, `switchport`, `cisco_thousandeyes`, `cisco_vpn`, `virtual-application-utd`
+     *   - Choices: `cisco_system`, `cisco_logging`, `cedge_aaa`, `cisco_bfd`, `cisco_omp`, `cisco_security`, `cisco_banner`, `cisco_snmp`, `cedge_global`, `cli-template`, `cisco_sig_credentials`, `switchport`, `cisco_thousandeyes`, `cisco_vpn`, `virtual-application-utd`, `cellular-cedge-controller`
      * 
      */
     public Output<String> type() {
@@ -162,7 +162,7 @@ public final class FeatureDeviceTemplateGeneralTemplateArgs extends com.pulumi.r
 
         /**
          * @param type Feature template type
-         *   - Choices: `cisco_system`, `cisco_logging`, `cedge_aaa`, `cisco_bfd`, `cisco_omp`, `cisco_security`, `cisco_banner`, `cisco_snmp`, `cedge_global`, `cli-template`, `cisco_sig_credentials`, `switchport`, `cisco_thousandeyes`, `cisco_vpn`, `virtual-application-utd`
+         *   - Choices: `cisco_system`, `cisco_logging`, `cedge_aaa`, `cisco_bfd`, `cisco_omp`, `cisco_security`, `cisco_banner`, `cisco_snmp`, `cedge_global`, `cli-template`, `cisco_sig_credentials`, `switchport`, `cisco_thousandeyes`, `cisco_vpn`, `virtual-application-utd`, `cellular-cedge-controller`
          * 
          * @return builder
          * 
@@ -174,7 +174,7 @@ public final class FeatureDeviceTemplateGeneralTemplateArgs extends com.pulumi.r
 
         /**
          * @param type Feature template type
-         *   - Choices: `cisco_system`, `cisco_logging`, `cedge_aaa`, `cisco_bfd`, `cisco_omp`, `cisco_security`, `cisco_banner`, `cisco_snmp`, `cedge_global`, `cli-template`, `cisco_sig_credentials`, `switchport`, `cisco_thousandeyes`, `cisco_vpn`, `virtual-application-utd`
+         *   - Choices: `cisco_system`, `cisco_logging`, `cedge_aaa`, `cisco_bfd`, `cisco_omp`, `cisco_security`, `cisco_banner`, `cisco_snmp`, `cedge_global`, `cli-template`, `cisco_sig_credentials`, `switchport`, `cisco_thousandeyes`, `cisco_vpn`, `virtual-application-utd`, `cellular-cedge-controller`
          * 
          * @return builder
          * 

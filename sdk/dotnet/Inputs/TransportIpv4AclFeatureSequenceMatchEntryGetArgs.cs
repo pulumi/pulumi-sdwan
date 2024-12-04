@@ -67,7 +67,7 @@ namespace Pulumi.Sdwan.Inputs
         /// Packet Length
         /// </summary>
         [Input("packetLength")]
-        public Input<int>? PacketLength { get; set; }
+        public Input<string>? PacketLength { get; set; }
 
         [Input("protocols")]
         private InputList<int>? _protocols;

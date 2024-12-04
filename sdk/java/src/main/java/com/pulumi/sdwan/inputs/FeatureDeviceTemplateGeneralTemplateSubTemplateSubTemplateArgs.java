@@ -34,7 +34,7 @@ public final class FeatureDeviceTemplateGeneralTemplateSubTemplateSubTemplateArg
 
     /**
      * Feature template type
-     *   - Choices: `cisco_dhcp_server`
+     *   - Choices: `cisco_dhcp_server`, `cellular-cedge-profile`
      * 
      */
     @Import(name="type", required=true)
@@ -42,7 +42,7 @@ public final class FeatureDeviceTemplateGeneralTemplateSubTemplateSubTemplateArg
 
     /**
      * @return Feature template type
-     *   - Choices: `cisco_dhcp_server`
+     *   - Choices: `cisco_dhcp_server`, `cellular-cedge-profile`
      * 
      */
     public Output<String> type() {
@@ -113,7 +113,7 @@ public final class FeatureDeviceTemplateGeneralTemplateSubTemplateSubTemplateArg
 
         /**
          * @param type Feature template type
-         *   - Choices: `cisco_dhcp_server`
+         *   - Choices: `cisco_dhcp_server`, `cellular-cedge-profile`
          * 
          * @return builder
          * 
@@ -125,7 +125,7 @@ public final class FeatureDeviceTemplateGeneralTemplateSubTemplateSubTemplateArg
 
         /**
          * @param type Feature template type
-         *   - Choices: `cisco_dhcp_server`
+         *   - Choices: `cisco_dhcp_server`, `cellular-cedge-profile`
          * 
          * @return builder
          * 

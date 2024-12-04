@@ -19,7 +19,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string Id;
         /// <summary>
         /// Feature template type
-        ///   - Choices: `cisco_dhcp_server`
+        ///   - Choices: `cisco_dhcp_server`, `cellular-cedge-profile`
         /// </summary>
         public readonly string Type;
         /// <summary>

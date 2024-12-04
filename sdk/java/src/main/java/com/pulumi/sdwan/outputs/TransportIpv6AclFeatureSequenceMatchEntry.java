@@ -41,7 +41,7 @@ public final class TransportIpv6AclFeatureSequenceMatchEntry {
      * @return Packet Length
      * 
      */
-    private @Nullable Integer packetLength;
+    private @Nullable String packetLength;
     /**
      * @return Source Data IP Prefix
      * 
@@ -102,7 +102,7 @@ public final class TransportIpv6AclFeatureSequenceMatchEntry {
      * @return Packet Length
      * 
      */
-    public Optional<Integer> packetLength() {
+    public Optional<String> packetLength() {
         return Optional.ofNullable(this.packetLength);
     }
     /**
@@ -152,7 +152,7 @@ public final class TransportIpv6AclFeatureSequenceMatchEntry {
         private @Nullable List<TransportIpv6AclFeatureSequenceMatchEntryDestinationPort> destinationPorts;
         private @Nullable List<String> icmpMessages;
         private @Nullable Integer nextHeader;
-        private @Nullable Integer packetLength;
+        private @Nullable String packetLength;
         private @Nullable String sourceDataPrefix;
         private @Nullable String sourceDataPrefixListId;
         private @Nullable List<TransportIpv6AclFeatureSequenceMatchEntrySourcePort> sourcePorts;
@@ -211,7 +211,7 @@ public final class TransportIpv6AclFeatureSequenceMatchEntry {
             return this;
         }
         @CustomType.Setter
-        public Builder packetLength(@Nullable Integer packetLength) {
+        public Builder packetLength(@Nullable String packetLength) {
 
             this.packetLength = packetLength;
             return this;

@@ -318,7 +318,7 @@ type VpnInterfaceCellularFeatureTemplate struct {
 	TunnelInterfaceVmanageConnectionPreference pulumi.IntPtrOutput `pulumi:"tunnelInterfaceVmanageConnectionPreference"`
 	// Variable name
 	TunnelInterfaceVmanageConnectionPreferenceVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceVmanageConnectionPreferenceVariable"`
-	// Set tunnel QoS mode - Choices: `spoke`
+	// Set tunnel QoS mode - Choices: `hub`, `spoke`
 	TunnelQosMode pulumi.StringPtrOutput `pulumi:"tunnelQosMode"`
 	// Variable name
 	TunnelQosModeVariable pulumi.StringPtrOutput `pulumi:"tunnelQosModeVariable"`
@@ -661,7 +661,7 @@ type vpnInterfaceCellularFeatureTemplateState struct {
 	TunnelInterfaceVmanageConnectionPreference *int `pulumi:"tunnelInterfaceVmanageConnectionPreference"`
 	// Variable name
 	TunnelInterfaceVmanageConnectionPreferenceVariable *string `pulumi:"tunnelInterfaceVmanageConnectionPreferenceVariable"`
-	// Set tunnel QoS mode - Choices: `spoke`
+	// Set tunnel QoS mode - Choices: `hub`, `spoke`
 	TunnelQosMode *string `pulumi:"tunnelQosMode"`
 	// Variable name
 	TunnelQosModeVariable *string `pulumi:"tunnelQosModeVariable"`
@@ -969,7 +969,7 @@ type VpnInterfaceCellularFeatureTemplateState struct {
 	TunnelInterfaceVmanageConnectionPreference pulumi.IntPtrInput
 	// Variable name
 	TunnelInterfaceVmanageConnectionPreferenceVariable pulumi.StringPtrInput
-	// Set tunnel QoS mode - Choices: `spoke`
+	// Set tunnel QoS mode - Choices: `hub`, `spoke`
 	TunnelQosMode pulumi.StringPtrInput
 	// Variable name
 	TunnelQosModeVariable pulumi.StringPtrInput
@@ -1279,7 +1279,7 @@ type vpnInterfaceCellularFeatureTemplateArgs struct {
 	TunnelInterfaceVmanageConnectionPreference *int `pulumi:"tunnelInterfaceVmanageConnectionPreference"`
 	// Variable name
 	TunnelInterfaceVmanageConnectionPreferenceVariable *string `pulumi:"tunnelInterfaceVmanageConnectionPreferenceVariable"`
-	// Set tunnel QoS mode - Choices: `spoke`
+	// Set tunnel QoS mode - Choices: `hub`, `spoke`
 	TunnelQosMode *string `pulumi:"tunnelQosMode"`
 	// Variable name
 	TunnelQosModeVariable *string `pulumi:"tunnelQosModeVariable"`
@@ -1584,7 +1584,7 @@ type VpnInterfaceCellularFeatureTemplateArgs struct {
 	TunnelInterfaceVmanageConnectionPreference pulumi.IntPtrInput
 	// Variable name
 	TunnelInterfaceVmanageConnectionPreferenceVariable pulumi.StringPtrInput
-	// Set tunnel QoS mode - Choices: `spoke`
+	// Set tunnel QoS mode - Choices: `hub`, `spoke`
 	TunnelQosMode pulumi.StringPtrInput
 	// Variable name
 	TunnelQosModeVariable pulumi.StringPtrInput
@@ -2553,7 +2553,7 @@ func (o VpnInterfaceCellularFeatureTemplateOutput) TunnelInterfaceVmanageConnect
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set tunnel QoS mode - Choices: `spoke`
+// Set tunnel QoS mode - Choices: `hub`, `spoke`
 func (o VpnInterfaceCellularFeatureTemplateOutput) TunnelQosMode() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceCellularFeatureTemplate) pulumi.StringPtrOutput { return v.TunnelQosMode }).(pulumi.StringPtrOutput)
 }

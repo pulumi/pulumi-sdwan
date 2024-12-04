@@ -2218,14 +2218,14 @@ public class VpnInterfaceCellularFeatureTemplate extends com.pulumi.resources.Cu
         return Codegen.optional(this.tunnelInterfaceVmanageConnectionPreferenceVariable);
     }
     /**
-     * Set tunnel QoS mode - Choices: `spoke`
+     * Set tunnel QoS mode - Choices: `hub`, `spoke`
      * 
      */
     @Export(name="tunnelQosMode", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelQosMode;
 
     /**
-     * @return Set tunnel QoS mode - Choices: `spoke`
+     * @return Set tunnel QoS mode - Choices: `hub`, `spoke`
      * 
      */
     public Output<Optional<String>> tunnelQosMode() {
