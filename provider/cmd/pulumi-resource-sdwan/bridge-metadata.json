@@ -1865,6 +1865,33 @@
                     }
                 }
             },
+            "sdwan_service_dhcp_server_feature": {
+                "current": "sdwan:index/serviceDhcpServerFeature:ServiceDhcpServerFeature",
+                "fields": {
+                    "dns_servers": {
+                        "maxItemsOne": false
+                    },
+                    "exclude": {
+                        "maxItemsOne": false
+                    },
+                    "option_codes": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "ip": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    },
+                    "static_leases": {
+                        "maxItemsOne": false
+                    },
+                    "tftp_servers": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
             "sdwan_service_feature_profile": {
                 "current": "sdwan:index/serviceFeatureProfile:ServiceFeatureProfile"
             },
@@ -2151,11 +2178,17 @@
                     }
                 }
             },
+            "sdwan_service_lan_vpn_interface_ethernet_feature_associate_dhcp_server_feature": {
+                "current": "sdwan:index/serviceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature:ServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature"
+            },
             "sdwan_service_lan_vpn_interface_gre_feature": {
                 "current": "sdwan:index/serviceLanVpnInterfaceGreFeature:ServiceLanVpnInterfaceGreFeature"
             },
             "sdwan_service_lan_vpn_interface_ipsec_feature": {
                 "current": "sdwan:index/serviceLanVpnInterfaceIpsecFeature:ServiceLanVpnInterfaceIpsecFeature"
+            },
+            "sdwan_service_lan_vpn_interface_ipsec_feature_associate_dhcp_server_feature": {
+                "current": "sdwan:index/serviceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature:ServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature"
             },
             "sdwan_service_lan_vpn_interface_svi_feature": {
                 "current": "sdwan:index/serviceLanVpnInterfaceSviFeature:ServiceLanVpnInterfaceSviFeature",
@@ -2202,6 +2235,9 @@
                         }
                     }
                 }
+            },
+            "sdwan_service_lan_vpn_interface_svi_feature_associate_dhcp_server_feature": {
+                "current": "sdwan:index/serviceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature:ServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature"
             },
             "sdwan_service_multicast_feature": {
                 "current": "sdwan:index/serviceMulticastFeature:ServiceMulticastFeature",
@@ -5489,6 +5525,33 @@
                     }
                 }
             },
+            "sdwan_service_dhcp_server_feature": {
+                "current": "sdwan:index/getServiceDhcpServerFeature:getServiceDhcpServerFeature",
+                "fields": {
+                    "dns_servers": {
+                        "maxItemsOne": false
+                    },
+                    "exclude": {
+                        "maxItemsOne": false
+                    },
+                    "option_codes": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "ip": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    },
+                    "static_leases": {
+                        "maxItemsOne": false
+                    },
+                    "tftp_servers": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
             "sdwan_service_feature_profile": {
                 "current": "sdwan:index/getServiceFeatureProfile:getServiceFeatureProfile"
             },
@@ -5775,11 +5838,17 @@
                     }
                 }
             },
+            "sdwan_service_lan_vpn_interface_ethernet_feature_associate_dhcp_server_feature": {
+                "current": "sdwan:index/getServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature:getServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature"
+            },
             "sdwan_service_lan_vpn_interface_gre_feature": {
                 "current": "sdwan:index/getServiceLanVpnInterfaceGreFeature:getServiceLanVpnInterfaceGreFeature"
             },
             "sdwan_service_lan_vpn_interface_ipsec_feature": {
                 "current": "sdwan:index/getServiceLanVpnInterfaceIpsecFeature:getServiceLanVpnInterfaceIpsecFeature"
+            },
+            "sdwan_service_lan_vpn_interface_ipsec_feature_associate_dhcp_server_feature": {
+                "current": "sdwan:index/getServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature:getServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature"
             },
             "sdwan_service_lan_vpn_interface_svi_feature": {
                 "current": "sdwan:index/getServiceLanVpnInterfaceSviFeature:getServiceLanVpnInterfaceSviFeature",
@@ -5826,6 +5895,9 @@
                         }
                     }
                 }
+            },
+            "sdwan_service_lan_vpn_interface_svi_feature_associate_dhcp_server_feature": {
+                "current": "sdwan:index/getServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature:getServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature"
             },
             "sdwan_service_multicast_feature": {
                 "current": "sdwan:index/getServiceMulticastFeature:getServiceMulticastFeature",
