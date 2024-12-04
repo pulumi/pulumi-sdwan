@@ -2196,14 +2196,14 @@ public final class VpnInterfaceCellularFeatureTemplateArgs extends com.pulumi.re
     }
 
     /**
-     * Set tunnel QoS mode - Choices: `spoke`
+     * Set tunnel QoS mode - Choices: `hub`, `spoke`
      * 
      */
     @Import(name="tunnelQosMode")
     private @Nullable Output<String> tunnelQosMode;
 
     /**
-     * @return Set tunnel QoS mode - Choices: `spoke`
+     * @return Set tunnel QoS mode - Choices: `hub`, `spoke`
      * 
      */
     public Optional<Output<String>> tunnelQosMode() {
@@ -5573,7 +5573,7 @@ public final class VpnInterfaceCellularFeatureTemplateArgs extends com.pulumi.re
         }
 
         /**
-         * @param tunnelQosMode Set tunnel QoS mode - Choices: `spoke`
+         * @param tunnelQosMode Set tunnel QoS mode - Choices: `hub`, `spoke`
          * 
          * @return builder
          * 
@@ -5584,7 +5584,7 @@ public final class VpnInterfaceCellularFeatureTemplateArgs extends com.pulumi.re
         }
 
         /**
-         * @param tunnelQosMode Set tunnel QoS mode - Choices: `spoke`
+         * @param tunnelQosMode Set tunnel QoS mode - Choices: `hub`, `spoke`
          * 
          * @return builder
          * 

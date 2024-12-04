@@ -898,7 +898,7 @@ namespace Pulumi.Sdwan
         public Output<string?> TunnelInterfaceVmanageConnectionPreferenceVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set tunnel QoS mode - Choices: `spoke`
+        /// Set tunnel QoS mode - Choices: `hub`, `spoke`
         /// </summary>
         [Output("tunnelQosMode")]
         public Output<string?> TunnelQosMode { get; private set; } = null!;
@@ -1909,7 +1909,7 @@ namespace Pulumi.Sdwan
         public Input<string>? TunnelInterfaceVmanageConnectionPreferenceVariable { get; set; }
 
         /// <summary>
-        /// Set tunnel QoS mode - Choices: `spoke`
+        /// Set tunnel QoS mode - Choices: `hub`, `spoke`
         /// </summary>
         [Input("tunnelQosMode")]
         public Input<string>? TunnelQosMode { get; set; }
@@ -2882,7 +2882,7 @@ namespace Pulumi.Sdwan
         public Input<string>? TunnelInterfaceVmanageConnectionPreferenceVariable { get; set; }
 
         /// <summary>
-        /// Set tunnel QoS mode - Choices: `spoke`
+        /// Set tunnel QoS mode - Choices: `hub`, `spoke`
         /// </summary>
         [Input("tunnelQosMode")]
         public Input<string>? TunnelQosMode { get; set; }

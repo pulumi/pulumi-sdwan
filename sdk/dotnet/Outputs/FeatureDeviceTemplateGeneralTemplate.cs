@@ -23,7 +23,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly ImmutableArray<Outputs.FeatureDeviceTemplateGeneralTemplateSubTemplate> SubTemplates;
         /// <summary>
         /// Feature template type
-        ///   - Choices: `cisco_system`, `cisco_logging`, `cedge_aaa`, `cisco_bfd`, `cisco_omp`, `cisco_security`, `cisco_banner`, `cisco_snmp`, `cedge_global`, `cli-template`, `cisco_sig_credentials`, `switchport`, `cisco_thousandeyes`, `cisco_vpn`, `virtual-application-utd`
+        ///   - Choices: `cisco_system`, `cisco_logging`, `cedge_aaa`, `cisco_bfd`, `cisco_omp`, `cisco_security`, `cisco_banner`, `cisco_snmp`, `cedge_global`, `cli-template`, `cisco_sig_credentials`, `switchport`, `cisco_thousandeyes`, `cisco_vpn`, `virtual-application-utd`, `cellular-cedge-controller`
         /// </summary>
         public readonly string Type;
         /// <summary>

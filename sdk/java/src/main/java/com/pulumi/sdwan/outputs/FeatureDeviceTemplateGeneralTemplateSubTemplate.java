@@ -27,7 +27,7 @@ public final class FeatureDeviceTemplateGeneralTemplateSubTemplate {
     private @Nullable List<FeatureDeviceTemplateGeneralTemplateSubTemplateSubTemplate> subTemplates;
     /**
      * @return Feature template type
-     *   - Choices: `cisco_logging`, `cisco_ntp`, `cisco_ospf`, `cisco_bgp`, `cisco_vpn_interface`, `cisco_vpn_interface_ipsec`, `vpn-interface-svi`, `cisco_secure_internet_gateway`
+     *   - Choices: `cisco_logging`, `cisco_ntp`, `cisco_ospf`, `cisco_bgp`, `cisco_vpn_interface`, `cisco_vpn_interface_gre`, `cisco_vpn_interface_ipsec`, `vpn-interface-svi`, `vpn-cedge-interface-cellular`, `cisco_secure_internet_gateway`
      * 
      */
     private String type;
@@ -54,7 +54,7 @@ public final class FeatureDeviceTemplateGeneralTemplateSubTemplate {
     }
     /**
      * @return Feature template type
-     *   - Choices: `cisco_logging`, `cisco_ntp`, `cisco_ospf`, `cisco_bgp`, `cisco_vpn_interface`, `cisco_vpn_interface_ipsec`, `vpn-interface-svi`, `cisco_secure_internet_gateway`
+     *   - Choices: `cisco_logging`, `cisco_ntp`, `cisco_ospf`, `cisco_bgp`, `cisco_vpn_interface`, `cisco_vpn_interface_gre`, `cisco_vpn_interface_ipsec`, `vpn-interface-svi`, `vpn-cedge-interface-cellular`, `cisco_secure_internet_gateway`
      * 
      */
     public String type() {

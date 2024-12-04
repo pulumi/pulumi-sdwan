@@ -935,6 +935,11 @@ export const getSecurityPolicy: typeof import("./getSecurityPolicy").getSecurity
 export const getSecurityPolicyOutput: typeof import("./getSecurityPolicy").getSecurityPolicyOutput = null as any;
 utilities.lazyLoad(exports, ["getSecurityPolicy","getSecurityPolicyOutput"], () => require("./getSecurityPolicy"));
 
+export { GetServiceDhcpServerFeatureArgs, GetServiceDhcpServerFeatureResult, GetServiceDhcpServerFeatureOutputArgs } from "./getServiceDhcpServerFeature";
+export const getServiceDhcpServerFeature: typeof import("./getServiceDhcpServerFeature").getServiceDhcpServerFeature = null as any;
+export const getServiceDhcpServerFeatureOutput: typeof import("./getServiceDhcpServerFeature").getServiceDhcpServerFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getServiceDhcpServerFeature","getServiceDhcpServerFeatureOutput"], () => require("./getServiceDhcpServerFeature"));
+
 export { GetServiceFeatureProfileArgs, GetServiceFeatureProfileResult, GetServiceFeatureProfileOutputArgs } from "./getServiceFeatureProfile";
 export const getServiceFeatureProfile: typeof import("./getServiceFeatureProfile").getServiceFeatureProfile = null as any;
 export const getServiceFeatureProfileOutput: typeof import("./getServiceFeatureProfile").getServiceFeatureProfileOutput = null as any;
@@ -990,6 +995,11 @@ export const getServiceLanVpnInterfaceEthernetFeature: typeof import("./getServi
 export const getServiceLanVpnInterfaceEthernetFeatureOutput: typeof import("./getServiceLanVpnInterfaceEthernetFeature").getServiceLanVpnInterfaceEthernetFeatureOutput = null as any;
 utilities.lazyLoad(exports, ["getServiceLanVpnInterfaceEthernetFeature","getServiceLanVpnInterfaceEthernetFeatureOutput"], () => require("./getServiceLanVpnInterfaceEthernetFeature"));
 
+export { GetServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureArgs, GetServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureResult, GetServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureOutputArgs } from "./getServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature";
+export const getServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature: typeof import("./getServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature").getServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature = null as any;
+export const getServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureOutput: typeof import("./getServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature").getServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature","getServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureOutput"], () => require("./getServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature"));
+
 export { GetServiceLanVpnInterfaceGreFeatureArgs, GetServiceLanVpnInterfaceGreFeatureResult, GetServiceLanVpnInterfaceGreFeatureOutputArgs } from "./getServiceLanVpnInterfaceGreFeature";
 export const getServiceLanVpnInterfaceGreFeature: typeof import("./getServiceLanVpnInterfaceGreFeature").getServiceLanVpnInterfaceGreFeature = null as any;
 export const getServiceLanVpnInterfaceGreFeatureOutput: typeof import("./getServiceLanVpnInterfaceGreFeature").getServiceLanVpnInterfaceGreFeatureOutput = null as any;
@@ -1000,10 +1010,20 @@ export const getServiceLanVpnInterfaceIpsecFeature: typeof import("./getServiceL
 export const getServiceLanVpnInterfaceIpsecFeatureOutput: typeof import("./getServiceLanVpnInterfaceIpsecFeature").getServiceLanVpnInterfaceIpsecFeatureOutput = null as any;
 utilities.lazyLoad(exports, ["getServiceLanVpnInterfaceIpsecFeature","getServiceLanVpnInterfaceIpsecFeatureOutput"], () => require("./getServiceLanVpnInterfaceIpsecFeature"));
 
+export { GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureArgs, GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureResult, GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureOutputArgs } from "./getServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature";
+export const getServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature: typeof import("./getServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature").getServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature = null as any;
+export const getServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureOutput: typeof import("./getServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature").getServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature","getServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureOutput"], () => require("./getServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature"));
+
 export { GetServiceLanVpnInterfaceSviFeatureArgs, GetServiceLanVpnInterfaceSviFeatureResult, GetServiceLanVpnInterfaceSviFeatureOutputArgs } from "./getServiceLanVpnInterfaceSviFeature";
 export const getServiceLanVpnInterfaceSviFeature: typeof import("./getServiceLanVpnInterfaceSviFeature").getServiceLanVpnInterfaceSviFeature = null as any;
 export const getServiceLanVpnInterfaceSviFeatureOutput: typeof import("./getServiceLanVpnInterfaceSviFeature").getServiceLanVpnInterfaceSviFeatureOutput = null as any;
 utilities.lazyLoad(exports, ["getServiceLanVpnInterfaceSviFeature","getServiceLanVpnInterfaceSviFeatureOutput"], () => require("./getServiceLanVpnInterfaceSviFeature"));
+
+export { GetServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeatureArgs, GetServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeatureResult, GetServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeatureOutputArgs } from "./getServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature";
+export const getServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature: typeof import("./getServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature").getServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature = null as any;
+export const getServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeatureOutput: typeof import("./getServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature").getServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature","getServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeatureOutput"], () => require("./getServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature"));
 
 export { GetServiceMulticastFeatureArgs, GetServiceMulticastFeatureResult, GetServiceMulticastFeatureOutputArgs } from "./getServiceMulticastFeature";
 export const getServiceMulticastFeature: typeof import("./getServiceMulticastFeature").getServiceMulticastFeature = null as any;
@@ -1730,6 +1750,11 @@ export type SecurityPolicy = import("./securityPolicy").SecurityPolicy;
 export const SecurityPolicy: typeof import("./securityPolicy").SecurityPolicy = null as any;
 utilities.lazyLoad(exports, ["SecurityPolicy"], () => require("./securityPolicy"));
 
+export { ServiceDhcpServerFeatureArgs, ServiceDhcpServerFeatureState } from "./serviceDhcpServerFeature";
+export type ServiceDhcpServerFeature = import("./serviceDhcpServerFeature").ServiceDhcpServerFeature;
+export const ServiceDhcpServerFeature: typeof import("./serviceDhcpServerFeature").ServiceDhcpServerFeature = null as any;
+utilities.lazyLoad(exports, ["ServiceDhcpServerFeature"], () => require("./serviceDhcpServerFeature"));
+
 export { ServiceFeatureProfileArgs, ServiceFeatureProfileState } from "./serviceFeatureProfile";
 export type ServiceFeatureProfile = import("./serviceFeatureProfile").ServiceFeatureProfile;
 export const ServiceFeatureProfile: typeof import("./serviceFeatureProfile").ServiceFeatureProfile = null as any;
@@ -1785,6 +1810,11 @@ export type ServiceLanVpnInterfaceEthernetFeature = import("./serviceLanVpnInter
 export const ServiceLanVpnInterfaceEthernetFeature: typeof import("./serviceLanVpnInterfaceEthernetFeature").ServiceLanVpnInterfaceEthernetFeature = null as any;
 utilities.lazyLoad(exports, ["ServiceLanVpnInterfaceEthernetFeature"], () => require("./serviceLanVpnInterfaceEthernetFeature"));
 
+export { ServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureArgs, ServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureState } from "./serviceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature";
+export type ServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature = import("./serviceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature").ServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature;
+export const ServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature: typeof import("./serviceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature").ServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature = null as any;
+utilities.lazyLoad(exports, ["ServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature"], () => require("./serviceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature"));
+
 export { ServiceLanVpnInterfaceGreFeatureArgs, ServiceLanVpnInterfaceGreFeatureState } from "./serviceLanVpnInterfaceGreFeature";
 export type ServiceLanVpnInterfaceGreFeature = import("./serviceLanVpnInterfaceGreFeature").ServiceLanVpnInterfaceGreFeature;
 export const ServiceLanVpnInterfaceGreFeature: typeof import("./serviceLanVpnInterfaceGreFeature").ServiceLanVpnInterfaceGreFeature = null as any;
@@ -1795,10 +1825,20 @@ export type ServiceLanVpnInterfaceIpsecFeature = import("./serviceLanVpnInterfac
 export const ServiceLanVpnInterfaceIpsecFeature: typeof import("./serviceLanVpnInterfaceIpsecFeature").ServiceLanVpnInterfaceIpsecFeature = null as any;
 utilities.lazyLoad(exports, ["ServiceLanVpnInterfaceIpsecFeature"], () => require("./serviceLanVpnInterfaceIpsecFeature"));
 
+export { ServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureArgs, ServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureState } from "./serviceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature";
+export type ServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature = import("./serviceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature").ServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature;
+export const ServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature: typeof import("./serviceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature").ServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature = null as any;
+utilities.lazyLoad(exports, ["ServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature"], () => require("./serviceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature"));
+
 export { ServiceLanVpnInterfaceSviFeatureArgs, ServiceLanVpnInterfaceSviFeatureState } from "./serviceLanVpnInterfaceSviFeature";
 export type ServiceLanVpnInterfaceSviFeature = import("./serviceLanVpnInterfaceSviFeature").ServiceLanVpnInterfaceSviFeature;
 export const ServiceLanVpnInterfaceSviFeature: typeof import("./serviceLanVpnInterfaceSviFeature").ServiceLanVpnInterfaceSviFeature = null as any;
 utilities.lazyLoad(exports, ["ServiceLanVpnInterfaceSviFeature"], () => require("./serviceLanVpnInterfaceSviFeature"));
+
+export { ServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeatureArgs, ServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeatureState } from "./serviceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature";
+export type ServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature = import("./serviceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature").ServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature;
+export const ServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature: typeof import("./serviceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature").ServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature = null as any;
+utilities.lazyLoad(exports, ["ServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature"], () => require("./serviceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature"));
 
 export { ServiceMulticastFeatureArgs, ServiceMulticastFeatureState } from "./serviceMulticastFeature";
 export type ServiceMulticastFeature = import("./serviceMulticastFeature").ServiceMulticastFeature;
@@ -2480,6 +2520,8 @@ const _module = {
                 return new SecurityAppHostingFeatureTemplate(name, <any>undefined, { urn })
             case "sdwan:index/securityPolicy:SecurityPolicy":
                 return new SecurityPolicy(name, <any>undefined, { urn })
+            case "sdwan:index/serviceDhcpServerFeature:ServiceDhcpServerFeature":
+                return new ServiceDhcpServerFeature(name, <any>undefined, { urn })
             case "sdwan:index/serviceFeatureProfile:ServiceFeatureProfile":
                 return new ServiceFeatureProfile(name, <any>undefined, { urn })
             case "sdwan:index/serviceIpv4AclFeature:ServiceIpv4AclFeature":
@@ -2502,12 +2544,18 @@ const _module = {
                 return new ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6Feature(name, <any>undefined, { urn })
             case "sdwan:index/serviceLanVpnInterfaceEthernetFeature:ServiceLanVpnInterfaceEthernetFeature":
                 return new ServiceLanVpnInterfaceEthernetFeature(name, <any>undefined, { urn })
+            case "sdwan:index/serviceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature:ServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature":
+                return new ServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature(name, <any>undefined, { urn })
             case "sdwan:index/serviceLanVpnInterfaceGreFeature:ServiceLanVpnInterfaceGreFeature":
                 return new ServiceLanVpnInterfaceGreFeature(name, <any>undefined, { urn })
             case "sdwan:index/serviceLanVpnInterfaceIpsecFeature:ServiceLanVpnInterfaceIpsecFeature":
                 return new ServiceLanVpnInterfaceIpsecFeature(name, <any>undefined, { urn })
+            case "sdwan:index/serviceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature:ServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature":
+                return new ServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature(name, <any>undefined, { urn })
             case "sdwan:index/serviceLanVpnInterfaceSviFeature:ServiceLanVpnInterfaceSviFeature":
                 return new ServiceLanVpnInterfaceSviFeature(name, <any>undefined, { urn })
+            case "sdwan:index/serviceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature:ServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature":
+                return new ServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature(name, <any>undefined, { urn })
             case "sdwan:index/serviceMulticastFeature:ServiceMulticastFeature":
                 return new ServiceMulticastFeature(name, <any>undefined, { urn })
             case "sdwan:index/serviceObjectTrackerFeature:ServiceObjectTrackerFeature":
@@ -2804,6 +2852,7 @@ pulumi.runtime.registerResourceModule("sdwan", "index/routePolicyDefinition", _m
 pulumi.runtime.registerResourceModule("sdwan", "index/ruleSetPolicyDefinition", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/securityAppHostingFeatureTemplate", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/securityPolicy", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/serviceDhcpServerFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceFeatureProfile", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceIpv4AclFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceIpv6AclFeature", _module)
@@ -2815,9 +2864,12 @@ pulumi.runtime.registerResourceModule("sdwan", "index/serviceLanVpnFeatureAssoci
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceLanVpnFeatureAssociateRoutingOspfv3Ipv6Feature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceLanVpnInterfaceEthernetFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/serviceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceLanVpnInterfaceGreFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceLanVpnInterfaceIpsecFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/serviceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceLanVpnInterfaceSviFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/serviceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceMulticastFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceObjectTrackerFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/serviceObjectTrackerGroupFeature", _module)

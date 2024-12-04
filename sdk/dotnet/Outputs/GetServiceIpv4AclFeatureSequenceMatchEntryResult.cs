@@ -37,7 +37,7 @@ namespace Pulumi.Sdwan.Outputs
         /// <summary>
         /// Packet Length
         /// </summary>
-        public readonly int PacketLength;
+        public readonly string PacketLength;
         /// <summary>
         /// protocol number list with at least one item
         /// </summary>
@@ -74,7 +74,7 @@ namespace Pulumi.Sdwan.Outputs
 
             ImmutableArray<string> icmpMessages,
 
-            int packetLength,
+            string packetLength,
 
             ImmutableArray<int> protocols,
 

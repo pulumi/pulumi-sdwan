@@ -44,7 +44,7 @@ public final class GetServiceIpv4AclFeatureSequenceMatchEntry {
      * @return Packet Length
      * 
      */
-    private Integer packetLength;
+    private String packetLength;
     /**
      * @return protocol number list with at least one item
      * 
@@ -115,7 +115,7 @@ public final class GetServiceIpv4AclFeatureSequenceMatchEntry {
      * @return Packet Length
      * 
      */
-    public Integer packetLength() {
+    public String packetLength() {
         return this.packetLength;
     }
     /**
@@ -172,7 +172,7 @@ public final class GetServiceIpv4AclFeatureSequenceMatchEntry {
         private List<GetServiceIpv4AclFeatureSequenceMatchEntryDestinationPort> destinationPorts;
         private List<Integer> dscps;
         private List<String> icmpMessages;
-        private Integer packetLength;
+        private String packetLength;
         private List<Integer> protocols;
         private String sourceDataPrefix;
         private String sourceDataPrefixListId;
@@ -255,7 +255,7 @@ public final class GetServiceIpv4AclFeatureSequenceMatchEntry {
             return icmpMessages(List.of(icmpMessages));
         }
         @CustomType.Setter
-        public Builder packetLength(Integer packetLength) {
+        public Builder packetLength(String packetLength) {
             if (packetLength == null) {
               throw new MissingRequiredPropertyException("GetServiceIpv4AclFeatureSequenceMatchEntry", "packetLength");
             }

@@ -93,13 +93,13 @@ public final class ServiceIpv6AclFeatureSequenceMatchEntryArgs extends com.pulum
      * 
      */
     @Import(name="packetLength")
-    private @Nullable Output<Integer> packetLength;
+    private @Nullable Output<String> packetLength;
 
     /**
      * @return Packet Length
      * 
      */
-    public Optional<Output<Integer>> packetLength() {
+    public Optional<Output<String>> packetLength() {
         return Optional.ofNullable(this.packetLength);
     }
 
@@ -327,7 +327,7 @@ public final class ServiceIpv6AclFeatureSequenceMatchEntryArgs extends com.pulum
          * @return builder
          * 
          */
-        public Builder packetLength(@Nullable Output<Integer> packetLength) {
+        public Builder packetLength(@Nullable Output<String> packetLength) {
             $.packetLength = packetLength;
             return this;
         }
@@ -338,7 +338,7 @@ public final class ServiceIpv6AclFeatureSequenceMatchEntryArgs extends com.pulum
          * @return builder
          * 
          */
-        public Builder packetLength(Integer packetLength) {
+        public Builder packetLength(String packetLength) {
             return packetLength(Output.of(packetLength));
         }
 

@@ -34,7 +34,7 @@ namespace Pulumi.Sdwan.Outputs
         /// <summary>
         /// Packet Length
         /// </summary>
-        public readonly int? PacketLength;
+        public readonly string? PacketLength;
         /// <summary>
         /// Source Data IP Prefix
         /// </summary>
@@ -66,7 +66,7 @@ namespace Pulumi.Sdwan.Outputs
 
             int? nextHeader,
 
-            int? packetLength,
+            string? packetLength,
 
             string? sourceDataPrefix,
 

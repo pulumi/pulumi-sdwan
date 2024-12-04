@@ -630,7 +630,7 @@ export class VpnInterfaceCellularFeatureTemplate extends pulumi.CustomResource {
      */
     public readonly tunnelInterfaceVmanageConnectionPreferenceVariable!: pulumi.Output<string | undefined>;
     /**
-     * Set tunnel QoS mode - Choices: `spoke`
+     * Set tunnel QoS mode - Choices: `hub`, `spoke`
      */
     public readonly tunnelQosMode!: pulumi.Output<string | undefined>;
     /**
@@ -1567,7 +1567,7 @@ export interface VpnInterfaceCellularFeatureTemplateState {
      */
     tunnelInterfaceVmanageConnectionPreferenceVariable?: pulumi.Input<string>;
     /**
-     * Set tunnel QoS mode - Choices: `spoke`
+     * Set tunnel QoS mode - Choices: `hub`, `spoke`
      */
     tunnelQosMode?: pulumi.Input<string>;
     /**
@@ -2174,7 +2174,7 @@ export interface VpnInterfaceCellularFeatureTemplateArgs {
      */
     tunnelInterfaceVmanageConnectionPreferenceVariable?: pulumi.Input<string>;
     /**
-     * Set tunnel QoS mode - Choices: `spoke`
+     * Set tunnel QoS mode - Choices: `hub`, `spoke`
      */
     tunnelQosMode?: pulumi.Input<string>;
     /**

@@ -267,6 +267,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &SecurityAppHostingFeatureTemplate{}
 	case "sdwan:index/securityPolicy:SecurityPolicy":
 		r = &SecurityPolicy{}
+	case "sdwan:index/serviceDhcpServerFeature:ServiceDhcpServerFeature":
+		r = &ServiceDhcpServerFeature{}
 	case "sdwan:index/serviceFeatureProfile:ServiceFeatureProfile":
 		r = &ServiceFeatureProfile{}
 	case "sdwan:index/serviceIpv4AclFeature:ServiceIpv4AclFeature":
@@ -289,12 +291,18 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6Feature{}
 	case "sdwan:index/serviceLanVpnInterfaceEthernetFeature:ServiceLanVpnInterfaceEthernetFeature":
 		r = &ServiceLanVpnInterfaceEthernetFeature{}
+	case "sdwan:index/serviceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature:ServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature":
+		r = &ServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature{}
 	case "sdwan:index/serviceLanVpnInterfaceGreFeature:ServiceLanVpnInterfaceGreFeature":
 		r = &ServiceLanVpnInterfaceGreFeature{}
 	case "sdwan:index/serviceLanVpnInterfaceIpsecFeature:ServiceLanVpnInterfaceIpsecFeature":
 		r = &ServiceLanVpnInterfaceIpsecFeature{}
+	case "sdwan:index/serviceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature:ServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature":
+		r = &ServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature{}
 	case "sdwan:index/serviceLanVpnInterfaceSviFeature:ServiceLanVpnInterfaceSviFeature":
 		r = &ServiceLanVpnInterfaceSviFeature{}
+	case "sdwan:index/serviceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature:ServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature":
+		r = &ServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature{}
 	case "sdwan:index/serviceMulticastFeature:ServiceMulticastFeature":
 		r = &ServiceMulticastFeature{}
 	case "sdwan:index/serviceObjectTrackerFeature:ServiceObjectTrackerFeature":
@@ -1111,6 +1119,11 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"sdwan",
+		"index/serviceDhcpServerFeature",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
 		"index/serviceFeatureProfile",
 		&module{version},
 	)
@@ -1166,6 +1179,11 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"sdwan",
+		"index/serviceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
 		"index/serviceLanVpnInterfaceGreFeature",
 		&module{version},
 	)
@@ -1176,7 +1194,17 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"sdwan",
+		"index/serviceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
 		"index/serviceLanVpnInterfaceSviFeature",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/serviceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(

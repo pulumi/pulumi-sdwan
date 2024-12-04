@@ -6367,7 +6367,7 @@ export interface FeatureDeviceTemplateGeneralTemplate {
     subTemplates?: outputs.FeatureDeviceTemplateGeneralTemplateSubTemplate[];
     /**
      * Feature template type
-     *   - Choices: `ciscoSystem`, `ciscoLogging`, `cedgeAaa`, `ciscoBfd`, `ciscoOmp`, `ciscoSecurity`, `ciscoBanner`, `ciscoSnmp`, `cedgeGlobal`, `cli-template`, `ciscoSigCredentials`, `switchport`, `ciscoThousandeyes`, `ciscoVpn`, `virtual-application-utd`
+     *   - Choices: `ciscoSystem`, `ciscoLogging`, `cedgeAaa`, `ciscoBfd`, `ciscoOmp`, `ciscoSecurity`, `ciscoBanner`, `ciscoSnmp`, `cedgeGlobal`, `cli-template`, `ciscoSigCredentials`, `switchport`, `ciscoThousandeyes`, `ciscoVpn`, `virtual-application-utd`, `cellular-cedge-controller`
      */
     type: string;
     /**
@@ -6387,7 +6387,7 @@ export interface FeatureDeviceTemplateGeneralTemplateSubTemplate {
     subTemplates?: outputs.FeatureDeviceTemplateGeneralTemplateSubTemplateSubTemplate[];
     /**
      * Feature template type
-     *   - Choices: `ciscoLogging`, `ciscoNtp`, `ciscoOspf`, `ciscoBgp`, `ciscoVpnInterface`, `ciscoVpnInterfaceIpsec`, `vpn-interface-svi`, `ciscoSecureInternetGateway`
+     *   - Choices: `ciscoLogging`, `ciscoNtp`, `ciscoOspf`, `ciscoBgp`, `ciscoVpnInterface`, `ciscoVpnInterfaceGre`, `ciscoVpnInterfaceIpsec`, `vpn-interface-svi`, `vpn-cedge-interface-cellular`, `ciscoSecureInternetGateway`
      */
     type: string;
     /**
@@ -6403,7 +6403,7 @@ export interface FeatureDeviceTemplateGeneralTemplateSubTemplateSubTemplate {
     id: string;
     /**
      * Feature template type
-     *   - Choices: `ciscoDhcpServer`
+     *   - Choices: `ciscoDhcpServer`, `cellular-cedge-profile`
      */
     type: string;
     /**
@@ -13795,6 +13795,60 @@ export interface GetSecurityPolicyLogging {
     externalSyslogServerVpn: string;
 }
 
+export interface GetServiceDhcpServerFeatureOptionCode {
+    /**
+     * Set ASCII value
+     */
+    ascii: string;
+    /**
+     * Variable name
+     */
+    asciiVariable: string;
+    /**
+     * Set Option Code
+     */
+    code: number;
+    /**
+     * Variable name
+     */
+    codeVariable: string;
+    /**
+     * Set HEX value
+     */
+    hex: string;
+    /**
+     * Variable name
+     */
+    hexVariable: string;
+    /**
+     * Variable name
+     */
+    ipVariable: string;
+    /**
+     * Set ip address
+     */
+    ips: string[];
+}
+
+export interface GetServiceDhcpServerFeatureStaticLease {
+    /**
+     * Set client’s static IP address
+     */
+    ipAddress: string;
+    /**
+     * Variable name
+     */
+    ipAddressVariable: string;
+    /**
+     * Set MAC address of client
+     */
+    macAddress: string;
+    /**
+     * Variable name
+     */
+    macAddressVariable: string;
+}
+
 export interface GetServiceIpv4AclFeatureSequence {
     /**
      * Define list of actions
@@ -13872,7 +13926,7 @@ export interface GetServiceIpv4AclFeatureSequenceMatchEntry {
     /**
      * Packet Length
      */
-    packetLength: number;
+    packetLength: string;
     /**
      * protocol number list with at least one item
      */
@@ -13983,7 +14037,7 @@ export interface GetServiceIpv6AclFeatureSequenceMatchEntry {
     /**
      * Packet Length
      */
-    packetLength: number;
+    packetLength: string;
     /**
      * Source Data IP Prefix
      */
@@ -18512,7 +18566,7 @@ export interface GetTransportIpv4AclFeatureSequenceMatchEntry {
     /**
      * Packet Length
      */
-    packetLength: number;
+    packetLength: string;
     /**
      * protocol number list with at least one item
      */
@@ -18623,7 +18677,7 @@ export interface GetTransportIpv6AclFeatureSequenceMatchEntry {
     /**
      * Packet Length
      */
-    packetLength: number;
+    packetLength: string;
     /**
      * Source Data IP Prefix
      */
@@ -23465,6 +23519,61 @@ export interface SecurityPolicyLogging {
     externalSyslogServerVpn?: string;
 }
 
+export interface ServiceDhcpServerFeatureOptionCode {
+    /**
+     * Set ASCII value
+     */
+    ascii?: string;
+    /**
+     * Variable name
+     */
+    asciiVariable?: string;
+    /**
+     * Set Option Code
+     *   - Range: `1`-`254`
+     */
+    code?: number;
+    /**
+     * Variable name
+     */
+    codeVariable?: string;
+    /**
+     * Set HEX value
+     */
+    hex?: string;
+    /**
+     * Variable name
+     */
+    hexVariable?: string;
+    /**
+     * Variable name
+     */
+    ipVariable?: string;
+    /**
+     * Set ip address
+     */
+    ips?: string[];
+}
+
+export interface ServiceDhcpServerFeatureStaticLease {
+    /**
+     * Set client’s static IP address
+     */
+    ipAddress?: string;
+    /**
+     * Variable name
+     */
+    ipAddressVariable?: string;
+    /**
+     * Set MAC address of client
+     */
+    macAddress?: string;
+    /**
+     * Variable name
+     */
+    macAddressVariable?: string;
+}
+
 export interface ServiceIpv4AclFeatureSequence {
     /**
      * Define list of actions
@@ -23548,7 +23657,7 @@ export interface ServiceIpv4AclFeatureSequenceMatchEntry {
     /**
      * Packet Length
      */
-    packetLength?: number;
+    packetLength?: string;
     /**
      * protocol number list with at least one item
      */
@@ -23667,7 +23776,7 @@ export interface ServiceIpv6AclFeatureSequenceMatchEntry {
     /**
      * Packet Length
      */
-    packetLength?: number;
+    packetLength?: string;
     /**
      * Source Data IP Prefix
      */
@@ -28599,7 +28708,7 @@ export interface TransportIpv4AclFeatureSequenceMatchEntry {
     /**
      * Packet Length
      */
-    packetLength?: number;
+    packetLength?: string;
     /**
      * protocol number list with at least one item
      */
@@ -28718,7 +28827,7 @@ export interface TransportIpv6AclFeatureSequenceMatchEntry {
     /**
      * Packet Length
      */
-    packetLength?: number;
+    packetLength?: string;
     /**
      * Source Data IP Prefix
      */

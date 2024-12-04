@@ -253,6 +253,8 @@ import com.pulumi.sdwan.inputs.GetSecurityAppHostingFeatureTemplateArgs;
 import com.pulumi.sdwan.inputs.GetSecurityAppHostingFeatureTemplatePlainArgs;
 import com.pulumi.sdwan.inputs.GetSecurityPolicyArgs;
 import com.pulumi.sdwan.inputs.GetSecurityPolicyPlainArgs;
+import com.pulumi.sdwan.inputs.GetServiceDhcpServerFeatureArgs;
+import com.pulumi.sdwan.inputs.GetServiceDhcpServerFeaturePlainArgs;
 import com.pulumi.sdwan.inputs.GetServiceFeatureProfileArgs;
 import com.pulumi.sdwan.inputs.GetServiceFeatureProfilePlainArgs;
 import com.pulumi.sdwan.inputs.GetServiceIpv4AclFeatureArgs;
@@ -274,12 +276,18 @@ import com.pulumi.sdwan.inputs.GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6
 import com.pulumi.sdwan.inputs.GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6FeaturePlainArgs;
 import com.pulumi.sdwan.inputs.GetServiceLanVpnFeaturePlainArgs;
 import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureArgs;
+import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureArgs;
+import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeaturePlainArgs;
 import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeaturePlainArgs;
 import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceGreFeatureArgs;
 import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceGreFeaturePlainArgs;
 import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceIpsecFeatureArgs;
+import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureArgs;
+import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeaturePlainArgs;
 import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceIpsecFeaturePlainArgs;
 import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceSviFeatureArgs;
+import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeatureArgs;
+import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeaturePlainArgs;
 import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceSviFeaturePlainArgs;
 import com.pulumi.sdwan.inputs.GetServiceMulticastFeatureArgs;
 import com.pulumi.sdwan.inputs.GetServiceMulticastFeaturePlainArgs;
@@ -571,6 +579,7 @@ import com.pulumi.sdwan.outputs.GetRoutePolicyDefinitionResult;
 import com.pulumi.sdwan.outputs.GetRuleSetPolicyDefinitionResult;
 import com.pulumi.sdwan.outputs.GetSecurityAppHostingFeatureTemplateResult;
 import com.pulumi.sdwan.outputs.GetSecurityPolicyResult;
+import com.pulumi.sdwan.outputs.GetServiceDhcpServerFeatureResult;
 import com.pulumi.sdwan.outputs.GetServiceFeatureProfileResult;
 import com.pulumi.sdwan.outputs.GetServiceIpv4AclFeatureResult;
 import com.pulumi.sdwan.outputs.GetServiceIpv6AclFeatureResult;
@@ -581,9 +590,12 @@ import com.pulumi.sdwan.outputs.GetServiceLanVpnFeatureAssociateRoutingOspfFeatu
 import com.pulumi.sdwan.outputs.GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureResult;
 import com.pulumi.sdwan.outputs.GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureResult;
 import com.pulumi.sdwan.outputs.GetServiceLanVpnFeatureResult;
+import com.pulumi.sdwan.outputs.GetServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureResult;
 import com.pulumi.sdwan.outputs.GetServiceLanVpnInterfaceEthernetFeatureResult;
 import com.pulumi.sdwan.outputs.GetServiceLanVpnInterfaceGreFeatureResult;
+import com.pulumi.sdwan.outputs.GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureResult;
 import com.pulumi.sdwan.outputs.GetServiceLanVpnInterfaceIpsecFeatureResult;
+import com.pulumi.sdwan.outputs.GetServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeatureResult;
 import com.pulumi.sdwan.outputs.GetServiceLanVpnInterfaceSviFeatureResult;
 import com.pulumi.sdwan.outputs.GetServiceMulticastFeatureResult;
 import com.pulumi.sdwan.outputs.GetServiceObjectTrackerFeatureResult;
@@ -24168,6 +24180,178 @@ public final class SdwanFunctions {
         return Deployment.getInstance().invokeAsync("sdwan:index/getSecurityPolicy:getSecurityPolicy", TypeShape.of(GetSecurityPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
+     * This data source can read the Service DHCP Server Feature.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetServiceDhcpServerFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getServiceDhcpServerFeature(GetServiceDhcpServerFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetServiceDhcpServerFeatureResult> getServiceDhcpServerFeature(GetServiceDhcpServerFeatureArgs args) {
+        return getServiceDhcpServerFeature(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Service DHCP Server Feature.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetServiceDhcpServerFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getServiceDhcpServerFeature(GetServiceDhcpServerFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static CompletableFuture<GetServiceDhcpServerFeatureResult> getServiceDhcpServerFeaturePlain(GetServiceDhcpServerFeaturePlainArgs args) {
+        return getServiceDhcpServerFeaturePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Service DHCP Server Feature.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetServiceDhcpServerFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getServiceDhcpServerFeature(GetServiceDhcpServerFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetServiceDhcpServerFeatureResult> getServiceDhcpServerFeature(GetServiceDhcpServerFeatureArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getServiceDhcpServerFeature:getServiceDhcpServerFeature", TypeShape.of(GetServiceDhcpServerFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Service DHCP Server Feature.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetServiceDhcpServerFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getServiceDhcpServerFeature(GetServiceDhcpServerFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static CompletableFuture<GetServiceDhcpServerFeatureResult> getServiceDhcpServerFeaturePlain(GetServiceDhcpServerFeaturePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getServiceDhcpServerFeature:getServiceDhcpServerFeature", TypeShape.of(GetServiceDhcpServerFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
      * This data source can read the Service Feature Profile .
      * 
      * ## Example Usage
@@ -26084,6 +26268,186 @@ public final class SdwanFunctions {
         return Deployment.getInstance().invokeAsync("sdwan:index/getServiceLanVpnInterfaceEthernetFeature:getServiceLanVpnInterfaceEthernetFeature", TypeShape.of(GetServiceLanVpnInterfaceEthernetFeatureResult.class), args, Utilities.withVersion(options));
     }
     /**
+     * This data source can read the Service LAN VPN Interface Ethernet Feature Associate DHCP Server Feature .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature(GetServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .serviceLanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .serviceLanVpnInterfaceEthernetFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureResult> getServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature(GetServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureArgs args) {
+        return getServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Service LAN VPN Interface Ethernet Feature Associate DHCP Server Feature .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature(GetServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .serviceLanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .serviceLanVpnInterfaceEthernetFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static CompletableFuture<GetServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureResult> getServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeaturePlain(GetServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeaturePlainArgs args) {
+        return getServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeaturePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Service LAN VPN Interface Ethernet Feature Associate DHCP Server Feature .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature(GetServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .serviceLanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .serviceLanVpnInterfaceEthernetFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureResult> getServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature(GetServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature:getServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature", TypeShape.of(GetServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Service LAN VPN Interface Ethernet Feature Associate DHCP Server Feature .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature(GetServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .serviceLanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .serviceLanVpnInterfaceEthernetFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static CompletableFuture<GetServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureResult> getServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeaturePlain(GetServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeaturePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature:getServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature", TypeShape.of(GetServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
      * This data source can read the Service LAN VPN Interface GRE Feature.
      * 
      * ## Example Usage
@@ -26436,6 +26800,186 @@ public final class SdwanFunctions {
         return Deployment.getInstance().invokeAsync("sdwan:index/getServiceLanVpnInterfaceIpsecFeature:getServiceLanVpnInterfaceIpsecFeature", TypeShape.of(GetServiceLanVpnInterfaceIpsecFeatureResult.class), args, Utilities.withVersion(options));
     }
     /**
+     * This data source can read the Service LAN VPN Interface IPSec Feature Associate DHCP Server Feature .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature(GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .serviceLanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .serviceLanVpnInterfaceIpsecFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureResult> getServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature(GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureArgs args) {
+        return getServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Service LAN VPN Interface IPSec Feature Associate DHCP Server Feature .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature(GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .serviceLanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .serviceLanVpnInterfaceIpsecFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static CompletableFuture<GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureResult> getServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeaturePlain(GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeaturePlainArgs args) {
+        return getServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeaturePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Service LAN VPN Interface IPSec Feature Associate DHCP Server Feature .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature(GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .serviceLanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .serviceLanVpnInterfaceIpsecFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureResult> getServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature(GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature:getServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature", TypeShape.of(GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Service LAN VPN Interface IPSec Feature Associate DHCP Server Feature .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature(GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .serviceLanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .serviceLanVpnInterfaceIpsecFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static CompletableFuture<GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureResult> getServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeaturePlain(GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeaturePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature:getServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature", TypeShape.of(GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
      * This data source can read the Service LAN VPN Interface SVI Feature.
      * 
      * ## Example Usage
@@ -26610,6 +27154,186 @@ public final class SdwanFunctions {
      */
     public static CompletableFuture<GetServiceLanVpnInterfaceSviFeatureResult> getServiceLanVpnInterfaceSviFeaturePlain(GetServiceLanVpnInterfaceSviFeaturePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("sdwan:index/getServiceLanVpnInterfaceSviFeature:getServiceLanVpnInterfaceSviFeature", TypeShape.of(GetServiceLanVpnInterfaceSviFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Service LAN VPN Interface SVI Feature Associate DHCP Server Feature .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature(GetServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .serviceLanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .serviceLanVpnInterfaceSviFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeatureResult> getServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature(GetServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeatureArgs args) {
+        return getServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Service LAN VPN Interface SVI Feature Associate DHCP Server Feature .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature(GetServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .serviceLanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .serviceLanVpnInterfaceSviFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static CompletableFuture<GetServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeatureResult> getServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeaturePlain(GetServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeaturePlainArgs args) {
+        return getServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeaturePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Service LAN VPN Interface SVI Feature Associate DHCP Server Feature .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature(GetServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .serviceLanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .serviceLanVpnInterfaceSviFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeatureResult> getServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature(GetServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeatureArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature:getServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature", TypeShape.of(GetServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Service LAN VPN Interface SVI Feature Associate DHCP Server Feature .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature(GetServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .serviceLanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .serviceLanVpnInterfaceSviFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static CompletableFuture<GetServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeatureResult> getServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeaturePlain(GetServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeaturePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature:getServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature", TypeShape.of(GetServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeatureResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source can read the Service Multicast Feature.
