@@ -231,7 +231,7 @@ def get_cflowd_policy_definition(id: Optional[str] = None,
         type=pulumi.get(__ret__, 'type'),
         version=pulumi.get(__ret__, 'version'))
 def get_cflowd_policy_definition_output(id: Optional[pulumi.Input[str]] = None,
-                                        opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCflowdPolicyDefinitionResult]:
+                                        opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetCflowdPolicyDefinitionResult]:
     """
     This data source can read the Cflowd Policy Definition .
 
@@ -249,7 +249,7 @@ def get_cflowd_policy_definition_output(id: Optional[pulumi.Input[str]] = None,
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getCflowdPolicyDefinition:getCflowdPolicyDefinition', __args__, opts=opts, typ=GetCflowdPolicyDefinitionResult)
     return __ret__.apply(lambda __response__: GetCflowdPolicyDefinitionResult(
         active_flow_timeout=pulumi.get(__response__, 'active_flow_timeout'),

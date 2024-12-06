@@ -140,7 +140,7 @@ export interface GetTlsSslDecryptionPolicyDefinitionResult {
  * });
  * ```
  */
-export function getTlsSslDecryptionPolicyDefinitionOutput(args: GetTlsSslDecryptionPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTlsSslDecryptionPolicyDefinitionResult> {
+export function getTlsSslDecryptionPolicyDefinitionOutput(args: GetTlsSslDecryptionPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTlsSslDecryptionPolicyDefinitionResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getTlsSslDecryptionPolicyDefinition:getTlsSslDecryptionPolicyDefinition", {
         "id": args.id,

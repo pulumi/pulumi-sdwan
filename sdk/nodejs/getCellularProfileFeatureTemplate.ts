@@ -172,7 +172,7 @@ export interface GetCellularProfileFeatureTemplateResult {
  * });
  * ```
  */
-export function getCellularProfileFeatureTemplateOutput(args?: GetCellularProfileFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCellularProfileFeatureTemplateResult> {
+export function getCellularProfileFeatureTemplateOutput(args?: GetCellularProfileFeatureTemplateOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCellularProfileFeatureTemplateResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getCellularProfileFeatureTemplate:getCellularProfileFeatureTemplate", {

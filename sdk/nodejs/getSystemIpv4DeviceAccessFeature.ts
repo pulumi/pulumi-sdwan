@@ -91,7 +91,7 @@ export interface GetSystemIpv4DeviceAccessFeatureResult {
  * });
  * ```
  */
-export function getSystemIpv4DeviceAccessFeatureOutput(args: GetSystemIpv4DeviceAccessFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSystemIpv4DeviceAccessFeatureResult> {
+export function getSystemIpv4DeviceAccessFeatureOutput(args: GetSystemIpv4DeviceAccessFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSystemIpv4DeviceAccessFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getSystemIpv4DeviceAccessFeature:getSystemIpv4DeviceAccessFeature", {
         "featureProfileId": args.featureProfileId,

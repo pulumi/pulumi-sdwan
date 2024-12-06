@@ -123,7 +123,7 @@ def get_service_lan_vpn_feature_associate_multicast_feature(feature_profile_id: 
 def get_service_lan_vpn_feature_associate_multicast_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                                                    id: Optional[pulumi.Input[str]] = None,
                                                                    service_lan_vpn_feature_id: Optional[pulumi.Input[str]] = None,
-                                                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetServiceLanVpnFeatureAssociateMulticastFeatureResult]:
+                                                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetServiceLanVpnFeatureAssociateMulticastFeatureResult]:
     """
     This data source can read the Service LAN VPN Feature Associate Multicast Feature .
 
@@ -147,7 +147,7 @@ def get_service_lan_vpn_feature_associate_multicast_feature_output(feature_profi
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
     __args__['serviceLanVpnFeatureId'] = service_lan_vpn_feature_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getServiceLanVpnFeatureAssociateMulticastFeature:getServiceLanVpnFeatureAssociateMulticastFeature', __args__, opts=opts, typ=GetServiceLanVpnFeatureAssociateMulticastFeatureResult)
     return __ret__.apply(lambda __response__: GetServiceLanVpnFeatureAssociateMulticastFeatureResult(
         feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),

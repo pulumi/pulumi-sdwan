@@ -358,7 +358,7 @@ export interface GetCiscoOspfv3FeatureTemplateResult {
  * });
  * ```
  */
-export function getCiscoOspfv3FeatureTemplateOutput(args?: GetCiscoOspfv3FeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCiscoOspfv3FeatureTemplateResult> {
+export function getCiscoOspfv3FeatureTemplateOutput(args?: GetCiscoOspfv3FeatureTemplateOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCiscoOspfv3FeatureTemplateResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getCiscoOspfv3FeatureTemplate:getCiscoOspfv3FeatureTemplate", {

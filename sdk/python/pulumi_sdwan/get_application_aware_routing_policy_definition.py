@@ -140,7 +140,7 @@ def get_application_aware_routing_policy_definition(id: Optional[str] = None,
         type=pulumi.get(__ret__, 'type'),
         version=pulumi.get(__ret__, 'version'))
 def get_application_aware_routing_policy_definition_output(id: Optional[pulumi.Input[str]] = None,
-                                                           opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetApplicationAwareRoutingPolicyDefinitionResult]:
+                                                           opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetApplicationAwareRoutingPolicyDefinitionResult]:
     """
     This data source can read the Application Aware Routing Policy Definition .
 
@@ -158,7 +158,7 @@ def get_application_aware_routing_policy_definition_output(id: Optional[pulumi.I
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getApplicationAwareRoutingPolicyDefinition:getApplicationAwareRoutingPolicyDefinition', __args__, opts=opts, typ=GetApplicationAwareRoutingPolicyDefinitionResult)
     return __ret__.apply(lambda __response__: GetApplicationAwareRoutingPolicyDefinitionResult(
         description=pulumi.get(__response__, 'description'),

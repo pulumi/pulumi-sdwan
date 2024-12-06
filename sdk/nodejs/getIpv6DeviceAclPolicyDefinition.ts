@@ -84,7 +84,7 @@ export interface GetIpv6DeviceAclPolicyDefinitionResult {
  * });
  * ```
  */
-export function getIpv6DeviceAclPolicyDefinitionOutput(args: GetIpv6DeviceAclPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetIpv6DeviceAclPolicyDefinitionResult> {
+export function getIpv6DeviceAclPolicyDefinitionOutput(args: GetIpv6DeviceAclPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetIpv6DeviceAclPolicyDefinitionResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getIpv6DeviceAclPolicyDefinition:getIpv6DeviceAclPolicyDefinition", {
         "id": args.id,

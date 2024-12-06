@@ -88,7 +88,7 @@ export interface GetMeshTopologyPolicyDefinitionResult {
  * });
  * ```
  */
-export function getMeshTopologyPolicyDefinitionOutput(args: GetMeshTopologyPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetMeshTopologyPolicyDefinitionResult> {
+export function getMeshTopologyPolicyDefinitionOutput(args: GetMeshTopologyPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetMeshTopologyPolicyDefinitionResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getMeshTopologyPolicyDefinition:getMeshTopologyPolicyDefinition", {
         "id": args.id,

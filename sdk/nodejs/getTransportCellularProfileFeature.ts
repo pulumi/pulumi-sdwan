@@ -141,7 +141,7 @@ export interface GetTransportCellularProfileFeatureResult {
  * });
  * ```
  */
-export function getTransportCellularProfileFeatureOutput(args: GetTransportCellularProfileFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTransportCellularProfileFeatureResult> {
+export function getTransportCellularProfileFeatureOutput(args: GetTransportCellularProfileFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTransportCellularProfileFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getTransportCellularProfileFeature:getTransportCellularProfileFeature", {
         "featureProfileId": args.featureProfileId,

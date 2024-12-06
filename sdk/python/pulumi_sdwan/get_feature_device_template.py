@@ -205,7 +205,7 @@ def get_feature_device_template(id: Optional[str] = None,
         security_policy_version=pulumi.get(__ret__, 'security_policy_version'),
         version=pulumi.get(__ret__, 'version'))
 def get_feature_device_template_output(id: Optional[pulumi.Input[str]] = None,
-                                       opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetFeatureDeviceTemplateResult]:
+                                       opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetFeatureDeviceTemplateResult]:
     """
     This data source can read the Feature Device Template .
 
@@ -223,7 +223,7 @@ def get_feature_device_template_output(id: Optional[pulumi.Input[str]] = None,
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getFeatureDeviceTemplate:getFeatureDeviceTemplate', __args__, opts=opts, typ=GetFeatureDeviceTemplateResult)
     return __ret__.apply(lambda __response__: GetFeatureDeviceTemplateResult(
         description=pulumi.get(__response__, 'description'),

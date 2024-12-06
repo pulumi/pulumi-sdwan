@@ -72,7 +72,7 @@ export interface GetAsPathListPolicyObjectResult {
  * });
  * ```
  */
-export function getAsPathListPolicyObjectOutput(args: GetAsPathListPolicyObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAsPathListPolicyObjectResult> {
+export function getAsPathListPolicyObjectOutput(args: GetAsPathListPolicyObjectOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAsPathListPolicyObjectResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getAsPathListPolicyObject:getAsPathListPolicyObject", {
         "id": args.id,

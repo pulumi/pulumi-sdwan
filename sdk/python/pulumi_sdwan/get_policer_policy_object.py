@@ -139,7 +139,7 @@ def get_policer_policy_object(id: Optional[str] = None,
         rate=pulumi.get(__ret__, 'rate'),
         version=pulumi.get(__ret__, 'version'))
 def get_policer_policy_object_output(id: Optional[pulumi.Input[str]] = None,
-                                     opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetPolicerPolicyObjectResult]:
+                                     opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetPolicerPolicyObjectResult]:
     """
     This data source can read the Policer Policy Object .
 
@@ -157,7 +157,7 @@ def get_policer_policy_object_output(id: Optional[pulumi.Input[str]] = None,
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getPolicerPolicyObject:getPolicerPolicyObject', __args__, opts=opts, typ=GetPolicerPolicyObjectResult)
     return __ret__.apply(lambda __response__: GetPolicerPolicyObjectResult(
         burst=pulumi.get(__response__, 'burst'),

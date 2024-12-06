@@ -72,7 +72,7 @@ export interface GetDataFqdnPrefixListPolicyObjectResult {
  * });
  * ```
  */
-export function getDataFqdnPrefixListPolicyObjectOutput(args: GetDataFqdnPrefixListPolicyObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDataFqdnPrefixListPolicyObjectResult> {
+export function getDataFqdnPrefixListPolicyObjectOutput(args: GetDataFqdnPrefixListPolicyObjectOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDataFqdnPrefixListPolicyObjectResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getDataFqdnPrefixListPolicyObject:getDataFqdnPrefixListPolicyObject", {
         "id": args.id,

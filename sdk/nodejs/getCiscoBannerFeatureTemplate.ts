@@ -100,7 +100,7 @@ export interface GetCiscoBannerFeatureTemplateResult {
  * });
  * ```
  */
-export function getCiscoBannerFeatureTemplateOutput(args?: GetCiscoBannerFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCiscoBannerFeatureTemplateResult> {
+export function getCiscoBannerFeatureTemplateOutput(args?: GetCiscoBannerFeatureTemplateOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCiscoBannerFeatureTemplateResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getCiscoBannerFeatureTemplate:getCiscoBannerFeatureTemplate", {

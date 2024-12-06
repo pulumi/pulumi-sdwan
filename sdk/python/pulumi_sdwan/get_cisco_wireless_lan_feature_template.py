@@ -365,7 +365,7 @@ def get_cisco_wireless_lan_feature_template(id: Optional[str] = None,
         version=pulumi.get(__ret__, 'version'))
 def get_cisco_wireless_lan_feature_template_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                                    name: Optional[pulumi.Input[Optional[str]]] = None,
-                                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCiscoWirelessLanFeatureTemplateResult]:
+                                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetCiscoWirelessLanFeatureTemplateResult]:
     """
     This data source can read the Cisco Wireless LAN feature template.
 
@@ -385,7 +385,7 @@ def get_cisco_wireless_lan_feature_template_output(id: Optional[pulumi.Input[Opt
     __args__ = dict()
     __args__['id'] = id
     __args__['name'] = name
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getCiscoWirelessLanFeatureTemplate:getCiscoWirelessLanFeatureTemplate', __args__, opts=opts, typ=GetCiscoWirelessLanFeatureTemplateResult)
     return __ret__.apply(lambda __response__: GetCiscoWirelessLanFeatureTemplateResult(
         controller_default_gateway=pulumi.get(__response__, 'controller_default_gateway'),

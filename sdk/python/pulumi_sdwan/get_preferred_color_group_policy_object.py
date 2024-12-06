@@ -178,7 +178,7 @@ def get_preferred_color_group_policy_object(id: Optional[str] = None,
         tertiary_path_preference=pulumi.get(__ret__, 'tertiary_path_preference'),
         version=pulumi.get(__ret__, 'version'))
 def get_preferred_color_group_policy_object_output(id: Optional[pulumi.Input[str]] = None,
-                                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetPreferredColorGroupPolicyObjectResult]:
+                                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetPreferredColorGroupPolicyObjectResult]:
     """
     This data source can read the Preferred Color Group Policy Object .
 
@@ -196,7 +196,7 @@ def get_preferred_color_group_policy_object_output(id: Optional[pulumi.Input[str
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getPreferredColorGroupPolicyObject:getPreferredColorGroupPolicyObject', __args__, opts=opts, typ=GetPreferredColorGroupPolicyObjectResult)
     return __ret__.apply(lambda __response__: GetPreferredColorGroupPolicyObjectResult(
         id=pulumi.get(__response__, 'id'),

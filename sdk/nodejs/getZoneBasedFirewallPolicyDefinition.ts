@@ -82,7 +82,7 @@ export interface GetZoneBasedFirewallPolicyDefinitionResult {
  * });
  * ```
  */
-export function getZoneBasedFirewallPolicyDefinitionOutput(args: GetZoneBasedFirewallPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetZoneBasedFirewallPolicyDefinitionResult> {
+export function getZoneBasedFirewallPolicyDefinitionOutput(args: GetZoneBasedFirewallPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetZoneBasedFirewallPolicyDefinitionResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getZoneBasedFirewallPolicyDefinition:getZoneBasedFirewallPolicyDefinition", {
         "id": args.id,

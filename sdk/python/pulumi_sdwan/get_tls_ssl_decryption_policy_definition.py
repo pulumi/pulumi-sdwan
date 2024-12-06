@@ -335,7 +335,7 @@ def get_tls_ssl_decryption_policy_definition(id: Optional[str] = None,
         use_default_ca_cert_bundle=pulumi.get(__ret__, 'use_default_ca_cert_bundle'),
         version=pulumi.get(__ret__, 'version'))
 def get_tls_ssl_decryption_policy_definition_output(id: Optional[pulumi.Input[str]] = None,
-                                                    opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetTlsSslDecryptionPolicyDefinitionResult]:
+                                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetTlsSslDecryptionPolicyDefinitionResult]:
     """
     This data source can read the TLS SSL Decryption Policy Definition .
 
@@ -353,7 +353,7 @@ def get_tls_ssl_decryption_policy_definition_output(id: Optional[pulumi.Input[st
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getTlsSslDecryptionPolicyDefinition:getTlsSslDecryptionPolicyDefinition', __args__, opts=opts, typ=GetTlsSslDecryptionPolicyDefinitionResult)
     return __ret__.apply(lambda __response__: GetTlsSslDecryptionPolicyDefinitionResult(
         certificate_lifetime_in_days=pulumi.get(__response__, 'certificate_lifetime_in_days'),

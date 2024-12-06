@@ -163,7 +163,7 @@ export interface GetServiceTrackerFeatureResult {
  * });
  * ```
  */
-export function getServiceTrackerFeatureOutput(args: GetServiceTrackerFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetServiceTrackerFeatureResult> {
+export function getServiceTrackerFeatureOutput(args: GetServiceTrackerFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetServiceTrackerFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getServiceTrackerFeature:getServiceTrackerFeature", {
         "featureProfileId": args.featureProfileId,

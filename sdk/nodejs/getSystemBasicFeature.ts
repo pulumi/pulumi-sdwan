@@ -323,7 +323,7 @@ export interface GetSystemBasicFeatureResult {
  * });
  * ```
  */
-export function getSystemBasicFeatureOutput(args: GetSystemBasicFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSystemBasicFeatureResult> {
+export function getSystemBasicFeatureOutput(args: GetSystemBasicFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSystemBasicFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getSystemBasicFeature:getSystemBasicFeature", {
         "featureProfileId": args.featureProfileId,

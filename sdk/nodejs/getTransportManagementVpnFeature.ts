@@ -132,7 +132,7 @@ export interface GetTransportManagementVpnFeatureResult {
  * });
  * ```
  */
-export function getTransportManagementVpnFeatureOutput(args: GetTransportManagementVpnFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTransportManagementVpnFeatureResult> {
+export function getTransportManagementVpnFeatureOutput(args: GetTransportManagementVpnFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTransportManagementVpnFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getTransportManagementVpnFeature:getTransportManagementVpnFeature", {
         "featureProfileId": args.featureProfileId,

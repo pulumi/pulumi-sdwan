@@ -90,7 +90,7 @@ export interface GetSecurityAppHostingFeatureTemplateResult {
  * });
  * ```
  */
-export function getSecurityAppHostingFeatureTemplateOutput(args?: GetSecurityAppHostingFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSecurityAppHostingFeatureTemplateResult> {
+export function getSecurityAppHostingFeatureTemplateOutput(args?: GetSecurityAppHostingFeatureTemplateOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSecurityAppHostingFeatureTemplateResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getSecurityAppHostingFeatureTemplate:getSecurityAppHostingFeatureTemplate", {

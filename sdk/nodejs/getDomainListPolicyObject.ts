@@ -72,7 +72,7 @@ export interface GetDomainListPolicyObjectResult {
  * });
  * ```
  */
-export function getDomainListPolicyObjectOutput(args: GetDomainListPolicyObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDomainListPolicyObjectResult> {
+export function getDomainListPolicyObjectOutput(args: GetDomainListPolicyObjectOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDomainListPolicyObjectResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getDomainListPolicyObject:getDomainListPolicyObject", {
         "id": args.id,

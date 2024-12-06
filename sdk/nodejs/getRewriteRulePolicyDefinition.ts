@@ -80,7 +80,7 @@ export interface GetRewriteRulePolicyDefinitionResult {
  * });
  * ```
  */
-export function getRewriteRulePolicyDefinitionOutput(args: GetRewriteRulePolicyDefinitionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetRewriteRulePolicyDefinitionResult> {
+export function getRewriteRulePolicyDefinitionOutput(args: GetRewriteRulePolicyDefinitionOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetRewriteRulePolicyDefinitionResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getRewriteRulePolicyDefinition:getRewriteRulePolicyDefinition", {
         "id": args.id,

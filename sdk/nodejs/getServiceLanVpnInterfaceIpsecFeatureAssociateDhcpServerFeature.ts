@@ -95,7 +95,7 @@ export interface GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature
  * });
  * ```
  */
-export function getServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureOutput(args: GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureResult> {
+export function getServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureOutput(args: GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature:getServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature", {
         "featureProfileId": args.featureProfileId,

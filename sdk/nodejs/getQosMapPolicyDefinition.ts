@@ -80,7 +80,7 @@ export interface GetQosMapPolicyDefinitionResult {
  * });
  * ```
  */
-export function getQosMapPolicyDefinitionOutput(args: GetQosMapPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetQosMapPolicyDefinitionResult> {
+export function getQosMapPolicyDefinitionOutput(args: GetQosMapPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetQosMapPolicyDefinitionResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getQosMapPolicyDefinition:getQosMapPolicyDefinition", {
         "id": args.id,

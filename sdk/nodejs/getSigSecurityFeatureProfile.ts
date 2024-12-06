@@ -66,7 +66,7 @@ export interface GetSigSecurityFeatureProfileResult {
  * });
  * ```
  */
-export function getSigSecurityFeatureProfileOutput(args: GetSigSecurityFeatureProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSigSecurityFeatureProfileResult> {
+export function getSigSecurityFeatureProfileOutput(args: GetSigSecurityFeatureProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSigSecurityFeatureProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getSigSecurityFeatureProfile:getSigSecurityFeatureProfile", {
         "id": args.id,

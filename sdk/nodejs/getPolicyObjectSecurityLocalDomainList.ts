@@ -84,7 +84,7 @@ export interface GetPolicyObjectSecurityLocalDomainListResult {
  * });
  * ```
  */
-export function getPolicyObjectSecurityLocalDomainListOutput(args: GetPolicyObjectSecurityLocalDomainListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetPolicyObjectSecurityLocalDomainListResult> {
+export function getPolicyObjectSecurityLocalDomainListOutput(args: GetPolicyObjectSecurityLocalDomainListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetPolicyObjectSecurityLocalDomainListResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getPolicyObjectSecurityLocalDomainList:getPolicyObjectSecurityLocalDomainList", {
         "featureProfileId": args.featureProfileId,

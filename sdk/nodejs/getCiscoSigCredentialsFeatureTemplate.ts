@@ -172,7 +172,7 @@ export interface GetCiscoSigCredentialsFeatureTemplateResult {
  * });
  * ```
  */
-export function getCiscoSigCredentialsFeatureTemplateOutput(args?: GetCiscoSigCredentialsFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCiscoSigCredentialsFeatureTemplateResult> {
+export function getCiscoSigCredentialsFeatureTemplateOutput(args?: GetCiscoSigCredentialsFeatureTemplateOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCiscoSigCredentialsFeatureTemplateResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getCiscoSigCredentialsFeatureTemplate:getCiscoSigCredentialsFeatureTemplate", {

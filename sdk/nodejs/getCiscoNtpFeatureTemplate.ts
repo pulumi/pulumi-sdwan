@@ -126,7 +126,7 @@ export interface GetCiscoNtpFeatureTemplateResult {
  * });
  * ```
  */
-export function getCiscoNtpFeatureTemplateOutput(args?: GetCiscoNtpFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCiscoNtpFeatureTemplateResult> {
+export function getCiscoNtpFeatureTemplateOutput(args?: GetCiscoNtpFeatureTemplateOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCiscoNtpFeatureTemplateResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getCiscoNtpFeatureTemplate:getCiscoNtpFeatureTemplate", {
