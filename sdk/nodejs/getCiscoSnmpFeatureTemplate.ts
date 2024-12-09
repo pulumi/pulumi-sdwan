@@ -130,7 +130,7 @@ export interface GetCiscoSnmpFeatureTemplateResult {
  * });
  * ```
  */
-export function getCiscoSnmpFeatureTemplateOutput(args?: GetCiscoSnmpFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCiscoSnmpFeatureTemplateResult> {
+export function getCiscoSnmpFeatureTemplateOutput(args?: GetCiscoSnmpFeatureTemplateOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCiscoSnmpFeatureTemplateResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getCiscoSnmpFeatureTemplate:getCiscoSnmpFeatureTemplate", {

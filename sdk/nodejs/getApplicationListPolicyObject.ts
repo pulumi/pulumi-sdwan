@@ -72,7 +72,7 @@ export interface GetApplicationListPolicyObjectResult {
  * });
  * ```
  */
-export function getApplicationListPolicyObjectOutput(args: GetApplicationListPolicyObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplicationListPolicyObjectResult> {
+export function getApplicationListPolicyObjectOutput(args: GetApplicationListPolicyObjectOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApplicationListPolicyObjectResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getApplicationListPolicyObject:getApplicationListPolicyObject", {
         "id": args.id,

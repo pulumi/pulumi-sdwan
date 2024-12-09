@@ -91,7 +91,7 @@ export interface GetServiceIpv6AclFeatureResult {
  * });
  * ```
  */
-export function getServiceIpv6AclFeatureOutput(args: GetServiceIpv6AclFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetServiceIpv6AclFeatureResult> {
+export function getServiceIpv6AclFeatureOutput(args: GetServiceIpv6AclFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetServiceIpv6AclFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getServiceIpv6AclFeature:getServiceIpv6AclFeature", {
         "featureProfileId": args.featureProfileId,

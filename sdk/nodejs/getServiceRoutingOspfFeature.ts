@@ -196,7 +196,7 @@ export interface GetServiceRoutingOspfFeatureResult {
  * });
  * ```
  */
-export function getServiceRoutingOspfFeatureOutput(args: GetServiceRoutingOspfFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetServiceRoutingOspfFeatureResult> {
+export function getServiceRoutingOspfFeatureOutput(args: GetServiceRoutingOspfFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetServiceRoutingOspfFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getServiceRoutingOspfFeature:getServiceRoutingOspfFeature", {
         "featureProfileId": args.featureProfileId,

@@ -622,7 +622,7 @@ export interface GetVpnInterfaceMultilinkFeatureTemplateResult {
  * });
  * ```
  */
-export function getVpnInterfaceMultilinkFeatureTemplateOutput(args?: GetVpnInterfaceMultilinkFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetVpnInterfaceMultilinkFeatureTemplateResult> {
+export function getVpnInterfaceMultilinkFeatureTemplateOutput(args?: GetVpnInterfaceMultilinkFeatureTemplateOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetVpnInterfaceMultilinkFeatureTemplateResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getVpnInterfaceMultilinkFeatureTemplate:getVpnInterfaceMultilinkFeatureTemplate", {

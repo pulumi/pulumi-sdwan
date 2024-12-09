@@ -90,7 +90,7 @@ export interface GetCiscoThousandeyesFeatureTemplateResult {
  * });
  * ```
  */
-export function getCiscoThousandeyesFeatureTemplateOutput(args?: GetCiscoThousandeyesFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCiscoThousandeyesFeatureTemplateResult> {
+export function getCiscoThousandeyesFeatureTemplateOutput(args?: GetCiscoThousandeyesFeatureTemplateOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCiscoThousandeyesFeatureTemplateResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getCiscoThousandeyesFeatureTemplate:getCiscoThousandeyesFeatureTemplate", {

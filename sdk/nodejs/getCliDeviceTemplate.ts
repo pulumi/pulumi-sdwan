@@ -82,7 +82,7 @@ export interface GetCliDeviceTemplateResult {
  * });
  * ```
  */
-export function getCliDeviceTemplateOutput(args: GetCliDeviceTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCliDeviceTemplateResult> {
+export function getCliDeviceTemplateOutput(args: GetCliDeviceTemplateOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCliDeviceTemplateResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getCliDeviceTemplate:getCliDeviceTemplate", {
         "id": args.id,

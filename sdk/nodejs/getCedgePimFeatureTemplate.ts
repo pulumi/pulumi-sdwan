@@ -182,7 +182,7 @@ export interface GetCedgePimFeatureTemplateResult {
  * });
  * ```
  */
-export function getCedgePimFeatureTemplateOutput(args?: GetCedgePimFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCedgePimFeatureTemplateResult> {
+export function getCedgePimFeatureTemplateOutput(args?: GetCedgePimFeatureTemplateOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCedgePimFeatureTemplateResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getCedgePimFeatureTemplate:getCedgePimFeatureTemplate", {

@@ -157,7 +157,7 @@ def get_security_app_hosting_feature_template(id: Optional[str] = None,
         virtual_applications=pulumi.get(__ret__, 'virtual_applications'))
 def get_security_app_hosting_feature_template_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                                      name: Optional[pulumi.Input[Optional[str]]] = None,
-                                                     opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSecurityAppHostingFeatureTemplateResult]:
+                                                     opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSecurityAppHostingFeatureTemplateResult]:
     """
     This data source can read the Security App Hosting feature template.
 
@@ -177,7 +177,7 @@ def get_security_app_hosting_feature_template_output(id: Optional[pulumi.Input[O
     __args__ = dict()
     __args__['id'] = id
     __args__['name'] = name
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getSecurityAppHostingFeatureTemplate:getSecurityAppHostingFeatureTemplate', __args__, opts=opts, typ=GetSecurityAppHostingFeatureTemplateResult)
     return __ret__.apply(lambda __response__: GetSecurityAppHostingFeatureTemplateResult(
         description=pulumi.get(__response__, 'description'),

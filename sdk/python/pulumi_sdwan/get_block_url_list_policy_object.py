@@ -114,7 +114,7 @@ def get_block_url_list_policy_object(id: Optional[str] = None,
         name=pulumi.get(__ret__, 'name'),
         version=pulumi.get(__ret__, 'version'))
 def get_block_url_list_policy_object_output(id: Optional[pulumi.Input[str]] = None,
-                                            opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetBlockUrlListPolicyObjectResult]:
+                                            opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetBlockUrlListPolicyObjectResult]:
     """
     This data source can read the Block URL List Policy Object .
 
@@ -132,7 +132,7 @@ def get_block_url_list_policy_object_output(id: Optional[pulumi.Input[str]] = No
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getBlockUrlListPolicyObject:getBlockUrlListPolicyObject', __args__, opts=opts, typ=GetBlockUrlListPolicyObjectResult)
     return __ret__.apply(lambda __response__: GetBlockUrlListPolicyObjectResult(
         entries=pulumi.get(__response__, 'entries'),

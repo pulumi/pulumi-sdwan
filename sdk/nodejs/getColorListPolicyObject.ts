@@ -72,7 +72,7 @@ export interface GetColorListPolicyObjectResult {
  * });
  * ```
  */
-export function getColorListPolicyObjectOutput(args: GetColorListPolicyObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetColorListPolicyObjectResult> {
+export function getColorListPolicyObjectOutput(args: GetColorListPolicyObjectOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetColorListPolicyObjectResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getColorListPolicyObject:getColorListPolicyObject", {
         "id": args.id,

@@ -91,7 +91,7 @@ export interface GetTransportRoutePolicyFeatureResult {
  * });
  * ```
  */
-export function getTransportRoutePolicyFeatureOutput(args: GetTransportRoutePolicyFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTransportRoutePolicyFeatureResult> {
+export function getTransportRoutePolicyFeatureOutput(args: GetTransportRoutePolicyFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTransportRoutePolicyFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getTransportRoutePolicyFeature:getTransportRoutePolicyFeature", {
         "featureProfileId": args.featureProfileId,

@@ -87,7 +87,7 @@ export interface GetPolicyObjectSlaClassListResult {
  * });
  * ```
  */
-export function getPolicyObjectSlaClassListOutput(args: GetPolicyObjectSlaClassListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetPolicyObjectSlaClassListResult> {
+export function getPolicyObjectSlaClassListOutput(args: GetPolicyObjectSlaClassListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetPolicyObjectSlaClassListResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getPolicyObjectSlaClassList:getPolicyObjectSlaClassList", {
         "featureProfileId": args.featureProfileId,

@@ -145,7 +145,7 @@ def get_policy_object_security_identity_list(feature_profile_id: Optional[str] =
         version=pulumi.get(__ret__, 'version'))
 def get_policy_object_security_identity_list_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                                     id: Optional[pulumi.Input[str]] = None,
-                                                    opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetPolicyObjectSecurityIdentityListResult]:
+                                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetPolicyObjectSecurityIdentityListResult]:
     """
     This data source can read the Policy Object Security Identity List Policy_object.
 
@@ -166,7 +166,7 @@ def get_policy_object_security_identity_list_output(feature_profile_id: Optional
     __args__ = dict()
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getPolicyObjectSecurityIdentityList:getPolicyObjectSecurityIdentityList', __args__, opts=opts, typ=GetPolicyObjectSecurityIdentityListResult)
     return __ret__.apply(lambda __response__: GetPolicyObjectSecurityIdentityListResult(
         description=pulumi.get(__response__, 'description'),

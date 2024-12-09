@@ -72,7 +72,7 @@ export interface GetZoneListPolicyObjectResult {
  * });
  * ```
  */
-export function getZoneListPolicyObjectOutput(args: GetZoneListPolicyObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetZoneListPolicyObjectResult> {
+export function getZoneListPolicyObjectOutput(args: GetZoneListPolicyObjectOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetZoneListPolicyObjectResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getZoneListPolicyObject:getZoneListPolicyObject", {
         "id": args.id,

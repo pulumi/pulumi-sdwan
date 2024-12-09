@@ -268,7 +268,7 @@ export interface GetCedgeGlobalFeatureTemplateResult {
  * });
  * ```
  */
-export function getCedgeGlobalFeatureTemplateOutput(args?: GetCedgeGlobalFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCedgeGlobalFeatureTemplateResult> {
+export function getCedgeGlobalFeatureTemplateOutput(args?: GetCedgeGlobalFeatureTemplateOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCedgeGlobalFeatureTemplateResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getCedgeGlobalFeatureTemplate:getCedgeGlobalFeatureTemplate", {

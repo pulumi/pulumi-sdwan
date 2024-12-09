@@ -127,7 +127,7 @@ def get_app_probe_class_policy_object(id: Optional[str] = None,
         name=pulumi.get(__ret__, 'name'),
         version=pulumi.get(__ret__, 'version'))
 def get_app_probe_class_policy_object_output(id: Optional[pulumi.Input[str]] = None,
-                                             opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetAppProbeClassPolicyObjectResult]:
+                                             opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAppProbeClassPolicyObjectResult]:
     """
     This data source can read the App Probe Class Policy Object .
 
@@ -145,7 +145,7 @@ def get_app_probe_class_policy_object_output(id: Optional[pulumi.Input[str]] = N
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getAppProbeClassPolicyObject:getAppProbeClassPolicyObject', __args__, opts=opts, typ=GetAppProbeClassPolicyObjectResult)
     return __ret__.apply(lambda __response__: GetAppProbeClassPolicyObjectResult(
         forwarding_class=pulumi.get(__response__, 'forwarding_class'),

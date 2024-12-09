@@ -789,7 +789,7 @@ def get_transport_routing_bgp_feature(feature_profile_id: Optional[str] = None,
         version=pulumi.get(__ret__, 'version'))
 def get_transport_routing_bgp_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                              id: Optional[pulumi.Input[str]] = None,
-                                             opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetTransportRoutingBgpFeatureResult]:
+                                             opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetTransportRoutingBgpFeatureResult]:
     """
     This data source can read the Transport Routing BGP Feature.
 
@@ -810,7 +810,7 @@ def get_transport_routing_bgp_feature_output(feature_profile_id: Optional[pulumi
     __args__ = dict()
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getTransportRoutingBgpFeature:getTransportRoutingBgpFeature', __args__, opts=opts, typ=GetTransportRoutingBgpFeatureResult)
     return __ret__.apply(lambda __response__: GetTransportRoutingBgpFeatureResult(
         always_compare_med=pulumi.get(__response__, 'always_compare_med'),

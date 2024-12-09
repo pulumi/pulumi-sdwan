@@ -88,7 +88,7 @@ export interface GetCliTemplateFeatureTemplateResult {
  * });
  * ```
  */
-export function getCliTemplateFeatureTemplateOutput(args?: GetCliTemplateFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCliTemplateFeatureTemplateResult> {
+export function getCliTemplateFeatureTemplateOutput(args?: GetCliTemplateFeatureTemplateOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCliTemplateFeatureTemplateResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getCliTemplateFeatureTemplate:getCliTemplateFeatureTemplate", {

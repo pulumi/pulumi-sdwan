@@ -411,7 +411,7 @@ def get_service_tracker_feature(feature_profile_id: Optional[str] = None,
         version=pulumi.get(__ret__, 'version'))
 def get_service_tracker_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                        id: Optional[pulumi.Input[str]] = None,
-                                       opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetServiceTrackerFeatureResult]:
+                                       opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetServiceTrackerFeatureResult]:
     """
     This data source can read the Service Tracker Feature.
 
@@ -432,7 +432,7 @@ def get_service_tracker_feature_output(feature_profile_id: Optional[pulumi.Input
     __args__ = dict()
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getServiceTrackerFeature:getServiceTrackerFeature', __args__, opts=opts, typ=GetServiceTrackerFeatureResult)
     return __ret__.apply(lambda __response__: GetServiceTrackerFeatureResult(
         description=pulumi.get(__response__, 'description'),

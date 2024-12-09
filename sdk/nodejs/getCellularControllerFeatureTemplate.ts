@@ -130,7 +130,7 @@ export interface GetCellularControllerFeatureTemplateResult {
  * });
  * ```
  */
-export function getCellularControllerFeatureTemplateOutput(args?: GetCellularControllerFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCellularControllerFeatureTemplateResult> {
+export function getCellularControllerFeatureTemplateOutput(args?: GetCellularControllerFeatureTemplateOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCellularControllerFeatureTemplateResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getCellularControllerFeatureTemplate:getCellularControllerFeatureTemplate", {

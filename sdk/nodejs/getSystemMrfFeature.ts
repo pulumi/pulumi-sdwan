@@ -109,7 +109,7 @@ export interface GetSystemMrfFeatureResult {
  * });
  * ```
  */
-export function getSystemMrfFeatureOutput(args: GetSystemMrfFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSystemMrfFeatureResult> {
+export function getSystemMrfFeatureOutput(args: GetSystemMrfFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSystemMrfFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getSystemMrfFeature:getSystemMrfFeature", {
         "featureProfileId": args.featureProfileId,

@@ -76,7 +76,7 @@ export interface GetRuleSetPolicyDefinitionResult {
  * });
  * ```
  */
-export function getRuleSetPolicyDefinitionOutput(args: GetRuleSetPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetRuleSetPolicyDefinitionResult> {
+export function getRuleSetPolicyDefinitionOutput(args: GetRuleSetPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetRuleSetPolicyDefinitionResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getRuleSetPolicyDefinition:getRuleSetPolicyDefinition", {
         "id": args.id,

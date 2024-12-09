@@ -95,7 +95,7 @@ export interface GetApplicationPriorityQosPolicyResult {
  * });
  * ```
  */
-export function getApplicationPriorityQosPolicyOutput(args: GetApplicationPriorityQosPolicyOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplicationPriorityQosPolicyResult> {
+export function getApplicationPriorityQosPolicyOutput(args: GetApplicationPriorityQosPolicyOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApplicationPriorityQosPolicyResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getApplicationPriorityQosPolicy:getApplicationPriorityQosPolicy", {
         "featureProfileId": args.featureProfileId,

@@ -310,7 +310,7 @@ export interface GetTransportWanVpnInterfaceIpsecFeatureResult {
  * });
  * ```
  */
-export function getTransportWanVpnInterfaceIpsecFeatureOutput(args: GetTransportWanVpnInterfaceIpsecFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTransportWanVpnInterfaceIpsecFeatureResult> {
+export function getTransportWanVpnInterfaceIpsecFeatureOutput(args: GetTransportWanVpnInterfaceIpsecFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTransportWanVpnInterfaceIpsecFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getTransportWanVpnInterfaceIpsecFeature:getTransportWanVpnInterfaceIpsecFeature", {
         "featureProfileId": args.featureProfileId,

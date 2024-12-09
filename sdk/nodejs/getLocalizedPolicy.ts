@@ -116,7 +116,7 @@ export interface GetLocalizedPolicyResult {
  * });
  * ```
  */
-export function getLocalizedPolicyOutput(args: GetLocalizedPolicyOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetLocalizedPolicyResult> {
+export function getLocalizedPolicyOutput(args: GetLocalizedPolicyOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetLocalizedPolicyResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getLocalizedPolicy:getLocalizedPolicy", {
         "id": args.id,

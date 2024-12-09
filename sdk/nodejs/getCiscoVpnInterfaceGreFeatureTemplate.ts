@@ -202,7 +202,7 @@ export interface GetCiscoVpnInterfaceGreFeatureTemplateResult {
  * });
  * ```
  */
-export function getCiscoVpnInterfaceGreFeatureTemplateOutput(args?: GetCiscoVpnInterfaceGreFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCiscoVpnInterfaceGreFeatureTemplateResult> {
+export function getCiscoVpnInterfaceGreFeatureTemplateOutput(args?: GetCiscoVpnInterfaceGreFeatureTemplateOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCiscoVpnInterfaceGreFeatureTemplateResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getCiscoVpnInterfaceGreFeatureTemplate:getCiscoVpnInterfaceGreFeatureTemplate", {

@@ -210,7 +210,7 @@ export interface GetCiscoTrustsecFeatureTemplateResult {
  * });
  * ```
  */
-export function getCiscoTrustsecFeatureTemplateOutput(args?: GetCiscoTrustsecFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCiscoTrustsecFeatureTemplateResult> {
+export function getCiscoTrustsecFeatureTemplateOutput(args?: GetCiscoTrustsecFeatureTemplateOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCiscoTrustsecFeatureTemplateResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getCiscoTrustsecFeatureTemplate:getCiscoTrustsecFeatureTemplate", {

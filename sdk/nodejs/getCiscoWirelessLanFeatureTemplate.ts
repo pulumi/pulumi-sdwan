@@ -154,7 +154,7 @@ export interface GetCiscoWirelessLanFeatureTemplateResult {
  * });
  * ```
  */
-export function getCiscoWirelessLanFeatureTemplateOutput(args?: GetCiscoWirelessLanFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCiscoWirelessLanFeatureTemplateResult> {
+export function getCiscoWirelessLanFeatureTemplateOutput(args?: GetCiscoWirelessLanFeatureTemplateOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCiscoWirelessLanFeatureTemplateResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getCiscoWirelessLanFeatureTemplate:getCiscoWirelessLanFeatureTemplate", {

@@ -123,7 +123,7 @@ def get_transport_wan_vpn_feature_associate_routing_ospfv3_ipv4_feature(feature_
 def get_transport_wan_vpn_feature_associate_routing_ospfv3_ipv4_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                                                                id: Optional[pulumi.Input[str]] = None,
                                                                                transport_wan_vpn_feature_id: Optional[pulumi.Input[str]] = None,
-                                                                               opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureResult]:
+                                                                               opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureResult]:
     """
     This data source can read the Transport WAN VPN Feature Associate Routing OSPFv3 IPv4 Feature .
 
@@ -147,7 +147,7 @@ def get_transport_wan_vpn_feature_associate_routing_ospfv3_ipv4_feature_output(f
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
     __args__['transportWanVpnFeatureId'] = transport_wan_vpn_feature_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getTransportWanVpnFeatureAssociateRoutingOspfv3Ipv4Feature:getTransportWanVpnFeatureAssociateRoutingOspfv3Ipv4Feature', __args__, opts=opts, typ=GetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureResult)
     return __ret__.apply(lambda __response__: GetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureResult(
         feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),

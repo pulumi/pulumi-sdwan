@@ -145,7 +145,7 @@ def get_policy_object_security_geolocation_list(feature_profile_id: Optional[str
         version=pulumi.get(__ret__, 'version'))
 def get_policy_object_security_geolocation_list_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                                        id: Optional[pulumi.Input[str]] = None,
-                                                       opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetPolicyObjectSecurityGeolocationListResult]:
+                                                       opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetPolicyObjectSecurityGeolocationListResult]:
     """
     This data source can read the Policy Object Security Geolocation List Policy_object.
 
@@ -166,7 +166,7 @@ def get_policy_object_security_geolocation_list_output(feature_profile_id: Optio
     __args__ = dict()
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getPolicyObjectSecurityGeolocationList:getPolicyObjectSecurityGeolocationList', __args__, opts=opts, typ=GetPolicyObjectSecurityGeolocationListResult)
     return __ret__.apply(lambda __response__: GetPolicyObjectSecurityGeolocationListResult(
         description=pulumi.get(__response__, 'description'),

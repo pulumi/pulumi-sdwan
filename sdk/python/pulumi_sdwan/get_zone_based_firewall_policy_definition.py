@@ -160,7 +160,7 @@ def get_zone_based_firewall_policy_definition(id: Optional[str] = None,
         rules=pulumi.get(__ret__, 'rules'),
         version=pulumi.get(__ret__, 'version'))
 def get_zone_based_firewall_policy_definition_output(id: Optional[pulumi.Input[str]] = None,
-                                                     opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetZoneBasedFirewallPolicyDefinitionResult]:
+                                                     opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetZoneBasedFirewallPolicyDefinitionResult]:
     """
     This data source can read the Zone Based Firewall Policy Definition .
 
@@ -178,7 +178,7 @@ def get_zone_based_firewall_policy_definition_output(id: Optional[pulumi.Input[s
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getZoneBasedFirewallPolicyDefinition:getZoneBasedFirewallPolicyDefinition', __args__, opts=opts, typ=GetZoneBasedFirewallPolicyDefinitionResult)
     return __ret__.apply(lambda __response__: GetZoneBasedFirewallPolicyDefinitionResult(
         apply_zone_pairs=pulumi.get(__response__, 'apply_zone_pairs'),

@@ -82,7 +82,7 @@ def get_vedge_inventory(opts: Optional[pulumi.InvokeOptions] = None) -> Awaitabl
     return AwaitableGetVedgeInventoryResult(
         devices=pulumi.get(__ret__, 'devices'),
         id=pulumi.get(__ret__, 'id'))
-def get_vedge_inventory_output(opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetVedgeInventoryResult]:
+def get_vedge_inventory_output(opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetVedgeInventoryResult]:
     """
     This data source can read the VEdge Inventory .
 
@@ -96,7 +96,7 @@ def get_vedge_inventory_output(opts: Optional[pulumi.InvokeOptions] = None) -> p
     ```
     """
     __args__ = dict()
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getVedgeInventory:getVedgeInventory', __args__, opts=opts, typ=GetVedgeInventoryResult)
     return __ret__.apply(lambda __response__: GetVedgeInventoryResult(
         devices=pulumi.get(__response__, 'devices'),
