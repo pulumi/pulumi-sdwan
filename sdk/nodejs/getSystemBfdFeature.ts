@@ -102,7 +102,7 @@ export interface GetSystemBfdFeatureResult {
  * });
  * ```
  */
-export function getSystemBfdFeatureOutput(args: GetSystemBfdFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSystemBfdFeatureResult> {
+export function getSystemBfdFeatureOutput(args: GetSystemBfdFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSystemBfdFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getSystemBfdFeature:getSystemBfdFeature", {
         "featureProfileId": args.featureProfileId,

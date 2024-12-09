@@ -202,7 +202,7 @@ export interface GetCiscoOspfFeatureTemplateResult {
  * });
  * ```
  */
-export function getCiscoOspfFeatureTemplateOutput(args?: GetCiscoOspfFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCiscoOspfFeatureTemplateResult> {
+export function getCiscoOspfFeatureTemplateOutput(args?: GetCiscoOspfFeatureTemplateOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCiscoOspfFeatureTemplateResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getCiscoOspfFeatureTemplate:getCiscoOspfFeatureTemplate", {

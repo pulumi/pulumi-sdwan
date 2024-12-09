@@ -89,7 +89,7 @@ export interface GetSystemFlexiblePortSpeedFeatureResult {
  * });
  * ```
  */
-export function getSystemFlexiblePortSpeedFeatureOutput(args: GetSystemFlexiblePortSpeedFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSystemFlexiblePortSpeedFeatureResult> {
+export function getSystemFlexiblePortSpeedFeatureOutput(args: GetSystemFlexiblePortSpeedFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSystemFlexiblePortSpeedFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getSystemFlexiblePortSpeedFeature:getSystemFlexiblePortSpeedFeature", {
         "featureProfileId": args.featureProfileId,

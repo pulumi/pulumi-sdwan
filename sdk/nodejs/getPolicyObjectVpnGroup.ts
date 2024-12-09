@@ -87,7 +87,7 @@ export interface GetPolicyObjectVpnGroupResult {
  * });
  * ```
  */
-export function getPolicyObjectVpnGroupOutput(args: GetPolicyObjectVpnGroupOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetPolicyObjectVpnGroupResult> {
+export function getPolicyObjectVpnGroupOutput(args: GetPolicyObjectVpnGroupOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetPolicyObjectVpnGroupResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getPolicyObjectVpnGroup:getPolicyObjectVpnGroup", {
         "featureProfileId": args.featureProfileId,

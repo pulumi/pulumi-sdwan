@@ -554,7 +554,7 @@ export interface GetVpnInterfaceT1E1SerialFeatureTemplateResult {
  * });
  * ```
  */
-export function getVpnInterfaceT1E1SerialFeatureTemplateOutput(args?: GetVpnInterfaceT1E1SerialFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetVpnInterfaceT1E1SerialFeatureTemplateResult> {
+export function getVpnInterfaceT1E1SerialFeatureTemplateOutput(args?: GetVpnInterfaceT1E1SerialFeatureTemplateOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetVpnInterfaceT1E1SerialFeatureTemplateResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getVpnInterfaceT1E1SerialFeatureTemplate:getVpnInterfaceT1E1SerialFeatureTemplate", {

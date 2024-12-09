@@ -84,7 +84,7 @@ export interface GetServiceLanVpnFeatureAssociateRoutingBgpFeatureResult {
  * });
  * ```
  */
-export function getServiceLanVpnFeatureAssociateRoutingBgpFeatureOutput(args: GetServiceLanVpnFeatureAssociateRoutingBgpFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetServiceLanVpnFeatureAssociateRoutingBgpFeatureResult> {
+export function getServiceLanVpnFeatureAssociateRoutingBgpFeatureOutput(args: GetServiceLanVpnFeatureAssociateRoutingBgpFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetServiceLanVpnFeatureAssociateRoutingBgpFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getServiceLanVpnFeatureAssociateRoutingBgpFeature:getServiceLanVpnFeatureAssociateRoutingBgpFeature", {
         "featureProfileId": args.featureProfileId,

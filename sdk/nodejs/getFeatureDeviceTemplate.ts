@@ -100,7 +100,7 @@ export interface GetFeatureDeviceTemplateResult {
  * });
  * ```
  */
-export function getFeatureDeviceTemplateOutput(args: GetFeatureDeviceTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetFeatureDeviceTemplateResult> {
+export function getFeatureDeviceTemplateOutput(args: GetFeatureDeviceTemplateOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetFeatureDeviceTemplateResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getFeatureDeviceTemplate:getFeatureDeviceTemplate", {
         "id": args.id,

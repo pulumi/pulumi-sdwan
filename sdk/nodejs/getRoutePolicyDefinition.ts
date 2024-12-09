@@ -84,7 +84,7 @@ export interface GetRoutePolicyDefinitionResult {
  * });
  * ```
  */
-export function getRoutePolicyDefinitionOutput(args: GetRoutePolicyDefinitionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetRoutePolicyDefinitionResult> {
+export function getRoutePolicyDefinitionOutput(args: GetRoutePolicyDefinitionOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetRoutePolicyDefinitionResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getRoutePolicyDefinition:getRoutePolicyDefinition", {
         "id": args.id,

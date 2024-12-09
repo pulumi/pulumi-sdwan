@@ -148,7 +148,7 @@ export interface GetServiceRoutingEigrpFeatureResult {
  * });
  * ```
  */
-export function getServiceRoutingEigrpFeatureOutput(args: GetServiceRoutingEigrpFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetServiceRoutingEigrpFeatureResult> {
+export function getServiceRoutingEigrpFeatureOutput(args: GetServiceRoutingEigrpFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetServiceRoutingEigrpFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getServiceRoutingEigrpFeature:getServiceRoutingEigrpFeature", {
         "featureProfileId": args.featureProfileId,

@@ -206,7 +206,7 @@ export interface GetCiscoVpnFeatureTemplateResult {
  * });
  * ```
  */
-export function getCiscoVpnFeatureTemplateOutput(args?: GetCiscoVpnFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCiscoVpnFeatureTemplateResult> {
+export function getCiscoVpnFeatureTemplateOutput(args?: GetCiscoVpnFeatureTemplateOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCiscoVpnFeatureTemplateResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getCiscoVpnFeatureTemplate:getCiscoVpnFeatureTemplate", {

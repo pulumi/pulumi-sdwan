@@ -718,7 +718,7 @@ export interface GetVpnInterfaceDslIpoeFeatureTemplateResult {
  * });
  * ```
  */
-export function getVpnInterfaceDslIpoeFeatureTemplateOutput(args?: GetVpnInterfaceDslIpoeFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetVpnInterfaceDslIpoeFeatureTemplateResult> {
+export function getVpnInterfaceDslIpoeFeatureTemplateOutput(args?: GetVpnInterfaceDslIpoeFeatureTemplateOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetVpnInterfaceDslIpoeFeatureTemplateResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getVpnInterfaceDslIpoeFeatureTemplate:getVpnInterfaceDslIpoeFeatureTemplate", {

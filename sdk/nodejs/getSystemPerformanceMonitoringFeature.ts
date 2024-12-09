@@ -105,7 +105,7 @@ export interface GetSystemPerformanceMonitoringFeatureResult {
  * });
  * ```
  */
-export function getSystemPerformanceMonitoringFeatureOutput(args: GetSystemPerformanceMonitoringFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSystemPerformanceMonitoringFeatureResult> {
+export function getSystemPerformanceMonitoringFeatureOutput(args: GetSystemPerformanceMonitoringFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSystemPerformanceMonitoringFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getSystemPerformanceMonitoringFeature:getSystemPerformanceMonitoringFeature", {
         "featureProfileId": args.featureProfileId,

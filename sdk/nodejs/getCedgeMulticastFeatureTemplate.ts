@@ -108,7 +108,7 @@ export interface GetCedgeMulticastFeatureTemplateResult {
  * });
  * ```
  */
-export function getCedgeMulticastFeatureTemplateOutput(args?: GetCedgeMulticastFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCedgeMulticastFeatureTemplateResult> {
+export function getCedgeMulticastFeatureTemplateOutput(args?: GetCedgeMulticastFeatureTemplateOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCedgeMulticastFeatureTemplateResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getCedgeMulticastFeatureTemplate:getCedgeMulticastFeatureTemplate", {

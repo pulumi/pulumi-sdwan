@@ -84,7 +84,7 @@ export interface GetServiceLanVpnFeatureAssociateMulticastFeatureResult {
  * });
  * ```
  */
-export function getServiceLanVpnFeatureAssociateMulticastFeatureOutput(args: GetServiceLanVpnFeatureAssociateMulticastFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetServiceLanVpnFeatureAssociateMulticastFeatureResult> {
+export function getServiceLanVpnFeatureAssociateMulticastFeatureOutput(args: GetServiceLanVpnFeatureAssociateMulticastFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetServiceLanVpnFeatureAssociateMulticastFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getServiceLanVpnFeatureAssociateMulticastFeature:getServiceLanVpnFeatureAssociateMulticastFeature", {
         "featureProfileId": args.featureProfileId,

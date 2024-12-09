@@ -314,7 +314,7 @@ def get_system_aaa_feature(feature_profile_id: Optional[str] = None,
         version=pulumi.get(__ret__, 'version'))
 def get_system_aaa_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                   id: Optional[pulumi.Input[str]] = None,
-                                  opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSystemAaaFeatureResult]:
+                                  opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSystemAaaFeatureResult]:
     """
     This data source can read the System AAA Feature.
 
@@ -335,7 +335,7 @@ def get_system_aaa_feature_output(feature_profile_id: Optional[pulumi.Input[str]
     __args__ = dict()
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getSystemAaaFeature:getSystemAaaFeature', __args__, opts=opts, typ=GetSystemAaaFeatureResult)
     return __ret__.apply(lambda __response__: GetSystemAaaFeatureResult(
         accounting_group=pulumi.get(__response__, 'accounting_group'),

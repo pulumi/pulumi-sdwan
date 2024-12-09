@@ -833,7 +833,7 @@ export interface GetTransportWanVpnInterfaceEthernetFeatureResult {
  * });
  * ```
  */
-export function getTransportWanVpnInterfaceEthernetFeatureOutput(args: GetTransportWanVpnInterfaceEthernetFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTransportWanVpnInterfaceEthernetFeatureResult> {
+export function getTransportWanVpnInterfaceEthernetFeatureOutput(args: GetTransportWanVpnInterfaceEthernetFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTransportWanVpnInterfaceEthernetFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getTransportWanVpnInterfaceEthernetFeature:getTransportWanVpnInterfaceEthernetFeature", {
         "featureProfileId": args.featureProfileId,

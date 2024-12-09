@@ -126,7 +126,7 @@ def get_mirror_policy_object(id: Optional[str] = None,
         source_ip=pulumi.get(__ret__, 'source_ip'),
         version=pulumi.get(__ret__, 'version'))
 def get_mirror_policy_object_output(id: Optional[pulumi.Input[str]] = None,
-                                    opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetMirrorPolicyObjectResult]:
+                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetMirrorPolicyObjectResult]:
     """
     This data source can read the Mirror Policy Object .
 
@@ -144,7 +144,7 @@ def get_mirror_policy_object_output(id: Optional[pulumi.Input[str]] = None,
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getMirrorPolicyObject:getMirrorPolicyObject', __args__, opts=opts, typ=GetMirrorPolicyObjectResult)
     return __ret__.apply(lambda __response__: GetMirrorPolicyObjectResult(
         id=pulumi.get(__response__, 'id'),

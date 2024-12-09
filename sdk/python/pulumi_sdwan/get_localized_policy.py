@@ -257,7 +257,7 @@ def get_localized_policy(id: Optional[str] = None,
         name=pulumi.get(__ret__, 'name'),
         version=pulumi.get(__ret__, 'version'))
 def get_localized_policy_output(id: Optional[pulumi.Input[str]] = None,
-                                opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetLocalizedPolicyResult]:
+                                opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetLocalizedPolicyResult]:
     """
     This data source can read the Localized Policy .
 
@@ -275,7 +275,7 @@ def get_localized_policy_output(id: Optional[pulumi.Input[str]] = None,
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getLocalizedPolicy:getLocalizedPolicy', __args__, opts=opts, typ=GetLocalizedPolicyResult)
     return __ret__.apply(lambda __response__: GetLocalizedPolicyResult(
         application_visibility_ipv4=pulumi.get(__response__, 'application_visibility_ipv4'),

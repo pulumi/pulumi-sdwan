@@ -123,7 +123,7 @@ export interface GetSystemNtpFeatureResult {
  * });
  * ```
  */
-export function getSystemNtpFeatureOutput(args: GetSystemNtpFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSystemNtpFeatureResult> {
+export function getSystemNtpFeatureOutput(args: GetSystemNtpFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSystemNtpFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getSystemNtpFeature:getSystemNtpFeature", {
         "featureProfileId": args.featureProfileId,

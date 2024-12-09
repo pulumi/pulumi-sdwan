@@ -145,7 +145,7 @@ def get_policy_object_color_list(feature_profile_id: Optional[str] = None,
         version=pulumi.get(__ret__, 'version'))
 def get_policy_object_color_list_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                         id: Optional[pulumi.Input[str]] = None,
-                                        opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetPolicyObjectColorListResult]:
+                                        opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetPolicyObjectColorListResult]:
     """
     This data source can read the Policy Object Color List Policy_object.
 
@@ -166,7 +166,7 @@ def get_policy_object_color_list_output(feature_profile_id: Optional[pulumi.Inpu
     __args__ = dict()
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getPolicyObjectColorList:getPolicyObjectColorList', __args__, opts=opts, typ=GetPolicyObjectColorListResult)
     return __ret__.apply(lambda __response__: GetPolicyObjectColorListResult(
         description=pulumi.get(__response__, 'description'),

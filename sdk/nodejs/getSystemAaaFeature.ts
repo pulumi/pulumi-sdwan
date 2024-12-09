@@ -139,7 +139,7 @@ export interface GetSystemAaaFeatureResult {
  * });
  * ```
  */
-export function getSystemAaaFeatureOutput(args: GetSystemAaaFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSystemAaaFeatureResult> {
+export function getSystemAaaFeatureOutput(args: GetSystemAaaFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSystemAaaFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getSystemAaaFeature:getSystemAaaFeature", {
         "featureProfileId": args.featureProfileId,

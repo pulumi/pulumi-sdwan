@@ -179,7 +179,7 @@ def get_configuration_group(id: Optional[str] = None,
         topology_devices=pulumi.get(__ret__, 'topology_devices'),
         topology_site_devices=pulumi.get(__ret__, 'topology_site_devices'))
 def get_configuration_group_output(id: Optional[pulumi.Input[str]] = None,
-                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetConfigurationGroupResult]:
+                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetConfigurationGroupResult]:
     """
     This data source can read the Configuration Group .
 
@@ -197,7 +197,7 @@ def get_configuration_group_output(id: Optional[pulumi.Input[str]] = None,
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getConfigurationGroup:getConfigurationGroup', __args__, opts=opts, typ=GetConfigurationGroupResult)
     return __ret__.apply(lambda __response__: GetConfigurationGroupResult(
         description=pulumi.get(__response__, 'description'),

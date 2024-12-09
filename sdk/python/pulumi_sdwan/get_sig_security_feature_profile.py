@@ -100,7 +100,7 @@ def get_sig_security_feature_profile(id: Optional[str] = None,
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'))
 def get_sig_security_feature_profile_output(id: Optional[pulumi.Input[str]] = None,
-                                            opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSigSecurityFeatureProfileResult]:
+                                            opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSigSecurityFeatureProfileResult]:
     """
     This data source can read the SIG Security Feature Profile .
 
@@ -118,7 +118,7 @@ def get_sig_security_feature_profile_output(id: Optional[pulumi.Input[str]] = No
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getSigSecurityFeatureProfile:getSigSecurityFeatureProfile', __args__, opts=opts, typ=GetSigSecurityFeatureProfileResult)
     return __ret__.apply(lambda __response__: GetSigSecurityFeatureProfileResult(
         description=pulumi.get(__response__, 'description'),

@@ -95,7 +95,7 @@ export interface GetTransportTrackerGroupFeatureResult {
  * });
  * ```
  */
-export function getTransportTrackerGroupFeatureOutput(args: GetTransportTrackerGroupFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTransportTrackerGroupFeatureResult> {
+export function getTransportTrackerGroupFeatureOutput(args: GetTransportTrackerGroupFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTransportTrackerGroupFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getTransportTrackerGroupFeature:getTransportTrackerGroupFeature", {
         "featureProfileId": args.featureProfileId,

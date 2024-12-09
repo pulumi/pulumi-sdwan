@@ -87,7 +87,7 @@ export interface GetPolicyObjectClassMapResult {
  * });
  * ```
  */
-export function getPolicyObjectClassMapOutput(args: GetPolicyObjectClassMapOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetPolicyObjectClassMapResult> {
+export function getPolicyObjectClassMapOutput(args: GetPolicyObjectClassMapOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetPolicyObjectClassMapResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getPolicyObjectClassMap:getPolicyObjectClassMap", {
         "featureProfileId": args.featureProfileId,

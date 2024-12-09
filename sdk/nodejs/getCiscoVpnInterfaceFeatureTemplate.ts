@@ -894,7 +894,7 @@ export interface GetCiscoVpnInterfaceFeatureTemplateResult {
  * });
  * ```
  */
-export function getCiscoVpnInterfaceFeatureTemplateOutput(args?: GetCiscoVpnInterfaceFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCiscoVpnInterfaceFeatureTemplateResult> {
+export function getCiscoVpnInterfaceFeatureTemplateOutput(args?: GetCiscoVpnInterfaceFeatureTemplateOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCiscoVpnInterfaceFeatureTemplateResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getCiscoVpnInterfaceFeatureTemplate:getCiscoVpnInterfaceFeatureTemplate", {

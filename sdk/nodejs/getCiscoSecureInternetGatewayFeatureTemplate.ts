@@ -110,7 +110,7 @@ export interface GetCiscoSecureInternetGatewayFeatureTemplateResult {
  * });
  * ```
  */
-export function getCiscoSecureInternetGatewayFeatureTemplateOutput(args?: GetCiscoSecureInternetGatewayFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCiscoSecureInternetGatewayFeatureTemplateResult> {
+export function getCiscoSecureInternetGatewayFeatureTemplateOutput(args?: GetCiscoSecureInternetGatewayFeatureTemplateOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCiscoSecureInternetGatewayFeatureTemplateResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getCiscoSecureInternetGatewayFeatureTemplate:getCiscoSecureInternetGatewayFeatureTemplate", {

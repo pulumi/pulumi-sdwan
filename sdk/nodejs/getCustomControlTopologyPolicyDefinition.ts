@@ -84,7 +84,7 @@ export interface GetCustomControlTopologyPolicyDefinitionResult {
  * });
  * ```
  */
-export function getCustomControlTopologyPolicyDefinitionOutput(args: GetCustomControlTopologyPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCustomControlTopologyPolicyDefinitionResult> {
+export function getCustomControlTopologyPolicyDefinitionOutput(args: GetCustomControlTopologyPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCustomControlTopologyPolicyDefinitionResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getCustomControlTopologyPolicyDefinition:getCustomControlTopologyPolicyDefinition", {
         "id": args.id,

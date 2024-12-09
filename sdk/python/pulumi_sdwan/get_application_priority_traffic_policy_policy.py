@@ -175,7 +175,7 @@ def get_application_priority_traffic_policy_policy(feature_profile_id: Optional[
         vpns=pulumi.get(__ret__, 'vpns'))
 def get_application_priority_traffic_policy_policy_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                                           id: Optional[pulumi.Input[str]] = None,
-                                                          opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetApplicationPriorityTrafficPolicyPolicyResult]:
+                                                          opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetApplicationPriorityTrafficPolicyPolicyResult]:
     """
     This data source can read the Application Priority Traffic Policy Policy.
 
@@ -196,7 +196,7 @@ def get_application_priority_traffic_policy_policy_output(feature_profile_id: Op
     __args__ = dict()
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getApplicationPriorityTrafficPolicyPolicy:getApplicationPriorityTrafficPolicyPolicy', __args__, opts=opts, typ=GetApplicationPriorityTrafficPolicyPolicyResult)
     return __ret__.apply(lambda __response__: GetApplicationPriorityTrafficPolicyPolicyResult(
         default_action=pulumi.get(__response__, 'default_action'),

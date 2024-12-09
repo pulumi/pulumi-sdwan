@@ -72,7 +72,7 @@ export interface GetRegionListPolicyObjectResult {
  * });
  * ```
  */
-export function getRegionListPolicyObjectOutput(args: GetRegionListPolicyObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetRegionListPolicyObjectResult> {
+export function getRegionListPolicyObjectOutput(args: GetRegionListPolicyObjectOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetRegionListPolicyObjectResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getRegionListPolicyObject:getRegionListPolicyObject", {
         "id": args.id,

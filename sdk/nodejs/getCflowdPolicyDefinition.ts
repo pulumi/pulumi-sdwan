@@ -108,7 +108,7 @@ export interface GetCflowdPolicyDefinitionResult {
  * });
  * ```
  */
-export function getCflowdPolicyDefinitionOutput(args: GetCflowdPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCflowdPolicyDefinitionResult> {
+export function getCflowdPolicyDefinitionOutput(args: GetCflowdPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCflowdPolicyDefinitionResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getCflowdPolicyDefinition:getCflowdPolicyDefinition", {
         "id": args.id,
