@@ -521,7 +521,7 @@ def get_cisco_vpn_interface_gre_feature_template(id: Optional[str] = None,
         version=pulumi.get(__ret__, 'version'))
 def get_cisco_vpn_interface_gre_feature_template_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                                         name: Optional[pulumi.Input[Optional[str]]] = None,
-                                                        opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCiscoVpnInterfaceGreFeatureTemplateResult]:
+                                                        opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetCiscoVpnInterfaceGreFeatureTemplateResult]:
     """
     This data source can read the Cisco VPN Interface GRE feature template.
 
@@ -541,7 +541,7 @@ def get_cisco_vpn_interface_gre_feature_template_output(id: Optional[pulumi.Inpu
     __args__ = dict()
     __args__['id'] = id
     __args__['name'] = name
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getCiscoVpnInterfaceGreFeatureTemplate:getCiscoVpnInterfaceGreFeatureTemplate', __args__, opts=opts, typ=GetCiscoVpnInterfaceGreFeatureTemplateResult)
     return __ret__.apply(lambda __response__: GetCiscoVpnInterfaceGreFeatureTemplateResult(
         access_lists=pulumi.get(__response__, 'access_lists'),

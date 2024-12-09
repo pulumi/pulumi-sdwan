@@ -413,7 +413,7 @@ export interface GetServiceLanVpnInterfaceEthernetFeatureResult {
  * });
  * ```
  */
-export function getServiceLanVpnInterfaceEthernetFeatureOutput(args: GetServiceLanVpnInterfaceEthernetFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetServiceLanVpnInterfaceEthernetFeatureResult> {
+export function getServiceLanVpnInterfaceEthernetFeatureOutput(args: GetServiceLanVpnInterfaceEthernetFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetServiceLanVpnInterfaceEthernetFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getServiceLanVpnInterfaceEthernetFeature:getServiceLanVpnInterfaceEthernetFeature", {
         "featureProfileId": args.featureProfileId,

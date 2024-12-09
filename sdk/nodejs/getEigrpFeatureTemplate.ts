@@ -154,7 +154,7 @@ export interface GetEigrpFeatureTemplateResult {
  * });
  * ```
  */
-export function getEigrpFeatureTemplateOutput(args?: GetEigrpFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetEigrpFeatureTemplateResult> {
+export function getEigrpFeatureTemplateOutput(args?: GetEigrpFeatureTemplateOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetEigrpFeatureTemplateResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getEigrpFeatureTemplate:getEigrpFeatureTemplate", {

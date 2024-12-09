@@ -84,7 +84,7 @@ export interface GetTrafficDataPolicyDefinitionResult {
  * });
  * ```
  */
-export function getTrafficDataPolicyDefinitionOutput(args: GetTrafficDataPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTrafficDataPolicyDefinitionResult> {
+export function getTrafficDataPolicyDefinitionOutput(args: GetTrafficDataPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTrafficDataPolicyDefinitionResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getTrafficDataPolicyDefinition:getTrafficDataPolicyDefinition", {
         "id": args.id,

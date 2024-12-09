@@ -142,7 +142,7 @@ def get_policy_object_security_data_ipv4_prefix_list(feature_profile_id: Optiona
         version=pulumi.get(__ret__, 'version'))
 def get_policy_object_security_data_ipv4_prefix_list_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                                             id: Optional[pulumi.Input[str]] = None,
-                                                            opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetPolicyObjectSecurityDataIpv4PrefixListResult]:
+                                                            opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetPolicyObjectSecurityDataIpv4PrefixListResult]:
     """
     This data source can read the Policy Object Security Data IPv4 Prefix List Policy_object.
 
@@ -163,7 +163,7 @@ def get_policy_object_security_data_ipv4_prefix_list_output(feature_profile_id: 
     __args__ = dict()
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getPolicyObjectSecurityDataIpv4PrefixList:getPolicyObjectSecurityDataIpv4PrefixList', __args__, opts=opts, typ=GetPolicyObjectSecurityDataIpv4PrefixListResult)
     return __ret__.apply(lambda __response__: GetPolicyObjectSecurityDataIpv4PrefixListResult(
         description=pulumi.get(__response__, 'description'),

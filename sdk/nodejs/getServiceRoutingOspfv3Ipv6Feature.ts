@@ -220,7 +220,7 @@ export interface GetServiceRoutingOspfv3Ipv6FeatureResult {
  * });
  * ```
  */
-export function getServiceRoutingOspfv3Ipv6FeatureOutput(args: GetServiceRoutingOspfv3Ipv6FeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetServiceRoutingOspfv3Ipv6FeatureResult> {
+export function getServiceRoutingOspfv3Ipv6FeatureOutput(args: GetServiceRoutingOspfv3Ipv6FeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetServiceRoutingOspfv3Ipv6FeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getServiceRoutingOspfv3Ipv6Feature:getServiceRoutingOspfv3Ipv6Feature", {
         "featureProfileId": args.featureProfileId,

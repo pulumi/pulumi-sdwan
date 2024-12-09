@@ -204,7 +204,7 @@ def get_intrusion_prevention_policy_definition(id: Optional[str] = None,
         target_vpns=pulumi.get(__ret__, 'target_vpns'),
         version=pulumi.get(__ret__, 'version'))
 def get_intrusion_prevention_policy_definition_output(id: Optional[pulumi.Input[str]] = None,
-                                                      opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetIntrusionPreventionPolicyDefinitionResult]:
+                                                      opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetIntrusionPreventionPolicyDefinitionResult]:
     """
     This data source can read the Intrusion Prevention Policy Definition .
 
@@ -222,7 +222,7 @@ def get_intrusion_prevention_policy_definition_output(id: Optional[pulumi.Input[
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getIntrusionPreventionPolicyDefinition:getIntrusionPreventionPolicyDefinition', __args__, opts=opts, typ=GetIntrusionPreventionPolicyDefinitionResult)
     return __ret__.apply(lambda __response__: GetIntrusionPreventionPolicyDefinitionResult(
         description=pulumi.get(__response__, 'description'),

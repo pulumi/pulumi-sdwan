@@ -249,7 +249,7 @@ def get_system_logging_feature(feature_profile_id: Optional[str] = None,
         version=pulumi.get(__ret__, 'version'))
 def get_system_logging_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                       id: Optional[pulumi.Input[str]] = None,
-                                      opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSystemLoggingFeatureResult]:
+                                      opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSystemLoggingFeatureResult]:
     """
     This data source can read the System Logging Feature.
 
@@ -270,7 +270,7 @@ def get_system_logging_feature_output(feature_profile_id: Optional[pulumi.Input[
     __args__ = dict()
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getSystemLoggingFeature:getSystemLoggingFeature', __args__, opts=opts, typ=GetSystemLoggingFeatureResult)
     return __ret__.apply(lambda __response__: GetSystemLoggingFeatureResult(
         description=pulumi.get(__response__, 'description'),

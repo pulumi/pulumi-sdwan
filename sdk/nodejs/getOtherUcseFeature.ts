@@ -133,7 +133,7 @@ export interface GetOtherUcseFeatureResult {
  * });
  * ```
  */
-export function getOtherUcseFeatureOutput(args: GetOtherUcseFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetOtherUcseFeatureResult> {
+export function getOtherUcseFeatureOutput(args: GetOtherUcseFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetOtherUcseFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getOtherUcseFeature:getOtherUcseFeature", {
         "featureProfileId": args.featureProfileId,

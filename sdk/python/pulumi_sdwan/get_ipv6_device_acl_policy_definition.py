@@ -153,7 +153,7 @@ def get_ipv6_device_acl_policy_definition(id: Optional[str] = None,
         type=pulumi.get(__ret__, 'type'),
         version=pulumi.get(__ret__, 'version'))
 def get_ipv6_device_acl_policy_definition_output(id: Optional[pulumi.Input[str]] = None,
-                                                 opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetIpv6DeviceAclPolicyDefinitionResult]:
+                                                 opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetIpv6DeviceAclPolicyDefinitionResult]:
     """
     This data source can read the IPv6 Device ACL Policy Definition .
 
@@ -171,7 +171,7 @@ def get_ipv6_device_acl_policy_definition_output(id: Optional[pulumi.Input[str]]
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getIpv6DeviceAclPolicyDefinition:getIpv6DeviceAclPolicyDefinition', __args__, opts=opts, typ=GetIpv6DeviceAclPolicyDefinitionResult)
     return __ret__.apply(lambda __response__: GetIpv6DeviceAclPolicyDefinitionResult(
         default_action=pulumi.get(__response__, 'default_action'),

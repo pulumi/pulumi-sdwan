@@ -72,7 +72,7 @@ export interface GetVpnListPolicyObjectResult {
  * });
  * ```
  */
-export function getVpnListPolicyObjectOutput(args: GetVpnListPolicyObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetVpnListPolicyObjectResult> {
+export function getVpnListPolicyObjectOutput(args: GetVpnListPolicyObjectOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetVpnListPolicyObjectResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getVpnListPolicyObject:getVpnListPolicyObject", {
         "id": args.id,

@@ -632,7 +632,7 @@ def get_service_lan_vpn_interface_svi_feature(feature_profile_id: Optional[str] 
 def get_service_lan_vpn_interface_svi_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                                      id: Optional[pulumi.Input[str]] = None,
                                                      service_lan_vpn_feature_id: Optional[pulumi.Input[str]] = None,
-                                                     opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetServiceLanVpnInterfaceSviFeatureResult]:
+                                                     opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetServiceLanVpnInterfaceSviFeatureResult]:
     """
     This data source can read the Service LAN VPN Interface SVI Feature.
 
@@ -656,7 +656,7 @@ def get_service_lan_vpn_interface_svi_feature_output(feature_profile_id: Optiona
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
     __args__['serviceLanVpnFeatureId'] = service_lan_vpn_feature_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getServiceLanVpnInterfaceSviFeature:getServiceLanVpnInterfaceSviFeature', __args__, opts=opts, typ=GetServiceLanVpnInterfaceSviFeatureResult)
     return __ret__.apply(lambda __response__: GetServiceLanVpnInterfaceSviFeatureResult(
         acl_ipv4_egress_feature_id=pulumi.get(__response__, 'acl_ipv4_egress_feature_id'),

@@ -122,7 +122,7 @@ export interface GetCiscoLoggingFeatureTemplateResult {
  * });
  * ```
  */
-export function getCiscoLoggingFeatureTemplateOutput(args?: GetCiscoLoggingFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCiscoLoggingFeatureTemplateResult> {
+export function getCiscoLoggingFeatureTemplateOutput(args?: GetCiscoLoggingFeatureTemplateOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCiscoLoggingFeatureTemplateResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getCiscoLoggingFeatureTemplate:getCiscoLoggingFeatureTemplate", {

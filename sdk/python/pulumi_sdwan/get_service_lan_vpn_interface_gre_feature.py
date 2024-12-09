@@ -507,7 +507,7 @@ def get_service_lan_vpn_interface_gre_feature(feature_profile_id: Optional[str] 
 def get_service_lan_vpn_interface_gre_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                                      id: Optional[pulumi.Input[str]] = None,
                                                      service_lan_vpn_feature_id: Optional[pulumi.Input[str]] = None,
-                                                     opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetServiceLanVpnInterfaceGreFeatureResult]:
+                                                     opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetServiceLanVpnInterfaceGreFeatureResult]:
     """
     This data source can read the Service LAN VPN Interface GRE Feature.
 
@@ -531,7 +531,7 @@ def get_service_lan_vpn_interface_gre_feature_output(feature_profile_id: Optiona
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
     __args__['serviceLanVpnFeatureId'] = service_lan_vpn_feature_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getServiceLanVpnInterfaceGreFeature:getServiceLanVpnInterfaceGreFeature', __args__, opts=opts, typ=GetServiceLanVpnInterfaceGreFeatureResult)
     return __ret__.apply(lambda __response__: GetServiceLanVpnInterfaceGreFeatureResult(
         application_tunnel_type=pulumi.get(__response__, 'application_tunnel_type'),

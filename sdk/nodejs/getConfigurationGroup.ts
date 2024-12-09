@@ -92,7 +92,7 @@ export interface GetConfigurationGroupResult {
  * });
  * ```
  */
-export function getConfigurationGroupOutput(args: GetConfigurationGroupOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetConfigurationGroupResult> {
+export function getConfigurationGroupOutput(args: GetConfigurationGroupOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetConfigurationGroupResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getConfigurationGroup:getConfigurationGroup", {
         "id": args.id,

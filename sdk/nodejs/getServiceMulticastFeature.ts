@@ -183,7 +183,7 @@ export interface GetServiceMulticastFeatureResult {
  * });
  * ```
  */
-export function getServiceMulticastFeatureOutput(args: GetServiceMulticastFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetServiceMulticastFeatureResult> {
+export function getServiceMulticastFeatureOutput(args: GetServiceMulticastFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetServiceMulticastFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getServiceMulticastFeature:getServiceMulticastFeature", {
         "featureProfileId": args.featureProfileId,

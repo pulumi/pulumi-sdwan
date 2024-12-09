@@ -90,7 +90,7 @@ export interface GetApplicationPriorityTrafficPolicyPolicyResult {
  * });
  * ```
  */
-export function getApplicationPriorityTrafficPolicyPolicyOutput(args: GetApplicationPriorityTrafficPolicyPolicyOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplicationPriorityTrafficPolicyPolicyResult> {
+export function getApplicationPriorityTrafficPolicyPolicyOutput(args: GetApplicationPriorityTrafficPolicyPolicyOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApplicationPriorityTrafficPolicyPolicyResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getApplicationPriorityTrafficPolicyPolicy:getApplicationPriorityTrafficPolicyPolicy", {
         "featureProfileId": args.featureProfileId,

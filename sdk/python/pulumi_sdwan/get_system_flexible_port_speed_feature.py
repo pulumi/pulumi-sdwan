@@ -157,7 +157,7 @@ def get_system_flexible_port_speed_feature(feature_profile_id: Optional[str] = N
         version=pulumi.get(__ret__, 'version'))
 def get_system_flexible_port_speed_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                                   id: Optional[pulumi.Input[str]] = None,
-                                                  opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSystemFlexiblePortSpeedFeatureResult]:
+                                                  opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSystemFlexiblePortSpeedFeatureResult]:
     """
     This data source can read the System Flexible Port Speed Feature.
 
@@ -178,7 +178,7 @@ def get_system_flexible_port_speed_feature_output(feature_profile_id: Optional[p
     __args__ = dict()
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getSystemFlexiblePortSpeedFeature:getSystemFlexiblePortSpeedFeature', __args__, opts=opts, typ=GetSystemFlexiblePortSpeedFeatureResult)
     return __ret__.apply(lambda __response__: GetSystemFlexiblePortSpeedFeatureResult(
         description=pulumi.get(__response__, 'description'),

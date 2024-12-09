@@ -106,7 +106,7 @@ export interface GetAdvancedInspectionProfilePolicyDefinitionResult {
  * });
  * ```
  */
-export function getAdvancedInspectionProfilePolicyDefinitionOutput(args: GetAdvancedInspectionProfilePolicyDefinitionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAdvancedInspectionProfilePolicyDefinitionResult> {
+export function getAdvancedInspectionProfilePolicyDefinitionOutput(args: GetAdvancedInspectionProfilePolicyDefinitionOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAdvancedInspectionProfilePolicyDefinitionResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getAdvancedInspectionProfilePolicyDefinition:getAdvancedInspectionProfilePolicyDefinition", {
         "id": args.id,

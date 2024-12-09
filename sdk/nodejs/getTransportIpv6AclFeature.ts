@@ -91,7 +91,7 @@ export interface GetTransportIpv6AclFeatureResult {
  * });
  * ```
  */
-export function getTransportIpv6AclFeatureOutput(args: GetTransportIpv6AclFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTransportIpv6AclFeatureResult> {
+export function getTransportIpv6AclFeatureOutput(args: GetTransportIpv6AclFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTransportIpv6AclFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getTransportIpv6AclFeature:getTransportIpv6AclFeature", {
         "featureProfileId": args.featureProfileId,

@@ -84,7 +84,7 @@ export interface GetPolicyObjectSecurityDataIpv4PrefixListResult {
  * });
  * ```
  */
-export function getPolicyObjectSecurityDataIpv4PrefixListOutput(args: GetPolicyObjectSecurityDataIpv4PrefixListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetPolicyObjectSecurityDataIpv4PrefixListResult> {
+export function getPolicyObjectSecurityDataIpv4PrefixListOutput(args: GetPolicyObjectSecurityDataIpv4PrefixListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetPolicyObjectSecurityDataIpv4PrefixListResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getPolicyObjectSecurityDataIpv4PrefixList:getPolicyObjectSecurityDataIpv4PrefixList", {
         "featureProfileId": args.featureProfileId,

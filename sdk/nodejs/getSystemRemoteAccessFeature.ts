@@ -214,7 +214,7 @@ export interface GetSystemRemoteAccessFeatureResult {
  * });
  * ```
  */
-export function getSystemRemoteAccessFeatureOutput(args: GetSystemRemoteAccessFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSystemRemoteAccessFeatureResult> {
+export function getSystemRemoteAccessFeatureOutput(args: GetSystemRemoteAccessFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSystemRemoteAccessFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getSystemRemoteAccessFeature:getSystemRemoteAccessFeature", {
         "featureProfileId": args.featureProfileId,

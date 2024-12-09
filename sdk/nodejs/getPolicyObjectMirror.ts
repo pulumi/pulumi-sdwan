@@ -87,7 +87,7 @@ export interface GetPolicyObjectMirrorResult {
  * });
  * ```
  */
-export function getPolicyObjectMirrorOutput(args: GetPolicyObjectMirrorOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetPolicyObjectMirrorResult> {
+export function getPolicyObjectMirrorOutput(args: GetPolicyObjectMirrorOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetPolicyObjectMirrorResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getPolicyObjectMirror:getPolicyObjectMirror", {
         "featureProfileId": args.featureProfileId,

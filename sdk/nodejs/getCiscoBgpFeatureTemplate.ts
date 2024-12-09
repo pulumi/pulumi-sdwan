@@ -230,7 +230,7 @@ export interface GetCiscoBgpFeatureTemplateResult {
  * });
  * ```
  */
-export function getCiscoBgpFeatureTemplateOutput(args?: GetCiscoBgpFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCiscoBgpFeatureTemplateResult> {
+export function getCiscoBgpFeatureTemplateOutput(args?: GetCiscoBgpFeatureTemplateOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCiscoBgpFeatureTemplateResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getCiscoBgpFeatureTemplate:getCiscoBgpFeatureTemplate", {

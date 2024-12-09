@@ -100,7 +100,7 @@ def get_transport_feature_profile(id: Optional[str] = None,
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'))
 def get_transport_feature_profile_output(id: Optional[pulumi.Input[str]] = None,
-                                         opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetTransportFeatureProfileResult]:
+                                         opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetTransportFeatureProfileResult]:
     """
     This data source can read the Transport Feature Profile .
 
@@ -118,7 +118,7 @@ def get_transport_feature_profile_output(id: Optional[pulumi.Input[str]] = None,
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getTransportFeatureProfile:getTransportFeatureProfile', __args__, opts=opts, typ=GetTransportFeatureProfileResult)
     return __ret__.apply(lambda __response__: GetTransportFeatureProfileResult(
         description=pulumi.get(__response__, 'description'),

@@ -87,7 +87,7 @@ export interface GetPolicyObjectTlocListResult {
  * });
  * ```
  */
-export function getPolicyObjectTlocListOutput(args: GetPolicyObjectTlocListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetPolicyObjectTlocListResult> {
+export function getPolicyObjectTlocListOutput(args: GetPolicyObjectTlocListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetPolicyObjectTlocListResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getPolicyObjectTlocList:getPolicyObjectTlocList", {
         "featureProfileId": args.featureProfileId,

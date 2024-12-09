@@ -72,7 +72,7 @@ export interface GetAllowUrlListPolicyObjectResult {
  * });
  * ```
  */
-export function getAllowUrlListPolicyObjectOutput(args: GetAllowUrlListPolicyObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAllowUrlListPolicyObjectResult> {
+export function getAllowUrlListPolicyObjectOutput(args: GetAllowUrlListPolicyObjectOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAllowUrlListPolicyObjectResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getAllowUrlListPolicyObject:getAllowUrlListPolicyObject", {
         "id": args.id,

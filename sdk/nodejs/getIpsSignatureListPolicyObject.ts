@@ -72,7 +72,7 @@ export interface GetIpsSignatureListPolicyObjectResult {
  * });
  * ```
  */
-export function getIpsSignatureListPolicyObjectOutput(args: GetIpsSignatureListPolicyObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetIpsSignatureListPolicyObjectResult> {
+export function getIpsSignatureListPolicyObjectOutput(args: GetIpsSignatureListPolicyObjectOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetIpsSignatureListPolicyObjectResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getIpsSignatureListPolicyObject:getIpsSignatureListPolicyObject", {
         "id": args.id,

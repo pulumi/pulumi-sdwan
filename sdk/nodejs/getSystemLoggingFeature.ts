@@ -119,7 +119,7 @@ export interface GetSystemLoggingFeatureResult {
  * });
  * ```
  */
-export function getSystemLoggingFeatureOutput(args: GetSystemLoggingFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSystemLoggingFeatureResult> {
+export function getSystemLoggingFeatureOutput(args: GetSystemLoggingFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSystemLoggingFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getSystemLoggingFeature:getSystemLoggingFeature", {
         "featureProfileId": args.featureProfileId,

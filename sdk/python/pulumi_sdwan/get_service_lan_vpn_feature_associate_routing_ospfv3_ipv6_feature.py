@@ -123,7 +123,7 @@ def get_service_lan_vpn_feature_associate_routing_ospfv3_ipv6_feature(feature_pr
 def get_service_lan_vpn_feature_associate_routing_ospfv3_ipv6_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                                                              id: Optional[pulumi.Input[str]] = None,
                                                                              service_lan_vpn_feature_id: Optional[pulumi.Input[str]] = None,
-                                                                             opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureResult]:
+                                                                             opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureResult]:
     """
     This data source can read the Service LAN VPN Feature Associate Routing OSPFv3 IPv6 Feature .
 
@@ -147,7 +147,7 @@ def get_service_lan_vpn_feature_associate_routing_ospfv3_ipv6_feature_output(fea
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
     __args__['serviceLanVpnFeatureId'] = service_lan_vpn_feature_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6Feature:getServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6Feature', __args__, opts=opts, typ=GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureResult)
     return __ret__.apply(lambda __response__: GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureResult(
         feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),

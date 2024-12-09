@@ -153,7 +153,7 @@ export interface GetTransportTrackerFeatureResult {
  * });
  * ```
  */
-export function getTransportTrackerFeatureOutput(args: GetTransportTrackerFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTransportTrackerFeatureResult> {
+export function getTransportTrackerFeatureOutput(args: GetTransportTrackerFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTransportTrackerFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getTransportTrackerFeature:getTransportTrackerFeature", {
         "featureProfileId": args.featureProfileId,

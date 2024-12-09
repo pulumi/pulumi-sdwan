@@ -66,7 +66,7 @@ export interface GetDnsSecurityFeatureProfileResult {
  * });
  * ```
  */
-export function getDnsSecurityFeatureProfileOutput(args: GetDnsSecurityFeatureProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDnsSecurityFeatureProfileResult> {
+export function getDnsSecurityFeatureProfileOutput(args: GetDnsSecurityFeatureProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDnsSecurityFeatureProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getDnsSecurityFeatureProfile:getDnsSecurityFeatureProfile", {
         "id": args.id,

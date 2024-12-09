@@ -313,7 +313,7 @@ export interface GetSystemOmpFeatureResult {
  * });
  * ```
  */
-export function getSystemOmpFeatureOutput(args: GetSystemOmpFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSystemOmpFeatureResult> {
+export function getSystemOmpFeatureOutput(args: GetSystemOmpFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSystemOmpFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getSystemOmpFeature:getSystemOmpFeature", {
         "featureProfileId": args.featureProfileId,

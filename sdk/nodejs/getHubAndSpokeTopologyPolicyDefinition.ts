@@ -88,7 +88,7 @@ export interface GetHubAndSpokeTopologyPolicyDefinitionResult {
  * });
  * ```
  */
-export function getHubAndSpokeTopologyPolicyDefinitionOutput(args: GetHubAndSpokeTopologyPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetHubAndSpokeTopologyPolicyDefinitionResult> {
+export function getHubAndSpokeTopologyPolicyDefinitionOutput(args: GetHubAndSpokeTopologyPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetHubAndSpokeTopologyPolicyDefinitionResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getHubAndSpokeTopologyPolicyDefinition:getHubAndSpokeTopologyPolicyDefinition", {
         "id": args.id,

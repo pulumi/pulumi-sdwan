@@ -66,7 +66,7 @@ export interface GetTransportFeatureProfileResult {
  * });
  * ```
  */
-export function getTransportFeatureProfileOutput(args: GetTransportFeatureProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTransportFeatureProfileResult> {
+export function getTransportFeatureProfileOutput(args: GetTransportFeatureProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTransportFeatureProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getTransportFeatureProfile:getTransportFeatureProfile", {
         "id": args.id,

@@ -95,7 +95,7 @@ export interface GetTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroup
  * });
  * ```
  */
-export function getTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureOutput(args: GetTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureResult> {
+export function getTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureOutput(args: GetTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature:getTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature", {
         "featureProfileId": args.featureProfileId,

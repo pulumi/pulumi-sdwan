@@ -72,7 +72,7 @@ export interface GetProtocolListPolicyObjectResult {
  * });
  * ```
  */
-export function getProtocolListPolicyObjectOutput(args: GetProtocolListPolicyObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetProtocolListPolicyObjectResult> {
+export function getProtocolListPolicyObjectOutput(args: GetProtocolListPolicyObjectOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetProtocolListPolicyObjectResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getProtocolListPolicyObject:getProtocolListPolicyObject", {
         "id": args.id,

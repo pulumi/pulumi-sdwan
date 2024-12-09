@@ -141,7 +141,7 @@ def get_transport_wan_vpn_interface_ethernet_feature_associate_tracker_feature_o
                                                                                       id: Optional[pulumi.Input[str]] = None,
                                                                                       transport_wan_vpn_feature_id: Optional[pulumi.Input[str]] = None,
                                                                                       transport_wan_vpn_interface_ethernet_feature_id: Optional[pulumi.Input[str]] = None,
-                                                                                      opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeatureResult]:
+                                                                                      opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeatureResult]:
     """
     This data source can read the Transport WAN VPN Interface Ethernet Feature Associate Tracker Feature .
 
@@ -168,7 +168,7 @@ def get_transport_wan_vpn_interface_ethernet_feature_associate_tracker_feature_o
     __args__['id'] = id
     __args__['transportWanVpnFeatureId'] = transport_wan_vpn_feature_id
     __args__['transportWanVpnInterfaceEthernetFeatureId'] = transport_wan_vpn_interface_ethernet_feature_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeature:getTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeature', __args__, opts=opts, typ=GetTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeatureResult)
     return __ret__.apply(lambda __response__: GetTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeatureResult(
         feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),

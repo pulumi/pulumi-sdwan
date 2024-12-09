@@ -741,7 +741,7 @@ def get_cedge_global_feature_template(id: Optional[str] = None,
         vty_logging_variable=pulumi.get(__ret__, 'vty_logging_variable'))
 def get_cedge_global_feature_template_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                              name: Optional[pulumi.Input[Optional[str]]] = None,
-                                             opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCedgeGlobalFeatureTemplateResult]:
+                                             opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetCedgeGlobalFeatureTemplateResult]:
     """
     This data source can read the cEdge Global feature template.
 
@@ -761,7 +761,7 @@ def get_cedge_global_feature_template_output(id: Optional[pulumi.Input[Optional[
     __args__ = dict()
     __args__['id'] = id
     __args__['name'] = name
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getCedgeGlobalFeatureTemplate:getCedgeGlobalFeatureTemplate', __args__, opts=opts, typ=GetCedgeGlobalFeatureTemplateResult)
     return __ret__.apply(lambda __response__: GetCedgeGlobalFeatureTemplateResult(
         arp_proxy=pulumi.get(__response__, 'arp_proxy'),

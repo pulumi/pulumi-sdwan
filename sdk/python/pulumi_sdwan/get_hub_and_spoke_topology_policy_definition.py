@@ -166,7 +166,7 @@ def get_hub_and_spoke_topology_policy_definition(id: Optional[str] = None,
         vpn_list_id=pulumi.get(__ret__, 'vpn_list_id'),
         vpn_list_version=pulumi.get(__ret__, 'vpn_list_version'))
 def get_hub_and_spoke_topology_policy_definition_output(id: Optional[pulumi.Input[str]] = None,
-                                                        opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetHubAndSpokeTopologyPolicyDefinitionResult]:
+                                                        opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetHubAndSpokeTopologyPolicyDefinitionResult]:
     """
     This data source can read the Hub and Spoke Topology Policy Definition .
 
@@ -184,7 +184,7 @@ def get_hub_and_spoke_topology_policy_definition_output(id: Optional[pulumi.Inpu
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getHubAndSpokeTopologyPolicyDefinition:getHubAndSpokeTopologyPolicyDefinition', __args__, opts=opts, typ=GetHubAndSpokeTopologyPolicyDefinitionResult)
     return __ret__.apply(lambda __response__: GetHubAndSpokeTopologyPolicyDefinitionResult(
         description=pulumi.get(__response__, 'description'),

@@ -287,7 +287,7 @@ def get_cisco_snmp_feature_template(id: Optional[str] = None,
         views=pulumi.get(__ret__, 'views'))
 def get_cisco_snmp_feature_template_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                            name: Optional[pulumi.Input[Optional[str]]] = None,
-                                           opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCiscoSnmpFeatureTemplateResult]:
+                                           opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetCiscoSnmpFeatureTemplateResult]:
     """
     This data source can read the Cisco SNMP feature template.
 
@@ -307,7 +307,7 @@ def get_cisco_snmp_feature_template_output(id: Optional[pulumi.Input[Optional[st
     __args__ = dict()
     __args__['id'] = id
     __args__['name'] = name
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getCiscoSnmpFeatureTemplate:getCiscoSnmpFeatureTemplate', __args__, opts=opts, typ=GetCiscoSnmpFeatureTemplateResult)
     return __ret__.apply(lambda __response__: GetCiscoSnmpFeatureTemplateResult(
         communities=pulumi.get(__response__, 'communities'),

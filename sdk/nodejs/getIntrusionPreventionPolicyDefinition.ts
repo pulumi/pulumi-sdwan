@@ -98,7 +98,7 @@ export interface GetIntrusionPreventionPolicyDefinitionResult {
  * });
  * ```
  */
-export function getIntrusionPreventionPolicyDefinitionOutput(args: GetIntrusionPreventionPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetIntrusionPreventionPolicyDefinitionResult> {
+export function getIntrusionPreventionPolicyDefinitionOutput(args: GetIntrusionPreventionPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetIntrusionPreventionPolicyDefinitionResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getIntrusionPreventionPolicyDefinition:getIntrusionPreventionPolicyDefinition", {
         "id": args.id,
