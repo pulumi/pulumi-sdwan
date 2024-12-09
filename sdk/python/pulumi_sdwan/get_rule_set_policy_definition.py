@@ -127,7 +127,7 @@ def get_rule_set_policy_definition(id: Optional[str] = None,
         rules=pulumi.get(__ret__, 'rules'),
         version=pulumi.get(__ret__, 'version'))
 def get_rule_set_policy_definition_output(id: Optional[pulumi.Input[str]] = None,
-                                          opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetRuleSetPolicyDefinitionResult]:
+                                          opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetRuleSetPolicyDefinitionResult]:
     """
     This data source can read the Rule Set Policy Definition .
 
@@ -145,7 +145,7 @@ def get_rule_set_policy_definition_output(id: Optional[pulumi.Input[str]] = None
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getRuleSetPolicyDefinition:getRuleSetPolicyDefinition', __args__, opts=opts, typ=GetRuleSetPolicyDefinitionResult)
     return __ret__.apply(lambda __response__: GetRuleSetPolicyDefinitionResult(
         description=pulumi.get(__response__, 'description'),

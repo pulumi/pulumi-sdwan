@@ -267,7 +267,7 @@ def get_security_policy(id: Optional[str] = None,
         use_case=pulumi.get(__ret__, 'use_case'),
         version=pulumi.get(__ret__, 'version'))
 def get_security_policy_output(id: Optional[pulumi.Input[str]] = None,
-                               opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSecurityPolicyResult]:
+                               opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSecurityPolicyResult]:
     """
     This data source can read the Security Policy .
 
@@ -285,7 +285,7 @@ def get_security_policy_output(id: Optional[pulumi.Input[str]] = None,
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getSecurityPolicy:getSecurityPolicy', __args__, opts=opts, typ=GetSecurityPolicyResult)
     return __ret__.apply(lambda __response__: GetSecurityPolicyResult(
         audit_trail=pulumi.get(__response__, 'audit_trail'),

@@ -131,7 +131,7 @@ export interface GetSystemSecurityFeatureResult {
  * });
  * ```
  */
-export function getSystemSecurityFeatureOutput(args: GetSystemSecurityFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSystemSecurityFeatureResult> {
+export function getSystemSecurityFeatureOutput(args: GetSystemSecurityFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSystemSecurityFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getSystemSecurityFeature:getSystemSecurityFeature", {
         "featureProfileId": args.featureProfileId,

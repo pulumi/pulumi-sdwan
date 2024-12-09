@@ -261,7 +261,7 @@ def get_transport_cellular_controller_feature(feature_profile_id: Optional[str] 
         version=pulumi.get(__ret__, 'version'))
 def get_transport_cellular_controller_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                                      id: Optional[pulumi.Input[str]] = None,
-                                                     opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetTransportCellularControllerFeatureResult]:
+                                                     opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetTransportCellularControllerFeatureResult]:
     """
     This data source can read the Transport Cellular Controller Feature.
 
@@ -282,7 +282,7 @@ def get_transport_cellular_controller_feature_output(feature_profile_id: Optiona
     __args__ = dict()
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getTransportCellularControllerFeature:getTransportCellularControllerFeature', __args__, opts=opts, typ=GetTransportCellularControllerFeatureResult)
     return __ret__.apply(lambda __response__: GetTransportCellularControllerFeatureResult(
         cellular_id=pulumi.get(__response__, 'cellular_id'),

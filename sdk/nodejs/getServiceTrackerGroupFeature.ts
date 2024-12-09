@@ -95,7 +95,7 @@ export interface GetServiceTrackerGroupFeatureResult {
  * });
  * ```
  */
-export function getServiceTrackerGroupFeatureOutput(args: GetServiceTrackerGroupFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetServiceTrackerGroupFeatureResult> {
+export function getServiceTrackerGroupFeatureOutput(args: GetServiceTrackerGroupFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetServiceTrackerGroupFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getServiceTrackerGroupFeature:getServiceTrackerGroupFeature", {
         "featureProfileId": args.featureProfileId,

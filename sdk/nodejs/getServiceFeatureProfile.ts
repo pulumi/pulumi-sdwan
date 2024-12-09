@@ -66,7 +66,7 @@ export interface GetServiceFeatureProfileResult {
  * });
  * ```
  */
-export function getServiceFeatureProfileOutput(args: GetServiceFeatureProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetServiceFeatureProfileResult> {
+export function getServiceFeatureProfileOutput(args: GetServiceFeatureProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetServiceFeatureProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getServiceFeatureProfile:getServiceFeatureProfile", {
         "id": args.id,

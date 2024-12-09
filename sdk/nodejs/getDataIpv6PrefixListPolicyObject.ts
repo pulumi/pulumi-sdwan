@@ -72,7 +72,7 @@ export interface GetDataIpv6PrefixListPolicyObjectResult {
  * });
  * ```
  */
-export function getDataIpv6PrefixListPolicyObjectOutput(args: GetDataIpv6PrefixListPolicyObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDataIpv6PrefixListPolicyObjectResult> {
+export function getDataIpv6PrefixListPolicyObjectOutput(args: GetDataIpv6PrefixListPolicyObjectOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDataIpv6PrefixListPolicyObjectResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getDataIpv6PrefixListPolicyObject:getDataIpv6PrefixListPolicyObject", {
         "id": args.id,

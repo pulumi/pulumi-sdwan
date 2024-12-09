@@ -112,7 +112,7 @@ export interface GetDnsSecurityPolicyDefinitionResult {
  * });
  * ```
  */
-export function getDnsSecurityPolicyDefinitionOutput(args: GetDnsSecurityPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDnsSecurityPolicyDefinitionResult> {
+export function getDnsSecurityPolicyDefinitionOutput(args: GetDnsSecurityPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDnsSecurityPolicyDefinitionResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getDnsSecurityPolicyDefinition:getDnsSecurityPolicyDefinition", {
         "id": args.id,

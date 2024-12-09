@@ -144,7 +144,7 @@ def get_cli_config_feature(feature_profile_id: Optional[str] = None,
         version=pulumi.get(__ret__, 'version'))
 def get_cli_config_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                   id: Optional[pulumi.Input[str]] = None,
-                                  opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCliConfigFeatureResult]:
+                                  opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetCliConfigFeatureResult]:
     """
     This data source can read the CLI Config Feature .
 
@@ -165,7 +165,7 @@ def get_cli_config_feature_output(feature_profile_id: Optional[pulumi.Input[str]
     __args__ = dict()
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getCliConfigFeature:getCliConfigFeature', __args__, opts=opts, typ=GetCliConfigFeatureResult)
     return __ret__.apply(lambda __response__: GetCliConfigFeatureResult(
         cli_configuration=pulumi.get(__response__, 'cli_configuration'),

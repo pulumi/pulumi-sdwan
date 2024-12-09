@@ -66,7 +66,7 @@ export interface GetApplicationPriorityFeatureProfileResult {
  * });
  * ```
  */
-export function getApplicationPriorityFeatureProfileOutput(args: GetApplicationPriorityFeatureProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplicationPriorityFeatureProfileResult> {
+export function getApplicationPriorityFeatureProfileOutput(args: GetApplicationPriorityFeatureProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApplicationPriorityFeatureProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getApplicationPriorityFeatureProfile:getApplicationPriorityFeatureProfile", {
         "id": args.id,

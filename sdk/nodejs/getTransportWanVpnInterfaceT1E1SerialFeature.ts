@@ -492,7 +492,7 @@ export interface GetTransportWanVpnInterfaceT1E1SerialFeatureResult {
  * });
  * ```
  */
-export function getTransportWanVpnInterfaceT1E1SerialFeatureOutput(args: GetTransportWanVpnInterfaceT1E1SerialFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTransportWanVpnInterfaceT1E1SerialFeatureResult> {
+export function getTransportWanVpnInterfaceT1E1SerialFeatureOutput(args: GetTransportWanVpnInterfaceT1E1SerialFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTransportWanVpnInterfaceT1E1SerialFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getTransportWanVpnInterfaceT1E1SerialFeature:getTransportWanVpnInterfaceT1E1SerialFeature", {
         "featureProfileId": args.featureProfileId,

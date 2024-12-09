@@ -234,7 +234,7 @@ export interface GetServiceLanVpnInterfaceSviFeatureResult {
  * });
  * ```
  */
-export function getServiceLanVpnInterfaceSviFeatureOutput(args: GetServiceLanVpnInterfaceSviFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetServiceLanVpnInterfaceSviFeatureResult> {
+export function getServiceLanVpnInterfaceSviFeatureOutput(args: GetServiceLanVpnInterfaceSviFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetServiceLanVpnInterfaceSviFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getServiceLanVpnInterfaceSviFeature:getServiceLanVpnInterfaceSviFeature", {
         "featureProfileId": args.featureProfileId,

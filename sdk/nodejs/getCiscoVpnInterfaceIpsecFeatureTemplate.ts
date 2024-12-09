@@ -296,7 +296,7 @@ export interface GetCiscoVpnInterfaceIpsecFeatureTemplateResult {
  * });
  * ```
  */
-export function getCiscoVpnInterfaceIpsecFeatureTemplateOutput(args?: GetCiscoVpnInterfaceIpsecFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCiscoVpnInterfaceIpsecFeatureTemplateResult> {
+export function getCiscoVpnInterfaceIpsecFeatureTemplateOutput(args?: GetCiscoVpnInterfaceIpsecFeatureTemplateOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCiscoVpnInterfaceIpsecFeatureTemplateResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getCiscoVpnInterfaceIpsecFeatureTemplate:getCiscoVpnInterfaceIpsecFeatureTemplate", {

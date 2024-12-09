@@ -235,7 +235,7 @@ def get_switchport_feature_template(id: Optional[str] = None,
         version=pulumi.get(__ret__, 'version'))
 def get_switchport_feature_template_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                            name: Optional[pulumi.Input[Optional[str]]] = None,
-                                           opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSwitchportFeatureTemplateResult]:
+                                           opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSwitchportFeatureTemplateResult]:
     """
     This data source can read the Switchport feature template.
 
@@ -255,7 +255,7 @@ def get_switchport_feature_template_output(id: Optional[pulumi.Input[Optional[st
     __args__ = dict()
     __args__['id'] = id
     __args__['name'] = name
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getSwitchportFeatureTemplate:getSwitchportFeatureTemplate', __args__, opts=opts, typ=GetSwitchportFeatureTemplateResult)
     return __ret__.apply(lambda __response__: GetSwitchportFeatureTemplateResult(
         age_out_time=pulumi.get(__response__, 'age_out_time'),

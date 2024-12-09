@@ -140,7 +140,7 @@ export interface GetCellularCedgeProfileFeatureTemplateResult {
  * });
  * ```
  */
-export function getCellularCedgeProfileFeatureTemplateOutput(args?: GetCellularCedgeProfileFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCellularCedgeProfileFeatureTemplateResult> {
+export function getCellularCedgeProfileFeatureTemplateOutput(args?: GetCellularCedgeProfileFeatureTemplateOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCellularCedgeProfileFeatureTemplateResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getCellularCedgeProfileFeatureTemplate:getCellularCedgeProfileFeatureTemplate", {

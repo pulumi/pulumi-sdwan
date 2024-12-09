@@ -99,7 +99,7 @@ export interface GetTransportT1E1ControllerFeatureResult {
  * });
  * ```
  */
-export function getTransportT1E1ControllerFeatureOutput(args: GetTransportT1E1ControllerFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTransportT1E1ControllerFeatureResult> {
+export function getTransportT1E1ControllerFeatureOutput(args: GetTransportT1E1ControllerFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTransportT1E1ControllerFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getTransportT1E1ControllerFeature:getTransportT1E1ControllerFeature", {
         "featureProfileId": args.featureProfileId,

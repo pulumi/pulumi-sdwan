@@ -90,7 +90,7 @@ export interface GetPreferredColorGroupPolicyObjectResult {
  * });
  * ```
  */
-export function getPreferredColorGroupPolicyObjectOutput(args: GetPreferredColorGroupPolicyObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetPreferredColorGroupPolicyObjectResult> {
+export function getPreferredColorGroupPolicyObjectOutput(args: GetPreferredColorGroupPolicyObjectOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetPreferredColorGroupPolicyObjectResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getPreferredColorGroupPolicyObject:getPreferredColorGroupPolicyObject", {
         "id": args.id,

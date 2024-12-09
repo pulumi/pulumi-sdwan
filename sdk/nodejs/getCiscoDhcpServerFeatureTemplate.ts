@@ -158,7 +158,7 @@ export interface GetCiscoDhcpServerFeatureTemplateResult {
  * });
  * ```
  */
-export function getCiscoDhcpServerFeatureTemplateOutput(args?: GetCiscoDhcpServerFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCiscoDhcpServerFeatureTemplateResult> {
+export function getCiscoDhcpServerFeatureTemplateOutput(args?: GetCiscoDhcpServerFeatureTemplateOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCiscoDhcpServerFeatureTemplateResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getCiscoDhcpServerFeatureTemplate:getCiscoDhcpServerFeatureTemplate", {

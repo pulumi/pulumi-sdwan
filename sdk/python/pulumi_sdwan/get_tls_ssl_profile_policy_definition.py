@@ -256,7 +256,7 @@ def get_tls_ssl_profile_policy_definition(id: Optional[str] = None,
         skip_decrypt_categories=pulumi.get(__ret__, 'skip_decrypt_categories'),
         version=pulumi.get(__ret__, 'version'))
 def get_tls_ssl_profile_policy_definition_output(id: Optional[pulumi.Input[str]] = None,
-                                                 opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetTlsSslProfilePolicyDefinitionResult]:
+                                                 opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetTlsSslProfilePolicyDefinitionResult]:
     """
     This data source can read the TLS SSL Profile Policy Definition .
 
@@ -274,7 +274,7 @@ def get_tls_ssl_profile_policy_definition_output(id: Optional[pulumi.Input[str]]
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getTlsSslProfilePolicyDefinition:getTlsSslProfilePolicyDefinition', __args__, opts=opts, typ=GetTlsSslProfilePolicyDefinitionResult)
     return __ret__.apply(lambda __response__: GetTlsSslProfilePolicyDefinitionResult(
         allow_url_list_id=pulumi.get(__response__, 'allow_url_list_id'),

@@ -84,7 +84,7 @@ export interface GetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureResul
  * });
  * ```
  */
-export function getTransportWanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureOutput(args: GetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureResult> {
+export function getTransportWanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureOutput(args: GetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getTransportWanVpnFeatureAssociateRoutingOspfv3Ipv6Feature:getTransportWanVpnFeatureAssociateRoutingOspfv3Ipv6Feature", {
         "featureProfileId": args.featureProfileId,

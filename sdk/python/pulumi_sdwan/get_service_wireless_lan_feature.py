@@ -366,7 +366,7 @@ def get_service_wireless_lan_feature(feature_profile_id: Optional[str] = None,
         version=pulumi.get(__ret__, 'version'))
 def get_service_wireless_lan_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                             id: Optional[pulumi.Input[str]] = None,
-                                            opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetServiceWirelessLanFeatureResult]:
+                                            opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetServiceWirelessLanFeatureResult]:
     """
     This data source can read the Service Wireless LAN Feature.
 
@@ -387,7 +387,7 @@ def get_service_wireless_lan_feature_output(feature_profile_id: Optional[pulumi.
     __args__ = dict()
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getServiceWirelessLanFeature:getServiceWirelessLanFeature', __args__, opts=opts, typ=GetServiceWirelessLanFeatureResult)
     return __ret__.apply(lambda __response__: GetServiceWirelessLanFeatureResult(
         country=pulumi.get(__response__, 'country'),

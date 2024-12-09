@@ -362,7 +362,7 @@ export interface GetCiscoSystemFeatureTemplateResult {
  * });
  * ```
  */
-export function getCiscoSystemFeatureTemplateOutput(args?: GetCiscoSystemFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCiscoSystemFeatureTemplateResult> {
+export function getCiscoSystemFeatureTemplateOutput(args?: GetCiscoSystemFeatureTemplateOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCiscoSystemFeatureTemplateResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getCiscoSystemFeatureTemplate:getCiscoSystemFeatureTemplate", {

@@ -702,7 +702,7 @@ export interface GetVpnInterfaceEthernetPppoeFeatureTemplateResult {
  * });
  * ```
  */
-export function getVpnInterfaceEthernetPppoeFeatureTemplateOutput(args?: GetVpnInterfaceEthernetPppoeFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetVpnInterfaceEthernetPppoeFeatureTemplateResult> {
+export function getVpnInterfaceEthernetPppoeFeatureTemplateOutput(args?: GetVpnInterfaceEthernetPppoeFeatureTemplateOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetVpnInterfaceEthernetPppoeFeatureTemplateResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getVpnInterfaceEthernetPppoeFeatureTemplate:getVpnInterfaceEthernetPppoeFeatureTemplate", {

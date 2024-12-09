@@ -153,7 +153,7 @@ def get_custom_control_topology_policy_definition(id: Optional[str] = None,
         type=pulumi.get(__ret__, 'type'),
         version=pulumi.get(__ret__, 'version'))
 def get_custom_control_topology_policy_definition_output(id: Optional[pulumi.Input[str]] = None,
-                                                         opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCustomControlTopologyPolicyDefinitionResult]:
+                                                         opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetCustomControlTopologyPolicyDefinitionResult]:
     """
     This data source can read the Custom Control Topology Policy Definition .
 
@@ -171,7 +171,7 @@ def get_custom_control_topology_policy_definition_output(id: Optional[pulumi.Inp
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getCustomControlTopologyPolicyDefinition:getCustomControlTopologyPolicyDefinition', __args__, opts=opts, typ=GetCustomControlTopologyPolicyDefinitionResult)
     return __ret__.apply(lambda __response__: GetCustomControlTopologyPolicyDefinitionResult(
         default_action=pulumi.get(__response__, 'default_action'),

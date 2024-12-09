@@ -198,7 +198,7 @@ export interface GetTransportWanVpnInterfaceGreFeatureResult {
  * });
  * ```
  */
-export function getTransportWanVpnInterfaceGreFeatureOutput(args: GetTransportWanVpnInterfaceGreFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTransportWanVpnInterfaceGreFeatureResult> {
+export function getTransportWanVpnInterfaceGreFeatureOutput(args: GetTransportWanVpnInterfaceGreFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTransportWanVpnInterfaceGreFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getTransportWanVpnInterfaceGreFeature:getTransportWanVpnInterfaceGreFeature", {
         "featureProfileId": args.featureProfileId,

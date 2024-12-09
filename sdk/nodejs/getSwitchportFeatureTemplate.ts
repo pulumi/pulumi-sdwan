@@ -114,7 +114,7 @@ export interface GetSwitchportFeatureTemplateResult {
  * });
  * ```
  */
-export function getSwitchportFeatureTemplateOutput(args?: GetSwitchportFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchportFeatureTemplateResult> {
+export function getSwitchportFeatureTemplateOutput(args?: GetSwitchportFeatureTemplateOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSwitchportFeatureTemplateResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getSwitchportFeatureTemplate:getSwitchportFeatureTemplate", {

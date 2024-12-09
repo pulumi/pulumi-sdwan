@@ -222,7 +222,7 @@ def get_system_mrf_feature(feature_profile_id: Optional[str] = None,
         version=pulumi.get(__ret__, 'version'))
 def get_system_mrf_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                   id: Optional[pulumi.Input[str]] = None,
-                                  opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSystemMrfFeatureResult]:
+                                  opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSystemMrfFeatureResult]:
     """
     This data source can read the System MRF Feature.
 
@@ -243,7 +243,7 @@ def get_system_mrf_feature_output(feature_profile_id: Optional[pulumi.Input[str]
     __args__ = dict()
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getSystemMrfFeature:getSystemMrfFeature', __args__, opts=opts, typ=GetSystemMrfFeatureResult)
     return __ret__.apply(lambda __response__: GetSystemMrfFeatureResult(
         description=pulumi.get(__response__, 'description'),

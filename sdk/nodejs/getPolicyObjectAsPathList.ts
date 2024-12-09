@@ -91,7 +91,7 @@ export interface GetPolicyObjectAsPathListResult {
  * });
  * ```
  */
-export function getPolicyObjectAsPathListOutput(args: GetPolicyObjectAsPathListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetPolicyObjectAsPathListResult> {
+export function getPolicyObjectAsPathListOutput(args: GetPolicyObjectAsPathListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetPolicyObjectAsPathListResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getPolicyObjectAsPathList:getPolicyObjectAsPathList", {
         "featureProfileId": args.featureProfileId,

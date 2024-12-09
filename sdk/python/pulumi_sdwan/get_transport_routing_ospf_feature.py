@@ -506,7 +506,7 @@ def get_transport_routing_ospf_feature(feature_profile_id: Optional[str] = None,
         version=pulumi.get(__ret__, 'version'))
 def get_transport_routing_ospf_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                               id: Optional[pulumi.Input[str]] = None,
-                                              opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetTransportRoutingOspfFeatureResult]:
+                                              opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetTransportRoutingOspfFeatureResult]:
     """
     This data source can read the Transport Routing OSPF Feature.
 
@@ -527,7 +527,7 @@ def get_transport_routing_ospf_feature_output(feature_profile_id: Optional[pulum
     __args__ = dict()
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getTransportRoutingOspfFeature:getTransportRoutingOspfFeature', __args__, opts=opts, typ=GetTransportRoutingOspfFeatureResult)
     return __ret__.apply(lambda __response__: GetTransportRoutingOspfFeatureResult(
         areas=pulumi.get(__response__, 'areas'),

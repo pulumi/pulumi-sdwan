@@ -49,7 +49,7 @@ export interface GetVedgeInventoryResult {
  * const example = sdwan.getVedgeInventory({});
  * ```
  */
-export function getVedgeInventoryOutput(opts?: pulumi.InvokeOptions): pulumi.Output<GetVedgeInventoryResult> {
+export function getVedgeInventoryOutput(opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetVedgeInventoryResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getVedgeInventory:getVedgeInventory", {
     }, opts);

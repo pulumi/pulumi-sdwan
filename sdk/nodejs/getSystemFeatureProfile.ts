@@ -66,7 +66,7 @@ export interface GetSystemFeatureProfileResult {
  * });
  * ```
  */
-export function getSystemFeatureProfileOutput(args: GetSystemFeatureProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSystemFeatureProfileResult> {
+export function getSystemFeatureProfileOutput(args: GetSystemFeatureProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSystemFeatureProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getSystemFeatureProfile:getSystemFeatureProfile", {
         "id": args.id,

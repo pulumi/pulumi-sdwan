@@ -87,7 +87,7 @@ export interface GetPolicyObjectPolicerResult {
  * });
  * ```
  */
-export function getPolicyObjectPolicerOutput(args: GetPolicyObjectPolicerOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetPolicyObjectPolicerResult> {
+export function getPolicyObjectPolicerOutput(args: GetPolicyObjectPolicerOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetPolicyObjectPolicerResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getPolicyObjectPolicer:getPolicyObjectPolicer", {
         "featureProfileId": args.featureProfileId,

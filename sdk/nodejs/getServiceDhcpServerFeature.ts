@@ -163,7 +163,7 @@ export interface GetServiceDhcpServerFeatureResult {
  * });
  * ```
  */
-export function getServiceDhcpServerFeatureOutput(args: GetServiceDhcpServerFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetServiceDhcpServerFeatureResult> {
+export function getServiceDhcpServerFeatureOutput(args: GetServiceDhcpServerFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetServiceDhcpServerFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getServiceDhcpServerFeature:getServiceDhcpServerFeature", {
         "featureProfileId": args.featureProfileId,

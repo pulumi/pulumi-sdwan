@@ -72,7 +72,7 @@ export interface GetSiteListPolicyObjectResult {
  * });
  * ```
  */
-export function getSiteListPolicyObjectOutput(args: GetSiteListPolicyObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSiteListPolicyObjectResult> {
+export function getSiteListPolicyObjectOutput(args: GetSiteListPolicyObjectOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSiteListPolicyObjectResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getSiteListPolicyObject:getSiteListPolicyObject", {
         "id": args.id,

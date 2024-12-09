@@ -72,7 +72,7 @@ export interface GetExpandedCommunityListPolicyObjectResult {
  * });
  * ```
  */
-export function getExpandedCommunityListPolicyObjectOutput(args: GetExpandedCommunityListPolicyObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetExpandedCommunityListPolicyObjectResult> {
+export function getExpandedCommunityListPolicyObjectOutput(args: GetExpandedCommunityListPolicyObjectOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetExpandedCommunityListPolicyObjectResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getExpandedCommunityListPolicyObject:getExpandedCommunityListPolicyObject", {
         "id": args.id,

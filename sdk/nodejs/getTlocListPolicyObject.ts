@@ -72,7 +72,7 @@ export interface GetTlocListPolicyObjectResult {
  * });
  * ```
  */
-export function getTlocListPolicyObjectOutput(args: GetTlocListPolicyObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTlocListPolicyObjectResult> {
+export function getTlocListPolicyObjectOutput(args: GetTlocListPolicyObjectOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTlocListPolicyObjectResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getTlocListPolicyObject:getTlocListPolicyObject", {
         "id": args.id,

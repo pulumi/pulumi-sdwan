@@ -155,7 +155,7 @@ export interface GetServiceWirelessLanFeatureResult {
  * });
  * ```
  */
-export function getServiceWirelessLanFeatureOutput(args: GetServiceWirelessLanFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetServiceWirelessLanFeatureResult> {
+export function getServiceWirelessLanFeatureOutput(args: GetServiceWirelessLanFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetServiceWirelessLanFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getServiceWirelessLanFeature:getServiceWirelessLanFeature", {
         "featureProfileId": args.featureProfileId,

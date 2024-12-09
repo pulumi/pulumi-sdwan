@@ -76,7 +76,7 @@ export interface GetCentralizedPolicyResult {
  * });
  * ```
  */
-export function getCentralizedPolicyOutput(args: GetCentralizedPolicyOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCentralizedPolicyResult> {
+export function getCentralizedPolicyOutput(args: GetCentralizedPolicyOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCentralizedPolicyResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getCentralizedPolicy:getCentralizedPolicy", {
         "id": args.id,

@@ -91,7 +91,7 @@ export interface GetServiceIpv4AclFeatureResult {
  * });
  * ```
  */
-export function getServiceIpv4AclFeatureOutput(args: GetServiceIpv4AclFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetServiceIpv4AclFeatureResult> {
+export function getServiceIpv4AclFeatureOutput(args: GetServiceIpv4AclFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetServiceIpv4AclFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getServiceIpv4AclFeature:getServiceIpv4AclFeature", {
         "featureProfileId": args.featureProfileId,
