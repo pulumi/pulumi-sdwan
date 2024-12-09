@@ -2159,7 +2159,7 @@ def get_vpn_interface_dsl_pppoe_feature_template(id: Optional[str] = None,
         write_rule_variable=pulumi.get(__ret__, 'write_rule_variable'))
 def get_vpn_interface_dsl_pppoe_feature_template_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                                         name: Optional[pulumi.Input[Optional[str]]] = None,
-                                                        opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetVpnInterfaceDslPppoeFeatureTemplateResult]:
+                                                        opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetVpnInterfaceDslPppoeFeatureTemplateResult]:
     """
     This data source can read the VPN Interface DSL PPPoE feature template.
 
@@ -2179,7 +2179,7 @@ def get_vpn_interface_dsl_pppoe_feature_template_output(id: Optional[pulumi.Inpu
     __args__ = dict()
     __args__['id'] = id
     __args__['name'] = name
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getVpnInterfaceDslPppoeFeatureTemplate:getVpnInterfaceDslPppoeFeatureTemplate', __args__, opts=opts, typ=GetVpnInterfaceDslPppoeFeatureTemplateResult)
     return __ret__.apply(lambda __response__: GetVpnInterfaceDslPppoeFeatureTemplateResult(
         access_lists=pulumi.get(__response__, 'access_lists'),

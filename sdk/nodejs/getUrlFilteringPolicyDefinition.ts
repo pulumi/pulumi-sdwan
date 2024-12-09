@@ -118,7 +118,7 @@ export interface GetUrlFilteringPolicyDefinitionResult {
  * });
  * ```
  */
-export function getUrlFilteringPolicyDefinitionOutput(args: GetUrlFilteringPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetUrlFilteringPolicyDefinitionResult> {
+export function getUrlFilteringPolicyDefinitionOutput(args: GetUrlFilteringPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetUrlFilteringPolicyDefinitionResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getUrlFilteringPolicyDefinition:getUrlFilteringPolicyDefinition", {
         "id": args.id,

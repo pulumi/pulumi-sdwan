@@ -114,7 +114,7 @@ def get_expanded_community_list_policy_object(id: Optional[str] = None,
         name=pulumi.get(__ret__, 'name'),
         version=pulumi.get(__ret__, 'version'))
 def get_expanded_community_list_policy_object_output(id: Optional[pulumi.Input[str]] = None,
-                                                     opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetExpandedCommunityListPolicyObjectResult]:
+                                                     opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetExpandedCommunityListPolicyObjectResult]:
     """
     This data source can read the Expanded Community List Policy Object .
 
@@ -132,7 +132,7 @@ def get_expanded_community_list_policy_object_output(id: Optional[pulumi.Input[s
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getExpandedCommunityListPolicyObject:getExpandedCommunityListPolicyObject', __args__, opts=opts, typ=GetExpandedCommunityListPolicyObjectResult)
     return __ret__.apply(lambda __response__: GetExpandedCommunityListPolicyObjectResult(
         entries=pulumi.get(__response__, 'entries'),

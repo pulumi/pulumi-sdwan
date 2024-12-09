@@ -99,7 +99,7 @@ export interface GetSlaClassPolicyObjectResult {
  * });
  * ```
  */
-export function getSlaClassPolicyObjectOutput(args: GetSlaClassPolicyObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSlaClassPolicyObjectResult> {
+export function getSlaClassPolicyObjectOutput(args: GetSlaClassPolicyObjectOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSlaClassPolicyObjectResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getSlaClassPolicyObject:getSlaClassPolicyObject", {
         "id": args.id,

@@ -87,7 +87,7 @@ export interface GetPolicyObjectPreferredColorGroupResult {
  * });
  * ```
  */
-export function getPolicyObjectPreferredColorGroupOutput(args: GetPolicyObjectPreferredColorGroupOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetPolicyObjectPreferredColorGroupResult> {
+export function getPolicyObjectPreferredColorGroupOutput(args: GetPolicyObjectPreferredColorGroupOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetPolicyObjectPreferredColorGroupResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getPolicyObjectPreferredColorGroup:getPolicyObjectPreferredColorGroup", {
         "featureProfileId": args.featureProfileId,

@@ -119,7 +119,7 @@ def get_device(name: Optional[str] = None,
         serial_number=pulumi.get(__ret__, 'serial_number'))
 def get_device_output(name: Optional[pulumi.Input[Optional[str]]] = None,
                       serial_number: Optional[pulumi.Input[Optional[str]]] = None,
-                      opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetDeviceResult]:
+                      opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetDeviceResult]:
     """
     This data source can read the Device .
 
@@ -140,7 +140,7 @@ def get_device_output(name: Optional[pulumi.Input[Optional[str]]] = None,
     __args__ = dict()
     __args__['name'] = name
     __args__['serialNumber'] = serial_number
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getDevice:getDevice', __args__, opts=opts, typ=GetDeviceResult)
     return __ret__.apply(lambda __response__: GetDeviceResult(
         devices=pulumi.get(__response__, 'devices'),

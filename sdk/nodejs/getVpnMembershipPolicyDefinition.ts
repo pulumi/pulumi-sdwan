@@ -80,7 +80,7 @@ export interface GetVpnMembershipPolicyDefinitionResult {
  * });
  * ```
  */
-export function getVpnMembershipPolicyDefinitionOutput(args: GetVpnMembershipPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetVpnMembershipPolicyDefinitionResult> {
+export function getVpnMembershipPolicyDefinitionOutput(args: GetVpnMembershipPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetVpnMembershipPolicyDefinitionResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getVpnMembershipPolicyDefinition:getVpnMembershipPolicyDefinition", {
         "id": args.id,

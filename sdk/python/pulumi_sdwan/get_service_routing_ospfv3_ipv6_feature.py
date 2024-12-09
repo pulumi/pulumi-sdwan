@@ -584,7 +584,7 @@ def get_service_routing_ospfv3_ipv6_feature(feature_profile_id: Optional[str] = 
         version=pulumi.get(__ret__, 'version'))
 def get_service_routing_ospfv3_ipv6_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                                    id: Optional[pulumi.Input[str]] = None,
-                                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetServiceRoutingOspfv3Ipv6FeatureResult]:
+                                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetServiceRoutingOspfv3Ipv6FeatureResult]:
     """
     This data source can read the Service Routing OSPFv3 IPv6 Feature.
 
@@ -605,7 +605,7 @@ def get_service_routing_ospfv3_ipv6_feature_output(feature_profile_id: Optional[
     __args__ = dict()
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getServiceRoutingOspfv3Ipv6Feature:getServiceRoutingOspfv3Ipv6Feature', __args__, opts=opts, typ=GetServiceRoutingOspfv3Ipv6FeatureResult)
     return __ret__.apply(lambda __response__: GetServiceRoutingOspfv3Ipv6FeatureResult(
         areas=pulumi.get(__response__, 'areas'),

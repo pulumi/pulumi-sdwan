@@ -129,7 +129,7 @@ export interface GetTransportGpsFeatureResult {
  * });
  * ```
  */
-export function getTransportGpsFeatureOutput(args: GetTransportGpsFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTransportGpsFeatureResult> {
+export function getTransportGpsFeatureOutput(args: GetTransportGpsFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTransportGpsFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getTransportGpsFeature:getTransportGpsFeature", {
         "featureProfileId": args.featureProfileId,

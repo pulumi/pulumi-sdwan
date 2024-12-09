@@ -1484,7 +1484,7 @@ def get_transport_wan_vpn_interface_t1_e1_serial_feature(feature_profile_id: Opt
 def get_transport_wan_vpn_interface_t1_e1_serial_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                                                 id: Optional[pulumi.Input[str]] = None,
                                                                 transport_wan_vpn_feature_id: Optional[pulumi.Input[str]] = None,
-                                                                opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetTransportWanVpnInterfaceT1E1SerialFeatureResult]:
+                                                                opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetTransportWanVpnInterfaceT1E1SerialFeatureResult]:
     """
     This data source can read the Transport WAN VPN Interface T1 E1 Serial Feature.
 
@@ -1508,7 +1508,7 @@ def get_transport_wan_vpn_interface_t1_e1_serial_feature_output(feature_profile_
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
     __args__['transportWanVpnFeatureId'] = transport_wan_vpn_feature_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getTransportWanVpnInterfaceT1E1SerialFeature:getTransportWanVpnInterfaceT1E1SerialFeature', __args__, opts=opts, typ=GetTransportWanVpnInterfaceT1E1SerialFeatureResult)
     return __ret__.apply(lambda __response__: GetTransportWanVpnInterfaceT1E1SerialFeatureResult(
         acl_ipv4_egress_feature_id=pulumi.get(__response__, 'acl_ipv4_egress_feature_id'),

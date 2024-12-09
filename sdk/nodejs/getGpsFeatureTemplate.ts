@@ -132,7 +132,7 @@ export interface GetGpsFeatureTemplateResult {
  * });
  * ```
  */
-export function getGpsFeatureTemplateOutput(args?: GetGpsFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetGpsFeatureTemplateResult> {
+export function getGpsFeatureTemplateOutput(args?: GetGpsFeatureTemplateOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetGpsFeatureTemplateResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getGpsFeatureTemplate:getGpsFeatureTemplate", {

@@ -91,7 +91,7 @@ export interface GetSystemBannerFeatureResult {
  * });
  * ```
  */
-export function getSystemBannerFeatureOutput(args: GetSystemBannerFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSystemBannerFeatureResult> {
+export function getSystemBannerFeatureOutput(args: GetSystemBannerFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSystemBannerFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getSystemBannerFeature:getSystemBannerFeature", {
         "featureProfileId": args.featureProfileId,

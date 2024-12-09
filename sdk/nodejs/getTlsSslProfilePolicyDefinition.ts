@@ -114,7 +114,7 @@ export interface GetTlsSslProfilePolicyDefinitionResult {
  * });
  * ```
  */
-export function getTlsSslProfilePolicyDefinitionOutput(args: GetTlsSslProfilePolicyDefinitionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTlsSslProfilePolicyDefinitionResult> {
+export function getTlsSslProfilePolicyDefinitionOutput(args: GetTlsSslProfilePolicyDefinitionOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTlsSslProfilePolicyDefinitionResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getTlsSslProfilePolicyDefinition:getTlsSslProfilePolicyDefinition", {
         "id": args.id,

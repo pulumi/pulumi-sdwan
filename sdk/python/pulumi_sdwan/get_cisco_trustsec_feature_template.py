@@ -547,7 +547,7 @@ def get_cisco_trustsec_feature_template(id: Optional[str] = None,
         version=pulumi.get(__ret__, 'version'))
 def get_cisco_trustsec_feature_template_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                                name: Optional[pulumi.Input[Optional[str]]] = None,
-                                               opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCiscoTrustsecFeatureTemplateResult]:
+                                               opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetCiscoTrustsecFeatureTemplateResult]:
     """
     This data source can read the Cisco TrustSec feature template.
 
@@ -567,7 +567,7 @@ def get_cisco_trustsec_feature_template_output(id: Optional[pulumi.Input[Optiona
     __args__ = dict()
     __args__['id'] = id
     __args__['name'] = name
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getCiscoTrustsecFeatureTemplate:getCiscoTrustsecFeatureTemplate', __args__, opts=opts, typ=GetCiscoTrustsecFeatureTemplateResult)
     return __ret__.apply(lambda __response__: GetCiscoTrustsecFeatureTemplateResult(
         credentials_id=pulumi.get(__response__, 'credentials_id'),

@@ -72,7 +72,7 @@ export interface GetBlockUrlListPolicyObjectResult {
  * });
  * ```
  */
-export function getBlockUrlListPolicyObjectOutput(args: GetBlockUrlListPolicyObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetBlockUrlListPolicyObjectResult> {
+export function getBlockUrlListPolicyObjectOutput(args: GetBlockUrlListPolicyObjectOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetBlockUrlListPolicyObjectResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getBlockUrlListPolicyObject:getBlockUrlListPolicyObject", {
         "id": args.id,

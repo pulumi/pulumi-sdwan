@@ -190,7 +190,7 @@ export interface GetCedgeAaaFeatureTemplateResult {
  * });
  * ```
  */
-export function getCedgeAaaFeatureTemplateOutput(args?: GetCedgeAaaFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCedgeAaaFeatureTemplateResult> {
+export function getCedgeAaaFeatureTemplateOutput(args?: GetCedgeAaaFeatureTemplateOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCedgeAaaFeatureTemplateResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getCedgeAaaFeatureTemplate:getCedgeAaaFeatureTemplate", {

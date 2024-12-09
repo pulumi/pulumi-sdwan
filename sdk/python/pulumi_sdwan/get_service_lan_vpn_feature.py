@@ -598,7 +598,7 @@ def get_service_lan_vpn_feature(feature_profile_id: Optional[str] = None,
         vpn_variable=pulumi.get(__ret__, 'vpn_variable'))
 def get_service_lan_vpn_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                        id: Optional[pulumi.Input[str]] = None,
-                                       opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetServiceLanVpnFeatureResult]:
+                                       opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetServiceLanVpnFeatureResult]:
     """
     This data source can read the Service LAN VPN Feature.
 
@@ -619,7 +619,7 @@ def get_service_lan_vpn_feature_output(feature_profile_id: Optional[pulumi.Input
     __args__ = dict()
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getServiceLanVpnFeature:getServiceLanVpnFeature', __args__, opts=opts, typ=GetServiceLanVpnFeatureResult)
     return __ret__.apply(lambda __response__: GetServiceLanVpnFeatureResult(
         advertise_omp_ipv4s=pulumi.get(__response__, 'advertise_omp_ipv4s'),

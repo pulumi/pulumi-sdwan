@@ -90,7 +90,7 @@ export interface GetCedgeIgmpFeatureTemplateResult {
  * });
  * ```
  */
-export function getCedgeIgmpFeatureTemplateOutput(args?: GetCedgeIgmpFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCedgeIgmpFeatureTemplateResult> {
+export function getCedgeIgmpFeatureTemplateOutput(args?: GetCedgeIgmpFeatureTemplateOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCedgeIgmpFeatureTemplateResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getCedgeIgmpFeatureTemplate:getCedgeIgmpFeatureTemplate", {

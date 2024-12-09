@@ -281,7 +281,7 @@ export interface GetTransportManagementVpnInterfaceEthernetFeatureResult {
  * });
  * ```
  */
-export function getTransportManagementVpnInterfaceEthernetFeatureOutput(args: GetTransportManagementVpnInterfaceEthernetFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTransportManagementVpnInterfaceEthernetFeatureResult> {
+export function getTransportManagementVpnInterfaceEthernetFeatureOutput(args: GetTransportManagementVpnInterfaceEthernetFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTransportManagementVpnInterfaceEthernetFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getTransportManagementVpnInterfaceEthernetFeature:getTransportManagementVpnInterfaceEthernetFeature", {
         "featureProfileId": args.featureProfileId,

@@ -87,7 +87,7 @@ export interface GetOtherThousandeyesFeatureResult {
  * });
  * ```
  */
-export function getOtherThousandeyesFeatureOutput(args: GetOtherThousandeyesFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetOtherThousandeyesFeatureResult> {
+export function getOtherThousandeyesFeatureOutput(args: GetOtherThousandeyesFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetOtherThousandeyesFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getOtherThousandeyesFeature:getOtherThousandeyesFeature", {
         "featureProfileId": args.featureProfileId,

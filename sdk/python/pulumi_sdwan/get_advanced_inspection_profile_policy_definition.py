@@ -230,7 +230,7 @@ def get_advanced_inspection_profile_policy_definition(id: Optional[str] = None,
         url_filtering_version=pulumi.get(__ret__, 'url_filtering_version'),
         version=pulumi.get(__ret__, 'version'))
 def get_advanced_inspection_profile_policy_definition_output(id: Optional[pulumi.Input[str]] = None,
-                                                             opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetAdvancedInspectionProfilePolicyDefinitionResult]:
+                                                             opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAdvancedInspectionProfilePolicyDefinitionResult]:
     """
     This data source can read the Advanced Inspection Profile Policy Definition .
 
@@ -248,7 +248,7 @@ def get_advanced_inspection_profile_policy_definition_output(id: Optional[pulumi
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getAdvancedInspectionProfilePolicyDefinition:getAdvancedInspectionProfilePolicyDefinition', __args__, opts=opts, typ=GetAdvancedInspectionProfilePolicyDefinitionResult)
     return __ret__.apply(lambda __response__: GetAdvancedInspectionProfilePolicyDefinitionResult(
         advanced_malware_protection_id=pulumi.get(__response__, 'advanced_malware_protection_id'),

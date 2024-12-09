@@ -84,7 +84,7 @@ export interface GetPolicyObjectSecurityScalableGroupTagListResult {
  * });
  * ```
  */
-export function getPolicyObjectSecurityScalableGroupTagListOutput(args: GetPolicyObjectSecurityScalableGroupTagListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetPolicyObjectSecurityScalableGroupTagListResult> {
+export function getPolicyObjectSecurityScalableGroupTagListOutput(args: GetPolicyObjectSecurityScalableGroupTagListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetPolicyObjectSecurityScalableGroupTagListResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getPolicyObjectSecurityScalableGroupTagList:getPolicyObjectSecurityScalableGroupTagList", {
         "featureProfileId": args.featureProfileId,

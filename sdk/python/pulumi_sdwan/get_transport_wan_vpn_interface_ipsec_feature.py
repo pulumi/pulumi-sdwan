@@ -898,7 +898,7 @@ def get_transport_wan_vpn_interface_ipsec_feature(feature_profile_id: Optional[s
 def get_transport_wan_vpn_interface_ipsec_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                                          id: Optional[pulumi.Input[str]] = None,
                                                          transport_wan_vpn_feature_id: Optional[pulumi.Input[str]] = None,
-                                                         opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetTransportWanVpnInterfaceIpsecFeatureResult]:
+                                                         opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetTransportWanVpnInterfaceIpsecFeatureResult]:
     """
     This data source can read the Transport WAN VPN Interface IPSEC Feature.
 
@@ -922,7 +922,7 @@ def get_transport_wan_vpn_interface_ipsec_feature_output(feature_profile_id: Opt
     __args__['featureProfileId'] = feature_profile_id
     __args__['id'] = id
     __args__['transportWanVpnFeatureId'] = transport_wan_vpn_feature_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getTransportWanVpnInterfaceIpsecFeature:getTransportWanVpnInterfaceIpsecFeature', __args__, opts=opts, typ=GetTransportWanVpnInterfaceIpsecFeatureResult)
     return __ret__.apply(lambda __response__: GetTransportWanVpnInterfaceIpsecFeatureResult(
         application_tunnel_type=pulumi.get(__response__, 'application_tunnel_type'),

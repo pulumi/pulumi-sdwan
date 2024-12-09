@@ -281,7 +281,7 @@ export interface GetTransportRoutingBgpFeatureResult {
  * });
  * ```
  */
-export function getTransportRoutingBgpFeatureOutput(args: GetTransportRoutingBgpFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTransportRoutingBgpFeatureResult> {
+export function getTransportRoutingBgpFeatureOutput(args: GetTransportRoutingBgpFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTransportRoutingBgpFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getTransportRoutingBgpFeature:getTransportRoutingBgpFeature", {
         "featureProfileId": args.featureProfileId,

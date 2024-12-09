@@ -127,7 +127,7 @@ def get_centralized_policy(id: Optional[str] = None,
         name=pulumi.get(__ret__, 'name'),
         version=pulumi.get(__ret__, 'version'))
 def get_centralized_policy_output(id: Optional[pulumi.Input[str]] = None,
-                                  opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCentralizedPolicyResult]:
+                                  opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetCentralizedPolicyResult]:
     """
     This data source can read the Centralized Policy .
 
@@ -145,7 +145,7 @@ def get_centralized_policy_output(id: Optional[pulumi.Input[str]] = None,
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getCentralizedPolicy:getCentralizedPolicy', __args__, opts=opts, typ=GetCentralizedPolicyResult)
     return __ret__.apply(lambda __response__: GetCentralizedPolicyResult(
         definitions=pulumi.get(__response__, 'definitions'),

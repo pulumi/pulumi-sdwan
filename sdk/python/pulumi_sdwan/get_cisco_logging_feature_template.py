@@ -261,7 +261,7 @@ def get_cisco_logging_feature_template(id: Optional[str] = None,
         version=pulumi.get(__ret__, 'version'))
 def get_cisco_logging_feature_template_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                               name: Optional[pulumi.Input[Optional[str]]] = None,
-                                              opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCiscoLoggingFeatureTemplateResult]:
+                                              opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetCiscoLoggingFeatureTemplateResult]:
     """
     This data source can read the Cisco Logging feature template.
 
@@ -281,7 +281,7 @@ def get_cisco_logging_feature_template_output(id: Optional[pulumi.Input[Optional
     __args__ = dict()
     __args__['id'] = id
     __args__['name'] = name
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getCiscoLoggingFeatureTemplate:getCiscoLoggingFeatureTemplate', __args__, opts=opts, typ=GetCiscoLoggingFeatureTemplateResult)
     return __ret__.apply(lambda __response__: GetCiscoLoggingFeatureTemplateResult(
         description=pulumi.get(__response__, 'description'),

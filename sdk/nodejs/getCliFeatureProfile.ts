@@ -66,7 +66,7 @@ export interface GetCliFeatureProfileResult {
  * });
  * ```
  */
-export function getCliFeatureProfileOutput(args: GetCliFeatureProfileOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCliFeatureProfileResult> {
+export function getCliFeatureProfileOutput(args: GetCliFeatureProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCliFeatureProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getCliFeatureProfile:getCliFeatureProfile", {
         "id": args.id,

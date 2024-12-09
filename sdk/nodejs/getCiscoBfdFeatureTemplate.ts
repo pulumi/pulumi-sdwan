@@ -114,7 +114,7 @@ export interface GetCiscoBfdFeatureTemplateResult {
  * });
  * ```
  */
-export function getCiscoBfdFeatureTemplateOutput(args?: GetCiscoBfdFeatureTemplateOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCiscoBfdFeatureTemplateResult> {
+export function getCiscoBfdFeatureTemplateOutput(args?: GetCiscoBfdFeatureTemplateOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCiscoBfdFeatureTemplateResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getCiscoBfdFeatureTemplate:getCiscoBfdFeatureTemplate", {

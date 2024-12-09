@@ -87,7 +87,7 @@ export interface GetPolicyObjectSecurityGeolocationListResult {
  * });
  * ```
  */
-export function getPolicyObjectSecurityGeolocationListOutput(args: GetPolicyObjectSecurityGeolocationListOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetPolicyObjectSecurityGeolocationListResult> {
+export function getPolicyObjectSecurityGeolocationListOutput(args: GetPolicyObjectSecurityGeolocationListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetPolicyObjectSecurityGeolocationListResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getPolicyObjectSecurityGeolocationList:getPolicyObjectSecurityGeolocationList", {
         "featureProfileId": args.featureProfileId,

@@ -84,7 +84,7 @@ export interface GetIpv4AclPolicyDefinitionResult {
  * });
  * ```
  */
-export function getIpv4AclPolicyDefinitionOutput(args: GetIpv4AclPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetIpv4AclPolicyDefinitionResult> {
+export function getIpv4AclPolicyDefinitionOutput(args: GetIpv4AclPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetIpv4AclPolicyDefinitionResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getIpv4AclPolicyDefinition:getIpv4AclPolicyDefinition", {
         "id": args.id,

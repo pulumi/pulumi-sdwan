@@ -140,7 +140,7 @@ def get_qos_map_policy_definition(id: Optional[str] = None,
         type=pulumi.get(__ret__, 'type'),
         version=pulumi.get(__ret__, 'version'))
 def get_qos_map_policy_definition_output(id: Optional[pulumi.Input[str]] = None,
-                                         opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetQosMapPolicyDefinitionResult]:
+                                         opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetQosMapPolicyDefinitionResult]:
     """
     This data source can read the QoS Map Policy Definition .
 
@@ -158,7 +158,7 @@ def get_qos_map_policy_definition_output(id: Optional[pulumi.Input[str]] = None,
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getQosMapPolicyDefinition:getQosMapPolicyDefinition', __args__, opts=opts, typ=GetQosMapPolicyDefinitionResult)
     return __ret__.apply(lambda __response__: GetQosMapPolicyDefinitionResult(
         description=pulumi.get(__response__, 'description'),

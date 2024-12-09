@@ -127,7 +127,7 @@ export interface GetSystemSnmpFeatureResult {
  * });
  * ```
  */
-export function getSystemSnmpFeatureOutput(args: GetSystemSnmpFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSystemSnmpFeatureResult> {
+export function getSystemSnmpFeatureOutput(args: GetSystemSnmpFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSystemSnmpFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getSystemSnmpFeature:getSystemSnmpFeature", {
         "featureProfileId": args.featureProfileId,

@@ -80,7 +80,7 @@ export interface GetApplicationAwareRoutingPolicyDefinitionResult {
  * });
  * ```
  */
-export function getApplicationAwareRoutingPolicyDefinitionOutput(args: GetApplicationAwareRoutingPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplicationAwareRoutingPolicyDefinitionResult> {
+export function getApplicationAwareRoutingPolicyDefinitionOutput(args: GetApplicationAwareRoutingPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApplicationAwareRoutingPolicyDefinitionResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getApplicationAwareRoutingPolicyDefinition:getApplicationAwareRoutingPolicyDefinition", {
         "id": args.id,

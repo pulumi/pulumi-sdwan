@@ -70,7 +70,7 @@ export interface GetClassMapPolicyObjectResult {
  * });
  * ```
  */
-export function getClassMapPolicyObjectOutput(args: GetClassMapPolicyObjectOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetClassMapPolicyObjectResult> {
+export function getClassMapPolicyObjectOutput(args: GetClassMapPolicyObjectOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetClassMapPolicyObjectResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getClassMapPolicyObject:getClassMapPolicyObject", {
         "id": args.id,

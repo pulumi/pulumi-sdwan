@@ -122,7 +122,7 @@ export interface GetObjectGroupPolicyDefinitionResult {
  * });
  * ```
  */
-export function getObjectGroupPolicyDefinitionOutput(args: GetObjectGroupPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetObjectGroupPolicyDefinitionResult> {
+export function getObjectGroupPolicyDefinitionOutput(args: GetObjectGroupPolicyDefinitionOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetObjectGroupPolicyDefinitionResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getObjectGroupPolicyDefinition:getObjectGroupPolicyDefinition", {
         "id": args.id,

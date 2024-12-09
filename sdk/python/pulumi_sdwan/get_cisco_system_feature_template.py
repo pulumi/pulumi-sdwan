@@ -1041,7 +1041,7 @@ def get_cisco_system_feature_template(id: Optional[str] = None,
         version=pulumi.get(__ret__, 'version'))
 def get_cisco_system_feature_template_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                              name: Optional[pulumi.Input[Optional[str]]] = None,
-                                             opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCiscoSystemFeatureTemplateResult]:
+                                             opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetCiscoSystemFeatureTemplateResult]:
     """
     This data source can read the Cisco System feature template.
 
@@ -1061,7 +1061,7 @@ def get_cisco_system_feature_template_output(id: Optional[pulumi.Input[Optional[
     __args__ = dict()
     __args__['id'] = id
     __args__['name'] = name
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getCiscoSystemFeatureTemplate:getCiscoSystemFeatureTemplate', __args__, opts=opts, typ=GetCiscoSystemFeatureTemplateResult)
     return __ret__.apply(lambda __response__: GetCiscoSystemFeatureTemplateResult(
         admin_tech_on_failure=pulumi.get(__response__, 'admin_tech_on_failure'),

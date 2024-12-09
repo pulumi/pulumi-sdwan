@@ -99,7 +99,7 @@ export interface GetServiceSwitchportFeatureResult {
  * });
  * ```
  */
-export function getServiceSwitchportFeatureOutput(args: GetServiceSwitchportFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetServiceSwitchportFeatureResult> {
+export function getServiceSwitchportFeatureOutput(args: GetServiceSwitchportFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetServiceSwitchportFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getServiceSwitchportFeature:getServiceSwitchportFeature", {
         "featureProfileId": args.featureProfileId,

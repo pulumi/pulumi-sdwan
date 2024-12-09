@@ -265,7 +265,7 @@ export interface GetSystemGlobalFeatureResult {
  * });
  * ```
  */
-export function getSystemGlobalFeatureOutput(args: GetSystemGlobalFeatureOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSystemGlobalFeatureResult> {
+export function getSystemGlobalFeatureOutput(args: GetSystemGlobalFeatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSystemGlobalFeatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getSystemGlobalFeature:getSystemGlobalFeature", {
         "featureProfileId": args.featureProfileId,

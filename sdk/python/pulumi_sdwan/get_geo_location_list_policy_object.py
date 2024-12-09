@@ -114,7 +114,7 @@ def get_geo_location_list_policy_object(id: Optional[str] = None,
         name=pulumi.get(__ret__, 'name'),
         version=pulumi.get(__ret__, 'version'))
 def get_geo_location_list_policy_object_output(id: Optional[pulumi.Input[str]] = None,
-                                               opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetGeoLocationListPolicyObjectResult]:
+                                               opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetGeoLocationListPolicyObjectResult]:
     """
     This data source can read the Geo Location List Policy Object .
 
@@ -132,7 +132,7 @@ def get_geo_location_list_policy_object_output(id: Optional[pulumi.Input[str]] =
     """
     __args__ = dict()
     __args__['id'] = id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getGeoLocationListPolicyObject:getGeoLocationListPolicyObject', __args__, opts=opts, typ=GetGeoLocationListPolicyObjectResult)
     return __ret__.apply(lambda __response__: GetGeoLocationListPolicyObjectResult(
         entries=pulumi.get(__response__, 'entries'),

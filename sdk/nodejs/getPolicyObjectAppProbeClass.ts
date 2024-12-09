@@ -87,7 +87,7 @@ export interface GetPolicyObjectAppProbeClassResult {
  * });
  * ```
  */
-export function getPolicyObjectAppProbeClassOutput(args: GetPolicyObjectAppProbeClassOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetPolicyObjectAppProbeClassResult> {
+export function getPolicyObjectAppProbeClassOutput(args: GetPolicyObjectAppProbeClassOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetPolicyObjectAppProbeClassResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("sdwan:index/getPolicyObjectAppProbeClass:getPolicyObjectAppProbeClass", {
         "featureProfileId": args.featureProfileId,
