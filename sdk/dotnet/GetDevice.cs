@@ -60,6 +60,31 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetDeviceResult> Invoke(GetDeviceInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetDeviceResult>("sdwan:index/getDevice:getDevice", args ?? new GetDeviceInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Device .
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetDevice.Invoke(new()
+        ///     {
+        ///         SerialNumber = "12B53B6E42654E01B98C77C347CE216E",
+        ///         Name = "Controller01",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetDeviceResult> Invoke(GetDeviceInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetDeviceResult>("sdwan:index/getDevice:getDevice", args ?? new GetDeviceInvokeArgs(), options.WithDefaults());
     }
 
 

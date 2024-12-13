@@ -58,6 +58,30 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetCiscoBannerFeatureTemplateResult> Invoke(GetCiscoBannerFeatureTemplateInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetCiscoBannerFeatureTemplateResult>("sdwan:index/getCiscoBannerFeatureTemplate:getCiscoBannerFeatureTemplate", args ?? new GetCiscoBannerFeatureTemplateInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Cisco Banner feature template.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetCiscoBannerFeatureTemplate.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetCiscoBannerFeatureTemplateResult> Invoke(GetCiscoBannerFeatureTemplateInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetCiscoBannerFeatureTemplateResult>("sdwan:index/getCiscoBannerFeatureTemplate:getCiscoBannerFeatureTemplate", args ?? new GetCiscoBannerFeatureTemplateInvokeArgs(), options.WithDefaults());
     }
 
 

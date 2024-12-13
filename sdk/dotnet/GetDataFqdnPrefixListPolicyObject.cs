@@ -58,6 +58,30 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetDataFqdnPrefixListPolicyObjectResult> Invoke(GetDataFqdnPrefixListPolicyObjectInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetDataFqdnPrefixListPolicyObjectResult>("sdwan:index/getDataFqdnPrefixListPolicyObject:getDataFqdnPrefixListPolicyObject", args ?? new GetDataFqdnPrefixListPolicyObjectInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Data FQDN Prefix List Policy Object .
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetDataFqdnPrefixListPolicyObject.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetDataFqdnPrefixListPolicyObjectResult> Invoke(GetDataFqdnPrefixListPolicyObjectInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetDataFqdnPrefixListPolicyObjectResult>("sdwan:index/getDataFqdnPrefixListPolicyObject:getDataFqdnPrefixListPolicyObject", args ?? new GetDataFqdnPrefixListPolicyObjectInvokeArgs(), options.WithDefaults());
     }
 
 

@@ -86,21 +86,11 @@ type LookupSystemMrfFeatureResult struct {
 }
 
 func LookupSystemMrfFeatureOutput(ctx *pulumi.Context, args LookupSystemMrfFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupSystemMrfFeatureResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupSystemMrfFeatureResultOutput, error) {
 			args := v.(LookupSystemMrfFeatureArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupSystemMrfFeatureResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getSystemMrfFeature:getSystemMrfFeature", args, &rv, "", opts...)
-			if err != nil {
-				return LookupSystemMrfFeatureResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupSystemMrfFeatureResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupSystemMrfFeatureResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getSystemMrfFeature:getSystemMrfFeature", args, LookupSystemMrfFeatureResultOutput{}, options).(LookupSystemMrfFeatureResultOutput), nil
 		}).(LookupSystemMrfFeatureResultOutput)
 }
 

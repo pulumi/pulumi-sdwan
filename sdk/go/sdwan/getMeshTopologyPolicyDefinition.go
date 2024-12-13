@@ -75,21 +75,11 @@ type LookupMeshTopologyPolicyDefinitionResult struct {
 }
 
 func LookupMeshTopologyPolicyDefinitionOutput(ctx *pulumi.Context, args LookupMeshTopologyPolicyDefinitionOutputArgs, opts ...pulumi.InvokeOption) LookupMeshTopologyPolicyDefinitionResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupMeshTopologyPolicyDefinitionResultOutput, error) {
 			args := v.(LookupMeshTopologyPolicyDefinitionArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupMeshTopologyPolicyDefinitionResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getMeshTopologyPolicyDefinition:getMeshTopologyPolicyDefinition", args, &rv, "", opts...)
-			if err != nil {
-				return LookupMeshTopologyPolicyDefinitionResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupMeshTopologyPolicyDefinitionResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupMeshTopologyPolicyDefinitionResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getMeshTopologyPolicyDefinition:getMeshTopologyPolicyDefinition", args, LookupMeshTopologyPolicyDefinitionResultOutput{}, options).(LookupMeshTopologyPolicyDefinitionResultOutput), nil
 		}).(LookupMeshTopologyPolicyDefinitionResultOutput)
 }
 

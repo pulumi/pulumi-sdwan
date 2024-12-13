@@ -145,21 +145,11 @@ type LookupCiscoBgpFeatureTemplateResult struct {
 }
 
 func LookupCiscoBgpFeatureTemplateOutput(ctx *pulumi.Context, args LookupCiscoBgpFeatureTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupCiscoBgpFeatureTemplateResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupCiscoBgpFeatureTemplateResultOutput, error) {
 			args := v.(LookupCiscoBgpFeatureTemplateArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupCiscoBgpFeatureTemplateResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getCiscoBgpFeatureTemplate:getCiscoBgpFeatureTemplate", args, &rv, "", opts...)
-			if err != nil {
-				return LookupCiscoBgpFeatureTemplateResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupCiscoBgpFeatureTemplateResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupCiscoBgpFeatureTemplateResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getCiscoBgpFeatureTemplate:getCiscoBgpFeatureTemplate", args, LookupCiscoBgpFeatureTemplateResultOutput{}, options).(LookupCiscoBgpFeatureTemplateResultOutput), nil
 		}).(LookupCiscoBgpFeatureTemplateResultOutput)
 }
 

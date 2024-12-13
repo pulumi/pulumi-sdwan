@@ -73,21 +73,11 @@ type LookupServiceLanVpnFeatureAssociateMulticastFeatureResult struct {
 }
 
 func LookupServiceLanVpnFeatureAssociateMulticastFeatureOutput(ctx *pulumi.Context, args LookupServiceLanVpnFeatureAssociateMulticastFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupServiceLanVpnFeatureAssociateMulticastFeatureResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupServiceLanVpnFeatureAssociateMulticastFeatureResultOutput, error) {
 			args := v.(LookupServiceLanVpnFeatureAssociateMulticastFeatureArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupServiceLanVpnFeatureAssociateMulticastFeatureResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getServiceLanVpnFeatureAssociateMulticastFeature:getServiceLanVpnFeatureAssociateMulticastFeature", args, &rv, "", opts...)
-			if err != nil {
-				return LookupServiceLanVpnFeatureAssociateMulticastFeatureResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupServiceLanVpnFeatureAssociateMulticastFeatureResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupServiceLanVpnFeatureAssociateMulticastFeatureResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getServiceLanVpnFeatureAssociateMulticastFeature:getServiceLanVpnFeatureAssociateMulticastFeature", args, LookupServiceLanVpnFeatureAssociateMulticastFeatureResultOutput{}, options).(LookupServiceLanVpnFeatureAssociateMulticastFeatureResultOutput), nil
 		}).(LookupServiceLanVpnFeatureAssociateMulticastFeatureResultOutput)
 }
 

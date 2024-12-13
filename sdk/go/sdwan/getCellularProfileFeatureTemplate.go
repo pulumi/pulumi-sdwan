@@ -117,21 +117,11 @@ type LookupCellularProfileFeatureTemplateResult struct {
 }
 
 func LookupCellularProfileFeatureTemplateOutput(ctx *pulumi.Context, args LookupCellularProfileFeatureTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupCellularProfileFeatureTemplateResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupCellularProfileFeatureTemplateResultOutput, error) {
 			args := v.(LookupCellularProfileFeatureTemplateArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupCellularProfileFeatureTemplateResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getCellularProfileFeatureTemplate:getCellularProfileFeatureTemplate", args, &rv, "", opts...)
-			if err != nil {
-				return LookupCellularProfileFeatureTemplateResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupCellularProfileFeatureTemplateResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupCellularProfileFeatureTemplateResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getCellularProfileFeatureTemplate:getCellularProfileFeatureTemplate", args, LookupCellularProfileFeatureTemplateResultOutput{}, options).(LookupCellularProfileFeatureTemplateResultOutput), nil
 		}).(LookupCellularProfileFeatureTemplateResultOutput)
 }
 

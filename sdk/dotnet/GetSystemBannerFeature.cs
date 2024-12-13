@@ -60,6 +60,31 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetSystemBannerFeatureResult> Invoke(GetSystemBannerFeatureInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSystemBannerFeatureResult>("sdwan:index/getSystemBannerFeature:getSystemBannerFeature", args ?? new GetSystemBannerFeatureInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the System Banner Feature.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetSystemBannerFeature.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSystemBannerFeatureResult> Invoke(GetSystemBannerFeatureInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSystemBannerFeatureResult>("sdwan:index/getSystemBannerFeature:getSystemBannerFeature", args ?? new GetSystemBannerFeatureInvokeArgs(), options.WithDefaults());
     }
 
 

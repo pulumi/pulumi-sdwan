@@ -129,21 +129,11 @@ type LookupServiceRoutingOspfFeatureResult struct {
 }
 
 func LookupServiceRoutingOspfFeatureOutput(ctx *pulumi.Context, args LookupServiceRoutingOspfFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupServiceRoutingOspfFeatureResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupServiceRoutingOspfFeatureResultOutput, error) {
 			args := v.(LookupServiceRoutingOspfFeatureArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupServiceRoutingOspfFeatureResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getServiceRoutingOspfFeature:getServiceRoutingOspfFeature", args, &rv, "", opts...)
-			if err != nil {
-				return LookupServiceRoutingOspfFeatureResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupServiceRoutingOspfFeatureResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupServiceRoutingOspfFeatureResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getServiceRoutingOspfFeature:getServiceRoutingOspfFeature", args, LookupServiceRoutingOspfFeatureResultOutput{}, options).(LookupServiceRoutingOspfFeatureResultOutput), nil
 		}).(LookupServiceRoutingOspfFeatureResultOutput)
 }
 

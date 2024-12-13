@@ -69,21 +69,11 @@ type LookupMirrorPolicyObjectResult struct {
 }
 
 func LookupMirrorPolicyObjectOutput(ctx *pulumi.Context, args LookupMirrorPolicyObjectOutputArgs, opts ...pulumi.InvokeOption) LookupMirrorPolicyObjectResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupMirrorPolicyObjectResultOutput, error) {
 			args := v.(LookupMirrorPolicyObjectArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupMirrorPolicyObjectResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getMirrorPolicyObject:getMirrorPolicyObject", args, &rv, "", opts...)
-			if err != nil {
-				return LookupMirrorPolicyObjectResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupMirrorPolicyObjectResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupMirrorPolicyObjectResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getMirrorPolicyObject:getMirrorPolicyObject", args, LookupMirrorPolicyObjectResultOutput{}, options).(LookupMirrorPolicyObjectResultOutput), nil
 		}).(LookupMirrorPolicyObjectResultOutput)
 }
 

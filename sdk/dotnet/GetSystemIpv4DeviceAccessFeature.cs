@@ -60,6 +60,31 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetSystemIpv4DeviceAccessFeatureResult> Invoke(GetSystemIpv4DeviceAccessFeatureInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSystemIpv4DeviceAccessFeatureResult>("sdwan:index/getSystemIpv4DeviceAccessFeature:getSystemIpv4DeviceAccessFeature", args ?? new GetSystemIpv4DeviceAccessFeatureInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the System IPv4 Device Access Feature.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetSystemIpv4DeviceAccessFeature.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSystemIpv4DeviceAccessFeatureResult> Invoke(GetSystemIpv4DeviceAccessFeatureInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSystemIpv4DeviceAccessFeatureResult>("sdwan:index/getSystemIpv4DeviceAccessFeature:getSystemIpv4DeviceAccessFeature", args ?? new GetSystemIpv4DeviceAccessFeatureInvokeArgs(), options.WithDefaults());
     }
 
 

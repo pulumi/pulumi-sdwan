@@ -58,6 +58,30 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetSigSecurityFeatureProfileResult> Invoke(GetSigSecurityFeatureProfileInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSigSecurityFeatureProfileResult>("sdwan:index/getSigSecurityFeatureProfile:getSigSecurityFeatureProfile", args ?? new GetSigSecurityFeatureProfileInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the SIG Security Feature Profile .
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetSigSecurityFeatureProfile.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSigSecurityFeatureProfileResult> Invoke(GetSigSecurityFeatureProfileInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSigSecurityFeatureProfileResult>("sdwan:index/getSigSecurityFeatureProfile:getSigSecurityFeatureProfile", args ?? new GetSigSecurityFeatureProfileInvokeArgs(), options.WithDefaults());
     }
 
 

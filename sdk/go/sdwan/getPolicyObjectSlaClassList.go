@@ -74,21 +74,11 @@ type LookupPolicyObjectSlaClassListResult struct {
 }
 
 func LookupPolicyObjectSlaClassListOutput(ctx *pulumi.Context, args LookupPolicyObjectSlaClassListOutputArgs, opts ...pulumi.InvokeOption) LookupPolicyObjectSlaClassListResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupPolicyObjectSlaClassListResultOutput, error) {
 			args := v.(LookupPolicyObjectSlaClassListArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupPolicyObjectSlaClassListResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getPolicyObjectSlaClassList:getPolicyObjectSlaClassList", args, &rv, "", opts...)
-			if err != nil {
-				return LookupPolicyObjectSlaClassListResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupPolicyObjectSlaClassListResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupPolicyObjectSlaClassListResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getPolicyObjectSlaClassList:getPolicyObjectSlaClassList", args, LookupPolicyObjectSlaClassListResultOutput{}, options).(LookupPolicyObjectSlaClassListResultOutput), nil
 		}).(LookupPolicyObjectSlaClassListResultOutput)
 }
 

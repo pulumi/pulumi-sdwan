@@ -67,21 +67,11 @@ type LookupBlockUrlListPolicyObjectResult struct {
 }
 
 func LookupBlockUrlListPolicyObjectOutput(ctx *pulumi.Context, args LookupBlockUrlListPolicyObjectOutputArgs, opts ...pulumi.InvokeOption) LookupBlockUrlListPolicyObjectResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupBlockUrlListPolicyObjectResultOutput, error) {
 			args := v.(LookupBlockUrlListPolicyObjectArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupBlockUrlListPolicyObjectResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getBlockUrlListPolicyObject:getBlockUrlListPolicyObject", args, &rv, "", opts...)
-			if err != nil {
-				return LookupBlockUrlListPolicyObjectResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupBlockUrlListPolicyObjectResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupBlockUrlListPolicyObjectResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getBlockUrlListPolicyObject:getBlockUrlListPolicyObject", args, LookupBlockUrlListPolicyObjectResultOutput{}, options).(LookupBlockUrlListPolicyObjectResultOutput), nil
 		}).(LookupBlockUrlListPolicyObjectResultOutput)
 }
 

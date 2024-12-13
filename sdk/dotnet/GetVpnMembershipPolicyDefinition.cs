@@ -58,6 +58,30 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetVpnMembershipPolicyDefinitionResult> Invoke(GetVpnMembershipPolicyDefinitionInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetVpnMembershipPolicyDefinitionResult>("sdwan:index/getVpnMembershipPolicyDefinition:getVpnMembershipPolicyDefinition", args ?? new GetVpnMembershipPolicyDefinitionInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the VPN Membership Policy Definition .
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetVpnMembershipPolicyDefinition.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetVpnMembershipPolicyDefinitionResult> Invoke(GetVpnMembershipPolicyDefinitionInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetVpnMembershipPolicyDefinitionResult>("sdwan:index/getVpnMembershipPolicyDefinition:getVpnMembershipPolicyDefinition", args ?? new GetVpnMembershipPolicyDefinitionInvokeArgs(), options.WithDefaults());
     }
 
 

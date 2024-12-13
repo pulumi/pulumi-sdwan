@@ -60,6 +60,31 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetServiceIpv6AclFeatureResult> Invoke(GetServiceIpv6AclFeatureInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetServiceIpv6AclFeatureResult>("sdwan:index/getServiceIpv6AclFeature:getServiceIpv6AclFeature", args ?? new GetServiceIpv6AclFeatureInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Service IPv6 ACL Feature.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetServiceIpv6AclFeature.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetServiceIpv6AclFeatureResult> Invoke(GetServiceIpv6AclFeatureInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetServiceIpv6AclFeatureResult>("sdwan:index/getServiceIpv6AclFeature:getServiceIpv6AclFeature", args ?? new GetServiceIpv6AclFeatureInvokeArgs(), options.WithDefaults());
     }
 
 

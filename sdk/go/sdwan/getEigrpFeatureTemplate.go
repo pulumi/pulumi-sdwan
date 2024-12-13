@@ -107,21 +107,11 @@ type LookupEigrpFeatureTemplateResult struct {
 }
 
 func LookupEigrpFeatureTemplateOutput(ctx *pulumi.Context, args LookupEigrpFeatureTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupEigrpFeatureTemplateResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupEigrpFeatureTemplateResultOutput, error) {
 			args := v.(LookupEigrpFeatureTemplateArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupEigrpFeatureTemplateResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getEigrpFeatureTemplate:getEigrpFeatureTemplate", args, &rv, "", opts...)
-			if err != nil {
-				return LookupEigrpFeatureTemplateResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupEigrpFeatureTemplateResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupEigrpFeatureTemplateResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getEigrpFeatureTemplate:getEigrpFeatureTemplate", args, LookupEigrpFeatureTemplateResultOutput{}, options).(LookupEigrpFeatureTemplateResultOutput), nil
 		}).(LookupEigrpFeatureTemplateResultOutput)
 }
 

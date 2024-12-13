@@ -65,21 +65,11 @@ type LookupDnsSecurityFeatureProfileResult struct {
 }
 
 func LookupDnsSecurityFeatureProfileOutput(ctx *pulumi.Context, args LookupDnsSecurityFeatureProfileOutputArgs, opts ...pulumi.InvokeOption) LookupDnsSecurityFeatureProfileResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupDnsSecurityFeatureProfileResultOutput, error) {
 			args := v.(LookupDnsSecurityFeatureProfileArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupDnsSecurityFeatureProfileResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getDnsSecurityFeatureProfile:getDnsSecurityFeatureProfile", args, &rv, "", opts...)
-			if err != nil {
-				return LookupDnsSecurityFeatureProfileResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupDnsSecurityFeatureProfileResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupDnsSecurityFeatureProfileResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getDnsSecurityFeatureProfile:getDnsSecurityFeatureProfile", args, LookupDnsSecurityFeatureProfileResultOutput{}, options).(LookupDnsSecurityFeatureProfileResultOutput), nil
 		}).(LookupDnsSecurityFeatureProfileResultOutput)
 }
 

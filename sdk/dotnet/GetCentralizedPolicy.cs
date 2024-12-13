@@ -58,6 +58,30 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetCentralizedPolicyResult> Invoke(GetCentralizedPolicyInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetCentralizedPolicyResult>("sdwan:index/getCentralizedPolicy:getCentralizedPolicy", args ?? new GetCentralizedPolicyInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Centralized Policy .
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetCentralizedPolicy.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetCentralizedPolicyResult> Invoke(GetCentralizedPolicyInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetCentralizedPolicyResult>("sdwan:index/getCentralizedPolicy:getCentralizedPolicy", args ?? new GetCentralizedPolicyInvokeArgs(), options.WithDefaults());
     }
 
 

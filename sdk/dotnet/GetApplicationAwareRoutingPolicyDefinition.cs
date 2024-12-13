@@ -58,6 +58,30 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetApplicationAwareRoutingPolicyDefinitionResult> Invoke(GetApplicationAwareRoutingPolicyDefinitionInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetApplicationAwareRoutingPolicyDefinitionResult>("sdwan:index/getApplicationAwareRoutingPolicyDefinition:getApplicationAwareRoutingPolicyDefinition", args ?? new GetApplicationAwareRoutingPolicyDefinitionInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Application Aware Routing Policy Definition .
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetApplicationAwareRoutingPolicyDefinition.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetApplicationAwareRoutingPolicyDefinitionResult> Invoke(GetApplicationAwareRoutingPolicyDefinitionInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetApplicationAwareRoutingPolicyDefinitionResult>("sdwan:index/getApplicationAwareRoutingPolicyDefinition:getApplicationAwareRoutingPolicyDefinition", args ?? new GetApplicationAwareRoutingPolicyDefinitionInvokeArgs(), options.WithDefaults());
     }
 
 

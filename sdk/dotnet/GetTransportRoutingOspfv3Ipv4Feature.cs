@@ -60,6 +60,31 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetTransportRoutingOspfv3Ipv4FeatureResult> Invoke(GetTransportRoutingOspfv3Ipv4FeatureInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetTransportRoutingOspfv3Ipv4FeatureResult>("sdwan:index/getTransportRoutingOspfv3Ipv4Feature:getTransportRoutingOspfv3Ipv4Feature", args ?? new GetTransportRoutingOspfv3Ipv4FeatureInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Transport Routing OSPFv3 IPv4 Feature.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetTransportRoutingOspfv3Ipv4Feature.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetTransportRoutingOspfv3Ipv4FeatureResult> Invoke(GetTransportRoutingOspfv3Ipv4FeatureInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetTransportRoutingOspfv3Ipv4FeatureResult>("sdwan:index/getTransportRoutingOspfv3Ipv4Feature:getTransportRoutingOspfv3Ipv4Feature", args ?? new GetTransportRoutingOspfv3Ipv4FeatureInvokeArgs(), options.WithDefaults());
     }
 
 

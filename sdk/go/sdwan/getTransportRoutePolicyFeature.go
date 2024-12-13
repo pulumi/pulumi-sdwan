@@ -76,21 +76,11 @@ type LookupTransportRoutePolicyFeatureResult struct {
 }
 
 func LookupTransportRoutePolicyFeatureOutput(ctx *pulumi.Context, args LookupTransportRoutePolicyFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupTransportRoutePolicyFeatureResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupTransportRoutePolicyFeatureResultOutput, error) {
 			args := v.(LookupTransportRoutePolicyFeatureArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupTransportRoutePolicyFeatureResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getTransportRoutePolicyFeature:getTransportRoutePolicyFeature", args, &rv, "", opts...)
-			if err != nil {
-				return LookupTransportRoutePolicyFeatureResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupTransportRoutePolicyFeatureResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupTransportRoutePolicyFeatureResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getTransportRoutePolicyFeature:getTransportRoutePolicyFeature", args, LookupTransportRoutePolicyFeatureResultOutput{}, options).(LookupTransportRoutePolicyFeatureResultOutput), nil
 		}).(LookupTransportRoutePolicyFeatureResultOutput)
 }
 

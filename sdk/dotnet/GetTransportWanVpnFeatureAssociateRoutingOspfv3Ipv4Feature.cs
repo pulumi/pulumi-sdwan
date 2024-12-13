@@ -62,6 +62,32 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureResult> Invoke(GetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureResult>("sdwan:index/getTransportWanVpnFeatureAssociateRoutingOspfv3Ipv4Feature:getTransportWanVpnFeatureAssociateRoutingOspfv3Ipv4Feature", args ?? new GetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Transport WAN VPN Feature Associate Routing OSPFv3 IPv4 Feature .
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv4Feature.Invoke(new()
+        ///     {
+        ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+        ///         TransportWanVpnFeatureId = "140331f6-5418-4755-a059-13c77eb96037",
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureResult> Invoke(GetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureResult>("sdwan:index/getTransportWanVpnFeatureAssociateRoutingOspfv3Ipv4Feature:getTransportWanVpnFeatureAssociateRoutingOspfv3Ipv4Feature", args ?? new GetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureInvokeArgs(), options.WithDefaults());
     }
 
 

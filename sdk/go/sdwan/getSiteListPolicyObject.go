@@ -67,21 +67,11 @@ type LookupSiteListPolicyObjectResult struct {
 }
 
 func LookupSiteListPolicyObjectOutput(ctx *pulumi.Context, args LookupSiteListPolicyObjectOutputArgs, opts ...pulumi.InvokeOption) LookupSiteListPolicyObjectResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupSiteListPolicyObjectResultOutput, error) {
 			args := v.(LookupSiteListPolicyObjectArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupSiteListPolicyObjectResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getSiteListPolicyObject:getSiteListPolicyObject", args, &rv, "", opts...)
-			if err != nil {
-				return LookupSiteListPolicyObjectResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupSiteListPolicyObjectResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupSiteListPolicyObjectResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getSiteListPolicyObject:getSiteListPolicyObject", args, LookupSiteListPolicyObjectResultOutput{}, options).(LookupSiteListPolicyObjectResultOutput), nil
 		}).(LookupSiteListPolicyObjectResultOutput)
 }
 

@@ -80,21 +80,11 @@ type LookupServiceSwitchportFeatureResult struct {
 }
 
 func LookupServiceSwitchportFeatureOutput(ctx *pulumi.Context, args LookupServiceSwitchportFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupServiceSwitchportFeatureResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupServiceSwitchportFeatureResultOutput, error) {
 			args := v.(LookupServiceSwitchportFeatureArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupServiceSwitchportFeatureResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getServiceSwitchportFeature:getServiceSwitchportFeature", args, &rv, "", opts...)
-			if err != nil {
-				return LookupServiceSwitchportFeatureResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupServiceSwitchportFeatureResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupServiceSwitchportFeatureResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getServiceSwitchportFeature:getServiceSwitchportFeature", args, LookupServiceSwitchportFeatureResultOutput{}, options).(LookupServiceSwitchportFeatureResultOutput), nil
 		}).(LookupServiceSwitchportFeatureResultOutput)
 }
 

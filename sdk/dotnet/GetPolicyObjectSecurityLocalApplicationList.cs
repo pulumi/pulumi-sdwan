@@ -60,6 +60,31 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetPolicyObjectSecurityLocalApplicationListResult> Invoke(GetPolicyObjectSecurityLocalApplicationListInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetPolicyObjectSecurityLocalApplicationListResult>("sdwan:index/getPolicyObjectSecurityLocalApplicationList:getPolicyObjectSecurityLocalApplicationList", args ?? new GetPolicyObjectSecurityLocalApplicationListInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Policy Object Security Local Application List Policy_object.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetPolicyObjectSecurityLocalApplicationList.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetPolicyObjectSecurityLocalApplicationListResult> Invoke(GetPolicyObjectSecurityLocalApplicationListInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetPolicyObjectSecurityLocalApplicationListResult>("sdwan:index/getPolicyObjectSecurityLocalApplicationList:getPolicyObjectSecurityLocalApplicationList", args ?? new GetPolicyObjectSecurityLocalApplicationListInvokeArgs(), options.WithDefaults());
     }
 
 

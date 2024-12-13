@@ -60,6 +60,31 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetPolicyObjectDataIpv6PrefixListResult> Invoke(GetPolicyObjectDataIpv6PrefixListInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetPolicyObjectDataIpv6PrefixListResult>("sdwan:index/getPolicyObjectDataIpv6PrefixList:getPolicyObjectDataIpv6PrefixList", args ?? new GetPolicyObjectDataIpv6PrefixListInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Policy Object Data IPv6 Prefix List Policy_object.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetPolicyObjectDataIpv6PrefixList.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetPolicyObjectDataIpv6PrefixListResult> Invoke(GetPolicyObjectDataIpv6PrefixListInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetPolicyObjectDataIpv6PrefixListResult>("sdwan:index/getPolicyObjectDataIpv6PrefixList:getPolicyObjectDataIpv6PrefixList", args ?? new GetPolicyObjectDataIpv6PrefixListInvokeArgs(), options.WithDefaults());
     }
 
 

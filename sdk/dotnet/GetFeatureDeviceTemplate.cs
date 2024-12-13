@@ -58,6 +58,30 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetFeatureDeviceTemplateResult> Invoke(GetFeatureDeviceTemplateInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetFeatureDeviceTemplateResult>("sdwan:index/getFeatureDeviceTemplate:getFeatureDeviceTemplate", args ?? new GetFeatureDeviceTemplateInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Feature Device Template .
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetFeatureDeviceTemplate.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetFeatureDeviceTemplateResult> Invoke(GetFeatureDeviceTemplateInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetFeatureDeviceTemplateResult>("sdwan:index/getFeatureDeviceTemplate:getFeatureDeviceTemplate", args ?? new GetFeatureDeviceTemplateInvokeArgs(), options.WithDefaults());
     }
 
 

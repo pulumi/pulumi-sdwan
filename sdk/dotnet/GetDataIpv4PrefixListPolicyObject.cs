@@ -58,6 +58,30 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetDataIpv4PrefixListPolicyObjectResult> Invoke(GetDataIpv4PrefixListPolicyObjectInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetDataIpv4PrefixListPolicyObjectResult>("sdwan:index/getDataIpv4PrefixListPolicyObject:getDataIpv4PrefixListPolicyObject", args ?? new GetDataIpv4PrefixListPolicyObjectInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Data IPv4 Prefix List Policy Object .
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetDataIpv4PrefixListPolicyObject.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetDataIpv4PrefixListPolicyObjectResult> Invoke(GetDataIpv4PrefixListPolicyObjectInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetDataIpv4PrefixListPolicyObjectResult>("sdwan:index/getDataIpv4PrefixListPolicyObject:getDataIpv4PrefixListPolicyObject", args ?? new GetDataIpv4PrefixListPolicyObjectInvokeArgs(), options.WithDefaults());
     }
 
 

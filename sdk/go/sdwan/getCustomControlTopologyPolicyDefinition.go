@@ -73,21 +73,11 @@ type LookupCustomControlTopologyPolicyDefinitionResult struct {
 }
 
 func LookupCustomControlTopologyPolicyDefinitionOutput(ctx *pulumi.Context, args LookupCustomControlTopologyPolicyDefinitionOutputArgs, opts ...pulumi.InvokeOption) LookupCustomControlTopologyPolicyDefinitionResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupCustomControlTopologyPolicyDefinitionResultOutput, error) {
 			args := v.(LookupCustomControlTopologyPolicyDefinitionArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupCustomControlTopologyPolicyDefinitionResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getCustomControlTopologyPolicyDefinition:getCustomControlTopologyPolicyDefinition", args, &rv, "", opts...)
-			if err != nil {
-				return LookupCustomControlTopologyPolicyDefinitionResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupCustomControlTopologyPolicyDefinitionResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupCustomControlTopologyPolicyDefinitionResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getCustomControlTopologyPolicyDefinition:getCustomControlTopologyPolicyDefinition", args, LookupCustomControlTopologyPolicyDefinitionResultOutput{}, options).(LookupCustomControlTopologyPolicyDefinitionResultOutput), nil
 		}).(LookupCustomControlTopologyPolicyDefinitionResultOutput)
 }
 

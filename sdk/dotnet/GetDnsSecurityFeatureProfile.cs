@@ -58,6 +58,30 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetDnsSecurityFeatureProfileResult> Invoke(GetDnsSecurityFeatureProfileInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetDnsSecurityFeatureProfileResult>("sdwan:index/getDnsSecurityFeatureProfile:getDnsSecurityFeatureProfile", args ?? new GetDnsSecurityFeatureProfileInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the DNS Security Feature Profile .
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetDnsSecurityFeatureProfile.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetDnsSecurityFeatureProfileResult> Invoke(GetDnsSecurityFeatureProfileInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetDnsSecurityFeatureProfileResult>("sdwan:index/getDnsSecurityFeatureProfile:getDnsSecurityFeatureProfile", args ?? new GetDnsSecurityFeatureProfileInvokeArgs(), options.WithDefaults());
     }
 
 

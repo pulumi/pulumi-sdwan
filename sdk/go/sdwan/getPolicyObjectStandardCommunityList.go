@@ -74,21 +74,11 @@ type LookupPolicyObjectStandardCommunityListResult struct {
 }
 
 func LookupPolicyObjectStandardCommunityListOutput(ctx *pulumi.Context, args LookupPolicyObjectStandardCommunityListOutputArgs, opts ...pulumi.InvokeOption) LookupPolicyObjectStandardCommunityListResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupPolicyObjectStandardCommunityListResultOutput, error) {
 			args := v.(LookupPolicyObjectStandardCommunityListArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupPolicyObjectStandardCommunityListResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getPolicyObjectStandardCommunityList:getPolicyObjectStandardCommunityList", args, &rv, "", opts...)
-			if err != nil {
-				return LookupPolicyObjectStandardCommunityListResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupPolicyObjectStandardCommunityListResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupPolicyObjectStandardCommunityListResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getPolicyObjectStandardCommunityList:getPolicyObjectStandardCommunityList", args, LookupPolicyObjectStandardCommunityListResultOutput{}, options).(LookupPolicyObjectStandardCommunityListResultOutput), nil
 		}).(LookupPolicyObjectStandardCommunityListResultOutput)
 }
 

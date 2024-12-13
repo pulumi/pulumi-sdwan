@@ -78,21 +78,11 @@ type LookupServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureResult
 }
 
 func LookupServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureOutput(ctx *pulumi.Context, args LookupServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureResultOutput, error) {
 			args := v.(LookupServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature:getServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature", args, &rv, "", opts...)
-			if err != nil {
-				return LookupServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature:getServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature", args, LookupServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureResultOutput{}, options).(LookupServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureResultOutput), nil
 		}).(LookupServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureResultOutput)
 }
 

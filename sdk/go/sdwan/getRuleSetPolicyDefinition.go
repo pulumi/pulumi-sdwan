@@ -69,21 +69,11 @@ type LookupRuleSetPolicyDefinitionResult struct {
 }
 
 func LookupRuleSetPolicyDefinitionOutput(ctx *pulumi.Context, args LookupRuleSetPolicyDefinitionOutputArgs, opts ...pulumi.InvokeOption) LookupRuleSetPolicyDefinitionResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupRuleSetPolicyDefinitionResultOutput, error) {
 			args := v.(LookupRuleSetPolicyDefinitionArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupRuleSetPolicyDefinitionResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getRuleSetPolicyDefinition:getRuleSetPolicyDefinition", args, &rv, "", opts...)
-			if err != nil {
-				return LookupRuleSetPolicyDefinitionResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupRuleSetPolicyDefinitionResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupRuleSetPolicyDefinitionResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getRuleSetPolicyDefinition:getRuleSetPolicyDefinition", args, LookupRuleSetPolicyDefinitionResultOutput{}, options).(LookupRuleSetPolicyDefinitionResultOutput), nil
 		}).(LookupRuleSetPolicyDefinitionResultOutput)
 }
 

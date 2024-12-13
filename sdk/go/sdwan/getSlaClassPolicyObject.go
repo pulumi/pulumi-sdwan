@@ -82,21 +82,11 @@ type LookupSlaClassPolicyObjectResult struct {
 }
 
 func LookupSlaClassPolicyObjectOutput(ctx *pulumi.Context, args LookupSlaClassPolicyObjectOutputArgs, opts ...pulumi.InvokeOption) LookupSlaClassPolicyObjectResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupSlaClassPolicyObjectResultOutput, error) {
 			args := v.(LookupSlaClassPolicyObjectArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupSlaClassPolicyObjectResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getSlaClassPolicyObject:getSlaClassPolicyObject", args, &rv, "", opts...)
-			if err != nil {
-				return LookupSlaClassPolicyObjectResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupSlaClassPolicyObjectResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupSlaClassPolicyObjectResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getSlaClassPolicyObject:getSlaClassPolicyObject", args, LookupSlaClassPolicyObjectResultOutput{}, options).(LookupSlaClassPolicyObjectResultOutput), nil
 		}).(LookupSlaClassPolicyObjectResultOutput)
 }
 

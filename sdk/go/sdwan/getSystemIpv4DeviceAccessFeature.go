@@ -76,21 +76,11 @@ type LookupSystemIpv4DeviceAccessFeatureResult struct {
 }
 
 func LookupSystemIpv4DeviceAccessFeatureOutput(ctx *pulumi.Context, args LookupSystemIpv4DeviceAccessFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupSystemIpv4DeviceAccessFeatureResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupSystemIpv4DeviceAccessFeatureResultOutput, error) {
 			args := v.(LookupSystemIpv4DeviceAccessFeatureArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupSystemIpv4DeviceAccessFeatureResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getSystemIpv4DeviceAccessFeature:getSystemIpv4DeviceAccessFeature", args, &rv, "", opts...)
-			if err != nil {
-				return LookupSystemIpv4DeviceAccessFeatureResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupSystemIpv4DeviceAccessFeatureResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupSystemIpv4DeviceAccessFeatureResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getSystemIpv4DeviceAccessFeature:getSystemIpv4DeviceAccessFeature", args, LookupSystemIpv4DeviceAccessFeatureResultOutput{}, options).(LookupSystemIpv4DeviceAccessFeatureResultOutput), nil
 		}).(LookupSystemIpv4DeviceAccessFeatureResultOutput)
 }
 

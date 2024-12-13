@@ -58,6 +58,30 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetObjectGroupPolicyDefinitionResult> Invoke(GetObjectGroupPolicyDefinitionInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetObjectGroupPolicyDefinitionResult>("sdwan:index/getObjectGroupPolicyDefinition:getObjectGroupPolicyDefinition", args ?? new GetObjectGroupPolicyDefinitionInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Object Group Policy Definition .
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetObjectGroupPolicyDefinition.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetObjectGroupPolicyDefinitionResult> Invoke(GetObjectGroupPolicyDefinitionInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetObjectGroupPolicyDefinitionResult>("sdwan:index/getObjectGroupPolicyDefinition:getObjectGroupPolicyDefinition", args ?? new GetObjectGroupPolicyDefinitionInvokeArgs(), options.WithDefaults());
     }
 
 

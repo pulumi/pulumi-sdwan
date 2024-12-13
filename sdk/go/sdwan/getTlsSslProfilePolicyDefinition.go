@@ -89,21 +89,11 @@ type LookupTlsSslProfilePolicyDefinitionResult struct {
 }
 
 func LookupTlsSslProfilePolicyDefinitionOutput(ctx *pulumi.Context, args LookupTlsSslProfilePolicyDefinitionOutputArgs, opts ...pulumi.InvokeOption) LookupTlsSslProfilePolicyDefinitionResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupTlsSslProfilePolicyDefinitionResultOutput, error) {
 			args := v.(LookupTlsSslProfilePolicyDefinitionArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupTlsSslProfilePolicyDefinitionResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getTlsSslProfilePolicyDefinition:getTlsSslProfilePolicyDefinition", args, &rv, "", opts...)
-			if err != nil {
-				return LookupTlsSslProfilePolicyDefinitionResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupTlsSslProfilePolicyDefinitionResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupTlsSslProfilePolicyDefinitionResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getTlsSslProfilePolicyDefinition:getTlsSslProfilePolicyDefinition", args, LookupTlsSslProfilePolicyDefinitionResultOutput{}, options).(LookupTlsSslProfilePolicyDefinitionResultOutput), nil
 		}).(LookupTlsSslProfilePolicyDefinitionResultOutput)
 }
 

@@ -58,6 +58,30 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetAsPathListPolicyObjectResult> Invoke(GetAsPathListPolicyObjectInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetAsPathListPolicyObjectResult>("sdwan:index/getAsPathListPolicyObject:getAsPathListPolicyObject", args ?? new GetAsPathListPolicyObjectInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the AS Path List Policy Object .
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetAsPathListPolicyObject.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetAsPathListPolicyObjectResult> Invoke(GetAsPathListPolicyObjectInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetAsPathListPolicyObjectResult>("sdwan:index/getAsPathListPolicyObject:getAsPathListPolicyObject", args ?? new GetAsPathListPolicyObjectInvokeArgs(), options.WithDefaults());
     }
 
 

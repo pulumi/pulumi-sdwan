@@ -75,21 +75,11 @@ type LookupHubAndSpokeTopologyPolicyDefinitionResult struct {
 }
 
 func LookupHubAndSpokeTopologyPolicyDefinitionOutput(ctx *pulumi.Context, args LookupHubAndSpokeTopologyPolicyDefinitionOutputArgs, opts ...pulumi.InvokeOption) LookupHubAndSpokeTopologyPolicyDefinitionResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupHubAndSpokeTopologyPolicyDefinitionResultOutput, error) {
 			args := v.(LookupHubAndSpokeTopologyPolicyDefinitionArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupHubAndSpokeTopologyPolicyDefinitionResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getHubAndSpokeTopologyPolicyDefinition:getHubAndSpokeTopologyPolicyDefinition", args, &rv, "", opts...)
-			if err != nil {
-				return LookupHubAndSpokeTopologyPolicyDefinitionResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupHubAndSpokeTopologyPolicyDefinitionResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupHubAndSpokeTopologyPolicyDefinitionResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getHubAndSpokeTopologyPolicyDefinition:getHubAndSpokeTopologyPolicyDefinition", args, LookupHubAndSpokeTopologyPolicyDefinitionResultOutput{}, options).(LookupHubAndSpokeTopologyPolicyDefinitionResultOutput), nil
 		}).(LookupHubAndSpokeTopologyPolicyDefinitionResultOutput)
 }
 
