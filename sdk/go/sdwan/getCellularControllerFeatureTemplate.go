@@ -95,21 +95,11 @@ type LookupCellularControllerFeatureTemplateResult struct {
 }
 
 func LookupCellularControllerFeatureTemplateOutput(ctx *pulumi.Context, args LookupCellularControllerFeatureTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupCellularControllerFeatureTemplateResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupCellularControllerFeatureTemplateResultOutput, error) {
 			args := v.(LookupCellularControllerFeatureTemplateArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupCellularControllerFeatureTemplateResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getCellularControllerFeatureTemplate:getCellularControllerFeatureTemplate", args, &rv, "", opts...)
-			if err != nil {
-				return LookupCellularControllerFeatureTemplateResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupCellularControllerFeatureTemplateResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupCellularControllerFeatureTemplateResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getCellularControllerFeatureTemplate:getCellularControllerFeatureTemplate", args, LookupCellularControllerFeatureTemplateResultOutput{}, options).(LookupCellularControllerFeatureTemplateResultOutput), nil
 		}).(LookupCellularControllerFeatureTemplateResultOutput)
 }
 

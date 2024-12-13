@@ -58,6 +58,30 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetRewriteRulePolicyDefinitionResult> Invoke(GetRewriteRulePolicyDefinitionInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetRewriteRulePolicyDefinitionResult>("sdwan:index/getRewriteRulePolicyDefinition:getRewriteRulePolicyDefinition", args ?? new GetRewriteRulePolicyDefinitionInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Rewrite Rule Policy Definition .
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetRewriteRulePolicyDefinition.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetRewriteRulePolicyDefinitionResult> Invoke(GetRewriteRulePolicyDefinitionInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetRewriteRulePolicyDefinitionResult>("sdwan:index/getRewriteRulePolicyDefinition:getRewriteRulePolicyDefinition", args ?? new GetRewriteRulePolicyDefinitionInvokeArgs(), options.WithDefaults());
     }
 
 

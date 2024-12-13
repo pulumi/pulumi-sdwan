@@ -77,21 +77,11 @@ type LookupConfigurationGroupResult struct {
 }
 
 func LookupConfigurationGroupOutput(ctx *pulumi.Context, args LookupConfigurationGroupOutputArgs, opts ...pulumi.InvokeOption) LookupConfigurationGroupResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupConfigurationGroupResultOutput, error) {
 			args := v.(LookupConfigurationGroupArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupConfigurationGroupResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getConfigurationGroup:getConfigurationGroup", args, &rv, "", opts...)
-			if err != nil {
-				return LookupConfigurationGroupResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupConfigurationGroupResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupConfigurationGroupResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getConfigurationGroup:getConfigurationGroup", args, LookupConfigurationGroupResultOutput{}, options).(LookupConfigurationGroupResultOutput), nil
 		}).(LookupConfigurationGroupResultOutput)
 }
 

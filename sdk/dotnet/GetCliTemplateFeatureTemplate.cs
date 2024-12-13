@@ -58,6 +58,30 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetCliTemplateFeatureTemplateResult> Invoke(GetCliTemplateFeatureTemplateInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetCliTemplateFeatureTemplateResult>("sdwan:index/getCliTemplateFeatureTemplate:getCliTemplateFeatureTemplate", args ?? new GetCliTemplateFeatureTemplateInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the CLI Template feature template.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetCliTemplateFeatureTemplate.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetCliTemplateFeatureTemplateResult> Invoke(GetCliTemplateFeatureTemplateInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetCliTemplateFeatureTemplateResult>("sdwan:index/getCliTemplateFeatureTemplate:getCliTemplateFeatureTemplate", args ?? new GetCliTemplateFeatureTemplateInvokeArgs(), options.WithDefaults());
     }
 
 

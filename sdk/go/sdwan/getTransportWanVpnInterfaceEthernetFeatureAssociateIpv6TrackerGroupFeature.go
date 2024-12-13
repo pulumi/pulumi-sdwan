@@ -78,21 +78,11 @@ type LookupTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatu
 }
 
 func LookupTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureOutput(ctx *pulumi.Context, args LookupTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureResultOutput, error) {
 			args := v.(LookupTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature:getTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature", args, &rv, "", opts...)
-			if err != nil {
-				return LookupTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature:getTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature", args, LookupTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureResultOutput{}, options).(LookupTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureResultOutput), nil
 		}).(LookupTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureResultOutput)
 }
 

@@ -89,21 +89,11 @@ type LookupLocalizedPolicyResult struct {
 }
 
 func LookupLocalizedPolicyOutput(ctx *pulumi.Context, args LookupLocalizedPolicyOutputArgs, opts ...pulumi.InvokeOption) LookupLocalizedPolicyResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupLocalizedPolicyResultOutput, error) {
 			args := v.(LookupLocalizedPolicyArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupLocalizedPolicyResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getLocalizedPolicy:getLocalizedPolicy", args, &rv, "", opts...)
-			if err != nil {
-				return LookupLocalizedPolicyResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupLocalizedPolicyResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupLocalizedPolicyResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getLocalizedPolicy:getLocalizedPolicy", args, LookupLocalizedPolicyResultOutput{}, options).(LookupLocalizedPolicyResultOutput), nil
 		}).(LookupLocalizedPolicyResultOutput)
 }
 

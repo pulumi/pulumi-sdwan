@@ -58,6 +58,30 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetHubAndSpokeTopologyPolicyDefinitionResult> Invoke(GetHubAndSpokeTopologyPolicyDefinitionInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetHubAndSpokeTopologyPolicyDefinitionResult>("sdwan:index/getHubAndSpokeTopologyPolicyDefinition:getHubAndSpokeTopologyPolicyDefinition", args ?? new GetHubAndSpokeTopologyPolicyDefinitionInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Hub and Spoke Topology Policy Definition .
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetHubAndSpokeTopologyPolicyDefinition.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetHubAndSpokeTopologyPolicyDefinitionResult> Invoke(GetHubAndSpokeTopologyPolicyDefinitionInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetHubAndSpokeTopologyPolicyDefinitionResult>("sdwan:index/getHubAndSpokeTopologyPolicyDefinition:getHubAndSpokeTopologyPolicyDefinition", args ?? new GetHubAndSpokeTopologyPolicyDefinitionInvokeArgs(), options.WithDefaults());
     }
 
 

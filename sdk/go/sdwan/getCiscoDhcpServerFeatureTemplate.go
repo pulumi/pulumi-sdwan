@@ -109,21 +109,11 @@ type LookupCiscoDhcpServerFeatureTemplateResult struct {
 }
 
 func LookupCiscoDhcpServerFeatureTemplateOutput(ctx *pulumi.Context, args LookupCiscoDhcpServerFeatureTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupCiscoDhcpServerFeatureTemplateResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupCiscoDhcpServerFeatureTemplateResultOutput, error) {
 			args := v.(LookupCiscoDhcpServerFeatureTemplateArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupCiscoDhcpServerFeatureTemplateResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getCiscoDhcpServerFeatureTemplate:getCiscoDhcpServerFeatureTemplate", args, &rv, "", opts...)
-			if err != nil {
-				return LookupCiscoDhcpServerFeatureTemplateResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupCiscoDhcpServerFeatureTemplateResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupCiscoDhcpServerFeatureTemplateResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getCiscoDhcpServerFeatureTemplate:getCiscoDhcpServerFeatureTemplate", args, LookupCiscoDhcpServerFeatureTemplateResultOutput{}, options).(LookupCiscoDhcpServerFeatureTemplateResultOutput), nil
 		}).(LookupCiscoDhcpServerFeatureTemplateResultOutput)
 }
 

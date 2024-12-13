@@ -60,6 +60,31 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetPolicyObjectStandardCommunityListResult> Invoke(GetPolicyObjectStandardCommunityListInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetPolicyObjectStandardCommunityListResult>("sdwan:index/getPolicyObjectStandardCommunityList:getPolicyObjectStandardCommunityList", args ?? new GetPolicyObjectStandardCommunityListInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Policy Object Standard Community List Policy_object.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetPolicyObjectStandardCommunityList.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetPolicyObjectStandardCommunityListResult> Invoke(GetPolicyObjectStandardCommunityListInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetPolicyObjectStandardCommunityListResult>("sdwan:index/getPolicyObjectStandardCommunityList:getPolicyObjectStandardCommunityList", args ?? new GetPolicyObjectStandardCommunityListInvokeArgs(), options.WithDefaults());
     }
 
 

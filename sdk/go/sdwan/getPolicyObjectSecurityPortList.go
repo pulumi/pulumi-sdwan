@@ -74,21 +74,11 @@ type LookupPolicyObjectSecurityPortListResult struct {
 }
 
 func LookupPolicyObjectSecurityPortListOutput(ctx *pulumi.Context, args LookupPolicyObjectSecurityPortListOutputArgs, opts ...pulumi.InvokeOption) LookupPolicyObjectSecurityPortListResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupPolicyObjectSecurityPortListResultOutput, error) {
 			args := v.(LookupPolicyObjectSecurityPortListArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupPolicyObjectSecurityPortListResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getPolicyObjectSecurityPortList:getPolicyObjectSecurityPortList", args, &rv, "", opts...)
-			if err != nil {
-				return LookupPolicyObjectSecurityPortListResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupPolicyObjectSecurityPortListResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupPolicyObjectSecurityPortListResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getPolicyObjectSecurityPortList:getPolicyObjectSecurityPortList", args, LookupPolicyObjectSecurityPortListResultOutput{}, options).(LookupPolicyObjectSecurityPortListResultOutput), nil
 		}).(LookupPolicyObjectSecurityPortListResultOutput)
 }
 

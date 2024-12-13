@@ -92,21 +92,11 @@ type LookupSystemNtpFeatureResult struct {
 }
 
 func LookupSystemNtpFeatureOutput(ctx *pulumi.Context, args LookupSystemNtpFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupSystemNtpFeatureResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupSystemNtpFeatureResultOutput, error) {
 			args := v.(LookupSystemNtpFeatureArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupSystemNtpFeatureResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getSystemNtpFeature:getSystemNtpFeature", args, &rv, "", opts...)
-			if err != nil {
-				return LookupSystemNtpFeatureResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupSystemNtpFeatureResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupSystemNtpFeatureResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getSystemNtpFeature:getSystemNtpFeature", args, LookupSystemNtpFeatureResultOutput{}, options).(LookupSystemNtpFeatureResultOutput), nil
 		}).(LookupSystemNtpFeatureResultOutput)
 }
 

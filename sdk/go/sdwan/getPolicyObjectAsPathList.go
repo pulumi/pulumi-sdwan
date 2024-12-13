@@ -76,21 +76,11 @@ type LookupPolicyObjectAsPathListResult struct {
 }
 
 func LookupPolicyObjectAsPathListOutput(ctx *pulumi.Context, args LookupPolicyObjectAsPathListOutputArgs, opts ...pulumi.InvokeOption) LookupPolicyObjectAsPathListResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupPolicyObjectAsPathListResultOutput, error) {
 			args := v.(LookupPolicyObjectAsPathListArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupPolicyObjectAsPathListResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getPolicyObjectAsPathList:getPolicyObjectAsPathList", args, &rv, "", opts...)
-			if err != nil {
-				return LookupPolicyObjectAsPathListResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupPolicyObjectAsPathListResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupPolicyObjectAsPathListResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getPolicyObjectAsPathList:getPolicyObjectAsPathList", args, LookupPolicyObjectAsPathListResultOutput{}, options).(LookupPolicyObjectAsPathListResultOutput), nil
 		}).(LookupPolicyObjectAsPathListResultOutput)
 }
 

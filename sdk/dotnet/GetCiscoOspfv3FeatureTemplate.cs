@@ -58,6 +58,30 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetCiscoOspfv3FeatureTemplateResult> Invoke(GetCiscoOspfv3FeatureTemplateInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetCiscoOspfv3FeatureTemplateResult>("sdwan:index/getCiscoOspfv3FeatureTemplate:getCiscoOspfv3FeatureTemplate", args ?? new GetCiscoOspfv3FeatureTemplateInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Cisco OSPFv3 feature template.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetCiscoOspfv3FeatureTemplate.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetCiscoOspfv3FeatureTemplateResult> Invoke(GetCiscoOspfv3FeatureTemplateInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetCiscoOspfv3FeatureTemplateResult>("sdwan:index/getCiscoOspfv3FeatureTemplate:getCiscoOspfv3FeatureTemplate", args ?? new GetCiscoOspfv3FeatureTemplateInvokeArgs(), options.WithDefaults());
     }
 
 

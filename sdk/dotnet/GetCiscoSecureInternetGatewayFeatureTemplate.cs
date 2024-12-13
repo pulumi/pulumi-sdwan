@@ -58,6 +58,30 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetCiscoSecureInternetGatewayFeatureTemplateResult> Invoke(GetCiscoSecureInternetGatewayFeatureTemplateInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetCiscoSecureInternetGatewayFeatureTemplateResult>("sdwan:index/getCiscoSecureInternetGatewayFeatureTemplate:getCiscoSecureInternetGatewayFeatureTemplate", args ?? new GetCiscoSecureInternetGatewayFeatureTemplateInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Cisco Secure Internet Gateway feature template.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetCiscoSecureInternetGatewayFeatureTemplate.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetCiscoSecureInternetGatewayFeatureTemplateResult> Invoke(GetCiscoSecureInternetGatewayFeatureTemplateInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetCiscoSecureInternetGatewayFeatureTemplateResult>("sdwan:index/getCiscoSecureInternetGatewayFeatureTemplate:getCiscoSecureInternetGatewayFeatureTemplate", args ?? new GetCiscoSecureInternetGatewayFeatureTemplateInvokeArgs(), options.WithDefaults());
     }
 
 

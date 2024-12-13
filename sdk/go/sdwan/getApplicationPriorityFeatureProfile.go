@@ -65,21 +65,11 @@ type LookupApplicationPriorityFeatureProfileResult struct {
 }
 
 func LookupApplicationPriorityFeatureProfileOutput(ctx *pulumi.Context, args LookupApplicationPriorityFeatureProfileOutputArgs, opts ...pulumi.InvokeOption) LookupApplicationPriorityFeatureProfileResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupApplicationPriorityFeatureProfileResultOutput, error) {
 			args := v.(LookupApplicationPriorityFeatureProfileArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupApplicationPriorityFeatureProfileResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getApplicationPriorityFeatureProfile:getApplicationPriorityFeatureProfile", args, &rv, "", opts...)
-			if err != nil {
-				return LookupApplicationPriorityFeatureProfileResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupApplicationPriorityFeatureProfileResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupApplicationPriorityFeatureProfileResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getApplicationPriorityFeatureProfile:getApplicationPriorityFeatureProfile", args, LookupApplicationPriorityFeatureProfileResultOutput{}, options).(LookupApplicationPriorityFeatureProfileResultOutput), nil
 		}).(LookupApplicationPriorityFeatureProfileResultOutput)
 }
 

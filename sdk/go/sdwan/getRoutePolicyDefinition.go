@@ -73,21 +73,11 @@ type LookupRoutePolicyDefinitionResult struct {
 }
 
 func LookupRoutePolicyDefinitionOutput(ctx *pulumi.Context, args LookupRoutePolicyDefinitionOutputArgs, opts ...pulumi.InvokeOption) LookupRoutePolicyDefinitionResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupRoutePolicyDefinitionResultOutput, error) {
 			args := v.(LookupRoutePolicyDefinitionArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupRoutePolicyDefinitionResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getRoutePolicyDefinition:getRoutePolicyDefinition", args, &rv, "", opts...)
-			if err != nil {
-				return LookupRoutePolicyDefinitionResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupRoutePolicyDefinitionResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupRoutePolicyDefinitionResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getRoutePolicyDefinition:getRoutePolicyDefinition", args, LookupRoutePolicyDefinitionResultOutput{}, options).(LookupRoutePolicyDefinitionResultOutput), nil
 		}).(LookupRoutePolicyDefinitionResultOutput)
 }
 

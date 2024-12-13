@@ -58,6 +58,30 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetDnsSecurityPolicyDefinitionResult> Invoke(GetDnsSecurityPolicyDefinitionInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetDnsSecurityPolicyDefinitionResult>("sdwan:index/getDnsSecurityPolicyDefinition:getDnsSecurityPolicyDefinition", args ?? new GetDnsSecurityPolicyDefinitionInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the DNS Security Policy Definition .
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetDnsSecurityPolicyDefinition.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetDnsSecurityPolicyDefinitionResult> Invoke(GetDnsSecurityPolicyDefinitionInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetDnsSecurityPolicyDefinitionResult>("sdwan:index/getDnsSecurityPolicyDefinition:getDnsSecurityPolicyDefinition", args ?? new GetDnsSecurityPolicyDefinitionInvokeArgs(), options.WithDefaults());
     }
 
 

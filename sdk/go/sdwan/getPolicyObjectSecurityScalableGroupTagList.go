@@ -73,21 +73,11 @@ type LookupPolicyObjectSecurityScalableGroupTagListResult struct {
 }
 
 func LookupPolicyObjectSecurityScalableGroupTagListOutput(ctx *pulumi.Context, args LookupPolicyObjectSecurityScalableGroupTagListOutputArgs, opts ...pulumi.InvokeOption) LookupPolicyObjectSecurityScalableGroupTagListResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupPolicyObjectSecurityScalableGroupTagListResultOutput, error) {
 			args := v.(LookupPolicyObjectSecurityScalableGroupTagListArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupPolicyObjectSecurityScalableGroupTagListResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getPolicyObjectSecurityScalableGroupTagList:getPolicyObjectSecurityScalableGroupTagList", args, &rv, "", opts...)
-			if err != nil {
-				return LookupPolicyObjectSecurityScalableGroupTagListResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupPolicyObjectSecurityScalableGroupTagListResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupPolicyObjectSecurityScalableGroupTagListResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getPolicyObjectSecurityScalableGroupTagList:getPolicyObjectSecurityScalableGroupTagList", args, LookupPolicyObjectSecurityScalableGroupTagListResultOutput{}, options).(LookupPolicyObjectSecurityScalableGroupTagListResultOutput), nil
 		}).(LookupPolicyObjectSecurityScalableGroupTagListResultOutput)
 }
 

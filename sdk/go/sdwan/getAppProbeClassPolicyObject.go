@@ -69,21 +69,11 @@ type LookupAppProbeClassPolicyObjectResult struct {
 }
 
 func LookupAppProbeClassPolicyObjectOutput(ctx *pulumi.Context, args LookupAppProbeClassPolicyObjectOutputArgs, opts ...pulumi.InvokeOption) LookupAppProbeClassPolicyObjectResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupAppProbeClassPolicyObjectResultOutput, error) {
 			args := v.(LookupAppProbeClassPolicyObjectArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupAppProbeClassPolicyObjectResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getAppProbeClassPolicyObject:getAppProbeClassPolicyObject", args, &rv, "", opts...)
-			if err != nil {
-				return LookupAppProbeClassPolicyObjectResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupAppProbeClassPolicyObjectResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupAppProbeClassPolicyObjectResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getAppProbeClassPolicyObject:getAppProbeClassPolicyObject", args, LookupAppProbeClassPolicyObjectResultOutput{}, options).(LookupAppProbeClassPolicyObjectResultOutput), nil
 		}).(LookupAppProbeClassPolicyObjectResultOutput)
 }
 

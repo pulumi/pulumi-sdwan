@@ -52,6 +52,27 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetVedgeInventoryResult> Invoke(InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetVedgeInventoryResult>("sdwan:index/getVedgeInventory:getVedgeInventory", InvokeArgs.Empty, options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the VEdge Inventory .
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetVedgeInventory.Invoke();
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetVedgeInventoryResult> Invoke(InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetVedgeInventoryResult>("sdwan:index/getVedgeInventory:getVedgeInventory", InvokeArgs.Empty, options.WithDefaults());
     }
 
 

@@ -78,21 +78,11 @@ type LookupServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureResult st
 }
 
 func LookupServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureOutput(ctx *pulumi.Context, args LookupServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureResultOutput, error) {
 			args := v.(LookupServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature:getServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature", args, &rv, "", opts...)
-			if err != nil {
-				return LookupServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature:getServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature", args, LookupServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureResultOutput{}, options).(LookupServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureResultOutput), nil
 		}).(LookupServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureResultOutput)
 }
 

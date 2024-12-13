@@ -58,6 +58,30 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetIpv6DeviceAclPolicyDefinitionResult> Invoke(GetIpv6DeviceAclPolicyDefinitionInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetIpv6DeviceAclPolicyDefinitionResult>("sdwan:index/getIpv6DeviceAclPolicyDefinition:getIpv6DeviceAclPolicyDefinition", args ?? new GetIpv6DeviceAclPolicyDefinitionInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the IPv6 Device ACL Policy Definition .
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetIpv6DeviceAclPolicyDefinition.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetIpv6DeviceAclPolicyDefinitionResult> Invoke(GetIpv6DeviceAclPolicyDefinitionInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetIpv6DeviceAclPolicyDefinitionResult>("sdwan:index/getIpv6DeviceAclPolicyDefinition:getIpv6DeviceAclPolicyDefinition", args ?? new GetIpv6DeviceAclPolicyDefinitionInvokeArgs(), options.WithDefaults());
     }
 
 

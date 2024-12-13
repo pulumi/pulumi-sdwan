@@ -94,21 +94,11 @@ type LookupServiceObjectTrackerFeatureResult struct {
 }
 
 func LookupServiceObjectTrackerFeatureOutput(ctx *pulumi.Context, args LookupServiceObjectTrackerFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupServiceObjectTrackerFeatureResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupServiceObjectTrackerFeatureResultOutput, error) {
 			args := v.(LookupServiceObjectTrackerFeatureArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupServiceObjectTrackerFeatureResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getServiceObjectTrackerFeature:getServiceObjectTrackerFeature", args, &rv, "", opts...)
-			if err != nil {
-				return LookupServiceObjectTrackerFeatureResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupServiceObjectTrackerFeatureResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupServiceObjectTrackerFeatureResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getServiceObjectTrackerFeature:getServiceObjectTrackerFeature", args, LookupServiceObjectTrackerFeatureResultOutput{}, options).(LookupServiceObjectTrackerFeatureResultOutput), nil
 		}).(LookupServiceObjectTrackerFeatureResultOutput)
 }
 

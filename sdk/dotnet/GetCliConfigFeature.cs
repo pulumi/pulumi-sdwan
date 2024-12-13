@@ -60,6 +60,31 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetCliConfigFeatureResult> Invoke(GetCliConfigFeatureInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetCliConfigFeatureResult>("sdwan:index/getCliConfigFeature:getCliConfigFeature", args ?? new GetCliConfigFeatureInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the CLI Config Feature .
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetCliConfigFeature.Invoke(new()
+        ///     {
+        ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetCliConfigFeatureResult> Invoke(GetCliConfigFeatureInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetCliConfigFeatureResult>("sdwan:index/getCliConfigFeature:getCliConfigFeature", args ?? new GetCliConfigFeatureInvokeArgs(), options.WithDefaults());
     }
 
 

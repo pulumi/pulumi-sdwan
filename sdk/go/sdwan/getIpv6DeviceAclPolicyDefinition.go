@@ -73,21 +73,11 @@ type LookupIpv6DeviceAclPolicyDefinitionResult struct {
 }
 
 func LookupIpv6DeviceAclPolicyDefinitionOutput(ctx *pulumi.Context, args LookupIpv6DeviceAclPolicyDefinitionOutputArgs, opts ...pulumi.InvokeOption) LookupIpv6DeviceAclPolicyDefinitionResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupIpv6DeviceAclPolicyDefinitionResultOutput, error) {
 			args := v.(LookupIpv6DeviceAclPolicyDefinitionArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupIpv6DeviceAclPolicyDefinitionResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getIpv6DeviceAclPolicyDefinition:getIpv6DeviceAclPolicyDefinition", args, &rv, "", opts...)
-			if err != nil {
-				return LookupIpv6DeviceAclPolicyDefinitionResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupIpv6DeviceAclPolicyDefinitionResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupIpv6DeviceAclPolicyDefinitionResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getIpv6DeviceAclPolicyDefinition:getIpv6DeviceAclPolicyDefinition", args, LookupIpv6DeviceAclPolicyDefinitionResultOutput{}, options).(LookupIpv6DeviceAclPolicyDefinitionResultOutput), nil
 		}).(LookupIpv6DeviceAclPolicyDefinitionResultOutput)
 }
 

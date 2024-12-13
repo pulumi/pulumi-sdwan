@@ -78,21 +78,11 @@ type LookupTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureRes
 }
 
 func LookupTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureOutput(ctx *pulumi.Context, args LookupTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureResultOutput, error) {
 			args := v.(LookupTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature:getTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature", args, &rv, "", opts...)
-			if err != nil {
-				return LookupTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature:getTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature", args, LookupTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureResultOutput{}, options).(LookupTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureResultOutput), nil
 		}).(LookupTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureResultOutput)
 }
 

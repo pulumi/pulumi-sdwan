@@ -58,6 +58,30 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetCedgeIgmpFeatureTemplateResult> Invoke(GetCedgeIgmpFeatureTemplateInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetCedgeIgmpFeatureTemplateResult>("sdwan:index/getCedgeIgmpFeatureTemplate:getCedgeIgmpFeatureTemplate", args ?? new GetCedgeIgmpFeatureTemplateInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the cEdge IGMP feature template.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetCedgeIgmpFeatureTemplate.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetCedgeIgmpFeatureTemplateResult> Invoke(GetCedgeIgmpFeatureTemplateInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetCedgeIgmpFeatureTemplateResult>("sdwan:index/getCedgeIgmpFeatureTemplate:getCedgeIgmpFeatureTemplate", args ?? new GetCedgeIgmpFeatureTemplateInvokeArgs(), options.WithDefaults());
     }
 
 

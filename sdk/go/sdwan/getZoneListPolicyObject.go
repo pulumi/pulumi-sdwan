@@ -67,21 +67,11 @@ type LookupZoneListPolicyObjectResult struct {
 }
 
 func LookupZoneListPolicyObjectOutput(ctx *pulumi.Context, args LookupZoneListPolicyObjectOutputArgs, opts ...pulumi.InvokeOption) LookupZoneListPolicyObjectResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupZoneListPolicyObjectResultOutput, error) {
 			args := v.(LookupZoneListPolicyObjectArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupZoneListPolicyObjectResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getZoneListPolicyObject:getZoneListPolicyObject", args, &rv, "", opts...)
-			if err != nil {
-				return LookupZoneListPolicyObjectResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupZoneListPolicyObjectResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupZoneListPolicyObjectResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getZoneListPolicyObject:getZoneListPolicyObject", args, LookupZoneListPolicyObjectResultOutput{}, options).(LookupZoneListPolicyObjectResultOutput), nil
 		}).(LookupZoneListPolicyObjectResultOutput)
 }
 

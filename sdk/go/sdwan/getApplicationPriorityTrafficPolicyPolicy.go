@@ -77,21 +77,11 @@ type LookupApplicationPriorityTrafficPolicyPolicyResult struct {
 }
 
 func LookupApplicationPriorityTrafficPolicyPolicyOutput(ctx *pulumi.Context, args LookupApplicationPriorityTrafficPolicyPolicyOutputArgs, opts ...pulumi.InvokeOption) LookupApplicationPriorityTrafficPolicyPolicyResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupApplicationPriorityTrafficPolicyPolicyResultOutput, error) {
 			args := v.(LookupApplicationPriorityTrafficPolicyPolicyArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupApplicationPriorityTrafficPolicyPolicyResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getApplicationPriorityTrafficPolicyPolicy:getApplicationPriorityTrafficPolicyPolicy", args, &rv, "", opts...)
-			if err != nil {
-				return LookupApplicationPriorityTrafficPolicyPolicyResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupApplicationPriorityTrafficPolicyPolicyResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupApplicationPriorityTrafficPolicyPolicyResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getApplicationPriorityTrafficPolicyPolicy:getApplicationPriorityTrafficPolicyPolicy", args, LookupApplicationPriorityTrafficPolicyPolicyResultOutput{}, options).(LookupApplicationPriorityTrafficPolicyPolicyResultOutput), nil
 		}).(LookupApplicationPriorityTrafficPolicyPolicyResultOutput)
 }
 

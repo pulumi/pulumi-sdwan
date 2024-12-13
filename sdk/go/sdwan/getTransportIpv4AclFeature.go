@@ -76,21 +76,11 @@ type LookupTransportIpv4AclFeatureResult struct {
 }
 
 func LookupTransportIpv4AclFeatureOutput(ctx *pulumi.Context, args LookupTransportIpv4AclFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupTransportIpv4AclFeatureResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupTransportIpv4AclFeatureResultOutput, error) {
 			args := v.(LookupTransportIpv4AclFeatureArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupTransportIpv4AclFeatureResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getTransportIpv4AclFeature:getTransportIpv4AclFeature", args, &rv, "", opts...)
-			if err != nil {
-				return LookupTransportIpv4AclFeatureResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupTransportIpv4AclFeatureResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupTransportIpv4AclFeatureResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getTransportIpv4AclFeature:getTransportIpv4AclFeature", args, LookupTransportIpv4AclFeatureResultOutput{}, options).(LookupTransportIpv4AclFeatureResultOutput), nil
 		}).(LookupTransportIpv4AclFeatureResultOutput)
 }
 

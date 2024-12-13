@@ -209,21 +209,11 @@ type LookupCiscoOspfv3FeatureTemplateResult struct {
 }
 
 func LookupCiscoOspfv3FeatureTemplateOutput(ctx *pulumi.Context, args LookupCiscoOspfv3FeatureTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupCiscoOspfv3FeatureTemplateResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupCiscoOspfv3FeatureTemplateResultOutput, error) {
 			args := v.(LookupCiscoOspfv3FeatureTemplateArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupCiscoOspfv3FeatureTemplateResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getCiscoOspfv3FeatureTemplate:getCiscoOspfv3FeatureTemplate", args, &rv, "", opts...)
-			if err != nil {
-				return LookupCiscoOspfv3FeatureTemplateResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupCiscoOspfv3FeatureTemplateResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupCiscoOspfv3FeatureTemplateResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getCiscoOspfv3FeatureTemplate:getCiscoOspfv3FeatureTemplate", args, LookupCiscoOspfv3FeatureTemplateResultOutput{}, options).(LookupCiscoOspfv3FeatureTemplateResultOutput), nil
 		}).(LookupCiscoOspfv3FeatureTemplateResultOutput)
 }
 

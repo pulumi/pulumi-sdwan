@@ -73,21 +73,11 @@ type LookupTransportWanVpnFeatureAssociateRoutingBgpFeatureResult struct {
 }
 
 func LookupTransportWanVpnFeatureAssociateRoutingBgpFeatureOutput(ctx *pulumi.Context, args LookupTransportWanVpnFeatureAssociateRoutingBgpFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupTransportWanVpnFeatureAssociateRoutingBgpFeatureResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupTransportWanVpnFeatureAssociateRoutingBgpFeatureResultOutput, error) {
 			args := v.(LookupTransportWanVpnFeatureAssociateRoutingBgpFeatureArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupTransportWanVpnFeatureAssociateRoutingBgpFeatureResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getTransportWanVpnFeatureAssociateRoutingBgpFeature:getTransportWanVpnFeatureAssociateRoutingBgpFeature", args, &rv, "", opts...)
-			if err != nil {
-				return LookupTransportWanVpnFeatureAssociateRoutingBgpFeatureResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupTransportWanVpnFeatureAssociateRoutingBgpFeatureResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupTransportWanVpnFeatureAssociateRoutingBgpFeatureResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getTransportWanVpnFeatureAssociateRoutingBgpFeature:getTransportWanVpnFeatureAssociateRoutingBgpFeature", args, LookupTransportWanVpnFeatureAssociateRoutingBgpFeatureResultOutput{}, options).(LookupTransportWanVpnFeatureAssociateRoutingBgpFeatureResultOutput), nil
 		}).(LookupTransportWanVpnFeatureAssociateRoutingBgpFeatureResultOutput)
 }
 

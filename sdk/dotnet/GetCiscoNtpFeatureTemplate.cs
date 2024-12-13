@@ -58,6 +58,30 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetCiscoNtpFeatureTemplateResult> Invoke(GetCiscoNtpFeatureTemplateInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetCiscoNtpFeatureTemplateResult>("sdwan:index/getCiscoNtpFeatureTemplate:getCiscoNtpFeatureTemplate", args ?? new GetCiscoNtpFeatureTemplateInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Cisco NTP feature template.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetCiscoNtpFeatureTemplate.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetCiscoNtpFeatureTemplateResult> Invoke(GetCiscoNtpFeatureTemplateInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetCiscoNtpFeatureTemplateResult>("sdwan:index/getCiscoNtpFeatureTemplate:getCiscoNtpFeatureTemplate", args ?? new GetCiscoNtpFeatureTemplateInvokeArgs(), options.WithDefaults());
     }
 
 
