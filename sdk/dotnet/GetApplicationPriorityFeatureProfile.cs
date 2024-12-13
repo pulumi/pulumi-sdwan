@@ -58,6 +58,30 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetApplicationPriorityFeatureProfileResult> Invoke(GetApplicationPriorityFeatureProfileInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetApplicationPriorityFeatureProfileResult>("sdwan:index/getApplicationPriorityFeatureProfile:getApplicationPriorityFeatureProfile", args ?? new GetApplicationPriorityFeatureProfileInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Application Priority Feature Profile .
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetApplicationPriorityFeatureProfile.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetApplicationPriorityFeatureProfileResult> Invoke(GetApplicationPriorityFeatureProfileInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetApplicationPriorityFeatureProfileResult>("sdwan:index/getApplicationPriorityFeatureProfile:getApplicationPriorityFeatureProfile", args ?? new GetApplicationPriorityFeatureProfileInvokeArgs(), options.WithDefaults());
     }
 
 

@@ -81,21 +81,11 @@ type LookupIntrusionPreventionPolicyDefinitionResult struct {
 }
 
 func LookupIntrusionPreventionPolicyDefinitionOutput(ctx *pulumi.Context, args LookupIntrusionPreventionPolicyDefinitionOutputArgs, opts ...pulumi.InvokeOption) LookupIntrusionPreventionPolicyDefinitionResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupIntrusionPreventionPolicyDefinitionResultOutput, error) {
 			args := v.(LookupIntrusionPreventionPolicyDefinitionArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupIntrusionPreventionPolicyDefinitionResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getIntrusionPreventionPolicyDefinition:getIntrusionPreventionPolicyDefinition", args, &rv, "", opts...)
-			if err != nil {
-				return LookupIntrusionPreventionPolicyDefinitionResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupIntrusionPreventionPolicyDefinitionResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupIntrusionPreventionPolicyDefinitionResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getIntrusionPreventionPolicyDefinition:getIntrusionPreventionPolicyDefinition", args, LookupIntrusionPreventionPolicyDefinitionResultOutput{}, options).(LookupIntrusionPreventionPolicyDefinitionResultOutput), nil
 		}).(LookupIntrusionPreventionPolicyDefinitionResultOutput)
 }
 

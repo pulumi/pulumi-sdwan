@@ -60,6 +60,31 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetTransportT1E1ControllerFeatureResult> Invoke(GetTransportT1E1ControllerFeatureInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetTransportT1E1ControllerFeatureResult>("sdwan:index/getTransportT1E1ControllerFeature:getTransportT1E1ControllerFeature", args ?? new GetTransportT1E1ControllerFeatureInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Transport T1 E1 Controller Feature.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetTransportT1E1ControllerFeature.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetTransportT1E1ControllerFeatureResult> Invoke(GetTransportT1E1ControllerFeatureInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetTransportT1E1ControllerFeatureResult>("sdwan:index/getTransportT1E1ControllerFeature:getTransportT1E1ControllerFeature", args ?? new GetTransportT1E1ControllerFeatureInvokeArgs(), options.WithDefaults());
     }
 
 

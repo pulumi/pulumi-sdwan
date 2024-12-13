@@ -58,6 +58,30 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetCedgeMulticastFeatureTemplateResult> Invoke(GetCedgeMulticastFeatureTemplateInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetCedgeMulticastFeatureTemplateResult>("sdwan:index/getCedgeMulticastFeatureTemplate:getCedgeMulticastFeatureTemplate", args ?? new GetCedgeMulticastFeatureTemplateInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the cEdge Multicast feature template.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetCedgeMulticastFeatureTemplate.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetCedgeMulticastFeatureTemplateResult> Invoke(GetCedgeMulticastFeatureTemplateInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetCedgeMulticastFeatureTemplateResult>("sdwan:index/getCedgeMulticastFeatureTemplate:getCedgeMulticastFeatureTemplate", args ?? new GetCedgeMulticastFeatureTemplateInvokeArgs(), options.WithDefaults());
     }
 
 

@@ -58,6 +58,30 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetCflowdPolicyDefinitionResult> Invoke(GetCflowdPolicyDefinitionInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetCflowdPolicyDefinitionResult>("sdwan:index/getCflowdPolicyDefinition:getCflowdPolicyDefinition", args ?? new GetCflowdPolicyDefinitionInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Cflowd Policy Definition .
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetCflowdPolicyDefinition.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetCflowdPolicyDefinitionResult> Invoke(GetCflowdPolicyDefinitionInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetCflowdPolicyDefinitionResult>("sdwan:index/getCflowdPolicyDefinition:getCflowdPolicyDefinition", args ?? new GetCflowdPolicyDefinitionInvokeArgs(), options.WithDefaults());
     }
 
 

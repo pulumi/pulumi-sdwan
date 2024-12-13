@@ -58,6 +58,30 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetDomainListPolicyObjectResult> Invoke(GetDomainListPolicyObjectInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetDomainListPolicyObjectResult>("sdwan:index/getDomainListPolicyObject:getDomainListPolicyObject", args ?? new GetDomainListPolicyObjectInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Domain List Policy Object .
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetDomainListPolicyObject.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetDomainListPolicyObjectResult> Invoke(GetDomainListPolicyObjectInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetDomainListPolicyObjectResult>("sdwan:index/getDomainListPolicyObject:getDomainListPolicyObject", args ?? new GetDomainListPolicyObjectInvokeArgs(), options.WithDefaults());
     }
 
 

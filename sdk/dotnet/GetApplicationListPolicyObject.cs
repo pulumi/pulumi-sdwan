@@ -58,6 +58,30 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetApplicationListPolicyObjectResult> Invoke(GetApplicationListPolicyObjectInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetApplicationListPolicyObjectResult>("sdwan:index/getApplicationListPolicyObject:getApplicationListPolicyObject", args ?? new GetApplicationListPolicyObjectInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Application List Policy Object .
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetApplicationListPolicyObject.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetApplicationListPolicyObjectResult> Invoke(GetApplicationListPolicyObjectInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetApplicationListPolicyObjectResult>("sdwan:index/getApplicationListPolicyObject:getApplicationListPolicyObject", args ?? new GetApplicationListPolicyObjectInvokeArgs(), options.WithDefaults());
     }
 
 

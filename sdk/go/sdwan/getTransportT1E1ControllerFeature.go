@@ -80,21 +80,11 @@ type LookupTransportT1E1ControllerFeatureResult struct {
 }
 
 func LookupTransportT1E1ControllerFeatureOutput(ctx *pulumi.Context, args LookupTransportT1E1ControllerFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupTransportT1E1ControllerFeatureResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupTransportT1E1ControllerFeatureResultOutput, error) {
 			args := v.(LookupTransportT1E1ControllerFeatureArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupTransportT1E1ControllerFeatureResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getTransportT1E1ControllerFeature:getTransportT1E1ControllerFeature", args, &rv, "", opts...)
-			if err != nil {
-				return LookupTransportT1E1ControllerFeatureResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupTransportT1E1ControllerFeatureResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupTransportT1E1ControllerFeatureResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getTransportT1E1ControllerFeature:getTransportT1E1ControllerFeature", args, LookupTransportT1E1ControllerFeatureResultOutput{}, options).(LookupTransportT1E1ControllerFeatureResultOutput), nil
 		}).(LookupTransportT1E1ControllerFeatureResultOutput)
 }
 

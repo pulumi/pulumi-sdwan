@@ -58,6 +58,30 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetEmbeddedSecurityFeatureProfileResult> Invoke(GetEmbeddedSecurityFeatureProfileInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetEmbeddedSecurityFeatureProfileResult>("sdwan:index/getEmbeddedSecurityFeatureProfile:getEmbeddedSecurityFeatureProfile", args ?? new GetEmbeddedSecurityFeatureProfileInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Embedded Security Feature Profile .
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetEmbeddedSecurityFeatureProfile.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetEmbeddedSecurityFeatureProfileResult> Invoke(GetEmbeddedSecurityFeatureProfileInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetEmbeddedSecurityFeatureProfileResult>("sdwan:index/getEmbeddedSecurityFeatureProfile:getEmbeddedSecurityFeatureProfile", args ?? new GetEmbeddedSecurityFeatureProfileInvokeArgs(), options.WithDefaults());
     }
 
 

@@ -62,6 +62,32 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetServiceLanVpnInterfaceEthernetFeatureResult> Invoke(GetServiceLanVpnInterfaceEthernetFeatureInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetServiceLanVpnInterfaceEthernetFeatureResult>("sdwan:index/getServiceLanVpnInterfaceEthernetFeature:getServiceLanVpnInterfaceEthernetFeature", args ?? new GetServiceLanVpnInterfaceEthernetFeatureInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Service LAN VPN Interface Ethernet Feature.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetServiceLanVpnInterfaceEthernetFeature.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+        ///         ServiceLanVpnFeatureId = "140331f6-5418-4755-a059-13c77eb96037",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetServiceLanVpnInterfaceEthernetFeatureResult> Invoke(GetServiceLanVpnInterfaceEthernetFeatureInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetServiceLanVpnInterfaceEthernetFeatureResult>("sdwan:index/getServiceLanVpnInterfaceEthernetFeature:getServiceLanVpnInterfaceEthernetFeature", args ?? new GetServiceLanVpnInterfaceEthernetFeatureInvokeArgs(), options.WithDefaults());
     }
 
 

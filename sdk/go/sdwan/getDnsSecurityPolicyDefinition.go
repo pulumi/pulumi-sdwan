@@ -87,21 +87,11 @@ type LookupDnsSecurityPolicyDefinitionResult struct {
 }
 
 func LookupDnsSecurityPolicyDefinitionOutput(ctx *pulumi.Context, args LookupDnsSecurityPolicyDefinitionOutputArgs, opts ...pulumi.InvokeOption) LookupDnsSecurityPolicyDefinitionResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupDnsSecurityPolicyDefinitionResultOutput, error) {
 			args := v.(LookupDnsSecurityPolicyDefinitionArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupDnsSecurityPolicyDefinitionResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getDnsSecurityPolicyDefinition:getDnsSecurityPolicyDefinition", args, &rv, "", opts...)
-			if err != nil {
-				return LookupDnsSecurityPolicyDefinitionResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupDnsSecurityPolicyDefinitionResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupDnsSecurityPolicyDefinitionResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getDnsSecurityPolicyDefinition:getDnsSecurityPolicyDefinition", args, LookupDnsSecurityPolicyDefinitionResultOutput{}, options).(LookupDnsSecurityPolicyDefinitionResultOutput), nil
 		}).(LookupDnsSecurityPolicyDefinitionResultOutput)
 }
 

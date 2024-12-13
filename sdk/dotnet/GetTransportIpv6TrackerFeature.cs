@@ -60,6 +60,31 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetTransportIpv6TrackerFeatureResult> Invoke(GetTransportIpv6TrackerFeatureInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetTransportIpv6TrackerFeatureResult>("sdwan:index/getTransportIpv6TrackerFeature:getTransportIpv6TrackerFeature", args ?? new GetTransportIpv6TrackerFeatureInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Transport IPv6 Tracker Feature.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetTransportIpv6TrackerFeature.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetTransportIpv6TrackerFeatureResult> Invoke(GetTransportIpv6TrackerFeatureInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetTransportIpv6TrackerFeatureResult>("sdwan:index/getTransportIpv6TrackerFeature:getTransportIpv6TrackerFeature", args ?? new GetTransportIpv6TrackerFeatureInvokeArgs(), options.WithDefaults());
     }
 
 

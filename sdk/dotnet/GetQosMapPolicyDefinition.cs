@@ -58,6 +58,30 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetQosMapPolicyDefinitionResult> Invoke(GetQosMapPolicyDefinitionInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetQosMapPolicyDefinitionResult>("sdwan:index/getQosMapPolicyDefinition:getQosMapPolicyDefinition", args ?? new GetQosMapPolicyDefinitionInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the QoS Map Policy Definition .
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetQosMapPolicyDefinition.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetQosMapPolicyDefinitionResult> Invoke(GetQosMapPolicyDefinitionInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetQosMapPolicyDefinitionResult>("sdwan:index/getQosMapPolicyDefinition:getQosMapPolicyDefinition", args ?? new GetQosMapPolicyDefinitionInvokeArgs(), options.WithDefaults());
     }
 
 

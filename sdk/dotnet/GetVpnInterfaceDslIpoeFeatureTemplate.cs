@@ -58,6 +58,30 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetVpnInterfaceDslIpoeFeatureTemplateResult> Invoke(GetVpnInterfaceDslIpoeFeatureTemplateInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetVpnInterfaceDslIpoeFeatureTemplateResult>("sdwan:index/getVpnInterfaceDslIpoeFeatureTemplate:getVpnInterfaceDslIpoeFeatureTemplate", args ?? new GetVpnInterfaceDslIpoeFeatureTemplateInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the VPN Interface DSL IPoE feature template.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetVpnInterfaceDslIpoeFeatureTemplate.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetVpnInterfaceDslIpoeFeatureTemplateResult> Invoke(GetVpnInterfaceDslIpoeFeatureTemplateInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetVpnInterfaceDslIpoeFeatureTemplateResult>("sdwan:index/getVpnInterfaceDslIpoeFeatureTemplate:getVpnInterfaceDslIpoeFeatureTemplate", args ?? new GetVpnInterfaceDslIpoeFeatureTemplateInvokeArgs(), options.WithDefaults());
     }
 
 

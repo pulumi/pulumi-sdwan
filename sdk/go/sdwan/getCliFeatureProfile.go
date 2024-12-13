@@ -65,21 +65,11 @@ type LookupCliFeatureProfileResult struct {
 }
 
 func LookupCliFeatureProfileOutput(ctx *pulumi.Context, args LookupCliFeatureProfileOutputArgs, opts ...pulumi.InvokeOption) LookupCliFeatureProfileResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupCliFeatureProfileResultOutput, error) {
 			args := v.(LookupCliFeatureProfileArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupCliFeatureProfileResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getCliFeatureProfile:getCliFeatureProfile", args, &rv, "", opts...)
-			if err != nil {
-				return LookupCliFeatureProfileResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupCliFeatureProfileResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupCliFeatureProfileResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getCliFeatureProfile:getCliFeatureProfile", args, LookupCliFeatureProfileResultOutput{}, options).(LookupCliFeatureProfileResultOutput), nil
 		}).(LookupCliFeatureProfileResultOutput)
 }
 

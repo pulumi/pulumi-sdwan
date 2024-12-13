@@ -58,6 +58,30 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetPreferredColorGroupPolicyObjectResult> Invoke(GetPreferredColorGroupPolicyObjectInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetPreferredColorGroupPolicyObjectResult>("sdwan:index/getPreferredColorGroupPolicyObject:getPreferredColorGroupPolicyObject", args ?? new GetPreferredColorGroupPolicyObjectInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Preferred Color Group Policy Object .
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetPreferredColorGroupPolicyObject.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetPreferredColorGroupPolicyObjectResult> Invoke(GetPreferredColorGroupPolicyObjectInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetPreferredColorGroupPolicyObjectResult>("sdwan:index/getPreferredColorGroupPolicyObject:getPreferredColorGroupPolicyObject", args ?? new GetPreferredColorGroupPolicyObjectInvokeArgs(), options.WithDefaults());
     }
 
 

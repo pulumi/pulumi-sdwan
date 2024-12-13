@@ -58,6 +58,30 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetUrlFilteringPolicyDefinitionResult> Invoke(GetUrlFilteringPolicyDefinitionInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetUrlFilteringPolicyDefinitionResult>("sdwan:index/getUrlFilteringPolicyDefinition:getUrlFilteringPolicyDefinition", args ?? new GetUrlFilteringPolicyDefinitionInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the URL Filtering Policy Definition .
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetUrlFilteringPolicyDefinition.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetUrlFilteringPolicyDefinitionResult> Invoke(GetUrlFilteringPolicyDefinitionInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetUrlFilteringPolicyDefinitionResult>("sdwan:index/getUrlFilteringPolicyDefinition:getUrlFilteringPolicyDefinition", args ?? new GetUrlFilteringPolicyDefinitionInvokeArgs(), options.WithDefaults());
     }
 
 

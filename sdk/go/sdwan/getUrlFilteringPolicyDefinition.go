@@ -91,21 +91,11 @@ type LookupUrlFilteringPolicyDefinitionResult struct {
 }
 
 func LookupUrlFilteringPolicyDefinitionOutput(ctx *pulumi.Context, args LookupUrlFilteringPolicyDefinitionOutputArgs, opts ...pulumi.InvokeOption) LookupUrlFilteringPolicyDefinitionResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupUrlFilteringPolicyDefinitionResultOutput, error) {
 			args := v.(LookupUrlFilteringPolicyDefinitionArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupUrlFilteringPolicyDefinitionResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getUrlFilteringPolicyDefinition:getUrlFilteringPolicyDefinition", args, &rv, "", opts...)
-			if err != nil {
-				return LookupUrlFilteringPolicyDefinitionResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupUrlFilteringPolicyDefinitionResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupUrlFilteringPolicyDefinitionResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getUrlFilteringPolicyDefinition:getUrlFilteringPolicyDefinition", args, LookupUrlFilteringPolicyDefinitionResultOutput{}, options).(LookupUrlFilteringPolicyDefinitionResultOutput), nil
 		}).(LookupUrlFilteringPolicyDefinitionResultOutput)
 }
 

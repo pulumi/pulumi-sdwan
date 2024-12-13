@@ -58,6 +58,30 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetCiscoBfdFeatureTemplateResult> Invoke(GetCiscoBfdFeatureTemplateInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetCiscoBfdFeatureTemplateResult>("sdwan:index/getCiscoBfdFeatureTemplate:getCiscoBfdFeatureTemplate", args ?? new GetCiscoBfdFeatureTemplateInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Cisco BFD feature template.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetCiscoBfdFeatureTemplate.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetCiscoBfdFeatureTemplateResult> Invoke(GetCiscoBfdFeatureTemplateInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetCiscoBfdFeatureTemplateResult>("sdwan:index/getCiscoBfdFeatureTemplate:getCiscoBfdFeatureTemplate", args ?? new GetCiscoBfdFeatureTemplateInvokeArgs(), options.WithDefaults());
     }
 
 

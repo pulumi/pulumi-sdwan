@@ -58,6 +58,30 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetIpv4AclPolicyDefinitionResult> Invoke(GetIpv4AclPolicyDefinitionInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetIpv4AclPolicyDefinitionResult>("sdwan:index/getIpv4AclPolicyDefinition:getIpv4AclPolicyDefinition", args ?? new GetIpv4AclPolicyDefinitionInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the IPv4 ACL Policy Definition .
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetIpv4AclPolicyDefinition.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetIpv4AclPolicyDefinitionResult> Invoke(GetIpv4AclPolicyDefinitionInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetIpv4AclPolicyDefinitionResult>("sdwan:index/getIpv4AclPolicyDefinition:getIpv4AclPolicyDefinition", args ?? new GetIpv4AclPolicyDefinitionInvokeArgs(), options.WithDefaults());
     }
 
 

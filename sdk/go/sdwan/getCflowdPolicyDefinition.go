@@ -85,21 +85,11 @@ type LookupCflowdPolicyDefinitionResult struct {
 }
 
 func LookupCflowdPolicyDefinitionOutput(ctx *pulumi.Context, args LookupCflowdPolicyDefinitionOutputArgs, opts ...pulumi.InvokeOption) LookupCflowdPolicyDefinitionResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupCflowdPolicyDefinitionResultOutput, error) {
 			args := v.(LookupCflowdPolicyDefinitionArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupCflowdPolicyDefinitionResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getCflowdPolicyDefinition:getCflowdPolicyDefinition", args, &rv, "", opts...)
-			if err != nil {
-				return LookupCflowdPolicyDefinitionResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupCflowdPolicyDefinitionResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupCflowdPolicyDefinitionResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getCflowdPolicyDefinition:getCflowdPolicyDefinition", args, LookupCflowdPolicyDefinitionResultOutput{}, options).(LookupCflowdPolicyDefinitionResultOutput), nil
 		}).(LookupCflowdPolicyDefinitionResultOutput)
 }
 

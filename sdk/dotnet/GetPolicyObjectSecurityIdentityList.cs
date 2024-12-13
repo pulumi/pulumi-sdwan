@@ -60,6 +60,31 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetPolicyObjectSecurityIdentityListResult> Invoke(GetPolicyObjectSecurityIdentityListInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetPolicyObjectSecurityIdentityListResult>("sdwan:index/getPolicyObjectSecurityIdentityList:getPolicyObjectSecurityIdentityList", args ?? new GetPolicyObjectSecurityIdentityListInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Policy Object Security Identity List Policy_object.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetPolicyObjectSecurityIdentityList.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetPolicyObjectSecurityIdentityListResult> Invoke(GetPolicyObjectSecurityIdentityListInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetPolicyObjectSecurityIdentityListResult>("sdwan:index/getPolicyObjectSecurityIdentityList:getPolicyObjectSecurityIdentityList", args ?? new GetPolicyObjectSecurityIdentityListInvokeArgs(), options.WithDefaults());
     }
 
 

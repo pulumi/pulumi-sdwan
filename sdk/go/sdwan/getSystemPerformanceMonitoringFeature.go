@@ -84,21 +84,11 @@ type LookupSystemPerformanceMonitoringFeatureResult struct {
 }
 
 func LookupSystemPerformanceMonitoringFeatureOutput(ctx *pulumi.Context, args LookupSystemPerformanceMonitoringFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupSystemPerformanceMonitoringFeatureResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupSystemPerformanceMonitoringFeatureResultOutput, error) {
 			args := v.(LookupSystemPerformanceMonitoringFeatureArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupSystemPerformanceMonitoringFeatureResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getSystemPerformanceMonitoringFeature:getSystemPerformanceMonitoringFeature", args, &rv, "", opts...)
-			if err != nil {
-				return LookupSystemPerformanceMonitoringFeatureResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupSystemPerformanceMonitoringFeatureResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupSystemPerformanceMonitoringFeatureResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getSystemPerformanceMonitoringFeature:getSystemPerformanceMonitoringFeature", args, LookupSystemPerformanceMonitoringFeatureResultOutput{}, options).(LookupSystemPerformanceMonitoringFeatureResultOutput), nil
 		}).(LookupSystemPerformanceMonitoringFeatureResultOutput)
 }
 

@@ -73,21 +73,11 @@ type LookupTrafficDataPolicyDefinitionResult struct {
 }
 
 func LookupTrafficDataPolicyDefinitionOutput(ctx *pulumi.Context, args LookupTrafficDataPolicyDefinitionOutputArgs, opts ...pulumi.InvokeOption) LookupTrafficDataPolicyDefinitionResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupTrafficDataPolicyDefinitionResultOutput, error) {
 			args := v.(LookupTrafficDataPolicyDefinitionArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupTrafficDataPolicyDefinitionResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getTrafficDataPolicyDefinition:getTrafficDataPolicyDefinition", args, &rv, "", opts...)
-			if err != nil {
-				return LookupTrafficDataPolicyDefinitionResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupTrafficDataPolicyDefinitionResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupTrafficDataPolicyDefinitionResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getTrafficDataPolicyDefinition:getTrafficDataPolicyDefinition", args, LookupTrafficDataPolicyDefinitionResultOutput{}, options).(LookupTrafficDataPolicyDefinitionResultOutput), nil
 		}).(LookupTrafficDataPolicyDefinitionResultOutput)
 }
 

@@ -131,21 +131,11 @@ type LookupTransportWanVpnInterfaceGreFeatureResult struct {
 }
 
 func LookupTransportWanVpnInterfaceGreFeatureOutput(ctx *pulumi.Context, args LookupTransportWanVpnInterfaceGreFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupTransportWanVpnInterfaceGreFeatureResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupTransportWanVpnInterfaceGreFeatureResultOutput, error) {
 			args := v.(LookupTransportWanVpnInterfaceGreFeatureArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupTransportWanVpnInterfaceGreFeatureResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getTransportWanVpnInterfaceGreFeature:getTransportWanVpnInterfaceGreFeature", args, &rv, "", opts...)
-			if err != nil {
-				return LookupTransportWanVpnInterfaceGreFeatureResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupTransportWanVpnInterfaceGreFeatureResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupTransportWanVpnInterfaceGreFeatureResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getTransportWanVpnInterfaceGreFeature:getTransportWanVpnInterfaceGreFeature", args, LookupTransportWanVpnInterfaceGreFeatureResultOutput{}, options).(LookupTransportWanVpnInterfaceGreFeatureResultOutput), nil
 		}).(LookupTransportWanVpnInterfaceGreFeatureResultOutput)
 }
 

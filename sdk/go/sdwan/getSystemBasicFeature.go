@@ -192,21 +192,11 @@ type LookupSystemBasicFeatureResult struct {
 }
 
 func LookupSystemBasicFeatureOutput(ctx *pulumi.Context, args LookupSystemBasicFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupSystemBasicFeatureResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupSystemBasicFeatureResultOutput, error) {
 			args := v.(LookupSystemBasicFeatureArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupSystemBasicFeatureResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getSystemBasicFeature:getSystemBasicFeature", args, &rv, "", opts...)
-			if err != nil {
-				return LookupSystemBasicFeatureResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupSystemBasicFeatureResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupSystemBasicFeatureResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getSystemBasicFeature:getSystemBasicFeature", args, LookupSystemBasicFeatureResultOutput{}, options).(LookupSystemBasicFeatureResultOutput), nil
 		}).(LookupSystemBasicFeatureResultOutput)
 }
 

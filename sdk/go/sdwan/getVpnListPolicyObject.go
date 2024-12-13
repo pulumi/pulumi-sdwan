@@ -67,21 +67,11 @@ type LookupVpnListPolicyObjectResult struct {
 }
 
 func LookupVpnListPolicyObjectOutput(ctx *pulumi.Context, args LookupVpnListPolicyObjectOutputArgs, opts ...pulumi.InvokeOption) LookupVpnListPolicyObjectResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupVpnListPolicyObjectResultOutput, error) {
 			args := v.(LookupVpnListPolicyObjectArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupVpnListPolicyObjectResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getVpnListPolicyObject:getVpnListPolicyObject", args, &rv, "", opts...)
-			if err != nil {
-				return LookupVpnListPolicyObjectResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupVpnListPolicyObjectResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupVpnListPolicyObjectResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getVpnListPolicyObject:getVpnListPolicyObject", args, LookupVpnListPolicyObjectResultOutput{}, options).(LookupVpnListPolicyObjectResultOutput), nil
 		}).(LookupVpnListPolicyObjectResultOutput)
 }
 

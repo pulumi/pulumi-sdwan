@@ -58,6 +58,30 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetCiscoSystemFeatureTemplateResult> Invoke(GetCiscoSystemFeatureTemplateInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetCiscoSystemFeatureTemplateResult>("sdwan:index/getCiscoSystemFeatureTemplate:getCiscoSystemFeatureTemplate", args ?? new GetCiscoSystemFeatureTemplateInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Cisco System feature template.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetCiscoSystemFeatureTemplate.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetCiscoSystemFeatureTemplateResult> Invoke(GetCiscoSystemFeatureTemplateInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetCiscoSystemFeatureTemplateResult>("sdwan:index/getCiscoSystemFeatureTemplate:getCiscoSystemFeatureTemplate", args ?? new GetCiscoSystemFeatureTemplateInvokeArgs(), options.WithDefaults());
     }
 
 

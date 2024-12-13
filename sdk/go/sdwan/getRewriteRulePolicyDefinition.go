@@ -71,21 +71,11 @@ type LookupRewriteRulePolicyDefinitionResult struct {
 }
 
 func LookupRewriteRulePolicyDefinitionOutput(ctx *pulumi.Context, args LookupRewriteRulePolicyDefinitionOutputArgs, opts ...pulumi.InvokeOption) LookupRewriteRulePolicyDefinitionResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupRewriteRulePolicyDefinitionResultOutput, error) {
 			args := v.(LookupRewriteRulePolicyDefinitionArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupRewriteRulePolicyDefinitionResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getRewriteRulePolicyDefinition:getRewriteRulePolicyDefinition", args, &rv, "", opts...)
-			if err != nil {
-				return LookupRewriteRulePolicyDefinitionResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupRewriteRulePolicyDefinitionResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupRewriteRulePolicyDefinitionResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getRewriteRulePolicyDefinition:getRewriteRulePolicyDefinition", args, LookupRewriteRulePolicyDefinitionResultOutput{}, options).(LookupRewriteRulePolicyDefinitionResultOutput), nil
 		}).(LookupRewriteRulePolicyDefinitionResultOutput)
 }
 

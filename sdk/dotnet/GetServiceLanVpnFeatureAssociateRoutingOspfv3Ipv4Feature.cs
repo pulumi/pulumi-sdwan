@@ -62,6 +62,32 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureResult> Invoke(GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureResult>("sdwan:index/getServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature:getServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature", args ?? new GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Service LAN VPN Feature Associate Routing OSPFv3 IPv4 Feature .
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature.Invoke(new()
+        ///     {
+        ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+        ///         ServiceLanVpnFeatureId = "140331f6-5418-4755-a059-13c77eb96037",
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureResult> Invoke(GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureResult>("sdwan:index/getServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature:getServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature", args ?? new GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureInvokeArgs(), options.WithDefaults());
     }
 
 

@@ -75,21 +75,11 @@ type LookupCiscoThousandeyesFeatureTemplateResult struct {
 }
 
 func LookupCiscoThousandeyesFeatureTemplateOutput(ctx *pulumi.Context, args LookupCiscoThousandeyesFeatureTemplateOutputArgs, opts ...pulumi.InvokeOption) LookupCiscoThousandeyesFeatureTemplateResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupCiscoThousandeyesFeatureTemplateResultOutput, error) {
 			args := v.(LookupCiscoThousandeyesFeatureTemplateArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupCiscoThousandeyesFeatureTemplateResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getCiscoThousandeyesFeatureTemplate:getCiscoThousandeyesFeatureTemplate", args, &rv, "", opts...)
-			if err != nil {
-				return LookupCiscoThousandeyesFeatureTemplateResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupCiscoThousandeyesFeatureTemplateResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupCiscoThousandeyesFeatureTemplateResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getCiscoThousandeyesFeatureTemplate:getCiscoThousandeyesFeatureTemplate", args, LookupCiscoThousandeyesFeatureTemplateResultOutput{}, options).(LookupCiscoThousandeyesFeatureTemplateResultOutput), nil
 		}).(LookupCiscoThousandeyesFeatureTemplateResultOutput)
 }
 

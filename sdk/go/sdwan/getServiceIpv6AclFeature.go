@@ -76,21 +76,11 @@ type LookupServiceIpv6AclFeatureResult struct {
 }
 
 func LookupServiceIpv6AclFeatureOutput(ctx *pulumi.Context, args LookupServiceIpv6AclFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupServiceIpv6AclFeatureResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupServiceIpv6AclFeatureResultOutput, error) {
 			args := v.(LookupServiceIpv6AclFeatureArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupServiceIpv6AclFeatureResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getServiceIpv6AclFeature:getServiceIpv6AclFeature", args, &rv, "", opts...)
-			if err != nil {
-				return LookupServiceIpv6AclFeatureResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupServiceIpv6AclFeatureResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupServiceIpv6AclFeatureResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getServiceIpv6AclFeature:getServiceIpv6AclFeature", args, LookupServiceIpv6AclFeatureResultOutput{}, options).(LookupServiceIpv6AclFeatureResultOutput), nil
 		}).(LookupServiceIpv6AclFeatureResultOutput)
 }
 

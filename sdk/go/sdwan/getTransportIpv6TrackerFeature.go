@@ -108,21 +108,11 @@ type LookupTransportIpv6TrackerFeatureResult struct {
 }
 
 func LookupTransportIpv6TrackerFeatureOutput(ctx *pulumi.Context, args LookupTransportIpv6TrackerFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupTransportIpv6TrackerFeatureResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupTransportIpv6TrackerFeatureResultOutput, error) {
 			args := v.(LookupTransportIpv6TrackerFeatureArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupTransportIpv6TrackerFeatureResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getTransportIpv6TrackerFeature:getTransportIpv6TrackerFeature", args, &rv, "", opts...)
-			if err != nil {
-				return LookupTransportIpv6TrackerFeatureResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupTransportIpv6TrackerFeatureResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupTransportIpv6TrackerFeatureResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getTransportIpv6TrackerFeature:getTransportIpv6TrackerFeature", args, LookupTransportIpv6TrackerFeatureResultOutput{}, options).(LookupTransportIpv6TrackerFeatureResultOutput), nil
 		}).(LookupTransportIpv6TrackerFeatureResultOutput)
 }
 

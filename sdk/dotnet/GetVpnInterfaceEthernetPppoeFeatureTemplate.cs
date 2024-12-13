@@ -58,6 +58,30 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetVpnInterfaceEthernetPppoeFeatureTemplateResult> Invoke(GetVpnInterfaceEthernetPppoeFeatureTemplateInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetVpnInterfaceEthernetPppoeFeatureTemplateResult>("sdwan:index/getVpnInterfaceEthernetPppoeFeatureTemplate:getVpnInterfaceEthernetPppoeFeatureTemplate", args ?? new GetVpnInterfaceEthernetPppoeFeatureTemplateInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the VPN Interface Ethernet PPPoE feature template.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetVpnInterfaceEthernetPppoeFeatureTemplate.Invoke(new()
+        ///     {
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetVpnInterfaceEthernetPppoeFeatureTemplateResult> Invoke(GetVpnInterfaceEthernetPppoeFeatureTemplateInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetVpnInterfaceEthernetPppoeFeatureTemplateResult>("sdwan:index/getVpnInterfaceEthernetPppoeFeatureTemplate:getVpnInterfaceEthernetPppoeFeatureTemplate", args ?? new GetVpnInterfaceEthernetPppoeFeatureTemplateInvokeArgs(), options.WithDefaults());
     }
 
 

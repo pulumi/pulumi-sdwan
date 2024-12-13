@@ -78,21 +78,11 @@ type LookupTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeatureResult 
 }
 
 func LookupTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeatureOutput(ctx *pulumi.Context, args LookupTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeatureResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeatureResultOutput, error) {
 			args := v.(LookupTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeatureArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeatureResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeature:getTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeature", args, &rv, "", opts...)
-			if err != nil {
-				return LookupTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeatureResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeatureResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeatureResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeature:getTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeature", args, LookupTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeatureResultOutput{}, options).(LookupTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeatureResultOutput), nil
 		}).(LookupTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeatureResultOutput)
 }
 

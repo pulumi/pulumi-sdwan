@@ -149,21 +149,11 @@ type LookupServiceLanVpnInterfaceSviFeatureResult struct {
 }
 
 func LookupServiceLanVpnInterfaceSviFeatureOutput(ctx *pulumi.Context, args LookupServiceLanVpnInterfaceSviFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupServiceLanVpnInterfaceSviFeatureResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupServiceLanVpnInterfaceSviFeatureResultOutput, error) {
 			args := v.(LookupServiceLanVpnInterfaceSviFeatureArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupServiceLanVpnInterfaceSviFeatureResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getServiceLanVpnInterfaceSviFeature:getServiceLanVpnInterfaceSviFeature", args, &rv, "", opts...)
-			if err != nil {
-				return LookupServiceLanVpnInterfaceSviFeatureResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupServiceLanVpnInterfaceSviFeatureResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupServiceLanVpnInterfaceSviFeatureResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getServiceLanVpnInterfaceSviFeature:getServiceLanVpnInterfaceSviFeature", args, LookupServiceLanVpnInterfaceSviFeatureResultOutput{}, options).(LookupServiceLanVpnInterfaceSviFeatureResultOutput), nil
 		}).(LookupServiceLanVpnInterfaceSviFeatureResultOutput)
 }
 

@@ -71,21 +71,11 @@ type LookupVpnMembershipPolicyDefinitionResult struct {
 }
 
 func LookupVpnMembershipPolicyDefinitionOutput(ctx *pulumi.Context, args LookupVpnMembershipPolicyDefinitionOutputArgs, opts ...pulumi.InvokeOption) LookupVpnMembershipPolicyDefinitionResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupVpnMembershipPolicyDefinitionResultOutput, error) {
 			args := v.(LookupVpnMembershipPolicyDefinitionArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupVpnMembershipPolicyDefinitionResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getVpnMembershipPolicyDefinition:getVpnMembershipPolicyDefinition", args, &rv, "", opts...)
-			if err != nil {
-				return LookupVpnMembershipPolicyDefinitionResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupVpnMembershipPolicyDefinitionResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupVpnMembershipPolicyDefinitionResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getVpnMembershipPolicyDefinition:getVpnMembershipPolicyDefinition", args, LookupVpnMembershipPolicyDefinitionResultOutput{}, options).(LookupVpnMembershipPolicyDefinitionResultOutput), nil
 		}).(LookupVpnMembershipPolicyDefinitionResultOutput)
 }
 

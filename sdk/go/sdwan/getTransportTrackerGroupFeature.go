@@ -78,21 +78,11 @@ type LookupTransportTrackerGroupFeatureResult struct {
 }
 
 func LookupTransportTrackerGroupFeatureOutput(ctx *pulumi.Context, args LookupTransportTrackerGroupFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupTransportTrackerGroupFeatureResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupTransportTrackerGroupFeatureResultOutput, error) {
 			args := v.(LookupTransportTrackerGroupFeatureArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupTransportTrackerGroupFeatureResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getTransportTrackerGroupFeature:getTransportTrackerGroupFeature", args, &rv, "", opts...)
-			if err != nil {
-				return LookupTransportTrackerGroupFeatureResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupTransportTrackerGroupFeatureResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupTransportTrackerGroupFeatureResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getTransportTrackerGroupFeature:getTransportTrackerGroupFeature", args, LookupTransportTrackerGroupFeatureResultOutput{}, options).(LookupTransportTrackerGroupFeatureResultOutput), nil
 		}).(LookupTransportTrackerGroupFeatureResultOutput)
 }
 

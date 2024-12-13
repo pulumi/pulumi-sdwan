@@ -98,21 +98,11 @@ type LookupOtherUcseFeatureResult struct {
 }
 
 func LookupOtherUcseFeatureOutput(ctx *pulumi.Context, args LookupOtherUcseFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupOtherUcseFeatureResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupOtherUcseFeatureResultOutput, error) {
 			args := v.(LookupOtherUcseFeatureArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupOtherUcseFeatureResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getOtherUcseFeature:getOtherUcseFeature", args, &rv, "", opts...)
-			if err != nil {
-				return LookupOtherUcseFeatureResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupOtherUcseFeatureResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupOtherUcseFeatureResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getOtherUcseFeature:getOtherUcseFeature", args, LookupOtherUcseFeatureResultOutput{}, options).(LookupOtherUcseFeatureResultOutput), nil
 		}).(LookupOtherUcseFeatureResultOutput)
 }
 

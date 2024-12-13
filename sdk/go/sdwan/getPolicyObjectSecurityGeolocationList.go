@@ -74,21 +74,11 @@ type LookupPolicyObjectSecurityGeolocationListResult struct {
 }
 
 func LookupPolicyObjectSecurityGeolocationListOutput(ctx *pulumi.Context, args LookupPolicyObjectSecurityGeolocationListOutputArgs, opts ...pulumi.InvokeOption) LookupPolicyObjectSecurityGeolocationListResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupPolicyObjectSecurityGeolocationListResultOutput, error) {
 			args := v.(LookupPolicyObjectSecurityGeolocationListArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupPolicyObjectSecurityGeolocationListResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getPolicyObjectSecurityGeolocationList:getPolicyObjectSecurityGeolocationList", args, &rv, "", opts...)
-			if err != nil {
-				return LookupPolicyObjectSecurityGeolocationListResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupPolicyObjectSecurityGeolocationListResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupPolicyObjectSecurityGeolocationListResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getPolicyObjectSecurityGeolocationList:getPolicyObjectSecurityGeolocationList", args, LookupPolicyObjectSecurityGeolocationListResultOutput{}, options).(LookupPolicyObjectSecurityGeolocationListResultOutput), nil
 		}).(LookupPolicyObjectSecurityGeolocationListResultOutput)
 }
 

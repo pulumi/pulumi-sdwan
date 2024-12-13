@@ -78,21 +78,11 @@ type LookupSystemBannerFeatureResult struct {
 }
 
 func LookupSystemBannerFeatureOutput(ctx *pulumi.Context, args LookupSystemBannerFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupSystemBannerFeatureResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupSystemBannerFeatureResultOutput, error) {
 			args := v.(LookupSystemBannerFeatureArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupSystemBannerFeatureResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getSystemBannerFeature:getSystemBannerFeature", args, &rv, "", opts...)
-			if err != nil {
-				return LookupSystemBannerFeatureResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupSystemBannerFeatureResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupSystemBannerFeatureResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getSystemBannerFeature:getSystemBannerFeature", args, LookupSystemBannerFeatureResultOutput{}, options).(LookupSystemBannerFeatureResultOutput), nil
 		}).(LookupSystemBannerFeatureResultOutput)
 }
 

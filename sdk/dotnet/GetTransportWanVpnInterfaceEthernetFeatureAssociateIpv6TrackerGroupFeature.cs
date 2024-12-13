@@ -64,6 +64,33 @@ namespace Pulumi.Sdwan
         /// </summary>
         public static Output<GetTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureResult> Invoke(GetTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureResult>("sdwan:index/getTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature:getTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature", args ?? new GetTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// This data source can read the Transport WAN VPN Interface Ethernet Feature Associate IPv6 Tracker Group Feature .
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Sdwan = Pulumi.Sdwan;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Sdwan.GetTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature.Invoke(new()
+        ///     {
+        ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+        ///         TransportWanVpnFeatureId = "140331f6-5418-4755-a059-13c77eb96037",
+        ///         TransportWanVpnInterfaceEthernetFeatureId = "140331f6-5418-4755-a059-13c77eb96037",
+        ///         Id = "f6b2c44c-693c-4763-b010-895aa3d236bd",
+        ///     });
+        /// 
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureResult> Invoke(GetTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureResult>("sdwan:index/getTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature:getTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature", args ?? new GetTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureInvokeArgs(), options.WithDefaults());
     }
 
 

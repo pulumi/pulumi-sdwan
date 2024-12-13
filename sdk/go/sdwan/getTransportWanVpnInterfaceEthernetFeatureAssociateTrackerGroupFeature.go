@@ -78,21 +78,11 @@ type LookupTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureRe
 }
 
 func LookupTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureOutput(ctx *pulumi.Context, args LookupTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureResultOutput, error) {
 			args := v.(LookupTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureResult
-			secret, err := ctx.InvokePackageRaw("sdwan:index/getTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature:getTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature", args, &rv, "", opts...)
-			if err != nil {
-				return LookupTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("sdwan:index/getTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature:getTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature", args, LookupTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureResultOutput{}, options).(LookupTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureResultOutput), nil
 		}).(LookupTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureResultOutput)
 }
 
