@@ -293,6 +293,10 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &ServiceLanVpnInterfaceEthernetFeature{}
 	case "sdwan:index/serviceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature:ServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature":
 		r = &ServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature{}
+	case "sdwan:index/serviceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature:ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature":
+		r = &ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature{}
+	case "sdwan:index/serviceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature:ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature":
+		r = &ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature{}
 	case "sdwan:index/serviceLanVpnInterfaceGreFeature:ServiceLanVpnInterfaceGreFeature":
 		r = &ServiceLanVpnInterfaceGreFeature{}
 	case "sdwan:index/serviceLanVpnInterfaceIpsecFeature:ServiceLanVpnInterfaceIpsecFeature":
@@ -429,6 +433,10 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &TransportWanVpnFeatureAssociateRoutingOspfv3Ipv6Feature{}
 	case "sdwan:index/transportWanVpnInterfaceCellularFeature:TransportWanVpnInterfaceCellularFeature":
 		r = &TransportWanVpnInterfaceCellularFeature{}
+	case "sdwan:index/transportWanVpnInterfaceCellularFeatureAssociateTrackerFeature:TransportWanVpnInterfaceCellularFeatureAssociateTrackerFeature":
+		r = &TransportWanVpnInterfaceCellularFeatureAssociateTrackerFeature{}
+	case "sdwan:index/transportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature:TransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature":
+		r = &TransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature{}
 	case "sdwan:index/transportWanVpnInterfaceEthernetFeature:TransportWanVpnInterfaceEthernetFeature":
 		r = &TransportWanVpnInterfaceEthernetFeature{}
 	case "sdwan:index/transportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature:TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature":
@@ -441,8 +449,12 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &TransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature{}
 	case "sdwan:index/transportWanVpnInterfaceGreFeature:TransportWanVpnInterfaceGreFeature":
 		r = &TransportWanVpnInterfaceGreFeature{}
+	case "sdwan:index/transportWanVpnInterfaceGreFeatureAssociateTrackerFeature:TransportWanVpnInterfaceGreFeatureAssociateTrackerFeature":
+		r = &TransportWanVpnInterfaceGreFeatureAssociateTrackerFeature{}
 	case "sdwan:index/transportWanVpnInterfaceIpsecFeature:TransportWanVpnInterfaceIpsecFeature":
 		r = &TransportWanVpnInterfaceIpsecFeature{}
+	case "sdwan:index/transportWanVpnInterfaceIpsecFeatureAssociateTrackerFeature:TransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeature":
+		r = &TransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeature{}
 	case "sdwan:index/transportWanVpnInterfaceT1E1SerialFeature:TransportWanVpnInterfaceT1E1SerialFeature":
 		r = &TransportWanVpnInterfaceT1E1SerialFeature{}
 	case "sdwan:index/urlFilteringPolicyDefinition:UrlFilteringPolicyDefinition":
@@ -1184,6 +1196,16 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"sdwan",
+		"index/serviceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/serviceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
 		"index/serviceLanVpnInterfaceGreFeature",
 		&module{version},
 	)
@@ -1524,6 +1546,16 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"sdwan",
+		"index/transportWanVpnInterfaceCellularFeatureAssociateTrackerFeature",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/transportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
 		"index/transportWanVpnInterfaceEthernetFeature",
 		&module{version},
 	)
@@ -1554,7 +1586,17 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"sdwan",
+		"index/transportWanVpnInterfaceGreFeatureAssociateTrackerFeature",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
 		"index/transportWanVpnInterfaceIpsecFeature",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/transportWanVpnInterfaceIpsecFeatureAssociateTrackerFeature",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
