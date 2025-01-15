@@ -2181,6 +2181,12 @@
             "sdwan_service_lan_vpn_interface_ethernet_feature_associate_dhcp_server_feature": {
                 "current": "sdwan:index/serviceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature:ServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature"
             },
+            "sdwan_service_lan_vpn_interface_ethernet_feature_associate_tracker_feature": {
+                "current": "sdwan:index/serviceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature:ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature"
+            },
+            "sdwan_service_lan_vpn_interface_ethernet_feature_associate_tracker_group_feature": {
+                "current": "sdwan:index/serviceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature:ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature"
+            },
             "sdwan_service_lan_vpn_interface_gre_feature": {
                 "current": "sdwan:index/serviceLanVpnInterfaceGreFeature:ServiceLanVpnInterfaceGreFeature"
             },
@@ -3239,6 +3245,12 @@
                     }
                 }
             },
+            "sdwan_transport_wan_vpn_interface_cellular_feature_associate_tracker_feature": {
+                "current": "sdwan:index/transportWanVpnInterfaceCellularFeatureAssociateTrackerFeature:TransportWanVpnInterfaceCellularFeatureAssociateTrackerFeature"
+            },
+            "sdwan_transport_wan_vpn_interface_cellular_feature_associate_tracker_group_feature": {
+                "current": "sdwan:index/transportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature:TransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature"
+            },
             "sdwan_transport_wan_vpn_interface_ethernet_feature": {
                 "current": "sdwan:index/transportWanVpnInterfaceEthernetFeature:TransportWanVpnInterfaceEthernetFeature",
                 "fields": {
@@ -3286,8 +3298,14 @@
             "sdwan_transport_wan_vpn_interface_gre_feature": {
                 "current": "sdwan:index/transportWanVpnInterfaceGreFeature:TransportWanVpnInterfaceGreFeature"
             },
+            "sdwan_transport_wan_vpn_interface_gre_feature_associate_tracker_feature": {
+                "current": "sdwan:index/transportWanVpnInterfaceGreFeatureAssociateTrackerFeature:TransportWanVpnInterfaceGreFeatureAssociateTrackerFeature"
+            },
             "sdwan_transport_wan_vpn_interface_ipsec_feature": {
                 "current": "sdwan:index/transportWanVpnInterfaceIpsecFeature:TransportWanVpnInterfaceIpsecFeature"
+            },
+            "sdwan_transport_wan_vpn_interface_ipsec_feature_associate_tracker_feature": {
+                "current": "sdwan:index/transportWanVpnInterfaceIpsecFeatureAssociateTrackerFeature:TransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeature"
             },
             "sdwan_transport_wan_vpn_interface_t1_e1_serial_feature": {
                 "current": "sdwan:index/transportWanVpnInterfaceT1E1SerialFeature:TransportWanVpnInterfaceT1E1SerialFeature",
@@ -5841,6 +5859,12 @@
             "sdwan_service_lan_vpn_interface_ethernet_feature_associate_dhcp_server_feature": {
                 "current": "sdwan:index/getServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature:getServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature"
             },
+            "sdwan_service_lan_vpn_interface_ethernet_feature_associate_tracker_feature": {
+                "current": "sdwan:index/getServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature:getServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature"
+            },
+            "sdwan_service_lan_vpn_interface_ethernet_feature_associate_tracker_group_feature": {
+                "current": "sdwan:index/getServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature:getServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature"
+            },
             "sdwan_service_lan_vpn_interface_gre_feature": {
                 "current": "sdwan:index/getServiceLanVpnInterfaceGreFeature:getServiceLanVpnInterfaceGreFeature"
             },
@@ -6899,6 +6923,12 @@
                     }
                 }
             },
+            "sdwan_transport_wan_vpn_interface_cellular_feature_associate_tracker_feature": {
+                "current": "sdwan:index/getTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeature:getTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeature"
+            },
+            "sdwan_transport_wan_vpn_interface_cellular_feature_associate_tracker_group_feature": {
+                "current": "sdwan:index/getTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature:getTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature"
+            },
             "sdwan_transport_wan_vpn_interface_ethernet_feature": {
                 "current": "sdwan:index/getTransportWanVpnInterfaceEthernetFeature:getTransportWanVpnInterfaceEthernetFeature",
                 "fields": {
@@ -6946,8 +6976,14 @@
             "sdwan_transport_wan_vpn_interface_gre_feature": {
                 "current": "sdwan:index/getTransportWanVpnInterfaceGreFeature:getTransportWanVpnInterfaceGreFeature"
             },
+            "sdwan_transport_wan_vpn_interface_gre_feature_associate_tracker_feature": {
+                "current": "sdwan:index/getTransportWanVpnInterfaceGreFeatureAssociateTrackerFeature:getTransportWanVpnInterfaceGreFeatureAssociateTrackerFeature"
+            },
             "sdwan_transport_wan_vpn_interface_ipsec_feature": {
                 "current": "sdwan:index/getTransportWanVpnInterfaceIpsecFeature:getTransportWanVpnInterfaceIpsecFeature"
+            },
+            "sdwan_transport_wan_vpn_interface_ipsec_feature_associate_tracker_feature": {
+                "current": "sdwan:index/getTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeature:getTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeature"
             },
             "sdwan_transport_wan_vpn_interface_t1_e1_serial_feature": {
                 "current": "sdwan:index/getTransportWanVpnInterfaceT1E1SerialFeature:getTransportWanVpnInterfaceT1E1SerialFeature",

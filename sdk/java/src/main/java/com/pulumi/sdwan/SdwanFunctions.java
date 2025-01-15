@@ -279,6 +279,10 @@ import com.pulumi.sdwan.inputs.GetServiceLanVpnFeaturePlainArgs;
 import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureArgs;
 import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureArgs;
 import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeaturePlainArgs;
+import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureArgs;
+import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeaturePlainArgs;
+import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureArgs;
+import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeaturePlainArgs;
 import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeaturePlainArgs;
 import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceGreFeatureArgs;
 import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceGreFeaturePlainArgs;
@@ -415,6 +419,10 @@ import com.pulumi.sdwan.inputs.GetTransportWanVpnFeatureAssociateRoutingOspfv3Ip
 import com.pulumi.sdwan.inputs.GetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv6FeaturePlainArgs;
 import com.pulumi.sdwan.inputs.GetTransportWanVpnFeaturePlainArgs;
 import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceCellularFeatureArgs;
+import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeatureArgs;
+import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeaturePlainArgs;
+import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeatureArgs;
+import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeaturePlainArgs;
 import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceCellularFeaturePlainArgs;
 import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceEthernetFeatureArgs;
 import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureArgs;
@@ -427,8 +435,12 @@ import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceEthernetFeatureAssocia
 import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeaturePlainArgs;
 import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceEthernetFeaturePlainArgs;
 import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceGreFeatureArgs;
+import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureArgs;
+import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceGreFeatureAssociateTrackerFeaturePlainArgs;
 import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceGreFeaturePlainArgs;
 import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceIpsecFeatureArgs;
+import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeatureArgs;
+import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeaturePlainArgs;
 import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceIpsecFeaturePlainArgs;
 import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceT1E1SerialFeatureArgs;
 import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceT1E1SerialFeaturePlainArgs;
@@ -592,6 +604,8 @@ import com.pulumi.sdwan.outputs.GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv
 import com.pulumi.sdwan.outputs.GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureResult;
 import com.pulumi.sdwan.outputs.GetServiceLanVpnFeatureResult;
 import com.pulumi.sdwan.outputs.GetServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureResult;
+import com.pulumi.sdwan.outputs.GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureResult;
+import com.pulumi.sdwan.outputs.GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureResult;
 import com.pulumi.sdwan.outputs.GetServiceLanVpnInterfaceEthernetFeatureResult;
 import com.pulumi.sdwan.outputs.GetServiceLanVpnInterfaceGreFeatureResult;
 import com.pulumi.sdwan.outputs.GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureResult;
@@ -660,13 +674,17 @@ import com.pulumi.sdwan.outputs.GetTransportWanVpnFeatureAssociateRoutingOspfFea
 import com.pulumi.sdwan.outputs.GetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureResult;
 import com.pulumi.sdwan.outputs.GetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureResult;
 import com.pulumi.sdwan.outputs.GetTransportWanVpnFeatureResult;
+import com.pulumi.sdwan.outputs.GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeatureResult;
+import com.pulumi.sdwan.outputs.GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeatureResult;
 import com.pulumi.sdwan.outputs.GetTransportWanVpnInterfaceCellularFeatureResult;
 import com.pulumi.sdwan.outputs.GetTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureResult;
 import com.pulumi.sdwan.outputs.GetTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureResult;
 import com.pulumi.sdwan.outputs.GetTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeatureResult;
 import com.pulumi.sdwan.outputs.GetTransportWanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureResult;
 import com.pulumi.sdwan.outputs.GetTransportWanVpnInterfaceEthernetFeatureResult;
+import com.pulumi.sdwan.outputs.GetTransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureResult;
 import com.pulumi.sdwan.outputs.GetTransportWanVpnInterfaceGreFeatureResult;
+import com.pulumi.sdwan.outputs.GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeatureResult;
 import com.pulumi.sdwan.outputs.GetTransportWanVpnInterfaceIpsecFeatureResult;
 import com.pulumi.sdwan.outputs.GetTransportWanVpnInterfaceT1E1SerialFeatureResult;
 import com.pulumi.sdwan.outputs.GetUrlFilteringPolicyDefinitionResult;
@@ -32175,6 +32193,456 @@ public final class SdwanFunctions {
         return Deployment.getInstance().invokeAsync("sdwan:index/getServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature:getServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature", TypeShape.of(GetServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureResult.class), args, Utilities.withVersion(options));
     }
     /**
+     * This data source can read the Service LAN VPN Interface Ethernet Feature Associate Tracker Feature .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature(GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .serviceLanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .serviceLanVpnInterfaceEthernetFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureResult> getServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature(GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureArgs args) {
+        return getServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Service LAN VPN Interface Ethernet Feature Associate Tracker Feature .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature(GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .serviceLanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .serviceLanVpnInterfaceEthernetFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static CompletableFuture<GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureResult> getServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeaturePlain(GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeaturePlainArgs args) {
+        return getServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeaturePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Service LAN VPN Interface Ethernet Feature Associate Tracker Feature .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature(GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .serviceLanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .serviceLanVpnInterfaceEthernetFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureResult> getServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature(GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature:getServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature", TypeShape.of(GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Service LAN VPN Interface Ethernet Feature Associate Tracker Feature .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature(GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .serviceLanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .serviceLanVpnInterfaceEthernetFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureResult> getServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature(GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature:getServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature", TypeShape.of(GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Service LAN VPN Interface Ethernet Feature Associate Tracker Feature .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature(GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .serviceLanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .serviceLanVpnInterfaceEthernetFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static CompletableFuture<GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureResult> getServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeaturePlain(GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeaturePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature:getServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature", TypeShape.of(GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Service LAN VPN Interface Ethernet Feature Associate Tracker Group Feature .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature(GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .serviceLanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .serviceLanVpnInterfaceEthernetFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureResult> getServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature(GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureArgs args) {
+        return getServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Service LAN VPN Interface Ethernet Feature Associate Tracker Group Feature .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature(GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .serviceLanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .serviceLanVpnInterfaceEthernetFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static CompletableFuture<GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureResult> getServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeaturePlain(GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeaturePlainArgs args) {
+        return getServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeaturePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Service LAN VPN Interface Ethernet Feature Associate Tracker Group Feature .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature(GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .serviceLanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .serviceLanVpnInterfaceEthernetFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureResult> getServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature(GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature:getServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature", TypeShape.of(GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Service LAN VPN Interface Ethernet Feature Associate Tracker Group Feature .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature(GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .serviceLanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .serviceLanVpnInterfaceEthernetFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureResult> getServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature(GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature:getServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature", TypeShape.of(GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Service LAN VPN Interface Ethernet Feature Associate Tracker Group Feature .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature(GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .serviceLanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .serviceLanVpnInterfaceEthernetFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static CompletableFuture<GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureResult> getServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeaturePlain(GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeaturePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature:getServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature", TypeShape.of(GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
      * This data source can read the Service LAN VPN Interface GRE Feature.
      * 
      * ## Example Usage
@@ -46889,6 +47357,456 @@ public final class SdwanFunctions {
         return Deployment.getInstance().invokeAsync("sdwan:index/getTransportWanVpnInterfaceCellularFeature:getTransportWanVpnInterfaceCellularFeature", TypeShape.of(GetTransportWanVpnInterfaceCellularFeatureResult.class), args, Utilities.withVersion(options));
     }
     /**
+     * This data source can read the Transport WAN VPN Interface Cellular Feature Associate Tracker Feature .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeature(GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .transportWanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .transportWanVpnInterfaceCellularFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeatureResult> getTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeature(GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeatureArgs args) {
+        return getTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeature(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Transport WAN VPN Interface Cellular Feature Associate Tracker Feature .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeature(GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .transportWanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .transportWanVpnInterfaceCellularFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static CompletableFuture<GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeatureResult> getTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeaturePlain(GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeaturePlainArgs args) {
+        return getTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeaturePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Transport WAN VPN Interface Cellular Feature Associate Tracker Feature .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeature(GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .transportWanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .transportWanVpnInterfaceCellularFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeatureResult> getTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeature(GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeatureArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeature:getTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeature", TypeShape.of(GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Transport WAN VPN Interface Cellular Feature Associate Tracker Feature .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeature(GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .transportWanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .transportWanVpnInterfaceCellularFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeatureResult> getTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeature(GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeatureArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeature:getTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeature", TypeShape.of(GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Transport WAN VPN Interface Cellular Feature Associate Tracker Feature .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeature(GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .transportWanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .transportWanVpnInterfaceCellularFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static CompletableFuture<GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeatureResult> getTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeaturePlain(GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeaturePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeature:getTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeature", TypeShape.of(GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Transport WAN VPN Interface Cellular Feature Associate Tracker Group Feature .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature(GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .transportWanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .transportWanVpnInterfaceCellularFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeatureResult> getTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature(GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeatureArgs args) {
+        return getTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Transport WAN VPN Interface Cellular Feature Associate Tracker Group Feature .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature(GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .transportWanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .transportWanVpnInterfaceCellularFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static CompletableFuture<GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeatureResult> getTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeaturePlain(GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeaturePlainArgs args) {
+        return getTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeaturePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Transport WAN VPN Interface Cellular Feature Associate Tracker Group Feature .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature(GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .transportWanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .transportWanVpnInterfaceCellularFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeatureResult> getTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature(GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeatureArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature:getTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature", TypeShape.of(GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Transport WAN VPN Interface Cellular Feature Associate Tracker Group Feature .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature(GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .transportWanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .transportWanVpnInterfaceCellularFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeatureResult> getTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature(GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeatureArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature:getTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature", TypeShape.of(GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Transport WAN VPN Interface Cellular Feature Associate Tracker Group Feature .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature(GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .transportWanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .transportWanVpnInterfaceCellularFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static CompletableFuture<GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeatureResult> getTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeaturePlain(GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeaturePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature:getTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature", TypeShape.of(GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
      * This data source can read the Transport WAN VPN Interface Ethernet Feature.
      * 
      * ## Example Usage
@@ -48229,6 +49147,231 @@ public final class SdwanFunctions {
         return Deployment.getInstance().invokeAsync("sdwan:index/getTransportWanVpnInterfaceGreFeature:getTransportWanVpnInterfaceGreFeature", TypeShape.of(GetTransportWanVpnInterfaceGreFeatureResult.class), args, Utilities.withVersion(options));
     }
     /**
+     * This data source can read the Transport WAN VPN Interface GRE Feature Associate Tracker Feature .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTransportWanVpnInterfaceGreFeatureAssociateTrackerFeature(GetTransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .transportWanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .transportWanVpnInterfaceGreFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetTransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureResult> getTransportWanVpnInterfaceGreFeatureAssociateTrackerFeature(GetTransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureArgs args) {
+        return getTransportWanVpnInterfaceGreFeatureAssociateTrackerFeature(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Transport WAN VPN Interface GRE Feature Associate Tracker Feature .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTransportWanVpnInterfaceGreFeatureAssociateTrackerFeature(GetTransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .transportWanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .transportWanVpnInterfaceGreFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static CompletableFuture<GetTransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureResult> getTransportWanVpnInterfaceGreFeatureAssociateTrackerFeaturePlain(GetTransportWanVpnInterfaceGreFeatureAssociateTrackerFeaturePlainArgs args) {
+        return getTransportWanVpnInterfaceGreFeatureAssociateTrackerFeaturePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Transport WAN VPN Interface GRE Feature Associate Tracker Feature .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTransportWanVpnInterfaceGreFeatureAssociateTrackerFeature(GetTransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .transportWanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .transportWanVpnInterfaceGreFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetTransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureResult> getTransportWanVpnInterfaceGreFeatureAssociateTrackerFeature(GetTransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getTransportWanVpnInterfaceGreFeatureAssociateTrackerFeature:getTransportWanVpnInterfaceGreFeatureAssociateTrackerFeature", TypeShape.of(GetTransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Transport WAN VPN Interface GRE Feature Associate Tracker Feature .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTransportWanVpnInterfaceGreFeatureAssociateTrackerFeature(GetTransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .transportWanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .transportWanVpnInterfaceGreFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetTransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureResult> getTransportWanVpnInterfaceGreFeatureAssociateTrackerFeature(GetTransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getTransportWanVpnInterfaceGreFeatureAssociateTrackerFeature:getTransportWanVpnInterfaceGreFeatureAssociateTrackerFeature", TypeShape.of(GetTransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Transport WAN VPN Interface GRE Feature Associate Tracker Feature .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTransportWanVpnInterfaceGreFeatureAssociateTrackerFeature(GetTransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .transportWanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .transportWanVpnInterfaceGreFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static CompletableFuture<GetTransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureResult> getTransportWanVpnInterfaceGreFeatureAssociateTrackerFeaturePlain(GetTransportWanVpnInterfaceGreFeatureAssociateTrackerFeaturePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getTransportWanVpnInterfaceGreFeatureAssociateTrackerFeature:getTransportWanVpnInterfaceGreFeatureAssociateTrackerFeature", TypeShape.of(GetTransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
      * This data source can read the Transport WAN VPN Interface IPSEC Feature.
      * 
      * ## Example Usage
@@ -48447,6 +49590,231 @@ public final class SdwanFunctions {
      */
     public static CompletableFuture<GetTransportWanVpnInterfaceIpsecFeatureResult> getTransportWanVpnInterfaceIpsecFeaturePlain(GetTransportWanVpnInterfaceIpsecFeaturePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("sdwan:index/getTransportWanVpnInterfaceIpsecFeature:getTransportWanVpnInterfaceIpsecFeature", TypeShape.of(GetTransportWanVpnInterfaceIpsecFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Transport WAN VPN Interface IPSEC Feature Associate Tracker Feature .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeature(GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .transportWanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .transportWanVpnInterfaceIpsecFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeatureResult> getTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeature(GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeatureArgs args) {
+        return getTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeature(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Transport WAN VPN Interface IPSEC Feature Associate Tracker Feature .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeature(GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .transportWanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .transportWanVpnInterfaceIpsecFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static CompletableFuture<GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeatureResult> getTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeaturePlain(GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeaturePlainArgs args) {
+        return getTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeaturePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Transport WAN VPN Interface IPSEC Feature Associate Tracker Feature .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeature(GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .transportWanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .transportWanVpnInterfaceIpsecFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeatureResult> getTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeature(GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeatureArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeature:getTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeature", TypeShape.of(GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Transport WAN VPN Interface IPSEC Feature Associate Tracker Feature .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeature(GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .transportWanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .transportWanVpnInterfaceIpsecFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeatureResult> getTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeature(GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeatureArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeature:getTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeature", TypeShape.of(GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Transport WAN VPN Interface IPSEC Feature Associate Tracker Feature .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeature(GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeatureArgs.builder()
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .transportWanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .transportWanVpnInterfaceIpsecFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static CompletableFuture<GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeatureResult> getTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeaturePlain(GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeaturePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeature:getTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeature", TypeShape.of(GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeatureResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source can read the Transport WAN VPN Interface T1 E1 Serial Feature.

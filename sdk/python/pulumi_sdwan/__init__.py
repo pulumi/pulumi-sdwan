@@ -204,6 +204,8 @@ from .get_service_lan_vpn_feature_associate_routing_ospfv3_ipv4_feature import *
 from .get_service_lan_vpn_feature_associate_routing_ospfv3_ipv6_feature import *
 from .get_service_lan_vpn_interface_ethernet_feature import *
 from .get_service_lan_vpn_interface_ethernet_feature_associate_dhcp_server_feature import *
+from .get_service_lan_vpn_interface_ethernet_feature_associate_tracker_feature import *
+from .get_service_lan_vpn_interface_ethernet_feature_associate_tracker_group_feature import *
 from .get_service_lan_vpn_interface_gre_feature import *
 from .get_service_lan_vpn_interface_ipsec_feature import *
 from .get_service_lan_vpn_interface_ipsec_feature_associate_dhcp_server_feature import *
@@ -272,13 +274,17 @@ from .get_transport_wan_vpn_feature_associate_routing_ospf_feature import *
 from .get_transport_wan_vpn_feature_associate_routing_ospfv3_ipv4_feature import *
 from .get_transport_wan_vpn_feature_associate_routing_ospfv3_ipv6_feature import *
 from .get_transport_wan_vpn_interface_cellular_feature import *
+from .get_transport_wan_vpn_interface_cellular_feature_associate_tracker_feature import *
+from .get_transport_wan_vpn_interface_cellular_feature_associate_tracker_group_feature import *
 from .get_transport_wan_vpn_interface_ethernet_feature import *
 from .get_transport_wan_vpn_interface_ethernet_feature_associate_ipv6_tracker_feature import *
 from .get_transport_wan_vpn_interface_ethernet_feature_associate_ipv6_tracker_group_feature import *
 from .get_transport_wan_vpn_interface_ethernet_feature_associate_tracker_feature import *
 from .get_transport_wan_vpn_interface_ethernet_feature_associate_tracker_group_feature import *
 from .get_transport_wan_vpn_interface_gre_feature import *
+from .get_transport_wan_vpn_interface_gre_feature_associate_tracker_feature import *
 from .get_transport_wan_vpn_interface_ipsec_feature import *
+from .get_transport_wan_vpn_interface_ipsec_feature_associate_tracker_feature import *
 from .get_transport_wan_vpn_interface_t1_e1_serial_feature import *
 from .get_url_filtering_policy_definition import *
 from .get_vedge_inventory import *
@@ -367,6 +373,8 @@ from .service_lan_vpn_feature_associate_routing_ospfv3_ipv4_feature import *
 from .service_lan_vpn_feature_associate_routing_ospfv3_ipv6_feature import *
 from .service_lan_vpn_interface_ethernet_feature import *
 from .service_lan_vpn_interface_ethernet_feature_associate_dhcp_server_feature import *
+from .service_lan_vpn_interface_ethernet_feature_associate_tracker_feature import *
+from .service_lan_vpn_interface_ethernet_feature_associate_tracker_group_feature import *
 from .service_lan_vpn_interface_gre_feature import *
 from .service_lan_vpn_interface_ipsec_feature import *
 from .service_lan_vpn_interface_ipsec_feature_associate_dhcp_server_feature import *
@@ -435,13 +443,17 @@ from .transport_wan_vpn_feature_associate_routing_ospf_feature import *
 from .transport_wan_vpn_feature_associate_routing_ospfv3_ipv4_feature import *
 from .transport_wan_vpn_feature_associate_routing_ospfv3_ipv6_feature import *
 from .transport_wan_vpn_interface_cellular_feature import *
+from .transport_wan_vpn_interface_cellular_feature_associate_tracker_feature import *
+from .transport_wan_vpn_interface_cellular_feature_associate_tracker_group_feature import *
 from .transport_wan_vpn_interface_ethernet_feature import *
 from .transport_wan_vpn_interface_ethernet_feature_associate_ipv6_tracker_feature import *
 from .transport_wan_vpn_interface_ethernet_feature_associate_ipv6_tracker_group_feature import *
 from .transport_wan_vpn_interface_ethernet_feature_associate_tracker_feature import *
 from .transport_wan_vpn_interface_ethernet_feature_associate_tracker_group_feature import *
 from .transport_wan_vpn_interface_gre_feature import *
+from .transport_wan_vpn_interface_gre_feature_associate_tracker_feature import *
 from .transport_wan_vpn_interface_ipsec_feature import *
+from .transport_wan_vpn_interface_ipsec_feature_associate_tracker_feature import *
 from .transport_wan_vpn_interface_t1_e1_serial_feature import *
 from .url_filtering_policy_definition import *
 from .vpn_interface_cellular_feature_template import *
@@ -1559,6 +1571,22 @@ _utilities.register(
  },
  {
   "pkg": "sdwan",
+  "mod": "index/serviceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/serviceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature:ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature": "ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/serviceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/serviceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature:ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature": "ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature"
+  }
+ },
+ {
+  "pkg": "sdwan",
   "mod": "index/serviceLanVpnInterfaceGreFeature",
   "fqn": "pulumi_sdwan",
   "classes": {
@@ -2103,6 +2131,22 @@ _utilities.register(
  },
  {
   "pkg": "sdwan",
+  "mod": "index/transportWanVpnInterfaceCellularFeatureAssociateTrackerFeature",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/transportWanVpnInterfaceCellularFeatureAssociateTrackerFeature:TransportWanVpnInterfaceCellularFeatureAssociateTrackerFeature": "TransportWanVpnInterfaceCellularFeatureAssociateTrackerFeature"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/transportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/transportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature:TransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature": "TransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeature"
+  }
+ },
+ {
+  "pkg": "sdwan",
   "mod": "index/transportWanVpnInterfaceEthernetFeature",
   "fqn": "pulumi_sdwan",
   "classes": {
@@ -2151,10 +2195,26 @@ _utilities.register(
  },
  {
   "pkg": "sdwan",
+  "mod": "index/transportWanVpnInterfaceGreFeatureAssociateTrackerFeature",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/transportWanVpnInterfaceGreFeatureAssociateTrackerFeature:TransportWanVpnInterfaceGreFeatureAssociateTrackerFeature": "TransportWanVpnInterfaceGreFeatureAssociateTrackerFeature"
+  }
+ },
+ {
+  "pkg": "sdwan",
   "mod": "index/transportWanVpnInterfaceIpsecFeature",
   "fqn": "pulumi_sdwan",
   "classes": {
    "sdwan:index/transportWanVpnInterfaceIpsecFeature:TransportWanVpnInterfaceIpsecFeature": "TransportWanVpnInterfaceIpsecFeature"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/transportWanVpnInterfaceIpsecFeatureAssociateTrackerFeature",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/transportWanVpnInterfaceIpsecFeatureAssociateTrackerFeature:TransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeature": "TransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeature"
   }
  },
  {
