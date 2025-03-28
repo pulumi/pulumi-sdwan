@@ -162,7 +162,6 @@ __all__ = [
     'ColorListPolicyObjectEntry',
     'ConfigurationGroupDevice',
     'ConfigurationGroupDeviceVariable',
-    'ConfigurationGroupFeatureProfile',
     'ConfigurationGroupTopologyDevice',
     'ConfigurationGroupTopologyDeviceUnsupportedFeature',
     'CustomControlTopologyPolicyDefinitionSequence',
@@ -173,6 +172,7 @@ __all__ = [
     'DataIpv4PrefixListPolicyObjectEntry',
     'DataIpv6PrefixListPolicyObjectEntry',
     'DnsSecurityPolicyDefinitionTargetVpn',
+    'DnsSecurityPolicyTargetVpn',
     'DomainListPolicyObjectEntry',
     'EigrpFeatureTemplateAddressFamily',
     'EigrpFeatureTemplateAddressFamilyNetwork',
@@ -189,6 +189,7 @@ __all__ = [
     'HubAndSpokeTopologyPolicyDefinitionTopology',
     'HubAndSpokeTopologyPolicyDefinitionTopologySpoke',
     'HubAndSpokeTopologyPolicyDefinitionTopologySpokeHub',
+    'IntrusionPreventionPolicyDefinitionLogging',
     'IpsSignatureListPolicyObjectEntry',
     'Ipv4AclPolicyDefinitionSequence',
     'Ipv4AclPolicyDefinitionSequenceActionEntry',
@@ -465,6 +466,7 @@ __all__ = [
     'TransportWanVpnInterfaceEthernetFeatureStaticNat66',
     'TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulation',
     'TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulation',
+    'UrlFilteringPolicyDefinitionLogging',
     'VpnInterfaceCellularFeatureTemplateIpv4AccessList',
     'VpnInterfaceCellularFeatureTemplateIpv6AccessList',
     'VpnInterfaceCellularFeatureTemplateNatPortForward',
@@ -665,7 +667,6 @@ __all__ = [
     'GetColorListPolicyObjectEntryResult',
     'GetConfigurationGroupDeviceResult',
     'GetConfigurationGroupDeviceVariableResult',
-    'GetConfigurationGroupFeatureProfileResult',
     'GetConfigurationGroupTopologyDeviceResult',
     'GetConfigurationGroupTopologyDeviceUnsupportedFeatureResult',
     'GetCustomControlTopologyPolicyDefinitionSequenceResult',
@@ -677,6 +678,7 @@ __all__ = [
     'GetDataIpv6PrefixListPolicyObjectEntryResult',
     'GetDeviceDeviceResult',
     'GetDnsSecurityPolicyDefinitionTargetVpnResult',
+    'GetDnsSecurityPolicyTargetVpnResult',
     'GetDomainListPolicyObjectEntryResult',
     'GetEigrpFeatureTemplateAddressFamilyResult',
     'GetEigrpFeatureTemplateAddressFamilyNetworkResult',
@@ -693,6 +695,7 @@ __all__ = [
     'GetHubAndSpokeTopologyPolicyDefinitionTopologyResult',
     'GetHubAndSpokeTopologyPolicyDefinitionTopologySpokeResult',
     'GetHubAndSpokeTopologyPolicyDefinitionTopologySpokeHubResult',
+    'GetIntrusionPreventionPolicyDefinitionLoggingResult',
     'GetIpsSignatureListPolicyObjectEntryResult',
     'GetIpv4AclPolicyDefinitionSequenceResult',
     'GetIpv4AclPolicyDefinitionSequenceActionEntryResult',
@@ -969,6 +972,7 @@ __all__ = [
     'GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Result',
     'GetTransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationResult',
     'GetTransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationResult',
+    'GetUrlFilteringPolicyDefinitionLoggingResult',
     'GetVedgeInventoryDeviceResult',
     'GetVpnInterfaceCellularFeatureTemplateIpv4AccessListResult',
     'GetVpnInterfaceCellularFeatureTemplateIpv6AccessListResult',
@@ -1201,11 +1205,11 @@ class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntry(dict):
         """
         :param str type: Type of action entry
                  - Choices: `backupSlaPreferredColor`, `count`, `log`, `slaClass`, `cloudSaas`
-        :param str backup_sla_preferred_color: Backup SLA preferred color (Single value or multiple values separated by spaces)
-        :param bool cloud_sla: Cloud SLA
-        :param str counter: Counter name
-        :param bool log: Enable logging
-        :param Sequence['ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameterArgs'] sla_class_parameters: List of SLA class parameters
+        :param str backup_sla_preferred_color: Backup SLA preferred color (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `backupSlaPreferredColor`
+        :param bool cloud_sla: Cloud SLA, Attribute conditional on `type` being equal to `cloudSaas`
+        :param str counter: Counter name, Attribute conditional on `type` being equal to `count`
+        :param bool log: Enable logging, Attribute conditional on `type` being equal to `log`
+        :param Sequence['ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameterArgs'] sla_class_parameters: List of SLA class parameters, Attribute conditional on `type` being equal to `slaClass`
         """
         pulumi.set(__self__, "type", type)
         if backup_sla_preferred_color is not None:
@@ -1232,7 +1236,7 @@ class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="backupSlaPreferredColor")
     def backup_sla_preferred_color(self) -> Optional[str]:
         """
-        Backup SLA preferred color (Single value or multiple values separated by spaces)
+        Backup SLA preferred color (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `backupSlaPreferredColor`
         """
         return pulumi.get(self, "backup_sla_preferred_color")
 
@@ -1240,7 +1244,7 @@ class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="cloudSla")
     def cloud_sla(self) -> Optional[bool]:
         """
-        Cloud SLA
+        Cloud SLA, Attribute conditional on `type` being equal to `cloudSaas`
         """
         return pulumi.get(self, "cloud_sla")
 
@@ -1248,7 +1252,7 @@ class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter
     def counter(self) -> Optional[str]:
         """
-        Counter name
+        Counter name, Attribute conditional on `type` being equal to `count`
         """
         return pulumi.get(self, "counter")
 
@@ -1256,7 +1260,7 @@ class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter
     def log(self) -> Optional[bool]:
         """
-        Enable logging
+        Enable logging, Attribute conditional on `type` being equal to `log`
         """
         return pulumi.get(self, "log")
 
@@ -1264,7 +1268,7 @@ class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="slaClassParameters")
     def sla_class_parameters(self) -> Optional[Sequence['outputs.ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameter']]:
         """
-        List of SLA class parameters
+        List of SLA class parameters, Attribute conditional on `type` being equal to `slaClass`
         """
         return pulumi.get(self, "sla_class_parameters")
 
@@ -1306,10 +1310,10 @@ class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParamete
         """
         :param str type: Type of SLA class parameter
                  - Choices: `name`, `preferredColor`, `preferredColorGroup`, `strict`, `fallbackToBestPath`
-        :param str preferred_color: preferred color (Single value or multiple values separated by spaces)
-        :param str preferred_color_group_list: Preferred color group list ID
+        :param str preferred_color: preferred color (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `preferredColor`
+        :param str preferred_color_group_list: Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
         :param int preferred_color_group_list_version: Preferred color group list version
-        :param str sla_class_list: SLA class list ID
+        :param str sla_class_list: SLA class list ID, Attribute conditional on `type` being equal to `name`
         :param int sla_class_list_version: SLA class list version
         """
         pulumi.set(__self__, "type", type)
@@ -1337,7 +1341,7 @@ class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParamete
     @pulumi.getter(name="preferredColor")
     def preferred_color(self) -> Optional[str]:
         """
-        preferred color (Single value or multiple values separated by spaces)
+        preferred color (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `preferredColor`
         """
         return pulumi.get(self, "preferred_color")
 
@@ -1345,7 +1349,7 @@ class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParamete
     @pulumi.getter(name="preferredColorGroupList")
     def preferred_color_group_list(self) -> Optional[str]:
         """
-        Preferred color group list ID
+        Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
         """
         return pulumi.get(self, "preferred_color_group_list")
 
@@ -1361,7 +1365,7 @@ class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParamete
     @pulumi.getter(name="slaClassList")
     def sla_class_list(self) -> Optional[str]:
         """
-        SLA class list ID
+        SLA class list ID, Attribute conditional on `type` being equal to `name`
         """
         return pulumi.get(self, "sla_class_list")
 
@@ -1445,29 +1449,29 @@ class ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry(dict):
         """
         :param str type: Type of match entry
                  - Choices: `appList`, `dnsAppList`, `dns`, `dscp`, `plp`, `protocol`, `sourceDataPrefixList`, `sourceIp`, `sourcePort`, `destinationDataPrefixList`, `destinationIp`, `destinationRegion`, `destinationPort`, `trafficTo`, `icmpMessage`
-        :param str application_list_id: Application list ID
+        :param str application_list_id: Application list ID, Attribute conditional on `type` being equal to `appList`
         :param int application_list_version: Application list version
-        :param str destination_data_prefix_list_id: Destination Data Prefix list ID
+        :param str destination_data_prefix_list_id: Destination Data Prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
         :param int destination_data_prefix_list_version: Destination Data Prefix list version
-        :param str destination_ip: Destination IP
-        :param str destination_port: Destination port, 0-65535 (Single value, range or multiple values separated by spaces)
-        :param str destination_region: Destination region
+        :param str destination_ip: Destination IP, Attribute conditional on `type` being equal to `destinationIp`
+        :param str destination_port: Destination port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `type` being equal to `destinationPort`
+        :param str destination_region: Destination region, Attribute conditional on `type` being equal to `destinationRegion`
                  - Choices: `primary-region`, `secondary-region`, `other-region`
-        :param str dns: DNS request or response
+        :param str dns: DNS request or response, Attribute conditional on `type` being equal to `dns`
                  - Choices: `request`, `response`
-        :param str dns_application_list_id: DNS Application list ID
+        :param str dns_application_list_id: DNS Application list ID, Attribute conditional on `type` being equal to `dnsAppList`
         :param int dns_application_list_version: DNS Application list version
-        :param int dscp: DSCP value
+        :param int dscp: DSCP value, Attribute conditional on `type` being equal to `dscp`
                  - Range: `0`-`63`
-        :param str icmp_message: ICMP Message
-        :param str plp: PLP
+        :param str icmp_message: ICMP Message, Attribute conditional on `type` being equal to `icmpMessage`
+        :param str plp: PLP, Attribute conditional on `type` being equal to `plp`
                  - Choices: `low`, `high`
-        :param str protocol: IP Protocol, 0-255 (Single value or multiple values separated by spaces)
-        :param str source_data_prefix_list_id: Source Data Prefix list ID
+        :param str protocol: IP Protocol, 0-255 (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `protocol`
+        :param str source_data_prefix_list_id: Source Data Prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
         :param int source_data_prefix_list_version: Source Data Prefix list version
-        :param str source_ip: Source IP
-        :param str source_port: Source port, 0-65535 (Single value, range or multiple values separated by spaces)
-        :param str traffic_to: Traffic to
+        :param str source_ip: Source IP, Attribute conditional on `type` being equal to `sourceIp`
+        :param str source_port: Source port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `type` being equal to `sourcePort`
+        :param str traffic_to: Traffic to, Attribute conditional on `type` being equal to `trafficTo`
                  - Choices: `access`, `core`, `service`
         """
         pulumi.set(__self__, "type", type)
@@ -1523,7 +1527,7 @@ class ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="applicationListId")
     def application_list_id(self) -> Optional[str]:
         """
-        Application list ID
+        Application list ID, Attribute conditional on `type` being equal to `appList`
         """
         return pulumi.get(self, "application_list_id")
 
@@ -1539,7 +1543,7 @@ class ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="destinationDataPrefixListId")
     def destination_data_prefix_list_id(self) -> Optional[str]:
         """
-        Destination Data Prefix list ID
+        Destination Data Prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
         """
         return pulumi.get(self, "destination_data_prefix_list_id")
 
@@ -1555,7 +1559,7 @@ class ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="destinationIp")
     def destination_ip(self) -> Optional[str]:
         """
-        Destination IP
+        Destination IP, Attribute conditional on `type` being equal to `destinationIp`
         """
         return pulumi.get(self, "destination_ip")
 
@@ -1563,7 +1567,7 @@ class ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="destinationPort")
     def destination_port(self) -> Optional[str]:
         """
-        Destination port, 0-65535 (Single value, range or multiple values separated by spaces)
+        Destination port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `type` being equal to `destinationPort`
         """
         return pulumi.get(self, "destination_port")
 
@@ -1571,7 +1575,7 @@ class ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="destinationRegion")
     def destination_region(self) -> Optional[str]:
         """
-        Destination region
+        Destination region, Attribute conditional on `type` being equal to `destinationRegion`
           - Choices: `primary-region`, `secondary-region`, `other-region`
         """
         return pulumi.get(self, "destination_region")
@@ -1580,7 +1584,7 @@ class ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter
     def dns(self) -> Optional[str]:
         """
-        DNS request or response
+        DNS request or response, Attribute conditional on `type` being equal to `dns`
           - Choices: `request`, `response`
         """
         return pulumi.get(self, "dns")
@@ -1589,7 +1593,7 @@ class ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="dnsApplicationListId")
     def dns_application_list_id(self) -> Optional[str]:
         """
-        DNS Application list ID
+        DNS Application list ID, Attribute conditional on `type` being equal to `dnsAppList`
         """
         return pulumi.get(self, "dns_application_list_id")
 
@@ -1605,7 +1609,7 @@ class ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter
     def dscp(self) -> Optional[int]:
         """
-        DSCP value
+        DSCP value, Attribute conditional on `type` being equal to `dscp`
           - Range: `0`-`63`
         """
         return pulumi.get(self, "dscp")
@@ -1614,7 +1618,7 @@ class ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="icmpMessage")
     def icmp_message(self) -> Optional[str]:
         """
-        ICMP Message
+        ICMP Message, Attribute conditional on `type` being equal to `icmpMessage`
         """
         return pulumi.get(self, "icmp_message")
 
@@ -1622,7 +1626,7 @@ class ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter
     def plp(self) -> Optional[str]:
         """
-        PLP
+        PLP, Attribute conditional on `type` being equal to `plp`
           - Choices: `low`, `high`
         """
         return pulumi.get(self, "plp")
@@ -1631,7 +1635,7 @@ class ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter
     def protocol(self) -> Optional[str]:
         """
-        IP Protocol, 0-255 (Single value or multiple values separated by spaces)
+        IP Protocol, 0-255 (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `protocol`
         """
         return pulumi.get(self, "protocol")
 
@@ -1639,7 +1643,7 @@ class ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="sourceDataPrefixListId")
     def source_data_prefix_list_id(self) -> Optional[str]:
         """
-        Source Data Prefix list ID
+        Source Data Prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
         """
         return pulumi.get(self, "source_data_prefix_list_id")
 
@@ -1655,7 +1659,7 @@ class ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="sourceIp")
     def source_ip(self) -> Optional[str]:
         """
-        Source IP
+        Source IP, Attribute conditional on `type` being equal to `sourceIp`
         """
         return pulumi.get(self, "source_ip")
 
@@ -1663,7 +1667,7 @@ class ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="sourcePort")
     def source_port(self) -> Optional[str]:
         """
-        Source port, 0-65535 (Single value, range or multiple values separated by spaces)
+        Source port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `type` being equal to `sourcePort`
         """
         return pulumi.get(self, "source_port")
 
@@ -1671,7 +1675,7 @@ class ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="trafficTo")
     def traffic_to(self) -> Optional[str]:
         """
-        Traffic to
+        Traffic to, Attribute conditional on `type` being equal to `trafficTo`
           - Choices: `access`, `core`, `service`
         """
         return pulumi.get(self, "traffic_to")
@@ -22045,25 +22049,6 @@ class ConfigurationGroupDeviceVariable(dict):
 
 
 @pulumi.output_type
-class ConfigurationGroupFeatureProfile(dict):
-    def __init__(__self__, *,
-                 id: Optional[str] = None):
-        """
-        :param str id: Feature profile ID
-        """
-        if id is not None:
-            pulumi.set(__self__, "id", id)
-
-    @property
-    @pulumi.getter
-    def id(self) -> Optional[str]:
-        """
-        Feature profile ID
-        """
-        return pulumi.get(self, "id")
-
-
-@pulumi.output_type
 class ConfigurationGroupTopologyDevice(dict):
     @staticmethod
     def __key_warning(key: str):
@@ -22329,9 +22314,9 @@ class CustomControlTopologyPolicyDefinitionSequenceActionEntry(dict):
         """
         :param str type: Type of action entry
                  - Choices: `set`, `exportTo`
-        :param str export_to_vpn_list_id: Export to VPN list ID
+        :param str export_to_vpn_list_id: Export to VPN list ID, Attribute conditional on `type` being equal to `exportTo`
         :param int export_to_vpn_list_version: Export to VPN list version
-        :param Sequence['CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameterArgs'] set_parameters: List of set parameters
+        :param Sequence['CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameterArgs'] set_parameters: List of set parameters, Attribute conditional on `type` being equal to `set`
         """
         pulumi.set(__self__, "type", type)
         if export_to_vpn_list_id is not None:
@@ -22354,7 +22339,7 @@ class CustomControlTopologyPolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="exportToVpnListId")
     def export_to_vpn_list_id(self) -> Optional[str]:
         """
-        Export to VPN list ID
+        Export to VPN list ID, Attribute conditional on `type` being equal to `exportTo`
         """
         return pulumi.get(self, "export_to_vpn_list_id")
 
@@ -22370,7 +22355,7 @@ class CustomControlTopologyPolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="setParameters")
     def set_parameters(self) -> Optional[Sequence['outputs.CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameter']]:
         """
-        List of set parameters
+        List of set parameters, Attribute conditional on `type` being equal to `set`
         """
         return pulumi.get(self, "set_parameters")
 
@@ -22444,29 +22429,29 @@ class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameter(dict)
         """
         :param str type: Type of set parameter
                  - Choices: `tlocList`, `tloc`, `tlocAction`, `preference`, `ompTag`, `community`, `communityAdditive`, `service`
-        :param str community: Community value, e.g. `1000:10000` or `internet` or `local-AS`
-        :param bool community_additive: Community additive
-        :param int omp_tag: OMP tag
+        :param str community: Community value, e.g. `1000:10000` or `internet` or `local-AS`, Attribute conditional on `type` being equal to `community`
+        :param bool community_additive: Community additive, Attribute conditional on `type` being equal to `communityAdditive`
+        :param int omp_tag: OMP tag, Attribute conditional on `type` being equal to `ompTag`
                  - Range: `0`-`4294967295`
-        :param int preference: Preference
+        :param int preference: Preference, Attribute conditional on `type` being equal to `preference`
                  - Range: `0`-`4294967295`
-        :param str service_tloc_color: Service TLOC color
-        :param str service_tloc_encapsulation: Service TLOC encapsulation
+        :param str service_tloc_color: Service TLOC color, Attribute conditional on `type` being equal to `service`
+        :param str service_tloc_encapsulation: Service TLOC encapsulation, Attribute conditional on `type` being equal to `service`
                  - Choices: `ipsec`, `gre`
-        :param str service_tloc_ip: Service TLOC IP address
-        :param str service_tloc_list_id: Service TLOC list ID
+        :param str service_tloc_ip: Service TLOC IP address, Attribute conditional on `type` being equal to `service`
+        :param str service_tloc_list_id: Service TLOC list ID, Attribute conditional on `type` being equal to `service`
         :param int service_tloc_list_version: Service TLOC list version
-        :param str service_type: Service type
+        :param str service_type: Service type, Attribute conditional on `type` being equal to `service`
                  - Choices: `FW`, `IDP`, `IDS`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `netsvc5`
-        :param int service_vpn_id: Service VPN ID
+        :param int service_vpn_id: Service VPN ID, Attribute conditional on `type` being equal to `service`
                  - Range: `0`-`65536`
-        :param str tloc_action: TLOC action
+        :param str tloc_action: TLOC action, Attribute conditional on `type` being equal to `tlocAction`
                  - Choices: `strict`, `primary`, `backup`, `ecmp`
-        :param str tloc_color: TLOC color
-        :param str tloc_encapsulation: TLOC encapsulation
+        :param str tloc_color: TLOC color, Attribute conditional on `type` being equal to `tloc`
+        :param str tloc_encapsulation: TLOC encapsulation, Attribute conditional on `type` being equal to `tloc`
                  - Choices: `ipsec`, `gre`
-        :param str tloc_ip: TLOC IP address
-        :param str tloc_list_id: TLOC list ID
+        :param str tloc_ip: TLOC IP address, Attribute conditional on `type` being equal to `tloc`
+        :param str tloc_list_id: TLOC list ID, Attribute conditional on `type` being equal to `tlocList`
         :param int tloc_list_version: TLOC list version
         """
         pulumi.set(__self__, "type", type)
@@ -22518,7 +22503,7 @@ class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameter(dict)
     @pulumi.getter
     def community(self) -> Optional[str]:
         """
-        Community value, e.g. `1000:10000` or `internet` or `local-AS`
+        Community value, e.g. `1000:10000` or `internet` or `local-AS`, Attribute conditional on `type` being equal to `community`
         """
         return pulumi.get(self, "community")
 
@@ -22526,7 +22511,7 @@ class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameter(dict)
     @pulumi.getter(name="communityAdditive")
     def community_additive(self) -> Optional[bool]:
         """
-        Community additive
+        Community additive, Attribute conditional on `type` being equal to `communityAdditive`
         """
         return pulumi.get(self, "community_additive")
 
@@ -22534,7 +22519,7 @@ class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameter(dict)
     @pulumi.getter(name="ompTag")
     def omp_tag(self) -> Optional[int]:
         """
-        OMP tag
+        OMP tag, Attribute conditional on `type` being equal to `ompTag`
           - Range: `0`-`4294967295`
         """
         return pulumi.get(self, "omp_tag")
@@ -22543,7 +22528,7 @@ class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameter(dict)
     @pulumi.getter
     def preference(self) -> Optional[int]:
         """
-        Preference
+        Preference, Attribute conditional on `type` being equal to `preference`
           - Range: `0`-`4294967295`
         """
         return pulumi.get(self, "preference")
@@ -22552,7 +22537,7 @@ class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameter(dict)
     @pulumi.getter(name="serviceTlocColor")
     def service_tloc_color(self) -> Optional[str]:
         """
-        Service TLOC color
+        Service TLOC color, Attribute conditional on `type` being equal to `service`
         """
         return pulumi.get(self, "service_tloc_color")
 
@@ -22560,7 +22545,7 @@ class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameter(dict)
     @pulumi.getter(name="serviceTlocEncapsulation")
     def service_tloc_encapsulation(self) -> Optional[str]:
         """
-        Service TLOC encapsulation
+        Service TLOC encapsulation, Attribute conditional on `type` being equal to `service`
           - Choices: `ipsec`, `gre`
         """
         return pulumi.get(self, "service_tloc_encapsulation")
@@ -22569,7 +22554,7 @@ class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameter(dict)
     @pulumi.getter(name="serviceTlocIp")
     def service_tloc_ip(self) -> Optional[str]:
         """
-        Service TLOC IP address
+        Service TLOC IP address, Attribute conditional on `type` being equal to `service`
         """
         return pulumi.get(self, "service_tloc_ip")
 
@@ -22577,7 +22562,7 @@ class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameter(dict)
     @pulumi.getter(name="serviceTlocListId")
     def service_tloc_list_id(self) -> Optional[str]:
         """
-        Service TLOC list ID
+        Service TLOC list ID, Attribute conditional on `type` being equal to `service`
         """
         return pulumi.get(self, "service_tloc_list_id")
 
@@ -22593,7 +22578,7 @@ class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameter(dict)
     @pulumi.getter(name="serviceType")
     def service_type(self) -> Optional[str]:
         """
-        Service type
+        Service type, Attribute conditional on `type` being equal to `service`
           - Choices: `FW`, `IDP`, `IDS`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `netsvc5`
         """
         return pulumi.get(self, "service_type")
@@ -22602,7 +22587,7 @@ class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameter(dict)
     @pulumi.getter(name="serviceVpnId")
     def service_vpn_id(self) -> Optional[int]:
         """
-        Service VPN ID
+        Service VPN ID, Attribute conditional on `type` being equal to `service`
           - Range: `0`-`65536`
         """
         return pulumi.get(self, "service_vpn_id")
@@ -22611,7 +22596,7 @@ class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameter(dict)
     @pulumi.getter(name="tlocAction")
     def tloc_action(self) -> Optional[str]:
         """
-        TLOC action
+        TLOC action, Attribute conditional on `type` being equal to `tlocAction`
           - Choices: `strict`, `primary`, `backup`, `ecmp`
         """
         return pulumi.get(self, "tloc_action")
@@ -22620,7 +22605,7 @@ class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameter(dict)
     @pulumi.getter(name="tlocColor")
     def tloc_color(self) -> Optional[str]:
         """
-        TLOC color
+        TLOC color, Attribute conditional on `type` being equal to `tloc`
         """
         return pulumi.get(self, "tloc_color")
 
@@ -22628,7 +22613,7 @@ class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameter(dict)
     @pulumi.getter(name="tlocEncapsulation")
     def tloc_encapsulation(self) -> Optional[str]:
         """
-        TLOC encapsulation
+        TLOC encapsulation, Attribute conditional on `type` being equal to `tloc`
           - Choices: `ipsec`, `gre`
         """
         return pulumi.get(self, "tloc_encapsulation")
@@ -22637,7 +22622,7 @@ class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameter(dict)
     @pulumi.getter(name="tlocIp")
     def tloc_ip(self) -> Optional[str]:
         """
-        TLOC IP address
+        TLOC IP address, Attribute conditional on `type` being equal to `tloc`
         """
         return pulumi.get(self, "tloc_ip")
 
@@ -22645,7 +22630,7 @@ class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameter(dict)
     @pulumi.getter(name="tlocListId")
     def tloc_list_id(self) -> Optional[str]:
         """
-        TLOC list ID
+        TLOC list ID, Attribute conditional on `type` being equal to `tlocList`
         """
         return pulumi.get(self, "tloc_list_id")
 
@@ -22753,42 +22738,42 @@ class CustomControlTopologyPolicyDefinitionSequenceMatchEntry(dict):
         """
         :param str type: Type of match entry
                  - Choices: `colorList`, `community`, `expandedCommunity`, `ompTag`, `origin`, `originator`, `preference`, `siteList`, `pathType`, `tlocList`, `vpnList`, `prefixList`, `vpn`, `tloc`, `siteId`, `carrier`, `domainId`, `groupId`
-        :param str carrier: Carrier
+        :param str carrier: Carrier, Attribute conditional on `type` being equal to `carrier`
                  - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
-        :param str color_list_id: Color list ID
+        :param str color_list_id: Color list ID, Attribute conditional on `type` being equal to `colorList`
         :param int color_list_version: Color list version
-        :param str community_list_id: Community list ID
+        :param str community_list_id: Community list ID, Attribute conditional on `type` being equal to `community`
         :param int community_list_version: Community list version
-        :param int domain_id: Domain ID
+        :param int domain_id: Domain ID, Attribute conditional on `type` being equal to `domainId`
                  - Range: `0`-`4294967295`
-        :param str expanded_community_list_id: Expanded community list ID
+        :param str expanded_community_list_id: Expanded community list ID, Attribute conditional on `type` being equal to `expandedCommunity`
         :param int expanded_community_list_version: Expanded community list version
-        :param int group_id: Group ID
+        :param int group_id: Group ID, Attribute conditional on `type` being equal to `groupId`
                  - Range: `0`-`4294967295`
-        :param int omp_tag: OMP tag
+        :param int omp_tag: OMP tag, Attribute conditional on `type` being equal to `ompTag`
                  - Range: `0`-`4294967295`
-        :param str origin: Origin
+        :param str origin: Origin, Attribute conditional on `type` being equal to `origin`
                  - Choices: `igp`, `egp`, `incomplete`, `aggregrate`, `bgp`, `bgp-external`, `bgp-internal`, `connected`, `eigrp`, `ospf`, `ospf-inter-area`, `ospf-intra-area`, `ospf-external1`, `ospf-external2`, `rip`, `static`, `eigrp-summary`, `eigrp-internal`, `eigrp-external`, `lisp`, `nat-dia`, `natpool`, `isis`, `isis-level1`, `isis-level2`
-        :param str originator: Originator IP
-        :param str path_type: Path type
+        :param str originator: Originator IP, Attribute conditional on `type` being equal to `originator`
+        :param str path_type: Path type, Attribute conditional on `type` being equal to `pathType`
                  - Choices: `hierarchical-path`, `direct-path`, `transport-gateway-path`
-        :param int preference: Preference
+        :param int preference: Preference, Attribute conditional on `type` being equal to `preference`
                  - Range: `0`-`4294967295`
-        :param str prefix_list_id: Prefix list ID
+        :param str prefix_list_id: Prefix list ID, Attribute conditional on `type` being equal to `prefixList`
         :param int prefix_list_version: Prefix list version
-        :param int site_id: Site ID
+        :param int site_id: Site ID, Attribute conditional on `type` being equal to `siteId`
                  - Range: `0`-`4294967295`
-        :param str site_list_id: Site list ID
+        :param str site_list_id: Site list ID, Attribute conditional on `type` being equal to `siteList`
         :param int site_list_version: Site list version
-        :param str tloc_color: TLOC color
-        :param str tloc_encapsulation: TLOC encapsulation
+        :param str tloc_color: TLOC color, Attribute conditional on `type` being equal to `tloc`
+        :param str tloc_encapsulation: TLOC encapsulation, Attribute conditional on `type` being equal to `tloc`
                  - Choices: `ipsec`, `gre`
-        :param str tloc_ip: TLOC IP address
-        :param str tloc_list_id: TLOC list ID
+        :param str tloc_ip: TLOC IP address, Attribute conditional on `type` being equal to `tloc`
+        :param str tloc_list_id: TLOC list ID, Attribute conditional on `type` being equal to `tlocList`
         :param int tloc_list_version: TLOC list version
-        :param int vpn_id: VPN ID
+        :param int vpn_id: VPN ID, Attribute conditional on `type` being equal to `vpn`
                  - Range: `0`-`65536`
-        :param str vpn_list_id: VPN list ID
+        :param str vpn_list_id: VPN list ID, Attribute conditional on `type` being equal to `vpnList`
         :param int vpn_list_version: VPN list version
         """
         pulumi.set(__self__, "type", type)
@@ -22860,7 +22845,7 @@ class CustomControlTopologyPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter
     def carrier(self) -> Optional[str]:
         """
-        Carrier
+        Carrier, Attribute conditional on `type` being equal to `carrier`
           - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
         """
         return pulumi.get(self, "carrier")
@@ -22869,7 +22854,7 @@ class CustomControlTopologyPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="colorListId")
     def color_list_id(self) -> Optional[str]:
         """
-        Color list ID
+        Color list ID, Attribute conditional on `type` being equal to `colorList`
         """
         return pulumi.get(self, "color_list_id")
 
@@ -22885,7 +22870,7 @@ class CustomControlTopologyPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="communityListId")
     def community_list_id(self) -> Optional[str]:
         """
-        Community list ID
+        Community list ID, Attribute conditional on `type` being equal to `community`
         """
         return pulumi.get(self, "community_list_id")
 
@@ -22901,7 +22886,7 @@ class CustomControlTopologyPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="domainId")
     def domain_id(self) -> Optional[int]:
         """
-        Domain ID
+        Domain ID, Attribute conditional on `type` being equal to `domainId`
           - Range: `0`-`4294967295`
         """
         return pulumi.get(self, "domain_id")
@@ -22910,7 +22895,7 @@ class CustomControlTopologyPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="expandedCommunityListId")
     def expanded_community_list_id(self) -> Optional[str]:
         """
-        Expanded community list ID
+        Expanded community list ID, Attribute conditional on `type` being equal to `expandedCommunity`
         """
         return pulumi.get(self, "expanded_community_list_id")
 
@@ -22926,7 +22911,7 @@ class CustomControlTopologyPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="groupId")
     def group_id(self) -> Optional[int]:
         """
-        Group ID
+        Group ID, Attribute conditional on `type` being equal to `groupId`
           - Range: `0`-`4294967295`
         """
         return pulumi.get(self, "group_id")
@@ -22935,7 +22920,7 @@ class CustomControlTopologyPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="ompTag")
     def omp_tag(self) -> Optional[int]:
         """
-        OMP tag
+        OMP tag, Attribute conditional on `type` being equal to `ompTag`
           - Range: `0`-`4294967295`
         """
         return pulumi.get(self, "omp_tag")
@@ -22944,7 +22929,7 @@ class CustomControlTopologyPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter
     def origin(self) -> Optional[str]:
         """
-        Origin
+        Origin, Attribute conditional on `type` being equal to `origin`
           - Choices: `igp`, `egp`, `incomplete`, `aggregrate`, `bgp`, `bgp-external`, `bgp-internal`, `connected`, `eigrp`, `ospf`, `ospf-inter-area`, `ospf-intra-area`, `ospf-external1`, `ospf-external2`, `rip`, `static`, `eigrp-summary`, `eigrp-internal`, `eigrp-external`, `lisp`, `nat-dia`, `natpool`, `isis`, `isis-level1`, `isis-level2`
         """
         return pulumi.get(self, "origin")
@@ -22953,7 +22938,7 @@ class CustomControlTopologyPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter
     def originator(self) -> Optional[str]:
         """
-        Originator IP
+        Originator IP, Attribute conditional on `type` being equal to `originator`
         """
         return pulumi.get(self, "originator")
 
@@ -22961,7 +22946,7 @@ class CustomControlTopologyPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="pathType")
     def path_type(self) -> Optional[str]:
         """
-        Path type
+        Path type, Attribute conditional on `type` being equal to `pathType`
           - Choices: `hierarchical-path`, `direct-path`, `transport-gateway-path`
         """
         return pulumi.get(self, "path_type")
@@ -22970,7 +22955,7 @@ class CustomControlTopologyPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter
     def preference(self) -> Optional[int]:
         """
-        Preference
+        Preference, Attribute conditional on `type` being equal to `preference`
           - Range: `0`-`4294967295`
         """
         return pulumi.get(self, "preference")
@@ -22979,7 +22964,7 @@ class CustomControlTopologyPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="prefixListId")
     def prefix_list_id(self) -> Optional[str]:
         """
-        Prefix list ID
+        Prefix list ID, Attribute conditional on `type` being equal to `prefixList`
         """
         return pulumi.get(self, "prefix_list_id")
 
@@ -22995,7 +22980,7 @@ class CustomControlTopologyPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="siteId")
     def site_id(self) -> Optional[int]:
         """
-        Site ID
+        Site ID, Attribute conditional on `type` being equal to `siteId`
           - Range: `0`-`4294967295`
         """
         return pulumi.get(self, "site_id")
@@ -23004,7 +22989,7 @@ class CustomControlTopologyPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="siteListId")
     def site_list_id(self) -> Optional[str]:
         """
-        Site list ID
+        Site list ID, Attribute conditional on `type` being equal to `siteList`
         """
         return pulumi.get(self, "site_list_id")
 
@@ -23020,7 +23005,7 @@ class CustomControlTopologyPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="tlocColor")
     def tloc_color(self) -> Optional[str]:
         """
-        TLOC color
+        TLOC color, Attribute conditional on `type` being equal to `tloc`
         """
         return pulumi.get(self, "tloc_color")
 
@@ -23028,7 +23013,7 @@ class CustomControlTopologyPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="tlocEncapsulation")
     def tloc_encapsulation(self) -> Optional[str]:
         """
-        TLOC encapsulation
+        TLOC encapsulation, Attribute conditional on `type` being equal to `tloc`
           - Choices: `ipsec`, `gre`
         """
         return pulumi.get(self, "tloc_encapsulation")
@@ -23037,7 +23022,7 @@ class CustomControlTopologyPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="tlocIp")
     def tloc_ip(self) -> Optional[str]:
         """
-        TLOC IP address
+        TLOC IP address, Attribute conditional on `type` being equal to `tloc`
         """
         return pulumi.get(self, "tloc_ip")
 
@@ -23045,7 +23030,7 @@ class CustomControlTopologyPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="tlocListId")
     def tloc_list_id(self) -> Optional[str]:
         """
-        TLOC list ID
+        TLOC list ID, Attribute conditional on `type` being equal to `tlocList`
         """
         return pulumi.get(self, "tloc_list_id")
 
@@ -23061,7 +23046,7 @@ class CustomControlTopologyPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="vpnId")
     def vpn_id(self) -> Optional[int]:
         """
-        VPN ID
+        VPN ID, Attribute conditional on `type` being equal to `vpn`
           - Range: `0`-`65536`
         """
         return pulumi.get(self, "vpn_id")
@@ -23070,7 +23055,7 @@ class CustomControlTopologyPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="vpnListId")
     def vpn_list_id(self) -> Optional[str]:
         """
-        VPN list ID
+        VPN list ID, Attribute conditional on `type` being equal to `vpnList`
         """
         return pulumi.get(self, "vpn_list_id")
 
@@ -23213,6 +23198,90 @@ class DnsSecurityPolicyDefinitionTargetVpn(dict):
         VPN ID's separated by Comma
         """
         return pulumi.get(self, "vpn_ids")
+
+
+@pulumi.output_type
+class DnsSecurityPolicyTargetVpn(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "dnsServerIp":
+            suggest = "dns_server_ip"
+        elif key == "localDomainBypassEnabled":
+            suggest = "local_domain_bypass_enabled"
+        elif key == "umbrellaDefault":
+            suggest = "umbrella_default"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in DnsSecurityPolicyTargetVpn. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        DnsSecurityPolicyTargetVpn.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        DnsSecurityPolicyTargetVpn.__key_warning(key)
+        return super().get(key, default)
+
+    def __init__(__self__, *,
+                 dns_server_ip: Optional[str] = None,
+                 local_domain_bypass_enabled: Optional[bool] = None,
+                 uid: Optional[str] = None,
+                 umbrella_default: Optional[bool] = None,
+                 vpns: Optional[Sequence[str]] = None):
+        """
+        :param str dns_server_ip: Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry
+        :param bool local_domain_bypass_enabled: Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry
+        :param str uid: non empty interger string
+        :param bool umbrella_default: Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry
+        """
+        if dns_server_ip is not None:
+            pulumi.set(__self__, "dns_server_ip", dns_server_ip)
+        if local_domain_bypass_enabled is not None:
+            pulumi.set(__self__, "local_domain_bypass_enabled", local_domain_bypass_enabled)
+        if uid is not None:
+            pulumi.set(__self__, "uid", uid)
+        if umbrella_default is not None:
+            pulumi.set(__self__, "umbrella_default", umbrella_default)
+        if vpns is not None:
+            pulumi.set(__self__, "vpns", vpns)
+
+    @property
+    @pulumi.getter(name="dnsServerIp")
+    def dns_server_ip(self) -> Optional[str]:
+        """
+        Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry
+        """
+        return pulumi.get(self, "dns_server_ip")
+
+    @property
+    @pulumi.getter(name="localDomainBypassEnabled")
+    def local_domain_bypass_enabled(self) -> Optional[bool]:
+        """
+        Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry
+        """
+        return pulumi.get(self, "local_domain_bypass_enabled")
+
+    @property
+    @pulumi.getter
+    def uid(self) -> Optional[str]:
+        """
+        non empty interger string
+        """
+        return pulumi.get(self, "uid")
+
+    @property
+    @pulumi.getter(name="umbrellaDefault")
+    def umbrella_default(self) -> Optional[bool]:
+        """
+        Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry
+        """
+        return pulumi.get(self, "umbrella_default")
+
+    @property
+    @pulumi.getter
+    def vpns(self) -> Optional[Sequence[str]]:
+        return pulumi.get(self, "vpns")
 
 
 @pulumi.output_type
@@ -24196,6 +24265,56 @@ class HubAndSpokeTopologyPolicyDefinitionTopologySpokeHub(dict):
 
 
 @pulumi.output_type
+class IntrusionPreventionPolicyDefinitionLogging(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "externalSyslogServerIp":
+            suggest = "external_syslog_server_ip"
+        elif key == "externalSyslogServerVpn":
+            suggest = "external_syslog_server_vpn"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in IntrusionPreventionPolicyDefinitionLogging. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        IntrusionPreventionPolicyDefinitionLogging.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        IntrusionPreventionPolicyDefinitionLogging.__key_warning(key)
+        return super().get(key, default)
+
+    def __init__(__self__, *,
+                 external_syslog_server_ip: Optional[str] = None,
+                 external_syslog_server_vpn: Optional[str] = None):
+        """
+        :param str external_syslog_server_ip: External Syslog Server IP
+        :param str external_syslog_server_vpn: External Syslog Server VPN
+        """
+        if external_syslog_server_ip is not None:
+            pulumi.set(__self__, "external_syslog_server_ip", external_syslog_server_ip)
+        if external_syslog_server_vpn is not None:
+            pulumi.set(__self__, "external_syslog_server_vpn", external_syslog_server_vpn)
+
+    @property
+    @pulumi.getter(name="externalSyslogServerIp")
+    def external_syslog_server_ip(self) -> Optional[str]:
+        """
+        External Syslog Server IP
+        """
+        return pulumi.get(self, "external_syslog_server_ip")
+
+    @property
+    @pulumi.getter(name="externalSyslogServerVpn")
+    def external_syslog_server_vpn(self) -> Optional[str]:
+        """
+        External Syslog Server VPN
+        """
+        return pulumi.get(self, "external_syslog_server_vpn")
+
+
+@pulumi.output_type
 class IpsSignatureListPolicyObjectEntry(dict):
     @staticmethod
     def __key_warning(key: str):
@@ -24386,15 +24505,15 @@ class Ipv4AclPolicyDefinitionSequenceActionEntry(dict):
         """
         :param str type: Type of action entry
                  - Choices: `class`, `count`, `set`, `log`, `mirror`, `policer`
-        :param str class_map_id: Class map ID
+        :param str class_map_id: Class map ID, Attribute conditional on `type` being equal to `class`
         :param int class_map_version: Class map version
-        :param str counter_name: Counter name
-        :param bool log: Enable logging
-        :param str mirror_id: Mirror ID
+        :param str counter_name: Counter name, Attribute conditional on `type` being equal to `count`
+        :param bool log: Enable logging, Attribute conditional on `type` being equal to `log`
+        :param str mirror_id: Mirror ID, Attribute conditional on `type` being equal to `mirror`
         :param int mirror_version: Mirror version
-        :param str policer_id: Policer ID
+        :param str policer_id: Policer ID, Attribute conditional on `type` being equal to `policer`
         :param int policer_version: Policer version
-        :param Sequence['Ipv4AclPolicyDefinitionSequenceActionEntrySetParameterArgs'] set_parameters: List of set parameters
+        :param Sequence['Ipv4AclPolicyDefinitionSequenceActionEntrySetParameterArgs'] set_parameters: List of set parameters, Attribute conditional on `type` being equal to `set`
         """
         pulumi.set(__self__, "type", type)
         if class_map_id is not None:
@@ -24429,7 +24548,7 @@ class Ipv4AclPolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="classMapId")
     def class_map_id(self) -> Optional[str]:
         """
-        Class map ID
+        Class map ID, Attribute conditional on `type` being equal to `class`
         """
         return pulumi.get(self, "class_map_id")
 
@@ -24445,7 +24564,7 @@ class Ipv4AclPolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="counterName")
     def counter_name(self) -> Optional[str]:
         """
-        Counter name
+        Counter name, Attribute conditional on `type` being equal to `count`
         """
         return pulumi.get(self, "counter_name")
 
@@ -24453,7 +24572,7 @@ class Ipv4AclPolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter
     def log(self) -> Optional[bool]:
         """
-        Enable logging
+        Enable logging, Attribute conditional on `type` being equal to `log`
         """
         return pulumi.get(self, "log")
 
@@ -24461,7 +24580,7 @@ class Ipv4AclPolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="mirrorId")
     def mirror_id(self) -> Optional[str]:
         """
-        Mirror ID
+        Mirror ID, Attribute conditional on `type` being equal to `mirror`
         """
         return pulumi.get(self, "mirror_id")
 
@@ -24477,7 +24596,7 @@ class Ipv4AclPolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="policerId")
     def policer_id(self) -> Optional[str]:
         """
-        Policer ID
+        Policer ID, Attribute conditional on `type` being equal to `policer`
         """
         return pulumi.get(self, "policer_id")
 
@@ -24493,7 +24612,7 @@ class Ipv4AclPolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="setParameters")
     def set_parameters(self) -> Optional[Sequence['outputs.Ipv4AclPolicyDefinitionSequenceActionEntrySetParameter']]:
         """
-        List of set parameters
+        List of set parameters, Attribute conditional on `type` being equal to `set`
         """
         return pulumi.get(self, "set_parameters")
 
@@ -24524,9 +24643,9 @@ class Ipv4AclPolicyDefinitionSequenceActionEntrySetParameter(dict):
         """
         :param str type: Type of set parameter
                  - Choices: `dscp`, `nextHop`
-        :param int dscp: DSCP value
+        :param int dscp: DSCP value, Attribute conditional on `type` being equal to `dscp`
                  - Range: `0`-`63`
-        :param str next_hop: Next hop IP
+        :param str next_hop: Next hop IP, Attribute conditional on `type` being equal to `nextHop`
         """
         pulumi.set(__self__, "type", type)
         if dscp is not None:
@@ -24547,7 +24666,7 @@ class Ipv4AclPolicyDefinitionSequenceActionEntrySetParameter(dict):
     @pulumi.getter
     def dscp(self) -> Optional[int]:
         """
-        DSCP value
+        DSCP value, Attribute conditional on `type` being equal to `dscp`
           - Range: `0`-`63`
         """
         return pulumi.get(self, "dscp")
@@ -24556,7 +24675,7 @@ class Ipv4AclPolicyDefinitionSequenceActionEntrySetParameter(dict):
     @pulumi.getter(name="nextHop")
     def next_hop(self) -> Optional[str]:
         """
-        Next hop IP
+        Next hop IP, Attribute conditional on `type` being equal to `nextHop`
         """
         return pulumi.get(self, "next_hop")
 
@@ -24623,25 +24742,25 @@ class Ipv4AclPolicyDefinitionSequenceMatchEntry(dict):
         """
         :param str type: Type of match entry
                  - Choices: `dscp`, `sourceIp`, `destinationIp`, `class`, `packetLength`, `plp`, `sourcePort`, `destinationPort`, `sourceDataPrefixList`, `destinationDataPrefixList`, `protocol`, `tcp`, `icmpMessage`
-        :param str class_map_id: Class map ID
+        :param str class_map_id: Class map ID, Attribute conditional on `type` being equal to `class`
         :param int class_map_version: Class map version
-        :param str destination_data_ipv4_prefix_list_id: Destination data IPv4 prefix list ID
+        :param str destination_data_ipv4_prefix_list_id: Destination data IPv4 prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
         :param int destination_data_ipv4_prefix_list_version: Destination data IPv4 prefix list version
-        :param str destination_ip: Destination IP prefix
-        :param str destination_ports: Destination ports. Single value (0-65535) or ranges separated by spaces.
-        :param int dscp: DSCP value
+        :param str destination_ip: Destination IP prefix, Attribute conditional on `type` being equal to `destinationIp`
+        :param str destination_ports: Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `destinationPort`
+        :param int dscp: DSCP value, Attribute conditional on `type` being equal to `dscp`
                  - Range: `0`-`63`
-        :param str icmp_message: ICMP Message
-        :param int packet_length: Packet length
+        :param str icmp_message: ICMP Message, Attribute conditional on `type` being equal to `icmpMessage`
+        :param int packet_length: Packet length, Attribute conditional on `type` being equal to `packetLength`
                  - Range: `0`-`65535`
-        :param str priority: PLP - priority
+        :param str priority: PLP - priority, Attribute conditional on `type` being equal to `plp`
                  - Choices: `high`, `low`
-        :param str protocol: Single value (0-255) or multiple values separated by spaces
-        :param str source_data_ipv4_prefix_list_id: Source data IPv4 prefix list ID
+        :param str protocol: Single value (0-255) or multiple values separated by spaces, Attribute conditional on `type` being equal to `protocol`
+        :param str source_data_ipv4_prefix_list_id: Source data IPv4 prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
         :param int source_data_ipv4_prefix_list_version: Source data IPv4 prefix list version
-        :param str source_ip: Source IP prefix
-        :param str source_ports: Source ports. Single value (0-65535) or ranges separated by spaces.
-        :param str tcp: TCP parameters
+        :param str source_ip: Source IP prefix, Attribute conditional on `type` being equal to `sourceIp`
+        :param str source_ports: Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
+        :param str tcp: TCP parameters, Attribute conditional on `type` being equal to `tcp`
                  - Choices: `syn`
         """
         pulumi.set(__self__, "type", type)
@@ -24691,7 +24810,7 @@ class Ipv4AclPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="classMapId")
     def class_map_id(self) -> Optional[str]:
         """
-        Class map ID
+        Class map ID, Attribute conditional on `type` being equal to `class`
         """
         return pulumi.get(self, "class_map_id")
 
@@ -24707,7 +24826,7 @@ class Ipv4AclPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="destinationDataIpv4PrefixListId")
     def destination_data_ipv4_prefix_list_id(self) -> Optional[str]:
         """
-        Destination data IPv4 prefix list ID
+        Destination data IPv4 prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
         """
         return pulumi.get(self, "destination_data_ipv4_prefix_list_id")
 
@@ -24723,7 +24842,7 @@ class Ipv4AclPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="destinationIp")
     def destination_ip(self) -> Optional[str]:
         """
-        Destination IP prefix
+        Destination IP prefix, Attribute conditional on `type` being equal to `destinationIp`
         """
         return pulumi.get(self, "destination_ip")
 
@@ -24731,7 +24850,7 @@ class Ipv4AclPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="destinationPorts")
     def destination_ports(self) -> Optional[str]:
         """
-        Destination ports. Single value (0-65535) or ranges separated by spaces.
+        Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `destinationPort`
         """
         return pulumi.get(self, "destination_ports")
 
@@ -24739,7 +24858,7 @@ class Ipv4AclPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter
     def dscp(self) -> Optional[int]:
         """
-        DSCP value
+        DSCP value, Attribute conditional on `type` being equal to `dscp`
           - Range: `0`-`63`
         """
         return pulumi.get(self, "dscp")
@@ -24748,7 +24867,7 @@ class Ipv4AclPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="icmpMessage")
     def icmp_message(self) -> Optional[str]:
         """
-        ICMP Message
+        ICMP Message, Attribute conditional on `type` being equal to `icmpMessage`
         """
         return pulumi.get(self, "icmp_message")
 
@@ -24756,7 +24875,7 @@ class Ipv4AclPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="packetLength")
     def packet_length(self) -> Optional[int]:
         """
-        Packet length
+        Packet length, Attribute conditional on `type` being equal to `packetLength`
           - Range: `0`-`65535`
         """
         return pulumi.get(self, "packet_length")
@@ -24765,7 +24884,7 @@ class Ipv4AclPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter
     def priority(self) -> Optional[str]:
         """
-        PLP - priority
+        PLP - priority, Attribute conditional on `type` being equal to `plp`
           - Choices: `high`, `low`
         """
         return pulumi.get(self, "priority")
@@ -24774,7 +24893,7 @@ class Ipv4AclPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter
     def protocol(self) -> Optional[str]:
         """
-        Single value (0-255) or multiple values separated by spaces
+        Single value (0-255) or multiple values separated by spaces, Attribute conditional on `type` being equal to `protocol`
         """
         return pulumi.get(self, "protocol")
 
@@ -24782,7 +24901,7 @@ class Ipv4AclPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="sourceDataIpv4PrefixListId")
     def source_data_ipv4_prefix_list_id(self) -> Optional[str]:
         """
-        Source data IPv4 prefix list ID
+        Source data IPv4 prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
         """
         return pulumi.get(self, "source_data_ipv4_prefix_list_id")
 
@@ -24798,7 +24917,7 @@ class Ipv4AclPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="sourceIp")
     def source_ip(self) -> Optional[str]:
         """
-        Source IP prefix
+        Source IP prefix, Attribute conditional on `type` being equal to `sourceIp`
         """
         return pulumi.get(self, "source_ip")
 
@@ -24806,7 +24925,7 @@ class Ipv4AclPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="sourcePorts")
     def source_ports(self) -> Optional[str]:
         """
-        Source ports. Single value (0-65535) or ranges separated by spaces.
+        Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
         """
         return pulumi.get(self, "source_ports")
 
@@ -24814,7 +24933,7 @@ class Ipv4AclPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter
     def tcp(self) -> Optional[str]:
         """
-        TCP parameters
+        TCP parameters, Attribute conditional on `type` being equal to `tcp`
           - Choices: `syn`
         """
         return pulumi.get(self, "tcp")
@@ -24935,7 +25054,7 @@ class Ipv4DeviceAclPolicyDefinitionSequenceActionEntry(dict):
         """
         :param str type: Type of action entry
                  - Choices: `count`
-        :param str counter_name: Counter name
+        :param str counter_name: Counter name, Attribute conditional on `type` being equal to `count`
         """
         pulumi.set(__self__, "type", type)
         if counter_name is not None:
@@ -24954,7 +25073,7 @@ class Ipv4DeviceAclPolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="counterName")
     def counter_name(self) -> Optional[str]:
         """
-        Counter name
+        Counter name, Attribute conditional on `type` being equal to `count`
         """
         return pulumi.get(self, "counter_name")
 
@@ -25005,15 +25124,15 @@ class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry(dict):
         """
         :param str type: Type of match entry
                  - Choices: `sourceIp`, `destinationIp`, `sourcePort`, `destinationPort`, `sourceDataPrefixList`, `destinationDataPrefixList`
-        :param str destination_data_ipv4_prefix_list_id: Destination data IPv4 prefix list ID
+        :param str destination_data_ipv4_prefix_list_id: Destination data IPv4 prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
         :param int destination_data_ipv4_prefix_list_version: Destination data IPv4 prefix list version
-        :param str destination_ip: Destination IP prefix
-        :param int destination_port: Destination port, only `22` and `161` supported
+        :param str destination_ip: Destination IP prefix, Attribute conditional on `type` being equal to `destinationIp`
+        :param int destination_port: Destination port, only `22` and `161` supported, Attribute conditional on `type` being equal to `destinationPort`
                  - Range: `0`-`65535`
-        :param str source_data_ipv4_prefix_list_id: Source data IPv4 prefix list ID
+        :param str source_data_ipv4_prefix_list_id: Source data IPv4 prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
         :param int source_data_ipv4_prefix_list_version: Source data IPv4 prefix list version
-        :param str source_ip: Source IP prefix
-        :param str source_ports: Source ports. Single value (0-65535) or ranges separated by spaces.
+        :param str source_ip: Source IP prefix, Attribute conditional on `type` being equal to `sourceIp`
+        :param str source_ports: Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
         """
         pulumi.set(__self__, "type", type)
         if destination_data_ipv4_prefix_list_id is not None:
@@ -25046,7 +25165,7 @@ class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="destinationDataIpv4PrefixListId")
     def destination_data_ipv4_prefix_list_id(self) -> Optional[str]:
         """
-        Destination data IPv4 prefix list ID
+        Destination data IPv4 prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
         """
         return pulumi.get(self, "destination_data_ipv4_prefix_list_id")
 
@@ -25062,7 +25181,7 @@ class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="destinationIp")
     def destination_ip(self) -> Optional[str]:
         """
-        Destination IP prefix
+        Destination IP prefix, Attribute conditional on `type` being equal to `destinationIp`
         """
         return pulumi.get(self, "destination_ip")
 
@@ -25070,7 +25189,7 @@ class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="destinationPort")
     def destination_port(self) -> Optional[int]:
         """
-        Destination port, only `22` and `161` supported
+        Destination port, only `22` and `161` supported, Attribute conditional on `type` being equal to `destinationPort`
           - Range: `0`-`65535`
         """
         return pulumi.get(self, "destination_port")
@@ -25079,7 +25198,7 @@ class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="sourceDataIpv4PrefixListId")
     def source_data_ipv4_prefix_list_id(self) -> Optional[str]:
         """
-        Source data IPv4 prefix list ID
+        Source data IPv4 prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
         """
         return pulumi.get(self, "source_data_ipv4_prefix_list_id")
 
@@ -25095,7 +25214,7 @@ class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="sourceIp")
     def source_ip(self) -> Optional[str]:
         """
-        Source IP prefix
+        Source IP prefix, Attribute conditional on `type` being equal to `sourceIp`
         """
         return pulumi.get(self, "source_ip")
 
@@ -25103,7 +25222,7 @@ class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="sourcePorts")
     def source_ports(self) -> Optional[str]:
         """
-        Source ports. Single value (0-65535) or ranges separated by spaces.
+        Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
         """
         return pulumi.get(self, "source_ports")
 
@@ -25287,15 +25406,15 @@ class Ipv6AclPolicyDefinitionSequenceActionEntry(dict):
         """
         :param str type: Type of action entry
                  - Choices: `class`, `count`, `set`, `log`, `mirror`, `policer`
-        :param str class_map_id: Class map ID
+        :param str class_map_id: Class map ID, Attribute conditional on `type` being equal to `class`
         :param int class_map_version: Class map version
-        :param str counter_name: Counter name
-        :param bool log: Enable logging
-        :param str mirror_id: Mirror ID
+        :param str counter_name: Counter name, Attribute conditional on `type` being equal to `count`
+        :param bool log: Enable logging, Attribute conditional on `type` being equal to `log`
+        :param str mirror_id: Mirror ID, Attribute conditional on `type` being equal to `mirror`
         :param int mirror_version: Mirror version
-        :param str policer_id: Policer ID
+        :param str policer_id: Policer ID, Attribute conditional on `type` being equal to `policer`
         :param int policer_version: Policer version
-        :param Sequence['Ipv6AclPolicyDefinitionSequenceActionEntrySetParameterArgs'] set_parameters: List of set parameters
+        :param Sequence['Ipv6AclPolicyDefinitionSequenceActionEntrySetParameterArgs'] set_parameters: List of set parameters, Attribute conditional on `type` being equal to `set`
         """
         pulumi.set(__self__, "type", type)
         if class_map_id is not None:
@@ -25330,7 +25449,7 @@ class Ipv6AclPolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="classMapId")
     def class_map_id(self) -> Optional[str]:
         """
-        Class map ID
+        Class map ID, Attribute conditional on `type` being equal to `class`
         """
         return pulumi.get(self, "class_map_id")
 
@@ -25346,7 +25465,7 @@ class Ipv6AclPolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="counterName")
     def counter_name(self) -> Optional[str]:
         """
-        Counter name
+        Counter name, Attribute conditional on `type` being equal to `count`
         """
         return pulumi.get(self, "counter_name")
 
@@ -25354,7 +25473,7 @@ class Ipv6AclPolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter
     def log(self) -> Optional[bool]:
         """
-        Enable logging
+        Enable logging, Attribute conditional on `type` being equal to `log`
         """
         return pulumi.get(self, "log")
 
@@ -25362,7 +25481,7 @@ class Ipv6AclPolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="mirrorId")
     def mirror_id(self) -> Optional[str]:
         """
-        Mirror ID
+        Mirror ID, Attribute conditional on `type` being equal to `mirror`
         """
         return pulumi.get(self, "mirror_id")
 
@@ -25378,7 +25497,7 @@ class Ipv6AclPolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="policerId")
     def policer_id(self) -> Optional[str]:
         """
-        Policer ID
+        Policer ID, Attribute conditional on `type` being equal to `policer`
         """
         return pulumi.get(self, "policer_id")
 
@@ -25394,7 +25513,7 @@ class Ipv6AclPolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="setParameters")
     def set_parameters(self) -> Optional[Sequence['outputs.Ipv6AclPolicyDefinitionSequenceActionEntrySetParameter']]:
         """
-        List of set parameters
+        List of set parameters, Attribute conditional on `type` being equal to `set`
         """
         return pulumi.get(self, "set_parameters")
 
@@ -25427,8 +25546,8 @@ class Ipv6AclPolicyDefinitionSequenceActionEntrySetParameter(dict):
         """
         :param str type: Type of set parameter
                  - Choices: `trafficClass`, `nextHop`
-        :param str next_hop: Next hop IP
-        :param int traffic_class: Traffic class
+        :param str next_hop: Next hop IP, Attribute conditional on `type` being equal to `nextHop`
+        :param int traffic_class: Traffic class, Attribute conditional on `type` being equal to `trafficClass`
                  - Range: `0`-`63`
         """
         pulumi.set(__self__, "type", type)
@@ -25450,7 +25569,7 @@ class Ipv6AclPolicyDefinitionSequenceActionEntrySetParameter(dict):
     @pulumi.getter(name="nextHop")
     def next_hop(self) -> Optional[str]:
         """
-        Next hop IP
+        Next hop IP, Attribute conditional on `type` being equal to `nextHop`
         """
         return pulumi.get(self, "next_hop")
 
@@ -25458,7 +25577,7 @@ class Ipv6AclPolicyDefinitionSequenceActionEntrySetParameter(dict):
     @pulumi.getter(name="trafficClass")
     def traffic_class(self) -> Optional[int]:
         """
-        Traffic class
+        Traffic class, Attribute conditional on `type` being equal to `trafficClass`
           - Range: `0`-`63`
         """
         return pulumi.get(self, "traffic_class")
@@ -25527,25 +25646,25 @@ class Ipv6AclPolicyDefinitionSequenceMatchEntry(dict):
         """
         :param str type: Type of match entry
                  - Choices: `nextHeader`, `sourceIpv6`, `destinationIpv6`, `class`, `packetLength`, `plp`, `sourcePort`, `destinationPort`, `sourceDataIpv6PrefixList`, `destinationDataIpv6PrefixList`, `tcp`, `trafficClass`
-        :param str class_map_id: Class map ID
+        :param str class_map_id: Class map ID, Attribute conditional on `type` being equal to `class`
         :param int class_map_version: Class map version
-        :param str destination_data_ipv6_prefix_list_id: Destination dataIPv6 prefix list ID
+        :param str destination_data_ipv6_prefix_list_id: Destination dataIPv6 prefix list ID, Attribute conditional on `type` being equal to `destinationDataIpv6PrefixList`
         :param int destination_data_ipv6_prefix_list_version: Destination data prefix list version
-        :param str destination_ip: Destination IPv6 prefix
-        :param str destination_ports: Destination ports. Single value (0-65535) or ranges separated by spaces.
-        :param int next_header: Next header
+        :param str destination_ip: Destination IPv6 prefix, Attribute conditional on `type` being equal to `destinationIpv6`
+        :param str destination_ports: Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `destinationPort`
+        :param int next_header: Next header, Attribute conditional on `type` being equal to `nextHeader`
                  - Range: `0`-`255`
-        :param int packet_length: Packet length
+        :param int packet_length: Packet length, Attribute conditional on `type` being equal to `packetLength`
                  - Range: `0`-`65535`
-        :param str priority: PLP - priority
+        :param str priority: PLP - priority, Attribute conditional on `type` being equal to `plp`
                  - Choices: `high`, `low`
-        :param str source_data_ipv6_prefix_list_id: Source data IPv6 prefix list ID
+        :param str source_data_ipv6_prefix_list_id: Source data IPv6 prefix list ID, Attribute conditional on `type` being equal to `sourceDataIpv6PrefixList`
         :param int source_data_ipv6_prefix_list_version: Source data IPv6 prefix list version
-        :param str source_ip: Source IPv6 prefix
-        :param str source_ports: Source ports. Single value (0-65535) or ranges separated by spaces.
-        :param str tcp: TCP parameters
+        :param str source_ip: Source IPv6 prefix, Attribute conditional on `type` being equal to `sourceIpv6`
+        :param str source_ports: Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
+        :param str tcp: TCP parameters, Attribute conditional on `type` being equal to `tcp`
                  - Choices: `syn`
-        :param int traffic_class: Traffic class
+        :param int traffic_class: Traffic class, Attribute conditional on `type` being equal to `trafficClass`
                  - Range: `0`-`63`
         """
         pulumi.set(__self__, "type", type)
@@ -25593,7 +25712,7 @@ class Ipv6AclPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="classMapId")
     def class_map_id(self) -> Optional[str]:
         """
-        Class map ID
+        Class map ID, Attribute conditional on `type` being equal to `class`
         """
         return pulumi.get(self, "class_map_id")
 
@@ -25609,7 +25728,7 @@ class Ipv6AclPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="destinationDataIpv6PrefixListId")
     def destination_data_ipv6_prefix_list_id(self) -> Optional[str]:
         """
-        Destination dataIPv6 prefix list ID
+        Destination dataIPv6 prefix list ID, Attribute conditional on `type` being equal to `destinationDataIpv6PrefixList`
         """
         return pulumi.get(self, "destination_data_ipv6_prefix_list_id")
 
@@ -25625,7 +25744,7 @@ class Ipv6AclPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="destinationIp")
     def destination_ip(self) -> Optional[str]:
         """
-        Destination IPv6 prefix
+        Destination IPv6 prefix, Attribute conditional on `type` being equal to `destinationIpv6`
         """
         return pulumi.get(self, "destination_ip")
 
@@ -25633,7 +25752,7 @@ class Ipv6AclPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="destinationPorts")
     def destination_ports(self) -> Optional[str]:
         """
-        Destination ports. Single value (0-65535) or ranges separated by spaces.
+        Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `destinationPort`
         """
         return pulumi.get(self, "destination_ports")
 
@@ -25641,7 +25760,7 @@ class Ipv6AclPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="nextHeader")
     def next_header(self) -> Optional[int]:
         """
-        Next header
+        Next header, Attribute conditional on `type` being equal to `nextHeader`
           - Range: `0`-`255`
         """
         return pulumi.get(self, "next_header")
@@ -25650,7 +25769,7 @@ class Ipv6AclPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="packetLength")
     def packet_length(self) -> Optional[int]:
         """
-        Packet length
+        Packet length, Attribute conditional on `type` being equal to `packetLength`
           - Range: `0`-`65535`
         """
         return pulumi.get(self, "packet_length")
@@ -25659,7 +25778,7 @@ class Ipv6AclPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter
     def priority(self) -> Optional[str]:
         """
-        PLP - priority
+        PLP - priority, Attribute conditional on `type` being equal to `plp`
           - Choices: `high`, `low`
         """
         return pulumi.get(self, "priority")
@@ -25668,7 +25787,7 @@ class Ipv6AclPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="sourceDataIpv6PrefixListId")
     def source_data_ipv6_prefix_list_id(self) -> Optional[str]:
         """
-        Source data IPv6 prefix list ID
+        Source data IPv6 prefix list ID, Attribute conditional on `type` being equal to `sourceDataIpv6PrefixList`
         """
         return pulumi.get(self, "source_data_ipv6_prefix_list_id")
 
@@ -25684,7 +25803,7 @@ class Ipv6AclPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="sourceIp")
     def source_ip(self) -> Optional[str]:
         """
-        Source IPv6 prefix
+        Source IPv6 prefix, Attribute conditional on `type` being equal to `sourceIpv6`
         """
         return pulumi.get(self, "source_ip")
 
@@ -25692,7 +25811,7 @@ class Ipv6AclPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="sourcePorts")
     def source_ports(self) -> Optional[str]:
         """
-        Source ports. Single value (0-65535) or ranges separated by spaces.
+        Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
         """
         return pulumi.get(self, "source_ports")
 
@@ -25700,7 +25819,7 @@ class Ipv6AclPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter
     def tcp(self) -> Optional[str]:
         """
-        TCP parameters
+        TCP parameters, Attribute conditional on `type` being equal to `tcp`
           - Choices: `syn`
         """
         return pulumi.get(self, "tcp")
@@ -25709,7 +25828,7 @@ class Ipv6AclPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="trafficClass")
     def traffic_class(self) -> Optional[int]:
         """
-        Traffic class
+        Traffic class, Attribute conditional on `type` being equal to `trafficClass`
           - Range: `0`-`63`
         """
         return pulumi.get(self, "traffic_class")
@@ -25830,7 +25949,7 @@ class Ipv6DeviceAclPolicyDefinitionSequenceActionEntry(dict):
         """
         :param str type: Type of action entry
                  - Choices: `count`
-        :param str counter_name: Counter name
+        :param str counter_name: Counter name, Attribute conditional on `type` being equal to `count`
         """
         pulumi.set(__self__, "type", type)
         if counter_name is not None:
@@ -25849,7 +25968,7 @@ class Ipv6DeviceAclPolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="counterName")
     def counter_name(self) -> Optional[str]:
         """
-        Counter name
+        Counter name, Attribute conditional on `type` being equal to `count`
         """
         return pulumi.get(self, "counter_name")
 
@@ -25900,15 +26019,15 @@ class Ipv6DeviceAclPolicyDefinitionSequenceMatchEntry(dict):
         """
         :param str type: Type of match entry
                  - Choices: `sourceIpv6`, `destinationIpv6`, `sourcePort`, `destinationPort`, `sourceDataIpv6PrefixList`, `destinationDataIpv6PrefixList`
-        :param str destination_data_ipv6_prefix_list_id: Destination data IPv6 prefix list ID
+        :param str destination_data_ipv6_prefix_list_id: Destination data IPv6 prefix list ID, Attribute conditional on `type` being equal to `destinationDataIpv6PrefixList`
         :param int destination_data_ipv6_prefix_list_version: Destination data IPv6 prefix list version
-        :param str destination_ip: Destination IP prefix
-        :param int destination_port: Destination port, only `22` and `161` supported
+        :param str destination_ip: Destination IP prefix, Attribute conditional on `type` being equal to `destinationIpv6`
+        :param int destination_port: Destination port, only `22` and `161` supported, Attribute conditional on `type` being equal to `destinationPort`
                  - Range: `0`-`65535`
-        :param str source_data_ipv6_prefix_list_id: Source data IPv6 prefix list ID
+        :param str source_data_ipv6_prefix_list_id: Source data IPv6 prefix list ID, Attribute conditional on `type` being equal to `sourceDataIpv6PrefixList`
         :param int source_data_ipv6_prefix_list_version: Source data IPv6 prefix list version
-        :param str source_ip: Source IP prefix
-        :param str source_ports: Source ports. Single value (0-65535) or ranges separated by spaces.
+        :param str source_ip: Source IP prefix, Attribute conditional on `type` being equal to `sourceIpv6`
+        :param str source_ports: Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
         """
         pulumi.set(__self__, "type", type)
         if destination_data_ipv6_prefix_list_id is not None:
@@ -25941,7 +26060,7 @@ class Ipv6DeviceAclPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="destinationDataIpv6PrefixListId")
     def destination_data_ipv6_prefix_list_id(self) -> Optional[str]:
         """
-        Destination data IPv6 prefix list ID
+        Destination data IPv6 prefix list ID, Attribute conditional on `type` being equal to `destinationDataIpv6PrefixList`
         """
         return pulumi.get(self, "destination_data_ipv6_prefix_list_id")
 
@@ -25957,7 +26076,7 @@ class Ipv6DeviceAclPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="destinationIp")
     def destination_ip(self) -> Optional[str]:
         """
-        Destination IP prefix
+        Destination IP prefix, Attribute conditional on `type` being equal to `destinationIpv6`
         """
         return pulumi.get(self, "destination_ip")
 
@@ -25965,7 +26084,7 @@ class Ipv6DeviceAclPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="destinationPort")
     def destination_port(self) -> Optional[int]:
         """
-        Destination port, only `22` and `161` supported
+        Destination port, only `22` and `161` supported, Attribute conditional on `type` being equal to `destinationPort`
           - Range: `0`-`65535`
         """
         return pulumi.get(self, "destination_port")
@@ -25974,7 +26093,7 @@ class Ipv6DeviceAclPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="sourceDataIpv6PrefixListId")
     def source_data_ipv6_prefix_list_id(self) -> Optional[str]:
         """
-        Source data IPv6 prefix list ID
+        Source data IPv6 prefix list ID, Attribute conditional on `type` being equal to `sourceDataIpv6PrefixList`
         """
         return pulumi.get(self, "source_data_ipv6_prefix_list_id")
 
@@ -25990,7 +26109,7 @@ class Ipv6DeviceAclPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="sourceIp")
     def source_ip(self) -> Optional[str]:
         """
-        Source IP prefix
+        Source IP prefix, Attribute conditional on `type` being equal to `sourceIpv6`
         """
         return pulumi.get(self, "source_ip")
 
@@ -25998,7 +26117,7 @@ class Ipv6DeviceAclPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="sourcePorts")
     def source_ports(self) -> Optional[str]:
         """
-        Source ports. Single value (0-65535) or ranges separated by spaces.
+        Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
         """
         return pulumi.get(self, "source_ports")
 
@@ -28384,29 +28503,29 @@ class RoutePolicyDefinitionSequenceActionEntry(dict):
         """
         :param str type: Type of action entry
                  - Choices: `aggregator`, `asPath`, `atomicAggregate`, `community`, `communityAdditive`, `localPreference`, `metric`, `weight`, `metricType`, `nextHop`, `ompTag`, `ospfTag`, `origin`, `originator`
-        :param int aggregator: Aggregator
+        :param int aggregator: Aggregator, Attribute conditional on `type` being equal to `aggregator`
                  - Range: `0`-`4294967295`
-        :param str aggregator_ip_address: IP address
-        :param str as_path_exclude: Space separated list of ASN to exclude
-        :param str as_path_prepend: Space separated list of ASN to prepend
-        :param bool atomic_aggregate: Atomic aggregate
-        :param str community: Community value, e.g. `1000:10000` or `internet` or `local-AS`
-        :param bool community_additive: Community additive
-        :param int local_preference: Local preference
+        :param str aggregator_ip_address: IP address, Attribute conditional on `type` being equal to `aggregator`
+        :param str as_path_exclude: Space separated list of ASN to exclude, Attribute conditional on `type` being equal to `asPath`
+        :param str as_path_prepend: Space separated list of ASN to prepend, Attribute conditional on `type` being equal to `asPath`
+        :param bool atomic_aggregate: Atomic aggregate, Attribute conditional on `type` being equal to `atomicAggregate`
+        :param str community: Community value, e.g. `1000:10000` or `internet` or `local-AS`, Attribute conditional on `type` being equal to `community`
+        :param bool community_additive: Community additive, Attribute conditional on `type` being equal to `communityAdditive`
+        :param int local_preference: Local preference, Attribute conditional on `type` being equal to `localPreference`
                  - Range: `0`-`4294967295`
-        :param int metric: Metric
+        :param int metric: Metric, Attribute conditional on `type` being equal to `metric`
                  - Range: `0`-`4294967295`
-        :param str metric_type: Metric type
+        :param str metric_type: Metric type, Attribute conditional on `type` being equal to `metricType`
                  - Choices: `type1`, `type2`
-        :param str next_hop: Next hop IP
-        :param int omp_tag: OMP tag
+        :param str next_hop: Next hop IP, Attribute conditional on `type` being equal to `nextHop`
+        :param int omp_tag: OMP tag, Attribute conditional on `type` being equal to `ompTag`
                  - Range: `0`-`4294967295`
-        :param str origin: Origin
+        :param str origin: Origin, Attribute conditional on `type` being equal to `origin`
                  - Choices: `igp`, `egp`, `incomplete`
-        :param str originator: Originator IP
-        :param int ospf_tag: OSPF tag
+        :param str originator: Originator IP, Attribute conditional on `type` being equal to `originator`
+        :param int ospf_tag: OSPF tag, Attribute conditional on `type` being equal to `ospfTag`
                  - Range: `0`-`4294967295`
-        :param int weight: Weight
+        :param int weight: Weight, Attribute conditional on `type` being equal to `weight`
                  - Range: `0`-`4294967295`
         """
         pulumi.set(__self__, "type", type)
@@ -28456,7 +28575,7 @@ class RoutePolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter
     def aggregator(self) -> Optional[int]:
         """
-        Aggregator
+        Aggregator, Attribute conditional on `type` being equal to `aggregator`
           - Range: `0`-`4294967295`
         """
         return pulumi.get(self, "aggregator")
@@ -28465,7 +28584,7 @@ class RoutePolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="aggregatorIpAddress")
     def aggregator_ip_address(self) -> Optional[str]:
         """
-        IP address
+        IP address, Attribute conditional on `type` being equal to `aggregator`
         """
         return pulumi.get(self, "aggregator_ip_address")
 
@@ -28473,7 +28592,7 @@ class RoutePolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="asPathExclude")
     def as_path_exclude(self) -> Optional[str]:
         """
-        Space separated list of ASN to exclude
+        Space separated list of ASN to exclude, Attribute conditional on `type` being equal to `asPath`
         """
         return pulumi.get(self, "as_path_exclude")
 
@@ -28481,7 +28600,7 @@ class RoutePolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="asPathPrepend")
     def as_path_prepend(self) -> Optional[str]:
         """
-        Space separated list of ASN to prepend
+        Space separated list of ASN to prepend, Attribute conditional on `type` being equal to `asPath`
         """
         return pulumi.get(self, "as_path_prepend")
 
@@ -28489,7 +28608,7 @@ class RoutePolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="atomicAggregate")
     def atomic_aggregate(self) -> Optional[bool]:
         """
-        Atomic aggregate
+        Atomic aggregate, Attribute conditional on `type` being equal to `atomicAggregate`
         """
         return pulumi.get(self, "atomic_aggregate")
 
@@ -28497,7 +28616,7 @@ class RoutePolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter
     def community(self) -> Optional[str]:
         """
-        Community value, e.g. `1000:10000` or `internet` or `local-AS`
+        Community value, e.g. `1000:10000` or `internet` or `local-AS`, Attribute conditional on `type` being equal to `community`
         """
         return pulumi.get(self, "community")
 
@@ -28505,7 +28624,7 @@ class RoutePolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="communityAdditive")
     def community_additive(self) -> Optional[bool]:
         """
-        Community additive
+        Community additive, Attribute conditional on `type` being equal to `communityAdditive`
         """
         return pulumi.get(self, "community_additive")
 
@@ -28513,7 +28632,7 @@ class RoutePolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="localPreference")
     def local_preference(self) -> Optional[int]:
         """
-        Local preference
+        Local preference, Attribute conditional on `type` being equal to `localPreference`
           - Range: `0`-`4294967295`
         """
         return pulumi.get(self, "local_preference")
@@ -28522,7 +28641,7 @@ class RoutePolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter
     def metric(self) -> Optional[int]:
         """
-        Metric
+        Metric, Attribute conditional on `type` being equal to `metric`
           - Range: `0`-`4294967295`
         """
         return pulumi.get(self, "metric")
@@ -28531,7 +28650,7 @@ class RoutePolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="metricType")
     def metric_type(self) -> Optional[str]:
         """
-        Metric type
+        Metric type, Attribute conditional on `type` being equal to `metricType`
           - Choices: `type1`, `type2`
         """
         return pulumi.get(self, "metric_type")
@@ -28540,7 +28659,7 @@ class RoutePolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="nextHop")
     def next_hop(self) -> Optional[str]:
         """
-        Next hop IP
+        Next hop IP, Attribute conditional on `type` being equal to `nextHop`
         """
         return pulumi.get(self, "next_hop")
 
@@ -28548,7 +28667,7 @@ class RoutePolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="ompTag")
     def omp_tag(self) -> Optional[int]:
         """
-        OMP tag
+        OMP tag, Attribute conditional on `type` being equal to `ompTag`
           - Range: `0`-`4294967295`
         """
         return pulumi.get(self, "omp_tag")
@@ -28557,7 +28676,7 @@ class RoutePolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter
     def origin(self) -> Optional[str]:
         """
-        Origin
+        Origin, Attribute conditional on `type` being equal to `origin`
           - Choices: `igp`, `egp`, `incomplete`
         """
         return pulumi.get(self, "origin")
@@ -28566,7 +28685,7 @@ class RoutePolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter
     def originator(self) -> Optional[str]:
         """
-        Originator IP
+        Originator IP, Attribute conditional on `type` being equal to `originator`
         """
         return pulumi.get(self, "originator")
 
@@ -28574,7 +28693,7 @@ class RoutePolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="ospfTag")
     def ospf_tag(self) -> Optional[int]:
         """
-        OSPF tag
+        OSPF tag, Attribute conditional on `type` being equal to `ospfTag`
           - Range: `0`-`4294967295`
         """
         return pulumi.get(self, "ospf_tag")
@@ -28583,7 +28702,7 @@ class RoutePolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter
     def weight(self) -> Optional[int]:
         """
-        Weight
+        Weight, Attribute conditional on `type` being equal to `weight`
           - Range: `0`-`4294967295`
         """
         return pulumi.get(self, "weight")
@@ -28662,30 +28781,30 @@ class RoutePolicyDefinitionSequenceMatchEntry(dict):
         """
         :param str type: Type of match entry
                  - Choices: `address`, `asPath`, `advancedCommunity`, `expandedCommunity`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
-        :param str as_path_list_id: AS path list ID
+        :param str as_path_list_id: AS path list ID, Attribute conditional on `type` being equal to `asPath`
         :param int as_path_list_version: AS path list version
-        :param Sequence[str] community_list_ids: Community list IDs
-        :param str community_list_match_flag: Community list match flag
+        :param Sequence[str] community_list_ids: Community list IDs, Attribute conditional on `type` being equal to `advancedCommunity`
+        :param str community_list_match_flag: Community list match flag, Attribute conditional on `type` being equal to `advancedCommunity`
                  - Choices: `and`, `or`, `exact`
         :param Sequence[str] community_list_versions: Community list versions
-        :param str expanded_community_list_id: Expanded community list ID
+        :param str expanded_community_list_id: Expanded community list ID, Attribute conditional on `type` being equal to `expandedCommunity`
         :param int expanded_community_list_version: Expanded community list version
-        :param str extended_community_list_id: Extended community list ID
+        :param str extended_community_list_id: Extended community list ID, Attribute conditional on `type` being equal to `extCommunity`
         :param int extended_community_list_version: Extended community list version
-        :param int local_preference: Local preference
+        :param int local_preference: Local preference, Attribute conditional on `type` being equal to `localPreference`
                  - Range: `0`-`4294967295`
-        :param int metric: Metric
+        :param int metric: Metric, Attribute conditional on `type` being equal to `metric`
                  - Range: `0`-`4294967295`
-        :param str next_hop_prefix_list_id: Next hop prefix list ID
+        :param str next_hop_prefix_list_id: Next hop prefix list ID, Attribute conditional on `type` being equal to `nextHop`
         :param int next_hop_prefix_list_version: Next hop prefix list version
-        :param int omp_tag: OMP tag
+        :param int omp_tag: OMP tag, Attribute conditional on `type` being equal to `ompTag`
                  - Range: `0`-`4294967295`
-        :param str origin: Origin
+        :param str origin: Origin, Attribute conditional on `type` being equal to `origin`
                  - Choices: `igp`, `egp`, `incomplete`
-        :param int ospf_tag: OSPF tag
+        :param int ospf_tag: OSPF tag, Attribute conditional on `type` being equal to `ospfTag`
                  - Range: `0`-`4294967295`
-        :param str peer: Peer IP
-        :param str prefix_list_id: Prefix list ID
+        :param str peer: Peer IP, Attribute conditional on `type` being equal to `peer`
+        :param str prefix_list_id: Prefix list ID, Attribute conditional on `type` being equal to `address`
         :param int prefix_list_version: Prefix list version
         """
         pulumi.set(__self__, "type", type)
@@ -28741,7 +28860,7 @@ class RoutePolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="asPathListId")
     def as_path_list_id(self) -> Optional[str]:
         """
-        AS path list ID
+        AS path list ID, Attribute conditional on `type` being equal to `asPath`
         """
         return pulumi.get(self, "as_path_list_id")
 
@@ -28757,7 +28876,7 @@ class RoutePolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="communityListIds")
     def community_list_ids(self) -> Optional[Sequence[str]]:
         """
-        Community list IDs
+        Community list IDs, Attribute conditional on `type` being equal to `advancedCommunity`
         """
         return pulumi.get(self, "community_list_ids")
 
@@ -28765,7 +28884,7 @@ class RoutePolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="communityListMatchFlag")
     def community_list_match_flag(self) -> Optional[str]:
         """
-        Community list match flag
+        Community list match flag, Attribute conditional on `type` being equal to `advancedCommunity`
           - Choices: `and`, `or`, `exact`
         """
         return pulumi.get(self, "community_list_match_flag")
@@ -28782,7 +28901,7 @@ class RoutePolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="expandedCommunityListId")
     def expanded_community_list_id(self) -> Optional[str]:
         """
-        Expanded community list ID
+        Expanded community list ID, Attribute conditional on `type` being equal to `expandedCommunity`
         """
         return pulumi.get(self, "expanded_community_list_id")
 
@@ -28798,7 +28917,7 @@ class RoutePolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="extendedCommunityListId")
     def extended_community_list_id(self) -> Optional[str]:
         """
-        Extended community list ID
+        Extended community list ID, Attribute conditional on `type` being equal to `extCommunity`
         """
         return pulumi.get(self, "extended_community_list_id")
 
@@ -28814,7 +28933,7 @@ class RoutePolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="localPreference")
     def local_preference(self) -> Optional[int]:
         """
-        Local preference
+        Local preference, Attribute conditional on `type` being equal to `localPreference`
           - Range: `0`-`4294967295`
         """
         return pulumi.get(self, "local_preference")
@@ -28823,7 +28942,7 @@ class RoutePolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter
     def metric(self) -> Optional[int]:
         """
-        Metric
+        Metric, Attribute conditional on `type` being equal to `metric`
           - Range: `0`-`4294967295`
         """
         return pulumi.get(self, "metric")
@@ -28832,7 +28951,7 @@ class RoutePolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="nextHopPrefixListId")
     def next_hop_prefix_list_id(self) -> Optional[str]:
         """
-        Next hop prefix list ID
+        Next hop prefix list ID, Attribute conditional on `type` being equal to `nextHop`
         """
         return pulumi.get(self, "next_hop_prefix_list_id")
 
@@ -28848,7 +28967,7 @@ class RoutePolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="ompTag")
     def omp_tag(self) -> Optional[int]:
         """
-        OMP tag
+        OMP tag, Attribute conditional on `type` being equal to `ompTag`
           - Range: `0`-`4294967295`
         """
         return pulumi.get(self, "omp_tag")
@@ -28857,7 +28976,7 @@ class RoutePolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter
     def origin(self) -> Optional[str]:
         """
-        Origin
+        Origin, Attribute conditional on `type` being equal to `origin`
           - Choices: `igp`, `egp`, `incomplete`
         """
         return pulumi.get(self, "origin")
@@ -28866,7 +28985,7 @@ class RoutePolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="ospfTag")
     def ospf_tag(self) -> Optional[int]:
         """
-        OSPF tag
+        OSPF tag, Attribute conditional on `type` being equal to `ospfTag`
           - Range: `0`-`4294967295`
         """
         return pulumi.get(self, "ospf_tag")
@@ -28875,7 +28994,7 @@ class RoutePolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter
     def peer(self) -> Optional[str]:
         """
-        Peer IP
+        Peer IP, Attribute conditional on `type` being equal to `peer`
         """
         return pulumi.get(self, "peer")
 
@@ -28883,7 +29002,7 @@ class RoutePolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="prefixListId")
     def prefix_list_id(self) -> Optional[str]:
         """
-        Prefix list ID
+        Prefix list ID, Attribute conditional on `type` being equal to `address`
         """
         return pulumi.get(self, "prefix_list_id")
 
@@ -29692,18 +29811,45 @@ class SecurityAppHostingFeatureTemplateVirtualApplication(dict):
 
 @pulumi.output_type
 class SecurityPolicyDefinition(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "destinationZone":
+            suggest = "destination_zone"
+        elif key == "sourceZone":
+            suggest = "source_zone"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in SecurityPolicyDefinition. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        SecurityPolicyDefinition.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        SecurityPolicyDefinition.__key_warning(key)
+        return super().get(key, default)
+
     def __init__(__self__, *,
                  id: str,
                  type: str,
+                 destination_zone: Optional[str] = None,
+                 source_zone: Optional[str] = None,
                  version: Optional[int] = None):
         """
         :param str id: Policy definition ID
         :param str type: Policy definition type
                  - Choices: `urlFiltering`, `zoneBasedFW`, `intrusionPrevention`, `sslDecryption`, `advancedMalwareProtection`, `dnsSecurity`
+        :param str destination_zone: Destination Zone, Attribute conditional on `type` being equal to `zoneBasedFW`
+        :param str source_zone: Source Zone, Attribute conditional on `type` being equal to `zoneBasedFW`
         :param int version: Policy definition version
         """
         pulumi.set(__self__, "id", id)
         pulumi.set(__self__, "type", type)
+        if destination_zone is not None:
+            pulumi.set(__self__, "destination_zone", destination_zone)
+        if source_zone is not None:
+            pulumi.set(__self__, "source_zone", source_zone)
         if version is not None:
             pulumi.set(__self__, "version", version)
 
@@ -29725,6 +29871,22 @@ class SecurityPolicyDefinition(dict):
         return pulumi.get(self, "type")
 
     @property
+    @pulumi.getter(name="destinationZone")
+    def destination_zone(self) -> Optional[str]:
+        """
+        Destination Zone, Attribute conditional on `type` being equal to `zoneBasedFW`
+        """
+        return pulumi.get(self, "destination_zone")
+
+    @property
+    @pulumi.getter(name="sourceZone")
+    def source_zone(self) -> Optional[str]:
+        """
+        Source Zone, Attribute conditional on `type` being equal to `zoneBasedFW`
+        """
+        return pulumi.get(self, "source_zone")
+
+    @property
     @pulumi.getter
     def version(self) -> Optional[int]:
         """
@@ -29740,6 +29902,8 @@ class SecurityPolicyLogging(dict):
         suggest = None
         if key == "externalSyslogServerIp":
             suggest = "external_syslog_server_ip"
+        elif key == "externalSyslogServerSourceInterface":
+            suggest = "external_syslog_server_source_interface"
         elif key == "externalSyslogServerVpn":
             suggest = "external_syslog_server_vpn"
 
@@ -29756,13 +29920,17 @@ class SecurityPolicyLogging(dict):
 
     def __init__(__self__, *,
                  external_syslog_server_ip: Optional[str] = None,
+                 external_syslog_server_source_interface: Optional[str] = None,
                  external_syslog_server_vpn: Optional[str] = None):
         """
         :param str external_syslog_server_ip: External Syslog Server IP
+        :param str external_syslog_server_source_interface: External Syslog Server Source Interface
         :param str external_syslog_server_vpn: External Syslog Server VPN
         """
         if external_syslog_server_ip is not None:
             pulumi.set(__self__, "external_syslog_server_ip", external_syslog_server_ip)
+        if external_syslog_server_source_interface is not None:
+            pulumi.set(__self__, "external_syslog_server_source_interface", external_syslog_server_source_interface)
         if external_syslog_server_vpn is not None:
             pulumi.set(__self__, "external_syslog_server_vpn", external_syslog_server_vpn)
 
@@ -29773,6 +29941,14 @@ class SecurityPolicyLogging(dict):
         External Syslog Server IP
         """
         return pulumi.get(self, "external_syslog_server_ip")
+
+    @property
+    @pulumi.getter(name="externalSyslogServerSourceInterface")
+    def external_syslog_server_source_interface(self) -> Optional[str]:
+        """
+        External Syslog Server Source Interface
+        """
+        return pulumi.get(self, "external_syslog_server_source_interface")
 
     @property
     @pulumi.getter(name="externalSyslogServerVpn")
@@ -47508,32 +47684,32 @@ class TrafficDataPolicyDefinitionSequenceActionEntry(dict):
         """
         :param str type: Type of action entry
                  - Choices: `cflowd`, `count`, `dreOptimization`, `fallbackToRouting`, `log`, `lossProtect`, `lossProtectPktDup`, `lossProtectFec`, `nat`, `redirectDns`, `serviceNodeGroup`, `set`, `sig`, `tcpOptimization`
-        :param bool cflowd: Enable cflowd
-        :param str counter: Counter name
-        :param bool dre_optimization: Enable DRE optimization
-        :param bool fallback_to_routing: Enable fallback to routing
-        :param bool log: Enable logging
-        :param str loss_correction: Loss correction
+        :param bool cflowd: Enable cflowd, Attribute conditional on `type` being equal to `cflowd`
+        :param str counter: Counter name, Attribute conditional on `type` being equal to `count`
+        :param bool dre_optimization: Enable DRE optimization, Attribute conditional on `type` being equal to `dreOptimization`
+        :param bool fallback_to_routing: Enable fallback to routing, Attribute conditional on `type` being equal to `fallbackToRouting`
+        :param bool log: Enable logging, Attribute conditional on `type` being equal to `log`
+        :param str loss_correction: Loss correction, Attribute conditional on `type` being equal to `lossProtect`
                  - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
-        :param str loss_correction_fec: Loss correction FEC
+        :param str loss_correction_fec: Loss correction FEC, Attribute conditional on `type` being equal to `lossProtectFec`
                  - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
-        :param str loss_correction_fec_threshold: Loss correction FEC threshold
-        :param str loss_correction_packet_duplication: Loss correction packet duplication
+        :param str loss_correction_fec_threshold: Loss correction FEC threshold, Attribute conditional on `type` being equal to `lossProtectFec`
+        :param str loss_correction_packet_duplication: Loss correction packet duplication, Attribute conditional on `type` being equal to `lossProtectPktDup`
                  - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
-        :param Sequence['TrafficDataPolicyDefinitionSequenceActionEntryNatParameterArgs'] nat_parameters: List of NAT parameters
-        :param str nat_pool: NAT pool
+        :param Sequence['TrafficDataPolicyDefinitionSequenceActionEntryNatParameterArgs'] nat_parameters: List of NAT parameters, Attribute conditional on `type` being equal to `nat`
+        :param str nat_pool: NAT pool, Attribute conditional on `type` being equal to `nat`
                  - Choices: `pool`
-        :param int nat_pool_id: NAT pool ID
+        :param int nat_pool_id: NAT pool ID, Attribute conditional on `type` being equal to `nat`
                  - Range: `1`-`31`
-        :param str redirect_dns: Redirect DNS
+        :param str redirect_dns: Redirect DNS, Attribute conditional on `type` being equal to `redirectDns`
                  - Choices: `dnsType`, `ipAddress`
-        :param str redirect_dns_address: Redirect DNS IP address
-        :param str redirect_dns_type: Redirect DNS type
+        :param str redirect_dns_address: Redirect DNS IP address, Attribute conditional on `redirect_dns` being equal to `ipAddress`
+        :param str redirect_dns_type: Redirect DNS type, Attribute conditional on `redirect_dns` being equal to `dnsType`
                  - Choices: `host`, `umbrella`
-        :param bool secure_internet_gateway: Enable secure internet gateway
-        :param str service_node_group: Service node group
-        :param Sequence['TrafficDataPolicyDefinitionSequenceActionEntrySetParameterArgs'] set_parameters: List of set parameters
-        :param bool tcp_optimization: Enable TCP optimization
+        :param bool secure_internet_gateway: Enable secure internet gateway, Attribute conditional on `type` being equal to `sig`
+        :param str service_node_group: Service node group, Attribute conditional on `type` being equal to `serviceNodeGroup`
+        :param Sequence['TrafficDataPolicyDefinitionSequenceActionEntrySetParameterArgs'] set_parameters: List of set parameters, Attribute conditional on `type` being equal to `set`
+        :param bool tcp_optimization: Enable TCP optimization, Attribute conditional on `type` being equal to `tcpOptimization`
         """
         pulumi.set(__self__, "type", type)
         if cflowd is not None:
@@ -47588,7 +47764,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter
     def cflowd(self) -> Optional[bool]:
         """
-        Enable cflowd
+        Enable cflowd, Attribute conditional on `type` being equal to `cflowd`
         """
         return pulumi.get(self, "cflowd")
 
@@ -47596,7 +47772,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter
     def counter(self) -> Optional[str]:
         """
-        Counter name
+        Counter name, Attribute conditional on `type` being equal to `count`
         """
         return pulumi.get(self, "counter")
 
@@ -47604,7 +47780,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="dreOptimization")
     def dre_optimization(self) -> Optional[bool]:
         """
-        Enable DRE optimization
+        Enable DRE optimization, Attribute conditional on `type` being equal to `dreOptimization`
         """
         return pulumi.get(self, "dre_optimization")
 
@@ -47612,7 +47788,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="fallbackToRouting")
     def fallback_to_routing(self) -> Optional[bool]:
         """
-        Enable fallback to routing
+        Enable fallback to routing, Attribute conditional on `type` being equal to `fallbackToRouting`
         """
         return pulumi.get(self, "fallback_to_routing")
 
@@ -47620,7 +47796,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter
     def log(self) -> Optional[bool]:
         """
-        Enable logging
+        Enable logging, Attribute conditional on `type` being equal to `log`
         """
         return pulumi.get(self, "log")
 
@@ -47628,7 +47804,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="lossCorrection")
     def loss_correction(self) -> Optional[str]:
         """
-        Loss correction
+        Loss correction, Attribute conditional on `type` being equal to `lossProtect`
           - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
         """
         return pulumi.get(self, "loss_correction")
@@ -47637,7 +47813,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="lossCorrectionFec")
     def loss_correction_fec(self) -> Optional[str]:
         """
-        Loss correction FEC
+        Loss correction FEC, Attribute conditional on `type` being equal to `lossProtectFec`
           - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
         """
         return pulumi.get(self, "loss_correction_fec")
@@ -47646,7 +47822,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="lossCorrectionFecThreshold")
     def loss_correction_fec_threshold(self) -> Optional[str]:
         """
-        Loss correction FEC threshold
+        Loss correction FEC threshold, Attribute conditional on `type` being equal to `lossProtectFec`
         """
         return pulumi.get(self, "loss_correction_fec_threshold")
 
@@ -47654,7 +47830,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="lossCorrectionPacketDuplication")
     def loss_correction_packet_duplication(self) -> Optional[str]:
         """
-        Loss correction packet duplication
+        Loss correction packet duplication, Attribute conditional on `type` being equal to `lossProtectPktDup`
           - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
         """
         return pulumi.get(self, "loss_correction_packet_duplication")
@@ -47663,7 +47839,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="natParameters")
     def nat_parameters(self) -> Optional[Sequence['outputs.TrafficDataPolicyDefinitionSequenceActionEntryNatParameter']]:
         """
-        List of NAT parameters
+        List of NAT parameters, Attribute conditional on `type` being equal to `nat`
         """
         return pulumi.get(self, "nat_parameters")
 
@@ -47671,7 +47847,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="natPool")
     def nat_pool(self) -> Optional[str]:
         """
-        NAT pool
+        NAT pool, Attribute conditional on `type` being equal to `nat`
           - Choices: `pool`
         """
         return pulumi.get(self, "nat_pool")
@@ -47680,7 +47856,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="natPoolId")
     def nat_pool_id(self) -> Optional[int]:
         """
-        NAT pool ID
+        NAT pool ID, Attribute conditional on `type` being equal to `nat`
           - Range: `1`-`31`
         """
         return pulumi.get(self, "nat_pool_id")
@@ -47689,7 +47865,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="redirectDns")
     def redirect_dns(self) -> Optional[str]:
         """
-        Redirect DNS
+        Redirect DNS, Attribute conditional on `type` being equal to `redirectDns`
           - Choices: `dnsType`, `ipAddress`
         """
         return pulumi.get(self, "redirect_dns")
@@ -47698,7 +47874,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="redirectDnsAddress")
     def redirect_dns_address(self) -> Optional[str]:
         """
-        Redirect DNS IP address
+        Redirect DNS IP address, Attribute conditional on `redirect_dns` being equal to `ipAddress`
         """
         return pulumi.get(self, "redirect_dns_address")
 
@@ -47706,7 +47882,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="redirectDnsType")
     def redirect_dns_type(self) -> Optional[str]:
         """
-        Redirect DNS type
+        Redirect DNS type, Attribute conditional on `redirect_dns` being equal to `dnsType`
           - Choices: `host`, `umbrella`
         """
         return pulumi.get(self, "redirect_dns_type")
@@ -47715,7 +47891,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="secureInternetGateway")
     def secure_internet_gateway(self) -> Optional[bool]:
         """
-        Enable secure internet gateway
+        Enable secure internet gateway, Attribute conditional on `type` being equal to `sig`
         """
         return pulumi.get(self, "secure_internet_gateway")
 
@@ -47723,7 +47899,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="serviceNodeGroup")
     def service_node_group(self) -> Optional[str]:
         """
-        Service node group
+        Service node group, Attribute conditional on `type` being equal to `serviceNodeGroup`
         """
         return pulumi.get(self, "service_node_group")
 
@@ -47731,7 +47907,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="setParameters")
     def set_parameters(self) -> Optional[Sequence['outputs.TrafficDataPolicyDefinitionSequenceActionEntrySetParameter']]:
         """
-        List of set parameters
+        List of set parameters, Attribute conditional on `type` being equal to `set`
         """
         return pulumi.get(self, "set_parameters")
 
@@ -47739,7 +47915,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntry(dict):
     @pulumi.getter(name="tcpOptimization")
     def tcp_optimization(self) -> Optional[bool]:
         """
-        Enable TCP optimization
+        Enable TCP optimization, Attribute conditional on `type` being equal to `tcpOptimization`
         """
         return pulumi.get(self, "tcp_optimization")
 
@@ -47770,8 +47946,8 @@ class TrafficDataPolicyDefinitionSequenceActionEntryNatParameter(dict):
         """
         :param str type: Type of NAT parameter
                  - Choices: `useVpn`, `fallback`
-        :param bool fallback: Fallback
-        :param int vpn_id: DSCP
+        :param bool fallback: Fallback, Attribute conditional on `type` being equal to `fallback`
+        :param int vpn_id: DSCP, Attribute conditional on `type` being equal to `useVpn`
         """
         pulumi.set(__self__, "type", type)
         if fallback is not None:
@@ -47792,7 +47968,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntryNatParameter(dict):
     @pulumi.getter
     def fallback(self) -> Optional[bool]:
         """
-        Fallback
+        Fallback, Attribute conditional on `type` being equal to `fallback`
         """
         return pulumi.get(self, "fallback")
 
@@ -47800,7 +47976,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntryNatParameter(dict):
     @pulumi.getter(name="vpnId")
     def vpn_id(self) -> Optional[int]:
         """
-        DSCP
+        DSCP, Attribute conditional on `type` being equal to `useVpn`
         """
         return pulumi.get(self, "vpn_id")
 
@@ -47903,38 +48079,38 @@ class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter(dict):
         """
         :param str type: Type of set parameter
                  - Choices: `dscp`, `forwardingClass`, `localTlocList`, `nextHop`, `nextHopLoose`, `policer`, `preferredColorGroup`, `tlocList`, `tloc`, `service`, `vpn`
-        :param int dscp: DSCP
+        :param int dscp: DSCP, Attribute conditional on `type` being equal to `dscp`
                  - Range: `0`-`63`
-        :param str forwarding_class: Forwarding class
-        :param str local_tloc_list_color: Local TLOC list color. Space separated list of colors.
-        :param str local_tloc_list_encap: Local TLOC list encapsulation.
+        :param str forwarding_class: Forwarding class, Attribute conditional on `type` being equal to `forwardingClass`
+        :param str local_tloc_list_color: Local TLOC list color. Space separated list of colors., Attribute conditional on `type` being equal to `localTlocList`
+        :param str local_tloc_list_encap: Local TLOC list encapsulation., Attribute conditional on `type` being equal to `localTlocList`
                  - Choices: `ipsec`, `gre`, `ipsec gre`
-        :param bool local_tloc_list_restrict: Local TLOC list restrict
-        :param str next_hop: Next hop IP
-        :param bool next_hop_loose: Use routing table entry to forward the packet in case Next-hop is not available
-        :param str policer_list_id: Policer list ID
+        :param bool local_tloc_list_restrict: Local TLOC list restrict, Attribute conditional on `type` being equal to `localTlocList`
+        :param str next_hop: Next hop IP, Attribute conditional on `type` being equal to `nextHop`
+        :param bool next_hop_loose: Use routing table entry to forward the packet in case Next-hop is not available, Attribute conditional on `type` being equal to `nextHopLoose`
+        :param str policer_list_id: Policer list ID, Attribute conditional on `type` being equal to `policer`
         :param int policer_list_version: Policer list version
-        :param str preferred_color_group_list: Preferred color group list ID
+        :param str preferred_color_group_list: Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
         :param int preferred_color_group_list_version: Preferred color group list version
-        :param str service_tloc_color: Service TLOC color
-        :param str service_tloc_encapsulation: Service TLOC encapsulation
+        :param str service_tloc_color: Service TLOC color, Attribute conditional on `type` being equal to `service`
+        :param str service_tloc_encapsulation: Service TLOC encapsulation, Attribute conditional on `type` being equal to `service`
                  - Choices: `ipsec`, `gre`, `ipsec gre`
-        :param str service_tloc_ip: Service TLOC IP address
-        :param str service_tloc_list_id: Service TLOC list ID
+        :param str service_tloc_ip: Service TLOC IP address, Attribute conditional on `type` being equal to `service`
+        :param str service_tloc_list_id: Service TLOC list ID, Attribute conditional on `type` being equal to `service`
         :param int service_tloc_list_version: Service TLOC list version
-        :param bool service_tloc_local: Service TLOC Local
-        :param bool service_tloc_restrict: Service TLOC Restrict
-        :param str service_type: Service type
+        :param bool service_tloc_local: Service TLOC Local, Attribute conditional on `type` being equal to `service`
+        :param bool service_tloc_restrict: Service TLOC Restrict, Attribute conditional on `type` being equal to `service`
+        :param str service_type: Service type, Attribute conditional on `type` being equal to `service`
                  - Choices: `FW`, `IDP`, `IDS`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `netsvc5`
-        :param int service_vpn_id: Service VPN ID
+        :param int service_vpn_id: Service VPN ID, Attribute conditional on `type` being equal to `service`
                  - Range: `0`-`65536`
-        :param str tloc_color: TLOC color
-        :param str tloc_encapsulation: TLOC encapsulation
+        :param str tloc_color: TLOC color, Attribute conditional on `type` being equal to `tloc`
+        :param str tloc_encapsulation: TLOC encapsulation, Attribute conditional on `type` being equal to `tloc`
                  - Choices: `ipsec`, `gre`, `ipsec gre`
-        :param str tloc_ip: TLOC IP address
-        :param str tloc_list_id: TLOC list ID
+        :param str tloc_ip: TLOC IP address, Attribute conditional on `type` being equal to `tloc`
+        :param str tloc_list_id: TLOC list ID, Attribute conditional on `type` being equal to `tlocList`
         :param int tloc_list_version: TLOC list version
-        :param int vpn_id: DSCP
+        :param int vpn_id: DSCP, Attribute conditional on `type` being equal to `vpn`
                  - Range: `0`-`65530`
         """
         pulumi.set(__self__, "type", type)
@@ -48004,7 +48180,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter(dict):
     @pulumi.getter
     def dscp(self) -> Optional[int]:
         """
-        DSCP
+        DSCP, Attribute conditional on `type` being equal to `dscp`
           - Range: `0`-`63`
         """
         return pulumi.get(self, "dscp")
@@ -48013,7 +48189,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter(dict):
     @pulumi.getter(name="forwardingClass")
     def forwarding_class(self) -> Optional[str]:
         """
-        Forwarding class
+        Forwarding class, Attribute conditional on `type` being equal to `forwardingClass`
         """
         return pulumi.get(self, "forwarding_class")
 
@@ -48021,7 +48197,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter(dict):
     @pulumi.getter(name="localTlocListColor")
     def local_tloc_list_color(self) -> Optional[str]:
         """
-        Local TLOC list color. Space separated list of colors.
+        Local TLOC list color. Space separated list of colors., Attribute conditional on `type` being equal to `localTlocList`
         """
         return pulumi.get(self, "local_tloc_list_color")
 
@@ -48029,7 +48205,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter(dict):
     @pulumi.getter(name="localTlocListEncap")
     def local_tloc_list_encap(self) -> Optional[str]:
         """
-        Local TLOC list encapsulation.
+        Local TLOC list encapsulation., Attribute conditional on `type` being equal to `localTlocList`
           - Choices: `ipsec`, `gre`, `ipsec gre`
         """
         return pulumi.get(self, "local_tloc_list_encap")
@@ -48038,7 +48214,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter(dict):
     @pulumi.getter(name="localTlocListRestrict")
     def local_tloc_list_restrict(self) -> Optional[bool]:
         """
-        Local TLOC list restrict
+        Local TLOC list restrict, Attribute conditional on `type` being equal to `localTlocList`
         """
         return pulumi.get(self, "local_tloc_list_restrict")
 
@@ -48046,7 +48222,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter(dict):
     @pulumi.getter(name="nextHop")
     def next_hop(self) -> Optional[str]:
         """
-        Next hop IP
+        Next hop IP, Attribute conditional on `type` being equal to `nextHop`
         """
         return pulumi.get(self, "next_hop")
 
@@ -48054,7 +48230,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter(dict):
     @pulumi.getter(name="nextHopLoose")
     def next_hop_loose(self) -> Optional[bool]:
         """
-        Use routing table entry to forward the packet in case Next-hop is not available
+        Use routing table entry to forward the packet in case Next-hop is not available, Attribute conditional on `type` being equal to `nextHopLoose`
         """
         return pulumi.get(self, "next_hop_loose")
 
@@ -48062,7 +48238,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter(dict):
     @pulumi.getter(name="policerListId")
     def policer_list_id(self) -> Optional[str]:
         """
-        Policer list ID
+        Policer list ID, Attribute conditional on `type` being equal to `policer`
         """
         return pulumi.get(self, "policer_list_id")
 
@@ -48078,7 +48254,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter(dict):
     @pulumi.getter(name="preferredColorGroupList")
     def preferred_color_group_list(self) -> Optional[str]:
         """
-        Preferred color group list ID
+        Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
         """
         return pulumi.get(self, "preferred_color_group_list")
 
@@ -48094,7 +48270,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter(dict):
     @pulumi.getter(name="serviceTlocColor")
     def service_tloc_color(self) -> Optional[str]:
         """
-        Service TLOC color
+        Service TLOC color, Attribute conditional on `type` being equal to `service`
         """
         return pulumi.get(self, "service_tloc_color")
 
@@ -48102,7 +48278,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter(dict):
     @pulumi.getter(name="serviceTlocEncapsulation")
     def service_tloc_encapsulation(self) -> Optional[str]:
         """
-        Service TLOC encapsulation
+        Service TLOC encapsulation, Attribute conditional on `type` being equal to `service`
           - Choices: `ipsec`, `gre`, `ipsec gre`
         """
         return pulumi.get(self, "service_tloc_encapsulation")
@@ -48111,7 +48287,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter(dict):
     @pulumi.getter(name="serviceTlocIp")
     def service_tloc_ip(self) -> Optional[str]:
         """
-        Service TLOC IP address
+        Service TLOC IP address, Attribute conditional on `type` being equal to `service`
         """
         return pulumi.get(self, "service_tloc_ip")
 
@@ -48119,7 +48295,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter(dict):
     @pulumi.getter(name="serviceTlocListId")
     def service_tloc_list_id(self) -> Optional[str]:
         """
-        Service TLOC list ID
+        Service TLOC list ID, Attribute conditional on `type` being equal to `service`
         """
         return pulumi.get(self, "service_tloc_list_id")
 
@@ -48135,7 +48311,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter(dict):
     @pulumi.getter(name="serviceTlocLocal")
     def service_tloc_local(self) -> Optional[bool]:
         """
-        Service TLOC Local
+        Service TLOC Local, Attribute conditional on `type` being equal to `service`
         """
         return pulumi.get(self, "service_tloc_local")
 
@@ -48143,7 +48319,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter(dict):
     @pulumi.getter(name="serviceTlocRestrict")
     def service_tloc_restrict(self) -> Optional[bool]:
         """
-        Service TLOC Restrict
+        Service TLOC Restrict, Attribute conditional on `type` being equal to `service`
         """
         return pulumi.get(self, "service_tloc_restrict")
 
@@ -48151,7 +48327,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter(dict):
     @pulumi.getter(name="serviceType")
     def service_type(self) -> Optional[str]:
         """
-        Service type
+        Service type, Attribute conditional on `type` being equal to `service`
           - Choices: `FW`, `IDP`, `IDS`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `netsvc5`
         """
         return pulumi.get(self, "service_type")
@@ -48160,7 +48336,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter(dict):
     @pulumi.getter(name="serviceVpnId")
     def service_vpn_id(self) -> Optional[int]:
         """
-        Service VPN ID
+        Service VPN ID, Attribute conditional on `type` being equal to `service`
           - Range: `0`-`65536`
         """
         return pulumi.get(self, "service_vpn_id")
@@ -48169,7 +48345,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter(dict):
     @pulumi.getter(name="tlocColor")
     def tloc_color(self) -> Optional[str]:
         """
-        TLOC color
+        TLOC color, Attribute conditional on `type` being equal to `tloc`
         """
         return pulumi.get(self, "tloc_color")
 
@@ -48177,7 +48353,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter(dict):
     @pulumi.getter(name="tlocEncapsulation")
     def tloc_encapsulation(self) -> Optional[str]:
         """
-        TLOC encapsulation
+        TLOC encapsulation, Attribute conditional on `type` being equal to `tloc`
           - Choices: `ipsec`, `gre`, `ipsec gre`
         """
         return pulumi.get(self, "tloc_encapsulation")
@@ -48186,7 +48362,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter(dict):
     @pulumi.getter(name="tlocIp")
     def tloc_ip(self) -> Optional[str]:
         """
-        TLOC IP address
+        TLOC IP address, Attribute conditional on `type` being equal to `tloc`
         """
         return pulumi.get(self, "tloc_ip")
 
@@ -48194,7 +48370,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter(dict):
     @pulumi.getter(name="tlocListId")
     def tloc_list_id(self) -> Optional[str]:
         """
-        TLOC list ID
+        TLOC list ID, Attribute conditional on `type` being equal to `tlocList`
         """
         return pulumi.get(self, "tloc_list_id")
 
@@ -48210,7 +48386,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter(dict):
     @pulumi.getter(name="vpnId")
     def vpn_id(self) -> Optional[int]:
         """
-        DSCP
+        DSCP, Attribute conditional on `type` being equal to `vpn`
           - Range: `0`-`65530`
         """
         return pulumi.get(self, "vpn_id")
@@ -48291,33 +48467,33 @@ class TrafficDataPolicyDefinitionSequenceMatchEntry(dict):
         """
         :param str type: Type of match entry
                  - Choices: `appList`, `dnsAppList`, `dns`, `dscp`, `packetLength`, `plp`, `protocol`, `sourceDataPrefixList`, `sourceIp`, `sourcePort`, `destinationDataPrefixList`, `destinationIp`, `destinationRegion`, `destinationPort`, `tcp`, `trafficTo`, `icmpMessage`
-        :param str application_list_id: Application list ID
+        :param str application_list_id: Application list ID, Attribute conditional on `type` being equal to `appList`
         :param int application_list_version: Application list version
-        :param str destination_data_prefix_list_id: Destination Data Prefix list ID
+        :param str destination_data_prefix_list_id: Destination Data Prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
         :param int destination_data_prefix_list_version: Destination Data Prefix list version
-        :param str destination_ip: Destination IP
-        :param str destination_port: Destination port, 0-65535 (Single value, range or multiple values separated by spaces)
-        :param str destination_region: Destination region
+        :param str destination_ip: Destination IP, Attribute conditional on `type` being equal to `destinationIp`
+        :param str destination_port: Destination port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `type` being equal to `destinationPort`
+        :param str destination_region: Destination region, Attribute conditional on `type` being equal to `destinationRegion`
                  - Choices: `primary-region`, `secondary-region`, `other-region`
-        :param str dns: DNS request or response
+        :param str dns: DNS request or response, Attribute conditional on `type` being equal to `dns`
                  - Choices: `request`, `response`
-        :param str dns_application_list_id: DNS Application list ID
+        :param str dns_application_list_id: DNS Application list ID, Attribute conditional on `type` being equal to `dnsAppList`
         :param int dns_application_list_version: DNS Application list version
-        :param int dscp: DSCP value
+        :param int dscp: DSCP value, Attribute conditional on `type` being equal to `dscp`
                  - Range: `0`-`63`
-        :param str icmp_message: ICMP Message
-        :param int packet_length: Packet length
+        :param str icmp_message: ICMP Message, Attribute conditional on `type` being equal to `icmpMessage`
+        :param int packet_length: Packet length, Attribute conditional on `type` being equal to `packetLength`
                  - Range: `0`-`65535`
-        :param str plp: PLP
+        :param str plp: PLP, Attribute conditional on `type` being equal to `plp`
                  - Choices: `low`, `high`
-        :param str protocol: IP Protocol, 0-255 (Single value or multiple values separated by spaces)
-        :param str source_data_prefix_list_id: Source Data Prefix list ID
+        :param str protocol: IP Protocol, 0-255 (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `protocol`
+        :param str source_data_prefix_list_id: Source Data Prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
         :param int source_data_prefix_list_version: Source Data Prefix list version
-        :param str source_ip: Source IP
-        :param str source_port: Source port, 0-65535 (Single value, range or multiple values separated by spaces)
-        :param str tcp: TCP flags
+        :param str source_ip: Source IP, Attribute conditional on `type` being equal to `sourceIp`
+        :param str source_port: Source port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `type` being equal to `sourcePort`
+        :param str tcp: TCP flags, Attribute conditional on `type` being equal to `tcp`
                  - Choices: `syn`
-        :param str traffic_to: Traffic to
+        :param str traffic_to: Traffic to, Attribute conditional on `type` being equal to `trafficTo`
                  - Choices: `access`, `core`, `service`
         """
         pulumi.set(__self__, "type", type)
@@ -48377,7 +48553,7 @@ class TrafficDataPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="applicationListId")
     def application_list_id(self) -> Optional[str]:
         """
-        Application list ID
+        Application list ID, Attribute conditional on `type` being equal to `appList`
         """
         return pulumi.get(self, "application_list_id")
 
@@ -48393,7 +48569,7 @@ class TrafficDataPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="destinationDataPrefixListId")
     def destination_data_prefix_list_id(self) -> Optional[str]:
         """
-        Destination Data Prefix list ID
+        Destination Data Prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
         """
         return pulumi.get(self, "destination_data_prefix_list_id")
 
@@ -48409,7 +48585,7 @@ class TrafficDataPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="destinationIp")
     def destination_ip(self) -> Optional[str]:
         """
-        Destination IP
+        Destination IP, Attribute conditional on `type` being equal to `destinationIp`
         """
         return pulumi.get(self, "destination_ip")
 
@@ -48417,7 +48593,7 @@ class TrafficDataPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="destinationPort")
     def destination_port(self) -> Optional[str]:
         """
-        Destination port, 0-65535 (Single value, range or multiple values separated by spaces)
+        Destination port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `type` being equal to `destinationPort`
         """
         return pulumi.get(self, "destination_port")
 
@@ -48425,7 +48601,7 @@ class TrafficDataPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="destinationRegion")
     def destination_region(self) -> Optional[str]:
         """
-        Destination region
+        Destination region, Attribute conditional on `type` being equal to `destinationRegion`
           - Choices: `primary-region`, `secondary-region`, `other-region`
         """
         return pulumi.get(self, "destination_region")
@@ -48434,7 +48610,7 @@ class TrafficDataPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter
     def dns(self) -> Optional[str]:
         """
-        DNS request or response
+        DNS request or response, Attribute conditional on `type` being equal to `dns`
           - Choices: `request`, `response`
         """
         return pulumi.get(self, "dns")
@@ -48443,7 +48619,7 @@ class TrafficDataPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="dnsApplicationListId")
     def dns_application_list_id(self) -> Optional[str]:
         """
-        DNS Application list ID
+        DNS Application list ID, Attribute conditional on `type` being equal to `dnsAppList`
         """
         return pulumi.get(self, "dns_application_list_id")
 
@@ -48459,7 +48635,7 @@ class TrafficDataPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter
     def dscp(self) -> Optional[int]:
         """
-        DSCP value
+        DSCP value, Attribute conditional on `type` being equal to `dscp`
           - Range: `0`-`63`
         """
         return pulumi.get(self, "dscp")
@@ -48468,7 +48644,7 @@ class TrafficDataPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="icmpMessage")
     def icmp_message(self) -> Optional[str]:
         """
-        ICMP Message
+        ICMP Message, Attribute conditional on `type` being equal to `icmpMessage`
         """
         return pulumi.get(self, "icmp_message")
 
@@ -48476,7 +48652,7 @@ class TrafficDataPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="packetLength")
     def packet_length(self) -> Optional[int]:
         """
-        Packet length
+        Packet length, Attribute conditional on `type` being equal to `packetLength`
           - Range: `0`-`65535`
         """
         return pulumi.get(self, "packet_length")
@@ -48485,7 +48661,7 @@ class TrafficDataPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter
     def plp(self) -> Optional[str]:
         """
-        PLP
+        PLP, Attribute conditional on `type` being equal to `plp`
           - Choices: `low`, `high`
         """
         return pulumi.get(self, "plp")
@@ -48494,7 +48670,7 @@ class TrafficDataPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter
     def protocol(self) -> Optional[str]:
         """
-        IP Protocol, 0-255 (Single value or multiple values separated by spaces)
+        IP Protocol, 0-255 (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `protocol`
         """
         return pulumi.get(self, "protocol")
 
@@ -48502,7 +48678,7 @@ class TrafficDataPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="sourceDataPrefixListId")
     def source_data_prefix_list_id(self) -> Optional[str]:
         """
-        Source Data Prefix list ID
+        Source Data Prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
         """
         return pulumi.get(self, "source_data_prefix_list_id")
 
@@ -48518,7 +48694,7 @@ class TrafficDataPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="sourceIp")
     def source_ip(self) -> Optional[str]:
         """
-        Source IP
+        Source IP, Attribute conditional on `type` being equal to `sourceIp`
         """
         return pulumi.get(self, "source_ip")
 
@@ -48526,7 +48702,7 @@ class TrafficDataPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="sourcePort")
     def source_port(self) -> Optional[str]:
         """
-        Source port, 0-65535 (Single value, range or multiple values separated by spaces)
+        Source port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `type` being equal to `sourcePort`
         """
         return pulumi.get(self, "source_port")
 
@@ -48534,7 +48710,7 @@ class TrafficDataPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter
     def tcp(self) -> Optional[str]:
         """
-        TCP flags
+        TCP flags, Attribute conditional on `type` being equal to `tcp`
           - Choices: `syn`
         """
         return pulumi.get(self, "tcp")
@@ -48543,7 +48719,7 @@ class TrafficDataPolicyDefinitionSequenceMatchEntry(dict):
     @pulumi.getter(name="trafficTo")
     def traffic_to(self) -> Optional[str]:
         """
-        Traffic to
+        Traffic to, Attribute conditional on `type` being equal to `trafficTo`
           - Choices: `access`, `core`, `service`
         """
         return pulumi.get(self, "traffic_to")
@@ -56513,6 +56689,56 @@ class TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulation(dict
 
 
 @pulumi.output_type
+class UrlFilteringPolicyDefinitionLogging(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "externalSyslogServerIp":
+            suggest = "external_syslog_server_ip"
+        elif key == "externalSyslogServerVpn":
+            suggest = "external_syslog_server_vpn"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in UrlFilteringPolicyDefinitionLogging. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        UrlFilteringPolicyDefinitionLogging.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        UrlFilteringPolicyDefinitionLogging.__key_warning(key)
+        return super().get(key, default)
+
+    def __init__(__self__, *,
+                 external_syslog_server_ip: Optional[str] = None,
+                 external_syslog_server_vpn: Optional[str] = None):
+        """
+        :param str external_syslog_server_ip: External Syslog Server IP
+        :param str external_syslog_server_vpn: External Syslog Server VPN
+        """
+        if external_syslog_server_ip is not None:
+            pulumi.set(__self__, "external_syslog_server_ip", external_syslog_server_ip)
+        if external_syslog_server_vpn is not None:
+            pulumi.set(__self__, "external_syslog_server_vpn", external_syslog_server_vpn)
+
+    @property
+    @pulumi.getter(name="externalSyslogServerIp")
+    def external_syslog_server_ip(self) -> Optional[str]:
+        """
+        External Syslog Server IP
+        """
+        return pulumi.get(self, "external_syslog_server_ip")
+
+    @property
+    @pulumi.getter(name="externalSyslogServerVpn")
+    def external_syslog_server_vpn(self) -> Optional[str]:
+        """
+        External Syslog Server VPN
+        """
+        return pulumi.get(self, "external_syslog_server_vpn")
+
+
+@pulumi.output_type
 class VpnInterfaceCellularFeatureTemplateIpv4AccessList(dict):
     @staticmethod
     def __key_warning(key: str):
@@ -62098,7 +62324,7 @@ class ZoneBasedFirewallPolicyDefinitionRuleActionEntry(dict):
                  type: Optional[str] = None):
         """
         :param str type: Type of action entry
-                 - Choices: `log`, `connectionEvents`
+                 - Choices: `log`, `connectionEvents`, `advancedInspectionProfile`
         """
         if type is not None:
             pulumi.set(__self__, "type", type)
@@ -62108,7 +62334,7 @@ class ZoneBasedFirewallPolicyDefinitionRuleActionEntry(dict):
     def type(self) -> Optional[str]:
         """
         Type of action entry
-          - Choices: `log`, `connectionEvents`
+          - Choices: `log`, `connectionEvents`, `advancedInspectionProfile`
         """
         return pulumi.get(self, "type")
 
@@ -77084,24 +77310,6 @@ class GetConfigurationGroupDeviceVariableResult(dict):
 
 
 @pulumi.output_type
-class GetConfigurationGroupFeatureProfileResult(dict):
-    def __init__(__self__, *,
-                 id: str):
-        """
-        :param str id: Feature profile ID
-        """
-        pulumi.set(__self__, "id", id)
-
-    @property
-    @pulumi.getter
-    def id(self) -> str:
-        """
-        Feature profile ID
-        """
-        return pulumi.get(self, "id")
-
-
-@pulumi.output_type
 class GetConfigurationGroupTopologyDeviceResult(dict):
     def __init__(__self__, *,
                  criteria_attribute: str,
@@ -78026,6 +78234,64 @@ class GetDnsSecurityPolicyDefinitionTargetVpnResult(dict):
 
 
 @pulumi.output_type
+class GetDnsSecurityPolicyTargetVpnResult(dict):
+    def __init__(__self__, *,
+                 dns_server_ip: str,
+                 local_domain_bypass_enabled: bool,
+                 uid: str,
+                 umbrella_default: bool,
+                 vpns: Sequence[str]):
+        """
+        :param str dns_server_ip: Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry
+        :param bool local_domain_bypass_enabled: Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry
+        :param str uid: non empty interger string
+        :param bool umbrella_default: Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry
+        """
+        pulumi.set(__self__, "dns_server_ip", dns_server_ip)
+        pulumi.set(__self__, "local_domain_bypass_enabled", local_domain_bypass_enabled)
+        pulumi.set(__self__, "uid", uid)
+        pulumi.set(__self__, "umbrella_default", umbrella_default)
+        pulumi.set(__self__, "vpns", vpns)
+
+    @property
+    @pulumi.getter(name="dnsServerIp")
+    def dns_server_ip(self) -> str:
+        """
+        Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry
+        """
+        return pulumi.get(self, "dns_server_ip")
+
+    @property
+    @pulumi.getter(name="localDomainBypassEnabled")
+    def local_domain_bypass_enabled(self) -> bool:
+        """
+        Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry
+        """
+        return pulumi.get(self, "local_domain_bypass_enabled")
+
+    @property
+    @pulumi.getter
+    def uid(self) -> str:
+        """
+        non empty interger string
+        """
+        return pulumi.get(self, "uid")
+
+    @property
+    @pulumi.getter(name="umbrellaDefault")
+    def umbrella_default(self) -> bool:
+        """
+        Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry
+        """
+        return pulumi.get(self, "umbrella_default")
+
+    @property
+    @pulumi.getter
+    def vpns(self) -> Sequence[str]:
+        return pulumi.get(self, "vpns")
+
+
+@pulumi.output_type
 class GetDomainListPolicyObjectEntryResult(dict):
     def __init__(__self__, *,
                  domain: str):
@@ -78740,6 +79006,35 @@ class GetHubAndSpokeTopologyPolicyDefinitionTopologySpokeHubResult(dict):
         Site list version
         """
         return pulumi.get(self, "site_list_version")
+
+
+@pulumi.output_type
+class GetIntrusionPreventionPolicyDefinitionLoggingResult(dict):
+    def __init__(__self__, *,
+                 external_syslog_server_ip: str,
+                 external_syslog_server_vpn: str):
+        """
+        :param str external_syslog_server_ip: External Syslog Server IP
+        :param str external_syslog_server_vpn: External Syslog Server VPN
+        """
+        pulumi.set(__self__, "external_syslog_server_ip", external_syslog_server_ip)
+        pulumi.set(__self__, "external_syslog_server_vpn", external_syslog_server_vpn)
+
+    @property
+    @pulumi.getter(name="externalSyslogServerIp")
+    def external_syslog_server_ip(self) -> str:
+        """
+        External Syslog Server IP
+        """
+        return pulumi.get(self, "external_syslog_server_ip")
+
+    @property
+    @pulumi.getter(name="externalSyslogServerVpn")
+    def external_syslog_server_vpn(self) -> str:
+        """
+        External Syslog Server VPN
+        """
+        return pulumi.get(self, "external_syslog_server_vpn")
 
 
 @pulumi.output_type
@@ -82554,17 +82849,31 @@ class GetSecurityAppHostingFeatureTemplateVirtualApplicationResult(dict):
 @pulumi.output_type
 class GetSecurityPolicyDefinitionResult(dict):
     def __init__(__self__, *,
+                 destination_zone: str,
                  id: str,
+                 source_zone: str,
                  type: str,
                  version: int):
         """
+        :param str destination_zone: Destination Zone
         :param str id: Policy definition ID
+        :param str source_zone: Source Zone
         :param str type: Policy definition type
         :param int version: Policy definition version
         """
+        pulumi.set(__self__, "destination_zone", destination_zone)
         pulumi.set(__self__, "id", id)
+        pulumi.set(__self__, "source_zone", source_zone)
         pulumi.set(__self__, "type", type)
         pulumi.set(__self__, "version", version)
+
+    @property
+    @pulumi.getter(name="destinationZone")
+    def destination_zone(self) -> str:
+        """
+        Destination Zone
+        """
+        return pulumi.get(self, "destination_zone")
 
     @property
     @pulumi.getter
@@ -82573,6 +82882,14 @@ class GetSecurityPolicyDefinitionResult(dict):
         Policy definition ID
         """
         return pulumi.get(self, "id")
+
+    @property
+    @pulumi.getter(name="sourceZone")
+    def source_zone(self) -> str:
+        """
+        Source Zone
+        """
+        return pulumi.get(self, "source_zone")
 
     @property
     @pulumi.getter
@@ -82595,12 +82912,15 @@ class GetSecurityPolicyDefinitionResult(dict):
 class GetSecurityPolicyLoggingResult(dict):
     def __init__(__self__, *,
                  external_syslog_server_ip: str,
+                 external_syslog_server_source_interface: str,
                  external_syslog_server_vpn: str):
         """
         :param str external_syslog_server_ip: External Syslog Server IP
+        :param str external_syslog_server_source_interface: External Syslog Server Source Interface
         :param str external_syslog_server_vpn: External Syslog Server VPN
         """
         pulumi.set(__self__, "external_syslog_server_ip", external_syslog_server_ip)
+        pulumi.set(__self__, "external_syslog_server_source_interface", external_syslog_server_source_interface)
         pulumi.set(__self__, "external_syslog_server_vpn", external_syslog_server_vpn)
 
     @property
@@ -82610,6 +82930,14 @@ class GetSecurityPolicyLoggingResult(dict):
         External Syslog Server IP
         """
         return pulumi.get(self, "external_syslog_server_ip")
+
+    @property
+    @pulumi.getter(name="externalSyslogServerSourceInterface")
+    def external_syslog_server_source_interface(self) -> str:
+        """
+        External Syslog Server Source Interface
+        """
+        return pulumi.get(self, "external_syslog_server_source_interface")
 
     @property
     @pulumi.getter(name="externalSyslogServerVpn")
@@ -101023,6 +101351,35 @@ class GetTransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsulationRe
         Variable name
         """
         return pulumi.get(self, "weight_variable")
+
+
+@pulumi.output_type
+class GetUrlFilteringPolicyDefinitionLoggingResult(dict):
+    def __init__(__self__, *,
+                 external_syslog_server_ip: str,
+                 external_syslog_server_vpn: str):
+        """
+        :param str external_syslog_server_ip: External Syslog Server IP
+        :param str external_syslog_server_vpn: External Syslog Server VPN
+        """
+        pulumi.set(__self__, "external_syslog_server_ip", external_syslog_server_ip)
+        pulumi.set(__self__, "external_syslog_server_vpn", external_syslog_server_vpn)
+
+    @property
+    @pulumi.getter(name="externalSyslogServerIp")
+    def external_syslog_server_ip(self) -> str:
+        """
+        External Syslog Server IP
+        """
+        return pulumi.get(self, "external_syslog_server_ip")
+
+    @property
+    @pulumi.getter(name="externalSyslogServerVpn")
+    def external_syslog_server_vpn(self) -> str:
+        """
+        External Syslog Server VPN
+        """
+        return pulumi.get(self, "external_syslog_server_vpn")
 
 
 @pulumi.output_type

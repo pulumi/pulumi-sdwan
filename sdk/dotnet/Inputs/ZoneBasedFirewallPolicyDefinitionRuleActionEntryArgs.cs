@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Inputs
     {
         /// <summary>
         /// Type of action entry
-        ///   - Choices: `log`, `connectionEvents`
+        ///   - Choices: `log`, `connectionEvents`, `advancedInspectionProfile`
         /// </summary>
         [Input("type")]
         public Input<string>? Type { get; set; }

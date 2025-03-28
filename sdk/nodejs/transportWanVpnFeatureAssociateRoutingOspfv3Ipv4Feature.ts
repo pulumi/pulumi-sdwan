@@ -23,8 +23,10 @@ import * as utilities from "./utilities";
  *
  * ## Import
  *
+ * Expected import identifier with the format: "transport_wan_vpn_feature_associate_routing_ospfv3_ipv4_feature_id,feature_profile_id,transport_wan_vpn_feature_id"
+ *
  * ```sh
- * $ pulumi import sdwan:index/transportWanVpnFeatureAssociateRoutingOspfv3Ipv4Feature:TransportWanVpnFeatureAssociateRoutingOspfv3Ipv4Feature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+ * $ pulumi import sdwan:index/transportWanVpnFeatureAssociateRoutingOspfv3Ipv4Feature:TransportWanVpnFeatureAssociateRoutingOspfv3Ipv4Feature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037"
  * ```
  */
 export class TransportWanVpnFeatureAssociateRoutingOspfv3Ipv4Feature extends pulumi.CustomResource {
@@ -67,6 +69,10 @@ export class TransportWanVpnFeatureAssociateRoutingOspfv3Ipv4Feature extends pul
      * Transport WAN VPN Feature ID
      */
     public readonly transportWanVpnFeatureId!: pulumi.Output<string>;
+    /**
+     * The version of the object
+     */
+    public /*out*/ readonly version!: pulumi.Output<number>;
 
     /**
      * Create a TransportWanVpnFeatureAssociateRoutingOspfv3Ipv4Feature resource with the given unique name, arguments, and options.
@@ -84,6 +90,7 @@ export class TransportWanVpnFeatureAssociateRoutingOspfv3Ipv4Feature extends pul
             resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
             resourceInputs["transportRoutingOspfv3Ipv4FeatureId"] = state ? state.transportRoutingOspfv3Ipv4FeatureId : undefined;
             resourceInputs["transportWanVpnFeatureId"] = state ? state.transportWanVpnFeatureId : undefined;
+            resourceInputs["version"] = state ? state.version : undefined;
         } else {
             const args = argsOrState as TransportWanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureArgs | undefined;
             if ((!args || args.featureProfileId === undefined) && !opts.urn) {
@@ -98,6 +105,7 @@ export class TransportWanVpnFeatureAssociateRoutingOspfv3Ipv4Feature extends pul
             resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
             resourceInputs["transportRoutingOspfv3Ipv4FeatureId"] = args ? args.transportRoutingOspfv3Ipv4FeatureId : undefined;
             resourceInputs["transportWanVpnFeatureId"] = args ? args.transportWanVpnFeatureId : undefined;
+            resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(TransportWanVpnFeatureAssociateRoutingOspfv3Ipv4Feature.__pulumiType, name, resourceInputs, opts);
@@ -120,6 +128,10 @@ export interface TransportWanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureState {
      * Transport WAN VPN Feature ID
      */
     transportWanVpnFeatureId?: pulumi.Input<string>;
+    /**
+     * The version of the object
+     */
+    version?: pulumi.Input<number>;
 }
 
 /**

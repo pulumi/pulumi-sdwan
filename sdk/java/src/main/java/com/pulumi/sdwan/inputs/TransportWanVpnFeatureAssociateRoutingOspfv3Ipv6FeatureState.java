@@ -5,6 +5,7 @@ package com.pulumi.sdwan.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -60,12 +61,28 @@ public final class TransportWanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureState 
         return Optional.ofNullable(this.transportWanVpnFeatureId);
     }
 
+    /**
+     * The version of the object
+     * 
+     */
+    @Import(name="version")
+    private @Nullable Output<Integer> version;
+
+    /**
+     * @return The version of the object
+     * 
+     */
+    public Optional<Output<Integer>> version() {
+        return Optional.ofNullable(this.version);
+    }
+
     private TransportWanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureState() {}
 
     private TransportWanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureState(TransportWanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureState $) {
         this.featureProfileId = $.featureProfileId;
         this.transportRoutingOspfv3Ipv6FeatureId = $.transportRoutingOspfv3Ipv6FeatureId;
         this.transportWanVpnFeatureId = $.transportWanVpnFeatureId;
+        this.version = $.version;
     }
 
     public static Builder builder() {
@@ -147,6 +164,27 @@ public final class TransportWanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureState 
          */
         public Builder transportWanVpnFeatureId(String transportWanVpnFeatureId) {
             return transportWanVpnFeatureId(Output.of(transportWanVpnFeatureId));
+        }
+
+        /**
+         * @param version The version of the object
+         * 
+         * @return builder
+         * 
+         */
+        public Builder version(@Nullable Output<Integer> version) {
+            $.version = version;
+            return this;
+        }
+
+        /**
+         * @param version The version of the object
+         * 
+         * @return builder
+         * 
+         */
+        public Builder version(Integer version) {
+            return version(Output.of(version));
         }
 
         public TransportWanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureState build() {

@@ -70,6 +70,10 @@ export interface GetSecurityPolicyResult {
      */
     readonly highSpeedLoggingServerPort: string;
     /**
+     * High Speed Logging Source Interface
+     */
+    readonly highSpeedLoggingServerSourceInterface: string;
+    /**
      * High Speed Logging VPN
      */
     readonly highSpeedLoggingVpn: string;
@@ -77,11 +81,27 @@ export interface GetSecurityPolicyResult {
      * The id of the object
      */
     readonly id: string;
+    /**
+     * ICMP Unreachable Allow
+     */
+    readonly imcpUnreachableAllow: boolean;
     readonly loggings: outputs.GetSecurityPolicyLogging[];
     /**
      * Match Statistics per-filter
      */
     readonly matchStatisticsPerFilter: string;
+    /**
+     * Max Incomplete ICMP Limit
+     */
+    readonly maxIncompleteIcmpLimit: number;
+    /**
+     * Max Incomplete TCP Limit
+     */
+    readonly maxIncompleteTcpLimit: number;
+    /**
+     * Max Incomplete UDP Limit
+     */
+    readonly maxIncompleteUdpLimit: number;
     /**
      * The policy mode
      */
@@ -91,9 +111,17 @@ export interface GetSecurityPolicyResult {
      */
     readonly name: string;
     /**
+     * Session Reclassify Allow
+     */
+    readonly sessionReclassifyAllow: boolean;
+    /**
      * TCP SYN Flood Limit, value from 1 to 4294967295
      */
     readonly tcpSynFloodLimit: string;
+    /**
+     * Unified Logging
+     */
+    readonly unifiedLogging: boolean;
     /**
      * The use case of the security policy
      */

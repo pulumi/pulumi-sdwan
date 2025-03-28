@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 public final class ZoneBasedFirewallPolicyDefinitionRuleActionEntry {
     /**
      * @return Type of action entry
-     *   - Choices: `log`, `connectionEvents`
+     *   - Choices: `log`, `connectionEvents`, `advancedInspectionProfile`
      * 
      */
     private @Nullable String type;
@@ -21,7 +21,7 @@ public final class ZoneBasedFirewallPolicyDefinitionRuleActionEntry {
     private ZoneBasedFirewallPolicyDefinitionRuleActionEntry() {}
     /**
      * @return Type of action entry
-     *   - Choices: `log`, `connectionEvents`
+     *   - Choices: `log`, `connectionEvents`, `advancedInspectionProfile`
      * 
      */
     public Optional<String> type() {

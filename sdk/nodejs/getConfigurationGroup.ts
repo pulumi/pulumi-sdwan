@@ -50,9 +50,9 @@ export interface GetConfigurationGroupResult {
      */
     readonly devices: outputs.GetConfigurationGroupDevice[];
     /**
-     * List of feature profiles
+     * List of feature profile IDs
      */
-    readonly featureProfiles: outputs.GetConfigurationGroupFeatureProfile[];
+    readonly featureProfileIds: string[];
     /**
      * List of all associated feature versions
      */

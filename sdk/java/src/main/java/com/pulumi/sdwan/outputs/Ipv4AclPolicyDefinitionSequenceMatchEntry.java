@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class Ipv4AclPolicyDefinitionSequenceMatchEntry {
     /**
-     * @return Class map ID
+     * @return Class map ID, Attribute conditional on `type` being equal to `class`
      * 
      */
     private @Nullable String classMapId;
@@ -24,7 +24,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntry {
      */
     private @Nullable Integer classMapVersion;
     /**
-     * @return Destination data IPv4 prefix list ID
+     * @return Destination data IPv4 prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
      * 
      */
     private @Nullable String destinationDataIpv4PrefixListId;
@@ -34,45 +34,45 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntry {
      */
     private @Nullable Integer destinationDataIpv4PrefixListVersion;
     /**
-     * @return Destination IP prefix
+     * @return Destination IP prefix, Attribute conditional on `type` being equal to `destinationIp`
      * 
      */
     private @Nullable String destinationIp;
     /**
-     * @return Destination ports. Single value (0-65535) or ranges separated by spaces.
+     * @return Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `destinationPort`
      * 
      */
     private @Nullable String destinationPorts;
     /**
-     * @return DSCP value
+     * @return DSCP value, Attribute conditional on `type` being equal to `dscp`
      *   - Range: `0`-`63`
      * 
      */
     private @Nullable Integer dscp;
     /**
-     * @return ICMP Message
+     * @return ICMP Message, Attribute conditional on `type` being equal to `icmpMessage`
      * 
      */
     private @Nullable String icmpMessage;
     /**
-     * @return Packet length
+     * @return Packet length, Attribute conditional on `type` being equal to `packetLength`
      *   - Range: `0`-`65535`
      * 
      */
     private @Nullable Integer packetLength;
     /**
-     * @return PLP - priority
+     * @return PLP - priority, Attribute conditional on `type` being equal to `plp`
      *   - Choices: `high`, `low`
      * 
      */
     private @Nullable String priority;
     /**
-     * @return Single value (0-255) or multiple values separated by spaces
+     * @return Single value (0-255) or multiple values separated by spaces, Attribute conditional on `type` being equal to `protocol`
      * 
      */
     private @Nullable String protocol;
     /**
-     * @return Source data IPv4 prefix list ID
+     * @return Source data IPv4 prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
      * 
      */
     private @Nullable String sourceDataIpv4PrefixListId;
@@ -82,17 +82,17 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntry {
      */
     private @Nullable Integer sourceDataIpv4PrefixListVersion;
     /**
-     * @return Source IP prefix
+     * @return Source IP prefix, Attribute conditional on `type` being equal to `sourceIp`
      * 
      */
     private @Nullable String sourceIp;
     /**
-     * @return Source ports. Single value (0-65535) or ranges separated by spaces.
+     * @return Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
      * 
      */
     private @Nullable String sourcePorts;
     /**
-     * @return TCP parameters
+     * @return TCP parameters, Attribute conditional on `type` being equal to `tcp`
      *   - Choices: `syn`
      * 
      */
@@ -106,7 +106,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntry {
 
     private Ipv4AclPolicyDefinitionSequenceMatchEntry() {}
     /**
-     * @return Class map ID
+     * @return Class map ID, Attribute conditional on `type` being equal to `class`
      * 
      */
     public Optional<String> classMapId() {
@@ -120,7 +120,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.classMapVersion);
     }
     /**
-     * @return Destination data IPv4 prefix list ID
+     * @return Destination data IPv4 prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
      * 
      */
     public Optional<String> destinationDataIpv4PrefixListId() {
@@ -134,21 +134,21 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.destinationDataIpv4PrefixListVersion);
     }
     /**
-     * @return Destination IP prefix
+     * @return Destination IP prefix, Attribute conditional on `type` being equal to `destinationIp`
      * 
      */
     public Optional<String> destinationIp() {
         return Optional.ofNullable(this.destinationIp);
     }
     /**
-     * @return Destination ports. Single value (0-65535) or ranges separated by spaces.
+     * @return Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `destinationPort`
      * 
      */
     public Optional<String> destinationPorts() {
         return Optional.ofNullable(this.destinationPorts);
     }
     /**
-     * @return DSCP value
+     * @return DSCP value, Attribute conditional on `type` being equal to `dscp`
      *   - Range: `0`-`63`
      * 
      */
@@ -156,14 +156,14 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.dscp);
     }
     /**
-     * @return ICMP Message
+     * @return ICMP Message, Attribute conditional on `type` being equal to `icmpMessage`
      * 
      */
     public Optional<String> icmpMessage() {
         return Optional.ofNullable(this.icmpMessage);
     }
     /**
-     * @return Packet length
+     * @return Packet length, Attribute conditional on `type` being equal to `packetLength`
      *   - Range: `0`-`65535`
      * 
      */
@@ -171,7 +171,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.packetLength);
     }
     /**
-     * @return PLP - priority
+     * @return PLP - priority, Attribute conditional on `type` being equal to `plp`
      *   - Choices: `high`, `low`
      * 
      */
@@ -179,14 +179,14 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.priority);
     }
     /**
-     * @return Single value (0-255) or multiple values separated by spaces
+     * @return Single value (0-255) or multiple values separated by spaces, Attribute conditional on `type` being equal to `protocol`
      * 
      */
     public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
-     * @return Source data IPv4 prefix list ID
+     * @return Source data IPv4 prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
      * 
      */
     public Optional<String> sourceDataIpv4PrefixListId() {
@@ -200,21 +200,21 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.sourceDataIpv4PrefixListVersion);
     }
     /**
-     * @return Source IP prefix
+     * @return Source IP prefix, Attribute conditional on `type` being equal to `sourceIp`
      * 
      */
     public Optional<String> sourceIp() {
         return Optional.ofNullable(this.sourceIp);
     }
     /**
-     * @return Source ports. Single value (0-65535) or ranges separated by spaces.
+     * @return Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
      * 
      */
     public Optional<String> sourcePorts() {
         return Optional.ofNullable(this.sourcePorts);
     }
     /**
-     * @return TCP parameters
+     * @return TCP parameters, Attribute conditional on `type` being equal to `tcp`
      *   - Choices: `syn`
      * 
      */

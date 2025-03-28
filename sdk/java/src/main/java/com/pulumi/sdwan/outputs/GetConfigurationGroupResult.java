@@ -6,7 +6,6 @@ package com.pulumi.sdwan.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.sdwan.outputs.GetConfigurationGroupDevice;
-import com.pulumi.sdwan.outputs.GetConfigurationGroupFeatureProfile;
 import com.pulumi.sdwan.outputs.GetConfigurationGroupTopologyDevice;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,10 +25,10 @@ public final class GetConfigurationGroupResult {
      */
     private List<GetConfigurationGroupDevice> devices;
     /**
-     * @return List of feature profiles
+     * @return List of feature profile IDs
      * 
      */
-    private List<GetConfigurationGroupFeatureProfile> featureProfiles;
+    private List<String> featureProfileIds;
     /**
      * @return List of all associated feature versions
      * 
@@ -77,11 +76,11 @@ public final class GetConfigurationGroupResult {
         return this.devices;
     }
     /**
-     * @return List of feature profiles
+     * @return List of feature profile IDs
      * 
      */
-    public List<GetConfigurationGroupFeatureProfile> featureProfiles() {
-        return this.featureProfiles;
+    public List<String> featureProfileIds() {
+        return this.featureProfileIds;
     }
     /**
      * @return List of all associated feature versions
@@ -137,7 +136,7 @@ public final class GetConfigurationGroupResult {
     public static final class Builder {
         private String description;
         private List<GetConfigurationGroupDevice> devices;
-        private List<GetConfigurationGroupFeatureProfile> featureProfiles;
+        private List<String> featureProfileIds;
         private List<String> featureVersions;
         private String id;
         private String name;
@@ -149,7 +148,7 @@ public final class GetConfigurationGroupResult {
     	      Objects.requireNonNull(defaults);
     	      this.description = defaults.description;
     	      this.devices = defaults.devices;
-    	      this.featureProfiles = defaults.featureProfiles;
+    	      this.featureProfileIds = defaults.featureProfileIds;
     	      this.featureVersions = defaults.featureVersions;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
@@ -178,15 +177,15 @@ public final class GetConfigurationGroupResult {
             return devices(List.of(devices));
         }
         @CustomType.Setter
-        public Builder featureProfiles(List<GetConfigurationGroupFeatureProfile> featureProfiles) {
-            if (featureProfiles == null) {
-              throw new MissingRequiredPropertyException("GetConfigurationGroupResult", "featureProfiles");
+        public Builder featureProfileIds(List<String> featureProfileIds) {
+            if (featureProfileIds == null) {
+              throw new MissingRequiredPropertyException("GetConfigurationGroupResult", "featureProfileIds");
             }
-            this.featureProfiles = featureProfiles;
+            this.featureProfileIds = featureProfileIds;
             return this;
         }
-        public Builder featureProfiles(GetConfigurationGroupFeatureProfile... featureProfiles) {
-            return featureProfiles(List.of(featureProfiles));
+        public Builder featureProfileIds(String... featureProfileIds) {
+            return featureProfileIds(List.of(featureProfileIds));
         }
         @CustomType.Setter
         public Builder featureVersions(List<String> featureVersions) {
@@ -246,7 +245,7 @@ public final class GetConfigurationGroupResult {
             final var _resultValue = new GetConfigurationGroupResult();
             _resultValue.description = description;
             _resultValue.devices = devices;
-            _resultValue.featureProfiles = featureProfiles;
+            _resultValue.featureProfileIds = featureProfileIds;
             _resultValue.featureVersions = featureVersions;
             _resultValue.id = id;
             _resultValue.name = name;

@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TrafficDataPolicyDefinitionSequenceMatchEntry {
     /**
-     * @return Application list ID
+     * @return Application list ID, Attribute conditional on `type` being equal to `appList`
      * 
      */
     private @Nullable String applicationListId;
@@ -24,7 +24,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntry {
      */
     private @Nullable Integer applicationListVersion;
     /**
-     * @return Destination Data Prefix list ID
+     * @return Destination Data Prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
      * 
      */
     private @Nullable String destinationDataPrefixListId;
@@ -34,29 +34,29 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntry {
      */
     private @Nullable Integer destinationDataPrefixListVersion;
     /**
-     * @return Destination IP
+     * @return Destination IP, Attribute conditional on `type` being equal to `destinationIp`
      * 
      */
     private @Nullable String destinationIp;
     /**
-     * @return Destination port, 0-65535 (Single value, range or multiple values separated by spaces)
+     * @return Destination port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `type` being equal to `destinationPort`
      * 
      */
     private @Nullable String destinationPort;
     /**
-     * @return Destination region
+     * @return Destination region, Attribute conditional on `type` being equal to `destinationRegion`
      *   - Choices: `primary-region`, `secondary-region`, `other-region`
      * 
      */
     private @Nullable String destinationRegion;
     /**
-     * @return DNS request or response
+     * @return DNS request or response, Attribute conditional on `type` being equal to `dns`
      *   - Choices: `request`, `response`
      * 
      */
     private @Nullable String dns;
     /**
-     * @return DNS Application list ID
+     * @return DNS Application list ID, Attribute conditional on `type` being equal to `dnsAppList`
      * 
      */
     private @Nullable String dnsApplicationListId;
@@ -66,35 +66,35 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntry {
      */
     private @Nullable Integer dnsApplicationListVersion;
     /**
-     * @return DSCP value
+     * @return DSCP value, Attribute conditional on `type` being equal to `dscp`
      *   - Range: `0`-`63`
      * 
      */
     private @Nullable Integer dscp;
     /**
-     * @return ICMP Message
+     * @return ICMP Message, Attribute conditional on `type` being equal to `icmpMessage`
      * 
      */
     private @Nullable String icmpMessage;
     /**
-     * @return Packet length
+     * @return Packet length, Attribute conditional on `type` being equal to `packetLength`
      *   - Range: `0`-`65535`
      * 
      */
     private @Nullable Integer packetLength;
     /**
-     * @return PLP
+     * @return PLP, Attribute conditional on `type` being equal to `plp`
      *   - Choices: `low`, `high`
      * 
      */
     private @Nullable String plp;
     /**
-     * @return IP Protocol, 0-255 (Single value or multiple values separated by spaces)
+     * @return IP Protocol, 0-255 (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `protocol`
      * 
      */
     private @Nullable String protocol;
     /**
-     * @return Source Data Prefix list ID
+     * @return Source Data Prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
      * 
      */
     private @Nullable String sourceDataPrefixListId;
@@ -104,23 +104,23 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntry {
      */
     private @Nullable Integer sourceDataPrefixListVersion;
     /**
-     * @return Source IP
+     * @return Source IP, Attribute conditional on `type` being equal to `sourceIp`
      * 
      */
     private @Nullable String sourceIp;
     /**
-     * @return Source port, 0-65535 (Single value, range or multiple values separated by spaces)
+     * @return Source port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `type` being equal to `sourcePort`
      * 
      */
     private @Nullable String sourcePort;
     /**
-     * @return TCP flags
+     * @return TCP flags, Attribute conditional on `type` being equal to `tcp`
      *   - Choices: `syn`
      * 
      */
     private @Nullable String tcp;
     /**
-     * @return Traffic to
+     * @return Traffic to, Attribute conditional on `type` being equal to `trafficTo`
      *   - Choices: `access`, `core`, `service`
      * 
      */
@@ -134,7 +134,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntry {
 
     private TrafficDataPolicyDefinitionSequenceMatchEntry() {}
     /**
-     * @return Application list ID
+     * @return Application list ID, Attribute conditional on `type` being equal to `appList`
      * 
      */
     public Optional<String> applicationListId() {
@@ -148,7 +148,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.applicationListVersion);
     }
     /**
-     * @return Destination Data Prefix list ID
+     * @return Destination Data Prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
      * 
      */
     public Optional<String> destinationDataPrefixListId() {
@@ -162,21 +162,21 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.destinationDataPrefixListVersion);
     }
     /**
-     * @return Destination IP
+     * @return Destination IP, Attribute conditional on `type` being equal to `destinationIp`
      * 
      */
     public Optional<String> destinationIp() {
         return Optional.ofNullable(this.destinationIp);
     }
     /**
-     * @return Destination port, 0-65535 (Single value, range or multiple values separated by spaces)
+     * @return Destination port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `type` being equal to `destinationPort`
      * 
      */
     public Optional<String> destinationPort() {
         return Optional.ofNullable(this.destinationPort);
     }
     /**
-     * @return Destination region
+     * @return Destination region, Attribute conditional on `type` being equal to `destinationRegion`
      *   - Choices: `primary-region`, `secondary-region`, `other-region`
      * 
      */
@@ -184,7 +184,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.destinationRegion);
     }
     /**
-     * @return DNS request or response
+     * @return DNS request or response, Attribute conditional on `type` being equal to `dns`
      *   - Choices: `request`, `response`
      * 
      */
@@ -192,7 +192,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.dns);
     }
     /**
-     * @return DNS Application list ID
+     * @return DNS Application list ID, Attribute conditional on `type` being equal to `dnsAppList`
      * 
      */
     public Optional<String> dnsApplicationListId() {
@@ -206,7 +206,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.dnsApplicationListVersion);
     }
     /**
-     * @return DSCP value
+     * @return DSCP value, Attribute conditional on `type` being equal to `dscp`
      *   - Range: `0`-`63`
      * 
      */
@@ -214,14 +214,14 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.dscp);
     }
     /**
-     * @return ICMP Message
+     * @return ICMP Message, Attribute conditional on `type` being equal to `icmpMessage`
      * 
      */
     public Optional<String> icmpMessage() {
         return Optional.ofNullable(this.icmpMessage);
     }
     /**
-     * @return Packet length
+     * @return Packet length, Attribute conditional on `type` being equal to `packetLength`
      *   - Range: `0`-`65535`
      * 
      */
@@ -229,7 +229,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.packetLength);
     }
     /**
-     * @return PLP
+     * @return PLP, Attribute conditional on `type` being equal to `plp`
      *   - Choices: `low`, `high`
      * 
      */
@@ -237,14 +237,14 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.plp);
     }
     /**
-     * @return IP Protocol, 0-255 (Single value or multiple values separated by spaces)
+     * @return IP Protocol, 0-255 (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `protocol`
      * 
      */
     public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
-     * @return Source Data Prefix list ID
+     * @return Source Data Prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
      * 
      */
     public Optional<String> sourceDataPrefixListId() {
@@ -258,21 +258,21 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.sourceDataPrefixListVersion);
     }
     /**
-     * @return Source IP
+     * @return Source IP, Attribute conditional on `type` being equal to `sourceIp`
      * 
      */
     public Optional<String> sourceIp() {
         return Optional.ofNullable(this.sourceIp);
     }
     /**
-     * @return Source port, 0-65535 (Single value, range or multiple values separated by spaces)
+     * @return Source port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `type` being equal to `sourcePort`
      * 
      */
     public Optional<String> sourcePort() {
         return Optional.ofNullable(this.sourcePort);
     }
     /**
-     * @return TCP flags
+     * @return TCP flags, Attribute conditional on `type` being equal to `tcp`
      *   - Choices: `syn`
      * 
      */
@@ -280,7 +280,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.tcp);
     }
     /**
-     * @return Traffic to
+     * @return Traffic to, Attribute conditional on `type` being equal to `trafficTo`
      *   - Choices: `access`, `core`, `service`
      * 
      */

@@ -26,7 +26,7 @@ class GetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureResult:
     """
     A collection of values returned by getTransportWanVpnFeatureAssociateRoutingOspfv3Ipv6Feature.
     """
-    def __init__(__self__, feature_profile_id=None, id=None, transport_routing_ospfv3_ipv6_feature_id=None, transport_wan_vpn_feature_id=None):
+    def __init__(__self__, feature_profile_id=None, id=None, transport_routing_ospfv3_ipv6_feature_id=None, transport_wan_vpn_feature_id=None, version=None):
         if feature_profile_id and not isinstance(feature_profile_id, str):
             raise TypeError("Expected argument 'feature_profile_id' to be a str")
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
@@ -39,6 +39,9 @@ class GetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureResult:
         if transport_wan_vpn_feature_id and not isinstance(transport_wan_vpn_feature_id, str):
             raise TypeError("Expected argument 'transport_wan_vpn_feature_id' to be a str")
         pulumi.set(__self__, "transport_wan_vpn_feature_id", transport_wan_vpn_feature_id)
+        if version and not isinstance(version, int):
+            raise TypeError("Expected argument 'version' to be a int")
+        pulumi.set(__self__, "version", version)
 
     @property
     @pulumi.getter(name="featureProfileId")
@@ -72,6 +75,14 @@ class GetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureResult:
         """
         return pulumi.get(self, "transport_wan_vpn_feature_id")
 
+    @property
+    @pulumi.getter
+    def version(self) -> int:
+        """
+        The version of the object
+        """
+        return pulumi.get(self, "version")
+
 
 class AwaitableGetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureResult(GetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureResult):
     # pylint: disable=using-constant-test
@@ -82,7 +93,8 @@ class AwaitableGetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureResult(
             feature_profile_id=self.feature_profile_id,
             id=self.id,
             transport_routing_ospfv3_ipv6_feature_id=self.transport_routing_ospfv3_ipv6_feature_id,
-            transport_wan_vpn_feature_id=self.transport_wan_vpn_feature_id)
+            transport_wan_vpn_feature_id=self.transport_wan_vpn_feature_id,
+            version=self.version)
 
 
 def get_transport_wan_vpn_feature_associate_routing_ospfv3_ipv6_feature(feature_profile_id: Optional[str] = None,
@@ -119,7 +131,8 @@ def get_transport_wan_vpn_feature_associate_routing_ospfv3_ipv6_feature(feature_
         feature_profile_id=pulumi.get(__ret__, 'feature_profile_id'),
         id=pulumi.get(__ret__, 'id'),
         transport_routing_ospfv3_ipv6_feature_id=pulumi.get(__ret__, 'transport_routing_ospfv3_ipv6_feature_id'),
-        transport_wan_vpn_feature_id=pulumi.get(__ret__, 'transport_wan_vpn_feature_id'))
+        transport_wan_vpn_feature_id=pulumi.get(__ret__, 'transport_wan_vpn_feature_id'),
+        version=pulumi.get(__ret__, 'version'))
 def get_transport_wan_vpn_feature_associate_routing_ospfv3_ipv6_feature_output(feature_profile_id: Optional[pulumi.Input[str]] = None,
                                                                                id: Optional[pulumi.Input[str]] = None,
                                                                                transport_wan_vpn_feature_id: Optional[pulumi.Input[str]] = None,
@@ -153,4 +166,5 @@ def get_transport_wan_vpn_feature_associate_routing_ospfv3_ipv6_feature_output(f
         feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),
         id=pulumi.get(__response__, 'id'),
         transport_routing_ospfv3_ipv6_feature_id=pulumi.get(__response__, 'transport_routing_ospfv3_ipv6_feature_id'),
-        transport_wan_vpn_feature_id=pulumi.get(__response__, 'transport_wan_vpn_feature_id')))
+        transport_wan_vpn_feature_id=pulumi.get(__response__, 'transport_wan_vpn_feature_id'),
+        version=pulumi.get(__response__, 'version')))

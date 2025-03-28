@@ -118,6 +118,10 @@ namespace Pulumi.Sdwan
     public sealed class GetIntrusionPreventionPolicyDefinitionResult
     {
         /// <summary>
+        /// Custom signature
+        /// </summary>
+        public readonly bool CustomSignature;
+        /// <summary>
         /// The description of the policy definition
         /// </summary>
         public readonly string Description;
@@ -141,6 +145,7 @@ namespace Pulumi.Sdwan
         /// Log level
         /// </summary>
         public readonly string LogLevel;
+        public readonly ImmutableArray<Outputs.GetIntrusionPreventionPolicyDefinitionLoggingResult> Loggings;
         /// <summary>
         /// The policy mode
         /// </summary>
@@ -164,6 +169,8 @@ namespace Pulumi.Sdwan
 
         [OutputConstructor]
         private GetIntrusionPreventionPolicyDefinitionResult(
+            bool customSignature,
+
             string description,
 
             string id,
@@ -176,6 +183,8 @@ namespace Pulumi.Sdwan
 
             string logLevel,
 
+            ImmutableArray<Outputs.GetIntrusionPreventionPolicyDefinitionLoggingResult> loggings,
+
             string mode,
 
             string name,
@@ -186,12 +195,14 @@ namespace Pulumi.Sdwan
 
             int version)
         {
+            CustomSignature = customSignature;
             Description = description;
             Id = id;
             InspectionMode = inspectionMode;
             IpsSignatureListId = ipsSignatureListId;
             IpsSignatureListVersion = ipsSignatureListVersion;
             LogLevel = logLevel;
+            Loggings = loggings;
             Mode = mode;
             Name = name;
             SignatureSet = signatureSet;

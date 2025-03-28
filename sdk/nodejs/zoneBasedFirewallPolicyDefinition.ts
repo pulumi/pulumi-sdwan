@@ -43,7 +43,10 @@ export class ZoneBasedFirewallPolicyDefinition extends pulumi.CustomResource {
         return obj['__pulumiType'] === ZoneBasedFirewallPolicyDefinition.__pulumiType;
     }
 
-    public readonly applyZonePairs!: pulumi.Output<outputs.ZoneBasedFirewallPolicyDefinitionApplyZonePair[]>;
+    /**
+     * , Attribute conditional on `mode` being equal to `security`
+     */
+    public readonly applyZonePairs!: pulumi.Output<outputs.ZoneBasedFirewallPolicyDefinitionApplyZonePair[] | undefined>;
     /**
      * Default Action - Choices: `pass`, `drop`
      */
@@ -88,9 +91,6 @@ export class ZoneBasedFirewallPolicyDefinition extends pulumi.CustomResource {
             resourceInputs["version"] = state ? state.version : undefined;
         } else {
             const args = argsOrState as ZoneBasedFirewallPolicyDefinitionArgs | undefined;
-            if ((!args || args.applyZonePairs === undefined) && !opts.urn) {
-                throw new Error("Missing required property 'applyZonePairs'");
-            }
             if ((!args || args.defaultAction === undefined) && !opts.urn) {
                 throw new Error("Missing required property 'defaultAction'");
             }
@@ -120,6 +120,9 @@ export class ZoneBasedFirewallPolicyDefinition extends pulumi.CustomResource {
  * Input properties used for looking up and filtering ZoneBasedFirewallPolicyDefinition resources.
  */
 export interface ZoneBasedFirewallPolicyDefinitionState {
+    /**
+     * , Attribute conditional on `mode` being equal to `security`
+     */
     applyZonePairs?: pulumi.Input<pulumi.Input<inputs.ZoneBasedFirewallPolicyDefinitionApplyZonePair>[]>;
     /**
      * Default Action - Choices: `pass`, `drop`
@@ -148,7 +151,10 @@ export interface ZoneBasedFirewallPolicyDefinitionState {
  * The set of arguments for constructing a ZoneBasedFirewallPolicyDefinition resource.
  */
 export interface ZoneBasedFirewallPolicyDefinitionArgs {
-    applyZonePairs: pulumi.Input<pulumi.Input<inputs.ZoneBasedFirewallPolicyDefinitionApplyZonePair>[]>;
+    /**
+     * , Attribute conditional on `mode` being equal to `security`
+     */
+    applyZonePairs?: pulumi.Input<pulumi.Input<inputs.ZoneBasedFirewallPolicyDefinitionApplyZonePair>[]>;
     /**
      * Default Action - Choices: `pass`, `drop`
      */

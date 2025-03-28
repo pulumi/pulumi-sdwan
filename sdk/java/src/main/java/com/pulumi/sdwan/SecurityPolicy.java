@@ -12,6 +12,7 @@ import com.pulumi.sdwan.Utilities;
 import com.pulumi.sdwan.inputs.SecurityPolicyState;
 import com.pulumi.sdwan.outputs.SecurityPolicyDefinition;
 import com.pulumi.sdwan.outputs.SecurityPolicyLogging;
+import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -178,6 +179,20 @@ public class SecurityPolicy extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.highSpeedLoggingServerPort);
     }
     /**
+     * High Speed Logging Source Interface
+     * 
+     */
+    @Export(name="highSpeedLoggingServerSourceInterface", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> highSpeedLoggingServerSourceInterface;
+
+    /**
+     * @return High Speed Logging Source Interface
+     * 
+     */
+    public Output<Optional<String>> highSpeedLoggingServerSourceInterface() {
+        return Codegen.optional(this.highSpeedLoggingServerSourceInterface);
+    }
+    /**
      * High Speed Logging VPN
      * 
      */
@@ -190,6 +205,20 @@ public class SecurityPolicy extends com.pulumi.resources.CustomResource {
      */
     public Output<Optional<String>> highSpeedLoggingVpn() {
         return Codegen.optional(this.highSpeedLoggingVpn);
+    }
+    /**
+     * ICMP Unreachable Allow
+     * 
+     */
+    @Export(name="imcpUnreachableAllow", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> imcpUnreachableAllow;
+
+    /**
+     * @return ICMP Unreachable Allow
+     * 
+     */
+    public Output<Optional<Boolean>> imcpUnreachableAllow() {
+        return Codegen.optional(this.imcpUnreachableAllow);
     }
     @Export(name="loggings", refs={List.class,SecurityPolicyLogging.class}, tree="[0,1]")
     private Output</* @Nullable */ List<SecurityPolicyLogging>> loggings;
@@ -210,6 +239,48 @@ public class SecurityPolicy extends com.pulumi.resources.CustomResource {
      */
     public Output<Optional<String>> matchStatisticsPerFilter() {
         return Codegen.optional(this.matchStatisticsPerFilter);
+    }
+    /**
+     * Max Incomplete ICMP Limit
+     * 
+     */
+    @Export(name="maxIncompleteIcmpLimit", refs={Integer.class}, tree="[0]")
+    private Output</* @Nullable */ Integer> maxIncompleteIcmpLimit;
+
+    /**
+     * @return Max Incomplete ICMP Limit
+     * 
+     */
+    public Output<Optional<Integer>> maxIncompleteIcmpLimit() {
+        return Codegen.optional(this.maxIncompleteIcmpLimit);
+    }
+    /**
+     * Max Incomplete TCP Limit
+     * 
+     */
+    @Export(name="maxIncompleteTcpLimit", refs={Integer.class}, tree="[0]")
+    private Output</* @Nullable */ Integer> maxIncompleteTcpLimit;
+
+    /**
+     * @return Max Incomplete TCP Limit
+     * 
+     */
+    public Output<Optional<Integer>> maxIncompleteTcpLimit() {
+        return Codegen.optional(this.maxIncompleteTcpLimit);
+    }
+    /**
+     * Max Incomplete UDP Limit
+     * 
+     */
+    @Export(name="maxIncompleteUdpLimit", refs={Integer.class}, tree="[0]")
+    private Output</* @Nullable */ Integer> maxIncompleteUdpLimit;
+
+    /**
+     * @return Max Incomplete UDP Limit
+     * 
+     */
+    public Output<Optional<Integer>> maxIncompleteUdpLimit() {
+        return Codegen.optional(this.maxIncompleteUdpLimit);
     }
     /**
      * The policy mode - Choices: `security`, `unified` - Default value: `security`
@@ -240,6 +311,20 @@ public class SecurityPolicy extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
+     * Session Reclassify Allow
+     * 
+     */
+    @Export(name="sessionReclassifyAllow", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> sessionReclassifyAllow;
+
+    /**
+     * @return Session Reclassify Allow
+     * 
+     */
+    public Output<Optional<Boolean>> sessionReclassifyAllow() {
+        return Codegen.optional(this.sessionReclassifyAllow);
+    }
+    /**
      * TCP SYN Flood Limit, value from 1 to 4294967295
      * 
      */
@@ -252,6 +337,20 @@ public class SecurityPolicy extends com.pulumi.resources.CustomResource {
      */
     public Output<Optional<String>> tcpSynFloodLimit() {
         return Codegen.optional(this.tcpSynFloodLimit);
+    }
+    /**
+     * Unified Logging
+     * 
+     */
+    @Export(name="unifiedLogging", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> unifiedLogging;
+
+    /**
+     * @return Unified Logging
+     * 
+     */
+    public Output<Optional<Boolean>> unifiedLogging() {
+        return Codegen.optional(this.unifiedLogging);
     }
     /**
      * The use case of the security policy - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`,

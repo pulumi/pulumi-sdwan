@@ -5,6 +5,7 @@ package com.pulumi.sdwan.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
@@ -35,6 +36,11 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeatur
      * 
      */
     private String transportWanVpnInterfaceIpsecFeatureId;
+    /**
+     * @return The version of the object
+     * 
+     */
+    private Integer version;
 
     private GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeatureResult() {}
     /**
@@ -72,6 +78,13 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeatur
     public String transportWanVpnInterfaceIpsecFeatureId() {
         return this.transportWanVpnInterfaceIpsecFeatureId;
     }
+    /**
+     * @return The version of the object
+     * 
+     */
+    public Integer version() {
+        return this.version;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -87,6 +100,7 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeatur
         private String transportTrackerFeatureId;
         private String transportWanVpnFeatureId;
         private String transportWanVpnInterfaceIpsecFeatureId;
+        private Integer version;
         public Builder() {}
         public Builder(GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeatureResult defaults) {
     	      Objects.requireNonNull(defaults);
@@ -95,6 +109,7 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeatur
     	      this.transportTrackerFeatureId = defaults.transportTrackerFeatureId;
     	      this.transportWanVpnFeatureId = defaults.transportWanVpnFeatureId;
     	      this.transportWanVpnInterfaceIpsecFeatureId = defaults.transportWanVpnInterfaceIpsecFeatureId;
+    	      this.version = defaults.version;
         }
 
         @CustomType.Setter
@@ -137,6 +152,14 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeatur
             this.transportWanVpnInterfaceIpsecFeatureId = transportWanVpnInterfaceIpsecFeatureId;
             return this;
         }
+        @CustomType.Setter
+        public Builder version(Integer version) {
+            if (version == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeatureResult", "version");
+            }
+            this.version = version;
+            return this;
+        }
         public GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeatureResult build() {
             final var _resultValue = new GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeatureResult();
             _resultValue.featureProfileId = featureProfileId;
@@ -144,6 +167,7 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeatur
             _resultValue.transportTrackerFeatureId = transportTrackerFeatureId;
             _resultValue.transportWanVpnFeatureId = transportWanVpnFeatureId;
             _resultValue.transportWanVpnInterfaceIpsecFeatureId = transportWanVpnInterfaceIpsecFeatureId;
+            _resultValue.version = version;
             return _resultValue;
         }
     }

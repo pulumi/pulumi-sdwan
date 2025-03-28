@@ -15,6 +15,7 @@ import com.pulumi.sdwan.outputs.ZoneBasedFirewallPolicyDefinitionRule;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -80,11 +81,19 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="sdwan:index/zoneBasedFirewallPolicyDefinition:ZoneBasedFirewallPolicyDefinition")
 public class ZoneBasedFirewallPolicyDefinition extends com.pulumi.resources.CustomResource {
+    /**
+     * , Attribute conditional on `mode` being equal to `security`
+     * 
+     */
     @Export(name="applyZonePairs", refs={List.class,ZoneBasedFirewallPolicyDefinitionApplyZonePair.class}, tree="[0,1]")
-    private Output<List<ZoneBasedFirewallPolicyDefinitionApplyZonePair>> applyZonePairs;
+    private Output</* @Nullable */ List<ZoneBasedFirewallPolicyDefinitionApplyZonePair>> applyZonePairs;
 
-    public Output<List<ZoneBasedFirewallPolicyDefinitionApplyZonePair>> applyZonePairs() {
-        return this.applyZonePairs;
+    /**
+     * @return , Attribute conditional on `mode` being equal to `security`
+     * 
+     */
+    public Output<Optional<List<ZoneBasedFirewallPolicyDefinitionApplyZonePair>>> applyZonePairs() {
+        return Codegen.optional(this.applyZonePairs);
     }
     /**
      * Default Action - Choices: `pass`, `drop`

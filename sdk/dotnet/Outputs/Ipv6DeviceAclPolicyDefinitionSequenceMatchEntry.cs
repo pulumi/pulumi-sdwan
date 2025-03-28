@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class Ipv6DeviceAclPolicyDefinitionSequenceMatchEntry
     {
         /// <summary>
-        /// Destination data IPv6 prefix list ID
+        /// Destination data IPv6 prefix list ID, Attribute conditional on `type` being equal to `destinationDataIpv6PrefixList`
         /// </summary>
         public readonly string? DestinationDataIpv6PrefixListId;
         /// <summary>
@@ -22,16 +22,16 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? DestinationDataIpv6PrefixListVersion;
         /// <summary>
-        /// Destination IP prefix
+        /// Destination IP prefix, Attribute conditional on `type` being equal to `destinationIpv6`
         /// </summary>
         public readonly string? DestinationIp;
         /// <summary>
-        /// Destination port, only `22` and `161` supported
+        /// Destination port, only `22` and `161` supported, Attribute conditional on `type` being equal to `destinationPort`
         ///   - Range: `0`-`65535`
         /// </summary>
         public readonly int? DestinationPort;
         /// <summary>
-        /// Source data IPv6 prefix list ID
+        /// Source data IPv6 prefix list ID, Attribute conditional on `type` being equal to `sourceDataIpv6PrefixList`
         /// </summary>
         public readonly string? SourceDataIpv6PrefixListId;
         /// <summary>
@@ -39,11 +39,11 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? SourceDataIpv6PrefixListVersion;
         /// <summary>
-        /// Source IP prefix
+        /// Source IP prefix, Attribute conditional on `type` being equal to `sourceIpv6`
         /// </summary>
         public readonly string? SourceIp;
         /// <summary>
-        /// Source ports. Single value (0-65535) or ranges separated by spaces.
+        /// Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
         /// </summary>
         public readonly string? SourcePorts;
         /// <summary>

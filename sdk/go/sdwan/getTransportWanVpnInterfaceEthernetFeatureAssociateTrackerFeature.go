@@ -75,6 +75,8 @@ type LookupTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeatureResult 
 	TransportWanVpnFeatureId string `pulumi:"transportWanVpnFeatureId"`
 	// Transport WAN VPN Interface Ethernet Feature ID
 	TransportWanVpnInterfaceEthernetFeatureId string `pulumi:"transportWanVpnInterfaceEthernetFeatureId"`
+	// The version of the object
+	Version int `pulumi:"version"`
 }
 
 func LookupTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeatureOutput(ctx *pulumi.Context, args LookupTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeatureResultOutput {
@@ -148,6 +150,13 @@ func (o LookupTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeatureResu
 	return o.ApplyT(func(v LookupTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeatureResult) string {
 		return v.TransportWanVpnInterfaceEthernetFeatureId
 	}).(pulumi.StringOutput)
+}
+
+// The version of the object
+func (o LookupTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeatureResultOutput) Version() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeatureResult) int {
+		return v.Version
+	}).(pulumi.IntOutput)
 }
 
 func init() {

@@ -14,47 +14,6 @@ import (
 
 // This resource can manage a URL Filtering Policy Definition .
 //
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := sdwan.NewUrlFilteringPolicyDefinition(ctx, "example", &sdwan.UrlFilteringPolicyDefinitionArgs{
-//				Name:        pulumi.String("Example"),
-//				Description: pulumi.String("My description"),
-//				Mode:        pulumi.String("security"),
-//				Alerts: pulumi.StringArray{
-//					pulumi.String("blacklist"),
-//				},
-//				WebCategories: pulumi.StringArray{
-//					pulumi.String("alcohol-and-tobacco"),
-//				},
-//				WebCategoriesAction: pulumi.String("allow"),
-//				WebReputation:       pulumi.String("moderate-risk"),
-//				TargetVpns: pulumi.StringArray{
-//					pulumi.String("1"),
-//				},
-//				BlockPageAction:   pulumi.String("text"),
-//				BlockPageContents: pulumi.String("Access to the requested page has been denied. Please contact your Network Administrator"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
-//
 // ## Import
 //
 // ```sh
@@ -78,7 +37,8 @@ type UrlFilteringPolicyDefinition struct {
 	// Block URL list version
 	BlockUrlListVersion pulumi.IntPtrOutput `pulumi:"blockUrlListVersion"`
 	// The description of the policy definition.
-	Description pulumi.StringOutput `pulumi:"description"`
+	Description pulumi.StringOutput                            `pulumi:"description"`
+	Loggings    UrlFilteringPolicyDefinitionLoggingArrayOutput `pulumi:"loggings"`
 	// The policy mode - Choices: `security`, `unified`
 	Mode pulumi.StringPtrOutput `pulumi:"mode"`
 	// The name of the policy definition.
@@ -144,7 +104,8 @@ type urlFilteringPolicyDefinitionState struct {
 	// Block URL list version
 	BlockUrlListVersion *int `pulumi:"blockUrlListVersion"`
 	// The description of the policy definition.
-	Description *string `pulumi:"description"`
+	Description *string                               `pulumi:"description"`
+	Loggings    []UrlFilteringPolicyDefinitionLogging `pulumi:"loggings"`
 	// The policy mode - Choices: `security`, `unified`
 	Mode *string `pulumi:"mode"`
 	// The name of the policy definition.
@@ -179,6 +140,7 @@ type UrlFilteringPolicyDefinitionState struct {
 	BlockUrlListVersion pulumi.IntPtrInput
 	// The description of the policy definition.
 	Description pulumi.StringPtrInput
+	Loggings    UrlFilteringPolicyDefinitionLoggingArrayInput
 	// The policy mode - Choices: `security`, `unified`
 	Mode pulumi.StringPtrInput
 	// The name of the policy definition.
@@ -216,7 +178,8 @@ type urlFilteringPolicyDefinitionArgs struct {
 	// Block URL list version
 	BlockUrlListVersion *int `pulumi:"blockUrlListVersion"`
 	// The description of the policy definition.
-	Description string `pulumi:"description"`
+	Description string                                `pulumi:"description"`
+	Loggings    []UrlFilteringPolicyDefinitionLogging `pulumi:"loggings"`
 	// The policy mode - Choices: `security`, `unified`
 	Mode *string `pulumi:"mode"`
 	// The name of the policy definition.
@@ -250,6 +213,7 @@ type UrlFilteringPolicyDefinitionArgs struct {
 	BlockUrlListVersion pulumi.IntPtrInput
 	// The description of the policy definition.
 	Description pulumi.StringInput
+	Loggings    UrlFilteringPolicyDefinitionLoggingArrayInput
 	// The policy mode - Choices: `security`, `unified`
 	Mode pulumi.StringPtrInput
 	// The name of the policy definition.
@@ -390,6 +354,12 @@ func (o UrlFilteringPolicyDefinitionOutput) BlockUrlListVersion() pulumi.IntPtrO
 // The description of the policy definition.
 func (o UrlFilteringPolicyDefinitionOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v *UrlFilteringPolicyDefinition) pulumi.StringOutput { return v.Description }).(pulumi.StringOutput)
+}
+
+func (o UrlFilteringPolicyDefinitionOutput) Loggings() UrlFilteringPolicyDefinitionLoggingArrayOutput {
+	return o.ApplyT(func(v *UrlFilteringPolicyDefinition) UrlFilteringPolicyDefinitionLoggingArrayOutput {
+		return v.Loggings
+	}).(UrlFilteringPolicyDefinitionLoggingArrayOutput)
 }
 
 // The policy mode - Choices: `security`, `unified`

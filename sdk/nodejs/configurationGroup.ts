@@ -20,9 +20,7 @@ import * as utilities from "./utilities";
  *     name: "CG_1",
  *     description: "My config group 1",
  *     solution: "sdwan",
- *     featureProfiles: [{
- *         id: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
- *     }],
+ *     featureProfileIds: ["f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"],
  *     devices: [{
  *         id: "C8K-40C0CCFD-9EA8-2B2E-E73B-32C5924EC79B",
  *         variables: [{
@@ -76,9 +74,9 @@ export class ConfigurationGroup extends pulumi.CustomResource {
      */
     public readonly devices!: pulumi.Output<outputs.ConfigurationGroupDevice[] | undefined>;
     /**
-     * List of feature profiles
+     * List of feature profile IDs
      */
-    public readonly featureProfiles!: pulumi.Output<outputs.ConfigurationGroupFeatureProfile[] | undefined>;
+    public readonly featureProfileIds!: pulumi.Output<string[] | undefined>;
     /**
      * List of all associated feature versions
      */
@@ -115,7 +113,7 @@ export class ConfigurationGroup extends pulumi.CustomResource {
             const state = argsOrState as ConfigurationGroupState | undefined;
             resourceInputs["description"] = state ? state.description : undefined;
             resourceInputs["devices"] = state ? state.devices : undefined;
-            resourceInputs["featureProfiles"] = state ? state.featureProfiles : undefined;
+            resourceInputs["featureProfileIds"] = state ? state.featureProfileIds : undefined;
             resourceInputs["featureVersions"] = state ? state.featureVersions : undefined;
             resourceInputs["name"] = state ? state.name : undefined;
             resourceInputs["solution"] = state ? state.solution : undefined;
@@ -131,7 +129,7 @@ export class ConfigurationGroup extends pulumi.CustomResource {
             }
             resourceInputs["description"] = args ? args.description : undefined;
             resourceInputs["devices"] = args ? args.devices : undefined;
-            resourceInputs["featureProfiles"] = args ? args.featureProfiles : undefined;
+            resourceInputs["featureProfileIds"] = args ? args.featureProfileIds : undefined;
             resourceInputs["featureVersions"] = args ? args.featureVersions : undefined;
             resourceInputs["name"] = args ? args.name : undefined;
             resourceInputs["solution"] = args ? args.solution : undefined;
@@ -156,9 +154,9 @@ export interface ConfigurationGroupState {
      */
     devices?: pulumi.Input<pulumi.Input<inputs.ConfigurationGroupDevice>[]>;
     /**
-     * List of feature profiles
+     * List of feature profile IDs
      */
-    featureProfiles?: pulumi.Input<pulumi.Input<inputs.ConfigurationGroupFeatureProfile>[]>;
+    featureProfileIds?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * List of all associated feature versions
      */
@@ -194,9 +192,9 @@ export interface ConfigurationGroupArgs {
      */
     devices?: pulumi.Input<pulumi.Input<inputs.ConfigurationGroupDevice>[]>;
     /**
-     * List of feature profiles
+     * List of feature profile IDs
      */
-    featureProfiles?: pulumi.Input<pulumi.Input<inputs.ConfigurationGroupFeatureProfile>[]>;
+    featureProfileIds?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * List of all associated feature versions
      */

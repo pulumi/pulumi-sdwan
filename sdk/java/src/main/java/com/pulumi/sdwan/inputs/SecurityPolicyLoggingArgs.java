@@ -31,6 +31,21 @@ public final class SecurityPolicyLoggingArgs extends com.pulumi.resources.Resour
     }
 
     /**
+     * External Syslog Server Source Interface
+     * 
+     */
+    @Import(name="externalSyslogServerSourceInterface")
+    private @Nullable Output<String> externalSyslogServerSourceInterface;
+
+    /**
+     * @return External Syslog Server Source Interface
+     * 
+     */
+    public Optional<Output<String>> externalSyslogServerSourceInterface() {
+        return Optional.ofNullable(this.externalSyslogServerSourceInterface);
+    }
+
+    /**
      * External Syslog Server VPN
      * 
      */
@@ -49,6 +64,7 @@ public final class SecurityPolicyLoggingArgs extends com.pulumi.resources.Resour
 
     private SecurityPolicyLoggingArgs(SecurityPolicyLoggingArgs $) {
         this.externalSyslogServerIp = $.externalSyslogServerIp;
+        this.externalSyslogServerSourceInterface = $.externalSyslogServerSourceInterface;
         this.externalSyslogServerVpn = $.externalSyslogServerVpn;
     }
 
@@ -89,6 +105,27 @@ public final class SecurityPolicyLoggingArgs extends com.pulumi.resources.Resour
          */
         public Builder externalSyslogServerIp(String externalSyslogServerIp) {
             return externalSyslogServerIp(Output.of(externalSyslogServerIp));
+        }
+
+        /**
+         * @param externalSyslogServerSourceInterface External Syslog Server Source Interface
+         * 
+         * @return builder
+         * 
+         */
+        public Builder externalSyslogServerSourceInterface(@Nullable Output<String> externalSyslogServerSourceInterface) {
+            $.externalSyslogServerSourceInterface = externalSyslogServerSourceInterface;
+            return this;
+        }
+
+        /**
+         * @param externalSyslogServerSourceInterface External Syslog Server Source Interface
+         * 
+         * @return builder
+         * 
+         */
+        public Builder externalSyslogServerSourceInterface(String externalSyslogServerSourceInterface) {
+            return externalSyslogServerSourceInterface(Output.of(externalSyslogServerSourceInterface));
         }
 
         /**

@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class RoutePolicyDefinitionSequenceMatchEntry
     {
         /// <summary>
-        /// AS path list ID
+        /// AS path list ID, Attribute conditional on `type` being equal to `asPath`
         /// </summary>
         public readonly string? AsPathListId;
         /// <summary>
@@ -22,11 +22,11 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? AsPathListVersion;
         /// <summary>
-        /// Community list IDs
+        /// Community list IDs, Attribute conditional on `type` being equal to `advancedCommunity`
         /// </summary>
         public readonly ImmutableArray<string> CommunityListIds;
         /// <summary>
-        /// Community list match flag
+        /// Community list match flag, Attribute conditional on `type` being equal to `advancedCommunity`
         ///   - Choices: `and`, `or`, `exact`
         /// </summary>
         public readonly string? CommunityListMatchFlag;
@@ -35,7 +35,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly ImmutableArray<string> CommunityListVersions;
         /// <summary>
-        /// Expanded community list ID
+        /// Expanded community list ID, Attribute conditional on `type` being equal to `expandedCommunity`
         /// </summary>
         public readonly string? ExpandedCommunityListId;
         /// <summary>
@@ -43,7 +43,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? ExpandedCommunityListVersion;
         /// <summary>
-        /// Extended community list ID
+        /// Extended community list ID, Attribute conditional on `type` being equal to `extCommunity`
         /// </summary>
         public readonly string? ExtendedCommunityListId;
         /// <summary>
@@ -51,17 +51,17 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? ExtendedCommunityListVersion;
         /// <summary>
-        /// Local preference
+        /// Local preference, Attribute conditional on `type` being equal to `localPreference`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         public readonly int? LocalPreference;
         /// <summary>
-        /// Metric
+        /// Metric, Attribute conditional on `type` being equal to `metric`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         public readonly int? Metric;
         /// <summary>
-        /// Next hop prefix list ID
+        /// Next hop prefix list ID, Attribute conditional on `type` being equal to `nextHop`
         /// </summary>
         public readonly string? NextHopPrefixListId;
         /// <summary>
@@ -69,26 +69,26 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? NextHopPrefixListVersion;
         /// <summary>
-        /// OMP tag
+        /// OMP tag, Attribute conditional on `type` being equal to `ompTag`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         public readonly int? OmpTag;
         /// <summary>
-        /// Origin
+        /// Origin, Attribute conditional on `type` being equal to `origin`
         ///   - Choices: `igp`, `egp`, `incomplete`
         /// </summary>
         public readonly string? Origin;
         /// <summary>
-        /// OSPF tag
+        /// OSPF tag, Attribute conditional on `type` being equal to `ospfTag`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         public readonly int? OspfTag;
         /// <summary>
-        /// Peer IP
+        /// Peer IP, Attribute conditional on `type` being equal to `peer`
         /// </summary>
         public readonly string? Peer;
         /// <summary>
-        /// Prefix list ID
+        /// Prefix list ID, Attribute conditional on `type` being equal to `address`
         /// </summary>
         public readonly string? PrefixListId;
         /// <summary>

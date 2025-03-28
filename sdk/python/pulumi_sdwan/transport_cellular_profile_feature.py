@@ -19,9 +19,8 @@ __all__ = ['TransportCellularProfileFeatureArgs', 'TransportCellularProfileFeatu
 @pulumi.input_type
 class TransportCellularProfileFeatureArgs:
     def __init__(__self__, *,
-                 access_point_name: pulumi.Input[str],
                  feature_profile_id: pulumi.Input[str],
-                 profile_id: pulumi.Input[int],
+                 access_point_name: Optional[pulumi.Input[str]] = None,
                  access_point_name_variable: Optional[pulumi.Input[str]] = None,
                  authentication_type: Optional[pulumi.Input[str]] = None,
                  authentication_type_variable: Optional[pulumi.Input[str]] = None,
@@ -32,6 +31,7 @@ class TransportCellularProfileFeatureArgs:
                  no_overwrite_variable: Optional[pulumi.Input[str]] = None,
                  packet_data_network_type: Optional[pulumi.Input[str]] = None,
                  packet_data_network_type_variable: Optional[pulumi.Input[str]] = None,
+                 profile_id: Optional[pulumi.Input[int]] = None,
                  profile_id_variable: Optional[pulumi.Input[str]] = None,
                  profile_password: Optional[pulumi.Input[str]] = None,
                  profile_password_variable: Optional[pulumi.Input[str]] = None,
@@ -39,9 +39,8 @@ class TransportCellularProfileFeatureArgs:
                  profile_username_variable: Optional[pulumi.Input[str]] = None):
         """
         The set of arguments for constructing a TransportCellularProfileFeature resource.
-        :param pulumi.Input[str] access_point_name: Set access point name
         :param pulumi.Input[str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[int] profile_id: Set Profile ID - Range: `1`-`16`
+        :param pulumi.Input[str] access_point_name: Set access point name
         :param pulumi.Input[str] access_point_name_variable: Variable name
         :param pulumi.Input[str] authentication_type: Set authentication type - Choices: `pap`, `chap`, `pap_chap`
         :param pulumi.Input[str] authentication_type_variable: Variable name
@@ -52,15 +51,16 @@ class TransportCellularProfileFeatureArgs:
         :param pulumi.Input[str] no_overwrite_variable: Variable name
         :param pulumi.Input[str] packet_data_network_type: Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
         :param pulumi.Input[str] packet_data_network_type_variable: Variable name
+        :param pulumi.Input[int] profile_id: Set Profile ID - Range: `1`-`16`
         :param pulumi.Input[str] profile_id_variable: Variable name
         :param pulumi.Input[str] profile_password: Set the profile password
         :param pulumi.Input[str] profile_password_variable: Variable name
         :param pulumi.Input[str] profile_username: Set the profile username
         :param pulumi.Input[str] profile_username_variable: Variable name
         """
-        pulumi.set(__self__, "access_point_name", access_point_name)
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
-        pulumi.set(__self__, "profile_id", profile_id)
+        if access_point_name is not None:
+            pulumi.set(__self__, "access_point_name", access_point_name)
         if access_point_name_variable is not None:
             pulumi.set(__self__, "access_point_name_variable", access_point_name_variable)
         if authentication_type is not None:
@@ -81,6 +81,8 @@ class TransportCellularProfileFeatureArgs:
             pulumi.set(__self__, "packet_data_network_type", packet_data_network_type)
         if packet_data_network_type_variable is not None:
             pulumi.set(__self__, "packet_data_network_type_variable", packet_data_network_type_variable)
+        if profile_id is not None:
+            pulumi.set(__self__, "profile_id", profile_id)
         if profile_id_variable is not None:
             pulumi.set(__self__, "profile_id_variable", profile_id_variable)
         if profile_password is not None:
@@ -91,18 +93,6 @@ class TransportCellularProfileFeatureArgs:
             pulumi.set(__self__, "profile_username", profile_username)
         if profile_username_variable is not None:
             pulumi.set(__self__, "profile_username_variable", profile_username_variable)
-
-    @property
-    @pulumi.getter(name="accessPointName")
-    def access_point_name(self) -> pulumi.Input[str]:
-        """
-        Set access point name
-        """
-        return pulumi.get(self, "access_point_name")
-
-    @access_point_name.setter
-    def access_point_name(self, value: pulumi.Input[str]):
-        pulumi.set(self, "access_point_name", value)
 
     @property
     @pulumi.getter(name="featureProfileId")
@@ -117,16 +107,16 @@ class TransportCellularProfileFeatureArgs:
         pulumi.set(self, "feature_profile_id", value)
 
     @property
-    @pulumi.getter(name="profileId")
-    def profile_id(self) -> pulumi.Input[int]:
+    @pulumi.getter(name="accessPointName")
+    def access_point_name(self) -> Optional[pulumi.Input[str]]:
         """
-        Set Profile ID - Range: `1`-`16`
+        Set access point name
         """
-        return pulumi.get(self, "profile_id")
+        return pulumi.get(self, "access_point_name")
 
-    @profile_id.setter
-    def profile_id(self, value: pulumi.Input[int]):
-        pulumi.set(self, "profile_id", value)
+    @access_point_name.setter
+    def access_point_name(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "access_point_name", value)
 
     @property
     @pulumi.getter(name="accessPointNameVariable")
@@ -247,6 +237,18 @@ class TransportCellularProfileFeatureArgs:
     @packet_data_network_type_variable.setter
     def packet_data_network_type_variable(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "packet_data_network_type_variable", value)
+
+    @property
+    @pulumi.getter(name="profileId")
+    def profile_id(self) -> Optional[pulumi.Input[int]]:
+        """
+        Set Profile ID - Range: `1`-`16`
+        """
+        return pulumi.get(self, "profile_id")
+
+    @profile_id.setter
+    def profile_id(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "profile_id", value)
 
     @property
     @pulumi.getter(name="profileIdVariable")
@@ -776,8 +778,6 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
                 raise TypeError('__props__ is only valid when passed in combination with a valid opts.id to get an existing resource')
             __props__ = TransportCellularProfileFeatureArgs.__new__(TransportCellularProfileFeatureArgs)
 
-            if access_point_name is None and not opts.urn:
-                raise TypeError("Missing required property 'access_point_name'")
             __props__.__dict__["access_point_name"] = access_point_name
             __props__.__dict__["access_point_name_variable"] = access_point_name_variable
             __props__.__dict__["authentication_type"] = authentication_type
@@ -792,8 +792,6 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
             __props__.__dict__["no_overwrite_variable"] = no_overwrite_variable
             __props__.__dict__["packet_data_network_type"] = packet_data_network_type
             __props__.__dict__["packet_data_network_type_variable"] = packet_data_network_type_variable
-            if profile_id is None and not opts.urn:
-                raise TypeError("Missing required property 'profile_id'")
             __props__.__dict__["profile_id"] = profile_id
             __props__.__dict__["profile_id_variable"] = profile_id_variable
             __props__.__dict__["profile_password"] = profile_password
@@ -884,7 +882,7 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="accessPointName")
-    def access_point_name(self) -> pulumi.Output[str]:
+    def access_point_name(self) -> pulumi.Output[Optional[str]]:
         """
         Set access point name
         """
@@ -980,7 +978,7 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="profileId")
-    def profile_id(self) -> pulumi.Output[int]:
+    def profile_id(self) -> pulumi.Output[Optional[int]]:
         """
         Set Profile ID - Range: `1`-`16`
         """

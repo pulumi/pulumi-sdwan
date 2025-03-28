@@ -6,6 +6,8 @@ package com.pulumi.sdwan;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import com.pulumi.sdwan.inputs.IntrusionPreventionPolicyDefinitionLoggingArgs;
+import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -17,6 +19,21 @@ import javax.annotation.Nullable;
 public final class IntrusionPreventionPolicyDefinitionArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final IntrusionPreventionPolicyDefinitionArgs Empty = new IntrusionPreventionPolicyDefinitionArgs();
+
+    /**
+     * Custom signature
+     * 
+     */
+    @Import(name="customSignature")
+    private @Nullable Output<Boolean> customSignature;
+
+    /**
+     * @return Custom signature
+     * 
+     */
+    public Optional<Output<Boolean>> customSignature() {
+        return Optional.ofNullable(this.customSignature);
+    }
 
     /**
      * The description of the policy definition
@@ -93,6 +110,13 @@ public final class IntrusionPreventionPolicyDefinitionArgs extends com.pulumi.re
         return Optional.ofNullable(this.logLevel);
     }
 
+    @Import(name="loggings")
+    private @Nullable Output<List<IntrusionPreventionPolicyDefinitionLoggingArgs>> loggings;
+
+    public Optional<Output<List<IntrusionPreventionPolicyDefinitionLoggingArgs>>> loggings() {
+        return Optional.ofNullable(this.loggings);
+    }
+
     /**
      * The policy mode - Choices: `security`, `unified`
      * 
@@ -156,11 +180,13 @@ public final class IntrusionPreventionPolicyDefinitionArgs extends com.pulumi.re
     private IntrusionPreventionPolicyDefinitionArgs() {}
 
     private IntrusionPreventionPolicyDefinitionArgs(IntrusionPreventionPolicyDefinitionArgs $) {
+        this.customSignature = $.customSignature;
         this.description = $.description;
         this.inspectionMode = $.inspectionMode;
         this.ipsSignatureListId = $.ipsSignatureListId;
         this.ipsSignatureListVersion = $.ipsSignatureListVersion;
         this.logLevel = $.logLevel;
+        this.loggings = $.loggings;
         this.mode = $.mode;
         this.name = $.name;
         this.signatureSet = $.signatureSet;
@@ -183,6 +209,27 @@ public final class IntrusionPreventionPolicyDefinitionArgs extends com.pulumi.re
 
         public Builder(IntrusionPreventionPolicyDefinitionArgs defaults) {
             $ = new IntrusionPreventionPolicyDefinitionArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param customSignature Custom signature
+         * 
+         * @return builder
+         * 
+         */
+        public Builder customSignature(@Nullable Output<Boolean> customSignature) {
+            $.customSignature = customSignature;
+            return this;
+        }
+
+        /**
+         * @param customSignature Custom signature
+         * 
+         * @return builder
+         * 
+         */
+        public Builder customSignature(Boolean customSignature) {
+            return customSignature(Output.of(customSignature));
         }
 
         /**
@@ -288,6 +335,19 @@ public final class IntrusionPreventionPolicyDefinitionArgs extends com.pulumi.re
          */
         public Builder logLevel(String logLevel) {
             return logLevel(Output.of(logLevel));
+        }
+
+        public Builder loggings(@Nullable Output<List<IntrusionPreventionPolicyDefinitionLoggingArgs>> loggings) {
+            $.loggings = loggings;
+            return this;
+        }
+
+        public Builder loggings(List<IntrusionPreventionPolicyDefinitionLoggingArgs> loggings) {
+            return loggings(Output.of(loggings));
+        }
+
+        public Builder loggings(IntrusionPreventionPolicyDefinitionLoggingArgs... loggings) {
+            return loggings(List.of(loggings));
         }
 
         /**

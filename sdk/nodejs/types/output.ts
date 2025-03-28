@@ -51,23 +51,23 @@ export interface ApplicationAwareRoutingPolicyDefinitionSequence {
 
 export interface ApplicationAwareRoutingPolicyDefinitionSequenceActionEntry {
     /**
-     * Backup SLA preferred color (Single value or multiple values separated by spaces)
+     * Backup SLA preferred color (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `backupSlaPreferredColor`
      */
     backupSlaPreferredColor?: string;
     /**
-     * Cloud SLA
+     * Cloud SLA, Attribute conditional on `type` being equal to `cloudSaas`
      */
     cloudSla?: boolean;
     /**
-     * Counter name
+     * Counter name, Attribute conditional on `type` being equal to `count`
      */
     counter?: string;
     /**
-     * Enable logging
+     * Enable logging, Attribute conditional on `type` being equal to `log`
      */
     log?: boolean;
     /**
-     * List of SLA class parameters
+     * List of SLA class parameters, Attribute conditional on `type` being equal to `slaClass`
      */
     slaClassParameters?: outputs.ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameter[];
     /**
@@ -79,11 +79,11 @@ export interface ApplicationAwareRoutingPolicyDefinitionSequenceActionEntry {
 
 export interface ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameter {
     /**
-     * preferred color (Single value or multiple values separated by spaces)
+     * preferred color (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `preferredColor`
      */
     preferredColor?: string;
     /**
-     * Preferred color group list ID
+     * Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
      */
     preferredColorGroupList?: string;
     /**
@@ -91,7 +91,7 @@ export interface ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaCl
      */
     preferredColorGroupListVersion?: number;
     /**
-     * SLA class list ID
+     * SLA class list ID, Attribute conditional on `type` being equal to `name`
      */
     slaClassList?: string;
     /**
@@ -107,7 +107,7 @@ export interface ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaCl
 
 export interface ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry {
     /**
-     * Application list ID
+     * Application list ID, Attribute conditional on `type` being equal to `appList`
      */
     applicationListId?: string;
     /**
@@ -115,7 +115,7 @@ export interface ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry {
      */
     applicationListVersion?: number;
     /**
-     * Destination Data Prefix list ID
+     * Destination Data Prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
      */
     destinationDataPrefixListId?: string;
     /**
@@ -123,25 +123,25 @@ export interface ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry {
      */
     destinationDataPrefixListVersion?: number;
     /**
-     * Destination IP
+     * Destination IP, Attribute conditional on `type` being equal to `destinationIp`
      */
     destinationIp?: string;
     /**
-     * Destination port, 0-65535 (Single value, range or multiple values separated by spaces)
+     * Destination port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `type` being equal to `destinationPort`
      */
     destinationPort?: string;
     /**
-     * Destination region
+     * Destination region, Attribute conditional on `type` being equal to `destinationRegion`
      *   - Choices: `primary-region`, `secondary-region`, `other-region`
      */
     destinationRegion?: string;
     /**
-     * DNS request or response
+     * DNS request or response, Attribute conditional on `type` being equal to `dns`
      *   - Choices: `request`, `response`
      */
     dns?: string;
     /**
-     * DNS Application list ID
+     * DNS Application list ID, Attribute conditional on `type` being equal to `dnsAppList`
      */
     dnsApplicationListId?: string;
     /**
@@ -149,25 +149,25 @@ export interface ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry {
      */
     dnsApplicationListVersion?: number;
     /**
-     * DSCP value
+     * DSCP value, Attribute conditional on `type` being equal to `dscp`
      *   - Range: `0`-`63`
      */
     dscp?: number;
     /**
-     * ICMP Message
+     * ICMP Message, Attribute conditional on `type` being equal to `icmpMessage`
      */
     icmpMessage?: string;
     /**
-     * PLP
+     * PLP, Attribute conditional on `type` being equal to `plp`
      *   - Choices: `low`, `high`
      */
     plp?: string;
     /**
-     * IP Protocol, 0-255 (Single value or multiple values separated by spaces)
+     * IP Protocol, 0-255 (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `protocol`
      */
     protocol?: string;
     /**
-     * Source Data Prefix list ID
+     * Source Data Prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
      */
     sourceDataPrefixListId?: string;
     /**
@@ -175,15 +175,15 @@ export interface ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry {
      */
     sourceDataPrefixListVersion?: number;
     /**
-     * Source IP
+     * Source IP, Attribute conditional on `type` being equal to `sourceIp`
      */
     sourceIp?: string;
     /**
-     * Source port, 0-65535 (Single value, range or multiple values separated by spaces)
+     * Source port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `type` being equal to `sourcePort`
      */
     sourcePort?: string;
     /**
-     * Traffic to
+     * Traffic to, Attribute conditional on `type` being equal to `trafficTo`
      *   - Choices: `access`, `core`, `service`
      */
     trafficTo?: string;
@@ -5870,13 +5870,6 @@ export interface ConfigurationGroupDeviceVariable {
     value?: string;
 }
 
-export interface ConfigurationGroupFeatureProfile {
-    /**
-     * Feature profile ID
-     */
-    id?: string;
-}
-
 export interface ConfigurationGroupTopologyDevice {
     /**
      * Criteria attribute
@@ -5941,7 +5934,7 @@ export interface CustomControlTopologyPolicyDefinitionSequence {
 
 export interface CustomControlTopologyPolicyDefinitionSequenceActionEntry {
     /**
-     * Export to VPN list ID
+     * Export to VPN list ID, Attribute conditional on `type` being equal to `exportTo`
      */
     exportToVpnListId?: string;
     /**
@@ -5949,7 +5942,7 @@ export interface CustomControlTopologyPolicyDefinitionSequenceActionEntry {
      */
     exportToVpnListVersion?: number;
     /**
-     * List of set parameters
+     * List of set parameters, Attribute conditional on `type` being equal to `set`
      */
     setParameters?: outputs.CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameter[];
     /**
@@ -5961,38 +5954,38 @@ export interface CustomControlTopologyPolicyDefinitionSequenceActionEntry {
 
 export interface CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameter {
     /**
-     * Community value, e.g. `1000:10000` or `internet` or `local-AS`
+     * Community value, e.g. `1000:10000` or `internet` or `local-AS`, Attribute conditional on `type` being equal to `community`
      */
     community?: string;
     /**
-     * Community additive
+     * Community additive, Attribute conditional on `type` being equal to `communityAdditive`
      */
     communityAdditive?: boolean;
     /**
-     * OMP tag
+     * OMP tag, Attribute conditional on `type` being equal to `ompTag`
      *   - Range: `0`-`4294967295`
      */
     ompTag?: number;
     /**
-     * Preference
+     * Preference, Attribute conditional on `type` being equal to `preference`
      *   - Range: `0`-`4294967295`
      */
     preference?: number;
     /**
-     * Service TLOC color
+     * Service TLOC color, Attribute conditional on `type` being equal to `service`
      */
     serviceTlocColor?: string;
     /**
-     * Service TLOC encapsulation
+     * Service TLOC encapsulation, Attribute conditional on `type` being equal to `service`
      *   - Choices: `ipsec`, `gre`
      */
     serviceTlocEncapsulation?: string;
     /**
-     * Service TLOC IP address
+     * Service TLOC IP address, Attribute conditional on `type` being equal to `service`
      */
     serviceTlocIp?: string;
     /**
-     * Service TLOC list ID
+     * Service TLOC list ID, Attribute conditional on `type` being equal to `service`
      */
     serviceTlocListId?: string;
     /**
@@ -6000,35 +5993,35 @@ export interface CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPara
      */
     serviceTlocListVersion?: number;
     /**
-     * Service type
+     * Service type, Attribute conditional on `type` being equal to `service`
      *   - Choices: `FW`, `IDP`, `IDS`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `netsvc5`
      */
     serviceType?: string;
     /**
-     * Service VPN ID
+     * Service VPN ID, Attribute conditional on `type` being equal to `service`
      *   - Range: `0`-`65536`
      */
     serviceVpnId?: number;
     /**
-     * TLOC action
+     * TLOC action, Attribute conditional on `type` being equal to `tlocAction`
      *   - Choices: `strict`, `primary`, `backup`, `ecmp`
      */
     tlocAction?: string;
     /**
-     * TLOC color
+     * TLOC color, Attribute conditional on `type` being equal to `tloc`
      */
     tlocColor?: string;
     /**
-     * TLOC encapsulation
+     * TLOC encapsulation, Attribute conditional on `type` being equal to `tloc`
      *   - Choices: `ipsec`, `gre`
      */
     tlocEncapsulation?: string;
     /**
-     * TLOC IP address
+     * TLOC IP address, Attribute conditional on `type` being equal to `tloc`
      */
     tlocIp?: string;
     /**
-     * TLOC list ID
+     * TLOC list ID, Attribute conditional on `type` being equal to `tlocList`
      */
     tlocListId?: string;
     /**
@@ -6044,12 +6037,12 @@ export interface CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPara
 
 export interface CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
     /**
-     * Carrier
+     * Carrier, Attribute conditional on `type` being equal to `carrier`
      *   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
      */
     carrier?: string;
     /**
-     * Color list ID
+     * Color list ID, Attribute conditional on `type` being equal to `colorList`
      */
     colorListId?: string;
     /**
@@ -6057,7 +6050,7 @@ export interface CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
      */
     colorListVersion?: number;
     /**
-     * Community list ID
+     * Community list ID, Attribute conditional on `type` being equal to `community`
      */
     communityListId?: string;
     /**
@@ -6065,12 +6058,12 @@ export interface CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
      */
     communityListVersion?: number;
     /**
-     * Domain ID
+     * Domain ID, Attribute conditional on `type` being equal to `domainId`
      *   - Range: `0`-`4294967295`
      */
     domainId?: number;
     /**
-     * Expanded community list ID
+     * Expanded community list ID, Attribute conditional on `type` being equal to `expandedCommunity`
      */
     expandedCommunityListId?: string;
     /**
@@ -6078,36 +6071,36 @@ export interface CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
      */
     expandedCommunityListVersion?: number;
     /**
-     * Group ID
+     * Group ID, Attribute conditional on `type` being equal to `groupId`
      *   - Range: `0`-`4294967295`
      */
     groupId?: number;
     /**
-     * OMP tag
+     * OMP tag, Attribute conditional on `type` being equal to `ompTag`
      *   - Range: `0`-`4294967295`
      */
     ompTag?: number;
     /**
-     * Origin
+     * Origin, Attribute conditional on `type` being equal to `origin`
      *   - Choices: `igp`, `egp`, `incomplete`, `aggregrate`, `bgp`, `bgp-external`, `bgp-internal`, `connected`, `eigrp`, `ospf`, `ospf-inter-area`, `ospf-intra-area`, `ospf-external1`, `ospf-external2`, `rip`, `static`, `eigrp-summary`, `eigrp-internal`, `eigrp-external`, `lisp`, `nat-dia`, `natpool`, `isis`, `isis-level1`, `isis-level2`
      */
     origin?: string;
     /**
-     * Originator IP
+     * Originator IP, Attribute conditional on `type` being equal to `originator`
      */
     originator?: string;
     /**
-     * Path type
+     * Path type, Attribute conditional on `type` being equal to `pathType`
      *   - Choices: `hierarchical-path`, `direct-path`, `transport-gateway-path`
      */
     pathType?: string;
     /**
-     * Preference
+     * Preference, Attribute conditional on `type` being equal to `preference`
      *   - Range: `0`-`4294967295`
      */
     preference?: number;
     /**
-     * Prefix list ID
+     * Prefix list ID, Attribute conditional on `type` being equal to `prefixList`
      */
     prefixListId?: string;
     /**
@@ -6115,12 +6108,12 @@ export interface CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
      */
     prefixListVersion?: number;
     /**
-     * Site ID
+     * Site ID, Attribute conditional on `type` being equal to `siteId`
      *   - Range: `0`-`4294967295`
      */
     siteId?: number;
     /**
-     * Site list ID
+     * Site list ID, Attribute conditional on `type` being equal to `siteList`
      */
     siteListId?: string;
     /**
@@ -6128,20 +6121,20 @@ export interface CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
      */
     siteListVersion?: number;
     /**
-     * TLOC color
+     * TLOC color, Attribute conditional on `type` being equal to `tloc`
      */
     tlocColor?: string;
     /**
-     * TLOC encapsulation
+     * TLOC encapsulation, Attribute conditional on `type` being equal to `tloc`
      *   - Choices: `ipsec`, `gre`
      */
     tlocEncapsulation?: string;
     /**
-     * TLOC IP address
+     * TLOC IP address, Attribute conditional on `type` being equal to `tloc`
      */
     tlocIp?: string;
     /**
-     * TLOC list ID
+     * TLOC list ID, Attribute conditional on `type` being equal to `tlocList`
      */
     tlocListId?: string;
     /**
@@ -6154,12 +6147,12 @@ export interface CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
      */
     type: string;
     /**
-     * VPN ID
+     * VPN ID, Attribute conditional on `type` being equal to `vpn`
      *   - Range: `0`-`65536`
      */
     vpnId?: number;
     /**
-     * VPN list ID
+     * VPN list ID, Attribute conditional on `type` being equal to `vpnList`
      */
     vpnListId?: string;
     /**
@@ -6206,6 +6199,26 @@ export interface DnsSecurityPolicyDefinitionTargetVpn {
      * VPN ID's separated by Comma
      */
     vpnIds?: string[];
+}
+
+export interface DnsSecurityPolicyTargetVpn {
+    /**
+     * Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry
+     */
+    dnsServerIp?: string;
+    /**
+     * Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry
+     */
+    localDomainBypassEnabled?: boolean;
+    /**
+     * non empty interger string
+     */
+    uid?: string;
+    /**
+     * Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry
+     */
+    umbrellaDefault?: boolean;
+    vpns?: string[];
 }
 
 export interface DomainListPolicyObjectEntry {
@@ -11777,13 +11790,6 @@ export interface GetConfigurationGroupDeviceVariable {
     value: string;
 }
 
-export interface GetConfigurationGroupFeatureProfile {
-    /**
-     * Feature profile ID
-     */
-    id: string;
-}
-
 export interface GetConfigurationGroupTopologyDevice {
     /**
      * Criteria attribute
@@ -12125,6 +12131,26 @@ export interface GetDnsSecurityPolicyDefinitionTargetVpn {
     vpnIds: string[];
 }
 
+export interface GetDnsSecurityPolicyTargetVpn {
+    /**
+     * Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry
+     */
+    dnsServerIp: string;
+    /**
+     * Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry
+     */
+    localDomainBypassEnabled: boolean;
+    /**
+     * non empty interger string
+     */
+    uid: string;
+    /**
+     * Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry
+     */
+    umbrellaDefault: boolean;
+    vpns: string[];
+}
+
 export interface GetDomainListPolicyObjectEntry {
     /**
      * Domain name, must not start with `*`
@@ -12391,6 +12417,17 @@ export interface GetHubAndSpokeTopologyPolicyDefinitionTopologySpokeHub {
      * Site list version
      */
     siteListVersion: number;
+}
+
+export interface GetIntrusionPreventionPolicyDefinitionLogging {
+    /**
+     * External Syslog Server IP
+     */
+    externalSyslogServerIp: string;
+    /**
+     * External Syslog Server VPN
+     */
+    externalSyslogServerVpn: string;
 }
 
 export interface GetIpsSignatureListPolicyObjectEntry {
@@ -13771,9 +13808,17 @@ export interface GetSecurityAppHostingFeatureTemplateVirtualApplication {
 
 export interface GetSecurityPolicyDefinition {
     /**
+     * Destination Zone
+     */
+    destinationZone: string;
+    /**
      * Policy definition ID
      */
     id: string;
+    /**
+     * Source Zone
+     */
+    sourceZone: string;
     /**
      * Policy definition type
      */
@@ -13789,6 +13834,10 @@ export interface GetSecurityPolicyLogging {
      * External Syslog Server IP
      */
     externalSyslogServerIp: string;
+    /**
+     * External Syslog Server Source Interface
+     */
+    externalSyslogServerSourceInterface: string;
     /**
      * External Syslog Server VPN
      */
@@ -20439,6 +20488,17 @@ export interface GetTransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEnca
     weightVariable: string;
 }
 
+export interface GetUrlFilteringPolicyDefinitionLogging {
+    /**
+     * External Syslog Server IP
+     */
+    externalSyslogServerIp: string;
+    /**
+     * External Syslog Server VPN
+     */
+    externalSyslogServerVpn: string;
+}
+
 export interface GetVedgeInventoryDevice {
     /**
      * Chassis Number
@@ -21988,6 +22048,17 @@ export interface HubAndSpokeTopologyPolicyDefinitionTopologySpokeHub {
     siteListVersion?: number;
 }
 
+export interface IntrusionPreventionPolicyDefinitionLogging {
+    /**
+     * External Syslog Server IP
+     */
+    externalSyslogServerIp?: string;
+    /**
+     * External Syslog Server VPN
+     */
+    externalSyslogServerVpn?: string;
+}
+
 export interface IpsSignatureListPolicyObjectEntry {
     /**
      * Signature generator ID
@@ -22028,7 +22099,7 @@ export interface Ipv4AclPolicyDefinitionSequence {
 
 export interface Ipv4AclPolicyDefinitionSequenceActionEntry {
     /**
-     * Class map ID
+     * Class map ID, Attribute conditional on `type` being equal to `class`
      */
     classMapId?: string;
     /**
@@ -22036,15 +22107,15 @@ export interface Ipv4AclPolicyDefinitionSequenceActionEntry {
      */
     classMapVersion?: number;
     /**
-     * Counter name
+     * Counter name, Attribute conditional on `type` being equal to `count`
      */
     counterName?: string;
     /**
-     * Enable logging
+     * Enable logging, Attribute conditional on `type` being equal to `log`
      */
     log?: boolean;
     /**
-     * Mirror ID
+     * Mirror ID, Attribute conditional on `type` being equal to `mirror`
      */
     mirrorId?: string;
     /**
@@ -22052,7 +22123,7 @@ export interface Ipv4AclPolicyDefinitionSequenceActionEntry {
      */
     mirrorVersion?: number;
     /**
-     * Policer ID
+     * Policer ID, Attribute conditional on `type` being equal to `policer`
      */
     policerId?: string;
     /**
@@ -22060,7 +22131,7 @@ export interface Ipv4AclPolicyDefinitionSequenceActionEntry {
      */
     policerVersion?: number;
     /**
-     * List of set parameters
+     * List of set parameters, Attribute conditional on `type` being equal to `set`
      */
     setParameters?: outputs.Ipv4AclPolicyDefinitionSequenceActionEntrySetParameter[];
     /**
@@ -22072,12 +22143,12 @@ export interface Ipv4AclPolicyDefinitionSequenceActionEntry {
 
 export interface Ipv4AclPolicyDefinitionSequenceActionEntrySetParameter {
     /**
-     * DSCP value
+     * DSCP value, Attribute conditional on `type` being equal to `dscp`
      *   - Range: `0`-`63`
      */
     dscp?: number;
     /**
-     * Next hop IP
+     * Next hop IP, Attribute conditional on `type` being equal to `nextHop`
      */
     nextHop?: string;
     /**
@@ -22089,7 +22160,7 @@ export interface Ipv4AclPolicyDefinitionSequenceActionEntrySetParameter {
 
 export interface Ipv4AclPolicyDefinitionSequenceMatchEntry {
     /**
-     * Class map ID
+     * Class map ID, Attribute conditional on `type` being equal to `class`
      */
     classMapId?: string;
     /**
@@ -22097,7 +22168,7 @@ export interface Ipv4AclPolicyDefinitionSequenceMatchEntry {
      */
     classMapVersion?: number;
     /**
-     * Destination data IPv4 prefix list ID
+     * Destination data IPv4 prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
      */
     destinationDataIpv4PrefixListId?: string;
     /**
@@ -22105,38 +22176,38 @@ export interface Ipv4AclPolicyDefinitionSequenceMatchEntry {
      */
     destinationDataIpv4PrefixListVersion?: number;
     /**
-     * Destination IP prefix
+     * Destination IP prefix, Attribute conditional on `type` being equal to `destinationIp`
      */
     destinationIp?: string;
     /**
-     * Destination ports. Single value (0-65535) or ranges separated by spaces.
+     * Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `destinationPort`
      */
     destinationPorts?: string;
     /**
-     * DSCP value
+     * DSCP value, Attribute conditional on `type` being equal to `dscp`
      *   - Range: `0`-`63`
      */
     dscp?: number;
     /**
-     * ICMP Message
+     * ICMP Message, Attribute conditional on `type` being equal to `icmpMessage`
      */
     icmpMessage?: string;
     /**
-     * Packet length
+     * Packet length, Attribute conditional on `type` being equal to `packetLength`
      *   - Range: `0`-`65535`
      */
     packetLength?: number;
     /**
-     * PLP - priority
+     * PLP - priority, Attribute conditional on `type` being equal to `plp`
      *   - Choices: `high`, `low`
      */
     priority?: string;
     /**
-     * Single value (0-255) or multiple values separated by spaces
+     * Single value (0-255) or multiple values separated by spaces, Attribute conditional on `type` being equal to `protocol`
      */
     protocol?: string;
     /**
-     * Source data IPv4 prefix list ID
+     * Source data IPv4 prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
      */
     sourceDataIpv4PrefixListId?: string;
     /**
@@ -22144,15 +22215,15 @@ export interface Ipv4AclPolicyDefinitionSequenceMatchEntry {
      */
     sourceDataIpv4PrefixListVersion?: number;
     /**
-     * Source IP prefix
+     * Source IP prefix, Attribute conditional on `type` being equal to `sourceIp`
      */
     sourceIp?: string;
     /**
-     * Source ports. Single value (0-65535) or ranges separated by spaces.
+     * Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
      */
     sourcePorts?: string;
     /**
-     * TCP parameters
+     * TCP parameters, Attribute conditional on `type` being equal to `tcp`
      *   - Choices: `syn`
      */
     tcp?: string;
@@ -22190,7 +22261,7 @@ export interface Ipv4DeviceAclPolicyDefinitionSequence {
 
 export interface Ipv4DeviceAclPolicyDefinitionSequenceActionEntry {
     /**
-     * Counter name
+     * Counter name, Attribute conditional on `type` being equal to `count`
      */
     counterName?: string;
     /**
@@ -22202,7 +22273,7 @@ export interface Ipv4DeviceAclPolicyDefinitionSequenceActionEntry {
 
 export interface Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry {
     /**
-     * Destination data IPv4 prefix list ID
+     * Destination data IPv4 prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
      */
     destinationDataIpv4PrefixListId?: string;
     /**
@@ -22210,16 +22281,16 @@ export interface Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry {
      */
     destinationDataIpv4PrefixListVersion?: number;
     /**
-     * Destination IP prefix
+     * Destination IP prefix, Attribute conditional on `type` being equal to `destinationIp`
      */
     destinationIp?: string;
     /**
-     * Destination port, only `22` and `161` supported
+     * Destination port, only `22` and `161` supported, Attribute conditional on `type` being equal to `destinationPort`
      *   - Range: `0`-`65535`
      */
     destinationPort?: number;
     /**
-     * Source data IPv4 prefix list ID
+     * Source data IPv4 prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
      */
     sourceDataIpv4PrefixListId?: string;
     /**
@@ -22227,11 +22298,11 @@ export interface Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry {
      */
     sourceDataIpv4PrefixListVersion?: number;
     /**
-     * Source IP prefix
+     * Source IP prefix, Attribute conditional on `type` being equal to `sourceIp`
      */
     sourceIp?: string;
     /**
-     * Source ports. Single value (0-65535) or ranges separated by spaces.
+     * Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
      */
     sourcePorts?: string;
     /**
@@ -22283,7 +22354,7 @@ export interface Ipv6AclPolicyDefinitionSequence {
 
 export interface Ipv6AclPolicyDefinitionSequenceActionEntry {
     /**
-     * Class map ID
+     * Class map ID, Attribute conditional on `type` being equal to `class`
      */
     classMapId?: string;
     /**
@@ -22291,15 +22362,15 @@ export interface Ipv6AclPolicyDefinitionSequenceActionEntry {
      */
     classMapVersion?: number;
     /**
-     * Counter name
+     * Counter name, Attribute conditional on `type` being equal to `count`
      */
     counterName?: string;
     /**
-     * Enable logging
+     * Enable logging, Attribute conditional on `type` being equal to `log`
      */
     log?: boolean;
     /**
-     * Mirror ID
+     * Mirror ID, Attribute conditional on `type` being equal to `mirror`
      */
     mirrorId?: string;
     /**
@@ -22307,7 +22378,7 @@ export interface Ipv6AclPolicyDefinitionSequenceActionEntry {
      */
     mirrorVersion?: number;
     /**
-     * Policer ID
+     * Policer ID, Attribute conditional on `type` being equal to `policer`
      */
     policerId?: string;
     /**
@@ -22315,7 +22386,7 @@ export interface Ipv6AclPolicyDefinitionSequenceActionEntry {
      */
     policerVersion?: number;
     /**
-     * List of set parameters
+     * List of set parameters, Attribute conditional on `type` being equal to `set`
      */
     setParameters?: outputs.Ipv6AclPolicyDefinitionSequenceActionEntrySetParameter[];
     /**
@@ -22327,11 +22398,11 @@ export interface Ipv6AclPolicyDefinitionSequenceActionEntry {
 
 export interface Ipv6AclPolicyDefinitionSequenceActionEntrySetParameter {
     /**
-     * Next hop IP
+     * Next hop IP, Attribute conditional on `type` being equal to `nextHop`
      */
     nextHop?: string;
     /**
-     * Traffic class
+     * Traffic class, Attribute conditional on `type` being equal to `trafficClass`
      *   - Range: `0`-`63`
      */
     trafficClass?: number;
@@ -22344,7 +22415,7 @@ export interface Ipv6AclPolicyDefinitionSequenceActionEntrySetParameter {
 
 export interface Ipv6AclPolicyDefinitionSequenceMatchEntry {
     /**
-     * Class map ID
+     * Class map ID, Attribute conditional on `type` being equal to `class`
      */
     classMapId?: string;
     /**
@@ -22352,7 +22423,7 @@ export interface Ipv6AclPolicyDefinitionSequenceMatchEntry {
      */
     classMapVersion?: number;
     /**
-     * Destination dataIPv6 prefix list ID
+     * Destination dataIPv6 prefix list ID, Attribute conditional on `type` being equal to `destinationDataIpv6PrefixList`
      */
     destinationDataIpv6PrefixListId?: string;
     /**
@@ -22360,30 +22431,30 @@ export interface Ipv6AclPolicyDefinitionSequenceMatchEntry {
      */
     destinationDataIpv6PrefixListVersion?: number;
     /**
-     * Destination IPv6 prefix
+     * Destination IPv6 prefix, Attribute conditional on `type` being equal to `destinationIpv6`
      */
     destinationIp?: string;
     /**
-     * Destination ports. Single value (0-65535) or ranges separated by spaces.
+     * Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `destinationPort`
      */
     destinationPorts?: string;
     /**
-     * Next header
+     * Next header, Attribute conditional on `type` being equal to `nextHeader`
      *   - Range: `0`-`255`
      */
     nextHeader?: number;
     /**
-     * Packet length
+     * Packet length, Attribute conditional on `type` being equal to `packetLength`
      *   - Range: `0`-`65535`
      */
     packetLength?: number;
     /**
-     * PLP - priority
+     * PLP - priority, Attribute conditional on `type` being equal to `plp`
      *   - Choices: `high`, `low`
      */
     priority?: string;
     /**
-     * Source data IPv6 prefix list ID
+     * Source data IPv6 prefix list ID, Attribute conditional on `type` being equal to `sourceDataIpv6PrefixList`
      */
     sourceDataIpv6PrefixListId?: string;
     /**
@@ -22391,20 +22462,20 @@ export interface Ipv6AclPolicyDefinitionSequenceMatchEntry {
      */
     sourceDataIpv6PrefixListVersion?: number;
     /**
-     * Source IPv6 prefix
+     * Source IPv6 prefix, Attribute conditional on `type` being equal to `sourceIpv6`
      */
     sourceIp?: string;
     /**
-     * Source ports. Single value (0-65535) or ranges separated by spaces.
+     * Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
      */
     sourcePorts?: string;
     /**
-     * TCP parameters
+     * TCP parameters, Attribute conditional on `type` being equal to `tcp`
      *   - Choices: `syn`
      */
     tcp?: string;
     /**
-     * Traffic class
+     * Traffic class, Attribute conditional on `type` being equal to `trafficClass`
      *   - Range: `0`-`63`
      */
     trafficClass?: number;
@@ -22442,7 +22513,7 @@ export interface Ipv6DeviceAclPolicyDefinitionSequence {
 
 export interface Ipv6DeviceAclPolicyDefinitionSequenceActionEntry {
     /**
-     * Counter name
+     * Counter name, Attribute conditional on `type` being equal to `count`
      */
     counterName?: string;
     /**
@@ -22454,7 +22525,7 @@ export interface Ipv6DeviceAclPolicyDefinitionSequenceActionEntry {
 
 export interface Ipv6DeviceAclPolicyDefinitionSequenceMatchEntry {
     /**
-     * Destination data IPv6 prefix list ID
+     * Destination data IPv6 prefix list ID, Attribute conditional on `type` being equal to `destinationDataIpv6PrefixList`
      */
     destinationDataIpv6PrefixListId?: string;
     /**
@@ -22462,16 +22533,16 @@ export interface Ipv6DeviceAclPolicyDefinitionSequenceMatchEntry {
      */
     destinationDataIpv6PrefixListVersion?: number;
     /**
-     * Destination IP prefix
+     * Destination IP prefix, Attribute conditional on `type` being equal to `destinationIpv6`
      */
     destinationIp?: string;
     /**
-     * Destination port, only `22` and `161` supported
+     * Destination port, only `22` and `161` supported, Attribute conditional on `type` being equal to `destinationPort`
      *   - Range: `0`-`65535`
      */
     destinationPort?: number;
     /**
-     * Source data IPv6 prefix list ID
+     * Source data IPv6 prefix list ID, Attribute conditional on `type` being equal to `sourceDataIpv6PrefixList`
      */
     sourceDataIpv6PrefixListId?: string;
     /**
@@ -22479,11 +22550,11 @@ export interface Ipv6DeviceAclPolicyDefinitionSequenceMatchEntry {
      */
     sourceDataIpv6PrefixListVersion?: number;
     /**
-     * Source IP prefix
+     * Source IP prefix, Attribute conditional on `type` being equal to `sourceIpv6`
      */
     sourceIp?: string;
     /**
-     * Source ports. Single value (0-65535) or ranges separated by spaces.
+     * Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
      */
     sourcePorts?: string;
     /**
@@ -23096,69 +23167,69 @@ export interface RoutePolicyDefinitionSequence {
 
 export interface RoutePolicyDefinitionSequenceActionEntry {
     /**
-     * Aggregator
+     * Aggregator, Attribute conditional on `type` being equal to `aggregator`
      *   - Range: `0`-`4294967295`
      */
     aggregator?: number;
     /**
-     * IP address
+     * IP address, Attribute conditional on `type` being equal to `aggregator`
      */
     aggregatorIpAddress?: string;
     /**
-     * Space separated list of ASN to exclude
+     * Space separated list of ASN to exclude, Attribute conditional on `type` being equal to `asPath`
      */
     asPathExclude?: string;
     /**
-     * Space separated list of ASN to prepend
+     * Space separated list of ASN to prepend, Attribute conditional on `type` being equal to `asPath`
      */
     asPathPrepend?: string;
     /**
-     * Atomic aggregate
+     * Atomic aggregate, Attribute conditional on `type` being equal to `atomicAggregate`
      */
     atomicAggregate?: boolean;
     /**
-     * Community value, e.g. `1000:10000` or `internet` or `local-AS`
+     * Community value, e.g. `1000:10000` or `internet` or `local-AS`, Attribute conditional on `type` being equal to `community`
      */
     community?: string;
     /**
-     * Community additive
+     * Community additive, Attribute conditional on `type` being equal to `communityAdditive`
      */
     communityAdditive?: boolean;
     /**
-     * Local preference
+     * Local preference, Attribute conditional on `type` being equal to `localPreference`
      *   - Range: `0`-`4294967295`
      */
     localPreference?: number;
     /**
-     * Metric
+     * Metric, Attribute conditional on `type` being equal to `metric`
      *   - Range: `0`-`4294967295`
      */
     metric?: number;
     /**
-     * Metric type
+     * Metric type, Attribute conditional on `type` being equal to `metricType`
      *   - Choices: `type1`, `type2`
      */
     metricType?: string;
     /**
-     * Next hop IP
+     * Next hop IP, Attribute conditional on `type` being equal to `nextHop`
      */
     nextHop?: string;
     /**
-     * OMP tag
+     * OMP tag, Attribute conditional on `type` being equal to `ompTag`
      *   - Range: `0`-`4294967295`
      */
     ompTag?: number;
     /**
-     * Origin
+     * Origin, Attribute conditional on `type` being equal to `origin`
      *   - Choices: `igp`, `egp`, `incomplete`
      */
     origin?: string;
     /**
-     * Originator IP
+     * Originator IP, Attribute conditional on `type` being equal to `originator`
      */
     originator?: string;
     /**
-     * OSPF tag
+     * OSPF tag, Attribute conditional on `type` being equal to `ospfTag`
      *   - Range: `0`-`4294967295`
      */
     ospfTag?: number;
@@ -23168,7 +23239,7 @@ export interface RoutePolicyDefinitionSequenceActionEntry {
      */
     type: string;
     /**
-     * Weight
+     * Weight, Attribute conditional on `type` being equal to `weight`
      *   - Range: `0`-`4294967295`
      */
     weight?: number;
@@ -23176,7 +23247,7 @@ export interface RoutePolicyDefinitionSequenceActionEntry {
 
 export interface RoutePolicyDefinitionSequenceMatchEntry {
     /**
-     * AS path list ID
+     * AS path list ID, Attribute conditional on `type` being equal to `asPath`
      */
     asPathListId?: string;
     /**
@@ -23184,11 +23255,11 @@ export interface RoutePolicyDefinitionSequenceMatchEntry {
      */
     asPathListVersion?: number;
     /**
-     * Community list IDs
+     * Community list IDs, Attribute conditional on `type` being equal to `advancedCommunity`
      */
     communityListIds?: string[];
     /**
-     * Community list match flag
+     * Community list match flag, Attribute conditional on `type` being equal to `advancedCommunity`
      *   - Choices: `and`, `or`, `exact`
      */
     communityListMatchFlag?: string;
@@ -23197,7 +23268,7 @@ export interface RoutePolicyDefinitionSequenceMatchEntry {
      */
     communityListVersions?: string[];
     /**
-     * Expanded community list ID
+     * Expanded community list ID, Attribute conditional on `type` being equal to `expandedCommunity`
      */
     expandedCommunityListId?: string;
     /**
@@ -23205,7 +23276,7 @@ export interface RoutePolicyDefinitionSequenceMatchEntry {
      */
     expandedCommunityListVersion?: number;
     /**
-     * Extended community list ID
+     * Extended community list ID, Attribute conditional on `type` being equal to `extCommunity`
      */
     extendedCommunityListId?: string;
     /**
@@ -23213,17 +23284,17 @@ export interface RoutePolicyDefinitionSequenceMatchEntry {
      */
     extendedCommunityListVersion?: number;
     /**
-     * Local preference
+     * Local preference, Attribute conditional on `type` being equal to `localPreference`
      *   - Range: `0`-`4294967295`
      */
     localPreference?: number;
     /**
-     * Metric
+     * Metric, Attribute conditional on `type` being equal to `metric`
      *   - Range: `0`-`4294967295`
      */
     metric?: number;
     /**
-     * Next hop prefix list ID
+     * Next hop prefix list ID, Attribute conditional on `type` being equal to `nextHop`
      */
     nextHopPrefixListId?: string;
     /**
@@ -23231,26 +23302,26 @@ export interface RoutePolicyDefinitionSequenceMatchEntry {
      */
     nextHopPrefixListVersion?: number;
     /**
-     * OMP tag
+     * OMP tag, Attribute conditional on `type` being equal to `ompTag`
      *   - Range: `0`-`4294967295`
      */
     ompTag?: number;
     /**
-     * Origin
+     * Origin, Attribute conditional on `type` being equal to `origin`
      *   - Choices: `igp`, `egp`, `incomplete`
      */
     origin?: string;
     /**
-     * OSPF tag
+     * OSPF tag, Attribute conditional on `type` being equal to `ospfTag`
      *   - Range: `0`-`4294967295`
      */
     ospfTag?: number;
     /**
-     * Peer IP
+     * Peer IP, Attribute conditional on `type` being equal to `peer`
      */
     peer?: string;
     /**
-     * Prefix list ID
+     * Prefix list ID, Attribute conditional on `type` being equal to `address`
      */
     prefixListId?: string;
     /**
@@ -23494,9 +23565,17 @@ export interface SecurityAppHostingFeatureTemplateVirtualApplication {
 
 export interface SecurityPolicyDefinition {
     /**
+     * Destination Zone, Attribute conditional on `type` being equal to `zoneBasedFW`
+     */
+    destinationZone?: string;
+    /**
      * Policy definition ID
      */
     id: string;
+    /**
+     * Source Zone, Attribute conditional on `type` being equal to `zoneBasedFW`
+     */
+    sourceZone?: string;
     /**
      * Policy definition type
      *   - Choices: `urlFiltering`, `zoneBasedFW`, `intrusionPrevention`, `sslDecryption`, `advancedMalwareProtection`, `dnsSecurity`
@@ -23513,6 +23592,10 @@ export interface SecurityPolicyLogging {
      * External Syslog Server IP
      */
     externalSyslogServerIp?: string;
+    /**
+     * External Syslog Server Source Interface
+     */
+    externalSyslogServerSourceInterface?: string;
     /**
      * External Syslog Server VPN
      */
@@ -28302,86 +28385,86 @@ export interface TrafficDataPolicyDefinitionSequence {
 
 export interface TrafficDataPolicyDefinitionSequenceActionEntry {
     /**
-     * Enable cflowd
+     * Enable cflowd, Attribute conditional on `type` being equal to `cflowd`
      */
     cflowd?: boolean;
     /**
-     * Counter name
+     * Counter name, Attribute conditional on `type` being equal to `count`
      */
     counter?: string;
     /**
-     * Enable DRE optimization
+     * Enable DRE optimization, Attribute conditional on `type` being equal to `dreOptimization`
      */
     dreOptimization?: boolean;
     /**
-     * Enable fallback to routing
+     * Enable fallback to routing, Attribute conditional on `type` being equal to `fallbackToRouting`
      */
     fallbackToRouting?: boolean;
     /**
-     * Enable logging
+     * Enable logging, Attribute conditional on `type` being equal to `log`
      */
     log?: boolean;
     /**
-     * Loss correction
+     * Loss correction, Attribute conditional on `type` being equal to `lossProtect`
      *   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
      */
     lossCorrection?: string;
     /**
-     * Loss correction FEC
+     * Loss correction FEC, Attribute conditional on `type` being equal to `lossProtectFec`
      *   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
      */
     lossCorrectionFec?: string;
     /**
-     * Loss correction FEC threshold
+     * Loss correction FEC threshold, Attribute conditional on `type` being equal to `lossProtectFec`
      */
     lossCorrectionFecThreshold?: string;
     /**
-     * Loss correction packet duplication
+     * Loss correction packet duplication, Attribute conditional on `type` being equal to `lossProtectPktDup`
      *   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
      */
     lossCorrectionPacketDuplication?: string;
     /**
-     * List of NAT parameters
+     * List of NAT parameters, Attribute conditional on `type` being equal to `nat`
      */
     natParameters?: outputs.TrafficDataPolicyDefinitionSequenceActionEntryNatParameter[];
     /**
-     * NAT pool
+     * NAT pool, Attribute conditional on `type` being equal to `nat`
      *   - Choices: `pool`
      */
     natPool?: string;
     /**
-     * NAT pool ID
+     * NAT pool ID, Attribute conditional on `type` being equal to `nat`
      *   - Range: `1`-`31`
      */
     natPoolId?: number;
     /**
-     * Redirect DNS
+     * Redirect DNS, Attribute conditional on `type` being equal to `redirectDns`
      *   - Choices: `dnsType`, `ipAddress`
      */
     redirectDns?: string;
     /**
-     * Redirect DNS IP address
+     * Redirect DNS IP address, Attribute conditional on `redirectDns` being equal to `ipAddress`
      */
     redirectDnsAddress?: string;
     /**
-     * Redirect DNS type
+     * Redirect DNS type, Attribute conditional on `redirectDns` being equal to `dnsType`
      *   - Choices: `host`, `umbrella`
      */
     redirectDnsType?: string;
     /**
-     * Enable secure internet gateway
+     * Enable secure internet gateway, Attribute conditional on `type` being equal to `sig`
      */
     secureInternetGateway?: boolean;
     /**
-     * Service node group
+     * Service node group, Attribute conditional on `type` being equal to `serviceNodeGroup`
      */
     serviceNodeGroup?: string;
     /**
-     * List of set parameters
+     * List of set parameters, Attribute conditional on `type` being equal to `set`
      */
     setParameters?: outputs.TrafficDataPolicyDefinitionSequenceActionEntrySetParameter[];
     /**
-     * Enable TCP optimization
+     * Enable TCP optimization, Attribute conditional on `type` being equal to `tcpOptimization`
      */
     tcpOptimization?: boolean;
     /**
@@ -28393,7 +28476,7 @@ export interface TrafficDataPolicyDefinitionSequenceActionEntry {
 
 export interface TrafficDataPolicyDefinitionSequenceActionEntryNatParameter {
     /**
-     * Fallback
+     * Fallback, Attribute conditional on `type` being equal to `fallback`
      */
     fallback?: boolean;
     /**
@@ -28402,44 +28485,44 @@ export interface TrafficDataPolicyDefinitionSequenceActionEntryNatParameter {
      */
     type: string;
     /**
-     * DSCP
+     * DSCP, Attribute conditional on `type` being equal to `useVpn`
      */
     vpnId?: number;
 }
 
 export interface TrafficDataPolicyDefinitionSequenceActionEntrySetParameter {
     /**
-     * DSCP
+     * DSCP, Attribute conditional on `type` being equal to `dscp`
      *   - Range: `0`-`63`
      */
     dscp?: number;
     /**
-     * Forwarding class
+     * Forwarding class, Attribute conditional on `type` being equal to `forwardingClass`
      */
     forwardingClass?: string;
     /**
-     * Local TLOC list color. Space separated list of colors.
+     * Local TLOC list color. Space separated list of colors., Attribute conditional on `type` being equal to `localTlocList`
      */
     localTlocListColor?: string;
     /**
-     * Local TLOC list encapsulation.
+     * Local TLOC list encapsulation., Attribute conditional on `type` being equal to `localTlocList`
      *   - Choices: `ipsec`, `gre`, `ipsec gre`
      */
     localTlocListEncap?: string;
     /**
-     * Local TLOC list restrict
+     * Local TLOC list restrict, Attribute conditional on `type` being equal to `localTlocList`
      */
     localTlocListRestrict?: boolean;
     /**
-     * Next hop IP
+     * Next hop IP, Attribute conditional on `type` being equal to `nextHop`
      */
     nextHop?: string;
     /**
-     * Use routing table entry to forward the packet in case Next-hop is not available
+     * Use routing table entry to forward the packet in case Next-hop is not available, Attribute conditional on `type` being equal to `nextHopLoose`
      */
     nextHopLoose?: boolean;
     /**
-     * Policer list ID
+     * Policer list ID, Attribute conditional on `type` being equal to `policer`
      */
     policerListId?: string;
     /**
@@ -28447,7 +28530,7 @@ export interface TrafficDataPolicyDefinitionSequenceActionEntrySetParameter {
      */
     policerListVersion?: number;
     /**
-     * Preferred color group list ID
+     * Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
      */
     preferredColorGroupList?: string;
     /**
@@ -28455,20 +28538,20 @@ export interface TrafficDataPolicyDefinitionSequenceActionEntrySetParameter {
      */
     preferredColorGroupListVersion?: number;
     /**
-     * Service TLOC color
+     * Service TLOC color, Attribute conditional on `type` being equal to `service`
      */
     serviceTlocColor?: string;
     /**
-     * Service TLOC encapsulation
+     * Service TLOC encapsulation, Attribute conditional on `type` being equal to `service`
      *   - Choices: `ipsec`, `gre`, `ipsec gre`
      */
     serviceTlocEncapsulation?: string;
     /**
-     * Service TLOC IP address
+     * Service TLOC IP address, Attribute conditional on `type` being equal to `service`
      */
     serviceTlocIp?: string;
     /**
-     * Service TLOC list ID
+     * Service TLOC list ID, Attribute conditional on `type` being equal to `service`
      */
     serviceTlocListId?: string;
     /**
@@ -28476,38 +28559,38 @@ export interface TrafficDataPolicyDefinitionSequenceActionEntrySetParameter {
      */
     serviceTlocListVersion?: number;
     /**
-     * Service TLOC Local
+     * Service TLOC Local, Attribute conditional on `type` being equal to `service`
      */
     serviceTlocLocal?: boolean;
     /**
-     * Service TLOC Restrict
+     * Service TLOC Restrict, Attribute conditional on `type` being equal to `service`
      */
     serviceTlocRestrict?: boolean;
     /**
-     * Service type
+     * Service type, Attribute conditional on `type` being equal to `service`
      *   - Choices: `FW`, `IDP`, `IDS`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `netsvc5`
      */
     serviceType?: string;
     /**
-     * Service VPN ID
+     * Service VPN ID, Attribute conditional on `type` being equal to `service`
      *   - Range: `0`-`65536`
      */
     serviceVpnId?: number;
     /**
-     * TLOC color
+     * TLOC color, Attribute conditional on `type` being equal to `tloc`
      */
     tlocColor?: string;
     /**
-     * TLOC encapsulation
+     * TLOC encapsulation, Attribute conditional on `type` being equal to `tloc`
      *   - Choices: `ipsec`, `gre`, `ipsec gre`
      */
     tlocEncapsulation?: string;
     /**
-     * TLOC IP address
+     * TLOC IP address, Attribute conditional on `type` being equal to `tloc`
      */
     tlocIp?: string;
     /**
-     * TLOC list ID
+     * TLOC list ID, Attribute conditional on `type` being equal to `tlocList`
      */
     tlocListId?: string;
     /**
@@ -28520,7 +28603,7 @@ export interface TrafficDataPolicyDefinitionSequenceActionEntrySetParameter {
      */
     type: string;
     /**
-     * DSCP
+     * DSCP, Attribute conditional on `type` being equal to `vpn`
      *   - Range: `0`-`65530`
      */
     vpnId?: number;
@@ -28528,7 +28611,7 @@ export interface TrafficDataPolicyDefinitionSequenceActionEntrySetParameter {
 
 export interface TrafficDataPolicyDefinitionSequenceMatchEntry {
     /**
-     * Application list ID
+     * Application list ID, Attribute conditional on `type` being equal to `appList`
      */
     applicationListId?: string;
     /**
@@ -28536,7 +28619,7 @@ export interface TrafficDataPolicyDefinitionSequenceMatchEntry {
      */
     applicationListVersion?: number;
     /**
-     * Destination Data Prefix list ID
+     * Destination Data Prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
      */
     destinationDataPrefixListId?: string;
     /**
@@ -28544,25 +28627,25 @@ export interface TrafficDataPolicyDefinitionSequenceMatchEntry {
      */
     destinationDataPrefixListVersion?: number;
     /**
-     * Destination IP
+     * Destination IP, Attribute conditional on `type` being equal to `destinationIp`
      */
     destinationIp?: string;
     /**
-     * Destination port, 0-65535 (Single value, range or multiple values separated by spaces)
+     * Destination port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `type` being equal to `destinationPort`
      */
     destinationPort?: string;
     /**
-     * Destination region
+     * Destination region, Attribute conditional on `type` being equal to `destinationRegion`
      *   - Choices: `primary-region`, `secondary-region`, `other-region`
      */
     destinationRegion?: string;
     /**
-     * DNS request or response
+     * DNS request or response, Attribute conditional on `type` being equal to `dns`
      *   - Choices: `request`, `response`
      */
     dns?: string;
     /**
-     * DNS Application list ID
+     * DNS Application list ID, Attribute conditional on `type` being equal to `dnsAppList`
      */
     dnsApplicationListId?: string;
     /**
@@ -28570,30 +28653,30 @@ export interface TrafficDataPolicyDefinitionSequenceMatchEntry {
      */
     dnsApplicationListVersion?: number;
     /**
-     * DSCP value
+     * DSCP value, Attribute conditional on `type` being equal to `dscp`
      *   - Range: `0`-`63`
      */
     dscp?: number;
     /**
-     * ICMP Message
+     * ICMP Message, Attribute conditional on `type` being equal to `icmpMessage`
      */
     icmpMessage?: string;
     /**
-     * Packet length
+     * Packet length, Attribute conditional on `type` being equal to `packetLength`
      *   - Range: `0`-`65535`
      */
     packetLength?: number;
     /**
-     * PLP
+     * PLP, Attribute conditional on `type` being equal to `plp`
      *   - Choices: `low`, `high`
      */
     plp?: string;
     /**
-     * IP Protocol, 0-255 (Single value or multiple values separated by spaces)
+     * IP Protocol, 0-255 (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `protocol`
      */
     protocol?: string;
     /**
-     * Source Data Prefix list ID
+     * Source Data Prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
      */
     sourceDataPrefixListId?: string;
     /**
@@ -28601,20 +28684,20 @@ export interface TrafficDataPolicyDefinitionSequenceMatchEntry {
      */
     sourceDataPrefixListVersion?: number;
     /**
-     * Source IP
+     * Source IP, Attribute conditional on `type` being equal to `sourceIp`
      */
     sourceIp?: string;
     /**
-     * Source port, 0-65535 (Single value, range or multiple values separated by spaces)
+     * Source port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `type` being equal to `sourcePort`
      */
     sourcePort?: string;
     /**
-     * TCP flags
+     * TCP flags, Attribute conditional on `type` being equal to `tcp`
      *   - Choices: `syn`
      */
     tcp?: string;
     /**
-     * Traffic to
+     * Traffic to, Attribute conditional on `type` being equal to `trafficTo`
      *   - Choices: `access`, `core`, `service`
      */
     trafficTo?: string;
@@ -30772,6 +30855,17 @@ export interface TransportWanVpnInterfaceT1E1SerialFeatureTunnelInterfaceEncapsu
     weightVariable?: string;
 }
 
+export interface UrlFilteringPolicyDefinitionLogging {
+    /**
+     * External Syslog Server IP
+     */
+    externalSyslogServerIp?: string;
+    /**
+     * External Syslog Server VPN
+     */
+    externalSyslogServerVpn?: string;
+}
+
 export interface VpnInterfaceCellularFeatureTemplateIpv4AccessList {
     /**
      * Name of access list
@@ -32313,7 +32407,7 @@ export interface ZoneBasedFirewallPolicyDefinitionRule {
 export interface ZoneBasedFirewallPolicyDefinitionRuleActionEntry {
     /**
      * Type of action entry
-     *   - Choices: `log`, `connectionEvents`
+     *   - Choices: `log`, `connectionEvents`, `advancedInspectionProfile`
      */
     type?: string;
 }

@@ -56,6 +56,8 @@ type LookupIntrusionPreventionPolicyDefinitionArgs struct {
 
 // A collection of values returned by getIntrusionPreventionPolicyDefinition.
 type LookupIntrusionPreventionPolicyDefinitionResult struct {
+	// Custom signature
+	CustomSignature bool `pulumi:"customSignature"`
 	// The description of the policy definition
 	Description string `pulumi:"description"`
 	// The id of the object
@@ -67,7 +69,8 @@ type LookupIntrusionPreventionPolicyDefinitionResult struct {
 	// IPS signature list version
 	IpsSignatureListVersion int `pulumi:"ipsSignatureListVersion"`
 	// Log level
-	LogLevel string `pulumi:"logLevel"`
+	LogLevel string                                          `pulumi:"logLevel"`
+	Loggings []GetIntrusionPreventionPolicyDefinitionLogging `pulumi:"loggings"`
 	// The policy mode
 	Mode string `pulumi:"mode"`
 	// The name of the policy definition
@@ -114,6 +117,11 @@ func (o LookupIntrusionPreventionPolicyDefinitionResultOutput) ToLookupIntrusion
 	return o
 }
 
+// Custom signature
+func (o LookupIntrusionPreventionPolicyDefinitionResultOutput) CustomSignature() pulumi.BoolOutput {
+	return o.ApplyT(func(v LookupIntrusionPreventionPolicyDefinitionResult) bool { return v.CustomSignature }).(pulumi.BoolOutput)
+}
+
 // The description of the policy definition
 func (o LookupIntrusionPreventionPolicyDefinitionResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIntrusionPreventionPolicyDefinitionResult) string { return v.Description }).(pulumi.StringOutput)
@@ -142,6 +150,12 @@ func (o LookupIntrusionPreventionPolicyDefinitionResultOutput) IpsSignatureListV
 // Log level
 func (o LookupIntrusionPreventionPolicyDefinitionResultOutput) LogLevel() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIntrusionPreventionPolicyDefinitionResult) string { return v.LogLevel }).(pulumi.StringOutput)
+}
+
+func (o LookupIntrusionPreventionPolicyDefinitionResultOutput) Loggings() GetIntrusionPreventionPolicyDefinitionLoggingArrayOutput {
+	return o.ApplyT(func(v LookupIntrusionPreventionPolicyDefinitionResult) []GetIntrusionPreventionPolicyDefinitionLogging {
+		return v.Loggings
+	}).(GetIntrusionPreventionPolicyDefinitionLoggingArrayOutput)
 }
 
 // The policy mode

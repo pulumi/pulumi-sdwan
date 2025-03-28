@@ -74,12 +74,14 @@ class _ServiceLanVpnFeatureAssociateRoutingEigrpFeatureState:
     def __init__(__self__, *,
                  feature_profile_id: Optional[pulumi.Input[str]] = None,
                  service_lan_vpn_feature_id: Optional[pulumi.Input[str]] = None,
-                 service_routing_eigrp_feature_id: Optional[pulumi.Input[str]] = None):
+                 service_routing_eigrp_feature_id: Optional[pulumi.Input[str]] = None,
+                 version: Optional[pulumi.Input[int]] = None):
         """
         Input properties used for looking up and filtering ServiceLanVpnFeatureAssociateRoutingEigrpFeature resources.
         :param pulumi.Input[str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[str] service_lan_vpn_feature_id: Service LAN VPN Feature ID
         :param pulumi.Input[str] service_routing_eigrp_feature_id: Service Routing EIGRP Feature ID
+        :param pulumi.Input[int] version: The version of the object
         """
         if feature_profile_id is not None:
             pulumi.set(__self__, "feature_profile_id", feature_profile_id)
@@ -87,6 +89,8 @@ class _ServiceLanVpnFeatureAssociateRoutingEigrpFeatureState:
             pulumi.set(__self__, "service_lan_vpn_feature_id", service_lan_vpn_feature_id)
         if service_routing_eigrp_feature_id is not None:
             pulumi.set(__self__, "service_routing_eigrp_feature_id", service_routing_eigrp_feature_id)
+        if version is not None:
+            pulumi.set(__self__, "version", version)
 
     @property
     @pulumi.getter(name="featureProfileId")
@@ -124,6 +128,18 @@ class _ServiceLanVpnFeatureAssociateRoutingEigrpFeatureState:
     def service_routing_eigrp_feature_id(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "service_routing_eigrp_feature_id", value)
 
+    @property
+    @pulumi.getter
+    def version(self) -> Optional[pulumi.Input[int]]:
+        """
+        The version of the object
+        """
+        return pulumi.get(self, "version")
+
+    @version.setter
+    def version(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "version", value)
+
 
 class ServiceLanVpnFeatureAssociateRoutingEigrpFeature(pulumi.CustomResource):
     @overload
@@ -152,8 +168,10 @@ class ServiceLanVpnFeatureAssociateRoutingEigrpFeature(pulumi.CustomResource):
 
         ## Import
 
+        Expected import identifier with the format: "service_lan_vpn_feature_associate_routing_eigrp_feature_id,feature_profile_id,service_lan_vpn_feature_id"
+
         ```sh
-        $ pulumi import sdwan:index/serviceLanVpnFeatureAssociateRoutingEigrpFeature:ServiceLanVpnFeatureAssociateRoutingEigrpFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+        $ pulumi import sdwan:index/serviceLanVpnFeatureAssociateRoutingEigrpFeature:ServiceLanVpnFeatureAssociateRoutingEigrpFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037"
         ```
 
         :param str resource_name: The name of the resource.
@@ -186,8 +204,10 @@ class ServiceLanVpnFeatureAssociateRoutingEigrpFeature(pulumi.CustomResource):
 
         ## Import
 
+        Expected import identifier with the format: "service_lan_vpn_feature_associate_routing_eigrp_feature_id,feature_profile_id,service_lan_vpn_feature_id"
+
         ```sh
-        $ pulumi import sdwan:index/serviceLanVpnFeatureAssociateRoutingEigrpFeature:ServiceLanVpnFeatureAssociateRoutingEigrpFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+        $ pulumi import sdwan:index/serviceLanVpnFeatureAssociateRoutingEigrpFeature:ServiceLanVpnFeatureAssociateRoutingEigrpFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037"
         ```
 
         :param str resource_name: The name of the resource.
@@ -226,6 +246,7 @@ class ServiceLanVpnFeatureAssociateRoutingEigrpFeature(pulumi.CustomResource):
             if service_routing_eigrp_feature_id is None and not opts.urn:
                 raise TypeError("Missing required property 'service_routing_eigrp_feature_id'")
             __props__.__dict__["service_routing_eigrp_feature_id"] = service_routing_eigrp_feature_id
+            __props__.__dict__["version"] = None
         super(ServiceLanVpnFeatureAssociateRoutingEigrpFeature, __self__).__init__(
             'sdwan:index/serviceLanVpnFeatureAssociateRoutingEigrpFeature:ServiceLanVpnFeatureAssociateRoutingEigrpFeature',
             resource_name,
@@ -238,7 +259,8 @@ class ServiceLanVpnFeatureAssociateRoutingEigrpFeature(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             feature_profile_id: Optional[pulumi.Input[str]] = None,
             service_lan_vpn_feature_id: Optional[pulumi.Input[str]] = None,
-            service_routing_eigrp_feature_id: Optional[pulumi.Input[str]] = None) -> 'ServiceLanVpnFeatureAssociateRoutingEigrpFeature':
+            service_routing_eigrp_feature_id: Optional[pulumi.Input[str]] = None,
+            version: Optional[pulumi.Input[int]] = None) -> 'ServiceLanVpnFeatureAssociateRoutingEigrpFeature':
         """
         Get an existing ServiceLanVpnFeatureAssociateRoutingEigrpFeature resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -249,6 +271,7 @@ class ServiceLanVpnFeatureAssociateRoutingEigrpFeature(pulumi.CustomResource):
         :param pulumi.Input[str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[str] service_lan_vpn_feature_id: Service LAN VPN Feature ID
         :param pulumi.Input[str] service_routing_eigrp_feature_id: Service Routing EIGRP Feature ID
+        :param pulumi.Input[int] version: The version of the object
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -257,6 +280,7 @@ class ServiceLanVpnFeatureAssociateRoutingEigrpFeature(pulumi.CustomResource):
         __props__.__dict__["feature_profile_id"] = feature_profile_id
         __props__.__dict__["service_lan_vpn_feature_id"] = service_lan_vpn_feature_id
         __props__.__dict__["service_routing_eigrp_feature_id"] = service_routing_eigrp_feature_id
+        __props__.__dict__["version"] = version
         return ServiceLanVpnFeatureAssociateRoutingEigrpFeature(resource_name, opts=opts, __props__=__props__)
 
     @property
@@ -282,4 +306,12 @@ class ServiceLanVpnFeatureAssociateRoutingEigrpFeature(pulumi.CustomResource):
         Service Routing EIGRP Feature ID
         """
         return pulumi.get(self, "service_routing_eigrp_feature_id")
+
+    @property
+    @pulumi.getter
+    def version(self) -> pulumi.Output[int]:
+        """
+        The version of the object
+        """
+        return pulumi.get(self, "version")
 

@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class TrafficDataPolicyDefinitionSequenceActionEntryNatParameter
     {
         /// <summary>
-        /// Fallback
+        /// Fallback, Attribute conditional on `type` being equal to `fallback`
         /// </summary>
         public readonly bool? Fallback;
         /// <summary>
@@ -23,7 +23,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string Type;
         /// <summary>
-        /// DSCP
+        /// DSCP, Attribute conditional on `type` being equal to `useVpn`
         /// </summary>
         public readonly int? VpnId;
 

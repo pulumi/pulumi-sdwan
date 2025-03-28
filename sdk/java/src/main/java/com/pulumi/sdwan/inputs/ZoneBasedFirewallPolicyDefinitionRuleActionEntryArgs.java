@@ -17,7 +17,7 @@ public final class ZoneBasedFirewallPolicyDefinitionRuleActionEntryArgs extends 
 
     /**
      * Type of action entry
-     *   - Choices: `log`, `connectionEvents`
+     *   - Choices: `log`, `connectionEvents`, `advancedInspectionProfile`
      * 
      */
     @Import(name="type")
@@ -25,7 +25,7 @@ public final class ZoneBasedFirewallPolicyDefinitionRuleActionEntryArgs extends 
 
     /**
      * @return Type of action entry
-     *   - Choices: `log`, `connectionEvents`
+     *   - Choices: `log`, `connectionEvents`, `advancedInspectionProfile`
      * 
      */
     public Optional<Output<String>> type() {
@@ -58,7 +58,7 @@ public final class ZoneBasedFirewallPolicyDefinitionRuleActionEntryArgs extends 
 
         /**
          * @param type Type of action entry
-         *   - Choices: `log`, `connectionEvents`
+         *   - Choices: `log`, `connectionEvents`, `advancedInspectionProfile`
          * 
          * @return builder
          * 
@@ -70,7 +70,7 @@ public final class ZoneBasedFirewallPolicyDefinitionRuleActionEntryArgs extends 
 
         /**
          * @param type Type of action entry
-         *   - Choices: `log`, `connectionEvents`
+         *   - Choices: `log`, `connectionEvents`, `advancedInspectionProfile`
          * 
          * @return builder
          * 

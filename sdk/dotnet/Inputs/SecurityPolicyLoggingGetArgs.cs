@@ -19,6 +19,12 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? ExternalSyslogServerIp { get; set; }
 
         /// <summary>
+        /// External Syslog Server Source Interface
+        /// </summary>
+        [Input("externalSyslogServerSourceInterface")]
+        public Input<string>? ExternalSyslogServerSourceInterface { get; set; }
+
+        /// <summary>
         /// External Syslog Server VPN
         /// </summary>
         [Input("externalSyslogServerVpn")]

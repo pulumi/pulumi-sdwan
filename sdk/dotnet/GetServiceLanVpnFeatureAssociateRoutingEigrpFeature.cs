@@ -163,6 +163,10 @@ namespace Pulumi.Sdwan
         /// Service Routing EIGRP Feature ID
         /// </summary>
         public readonly string ServiceRoutingEigrpFeatureId;
+        /// <summary>
+        /// The version of the object
+        /// </summary>
+        public readonly int Version;
 
         [OutputConstructor]
         private GetServiceLanVpnFeatureAssociateRoutingEigrpFeatureResult(
@@ -172,12 +176,15 @@ namespace Pulumi.Sdwan
 
             string serviceLanVpnFeatureId,
 
-            string serviceRoutingEigrpFeatureId)
+            string serviceRoutingEigrpFeatureId,
+
+            int version)
         {
             FeatureProfileId = featureProfileId;
             Id = id;
             ServiceLanVpnFeatureId = serviceLanVpnFeatureId;
             ServiceRoutingEigrpFeatureId = serviceRoutingEigrpFeatureId;
+            Version = version;
         }
     }
 }

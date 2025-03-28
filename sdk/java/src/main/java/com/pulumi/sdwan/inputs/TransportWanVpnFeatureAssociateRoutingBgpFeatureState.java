@@ -5,6 +5,7 @@ package com.pulumi.sdwan.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -60,12 +61,28 @@ public final class TransportWanVpnFeatureAssociateRoutingBgpFeatureState extends
         return Optional.ofNullable(this.transportWanVpnFeatureId);
     }
 
+    /**
+     * The version of the object
+     * 
+     */
+    @Import(name="version")
+    private @Nullable Output<Integer> version;
+
+    /**
+     * @return The version of the object
+     * 
+     */
+    public Optional<Output<Integer>> version() {
+        return Optional.ofNullable(this.version);
+    }
+
     private TransportWanVpnFeatureAssociateRoutingBgpFeatureState() {}
 
     private TransportWanVpnFeatureAssociateRoutingBgpFeatureState(TransportWanVpnFeatureAssociateRoutingBgpFeatureState $) {
         this.featureProfileId = $.featureProfileId;
         this.transportRoutingBgpFeatureId = $.transportRoutingBgpFeatureId;
         this.transportWanVpnFeatureId = $.transportWanVpnFeatureId;
+        this.version = $.version;
     }
 
     public static Builder builder() {
@@ -147,6 +164,27 @@ public final class TransportWanVpnFeatureAssociateRoutingBgpFeatureState extends
          */
         public Builder transportWanVpnFeatureId(String transportWanVpnFeatureId) {
             return transportWanVpnFeatureId(Output.of(transportWanVpnFeatureId));
+        }
+
+        /**
+         * @param version The version of the object
+         * 
+         * @return builder
+         * 
+         */
+        public Builder version(@Nullable Output<Integer> version) {
+            $.version = version;
+            return this;
+        }
+
+        /**
+         * @param version The version of the object
+         * 
+         * @return builder
+         * 
+         */
+        public Builder version(Integer version) {
+            return version(Output.of(version));
         }
 
         public TransportWanVpnFeatureAssociateRoutingBgpFeatureState build() {

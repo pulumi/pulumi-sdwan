@@ -14,12 +14,12 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class CustomControlTopologyPolicyDefinitionSequenceMatchEntry
     {
         /// <summary>
-        /// Carrier
+        /// Carrier, Attribute conditional on `type` being equal to `carrier`
         ///   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
         /// </summary>
         public readonly string? Carrier;
         /// <summary>
-        /// Color list ID
+        /// Color list ID, Attribute conditional on `type` being equal to `colorList`
         /// </summary>
         public readonly string? ColorListId;
         /// <summary>
@@ -27,7 +27,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? ColorListVersion;
         /// <summary>
-        /// Community list ID
+        /// Community list ID, Attribute conditional on `type` being equal to `community`
         /// </summary>
         public readonly string? CommunityListId;
         /// <summary>
@@ -35,12 +35,12 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? CommunityListVersion;
         /// <summary>
-        /// Domain ID
+        /// Domain ID, Attribute conditional on `type` being equal to `domainId`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         public readonly int? DomainId;
         /// <summary>
-        /// Expanded community list ID
+        /// Expanded community list ID, Attribute conditional on `type` being equal to `expandedCommunity`
         /// </summary>
         public readonly string? ExpandedCommunityListId;
         /// <summary>
@@ -48,36 +48,36 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? ExpandedCommunityListVersion;
         /// <summary>
-        /// Group ID
+        /// Group ID, Attribute conditional on `type` being equal to `groupId`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         public readonly int? GroupId;
         /// <summary>
-        /// OMP tag
+        /// OMP tag, Attribute conditional on `type` being equal to `ompTag`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         public readonly int? OmpTag;
         /// <summary>
-        /// Origin
+        /// Origin, Attribute conditional on `type` being equal to `origin`
         ///   - Choices: `igp`, `egp`, `incomplete`, `aggregrate`, `bgp`, `bgp-external`, `bgp-internal`, `connected`, `eigrp`, `ospf`, `ospf-inter-area`, `ospf-intra-area`, `ospf-external1`, `ospf-external2`, `rip`, `static`, `eigrp-summary`, `eigrp-internal`, `eigrp-external`, `lisp`, `nat-dia`, `natpool`, `isis`, `isis-level1`, `isis-level2`
         /// </summary>
         public readonly string? Origin;
         /// <summary>
-        /// Originator IP
+        /// Originator IP, Attribute conditional on `type` being equal to `originator`
         /// </summary>
         public readonly string? Originator;
         /// <summary>
-        /// Path type
+        /// Path type, Attribute conditional on `type` being equal to `pathType`
         ///   - Choices: `hierarchical-path`, `direct-path`, `transport-gateway-path`
         /// </summary>
         public readonly string? PathType;
         /// <summary>
-        /// Preference
+        /// Preference, Attribute conditional on `type` being equal to `preference`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         public readonly int? Preference;
         /// <summary>
-        /// Prefix list ID
+        /// Prefix list ID, Attribute conditional on `type` being equal to `prefixList`
         /// </summary>
         public readonly string? PrefixListId;
         /// <summary>
@@ -85,12 +85,12 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? PrefixListVersion;
         /// <summary>
-        /// Site ID
+        /// Site ID, Attribute conditional on `type` being equal to `siteId`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         public readonly int? SiteId;
         /// <summary>
-        /// Site list ID
+        /// Site list ID, Attribute conditional on `type` being equal to `siteList`
         /// </summary>
         public readonly string? SiteListId;
         /// <summary>
@@ -98,20 +98,20 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? SiteListVersion;
         /// <summary>
-        /// TLOC color
+        /// TLOC color, Attribute conditional on `type` being equal to `tloc`
         /// </summary>
         public readonly string? TlocColor;
         /// <summary>
-        /// TLOC encapsulation
+        /// TLOC encapsulation, Attribute conditional on `type` being equal to `tloc`
         ///   - Choices: `ipsec`, `gre`
         /// </summary>
         public readonly string? TlocEncapsulation;
         /// <summary>
-        /// TLOC IP address
+        /// TLOC IP address, Attribute conditional on `type` being equal to `tloc`
         /// </summary>
         public readonly string? TlocIp;
         /// <summary>
-        /// TLOC list ID
+        /// TLOC list ID, Attribute conditional on `type` being equal to `tlocList`
         /// </summary>
         public readonly string? TlocListId;
         /// <summary>
@@ -124,12 +124,12 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string Type;
         /// <summary>
-        /// VPN ID
+        /// VPN ID, Attribute conditional on `type` being equal to `vpn`
         ///   - Range: `0`-`65536`
         /// </summary>
         public readonly int? VpnId;
         /// <summary>
-        /// VPN list ID
+        /// VPN list ID, Attribute conditional on `type` being equal to `vpnList`
         /// </summary>
         public readonly string? VpnListId;
         /// <summary>

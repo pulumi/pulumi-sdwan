@@ -10,6 +10,8 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.sdwan.IntrusionPreventionPolicyDefinitionArgs;
 import com.pulumi.sdwan.Utilities;
 import com.pulumi.sdwan.inputs.IntrusionPreventionPolicyDefinitionState;
+import com.pulumi.sdwan.outputs.IntrusionPreventionPolicyDefinitionLogging;
+import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -31,6 +33,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.core.Output;
  * import com.pulumi.sdwan.IntrusionPreventionPolicyDefinition;
  * import com.pulumi.sdwan.IntrusionPreventionPolicyDefinitionArgs;
+ * import com.pulumi.sdwan.inputs.IntrusionPreventionPolicyDefinitionLoggingArgs;
  * import java.util.List;
  * import java.util.ArrayList;
  * import java.util.Map;
@@ -50,8 +53,13 @@ import javax.annotation.Nullable;
  *             .mode("security")
  *             .inspectionMode("protection")
  *             .logLevel("alert")
+ *             .customSignature(false)
  *             .signatureSet("connectivity")
  *             .targetVpns("1")
+ *             .loggings(IntrusionPreventionPolicyDefinitionLoggingArgs.builder()
+ *                 .external_syslog_server_ip("10.0.0.1")
+ *                 .external_syslog_server_vpn("123")
+ *                 .build())
  *             .build());
  * 
  *     }
@@ -69,6 +77,20 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="sdwan:index/intrusionPreventionPolicyDefinition:IntrusionPreventionPolicyDefinition")
 public class IntrusionPreventionPolicyDefinition extends com.pulumi.resources.CustomResource {
+    /**
+     * Custom signature
+     * 
+     */
+    @Export(name="customSignature", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> customSignature;
+
+    /**
+     * @return Custom signature
+     * 
+     */
+    public Output<Optional<Boolean>> customSignature() {
+        return Codegen.optional(this.customSignature);
+    }
     /**
      * The description of the policy definition
      * 
@@ -138,6 +160,12 @@ public class IntrusionPreventionPolicyDefinition extends com.pulumi.resources.Cu
      */
     public Output<Optional<String>> logLevel() {
         return Codegen.optional(this.logLevel);
+    }
+    @Export(name="loggings", refs={List.class,IntrusionPreventionPolicyDefinitionLogging.class}, tree="[0,1]")
+    private Output</* @Nullable */ List<IntrusionPreventionPolicyDefinitionLogging>> loggings;
+
+    public Output<Optional<List<IntrusionPreventionPolicyDefinitionLogging>>> loggings() {
+        return Codegen.optional(this.loggings);
     }
     /**
      * The policy mode - Choices: `security`, `unified`

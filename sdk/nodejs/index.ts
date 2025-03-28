@@ -285,6 +285,11 @@ export type DnsSecurityFeatureProfile = import("./dnsSecurityFeatureProfile").Dn
 export const DnsSecurityFeatureProfile: typeof import("./dnsSecurityFeatureProfile").DnsSecurityFeatureProfile = null as any;
 utilities.lazyLoad(exports, ["DnsSecurityFeatureProfile"], () => require("./dnsSecurityFeatureProfile"));
 
+export { DnsSecurityPolicyArgs, DnsSecurityPolicyState } from "./dnsSecurityPolicy";
+export type DnsSecurityPolicy = import("./dnsSecurityPolicy").DnsSecurityPolicy;
+export const DnsSecurityPolicy: typeof import("./dnsSecurityPolicy").DnsSecurityPolicy = null as any;
+utilities.lazyLoad(exports, ["DnsSecurityPolicy"], () => require("./dnsSecurityPolicy"));
+
 export { DnsSecurityPolicyDefinitionArgs, DnsSecurityPolicyDefinitionState } from "./dnsSecurityPolicyDefinition";
 export type DnsSecurityPolicyDefinition = import("./dnsSecurityPolicyDefinition").DnsSecurityPolicyDefinition;
 export const DnsSecurityPolicyDefinition: typeof import("./dnsSecurityPolicyDefinition").DnsSecurityPolicyDefinition = null as any;
@@ -599,6 +604,11 @@ export { GetDnsSecurityFeatureProfileArgs, GetDnsSecurityFeatureProfileResult, G
 export const getDnsSecurityFeatureProfile: typeof import("./getDnsSecurityFeatureProfile").getDnsSecurityFeatureProfile = null as any;
 export const getDnsSecurityFeatureProfileOutput: typeof import("./getDnsSecurityFeatureProfile").getDnsSecurityFeatureProfileOutput = null as any;
 utilities.lazyLoad(exports, ["getDnsSecurityFeatureProfile","getDnsSecurityFeatureProfileOutput"], () => require("./getDnsSecurityFeatureProfile"));
+
+export { GetDnsSecurityPolicyArgs, GetDnsSecurityPolicyResult, GetDnsSecurityPolicyOutputArgs } from "./getDnsSecurityPolicy";
+export const getDnsSecurityPolicy: typeof import("./getDnsSecurityPolicy").getDnsSecurityPolicy = null as any;
+export const getDnsSecurityPolicyOutput: typeof import("./getDnsSecurityPolicy").getDnsSecurityPolicyOutput = null as any;
+utilities.lazyLoad(exports, ["getDnsSecurityPolicy","getDnsSecurityPolicyOutput"], () => require("./getDnsSecurityPolicy"));
 
 export { GetDnsSecurityPolicyDefinitionArgs, GetDnsSecurityPolicyDefinitionResult, GetDnsSecurityPolicyDefinitionOutputArgs } from "./getDnsSecurityPolicyDefinition";
 export const getDnsSecurityPolicyDefinition: typeof import("./getDnsSecurityPolicyDefinition").getDnsSecurityPolicyDefinition = null as any;
@@ -1209,6 +1219,11 @@ export { GetSystemSnmpFeatureArgs, GetSystemSnmpFeatureResult, GetSystemSnmpFeat
 export const getSystemSnmpFeature: typeof import("./getSystemSnmpFeature").getSystemSnmpFeature = null as any;
 export const getSystemSnmpFeatureOutput: typeof import("./getSystemSnmpFeature").getSystemSnmpFeatureOutput = null as any;
 utilities.lazyLoad(exports, ["getSystemSnmpFeature","getSystemSnmpFeatureOutput"], () => require("./getSystemSnmpFeature"));
+
+export { GetTagArgs, GetTagResult, GetTagOutputArgs } from "./getTag";
+export const getTag: typeof import("./getTag").getTag = null as any;
+export const getTagOutput: typeof import("./getTag").getTagOutput = null as any;
+utilities.lazyLoad(exports, ["getTag","getTagOutput"], () => require("./getTag"));
 
 export { GetTlocListPolicyObjectArgs, GetTlocListPolicyObjectResult, GetTlocListPolicyObjectOutputArgs } from "./getTlocListPolicyObject";
 export const getTlocListPolicyObject: typeof import("./getTlocListPolicyObject").getTlocListPolicyObject = null as any;
@@ -2055,6 +2070,11 @@ export type SystemSnmpFeature = import("./systemSnmpFeature").SystemSnmpFeature;
 export const SystemSnmpFeature: typeof import("./systemSnmpFeature").SystemSnmpFeature = null as any;
 utilities.lazyLoad(exports, ["SystemSnmpFeature"], () => require("./systemSnmpFeature"));
 
+export { TagArgs, TagState } from "./tag";
+export type Tag = import("./tag").Tag;
+export const Tag: typeof import("./tag").Tag = null as any;
+utilities.lazyLoad(exports, ["Tag"], () => require("./tag"));
+
 export { TlocListPolicyObjectArgs, TlocListPolicyObjectState } from "./tlocListPolicyObject";
 export type TlocListPolicyObject = import("./tlocListPolicyObject").TlocListPolicyObject;
 export const TlocListPolicyObject: typeof import("./tlocListPolicyObject").TlocListPolicyObject = null as any;
@@ -2446,6 +2466,8 @@ const _module = {
                 return new DataIpv6PrefixListPolicyObject(name, <any>undefined, { urn })
             case "sdwan:index/dnsSecurityFeatureProfile:DnsSecurityFeatureProfile":
                 return new DnsSecurityFeatureProfile(name, <any>undefined, { urn })
+            case "sdwan:index/dnsSecurityPolicy:DnsSecurityPolicy":
+                return new DnsSecurityPolicy(name, <any>undefined, { urn })
             case "sdwan:index/dnsSecurityPolicyDefinition:DnsSecurityPolicyDefinition":
                 return new DnsSecurityPolicyDefinition(name, <any>undefined, { urn })
             case "sdwan:index/domainListPolicyObject:DomainListPolicyObject":
@@ -2690,6 +2712,8 @@ const _module = {
                 return new SystemSecurityFeature(name, <any>undefined, { urn })
             case "sdwan:index/systemSnmpFeature:SystemSnmpFeature":
                 return new SystemSnmpFeature(name, <any>undefined, { urn })
+            case "sdwan:index/tag:Tag":
+                return new Tag(name, <any>undefined, { urn })
             case "sdwan:index/tlocListPolicyObject:TlocListPolicyObject":
                 return new TlocListPolicyObject(name, <any>undefined, { urn })
             case "sdwan:index/tlsSslDecryptionPolicyDefinition:TlsSslDecryptionPolicyDefinition":
@@ -2857,6 +2881,7 @@ pulumi.runtime.registerResourceModule("sdwan", "index/dataFqdnPrefixListPolicyOb
 pulumi.runtime.registerResourceModule("sdwan", "index/dataIpv4PrefixListPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/dataIpv6PrefixListPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/dnsSecurityFeatureProfile", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/dnsSecurityPolicy", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/dnsSecurityPolicyDefinition", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/domainListPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/eigrpFeatureTemplate", _module)
@@ -2979,6 +3004,7 @@ pulumi.runtime.registerResourceModule("sdwan", "index/systemPerformanceMonitorin
 pulumi.runtime.registerResourceModule("sdwan", "index/systemRemoteAccessFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/systemSecurityFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/systemSnmpFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/tag", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/tlocListPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/tlsSslDecryptionPolicyDefinition", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/tlsSslProfilePolicyDefinition", _module)

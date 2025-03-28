@@ -13,7 +13,7 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class RoutePolicyDefinitionSequenceMatchEntryGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// AS path list ID
+        /// AS path list ID, Attribute conditional on `type` being equal to `asPath`
         /// </summary>
         [Input("asPathListId")]
         public Input<string>? AsPathListId { get; set; }
@@ -28,7 +28,7 @@ namespace Pulumi.Sdwan.Inputs
         private InputList<string>? _communityListIds;
 
         /// <summary>
-        /// Community list IDs
+        /// Community list IDs, Attribute conditional on `type` being equal to `advancedCommunity`
         /// </summary>
         public InputList<string> CommunityListIds
         {
@@ -37,7 +37,7 @@ namespace Pulumi.Sdwan.Inputs
         }
 
         /// <summary>
-        /// Community list match flag
+        /// Community list match flag, Attribute conditional on `type` being equal to `advancedCommunity`
         ///   - Choices: `and`, `or`, `exact`
         /// </summary>
         [Input("communityListMatchFlag")]
@@ -56,7 +56,7 @@ namespace Pulumi.Sdwan.Inputs
         }
 
         /// <summary>
-        /// Expanded community list ID
+        /// Expanded community list ID, Attribute conditional on `type` being equal to `expandedCommunity`
         /// </summary>
         [Input("expandedCommunityListId")]
         public Input<string>? ExpandedCommunityListId { get; set; }
@@ -68,7 +68,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? ExpandedCommunityListVersion { get; set; }
 
         /// <summary>
-        /// Extended community list ID
+        /// Extended community list ID, Attribute conditional on `type` being equal to `extCommunity`
         /// </summary>
         [Input("extendedCommunityListId")]
         public Input<string>? ExtendedCommunityListId { get; set; }
@@ -80,21 +80,21 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? ExtendedCommunityListVersion { get; set; }
 
         /// <summary>
-        /// Local preference
+        /// Local preference, Attribute conditional on `type` being equal to `localPreference`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         [Input("localPreference")]
         public Input<int>? LocalPreference { get; set; }
 
         /// <summary>
-        /// Metric
+        /// Metric, Attribute conditional on `type` being equal to `metric`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         [Input("metric")]
         public Input<int>? Metric { get; set; }
 
         /// <summary>
-        /// Next hop prefix list ID
+        /// Next hop prefix list ID, Attribute conditional on `type` being equal to `nextHop`
         /// </summary>
         [Input("nextHopPrefixListId")]
         public Input<string>? NextHopPrefixListId { get; set; }
@@ -106,34 +106,34 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? NextHopPrefixListVersion { get; set; }
 
         /// <summary>
-        /// OMP tag
+        /// OMP tag, Attribute conditional on `type` being equal to `ompTag`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         [Input("ompTag")]
         public Input<int>? OmpTag { get; set; }
 
         /// <summary>
-        /// Origin
+        /// Origin, Attribute conditional on `type` being equal to `origin`
         ///   - Choices: `igp`, `egp`, `incomplete`
         /// </summary>
         [Input("origin")]
         public Input<string>? Origin { get; set; }
 
         /// <summary>
-        /// OSPF tag
+        /// OSPF tag, Attribute conditional on `type` being equal to `ospfTag`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         [Input("ospfTag")]
         public Input<int>? OspfTag { get; set; }
 
         /// <summary>
-        /// Peer IP
+        /// Peer IP, Attribute conditional on `type` being equal to `peer`
         /// </summary>
         [Input("peer")]
         public Input<string>? Peer { get; set; }
 
         /// <summary>
-        /// Prefix list ID
+        /// Prefix list ID, Attribute conditional on `type` being equal to `address`
         /// </summary>
         [Input("prefixListId")]
         public Input<string>? PrefixListId { get; set; }

@@ -10,6 +10,7 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.sdwan.ServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureArgs;
 import com.pulumi.sdwan.Utilities;
 import com.pulumi.sdwan.inputs.ServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureState;
+import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -57,8 +58,10 @@ import javax.annotation.Nullable;
  * 
  * ## Import
  * 
+ * Expected import identifier with the format: &#34;service_lan_vpn_interface_ethernet_feature_associate_dhcp_server_feature_id,feature_profile_id,service_lan_vpn_feature_id,service_lan_vpn_interface_ethernet_feature_id&#34;
+ * 
  * ```sh
- * $ pulumi import sdwan:index/serviceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature:ServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature example &#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;
+ * $ pulumi import sdwan:index/serviceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature:ServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature example &#34;f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037,140331f6-5418-4755-a059-13c77eb96037&#34;
  * ```
  * 
  */
@@ -119,6 +122,20 @@ public class ServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature ext
      */
     public Output<String> serviceLanVpnInterfaceEthernetFeatureId() {
         return this.serviceLanVpnInterfaceEthernetFeatureId;
+    }
+    /**
+     * The version of the object
+     * 
+     */
+    @Export(name="version", refs={Integer.class}, tree="[0]")
+    private Output<Integer> version;
+
+    /**
+     * @return The version of the object
+     * 
+     */
+    public Output<Integer> version() {
+        return this.version;
     }
 
     /**

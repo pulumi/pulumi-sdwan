@@ -2,30 +2,12 @@
 // *** Do not edit by hand unless you're certain you know what you are doing! ***
 
 import * as pulumi from "@pulumi/pulumi";
+import * as inputs from "./types/input";
+import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
  * This resource can manage a URL Filtering Policy Definition .
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as sdwan from "@pulumi/sdwan";
- *
- * const example = new sdwan.UrlFilteringPolicyDefinition("example", {
- *     name: "Example",
- *     description: "My description",
- *     mode: "security",
- *     alerts: ["blacklist"],
- *     webCategories: ["alcohol-and-tobacco"],
- *     webCategoriesAction: "allow",
- *     webReputation: "moderate-risk",
- *     targetVpns: ["1"],
- *     blockPageAction: "text",
- *     blockPageContents: "Access to the requested page has been denied. Please contact your Network Administrator",
- * });
- * ```
  *
  * ## Import
  *
@@ -93,6 +75,7 @@ export class UrlFilteringPolicyDefinition extends pulumi.CustomResource {
      * The description of the policy definition.
      */
     public readonly description!: pulumi.Output<string>;
+    public readonly loggings!: pulumi.Output<outputs.UrlFilteringPolicyDefinitionLogging[] | undefined>;
     /**
      * The policy mode - Choices: `security`, `unified`
      */
@@ -144,6 +127,7 @@ export class UrlFilteringPolicyDefinition extends pulumi.CustomResource {
             resourceInputs["blockUrlListId"] = state ? state.blockUrlListId : undefined;
             resourceInputs["blockUrlListVersion"] = state ? state.blockUrlListVersion : undefined;
             resourceInputs["description"] = state ? state.description : undefined;
+            resourceInputs["loggings"] = state ? state.loggings : undefined;
             resourceInputs["mode"] = state ? state.mode : undefined;
             resourceInputs["name"] = state ? state.name : undefined;
             resourceInputs["targetVpns"] = state ? state.targetVpns : undefined;
@@ -164,6 +148,7 @@ export class UrlFilteringPolicyDefinition extends pulumi.CustomResource {
             resourceInputs["blockUrlListId"] = args ? args.blockUrlListId : undefined;
             resourceInputs["blockUrlListVersion"] = args ? args.blockUrlListVersion : undefined;
             resourceInputs["description"] = args ? args.description : undefined;
+            resourceInputs["loggings"] = args ? args.loggings : undefined;
             resourceInputs["mode"] = args ? args.mode : undefined;
             resourceInputs["name"] = args ? args.name : undefined;
             resourceInputs["targetVpns"] = args ? args.targetVpns : undefined;
@@ -213,6 +198,7 @@ export interface UrlFilteringPolicyDefinitionState {
      * The description of the policy definition.
      */
     description?: pulumi.Input<string>;
+    loggings?: pulumi.Input<pulumi.Input<inputs.UrlFilteringPolicyDefinitionLogging>[]>;
     /**
      * The policy mode - Choices: `security`, `unified`
      */
@@ -280,6 +266,7 @@ export interface UrlFilteringPolicyDefinitionArgs {
      * The description of the policy definition.
      */
     description: pulumi.Input<string>;
+    loggings?: pulumi.Input<pulumi.Input<inputs.UrlFilteringPolicyDefinitionLogging>[]>;
     /**
      * The policy mode - Choices: `security`, `unified`
      */

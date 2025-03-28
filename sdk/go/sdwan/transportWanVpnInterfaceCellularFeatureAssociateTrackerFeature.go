@@ -46,8 +46,10 @@ import (
 //
 // ## Import
 //
+// Expected import identifier with the format: "transport_wan_vpn_interface_cellular_feature_associate_tracker_feature_id,feature_profile_id,transport_wan_vpn_feature_id,transport_wan_vpn_interface_cellular_feature_id"
+//
 // ```sh
-// $ pulumi import sdwan:index/transportWanVpnInterfaceCellularFeatureAssociateTrackerFeature:TransportWanVpnInterfaceCellularFeatureAssociateTrackerFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+// $ pulumi import sdwan:index/transportWanVpnInterfaceCellularFeatureAssociateTrackerFeature:TransportWanVpnInterfaceCellularFeatureAssociateTrackerFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037,140331f6-5418-4755-a059-13c77eb96037"
 // ```
 type TransportWanVpnInterfaceCellularFeatureAssociateTrackerFeature struct {
 	pulumi.CustomResourceState
@@ -60,6 +62,8 @@ type TransportWanVpnInterfaceCellularFeatureAssociateTrackerFeature struct {
 	TransportWanVpnFeatureId pulumi.StringOutput `pulumi:"transportWanVpnFeatureId"`
 	// Transport WAN VPN Interface Cellular Feature ID
 	TransportWanVpnInterfaceCellularFeatureId pulumi.StringOutput `pulumi:"transportWanVpnInterfaceCellularFeatureId"`
+	// The version of the object
+	Version pulumi.IntOutput `pulumi:"version"`
 }
 
 // NewTransportWanVpnInterfaceCellularFeatureAssociateTrackerFeature registers a new resource with the given unique name, arguments, and options.
@@ -112,6 +116,8 @@ type transportWanVpnInterfaceCellularFeatureAssociateTrackerFeatureState struct 
 	TransportWanVpnFeatureId *string `pulumi:"transportWanVpnFeatureId"`
 	// Transport WAN VPN Interface Cellular Feature ID
 	TransportWanVpnInterfaceCellularFeatureId *string `pulumi:"transportWanVpnInterfaceCellularFeatureId"`
+	// The version of the object
+	Version *int `pulumi:"version"`
 }
 
 type TransportWanVpnInterfaceCellularFeatureAssociateTrackerFeatureState struct {
@@ -123,6 +129,8 @@ type TransportWanVpnInterfaceCellularFeatureAssociateTrackerFeatureState struct 
 	TransportWanVpnFeatureId pulumi.StringPtrInput
 	// Transport WAN VPN Interface Cellular Feature ID
 	TransportWanVpnInterfaceCellularFeatureId pulumi.StringPtrInput
+	// The version of the object
+	Version pulumi.IntPtrInput
 }
 
 func (TransportWanVpnInterfaceCellularFeatureAssociateTrackerFeatureState) ElementType() reflect.Type {
@@ -265,6 +273,13 @@ func (o TransportWanVpnInterfaceCellularFeatureAssociateTrackerFeatureOutput) Tr
 	return o.ApplyT(func(v *TransportWanVpnInterfaceCellularFeatureAssociateTrackerFeature) pulumi.StringOutput {
 		return v.TransportWanVpnInterfaceCellularFeatureId
 	}).(pulumi.StringOutput)
+}
+
+// The version of the object
+func (o TransportWanVpnInterfaceCellularFeatureAssociateTrackerFeatureOutput) Version() pulumi.IntOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceCellularFeatureAssociateTrackerFeature) pulumi.IntOutput {
+		return v.Version
+	}).(pulumi.IntOutput)
 }
 
 type TransportWanVpnInterfaceCellularFeatureAssociateTrackerFeatureArrayOutput struct{ *pulumi.OutputState }

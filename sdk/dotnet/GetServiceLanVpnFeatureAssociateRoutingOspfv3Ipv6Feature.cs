@@ -163,6 +163,10 @@ namespace Pulumi.Sdwan
         /// Service Routing OSPFv3 IPv6 Feature ID
         /// </summary>
         public readonly string ServiceRoutingOspfv3Ipv6FeatureId;
+        /// <summary>
+        /// The version of the object
+        /// </summary>
+        public readonly int Version;
 
         [OutputConstructor]
         private GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureResult(
@@ -172,12 +176,15 @@ namespace Pulumi.Sdwan
 
             string serviceLanVpnFeatureId,
 
-            string serviceRoutingOspfv3Ipv6FeatureId)
+            string serviceRoutingOspfv3Ipv6FeatureId,
+
+            int version)
         {
             FeatureProfileId = featureProfileId;
             Id = id;
             ServiceLanVpnFeatureId = serviceLanVpnFeatureId;
             ServiceRoutingOspfv3Ipv6FeatureId = serviceRoutingOspfv3Ipv6FeatureId;
+            Version = version;
         }
     }
 }

@@ -70,6 +70,8 @@ type LookupServiceLanVpnFeatureAssociateMulticastFeatureResult struct {
 	ServiceLanVpnFeatureId string `pulumi:"serviceLanVpnFeatureId"`
 	// Service Multicast Feature ID
 	ServiceMulticastFeatureId string `pulumi:"serviceMulticastFeatureId"`
+	// The version of the object
+	Version int `pulumi:"version"`
 }
 
 func LookupServiceLanVpnFeatureAssociateMulticastFeatureOutput(ctx *pulumi.Context, args LookupServiceLanVpnFeatureAssociateMulticastFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupServiceLanVpnFeatureAssociateMulticastFeatureResultOutput {
@@ -132,6 +134,11 @@ func (o LookupServiceLanVpnFeatureAssociateMulticastFeatureResultOutput) Service
 	return o.ApplyT(func(v LookupServiceLanVpnFeatureAssociateMulticastFeatureResult) string {
 		return v.ServiceMulticastFeatureId
 	}).(pulumi.StringOutput)
+}
+
+// The version of the object
+func (o LookupServiceLanVpnFeatureAssociateMulticastFeatureResultOutput) Version() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupServiceLanVpnFeatureAssociateMulticastFeatureResult) int { return v.Version }).(pulumi.IntOutput)
 }
 
 func init() {

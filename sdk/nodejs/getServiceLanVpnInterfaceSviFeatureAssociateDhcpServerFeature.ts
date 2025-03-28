@@ -77,6 +77,10 @@ export interface GetServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeatureRe
      * Service LAN VPN Interface SVI Feature ID
      */
     readonly serviceLanVpnInterfaceSviFeatureId: string;
+    /**
+     * The version of the object
+     */
+    readonly version: number;
 }
 /**
  * This data source can read the Service LAN VPN Interface SVI Feature Associate DHCP Server Feature .

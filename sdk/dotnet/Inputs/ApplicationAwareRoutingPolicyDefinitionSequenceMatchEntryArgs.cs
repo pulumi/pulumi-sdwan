@@ -13,7 +13,7 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntryArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Application list ID
+        /// Application list ID, Attribute conditional on `type` being equal to `appList`
         /// </summary>
         [Input("applicationListId")]
         public Input<string>? ApplicationListId { get; set; }
@@ -25,7 +25,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? ApplicationListVersion { get; set; }
 
         /// <summary>
-        /// Destination Data Prefix list ID
+        /// Destination Data Prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
         /// </summary>
         [Input("destinationDataPrefixListId")]
         public Input<string>? DestinationDataPrefixListId { get; set; }
@@ -37,33 +37,33 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? DestinationDataPrefixListVersion { get; set; }
 
         /// <summary>
-        /// Destination IP
+        /// Destination IP, Attribute conditional on `type` being equal to `destinationIp`
         /// </summary>
         [Input("destinationIp")]
         public Input<string>? DestinationIp { get; set; }
 
         /// <summary>
-        /// Destination port, 0-65535 (Single value, range or multiple values separated by spaces)
+        /// Destination port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `type` being equal to `destinationPort`
         /// </summary>
         [Input("destinationPort")]
         public Input<string>? DestinationPort { get; set; }
 
         /// <summary>
-        /// Destination region
+        /// Destination region, Attribute conditional on `type` being equal to `destinationRegion`
         ///   - Choices: `primary-region`, `secondary-region`, `other-region`
         /// </summary>
         [Input("destinationRegion")]
         public Input<string>? DestinationRegion { get; set; }
 
         /// <summary>
-        /// DNS request or response
+        /// DNS request or response, Attribute conditional on `type` being equal to `dns`
         ///   - Choices: `request`, `response`
         /// </summary>
         [Input("dns")]
         public Input<string>? Dns { get; set; }
 
         /// <summary>
-        /// DNS Application list ID
+        /// DNS Application list ID, Attribute conditional on `type` being equal to `dnsAppList`
         /// </summary>
         [Input("dnsApplicationListId")]
         public Input<string>? DnsApplicationListId { get; set; }
@@ -75,33 +75,33 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? DnsApplicationListVersion { get; set; }
 
         /// <summary>
-        /// DSCP value
+        /// DSCP value, Attribute conditional on `type` being equal to `dscp`
         ///   - Range: `0`-`63`
         /// </summary>
         [Input("dscp")]
         public Input<int>? Dscp { get; set; }
 
         /// <summary>
-        /// ICMP Message
+        /// ICMP Message, Attribute conditional on `type` being equal to `icmpMessage`
         /// </summary>
         [Input("icmpMessage")]
         public Input<string>? IcmpMessage { get; set; }
 
         /// <summary>
-        /// PLP
+        /// PLP, Attribute conditional on `type` being equal to `plp`
         ///   - Choices: `low`, `high`
         /// </summary>
         [Input("plp")]
         public Input<string>? Plp { get; set; }
 
         /// <summary>
-        /// IP Protocol, 0-255 (Single value or multiple values separated by spaces)
+        /// IP Protocol, 0-255 (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `protocol`
         /// </summary>
         [Input("protocol")]
         public Input<string>? Protocol { get; set; }
 
         /// <summary>
-        /// Source Data Prefix list ID
+        /// Source Data Prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
         /// </summary>
         [Input("sourceDataPrefixListId")]
         public Input<string>? SourceDataPrefixListId { get; set; }
@@ -113,19 +113,19 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? SourceDataPrefixListVersion { get; set; }
 
         /// <summary>
-        /// Source IP
+        /// Source IP, Attribute conditional on `type` being equal to `sourceIp`
         /// </summary>
         [Input("sourceIp")]
         public Input<string>? SourceIp { get; set; }
 
         /// <summary>
-        /// Source port, 0-65535 (Single value, range or multiple values separated by spaces)
+        /// Source port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `type` being equal to `sourcePort`
         /// </summary>
         [Input("sourcePort")]
         public Input<string>? SourcePort { get; set; }
 
         /// <summary>
-        /// Traffic to
+        /// Traffic to, Attribute conditional on `type` being equal to `trafficTo`
         ///   - Choices: `access`, `core`, `service`
         /// </summary>
         [Input("trafficTo")]

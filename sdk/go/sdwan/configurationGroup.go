@@ -33,10 +33,8 @@ import (
 //				Name:        pulumi.String("CG_1"),
 //				Description: pulumi.String("My config group 1"),
 //				Solution:    pulumi.String("sdwan"),
-//				FeatureProfiles: sdwan.ConfigurationGroupFeatureProfileArray{
-//					&sdwan.ConfigurationGroupFeatureProfileArgs{
-//						Id: pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
-//					},
+//				FeatureProfileIds: pulumi.StringArray{
+//					pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
 //				},
 //				Devices: sdwan.ConfigurationGroupDeviceArray{
 //					&sdwan.ConfigurationGroupDeviceArgs{
@@ -71,8 +69,8 @@ type ConfigurationGroup struct {
 	Description pulumi.StringOutput `pulumi:"description"`
 	// List of devices
 	Devices ConfigurationGroupDeviceArrayOutput `pulumi:"devices"`
-	// List of feature profiles
-	FeatureProfiles ConfigurationGroupFeatureProfileArrayOutput `pulumi:"featureProfiles"`
+	// List of feature profile IDs
+	FeatureProfileIds pulumi.StringArrayOutput `pulumi:"featureProfileIds"`
 	// List of all associated feature versions
 	FeatureVersions pulumi.StringArrayOutput `pulumi:"featureVersions"`
 	// The name of the configuration group
@@ -125,8 +123,8 @@ type configurationGroupState struct {
 	Description *string `pulumi:"description"`
 	// List of devices
 	Devices []ConfigurationGroupDevice `pulumi:"devices"`
-	// List of feature profiles
-	FeatureProfiles []ConfigurationGroupFeatureProfile `pulumi:"featureProfiles"`
+	// List of feature profile IDs
+	FeatureProfileIds []string `pulumi:"featureProfileIds"`
 	// List of all associated feature versions
 	FeatureVersions []string `pulumi:"featureVersions"`
 	// The name of the configuration group
@@ -144,8 +142,8 @@ type ConfigurationGroupState struct {
 	Description pulumi.StringPtrInput
 	// List of devices
 	Devices ConfigurationGroupDeviceArrayInput
-	// List of feature profiles
-	FeatureProfiles ConfigurationGroupFeatureProfileArrayInput
+	// List of feature profile IDs
+	FeatureProfileIds pulumi.StringArrayInput
 	// List of all associated feature versions
 	FeatureVersions pulumi.StringArrayInput
 	// The name of the configuration group
@@ -167,8 +165,8 @@ type configurationGroupArgs struct {
 	Description string `pulumi:"description"`
 	// List of devices
 	Devices []ConfigurationGroupDevice `pulumi:"devices"`
-	// List of feature profiles
-	FeatureProfiles []ConfigurationGroupFeatureProfile `pulumi:"featureProfiles"`
+	// List of feature profile IDs
+	FeatureProfileIds []string `pulumi:"featureProfileIds"`
 	// List of all associated feature versions
 	FeatureVersions []string `pulumi:"featureVersions"`
 	// The name of the configuration group
@@ -187,8 +185,8 @@ type ConfigurationGroupArgs struct {
 	Description pulumi.StringInput
 	// List of devices
 	Devices ConfigurationGroupDeviceArrayInput
-	// List of feature profiles
-	FeatureProfiles ConfigurationGroupFeatureProfileArrayInput
+	// List of feature profile IDs
+	FeatureProfileIds pulumi.StringArrayInput
 	// List of all associated feature versions
 	FeatureVersions pulumi.StringArrayInput
 	// The name of the configuration group
@@ -298,9 +296,9 @@ func (o ConfigurationGroupOutput) Devices() ConfigurationGroupDeviceArrayOutput 
 	return o.ApplyT(func(v *ConfigurationGroup) ConfigurationGroupDeviceArrayOutput { return v.Devices }).(ConfigurationGroupDeviceArrayOutput)
 }
 
-// List of feature profiles
-func (o ConfigurationGroupOutput) FeatureProfiles() ConfigurationGroupFeatureProfileArrayOutput {
-	return o.ApplyT(func(v *ConfigurationGroup) ConfigurationGroupFeatureProfileArrayOutput { return v.FeatureProfiles }).(ConfigurationGroupFeatureProfileArrayOutput)
+// List of feature profile IDs
+func (o ConfigurationGroupOutput) FeatureProfileIds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v *ConfigurationGroup) pulumi.StringArrayOutput { return v.FeatureProfileIds }).(pulumi.StringArrayOutput)
 }
 
 // List of all associated feature versions

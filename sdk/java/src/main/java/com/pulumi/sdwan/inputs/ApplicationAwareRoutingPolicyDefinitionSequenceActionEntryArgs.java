@@ -20,14 +20,14 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntryArg
     public static final ApplicationAwareRoutingPolicyDefinitionSequenceActionEntryArgs Empty = new ApplicationAwareRoutingPolicyDefinitionSequenceActionEntryArgs();
 
     /**
-     * Backup SLA preferred color (Single value or multiple values separated by spaces)
+     * Backup SLA preferred color (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `backupSlaPreferredColor`
      * 
      */
     @Import(name="backupSlaPreferredColor")
     private @Nullable Output<String> backupSlaPreferredColor;
 
     /**
-     * @return Backup SLA preferred color (Single value or multiple values separated by spaces)
+     * @return Backup SLA preferred color (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `backupSlaPreferredColor`
      * 
      */
     public Optional<Output<String>> backupSlaPreferredColor() {
@@ -35,14 +35,14 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntryArg
     }
 
     /**
-     * Cloud SLA
+     * Cloud SLA, Attribute conditional on `type` being equal to `cloudSaas`
      * 
      */
     @Import(name="cloudSla")
     private @Nullable Output<Boolean> cloudSla;
 
     /**
-     * @return Cloud SLA
+     * @return Cloud SLA, Attribute conditional on `type` being equal to `cloudSaas`
      * 
      */
     public Optional<Output<Boolean>> cloudSla() {
@@ -50,14 +50,14 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntryArg
     }
 
     /**
-     * Counter name
+     * Counter name, Attribute conditional on `type` being equal to `count`
      * 
      */
     @Import(name="counter")
     private @Nullable Output<String> counter;
 
     /**
-     * @return Counter name
+     * @return Counter name, Attribute conditional on `type` being equal to `count`
      * 
      */
     public Optional<Output<String>> counter() {
@@ -65,14 +65,14 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntryArg
     }
 
     /**
-     * Enable logging
+     * Enable logging, Attribute conditional on `type` being equal to `log`
      * 
      */
     @Import(name="log")
     private @Nullable Output<Boolean> log;
 
     /**
-     * @return Enable logging
+     * @return Enable logging, Attribute conditional on `type` being equal to `log`
      * 
      */
     public Optional<Output<Boolean>> log() {
@@ -80,14 +80,14 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntryArg
     }
 
     /**
-     * List of SLA class parameters
+     * List of SLA class parameters, Attribute conditional on `type` being equal to `slaClass`
      * 
      */
     @Import(name="slaClassParameters")
     private @Nullable Output<List<ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameterArgs>> slaClassParameters;
 
     /**
-     * @return List of SLA class parameters
+     * @return List of SLA class parameters, Attribute conditional on `type` being equal to `slaClass`
      * 
      */
     public Optional<Output<List<ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameterArgs>>> slaClassParameters() {
@@ -141,7 +141,7 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntryArg
         }
 
         /**
-         * @param backupSlaPreferredColor Backup SLA preferred color (Single value or multiple values separated by spaces)
+         * @param backupSlaPreferredColor Backup SLA preferred color (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `backupSlaPreferredColor`
          * 
          * @return builder
          * 
@@ -152,7 +152,7 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntryArg
         }
 
         /**
-         * @param backupSlaPreferredColor Backup SLA preferred color (Single value or multiple values separated by spaces)
+         * @param backupSlaPreferredColor Backup SLA preferred color (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `backupSlaPreferredColor`
          * 
          * @return builder
          * 
@@ -162,7 +162,7 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntryArg
         }
 
         /**
-         * @param cloudSla Cloud SLA
+         * @param cloudSla Cloud SLA, Attribute conditional on `type` being equal to `cloudSaas`
          * 
          * @return builder
          * 
@@ -173,7 +173,7 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntryArg
         }
 
         /**
-         * @param cloudSla Cloud SLA
+         * @param cloudSla Cloud SLA, Attribute conditional on `type` being equal to `cloudSaas`
          * 
          * @return builder
          * 
@@ -183,7 +183,7 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntryArg
         }
 
         /**
-         * @param counter Counter name
+         * @param counter Counter name, Attribute conditional on `type` being equal to `count`
          * 
          * @return builder
          * 
@@ -194,7 +194,7 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntryArg
         }
 
         /**
-         * @param counter Counter name
+         * @param counter Counter name, Attribute conditional on `type` being equal to `count`
          * 
          * @return builder
          * 
@@ -204,7 +204,7 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntryArg
         }
 
         /**
-         * @param log Enable logging
+         * @param log Enable logging, Attribute conditional on `type` being equal to `log`
          * 
          * @return builder
          * 
@@ -215,7 +215,7 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntryArg
         }
 
         /**
-         * @param log Enable logging
+         * @param log Enable logging, Attribute conditional on `type` being equal to `log`
          * 
          * @return builder
          * 
@@ -225,7 +225,7 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntryArg
         }
 
         /**
-         * @param slaClassParameters List of SLA class parameters
+         * @param slaClassParameters List of SLA class parameters, Attribute conditional on `type` being equal to `slaClass`
          * 
          * @return builder
          * 
@@ -236,7 +236,7 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntryArg
         }
 
         /**
-         * @param slaClassParameters List of SLA class parameters
+         * @param slaClassParameters List of SLA class parameters, Attribute conditional on `type` being equal to `slaClass`
          * 
          * @return builder
          * 
@@ -246,7 +246,7 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntryArg
         }
 
         /**
-         * @param slaClassParameters List of SLA class parameters
+         * @param slaClassParameters List of SLA class parameters, Attribute conditional on `type` being equal to `slaClass`
          * 
          * @return builder
          * 

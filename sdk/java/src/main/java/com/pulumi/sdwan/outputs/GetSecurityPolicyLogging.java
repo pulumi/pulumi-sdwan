@@ -16,6 +16,11 @@ public final class GetSecurityPolicyLogging {
      */
     private String externalSyslogServerIp;
     /**
+     * @return External Syslog Server Source Interface
+     * 
+     */
+    private String externalSyslogServerSourceInterface;
+    /**
      * @return External Syslog Server VPN
      * 
      */
@@ -28,6 +33,13 @@ public final class GetSecurityPolicyLogging {
      */
     public String externalSyslogServerIp() {
         return this.externalSyslogServerIp;
+    }
+    /**
+     * @return External Syslog Server Source Interface
+     * 
+     */
+    public String externalSyslogServerSourceInterface() {
+        return this.externalSyslogServerSourceInterface;
     }
     /**
      * @return External Syslog Server VPN
@@ -47,11 +59,13 @@ public final class GetSecurityPolicyLogging {
     @CustomType.Builder
     public static final class Builder {
         private String externalSyslogServerIp;
+        private String externalSyslogServerSourceInterface;
         private String externalSyslogServerVpn;
         public Builder() {}
         public Builder(GetSecurityPolicyLogging defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.externalSyslogServerIp = defaults.externalSyslogServerIp;
+    	      this.externalSyslogServerSourceInterface = defaults.externalSyslogServerSourceInterface;
     	      this.externalSyslogServerVpn = defaults.externalSyslogServerVpn;
         }
 
@@ -61,6 +75,14 @@ public final class GetSecurityPolicyLogging {
               throw new MissingRequiredPropertyException("GetSecurityPolicyLogging", "externalSyslogServerIp");
             }
             this.externalSyslogServerIp = externalSyslogServerIp;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder externalSyslogServerSourceInterface(String externalSyslogServerSourceInterface) {
+            if (externalSyslogServerSourceInterface == null) {
+              throw new MissingRequiredPropertyException("GetSecurityPolicyLogging", "externalSyslogServerSourceInterface");
+            }
+            this.externalSyslogServerSourceInterface = externalSyslogServerSourceInterface;
             return this;
         }
         @CustomType.Setter
@@ -74,6 +96,7 @@ public final class GetSecurityPolicyLogging {
         public GetSecurityPolicyLogging build() {
             final var _resultValue = new GetSecurityPolicyLogging();
             _resultValue.externalSyslogServerIp = externalSyslogServerIp;
+            _resultValue.externalSyslogServerSourceInterface = externalSyslogServerSourceInterface;
             _resultValue.externalSyslogServerVpn = externalSyslogServerVpn;
             return _resultValue;
         }

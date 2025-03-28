@@ -67,6 +67,10 @@ export interface GetServiceLanVpnFeatureAssociateRoutingEigrpFeatureResult {
      * Service Routing EIGRP Feature ID
      */
     readonly serviceRoutingEigrpFeatureId: string;
+    /**
+     * The version of the object
+     */
+    readonly version: number;
 }
 /**
  * This data source can read the Service LAN VPN Feature Associate Routing EIGRP Feature .

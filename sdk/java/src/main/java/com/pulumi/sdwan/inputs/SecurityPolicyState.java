@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.sdwan.inputs.SecurityPolicyDefinitionArgs;
 import com.pulumi.sdwan.inputs.SecurityPolicyLoggingArgs;
+import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -125,6 +126,21 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
     }
 
     /**
+     * High Speed Logging Source Interface
+     * 
+     */
+    @Import(name="highSpeedLoggingServerSourceInterface")
+    private @Nullable Output<String> highSpeedLoggingServerSourceInterface;
+
+    /**
+     * @return High Speed Logging Source Interface
+     * 
+     */
+    public Optional<Output<String>> highSpeedLoggingServerSourceInterface() {
+        return Optional.ofNullable(this.highSpeedLoggingServerSourceInterface);
+    }
+
+    /**
      * High Speed Logging VPN
      * 
      */
@@ -137,6 +153,21 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
      */
     public Optional<Output<String>> highSpeedLoggingVpn() {
         return Optional.ofNullable(this.highSpeedLoggingVpn);
+    }
+
+    /**
+     * ICMP Unreachable Allow
+     * 
+     */
+    @Import(name="imcpUnreachableAllow")
+    private @Nullable Output<Boolean> imcpUnreachableAllow;
+
+    /**
+     * @return ICMP Unreachable Allow
+     * 
+     */
+    public Optional<Output<Boolean>> imcpUnreachableAllow() {
+        return Optional.ofNullable(this.imcpUnreachableAllow);
     }
 
     @Import(name="loggings")
@@ -159,6 +190,51 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
      */
     public Optional<Output<String>> matchStatisticsPerFilter() {
         return Optional.ofNullable(this.matchStatisticsPerFilter);
+    }
+
+    /**
+     * Max Incomplete ICMP Limit
+     * 
+     */
+    @Import(name="maxIncompleteIcmpLimit")
+    private @Nullable Output<Integer> maxIncompleteIcmpLimit;
+
+    /**
+     * @return Max Incomplete ICMP Limit
+     * 
+     */
+    public Optional<Output<Integer>> maxIncompleteIcmpLimit() {
+        return Optional.ofNullable(this.maxIncompleteIcmpLimit);
+    }
+
+    /**
+     * Max Incomplete TCP Limit
+     * 
+     */
+    @Import(name="maxIncompleteTcpLimit")
+    private @Nullable Output<Integer> maxIncompleteTcpLimit;
+
+    /**
+     * @return Max Incomplete TCP Limit
+     * 
+     */
+    public Optional<Output<Integer>> maxIncompleteTcpLimit() {
+        return Optional.ofNullable(this.maxIncompleteTcpLimit);
+    }
+
+    /**
+     * Max Incomplete UDP Limit
+     * 
+     */
+    @Import(name="maxIncompleteUdpLimit")
+    private @Nullable Output<Integer> maxIncompleteUdpLimit;
+
+    /**
+     * @return Max Incomplete UDP Limit
+     * 
+     */
+    public Optional<Output<Integer>> maxIncompleteUdpLimit() {
+        return Optional.ofNullable(this.maxIncompleteUdpLimit);
     }
 
     /**
@@ -192,6 +268,21 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
     }
 
     /**
+     * Session Reclassify Allow
+     * 
+     */
+    @Import(name="sessionReclassifyAllow")
+    private @Nullable Output<Boolean> sessionReclassifyAllow;
+
+    /**
+     * @return Session Reclassify Allow
+     * 
+     */
+    public Optional<Output<Boolean>> sessionReclassifyAllow() {
+        return Optional.ofNullable(this.sessionReclassifyAllow);
+    }
+
+    /**
      * TCP SYN Flood Limit, value from 1 to 4294967295
      * 
      */
@@ -204,6 +295,21 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
      */
     public Optional<Output<String>> tcpSynFloodLimit() {
         return Optional.ofNullable(this.tcpSynFloodLimit);
+    }
+
+    /**
+     * Unified Logging
+     * 
+     */
+    @Import(name="unifiedLogging")
+    private @Nullable Output<Boolean> unifiedLogging;
+
+    /**
+     * @return Unified Logging
+     * 
+     */
+    public Optional<Output<Boolean>> unifiedLogging() {
+        return Optional.ofNullable(this.unifiedLogging);
     }
 
     /**
@@ -248,12 +354,19 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
         this.failureMode = $.failureMode;
         this.highSpeedLoggingServerIp = $.highSpeedLoggingServerIp;
         this.highSpeedLoggingServerPort = $.highSpeedLoggingServerPort;
+        this.highSpeedLoggingServerSourceInterface = $.highSpeedLoggingServerSourceInterface;
         this.highSpeedLoggingVpn = $.highSpeedLoggingVpn;
+        this.imcpUnreachableAllow = $.imcpUnreachableAllow;
         this.loggings = $.loggings;
         this.matchStatisticsPerFilter = $.matchStatisticsPerFilter;
+        this.maxIncompleteIcmpLimit = $.maxIncompleteIcmpLimit;
+        this.maxIncompleteTcpLimit = $.maxIncompleteTcpLimit;
+        this.maxIncompleteUdpLimit = $.maxIncompleteUdpLimit;
         this.mode = $.mode;
         this.name = $.name;
+        this.sessionReclassifyAllow = $.sessionReclassifyAllow;
         this.tcpSynFloodLimit = $.tcpSynFloodLimit;
+        this.unifiedLogging = $.unifiedLogging;
         this.useCase = $.useCase;
         this.version = $.version;
     }
@@ -434,6 +547,27 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
         }
 
         /**
+         * @param highSpeedLoggingServerSourceInterface High Speed Logging Source Interface
+         * 
+         * @return builder
+         * 
+         */
+        public Builder highSpeedLoggingServerSourceInterface(@Nullable Output<String> highSpeedLoggingServerSourceInterface) {
+            $.highSpeedLoggingServerSourceInterface = highSpeedLoggingServerSourceInterface;
+            return this;
+        }
+
+        /**
+         * @param highSpeedLoggingServerSourceInterface High Speed Logging Source Interface
+         * 
+         * @return builder
+         * 
+         */
+        public Builder highSpeedLoggingServerSourceInterface(String highSpeedLoggingServerSourceInterface) {
+            return highSpeedLoggingServerSourceInterface(Output.of(highSpeedLoggingServerSourceInterface));
+        }
+
+        /**
          * @param highSpeedLoggingVpn High Speed Logging VPN
          * 
          * @return builder
@@ -452,6 +586,27 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
          */
         public Builder highSpeedLoggingVpn(String highSpeedLoggingVpn) {
             return highSpeedLoggingVpn(Output.of(highSpeedLoggingVpn));
+        }
+
+        /**
+         * @param imcpUnreachableAllow ICMP Unreachable Allow
+         * 
+         * @return builder
+         * 
+         */
+        public Builder imcpUnreachableAllow(@Nullable Output<Boolean> imcpUnreachableAllow) {
+            $.imcpUnreachableAllow = imcpUnreachableAllow;
+            return this;
+        }
+
+        /**
+         * @param imcpUnreachableAllow ICMP Unreachable Allow
+         * 
+         * @return builder
+         * 
+         */
+        public Builder imcpUnreachableAllow(Boolean imcpUnreachableAllow) {
+            return imcpUnreachableAllow(Output.of(imcpUnreachableAllow));
         }
 
         public Builder loggings(@Nullable Output<List<SecurityPolicyLoggingArgs>> loggings) {
@@ -486,6 +641,69 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
          */
         public Builder matchStatisticsPerFilter(String matchStatisticsPerFilter) {
             return matchStatisticsPerFilter(Output.of(matchStatisticsPerFilter));
+        }
+
+        /**
+         * @param maxIncompleteIcmpLimit Max Incomplete ICMP Limit
+         * 
+         * @return builder
+         * 
+         */
+        public Builder maxIncompleteIcmpLimit(@Nullable Output<Integer> maxIncompleteIcmpLimit) {
+            $.maxIncompleteIcmpLimit = maxIncompleteIcmpLimit;
+            return this;
+        }
+
+        /**
+         * @param maxIncompleteIcmpLimit Max Incomplete ICMP Limit
+         * 
+         * @return builder
+         * 
+         */
+        public Builder maxIncompleteIcmpLimit(Integer maxIncompleteIcmpLimit) {
+            return maxIncompleteIcmpLimit(Output.of(maxIncompleteIcmpLimit));
+        }
+
+        /**
+         * @param maxIncompleteTcpLimit Max Incomplete TCP Limit
+         * 
+         * @return builder
+         * 
+         */
+        public Builder maxIncompleteTcpLimit(@Nullable Output<Integer> maxIncompleteTcpLimit) {
+            $.maxIncompleteTcpLimit = maxIncompleteTcpLimit;
+            return this;
+        }
+
+        /**
+         * @param maxIncompleteTcpLimit Max Incomplete TCP Limit
+         * 
+         * @return builder
+         * 
+         */
+        public Builder maxIncompleteTcpLimit(Integer maxIncompleteTcpLimit) {
+            return maxIncompleteTcpLimit(Output.of(maxIncompleteTcpLimit));
+        }
+
+        /**
+         * @param maxIncompleteUdpLimit Max Incomplete UDP Limit
+         * 
+         * @return builder
+         * 
+         */
+        public Builder maxIncompleteUdpLimit(@Nullable Output<Integer> maxIncompleteUdpLimit) {
+            $.maxIncompleteUdpLimit = maxIncompleteUdpLimit;
+            return this;
+        }
+
+        /**
+         * @param maxIncompleteUdpLimit Max Incomplete UDP Limit
+         * 
+         * @return builder
+         * 
+         */
+        public Builder maxIncompleteUdpLimit(Integer maxIncompleteUdpLimit) {
+            return maxIncompleteUdpLimit(Output.of(maxIncompleteUdpLimit));
         }
 
         /**
@@ -531,6 +749,27 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
         }
 
         /**
+         * @param sessionReclassifyAllow Session Reclassify Allow
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sessionReclassifyAllow(@Nullable Output<Boolean> sessionReclassifyAllow) {
+            $.sessionReclassifyAllow = sessionReclassifyAllow;
+            return this;
+        }
+
+        /**
+         * @param sessionReclassifyAllow Session Reclassify Allow
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sessionReclassifyAllow(Boolean sessionReclassifyAllow) {
+            return sessionReclassifyAllow(Output.of(sessionReclassifyAllow));
+        }
+
+        /**
          * @param tcpSynFloodLimit TCP SYN Flood Limit, value from 1 to 4294967295
          * 
          * @return builder
@@ -549,6 +788,27 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
          */
         public Builder tcpSynFloodLimit(String tcpSynFloodLimit) {
             return tcpSynFloodLimit(Output.of(tcpSynFloodLimit));
+        }
+
+        /**
+         * @param unifiedLogging Unified Logging
+         * 
+         * @return builder
+         * 
+         */
+        public Builder unifiedLogging(@Nullable Output<Boolean> unifiedLogging) {
+            $.unifiedLogging = unifiedLogging;
+            return this;
+        }
+
+        /**
+         * @param unifiedLogging Unified Logging
+         * 
+         * @return builder
+         * 
+         */
+        public Builder unifiedLogging(Boolean unifiedLogging) {
+            return unifiedLogging(Output.of(unifiedLogging));
         }
 
         /**

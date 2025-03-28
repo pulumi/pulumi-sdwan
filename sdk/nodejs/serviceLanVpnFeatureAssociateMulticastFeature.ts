@@ -23,8 +23,10 @@ import * as utilities from "./utilities";
  *
  * ## Import
  *
+ * Expected import identifier with the format: "service_lan_vpn_feature_associate_multicast_feature_id,feature_profile_id,service_lan_vpn_feature_id"
+ *
  * ```sh
- * $ pulumi import sdwan:index/serviceLanVpnFeatureAssociateMulticastFeature:ServiceLanVpnFeatureAssociateMulticastFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+ * $ pulumi import sdwan:index/serviceLanVpnFeatureAssociateMulticastFeature:ServiceLanVpnFeatureAssociateMulticastFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037"
  * ```
  */
 export class ServiceLanVpnFeatureAssociateMulticastFeature extends pulumi.CustomResource {
@@ -67,6 +69,10 @@ export class ServiceLanVpnFeatureAssociateMulticastFeature extends pulumi.Custom
      * Service Multicast Feature ID
      */
     public readonly serviceMulticastFeatureId!: pulumi.Output<string>;
+    /**
+     * The version of the object
+     */
+    public /*out*/ readonly version!: pulumi.Output<number>;
 
     /**
      * Create a ServiceLanVpnFeatureAssociateMulticastFeature resource with the given unique name, arguments, and options.
@@ -84,6 +90,7 @@ export class ServiceLanVpnFeatureAssociateMulticastFeature extends pulumi.Custom
             resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
             resourceInputs["serviceLanVpnFeatureId"] = state ? state.serviceLanVpnFeatureId : undefined;
             resourceInputs["serviceMulticastFeatureId"] = state ? state.serviceMulticastFeatureId : undefined;
+            resourceInputs["version"] = state ? state.version : undefined;
         } else {
             const args = argsOrState as ServiceLanVpnFeatureAssociateMulticastFeatureArgs | undefined;
             if ((!args || args.featureProfileId === undefined) && !opts.urn) {
@@ -98,6 +105,7 @@ export class ServiceLanVpnFeatureAssociateMulticastFeature extends pulumi.Custom
             resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
             resourceInputs["serviceLanVpnFeatureId"] = args ? args.serviceLanVpnFeatureId : undefined;
             resourceInputs["serviceMulticastFeatureId"] = args ? args.serviceMulticastFeatureId : undefined;
+            resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(ServiceLanVpnFeatureAssociateMulticastFeature.__pulumiType, name, resourceInputs, opts);
@@ -120,6 +128,10 @@ export interface ServiceLanVpnFeatureAssociateMulticastFeatureState {
      * Service Multicast Feature ID
      */
     serviceMulticastFeatureId?: pulumi.Input<string>;
+    /**
+     * The version of the object
+     */
+    version?: pulumi.Input<number>;
 }
 
 /**

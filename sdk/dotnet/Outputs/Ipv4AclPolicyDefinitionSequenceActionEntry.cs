@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class Ipv4AclPolicyDefinitionSequenceActionEntry
     {
         /// <summary>
-        /// Class map ID
+        /// Class map ID, Attribute conditional on `type` being equal to `class`
         /// </summary>
         public readonly string? ClassMapId;
         /// <summary>
@@ -22,15 +22,15 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? ClassMapVersion;
         /// <summary>
-        /// Counter name
+        /// Counter name, Attribute conditional on `type` being equal to `count`
         /// </summary>
         public readonly string? CounterName;
         /// <summary>
-        /// Enable logging
+        /// Enable logging, Attribute conditional on `type` being equal to `log`
         /// </summary>
         public readonly bool? Log;
         /// <summary>
-        /// Mirror ID
+        /// Mirror ID, Attribute conditional on `type` being equal to `mirror`
         /// </summary>
         public readonly string? MirrorId;
         /// <summary>
@@ -38,7 +38,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? MirrorVersion;
         /// <summary>
-        /// Policer ID
+        /// Policer ID, Attribute conditional on `type` being equal to `policer`
         /// </summary>
         public readonly string? PolicerId;
         /// <summary>
@@ -46,7 +46,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? PolicerVersion;
         /// <summary>
-        /// List of set parameters
+        /// List of set parameters, Attribute conditional on `type` being equal to `set`
         /// </summary>
         public readonly ImmutableArray<Outputs.Ipv4AclPolicyDefinitionSequenceActionEntrySetParameter> SetParameters;
         /// <summary>

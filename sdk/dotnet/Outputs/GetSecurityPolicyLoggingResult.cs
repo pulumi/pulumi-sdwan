@@ -18,6 +18,10 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string ExternalSyslogServerIp;
         /// <summary>
+        /// External Syslog Server Source Interface
+        /// </summary>
+        public readonly string ExternalSyslogServerSourceInterface;
+        /// <summary>
         /// External Syslog Server VPN
         /// </summary>
         public readonly string ExternalSyslogServerVpn;
@@ -26,9 +30,12 @@ namespace Pulumi.Sdwan.Outputs
         private GetSecurityPolicyLoggingResult(
             string externalSyslogServerIp,
 
+            string externalSyslogServerSourceInterface,
+
             string externalSyslogServerVpn)
         {
             ExternalSyslogServerIp = externalSyslogServerIp;
+            ExternalSyslogServerSourceInterface = externalSyslogServerSourceInterface;
             ExternalSyslogServerVpn = externalSyslogServerVpn;
         }
     }

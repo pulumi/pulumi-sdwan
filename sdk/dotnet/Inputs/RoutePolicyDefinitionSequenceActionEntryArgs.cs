@@ -13,97 +13,97 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class RoutePolicyDefinitionSequenceActionEntryArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Aggregator
+        /// Aggregator, Attribute conditional on `type` being equal to `aggregator`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         [Input("aggregator")]
         public Input<int>? Aggregator { get; set; }
 
         /// <summary>
-        /// IP address
+        /// IP address, Attribute conditional on `type` being equal to `aggregator`
         /// </summary>
         [Input("aggregatorIpAddress")]
         public Input<string>? AggregatorIpAddress { get; set; }
 
         /// <summary>
-        /// Space separated list of ASN to exclude
+        /// Space separated list of ASN to exclude, Attribute conditional on `type` being equal to `asPath`
         /// </summary>
         [Input("asPathExclude")]
         public Input<string>? AsPathExclude { get; set; }
 
         /// <summary>
-        /// Space separated list of ASN to prepend
+        /// Space separated list of ASN to prepend, Attribute conditional on `type` being equal to `asPath`
         /// </summary>
         [Input("asPathPrepend")]
         public Input<string>? AsPathPrepend { get; set; }
 
         /// <summary>
-        /// Atomic aggregate
+        /// Atomic aggregate, Attribute conditional on `type` being equal to `atomicAggregate`
         /// </summary>
         [Input("atomicAggregate")]
         public Input<bool>? AtomicAggregate { get; set; }
 
         /// <summary>
-        /// Community value, e.g. `1000:10000` or `internet` or `local-AS`
+        /// Community value, e.g. `1000:10000` or `internet` or `local-AS`, Attribute conditional on `type` being equal to `community`
         /// </summary>
         [Input("community")]
         public Input<string>? Community { get; set; }
 
         /// <summary>
-        /// Community additive
+        /// Community additive, Attribute conditional on `type` being equal to `communityAdditive`
         /// </summary>
         [Input("communityAdditive")]
         public Input<bool>? CommunityAdditive { get; set; }
 
         /// <summary>
-        /// Local preference
+        /// Local preference, Attribute conditional on `type` being equal to `localPreference`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         [Input("localPreference")]
         public Input<int>? LocalPreference { get; set; }
 
         /// <summary>
-        /// Metric
+        /// Metric, Attribute conditional on `type` being equal to `metric`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         [Input("metric")]
         public Input<int>? Metric { get; set; }
 
         /// <summary>
-        /// Metric type
+        /// Metric type, Attribute conditional on `type` being equal to `metricType`
         ///   - Choices: `type1`, `type2`
         /// </summary>
         [Input("metricType")]
         public Input<string>? MetricType { get; set; }
 
         /// <summary>
-        /// Next hop IP
+        /// Next hop IP, Attribute conditional on `type` being equal to `nextHop`
         /// </summary>
         [Input("nextHop")]
         public Input<string>? NextHop { get; set; }
 
         /// <summary>
-        /// OMP tag
+        /// OMP tag, Attribute conditional on `type` being equal to `ompTag`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         [Input("ompTag")]
         public Input<int>? OmpTag { get; set; }
 
         /// <summary>
-        /// Origin
+        /// Origin, Attribute conditional on `type` being equal to `origin`
         ///   - Choices: `igp`, `egp`, `incomplete`
         /// </summary>
         [Input("origin")]
         public Input<string>? Origin { get; set; }
 
         /// <summary>
-        /// Originator IP
+        /// Originator IP, Attribute conditional on `type` being equal to `originator`
         /// </summary>
         [Input("originator")]
         public Input<string>? Originator { get; set; }
 
         /// <summary>
-        /// OSPF tag
+        /// OSPF tag, Attribute conditional on `type` being equal to `ospfTag`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         [Input("ospfTag")]
@@ -117,7 +117,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string> Type { get; set; } = null!;
 
         /// <summary>
-        /// Weight
+        /// Weight, Attribute conditional on `type` being equal to `weight`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         [Input("weight")]

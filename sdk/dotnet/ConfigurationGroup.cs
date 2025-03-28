@@ -28,12 +28,9 @@ namespace Pulumi.Sdwan
     ///         Name = "CG_1",
     ///         Description = "My config group 1",
     ///         Solution = "sdwan",
-    ///         FeatureProfiles = new[]
+    ///         FeatureProfileIds = new[]
     ///         {
-    ///             new Sdwan.Inputs.ConfigurationGroupFeatureProfileArgs
-    ///             {
-    ///                 Id = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
-    ///             },
+    ///             "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
     ///         },
     ///         Devices = new[]
     ///         {
@@ -77,10 +74,10 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.ConfigurationGroupDevice>> Devices { get; private set; } = null!;
 
         /// <summary>
-        /// List of feature profiles
+        /// List of feature profile IDs
         /// </summary>
-        [Output("featureProfiles")]
-        public Output<ImmutableArray<Outputs.ConfigurationGroupFeatureProfile>> FeatureProfiles { get; private set; } = null!;
+        [Output("featureProfileIds")]
+        public Output<ImmutableArray<string>> FeatureProfileIds { get; private set; } = null!;
 
         /// <summary>
         /// List of all associated feature versions
@@ -176,16 +173,16 @@ namespace Pulumi.Sdwan
             set => _devices = value;
         }
 
-        [Input("featureProfiles")]
-        private InputList<Inputs.ConfigurationGroupFeatureProfileArgs>? _featureProfiles;
+        [Input("featureProfileIds")]
+        private InputList<string>? _featureProfileIds;
 
         /// <summary>
-        /// List of feature profiles
+        /// List of feature profile IDs
         /// </summary>
-        public InputList<Inputs.ConfigurationGroupFeatureProfileArgs> FeatureProfiles
+        public InputList<string> FeatureProfileIds
         {
-            get => _featureProfiles ?? (_featureProfiles = new InputList<Inputs.ConfigurationGroupFeatureProfileArgs>());
-            set => _featureProfiles = value;
+            get => _featureProfileIds ?? (_featureProfileIds = new InputList<string>());
+            set => _featureProfileIds = value;
         }
 
         [Input("featureVersions")]
@@ -256,16 +253,16 @@ namespace Pulumi.Sdwan
             set => _devices = value;
         }
 
-        [Input("featureProfiles")]
-        private InputList<Inputs.ConfigurationGroupFeatureProfileGetArgs>? _featureProfiles;
+        [Input("featureProfileIds")]
+        private InputList<string>? _featureProfileIds;
 
         /// <summary>
-        /// List of feature profiles
+        /// List of feature profile IDs
         /// </summary>
-        public InputList<Inputs.ConfigurationGroupFeatureProfileGetArgs> FeatureProfiles
+        public InputList<string> FeatureProfileIds
         {
-            get => _featureProfiles ?? (_featureProfiles = new InputList<Inputs.ConfigurationGroupFeatureProfileGetArgs>());
-            set => _featureProfiles = value;
+            get => _featureProfileIds ?? (_featureProfileIds = new InputList<string>());
+            set => _featureProfileIds = value;
         }
 
         [Input("featureVersions")]

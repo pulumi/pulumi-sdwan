@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class Ipv4AclPolicyDefinitionSequenceMatchEntry
     {
         /// <summary>
-        /// Class map ID
+        /// Class map ID, Attribute conditional on `type` being equal to `class`
         /// </summary>
         public readonly string? ClassMapId;
         /// <summary>
@@ -22,7 +22,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? ClassMapVersion;
         /// <summary>
-        /// Destination data IPv4 prefix list ID
+        /// Destination data IPv4 prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
         /// </summary>
         public readonly string? DestinationDataIpv4PrefixListId;
         /// <summary>
@@ -30,38 +30,38 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? DestinationDataIpv4PrefixListVersion;
         /// <summary>
-        /// Destination IP prefix
+        /// Destination IP prefix, Attribute conditional on `type` being equal to `destinationIp`
         /// </summary>
         public readonly string? DestinationIp;
         /// <summary>
-        /// Destination ports. Single value (0-65535) or ranges separated by spaces.
+        /// Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `destinationPort`
         /// </summary>
         public readonly string? DestinationPorts;
         /// <summary>
-        /// DSCP value
+        /// DSCP value, Attribute conditional on `type` being equal to `dscp`
         ///   - Range: `0`-`63`
         /// </summary>
         public readonly int? Dscp;
         /// <summary>
-        /// ICMP Message
+        /// ICMP Message, Attribute conditional on `type` being equal to `icmpMessage`
         /// </summary>
         public readonly string? IcmpMessage;
         /// <summary>
-        /// Packet length
+        /// Packet length, Attribute conditional on `type` being equal to `packetLength`
         ///   - Range: `0`-`65535`
         /// </summary>
         public readonly int? PacketLength;
         /// <summary>
-        /// PLP - priority
+        /// PLP - priority, Attribute conditional on `type` being equal to `plp`
         ///   - Choices: `high`, `low`
         /// </summary>
         public readonly string? Priority;
         /// <summary>
-        /// Single value (0-255) or multiple values separated by spaces
+        /// Single value (0-255) or multiple values separated by spaces, Attribute conditional on `type` being equal to `protocol`
         /// </summary>
         public readonly string? Protocol;
         /// <summary>
-        /// Source data IPv4 prefix list ID
+        /// Source data IPv4 prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
         /// </summary>
         public readonly string? SourceDataIpv4PrefixListId;
         /// <summary>
@@ -69,15 +69,15 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? SourceDataIpv4PrefixListVersion;
         /// <summary>
-        /// Source IP prefix
+        /// Source IP prefix, Attribute conditional on `type` being equal to `sourceIp`
         /// </summary>
         public readonly string? SourceIp;
         /// <summary>
-        /// Source ports. Single value (0-65535) or ranges separated by spaces.
+        /// Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
         /// </summary>
         public readonly string? SourcePorts;
         /// <summary>
-        /// TCP parameters
+        /// TCP parameters, Attribute conditional on `type` being equal to `tcp`
         ///   - Choices: `syn`
         /// </summary>
         public readonly string? Tcp;

@@ -23,8 +23,10 @@ import * as utilities from "./utilities";
  *
  * ## Import
  *
+ * Expected import identifier with the format: "service_lan_vpn_feature_associate_routing_ospf_feature_id,feature_profile_id,service_lan_vpn_feature_id"
+ *
  * ```sh
- * $ pulumi import sdwan:index/serviceLanVpnFeatureAssociateRoutingOspfFeature:ServiceLanVpnFeatureAssociateRoutingOspfFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+ * $ pulumi import sdwan:index/serviceLanVpnFeatureAssociateRoutingOspfFeature:ServiceLanVpnFeatureAssociateRoutingOspfFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037"
  * ```
  */
 export class ServiceLanVpnFeatureAssociateRoutingOspfFeature extends pulumi.CustomResource {
@@ -67,6 +69,10 @@ export class ServiceLanVpnFeatureAssociateRoutingOspfFeature extends pulumi.Cust
      * Service Routing OSPF Feature ID
      */
     public readonly serviceRoutingOspfFeatureId!: pulumi.Output<string>;
+    /**
+     * The version of the object
+     */
+    public /*out*/ readonly version!: pulumi.Output<number>;
 
     /**
      * Create a ServiceLanVpnFeatureAssociateRoutingOspfFeature resource with the given unique name, arguments, and options.
@@ -84,6 +90,7 @@ export class ServiceLanVpnFeatureAssociateRoutingOspfFeature extends pulumi.Cust
             resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
             resourceInputs["serviceLanVpnFeatureId"] = state ? state.serviceLanVpnFeatureId : undefined;
             resourceInputs["serviceRoutingOspfFeatureId"] = state ? state.serviceRoutingOspfFeatureId : undefined;
+            resourceInputs["version"] = state ? state.version : undefined;
         } else {
             const args = argsOrState as ServiceLanVpnFeatureAssociateRoutingOspfFeatureArgs | undefined;
             if ((!args || args.featureProfileId === undefined) && !opts.urn) {
@@ -98,6 +105,7 @@ export class ServiceLanVpnFeatureAssociateRoutingOspfFeature extends pulumi.Cust
             resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
             resourceInputs["serviceLanVpnFeatureId"] = args ? args.serviceLanVpnFeatureId : undefined;
             resourceInputs["serviceRoutingOspfFeatureId"] = args ? args.serviceRoutingOspfFeatureId : undefined;
+            resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(ServiceLanVpnFeatureAssociateRoutingOspfFeature.__pulumiType, name, resourceInputs, opts);
@@ -120,6 +128,10 @@ export interface ServiceLanVpnFeatureAssociateRoutingOspfFeatureState {
      * Service Routing OSPF Feature ID
      */
     serviceRoutingOspfFeatureId?: pulumi.Input<string>;
+    /**
+     * The version of the object
+     */
+    version?: pulumi.Input<number>;
 }
 
 /**

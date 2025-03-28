@@ -72,14 +72,34 @@ export class SecurityPolicy extends pulumi.CustomResource {
      */
     public readonly highSpeedLoggingServerPort!: pulumi.Output<string | undefined>;
     /**
+     * High Speed Logging Source Interface
+     */
+    public readonly highSpeedLoggingServerSourceInterface!: pulumi.Output<string | undefined>;
+    /**
      * High Speed Logging VPN
      */
     public readonly highSpeedLoggingVpn!: pulumi.Output<string | undefined>;
+    /**
+     * ICMP Unreachable Allow
+     */
+    public readonly imcpUnreachableAllow!: pulumi.Output<boolean | undefined>;
     public readonly loggings!: pulumi.Output<outputs.SecurityPolicyLogging[] | undefined>;
     /**
      * Match Statistics per-filter - Choices: `on`, `off`
      */
     public readonly matchStatisticsPerFilter!: pulumi.Output<string | undefined>;
+    /**
+     * Max Incomplete ICMP Limit
+     */
+    public readonly maxIncompleteIcmpLimit!: pulumi.Output<number | undefined>;
+    /**
+     * Max Incomplete TCP Limit
+     */
+    public readonly maxIncompleteTcpLimit!: pulumi.Output<number | undefined>;
+    /**
+     * Max Incomplete UDP Limit
+     */
+    public readonly maxIncompleteUdpLimit!: pulumi.Output<number | undefined>;
     /**
      * The policy mode - Choices: `security`, `unified` - Default value: `security`
      */
@@ -89,9 +109,17 @@ export class SecurityPolicy extends pulumi.CustomResource {
      */
     public readonly name!: pulumi.Output<string>;
     /**
+     * Session Reclassify Allow
+     */
+    public readonly sessionReclassifyAllow!: pulumi.Output<boolean | undefined>;
+    /**
      * TCP SYN Flood Limit, value from 1 to 4294967295
      */
     public readonly tcpSynFloodLimit!: pulumi.Output<string | undefined>;
+    /**
+     * Unified Logging
+     */
+    public readonly unifiedLogging!: pulumi.Output<boolean | undefined>;
     /**
      * The use case of the security policy - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`,
      * `directInternetAccess`, `directCloudAccess` - Default value: `custom`
@@ -122,12 +150,19 @@ export class SecurityPolicy extends pulumi.CustomResource {
             resourceInputs["failureMode"] = state ? state.failureMode : undefined;
             resourceInputs["highSpeedLoggingServerIp"] = state ? state.highSpeedLoggingServerIp : undefined;
             resourceInputs["highSpeedLoggingServerPort"] = state ? state.highSpeedLoggingServerPort : undefined;
+            resourceInputs["highSpeedLoggingServerSourceInterface"] = state ? state.highSpeedLoggingServerSourceInterface : undefined;
             resourceInputs["highSpeedLoggingVpn"] = state ? state.highSpeedLoggingVpn : undefined;
+            resourceInputs["imcpUnreachableAllow"] = state ? state.imcpUnreachableAllow : undefined;
             resourceInputs["loggings"] = state ? state.loggings : undefined;
             resourceInputs["matchStatisticsPerFilter"] = state ? state.matchStatisticsPerFilter : undefined;
+            resourceInputs["maxIncompleteIcmpLimit"] = state ? state.maxIncompleteIcmpLimit : undefined;
+            resourceInputs["maxIncompleteTcpLimit"] = state ? state.maxIncompleteTcpLimit : undefined;
+            resourceInputs["maxIncompleteUdpLimit"] = state ? state.maxIncompleteUdpLimit : undefined;
             resourceInputs["mode"] = state ? state.mode : undefined;
             resourceInputs["name"] = state ? state.name : undefined;
+            resourceInputs["sessionReclassifyAllow"] = state ? state.sessionReclassifyAllow : undefined;
             resourceInputs["tcpSynFloodLimit"] = state ? state.tcpSynFloodLimit : undefined;
+            resourceInputs["unifiedLogging"] = state ? state.unifiedLogging : undefined;
             resourceInputs["useCase"] = state ? state.useCase : undefined;
             resourceInputs["version"] = state ? state.version : undefined;
         } else {
@@ -145,12 +180,19 @@ export class SecurityPolicy extends pulumi.CustomResource {
             resourceInputs["failureMode"] = args ? args.failureMode : undefined;
             resourceInputs["highSpeedLoggingServerIp"] = args ? args.highSpeedLoggingServerIp : undefined;
             resourceInputs["highSpeedLoggingServerPort"] = args ? args.highSpeedLoggingServerPort : undefined;
+            resourceInputs["highSpeedLoggingServerSourceInterface"] = args ? args.highSpeedLoggingServerSourceInterface : undefined;
             resourceInputs["highSpeedLoggingVpn"] = args ? args.highSpeedLoggingVpn : undefined;
+            resourceInputs["imcpUnreachableAllow"] = args ? args.imcpUnreachableAllow : undefined;
             resourceInputs["loggings"] = args ? args.loggings : undefined;
             resourceInputs["matchStatisticsPerFilter"] = args ? args.matchStatisticsPerFilter : undefined;
+            resourceInputs["maxIncompleteIcmpLimit"] = args ? args.maxIncompleteIcmpLimit : undefined;
+            resourceInputs["maxIncompleteTcpLimit"] = args ? args.maxIncompleteTcpLimit : undefined;
+            resourceInputs["maxIncompleteUdpLimit"] = args ? args.maxIncompleteUdpLimit : undefined;
             resourceInputs["mode"] = args ? args.mode : undefined;
             resourceInputs["name"] = args ? args.name : undefined;
+            resourceInputs["sessionReclassifyAllow"] = args ? args.sessionReclassifyAllow : undefined;
             resourceInputs["tcpSynFloodLimit"] = args ? args.tcpSynFloodLimit : undefined;
+            resourceInputs["unifiedLogging"] = args ? args.unifiedLogging : undefined;
             resourceInputs["useCase"] = args ? args.useCase : undefined;
             resourceInputs["version"] = undefined /*out*/;
         }
@@ -192,14 +234,34 @@ export interface SecurityPolicyState {
      */
     highSpeedLoggingServerPort?: pulumi.Input<string>;
     /**
+     * High Speed Logging Source Interface
+     */
+    highSpeedLoggingServerSourceInterface?: pulumi.Input<string>;
+    /**
      * High Speed Logging VPN
      */
     highSpeedLoggingVpn?: pulumi.Input<string>;
+    /**
+     * ICMP Unreachable Allow
+     */
+    imcpUnreachableAllow?: pulumi.Input<boolean>;
     loggings?: pulumi.Input<pulumi.Input<inputs.SecurityPolicyLogging>[]>;
     /**
      * Match Statistics per-filter - Choices: `on`, `off`
      */
     matchStatisticsPerFilter?: pulumi.Input<string>;
+    /**
+     * Max Incomplete ICMP Limit
+     */
+    maxIncompleteIcmpLimit?: pulumi.Input<number>;
+    /**
+     * Max Incomplete TCP Limit
+     */
+    maxIncompleteTcpLimit?: pulumi.Input<number>;
+    /**
+     * Max Incomplete UDP Limit
+     */
+    maxIncompleteUdpLimit?: pulumi.Input<number>;
     /**
      * The policy mode - Choices: `security`, `unified` - Default value: `security`
      */
@@ -209,9 +271,17 @@ export interface SecurityPolicyState {
      */
     name?: pulumi.Input<string>;
     /**
+     * Session Reclassify Allow
+     */
+    sessionReclassifyAllow?: pulumi.Input<boolean>;
+    /**
      * TCP SYN Flood Limit, value from 1 to 4294967295
      */
     tcpSynFloodLimit?: pulumi.Input<string>;
+    /**
+     * Unified Logging
+     */
+    unifiedLogging?: pulumi.Input<boolean>;
     /**
      * The use case of the security policy - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`,
      * `directInternetAccess`, `directCloudAccess` - Default value: `custom`
@@ -256,14 +326,34 @@ export interface SecurityPolicyArgs {
      */
     highSpeedLoggingServerPort?: pulumi.Input<string>;
     /**
+     * High Speed Logging Source Interface
+     */
+    highSpeedLoggingServerSourceInterface?: pulumi.Input<string>;
+    /**
      * High Speed Logging VPN
      */
     highSpeedLoggingVpn?: pulumi.Input<string>;
+    /**
+     * ICMP Unreachable Allow
+     */
+    imcpUnreachableAllow?: pulumi.Input<boolean>;
     loggings?: pulumi.Input<pulumi.Input<inputs.SecurityPolicyLogging>[]>;
     /**
      * Match Statistics per-filter - Choices: `on`, `off`
      */
     matchStatisticsPerFilter?: pulumi.Input<string>;
+    /**
+     * Max Incomplete ICMP Limit
+     */
+    maxIncompleteIcmpLimit?: pulumi.Input<number>;
+    /**
+     * Max Incomplete TCP Limit
+     */
+    maxIncompleteTcpLimit?: pulumi.Input<number>;
+    /**
+     * Max Incomplete UDP Limit
+     */
+    maxIncompleteUdpLimit?: pulumi.Input<number>;
     /**
      * The policy mode - Choices: `security`, `unified` - Default value: `security`
      */
@@ -273,9 +363,17 @@ export interface SecurityPolicyArgs {
      */
     name?: pulumi.Input<string>;
     /**
+     * Session Reclassify Allow
+     */
+    sessionReclassifyAllow?: pulumi.Input<boolean>;
+    /**
      * TCP SYN Flood Limit, value from 1 to 4294967295
      */
     tcpSynFloodLimit?: pulumi.Input<string>;
+    /**
+     * Unified Logging
+     */
+    unifiedLogging?: pulumi.Input<boolean>;
     /**
      * The use case of the security policy - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`,
      * `directInternetAccess`, `directCloudAccess` - Default value: `custom`

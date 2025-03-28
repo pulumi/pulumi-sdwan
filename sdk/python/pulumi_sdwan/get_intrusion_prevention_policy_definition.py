@@ -13,6 +13,7 @@ if sys.version_info >= (3, 11):
 else:
     from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
+from . import outputs
 
 __all__ = [
     'GetIntrusionPreventionPolicyDefinitionResult',
@@ -26,7 +27,10 @@ class GetIntrusionPreventionPolicyDefinitionResult:
     """
     A collection of values returned by getIntrusionPreventionPolicyDefinition.
     """
-    def __init__(__self__, description=None, id=None, inspection_mode=None, ips_signature_list_id=None, ips_signature_list_version=None, log_level=None, mode=None, name=None, signature_set=None, target_vpns=None, version=None):
+    def __init__(__self__, custom_signature=None, description=None, id=None, inspection_mode=None, ips_signature_list_id=None, ips_signature_list_version=None, log_level=None, loggings=None, mode=None, name=None, signature_set=None, target_vpns=None, version=None):
+        if custom_signature and not isinstance(custom_signature, bool):
+            raise TypeError("Expected argument 'custom_signature' to be a bool")
+        pulumi.set(__self__, "custom_signature", custom_signature)
         if description and not isinstance(description, str):
             raise TypeError("Expected argument 'description' to be a str")
         pulumi.set(__self__, "description", description)
@@ -45,6 +49,9 @@ class GetIntrusionPreventionPolicyDefinitionResult:
         if log_level and not isinstance(log_level, str):
             raise TypeError("Expected argument 'log_level' to be a str")
         pulumi.set(__self__, "log_level", log_level)
+        if loggings and not isinstance(loggings, list):
+            raise TypeError("Expected argument 'loggings' to be a list")
+        pulumi.set(__self__, "loggings", loggings)
         if mode and not isinstance(mode, str):
             raise TypeError("Expected argument 'mode' to be a str")
         pulumi.set(__self__, "mode", mode)
@@ -60,6 +67,14 @@ class GetIntrusionPreventionPolicyDefinitionResult:
         if version and not isinstance(version, int):
             raise TypeError("Expected argument 'version' to be a int")
         pulumi.set(__self__, "version", version)
+
+    @property
+    @pulumi.getter(name="customSignature")
+    def custom_signature(self) -> bool:
+        """
+        Custom signature
+        """
+        return pulumi.get(self, "custom_signature")
 
     @property
     @pulumi.getter
@@ -111,6 +126,11 @@ class GetIntrusionPreventionPolicyDefinitionResult:
 
     @property
     @pulumi.getter
+    def loggings(self) -> Sequence['outputs.GetIntrusionPreventionPolicyDefinitionLoggingResult']:
+        return pulumi.get(self, "loggings")
+
+    @property
+    @pulumi.getter
     def mode(self) -> str:
         """
         The policy mode
@@ -156,12 +176,14 @@ class AwaitableGetIntrusionPreventionPolicyDefinitionResult(GetIntrusionPreventi
         if False:
             yield self
         return GetIntrusionPreventionPolicyDefinitionResult(
+            custom_signature=self.custom_signature,
             description=self.description,
             id=self.id,
             inspection_mode=self.inspection_mode,
             ips_signature_list_id=self.ips_signature_list_id,
             ips_signature_list_version=self.ips_signature_list_version,
             log_level=self.log_level,
+            loggings=self.loggings,
             mode=self.mode,
             name=self.name,
             signature_set=self.signature_set,
@@ -192,12 +214,14 @@ def get_intrusion_prevention_policy_definition(id: Optional[str] = None,
     __ret__ = pulumi.runtime.invoke('sdwan:index/getIntrusionPreventionPolicyDefinition:getIntrusionPreventionPolicyDefinition', __args__, opts=opts, typ=GetIntrusionPreventionPolicyDefinitionResult).value
 
     return AwaitableGetIntrusionPreventionPolicyDefinitionResult(
+        custom_signature=pulumi.get(__ret__, 'custom_signature'),
         description=pulumi.get(__ret__, 'description'),
         id=pulumi.get(__ret__, 'id'),
         inspection_mode=pulumi.get(__ret__, 'inspection_mode'),
         ips_signature_list_id=pulumi.get(__ret__, 'ips_signature_list_id'),
         ips_signature_list_version=pulumi.get(__ret__, 'ips_signature_list_version'),
         log_level=pulumi.get(__ret__, 'log_level'),
+        loggings=pulumi.get(__ret__, 'loggings'),
         mode=pulumi.get(__ret__, 'mode'),
         name=pulumi.get(__ret__, 'name'),
         signature_set=pulumi.get(__ret__, 'signature_set'),
@@ -225,12 +249,14 @@ def get_intrusion_prevention_policy_definition_output(id: Optional[pulumi.Input[
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getIntrusionPreventionPolicyDefinition:getIntrusionPreventionPolicyDefinition', __args__, opts=opts, typ=GetIntrusionPreventionPolicyDefinitionResult)
     return __ret__.apply(lambda __response__: GetIntrusionPreventionPolicyDefinitionResult(
+        custom_signature=pulumi.get(__response__, 'custom_signature'),
         description=pulumi.get(__response__, 'description'),
         id=pulumi.get(__response__, 'id'),
         inspection_mode=pulumi.get(__response__, 'inspection_mode'),
         ips_signature_list_id=pulumi.get(__response__, 'ips_signature_list_id'),
         ips_signature_list_version=pulumi.get(__response__, 'ips_signature_list_version'),
         log_level=pulumi.get(__response__, 'log_level'),
+        loggings=pulumi.get(__response__, 'loggings'),
         mode=pulumi.get(__response__, 'mode'),
         name=pulumi.get(__response__, 'name'),
         signature_set=pulumi.get(__response__, 'signature_set'),

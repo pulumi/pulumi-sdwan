@@ -13,14 +13,14 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class CustomControlTopologyPolicyDefinitionSequenceMatchEntryGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Carrier
+        /// Carrier, Attribute conditional on `type` being equal to `carrier`
         ///   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
         /// </summary>
         [Input("carrier")]
         public Input<string>? Carrier { get; set; }
 
         /// <summary>
-        /// Color list ID
+        /// Color list ID, Attribute conditional on `type` being equal to `colorList`
         /// </summary>
         [Input("colorListId")]
         public Input<string>? ColorListId { get; set; }
@@ -32,7 +32,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? ColorListVersion { get; set; }
 
         /// <summary>
-        /// Community list ID
+        /// Community list ID, Attribute conditional on `type` being equal to `community`
         /// </summary>
         [Input("communityListId")]
         public Input<string>? CommunityListId { get; set; }
@@ -44,14 +44,14 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? CommunityListVersion { get; set; }
 
         /// <summary>
-        /// Domain ID
+        /// Domain ID, Attribute conditional on `type` being equal to `domainId`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         [Input("domainId")]
         public Input<int>? DomainId { get; set; }
 
         /// <summary>
-        /// Expanded community list ID
+        /// Expanded community list ID, Attribute conditional on `type` being equal to `expandedCommunity`
         /// </summary>
         [Input("expandedCommunityListId")]
         public Input<string>? ExpandedCommunityListId { get; set; }
@@ -63,48 +63,48 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? ExpandedCommunityListVersion { get; set; }
 
         /// <summary>
-        /// Group ID
+        /// Group ID, Attribute conditional on `type` being equal to `groupId`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         [Input("groupId")]
         public Input<int>? GroupId { get; set; }
 
         /// <summary>
-        /// OMP tag
+        /// OMP tag, Attribute conditional on `type` being equal to `ompTag`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         [Input("ompTag")]
         public Input<int>? OmpTag { get; set; }
 
         /// <summary>
-        /// Origin
+        /// Origin, Attribute conditional on `type` being equal to `origin`
         ///   - Choices: `igp`, `egp`, `incomplete`, `aggregrate`, `bgp`, `bgp-external`, `bgp-internal`, `connected`, `eigrp`, `ospf`, `ospf-inter-area`, `ospf-intra-area`, `ospf-external1`, `ospf-external2`, `rip`, `static`, `eigrp-summary`, `eigrp-internal`, `eigrp-external`, `lisp`, `nat-dia`, `natpool`, `isis`, `isis-level1`, `isis-level2`
         /// </summary>
         [Input("origin")]
         public Input<string>? Origin { get; set; }
 
         /// <summary>
-        /// Originator IP
+        /// Originator IP, Attribute conditional on `type` being equal to `originator`
         /// </summary>
         [Input("originator")]
         public Input<string>? Originator { get; set; }
 
         /// <summary>
-        /// Path type
+        /// Path type, Attribute conditional on `type` being equal to `pathType`
         ///   - Choices: `hierarchical-path`, `direct-path`, `transport-gateway-path`
         /// </summary>
         [Input("pathType")]
         public Input<string>? PathType { get; set; }
 
         /// <summary>
-        /// Preference
+        /// Preference, Attribute conditional on `type` being equal to `preference`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         [Input("preference")]
         public Input<int>? Preference { get; set; }
 
         /// <summary>
-        /// Prefix list ID
+        /// Prefix list ID, Attribute conditional on `type` being equal to `prefixList`
         /// </summary>
         [Input("prefixListId")]
         public Input<string>? PrefixListId { get; set; }
@@ -116,14 +116,14 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? PrefixListVersion { get; set; }
 
         /// <summary>
-        /// Site ID
+        /// Site ID, Attribute conditional on `type` being equal to `siteId`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         [Input("siteId")]
         public Input<int>? SiteId { get; set; }
 
         /// <summary>
-        /// Site list ID
+        /// Site list ID, Attribute conditional on `type` being equal to `siteList`
         /// </summary>
         [Input("siteListId")]
         public Input<string>? SiteListId { get; set; }
@@ -135,26 +135,26 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? SiteListVersion { get; set; }
 
         /// <summary>
-        /// TLOC color
+        /// TLOC color, Attribute conditional on `type` being equal to `tloc`
         /// </summary>
         [Input("tlocColor")]
         public Input<string>? TlocColor { get; set; }
 
         /// <summary>
-        /// TLOC encapsulation
+        /// TLOC encapsulation, Attribute conditional on `type` being equal to `tloc`
         ///   - Choices: `ipsec`, `gre`
         /// </summary>
         [Input("tlocEncapsulation")]
         public Input<string>? TlocEncapsulation { get; set; }
 
         /// <summary>
-        /// TLOC IP address
+        /// TLOC IP address, Attribute conditional on `type` being equal to `tloc`
         /// </summary>
         [Input("tlocIp")]
         public Input<string>? TlocIp { get; set; }
 
         /// <summary>
-        /// TLOC list ID
+        /// TLOC list ID, Attribute conditional on `type` being equal to `tlocList`
         /// </summary>
         [Input("tlocListId")]
         public Input<string>? TlocListId { get; set; }
@@ -173,14 +173,14 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string> Type { get; set; } = null!;
 
         /// <summary>
-        /// VPN ID
+        /// VPN ID, Attribute conditional on `type` being equal to `vpn`
         ///   - Range: `0`-`65536`
         /// </summary>
         [Input("vpnId")]
         public Input<int>? VpnId { get; set; }
 
         /// <summary>
-        /// VPN list ID
+        /// VPN list ID, Attribute conditional on `type` being equal to `vpnList`
         /// </summary>
         [Input("vpnListId")]
         public Input<string>? VpnListId { get; set; }

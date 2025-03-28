@@ -36,8 +36,10 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Import
     /// 
+    /// Expected import identifier with the format: "transport_wan_vpn_interface_ethernet_feature_associate_ipv6_tracker_group_feature_id,feature_profile_id,transport_wan_vpn_feature_id,transport_wan_vpn_interface_ethernet_feature_id"
+    /// 
     /// ```sh
-    /// $ pulumi import sdwan:index/transportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature:TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+    /// $ pulumi import sdwan:index/transportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature:TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037,140331f6-5418-4755-a059-13c77eb96037"
     /// ```
     /// </summary>
     [SdwanResourceType("sdwan:index/transportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature:TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature")]
@@ -66,6 +68,12 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Output("transportWanVpnInterfaceEthernetFeatureId")]
         public Output<string> TransportWanVpnInterfaceEthernetFeatureId { get; private set; } = null!;
+
+        /// <summary>
+        /// The version of the object
+        /// </summary>
+        [Output("version")]
+        public Output<int> Version { get; private set; } = null!;
 
 
         /// <summary>
@@ -168,6 +176,12 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Input("transportWanVpnInterfaceEthernetFeatureId")]
         public Input<string>? TransportWanVpnInterfaceEthernetFeatureId { get; set; }
+
+        /// <summary>
+        /// The version of the object
+        /// </summary>
+        [Input("version")]
+        public Input<int>? Version { get; set; }
 
         public TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureState()
         {

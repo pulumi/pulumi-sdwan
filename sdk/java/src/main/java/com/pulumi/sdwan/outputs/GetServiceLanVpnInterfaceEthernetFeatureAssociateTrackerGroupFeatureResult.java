@@ -5,6 +5,7 @@ package com.pulumi.sdwan.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
@@ -35,6 +36,11 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroup
      * 
      */
     private String serviceTrackerGroupFeatureId;
+    /**
+     * @return The version of the object
+     * 
+     */
+    private Integer version;
 
     private GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureResult() {}
     /**
@@ -72,6 +78,13 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroup
     public String serviceTrackerGroupFeatureId() {
         return this.serviceTrackerGroupFeatureId;
     }
+    /**
+     * @return The version of the object
+     * 
+     */
+    public Integer version() {
+        return this.version;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -87,6 +100,7 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroup
         private String serviceLanVpnFeatureId;
         private String serviceLanVpnInterfaceEthernetFeatureId;
         private String serviceTrackerGroupFeatureId;
+        private Integer version;
         public Builder() {}
         public Builder(GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureResult defaults) {
     	      Objects.requireNonNull(defaults);
@@ -95,6 +109,7 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroup
     	      this.serviceLanVpnFeatureId = defaults.serviceLanVpnFeatureId;
     	      this.serviceLanVpnInterfaceEthernetFeatureId = defaults.serviceLanVpnInterfaceEthernetFeatureId;
     	      this.serviceTrackerGroupFeatureId = defaults.serviceTrackerGroupFeatureId;
+    	      this.version = defaults.version;
         }
 
         @CustomType.Setter
@@ -137,6 +152,14 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroup
             this.serviceTrackerGroupFeatureId = serviceTrackerGroupFeatureId;
             return this;
         }
+        @CustomType.Setter
+        public Builder version(Integer version) {
+            if (version == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureResult", "version");
+            }
+            this.version = version;
+            return this;
+        }
         public GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureResult build() {
             final var _resultValue = new GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureResult();
             _resultValue.featureProfileId = featureProfileId;
@@ -144,6 +167,7 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroup
             _resultValue.serviceLanVpnFeatureId = serviceLanVpnFeatureId;
             _resultValue.serviceLanVpnInterfaceEthernetFeatureId = serviceLanVpnInterfaceEthernetFeatureId;
             _resultValue.serviceTrackerGroupFeatureId = serviceTrackerGroupFeatureId;
+            _resultValue.version = version;
             return _resultValue;
         }
     }

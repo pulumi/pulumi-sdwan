@@ -5,6 +5,7 @@ package com.pulumi.sdwan.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
@@ -35,6 +36,11 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureAssociateIpv6Tracke
      * 
      */
     private String transportWanVpnInterfaceEthernetFeatureId;
+    /**
+     * @return The version of the object
+     * 
+     */
+    private Integer version;
 
     private GetTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureResult() {}
     /**
@@ -72,6 +78,13 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureAssociateIpv6Tracke
     public String transportWanVpnInterfaceEthernetFeatureId() {
         return this.transportWanVpnInterfaceEthernetFeatureId;
     }
+    /**
+     * @return The version of the object
+     * 
+     */
+    public Integer version() {
+        return this.version;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -87,6 +100,7 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureAssociateIpv6Tracke
         private String transportIpv6TrackerGroupFeatureId;
         private String transportWanVpnFeatureId;
         private String transportWanVpnInterfaceEthernetFeatureId;
+        private Integer version;
         public Builder() {}
         public Builder(GetTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureResult defaults) {
     	      Objects.requireNonNull(defaults);
@@ -95,6 +109,7 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureAssociateIpv6Tracke
     	      this.transportIpv6TrackerGroupFeatureId = defaults.transportIpv6TrackerGroupFeatureId;
     	      this.transportWanVpnFeatureId = defaults.transportWanVpnFeatureId;
     	      this.transportWanVpnInterfaceEthernetFeatureId = defaults.transportWanVpnInterfaceEthernetFeatureId;
+    	      this.version = defaults.version;
         }
 
         @CustomType.Setter
@@ -137,6 +152,14 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureAssociateIpv6Tracke
             this.transportWanVpnInterfaceEthernetFeatureId = transportWanVpnInterfaceEthernetFeatureId;
             return this;
         }
+        @CustomType.Setter
+        public Builder version(Integer version) {
+            if (version == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureResult", "version");
+            }
+            this.version = version;
+            return this;
+        }
         public GetTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureResult build() {
             final var _resultValue = new GetTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureResult();
             _resultValue.featureProfileId = featureProfileId;
@@ -144,6 +167,7 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureAssociateIpv6Tracke
             _resultValue.transportIpv6TrackerGroupFeatureId = transportIpv6TrackerGroupFeatureId;
             _resultValue.transportWanVpnFeatureId = transportWanVpnFeatureId;
             _resultValue.transportWanVpnInterfaceEthernetFeatureId = transportWanVpnInterfaceEthernetFeatureId;
+            _resultValue.version = version;
             return _resultValue;
         }
     }

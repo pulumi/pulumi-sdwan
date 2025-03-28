@@ -18,14 +18,14 @@ public final class Ipv6AclPolicyDefinitionSequenceActionEntrySetParameterArgs ex
     public static final Ipv6AclPolicyDefinitionSequenceActionEntrySetParameterArgs Empty = new Ipv6AclPolicyDefinitionSequenceActionEntrySetParameterArgs();
 
     /**
-     * Next hop IP
+     * Next hop IP, Attribute conditional on `type` being equal to `nextHop`
      * 
      */
     @Import(name="nextHop")
     private @Nullable Output<String> nextHop;
 
     /**
-     * @return Next hop IP
+     * @return Next hop IP, Attribute conditional on `type` being equal to `nextHop`
      * 
      */
     public Optional<Output<String>> nextHop() {
@@ -33,7 +33,7 @@ public final class Ipv6AclPolicyDefinitionSequenceActionEntrySetParameterArgs ex
     }
 
     /**
-     * Traffic class
+     * Traffic class, Attribute conditional on `type` being equal to `trafficClass`
      *   - Range: `0`-`63`
      * 
      */
@@ -41,7 +41,7 @@ public final class Ipv6AclPolicyDefinitionSequenceActionEntrySetParameterArgs ex
     private @Nullable Output<Integer> trafficClass;
 
     /**
-     * @return Traffic class
+     * @return Traffic class, Attribute conditional on `type` being equal to `trafficClass`
      *   - Range: `0`-`63`
      * 
      */
@@ -93,7 +93,7 @@ public final class Ipv6AclPolicyDefinitionSequenceActionEntrySetParameterArgs ex
         }
 
         /**
-         * @param nextHop Next hop IP
+         * @param nextHop Next hop IP, Attribute conditional on `type` being equal to `nextHop`
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class Ipv6AclPolicyDefinitionSequenceActionEntrySetParameterArgs ex
         }
 
         /**
-         * @param nextHop Next hop IP
+         * @param nextHop Next hop IP, Attribute conditional on `type` being equal to `nextHop`
          * 
          * @return builder
          * 
@@ -114,7 +114,7 @@ public final class Ipv6AclPolicyDefinitionSequenceActionEntrySetParameterArgs ex
         }
 
         /**
-         * @param trafficClass Traffic class
+         * @param trafficClass Traffic class, Attribute conditional on `type` being equal to `trafficClass`
          *   - Range: `0`-`63`
          * 
          * @return builder
@@ -126,7 +126,7 @@ public final class Ipv6AclPolicyDefinitionSequenceActionEntrySetParameterArgs ex
         }
 
         /**
-         * @param trafficClass Traffic class
+         * @param trafficClass Traffic class, Attribute conditional on `type` being equal to `trafficClass`
          *   - Range: `0`-`63`
          * 
          * @return builder

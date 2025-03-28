@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TrafficDataPolicyDefinitionSequenceActionEntryNatParameter {
     /**
-     * @return Fallback
+     * @return Fallback, Attribute conditional on `type` being equal to `fallback`
      * 
      */
     private @Nullable Boolean fallback;
@@ -26,14 +26,14 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryNatParameter {
      */
     private String type;
     /**
-     * @return DSCP
+     * @return DSCP, Attribute conditional on `type` being equal to `useVpn`
      * 
      */
     private @Nullable Integer vpnId;
 
     private TrafficDataPolicyDefinitionSequenceActionEntryNatParameter() {}
     /**
-     * @return Fallback
+     * @return Fallback, Attribute conditional on `type` being equal to `fallback`
      * 
      */
     public Optional<Boolean> fallback() {
@@ -48,7 +48,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryNatParameter {
         return this.type;
     }
     /**
-     * @return DSCP
+     * @return DSCP, Attribute conditional on `type` being equal to `useVpn`
      * 
      */
     public Optional<Integer> vpnId() {

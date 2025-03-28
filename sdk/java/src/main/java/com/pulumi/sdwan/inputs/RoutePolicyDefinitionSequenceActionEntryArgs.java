@@ -19,7 +19,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
     public static final RoutePolicyDefinitionSequenceActionEntryArgs Empty = new RoutePolicyDefinitionSequenceActionEntryArgs();
 
     /**
-     * Aggregator
+     * Aggregator, Attribute conditional on `type` being equal to `aggregator`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -27,7 +27,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
     private @Nullable Output<Integer> aggregator;
 
     /**
-     * @return Aggregator
+     * @return Aggregator, Attribute conditional on `type` being equal to `aggregator`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -36,14 +36,14 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
     }
 
     /**
-     * IP address
+     * IP address, Attribute conditional on `type` being equal to `aggregator`
      * 
      */
     @Import(name="aggregatorIpAddress")
     private @Nullable Output<String> aggregatorIpAddress;
 
     /**
-     * @return IP address
+     * @return IP address, Attribute conditional on `type` being equal to `aggregator`
      * 
      */
     public Optional<Output<String>> aggregatorIpAddress() {
@@ -51,14 +51,14 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
     }
 
     /**
-     * Space separated list of ASN to exclude
+     * Space separated list of ASN to exclude, Attribute conditional on `type` being equal to `asPath`
      * 
      */
     @Import(name="asPathExclude")
     private @Nullable Output<String> asPathExclude;
 
     /**
-     * @return Space separated list of ASN to exclude
+     * @return Space separated list of ASN to exclude, Attribute conditional on `type` being equal to `asPath`
      * 
      */
     public Optional<Output<String>> asPathExclude() {
@@ -66,14 +66,14 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
     }
 
     /**
-     * Space separated list of ASN to prepend
+     * Space separated list of ASN to prepend, Attribute conditional on `type` being equal to `asPath`
      * 
      */
     @Import(name="asPathPrepend")
     private @Nullable Output<String> asPathPrepend;
 
     /**
-     * @return Space separated list of ASN to prepend
+     * @return Space separated list of ASN to prepend, Attribute conditional on `type` being equal to `asPath`
      * 
      */
     public Optional<Output<String>> asPathPrepend() {
@@ -81,14 +81,14 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
     }
 
     /**
-     * Atomic aggregate
+     * Atomic aggregate, Attribute conditional on `type` being equal to `atomicAggregate`
      * 
      */
     @Import(name="atomicAggregate")
     private @Nullable Output<Boolean> atomicAggregate;
 
     /**
-     * @return Atomic aggregate
+     * @return Atomic aggregate, Attribute conditional on `type` being equal to `atomicAggregate`
      * 
      */
     public Optional<Output<Boolean>> atomicAggregate() {
@@ -96,14 +96,14 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
     }
 
     /**
-     * Community value, e.g. `1000:10000` or `internet` or `local-AS`
+     * Community value, e.g. `1000:10000` or `internet` or `local-AS`, Attribute conditional on `type` being equal to `community`
      * 
      */
     @Import(name="community")
     private @Nullable Output<String> community;
 
     /**
-     * @return Community value, e.g. `1000:10000` or `internet` or `local-AS`
+     * @return Community value, e.g. `1000:10000` or `internet` or `local-AS`, Attribute conditional on `type` being equal to `community`
      * 
      */
     public Optional<Output<String>> community() {
@@ -111,14 +111,14 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
     }
 
     /**
-     * Community additive
+     * Community additive, Attribute conditional on `type` being equal to `communityAdditive`
      * 
      */
     @Import(name="communityAdditive")
     private @Nullable Output<Boolean> communityAdditive;
 
     /**
-     * @return Community additive
+     * @return Community additive, Attribute conditional on `type` being equal to `communityAdditive`
      * 
      */
     public Optional<Output<Boolean>> communityAdditive() {
@@ -126,7 +126,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
     }
 
     /**
-     * Local preference
+     * Local preference, Attribute conditional on `type` being equal to `localPreference`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -134,7 +134,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
     private @Nullable Output<Integer> localPreference;
 
     /**
-     * @return Local preference
+     * @return Local preference, Attribute conditional on `type` being equal to `localPreference`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -143,7 +143,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
     }
 
     /**
-     * Metric
+     * Metric, Attribute conditional on `type` being equal to `metric`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -151,7 +151,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
     private @Nullable Output<Integer> metric;
 
     /**
-     * @return Metric
+     * @return Metric, Attribute conditional on `type` being equal to `metric`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -160,7 +160,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
     }
 
     /**
-     * Metric type
+     * Metric type, Attribute conditional on `type` being equal to `metricType`
      *   - Choices: `type1`, `type2`
      * 
      */
@@ -168,7 +168,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
     private @Nullable Output<String> metricType;
 
     /**
-     * @return Metric type
+     * @return Metric type, Attribute conditional on `type` being equal to `metricType`
      *   - Choices: `type1`, `type2`
      * 
      */
@@ -177,14 +177,14 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
     }
 
     /**
-     * Next hop IP
+     * Next hop IP, Attribute conditional on `type` being equal to `nextHop`
      * 
      */
     @Import(name="nextHop")
     private @Nullable Output<String> nextHop;
 
     /**
-     * @return Next hop IP
+     * @return Next hop IP, Attribute conditional on `type` being equal to `nextHop`
      * 
      */
     public Optional<Output<String>> nextHop() {
@@ -192,7 +192,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
     }
 
     /**
-     * OMP tag
+     * OMP tag, Attribute conditional on `type` being equal to `ompTag`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -200,7 +200,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
     private @Nullable Output<Integer> ompTag;
 
     /**
-     * @return OMP tag
+     * @return OMP tag, Attribute conditional on `type` being equal to `ompTag`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -209,7 +209,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
     }
 
     /**
-     * Origin
+     * Origin, Attribute conditional on `type` being equal to `origin`
      *   - Choices: `igp`, `egp`, `incomplete`
      * 
      */
@@ -217,7 +217,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
     private @Nullable Output<String> origin;
 
     /**
-     * @return Origin
+     * @return Origin, Attribute conditional on `type` being equal to `origin`
      *   - Choices: `igp`, `egp`, `incomplete`
      * 
      */
@@ -226,14 +226,14 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
     }
 
     /**
-     * Originator IP
+     * Originator IP, Attribute conditional on `type` being equal to `originator`
      * 
      */
     @Import(name="originator")
     private @Nullable Output<String> originator;
 
     /**
-     * @return Originator IP
+     * @return Originator IP, Attribute conditional on `type` being equal to `originator`
      * 
      */
     public Optional<Output<String>> originator() {
@@ -241,7 +241,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
     }
 
     /**
-     * OSPF tag
+     * OSPF tag, Attribute conditional on `type` being equal to `ospfTag`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -249,7 +249,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
     private @Nullable Output<Integer> ospfTag;
 
     /**
-     * @return OSPF tag
+     * @return OSPF tag, Attribute conditional on `type` being equal to `ospfTag`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -275,7 +275,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
     }
 
     /**
-     * Weight
+     * Weight, Attribute conditional on `type` being equal to `weight`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -283,7 +283,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
     private @Nullable Output<Integer> weight;
 
     /**
-     * @return Weight
+     * @return Weight, Attribute conditional on `type` being equal to `weight`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -332,7 +332,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
         }
 
         /**
-         * @param aggregator Aggregator
+         * @param aggregator Aggregator, Attribute conditional on `type` being equal to `aggregator`
          *   - Range: `0`-`4294967295`
          * 
          * @return builder
@@ -344,7 +344,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
         }
 
         /**
-         * @param aggregator Aggregator
+         * @param aggregator Aggregator, Attribute conditional on `type` being equal to `aggregator`
          *   - Range: `0`-`4294967295`
          * 
          * @return builder
@@ -355,7 +355,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
         }
 
         /**
-         * @param aggregatorIpAddress IP address
+         * @param aggregatorIpAddress IP address, Attribute conditional on `type` being equal to `aggregator`
          * 
          * @return builder
          * 
@@ -366,7 +366,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
         }
 
         /**
-         * @param aggregatorIpAddress IP address
+         * @param aggregatorIpAddress IP address, Attribute conditional on `type` being equal to `aggregator`
          * 
          * @return builder
          * 
@@ -376,7 +376,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
         }
 
         /**
-         * @param asPathExclude Space separated list of ASN to exclude
+         * @param asPathExclude Space separated list of ASN to exclude, Attribute conditional on `type` being equal to `asPath`
          * 
          * @return builder
          * 
@@ -387,7 +387,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
         }
 
         /**
-         * @param asPathExclude Space separated list of ASN to exclude
+         * @param asPathExclude Space separated list of ASN to exclude, Attribute conditional on `type` being equal to `asPath`
          * 
          * @return builder
          * 
@@ -397,7 +397,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
         }
 
         /**
-         * @param asPathPrepend Space separated list of ASN to prepend
+         * @param asPathPrepend Space separated list of ASN to prepend, Attribute conditional on `type` being equal to `asPath`
          * 
          * @return builder
          * 
@@ -408,7 +408,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
         }
 
         /**
-         * @param asPathPrepend Space separated list of ASN to prepend
+         * @param asPathPrepend Space separated list of ASN to prepend, Attribute conditional on `type` being equal to `asPath`
          * 
          * @return builder
          * 
@@ -418,7 +418,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
         }
 
         /**
-         * @param atomicAggregate Atomic aggregate
+         * @param atomicAggregate Atomic aggregate, Attribute conditional on `type` being equal to `atomicAggregate`
          * 
          * @return builder
          * 
@@ -429,7 +429,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
         }
 
         /**
-         * @param atomicAggregate Atomic aggregate
+         * @param atomicAggregate Atomic aggregate, Attribute conditional on `type` being equal to `atomicAggregate`
          * 
          * @return builder
          * 
@@ -439,7 +439,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
         }
 
         /**
-         * @param community Community value, e.g. `1000:10000` or `internet` or `local-AS`
+         * @param community Community value, e.g. `1000:10000` or `internet` or `local-AS`, Attribute conditional on `type` being equal to `community`
          * 
          * @return builder
          * 
@@ -450,7 +450,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
         }
 
         /**
-         * @param community Community value, e.g. `1000:10000` or `internet` or `local-AS`
+         * @param community Community value, e.g. `1000:10000` or `internet` or `local-AS`, Attribute conditional on `type` being equal to `community`
          * 
          * @return builder
          * 
@@ -460,7 +460,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
         }
 
         /**
-         * @param communityAdditive Community additive
+         * @param communityAdditive Community additive, Attribute conditional on `type` being equal to `communityAdditive`
          * 
          * @return builder
          * 
@@ -471,7 +471,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
         }
 
         /**
-         * @param communityAdditive Community additive
+         * @param communityAdditive Community additive, Attribute conditional on `type` being equal to `communityAdditive`
          * 
          * @return builder
          * 
@@ -481,7 +481,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
         }
 
         /**
-         * @param localPreference Local preference
+         * @param localPreference Local preference, Attribute conditional on `type` being equal to `localPreference`
          *   - Range: `0`-`4294967295`
          * 
          * @return builder
@@ -493,7 +493,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
         }
 
         /**
-         * @param localPreference Local preference
+         * @param localPreference Local preference, Attribute conditional on `type` being equal to `localPreference`
          *   - Range: `0`-`4294967295`
          * 
          * @return builder
@@ -504,7 +504,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
         }
 
         /**
-         * @param metric Metric
+         * @param metric Metric, Attribute conditional on `type` being equal to `metric`
          *   - Range: `0`-`4294967295`
          * 
          * @return builder
@@ -516,7 +516,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
         }
 
         /**
-         * @param metric Metric
+         * @param metric Metric, Attribute conditional on `type` being equal to `metric`
          *   - Range: `0`-`4294967295`
          * 
          * @return builder
@@ -527,7 +527,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
         }
 
         /**
-         * @param metricType Metric type
+         * @param metricType Metric type, Attribute conditional on `type` being equal to `metricType`
          *   - Choices: `type1`, `type2`
          * 
          * @return builder
@@ -539,7 +539,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
         }
 
         /**
-         * @param metricType Metric type
+         * @param metricType Metric type, Attribute conditional on `type` being equal to `metricType`
          *   - Choices: `type1`, `type2`
          * 
          * @return builder
@@ -550,7 +550,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
         }
 
         /**
-         * @param nextHop Next hop IP
+         * @param nextHop Next hop IP, Attribute conditional on `type` being equal to `nextHop`
          * 
          * @return builder
          * 
@@ -561,7 +561,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
         }
 
         /**
-         * @param nextHop Next hop IP
+         * @param nextHop Next hop IP, Attribute conditional on `type` being equal to `nextHop`
          * 
          * @return builder
          * 
@@ -571,7 +571,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
         }
 
         /**
-         * @param ompTag OMP tag
+         * @param ompTag OMP tag, Attribute conditional on `type` being equal to `ompTag`
          *   - Range: `0`-`4294967295`
          * 
          * @return builder
@@ -583,7 +583,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
         }
 
         /**
-         * @param ompTag OMP tag
+         * @param ompTag OMP tag, Attribute conditional on `type` being equal to `ompTag`
          *   - Range: `0`-`4294967295`
          * 
          * @return builder
@@ -594,7 +594,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
         }
 
         /**
-         * @param origin Origin
+         * @param origin Origin, Attribute conditional on `type` being equal to `origin`
          *   - Choices: `igp`, `egp`, `incomplete`
          * 
          * @return builder
@@ -606,7 +606,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
         }
 
         /**
-         * @param origin Origin
+         * @param origin Origin, Attribute conditional on `type` being equal to `origin`
          *   - Choices: `igp`, `egp`, `incomplete`
          * 
          * @return builder
@@ -617,7 +617,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
         }
 
         /**
-         * @param originator Originator IP
+         * @param originator Originator IP, Attribute conditional on `type` being equal to `originator`
          * 
          * @return builder
          * 
@@ -628,7 +628,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
         }
 
         /**
-         * @param originator Originator IP
+         * @param originator Originator IP, Attribute conditional on `type` being equal to `originator`
          * 
          * @return builder
          * 
@@ -638,7 +638,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
         }
 
         /**
-         * @param ospfTag OSPF tag
+         * @param ospfTag OSPF tag, Attribute conditional on `type` being equal to `ospfTag`
          *   - Range: `0`-`4294967295`
          * 
          * @return builder
@@ -650,7 +650,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
         }
 
         /**
-         * @param ospfTag OSPF tag
+         * @param ospfTag OSPF tag, Attribute conditional on `type` being equal to `ospfTag`
          *   - Range: `0`-`4294967295`
          * 
          * @return builder
@@ -684,7 +684,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
         }
 
         /**
-         * @param weight Weight
+         * @param weight Weight, Attribute conditional on `type` being equal to `weight`
          *   - Range: `0`-`4294967295`
          * 
          * @return builder
@@ -696,7 +696,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
         }
 
         /**
-         * @param weight Weight
+         * @param weight Weight, Attribute conditional on `type` being equal to `weight`
          *   - Range: `0`-`4294967295`
          * 
          * @return builder

@@ -24,8 +24,10 @@ import * as utilities from "./utilities";
  *
  * ## Import
  *
+ * Expected import identifier with the format: "service_lan_vpn_interface_ethernet_feature_associate_tracker_feature_id,feature_profile_id,service_lan_vpn_feature_id,service_lan_vpn_interface_ethernet_feature_id"
+ *
  * ```sh
- * $ pulumi import sdwan:index/serviceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature:ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+ * $ pulumi import sdwan:index/serviceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature:ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037,140331f6-5418-4755-a059-13c77eb96037"
  * ```
  */
 export class ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature extends pulumi.CustomResource {
@@ -72,6 +74,10 @@ export class ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature extend
      * Service Tracker Feature ID
      */
     public readonly serviceTrackerFeatureId!: pulumi.Output<string>;
+    /**
+     * The version of the object
+     */
+    public /*out*/ readonly version!: pulumi.Output<number>;
 
     /**
      * Create a ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature resource with the given unique name, arguments, and options.
@@ -90,6 +96,7 @@ export class ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature extend
             resourceInputs["serviceLanVpnFeatureId"] = state ? state.serviceLanVpnFeatureId : undefined;
             resourceInputs["serviceLanVpnInterfaceEthernetFeatureId"] = state ? state.serviceLanVpnInterfaceEthernetFeatureId : undefined;
             resourceInputs["serviceTrackerFeatureId"] = state ? state.serviceTrackerFeatureId : undefined;
+            resourceInputs["version"] = state ? state.version : undefined;
         } else {
             const args = argsOrState as ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureArgs | undefined;
             if ((!args || args.featureProfileId === undefined) && !opts.urn) {
@@ -108,6 +115,7 @@ export class ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature extend
             resourceInputs["serviceLanVpnFeatureId"] = args ? args.serviceLanVpnFeatureId : undefined;
             resourceInputs["serviceLanVpnInterfaceEthernetFeatureId"] = args ? args.serviceLanVpnInterfaceEthernetFeatureId : undefined;
             resourceInputs["serviceTrackerFeatureId"] = args ? args.serviceTrackerFeatureId : undefined;
+            resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature.__pulumiType, name, resourceInputs, opts);
@@ -134,6 +142,10 @@ export interface ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureSta
      * Service Tracker Feature ID
      */
     serviceTrackerFeatureId?: pulumi.Input<string>;
+    /**
+     * The version of the object
+     */
+    version?: pulumi.Input<number>;
 }
 
 /**

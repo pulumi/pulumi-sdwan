@@ -182,6 +182,10 @@ namespace Pulumi.Sdwan
         /// Transport WAN VPN Interface Ethernet Feature ID
         /// </summary>
         public readonly string TransportWanVpnInterfaceEthernetFeatureId;
+        /// <summary>
+        /// The version of the object
+        /// </summary>
+        public readonly int Version;
 
         [OutputConstructor]
         private GetTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureResult(
@@ -193,13 +197,16 @@ namespace Pulumi.Sdwan
 
             string transportWanVpnFeatureId,
 
-            string transportWanVpnInterfaceEthernetFeatureId)
+            string transportWanVpnInterfaceEthernetFeatureId,
+
+            int version)
         {
             FeatureProfileId = featureProfileId;
             Id = id;
             TransportIpv6TrackerFeatureId = transportIpv6TrackerFeatureId;
             TransportWanVpnFeatureId = transportWanVpnFeatureId;
             TransportWanVpnInterfaceEthernetFeatureId = transportWanVpnInterfaceEthernetFeatureId;
+            Version = version;
         }
     }
 }

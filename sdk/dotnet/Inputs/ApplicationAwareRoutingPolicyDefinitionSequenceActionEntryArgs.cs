@@ -13,25 +13,25 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntryArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Backup SLA preferred color (Single value or multiple values separated by spaces)
+        /// Backup SLA preferred color (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `backupSlaPreferredColor`
         /// </summary>
         [Input("backupSlaPreferredColor")]
         public Input<string>? BackupSlaPreferredColor { get; set; }
 
         /// <summary>
-        /// Cloud SLA
+        /// Cloud SLA, Attribute conditional on `type` being equal to `cloudSaas`
         /// </summary>
         [Input("cloudSla")]
         public Input<bool>? CloudSla { get; set; }
 
         /// <summary>
-        /// Counter name
+        /// Counter name, Attribute conditional on `type` being equal to `count`
         /// </summary>
         [Input("counter")]
         public Input<string>? Counter { get; set; }
 
         /// <summary>
-        /// Enable logging
+        /// Enable logging, Attribute conditional on `type` being equal to `log`
         /// </summary>
         [Input("log")]
         public Input<bool>? Log { get; set; }
@@ -40,7 +40,7 @@ namespace Pulumi.Sdwan.Inputs
         private InputList<Inputs.ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameterArgs>? _slaClassParameters;
 
         /// <summary>
-        /// List of SLA class parameters
+        /// List of SLA class parameters, Attribute conditional on `type` being equal to `slaClass`
         /// </summary>
         public InputList<Inputs.ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameterArgs> SlaClassParameters
         {

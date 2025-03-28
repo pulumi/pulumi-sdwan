@@ -45,8 +45,10 @@ import (
 //
 // ## Import
 //
+// Expected import identifier with the format: "service_lan_vpn_feature_associate_multicast_feature_id,feature_profile_id,service_lan_vpn_feature_id"
+//
 // ```sh
-// $ pulumi import sdwan:index/serviceLanVpnFeatureAssociateMulticastFeature:ServiceLanVpnFeatureAssociateMulticastFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+// $ pulumi import sdwan:index/serviceLanVpnFeatureAssociateMulticastFeature:ServiceLanVpnFeatureAssociateMulticastFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037"
 // ```
 type ServiceLanVpnFeatureAssociateMulticastFeature struct {
 	pulumi.CustomResourceState
@@ -57,6 +59,8 @@ type ServiceLanVpnFeatureAssociateMulticastFeature struct {
 	ServiceLanVpnFeatureId pulumi.StringOutput `pulumi:"serviceLanVpnFeatureId"`
 	// Service Multicast Feature ID
 	ServiceMulticastFeatureId pulumi.StringOutput `pulumi:"serviceMulticastFeatureId"`
+	// The version of the object
+	Version pulumi.IntOutput `pulumi:"version"`
 }
 
 // NewServiceLanVpnFeatureAssociateMulticastFeature registers a new resource with the given unique name, arguments, and options.
@@ -104,6 +108,8 @@ type serviceLanVpnFeatureAssociateMulticastFeatureState struct {
 	ServiceLanVpnFeatureId *string `pulumi:"serviceLanVpnFeatureId"`
 	// Service Multicast Feature ID
 	ServiceMulticastFeatureId *string `pulumi:"serviceMulticastFeatureId"`
+	// The version of the object
+	Version *int `pulumi:"version"`
 }
 
 type ServiceLanVpnFeatureAssociateMulticastFeatureState struct {
@@ -113,6 +119,8 @@ type ServiceLanVpnFeatureAssociateMulticastFeatureState struct {
 	ServiceLanVpnFeatureId pulumi.StringPtrInput
 	// Service Multicast Feature ID
 	ServiceMulticastFeatureId pulumi.StringPtrInput
+	// The version of the object
+	Version pulumi.IntPtrInput
 }
 
 func (ServiceLanVpnFeatureAssociateMulticastFeatureState) ElementType() reflect.Type {
@@ -242,6 +250,11 @@ func (o ServiceLanVpnFeatureAssociateMulticastFeatureOutput) ServiceMulticastFea
 	return o.ApplyT(func(v *ServiceLanVpnFeatureAssociateMulticastFeature) pulumi.StringOutput {
 		return v.ServiceMulticastFeatureId
 	}).(pulumi.StringOutput)
+}
+
+// The version of the object
+func (o ServiceLanVpnFeatureAssociateMulticastFeatureOutput) Version() pulumi.IntOutput {
+	return o.ApplyT(func(v *ServiceLanVpnFeatureAssociateMulticastFeature) pulumi.IntOutput { return v.Version }).(pulumi.IntOutput)
 }
 
 type ServiceLanVpnFeatureAssociateMulticastFeatureArrayOutput struct{ *pulumi.OutputState }

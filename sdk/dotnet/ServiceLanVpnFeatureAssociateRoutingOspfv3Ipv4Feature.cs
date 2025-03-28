@@ -35,8 +35,10 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Import
     /// 
+    /// Expected import identifier with the format: "service_lan_vpn_feature_associate_routing_ospfv3_ipv4_feature_id,feature_profile_id,service_lan_vpn_feature_id"
+    /// 
     /// ```sh
-    /// $ pulumi import sdwan:index/serviceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature:ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+    /// $ pulumi import sdwan:index/serviceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature:ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037"
     /// ```
     /// </summary>
     [SdwanResourceType("sdwan:index/serviceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature:ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature")]
@@ -59,6 +61,12 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Output("serviceRoutingOspfv3Ipv4FeatureId")]
         public Output<string> ServiceRoutingOspfv3Ipv4FeatureId { get; private set; } = null!;
+
+        /// <summary>
+        /// The version of the object
+        /// </summary>
+        [Output("version")]
+        public Output<int> Version { get; private set; } = null!;
 
 
         /// <summary>
@@ -149,6 +157,12 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Input("serviceRoutingOspfv3Ipv4FeatureId")]
         public Input<string>? ServiceRoutingOspfv3Ipv4FeatureId { get; set; }
+
+        /// <summary>
+        /// The version of the object
+        /// </summary>
+        [Input("version")]
+        public Input<int>? Version { get; set; }
 
         public ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureState()
         {

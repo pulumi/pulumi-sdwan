@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class Ipv4AclPolicyDefinitionSequenceActionEntry {
     /**
-     * @return Class map ID
+     * @return Class map ID, Attribute conditional on `type` being equal to `class`
      * 
      */
     private @Nullable String classMapId;
@@ -27,17 +27,17 @@ public final class Ipv4AclPolicyDefinitionSequenceActionEntry {
      */
     private @Nullable Integer classMapVersion;
     /**
-     * @return Counter name
+     * @return Counter name, Attribute conditional on `type` being equal to `count`
      * 
      */
     private @Nullable String counterName;
     /**
-     * @return Enable logging
+     * @return Enable logging, Attribute conditional on `type` being equal to `log`
      * 
      */
     private @Nullable Boolean log;
     /**
-     * @return Mirror ID
+     * @return Mirror ID, Attribute conditional on `type` being equal to `mirror`
      * 
      */
     private @Nullable String mirrorId;
@@ -47,7 +47,7 @@ public final class Ipv4AclPolicyDefinitionSequenceActionEntry {
      */
     private @Nullable Integer mirrorVersion;
     /**
-     * @return Policer ID
+     * @return Policer ID, Attribute conditional on `type` being equal to `policer`
      * 
      */
     private @Nullable String policerId;
@@ -57,7 +57,7 @@ public final class Ipv4AclPolicyDefinitionSequenceActionEntry {
      */
     private @Nullable Integer policerVersion;
     /**
-     * @return List of set parameters
+     * @return List of set parameters, Attribute conditional on `type` being equal to `set`
      * 
      */
     private @Nullable List<Ipv4AclPolicyDefinitionSequenceActionEntrySetParameter> setParameters;
@@ -70,7 +70,7 @@ public final class Ipv4AclPolicyDefinitionSequenceActionEntry {
 
     private Ipv4AclPolicyDefinitionSequenceActionEntry() {}
     /**
-     * @return Class map ID
+     * @return Class map ID, Attribute conditional on `type` being equal to `class`
      * 
      */
     public Optional<String> classMapId() {
@@ -84,21 +84,21 @@ public final class Ipv4AclPolicyDefinitionSequenceActionEntry {
         return Optional.ofNullable(this.classMapVersion);
     }
     /**
-     * @return Counter name
+     * @return Counter name, Attribute conditional on `type` being equal to `count`
      * 
      */
     public Optional<String> counterName() {
         return Optional.ofNullable(this.counterName);
     }
     /**
-     * @return Enable logging
+     * @return Enable logging, Attribute conditional on `type` being equal to `log`
      * 
      */
     public Optional<Boolean> log() {
         return Optional.ofNullable(this.log);
     }
     /**
-     * @return Mirror ID
+     * @return Mirror ID, Attribute conditional on `type` being equal to `mirror`
      * 
      */
     public Optional<String> mirrorId() {
@@ -112,7 +112,7 @@ public final class Ipv4AclPolicyDefinitionSequenceActionEntry {
         return Optional.ofNullable(this.mirrorVersion);
     }
     /**
-     * @return Policer ID
+     * @return Policer ID, Attribute conditional on `type` being equal to `policer`
      * 
      */
     public Optional<String> policerId() {
@@ -126,7 +126,7 @@ public final class Ipv4AclPolicyDefinitionSequenceActionEntry {
         return Optional.ofNullable(this.policerVersion);
     }
     /**
-     * @return List of set parameters
+     * @return List of set parameters, Attribute conditional on `type` being equal to `set`
      * 
      */
     public List<Ipv4AclPolicyDefinitionSequenceActionEntrySetParameter> setParameters() {

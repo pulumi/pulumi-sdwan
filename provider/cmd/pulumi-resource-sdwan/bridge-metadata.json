@@ -1113,7 +1113,7 @@
                             }
                         }
                     },
-                    "feature_profiles": {
+                    "feature_profile_ids": {
                         "maxItemsOne": false
                     },
                     "feature_versions": {
@@ -1182,6 +1182,21 @@
             },
             "sdwan_dns_security_feature_profile": {
                 "current": "sdwan:index/dnsSecurityFeatureProfile:DnsSecurityFeatureProfile"
+            },
+            "sdwan_dns_security_policy": {
+                "current": "sdwan:index/dnsSecurityPolicy:DnsSecurityPolicy",
+                "fields": {
+                    "target_vpns": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "vpns": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    }
+                }
             },
             "sdwan_dns_security_policy_definition": {
                 "current": "sdwan:index/dnsSecurityPolicyDefinition:DnsSecurityPolicyDefinition",
@@ -1332,6 +1347,9 @@
             "sdwan_intrusion_prevention_policy_definition": {
                 "current": "sdwan:index/intrusionPreventionPolicyDefinition:IntrusionPreventionPolicyDefinition",
                 "fields": {
+                    "logging": {
+                        "maxItemsOne": false
+                    },
                     "target_vpns": {
                         "maxItemsOne": false
                     }
@@ -2784,6 +2802,14 @@
                     }
                 }
             },
+            "sdwan_tag": {
+                "current": "sdwan:index/tag:Tag",
+                "fields": {
+                    "devices": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
             "sdwan_tloc_list_policy_object": {
                 "current": "sdwan:index/tlocListPolicyObject:TlocListPolicyObject",
                 "fields": {
@@ -3322,6 +3348,9 @@
                 "current": "sdwan:index/urlFilteringPolicyDefinition:UrlFilteringPolicyDefinition",
                 "fields": {
                     "alerts": {
+                        "maxItemsOne": false
+                    },
+                    "logging": {
                         "maxItemsOne": false
                     },
                     "target_vpns": {
@@ -4783,7 +4812,7 @@
                             }
                         }
                     },
-                    "feature_profiles": {
+                    "feature_profile_ids": {
                         "maxItemsOne": false
                     },
                     "feature_versions": {
@@ -4860,6 +4889,21 @@
             },
             "sdwan_dns_security_feature_profile": {
                 "current": "sdwan:index/getDnsSecurityFeatureProfile:getDnsSecurityFeatureProfile"
+            },
+            "sdwan_dns_security_policy": {
+                "current": "sdwan:index/getDnsSecurityPolicy:getDnsSecurityPolicy",
+                "fields": {
+                    "target_vpns": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "vpns": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    }
+                }
             },
             "sdwan_dns_security_policy_definition": {
                 "current": "sdwan:index/getDnsSecurityPolicyDefinition:getDnsSecurityPolicyDefinition",
@@ -5010,6 +5054,9 @@
             "sdwan_intrusion_prevention_policy_definition": {
                 "current": "sdwan:index/getIntrusionPreventionPolicyDefinition:getIntrusionPreventionPolicyDefinition",
                 "fields": {
+                    "logging": {
+                        "maxItemsOne": false
+                    },
                     "target_vpns": {
                         "maxItemsOne": false
                     }
@@ -6462,6 +6509,14 @@
                     }
                 }
             },
+            "sdwan_tag": {
+                "current": "sdwan:index/getTag:getTag",
+                "fields": {
+                    "devices": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
             "sdwan_tloc_list_policy_object": {
                 "current": "sdwan:index/getTlocListPolicyObject:getTlocListPolicyObject",
                 "fields": {
@@ -7000,6 +7055,9 @@
                 "current": "sdwan:index/getUrlFilteringPolicyDefinition:getUrlFilteringPolicyDefinition",
                 "fields": {
                     "alerts": {
+                        "maxItemsOne": false
+                    },
+                    "logging": {
                         "maxItemsOne": false
                     },
                     "target_vpns": {

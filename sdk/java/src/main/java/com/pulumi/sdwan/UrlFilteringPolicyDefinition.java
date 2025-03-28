@@ -10,6 +10,7 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.sdwan.UrlFilteringPolicyDefinitionArgs;
 import com.pulumi.sdwan.Utilities;
 import com.pulumi.sdwan.inputs.UrlFilteringPolicyDefinitionState;
+import com.pulumi.sdwan.outputs.UrlFilteringPolicyDefinitionLogging;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -31,6 +32,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.core.Output;
  * import com.pulumi.sdwan.UrlFilteringPolicyDefinition;
  * import com.pulumi.sdwan.UrlFilteringPolicyDefinitionArgs;
+ * import com.pulumi.sdwan.inputs.UrlFilteringPolicyDefinitionLoggingArgs;
  * import java.util.List;
  * import java.util.ArrayList;
  * import java.util.Map;
@@ -55,6 +57,10 @@ import javax.annotation.Nullable;
  *             .targetVpns("1")
  *             .blockPageAction("text")
  *             .blockPageContents("Access to the requested page has been denied. Please contact your Network Administrator")
+ *             .loggings(UrlFilteringPolicyDefinitionLoggingArgs.builder()
+ *                 .external_syslog_server_ip("10.0.0.1")
+ *                 .external_syslog_server_vpn("123")
+ *                 .build())
  *             .build());
  * 
  *     }
@@ -183,6 +189,12 @@ public class UrlFilteringPolicyDefinition extends com.pulumi.resources.CustomRes
      */
     public Output<String> description() {
         return this.description;
+    }
+    @Export(name="loggings", refs={List.class,UrlFilteringPolicyDefinitionLogging.class}, tree="[0,1]")
+    private Output</* @Nullable */ List<UrlFilteringPolicyDefinitionLogging>> loggings;
+
+    public Output<Optional<List<UrlFilteringPolicyDefinitionLogging>>> loggings() {
+        return Codegen.optional(this.loggings);
     }
     /**
      * The policy mode - Choices: `security`, `unified`

@@ -45,8 +45,10 @@ import (
 //
 // ## Import
 //
+// Expected import identifier with the format: "service_lan_vpn_feature_associate_routing_ospfv3_ipv4_feature_id,feature_profile_id,service_lan_vpn_feature_id"
+//
 // ```sh
-// $ pulumi import sdwan:index/serviceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature:ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+// $ pulumi import sdwan:index/serviceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature:ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037"
 // ```
 type ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature struct {
 	pulumi.CustomResourceState
@@ -57,6 +59,8 @@ type ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature struct {
 	ServiceLanVpnFeatureId pulumi.StringOutput `pulumi:"serviceLanVpnFeatureId"`
 	// Service Routing OSPFv3 IPv4 Feature ID
 	ServiceRoutingOspfv3Ipv4FeatureId pulumi.StringOutput `pulumi:"serviceRoutingOspfv3Ipv4FeatureId"`
+	// The version of the object
+	Version pulumi.IntOutput `pulumi:"version"`
 }
 
 // NewServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature registers a new resource with the given unique name, arguments, and options.
@@ -104,6 +108,8 @@ type serviceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureState struct {
 	ServiceLanVpnFeatureId *string `pulumi:"serviceLanVpnFeatureId"`
 	// Service Routing OSPFv3 IPv4 Feature ID
 	ServiceRoutingOspfv3Ipv4FeatureId *string `pulumi:"serviceRoutingOspfv3Ipv4FeatureId"`
+	// The version of the object
+	Version *int `pulumi:"version"`
 }
 
 type ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureState struct {
@@ -113,6 +119,8 @@ type ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureState struct {
 	ServiceLanVpnFeatureId pulumi.StringPtrInput
 	// Service Routing OSPFv3 IPv4 Feature ID
 	ServiceRoutingOspfv3Ipv4FeatureId pulumi.StringPtrInput
+	// The version of the object
+	Version pulumi.IntPtrInput
 }
 
 func (ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureState) ElementType() reflect.Type {
@@ -244,6 +252,11 @@ func (o ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureOutput) ServiceRout
 	return o.ApplyT(func(v *ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature) pulumi.StringOutput {
 		return v.ServiceRoutingOspfv3Ipv4FeatureId
 	}).(pulumi.StringOutput)
+}
+
+// The version of the object
+func (o ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureOutput) Version() pulumi.IntOutput {
+	return o.ApplyT(func(v *ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature) pulumi.IntOutput { return v.Version }).(pulumi.IntOutput)
 }
 
 type ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureArrayOutput struct{ *pulumi.OutputState }

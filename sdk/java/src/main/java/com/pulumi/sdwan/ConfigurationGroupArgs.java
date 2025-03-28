@@ -7,7 +7,6 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.sdwan.inputs.ConfigurationGroupDeviceArgs;
-import com.pulumi.sdwan.inputs.ConfigurationGroupFeatureProfileArgs;
 import com.pulumi.sdwan.inputs.ConfigurationGroupTopologyDeviceArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -52,18 +51,18 @@ public final class ConfigurationGroupArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * List of feature profiles
+     * List of feature profile IDs
      * 
      */
-    @Import(name="featureProfiles")
-    private @Nullable Output<List<ConfigurationGroupFeatureProfileArgs>> featureProfiles;
+    @Import(name="featureProfileIds")
+    private @Nullable Output<List<String>> featureProfileIds;
 
     /**
-     * @return List of feature profiles
+     * @return List of feature profile IDs
      * 
      */
-    public Optional<Output<List<ConfigurationGroupFeatureProfileArgs>>> featureProfiles() {
-        return Optional.ofNullable(this.featureProfiles);
+    public Optional<Output<List<String>>> featureProfileIds() {
+        return Optional.ofNullable(this.featureProfileIds);
     }
 
     /**
@@ -146,7 +145,7 @@ public final class ConfigurationGroupArgs extends com.pulumi.resources.ResourceA
     private ConfigurationGroupArgs(ConfigurationGroupArgs $) {
         this.description = $.description;
         this.devices = $.devices;
-        this.featureProfiles = $.featureProfiles;
+        this.featureProfileIds = $.featureProfileIds;
         this.featureVersions = $.featureVersions;
         this.name = $.name;
         this.solution = $.solution;
@@ -225,34 +224,34 @@ public final class ConfigurationGroupArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param featureProfiles List of feature profiles
+         * @param featureProfileIds List of feature profile IDs
          * 
          * @return builder
          * 
          */
-        public Builder featureProfiles(@Nullable Output<List<ConfigurationGroupFeatureProfileArgs>> featureProfiles) {
-            $.featureProfiles = featureProfiles;
+        public Builder featureProfileIds(@Nullable Output<List<String>> featureProfileIds) {
+            $.featureProfileIds = featureProfileIds;
             return this;
         }
 
         /**
-         * @param featureProfiles List of feature profiles
+         * @param featureProfileIds List of feature profile IDs
          * 
          * @return builder
          * 
          */
-        public Builder featureProfiles(List<ConfigurationGroupFeatureProfileArgs> featureProfiles) {
-            return featureProfiles(Output.of(featureProfiles));
+        public Builder featureProfileIds(List<String> featureProfileIds) {
+            return featureProfileIds(Output.of(featureProfileIds));
         }
 
         /**
-         * @param featureProfiles List of feature profiles
+         * @param featureProfileIds List of feature profile IDs
          * 
          * @return builder
          * 
          */
-        public Builder featureProfiles(ConfigurationGroupFeatureProfileArgs... featureProfiles) {
-            return featureProfiles(List.of(featureProfiles));
+        public Builder featureProfileIds(String... featureProfileIds) {
+            return featureProfileIds(List.of(featureProfileIds));
         }
 
         /**

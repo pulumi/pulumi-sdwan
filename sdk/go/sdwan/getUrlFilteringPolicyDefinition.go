@@ -73,7 +73,8 @@ type LookupUrlFilteringPolicyDefinitionResult struct {
 	// The description of the policy definition.
 	Description string `pulumi:"description"`
 	// The id of the object
-	Id string `pulumi:"id"`
+	Id       string                                   `pulumi:"id"`
+	Loggings []GetUrlFilteringPolicyDefinitionLogging `pulumi:"loggings"`
 	// The policy mode
 	Mode string `pulumi:"mode"`
 	// The name of the policy definition.
@@ -167,6 +168,12 @@ func (o LookupUrlFilteringPolicyDefinitionResultOutput) Description() pulumi.Str
 // The id of the object
 func (o LookupUrlFilteringPolicyDefinitionResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupUrlFilteringPolicyDefinitionResult) string { return v.Id }).(pulumi.StringOutput)
+}
+
+func (o LookupUrlFilteringPolicyDefinitionResultOutput) Loggings() GetUrlFilteringPolicyDefinitionLoggingArrayOutput {
+	return o.ApplyT(func(v LookupUrlFilteringPolicyDefinitionResult) []GetUrlFilteringPolicyDefinitionLogging {
+		return v.Loggings
+	}).(GetUrlFilteringPolicyDefinitionLoggingArrayOutput)
 }
 
 // The policy mode
