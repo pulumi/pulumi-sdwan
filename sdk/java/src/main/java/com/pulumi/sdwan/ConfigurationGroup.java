@@ -11,7 +11,6 @@ import com.pulumi.sdwan.ConfigurationGroupArgs;
 import com.pulumi.sdwan.Utilities;
 import com.pulumi.sdwan.inputs.ConfigurationGroupState;
 import com.pulumi.sdwan.outputs.ConfigurationGroupDevice;
-import com.pulumi.sdwan.outputs.ConfigurationGroupFeatureProfile;
 import com.pulumi.sdwan.outputs.ConfigurationGroupTopologyDevice;
 import java.lang.Integer;
 import java.lang.String;
@@ -35,7 +34,6 @@ import javax.annotation.Nullable;
  * import com.pulumi.core.Output;
  * import com.pulumi.sdwan.ConfigurationGroup;
  * import com.pulumi.sdwan.ConfigurationGroupArgs;
- * import com.pulumi.sdwan.inputs.ConfigurationGroupFeatureProfileArgs;
  * import com.pulumi.sdwan.inputs.ConfigurationGroupDeviceArgs;
  * import java.util.List;
  * import java.util.ArrayList;
@@ -54,9 +52,7 @@ import javax.annotation.Nullable;
  *             .name("CG_1")
  *             .description("My config group 1")
  *             .solution("sdwan")
- *             .featureProfiles(ConfigurationGroupFeatureProfileArgs.builder()
- *                 .id("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
- *                 .build())
+ *             .featureProfileIds("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
  *             .devices(ConfigurationGroupDeviceArgs.builder()
  *                 .id("C8K-40C0CCFD-9EA8-2B2E-E73B-32C5924EC79B")
  *                 .variables(ConfigurationGroupDeviceVariableArgs.builder()
@@ -110,18 +106,18 @@ public class ConfigurationGroup extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.devices);
     }
     /**
-     * List of feature profiles
+     * List of feature profile IDs
      * 
      */
-    @Export(name="featureProfiles", refs={List.class,ConfigurationGroupFeatureProfile.class}, tree="[0,1]")
-    private Output</* @Nullable */ List<ConfigurationGroupFeatureProfile>> featureProfiles;
+    @Export(name="featureProfileIds", refs={List.class,String.class}, tree="[0,1]")
+    private Output</* @Nullable */ List<String>> featureProfileIds;
 
     /**
-     * @return List of feature profiles
+     * @return List of feature profile IDs
      * 
      */
-    public Output<Optional<List<ConfigurationGroupFeatureProfile>>> featureProfiles() {
-        return Codegen.optional(this.featureProfiles);
+    public Output<Optional<List<String>>> featureProfileIds() {
+        return Codegen.optional(this.featureProfileIds);
     }
     /**
      * List of all associated feature versions

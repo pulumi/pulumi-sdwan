@@ -5,6 +5,8 @@ package com.pulumi.sdwan.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import com.pulumi.sdwan.outputs.GetIntrusionPreventionPolicyDefinitionLogging;
+import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,6 +14,11 @@ import java.util.Objects;
 
 @CustomType
 public final class GetIntrusionPreventionPolicyDefinitionResult {
+    /**
+     * @return Custom signature
+     * 
+     */
+    private Boolean customSignature;
     /**
      * @return The description of the policy definition
      * 
@@ -42,6 +49,7 @@ public final class GetIntrusionPreventionPolicyDefinitionResult {
      * 
      */
     private String logLevel;
+    private List<GetIntrusionPreventionPolicyDefinitionLogging> loggings;
     /**
      * @return The policy mode
      * 
@@ -69,6 +77,13 @@ public final class GetIntrusionPreventionPolicyDefinitionResult {
     private Integer version;
 
     private GetIntrusionPreventionPolicyDefinitionResult() {}
+    /**
+     * @return Custom signature
+     * 
+     */
+    public Boolean customSignature() {
+        return this.customSignature;
+    }
     /**
      * @return The description of the policy definition
      * 
@@ -110,6 +125,9 @@ public final class GetIntrusionPreventionPolicyDefinitionResult {
      */
     public String logLevel() {
         return this.logLevel;
+    }
+    public List<GetIntrusionPreventionPolicyDefinitionLogging> loggings() {
+        return this.loggings;
     }
     /**
      * @return The policy mode
@@ -156,12 +174,14 @@ public final class GetIntrusionPreventionPolicyDefinitionResult {
     }
     @CustomType.Builder
     public static final class Builder {
+        private Boolean customSignature;
         private String description;
         private String id;
         private String inspectionMode;
         private String ipsSignatureListId;
         private Integer ipsSignatureListVersion;
         private String logLevel;
+        private List<GetIntrusionPreventionPolicyDefinitionLogging> loggings;
         private String mode;
         private String name;
         private String signatureSet;
@@ -170,12 +190,14 @@ public final class GetIntrusionPreventionPolicyDefinitionResult {
         public Builder() {}
         public Builder(GetIntrusionPreventionPolicyDefinitionResult defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.customSignature = defaults.customSignature;
     	      this.description = defaults.description;
     	      this.id = defaults.id;
     	      this.inspectionMode = defaults.inspectionMode;
     	      this.ipsSignatureListId = defaults.ipsSignatureListId;
     	      this.ipsSignatureListVersion = defaults.ipsSignatureListVersion;
     	      this.logLevel = defaults.logLevel;
+    	      this.loggings = defaults.loggings;
     	      this.mode = defaults.mode;
     	      this.name = defaults.name;
     	      this.signatureSet = defaults.signatureSet;
@@ -183,6 +205,14 @@ public final class GetIntrusionPreventionPolicyDefinitionResult {
     	      this.version = defaults.version;
         }
 
+        @CustomType.Setter
+        public Builder customSignature(Boolean customSignature) {
+            if (customSignature == null) {
+              throw new MissingRequiredPropertyException("GetIntrusionPreventionPolicyDefinitionResult", "customSignature");
+            }
+            this.customSignature = customSignature;
+            return this;
+        }
         @CustomType.Setter
         public Builder description(String description) {
             if (description == null) {
@@ -232,6 +262,17 @@ public final class GetIntrusionPreventionPolicyDefinitionResult {
             return this;
         }
         @CustomType.Setter
+        public Builder loggings(List<GetIntrusionPreventionPolicyDefinitionLogging> loggings) {
+            if (loggings == null) {
+              throw new MissingRequiredPropertyException("GetIntrusionPreventionPolicyDefinitionResult", "loggings");
+            }
+            this.loggings = loggings;
+            return this;
+        }
+        public Builder loggings(GetIntrusionPreventionPolicyDefinitionLogging... loggings) {
+            return loggings(List.of(loggings));
+        }
+        @CustomType.Setter
         public Builder mode(String mode) {
             if (mode == null) {
               throw new MissingRequiredPropertyException("GetIntrusionPreventionPolicyDefinitionResult", "mode");
@@ -276,12 +317,14 @@ public final class GetIntrusionPreventionPolicyDefinitionResult {
         }
         public GetIntrusionPreventionPolicyDefinitionResult build() {
             final var _resultValue = new GetIntrusionPreventionPolicyDefinitionResult();
+            _resultValue.customSignature = customSignature;
             _resultValue.description = description;
             _resultValue.id = id;
             _resultValue.inspectionMode = inspectionMode;
             _resultValue.ipsSignatureListId = ipsSignatureListId;
             _resultValue.ipsSignatureListVersion = ipsSignatureListVersion;
             _resultValue.logLevel = logLevel;
+            _resultValue.loggings = loggings;
             _resultValue.mode = mode;
             _resultValue.name = name;
             _resultValue.signatureSet = signatureSet;

@@ -126,9 +126,9 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly ImmutableArray<Outputs.GetConfigurationGroupDeviceResult> Devices;
         /// <summary>
-        /// List of feature profiles
+        /// List of feature profile IDs
         /// </summary>
-        public readonly ImmutableArray<Outputs.GetConfigurationGroupFeatureProfileResult> FeatureProfiles;
+        public readonly ImmutableArray<string> FeatureProfileIds;
         /// <summary>
         /// List of all associated feature versions
         /// </summary>
@@ -160,7 +160,7 @@ namespace Pulumi.Sdwan
 
             ImmutableArray<Outputs.GetConfigurationGroupDeviceResult> devices,
 
-            ImmutableArray<Outputs.GetConfigurationGroupFeatureProfileResult> featureProfiles,
+            ImmutableArray<string> featureProfileIds,
 
             ImmutableArray<string> featureVersions,
 
@@ -176,7 +176,7 @@ namespace Pulumi.Sdwan
         {
             Description = description;
             Devices = devices;
-            FeatureProfiles = featureProfiles;
+            FeatureProfileIds = featureProfileIds;
             FeatureVersions = featureVersions;
             Id = id;
             Name = name;

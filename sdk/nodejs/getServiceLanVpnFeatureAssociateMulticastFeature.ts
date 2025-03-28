@@ -67,6 +67,10 @@ export interface GetServiceLanVpnFeatureAssociateMulticastFeatureResult {
      * Service Multicast Feature ID
      */
     readonly serviceMulticastFeatureId: string;
+    /**
+     * The version of the object
+     */
+    readonly version: number;
 }
 /**
  * This data source can read the Service LAN VPN Feature Associate Multicast Feature .

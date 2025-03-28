@@ -61,6 +61,7 @@ from .data_fqdn_prefix_list_policy_object import *
 from .data_ipv4_prefix_list_policy_object import *
 from .data_ipv6_prefix_list_policy_object import *
 from .dns_security_feature_profile import *
+from .dns_security_policy import *
 from .dns_security_policy_definition import *
 from .domain_list_policy_object import *
 from .eigrp_feature_template import *
@@ -124,6 +125,7 @@ from .get_data_ipv4_prefix_list_policy_object import *
 from .get_data_ipv6_prefix_list_policy_object import *
 from .get_device import *
 from .get_dns_security_feature_profile import *
+from .get_dns_security_policy import *
 from .get_dns_security_policy_definition import *
 from .get_domain_list_policy_object import *
 from .get_eigrp_feature_template import *
@@ -246,6 +248,7 @@ from .get_system_performance_monitoring_feature import *
 from .get_system_remote_access_feature import *
 from .get_system_security_feature import *
 from .get_system_snmp_feature import *
+from .get_tag import *
 from .get_tloc_list_policy_object import *
 from .get_tls_ssl_decryption_policy_definition import *
 from .get_tls_ssl_profile_policy_definition import *
@@ -415,6 +418,7 @@ from .system_performance_monitoring_feature import *
 from .system_remote_access_feature import *
 from .system_security_feature import *
 from .system_snmp_feature import *
+from .tag import *
 from .tloc_list_policy_object import *
 from .tls_ssl_decryption_policy_definition import *
 from .tls_ssl_profile_policy_definition import *
@@ -927,6 +931,14 @@ _utilities.register(
   "fqn": "pulumi_sdwan",
   "classes": {
    "sdwan:index/dnsSecurityFeatureProfile:DnsSecurityFeatureProfile": "DnsSecurityFeatureProfile"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/dnsSecurityPolicy",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/dnsSecurityPolicy:DnsSecurityPolicy": "DnsSecurityPolicy"
   }
  },
  {
@@ -1903,6 +1915,14 @@ _utilities.register(
   "fqn": "pulumi_sdwan",
   "classes": {
    "sdwan:index/systemSnmpFeature:SystemSnmpFeature": "SystemSnmpFeature"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/tag",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/tag:Tag": "Tag"
   }
  },
  {

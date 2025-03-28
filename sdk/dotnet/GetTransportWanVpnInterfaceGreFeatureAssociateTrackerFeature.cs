@@ -182,6 +182,10 @@ namespace Pulumi.Sdwan
         /// Transport WAN VPN Interface GRE Feature ID
         /// </summary>
         public readonly string TransportWanVpnInterfaceGreFeatureId;
+        /// <summary>
+        /// The version of the object
+        /// </summary>
+        public readonly int Version;
 
         [OutputConstructor]
         private GetTransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureResult(
@@ -193,13 +197,16 @@ namespace Pulumi.Sdwan
 
             string transportWanVpnFeatureId,
 
-            string transportWanVpnInterfaceGreFeatureId)
+            string transportWanVpnInterfaceGreFeatureId,
+
+            int version)
         {
             FeatureProfileId = featureProfileId;
             Id = id;
             TransportTrackerFeatureId = transportTrackerFeatureId;
             TransportWanVpnFeatureId = transportWanVpnFeatureId;
             TransportWanVpnInterfaceGreFeatureId = transportWanVpnInterfaceGreFeatureId;
+            Version = version;
         }
     }
 }

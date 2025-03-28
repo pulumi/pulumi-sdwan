@@ -13,52 +13,52 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameterArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Community value, e.g. `1000:10000` or `internet` or `local-AS`
+        /// Community value, e.g. `1000:10000` or `internet` or `local-AS`, Attribute conditional on `type` being equal to `community`
         /// </summary>
         [Input("community")]
         public Input<string>? Community { get; set; }
 
         /// <summary>
-        /// Community additive
+        /// Community additive, Attribute conditional on `type` being equal to `communityAdditive`
         /// </summary>
         [Input("communityAdditive")]
         public Input<bool>? CommunityAdditive { get; set; }
 
         /// <summary>
-        /// OMP tag
+        /// OMP tag, Attribute conditional on `type` being equal to `ompTag`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         [Input("ompTag")]
         public Input<int>? OmpTag { get; set; }
 
         /// <summary>
-        /// Preference
+        /// Preference, Attribute conditional on `type` being equal to `preference`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         [Input("preference")]
         public Input<int>? Preference { get; set; }
 
         /// <summary>
-        /// Service TLOC color
+        /// Service TLOC color, Attribute conditional on `type` being equal to `service`
         /// </summary>
         [Input("serviceTlocColor")]
         public Input<string>? ServiceTlocColor { get; set; }
 
         /// <summary>
-        /// Service TLOC encapsulation
+        /// Service TLOC encapsulation, Attribute conditional on `type` being equal to `service`
         ///   - Choices: `ipsec`, `gre`
         /// </summary>
         [Input("serviceTlocEncapsulation")]
         public Input<string>? ServiceTlocEncapsulation { get; set; }
 
         /// <summary>
-        /// Service TLOC IP address
+        /// Service TLOC IP address, Attribute conditional on `type` being equal to `service`
         /// </summary>
         [Input("serviceTlocIp")]
         public Input<string>? ServiceTlocIp { get; set; }
 
         /// <summary>
-        /// Service TLOC list ID
+        /// Service TLOC list ID, Attribute conditional on `type` being equal to `service`
         /// </summary>
         [Input("serviceTlocListId")]
         public Input<string>? ServiceTlocListId { get; set; }
@@ -70,47 +70,47 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? ServiceTlocListVersion { get; set; }
 
         /// <summary>
-        /// Service type
+        /// Service type, Attribute conditional on `type` being equal to `service`
         ///   - Choices: `FW`, `IDP`, `IDS`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `netsvc5`
         /// </summary>
         [Input("serviceType")]
         public Input<string>? ServiceType { get; set; }
 
         /// <summary>
-        /// Service VPN ID
+        /// Service VPN ID, Attribute conditional on `type` being equal to `service`
         ///   - Range: `0`-`65536`
         /// </summary>
         [Input("serviceVpnId")]
         public Input<int>? ServiceVpnId { get; set; }
 
         /// <summary>
-        /// TLOC action
+        /// TLOC action, Attribute conditional on `type` being equal to `tlocAction`
         ///   - Choices: `strict`, `primary`, `backup`, `ecmp`
         /// </summary>
         [Input("tlocAction")]
         public Input<string>? TlocAction { get; set; }
 
         /// <summary>
-        /// TLOC color
+        /// TLOC color, Attribute conditional on `type` being equal to `tloc`
         /// </summary>
         [Input("tlocColor")]
         public Input<string>? TlocColor { get; set; }
 
         /// <summary>
-        /// TLOC encapsulation
+        /// TLOC encapsulation, Attribute conditional on `type` being equal to `tloc`
         ///   - Choices: `ipsec`, `gre`
         /// </summary>
         [Input("tlocEncapsulation")]
         public Input<string>? TlocEncapsulation { get; set; }
 
         /// <summary>
-        /// TLOC IP address
+        /// TLOC IP address, Attribute conditional on `type` being equal to `tloc`
         /// </summary>
         [Input("tlocIp")]
         public Input<string>? TlocIp { get; set; }
 
         /// <summary>
-        /// TLOC list ID
+        /// TLOC list ID, Attribute conditional on `type` being equal to `tlocList`
         /// </summary>
         [Input("tlocListId")]
         public Input<string>? TlocListId { get; set; }

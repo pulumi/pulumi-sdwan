@@ -13,57 +13,57 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class TrafficDataPolicyDefinitionSequenceActionEntryArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Enable cflowd
+        /// Enable cflowd, Attribute conditional on `type` being equal to `cflowd`
         /// </summary>
         [Input("cflowd")]
         public Input<bool>? Cflowd { get; set; }
 
         /// <summary>
-        /// Counter name
+        /// Counter name, Attribute conditional on `type` being equal to `count`
         /// </summary>
         [Input("counter")]
         public Input<string>? Counter { get; set; }
 
         /// <summary>
-        /// Enable DRE optimization
+        /// Enable DRE optimization, Attribute conditional on `type` being equal to `dreOptimization`
         /// </summary>
         [Input("dreOptimization")]
         public Input<bool>? DreOptimization { get; set; }
 
         /// <summary>
-        /// Enable fallback to routing
+        /// Enable fallback to routing, Attribute conditional on `type` being equal to `fallbackToRouting`
         /// </summary>
         [Input("fallbackToRouting")]
         public Input<bool>? FallbackToRouting { get; set; }
 
         /// <summary>
-        /// Enable logging
+        /// Enable logging, Attribute conditional on `type` being equal to `log`
         /// </summary>
         [Input("log")]
         public Input<bool>? Log { get; set; }
 
         /// <summary>
-        /// Loss correction
+        /// Loss correction, Attribute conditional on `type` being equal to `lossProtect`
         ///   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
         /// </summary>
         [Input("lossCorrection")]
         public Input<string>? LossCorrection { get; set; }
 
         /// <summary>
-        /// Loss correction FEC
+        /// Loss correction FEC, Attribute conditional on `type` being equal to `lossProtectFec`
         ///   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
         /// </summary>
         [Input("lossCorrectionFec")]
         public Input<string>? LossCorrectionFec { get; set; }
 
         /// <summary>
-        /// Loss correction FEC threshold
+        /// Loss correction FEC threshold, Attribute conditional on `type` being equal to `lossProtectFec`
         /// </summary>
         [Input("lossCorrectionFecThreshold")]
         public Input<string>? LossCorrectionFecThreshold { get; set; }
 
         /// <summary>
-        /// Loss correction packet duplication
+        /// Loss correction packet duplication, Attribute conditional on `type` being equal to `lossProtectPktDup`
         ///   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
         /// </summary>
         [Input("lossCorrectionPacketDuplication")]
@@ -73,7 +73,7 @@ namespace Pulumi.Sdwan.Inputs
         private InputList<Inputs.TrafficDataPolicyDefinitionSequenceActionEntryNatParameterArgs>? _natParameters;
 
         /// <summary>
-        /// List of NAT parameters
+        /// List of NAT parameters, Attribute conditional on `type` being equal to `nat`
         /// </summary>
         public InputList<Inputs.TrafficDataPolicyDefinitionSequenceActionEntryNatParameterArgs> NatParameters
         {
@@ -82,47 +82,47 @@ namespace Pulumi.Sdwan.Inputs
         }
 
         /// <summary>
-        /// NAT pool
+        /// NAT pool, Attribute conditional on `type` being equal to `nat`
         ///   - Choices: `pool`
         /// </summary>
         [Input("natPool")]
         public Input<string>? NatPool { get; set; }
 
         /// <summary>
-        /// NAT pool ID
+        /// NAT pool ID, Attribute conditional on `type` being equal to `nat`
         ///   - Range: `1`-`31`
         /// </summary>
         [Input("natPoolId")]
         public Input<int>? NatPoolId { get; set; }
 
         /// <summary>
-        /// Redirect DNS
+        /// Redirect DNS, Attribute conditional on `type` being equal to `redirectDns`
         ///   - Choices: `dnsType`, `ipAddress`
         /// </summary>
         [Input("redirectDns")]
         public Input<string>? RedirectDns { get; set; }
 
         /// <summary>
-        /// Redirect DNS IP address
+        /// Redirect DNS IP address, Attribute conditional on `redirect_dns` being equal to `ipAddress`
         /// </summary>
         [Input("redirectDnsAddress")]
         public Input<string>? RedirectDnsAddress { get; set; }
 
         /// <summary>
-        /// Redirect DNS type
+        /// Redirect DNS type, Attribute conditional on `redirect_dns` being equal to `dnsType`
         ///   - Choices: `host`, `umbrella`
         /// </summary>
         [Input("redirectDnsType")]
         public Input<string>? RedirectDnsType { get; set; }
 
         /// <summary>
-        /// Enable secure internet gateway
+        /// Enable secure internet gateway, Attribute conditional on `type` being equal to `sig`
         /// </summary>
         [Input("secureInternetGateway")]
         public Input<bool>? SecureInternetGateway { get; set; }
 
         /// <summary>
-        /// Service node group
+        /// Service node group, Attribute conditional on `type` being equal to `serviceNodeGroup`
         /// </summary>
         [Input("serviceNodeGroup")]
         public Input<string>? ServiceNodeGroup { get; set; }
@@ -131,7 +131,7 @@ namespace Pulumi.Sdwan.Inputs
         private InputList<Inputs.TrafficDataPolicyDefinitionSequenceActionEntrySetParameterArgs>? _setParameters;
 
         /// <summary>
-        /// List of set parameters
+        /// List of set parameters, Attribute conditional on `type` being equal to `set`
         /// </summary>
         public InputList<Inputs.TrafficDataPolicyDefinitionSequenceActionEntrySetParameterArgs> SetParameters
         {
@@ -140,7 +140,7 @@ namespace Pulumi.Sdwan.Inputs
         }
 
         /// <summary>
-        /// Enable TCP optimization
+        /// Enable TCP optimization, Attribute conditional on `type` being equal to `tcpOptimization`
         /// </summary>
         [Input("tcpOptimization")]
         public Input<bool>? TcpOptimization { get; set; }

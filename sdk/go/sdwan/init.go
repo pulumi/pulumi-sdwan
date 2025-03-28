@@ -133,6 +133,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &DataIpv6PrefixListPolicyObject{}
 	case "sdwan:index/dnsSecurityFeatureProfile:DnsSecurityFeatureProfile":
 		r = &DnsSecurityFeatureProfile{}
+	case "sdwan:index/dnsSecurityPolicy:DnsSecurityPolicy":
+		r = &DnsSecurityPolicy{}
 	case "sdwan:index/dnsSecurityPolicyDefinition:DnsSecurityPolicyDefinition":
 		r = &DnsSecurityPolicyDefinition{}
 	case "sdwan:index/domainListPolicyObject:DomainListPolicyObject":
@@ -377,6 +379,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &SystemSecurityFeature{}
 	case "sdwan:index/systemSnmpFeature:SystemSnmpFeature":
 		r = &SystemSnmpFeature{}
+	case "sdwan:index/tag:Tag":
+		r = &Tag{}
 	case "sdwan:index/tlocListPolicyObject:TlocListPolicyObject":
 		r = &TlocListPolicyObject{}
 	case "sdwan:index/tlsSslDecryptionPolicyDefinition:TlsSslDecryptionPolicyDefinition":
@@ -792,6 +796,11 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"sdwan",
 		"index/dnsSecurityFeatureProfile",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/dnsSecurityPolicy",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
@@ -1402,6 +1411,11 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"sdwan",
 		"index/systemSnmpFeature",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/tag",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(

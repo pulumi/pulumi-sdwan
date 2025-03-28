@@ -77,6 +77,10 @@ export interface GetServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeat
      * Service LAN VPN Interface Ethernet Feature ID
      */
     readonly serviceLanVpnInterfaceEthernetFeatureId: string;
+    /**
+     * The version of the object
+     */
+    readonly version: number;
 }
 /**
  * This data source can read the Service LAN VPN Interface Ethernet Feature Associate DHCP Server Feature .

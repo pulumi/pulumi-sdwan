@@ -13,6 +13,8 @@ if sys.version_info >= (3, 11):
 else:
     from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
+from . import outputs
+from ._inputs import *
 
 __all__ = ['UrlFilteringPolicyDefinitionArgs', 'UrlFilteringPolicyDefinition']
 
@@ -27,6 +29,7 @@ class UrlFilteringPolicyDefinitionArgs:
                  block_page_contents: Optional[pulumi.Input[str]] = None,
                  block_url_list_id: Optional[pulumi.Input[str]] = None,
                  block_url_list_version: Optional[pulumi.Input[int]] = None,
+                 loggings: Optional[pulumi.Input[Sequence[pulumi.Input['UrlFilteringPolicyDefinitionLoggingArgs']]]] = None,
                  mode: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  target_vpns: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
@@ -66,6 +69,8 @@ class UrlFilteringPolicyDefinitionArgs:
             pulumi.set(__self__, "block_url_list_id", block_url_list_id)
         if block_url_list_version is not None:
             pulumi.set(__self__, "block_url_list_version", block_url_list_version)
+        if loggings is not None:
+            pulumi.set(__self__, "loggings", loggings)
         if mode is not None:
             pulumi.set(__self__, "mode", mode)
         if name is not None:
@@ -177,6 +182,15 @@ class UrlFilteringPolicyDefinitionArgs:
 
     @property
     @pulumi.getter
+    def loggings(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['UrlFilteringPolicyDefinitionLoggingArgs']]]]:
+        return pulumi.get(self, "loggings")
+
+    @loggings.setter
+    def loggings(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['UrlFilteringPolicyDefinitionLoggingArgs']]]]):
+        pulumi.set(self, "loggings", value)
+
+    @property
+    @pulumi.getter
     def mode(self) -> Optional[pulumi.Input[str]]:
         """
         The policy mode - Choices: `security`, `unified`
@@ -260,6 +274,7 @@ class _UrlFilteringPolicyDefinitionState:
                  block_url_list_id: Optional[pulumi.Input[str]] = None,
                  block_url_list_version: Optional[pulumi.Input[int]] = None,
                  description: Optional[pulumi.Input[str]] = None,
+                 loggings: Optional[pulumi.Input[Sequence[pulumi.Input['UrlFilteringPolicyDefinitionLoggingArgs']]]] = None,
                  mode: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  target_vpns: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
@@ -302,6 +317,8 @@ class _UrlFilteringPolicyDefinitionState:
             pulumi.set(__self__, "block_url_list_version", block_url_list_version)
         if description is not None:
             pulumi.set(__self__, "description", description)
+        if loggings is not None:
+            pulumi.set(__self__, "loggings", loggings)
         if mode is not None:
             pulumi.set(__self__, "mode", mode)
         if name is not None:
@@ -415,6 +432,15 @@ class _UrlFilteringPolicyDefinitionState:
 
     @property
     @pulumi.getter
+    def loggings(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['UrlFilteringPolicyDefinitionLoggingArgs']]]]:
+        return pulumi.get(self, "loggings")
+
+    @loggings.setter
+    def loggings(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['UrlFilteringPolicyDefinitionLoggingArgs']]]]):
+        pulumi.set(self, "loggings", value)
+
+    @property
+    @pulumi.getter
     def mode(self) -> Optional[pulumi.Input[str]]:
         """
         The policy mode - Choices: `security`, `unified`
@@ -512,6 +538,7 @@ class UrlFilteringPolicyDefinition(pulumi.CustomResource):
                  block_url_list_id: Optional[pulumi.Input[str]] = None,
                  block_url_list_version: Optional[pulumi.Input[int]] = None,
                  description: Optional[pulumi.Input[str]] = None,
+                 loggings: Optional[pulumi.Input[Sequence[pulumi.Input[Union['UrlFilteringPolicyDefinitionLoggingArgs', 'UrlFilteringPolicyDefinitionLoggingArgsDict']]]]] = None,
                  mode: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  target_vpns: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
@@ -521,25 +548,6 @@ class UrlFilteringPolicyDefinition(pulumi.CustomResource):
                  __props__=None):
         """
         This resource can manage a URL Filtering Policy Definition .
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_sdwan as sdwan
-
-        example = sdwan.UrlFilteringPolicyDefinition("example",
-            name="Example",
-            description="My description",
-            mode="security",
-            alerts=["blacklist"],
-            web_categories=["alcohol-and-tobacco"],
-            web_categories_action="allow",
-            web_reputation="moderate-risk",
-            target_vpns=["1"],
-            block_page_action="text",
-            block_page_contents="Access to the requested page has been denied. Please contact your Network Administrator")
-        ```
 
         ## Import
 
@@ -574,25 +582,6 @@ class UrlFilteringPolicyDefinition(pulumi.CustomResource):
         """
         This resource can manage a URL Filtering Policy Definition .
 
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_sdwan as sdwan
-
-        example = sdwan.UrlFilteringPolicyDefinition("example",
-            name="Example",
-            description="My description",
-            mode="security",
-            alerts=["blacklist"],
-            web_categories=["alcohol-and-tobacco"],
-            web_categories_action="allow",
-            web_reputation="moderate-risk",
-            target_vpns=["1"],
-            block_page_action="text",
-            block_page_contents="Access to the requested page has been denied. Please contact your Network Administrator")
-        ```
-
         ## Import
 
         ```sh
@@ -622,6 +611,7 @@ class UrlFilteringPolicyDefinition(pulumi.CustomResource):
                  block_url_list_id: Optional[pulumi.Input[str]] = None,
                  block_url_list_version: Optional[pulumi.Input[int]] = None,
                  description: Optional[pulumi.Input[str]] = None,
+                 loggings: Optional[pulumi.Input[Sequence[pulumi.Input[Union['UrlFilteringPolicyDefinitionLoggingArgs', 'UrlFilteringPolicyDefinitionLoggingArgsDict']]]]] = None,
                  mode: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  target_vpns: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
@@ -647,6 +637,7 @@ class UrlFilteringPolicyDefinition(pulumi.CustomResource):
             if description is None and not opts.urn:
                 raise TypeError("Missing required property 'description'")
             __props__.__dict__["description"] = description
+            __props__.__dict__["loggings"] = loggings
             __props__.__dict__["mode"] = mode
             __props__.__dict__["name"] = name
             __props__.__dict__["target_vpns"] = target_vpns
@@ -672,6 +663,7 @@ class UrlFilteringPolicyDefinition(pulumi.CustomResource):
             block_url_list_id: Optional[pulumi.Input[str]] = None,
             block_url_list_version: Optional[pulumi.Input[int]] = None,
             description: Optional[pulumi.Input[str]] = None,
+            loggings: Optional[pulumi.Input[Sequence[pulumi.Input[Union['UrlFilteringPolicyDefinitionLoggingArgs', 'UrlFilteringPolicyDefinitionLoggingArgsDict']]]]] = None,
             mode: Optional[pulumi.Input[str]] = None,
             name: Optional[pulumi.Input[str]] = None,
             target_vpns: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
@@ -715,6 +707,7 @@ class UrlFilteringPolicyDefinition(pulumi.CustomResource):
         __props__.__dict__["block_url_list_id"] = block_url_list_id
         __props__.__dict__["block_url_list_version"] = block_url_list_version
         __props__.__dict__["description"] = description
+        __props__.__dict__["loggings"] = loggings
         __props__.__dict__["mode"] = mode
         __props__.__dict__["name"] = name
         __props__.__dict__["target_vpns"] = target_vpns
@@ -787,6 +780,11 @@ class UrlFilteringPolicyDefinition(pulumi.CustomResource):
         The description of the policy definition.
         """
         return pulumi.get(self, "description")
+
+    @property
+    @pulumi.getter
+    def loggings(self) -> pulumi.Output[Optional[Sequence['outputs.UrlFilteringPolicyDefinitionLogging']]]:
+        return pulumi.get(self, "loggings")
 
     @property
     @pulumi.getter

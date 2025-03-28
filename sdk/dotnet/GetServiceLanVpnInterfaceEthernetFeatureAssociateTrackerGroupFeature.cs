@@ -182,6 +182,10 @@ namespace Pulumi.Sdwan
         /// Service Tracker Group Feature ID
         /// </summary>
         public readonly string ServiceTrackerGroupFeatureId;
+        /// <summary>
+        /// The version of the object
+        /// </summary>
+        public readonly int Version;
 
         [OutputConstructor]
         private GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureResult(
@@ -193,13 +197,16 @@ namespace Pulumi.Sdwan
 
             string serviceLanVpnInterfaceEthernetFeatureId,
 
-            string serviceTrackerGroupFeatureId)
+            string serviceTrackerGroupFeatureId,
+
+            int version)
         {
             FeatureProfileId = featureProfileId;
             Id = id;
             ServiceLanVpnFeatureId = serviceLanVpnFeatureId;
             ServiceLanVpnInterfaceEthernetFeatureId = serviceLanVpnInterfaceEthernetFeatureId;
             ServiceTrackerGroupFeatureId = serviceTrackerGroupFeatureId;
+            Version = version;
         }
     }
 }

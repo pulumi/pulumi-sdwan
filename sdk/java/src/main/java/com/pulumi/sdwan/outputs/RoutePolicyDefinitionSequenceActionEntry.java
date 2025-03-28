@@ -15,83 +15,83 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RoutePolicyDefinitionSequenceActionEntry {
     /**
-     * @return Aggregator
+     * @return Aggregator, Attribute conditional on `type` being equal to `aggregator`
      *   - Range: `0`-`4294967295`
      * 
      */
     private @Nullable Integer aggregator;
     /**
-     * @return IP address
+     * @return IP address, Attribute conditional on `type` being equal to `aggregator`
      * 
      */
     private @Nullable String aggregatorIpAddress;
     /**
-     * @return Space separated list of ASN to exclude
+     * @return Space separated list of ASN to exclude, Attribute conditional on `type` being equal to `asPath`
      * 
      */
     private @Nullable String asPathExclude;
     /**
-     * @return Space separated list of ASN to prepend
+     * @return Space separated list of ASN to prepend, Attribute conditional on `type` being equal to `asPath`
      * 
      */
     private @Nullable String asPathPrepend;
     /**
-     * @return Atomic aggregate
+     * @return Atomic aggregate, Attribute conditional on `type` being equal to `atomicAggregate`
      * 
      */
     private @Nullable Boolean atomicAggregate;
     /**
-     * @return Community value, e.g. `1000:10000` or `internet` or `local-AS`
+     * @return Community value, e.g. `1000:10000` or `internet` or `local-AS`, Attribute conditional on `type` being equal to `community`
      * 
      */
     private @Nullable String community;
     /**
-     * @return Community additive
+     * @return Community additive, Attribute conditional on `type` being equal to `communityAdditive`
      * 
      */
     private @Nullable Boolean communityAdditive;
     /**
-     * @return Local preference
+     * @return Local preference, Attribute conditional on `type` being equal to `localPreference`
      *   - Range: `0`-`4294967295`
      * 
      */
     private @Nullable Integer localPreference;
     /**
-     * @return Metric
+     * @return Metric, Attribute conditional on `type` being equal to `metric`
      *   - Range: `0`-`4294967295`
      * 
      */
     private @Nullable Integer metric;
     /**
-     * @return Metric type
+     * @return Metric type, Attribute conditional on `type` being equal to `metricType`
      *   - Choices: `type1`, `type2`
      * 
      */
     private @Nullable String metricType;
     /**
-     * @return Next hop IP
+     * @return Next hop IP, Attribute conditional on `type` being equal to `nextHop`
      * 
      */
     private @Nullable String nextHop;
     /**
-     * @return OMP tag
+     * @return OMP tag, Attribute conditional on `type` being equal to `ompTag`
      *   - Range: `0`-`4294967295`
      * 
      */
     private @Nullable Integer ompTag;
     /**
-     * @return Origin
+     * @return Origin, Attribute conditional on `type` being equal to `origin`
      *   - Choices: `igp`, `egp`, `incomplete`
      * 
      */
     private @Nullable String origin;
     /**
-     * @return Originator IP
+     * @return Originator IP, Attribute conditional on `type` being equal to `originator`
      * 
      */
     private @Nullable String originator;
     /**
-     * @return OSPF tag
+     * @return OSPF tag, Attribute conditional on `type` being equal to `ospfTag`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -103,7 +103,7 @@ public final class RoutePolicyDefinitionSequenceActionEntry {
      */
     private String type;
     /**
-     * @return Weight
+     * @return Weight, Attribute conditional on `type` being equal to `weight`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -111,7 +111,7 @@ public final class RoutePolicyDefinitionSequenceActionEntry {
 
     private RoutePolicyDefinitionSequenceActionEntry() {}
     /**
-     * @return Aggregator
+     * @return Aggregator, Attribute conditional on `type` being equal to `aggregator`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -119,49 +119,49 @@ public final class RoutePolicyDefinitionSequenceActionEntry {
         return Optional.ofNullable(this.aggregator);
     }
     /**
-     * @return IP address
+     * @return IP address, Attribute conditional on `type` being equal to `aggregator`
      * 
      */
     public Optional<String> aggregatorIpAddress() {
         return Optional.ofNullable(this.aggregatorIpAddress);
     }
     /**
-     * @return Space separated list of ASN to exclude
+     * @return Space separated list of ASN to exclude, Attribute conditional on `type` being equal to `asPath`
      * 
      */
     public Optional<String> asPathExclude() {
         return Optional.ofNullable(this.asPathExclude);
     }
     /**
-     * @return Space separated list of ASN to prepend
+     * @return Space separated list of ASN to prepend, Attribute conditional on `type` being equal to `asPath`
      * 
      */
     public Optional<String> asPathPrepend() {
         return Optional.ofNullable(this.asPathPrepend);
     }
     /**
-     * @return Atomic aggregate
+     * @return Atomic aggregate, Attribute conditional on `type` being equal to `atomicAggregate`
      * 
      */
     public Optional<Boolean> atomicAggregate() {
         return Optional.ofNullable(this.atomicAggregate);
     }
     /**
-     * @return Community value, e.g. `1000:10000` or `internet` or `local-AS`
+     * @return Community value, e.g. `1000:10000` or `internet` or `local-AS`, Attribute conditional on `type` being equal to `community`
      * 
      */
     public Optional<String> community() {
         return Optional.ofNullable(this.community);
     }
     /**
-     * @return Community additive
+     * @return Community additive, Attribute conditional on `type` being equal to `communityAdditive`
      * 
      */
     public Optional<Boolean> communityAdditive() {
         return Optional.ofNullable(this.communityAdditive);
     }
     /**
-     * @return Local preference
+     * @return Local preference, Attribute conditional on `type` being equal to `localPreference`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -169,7 +169,7 @@ public final class RoutePolicyDefinitionSequenceActionEntry {
         return Optional.ofNullable(this.localPreference);
     }
     /**
-     * @return Metric
+     * @return Metric, Attribute conditional on `type` being equal to `metric`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -177,7 +177,7 @@ public final class RoutePolicyDefinitionSequenceActionEntry {
         return Optional.ofNullable(this.metric);
     }
     /**
-     * @return Metric type
+     * @return Metric type, Attribute conditional on `type` being equal to `metricType`
      *   - Choices: `type1`, `type2`
      * 
      */
@@ -185,14 +185,14 @@ public final class RoutePolicyDefinitionSequenceActionEntry {
         return Optional.ofNullable(this.metricType);
     }
     /**
-     * @return Next hop IP
+     * @return Next hop IP, Attribute conditional on `type` being equal to `nextHop`
      * 
      */
     public Optional<String> nextHop() {
         return Optional.ofNullable(this.nextHop);
     }
     /**
-     * @return OMP tag
+     * @return OMP tag, Attribute conditional on `type` being equal to `ompTag`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -200,7 +200,7 @@ public final class RoutePolicyDefinitionSequenceActionEntry {
         return Optional.ofNullable(this.ompTag);
     }
     /**
-     * @return Origin
+     * @return Origin, Attribute conditional on `type` being equal to `origin`
      *   - Choices: `igp`, `egp`, `incomplete`
      * 
      */
@@ -208,14 +208,14 @@ public final class RoutePolicyDefinitionSequenceActionEntry {
         return Optional.ofNullable(this.origin);
     }
     /**
-     * @return Originator IP
+     * @return Originator IP, Attribute conditional on `type` being equal to `originator`
      * 
      */
     public Optional<String> originator() {
         return Optional.ofNullable(this.originator);
     }
     /**
-     * @return OSPF tag
+     * @return OSPF tag, Attribute conditional on `type` being equal to `ospfTag`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -231,7 +231,7 @@ public final class RoutePolicyDefinitionSequenceActionEntry {
         return this.type;
     }
     /**
-     * @return Weight
+     * @return Weight, Attribute conditional on `type` being equal to `weight`
      *   - Range: `0`-`4294967295`
      * 
      */

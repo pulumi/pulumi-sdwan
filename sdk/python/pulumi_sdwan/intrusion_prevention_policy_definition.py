@@ -13,6 +13,8 @@ if sys.version_info >= (3, 11):
 else:
     from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
+from . import outputs
+from ._inputs import *
 
 __all__ = ['IntrusionPreventionPolicyDefinitionArgs', 'IntrusionPreventionPolicyDefinition']
 
@@ -20,10 +22,12 @@ __all__ = ['IntrusionPreventionPolicyDefinitionArgs', 'IntrusionPreventionPolicy
 class IntrusionPreventionPolicyDefinitionArgs:
     def __init__(__self__, *,
                  description: pulumi.Input[str],
+                 custom_signature: Optional[pulumi.Input[bool]] = None,
                  inspection_mode: Optional[pulumi.Input[str]] = None,
                  ips_signature_list_id: Optional[pulumi.Input[str]] = None,
                  ips_signature_list_version: Optional[pulumi.Input[int]] = None,
                  log_level: Optional[pulumi.Input[str]] = None,
+                 loggings: Optional[pulumi.Input[Sequence[pulumi.Input['IntrusionPreventionPolicyDefinitionLoggingArgs']]]] = None,
                  mode: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  signature_set: Optional[pulumi.Input[str]] = None,
@@ -31,6 +35,7 @@ class IntrusionPreventionPolicyDefinitionArgs:
         """
         The set of arguments for constructing a IntrusionPreventionPolicyDefinition resource.
         :param pulumi.Input[str] description: The description of the policy definition
+        :param pulumi.Input[bool] custom_signature: Custom signature
         :param pulumi.Input[str] inspection_mode: The inspection mode - Choices: `protection`, `detection`
         :param pulumi.Input[str] ips_signature_list_id: IPS signature list ID
         :param pulumi.Input[int] ips_signature_list_version: IPS signature list version
@@ -41,6 +46,8 @@ class IntrusionPreventionPolicyDefinitionArgs:
         :param pulumi.Input[Sequence[pulumi.Input[str]]] target_vpns: List of VPN IDs
         """
         pulumi.set(__self__, "description", description)
+        if custom_signature is not None:
+            pulumi.set(__self__, "custom_signature", custom_signature)
         if inspection_mode is not None:
             pulumi.set(__self__, "inspection_mode", inspection_mode)
         if ips_signature_list_id is not None:
@@ -49,6 +56,8 @@ class IntrusionPreventionPolicyDefinitionArgs:
             pulumi.set(__self__, "ips_signature_list_version", ips_signature_list_version)
         if log_level is not None:
             pulumi.set(__self__, "log_level", log_level)
+        if loggings is not None:
+            pulumi.set(__self__, "loggings", loggings)
         if mode is not None:
             pulumi.set(__self__, "mode", mode)
         if name is not None:
@@ -69,6 +78,18 @@ class IntrusionPreventionPolicyDefinitionArgs:
     @description.setter
     def description(self, value: pulumi.Input[str]):
         pulumi.set(self, "description", value)
+
+    @property
+    @pulumi.getter(name="customSignature")
+    def custom_signature(self) -> Optional[pulumi.Input[bool]]:
+        """
+        Custom signature
+        """
+        return pulumi.get(self, "custom_signature")
+
+    @custom_signature.setter
+    def custom_signature(self, value: Optional[pulumi.Input[bool]]):
+        pulumi.set(self, "custom_signature", value)
 
     @property
     @pulumi.getter(name="inspectionMode")
@@ -117,6 +138,15 @@ class IntrusionPreventionPolicyDefinitionArgs:
     @log_level.setter
     def log_level(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "log_level", value)
+
+    @property
+    @pulumi.getter
+    def loggings(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['IntrusionPreventionPolicyDefinitionLoggingArgs']]]]:
+        return pulumi.get(self, "loggings")
+
+    @loggings.setter
+    def loggings(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['IntrusionPreventionPolicyDefinitionLoggingArgs']]]]):
+        pulumi.set(self, "loggings", value)
 
     @property
     @pulumi.getter
@@ -170,11 +200,13 @@ class IntrusionPreventionPolicyDefinitionArgs:
 @pulumi.input_type
 class _IntrusionPreventionPolicyDefinitionState:
     def __init__(__self__, *,
+                 custom_signature: Optional[pulumi.Input[bool]] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  inspection_mode: Optional[pulumi.Input[str]] = None,
                  ips_signature_list_id: Optional[pulumi.Input[str]] = None,
                  ips_signature_list_version: Optional[pulumi.Input[int]] = None,
                  log_level: Optional[pulumi.Input[str]] = None,
+                 loggings: Optional[pulumi.Input[Sequence[pulumi.Input['IntrusionPreventionPolicyDefinitionLoggingArgs']]]] = None,
                  mode: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  signature_set: Optional[pulumi.Input[str]] = None,
@@ -182,6 +214,7 @@ class _IntrusionPreventionPolicyDefinitionState:
                  version: Optional[pulumi.Input[int]] = None):
         """
         Input properties used for looking up and filtering IntrusionPreventionPolicyDefinition resources.
+        :param pulumi.Input[bool] custom_signature: Custom signature
         :param pulumi.Input[str] description: The description of the policy definition
         :param pulumi.Input[str] inspection_mode: The inspection mode - Choices: `protection`, `detection`
         :param pulumi.Input[str] ips_signature_list_id: IPS signature list ID
@@ -193,6 +226,8 @@ class _IntrusionPreventionPolicyDefinitionState:
         :param pulumi.Input[Sequence[pulumi.Input[str]]] target_vpns: List of VPN IDs
         :param pulumi.Input[int] version: The version of the object
         """
+        if custom_signature is not None:
+            pulumi.set(__self__, "custom_signature", custom_signature)
         if description is not None:
             pulumi.set(__self__, "description", description)
         if inspection_mode is not None:
@@ -203,6 +238,8 @@ class _IntrusionPreventionPolicyDefinitionState:
             pulumi.set(__self__, "ips_signature_list_version", ips_signature_list_version)
         if log_level is not None:
             pulumi.set(__self__, "log_level", log_level)
+        if loggings is not None:
+            pulumi.set(__self__, "loggings", loggings)
         if mode is not None:
             pulumi.set(__self__, "mode", mode)
         if name is not None:
@@ -213,6 +250,18 @@ class _IntrusionPreventionPolicyDefinitionState:
             pulumi.set(__self__, "target_vpns", target_vpns)
         if version is not None:
             pulumi.set(__self__, "version", version)
+
+    @property
+    @pulumi.getter(name="customSignature")
+    def custom_signature(self) -> Optional[pulumi.Input[bool]]:
+        """
+        Custom signature
+        """
+        return pulumi.get(self, "custom_signature")
+
+    @custom_signature.setter
+    def custom_signature(self, value: Optional[pulumi.Input[bool]]):
+        pulumi.set(self, "custom_signature", value)
 
     @property
     @pulumi.getter
@@ -273,6 +322,15 @@ class _IntrusionPreventionPolicyDefinitionState:
     @log_level.setter
     def log_level(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "log_level", value)
+
+    @property
+    @pulumi.getter
+    def loggings(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['IntrusionPreventionPolicyDefinitionLoggingArgs']]]]:
+        return pulumi.get(self, "loggings")
+
+    @loggings.setter
+    def loggings(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['IntrusionPreventionPolicyDefinitionLoggingArgs']]]]):
+        pulumi.set(self, "loggings", value)
 
     @property
     @pulumi.getter
@@ -340,11 +398,13 @@ class IntrusionPreventionPolicyDefinition(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
+                 custom_signature: Optional[pulumi.Input[bool]] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  inspection_mode: Optional[pulumi.Input[str]] = None,
                  ips_signature_list_id: Optional[pulumi.Input[str]] = None,
                  ips_signature_list_version: Optional[pulumi.Input[int]] = None,
                  log_level: Optional[pulumi.Input[str]] = None,
+                 loggings: Optional[pulumi.Input[Sequence[pulumi.Input[Union['IntrusionPreventionPolicyDefinitionLoggingArgs', 'IntrusionPreventionPolicyDefinitionLoggingArgsDict']]]]] = None,
                  mode: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  signature_set: Optional[pulumi.Input[str]] = None,
@@ -352,22 +412,6 @@ class IntrusionPreventionPolicyDefinition(pulumi.CustomResource):
                  __props__=None):
         """
         This resource can manage a Intrusion Prevention Policy Definition .
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_sdwan as sdwan
-
-        example = sdwan.IntrusionPreventionPolicyDefinition("example",
-            name="Example",
-            description="My description",
-            mode="security",
-            inspection_mode="protection",
-            log_level="alert",
-            signature_set="connectivity",
-            target_vpns=["1"])
-        ```
 
         ## Import
 
@@ -377,6 +421,7 @@ class IntrusionPreventionPolicyDefinition(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
+        :param pulumi.Input[bool] custom_signature: Custom signature
         :param pulumi.Input[str] description: The description of the policy definition
         :param pulumi.Input[str] inspection_mode: The inspection mode - Choices: `protection`, `detection`
         :param pulumi.Input[str] ips_signature_list_id: IPS signature list ID
@@ -395,22 +440,6 @@ class IntrusionPreventionPolicyDefinition(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a Intrusion Prevention Policy Definition .
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_sdwan as sdwan
-
-        example = sdwan.IntrusionPreventionPolicyDefinition("example",
-            name="Example",
-            description="My description",
-            mode="security",
-            inspection_mode="protection",
-            log_level="alert",
-            signature_set="connectivity",
-            target_vpns=["1"])
-        ```
 
         ## Import
 
@@ -433,11 +462,13 @@ class IntrusionPreventionPolicyDefinition(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
+                 custom_signature: Optional[pulumi.Input[bool]] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  inspection_mode: Optional[pulumi.Input[str]] = None,
                  ips_signature_list_id: Optional[pulumi.Input[str]] = None,
                  ips_signature_list_version: Optional[pulumi.Input[int]] = None,
                  log_level: Optional[pulumi.Input[str]] = None,
+                 loggings: Optional[pulumi.Input[Sequence[pulumi.Input[Union['IntrusionPreventionPolicyDefinitionLoggingArgs', 'IntrusionPreventionPolicyDefinitionLoggingArgsDict']]]]] = None,
                  mode: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  signature_set: Optional[pulumi.Input[str]] = None,
@@ -451,6 +482,7 @@ class IntrusionPreventionPolicyDefinition(pulumi.CustomResource):
                 raise TypeError('__props__ is only valid when passed in combination with a valid opts.id to get an existing resource')
             __props__ = IntrusionPreventionPolicyDefinitionArgs.__new__(IntrusionPreventionPolicyDefinitionArgs)
 
+            __props__.__dict__["custom_signature"] = custom_signature
             if description is None and not opts.urn:
                 raise TypeError("Missing required property 'description'")
             __props__.__dict__["description"] = description
@@ -458,6 +490,7 @@ class IntrusionPreventionPolicyDefinition(pulumi.CustomResource):
             __props__.__dict__["ips_signature_list_id"] = ips_signature_list_id
             __props__.__dict__["ips_signature_list_version"] = ips_signature_list_version
             __props__.__dict__["log_level"] = log_level
+            __props__.__dict__["loggings"] = loggings
             __props__.__dict__["mode"] = mode
             __props__.__dict__["name"] = name
             __props__.__dict__["signature_set"] = signature_set
@@ -473,11 +506,13 @@ class IntrusionPreventionPolicyDefinition(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
+            custom_signature: Optional[pulumi.Input[bool]] = None,
             description: Optional[pulumi.Input[str]] = None,
             inspection_mode: Optional[pulumi.Input[str]] = None,
             ips_signature_list_id: Optional[pulumi.Input[str]] = None,
             ips_signature_list_version: Optional[pulumi.Input[int]] = None,
             log_level: Optional[pulumi.Input[str]] = None,
+            loggings: Optional[pulumi.Input[Sequence[pulumi.Input[Union['IntrusionPreventionPolicyDefinitionLoggingArgs', 'IntrusionPreventionPolicyDefinitionLoggingArgsDict']]]]] = None,
             mode: Optional[pulumi.Input[str]] = None,
             name: Optional[pulumi.Input[str]] = None,
             signature_set: Optional[pulumi.Input[str]] = None,
@@ -490,6 +525,7 @@ class IntrusionPreventionPolicyDefinition(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
+        :param pulumi.Input[bool] custom_signature: Custom signature
         :param pulumi.Input[str] description: The description of the policy definition
         :param pulumi.Input[str] inspection_mode: The inspection mode - Choices: `protection`, `detection`
         :param pulumi.Input[str] ips_signature_list_id: IPS signature list ID
@@ -505,17 +541,27 @@ class IntrusionPreventionPolicyDefinition(pulumi.CustomResource):
 
         __props__ = _IntrusionPreventionPolicyDefinitionState.__new__(_IntrusionPreventionPolicyDefinitionState)
 
+        __props__.__dict__["custom_signature"] = custom_signature
         __props__.__dict__["description"] = description
         __props__.__dict__["inspection_mode"] = inspection_mode
         __props__.__dict__["ips_signature_list_id"] = ips_signature_list_id
         __props__.__dict__["ips_signature_list_version"] = ips_signature_list_version
         __props__.__dict__["log_level"] = log_level
+        __props__.__dict__["loggings"] = loggings
         __props__.__dict__["mode"] = mode
         __props__.__dict__["name"] = name
         __props__.__dict__["signature_set"] = signature_set
         __props__.__dict__["target_vpns"] = target_vpns
         __props__.__dict__["version"] = version
         return IntrusionPreventionPolicyDefinition(resource_name, opts=opts, __props__=__props__)
+
+    @property
+    @pulumi.getter(name="customSignature")
+    def custom_signature(self) -> pulumi.Output[Optional[bool]]:
+        """
+        Custom signature
+        """
+        return pulumi.get(self, "custom_signature")
 
     @property
     @pulumi.getter
@@ -556,6 +602,11 @@ class IntrusionPreventionPolicyDefinition(pulumi.CustomResource):
         Log level - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
         """
         return pulumi.get(self, "log_level")
+
+    @property
+    @pulumi.getter
+    def loggings(self) -> pulumi.Output[Optional[Sequence['outputs.IntrusionPreventionPolicyDefinitionLogging']]]:
+        return pulumi.get(self, "loggings")
 
     @property
     @pulumi.getter

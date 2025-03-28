@@ -46,8 +46,10 @@ import (
 //
 // ## Import
 //
+// Expected import identifier with the format: "service_lan_vpn_interface_ipsec_feature_associate_dhcp_server_feature_id,feature_profile_id,service_lan_vpn_feature_id,service_lan_vpn_interface_ipsec_feature_id"
+//
 // ```sh
-// $ pulumi import sdwan:index/serviceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature:ServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+// $ pulumi import sdwan:index/serviceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature:ServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037,140331f6-5418-4755-a059-13c77eb96037"
 // ```
 type ServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature struct {
 	pulumi.CustomResourceState
@@ -60,6 +62,8 @@ type ServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature struct {
 	ServiceLanVpnFeatureId pulumi.StringOutput `pulumi:"serviceLanVpnFeatureId"`
 	// Service LAN VPN Interface IPSec Feature ID
 	ServiceLanVpnInterfaceIpsecFeatureId pulumi.StringOutput `pulumi:"serviceLanVpnInterfaceIpsecFeatureId"`
+	// The version of the object
+	Version pulumi.IntOutput `pulumi:"version"`
 }
 
 // NewServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature registers a new resource with the given unique name, arguments, and options.
@@ -112,6 +116,8 @@ type serviceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureState struct {
 	ServiceLanVpnFeatureId *string `pulumi:"serviceLanVpnFeatureId"`
 	// Service LAN VPN Interface IPSec Feature ID
 	ServiceLanVpnInterfaceIpsecFeatureId *string `pulumi:"serviceLanVpnInterfaceIpsecFeatureId"`
+	// The version of the object
+	Version *int `pulumi:"version"`
 }
 
 type ServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureState struct {
@@ -123,6 +129,8 @@ type ServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureState struct {
 	ServiceLanVpnFeatureId pulumi.StringPtrInput
 	// Service LAN VPN Interface IPSec Feature ID
 	ServiceLanVpnInterfaceIpsecFeatureId pulumi.StringPtrInput
+	// The version of the object
+	Version pulumi.IntPtrInput
 }
 
 func (ServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureState) ElementType() reflect.Type {
@@ -265,6 +273,13 @@ func (o ServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureOutput) Serv
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature) pulumi.StringOutput {
 		return v.ServiceLanVpnInterfaceIpsecFeatureId
 	}).(pulumi.StringOutput)
+}
+
+// The version of the object
+func (o ServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureOutput) Version() pulumi.IntOutput {
+	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature) pulumi.IntOutput {
+		return v.Version
+	}).(pulumi.IntOutput)
 }
 
 type ServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureArrayOutput struct{ *pulumi.OutputState }

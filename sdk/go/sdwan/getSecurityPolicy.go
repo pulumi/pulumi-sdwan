@@ -70,19 +70,33 @@ type LookupSecurityPolicyResult struct {
 	HighSpeedLoggingServerIp string `pulumi:"highSpeedLoggingServerIp"`
 	// High Speed Logging Port
 	HighSpeedLoggingServerPort string `pulumi:"highSpeedLoggingServerPort"`
+	// High Speed Logging Source Interface
+	HighSpeedLoggingServerSourceInterface string `pulumi:"highSpeedLoggingServerSourceInterface"`
 	// High Speed Logging VPN
 	HighSpeedLoggingVpn string `pulumi:"highSpeedLoggingVpn"`
 	// The id of the object
-	Id       string                     `pulumi:"id"`
-	Loggings []GetSecurityPolicyLogging `pulumi:"loggings"`
+	Id string `pulumi:"id"`
+	// ICMP Unreachable Allow
+	ImcpUnreachableAllow bool                       `pulumi:"imcpUnreachableAllow"`
+	Loggings             []GetSecurityPolicyLogging `pulumi:"loggings"`
 	// Match Statistics per-filter
 	MatchStatisticsPerFilter string `pulumi:"matchStatisticsPerFilter"`
+	// Max Incomplete ICMP Limit
+	MaxIncompleteIcmpLimit int `pulumi:"maxIncompleteIcmpLimit"`
+	// Max Incomplete TCP Limit
+	MaxIncompleteTcpLimit int `pulumi:"maxIncompleteTcpLimit"`
+	// Max Incomplete UDP Limit
+	MaxIncompleteUdpLimit int `pulumi:"maxIncompleteUdpLimit"`
 	// The policy mode
 	Mode string `pulumi:"mode"`
 	// The name of the security policy
 	Name string `pulumi:"name"`
+	// Session Reclassify Allow
+	SessionReclassifyAllow bool `pulumi:"sessionReclassifyAllow"`
 	// TCP SYN Flood Limit, value from 1 to 4294967295
 	TcpSynFloodLimit string `pulumi:"tcpSynFloodLimit"`
+	// Unified Logging
+	UnifiedLogging bool `pulumi:"unifiedLogging"`
 	// The use case of the security policy
 	UseCase string `pulumi:"useCase"`
 	// The version of the object
@@ -158,6 +172,11 @@ func (o LookupSecurityPolicyResultOutput) HighSpeedLoggingServerPort() pulumi.St
 	return o.ApplyT(func(v LookupSecurityPolicyResult) string { return v.HighSpeedLoggingServerPort }).(pulumi.StringOutput)
 }
 
+// High Speed Logging Source Interface
+func (o LookupSecurityPolicyResultOutput) HighSpeedLoggingServerSourceInterface() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupSecurityPolicyResult) string { return v.HighSpeedLoggingServerSourceInterface }).(pulumi.StringOutput)
+}
+
 // High Speed Logging VPN
 func (o LookupSecurityPolicyResultOutput) HighSpeedLoggingVpn() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSecurityPolicyResult) string { return v.HighSpeedLoggingVpn }).(pulumi.StringOutput)
@@ -168,6 +187,11 @@ func (o LookupSecurityPolicyResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSecurityPolicyResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// ICMP Unreachable Allow
+func (o LookupSecurityPolicyResultOutput) ImcpUnreachableAllow() pulumi.BoolOutput {
+	return o.ApplyT(func(v LookupSecurityPolicyResult) bool { return v.ImcpUnreachableAllow }).(pulumi.BoolOutput)
+}
+
 func (o LookupSecurityPolicyResultOutput) Loggings() GetSecurityPolicyLoggingArrayOutput {
 	return o.ApplyT(func(v LookupSecurityPolicyResult) []GetSecurityPolicyLogging { return v.Loggings }).(GetSecurityPolicyLoggingArrayOutput)
 }
@@ -175,6 +199,21 @@ func (o LookupSecurityPolicyResultOutput) Loggings() GetSecurityPolicyLoggingArr
 // Match Statistics per-filter
 func (o LookupSecurityPolicyResultOutput) MatchStatisticsPerFilter() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSecurityPolicyResult) string { return v.MatchStatisticsPerFilter }).(pulumi.StringOutput)
+}
+
+// Max Incomplete ICMP Limit
+func (o LookupSecurityPolicyResultOutput) MaxIncompleteIcmpLimit() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupSecurityPolicyResult) int { return v.MaxIncompleteIcmpLimit }).(pulumi.IntOutput)
+}
+
+// Max Incomplete TCP Limit
+func (o LookupSecurityPolicyResultOutput) MaxIncompleteTcpLimit() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupSecurityPolicyResult) int { return v.MaxIncompleteTcpLimit }).(pulumi.IntOutput)
+}
+
+// Max Incomplete UDP Limit
+func (o LookupSecurityPolicyResultOutput) MaxIncompleteUdpLimit() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupSecurityPolicyResult) int { return v.MaxIncompleteUdpLimit }).(pulumi.IntOutput)
 }
 
 // The policy mode
@@ -187,9 +226,19 @@ func (o LookupSecurityPolicyResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSecurityPolicyResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// Session Reclassify Allow
+func (o LookupSecurityPolicyResultOutput) SessionReclassifyAllow() pulumi.BoolOutput {
+	return o.ApplyT(func(v LookupSecurityPolicyResult) bool { return v.SessionReclassifyAllow }).(pulumi.BoolOutput)
+}
+
 // TCP SYN Flood Limit, value from 1 to 4294967295
 func (o LookupSecurityPolicyResultOutput) TcpSynFloodLimit() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSecurityPolicyResult) string { return v.TcpSynFloodLimit }).(pulumi.StringOutput)
+}
+
+// Unified Logging
+func (o LookupSecurityPolicyResultOutput) UnifiedLogging() pulumi.BoolOutput {
+	return o.ApplyT(func(v LookupSecurityPolicyResult) bool { return v.UnifiedLogging }).(pulumi.BoolOutput)
 }
 
 // The use case of the security policy

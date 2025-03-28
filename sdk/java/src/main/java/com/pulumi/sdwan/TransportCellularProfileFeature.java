@@ -80,14 +80,14 @@ public class TransportCellularProfileFeature extends com.pulumi.resources.Custom
      * 
      */
     @Export(name="accessPointName", refs={String.class}, tree="[0]")
-    private Output<String> accessPointName;
+    private Output</* @Nullable */ String> accessPointName;
 
     /**
      * @return Set access point name
      * 
      */
-    public Output<String> accessPointName() {
-        return this.accessPointName;
+    public Output<Optional<String>> accessPointName() {
+        return Codegen.optional(this.accessPointName);
     }
     /**
      * Variable name
@@ -248,14 +248,14 @@ public class TransportCellularProfileFeature extends com.pulumi.resources.Custom
      * 
      */
     @Export(name="profileId", refs={Integer.class}, tree="[0]")
-    private Output<Integer> profileId;
+    private Output</* @Nullable */ Integer> profileId;
 
     /**
      * @return Set Profile ID - Range: `1`-`16`
      * 
      */
-    public Output<Integer> profileId() {
-        return this.profileId;
+    public Output<Optional<Integer>> profileId() {
+        return Codegen.optional(this.profileId);
     }
     /**
      * Variable name

@@ -77,6 +77,10 @@ export interface GetTransportWanVpnInterfaceCellularFeatureAssociateTrackerGroup
      * Transport WAN VPN Interface Cellular Feature ID
      */
     readonly transportWanVpnInterfaceCellularFeatureId: string;
+    /**
+     * The version of the object
+     */
+    readonly version: number;
 }
 /**
  * This data source can read the Transport WAN VPN Interface Cellular Feature Associate Tracker Group Feature .

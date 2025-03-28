@@ -5,6 +5,7 @@ package com.pulumi.sdwan.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
@@ -35,6 +36,11 @@ public final class GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatu
      * 
      */
     private String serviceLanVpnInterfaceIpsecFeatureId;
+    /**
+     * @return The version of the object
+     * 
+     */
+    private Integer version;
 
     private GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureResult() {}
     /**
@@ -72,6 +78,13 @@ public final class GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatu
     public String serviceLanVpnInterfaceIpsecFeatureId() {
         return this.serviceLanVpnInterfaceIpsecFeatureId;
     }
+    /**
+     * @return The version of the object
+     * 
+     */
+    public Integer version() {
+        return this.version;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -87,6 +100,7 @@ public final class GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatu
         private String serviceDhcpServerFeatureId;
         private String serviceLanVpnFeatureId;
         private String serviceLanVpnInterfaceIpsecFeatureId;
+        private Integer version;
         public Builder() {}
         public Builder(GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureResult defaults) {
     	      Objects.requireNonNull(defaults);
@@ -95,6 +109,7 @@ public final class GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatu
     	      this.serviceDhcpServerFeatureId = defaults.serviceDhcpServerFeatureId;
     	      this.serviceLanVpnFeatureId = defaults.serviceLanVpnFeatureId;
     	      this.serviceLanVpnInterfaceIpsecFeatureId = defaults.serviceLanVpnInterfaceIpsecFeatureId;
+    	      this.version = defaults.version;
         }
 
         @CustomType.Setter
@@ -137,6 +152,14 @@ public final class GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatu
             this.serviceLanVpnInterfaceIpsecFeatureId = serviceLanVpnInterfaceIpsecFeatureId;
             return this;
         }
+        @CustomType.Setter
+        public Builder version(Integer version) {
+            if (version == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureResult", "version");
+            }
+            this.version = version;
+            return this;
+        }
         public GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureResult build() {
             final var _resultValue = new GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureResult();
             _resultValue.featureProfileId = featureProfileId;
@@ -144,6 +167,7 @@ public final class GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatu
             _resultValue.serviceDhcpServerFeatureId = serviceDhcpServerFeatureId;
             _resultValue.serviceLanVpnFeatureId = serviceLanVpnFeatureId;
             _resultValue.serviceLanVpnInterfaceIpsecFeatureId = serviceLanVpnInterfaceIpsecFeatureId;
+            _resultValue.version = version;
             return _resultValue;
         }
     }

@@ -14,40 +14,6 @@ import (
 
 // This resource can manage a Intrusion Prevention Policy Definition .
 //
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := sdwan.NewIntrusionPreventionPolicyDefinition(ctx, "example", &sdwan.IntrusionPreventionPolicyDefinitionArgs{
-//				Name:           pulumi.String("Example"),
-//				Description:    pulumi.String("My description"),
-//				Mode:           pulumi.String("security"),
-//				InspectionMode: pulumi.String("protection"),
-//				LogLevel:       pulumi.String("alert"),
-//				SignatureSet:   pulumi.String("connectivity"),
-//				TargetVpns: pulumi.StringArray{
-//					pulumi.String("1"),
-//				},
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
-//
 // ## Import
 //
 // ```sh
@@ -56,6 +22,8 @@ import (
 type IntrusionPreventionPolicyDefinition struct {
 	pulumi.CustomResourceState
 
+	// Custom signature
+	CustomSignature pulumi.BoolPtrOutput `pulumi:"customSignature"`
 	// The description of the policy definition
 	Description pulumi.StringOutput `pulumi:"description"`
 	// The inspection mode - Choices: `protection`, `detection`
@@ -65,7 +33,8 @@ type IntrusionPreventionPolicyDefinition struct {
 	// IPS signature list version
 	IpsSignatureListVersion pulumi.IntPtrOutput `pulumi:"ipsSignatureListVersion"`
 	// Log level - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
-	LogLevel pulumi.StringPtrOutput `pulumi:"logLevel"`
+	LogLevel pulumi.StringPtrOutput                                `pulumi:"logLevel"`
+	Loggings IntrusionPreventionPolicyDefinitionLoggingArrayOutput `pulumi:"loggings"`
 	// The policy mode - Choices: `security`, `unified`
 	Mode pulumi.StringPtrOutput `pulumi:"mode"`
 	// The name of the policy definition
@@ -111,6 +80,8 @@ func GetIntrusionPreventionPolicyDefinition(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering IntrusionPreventionPolicyDefinition resources.
 type intrusionPreventionPolicyDefinitionState struct {
+	// Custom signature
+	CustomSignature *bool `pulumi:"customSignature"`
 	// The description of the policy definition
 	Description *string `pulumi:"description"`
 	// The inspection mode - Choices: `protection`, `detection`
@@ -120,7 +91,8 @@ type intrusionPreventionPolicyDefinitionState struct {
 	// IPS signature list version
 	IpsSignatureListVersion *int `pulumi:"ipsSignatureListVersion"`
 	// Log level - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
-	LogLevel *string `pulumi:"logLevel"`
+	LogLevel *string                                      `pulumi:"logLevel"`
+	Loggings []IntrusionPreventionPolicyDefinitionLogging `pulumi:"loggings"`
 	// The policy mode - Choices: `security`, `unified`
 	Mode *string `pulumi:"mode"`
 	// The name of the policy definition
@@ -134,6 +106,8 @@ type intrusionPreventionPolicyDefinitionState struct {
 }
 
 type IntrusionPreventionPolicyDefinitionState struct {
+	// Custom signature
+	CustomSignature pulumi.BoolPtrInput
 	// The description of the policy definition
 	Description pulumi.StringPtrInput
 	// The inspection mode - Choices: `protection`, `detection`
@@ -144,6 +118,7 @@ type IntrusionPreventionPolicyDefinitionState struct {
 	IpsSignatureListVersion pulumi.IntPtrInput
 	// Log level - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
 	LogLevel pulumi.StringPtrInput
+	Loggings IntrusionPreventionPolicyDefinitionLoggingArrayInput
 	// The policy mode - Choices: `security`, `unified`
 	Mode pulumi.StringPtrInput
 	// The name of the policy definition
@@ -161,6 +136,8 @@ func (IntrusionPreventionPolicyDefinitionState) ElementType() reflect.Type {
 }
 
 type intrusionPreventionPolicyDefinitionArgs struct {
+	// Custom signature
+	CustomSignature *bool `pulumi:"customSignature"`
 	// The description of the policy definition
 	Description string `pulumi:"description"`
 	// The inspection mode - Choices: `protection`, `detection`
@@ -170,7 +147,8 @@ type intrusionPreventionPolicyDefinitionArgs struct {
 	// IPS signature list version
 	IpsSignatureListVersion *int `pulumi:"ipsSignatureListVersion"`
 	// Log level - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
-	LogLevel *string `pulumi:"logLevel"`
+	LogLevel *string                                      `pulumi:"logLevel"`
+	Loggings []IntrusionPreventionPolicyDefinitionLogging `pulumi:"loggings"`
 	// The policy mode - Choices: `security`, `unified`
 	Mode *string `pulumi:"mode"`
 	// The name of the policy definition
@@ -183,6 +161,8 @@ type intrusionPreventionPolicyDefinitionArgs struct {
 
 // The set of arguments for constructing a IntrusionPreventionPolicyDefinition resource.
 type IntrusionPreventionPolicyDefinitionArgs struct {
+	// Custom signature
+	CustomSignature pulumi.BoolPtrInput
 	// The description of the policy definition
 	Description pulumi.StringInput
 	// The inspection mode - Choices: `protection`, `detection`
@@ -193,6 +173,7 @@ type IntrusionPreventionPolicyDefinitionArgs struct {
 	IpsSignatureListVersion pulumi.IntPtrInput
 	// Log level - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
 	LogLevel pulumi.StringPtrInput
+	Loggings IntrusionPreventionPolicyDefinitionLoggingArrayInput
 	// The policy mode - Choices: `security`, `unified`
 	Mode pulumi.StringPtrInput
 	// The name of the policy definition
@@ -290,6 +271,11 @@ func (o IntrusionPreventionPolicyDefinitionOutput) ToIntrusionPreventionPolicyDe
 	return o
 }
 
+// Custom signature
+func (o IntrusionPreventionPolicyDefinitionOutput) CustomSignature() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *IntrusionPreventionPolicyDefinition) pulumi.BoolPtrOutput { return v.CustomSignature }).(pulumi.BoolPtrOutput)
+}
+
 // The description of the policy definition
 func (o IntrusionPreventionPolicyDefinitionOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v *IntrusionPreventionPolicyDefinition) pulumi.StringOutput { return v.Description }).(pulumi.StringOutput)
@@ -313,6 +299,12 @@ func (o IntrusionPreventionPolicyDefinitionOutput) IpsSignatureListVersion() pul
 // Log level - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
 func (o IntrusionPreventionPolicyDefinitionOutput) LogLevel() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *IntrusionPreventionPolicyDefinition) pulumi.StringPtrOutput { return v.LogLevel }).(pulumi.StringPtrOutput)
+}
+
+func (o IntrusionPreventionPolicyDefinitionOutput) Loggings() IntrusionPreventionPolicyDefinitionLoggingArrayOutput {
+	return o.ApplyT(func(v *IntrusionPreventionPolicyDefinition) IntrusionPreventionPolicyDefinitionLoggingArrayOutput {
+		return v.Loggings
+	}).(IntrusionPreventionPolicyDefinitionLoggingArrayOutput)
 }
 
 // The policy mode - Choices: `security`, `unified`

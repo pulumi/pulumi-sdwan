@@ -12,10 +12,20 @@ import java.util.Objects;
 @CustomType
 public final class GetSecurityPolicyDefinition {
     /**
+     * @return Destination Zone
+     * 
+     */
+    private String destinationZone;
+    /**
      * @return Policy definition ID
      * 
      */
     private String id;
+    /**
+     * @return Source Zone
+     * 
+     */
+    private String sourceZone;
     /**
      * @return Policy definition type
      * 
@@ -29,11 +39,25 @@ public final class GetSecurityPolicyDefinition {
 
     private GetSecurityPolicyDefinition() {}
     /**
+     * @return Destination Zone
+     * 
+     */
+    public String destinationZone() {
+        return this.destinationZone;
+    }
+    /**
      * @return Policy definition ID
      * 
      */
     public String id() {
         return this.id;
+    }
+    /**
+     * @return Source Zone
+     * 
+     */
+    public String sourceZone() {
+        return this.sourceZone;
     }
     /**
      * @return Policy definition type
@@ -59,23 +83,43 @@ public final class GetSecurityPolicyDefinition {
     }
     @CustomType.Builder
     public static final class Builder {
+        private String destinationZone;
         private String id;
+        private String sourceZone;
         private String type;
         private Integer version;
         public Builder() {}
         public Builder(GetSecurityPolicyDefinition defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.destinationZone = defaults.destinationZone;
     	      this.id = defaults.id;
+    	      this.sourceZone = defaults.sourceZone;
     	      this.type = defaults.type;
     	      this.version = defaults.version;
         }
 
+        @CustomType.Setter
+        public Builder destinationZone(String destinationZone) {
+            if (destinationZone == null) {
+              throw new MissingRequiredPropertyException("GetSecurityPolicyDefinition", "destinationZone");
+            }
+            this.destinationZone = destinationZone;
+            return this;
+        }
         @CustomType.Setter
         public Builder id(String id) {
             if (id == null) {
               throw new MissingRequiredPropertyException("GetSecurityPolicyDefinition", "id");
             }
             this.id = id;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder sourceZone(String sourceZone) {
+            if (sourceZone == null) {
+              throw new MissingRequiredPropertyException("GetSecurityPolicyDefinition", "sourceZone");
+            }
+            this.sourceZone = sourceZone;
             return this;
         }
         @CustomType.Setter
@@ -96,7 +140,9 @@ public final class GetSecurityPolicyDefinition {
         }
         public GetSecurityPolicyDefinition build() {
             final var _resultValue = new GetSecurityPolicyDefinition();
+            _resultValue.destinationZone = destinationZone;
             _resultValue.id = id;
+            _resultValue.sourceZone = sourceZone;
             _resultValue.type = type;
             _resultValue.version = version;
             return _resultValue;

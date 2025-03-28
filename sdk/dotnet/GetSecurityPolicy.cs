@@ -146,6 +146,10 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string HighSpeedLoggingServerPort;
         /// <summary>
+        /// High Speed Logging Source Interface
+        /// </summary>
+        public readonly string HighSpeedLoggingServerSourceInterface;
+        /// <summary>
         /// High Speed Logging VPN
         /// </summary>
         public readonly string HighSpeedLoggingVpn;
@@ -153,11 +157,27 @@ namespace Pulumi.Sdwan
         /// The id of the object
         /// </summary>
         public readonly string Id;
+        /// <summary>
+        /// ICMP Unreachable Allow
+        /// </summary>
+        public readonly bool ImcpUnreachableAllow;
         public readonly ImmutableArray<Outputs.GetSecurityPolicyLoggingResult> Loggings;
         /// <summary>
         /// Match Statistics per-filter
         /// </summary>
         public readonly string MatchStatisticsPerFilter;
+        /// <summary>
+        /// Max Incomplete ICMP Limit
+        /// </summary>
+        public readonly int MaxIncompleteIcmpLimit;
+        /// <summary>
+        /// Max Incomplete TCP Limit
+        /// </summary>
+        public readonly int MaxIncompleteTcpLimit;
+        /// <summary>
+        /// Max Incomplete UDP Limit
+        /// </summary>
+        public readonly int MaxIncompleteUdpLimit;
         /// <summary>
         /// The policy mode
         /// </summary>
@@ -167,9 +187,17 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string Name;
         /// <summary>
+        /// Session Reclassify Allow
+        /// </summary>
+        public readonly bool SessionReclassifyAllow;
+        /// <summary>
         /// TCP SYN Flood Limit, value from 1 to 4294967295
         /// </summary>
         public readonly string TcpSynFloodLimit;
+        /// <summary>
+        /// Unified Logging
+        /// </summary>
+        public readonly bool UnifiedLogging;
         /// <summary>
         /// The use case of the security policy
         /// </summary>
@@ -195,19 +223,33 @@ namespace Pulumi.Sdwan
 
             string highSpeedLoggingServerPort,
 
+            string highSpeedLoggingServerSourceInterface,
+
             string highSpeedLoggingVpn,
 
             string id,
+
+            bool imcpUnreachableAllow,
 
             ImmutableArray<Outputs.GetSecurityPolicyLoggingResult> loggings,
 
             string matchStatisticsPerFilter,
 
+            int maxIncompleteIcmpLimit,
+
+            int maxIncompleteTcpLimit,
+
+            int maxIncompleteUdpLimit,
+
             string mode,
 
             string name,
 
+            bool sessionReclassifyAllow,
+
             string tcpSynFloodLimit,
+
+            bool unifiedLogging,
 
             string useCase,
 
@@ -220,13 +262,20 @@ namespace Pulumi.Sdwan
             FailureMode = failureMode;
             HighSpeedLoggingServerIp = highSpeedLoggingServerIp;
             HighSpeedLoggingServerPort = highSpeedLoggingServerPort;
+            HighSpeedLoggingServerSourceInterface = highSpeedLoggingServerSourceInterface;
             HighSpeedLoggingVpn = highSpeedLoggingVpn;
             Id = id;
+            ImcpUnreachableAllow = imcpUnreachableAllow;
             Loggings = loggings;
             MatchStatisticsPerFilter = matchStatisticsPerFilter;
+            MaxIncompleteIcmpLimit = maxIncompleteIcmpLimit;
+            MaxIncompleteTcpLimit = maxIncompleteTcpLimit;
+            MaxIncompleteUdpLimit = maxIncompleteUdpLimit;
             Mode = mode;
             Name = name;
+            SessionReclassifyAllow = sessionReclassifyAllow;
             TcpSynFloodLimit = tcpSynFloodLimit;
+            UnifiedLogging = unifiedLogging;
             UseCase = useCase;
             Version = version;
         }

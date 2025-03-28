@@ -46,8 +46,10 @@ import (
 //
 // ## Import
 //
+// Expected import identifier with the format: "service_lan_vpn_interface_ethernet_feature_associate_tracker_group_feature_id,feature_profile_id,service_lan_vpn_feature_id,service_lan_vpn_interface_ethernet_feature_id"
+//
 // ```sh
-// $ pulumi import sdwan:index/serviceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature:ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+// $ pulumi import sdwan:index/serviceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature:ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037,140331f6-5418-4755-a059-13c77eb96037"
 // ```
 type ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature struct {
 	pulumi.CustomResourceState
@@ -60,6 +62,8 @@ type ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature struct {
 	ServiceLanVpnInterfaceEthernetFeatureId pulumi.StringOutput `pulumi:"serviceLanVpnInterfaceEthernetFeatureId"`
 	// Service Tracker Group Feature ID
 	ServiceTrackerGroupFeatureId pulumi.StringOutput `pulumi:"serviceTrackerGroupFeatureId"`
+	// The version of the object
+	Version pulumi.IntOutput `pulumi:"version"`
 }
 
 // NewServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature registers a new resource with the given unique name, arguments, and options.
@@ -112,6 +116,8 @@ type serviceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureState stru
 	ServiceLanVpnInterfaceEthernetFeatureId *string `pulumi:"serviceLanVpnInterfaceEthernetFeatureId"`
 	// Service Tracker Group Feature ID
 	ServiceTrackerGroupFeatureId *string `pulumi:"serviceTrackerGroupFeatureId"`
+	// The version of the object
+	Version *int `pulumi:"version"`
 }
 
 type ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureState struct {
@@ -123,6 +129,8 @@ type ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureState stru
 	ServiceLanVpnInterfaceEthernetFeatureId pulumi.StringPtrInput
 	// Service Tracker Group Feature ID
 	ServiceTrackerGroupFeatureId pulumi.StringPtrInput
+	// The version of the object
+	Version pulumi.IntPtrInput
 }
 
 func (ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureState) ElementType() reflect.Type {
@@ -265,6 +273,13 @@ func (o ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureOutput)
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature) pulumi.StringOutput {
 		return v.ServiceTrackerGroupFeatureId
 	}).(pulumi.StringOutput)
+}
+
+// The version of the object
+func (o ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureOutput) Version() pulumi.IntOutput {
+	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeature) pulumi.IntOutput {
+		return v.Version
+	}).(pulumi.IntOutput)
 }
 
 type ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureArrayOutput struct{ *pulumi.OutputState }

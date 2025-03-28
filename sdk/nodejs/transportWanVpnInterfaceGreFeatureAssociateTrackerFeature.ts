@@ -24,8 +24,10 @@ import * as utilities from "./utilities";
  *
  * ## Import
  *
+ * Expected import identifier with the format: "transport_wan_vpn_interface_gre_feature_associate_tracker_feature_id,feature_profile_id,transport_wan_vpn_feature_id,transport_wan_vpn_interface_gre_feature_id"
+ *
  * ```sh
- * $ pulumi import sdwan:index/transportWanVpnInterfaceGreFeatureAssociateTrackerFeature:TransportWanVpnInterfaceGreFeatureAssociateTrackerFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+ * $ pulumi import sdwan:index/transportWanVpnInterfaceGreFeatureAssociateTrackerFeature:TransportWanVpnInterfaceGreFeatureAssociateTrackerFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037,140331f6-5418-4755-a059-13c77eb96037"
  * ```
  */
 export class TransportWanVpnInterfaceGreFeatureAssociateTrackerFeature extends pulumi.CustomResource {
@@ -72,6 +74,10 @@ export class TransportWanVpnInterfaceGreFeatureAssociateTrackerFeature extends p
      * Transport WAN VPN Interface GRE Feature ID
      */
     public readonly transportWanVpnInterfaceGreFeatureId!: pulumi.Output<string>;
+    /**
+     * The version of the object
+     */
+    public /*out*/ readonly version!: pulumi.Output<number>;
 
     /**
      * Create a TransportWanVpnInterfaceGreFeatureAssociateTrackerFeature resource with the given unique name, arguments, and options.
@@ -90,6 +96,7 @@ export class TransportWanVpnInterfaceGreFeatureAssociateTrackerFeature extends p
             resourceInputs["transportTrackerFeatureId"] = state ? state.transportTrackerFeatureId : undefined;
             resourceInputs["transportWanVpnFeatureId"] = state ? state.transportWanVpnFeatureId : undefined;
             resourceInputs["transportWanVpnInterfaceGreFeatureId"] = state ? state.transportWanVpnInterfaceGreFeatureId : undefined;
+            resourceInputs["version"] = state ? state.version : undefined;
         } else {
             const args = argsOrState as TransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureArgs | undefined;
             if ((!args || args.featureProfileId === undefined) && !opts.urn) {
@@ -108,6 +115,7 @@ export class TransportWanVpnInterfaceGreFeatureAssociateTrackerFeature extends p
             resourceInputs["transportTrackerFeatureId"] = args ? args.transportTrackerFeatureId : undefined;
             resourceInputs["transportWanVpnFeatureId"] = args ? args.transportWanVpnFeatureId : undefined;
             resourceInputs["transportWanVpnInterfaceGreFeatureId"] = args ? args.transportWanVpnInterfaceGreFeatureId : undefined;
+            resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(TransportWanVpnInterfaceGreFeatureAssociateTrackerFeature.__pulumiType, name, resourceInputs, opts);
@@ -134,6 +142,10 @@ export interface TransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureState 
      * Transport WAN VPN Interface GRE Feature ID
      */
     transportWanVpnInterfaceGreFeatureId?: pulumi.Input<string>;
+    /**
+     * The version of the object
+     */
+    version?: pulumi.Input<number>;
 }
 
 /**

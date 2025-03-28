@@ -5,6 +5,7 @@ package com.pulumi.sdwan.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -75,6 +76,21 @@ public final class ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFea
         return Optional.ofNullable(this.serviceTrackerGroupFeatureId);
     }
 
+    /**
+     * The version of the object
+     * 
+     */
+    @Import(name="version")
+    private @Nullable Output<Integer> version;
+
+    /**
+     * @return The version of the object
+     * 
+     */
+    public Optional<Output<Integer>> version() {
+        return Optional.ofNullable(this.version);
+    }
+
     private ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureState() {}
 
     private ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureState(ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureState $) {
@@ -82,6 +98,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFea
         this.serviceLanVpnFeatureId = $.serviceLanVpnFeatureId;
         this.serviceLanVpnInterfaceEthernetFeatureId = $.serviceLanVpnInterfaceEthernetFeatureId;
         this.serviceTrackerGroupFeatureId = $.serviceTrackerGroupFeatureId;
+        this.version = $.version;
     }
 
     public static Builder builder() {
@@ -184,6 +201,27 @@ public final class ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFea
          */
         public Builder serviceTrackerGroupFeatureId(String serviceTrackerGroupFeatureId) {
             return serviceTrackerGroupFeatureId(Output.of(serviceTrackerGroupFeatureId));
+        }
+
+        /**
+         * @param version The version of the object
+         * 
+         * @return builder
+         * 
+         */
+        public Builder version(@Nullable Output<Integer> version) {
+            $.version = version;
+            return this;
+        }
+
+        /**
+         * @param version The version of the object
+         * 
+         * @return builder
+         * 
+         */
+        public Builder version(Integer version) {
+            return version(Output.of(version));
         }
 
         public ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFeatureState build() {

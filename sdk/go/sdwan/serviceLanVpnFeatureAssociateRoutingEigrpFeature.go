@@ -45,8 +45,10 @@ import (
 //
 // ## Import
 //
+// Expected import identifier with the format: "service_lan_vpn_feature_associate_routing_eigrp_feature_id,feature_profile_id,service_lan_vpn_feature_id"
+//
 // ```sh
-// $ pulumi import sdwan:index/serviceLanVpnFeatureAssociateRoutingEigrpFeature:ServiceLanVpnFeatureAssociateRoutingEigrpFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+// $ pulumi import sdwan:index/serviceLanVpnFeatureAssociateRoutingEigrpFeature:ServiceLanVpnFeatureAssociateRoutingEigrpFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037"
 // ```
 type ServiceLanVpnFeatureAssociateRoutingEigrpFeature struct {
 	pulumi.CustomResourceState
@@ -57,6 +59,8 @@ type ServiceLanVpnFeatureAssociateRoutingEigrpFeature struct {
 	ServiceLanVpnFeatureId pulumi.StringOutput `pulumi:"serviceLanVpnFeatureId"`
 	// Service Routing EIGRP Feature ID
 	ServiceRoutingEigrpFeatureId pulumi.StringOutput `pulumi:"serviceRoutingEigrpFeatureId"`
+	// The version of the object
+	Version pulumi.IntOutput `pulumi:"version"`
 }
 
 // NewServiceLanVpnFeatureAssociateRoutingEigrpFeature registers a new resource with the given unique name, arguments, and options.
@@ -104,6 +108,8 @@ type serviceLanVpnFeatureAssociateRoutingEigrpFeatureState struct {
 	ServiceLanVpnFeatureId *string `pulumi:"serviceLanVpnFeatureId"`
 	// Service Routing EIGRP Feature ID
 	ServiceRoutingEigrpFeatureId *string `pulumi:"serviceRoutingEigrpFeatureId"`
+	// The version of the object
+	Version *int `pulumi:"version"`
 }
 
 type ServiceLanVpnFeatureAssociateRoutingEigrpFeatureState struct {
@@ -113,6 +119,8 @@ type ServiceLanVpnFeatureAssociateRoutingEigrpFeatureState struct {
 	ServiceLanVpnFeatureId pulumi.StringPtrInput
 	// Service Routing EIGRP Feature ID
 	ServiceRoutingEigrpFeatureId pulumi.StringPtrInput
+	// The version of the object
+	Version pulumi.IntPtrInput
 }
 
 func (ServiceLanVpnFeatureAssociateRoutingEigrpFeatureState) ElementType() reflect.Type {
@@ -244,6 +252,11 @@ func (o ServiceLanVpnFeatureAssociateRoutingEigrpFeatureOutput) ServiceRoutingEi
 	return o.ApplyT(func(v *ServiceLanVpnFeatureAssociateRoutingEigrpFeature) pulumi.StringOutput {
 		return v.ServiceRoutingEigrpFeatureId
 	}).(pulumi.StringOutput)
+}
+
+// The version of the object
+func (o ServiceLanVpnFeatureAssociateRoutingEigrpFeatureOutput) Version() pulumi.IntOutput {
+	return o.ApplyT(func(v *ServiceLanVpnFeatureAssociateRoutingEigrpFeature) pulumi.IntOutput { return v.Version }).(pulumi.IntOutput)
 }
 
 type ServiceLanVpnFeatureAssociateRoutingEigrpFeatureArrayOutput struct{ *pulumi.OutputState }

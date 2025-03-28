@@ -19,11 +19,19 @@ public final class ZoneBasedFirewallPolicyDefinitionArgs extends com.pulumi.reso
 
     public static final ZoneBasedFirewallPolicyDefinitionArgs Empty = new ZoneBasedFirewallPolicyDefinitionArgs();
 
-    @Import(name="applyZonePairs", required=true)
-    private Output<List<ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs>> applyZonePairs;
+    /**
+     * , Attribute conditional on `mode` being equal to `security`
+     * 
+     */
+    @Import(name="applyZonePairs")
+    private @Nullable Output<List<ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs>> applyZonePairs;
 
-    public Output<List<ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs>> applyZonePairs() {
-        return this.applyZonePairs;
+    /**
+     * @return , Attribute conditional on `mode` being equal to `security`
+     * 
+     */
+    public Optional<Output<List<ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs>>> applyZonePairs() {
+        return Optional.ofNullable(this.applyZonePairs);
     }
 
     /**
@@ -122,15 +130,33 @@ public final class ZoneBasedFirewallPolicyDefinitionArgs extends com.pulumi.reso
             $ = new ZoneBasedFirewallPolicyDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
-        public Builder applyZonePairs(Output<List<ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs>> applyZonePairs) {
+        /**
+         * @param applyZonePairs , Attribute conditional on `mode` being equal to `security`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder applyZonePairs(@Nullable Output<List<ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs>> applyZonePairs) {
             $.applyZonePairs = applyZonePairs;
             return this;
         }
 
+        /**
+         * @param applyZonePairs , Attribute conditional on `mode` being equal to `security`
+         * 
+         * @return builder
+         * 
+         */
         public Builder applyZonePairs(List<ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs> applyZonePairs) {
             return applyZonePairs(Output.of(applyZonePairs));
         }
 
+        /**
+         * @param applyZonePairs , Attribute conditional on `mode` being equal to `security`
+         * 
+         * @return builder
+         * 
+         */
         public Builder applyZonePairs(ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs... applyZonePairs) {
             return applyZonePairs(List.of(applyZonePairs));
         }
@@ -233,9 +259,6 @@ public final class ZoneBasedFirewallPolicyDefinitionArgs extends com.pulumi.reso
         }
 
         public ZoneBasedFirewallPolicyDefinitionArgs build() {
-            if ($.applyZonePairs == null) {
-                throw new MissingRequiredPropertyException("ZoneBasedFirewallPolicyDefinitionArgs", "applyZonePairs");
-            }
             if ($.defaultAction == null) {
                 throw new MissingRequiredPropertyException("ZoneBasedFirewallPolicyDefinitionArgs", "defaultAction");
             }

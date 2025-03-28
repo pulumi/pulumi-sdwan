@@ -14,38 +14,38 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameter
     {
         /// <summary>
-        /// Community value, e.g. `1000:10000` or `internet` or `local-AS`
+        /// Community value, e.g. `1000:10000` or `internet` or `local-AS`, Attribute conditional on `type` being equal to `community`
         /// </summary>
         public readonly string? Community;
         /// <summary>
-        /// Community additive
+        /// Community additive, Attribute conditional on `type` being equal to `communityAdditive`
         /// </summary>
         public readonly bool? CommunityAdditive;
         /// <summary>
-        /// OMP tag
+        /// OMP tag, Attribute conditional on `type` being equal to `ompTag`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         public readonly int? OmpTag;
         /// <summary>
-        /// Preference
+        /// Preference, Attribute conditional on `type` being equal to `preference`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         public readonly int? Preference;
         /// <summary>
-        /// Service TLOC color
+        /// Service TLOC color, Attribute conditional on `type` being equal to `service`
         /// </summary>
         public readonly string? ServiceTlocColor;
         /// <summary>
-        /// Service TLOC encapsulation
+        /// Service TLOC encapsulation, Attribute conditional on `type` being equal to `service`
         ///   - Choices: `ipsec`, `gre`
         /// </summary>
         public readonly string? ServiceTlocEncapsulation;
         /// <summary>
-        /// Service TLOC IP address
+        /// Service TLOC IP address, Attribute conditional on `type` being equal to `service`
         /// </summary>
         public readonly string? ServiceTlocIp;
         /// <summary>
-        /// Service TLOC list ID
+        /// Service TLOC list ID, Attribute conditional on `type` being equal to `service`
         /// </summary>
         public readonly string? ServiceTlocListId;
         /// <summary>
@@ -53,35 +53,35 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? ServiceTlocListVersion;
         /// <summary>
-        /// Service type
+        /// Service type, Attribute conditional on `type` being equal to `service`
         ///   - Choices: `FW`, `IDP`, `IDS`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `netsvc5`
         /// </summary>
         public readonly string? ServiceType;
         /// <summary>
-        /// Service VPN ID
+        /// Service VPN ID, Attribute conditional on `type` being equal to `service`
         ///   - Range: `0`-`65536`
         /// </summary>
         public readonly int? ServiceVpnId;
         /// <summary>
-        /// TLOC action
+        /// TLOC action, Attribute conditional on `type` being equal to `tlocAction`
         ///   - Choices: `strict`, `primary`, `backup`, `ecmp`
         /// </summary>
         public readonly string? TlocAction;
         /// <summary>
-        /// TLOC color
+        /// TLOC color, Attribute conditional on `type` being equal to `tloc`
         /// </summary>
         public readonly string? TlocColor;
         /// <summary>
-        /// TLOC encapsulation
+        /// TLOC encapsulation, Attribute conditional on `type` being equal to `tloc`
         ///   - Choices: `ipsec`, `gre`
         /// </summary>
         public readonly string? TlocEncapsulation;
         /// <summary>
-        /// TLOC IP address
+        /// TLOC IP address, Attribute conditional on `type` being equal to `tloc`
         /// </summary>
         public readonly string? TlocIp;
         /// <summary>
-        /// TLOC list ID
+        /// TLOC list ID, Attribute conditional on `type` being equal to `tlocList`
         /// </summary>
         public readonly string? TlocListId;
         /// <summary>

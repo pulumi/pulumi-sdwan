@@ -77,6 +77,10 @@ export interface GetTransportWanVpnInterfaceIpsecFeatureAssociateTrackerFeatureR
      * Transport WAN VPN Interface IPSEC Feature ID
      */
     readonly transportWanVpnInterfaceIpsecFeatureId: string;
+    /**
+     * The version of the object
+     */
+    readonly version: number;
 }
 /**
  * This data source can read the Transport WAN VPN Interface IPSEC Feature Associate Tracker Feature .

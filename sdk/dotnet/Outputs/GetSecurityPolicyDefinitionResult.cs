@@ -14,9 +14,17 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class GetSecurityPolicyDefinitionResult
     {
         /// <summary>
+        /// Destination Zone
+        /// </summary>
+        public readonly string DestinationZone;
+        /// <summary>
         /// Policy definition ID
         /// </summary>
         public readonly string Id;
+        /// <summary>
+        /// Source Zone
+        /// </summary>
+        public readonly string SourceZone;
         /// <summary>
         /// Policy definition type
         /// </summary>
@@ -28,13 +36,19 @@ namespace Pulumi.Sdwan.Outputs
 
         [OutputConstructor]
         private GetSecurityPolicyDefinitionResult(
+            string destinationZone,
+
             string id,
+
+            string sourceZone,
 
             string type,
 
             int version)
         {
+            DestinationZone = destinationZone;
             Id = id;
+            SourceZone = sourceZone;
             Type = type;
             Version = version;
         }

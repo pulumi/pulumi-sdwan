@@ -2,6 +2,8 @@
 // *** Do not edit by hand unless you're certain you know what you are doing! ***
 
 import * as pulumi from "@pulumi/pulumi";
+import * as inputs from "./types/input";
+import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
@@ -40,6 +42,10 @@ export interface GetIntrusionPreventionPolicyDefinitionArgs {
  */
 export interface GetIntrusionPreventionPolicyDefinitionResult {
     /**
+     * Custom signature
+     */
+    readonly customSignature: boolean;
+    /**
      * The description of the policy definition
      */
     readonly description: string;
@@ -63,6 +69,7 @@ export interface GetIntrusionPreventionPolicyDefinitionResult {
      * Log level
      */
     readonly logLevel: string;
+    readonly loggings: outputs.GetIntrusionPreventionPolicyDefinitionLogging[];
     /**
      * The policy mode
      */

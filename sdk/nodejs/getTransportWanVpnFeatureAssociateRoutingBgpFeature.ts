@@ -67,6 +67,10 @@ export interface GetTransportWanVpnFeatureAssociateRoutingBgpFeatureResult {
      * Transport WAN VPN Feature ID
      */
     readonly transportWanVpnFeatureId: string;
+    /**
+     * The version of the object
+     */
+    readonly version: number;
 }
 /**
  * This data source can read the Transport WAN VPN Feature Associate Routing BGP Feature .

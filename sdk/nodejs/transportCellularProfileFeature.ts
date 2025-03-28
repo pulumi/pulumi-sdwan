@@ -67,7 +67,7 @@ export class TransportCellularProfileFeature extends pulumi.CustomResource {
     /**
      * Set access point name
      */
-    public readonly accessPointName!: pulumi.Output<string>;
+    public readonly accessPointName!: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
@@ -115,7 +115,7 @@ export class TransportCellularProfileFeature extends pulumi.CustomResource {
     /**
      * Set Profile ID - Range: `1`-`16`
      */
-    public readonly profileId!: pulumi.Output<number>;
+    public readonly profileId!: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
@@ -175,14 +175,8 @@ export class TransportCellularProfileFeature extends pulumi.CustomResource {
             resourceInputs["version"] = state ? state.version : undefined;
         } else {
             const args = argsOrState as TransportCellularProfileFeatureArgs | undefined;
-            if ((!args || args.accessPointName === undefined) && !opts.urn) {
-                throw new Error("Missing required property 'accessPointName'");
-            }
             if ((!args || args.featureProfileId === undefined) && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
-            }
-            if ((!args || args.profileId === undefined) && !opts.urn) {
-                throw new Error("Missing required property 'profileId'");
             }
             resourceInputs["accessPointName"] = args ? args.accessPointName : undefined;
             resourceInputs["accessPointNameVariable"] = args ? args.accessPointNameVariable : undefined;
@@ -298,7 +292,7 @@ export interface TransportCellularProfileFeatureArgs {
     /**
      * Set access point name
      */
-    accessPointName: pulumi.Input<string>;
+    accessPointName?: pulumi.Input<string>;
     /**
      * Variable name
      */
@@ -346,7 +340,7 @@ export interface TransportCellularProfileFeatureArgs {
     /**
      * Set Profile ID - Range: `1`-`16`
      */
-    profileId: pulumi.Input<number>;
+    profileId?: pulumi.Input<number>;
     /**
      * Variable name
      */

@@ -22,15 +22,15 @@ public final class TransportCellularProfileFeatureArgs extends com.pulumi.resour
      * Set access point name
      * 
      */
-    @Import(name="accessPointName", required=true)
-    private Output<String> accessPointName;
+    @Import(name="accessPointName")
+    private @Nullable Output<String> accessPointName;
 
     /**
      * @return Set access point name
      * 
      */
-    public Output<String> accessPointName() {
-        return this.accessPointName;
+    public Optional<Output<String>> accessPointName() {
+        return Optional.ofNullable(this.accessPointName);
     }
 
     /**
@@ -202,15 +202,15 @@ public final class TransportCellularProfileFeatureArgs extends com.pulumi.resour
      * Set Profile ID - Range: `1`-`16`
      * 
      */
-    @Import(name="profileId", required=true)
-    private Output<Integer> profileId;
+    @Import(name="profileId")
+    private @Nullable Output<Integer> profileId;
 
     /**
      * @return Set Profile ID - Range: `1`-`16`
      * 
      */
-    public Output<Integer> profileId() {
-        return this.profileId;
+    public Optional<Output<Integer>> profileId() {
+        return Optional.ofNullable(this.profileId);
     }
 
     /**
@@ -335,7 +335,7 @@ public final class TransportCellularProfileFeatureArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder accessPointName(Output<String> accessPointName) {
+        public Builder accessPointName(@Nullable Output<String> accessPointName) {
             $.accessPointName = accessPointName;
             return this;
         }
@@ -587,7 +587,7 @@ public final class TransportCellularProfileFeatureArgs extends com.pulumi.resour
          * @return builder
          * 
          */
-        public Builder profileId(Output<Integer> profileId) {
+        public Builder profileId(@Nullable Output<Integer> profileId) {
             $.profileId = profileId;
             return this;
         }
@@ -708,14 +708,8 @@ public final class TransportCellularProfileFeatureArgs extends com.pulumi.resour
         }
 
         public TransportCellularProfileFeatureArgs build() {
-            if ($.accessPointName == null) {
-                throw new MissingRequiredPropertyException("TransportCellularProfileFeatureArgs", "accessPointName");
-            }
             if ($.featureProfileId == null) {
                 throw new MissingRequiredPropertyException("TransportCellularProfileFeatureArgs", "featureProfileId");
-            }
-            if ($.profileId == null) {
-                throw new MissingRequiredPropertyException("TransportCellularProfileFeatureArgs", "profileId");
             }
             return $;
         }

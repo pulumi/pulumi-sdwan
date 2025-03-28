@@ -163,6 +163,10 @@ namespace Pulumi.Sdwan
         /// Service Multicast Feature ID
         /// </summary>
         public readonly string ServiceMulticastFeatureId;
+        /// <summary>
+        /// The version of the object
+        /// </summary>
+        public readonly int Version;
 
         [OutputConstructor]
         private GetServiceLanVpnFeatureAssociateMulticastFeatureResult(
@@ -172,12 +176,15 @@ namespace Pulumi.Sdwan
 
             string serviceLanVpnFeatureId,
 
-            string serviceMulticastFeatureId)
+            string serviceMulticastFeatureId,
+
+            int version)
         {
             FeatureProfileId = featureProfileId;
             Id = id;
             ServiceLanVpnFeatureId = serviceLanVpnFeatureId;
             ServiceMulticastFeatureId = serviceMulticastFeatureId;
+            Version = version;
         }
     }
 }

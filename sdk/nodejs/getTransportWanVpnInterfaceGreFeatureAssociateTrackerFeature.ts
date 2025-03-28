@@ -77,6 +77,10 @@ export interface GetTransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureRes
      * Transport WAN VPN Interface GRE Feature ID
      */
     readonly transportWanVpnInterfaceGreFeatureId: string;
+    /**
+     * The version of the object
+     */
+    readonly version: number;
 }
 /**
  * This data source can read the Transport WAN VPN Interface GRE Feature Associate Tracker Feature .

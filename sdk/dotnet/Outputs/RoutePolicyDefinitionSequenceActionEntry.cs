@@ -14,69 +14,69 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class RoutePolicyDefinitionSequenceActionEntry
     {
         /// <summary>
-        /// Aggregator
+        /// Aggregator, Attribute conditional on `type` being equal to `aggregator`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         public readonly int? Aggregator;
         /// <summary>
-        /// IP address
+        /// IP address, Attribute conditional on `type` being equal to `aggregator`
         /// </summary>
         public readonly string? AggregatorIpAddress;
         /// <summary>
-        /// Space separated list of ASN to exclude
+        /// Space separated list of ASN to exclude, Attribute conditional on `type` being equal to `asPath`
         /// </summary>
         public readonly string? AsPathExclude;
         /// <summary>
-        /// Space separated list of ASN to prepend
+        /// Space separated list of ASN to prepend, Attribute conditional on `type` being equal to `asPath`
         /// </summary>
         public readonly string? AsPathPrepend;
         /// <summary>
-        /// Atomic aggregate
+        /// Atomic aggregate, Attribute conditional on `type` being equal to `atomicAggregate`
         /// </summary>
         public readonly bool? AtomicAggregate;
         /// <summary>
-        /// Community value, e.g. `1000:10000` or `internet` or `local-AS`
+        /// Community value, e.g. `1000:10000` or `internet` or `local-AS`, Attribute conditional on `type` being equal to `community`
         /// </summary>
         public readonly string? Community;
         /// <summary>
-        /// Community additive
+        /// Community additive, Attribute conditional on `type` being equal to `communityAdditive`
         /// </summary>
         public readonly bool? CommunityAdditive;
         /// <summary>
-        /// Local preference
+        /// Local preference, Attribute conditional on `type` being equal to `localPreference`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         public readonly int? LocalPreference;
         /// <summary>
-        /// Metric
+        /// Metric, Attribute conditional on `type` being equal to `metric`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         public readonly int? Metric;
         /// <summary>
-        /// Metric type
+        /// Metric type, Attribute conditional on `type` being equal to `metricType`
         ///   - Choices: `type1`, `type2`
         /// </summary>
         public readonly string? MetricType;
         /// <summary>
-        /// Next hop IP
+        /// Next hop IP, Attribute conditional on `type` being equal to `nextHop`
         /// </summary>
         public readonly string? NextHop;
         /// <summary>
-        /// OMP tag
+        /// OMP tag, Attribute conditional on `type` being equal to `ompTag`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         public readonly int? OmpTag;
         /// <summary>
-        /// Origin
+        /// Origin, Attribute conditional on `type` being equal to `origin`
         ///   - Choices: `igp`, `egp`, `incomplete`
         /// </summary>
         public readonly string? Origin;
         /// <summary>
-        /// Originator IP
+        /// Originator IP, Attribute conditional on `type` being equal to `originator`
         /// </summary>
         public readonly string? Originator;
         /// <summary>
-        /// OSPF tag
+        /// OSPF tag, Attribute conditional on `type` being equal to `ospfTag`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         public readonly int? OspfTag;
@@ -86,7 +86,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string Type;
         /// <summary>
-        /// Weight
+        /// Weight, Attribute conditional on `type` being equal to `weight`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         public readonly int? Weight;

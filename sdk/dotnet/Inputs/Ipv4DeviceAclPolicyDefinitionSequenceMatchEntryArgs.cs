@@ -13,7 +13,7 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Destination data IPv4 prefix list ID
+        /// Destination data IPv4 prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
         /// </summary>
         [Input("destinationDataIpv4PrefixListId")]
         public Input<string>? DestinationDataIpv4PrefixListId { get; set; }
@@ -25,20 +25,20 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? DestinationDataIpv4PrefixListVersion { get; set; }
 
         /// <summary>
-        /// Destination IP prefix
+        /// Destination IP prefix, Attribute conditional on `type` being equal to `destinationIp`
         /// </summary>
         [Input("destinationIp")]
         public Input<string>? DestinationIp { get; set; }
 
         /// <summary>
-        /// Destination port, only `22` and `161` supported
+        /// Destination port, only `22` and `161` supported, Attribute conditional on `type` being equal to `destinationPort`
         ///   - Range: `0`-`65535`
         /// </summary>
         [Input("destinationPort")]
         public Input<int>? DestinationPort { get; set; }
 
         /// <summary>
-        /// Source data IPv4 prefix list ID
+        /// Source data IPv4 prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
         /// </summary>
         [Input("sourceDataIpv4PrefixListId")]
         public Input<string>? SourceDataIpv4PrefixListId { get; set; }
@@ -50,13 +50,13 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? SourceDataIpv4PrefixListVersion { get; set; }
 
         /// <summary>
-        /// Source IP prefix
+        /// Source IP prefix, Attribute conditional on `type` being equal to `sourceIp`
         /// </summary>
         [Input("sourceIp")]
         public Input<string>? SourceIp { get; set; }
 
         /// <summary>
-        /// Source ports. Single value (0-65535) or ranges separated by spaces.
+        /// Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
         /// </summary>
         [Input("sourcePorts")]
         public Input<string>? SourcePorts { get; set; }

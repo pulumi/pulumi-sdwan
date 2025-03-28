@@ -70,6 +70,8 @@ type LookupTransportWanVpnFeatureAssociateRoutingOspfFeatureResult struct {
 	TransportRoutingOspfFeatureId string `pulumi:"transportRoutingOspfFeatureId"`
 	// Transport WAN VPN Feature ID
 	TransportWanVpnFeatureId string `pulumi:"transportWanVpnFeatureId"`
+	// The version of the object
+	Version int `pulumi:"version"`
 }
 
 func LookupTransportWanVpnFeatureAssociateRoutingOspfFeatureOutput(ctx *pulumi.Context, args LookupTransportWanVpnFeatureAssociateRoutingOspfFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupTransportWanVpnFeatureAssociateRoutingOspfFeatureResultOutput {
@@ -134,6 +136,11 @@ func (o LookupTransportWanVpnFeatureAssociateRoutingOspfFeatureResultOutput) Tra
 	return o.ApplyT(func(v LookupTransportWanVpnFeatureAssociateRoutingOspfFeatureResult) string {
 		return v.TransportWanVpnFeatureId
 	}).(pulumi.StringOutput)
+}
+
+// The version of the object
+func (o LookupTransportWanVpnFeatureAssociateRoutingOspfFeatureResultOutput) Version() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupTransportWanVpnFeatureAssociateRoutingOspfFeatureResult) int { return v.Version }).(pulumi.IntOutput)
 }
 
 func init() {

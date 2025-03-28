@@ -64,10 +64,22 @@ namespace Pulumi.Sdwan
         public Output<string?> HighSpeedLoggingServerPort { get; private set; } = null!;
 
         /// <summary>
+        /// High Speed Logging Source Interface
+        /// </summary>
+        [Output("highSpeedLoggingServerSourceInterface")]
+        public Output<string?> HighSpeedLoggingServerSourceInterface { get; private set; } = null!;
+
+        /// <summary>
         /// High Speed Logging VPN
         /// </summary>
         [Output("highSpeedLoggingVpn")]
         public Output<string?> HighSpeedLoggingVpn { get; private set; } = null!;
+
+        /// <summary>
+        /// ICMP Unreachable Allow
+        /// </summary>
+        [Output("imcpUnreachableAllow")]
+        public Output<bool?> ImcpUnreachableAllow { get; private set; } = null!;
 
         [Output("loggings")]
         public Output<ImmutableArray<Outputs.SecurityPolicyLogging>> Loggings { get; private set; } = null!;
@@ -77,6 +89,24 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Output("matchStatisticsPerFilter")]
         public Output<string?> MatchStatisticsPerFilter { get; private set; } = null!;
+
+        /// <summary>
+        /// Max Incomplete ICMP Limit
+        /// </summary>
+        [Output("maxIncompleteIcmpLimit")]
+        public Output<int?> MaxIncompleteIcmpLimit { get; private set; } = null!;
+
+        /// <summary>
+        /// Max Incomplete TCP Limit
+        /// </summary>
+        [Output("maxIncompleteTcpLimit")]
+        public Output<int?> MaxIncompleteTcpLimit { get; private set; } = null!;
+
+        /// <summary>
+        /// Max Incomplete UDP Limit
+        /// </summary>
+        [Output("maxIncompleteUdpLimit")]
+        public Output<int?> MaxIncompleteUdpLimit { get; private set; } = null!;
 
         /// <summary>
         /// The policy mode - Choices: `security`, `unified` - Default value: `security`
@@ -91,10 +121,22 @@ namespace Pulumi.Sdwan
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
+        /// Session Reclassify Allow
+        /// </summary>
+        [Output("sessionReclassifyAllow")]
+        public Output<bool?> SessionReclassifyAllow { get; private set; } = null!;
+
+        /// <summary>
         /// TCP SYN Flood Limit, value from 1 to 4294967295
         /// </summary>
         [Output("tcpSynFloodLimit")]
         public Output<string?> TcpSynFloodLimit { get; private set; } = null!;
+
+        /// <summary>
+        /// Unified Logging
+        /// </summary>
+        [Output("unifiedLogging")]
+        public Output<bool?> UnifiedLogging { get; private set; } = null!;
 
         /// <summary>
         /// The use case of the security policy - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`,
@@ -204,10 +246,22 @@ namespace Pulumi.Sdwan
         public Input<string>? HighSpeedLoggingServerPort { get; set; }
 
         /// <summary>
+        /// High Speed Logging Source Interface
+        /// </summary>
+        [Input("highSpeedLoggingServerSourceInterface")]
+        public Input<string>? HighSpeedLoggingServerSourceInterface { get; set; }
+
+        /// <summary>
         /// High Speed Logging VPN
         /// </summary>
         [Input("highSpeedLoggingVpn")]
         public Input<string>? HighSpeedLoggingVpn { get; set; }
+
+        /// <summary>
+        /// ICMP Unreachable Allow
+        /// </summary>
+        [Input("imcpUnreachableAllow")]
+        public Input<bool>? ImcpUnreachableAllow { get; set; }
 
         [Input("loggings")]
         private InputList<Inputs.SecurityPolicyLoggingArgs>? _loggings;
@@ -224,6 +278,24 @@ namespace Pulumi.Sdwan
         public Input<string>? MatchStatisticsPerFilter { get; set; }
 
         /// <summary>
+        /// Max Incomplete ICMP Limit
+        /// </summary>
+        [Input("maxIncompleteIcmpLimit")]
+        public Input<int>? MaxIncompleteIcmpLimit { get; set; }
+
+        /// <summary>
+        /// Max Incomplete TCP Limit
+        /// </summary>
+        [Input("maxIncompleteTcpLimit")]
+        public Input<int>? MaxIncompleteTcpLimit { get; set; }
+
+        /// <summary>
+        /// Max Incomplete UDP Limit
+        /// </summary>
+        [Input("maxIncompleteUdpLimit")]
+        public Input<int>? MaxIncompleteUdpLimit { get; set; }
+
+        /// <summary>
         /// The policy mode - Choices: `security`, `unified` - Default value: `security`
         /// </summary>
         [Input("mode")]
@@ -236,10 +308,22 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
+        /// Session Reclassify Allow
+        /// </summary>
+        [Input("sessionReclassifyAllow")]
+        public Input<bool>? SessionReclassifyAllow { get; set; }
+
+        /// <summary>
         /// TCP SYN Flood Limit, value from 1 to 4294967295
         /// </summary>
         [Input("tcpSynFloodLimit")]
         public Input<string>? TcpSynFloodLimit { get; set; }
+
+        /// <summary>
+        /// Unified Logging
+        /// </summary>
+        [Input("unifiedLogging")]
+        public Input<bool>? UnifiedLogging { get; set; }
 
         /// <summary>
         /// The use case of the security policy - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`,
@@ -305,10 +389,22 @@ namespace Pulumi.Sdwan
         public Input<string>? HighSpeedLoggingServerPort { get; set; }
 
         /// <summary>
+        /// High Speed Logging Source Interface
+        /// </summary>
+        [Input("highSpeedLoggingServerSourceInterface")]
+        public Input<string>? HighSpeedLoggingServerSourceInterface { get; set; }
+
+        /// <summary>
         /// High Speed Logging VPN
         /// </summary>
         [Input("highSpeedLoggingVpn")]
         public Input<string>? HighSpeedLoggingVpn { get; set; }
+
+        /// <summary>
+        /// ICMP Unreachable Allow
+        /// </summary>
+        [Input("imcpUnreachableAllow")]
+        public Input<bool>? ImcpUnreachableAllow { get; set; }
 
         [Input("loggings")]
         private InputList<Inputs.SecurityPolicyLoggingGetArgs>? _loggings;
@@ -325,6 +421,24 @@ namespace Pulumi.Sdwan
         public Input<string>? MatchStatisticsPerFilter { get; set; }
 
         /// <summary>
+        /// Max Incomplete ICMP Limit
+        /// </summary>
+        [Input("maxIncompleteIcmpLimit")]
+        public Input<int>? MaxIncompleteIcmpLimit { get; set; }
+
+        /// <summary>
+        /// Max Incomplete TCP Limit
+        /// </summary>
+        [Input("maxIncompleteTcpLimit")]
+        public Input<int>? MaxIncompleteTcpLimit { get; set; }
+
+        /// <summary>
+        /// Max Incomplete UDP Limit
+        /// </summary>
+        [Input("maxIncompleteUdpLimit")]
+        public Input<int>? MaxIncompleteUdpLimit { get; set; }
+
+        /// <summary>
         /// The policy mode - Choices: `security`, `unified` - Default value: `security`
         /// </summary>
         [Input("mode")]
@@ -337,10 +451,22 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
+        /// Session Reclassify Allow
+        /// </summary>
+        [Input("sessionReclassifyAllow")]
+        public Input<bool>? SessionReclassifyAllow { get; set; }
+
+        /// <summary>
         /// TCP SYN Flood Limit, value from 1 to 4294967295
         /// </summary>
         [Input("tcpSynFloodLimit")]
         public Input<string>? TcpSynFloodLimit { get; set; }
+
+        /// <summary>
+        /// Unified Logging
+        /// </summary>
+        [Input("unifiedLogging")]
+        public Input<bool>? UnifiedLogging { get; set; }
 
         /// <summary>
         /// The use case of the security policy - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`,

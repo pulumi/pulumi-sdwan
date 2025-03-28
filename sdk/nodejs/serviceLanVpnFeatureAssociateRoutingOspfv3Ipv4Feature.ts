@@ -23,8 +23,10 @@ import * as utilities from "./utilities";
  *
  * ## Import
  *
+ * Expected import identifier with the format: "service_lan_vpn_feature_associate_routing_ospfv3_ipv4_feature_id,feature_profile_id,service_lan_vpn_feature_id"
+ *
  * ```sh
- * $ pulumi import sdwan:index/serviceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature:ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+ * $ pulumi import sdwan:index/serviceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature:ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037"
  * ```
  */
 export class ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature extends pulumi.CustomResource {
@@ -67,6 +69,10 @@ export class ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature extends pulum
      * Service Routing OSPFv3 IPv4 Feature ID
      */
     public readonly serviceRoutingOspfv3Ipv4FeatureId!: pulumi.Output<string>;
+    /**
+     * The version of the object
+     */
+    public /*out*/ readonly version!: pulumi.Output<number>;
 
     /**
      * Create a ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature resource with the given unique name, arguments, and options.
@@ -84,6 +90,7 @@ export class ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature extends pulum
             resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
             resourceInputs["serviceLanVpnFeatureId"] = state ? state.serviceLanVpnFeatureId : undefined;
             resourceInputs["serviceRoutingOspfv3Ipv4FeatureId"] = state ? state.serviceRoutingOspfv3Ipv4FeatureId : undefined;
+            resourceInputs["version"] = state ? state.version : undefined;
         } else {
             const args = argsOrState as ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureArgs | undefined;
             if ((!args || args.featureProfileId === undefined) && !opts.urn) {
@@ -98,6 +105,7 @@ export class ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature extends pulum
             resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
             resourceInputs["serviceLanVpnFeatureId"] = args ? args.serviceLanVpnFeatureId : undefined;
             resourceInputs["serviceRoutingOspfv3Ipv4FeatureId"] = args ? args.serviceRoutingOspfv3Ipv4FeatureId : undefined;
+            resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4Feature.__pulumiType, name, resourceInputs, opts);
@@ -120,6 +128,10 @@ export interface ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureState {
      * Service Routing OSPFv3 IPv4 Feature ID
      */
     serviceRoutingOspfv3Ipv4FeatureId?: pulumi.Input<string>;
+    /**
+     * The version of the object
+     */
+    version?: pulumi.Input<number>;
 }
 
 /**

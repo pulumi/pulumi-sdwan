@@ -6,6 +6,7 @@ package com.pulumi.sdwan;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import com.pulumi.sdwan.inputs.UrlFilteringPolicyDefinitionLoggingArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -138,6 +139,13 @@ public final class UrlFilteringPolicyDefinitionArgs extends com.pulumi.resources
         return this.description;
     }
 
+    @Import(name="loggings")
+    private @Nullable Output<List<UrlFilteringPolicyDefinitionLoggingArgs>> loggings;
+
+    public Optional<Output<List<UrlFilteringPolicyDefinitionLoggingArgs>>> loggings() {
+        return Optional.ofNullable(this.loggings);
+    }
+
     /**
      * The policy mode - Choices: `security`, `unified`
      * 
@@ -241,6 +249,7 @@ public final class UrlFilteringPolicyDefinitionArgs extends com.pulumi.resources
         this.blockUrlListId = $.blockUrlListId;
         this.blockUrlListVersion = $.blockUrlListVersion;
         this.description = $.description;
+        this.loggings = $.loggings;
         this.mode = $.mode;
         this.name = $.name;
         this.targetVpns = $.targetVpns;
@@ -443,6 +452,19 @@ public final class UrlFilteringPolicyDefinitionArgs extends com.pulumi.resources
          */
         public Builder description(String description) {
             return description(Output.of(description));
+        }
+
+        public Builder loggings(@Nullable Output<List<UrlFilteringPolicyDefinitionLoggingArgs>> loggings) {
+            $.loggings = loggings;
+            return this;
+        }
+
+        public Builder loggings(List<UrlFilteringPolicyDefinitionLoggingArgs> loggings) {
+            return loggings(Output.of(loggings));
+        }
+
+        public Builder loggings(UrlFilteringPolicyDefinitionLoggingArgs... loggings) {
+            return loggings(List.of(loggings));
         }
 
         /**

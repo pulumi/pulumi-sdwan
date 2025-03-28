@@ -13,7 +13,7 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class Ipv4AclPolicyDefinitionSequenceActionEntryArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Class map ID
+        /// Class map ID, Attribute conditional on `type` being equal to `class`
         /// </summary>
         [Input("classMapId")]
         public Input<string>? ClassMapId { get; set; }
@@ -25,19 +25,19 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? ClassMapVersion { get; set; }
 
         /// <summary>
-        /// Counter name
+        /// Counter name, Attribute conditional on `type` being equal to `count`
         /// </summary>
         [Input("counterName")]
         public Input<string>? CounterName { get; set; }
 
         /// <summary>
-        /// Enable logging
+        /// Enable logging, Attribute conditional on `type` being equal to `log`
         /// </summary>
         [Input("log")]
         public Input<bool>? Log { get; set; }
 
         /// <summary>
-        /// Mirror ID
+        /// Mirror ID, Attribute conditional on `type` being equal to `mirror`
         /// </summary>
         [Input("mirrorId")]
         public Input<string>? MirrorId { get; set; }
@@ -49,7 +49,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? MirrorVersion { get; set; }
 
         /// <summary>
-        /// Policer ID
+        /// Policer ID, Attribute conditional on `type` being equal to `policer`
         /// </summary>
         [Input("policerId")]
         public Input<string>? PolicerId { get; set; }
@@ -64,7 +64,7 @@ namespace Pulumi.Sdwan.Inputs
         private InputList<Inputs.Ipv4AclPolicyDefinitionSequenceActionEntrySetParameterArgs>? _setParameters;
 
         /// <summary>
-        /// List of set parameters
+        /// List of set parameters, Attribute conditional on `type` being equal to `set`
         /// </summary>
         public InputList<Inputs.Ipv4AclPolicyDefinitionSequenceActionEntrySetParameterArgs> SetParameters
         {

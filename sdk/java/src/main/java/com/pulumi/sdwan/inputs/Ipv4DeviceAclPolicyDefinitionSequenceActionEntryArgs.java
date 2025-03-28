@@ -17,14 +17,14 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceActionEntryArgs extends 
     public static final Ipv4DeviceAclPolicyDefinitionSequenceActionEntryArgs Empty = new Ipv4DeviceAclPolicyDefinitionSequenceActionEntryArgs();
 
     /**
-     * Counter name
+     * Counter name, Attribute conditional on `type` being equal to `count`
      * 
      */
     @Import(name="counterName")
     private @Nullable Output<String> counterName;
 
     /**
-     * @return Counter name
+     * @return Counter name, Attribute conditional on `type` being equal to `count`
      * 
      */
     public Optional<Output<String>> counterName() {
@@ -74,7 +74,7 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceActionEntryArgs extends 
         }
 
         /**
-         * @param counterName Counter name
+         * @param counterName Counter name, Attribute conditional on `type` being equal to `count`
          * 
          * @return builder
          * 
@@ -85,7 +85,7 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceActionEntryArgs extends 
         }
 
         /**
-         * @param counterName Counter name
+         * @param counterName Counter name, Attribute conditional on `type` being equal to `count`
          * 
          * @return builder
          * 

@@ -67,6 +67,10 @@ export interface GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureResult 
      * Service Routing OSPFv3 IPv6 Feature ID
      */
     readonly serviceRoutingOspfv3Ipv6FeatureId: string;
+    /**
+     * The version of the object
+     */
+    readonly version: number;
 }
 /**
  * This data source can read the Service LAN VPN Feature Associate Routing OSPFv3 IPv6 Feature .

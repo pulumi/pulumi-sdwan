@@ -70,6 +70,8 @@ type LookupServiceLanVpnFeatureAssociateRoutingOspfFeatureResult struct {
 	ServiceLanVpnFeatureId string `pulumi:"serviceLanVpnFeatureId"`
 	// Service Routing OSPF Feature ID
 	ServiceRoutingOspfFeatureId string `pulumi:"serviceRoutingOspfFeatureId"`
+	// The version of the object
+	Version int `pulumi:"version"`
 }
 
 func LookupServiceLanVpnFeatureAssociateRoutingOspfFeatureOutput(ctx *pulumi.Context, args LookupServiceLanVpnFeatureAssociateRoutingOspfFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupServiceLanVpnFeatureAssociateRoutingOspfFeatureResultOutput {
@@ -132,6 +134,11 @@ func (o LookupServiceLanVpnFeatureAssociateRoutingOspfFeatureResultOutput) Servi
 	return o.ApplyT(func(v LookupServiceLanVpnFeatureAssociateRoutingOspfFeatureResult) string {
 		return v.ServiceRoutingOspfFeatureId
 	}).(pulumi.StringOutput)
+}
+
+// The version of the object
+func (o LookupServiceLanVpnFeatureAssociateRoutingOspfFeatureResultOutput) Version() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupServiceLanVpnFeatureAssociateRoutingOspfFeatureResult) int { return v.Version }).(pulumi.IntOutput)
 }
 
 func init() {

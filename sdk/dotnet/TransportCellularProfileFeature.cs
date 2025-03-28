@@ -55,7 +55,7 @@ namespace Pulumi.Sdwan
         /// Set access point name
         /// </summary>
         [Output("accessPointName")]
-        public Output<string> AccessPointName { get; private set; } = null!;
+        public Output<string?> AccessPointName { get; private set; } = null!;
 
         /// <summary>
         /// Variable name
@@ -127,7 +127,7 @@ namespace Pulumi.Sdwan
         /// Set Profile ID - Range: `1`-`16`
         /// </summary>
         [Output("profileId")]
-        public Output<int> ProfileId { get; private set; } = null!;
+        public Output<int?> ProfileId { get; private set; } = null!;
 
         /// <summary>
         /// Variable name
@@ -214,8 +214,8 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// Set access point name
         /// </summary>
-        [Input("accessPointName", required: true)]
-        public Input<string> AccessPointName { get; set; } = null!;
+        [Input("accessPointName")]
+        public Input<string>? AccessPointName { get; set; }
 
         /// <summary>
         /// Variable name
@@ -286,8 +286,8 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// Set Profile ID - Range: `1`-`16`
         /// </summary>
-        [Input("profileId", required: true)]
-        public Input<int> ProfileId { get; set; } = null!;
+        [Input("profileId")]
+        public Input<int>? ProfileId { get; set; }
 
         /// <summary>
         /// Variable name

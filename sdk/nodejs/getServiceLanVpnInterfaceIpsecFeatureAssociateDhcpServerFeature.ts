@@ -77,6 +77,10 @@ export interface GetServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature
      * Service LAN VPN Interface IPSec Feature ID
      */
     readonly serviceLanVpnInterfaceIpsecFeatureId: string;
+    /**
+     * The version of the object
+     */
+    readonly version: number;
 }
 /**
  * This data source can read the Service LAN VPN Interface IPSec Feature Associate DHCP Server Feature .

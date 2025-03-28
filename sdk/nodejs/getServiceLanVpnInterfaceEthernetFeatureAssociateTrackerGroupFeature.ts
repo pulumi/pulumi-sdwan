@@ -77,6 +77,10 @@ export interface GetServiceLanVpnInterfaceEthernetFeatureAssociateTrackerGroupFe
      * Service Tracker Group Feature ID
      */
     readonly serviceTrackerGroupFeatureId: string;
+    /**
+     * The version of the object
+     */
+    readonly version: number;
 }
 /**
  * This data source can read the Service LAN VPN Interface Ethernet Feature Associate Tracker Group Feature .

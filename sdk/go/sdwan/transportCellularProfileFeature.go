@@ -61,7 +61,7 @@ type TransportCellularProfileFeature struct {
 	pulumi.CustomResourceState
 
 	// Set access point name
-	AccessPointName pulumi.StringOutput `pulumi:"accessPointName"`
+	AccessPointName pulumi.StringPtrOutput `pulumi:"accessPointName"`
 	// Variable name
 	AccessPointNameVariable pulumi.StringPtrOutput `pulumi:"accessPointNameVariable"`
 	// Set authentication type - Choices: `pap`, `chap`, `papChap`
@@ -85,7 +85,7 @@ type TransportCellularProfileFeature struct {
 	// Variable name
 	PacketDataNetworkTypeVariable pulumi.StringPtrOutput `pulumi:"packetDataNetworkTypeVariable"`
 	// Set Profile ID - Range: `1`-`16`
-	ProfileId pulumi.IntOutput `pulumi:"profileId"`
+	ProfileId pulumi.IntPtrOutput `pulumi:"profileId"`
 	// Variable name
 	ProfileIdVariable pulumi.StringPtrOutput `pulumi:"profileIdVariable"`
 	// Set the profile password
@@ -107,14 +107,8 @@ func NewTransportCellularProfileFeature(ctx *pulumi.Context,
 		return nil, errors.New("missing one or more required arguments")
 	}
 
-	if args.AccessPointName == nil {
-		return nil, errors.New("invalid value for required argument 'AccessPointName'")
-	}
 	if args.FeatureProfileId == nil {
 		return nil, errors.New("invalid value for required argument 'FeatureProfileId'")
-	}
-	if args.ProfileId == nil {
-		return nil, errors.New("invalid value for required argument 'ProfileId'")
 	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource TransportCellularProfileFeature
@@ -226,7 +220,7 @@ func (TransportCellularProfileFeatureState) ElementType() reflect.Type {
 
 type transportCellularProfileFeatureArgs struct {
 	// Set access point name
-	AccessPointName string `pulumi:"accessPointName"`
+	AccessPointName *string `pulumi:"accessPointName"`
 	// Variable name
 	AccessPointNameVariable *string `pulumi:"accessPointNameVariable"`
 	// Set authentication type - Choices: `pap`, `chap`, `papChap`
@@ -250,7 +244,7 @@ type transportCellularProfileFeatureArgs struct {
 	// Variable name
 	PacketDataNetworkTypeVariable *string `pulumi:"packetDataNetworkTypeVariable"`
 	// Set Profile ID - Range: `1`-`16`
-	ProfileId int `pulumi:"profileId"`
+	ProfileId *int `pulumi:"profileId"`
 	// Variable name
 	ProfileIdVariable *string `pulumi:"profileIdVariable"`
 	// Set the profile password
@@ -266,7 +260,7 @@ type transportCellularProfileFeatureArgs struct {
 // The set of arguments for constructing a TransportCellularProfileFeature resource.
 type TransportCellularProfileFeatureArgs struct {
 	// Set access point name
-	AccessPointName pulumi.StringInput
+	AccessPointName pulumi.StringPtrInput
 	// Variable name
 	AccessPointNameVariable pulumi.StringPtrInput
 	// Set authentication type - Choices: `pap`, `chap`, `papChap`
@@ -290,7 +284,7 @@ type TransportCellularProfileFeatureArgs struct {
 	// Variable name
 	PacketDataNetworkTypeVariable pulumi.StringPtrInput
 	// Set Profile ID - Range: `1`-`16`
-	ProfileId pulumi.IntInput
+	ProfileId pulumi.IntPtrInput
 	// Variable name
 	ProfileIdVariable pulumi.StringPtrInput
 	// Set the profile password
@@ -391,8 +385,8 @@ func (o TransportCellularProfileFeatureOutput) ToTransportCellularProfileFeature
 }
 
 // Set access point name
-func (o TransportCellularProfileFeatureOutput) AccessPointName() pulumi.StringOutput {
-	return o.ApplyT(func(v *TransportCellularProfileFeature) pulumi.StringOutput { return v.AccessPointName }).(pulumi.StringOutput)
+func (o TransportCellularProfileFeatureOutput) AccessPointName() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *TransportCellularProfileFeature) pulumi.StringPtrOutput { return v.AccessPointName }).(pulumi.StringPtrOutput)
 }
 
 // Variable name
@@ -453,8 +447,8 @@ func (o TransportCellularProfileFeatureOutput) PacketDataNetworkTypeVariable() p
 }
 
 // Set Profile ID - Range: `1`-`16`
-func (o TransportCellularProfileFeatureOutput) ProfileId() pulumi.IntOutput {
-	return o.ApplyT(func(v *TransportCellularProfileFeature) pulumi.IntOutput { return v.ProfileId }).(pulumi.IntOutput)
+func (o TransportCellularProfileFeatureOutput) ProfileId() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *TransportCellularProfileFeature) pulumi.IntPtrOutput { return v.ProfileId }).(pulumi.IntPtrOutput)
 }
 
 // Variable name

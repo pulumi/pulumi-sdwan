@@ -5,6 +5,7 @@ package com.pulumi.sdwan.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import com.pulumi.sdwan.outputs.GetUrlFilteringPolicyDefinitionLogging;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -57,6 +58,7 @@ public final class GetUrlFilteringPolicyDefinitionResult {
      * 
      */
     private String id;
+    private List<GetUrlFilteringPolicyDefinitionLogging> loggings;
     /**
      * @return The policy mode
      * 
@@ -157,6 +159,9 @@ public final class GetUrlFilteringPolicyDefinitionResult {
     public String id() {
         return this.id;
     }
+    public List<GetUrlFilteringPolicyDefinitionLogging> loggings() {
+        return this.loggings;
+    }
     /**
      * @return The policy mode
      * 
@@ -225,6 +230,7 @@ public final class GetUrlFilteringPolicyDefinitionResult {
         private Integer blockUrlListVersion;
         private String description;
         private String id;
+        private List<GetUrlFilteringPolicyDefinitionLogging> loggings;
         private String mode;
         private String name;
         private List<String> targetVpns;
@@ -244,6 +250,7 @@ public final class GetUrlFilteringPolicyDefinitionResult {
     	      this.blockUrlListVersion = defaults.blockUrlListVersion;
     	      this.description = defaults.description;
     	      this.id = defaults.id;
+    	      this.loggings = defaults.loggings;
     	      this.mode = defaults.mode;
     	      this.name = defaults.name;
     	      this.targetVpns = defaults.targetVpns;
@@ -329,6 +336,17 @@ public final class GetUrlFilteringPolicyDefinitionResult {
             return this;
         }
         @CustomType.Setter
+        public Builder loggings(List<GetUrlFilteringPolicyDefinitionLogging> loggings) {
+            if (loggings == null) {
+              throw new MissingRequiredPropertyException("GetUrlFilteringPolicyDefinitionResult", "loggings");
+            }
+            this.loggings = loggings;
+            return this;
+        }
+        public Builder loggings(GetUrlFilteringPolicyDefinitionLogging... loggings) {
+            return loggings(List.of(loggings));
+        }
+        @CustomType.Setter
         public Builder mode(String mode) {
             if (mode == null) {
               throw new MissingRequiredPropertyException("GetUrlFilteringPolicyDefinitionResult", "mode");
@@ -401,6 +419,7 @@ public final class GetUrlFilteringPolicyDefinitionResult {
             _resultValue.blockUrlListVersion = blockUrlListVersion;
             _resultValue.description = description;
             _resultValue.id = id;
+            _resultValue.loggings = loggings;
             _resultValue.mode = mode;
             _resultValue.name = name;
             _resultValue.targetVpns = targetVpns;

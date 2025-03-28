@@ -18,7 +18,7 @@ public final class Ipv4AclPolicyDefinitionSequenceActionEntrySetParameterArgs ex
     public static final Ipv4AclPolicyDefinitionSequenceActionEntrySetParameterArgs Empty = new Ipv4AclPolicyDefinitionSequenceActionEntrySetParameterArgs();
 
     /**
-     * DSCP value
+     * DSCP value, Attribute conditional on `type` being equal to `dscp`
      *   - Range: `0`-`63`
      * 
      */
@@ -26,7 +26,7 @@ public final class Ipv4AclPolicyDefinitionSequenceActionEntrySetParameterArgs ex
     private @Nullable Output<Integer> dscp;
 
     /**
-     * @return DSCP value
+     * @return DSCP value, Attribute conditional on `type` being equal to `dscp`
      *   - Range: `0`-`63`
      * 
      */
@@ -35,14 +35,14 @@ public final class Ipv4AclPolicyDefinitionSequenceActionEntrySetParameterArgs ex
     }
 
     /**
-     * Next hop IP
+     * Next hop IP, Attribute conditional on `type` being equal to `nextHop`
      * 
      */
     @Import(name="nextHop")
     private @Nullable Output<String> nextHop;
 
     /**
-     * @return Next hop IP
+     * @return Next hop IP, Attribute conditional on `type` being equal to `nextHop`
      * 
      */
     public Optional<Output<String>> nextHop() {
@@ -93,7 +93,7 @@ public final class Ipv4AclPolicyDefinitionSequenceActionEntrySetParameterArgs ex
         }
 
         /**
-         * @param dscp DSCP value
+         * @param dscp DSCP value, Attribute conditional on `type` being equal to `dscp`
          *   - Range: `0`-`63`
          * 
          * @return builder
@@ -105,7 +105,7 @@ public final class Ipv4AclPolicyDefinitionSequenceActionEntrySetParameterArgs ex
         }
 
         /**
-         * @param dscp DSCP value
+         * @param dscp DSCP value, Attribute conditional on `type` being equal to `dscp`
          *   - Range: `0`-`63`
          * 
          * @return builder
@@ -116,7 +116,7 @@ public final class Ipv4AclPolicyDefinitionSequenceActionEntrySetParameterArgs ex
         }
 
         /**
-         * @param nextHop Next hop IP
+         * @param nextHop Next hop IP, Attribute conditional on `type` being equal to `nextHop`
          * 
          * @return builder
          * 
@@ -127,7 +127,7 @@ public final class Ipv4AclPolicyDefinitionSequenceActionEntrySetParameterArgs ex
         }
 
         /**
-         * @param nextHop Next hop IP
+         * @param nextHop Next hop IP, Attribute conditional on `type` being equal to `nextHop`
          * 
          * @return builder
          * 

@@ -5,6 +5,7 @@ package com.pulumi.sdwan.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
@@ -30,6 +31,11 @@ public final class GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureResul
      * 
      */
     private String serviceRoutingOspfv3Ipv6FeatureId;
+    /**
+     * @return The version of the object
+     * 
+     */
+    private Integer version;
 
     private GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureResult() {}
     /**
@@ -60,6 +66,13 @@ public final class GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureResul
     public String serviceRoutingOspfv3Ipv6FeatureId() {
         return this.serviceRoutingOspfv3Ipv6FeatureId;
     }
+    /**
+     * @return The version of the object
+     * 
+     */
+    public Integer version() {
+        return this.version;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -74,6 +87,7 @@ public final class GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureResul
         private String id;
         private String serviceLanVpnFeatureId;
         private String serviceRoutingOspfv3Ipv6FeatureId;
+        private Integer version;
         public Builder() {}
         public Builder(GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureResult defaults) {
     	      Objects.requireNonNull(defaults);
@@ -81,6 +95,7 @@ public final class GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureResul
     	      this.id = defaults.id;
     	      this.serviceLanVpnFeatureId = defaults.serviceLanVpnFeatureId;
     	      this.serviceRoutingOspfv3Ipv6FeatureId = defaults.serviceRoutingOspfv3Ipv6FeatureId;
+    	      this.version = defaults.version;
         }
 
         @CustomType.Setter
@@ -115,12 +130,21 @@ public final class GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureResul
             this.serviceRoutingOspfv3Ipv6FeatureId = serviceRoutingOspfv3Ipv6FeatureId;
             return this;
         }
+        @CustomType.Setter
+        public Builder version(Integer version) {
+            if (version == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureResult", "version");
+            }
+            this.version = version;
+            return this;
+        }
         public GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureResult build() {
             final var _resultValue = new GetServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureResult();
             _resultValue.featureProfileId = featureProfileId;
             _resultValue.id = id;
             _resultValue.serviceLanVpnFeatureId = serviceLanVpnFeatureId;
             _resultValue.serviceRoutingOspfv3Ipv6FeatureId = serviceRoutingOspfv3Ipv6FeatureId;
+            _resultValue.version = version;
             return _resultValue;
         }
     }

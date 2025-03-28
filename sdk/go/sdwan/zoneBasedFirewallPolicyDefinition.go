@@ -22,6 +22,7 @@ import (
 type ZoneBasedFirewallPolicyDefinition struct {
 	pulumi.CustomResourceState
 
+	// , Attribute conditional on `mode` being equal to `security`
 	ApplyZonePairs ZoneBasedFirewallPolicyDefinitionApplyZonePairArrayOutput `pulumi:"applyZonePairs"`
 	// Default Action - Choices: `pass`, `drop`
 	DefaultAction pulumi.StringOutput `pulumi:"defaultAction"`
@@ -43,9 +44,6 @@ func NewZoneBasedFirewallPolicyDefinition(ctx *pulumi.Context,
 		return nil, errors.New("missing one or more required arguments")
 	}
 
-	if args.ApplyZonePairs == nil {
-		return nil, errors.New("invalid value for required argument 'ApplyZonePairs'")
-	}
 	if args.DefaultAction == nil {
 		return nil, errors.New("invalid value for required argument 'DefaultAction'")
 	}
@@ -81,6 +79,7 @@ func GetZoneBasedFirewallPolicyDefinition(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering ZoneBasedFirewallPolicyDefinition resources.
 type zoneBasedFirewallPolicyDefinitionState struct {
+	// , Attribute conditional on `mode` being equal to `security`
 	ApplyZonePairs []ZoneBasedFirewallPolicyDefinitionApplyZonePair `pulumi:"applyZonePairs"`
 	// Default Action - Choices: `pass`, `drop`
 	DefaultAction *string `pulumi:"defaultAction"`
@@ -96,6 +95,7 @@ type zoneBasedFirewallPolicyDefinitionState struct {
 }
 
 type ZoneBasedFirewallPolicyDefinitionState struct {
+	// , Attribute conditional on `mode` being equal to `security`
 	ApplyZonePairs ZoneBasedFirewallPolicyDefinitionApplyZonePairArrayInput
 	// Default Action - Choices: `pass`, `drop`
 	DefaultAction pulumi.StringPtrInput
@@ -115,6 +115,7 @@ func (ZoneBasedFirewallPolicyDefinitionState) ElementType() reflect.Type {
 }
 
 type zoneBasedFirewallPolicyDefinitionArgs struct {
+	// , Attribute conditional on `mode` being equal to `security`
 	ApplyZonePairs []ZoneBasedFirewallPolicyDefinitionApplyZonePair `pulumi:"applyZonePairs"`
 	// Default Action - Choices: `pass`, `drop`
 	DefaultAction string `pulumi:"defaultAction"`
@@ -129,6 +130,7 @@ type zoneBasedFirewallPolicyDefinitionArgs struct {
 
 // The set of arguments for constructing a ZoneBasedFirewallPolicyDefinition resource.
 type ZoneBasedFirewallPolicyDefinitionArgs struct {
+	// , Attribute conditional on `mode` being equal to `security`
 	ApplyZonePairs ZoneBasedFirewallPolicyDefinitionApplyZonePairArrayInput
 	// Default Action - Choices: `pass`, `drop`
 	DefaultAction pulumi.StringInput
@@ -228,6 +230,7 @@ func (o ZoneBasedFirewallPolicyDefinitionOutput) ToZoneBasedFirewallPolicyDefini
 	return o
 }
 
+// , Attribute conditional on `mode` being equal to `security`
 func (o ZoneBasedFirewallPolicyDefinitionOutput) ApplyZonePairs() ZoneBasedFirewallPolicyDefinitionApplyZonePairArrayOutput {
 	return o.ApplyT(func(v *ZoneBasedFirewallPolicyDefinition) ZoneBasedFirewallPolicyDefinitionApplyZonePairArrayOutput {
 		return v.ApplyZonePairs

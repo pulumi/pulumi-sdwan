@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class Ipv4DeviceAclPolicyDefinitionSequenceActionEntry
     {
         /// <summary>
-        /// Counter name
+        /// Counter name, Attribute conditional on `type` being equal to `count`
         /// </summary>
         public readonly string? CounterName;
         /// <summary>

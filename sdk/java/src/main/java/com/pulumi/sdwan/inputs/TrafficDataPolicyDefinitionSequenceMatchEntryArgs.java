@@ -18,14 +18,14 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
     public static final TrafficDataPolicyDefinitionSequenceMatchEntryArgs Empty = new TrafficDataPolicyDefinitionSequenceMatchEntryArgs();
 
     /**
-     * Application list ID
+     * Application list ID, Attribute conditional on `type` being equal to `appList`
      * 
      */
     @Import(name="applicationListId")
     private @Nullable Output<String> applicationListId;
 
     /**
-     * @return Application list ID
+     * @return Application list ID, Attribute conditional on `type` being equal to `appList`
      * 
      */
     public Optional<Output<String>> applicationListId() {
@@ -48,14 +48,14 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
     }
 
     /**
-     * Destination Data Prefix list ID
+     * Destination Data Prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
      * 
      */
     @Import(name="destinationDataPrefixListId")
     private @Nullable Output<String> destinationDataPrefixListId;
 
     /**
-     * @return Destination Data Prefix list ID
+     * @return Destination Data Prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
      * 
      */
     public Optional<Output<String>> destinationDataPrefixListId() {
@@ -78,14 +78,14 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
     }
 
     /**
-     * Destination IP
+     * Destination IP, Attribute conditional on `type` being equal to `destinationIp`
      * 
      */
     @Import(name="destinationIp")
     private @Nullable Output<String> destinationIp;
 
     /**
-     * @return Destination IP
+     * @return Destination IP, Attribute conditional on `type` being equal to `destinationIp`
      * 
      */
     public Optional<Output<String>> destinationIp() {
@@ -93,14 +93,14 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
     }
 
     /**
-     * Destination port, 0-65535 (Single value, range or multiple values separated by spaces)
+     * Destination port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `type` being equal to `destinationPort`
      * 
      */
     @Import(name="destinationPort")
     private @Nullable Output<String> destinationPort;
 
     /**
-     * @return Destination port, 0-65535 (Single value, range or multiple values separated by spaces)
+     * @return Destination port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `type` being equal to `destinationPort`
      * 
      */
     public Optional<Output<String>> destinationPort() {
@@ -108,7 +108,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
     }
 
     /**
-     * Destination region
+     * Destination region, Attribute conditional on `type` being equal to `destinationRegion`
      *   - Choices: `primary-region`, `secondary-region`, `other-region`
      * 
      */
@@ -116,7 +116,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
     private @Nullable Output<String> destinationRegion;
 
     /**
-     * @return Destination region
+     * @return Destination region, Attribute conditional on `type` being equal to `destinationRegion`
      *   - Choices: `primary-region`, `secondary-region`, `other-region`
      * 
      */
@@ -125,7 +125,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
     }
 
     /**
-     * DNS request or response
+     * DNS request or response, Attribute conditional on `type` being equal to `dns`
      *   - Choices: `request`, `response`
      * 
      */
@@ -133,7 +133,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
     private @Nullable Output<String> dns;
 
     /**
-     * @return DNS request or response
+     * @return DNS request or response, Attribute conditional on `type` being equal to `dns`
      *   - Choices: `request`, `response`
      * 
      */
@@ -142,14 +142,14 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
     }
 
     /**
-     * DNS Application list ID
+     * DNS Application list ID, Attribute conditional on `type` being equal to `dnsAppList`
      * 
      */
     @Import(name="dnsApplicationListId")
     private @Nullable Output<String> dnsApplicationListId;
 
     /**
-     * @return DNS Application list ID
+     * @return DNS Application list ID, Attribute conditional on `type` being equal to `dnsAppList`
      * 
      */
     public Optional<Output<String>> dnsApplicationListId() {
@@ -172,7 +172,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
     }
 
     /**
-     * DSCP value
+     * DSCP value, Attribute conditional on `type` being equal to `dscp`
      *   - Range: `0`-`63`
      * 
      */
@@ -180,7 +180,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
     private @Nullable Output<Integer> dscp;
 
     /**
-     * @return DSCP value
+     * @return DSCP value, Attribute conditional on `type` being equal to `dscp`
      *   - Range: `0`-`63`
      * 
      */
@@ -189,14 +189,14 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
     }
 
     /**
-     * ICMP Message
+     * ICMP Message, Attribute conditional on `type` being equal to `icmpMessage`
      * 
      */
     @Import(name="icmpMessage")
     private @Nullable Output<String> icmpMessage;
 
     /**
-     * @return ICMP Message
+     * @return ICMP Message, Attribute conditional on `type` being equal to `icmpMessage`
      * 
      */
     public Optional<Output<String>> icmpMessage() {
@@ -204,7 +204,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
     }
 
     /**
-     * Packet length
+     * Packet length, Attribute conditional on `type` being equal to `packetLength`
      *   - Range: `0`-`65535`
      * 
      */
@@ -212,7 +212,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
     private @Nullable Output<Integer> packetLength;
 
     /**
-     * @return Packet length
+     * @return Packet length, Attribute conditional on `type` being equal to `packetLength`
      *   - Range: `0`-`65535`
      * 
      */
@@ -221,7 +221,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
     }
 
     /**
-     * PLP
+     * PLP, Attribute conditional on `type` being equal to `plp`
      *   - Choices: `low`, `high`
      * 
      */
@@ -229,7 +229,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
     private @Nullable Output<String> plp;
 
     /**
-     * @return PLP
+     * @return PLP, Attribute conditional on `type` being equal to `plp`
      *   - Choices: `low`, `high`
      * 
      */
@@ -238,14 +238,14 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
     }
 
     /**
-     * IP Protocol, 0-255 (Single value or multiple values separated by spaces)
+     * IP Protocol, 0-255 (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `protocol`
      * 
      */
     @Import(name="protocol")
     private @Nullable Output<String> protocol;
 
     /**
-     * @return IP Protocol, 0-255 (Single value or multiple values separated by spaces)
+     * @return IP Protocol, 0-255 (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `protocol`
      * 
      */
     public Optional<Output<String>> protocol() {
@@ -253,14 +253,14 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
     }
 
     /**
-     * Source Data Prefix list ID
+     * Source Data Prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
      * 
      */
     @Import(name="sourceDataPrefixListId")
     private @Nullable Output<String> sourceDataPrefixListId;
 
     /**
-     * @return Source Data Prefix list ID
+     * @return Source Data Prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
      * 
      */
     public Optional<Output<String>> sourceDataPrefixListId() {
@@ -283,14 +283,14 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
     }
 
     /**
-     * Source IP
+     * Source IP, Attribute conditional on `type` being equal to `sourceIp`
      * 
      */
     @Import(name="sourceIp")
     private @Nullable Output<String> sourceIp;
 
     /**
-     * @return Source IP
+     * @return Source IP, Attribute conditional on `type` being equal to `sourceIp`
      * 
      */
     public Optional<Output<String>> sourceIp() {
@@ -298,14 +298,14 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
     }
 
     /**
-     * Source port, 0-65535 (Single value, range or multiple values separated by spaces)
+     * Source port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `type` being equal to `sourcePort`
      * 
      */
     @Import(name="sourcePort")
     private @Nullable Output<String> sourcePort;
 
     /**
-     * @return Source port, 0-65535 (Single value, range or multiple values separated by spaces)
+     * @return Source port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `type` being equal to `sourcePort`
      * 
      */
     public Optional<Output<String>> sourcePort() {
@@ -313,7 +313,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
     }
 
     /**
-     * TCP flags
+     * TCP flags, Attribute conditional on `type` being equal to `tcp`
      *   - Choices: `syn`
      * 
      */
@@ -321,7 +321,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
     private @Nullable Output<String> tcp;
 
     /**
-     * @return TCP flags
+     * @return TCP flags, Attribute conditional on `type` being equal to `tcp`
      *   - Choices: `syn`
      * 
      */
@@ -330,7 +330,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
     }
 
     /**
-     * Traffic to
+     * Traffic to, Attribute conditional on `type` being equal to `trafficTo`
      *   - Choices: `access`, `core`, `service`
      * 
      */
@@ -338,7 +338,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
     private @Nullable Output<String> trafficTo;
 
     /**
-     * @return Traffic to
+     * @return Traffic to, Attribute conditional on `type` being equal to `trafficTo`
      *   - Choices: `access`, `core`, `service`
      * 
      */
@@ -409,7 +409,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
         }
 
         /**
-         * @param applicationListId Application list ID
+         * @param applicationListId Application list ID, Attribute conditional on `type` being equal to `appList`
          * 
          * @return builder
          * 
@@ -420,7 +420,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
         }
 
         /**
-         * @param applicationListId Application list ID
+         * @param applicationListId Application list ID, Attribute conditional on `type` being equal to `appList`
          * 
          * @return builder
          * 
@@ -451,7 +451,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
         }
 
         /**
-         * @param destinationDataPrefixListId Destination Data Prefix list ID
+         * @param destinationDataPrefixListId Destination Data Prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
          * 
          * @return builder
          * 
@@ -462,7 +462,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
         }
 
         /**
-         * @param destinationDataPrefixListId Destination Data Prefix list ID
+         * @param destinationDataPrefixListId Destination Data Prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
          * 
          * @return builder
          * 
@@ -493,7 +493,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
         }
 
         /**
-         * @param destinationIp Destination IP
+         * @param destinationIp Destination IP, Attribute conditional on `type` being equal to `destinationIp`
          * 
          * @return builder
          * 
@@ -504,7 +504,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
         }
 
         /**
-         * @param destinationIp Destination IP
+         * @param destinationIp Destination IP, Attribute conditional on `type` being equal to `destinationIp`
          * 
          * @return builder
          * 
@@ -514,7 +514,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
         }
 
         /**
-         * @param destinationPort Destination port, 0-65535 (Single value, range or multiple values separated by spaces)
+         * @param destinationPort Destination port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `type` being equal to `destinationPort`
          * 
          * @return builder
          * 
@@ -525,7 +525,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
         }
 
         /**
-         * @param destinationPort Destination port, 0-65535 (Single value, range or multiple values separated by spaces)
+         * @param destinationPort Destination port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `type` being equal to `destinationPort`
          * 
          * @return builder
          * 
@@ -535,7 +535,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
         }
 
         /**
-         * @param destinationRegion Destination region
+         * @param destinationRegion Destination region, Attribute conditional on `type` being equal to `destinationRegion`
          *   - Choices: `primary-region`, `secondary-region`, `other-region`
          * 
          * @return builder
@@ -547,7 +547,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
         }
 
         /**
-         * @param destinationRegion Destination region
+         * @param destinationRegion Destination region, Attribute conditional on `type` being equal to `destinationRegion`
          *   - Choices: `primary-region`, `secondary-region`, `other-region`
          * 
          * @return builder
@@ -558,7 +558,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
         }
 
         /**
-         * @param dns DNS request or response
+         * @param dns DNS request or response, Attribute conditional on `type` being equal to `dns`
          *   - Choices: `request`, `response`
          * 
          * @return builder
@@ -570,7 +570,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
         }
 
         /**
-         * @param dns DNS request or response
+         * @param dns DNS request or response, Attribute conditional on `type` being equal to `dns`
          *   - Choices: `request`, `response`
          * 
          * @return builder
@@ -581,7 +581,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
         }
 
         /**
-         * @param dnsApplicationListId DNS Application list ID
+         * @param dnsApplicationListId DNS Application list ID, Attribute conditional on `type` being equal to `dnsAppList`
          * 
          * @return builder
          * 
@@ -592,7 +592,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
         }
 
         /**
-         * @param dnsApplicationListId DNS Application list ID
+         * @param dnsApplicationListId DNS Application list ID, Attribute conditional on `type` being equal to `dnsAppList`
          * 
          * @return builder
          * 
@@ -623,7 +623,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
         }
 
         /**
-         * @param dscp DSCP value
+         * @param dscp DSCP value, Attribute conditional on `type` being equal to `dscp`
          *   - Range: `0`-`63`
          * 
          * @return builder
@@ -635,7 +635,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
         }
 
         /**
-         * @param dscp DSCP value
+         * @param dscp DSCP value, Attribute conditional on `type` being equal to `dscp`
          *   - Range: `0`-`63`
          * 
          * @return builder
@@ -646,7 +646,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
         }
 
         /**
-         * @param icmpMessage ICMP Message
+         * @param icmpMessage ICMP Message, Attribute conditional on `type` being equal to `icmpMessage`
          * 
          * @return builder
          * 
@@ -657,7 +657,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
         }
 
         /**
-         * @param icmpMessage ICMP Message
+         * @param icmpMessage ICMP Message, Attribute conditional on `type` being equal to `icmpMessage`
          * 
          * @return builder
          * 
@@ -667,7 +667,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
         }
 
         /**
-         * @param packetLength Packet length
+         * @param packetLength Packet length, Attribute conditional on `type` being equal to `packetLength`
          *   - Range: `0`-`65535`
          * 
          * @return builder
@@ -679,7 +679,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
         }
 
         /**
-         * @param packetLength Packet length
+         * @param packetLength Packet length, Attribute conditional on `type` being equal to `packetLength`
          *   - Range: `0`-`65535`
          * 
          * @return builder
@@ -690,7 +690,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
         }
 
         /**
-         * @param plp PLP
+         * @param plp PLP, Attribute conditional on `type` being equal to `plp`
          *   - Choices: `low`, `high`
          * 
          * @return builder
@@ -702,7 +702,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
         }
 
         /**
-         * @param plp PLP
+         * @param plp PLP, Attribute conditional on `type` being equal to `plp`
          *   - Choices: `low`, `high`
          * 
          * @return builder
@@ -713,7 +713,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
         }
 
         /**
-         * @param protocol IP Protocol, 0-255 (Single value or multiple values separated by spaces)
+         * @param protocol IP Protocol, 0-255 (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `protocol`
          * 
          * @return builder
          * 
@@ -724,7 +724,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
         }
 
         /**
-         * @param protocol IP Protocol, 0-255 (Single value or multiple values separated by spaces)
+         * @param protocol IP Protocol, 0-255 (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `protocol`
          * 
          * @return builder
          * 
@@ -734,7 +734,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
         }
 
         /**
-         * @param sourceDataPrefixListId Source Data Prefix list ID
+         * @param sourceDataPrefixListId Source Data Prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
          * 
          * @return builder
          * 
@@ -745,7 +745,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
         }
 
         /**
-         * @param sourceDataPrefixListId Source Data Prefix list ID
+         * @param sourceDataPrefixListId Source Data Prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
          * 
          * @return builder
          * 
@@ -776,7 +776,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
         }
 
         /**
-         * @param sourceIp Source IP
+         * @param sourceIp Source IP, Attribute conditional on `type` being equal to `sourceIp`
          * 
          * @return builder
          * 
@@ -787,7 +787,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
         }
 
         /**
-         * @param sourceIp Source IP
+         * @param sourceIp Source IP, Attribute conditional on `type` being equal to `sourceIp`
          * 
          * @return builder
          * 
@@ -797,7 +797,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
         }
 
         /**
-         * @param sourcePort Source port, 0-65535 (Single value, range or multiple values separated by spaces)
+         * @param sourcePort Source port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `type` being equal to `sourcePort`
          * 
          * @return builder
          * 
@@ -808,7 +808,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
         }
 
         /**
-         * @param sourcePort Source port, 0-65535 (Single value, range or multiple values separated by spaces)
+         * @param sourcePort Source port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `type` being equal to `sourcePort`
          * 
          * @return builder
          * 
@@ -818,7 +818,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
         }
 
         /**
-         * @param tcp TCP flags
+         * @param tcp TCP flags, Attribute conditional on `type` being equal to `tcp`
          *   - Choices: `syn`
          * 
          * @return builder
@@ -830,7 +830,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
         }
 
         /**
-         * @param tcp TCP flags
+         * @param tcp TCP flags, Attribute conditional on `type` being equal to `tcp`
          *   - Choices: `syn`
          * 
          * @return builder
@@ -841,7 +841,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
         }
 
         /**
-         * @param trafficTo Traffic to
+         * @param trafficTo Traffic to, Attribute conditional on `type` being equal to `trafficTo`
          *   - Choices: `access`, `core`, `service`
          * 
          * @return builder
@@ -853,7 +853,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
         }
 
         /**
-         * @param trafficTo Traffic to
+         * @param trafficTo Traffic to, Attribute conditional on `type` being equal to `trafficTo`
          *   - Choices: `access`, `core`, `service`
          * 
          * @return builder

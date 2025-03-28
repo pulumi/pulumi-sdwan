@@ -75,6 +75,8 @@ type LookupServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureResult st
 	ServiceLanVpnFeatureId string `pulumi:"serviceLanVpnFeatureId"`
 	// Service LAN VPN Interface IPSec Feature ID
 	ServiceLanVpnInterfaceIpsecFeatureId string `pulumi:"serviceLanVpnInterfaceIpsecFeatureId"`
+	// The version of the object
+	Version int `pulumi:"version"`
 }
 
 func LookupServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureOutput(ctx *pulumi.Context, args LookupServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureOutputArgs, opts ...pulumi.InvokeOption) LookupServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureResultOutput {
@@ -148,6 +150,11 @@ func (o LookupServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureResult
 	return o.ApplyT(func(v LookupServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureResult) string {
 		return v.ServiceLanVpnInterfaceIpsecFeatureId
 	}).(pulumi.StringOutput)
+}
+
+// The version of the object
+func (o LookupServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureResultOutput) Version() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeatureResult) int { return v.Version }).(pulumi.IntOutput)
 }
 
 func init() {

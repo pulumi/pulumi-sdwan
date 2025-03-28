@@ -12,33 +12,6 @@ namespace Pulumi.Sdwan
     /// <summary>
     /// This resource can manage a Intrusion Prevention Policy Definition .
     /// 
-    /// ## Example Usage
-    /// 
-    /// ```csharp
-    /// using System.Collections.Generic;
-    /// using System.Linq;
-    /// using Pulumi;
-    /// using Sdwan = Pulumi.Sdwan;
-    /// 
-    /// return await Deployment.RunAsync(() =&gt; 
-    /// {
-    ///     var example = new Sdwan.IntrusionPreventionPolicyDefinition("example", new()
-    ///     {
-    ///         Name = "Example",
-    ///         Description = "My description",
-    ///         Mode = "security",
-    ///         InspectionMode = "protection",
-    ///         LogLevel = "alert",
-    ///         SignatureSet = "connectivity",
-    ///         TargetVpns = new[]
-    ///         {
-    ///             "1",
-    ///         },
-    ///     });
-    /// 
-    /// });
-    /// ```
-    /// 
     /// ## Import
     /// 
     /// ```sh
@@ -48,6 +21,12 @@ namespace Pulumi.Sdwan
     [SdwanResourceType("sdwan:index/intrusionPreventionPolicyDefinition:IntrusionPreventionPolicyDefinition")]
     public partial class IntrusionPreventionPolicyDefinition : global::Pulumi.CustomResource
     {
+        /// <summary>
+        /// Custom signature
+        /// </summary>
+        [Output("customSignature")]
+        public Output<bool?> CustomSignature { get; private set; } = null!;
+
         /// <summary>
         /// The description of the policy definition
         /// </summary>
@@ -77,6 +56,9 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Output("logLevel")]
         public Output<string?> LogLevel { get; private set; } = null!;
+
+        [Output("loggings")]
+        public Output<ImmutableArray<Outputs.IntrusionPreventionPolicyDefinitionLogging>> Loggings { get; private set; } = null!;
 
         /// <summary>
         /// The policy mode - Choices: `security`, `unified`
@@ -155,6 +137,12 @@ namespace Pulumi.Sdwan
     public sealed class IntrusionPreventionPolicyDefinitionArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
+        /// Custom signature
+        /// </summary>
+        [Input("customSignature")]
+        public Input<bool>? CustomSignature { get; set; }
+
+        /// <summary>
         /// The description of the policy definition
         /// </summary>
         [Input("description", required: true)]
@@ -183,6 +171,14 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Input("logLevel")]
         public Input<string>? LogLevel { get; set; }
+
+        [Input("loggings")]
+        private InputList<Inputs.IntrusionPreventionPolicyDefinitionLoggingArgs>? _loggings;
+        public InputList<Inputs.IntrusionPreventionPolicyDefinitionLoggingArgs> Loggings
+        {
+            get => _loggings ?? (_loggings = new InputList<Inputs.IntrusionPreventionPolicyDefinitionLoggingArgs>());
+            set => _loggings = value;
+        }
 
         /// <summary>
         /// The policy mode - Choices: `security`, `unified`
@@ -223,6 +219,12 @@ namespace Pulumi.Sdwan
     public sealed class IntrusionPreventionPolicyDefinitionState : global::Pulumi.ResourceArgs
     {
         /// <summary>
+        /// Custom signature
+        /// </summary>
+        [Input("customSignature")]
+        public Input<bool>? CustomSignature { get; set; }
+
+        /// <summary>
         /// The description of the policy definition
         /// </summary>
         [Input("description")]
@@ -251,6 +253,14 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Input("logLevel")]
         public Input<string>? LogLevel { get; set; }
+
+        [Input("loggings")]
+        private InputList<Inputs.IntrusionPreventionPolicyDefinitionLoggingGetArgs>? _loggings;
+        public InputList<Inputs.IntrusionPreventionPolicyDefinitionLoggingGetArgs> Loggings
+        {
+            get => _loggings ?? (_loggings = new InputList<Inputs.IntrusionPreventionPolicyDefinitionLoggingGetArgs>());
+            set => _loggings = value;
+        }
 
         /// <summary>
         /// The policy mode - Choices: `security`, `unified`

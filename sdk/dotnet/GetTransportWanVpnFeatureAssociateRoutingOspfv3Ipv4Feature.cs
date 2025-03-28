@@ -163,6 +163,10 @@ namespace Pulumi.Sdwan
         /// Transport WAN VPN Feature ID
         /// </summary>
         public readonly string TransportWanVpnFeatureId;
+        /// <summary>
+        /// The version of the object
+        /// </summary>
+        public readonly int Version;
 
         [OutputConstructor]
         private GetTransportWanVpnFeatureAssociateRoutingOspfv3Ipv4FeatureResult(
@@ -172,12 +176,15 @@ namespace Pulumi.Sdwan
 
             string transportRoutingOspfv3Ipv4FeatureId,
 
-            string transportWanVpnFeatureId)
+            string transportWanVpnFeatureId,
+
+            int version)
         {
             FeatureProfileId = featureProfileId;
             Id = id;
             TransportRoutingOspfv3Ipv4FeatureId = transportRoutingOspfv3Ipv4FeatureId;
             TransportWanVpnFeatureId = transportWanVpnFeatureId;
+            Version = version;
         }
     }
 }

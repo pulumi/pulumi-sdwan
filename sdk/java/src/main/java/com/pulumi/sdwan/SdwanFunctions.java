@@ -120,8 +120,10 @@ import com.pulumi.sdwan.inputs.GetDeviceArgs;
 import com.pulumi.sdwan.inputs.GetDevicePlainArgs;
 import com.pulumi.sdwan.inputs.GetDnsSecurityFeatureProfileArgs;
 import com.pulumi.sdwan.inputs.GetDnsSecurityFeatureProfilePlainArgs;
+import com.pulumi.sdwan.inputs.GetDnsSecurityPolicyArgs;
 import com.pulumi.sdwan.inputs.GetDnsSecurityPolicyDefinitionArgs;
 import com.pulumi.sdwan.inputs.GetDnsSecurityPolicyDefinitionPlainArgs;
+import com.pulumi.sdwan.inputs.GetDnsSecurityPolicyPlainArgs;
 import com.pulumi.sdwan.inputs.GetDomainListPolicyObjectArgs;
 import com.pulumi.sdwan.inputs.GetDomainListPolicyObjectPlainArgs;
 import com.pulumi.sdwan.inputs.GetEigrpFeatureTemplateArgs;
@@ -364,6 +366,8 @@ import com.pulumi.sdwan.inputs.GetSystemSecurityFeatureArgs;
 import com.pulumi.sdwan.inputs.GetSystemSecurityFeaturePlainArgs;
 import com.pulumi.sdwan.inputs.GetSystemSnmpFeatureArgs;
 import com.pulumi.sdwan.inputs.GetSystemSnmpFeaturePlainArgs;
+import com.pulumi.sdwan.inputs.GetTagArgs;
+import com.pulumi.sdwan.inputs.GetTagPlainArgs;
 import com.pulumi.sdwan.inputs.GetTlocListPolicyObjectArgs;
 import com.pulumi.sdwan.inputs.GetTlocListPolicyObjectPlainArgs;
 import com.pulumi.sdwan.inputs.GetTlsSslDecryptionPolicyDefinitionArgs;
@@ -526,6 +530,7 @@ import com.pulumi.sdwan.outputs.GetDataIpv6PrefixListPolicyObjectResult;
 import com.pulumi.sdwan.outputs.GetDeviceResult;
 import com.pulumi.sdwan.outputs.GetDnsSecurityFeatureProfileResult;
 import com.pulumi.sdwan.outputs.GetDnsSecurityPolicyDefinitionResult;
+import com.pulumi.sdwan.outputs.GetDnsSecurityPolicyResult;
 import com.pulumi.sdwan.outputs.GetDomainListPolicyObjectResult;
 import com.pulumi.sdwan.outputs.GetEigrpFeatureTemplateResult;
 import com.pulumi.sdwan.outputs.GetEmbeddedSecurityFeatureProfileResult;
@@ -647,6 +652,7 @@ import com.pulumi.sdwan.outputs.GetSystemPerformanceMonitoringFeatureResult;
 import com.pulumi.sdwan.outputs.GetSystemRemoteAccessFeatureResult;
 import com.pulumi.sdwan.outputs.GetSystemSecurityFeatureResult;
 import com.pulumi.sdwan.outputs.GetSystemSnmpFeatureResult;
+import com.pulumi.sdwan.outputs.GetTagResult;
 import com.pulumi.sdwan.outputs.GetTlocListPolicyObjectResult;
 import com.pulumi.sdwan.outputs.GetTlsSslDecryptionPolicyDefinitionResult;
 import com.pulumi.sdwan.outputs.GetTlsSslProfilePolicyDefinitionResult;
@@ -14879,6 +14885,221 @@ public final class SdwanFunctions {
      */
     public static CompletableFuture<GetDnsSecurityFeatureProfileResult> getDnsSecurityFeatureProfilePlain(GetDnsSecurityFeatureProfilePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("sdwan:index/getDnsSecurityFeatureProfile:getDnsSecurityFeatureProfile", TypeShape.of(GetDnsSecurityFeatureProfileResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the DNS Security Policy.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetDnsSecurityPolicyArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getDnsSecurityPolicy(GetDnsSecurityPolicyArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetDnsSecurityPolicyResult> getDnsSecurityPolicy(GetDnsSecurityPolicyArgs args) {
+        return getDnsSecurityPolicy(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the DNS Security Policy.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetDnsSecurityPolicyArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getDnsSecurityPolicy(GetDnsSecurityPolicyArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static CompletableFuture<GetDnsSecurityPolicyResult> getDnsSecurityPolicyPlain(GetDnsSecurityPolicyPlainArgs args) {
+        return getDnsSecurityPolicyPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the DNS Security Policy.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetDnsSecurityPolicyArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getDnsSecurityPolicy(GetDnsSecurityPolicyArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetDnsSecurityPolicyResult> getDnsSecurityPolicy(GetDnsSecurityPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getDnsSecurityPolicy:getDnsSecurityPolicy", TypeShape.of(GetDnsSecurityPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the DNS Security Policy.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetDnsSecurityPolicyArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getDnsSecurityPolicy(GetDnsSecurityPolicyArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetDnsSecurityPolicyResult> getDnsSecurityPolicy(GetDnsSecurityPolicyArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getDnsSecurityPolicy:getDnsSecurityPolicy", TypeShape.of(GetDnsSecurityPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the DNS Security Policy.
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetDnsSecurityPolicyArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getDnsSecurityPolicy(GetDnsSecurityPolicyArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static CompletableFuture<GetDnsSecurityPolicyResult> getDnsSecurityPolicyPlain(GetDnsSecurityPolicyPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getDnsSecurityPolicy:getDnsSecurityPolicy", TypeShape.of(GetDnsSecurityPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source can read the DNS Security Policy Definition .
@@ -41330,6 +41551,216 @@ public final class SdwanFunctions {
      */
     public static CompletableFuture<GetSystemSnmpFeatureResult> getSystemSnmpFeaturePlain(GetSystemSnmpFeaturePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("sdwan:index/getSystemSnmpFeature:getSystemSnmpFeature", TypeShape.of(GetSystemSnmpFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Tag .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTagArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTag(GetTagArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetTagResult> getTag(GetTagArgs args) {
+        return getTag(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Tag .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTagArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTag(GetTagArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static CompletableFuture<GetTagResult> getTagPlain(GetTagPlainArgs args) {
+        return getTagPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Tag .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTagArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTag(GetTagArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetTagResult> getTag(GetTagArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getTag:getTag", TypeShape.of(GetTagResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Tag .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTagArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTag(GetTagArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetTagResult> getTag(GetTagArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getTag:getTag", TypeShape.of(GetTagResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Tag .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetTagArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getTag(GetTagArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static CompletableFuture<GetTagResult> getTagPlain(GetTagPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getTag:getTag", TypeShape.of(GetTagResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source can read the TLOC List Policy Object .

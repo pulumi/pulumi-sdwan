@@ -45,8 +45,10 @@ import (
 //
 // ## Import
 //
+// Expected import identifier with the format: "transport_wan_vpn_feature_associate_routing_bgp_feature_id,feature_profile_id,transport_wan_vpn_feature_id"
+//
 // ```sh
-// $ pulumi import sdwan:index/transportWanVpnFeatureAssociateRoutingBgpFeature:TransportWanVpnFeatureAssociateRoutingBgpFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+// $ pulumi import sdwan:index/transportWanVpnFeatureAssociateRoutingBgpFeature:TransportWanVpnFeatureAssociateRoutingBgpFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037"
 // ```
 type TransportWanVpnFeatureAssociateRoutingBgpFeature struct {
 	pulumi.CustomResourceState
@@ -57,6 +59,8 @@ type TransportWanVpnFeatureAssociateRoutingBgpFeature struct {
 	TransportRoutingBgpFeatureId pulumi.StringOutput `pulumi:"transportRoutingBgpFeatureId"`
 	// Transport WAN VPN Feature ID
 	TransportWanVpnFeatureId pulumi.StringOutput `pulumi:"transportWanVpnFeatureId"`
+	// The version of the object
+	Version pulumi.IntOutput `pulumi:"version"`
 }
 
 // NewTransportWanVpnFeatureAssociateRoutingBgpFeature registers a new resource with the given unique name, arguments, and options.
@@ -104,6 +108,8 @@ type transportWanVpnFeatureAssociateRoutingBgpFeatureState struct {
 	TransportRoutingBgpFeatureId *string `pulumi:"transportRoutingBgpFeatureId"`
 	// Transport WAN VPN Feature ID
 	TransportWanVpnFeatureId *string `pulumi:"transportWanVpnFeatureId"`
+	// The version of the object
+	Version *int `pulumi:"version"`
 }
 
 type TransportWanVpnFeatureAssociateRoutingBgpFeatureState struct {
@@ -113,6 +119,8 @@ type TransportWanVpnFeatureAssociateRoutingBgpFeatureState struct {
 	TransportRoutingBgpFeatureId pulumi.StringPtrInput
 	// Transport WAN VPN Feature ID
 	TransportWanVpnFeatureId pulumi.StringPtrInput
+	// The version of the object
+	Version pulumi.IntPtrInput
 }
 
 func (TransportWanVpnFeatureAssociateRoutingBgpFeatureState) ElementType() reflect.Type {
@@ -244,6 +252,11 @@ func (o TransportWanVpnFeatureAssociateRoutingBgpFeatureOutput) TransportWanVpnF
 	return o.ApplyT(func(v *TransportWanVpnFeatureAssociateRoutingBgpFeature) pulumi.StringOutput {
 		return v.TransportWanVpnFeatureId
 	}).(pulumi.StringOutput)
+}
+
+// The version of the object
+func (o TransportWanVpnFeatureAssociateRoutingBgpFeatureOutput) Version() pulumi.IntOutput {
+	return o.ApplyT(func(v *TransportWanVpnFeatureAssociateRoutingBgpFeature) pulumi.IntOutput { return v.Version }).(pulumi.IntOutput)
 }
 
 type TransportWanVpnFeatureAssociateRoutingBgpFeatureArrayOutput struct{ *pulumi.OutputState }

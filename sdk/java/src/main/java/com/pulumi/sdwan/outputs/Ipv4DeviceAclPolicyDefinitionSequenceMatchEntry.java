@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry {
     /**
-     * @return Destination data IPv4 prefix list ID
+     * @return Destination data IPv4 prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
      * 
      */
     private @Nullable String destinationDataIpv4PrefixListId;
@@ -24,18 +24,18 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry {
      */
     private @Nullable Integer destinationDataIpv4PrefixListVersion;
     /**
-     * @return Destination IP prefix
+     * @return Destination IP prefix, Attribute conditional on `type` being equal to `destinationIp`
      * 
      */
     private @Nullable String destinationIp;
     /**
-     * @return Destination port, only `22` and `161` supported
+     * @return Destination port, only `22` and `161` supported, Attribute conditional on `type` being equal to `destinationPort`
      *   - Range: `0`-`65535`
      * 
      */
     private @Nullable Integer destinationPort;
     /**
-     * @return Source data IPv4 prefix list ID
+     * @return Source data IPv4 prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
      * 
      */
     private @Nullable String sourceDataIpv4PrefixListId;
@@ -45,12 +45,12 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry {
      */
     private @Nullable Integer sourceDataIpv4PrefixListVersion;
     /**
-     * @return Source IP prefix
+     * @return Source IP prefix, Attribute conditional on `type` being equal to `sourceIp`
      * 
      */
     private @Nullable String sourceIp;
     /**
-     * @return Source ports. Single value (0-65535) or ranges separated by spaces.
+     * @return Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
      * 
      */
     private @Nullable String sourcePorts;
@@ -63,7 +63,7 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry {
 
     private Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry() {}
     /**
-     * @return Destination data IPv4 prefix list ID
+     * @return Destination data IPv4 prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
      * 
      */
     public Optional<String> destinationDataIpv4PrefixListId() {
@@ -77,14 +77,14 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.destinationDataIpv4PrefixListVersion);
     }
     /**
-     * @return Destination IP prefix
+     * @return Destination IP prefix, Attribute conditional on `type` being equal to `destinationIp`
      * 
      */
     public Optional<String> destinationIp() {
         return Optional.ofNullable(this.destinationIp);
     }
     /**
-     * @return Destination port, only `22` and `161` supported
+     * @return Destination port, only `22` and `161` supported, Attribute conditional on `type` being equal to `destinationPort`
      *   - Range: `0`-`65535`
      * 
      */
@@ -92,7 +92,7 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.destinationPort);
     }
     /**
-     * @return Source data IPv4 prefix list ID
+     * @return Source data IPv4 prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
      * 
      */
     public Optional<String> sourceDataIpv4PrefixListId() {
@@ -106,14 +106,14 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.sourceDataIpv4PrefixListVersion);
     }
     /**
-     * @return Source IP prefix
+     * @return Source IP prefix, Attribute conditional on `type` being equal to `sourceIp`
      * 
      */
     public Optional<String> sourceIp() {
         return Optional.ofNullable(this.sourceIp);
     }
     /**
-     * @return Source ports. Single value (0-65535) or ranges separated by spaces.
+     * @return Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
      * 
      */
     public Optional<String> sourcePorts() {

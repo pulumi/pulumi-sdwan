@@ -45,8 +45,10 @@ import (
 //
 // ## Import
 //
+// Expected import identifier with the format: "service_lan_vpn_feature_associate_routing_bgp_feature_id,feature_profile_id,service_lan_vpn_feature_id"
+//
 // ```sh
-// $ pulumi import sdwan:index/serviceLanVpnFeatureAssociateRoutingBgpFeature:ServiceLanVpnFeatureAssociateRoutingBgpFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+// $ pulumi import sdwan:index/serviceLanVpnFeatureAssociateRoutingBgpFeature:ServiceLanVpnFeatureAssociateRoutingBgpFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037"
 // ```
 type ServiceLanVpnFeatureAssociateRoutingBgpFeature struct {
 	pulumi.CustomResourceState
@@ -57,6 +59,8 @@ type ServiceLanVpnFeatureAssociateRoutingBgpFeature struct {
 	ServiceLanVpnFeatureId pulumi.StringOutput `pulumi:"serviceLanVpnFeatureId"`
 	// Service Routing BGP Feature ID
 	ServiceRoutingBgpFeatureId pulumi.StringOutput `pulumi:"serviceRoutingBgpFeatureId"`
+	// The version of the object
+	Version pulumi.IntOutput `pulumi:"version"`
 }
 
 // NewServiceLanVpnFeatureAssociateRoutingBgpFeature registers a new resource with the given unique name, arguments, and options.
@@ -104,6 +108,8 @@ type serviceLanVpnFeatureAssociateRoutingBgpFeatureState struct {
 	ServiceLanVpnFeatureId *string `pulumi:"serviceLanVpnFeatureId"`
 	// Service Routing BGP Feature ID
 	ServiceRoutingBgpFeatureId *string `pulumi:"serviceRoutingBgpFeatureId"`
+	// The version of the object
+	Version *int `pulumi:"version"`
 }
 
 type ServiceLanVpnFeatureAssociateRoutingBgpFeatureState struct {
@@ -113,6 +119,8 @@ type ServiceLanVpnFeatureAssociateRoutingBgpFeatureState struct {
 	ServiceLanVpnFeatureId pulumi.StringPtrInput
 	// Service Routing BGP Feature ID
 	ServiceRoutingBgpFeatureId pulumi.StringPtrInput
+	// The version of the object
+	Version pulumi.IntPtrInput
 }
 
 func (ServiceLanVpnFeatureAssociateRoutingBgpFeatureState) ElementType() reflect.Type {
@@ -242,6 +250,11 @@ func (o ServiceLanVpnFeatureAssociateRoutingBgpFeatureOutput) ServiceRoutingBgpF
 	return o.ApplyT(func(v *ServiceLanVpnFeatureAssociateRoutingBgpFeature) pulumi.StringOutput {
 		return v.ServiceRoutingBgpFeatureId
 	}).(pulumi.StringOutput)
+}
+
+// The version of the object
+func (o ServiceLanVpnFeatureAssociateRoutingBgpFeatureOutput) Version() pulumi.IntOutput {
+	return o.ApplyT(func(v *ServiceLanVpnFeatureAssociateRoutingBgpFeature) pulumi.IntOutput { return v.Version }).(pulumi.IntOutput)
 }
 
 type ServiceLanVpnFeatureAssociateRoutingBgpFeatureArrayOutput struct{ *pulumi.OutputState }

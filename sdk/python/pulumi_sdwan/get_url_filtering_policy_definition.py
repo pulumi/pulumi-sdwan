@@ -13,6 +13,7 @@ if sys.version_info >= (3, 11):
 else:
     from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
+from . import outputs
 
 __all__ = [
     'GetUrlFilteringPolicyDefinitionResult',
@@ -26,7 +27,7 @@ class GetUrlFilteringPolicyDefinitionResult:
     """
     A collection of values returned by getUrlFilteringPolicyDefinition.
     """
-    def __init__(__self__, alerts=None, allow_url_list_id=None, allow_url_list_version=None, block_page_action=None, block_page_contents=None, block_url_list_id=None, block_url_list_version=None, description=None, id=None, mode=None, name=None, target_vpns=None, version=None, web_categories=None, web_categories_action=None, web_reputation=None):
+    def __init__(__self__, alerts=None, allow_url_list_id=None, allow_url_list_version=None, block_page_action=None, block_page_contents=None, block_url_list_id=None, block_url_list_version=None, description=None, id=None, loggings=None, mode=None, name=None, target_vpns=None, version=None, web_categories=None, web_categories_action=None, web_reputation=None):
         if alerts and not isinstance(alerts, list):
             raise TypeError("Expected argument 'alerts' to be a list")
         pulumi.set(__self__, "alerts", alerts)
@@ -54,6 +55,9 @@ class GetUrlFilteringPolicyDefinitionResult:
         if id and not isinstance(id, str):
             raise TypeError("Expected argument 'id' to be a str")
         pulumi.set(__self__, "id", id)
+        if loggings and not isinstance(loggings, list):
+            raise TypeError("Expected argument 'loggings' to be a list")
+        pulumi.set(__self__, "loggings", loggings)
         if mode and not isinstance(mode, str):
             raise TypeError("Expected argument 'mode' to be a str")
         pulumi.set(__self__, "mode", mode)
@@ -150,6 +154,11 @@ class GetUrlFilteringPolicyDefinitionResult:
 
     @property
     @pulumi.getter
+    def loggings(self) -> Sequence['outputs.GetUrlFilteringPolicyDefinitionLoggingResult']:
+        return pulumi.get(self, "loggings")
+
+    @property
+    @pulumi.getter
     def mode(self) -> str:
         """
         The policy mode
@@ -220,6 +229,7 @@ class AwaitableGetUrlFilteringPolicyDefinitionResult(GetUrlFilteringPolicyDefini
             block_url_list_version=self.block_url_list_version,
             description=self.description,
             id=self.id,
+            loggings=self.loggings,
             mode=self.mode,
             name=self.name,
             target_vpns=self.target_vpns,
@@ -261,6 +271,7 @@ def get_url_filtering_policy_definition(id: Optional[str] = None,
         block_url_list_version=pulumi.get(__ret__, 'block_url_list_version'),
         description=pulumi.get(__ret__, 'description'),
         id=pulumi.get(__ret__, 'id'),
+        loggings=pulumi.get(__ret__, 'loggings'),
         mode=pulumi.get(__ret__, 'mode'),
         name=pulumi.get(__ret__, 'name'),
         target_vpns=pulumi.get(__ret__, 'target_vpns'),
@@ -299,6 +310,7 @@ def get_url_filtering_policy_definition_output(id: Optional[pulumi.Input[str]] =
         block_url_list_version=pulumi.get(__response__, 'block_url_list_version'),
         description=pulumi.get(__response__, 'description'),
         id=pulumi.get(__response__, 'id'),
+        loggings=pulumi.get(__response__, 'loggings'),
         mode=pulumi.get(__response__, 'mode'),
         name=pulumi.get(__response__, 'name'),
         target_vpns=pulumi.get(__response__, 'target_vpns'),

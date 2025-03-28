@@ -153,6 +153,7 @@ namespace Pulumi.Sdwan
         /// The id of the object
         /// </summary>
         public readonly string Id;
+        public readonly ImmutableArray<Outputs.GetUrlFilteringPolicyDefinitionLoggingResult> Loggings;
         /// <summary>
         /// The policy mode
         /// </summary>
@@ -202,6 +203,8 @@ namespace Pulumi.Sdwan
 
             string id,
 
+            ImmutableArray<Outputs.GetUrlFilteringPolicyDefinitionLoggingResult> loggings,
+
             string mode,
 
             string name,
@@ -225,6 +228,7 @@ namespace Pulumi.Sdwan
             BlockUrlListVersion = blockUrlListVersion;
             Description = description;
             Id = id;
+            Loggings = loggings;
             Mode = mode;
             Name = name;
             TargetVpns = targetVpns;

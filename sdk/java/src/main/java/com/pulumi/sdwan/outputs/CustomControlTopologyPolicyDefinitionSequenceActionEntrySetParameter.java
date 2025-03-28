@@ -15,45 +15,45 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameter {
     /**
-     * @return Community value, e.g. `1000:10000` or `internet` or `local-AS`
+     * @return Community value, e.g. `1000:10000` or `internet` or `local-AS`, Attribute conditional on `type` being equal to `community`
      * 
      */
     private @Nullable String community;
     /**
-     * @return Community additive
+     * @return Community additive, Attribute conditional on `type` being equal to `communityAdditive`
      * 
      */
     private @Nullable Boolean communityAdditive;
     /**
-     * @return OMP tag
+     * @return OMP tag, Attribute conditional on `type` being equal to `ompTag`
      *   - Range: `0`-`4294967295`
      * 
      */
     private @Nullable Integer ompTag;
     /**
-     * @return Preference
+     * @return Preference, Attribute conditional on `type` being equal to `preference`
      *   - Range: `0`-`4294967295`
      * 
      */
     private @Nullable Integer preference;
     /**
-     * @return Service TLOC color
+     * @return Service TLOC color, Attribute conditional on `type` being equal to `service`
      * 
      */
     private @Nullable String serviceTlocColor;
     /**
-     * @return Service TLOC encapsulation
+     * @return Service TLOC encapsulation, Attribute conditional on `type` being equal to `service`
      *   - Choices: `ipsec`, `gre`
      * 
      */
     private @Nullable String serviceTlocEncapsulation;
     /**
-     * @return Service TLOC IP address
+     * @return Service TLOC IP address, Attribute conditional on `type` being equal to `service`
      * 
      */
     private @Nullable String serviceTlocIp;
     /**
-     * @return Service TLOC list ID
+     * @return Service TLOC list ID, Attribute conditional on `type` being equal to `service`
      * 
      */
     private @Nullable String serviceTlocListId;
@@ -63,41 +63,41 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
      */
     private @Nullable Integer serviceTlocListVersion;
     /**
-     * @return Service type
+     * @return Service type, Attribute conditional on `type` being equal to `service`
      *   - Choices: `FW`, `IDP`, `IDS`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `netsvc5`
      * 
      */
     private @Nullable String serviceType;
     /**
-     * @return Service VPN ID
+     * @return Service VPN ID, Attribute conditional on `type` being equal to `service`
      *   - Range: `0`-`65536`
      * 
      */
     private @Nullable Integer serviceVpnId;
     /**
-     * @return TLOC action
+     * @return TLOC action, Attribute conditional on `type` being equal to `tlocAction`
      *   - Choices: `strict`, `primary`, `backup`, `ecmp`
      * 
      */
     private @Nullable String tlocAction;
     /**
-     * @return TLOC color
+     * @return TLOC color, Attribute conditional on `type` being equal to `tloc`
      * 
      */
     private @Nullable String tlocColor;
     /**
-     * @return TLOC encapsulation
+     * @return TLOC encapsulation, Attribute conditional on `type` being equal to `tloc`
      *   - Choices: `ipsec`, `gre`
      * 
      */
     private @Nullable String tlocEncapsulation;
     /**
-     * @return TLOC IP address
+     * @return TLOC IP address, Attribute conditional on `type` being equal to `tloc`
      * 
      */
     private @Nullable String tlocIp;
     /**
-     * @return TLOC list ID
+     * @return TLOC list ID, Attribute conditional on `type` being equal to `tlocList`
      * 
      */
     private @Nullable String tlocListId;
@@ -115,21 +115,21 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
 
     private CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameter() {}
     /**
-     * @return Community value, e.g. `1000:10000` or `internet` or `local-AS`
+     * @return Community value, e.g. `1000:10000` or `internet` or `local-AS`, Attribute conditional on `type` being equal to `community`
      * 
      */
     public Optional<String> community() {
         return Optional.ofNullable(this.community);
     }
     /**
-     * @return Community additive
+     * @return Community additive, Attribute conditional on `type` being equal to `communityAdditive`
      * 
      */
     public Optional<Boolean> communityAdditive() {
         return Optional.ofNullable(this.communityAdditive);
     }
     /**
-     * @return OMP tag
+     * @return OMP tag, Attribute conditional on `type` being equal to `ompTag`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -137,7 +137,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
         return Optional.ofNullable(this.ompTag);
     }
     /**
-     * @return Preference
+     * @return Preference, Attribute conditional on `type` being equal to `preference`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -145,14 +145,14 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
         return Optional.ofNullable(this.preference);
     }
     /**
-     * @return Service TLOC color
+     * @return Service TLOC color, Attribute conditional on `type` being equal to `service`
      * 
      */
     public Optional<String> serviceTlocColor() {
         return Optional.ofNullable(this.serviceTlocColor);
     }
     /**
-     * @return Service TLOC encapsulation
+     * @return Service TLOC encapsulation, Attribute conditional on `type` being equal to `service`
      *   - Choices: `ipsec`, `gre`
      * 
      */
@@ -160,14 +160,14 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
         return Optional.ofNullable(this.serviceTlocEncapsulation);
     }
     /**
-     * @return Service TLOC IP address
+     * @return Service TLOC IP address, Attribute conditional on `type` being equal to `service`
      * 
      */
     public Optional<String> serviceTlocIp() {
         return Optional.ofNullable(this.serviceTlocIp);
     }
     /**
-     * @return Service TLOC list ID
+     * @return Service TLOC list ID, Attribute conditional on `type` being equal to `service`
      * 
      */
     public Optional<String> serviceTlocListId() {
@@ -181,7 +181,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
         return Optional.ofNullable(this.serviceTlocListVersion);
     }
     /**
-     * @return Service type
+     * @return Service type, Attribute conditional on `type` being equal to `service`
      *   - Choices: `FW`, `IDP`, `IDS`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `netsvc5`
      * 
      */
@@ -189,7 +189,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
         return Optional.ofNullable(this.serviceType);
     }
     /**
-     * @return Service VPN ID
+     * @return Service VPN ID, Attribute conditional on `type` being equal to `service`
      *   - Range: `0`-`65536`
      * 
      */
@@ -197,7 +197,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
         return Optional.ofNullable(this.serviceVpnId);
     }
     /**
-     * @return TLOC action
+     * @return TLOC action, Attribute conditional on `type` being equal to `tlocAction`
      *   - Choices: `strict`, `primary`, `backup`, `ecmp`
      * 
      */
@@ -205,14 +205,14 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
         return Optional.ofNullable(this.tlocAction);
     }
     /**
-     * @return TLOC color
+     * @return TLOC color, Attribute conditional on `type` being equal to `tloc`
      * 
      */
     public Optional<String> tlocColor() {
         return Optional.ofNullable(this.tlocColor);
     }
     /**
-     * @return TLOC encapsulation
+     * @return TLOC encapsulation, Attribute conditional on `type` being equal to `tloc`
      *   - Choices: `ipsec`, `gre`
      * 
      */
@@ -220,14 +220,14 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPa
         return Optional.ofNullable(this.tlocEncapsulation);
     }
     /**
-     * @return TLOC IP address
+     * @return TLOC IP address, Attribute conditional on `type` being equal to `tloc`
      * 
      */
     public Optional<String> tlocIp() {
         return Optional.ofNullable(this.tlocIp);
     }
     /**
-     * @return TLOC list ID
+     * @return TLOC list ID, Attribute conditional on `type` being equal to `tlocList`
      * 
      */
     public Optional<String> tlocListId() {

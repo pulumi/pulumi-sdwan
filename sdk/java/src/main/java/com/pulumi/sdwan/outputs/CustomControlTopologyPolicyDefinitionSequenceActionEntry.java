@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CustomControlTopologyPolicyDefinitionSequenceActionEntry {
     /**
-     * @return Export to VPN list ID
+     * @return Export to VPN list ID, Attribute conditional on `type` being equal to `exportTo`
      * 
      */
     private @Nullable String exportToVpnListId;
@@ -26,7 +26,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntry {
      */
     private @Nullable Integer exportToVpnListVersion;
     /**
-     * @return List of set parameters
+     * @return List of set parameters, Attribute conditional on `type` being equal to `set`
      * 
      */
     private @Nullable List<CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameter> setParameters;
@@ -39,7 +39,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntry {
 
     private CustomControlTopologyPolicyDefinitionSequenceActionEntry() {}
     /**
-     * @return Export to VPN list ID
+     * @return Export to VPN list ID, Attribute conditional on `type` being equal to `exportTo`
      * 
      */
     public Optional<String> exportToVpnListId() {
@@ -53,7 +53,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceActionEntry {
         return Optional.ofNullable(this.exportToVpnListVersion);
     }
     /**
-     * @return List of set parameters
+     * @return List of set parameters, Attribute conditional on `type` being equal to `set`
      * 
      */
     public List<CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameter> setParameters() {

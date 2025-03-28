@@ -7,6 +7,7 @@ import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.sdwan.outputs.GetSecurityPolicyDefinition;
 import com.pulumi.sdwan.outputs.GetSecurityPolicyLogging;
+import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -50,6 +51,11 @@ public final class GetSecurityPolicyResult {
      */
     private String highSpeedLoggingServerPort;
     /**
+     * @return High Speed Logging Source Interface
+     * 
+     */
+    private String highSpeedLoggingServerSourceInterface;
+    /**
      * @return High Speed Logging VPN
      * 
      */
@@ -59,12 +65,32 @@ public final class GetSecurityPolicyResult {
      * 
      */
     private String id;
+    /**
+     * @return ICMP Unreachable Allow
+     * 
+     */
+    private Boolean imcpUnreachableAllow;
     private List<GetSecurityPolicyLogging> loggings;
     /**
      * @return Match Statistics per-filter
      * 
      */
     private String matchStatisticsPerFilter;
+    /**
+     * @return Max Incomplete ICMP Limit
+     * 
+     */
+    private Integer maxIncompleteIcmpLimit;
+    /**
+     * @return Max Incomplete TCP Limit
+     * 
+     */
+    private Integer maxIncompleteTcpLimit;
+    /**
+     * @return Max Incomplete UDP Limit
+     * 
+     */
+    private Integer maxIncompleteUdpLimit;
     /**
      * @return The policy mode
      * 
@@ -76,10 +102,20 @@ public final class GetSecurityPolicyResult {
      */
     private String name;
     /**
+     * @return Session Reclassify Allow
+     * 
+     */
+    private Boolean sessionReclassifyAllow;
+    /**
      * @return TCP SYN Flood Limit, value from 1 to 4294967295
      * 
      */
     private String tcpSynFloodLimit;
+    /**
+     * @return Unified Logging
+     * 
+     */
+    private Boolean unifiedLogging;
     /**
      * @return The use case of the security policy
      * 
@@ -142,6 +178,13 @@ public final class GetSecurityPolicyResult {
         return this.highSpeedLoggingServerPort;
     }
     /**
+     * @return High Speed Logging Source Interface
+     * 
+     */
+    public String highSpeedLoggingServerSourceInterface() {
+        return this.highSpeedLoggingServerSourceInterface;
+    }
+    /**
      * @return High Speed Logging VPN
      * 
      */
@@ -155,6 +198,13 @@ public final class GetSecurityPolicyResult {
     public String id() {
         return this.id;
     }
+    /**
+     * @return ICMP Unreachable Allow
+     * 
+     */
+    public Boolean imcpUnreachableAllow() {
+        return this.imcpUnreachableAllow;
+    }
     public List<GetSecurityPolicyLogging> loggings() {
         return this.loggings;
     }
@@ -164,6 +214,27 @@ public final class GetSecurityPolicyResult {
      */
     public String matchStatisticsPerFilter() {
         return this.matchStatisticsPerFilter;
+    }
+    /**
+     * @return Max Incomplete ICMP Limit
+     * 
+     */
+    public Integer maxIncompleteIcmpLimit() {
+        return this.maxIncompleteIcmpLimit;
+    }
+    /**
+     * @return Max Incomplete TCP Limit
+     * 
+     */
+    public Integer maxIncompleteTcpLimit() {
+        return this.maxIncompleteTcpLimit;
+    }
+    /**
+     * @return Max Incomplete UDP Limit
+     * 
+     */
+    public Integer maxIncompleteUdpLimit() {
+        return this.maxIncompleteUdpLimit;
     }
     /**
      * @return The policy mode
@@ -180,11 +251,25 @@ public final class GetSecurityPolicyResult {
         return this.name;
     }
     /**
+     * @return Session Reclassify Allow
+     * 
+     */
+    public Boolean sessionReclassifyAllow() {
+        return this.sessionReclassifyAllow;
+    }
+    /**
      * @return TCP SYN Flood Limit, value from 1 to 4294967295
      * 
      */
     public String tcpSynFloodLimit() {
         return this.tcpSynFloodLimit;
+    }
+    /**
+     * @return Unified Logging
+     * 
+     */
+    public Boolean unifiedLogging() {
+        return this.unifiedLogging;
     }
     /**
      * @return The use case of the security policy
@@ -217,13 +302,20 @@ public final class GetSecurityPolicyResult {
         private String failureMode;
         private String highSpeedLoggingServerIp;
         private String highSpeedLoggingServerPort;
+        private String highSpeedLoggingServerSourceInterface;
         private String highSpeedLoggingVpn;
         private String id;
+        private Boolean imcpUnreachableAllow;
         private List<GetSecurityPolicyLogging> loggings;
         private String matchStatisticsPerFilter;
+        private Integer maxIncompleteIcmpLimit;
+        private Integer maxIncompleteTcpLimit;
+        private Integer maxIncompleteUdpLimit;
         private String mode;
         private String name;
+        private Boolean sessionReclassifyAllow;
         private String tcpSynFloodLimit;
+        private Boolean unifiedLogging;
         private String useCase;
         private Integer version;
         public Builder() {}
@@ -236,13 +328,20 @@ public final class GetSecurityPolicyResult {
     	      this.failureMode = defaults.failureMode;
     	      this.highSpeedLoggingServerIp = defaults.highSpeedLoggingServerIp;
     	      this.highSpeedLoggingServerPort = defaults.highSpeedLoggingServerPort;
+    	      this.highSpeedLoggingServerSourceInterface = defaults.highSpeedLoggingServerSourceInterface;
     	      this.highSpeedLoggingVpn = defaults.highSpeedLoggingVpn;
     	      this.id = defaults.id;
+    	      this.imcpUnreachableAllow = defaults.imcpUnreachableAllow;
     	      this.loggings = defaults.loggings;
     	      this.matchStatisticsPerFilter = defaults.matchStatisticsPerFilter;
+    	      this.maxIncompleteIcmpLimit = defaults.maxIncompleteIcmpLimit;
+    	      this.maxIncompleteTcpLimit = defaults.maxIncompleteTcpLimit;
+    	      this.maxIncompleteUdpLimit = defaults.maxIncompleteUdpLimit;
     	      this.mode = defaults.mode;
     	      this.name = defaults.name;
+    	      this.sessionReclassifyAllow = defaults.sessionReclassifyAllow;
     	      this.tcpSynFloodLimit = defaults.tcpSynFloodLimit;
+    	      this.unifiedLogging = defaults.unifiedLogging;
     	      this.useCase = defaults.useCase;
     	      this.version = defaults.version;
         }
@@ -307,6 +406,14 @@ public final class GetSecurityPolicyResult {
             return this;
         }
         @CustomType.Setter
+        public Builder highSpeedLoggingServerSourceInterface(String highSpeedLoggingServerSourceInterface) {
+            if (highSpeedLoggingServerSourceInterface == null) {
+              throw new MissingRequiredPropertyException("GetSecurityPolicyResult", "highSpeedLoggingServerSourceInterface");
+            }
+            this.highSpeedLoggingServerSourceInterface = highSpeedLoggingServerSourceInterface;
+            return this;
+        }
+        @CustomType.Setter
         public Builder highSpeedLoggingVpn(String highSpeedLoggingVpn) {
             if (highSpeedLoggingVpn == null) {
               throw new MissingRequiredPropertyException("GetSecurityPolicyResult", "highSpeedLoggingVpn");
@@ -320,6 +427,14 @@ public final class GetSecurityPolicyResult {
               throw new MissingRequiredPropertyException("GetSecurityPolicyResult", "id");
             }
             this.id = id;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder imcpUnreachableAllow(Boolean imcpUnreachableAllow) {
+            if (imcpUnreachableAllow == null) {
+              throw new MissingRequiredPropertyException("GetSecurityPolicyResult", "imcpUnreachableAllow");
+            }
+            this.imcpUnreachableAllow = imcpUnreachableAllow;
             return this;
         }
         @CustomType.Setter
@@ -342,6 +457,30 @@ public final class GetSecurityPolicyResult {
             return this;
         }
         @CustomType.Setter
+        public Builder maxIncompleteIcmpLimit(Integer maxIncompleteIcmpLimit) {
+            if (maxIncompleteIcmpLimit == null) {
+              throw new MissingRequiredPropertyException("GetSecurityPolicyResult", "maxIncompleteIcmpLimit");
+            }
+            this.maxIncompleteIcmpLimit = maxIncompleteIcmpLimit;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder maxIncompleteTcpLimit(Integer maxIncompleteTcpLimit) {
+            if (maxIncompleteTcpLimit == null) {
+              throw new MissingRequiredPropertyException("GetSecurityPolicyResult", "maxIncompleteTcpLimit");
+            }
+            this.maxIncompleteTcpLimit = maxIncompleteTcpLimit;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder maxIncompleteUdpLimit(Integer maxIncompleteUdpLimit) {
+            if (maxIncompleteUdpLimit == null) {
+              throw new MissingRequiredPropertyException("GetSecurityPolicyResult", "maxIncompleteUdpLimit");
+            }
+            this.maxIncompleteUdpLimit = maxIncompleteUdpLimit;
+            return this;
+        }
+        @CustomType.Setter
         public Builder mode(String mode) {
             if (mode == null) {
               throw new MissingRequiredPropertyException("GetSecurityPolicyResult", "mode");
@@ -358,11 +497,27 @@ public final class GetSecurityPolicyResult {
             return this;
         }
         @CustomType.Setter
+        public Builder sessionReclassifyAllow(Boolean sessionReclassifyAllow) {
+            if (sessionReclassifyAllow == null) {
+              throw new MissingRequiredPropertyException("GetSecurityPolicyResult", "sessionReclassifyAllow");
+            }
+            this.sessionReclassifyAllow = sessionReclassifyAllow;
+            return this;
+        }
+        @CustomType.Setter
         public Builder tcpSynFloodLimit(String tcpSynFloodLimit) {
             if (tcpSynFloodLimit == null) {
               throw new MissingRequiredPropertyException("GetSecurityPolicyResult", "tcpSynFloodLimit");
             }
             this.tcpSynFloodLimit = tcpSynFloodLimit;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder unifiedLogging(Boolean unifiedLogging) {
+            if (unifiedLogging == null) {
+              throw new MissingRequiredPropertyException("GetSecurityPolicyResult", "unifiedLogging");
+            }
+            this.unifiedLogging = unifiedLogging;
             return this;
         }
         @CustomType.Setter
@@ -390,13 +545,20 @@ public final class GetSecurityPolicyResult {
             _resultValue.failureMode = failureMode;
             _resultValue.highSpeedLoggingServerIp = highSpeedLoggingServerIp;
             _resultValue.highSpeedLoggingServerPort = highSpeedLoggingServerPort;
+            _resultValue.highSpeedLoggingServerSourceInterface = highSpeedLoggingServerSourceInterface;
             _resultValue.highSpeedLoggingVpn = highSpeedLoggingVpn;
             _resultValue.id = id;
+            _resultValue.imcpUnreachableAllow = imcpUnreachableAllow;
             _resultValue.loggings = loggings;
             _resultValue.matchStatisticsPerFilter = matchStatisticsPerFilter;
+            _resultValue.maxIncompleteIcmpLimit = maxIncompleteIcmpLimit;
+            _resultValue.maxIncompleteTcpLimit = maxIncompleteTcpLimit;
+            _resultValue.maxIncompleteUdpLimit = maxIncompleteUdpLimit;
             _resultValue.mode = mode;
             _resultValue.name = name;
+            _resultValue.sessionReclassifyAllow = sessionReclassifyAllow;
             _resultValue.tcpSynFloodLimit = tcpSynFloodLimit;
+            _resultValue.unifiedLogging = unifiedLogging;
             _resultValue.useCase = useCase;
             _resultValue.version = version;
             return _resultValue;

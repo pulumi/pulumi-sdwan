@@ -46,8 +46,10 @@ import (
 //
 // ## Import
 //
+// Expected import identifier with the format: "transport_wan_vpn_interface_ethernet_feature_associate_ipv6_tracker_feature_id,feature_profile_id,transport_wan_vpn_feature_id,transport_wan_vpn_interface_ethernet_feature_id"
+//
 // ```sh
-// $ pulumi import sdwan:index/transportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature:TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+// $ pulumi import sdwan:index/transportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature:TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037,140331f6-5418-4755-a059-13c77eb96037"
 // ```
 type TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature struct {
 	pulumi.CustomResourceState
@@ -60,6 +62,8 @@ type TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature struct {
 	TransportWanVpnFeatureId pulumi.StringOutput `pulumi:"transportWanVpnFeatureId"`
 	// Transport WAN VPN Interface Ethernet Feature ID
 	TransportWanVpnInterfaceEthernetFeatureId pulumi.StringOutput `pulumi:"transportWanVpnInterfaceEthernetFeatureId"`
+	// The version of the object
+	Version pulumi.IntOutput `pulumi:"version"`
 }
 
 // NewTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature registers a new resource with the given unique name, arguments, and options.
@@ -112,6 +116,8 @@ type transportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureState str
 	TransportWanVpnFeatureId *string `pulumi:"transportWanVpnFeatureId"`
 	// Transport WAN VPN Interface Ethernet Feature ID
 	TransportWanVpnInterfaceEthernetFeatureId *string `pulumi:"transportWanVpnInterfaceEthernetFeatureId"`
+	// The version of the object
+	Version *int `pulumi:"version"`
 }
 
 type TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureState struct {
@@ -123,6 +129,8 @@ type TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureState str
 	TransportWanVpnFeatureId pulumi.StringPtrInput
 	// Transport WAN VPN Interface Ethernet Feature ID
 	TransportWanVpnInterfaceEthernetFeatureId pulumi.StringPtrInput
+	// The version of the object
+	Version pulumi.IntPtrInput
 }
 
 func (TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureState) ElementType() reflect.Type {
@@ -265,6 +273,13 @@ func (o TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureOutput
 	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature) pulumi.StringOutput {
 		return v.TransportWanVpnInterfaceEthernetFeatureId
 	}).(pulumi.StringOutput)
+}
+
+// The version of the object
+func (o TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureOutput) Version() pulumi.IntOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeature) pulumi.IntOutput {
+		return v.Version
+	}).(pulumi.IntOutput)
 }
 
 type TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerFeatureArrayOutput struct{ *pulumi.OutputState }

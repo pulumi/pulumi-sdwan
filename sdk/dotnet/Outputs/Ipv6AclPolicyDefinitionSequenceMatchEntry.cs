@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class Ipv6AclPolicyDefinitionSequenceMatchEntry
     {
         /// <summary>
-        /// Class map ID
+        /// Class map ID, Attribute conditional on `type` being equal to `class`
         /// </summary>
         public readonly string? ClassMapId;
         /// <summary>
@@ -22,7 +22,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? ClassMapVersion;
         /// <summary>
-        /// Destination dataIPv6 prefix list ID
+        /// Destination dataIPv6 prefix list ID, Attribute conditional on `type` being equal to `destinationDataIpv6PrefixList`
         /// </summary>
         public readonly string? DestinationDataIpv6PrefixListId;
         /// <summary>
@@ -30,30 +30,30 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? DestinationDataIpv6PrefixListVersion;
         /// <summary>
-        /// Destination IPv6 prefix
+        /// Destination IPv6 prefix, Attribute conditional on `type` being equal to `destinationIpv6`
         /// </summary>
         public readonly string? DestinationIp;
         /// <summary>
-        /// Destination ports. Single value (0-65535) or ranges separated by spaces.
+        /// Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `destinationPort`
         /// </summary>
         public readonly string? DestinationPorts;
         /// <summary>
-        /// Next header
+        /// Next header, Attribute conditional on `type` being equal to `nextHeader`
         ///   - Range: `0`-`255`
         /// </summary>
         public readonly int? NextHeader;
         /// <summary>
-        /// Packet length
+        /// Packet length, Attribute conditional on `type` being equal to `packetLength`
         ///   - Range: `0`-`65535`
         /// </summary>
         public readonly int? PacketLength;
         /// <summary>
-        /// PLP - priority
+        /// PLP - priority, Attribute conditional on `type` being equal to `plp`
         ///   - Choices: `high`, `low`
         /// </summary>
         public readonly string? Priority;
         /// <summary>
-        /// Source data IPv6 prefix list ID
+        /// Source data IPv6 prefix list ID, Attribute conditional on `type` being equal to `sourceDataIpv6PrefixList`
         /// </summary>
         public readonly string? SourceDataIpv6PrefixListId;
         /// <summary>
@@ -61,20 +61,20 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? SourceDataIpv6PrefixListVersion;
         /// <summary>
-        /// Source IPv6 prefix
+        /// Source IPv6 prefix, Attribute conditional on `type` being equal to `sourceIpv6`
         /// </summary>
         public readonly string? SourceIp;
         /// <summary>
-        /// Source ports. Single value (0-65535) or ranges separated by spaces.
+        /// Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
         /// </summary>
         public readonly string? SourcePorts;
         /// <summary>
-        /// TCP parameters
+        /// TCP parameters, Attribute conditional on `type` being equal to `tcp`
         ///   - Choices: `syn`
         /// </summary>
         public readonly string? Tcp;
         /// <summary>
-        /// Traffic class
+        /// Traffic class, Attribute conditional on `type` being equal to `trafficClass`
         ///   - Range: `0`-`63`
         /// </summary>
         public readonly int? TrafficClass;

@@ -5,6 +5,7 @@ package com.pulumi.sdwan.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -75,6 +76,21 @@ public final class TransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupF
         return Optional.ofNullable(this.transportWanVpnInterfaceCellularFeatureId);
     }
 
+    /**
+     * The version of the object
+     * 
+     */
+    @Import(name="version")
+    private @Nullable Output<Integer> version;
+
+    /**
+     * @return The version of the object
+     * 
+     */
+    public Optional<Output<Integer>> version() {
+        return Optional.ofNullable(this.version);
+    }
+
     private TransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeatureState() {}
 
     private TransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeatureState(TransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeatureState $) {
@@ -82,6 +98,7 @@ public final class TransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupF
         this.transportTrackerGroupFeatureId = $.transportTrackerGroupFeatureId;
         this.transportWanVpnFeatureId = $.transportWanVpnFeatureId;
         this.transportWanVpnInterfaceCellularFeatureId = $.transportWanVpnInterfaceCellularFeatureId;
+        this.version = $.version;
     }
 
     public static Builder builder() {
@@ -184,6 +201,27 @@ public final class TransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupF
          */
         public Builder transportWanVpnInterfaceCellularFeatureId(String transportWanVpnInterfaceCellularFeatureId) {
             return transportWanVpnInterfaceCellularFeatureId(Output.of(transportWanVpnInterfaceCellularFeatureId));
+        }
+
+        /**
+         * @param version The version of the object
+         * 
+         * @return builder
+         * 
+         */
+        public Builder version(@Nullable Output<Integer> version) {
+            $.version = version;
+            return this;
+        }
+
+        /**
+         * @param version The version of the object
+         * 
+         * @return builder
+         * 
+         */
+        public Builder version(Integer version) {
+            return version(Output.of(version));
         }
 
         public TransportWanVpnInterfaceCellularFeatureAssociateTrackerGroupFeatureState build() {

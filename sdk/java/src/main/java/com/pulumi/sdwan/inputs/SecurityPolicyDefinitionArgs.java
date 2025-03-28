@@ -18,6 +18,21 @@ public final class SecurityPolicyDefinitionArgs extends com.pulumi.resources.Res
     public static final SecurityPolicyDefinitionArgs Empty = new SecurityPolicyDefinitionArgs();
 
     /**
+     * Destination Zone, Attribute conditional on `type` being equal to `zoneBasedFW`
+     * 
+     */
+    @Import(name="destinationZone")
+    private @Nullable Output<String> destinationZone;
+
+    /**
+     * @return Destination Zone, Attribute conditional on `type` being equal to `zoneBasedFW`
+     * 
+     */
+    public Optional<Output<String>> destinationZone() {
+        return Optional.ofNullable(this.destinationZone);
+    }
+
+    /**
      * Policy definition ID
      * 
      */
@@ -30,6 +45,21 @@ public final class SecurityPolicyDefinitionArgs extends com.pulumi.resources.Res
      */
     public Output<String> id() {
         return this.id;
+    }
+
+    /**
+     * Source Zone, Attribute conditional on `type` being equal to `zoneBasedFW`
+     * 
+     */
+    @Import(name="sourceZone")
+    private @Nullable Output<String> sourceZone;
+
+    /**
+     * @return Source Zone, Attribute conditional on `type` being equal to `zoneBasedFW`
+     * 
+     */
+    public Optional<Output<String>> sourceZone() {
+        return Optional.ofNullable(this.sourceZone);
     }
 
     /**
@@ -67,7 +97,9 @@ public final class SecurityPolicyDefinitionArgs extends com.pulumi.resources.Res
     private SecurityPolicyDefinitionArgs() {}
 
     private SecurityPolicyDefinitionArgs(SecurityPolicyDefinitionArgs $) {
+        this.destinationZone = $.destinationZone;
         this.id = $.id;
+        this.sourceZone = $.sourceZone;
         this.type = $.type;
         this.version = $.version;
     }
@@ -91,6 +123,27 @@ public final class SecurityPolicyDefinitionArgs extends com.pulumi.resources.Res
         }
 
         /**
+         * @param destinationZone Destination Zone, Attribute conditional on `type` being equal to `zoneBasedFW`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder destinationZone(@Nullable Output<String> destinationZone) {
+            $.destinationZone = destinationZone;
+            return this;
+        }
+
+        /**
+         * @param destinationZone Destination Zone, Attribute conditional on `type` being equal to `zoneBasedFW`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder destinationZone(String destinationZone) {
+            return destinationZone(Output.of(destinationZone));
+        }
+
+        /**
          * @param id Policy definition ID
          * 
          * @return builder
@@ -109,6 +162,27 @@ public final class SecurityPolicyDefinitionArgs extends com.pulumi.resources.Res
          */
         public Builder id(String id) {
             return id(Output.of(id));
+        }
+
+        /**
+         * @param sourceZone Source Zone, Attribute conditional on `type` being equal to `zoneBasedFW`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sourceZone(@Nullable Output<String> sourceZone) {
+            $.sourceZone = sourceZone;
+            return this;
+        }
+
+        /**
+         * @param sourceZone Source Zone, Attribute conditional on `type` being equal to `zoneBasedFW`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sourceZone(String sourceZone) {
+            return sourceZone(Output.of(sourceZone));
         }
 
         /**

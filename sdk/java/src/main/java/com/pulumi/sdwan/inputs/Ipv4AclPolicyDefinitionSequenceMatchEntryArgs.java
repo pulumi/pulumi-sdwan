@@ -18,14 +18,14 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
     public static final Ipv4AclPolicyDefinitionSequenceMatchEntryArgs Empty = new Ipv4AclPolicyDefinitionSequenceMatchEntryArgs();
 
     /**
-     * Class map ID
+     * Class map ID, Attribute conditional on `type` being equal to `class`
      * 
      */
     @Import(name="classMapId")
     private @Nullable Output<String> classMapId;
 
     /**
-     * @return Class map ID
+     * @return Class map ID, Attribute conditional on `type` being equal to `class`
      * 
      */
     public Optional<Output<String>> classMapId() {
@@ -48,14 +48,14 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
     }
 
     /**
-     * Destination data IPv4 prefix list ID
+     * Destination data IPv4 prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
      * 
      */
     @Import(name="destinationDataIpv4PrefixListId")
     private @Nullable Output<String> destinationDataIpv4PrefixListId;
 
     /**
-     * @return Destination data IPv4 prefix list ID
+     * @return Destination data IPv4 prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
      * 
      */
     public Optional<Output<String>> destinationDataIpv4PrefixListId() {
@@ -78,14 +78,14 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
     }
 
     /**
-     * Destination IP prefix
+     * Destination IP prefix, Attribute conditional on `type` being equal to `destinationIp`
      * 
      */
     @Import(name="destinationIp")
     private @Nullable Output<String> destinationIp;
 
     /**
-     * @return Destination IP prefix
+     * @return Destination IP prefix, Attribute conditional on `type` being equal to `destinationIp`
      * 
      */
     public Optional<Output<String>> destinationIp() {
@@ -93,14 +93,14 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
     }
 
     /**
-     * Destination ports. Single value (0-65535) or ranges separated by spaces.
+     * Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `destinationPort`
      * 
      */
     @Import(name="destinationPorts")
     private @Nullable Output<String> destinationPorts;
 
     /**
-     * @return Destination ports. Single value (0-65535) or ranges separated by spaces.
+     * @return Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `destinationPort`
      * 
      */
     public Optional<Output<String>> destinationPorts() {
@@ -108,7 +108,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
     }
 
     /**
-     * DSCP value
+     * DSCP value, Attribute conditional on `type` being equal to `dscp`
      *   - Range: `0`-`63`
      * 
      */
@@ -116,7 +116,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
     private @Nullable Output<Integer> dscp;
 
     /**
-     * @return DSCP value
+     * @return DSCP value, Attribute conditional on `type` being equal to `dscp`
      *   - Range: `0`-`63`
      * 
      */
@@ -125,14 +125,14 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
     }
 
     /**
-     * ICMP Message
+     * ICMP Message, Attribute conditional on `type` being equal to `icmpMessage`
      * 
      */
     @Import(name="icmpMessage")
     private @Nullable Output<String> icmpMessage;
 
     /**
-     * @return ICMP Message
+     * @return ICMP Message, Attribute conditional on `type` being equal to `icmpMessage`
      * 
      */
     public Optional<Output<String>> icmpMessage() {
@@ -140,7 +140,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
     }
 
     /**
-     * Packet length
+     * Packet length, Attribute conditional on `type` being equal to `packetLength`
      *   - Range: `0`-`65535`
      * 
      */
@@ -148,7 +148,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
     private @Nullable Output<Integer> packetLength;
 
     /**
-     * @return Packet length
+     * @return Packet length, Attribute conditional on `type` being equal to `packetLength`
      *   - Range: `0`-`65535`
      * 
      */
@@ -157,7 +157,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
     }
 
     /**
-     * PLP - priority
+     * PLP - priority, Attribute conditional on `type` being equal to `plp`
      *   - Choices: `high`, `low`
      * 
      */
@@ -165,7 +165,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
     private @Nullable Output<String> priority;
 
     /**
-     * @return PLP - priority
+     * @return PLP - priority, Attribute conditional on `type` being equal to `plp`
      *   - Choices: `high`, `low`
      * 
      */
@@ -174,14 +174,14 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
     }
 
     /**
-     * Single value (0-255) or multiple values separated by spaces
+     * Single value (0-255) or multiple values separated by spaces, Attribute conditional on `type` being equal to `protocol`
      * 
      */
     @Import(name="protocol")
     private @Nullable Output<String> protocol;
 
     /**
-     * @return Single value (0-255) or multiple values separated by spaces
+     * @return Single value (0-255) or multiple values separated by spaces, Attribute conditional on `type` being equal to `protocol`
      * 
      */
     public Optional<Output<String>> protocol() {
@@ -189,14 +189,14 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
     }
 
     /**
-     * Source data IPv4 prefix list ID
+     * Source data IPv4 prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
      * 
      */
     @Import(name="sourceDataIpv4PrefixListId")
     private @Nullable Output<String> sourceDataIpv4PrefixListId;
 
     /**
-     * @return Source data IPv4 prefix list ID
+     * @return Source data IPv4 prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
      * 
      */
     public Optional<Output<String>> sourceDataIpv4PrefixListId() {
@@ -219,14 +219,14 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
     }
 
     /**
-     * Source IP prefix
+     * Source IP prefix, Attribute conditional on `type` being equal to `sourceIp`
      * 
      */
     @Import(name="sourceIp")
     private @Nullable Output<String> sourceIp;
 
     /**
-     * @return Source IP prefix
+     * @return Source IP prefix, Attribute conditional on `type` being equal to `sourceIp`
      * 
      */
     public Optional<Output<String>> sourceIp() {
@@ -234,14 +234,14 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
     }
 
     /**
-     * Source ports. Single value (0-65535) or ranges separated by spaces.
+     * Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
      * 
      */
     @Import(name="sourcePorts")
     private @Nullable Output<String> sourcePorts;
 
     /**
-     * @return Source ports. Single value (0-65535) or ranges separated by spaces.
+     * @return Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
      * 
      */
     public Optional<Output<String>> sourcePorts() {
@@ -249,7 +249,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
     }
 
     /**
-     * TCP parameters
+     * TCP parameters, Attribute conditional on `type` being equal to `tcp`
      *   - Choices: `syn`
      * 
      */
@@ -257,7 +257,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
     private @Nullable Output<String> tcp;
 
     /**
-     * @return TCP parameters
+     * @return TCP parameters, Attribute conditional on `type` being equal to `tcp`
      *   - Choices: `syn`
      * 
      */
@@ -323,7 +323,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param classMapId Class map ID
+         * @param classMapId Class map ID, Attribute conditional on `type` being equal to `class`
          * 
          * @return builder
          * 
@@ -334,7 +334,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param classMapId Class map ID
+         * @param classMapId Class map ID, Attribute conditional on `type` being equal to `class`
          * 
          * @return builder
          * 
@@ -365,7 +365,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param destinationDataIpv4PrefixListId Destination data IPv4 prefix list ID
+         * @param destinationDataIpv4PrefixListId Destination data IPv4 prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
          * 
          * @return builder
          * 
@@ -376,7 +376,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param destinationDataIpv4PrefixListId Destination data IPv4 prefix list ID
+         * @param destinationDataIpv4PrefixListId Destination data IPv4 prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
          * 
          * @return builder
          * 
@@ -407,7 +407,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param destinationIp Destination IP prefix
+         * @param destinationIp Destination IP prefix, Attribute conditional on `type` being equal to `destinationIp`
          * 
          * @return builder
          * 
@@ -418,7 +418,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param destinationIp Destination IP prefix
+         * @param destinationIp Destination IP prefix, Attribute conditional on `type` being equal to `destinationIp`
          * 
          * @return builder
          * 
@@ -428,7 +428,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param destinationPorts Destination ports. Single value (0-65535) or ranges separated by spaces.
+         * @param destinationPorts Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `destinationPort`
          * 
          * @return builder
          * 
@@ -439,7 +439,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param destinationPorts Destination ports. Single value (0-65535) or ranges separated by spaces.
+         * @param destinationPorts Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `destinationPort`
          * 
          * @return builder
          * 
@@ -449,7 +449,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param dscp DSCP value
+         * @param dscp DSCP value, Attribute conditional on `type` being equal to `dscp`
          *   - Range: `0`-`63`
          * 
          * @return builder
@@ -461,7 +461,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param dscp DSCP value
+         * @param dscp DSCP value, Attribute conditional on `type` being equal to `dscp`
          *   - Range: `0`-`63`
          * 
          * @return builder
@@ -472,7 +472,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param icmpMessage ICMP Message
+         * @param icmpMessage ICMP Message, Attribute conditional on `type` being equal to `icmpMessage`
          * 
          * @return builder
          * 
@@ -483,7 +483,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param icmpMessage ICMP Message
+         * @param icmpMessage ICMP Message, Attribute conditional on `type` being equal to `icmpMessage`
          * 
          * @return builder
          * 
@@ -493,7 +493,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param packetLength Packet length
+         * @param packetLength Packet length, Attribute conditional on `type` being equal to `packetLength`
          *   - Range: `0`-`65535`
          * 
          * @return builder
@@ -505,7 +505,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param packetLength Packet length
+         * @param packetLength Packet length, Attribute conditional on `type` being equal to `packetLength`
          *   - Range: `0`-`65535`
          * 
          * @return builder
@@ -516,7 +516,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param priority PLP - priority
+         * @param priority PLP - priority, Attribute conditional on `type` being equal to `plp`
          *   - Choices: `high`, `low`
          * 
          * @return builder
@@ -528,7 +528,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param priority PLP - priority
+         * @param priority PLP - priority, Attribute conditional on `type` being equal to `plp`
          *   - Choices: `high`, `low`
          * 
          * @return builder
@@ -539,7 +539,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param protocol Single value (0-255) or multiple values separated by spaces
+         * @param protocol Single value (0-255) or multiple values separated by spaces, Attribute conditional on `type` being equal to `protocol`
          * 
          * @return builder
          * 
@@ -550,7 +550,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param protocol Single value (0-255) or multiple values separated by spaces
+         * @param protocol Single value (0-255) or multiple values separated by spaces, Attribute conditional on `type` being equal to `protocol`
          * 
          * @return builder
          * 
@@ -560,7 +560,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param sourceDataIpv4PrefixListId Source data IPv4 prefix list ID
+         * @param sourceDataIpv4PrefixListId Source data IPv4 prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
          * 
          * @return builder
          * 
@@ -571,7 +571,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param sourceDataIpv4PrefixListId Source data IPv4 prefix list ID
+         * @param sourceDataIpv4PrefixListId Source data IPv4 prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
          * 
          * @return builder
          * 
@@ -602,7 +602,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param sourceIp Source IP prefix
+         * @param sourceIp Source IP prefix, Attribute conditional on `type` being equal to `sourceIp`
          * 
          * @return builder
          * 
@@ -613,7 +613,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param sourceIp Source IP prefix
+         * @param sourceIp Source IP prefix, Attribute conditional on `type` being equal to `sourceIp`
          * 
          * @return builder
          * 
@@ -623,7 +623,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param sourcePorts Source ports. Single value (0-65535) or ranges separated by spaces.
+         * @param sourcePorts Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
          * 
          * @return builder
          * 
@@ -634,7 +634,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param sourcePorts Source ports. Single value (0-65535) or ranges separated by spaces.
+         * @param sourcePorts Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
          * 
          * @return builder
          * 
@@ -644,7 +644,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param tcp TCP parameters
+         * @param tcp TCP parameters, Attribute conditional on `type` being equal to `tcp`
          *   - Choices: `syn`
          * 
          * @return builder
@@ -656,7 +656,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param tcp TCP parameters
+         * @param tcp TCP parameters, Attribute conditional on `type` being equal to `tcp`
          *   - Choices: `syn`
          * 
          * @return builder

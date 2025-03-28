@@ -21,6 +21,9 @@ namespace Pulumi.Sdwan
     [SdwanResourceType("sdwan:index/zoneBasedFirewallPolicyDefinition:ZoneBasedFirewallPolicyDefinition")]
     public partial class ZoneBasedFirewallPolicyDefinition : global::Pulumi.CustomResource
     {
+        /// <summary>
+        /// , Attribute conditional on `mode` being equal to `security`
+        /// </summary>
         [Output("applyZonePairs")]
         public Output<ImmutableArray<Outputs.ZoneBasedFirewallPolicyDefinitionApplyZonePair>> ApplyZonePairs { get; private set; } = null!;
 
@@ -103,8 +106,12 @@ namespace Pulumi.Sdwan
 
     public sealed class ZoneBasedFirewallPolicyDefinitionArgs : global::Pulumi.ResourceArgs
     {
-        [Input("applyZonePairs", required: true)]
+        [Input("applyZonePairs")]
         private InputList<Inputs.ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs>? _applyZonePairs;
+
+        /// <summary>
+        /// , Attribute conditional on `mode` being equal to `security`
+        /// </summary>
         public InputList<Inputs.ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs> ApplyZonePairs
         {
             get => _applyZonePairs ?? (_applyZonePairs = new InputList<Inputs.ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs>());
@@ -153,6 +160,10 @@ namespace Pulumi.Sdwan
     {
         [Input("applyZonePairs")]
         private InputList<Inputs.ZoneBasedFirewallPolicyDefinitionApplyZonePairGetArgs>? _applyZonePairs;
+
+        /// <summary>
+        /// , Attribute conditional on `mode` being equal to `security`
+        /// </summary>
         public InputList<Inputs.ZoneBasedFirewallPolicyDefinitionApplyZonePairGetArgs> ApplyZonePairs
         {
             get => _applyZonePairs ?? (_applyZonePairs = new InputList<Inputs.ZoneBasedFirewallPolicyDefinitionApplyZonePairGetArgs>());

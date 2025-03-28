@@ -22,14 +22,14 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
     public static final TrafficDataPolicyDefinitionSequenceActionEntryArgs Empty = new TrafficDataPolicyDefinitionSequenceActionEntryArgs();
 
     /**
-     * Enable cflowd
+     * Enable cflowd, Attribute conditional on `type` being equal to `cflowd`
      * 
      */
     @Import(name="cflowd")
     private @Nullable Output<Boolean> cflowd;
 
     /**
-     * @return Enable cflowd
+     * @return Enable cflowd, Attribute conditional on `type` being equal to `cflowd`
      * 
      */
     public Optional<Output<Boolean>> cflowd() {
@@ -37,14 +37,14 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
     }
 
     /**
-     * Counter name
+     * Counter name, Attribute conditional on `type` being equal to `count`
      * 
      */
     @Import(name="counter")
     private @Nullable Output<String> counter;
 
     /**
-     * @return Counter name
+     * @return Counter name, Attribute conditional on `type` being equal to `count`
      * 
      */
     public Optional<Output<String>> counter() {
@@ -52,14 +52,14 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
     }
 
     /**
-     * Enable DRE optimization
+     * Enable DRE optimization, Attribute conditional on `type` being equal to `dreOptimization`
      * 
      */
     @Import(name="dreOptimization")
     private @Nullable Output<Boolean> dreOptimization;
 
     /**
-     * @return Enable DRE optimization
+     * @return Enable DRE optimization, Attribute conditional on `type` being equal to `dreOptimization`
      * 
      */
     public Optional<Output<Boolean>> dreOptimization() {
@@ -67,14 +67,14 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
     }
 
     /**
-     * Enable fallback to routing
+     * Enable fallback to routing, Attribute conditional on `type` being equal to `fallbackToRouting`
      * 
      */
     @Import(name="fallbackToRouting")
     private @Nullable Output<Boolean> fallbackToRouting;
 
     /**
-     * @return Enable fallback to routing
+     * @return Enable fallback to routing, Attribute conditional on `type` being equal to `fallbackToRouting`
      * 
      */
     public Optional<Output<Boolean>> fallbackToRouting() {
@@ -82,14 +82,14 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
     }
 
     /**
-     * Enable logging
+     * Enable logging, Attribute conditional on `type` being equal to `log`
      * 
      */
     @Import(name="log")
     private @Nullable Output<Boolean> log;
 
     /**
-     * @return Enable logging
+     * @return Enable logging, Attribute conditional on `type` being equal to `log`
      * 
      */
     public Optional<Output<Boolean>> log() {
@@ -97,7 +97,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
     }
 
     /**
-     * Loss correction
+     * Loss correction, Attribute conditional on `type` being equal to `lossProtect`
      *   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
      * 
      */
@@ -105,7 +105,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
     private @Nullable Output<String> lossCorrection;
 
     /**
-     * @return Loss correction
+     * @return Loss correction, Attribute conditional on `type` being equal to `lossProtect`
      *   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
      * 
      */
@@ -114,7 +114,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
     }
 
     /**
-     * Loss correction FEC
+     * Loss correction FEC, Attribute conditional on `type` being equal to `lossProtectFec`
      *   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
      * 
      */
@@ -122,7 +122,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
     private @Nullable Output<String> lossCorrectionFec;
 
     /**
-     * @return Loss correction FEC
+     * @return Loss correction FEC, Attribute conditional on `type` being equal to `lossProtectFec`
      *   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
      * 
      */
@@ -131,14 +131,14 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
     }
 
     /**
-     * Loss correction FEC threshold
+     * Loss correction FEC threshold, Attribute conditional on `type` being equal to `lossProtectFec`
      * 
      */
     @Import(name="lossCorrectionFecThreshold")
     private @Nullable Output<String> lossCorrectionFecThreshold;
 
     /**
-     * @return Loss correction FEC threshold
+     * @return Loss correction FEC threshold, Attribute conditional on `type` being equal to `lossProtectFec`
      * 
      */
     public Optional<Output<String>> lossCorrectionFecThreshold() {
@@ -146,7 +146,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
     }
 
     /**
-     * Loss correction packet duplication
+     * Loss correction packet duplication, Attribute conditional on `type` being equal to `lossProtectPktDup`
      *   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
      * 
      */
@@ -154,7 +154,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
     private @Nullable Output<String> lossCorrectionPacketDuplication;
 
     /**
-     * @return Loss correction packet duplication
+     * @return Loss correction packet duplication, Attribute conditional on `type` being equal to `lossProtectPktDup`
      *   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
      * 
      */
@@ -163,14 +163,14 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
     }
 
     /**
-     * List of NAT parameters
+     * List of NAT parameters, Attribute conditional on `type` being equal to `nat`
      * 
      */
     @Import(name="natParameters")
     private @Nullable Output<List<TrafficDataPolicyDefinitionSequenceActionEntryNatParameterArgs>> natParameters;
 
     /**
-     * @return List of NAT parameters
+     * @return List of NAT parameters, Attribute conditional on `type` being equal to `nat`
      * 
      */
     public Optional<Output<List<TrafficDataPolicyDefinitionSequenceActionEntryNatParameterArgs>>> natParameters() {
@@ -178,7 +178,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
     }
 
     /**
-     * NAT pool
+     * NAT pool, Attribute conditional on `type` being equal to `nat`
      *   - Choices: `pool`
      * 
      */
@@ -186,7 +186,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
     private @Nullable Output<String> natPool;
 
     /**
-     * @return NAT pool
+     * @return NAT pool, Attribute conditional on `type` being equal to `nat`
      *   - Choices: `pool`
      * 
      */
@@ -195,7 +195,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
     }
 
     /**
-     * NAT pool ID
+     * NAT pool ID, Attribute conditional on `type` being equal to `nat`
      *   - Range: `1`-`31`
      * 
      */
@@ -203,7 +203,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
     private @Nullable Output<Integer> natPoolId;
 
     /**
-     * @return NAT pool ID
+     * @return NAT pool ID, Attribute conditional on `type` being equal to `nat`
      *   - Range: `1`-`31`
      * 
      */
@@ -212,7 +212,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
     }
 
     /**
-     * Redirect DNS
+     * Redirect DNS, Attribute conditional on `type` being equal to `redirectDns`
      *   - Choices: `dnsType`, `ipAddress`
      * 
      */
@@ -220,7 +220,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
     private @Nullable Output<String> redirectDns;
 
     /**
-     * @return Redirect DNS
+     * @return Redirect DNS, Attribute conditional on `type` being equal to `redirectDns`
      *   - Choices: `dnsType`, `ipAddress`
      * 
      */
@@ -229,14 +229,14 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
     }
 
     /**
-     * Redirect DNS IP address
+     * Redirect DNS IP address, Attribute conditional on `redirect_dns` being equal to `ipAddress`
      * 
      */
     @Import(name="redirectDnsAddress")
     private @Nullable Output<String> redirectDnsAddress;
 
     /**
-     * @return Redirect DNS IP address
+     * @return Redirect DNS IP address, Attribute conditional on `redirect_dns` being equal to `ipAddress`
      * 
      */
     public Optional<Output<String>> redirectDnsAddress() {
@@ -244,7 +244,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
     }
 
     /**
-     * Redirect DNS type
+     * Redirect DNS type, Attribute conditional on `redirect_dns` being equal to `dnsType`
      *   - Choices: `host`, `umbrella`
      * 
      */
@@ -252,7 +252,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
     private @Nullable Output<String> redirectDnsType;
 
     /**
-     * @return Redirect DNS type
+     * @return Redirect DNS type, Attribute conditional on `redirect_dns` being equal to `dnsType`
      *   - Choices: `host`, `umbrella`
      * 
      */
@@ -261,14 +261,14 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
     }
 
     /**
-     * Enable secure internet gateway
+     * Enable secure internet gateway, Attribute conditional on `type` being equal to `sig`
      * 
      */
     @Import(name="secureInternetGateway")
     private @Nullable Output<Boolean> secureInternetGateway;
 
     /**
-     * @return Enable secure internet gateway
+     * @return Enable secure internet gateway, Attribute conditional on `type` being equal to `sig`
      * 
      */
     public Optional<Output<Boolean>> secureInternetGateway() {
@@ -276,14 +276,14 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
     }
 
     /**
-     * Service node group
+     * Service node group, Attribute conditional on `type` being equal to `serviceNodeGroup`
      * 
      */
     @Import(name="serviceNodeGroup")
     private @Nullable Output<String> serviceNodeGroup;
 
     /**
-     * @return Service node group
+     * @return Service node group, Attribute conditional on `type` being equal to `serviceNodeGroup`
      * 
      */
     public Optional<Output<String>> serviceNodeGroup() {
@@ -291,14 +291,14 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
     }
 
     /**
-     * List of set parameters
+     * List of set parameters, Attribute conditional on `type` being equal to `set`
      * 
      */
     @Import(name="setParameters")
     private @Nullable Output<List<TrafficDataPolicyDefinitionSequenceActionEntrySetParameterArgs>> setParameters;
 
     /**
-     * @return List of set parameters
+     * @return List of set parameters, Attribute conditional on `type` being equal to `set`
      * 
      */
     public Optional<Output<List<TrafficDataPolicyDefinitionSequenceActionEntrySetParameterArgs>>> setParameters() {
@@ -306,14 +306,14 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
     }
 
     /**
-     * Enable TCP optimization
+     * Enable TCP optimization, Attribute conditional on `type` being equal to `tcpOptimization`
      * 
      */
     @Import(name="tcpOptimization")
     private @Nullable Output<Boolean> tcpOptimization;
 
     /**
-     * @return Enable TCP optimization
+     * @return Enable TCP optimization, Attribute conditional on `type` being equal to `tcpOptimization`
      * 
      */
     public Optional<Output<Boolean>> tcpOptimization() {
@@ -381,7 +381,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param cflowd Enable cflowd
+         * @param cflowd Enable cflowd, Attribute conditional on `type` being equal to `cflowd`
          * 
          * @return builder
          * 
@@ -392,7 +392,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param cflowd Enable cflowd
+         * @param cflowd Enable cflowd, Attribute conditional on `type` being equal to `cflowd`
          * 
          * @return builder
          * 
@@ -402,7 +402,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param counter Counter name
+         * @param counter Counter name, Attribute conditional on `type` being equal to `count`
          * 
          * @return builder
          * 
@@ -413,7 +413,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param counter Counter name
+         * @param counter Counter name, Attribute conditional on `type` being equal to `count`
          * 
          * @return builder
          * 
@@ -423,7 +423,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param dreOptimization Enable DRE optimization
+         * @param dreOptimization Enable DRE optimization, Attribute conditional on `type` being equal to `dreOptimization`
          * 
          * @return builder
          * 
@@ -434,7 +434,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param dreOptimization Enable DRE optimization
+         * @param dreOptimization Enable DRE optimization, Attribute conditional on `type` being equal to `dreOptimization`
          * 
          * @return builder
          * 
@@ -444,7 +444,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param fallbackToRouting Enable fallback to routing
+         * @param fallbackToRouting Enable fallback to routing, Attribute conditional on `type` being equal to `fallbackToRouting`
          * 
          * @return builder
          * 
@@ -455,7 +455,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param fallbackToRouting Enable fallback to routing
+         * @param fallbackToRouting Enable fallback to routing, Attribute conditional on `type` being equal to `fallbackToRouting`
          * 
          * @return builder
          * 
@@ -465,7 +465,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param log Enable logging
+         * @param log Enable logging, Attribute conditional on `type` being equal to `log`
          * 
          * @return builder
          * 
@@ -476,7 +476,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param log Enable logging
+         * @param log Enable logging, Attribute conditional on `type` being equal to `log`
          * 
          * @return builder
          * 
@@ -486,7 +486,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param lossCorrection Loss correction
+         * @param lossCorrection Loss correction, Attribute conditional on `type` being equal to `lossProtect`
          *   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
          * 
          * @return builder
@@ -498,7 +498,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param lossCorrection Loss correction
+         * @param lossCorrection Loss correction, Attribute conditional on `type` being equal to `lossProtect`
          *   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
          * 
          * @return builder
@@ -509,7 +509,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param lossCorrectionFec Loss correction FEC
+         * @param lossCorrectionFec Loss correction FEC, Attribute conditional on `type` being equal to `lossProtectFec`
          *   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
          * 
          * @return builder
@@ -521,7 +521,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param lossCorrectionFec Loss correction FEC
+         * @param lossCorrectionFec Loss correction FEC, Attribute conditional on `type` being equal to `lossProtectFec`
          *   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
          * 
          * @return builder
@@ -532,7 +532,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param lossCorrectionFecThreshold Loss correction FEC threshold
+         * @param lossCorrectionFecThreshold Loss correction FEC threshold, Attribute conditional on `type` being equal to `lossProtectFec`
          * 
          * @return builder
          * 
@@ -543,7 +543,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param lossCorrectionFecThreshold Loss correction FEC threshold
+         * @param lossCorrectionFecThreshold Loss correction FEC threshold, Attribute conditional on `type` being equal to `lossProtectFec`
          * 
          * @return builder
          * 
@@ -553,7 +553,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param lossCorrectionPacketDuplication Loss correction packet duplication
+         * @param lossCorrectionPacketDuplication Loss correction packet duplication, Attribute conditional on `type` being equal to `lossProtectPktDup`
          *   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
          * 
          * @return builder
@@ -565,7 +565,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param lossCorrectionPacketDuplication Loss correction packet duplication
+         * @param lossCorrectionPacketDuplication Loss correction packet duplication, Attribute conditional on `type` being equal to `lossProtectPktDup`
          *   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
          * 
          * @return builder
@@ -576,7 +576,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param natParameters List of NAT parameters
+         * @param natParameters List of NAT parameters, Attribute conditional on `type` being equal to `nat`
          * 
          * @return builder
          * 
@@ -587,7 +587,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param natParameters List of NAT parameters
+         * @param natParameters List of NAT parameters, Attribute conditional on `type` being equal to `nat`
          * 
          * @return builder
          * 
@@ -597,7 +597,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param natParameters List of NAT parameters
+         * @param natParameters List of NAT parameters, Attribute conditional on `type` being equal to `nat`
          * 
          * @return builder
          * 
@@ -607,7 +607,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param natPool NAT pool
+         * @param natPool NAT pool, Attribute conditional on `type` being equal to `nat`
          *   - Choices: `pool`
          * 
          * @return builder
@@ -619,7 +619,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param natPool NAT pool
+         * @param natPool NAT pool, Attribute conditional on `type` being equal to `nat`
          *   - Choices: `pool`
          * 
          * @return builder
@@ -630,7 +630,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param natPoolId NAT pool ID
+         * @param natPoolId NAT pool ID, Attribute conditional on `type` being equal to `nat`
          *   - Range: `1`-`31`
          * 
          * @return builder
@@ -642,7 +642,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param natPoolId NAT pool ID
+         * @param natPoolId NAT pool ID, Attribute conditional on `type` being equal to `nat`
          *   - Range: `1`-`31`
          * 
          * @return builder
@@ -653,7 +653,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param redirectDns Redirect DNS
+         * @param redirectDns Redirect DNS, Attribute conditional on `type` being equal to `redirectDns`
          *   - Choices: `dnsType`, `ipAddress`
          * 
          * @return builder
@@ -665,7 +665,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param redirectDns Redirect DNS
+         * @param redirectDns Redirect DNS, Attribute conditional on `type` being equal to `redirectDns`
          *   - Choices: `dnsType`, `ipAddress`
          * 
          * @return builder
@@ -676,7 +676,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param redirectDnsAddress Redirect DNS IP address
+         * @param redirectDnsAddress Redirect DNS IP address, Attribute conditional on `redirect_dns` being equal to `ipAddress`
          * 
          * @return builder
          * 
@@ -687,7 +687,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param redirectDnsAddress Redirect DNS IP address
+         * @param redirectDnsAddress Redirect DNS IP address, Attribute conditional on `redirect_dns` being equal to `ipAddress`
          * 
          * @return builder
          * 
@@ -697,7 +697,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param redirectDnsType Redirect DNS type
+         * @param redirectDnsType Redirect DNS type, Attribute conditional on `redirect_dns` being equal to `dnsType`
          *   - Choices: `host`, `umbrella`
          * 
          * @return builder
@@ -709,7 +709,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param redirectDnsType Redirect DNS type
+         * @param redirectDnsType Redirect DNS type, Attribute conditional on `redirect_dns` being equal to `dnsType`
          *   - Choices: `host`, `umbrella`
          * 
          * @return builder
@@ -720,7 +720,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param secureInternetGateway Enable secure internet gateway
+         * @param secureInternetGateway Enable secure internet gateway, Attribute conditional on `type` being equal to `sig`
          * 
          * @return builder
          * 
@@ -731,7 +731,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param secureInternetGateway Enable secure internet gateway
+         * @param secureInternetGateway Enable secure internet gateway, Attribute conditional on `type` being equal to `sig`
          * 
          * @return builder
          * 
@@ -741,7 +741,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param serviceNodeGroup Service node group
+         * @param serviceNodeGroup Service node group, Attribute conditional on `type` being equal to `serviceNodeGroup`
          * 
          * @return builder
          * 
@@ -752,7 +752,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param serviceNodeGroup Service node group
+         * @param serviceNodeGroup Service node group, Attribute conditional on `type` being equal to `serviceNodeGroup`
          * 
          * @return builder
          * 
@@ -762,7 +762,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param setParameters List of set parameters
+         * @param setParameters List of set parameters, Attribute conditional on `type` being equal to `set`
          * 
          * @return builder
          * 
@@ -773,7 +773,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param setParameters List of set parameters
+         * @param setParameters List of set parameters, Attribute conditional on `type` being equal to `set`
          * 
          * @return builder
          * 
@@ -783,7 +783,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param setParameters List of set parameters
+         * @param setParameters List of set parameters, Attribute conditional on `type` being equal to `set`
          * 
          * @return builder
          * 
@@ -793,7 +793,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param tcpOptimization Enable TCP optimization
+         * @param tcpOptimization Enable TCP optimization, Attribute conditional on `type` being equal to `tcpOptimization`
          * 
          * @return builder
          * 
@@ -804,7 +804,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param tcpOptimization Enable TCP optimization
+         * @param tcpOptimization Enable TCP optimization, Attribute conditional on `type` being equal to `tcpOptimization`
          * 
          * @return builder
          * 

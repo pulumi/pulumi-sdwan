@@ -90,13 +90,15 @@ class _TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureSt
                  feature_profile_id: Optional[pulumi.Input[str]] = None,
                  transport_ipv6_tracker_group_feature_id: Optional[pulumi.Input[str]] = None,
                  transport_wan_vpn_feature_id: Optional[pulumi.Input[str]] = None,
-                 transport_wan_vpn_interface_ethernet_feature_id: Optional[pulumi.Input[str]] = None):
+                 transport_wan_vpn_interface_ethernet_feature_id: Optional[pulumi.Input[str]] = None,
+                 version: Optional[pulumi.Input[int]] = None):
         """
         Input properties used for looking up and filtering TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature resources.
         :param pulumi.Input[str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[str] transport_ipv6_tracker_group_feature_id: Transport IPv6 Tracker Group Feature ID
         :param pulumi.Input[str] transport_wan_vpn_feature_id: Transport WAN VPN Feature ID
         :param pulumi.Input[str] transport_wan_vpn_interface_ethernet_feature_id: Transport WAN VPN Interface Ethernet Feature ID
+        :param pulumi.Input[int] version: The version of the object
         """
         if feature_profile_id is not None:
             pulumi.set(__self__, "feature_profile_id", feature_profile_id)
@@ -106,6 +108,8 @@ class _TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureSt
             pulumi.set(__self__, "transport_wan_vpn_feature_id", transport_wan_vpn_feature_id)
         if transport_wan_vpn_interface_ethernet_feature_id is not None:
             pulumi.set(__self__, "transport_wan_vpn_interface_ethernet_feature_id", transport_wan_vpn_interface_ethernet_feature_id)
+        if version is not None:
+            pulumi.set(__self__, "version", version)
 
     @property
     @pulumi.getter(name="featureProfileId")
@@ -155,6 +159,18 @@ class _TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeatureSt
     def transport_wan_vpn_interface_ethernet_feature_id(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "transport_wan_vpn_interface_ethernet_feature_id", value)
 
+    @property
+    @pulumi.getter
+    def version(self) -> Optional[pulumi.Input[int]]:
+        """
+        The version of the object
+        """
+        return pulumi.get(self, "version")
+
+    @version.setter
+    def version(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "version", value)
+
 
 class TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature(pulumi.CustomResource):
     @overload
@@ -185,8 +201,10 @@ class TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature(pu
 
         ## Import
 
+        Expected import identifier with the format: "transport_wan_vpn_interface_ethernet_feature_associate_ipv6_tracker_group_feature_id,feature_profile_id,transport_wan_vpn_feature_id,transport_wan_vpn_interface_ethernet_feature_id"
+
         ```sh
-        $ pulumi import sdwan:index/transportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature:TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+        $ pulumi import sdwan:index/transportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature:TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037,140331f6-5418-4755-a059-13c77eb96037"
         ```
 
         :param str resource_name: The name of the resource.
@@ -221,8 +239,10 @@ class TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature(pu
 
         ## Import
 
+        Expected import identifier with the format: "transport_wan_vpn_interface_ethernet_feature_associate_ipv6_tracker_group_feature_id,feature_profile_id,transport_wan_vpn_feature_id,transport_wan_vpn_interface_ethernet_feature_id"
+
         ```sh
-        $ pulumi import sdwan:index/transportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature:TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd"
+        $ pulumi import sdwan:index/transportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature:TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature example "f6b2c44c-693c-4763-b010-895aa3d236bd,f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac,140331f6-5418-4755-a059-13c77eb96037,140331f6-5418-4755-a059-13c77eb96037"
         ```
 
         :param str resource_name: The name of the resource.
@@ -265,6 +285,7 @@ class TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature(pu
             if transport_wan_vpn_interface_ethernet_feature_id is None and not opts.urn:
                 raise TypeError("Missing required property 'transport_wan_vpn_interface_ethernet_feature_id'")
             __props__.__dict__["transport_wan_vpn_interface_ethernet_feature_id"] = transport_wan_vpn_interface_ethernet_feature_id
+            __props__.__dict__["version"] = None
         super(TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature, __self__).__init__(
             'sdwan:index/transportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature:TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature',
             resource_name,
@@ -278,7 +299,8 @@ class TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature(pu
             feature_profile_id: Optional[pulumi.Input[str]] = None,
             transport_ipv6_tracker_group_feature_id: Optional[pulumi.Input[str]] = None,
             transport_wan_vpn_feature_id: Optional[pulumi.Input[str]] = None,
-            transport_wan_vpn_interface_ethernet_feature_id: Optional[pulumi.Input[str]] = None) -> 'TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature':
+            transport_wan_vpn_interface_ethernet_feature_id: Optional[pulumi.Input[str]] = None,
+            version: Optional[pulumi.Input[int]] = None) -> 'TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature':
         """
         Get an existing TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -290,6 +312,7 @@ class TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature(pu
         :param pulumi.Input[str] transport_ipv6_tracker_group_feature_id: Transport IPv6 Tracker Group Feature ID
         :param pulumi.Input[str] transport_wan_vpn_feature_id: Transport WAN VPN Feature ID
         :param pulumi.Input[str] transport_wan_vpn_interface_ethernet_feature_id: Transport WAN VPN Interface Ethernet Feature ID
+        :param pulumi.Input[int] version: The version of the object
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -299,6 +322,7 @@ class TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature(pu
         __props__.__dict__["transport_ipv6_tracker_group_feature_id"] = transport_ipv6_tracker_group_feature_id
         __props__.__dict__["transport_wan_vpn_feature_id"] = transport_wan_vpn_feature_id
         __props__.__dict__["transport_wan_vpn_interface_ethernet_feature_id"] = transport_wan_vpn_interface_ethernet_feature_id
+        __props__.__dict__["version"] = version
         return TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature(resource_name, opts=opts, __props__=__props__)
 
     @property
@@ -332,4 +356,12 @@ class TransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerGroupFeature(pu
         Transport WAN VPN Interface Ethernet Feature ID
         """
         return pulumi.get(self, "transport_wan_vpn_interface_ethernet_feature_id")
+
+    @property
+    @pulumi.getter
+    def version(self) -> pulumi.Output[int]:
+        """
+        The version of the object
+        """
+        return pulumi.get(self, "version")
 

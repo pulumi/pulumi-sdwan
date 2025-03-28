@@ -14,23 +14,23 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntry
     {
         /// <summary>
-        /// Backup SLA preferred color (Single value or multiple values separated by spaces)
+        /// Backup SLA preferred color (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `backupSlaPreferredColor`
         /// </summary>
         public readonly string? BackupSlaPreferredColor;
         /// <summary>
-        /// Cloud SLA
+        /// Cloud SLA, Attribute conditional on `type` being equal to `cloudSaas`
         /// </summary>
         public readonly bool? CloudSla;
         /// <summary>
-        /// Counter name
+        /// Counter name, Attribute conditional on `type` being equal to `count`
         /// </summary>
         public readonly string? Counter;
         /// <summary>
-        /// Enable logging
+        /// Enable logging, Attribute conditional on `type` being equal to `log`
         /// </summary>
         public readonly bool? Log;
         /// <summary>
-        /// List of SLA class parameters
+        /// List of SLA class parameters, Attribute conditional on `type` being equal to `slaClass`
         /// </summary>
         public readonly ImmutableArray<Outputs.ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameter> SlaClassParameters;
         /// <summary>

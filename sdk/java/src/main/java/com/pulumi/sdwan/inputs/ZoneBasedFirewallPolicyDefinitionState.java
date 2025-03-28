@@ -19,9 +19,17 @@ public final class ZoneBasedFirewallPolicyDefinitionState extends com.pulumi.res
 
     public static final ZoneBasedFirewallPolicyDefinitionState Empty = new ZoneBasedFirewallPolicyDefinitionState();
 
+    /**
+     * , Attribute conditional on `mode` being equal to `security`
+     * 
+     */
     @Import(name="applyZonePairs")
     private @Nullable Output<List<ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs>> applyZonePairs;
 
+    /**
+     * @return , Attribute conditional on `mode` being equal to `security`
+     * 
+     */
     public Optional<Output<List<ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs>>> applyZonePairs() {
         return Optional.ofNullable(this.applyZonePairs);
     }
@@ -138,15 +146,33 @@ public final class ZoneBasedFirewallPolicyDefinitionState extends com.pulumi.res
             $ = new ZoneBasedFirewallPolicyDefinitionState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applyZonePairs , Attribute conditional on `mode` being equal to `security`
+         * 
+         * @return builder
+         * 
+         */
         public Builder applyZonePairs(@Nullable Output<List<ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs>> applyZonePairs) {
             $.applyZonePairs = applyZonePairs;
             return this;
         }
 
+        /**
+         * @param applyZonePairs , Attribute conditional on `mode` being equal to `security`
+         * 
+         * @return builder
+         * 
+         */
         public Builder applyZonePairs(List<ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs> applyZonePairs) {
             return applyZonePairs(Output.of(applyZonePairs));
         }
 
+        /**
+         * @param applyZonePairs , Attribute conditional on `mode` being equal to `security`
+         * 
+         * @return builder
+         * 
+         */
         public Builder applyZonePairs(ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs... applyZonePairs) {
             return applyZonePairs(List.of(applyZonePairs));
         }

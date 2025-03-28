@@ -77,6 +77,10 @@ export interface GetTransportWanVpnInterfaceEthernetFeatureAssociateIpv6TrackerG
      * Transport WAN VPN Interface Ethernet Feature ID
      */
     readonly transportWanVpnInterfaceEthernetFeatureId: string;
+    /**
+     * The version of the object
+     */
+    readonly version: number;
 }
 /**
  * This data source can read the Transport WAN VPN Interface Ethernet Feature Associate IPv6 Tracker Group Feature .

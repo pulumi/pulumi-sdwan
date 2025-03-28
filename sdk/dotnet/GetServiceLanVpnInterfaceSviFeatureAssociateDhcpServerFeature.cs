@@ -182,6 +182,10 @@ namespace Pulumi.Sdwan
         /// Service LAN VPN Interface SVI Feature ID
         /// </summary>
         public readonly string ServiceLanVpnInterfaceSviFeatureId;
+        /// <summary>
+        /// The version of the object
+        /// </summary>
+        public readonly int Version;
 
         [OutputConstructor]
         private GetServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeatureResult(
@@ -193,13 +197,16 @@ namespace Pulumi.Sdwan
 
             string serviceLanVpnFeatureId,
 
-            string serviceLanVpnInterfaceSviFeatureId)
+            string serviceLanVpnInterfaceSviFeatureId,
+
+            int version)
         {
             FeatureProfileId = featureProfileId;
             Id = id;
             ServiceDhcpServerFeatureId = serviceDhcpServerFeatureId;
             ServiceLanVpnFeatureId = serviceLanVpnFeatureId;
             ServiceLanVpnInterfaceSviFeatureId = serviceLanVpnInterfaceSviFeatureId;
+            Version = version;
         }
     }
 }

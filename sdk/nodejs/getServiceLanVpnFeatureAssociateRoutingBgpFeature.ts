@@ -67,6 +67,10 @@ export interface GetServiceLanVpnFeatureAssociateRoutingBgpFeatureResult {
      * Service Routing BGP Feature ID
      */
     readonly serviceRoutingBgpFeatureId: string;
+    /**
+     * The version of the object
+     */
+    readonly version: number;
 }
 /**
  * This data source can read the Service LAN VPN Feature Associate Routing BGP Feature .
