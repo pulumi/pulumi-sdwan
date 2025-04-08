@@ -24,46 +24,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.sdwan.SystemIpv4DeviceAccessFeature;
- * import com.pulumi.sdwan.SystemIpv4DeviceAccessFeatureArgs;
- * import com.pulumi.sdwan.inputs.SystemIpv4DeviceAccessFeatureSequenceArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new SystemIpv4DeviceAccessFeature("example", SystemIpv4DeviceAccessFeatureArgs.builder()
- *             .name("Example")
- *             .description("My Example")
- *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
- *             .defaultAction("drop")
- *             .sequences(SystemIpv4DeviceAccessFeatureSequenceArgs.builder()
- *                 .id(1)
- *                 .name("SEQ_1")
- *                 .base_action("accept")
- *                 .device_access_port(161)
- *                 .build())
- *             .build());
- * 
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

@@ -25,59 +25,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.sdwan.CiscoDhcpServerFeatureTemplate;
- * import com.pulumi.sdwan.CiscoDhcpServerFeatureTemplateArgs;
- * import com.pulumi.sdwan.inputs.CiscoDhcpServerFeatureTemplateStaticLeaseArgs;
- * import com.pulumi.sdwan.inputs.CiscoDhcpServerFeatureTemplateOptionArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new CiscoDhcpServerFeatureTemplate("example", CiscoDhcpServerFeatureTemplateArgs.builder()
- *             .name("Example")
- *             .description("My Example")
- *             .deviceTypes("vedge-C8000V")
- *             .addressPool("10.1.1.0/24")
- *             .excludeAddresses(            
- *                 "10.1.1.1-10.1.1.5",
- *                 "10.1.1.254")
- *             .leaseTime(600)
- *             .interfaceMtu(1500)
- *             .domainName("cisco.com")
- *             .defaultGateway("10.1.1.254")
- *             .dnsServers("1.2.3.4")
- *             .tftpServers("1.2.3.4")
- *             .staticLeases(CiscoDhcpServerFeatureTemplateStaticLeaseArgs.builder()
- *                 .mac_address("11:11:11:11:11:11")
- *                 .ip_address("10.1.1.10")
- *                 .hostname("HOST1")
- *                 .build())
- *             .options(CiscoDhcpServerFeatureTemplateOptionArgs.builder()
- *                 .option_code(10)
- *                 .ascii("abc")
- *                 .build())
- *             .build());
- * 
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

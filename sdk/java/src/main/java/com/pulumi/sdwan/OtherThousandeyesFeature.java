@@ -24,51 +24,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.sdwan.OtherThousandeyesFeature;
- * import com.pulumi.sdwan.OtherThousandeyesFeatureArgs;
- * import com.pulumi.sdwan.inputs.OtherThousandeyesFeatureVirtualApplicationArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new OtherThousandeyesFeature("example", OtherThousandeyesFeatureArgs.builder()
- *             .name("Example")
- *             .description("My Example")
- *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
- *             .virtualApplications(OtherThousandeyesFeatureVirtualApplicationArgs.builder()
- *                 .account_group_token("qwer")
- *                 .vpn(1)
- *                 .management_ip("10.0.0.2")
- *                 .management_subnet_mask("255.255.255.0")
- *                 .agent_default_gateway("10.0.0.1")
- *                 .name_server_ip("77.77.77.71")
- *                 .hostname("thousandeyesHost")
- *                 .proxy_type("static")
- *                 .proxy_host("proxy.thousandeyes.com")
- *                 .proxy_port(3128)
- *                 .build())
- *             .build());
- * 
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

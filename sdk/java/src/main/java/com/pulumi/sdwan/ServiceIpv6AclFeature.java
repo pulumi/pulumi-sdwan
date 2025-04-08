@@ -24,51 +24,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.sdwan.ServiceIpv6AclFeature;
- * import com.pulumi.sdwan.ServiceIpv6AclFeatureArgs;
- * import com.pulumi.sdwan.inputs.ServiceIpv6AclFeatureSequenceArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new ServiceIpv6AclFeature("example", ServiceIpv6AclFeatureArgs.builder()
- *             .name("Example")
- *             .description("My Example")
- *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
- *             .defaultAction("drop")
- *             .sequences(ServiceIpv6AclFeatureSequenceArgs.builder()
- *                 .sequence_id(1)
- *                 .sequence_name("AccessControlList1")
- *                 .match_entries(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
- *                 .actions(ServiceIpv6AclFeatureSequenceActionArgs.builder()
- *                     .acceptCounterName("COUNTER_1")
- *                     .acceptLog(false)
- *                     .acceptSetNextHop("2001:0db8:85a3:0000:0000:8a2e:0370:7334")
- *                     .acceptTrafficClass(10)
- *                     .build())
- *                 .build())
- *             .build());
- * 
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import
