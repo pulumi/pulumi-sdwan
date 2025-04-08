@@ -25,57 +25,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.sdwan.ServiceDhcpServerFeature;
- * import com.pulumi.sdwan.ServiceDhcpServerFeatureArgs;
- * import com.pulumi.sdwan.inputs.ServiceDhcpServerFeatureStaticLeaseArgs;
- * import com.pulumi.sdwan.inputs.ServiceDhcpServerFeatureOptionCodeArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new ServiceDhcpServerFeature("example", ServiceDhcpServerFeatureArgs.builder()
- *             .name("Example")
- *             .description("My Example")
- *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
- *             .networkAddress("1.2.3.4")
- *             .subnetMask("255.255.255.0")
- *             .excludes("192.168.1.1")
- *             .leaseTime(86400)
- *             .interfaceMtu(65535)
- *             .domainName("example.com")
- *             .defaultGateway("1.2.3.4")
- *             .dnsServers("8.8.8.8")
- *             .tftpServers("1.1.1.1")
- *             .staticLeases(ServiceDhcpServerFeatureStaticLeaseArgs.builder()
- *                 .mac_address("01:02:03:04:05:06")
- *                 .ip_address("1.2.3.4")
- *                 .build())
- *             .optionCodes(ServiceDhcpServerFeatureOptionCodeArgs.builder()
- *                 .code(250)
- *                 .ascii("example")
- *                 .build())
- *             .build());
- * 
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

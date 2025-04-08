@@ -23,43 +23,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.sdwan.MeshTopologyPolicyDefinition;
- * import com.pulumi.sdwan.MeshTopologyPolicyDefinitionArgs;
- * import com.pulumi.sdwan.inputs.MeshTopologyPolicyDefinitionRegionArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new MeshTopologyPolicyDefinition("example", MeshTopologyPolicyDefinitionArgs.builder()
- *             .name("Example")
- *             .description("My description")
- *             .vpnListId("04fcbb0b-efbf-43d2-a04b-847d3a7b104e")
- *             .regions(MeshTopologyPolicyDefinitionRegionArgs.builder()
- *                 .name("Region1")
- *                 .site_list_ids("e858e1c4-6aa8-4de7-99df-c3adbf80290d")
- *                 .build())
- *             .build());
- * 
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

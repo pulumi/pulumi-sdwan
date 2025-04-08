@@ -24,46 +24,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.sdwan.ApplicationPriorityQosPolicy;
- * import com.pulumi.sdwan.ApplicationPriorityQosPolicyArgs;
- * import com.pulumi.sdwan.inputs.ApplicationPriorityQosPolicyQosSchedulerArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new ApplicationPriorityQosPolicy("example", ApplicationPriorityQosPolicyArgs.builder()
- *             .name("Example")
- *             .description("My Example")
- *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
- *             .targetInterfaces("{{interface_var_1}}")
- *             .qosSchedulers(ApplicationPriorityQosPolicyQosSchedulerArgs.builder()
- *                 .drops("tail-drop")
- *                 .queue("0")
- *                 .bandwidth("10")
- *                 .scheduling_type("llq")
- *                 .build())
- *             .build());
- * 
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

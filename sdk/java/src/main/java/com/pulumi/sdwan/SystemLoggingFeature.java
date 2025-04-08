@@ -27,67 +27,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.sdwan.SystemLoggingFeature;
- * import com.pulumi.sdwan.SystemLoggingFeatureArgs;
- * import com.pulumi.sdwan.inputs.SystemLoggingFeatureTlsProfileArgs;
- * import com.pulumi.sdwan.inputs.SystemLoggingFeatureIpv4ServerArgs;
- * import com.pulumi.sdwan.inputs.SystemLoggingFeatureIpv6ServerArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new SystemLoggingFeature("example", SystemLoggingFeatureArgs.builder()
- *             .name("Example")
- *             .description("My Example")
- *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
- *             .diskEnable(true)
- *             .diskFileSize(9)
- *             .diskFileRotate(10)
- *             .tlsProfiles(SystemLoggingFeatureTlsProfileArgs.builder()
- *                 .profile("test")
- *                 .tls_version("TLSv1.1")
- *                 .cipher_suites("aes-128-cbc-sha")
- *                 .build())
- *             .ipv4Servers(SystemLoggingFeatureIpv4ServerArgs.builder()
- *                 .hostname_ip("1.1.1.1")
- *                 .vpn(512)
- *                 .source_interface("GigabitEthernet1")
- *                 .priority("informational")
- *                 .tls_enable(true)
- *                 .tls_properties_custom_profile(true)
- *                 .tls_properties_profile("test")
- *                 .build())
- *             .ipv6Servers(SystemLoggingFeatureIpv6ServerArgs.builder()
- *                 .hostname_ip("1.1.1.1")
- *                 .vpn(512)
- *                 .source_interface("GigabitEthernet1")
- *                 .priority("informational")
- *                 .tls_enable(true)
- *                 .tls_properties_custom_profile(true)
- *                 .tls_properties_profile("test")
- *                 .build())
- *             .build());
- * 
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

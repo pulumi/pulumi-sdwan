@@ -26,60 +26,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.sdwan.CiscoOmpFeatureTemplate;
- * import com.pulumi.sdwan.CiscoOmpFeatureTemplateArgs;
- * import com.pulumi.sdwan.inputs.CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs;
- * import com.pulumi.sdwan.inputs.CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new CiscoOmpFeatureTemplate("example", CiscoOmpFeatureTemplateArgs.builder()
- *             .name("Example")
- *             .description("My Example")
- *             .deviceTypes("vedge-C8000V")
- *             .gracefulRestart(true)
- *             .overlayAs(1)
- *             .sendPathLimit(4)
- *             .ecmpLimit(4)
- *             .shutdown(false)
- *             .ompAdminDistanceIpv4(10)
- *             .ompAdminDistanceIpv6(10)
- *             .advertisementInterval(1)
- *             .gracefulRestartTimer(43200)
- *             .eorTimer(300)
- *             .holdtime(60)
- *             .ignoreRegionPathLength(false)
- *             .transportGateway("prefer")
- *             .advertiseIpv4Routes(CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs.builder()
- *                 .protocol("ospf")
- *                 .advertise_external_ospf("external")
- *                 .build())
- *             .advertiseIpv6Routes(CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs.builder()
- *                 .protocol("ospf")
- *                 .build())
- *             .build());
- * 
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

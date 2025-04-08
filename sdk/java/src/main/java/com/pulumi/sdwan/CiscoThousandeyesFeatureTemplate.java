@@ -24,52 +24,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.sdwan.CiscoThousandeyesFeatureTemplate;
- * import com.pulumi.sdwan.CiscoThousandeyesFeatureTemplateArgs;
- * import com.pulumi.sdwan.inputs.CiscoThousandeyesFeatureTemplateVirtualApplicationArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new CiscoThousandeyesFeatureTemplate("example", CiscoThousandeyesFeatureTemplateArgs.builder()
- *             .name("Example")
- *             .description("My Example")
- *             .deviceTypes("vedge-C8000V")
- *             .virtualApplications(CiscoThousandeyesFeatureTemplateVirtualApplicationArgs.builder()
- *                 .instance_id("1")
- *                 .application_type("te")
- *                 .te_account_group_token("1234567")
- *                 .te_vpn(1)
- *                 .te_agent_ip("1.1.1.2/24")
- *                 .te_default_gateway("1.1.1.255")
- *                 .te_name_server("10.2.2.2")
- *                 .te_hostname("agent1")
- *                 .te_web_proxy_type("static")
- *                 .te_proxy_host("3.3.3.3")
- *                 .te_proxy_port(80)
- *                 .build())
- *             .build());
- * 
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

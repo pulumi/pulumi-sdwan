@@ -22,47 +22,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.sdwan.QosMapPolicyDefinition;
- * import com.pulumi.sdwan.QosMapPolicyDefinitionArgs;
- * import com.pulumi.sdwan.inputs.QosMapPolicyDefinitionQosSchedulerArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new QosMapPolicyDefinition("example", QosMapPolicyDefinitionArgs.builder()
- *             .name("Example")
- *             .description("My description")
- *             .qosSchedulers(QosMapPolicyDefinitionQosSchedulerArgs.builder()
- *                 .queue(6)
- *                 .class_map_id("2081c2f4-3f9f-4fee-8078-dcc8904e368d")
- *                 .bandwidth_percent(10)
- *                 .buffer_percent(10)
- *                 .burst(100000)
- *                 .drop_type("red-drop")
- *                 .scheduling_type("wrr")
- *                 .build())
- *             .build());
- * 
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import
