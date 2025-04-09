@@ -25,55 +25,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.sdwan.ServiceWirelessLanFeature;
- * import com.pulumi.sdwan.ServiceWirelessLanFeatureArgs;
- * import com.pulumi.sdwan.inputs.ServiceWirelessLanFeatureSsidArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App }{{@code
- *     public static void main(String[] args) }{{@code
- *         Pulumi.run(App::stack);
- *     }}{@code
- * 
- *     public static void stack(Context ctx) }{{@code
- *         var example = new ServiceWirelessLanFeature("example", ServiceWirelessLanFeatureArgs.builder()
- *             .name("Example")
- *             .description("My Example")
- *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
- *             .enable24g(true)
- *             .enable5g(true)
- *             .ssids(ServiceWirelessLanFeatureSsidArgs.builder()
- *                 .ssid_name("SSID_1")
- *                 .admin_state(true)
- *                 .broadcast_ssid(true)
- *                 .vlan_id(1)
- *                 .radio_type("all")
- *                 .security_type("personal")
- *                 .passphrase("MyPassword123")
- *                 .qos_profile("silver")
- *                 .build())
- *             .country("GB")
- *             .username("user1")
- *             .password("Test}{@literal @}{@code 316s13")
- *             .meDynamicIpEnabled(true)
- *             .build());
- * 
- *     }}{@code
- * }}{@code
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

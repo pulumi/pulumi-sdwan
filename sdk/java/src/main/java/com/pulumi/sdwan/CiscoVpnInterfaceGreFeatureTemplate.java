@@ -25,57 +25,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.sdwan.CiscoVpnInterfaceGreFeatureTemplate;
- * import com.pulumi.sdwan.CiscoVpnInterfaceGreFeatureTemplateArgs;
- * import com.pulumi.sdwan.inputs.CiscoVpnInterfaceGreFeatureTemplateAccessListArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new CiscoVpnInterfaceGreFeatureTemplate("example", CiscoVpnInterfaceGreFeatureTemplateArgs.builder()
- *             .name("Example")
- *             .description("My Example")
- *             .deviceTypes("vedge-C8000V")
- *             .interfaceName("gre0/0")
- *             .interfaceDescription("My Description")
- *             .ipAddress("1.1.1.1/24")
- *             .tunnelSource("1.2.3.4")
- *             .shutdown(true)
- *             .tunnelSourceInterface("e1")
- *             .tunnelDestination("3.4.5.6")
- *             .application("sig")
- *             .ipMtu(1500)
- *             .tcpMssAdjust(1400)
- *             .clearDontFragment(true)
- *             .rewriteRule("ACL1")
- *             .accessLists(CiscoVpnInterfaceGreFeatureTemplateAccessListArgs.builder()
- *                 .direction("in")
- *                 .acl_name("ACL2")
- *                 .build())
- *             .trackers("TRACKER1")
- *             .tunnelRouteVia("g0/0")
- *             .build());
- * 
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

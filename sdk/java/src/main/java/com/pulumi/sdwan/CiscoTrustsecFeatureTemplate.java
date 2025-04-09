@@ -25,65 +25,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.sdwan.CiscoTrustsecFeatureTemplate;
- * import com.pulumi.sdwan.CiscoTrustsecFeatureTemplateArgs;
- * import com.pulumi.sdwan.inputs.CiscoTrustsecFeatureTemplateSxpConnectionArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new CiscoTrustsecFeatureTemplate("example", CiscoTrustsecFeatureTemplateArgs.builder()
- *             .name("Example")
- *             .description("My Example")
- *             .deviceTypes("vedge-C8000V")
- *             .deviceSgt(100)
- *             .credentialsId("user1")
- *             .credentialsPassword("MyPassword")
- *             .enableEnforcement(true)
- *             .enableSxp(true)
- *             .sxpSourceIp("1.2.3.4")
- *             .sxpDefaultPassword("MyPassword")
- *             .sxpKeyChain("keychain1")
- *             .sxpLogBindingChanges(false)
- *             .sxpReconciliationPeriod(120)
- *             .sxpRetryPeriod(120)
- *             .speakerHoldTime(120)
- *             .minimumListenerHoldTime(90)
- *             .maximumListenerHoldTime(180)
- *             .sxpNodeIdType("interface-name")
- *             .sxpNodeId("VirtualPortGroup")
- *             .sxpConnections(CiscoTrustsecFeatureTemplateSxpConnectionArgs.builder()
- *                 .peer_ip("1.2.3.4")
- *                 .source_ip("2.3.4.5")
- *                 .preshared_key("default")
- *                 .mode("local")
- *                 .mode_type("listener")
- *                 .minimum_hold_time(100)
- *                 .maximum_hold_time(200)
- *                 .vpn_id(0)
- *                 .build())
- *             .build());
- * 
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

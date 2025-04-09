@@ -23,50 +23,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.sdwan.UrlFilteringPolicyDefinition;
- * import com.pulumi.sdwan.UrlFilteringPolicyDefinitionArgs;
- * import com.pulumi.sdwan.inputs.UrlFilteringPolicyDefinitionLoggingArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new UrlFilteringPolicyDefinition("example", UrlFilteringPolicyDefinitionArgs.builder()
- *             .name("Example")
- *             .description("My description")
- *             .mode("security")
- *             .alerts("blacklist")
- *             .webCategories("alcohol-and-tobacco")
- *             .webCategoriesAction("allow")
- *             .webReputation("moderate-risk")
- *             .targetVpns("1")
- *             .blockPageAction("text")
- *             .blockPageContents("Access to the requested page has been denied. Please contact your Network Administrator")
- *             .loggings(UrlFilteringPolicyDefinitionLoggingArgs.builder()
- *                 .external_syslog_server_ip("10.0.0.1")
- *                 .external_syslog_server_vpn("123")
- *                 .build())
- *             .build());
- * 
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

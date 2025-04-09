@@ -25,60 +25,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.sdwan.CiscoWirelessLanFeatureTemplate;
- * import com.pulumi.sdwan.CiscoWirelessLanFeatureTemplateArgs;
- * import com.pulumi.sdwan.inputs.CiscoWirelessLanFeatureTemplateSsidArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new CiscoWirelessLanFeatureTemplate("example", CiscoWirelessLanFeatureTemplateArgs.builder()
- *             .name("Example")
- *             .description("My Example")
- *             .deviceTypes("vedge-C8000V")
- *             .shutdown24ghz(false)
- *             .shutdown5ghz(false)
- *             .ssids(CiscoWirelessLanFeatureTemplateSsidArgs.builder()
- *                 .wireless_network_name("WLAN1")
- *                 .admin_state(false)
- *                 .broadcast_ssid(true)
- *                 .vlan_id(1)
- *                 .radio_type("24ghz")
- *                 .security_type("enterprise")
- *                 .radius_server_ip("1.2.3.4")
- *                 .radius_server_port(1812)
- *                 .radius_server_secret("MySecret1")
- *                 .passphrase("passphrase")
- *                 .qos_profile("silver")
- *                 .build())
- *             .country("AE")
- *             .username("user1")
- *             .password("myPassword01")
- *             .controllerIpAddress("0.0.0.0")
- *             .controllerSubnetMask("0.0.0.0")
- *             .controllerDefaultGateway("0.0.0.0")
- *             .build());
- * 
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

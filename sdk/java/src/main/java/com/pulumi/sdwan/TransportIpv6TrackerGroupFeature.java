@@ -24,44 +24,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.sdwan.TransportIpv6TrackerGroupFeature;
- * import com.pulumi.sdwan.TransportIpv6TrackerGroupFeatureArgs;
- * import com.pulumi.sdwan.inputs.TransportIpv6TrackerGroupFeatureTrackerElementArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new TransportIpv6TrackerGroupFeature("example", TransportIpv6TrackerGroupFeatureArgs.builder()
- *             .name("Example")
- *             .description("My Example")
- *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
- *             .trackerName("TRACKER_GROUP_1")
- *             .trackerElements(TransportIpv6TrackerGroupFeatureTrackerElementArgs.builder()
- *                 .tracker_id("615d948f-34ee-4a2e-810e-a9bd8d3d48ec")
- *                 .build())
- *             .trackerBoolean("or")
- *             .build());
- * 
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import
