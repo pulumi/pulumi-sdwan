@@ -24,45 +24,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.sdwan.PolicyObjectIpv4PrefixList;
- * import com.pulumi.sdwan.PolicyObjectIpv4PrefixListArgs;
- * import com.pulumi.sdwan.inputs.PolicyObjectIpv4PrefixListEntryArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new PolicyObjectIpv4PrefixList("example", PolicyObjectIpv4PrefixListArgs.builder()
- *             .name("Example")
- *             .description("My Example")
- *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
- *             .entries(PolicyObjectIpv4PrefixListEntryArgs.builder()
- *                 .ipv4_address("10.0.0.0")
- *                 .ipv4_prefix_length(8)
- *                 .le(24)
- *                 .ge(16)
- *                 .build())
- *             .build());
- * 
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

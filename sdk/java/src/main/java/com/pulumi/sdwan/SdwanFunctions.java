@@ -50704,7 +50704,7 @@ public final class SdwanFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = SdwanFunctions.getVedgeInventory();
+     *         final var example = SdwanFunctions.getVedgeInventory(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference);
      * 
      *     }
      * }
@@ -50743,7 +50743,7 @@ public final class SdwanFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = SdwanFunctions.getVedgeInventory();
+     *         final var example = SdwanFunctions.getVedgeInventory(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference);
      * 
      *     }
      * }
@@ -50782,7 +50782,7 @@ public final class SdwanFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = SdwanFunctions.getVedgeInventory();
+     *         final var example = SdwanFunctions.getVedgeInventory(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference);
      * 
      *     }
      * }
@@ -50821,7 +50821,7 @@ public final class SdwanFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = SdwanFunctions.getVedgeInventory();
+     *         final var example = SdwanFunctions.getVedgeInventory(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference);
      * 
      *     }
      * }
@@ -50860,7 +50860,7 @@ public final class SdwanFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = SdwanFunctions.getVedgeInventory();
+     *         final var example = SdwanFunctions.getVedgeInventory(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference);
      * 
      *     }
      * }
@@ -50899,7 +50899,7 @@ public final class SdwanFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = SdwanFunctions.getVedgeInventory();
+     *         final var example = SdwanFunctions.getVedgeInventory(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference);
      * 
      *     }
      * }
@@ -50938,7 +50938,7 @@ public final class SdwanFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = SdwanFunctions.getVedgeInventory();
+     *         final var example = SdwanFunctions.getVedgeInventory(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference);
      * 
      *     }
      * }

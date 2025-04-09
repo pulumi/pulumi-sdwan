@@ -24,52 +24,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.sdwan.ZoneBasedFirewallPolicyDefinition;
- * import com.pulumi.sdwan.ZoneBasedFirewallPolicyDefinitionArgs;
- * import com.pulumi.sdwan.inputs.ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs;
- * import com.pulumi.sdwan.inputs.ZoneBasedFirewallPolicyDefinitionRuleArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new ZoneBasedFirewallPolicyDefinition("example", ZoneBasedFirewallPolicyDefinitionArgs.builder()
- *             .name("Example")
- *             .description("My description")
- *             .mode("security")
- *             .applyZonePairs(ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs.builder()
- *                 .source_zone("self")
- *                 .destination_zone("0d26a366-4a11-4942-a5ea-82af9502889f")
- *                 .build())
- *             .defaultAction("pass")
- *             .rules(ZoneBasedFirewallPolicyDefinitionRuleArgs.builder()
- *                 .rule_order(1)
- *                 .rule_name("RULE_1")
- *                 .base_action("inspect")
- *                 .match_entries(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
- *                 .action_entries(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
- *                 .build())
- *             .build());
- * 
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

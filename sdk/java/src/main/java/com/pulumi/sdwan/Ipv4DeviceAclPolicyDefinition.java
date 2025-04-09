@@ -23,46 +23,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.sdwan.Ipv4DeviceAclPolicyDefinition;
- * import com.pulumi.sdwan.Ipv4DeviceAclPolicyDefinitionArgs;
- * import com.pulumi.sdwan.inputs.Ipv4DeviceAclPolicyDefinitionSequenceArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new Ipv4DeviceAclPolicyDefinition("example", Ipv4DeviceAclPolicyDefinitionArgs.builder()
- *             .name("Example")
- *             .description("My description")
- *             .defaultAction("drop")
- *             .sequences(Ipv4DeviceAclPolicyDefinitionSequenceArgs.builder()
- *                 .id(10)
- *                 .name("Sequence 10")
- *                 .base_action("accept")
- *                 .match_entries(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
- *                 .action_entries(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
- *                 .build())
- *             .build());
- * 
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import
