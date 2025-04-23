@@ -115,6 +115,9 @@ class _PortListPolicyObjectState:
 
 
 class PortListPolicyObject(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/portListPolicyObject:PortListPolicyObject"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -616,6 +616,9 @@ class _CellularCedgeProfileFeatureTemplateState:
 
 
 class CellularCedgeProfileFeatureTemplate(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/cellularCedgeProfileFeatureTemplate:CellularCedgeProfileFeatureTemplate"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

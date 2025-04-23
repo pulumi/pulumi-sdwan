@@ -202,6 +202,9 @@ class _CiscoThousandeyesFeatureTemplateState:
 
 
 class CiscoThousandeyesFeatureTemplate(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/ciscoThousandeyesFeatureTemplate:CiscoThousandeyesFeatureTemplate"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

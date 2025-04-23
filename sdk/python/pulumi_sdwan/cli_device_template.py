@@ -206,6 +206,9 @@ class _CliDeviceTemplateState:
 
 
 class CliDeviceTemplate(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/cliDeviceTemplate:CliDeviceTemplate"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

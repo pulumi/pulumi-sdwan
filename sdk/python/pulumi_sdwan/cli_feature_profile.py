@@ -97,6 +97,9 @@ class _CliFeatureProfileState:
 
 
 class CliFeatureProfile(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/cliFeatureProfile:CliFeatureProfile"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

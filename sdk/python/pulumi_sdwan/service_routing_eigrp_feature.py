@@ -682,6 +682,9 @@ class _ServiceRoutingEigrpFeatureState:
 
 
 class ServiceRoutingEigrpFeature(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/serviceRoutingEigrpFeature:ServiceRoutingEigrpFeature"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

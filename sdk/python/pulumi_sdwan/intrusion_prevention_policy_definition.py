@@ -395,6 +395,9 @@ class _IntrusionPreventionPolicyDefinitionState:
 
 
 class IntrusionPreventionPolicyDefinition(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/intrusionPreventionPolicyDefinition:IntrusionPreventionPolicyDefinition"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

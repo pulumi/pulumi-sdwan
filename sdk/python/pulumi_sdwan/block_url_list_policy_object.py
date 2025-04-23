@@ -115,6 +115,9 @@ class _BlockUrlListPolicyObjectState:
 
 
 class BlockUrlListPolicyObject(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/blockUrlListPolicyObject:BlockUrlListPolicyObject"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

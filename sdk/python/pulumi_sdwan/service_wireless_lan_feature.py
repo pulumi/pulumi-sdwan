@@ -773,6 +773,9 @@ class _ServiceWirelessLanFeatureState:
 
 
 class ServiceWirelessLanFeature(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/serviceWirelessLanFeature:ServiceWirelessLanFeature"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

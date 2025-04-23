@@ -115,6 +115,9 @@ class _StandardCommunityListPolicyObjectState:
 
 
 class StandardCommunityListPolicyObject(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/standardCommunityListPolicyObject:StandardCommunityListPolicyObject"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

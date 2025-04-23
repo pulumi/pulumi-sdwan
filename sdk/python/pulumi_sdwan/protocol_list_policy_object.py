@@ -115,6 +115,9 @@ class _ProtocolListPolicyObjectState:
 
 
 class ProtocolListPolicyObject(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/protocolListPolicyObject:ProtocolListPolicyObject"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

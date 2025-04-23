@@ -99,6 +99,9 @@ class _AttachFeatureDeviceTemplateState:
 
 
 class AttachFeatureDeviceTemplate(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/attachFeatureDeviceTemplate:AttachFeatureDeviceTemplate"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -178,6 +178,9 @@ class _PolicyObjectSecurityUrlAllowListState:
 
 
 class PolicyObjectSecurityUrlAllowList(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/policyObjectSecurityUrlAllowList:PolicyObjectSecurityUrlAllowList"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

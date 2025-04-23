@@ -275,6 +275,9 @@ class _ServiceSwitchportFeatureState:
 
 
 class ServiceSwitchportFeature(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/serviceSwitchportFeature:ServiceSwitchportFeature"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

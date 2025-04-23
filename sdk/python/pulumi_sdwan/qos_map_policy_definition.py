@@ -162,6 +162,9 @@ class _QosMapPolicyDefinitionState:
 
 
 class QosMapPolicyDefinition(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/qosMapPolicyDefinition:QosMapPolicyDefinition"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -212,6 +212,9 @@ class _TransportIpv4AclFeatureState:
 
 
 class TransportIpv4AclFeature(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/transportIpv4AclFeature:TransportIpv4AclFeature"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -226,6 +226,9 @@ class _HubAndSpokeTopologyPolicyDefinitionState:
 
 
 class HubAndSpokeTopologyPolicyDefinition(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/hubAndSpokeTopologyPolicyDefinition:HubAndSpokeTopologyPolicyDefinition"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

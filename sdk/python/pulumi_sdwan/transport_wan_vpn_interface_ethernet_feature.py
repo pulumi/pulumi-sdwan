@@ -6255,6 +6255,9 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
 
 
 class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/transportWanVpnInterfaceEthernetFeature:TransportWanVpnInterfaceEthernetFeature"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

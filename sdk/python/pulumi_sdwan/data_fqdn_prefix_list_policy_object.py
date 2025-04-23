@@ -115,6 +115,9 @@ class _DataFqdnPrefixListPolicyObjectState:
 
 
 class DataFqdnPrefixListPolicyObject(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/dataFqdnPrefixListPolicyObject:DataFqdnPrefixListPolicyObject"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

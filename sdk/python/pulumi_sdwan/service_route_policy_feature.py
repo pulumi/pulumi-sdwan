@@ -211,6 +211,9 @@ class _ServiceRoutePolicyFeatureState:
 
 
 class ServiceRoutePolicyFeature(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/serviceRoutePolicyFeature:ServiceRoutePolicyFeature"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

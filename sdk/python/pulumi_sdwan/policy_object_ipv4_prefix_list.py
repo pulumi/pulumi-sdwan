@@ -178,6 +178,9 @@ class _PolicyObjectIpv4PrefixListState:
 
 
 class PolicyObjectIpv4PrefixList(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/policyObjectIpv4PrefixList:PolicyObjectIpv4PrefixList"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

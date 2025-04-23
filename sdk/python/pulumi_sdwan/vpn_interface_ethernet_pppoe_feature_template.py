@@ -5110,6 +5110,9 @@ class _VpnInterfaceEthernetPppoeFeatureTemplateState:
 
 
 class VpnInterfaceEthernetPppoeFeatureTemplate(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/vpnInterfaceEthernetPppoeFeatureTemplate:VpnInterfaceEthernetPppoeFeatureTemplate"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

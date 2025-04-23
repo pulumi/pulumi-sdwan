@@ -144,6 +144,9 @@ class _MirrorPolicyObjectState:
 
 
 class MirrorPolicyObject(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/mirrorPolicyObject:MirrorPolicyObject"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

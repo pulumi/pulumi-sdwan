@@ -468,6 +468,9 @@ class _SystemNtpFeatureState:
 
 
 class SystemNtpFeature(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/systemNtpFeature:SystemNtpFeature"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

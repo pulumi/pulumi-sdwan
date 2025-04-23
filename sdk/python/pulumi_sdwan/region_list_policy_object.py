@@ -115,6 +115,9 @@ class _RegionListPolicyObjectState:
 
 
 class RegionListPolicyObject(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/regionListPolicyObject:RegionListPolicyObject"
+
     @overload
     def __init__(__self__,
                  resource_name: str,
