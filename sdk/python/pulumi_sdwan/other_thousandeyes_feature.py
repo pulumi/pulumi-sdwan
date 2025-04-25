@@ -179,6 +179,9 @@ class _OtherThousandeyesFeatureState:
 
 
 class OtherThousandeyesFeature(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/otherThousandeyesFeature:OtherThousandeyesFeature"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

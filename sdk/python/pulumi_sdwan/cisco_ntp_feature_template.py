@@ -490,6 +490,9 @@ class _CiscoNtpFeatureTemplateState:
 
 
 class CiscoNtpFeatureTemplate(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/ciscoNtpFeatureTemplate:CiscoNtpFeatureTemplate"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

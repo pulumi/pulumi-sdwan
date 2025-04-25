@@ -232,6 +232,9 @@ class _ZoneBasedFirewallPolicyDefinitionState:
 
 
 class ZoneBasedFirewallPolicyDefinition(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/zoneBasedFirewallPolicyDefinition:ZoneBasedFirewallPolicyDefinition"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

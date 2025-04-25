@@ -1617,6 +1617,9 @@ class _SystemGlobalFeatureState:
 
 
 class SystemGlobalFeature(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/systemGlobalFeature:SystemGlobalFeature"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

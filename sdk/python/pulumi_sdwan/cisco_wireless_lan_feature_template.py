@@ -734,6 +734,9 @@ class _CiscoWirelessLanFeatureTemplateState:
 
 
 class CiscoWirelessLanFeatureTemplate(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/ciscoWirelessLanFeatureTemplate:CiscoWirelessLanFeatureTemplate"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

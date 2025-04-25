@@ -146,6 +146,9 @@ class _AppProbeClassPolicyObjectState:
 
 
 class AppProbeClassPolicyObject(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/appProbeClassPolicyObject:AppProbeClassPolicyObject"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

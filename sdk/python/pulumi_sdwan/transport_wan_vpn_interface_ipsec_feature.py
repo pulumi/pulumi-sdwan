@@ -2105,6 +2105,9 @@ class _TransportWanVpnInterfaceIpsecFeatureState:
 
 
 class TransportWanVpnInterfaceIpsecFeature(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/transportWanVpnInterfaceIpsecFeature:TransportWanVpnInterfaceIpsecFeature"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

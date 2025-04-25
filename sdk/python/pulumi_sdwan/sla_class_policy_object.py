@@ -378,6 +378,9 @@ class _SlaClassPolicyObjectState:
 
 
 class SlaClassPolicyObject(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/slaClassPolicyObject:SlaClassPolicyObject"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -170,6 +170,9 @@ class _PolicyObjectSecurityFqdnListState:
 
 
 class PolicyObjectSecurityFqdnList(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/policyObjectSecurityFqdnList:PolicyObjectSecurityFqdnList"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

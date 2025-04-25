@@ -529,6 +529,9 @@ class _ObjectGroupPolicyDefinitionState:
 
 
 class ObjectGroupPolicyDefinition(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/objectGroupPolicyDefinition:ObjectGroupPolicyDefinition"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

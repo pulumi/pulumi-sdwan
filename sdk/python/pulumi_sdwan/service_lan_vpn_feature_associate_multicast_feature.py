@@ -143,6 +143,9 @@ class _ServiceLanVpnFeatureAssociateMulticastFeatureState:
 
 
 class ServiceLanVpnFeatureAssociateMulticastFeature(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/serviceLanVpnFeatureAssociateMulticastFeature:ServiceLanVpnFeatureAssociateMulticastFeature"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

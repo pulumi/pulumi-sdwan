@@ -458,6 +458,9 @@ class _CiscoLoggingFeatureTemplateState:
 
 
 class CiscoLoggingFeatureTemplate(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/ciscoLoggingFeatureTemplate:CiscoLoggingFeatureTemplate"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -243,6 +243,9 @@ class _ApplicationPriorityQosPolicyState:
 
 
 class ApplicationPriorityQosPolicy(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/applicationPriorityQosPolicy:ApplicationPriorityQosPolicy"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

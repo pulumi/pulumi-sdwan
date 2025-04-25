@@ -178,6 +178,9 @@ class _PolicyObjectSecurityIpsSignatureState:
 
 
 class PolicyObjectSecurityIpsSignature(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/policyObjectSecurityIpsSignature:PolicyObjectSecurityIpsSignature"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -714,6 +714,9 @@ class _EigrpFeatureTemplateState:
 
 
 class EigrpFeatureTemplate(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/eigrpFeatureTemplate:EigrpFeatureTemplate"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

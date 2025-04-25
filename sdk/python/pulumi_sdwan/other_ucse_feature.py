@@ -597,6 +597,9 @@ class _OtherUcseFeatureState:
 
 
 class OtherUcseFeature(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/otherUcseFeature:OtherUcseFeature"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

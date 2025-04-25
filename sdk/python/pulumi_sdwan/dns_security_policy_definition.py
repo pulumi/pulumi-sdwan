@@ -432,6 +432,9 @@ class _DnsSecurityPolicyDefinitionState:
 
 
 class DnsSecurityPolicyDefinition(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/dnsSecurityPolicyDefinition:DnsSecurityPolicyDefinition"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

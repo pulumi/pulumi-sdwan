@@ -4886,6 +4886,9 @@ class _VpnInterfaceDslPppoaFeatureTemplateState:
 
 
 class VpnInterfaceDslPppoaFeatureTemplate(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/vpnInterfaceDslPppoaFeatureTemplate:VpnInterfaceDslPppoaFeatureTemplate"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

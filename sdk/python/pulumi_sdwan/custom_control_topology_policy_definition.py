@@ -195,6 +195,9 @@ class _CustomControlTopologyPolicyDefinitionState:
 
 
 class CustomControlTopologyPolicyDefinition(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/customControlTopologyPolicyDefinition:CustomControlTopologyPolicyDefinition"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -174,6 +174,9 @@ class _ServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeatureState:
 
 
 class ServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/serviceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature:ServiceLanVpnInterfaceEthernetFeatureAssociateDhcpServerFeature"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

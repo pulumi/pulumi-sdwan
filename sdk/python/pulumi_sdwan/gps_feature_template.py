@@ -552,6 +552,9 @@ class _GpsFeatureTemplateState:
 
 
 class GpsFeatureTemplate(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/gpsFeatureTemplate:GpsFeatureTemplate"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -264,6 +264,9 @@ class _ApplicationPriorityTrafficPolicyPolicyState:
 
 
 class ApplicationPriorityTrafficPolicyPolicy(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/applicationPriorityTrafficPolicyPolicy:ApplicationPriorityTrafficPolicyPolicy"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -746,6 +746,9 @@ class _CiscoDhcpServerFeatureTemplateState:
 
 
 class CiscoDhcpServerFeatureTemplate(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/ciscoDhcpServerFeatureTemplate:CiscoDhcpServerFeatureTemplate"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

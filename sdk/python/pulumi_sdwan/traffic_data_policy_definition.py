@@ -194,6 +194,9 @@ class _TrafficDataPolicyDefinitionState:
 
 
 class TrafficDataPolicyDefinition(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/trafficDataPolicyDefinition:TrafficDataPolicyDefinition"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

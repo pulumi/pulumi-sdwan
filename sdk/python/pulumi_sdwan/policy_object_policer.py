@@ -178,6 +178,9 @@ class _PolicyObjectPolicerState:
 
 
 class PolicyObjectPolicer(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/policyObjectPolicer:PolicyObjectPolicer"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

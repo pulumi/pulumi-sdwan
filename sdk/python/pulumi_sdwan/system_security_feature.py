@@ -536,6 +536,9 @@ class _SystemSecurityFeatureState:
 
 
 class SystemSecurityFeature(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/systemSecurityFeature:SystemSecurityFeature"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

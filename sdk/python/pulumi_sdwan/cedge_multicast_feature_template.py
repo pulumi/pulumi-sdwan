@@ -360,6 +360,9 @@ class _CedgeMulticastFeatureTemplateState:
 
 
 class CedgeMulticastFeatureTemplate(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/cedgeMulticastFeatureTemplate:CedgeMulticastFeatureTemplate"
+
     @overload
     def __init__(__self__,
                  resource_name: str,
