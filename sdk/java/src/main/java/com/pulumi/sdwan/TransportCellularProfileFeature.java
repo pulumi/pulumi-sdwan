@@ -51,6 +51,7 @@ import javax.annotation.Nullable;
  *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
  *             .profileId(1)
  *             .accessPointName("apn1")
+ *             .requiresAuthentication(true)
  *             .authenticationType("pap")
  *             .profileUsername("example")
  *             .profilePassword("example123!")
@@ -104,28 +105,30 @@ public class TransportCellularProfileFeature extends com.pulumi.resources.Custom
         return Codegen.optional(this.accessPointNameVariable);
     }
     /**
-     * Set authentication type - Choices: `pap`, `chap`, `pap_chap`
+     * Set authentication type, Attribute conditional on `requires_authentication` being equal to `true` - Choices: `pap`,
+     * `chap`, `pap_chap`
      * 
      */
     @Export(name="authenticationType", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> authenticationType;
 
     /**
-     * @return Set authentication type - Choices: `pap`, `chap`, `pap_chap`
+     * @return Set authentication type, Attribute conditional on `requires_authentication` being equal to `true` - Choices: `pap`,
+     * `chap`, `pap_chap`
      * 
      */
     public Output<Optional<String>> authenticationType() {
         return Codegen.optional(this.authenticationType);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `requires_authentication` being equal to `true`
      * 
      */
     @Export(name="authenticationTypeVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> authenticationTypeVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `requires_authentication` being equal to `true`
      * 
      */
     public Output<Optional<String>> authenticationTypeVariable() {
@@ -172,20 +175,6 @@ public class TransportCellularProfileFeature extends com.pulumi.resources.Custom
      */
     public Output<String> name() {
         return this.name;
-    }
-    /**
-     * No Authentication
-     * 
-     */
-    @Export(name="noAuthentication", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> noAuthentication;
-
-    /**
-     * @return No Authentication
-     * 
-     */
-    public Output<Optional<String>> noAuthentication() {
-        return Codegen.optional(this.noAuthentication);
     }
     /**
      * No Overwrite
@@ -272,60 +261,74 @@ public class TransportCellularProfileFeature extends com.pulumi.resources.Custom
         return Codegen.optional(this.profileIdVariable);
     }
     /**
-     * Set the profile password
+     * Set the profile password, Attribute conditional on `requires_authentication` being equal to `true`
      * 
      */
     @Export(name="profilePassword", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> profilePassword;
 
     /**
-     * @return Set the profile password
+     * @return Set the profile password, Attribute conditional on `requires_authentication` being equal to `true`
      * 
      */
     public Output<Optional<String>> profilePassword() {
         return Codegen.optional(this.profilePassword);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `requires_authentication` being equal to `true`
      * 
      */
     @Export(name="profilePasswordVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> profilePasswordVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `requires_authentication` being equal to `true`
      * 
      */
     public Output<Optional<String>> profilePasswordVariable() {
         return Codegen.optional(this.profilePasswordVariable);
     }
     /**
-     * Set the profile username
+     * Set the profile username, Attribute conditional on `requires_authentication` being equal to `true`
      * 
      */
     @Export(name="profileUsername", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> profileUsername;
 
     /**
-     * @return Set the profile username
+     * @return Set the profile username, Attribute conditional on `requires_authentication` being equal to `true`
      * 
      */
     public Output<Optional<String>> profileUsername() {
         return Codegen.optional(this.profileUsername);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `requires_authentication` being equal to `true`
      * 
      */
     @Export(name="profileUsernameVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> profileUsernameVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `requires_authentication` being equal to `true`
      * 
      */
     public Output<Optional<String>> profileUsernameVariable() {
         return Codegen.optional(this.profileUsernameVariable);
+    }
+    /**
+     * Require authentication type - Default value: `false`
+     * 
+     */
+    @Export(name="requiresAuthentication", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> requiresAuthentication;
+
+    /**
+     * @return Require authentication type - Default value: `false`
+     * 
+     */
+    public Output<Optional<Boolean>> requiresAuthentication() {
+        return Codegen.optional(this.requiresAuthentication);
     }
     /**
      * The version of the Feature

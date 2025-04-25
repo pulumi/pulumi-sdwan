@@ -24,7 +24,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string? Nat;
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `gateway` being equal to `nat`
         /// </summary>
         public readonly string? NatVariable;
         /// <summary>

@@ -26951,7 +26951,7 @@ export interface ServiceWirelessLanFeatureSsid {
      */
     passphrase?: string;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `securityType` being equal to `personal`
      */
     passphraseVariable?: string;
     /**
@@ -26979,7 +26979,7 @@ export interface ServiceWirelessLanFeatureSsid {
      */
     radiusServerIp?: string;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `securityType` being equal to `enterprise`
      */
     radiusServerIpVariable?: string;
     /**
@@ -26989,7 +26989,7 @@ export interface ServiceWirelessLanFeatureSsid {
      */
     radiusServerPort?: number;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `securityType` being equal to `enterprise`
      */
     radiusServerPortVariable?: string;
     /**
@@ -26997,7 +26997,7 @@ export interface ServiceWirelessLanFeatureSsid {
      */
     radiusServerSecret?: string;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `securityType` being equal to `enterprise`
      */
     radiusServerSecretVariable?: string;
     /**
@@ -28957,7 +28957,7 @@ export interface TransportManagementVpnFeatureIpv4StaticRoute {
      */
     administrativeDistance?: number;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `gateway` being equal to `null0`
      */
     administrativeDistanceVariable?: string;
     /**
@@ -29022,7 +29022,7 @@ export interface TransportManagementVpnFeatureIpv6StaticRoute {
      */
     nat?: string;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `gateway` being equal to `nat`
      */
     natVariable?: string;
     /**
@@ -30384,7 +30384,7 @@ export interface TransportT1E1ControllerFeatureEntry {
      */
     lengthLong?: string;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `cableLength` being equal to `long`
      */
     lengthLongVariable?: string;
     /**
@@ -30393,7 +30393,7 @@ export interface TransportT1E1ControllerFeatureEntry {
      */
     lengthShort?: string;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `cableLength` being equal to `short`
      */
     lengthShortVariable?: string;
     /**
@@ -30462,7 +30462,7 @@ export interface TransportWanVpnFeatureIpv4StaticRoute {
      */
     administrativeDistance?: number;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `gateway` being equal to `null0`
      */
     administrativeDistanceVariable?: string;
     /**
@@ -30527,7 +30527,7 @@ export interface TransportWanVpnFeatureIpv6StaticRoute {
      */
     nat?: string;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `gateway` being equal to `nat`
      */
     natVariable?: string;
     /**

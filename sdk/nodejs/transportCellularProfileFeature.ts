@@ -20,6 +20,7 @@ import * as utilities from "./utilities";
  *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
  *     profileId: 1,
  *     accessPointName: "apn1",
+ *     requiresAuthentication: true,
  *     authenticationType: "pap",
  *     profileUsername: "example",
  *     profilePassword: "example123!",
@@ -73,11 +74,12 @@ export class TransportCellularProfileFeature extends pulumi.CustomResource {
      */
     public readonly accessPointNameVariable!: pulumi.Output<string | undefined>;
     /**
-     * Set authentication type - Choices: `pap`, `chap`, `papChap`
+     * Set authentication type, Attribute conditional on `requiresAuthentication` being equal to `true` - Choices: `pap`,
+     * `chap`, `papChap`
      */
     public readonly authenticationType!: pulumi.Output<string | undefined>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
      */
     public readonly authenticationTypeVariable!: pulumi.Output<string | undefined>;
     /**
@@ -92,10 +94,6 @@ export class TransportCellularProfileFeature extends pulumi.CustomResource {
      * The name of the Feature
      */
     public readonly name!: pulumi.Output<string>;
-    /**
-     * No Authentication
-     */
-    public readonly noAuthentication!: pulumi.Output<string | undefined>;
     /**
      * No Overwrite
      */
@@ -121,21 +119,25 @@ export class TransportCellularProfileFeature extends pulumi.CustomResource {
      */
     public readonly profileIdVariable!: pulumi.Output<string | undefined>;
     /**
-     * Set the profile password
+     * Set the profile password, Attribute conditional on `requiresAuthentication` being equal to `true`
      */
     public readonly profilePassword!: pulumi.Output<string | undefined>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
      */
     public readonly profilePasswordVariable!: pulumi.Output<string | undefined>;
     /**
-     * Set the profile username
+     * Set the profile username, Attribute conditional on `requiresAuthentication` being equal to `true`
      */
     public readonly profileUsername!: pulumi.Output<string | undefined>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
      */
     public readonly profileUsernameVariable!: pulumi.Output<string | undefined>;
+    /**
+     * Require authentication type - Default value: `false`
+     */
+    public readonly requiresAuthentication!: pulumi.Output<boolean | undefined>;
     /**
      * The version of the Feature
      */
@@ -161,7 +163,6 @@ export class TransportCellularProfileFeature extends pulumi.CustomResource {
             resourceInputs["description"] = state ? state.description : undefined;
             resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
             resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["noAuthentication"] = state ? state.noAuthentication : undefined;
             resourceInputs["noOverwrite"] = state ? state.noOverwrite : undefined;
             resourceInputs["noOverwriteVariable"] = state ? state.noOverwriteVariable : undefined;
             resourceInputs["packetDataNetworkType"] = state ? state.packetDataNetworkType : undefined;
@@ -172,6 +173,7 @@ export class TransportCellularProfileFeature extends pulumi.CustomResource {
             resourceInputs["profilePasswordVariable"] = state ? state.profilePasswordVariable : undefined;
             resourceInputs["profileUsername"] = state ? state.profileUsername : undefined;
             resourceInputs["profileUsernameVariable"] = state ? state.profileUsernameVariable : undefined;
+            resourceInputs["requiresAuthentication"] = state ? state.requiresAuthentication : undefined;
             resourceInputs["version"] = state ? state.version : undefined;
         } else {
             const args = argsOrState as TransportCellularProfileFeatureArgs | undefined;
@@ -185,7 +187,6 @@ export class TransportCellularProfileFeature extends pulumi.CustomResource {
             resourceInputs["description"] = args ? args.description : undefined;
             resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
             resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["noAuthentication"] = args ? args.noAuthentication : undefined;
             resourceInputs["noOverwrite"] = args ? args.noOverwrite : undefined;
             resourceInputs["noOverwriteVariable"] = args ? args.noOverwriteVariable : undefined;
             resourceInputs["packetDataNetworkType"] = args ? args.packetDataNetworkType : undefined;
@@ -196,6 +197,7 @@ export class TransportCellularProfileFeature extends pulumi.CustomResource {
             resourceInputs["profilePasswordVariable"] = args ? args.profilePasswordVariable : undefined;
             resourceInputs["profileUsername"] = args ? args.profileUsername : undefined;
             resourceInputs["profileUsernameVariable"] = args ? args.profileUsernameVariable : undefined;
+            resourceInputs["requiresAuthentication"] = args ? args.requiresAuthentication : undefined;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -216,11 +218,12 @@ export interface TransportCellularProfileFeatureState {
      */
     accessPointNameVariable?: pulumi.Input<string>;
     /**
-     * Set authentication type - Choices: `pap`, `chap`, `papChap`
+     * Set authentication type, Attribute conditional on `requiresAuthentication` being equal to `true` - Choices: `pap`,
+     * `chap`, `papChap`
      */
     authenticationType?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
      */
     authenticationTypeVariable?: pulumi.Input<string>;
     /**
@@ -235,10 +238,6 @@ export interface TransportCellularProfileFeatureState {
      * The name of the Feature
      */
     name?: pulumi.Input<string>;
-    /**
-     * No Authentication
-     */
-    noAuthentication?: pulumi.Input<string>;
     /**
      * No Overwrite
      */
@@ -264,21 +263,25 @@ export interface TransportCellularProfileFeatureState {
      */
     profileIdVariable?: pulumi.Input<string>;
     /**
-     * Set the profile password
+     * Set the profile password, Attribute conditional on `requiresAuthentication` being equal to `true`
      */
     profilePassword?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
      */
     profilePasswordVariable?: pulumi.Input<string>;
     /**
-     * Set the profile username
+     * Set the profile username, Attribute conditional on `requiresAuthentication` being equal to `true`
      */
     profileUsername?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
      */
     profileUsernameVariable?: pulumi.Input<string>;
+    /**
+     * Require authentication type - Default value: `false`
+     */
+    requiresAuthentication?: pulumi.Input<boolean>;
     /**
      * The version of the Feature
      */
@@ -298,11 +301,12 @@ export interface TransportCellularProfileFeatureArgs {
      */
     accessPointNameVariable?: pulumi.Input<string>;
     /**
-     * Set authentication type - Choices: `pap`, `chap`, `papChap`
+     * Set authentication type, Attribute conditional on `requiresAuthentication` being equal to `true` - Choices: `pap`,
+     * `chap`, `papChap`
      */
     authenticationType?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
      */
     authenticationTypeVariable?: pulumi.Input<string>;
     /**
@@ -317,10 +321,6 @@ export interface TransportCellularProfileFeatureArgs {
      * The name of the Feature
      */
     name?: pulumi.Input<string>;
-    /**
-     * No Authentication
-     */
-    noAuthentication?: pulumi.Input<string>;
     /**
      * No Overwrite
      */
@@ -346,19 +346,23 @@ export interface TransportCellularProfileFeatureArgs {
      */
     profileIdVariable?: pulumi.Input<string>;
     /**
-     * Set the profile password
+     * Set the profile password, Attribute conditional on `requiresAuthentication` being equal to `true`
      */
     profilePassword?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
      */
     profilePasswordVariable?: pulumi.Input<string>;
     /**
-     * Set the profile username
+     * Set the profile username, Attribute conditional on `requiresAuthentication` being equal to `true`
      */
     profileUsername?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
      */
     profileUsernameVariable?: pulumi.Input<string>;
+    /**
+     * Require authentication type - Default value: `false`
+     */
+    requiresAuthentication?: pulumi.Input<boolean>;
 }

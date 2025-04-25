@@ -568,14 +568,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `static`
      * 
      */
     @Import(name="ipv4AddressVariable")
     private @Nullable Output<String> ipv4AddressVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `static`
      * 
      */
     public Optional<Output<String>> ipv4AddressVariable() {
@@ -615,14 +615,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic`
      * 
      */
     @Import(name="ipv4DhcpDistanceVariable")
     private @Nullable Output<String> ipv4DhcpDistanceVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic`
      * 
      */
     public Optional<Output<String>> ipv4DhcpDistanceVariable() {
@@ -700,14 +700,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `static`
      * 
      */
     @Import(name="ipv4SubnetMaskVariable")
     private @Nullable Output<String> ipv4SubnetMaskVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `static`
      * 
      */
     public Optional<Output<String>> ipv4SubnetMaskVariable() {
@@ -730,14 +730,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `ipv6_configuration_type` being equal to `static`
      * 
      */
     @Import(name="ipv6AddressVariable")
     private @Nullable Output<String> ipv6AddressVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `ipv6_configuration_type` being equal to `static`
      * 
      */
     public Optional<Output<String>> ipv6AddressVariable() {
@@ -3889,7 +3889,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipv4AddressVariable Variable name
+         * @param ipv4AddressVariable Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `static`
          * 
          * @return builder
          * 
@@ -3900,7 +3900,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipv4AddressVariable Variable name
+         * @param ipv4AddressVariable Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `static`
          * 
          * @return builder
          * 
@@ -3954,7 +3954,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipv4DhcpDistanceVariable Variable name
+         * @param ipv4DhcpDistanceVariable Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic`
          * 
          * @return builder
          * 
@@ -3965,7 +3965,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipv4DhcpDistanceVariable Variable name
+         * @param ipv4DhcpDistanceVariable Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic`
          * 
          * @return builder
          * 
@@ -4089,7 +4089,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipv4SubnetMaskVariable Variable name
+         * @param ipv4SubnetMaskVariable Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `static`
          * 
          * @return builder
          * 
@@ -4100,7 +4100,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipv4SubnetMaskVariable Variable name
+         * @param ipv4SubnetMaskVariable Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `static`
          * 
          * @return builder
          * 
@@ -4131,7 +4131,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipv6AddressVariable Variable name
+         * @param ipv6AddressVariable Variable name, Attribute conditional on `ipv6_configuration_type` being equal to `static`
          * 
          * @return builder
          * 
@@ -4142,7 +4142,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipv6AddressVariable Variable name
+         * @param ipv6AddressVariable Variable name, Attribute conditional on `ipv6_configuration_type` being equal to `static`
          * 
          * @return builder
          * 

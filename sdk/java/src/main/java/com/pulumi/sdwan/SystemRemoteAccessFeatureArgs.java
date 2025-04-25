@@ -34,14 +34,14 @@ public final class SystemRemoteAccessFeatureArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
      * 
      */
     @Import(name="aaaDeriveNameFromPeerDomainVariable")
     private @Nullable Output<String> aaaDeriveNameFromPeerDomainVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
      * 
      */
     public Optional<Output<String>> aaaDeriveNameFromPeerDomainVariable() {
@@ -64,14 +64,14 @@ public final class SystemRemoteAccessFeatureArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
      * 
      */
     @Import(name="aaaDeriveNameFromPeerIdentityVariable")
     private @Nullable Output<String> aaaDeriveNameFromPeerIdentityVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
      * 
      */
     public Optional<Output<String>> aaaDeriveNameFromPeerIdentityVariable() {
@@ -260,14 +260,14 @@ public final class SystemRemoteAccessFeatureArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
      * 
      */
     @Import(name="ikev2AntiDosThresholdVariable")
     private @Nullable Output<String> ikev2AntiDosThresholdVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
      * 
      */
     public Optional<Output<String>> ikev2AntiDosThresholdVariable() {
@@ -292,14 +292,14 @@ public final class SystemRemoteAccessFeatureArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
      * 
      */
     @Import(name="ikev2LocalIkeIdentityTypeVariable")
     private @Nullable Output<String> ikev2LocalIkeIdentityTypeVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
      * 
      */
     public Optional<Output<String>> ikev2LocalIkeIdentityTypeVariable() {
@@ -322,14 +322,14 @@ public final class SystemRemoteAccessFeatureArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
      * 
      */
     @Import(name="ikev2LocalIkeIdentityValueVariable")
     private @Nullable Output<String> ikev2LocalIkeIdentityValueVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
      * 
      */
     public Optional<Output<String>> ikev2LocalIkeIdentityValueVariable() {
@@ -354,14 +354,14 @@ public final class SystemRemoteAccessFeatureArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
      * 
      */
     @Import(name="ikev2SecurityAssociationLifetimeVariable")
     private @Nullable Output<String> ikev2SecurityAssociationLifetimeVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
      * 
      */
     public Optional<Output<String>> ikev2SecurityAssociationLifetimeVariable() {
@@ -386,14 +386,14 @@ public final class SystemRemoteAccessFeatureArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `ipsec_enable_anti_replay` being equal to `true`
      * 
      */
     @Import(name="ipsecAntiReplayWindowSizeVariable")
     private @Nullable Output<String> ipsecAntiReplayWindowSizeVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `ipsec_enable_anti_replay` being equal to `true`
      * 
      */
     public Optional<Output<String>> ipsecAntiReplayWindowSizeVariable() {
@@ -416,14 +416,14 @@ public final class SystemRemoteAccessFeatureArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
      * 
      */
     @Import(name="ipsecEnableAntiReplayVariable")
     private @Nullable Output<String> ipsecEnableAntiReplayVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
      * 
      */
     public Optional<Output<String>> ipsecEnableAntiReplayVariable() {
@@ -448,14 +448,14 @@ public final class SystemRemoteAccessFeatureArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
      * 
      */
     @Import(name="ipsecEnablePerfectFowardSecrecyVariable")
     private @Nullable Output<String> ipsecEnablePerfectFowardSecrecyVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
      * 
      */
     public Optional<Output<String>> ipsecEnablePerfectFowardSecrecyVariable() {
@@ -480,14 +480,14 @@ public final class SystemRemoteAccessFeatureArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
      * 
      */
     @Import(name="ipsecSecurityAssociationLifetimeVariable")
     private @Nullable Output<String> ipsecSecurityAssociationLifetimeVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
      * 
      */
     public Optional<Output<String>> ipsecSecurityAssociationLifetimeVariable() {
@@ -585,14 +585,14 @@ public final class SystemRemoteAccessFeatureArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `psk_authentication_type` being equal to `group`
      * 
      */
     @Import(name="pskAuthenticationPreSharedKeyVariable")
     private @Nullable Output<String> pskAuthenticationPreSharedKeyVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `psk_authentication_type` being equal to `group`
      * 
      */
     public Optional<Output<String>> pskAuthenticationPreSharedKeyVariable() {
@@ -615,14 +615,14 @@ public final class SystemRemoteAccessFeatureArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
      * 
      */
     @Import(name="pskAuthenticationTypeVariable")
     private @Nullable Output<String> pskAuthenticationTypeVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
      * 
      */
     public Optional<Output<String>> pskAuthenticationTypeVariable() {
@@ -739,7 +739,7 @@ public final class SystemRemoteAccessFeatureArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param aaaDeriveNameFromPeerDomainVariable Variable name
+         * @param aaaDeriveNameFromPeerDomainVariable Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
          * 
          * @return builder
          * 
@@ -750,7 +750,7 @@ public final class SystemRemoteAccessFeatureArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param aaaDeriveNameFromPeerDomainVariable Variable name
+         * @param aaaDeriveNameFromPeerDomainVariable Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
          * 
          * @return builder
          * 
@@ -781,7 +781,7 @@ public final class SystemRemoteAccessFeatureArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param aaaDeriveNameFromPeerIdentityVariable Variable name
+         * @param aaaDeriveNameFromPeerIdentityVariable Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
          * 
          * @return builder
          * 
@@ -792,7 +792,7 @@ public final class SystemRemoteAccessFeatureArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param aaaDeriveNameFromPeerIdentityVariable Variable name
+         * @param aaaDeriveNameFromPeerIdentityVariable Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
          * 
          * @return builder
          * 
@@ -1053,7 +1053,7 @@ public final class SystemRemoteAccessFeatureArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param ikev2AntiDosThresholdVariable Variable name
+         * @param ikev2AntiDosThresholdVariable Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
          * 
          * @return builder
          * 
@@ -1064,7 +1064,7 @@ public final class SystemRemoteAccessFeatureArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param ikev2AntiDosThresholdVariable Variable name
+         * @param ikev2AntiDosThresholdVariable Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
          * 
          * @return builder
          * 
@@ -1097,7 +1097,7 @@ public final class SystemRemoteAccessFeatureArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param ikev2LocalIkeIdentityTypeVariable Variable name
+         * @param ikev2LocalIkeIdentityTypeVariable Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
          * 
          * @return builder
          * 
@@ -1108,7 +1108,7 @@ public final class SystemRemoteAccessFeatureArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param ikev2LocalIkeIdentityTypeVariable Variable name
+         * @param ikev2LocalIkeIdentityTypeVariable Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
          * 
          * @return builder
          * 
@@ -1139,7 +1139,7 @@ public final class SystemRemoteAccessFeatureArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param ikev2LocalIkeIdentityValueVariable Variable name
+         * @param ikev2LocalIkeIdentityValueVariable Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
          * 
          * @return builder
          * 
@@ -1150,7 +1150,7 @@ public final class SystemRemoteAccessFeatureArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param ikev2LocalIkeIdentityValueVariable Variable name
+         * @param ikev2LocalIkeIdentityValueVariable Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
          * 
          * @return builder
          * 
@@ -1183,7 +1183,7 @@ public final class SystemRemoteAccessFeatureArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param ikev2SecurityAssociationLifetimeVariable Variable name
+         * @param ikev2SecurityAssociationLifetimeVariable Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
          * 
          * @return builder
          * 
@@ -1194,7 +1194,7 @@ public final class SystemRemoteAccessFeatureArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param ikev2SecurityAssociationLifetimeVariable Variable name
+         * @param ikev2SecurityAssociationLifetimeVariable Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
          * 
          * @return builder
          * 
@@ -1227,7 +1227,7 @@ public final class SystemRemoteAccessFeatureArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param ipsecAntiReplayWindowSizeVariable Variable name
+         * @param ipsecAntiReplayWindowSizeVariable Variable name, Attribute conditional on `ipsec_enable_anti_replay` being equal to `true`
          * 
          * @return builder
          * 
@@ -1238,7 +1238,7 @@ public final class SystemRemoteAccessFeatureArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param ipsecAntiReplayWindowSizeVariable Variable name
+         * @param ipsecAntiReplayWindowSizeVariable Variable name, Attribute conditional on `ipsec_enable_anti_replay` being equal to `true`
          * 
          * @return builder
          * 
@@ -1269,7 +1269,7 @@ public final class SystemRemoteAccessFeatureArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param ipsecEnableAntiReplayVariable Variable name
+         * @param ipsecEnableAntiReplayVariable Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
          * 
          * @return builder
          * 
@@ -1280,7 +1280,7 @@ public final class SystemRemoteAccessFeatureArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param ipsecEnableAntiReplayVariable Variable name
+         * @param ipsecEnableAntiReplayVariable Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
          * 
          * @return builder
          * 
@@ -1313,7 +1313,7 @@ public final class SystemRemoteAccessFeatureArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param ipsecEnablePerfectFowardSecrecyVariable Variable name
+         * @param ipsecEnablePerfectFowardSecrecyVariable Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
          * 
          * @return builder
          * 
@@ -1324,7 +1324,7 @@ public final class SystemRemoteAccessFeatureArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param ipsecEnablePerfectFowardSecrecyVariable Variable name
+         * @param ipsecEnablePerfectFowardSecrecyVariable Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
          * 
          * @return builder
          * 
@@ -1357,7 +1357,7 @@ public final class SystemRemoteAccessFeatureArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param ipsecSecurityAssociationLifetimeVariable Variable name
+         * @param ipsecSecurityAssociationLifetimeVariable Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
          * 
          * @return builder
          * 
@@ -1368,7 +1368,7 @@ public final class SystemRemoteAccessFeatureArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param ipsecSecurityAssociationLifetimeVariable Variable name
+         * @param ipsecSecurityAssociationLifetimeVariable Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
          * 
          * @return builder
          * 
@@ -1504,7 +1504,7 @@ public final class SystemRemoteAccessFeatureArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param pskAuthenticationPreSharedKeyVariable Variable name
+         * @param pskAuthenticationPreSharedKeyVariable Variable name, Attribute conditional on `psk_authentication_type` being equal to `group`
          * 
          * @return builder
          * 
@@ -1515,7 +1515,7 @@ public final class SystemRemoteAccessFeatureArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param pskAuthenticationPreSharedKeyVariable Variable name
+         * @param pskAuthenticationPreSharedKeyVariable Variable name, Attribute conditional on `psk_authentication_type` being equal to `group`
          * 
          * @return builder
          * 
@@ -1546,7 +1546,7 @@ public final class SystemRemoteAccessFeatureArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param pskAuthenticationTypeVariable Variable name
+         * @param pskAuthenticationTypeVariable Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
          * 
          * @return builder
          * 
@@ -1557,7 +1557,7 @@ public final class SystemRemoteAccessFeatureArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param pskAuthenticationTypeVariable Variable name
+         * @param pskAuthenticationTypeVariable Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
          * 
          * @return builder
          * 

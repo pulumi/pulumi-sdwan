@@ -27,7 +27,6 @@ class TransportCellularProfileFeatureArgs:
                  authentication_type_variable: Optional[pulumi.Input[builtins.str]] = None,
                  description: Optional[pulumi.Input[builtins.str]] = None,
                  name: Optional[pulumi.Input[builtins.str]] = None,
-                 no_authentication: Optional[pulumi.Input[builtins.str]] = None,
                  no_overwrite: Optional[pulumi.Input[builtins.bool]] = None,
                  no_overwrite_variable: Optional[pulumi.Input[builtins.str]] = None,
                  packet_data_network_type: Optional[pulumi.Input[builtins.str]] = None,
@@ -37,27 +36,29 @@ class TransportCellularProfileFeatureArgs:
                  profile_password: Optional[pulumi.Input[builtins.str]] = None,
                  profile_password_variable: Optional[pulumi.Input[builtins.str]] = None,
                  profile_username: Optional[pulumi.Input[builtins.str]] = None,
-                 profile_username_variable: Optional[pulumi.Input[builtins.str]] = None):
+                 profile_username_variable: Optional[pulumi.Input[builtins.str]] = None,
+                 requires_authentication: Optional[pulumi.Input[builtins.bool]] = None):
         """
         The set of arguments for constructing a TransportCellularProfileFeature resource.
         :param pulumi.Input[builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[builtins.str] access_point_name: Set access point name
         :param pulumi.Input[builtins.str] access_point_name_variable: Variable name
-        :param pulumi.Input[builtins.str] authentication_type: Set authentication type - Choices: `pap`, `chap`, `pap_chap`
-        :param pulumi.Input[builtins.str] authentication_type_variable: Variable name
+        :param pulumi.Input[builtins.str] authentication_type: Set authentication type, Attribute conditional on `requires_authentication` being equal to `true` - Choices: `pap`,
+               `chap`, `pap_chap`
+        :param pulumi.Input[builtins.str] authentication_type_variable: Variable name, Attribute conditional on `requires_authentication` being equal to `true`
         :param pulumi.Input[builtins.str] description: The description of the Feature
         :param pulumi.Input[builtins.str] name: The name of the Feature
-        :param pulumi.Input[builtins.str] no_authentication: No Authentication
         :param pulumi.Input[builtins.bool] no_overwrite: No Overwrite
         :param pulumi.Input[builtins.str] no_overwrite_variable: Variable name
         :param pulumi.Input[builtins.str] packet_data_network_type: Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
         :param pulumi.Input[builtins.str] packet_data_network_type_variable: Variable name
         :param pulumi.Input[builtins.int] profile_id: Set Profile ID - Range: `1`-`16`
         :param pulumi.Input[builtins.str] profile_id_variable: Variable name
-        :param pulumi.Input[builtins.str] profile_password: Set the profile password
-        :param pulumi.Input[builtins.str] profile_password_variable: Variable name
-        :param pulumi.Input[builtins.str] profile_username: Set the profile username
-        :param pulumi.Input[builtins.str] profile_username_variable: Variable name
+        :param pulumi.Input[builtins.str] profile_password: Set the profile password, Attribute conditional on `requires_authentication` being equal to `true`
+        :param pulumi.Input[builtins.str] profile_password_variable: Variable name, Attribute conditional on `requires_authentication` being equal to `true`
+        :param pulumi.Input[builtins.str] profile_username: Set the profile username, Attribute conditional on `requires_authentication` being equal to `true`
+        :param pulumi.Input[builtins.str] profile_username_variable: Variable name, Attribute conditional on `requires_authentication` being equal to `true`
+        :param pulumi.Input[builtins.bool] requires_authentication: Require authentication type - Default value: `false`
         """
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
         if access_point_name is not None:
@@ -72,8 +73,6 @@ class TransportCellularProfileFeatureArgs:
             pulumi.set(__self__, "description", description)
         if name is not None:
             pulumi.set(__self__, "name", name)
-        if no_authentication is not None:
-            pulumi.set(__self__, "no_authentication", no_authentication)
         if no_overwrite is not None:
             pulumi.set(__self__, "no_overwrite", no_overwrite)
         if no_overwrite_variable is not None:
@@ -94,6 +93,8 @@ class TransportCellularProfileFeatureArgs:
             pulumi.set(__self__, "profile_username", profile_username)
         if profile_username_variable is not None:
             pulumi.set(__self__, "profile_username_variable", profile_username_variable)
+        if requires_authentication is not None:
+            pulumi.set(__self__, "requires_authentication", requires_authentication)
 
     @property
     @pulumi.getter(name="featureProfileId")
@@ -135,7 +136,8 @@ class TransportCellularProfileFeatureArgs:
     @pulumi.getter(name="authenticationType")
     def authentication_type(self) -> Optional[pulumi.Input[builtins.str]]:
         """
-        Set authentication type - Choices: `pap`, `chap`, `pap_chap`
+        Set authentication type, Attribute conditional on `requires_authentication` being equal to `true` - Choices: `pap`,
+        `chap`, `pap_chap`
         """
         return pulumi.get(self, "authentication_type")
 
@@ -147,7 +149,7 @@ class TransportCellularProfileFeatureArgs:
     @pulumi.getter(name="authenticationTypeVariable")
     def authentication_type_variable(self) -> Optional[pulumi.Input[builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `requires_authentication` being equal to `true`
         """
         return pulumi.get(self, "authentication_type_variable")
 
@@ -178,18 +180,6 @@ class TransportCellularProfileFeatureArgs:
     @name.setter
     def name(self, value: Optional[pulumi.Input[builtins.str]]):
         pulumi.set(self, "name", value)
-
-    @property
-    @pulumi.getter(name="noAuthentication")
-    def no_authentication(self) -> Optional[pulumi.Input[builtins.str]]:
-        """
-        No Authentication
-        """
-        return pulumi.get(self, "no_authentication")
-
-    @no_authentication.setter
-    def no_authentication(self, value: Optional[pulumi.Input[builtins.str]]):
-        pulumi.set(self, "no_authentication", value)
 
     @property
     @pulumi.getter(name="noOverwrite")
@@ -267,7 +257,7 @@ class TransportCellularProfileFeatureArgs:
     @pulumi.getter(name="profilePassword")
     def profile_password(self) -> Optional[pulumi.Input[builtins.str]]:
         """
-        Set the profile password
+        Set the profile password, Attribute conditional on `requires_authentication` being equal to `true`
         """
         return pulumi.get(self, "profile_password")
 
@@ -279,7 +269,7 @@ class TransportCellularProfileFeatureArgs:
     @pulumi.getter(name="profilePasswordVariable")
     def profile_password_variable(self) -> Optional[pulumi.Input[builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `requires_authentication` being equal to `true`
         """
         return pulumi.get(self, "profile_password_variable")
 
@@ -291,7 +281,7 @@ class TransportCellularProfileFeatureArgs:
     @pulumi.getter(name="profileUsername")
     def profile_username(self) -> Optional[pulumi.Input[builtins.str]]:
         """
-        Set the profile username
+        Set the profile username, Attribute conditional on `requires_authentication` being equal to `true`
         """
         return pulumi.get(self, "profile_username")
 
@@ -303,13 +293,25 @@ class TransportCellularProfileFeatureArgs:
     @pulumi.getter(name="profileUsernameVariable")
     def profile_username_variable(self) -> Optional[pulumi.Input[builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `requires_authentication` being equal to `true`
         """
         return pulumi.get(self, "profile_username_variable")
 
     @profile_username_variable.setter
     def profile_username_variable(self, value: Optional[pulumi.Input[builtins.str]]):
         pulumi.set(self, "profile_username_variable", value)
+
+    @property
+    @pulumi.getter(name="requiresAuthentication")
+    def requires_authentication(self) -> Optional[pulumi.Input[builtins.bool]]:
+        """
+        Require authentication type - Default value: `false`
+        """
+        return pulumi.get(self, "requires_authentication")
+
+    @requires_authentication.setter
+    def requires_authentication(self, value: Optional[pulumi.Input[builtins.bool]]):
+        pulumi.set(self, "requires_authentication", value)
 
 
 @pulumi.input_type
@@ -322,7 +324,6 @@ class _TransportCellularProfileFeatureState:
                  description: Optional[pulumi.Input[builtins.str]] = None,
                  feature_profile_id: Optional[pulumi.Input[builtins.str]] = None,
                  name: Optional[pulumi.Input[builtins.str]] = None,
-                 no_authentication: Optional[pulumi.Input[builtins.str]] = None,
                  no_overwrite: Optional[pulumi.Input[builtins.bool]] = None,
                  no_overwrite_variable: Optional[pulumi.Input[builtins.str]] = None,
                  packet_data_network_type: Optional[pulumi.Input[builtins.str]] = None,
@@ -333,27 +334,29 @@ class _TransportCellularProfileFeatureState:
                  profile_password_variable: Optional[pulumi.Input[builtins.str]] = None,
                  profile_username: Optional[pulumi.Input[builtins.str]] = None,
                  profile_username_variable: Optional[pulumi.Input[builtins.str]] = None,
+                 requires_authentication: Optional[pulumi.Input[builtins.bool]] = None,
                  version: Optional[pulumi.Input[builtins.int]] = None):
         """
         Input properties used for looking up and filtering TransportCellularProfileFeature resources.
         :param pulumi.Input[builtins.str] access_point_name: Set access point name
         :param pulumi.Input[builtins.str] access_point_name_variable: Variable name
-        :param pulumi.Input[builtins.str] authentication_type: Set authentication type - Choices: `pap`, `chap`, `pap_chap`
-        :param pulumi.Input[builtins.str] authentication_type_variable: Variable name
+        :param pulumi.Input[builtins.str] authentication_type: Set authentication type, Attribute conditional on `requires_authentication` being equal to `true` - Choices: `pap`,
+               `chap`, `pap_chap`
+        :param pulumi.Input[builtins.str] authentication_type_variable: Variable name, Attribute conditional on `requires_authentication` being equal to `true`
         :param pulumi.Input[builtins.str] description: The description of the Feature
         :param pulumi.Input[builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[builtins.str] name: The name of the Feature
-        :param pulumi.Input[builtins.str] no_authentication: No Authentication
         :param pulumi.Input[builtins.bool] no_overwrite: No Overwrite
         :param pulumi.Input[builtins.str] no_overwrite_variable: Variable name
         :param pulumi.Input[builtins.str] packet_data_network_type: Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
         :param pulumi.Input[builtins.str] packet_data_network_type_variable: Variable name
         :param pulumi.Input[builtins.int] profile_id: Set Profile ID - Range: `1`-`16`
         :param pulumi.Input[builtins.str] profile_id_variable: Variable name
-        :param pulumi.Input[builtins.str] profile_password: Set the profile password
-        :param pulumi.Input[builtins.str] profile_password_variable: Variable name
-        :param pulumi.Input[builtins.str] profile_username: Set the profile username
-        :param pulumi.Input[builtins.str] profile_username_variable: Variable name
+        :param pulumi.Input[builtins.str] profile_password: Set the profile password, Attribute conditional on `requires_authentication` being equal to `true`
+        :param pulumi.Input[builtins.str] profile_password_variable: Variable name, Attribute conditional on `requires_authentication` being equal to `true`
+        :param pulumi.Input[builtins.str] profile_username: Set the profile username, Attribute conditional on `requires_authentication` being equal to `true`
+        :param pulumi.Input[builtins.str] profile_username_variable: Variable name, Attribute conditional on `requires_authentication` being equal to `true`
+        :param pulumi.Input[builtins.bool] requires_authentication: Require authentication type - Default value: `false`
         :param pulumi.Input[builtins.int] version: The version of the Feature
         """
         if access_point_name is not None:
@@ -370,8 +373,6 @@ class _TransportCellularProfileFeatureState:
             pulumi.set(__self__, "feature_profile_id", feature_profile_id)
         if name is not None:
             pulumi.set(__self__, "name", name)
-        if no_authentication is not None:
-            pulumi.set(__self__, "no_authentication", no_authentication)
         if no_overwrite is not None:
             pulumi.set(__self__, "no_overwrite", no_overwrite)
         if no_overwrite_variable is not None:
@@ -392,6 +393,8 @@ class _TransportCellularProfileFeatureState:
             pulumi.set(__self__, "profile_username", profile_username)
         if profile_username_variable is not None:
             pulumi.set(__self__, "profile_username_variable", profile_username_variable)
+        if requires_authentication is not None:
+            pulumi.set(__self__, "requires_authentication", requires_authentication)
         if version is not None:
             pulumi.set(__self__, "version", version)
 
@@ -423,7 +426,8 @@ class _TransportCellularProfileFeatureState:
     @pulumi.getter(name="authenticationType")
     def authentication_type(self) -> Optional[pulumi.Input[builtins.str]]:
         """
-        Set authentication type - Choices: `pap`, `chap`, `pap_chap`
+        Set authentication type, Attribute conditional on `requires_authentication` being equal to `true` - Choices: `pap`,
+        `chap`, `pap_chap`
         """
         return pulumi.get(self, "authentication_type")
 
@@ -435,7 +439,7 @@ class _TransportCellularProfileFeatureState:
     @pulumi.getter(name="authenticationTypeVariable")
     def authentication_type_variable(self) -> Optional[pulumi.Input[builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `requires_authentication` being equal to `true`
         """
         return pulumi.get(self, "authentication_type_variable")
 
@@ -480,18 +484,6 @@ class _TransportCellularProfileFeatureState:
         pulumi.set(self, "name", value)
 
     @property
-    @pulumi.getter(name="noAuthentication")
-    def no_authentication(self) -> Optional[pulumi.Input[builtins.str]]:
-        """
-        No Authentication
-        """
-        return pulumi.get(self, "no_authentication")
-
-    @no_authentication.setter
-    def no_authentication(self, value: Optional[pulumi.Input[builtins.str]]):
-        pulumi.set(self, "no_authentication", value)
-
-    @property
     @pulumi.getter(name="noOverwrite")
     def no_overwrite(self) -> Optional[pulumi.Input[builtins.bool]]:
         """
@@ -567,7 +559,7 @@ class _TransportCellularProfileFeatureState:
     @pulumi.getter(name="profilePassword")
     def profile_password(self) -> Optional[pulumi.Input[builtins.str]]:
         """
-        Set the profile password
+        Set the profile password, Attribute conditional on `requires_authentication` being equal to `true`
         """
         return pulumi.get(self, "profile_password")
 
@@ -579,7 +571,7 @@ class _TransportCellularProfileFeatureState:
     @pulumi.getter(name="profilePasswordVariable")
     def profile_password_variable(self) -> Optional[pulumi.Input[builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `requires_authentication` being equal to `true`
         """
         return pulumi.get(self, "profile_password_variable")
 
@@ -591,7 +583,7 @@ class _TransportCellularProfileFeatureState:
     @pulumi.getter(name="profileUsername")
     def profile_username(self) -> Optional[pulumi.Input[builtins.str]]:
         """
-        Set the profile username
+        Set the profile username, Attribute conditional on `requires_authentication` being equal to `true`
         """
         return pulumi.get(self, "profile_username")
 
@@ -603,13 +595,25 @@ class _TransportCellularProfileFeatureState:
     @pulumi.getter(name="profileUsernameVariable")
     def profile_username_variable(self) -> Optional[pulumi.Input[builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `requires_authentication` being equal to `true`
         """
         return pulumi.get(self, "profile_username_variable")
 
     @profile_username_variable.setter
     def profile_username_variable(self, value: Optional[pulumi.Input[builtins.str]]):
         pulumi.set(self, "profile_username_variable", value)
+
+    @property
+    @pulumi.getter(name="requiresAuthentication")
+    def requires_authentication(self) -> Optional[pulumi.Input[builtins.bool]]:
+        """
+        Require authentication type - Default value: `false`
+        """
+        return pulumi.get(self, "requires_authentication")
+
+    @requires_authentication.setter
+    def requires_authentication(self, value: Optional[pulumi.Input[builtins.bool]]):
+        pulumi.set(self, "requires_authentication", value)
 
     @property
     @pulumi.getter
@@ -636,7 +640,6 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
                  description: Optional[pulumi.Input[builtins.str]] = None,
                  feature_profile_id: Optional[pulumi.Input[builtins.str]] = None,
                  name: Optional[pulumi.Input[builtins.str]] = None,
-                 no_authentication: Optional[pulumi.Input[builtins.str]] = None,
                  no_overwrite: Optional[pulumi.Input[builtins.bool]] = None,
                  no_overwrite_variable: Optional[pulumi.Input[builtins.str]] = None,
                  packet_data_network_type: Optional[pulumi.Input[builtins.str]] = None,
@@ -647,6 +650,7 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
                  profile_password_variable: Optional[pulumi.Input[builtins.str]] = None,
                  profile_username: Optional[pulumi.Input[builtins.str]] = None,
                  profile_username_variable: Optional[pulumi.Input[builtins.str]] = None,
+                 requires_authentication: Optional[pulumi.Input[builtins.bool]] = None,
                  __props__=None):
         """
         This resource can manage a Transport Cellular Profile Feature.
@@ -664,6 +668,7 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
             feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
             profile_id=1,
             access_point_name="apn1",
+            requires_authentication=True,
             authentication_type="pap",
             profile_username="example",
             profile_password="example123!",
@@ -683,22 +688,23 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[builtins.str] access_point_name: Set access point name
         :param pulumi.Input[builtins.str] access_point_name_variable: Variable name
-        :param pulumi.Input[builtins.str] authentication_type: Set authentication type - Choices: `pap`, `chap`, `pap_chap`
-        :param pulumi.Input[builtins.str] authentication_type_variable: Variable name
+        :param pulumi.Input[builtins.str] authentication_type: Set authentication type, Attribute conditional on `requires_authentication` being equal to `true` - Choices: `pap`,
+               `chap`, `pap_chap`
+        :param pulumi.Input[builtins.str] authentication_type_variable: Variable name, Attribute conditional on `requires_authentication` being equal to `true`
         :param pulumi.Input[builtins.str] description: The description of the Feature
         :param pulumi.Input[builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[builtins.str] name: The name of the Feature
-        :param pulumi.Input[builtins.str] no_authentication: No Authentication
         :param pulumi.Input[builtins.bool] no_overwrite: No Overwrite
         :param pulumi.Input[builtins.str] no_overwrite_variable: Variable name
         :param pulumi.Input[builtins.str] packet_data_network_type: Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
         :param pulumi.Input[builtins.str] packet_data_network_type_variable: Variable name
         :param pulumi.Input[builtins.int] profile_id: Set Profile ID - Range: `1`-`16`
         :param pulumi.Input[builtins.str] profile_id_variable: Variable name
-        :param pulumi.Input[builtins.str] profile_password: Set the profile password
-        :param pulumi.Input[builtins.str] profile_password_variable: Variable name
-        :param pulumi.Input[builtins.str] profile_username: Set the profile username
-        :param pulumi.Input[builtins.str] profile_username_variable: Variable name
+        :param pulumi.Input[builtins.str] profile_password: Set the profile password, Attribute conditional on `requires_authentication` being equal to `true`
+        :param pulumi.Input[builtins.str] profile_password_variable: Variable name, Attribute conditional on `requires_authentication` being equal to `true`
+        :param pulumi.Input[builtins.str] profile_username: Set the profile username, Attribute conditional on `requires_authentication` being equal to `true`
+        :param pulumi.Input[builtins.str] profile_username_variable: Variable name, Attribute conditional on `requires_authentication` being equal to `true`
+        :param pulumi.Input[builtins.bool] requires_authentication: Require authentication type - Default value: `false`
         """
         ...
     @overload
@@ -722,6 +728,7 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
             feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
             profile_id=1,
             access_point_name="apn1",
+            requires_authentication=True,
             authentication_type="pap",
             profile_username="example",
             profile_password="example123!",
@@ -759,7 +766,6 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
                  description: Optional[pulumi.Input[builtins.str]] = None,
                  feature_profile_id: Optional[pulumi.Input[builtins.str]] = None,
                  name: Optional[pulumi.Input[builtins.str]] = None,
-                 no_authentication: Optional[pulumi.Input[builtins.str]] = None,
                  no_overwrite: Optional[pulumi.Input[builtins.bool]] = None,
                  no_overwrite_variable: Optional[pulumi.Input[builtins.str]] = None,
                  packet_data_network_type: Optional[pulumi.Input[builtins.str]] = None,
@@ -770,6 +776,7 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
                  profile_password_variable: Optional[pulumi.Input[builtins.str]] = None,
                  profile_username: Optional[pulumi.Input[builtins.str]] = None,
                  profile_username_variable: Optional[pulumi.Input[builtins.str]] = None,
+                 requires_authentication: Optional[pulumi.Input[builtins.bool]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -788,7 +795,6 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
                 raise TypeError("Missing required property 'feature_profile_id'")
             __props__.__dict__["feature_profile_id"] = feature_profile_id
             __props__.__dict__["name"] = name
-            __props__.__dict__["no_authentication"] = no_authentication
             __props__.__dict__["no_overwrite"] = no_overwrite
             __props__.__dict__["no_overwrite_variable"] = no_overwrite_variable
             __props__.__dict__["packet_data_network_type"] = packet_data_network_type
@@ -799,6 +805,7 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
             __props__.__dict__["profile_password_variable"] = profile_password_variable
             __props__.__dict__["profile_username"] = profile_username
             __props__.__dict__["profile_username_variable"] = profile_username_variable
+            __props__.__dict__["requires_authentication"] = requires_authentication
             __props__.__dict__["version"] = None
         super(TransportCellularProfileFeature, __self__).__init__(
             'sdwan:index/transportCellularProfileFeature:TransportCellularProfileFeature',
@@ -817,7 +824,6 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
             description: Optional[pulumi.Input[builtins.str]] = None,
             feature_profile_id: Optional[pulumi.Input[builtins.str]] = None,
             name: Optional[pulumi.Input[builtins.str]] = None,
-            no_authentication: Optional[pulumi.Input[builtins.str]] = None,
             no_overwrite: Optional[pulumi.Input[builtins.bool]] = None,
             no_overwrite_variable: Optional[pulumi.Input[builtins.str]] = None,
             packet_data_network_type: Optional[pulumi.Input[builtins.str]] = None,
@@ -828,6 +834,7 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
             profile_password_variable: Optional[pulumi.Input[builtins.str]] = None,
             profile_username: Optional[pulumi.Input[builtins.str]] = None,
             profile_username_variable: Optional[pulumi.Input[builtins.str]] = None,
+            requires_authentication: Optional[pulumi.Input[builtins.bool]] = None,
             version: Optional[pulumi.Input[builtins.int]] = None) -> 'TransportCellularProfileFeature':
         """
         Get an existing TransportCellularProfileFeature resource's state with the given name, id, and optional extra
@@ -838,22 +845,23 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[builtins.str] access_point_name: Set access point name
         :param pulumi.Input[builtins.str] access_point_name_variable: Variable name
-        :param pulumi.Input[builtins.str] authentication_type: Set authentication type - Choices: `pap`, `chap`, `pap_chap`
-        :param pulumi.Input[builtins.str] authentication_type_variable: Variable name
+        :param pulumi.Input[builtins.str] authentication_type: Set authentication type, Attribute conditional on `requires_authentication` being equal to `true` - Choices: `pap`,
+               `chap`, `pap_chap`
+        :param pulumi.Input[builtins.str] authentication_type_variable: Variable name, Attribute conditional on `requires_authentication` being equal to `true`
         :param pulumi.Input[builtins.str] description: The description of the Feature
         :param pulumi.Input[builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[builtins.str] name: The name of the Feature
-        :param pulumi.Input[builtins.str] no_authentication: No Authentication
         :param pulumi.Input[builtins.bool] no_overwrite: No Overwrite
         :param pulumi.Input[builtins.str] no_overwrite_variable: Variable name
         :param pulumi.Input[builtins.str] packet_data_network_type: Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
         :param pulumi.Input[builtins.str] packet_data_network_type_variable: Variable name
         :param pulumi.Input[builtins.int] profile_id: Set Profile ID - Range: `1`-`16`
         :param pulumi.Input[builtins.str] profile_id_variable: Variable name
-        :param pulumi.Input[builtins.str] profile_password: Set the profile password
-        :param pulumi.Input[builtins.str] profile_password_variable: Variable name
-        :param pulumi.Input[builtins.str] profile_username: Set the profile username
-        :param pulumi.Input[builtins.str] profile_username_variable: Variable name
+        :param pulumi.Input[builtins.str] profile_password: Set the profile password, Attribute conditional on `requires_authentication` being equal to `true`
+        :param pulumi.Input[builtins.str] profile_password_variable: Variable name, Attribute conditional on `requires_authentication` being equal to `true`
+        :param pulumi.Input[builtins.str] profile_username: Set the profile username, Attribute conditional on `requires_authentication` being equal to `true`
+        :param pulumi.Input[builtins.str] profile_username_variable: Variable name, Attribute conditional on `requires_authentication` being equal to `true`
+        :param pulumi.Input[builtins.bool] requires_authentication: Require authentication type - Default value: `false`
         :param pulumi.Input[builtins.int] version: The version of the Feature
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -867,7 +875,6 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
         __props__.__dict__["description"] = description
         __props__.__dict__["feature_profile_id"] = feature_profile_id
         __props__.__dict__["name"] = name
-        __props__.__dict__["no_authentication"] = no_authentication
         __props__.__dict__["no_overwrite"] = no_overwrite
         __props__.__dict__["no_overwrite_variable"] = no_overwrite_variable
         __props__.__dict__["packet_data_network_type"] = packet_data_network_type
@@ -878,6 +885,7 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
         __props__.__dict__["profile_password_variable"] = profile_password_variable
         __props__.__dict__["profile_username"] = profile_username
         __props__.__dict__["profile_username_variable"] = profile_username_variable
+        __props__.__dict__["requires_authentication"] = requires_authentication
         __props__.__dict__["version"] = version
         return TransportCellularProfileFeature(resource_name, opts=opts, __props__=__props__)
 
@@ -901,7 +909,8 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
     @pulumi.getter(name="authenticationType")
     def authentication_type(self) -> pulumi.Output[Optional[builtins.str]]:
         """
-        Set authentication type - Choices: `pap`, `chap`, `pap_chap`
+        Set authentication type, Attribute conditional on `requires_authentication` being equal to `true` - Choices: `pap`,
+        `chap`, `pap_chap`
         """
         return pulumi.get(self, "authentication_type")
 
@@ -909,7 +918,7 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
     @pulumi.getter(name="authenticationTypeVariable")
     def authentication_type_variable(self) -> pulumi.Output[Optional[builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `requires_authentication` being equal to `true`
         """
         return pulumi.get(self, "authentication_type_variable")
 
@@ -936,14 +945,6 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
         The name of the Feature
         """
         return pulumi.get(self, "name")
-
-    @property
-    @pulumi.getter(name="noAuthentication")
-    def no_authentication(self) -> pulumi.Output[Optional[builtins.str]]:
-        """
-        No Authentication
-        """
-        return pulumi.get(self, "no_authentication")
 
     @property
     @pulumi.getter(name="noOverwrite")
@@ -997,7 +998,7 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
     @pulumi.getter(name="profilePassword")
     def profile_password(self) -> pulumi.Output[Optional[builtins.str]]:
         """
-        Set the profile password
+        Set the profile password, Attribute conditional on `requires_authentication` being equal to `true`
         """
         return pulumi.get(self, "profile_password")
 
@@ -1005,7 +1006,7 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
     @pulumi.getter(name="profilePasswordVariable")
     def profile_password_variable(self) -> pulumi.Output[Optional[builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `requires_authentication` being equal to `true`
         """
         return pulumi.get(self, "profile_password_variable")
 
@@ -1013,7 +1014,7 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
     @pulumi.getter(name="profileUsername")
     def profile_username(self) -> pulumi.Output[Optional[builtins.str]]:
         """
-        Set the profile username
+        Set the profile username, Attribute conditional on `requires_authentication` being equal to `true`
         """
         return pulumi.get(self, "profile_username")
 
@@ -1021,9 +1022,17 @@ class TransportCellularProfileFeature(pulumi.CustomResource):
     @pulumi.getter(name="profileUsernameVariable")
     def profile_username_variable(self) -> pulumi.Output[Optional[builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `requires_authentication` being equal to `true`
         """
         return pulumi.get(self, "profile_username_variable")
+
+    @property
+    @pulumi.getter(name="requiresAuthentication")
+    def requires_authentication(self) -> pulumi.Output[Optional[builtins.bool]]:
+        """
+        Require authentication type - Default value: `false`
+        """
+        return pulumi.get(self, "requires_authentication")
 
     @property
     @pulumi.getter

@@ -27,7 +27,7 @@ class GetTransportCellularProfileFeatureResult:
     """
     A collection of values returned by getTransportCellularProfileFeature.
     """
-    def __init__(__self__, access_point_name=None, access_point_name_variable=None, authentication_type=None, authentication_type_variable=None, description=None, feature_profile_id=None, id=None, name=None, no_authentication=None, no_overwrite=None, no_overwrite_variable=None, packet_data_network_type=None, packet_data_network_type_variable=None, profile_id=None, profile_id_variable=None, profile_password=None, profile_password_variable=None, profile_username=None, profile_username_variable=None, version=None):
+    def __init__(__self__, access_point_name=None, access_point_name_variable=None, authentication_type=None, authentication_type_variable=None, description=None, feature_profile_id=None, id=None, name=None, no_overwrite=None, no_overwrite_variable=None, packet_data_network_type=None, packet_data_network_type_variable=None, profile_id=None, profile_id_variable=None, profile_password=None, profile_password_variable=None, profile_username=None, profile_username_variable=None, requires_authentication=None, version=None):
         if access_point_name and not isinstance(access_point_name, str):
             raise TypeError("Expected argument 'access_point_name' to be a str")
         pulumi.set(__self__, "access_point_name", access_point_name)
@@ -52,9 +52,6 @@ class GetTransportCellularProfileFeatureResult:
         if name and not isinstance(name, str):
             raise TypeError("Expected argument 'name' to be a str")
         pulumi.set(__self__, "name", name)
-        if no_authentication and not isinstance(no_authentication, str):
-            raise TypeError("Expected argument 'no_authentication' to be a str")
-        pulumi.set(__self__, "no_authentication", no_authentication)
         if no_overwrite and not isinstance(no_overwrite, bool):
             raise TypeError("Expected argument 'no_overwrite' to be a bool")
         pulumi.set(__self__, "no_overwrite", no_overwrite)
@@ -85,6 +82,9 @@ class GetTransportCellularProfileFeatureResult:
         if profile_username_variable and not isinstance(profile_username_variable, str):
             raise TypeError("Expected argument 'profile_username_variable' to be a str")
         pulumi.set(__self__, "profile_username_variable", profile_username_variable)
+        if requires_authentication and not isinstance(requires_authentication, bool):
+            raise TypeError("Expected argument 'requires_authentication' to be a bool")
+        pulumi.set(__self__, "requires_authentication", requires_authentication)
         if version and not isinstance(version, int):
             raise TypeError("Expected argument 'version' to be a int")
         pulumi.set(__self__, "version", version)
@@ -152,14 +152,6 @@ class GetTransportCellularProfileFeatureResult:
         The name of the Feature
         """
         return pulumi.get(self, "name")
-
-    @property
-    @pulumi.getter(name="noAuthentication")
-    def no_authentication(self) -> builtins.str:
-        """
-        No Authentication
-        """
-        return pulumi.get(self, "no_authentication")
 
     @property
     @pulumi.getter(name="noOverwrite")
@@ -242,6 +234,14 @@ class GetTransportCellularProfileFeatureResult:
         return pulumi.get(self, "profile_username_variable")
 
     @property
+    @pulumi.getter(name="requiresAuthentication")
+    def requires_authentication(self) -> builtins.bool:
+        """
+        Require authentication type
+        """
+        return pulumi.get(self, "requires_authentication")
+
+    @property
     @pulumi.getter
     def version(self) -> builtins.int:
         """
@@ -264,7 +264,6 @@ class AwaitableGetTransportCellularProfileFeatureResult(GetTransportCellularProf
             feature_profile_id=self.feature_profile_id,
             id=self.id,
             name=self.name,
-            no_authentication=self.no_authentication,
             no_overwrite=self.no_overwrite,
             no_overwrite_variable=self.no_overwrite_variable,
             packet_data_network_type=self.packet_data_network_type,
@@ -275,6 +274,7 @@ class AwaitableGetTransportCellularProfileFeatureResult(GetTransportCellularProf
             profile_password_variable=self.profile_password_variable,
             profile_username=self.profile_username,
             profile_username_variable=self.profile_username_variable,
+            requires_authentication=self.requires_authentication,
             version=self.version)
 
 
@@ -313,7 +313,6 @@ def get_transport_cellular_profile_feature(feature_profile_id: Optional[builtins
         feature_profile_id=pulumi.get(__ret__, 'feature_profile_id'),
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'),
-        no_authentication=pulumi.get(__ret__, 'no_authentication'),
         no_overwrite=pulumi.get(__ret__, 'no_overwrite'),
         no_overwrite_variable=pulumi.get(__ret__, 'no_overwrite_variable'),
         packet_data_network_type=pulumi.get(__ret__, 'packet_data_network_type'),
@@ -324,6 +323,7 @@ def get_transport_cellular_profile_feature(feature_profile_id: Optional[builtins
         profile_password_variable=pulumi.get(__ret__, 'profile_password_variable'),
         profile_username=pulumi.get(__ret__, 'profile_username'),
         profile_username_variable=pulumi.get(__ret__, 'profile_username_variable'),
+        requires_authentication=pulumi.get(__ret__, 'requires_authentication'),
         version=pulumi.get(__ret__, 'version'))
 def get_transport_cellular_profile_feature_output(feature_profile_id: Optional[pulumi.Input[builtins.str]] = None,
                                                   id: Optional[pulumi.Input[builtins.str]] = None,
@@ -359,7 +359,6 @@ def get_transport_cellular_profile_feature_output(feature_profile_id: Optional[p
         feature_profile_id=pulumi.get(__response__, 'feature_profile_id'),
         id=pulumi.get(__response__, 'id'),
         name=pulumi.get(__response__, 'name'),
-        no_authentication=pulumi.get(__response__, 'no_authentication'),
         no_overwrite=pulumi.get(__response__, 'no_overwrite'),
         no_overwrite_variable=pulumi.get(__response__, 'no_overwrite_variable'),
         packet_data_network_type=pulumi.get(__response__, 'packet_data_network_type'),
@@ -370,4 +369,5 @@ def get_transport_cellular_profile_feature_output(feature_profile_id: Optional[p
         profile_password_variable=pulumi.get(__response__, 'profile_password_variable'),
         profile_username=pulumi.get(__response__, 'profile_username'),
         profile_username_variable=pulumi.get(__response__, 'profile_username_variable'),
+        requires_authentication=pulumi.get(__response__, 'requires_authentication'),
         version=pulumi.get(__response__, 'version')))

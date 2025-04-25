@@ -91,7 +91,7 @@ export class ServiceRoutingEigrpFeature extends pulumi.CustomResource {
      */
     public readonly hmacAuthenticationKey!: pulumi.Output<string | undefined>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
      */
     public readonly hmacAuthenticationKeyVariable!: pulumi.Output<string | undefined>;
     /**
@@ -246,7 +246,7 @@ export interface ServiceRoutingEigrpFeatureState {
      */
     hmacAuthenticationKey?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
      */
     hmacAuthenticationKeyVariable?: pulumi.Input<string>;
     /**
@@ -333,7 +333,7 @@ export interface ServiceRoutingEigrpFeatureArgs {
      */
     hmacAuthenticationKey?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
      */
     hmacAuthenticationKeyVariable?: pulumi.Input<string>;
     /**

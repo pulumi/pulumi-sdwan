@@ -165,10 +165,6 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// No Authentication
-        /// </summary>
-        public readonly string NoAuthentication;
-        /// <summary>
         /// No Overwrite
         /// </summary>
         public readonly bool NoOverwrite;
@@ -209,6 +205,10 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string ProfileUsernameVariable;
         /// <summary>
+        /// Require authentication type
+        /// </summary>
+        public readonly bool RequiresAuthentication;
+        /// <summary>
         /// The version of the Feature
         /// </summary>
         public readonly int Version;
@@ -231,8 +231,6 @@ namespace Pulumi.Sdwan
 
             string name,
 
-            string noAuthentication,
-
             bool noOverwrite,
 
             string noOverwriteVariable,
@@ -253,6 +251,8 @@ namespace Pulumi.Sdwan
 
             string profileUsernameVariable,
 
+            bool requiresAuthentication,
+
             int version)
         {
             AccessPointName = accessPointName;
@@ -263,7 +263,6 @@ namespace Pulumi.Sdwan
             FeatureProfileId = featureProfileId;
             Id = id;
             Name = name;
-            NoAuthentication = noAuthentication;
             NoOverwrite = noOverwrite;
             NoOverwriteVariable = noOverwriteVariable;
             PacketDataNetworkType = packetDataNetworkType;
@@ -274,6 +273,7 @@ namespace Pulumi.Sdwan
             ProfilePasswordVariable = profilePasswordVariable;
             ProfileUsername = profileUsername;
             ProfileUsernameVariable = profileUsernameVariable;
+            RequiresAuthentication = requiresAuthentication;
             Version = version;
         }
     }

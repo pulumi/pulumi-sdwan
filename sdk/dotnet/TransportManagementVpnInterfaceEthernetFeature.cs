@@ -158,7 +158,7 @@ namespace Pulumi.Sdwan
         public Output<string?> Ipv4Address { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `static`
         /// </summary>
         [Output("ipv4AddressVariable")]
         public Output<string?> Ipv4AddressVariable { get; private set; } = null!;
@@ -189,7 +189,7 @@ namespace Pulumi.Sdwan
         public Output<int?> Ipv4DhcpDistance { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic`
         /// </summary>
         [Output("ipv4DhcpDistanceVariable")]
         public Output<string?> Ipv4DhcpDistanceVariable { get; private set; } = null!;
@@ -236,7 +236,7 @@ namespace Pulumi.Sdwan
         public Output<string?> Ipv4SubnetMask { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `static`
         /// </summary>
         [Output("ipv4SubnetMaskVariable")]
         public Output<string?> Ipv4SubnetMaskVariable { get; private set; } = null!;
@@ -248,7 +248,7 @@ namespace Pulumi.Sdwan
         public Output<string?> Ipv6Address { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `ipv6_configuration_type` being equal to `static`
         /// </summary>
         [Output("ipv6AddressVariable")]
         public Output<string?> Ipv6AddressVariable { get; private set; } = null!;
@@ -535,7 +535,7 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4Address { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `static`
         /// </summary>
         [Input("ipv4AddressVariable")]
         public Input<string>? Ipv4AddressVariable { get; set; }
@@ -566,7 +566,7 @@ namespace Pulumi.Sdwan
         public Input<int>? Ipv4DhcpDistance { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic`
         /// </summary>
         [Input("ipv4DhcpDistanceVariable")]
         public Input<string>? Ipv4DhcpDistanceVariable { get; set; }
@@ -625,7 +625,7 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4SubnetMask { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `static`
         /// </summary>
         [Input("ipv4SubnetMaskVariable")]
         public Input<string>? Ipv4SubnetMaskVariable { get; set; }
@@ -637,7 +637,7 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv6Address { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `ipv6_configuration_type` being equal to `static`
         /// </summary>
         [Input("ipv6AddressVariable")]
         public Input<string>? Ipv6AddressVariable { get; set; }
@@ -880,7 +880,7 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4Address { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `static`
         /// </summary>
         [Input("ipv4AddressVariable")]
         public Input<string>? Ipv4AddressVariable { get; set; }
@@ -911,7 +911,7 @@ namespace Pulumi.Sdwan
         public Input<int>? Ipv4DhcpDistance { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic`
         /// </summary>
         [Input("ipv4DhcpDistanceVariable")]
         public Input<string>? Ipv4DhcpDistanceVariable { get; set; }
@@ -970,7 +970,7 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4SubnetMask { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `static`
         /// </summary>
         [Input("ipv4SubnetMaskVariable")]
         public Input<string>? Ipv4SubnetMaskVariable { get; set; }
@@ -982,7 +982,7 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv6Address { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `ipv6_configuration_type` being equal to `static`
         /// </summary>
         [Input("ipv6AddressVariable")]
         public Input<string>? Ipv6AddressVariable { get; set; }

@@ -27,7 +27,7 @@ public final class TransportManagementVpnFeatureIpv6StaticRoute {
      */
     private @Nullable String nat;
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `gateway` being equal to `nat`
      * 
      */
     private @Nullable String natVariable;
@@ -70,7 +70,7 @@ public final class TransportManagementVpnFeatureIpv6StaticRoute {
         return Optional.ofNullable(this.nat);
     }
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `gateway` being equal to `nat`
      * 
      */
     public Optional<String> natVariable() {

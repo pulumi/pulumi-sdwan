@@ -547,14 +547,14 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.ipv4Address);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `static`
      * 
      */
     @Export(name="ipv4AddressVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4AddressVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `static`
      * 
      */
     public Output<Optional<String>> ipv4AddressVariable() {
@@ -591,14 +591,14 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.ipv4DhcpDistance);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic`
      * 
      */
     @Export(name="ipv4DhcpDistanceVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4DhcpDistanceVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic`
      * 
      */
     public Output<Optional<String>> ipv4DhcpDistanceVariable() {
@@ -671,14 +671,14 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.ipv4SubnetMask);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `static`
      * 
      */
     @Export(name="ipv4SubnetMaskVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4SubnetMaskVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `static`
      * 
      */
     public Output<Optional<String>> ipv4SubnetMaskVariable() {
@@ -699,14 +699,14 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.ipv6Address);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `ipv6_configuration_type` being equal to `static`
      * 
      */
     @Export(name="ipv6AddressVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv6AddressVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `ipv6_configuration_type` being equal to `static`
      * 
      */
     public Output<Optional<String>> ipv6AddressVariable() {

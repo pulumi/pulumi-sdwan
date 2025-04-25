@@ -75,7 +75,7 @@ public final class TransportT1E1ControllerFeatureEntry {
      */
     private @Nullable String lengthLong;
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `cable_length` being equal to `long`
      * 
      */
     private @Nullable String lengthLongVariable;
@@ -86,7 +86,7 @@ public final class TransportT1E1ControllerFeatureEntry {
      */
     private @Nullable String lengthShort;
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `cable_length` being equal to `short`
      * 
      */
     private @Nullable String lengthShortVariable;
@@ -215,7 +215,7 @@ public final class TransportT1E1ControllerFeatureEntry {
         return Optional.ofNullable(this.lengthLong);
     }
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `cable_length` being equal to `long`
      * 
      */
     public Optional<String> lengthLongVariable() {
@@ -230,7 +230,7 @@ public final class TransportT1E1ControllerFeatureEntry {
         return Optional.ofNullable(this.lengthShort);
     }
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `cable_length` being equal to `short`
      * 
      */
     public Optional<String> lengthShortVariable() {

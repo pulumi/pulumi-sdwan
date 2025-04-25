@@ -91,7 +91,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? LengthLong { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `cable_length` being equal to `long`
         /// </summary>
         [Input("lengthLongVariable")]
         public Input<string>? LengthLongVariable { get; set; }
@@ -104,7 +104,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? LengthShort { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `cable_length` being equal to `short`
         /// </summary>
         [Input("lengthShortVariable")]
         public Input<string>? LengthShortVariable { get; set; }

@@ -27,7 +27,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? Nat { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `gateway` being equal to `nat`
         /// </summary>
         [Input("natVariable")]
         public Input<string>? NatVariable { get; set; }

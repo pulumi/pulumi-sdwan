@@ -36,7 +36,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string? Passphrase;
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `security_type` being equal to `personal`
         /// </summary>
         public readonly string? PassphraseVariable;
         /// <summary>
@@ -64,7 +64,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string? RadiusServerIp;
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `security_type` being equal to `enterprise`
         /// </summary>
         public readonly string? RadiusServerIpVariable;
         /// <summary>
@@ -74,7 +74,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? RadiusServerPort;
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `security_type` being equal to `enterprise`
         /// </summary>
         public readonly string? RadiusServerPortVariable;
         /// <summary>
@@ -82,7 +82,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string? RadiusServerSecret;
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `security_type` being equal to `enterprise`
         /// </summary>
         public readonly string? RadiusServerSecretVariable;
         /// <summary>

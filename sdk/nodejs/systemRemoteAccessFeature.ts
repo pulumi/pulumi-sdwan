@@ -78,7 +78,7 @@ export class SystemRemoteAccessFeature extends pulumi.CustomResource {
      */
     public readonly aaaDeriveNameFromPeerDomain!: pulumi.Output<string | undefined>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      */
     public readonly aaaDeriveNameFromPeerDomainVariable!: pulumi.Output<string | undefined>;
     /**
@@ -86,7 +86,7 @@ export class SystemRemoteAccessFeature extends pulumi.CustomResource {
      */
     public readonly aaaDeriveNameFromPeerIdentity!: pulumi.Output<string | undefined>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      */
     public readonly aaaDeriveNameFromPeerIdentityVariable!: pulumi.Output<string | undefined>;
     /**
@@ -137,7 +137,7 @@ export class SystemRemoteAccessFeature extends pulumi.CustomResource {
      */
     public readonly ikev2AntiDosThreshold!: pulumi.Output<number | undefined>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      */
     public readonly ikev2AntiDosThresholdVariable!: pulumi.Output<string | undefined>;
     /**
@@ -146,7 +146,7 @@ export class SystemRemoteAccessFeature extends pulumi.CustomResource {
      */
     public readonly ikev2LocalIkeIdentityType!: pulumi.Output<string | undefined>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      */
     public readonly ikev2LocalIkeIdentityTypeVariable!: pulumi.Output<string | undefined>;
     /**
@@ -154,7 +154,7 @@ export class SystemRemoteAccessFeature extends pulumi.CustomResource {
      */
     public readonly ikev2LocalIkeIdentityValue!: pulumi.Output<string | undefined>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      */
     public readonly ikev2LocalIkeIdentityValueVariable!: pulumi.Output<string | undefined>;
     /**
@@ -163,7 +163,7 @@ export class SystemRemoteAccessFeature extends pulumi.CustomResource {
      */
     public readonly ikev2SecurityAssociationLifetime!: pulumi.Output<number | undefined>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      */
     public readonly ikev2SecurityAssociationLifetimeVariable!: pulumi.Output<string | undefined>;
     /**
@@ -172,7 +172,7 @@ export class SystemRemoteAccessFeature extends pulumi.CustomResource {
      */
     public readonly ipsecAntiReplayWindowSize!: pulumi.Output<number | undefined>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `ipsecEnableAntiReplay` being equal to `true`
      */
     public readonly ipsecAntiReplayWindowSizeVariable!: pulumi.Output<string | undefined>;
     /**
@@ -180,7 +180,7 @@ export class SystemRemoteAccessFeature extends pulumi.CustomResource {
      */
     public readonly ipsecEnableAntiReplay!: pulumi.Output<boolean | undefined>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      */
     public readonly ipsecEnableAntiReplayVariable!: pulumi.Output<string | undefined>;
     /**
@@ -189,7 +189,7 @@ export class SystemRemoteAccessFeature extends pulumi.CustomResource {
      */
     public readonly ipsecEnablePerfectFowardSecrecy!: pulumi.Output<boolean | undefined>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      */
     public readonly ipsecEnablePerfectFowardSecrecyVariable!: pulumi.Output<string | undefined>;
     /**
@@ -198,7 +198,7 @@ export class SystemRemoteAccessFeature extends pulumi.CustomResource {
      */
     public readonly ipsecSecurityAssociationLifetime!: pulumi.Output<number | undefined>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      */
     public readonly ipsecSecurityAssociationLifetimeVariable!: pulumi.Output<string | undefined>;
     /**
@@ -226,7 +226,7 @@ export class SystemRemoteAccessFeature extends pulumi.CustomResource {
      */
     public readonly pskAuthenticationPreSharedKey!: pulumi.Output<string | undefined>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `pskAuthenticationType` being equal to `group`
      */
     public readonly pskAuthenticationPreSharedKeyVariable!: pulumi.Output<string | undefined>;
     /**
@@ -234,7 +234,7 @@ export class SystemRemoteAccessFeature extends pulumi.CustomResource {
      */
     public readonly pskAuthenticationType!: pulumi.Output<string | undefined>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      */
     public readonly pskAuthenticationTypeVariable!: pulumi.Output<string | undefined>;
     public readonly radiusGroupName!: pulumi.Output<string>;
@@ -368,7 +368,7 @@ export interface SystemRemoteAccessFeatureState {
      */
     aaaDeriveNameFromPeerDomain?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      */
     aaaDeriveNameFromPeerDomainVariable?: pulumi.Input<string>;
     /**
@@ -376,7 +376,7 @@ export interface SystemRemoteAccessFeatureState {
      */
     aaaDeriveNameFromPeerIdentity?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      */
     aaaDeriveNameFromPeerIdentityVariable?: pulumi.Input<string>;
     /**
@@ -427,7 +427,7 @@ export interface SystemRemoteAccessFeatureState {
      */
     ikev2AntiDosThreshold?: pulumi.Input<number>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      */
     ikev2AntiDosThresholdVariable?: pulumi.Input<string>;
     /**
@@ -436,7 +436,7 @@ export interface SystemRemoteAccessFeatureState {
      */
     ikev2LocalIkeIdentityType?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      */
     ikev2LocalIkeIdentityTypeVariable?: pulumi.Input<string>;
     /**
@@ -444,7 +444,7 @@ export interface SystemRemoteAccessFeatureState {
      */
     ikev2LocalIkeIdentityValue?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      */
     ikev2LocalIkeIdentityValueVariable?: pulumi.Input<string>;
     /**
@@ -453,7 +453,7 @@ export interface SystemRemoteAccessFeatureState {
      */
     ikev2SecurityAssociationLifetime?: pulumi.Input<number>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      */
     ikev2SecurityAssociationLifetimeVariable?: pulumi.Input<string>;
     /**
@@ -462,7 +462,7 @@ export interface SystemRemoteAccessFeatureState {
      */
     ipsecAntiReplayWindowSize?: pulumi.Input<number>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `ipsecEnableAntiReplay` being equal to `true`
      */
     ipsecAntiReplayWindowSizeVariable?: pulumi.Input<string>;
     /**
@@ -470,7 +470,7 @@ export interface SystemRemoteAccessFeatureState {
      */
     ipsecEnableAntiReplay?: pulumi.Input<boolean>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      */
     ipsecEnableAntiReplayVariable?: pulumi.Input<string>;
     /**
@@ -479,7 +479,7 @@ export interface SystemRemoteAccessFeatureState {
      */
     ipsecEnablePerfectFowardSecrecy?: pulumi.Input<boolean>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      */
     ipsecEnablePerfectFowardSecrecyVariable?: pulumi.Input<string>;
     /**
@@ -488,7 +488,7 @@ export interface SystemRemoteAccessFeatureState {
      */
     ipsecSecurityAssociationLifetime?: pulumi.Input<number>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      */
     ipsecSecurityAssociationLifetimeVariable?: pulumi.Input<string>;
     /**
@@ -516,7 +516,7 @@ export interface SystemRemoteAccessFeatureState {
      */
     pskAuthenticationPreSharedKey?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `pskAuthenticationType` being equal to `group`
      */
     pskAuthenticationPreSharedKeyVariable?: pulumi.Input<string>;
     /**
@@ -524,7 +524,7 @@ export interface SystemRemoteAccessFeatureState {
      */
     pskAuthenticationType?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      */
     pskAuthenticationTypeVariable?: pulumi.Input<string>;
     radiusGroupName?: pulumi.Input<string>;
@@ -547,7 +547,7 @@ export interface SystemRemoteAccessFeatureArgs {
      */
     aaaDeriveNameFromPeerDomain?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      */
     aaaDeriveNameFromPeerDomainVariable?: pulumi.Input<string>;
     /**
@@ -555,7 +555,7 @@ export interface SystemRemoteAccessFeatureArgs {
      */
     aaaDeriveNameFromPeerIdentity?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      */
     aaaDeriveNameFromPeerIdentityVariable?: pulumi.Input<string>;
     /**
@@ -606,7 +606,7 @@ export interface SystemRemoteAccessFeatureArgs {
      */
     ikev2AntiDosThreshold?: pulumi.Input<number>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      */
     ikev2AntiDosThresholdVariable?: pulumi.Input<string>;
     /**
@@ -615,7 +615,7 @@ export interface SystemRemoteAccessFeatureArgs {
      */
     ikev2LocalIkeIdentityType?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      */
     ikev2LocalIkeIdentityTypeVariable?: pulumi.Input<string>;
     /**
@@ -623,7 +623,7 @@ export interface SystemRemoteAccessFeatureArgs {
      */
     ikev2LocalIkeIdentityValue?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      */
     ikev2LocalIkeIdentityValueVariable?: pulumi.Input<string>;
     /**
@@ -632,7 +632,7 @@ export interface SystemRemoteAccessFeatureArgs {
      */
     ikev2SecurityAssociationLifetime?: pulumi.Input<number>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      */
     ikev2SecurityAssociationLifetimeVariable?: pulumi.Input<string>;
     /**
@@ -641,7 +641,7 @@ export interface SystemRemoteAccessFeatureArgs {
      */
     ipsecAntiReplayWindowSize?: pulumi.Input<number>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `ipsecEnableAntiReplay` being equal to `true`
      */
     ipsecAntiReplayWindowSizeVariable?: pulumi.Input<string>;
     /**
@@ -649,7 +649,7 @@ export interface SystemRemoteAccessFeatureArgs {
      */
     ipsecEnableAntiReplay?: pulumi.Input<boolean>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      */
     ipsecEnableAntiReplayVariable?: pulumi.Input<string>;
     /**
@@ -658,7 +658,7 @@ export interface SystemRemoteAccessFeatureArgs {
      */
     ipsecEnablePerfectFowardSecrecy?: pulumi.Input<boolean>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      */
     ipsecEnablePerfectFowardSecrecyVariable?: pulumi.Input<string>;
     /**
@@ -667,7 +667,7 @@ export interface SystemRemoteAccessFeatureArgs {
      */
     ipsecSecurityAssociationLifetime?: pulumi.Input<number>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      */
     ipsecSecurityAssociationLifetimeVariable?: pulumi.Input<string>;
     /**
@@ -695,7 +695,7 @@ export interface SystemRemoteAccessFeatureArgs {
      */
     pskAuthenticationPreSharedKey?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `pskAuthenticationType` being equal to `group`
      */
     pskAuthenticationPreSharedKeyVariable?: pulumi.Input<string>;
     /**
@@ -703,7 +703,7 @@ export interface SystemRemoteAccessFeatureArgs {
      */
     pskAuthenticationType?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      */
     pskAuthenticationTypeVariable?: pulumi.Input<string>;
     radiusGroupName: pulumi.Input<string>;

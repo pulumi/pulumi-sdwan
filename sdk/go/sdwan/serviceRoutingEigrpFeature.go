@@ -47,7 +47,7 @@ type ServiceRoutingEigrpFeature struct {
 	HelloIntervalVariable pulumi.StringPtrOutput `pulumi:"helloIntervalVariable"`
 	// Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
 	HmacAuthenticationKey pulumi.StringPtrOutput `pulumi:"hmacAuthenticationKey"`
-	// Variable name
+	// Variable name, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
 	HmacAuthenticationKeyVariable pulumi.StringPtrOutput `pulumi:"hmacAuthenticationKeyVariable"`
 	// Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
 	HoldTime pulumi.IntPtrOutput `pulumi:"holdTime"`
@@ -126,7 +126,7 @@ type serviceRoutingEigrpFeatureState struct {
 	HelloIntervalVariable *string `pulumi:"helloIntervalVariable"`
 	// Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
 	HmacAuthenticationKey *string `pulumi:"hmacAuthenticationKey"`
-	// Variable name
+	// Variable name, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
 	HmacAuthenticationKeyVariable *string `pulumi:"hmacAuthenticationKeyVariable"`
 	// Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
 	HoldTime *int `pulumi:"holdTime"`
@@ -170,7 +170,7 @@ type ServiceRoutingEigrpFeatureState struct {
 	HelloIntervalVariable pulumi.StringPtrInput
 	// Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
 	HmacAuthenticationKey pulumi.StringPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
 	HmacAuthenticationKeyVariable pulumi.StringPtrInput
 	// Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
 	HoldTime pulumi.IntPtrInput
@@ -218,7 +218,7 @@ type serviceRoutingEigrpFeatureArgs struct {
 	HelloIntervalVariable *string `pulumi:"helloIntervalVariable"`
 	// Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
 	HmacAuthenticationKey *string `pulumi:"hmacAuthenticationKey"`
-	// Variable name
+	// Variable name, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
 	HmacAuthenticationKeyVariable *string `pulumi:"hmacAuthenticationKeyVariable"`
 	// Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
 	HoldTime *int `pulumi:"holdTime"`
@@ -261,7 +261,7 @@ type ServiceRoutingEigrpFeatureArgs struct {
 	HelloIntervalVariable pulumi.StringPtrInput
 	// Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
 	HmacAuthenticationKey pulumi.StringPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
 	HmacAuthenticationKeyVariable pulumi.StringPtrInput
 	// Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
 	HoldTime pulumi.IntPtrInput
@@ -422,7 +422,7 @@ func (o ServiceRoutingEigrpFeatureOutput) HmacAuthenticationKey() pulumi.StringP
 	return o.ApplyT(func(v *ServiceRoutingEigrpFeature) pulumi.StringPtrOutput { return v.HmacAuthenticationKey }).(pulumi.StringPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
 func (o ServiceRoutingEigrpFeatureOutput) HmacAuthenticationKeyVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingEigrpFeature) pulumi.StringPtrOutput { return v.HmacAuthenticationKeyVariable }).(pulumi.StringPtrOutput)
 }

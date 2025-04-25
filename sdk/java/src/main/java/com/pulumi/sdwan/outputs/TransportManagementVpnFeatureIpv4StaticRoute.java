@@ -22,7 +22,7 @@ public final class TransportManagementVpnFeatureIpv4StaticRoute {
      */
     private @Nullable Integer administrativeDistance;
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `gateway` being equal to `null0`
      * 
      */
     private @Nullable String administrativeDistanceVariable;
@@ -71,7 +71,7 @@ public final class TransportManagementVpnFeatureIpv4StaticRoute {
         return Optional.ofNullable(this.administrativeDistance);
     }
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `gateway` being equal to `null0`
      * 
      */
     public Optional<String> administrativeDistanceVariable() {

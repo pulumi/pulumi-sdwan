@@ -56157,7 +56157,7 @@ if not MYPY:
         """
         passphrase_variable: NotRequired[pulumi.Input[builtins.str]]
         """
-        Variable name
+        Variable name, Attribute conditional on `security_type` being equal to `personal`
         """
         qos_profile: NotRequired[pulumi.Input[builtins.str]]
         """
@@ -56185,7 +56185,7 @@ if not MYPY:
         """
         radius_server_ip_variable: NotRequired[pulumi.Input[builtins.str]]
         """
-        Variable name
+        Variable name, Attribute conditional on `security_type` being equal to `enterprise`
         """
         radius_server_port: NotRequired[pulumi.Input[builtins.int]]
         """
@@ -56195,7 +56195,7 @@ if not MYPY:
         """
         radius_server_port_variable: NotRequired[pulumi.Input[builtins.str]]
         """
-        Variable name
+        Variable name, Attribute conditional on `security_type` being equal to `enterprise`
         """
         radius_server_secret: NotRequired[pulumi.Input[builtins.str]]
         """
@@ -56203,7 +56203,7 @@ if not MYPY:
         """
         radius_server_secret_variable: NotRequired[pulumi.Input[builtins.str]]
         """
-        Variable name
+        Variable name, Attribute conditional on `security_type` being equal to `enterprise`
         """
         security_type: NotRequired[pulumi.Input[builtins.str]]
         """
@@ -56257,7 +56257,7 @@ class ServiceWirelessLanFeatureSsidArgs:
                  - Default value: `true`
         :param pulumi.Input[builtins.str] broadcast_ssid_variable: Variable name
         :param pulumi.Input[builtins.str] passphrase: Set passphrase, Attribute conditional on `security_type` being equal to `personal`
-        :param pulumi.Input[builtins.str] passphrase_variable: Variable name
+        :param pulumi.Input[builtins.str] passphrase_variable: Variable name, Attribute conditional on `security_type` being equal to `personal`
         :param pulumi.Input[builtins.str] qos_profile: Select QoS profile
                  - Choices: `platinum`, `gold`, `silver`, `bronze`
                  - Default value: `silver`
@@ -56267,13 +56267,13 @@ class ServiceWirelessLanFeatureSsidArgs:
                  - Default value: `all`
         :param pulumi.Input[builtins.str] radio_type_variable: Variable name
         :param pulumi.Input[builtins.str] radius_server_ip: Set RADIUS server IP, Attribute conditional on `security_type` being equal to `enterprise`
-        :param pulumi.Input[builtins.str] radius_server_ip_variable: Variable name
+        :param pulumi.Input[builtins.str] radius_server_ip_variable: Variable name, Attribute conditional on `security_type` being equal to `enterprise`
         :param pulumi.Input[builtins.int] radius_server_port: Set RADIUS server authentication port, Attribute conditional on `security_type` being equal to `enterprise`
                  - Range: `1`-`65535`
                  - Default value: `1812`
-        :param pulumi.Input[builtins.str] radius_server_port_variable: Variable name
+        :param pulumi.Input[builtins.str] radius_server_port_variable: Variable name, Attribute conditional on `security_type` being equal to `enterprise`
         :param pulumi.Input[builtins.str] radius_server_secret: Set RADIUS server shared secret, Attribute conditional on `security_type` being equal to `enterprise`
-        :param pulumi.Input[builtins.str] radius_server_secret_variable: Variable name
+        :param pulumi.Input[builtins.str] radius_server_secret_variable: Variable name, Attribute conditional on `security_type` being equal to `enterprise`
         :param pulumi.Input[builtins.str] security_type: Select security type
                  - Choices: `enterprise`, `personal`, `open`
         :param pulumi.Input[builtins.str] ssid_name: Configure wlan SSID
@@ -56388,7 +56388,7 @@ class ServiceWirelessLanFeatureSsidArgs:
     @pulumi.getter(name="passphraseVariable")
     def passphrase_variable(self) -> Optional[pulumi.Input[builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `security_type` being equal to `personal`
         """
         return pulumi.get(self, "passphrase_variable")
 
@@ -56464,7 +56464,7 @@ class ServiceWirelessLanFeatureSsidArgs:
     @pulumi.getter(name="radiusServerIpVariable")
     def radius_server_ip_variable(self) -> Optional[pulumi.Input[builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `security_type` being equal to `enterprise`
         """
         return pulumi.get(self, "radius_server_ip_variable")
 
@@ -56490,7 +56490,7 @@ class ServiceWirelessLanFeatureSsidArgs:
     @pulumi.getter(name="radiusServerPortVariable")
     def radius_server_port_variable(self) -> Optional[pulumi.Input[builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `security_type` being equal to `enterprise`
         """
         return pulumi.get(self, "radius_server_port_variable")
 
@@ -56514,7 +56514,7 @@ class ServiceWirelessLanFeatureSsidArgs:
     @pulumi.getter(name="radiusServerSecretVariable")
     def radius_server_secret_variable(self) -> Optional[pulumi.Input[builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `security_type` being equal to `enterprise`
         """
         return pulumi.get(self, "radius_server_secret_variable")
 
@@ -65860,7 +65860,7 @@ if not MYPY:
         """
         administrative_distance_variable: NotRequired[pulumi.Input[builtins.str]]
         """
-        Variable name
+        Variable name, Attribute conditional on `gateway` being equal to `null0`
         """
         gateway: NotRequired[pulumi.Input[builtins.str]]
         """
@@ -65907,7 +65907,7 @@ class TransportManagementVpnFeatureIpv4StaticRouteArgs:
         :param pulumi.Input[builtins.int] administrative_distance: Administrative distance, Attribute conditional on `gateway` being equal to `null0`
                  - Range: `1`-`255`
                  - Default value: `1`
-        :param pulumi.Input[builtins.str] administrative_distance_variable: Variable name
+        :param pulumi.Input[builtins.str] administrative_distance_variable: Variable name, Attribute conditional on `gateway` being equal to `null0`
         :param pulumi.Input[builtins.str] gateway: Gateway
                  - Choices: `nextHop`, `dhcp`, `null0`
                  - Default value: `nextHop`
@@ -65953,7 +65953,7 @@ class TransportManagementVpnFeatureIpv4StaticRouteArgs:
     @pulumi.getter(name="administrativeDistanceVariable")
     def administrative_distance_variable(self) -> Optional[pulumi.Input[builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `gateway` being equal to `null0`
         """
         return pulumi.get(self, "administrative_distance_variable")
 
@@ -66149,7 +66149,7 @@ if not MYPY:
         """
         nat_variable: NotRequired[pulumi.Input[builtins.str]]
         """
-        Variable name
+        Variable name, Attribute conditional on `gateway` being equal to `nat`
         """
         next_hops: NotRequired[pulumi.Input[Sequence[pulumi.Input['TransportManagementVpnFeatureIpv6StaticRouteNextHopArgsDict']]]]
         """
@@ -66185,7 +66185,7 @@ class TransportManagementVpnFeatureIpv6StaticRouteArgs:
                  - Choices: `nextHop`, `null0`, `nat`
         :param pulumi.Input[builtins.str] nat: IPv6 Nat, Attribute conditional on `gateway` being equal to `nat`
                  - Choices: `NAT64`, `NAT66`
-        :param pulumi.Input[builtins.str] nat_variable: Variable name
+        :param pulumi.Input[builtins.str] nat_variable: Variable name, Attribute conditional on `gateway` being equal to `nat`
         :param pulumi.Input[Sequence[pulumi.Input['TransportManagementVpnFeatureIpv6StaticRouteNextHopArgs']]] next_hops: IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
         :param pulumi.Input[builtins.bool] null0: IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `null0`
         :param pulumi.Input[builtins.str] prefix: Prefix
@@ -66236,7 +66236,7 @@ class TransportManagementVpnFeatureIpv6StaticRouteArgs:
     @pulumi.getter(name="natVariable")
     def nat_variable(self) -> Optional[pulumi.Input[builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `gateway` being equal to `nat`
         """
         return pulumi.get(self, "nat_variable")
 
@@ -72632,7 +72632,7 @@ if not MYPY:
         """
         length_long_variable: NotRequired[pulumi.Input[builtins.str]]
         """
-        Variable name
+        Variable name, Attribute conditional on `cable_length` being equal to `long`
         """
         length_short: NotRequired[pulumi.Input[builtins.str]]
         """
@@ -72641,7 +72641,7 @@ if not MYPY:
         """
         length_short_variable: NotRequired[pulumi.Input[builtins.str]]
         """
-        Variable name
+        Variable name, Attribute conditional on `cable_length` being equal to `short`
         """
         line_mode: NotRequired[pulumi.Input[builtins.str]]
         """
@@ -72720,10 +72720,10 @@ class TransportT1E1ControllerFeatureEntryArgs:
         :param pulumi.Input[builtins.str] e1_linecode_variable: Variable name
         :param pulumi.Input[builtins.str] length_long: length, Attribute conditional on `cable_length` being equal to `long`
                  - Choices: `-15db`, `-22.5db`, `-7.5db`, `0db`
-        :param pulumi.Input[builtins.str] length_long_variable: Variable name
+        :param pulumi.Input[builtins.str] length_long_variable: Variable name, Attribute conditional on `cable_length` being equal to `long`
         :param pulumi.Input[builtins.str] length_short: length, Attribute conditional on `cable_length` being equal to `short`
                  - Choices: `110ft`, `220ft`, `330ft`, `440ft`, `550ft`, `660ft`
-        :param pulumi.Input[builtins.str] length_short_variable: Variable name
+        :param pulumi.Input[builtins.str] length_short_variable: Variable name, Attribute conditional on `cable_length` being equal to `short`
         :param pulumi.Input[builtins.str] line_mode: Line Mode
                  - Choices: `secondary`, `primary`
         :param pulumi.Input[builtins.str] line_mode_variable: Variable name
@@ -72921,7 +72921,7 @@ class TransportT1E1ControllerFeatureEntryArgs:
     @pulumi.getter(name="lengthLongVariable")
     def length_long_variable(self) -> Optional[pulumi.Input[builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `cable_length` being equal to `long`
         """
         return pulumi.get(self, "length_long_variable")
 
@@ -72946,7 +72946,7 @@ class TransportT1E1ControllerFeatureEntryArgs:
     @pulumi.getter(name="lengthShortVariable")
     def length_short_variable(self) -> Optional[pulumi.Input[builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `cable_length` being equal to `short`
         """
         return pulumi.get(self, "length_short_variable")
 
@@ -73171,7 +73171,7 @@ if not MYPY:
         """
         administrative_distance_variable: NotRequired[pulumi.Input[builtins.str]]
         """
-        Variable name
+        Variable name, Attribute conditional on `gateway` being equal to `null0`
         """
         gateway: NotRequired[pulumi.Input[builtins.str]]
         """
@@ -73218,7 +73218,7 @@ class TransportWanVpnFeatureIpv4StaticRouteArgs:
         :param pulumi.Input[builtins.int] administrative_distance: Administrative distance, Attribute conditional on `gateway` being equal to `null0`
                  - Range: `1`-`255`
                  - Default value: `1`
-        :param pulumi.Input[builtins.str] administrative_distance_variable: Variable name
+        :param pulumi.Input[builtins.str] administrative_distance_variable: Variable name, Attribute conditional on `gateway` being equal to `null0`
         :param pulumi.Input[builtins.str] gateway: Gateway
                  - Choices: `nextHop`, `dhcp`, `null0`
                  - Default value: `nextHop`
@@ -73264,7 +73264,7 @@ class TransportWanVpnFeatureIpv4StaticRouteArgs:
     @pulumi.getter(name="administrativeDistanceVariable")
     def administrative_distance_variable(self) -> Optional[pulumi.Input[builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `gateway` being equal to `null0`
         """
         return pulumi.get(self, "administrative_distance_variable")
 
@@ -73460,7 +73460,7 @@ if not MYPY:
         """
         nat_variable: NotRequired[pulumi.Input[builtins.str]]
         """
-        Variable name
+        Variable name, Attribute conditional on `gateway` being equal to `nat`
         """
         next_hops: NotRequired[pulumi.Input[Sequence[pulumi.Input['TransportWanVpnFeatureIpv6StaticRouteNextHopArgsDict']]]]
         """
@@ -73496,7 +73496,7 @@ class TransportWanVpnFeatureIpv6StaticRouteArgs:
                  - Choices: `nextHop`, `null0`, `nat`
         :param pulumi.Input[builtins.str] nat: IPv6 Nat, Attribute conditional on `gateway` being equal to `nat`
                  - Choices: `NAT64`, `NAT66`
-        :param pulumi.Input[builtins.str] nat_variable: Variable name
+        :param pulumi.Input[builtins.str] nat_variable: Variable name, Attribute conditional on `gateway` being equal to `nat`
         :param pulumi.Input[Sequence[pulumi.Input['TransportWanVpnFeatureIpv6StaticRouteNextHopArgs']]] next_hops: IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
         :param pulumi.Input[builtins.bool] null0: IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `null0`
         :param pulumi.Input[builtins.str] prefix: Prefix
@@ -73547,7 +73547,7 @@ class TransportWanVpnFeatureIpv6StaticRouteArgs:
     @pulumi.getter(name="natVariable")
     def nat_variable(self) -> Optional[pulumi.Input[builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `gateway` being equal to `nat`
         """
         return pulumi.get(self, "nat_variable")
 

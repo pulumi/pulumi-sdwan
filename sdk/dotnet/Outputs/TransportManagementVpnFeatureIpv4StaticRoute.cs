@@ -20,7 +20,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? AdministrativeDistance;
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `gateway` being equal to `null0`
         /// </summary>
         public readonly string? AdministrativeDistanceVariable;
         /// <summary>

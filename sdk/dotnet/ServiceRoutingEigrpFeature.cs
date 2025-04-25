@@ -91,7 +91,7 @@ namespace Pulumi.Sdwan
         public Output<string?> HmacAuthenticationKey { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
         /// </summary>
         [Output("hmacAuthenticationKeyVariable")]
         public Output<string?> HmacAuthenticationKeyVariable { get; private set; } = null!;
@@ -260,7 +260,7 @@ namespace Pulumi.Sdwan
         public Input<string>? HmacAuthenticationKey { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
         /// </summary>
         [Input("hmacAuthenticationKeyVariable")]
         public Input<string>? HmacAuthenticationKeyVariable { get; set; }
@@ -409,7 +409,7 @@ namespace Pulumi.Sdwan
         public Input<string>? HmacAuthenticationKey { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
         /// </summary>
         [Input("hmacAuthenticationKeyVariable")]
         public Input<string>? HmacAuthenticationKeyVariable { get; set; }

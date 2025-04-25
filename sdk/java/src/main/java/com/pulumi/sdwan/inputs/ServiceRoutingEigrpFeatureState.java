@@ -188,14 +188,14 @@ public final class ServiceRoutingEigrpFeatureState extends com.pulumi.resources.
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
      * 
      */
     @Import(name="hmacAuthenticationKeyVariable")
     private @Nullable Output<String> hmacAuthenticationKeyVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
      * 
      */
     public Optional<Output<String>> hmacAuthenticationKeyVariable() {
@@ -605,7 +605,7 @@ public final class ServiceRoutingEigrpFeatureState extends com.pulumi.resources.
         }
 
         /**
-         * @param hmacAuthenticationKeyVariable Variable name
+         * @param hmacAuthenticationKeyVariable Variable name, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
          * 
          * @return builder
          * 
@@ -616,7 +616,7 @@ public final class ServiceRoutingEigrpFeatureState extends com.pulumi.resources.
         }
 
         /**
-         * @param hmacAuthenticationKeyVariable Variable name
+         * @param hmacAuthenticationKeyVariable Variable name, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
          * 
          * @return builder
          * 

@@ -38,14 +38,14 @@ public final class TransportManagementVpnFeatureIpv4StaticRouteArgs extends com.
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `gateway` being equal to `null0`
      * 
      */
     @Import(name="administrativeDistanceVariable")
     private @Nullable Output<String> administrativeDistanceVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `gateway` being equal to `null0`
      * 
      */
     public Optional<Output<String>> administrativeDistanceVariable() {
@@ -205,7 +205,7 @@ public final class TransportManagementVpnFeatureIpv4StaticRouteArgs extends com.
         }
 
         /**
-         * @param administrativeDistanceVariable Variable name
+         * @param administrativeDistanceVariable Variable name, Attribute conditional on `gateway` being equal to `null0`
          * 
          * @return builder
          * 
@@ -216,7 +216,7 @@ public final class TransportManagementVpnFeatureIpv4StaticRouteArgs extends com.
         }
 
         /**
-         * @param administrativeDistanceVariable Variable name
+         * @param administrativeDistanceVariable Variable name, Attribute conditional on `gateway` being equal to `null0`
          * 
          * @return builder
          * 

@@ -78,10 +78,6 @@ export interface GetTransportCellularProfileFeatureResult {
      */
     readonly name: string;
     /**
-     * No Authentication
-     */
-    readonly noAuthentication: string;
-    /**
      * No Overwrite
      */
     readonly noOverwrite: boolean;
@@ -121,6 +117,10 @@ export interface GetTransportCellularProfileFeatureResult {
      * Variable name
      */
     readonly profileUsernameVariable: string;
+    /**
+     * Require authentication type
+     */
+    readonly requiresAuthentication: boolean;
     /**
      * The version of the Feature
      */
