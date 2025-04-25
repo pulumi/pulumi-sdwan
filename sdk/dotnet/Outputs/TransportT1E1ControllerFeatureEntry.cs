@@ -64,7 +64,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string? LengthLong;
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `cable_length` being equal to `long`
         /// </summary>
         public readonly string? LengthLongVariable;
         /// <summary>
@@ -73,7 +73,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string? LengthShort;
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `cable_length` being equal to `short`
         /// </summary>
         public readonly string? LengthShortVariable;
         /// <summary>

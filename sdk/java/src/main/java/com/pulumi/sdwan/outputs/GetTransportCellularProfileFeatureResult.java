@@ -53,11 +53,6 @@ public final class GetTransportCellularProfileFeatureResult {
      */
     private String name;
     /**
-     * @return No Authentication
-     * 
-     */
-    private String noAuthentication;
-    /**
      * @return No Overwrite
      * 
      */
@@ -107,6 +102,11 @@ public final class GetTransportCellularProfileFeatureResult {
      * 
      */
     private String profileUsernameVariable;
+    /**
+     * @return Require authentication type
+     * 
+     */
+    private Boolean requiresAuthentication;
     /**
      * @return The version of the Feature
      * 
@@ -169,13 +169,6 @@ public final class GetTransportCellularProfileFeatureResult {
      */
     public String name() {
         return this.name;
-    }
-    /**
-     * @return No Authentication
-     * 
-     */
-    public String noAuthentication() {
-        return this.noAuthentication;
     }
     /**
      * @return No Overwrite
@@ -248,6 +241,13 @@ public final class GetTransportCellularProfileFeatureResult {
         return this.profileUsernameVariable;
     }
     /**
+     * @return Require authentication type
+     * 
+     */
+    public Boolean requiresAuthentication() {
+        return this.requiresAuthentication;
+    }
+    /**
      * @return The version of the Feature
      * 
      */
@@ -272,7 +272,6 @@ public final class GetTransportCellularProfileFeatureResult {
         private String featureProfileId;
         private String id;
         private String name;
-        private String noAuthentication;
         private Boolean noOverwrite;
         private String noOverwriteVariable;
         private String packetDataNetworkType;
@@ -283,6 +282,7 @@ public final class GetTransportCellularProfileFeatureResult {
         private String profilePasswordVariable;
         private String profileUsername;
         private String profileUsernameVariable;
+        private Boolean requiresAuthentication;
         private Integer version;
         public Builder() {}
         public Builder(GetTransportCellularProfileFeatureResult defaults) {
@@ -295,7 +295,6 @@ public final class GetTransportCellularProfileFeatureResult {
     	      this.featureProfileId = defaults.featureProfileId;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
-    	      this.noAuthentication = defaults.noAuthentication;
     	      this.noOverwrite = defaults.noOverwrite;
     	      this.noOverwriteVariable = defaults.noOverwriteVariable;
     	      this.packetDataNetworkType = defaults.packetDataNetworkType;
@@ -306,6 +305,7 @@ public final class GetTransportCellularProfileFeatureResult {
     	      this.profilePasswordVariable = defaults.profilePasswordVariable;
     	      this.profileUsername = defaults.profileUsername;
     	      this.profileUsernameVariable = defaults.profileUsernameVariable;
+    	      this.requiresAuthentication = defaults.requiresAuthentication;
     	      this.version = defaults.version;
         }
 
@@ -371,14 +371,6 @@ public final class GetTransportCellularProfileFeatureResult {
               throw new MissingRequiredPropertyException("GetTransportCellularProfileFeatureResult", "name");
             }
             this.name = name;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder noAuthentication(String noAuthentication) {
-            if (noAuthentication == null) {
-              throw new MissingRequiredPropertyException("GetTransportCellularProfileFeatureResult", "noAuthentication");
-            }
-            this.noAuthentication = noAuthentication;
             return this;
         }
         @CustomType.Setter
@@ -462,6 +454,14 @@ public final class GetTransportCellularProfileFeatureResult {
             return this;
         }
         @CustomType.Setter
+        public Builder requiresAuthentication(Boolean requiresAuthentication) {
+            if (requiresAuthentication == null) {
+              throw new MissingRequiredPropertyException("GetTransportCellularProfileFeatureResult", "requiresAuthentication");
+            }
+            this.requiresAuthentication = requiresAuthentication;
+            return this;
+        }
+        @CustomType.Setter
         public Builder version(Integer version) {
             if (version == null) {
               throw new MissingRequiredPropertyException("GetTransportCellularProfileFeatureResult", "version");
@@ -479,7 +479,6 @@ public final class GetTransportCellularProfileFeatureResult {
             _resultValue.featureProfileId = featureProfileId;
             _resultValue.id = id;
             _resultValue.name = name;
-            _resultValue.noAuthentication = noAuthentication;
             _resultValue.noOverwrite = noOverwrite;
             _resultValue.noOverwriteVariable = noOverwriteVariable;
             _resultValue.packetDataNetworkType = packetDataNetworkType;
@@ -490,6 +489,7 @@ public final class GetTransportCellularProfileFeatureResult {
             _resultValue.profilePasswordVariable = profilePasswordVariable;
             _resultValue.profileUsername = profileUsername;
             _resultValue.profileUsernameVariable = profileUsernameVariable;
+            _resultValue.requiresAuthentication = requiresAuthentication;
             _resultValue.version = version;
             return _resultValue;
         }

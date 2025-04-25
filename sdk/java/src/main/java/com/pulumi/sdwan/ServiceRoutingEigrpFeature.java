@@ -196,14 +196,14 @@ public class ServiceRoutingEigrpFeature extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.hmacAuthenticationKey);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
      * 
      */
     @Export(name="hmacAuthenticationKeyVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> hmacAuthenticationKeyVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
      * 
      */
     public Output<Optional<String>> hmacAuthenticationKeyVariable() {

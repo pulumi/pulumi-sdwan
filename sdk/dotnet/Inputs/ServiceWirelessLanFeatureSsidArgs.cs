@@ -45,7 +45,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? Passphrase { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `security_type` being equal to `personal`
         /// </summary>
         [Input("passphraseVariable")]
         public Input<string>? PassphraseVariable { get; set; }
@@ -85,7 +85,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? RadiusServerIp { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `security_type` being equal to `enterprise`
         /// </summary>
         [Input("radiusServerIpVariable")]
         public Input<string>? RadiusServerIpVariable { get; set; }
@@ -99,7 +99,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? RadiusServerPort { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `security_type` being equal to `enterprise`
         /// </summary>
         [Input("radiusServerPortVariable")]
         public Input<string>? RadiusServerPortVariable { get; set; }
@@ -111,7 +111,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? RadiusServerSecret { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `security_type` being equal to `enterprise`
         /// </summary>
         [Input("radiusServerSecretVariable")]
         public Input<string>? RadiusServerSecretVariable { get; set; }

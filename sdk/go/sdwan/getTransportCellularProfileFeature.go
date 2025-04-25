@@ -75,8 +75,6 @@ type LookupTransportCellularProfileFeatureResult struct {
 	Id string `pulumi:"id"`
 	// The name of the Feature
 	Name string `pulumi:"name"`
-	// No Authentication
-	NoAuthentication string `pulumi:"noAuthentication"`
 	// No Overwrite
 	NoOverwrite bool `pulumi:"noOverwrite"`
 	// Variable name
@@ -97,6 +95,8 @@ type LookupTransportCellularProfileFeatureResult struct {
 	ProfileUsername string `pulumi:"profileUsername"`
 	// Variable name
 	ProfileUsernameVariable string `pulumi:"profileUsernameVariable"`
+	// Require authentication type
+	RequiresAuthentication bool `pulumi:"requiresAuthentication"`
 	// The version of the Feature
 	Version int `pulumi:"version"`
 }
@@ -177,11 +177,6 @@ func (o LookupTransportCellularProfileFeatureResultOutput) Name() pulumi.StringO
 	return o.ApplyT(func(v LookupTransportCellularProfileFeatureResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// No Authentication
-func (o LookupTransportCellularProfileFeatureResultOutput) NoAuthentication() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupTransportCellularProfileFeatureResult) string { return v.NoAuthentication }).(pulumi.StringOutput)
-}
-
 // No Overwrite
 func (o LookupTransportCellularProfileFeatureResultOutput) NoOverwrite() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupTransportCellularProfileFeatureResult) bool { return v.NoOverwrite }).(pulumi.BoolOutput)
@@ -230,6 +225,11 @@ func (o LookupTransportCellularProfileFeatureResultOutput) ProfileUsername() pul
 // Variable name
 func (o LookupTransportCellularProfileFeatureResultOutput) ProfileUsernameVariable() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTransportCellularProfileFeatureResult) string { return v.ProfileUsernameVariable }).(pulumi.StringOutput)
+}
+
+// Require authentication type
+func (o LookupTransportCellularProfileFeatureResultOutput) RequiresAuthentication() pulumi.BoolOutput {
+	return o.ApplyT(func(v LookupTransportCellularProfileFeatureResult) bool { return v.RequiresAuthentication }).(pulumi.BoolOutput)
 }
 
 // The version of the Feature

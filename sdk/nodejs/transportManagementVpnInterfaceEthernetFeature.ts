@@ -134,7 +134,7 @@ export class TransportManagementVpnInterfaceEthernetFeature extends pulumi.Custo
      */
     public readonly ipv4Address!: pulumi.Output<string | undefined>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      */
     public readonly ipv4AddressVariable!: pulumi.Output<string | undefined>;
     /**
@@ -155,7 +155,7 @@ export class TransportManagementVpnInterfaceEthernetFeature extends pulumi.Custo
      */
     public readonly ipv4DhcpDistance!: pulumi.Output<number | undefined>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
      */
     public readonly ipv4DhcpDistanceVariable!: pulumi.Output<string | undefined>;
     /**
@@ -188,7 +188,7 @@ export class TransportManagementVpnInterfaceEthernetFeature extends pulumi.Custo
      */
     public readonly ipv4SubnetMask!: pulumi.Output<string | undefined>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      */
     public readonly ipv4SubnetMaskVariable!: pulumi.Output<string | undefined>;
     /**
@@ -196,7 +196,7 @@ export class TransportManagementVpnInterfaceEthernetFeature extends pulumi.Custo
      */
     public readonly ipv6Address!: pulumi.Output<string | undefined>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
      */
     public readonly ipv6AddressVariable!: pulumi.Output<string | undefined>;
     /**
@@ -485,7 +485,7 @@ export interface TransportManagementVpnInterfaceEthernetFeatureState {
      */
     ipv4Address?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      */
     ipv4AddressVariable?: pulumi.Input<string>;
     /**
@@ -506,7 +506,7 @@ export interface TransportManagementVpnInterfaceEthernetFeatureState {
      */
     ipv4DhcpDistance?: pulumi.Input<number>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
      */
     ipv4DhcpDistanceVariable?: pulumi.Input<string>;
     /**
@@ -539,7 +539,7 @@ export interface TransportManagementVpnInterfaceEthernetFeatureState {
      */
     ipv4SubnetMask?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      */
     ipv4SubnetMaskVariable?: pulumi.Input<string>;
     /**
@@ -547,7 +547,7 @@ export interface TransportManagementVpnInterfaceEthernetFeatureState {
      */
     ipv6Address?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
      */
     ipv6AddressVariable?: pulumi.Input<string>;
     /**
@@ -708,7 +708,7 @@ export interface TransportManagementVpnInterfaceEthernetFeatureArgs {
      */
     ipv4Address?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      */
     ipv4AddressVariable?: pulumi.Input<string>;
     /**
@@ -729,7 +729,7 @@ export interface TransportManagementVpnInterfaceEthernetFeatureArgs {
      */
     ipv4DhcpDistance?: pulumi.Input<number>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
      */
     ipv4DhcpDistanceVariable?: pulumi.Input<string>;
     /**
@@ -762,7 +762,7 @@ export interface TransportManagementVpnInterfaceEthernetFeatureArgs {
      */
     ipv4SubnetMask?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      */
     ipv4SubnetMaskVariable?: pulumi.Input<string>;
     /**
@@ -770,7 +770,7 @@ export interface TransportManagementVpnInterfaceEthernetFeatureArgs {
      */
     ipv6Address?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
      */
     ipv6AddressVariable?: pulumi.Input<string>;
     /**

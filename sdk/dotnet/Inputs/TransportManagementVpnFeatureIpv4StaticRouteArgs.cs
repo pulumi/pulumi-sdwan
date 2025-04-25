@@ -21,7 +21,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? AdministrativeDistance { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `gateway` being equal to `null0`
         /// </summary>
         [Input("administrativeDistanceVariable")]
         public Input<string>? AdministrativeDistanceVariable { get; set; }

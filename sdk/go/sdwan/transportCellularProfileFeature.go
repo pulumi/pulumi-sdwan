@@ -30,16 +30,17 @@ import (
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			_, err := sdwan.NewTransportCellularProfileFeature(ctx, "example", &sdwan.TransportCellularProfileFeatureArgs{
-//				Name:                  pulumi.String("Example"),
-//				Description:           pulumi.String("My Example"),
-//				FeatureProfileId:      pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
-//				ProfileId:             pulumi.Int(1),
-//				AccessPointName:       pulumi.String("apn1"),
-//				AuthenticationType:    pulumi.String("pap"),
-//				ProfileUsername:       pulumi.String("example"),
-//				ProfilePassword:       pulumi.String("example123!"),
-//				PacketDataNetworkType: pulumi.String("ipv4"),
-//				NoOverwrite:           pulumi.Bool(false),
+//				Name:                   pulumi.String("Example"),
+//				Description:            pulumi.String("My Example"),
+//				FeatureProfileId:       pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				ProfileId:              pulumi.Int(1),
+//				AccessPointName:        pulumi.String("apn1"),
+//				RequiresAuthentication: pulumi.Bool(true),
+//				AuthenticationType:     pulumi.String("pap"),
+//				ProfileUsername:        pulumi.String("example"),
+//				ProfilePassword:        pulumi.String("example123!"),
+//				PacketDataNetworkType:  pulumi.String("ipv4"),
+//				NoOverwrite:            pulumi.Bool(false),
 //			})
 //			if err != nil {
 //				return err
@@ -64,9 +65,10 @@ type TransportCellularProfileFeature struct {
 	AccessPointName pulumi.StringPtrOutput `pulumi:"accessPointName"`
 	// Variable name
 	AccessPointNameVariable pulumi.StringPtrOutput `pulumi:"accessPointNameVariable"`
-	// Set authentication type - Choices: `pap`, `chap`, `papChap`
+	// Set authentication type, Attribute conditional on `requiresAuthentication` being equal to `true` - Choices: `pap`,
+	// `chap`, `papChap`
 	AuthenticationType pulumi.StringPtrOutput `pulumi:"authenticationType"`
-	// Variable name
+	// Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
 	AuthenticationTypeVariable pulumi.StringPtrOutput `pulumi:"authenticationTypeVariable"`
 	// The description of the Feature
 	Description pulumi.StringPtrOutput `pulumi:"description"`
@@ -74,8 +76,6 @@ type TransportCellularProfileFeature struct {
 	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
 	// The name of the Feature
 	Name pulumi.StringOutput `pulumi:"name"`
-	// No Authentication
-	NoAuthentication pulumi.StringPtrOutput `pulumi:"noAuthentication"`
 	// No Overwrite
 	NoOverwrite pulumi.BoolPtrOutput `pulumi:"noOverwrite"`
 	// Variable name
@@ -88,14 +88,16 @@ type TransportCellularProfileFeature struct {
 	ProfileId pulumi.IntPtrOutput `pulumi:"profileId"`
 	// Variable name
 	ProfileIdVariable pulumi.StringPtrOutput `pulumi:"profileIdVariable"`
-	// Set the profile password
+	// Set the profile password, Attribute conditional on `requiresAuthentication` being equal to `true`
 	ProfilePassword pulumi.StringPtrOutput `pulumi:"profilePassword"`
-	// Variable name
+	// Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
 	ProfilePasswordVariable pulumi.StringPtrOutput `pulumi:"profilePasswordVariable"`
-	// Set the profile username
+	// Set the profile username, Attribute conditional on `requiresAuthentication` being equal to `true`
 	ProfileUsername pulumi.StringPtrOutput `pulumi:"profileUsername"`
-	// Variable name
+	// Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
 	ProfileUsernameVariable pulumi.StringPtrOutput `pulumi:"profileUsernameVariable"`
+	// Require authentication type - Default value: `false`
+	RequiresAuthentication pulumi.BoolPtrOutput `pulumi:"requiresAuthentication"`
 	// The version of the Feature
 	Version pulumi.IntOutput `pulumi:"version"`
 }
@@ -137,9 +139,10 @@ type transportCellularProfileFeatureState struct {
 	AccessPointName *string `pulumi:"accessPointName"`
 	// Variable name
 	AccessPointNameVariable *string `pulumi:"accessPointNameVariable"`
-	// Set authentication type - Choices: `pap`, `chap`, `papChap`
+	// Set authentication type, Attribute conditional on `requiresAuthentication` being equal to `true` - Choices: `pap`,
+	// `chap`, `papChap`
 	AuthenticationType *string `pulumi:"authenticationType"`
-	// Variable name
+	// Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
 	AuthenticationTypeVariable *string `pulumi:"authenticationTypeVariable"`
 	// The description of the Feature
 	Description *string `pulumi:"description"`
@@ -147,8 +150,6 @@ type transportCellularProfileFeatureState struct {
 	FeatureProfileId *string `pulumi:"featureProfileId"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
-	// No Authentication
-	NoAuthentication *string `pulumi:"noAuthentication"`
 	// No Overwrite
 	NoOverwrite *bool `pulumi:"noOverwrite"`
 	// Variable name
@@ -161,14 +162,16 @@ type transportCellularProfileFeatureState struct {
 	ProfileId *int `pulumi:"profileId"`
 	// Variable name
 	ProfileIdVariable *string `pulumi:"profileIdVariable"`
-	// Set the profile password
+	// Set the profile password, Attribute conditional on `requiresAuthentication` being equal to `true`
 	ProfilePassword *string `pulumi:"profilePassword"`
-	// Variable name
+	// Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
 	ProfilePasswordVariable *string `pulumi:"profilePasswordVariable"`
-	// Set the profile username
+	// Set the profile username, Attribute conditional on `requiresAuthentication` being equal to `true`
 	ProfileUsername *string `pulumi:"profileUsername"`
-	// Variable name
+	// Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
 	ProfileUsernameVariable *string `pulumi:"profileUsernameVariable"`
+	// Require authentication type - Default value: `false`
+	RequiresAuthentication *bool `pulumi:"requiresAuthentication"`
 	// The version of the Feature
 	Version *int `pulumi:"version"`
 }
@@ -178,9 +181,10 @@ type TransportCellularProfileFeatureState struct {
 	AccessPointName pulumi.StringPtrInput
 	// Variable name
 	AccessPointNameVariable pulumi.StringPtrInput
-	// Set authentication type - Choices: `pap`, `chap`, `papChap`
+	// Set authentication type, Attribute conditional on `requiresAuthentication` being equal to `true` - Choices: `pap`,
+	// `chap`, `papChap`
 	AuthenticationType pulumi.StringPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
 	AuthenticationTypeVariable pulumi.StringPtrInput
 	// The description of the Feature
 	Description pulumi.StringPtrInput
@@ -188,8 +192,6 @@ type TransportCellularProfileFeatureState struct {
 	FeatureProfileId pulumi.StringPtrInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
-	// No Authentication
-	NoAuthentication pulumi.StringPtrInput
 	// No Overwrite
 	NoOverwrite pulumi.BoolPtrInput
 	// Variable name
@@ -202,14 +204,16 @@ type TransportCellularProfileFeatureState struct {
 	ProfileId pulumi.IntPtrInput
 	// Variable name
 	ProfileIdVariable pulumi.StringPtrInput
-	// Set the profile password
+	// Set the profile password, Attribute conditional on `requiresAuthentication` being equal to `true`
 	ProfilePassword pulumi.StringPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
 	ProfilePasswordVariable pulumi.StringPtrInput
-	// Set the profile username
+	// Set the profile username, Attribute conditional on `requiresAuthentication` being equal to `true`
 	ProfileUsername pulumi.StringPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
 	ProfileUsernameVariable pulumi.StringPtrInput
+	// Require authentication type - Default value: `false`
+	RequiresAuthentication pulumi.BoolPtrInput
 	// The version of the Feature
 	Version pulumi.IntPtrInput
 }
@@ -223,9 +227,10 @@ type transportCellularProfileFeatureArgs struct {
 	AccessPointName *string `pulumi:"accessPointName"`
 	// Variable name
 	AccessPointNameVariable *string `pulumi:"accessPointNameVariable"`
-	// Set authentication type - Choices: `pap`, `chap`, `papChap`
+	// Set authentication type, Attribute conditional on `requiresAuthentication` being equal to `true` - Choices: `pap`,
+	// `chap`, `papChap`
 	AuthenticationType *string `pulumi:"authenticationType"`
-	// Variable name
+	// Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
 	AuthenticationTypeVariable *string `pulumi:"authenticationTypeVariable"`
 	// The description of the Feature
 	Description *string `pulumi:"description"`
@@ -233,8 +238,6 @@ type transportCellularProfileFeatureArgs struct {
 	FeatureProfileId string `pulumi:"featureProfileId"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
-	// No Authentication
-	NoAuthentication *string `pulumi:"noAuthentication"`
 	// No Overwrite
 	NoOverwrite *bool `pulumi:"noOverwrite"`
 	// Variable name
@@ -247,14 +250,16 @@ type transportCellularProfileFeatureArgs struct {
 	ProfileId *int `pulumi:"profileId"`
 	// Variable name
 	ProfileIdVariable *string `pulumi:"profileIdVariable"`
-	// Set the profile password
+	// Set the profile password, Attribute conditional on `requiresAuthentication` being equal to `true`
 	ProfilePassword *string `pulumi:"profilePassword"`
-	// Variable name
+	// Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
 	ProfilePasswordVariable *string `pulumi:"profilePasswordVariable"`
-	// Set the profile username
+	// Set the profile username, Attribute conditional on `requiresAuthentication` being equal to `true`
 	ProfileUsername *string `pulumi:"profileUsername"`
-	// Variable name
+	// Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
 	ProfileUsernameVariable *string `pulumi:"profileUsernameVariable"`
+	// Require authentication type - Default value: `false`
+	RequiresAuthentication *bool `pulumi:"requiresAuthentication"`
 }
 
 // The set of arguments for constructing a TransportCellularProfileFeature resource.
@@ -263,9 +268,10 @@ type TransportCellularProfileFeatureArgs struct {
 	AccessPointName pulumi.StringPtrInput
 	// Variable name
 	AccessPointNameVariable pulumi.StringPtrInput
-	// Set authentication type - Choices: `pap`, `chap`, `papChap`
+	// Set authentication type, Attribute conditional on `requiresAuthentication` being equal to `true` - Choices: `pap`,
+	// `chap`, `papChap`
 	AuthenticationType pulumi.StringPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
 	AuthenticationTypeVariable pulumi.StringPtrInput
 	// The description of the Feature
 	Description pulumi.StringPtrInput
@@ -273,8 +279,6 @@ type TransportCellularProfileFeatureArgs struct {
 	FeatureProfileId pulumi.StringInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
-	// No Authentication
-	NoAuthentication pulumi.StringPtrInput
 	// No Overwrite
 	NoOverwrite pulumi.BoolPtrInput
 	// Variable name
@@ -287,14 +291,16 @@ type TransportCellularProfileFeatureArgs struct {
 	ProfileId pulumi.IntPtrInput
 	// Variable name
 	ProfileIdVariable pulumi.StringPtrInput
-	// Set the profile password
+	// Set the profile password, Attribute conditional on `requiresAuthentication` being equal to `true`
 	ProfilePassword pulumi.StringPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
 	ProfilePasswordVariable pulumi.StringPtrInput
-	// Set the profile username
+	// Set the profile username, Attribute conditional on `requiresAuthentication` being equal to `true`
 	ProfileUsername pulumi.StringPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
 	ProfileUsernameVariable pulumi.StringPtrInput
+	// Require authentication type - Default value: `false`
+	RequiresAuthentication pulumi.BoolPtrInput
 }
 
 func (TransportCellularProfileFeatureArgs) ElementType() reflect.Type {
@@ -394,12 +400,13 @@ func (o TransportCellularProfileFeatureOutput) AccessPointNameVariable() pulumi.
 	return o.ApplyT(func(v *TransportCellularProfileFeature) pulumi.StringPtrOutput { return v.AccessPointNameVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set authentication type - Choices: `pap`, `chap`, `papChap`
+// Set authentication type, Attribute conditional on `requiresAuthentication` being equal to `true` - Choices: `pap`,
+// `chap`, `papChap`
 func (o TransportCellularProfileFeatureOutput) AuthenticationType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportCellularProfileFeature) pulumi.StringPtrOutput { return v.AuthenticationType }).(pulumi.StringPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
 func (o TransportCellularProfileFeatureOutput) AuthenticationTypeVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportCellularProfileFeature) pulumi.StringPtrOutput { return v.AuthenticationTypeVariable }).(pulumi.StringPtrOutput)
 }
@@ -417,11 +424,6 @@ func (o TransportCellularProfileFeatureOutput) FeatureProfileId() pulumi.StringO
 // The name of the Feature
 func (o TransportCellularProfileFeatureOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *TransportCellularProfileFeature) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
-}
-
-// No Authentication
-func (o TransportCellularProfileFeatureOutput) NoAuthentication() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *TransportCellularProfileFeature) pulumi.StringPtrOutput { return v.NoAuthentication }).(pulumi.StringPtrOutput)
 }
 
 // No Overwrite
@@ -456,24 +458,29 @@ func (o TransportCellularProfileFeatureOutput) ProfileIdVariable() pulumi.String
 	return o.ApplyT(func(v *TransportCellularProfileFeature) pulumi.StringPtrOutput { return v.ProfileIdVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set the profile password
+// Set the profile password, Attribute conditional on `requiresAuthentication` being equal to `true`
 func (o TransportCellularProfileFeatureOutput) ProfilePassword() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportCellularProfileFeature) pulumi.StringPtrOutput { return v.ProfilePassword }).(pulumi.StringPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
 func (o TransportCellularProfileFeatureOutput) ProfilePasswordVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportCellularProfileFeature) pulumi.StringPtrOutput { return v.ProfilePasswordVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set the profile username
+// Set the profile username, Attribute conditional on `requiresAuthentication` being equal to `true`
 func (o TransportCellularProfileFeatureOutput) ProfileUsername() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportCellularProfileFeature) pulumi.StringPtrOutput { return v.ProfileUsername }).(pulumi.StringPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
 func (o TransportCellularProfileFeatureOutput) ProfileUsernameVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportCellularProfileFeature) pulumi.StringPtrOutput { return v.ProfileUsernameVariable }).(pulumi.StringPtrOutput)
+}
+
+// Require authentication type - Default value: `false`
+func (o TransportCellularProfileFeatureOutput) RequiresAuthentication() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *TransportCellularProfileFeature) pulumi.BoolPtrOutput { return v.RequiresAuthentication }).(pulumi.BoolPtrOutput)
 }
 
 // The version of the Feature

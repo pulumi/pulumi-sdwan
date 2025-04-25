@@ -56,7 +56,7 @@ class ServiceRoutingEigrpFeatureArgs:
         :param pulumi.Input[builtins.int] hello_interval: Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
         :param pulumi.Input[builtins.str] hello_interval_variable: Variable name
         :param pulumi.Input[builtins.str] hmac_authentication_key: Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
-        :param pulumi.Input[builtins.str] hmac_authentication_key_variable: Variable name
+        :param pulumi.Input[builtins.str] hmac_authentication_key_variable: Variable name, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
         :param pulumi.Input[builtins.int] hold_time: Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
         :param pulumi.Input[builtins.str] hold_time_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureInterfaceArgs']]] interfaces: Configure IPv4 Static Routes
@@ -251,7 +251,7 @@ class ServiceRoutingEigrpFeatureArgs:
     @pulumi.getter(name="hmacAuthenticationKeyVariable")
     def hmac_authentication_key_variable(self) -> Optional[pulumi.Input[builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
         """
         return pulumi.get(self, "hmac_authentication_key_variable")
 
@@ -378,7 +378,7 @@ class _ServiceRoutingEigrpFeatureState:
         :param pulumi.Input[builtins.int] hello_interval: Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
         :param pulumi.Input[builtins.str] hello_interval_variable: Variable name
         :param pulumi.Input[builtins.str] hmac_authentication_key: Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
-        :param pulumi.Input[builtins.str] hmac_authentication_key_variable: Variable name
+        :param pulumi.Input[builtins.str] hmac_authentication_key_variable: Variable name, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
         :param pulumi.Input[builtins.int] hold_time: Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
         :param pulumi.Input[builtins.str] hold_time_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureInterfaceArgs']]] interfaces: Configure IPv4 Static Routes
@@ -567,7 +567,7 @@ class _ServiceRoutingEigrpFeatureState:
     @pulumi.getter(name="hmacAuthenticationKeyVariable")
     def hmac_authentication_key_variable(self) -> Optional[pulumi.Input[builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
         """
         return pulumi.get(self, "hmac_authentication_key_variable")
 
@@ -732,7 +732,7 @@ class ServiceRoutingEigrpFeature(pulumi.CustomResource):
         :param pulumi.Input[builtins.int] hello_interval: Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
         :param pulumi.Input[builtins.str] hello_interval_variable: Variable name
         :param pulumi.Input[builtins.str] hmac_authentication_key: Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
-        :param pulumi.Input[builtins.str] hmac_authentication_key_variable: Variable name
+        :param pulumi.Input[builtins.str] hmac_authentication_key_variable: Variable name, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
         :param pulumi.Input[builtins.int] hold_time: Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
         :param pulumi.Input[builtins.str] hold_time_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureInterfaceArgs', 'ServiceRoutingEigrpFeatureInterfaceArgsDict']]]] interfaces: Configure IPv4 Static Routes
@@ -877,7 +877,7 @@ class ServiceRoutingEigrpFeature(pulumi.CustomResource):
         :param pulumi.Input[builtins.int] hello_interval: Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
         :param pulumi.Input[builtins.str] hello_interval_variable: Variable name
         :param pulumi.Input[builtins.str] hmac_authentication_key: Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
-        :param pulumi.Input[builtins.str] hmac_authentication_key_variable: Variable name
+        :param pulumi.Input[builtins.str] hmac_authentication_key_variable: Variable name, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
         :param pulumi.Input[builtins.int] hold_time: Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
         :param pulumi.Input[builtins.str] hold_time_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureInterfaceArgs', 'ServiceRoutingEigrpFeatureInterfaceArgsDict']]]] interfaces: Configure IPv4 Static Routes
@@ -1006,7 +1006,7 @@ class ServiceRoutingEigrpFeature(pulumi.CustomResource):
     @pulumi.getter(name="hmacAuthenticationKeyVariable")
     def hmac_authentication_key_variable(self) -> pulumi.Output[Optional[builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
         """
         return pulumi.get(self, "hmac_authentication_key_variable")
 

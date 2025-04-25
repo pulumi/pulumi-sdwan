@@ -41,7 +41,7 @@ public final class ServiceWirelessLanFeatureSsid {
      */
     private @Nullable String passphrase;
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `security_type` being equal to `personal`
      * 
      */
     private @Nullable String passphraseVariable;
@@ -75,7 +75,7 @@ public final class ServiceWirelessLanFeatureSsid {
      */
     private @Nullable String radiusServerIp;
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `security_type` being equal to `enterprise`
      * 
      */
     private @Nullable String radiusServerIpVariable;
@@ -87,7 +87,7 @@ public final class ServiceWirelessLanFeatureSsid {
      */
     private @Nullable Integer radiusServerPort;
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `security_type` being equal to `enterprise`
      * 
      */
     private @Nullable String radiusServerPortVariable;
@@ -97,7 +97,7 @@ public final class ServiceWirelessLanFeatureSsid {
      */
     private @Nullable String radiusServerSecret;
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `security_type` being equal to `enterprise`
      * 
      */
     private @Nullable String radiusServerSecretVariable;
@@ -163,7 +163,7 @@ public final class ServiceWirelessLanFeatureSsid {
         return Optional.ofNullable(this.passphrase);
     }
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `security_type` being equal to `personal`
      * 
      */
     public Optional<String> passphraseVariable() {
@@ -209,7 +209,7 @@ public final class ServiceWirelessLanFeatureSsid {
         return Optional.ofNullable(this.radiusServerIp);
     }
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `security_type` being equal to `enterprise`
      * 
      */
     public Optional<String> radiusServerIpVariable() {
@@ -225,7 +225,7 @@ public final class ServiceWirelessLanFeatureSsid {
         return Optional.ofNullable(this.radiusServerPort);
     }
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `security_type` being equal to `enterprise`
      * 
      */
     public Optional<String> radiusServerPortVariable() {
@@ -239,7 +239,7 @@ public final class ServiceWirelessLanFeatureSsid {
         return Optional.ofNullable(this.radiusServerSecret);
     }
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `security_type` being equal to `enterprise`
      * 
      */
     public Optional<String> radiusServerSecretVariable() {

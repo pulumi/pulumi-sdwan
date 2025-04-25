@@ -53,14 +53,14 @@ public final class TransportManagementVpnFeatureIpv6StaticRouteArgs extends com.
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `gateway` being equal to `nat`
      * 
      */
     @Import(name="natVariable")
     private @Nullable Output<String> natVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `gateway` being equal to `nat`
      * 
      */
     public Optional<Output<String>> natVariable() {
@@ -204,7 +204,7 @@ public final class TransportManagementVpnFeatureIpv6StaticRouteArgs extends com.
         }
 
         /**
-         * @param natVariable Variable name
+         * @param natVariable Variable name, Attribute conditional on `gateway` being equal to `nat`
          * 
          * @return builder
          * 
@@ -215,7 +215,7 @@ public final class TransportManagementVpnFeatureIpv6StaticRouteArgs extends com.
         }
 
         /**
-         * @param natVariable Variable name
+         * @param natVariable Variable name, Attribute conditional on `gateway` being equal to `nat`
          * 
          * @return builder
          * 

@@ -11401,7 +11401,7 @@ export interface ServiceWirelessLanFeatureSsid {
      */
     passphrase?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `securityType` being equal to `personal`
      */
     passphraseVariable?: pulumi.Input<string>;
     /**
@@ -11429,7 +11429,7 @@ export interface ServiceWirelessLanFeatureSsid {
      */
     radiusServerIp?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `securityType` being equal to `enterprise`
      */
     radiusServerIpVariable?: pulumi.Input<string>;
     /**
@@ -11439,7 +11439,7 @@ export interface ServiceWirelessLanFeatureSsid {
      */
     radiusServerPort?: pulumi.Input<number>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `securityType` being equal to `enterprise`
      */
     radiusServerPortVariable?: pulumi.Input<string>;
     /**
@@ -11447,7 +11447,7 @@ export interface ServiceWirelessLanFeatureSsid {
      */
     radiusServerSecret?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `securityType` being equal to `enterprise`
      */
     radiusServerSecretVariable?: pulumi.Input<string>;
     /**
@@ -13407,7 +13407,7 @@ export interface TransportManagementVpnFeatureIpv4StaticRoute {
      */
     administrativeDistance?: pulumi.Input<number>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `gateway` being equal to `null0`
      */
     administrativeDistanceVariable?: pulumi.Input<string>;
     /**
@@ -13472,7 +13472,7 @@ export interface TransportManagementVpnFeatureIpv6StaticRoute {
      */
     nat?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `gateway` being equal to `nat`
      */
     natVariable?: pulumi.Input<string>;
     /**
@@ -14834,7 +14834,7 @@ export interface TransportT1E1ControllerFeatureEntry {
      */
     lengthLong?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `cableLength` being equal to `long`
      */
     lengthLongVariable?: pulumi.Input<string>;
     /**
@@ -14843,7 +14843,7 @@ export interface TransportT1E1ControllerFeatureEntry {
      */
     lengthShort?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `cableLength` being equal to `short`
      */
     lengthShortVariable?: pulumi.Input<string>;
     /**
@@ -14912,7 +14912,7 @@ export interface TransportWanVpnFeatureIpv4StaticRoute {
      */
     administrativeDistance?: pulumi.Input<number>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `gateway` being equal to `null0`
      */
     administrativeDistanceVariable?: pulumi.Input<string>;
     /**
@@ -14977,7 +14977,7 @@ export interface TransportWanVpnFeatureIpv6StaticRoute {
      */
     nat?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `gateway` being equal to `nat`
      */
     natVariable?: pulumi.Input<string>;
     /**
