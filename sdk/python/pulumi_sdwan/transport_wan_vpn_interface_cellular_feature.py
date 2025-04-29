@@ -4247,6 +4247,9 @@ class _TransportWanVpnInterfaceCellularFeatureState:
 
 
 class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/transportWanVpnInterfaceCellularFeature:TransportWanVpnInterfaceCellularFeature"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

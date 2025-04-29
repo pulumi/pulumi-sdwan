@@ -872,6 +872,9 @@ class _CiscoSigCredentialsFeatureTemplateState:
 
 
 class CiscoSigCredentialsFeatureTemplate(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/ciscoSigCredentialsFeatureTemplate:CiscoSigCredentialsFeatureTemplate"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

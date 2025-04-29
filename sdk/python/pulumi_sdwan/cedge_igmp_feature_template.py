@@ -202,6 +202,9 @@ class _CedgeIgmpFeatureTemplateState:
 
 
 class CedgeIgmpFeatureTemplate(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/cedgeIgmpFeatureTemplate:CedgeIgmpFeatureTemplate"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

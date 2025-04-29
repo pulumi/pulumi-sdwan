@@ -97,6 +97,9 @@ class _DnsSecurityFeatureProfileState:
 
 
 class DnsSecurityFeatureProfile(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/dnsSecurityFeatureProfile:DnsSecurityFeatureProfile"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

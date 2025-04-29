@@ -147,6 +147,9 @@ class _CentralizedPolicyState:
 
 
 class CentralizedPolicy(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/centralizedPolicy:CentralizedPolicy"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -394,6 +394,9 @@ class _SwitchportFeatureTemplateState:
 
 
 class SwitchportFeatureTemplate(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/switchportFeatureTemplate:SwitchportFeatureTemplate"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

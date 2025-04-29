@@ -115,6 +115,9 @@ class _AsPathListPolicyObjectState:
 
 
 class AsPathListPolicyObject(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/asPathListPolicyObject:AsPathListPolicyObject"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

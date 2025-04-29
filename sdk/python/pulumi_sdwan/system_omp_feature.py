@@ -2001,6 +2001,9 @@ class _SystemOmpFeatureState:
 
 
 class SystemOmpFeature(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/systemOmpFeature:SystemOmpFeature"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

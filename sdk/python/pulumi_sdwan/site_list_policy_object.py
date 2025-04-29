@@ -115,6 +115,9 @@ class _SiteListPolicyObjectState:
 
 
 class SiteListPolicyObject(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/siteListPolicyObject:SiteListPolicyObject"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

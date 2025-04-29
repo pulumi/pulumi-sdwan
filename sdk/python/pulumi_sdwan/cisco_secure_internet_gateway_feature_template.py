@@ -362,6 +362,9 @@ class _CiscoSecureInternetGatewayFeatureTemplateState:
 
 
 class CiscoSecureInternetGatewayFeatureTemplate(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/ciscoSecureInternetGatewayFeatureTemplate:CiscoSecureInternetGatewayFeatureTemplate"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

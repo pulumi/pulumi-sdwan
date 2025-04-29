@@ -1081,6 +1081,9 @@ class _TransportWanVpnInterfaceGreFeatureState:
 
 
 class TransportWanVpnInterfaceGreFeature(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/transportWanVpnInterfaceGreFeature:TransportWanVpnInterfaceGreFeature"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

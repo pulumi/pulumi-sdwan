@@ -170,6 +170,9 @@ class _PolicyObjectSecurityScalableGroupTagListState:
 
 
 class PolicyObjectSecurityScalableGroupTagList(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/policyObjectSecurityScalableGroupTagList:PolicyObjectSecurityScalableGroupTagList"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

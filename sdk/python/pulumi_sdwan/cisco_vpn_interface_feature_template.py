@@ -6658,6 +6658,9 @@ class _CiscoVpnInterfaceFeatureTemplateState:
 
 
 class CiscoVpnInterfaceFeatureTemplate(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/ciscoVpnInterfaceFeatureTemplate:CiscoVpnInterfaceFeatureTemplate"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

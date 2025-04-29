@@ -179,6 +179,9 @@ class _PolicyObjectSecurityIdentityListState:
 
 
 class PolicyObjectSecurityIdentityList(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/policyObjectSecurityIdentityList:PolicyObjectSecurityIdentityList"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -370,6 +370,9 @@ class _SystemMrfFeatureState:
 
 
 class SystemMrfFeature(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/systemMrfFeature:SystemMrfFeature"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

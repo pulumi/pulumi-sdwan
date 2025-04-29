@@ -226,6 +226,9 @@ class _MeshTopologyPolicyDefinitionState:
 
 
 class MeshTopologyPolicyDefinition(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/meshTopologyPolicyDefinition:MeshTopologyPolicyDefinition"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

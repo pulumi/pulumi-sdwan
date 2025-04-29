@@ -622,6 +622,9 @@ class _CiscoSecurityFeatureTemplateState:
 
 
 class CiscoSecurityFeatureTemplate(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/ciscoSecurityFeatureTemplate:CiscoSecurityFeatureTemplate"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -175,6 +175,9 @@ class _CliConfigFeatureState:
 
 
 class CliConfigFeature(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/cliConfigFeature:CliConfigFeature"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

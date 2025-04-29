@@ -386,6 +386,9 @@ class _CflowdPolicyDefinitionState:
 
 
 class CflowdPolicyDefinition(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/cflowdPolicyDefinition:CflowdPolicyDefinition"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

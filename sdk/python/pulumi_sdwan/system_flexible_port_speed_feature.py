@@ -217,6 +217,9 @@ class _SystemFlexiblePortSpeedFeatureState:
 
 
 class SystemFlexiblePortSpeedFeature(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/systemFlexiblePortSpeedFeature:SystemFlexiblePortSpeedFeature"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

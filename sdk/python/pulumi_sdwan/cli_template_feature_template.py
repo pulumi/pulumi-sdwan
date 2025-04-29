@@ -200,6 +200,9 @@ class _CliTemplateFeatureTemplateState:
 
 
 class CliTemplateFeatureTemplate(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/cliTemplateFeatureTemplate:CliTemplateFeatureTemplate"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

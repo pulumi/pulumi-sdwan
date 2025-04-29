@@ -97,6 +97,9 @@ class _ServiceFeatureProfileState:
 
 
 class ServiceFeatureProfile(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/serviceFeatureProfile:ServiceFeatureProfile"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -1259,6 +1259,9 @@ class _ServiceRoutingOspfv3Ipv4FeatureState:
 
 
 class ServiceRoutingOspfv3Ipv4Feature(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/serviceRoutingOspfv3Ipv4Feature:ServiceRoutingOspfv3Ipv4Feature"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

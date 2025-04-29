@@ -1066,6 +1066,9 @@ class _CiscoOmpFeatureTemplateState:
 
 
 class CiscoOmpFeatureTemplate(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/ciscoOmpFeatureTemplate:CiscoOmpFeatureTemplate"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -467,6 +467,9 @@ class _LocalizedPolicyState:
 
 
 class LocalizedPolicy(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/localizedPolicy:LocalizedPolicy"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

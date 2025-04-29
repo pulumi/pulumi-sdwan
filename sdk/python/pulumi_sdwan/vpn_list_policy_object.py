@@ -115,6 +115,9 @@ class _VpnListPolicyObjectState:
 
 
 class VpnListPolicyObject(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/vpnListPolicyObject:VpnListPolicyObject"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

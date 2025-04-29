@@ -1736,6 +1736,9 @@ class _ServiceRoutingBgpFeatureState:
 
 
 class ServiceRoutingBgpFeature(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/serviceRoutingBgpFeature:ServiceRoutingBgpFeature"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

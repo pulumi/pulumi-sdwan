@@ -194,6 +194,9 @@ class _Ipv4AclPolicyDefinitionState:
 
 
 class Ipv4AclPolicyDefinition(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/ipv4AclPolicyDefinition:Ipv4AclPolicyDefinition"
+
     @overload
     def __init__(__self__,
                  resource_name: str,
