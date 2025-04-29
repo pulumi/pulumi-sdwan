@@ -721,6 +721,9 @@ class _TransportTrackerFeatureState:
 
 
 class TransportTrackerFeature(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/transportTrackerFeature:TransportTrackerFeature"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -512,6 +512,9 @@ class _ServiceObjectTrackerFeatureState:
 
 
 class ServiceObjectTrackerFeature(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/serviceObjectTrackerFeature:ServiceObjectTrackerFeature"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

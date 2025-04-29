@@ -1425,6 +1425,9 @@ class _SystemRemoteAccessFeatureState:
 
 
 class SystemRemoteAccessFeature(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/systemRemoteAccessFeature:SystemRemoteAccessFeature"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

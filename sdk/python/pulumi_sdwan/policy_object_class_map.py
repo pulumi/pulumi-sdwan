@@ -178,6 +178,9 @@ class _PolicyObjectClassMapState:
 
 
 class PolicyObjectClassMap(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/policyObjectClassMap:PolicyObjectClassMap"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

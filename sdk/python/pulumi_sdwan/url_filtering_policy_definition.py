@@ -527,6 +527,9 @@ class _UrlFilteringPolicyDefinitionState:
 
 
 class UrlFilteringPolicyDefinition(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/urlFilteringPolicyDefinition:UrlFilteringPolicyDefinition"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

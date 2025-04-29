@@ -143,6 +143,9 @@ class _ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6FeatureState:
 
 
 class ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6Feature(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/serviceLanVpnFeatureAssociateRoutingOspfv3Ipv6Feature:ServiceLanVpnFeatureAssociateRoutingOspfv3Ipv6Feature"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

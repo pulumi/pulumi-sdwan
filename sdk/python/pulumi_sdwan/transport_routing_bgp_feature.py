@@ -1768,6 +1768,9 @@ class _TransportRoutingBgpFeatureState:
 
 
 class TransportRoutingBgpFeature(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/transportRoutingBgpFeature:TransportRoutingBgpFeature"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

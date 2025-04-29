@@ -115,6 +115,9 @@ class _ApplicationListPolicyObjectState:
 
 
 class ApplicationListPolicyObject(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/applicationListPolicyObject:ApplicationListPolicyObject"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

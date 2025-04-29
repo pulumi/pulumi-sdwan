@@ -290,6 +290,9 @@ class _ConfigurationGroupState:
 
 
 class ConfigurationGroup(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/configurationGroup:ConfigurationGroup"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

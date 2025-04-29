@@ -174,6 +174,9 @@ class _TransportWanVpnInterfaceGreFeatureAssociateTrackerFeatureState:
 
 
 class TransportWanVpnInterfaceGreFeatureAssociateTrackerFeature(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/transportWanVpnInterfaceGreFeatureAssociateTrackerFeature:TransportWanVpnInterfaceGreFeatureAssociateTrackerFeature"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

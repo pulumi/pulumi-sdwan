@@ -464,6 +464,9 @@ class _TransportCellularControllerFeatureState:
 
 
 class TransportCellularControllerFeature(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/transportCellularControllerFeature:TransportCellularControllerFeature"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

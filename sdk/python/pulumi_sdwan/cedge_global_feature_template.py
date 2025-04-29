@@ -1640,6 +1640,9 @@ class _CedgeGlobalFeatureTemplateState:
 
 
 class CedgeGlobalFeatureTemplate(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/cedgeGlobalFeatureTemplate:CedgeGlobalFeatureTemplate"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

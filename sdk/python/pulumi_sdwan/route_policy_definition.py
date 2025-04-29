@@ -195,6 +195,9 @@ class _RoutePolicyDefinitionState:
 
 
 class RoutePolicyDefinition(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/routePolicyDefinition:RoutePolicyDefinition"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

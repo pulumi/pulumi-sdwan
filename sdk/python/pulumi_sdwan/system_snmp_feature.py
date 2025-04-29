@@ -500,6 +500,9 @@ class _SystemSnmpFeatureState:
 
 
 class SystemSnmpFeature(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/systemSnmpFeature:SystemSnmpFeature"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

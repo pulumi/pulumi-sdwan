@@ -194,6 +194,9 @@ class _Ipv6DeviceAclPolicyDefinitionState:
 
 
 class Ipv6DeviceAclPolicyDefinition(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/ipv6DeviceAclPolicyDefinition:Ipv6DeviceAclPolicyDefinition"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -296,6 +296,9 @@ class _CiscoBannerFeatureTemplateState:
 
 
 class CiscoBannerFeatureTemplate(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/ciscoBannerFeatureTemplate:CiscoBannerFeatureTemplate"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

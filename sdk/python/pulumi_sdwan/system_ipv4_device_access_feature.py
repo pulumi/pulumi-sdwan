@@ -211,6 +211,9 @@ class _SystemIpv4DeviceAccessFeatureState:
 
 
 class SystemIpv4DeviceAccessFeature(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/systemIpv4DeviceAccessFeature:SystemIpv4DeviceAccessFeature"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -273,6 +273,9 @@ class _PreferredColorGroupPolicyObjectState:
 
 
 class PreferredColorGroupPolicyObject(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/preferredColorGroupPolicyObject:PreferredColorGroupPolicyObject"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

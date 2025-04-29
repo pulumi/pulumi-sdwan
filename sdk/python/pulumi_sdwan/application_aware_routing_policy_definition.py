@@ -162,6 +162,9 @@ class _ApplicationAwareRoutingPolicyDefinitionState:
 
 
 class ApplicationAwareRoutingPolicyDefinition(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/applicationAwareRoutingPolicyDefinition:ApplicationAwareRoutingPolicyDefinition"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

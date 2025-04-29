@@ -2871,6 +2871,9 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
 
 
 class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/serviceLanVpnInterfaceEthernetFeature:ServiceLanVpnInterfaceEthernetFeature"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

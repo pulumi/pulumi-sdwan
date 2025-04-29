@@ -371,6 +371,9 @@ class _SystemBfdFeatureState:
 
 
 class SystemBfdFeature(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/systemBfdFeature:SystemBfdFeature"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

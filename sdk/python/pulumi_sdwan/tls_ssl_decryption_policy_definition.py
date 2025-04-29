@@ -659,6 +659,9 @@ class _TlsSslDecryptionPolicyDefinitionState:
 
 
 class TlsSslDecryptionPolicyDefinition(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/tlsSslDecryptionPolicyDefinition:TlsSslDecryptionPolicyDefinition"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

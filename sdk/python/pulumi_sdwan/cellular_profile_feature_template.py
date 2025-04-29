@@ -872,6 +872,9 @@ class _CellularProfileFeatureTemplateState:
 
 
 class CellularProfileFeatureTemplate(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/cellularProfileFeatureTemplate:CellularProfileFeatureTemplate"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

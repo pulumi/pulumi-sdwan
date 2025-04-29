@@ -338,6 +338,9 @@ class _SystemPerformanceMonitoringFeatureState:
 
 
 class SystemPerformanceMonitoringFeature(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/systemPerformanceMonitoringFeature:SystemPerformanceMonitoringFeature"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -146,6 +146,9 @@ class _RuleSetPolicyDefinitionState:
 
 
 class RuleSetPolicyDefinition(pulumi.CustomResource):
+
+    pulumi_type = "sdwan:index/ruleSetPolicyDefinition:RuleSetPolicyDefinition"
+
     @overload
     def __init__(__self__,
                  resource_name: str,
