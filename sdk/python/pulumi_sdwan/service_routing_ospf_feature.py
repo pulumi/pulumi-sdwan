@@ -1066,10 +1066,8 @@ class _ServiceRoutingOspfFeatureState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/serviceRoutingOspfFeature:ServiceRoutingOspfFeature")
 class ServiceRoutingOspfFeature(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/serviceRoutingOspfFeature:ServiceRoutingOspfFeature"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -98,10 +98,8 @@ class _AttachFeatureDeviceTemplateState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/attachFeatureDeviceTemplate:AttachFeatureDeviceTemplate")
 class AttachFeatureDeviceTemplate(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/attachFeatureDeviceTemplate:AttachFeatureDeviceTemplate"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -385,10 +385,8 @@ class _CflowdPolicyDefinitionState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/cflowdPolicyDefinition:CflowdPolicyDefinition")
 class CflowdPolicyDefinition(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/cflowdPolicyDefinition:CflowdPolicyDefinition"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

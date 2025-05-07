@@ -717,10 +717,8 @@ class _SecurityPolicyState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/securityPolicy:SecurityPolicy")
 class SecurityPolicy(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/securityPolicy:SecurityPolicy"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

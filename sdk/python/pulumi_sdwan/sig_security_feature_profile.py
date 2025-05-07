@@ -96,10 +96,8 @@ class _SigSecurityFeatureProfileState:
         pulumi.set(self, "name", value)
 
 
+@pulumi.type_token("sdwan:index/sigSecurityFeatureProfile:SigSecurityFeatureProfile")
 class SigSecurityFeatureProfile(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/sigSecurityFeatureProfile:SigSecurityFeatureProfile"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

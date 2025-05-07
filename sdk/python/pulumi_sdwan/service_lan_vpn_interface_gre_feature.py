@@ -1080,10 +1080,8 @@ class _ServiceLanVpnInterfaceGreFeatureState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/serviceLanVpnInterfaceGreFeature:ServiceLanVpnInterfaceGreFeature")
 class ServiceLanVpnInterfaceGreFeature(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/serviceLanVpnInterfaceGreFeature:ServiceLanVpnInterfaceGreFeature"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

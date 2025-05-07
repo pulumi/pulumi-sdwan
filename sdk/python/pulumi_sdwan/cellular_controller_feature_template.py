@@ -521,10 +521,8 @@ class _CellularControllerFeatureTemplateState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/cellularControllerFeatureTemplate:CellularControllerFeatureTemplate")
 class CellularControllerFeatureTemplate(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/cellularControllerFeatureTemplate:CellularControllerFeatureTemplate"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -6254,10 +6254,8 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
         pulumi.set(self, "xconnect_variable", value)
 
 
+@pulumi.type_token("sdwan:index/transportWanVpnInterfaceEthernetFeature:TransportWanVpnInterfaceEthernetFeature")
 class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/transportWanVpnInterfaceEthernetFeature:TransportWanVpnInterfaceEthernetFeature"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

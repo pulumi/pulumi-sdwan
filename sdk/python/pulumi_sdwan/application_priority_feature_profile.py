@@ -96,10 +96,8 @@ class _ApplicationPriorityFeatureProfileState:
         pulumi.set(self, "name", value)
 
 
+@pulumi.type_token("sdwan:index/applicationPriorityFeatureProfile:ApplicationPriorityFeatureProfile")
 class ApplicationPriorityFeatureProfile(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/applicationPriorityFeatureProfile:ApplicationPriorityFeatureProfile"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

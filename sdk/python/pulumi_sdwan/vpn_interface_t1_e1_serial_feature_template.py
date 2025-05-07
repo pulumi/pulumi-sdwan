@@ -3933,10 +3933,8 @@ class _VpnInterfaceT1E1SerialFeatureTemplateState:
         pulumi.set(self, "write_rule_variable", value)
 
 
+@pulumi.type_token("sdwan:index/vpnInterfaceT1E1SerialFeatureTemplate:VpnInterfaceT1E1SerialFeatureTemplate")
 class VpnInterfaceT1E1SerialFeatureTemplate(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/vpnInterfaceT1E1SerialFeatureTemplate:VpnInterfaceT1E1SerialFeatureTemplate"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

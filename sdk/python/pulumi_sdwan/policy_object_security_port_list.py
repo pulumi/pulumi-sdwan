@@ -177,10 +177,8 @@ class _PolicyObjectSecurityPortListState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/policyObjectSecurityPortList:PolicyObjectSecurityPortList")
 class PolicyObjectSecurityPortList(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/policyObjectSecurityPortList:PolicyObjectSecurityPortList"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

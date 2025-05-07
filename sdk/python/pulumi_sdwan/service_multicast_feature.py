@@ -946,10 +946,8 @@ class _ServiceMulticastFeatureState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/serviceMulticastFeature:ServiceMulticastFeature")
 class ServiceMulticastFeature(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/serviceMulticastFeature:ServiceMulticastFeature"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

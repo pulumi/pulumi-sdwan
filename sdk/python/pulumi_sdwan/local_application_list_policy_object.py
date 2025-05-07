@@ -114,10 +114,8 @@ class _LocalApplicationListPolicyObjectState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/localApplicationListPolicyObject:LocalApplicationListPolicyObject")
 class LocalApplicationListPolicyObject(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/localApplicationListPolicyObject:LocalApplicationListPolicyObject"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

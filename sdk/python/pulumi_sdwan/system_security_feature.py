@@ -535,10 +535,8 @@ class _SystemSecurityFeatureState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/systemSecurityFeature:SystemSecurityFeature")
 class SystemSecurityFeature(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/systemSecurityFeature:SystemSecurityFeature"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

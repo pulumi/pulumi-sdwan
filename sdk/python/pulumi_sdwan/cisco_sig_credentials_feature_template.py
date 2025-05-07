@@ -871,10 +871,8 @@ class _CiscoSigCredentialsFeatureTemplateState:
         pulumi.set(self, "zscaler_username_variable", value)
 
 
+@pulumi.type_token("sdwan:index/ciscoSigCredentialsFeatureTemplate:CiscoSigCredentialsFeatureTemplate")
 class CiscoSigCredentialsFeatureTemplate(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/ciscoSigCredentialsFeatureTemplate:CiscoSigCredentialsFeatureTemplate"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -174,10 +174,8 @@ class _PolicerPolicyObjectState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/policerPolicyObject:PolicerPolicyObject")
 class PolicerPolicyObject(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/policerPolicyObject:PolicerPolicyObject"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

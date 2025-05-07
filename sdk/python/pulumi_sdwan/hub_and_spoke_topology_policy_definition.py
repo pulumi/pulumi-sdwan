@@ -225,10 +225,8 @@ class _HubAndSpokeTopologyPolicyDefinitionState:
         pulumi.set(self, "vpn_list_version", value)
 
 
+@pulumi.type_token("sdwan:index/hubAndSpokeTopologyPolicyDefinition:HubAndSpokeTopologyPolicyDefinition")
 class HubAndSpokeTopologyPolicyDefinition(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/hubAndSpokeTopologyPolicyDefinition:HubAndSpokeTopologyPolicyDefinition"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

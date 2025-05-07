@@ -225,10 +225,8 @@ class _MeshTopologyPolicyDefinitionState:
         pulumi.set(self, "vpn_list_version", value)
 
 
+@pulumi.type_token("sdwan:index/meshTopologyPolicyDefinition:MeshTopologyPolicyDefinition")
 class MeshTopologyPolicyDefinition(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/meshTopologyPolicyDefinition:MeshTopologyPolicyDefinition"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

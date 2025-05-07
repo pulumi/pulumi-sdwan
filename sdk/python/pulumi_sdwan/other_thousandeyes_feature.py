@@ -178,10 +178,8 @@ class _OtherThousandeyesFeatureState:
         pulumi.set(self, "virtual_applications", value)
 
 
+@pulumi.type_token("sdwan:index/otherThousandeyesFeature:OtherThousandeyesFeature")
 class OtherThousandeyesFeature(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/otherThousandeyesFeature:OtherThousandeyesFeature"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

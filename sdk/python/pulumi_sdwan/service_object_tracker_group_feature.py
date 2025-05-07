@@ -306,10 +306,8 @@ class _ServiceObjectTrackerGroupFeatureState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/serviceObjectTrackerGroupFeature:ServiceObjectTrackerGroupFeature")
 class ServiceObjectTrackerGroupFeature(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/serviceObjectTrackerGroupFeature:ServiceObjectTrackerGroupFeature"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

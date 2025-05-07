@@ -937,10 +937,8 @@ class _CedgePimFeatureTemplateState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/cedgePimFeatureTemplate:CedgePimFeatureTemplate")
 class CedgePimFeatureTemplate(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/cedgePimFeatureTemplate:CedgePimFeatureTemplate"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -555,10 +555,8 @@ class _TransportManagementVpnFeatureState:
         pulumi.set(self, "vpn_description_variable", value)
 
 
+@pulumi.type_token("sdwan:index/transportManagementVpnFeature:TransportManagementVpnFeature")
 class TransportManagementVpnFeature(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/transportManagementVpnFeature:TransportManagementVpnFeature"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

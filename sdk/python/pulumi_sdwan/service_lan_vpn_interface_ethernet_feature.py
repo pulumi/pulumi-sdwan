@@ -2870,10 +2870,8 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
         pulumi.set(self, "xconnect_variable", value)
 
 
+@pulumi.type_token("sdwan:index/serviceLanVpnInterfaceEthernetFeature:ServiceLanVpnInterfaceEthernetFeature")
 class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/serviceLanVpnInterfaceEthernetFeature:ServiceLanVpnInterfaceEthernetFeature"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

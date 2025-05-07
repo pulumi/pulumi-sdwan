@@ -361,10 +361,8 @@ class _CiscoSecureInternetGatewayFeatureTemplateState:
         pulumi.set(self, "vpn_id", value)
 
 
+@pulumi.type_token("sdwan:index/ciscoSecureInternetGatewayFeatureTemplate:CiscoSecureInternetGatewayFeatureTemplate")
 class CiscoSecureInternetGatewayFeatureTemplate(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/ciscoSecureInternetGatewayFeatureTemplate:CiscoSecureInternetGatewayFeatureTemplate"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

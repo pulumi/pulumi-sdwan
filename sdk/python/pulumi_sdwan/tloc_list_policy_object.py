@@ -114,10 +114,8 @@ class _TlocListPolicyObjectState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/tlocListPolicyObject:TlocListPolicyObject")
 class TlocListPolicyObject(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/tlocListPolicyObject:TlocListPolicyObject"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

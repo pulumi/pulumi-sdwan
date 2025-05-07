@@ -528,10 +528,8 @@ class _ObjectGroupPolicyDefinitionState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/objectGroupPolicyDefinition:ObjectGroupPolicyDefinition")
 class ObjectGroupPolicyDefinition(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/objectGroupPolicyDefinition:ObjectGroupPolicyDefinition"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

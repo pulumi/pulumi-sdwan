@@ -65,10 +65,8 @@ class _ActivateCentralizedPolicyState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/activateCentralizedPolicy:ActivateCentralizedPolicy")
 class ActivateCentralizedPolicy(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/activateCentralizedPolicy:ActivateCentralizedPolicy"
-
     @overload
     def __init__(__self__,
                  resource_name: str,
