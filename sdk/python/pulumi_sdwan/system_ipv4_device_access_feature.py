@@ -210,10 +210,8 @@ class _SystemIpv4DeviceAccessFeatureState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/systemIpv4DeviceAccessFeature:SystemIpv4DeviceAccessFeature")
 class SystemIpv4DeviceAccessFeature(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/systemIpv4DeviceAccessFeature:SystemIpv4DeviceAccessFeature"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

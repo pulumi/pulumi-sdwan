@@ -177,10 +177,8 @@ class _PolicyObjectStandardCommunityListState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/policyObjectStandardCommunityList:PolicyObjectStandardCommunityList")
 class PolicyObjectStandardCommunityList(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/policyObjectStandardCommunityList:PolicyObjectStandardCommunityList"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

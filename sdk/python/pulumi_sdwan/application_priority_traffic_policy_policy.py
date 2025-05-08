@@ -263,10 +263,8 @@ class _ApplicationPriorityTrafficPolicyPolicyState:
         pulumi.set(self, "vpns", value)
 
 
+@pulumi.type_token("sdwan:index/applicationPriorityTrafficPolicyPolicy:ApplicationPriorityTrafficPolicyPolicy")
 class ApplicationPriorityTrafficPolicyPolicy(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/applicationPriorityTrafficPolicyPolicy:ApplicationPriorityTrafficPolicyPolicy"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

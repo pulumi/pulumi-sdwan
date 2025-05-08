@@ -177,10 +177,8 @@ class _PolicyObjectSecurityGeolocationListState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/policyObjectSecurityGeolocationList:PolicyObjectSecurityGeolocationList")
 class PolicyObjectSecurityGeolocationList(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/policyObjectSecurityGeolocationList:PolicyObjectSecurityGeolocationList"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

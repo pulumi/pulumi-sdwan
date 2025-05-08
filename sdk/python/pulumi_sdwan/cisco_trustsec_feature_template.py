@@ -1169,10 +1169,8 @@ class _CiscoTrustsecFeatureTemplateState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/ciscoTrustsecFeatureTemplate:CiscoTrustsecFeatureTemplate")
 class CiscoTrustsecFeatureTemplate(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/ciscoTrustsecFeatureTemplate:CiscoTrustsecFeatureTemplate"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

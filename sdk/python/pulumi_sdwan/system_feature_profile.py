@@ -96,10 +96,8 @@ class _SystemFeatureProfileState:
         pulumi.set(self, "name", value)
 
 
+@pulumi.type_token("sdwan:index/systemFeatureProfile:SystemFeatureProfile")
 class SystemFeatureProfile(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/systemFeatureProfile:SystemFeatureProfile"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

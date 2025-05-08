@@ -210,10 +210,8 @@ class _ServiceRoutePolicyFeatureState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/serviceRoutePolicyFeature:ServiceRoutePolicyFeature")
 class ServiceRoutePolicyFeature(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/serviceRoutePolicyFeature:ServiceRoutePolicyFeature"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

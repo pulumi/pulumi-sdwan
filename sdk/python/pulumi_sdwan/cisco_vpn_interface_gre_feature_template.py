@@ -1101,10 +1101,8 @@ class _CiscoVpnInterfaceGreFeatureTemplateState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/ciscoVpnInterfaceGreFeatureTemplate:CiscoVpnInterfaceGreFeatureTemplate")
 class CiscoVpnInterfaceGreFeatureTemplate(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/ciscoVpnInterfaceGreFeatureTemplate:CiscoVpnInterfaceGreFeatureTemplate"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

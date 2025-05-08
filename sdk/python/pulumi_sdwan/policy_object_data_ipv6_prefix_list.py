@@ -177,10 +177,8 @@ class _PolicyObjectDataIpv6PrefixListState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/policyObjectDataIpv6PrefixList:PolicyObjectDataIpv6PrefixList")
 class PolicyObjectDataIpv6PrefixList(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/policyObjectDataIpv6PrefixList:PolicyObjectDataIpv6PrefixList"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

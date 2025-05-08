@@ -593,10 +593,8 @@ class _SystemAaaFeatureState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/systemAaaFeature:SystemAaaFeature")
 class SystemAaaFeature(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/systemAaaFeature:SystemAaaFeature"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

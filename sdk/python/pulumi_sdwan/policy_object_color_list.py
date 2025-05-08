@@ -177,10 +177,8 @@ class _PolicyObjectColorListState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/policyObjectColorList:PolicyObjectColorList")
 class PolicyObjectColorList(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/policyObjectColorList:PolicyObjectColorList"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

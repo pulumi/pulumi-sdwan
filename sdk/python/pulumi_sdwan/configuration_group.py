@@ -289,10 +289,8 @@ class _ConfigurationGroupState:
         pulumi.set(self, "topology_site_devices", value)
 
 
+@pulumi.type_token("sdwan:index/configurationGroup:ConfigurationGroup")
 class ConfigurationGroup(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/configurationGroup:ConfigurationGroup"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

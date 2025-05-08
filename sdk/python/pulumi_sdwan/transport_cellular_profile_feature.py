@@ -628,10 +628,8 @@ class _TransportCellularProfileFeatureState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/transportCellularProfileFeature:TransportCellularProfileFeature")
 class TransportCellularProfileFeature(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/transportCellularProfileFeature:TransportCellularProfileFeature"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

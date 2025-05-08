@@ -1258,10 +1258,8 @@ class _TransportRoutingOspfv3Ipv4FeatureState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/transportRoutingOspfv3Ipv4Feature:TransportRoutingOspfv3Ipv4Feature")
 class TransportRoutingOspfv3Ipv4Feature(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/transportRoutingOspfv3Ipv4Feature:TransportRoutingOspfv3Ipv4Feature"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

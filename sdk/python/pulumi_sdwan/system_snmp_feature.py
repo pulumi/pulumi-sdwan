@@ -499,10 +499,8 @@ class _SystemSnmpFeatureState:
         pulumi.set(self, "views", value)
 
 
+@pulumi.type_token("sdwan:index/systemSnmpFeature:SystemSnmpFeature")
 class SystemSnmpFeature(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/systemSnmpFeature:SystemSnmpFeature"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

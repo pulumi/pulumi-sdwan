@@ -199,10 +199,8 @@ class _CliTemplateFeatureTemplateState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/cliTemplateFeatureTemplate:CliTemplateFeatureTemplate")
 class CliTemplateFeatureTemplate(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/cliTemplateFeatureTemplate:CliTemplateFeatureTemplate"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -1755,10 +1755,8 @@ export type ProtocolListPolicyObject = import("./protocolListPolicyObject").Prot
 export const ProtocolListPolicyObject: typeof import("./protocolListPolicyObject").ProtocolListPolicyObject = null as any;
 utilities.lazyLoad(exports, ["ProtocolListPolicyObject"], () => require("./protocolListPolicyObject"));
 
-export { ProviderArgs } from "./provider";
-export type Provider = import("./provider").Provider;
-export const Provider: typeof import("./provider").Provider = null as any;
-utilities.lazyLoad(exports, ["Provider"], () => require("./provider"));
+export * from "./provider";
+import { Provider } from "./provider";
 
 export { QosMapPolicyDefinitionArgs, QosMapPolicyDefinitionState } from "./qosMapPolicyDefinition";
 export type QosMapPolicyDefinition = import("./qosMapPolicyDefinition").QosMapPolicyDefinition;

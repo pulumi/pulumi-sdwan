@@ -169,10 +169,8 @@ class _PolicyObjectSecurityScalableGroupTagListState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/policyObjectSecurityScalableGroupTagList:PolicyObjectSecurityScalableGroupTagList")
 class PolicyObjectSecurityScalableGroupTagList(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/policyObjectSecurityScalableGroupTagList:PolicyObjectSecurityScalableGroupTagList"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

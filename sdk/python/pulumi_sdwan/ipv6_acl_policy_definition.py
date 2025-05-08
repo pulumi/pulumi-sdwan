@@ -193,10 +193,8 @@ class _Ipv6AclPolicyDefinitionState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/ipv6AclPolicyDefinition:Ipv6AclPolicyDefinition")
 class Ipv6AclPolicyDefinition(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/ipv6AclPolicyDefinition:Ipv6AclPolicyDefinition"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

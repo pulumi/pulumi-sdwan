@@ -169,10 +169,8 @@ class _PolicyObjectSecurityLocalDomainListState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/policyObjectSecurityLocalDomainList:PolicyObjectSecurityLocalDomainList")
 class PolicyObjectSecurityLocalDomainList(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/policyObjectSecurityLocalDomainList:PolicyObjectSecurityLocalDomainList"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

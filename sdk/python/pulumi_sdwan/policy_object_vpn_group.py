@@ -177,10 +177,8 @@ class _PolicyObjectVpnGroupState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/policyObjectVpnGroup:PolicyObjectVpnGroup")
 class PolicyObjectVpnGroup(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/policyObjectVpnGroup:PolicyObjectVpnGroup"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

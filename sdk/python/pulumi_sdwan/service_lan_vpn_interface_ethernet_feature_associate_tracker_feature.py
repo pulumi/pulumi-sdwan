@@ -173,10 +173,8 @@ class _ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/serviceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature:ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature")
 class ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/serviceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature:ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

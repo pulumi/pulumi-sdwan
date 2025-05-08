@@ -1639,10 +1639,8 @@ class _CedgeGlobalFeatureTemplateState:
         pulumi.set(self, "vty_logging_variable", value)
 
 
+@pulumi.type_token("sdwan:index/cedgeGlobalFeatureTemplate:CedgeGlobalFeatureTemplate")
 class CedgeGlobalFeatureTemplate(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/cedgeGlobalFeatureTemplate:CedgeGlobalFeatureTemplate"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

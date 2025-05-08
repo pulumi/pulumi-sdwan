@@ -114,10 +114,8 @@ class _ZoneListPolicyObjectState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/zoneListPolicyObject:ZoneListPolicyObject")
 class ZoneListPolicyObject(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/zoneListPolicyObject:ZoneListPolicyObject"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

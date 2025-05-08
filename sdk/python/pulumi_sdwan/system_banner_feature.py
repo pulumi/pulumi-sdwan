@@ -256,10 +256,8 @@ class _SystemBannerFeatureState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/systemBannerFeature:SystemBannerFeature")
 class SystemBannerFeature(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/systemBannerFeature:SystemBannerFeature"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

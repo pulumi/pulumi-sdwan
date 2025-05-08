@@ -216,10 +216,8 @@ class _SystemFlexiblePortSpeedFeatureState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/systemFlexiblePortSpeedFeature:SystemFlexiblePortSpeedFeature")
 class SystemFlexiblePortSpeedFeature(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/systemFlexiblePortSpeedFeature:SystemFlexiblePortSpeedFeature"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

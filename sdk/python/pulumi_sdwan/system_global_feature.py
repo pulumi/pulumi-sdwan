@@ -1616,10 +1616,8 @@ class _SystemGlobalFeatureState:
         pulumi.set(self, "vty_line_logging_variable", value)
 
 
+@pulumi.type_token("sdwan:index/systemGlobalFeature:SystemGlobalFeature")
 class SystemGlobalFeature(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/systemGlobalFeature:SystemGlobalFeature"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -464,10 +464,8 @@ class _TlsSslProfilePolicyDefinitionState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/tlsSslProfilePolicyDefinition:TlsSslProfilePolicyDefinition")
 class TlsSslProfilePolicyDefinition(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/tlsSslProfilePolicyDefinition:TlsSslProfilePolicyDefinition"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

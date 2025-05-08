@@ -128,10 +128,8 @@ class _TagState:
         pulumi.set(self, "name", value)
 
 
+@pulumi.type_token("sdwan:index/tag:Tag")
 class Tag(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/tag:Tag"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

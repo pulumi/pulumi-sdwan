@@ -142,10 +142,8 @@ class _ServiceLanVpnFeatureAssociateRoutingEigrpFeatureState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/serviceLanVpnFeatureAssociateRoutingEigrpFeature:ServiceLanVpnFeatureAssociateRoutingEigrpFeature")
 class ServiceLanVpnFeatureAssociateRoutingEigrpFeature(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/serviceLanVpnFeatureAssociateRoutingEigrpFeature:ServiceLanVpnFeatureAssociateRoutingEigrpFeature"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

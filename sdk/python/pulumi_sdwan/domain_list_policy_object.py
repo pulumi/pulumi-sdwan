@@ -114,10 +114,8 @@ class _DomainListPolicyObjectState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/domainListPolicyObject:DomainListPolicyObject")
 class DomainListPolicyObject(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/domainListPolicyObject:DomainListPolicyObject"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

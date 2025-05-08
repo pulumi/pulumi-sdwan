@@ -114,10 +114,8 @@ class _AllowUrlListPolicyObjectState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/allowUrlListPolicyObject:AllowUrlListPolicyObject")
 class AllowUrlListPolicyObject(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/allowUrlListPolicyObject:AllowUrlListPolicyObject"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -169,10 +169,8 @@ class _PolicyObjectSecurityFqdnListState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/policyObjectSecurityFqdnList:PolicyObjectSecurityFqdnList")
 class PolicyObjectSecurityFqdnList(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/policyObjectSecurityFqdnList:PolicyObjectSecurityFqdnList"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -96,10 +96,8 @@ class _PolicyObjectFeatureProfileState:
         pulumi.set(self, "name", value)
 
 
+@pulumi.type_token("sdwan:index/policyObjectFeatureProfile:PolicyObjectFeatureProfile")
 class PolicyObjectFeatureProfile(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/policyObjectFeatureProfile:PolicyObjectFeatureProfile"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

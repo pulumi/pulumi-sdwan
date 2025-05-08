@@ -526,10 +526,8 @@ class _UrlFilteringPolicyDefinitionState:
         pulumi.set(self, "web_reputation", value)
 
 
+@pulumi.type_token("sdwan:index/urlFilteringPolicyDefinition:UrlFilteringPolicyDefinition")
 class UrlFilteringPolicyDefinition(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/urlFilteringPolicyDefinition:UrlFilteringPolicyDefinition"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

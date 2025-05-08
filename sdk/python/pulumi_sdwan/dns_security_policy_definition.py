@@ -431,10 +431,8 @@ class _DnsSecurityPolicyDefinitionState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/dnsSecurityPolicyDefinition:DnsSecurityPolicyDefinition")
 class DnsSecurityPolicyDefinition(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/dnsSecurityPolicyDefinition:DnsSecurityPolicyDefinition"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

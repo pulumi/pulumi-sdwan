@@ -369,10 +369,8 @@ class _SystemMrfFeatureState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/systemMrfFeature:SystemMrfFeature")
 class SystemMrfFeature(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/systemMrfFeature:SystemMrfFeature"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

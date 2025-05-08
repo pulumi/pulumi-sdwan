@@ -463,10 +463,8 @@ class _TransportCellularControllerFeatureState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/transportCellularControllerFeature:TransportCellularControllerFeature")
 class TransportCellularControllerFeature(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/transportCellularControllerFeature:TransportCellularControllerFeature"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

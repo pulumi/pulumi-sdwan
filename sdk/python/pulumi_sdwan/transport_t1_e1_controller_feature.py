@@ -272,10 +272,8 @@ class _TransportT1E1ControllerFeatureState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/transportT1E1ControllerFeature:TransportT1E1ControllerFeature")
 class TransportT1E1ControllerFeature(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/transportT1E1ControllerFeature:TransportT1E1ControllerFeature"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -1321,10 +1321,8 @@ class _CiscoBgpFeatureTemplateState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/ciscoBgpFeatureTemplate:CiscoBgpFeatureTemplate")
 class CiscoBgpFeatureTemplate(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/ciscoBgpFeatureTemplate:CiscoBgpFeatureTemplate"
-
     @overload
     def __init__(__self__,
                  resource_name: str,
