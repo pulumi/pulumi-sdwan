@@ -1129,10 +1129,8 @@ class _CiscoVpnFeatureTemplateState:
         pulumi.set(self, "vpn_name_variable", value)
 
 
+@pulumi.type_token("sdwan:index/ciscoVpnFeatureTemplate:CiscoVpnFeatureTemplate")
 class CiscoVpnFeatureTemplate(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/ciscoVpnFeatureTemplate:CiscoVpnFeatureTemplate"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

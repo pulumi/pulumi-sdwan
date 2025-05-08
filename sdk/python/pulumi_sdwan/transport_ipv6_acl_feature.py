@@ -211,10 +211,8 @@ class _TransportIpv6AclFeatureState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/transportIpv6AclFeature:TransportIpv6AclFeature")
 class TransportIpv6AclFeature(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/transportIpv6AclFeature:TransportIpv6AclFeature"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

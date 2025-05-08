@@ -1097,10 +1097,8 @@ class _CiscoOspfFeatureTemplateState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/ciscoOspfFeatureTemplate:CiscoOspfFeatureTemplate")
 class CiscoOspfFeatureTemplate(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/ciscoOspfFeatureTemplate:CiscoOspfFeatureTemplate"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

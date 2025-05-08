@@ -201,10 +201,8 @@ class _CiscoThousandeyesFeatureTemplateState:
         pulumi.set(self, "virtual_applications", value)
 
 
+@pulumi.type_token("sdwan:index/ciscoThousandeyesFeatureTemplate:CiscoThousandeyesFeatureTemplate")
 class CiscoThousandeyesFeatureTemplate(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/ciscoThousandeyesFeatureTemplate:CiscoThousandeyesFeatureTemplate"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

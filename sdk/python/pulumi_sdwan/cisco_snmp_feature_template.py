@@ -521,10 +521,8 @@ class _CiscoSnmpFeatureTemplateState:
         pulumi.set(self, "views", value)
 
 
+@pulumi.type_token("sdwan:index/ciscoSnmpFeatureTemplate:CiscoSnmpFeatureTemplate")
 class CiscoSnmpFeatureTemplate(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/ciscoSnmpFeatureTemplate:CiscoSnmpFeatureTemplate"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

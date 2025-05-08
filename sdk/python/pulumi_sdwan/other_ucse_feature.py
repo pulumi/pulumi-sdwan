@@ -596,10 +596,8 @@ class _OtherUcseFeatureState:
         pulumi.set(self, "vlan_id_variable", value)
 
 
+@pulumi.type_token("sdwan:index/otherUcseFeature:OtherUcseFeature")
 class OtherUcseFeature(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/otherUcseFeature:OtherUcseFeature"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

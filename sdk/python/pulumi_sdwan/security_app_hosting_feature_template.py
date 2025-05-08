@@ -201,10 +201,8 @@ class _SecurityAppHostingFeatureTemplateState:
         pulumi.set(self, "virtual_applications", value)
 
 
+@pulumi.type_token("sdwan:index/securityAppHostingFeatureTemplate:SecurityAppHostingFeatureTemplate")
 class SecurityAppHostingFeatureTemplate(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/securityAppHostingFeatureTemplate:SecurityAppHostingFeatureTemplate"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

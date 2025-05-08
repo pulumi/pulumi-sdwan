@@ -2367,10 +2367,8 @@ class _SystemBasicFeatureState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/systemBasicFeature:SystemBasicFeature")
 class SystemBasicFeature(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/systemBasicFeature:SystemBasicFeature"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

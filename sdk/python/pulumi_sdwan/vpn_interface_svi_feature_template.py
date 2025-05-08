@@ -1353,10 +1353,8 @@ class _VpnInterfaceSviFeatureTemplateState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/vpnInterfaceSviFeatureTemplate:VpnInterfaceSviFeatureTemplate")
 class VpnInterfaceSviFeatureTemplate(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/vpnInterfaceSviFeatureTemplate:VpnInterfaceSviFeatureTemplate"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

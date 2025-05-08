@@ -145,10 +145,8 @@ class _RuleSetPolicyDefinitionState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/ruleSetPolicyDefinition:RuleSetPolicyDefinition")
 class RuleSetPolicyDefinition(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/ruleSetPolicyDefinition:RuleSetPolicyDefinition"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -802,10 +802,8 @@ class _ServiceDhcpServerFeatureState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/serviceDhcpServerFeature:ServiceDhcpServerFeature")
 class ServiceDhcpServerFeature(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/serviceDhcpServerFeature:ServiceDhcpServerFeature"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

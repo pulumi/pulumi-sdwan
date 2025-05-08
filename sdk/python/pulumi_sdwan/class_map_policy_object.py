@@ -112,10 +112,8 @@ class _ClassMapPolicyObjectState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/classMapPolicyObject:ClassMapPolicyObject")
 class ClassMapPolicyObject(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/classMapPolicyObject:ClassMapPolicyObject"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

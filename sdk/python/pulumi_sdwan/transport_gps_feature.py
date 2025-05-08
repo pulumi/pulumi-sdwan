@@ -528,10 +528,8 @@ class _TransportGpsFeatureState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/transportGpsFeature:TransportGpsFeature")
 class TransportGpsFeature(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/transportGpsFeature:TransportGpsFeature"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

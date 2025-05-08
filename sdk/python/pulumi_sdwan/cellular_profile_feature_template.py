@@ -871,10 +871,8 @@ class _CellularProfileFeatureTemplateState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/cellularProfileFeatureTemplate:CellularProfileFeatureTemplate")
 class CellularProfileFeatureTemplate(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/cellularProfileFeatureTemplate:CellularProfileFeatureTemplate"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

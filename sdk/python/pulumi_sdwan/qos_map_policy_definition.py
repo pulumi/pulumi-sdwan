@@ -161,10 +161,8 @@ class _QosMapPolicyDefinitionState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/qosMapPolicyDefinition:QosMapPolicyDefinition")
 class QosMapPolicyDefinition(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/qosMapPolicyDefinition:QosMapPolicyDefinition"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

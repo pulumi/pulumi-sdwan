@@ -177,10 +177,8 @@ class _PolicyObjectSecurityUrlAllowListState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/policyObjectSecurityUrlAllowList:PolicyObjectSecurityUrlAllowList")
 class PolicyObjectSecurityUrlAllowList(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/policyObjectSecurityUrlAllowList:PolicyObjectSecurityUrlAllowList"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

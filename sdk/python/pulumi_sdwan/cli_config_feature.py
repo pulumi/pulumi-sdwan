@@ -174,10 +174,8 @@ class _CliConfigFeatureState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/cliConfigFeature:CliConfigFeature")
 class CliConfigFeature(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/cliConfigFeature:CliConfigFeature"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

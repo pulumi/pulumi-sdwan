@@ -161,10 +161,8 @@ class _RewriteRulePolicyDefinitionState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/rewriteRulePolicyDefinition:RewriteRulePolicyDefinition")
 class RewriteRulePolicyDefinition(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/rewriteRulePolicyDefinition:RewriteRulePolicyDefinition"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

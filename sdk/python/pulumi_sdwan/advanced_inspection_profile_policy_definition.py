@@ -400,10 +400,8 @@ class _AdvancedInspectionProfilePolicyDefinitionState:
         pulumi.set(self, "version", value)
 
 
+@pulumi.type_token("sdwan:index/advancedInspectionProfilePolicyDefinition:AdvancedInspectionProfilePolicyDefinition")
 class AdvancedInspectionProfilePolicyDefinition(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/advancedInspectionProfilePolicyDefinition:AdvancedInspectionProfilePolicyDefinition"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -5237,10 +5237,8 @@ class _VpnInterfaceDslIpoeFeatureTemplateState:
         pulumi.set(self, "write_rule_variable", value)
 
 
+@pulumi.type_token("sdwan:index/vpnInterfaceDslIpoeFeatureTemplate:VpnInterfaceDslIpoeFeatureTemplate")
 class VpnInterfaceDslIpoeFeatureTemplate(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/vpnInterfaceDslIpoeFeatureTemplate:VpnInterfaceDslIpoeFeatureTemplate"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

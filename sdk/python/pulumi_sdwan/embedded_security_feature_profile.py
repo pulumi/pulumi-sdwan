@@ -96,10 +96,8 @@ class _EmbeddedSecurityFeatureProfileState:
         pulumi.set(self, "name", value)
 
 
+@pulumi.type_token("sdwan:index/embeddedSecurityFeatureProfile:EmbeddedSecurityFeatureProfile")
 class EmbeddedSecurityFeatureProfile(pulumi.CustomResource):
-
-    pulumi_type = "sdwan:index/embeddedSecurityFeatureProfile:EmbeddedSecurityFeatureProfile"
-
     @overload
     def __init__(__self__,
                  resource_name: str,
