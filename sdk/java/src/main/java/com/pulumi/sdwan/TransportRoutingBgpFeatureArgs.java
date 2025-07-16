@@ -5,6 +5,7 @@ package com.pulumi.sdwan;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.sdwan.inputs.TransportRoutingBgpFeatureIpv4AggregateAddressArgs;
 import com.pulumi.sdwan.inputs.TransportRoutingBgpFeatureIpv4NeighborArgs;
 import com.pulumi.sdwan.inputs.TransportRoutingBgpFeatureIpv4NetworkArgs;
@@ -196,15 +197,15 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
      * Feature Profile ID
      * 
      */
-    @Import(name="featureProfileId")
-    private @Nullable Output<String> featureProfileId;
+    @Import(name="featureProfileId", required=true)
+    private Output<String> featureProfileId;
 
     /**
      * @return Feature Profile ID
      * 
      */
-    public Optional<Output<String>> featureProfileId() {
-        return Optional.ofNullable(this.featureProfileId);
+    public Output<String> featureProfileId() {
+        return this.featureProfileId;
     }
 
     /**
@@ -1137,7 +1138,7 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
          * @return builder
          * 
          */
-        public Builder featureProfileId(@Nullable Output<String> featureProfileId) {
+        public Builder featureProfileId(Output<String> featureProfileId) {
             $.featureProfileId = featureProfileId;
             return this;
         }
@@ -2103,6 +2104,9 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
         }
 
         public TransportRoutingBgpFeatureArgs build() {
+            if ($.featureProfileId == null) {
+                throw new MissingRequiredPropertyException("TransportRoutingBgpFeatureArgs", "featureProfileId");
+            }
             return $;
         }
     }

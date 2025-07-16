@@ -21,6 +21,7 @@ __all__ = ['ServiceLanVpnInterfaceIpsecFeatureArgs', 'ServiceLanVpnInterfaceIpse
 class ServiceLanVpnInterfaceIpsecFeatureArgs:
     def __init__(__self__, *,
                  feature_profile_id: pulumi.Input[builtins.str],
+                 service_lan_vpn_feature_id: pulumi.Input[builtins.str],
                  tunnel_destination_ipv4_subnet_mask: pulumi.Input[builtins.str],
                  application_tunnel_type: Optional[pulumi.Input[builtins.str]] = None,
                  application_tunnel_type_variable: Optional[pulumi.Input[builtins.str]] = None,
@@ -65,7 +66,6 @@ class ServiceLanVpnInterfaceIpsecFeatureArgs:
                  name: Optional[pulumi.Input[builtins.str]] = None,
                  perfect_forward_secrecy: Optional[pulumi.Input[builtins.str]] = None,
                  perfect_forward_secrecy_variable: Optional[pulumi.Input[builtins.str]] = None,
-                 service_lan_vpn_feature_id: Optional[pulumi.Input[builtins.str]] = None,
                  shutdown: Optional[pulumi.Input[builtins.bool]] = None,
                  shutdown_variable: Optional[pulumi.Input[builtins.str]] = None,
                  tcp_mss: Optional[pulumi.Input[builtins.int]] = None,
@@ -86,6 +86,7 @@ class ServiceLanVpnInterfaceIpsecFeatureArgs:
         """
         The set of arguments for constructing a ServiceLanVpnInterfaceIpsecFeature resource.
         :param pulumi.Input[builtins.str] feature_profile_id: Feature Profile ID
+        :param pulumi.Input[builtins.str] service_lan_vpn_feature_id: Service LAN VPN Feature ID
         :param pulumi.Input[builtins.str] tunnel_destination_ipv4_subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
                `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
                `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
@@ -141,7 +142,6 @@ class ServiceLanVpnInterfaceIpsecFeatureArgs:
         :param pulumi.Input[builtins.str] perfect_forward_secrecy: IPsec perfect forward secrecy settings - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`,
                `group-19`, `group-20`, `group-21`, `group-24`, `none` - Default value: `group-16`
         :param pulumi.Input[builtins.str] perfect_forward_secrecy_variable: Variable name
-        :param pulumi.Input[builtins.str] service_lan_vpn_feature_id: Service LAN VPN Feature ID
         :param pulumi.Input[builtins.bool] shutdown: Administrative state - Default value: `true`
         :param pulumi.Input[builtins.str] shutdown_variable: Variable name
         :param pulumi.Input[builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
@@ -163,6 +163,7 @@ class ServiceLanVpnInterfaceIpsecFeatureArgs:
         :param pulumi.Input[builtins.str] tunnel_source_ipv4_subnet_mask_variable: Variable name
         """
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
+        pulumi.set(__self__, "service_lan_vpn_feature_id", service_lan_vpn_feature_id)
         pulumi.set(__self__, "tunnel_destination_ipv4_subnet_mask", tunnel_destination_ipv4_subnet_mask)
         if application_tunnel_type is not None:
             pulumi.set(__self__, "application_tunnel_type", application_tunnel_type)
@@ -250,8 +251,6 @@ class ServiceLanVpnInterfaceIpsecFeatureArgs:
             pulumi.set(__self__, "perfect_forward_secrecy", perfect_forward_secrecy)
         if perfect_forward_secrecy_variable is not None:
             pulumi.set(__self__, "perfect_forward_secrecy_variable", perfect_forward_secrecy_variable)
-        if service_lan_vpn_feature_id is not None:
-            pulumi.set(__self__, "service_lan_vpn_feature_id", service_lan_vpn_feature_id)
         if shutdown is not None:
             pulumi.set(__self__, "shutdown", shutdown)
         if shutdown_variable is not None:
@@ -298,6 +297,18 @@ class ServiceLanVpnInterfaceIpsecFeatureArgs:
     @feature_profile_id.setter
     def feature_profile_id(self, value: pulumi.Input[builtins.str]):
         pulumi.set(self, "feature_profile_id", value)
+
+    @property
+    @pulumi.getter(name="serviceLanVpnFeatureId")
+    def service_lan_vpn_feature_id(self) -> pulumi.Input[builtins.str]:
+        """
+        Service LAN VPN Feature ID
+        """
+        return pulumi.get(self, "service_lan_vpn_feature_id")
+
+    @service_lan_vpn_feature_id.setter
+    def service_lan_vpn_feature_id(self, value: pulumi.Input[builtins.str]):
+        pulumi.set(self, "service_lan_vpn_feature_id", value)
 
     @property
     @pulumi.getter(name="tunnelDestinationIpv4SubnetMask")
@@ -835,18 +846,6 @@ class ServiceLanVpnInterfaceIpsecFeatureArgs:
     @perfect_forward_secrecy_variable.setter
     def perfect_forward_secrecy_variable(self, value: Optional[pulumi.Input[builtins.str]]):
         pulumi.set(self, "perfect_forward_secrecy_variable", value)
-
-    @property
-    @pulumi.getter(name="serviceLanVpnFeatureId")
-    def service_lan_vpn_feature_id(self) -> Optional[pulumi.Input[builtins.str]]:
-        """
-        Service LAN VPN Feature ID
-        """
-        return pulumi.get(self, "service_lan_vpn_feature_id")
-
-    @service_lan_vpn_feature_id.setter
-    def service_lan_vpn_feature_id(self, value: Optional[pulumi.Input[builtins.str]]):
-        pulumi.set(self, "service_lan_vpn_feature_id", value)
 
     @property
     @pulumi.getter
@@ -2221,6 +2220,8 @@ class ServiceLanVpnInterfaceIpsecFeature(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         Expected import identifier with the format: "service_lan_vpn_interface_ipsec_feature_id,feature_profile_id,service_lan_vpn_feature_id"
 
         ```sh
@@ -2359,6 +2360,8 @@ class ServiceLanVpnInterfaceIpsecFeature(pulumi.CustomResource):
         ```
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         Expected import identifier with the format: "service_lan_vpn_interface_ipsec_feature_id,feature_profile_id,service_lan_vpn_feature_id"
 
@@ -2499,6 +2502,8 @@ class ServiceLanVpnInterfaceIpsecFeature(pulumi.CustomResource):
             __props__.__dict__["name"] = name
             __props__.__dict__["perfect_forward_secrecy"] = perfect_forward_secrecy
             __props__.__dict__["perfect_forward_secrecy_variable"] = perfect_forward_secrecy_variable
+            if service_lan_vpn_feature_id is None and not opts.urn:
+                raise TypeError("Missing required property 'service_lan_vpn_feature_id'")
             __props__.__dict__["service_lan_vpn_feature_id"] = service_lan_vpn_feature_id
             __props__.__dict__["shutdown"] = shutdown
             __props__.__dict__["shutdown_variable"] = shutdown_variable
@@ -3109,7 +3114,7 @@ class ServiceLanVpnInterfaceIpsecFeature(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="serviceLanVpnFeatureId")
-    def service_lan_vpn_feature_id(self) -> pulumi.Output[Optional[builtins.str]]:
+    def service_lan_vpn_feature_id(self) -> pulumi.Output[builtins.str]:
         """
         Service LAN VPN Feature ID
         """

@@ -39,6 +39,8 @@ import * as utilities from "./utilities";
  *
  * ## Import
  *
+ * The `pulumi import` command can be used, for example:
+ *
  * Expected import identifier with the format: "system_remote_access_feature_id,feature_profile_id"
  *
  * ```sh
@@ -130,7 +132,7 @@ export class SystemRemoteAccessFeature extends pulumi.CustomResource {
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string | undefined>;
+    public readonly featureProfileId!: pulumi.Output<string>;
     /**
      * Anti-DOS Threshold, Attribute conditional on `connectionTypeSsl` being equal to `false` - Range: `10`-`1000` - Default
      * value: `100`
@@ -306,6 +308,9 @@ export class SystemRemoteAccessFeature extends pulumi.CustomResource {
             resourceInputs["version"] = state ? state.version : undefined;
         } else {
             const args = argsOrState as SystemRemoteAccessFeatureArgs | undefined;
+            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+                throw new Error("Missing required property 'featureProfileId'");
+            }
             if ((!args || args.radiusGroupName === undefined) && !opts.urn) {
                 throw new Error("Missing required property 'radiusGroupName'");
             }
@@ -599,7 +604,7 @@ export interface SystemRemoteAccessFeatureArgs {
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId: pulumi.Input<string>;
     /**
      * Anti-DOS Threshold, Attribute conditional on `connectionTypeSsl` being equal to `false` - Range: `10`-`1000` - Default
      * value: `100`

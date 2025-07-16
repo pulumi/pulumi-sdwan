@@ -22,13 +22,13 @@ __all__ = ['ServiceMulticastFeatureArgs', 'ServiceMulticastFeature']
 @pulumi.input_type
 class ServiceMulticastFeatureArgs:
     def __init__(__self__, *,
+                 feature_profile_id: pulumi.Input[builtins.str],
                  pim_source_specific_multicast_enable: pulumi.Input[builtins.bool],
                  auto_rp_announces: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceMulticastFeatureAutoRpAnnounceArgs']]]] = None,
                  auto_rp_discoveries: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceMulticastFeatureAutoRpDiscoveryArgs']]]] = None,
                  description: Optional[pulumi.Input[builtins.str]] = None,
                  enable_auto_rp: Optional[pulumi.Input[builtins.bool]] = None,
                  enable_auto_rp_variable: Optional[pulumi.Input[builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[builtins.str]] = None,
                  igmp_interfaces: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceMulticastFeatureIgmpInterfaceArgs']]]] = None,
                  local_replicator: Optional[pulumi.Input[builtins.bool]] = None,
                  local_replicator_threshold: Optional[pulumi.Input[builtins.int]] = None,
@@ -52,13 +52,13 @@ class ServiceMulticastFeatureArgs:
                  static_rp_addresses: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceMulticastFeatureStaticRpAddressArgs']]]] = None):
         """
         The set of arguments for constructing a ServiceMulticastFeature resource.
+        :param pulumi.Input[builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[builtins.bool] pim_source_specific_multicast_enable: turn SSM on/off
         :param pulumi.Input[Sequence[pulumi.Input['ServiceMulticastFeatureAutoRpAnnounceArgs']]] auto_rp_announces: Enable or disable RP Announce
         :param pulumi.Input[Sequence[pulumi.Input['ServiceMulticastFeatureAutoRpDiscoveryArgs']]] auto_rp_discoveries: Enable or disable RP Discovery
         :param pulumi.Input[builtins.str] description: The description of the Feature
         :param pulumi.Input[builtins.bool] enable_auto_rp: Enable or disable auto-RP - Default value: `false`
         :param pulumi.Input[builtins.str] enable_auto_rp_variable: Variable name
-        :param pulumi.Input[builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[Sequence[pulumi.Input['ServiceMulticastFeatureIgmpInterfaceArgs']]] igmp_interfaces: Set IGMP interface parameters
         :param pulumi.Input[builtins.bool] local_replicator: Replicator is local to this device - Default value: `false`
         :param pulumi.Input[builtins.int] local_replicator_threshold: Set number of joins per group the router supports - Range: `0`-`131072`
@@ -81,6 +81,7 @@ class ServiceMulticastFeatureArgs:
         :param pulumi.Input[builtins.str] spt_only_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['ServiceMulticastFeatureStaticRpAddressArgs']]] static_rp_addresses: Set Static RP Address(es)
         """
+        pulumi.set(__self__, "feature_profile_id", feature_profile_id)
         pulumi.set(__self__, "pim_source_specific_multicast_enable", pim_source_specific_multicast_enable)
         if auto_rp_announces is not None:
             pulumi.set(__self__, "auto_rp_announces", auto_rp_announces)
@@ -92,8 +93,6 @@ class ServiceMulticastFeatureArgs:
             pulumi.set(__self__, "enable_auto_rp", enable_auto_rp)
         if enable_auto_rp_variable is not None:
             pulumi.set(__self__, "enable_auto_rp_variable", enable_auto_rp_variable)
-        if feature_profile_id is not None:
-            pulumi.set(__self__, "feature_profile_id", feature_profile_id)
         if igmp_interfaces is not None:
             pulumi.set(__self__, "igmp_interfaces", igmp_interfaces)
         if local_replicator is not None:
@@ -136,6 +135,18 @@ class ServiceMulticastFeatureArgs:
             pulumi.set(__self__, "spt_only_variable", spt_only_variable)
         if static_rp_addresses is not None:
             pulumi.set(__self__, "static_rp_addresses", static_rp_addresses)
+
+    @property
+    @pulumi.getter(name="featureProfileId")
+    def feature_profile_id(self) -> pulumi.Input[builtins.str]:
+        """
+        Feature Profile ID
+        """
+        return pulumi.get(self, "feature_profile_id")
+
+    @feature_profile_id.setter
+    def feature_profile_id(self, value: pulumi.Input[builtins.str]):
+        pulumi.set(self, "feature_profile_id", value)
 
     @property
     @pulumi.getter(name="pimSourceSpecificMulticastEnable")
@@ -208,18 +219,6 @@ class ServiceMulticastFeatureArgs:
     @enable_auto_rp_variable.setter
     def enable_auto_rp_variable(self, value: Optional[pulumi.Input[builtins.str]]):
         pulumi.set(self, "enable_auto_rp_variable", value)
-
-    @property
-    @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[builtins.str]]:
-        """
-        Feature Profile ID
-        """
-        return pulumi.get(self, "feature_profile_id")
-
-    @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[builtins.str]]):
-        pulumi.set(self, "feature_profile_id", value)
 
     @property
     @pulumi.getter(name="igmpInterfaces")
@@ -987,6 +986,8 @@ class ServiceMulticastFeature(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         Expected import identifier with the format: "service_multicast_feature_id,feature_profile_id"
 
         ```sh
@@ -1035,6 +1036,8 @@ class ServiceMulticastFeature(pulumi.CustomResource):
           - Minimum SD-WAN Manager version: `20.12.0`
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         Expected import identifier with the format: "service_multicast_feature_id,feature_profile_id"
 
@@ -1099,6 +1102,8 @@ class ServiceMulticastFeature(pulumi.CustomResource):
             __props__.__dict__["description"] = description
             __props__.__dict__["enable_auto_rp"] = enable_auto_rp
             __props__.__dict__["enable_auto_rp_variable"] = enable_auto_rp_variable
+            if feature_profile_id is None and not opts.urn:
+                raise TypeError("Missing required property 'feature_profile_id'")
             __props__.__dict__["feature_profile_id"] = feature_profile_id
             __props__.__dict__["igmp_interfaces"] = igmp_interfaces
             __props__.__dict__["local_replicator"] = local_replicator
@@ -1278,7 +1283,7 @@ class ServiceMulticastFeature(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> pulumi.Output[Optional[builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Output[builtins.str]:
         """
         Feature Profile ID
         """

@@ -22,11 +22,11 @@ __all__ = ['SystemSnmpFeatureArgs', 'SystemSnmpFeature']
 @pulumi.input_type
 class SystemSnmpFeatureArgs:
     def __init__(__self__, *,
+                 feature_profile_id: pulumi.Input[builtins.str],
                  communities: Optional[pulumi.Input[Sequence[pulumi.Input['SystemSnmpFeatureCommunityArgs']]]] = None,
                  contact_person: Optional[pulumi.Input[builtins.str]] = None,
                  contact_person_variable: Optional[pulumi.Input[builtins.str]] = None,
                  description: Optional[pulumi.Input[builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[builtins.str]] = None,
                  groups: Optional[pulumi.Input[Sequence[pulumi.Input['SystemSnmpFeatureGroupArgs']]]] = None,
                  location_of_device: Optional[pulumi.Input[builtins.str]] = None,
                  location_of_device_variable: Optional[pulumi.Input[builtins.str]] = None,
@@ -38,11 +38,11 @@ class SystemSnmpFeatureArgs:
                  views: Optional[pulumi.Input[Sequence[pulumi.Input['SystemSnmpFeatureViewArgs']]]] = None):
         """
         The set of arguments for constructing a SystemSnmpFeature resource.
+        :param pulumi.Input[builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[Sequence[pulumi.Input['SystemSnmpFeatureCommunityArgs']]] communities: Configure SNMP community
         :param pulumi.Input[builtins.str] contact_person: Set the contact for this managed node
         :param pulumi.Input[builtins.str] contact_person_variable: Variable name
         :param pulumi.Input[builtins.str] description: The description of the Feature
-        :param pulumi.Input[builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[Sequence[pulumi.Input['SystemSnmpFeatureGroupArgs']]] groups: Configure an SNMP group
         :param pulumi.Input[builtins.str] location_of_device: Set the physical location of this managed node
         :param pulumi.Input[builtins.str] location_of_device_variable: Variable name
@@ -53,6 +53,7 @@ class SystemSnmpFeatureArgs:
         :param pulumi.Input[Sequence[pulumi.Input['SystemSnmpFeatureUserArgs']]] users: Configure an SNMP user
         :param pulumi.Input[Sequence[pulumi.Input['SystemSnmpFeatureViewArgs']]] views: Configure a view record
         """
+        pulumi.set(__self__, "feature_profile_id", feature_profile_id)
         if communities is not None:
             pulumi.set(__self__, "communities", communities)
         if contact_person is not None:
@@ -61,8 +62,6 @@ class SystemSnmpFeatureArgs:
             pulumi.set(__self__, "contact_person_variable", contact_person_variable)
         if description is not None:
             pulumi.set(__self__, "description", description)
-        if feature_profile_id is not None:
-            pulumi.set(__self__, "feature_profile_id", feature_profile_id)
         if groups is not None:
             pulumi.set(__self__, "groups", groups)
         if location_of_device is not None:
@@ -81,6 +80,18 @@ class SystemSnmpFeatureArgs:
             pulumi.set(__self__, "users", users)
         if views is not None:
             pulumi.set(__self__, "views", views)
+
+    @property
+    @pulumi.getter(name="featureProfileId")
+    def feature_profile_id(self) -> pulumi.Input[builtins.str]:
+        """
+        Feature Profile ID
+        """
+        return pulumi.get(self, "feature_profile_id")
+
+    @feature_profile_id.setter
+    def feature_profile_id(self, value: pulumi.Input[builtins.str]):
+        pulumi.set(self, "feature_profile_id", value)
 
     @property
     @pulumi.getter
@@ -129,18 +140,6 @@ class SystemSnmpFeatureArgs:
     @description.setter
     def description(self, value: Optional[pulumi.Input[builtins.str]]):
         pulumi.set(self, "description", value)
-
-    @property
-    @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[builtins.str]]:
-        """
-        Feature Profile ID
-        """
-        return pulumi.get(self, "feature_profile_id")
-
-    @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[builtins.str]]):
-        pulumi.set(self, "feature_profile_id", value)
 
     @property
     @pulumi.getter
@@ -526,6 +525,8 @@ class SystemSnmpFeature(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         Expected import identifier with the format: "system_snmp_feature_id,feature_profile_id"
 
         ```sh
@@ -553,13 +554,15 @@ class SystemSnmpFeature(pulumi.CustomResource):
     @overload
     def __init__(__self__,
                  resource_name: str,
-                 args: Optional[SystemSnmpFeatureArgs] = None,
+                 args: SystemSnmpFeatureArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a System SNMP Feature.
           - Minimum SD-WAN Manager version: `20.12.0`
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         Expected import identifier with the format: "system_snmp_feature_id,feature_profile_id"
 
@@ -609,6 +612,8 @@ class SystemSnmpFeature(pulumi.CustomResource):
             __props__.__dict__["contact_person"] = contact_person
             __props__.__dict__["contact_person_variable"] = contact_person_variable
             __props__.__dict__["description"] = description
+            if feature_profile_id is None and not opts.urn:
+                raise TypeError("Missing required property 'feature_profile_id'")
             __props__.__dict__["feature_profile_id"] = feature_profile_id
             __props__.__dict__["groups"] = groups
             __props__.__dict__["location_of_device"] = location_of_device
@@ -723,7 +728,7 @@ class SystemSnmpFeature(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> pulumi.Output[Optional[builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Output[builtins.str]:
         """
         Feature Profile ID
         """

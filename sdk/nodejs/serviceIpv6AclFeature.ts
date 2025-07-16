@@ -12,6 +12,8 @@ import * as utilities from "./utilities";
  *
  * ## Import
  *
+ * The `pulumi import` command can be used, for example:
+ *
  * Expected import identifier with the format: "service_ipv6_acl_feature_id,feature_profile_id"
  *
  * ```sh
@@ -57,7 +59,7 @@ export class ServiceIpv6AclFeature extends pulumi.CustomResource {
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string | undefined>;
+    public readonly featureProfileId!: pulumi.Output<string>;
     /**
      * The name of the Feature
      */
@@ -78,7 +80,7 @@ export class ServiceIpv6AclFeature extends pulumi.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param opts A bag of options that control this resource's behavior.
      */
-    constructor(name: string, args?: ServiceIpv6AclFeatureArgs, opts?: pulumi.CustomResourceOptions)
+    constructor(name: string, args: ServiceIpv6AclFeatureArgs, opts?: pulumi.CustomResourceOptions)
     constructor(name: string, argsOrState?: ServiceIpv6AclFeatureArgs | ServiceIpv6AclFeatureState, opts?: pulumi.CustomResourceOptions) {
         let resourceInputs: pulumi.Inputs = {};
         opts = opts || {};
@@ -92,6 +94,9 @@ export class ServiceIpv6AclFeature extends pulumi.CustomResource {
             resourceInputs["version"] = state ? state.version : undefined;
         } else {
             const args = argsOrState as ServiceIpv6AclFeatureArgs | undefined;
+            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+                throw new Error("Missing required property 'featureProfileId'");
+            }
             resourceInputs["defaultAction"] = args ? args.defaultAction : undefined;
             resourceInputs["description"] = args ? args.description : undefined;
             resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
@@ -149,7 +154,7 @@ export interface ServiceIpv6AclFeatureArgs {
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId: pulumi.Input<string>;
     /**
      * The name of the Feature
      */

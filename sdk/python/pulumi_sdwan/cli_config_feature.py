@@ -206,6 +206,8 @@ class CliConfigFeature(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         Expected import identifier with the format: "cli_config_feature_id,feature_profile_id"
 
         ```sh
@@ -245,6 +247,8 @@ class CliConfigFeature(pulumi.CustomResource):
         ```
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         Expected import identifier with the format: "cli_config_feature_id,feature_profile_id"
 

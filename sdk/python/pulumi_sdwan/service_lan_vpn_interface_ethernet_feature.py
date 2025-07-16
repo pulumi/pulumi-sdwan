@@ -23,6 +23,7 @@ __all__ = ['ServiceLanVpnInterfaceEthernetFeatureArgs', 'ServiceLanVpnInterfaceE
 class ServiceLanVpnInterfaceEthernetFeatureArgs:
     def __init__(__self__, *,
                  feature_profile_id: pulumi.Input[builtins.str],
+                 service_lan_vpn_feature_id: pulumi.Input[builtins.str],
                  acl_ipv4_egress_policy_id: Optional[pulumi.Input[builtins.str]] = None,
                  acl_ipv4_ingress_policy_id: Optional[pulumi.Input[builtins.str]] = None,
                  acl_ipv6_egress_policy_id: Optional[pulumi.Input[builtins.str]] = None,
@@ -92,7 +93,6 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
                  media_type_variable: Optional[pulumi.Input[builtins.str]] = None,
                  name: Optional[pulumi.Input[builtins.str]] = None,
                  nat64: Optional[pulumi.Input[builtins.bool]] = None,
-                 service_lan_vpn_feature_id: Optional[pulumi.Input[builtins.str]] = None,
                  shutdown: Optional[pulumi.Input[builtins.bool]] = None,
                  shutdown_variable: Optional[pulumi.Input[builtins.str]] = None,
                  speed: Optional[pulumi.Input[builtins.str]] = None,
@@ -114,6 +114,7 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
         """
         The set of arguments for constructing a ServiceLanVpnInterfaceEthernetFeature resource.
         :param pulumi.Input[builtins.str] feature_profile_id: Feature Profile ID
+        :param pulumi.Input[builtins.str] service_lan_vpn_feature_id: Service LAN VPN Feature ID
         :param pulumi.Input[builtins.int] acl_shaping_rate: Shaping Rate (Kbps) - Range: `8`-`100000000`
         :param pulumi.Input[builtins.str] acl_shaping_rate_variable: Variable name
         :param pulumi.Input[builtins.int] arp_timeout: Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
@@ -182,7 +183,6 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
         :param pulumi.Input[builtins.str] media_type_variable: Variable name
         :param pulumi.Input[builtins.str] name: The name of the Feature
         :param pulumi.Input[builtins.bool] nat64: NAT64 on this interface - Default value: `false`
-        :param pulumi.Input[builtins.str] service_lan_vpn_feature_id: Service LAN VPN Feature ID
         :param pulumi.Input[builtins.bool] shutdown: - Default value: `true`
         :param pulumi.Input[builtins.str] shutdown_variable: Variable name
         :param pulumi.Input[builtins.str] speed: Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
@@ -203,6 +203,7 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
         :param pulumi.Input[builtins.str] xconnect_variable: Variable name
         """
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
+        pulumi.set(__self__, "service_lan_vpn_feature_id", service_lan_vpn_feature_id)
         if acl_ipv4_egress_policy_id is not None:
             pulumi.set(__self__, "acl_ipv4_egress_policy_id", acl_ipv4_egress_policy_id)
         if acl_ipv4_ingress_policy_id is not None:
@@ -341,8 +342,6 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
             pulumi.set(__self__, "name", name)
         if nat64 is not None:
             pulumi.set(__self__, "nat64", nat64)
-        if service_lan_vpn_feature_id is not None:
-            pulumi.set(__self__, "service_lan_vpn_feature_id", service_lan_vpn_feature_id)
         if shutdown is not None:
             pulumi.set(__self__, "shutdown", shutdown)
         if shutdown_variable is not None:
@@ -391,6 +390,18 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     @feature_profile_id.setter
     def feature_profile_id(self, value: pulumi.Input[builtins.str]):
         pulumi.set(self, "feature_profile_id", value)
+
+    @property
+    @pulumi.getter(name="serviceLanVpnFeatureId")
+    def service_lan_vpn_feature_id(self) -> pulumi.Input[builtins.str]:
+        """
+        Service LAN VPN Feature ID
+        """
+        return pulumi.get(self, "service_lan_vpn_feature_id")
+
+    @service_lan_vpn_feature_id.setter
+    def service_lan_vpn_feature_id(self, value: pulumi.Input[builtins.str]):
+        pulumi.set(self, "service_lan_vpn_feature_id", value)
 
     @property
     @pulumi.getter(name="aclIpv4EgressPolicyId")
@@ -1206,18 +1217,6 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     @nat64.setter
     def nat64(self, value: Optional[pulumi.Input[builtins.bool]]):
         pulumi.set(self, "nat64", value)
-
-    @property
-    @pulumi.getter(name="serviceLanVpnFeatureId")
-    def service_lan_vpn_feature_id(self) -> Optional[pulumi.Input[builtins.str]]:
-        """
-        Service LAN VPN Feature ID
-        """
-        return pulumi.get(self, "service_lan_vpn_feature_id")
-
-    @service_lan_vpn_feature_id.setter
-    def service_lan_vpn_feature_id(self, value: Optional[pulumi.Input[builtins.str]]):
-        pulumi.set(self, "service_lan_vpn_feature_id", value)
 
     @property
     @pulumi.getter
@@ -2972,6 +2971,8 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         Expected import identifier with the format: "service_lan_vpn_interface_ethernet_feature_id,feature_profile_id,service_lan_vpn_feature_id"
 
         ```sh
@@ -3080,6 +3081,8 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
           - Minimum SD-WAN Manager version: `20.12.0`
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         Expected import identifier with the format: "service_lan_vpn_interface_ethernet_feature_id,feature_profile_id,service_lan_vpn_feature_id"
 
@@ -3272,6 +3275,8 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
             __props__.__dict__["media_type_variable"] = media_type_variable
             __props__.__dict__["name"] = name
             __props__.__dict__["nat64"] = nat64
+            if service_lan_vpn_feature_id is None and not opts.urn:
+                raise TypeError("Missing required property 'service_lan_vpn_feature_id'")
             __props__.__dict__["service_lan_vpn_feature_id"] = service_lan_vpn_feature_id
             __props__.__dict__["shutdown"] = shutdown
             __props__.__dict__["shutdown_variable"] = shutdown_variable
@@ -4134,7 +4139,7 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="serviceLanVpnFeatureId")
-    def service_lan_vpn_feature_id(self) -> pulumi.Output[Optional[builtins.str]]:
+    def service_lan_vpn_feature_id(self) -> pulumi.Output[builtins.str]:
         """
         Service LAN VPN Feature ID
         """

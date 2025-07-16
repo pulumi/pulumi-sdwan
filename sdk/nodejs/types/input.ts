@@ -150,9 +150,8 @@ export interface ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry {
     dnsApplicationListVersion?: pulumi.Input<number>;
     /**
      * DSCP value, Attribute conditional on `type` being equal to `dscp`
-     *   - Range: `0`-`63`
      */
-    dscp?: pulumi.Input<number>;
+    dscp?: pulumi.Input<string>;
     /**
      * ICMP Message, Attribute conditional on `type` being equal to `icmpMessage`
      */
@@ -13104,9 +13103,8 @@ export interface TrafficDataPolicyDefinitionSequenceMatchEntry {
     dnsApplicationListVersion?: pulumi.Input<number>;
     /**
      * DSCP value, Attribute conditional on `type` being equal to `dscp`
-     *   - Range: `0`-`63`
      */
-    dscp?: pulumi.Input<number>;
+    dscp?: pulumi.Input<string>;
     /**
      * ICMP Message, Attribute conditional on `type` being equal to `icmpMessage`
      */
@@ -13892,44 +13890,83 @@ export interface TransportRoutingBgpFeatureIpv4Neighbor {
 
 export interface TransportRoutingBgpFeatureIpv4NeighborAddressFamily {
     /**
+     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `disable-peer`
+     *   - Range: `1`-`4294967295`
+     */
+    disablePeerMaxNumberOfPrefixes?: pulumi.Input<number>;
+    /**
+     * Variable name, Attribute conditional on `policyType` being equal to `disable-peer`
+     */
+    disablePeerMaxNumberOfPrefixesVariable?: pulumi.Input<string>;
+    /**
+     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `disable-peer`
+     *   - Range: `1`-`100`
+     *   - Default value: `75`
+     */
+    disablePeerThreshold?: pulumi.Input<number>;
+    /**
+     * Variable name, Attribute conditional on `policyType` being equal to `disable-peer`
+     */
+    disablePeerThresholdVariable?: pulumi.Input<string>;
+    /**
      * Set IPv4 unicast address family
      *   - Choices: `ipv4-unicast`, `vpnv4-unicast`, `vpnv6-unicast`
      */
     familyType?: pulumi.Input<string>;
     inRoutePolicyId?: pulumi.Input<string>;
-    /**
-     * Set maximum number of prefixes accepted from BGP peer
-     *   - Range: `1`-`4294967295`
-     */
-    maxNumberOfPrefixes?: pulumi.Input<number>;
-    /**
-     * Variable name
-     */
-    maxNumberOfPrefixesVariable?: pulumi.Input<string>;
     outRoutePolicyId?: pulumi.Input<string>;
     /**
      * Neighbor received maximum prefix policy is disabled.
+     *   - Choices: `restart`, `off`, `warning-only`, `disable-peer`
      */
     policyType?: pulumi.Input<string>;
     /**
-     * Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded
+     * Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policyType` being equal to `restart`
      *   - Range: `1`-`65535`
      */
     restartInterval?: pulumi.Input<number>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `policyType` being equal to `restart`
      */
     restartIntervalVariable?: pulumi.Input<string>;
     /**
-     * Set threshold(1 to 100) at which to generate a warning message
+     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `restart`
+     *   - Range: `1`-`4294967295`
+     */
+    restartMaxNumberOfPrefixes?: pulumi.Input<number>;
+    /**
+     * Variable name, Attribute conditional on `policyType` being equal to `restart`
+     */
+    restartMaxNumberOfPrefixesVariable?: pulumi.Input<string>;
+    /**
+     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `restart`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      */
-    threshold?: pulumi.Input<number>;
+    restartThreshold?: pulumi.Input<number>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `policyType` being equal to `restart`
      */
-    thresholdVariable?: pulumi.Input<string>;
+    restartThresholdVariable?: pulumi.Input<string>;
+    /**
+     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `warning-only`
+     *   - Range: `1`-`4294967295`
+     */
+    warningMessageMaxNumberOfPrefixes?: pulumi.Input<number>;
+    /**
+     * Variable name, Attribute conditional on `policyType` being equal to `warning-only`
+     */
+    warningMessageMaxNumberOfPrefixesVariable?: pulumi.Input<string>;
+    /**
+     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `warning-only`
+     *   - Range: `1`-`100`
+     *   - Default value: `75`
+     */
+    warningMessageThreshold?: pulumi.Input<number>;
+    /**
+     * Variable name, Attribute conditional on `policyType` being equal to `warning-only`
+     */
+    warningMessageThresholdVariable?: pulumi.Input<string>;
 }
 
 export interface TransportRoutingBgpFeatureIpv4Network {

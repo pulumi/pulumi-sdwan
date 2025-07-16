@@ -1043,15 +1043,15 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
      * Service LAN VPN Feature ID
      * 
      */
-    @Import(name="serviceLanVpnFeatureId")
-    private @Nullable Output<String> serviceLanVpnFeatureId;
+    @Import(name="serviceLanVpnFeatureId", required=true)
+    private Output<String> serviceLanVpnFeatureId;
 
     /**
      * @return Service LAN VPN Feature ID
      * 
      */
-    public Optional<Output<String>> serviceLanVpnFeatureId() {
-        return Optional.ofNullable(this.serviceLanVpnFeatureId);
+    public Output<String> serviceLanVpnFeatureId() {
+        return this.serviceLanVpnFeatureId;
     }
 
     /**
@@ -2930,7 +2930,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder serviceLanVpnFeatureId(@Nullable Output<String> serviceLanVpnFeatureId) {
+        public Builder serviceLanVpnFeatureId(Output<String> serviceLanVpnFeatureId) {
             $.serviceLanVpnFeatureId = serviceLanVpnFeatureId;
             return this;
         }
@@ -3336,6 +3336,9 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
         public ServiceLanVpnInterfaceEthernetFeatureArgs build() {
             if ($.featureProfileId == null) {
                 throw new MissingRequiredPropertyException("ServiceLanVpnInterfaceEthernetFeatureArgs", "featureProfileId");
+            }
+            if ($.serviceLanVpnFeatureId == null) {
+                throw new MissingRequiredPropertyException("ServiceLanVpnInterfaceEthernetFeatureArgs", "serviceLanVpnFeatureId");
             }
             return $;
         }

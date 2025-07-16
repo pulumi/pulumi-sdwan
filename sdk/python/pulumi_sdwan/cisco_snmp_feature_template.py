@@ -548,6 +548,8 @@ class CiscoSnmpFeatureTemplate(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         ```sh
         $ pulumi import sdwan:index/ciscoSnmpFeatureTemplate:CiscoSnmpFeatureTemplate example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
@@ -582,6 +584,8 @@ class CiscoSnmpFeatureTemplate(pulumi.CustomResource):
           - Minimum SD-WAN Manager version: `15.0.0`
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         ```sh
         $ pulumi import sdwan:index/ciscoSnmpFeatureTemplate:CiscoSnmpFeatureTemplate example "f6b2c44c-693c-4763-b010-895aa3d236bd"

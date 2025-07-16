@@ -5,6 +5,7 @@ package com.pulumi.sdwan;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.sdwan.inputs.TransportIpv6AclFeatureSequenceArgs;
 import java.lang.String;
 import java.util.List;
@@ -51,15 +52,15 @@ public final class TransportIpv6AclFeatureArgs extends com.pulumi.resources.Reso
      * Feature Profile ID
      * 
      */
-    @Import(name="featureProfileId")
-    private @Nullable Output<String> featureProfileId;
+    @Import(name="featureProfileId", required=true)
+    private Output<String> featureProfileId;
 
     /**
      * @return Feature Profile ID
      * 
      */
-    public Optional<Output<String>> featureProfileId() {
-        return Optional.ofNullable(this.featureProfileId);
+    public Output<String> featureProfileId() {
+        return this.featureProfileId;
     }
 
     /**
@@ -168,7 +169,7 @@ public final class TransportIpv6AclFeatureArgs extends com.pulumi.resources.Reso
          * @return builder
          * 
          */
-        public Builder featureProfileId(@Nullable Output<String> featureProfileId) {
+        public Builder featureProfileId(Output<String> featureProfileId) {
             $.featureProfileId = featureProfileId;
             return this;
         }
@@ -236,6 +237,9 @@ public final class TransportIpv6AclFeatureArgs extends com.pulumi.resources.Reso
         }
 
         public TransportIpv6AclFeatureArgs build() {
+            if ($.featureProfileId == null) {
+                throw new MissingRequiredPropertyException("TransportIpv6AclFeatureArgs", "featureProfileId");
+            }
             return $;
         }
     }

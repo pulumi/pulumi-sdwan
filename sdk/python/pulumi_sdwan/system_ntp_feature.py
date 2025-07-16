@@ -22,11 +22,11 @@ __all__ = ['SystemNtpFeatureArgs', 'SystemNtpFeature']
 @pulumi.input_type
 class SystemNtpFeatureArgs:
     def __init__(__self__, *,
+                 feature_profile_id: pulumi.Input[builtins.str],
                  authentication_keys: Optional[pulumi.Input[Sequence[pulumi.Input['SystemNtpFeatureAuthenticationKeyArgs']]]] = None,
                  authoritative_ntp_server: Optional[pulumi.Input[builtins.bool]] = None,
                  authoritative_ntp_server_variable: Optional[pulumi.Input[builtins.str]] = None,
                  description: Optional[pulumi.Input[builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[builtins.str]] = None,
                  name: Optional[pulumi.Input[builtins.str]] = None,
                  servers: Optional[pulumi.Input[Sequence[pulumi.Input['SystemNtpFeatureServerArgs']]]] = None,
                  source_interface: Optional[pulumi.Input[builtins.str]] = None,
@@ -37,11 +37,11 @@ class SystemNtpFeatureArgs:
                  trusted_keys_variable: Optional[pulumi.Input[builtins.str]] = None):
         """
         The set of arguments for constructing a SystemNtpFeature resource.
+        :param pulumi.Input[builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[Sequence[pulumi.Input['SystemNtpFeatureAuthenticationKeyArgs']]] authentication_keys: Set MD5 authentication key
         :param pulumi.Input[builtins.bool] authoritative_ntp_server: Enable device as NTP Leader - Default value: `false`
         :param pulumi.Input[builtins.str] authoritative_ntp_server_variable: Variable name
         :param pulumi.Input[builtins.str] description: The description of the Feature
-        :param pulumi.Input[builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[builtins.str] name: The name of the Feature
         :param pulumi.Input[Sequence[pulumi.Input['SystemNtpFeatureServerArgs']]] servers: Configure NTP servers
         :param pulumi.Input[builtins.str] source_interface: Enable device as NTP Leader
@@ -51,6 +51,7 @@ class SystemNtpFeatureArgs:
         :param pulumi.Input[Sequence[pulumi.Input[builtins.int]]] trusted_keys: Designate authentication key as trustworthy
         :param pulumi.Input[builtins.str] trusted_keys_variable: Variable name
         """
+        pulumi.set(__self__, "feature_profile_id", feature_profile_id)
         if authentication_keys is not None:
             pulumi.set(__self__, "authentication_keys", authentication_keys)
         if authoritative_ntp_server is not None:
@@ -59,8 +60,6 @@ class SystemNtpFeatureArgs:
             pulumi.set(__self__, "authoritative_ntp_server_variable", authoritative_ntp_server_variable)
         if description is not None:
             pulumi.set(__self__, "description", description)
-        if feature_profile_id is not None:
-            pulumi.set(__self__, "feature_profile_id", feature_profile_id)
         if name is not None:
             pulumi.set(__self__, "name", name)
         if servers is not None:
@@ -77,6 +76,18 @@ class SystemNtpFeatureArgs:
             pulumi.set(__self__, "trusted_keys", trusted_keys)
         if trusted_keys_variable is not None:
             pulumi.set(__self__, "trusted_keys_variable", trusted_keys_variable)
+
+    @property
+    @pulumi.getter(name="featureProfileId")
+    def feature_profile_id(self) -> pulumi.Input[builtins.str]:
+        """
+        Feature Profile ID
+        """
+        return pulumi.get(self, "feature_profile_id")
+
+    @feature_profile_id.setter
+    def feature_profile_id(self, value: pulumi.Input[builtins.str]):
+        pulumi.set(self, "feature_profile_id", value)
 
     @property
     @pulumi.getter(name="authenticationKeys")
@@ -125,18 +136,6 @@ class SystemNtpFeatureArgs:
     @description.setter
     def description(self, value: Optional[pulumi.Input[builtins.str]]):
         pulumi.set(self, "description", value)
-
-    @property
-    @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[builtins.str]]:
-        """
-        Feature Profile ID
-        """
-        return pulumi.get(self, "feature_profile_id")
-
-    @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[builtins.str]]):
-        pulumi.set(self, "feature_profile_id", value)
 
     @property
     @pulumi.getter
@@ -493,6 +492,8 @@ class SystemNtpFeature(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         Expected import identifier with the format: "system_ntp_feature_id,feature_profile_id"
 
         ```sh
@@ -519,13 +520,15 @@ class SystemNtpFeature(pulumi.CustomResource):
     @overload
     def __init__(__self__,
                  resource_name: str,
-                 args: Optional[SystemNtpFeatureArgs] = None,
+                 args: SystemNtpFeatureArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a System NTP Feature.
           - Minimum SD-WAN Manager version: `20.12.0`
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         Expected import identifier with the format: "system_ntp_feature_id,feature_profile_id"
 
@@ -574,6 +577,8 @@ class SystemNtpFeature(pulumi.CustomResource):
             __props__.__dict__["authoritative_ntp_server"] = authoritative_ntp_server
             __props__.__dict__["authoritative_ntp_server_variable"] = authoritative_ntp_server_variable
             __props__.__dict__["description"] = description
+            if feature_profile_id is None and not opts.urn:
+                raise TypeError("Missing required property 'feature_profile_id'")
             __props__.__dict__["feature_profile_id"] = feature_profile_id
             __props__.__dict__["name"] = name
             __props__.__dict__["servers"] = servers
@@ -684,7 +689,7 @@ class SystemNtpFeature(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> pulumi.Output[Optional[builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Output[builtins.str]:
         """
         Feature Profile ID
         """

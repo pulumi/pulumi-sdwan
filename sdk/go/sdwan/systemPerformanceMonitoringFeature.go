@@ -7,6 +7,7 @@ import (
 	"context"
 	"reflect"
 
+	"errors"
 	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan/internal"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
@@ -54,6 +55,8 @@ import (
 //
 // ## Import
 //
+// The `pulumi import` command can be used, for example:
+//
 // Expected import identifier with the format: "system_performance_monitoring_feature_id,feature_profile_id"
 //
 // ```sh
@@ -73,7 +76,7 @@ type SystemPerformanceMonitoringFeature struct {
 	// UMTS events
 	EventDrivenEvents pulumi.StringArrayOutput `pulumi:"eventDrivenEvents"`
 	// Feature Profile ID
-	FeatureProfileId pulumi.StringPtrOutput `pulumi:"featureProfileId"`
+	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
 	// UMTS monitoring enable or disable - Default value: `false`
 	MonitoringConfigEnabled pulumi.BoolPtrOutput `pulumi:"monitoringConfigEnabled"`
 	// UMTS monitoring interval(Minutes) - Choices: `30`, `60`
@@ -88,9 +91,12 @@ type SystemPerformanceMonitoringFeature struct {
 func NewSystemPerformanceMonitoringFeature(ctx *pulumi.Context,
 	name string, args *SystemPerformanceMonitoringFeatureArgs, opts ...pulumi.ResourceOption) (*SystemPerformanceMonitoringFeature, error) {
 	if args == nil {
-		args = &SystemPerformanceMonitoringFeatureArgs{}
+		return nil, errors.New("missing one or more required arguments")
 	}
 
+	if args.FeatureProfileId == nil {
+		return nil, errors.New("invalid value for required argument 'FeatureProfileId'")
+	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource SystemPerformanceMonitoringFeature
 	err := ctx.RegisterResource("sdwan:index/systemPerformanceMonitoringFeature:SystemPerformanceMonitoringFeature", name, args, &resource, opts...)
@@ -175,7 +181,7 @@ type systemPerformanceMonitoringFeatureArgs struct {
 	// UMTS events
 	EventDrivenEvents []string `pulumi:"eventDrivenEvents"`
 	// Feature Profile ID
-	FeatureProfileId *string `pulumi:"featureProfileId"`
+	FeatureProfileId string `pulumi:"featureProfileId"`
 	// UMTS monitoring enable or disable - Default value: `false`
 	MonitoringConfigEnabled *bool `pulumi:"monitoringConfigEnabled"`
 	// UMTS monitoring interval(Minutes) - Choices: `30`, `60`
@@ -197,7 +203,7 @@ type SystemPerformanceMonitoringFeatureArgs struct {
 	// UMTS events
 	EventDrivenEvents pulumi.StringArrayInput
 	// Feature Profile ID
-	FeatureProfileId pulumi.StringPtrInput
+	FeatureProfileId pulumi.StringInput
 	// UMTS monitoring enable or disable - Default value: `false`
 	MonitoringConfigEnabled pulumi.BoolPtrInput
 	// UMTS monitoring interval(Minutes) - Choices: `30`, `60`
@@ -319,8 +325,8 @@ func (o SystemPerformanceMonitoringFeatureOutput) EventDrivenEvents() pulumi.Str
 }
 
 // Feature Profile ID
-func (o SystemPerformanceMonitoringFeatureOutput) FeatureProfileId() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *SystemPerformanceMonitoringFeature) pulumi.StringPtrOutput { return v.FeatureProfileId }).(pulumi.StringPtrOutput)
+func (o SystemPerformanceMonitoringFeatureOutput) FeatureProfileId() pulumi.StringOutput {
+	return o.ApplyT(func(v *SystemPerformanceMonitoringFeature) pulumi.StringOutput { return v.FeatureProfileId }).(pulumi.StringOutput)
 }
 
 // UMTS monitoring enable or disable - Default value: `false`

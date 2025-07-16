@@ -516,6 +516,8 @@ class LocalizedPolicy(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         ```sh
         $ pulumi import sdwan:index/localizedPolicy:LocalizedPolicy example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
@@ -571,6 +573,8 @@ class LocalizedPolicy(pulumi.CustomResource):
         ```
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         ```sh
         $ pulumi import sdwan:index/localizedPolicy:LocalizedPolicy example "f6b2c44c-693c-4763-b010-895aa3d236bd"

@@ -23,6 +23,7 @@ __all__ = ['ServiceLanVpnInterfaceSviFeatureArgs', 'ServiceLanVpnInterfaceSviFea
 class ServiceLanVpnInterfaceSviFeatureArgs:
     def __init__(__self__, *,
                  feature_profile_id: pulumi.Input[builtins.str],
+                 service_lan_vpn_feature_id: pulumi.Input[builtins.str],
                  acl_ipv4_egress_feature_id: Optional[pulumi.Input[builtins.str]] = None,
                  acl_ipv4_ingress_feature_id: Optional[pulumi.Input[builtins.str]] = None,
                  acl_ipv6_egress_feature_id: Optional[pulumi.Input[builtins.str]] = None,
@@ -59,7 +60,6 @@ class ServiceLanVpnInterfaceSviFeatureArgs:
                  ipv6_secondary_addresses: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceSviFeatureIpv6SecondaryAddressArgs']]]] = None,
                  ipv6_vrrps: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceSviFeatureIpv6VrrpArgs']]]] = None,
                  name: Optional[pulumi.Input[builtins.str]] = None,
-                 service_lan_vpn_feature_id: Optional[pulumi.Input[builtins.str]] = None,
                  shutdown: Optional[pulumi.Input[builtins.bool]] = None,
                  shutdown_variable: Optional[pulumi.Input[builtins.str]] = None,
                  tcp_mss: Optional[pulumi.Input[builtins.int]] = None,
@@ -67,6 +67,7 @@ class ServiceLanVpnInterfaceSviFeatureArgs:
         """
         The set of arguments for constructing a ServiceLanVpnInterfaceSviFeature resource.
         :param pulumi.Input[builtins.str] feature_profile_id: Feature Profile ID
+        :param pulumi.Input[builtins.str] service_lan_vpn_feature_id: Service LAN VPN Feature ID
         :param pulumi.Input[builtins.int] arp_timeout: Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2678400` - Default value: `1200`
         :param pulumi.Input[builtins.str] arp_timeout_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceSviFeatureArpArgs']]] arps: Configure static ARP entries
@@ -103,13 +104,13 @@ class ServiceLanVpnInterfaceSviFeatureArgs:
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceSviFeatureIpv6SecondaryAddressArgs']]] ipv6_secondary_addresses: Assign secondary IPv6 addresses
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceSviFeatureIpv6VrrpArgs']]] ipv6_vrrps: Enable ipv6 VRRP
         :param pulumi.Input[builtins.str] name: The name of the Feature
-        :param pulumi.Input[builtins.str] service_lan_vpn_feature_id: Service LAN VPN Feature ID
         :param pulumi.Input[builtins.bool] shutdown: Administrative state - Default value: `true`
         :param pulumi.Input[builtins.str] shutdown_variable: Variable name
         :param pulumi.Input[builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
         :param pulumi.Input[builtins.str] tcp_mss_variable: Variable name
         """
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
+        pulumi.set(__self__, "service_lan_vpn_feature_id", service_lan_vpn_feature_id)
         if acl_ipv4_egress_feature_id is not None:
             pulumi.set(__self__, "acl_ipv4_egress_feature_id", acl_ipv4_egress_feature_id)
         if acl_ipv4_ingress_feature_id is not None:
@@ -182,8 +183,6 @@ class ServiceLanVpnInterfaceSviFeatureArgs:
             pulumi.set(__self__, "ipv6_vrrps", ipv6_vrrps)
         if name is not None:
             pulumi.set(__self__, "name", name)
-        if service_lan_vpn_feature_id is not None:
-            pulumi.set(__self__, "service_lan_vpn_feature_id", service_lan_vpn_feature_id)
         if shutdown is not None:
             pulumi.set(__self__, "shutdown", shutdown)
         if shutdown_variable is not None:
@@ -204,6 +203,18 @@ class ServiceLanVpnInterfaceSviFeatureArgs:
     @feature_profile_id.setter
     def feature_profile_id(self, value: pulumi.Input[builtins.str]):
         pulumi.set(self, "feature_profile_id", value)
+
+    @property
+    @pulumi.getter(name="serviceLanVpnFeatureId")
+    def service_lan_vpn_feature_id(self) -> pulumi.Input[builtins.str]:
+        """
+        Service LAN VPN Feature ID
+        """
+        return pulumi.get(self, "service_lan_vpn_feature_id")
+
+    @service_lan_vpn_feature_id.setter
+    def service_lan_vpn_feature_id(self, value: pulumi.Input[builtins.str]):
+        pulumi.set(self, "service_lan_vpn_feature_id", value)
 
     @property
     @pulumi.getter(name="aclIpv4EgressFeatureId")
@@ -628,18 +639,6 @@ class ServiceLanVpnInterfaceSviFeatureArgs:
     @name.setter
     def name(self, value: Optional[pulumi.Input[builtins.str]]):
         pulumi.set(self, "name", value)
-
-    @property
-    @pulumi.getter(name="serviceLanVpnFeatureId")
-    def service_lan_vpn_feature_id(self) -> Optional[pulumi.Input[builtins.str]]:
-        """
-        Service LAN VPN Feature ID
-        """
-        return pulumi.get(self, "service_lan_vpn_feature_id")
-
-    @service_lan_vpn_feature_id.setter
-    def service_lan_vpn_feature_id(self, value: Optional[pulumi.Input[builtins.str]]):
-        pulumi.set(self, "service_lan_vpn_feature_id", value)
 
     @property
     @pulumi.getter
@@ -1433,6 +1432,8 @@ class ServiceLanVpnInterfaceSviFeature(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         Expected import identifier with the format: "service_lan_vpn_interface_svi_feature_id,feature_profile_id,service_lan_vpn_feature_id"
 
         ```sh
@@ -1495,6 +1496,8 @@ class ServiceLanVpnInterfaceSviFeature(pulumi.CustomResource):
           - Minimum SD-WAN Manager version: `20.12.0`
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         Expected import identifier with the format: "service_lan_vpn_interface_svi_feature_id,feature_profile_id,service_lan_vpn_feature_id"
 
@@ -1607,6 +1610,8 @@ class ServiceLanVpnInterfaceSviFeature(pulumi.CustomResource):
             __props__.__dict__["ipv6_secondary_addresses"] = ipv6_secondary_addresses
             __props__.__dict__["ipv6_vrrps"] = ipv6_vrrps
             __props__.__dict__["name"] = name
+            if service_lan_vpn_feature_id is None and not opts.urn:
+                raise TypeError("Missing required property 'service_lan_vpn_feature_id'")
             __props__.__dict__["service_lan_vpn_feature_id"] = service_lan_vpn_feature_id
             __props__.__dict__["shutdown"] = shutdown
             __props__.__dict__["shutdown_variable"] = shutdown_variable
@@ -2056,7 +2061,7 @@ class ServiceLanVpnInterfaceSviFeature(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="serviceLanVpnFeatureId")
-    def service_lan_vpn_feature_id(self) -> pulumi.Output[Optional[builtins.str]]:
+    def service_lan_vpn_feature_id(self) -> pulumi.Output[builtins.str]:
         """
         Service LAN VPN Feature ID
         """

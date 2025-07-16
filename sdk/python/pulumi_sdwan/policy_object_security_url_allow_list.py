@@ -209,6 +209,8 @@ class PolicyObjectSecurityUrlAllowList(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         Expected import identifier with the format: "policy_object_security_url_allow_list_id,feature_profile_id"
 
         ```sh
@@ -248,6 +250,8 @@ class PolicyObjectSecurityUrlAllowList(pulumi.CustomResource):
         ```
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         Expected import identifier with the format: "policy_object_security_url_allow_list_id,feature_profile_id"
 

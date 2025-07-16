@@ -57,9 +57,8 @@ namespace Pulumi.Sdwan.Outputs
         public readonly int? DnsApplicationListVersion;
         /// <summary>
         /// DSCP value, Attribute conditional on `type` being equal to `dscp`
-        ///   - Range: `0`-`63`
         /// </summary>
-        public readonly int? Dscp;
+        public readonly string? Dscp;
         /// <summary>
         /// ICMP Message, Attribute conditional on `type` being equal to `icmpMessage`
         /// </summary>
@@ -132,7 +131,7 @@ namespace Pulumi.Sdwan.Outputs
 
             int? dnsApplicationListVersion,
 
-            int? dscp,
+            string? dscp,
 
             string? icmpMessage,
 

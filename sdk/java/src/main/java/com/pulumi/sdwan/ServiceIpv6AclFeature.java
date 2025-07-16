@@ -28,6 +28,8 @@ import javax.annotation.Nullable;
  * 
  * ## Import
  * 
+ * The `pulumi import` command can be used, for example:
+ * 
  * Expected import identifier with the format: &#34;service_ipv6_acl_feature_id,feature_profile_id&#34;
  * 
  * ```sh
@@ -70,14 +72,14 @@ public class ServiceIpv6AclFeature extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="featureProfileId", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> featureProfileId;
+    private Output<String> featureProfileId;
 
     /**
      * @return Feature Profile ID
      * 
      */
-    public Output<Optional<String>> featureProfileId() {
-        return Codegen.optional(this.featureProfileId);
+    public Output<String> featureProfileId() {
+        return this.featureProfileId;
     }
     /**
      * The name of the Feature
@@ -134,7 +136,7 @@ public class ServiceIpv6AclFeature extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public ServiceIpv6AclFeature(java.lang.String name, @Nullable ServiceIpv6AclFeatureArgs args) {
+    public ServiceIpv6AclFeature(java.lang.String name, ServiceIpv6AclFeatureArgs args) {
         this(name, args, null);
     }
     /**
@@ -143,7 +145,7 @@ public class ServiceIpv6AclFeature extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ServiceIpv6AclFeature(java.lang.String name, @Nullable ServiceIpv6AclFeatureArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public ServiceIpv6AclFeature(java.lang.String name, ServiceIpv6AclFeatureArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("sdwan:index/serviceIpv6AclFeature:ServiceIpv6AclFeature", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
@@ -151,7 +153,7 @@ public class ServiceIpv6AclFeature extends com.pulumi.resources.CustomResource {
         super("sdwan:index/serviceIpv6AclFeature:ServiceIpv6AclFeature", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static ServiceIpv6AclFeatureArgs makeArgs(@Nullable ServiceIpv6AclFeatureArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private static ServiceIpv6AclFeatureArgs makeArgs(ServiceIpv6AclFeatureArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         if (options != null && options.getUrn().isPresent()) {
             return null;
         }

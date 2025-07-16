@@ -261,6 +261,8 @@ class TransportTrackerGroupFeature(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         Expected import identifier with the format: "transport_tracker_group_feature_id,feature_profile_id"
 
         ```sh
@@ -287,6 +289,8 @@ class TransportTrackerGroupFeature(pulumi.CustomResource):
           - Minimum SD-WAN Manager version: `20.12.0`
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         Expected import identifier with the format: "transport_tracker_group_feature_id,feature_profile_id"
 

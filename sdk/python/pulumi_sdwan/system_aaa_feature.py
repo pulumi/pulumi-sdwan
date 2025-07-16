@@ -623,6 +623,8 @@ class SystemAaaFeature(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         Expected import identifier with the format: "system_aaa_feature_id,feature_profile_id"
 
         ```sh
@@ -660,6 +662,8 @@ class SystemAaaFeature(pulumi.CustomResource):
           - Minimum SD-WAN Manager version: `20.12.0`
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         Expected import identifier with the format: "system_aaa_feature_id,feature_profile_id"
 

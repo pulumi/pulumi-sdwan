@@ -23,6 +23,8 @@ import * as utilities from "./utilities";
  *
  * ## Import
  *
+ * The `pulumi import` command can be used, for example:
+ *
  * Expected import identifier with the format: "transport_wan_vpn_feature_associate_routing_bgp_feature_id,feature_profile_id,transport_wan_vpn_feature_id"
  *
  * ```sh

@@ -35,6 +35,8 @@ import * as utilities from "./utilities";
  *
  * ## Import
  *
+ * The `pulumi import` command can be used, for example:
+ *
  * Expected import identifier with the format: "transport_wan_vpn_interface_gre_feature_id,feature_profile_id,transport_wan_vpn_feature_id"
  *
  * ```sh
@@ -157,7 +159,7 @@ export class TransportWanVpnInterfaceGreFeature extends pulumi.CustomResource {
     /**
      * Transport WAN VPN Feature ID
      */
-    public readonly transportWanVpnFeatureId!: pulumi.Output<string | undefined>;
+    public readonly transportWanVpnFeatureId!: pulumi.Output<string>;
     /**
      * Tunnel destination IP Address
      */
@@ -253,6 +255,9 @@ export class TransportWanVpnInterfaceGreFeature extends pulumi.CustomResource {
             const args = argsOrState as TransportWanVpnInterfaceGreFeatureArgs | undefined;
             if ((!args || args.featureProfileId === undefined) && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
+            }
+            if ((!args || args.transportWanVpnFeatureId === undefined) && !opts.urn) {
+                throw new Error("Missing required property 'transportWanVpnFeatureId'");
             }
             resourceInputs["applicationTunnelType"] = args ? args.applicationTunnelType : undefined;
             resourceInputs["applicationTunnelTypeVariable"] = args ? args.applicationTunnelTypeVariable : undefined;
@@ -524,7 +529,7 @@ export interface TransportWanVpnInterfaceGreFeatureArgs {
     /**
      * Transport WAN VPN Feature ID
      */
-    transportWanVpnFeatureId?: pulumi.Input<string>;
+    transportWanVpnFeatureId: pulumi.Input<string>;
     /**
      * Tunnel destination IP Address
      */

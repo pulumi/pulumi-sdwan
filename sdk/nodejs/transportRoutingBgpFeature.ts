@@ -12,6 +12,8 @@ import * as utilities from "./utilities";
  *
  * ## Import
  *
+ * The `pulumi import` command can be used, for example:
+ *
  * Expected import identifier with the format: "transport_routing_bgp_feature_id,feature_profile_id"
  *
  * ```sh
@@ -93,7 +95,7 @@ export class TransportRoutingBgpFeature extends pulumi.CustomResource {
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string | undefined>;
+    public readonly featureProfileId!: pulumi.Output<string>;
     /**
      * Interval (seconds) not receiving a keepalive message declares a BGP peer down - Range: `0`-`65535` - Default value:
      * `180`
@@ -269,7 +271,7 @@ export class TransportRoutingBgpFeature extends pulumi.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param opts A bag of options that control this resource's behavior.
      */
-    constructor(name: string, args?: TransportRoutingBgpFeatureArgs, opts?: pulumi.CustomResourceOptions)
+    constructor(name: string, args: TransportRoutingBgpFeatureArgs, opts?: pulumi.CustomResourceOptions)
     constructor(name: string, argsOrState?: TransportRoutingBgpFeatureArgs | TransportRoutingBgpFeatureState, opts?: pulumi.CustomResourceOptions) {
         let resourceInputs: pulumi.Inputs = {};
         opts = opts || {};
@@ -332,6 +334,9 @@ export class TransportRoutingBgpFeature extends pulumi.CustomResource {
             resourceInputs["version"] = state ? state.version : undefined;
         } else {
             const args = argsOrState as TransportRoutingBgpFeatureArgs | undefined;
+            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+                throw new Error("Missing required property 'featureProfileId'");
+            }
             resourceInputs["alwaysCompareMed"] = args ? args.alwaysCompareMed : undefined;
             resourceInputs["alwaysCompareMedVariable"] = args ? args.alwaysCompareMedVariable : undefined;
             resourceInputs["asNumber"] = args ? args.asNumber : undefined;
@@ -665,7 +670,7 @@ export interface TransportRoutingBgpFeatureArgs {
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId: pulumi.Input<string>;
     /**
      * Interval (seconds) not receiving a keepalive message declares a BGP peer down - Range: `0`-`65535` - Default value:
      * `180`

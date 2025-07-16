@@ -37,6 +37,8 @@ import javax.annotation.Nullable;
  * 
  * ## Import
  * 
+ * The `pulumi import` command can be used, for example:
+ * 
  * Expected import identifier with the format: &#34;transport_routing_bgp_feature_id,feature_profile_id&#34;
  * 
  * ```sh
@@ -205,14 +207,14 @@ public class TransportRoutingBgpFeature extends com.pulumi.resources.CustomResou
      * 
      */
     @Export(name="featureProfileId", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> featureProfileId;
+    private Output<String> featureProfileId;
 
     /**
      * @return Feature Profile ID
      * 
      */
-    public Output<Optional<String>> featureProfileId() {
-        return Codegen.optional(this.featureProfileId);
+    public Output<String> featureProfileId() {
+        return this.featureProfileId;
     }
     /**
      * Interval (seconds) not receiving a keepalive message declares a BGP peer down - Range: `0`-`65535` - Default value:
@@ -815,7 +817,7 @@ public class TransportRoutingBgpFeature extends com.pulumi.resources.CustomResou
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public TransportRoutingBgpFeature(java.lang.String name, @Nullable TransportRoutingBgpFeatureArgs args) {
+    public TransportRoutingBgpFeature(java.lang.String name, TransportRoutingBgpFeatureArgs args) {
         this(name, args, null);
     }
     /**
@@ -824,7 +826,7 @@ public class TransportRoutingBgpFeature extends com.pulumi.resources.CustomResou
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public TransportRoutingBgpFeature(java.lang.String name, @Nullable TransportRoutingBgpFeatureArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public TransportRoutingBgpFeature(java.lang.String name, TransportRoutingBgpFeatureArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("sdwan:index/transportRoutingBgpFeature:TransportRoutingBgpFeature", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
@@ -832,7 +834,7 @@ public class TransportRoutingBgpFeature extends com.pulumi.resources.CustomResou
         super("sdwan:index/transportRoutingBgpFeature:TransportRoutingBgpFeature", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static TransportRoutingBgpFeatureArgs makeArgs(@Nullable TransportRoutingBgpFeatureArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private static TransportRoutingBgpFeatureArgs makeArgs(TransportRoutingBgpFeatureArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         if (options != null && options.getUrn().isPresent()) {
             return null;
         }

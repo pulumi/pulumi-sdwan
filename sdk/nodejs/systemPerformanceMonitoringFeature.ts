@@ -29,6 +29,8 @@ import * as utilities from "./utilities";
  *
  * ## Import
  *
+ * The `pulumi import` command can be used, for example:
+ *
  * Expected import identifier with the format: "system_performance_monitoring_feature_id,feature_profile_id"
  *
  * ```sh
@@ -86,7 +88,7 @@ export class SystemPerformanceMonitoringFeature extends pulumi.CustomResource {
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string | undefined>;
+    public readonly featureProfileId!: pulumi.Output<string>;
     /**
      * UMTS monitoring enable or disable - Default value: `false`
      */
@@ -111,7 +113,7 @@ export class SystemPerformanceMonitoringFeature extends pulumi.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param opts A bag of options that control this resource's behavior.
      */
-    constructor(name: string, args?: SystemPerformanceMonitoringFeatureArgs, opts?: pulumi.CustomResourceOptions)
+    constructor(name: string, args: SystemPerformanceMonitoringFeatureArgs, opts?: pulumi.CustomResourceOptions)
     constructor(name: string, argsOrState?: SystemPerformanceMonitoringFeatureArgs | SystemPerformanceMonitoringFeatureState, opts?: pulumi.CustomResourceOptions) {
         let resourceInputs: pulumi.Inputs = {};
         opts = opts || {};
@@ -129,6 +131,9 @@ export class SystemPerformanceMonitoringFeature extends pulumi.CustomResource {
             resourceInputs["version"] = state ? state.version : undefined;
         } else {
             const args = argsOrState as SystemPerformanceMonitoringFeatureArgs | undefined;
+            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+                throw new Error("Missing required property 'featureProfileId'");
+            }
             resourceInputs["appPerfMonitorAppGroups"] = args ? args.appPerfMonitorAppGroups : undefined;
             resourceInputs["appPerfMonitorEnabled"] = args ? args.appPerfMonitorEnabled : undefined;
             resourceInputs["description"] = args ? args.description : undefined;
@@ -218,7 +223,7 @@ export interface SystemPerformanceMonitoringFeatureArgs {
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId: pulumi.Input<string>;
     /**
      * UMTS monitoring enable or disable - Default value: `false`
      */

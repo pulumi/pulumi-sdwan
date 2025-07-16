@@ -15,6 +15,8 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Import
     /// 
+    /// The `pulumi import` command can be used, for example:
+    /// 
     /// Expected import identifier with the format: "service_multicast_feature_id,feature_profile_id"
     /// 
     /// ```sh
@@ -58,7 +60,7 @@ namespace Pulumi.Sdwan
         /// Feature Profile ID
         /// </summary>
         [Output("featureProfileId")]
-        public Output<string?> FeatureProfileId { get; private set; } = null!;
+        public Output<string> FeatureProfileId { get; private set; } = null!;
 
         /// <summary>
         /// Set IGMP interface parameters
@@ -289,8 +291,8 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// Feature Profile ID
         /// </summary>
-        [Input("featureProfileId")]
-        public Input<string>? FeatureProfileId { get; set; }
+        [Input("featureProfileId", required: true)]
+        public Input<string> FeatureProfileId { get; set; } = null!;
 
         [Input("igmpInterfaces")]
         private InputList<Inputs.ServiceMulticastFeatureIgmpInterfaceArgs>? _igmpInterfaces;

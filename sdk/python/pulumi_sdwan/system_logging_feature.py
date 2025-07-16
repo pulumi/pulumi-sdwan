@@ -22,6 +22,7 @@ __all__ = ['SystemLoggingFeatureArgs', 'SystemLoggingFeature']
 @pulumi.input_type
 class SystemLoggingFeatureArgs:
     def __init__(__self__, *,
+                 feature_profile_id: pulumi.Input[builtins.str],
                  description: Optional[pulumi.Input[builtins.str]] = None,
                  disk_enable: Optional[pulumi.Input[builtins.bool]] = None,
                  disk_enable_variable: Optional[pulumi.Input[builtins.str]] = None,
@@ -29,13 +30,13 @@ class SystemLoggingFeatureArgs:
                  disk_file_rotate_variable: Optional[pulumi.Input[builtins.str]] = None,
                  disk_file_size: Optional[pulumi.Input[builtins.int]] = None,
                  disk_file_size_variable: Optional[pulumi.Input[builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[builtins.str]] = None,
                  ipv4_servers: Optional[pulumi.Input[Sequence[pulumi.Input['SystemLoggingFeatureIpv4ServerArgs']]]] = None,
                  ipv6_servers: Optional[pulumi.Input[Sequence[pulumi.Input['SystemLoggingFeatureIpv6ServerArgs']]]] = None,
                  name: Optional[pulumi.Input[builtins.str]] = None,
                  tls_profiles: Optional[pulumi.Input[Sequence[pulumi.Input['SystemLoggingFeatureTlsProfileArgs']]]] = None):
         """
         The set of arguments for constructing a SystemLoggingFeature resource.
+        :param pulumi.Input[builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[builtins.str] description: The description of the Feature
         :param pulumi.Input[builtins.bool] disk_enable: Enable logging to local disk - Default value: `true`
         :param pulumi.Input[builtins.str] disk_enable_variable: Variable name
@@ -43,12 +44,12 @@ class SystemLoggingFeatureArgs:
         :param pulumi.Input[builtins.str] disk_file_rotate_variable: Variable name
         :param pulumi.Input[builtins.int] disk_file_size: Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
         :param pulumi.Input[builtins.str] disk_file_size_variable: Variable name
-        :param pulumi.Input[builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[Sequence[pulumi.Input['SystemLoggingFeatureIpv4ServerArgs']]] ipv4_servers: Enable logging to remote server
         :param pulumi.Input[Sequence[pulumi.Input['SystemLoggingFeatureIpv6ServerArgs']]] ipv6_servers: Enable logging to remote ipv6 server
         :param pulumi.Input[builtins.str] name: The name of the Feature
         :param pulumi.Input[Sequence[pulumi.Input['SystemLoggingFeatureTlsProfileArgs']]] tls_profiles: Configure a TLS profile
         """
+        pulumi.set(__self__, "feature_profile_id", feature_profile_id)
         if description is not None:
             pulumi.set(__self__, "description", description)
         if disk_enable is not None:
@@ -63,8 +64,6 @@ class SystemLoggingFeatureArgs:
             pulumi.set(__self__, "disk_file_size", disk_file_size)
         if disk_file_size_variable is not None:
             pulumi.set(__self__, "disk_file_size_variable", disk_file_size_variable)
-        if feature_profile_id is not None:
-            pulumi.set(__self__, "feature_profile_id", feature_profile_id)
         if ipv4_servers is not None:
             pulumi.set(__self__, "ipv4_servers", ipv4_servers)
         if ipv6_servers is not None:
@@ -73,6 +72,18 @@ class SystemLoggingFeatureArgs:
             pulumi.set(__self__, "name", name)
         if tls_profiles is not None:
             pulumi.set(__self__, "tls_profiles", tls_profiles)
+
+    @property
+    @pulumi.getter(name="featureProfileId")
+    def feature_profile_id(self) -> pulumi.Input[builtins.str]:
+        """
+        Feature Profile ID
+        """
+        return pulumi.get(self, "feature_profile_id")
+
+    @feature_profile_id.setter
+    def feature_profile_id(self, value: pulumi.Input[builtins.str]):
+        pulumi.set(self, "feature_profile_id", value)
 
     @property
     @pulumi.getter
@@ -157,18 +168,6 @@ class SystemLoggingFeatureArgs:
     @disk_file_size_variable.setter
     def disk_file_size_variable(self, value: Optional[pulumi.Input[builtins.str]]):
         pulumi.set(self, "disk_file_size_variable", value)
-
-    @property
-    @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[builtins.str]]:
-        """
-        Feature Profile ID
-        """
-        return pulumi.get(self, "feature_profile_id")
-
-    @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[builtins.str]]):
-        pulumi.set(self, "feature_profile_id", value)
 
     @property
     @pulumi.getter(name="ipv4Servers")
@@ -460,6 +459,8 @@ class SystemLoggingFeature(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         Expected import identifier with the format: "system_logging_feature_id,feature_profile_id"
 
         ```sh
@@ -485,13 +486,15 @@ class SystemLoggingFeature(pulumi.CustomResource):
     @overload
     def __init__(__self__,
                  resource_name: str,
-                 args: Optional[SystemLoggingFeatureArgs] = None,
+                 args: SystemLoggingFeatureArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a System Logging Feature.
           - Minimum SD-WAN Manager version: `20.12.0`
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         Expected import identifier with the format: "system_logging_feature_id,feature_profile_id"
 
@@ -542,6 +545,8 @@ class SystemLoggingFeature(pulumi.CustomResource):
             __props__.__dict__["disk_file_rotate_variable"] = disk_file_rotate_variable
             __props__.__dict__["disk_file_size"] = disk_file_size
             __props__.__dict__["disk_file_size_variable"] = disk_file_size_variable
+            if feature_profile_id is None and not opts.urn:
+                raise TypeError("Missing required property 'feature_profile_id'")
             __props__.__dict__["feature_profile_id"] = feature_profile_id
             __props__.__dict__["ipv4_servers"] = ipv4_servers
             __props__.__dict__["ipv6_servers"] = ipv6_servers
@@ -669,7 +674,7 @@ class SystemLoggingFeature(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> pulumi.Output[Optional[builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Output[builtins.str]:
         """
         Feature Profile ID
         """

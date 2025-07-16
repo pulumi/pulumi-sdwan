@@ -56,7 +56,7 @@ namespace Pulumi.Sdwan.Outputs
         /// <summary>
         /// DSCP value
         /// </summary>
-        public readonly int Dscp;
+        public readonly string Dscp;
         /// <summary>
         /// ICMP Message
         /// </summary>
@@ -116,7 +116,7 @@ namespace Pulumi.Sdwan.Outputs
 
             int dnsApplicationListVersion,
 
-            int dscp,
+            string dscp,
 
             string icmpMessage,
 

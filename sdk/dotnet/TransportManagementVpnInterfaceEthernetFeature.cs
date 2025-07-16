@@ -15,6 +15,8 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Import
     /// 
+    /// The `pulumi import` command can be used, for example:
+    /// 
     /// Expected import identifier with the format: "transport_management_vpn_interface_ethernet_feature_id,feature_profile_id,transport_management_vpn_feature_id"
     /// 
     /// ```sh
@@ -82,7 +84,7 @@ namespace Pulumi.Sdwan
         /// Feature Profile ID
         /// </summary>
         [Output("featureProfileId")]
-        public Output<string?> FeatureProfileId { get; private set; } = null!;
+        public Output<string> FeatureProfileId { get; private set; } = null!;
 
         /// <summary>
         /// ICMP/ICMPv6 Redirect Disable - Default value: `true`
@@ -341,7 +343,7 @@ namespace Pulumi.Sdwan
         /// Transport Management VPN Feature ID
         /// </summary>
         [Output("transportManagementVpnFeatureId")]
-        public Output<string?> TransportManagementVpnFeatureId { get; private set; } = null!;
+        public Output<string> TransportManagementVpnFeatureId { get; private set; } = null!;
 
         /// <summary>
         /// The version of the Feature
@@ -357,7 +359,7 @@ namespace Pulumi.Sdwan
         /// <param name="name">The unique name of the resource</param>
         /// <param name="args">The arguments used to populate this resource's properties</param>
         /// <param name="options">A bag of options that control this resource's behavior</param>
-        public TransportManagementVpnInterfaceEthernetFeature(string name, TransportManagementVpnInterfaceEthernetFeatureArgs? args = null, CustomResourceOptions? options = null)
+        public TransportManagementVpnInterfaceEthernetFeature(string name, TransportManagementVpnInterfaceEthernetFeatureArgs args, CustomResourceOptions? options = null)
             : base("sdwan:index/transportManagementVpnInterfaceEthernetFeature:TransportManagementVpnInterfaceEthernetFeature", name, args ?? new TransportManagementVpnInterfaceEthernetFeatureArgs(), MakeResourceOptions(options, ""))
         {
         }
@@ -458,8 +460,8 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// Feature Profile ID
         /// </summary>
-        [Input("featureProfileId")]
-        public Input<string>? FeatureProfileId { get; set; }
+        [Input("featureProfileId", required: true)]
+        public Input<string> FeatureProfileId { get; set; } = null!;
 
         /// <summary>
         /// ICMP/ICMPv6 Redirect Disable - Default value: `true`
@@ -729,8 +731,8 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// Transport Management VPN Feature ID
         /// </summary>
-        [Input("transportManagementVpnFeatureId")]
-        public Input<string>? TransportManagementVpnFeatureId { get; set; }
+        [Input("transportManagementVpnFeatureId", required: true)]
+        public Input<string> TransportManagementVpnFeatureId { get; set; } = null!;
 
         public TransportManagementVpnInterfaceEthernetFeatureArgs()
         {

@@ -30,6 +30,8 @@ import javax.annotation.Nullable;
  * 
  * ## Import
  * 
+ * The `pulumi import` command can be used, for example:
+ * 
  * Expected import identifier with the format: &#34;system_ntp_feature_id,feature_profile_id&#34;
  * 
  * ```sh
@@ -100,14 +102,14 @@ public class SystemNtpFeature extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="featureProfileId", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> featureProfileId;
+    private Output<String> featureProfileId;
 
     /**
      * @return Feature Profile ID
      * 
      */
-    public Output<Optional<String>> featureProfileId() {
-        return Codegen.optional(this.featureProfileId);
+    public Output<String> featureProfileId() {
+        return this.featureProfileId;
     }
     /**
      * The name of the Feature
@@ -248,7 +250,7 @@ public class SystemNtpFeature extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SystemNtpFeature(java.lang.String name, @Nullable SystemNtpFeatureArgs args) {
+    public SystemNtpFeature(java.lang.String name, SystemNtpFeatureArgs args) {
         this(name, args, null);
     }
     /**
@@ -257,7 +259,7 @@ public class SystemNtpFeature extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SystemNtpFeature(java.lang.String name, @Nullable SystemNtpFeatureArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public SystemNtpFeature(java.lang.String name, SystemNtpFeatureArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("sdwan:index/systemNtpFeature:SystemNtpFeature", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
@@ -265,7 +267,7 @@ public class SystemNtpFeature extends com.pulumi.resources.CustomResource {
         super("sdwan:index/systemNtpFeature:SystemNtpFeature", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static SystemNtpFeatureArgs makeArgs(@Nullable SystemNtpFeatureArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private static SystemNtpFeatureArgs makeArgs(SystemNtpFeatureArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         if (options != null && options.getUrn().isPresent()) {
             return null;
         }

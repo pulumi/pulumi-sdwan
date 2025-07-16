@@ -21,6 +21,7 @@ __all__ = ['ServiceLanVpnInterfaceGreFeatureArgs', 'ServiceLanVpnInterfaceGreFea
 class ServiceLanVpnInterfaceGreFeatureArgs:
     def __init__(__self__, *,
                  feature_profile_id: pulumi.Input[builtins.str],
+                 service_lan_vpn_feature_id: pulumi.Input[builtins.str],
                  application_tunnel_type: Optional[pulumi.Input[builtins.str]] = None,
                  application_tunnel_type_variable: Optional[pulumi.Input[builtins.str]] = None,
                  clear_dont_fragment: Optional[pulumi.Input[builtins.bool]] = None,
@@ -37,7 +38,6 @@ class ServiceLanVpnInterfaceGreFeatureArgs:
                  ipv4_subnet_mask: Optional[pulumi.Input[builtins.str]] = None,
                  ipv4_subnet_mask_variable: Optional[pulumi.Input[builtins.str]] = None,
                  name: Optional[pulumi.Input[builtins.str]] = None,
-                 service_lan_vpn_feature_id: Optional[pulumi.Input[builtins.str]] = None,
                  shutdown: Optional[pulumi.Input[builtins.bool]] = None,
                  shutdown_variable: Optional[pulumi.Input[builtins.str]] = None,
                  tcp_mss: Optional[pulumi.Input[builtins.int]] = None,
@@ -55,6 +55,7 @@ class ServiceLanVpnInterfaceGreFeatureArgs:
         """
         The set of arguments for constructing a ServiceLanVpnInterfaceGreFeature resource.
         :param pulumi.Input[builtins.str] feature_profile_id: Feature Profile ID
+        :param pulumi.Input[builtins.str] service_lan_vpn_feature_id: Service LAN VPN Feature ID
         :param pulumi.Input[builtins.str] application_tunnel_type: Enable Application Tunnel Type - Choices: `none`, `sig`
         :param pulumi.Input[builtins.str] application_tunnel_type_variable: Variable name
         :param pulumi.Input[builtins.bool] clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
@@ -74,7 +75,6 @@ class ServiceLanVpnInterfaceGreFeatureArgs:
                `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[builtins.str] ipv4_subnet_mask_variable: Variable name
         :param pulumi.Input[builtins.str] name: The name of the Feature
-        :param pulumi.Input[builtins.str] service_lan_vpn_feature_id: Service LAN VPN Feature ID
         :param pulumi.Input[builtins.bool] shutdown: Administrative state - Default value: `false`
         :param pulumi.Input[builtins.str] shutdown_variable: Variable name
         :param pulumi.Input[builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
@@ -91,6 +91,7 @@ class ServiceLanVpnInterfaceGreFeatureArgs:
         :param pulumi.Input[builtins.str] tunnel_source_ipv4_address_variable: Variable name
         """
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
+        pulumi.set(__self__, "service_lan_vpn_feature_id", service_lan_vpn_feature_id)
         if application_tunnel_type is not None:
             pulumi.set(__self__, "application_tunnel_type", application_tunnel_type)
         if application_tunnel_type_variable is not None:
@@ -123,8 +124,6 @@ class ServiceLanVpnInterfaceGreFeatureArgs:
             pulumi.set(__self__, "ipv4_subnet_mask_variable", ipv4_subnet_mask_variable)
         if name is not None:
             pulumi.set(__self__, "name", name)
-        if service_lan_vpn_feature_id is not None:
-            pulumi.set(__self__, "service_lan_vpn_feature_id", service_lan_vpn_feature_id)
         if shutdown is not None:
             pulumi.set(__self__, "shutdown", shutdown)
         if shutdown_variable is not None:
@@ -165,6 +164,18 @@ class ServiceLanVpnInterfaceGreFeatureArgs:
     @feature_profile_id.setter
     def feature_profile_id(self, value: pulumi.Input[builtins.str]):
         pulumi.set(self, "feature_profile_id", value)
+
+    @property
+    @pulumi.getter(name="serviceLanVpnFeatureId")
+    def service_lan_vpn_feature_id(self) -> pulumi.Input[builtins.str]:
+        """
+        Service LAN VPN Feature ID
+        """
+        return pulumi.get(self, "service_lan_vpn_feature_id")
+
+    @service_lan_vpn_feature_id.setter
+    def service_lan_vpn_feature_id(self, value: pulumi.Input[builtins.str]):
+        pulumi.set(self, "service_lan_vpn_feature_id", value)
 
     @property
     @pulumi.getter(name="applicationTunnelType")
@@ -358,18 +369,6 @@ class ServiceLanVpnInterfaceGreFeatureArgs:
     @name.setter
     def name(self, value: Optional[pulumi.Input[builtins.str]]):
         pulumi.set(self, "name", value)
-
-    @property
-    @pulumi.getter(name="serviceLanVpnFeatureId")
-    def service_lan_vpn_feature_id(self) -> Optional[pulumi.Input[builtins.str]]:
-        """
-        Service LAN VPN Feature ID
-        """
-        return pulumi.get(self, "service_lan_vpn_feature_id")
-
-    @service_lan_vpn_feature_id.setter
-    def service_lan_vpn_feature_id(self, value: Optional[pulumi.Input[builtins.str]]):
-        pulumi.set(self, "service_lan_vpn_feature_id", value)
 
     @property
     @pulumi.getter
@@ -1149,6 +1148,8 @@ class ServiceLanVpnInterfaceGreFeature(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         Expected import identifier with the format: "service_lan_vpn_interface_gre_feature_id,feature_profile_id,service_lan_vpn_feature_id"
 
         ```sh
@@ -1228,6 +1229,8 @@ class ServiceLanVpnInterfaceGreFeature(pulumi.CustomResource):
         ```
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         Expected import identifier with the format: "service_lan_vpn_interface_gre_feature_id,feature_profile_id,service_lan_vpn_feature_id"
 
@@ -1310,6 +1313,8 @@ class ServiceLanVpnInterfaceGreFeature(pulumi.CustomResource):
             __props__.__dict__["ipv4_subnet_mask"] = ipv4_subnet_mask
             __props__.__dict__["ipv4_subnet_mask_variable"] = ipv4_subnet_mask_variable
             __props__.__dict__["name"] = name
+            if service_lan_vpn_feature_id is None and not opts.urn:
+                raise TypeError("Missing required property 'service_lan_vpn_feature_id'")
             __props__.__dict__["service_lan_vpn_feature_id"] = service_lan_vpn_feature_id
             __props__.__dict__["shutdown"] = shutdown
             __props__.__dict__["shutdown_variable"] = shutdown_variable
@@ -1591,7 +1596,7 @@ class ServiceLanVpnInterfaceGreFeature(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="serviceLanVpnFeatureId")
-    def service_lan_vpn_feature_id(self) -> pulumi.Output[Optional[builtins.str]]:
+    def service_lan_vpn_feature_id(self) -> pulumi.Output[builtins.str]:
         """
         Service LAN VPN Feature ID
         """

@@ -11,6 +11,8 @@ import * as utilities from "./utilities";
  *
  * ## Import
  *
+ * The `pulumi import` command can be used, for example:
+ *
  * ```sh
  * $ pulumi import sdwan:index/ipv6AclPolicyDefinition:Ipv6AclPolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"
  * ```

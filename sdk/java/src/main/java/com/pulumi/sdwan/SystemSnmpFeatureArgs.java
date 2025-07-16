@@ -5,6 +5,7 @@ package com.pulumi.sdwan;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.sdwan.inputs.SystemSnmpFeatureCommunityArgs;
 import com.pulumi.sdwan.inputs.SystemSnmpFeatureGroupArgs;
 import com.pulumi.sdwan.inputs.SystemSnmpFeatureTrapTargetServerArgs;
@@ -86,15 +87,15 @@ public final class SystemSnmpFeatureArgs extends com.pulumi.resources.ResourceAr
      * Feature Profile ID
      * 
      */
-    @Import(name="featureProfileId")
-    private @Nullable Output<String> featureProfileId;
+    @Import(name="featureProfileId", required=true)
+    private Output<String> featureProfileId;
 
     /**
      * @return Feature Profile ID
      * 
      */
-    public Optional<Output<String>> featureProfileId() {
-        return Optional.ofNullable(this.featureProfileId);
+    public Output<String> featureProfileId() {
+        return this.featureProfileId;
     }
 
     /**
@@ -369,7 +370,7 @@ public final class SystemSnmpFeatureArgs extends com.pulumi.resources.ResourceAr
          * @return builder
          * 
          */
-        public Builder featureProfileId(@Nullable Output<String> featureProfileId) {
+        public Builder featureProfileId(Output<String> featureProfileId) {
             $.featureProfileId = featureProfileId;
             return this;
         }
@@ -614,6 +615,9 @@ public final class SystemSnmpFeatureArgs extends com.pulumi.resources.ResourceAr
         }
 
         public SystemSnmpFeatureArgs build() {
+            if ($.featureProfileId == null) {
+                throw new MissingRequiredPropertyException("SystemSnmpFeatureArgs", "featureProfileId");
+            }
             return $;
         }
     }

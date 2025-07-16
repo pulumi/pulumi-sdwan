@@ -75,6 +75,8 @@ import (
 //
 // ## Import
 //
+// The `pulumi import` command can be used, for example:
+//
 // Expected import identifier with the format: "transport_wan_vpn_interface_ipsec_feature_id,feature_profile_id,transport_wan_vpn_feature_id"
 //
 // ```sh
@@ -191,7 +193,7 @@ type TransportWanVpnInterfaceIpsecFeature struct {
 	// Variable name
 	TrackerIdVariable pulumi.StringPtrOutput `pulumi:"trackerIdVariable"`
 	// Transport WAN VPN Feature ID
-	TransportWanVpnFeatureId     pulumi.StringPtrOutput `pulumi:"transportWanVpnFeatureId"`
+	TransportWanVpnFeatureId     pulumi.StringOutput    `pulumi:"transportWanVpnFeatureId"`
 	TunnelDestinationIpv4Address pulumi.StringPtrOutput `pulumi:"tunnelDestinationIpv4Address"`
 	// Variable name
 	TunnelDestinationIpv4AddressVariable pulumi.StringPtrOutput `pulumi:"tunnelDestinationIpv4AddressVariable"`
@@ -235,6 +237,9 @@ func NewTransportWanVpnInterfaceIpsecFeature(ctx *pulumi.Context,
 
 	if args.FeatureProfileId == nil {
 		return nil, errors.New("invalid value for required argument 'FeatureProfileId'")
+	}
+	if args.TransportWanVpnFeatureId == nil {
+		return nil, errors.New("invalid value for required argument 'TransportWanVpnFeatureId'")
 	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource TransportWanVpnInterfaceIpsecFeature
@@ -659,7 +664,7 @@ type transportWanVpnInterfaceIpsecFeatureArgs struct {
 	// Variable name
 	TrackerIdVariable *string `pulumi:"trackerIdVariable"`
 	// Transport WAN VPN Feature ID
-	TransportWanVpnFeatureId     *string `pulumi:"transportWanVpnFeatureId"`
+	TransportWanVpnFeatureId     string  `pulumi:"transportWanVpnFeatureId"`
 	TunnelDestinationIpv4Address *string `pulumi:"tunnelDestinationIpv4Address"`
 	// Variable name
 	TunnelDestinationIpv4AddressVariable *string `pulumi:"tunnelDestinationIpv4AddressVariable"`
@@ -802,7 +807,7 @@ type TransportWanVpnInterfaceIpsecFeatureArgs struct {
 	// Variable name
 	TrackerIdVariable pulumi.StringPtrInput
 	// Transport WAN VPN Feature ID
-	TransportWanVpnFeatureId     pulumi.StringPtrInput
+	TransportWanVpnFeatureId     pulumi.StringInput
 	TunnelDestinationIpv4Address pulumi.StringPtrInput
 	// Variable name
 	TunnelDestinationIpv4AddressVariable pulumi.StringPtrInput
@@ -1204,10 +1209,8 @@ func (o TransportWanVpnInterfaceIpsecFeatureOutput) TrackerIdVariable() pulumi.S
 }
 
 // Transport WAN VPN Feature ID
-func (o TransportWanVpnInterfaceIpsecFeatureOutput) TransportWanVpnFeatureId() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *TransportWanVpnInterfaceIpsecFeature) pulumi.StringPtrOutput {
-		return v.TransportWanVpnFeatureId
-	}).(pulumi.StringPtrOutput)
+func (o TransportWanVpnInterfaceIpsecFeatureOutput) TransportWanVpnFeatureId() pulumi.StringOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceIpsecFeature) pulumi.StringOutput { return v.TransportWanVpnFeatureId }).(pulumi.StringOutput)
 }
 
 func (o TransportWanVpnInterfaceIpsecFeatureOutput) TunnelDestinationIpv4Address() pulumi.StringPtrOutput {

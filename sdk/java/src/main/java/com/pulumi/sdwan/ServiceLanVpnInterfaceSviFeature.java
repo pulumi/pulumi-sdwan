@@ -34,6 +34,8 @@ import javax.annotation.Nullable;
  * 
  * ## Import
  * 
+ * The `pulumi import` command can be used, for example:
+ * 
  * Expected import identifier with the format: &#34;service_lan_vpn_interface_svi_feature_id,feature_profile_id,service_lan_vpn_feature_id&#34;
  * 
  * ```sh
@@ -542,14 +544,14 @@ public class ServiceLanVpnInterfaceSviFeature extends com.pulumi.resources.Custo
      * 
      */
     @Export(name="serviceLanVpnFeatureId", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> serviceLanVpnFeatureId;
+    private Output<String> serviceLanVpnFeatureId;
 
     /**
      * @return Service LAN VPN Feature ID
      * 
      */
-    public Output<Optional<String>> serviceLanVpnFeatureId() {
-        return Codegen.optional(this.serviceLanVpnFeatureId);
+    public Output<String> serviceLanVpnFeatureId() {
+        return this.serviceLanVpnFeatureId;
     }
     /**
      * Administrative state - Default value: `true`

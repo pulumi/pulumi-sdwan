@@ -112,6 +112,8 @@ class AttachFeatureDeviceTemplate(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         One feature device template ID and a comma separated list containing at least one device ID must be included:
 
         ```sh
@@ -133,6 +135,8 @@ class AttachFeatureDeviceTemplate(pulumi.CustomResource):
         This resource can attach a feature device template. Due to limitations of the API, once a device template is attached to a device, only one change can be applied per `pulumi up` operation. More information is available here.
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         One feature device template ID and a comma separated list containing at least one device ID must be included:
 

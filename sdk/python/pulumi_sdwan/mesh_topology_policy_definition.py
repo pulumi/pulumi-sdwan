@@ -242,6 +242,8 @@ class MeshTopologyPolicyDefinition(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         ```sh
         $ pulumi import sdwan:index/meshTopologyPolicyDefinition:MeshTopologyPolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
@@ -264,6 +266,8 @@ class MeshTopologyPolicyDefinition(pulumi.CustomResource):
         This resource can manage a Mesh Topology Policy Definition .
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         ```sh
         $ pulumi import sdwan:index/meshTopologyPolicyDefinition:MeshTopologyPolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"

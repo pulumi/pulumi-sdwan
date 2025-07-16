@@ -12,6 +12,8 @@ import * as utilities from "./utilities";
  *
  * ## Import
  *
+ * The `pulumi import` command can be used, for example:
+ *
  * Expected import identifier with the format: "service_lan_vpn_interface_ethernet_feature_id,feature_profile_id,service_lan_vpn_feature_id"
  *
  * ```sh
@@ -316,7 +318,7 @@ export class ServiceLanVpnInterfaceEthernetFeature extends pulumi.CustomResource
     /**
      * Service LAN VPN Feature ID
      */
-    public readonly serviceLanVpnFeatureId!: pulumi.Output<string | undefined>;
+    public readonly serviceLanVpnFeatureId!: pulumi.Output<string>;
     /**
      * - Default value: `true`
      */
@@ -501,6 +503,9 @@ export class ServiceLanVpnInterfaceEthernetFeature extends pulumi.CustomResource
             const args = argsOrState as ServiceLanVpnInterfaceEthernetFeatureArgs | undefined;
             if ((!args || args.featureProfileId === undefined) && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
+            }
+            if ((!args || args.serviceLanVpnFeatureId === undefined) && !opts.urn) {
+                throw new Error("Missing required property 'serviceLanVpnFeatureId'");
             }
             resourceInputs["aclIpv4EgressPolicyId"] = args ? args.aclIpv4EgressPolicyId : undefined;
             resourceInputs["aclIpv4IngressPolicyId"] = args ? args.aclIpv4IngressPolicyId : undefined;
@@ -1225,7 +1230,7 @@ export interface ServiceLanVpnInterfaceEthernetFeatureArgs {
     /**
      * Service LAN VPN Feature ID
      */
-    serviceLanVpnFeatureId?: pulumi.Input<string>;
+    serviceLanVpnFeatureId: pulumi.Input<string>;
     /**
      * - Default value: `true`
      */

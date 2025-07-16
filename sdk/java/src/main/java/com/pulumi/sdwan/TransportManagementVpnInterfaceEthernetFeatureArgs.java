@@ -5,6 +5,7 @@ package com.pulumi.sdwan;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.sdwan.inputs.TransportManagementVpnInterfaceEthernetFeatureArpEntryArgs;
 import com.pulumi.sdwan.inputs.TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs;
 import java.lang.Boolean;
@@ -159,15 +160,15 @@ public final class TransportManagementVpnInterfaceEthernetFeatureArgs extends co
      * Feature Profile ID
      * 
      */
-    @Import(name="featureProfileId")
-    private @Nullable Output<String> featureProfileId;
+    @Import(name="featureProfileId", required=true)
+    private Output<String> featureProfileId;
 
     /**
      * @return Feature Profile ID
      * 
      */
-    public Optional<Output<String>> featureProfileId() {
-        return Optional.ofNullable(this.featureProfileId);
+    public Output<String> featureProfileId() {
+        return this.featureProfileId;
     }
 
     /**
@@ -802,15 +803,15 @@ public final class TransportManagementVpnInterfaceEthernetFeatureArgs extends co
      * Transport Management VPN Feature ID
      * 
      */
-    @Import(name="transportManagementVpnFeatureId")
-    private @Nullable Output<String> transportManagementVpnFeatureId;
+    @Import(name="transportManagementVpnFeatureId", required=true)
+    private Output<String> transportManagementVpnFeatureId;
 
     /**
      * @return Transport Management VPN Feature ID
      * 
      */
-    public Optional<Output<String>> transportManagementVpnFeatureId() {
-        return Optional.ofNullable(this.transportManagementVpnFeatureId);
+    public Output<String> transportManagementVpnFeatureId() {
+        return this.transportManagementVpnFeatureId;
     }
 
     private TransportManagementVpnInterfaceEthernetFeatureArgs() {}
@@ -1094,7 +1095,7 @@ public final class TransportManagementVpnInterfaceEthernetFeatureArgs extends co
          * @return builder
          * 
          */
-        public Builder featureProfileId(@Nullable Output<String> featureProfileId) {
+        public Builder featureProfileId(Output<String> featureProfileId) {
             $.featureProfileId = featureProfileId;
             return this;
         }
@@ -2007,7 +2008,7 @@ public final class TransportManagementVpnInterfaceEthernetFeatureArgs extends co
          * @return builder
          * 
          */
-        public Builder transportManagementVpnFeatureId(@Nullable Output<String> transportManagementVpnFeatureId) {
+        public Builder transportManagementVpnFeatureId(Output<String> transportManagementVpnFeatureId) {
             $.transportManagementVpnFeatureId = transportManagementVpnFeatureId;
             return this;
         }
@@ -2023,6 +2024,12 @@ public final class TransportManagementVpnInterfaceEthernetFeatureArgs extends co
         }
 
         public TransportManagementVpnInterfaceEthernetFeatureArgs build() {
+            if ($.featureProfileId == null) {
+                throw new MissingRequiredPropertyException("TransportManagementVpnInterfaceEthernetFeatureArgs", "featureProfileId");
+            }
+            if ($.transportManagementVpnFeatureId == null) {
+                throw new MissingRequiredPropertyException("TransportManagementVpnInterfaceEthernetFeatureArgs", "transportManagementVpnFeatureId");
+            }
             return $;
         }
     }

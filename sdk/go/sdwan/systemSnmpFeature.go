@@ -7,6 +7,7 @@ import (
 	"context"
 	"reflect"
 
+	"errors"
 	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan/internal"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
@@ -15,6 +16,8 @@ import (
 //   - Minimum SD-WAN Manager version: `20.12.0`
 //
 // ## Import
+//
+// The `pulumi import` command can be used, for example:
 //
 // Expected import identifier with the format: "system_snmp_feature_id,feature_profile_id"
 //
@@ -33,7 +36,7 @@ type SystemSnmpFeature struct {
 	// The description of the Feature
 	Description pulumi.StringPtrOutput `pulumi:"description"`
 	// Feature Profile ID
-	FeatureProfileId pulumi.StringPtrOutput `pulumi:"featureProfileId"`
+	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
 	// Configure an SNMP group
 	Groups SystemSnmpFeatureGroupArrayOutput `pulumi:"groups"`
 	// Set the physical location of this managed node
@@ -60,9 +63,12 @@ type SystemSnmpFeature struct {
 func NewSystemSnmpFeature(ctx *pulumi.Context,
 	name string, args *SystemSnmpFeatureArgs, opts ...pulumi.ResourceOption) (*SystemSnmpFeature, error) {
 	if args == nil {
-		args = &SystemSnmpFeatureArgs{}
+		return nil, errors.New("missing one or more required arguments")
 	}
 
+	if args.FeatureProfileId == nil {
+		return nil, errors.New("invalid value for required argument 'FeatureProfileId'")
+	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource SystemSnmpFeature
 	err := ctx.RegisterResource("sdwan:index/systemSnmpFeature:SystemSnmpFeature", name, args, &resource, opts...)
@@ -165,7 +171,7 @@ type systemSnmpFeatureArgs struct {
 	// The description of the Feature
 	Description *string `pulumi:"description"`
 	// Feature Profile ID
-	FeatureProfileId *string `pulumi:"featureProfileId"`
+	FeatureProfileId string `pulumi:"featureProfileId"`
 	// Configure an SNMP group
 	Groups []SystemSnmpFeatureGroup `pulumi:"groups"`
 	// Set the physical location of this managed node
@@ -197,7 +203,7 @@ type SystemSnmpFeatureArgs struct {
 	// The description of the Feature
 	Description pulumi.StringPtrInput
 	// Feature Profile ID
-	FeatureProfileId pulumi.StringPtrInput
+	FeatureProfileId pulumi.StringInput
 	// Configure an SNMP group
 	Groups SystemSnmpFeatureGroupArrayInput
 	// Set the physical location of this managed node
@@ -326,8 +332,8 @@ func (o SystemSnmpFeatureOutput) Description() pulumi.StringPtrOutput {
 }
 
 // Feature Profile ID
-func (o SystemSnmpFeatureOutput) FeatureProfileId() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *SystemSnmpFeature) pulumi.StringPtrOutput { return v.FeatureProfileId }).(pulumi.StringPtrOutput)
+func (o SystemSnmpFeatureOutput) FeatureProfileId() pulumi.StringOutput {
+	return o.ApplyT(func(v *SystemSnmpFeature) pulumi.StringOutput { return v.FeatureProfileId }).(pulumi.StringOutput)
 }
 
 // Configure an SNMP group

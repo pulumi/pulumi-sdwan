@@ -150,9 +150,8 @@ export interface ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry {
     dnsApplicationListVersion?: number;
     /**
      * DSCP value, Attribute conditional on `type` being equal to `dscp`
-     *   - Range: `0`-`63`
      */
-    dscp?: number;
+    dscp?: string;
     /**
      * ICMP Message, Attribute conditional on `type` being equal to `icmpMessage`
      */
@@ -6576,7 +6575,7 @@ export interface GetApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry {
     /**
      * DSCP value
      */
-    dscp: number;
+    dscp: string;
     /**
      * ICMP Message
      */
@@ -18491,7 +18490,7 @@ export interface GetTrafficDataPolicyDefinitionSequenceMatchEntry {
     /**
      * DSCP value
      */
-    dscp: number;
+    dscp: string;
     /**
      * ICMP Message
      */
@@ -19206,18 +19205,26 @@ export interface GetTransportRoutingBgpFeatureIpv4Neighbor {
 
 export interface GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily {
     /**
+     * Set maximum number of prefixes accepted from BGP peer
+     */
+    disablePeerMaxNumberOfPrefixes: number;
+    /**
+     * Variable name
+     */
+    disablePeerMaxNumberOfPrefixesVariable: string;
+    /**
+     * Set threshold(1 to 100) at which to generate a warning message
+     */
+    disablePeerThreshold: number;
+    /**
+     * Variable name
+     */
+    disablePeerThresholdVariable: string;
+    /**
      * Set IPv4 unicast address family
      */
     familyType: string;
     inRoutePolicyId: string;
-    /**
-     * Set maximum number of prefixes accepted from BGP peer
-     */
-    maxNumberOfPrefixes: number;
-    /**
-     * Variable name
-     */
-    maxNumberOfPrefixesVariable: string;
     outRoutePolicyId: string;
     /**
      * Neighbor received maximum prefix policy is disabled.
@@ -19232,13 +19239,37 @@ export interface GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily {
      */
     restartIntervalVariable: string;
     /**
-     * Set threshold(1 to 100) at which to generate a warning message
+     * Set maximum number of prefixes accepted from BGP peer
      */
-    threshold: number;
+    restartMaxNumberOfPrefixes: number;
     /**
      * Variable name
      */
-    thresholdVariable: string;
+    restartMaxNumberOfPrefixesVariable: string;
+    /**
+     * Set threshold(1 to 100) at which to generate a warning message
+     */
+    restartThreshold: number;
+    /**
+     * Variable name
+     */
+    restartThresholdVariable: string;
+    /**
+     * Set maximum number of prefixes accepted from BGP peer
+     */
+    warningMessageMaxNumberOfPrefixes: number;
+    /**
+     * Variable name
+     */
+    warningMessageMaxNumberOfPrefixesVariable: string;
+    /**
+     * Set threshold(1 to 100) at which to generate a warning message
+     */
+    warningMessageThreshold: number;
+    /**
+     * Variable name
+     */
+    warningMessageThresholdVariable: string;
 }
 
 export interface GetTransportRoutingBgpFeatureIpv4Network {
@@ -28654,9 +28685,8 @@ export interface TrafficDataPolicyDefinitionSequenceMatchEntry {
     dnsApplicationListVersion?: number;
     /**
      * DSCP value, Attribute conditional on `type` being equal to `dscp`
-     *   - Range: `0`-`63`
      */
-    dscp?: number;
+    dscp?: string;
     /**
      * ICMP Message, Attribute conditional on `type` being equal to `icmpMessage`
      */
@@ -29442,44 +29472,83 @@ export interface TransportRoutingBgpFeatureIpv4Neighbor {
 
 export interface TransportRoutingBgpFeatureIpv4NeighborAddressFamily {
     /**
+     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `disable-peer`
+     *   - Range: `1`-`4294967295`
+     */
+    disablePeerMaxNumberOfPrefixes?: number;
+    /**
+     * Variable name, Attribute conditional on `policyType` being equal to `disable-peer`
+     */
+    disablePeerMaxNumberOfPrefixesVariable?: string;
+    /**
+     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `disable-peer`
+     *   - Range: `1`-`100`
+     *   - Default value: `75`
+     */
+    disablePeerThreshold?: number;
+    /**
+     * Variable name, Attribute conditional on `policyType` being equal to `disable-peer`
+     */
+    disablePeerThresholdVariable?: string;
+    /**
      * Set IPv4 unicast address family
      *   - Choices: `ipv4-unicast`, `vpnv4-unicast`, `vpnv6-unicast`
      */
     familyType?: string;
     inRoutePolicyId?: string;
-    /**
-     * Set maximum number of prefixes accepted from BGP peer
-     *   - Range: `1`-`4294967295`
-     */
-    maxNumberOfPrefixes?: number;
-    /**
-     * Variable name
-     */
-    maxNumberOfPrefixesVariable?: string;
     outRoutePolicyId?: string;
     /**
      * Neighbor received maximum prefix policy is disabled.
+     *   - Choices: `restart`, `off`, `warning-only`, `disable-peer`
      */
     policyType?: string;
     /**
-     * Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded
+     * Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policyType` being equal to `restart`
      *   - Range: `1`-`65535`
      */
     restartInterval?: number;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `policyType` being equal to `restart`
      */
     restartIntervalVariable?: string;
     /**
-     * Set threshold(1 to 100) at which to generate a warning message
+     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `restart`
+     *   - Range: `1`-`4294967295`
+     */
+    restartMaxNumberOfPrefixes?: number;
+    /**
+     * Variable name, Attribute conditional on `policyType` being equal to `restart`
+     */
+    restartMaxNumberOfPrefixesVariable?: string;
+    /**
+     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `restart`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      */
-    threshold?: number;
+    restartThreshold?: number;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `policyType` being equal to `restart`
      */
-    thresholdVariable?: string;
+    restartThresholdVariable?: string;
+    /**
+     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `warning-only`
+     *   - Range: `1`-`4294967295`
+     */
+    warningMessageMaxNumberOfPrefixes?: number;
+    /**
+     * Variable name, Attribute conditional on `policyType` being equal to `warning-only`
+     */
+    warningMessageMaxNumberOfPrefixesVariable?: string;
+    /**
+     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `warning-only`
+     *   - Range: `1`-`100`
+     *   - Default value: `75`
+     */
+    warningMessageThreshold?: number;
+    /**
+     * Variable name, Attribute conditional on `policyType` being equal to `warning-only`
+     */
+    warningMessageThresholdVariable?: string;
 }
 
 export interface TransportRoutingBgpFeatureIpv4Network {

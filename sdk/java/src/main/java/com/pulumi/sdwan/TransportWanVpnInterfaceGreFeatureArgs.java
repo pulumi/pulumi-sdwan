@@ -337,15 +337,15 @@ public final class TransportWanVpnInterfaceGreFeatureArgs extends com.pulumi.res
      * Transport WAN VPN Feature ID
      * 
      */
-    @Import(name="transportWanVpnFeatureId")
-    private @Nullable Output<String> transportWanVpnFeatureId;
+    @Import(name="transportWanVpnFeatureId", required=true)
+    private Output<String> transportWanVpnFeatureId;
 
     /**
      * @return Transport WAN VPN Feature ID
      * 
      */
-    public Optional<Output<String>> transportWanVpnFeatureId() {
-        return Optional.ofNullable(this.transportWanVpnFeatureId);
+    public Output<String> transportWanVpnFeatureId() {
+        return this.transportWanVpnFeatureId;
     }
 
     /**
@@ -996,7 +996,7 @@ public final class TransportWanVpnInterfaceGreFeatureArgs extends com.pulumi.res
          * @return builder
          * 
          */
-        public Builder transportWanVpnFeatureId(@Nullable Output<String> transportWanVpnFeatureId) {
+        public Builder transportWanVpnFeatureId(Output<String> transportWanVpnFeatureId) {
             $.transportWanVpnFeatureId = transportWanVpnFeatureId;
             return this;
         }
@@ -1224,6 +1224,9 @@ public final class TransportWanVpnInterfaceGreFeatureArgs extends com.pulumi.res
         public TransportWanVpnInterfaceGreFeatureArgs build() {
             if ($.featureProfileId == null) {
                 throw new MissingRequiredPropertyException("TransportWanVpnInterfaceGreFeatureArgs", "featureProfileId");
+            }
+            if ($.transportWanVpnFeatureId == null) {
+                throw new MissingRequiredPropertyException("TransportWanVpnInterfaceGreFeatureArgs", "transportWanVpnFeatureId");
             }
             return $;
         }

@@ -22,29 +22,40 @@ __all__ = ['TransportIpv4AclFeatureArgs', 'TransportIpv4AclFeature']
 @pulumi.input_type
 class TransportIpv4AclFeatureArgs:
     def __init__(__self__, *,
+                 feature_profile_id: pulumi.Input[builtins.str],
                  default_action: Optional[pulumi.Input[builtins.str]] = None,
                  description: Optional[pulumi.Input[builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[builtins.str]] = None,
                  name: Optional[pulumi.Input[builtins.str]] = None,
                  sequences: Optional[pulumi.Input[Sequence[pulumi.Input['TransportIpv4AclFeatureSequenceArgs']]]] = None):
         """
         The set of arguments for constructing a TransportIpv4AclFeature resource.
+        :param pulumi.Input[builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[builtins.str] default_action: Default Action - Choices: `drop`, `accept` - Default value: `drop`
         :param pulumi.Input[builtins.str] description: The description of the Feature
-        :param pulumi.Input[builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[builtins.str] name: The name of the Feature
         :param pulumi.Input[Sequence[pulumi.Input['TransportIpv4AclFeatureSequenceArgs']]] sequences: Access Control List
         """
+        pulumi.set(__self__, "feature_profile_id", feature_profile_id)
         if default_action is not None:
             pulumi.set(__self__, "default_action", default_action)
         if description is not None:
             pulumi.set(__self__, "description", description)
-        if feature_profile_id is not None:
-            pulumi.set(__self__, "feature_profile_id", feature_profile_id)
         if name is not None:
             pulumi.set(__self__, "name", name)
         if sequences is not None:
             pulumi.set(__self__, "sequences", sequences)
+
+    @property
+    @pulumi.getter(name="featureProfileId")
+    def feature_profile_id(self) -> pulumi.Input[builtins.str]:
+        """
+        Feature Profile ID
+        """
+        return pulumi.get(self, "feature_profile_id")
+
+    @feature_profile_id.setter
+    def feature_profile_id(self, value: pulumi.Input[builtins.str]):
+        pulumi.set(self, "feature_profile_id", value)
 
     @property
     @pulumi.getter(name="defaultAction")
@@ -69,18 +80,6 @@ class TransportIpv4AclFeatureArgs:
     @description.setter
     def description(self, value: Optional[pulumi.Input[builtins.str]]):
         pulumi.set(self, "description", value)
-
-    @property
-    @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[builtins.str]]:
-        """
-        Feature Profile ID
-        """
-        return pulumi.get(self, "feature_profile_id")
-
-    @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[builtins.str]]):
-        pulumi.set(self, "feature_profile_id", value)
 
     @property
     @pulumi.getter
@@ -229,6 +228,8 @@ class TransportIpv4AclFeature(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         Expected import identifier with the format: "transport_ipv4_acl_feature_id,feature_profile_id"
 
         ```sh
@@ -247,13 +248,15 @@ class TransportIpv4AclFeature(pulumi.CustomResource):
     @overload
     def __init__(__self__,
                  resource_name: str,
-                 args: Optional[TransportIpv4AclFeatureArgs] = None,
+                 args: TransportIpv4AclFeatureArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a Transport IPv4 ACL Feature.
           - Minimum SD-WAN Manager version: `20.12.0`
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         Expected import identifier with the format: "transport_ipv4_acl_feature_id,feature_profile_id"
 
@@ -292,6 +295,8 @@ class TransportIpv4AclFeature(pulumi.CustomResource):
 
             __props__.__dict__["default_action"] = default_action
             __props__.__dict__["description"] = description
+            if feature_profile_id is None and not opts.urn:
+                raise TypeError("Missing required property 'feature_profile_id'")
             __props__.__dict__["feature_profile_id"] = feature_profile_id
             __props__.__dict__["name"] = name
             __props__.__dict__["sequences"] = sequences
@@ -356,7 +361,7 @@ class TransportIpv4AclFeature(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> pulumi.Output[Optional[builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Output[builtins.str]:
         """
         Feature Profile ID
         """

@@ -7,6 +7,7 @@ import (
 	"context"
 	"reflect"
 
+	"errors"
 	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan/internal"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
@@ -15,6 +16,8 @@ import (
 //   - Minimum SD-WAN Manager version: `20.12.0`
 //
 // ## Import
+//
+// The `pulumi import` command can be used, for example:
 //
 // Expected import identifier with the format: "transport_management_vpn_interface_ethernet_feature_id,feature_profile_id,transport_management_vpn_feature_id"
 //
@@ -43,7 +46,7 @@ type TransportManagementVpnInterfaceEthernetFeature struct {
 	// Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
 	EnableDhcpv6 pulumi.BoolPtrOutput `pulumi:"enableDhcpv6"`
 	// Feature Profile ID
-	FeatureProfileId pulumi.StringPtrOutput `pulumi:"featureProfileId"`
+	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
 	// ICMP/ICMPv6 Redirect Disable - Default value: `true`
 	IcmpRedirectDisable pulumi.BoolPtrOutput `pulumi:"icmpRedirectDisable"`
 	// Variable name
@@ -134,7 +137,7 @@ type TransportManagementVpnInterfaceEthernetFeature struct {
 	// Variable name
 	TcpMssVariable pulumi.StringPtrOutput `pulumi:"tcpMssVariable"`
 	// Transport Management VPN Feature ID
-	TransportManagementVpnFeatureId pulumi.StringPtrOutput `pulumi:"transportManagementVpnFeatureId"`
+	TransportManagementVpnFeatureId pulumi.StringOutput `pulumi:"transportManagementVpnFeatureId"`
 	// The version of the Feature
 	Version pulumi.IntOutput `pulumi:"version"`
 }
@@ -143,9 +146,15 @@ type TransportManagementVpnInterfaceEthernetFeature struct {
 func NewTransportManagementVpnInterfaceEthernetFeature(ctx *pulumi.Context,
 	name string, args *TransportManagementVpnInterfaceEthernetFeatureArgs, opts ...pulumi.ResourceOption) (*TransportManagementVpnInterfaceEthernetFeature, error) {
 	if args == nil {
-		args = &TransportManagementVpnInterfaceEthernetFeatureArgs{}
+		return nil, errors.New("missing one or more required arguments")
 	}
 
+	if args.FeatureProfileId == nil {
+		return nil, errors.New("invalid value for required argument 'FeatureProfileId'")
+	}
+	if args.TransportManagementVpnFeatureId == nil {
+		return nil, errors.New("invalid value for required argument 'TransportManagementVpnFeatureId'")
+	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource TransportManagementVpnInterfaceEthernetFeature
 	err := ctx.RegisterResource("sdwan:index/transportManagementVpnInterfaceEthernetFeature:TransportManagementVpnInterfaceEthernetFeature", name, args, &resource, opts...)
@@ -424,7 +433,7 @@ type transportManagementVpnInterfaceEthernetFeatureArgs struct {
 	// Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
 	EnableDhcpv6 *bool `pulumi:"enableDhcpv6"`
 	// Feature Profile ID
-	FeatureProfileId *string `pulumi:"featureProfileId"`
+	FeatureProfileId string `pulumi:"featureProfileId"`
 	// ICMP/ICMPv6 Redirect Disable - Default value: `true`
 	IcmpRedirectDisable *bool `pulumi:"icmpRedirectDisable"`
 	// Variable name
@@ -515,7 +524,7 @@ type transportManagementVpnInterfaceEthernetFeatureArgs struct {
 	// Variable name
 	TcpMssVariable *string `pulumi:"tcpMssVariable"`
 	// Transport Management VPN Feature ID
-	TransportManagementVpnFeatureId *string `pulumi:"transportManagementVpnFeatureId"`
+	TransportManagementVpnFeatureId string `pulumi:"transportManagementVpnFeatureId"`
 }
 
 // The set of arguments for constructing a TransportManagementVpnInterfaceEthernetFeature resource.
@@ -539,7 +548,7 @@ type TransportManagementVpnInterfaceEthernetFeatureArgs struct {
 	// Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
 	EnableDhcpv6 pulumi.BoolPtrInput
 	// Feature Profile ID
-	FeatureProfileId pulumi.StringPtrInput
+	FeatureProfileId pulumi.StringInput
 	// ICMP/ICMPv6 Redirect Disable - Default value: `true`
 	IcmpRedirectDisable pulumi.BoolPtrInput
 	// Variable name
@@ -630,7 +639,7 @@ type TransportManagementVpnInterfaceEthernetFeatureArgs struct {
 	// Variable name
 	TcpMssVariable pulumi.StringPtrInput
 	// Transport Management VPN Feature ID
-	TransportManagementVpnFeatureId pulumi.StringPtrInput
+	TransportManagementVpnFeatureId pulumi.StringInput
 }
 
 func (TransportManagementVpnInterfaceEthernetFeatureArgs) ElementType() reflect.Type {
@@ -774,10 +783,8 @@ func (o TransportManagementVpnInterfaceEthernetFeatureOutput) EnableDhcpv6() pul
 }
 
 // Feature Profile ID
-func (o TransportManagementVpnInterfaceEthernetFeatureOutput) FeatureProfileId() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *TransportManagementVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
-		return v.FeatureProfileId
-	}).(pulumi.StringPtrOutput)
+func (o TransportManagementVpnInterfaceEthernetFeatureOutput) FeatureProfileId() pulumi.StringOutput {
+	return o.ApplyT(func(v *TransportManagementVpnInterfaceEthernetFeature) pulumi.StringOutput { return v.FeatureProfileId }).(pulumi.StringOutput)
 }
 
 // ICMP/ICMPv6 Redirect Disable - Default value: `true`
@@ -1050,10 +1057,10 @@ func (o TransportManagementVpnInterfaceEthernetFeatureOutput) TcpMssVariable() p
 }
 
 // Transport Management VPN Feature ID
-func (o TransportManagementVpnInterfaceEthernetFeatureOutput) TransportManagementVpnFeatureId() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *TransportManagementVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
+func (o TransportManagementVpnInterfaceEthernetFeatureOutput) TransportManagementVpnFeatureId() pulumi.StringOutput {
+	return o.ApplyT(func(v *TransportManagementVpnInterfaceEthernetFeature) pulumi.StringOutput {
 		return v.TransportManagementVpnFeatureId
-	}).(pulumi.StringPtrOutput)
+	}).(pulumi.StringOutput)
 }
 
 // The version of the Feature

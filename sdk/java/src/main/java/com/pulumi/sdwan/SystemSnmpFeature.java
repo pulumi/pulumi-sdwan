@@ -33,6 +33,8 @@ import javax.annotation.Nullable;
  * 
  * ## Import
  * 
+ * The `pulumi import` command can be used, for example:
+ * 
  * Expected import identifier with the format: &#34;system_snmp_feature_id,feature_profile_id&#34;
  * 
  * ```sh
@@ -103,14 +105,14 @@ public class SystemSnmpFeature extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="featureProfileId", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> featureProfileId;
+    private Output<String> featureProfileId;
 
     /**
      * @return Feature Profile ID
      * 
      */
-    public Output<Optional<String>> featureProfileId() {
-        return Codegen.optional(this.featureProfileId);
+    public Output<String> featureProfileId() {
+        return this.featureProfileId;
     }
     /**
      * Configure an SNMP group
@@ -265,7 +267,7 @@ public class SystemSnmpFeature extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SystemSnmpFeature(java.lang.String name, @Nullable SystemSnmpFeatureArgs args) {
+    public SystemSnmpFeature(java.lang.String name, SystemSnmpFeatureArgs args) {
         this(name, args, null);
     }
     /**
@@ -274,7 +276,7 @@ public class SystemSnmpFeature extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SystemSnmpFeature(java.lang.String name, @Nullable SystemSnmpFeatureArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public SystemSnmpFeature(java.lang.String name, SystemSnmpFeatureArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("sdwan:index/systemSnmpFeature:SystemSnmpFeature", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
@@ -282,7 +284,7 @@ public class SystemSnmpFeature extends com.pulumi.resources.CustomResource {
         super("sdwan:index/systemSnmpFeature:SystemSnmpFeature", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static SystemSnmpFeatureArgs makeArgs(@Nullable SystemSnmpFeatureArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private static SystemSnmpFeatureArgs makeArgs(SystemSnmpFeatureArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         if (options != null && options.getUrn().isPresent()) {
             return null;
         }

@@ -21,6 +21,7 @@ __all__ = ['TransportWanVpnInterfaceIpsecFeatureArgs', 'TransportWanVpnInterface
 class TransportWanVpnInterfaceIpsecFeatureArgs:
     def __init__(__self__, *,
                  feature_profile_id: pulumi.Input[builtins.str],
+                 transport_wan_vpn_feature_id: pulumi.Input[builtins.str],
                  application_tunnel_type: Optional[pulumi.Input[builtins.str]] = None,
                  application_tunnel_type_variable: Optional[pulumi.Input[builtins.str]] = None,
                  clear_dont_fragment: Optional[pulumi.Input[builtins.bool]] = None,
@@ -70,7 +71,6 @@ class TransportWanVpnInterfaceIpsecFeatureArgs:
                  tcp_mss_variable: Optional[pulumi.Input[builtins.str]] = None,
                  tracker_id: Optional[pulumi.Input[builtins.str]] = None,
                  tracker_id_variable: Optional[pulumi.Input[builtins.str]] = None,
-                 transport_wan_vpn_feature_id: Optional[pulumi.Input[builtins.str]] = None,
                  tunnel_destination_ipv4_address: Optional[pulumi.Input[builtins.str]] = None,
                  tunnel_destination_ipv4_address_variable: Optional[pulumi.Input[builtins.str]] = None,
                  tunnel_destination_ipv4_subnet_mask: Optional[pulumi.Input[builtins.str]] = None,
@@ -86,6 +86,7 @@ class TransportWanVpnInterfaceIpsecFeatureArgs:
         """
         The set of arguments for constructing a TransportWanVpnInterfaceIpsecFeature resource.
         :param pulumi.Input[builtins.str] feature_profile_id: Feature Profile ID
+        :param pulumi.Input[builtins.str] transport_wan_vpn_feature_id: Transport WAN VPN Feature ID
         :param pulumi.Input[builtins.str] application_tunnel_type: Enable Application Tunnel Type - Choices: `none`, `sig`
         :param pulumi.Input[builtins.str] application_tunnel_type_variable: Variable name
         :param pulumi.Input[builtins.bool] clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
@@ -142,7 +143,6 @@ class TransportWanVpnInterfaceIpsecFeatureArgs:
         :param pulumi.Input[builtins.str] tcp_mss_variable: Variable name
         :param pulumi.Input[builtins.str] tracker_id: Enable tracker for this interface
         :param pulumi.Input[builtins.str] tracker_id_variable: Variable name
-        :param pulumi.Input[builtins.str] transport_wan_vpn_feature_id: Transport WAN VPN Feature ID
         :param pulumi.Input[builtins.str] tunnel_destination_ipv4_address_variable: Variable name
         :param pulumi.Input[builtins.str] tunnel_destination_ipv4_subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
                `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
@@ -163,6 +163,7 @@ class TransportWanVpnInterfaceIpsecFeatureArgs:
         :param pulumi.Input[builtins.str] tunnel_source_ipv4_subnet_mask_variable: Variable name
         """
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
+        pulumi.set(__self__, "transport_wan_vpn_feature_id", transport_wan_vpn_feature_id)
         if application_tunnel_type is not None:
             pulumi.set(__self__, "application_tunnel_type", application_tunnel_type)
         if application_tunnel_type_variable is not None:
@@ -261,8 +262,6 @@ class TransportWanVpnInterfaceIpsecFeatureArgs:
             pulumi.set(__self__, "tracker_id", tracker_id)
         if tracker_id_variable is not None:
             pulumi.set(__self__, "tracker_id_variable", tracker_id_variable)
-        if transport_wan_vpn_feature_id is not None:
-            pulumi.set(__self__, "transport_wan_vpn_feature_id", transport_wan_vpn_feature_id)
         if tunnel_destination_ipv4_address is not None:
             pulumi.set(__self__, "tunnel_destination_ipv4_address", tunnel_destination_ipv4_address)
         if tunnel_destination_ipv4_address_variable is not None:
@@ -299,6 +298,18 @@ class TransportWanVpnInterfaceIpsecFeatureArgs:
     @feature_profile_id.setter
     def feature_profile_id(self, value: pulumi.Input[builtins.str]):
         pulumi.set(self, "feature_profile_id", value)
+
+    @property
+    @pulumi.getter(name="transportWanVpnFeatureId")
+    def transport_wan_vpn_feature_id(self) -> pulumi.Input[builtins.str]:
+        """
+        Transport WAN VPN Feature ID
+        """
+        return pulumi.get(self, "transport_wan_vpn_feature_id")
+
+    @transport_wan_vpn_feature_id.setter
+    def transport_wan_vpn_feature_id(self, value: pulumi.Input[builtins.str]):
+        pulumi.set(self, "transport_wan_vpn_feature_id", value)
 
     @property
     @pulumi.getter(name="applicationTunnelType")
@@ -892,18 +903,6 @@ class TransportWanVpnInterfaceIpsecFeatureArgs:
     @tracker_id_variable.setter
     def tracker_id_variable(self, value: Optional[pulumi.Input[builtins.str]]):
         pulumi.set(self, "tracker_id_variable", value)
-
-    @property
-    @pulumi.getter(name="transportWanVpnFeatureId")
-    def transport_wan_vpn_feature_id(self) -> Optional[pulumi.Input[builtins.str]]:
-        """
-        Transport WAN VPN Feature ID
-        """
-        return pulumi.get(self, "transport_wan_vpn_feature_id")
-
-    @transport_wan_vpn_feature_id.setter
-    def transport_wan_vpn_feature_id(self, value: Optional[pulumi.Input[builtins.str]]):
-        pulumi.set(self, "transport_wan_vpn_feature_id", value)
 
     @property
     @pulumi.getter(name="tunnelDestinationIpv4Address")
@@ -2222,6 +2221,8 @@ class TransportWanVpnInterfaceIpsecFeature(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         Expected import identifier with the format: "transport_wan_vpn_interface_ipsec_feature_id,feature_profile_id,transport_wan_vpn_feature_id"
 
         ```sh
@@ -2360,6 +2361,8 @@ class TransportWanVpnInterfaceIpsecFeature(pulumi.CustomResource):
         ```
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         Expected import identifier with the format: "transport_wan_vpn_interface_ipsec_feature_id,feature_profile_id,transport_wan_vpn_feature_id"
 
@@ -2506,6 +2509,8 @@ class TransportWanVpnInterfaceIpsecFeature(pulumi.CustomResource):
             __props__.__dict__["tcp_mss_variable"] = tcp_mss_variable
             __props__.__dict__["tracker_id"] = tracker_id
             __props__.__dict__["tracker_id_variable"] = tracker_id_variable
+            if transport_wan_vpn_feature_id is None and not opts.urn:
+                raise TypeError("Missing required property 'transport_wan_vpn_feature_id'")
             __props__.__dict__["transport_wan_vpn_feature_id"] = transport_wan_vpn_feature_id
             __props__.__dict__["tunnel_destination_ipv4_address"] = tunnel_destination_ipv4_address
             __props__.__dict__["tunnel_destination_ipv4_address_variable"] = tunnel_destination_ipv4_address_variable
@@ -3156,7 +3161,7 @@ class TransportWanVpnInterfaceIpsecFeature(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="transportWanVpnFeatureId")
-    def transport_wan_vpn_feature_id(self) -> pulumi.Output[Optional[builtins.str]]:
+    def transport_wan_vpn_feature_id(self) -> pulumi.Output[builtins.str]:
         """
         Transport WAN VPN Feature ID
         """

@@ -76,10 +76,9 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// DSCP value, Attribute conditional on `type` being equal to `dscp`
-        ///   - Range: `0`-`63`
         /// </summary>
         [Input("dscp")]
-        public Input<int>? Dscp { get; set; }
+        public Input<string>? Dscp { get; set; }
 
         /// <summary>
         /// ICMP Message, Attribute conditional on `type` being equal to `icmpMessage`

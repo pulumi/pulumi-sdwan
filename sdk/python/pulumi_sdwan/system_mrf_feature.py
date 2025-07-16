@@ -20,9 +20,9 @@ __all__ = ['SystemMrfFeatureArgs', 'SystemMrfFeature']
 @pulumi.input_type
 class SystemMrfFeatureArgs:
     def __init__(__self__, *,
+                 feature_profile_id: pulumi.Input[builtins.str],
                  description: Optional[pulumi.Input[builtins.str]] = None,
                  enable_migration_to_mrf: Optional[pulumi.Input[builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[builtins.str]] = None,
                  migration_bgp_community: Optional[pulumi.Input[builtins.int]] = None,
                  name: Optional[pulumi.Input[builtins.str]] = None,
                  region_id: Optional[pulumi.Input[builtins.int]] = None,
@@ -32,9 +32,9 @@ class SystemMrfFeatureArgs:
                  secondary_region_id_variable: Optional[pulumi.Input[builtins.str]] = None):
         """
         The set of arguments for constructing a SystemMrfFeature resource.
+        :param pulumi.Input[builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[builtins.str] description: The description of the Feature
         :param pulumi.Input[builtins.str] enable_migration_to_mrf: Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
-        :param pulumi.Input[builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[builtins.int] migration_bgp_community: Set BGP community during migration from BGP-core based network - Range: `1`-`4294967295`
         :param pulumi.Input[builtins.str] name: The name of the Feature
         :param pulumi.Input[builtins.int] region_id: Set region ID - Range: `1`-`63`
@@ -43,12 +43,11 @@ class SystemMrfFeatureArgs:
         :param pulumi.Input[builtins.int] secondary_region_id: Set secondary region ID - Range: `1`-`63`
         :param pulumi.Input[builtins.str] secondary_region_id_variable: Variable name
         """
+        pulumi.set(__self__, "feature_profile_id", feature_profile_id)
         if description is not None:
             pulumi.set(__self__, "description", description)
         if enable_migration_to_mrf is not None:
             pulumi.set(__self__, "enable_migration_to_mrf", enable_migration_to_mrf)
-        if feature_profile_id is not None:
-            pulumi.set(__self__, "feature_profile_id", feature_profile_id)
         if migration_bgp_community is not None:
             pulumi.set(__self__, "migration_bgp_community", migration_bgp_community)
         if name is not None:
@@ -63,6 +62,18 @@ class SystemMrfFeatureArgs:
             pulumi.set(__self__, "secondary_region_id", secondary_region_id)
         if secondary_region_id_variable is not None:
             pulumi.set(__self__, "secondary_region_id_variable", secondary_region_id_variable)
+
+    @property
+    @pulumi.getter(name="featureProfileId")
+    def feature_profile_id(self) -> pulumi.Input[builtins.str]:
+        """
+        Feature Profile ID
+        """
+        return pulumi.get(self, "feature_profile_id")
+
+    @feature_profile_id.setter
+    def feature_profile_id(self, value: pulumi.Input[builtins.str]):
+        pulumi.set(self, "feature_profile_id", value)
 
     @property
     @pulumi.getter
@@ -87,18 +98,6 @@ class SystemMrfFeatureArgs:
     @enable_migration_to_mrf.setter
     def enable_migration_to_mrf(self, value: Optional[pulumi.Input[builtins.str]]):
         pulumi.set(self, "enable_migration_to_mrf", value)
-
-    @property
-    @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[builtins.str]]:
-        """
-        Feature Profile ID
-        """
-        return pulumi.get(self, "feature_profile_id")
-
-    @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[builtins.str]]):
-        pulumi.set(self, "feature_profile_id", value)
 
     @property
     @pulumi.getter(name="migrationBgpCommunity")
@@ -409,6 +408,8 @@ class SystemMrfFeature(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         Expected import identifier with the format: "system_mrf_feature_id,feature_profile_id"
 
         ```sh
@@ -432,7 +433,7 @@ class SystemMrfFeature(pulumi.CustomResource):
     @overload
     def __init__(__self__,
                  resource_name: str,
-                 args: Optional[SystemMrfFeatureArgs] = None,
+                 args: SystemMrfFeatureArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a System MRF Feature.
@@ -456,6 +457,8 @@ class SystemMrfFeature(pulumi.CustomResource):
         ```
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         Expected import identifier with the format: "system_mrf_feature_id,feature_profile_id"
 
@@ -499,6 +502,8 @@ class SystemMrfFeature(pulumi.CustomResource):
 
             __props__.__dict__["description"] = description
             __props__.__dict__["enable_migration_to_mrf"] = enable_migration_to_mrf
+            if feature_profile_id is None and not opts.urn:
+                raise TypeError("Missing required property 'feature_profile_id'")
             __props__.__dict__["feature_profile_id"] = feature_profile_id
             __props__.__dict__["migration_bgp_community"] = migration_bgp_community
             __props__.__dict__["name"] = name
@@ -583,7 +588,7 @@ class SystemMrfFeature(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> pulumi.Output[Optional[builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Output[builtins.str]:
         """
         Feature Profile ID
         """

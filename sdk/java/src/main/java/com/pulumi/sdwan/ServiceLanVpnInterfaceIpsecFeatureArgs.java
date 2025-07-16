@@ -690,15 +690,15 @@ public final class ServiceLanVpnInterfaceIpsecFeatureArgs extends com.pulumi.res
      * Service LAN VPN Feature ID
      * 
      */
-    @Import(name="serviceLanVpnFeatureId")
-    private @Nullable Output<String> serviceLanVpnFeatureId;
+    @Import(name="serviceLanVpnFeatureId", required=true)
+    private Output<String> serviceLanVpnFeatureId;
 
     /**
      * @return Service LAN VPN Feature ID
      * 
      */
-    public Optional<Output<String>> serviceLanVpnFeatureId() {
-        return Optional.ofNullable(this.serviceLanVpnFeatureId);
+    public Output<String> serviceLanVpnFeatureId() {
+        return this.serviceLanVpnFeatureId;
     }
 
     /**
@@ -1991,7 +1991,7 @@ public final class ServiceLanVpnInterfaceIpsecFeatureArgs extends com.pulumi.res
          * @return builder
          * 
          */
-        public Builder serviceLanVpnFeatureId(@Nullable Output<String> serviceLanVpnFeatureId) {
+        public Builder serviceLanVpnFeatureId(Output<String> serviceLanVpnFeatureId) {
             $.serviceLanVpnFeatureId = serviceLanVpnFeatureId;
             return this;
         }
@@ -2379,6 +2379,9 @@ public final class ServiceLanVpnInterfaceIpsecFeatureArgs extends com.pulumi.res
         public ServiceLanVpnInterfaceIpsecFeatureArgs build() {
             if ($.featureProfileId == null) {
                 throw new MissingRequiredPropertyException("ServiceLanVpnInterfaceIpsecFeatureArgs", "featureProfileId");
+            }
+            if ($.serviceLanVpnFeatureId == null) {
+                throw new MissingRequiredPropertyException("ServiceLanVpnInterfaceIpsecFeatureArgs", "serviceLanVpnFeatureId");
             }
             if ($.tunnelDestinationIpv4SubnetMask == null) {
                 throw new MissingRequiredPropertyException("ServiceLanVpnInterfaceIpsecFeatureArgs", "tunnelDestinationIpv4SubnetMask");

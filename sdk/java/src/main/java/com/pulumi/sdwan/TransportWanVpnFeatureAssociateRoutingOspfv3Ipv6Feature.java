@@ -57,6 +57,8 @@ import javax.annotation.Nullable;
  * 
  * ## Import
  * 
+ * The `pulumi import` command can be used, for example:
+ * 
  * Expected import identifier with the format: &#34;transport_wan_vpn_feature_associate_routing_ospfv3_ipv6_feature_id,feature_profile_id,transport_wan_vpn_feature_id&#34;
  * 
  * ```sh

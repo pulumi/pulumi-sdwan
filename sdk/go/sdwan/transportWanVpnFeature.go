@@ -7,6 +7,7 @@ import (
 	"context"
 	"reflect"
 
+	"errors"
 	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan/internal"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
@@ -15,6 +16,8 @@ import (
 //   - Minimum SD-WAN Manager version: `20.12.0`
 //
 // ## Import
+//
+// The `pulumi import` command can be used, for example:
 //
 // Expected import identifier with the format: "transport_wan_vpn_feature_id,feature_profile_id"
 //
@@ -31,7 +34,7 @@ type TransportWanVpnFeature struct {
 	// Variable name
 	EnhanceEcmpKeyingVariable pulumi.StringPtrOutput `pulumi:"enhanceEcmpKeyingVariable"`
 	// Feature Profile ID
-	FeatureProfileId pulumi.StringPtrOutput `pulumi:"featureProfileId"`
+	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
 	// IPv4 Static Route
 	Ipv4StaticRoutes TransportWanVpnFeatureIpv4StaticRouteArrayOutput `pulumi:"ipv4StaticRoutes"`
 	// IPv6 Static Route
@@ -69,9 +72,12 @@ type TransportWanVpnFeature struct {
 func NewTransportWanVpnFeature(ctx *pulumi.Context,
 	name string, args *TransportWanVpnFeatureArgs, opts ...pulumi.ResourceOption) (*TransportWanVpnFeature, error) {
 	if args == nil {
-		args = &TransportWanVpnFeatureArgs{}
+		return nil, errors.New("missing one or more required arguments")
 	}
 
+	if args.FeatureProfileId == nil {
+		return nil, errors.New("invalid value for required argument 'FeatureProfileId'")
+	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource TransportWanVpnFeature
 	err := ctx.RegisterResource("sdwan:index/transportWanVpnFeature:TransportWanVpnFeature", name, args, &resource, opts...)
@@ -190,7 +196,7 @@ type transportWanVpnFeatureArgs struct {
 	// Variable name
 	EnhanceEcmpKeyingVariable *string `pulumi:"enhanceEcmpKeyingVariable"`
 	// Feature Profile ID
-	FeatureProfileId *string `pulumi:"featureProfileId"`
+	FeatureProfileId string `pulumi:"featureProfileId"`
 	// IPv4 Static Route
 	Ipv4StaticRoutes []TransportWanVpnFeatureIpv4StaticRoute `pulumi:"ipv4StaticRoutes"`
 	// IPv6 Static Route
@@ -231,7 +237,7 @@ type TransportWanVpnFeatureArgs struct {
 	// Variable name
 	EnhanceEcmpKeyingVariable pulumi.StringPtrInput
 	// Feature Profile ID
-	FeatureProfileId pulumi.StringPtrInput
+	FeatureProfileId pulumi.StringInput
 	// IPv4 Static Route
 	Ipv4StaticRoutes TransportWanVpnFeatureIpv4StaticRouteArrayInput
 	// IPv6 Static Route
@@ -366,8 +372,8 @@ func (o TransportWanVpnFeatureOutput) EnhanceEcmpKeyingVariable() pulumi.StringP
 }
 
 // Feature Profile ID
-func (o TransportWanVpnFeatureOutput) FeatureProfileId() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *TransportWanVpnFeature) pulumi.StringPtrOutput { return v.FeatureProfileId }).(pulumi.StringPtrOutput)
+func (o TransportWanVpnFeatureOutput) FeatureProfileId() pulumi.StringOutput {
+	return o.ApplyT(func(v *TransportWanVpnFeature) pulumi.StringOutput { return v.FeatureProfileId }).(pulumi.StringOutput)
 }
 
 // IPv4 Static Route

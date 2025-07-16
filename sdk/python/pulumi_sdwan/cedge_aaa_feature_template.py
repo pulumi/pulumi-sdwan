@@ -1043,6 +1043,8 @@ class CedgeAaaFeatureTemplate(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         ```sh
         $ pulumi import sdwan:index/cedgeAaaFeatureTemplate:CedgeAaaFeatureTemplate example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
@@ -1092,6 +1094,8 @@ class CedgeAaaFeatureTemplate(pulumi.CustomResource):
           - Minimum SD-WAN Manager version: `15.0.0`
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         ```sh
         $ pulumi import sdwan:index/cedgeAaaFeatureTemplate:CedgeAaaFeatureTemplate example "f6b2c44c-693c-4763-b010-895aa3d236bd"

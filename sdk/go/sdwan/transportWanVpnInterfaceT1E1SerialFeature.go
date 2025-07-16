@@ -106,6 +106,8 @@ import (
 //
 // ## Import
 //
+// The `pulumi import` command can be used, for example:
+//
 // Expected import identifier with the format: "transport_wan_vpn_interface_t1_e1_serial_feature_id,feature_profile_id,transport_wan_vpn_feature_id"
 //
 // ```sh
@@ -194,7 +196,7 @@ type TransportWanVpnInterfaceT1E1SerialFeature struct {
 	// Variable name
 	TlocExtensionVariable pulumi.StringPtrOutput `pulumi:"tlocExtensionVariable"`
 	// Transport WAN VPN Feature ID
-	TransportWanVpnFeatureId pulumi.StringPtrOutput `pulumi:"transportWanVpnFeatureId"`
+	TransportWanVpnFeatureId pulumi.StringOutput `pulumi:"transportWanVpnFeatureId"`
 	// Tunnel Interface - Default value: `false`
 	TunnelInterface pulumi.BoolPtrOutput `pulumi:"tunnelInterface"`
 	// Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
@@ -347,6 +349,9 @@ func NewTransportWanVpnInterfaceT1E1SerialFeature(ctx *pulumi.Context,
 
 	if args.FeatureProfileId == nil {
 		return nil, errors.New("invalid value for required argument 'FeatureProfileId'")
+	}
+	if args.TransportWanVpnFeatureId == nil {
+		return nil, errors.New("invalid value for required argument 'TransportWanVpnFeatureId'")
 	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource TransportWanVpnInterfaceT1E1SerialFeature
@@ -905,7 +910,7 @@ type transportWanVpnInterfaceT1E1SerialFeatureArgs struct {
 	// Variable name
 	TlocExtensionVariable *string `pulumi:"tlocExtensionVariable"`
 	// Transport WAN VPN Feature ID
-	TransportWanVpnFeatureId *string `pulumi:"transportWanVpnFeatureId"`
+	TransportWanVpnFeatureId string `pulumi:"transportWanVpnFeatureId"`
 	// Tunnel Interface - Default value: `false`
 	TunnelInterface *bool `pulumi:"tunnelInterface"`
 	// Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
@@ -1129,7 +1134,7 @@ type TransportWanVpnInterfaceT1E1SerialFeatureArgs struct {
 	// Variable name
 	TlocExtensionVariable pulumi.StringPtrInput
 	// Transport WAN VPN Feature ID
-	TransportWanVpnFeatureId pulumi.StringPtrInput
+	TransportWanVpnFeatureId pulumi.StringInput
 	// Tunnel Interface - Default value: `false`
 	TunnelInterface pulumi.BoolPtrInput
 	// Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
@@ -1585,10 +1590,10 @@ func (o TransportWanVpnInterfaceT1E1SerialFeatureOutput) TlocExtensionVariable()
 }
 
 // Transport WAN VPN Feature ID
-func (o TransportWanVpnInterfaceT1E1SerialFeatureOutput) TransportWanVpnFeatureId() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *TransportWanVpnInterfaceT1E1SerialFeature) pulumi.StringPtrOutput {
+func (o TransportWanVpnInterfaceT1E1SerialFeatureOutput) TransportWanVpnFeatureId() pulumi.StringOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceT1E1SerialFeature) pulumi.StringOutput {
 		return v.TransportWanVpnFeatureId
-	}).(pulumi.StringPtrOutput)
+	}).(pulumi.StringOutput)
 }
 
 // Tunnel Interface - Default value: `false`

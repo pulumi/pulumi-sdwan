@@ -61,6 +61,8 @@ import (
 //
 // ## Import
 //
+// The `pulumi import` command can be used, for example:
+//
 // Expected import identifier with the format: "system_remote_access_feature_id,feature_profile_id"
 //
 // ```sh
@@ -98,7 +100,7 @@ type SystemRemoteAccessFeature struct {
 	// Variable name
 	EnableCertificateListCheckVariable pulumi.StringPtrOutput `pulumi:"enableCertificateListCheckVariable"`
 	// Feature Profile ID
-	FeatureProfileId pulumi.StringPtrOutput `pulumi:"featureProfileId"`
+	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
 	// Anti-DOS Threshold, Attribute conditional on `connectionTypeSsl` being equal to `false` - Range: `10`-`1000` - Default
 	// value: `100`
 	Ikev2AntiDosThreshold pulumi.IntPtrOutput `pulumi:"ikev2AntiDosThreshold"`
@@ -169,6 +171,9 @@ func NewSystemRemoteAccessFeature(ctx *pulumi.Context,
 		return nil, errors.New("missing one or more required arguments")
 	}
 
+	if args.FeatureProfileId == nil {
+		return nil, errors.New("invalid value for required argument 'FeatureProfileId'")
+	}
 	if args.RadiusGroupName == nil {
 		return nil, errors.New("invalid value for required argument 'RadiusGroupName'")
 	}
@@ -416,7 +421,7 @@ type systemRemoteAccessFeatureArgs struct {
 	// Variable name
 	EnableCertificateListCheckVariable *string `pulumi:"enableCertificateListCheckVariable"`
 	// Feature Profile ID
-	FeatureProfileId *string `pulumi:"featureProfileId"`
+	FeatureProfileId string `pulumi:"featureProfileId"`
 	// Anti-DOS Threshold, Attribute conditional on `connectionTypeSsl` being equal to `false` - Range: `10`-`1000` - Default
 	// value: `100`
 	Ikev2AntiDosThreshold *int `pulumi:"ikev2AntiDosThreshold"`
@@ -509,7 +514,7 @@ type SystemRemoteAccessFeatureArgs struct {
 	// Variable name
 	EnableCertificateListCheckVariable pulumi.StringPtrInput
 	// Feature Profile ID
-	FeatureProfileId pulumi.StringPtrInput
+	FeatureProfileId pulumi.StringInput
 	// Anti-DOS Threshold, Attribute conditional on `connectionTypeSsl` being equal to `false` - Range: `10`-`1000` - Default
 	// value: `100`
 	Ikev2AntiDosThreshold pulumi.IntPtrInput
@@ -738,8 +743,8 @@ func (o SystemRemoteAccessFeatureOutput) EnableCertificateListCheckVariable() pu
 }
 
 // Feature Profile ID
-func (o SystemRemoteAccessFeatureOutput) FeatureProfileId() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *SystemRemoteAccessFeature) pulumi.StringPtrOutput { return v.FeatureProfileId }).(pulumi.StringPtrOutput)
+func (o SystemRemoteAccessFeatureOutput) FeatureProfileId() pulumi.StringOutput {
+	return o.ApplyT(func(v *SystemRemoteAccessFeature) pulumi.StringOutput { return v.FeatureProfileId }).(pulumi.StringOutput)
 }
 
 // Anti-DOS Threshold, Attribute conditional on `connectionTypeSsl` being equal to `false` - Range: `10`-`1000` - Default

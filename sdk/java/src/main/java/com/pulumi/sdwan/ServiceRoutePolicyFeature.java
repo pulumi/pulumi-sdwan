@@ -28,6 +28,8 @@ import javax.annotation.Nullable;
  * 
  * ## Import
  * 
+ * The `pulumi import` command can be used, for example:
+ * 
  * Expected import identifier with the format: &#34;service_route_policy_feature_id,feature_profile_id&#34;
  * 
  * ```sh

@@ -22,6 +22,8 @@ __all__ = ['TransportManagementVpnInterfaceEthernetFeatureArgs', 'TransportManag
 @pulumi.input_type
 class TransportManagementVpnInterfaceEthernetFeatureArgs:
     def __init__(__self__, *,
+                 feature_profile_id: pulumi.Input[builtins.str],
+                 transport_management_vpn_feature_id: pulumi.Input[builtins.str],
                  arp_entries: Optional[pulumi.Input[Sequence[pulumi.Input['TransportManagementVpnInterfaceEthernetFeatureArpEntryArgs']]]] = None,
                  arp_timeout: Optional[pulumi.Input[builtins.int]] = None,
                  arp_timeout_variable: Optional[pulumi.Input[builtins.str]] = None,
@@ -31,7 +33,6 @@ class TransportManagementVpnInterfaceEthernetFeatureArgs:
                  duplex: Optional[pulumi.Input[builtins.str]] = None,
                  duplex_variable: Optional[pulumi.Input[builtins.str]] = None,
                  enable_dhcpv6: Optional[pulumi.Input[builtins.bool]] = None,
-                 feature_profile_id: Optional[pulumi.Input[builtins.str]] = None,
                  icmp_redirect_disable: Optional[pulumi.Input[builtins.bool]] = None,
                  icmp_redirect_disable_variable: Optional[pulumi.Input[builtins.str]] = None,
                  interface_description: Optional[pulumi.Input[builtins.str]] = None,
@@ -73,10 +74,11 @@ class TransportManagementVpnInterfaceEthernetFeatureArgs:
                  speed: Optional[pulumi.Input[builtins.str]] = None,
                  speed_variable: Optional[pulumi.Input[builtins.str]] = None,
                  tcp_mss: Optional[pulumi.Input[builtins.int]] = None,
-                 tcp_mss_variable: Optional[pulumi.Input[builtins.str]] = None,
-                 transport_management_vpn_feature_id: Optional[pulumi.Input[builtins.str]] = None):
+                 tcp_mss_variable: Optional[pulumi.Input[builtins.str]] = None):
         """
         The set of arguments for constructing a TransportManagementVpnInterfaceEthernetFeature resource.
+        :param pulumi.Input[builtins.str] feature_profile_id: Feature Profile ID
+        :param pulumi.Input[builtins.str] transport_management_vpn_feature_id: Transport Management VPN Feature ID
         :param pulumi.Input[Sequence[pulumi.Input['TransportManagementVpnInterfaceEthernetFeatureArpEntryArgs']]] arp_entries: Configure ARP entries
         :param pulumi.Input[builtins.int] arp_timeout: Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
         :param pulumi.Input[builtins.str] arp_timeout_variable: Variable name
@@ -86,7 +88,6 @@ class TransportManagementVpnInterfaceEthernetFeatureArgs:
         :param pulumi.Input[builtins.str] duplex: Duplex mode - Choices: `full`, `half`, `auto`
         :param pulumi.Input[builtins.str] duplex_variable: Variable name
         :param pulumi.Input[builtins.bool] enable_dhcpv6: Enable DHCPv6, Attribute conditional on `ipv6_configuration_type` being equal to `dynamic`
-        :param pulumi.Input[builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[builtins.bool] icmp_redirect_disable: ICMP/ICMPv6 Redirect Disable - Default value: `true`
         :param pulumi.Input[builtins.str] icmp_redirect_disable_variable: Variable name
         :param pulumi.Input[builtins.str] interface_description_variable: Variable name
@@ -134,8 +135,9 @@ class TransportManagementVpnInterfaceEthernetFeatureArgs:
         :param pulumi.Input[builtins.str] speed_variable: Variable name
         :param pulumi.Input[builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
         :param pulumi.Input[builtins.str] tcp_mss_variable: Variable name
-        :param pulumi.Input[builtins.str] transport_management_vpn_feature_id: Transport Management VPN Feature ID
         """
+        pulumi.set(__self__, "feature_profile_id", feature_profile_id)
+        pulumi.set(__self__, "transport_management_vpn_feature_id", transport_management_vpn_feature_id)
         if arp_entries is not None:
             pulumi.set(__self__, "arp_entries", arp_entries)
         if arp_timeout is not None:
@@ -154,8 +156,6 @@ class TransportManagementVpnInterfaceEthernetFeatureArgs:
             pulumi.set(__self__, "duplex_variable", duplex_variable)
         if enable_dhcpv6 is not None:
             pulumi.set(__self__, "enable_dhcpv6", enable_dhcpv6)
-        if feature_profile_id is not None:
-            pulumi.set(__self__, "feature_profile_id", feature_profile_id)
         if icmp_redirect_disable is not None:
             pulumi.set(__self__, "icmp_redirect_disable", icmp_redirect_disable)
         if icmp_redirect_disable_variable is not None:
@@ -240,8 +240,30 @@ class TransportManagementVpnInterfaceEthernetFeatureArgs:
             pulumi.set(__self__, "tcp_mss", tcp_mss)
         if tcp_mss_variable is not None:
             pulumi.set(__self__, "tcp_mss_variable", tcp_mss_variable)
-        if transport_management_vpn_feature_id is not None:
-            pulumi.set(__self__, "transport_management_vpn_feature_id", transport_management_vpn_feature_id)
+
+    @property
+    @pulumi.getter(name="featureProfileId")
+    def feature_profile_id(self) -> pulumi.Input[builtins.str]:
+        """
+        Feature Profile ID
+        """
+        return pulumi.get(self, "feature_profile_id")
+
+    @feature_profile_id.setter
+    def feature_profile_id(self, value: pulumi.Input[builtins.str]):
+        pulumi.set(self, "feature_profile_id", value)
+
+    @property
+    @pulumi.getter(name="transportManagementVpnFeatureId")
+    def transport_management_vpn_feature_id(self) -> pulumi.Input[builtins.str]:
+        """
+        Transport Management VPN Feature ID
+        """
+        return pulumi.get(self, "transport_management_vpn_feature_id")
+
+    @transport_management_vpn_feature_id.setter
+    def transport_management_vpn_feature_id(self, value: pulumi.Input[builtins.str]):
+        pulumi.set(self, "transport_management_vpn_feature_id", value)
 
     @property
     @pulumi.getter(name="arpEntries")
@@ -350,18 +372,6 @@ class TransportManagementVpnInterfaceEthernetFeatureArgs:
     @enable_dhcpv6.setter
     def enable_dhcpv6(self, value: Optional[pulumi.Input[builtins.bool]]):
         pulumi.set(self, "enable_dhcpv6", value)
-
-    @property
-    @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[builtins.str]]:
-        """
-        Feature Profile ID
-        """
-        return pulumi.get(self, "feature_profile_id")
-
-    @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[builtins.str]]):
-        pulumi.set(self, "feature_profile_id", value)
 
     @property
     @pulumi.getter(name="icmpRedirectDisable")
@@ -867,18 +877,6 @@ class TransportManagementVpnInterfaceEthernetFeatureArgs:
     @tcp_mss_variable.setter
     def tcp_mss_variable(self, value: Optional[pulumi.Input[builtins.str]]):
         pulumi.set(self, "tcp_mss_variable", value)
-
-    @property
-    @pulumi.getter(name="transportManagementVpnFeatureId")
-    def transport_management_vpn_feature_id(self) -> Optional[pulumi.Input[builtins.str]]:
-        """
-        Transport Management VPN Feature ID
-        """
-        return pulumi.get(self, "transport_management_vpn_feature_id")
-
-    @transport_management_vpn_feature_id.setter
-    def transport_management_vpn_feature_id(self, value: Optional[pulumi.Input[builtins.str]]):
-        pulumi.set(self, "transport_management_vpn_feature_id", value)
 
 
 @pulumi.input_type
@@ -1825,6 +1823,8 @@ class TransportManagementVpnInterfaceEthernetFeature(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         Expected import identifier with the format: "transport_management_vpn_interface_ethernet_feature_id,feature_profile_id,transport_management_vpn_feature_id"
 
         ```sh
@@ -1896,13 +1896,15 @@ class TransportManagementVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @overload
     def __init__(__self__,
                  resource_name: str,
-                 args: Optional[TransportManagementVpnInterfaceEthernetFeatureArgs] = None,
+                 args: TransportManagementVpnInterfaceEthernetFeatureArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a Transport Management VPN Interface Ethernet Feature.
           - Minimum SD-WAN Manager version: `20.12.0`
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         Expected import identifier with the format: "transport_management_vpn_interface_ethernet_feature_id,feature_profile_id,transport_management_vpn_feature_id"
 
@@ -1996,6 +1998,8 @@ class TransportManagementVpnInterfaceEthernetFeature(pulumi.CustomResource):
             __props__.__dict__["duplex"] = duplex
             __props__.__dict__["duplex_variable"] = duplex_variable
             __props__.__dict__["enable_dhcpv6"] = enable_dhcpv6
+            if feature_profile_id is None and not opts.urn:
+                raise TypeError("Missing required property 'feature_profile_id'")
             __props__.__dict__["feature_profile_id"] = feature_profile_id
             __props__.__dict__["icmp_redirect_disable"] = icmp_redirect_disable
             __props__.__dict__["icmp_redirect_disable_variable"] = icmp_redirect_disable_variable
@@ -2039,6 +2043,8 @@ class TransportManagementVpnInterfaceEthernetFeature(pulumi.CustomResource):
             __props__.__dict__["speed_variable"] = speed_variable
             __props__.__dict__["tcp_mss"] = tcp_mss
             __props__.__dict__["tcp_mss_variable"] = tcp_mss_variable
+            if transport_management_vpn_feature_id is None and not opts.urn:
+                raise TypeError("Missing required property 'transport_management_vpn_feature_id'")
             __props__.__dict__["transport_management_vpn_feature_id"] = transport_management_vpn_feature_id
             __props__.__dict__["version"] = None
         super(TransportManagementVpnInterfaceEthernetFeature, __self__).__init__(
@@ -2306,7 +2312,7 @@ class TransportManagementVpnInterfaceEthernetFeature(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> pulumi.Output[Optional[builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Output[builtins.str]:
         """
         Feature Profile ID
         """
@@ -2651,7 +2657,7 @@ class TransportManagementVpnInterfaceEthernetFeature(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="transportManagementVpnFeatureId")
-    def transport_management_vpn_feature_id(self) -> pulumi.Output[Optional[builtins.str]]:
+    def transport_management_vpn_feature_id(self) -> pulumi.Output[builtins.str]:
         """
         Transport Management VPN Feature ID
         """

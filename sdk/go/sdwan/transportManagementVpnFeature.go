@@ -7,6 +7,7 @@ import (
 	"context"
 	"reflect"
 
+	"errors"
 	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan/internal"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
@@ -15,6 +16,8 @@ import (
 //   - Minimum SD-WAN Manager version: `20.12.0`
 //
 // ## Import
+//
+// The `pulumi import` command can be used, for example:
 //
 // Expected import identifier with the format: "transport_management_vpn_feature_id,feature_profile_id"
 //
@@ -27,7 +30,7 @@ type TransportManagementVpnFeature struct {
 	// The description of the Feature
 	Description pulumi.StringPtrOutput `pulumi:"description"`
 	// Feature Profile ID
-	FeatureProfileId pulumi.StringPtrOutput `pulumi:"featureProfileId"`
+	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
 	// IPv4 Static Route
 	Ipv4StaticRoutes TransportManagementVpnFeatureIpv4StaticRouteArrayOutput `pulumi:"ipv4StaticRoutes"`
 	// IPv6 Static Route
@@ -63,9 +66,12 @@ type TransportManagementVpnFeature struct {
 func NewTransportManagementVpnFeature(ctx *pulumi.Context,
 	name string, args *TransportManagementVpnFeatureArgs, opts ...pulumi.ResourceOption) (*TransportManagementVpnFeature, error) {
 	if args == nil {
-		args = &TransportManagementVpnFeatureArgs{}
+		return nil, errors.New("missing one or more required arguments")
 	}
 
+	if args.FeatureProfileId == nil {
+		return nil, errors.New("invalid value for required argument 'FeatureProfileId'")
+	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource TransportManagementVpnFeature
 	err := ctx.RegisterResource("sdwan:index/transportManagementVpnFeature:TransportManagementVpnFeature", name, args, &resource, opts...)
@@ -168,7 +174,7 @@ type transportManagementVpnFeatureArgs struct {
 	// The description of the Feature
 	Description *string `pulumi:"description"`
 	// Feature Profile ID
-	FeatureProfileId *string `pulumi:"featureProfileId"`
+	FeatureProfileId string `pulumi:"featureProfileId"`
 	// IPv4 Static Route
 	Ipv4StaticRoutes []TransportManagementVpnFeatureIpv4StaticRoute `pulumi:"ipv4StaticRoutes"`
 	// IPv6 Static Route
@@ -203,7 +209,7 @@ type TransportManagementVpnFeatureArgs struct {
 	// The description of the Feature
 	Description pulumi.StringPtrInput
 	// Feature Profile ID
-	FeatureProfileId pulumi.StringPtrInput
+	FeatureProfileId pulumi.StringInput
 	// IPv4 Static Route
 	Ipv4StaticRoutes TransportManagementVpnFeatureIpv4StaticRouteArrayInput
 	// IPv6 Static Route
@@ -326,8 +332,8 @@ func (o TransportManagementVpnFeatureOutput) Description() pulumi.StringPtrOutpu
 }
 
 // Feature Profile ID
-func (o TransportManagementVpnFeatureOutput) FeatureProfileId() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *TransportManagementVpnFeature) pulumi.StringPtrOutput { return v.FeatureProfileId }).(pulumi.StringPtrOutput)
+func (o TransportManagementVpnFeatureOutput) FeatureProfileId() pulumi.StringOutput {
+	return o.ApplyT(func(v *TransportManagementVpnFeature) pulumi.StringOutput { return v.FeatureProfileId }).(pulumi.StringOutput)
 }
 
 // IPv4 Static Route

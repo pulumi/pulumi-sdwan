@@ -689,6 +689,8 @@ class TlsSslDecryptionPolicyDefinition(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         ```sh
         $ pulumi import sdwan:index/tlsSslDecryptionPolicyDefinition:TlsSslDecryptionPolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
@@ -725,6 +727,8 @@ class TlsSslDecryptionPolicyDefinition(pulumi.CustomResource):
         This resource can manage a TLS SSL Decryption Policy Definition .
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         ```sh
         $ pulumi import sdwan:index/tlsSslDecryptionPolicyDefinition:TlsSslDecryptionPolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"

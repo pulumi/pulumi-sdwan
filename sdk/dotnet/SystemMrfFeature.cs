@@ -40,6 +40,8 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Import
     /// 
+    /// The `pulumi import` command can be used, for example:
+    /// 
     /// Expected import identifier with the format: "system_mrf_feature_id,feature_profile_id"
     /// 
     /// ```sh
@@ -65,7 +67,7 @@ namespace Pulumi.Sdwan
         /// Feature Profile ID
         /// </summary>
         [Output("featureProfileId")]
-        public Output<string?> FeatureProfileId { get; private set; } = null!;
+        public Output<string> FeatureProfileId { get; private set; } = null!;
 
         /// <summary>
         /// Set BGP community during migration from BGP-core based network - Range: `1`-`4294967295`
@@ -123,7 +125,7 @@ namespace Pulumi.Sdwan
         /// <param name="name">The unique name of the resource</param>
         /// <param name="args">The arguments used to populate this resource's properties</param>
         /// <param name="options">A bag of options that control this resource's behavior</param>
-        public SystemMrfFeature(string name, SystemMrfFeatureArgs? args = null, CustomResourceOptions? options = null)
+        public SystemMrfFeature(string name, SystemMrfFeatureArgs args, CustomResourceOptions? options = null)
             : base("sdwan:index/systemMrfFeature:SystemMrfFeature", name, args ?? new SystemMrfFeatureArgs(), MakeResourceOptions(options, ""))
         {
         }
@@ -176,8 +178,8 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// Feature Profile ID
         /// </summary>
-        [Input("featureProfileId")]
-        public Input<string>? FeatureProfileId { get; set; }
+        [Input("featureProfileId", required: true)]
+        public Input<string> FeatureProfileId { get; set; } = null!;
 
         /// <summary>
         /// Set BGP community during migration from BGP-core based network - Range: `1`-`4294967295`

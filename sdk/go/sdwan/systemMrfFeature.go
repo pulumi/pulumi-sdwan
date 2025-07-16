@@ -7,6 +7,7 @@ import (
 	"context"
 	"reflect"
 
+	"errors"
 	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan/internal"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
@@ -49,6 +50,8 @@ import (
 //
 // ## Import
 //
+// The `pulumi import` command can be used, for example:
+//
 // Expected import identifier with the format: "system_mrf_feature_id,feature_profile_id"
 //
 // ```sh
@@ -62,7 +65,7 @@ type SystemMrfFeature struct {
 	// Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
 	EnableMigrationToMrf pulumi.StringPtrOutput `pulumi:"enableMigrationToMrf"`
 	// Feature Profile ID
-	FeatureProfileId pulumi.StringPtrOutput `pulumi:"featureProfileId"`
+	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
 	// Set BGP community during migration from BGP-core based network - Range: `1`-`4294967295`
 	MigrationBgpCommunity pulumi.IntPtrOutput `pulumi:"migrationBgpCommunity"`
 	// The name of the Feature
@@ -85,9 +88,12 @@ type SystemMrfFeature struct {
 func NewSystemMrfFeature(ctx *pulumi.Context,
 	name string, args *SystemMrfFeatureArgs, opts ...pulumi.ResourceOption) (*SystemMrfFeature, error) {
 	if args == nil {
-		args = &SystemMrfFeatureArgs{}
+		return nil, errors.New("missing one or more required arguments")
 	}
 
+	if args.FeatureProfileId == nil {
+		return nil, errors.New("invalid value for required argument 'FeatureProfileId'")
+	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource SystemMrfFeature
 	err := ctx.RegisterResource("sdwan:index/systemMrfFeature:SystemMrfFeature", name, args, &resource, opts...)
@@ -170,7 +176,7 @@ type systemMrfFeatureArgs struct {
 	// Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
 	EnableMigrationToMrf *string `pulumi:"enableMigrationToMrf"`
 	// Feature Profile ID
-	FeatureProfileId *string `pulumi:"featureProfileId"`
+	FeatureProfileId string `pulumi:"featureProfileId"`
 	// Set BGP community during migration from BGP-core based network - Range: `1`-`4294967295`
 	MigrationBgpCommunity *int `pulumi:"migrationBgpCommunity"`
 	// The name of the Feature
@@ -194,7 +200,7 @@ type SystemMrfFeatureArgs struct {
 	// Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
 	EnableMigrationToMrf pulumi.StringPtrInput
 	// Feature Profile ID
-	FeatureProfileId pulumi.StringPtrInput
+	FeatureProfileId pulumi.StringInput
 	// Set BGP community during migration from BGP-core based network - Range: `1`-`4294967295`
 	MigrationBgpCommunity pulumi.IntPtrInput
 	// The name of the Feature
@@ -309,8 +315,8 @@ func (o SystemMrfFeatureOutput) EnableMigrationToMrf() pulumi.StringPtrOutput {
 }
 
 // Feature Profile ID
-func (o SystemMrfFeatureOutput) FeatureProfileId() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *SystemMrfFeature) pulumi.StringPtrOutput { return v.FeatureProfileId }).(pulumi.StringPtrOutput)
+func (o SystemMrfFeatureOutput) FeatureProfileId() pulumi.StringOutput {
+	return o.ApplyT(func(v *SystemMrfFeature) pulumi.StringOutput { return v.FeatureProfileId }).(pulumi.StringOutput)
 }
 
 // Set BGP community during migration from BGP-core based network - Range: `1`-`4294967295`

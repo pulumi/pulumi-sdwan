@@ -203,6 +203,8 @@ class ServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature(pulumi.Custom
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         Expected import identifier with the format: "service_lan_vpn_interface_ipsec_feature_associate_dhcp_server_feature_id,feature_profile_id,service_lan_vpn_feature_id,service_lan_vpn_interface_ipsec_feature_id"
 
         ```sh
@@ -240,6 +242,8 @@ class ServiceLanVpnInterfaceIpsecFeatureAssociateDhcpServerFeature(pulumi.Custom
         ```
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         Expected import identifier with the format: "service_lan_vpn_interface_ipsec_feature_associate_dhcp_server_feature_id,feature_profile_id,service_lan_vpn_feature_id,service_lan_vpn_interface_ipsec_feature_id"
 

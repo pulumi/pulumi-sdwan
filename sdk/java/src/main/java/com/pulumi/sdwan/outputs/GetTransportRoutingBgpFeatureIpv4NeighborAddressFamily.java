@@ -12,21 +12,31 @@ import java.util.Objects;
 @CustomType
 public final class GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily {
     /**
+     * @return Set maximum number of prefixes accepted from BGP peer
+     * 
+     */
+    private Integer disablePeerMaxNumberOfPrefixes;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String disablePeerMaxNumberOfPrefixesVariable;
+    /**
+     * @return Set threshold(1 to 100) at which to generate a warning message
+     * 
+     */
+    private Integer disablePeerThreshold;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String disablePeerThresholdVariable;
+    /**
      * @return Set IPv4 unicast address family
      * 
      */
     private String familyType;
     private String inRoutePolicyId;
-    /**
-     * @return Set maximum number of prefixes accepted from BGP peer
-     * 
-     */
-    private Integer maxNumberOfPrefixes;
-    /**
-     * @return Variable name
-     * 
-     */
-    private String maxNumberOfPrefixesVariable;
     private String outRoutePolicyId;
     /**
      * @return Neighbor received maximum prefix policy is disabled.
@@ -44,17 +54,75 @@ public final class GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily {
      */
     private String restartIntervalVariable;
     /**
-     * @return Set threshold(1 to 100) at which to generate a warning message
+     * @return Set maximum number of prefixes accepted from BGP peer
      * 
      */
-    private Integer threshold;
+    private Integer restartMaxNumberOfPrefixes;
     /**
      * @return Variable name
      * 
      */
-    private String thresholdVariable;
+    private String restartMaxNumberOfPrefixesVariable;
+    /**
+     * @return Set threshold(1 to 100) at which to generate a warning message
+     * 
+     */
+    private Integer restartThreshold;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String restartThresholdVariable;
+    /**
+     * @return Set maximum number of prefixes accepted from BGP peer
+     * 
+     */
+    private Integer warningMessageMaxNumberOfPrefixes;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String warningMessageMaxNumberOfPrefixesVariable;
+    /**
+     * @return Set threshold(1 to 100) at which to generate a warning message
+     * 
+     */
+    private Integer warningMessageThreshold;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String warningMessageThresholdVariable;
 
     private GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily() {}
+    /**
+     * @return Set maximum number of prefixes accepted from BGP peer
+     * 
+     */
+    public Integer disablePeerMaxNumberOfPrefixes() {
+        return this.disablePeerMaxNumberOfPrefixes;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String disablePeerMaxNumberOfPrefixesVariable() {
+        return this.disablePeerMaxNumberOfPrefixesVariable;
+    }
+    /**
+     * @return Set threshold(1 to 100) at which to generate a warning message
+     * 
+     */
+    public Integer disablePeerThreshold() {
+        return this.disablePeerThreshold;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String disablePeerThresholdVariable() {
+        return this.disablePeerThresholdVariable;
+    }
     /**
      * @return Set IPv4 unicast address family
      * 
@@ -64,20 +132,6 @@ public final class GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily {
     }
     public String inRoutePolicyId() {
         return this.inRoutePolicyId;
-    }
-    /**
-     * @return Set maximum number of prefixes accepted from BGP peer
-     * 
-     */
-    public Integer maxNumberOfPrefixes() {
-        return this.maxNumberOfPrefixes;
-    }
-    /**
-     * @return Variable name
-     * 
-     */
-    public String maxNumberOfPrefixesVariable() {
-        return this.maxNumberOfPrefixesVariable;
     }
     public String outRoutePolicyId() {
         return this.outRoutePolicyId;
@@ -104,18 +158,60 @@ public final class GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily {
         return this.restartIntervalVariable;
     }
     /**
-     * @return Set threshold(1 to 100) at which to generate a warning message
+     * @return Set maximum number of prefixes accepted from BGP peer
      * 
      */
-    public Integer threshold() {
-        return this.threshold;
+    public Integer restartMaxNumberOfPrefixes() {
+        return this.restartMaxNumberOfPrefixes;
     }
     /**
      * @return Variable name
      * 
      */
-    public String thresholdVariable() {
-        return this.thresholdVariable;
+    public String restartMaxNumberOfPrefixesVariable() {
+        return this.restartMaxNumberOfPrefixesVariable;
+    }
+    /**
+     * @return Set threshold(1 to 100) at which to generate a warning message
+     * 
+     */
+    public Integer restartThreshold() {
+        return this.restartThreshold;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String restartThresholdVariable() {
+        return this.restartThresholdVariable;
+    }
+    /**
+     * @return Set maximum number of prefixes accepted from BGP peer
+     * 
+     */
+    public Integer warningMessageMaxNumberOfPrefixes() {
+        return this.warningMessageMaxNumberOfPrefixes;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String warningMessageMaxNumberOfPrefixesVariable() {
+        return this.warningMessageMaxNumberOfPrefixesVariable;
+    }
+    /**
+     * @return Set threshold(1 to 100) at which to generate a warning message
+     * 
+     */
+    public Integer warningMessageThreshold() {
+        return this.warningMessageThreshold;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String warningMessageThresholdVariable() {
+        return this.warningMessageThresholdVariable;
     }
 
     public static Builder builder() {
@@ -127,31 +223,79 @@ public final class GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily {
     }
     @CustomType.Builder
     public static final class Builder {
+        private Integer disablePeerMaxNumberOfPrefixes;
+        private String disablePeerMaxNumberOfPrefixesVariable;
+        private Integer disablePeerThreshold;
+        private String disablePeerThresholdVariable;
         private String familyType;
         private String inRoutePolicyId;
-        private Integer maxNumberOfPrefixes;
-        private String maxNumberOfPrefixesVariable;
         private String outRoutePolicyId;
         private String policyType;
         private Integer restartInterval;
         private String restartIntervalVariable;
-        private Integer threshold;
-        private String thresholdVariable;
+        private Integer restartMaxNumberOfPrefixes;
+        private String restartMaxNumberOfPrefixesVariable;
+        private Integer restartThreshold;
+        private String restartThresholdVariable;
+        private Integer warningMessageMaxNumberOfPrefixes;
+        private String warningMessageMaxNumberOfPrefixesVariable;
+        private Integer warningMessageThreshold;
+        private String warningMessageThresholdVariable;
         public Builder() {}
         public Builder(GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.disablePeerMaxNumberOfPrefixes = defaults.disablePeerMaxNumberOfPrefixes;
+    	      this.disablePeerMaxNumberOfPrefixesVariable = defaults.disablePeerMaxNumberOfPrefixesVariable;
+    	      this.disablePeerThreshold = defaults.disablePeerThreshold;
+    	      this.disablePeerThresholdVariable = defaults.disablePeerThresholdVariable;
     	      this.familyType = defaults.familyType;
     	      this.inRoutePolicyId = defaults.inRoutePolicyId;
-    	      this.maxNumberOfPrefixes = defaults.maxNumberOfPrefixes;
-    	      this.maxNumberOfPrefixesVariable = defaults.maxNumberOfPrefixesVariable;
     	      this.outRoutePolicyId = defaults.outRoutePolicyId;
     	      this.policyType = defaults.policyType;
     	      this.restartInterval = defaults.restartInterval;
     	      this.restartIntervalVariable = defaults.restartIntervalVariable;
-    	      this.threshold = defaults.threshold;
-    	      this.thresholdVariable = defaults.thresholdVariable;
+    	      this.restartMaxNumberOfPrefixes = defaults.restartMaxNumberOfPrefixes;
+    	      this.restartMaxNumberOfPrefixesVariable = defaults.restartMaxNumberOfPrefixesVariable;
+    	      this.restartThreshold = defaults.restartThreshold;
+    	      this.restartThresholdVariable = defaults.restartThresholdVariable;
+    	      this.warningMessageMaxNumberOfPrefixes = defaults.warningMessageMaxNumberOfPrefixes;
+    	      this.warningMessageMaxNumberOfPrefixesVariable = defaults.warningMessageMaxNumberOfPrefixesVariable;
+    	      this.warningMessageThreshold = defaults.warningMessageThreshold;
+    	      this.warningMessageThresholdVariable = defaults.warningMessageThresholdVariable;
         }
 
+        @CustomType.Setter
+        public Builder disablePeerMaxNumberOfPrefixes(Integer disablePeerMaxNumberOfPrefixes) {
+            if (disablePeerMaxNumberOfPrefixes == null) {
+              throw new MissingRequiredPropertyException("GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily", "disablePeerMaxNumberOfPrefixes");
+            }
+            this.disablePeerMaxNumberOfPrefixes = disablePeerMaxNumberOfPrefixes;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder disablePeerMaxNumberOfPrefixesVariable(String disablePeerMaxNumberOfPrefixesVariable) {
+            if (disablePeerMaxNumberOfPrefixesVariable == null) {
+              throw new MissingRequiredPropertyException("GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily", "disablePeerMaxNumberOfPrefixesVariable");
+            }
+            this.disablePeerMaxNumberOfPrefixesVariable = disablePeerMaxNumberOfPrefixesVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder disablePeerThreshold(Integer disablePeerThreshold) {
+            if (disablePeerThreshold == null) {
+              throw new MissingRequiredPropertyException("GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily", "disablePeerThreshold");
+            }
+            this.disablePeerThreshold = disablePeerThreshold;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder disablePeerThresholdVariable(String disablePeerThresholdVariable) {
+            if (disablePeerThresholdVariable == null) {
+              throw new MissingRequiredPropertyException("GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily", "disablePeerThresholdVariable");
+            }
+            this.disablePeerThresholdVariable = disablePeerThresholdVariable;
+            return this;
+        }
         @CustomType.Setter
         public Builder familyType(String familyType) {
             if (familyType == null) {
@@ -166,22 +310,6 @@ public final class GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily {
               throw new MissingRequiredPropertyException("GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily", "inRoutePolicyId");
             }
             this.inRoutePolicyId = inRoutePolicyId;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder maxNumberOfPrefixes(Integer maxNumberOfPrefixes) {
-            if (maxNumberOfPrefixes == null) {
-              throw new MissingRequiredPropertyException("GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily", "maxNumberOfPrefixes");
-            }
-            this.maxNumberOfPrefixes = maxNumberOfPrefixes;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder maxNumberOfPrefixesVariable(String maxNumberOfPrefixesVariable) {
-            if (maxNumberOfPrefixesVariable == null) {
-              throw new MissingRequiredPropertyException("GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily", "maxNumberOfPrefixesVariable");
-            }
-            this.maxNumberOfPrefixesVariable = maxNumberOfPrefixesVariable;
             return this;
         }
         @CustomType.Setter
@@ -217,33 +345,89 @@ public final class GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily {
             return this;
         }
         @CustomType.Setter
-        public Builder threshold(Integer threshold) {
-            if (threshold == null) {
-              throw new MissingRequiredPropertyException("GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily", "threshold");
+        public Builder restartMaxNumberOfPrefixes(Integer restartMaxNumberOfPrefixes) {
+            if (restartMaxNumberOfPrefixes == null) {
+              throw new MissingRequiredPropertyException("GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily", "restartMaxNumberOfPrefixes");
             }
-            this.threshold = threshold;
+            this.restartMaxNumberOfPrefixes = restartMaxNumberOfPrefixes;
             return this;
         }
         @CustomType.Setter
-        public Builder thresholdVariable(String thresholdVariable) {
-            if (thresholdVariable == null) {
-              throw new MissingRequiredPropertyException("GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily", "thresholdVariable");
+        public Builder restartMaxNumberOfPrefixesVariable(String restartMaxNumberOfPrefixesVariable) {
+            if (restartMaxNumberOfPrefixesVariable == null) {
+              throw new MissingRequiredPropertyException("GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily", "restartMaxNumberOfPrefixesVariable");
             }
-            this.thresholdVariable = thresholdVariable;
+            this.restartMaxNumberOfPrefixesVariable = restartMaxNumberOfPrefixesVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder restartThreshold(Integer restartThreshold) {
+            if (restartThreshold == null) {
+              throw new MissingRequiredPropertyException("GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily", "restartThreshold");
+            }
+            this.restartThreshold = restartThreshold;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder restartThresholdVariable(String restartThresholdVariable) {
+            if (restartThresholdVariable == null) {
+              throw new MissingRequiredPropertyException("GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily", "restartThresholdVariable");
+            }
+            this.restartThresholdVariable = restartThresholdVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder warningMessageMaxNumberOfPrefixes(Integer warningMessageMaxNumberOfPrefixes) {
+            if (warningMessageMaxNumberOfPrefixes == null) {
+              throw new MissingRequiredPropertyException("GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily", "warningMessageMaxNumberOfPrefixes");
+            }
+            this.warningMessageMaxNumberOfPrefixes = warningMessageMaxNumberOfPrefixes;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder warningMessageMaxNumberOfPrefixesVariable(String warningMessageMaxNumberOfPrefixesVariable) {
+            if (warningMessageMaxNumberOfPrefixesVariable == null) {
+              throw new MissingRequiredPropertyException("GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily", "warningMessageMaxNumberOfPrefixesVariable");
+            }
+            this.warningMessageMaxNumberOfPrefixesVariable = warningMessageMaxNumberOfPrefixesVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder warningMessageThreshold(Integer warningMessageThreshold) {
+            if (warningMessageThreshold == null) {
+              throw new MissingRequiredPropertyException("GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily", "warningMessageThreshold");
+            }
+            this.warningMessageThreshold = warningMessageThreshold;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder warningMessageThresholdVariable(String warningMessageThresholdVariable) {
+            if (warningMessageThresholdVariable == null) {
+              throw new MissingRequiredPropertyException("GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily", "warningMessageThresholdVariable");
+            }
+            this.warningMessageThresholdVariable = warningMessageThresholdVariable;
             return this;
         }
         public GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily build() {
             final var _resultValue = new GetTransportRoutingBgpFeatureIpv4NeighborAddressFamily();
+            _resultValue.disablePeerMaxNumberOfPrefixes = disablePeerMaxNumberOfPrefixes;
+            _resultValue.disablePeerMaxNumberOfPrefixesVariable = disablePeerMaxNumberOfPrefixesVariable;
+            _resultValue.disablePeerThreshold = disablePeerThreshold;
+            _resultValue.disablePeerThresholdVariable = disablePeerThresholdVariable;
             _resultValue.familyType = familyType;
             _resultValue.inRoutePolicyId = inRoutePolicyId;
-            _resultValue.maxNumberOfPrefixes = maxNumberOfPrefixes;
-            _resultValue.maxNumberOfPrefixesVariable = maxNumberOfPrefixesVariable;
             _resultValue.outRoutePolicyId = outRoutePolicyId;
             _resultValue.policyType = policyType;
             _resultValue.restartInterval = restartInterval;
             _resultValue.restartIntervalVariable = restartIntervalVariable;
-            _resultValue.threshold = threshold;
-            _resultValue.thresholdVariable = thresholdVariable;
+            _resultValue.restartMaxNumberOfPrefixes = restartMaxNumberOfPrefixes;
+            _resultValue.restartMaxNumberOfPrefixesVariable = restartMaxNumberOfPrefixesVariable;
+            _resultValue.restartThreshold = restartThreshold;
+            _resultValue.restartThresholdVariable = restartThresholdVariable;
+            _resultValue.warningMessageMaxNumberOfPrefixes = warningMessageMaxNumberOfPrefixes;
+            _resultValue.warningMessageMaxNumberOfPrefixesVariable = warningMessageMaxNumberOfPrefixesVariable;
+            _resultValue.warningMessageThreshold = warningMessageThreshold;
+            _resultValue.warningMessageThresholdVariable = warningMessageThresholdVariable;
             return _resultValue;
         }
     }

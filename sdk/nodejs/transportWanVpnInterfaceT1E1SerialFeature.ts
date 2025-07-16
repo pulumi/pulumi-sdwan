@@ -82,6 +82,8 @@ import * as utilities from "./utilities";
  *
  * ## Import
  *
+ * The `pulumi import` command can be used, for example:
+ *
  * Expected import identifier with the format: "transport_wan_vpn_interface_t1_e1_serial_feature_id,feature_profile_id,transport_wan_vpn_feature_id"
  *
  * ```sh
@@ -266,7 +268,7 @@ export class TransportWanVpnInterfaceT1E1SerialFeature extends pulumi.CustomReso
     /**
      * Transport WAN VPN Feature ID
      */
-    public readonly transportWanVpnFeatureId!: pulumi.Output<string | undefined>;
+    public readonly transportWanVpnFeatureId!: pulumi.Output<string>;
     /**
      * Tunnel Interface - Default value: `false`
      */
@@ -673,6 +675,9 @@ export class TransportWanVpnInterfaceT1E1SerialFeature extends pulumi.CustomReso
             const args = argsOrState as TransportWanVpnInterfaceT1E1SerialFeatureArgs | undefined;
             if ((!args || args.featureProfileId === undefined) && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
+            }
+            if ((!args || args.transportWanVpnFeatureId === undefined) && !opts.urn) {
+                throw new Error("Missing required property 'transportWanVpnFeatureId'");
             }
             resourceInputs["aclIpv4EgressFeatureId"] = args ? args.aclIpv4EgressFeatureId : undefined;
             resourceInputs["aclIpv4IngressFeatureId"] = args ? args.aclIpv4IngressFeatureId : undefined;
@@ -1379,7 +1384,7 @@ export interface TransportWanVpnInterfaceT1E1SerialFeatureArgs {
     /**
      * Transport WAN VPN Feature ID
      */
-    transportWanVpnFeatureId?: pulumi.Input<string>;
+    transportWanVpnFeatureId: pulumi.Input<string>;
     /**
      * Tunnel Interface - Default value: `false`
      */
