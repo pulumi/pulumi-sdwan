@@ -65,6 +65,8 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Import
     /// 
+    /// The `pulumi import` command can be used, for example:
+    /// 
     /// Expected import identifier with the format: "transport_wan_vpn_interface_ipsec_feature_id,feature_profile_id,transport_wan_vpn_feature_id"
     /// 
     /// ```sh
@@ -383,7 +385,7 @@ namespace Pulumi.Sdwan
         /// Transport WAN VPN Feature ID
         /// </summary>
         [Output("transportWanVpnFeatureId")]
-        public Output<string?> TransportWanVpnFeatureId { get; private set; } = null!;
+        public Output<string> TransportWanVpnFeatureId { get; private set; } = null!;
 
         [Output("tunnelDestinationIpv4Address")]
         public Output<string?> TunnelDestinationIpv4Address { get; private set; } = null!;
@@ -819,8 +821,8 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// Transport WAN VPN Feature ID
         /// </summary>
-        [Input("transportWanVpnFeatureId")]
-        public Input<string>? TransportWanVpnFeatureId { get; set; }
+        [Input("transportWanVpnFeatureId", required: true)]
+        public Input<string> TransportWanVpnFeatureId { get; set; } = null!;
 
         [Input("tunnelDestinationIpv4Address")]
         public Input<string>? TunnelDestinationIpv4Address { get; set; }

@@ -67,10 +67,9 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntry {
     private @Nullable Integer dnsApplicationListVersion;
     /**
      * @return DSCP value, Attribute conditional on `type` being equal to `dscp`
-     *   - Range: `0`-`63`
      * 
      */
-    private @Nullable Integer dscp;
+    private @Nullable String dscp;
     /**
      * @return ICMP Message, Attribute conditional on `type` being equal to `icmpMessage`
      * 
@@ -207,10 +206,9 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntry {
     }
     /**
      * @return DSCP value, Attribute conditional on `type` being equal to `dscp`
-     *   - Range: `0`-`63`
      * 
      */
-    public Optional<Integer> dscp() {
+    public Optional<String> dscp() {
         return Optional.ofNullable(this.dscp);
     }
     /**
@@ -315,7 +313,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntry {
         private @Nullable String dns;
         private @Nullable String dnsApplicationListId;
         private @Nullable Integer dnsApplicationListVersion;
-        private @Nullable Integer dscp;
+        private @Nullable String dscp;
         private @Nullable String icmpMessage;
         private @Nullable Integer packetLength;
         private @Nullable String plp;
@@ -415,7 +413,7 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntry {
             return this;
         }
         @CustomType.Setter
-        public Builder dscp(@Nullable Integer dscp) {
+        public Builder dscp(@Nullable String dscp) {
 
             this.dscp = dscp;
             return this;

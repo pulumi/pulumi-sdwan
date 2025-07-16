@@ -75,6 +75,8 @@ import javax.annotation.Nullable;
  * 
  * ## Import
  * 
+ * The `pulumi import` command can be used, for example:
+ * 
  * Expected import identifier with the format: &#34;system_remote_access_feature_id,feature_profile_id&#34;
  * 
  * ```sh
@@ -283,14 +285,14 @@ public class SystemRemoteAccessFeature extends com.pulumi.resources.CustomResour
      * 
      */
     @Export(name="featureProfileId", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> featureProfileId;
+    private Output<String> featureProfileId;
 
     /**
      * @return Feature Profile ID
      * 
      */
-    public Output<Optional<String>> featureProfileId() {
-        return Codegen.optional(this.featureProfileId);
+    public Output<String> featureProfileId() {
+        return this.featureProfileId;
     }
     /**
      * Anti-DOS Threshold, Attribute conditional on `connection_type_ssl` being equal to `false` - Range: `10`-`1000` - Default

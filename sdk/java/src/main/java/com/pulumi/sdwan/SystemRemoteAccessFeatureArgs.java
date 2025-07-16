@@ -231,15 +231,15 @@ public final class SystemRemoteAccessFeatureArgs extends com.pulumi.resources.Re
      * Feature Profile ID
      * 
      */
-    @Import(name="featureProfileId")
-    private @Nullable Output<String> featureProfileId;
+    @Import(name="featureProfileId", required=true)
+    private Output<String> featureProfileId;
 
     /**
      * @return Feature Profile ID
      * 
      */
-    public Optional<Output<String>> featureProfileId() {
-        return Optional.ofNullable(this.featureProfileId);
+    public Output<String> featureProfileId() {
+        return this.featureProfileId;
     }
 
     /**
@@ -1014,7 +1014,7 @@ public final class SystemRemoteAccessFeatureArgs extends com.pulumi.resources.Re
          * @return builder
          * 
          */
-        public Builder featureProfileId(@Nullable Output<String> featureProfileId) {
+        public Builder featureProfileId(Output<String> featureProfileId) {
             $.featureProfileId = featureProfileId;
             return this;
         }
@@ -1597,6 +1597,9 @@ public final class SystemRemoteAccessFeatureArgs extends com.pulumi.resources.Re
         }
 
         public SystemRemoteAccessFeatureArgs build() {
+            if ($.featureProfileId == null) {
+                throw new MissingRequiredPropertyException("SystemRemoteAccessFeatureArgs", "featureProfileId");
+            }
             if ($.radiusGroupName == null) {
                 throw new MissingRequiredPropertyException("SystemRemoteAccessFeatureArgs", "radiusGroupName");
             }

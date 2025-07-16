@@ -20,6 +20,7 @@ __all__ = ['SystemRemoteAccessFeatureArgs', 'SystemRemoteAccessFeature']
 @pulumi.input_type
 class SystemRemoteAccessFeatureArgs:
     def __init__(__self__, *,
+                 feature_profile_id: pulumi.Input[builtins.str],
                  radius_group_name: pulumi.Input[builtins.str],
                  aaa_derive_name_from_peer_domain: Optional[pulumi.Input[builtins.str]] = None,
                  aaa_derive_name_from_peer_domain_variable: Optional[pulumi.Input[builtins.str]] = None,
@@ -36,7 +37,6 @@ class SystemRemoteAccessFeatureArgs:
                  description: Optional[pulumi.Input[builtins.str]] = None,
                  enable_certificate_list_check: Optional[pulumi.Input[builtins.bool]] = None,
                  enable_certificate_list_check_variable: Optional[pulumi.Input[builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[builtins.str]] = None,
                  ikev2_anti_dos_threshold: Optional[pulumi.Input[builtins.int]] = None,
                  ikev2_anti_dos_threshold_variable: Optional[pulumi.Input[builtins.str]] = None,
                  ikev2_local_ike_identity_type: Optional[pulumi.Input[builtins.str]] = None,
@@ -65,6 +65,7 @@ class SystemRemoteAccessFeatureArgs:
                  radius_group_name_variable: Optional[pulumi.Input[builtins.str]] = None):
         """
         The set of arguments for constructing a SystemRemoteAccessFeature resource.
+        :param pulumi.Input[builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[builtins.str] aaa_derive_name_from_peer_domain: , Attribute conditional on `connection_type_ssl` being equal to `false`
         :param pulumi.Input[builtins.str] aaa_derive_name_from_peer_domain_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
         :param pulumi.Input[builtins.str] aaa_derive_name_from_peer_identity: , Attribute conditional on `connection_type_ssl` being equal to `false`
@@ -78,7 +79,6 @@ class SystemRemoteAccessFeatureArgs:
         :param pulumi.Input[builtins.str] description: The description of the Feature
         :param pulumi.Input[builtins.bool] enable_certificate_list_check: - Default value: `false`
         :param pulumi.Input[builtins.str] enable_certificate_list_check_variable: Variable name
-        :param pulumi.Input[builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[builtins.int] ikev2_anti_dos_threshold: Anti-DOS Threshold, Attribute conditional on `connection_type_ssl` being equal to `false` - Range: `10`-`1000` - Default
                value: `100`
         :param pulumi.Input[builtins.str] ikev2_anti_dos_threshold_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
@@ -112,6 +112,7 @@ class SystemRemoteAccessFeatureArgs:
         :param pulumi.Input[builtins.str] psk_authentication_type_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
         :param pulumi.Input[builtins.str] radius_group_name_variable: Variable name
         """
+        pulumi.set(__self__, "feature_profile_id", feature_profile_id)
         pulumi.set(__self__, "radius_group_name", radius_group_name)
         if aaa_derive_name_from_peer_domain is not None:
             pulumi.set(__self__, "aaa_derive_name_from_peer_domain", aaa_derive_name_from_peer_domain)
@@ -143,8 +144,6 @@ class SystemRemoteAccessFeatureArgs:
             pulumi.set(__self__, "enable_certificate_list_check", enable_certificate_list_check)
         if enable_certificate_list_check_variable is not None:
             pulumi.set(__self__, "enable_certificate_list_check_variable", enable_certificate_list_check_variable)
-        if feature_profile_id is not None:
-            pulumi.set(__self__, "feature_profile_id", feature_profile_id)
         if ikev2_anti_dos_threshold is not None:
             pulumi.set(__self__, "ikev2_anti_dos_threshold", ikev2_anti_dos_threshold)
         if ikev2_anti_dos_threshold_variable is not None:
@@ -197,6 +196,18 @@ class SystemRemoteAccessFeatureArgs:
             pulumi.set(__self__, "psk_authentication_type_variable", psk_authentication_type_variable)
         if radius_group_name_variable is not None:
             pulumi.set(__self__, "radius_group_name_variable", radius_group_name_variable)
+
+    @property
+    @pulumi.getter(name="featureProfileId")
+    def feature_profile_id(self) -> pulumi.Input[builtins.str]:
+        """
+        Feature Profile ID
+        """
+        return pulumi.get(self, "feature_profile_id")
+
+    @feature_profile_id.setter
+    def feature_profile_id(self, value: pulumi.Input[builtins.str]):
+        pulumi.set(self, "feature_profile_id", value)
 
     @property
     @pulumi.getter(name="radiusGroupName")
@@ -380,18 +391,6 @@ class SystemRemoteAccessFeatureArgs:
     @enable_certificate_list_check_variable.setter
     def enable_certificate_list_check_variable(self, value: Optional[pulumi.Input[builtins.str]]):
         pulumi.set(self, "enable_certificate_list_check_variable", value)
-
-    @property
-    @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[builtins.str]]:
-        """
-        Feature Profile ID
-        """
-        return pulumi.get(self, "feature_profile_id")
-
-    @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[builtins.str]]):
-        pulumi.set(self, "feature_profile_id", value)
 
     @property
     @pulumi.getter(name="ikev2AntiDosThreshold")
@@ -1508,6 +1507,8 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         Expected import identifier with the format: "system_remote_access_feature_id,feature_profile_id"
 
         ```sh
@@ -1603,6 +1604,8 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         Expected import identifier with the format: "system_remote_access_feature_id,feature_profile_id"
 
         ```sh
@@ -1691,6 +1694,8 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
             __props__.__dict__["description"] = description
             __props__.__dict__["enable_certificate_list_check"] = enable_certificate_list_check
             __props__.__dict__["enable_certificate_list_check_variable"] = enable_certificate_list_check_variable
+            if feature_profile_id is None and not opts.urn:
+                raise TypeError("Missing required property 'feature_profile_id'")
             __props__.__dict__["feature_profile_id"] = feature_profile_id
             __props__.__dict__["ikev2_anti_dos_threshold"] = ikev2_anti_dos_threshold
             __props__.__dict__["ikev2_anti_dos_threshold_variable"] = ikev2_anti_dos_threshold_variable
@@ -1997,7 +2002,7 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> pulumi.Output[Optional[builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Output[builtins.str]:
         """
         Feature Profile ID
         """

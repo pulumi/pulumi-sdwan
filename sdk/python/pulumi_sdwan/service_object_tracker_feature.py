@@ -553,6 +553,8 @@ class ServiceObjectTrackerFeature(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         Expected import identifier with the format: "service_object_tracker_feature_id,feature_profile_id"
 
         ```sh
@@ -606,6 +608,8 @@ class ServiceObjectTrackerFeature(pulumi.CustomResource):
         ```
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         Expected import identifier with the format: "service_object_tracker_feature_id,feature_profile_id"
 

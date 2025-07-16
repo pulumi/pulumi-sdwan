@@ -7,6 +7,7 @@ import (
 	"context"
 	"reflect"
 
+	"errors"
 	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan/internal"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
@@ -15,6 +16,8 @@ import (
 //   - Minimum SD-WAN Manager version: `20.12.0`
 //
 // ## Import
+//
+// The `pulumi import` command can be used, for example:
 //
 // Expected import identifier with the format: "system_basic_feature_id,feature_profile_id"
 //
@@ -71,7 +74,7 @@ type SystemBasicFeature struct {
 	// Variable name
 	EnhancedAppAwareRoutingVariable pulumi.StringPtrOutput `pulumi:"enhancedAppAwareRoutingVariable"`
 	// Feature Profile ID
-	FeatureProfileId pulumi.StringPtrOutput `pulumi:"featureProfileId"`
+	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
 	// Enable Geo fencing - Default value: `false`
 	GpsGeoFencingEnable pulumi.BoolPtrOutput `pulumi:"gpsGeoFencingEnable"`
 	// Set the device’s geo fencing range - Range: `100`-`10000` - Default value: `100`
@@ -233,9 +236,12 @@ type SystemBasicFeature struct {
 func NewSystemBasicFeature(ctx *pulumi.Context,
 	name string, args *SystemBasicFeatureArgs, opts ...pulumi.ResourceOption) (*SystemBasicFeature, error) {
 	if args == nil {
-		args = &SystemBasicFeatureArgs{}
+		return nil, errors.New("missing one or more required arguments")
 	}
 
+	if args.FeatureProfileId == nil {
+		return nil, errors.New("invalid value for required argument 'FeatureProfileId'")
+	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource SystemBasicFeature
 	err := ctx.RegisterResource("sdwan:index/systemBasicFeature:SystemBasicFeature", name, args, &resource, opts...)
@@ -722,7 +728,7 @@ type systemBasicFeatureArgs struct {
 	// Variable name
 	EnhancedAppAwareRoutingVariable *string `pulumi:"enhancedAppAwareRoutingVariable"`
 	// Feature Profile ID
-	FeatureProfileId *string `pulumi:"featureProfileId"`
+	FeatureProfileId string `pulumi:"featureProfileId"`
 	// Enable Geo fencing - Default value: `false`
 	GpsGeoFencingEnable *bool `pulumi:"gpsGeoFencingEnable"`
 	// Set the device’s geo fencing range - Range: `100`-`10000` - Default value: `100`
@@ -927,7 +933,7 @@ type SystemBasicFeatureArgs struct {
 	// Variable name
 	EnhancedAppAwareRoutingVariable pulumi.StringPtrInput
 	// Feature Profile ID
-	FeatureProfileId pulumi.StringPtrInput
+	FeatureProfileId pulumi.StringInput
 	// Enable Geo fencing - Default value: `false`
 	GpsGeoFencingEnable pulumi.BoolPtrInput
 	// Set the device’s geo fencing range - Range: `100`-`10000` - Default value: `100`
@@ -1283,8 +1289,8 @@ func (o SystemBasicFeatureOutput) EnhancedAppAwareRoutingVariable() pulumi.Strin
 }
 
 // Feature Profile ID
-func (o SystemBasicFeatureOutput) FeatureProfileId() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *SystemBasicFeature) pulumi.StringPtrOutput { return v.FeatureProfileId }).(pulumi.StringPtrOutput)
+func (o SystemBasicFeatureOutput) FeatureProfileId() pulumi.StringOutput {
+	return o.ApplyT(func(v *SystemBasicFeature) pulumi.StringOutput { return v.FeatureProfileId }).(pulumi.StringOutput)
 }
 
 // Enable Geo fencing - Default value: `false`

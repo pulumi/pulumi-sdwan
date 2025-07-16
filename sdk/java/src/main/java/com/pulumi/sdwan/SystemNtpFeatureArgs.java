@@ -5,6 +5,7 @@ package com.pulumi.sdwan;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.sdwan.inputs.SystemNtpFeatureAuthenticationKeyArgs;
 import com.pulumi.sdwan.inputs.SystemNtpFeatureServerArgs;
 import java.lang.Boolean;
@@ -84,15 +85,15 @@ public final class SystemNtpFeatureArgs extends com.pulumi.resources.ResourceArg
      * Feature Profile ID
      * 
      */
-    @Import(name="featureProfileId")
-    private @Nullable Output<String> featureProfileId;
+    @Import(name="featureProfileId", required=true)
+    private Output<String> featureProfileId;
 
     /**
      * @return Feature Profile ID
      * 
      */
-    public Optional<Output<String>> featureProfileId() {
-        return Optional.ofNullable(this.featureProfileId);
+    public Output<String> featureProfileId() {
+        return this.featureProfileId;
     }
 
     /**
@@ -351,7 +352,7 @@ public final class SystemNtpFeatureArgs extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder featureProfileId(@Nullable Output<String> featureProfileId) {
+        public Builder featureProfileId(Output<String> featureProfileId) {
             $.featureProfileId = featureProfileId;
             return this;
         }
@@ -555,6 +556,9 @@ public final class SystemNtpFeatureArgs extends com.pulumi.resources.ResourceArg
         }
 
         public SystemNtpFeatureArgs build() {
+            if ($.featureProfileId == null) {
+                throw new MissingRequiredPropertyException("SystemNtpFeatureArgs", "featureProfileId");
+            }
             return $;
         }
     }

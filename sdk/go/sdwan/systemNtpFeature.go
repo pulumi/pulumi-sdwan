@@ -7,6 +7,7 @@ import (
 	"context"
 	"reflect"
 
+	"errors"
 	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan/internal"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
@@ -15,6 +16,8 @@ import (
 //   - Minimum SD-WAN Manager version: `20.12.0`
 //
 // ## Import
+//
+// The `pulumi import` command can be used, for example:
 //
 // Expected import identifier with the format: "system_ntp_feature_id,feature_profile_id"
 //
@@ -33,7 +36,7 @@ type SystemNtpFeature struct {
 	// The description of the Feature
 	Description pulumi.StringPtrOutput `pulumi:"description"`
 	// Feature Profile ID
-	FeatureProfileId pulumi.StringPtrOutput `pulumi:"featureProfileId"`
+	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
 	// The name of the Feature
 	Name pulumi.StringOutput `pulumi:"name"`
 	// Configure NTP servers
@@ -58,9 +61,12 @@ type SystemNtpFeature struct {
 func NewSystemNtpFeature(ctx *pulumi.Context,
 	name string, args *SystemNtpFeatureArgs, opts ...pulumi.ResourceOption) (*SystemNtpFeature, error) {
 	if args == nil {
-		args = &SystemNtpFeatureArgs{}
+		return nil, errors.New("missing one or more required arguments")
 	}
 
+	if args.FeatureProfileId == nil {
+		return nil, errors.New("invalid value for required argument 'FeatureProfileId'")
+	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource SystemNtpFeature
 	err := ctx.RegisterResource("sdwan:index/systemNtpFeature:SystemNtpFeature", name, args, &resource, opts...)
@@ -159,7 +165,7 @@ type systemNtpFeatureArgs struct {
 	// The description of the Feature
 	Description *string `pulumi:"description"`
 	// Feature Profile ID
-	FeatureProfileId *string `pulumi:"featureProfileId"`
+	FeatureProfileId string `pulumi:"featureProfileId"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
 	// Configure NTP servers
@@ -189,7 +195,7 @@ type SystemNtpFeatureArgs struct {
 	// The description of the Feature
 	Description pulumi.StringPtrInput
 	// Feature Profile ID
-	FeatureProfileId pulumi.StringPtrInput
+	FeatureProfileId pulumi.StringInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
 	// Configure NTP servers
@@ -316,8 +322,8 @@ func (o SystemNtpFeatureOutput) Description() pulumi.StringPtrOutput {
 }
 
 // Feature Profile ID
-func (o SystemNtpFeatureOutput) FeatureProfileId() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *SystemNtpFeature) pulumi.StringPtrOutput { return v.FeatureProfileId }).(pulumi.StringPtrOutput)
+func (o SystemNtpFeatureOutput) FeatureProfileId() pulumi.StringOutput {
+	return o.ApplyT(func(v *SystemNtpFeature) pulumi.StringOutput { return v.FeatureProfileId }).(pulumi.StringOutput)
 }
 
 // The name of the Feature

@@ -17,6 +17,8 @@ import (
 //
 // ## Import
 //
+// The `pulumi import` command can be used, for example:
+//
 // Expected import identifier with the format: "service_multicast_feature_id,feature_profile_id"
 //
 // ```sh
@@ -36,7 +38,7 @@ type ServiceMulticastFeature struct {
 	// Variable name
 	EnableAutoRpVariable pulumi.StringPtrOutput `pulumi:"enableAutoRpVariable"`
 	// Feature Profile ID
-	FeatureProfileId pulumi.StringPtrOutput `pulumi:"featureProfileId"`
+	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
 	// Set IGMP interface parameters
 	IgmpInterfaces ServiceMulticastFeatureIgmpInterfaceArrayOutput `pulumi:"igmpInterfaces"`
 	// Replicator is local to this device - Default value: `false`
@@ -92,6 +94,9 @@ func NewServiceMulticastFeature(ctx *pulumi.Context,
 		return nil, errors.New("missing one or more required arguments")
 	}
 
+	if args.FeatureProfileId == nil {
+		return nil, errors.New("invalid value for required argument 'FeatureProfileId'")
+	}
 	if args.PimSourceSpecificMulticastEnable == nil {
 		return nil, errors.New("invalid value for required argument 'PimSourceSpecificMulticastEnable'")
 	}
@@ -255,7 +260,7 @@ type serviceMulticastFeatureArgs struct {
 	// Variable name
 	EnableAutoRpVariable *string `pulumi:"enableAutoRpVariable"`
 	// Feature Profile ID
-	FeatureProfileId *string `pulumi:"featureProfileId"`
+	FeatureProfileId string `pulumi:"featureProfileId"`
 	// Set IGMP interface parameters
 	IgmpInterfaces []ServiceMulticastFeatureIgmpInterface `pulumi:"igmpInterfaces"`
 	// Replicator is local to this device - Default value: `false`
@@ -315,7 +320,7 @@ type ServiceMulticastFeatureArgs struct {
 	// Variable name
 	EnableAutoRpVariable pulumi.StringPtrInput
 	// Feature Profile ID
-	FeatureProfileId pulumi.StringPtrInput
+	FeatureProfileId pulumi.StringInput
 	// Set IGMP interface parameters
 	IgmpInterfaces ServiceMulticastFeatureIgmpInterfaceArrayInput
 	// Replicator is local to this device - Default value: `false`
@@ -479,8 +484,8 @@ func (o ServiceMulticastFeatureOutput) EnableAutoRpVariable() pulumi.StringPtrOu
 }
 
 // Feature Profile ID
-func (o ServiceMulticastFeatureOutput) FeatureProfileId() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *ServiceMulticastFeature) pulumi.StringPtrOutput { return v.FeatureProfileId }).(pulumi.StringPtrOutput)
+func (o ServiceMulticastFeatureOutput) FeatureProfileId() pulumi.StringOutput {
+	return o.ApplyT(func(v *ServiceMulticastFeature) pulumi.StringOutput { return v.FeatureProfileId }).(pulumi.StringOutput)
 }
 
 // Set IGMP interface parameters

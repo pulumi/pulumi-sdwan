@@ -173,18 +173,16 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
 
     /**
      * DSCP value, Attribute conditional on `type` being equal to `dscp`
-     *   - Range: `0`-`63`
      * 
      */
     @Import(name="dscp")
-    private @Nullable Output<Integer> dscp;
+    private @Nullable Output<String> dscp;
 
     /**
      * @return DSCP value, Attribute conditional on `type` being equal to `dscp`
-     *   - Range: `0`-`63`
      * 
      */
-    public Optional<Output<Integer>> dscp() {
+    public Optional<Output<String>> dscp() {
         return Optional.ofNullable(this.dscp);
     }
 
@@ -624,24 +622,22 @@ public final class TrafficDataPolicyDefinitionSequenceMatchEntryArgs extends com
 
         /**
          * @param dscp DSCP value, Attribute conditional on `type` being equal to `dscp`
-         *   - Range: `0`-`63`
          * 
          * @return builder
          * 
          */
-        public Builder dscp(@Nullable Output<Integer> dscp) {
+        public Builder dscp(@Nullable Output<String> dscp) {
             $.dscp = dscp;
             return this;
         }
 
         /**
          * @param dscp DSCP value, Attribute conditional on `type` being equal to `dscp`
-         *   - Range: `0`-`63`
          * 
          * @return builder
          * 
          */
-        public Builder dscp(Integer dscp) {
+        public Builder dscp(String dscp) {
             return dscp(Output.of(dscp));
         }
 

@@ -53,6 +53,8 @@ import * as utilities from "./utilities";
  *
  * ## Import
  *
+ * The `pulumi import` command can be used, for example:
+ *
  * Expected import identifier with the format: "service_lan_vpn_interface_ipsec_feature_id,feature_profile_id,service_lan_vpn_feature_id"
  *
  * ```sh
@@ -271,7 +273,7 @@ export class ServiceLanVpnInterfaceIpsecFeature extends pulumi.CustomResource {
     /**
      * Service LAN VPN Feature ID
      */
-    public readonly serviceLanVpnFeatureId!: pulumi.Output<string | undefined>;
+    public readonly serviceLanVpnFeatureId!: pulumi.Output<string>;
     /**
      * Administrative state - Default value: `true`
      */
@@ -432,6 +434,9 @@ export class ServiceLanVpnInterfaceIpsecFeature extends pulumi.CustomResource {
             const args = argsOrState as ServiceLanVpnInterfaceIpsecFeatureArgs | undefined;
             if ((!args || args.featureProfileId === undefined) && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
+            }
+            if ((!args || args.serviceLanVpnFeatureId === undefined) && !opts.urn) {
+                throw new Error("Missing required property 'serviceLanVpnFeatureId'");
             }
             if ((!args || args.tunnelDestinationIpv4SubnetMask === undefined) && !opts.urn) {
                 throw new Error("Missing required property 'tunnelDestinationIpv4SubnetMask'");
@@ -963,7 +968,7 @@ export interface ServiceLanVpnInterfaceIpsecFeatureArgs {
     /**
      * Service LAN VPN Feature ID
      */
-    serviceLanVpnFeatureId?: pulumi.Input<string>;
+    serviceLanVpnFeatureId: pulumi.Input<string>;
     /**
      * Administrative state - Default value: `true`
      */

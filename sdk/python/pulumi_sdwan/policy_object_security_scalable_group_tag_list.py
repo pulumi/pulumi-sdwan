@@ -186,6 +186,8 @@ class PolicyObjectSecurityScalableGroupTagList(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         Expected import identifier with the format: "policy_object_security_scalable_group_tag_list_id,feature_profile_id"
 
         ```sh
@@ -209,6 +211,8 @@ class PolicyObjectSecurityScalableGroupTagList(pulumi.CustomResource):
           - Minimum SD-WAN Manager version: `20.12.0`
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         Expected import identifier with the format: "policy_object_security_scalable_group_tag_list_id,feature_profile_id"
 

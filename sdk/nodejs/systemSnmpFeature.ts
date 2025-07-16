@@ -12,6 +12,8 @@ import * as utilities from "./utilities";
  *
  * ## Import
  *
+ * The `pulumi import` command can be used, for example:
+ *
  * Expected import identifier with the format: "system_snmp_feature_id,feature_profile_id"
  *
  * ```sh
@@ -65,7 +67,7 @@ export class SystemSnmpFeature extends pulumi.CustomResource {
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string | undefined>;
+    public readonly featureProfileId!: pulumi.Output<string>;
     /**
      * Configure an SNMP group
      */
@@ -114,7 +116,7 @@ export class SystemSnmpFeature extends pulumi.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param opts A bag of options that control this resource's behavior.
      */
-    constructor(name: string, args?: SystemSnmpFeatureArgs, opts?: pulumi.CustomResourceOptions)
+    constructor(name: string, args: SystemSnmpFeatureArgs, opts?: pulumi.CustomResourceOptions)
     constructor(name: string, argsOrState?: SystemSnmpFeatureArgs | SystemSnmpFeatureState, opts?: pulumi.CustomResourceOptions) {
         let resourceInputs: pulumi.Inputs = {};
         opts = opts || {};
@@ -137,6 +139,9 @@ export class SystemSnmpFeature extends pulumi.CustomResource {
             resourceInputs["views"] = state ? state.views : undefined;
         } else {
             const args = argsOrState as SystemSnmpFeatureArgs | undefined;
+            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+                throw new Error("Missing required property 'featureProfileId'");
+            }
             resourceInputs["communities"] = args ? args.communities : undefined;
             resourceInputs["contactPerson"] = args ? args.contactPerson : undefined;
             resourceInputs["contactPersonVariable"] = args ? args.contactPersonVariable : undefined;
@@ -247,7 +252,7 @@ export interface SystemSnmpFeatureArgs {
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId: pulumi.Input<string>;
     /**
      * Configure an SNMP group
      */

@@ -12,6 +12,8 @@ import * as utilities from "./utilities";
  *
  * ## Import
  *
+ * The `pulumi import` command can be used, for example:
+ *
  * Expected import identifier with the format: "transport_management_vpn_interface_ethernet_feature_id,feature_profile_id,transport_management_vpn_feature_id"
  *
  * ```sh
@@ -85,7 +87,7 @@ export class TransportManagementVpnInterfaceEthernetFeature extends pulumi.Custo
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string | undefined>;
+    public readonly featureProfileId!: pulumi.Output<string>;
     /**
      * ICMP/ICMPv6 Redirect Disable - Default value: `true`
      */
@@ -258,7 +260,7 @@ export class TransportManagementVpnInterfaceEthernetFeature extends pulumi.Custo
     /**
      * Transport Management VPN Feature ID
      */
-    public readonly transportManagementVpnFeatureId!: pulumi.Output<string | undefined>;
+    public readonly transportManagementVpnFeatureId!: pulumi.Output<string>;
     /**
      * The version of the Feature
      */
@@ -271,7 +273,7 @@ export class TransportManagementVpnInterfaceEthernetFeature extends pulumi.Custo
      * @param args The arguments to use to populate this resource's properties.
      * @param opts A bag of options that control this resource's behavior.
      */
-    constructor(name: string, args?: TransportManagementVpnInterfaceEthernetFeatureArgs, opts?: pulumi.CustomResourceOptions)
+    constructor(name: string, args: TransportManagementVpnInterfaceEthernetFeatureArgs, opts?: pulumi.CustomResourceOptions)
     constructor(name: string, argsOrState?: TransportManagementVpnInterfaceEthernetFeatureArgs | TransportManagementVpnInterfaceEthernetFeatureState, opts?: pulumi.CustomResourceOptions) {
         let resourceInputs: pulumi.Inputs = {};
         opts = opts || {};
@@ -333,6 +335,12 @@ export class TransportManagementVpnInterfaceEthernetFeature extends pulumi.Custo
             resourceInputs["version"] = state ? state.version : undefined;
         } else {
             const args = argsOrState as TransportManagementVpnInterfaceEthernetFeatureArgs | undefined;
+            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+                throw new Error("Missing required property 'featureProfileId'");
+            }
+            if ((!args || args.transportManagementVpnFeatureId === undefined) && !opts.urn) {
+                throw new Error("Missing required property 'transportManagementVpnFeatureId'");
+            }
             resourceInputs["arpEntries"] = args ? args.arpEntries : undefined;
             resourceInputs["arpTimeout"] = args ? args.arpTimeout : undefined;
             resourceInputs["arpTimeoutVariable"] = args ? args.arpTimeoutVariable : undefined;
@@ -659,7 +667,7 @@ export interface TransportManagementVpnInterfaceEthernetFeatureArgs {
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId: pulumi.Input<string>;
     /**
      * ICMP/ICMPv6 Redirect Disable - Default value: `true`
      */
@@ -832,5 +840,5 @@ export interface TransportManagementVpnInterfaceEthernetFeatureArgs {
     /**
      * Transport Management VPN Feature ID
      */
-    transportManagementVpnFeatureId?: pulumi.Input<string>;
+    transportManagementVpnFeatureId: pulumi.Input<string>;
 }

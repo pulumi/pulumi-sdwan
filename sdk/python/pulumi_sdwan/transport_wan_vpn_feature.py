@@ -22,10 +22,10 @@ __all__ = ['TransportWanVpnFeatureArgs', 'TransportWanVpnFeature']
 @pulumi.input_type
 class TransportWanVpnFeatureArgs:
     def __init__(__self__, *,
+                 feature_profile_id: pulumi.Input[builtins.str],
                  description: Optional[pulumi.Input[builtins.str]] = None,
                  enhance_ecmp_keying: Optional[pulumi.Input[builtins.bool]] = None,
                  enhance_ecmp_keying_variable: Optional[pulumi.Input[builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[builtins.str]] = None,
                  ipv4_static_routes: Optional[pulumi.Input[Sequence[pulumi.Input['TransportWanVpnFeatureIpv4StaticRouteArgs']]]] = None,
                  ipv6_static_routes: Optional[pulumi.Input[Sequence[pulumi.Input['TransportWanVpnFeatureIpv6StaticRouteArgs']]]] = None,
                  name: Optional[pulumi.Input[builtins.str]] = None,
@@ -43,10 +43,10 @@ class TransportWanVpnFeatureArgs:
                  vpn: Optional[pulumi.Input[builtins.int]] = None):
         """
         The set of arguments for constructing a TransportWanVpnFeature resource.
+        :param pulumi.Input[builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[builtins.str] description: The description of the Feature
         :param pulumi.Input[builtins.bool] enhance_ecmp_keying: Enhance ECMP Keying - Default value: `false`
         :param pulumi.Input[builtins.str] enhance_ecmp_keying_variable: Variable name
-        :param pulumi.Input[builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[Sequence[pulumi.Input['TransportWanVpnFeatureIpv4StaticRouteArgs']]] ipv4_static_routes: IPv4 Static Route
         :param pulumi.Input[Sequence[pulumi.Input['TransportWanVpnFeatureIpv6StaticRouteArgs']]] ipv6_static_routes: IPv6 Static Route
         :param pulumi.Input[builtins.str] name: The name of the Feature
@@ -62,14 +62,13 @@ class TransportWanVpnFeatureArgs:
         :param pulumi.Input[Sequence[pulumi.Input['TransportWanVpnFeatureServiceArgs']]] services: Service
         :param pulumi.Input[builtins.int] vpn: VPN - Default value: `0`
         """
+        pulumi.set(__self__, "feature_profile_id", feature_profile_id)
         if description is not None:
             pulumi.set(__self__, "description", description)
         if enhance_ecmp_keying is not None:
             pulumi.set(__self__, "enhance_ecmp_keying", enhance_ecmp_keying)
         if enhance_ecmp_keying_variable is not None:
             pulumi.set(__self__, "enhance_ecmp_keying_variable", enhance_ecmp_keying_variable)
-        if feature_profile_id is not None:
-            pulumi.set(__self__, "feature_profile_id", feature_profile_id)
         if ipv4_static_routes is not None:
             pulumi.set(__self__, "ipv4_static_routes", ipv4_static_routes)
         if ipv6_static_routes is not None:
@@ -100,6 +99,18 @@ class TransportWanVpnFeatureArgs:
             pulumi.set(__self__, "services", services)
         if vpn is not None:
             pulumi.set(__self__, "vpn", vpn)
+
+    @property
+    @pulumi.getter(name="featureProfileId")
+    def feature_profile_id(self) -> pulumi.Input[builtins.str]:
+        """
+        Feature Profile ID
+        """
+        return pulumi.get(self, "feature_profile_id")
+
+    @feature_profile_id.setter
+    def feature_profile_id(self, value: pulumi.Input[builtins.str]):
+        pulumi.set(self, "feature_profile_id", value)
 
     @property
     @pulumi.getter
@@ -136,18 +147,6 @@ class TransportWanVpnFeatureArgs:
     @enhance_ecmp_keying_variable.setter
     def enhance_ecmp_keying_variable(self, value: Optional[pulumi.Input[builtins.str]]):
         pulumi.set(self, "enhance_ecmp_keying_variable", value)
-
-    @property
-    @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[builtins.str]]:
-        """
-        Feature Profile ID
-        """
-        return pulumi.get(self, "feature_profile_id")
-
-    @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[builtins.str]]):
-        pulumi.set(self, "feature_profile_id", value)
 
     @property
     @pulumi.getter(name="ipv4StaticRoutes")
@@ -683,6 +682,8 @@ class TransportWanVpnFeature(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         Expected import identifier with the format: "transport_wan_vpn_feature_id,feature_profile_id"
 
         ```sh
@@ -714,13 +715,15 @@ class TransportWanVpnFeature(pulumi.CustomResource):
     @overload
     def __init__(__self__,
                  resource_name: str,
-                 args: Optional[TransportWanVpnFeatureArgs] = None,
+                 args: TransportWanVpnFeatureArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a Transport WAN VPN Feature.
           - Minimum SD-WAN Manager version: `20.12.0`
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         Expected import identifier with the format: "transport_wan_vpn_feature_id,feature_profile_id"
 
@@ -774,6 +777,8 @@ class TransportWanVpnFeature(pulumi.CustomResource):
             __props__.__dict__["description"] = description
             __props__.__dict__["enhance_ecmp_keying"] = enhance_ecmp_keying
             __props__.__dict__["enhance_ecmp_keying_variable"] = enhance_ecmp_keying_variable
+            if feature_profile_id is None and not opts.urn:
+                raise TypeError("Missing required property 'feature_profile_id'")
             __props__.__dict__["feature_profile_id"] = feature_profile_id
             __props__.__dict__["ipv4_static_routes"] = ipv4_static_routes
             __props__.__dict__["ipv6_static_routes"] = ipv6_static_routes
@@ -900,7 +905,7 @@ class TransportWanVpnFeature(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> pulumi.Output[Optional[builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Output[builtins.str]:
         """
         Feature Profile ID
         """

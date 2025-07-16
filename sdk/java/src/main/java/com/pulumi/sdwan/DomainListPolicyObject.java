@@ -60,6 +60,8 @@ import javax.annotation.Nullable;
  * 
  * ## Import
  * 
+ * The `pulumi import` command can be used, for example:
+ * 
  * ```sh
  * $ pulumi import sdwan:index/domainListPolicyObject:DomainListPolicyObject example &#34;f6b2c44c-693c-4763-b010-895aa3d236bd&#34;
  * ```

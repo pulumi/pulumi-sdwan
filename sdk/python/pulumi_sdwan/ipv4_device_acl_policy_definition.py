@@ -209,6 +209,8 @@ class Ipv4DeviceAclPolicyDefinition(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         ```sh
         $ pulumi import sdwan:index/ipv4DeviceAclPolicyDefinition:Ipv4DeviceAclPolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
@@ -230,6 +232,8 @@ class Ipv4DeviceAclPolicyDefinition(pulumi.CustomResource):
         This resource can manage a IPv4 Device ACL Policy Definition .
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         ```sh
         $ pulumi import sdwan:index/ipv4DeviceAclPolicyDefinition:Ipv4DeviceAclPolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"

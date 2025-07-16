@@ -23,6 +23,7 @@ __all__ = ['TransportWanVpnInterfaceT1E1SerialFeatureArgs', 'TransportWanVpnInte
 class TransportWanVpnInterfaceT1E1SerialFeatureArgs:
     def __init__(__self__, *,
                  feature_profile_id: pulumi.Input[builtins.str],
+                 transport_wan_vpn_feature_id: pulumi.Input[builtins.str],
                  acl_ipv4_egress_feature_id: Optional[pulumi.Input[builtins.str]] = None,
                  acl_ipv4_ingress_feature_id: Optional[pulumi.Input[builtins.str]] = None,
                  acl_ipv6_egress_feature_id: Optional[pulumi.Input[builtins.str]] = None,
@@ -61,7 +62,6 @@ class TransportWanVpnInterfaceT1E1SerialFeatureArgs:
                  tcp_mss_variable: Optional[pulumi.Input[builtins.str]] = None,
                  tloc_extension: Optional[pulumi.Input[builtins.str]] = None,
                  tloc_extension_variable: Optional[pulumi.Input[builtins.str]] = None,
-                 transport_wan_vpn_feature_id: Optional[pulumi.Input[builtins.str]] = None,
                  tunnel_interface: Optional[pulumi.Input[builtins.bool]] = None,
                  tunnel_interface_allow_all: Optional[pulumi.Input[builtins.bool]] = None,
                  tunnel_interface_allow_all_variable: Optional[pulumi.Input[builtins.str]] = None,
@@ -133,6 +133,7 @@ class TransportWanVpnInterfaceT1E1SerialFeatureArgs:
         """
         The set of arguments for constructing a TransportWanVpnInterfaceT1E1SerialFeature resource.
         :param pulumi.Input[builtins.str] feature_profile_id: Feature Profile ID
+        :param pulumi.Input[builtins.str] transport_wan_vpn_feature_id: Transport WAN VPN Feature ID
         :param pulumi.Input[builtins.int] bandwidth: Interface bandwidth capacity, in kbps - Range: `1`-`200000000`
         :param pulumi.Input[builtins.int] bandwidth_downstream: Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
         :param pulumi.Input[builtins.str] bandwidth_downstream_variable: Variable name
@@ -172,7 +173,6 @@ class TransportWanVpnInterfaceT1E1SerialFeatureArgs:
         :param pulumi.Input[builtins.str] tcp_mss_variable: Variable name
         :param pulumi.Input[builtins.str] tloc_extension: Extends a local TLOC to a remote node only for vpn 0
         :param pulumi.Input[builtins.str] tloc_extension_variable: Variable name
-        :param pulumi.Input[builtins.str] transport_wan_vpn_feature_id: Transport WAN VPN Feature ID
         :param pulumi.Input[builtins.bool] tunnel_interface: Tunnel Interface - Default value: `false`
         :param pulumi.Input[builtins.bool] tunnel_interface_allow_all: Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
         :param pulumi.Input[builtins.str] tunnel_interface_allow_all_variable: Variable name
@@ -246,6 +246,7 @@ class TransportWanVpnInterfaceT1E1SerialFeatureArgs:
         :param pulumi.Input[builtins.str] tunnel_qos_mode_variable: Variable name
         """
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
+        pulumi.set(__self__, "transport_wan_vpn_feature_id", transport_wan_vpn_feature_id)
         if acl_ipv4_egress_feature_id is not None:
             pulumi.set(__self__, "acl_ipv4_egress_feature_id", acl_ipv4_egress_feature_id)
         if acl_ipv4_ingress_feature_id is not None:
@@ -322,8 +323,6 @@ class TransportWanVpnInterfaceT1E1SerialFeatureArgs:
             pulumi.set(__self__, "tloc_extension", tloc_extension)
         if tloc_extension_variable is not None:
             pulumi.set(__self__, "tloc_extension_variable", tloc_extension_variable)
-        if transport_wan_vpn_feature_id is not None:
-            pulumi.set(__self__, "transport_wan_vpn_feature_id", transport_wan_vpn_feature_id)
         if tunnel_interface is not None:
             pulumi.set(__self__, "tunnel_interface", tunnel_interface)
         if tunnel_interface_allow_all is not None:
@@ -472,6 +471,18 @@ class TransportWanVpnInterfaceT1E1SerialFeatureArgs:
     @feature_profile_id.setter
     def feature_profile_id(self, value: pulumi.Input[builtins.str]):
         pulumi.set(self, "feature_profile_id", value)
+
+    @property
+    @pulumi.getter(name="transportWanVpnFeatureId")
+    def transport_wan_vpn_feature_id(self) -> pulumi.Input[builtins.str]:
+        """
+        Transport WAN VPN Feature ID
+        """
+        return pulumi.get(self, "transport_wan_vpn_feature_id")
+
+    @transport_wan_vpn_feature_id.setter
+    def transport_wan_vpn_feature_id(self, value: pulumi.Input[builtins.str]):
+        pulumi.set(self, "transport_wan_vpn_feature_id", value)
 
     @property
     @pulumi.getter(name="aclIpv4EgressFeatureId")
@@ -919,18 +930,6 @@ class TransportWanVpnInterfaceT1E1SerialFeatureArgs:
     @tloc_extension_variable.setter
     def tloc_extension_variable(self, value: Optional[pulumi.Input[builtins.str]]):
         pulumi.set(self, "tloc_extension_variable", value)
-
-    @property
-    @pulumi.getter(name="transportWanVpnFeatureId")
-    def transport_wan_vpn_feature_id(self) -> Optional[pulumi.Input[builtins.str]]:
-        """
-        Transport WAN VPN Feature ID
-        """
-        return pulumi.get(self, "transport_wan_vpn_feature_id")
-
-    @transport_wan_vpn_feature_id.setter
-    def transport_wan_vpn_feature_id(self, value: Optional[pulumi.Input[builtins.str]]):
-        pulumi.set(self, "transport_wan_vpn_feature_id", value)
 
     @property
     @pulumi.getter(name="tunnelInterface")
@@ -3692,6 +3691,8 @@ class TransportWanVpnInterfaceT1E1SerialFeature(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         Expected import identifier with the format: "transport_wan_vpn_interface_t1_e1_serial_feature_id,feature_profile_id,transport_wan_vpn_feature_id"
 
         ```sh
@@ -3894,6 +3895,8 @@ class TransportWanVpnInterfaceT1E1SerialFeature(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         Expected import identifier with the format: "transport_wan_vpn_interface_t1_e1_serial_feature_id,feature_profile_id,transport_wan_vpn_feature_id"
 
         ```sh
@@ -4073,6 +4076,8 @@ class TransportWanVpnInterfaceT1E1SerialFeature(pulumi.CustomResource):
             __props__.__dict__["tcp_mss_variable"] = tcp_mss_variable
             __props__.__dict__["tloc_extension"] = tloc_extension
             __props__.__dict__["tloc_extension_variable"] = tloc_extension_variable
+            if transport_wan_vpn_feature_id is None and not opts.urn:
+                raise TypeError("Missing required property 'transport_wan_vpn_feature_id'")
             __props__.__dict__["transport_wan_vpn_feature_id"] = transport_wan_vpn_feature_id
             __props__.__dict__["tunnel_interface"] = tunnel_interface
             __props__.__dict__["tunnel_interface_allow_all"] = tunnel_interface_allow_all
@@ -4803,7 +4808,7 @@ class TransportWanVpnInterfaceT1E1SerialFeature(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="transportWanVpnFeatureId")
-    def transport_wan_vpn_feature_id(self) -> pulumi.Output[Optional[builtins.str]]:
+    def transport_wan_vpn_feature_id(self) -> pulumi.Output[builtins.str]:
         """
         Transport WAN VPN Feature ID
         """

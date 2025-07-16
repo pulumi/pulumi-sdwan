@@ -896,15 +896,15 @@ public final class TransportWanVpnInterfaceCellularFeatureArgs extends com.pulum
      * Transport WAN VPN Feature ID
      * 
      */
-    @Import(name="transportWanVpnFeatureId")
-    private @Nullable Output<String> transportWanVpnFeatureId;
+    @Import(name="transportWanVpnFeatureId", required=true)
+    private Output<String> transportWanVpnFeatureId;
 
     /**
      * @return Transport WAN VPN Feature ID
      * 
      */
-    public Optional<Output<String>> transportWanVpnFeatureId() {
-        return Optional.ofNullable(this.transportWanVpnFeatureId);
+    public Output<String> transportWanVpnFeatureId() {
+        return this.transportWanVpnFeatureId;
     }
 
     /**
@@ -3357,7 +3357,7 @@ public final class TransportWanVpnInterfaceCellularFeatureArgs extends com.pulum
          * @return builder
          * 
          */
-        public Builder transportWanVpnFeatureId(@Nullable Output<String> transportWanVpnFeatureId) {
+        public Builder transportWanVpnFeatureId(Output<String> transportWanVpnFeatureId) {
             $.transportWanVpnFeatureId = transportWanVpnFeatureId;
             return this;
         }
@@ -4871,6 +4871,9 @@ public final class TransportWanVpnInterfaceCellularFeatureArgs extends com.pulum
         public TransportWanVpnInterfaceCellularFeatureArgs build() {
             if ($.featureProfileId == null) {
                 throw new MissingRequiredPropertyException("TransportWanVpnInterfaceCellularFeatureArgs", "featureProfileId");
+            }
+            if ($.transportWanVpnFeatureId == null) {
+                throw new MissingRequiredPropertyException("TransportWanVpnInterfaceCellularFeatureArgs", "transportWanVpnFeatureId");
             }
             return $;
         }

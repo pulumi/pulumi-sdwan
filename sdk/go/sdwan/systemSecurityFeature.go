@@ -7,6 +7,7 @@ import (
 	"context"
 	"reflect"
 
+	"errors"
 	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan/internal"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
@@ -15,6 +16,8 @@ import (
 //   - Minimum SD-WAN Manager version: `20.12.0`
 //
 // ## Import
+//
+// The `pulumi import` command can be used, for example:
 //
 // Expected import identifier with the format: "system_security_feature_id,feature_profile_id"
 //
@@ -36,7 +39,7 @@ type SystemSecurityFeature struct {
 	// Variable name
 	ExtendedAntiReplayWindowVariable pulumi.StringPtrOutput `pulumi:"extendedAntiReplayWindowVariable"`
 	// Feature Profile ID
-	FeatureProfileId pulumi.StringPtrOutput `pulumi:"featureProfileId"`
+	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
 	// Variable name
 	IntegrityTypeVariable pulumi.StringPtrOutput `pulumi:"integrityTypeVariable"`
 	// Set the authentication type for DTLS connections
@@ -63,9 +66,12 @@ type SystemSecurityFeature struct {
 func NewSystemSecurityFeature(ctx *pulumi.Context,
 	name string, args *SystemSecurityFeatureArgs, opts ...pulumi.ResourceOption) (*SystemSecurityFeature, error) {
 	if args == nil {
-		args = &SystemSecurityFeatureArgs{}
+		return nil, errors.New("missing one or more required arguments")
 	}
 
+	if args.FeatureProfileId == nil {
+		return nil, errors.New("invalid value for required argument 'FeatureProfileId'")
+	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource SystemSecurityFeature
 	err := ctx.RegisterResource("sdwan:index/systemSecurityFeature:SystemSecurityFeature", name, args, &resource, opts...)
@@ -177,7 +183,7 @@ type systemSecurityFeatureArgs struct {
 	// Variable name
 	ExtendedAntiReplayWindowVariable *string `pulumi:"extendedAntiReplayWindowVariable"`
 	// Feature Profile ID
-	FeatureProfileId *string `pulumi:"featureProfileId"`
+	FeatureProfileId string `pulumi:"featureProfileId"`
 	// Variable name
 	IntegrityTypeVariable *string `pulumi:"integrityTypeVariable"`
 	// Set the authentication type for DTLS connections
@@ -212,7 +218,7 @@ type SystemSecurityFeatureArgs struct {
 	// Variable name
 	ExtendedAntiReplayWindowVariable pulumi.StringPtrInput
 	// Feature Profile ID
-	FeatureProfileId pulumi.StringPtrInput
+	FeatureProfileId pulumi.StringInput
 	// Variable name
 	IntegrityTypeVariable pulumi.StringPtrInput
 	// Set the authentication type for DTLS connections
@@ -347,8 +353,8 @@ func (o SystemSecurityFeatureOutput) ExtendedAntiReplayWindowVariable() pulumi.S
 }
 
 // Feature Profile ID
-func (o SystemSecurityFeatureOutput) FeatureProfileId() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *SystemSecurityFeature) pulumi.StringPtrOutput { return v.FeatureProfileId }).(pulumi.StringPtrOutput)
+func (o SystemSecurityFeatureOutput) FeatureProfileId() pulumi.StringOutput {
+	return o.ApplyT(func(v *SystemSecurityFeature) pulumi.StringOutput { return v.FeatureProfileId }).(pulumi.StringOutput)
 }
 
 // Variable name

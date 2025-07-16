@@ -597,6 +597,8 @@ class GpsFeatureTemplate(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         ```sh
         $ pulumi import sdwan:index/gpsFeatureTemplate:GpsFeatureTemplate example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
@@ -650,6 +652,8 @@ class GpsFeatureTemplate(pulumi.CustomResource):
         ```
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         ```sh
         $ pulumi import sdwan:index/gpsFeatureTemplate:GpsFeatureTemplate example "f6b2c44c-693c-4763-b010-895aa3d236bd"

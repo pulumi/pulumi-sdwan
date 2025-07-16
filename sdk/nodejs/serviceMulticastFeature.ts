@@ -12,6 +12,8 @@ import * as utilities from "./utilities";
  *
  * ## Import
  *
+ * The `pulumi import` command can be used, for example:
+ *
  * Expected import identifier with the format: "service_multicast_feature_id,feature_profile_id"
  *
  * ```sh
@@ -69,7 +71,7 @@ export class ServiceMulticastFeature extends pulumi.CustomResource {
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string | undefined>;
+    public readonly featureProfileId!: pulumi.Output<string>;
     /**
      * Set IGMP interface parameters
      */
@@ -207,6 +209,9 @@ export class ServiceMulticastFeature extends pulumi.CustomResource {
             resourceInputs["version"] = state ? state.version : undefined;
         } else {
             const args = argsOrState as ServiceMulticastFeatureArgs | undefined;
+            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+                throw new Error("Missing required property 'featureProfileId'");
+            }
             if ((!args || args.pimSourceSpecificMulticastEnable === undefined) && !opts.urn) {
                 throw new Error("Missing required property 'pimSourceSpecificMulticastEnable'");
             }
@@ -394,7 +399,7 @@ export interface ServiceMulticastFeatureArgs {
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId: pulumi.Input<string>;
     /**
      * Set IGMP interface parameters
      */

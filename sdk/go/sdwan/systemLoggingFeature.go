@@ -7,6 +7,7 @@ import (
 	"context"
 	"reflect"
 
+	"errors"
 	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan/internal"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
@@ -15,6 +16,8 @@ import (
 //   - Minimum SD-WAN Manager version: `20.12.0`
 //
 // ## Import
+//
+// The `pulumi import` command can be used, for example:
 //
 // Expected import identifier with the format: "system_logging_feature_id,feature_profile_id"
 //
@@ -39,7 +42,7 @@ type SystemLoggingFeature struct {
 	// Variable name
 	DiskFileSizeVariable pulumi.StringPtrOutput `pulumi:"diskFileSizeVariable"`
 	// Feature Profile ID
-	FeatureProfileId pulumi.StringPtrOutput `pulumi:"featureProfileId"`
+	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
 	// Enable logging to remote server
 	Ipv4Servers SystemLoggingFeatureIpv4ServerArrayOutput `pulumi:"ipv4Servers"`
 	// Enable logging to remote ipv6 server
@@ -56,9 +59,12 @@ type SystemLoggingFeature struct {
 func NewSystemLoggingFeature(ctx *pulumi.Context,
 	name string, args *SystemLoggingFeatureArgs, opts ...pulumi.ResourceOption) (*SystemLoggingFeature, error) {
 	if args == nil {
-		args = &SystemLoggingFeatureArgs{}
+		return nil, errors.New("missing one or more required arguments")
 	}
 
+	if args.FeatureProfileId == nil {
+		return nil, errors.New("invalid value for required argument 'FeatureProfileId'")
+	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource SystemLoggingFeature
 	err := ctx.RegisterResource("sdwan:index/systemLoggingFeature:SystemLoggingFeature", name, args, &resource, opts...)
@@ -159,7 +165,7 @@ type systemLoggingFeatureArgs struct {
 	// Variable name
 	DiskFileSizeVariable *string `pulumi:"diskFileSizeVariable"`
 	// Feature Profile ID
-	FeatureProfileId *string `pulumi:"featureProfileId"`
+	FeatureProfileId string `pulumi:"featureProfileId"`
 	// Enable logging to remote server
 	Ipv4Servers []SystemLoggingFeatureIpv4Server `pulumi:"ipv4Servers"`
 	// Enable logging to remote ipv6 server
@@ -187,7 +193,7 @@ type SystemLoggingFeatureArgs struct {
 	// Variable name
 	DiskFileSizeVariable pulumi.StringPtrInput
 	// Feature Profile ID
-	FeatureProfileId pulumi.StringPtrInput
+	FeatureProfileId pulumi.StringInput
 	// Enable logging to remote server
 	Ipv4Servers SystemLoggingFeatureIpv4ServerArrayInput
 	// Enable logging to remote ipv6 server
@@ -321,8 +327,8 @@ func (o SystemLoggingFeatureOutput) DiskFileSizeVariable() pulumi.StringPtrOutpu
 }
 
 // Feature Profile ID
-func (o SystemLoggingFeatureOutput) FeatureProfileId() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *SystemLoggingFeature) pulumi.StringPtrOutput { return v.FeatureProfileId }).(pulumi.StringPtrOutput)
+func (o SystemLoggingFeatureOutput) FeatureProfileId() pulumi.StringOutput {
+	return o.ApplyT(func(v *SystemLoggingFeature) pulumi.StringOutput { return v.FeatureProfileId }).(pulumi.StringOutput)
 }
 
 // Enable logging to remote server

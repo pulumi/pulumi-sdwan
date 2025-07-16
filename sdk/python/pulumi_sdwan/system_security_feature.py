@@ -22,12 +22,12 @@ __all__ = ['SystemSecurityFeatureArgs', 'SystemSecurityFeature']
 @pulumi.input_type
 class SystemSecurityFeatureArgs:
     def __init__(__self__, *,
+                 feature_profile_id: pulumi.Input[builtins.str],
                  anti_replay_window: Optional[pulumi.Input[builtins.str]] = None,
                  anti_replay_window_variable: Optional[pulumi.Input[builtins.str]] = None,
                  description: Optional[pulumi.Input[builtins.str]] = None,
                  extended_anti_replay_window: Optional[pulumi.Input[builtins.int]] = None,
                  extended_anti_replay_window_variable: Optional[pulumi.Input[builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[builtins.str]] = None,
                  integrity_type_variable: Optional[pulumi.Input[builtins.str]] = None,
                  integrity_types: Optional[pulumi.Input[Sequence[pulumi.Input[builtins.str]]]] = None,
                  ipsec_pairwise_keying: Optional[pulumi.Input[builtins.bool]] = None,
@@ -39,13 +39,13 @@ class SystemSecurityFeatureArgs:
                  rekey_variable: Optional[pulumi.Input[builtins.str]] = None):
         """
         The set of arguments for constructing a SystemSecurityFeature resource.
+        :param pulumi.Input[builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[builtins.str] anti_replay_window: Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
                `512`
         :param pulumi.Input[builtins.str] anti_replay_window_variable: Variable name
         :param pulumi.Input[builtins.str] description: The description of the Feature
         :param pulumi.Input[builtins.int] extended_anti_replay_window: Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
         :param pulumi.Input[builtins.str] extended_anti_replay_window_variable: Variable name
-        :param pulumi.Input[builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[builtins.str] integrity_type_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[builtins.str]]] integrity_types: Set the authentication type for DTLS connections
         :param pulumi.Input[builtins.bool] ipsec_pairwise_keying: Enable or disable IPsec pairwise-keying - Default value: `false`
@@ -56,6 +56,7 @@ class SystemSecurityFeatureArgs:
         :param pulumi.Input[builtins.int] rekey: Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
         :param pulumi.Input[builtins.str] rekey_variable: Variable name
         """
+        pulumi.set(__self__, "feature_profile_id", feature_profile_id)
         if anti_replay_window is not None:
             pulumi.set(__self__, "anti_replay_window", anti_replay_window)
         if anti_replay_window_variable is not None:
@@ -66,8 +67,6 @@ class SystemSecurityFeatureArgs:
             pulumi.set(__self__, "extended_anti_replay_window", extended_anti_replay_window)
         if extended_anti_replay_window_variable is not None:
             pulumi.set(__self__, "extended_anti_replay_window_variable", extended_anti_replay_window_variable)
-        if feature_profile_id is not None:
-            pulumi.set(__self__, "feature_profile_id", feature_profile_id)
         if integrity_type_variable is not None:
             pulumi.set(__self__, "integrity_type_variable", integrity_type_variable)
         if integrity_types is not None:
@@ -86,6 +85,18 @@ class SystemSecurityFeatureArgs:
             pulumi.set(__self__, "rekey", rekey)
         if rekey_variable is not None:
             pulumi.set(__self__, "rekey_variable", rekey_variable)
+
+    @property
+    @pulumi.getter(name="featureProfileId")
+    def feature_profile_id(self) -> pulumi.Input[builtins.str]:
+        """
+        Feature Profile ID
+        """
+        return pulumi.get(self, "feature_profile_id")
+
+    @feature_profile_id.setter
+    def feature_profile_id(self, value: pulumi.Input[builtins.str]):
+        pulumi.set(self, "feature_profile_id", value)
 
     @property
     @pulumi.getter(name="antiReplayWindow")
@@ -147,18 +158,6 @@ class SystemSecurityFeatureArgs:
     @extended_anti_replay_window_variable.setter
     def extended_anti_replay_window_variable(self, value: Optional[pulumi.Input[builtins.str]]):
         pulumi.set(self, "extended_anti_replay_window_variable", value)
-
-    @property
-    @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[builtins.str]]:
-        """
-        Feature Profile ID
-        """
-        return pulumi.get(self, "feature_profile_id")
-
-    @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[builtins.str]]):
-        pulumi.set(self, "feature_profile_id", value)
 
     @property
     @pulumi.getter(name="integrityTypeVariable")
@@ -563,6 +562,8 @@ class SystemSecurityFeature(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         Expected import identifier with the format: "system_security_feature_id,feature_profile_id"
 
         ```sh
@@ -592,13 +593,15 @@ class SystemSecurityFeature(pulumi.CustomResource):
     @overload
     def __init__(__self__,
                  resource_name: str,
-                 args: Optional[SystemSecurityFeatureArgs] = None,
+                 args: SystemSecurityFeatureArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a System Security Feature.
           - Minimum SD-WAN Manager version: `20.12.0`
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         Expected import identifier with the format: "system_security_feature_id,feature_profile_id"
 
@@ -650,6 +653,8 @@ class SystemSecurityFeature(pulumi.CustomResource):
             __props__.__dict__["description"] = description
             __props__.__dict__["extended_anti_replay_window"] = extended_anti_replay_window
             __props__.__dict__["extended_anti_replay_window_variable"] = extended_anti_replay_window_variable
+            if feature_profile_id is None and not opts.urn:
+                raise TypeError("Missing required property 'feature_profile_id'")
             __props__.__dict__["feature_profile_id"] = feature_profile_id
             __props__.__dict__["integrity_type_variable"] = integrity_type_variable
             __props__.__dict__["integrity_types"] = integrity_types
@@ -777,7 +782,7 @@ class SystemSecurityFeature(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> pulumi.Output[Optional[builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Output[builtins.str]:
         """
         Feature Profile ID
         """

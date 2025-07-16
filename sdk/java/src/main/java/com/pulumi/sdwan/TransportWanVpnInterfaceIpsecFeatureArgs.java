@@ -780,15 +780,15 @@ public final class TransportWanVpnInterfaceIpsecFeatureArgs extends com.pulumi.r
      * Transport WAN VPN Feature ID
      * 
      */
-    @Import(name="transportWanVpnFeatureId")
-    private @Nullable Output<String> transportWanVpnFeatureId;
+    @Import(name="transportWanVpnFeatureId", required=true)
+    private Output<String> transportWanVpnFeatureId;
 
     /**
      * @return Transport WAN VPN Feature ID
      * 
      */
-    public Optional<Output<String>> transportWanVpnFeatureId() {
-        return Optional.ofNullable(this.transportWanVpnFeatureId);
+    public Output<String> transportWanVpnFeatureId() {
+        return this.transportWanVpnFeatureId;
     }
 
     @Import(name="tunnelDestinationIpv4Address")
@@ -2117,7 +2117,7 @@ public final class TransportWanVpnInterfaceIpsecFeatureArgs extends com.pulumi.r
          * @return builder
          * 
          */
-        public Builder transportWanVpnFeatureId(@Nullable Output<String> transportWanVpnFeatureId) {
+        public Builder transportWanVpnFeatureId(Output<String> transportWanVpnFeatureId) {
             $.transportWanVpnFeatureId = transportWanVpnFeatureId;
             return this;
         }
@@ -2379,6 +2379,9 @@ public final class TransportWanVpnInterfaceIpsecFeatureArgs extends com.pulumi.r
         public TransportWanVpnInterfaceIpsecFeatureArgs build() {
             if ($.featureProfileId == null) {
                 throw new MissingRequiredPropertyException("TransportWanVpnInterfaceIpsecFeatureArgs", "featureProfileId");
+            }
+            if ($.transportWanVpnFeatureId == null) {
+                throw new MissingRequiredPropertyException("TransportWanVpnInterfaceIpsecFeatureArgs", "transportWanVpnFeatureId");
             }
             return $;
         }

@@ -46,6 +46,8 @@ import (
 //
 // ## Import
 //
+// The `pulumi import` command can be used, for example:
+//
 // Expected import identifier with the format: "system_flexible_port_speed_feature_id,feature_profile_id"
 //
 // ```sh

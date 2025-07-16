@@ -30,6 +30,8 @@ import javax.annotation.Nullable;
  * 
  * ## Import
  * 
+ * The `pulumi import` command can be used, for example:
+ * 
  * Expected import identifier with the format: &#34;transport_management_vpn_interface_ethernet_feature_id,feature_profile_id,transport_management_vpn_feature_id&#34;
  * 
  * ```sh
@@ -170,14 +172,14 @@ public class TransportManagementVpnInterfaceEthernetFeature extends com.pulumi.r
      * 
      */
     @Export(name="featureProfileId", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> featureProfileId;
+    private Output<String> featureProfileId;
 
     /**
      * @return Feature Profile ID
      * 
      */
-    public Output<Optional<String>> featureProfileId() {
-        return Codegen.optional(this.featureProfileId);
+    public Output<String> featureProfileId() {
+        return this.featureProfileId;
     }
     /**
      * ICMP/ICMPv6 Redirect Disable - Default value: `true`
@@ -770,14 +772,14 @@ public class TransportManagementVpnInterfaceEthernetFeature extends com.pulumi.r
      * 
      */
     @Export(name="transportManagementVpnFeatureId", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> transportManagementVpnFeatureId;
+    private Output<String> transportManagementVpnFeatureId;
 
     /**
      * @return Transport Management VPN Feature ID
      * 
      */
-    public Output<Optional<String>> transportManagementVpnFeatureId() {
-        return Codegen.optional(this.transportManagementVpnFeatureId);
+    public Output<String> transportManagementVpnFeatureId() {
+        return this.transportManagementVpnFeatureId;
     }
     /**
      * The version of the Feature
@@ -806,7 +808,7 @@ public class TransportManagementVpnInterfaceEthernetFeature extends com.pulumi.r
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public TransportManagementVpnInterfaceEthernetFeature(java.lang.String name, @Nullable TransportManagementVpnInterfaceEthernetFeatureArgs args) {
+    public TransportManagementVpnInterfaceEthernetFeature(java.lang.String name, TransportManagementVpnInterfaceEthernetFeatureArgs args) {
         this(name, args, null);
     }
     /**
@@ -815,7 +817,7 @@ public class TransportManagementVpnInterfaceEthernetFeature extends com.pulumi.r
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public TransportManagementVpnInterfaceEthernetFeature(java.lang.String name, @Nullable TransportManagementVpnInterfaceEthernetFeatureArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public TransportManagementVpnInterfaceEthernetFeature(java.lang.String name, TransportManagementVpnInterfaceEthernetFeatureArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("sdwan:index/transportManagementVpnInterfaceEthernetFeature:TransportManagementVpnInterfaceEthernetFeature", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
@@ -823,7 +825,7 @@ public class TransportManagementVpnInterfaceEthernetFeature extends com.pulumi.r
         super("sdwan:index/transportManagementVpnInterfaceEthernetFeature:TransportManagementVpnInterfaceEthernetFeature", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static TransportManagementVpnInterfaceEthernetFeatureArgs makeArgs(@Nullable TransportManagementVpnInterfaceEthernetFeatureArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private static TransportManagementVpnInterfaceEthernetFeatureArgs makeArgs(TransportManagementVpnInterfaceEthernetFeatureArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         if (options != null && options.getUrn().isPresent()) {
             return null;
         }

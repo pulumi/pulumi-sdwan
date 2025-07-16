@@ -14,6 +14,8 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Import
     /// 
+    /// The `pulumi import` command can be used, for example:
+    /// 
     /// One feature device template ID and a comma separated list containing at least one device ID must be included:
     /// 
     /// ```sh

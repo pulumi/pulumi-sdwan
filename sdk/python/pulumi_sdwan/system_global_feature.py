@@ -1713,6 +1713,8 @@ class SystemGlobalFeature(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         Expected import identifier with the format: "system_global_feature_id,feature_profile_id"
 
         ```sh
@@ -1817,6 +1819,8 @@ class SystemGlobalFeature(pulumi.CustomResource):
         ```
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         Expected import identifier with the format: "system_global_feature_id,feature_profile_id"
 

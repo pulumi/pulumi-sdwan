@@ -48,6 +48,8 @@ import (
 //
 // ## Import
 //
+// The `pulumi import` command can be used, for example:
+//
 // Expected import identifier with the format: "policy_object_expanded_community_list_id,feature_profile_id"
 //
 // ```sh

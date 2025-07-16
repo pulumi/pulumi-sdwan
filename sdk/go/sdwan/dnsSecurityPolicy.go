@@ -52,6 +52,8 @@ import (
 //
 // ## Import
 //
+// The `pulumi import` command can be used, for example:
+//
 // Expected import identifier with the format: "dns_security_policy_id,feature_profile_id"
 //
 // ```sh

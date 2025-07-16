@@ -30,6 +30,8 @@ import javax.annotation.Nullable;
  * 
  * ## Import
  * 
+ * The `pulumi import` command can be used, for example:
+ * 
  * Expected import identifier with the format: &#34;system_security_feature_id,feature_profile_id&#34;
  * 
  * ```sh
@@ -116,14 +118,14 @@ public class SystemSecurityFeature extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="featureProfileId", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> featureProfileId;
+    private Output<String> featureProfileId;
 
     /**
      * @return Feature Profile ID
      * 
      */
-    public Output<Optional<String>> featureProfileId() {
-        return Codegen.optional(this.featureProfileId);
+    public Output<String> featureProfileId() {
+        return this.featureProfileId;
     }
     /**
      * Variable name
@@ -278,7 +280,7 @@ public class SystemSecurityFeature extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SystemSecurityFeature(java.lang.String name, @Nullable SystemSecurityFeatureArgs args) {
+    public SystemSecurityFeature(java.lang.String name, SystemSecurityFeatureArgs args) {
         this(name, args, null);
     }
     /**
@@ -287,7 +289,7 @@ public class SystemSecurityFeature extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SystemSecurityFeature(java.lang.String name, @Nullable SystemSecurityFeatureArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public SystemSecurityFeature(java.lang.String name, SystemSecurityFeatureArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("sdwan:index/systemSecurityFeature:SystemSecurityFeature", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
@@ -295,7 +297,7 @@ public class SystemSecurityFeature extends com.pulumi.resources.CustomResource {
         super("sdwan:index/systemSecurityFeature:SystemSecurityFeature", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static SystemSecurityFeatureArgs makeArgs(@Nullable SystemSecurityFeatureArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private static SystemSecurityFeatureArgs makeArgs(SystemSecurityFeatureArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         if (options != null && options.getUrn().isPresent()) {
             return null;
         }

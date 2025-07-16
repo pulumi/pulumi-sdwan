@@ -775,6 +775,8 @@ class TransportIpv6TrackerFeature(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         Expected import identifier with the format: "transport_ipv6_tracker_feature_id,feature_profile_id"
 
         ```sh
@@ -837,6 +839,8 @@ class TransportIpv6TrackerFeature(pulumi.CustomResource):
         ```
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         Expected import identifier with the format: "transport_ipv6_tracker_feature_id,feature_profile_id"
 

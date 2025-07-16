@@ -17,6 +17,8 @@ import (
 //
 // ## Import
 //
+// The `pulumi import` command can be used, for example:
+//
 // Expected import identifier with the format: "service_lan_vpn_interface_ethernet_feature_id,feature_profile_id,service_lan_vpn_feature_id"
 //
 // ```sh
@@ -165,7 +167,7 @@ type ServiceLanVpnInterfaceEthernetFeature struct {
 	// NAT64 on this interface - Default value: `false`
 	Nat64 pulumi.BoolPtrOutput `pulumi:"nat64"`
 	// Service LAN VPN Feature ID
-	ServiceLanVpnFeatureId pulumi.StringPtrOutput `pulumi:"serviceLanVpnFeatureId"`
+	ServiceLanVpnFeatureId pulumi.StringOutput `pulumi:"serviceLanVpnFeatureId"`
 	// - Default value: `true`
 	Shutdown pulumi.BoolPtrOutput `pulumi:"shutdown"`
 	// Variable name
@@ -215,6 +217,9 @@ func NewServiceLanVpnInterfaceEthernetFeature(ctx *pulumi.Context,
 
 	if args.FeatureProfileId == nil {
 		return nil, errors.New("invalid value for required argument 'FeatureProfileId'")
+	}
+	if args.ServiceLanVpnFeatureId == nil {
+		return nil, errors.New("invalid value for required argument 'ServiceLanVpnFeatureId'")
 	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource ServiceLanVpnInterfaceEthernetFeature
@@ -747,7 +752,7 @@ type serviceLanVpnInterfaceEthernetFeatureArgs struct {
 	// NAT64 on this interface - Default value: `false`
 	Nat64 *bool `pulumi:"nat64"`
 	// Service LAN VPN Feature ID
-	ServiceLanVpnFeatureId *string `pulumi:"serviceLanVpnFeatureId"`
+	ServiceLanVpnFeatureId string `pulumi:"serviceLanVpnFeatureId"`
 	// - Default value: `true`
 	Shutdown *bool `pulumi:"shutdown"`
 	// Variable name
@@ -928,7 +933,7 @@ type ServiceLanVpnInterfaceEthernetFeatureArgs struct {
 	// NAT64 on this interface - Default value: `false`
 	Nat64 pulumi.BoolPtrInput
 	// Service LAN VPN Feature ID
-	ServiceLanVpnFeatureId pulumi.StringPtrInput
+	ServiceLanVpnFeatureId pulumi.StringInput
 	// - Default value: `true`
 	Shutdown pulumi.BoolPtrInput
 	// Variable name
@@ -1440,8 +1445,8 @@ func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Nat64() pulumi.BoolPtrOutpu
 }
 
 // Service LAN VPN Feature ID
-func (o ServiceLanVpnInterfaceEthernetFeatureOutput) ServiceLanVpnFeatureId() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.ServiceLanVpnFeatureId }).(pulumi.StringPtrOutput)
+func (o ServiceLanVpnInterfaceEthernetFeatureOutput) ServiceLanVpnFeatureId() pulumi.StringOutput {
+	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.StringOutput { return v.ServiceLanVpnFeatureId }).(pulumi.StringOutput)
 }
 
 // - Default value: `true`

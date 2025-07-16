@@ -15,6 +15,8 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Import
     /// 
+    /// The `pulumi import` command can be used, for example:
+    /// 
     /// Expected import identifier with the format: "transport_wan_vpn_interface_cellular_feature_id,feature_profile_id,transport_wan_vpn_feature_id"
     /// 
     /// ```sh
@@ -378,7 +380,7 @@ namespace Pulumi.Sdwan
         /// Transport WAN VPN Feature ID
         /// </summary>
         [Output("transportWanVpnFeatureId")]
-        public Output<string?> TransportWanVpnFeatureId { get; private set; } = null!;
+        public Output<string> TransportWanVpnFeatureId { get; private set; } = null!;
 
         /// <summary>
         /// Tunnels Bandwidth Percent - Range: `1`-`100` - Default value: `50`
@@ -1220,8 +1222,8 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// Transport WAN VPN Feature ID
         /// </summary>
-        [Input("transportWanVpnFeatureId")]
-        public Input<string>? TransportWanVpnFeatureId { get; set; }
+        [Input("transportWanVpnFeatureId", required: true)]
+        public Input<string> TransportWanVpnFeatureId { get; set; } = null!;
 
         /// <summary>
         /// Tunnels Bandwidth Percent - Range: `1`-`100` - Default value: `50`

@@ -194,6 +194,8 @@ class PolicyObjectIpv6PrefixList(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         Expected import identifier with the format: "policy_object_ipv6_prefix_list_id,feature_profile_id"
 
         ```sh
@@ -218,6 +220,8 @@ class PolicyObjectIpv6PrefixList(pulumi.CustomResource):
           - Minimum SD-WAN Manager version: `20.12.0`
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         Expected import identifier with the format: "policy_object_ipv6_prefix_list_id,feature_profile_id"
 

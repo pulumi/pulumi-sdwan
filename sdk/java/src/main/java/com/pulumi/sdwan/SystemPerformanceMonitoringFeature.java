@@ -66,6 +66,8 @@ import javax.annotation.Nullable;
  * 
  * ## Import
  * 
+ * The `pulumi import` command can be used, for example:
+ * 
  * Expected import identifier with the format: &#34;system_performance_monitoring_feature_id,feature_profile_id&#34;
  * 
  * ```sh
@@ -150,14 +152,14 @@ public class SystemPerformanceMonitoringFeature extends com.pulumi.resources.Cus
      * 
      */
     @Export(name="featureProfileId", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> featureProfileId;
+    private Output<String> featureProfileId;
 
     /**
      * @return Feature Profile ID
      * 
      */
-    public Output<Optional<String>> featureProfileId() {
-        return Codegen.optional(this.featureProfileId);
+    public Output<String> featureProfileId() {
+        return this.featureProfileId;
     }
     /**
      * UMTS monitoring enable or disable - Default value: `false`
@@ -228,7 +230,7 @@ public class SystemPerformanceMonitoringFeature extends com.pulumi.resources.Cus
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SystemPerformanceMonitoringFeature(java.lang.String name, @Nullable SystemPerformanceMonitoringFeatureArgs args) {
+    public SystemPerformanceMonitoringFeature(java.lang.String name, SystemPerformanceMonitoringFeatureArgs args) {
         this(name, args, null);
     }
     /**
@@ -237,7 +239,7 @@ public class SystemPerformanceMonitoringFeature extends com.pulumi.resources.Cus
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SystemPerformanceMonitoringFeature(java.lang.String name, @Nullable SystemPerformanceMonitoringFeatureArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public SystemPerformanceMonitoringFeature(java.lang.String name, SystemPerformanceMonitoringFeatureArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("sdwan:index/systemPerformanceMonitoringFeature:SystemPerformanceMonitoringFeature", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
@@ -245,7 +247,7 @@ public class SystemPerformanceMonitoringFeature extends com.pulumi.resources.Cus
         super("sdwan:index/systemPerformanceMonitoringFeature:SystemPerformanceMonitoringFeature", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static SystemPerformanceMonitoringFeatureArgs makeArgs(@Nullable SystemPerformanceMonitoringFeatureArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private static SystemPerformanceMonitoringFeatureArgs makeArgs(SystemPerformanceMonitoringFeatureArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         if (options != null && options.getUrn().isPresent()) {
             return null;
         }

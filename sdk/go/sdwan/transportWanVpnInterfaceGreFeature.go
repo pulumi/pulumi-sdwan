@@ -57,6 +57,8 @@ import (
 //
 // ## Import
 //
+// The `pulumi import` command can be used, for example:
+//
 // Expected import identifier with the format: "transport_wan_vpn_interface_gre_feature_id,feature_profile_id,transport_wan_vpn_feature_id"
 //
 // ```sh
@@ -111,7 +113,7 @@ type TransportWanVpnInterfaceGreFeature struct {
 	// Variable name
 	TcpMssVariable pulumi.StringPtrOutput `pulumi:"tcpMssVariable"`
 	// Transport WAN VPN Feature ID
-	TransportWanVpnFeatureId pulumi.StringPtrOutput `pulumi:"transportWanVpnFeatureId"`
+	TransportWanVpnFeatureId pulumi.StringOutput `pulumi:"transportWanVpnFeatureId"`
 	// Tunnel destination IP Address
 	TunnelDestinationIpv4Address pulumi.StringPtrOutput `pulumi:"tunnelDestinationIpv4Address"`
 	// Variable name
@@ -145,6 +147,9 @@ func NewTransportWanVpnInterfaceGreFeature(ctx *pulumi.Context,
 
 	if args.FeatureProfileId == nil {
 		return nil, errors.New("invalid value for required argument 'FeatureProfileId'")
+	}
+	if args.TransportWanVpnFeatureId == nil {
+		return nil, errors.New("invalid value for required argument 'TransportWanVpnFeatureId'")
 	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource TransportWanVpnInterfaceGreFeature
@@ -363,7 +368,7 @@ type transportWanVpnInterfaceGreFeatureArgs struct {
 	// Variable name
 	TcpMssVariable *string `pulumi:"tcpMssVariable"`
 	// Transport WAN VPN Feature ID
-	TransportWanVpnFeatureId *string `pulumi:"transportWanVpnFeatureId"`
+	TransportWanVpnFeatureId string `pulumi:"transportWanVpnFeatureId"`
 	// Tunnel destination IP Address
 	TunnelDestinationIpv4Address *string `pulumi:"tunnelDestinationIpv4Address"`
 	// Variable name
@@ -434,7 +439,7 @@ type TransportWanVpnInterfaceGreFeatureArgs struct {
 	// Variable name
 	TcpMssVariable pulumi.StringPtrInput
 	// Transport WAN VPN Feature ID
-	TransportWanVpnFeatureId pulumi.StringPtrInput
+	TransportWanVpnFeatureId pulumi.StringInput
 	// Tunnel destination IP Address
 	TunnelDestinationIpv4Address pulumi.StringPtrInput
 	// Variable name
@@ -657,8 +662,8 @@ func (o TransportWanVpnInterfaceGreFeatureOutput) TcpMssVariable() pulumi.String
 }
 
 // Transport WAN VPN Feature ID
-func (o TransportWanVpnInterfaceGreFeatureOutput) TransportWanVpnFeatureId() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *TransportWanVpnInterfaceGreFeature) pulumi.StringPtrOutput { return v.TransportWanVpnFeatureId }).(pulumi.StringPtrOutput)
+func (o TransportWanVpnInterfaceGreFeatureOutput) TransportWanVpnFeatureId() pulumi.StringOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceGreFeature) pulumi.StringOutput { return v.TransportWanVpnFeatureId }).(pulumi.StringOutput)
 }
 
 // Tunnel destination IP Address

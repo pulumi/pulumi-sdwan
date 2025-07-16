@@ -261,6 +261,8 @@ class ApplicationPriorityQosPolicy(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         Expected import identifier with the format: "application_priority_qos_policy_id,feature_profile_id"
 
         ```sh
@@ -287,6 +289,8 @@ class ApplicationPriorityQosPolicy(pulumi.CustomResource):
           - Minimum SD-WAN Manager version: `20.12.0`
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         Expected import identifier with the format: "application_priority_qos_policy_id,feature_profile_id"
 

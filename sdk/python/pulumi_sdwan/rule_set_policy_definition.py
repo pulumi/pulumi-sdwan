@@ -160,6 +160,8 @@ class RuleSetPolicyDefinition(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         ```sh
         $ pulumi import sdwan:index/ruleSetPolicyDefinition:RuleSetPolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
@@ -180,6 +182,8 @@ class RuleSetPolicyDefinition(pulumi.CustomResource):
         This resource can manage a Rule Set Policy Definition .
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         ```sh
         $ pulumi import sdwan:index/ruleSetPolicyDefinition:RuleSetPolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"

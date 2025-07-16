@@ -17,6 +17,8 @@ import (
 //
 // ## Import
 //
+// The `pulumi import` command can be used, for example:
+//
 // Expected import identifier with the format: "transport_wan_vpn_interface_cellular_feature_id,feature_profile_id,transport_wan_vpn_feature_id"
 //
 // ```sh
@@ -144,7 +146,7 @@ type TransportWanVpnInterfaceCellularFeature struct {
 	// Variable name
 	TrackerVariable pulumi.StringPtrOutput `pulumi:"trackerVariable"`
 	// Transport WAN VPN Feature ID
-	TransportWanVpnFeatureId pulumi.StringPtrOutput `pulumi:"transportWanVpnFeatureId"`
+	TransportWanVpnFeatureId pulumi.StringOutput `pulumi:"transportWanVpnFeatureId"`
 	// Tunnels Bandwidth Percent - Range: `1`-`100` - Default value: `50`
 	TunnelBandwidthPercent pulumi.IntPtrOutput `pulumi:"tunnelBandwidthPercent"`
 	// Variable name
@@ -301,6 +303,9 @@ func NewTransportWanVpnInterfaceCellularFeature(ctx *pulumi.Context,
 
 	if args.FeatureProfileId == nil {
 		return nil, errors.New("invalid value for required argument 'FeatureProfileId'")
+	}
+	if args.TransportWanVpnFeatureId == nil {
+		return nil, errors.New("invalid value for required argument 'TransportWanVpnFeatureId'")
 	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource TransportWanVpnInterfaceCellularFeature
@@ -984,7 +989,7 @@ type transportWanVpnInterfaceCellularFeatureArgs struct {
 	// Variable name
 	TrackerVariable *string `pulumi:"trackerVariable"`
 	// Transport WAN VPN Feature ID
-	TransportWanVpnFeatureId *string `pulumi:"transportWanVpnFeatureId"`
+	TransportWanVpnFeatureId string `pulumi:"transportWanVpnFeatureId"`
 	// Tunnels Bandwidth Percent - Range: `1`-`100` - Default value: `50`
 	TunnelBandwidthPercent *int `pulumi:"tunnelBandwidthPercent"`
 	// Variable name
@@ -1251,7 +1256,7 @@ type TransportWanVpnInterfaceCellularFeatureArgs struct {
 	// Variable name
 	TrackerVariable pulumi.StringPtrInput
 	// Transport WAN VPN Feature ID
-	TransportWanVpnFeatureId pulumi.StringPtrInput
+	TransportWanVpnFeatureId pulumi.StringInput
 	// Tunnels Bandwidth Percent - Range: `1`-`100` - Default value: `50`
 	TunnelBandwidthPercent pulumi.IntPtrInput
 	// Variable name
@@ -1844,10 +1849,10 @@ func (o TransportWanVpnInterfaceCellularFeatureOutput) TrackerVariable() pulumi.
 }
 
 // Transport WAN VPN Feature ID
-func (o TransportWanVpnInterfaceCellularFeatureOutput) TransportWanVpnFeatureId() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *TransportWanVpnInterfaceCellularFeature) pulumi.StringPtrOutput {
+func (o TransportWanVpnInterfaceCellularFeatureOutput) TransportWanVpnFeatureId() pulumi.StringOutput {
+	return o.ApplyT(func(v *TransportWanVpnInterfaceCellularFeature) pulumi.StringOutput {
 		return v.TransportWanVpnFeatureId
-	}).(pulumi.StringPtrOutput)
+	}).(pulumi.StringOutput)
 }
 
 // Tunnels Bandwidth Percent - Range: `1`-`100` - Default value: `50`

@@ -31,6 +31,8 @@ import javax.annotation.Nullable;
  * 
  * ## Import
  * 
+ * The `pulumi import` command can be used, for example:
+ * 
  * Expected import identifier with the format: &#34;system_logging_feature_id,feature_profile_id&#34;
  * 
  * ```sh
@@ -143,14 +145,14 @@ public class SystemLoggingFeature extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="featureProfileId", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> featureProfileId;
+    private Output<String> featureProfileId;
 
     /**
      * @return Feature Profile ID
      * 
      */
-    public Output<Optional<String>> featureProfileId() {
-        return Codegen.optional(this.featureProfileId);
+    public Output<String> featureProfileId() {
+        return this.featureProfileId;
     }
     /**
      * Enable logging to remote server
@@ -235,7 +237,7 @@ public class SystemLoggingFeature extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SystemLoggingFeature(java.lang.String name, @Nullable SystemLoggingFeatureArgs args) {
+    public SystemLoggingFeature(java.lang.String name, SystemLoggingFeatureArgs args) {
         this(name, args, null);
     }
     /**
@@ -244,7 +246,7 @@ public class SystemLoggingFeature extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SystemLoggingFeature(java.lang.String name, @Nullable SystemLoggingFeatureArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public SystemLoggingFeature(java.lang.String name, SystemLoggingFeatureArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("sdwan:index/systemLoggingFeature:SystemLoggingFeature", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
@@ -252,7 +254,7 @@ public class SystemLoggingFeature extends com.pulumi.resources.CustomResource {
         super("sdwan:index/systemLoggingFeature:SystemLoggingFeature", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static SystemLoggingFeatureArgs makeArgs(@Nullable SystemLoggingFeatureArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private static SystemLoggingFeatureArgs makeArgs(SystemLoggingFeatureArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         if (options != null && options.getUrn().isPresent()) {
             return null;
         }

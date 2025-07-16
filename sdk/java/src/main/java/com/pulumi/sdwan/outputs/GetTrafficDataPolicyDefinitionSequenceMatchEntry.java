@@ -65,7 +65,7 @@ public final class GetTrafficDataPolicyDefinitionSequenceMatchEntry {
      * @return DSCP value
      * 
      */
-    private Integer dscp;
+    private String dscp;
     /**
      * @return ICMP Message
      * 
@@ -197,7 +197,7 @@ public final class GetTrafficDataPolicyDefinitionSequenceMatchEntry {
      * @return DSCP value
      * 
      */
-    public Integer dscp() {
+    public String dscp() {
         return this.dscp;
     }
     /**
@@ -297,7 +297,7 @@ public final class GetTrafficDataPolicyDefinitionSequenceMatchEntry {
         private String dns;
         private String dnsApplicationListId;
         private Integer dnsApplicationListVersion;
-        private Integer dscp;
+        private String dscp;
         private String icmpMessage;
         private Integer packetLength;
         private String plp;
@@ -417,7 +417,7 @@ public final class GetTrafficDataPolicyDefinitionSequenceMatchEntry {
             return this;
         }
         @CustomType.Setter
-        public Builder dscp(Integer dscp) {
+        public Builder dscp(String dscp) {
             if (dscp == null) {
               throw new MissingRequiredPropertyException("GetTrafficDataPolicyDefinitionSequenceMatchEntry", "dscp");
             }

@@ -22,8 +22,8 @@ __all__ = ['TransportManagementVpnFeatureArgs', 'TransportManagementVpnFeature']
 @pulumi.input_type
 class TransportManagementVpnFeatureArgs:
     def __init__(__self__, *,
+                 feature_profile_id: pulumi.Input[builtins.str],
                  description: Optional[pulumi.Input[builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[builtins.str]] = None,
                  ipv4_static_routes: Optional[pulumi.Input[Sequence[pulumi.Input['TransportManagementVpnFeatureIpv4StaticRouteArgs']]]] = None,
                  ipv6_static_routes: Optional[pulumi.Input[Sequence[pulumi.Input['TransportManagementVpnFeatureIpv6StaticRouteArgs']]]] = None,
                  name: Optional[pulumi.Input[builtins.str]] = None,
@@ -40,8 +40,8 @@ class TransportManagementVpnFeatureArgs:
                  vpn_description_variable: Optional[pulumi.Input[builtins.str]] = None):
         """
         The set of arguments for constructing a TransportManagementVpnFeature resource.
-        :param pulumi.Input[builtins.str] description: The description of the Feature
         :param pulumi.Input[builtins.str] feature_profile_id: Feature Profile ID
+        :param pulumi.Input[builtins.str] description: The description of the Feature
         :param pulumi.Input[Sequence[pulumi.Input['TransportManagementVpnFeatureIpv4StaticRouteArgs']]] ipv4_static_routes: IPv4 Static Route
         :param pulumi.Input[Sequence[pulumi.Input['TransportManagementVpnFeatureIpv6StaticRouteArgs']]] ipv6_static_routes: IPv6 Static Route
         :param pulumi.Input[builtins.str] name: The name of the Feature
@@ -56,10 +56,9 @@ class TransportManagementVpnFeatureArgs:
         :param pulumi.Input[builtins.str] vpn_description: Name
         :param pulumi.Input[builtins.str] vpn_description_variable: Variable name
         """
+        pulumi.set(__self__, "feature_profile_id", feature_profile_id)
         if description is not None:
             pulumi.set(__self__, "description", description)
-        if feature_profile_id is not None:
-            pulumi.set(__self__, "feature_profile_id", feature_profile_id)
         if ipv4_static_routes is not None:
             pulumi.set(__self__, "ipv4_static_routes", ipv4_static_routes)
         if ipv6_static_routes is not None:
@@ -90,6 +89,18 @@ class TransportManagementVpnFeatureArgs:
             pulumi.set(__self__, "vpn_description_variable", vpn_description_variable)
 
     @property
+    @pulumi.getter(name="featureProfileId")
+    def feature_profile_id(self) -> pulumi.Input[builtins.str]:
+        """
+        Feature Profile ID
+        """
+        return pulumi.get(self, "feature_profile_id")
+
+    @feature_profile_id.setter
+    def feature_profile_id(self, value: pulumi.Input[builtins.str]):
+        pulumi.set(self, "feature_profile_id", value)
+
+    @property
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[builtins.str]]:
         """
@@ -100,18 +111,6 @@ class TransportManagementVpnFeatureArgs:
     @description.setter
     def description(self, value: Optional[pulumi.Input[builtins.str]]):
         pulumi.set(self, "description", value)
-
-    @property
-    @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[builtins.str]]:
-        """
-        Feature Profile ID
-        """
-        return pulumi.get(self, "feature_profile_id")
-
-    @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[builtins.str]]):
-        pulumi.set(self, "feature_profile_id", value)
 
     @property
     @pulumi.getter(name="ipv4StaticRoutes")
@@ -584,6 +583,8 @@ class TransportManagementVpnFeature(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         Expected import identifier with the format: "transport_management_vpn_feature_id,feature_profile_id"
 
         ```sh
@@ -612,13 +613,15 @@ class TransportManagementVpnFeature(pulumi.CustomResource):
     @overload
     def __init__(__self__,
                  resource_name: str,
-                 args: Optional[TransportManagementVpnFeatureArgs] = None,
+                 args: TransportManagementVpnFeatureArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a Transport Management VPN Feature.
           - Minimum SD-WAN Manager version: `20.12.0`
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         Expected import identifier with the format: "transport_management_vpn_feature_id,feature_profile_id"
 
@@ -667,6 +670,8 @@ class TransportManagementVpnFeature(pulumi.CustomResource):
             __props__ = TransportManagementVpnFeatureArgs.__new__(TransportManagementVpnFeatureArgs)
 
             __props__.__dict__["description"] = description
+            if feature_profile_id is None and not opts.urn:
+                raise TypeError("Missing required property 'feature_profile_id'")
             __props__.__dict__["feature_profile_id"] = feature_profile_id
             __props__.__dict__["ipv4_static_routes"] = ipv4_static_routes
             __props__.__dict__["ipv6_static_routes"] = ipv6_static_routes
@@ -767,7 +772,7 @@ class TransportManagementVpnFeature(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> pulumi.Output[Optional[builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Output[builtins.str]:
         """
         Feature Profile ID
         """

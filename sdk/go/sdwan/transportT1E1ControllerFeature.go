@@ -17,6 +17,8 @@ import (
 //
 // ## Import
 //
+// The `pulumi import` command can be used, for example:
+//
 // Expected import identifier with the format: "transport_t1_e1_controller_feature_id,feature_profile_id"
 //
 // ```sh

@@ -75,6 +75,8 @@ import (
 //
 // ## Import
 //
+// The `pulumi import` command can be used, for example:
+//
 // Expected import identifier with the format: "service_lan_vpn_interface_ipsec_feature_id,feature_profile_id,service_lan_vpn_feature_id"
 //
 // ```sh
@@ -179,7 +181,7 @@ type ServiceLanVpnInterfaceIpsecFeature struct {
 	// Variable name
 	PerfectForwardSecrecyVariable pulumi.StringPtrOutput `pulumi:"perfectForwardSecrecyVariable"`
 	// Service LAN VPN Feature ID
-	ServiceLanVpnFeatureId pulumi.StringPtrOutput `pulumi:"serviceLanVpnFeatureId"`
+	ServiceLanVpnFeatureId pulumi.StringOutput `pulumi:"serviceLanVpnFeatureId"`
 	// Administrative state - Default value: `true`
 	Shutdown pulumi.BoolPtrOutput `pulumi:"shutdown"`
 	// Variable name
@@ -235,6 +237,9 @@ func NewServiceLanVpnInterfaceIpsecFeature(ctx *pulumi.Context,
 
 	if args.FeatureProfileId == nil {
 		return nil, errors.New("invalid value for required argument 'FeatureProfileId'")
+	}
+	if args.ServiceLanVpnFeatureId == nil {
+		return nil, errors.New("invalid value for required argument 'ServiceLanVpnFeatureId'")
 	}
 	if args.TunnelDestinationIpv4SubnetMask == nil {
 		return nil, errors.New("invalid value for required argument 'TunnelDestinationIpv4SubnetMask'")
@@ -650,7 +655,7 @@ type serviceLanVpnInterfaceIpsecFeatureArgs struct {
 	// Variable name
 	PerfectForwardSecrecyVariable *string `pulumi:"perfectForwardSecrecyVariable"`
 	// Service LAN VPN Feature ID
-	ServiceLanVpnFeatureId *string `pulumi:"serviceLanVpnFeatureId"`
+	ServiceLanVpnFeatureId string `pulumi:"serviceLanVpnFeatureId"`
 	// Administrative state - Default value: `true`
 	Shutdown *bool `pulumi:"shutdown"`
 	// Variable name
@@ -793,7 +798,7 @@ type ServiceLanVpnInterfaceIpsecFeatureArgs struct {
 	// Variable name
 	PerfectForwardSecrecyVariable pulumi.StringPtrInput
 	// Service LAN VPN Feature ID
-	ServiceLanVpnFeatureId pulumi.StringPtrInput
+	ServiceLanVpnFeatureId pulumi.StringInput
 	// Administrative state - Default value: `true`
 	Shutdown pulumi.BoolPtrInput
 	// Variable name
@@ -1169,8 +1174,8 @@ func (o ServiceLanVpnInterfaceIpsecFeatureOutput) PerfectForwardSecrecyVariable(
 }
 
 // Service LAN VPN Feature ID
-func (o ServiceLanVpnInterfaceIpsecFeatureOutput) ServiceLanVpnFeatureId() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringPtrOutput { return v.ServiceLanVpnFeatureId }).(pulumi.StringPtrOutput)
+func (o ServiceLanVpnInterfaceIpsecFeatureOutput) ServiceLanVpnFeatureId() pulumi.StringOutput {
+	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringOutput { return v.ServiceLanVpnFeatureId }).(pulumi.StringOutput)
 }
 
 // Administrative state - Default value: `true`

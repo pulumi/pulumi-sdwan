@@ -277,15 +277,15 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
      * Service LAN VPN Feature ID
      * 
      */
-    @Import(name="serviceLanVpnFeatureId")
-    private @Nullable Output<String> serviceLanVpnFeatureId;
+    @Import(name="serviceLanVpnFeatureId", required=true)
+    private Output<String> serviceLanVpnFeatureId;
 
     /**
      * @return Service LAN VPN Feature ID
      * 
      */
-    public Optional<Output<String>> serviceLanVpnFeatureId() {
-        return Optional.ofNullable(this.serviceLanVpnFeatureId);
+    public Output<String> serviceLanVpnFeatureId() {
+        return this.serviceLanVpnFeatureId;
     }
 
     /**
@@ -912,7 +912,7 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
          * @return builder
          * 
          */
-        public Builder serviceLanVpnFeatureId(@Nullable Output<String> serviceLanVpnFeatureId) {
+        public Builder serviceLanVpnFeatureId(Output<String> serviceLanVpnFeatureId) {
             $.serviceLanVpnFeatureId = serviceLanVpnFeatureId;
             return this;
         }
@@ -1224,6 +1224,9 @@ public final class ServiceLanVpnInterfaceGreFeatureArgs extends com.pulumi.resou
         public ServiceLanVpnInterfaceGreFeatureArgs build() {
             if ($.featureProfileId == null) {
                 throw new MissingRequiredPropertyException("ServiceLanVpnInterfaceGreFeatureArgs", "featureProfileId");
+            }
+            if ($.serviceLanVpnFeatureId == null) {
+                throw new MissingRequiredPropertyException("ServiceLanVpnInterfaceGreFeatureArgs", "serviceLanVpnFeatureId");
             }
             return $;
         }

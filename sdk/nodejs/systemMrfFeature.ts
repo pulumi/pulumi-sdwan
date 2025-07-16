@@ -28,6 +28,8 @@ import * as utilities from "./utilities";
  *
  * ## Import
  *
+ * The `pulumi import` command can be used, for example:
+ *
  * Expected import identifier with the format: "system_mrf_feature_id,feature_profile_id"
  *
  * ```sh
@@ -73,7 +75,7 @@ export class SystemMrfFeature extends pulumi.CustomResource {
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string | undefined>;
+    public readonly featureProfileId!: pulumi.Output<string>;
     /**
      * Set BGP community during migration from BGP-core based network - Range: `1`-`4294967295`
      */
@@ -114,7 +116,7 @@ export class SystemMrfFeature extends pulumi.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param opts A bag of options that control this resource's behavior.
      */
-    constructor(name: string, args?: SystemMrfFeatureArgs, opts?: pulumi.CustomResourceOptions)
+    constructor(name: string, args: SystemMrfFeatureArgs, opts?: pulumi.CustomResourceOptions)
     constructor(name: string, argsOrState?: SystemMrfFeatureArgs | SystemMrfFeatureState, opts?: pulumi.CustomResourceOptions) {
         let resourceInputs: pulumi.Inputs = {};
         opts = opts || {};
@@ -133,6 +135,9 @@ export class SystemMrfFeature extends pulumi.CustomResource {
             resourceInputs["version"] = state ? state.version : undefined;
         } else {
             const args = argsOrState as SystemMrfFeatureArgs | undefined;
+            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+                throw new Error("Missing required property 'featureProfileId'");
+            }
             resourceInputs["description"] = args ? args.description : undefined;
             resourceInputs["enableMigrationToMrf"] = args ? args.enableMigrationToMrf : undefined;
             resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
@@ -215,7 +220,7 @@ export interface SystemMrfFeatureArgs {
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId: pulumi.Input<string>;
     /**
      * Set BGP community during migration from BGP-core based network - Range: `1`-`4294967295`
      */

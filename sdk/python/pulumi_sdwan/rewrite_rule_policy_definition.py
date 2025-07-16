@@ -176,6 +176,8 @@ class RewriteRulePolicyDefinition(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         ```sh
         $ pulumi import sdwan:index/rewriteRulePolicyDefinition:RewriteRulePolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
@@ -196,6 +198,8 @@ class RewriteRulePolicyDefinition(pulumi.CustomResource):
         This resource can manage a Rewrite Rule Policy Definition .
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         ```sh
         $ pulumi import sdwan:index/rewriteRulePolicyDefinition:RewriteRulePolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"

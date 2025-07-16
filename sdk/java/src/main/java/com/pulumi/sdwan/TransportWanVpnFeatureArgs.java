@@ -5,6 +5,7 @@ package com.pulumi.sdwan;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.sdwan.inputs.TransportWanVpnFeatureIpv4StaticRouteArgs;
 import com.pulumi.sdwan.inputs.TransportWanVpnFeatureIpv6StaticRouteArgs;
 import com.pulumi.sdwan.inputs.TransportWanVpnFeatureNat64V4PoolArgs;
@@ -72,15 +73,15 @@ public final class TransportWanVpnFeatureArgs extends com.pulumi.resources.Resou
      * Feature Profile ID
      * 
      */
-    @Import(name="featureProfileId")
-    private @Nullable Output<String> featureProfileId;
+    @Import(name="featureProfileId", required=true)
+    private Output<String> featureProfileId;
 
     /**
      * @return Feature Profile ID
      * 
      */
-    public Optional<Output<String>> featureProfileId() {
-        return Optional.ofNullable(this.featureProfileId);
+    public Output<String> featureProfileId() {
+        return this.featureProfileId;
     }
 
     /**
@@ -411,7 +412,7 @@ public final class TransportWanVpnFeatureArgs extends com.pulumi.resources.Resou
          * @return builder
          * 
          */
-        public Builder featureProfileId(@Nullable Output<String> featureProfileId) {
+        public Builder featureProfileId(Output<String> featureProfileId) {
             $.featureProfileId = featureProfileId;
             return this;
         }
@@ -774,6 +775,9 @@ public final class TransportWanVpnFeatureArgs extends com.pulumi.resources.Resou
         }
 
         public TransportWanVpnFeatureArgs build() {
+            if ($.featureProfileId == null) {
+                throw new MissingRequiredPropertyException("TransportWanVpnFeatureArgs", "featureProfileId");
+            }
             return $;
         }
     }

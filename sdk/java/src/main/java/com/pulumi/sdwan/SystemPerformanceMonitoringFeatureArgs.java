@@ -5,6 +5,7 @@ package com.pulumi.sdwan;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -96,15 +97,15 @@ public final class SystemPerformanceMonitoringFeatureArgs extends com.pulumi.res
      * Feature Profile ID
      * 
      */
-    @Import(name="featureProfileId")
-    private @Nullable Output<String> featureProfileId;
+    @Import(name="featureProfileId", required=true)
+    private Output<String> featureProfileId;
 
     /**
      * @return Feature Profile ID
      * 
      */
-    public Optional<Output<String>> featureProfileId() {
-        return Optional.ofNullable(this.featureProfileId);
+    public Output<String> featureProfileId() {
+        return this.featureProfileId;
     }
 
     /**
@@ -315,7 +316,7 @@ public final class SystemPerformanceMonitoringFeatureArgs extends com.pulumi.res
          * @return builder
          * 
          */
-        public Builder featureProfileId(@Nullable Output<String> featureProfileId) {
+        public Builder featureProfileId(Output<String> featureProfileId) {
             $.featureProfileId = featureProfileId;
             return this;
         }
@@ -394,6 +395,9 @@ public final class SystemPerformanceMonitoringFeatureArgs extends com.pulumi.res
         }
 
         public SystemPerformanceMonitoringFeatureArgs build() {
+            if ($.featureProfileId == null) {
+                throw new MissingRequiredPropertyException("SystemPerformanceMonitoringFeatureArgs", "featureProfileId");
+            }
             return $;
         }
     }

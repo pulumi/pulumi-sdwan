@@ -22,6 +22,7 @@ __all__ = ['TransportRoutingBgpFeatureArgs', 'TransportRoutingBgpFeature']
 @pulumi.input_type
 class TransportRoutingBgpFeatureArgs:
     def __init__(__self__, *,
+                 feature_profile_id: pulumi.Input[builtins.str],
                  always_compare_med: Optional[pulumi.Input[builtins.bool]] = None,
                  always_compare_med_variable: Optional[pulumi.Input[builtins.str]] = None,
                  as_number: Optional[pulumi.Input[builtins.int]] = None,
@@ -33,7 +34,6 @@ class TransportRoutingBgpFeatureArgs:
                  deterministic_med_variable: Optional[pulumi.Input[builtins.str]] = None,
                  external_routes_distance: Optional[pulumi.Input[builtins.int]] = None,
                  external_routes_distance_variable: Optional[pulumi.Input[builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[builtins.str]] = None,
                  hold_time: Optional[pulumi.Input[builtins.int]] = None,
                  hold_time_variable: Optional[pulumi.Input[builtins.str]] = None,
                  internal_routes_distance: Optional[pulumi.Input[builtins.int]] = None,
@@ -78,6 +78,7 @@ class TransportRoutingBgpFeatureArgs:
                  router_id_variable: Optional[pulumi.Input[builtins.str]] = None):
         """
         The set of arguments for constructing a TransportRoutingBgpFeature resource.
+        :param pulumi.Input[builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[builtins.bool] always_compare_med: Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
         :param pulumi.Input[builtins.str] always_compare_med_variable: Variable name
         :param pulumi.Input[builtins.int] as_number: Set autonomous system number <1..4294967295> or <XX.YY>
@@ -89,7 +90,6 @@ class TransportRoutingBgpFeatureArgs:
         :param pulumi.Input[builtins.str] deterministic_med_variable: Variable name
         :param pulumi.Input[builtins.int] external_routes_distance: Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
         :param pulumi.Input[builtins.str] external_routes_distance_variable: Variable name
-        :param pulumi.Input[builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[builtins.int] hold_time: Interval (seconds) not receiving a keepalive message declares a BGP peer down - Range: `0`-`65535` - Default value:
                `180`
         :param pulumi.Input[builtins.str] hold_time_variable: Variable name
@@ -132,6 +132,7 @@ class TransportRoutingBgpFeatureArgs:
         :param pulumi.Input[builtins.str] router_id: Configure BGP router identifier
         :param pulumi.Input[builtins.str] router_id_variable: Variable name
         """
+        pulumi.set(__self__, "feature_profile_id", feature_profile_id)
         if always_compare_med is not None:
             pulumi.set(__self__, "always_compare_med", always_compare_med)
         if always_compare_med_variable is not None:
@@ -154,8 +155,6 @@ class TransportRoutingBgpFeatureArgs:
             pulumi.set(__self__, "external_routes_distance", external_routes_distance)
         if external_routes_distance_variable is not None:
             pulumi.set(__self__, "external_routes_distance_variable", external_routes_distance_variable)
-        if feature_profile_id is not None:
-            pulumi.set(__self__, "feature_profile_id", feature_profile_id)
         if hold_time is not None:
             pulumi.set(__self__, "hold_time", hold_time)
         if hold_time_variable is not None:
@@ -240,6 +239,18 @@ class TransportRoutingBgpFeatureArgs:
             pulumi.set(__self__, "router_id", router_id)
         if router_id_variable is not None:
             pulumi.set(__self__, "router_id_variable", router_id_variable)
+
+    @property
+    @pulumi.getter(name="featureProfileId")
+    def feature_profile_id(self) -> pulumi.Input[builtins.str]:
+        """
+        Feature Profile ID
+        """
+        return pulumi.get(self, "feature_profile_id")
+
+    @feature_profile_id.setter
+    def feature_profile_id(self, value: pulumi.Input[builtins.str]):
+        pulumi.set(self, "feature_profile_id", value)
 
     @property
     @pulumi.getter(name="alwaysCompareMed")
@@ -372,18 +383,6 @@ class TransportRoutingBgpFeatureArgs:
     @external_routes_distance_variable.setter
     def external_routes_distance_variable(self, value: Optional[pulumi.Input[builtins.str]]):
         pulumi.set(self, "external_routes_distance_variable", value)
-
-    @property
-    @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[builtins.str]]:
-        """
-        Feature Profile ID
-        """
-        return pulumi.get(self, "feature_profile_id")
-
-    @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[builtins.str]]):
-        pulumi.set(self, "feature_profile_id", value)
 
     @property
     @pulumi.getter(name="holdTime")
@@ -1834,6 +1833,8 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         Expected import identifier with the format: "transport_routing_bgp_feature_id,feature_profile_id"
 
         ```sh
@@ -1900,13 +1901,15 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
     @overload
     def __init__(__self__,
                  resource_name: str,
-                 args: Optional[TransportRoutingBgpFeatureArgs] = None,
+                 args: TransportRoutingBgpFeatureArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a Transport Routing BGP Feature.
           - Minimum SD-WAN Manager version: `20.12.0`
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         Expected import identifier with the format: "transport_routing_bgp_feature_id,feature_profile_id"
 
@@ -2003,6 +2006,8 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
             __props__.__dict__["deterministic_med_variable"] = deterministic_med_variable
             __props__.__dict__["external_routes_distance"] = external_routes_distance
             __props__.__dict__["external_routes_distance_variable"] = external_routes_distance_variable
+            if feature_profile_id is None and not opts.urn:
+                raise TypeError("Missing required property 'feature_profile_id'")
             __props__.__dict__["feature_profile_id"] = feature_profile_id
             __props__.__dict__["hold_time"] = hold_time
             __props__.__dict__["hold_time_variable"] = hold_time_variable
@@ -2325,7 +2330,7 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> pulumi.Output[Optional[builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Output[builtins.str]:
         """
         Feature Profile ID
         """

@@ -15,6 +15,8 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Import
     /// 
+    /// The `pulumi import` command can be used, for example:
+    /// 
     /// Expected import identifier with the format: "service_lan_vpn_interface_svi_feature_id,feature_profile_id,service_lan_vpn_feature_id"
     /// 
     /// ```sh
@@ -242,7 +244,7 @@ namespace Pulumi.Sdwan
         /// Service LAN VPN Feature ID
         /// </summary>
         [Output("serviceLanVpnFeatureId")]
-        public Output<string?> ServiceLanVpnFeatureId { get; private set; } = null!;
+        public Output<string> ServiceLanVpnFeatureId { get; private set; } = null!;
 
         /// <summary>
         /// Administrative state - Default value: `true`
@@ -579,8 +581,8 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// Service LAN VPN Feature ID
         /// </summary>
-        [Input("serviceLanVpnFeatureId")]
-        public Input<string>? ServiceLanVpnFeatureId { get; set; }
+        [Input("serviceLanVpnFeatureId", required: true)]
+        public Input<string> ServiceLanVpnFeatureId { get; set; } = null!;
 
         /// <summary>
         /// Administrative state - Default value: `true`

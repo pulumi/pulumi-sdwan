@@ -51,6 +51,8 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Import
     /// 
+    /// The `pulumi import` command can be used, for example:
+    /// 
     /// Expected import identifier with the format: "system_remote_access_feature_id,feature_profile_id"
     /// 
     /// ```sh
@@ -148,7 +150,7 @@ namespace Pulumi.Sdwan
         /// Feature Profile ID
         /// </summary>
         [Output("featureProfileId")]
-        public Output<string?> FeatureProfileId { get; private set; } = null!;
+        public Output<string> FeatureProfileId { get; private set; } = null!;
 
         /// <summary>
         /// Anti-DOS Threshold, Attribute conditional on `connection_type_ssl` being equal to `false` - Range: `10`-`1000` - Default
@@ -454,8 +456,8 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// Feature Profile ID
         /// </summary>
-        [Input("featureProfileId")]
-        public Input<string>? FeatureProfileId { get; set; }
+        [Input("featureProfileId", required: true)]
+        public Input<string> FeatureProfileId { get; set; } = null!;
 
         /// <summary>
         /// Anti-DOS Threshold, Attribute conditional on `connection_type_ssl` being equal to `false` - Range: `10`-`1000` - Default

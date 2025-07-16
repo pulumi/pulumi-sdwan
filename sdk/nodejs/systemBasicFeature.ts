@@ -12,6 +12,8 @@ import * as utilities from "./utilities";
  *
  * ## Import
  *
+ * The `pulumi import` command can be used, for example:
+ *
  * Expected import identifier with the format: "system_basic_feature_id,feature_profile_id"
  *
  * ```sh
@@ -139,7 +141,7 @@ export class SystemBasicFeature extends pulumi.CustomResource {
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string | undefined>;
+    public readonly featureProfileId!: pulumi.Output<string>;
     /**
      * Enable Geo fencing - Default value: `false`
      */
@@ -385,7 +387,7 @@ export class SystemBasicFeature extends pulumi.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param opts A bag of options that control this resource's behavior.
      */
-    constructor(name: string, args?: SystemBasicFeatureArgs, opts?: pulumi.CustomResourceOptions)
+    constructor(name: string, args: SystemBasicFeatureArgs, opts?: pulumi.CustomResourceOptions)
     constructor(name: string, argsOrState?: SystemBasicFeatureArgs | SystemBasicFeatureState, opts?: pulumi.CustomResourceOptions) {
         let resourceInputs: pulumi.Inputs = {};
         opts = opts || {};
@@ -457,6 +459,9 @@ export class SystemBasicFeature extends pulumi.CustomResource {
             resourceInputs["version"] = state ? state.version : undefined;
         } else {
             const args = argsOrState as SystemBasicFeatureArgs | undefined;
+            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+                throw new Error("Missing required property 'featureProfileId'");
+            }
             resourceInputs["adminTechOnFailure"] = args ? args.adminTechOnFailure : undefined;
             resourceInputs["adminTechOnFailureVariable"] = args ? args.adminTechOnFailureVariable : undefined;
             resourceInputs["affinityGroupNumber"] = args ? args.affinityGroupNumber : undefined;
@@ -961,7 +966,7 @@ export interface SystemBasicFeatureArgs {
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId: pulumi.Input<string>;
     /**
      * Enable Geo fencing - Default value: `false`
      */

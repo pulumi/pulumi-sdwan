@@ -30,6 +30,8 @@ import javax.annotation.Nullable;
  * 
  * ## Import
  * 
+ * The `pulumi import` command can be used, for example:
+ * 
  * Expected import identifier with the format: &#34;transport_wan_vpn_interface_cellular_feature_id,feature_profile_id,transport_wan_vpn_feature_id&#34;
  * 
  * ```sh
@@ -854,14 +856,14 @@ public class TransportWanVpnInterfaceCellularFeature extends com.pulumi.resource
      * 
      */
     @Export(name="transportWanVpnFeatureId", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> transportWanVpnFeatureId;
+    private Output<String> transportWanVpnFeatureId;
 
     /**
      * @return Transport WAN VPN Feature ID
      * 
      */
-    public Output<Optional<String>> transportWanVpnFeatureId() {
-        return Codegen.optional(this.transportWanVpnFeatureId);
+    public Output<String> transportWanVpnFeatureId() {
+        return this.transportWanVpnFeatureId;
     }
     /**
      * Tunnels Bandwidth Percent - Range: `1`-`100` - Default value: `50`

@@ -15,6 +15,8 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Import
     /// 
+    /// The `pulumi import` command can be used, for example:
+    /// 
     /// Expected import identifier with the format: "system_snmp_feature_id,feature_profile_id"
     /// 
     /// ```sh
@@ -52,7 +54,7 @@ namespace Pulumi.Sdwan
         /// Feature Profile ID
         /// </summary>
         [Output("featureProfileId")]
-        public Output<string?> FeatureProfileId { get; private set; } = null!;
+        public Output<string> FeatureProfileId { get; private set; } = null!;
 
         /// <summary>
         /// Configure an SNMP group
@@ -122,7 +124,7 @@ namespace Pulumi.Sdwan
         /// <param name="name">The unique name of the resource</param>
         /// <param name="args">The arguments used to populate this resource's properties</param>
         /// <param name="options">A bag of options that control this resource's behavior</param>
-        public SystemSnmpFeature(string name, SystemSnmpFeatureArgs? args = null, CustomResourceOptions? options = null)
+        public SystemSnmpFeature(string name, SystemSnmpFeatureArgs args, CustomResourceOptions? options = null)
             : base("sdwan:index/systemSnmpFeature:SystemSnmpFeature", name, args ?? new SystemSnmpFeatureArgs(), MakeResourceOptions(options, ""))
         {
         }
@@ -193,8 +195,8 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// Feature Profile ID
         /// </summary>
-        [Input("featureProfileId")]
-        public Input<string>? FeatureProfileId { get; set; }
+        [Input("featureProfileId", required: true)]
+        public Input<string> FeatureProfileId { get; set; } = null!;
 
         [Input("groups")]
         private InputList<Inputs.SystemSnmpFeatureGroupArgs>? _groups;

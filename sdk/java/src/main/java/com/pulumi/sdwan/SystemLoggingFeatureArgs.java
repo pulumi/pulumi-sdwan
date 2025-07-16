@@ -5,6 +5,7 @@ package com.pulumi.sdwan;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.sdwan.inputs.SystemLoggingFeatureIpv4ServerArgs;
 import com.pulumi.sdwan.inputs.SystemLoggingFeatureIpv6ServerArgs;
 import com.pulumi.sdwan.inputs.SystemLoggingFeatureTlsProfileArgs;
@@ -130,15 +131,15 @@ public final class SystemLoggingFeatureArgs extends com.pulumi.resources.Resourc
      * Feature Profile ID
      * 
      */
-    @Import(name="featureProfileId")
-    private @Nullable Output<String> featureProfileId;
+    @Import(name="featureProfileId", required=true)
+    private Output<String> featureProfileId;
 
     /**
      * @return Feature Profile ID
      * 
      */
-    public Optional<Output<String>> featureProfileId() {
-        return Optional.ofNullable(this.featureProfileId);
+    public Output<String> featureProfileId() {
+        return this.featureProfileId;
     }
 
     /**
@@ -389,7 +390,7 @@ public final class SystemLoggingFeatureArgs extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder featureProfileId(@Nullable Output<String> featureProfileId) {
+        public Builder featureProfileId(Output<String> featureProfileId) {
             $.featureProfileId = featureProfileId;
             return this;
         }
@@ -519,6 +520,9 @@ public final class SystemLoggingFeatureArgs extends com.pulumi.resources.Resourc
         }
 
         public SystemLoggingFeatureArgs build() {
+            if ($.featureProfileId == null) {
+                throw new MissingRequiredPropertyException("SystemLoggingFeatureArgs", "featureProfileId");
+            }
             return $;
         }
     }

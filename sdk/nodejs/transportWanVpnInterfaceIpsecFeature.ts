@@ -53,6 +53,8 @@ import * as utilities from "./utilities";
  *
  * ## Import
  *
+ * The `pulumi import` command can be used, for example:
+ *
  * Expected import identifier with the format: "transport_wan_vpn_interface_ipsec_feature_id,feature_profile_id,transport_wan_vpn_feature_id"
  *
  * ```sh
@@ -295,7 +297,7 @@ export class TransportWanVpnInterfaceIpsecFeature extends pulumi.CustomResource 
     /**
      * Transport WAN VPN Feature ID
      */
-    public readonly transportWanVpnFeatureId!: pulumi.Output<string | undefined>;
+    public readonly transportWanVpnFeatureId!: pulumi.Output<string>;
     public readonly tunnelDestinationIpv4Address!: pulumi.Output<string | undefined>;
     /**
      * Variable name
@@ -432,6 +434,9 @@ export class TransportWanVpnInterfaceIpsecFeature extends pulumi.CustomResource 
             const args = argsOrState as TransportWanVpnInterfaceIpsecFeatureArgs | undefined;
             if ((!args || args.featureProfileId === undefined) && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
+            }
+            if ((!args || args.transportWanVpnFeatureId === undefined) && !opts.urn) {
+                throw new Error("Missing required property 'transportWanVpnFeatureId'");
             }
             resourceInputs["applicationTunnelType"] = args ? args.applicationTunnelType : undefined;
             resourceInputs["applicationTunnelTypeVariable"] = args ? args.applicationTunnelTypeVariable : undefined;
@@ -984,7 +989,7 @@ export interface TransportWanVpnInterfaceIpsecFeatureArgs {
     /**
      * Transport WAN VPN Feature ID
      */
-    transportWanVpnFeatureId?: pulumi.Input<string>;
+    transportWanVpnFeatureId: pulumi.Input<string>;
     tunnelDestinationIpv4Address?: pulumi.Input<string>;
     /**
      * Variable name

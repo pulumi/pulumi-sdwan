@@ -176,6 +176,8 @@ class ApplicationAwareRoutingPolicyDefinition(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         ```sh
         $ pulumi import sdwan:index/applicationAwareRoutingPolicyDefinition:ApplicationAwareRoutingPolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"
         ```
@@ -196,6 +198,8 @@ class ApplicationAwareRoutingPolicyDefinition(pulumi.CustomResource):
         This resource can manage a Application Aware Routing Policy Definition .
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         ```sh
         $ pulumi import sdwan:index/applicationAwareRoutingPolicyDefinition:ApplicationAwareRoutingPolicyDefinition example "f6b2c44c-693c-4763-b010-895aa3d236bd"

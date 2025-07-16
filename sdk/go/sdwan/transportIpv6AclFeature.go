@@ -7,6 +7,7 @@ import (
 	"context"
 	"reflect"
 
+	"errors"
 	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan/internal"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
@@ -15,6 +16,8 @@ import (
 //   - Minimum SD-WAN Manager version: `20.12.0`
 //
 // ## Import
+//
+// The `pulumi import` command can be used, for example:
 //
 // Expected import identifier with the format: "transport_ipv6_acl_feature_id,feature_profile_id"
 //
@@ -29,7 +32,7 @@ type TransportIpv6AclFeature struct {
 	// The description of the Feature
 	Description pulumi.StringPtrOutput `pulumi:"description"`
 	// Feature Profile ID
-	FeatureProfileId pulumi.StringPtrOutput `pulumi:"featureProfileId"`
+	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
 	// The name of the Feature
 	Name pulumi.StringOutput `pulumi:"name"`
 	// Access Control List
@@ -42,9 +45,12 @@ type TransportIpv6AclFeature struct {
 func NewTransportIpv6AclFeature(ctx *pulumi.Context,
 	name string, args *TransportIpv6AclFeatureArgs, opts ...pulumi.ResourceOption) (*TransportIpv6AclFeature, error) {
 	if args == nil {
-		args = &TransportIpv6AclFeatureArgs{}
+		return nil, errors.New("missing one or more required arguments")
 	}
 
+	if args.FeatureProfileId == nil {
+		return nil, errors.New("invalid value for required argument 'FeatureProfileId'")
+	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource TransportIpv6AclFeature
 	err := ctx.RegisterResource("sdwan:index/transportIpv6AclFeature:TransportIpv6AclFeature", name, args, &resource, opts...)
@@ -107,7 +113,7 @@ type transportIpv6AclFeatureArgs struct {
 	// The description of the Feature
 	Description *string `pulumi:"description"`
 	// Feature Profile ID
-	FeatureProfileId *string `pulumi:"featureProfileId"`
+	FeatureProfileId string `pulumi:"featureProfileId"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
 	// Access Control List
@@ -121,7 +127,7 @@ type TransportIpv6AclFeatureArgs struct {
 	// The description of the Feature
 	Description pulumi.StringPtrInput
 	// Feature Profile ID
-	FeatureProfileId pulumi.StringPtrInput
+	FeatureProfileId pulumi.StringInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
 	// Access Control List
@@ -226,8 +232,8 @@ func (o TransportIpv6AclFeatureOutput) Description() pulumi.StringPtrOutput {
 }
 
 // Feature Profile ID
-func (o TransportIpv6AclFeatureOutput) FeatureProfileId() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *TransportIpv6AclFeature) pulumi.StringPtrOutput { return v.FeatureProfileId }).(pulumi.StringPtrOutput)
+func (o TransportIpv6AclFeatureOutput) FeatureProfileId() pulumi.StringOutput {
+	return o.ApplyT(func(v *TransportIpv6AclFeature) pulumi.StringOutput { return v.FeatureProfileId }).(pulumi.StringOutput)
 }
 
 // The name of the Feature

@@ -22,6 +22,7 @@ __all__ = ['SystemBasicFeatureArgs', 'SystemBasicFeature']
 @pulumi.input_type
 class SystemBasicFeatureArgs:
     def __init__(__self__, *,
+                 feature_profile_id: pulumi.Input[builtins.str],
                  admin_tech_on_failure: Optional[pulumi.Input[builtins.bool]] = None,
                  admin_tech_on_failure_variable: Optional[pulumi.Input[builtins.str]] = None,
                  affinity_group_number: Optional[pulumi.Input[builtins.int]] = None,
@@ -44,7 +45,6 @@ class SystemBasicFeatureArgs:
                  device_groups_variable: Optional[pulumi.Input[builtins.str]] = None,
                  enhanced_app_aware_routing: Optional[pulumi.Input[builtins.str]] = None,
                  enhanced_app_aware_routing_variable: Optional[pulumi.Input[builtins.str]] = None,
-                 feature_profile_id: Optional[pulumi.Input[builtins.str]] = None,
                  gps_geo_fencing_enable: Optional[pulumi.Input[builtins.bool]] = None,
                  gps_geo_fencing_range: Optional[pulumi.Input[builtins.int]] = None,
                  gps_geo_fencing_range_variable: Optional[pulumi.Input[builtins.str]] = None,
@@ -87,6 +87,7 @@ class SystemBasicFeatureArgs:
                  transport_gateway_variable: Optional[pulumi.Input[builtins.str]] = None):
         """
         The set of arguments for constructing a SystemBasicFeature resource.
+        :param pulumi.Input[builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[builtins.bool] admin_tech_on_failure: Collect admin-tech before reboot due to daemon failure - Default value: `true`
         :param pulumi.Input[builtins.str] admin_tech_on_failure_variable: Variable name
         :param pulumi.Input[builtins.int] affinity_group_number: Affinity Group Number - Range: `1`-`63`
@@ -111,7 +112,6 @@ class SystemBasicFeatureArgs:
         :param pulumi.Input[builtins.str] enhanced_app_aware_routing: Enable SLA Dampening and Enhanced App Routing. - Choices: `disabled`, `aggressive`, `moderate`, `conservative` - Default
                value: `disabled`
         :param pulumi.Input[builtins.str] enhanced_app_aware_routing_variable: Variable name
-        :param pulumi.Input[builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[builtins.bool] gps_geo_fencing_enable: Enable Geo fencing - Default value: `false`
         :param pulumi.Input[builtins.int] gps_geo_fencing_range: Set the device’s geo fencing range - Range: `100`-`10000` - Default value: `100`
         :param pulumi.Input[builtins.str] gps_geo_fencing_range_variable: Variable name
@@ -226,6 +226,7 @@ class SystemBasicFeatureArgs:
         :param pulumi.Input[builtins.bool] transport_gateway: Enable transport gateway - Default value: `false`
         :param pulumi.Input[builtins.str] transport_gateway_variable: Variable name
         """
+        pulumi.set(__self__, "feature_profile_id", feature_profile_id)
         if admin_tech_on_failure is not None:
             pulumi.set(__self__, "admin_tech_on_failure", admin_tech_on_failure)
         if admin_tech_on_failure_variable is not None:
@@ -270,8 +271,6 @@ class SystemBasicFeatureArgs:
             pulumi.set(__self__, "enhanced_app_aware_routing", enhanced_app_aware_routing)
         if enhanced_app_aware_routing_variable is not None:
             pulumi.set(__self__, "enhanced_app_aware_routing_variable", enhanced_app_aware_routing_variable)
-        if feature_profile_id is not None:
-            pulumi.set(__self__, "feature_profile_id", feature_profile_id)
         if gps_geo_fencing_enable is not None:
             pulumi.set(__self__, "gps_geo_fencing_enable", gps_geo_fencing_enable)
         if gps_geo_fencing_range is not None:
@@ -352,6 +351,18 @@ class SystemBasicFeatureArgs:
             pulumi.set(__self__, "transport_gateway", transport_gateway)
         if transport_gateway_variable is not None:
             pulumi.set(__self__, "transport_gateway_variable", transport_gateway_variable)
+
+    @property
+    @pulumi.getter(name="featureProfileId")
+    def feature_profile_id(self) -> pulumi.Input[builtins.str]:
+        """
+        Feature Profile ID
+        """
+        return pulumi.get(self, "feature_profile_id")
+
+    @feature_profile_id.setter
+    def feature_profile_id(self, value: pulumi.Input[builtins.str]):
+        pulumi.set(self, "feature_profile_id", value)
 
     @property
     @pulumi.getter(name="adminTechOnFailure")
@@ -618,18 +629,6 @@ class SystemBasicFeatureArgs:
     @enhanced_app_aware_routing_variable.setter
     def enhanced_app_aware_routing_variable(self, value: Optional[pulumi.Input[builtins.str]]):
         pulumi.set(self, "enhanced_app_aware_routing_variable", value)
-
-    @property
-    @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> Optional[pulumi.Input[builtins.str]]:
-        """
-        Feature Profile ID
-        """
-        return pulumi.get(self, "feature_profile_id")
-
-    @feature_profile_id.setter
-    def feature_profile_id(self, value: Optional[pulumi.Input[builtins.str]]):
-        pulumi.set(self, "feature_profile_id", value)
 
     @property
     @pulumi.getter(name="gpsGeoFencingEnable")
@@ -2443,6 +2442,8 @@ class SystemBasicFeature(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         Expected import identifier with the format: "system_basic_feature_id,feature_profile_id"
 
         ```sh
@@ -2594,13 +2595,15 @@ class SystemBasicFeature(pulumi.CustomResource):
     @overload
     def __init__(__self__,
                  resource_name: str,
-                 args: Optional[SystemBasicFeatureArgs] = None,
+                 args: SystemBasicFeatureArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a System Basic Feature.
           - Minimum SD-WAN Manager version: `20.12.0`
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         Expected import identifier with the format: "system_basic_feature_id,feature_profile_id"
 
@@ -2717,6 +2720,8 @@ class SystemBasicFeature(pulumi.CustomResource):
             __props__.__dict__["device_groups_variable"] = device_groups_variable
             __props__.__dict__["enhanced_app_aware_routing"] = enhanced_app_aware_routing
             __props__.__dict__["enhanced_app_aware_routing_variable"] = enhanced_app_aware_routing_variable
+            if feature_profile_id is None and not opts.urn:
+                raise TypeError("Missing required property 'feature_profile_id'")
             __props__.__dict__["feature_profile_id"] = feature_profile_id
             __props__.__dict__["gps_geo_fencing_enable"] = gps_geo_fencing_enable
             __props__.__dict__["gps_geo_fencing_range"] = gps_geo_fencing_range
@@ -3230,7 +3235,7 @@ class SystemBasicFeature(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="featureProfileId")
-    def feature_profile_id(self) -> pulumi.Output[Optional[builtins.str]]:
+    def feature_profile_id(self) -> pulumi.Output[builtins.str]:
         """
         Feature Profile ID
         """

@@ -12,6 +12,8 @@ import * as utilities from "./utilities";
  *
  * ## Import
  *
+ * The `pulumi import` command can be used, for example:
+ *
  * Expected import identifier with the format: "system_logging_feature_id,feature_profile_id"
  *
  * ```sh
@@ -77,7 +79,7 @@ export class SystemLoggingFeature extends pulumi.CustomResource {
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string | undefined>;
+    public readonly featureProfileId!: pulumi.Output<string>;
     /**
      * Enable logging to remote server
      */
@@ -106,7 +108,7 @@ export class SystemLoggingFeature extends pulumi.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param opts A bag of options that control this resource's behavior.
      */
-    constructor(name: string, args?: SystemLoggingFeatureArgs, opts?: pulumi.CustomResourceOptions)
+    constructor(name: string, args: SystemLoggingFeatureArgs, opts?: pulumi.CustomResourceOptions)
     constructor(name: string, argsOrState?: SystemLoggingFeatureArgs | SystemLoggingFeatureState, opts?: pulumi.CustomResourceOptions) {
         let resourceInputs: pulumi.Inputs = {};
         opts = opts || {};
@@ -127,6 +129,9 @@ export class SystemLoggingFeature extends pulumi.CustomResource {
             resourceInputs["version"] = state ? state.version : undefined;
         } else {
             const args = argsOrState as SystemLoggingFeatureArgs | undefined;
+            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+                throw new Error("Missing required property 'featureProfileId'");
+            }
             resourceInputs["description"] = args ? args.description : undefined;
             resourceInputs["diskEnable"] = args ? args.diskEnable : undefined;
             resourceInputs["diskEnableVariable"] = args ? args.diskEnableVariable : undefined;
@@ -239,7 +244,7 @@ export interface SystemLoggingFeatureArgs {
     /**
      * Feature Profile ID
      */
-    featureProfileId?: pulumi.Input<string>;
+    featureProfileId: pulumi.Input<string>;
     /**
      * Enable logging to remote server
      */

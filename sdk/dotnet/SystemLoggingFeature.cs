@@ -15,6 +15,8 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Import
     /// 
+    /// The `pulumi import` command can be used, for example:
+    /// 
     /// Expected import identifier with the format: "system_logging_feature_id,feature_profile_id"
     /// 
     /// ```sh
@@ -70,7 +72,7 @@ namespace Pulumi.Sdwan
         /// Feature Profile ID
         /// </summary>
         [Output("featureProfileId")]
-        public Output<string?> FeatureProfileId { get; private set; } = null!;
+        public Output<string> FeatureProfileId { get; private set; } = null!;
 
         /// <summary>
         /// Enable logging to remote server
@@ -110,7 +112,7 @@ namespace Pulumi.Sdwan
         /// <param name="name">The unique name of the resource</param>
         /// <param name="args">The arguments used to populate this resource's properties</param>
         /// <param name="options">A bag of options that control this resource's behavior</param>
-        public SystemLoggingFeature(string name, SystemLoggingFeatureArgs? args = null, CustomResourceOptions? options = null)
+        public SystemLoggingFeature(string name, SystemLoggingFeatureArgs args, CustomResourceOptions? options = null)
             : base("sdwan:index/systemLoggingFeature:SystemLoggingFeature", name, args ?? new SystemLoggingFeatureArgs(), MakeResourceOptions(options, ""))
         {
         }
@@ -193,8 +195,8 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// Feature Profile ID
         /// </summary>
-        [Input("featureProfileId")]
-        public Input<string>? FeatureProfileId { get; set; }
+        [Input("featureProfileId", required: true)]
+        public Input<string> FeatureProfileId { get; set; } = null!;
 
         [Input("ipv4Servers")]
         private InputList<Inputs.SystemLoggingFeatureIpv4ServerArgs>? _ipv4Servers;

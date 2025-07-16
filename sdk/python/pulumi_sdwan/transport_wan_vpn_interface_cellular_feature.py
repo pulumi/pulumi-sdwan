@@ -23,6 +23,7 @@ __all__ = ['TransportWanVpnInterfaceCellularFeatureArgs', 'TransportWanVpnInterf
 class TransportWanVpnInterfaceCellularFeatureArgs:
     def __init__(__self__, *,
                  feature_profile_id: pulumi.Input[builtins.str],
+                 transport_wan_vpn_feature_id: pulumi.Input[builtins.str],
                  acl_ipv4_egress_feature_id: Optional[pulumi.Input[builtins.str]] = None,
                  acl_ipv4_ingress_feature_id: Optional[pulumi.Input[builtins.str]] = None,
                  acl_ipv6_egress_feature_id: Optional[pulumi.Input[builtins.str]] = None,
@@ -83,7 +84,6 @@ class TransportWanVpnInterfaceCellularFeatureArgs:
                  tloc_extension_variable: Optional[pulumi.Input[builtins.str]] = None,
                  tracker: Optional[pulumi.Input[builtins.str]] = None,
                  tracker_variable: Optional[pulumi.Input[builtins.str]] = None,
-                 transport_wan_vpn_feature_id: Optional[pulumi.Input[builtins.str]] = None,
                  tunnel_bandwidth_percent: Optional[pulumi.Input[builtins.int]] = None,
                  tunnel_bandwidth_percent_variable: Optional[pulumi.Input[builtins.str]] = None,
                  tunnel_interface: Optional[pulumi.Input[builtins.bool]] = None,
@@ -157,6 +157,7 @@ class TransportWanVpnInterfaceCellularFeatureArgs:
         """
         The set of arguments for constructing a TransportWanVpnInterfaceCellularFeature resource.
         :param pulumi.Input[builtins.str] feature_profile_id: Feature Profile ID
+        :param pulumi.Input[builtins.str] transport_wan_vpn_feature_id: Transport WAN VPN Feature ID
         :param pulumi.Input[Sequence[pulumi.Input['TransportWanVpnInterfaceCellularFeatureArpArgs']]] arps: Configure ARP entries
         :param pulumi.Input[builtins.int] bandwidth_downstream: Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
         :param pulumi.Input[builtins.str] bandwidth_downstream_variable: Variable name
@@ -213,7 +214,6 @@ class TransportWanVpnInterfaceCellularFeatureArgs:
         :param pulumi.Input[builtins.str] tloc_extension_variable: Variable name
         :param pulumi.Input[builtins.str] tracker: Enable tracker for this interface
         :param pulumi.Input[builtins.str] tracker_variable: Variable name
-        :param pulumi.Input[builtins.str] transport_wan_vpn_feature_id: Transport WAN VPN Feature ID
         :param pulumi.Input[builtins.int] tunnel_bandwidth_percent: Tunnels Bandwidth Percent - Range: `1`-`100` - Default value: `50`
         :param pulumi.Input[builtins.str] tunnel_bandwidth_percent_variable: Variable name
         :param pulumi.Input[builtins.bool] tunnel_interface: Tunnel Interface on/off - Default value: `false`
@@ -289,6 +289,7 @@ class TransportWanVpnInterfaceCellularFeatureArgs:
         :param pulumi.Input[builtins.str] tunnel_qos_mode_variable: Variable name
         """
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
+        pulumi.set(__self__, "transport_wan_vpn_feature_id", transport_wan_vpn_feature_id)
         if acl_ipv4_egress_feature_id is not None:
             pulumi.set(__self__, "acl_ipv4_egress_feature_id", acl_ipv4_egress_feature_id)
         if acl_ipv4_ingress_feature_id is not None:
@@ -409,8 +410,6 @@ class TransportWanVpnInterfaceCellularFeatureArgs:
             pulumi.set(__self__, "tracker", tracker)
         if tracker_variable is not None:
             pulumi.set(__self__, "tracker_variable", tracker_variable)
-        if transport_wan_vpn_feature_id is not None:
-            pulumi.set(__self__, "transport_wan_vpn_feature_id", transport_wan_vpn_feature_id)
         if tunnel_bandwidth_percent is not None:
             pulumi.set(__self__, "tunnel_bandwidth_percent", tunnel_bandwidth_percent)
         if tunnel_bandwidth_percent_variable is not None:
@@ -563,6 +562,18 @@ class TransportWanVpnInterfaceCellularFeatureArgs:
     @feature_profile_id.setter
     def feature_profile_id(self, value: pulumi.Input[builtins.str]):
         pulumi.set(self, "feature_profile_id", value)
+
+    @property
+    @pulumi.getter(name="transportWanVpnFeatureId")
+    def transport_wan_vpn_feature_id(self) -> pulumi.Input[builtins.str]:
+        """
+        Transport WAN VPN Feature ID
+        """
+        return pulumi.get(self, "transport_wan_vpn_feature_id")
+
+    @transport_wan_vpn_feature_id.setter
+    def transport_wan_vpn_feature_id(self, value: pulumi.Input[builtins.str]):
+        pulumi.set(self, "transport_wan_vpn_feature_id", value)
 
     @property
     @pulumi.getter(name="aclIpv4EgressFeatureId")
@@ -1267,18 +1278,6 @@ class TransportWanVpnInterfaceCellularFeatureArgs:
     @tracker_variable.setter
     def tracker_variable(self, value: Optional[pulumi.Input[builtins.str]]):
         pulumi.set(self, "tracker_variable", value)
-
-    @property
-    @pulumi.getter(name="transportWanVpnFeatureId")
-    def transport_wan_vpn_feature_id(self) -> Optional[pulumi.Input[builtins.str]]:
-        """
-        Transport WAN VPN Feature ID
-        """
-        return pulumi.get(self, "transport_wan_vpn_feature_id")
-
-    @transport_wan_vpn_feature_id.setter
-    def transport_wan_vpn_feature_id(self, value: Optional[pulumi.Input[builtins.str]]):
-        pulumi.set(self, "transport_wan_vpn_feature_id", value)
 
     @property
     @pulumi.getter(name="tunnelBandwidthPercent")
@@ -4391,6 +4390,8 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
 
         ## Import
 
+        The `pulumi import` command can be used, for example:
+
         Expected import identifier with the format: "transport_wan_vpn_interface_cellular_feature_id,feature_profile_id,transport_wan_vpn_feature_id"
 
         ```sh
@@ -4542,6 +4543,8 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
           - Minimum SD-WAN Manager version: `20.12.0`
 
         ## Import
+
+        The `pulumi import` command can be used, for example:
 
         Expected import identifier with the format: "transport_wan_vpn_interface_cellular_feature_id,feature_profile_id,transport_wan_vpn_feature_id"
 
@@ -4768,6 +4771,8 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
             __props__.__dict__["tloc_extension_variable"] = tloc_extension_variable
             __props__.__dict__["tracker"] = tracker
             __props__.__dict__["tracker_variable"] = tracker_variable
+            if transport_wan_vpn_feature_id is None and not opts.urn:
+                raise TypeError("Missing required property 'transport_wan_vpn_feature_id'")
             __props__.__dict__["transport_wan_vpn_feature_id"] = transport_wan_vpn_feature_id
             __props__.__dict__["tunnel_bandwidth_percent"] = tunnel_bandwidth_percent
             __props__.__dict__["tunnel_bandwidth_percent_variable"] = tunnel_bandwidth_percent_variable
@@ -5736,7 +5741,7 @@ class TransportWanVpnInterfaceCellularFeature(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="transportWanVpnFeatureId")
-    def transport_wan_vpn_feature_id(self) -> pulumi.Output[Optional[builtins.str]]:
+    def transport_wan_vpn_feature_id(self) -> pulumi.Output[builtins.str]:
         """
         Transport WAN VPN Feature ID
         """

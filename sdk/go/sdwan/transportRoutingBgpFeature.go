@@ -7,6 +7,7 @@ import (
 	"context"
 	"reflect"
 
+	"errors"
 	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan/internal"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
@@ -15,6 +16,8 @@ import (
 //   - Minimum SD-WAN Manager version: `20.12.0`
 //
 // ## Import
+//
+// The `pulumi import` command can be used, for example:
 //
 // Expected import identifier with the format: "transport_routing_bgp_feature_id,feature_profile_id"
 //
@@ -47,7 +50,7 @@ type TransportRoutingBgpFeature struct {
 	// Variable name
 	ExternalRoutesDistanceVariable pulumi.StringPtrOutput `pulumi:"externalRoutesDistanceVariable"`
 	// Feature Profile ID
-	FeatureProfileId pulumi.StringPtrOutput `pulumi:"featureProfileId"`
+	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
 	// Interval (seconds) not receiving a keepalive message declares a BGP peer down - Range: `0`-`65535` - Default value:
 	// `180`
 	HoldTime pulumi.IntPtrOutput `pulumi:"holdTime"`
@@ -139,9 +142,12 @@ type TransportRoutingBgpFeature struct {
 func NewTransportRoutingBgpFeature(ctx *pulumi.Context,
 	name string, args *TransportRoutingBgpFeatureArgs, opts ...pulumi.ResourceOption) (*TransportRoutingBgpFeature, error) {
 	if args == nil {
-		args = &TransportRoutingBgpFeatureArgs{}
+		return nil, errors.New("missing one or more required arguments")
 	}
 
+	if args.FeatureProfileId == nil {
+		return nil, errors.New("invalid value for required argument 'FeatureProfileId'")
+	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource TransportRoutingBgpFeature
 	err := ctx.RegisterResource("sdwan:index/transportRoutingBgpFeature:TransportRoutingBgpFeature", name, args, &resource, opts...)
@@ -416,7 +422,7 @@ type transportRoutingBgpFeatureArgs struct {
 	// Variable name
 	ExternalRoutesDistanceVariable *string `pulumi:"externalRoutesDistanceVariable"`
 	// Feature Profile ID
-	FeatureProfileId *string `pulumi:"featureProfileId"`
+	FeatureProfileId string `pulumi:"featureProfileId"`
 	// Interval (seconds) not receiving a keepalive message declares a BGP peer down - Range: `0`-`65535` - Default value:
 	// `180`
 	HoldTime *int `pulumi:"holdTime"`
@@ -527,7 +533,7 @@ type TransportRoutingBgpFeatureArgs struct {
 	// Variable name
 	ExternalRoutesDistanceVariable pulumi.StringPtrInput
 	// Feature Profile ID
-	FeatureProfileId pulumi.StringPtrInput
+	FeatureProfileId pulumi.StringInput
 	// Interval (seconds) not receiving a keepalive message declares a BGP peer down - Range: `0`-`65535` - Default value:
 	// `180`
 	HoldTime pulumi.IntPtrInput
@@ -756,8 +762,8 @@ func (o TransportRoutingBgpFeatureOutput) ExternalRoutesDistanceVariable() pulum
 }
 
 // Feature Profile ID
-func (o TransportRoutingBgpFeatureOutput) FeatureProfileId() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *TransportRoutingBgpFeature) pulumi.StringPtrOutput { return v.FeatureProfileId }).(pulumi.StringPtrOutput)
+func (o TransportRoutingBgpFeatureOutput) FeatureProfileId() pulumi.StringOutput {
+	return o.ApplyT(func(v *TransportRoutingBgpFeature) pulumi.StringOutput { return v.FeatureProfileId }).(pulumi.StringOutput)
 }
 
 // Interval (seconds) not receiving a keepalive message declares a BGP peer down - Range: `0`-`65535` - Default value:

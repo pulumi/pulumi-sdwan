@@ -1551,10 +1551,9 @@ if not MYPY:
         """
         DNS Application list version
         """
-        dscp: NotRequired[pulumi.Input[builtins.int]]
+        dscp: NotRequired[pulumi.Input[builtins.str]]
         """
         DSCP value, Attribute conditional on `type` being equal to `dscp`
-          - Range: `0`-`63`
         """
         icmp_message: NotRequired[pulumi.Input[builtins.str]]
         """
@@ -1607,7 +1606,7 @@ class ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntryArgs:
                  dns: Optional[pulumi.Input[builtins.str]] = None,
                  dns_application_list_id: Optional[pulumi.Input[builtins.str]] = None,
                  dns_application_list_version: Optional[pulumi.Input[builtins.int]] = None,
-                 dscp: Optional[pulumi.Input[builtins.int]] = None,
+                 dscp: Optional[pulumi.Input[builtins.str]] = None,
                  icmp_message: Optional[pulumi.Input[builtins.str]] = None,
                  plp: Optional[pulumi.Input[builtins.str]] = None,
                  protocol: Optional[pulumi.Input[builtins.str]] = None,
@@ -1631,8 +1630,7 @@ class ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntryArgs:
                  - Choices: `request`, `response`
         :param pulumi.Input[builtins.str] dns_application_list_id: DNS Application list ID, Attribute conditional on `type` being equal to `dnsAppList`
         :param pulumi.Input[builtins.int] dns_application_list_version: DNS Application list version
-        :param pulumi.Input[builtins.int] dscp: DSCP value, Attribute conditional on `type` being equal to `dscp`
-                 - Range: `0`-`63`
+        :param pulumi.Input[builtins.str] dscp: DSCP value, Attribute conditional on `type` being equal to `dscp`
         :param pulumi.Input[builtins.str] icmp_message: ICMP Message, Attribute conditional on `type` being equal to `icmpMessage`
         :param pulumi.Input[builtins.str] plp: PLP, Attribute conditional on `type` being equal to `plp`
                  - Choices: `low`, `high`
@@ -1821,15 +1819,14 @@ class ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntryArgs:
 
     @property
     @pulumi.getter
-    def dscp(self) -> Optional[pulumi.Input[builtins.int]]:
+    def dscp(self) -> Optional[pulumi.Input[builtins.str]]:
         """
         DSCP value, Attribute conditional on `type` being equal to `dscp`
-          - Range: `0`-`63`
         """
         return pulumi.get(self, "dscp")
 
     @dscp.setter
-    def dscp(self, value: Optional[pulumi.Input[builtins.int]]):
+    def dscp(self, value: Optional[pulumi.Input[builtins.str]]):
         pulumi.set(self, "dscp", value)
 
     @property
@@ -64212,10 +64209,9 @@ if not MYPY:
         """
         DNS Application list version
         """
-        dscp: NotRequired[pulumi.Input[builtins.int]]
+        dscp: NotRequired[pulumi.Input[builtins.str]]
         """
         DSCP value, Attribute conditional on `type` being equal to `dscp`
-          - Range: `0`-`63`
         """
         icmp_message: NotRequired[pulumi.Input[builtins.str]]
         """
@@ -64278,7 +64274,7 @@ class TrafficDataPolicyDefinitionSequenceMatchEntryArgs:
                  dns: Optional[pulumi.Input[builtins.str]] = None,
                  dns_application_list_id: Optional[pulumi.Input[builtins.str]] = None,
                  dns_application_list_version: Optional[pulumi.Input[builtins.int]] = None,
-                 dscp: Optional[pulumi.Input[builtins.int]] = None,
+                 dscp: Optional[pulumi.Input[builtins.str]] = None,
                  icmp_message: Optional[pulumi.Input[builtins.str]] = None,
                  packet_length: Optional[pulumi.Input[builtins.int]] = None,
                  plp: Optional[pulumi.Input[builtins.str]] = None,
@@ -64304,8 +64300,7 @@ class TrafficDataPolicyDefinitionSequenceMatchEntryArgs:
                  - Choices: `request`, `response`
         :param pulumi.Input[builtins.str] dns_application_list_id: DNS Application list ID, Attribute conditional on `type` being equal to `dnsAppList`
         :param pulumi.Input[builtins.int] dns_application_list_version: DNS Application list version
-        :param pulumi.Input[builtins.int] dscp: DSCP value, Attribute conditional on `type` being equal to `dscp`
-                 - Range: `0`-`63`
+        :param pulumi.Input[builtins.str] dscp: DSCP value, Attribute conditional on `type` being equal to `dscp`
         :param pulumi.Input[builtins.str] icmp_message: ICMP Message, Attribute conditional on `type` being equal to `icmpMessage`
         :param pulumi.Input[builtins.int] packet_length: Packet length, Attribute conditional on `type` being equal to `packetLength`
                  - Range: `0`-`65535`
@@ -64502,15 +64497,14 @@ class TrafficDataPolicyDefinitionSequenceMatchEntryArgs:
 
     @property
     @pulumi.getter
-    def dscp(self) -> Optional[pulumi.Input[builtins.int]]:
+    def dscp(self) -> Optional[pulumi.Input[builtins.str]]:
         """
         DSCP value, Attribute conditional on `type` being equal to `dscp`
-          - Range: `0`-`63`
         """
         return pulumi.get(self, "dscp")
 
     @dscp.setter
-    def dscp(self, value: Optional[pulumi.Input[builtins.int]]):
+    def dscp(self, value: Optional[pulumi.Input[builtins.str]]):
         pulumi.set(self, "dscp", value)
 
     @property
@@ -68264,44 +68258,83 @@ class TransportRoutingBgpFeatureIpv4NeighborArgs:
 
 if not MYPY:
     class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgsDict(TypedDict):
+        disable_peer_max_number_of_prefixes: NotRequired[pulumi.Input[builtins.int]]
+        """
+        Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policy_type` being equal to `disable-peer`
+          - Range: `1`-`4294967295`
+        """
+        disable_peer_max_number_of_prefixes_variable: NotRequired[pulumi.Input[builtins.str]]
+        """
+        Variable name, Attribute conditional on `policy_type` being equal to `disable-peer`
+        """
+        disable_peer_threshold: NotRequired[pulumi.Input[builtins.int]]
+        """
+        Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policy_type` being equal to `disable-peer`
+          - Range: `1`-`100`
+          - Default value: `75`
+        """
+        disable_peer_threshold_variable: NotRequired[pulumi.Input[builtins.str]]
+        """
+        Variable name, Attribute conditional on `policy_type` being equal to `disable-peer`
+        """
         family_type: NotRequired[pulumi.Input[builtins.str]]
         """
         Set IPv4 unicast address family
           - Choices: `ipv4-unicast`, `vpnv4-unicast`, `vpnv6-unicast`
         """
         in_route_policy_id: NotRequired[pulumi.Input[builtins.str]]
-        max_number_of_prefixes: NotRequired[pulumi.Input[builtins.int]]
-        """
-        Set maximum number of prefixes accepted from BGP peer
-          - Range: `1`-`4294967295`
-        """
-        max_number_of_prefixes_variable: NotRequired[pulumi.Input[builtins.str]]
-        """
-        Variable name
-        """
         out_route_policy_id: NotRequired[pulumi.Input[builtins.str]]
         policy_type: NotRequired[pulumi.Input[builtins.str]]
         """
         Neighbor received maximum prefix policy is disabled.
+          - Choices: `restart`, `off`, `warning-only`, `disable-peer`
         """
         restart_interval: NotRequired[pulumi.Input[builtins.int]]
         """
-        Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded
+        Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policy_type` being equal to `restart`
           - Range: `1`-`65535`
         """
         restart_interval_variable: NotRequired[pulumi.Input[builtins.str]]
         """
-        Variable name
+        Variable name, Attribute conditional on `policy_type` being equal to `restart`
         """
-        threshold: NotRequired[pulumi.Input[builtins.int]]
+        restart_max_number_of_prefixes: NotRequired[pulumi.Input[builtins.int]]
         """
-        Set threshold(1 to 100) at which to generate a warning message
+        Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policy_type` being equal to `restart`
+          - Range: `1`-`4294967295`
+        """
+        restart_max_number_of_prefixes_variable: NotRequired[pulumi.Input[builtins.str]]
+        """
+        Variable name, Attribute conditional on `policy_type` being equal to `restart`
+        """
+        restart_threshold: NotRequired[pulumi.Input[builtins.int]]
+        """
+        Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policy_type` being equal to `restart`
           - Range: `1`-`100`
           - Default value: `75`
         """
-        threshold_variable: NotRequired[pulumi.Input[builtins.str]]
+        restart_threshold_variable: NotRequired[pulumi.Input[builtins.str]]
         """
-        Variable name
+        Variable name, Attribute conditional on `policy_type` being equal to `restart`
+        """
+        warning_message_max_number_of_prefixes: NotRequired[pulumi.Input[builtins.int]]
+        """
+        Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policy_type` being equal to `warning-only`
+          - Range: `1`-`4294967295`
+        """
+        warning_message_max_number_of_prefixes_variable: NotRequired[pulumi.Input[builtins.str]]
+        """
+        Variable name, Attribute conditional on `policy_type` being equal to `warning-only`
+        """
+        warning_message_threshold: NotRequired[pulumi.Input[builtins.int]]
+        """
+        Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policy_type` being equal to `warning-only`
+          - Range: `1`-`100`
+          - Default value: `75`
+        """
+        warning_message_threshold_variable: NotRequired[pulumi.Input[builtins.str]]
+        """
+        Variable name, Attribute conditional on `policy_type` being equal to `warning-only`
         """
 elif False:
     TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgsDict: TypeAlias = Mapping[str, Any]
@@ -68309,39 +68342,66 @@ elif False:
 @pulumi.input_type
 class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs:
     def __init__(__self__, *,
+                 disable_peer_max_number_of_prefixes: Optional[pulumi.Input[builtins.int]] = None,
+                 disable_peer_max_number_of_prefixes_variable: Optional[pulumi.Input[builtins.str]] = None,
+                 disable_peer_threshold: Optional[pulumi.Input[builtins.int]] = None,
+                 disable_peer_threshold_variable: Optional[pulumi.Input[builtins.str]] = None,
                  family_type: Optional[pulumi.Input[builtins.str]] = None,
                  in_route_policy_id: Optional[pulumi.Input[builtins.str]] = None,
-                 max_number_of_prefixes: Optional[pulumi.Input[builtins.int]] = None,
-                 max_number_of_prefixes_variable: Optional[pulumi.Input[builtins.str]] = None,
                  out_route_policy_id: Optional[pulumi.Input[builtins.str]] = None,
                  policy_type: Optional[pulumi.Input[builtins.str]] = None,
                  restart_interval: Optional[pulumi.Input[builtins.int]] = None,
                  restart_interval_variable: Optional[pulumi.Input[builtins.str]] = None,
-                 threshold: Optional[pulumi.Input[builtins.int]] = None,
-                 threshold_variable: Optional[pulumi.Input[builtins.str]] = None):
+                 restart_max_number_of_prefixes: Optional[pulumi.Input[builtins.int]] = None,
+                 restart_max_number_of_prefixes_variable: Optional[pulumi.Input[builtins.str]] = None,
+                 restart_threshold: Optional[pulumi.Input[builtins.int]] = None,
+                 restart_threshold_variable: Optional[pulumi.Input[builtins.str]] = None,
+                 warning_message_max_number_of_prefixes: Optional[pulumi.Input[builtins.int]] = None,
+                 warning_message_max_number_of_prefixes_variable: Optional[pulumi.Input[builtins.str]] = None,
+                 warning_message_threshold: Optional[pulumi.Input[builtins.int]] = None,
+                 warning_message_threshold_variable: Optional[pulumi.Input[builtins.str]] = None):
         """
-        :param pulumi.Input[builtins.str] family_type: Set IPv4 unicast address family
-                 - Choices: `ipv4-unicast`, `vpnv4-unicast`, `vpnv6-unicast`
-        :param pulumi.Input[builtins.int] max_number_of_prefixes: Set maximum number of prefixes accepted from BGP peer
+        :param pulumi.Input[builtins.int] disable_peer_max_number_of_prefixes: Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policy_type` being equal to `disable-peer`
                  - Range: `1`-`4294967295`
-        :param pulumi.Input[builtins.str] max_number_of_prefixes_variable: Variable name
-        :param pulumi.Input[builtins.str] policy_type: Neighbor received maximum prefix policy is disabled.
-        :param pulumi.Input[builtins.int] restart_interval: Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded
-                 - Range: `1`-`65535`
-        :param pulumi.Input[builtins.str] restart_interval_variable: Variable name
-        :param pulumi.Input[builtins.int] threshold: Set threshold(1 to 100) at which to generate a warning message
+        :param pulumi.Input[builtins.str] disable_peer_max_number_of_prefixes_variable: Variable name, Attribute conditional on `policy_type` being equal to `disable-peer`
+        :param pulumi.Input[builtins.int] disable_peer_threshold: Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policy_type` being equal to `disable-peer`
                  - Range: `1`-`100`
                  - Default value: `75`
-        :param pulumi.Input[builtins.str] threshold_variable: Variable name
+        :param pulumi.Input[builtins.str] disable_peer_threshold_variable: Variable name, Attribute conditional on `policy_type` being equal to `disable-peer`
+        :param pulumi.Input[builtins.str] family_type: Set IPv4 unicast address family
+                 - Choices: `ipv4-unicast`, `vpnv4-unicast`, `vpnv6-unicast`
+        :param pulumi.Input[builtins.str] policy_type: Neighbor received maximum prefix policy is disabled.
+                 - Choices: `restart`, `off`, `warning-only`, `disable-peer`
+        :param pulumi.Input[builtins.int] restart_interval: Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policy_type` being equal to `restart`
+                 - Range: `1`-`65535`
+        :param pulumi.Input[builtins.str] restart_interval_variable: Variable name, Attribute conditional on `policy_type` being equal to `restart`
+        :param pulumi.Input[builtins.int] restart_max_number_of_prefixes: Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policy_type` being equal to `restart`
+                 - Range: `1`-`4294967295`
+        :param pulumi.Input[builtins.str] restart_max_number_of_prefixes_variable: Variable name, Attribute conditional on `policy_type` being equal to `restart`
+        :param pulumi.Input[builtins.int] restart_threshold: Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policy_type` being equal to `restart`
+                 - Range: `1`-`100`
+                 - Default value: `75`
+        :param pulumi.Input[builtins.str] restart_threshold_variable: Variable name, Attribute conditional on `policy_type` being equal to `restart`
+        :param pulumi.Input[builtins.int] warning_message_max_number_of_prefixes: Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policy_type` being equal to `warning-only`
+                 - Range: `1`-`4294967295`
+        :param pulumi.Input[builtins.str] warning_message_max_number_of_prefixes_variable: Variable name, Attribute conditional on `policy_type` being equal to `warning-only`
+        :param pulumi.Input[builtins.int] warning_message_threshold: Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policy_type` being equal to `warning-only`
+                 - Range: `1`-`100`
+                 - Default value: `75`
+        :param pulumi.Input[builtins.str] warning_message_threshold_variable: Variable name, Attribute conditional on `policy_type` being equal to `warning-only`
         """
+        if disable_peer_max_number_of_prefixes is not None:
+            pulumi.set(__self__, "disable_peer_max_number_of_prefixes", disable_peer_max_number_of_prefixes)
+        if disable_peer_max_number_of_prefixes_variable is not None:
+            pulumi.set(__self__, "disable_peer_max_number_of_prefixes_variable", disable_peer_max_number_of_prefixes_variable)
+        if disable_peer_threshold is not None:
+            pulumi.set(__self__, "disable_peer_threshold", disable_peer_threshold)
+        if disable_peer_threshold_variable is not None:
+            pulumi.set(__self__, "disable_peer_threshold_variable", disable_peer_threshold_variable)
         if family_type is not None:
             pulumi.set(__self__, "family_type", family_type)
         if in_route_policy_id is not None:
             pulumi.set(__self__, "in_route_policy_id", in_route_policy_id)
-        if max_number_of_prefixes is not None:
-            pulumi.set(__self__, "max_number_of_prefixes", max_number_of_prefixes)
-        if max_number_of_prefixes_variable is not None:
-            pulumi.set(__self__, "max_number_of_prefixes_variable", max_number_of_prefixes_variable)
         if out_route_policy_id is not None:
             pulumi.set(__self__, "out_route_policy_id", out_route_policy_id)
         if policy_type is not None:
@@ -68350,10 +68410,73 @@ class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs:
             pulumi.set(__self__, "restart_interval", restart_interval)
         if restart_interval_variable is not None:
             pulumi.set(__self__, "restart_interval_variable", restart_interval_variable)
-        if threshold is not None:
-            pulumi.set(__self__, "threshold", threshold)
-        if threshold_variable is not None:
-            pulumi.set(__self__, "threshold_variable", threshold_variable)
+        if restart_max_number_of_prefixes is not None:
+            pulumi.set(__self__, "restart_max_number_of_prefixes", restart_max_number_of_prefixes)
+        if restart_max_number_of_prefixes_variable is not None:
+            pulumi.set(__self__, "restart_max_number_of_prefixes_variable", restart_max_number_of_prefixes_variable)
+        if restart_threshold is not None:
+            pulumi.set(__self__, "restart_threshold", restart_threshold)
+        if restart_threshold_variable is not None:
+            pulumi.set(__self__, "restart_threshold_variable", restart_threshold_variable)
+        if warning_message_max_number_of_prefixes is not None:
+            pulumi.set(__self__, "warning_message_max_number_of_prefixes", warning_message_max_number_of_prefixes)
+        if warning_message_max_number_of_prefixes_variable is not None:
+            pulumi.set(__self__, "warning_message_max_number_of_prefixes_variable", warning_message_max_number_of_prefixes_variable)
+        if warning_message_threshold is not None:
+            pulumi.set(__self__, "warning_message_threshold", warning_message_threshold)
+        if warning_message_threshold_variable is not None:
+            pulumi.set(__self__, "warning_message_threshold_variable", warning_message_threshold_variable)
+
+    @property
+    @pulumi.getter(name="disablePeerMaxNumberOfPrefixes")
+    def disable_peer_max_number_of_prefixes(self) -> Optional[pulumi.Input[builtins.int]]:
+        """
+        Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policy_type` being equal to `disable-peer`
+          - Range: `1`-`4294967295`
+        """
+        return pulumi.get(self, "disable_peer_max_number_of_prefixes")
+
+    @disable_peer_max_number_of_prefixes.setter
+    def disable_peer_max_number_of_prefixes(self, value: Optional[pulumi.Input[builtins.int]]):
+        pulumi.set(self, "disable_peer_max_number_of_prefixes", value)
+
+    @property
+    @pulumi.getter(name="disablePeerMaxNumberOfPrefixesVariable")
+    def disable_peer_max_number_of_prefixes_variable(self) -> Optional[pulumi.Input[builtins.str]]:
+        """
+        Variable name, Attribute conditional on `policy_type` being equal to `disable-peer`
+        """
+        return pulumi.get(self, "disable_peer_max_number_of_prefixes_variable")
+
+    @disable_peer_max_number_of_prefixes_variable.setter
+    def disable_peer_max_number_of_prefixes_variable(self, value: Optional[pulumi.Input[builtins.str]]):
+        pulumi.set(self, "disable_peer_max_number_of_prefixes_variable", value)
+
+    @property
+    @pulumi.getter(name="disablePeerThreshold")
+    def disable_peer_threshold(self) -> Optional[pulumi.Input[builtins.int]]:
+        """
+        Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policy_type` being equal to `disable-peer`
+          - Range: `1`-`100`
+          - Default value: `75`
+        """
+        return pulumi.get(self, "disable_peer_threshold")
+
+    @disable_peer_threshold.setter
+    def disable_peer_threshold(self, value: Optional[pulumi.Input[builtins.int]]):
+        pulumi.set(self, "disable_peer_threshold", value)
+
+    @property
+    @pulumi.getter(name="disablePeerThresholdVariable")
+    def disable_peer_threshold_variable(self) -> Optional[pulumi.Input[builtins.str]]:
+        """
+        Variable name, Attribute conditional on `policy_type` being equal to `disable-peer`
+        """
+        return pulumi.get(self, "disable_peer_threshold_variable")
+
+    @disable_peer_threshold_variable.setter
+    def disable_peer_threshold_variable(self, value: Optional[pulumi.Input[builtins.str]]):
+        pulumi.set(self, "disable_peer_threshold_variable", value)
 
     @property
     @pulumi.getter(name="familyType")
@@ -68378,31 +68501,6 @@ class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs:
         pulumi.set(self, "in_route_policy_id", value)
 
     @property
-    @pulumi.getter(name="maxNumberOfPrefixes")
-    def max_number_of_prefixes(self) -> Optional[pulumi.Input[builtins.int]]:
-        """
-        Set maximum number of prefixes accepted from BGP peer
-          - Range: `1`-`4294967295`
-        """
-        return pulumi.get(self, "max_number_of_prefixes")
-
-    @max_number_of_prefixes.setter
-    def max_number_of_prefixes(self, value: Optional[pulumi.Input[builtins.int]]):
-        pulumi.set(self, "max_number_of_prefixes", value)
-
-    @property
-    @pulumi.getter(name="maxNumberOfPrefixesVariable")
-    def max_number_of_prefixes_variable(self) -> Optional[pulumi.Input[builtins.str]]:
-        """
-        Variable name
-        """
-        return pulumi.get(self, "max_number_of_prefixes_variable")
-
-    @max_number_of_prefixes_variable.setter
-    def max_number_of_prefixes_variable(self, value: Optional[pulumi.Input[builtins.str]]):
-        pulumi.set(self, "max_number_of_prefixes_variable", value)
-
-    @property
     @pulumi.getter(name="outRoutePolicyId")
     def out_route_policy_id(self) -> Optional[pulumi.Input[builtins.str]]:
         return pulumi.get(self, "out_route_policy_id")
@@ -68416,6 +68514,7 @@ class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs:
     def policy_type(self) -> Optional[pulumi.Input[builtins.str]]:
         """
         Neighbor received maximum prefix policy is disabled.
+          - Choices: `restart`, `off`, `warning-only`, `disable-peer`
         """
         return pulumi.get(self, "policy_type")
 
@@ -68427,7 +68526,7 @@ class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs:
     @pulumi.getter(name="restartInterval")
     def restart_interval(self) -> Optional[pulumi.Input[builtins.int]]:
         """
-        Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded
+        Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policy_type` being equal to `restart`
           - Range: `1`-`65535`
         """
         return pulumi.get(self, "restart_interval")
@@ -68440,7 +68539,7 @@ class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs:
     @pulumi.getter(name="restartIntervalVariable")
     def restart_interval_variable(self) -> Optional[pulumi.Input[builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `policy_type` being equal to `restart`
         """
         return pulumi.get(self, "restart_interval_variable")
 
@@ -68449,30 +68548,106 @@ class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs:
         pulumi.set(self, "restart_interval_variable", value)
 
     @property
-    @pulumi.getter
-    def threshold(self) -> Optional[pulumi.Input[builtins.int]]:
+    @pulumi.getter(name="restartMaxNumberOfPrefixes")
+    def restart_max_number_of_prefixes(self) -> Optional[pulumi.Input[builtins.int]]:
         """
-        Set threshold(1 to 100) at which to generate a warning message
+        Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policy_type` being equal to `restart`
+          - Range: `1`-`4294967295`
+        """
+        return pulumi.get(self, "restart_max_number_of_prefixes")
+
+    @restart_max_number_of_prefixes.setter
+    def restart_max_number_of_prefixes(self, value: Optional[pulumi.Input[builtins.int]]):
+        pulumi.set(self, "restart_max_number_of_prefixes", value)
+
+    @property
+    @pulumi.getter(name="restartMaxNumberOfPrefixesVariable")
+    def restart_max_number_of_prefixes_variable(self) -> Optional[pulumi.Input[builtins.str]]:
+        """
+        Variable name, Attribute conditional on `policy_type` being equal to `restart`
+        """
+        return pulumi.get(self, "restart_max_number_of_prefixes_variable")
+
+    @restart_max_number_of_prefixes_variable.setter
+    def restart_max_number_of_prefixes_variable(self, value: Optional[pulumi.Input[builtins.str]]):
+        pulumi.set(self, "restart_max_number_of_prefixes_variable", value)
+
+    @property
+    @pulumi.getter(name="restartThreshold")
+    def restart_threshold(self) -> Optional[pulumi.Input[builtins.int]]:
+        """
+        Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policy_type` being equal to `restart`
           - Range: `1`-`100`
           - Default value: `75`
         """
-        return pulumi.get(self, "threshold")
+        return pulumi.get(self, "restart_threshold")
 
-    @threshold.setter
-    def threshold(self, value: Optional[pulumi.Input[builtins.int]]):
-        pulumi.set(self, "threshold", value)
+    @restart_threshold.setter
+    def restart_threshold(self, value: Optional[pulumi.Input[builtins.int]]):
+        pulumi.set(self, "restart_threshold", value)
 
     @property
-    @pulumi.getter(name="thresholdVariable")
-    def threshold_variable(self) -> Optional[pulumi.Input[builtins.str]]:
+    @pulumi.getter(name="restartThresholdVariable")
+    def restart_threshold_variable(self) -> Optional[pulumi.Input[builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `policy_type` being equal to `restart`
         """
-        return pulumi.get(self, "threshold_variable")
+        return pulumi.get(self, "restart_threshold_variable")
 
-    @threshold_variable.setter
-    def threshold_variable(self, value: Optional[pulumi.Input[builtins.str]]):
-        pulumi.set(self, "threshold_variable", value)
+    @restart_threshold_variable.setter
+    def restart_threshold_variable(self, value: Optional[pulumi.Input[builtins.str]]):
+        pulumi.set(self, "restart_threshold_variable", value)
+
+    @property
+    @pulumi.getter(name="warningMessageMaxNumberOfPrefixes")
+    def warning_message_max_number_of_prefixes(self) -> Optional[pulumi.Input[builtins.int]]:
+        """
+        Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policy_type` being equal to `warning-only`
+          - Range: `1`-`4294967295`
+        """
+        return pulumi.get(self, "warning_message_max_number_of_prefixes")
+
+    @warning_message_max_number_of_prefixes.setter
+    def warning_message_max_number_of_prefixes(self, value: Optional[pulumi.Input[builtins.int]]):
+        pulumi.set(self, "warning_message_max_number_of_prefixes", value)
+
+    @property
+    @pulumi.getter(name="warningMessageMaxNumberOfPrefixesVariable")
+    def warning_message_max_number_of_prefixes_variable(self) -> Optional[pulumi.Input[builtins.str]]:
+        """
+        Variable name, Attribute conditional on `policy_type` being equal to `warning-only`
+        """
+        return pulumi.get(self, "warning_message_max_number_of_prefixes_variable")
+
+    @warning_message_max_number_of_prefixes_variable.setter
+    def warning_message_max_number_of_prefixes_variable(self, value: Optional[pulumi.Input[builtins.str]]):
+        pulumi.set(self, "warning_message_max_number_of_prefixes_variable", value)
+
+    @property
+    @pulumi.getter(name="warningMessageThreshold")
+    def warning_message_threshold(self) -> Optional[pulumi.Input[builtins.int]]:
+        """
+        Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policy_type` being equal to `warning-only`
+          - Range: `1`-`100`
+          - Default value: `75`
+        """
+        return pulumi.get(self, "warning_message_threshold")
+
+    @warning_message_threshold.setter
+    def warning_message_threshold(self, value: Optional[pulumi.Input[builtins.int]]):
+        pulumi.set(self, "warning_message_threshold", value)
+
+    @property
+    @pulumi.getter(name="warningMessageThresholdVariable")
+    def warning_message_threshold_variable(self) -> Optional[pulumi.Input[builtins.str]]:
+        """
+        Variable name, Attribute conditional on `policy_type` being equal to `warning-only`
+        """
+        return pulumi.get(self, "warning_message_threshold_variable")
+
+    @warning_message_threshold_variable.setter
+    def warning_message_threshold_variable(self, value: Optional[pulumi.Input[builtins.str]]):
+        pulumi.set(self, "warning_message_threshold_variable", value)
 
 
 if not MYPY:
