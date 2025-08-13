@@ -21,14 +21,14 @@ public final class LocalizedPolicyArgs extends com.pulumi.resources.ResourceArgs
     public static final LocalizedPolicyArgs Empty = new LocalizedPolicyArgs();
 
     /**
-     * IPv4 application visibility - Default value: `true`
+     * IPv4 application visibility
      * 
      */
     @Import(name="applicationVisibilityIpv4")
     private @Nullable Output<Boolean> applicationVisibilityIpv4;
 
     /**
-     * @return IPv4 application visibility - Default value: `true`
+     * @return IPv4 application visibility
      * 
      */
     public Optional<Output<Boolean>> applicationVisibilityIpv4() {
@@ -36,14 +36,14 @@ public final class LocalizedPolicyArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * IPv6 application visibility - Default value: `true`
+     * IPv6 application visibility
      * 
      */
     @Import(name="applicationVisibilityIpv6")
     private @Nullable Output<Boolean> applicationVisibilityIpv6;
 
     /**
-     * @return IPv6 application visibility - Default value: `true`
+     * @return IPv6 application visibility
      * 
      */
     public Optional<Output<Boolean>> applicationVisibilityIpv6() {
@@ -51,14 +51,14 @@ public final class LocalizedPolicyArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Cloud QoS - Default value: `true`
+     * Cloud QoS
      * 
      */
     @Import(name="cloudQos")
     private @Nullable Output<Boolean> cloudQos;
 
     /**
-     * @return Cloud QoS - Default value: `true`
+     * @return Cloud QoS
      * 
      */
     public Optional<Output<Boolean>> cloudQos() {
@@ -66,14 +66,14 @@ public final class LocalizedPolicyArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Cloud QoS service side - Default value: `true`
+     * Cloud QoS service side
      * 
      */
     @Import(name="cloudQosServiceSide")
     private @Nullable Output<Boolean> cloudQosServiceSide;
 
     /**
-     * @return Cloud QoS service side - Default value: `true`
+     * @return Cloud QoS service side
      * 
      */
     public Optional<Output<Boolean>> cloudQosServiceSide() {
@@ -111,14 +111,14 @@ public final class LocalizedPolicyArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * IPv4 flow visibility - Default value: `true`
+     * IPv4 flow visibility
      * 
      */
     @Import(name="flowVisibilityIpv4")
     private @Nullable Output<Boolean> flowVisibilityIpv4;
 
     /**
-     * @return IPv4 flow visibility - Default value: `true`
+     * @return IPv4 flow visibility
      * 
      */
     public Optional<Output<Boolean>> flowVisibilityIpv4() {
@@ -126,14 +126,14 @@ public final class LocalizedPolicyArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * IPv6 flow visibility - Default value: `true`
+     * IPv6 flow visibility
      * 
      */
     @Import(name="flowVisibilityIpv6")
     private @Nullable Output<Boolean> flowVisibilityIpv6;
 
     /**
-     * @return IPv6 flow visibility - Default value: `true`
+     * @return IPv6 flow visibility
      * 
      */
     public Optional<Output<Boolean>> flowVisibilityIpv6() {
@@ -141,14 +141,14 @@ public final class LocalizedPolicyArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * Implicit ACL logging - Default value: `true`
+     * Implicit ACL logging
      * 
      */
     @Import(name="implicitAclLogging")
     private @Nullable Output<Boolean> implicitAclLogging;
 
     /**
-     * @return Implicit ACL logging - Default value: `true`
+     * @return Implicit ACL logging
      * 
      */
     public Optional<Output<Boolean>> implicitAclLogging() {
@@ -252,7 +252,7 @@ public final class LocalizedPolicyArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param applicationVisibilityIpv4 IPv4 application visibility - Default value: `true`
+         * @param applicationVisibilityIpv4 IPv4 application visibility
          * 
          * @return builder
          * 
@@ -263,7 +263,7 @@ public final class LocalizedPolicyArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param applicationVisibilityIpv4 IPv4 application visibility - Default value: `true`
+         * @param applicationVisibilityIpv4 IPv4 application visibility
          * 
          * @return builder
          * 
@@ -273,7 +273,7 @@ public final class LocalizedPolicyArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param applicationVisibilityIpv6 IPv6 application visibility - Default value: `true`
+         * @param applicationVisibilityIpv6 IPv6 application visibility
          * 
          * @return builder
          * 
@@ -284,7 +284,7 @@ public final class LocalizedPolicyArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param applicationVisibilityIpv6 IPv6 application visibility - Default value: `true`
+         * @param applicationVisibilityIpv6 IPv6 application visibility
          * 
          * @return builder
          * 
@@ -294,7 +294,7 @@ public final class LocalizedPolicyArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param cloudQos Cloud QoS - Default value: `true`
+         * @param cloudQos Cloud QoS
          * 
          * @return builder
          * 
@@ -305,7 +305,7 @@ public final class LocalizedPolicyArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param cloudQos Cloud QoS - Default value: `true`
+         * @param cloudQos Cloud QoS
          * 
          * @return builder
          * 
@@ -315,7 +315,7 @@ public final class LocalizedPolicyArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param cloudQosServiceSide Cloud QoS service side - Default value: `true`
+         * @param cloudQosServiceSide Cloud QoS service side
          * 
          * @return builder
          * 
@@ -326,7 +326,7 @@ public final class LocalizedPolicyArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param cloudQosServiceSide Cloud QoS service side - Default value: `true`
+         * @param cloudQosServiceSide Cloud QoS service side
          * 
          * @return builder
          * 
@@ -388,7 +388,7 @@ public final class LocalizedPolicyArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param flowVisibilityIpv4 IPv4 flow visibility - Default value: `true`
+         * @param flowVisibilityIpv4 IPv4 flow visibility
          * 
          * @return builder
          * 
@@ -399,7 +399,7 @@ public final class LocalizedPolicyArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param flowVisibilityIpv4 IPv4 flow visibility - Default value: `true`
+         * @param flowVisibilityIpv4 IPv4 flow visibility
          * 
          * @return builder
          * 
@@ -409,7 +409,7 @@ public final class LocalizedPolicyArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param flowVisibilityIpv6 IPv6 flow visibility - Default value: `true`
+         * @param flowVisibilityIpv6 IPv6 flow visibility
          * 
          * @return builder
          * 
@@ -420,7 +420,7 @@ public final class LocalizedPolicyArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param flowVisibilityIpv6 IPv6 flow visibility - Default value: `true`
+         * @param flowVisibilityIpv6 IPv6 flow visibility
          * 
          * @return builder
          * 
@@ -430,7 +430,7 @@ public final class LocalizedPolicyArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param implicitAclLogging Implicit ACL logging - Default value: `true`
+         * @param implicitAclLogging Implicit ACL logging
          * 
          * @return builder
          * 
@@ -441,7 +441,7 @@ public final class LocalizedPolicyArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param implicitAclLogging Implicit ACL logging - Default value: `true`
+         * @param implicitAclLogging Implicit ACL logging
          * 
          * @return builder
          * 

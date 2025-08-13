@@ -286,6 +286,20 @@ public class CiscoSystemFeatureTemplate extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.enableMrfMigration);
     }
     /**
+     * Enhanced App Aware Routing - Choices: `disabled`, `aggressive`, `moderate`, `conservative` - Default value: `disabled`
+     * 
+     */
+    @Export(name="enhancedAppAwareRouting", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> enhancedAppAwareRouting;
+
+    /**
+     * @return Enhanced App Aware Routing - Choices: `disabled`, `aggressive`, `moderate`, `conservative` - Default value: `disabled`
+     * 
+     */
+    public Output<Optional<String>> enhancedAppAwareRouting() {
+        return Codegen.optional(this.enhancedAppAwareRouting);
+    }
+    /**
      * Enable Geo fencing - Default value: `false`
      * 
      */

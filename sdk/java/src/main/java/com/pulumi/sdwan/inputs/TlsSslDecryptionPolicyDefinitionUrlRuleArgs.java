@@ -66,15 +66,15 @@ public final class TlsSslDecryptionPolicyDefinitionUrlRuleArgs extends com.pulum
      * TLS SSL Profile Policy version
      * 
      */
-    @Import(name="tlsSslProfileVersion")
-    private @Nullable Output<Integer> tlsSslProfileVersion;
+    @Import(name="tlsSslProfilePolicyVersion")
+    private @Nullable Output<Integer> tlsSslProfilePolicyVersion;
 
     /**
      * @return TLS SSL Profile Policy version
      * 
      */
-    public Optional<Output<Integer>> tlsSslProfileVersion() {
-        return Optional.ofNullable(this.tlsSslProfileVersion);
+    public Optional<Output<Integer>> tlsSslProfilePolicyVersion() {
+        return Optional.ofNullable(this.tlsSslProfilePolicyVersion);
     }
 
     private TlsSslDecryptionPolicyDefinitionUrlRuleArgs() {}
@@ -83,7 +83,7 @@ public final class TlsSslDecryptionPolicyDefinitionUrlRuleArgs extends com.pulum
         this.ruleName = $.ruleName;
         this.targetVpns = $.targetVpns;
         this.tlsSslProfilePolicyId = $.tlsSslProfilePolicyId;
-        this.tlsSslProfileVersion = $.tlsSslProfileVersion;
+        this.tlsSslProfilePolicyVersion = $.tlsSslProfilePolicyVersion;
     }
 
     public static Builder builder() {
@@ -178,24 +178,24 @@ public final class TlsSslDecryptionPolicyDefinitionUrlRuleArgs extends com.pulum
         }
 
         /**
-         * @param tlsSslProfileVersion TLS SSL Profile Policy version
+         * @param tlsSslProfilePolicyVersion TLS SSL Profile Policy version
          * 
          * @return builder
          * 
          */
-        public Builder tlsSslProfileVersion(@Nullable Output<Integer> tlsSslProfileVersion) {
-            $.tlsSslProfileVersion = tlsSslProfileVersion;
+        public Builder tlsSslProfilePolicyVersion(@Nullable Output<Integer> tlsSslProfilePolicyVersion) {
+            $.tlsSslProfilePolicyVersion = tlsSslProfilePolicyVersion;
             return this;
         }
 
         /**
-         * @param tlsSslProfileVersion TLS SSL Profile Policy version
+         * @param tlsSslProfilePolicyVersion TLS SSL Profile Policy version
          * 
          * @return builder
          * 
          */
-        public Builder tlsSslProfileVersion(Integer tlsSslProfileVersion) {
-            return tlsSslProfileVersion(Output.of(tlsSslProfileVersion));
+        public Builder tlsSslProfilePolicyVersion(Integer tlsSslProfilePolicyVersion) {
+            return tlsSslProfilePolicyVersion(Output.of(tlsSslProfilePolicyVersion));
         }
 
         public TlsSslDecryptionPolicyDefinitionUrlRuleArgs build() {

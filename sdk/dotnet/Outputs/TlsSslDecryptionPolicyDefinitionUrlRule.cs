@@ -28,7 +28,7 @@ namespace Pulumi.Sdwan.Outputs
         /// <summary>
         /// TLS SSL Profile Policy version
         /// </summary>
-        public readonly int? TlsSslProfileVersion;
+        public readonly int? TlsSslProfilePolicyVersion;
 
         [OutputConstructor]
         private TlsSslDecryptionPolicyDefinitionUrlRule(
@@ -38,12 +38,12 @@ namespace Pulumi.Sdwan.Outputs
 
             string? tlsSslProfilePolicyId,
 
-            int? tlsSslProfileVersion)
+            int? tlsSslProfilePolicyVersion)
         {
             RuleName = ruleName;
             TargetVpns = targetVpns;
             TlsSslProfilePolicyId = tlsSslProfilePolicyId;
-            TlsSslProfileVersion = tlsSslProfileVersion;
+            TlsSslProfilePolicyVersion = tlsSslProfilePolicyVersion;
         }
     }
 }

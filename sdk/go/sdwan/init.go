@@ -189,6 +189,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &OtherUcseFeature{}
 	case "sdwan:index/policerPolicyObject:PolicerPolicyObject":
 		r = &PolicerPolicyObject{}
+	case "sdwan:index/policyGroup:PolicyGroup":
+		r = &PolicyGroup{}
 	case "sdwan:index/policyObjectAppProbeClass:PolicyObjectAppProbeClass":
 		r = &PolicyObjectAppProbeClass{}
 	case "sdwan:index/policyObjectApplicationList:PolicyObjectApplicationList":
@@ -936,6 +938,11 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"sdwan",
 		"index/policerPolicyObject",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/policyGroup",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(

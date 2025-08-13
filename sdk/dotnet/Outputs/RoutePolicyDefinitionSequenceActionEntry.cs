@@ -43,6 +43,10 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly bool? CommunityAdditive;
         /// <summary>
+        /// Community variable, Attribute conditional on `type` being equal to `community`
+        /// </summary>
+        public readonly string? CommunityVariable;
+        /// <summary>
         /// Local preference, Attribute conditional on `type` being equal to `localPreference`
         ///   - Range: `0`-`4294967295`
         /// </summary>
@@ -107,6 +111,8 @@ namespace Pulumi.Sdwan.Outputs
 
             bool? communityAdditive,
 
+            string? communityVariable,
+
             int? localPreference,
 
             int? metric,
@@ -134,6 +140,7 @@ namespace Pulumi.Sdwan.Outputs
             AtomicAggregate = atomicAggregate;
             Community = community;
             CommunityAdditive = communityAdditive;
+            CommunityVariable = communityVariable;
             LocalPreference = localPreference;
             Metric = metric;
             MetricType = metricType;

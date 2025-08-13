@@ -19,21 +19,6 @@ public final class CiscoVpnFeatureTemplateIpv4StaticIpsecRouteArgs extends com.p
     public static final CiscoVpnFeatureTemplateIpv4StaticIpsecRouteArgs Empty = new CiscoVpnFeatureTemplateIpv4StaticIpsecRouteArgs();
 
     /**
-     * Variable name
-     * 
-     */
-    @Import(name="interfaceVariable")
-    private @Nullable Output<String> interfaceVariable;
-
-    /**
-     * @return Variable name
-     * 
-     */
-    public Optional<Output<String>> interfaceVariable() {
-        return Optional.ofNullable(this.interfaceVariable);
-    }
-
-    /**
      * List of IPSEC Interfaces (Separated by commas)
      * 
      */
@@ -46,6 +31,21 @@ public final class CiscoVpnFeatureTemplateIpv4StaticIpsecRouteArgs extends com.p
      */
     public Optional<Output<List<String>>> interfaces() {
         return Optional.ofNullable(this.interfaces);
+    }
+
+    /**
+     * Variable name
+     * 
+     */
+    @Import(name="interfacesVariable")
+    private @Nullable Output<String> interfacesVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<Output<String>> interfacesVariable() {
+        return Optional.ofNullable(this.interfacesVariable);
     }
 
     /**
@@ -113,8 +113,8 @@ public final class CiscoVpnFeatureTemplateIpv4StaticIpsecRouteArgs extends com.p
     private CiscoVpnFeatureTemplateIpv4StaticIpsecRouteArgs() {}
 
     private CiscoVpnFeatureTemplateIpv4StaticIpsecRouteArgs(CiscoVpnFeatureTemplateIpv4StaticIpsecRouteArgs $) {
-        this.interfaceVariable = $.interfaceVariable;
         this.interfaces = $.interfaces;
+        this.interfacesVariable = $.interfacesVariable;
         this.optional = $.optional;
         this.prefix = $.prefix;
         this.prefixVariable = $.prefixVariable;
@@ -137,27 +137,6 @@ public final class CiscoVpnFeatureTemplateIpv4StaticIpsecRouteArgs extends com.p
 
         public Builder(CiscoVpnFeatureTemplateIpv4StaticIpsecRouteArgs defaults) {
             $ = new CiscoVpnFeatureTemplateIpv4StaticIpsecRouteArgs(Objects.requireNonNull(defaults));
-        }
-
-        /**
-         * @param interfaceVariable Variable name
-         * 
-         * @return builder
-         * 
-         */
-        public Builder interfaceVariable(@Nullable Output<String> interfaceVariable) {
-            $.interfaceVariable = interfaceVariable;
-            return this;
-        }
-
-        /**
-         * @param interfaceVariable Variable name
-         * 
-         * @return builder
-         * 
-         */
-        public Builder interfaceVariable(String interfaceVariable) {
-            return interfaceVariable(Output.of(interfaceVariable));
         }
 
         /**
@@ -189,6 +168,27 @@ public final class CiscoVpnFeatureTemplateIpv4StaticIpsecRouteArgs extends com.p
          */
         public Builder interfaces(String... interfaces) {
             return interfaces(List.of(interfaces));
+        }
+
+        /**
+         * @param interfacesVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder interfacesVariable(@Nullable Output<String> interfacesVariable) {
+            $.interfacesVariable = interfacesVariable;
+            return this;
+        }
+
+        /**
+         * @param interfacesVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder interfacesVariable(String interfacesVariable) {
+            return interfacesVariable(Output.of(interfacesVariable));
         }
 
         /**

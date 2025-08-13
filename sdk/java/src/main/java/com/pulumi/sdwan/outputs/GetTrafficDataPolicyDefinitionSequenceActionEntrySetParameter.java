@@ -61,7 +61,7 @@ public final class GetTrafficDataPolicyDefinitionSequenceActionEntrySetParameter
      * @return Preferred color group list ID
      * 
      */
-    private String preferredColorGroupList;
+    private String preferredColorGroupListId;
     /**
      * @return Preferred color group list version
      * 
@@ -216,8 +216,8 @@ public final class GetTrafficDataPolicyDefinitionSequenceActionEntrySetParameter
      * @return Preferred color group list ID
      * 
      */
-    public String preferredColorGroupList() {
-        return this.preferredColorGroupList;
+    public String preferredColorGroupListId() {
+        return this.preferredColorGroupListId;
     }
     /**
      * @return Preferred color group list version
@@ -357,7 +357,7 @@ public final class GetTrafficDataPolicyDefinitionSequenceActionEntrySetParameter
         private Boolean nextHopLoose;
         private String policerListId;
         private Integer policerListVersion;
-        private String preferredColorGroupList;
+        private String preferredColorGroupListId;
         private Integer preferredColorGroupListVersion;
         private String serviceTlocColor;
         private String serviceTlocEncapsulation;
@@ -387,7 +387,7 @@ public final class GetTrafficDataPolicyDefinitionSequenceActionEntrySetParameter
     	      this.nextHopLoose = defaults.nextHopLoose;
     	      this.policerListId = defaults.policerListId;
     	      this.policerListVersion = defaults.policerListVersion;
-    	      this.preferredColorGroupList = defaults.preferredColorGroupList;
+    	      this.preferredColorGroupListId = defaults.preferredColorGroupListId;
     	      this.preferredColorGroupListVersion = defaults.preferredColorGroupListVersion;
     	      this.serviceTlocColor = defaults.serviceTlocColor;
     	      this.serviceTlocEncapsulation = defaults.serviceTlocEncapsulation;
@@ -480,11 +480,11 @@ public final class GetTrafficDataPolicyDefinitionSequenceActionEntrySetParameter
             return this;
         }
         @CustomType.Setter
-        public Builder preferredColorGroupList(String preferredColorGroupList) {
-            if (preferredColorGroupList == null) {
-              throw new MissingRequiredPropertyException("GetTrafficDataPolicyDefinitionSequenceActionEntrySetParameter", "preferredColorGroupList");
+        public Builder preferredColorGroupListId(String preferredColorGroupListId) {
+            if (preferredColorGroupListId == null) {
+              throw new MissingRequiredPropertyException("GetTrafficDataPolicyDefinitionSequenceActionEntrySetParameter", "preferredColorGroupListId");
             }
-            this.preferredColorGroupList = preferredColorGroupList;
+            this.preferredColorGroupListId = preferredColorGroupListId;
             return this;
         }
         @CustomType.Setter
@@ -634,7 +634,7 @@ public final class GetTrafficDataPolicyDefinitionSequenceActionEntrySetParameter
             _resultValue.nextHopLoose = nextHopLoose;
             _resultValue.policerListId = policerListId;
             _resultValue.policerListVersion = policerListVersion;
-            _resultValue.preferredColorGroupList = preferredColorGroupList;
+            _resultValue.preferredColorGroupListId = preferredColorGroupListId;
             _resultValue.preferredColorGroupListVersion = preferredColorGroupListVersion;
             _resultValue.serviceTlocColor = serviceTlocColor;
             _resultValue.serviceTlocEncapsulation = serviceTlocEncapsulation;

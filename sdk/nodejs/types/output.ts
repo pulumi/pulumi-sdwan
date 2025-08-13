@@ -85,7 +85,7 @@ export interface ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaCl
     /**
      * Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
      */
-    preferredColorGroupList?: string;
+    preferredColorGroupListId?: string;
     /**
      * Preferred color group list version
      */
@@ -93,7 +93,7 @@ export interface ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaCl
     /**
      * SLA class list ID, Attribute conditional on `type` being equal to `name`
      */
-    slaClassList?: string;
+    slaClassListId?: string;
     /**
      * SLA class list version
      */
@@ -4345,13 +4345,13 @@ export interface CiscoVpnFeatureTemplateDnsIpv6Server {
 
 export interface CiscoVpnFeatureTemplateIpv4StaticGreRoute {
     /**
-     * Variable name
-     */
-    interfaceVariable?: string;
-    /**
      * List of GRE Interfaces
      */
     interfaces?: string[];
+    /**
+     * Variable name
+     */
+    interfacesVariable?: string;
     /**
      * Indicates if list item is considered optional.
      */
@@ -4373,13 +4373,13 @@ export interface CiscoVpnFeatureTemplateIpv4StaticGreRoute {
 
 export interface CiscoVpnFeatureTemplateIpv4StaticIpsecRoute {
     /**
-     * Variable name
-     */
-    interfaceVariable?: string;
-    /**
      * List of IPSEC Interfaces (Separated by commas)
      */
     interfaces?: string[];
+    /**
+     * Variable name
+     */
+    interfacesVariable?: string;
     /**
      * Indicates if list item is considered optional.
      */
@@ -5892,7 +5892,7 @@ export interface ConfigurationGroupTopologyDeviceUnsupportedFeature {
     parcelId?: string;
     /**
      * Parcel type
-     *   - Choices: `wan/vpn/interface/gre`, `wan/vpn/interface/ethernet`, `wan/vpn/interface/cellular`, `wan/vpn/interface/ipsec`, `wan/vpn/interface/serial`, `routing/ospf`, `lan/vpn/interface/ethernet`, `lan/vpn/interface/svi`, `lan/vpn/interface/ipsec`, `lan/vpn`
+     *   - Choices: `wan/vpn/interface/gre`, `wan/vpn/interface/ethernet`, `wan/vpn/interface/cellular`, `wan/vpn/interface/ipsec`, `wan/vpn/interface/serial`, `route-policy`, `routing/bgp`, `routing/ospf`, `lan/vpn/interface/ethernet`, `lan/vpn/interface/svi`, `lan/vpn/interface/ipsec`, `lan/vpn`
      */
     parcelType?: string;
 }
@@ -6512,7 +6512,7 @@ export interface GetApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySl
     /**
      * Preferred color group list ID
      */
-    preferredColorGroupList: string;
+    preferredColorGroupListId: string;
     /**
      * Preferred color group list version
      */
@@ -6520,7 +6520,7 @@ export interface GetApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySl
     /**
      * SLA class list ID
      */
-    slaClassList: string;
+    slaClassListId: string;
     /**
      * SLA class list version
      */
@@ -10379,13 +10379,13 @@ export interface GetCiscoVpnFeatureTemplateDnsIpv6Server {
 
 export interface GetCiscoVpnFeatureTemplateIpv4StaticGreRoute {
     /**
-     * Variable name
-     */
-    interfaceVariable: string;
-    /**
      * List of GRE Interfaces
      */
     interfaces: string[];
+    /**
+     * Variable name
+     */
+    interfacesVariable: string;
     /**
      * Indicates if list item is considered optional.
      */
@@ -10406,13 +10406,13 @@ export interface GetCiscoVpnFeatureTemplateIpv4StaticGreRoute {
 
 export interface GetCiscoVpnFeatureTemplateIpv4StaticIpsecRoute {
     /**
-     * Variable name
-     */
-    interfaceVariable: string;
-    /**
      * List of IPSEC Interfaces (Separated by commas)
      */
     interfaces: string[];
+    /**
+     * Variable name
+     */
+    interfacesVariable: string;
     /**
      * Indicates if list item is considered optional.
      */
@@ -12543,13 +12543,17 @@ export interface GetIpv4AclPolicyDefinitionSequenceMatchEntry {
      */
     destinationIp: string;
     /**
+     * Destination IP prefix variable
+     */
+    destinationIpVariable: string;
+    /**
      * Destination ports. Single value (0-65535) or ranges separated by spaces.
      */
     destinationPorts: string;
     /**
      * DSCP value
      */
-    dscp: number;
+    dscp: string;
     /**
      * ICMP Message
      */
@@ -12578,6 +12582,10 @@ export interface GetIpv4AclPolicyDefinitionSequenceMatchEntry {
      * Source IP prefix
      */
     sourceIp: string;
+    /**
+     * Source IP prefix variable
+     */
+    sourceIpVariable: string;
     /**
      * Source ports. Single value (0-65535) or ranges separated by spaces.
      */
@@ -12640,6 +12648,10 @@ export interface GetIpv4DeviceAclPolicyDefinitionSequenceMatchEntry {
      */
     destinationIp: string;
     /**
+     * Destination IP prefix variable
+     */
+    destinationIpVariable: string;
+    /**
      * Destination port, only `22` and `161` supported
      */
     destinationPort: number;
@@ -12655,6 +12667,10 @@ export interface GetIpv4DeviceAclPolicyDefinitionSequenceMatchEntry {
      * Source IP prefix
      */
     sourceIp: string;
+    /**
+     * Source IP prefix variable
+     */
+    sourceIpVariable: string;
     /**
      * Source ports. Single value (0-65535) or ranges separated by spaces.
      */
@@ -13071,6 +13087,36 @@ export interface GetOtherUcseFeatureInterface {
     ucseInterfaceVpnVariable: string;
 }
 
+export interface GetPolicyGroupDevice {
+    /**
+     * Deploy to device if enabled.
+     */
+    deploy: boolean;
+    /**
+     * Device ID
+     */
+    id: string;
+    /**
+     * List of variables
+     */
+    variables: outputs.GetPolicyGroupDeviceVariable[];
+}
+
+export interface GetPolicyGroupDeviceVariable {
+    /**
+     * Use this instead of `value` in case value is of type `List`.
+     */
+    listValues: string[];
+    /**
+     * Variable name
+     */
+    name: string;
+    /**
+     * Variable value
+     */
+    value: string;
+}
+
 export interface GetPolicyObjectAppProbeClassEntry {
     /**
      * Forwarding Class Name
@@ -13463,6 +13509,10 @@ export interface GetRoutePolicyDefinitionSequenceActionEntry {
      */
     communityAdditive: boolean;
     /**
+     * Community variable
+     */
+    communityVariable: string;
+    /**
      * Local preference
      */
     localPreference: number;
@@ -13529,6 +13579,10 @@ export interface GetRoutePolicyDefinitionSequenceMatchEntry {
      * Expanded community list ID
      */
     expandedCommunityListId: string;
+    /**
+     * Expanded community list variable
+     */
+    expandedCommunityListVariable: string;
     /**
      * Expanded community list version
      */
@@ -14302,7 +14356,11 @@ export interface GetServiceLanVpnFeatureIpv4StaticRoute {
     /**
      * IPv4 Route Gateway DHCP
      */
-    gatewayDhcp: boolean;
+    dhcp: boolean;
+    /**
+     * Gateway type
+     */
+    gateway: string;
     /**
      * IP Address
      */
@@ -14399,6 +14457,10 @@ export interface GetServiceLanVpnFeatureIpv6ImportRouteTarget {
 }
 
 export interface GetServiceLanVpnFeatureIpv6StaticRoute {
+    /**
+     * Gateway type
+     */
+    gateway: string;
     /**
      * IPv6 Nat
      */
@@ -15837,18 +15899,26 @@ export interface GetServiceRoutingBgpFeatureIpv4Neighbor {
 
 export interface GetServiceRoutingBgpFeatureIpv4NeighborAddressFamily {
     /**
+     * Set maximum number of prefixes accepted from BGP peer
+     */
+    disablePeerMaxNumberOfPrefixes: number;
+    /**
+     * Variable name
+     */
+    disablePeerMaxNumberOfPrefixesVariable: string;
+    /**
+     * Set threshold(1 to 100) at which to generate a warning message
+     */
+    disablePeerThreshold: number;
+    /**
+     * Variable name
+     */
+    disablePeerThresholdVariable: string;
+    /**
      * Set IPv4 unicast address family
      */
     familyType: string;
     inRoutePolicyId: string;
-    /**
-     * Set maximum number of prefixes accepted from BGP peer
-     */
-    maxNumberOfPrefixes: number;
-    /**
-     * Variable name
-     */
-    maxNumberOfPrefixesVariable: string;
     outRoutePolicyId: string;
     /**
      * Neighbor received maximum prefix policy is disabled.
@@ -15863,13 +15933,37 @@ export interface GetServiceRoutingBgpFeatureIpv4NeighborAddressFamily {
      */
     restartIntervalVariable: string;
     /**
-     * Set threshold(1 to 100) at which to generate a warning message
+     * Set maximum number of prefixes accepted from BGP peer
      */
-    threshold: number;
+    restartMaxNumberOfPrefixes: number;
     /**
      * Variable name
      */
-    thresholdVariable: string;
+    restartMaxNumberOfPrefixesVariable: string;
+    /**
+     * Set threshold(1 to 100) at which to generate a warning message
+     */
+    restartThreshold: number;
+    /**
+     * Variable name
+     */
+    restartThresholdVariable: string;
+    /**
+     * Set maximum number of prefixes accepted from BGP peer
+     */
+    warningMessageMaxNumberOfPrefixes: number;
+    /**
+     * Variable name
+     */
+    warningMessageMaxNumberOfPrefixesVariable: string;
+    /**
+     * Set threshold(1 to 100) at which to generate a warning message
+     */
+    warningMessageThreshold: number;
+    /**
+     * Variable name
+     */
+    warningMessageThresholdVariable: string;
 }
 
 export interface GetServiceRoutingBgpFeatureIpv4Network {
@@ -18203,7 +18297,7 @@ export interface GetTlsSslDecryptionPolicyDefinitionUrlRule {
     /**
      * TLS SSL Profile Policy version
      */
-    tlsSslProfileVersion: number;
+    tlsSslProfilePolicyVersion: number;
 }
 
 export interface GetTrafficDataPolicyDefinitionSequence {
@@ -18375,7 +18469,7 @@ export interface GetTrafficDataPolicyDefinitionSequenceActionEntrySetParameter {
     /**
      * Preferred color group list ID
      */
-    preferredColorGroupList: string;
+    preferredColorGroupListId: string;
     /**
      * Preferred color group list version
      */
@@ -22211,14 +22305,17 @@ export interface Ipv4AclPolicyDefinitionSequenceMatchEntry {
      */
     destinationIp?: string;
     /**
+     * Destination IP prefix variable, Attribute conditional on `type` being equal to `destinationIp`
+     */
+    destinationIpVariable?: string;
+    /**
      * Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `destinationPort`
      */
     destinationPorts?: string;
     /**
      * DSCP value, Attribute conditional on `type` being equal to `dscp`
-     *   - Range: `0`-`63`
      */
-    dscp?: number;
+    dscp?: string;
     /**
      * ICMP Message, Attribute conditional on `type` being equal to `icmpMessage`
      */
@@ -22249,6 +22346,10 @@ export interface Ipv4AclPolicyDefinitionSequenceMatchEntry {
      * Source IP prefix, Attribute conditional on `type` being equal to `sourceIp`
      */
     sourceIp?: string;
+    /**
+     * Source IP prefix variable, Attribute conditional on `type` being equal to `sourceIp`
+     */
+    sourceIpVariable?: string;
     /**
      * Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
      */
@@ -22316,6 +22417,10 @@ export interface Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry {
      */
     destinationIp?: string;
     /**
+     * Destination IP prefix variable, Attribute conditional on `type` being equal to `destinationIp`
+     */
+    destinationIpVariable?: string;
+    /**
      * Destination port, only `22` and `161` supported, Attribute conditional on `type` being equal to `destinationPort`
      *   - Range: `0`-`65535`
      */
@@ -22332,6 +22437,10 @@ export interface Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry {
      * Source IP prefix, Attribute conditional on `type` being equal to `sourceIp`
      */
     sourceIp?: string;
+    /**
+     * Source IP prefix variable, Attribute conditional on `type` being equal to `sourceIp`
+     */
+    sourceIpVariable?: string;
     /**
      * Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
      */
@@ -22768,6 +22877,37 @@ export interface OtherUcseFeatureInterface {
      * Variable name
      */
     ucseInterfaceVpnVariable?: string;
+}
+
+export interface PolicyGroupDevice {
+    /**
+     * Deploy to device if enabled.
+     *   - Default value: `false`
+     */
+    deploy: boolean;
+    /**
+     * Device ID
+     */
+    id?: string;
+    /**
+     * List of variables
+     */
+    variables?: outputs.PolicyGroupDeviceVariable[];
+}
+
+export interface PolicyGroupDeviceVariable {
+    /**
+     * Use this instead of `value` in case value is of type `List`.
+     */
+    listValues?: string[];
+    /**
+     * Variable name
+     */
+    name: string;
+    /**
+     * Variable value
+     */
+    value?: string;
 }
 
 export interface PolicyObjectAppProbeClassEntry {
@@ -23227,6 +23367,10 @@ export interface RoutePolicyDefinitionSequenceActionEntry {
      */
     communityAdditive?: boolean;
     /**
+     * Community variable, Attribute conditional on `type` being equal to `community`
+     */
+    communityVariable?: string;
+    /**
      * Local preference, Attribute conditional on `type` being equal to `localPreference`
      *   - Range: `0`-`4294967295`
      */
@@ -23303,6 +23447,10 @@ export interface RoutePolicyDefinitionSequenceMatchEntry {
      */
     expandedCommunityListId?: string;
     /**
+     * Expanded community list variable, Attribute conditional on `type` being equal to `expandedCommunityInline`
+     */
+    expandedCommunityListVariable?: string;
+    /**
      * Expanded community list version
      */
     expandedCommunityListVersion?: number;
@@ -23361,7 +23509,7 @@ export interface RoutePolicyDefinitionSequenceMatchEntry {
     prefixListVersion?: number;
     /**
      * Type of match entry
-     *   - Choices: `address`, `asPath`, `advancedCommunity`, `expandedCommunity`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
+     *   - Choices: `address`, `asPath`, `advancedCommunity`, `expandedCommunity`, `expandedCommunityInline`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
      */
     type: string;
 }
@@ -24118,9 +24266,14 @@ export interface ServiceLanVpnFeatureIpv4ImportRouteTarget {
 
 export interface ServiceLanVpnFeatureIpv4StaticRoute {
     /**
-     * IPv4 Route Gateway DHCP
+     * IPv4 Route Gateway DHCP, Attribute conditional on `gateway` being equal to `dhcp`
      */
-    gatewayDhcp?: boolean;
+    dhcp?: boolean;
+    /**
+     * Gateway type
+     *   - Choices: `nextHop`, `null0`, `vpn`, `dhcp`
+     */
+    gateway?: string;
     /**
      * IP Address
      */
@@ -24130,15 +24283,15 @@ export interface ServiceLanVpnFeatureIpv4StaticRoute {
      */
     networkAddressVariable?: string;
     /**
-     * IPv4 Route Gateway Next Hop with Tracker
+     * IPv4 Route Gateway Next Hop with Tracker, Attribute conditional on `gateway` being equal to `nextHop`
      */
     nextHopWithTrackers?: outputs.ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTracker[];
     /**
-     * IPv4 Route Gateway Next Hop
+     * IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
      */
     nextHops?: outputs.ServiceLanVpnFeatureIpv4StaticRouteNextHop[];
     /**
-     * IPv4 Route Gateway Next Hop
+     * IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `null0`
      */
     null0?: boolean;
     /**
@@ -24151,7 +24304,7 @@ export interface ServiceLanVpnFeatureIpv4StaticRoute {
      */
     subnetMaskVariable?: string;
     /**
-     * IPv4 Route Gateway VPN
+     * IPv4 Route Gateway VPN, Attribute conditional on `gateway` being equal to `vpn`
      */
     vpn?: boolean;
 }
@@ -24221,20 +24374,25 @@ export interface ServiceLanVpnFeatureIpv6ImportRouteTarget {
 
 export interface ServiceLanVpnFeatureIpv6StaticRoute {
     /**
-     * IPv6 Nat
+     * Gateway type
+     *   - Choices: `nextHop`, `null0`, `nat`
+     */
+    gateway?: string;
+    /**
+     * IPv6 Nat, Attribute conditional on `gateway` being equal to `nat`
      *   - Choices: `NAT64`, `NAT66`
      */
     nat?: string;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `gateway` being equal to `nat`
      */
     natVariable?: string;
     /**
-     * IPv6 Route Gateway Next Hop
+     * IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
      */
     nextHops?: outputs.ServiceLanVpnFeatureIpv6StaticRouteNextHop[];
     /**
-     * IPv6 Route Gateway Next Hop
+     * IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `null0`
      */
     null0?: boolean;
     /**
@@ -25777,43 +25935,82 @@ export interface ServiceRoutingBgpFeatureIpv4Neighbor {
 
 export interface ServiceRoutingBgpFeatureIpv4NeighborAddressFamily {
     /**
+     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `disable-peer`
+     *   - Range: `1`-`4294967295`
+     */
+    disablePeerMaxNumberOfPrefixes?: number;
+    /**
+     * Variable name, Attribute conditional on `policyType` being equal to `disable-peer`
+     */
+    disablePeerMaxNumberOfPrefixesVariable?: string;
+    /**
+     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `disable-peer`
+     *   - Range: `1`-`100`
+     *   - Default value: `75`
+     */
+    disablePeerThreshold?: number;
+    /**
+     * Variable name, Attribute conditional on `policyType` being equal to `disable-peer`
+     */
+    disablePeerThresholdVariable?: string;
+    /**
      * Set IPv4 unicast address family
      */
     familyType?: string;
     inRoutePolicyId?: string;
-    /**
-     * Set maximum number of prefixes accepted from BGP peer
-     *   - Range: `1`-`4294967295`
-     */
-    maxNumberOfPrefixes?: number;
-    /**
-     * Variable name
-     */
-    maxNumberOfPrefixesVariable?: string;
     outRoutePolicyId?: string;
     /**
      * Neighbor received maximum prefix policy is disabled.
+     *   - Choices: `restart`, `off`, `warning-only`, `disable-peer`
      */
     policyType?: string;
     /**
-     * Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded
+     * Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policyType` being equal to `restart`
      *   - Range: `1`-`65535`
      */
     restartInterval?: number;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `policyType` being equal to `restart`
      */
     restartIntervalVariable?: string;
     /**
-     * Set threshold(1 to 100) at which to generate a warning message
+     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `restart`
+     *   - Range: `1`-`4294967295`
+     */
+    restartMaxNumberOfPrefixes?: number;
+    /**
+     * Variable name, Attribute conditional on `policyType` being equal to `restart`
+     */
+    restartMaxNumberOfPrefixesVariable?: string;
+    /**
+     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `restart`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      */
-    threshold?: number;
+    restartThreshold?: number;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `policyType` being equal to `restart`
      */
-    thresholdVariable?: string;
+    restartThresholdVariable?: string;
+    /**
+     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `warning-only`
+     *   - Range: `1`-`4294967295`
+     */
+    warningMessageMaxNumberOfPrefixes?: number;
+    /**
+     * Variable name, Attribute conditional on `policyType` being equal to `warning-only`
+     */
+    warningMessageMaxNumberOfPrefixesVariable?: string;
+    /**
+     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `warning-only`
+     *   - Range: `1`-`100`
+     *   - Default value: `75`
+     */
+    warningMessageThreshold?: number;
+    /**
+     * Variable name, Attribute conditional on `policyType` being equal to `warning-only`
+     */
+    warningMessageThresholdVariable?: string;
 }
 
 export interface ServiceRoutingBgpFeatureIpv4Network {
@@ -28377,7 +28574,7 @@ export interface TlsSslDecryptionPolicyDefinitionUrlRule {
     /**
      * TLS SSL Profile Policy version
      */
-    tlsSslProfileVersion?: number;
+    tlsSslProfilePolicyVersion?: number;
 }
 
 export interface TrafficDataPolicyDefinitionSequence {
@@ -28563,7 +28760,7 @@ export interface TrafficDataPolicyDefinitionSequenceActionEntrySetParameter {
     /**
      * Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
      */
-    preferredColorGroupList?: string;
+    preferredColorGroupListId?: string;
     /**
      * Preferred color group list version
      */

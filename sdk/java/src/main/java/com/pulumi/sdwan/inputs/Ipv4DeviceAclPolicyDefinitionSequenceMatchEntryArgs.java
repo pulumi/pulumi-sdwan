@@ -63,6 +63,21 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
     }
 
     /**
+     * Destination IP prefix variable, Attribute conditional on `type` being equal to `destinationIp`
+     * 
+     */
+    @Import(name="destinationIpVariable")
+    private @Nullable Output<String> destinationIpVariable;
+
+    /**
+     * @return Destination IP prefix variable, Attribute conditional on `type` being equal to `destinationIp`
+     * 
+     */
+    public Optional<Output<String>> destinationIpVariable() {
+        return Optional.ofNullable(this.destinationIpVariable);
+    }
+
+    /**
      * Destination port, only `22` and `161` supported, Attribute conditional on `type` being equal to `destinationPort`
      *   - Range: `0`-`65535`
      * 
@@ -125,6 +140,21 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
     }
 
     /**
+     * Source IP prefix variable, Attribute conditional on `type` being equal to `sourceIp`
+     * 
+     */
+    @Import(name="sourceIpVariable")
+    private @Nullable Output<String> sourceIpVariable;
+
+    /**
+     * @return Source IP prefix variable, Attribute conditional on `type` being equal to `sourceIp`
+     * 
+     */
+    public Optional<Output<String>> sourceIpVariable() {
+        return Optional.ofNullable(this.sourceIpVariable);
+    }
+
+    /**
      * Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
      * 
      */
@@ -162,10 +192,12 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
         this.destinationDataIpv4PrefixListId = $.destinationDataIpv4PrefixListId;
         this.destinationDataIpv4PrefixListVersion = $.destinationDataIpv4PrefixListVersion;
         this.destinationIp = $.destinationIp;
+        this.destinationIpVariable = $.destinationIpVariable;
         this.destinationPort = $.destinationPort;
         this.sourceDataIpv4PrefixListId = $.sourceDataIpv4PrefixListId;
         this.sourceDataIpv4PrefixListVersion = $.sourceDataIpv4PrefixListVersion;
         this.sourceIp = $.sourceIp;
+        this.sourceIpVariable = $.sourceIpVariable;
         this.sourcePorts = $.sourcePorts;
         this.type = $.type;
     }
@@ -252,6 +284,27 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
         }
 
         /**
+         * @param destinationIpVariable Destination IP prefix variable, Attribute conditional on `type` being equal to `destinationIp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder destinationIpVariable(@Nullable Output<String> destinationIpVariable) {
+            $.destinationIpVariable = destinationIpVariable;
+            return this;
+        }
+
+        /**
+         * @param destinationIpVariable Destination IP prefix variable, Attribute conditional on `type` being equal to `destinationIp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder destinationIpVariable(String destinationIpVariable) {
+            return destinationIpVariable(Output.of(destinationIpVariable));
+        }
+
+        /**
          * @param destinationPort Destination port, only `22` and `161` supported, Attribute conditional on `type` being equal to `destinationPort`
          *   - Range: `0`-`65535`
          * 
@@ -335,6 +388,27 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
          */
         public Builder sourceIp(String sourceIp) {
             return sourceIp(Output.of(sourceIp));
+        }
+
+        /**
+         * @param sourceIpVariable Source IP prefix variable, Attribute conditional on `type` being equal to `sourceIp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sourceIpVariable(@Nullable Output<String> sourceIpVariable) {
+            $.sourceIpVariable = sourceIpVariable;
+            return this;
+        }
+
+        /**
+         * @param sourceIpVariable Source IP prefix variable, Attribute conditional on `type` being equal to `sourceIp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sourceIpVariable(String sourceIpVariable) {
+            return sourceIpVariable(Output.of(sourceIpVariable));
         }
 
         /**

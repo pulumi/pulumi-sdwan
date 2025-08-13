@@ -62,6 +62,8 @@ type CiscoSystemFeatureTemplate struct {
 	DeviceTypes pulumi.StringArrayOutput `pulumi:"deviceTypes"`
 	// Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
 	EnableMrfMigration pulumi.StringPtrOutput `pulumi:"enableMrfMigration"`
+	// Enhanced App Aware Routing - Choices: `disabled`, `aggressive`, `moderate`, `conservative` - Default value: `disabled`
+	EnhancedAppAwareRouting pulumi.StringPtrOutput `pulumi:"enhancedAppAwareRouting"`
 	// Enable Geo fencing - Default value: `false`
 	GeoFencing pulumi.BoolPtrOutput `pulumi:"geoFencing"`
 	// Set the device’s geo fencing range - Range: `100`-`10000` - Default value: `100`
@@ -324,6 +326,8 @@ type ciscoSystemFeatureTemplateState struct {
 	DeviceTypes []string `pulumi:"deviceTypes"`
 	// Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
 	EnableMrfMigration *string `pulumi:"enableMrfMigration"`
+	// Enhanced App Aware Routing - Choices: `disabled`, `aggressive`, `moderate`, `conservative` - Default value: `disabled`
+	EnhancedAppAwareRouting *string `pulumi:"enhancedAppAwareRouting"`
 	// Enable Geo fencing - Default value: `false`
 	GeoFencing *bool `pulumi:"geoFencing"`
 	// Set the device’s geo fencing range - Range: `100`-`10000` - Default value: `100`
@@ -551,6 +555,8 @@ type CiscoSystemFeatureTemplateState struct {
 	DeviceTypes pulumi.StringArrayInput
 	// Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
 	EnableMrfMigration pulumi.StringPtrInput
+	// Enhanced App Aware Routing - Choices: `disabled`, `aggressive`, `moderate`, `conservative` - Default value: `disabled`
+	EnhancedAppAwareRouting pulumi.StringPtrInput
 	// Enable Geo fencing - Default value: `false`
 	GeoFencing pulumi.BoolPtrInput
 	// Set the device’s geo fencing range - Range: `100`-`10000` - Default value: `100`
@@ -782,6 +788,8 @@ type ciscoSystemFeatureTemplateArgs struct {
 	DeviceTypes []string `pulumi:"deviceTypes"`
 	// Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
 	EnableMrfMigration *string `pulumi:"enableMrfMigration"`
+	// Enhanced App Aware Routing - Choices: `disabled`, `aggressive`, `moderate`, `conservative` - Default value: `disabled`
+	EnhancedAppAwareRouting *string `pulumi:"enhancedAppAwareRouting"`
 	// Enable Geo fencing - Default value: `false`
 	GeoFencing *bool `pulumi:"geoFencing"`
 	// Set the device’s geo fencing range - Range: `100`-`10000` - Default value: `100`
@@ -1006,6 +1014,8 @@ type CiscoSystemFeatureTemplateArgs struct {
 	DeviceTypes pulumi.StringArrayInput
 	// Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
 	EnableMrfMigration pulumi.StringPtrInput
+	// Enhanced App Aware Routing - Choices: `disabled`, `aggressive`, `moderate`, `conservative` - Default value: `disabled`
+	EnhancedAppAwareRouting pulumi.StringPtrInput
 	// Enable Geo fencing - Default value: `false`
 	GeoFencing pulumi.BoolPtrInput
 	// Set the device’s geo fencing range - Range: `100`-`10000` - Default value: `100`
@@ -1364,6 +1374,11 @@ func (o CiscoSystemFeatureTemplateOutput) DeviceTypes() pulumi.StringArrayOutput
 // Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
 func (o CiscoSystemFeatureTemplateOutput) EnableMrfMigration() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CiscoSystemFeatureTemplate) pulumi.StringPtrOutput { return v.EnableMrfMigration }).(pulumi.StringPtrOutput)
+}
+
+// Enhanced App Aware Routing - Choices: `disabled`, `aggressive`, `moderate`, `conservative` - Default value: `disabled`
+func (o CiscoSystemFeatureTemplateOutput) EnhancedAppAwareRouting() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *CiscoSystemFeatureTemplate) pulumi.StringPtrOutput { return v.EnhancedAppAwareRouting }).(pulumi.StringPtrOutput)
 }
 
 // Enable Geo fencing - Default value: `false`

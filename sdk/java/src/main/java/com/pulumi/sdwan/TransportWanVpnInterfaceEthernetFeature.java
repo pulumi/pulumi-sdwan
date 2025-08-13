@@ -855,28 +855,28 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return this.name;
     }
     /**
-     * NAT64 on this interface - Default value: `false`
+     * NAT64 on this interface, Attribute conditional on `nat_ipv6` being equal to `true` - Default value: `false`
      * 
      */
     @Export(name="nat64", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> nat64;
 
     /**
-     * @return NAT64 on this interface - Default value: `false`
+     * @return NAT64 on this interface, Attribute conditional on `nat_ipv6` being equal to `true` - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> nat64() {
         return Codegen.optional(this.nat64);
     }
     /**
-     * NAT66 on this interface - Default value: `false`
+     * NAT66 on this interface, Attribute conditional on `nat_ipv6` being equal to `true` - Default value: `false`
      * 
      */
     @Export(name="nat66", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> nat66;
 
     /**
-     * @return NAT66 on this interface - Default value: `false`
+     * @return NAT66 on this interface, Attribute conditional on `nat_ipv6` being equal to `true` - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> nat66() {
@@ -939,266 +939,272 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.natIpv6Variable);
     }
     /**
-     * NAT Inside Source Loopback Interface
+     * NAT Inside Source Loopback Interface, Attribute conditional on `nat_ipv4` being equal to `true`
      * 
      */
     @Export(name="natLoopback", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> natLoopback;
 
     /**
-     * @return NAT Inside Source Loopback Interface
+     * @return NAT Inside Source Loopback Interface, Attribute conditional on `nat_ipv4` being equal to `true`
      * 
      */
     public Output<Optional<String>> natLoopback() {
         return Codegen.optional(this.natLoopback);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
      * 
      */
     @Export(name="natLoopbackVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> natLoopbackVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
      * 
      */
     public Output<Optional<String>> natLoopbackVariable() {
         return Codegen.optional(this.natLoopbackVariable);
     }
     /**
-     * NAT Overload - Default value: `true`
+     * NAT Overload, Attribute conditional on `nat_ipv4` being equal to `true` - Default value: `true`
      * 
      */
     @Export(name="natOverload", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> natOverload;
 
     /**
-     * @return NAT Overload - Default value: `true`
+     * @return NAT Overload, Attribute conditional on `nat_ipv4` being equal to `true` - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> natOverload() {
         return Codegen.optional(this.natOverload);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
      * 
      */
     @Export(name="natOverloadVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> natOverloadVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
      * 
      */
     public Output<Optional<String>> natOverloadVariable() {
         return Codegen.optional(this.natOverloadVariable);
     }
     /**
-     * NAT Pool Prefix Length - Range: `1`-`32`
+     * NAT Pool Prefix Length, Attribute conditional on `nat_ipv4` being equal to `true` - Range: `1`-`32`
      * 
      */
     @Export(name="natPrefixLength", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> natPrefixLength;
 
     /**
-     * @return NAT Pool Prefix Length - Range: `1`-`32`
+     * @return NAT Pool Prefix Length, Attribute conditional on `nat_ipv4` being equal to `true` - Range: `1`-`32`
      * 
      */
     public Output<Optional<Integer>> natPrefixLength() {
         return Codegen.optional(this.natPrefixLength);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
      * 
      */
     @Export(name="natPrefixLengthVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> natPrefixLengthVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
      * 
      */
     public Output<Optional<String>> natPrefixLengthVariable() {
         return Codegen.optional(this.natPrefixLengthVariable);
     }
     /**
-     * NAT Pool Range End
+     * NAT Pool Range End, Attribute conditional on `nat_ipv4` being equal to `true`
      * 
      */
     @Export(name="natRangeEnd", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> natRangeEnd;
 
     /**
-     * @return NAT Pool Range End
+     * @return NAT Pool Range End, Attribute conditional on `nat_ipv4` being equal to `true`
      * 
      */
     public Output<Optional<String>> natRangeEnd() {
         return Codegen.optional(this.natRangeEnd);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
      * 
      */
     @Export(name="natRangeEndVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> natRangeEndVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
      * 
      */
     public Output<Optional<String>> natRangeEndVariable() {
         return Codegen.optional(this.natRangeEndVariable);
     }
     /**
-     * NAT Pool Range Start
+     * NAT Pool Range Start, Attribute conditional on `nat_ipv4` being equal to `true`
      * 
      */
     @Export(name="natRangeStart", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> natRangeStart;
 
     /**
-     * @return NAT Pool Range Start
+     * @return NAT Pool Range Start, Attribute conditional on `nat_ipv4` being equal to `true`
      * 
      */
     public Output<Optional<String>> natRangeStart() {
         return Codegen.optional(this.natRangeStart);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
      * 
      */
     @Export(name="natRangeStartVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> natRangeStartVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
      * 
      */
     public Output<Optional<String>> natRangeStartVariable() {
         return Codegen.optional(this.natRangeStartVariable);
     }
     /**
-     * Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+     * Set NAT TCP session timeout, in minutes, Attribute conditional on `nat_ipv4` being equal to `true` - Range: `1`-`8947` -
+     * Default value: `60`
      * 
      */
     @Export(name="natTcpTimeout", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> natTcpTimeout;
 
     /**
-     * @return Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+     * @return Set NAT TCP session timeout, in minutes, Attribute conditional on `nat_ipv4` being equal to `true` - Range: `1`-`8947` -
+     * Default value: `60`
      * 
      */
     public Output<Optional<Integer>> natTcpTimeout() {
         return Codegen.optional(this.natTcpTimeout);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
      * 
      */
     @Export(name="natTcpTimeoutVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> natTcpTimeoutVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
      * 
      */
     public Output<Optional<String>> natTcpTimeoutVariable() {
         return Codegen.optional(this.natTcpTimeoutVariable);
     }
     /**
-     * NAT Type - Choices: `interface`, `pool`, `loopback` - Default value: `interface`
+     * NAT Type, Attribute conditional on `nat_ipv4` being equal to `true` - Choices: `interface`, `pool`, `loopback` - Default
+     * value: `interface`
      * 
      */
     @Export(name="natType", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> natType;
 
     /**
-     * @return NAT Type - Choices: `interface`, `pool`, `loopback` - Default value: `interface`
+     * @return NAT Type, Attribute conditional on `nat_ipv4` being equal to `true` - Choices: `interface`, `pool`, `loopback` - Default
+     * value: `interface`
      * 
      */
     public Output<Optional<String>> natType() {
         return Codegen.optional(this.natType);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
      * 
      */
     @Export(name="natTypeVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> natTypeVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
      * 
      */
     public Output<Optional<String>> natTypeVariable() {
         return Codegen.optional(this.natTypeVariable);
     }
     /**
-     * Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+     * Set NAT UDP session timeout, in minutes, Attribute conditional on `nat_ipv4` being equal to `true` - Range: `1`-`8947` -
+     * Default value: `1`
      * 
      */
     @Export(name="natUdpTimeout", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> natUdpTimeout;
 
     /**
-     * @return Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+     * @return Set NAT UDP session timeout, in minutes, Attribute conditional on `nat_ipv4` being equal to `true` - Range: `1`-`8947` -
+     * Default value: `1`
      * 
      */
     public Output<Optional<Integer>> natUdpTimeout() {
         return Codegen.optional(this.natUdpTimeout);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
      * 
      */
     @Export(name="natUdpTimeoutVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> natUdpTimeoutVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
      * 
      */
     public Output<Optional<String>> natUdpTimeoutVariable() {
         return Codegen.optional(this.natUdpTimeoutVariable);
     }
     /**
-     * static NAT
+     * static NAT, Attribute conditional on `nat_ipv4` being equal to `true`
      * 
      */
     @Export(name="newStaticNats", refs={List.class,TransportWanVpnInterfaceEthernetFeatureNewStaticNat.class}, tree="[0,1]")
     private Output</* @Nullable */ List<TransportWanVpnInterfaceEthernetFeatureNewStaticNat>> newStaticNats;
 
     /**
-     * @return static NAT
+     * @return static NAT, Attribute conditional on `nat_ipv4` being equal to `true`
      * 
      */
     public Output<Optional<List<TransportWanVpnInterfaceEthernetFeatureNewStaticNat>>> newStaticNats() {
         return Codegen.optional(this.newStaticNats);
     }
     /**
-     * Per-tunnel Qos - Default value: `false`
+     * Per-tunnel Qos, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
      * 
      */
     @Export(name="perTunnelQos", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> perTunnelQos;
 
     /**
-     * @return Per-tunnel Qos - Default value: `false`
+     * @return Per-tunnel Qos, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> perTunnelQos() {
         return Codegen.optional(this.perTunnelQos);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     @Export(name="perTunnelQosVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> perTunnelQosVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     public Output<Optional<String>> perTunnelQosVariable() {
@@ -1555,14 +1561,14 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.speedVariable);
     }
     /**
-     * static NAT66
+     * static NAT66, Attribute conditional on `nat_ipv6` being equal to `true`
      * 
      */
     @Export(name="staticNat66s", refs={List.class,TransportWanVpnInterfaceEthernetFeatureStaticNat66.class}, tree="[0,1]")
     private Output</* @Nullable */ List<TransportWanVpnInterfaceEthernetFeatureStaticNat66>> staticNat66s;
 
     /**
-     * @return static NAT66
+     * @return static NAT66, Attribute conditional on `nat_ipv6` being equal to `true`
      * 
      */
     public Output<Optional<List<TransportWanVpnInterfaceEthernetFeatureStaticNat66>>> staticNat66s() {
@@ -1667,28 +1673,30 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return this.transportWanVpnFeatureId;
     }
     /**
-     * Tunnels Bandwidth Percent - Range: `1`-`100` - Default value: `50`
+     * Tunnels Bandwidth Percent, Attribute conditional on `tunnel_interface` being equal to `true` - Range: `1`-`100` -
+     * Default value: `50`
      * 
      */
     @Export(name="tunnelBandwidthPercent", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> tunnelBandwidthPercent;
 
     /**
-     * @return Tunnels Bandwidth Percent - Range: `1`-`100` - Default value: `50`
+     * @return Tunnels Bandwidth Percent, Attribute conditional on `tunnel_interface` being equal to `true` - Range: `1`-`100` -
+     * Default value: `50`
      * 
      */
     public Output<Optional<Integer>> tunnelBandwidthPercent() {
         return Codegen.optional(this.tunnelBandwidthPercent);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     @Export(name="tunnelBandwidthPercentVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelBandwidthPercentVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelBandwidthPercentVariable() {
@@ -2073,202 +2081,212 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.tunnelInterfaceAllowStunVariable);
     }
     /**
-     * Bind loopback tunnel interface to a physical interface
+     * Bind loopback tunnel interface to a physical interface, Attribute conditional on `tunnel_interface` being equal to
+     * `true`
      * 
      */
     @Export(name="tunnelInterfaceBindLoopbackTunnel", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceBindLoopbackTunnel;
 
     /**
-     * @return Bind loopback tunnel interface to a physical interface
+     * @return Bind loopback tunnel interface to a physical interface, Attribute conditional on `tunnel_interface` being equal to
+     * `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceBindLoopbackTunnel() {
         return Codegen.optional(this.tunnelInterfaceBindLoopbackTunnel);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceBindLoopbackTunnelVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceBindLoopbackTunnelVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceBindLoopbackTunnelVariable() {
         return Codegen.optional(this.tunnelInterfaceBindLoopbackTunnelVariable);
     }
     /**
-     * Set TLOC as border TLOC - Default value: `false`
+     * Set TLOC as border TLOC, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
      * 
      */
     @Export(name="tunnelInterfaceBorder", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceBorder;
 
     /**
-     * @return Set TLOC as border TLOC - Default value: `false`
+     * @return Set TLOC as border TLOC, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceBorder() {
         return Codegen.optional(this.tunnelInterfaceBorder);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceBorderVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceBorderVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceBorderVariable() {
         return Codegen.optional(this.tunnelInterfaceBorderVariable);
     }
     /**
-     * Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-     * `carrier7`, `carrier8` - Default value: `default`
+     * Set carrier for TLOC, Attribute conditional on `tunnel_interface` being equal to `true` - Choices: `default`,
+     * `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8` - Default value:
+     * `default`
      * 
      */
     @Export(name="tunnelInterfaceCarrier", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceCarrier;
 
     /**
-     * @return Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-     * `carrier7`, `carrier8` - Default value: `default`
+     * @return Set carrier for TLOC, Attribute conditional on `tunnel_interface` being equal to `true` - Choices: `default`,
+     * `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8` - Default value:
+     * `default`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceCarrier() {
         return Codegen.optional(this.tunnelInterfaceCarrier);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceCarrierVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceCarrierVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceCarrierVariable() {
         return Codegen.optional(this.tunnelInterfaceCarrierVariable);
     }
     /**
-     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnel_interface` being
+     * equal to `true` - Default value: `false`
      * 
      */
     @Export(name="tunnelInterfaceClearDontFragment", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceClearDontFragment;
 
     /**
-     * @return Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+     * @return Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnel_interface` being
+     * equal to `true` - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceClearDontFragment() {
         return Codegen.optional(this.tunnelInterfaceClearDontFragment);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceClearDontFragmentVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceClearDontFragmentVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceClearDontFragmentVariable() {
         return Codegen.optional(this.tunnelInterfaceClearDontFragmentVariable);
     }
     /**
-     * Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-     * `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-     * `private4`, `private5`, `private6` - Default value: `mpls`
+     * Set color for TLOC, Attribute conditional on `tunnel_interface` being equal to `true` - Choices: `default`, `mpls`,
+     * `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`,
+     * `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6` - Default value:
+     * `mpls`
      * 
      */
     @Export(name="tunnelInterfaceColor", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceColor;
 
     /**
-     * @return Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-     * `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-     * `private4`, `private5`, `private6` - Default value: `mpls`
+     * @return Set color for TLOC, Attribute conditional on `tunnel_interface` being equal to `true` - Choices: `default`, `mpls`,
+     * `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`,
+     * `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6` - Default value:
+     * `mpls`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceColor() {
         return Codegen.optional(this.tunnelInterfaceColor);
     }
     /**
-     * Restrict this TLOC behavior - Default value: `false`
+     * Restrict this TLOC behavior, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
      * 
      */
     @Export(name="tunnelInterfaceColorRestrict", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceColorRestrict;
 
     /**
-     * @return Restrict this TLOC behavior - Default value: `false`
+     * @return Restrict this TLOC behavior, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceColorRestrict() {
         return Codegen.optional(this.tunnelInterfaceColorRestrict);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceColorRestrictVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceColorRestrictVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceColorRestrictVariable() {
         return Codegen.optional(this.tunnelInterfaceColorRestrictVariable);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceColorVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceColorVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceColorVariable() {
         return Codegen.optional(this.tunnelInterfaceColorVariable);
     }
     /**
-     * CTS SGT Propagation configuration - Default value: `false`
+     * CTS SGT Propagation configuration, Attribute conditional on `tunnel_interface` being equal to `true` - Default value:
+     * `false`
      * 
      */
     @Export(name="tunnelInterfaceCtsSgtPropagation", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceCtsSgtPropagation;
 
     /**
-     * @return CTS SGT Propagation configuration - Default value: `false`
+     * @return CTS SGT Propagation configuration, Attribute conditional on `tunnel_interface` being equal to `true` - Default value:
+     * `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceCtsSgtPropagation() {
         return Codegen.optional(this.tunnelInterfaceCtsSgtPropagation);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceCtsSgtPropagationVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceCtsSgtPropagationVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceCtsSgtPropagationVariable() {
@@ -2289,420 +2307,440 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.tunnelInterfaceEncapsulations);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceExcludeControllerGroupListVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceExcludeControllerGroupListVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceExcludeControllerGroupListVariable() {
         return Codegen.optional(this.tunnelInterfaceExcludeControllerGroupListVariable);
     }
     /**
-     * Exclude the following controller groups defined in this list.
+     * Exclude the following controller groups defined in this list., Attribute conditional on `tunnel_interface` being equal
+     * to `true`
      * 
      */
     @Export(name="tunnelInterfaceExcludeControllerGroupLists", refs={List.class,Integer.class}, tree="[0,1]")
     private Output</* @Nullable */ List<Integer>> tunnelInterfaceExcludeControllerGroupLists;
 
     /**
-     * @return Exclude the following controller groups defined in this list.
+     * @return Exclude the following controller groups defined in this list., Attribute conditional on `tunnel_interface` being equal
+     * to `true`
      * 
      */
     public Output<Optional<List<Integer>>> tunnelInterfaceExcludeControllerGroupLists() {
         return Codegen.optional(this.tunnelInterfaceExcludeControllerGroupLists);
     }
     /**
-     * GRE tunnel destination IP
+     * GRE tunnel destination IP, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceGreTunnelDestinationIp", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceGreTunnelDestinationIp;
 
     /**
-     * @return GRE tunnel destination IP
+     * @return GRE tunnel destination IP, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceGreTunnelDestinationIp() {
         return Codegen.optional(this.tunnelInterfaceGreTunnelDestinationIp);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceGreTunnelDestinationIpVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceGreTunnelDestinationIpVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceGreTunnelDestinationIpVariable() {
         return Codegen.optional(this.tunnelInterfaceGreTunnelDestinationIpVariable);
     }
     /**
-     * List of groups - Range: `1`-`4294967295`
+     * List of groups, Attribute conditional on `tunnel_interface` being equal to `true` - Range: `1`-`4294967295`
      * 
      */
     @Export(name="tunnelInterfaceGroups", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> tunnelInterfaceGroups;
 
     /**
-     * @return List of groups - Range: `1`-`4294967295`
+     * @return List of groups, Attribute conditional on `tunnel_interface` being equal to `true` - Range: `1`-`4294967295`
      * 
      */
     public Output<Optional<Integer>> tunnelInterfaceGroups() {
         return Codegen.optional(this.tunnelInterfaceGroups);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceGroupsVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceGroupsVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceGroupsVariable() {
         return Codegen.optional(this.tunnelInterfaceGroupsVariable);
     }
     /**
-     * Set time period of control hello packets &lt;100..600000&gt; milli seconds - Range: `100`-`600000` - Default value: `1000`
+     * Set time period of control hello packets &lt;100..600000&gt; milli seconds, Attribute conditional on `tunnel_interface` being
+     * equal to `true` - Range: `100`-`600000` - Default value: `1000`
      * 
      */
     @Export(name="tunnelInterfaceHelloInterval", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> tunnelInterfaceHelloInterval;
 
     /**
-     * @return Set time period of control hello packets &lt;100..600000&gt; milli seconds - Range: `100`-`600000` - Default value: `1000`
+     * @return Set time period of control hello packets &lt;100..600000&gt; milli seconds, Attribute conditional on `tunnel_interface` being
+     * equal to `true` - Range: `100`-`600000` - Default value: `1000`
      * 
      */
     public Output<Optional<Integer>> tunnelInterfaceHelloInterval() {
         return Codegen.optional(this.tunnelInterfaceHelloInterval);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceHelloIntervalVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceHelloIntervalVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceHelloIntervalVariable() {
         return Codegen.optional(this.tunnelInterfaceHelloIntervalVariable);
     }
     /**
-     * Set tolerance of control hello packets &lt;12..6000&gt; seconds - Range: `12`-`6000` - Default value: `12`
+     * Set tolerance of control hello packets &lt;12..6000&gt; seconds, Attribute conditional on `tunnel_interface` being equal to
+     * `true` - Range: `12`-`6000` - Default value: `12`
      * 
      */
     @Export(name="tunnelInterfaceHelloTolerance", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> tunnelInterfaceHelloTolerance;
 
     /**
-     * @return Set tolerance of control hello packets &lt;12..6000&gt; seconds - Range: `12`-`6000` - Default value: `12`
+     * @return Set tolerance of control hello packets &lt;12..6000&gt; seconds, Attribute conditional on `tunnel_interface` being equal to
+     * `true` - Range: `12`-`6000` - Default value: `12`
      * 
      */
     public Output<Optional<Integer>> tunnelInterfaceHelloTolerance() {
         return Codegen.optional(this.tunnelInterfaceHelloTolerance);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceHelloToleranceVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceHelloToleranceVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceHelloToleranceVariable() {
         return Codegen.optional(this.tunnelInterfaceHelloToleranceVariable);
     }
     /**
-     * Set TLOC as last resort - Default value: `false`
+     * Set TLOC as last resort, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
      * 
      */
     @Export(name="tunnelInterfaceLastResortCircuit", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceLastResortCircuit;
 
     /**
-     * @return Set TLOC as last resort - Default value: `false`
+     * @return Set TLOC as last resort, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceLastResortCircuit() {
         return Codegen.optional(this.tunnelInterfaceLastResortCircuit);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceLastResortCircuitVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceLastResortCircuitVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceLastResortCircuitVariable() {
         return Codegen.optional(this.tunnelInterfaceLastResortCircuitVariable);
     }
     /**
-     * Set the interface as a low-bandwidth circuit - Default value: `false`
+     * Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnel_interface` being equal to `true` -
+     * Default value: `false`
      * 
      */
     @Export(name="tunnelInterfaceLowBandwidthLink", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceLowBandwidthLink;
 
     /**
-     * @return Set the interface as a low-bandwidth circuit - Default value: `false`
+     * @return Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnel_interface` being equal to `true` -
+     * Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceLowBandwidthLink() {
         return Codegen.optional(this.tunnelInterfaceLowBandwidthLink);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceLowBandwidthLinkVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceLowBandwidthLinkVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceLowBandwidthLinkVariable() {
         return Codegen.optional(this.tunnelInterfaceLowBandwidthLinkVariable);
     }
     /**
-     * Maximum Control Connections - Range: `0`-`100`
+     * Maximum Control Connections, Attribute conditional on `tunnel_interface` being equal to `true` - Range: `0`-`100`
      * 
      */
     @Export(name="tunnelInterfaceMaxControlConnections", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> tunnelInterfaceMaxControlConnections;
 
     /**
-     * @return Maximum Control Connections - Range: `0`-`100`
+     * @return Maximum Control Connections, Attribute conditional on `tunnel_interface` being equal to `true` - Range: `0`-`100`
      * 
      */
     public Output<Optional<Integer>> tunnelInterfaceMaxControlConnections() {
         return Codegen.optional(this.tunnelInterfaceMaxControlConnections);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceMaxControlConnectionsVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceMaxControlConnectionsVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceMaxControlConnectionsVariable() {
         return Codegen.optional(this.tunnelInterfaceMaxControlConnectionsVariable);
     }
     /**
-     * Set time period of nat refresh packets &lt;1...60&gt; seconds - Range: `1`-`60` - Default value: `5`
+     * Set time period of nat refresh packets &lt;1...60&gt; seconds, Attribute conditional on `tunnel_interface` being equal to
+     * `true` - Range: `1`-`60` - Default value: `5`
      * 
      */
     @Export(name="tunnelInterfaceNatRefreshInterval", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> tunnelInterfaceNatRefreshInterval;
 
     /**
-     * @return Set time period of nat refresh packets &lt;1...60&gt; seconds - Range: `1`-`60` - Default value: `5`
+     * @return Set time period of nat refresh packets &lt;1...60&gt; seconds, Attribute conditional on `tunnel_interface` being equal to
+     * `true` - Range: `1`-`60` - Default value: `5`
      * 
      */
     public Output<Optional<Integer>> tunnelInterfaceNatRefreshInterval() {
         return Codegen.optional(this.tunnelInterfaceNatRefreshInterval);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceNatRefreshIntervalVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceNatRefreshIntervalVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceNatRefreshIntervalVariable() {
         return Codegen.optional(this.tunnelInterfaceNatRefreshIntervalVariable);
     }
     /**
-     * Accept and respond to network-prefix-directed broadcasts - Default value: `false`
+     * Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnel_interface` being equal to
+     * `true` - Default value: `false`
      * 
      */
     @Export(name="tunnelInterfaceNetworkBroadcast", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceNetworkBroadcast;
 
     /**
-     * @return Accept and respond to network-prefix-directed broadcasts - Default value: `false`
+     * @return Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnel_interface` being equal to
+     * `true` - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceNetworkBroadcast() {
         return Codegen.optional(this.tunnelInterfaceNetworkBroadcast);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceNetworkBroadcastVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceNetworkBroadcastVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceNetworkBroadcastVariable() {
         return Codegen.optional(this.tunnelInterfaceNetworkBroadcastVariable);
     }
     /**
-     * Disallow port hopping on the tunnel interface - Default value: `true`
+     * Disallow port hopping on the tunnel interface, Attribute conditional on `tunnel_interface` being equal to `true` -
+     * Default value: `true`
      * 
      */
     @Export(name="tunnelInterfacePortHop", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfacePortHop;
 
     /**
-     * @return Disallow port hopping on the tunnel interface - Default value: `true`
+     * @return Disallow port hopping on the tunnel interface, Attribute conditional on `tunnel_interface` being equal to `true` -
+     * Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfacePortHop() {
         return Codegen.optional(this.tunnelInterfacePortHop);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     @Export(name="tunnelInterfacePortHopVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfacePortHopVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfacePortHopVariable() {
         return Codegen.optional(this.tunnelInterfacePortHopVariable);
     }
     /**
-     * Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnel_interface` being equal to `true` - Range:
+     * `500`-`1460`
      * 
      */
     @Export(name="tunnelInterfaceTunnelTcpMss", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> tunnelInterfaceTunnelTcpMss;
 
     /**
-     * @return Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * @return Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnel_interface` being equal to `true` - Range:
+     * `500`-`1460`
      * 
      */
     public Output<Optional<Integer>> tunnelInterfaceTunnelTcpMss() {
         return Codegen.optional(this.tunnelInterfaceTunnelTcpMss);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceTunnelTcpMssVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceTunnelTcpMssVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceTunnelTcpMssVariable() {
         return Codegen.optional(this.tunnelInterfaceTunnelTcpMssVariable);
     }
     /**
-     * Put this wan interface in STUN mode only - Default value: `false`
+     * Put this wan interface in STUN mode only, Attribute conditional on `tunnel_interface` being equal to `true` - Default
+     * value: `false`
      * 
      */
     @Export(name="tunnelInterfaceVbondAsStunServer", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceVbondAsStunServer;
 
     /**
-     * @return Put this wan interface in STUN mode only - Default value: `false`
+     * @return Put this wan interface in STUN mode only, Attribute conditional on `tunnel_interface` being equal to `true` - Default
+     * value: `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceVbondAsStunServer() {
         return Codegen.optional(this.tunnelInterfaceVbondAsStunServer);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceVbondAsStunServerVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceVbondAsStunServerVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceVbondAsStunServerVariable() {
         return Codegen.optional(this.tunnelInterfaceVbondAsStunServerVariable);
     }
     /**
-     * Set interface preference for control connection to vManage &lt;0..8&gt; - Range: `0`-`8` - Default value: `5`
+     * Set interface preference for control connection to vManage &lt;0..8&gt;, Attribute conditional on `tunnel_interface` being
+     * equal to `true` - Range: `0`-`8` - Default value: `5`
      * 
      */
     @Export(name="tunnelInterfaceVmanageConnectionPreference", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> tunnelInterfaceVmanageConnectionPreference;
 
     /**
-     * @return Set interface preference for control connection to vManage &lt;0..8&gt; - Range: `0`-`8` - Default value: `5`
+     * @return Set interface preference for control connection to vManage &lt;0..8&gt;, Attribute conditional on `tunnel_interface` being
+     * equal to `true` - Range: `0`-`8` - Default value: `5`
      * 
      */
     public Output<Optional<Integer>> tunnelInterfaceVmanageConnectionPreference() {
         return Codegen.optional(this.tunnelInterfaceVmanageConnectionPreference);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceVmanageConnectionPreferenceVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceVmanageConnectionPreferenceVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceVmanageConnectionPreferenceVariable() {
         return Codegen.optional(this.tunnelInterfaceVmanageConnectionPreferenceVariable);
     }
     /**
-     * Set tunnel QoS mode - Choices: `hub`, `spoke`
+     * Set tunnel QoS mode, Attribute conditional on `tunnel_interface` being equal to `true` - Choices: `hub`, `spoke`
      * 
      */
     @Export(name="tunnelQosMode", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelQosMode;
 
     /**
-     * @return Set tunnel QoS mode - Choices: `hub`, `spoke`
+     * @return Set tunnel QoS mode, Attribute conditional on `tunnel_interface` being equal to `true` - Choices: `hub`, `spoke`
      * 
      */
     public Output<Optional<String>> tunnelQosMode() {
         return Codegen.optional(this.tunnelQosMode);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     @Export(name="tunnelQosModeVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelQosModeVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelQosModeVariable() {

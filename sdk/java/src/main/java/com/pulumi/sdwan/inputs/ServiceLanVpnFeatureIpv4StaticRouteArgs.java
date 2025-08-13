@@ -20,18 +20,35 @@ public final class ServiceLanVpnFeatureIpv4StaticRouteArgs extends com.pulumi.re
     public static final ServiceLanVpnFeatureIpv4StaticRouteArgs Empty = new ServiceLanVpnFeatureIpv4StaticRouteArgs();
 
     /**
-     * IPv4 Route Gateway DHCP
+     * IPv4 Route Gateway DHCP, Attribute conditional on `gateway` being equal to `dhcp`
      * 
      */
-    @Import(name="gatewayDhcp")
-    private @Nullable Output<Boolean> gatewayDhcp;
+    @Import(name="dhcp")
+    private @Nullable Output<Boolean> dhcp;
 
     /**
-     * @return IPv4 Route Gateway DHCP
+     * @return IPv4 Route Gateway DHCP, Attribute conditional on `gateway` being equal to `dhcp`
      * 
      */
-    public Optional<Output<Boolean>> gatewayDhcp() {
-        return Optional.ofNullable(this.gatewayDhcp);
+    public Optional<Output<Boolean>> dhcp() {
+        return Optional.ofNullable(this.dhcp);
+    }
+
+    /**
+     * Gateway type
+     *   - Choices: `nextHop`, `null0`, `vpn`, `dhcp`
+     * 
+     */
+    @Import(name="gateway")
+    private @Nullable Output<String> gateway;
+
+    /**
+     * @return Gateway type
+     *   - Choices: `nextHop`, `null0`, `vpn`, `dhcp`
+     * 
+     */
+    public Optional<Output<String>> gateway() {
+        return Optional.ofNullable(this.gateway);
     }
 
     /**
@@ -65,14 +82,14 @@ public final class ServiceLanVpnFeatureIpv4StaticRouteArgs extends com.pulumi.re
     }
 
     /**
-     * IPv4 Route Gateway Next Hop with Tracker
+     * IPv4 Route Gateway Next Hop with Tracker, Attribute conditional on `gateway` being equal to `nextHop`
      * 
      */
     @Import(name="nextHopWithTrackers")
     private @Nullable Output<List<ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTrackerArgs>> nextHopWithTrackers;
 
     /**
-     * @return IPv4 Route Gateway Next Hop with Tracker
+     * @return IPv4 Route Gateway Next Hop with Tracker, Attribute conditional on `gateway` being equal to `nextHop`
      * 
      */
     public Optional<Output<List<ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTrackerArgs>>> nextHopWithTrackers() {
@@ -80,14 +97,14 @@ public final class ServiceLanVpnFeatureIpv4StaticRouteArgs extends com.pulumi.re
     }
 
     /**
-     * IPv4 Route Gateway Next Hop
+     * IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
      * 
      */
     @Import(name="nextHops")
     private @Nullable Output<List<ServiceLanVpnFeatureIpv4StaticRouteNextHopArgs>> nextHops;
 
     /**
-     * @return IPv4 Route Gateway Next Hop
+     * @return IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
      * 
      */
     public Optional<Output<List<ServiceLanVpnFeatureIpv4StaticRouteNextHopArgs>>> nextHops() {
@@ -95,14 +112,14 @@ public final class ServiceLanVpnFeatureIpv4StaticRouteArgs extends com.pulumi.re
     }
 
     /**
-     * IPv4 Route Gateway Next Hop
+     * IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `null0`
      * 
      */
     @Import(name="null0")
     private @Nullable Output<Boolean> null0;
 
     /**
-     * @return IPv4 Route Gateway Next Hop
+     * @return IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `null0`
      * 
      */
     public Optional<Output<Boolean>> null0() {
@@ -142,14 +159,14 @@ public final class ServiceLanVpnFeatureIpv4StaticRouteArgs extends com.pulumi.re
     }
 
     /**
-     * IPv4 Route Gateway VPN
+     * IPv4 Route Gateway VPN, Attribute conditional on `gateway` being equal to `vpn`
      * 
      */
     @Import(name="vpn")
     private @Nullable Output<Boolean> vpn;
 
     /**
-     * @return IPv4 Route Gateway VPN
+     * @return IPv4 Route Gateway VPN, Attribute conditional on `gateway` being equal to `vpn`
      * 
      */
     public Optional<Output<Boolean>> vpn() {
@@ -159,7 +176,8 @@ public final class ServiceLanVpnFeatureIpv4StaticRouteArgs extends com.pulumi.re
     private ServiceLanVpnFeatureIpv4StaticRouteArgs() {}
 
     private ServiceLanVpnFeatureIpv4StaticRouteArgs(ServiceLanVpnFeatureIpv4StaticRouteArgs $) {
-        this.gatewayDhcp = $.gatewayDhcp;
+        this.dhcp = $.dhcp;
+        this.gateway = $.gateway;
         this.networkAddress = $.networkAddress;
         this.networkAddressVariable = $.networkAddressVariable;
         this.nextHopWithTrackers = $.nextHopWithTrackers;
@@ -189,24 +207,47 @@ public final class ServiceLanVpnFeatureIpv4StaticRouteArgs extends com.pulumi.re
         }
 
         /**
-         * @param gatewayDhcp IPv4 Route Gateway DHCP
+         * @param dhcp IPv4 Route Gateway DHCP, Attribute conditional on `gateway` being equal to `dhcp`
          * 
          * @return builder
          * 
          */
-        public Builder gatewayDhcp(@Nullable Output<Boolean> gatewayDhcp) {
-            $.gatewayDhcp = gatewayDhcp;
+        public Builder dhcp(@Nullable Output<Boolean> dhcp) {
+            $.dhcp = dhcp;
             return this;
         }
 
         /**
-         * @param gatewayDhcp IPv4 Route Gateway DHCP
+         * @param dhcp IPv4 Route Gateway DHCP, Attribute conditional on `gateway` being equal to `dhcp`
          * 
          * @return builder
          * 
          */
-        public Builder gatewayDhcp(Boolean gatewayDhcp) {
-            return gatewayDhcp(Output.of(gatewayDhcp));
+        public Builder dhcp(Boolean dhcp) {
+            return dhcp(Output.of(dhcp));
+        }
+
+        /**
+         * @param gateway Gateway type
+         *   - Choices: `nextHop`, `null0`, `vpn`, `dhcp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder gateway(@Nullable Output<String> gateway) {
+            $.gateway = gateway;
+            return this;
+        }
+
+        /**
+         * @param gateway Gateway type
+         *   - Choices: `nextHop`, `null0`, `vpn`, `dhcp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder gateway(String gateway) {
+            return gateway(Output.of(gateway));
         }
 
         /**
@@ -252,7 +293,7 @@ public final class ServiceLanVpnFeatureIpv4StaticRouteArgs extends com.pulumi.re
         }
 
         /**
-         * @param nextHopWithTrackers IPv4 Route Gateway Next Hop with Tracker
+         * @param nextHopWithTrackers IPv4 Route Gateway Next Hop with Tracker, Attribute conditional on `gateway` being equal to `nextHop`
          * 
          * @return builder
          * 
@@ -263,7 +304,7 @@ public final class ServiceLanVpnFeatureIpv4StaticRouteArgs extends com.pulumi.re
         }
 
         /**
-         * @param nextHopWithTrackers IPv4 Route Gateway Next Hop with Tracker
+         * @param nextHopWithTrackers IPv4 Route Gateway Next Hop with Tracker, Attribute conditional on `gateway` being equal to `nextHop`
          * 
          * @return builder
          * 
@@ -273,7 +314,7 @@ public final class ServiceLanVpnFeatureIpv4StaticRouteArgs extends com.pulumi.re
         }
 
         /**
-         * @param nextHopWithTrackers IPv4 Route Gateway Next Hop with Tracker
+         * @param nextHopWithTrackers IPv4 Route Gateway Next Hop with Tracker, Attribute conditional on `gateway` being equal to `nextHop`
          * 
          * @return builder
          * 
@@ -283,7 +324,7 @@ public final class ServiceLanVpnFeatureIpv4StaticRouteArgs extends com.pulumi.re
         }
 
         /**
-         * @param nextHops IPv4 Route Gateway Next Hop
+         * @param nextHops IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
          * 
          * @return builder
          * 
@@ -294,7 +335,7 @@ public final class ServiceLanVpnFeatureIpv4StaticRouteArgs extends com.pulumi.re
         }
 
         /**
-         * @param nextHops IPv4 Route Gateway Next Hop
+         * @param nextHops IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
          * 
          * @return builder
          * 
@@ -304,7 +345,7 @@ public final class ServiceLanVpnFeatureIpv4StaticRouteArgs extends com.pulumi.re
         }
 
         /**
-         * @param nextHops IPv4 Route Gateway Next Hop
+         * @param nextHops IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
          * 
          * @return builder
          * 
@@ -314,7 +355,7 @@ public final class ServiceLanVpnFeatureIpv4StaticRouteArgs extends com.pulumi.re
         }
 
         /**
-         * @param null0 IPv4 Route Gateway Next Hop
+         * @param null0 IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `null0`
          * 
          * @return builder
          * 
@@ -325,7 +366,7 @@ public final class ServiceLanVpnFeatureIpv4StaticRouteArgs extends com.pulumi.re
         }
 
         /**
-         * @param null0 IPv4 Route Gateway Next Hop
+         * @param null0 IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `null0`
          * 
          * @return builder
          * 
@@ -379,7 +420,7 @@ public final class ServiceLanVpnFeatureIpv4StaticRouteArgs extends com.pulumi.re
         }
 
         /**
-         * @param vpn IPv4 Route Gateway VPN
+         * @param vpn IPv4 Route Gateway VPN, Attribute conditional on `gateway` being equal to `vpn`
          * 
          * @return builder
          * 
@@ -390,7 +431,7 @@ public final class ServiceLanVpnFeatureIpv4StaticRouteArgs extends com.pulumi.re
         }
 
         /**
-         * @param vpn IPv4 Route Gateway VPN
+         * @param vpn IPv4 Route Gateway VPN, Attribute conditional on `gateway` being equal to `vpn`
          * 
          * @return builder
          * 

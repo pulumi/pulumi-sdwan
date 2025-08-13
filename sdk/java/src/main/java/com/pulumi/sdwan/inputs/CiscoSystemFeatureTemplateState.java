@@ -284,6 +284,21 @@ public final class CiscoSystemFeatureTemplateState extends com.pulumi.resources.
     }
 
     /**
+     * Enhanced App Aware Routing - Choices: `disabled`, `aggressive`, `moderate`, `conservative` - Default value: `disabled`
+     * 
+     */
+    @Import(name="enhancedAppAwareRouting")
+    private @Nullable Output<String> enhancedAppAwareRouting;
+
+    /**
+     * @return Enhanced App Aware Routing - Choices: `disabled`, `aggressive`, `moderate`, `conservative` - Default value: `disabled`
+     * 
+     */
+    public Optional<Output<String>> enhancedAppAwareRouting() {
+        return Optional.ofNullable(this.enhancedAppAwareRouting);
+    }
+
+    /**
      * Enable Geo fencing - Default value: `false`
      * 
      */
@@ -1304,6 +1319,7 @@ public final class CiscoSystemFeatureTemplateState extends com.pulumi.resources.
         this.deviceGroupsVariable = $.deviceGroupsVariable;
         this.deviceTypes = $.deviceTypes;
         this.enableMrfMigration = $.enableMrfMigration;
+        this.enhancedAppAwareRouting = $.enhancedAppAwareRouting;
         this.geoFencing = $.geoFencing;
         this.geoFencingRange = $.geoFencingRange;
         this.geoFencingRangeVariable = $.geoFencingRangeVariable;
@@ -1784,6 +1800,27 @@ public final class CiscoSystemFeatureTemplateState extends com.pulumi.resources.
          */
         public Builder enableMrfMigration(String enableMrfMigration) {
             return enableMrfMigration(Output.of(enableMrfMigration));
+        }
+
+        /**
+         * @param enhancedAppAwareRouting Enhanced App Aware Routing - Choices: `disabled`, `aggressive`, `moderate`, `conservative` - Default value: `disabled`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enhancedAppAwareRouting(@Nullable Output<String> enhancedAppAwareRouting) {
+            $.enhancedAppAwareRouting = enhancedAppAwareRouting;
+            return this;
+        }
+
+        /**
+         * @param enhancedAppAwareRouting Enhanced App Aware Routing - Choices: `disabled`, `aggressive`, `moderate`, `conservative` - Default value: `disabled`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enhancedAppAwareRouting(String enhancedAppAwareRouting) {
+            return enhancedAppAwareRouting(Output.of(enhancedAppAwareRouting));
         }
 
         /**

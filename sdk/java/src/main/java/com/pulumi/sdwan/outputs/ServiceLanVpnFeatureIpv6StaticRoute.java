@@ -15,23 +15,29 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServiceLanVpnFeatureIpv6StaticRoute {
     /**
-     * @return IPv6 Nat
+     * @return Gateway type
+     *   - Choices: `nextHop`, `null0`, `nat`
+     * 
+     */
+    private @Nullable String gateway;
+    /**
+     * @return IPv6 Nat, Attribute conditional on `gateway` being equal to `nat`
      *   - Choices: `NAT64`, `NAT66`
      * 
      */
     private @Nullable String nat;
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `gateway` being equal to `nat`
      * 
      */
     private @Nullable String natVariable;
     /**
-     * @return IPv6 Route Gateway Next Hop
+     * @return IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
      * 
      */
     private @Nullable List<ServiceLanVpnFeatureIpv6StaticRouteNextHop> nextHops;
     /**
-     * @return IPv6 Route Gateway Next Hop
+     * @return IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `null0`
      * 
      */
     private @Nullable Boolean null0;
@@ -48,7 +54,15 @@ public final class ServiceLanVpnFeatureIpv6StaticRoute {
 
     private ServiceLanVpnFeatureIpv6StaticRoute() {}
     /**
-     * @return IPv6 Nat
+     * @return Gateway type
+     *   - Choices: `nextHop`, `null0`, `nat`
+     * 
+     */
+    public Optional<String> gateway() {
+        return Optional.ofNullable(this.gateway);
+    }
+    /**
+     * @return IPv6 Nat, Attribute conditional on `gateway` being equal to `nat`
      *   - Choices: `NAT64`, `NAT66`
      * 
      */
@@ -56,21 +70,21 @@ public final class ServiceLanVpnFeatureIpv6StaticRoute {
         return Optional.ofNullable(this.nat);
     }
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `gateway` being equal to `nat`
      * 
      */
     public Optional<String> natVariable() {
         return Optional.ofNullable(this.natVariable);
     }
     /**
-     * @return IPv6 Route Gateway Next Hop
+     * @return IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
      * 
      */
     public List<ServiceLanVpnFeatureIpv6StaticRouteNextHop> nextHops() {
         return this.nextHops == null ? List.of() : this.nextHops;
     }
     /**
-     * @return IPv6 Route Gateway Next Hop
+     * @return IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `null0`
      * 
      */
     public Optional<Boolean> null0() {
@@ -100,6 +114,7 @@ public final class ServiceLanVpnFeatureIpv6StaticRoute {
     }
     @CustomType.Builder
     public static final class Builder {
+        private @Nullable String gateway;
         private @Nullable String nat;
         private @Nullable String natVariable;
         private @Nullable List<ServiceLanVpnFeatureIpv6StaticRouteNextHop> nextHops;
@@ -109,6 +124,7 @@ public final class ServiceLanVpnFeatureIpv6StaticRoute {
         public Builder() {}
         public Builder(ServiceLanVpnFeatureIpv6StaticRoute defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.gateway = defaults.gateway;
     	      this.nat = defaults.nat;
     	      this.natVariable = defaults.natVariable;
     	      this.nextHops = defaults.nextHops;
@@ -117,6 +133,12 @@ public final class ServiceLanVpnFeatureIpv6StaticRoute {
     	      this.prefixVariable = defaults.prefixVariable;
         }
 
+        @CustomType.Setter
+        public Builder gateway(@Nullable String gateway) {
+
+            this.gateway = gateway;
+            return this;
+        }
         @CustomType.Setter
         public Builder nat(@Nullable String nat) {
 
@@ -158,6 +180,7 @@ public final class ServiceLanVpnFeatureIpv6StaticRoute {
         }
         public ServiceLanVpnFeatureIpv6StaticRoute build() {
             final var _resultValue = new ServiceLanVpnFeatureIpv6StaticRoute();
+            _resultValue.gateway = gateway;
             _resultValue.nat = nat;
             _resultValue.natVariable = natVariable;
             _resultValue.nextHops = nextHops;

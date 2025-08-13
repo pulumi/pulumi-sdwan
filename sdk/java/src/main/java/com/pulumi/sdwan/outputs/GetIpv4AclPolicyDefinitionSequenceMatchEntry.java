@@ -37,6 +37,11 @@ public final class GetIpv4AclPolicyDefinitionSequenceMatchEntry {
      */
     private String destinationIp;
     /**
+     * @return Destination IP prefix variable
+     * 
+     */
+    private String destinationIpVariable;
+    /**
      * @return Destination ports. Single value (0-65535) or ranges separated by spaces.
      * 
      */
@@ -45,7 +50,7 @@ public final class GetIpv4AclPolicyDefinitionSequenceMatchEntry {
      * @return DSCP value
      * 
      */
-    private Integer dscp;
+    private String dscp;
     /**
      * @return ICMP Message
      * 
@@ -81,6 +86,11 @@ public final class GetIpv4AclPolicyDefinitionSequenceMatchEntry {
      * 
      */
     private String sourceIp;
+    /**
+     * @return Source IP prefix variable
+     * 
+     */
+    private String sourceIpVariable;
     /**
      * @return Source ports. Single value (0-65535) or ranges separated by spaces.
      * 
@@ -134,6 +144,13 @@ public final class GetIpv4AclPolicyDefinitionSequenceMatchEntry {
         return this.destinationIp;
     }
     /**
+     * @return Destination IP prefix variable
+     * 
+     */
+    public String destinationIpVariable() {
+        return this.destinationIpVariable;
+    }
+    /**
      * @return Destination ports. Single value (0-65535) or ranges separated by spaces.
      * 
      */
@@ -144,7 +161,7 @@ public final class GetIpv4AclPolicyDefinitionSequenceMatchEntry {
      * @return DSCP value
      * 
      */
-    public Integer dscp() {
+    public String dscp() {
         return this.dscp;
     }
     /**
@@ -197,6 +214,13 @@ public final class GetIpv4AclPolicyDefinitionSequenceMatchEntry {
         return this.sourceIp;
     }
     /**
+     * @return Source IP prefix variable
+     * 
+     */
+    public String sourceIpVariable() {
+        return this.sourceIpVariable;
+    }
+    /**
      * @return Source ports. Single value (0-65535) or ranges separated by spaces.
      * 
      */
@@ -232,8 +256,9 @@ public final class GetIpv4AclPolicyDefinitionSequenceMatchEntry {
         private String destinationDataIpv4PrefixListId;
         private Integer destinationDataIpv4PrefixListVersion;
         private String destinationIp;
+        private String destinationIpVariable;
         private String destinationPorts;
-        private Integer dscp;
+        private String dscp;
         private String icmpMessage;
         private Integer packetLength;
         private String priority;
@@ -241,6 +266,7 @@ public final class GetIpv4AclPolicyDefinitionSequenceMatchEntry {
         private String sourceDataIpv4PrefixListId;
         private Integer sourceDataIpv4PrefixListVersion;
         private String sourceIp;
+        private String sourceIpVariable;
         private String sourcePorts;
         private String tcp;
         private String type;
@@ -252,6 +278,7 @@ public final class GetIpv4AclPolicyDefinitionSequenceMatchEntry {
     	      this.destinationDataIpv4PrefixListId = defaults.destinationDataIpv4PrefixListId;
     	      this.destinationDataIpv4PrefixListVersion = defaults.destinationDataIpv4PrefixListVersion;
     	      this.destinationIp = defaults.destinationIp;
+    	      this.destinationIpVariable = defaults.destinationIpVariable;
     	      this.destinationPorts = defaults.destinationPorts;
     	      this.dscp = defaults.dscp;
     	      this.icmpMessage = defaults.icmpMessage;
@@ -261,6 +288,7 @@ public final class GetIpv4AclPolicyDefinitionSequenceMatchEntry {
     	      this.sourceDataIpv4PrefixListId = defaults.sourceDataIpv4PrefixListId;
     	      this.sourceDataIpv4PrefixListVersion = defaults.sourceDataIpv4PrefixListVersion;
     	      this.sourceIp = defaults.sourceIp;
+    	      this.sourceIpVariable = defaults.sourceIpVariable;
     	      this.sourcePorts = defaults.sourcePorts;
     	      this.tcp = defaults.tcp;
     	      this.type = defaults.type;
@@ -307,6 +335,14 @@ public final class GetIpv4AclPolicyDefinitionSequenceMatchEntry {
             return this;
         }
         @CustomType.Setter
+        public Builder destinationIpVariable(String destinationIpVariable) {
+            if (destinationIpVariable == null) {
+              throw new MissingRequiredPropertyException("GetIpv4AclPolicyDefinitionSequenceMatchEntry", "destinationIpVariable");
+            }
+            this.destinationIpVariable = destinationIpVariable;
+            return this;
+        }
+        @CustomType.Setter
         public Builder destinationPorts(String destinationPorts) {
             if (destinationPorts == null) {
               throw new MissingRequiredPropertyException("GetIpv4AclPolicyDefinitionSequenceMatchEntry", "destinationPorts");
@@ -315,7 +351,7 @@ public final class GetIpv4AclPolicyDefinitionSequenceMatchEntry {
             return this;
         }
         @CustomType.Setter
-        public Builder dscp(Integer dscp) {
+        public Builder dscp(String dscp) {
             if (dscp == null) {
               throw new MissingRequiredPropertyException("GetIpv4AclPolicyDefinitionSequenceMatchEntry", "dscp");
             }
@@ -379,6 +415,14 @@ public final class GetIpv4AclPolicyDefinitionSequenceMatchEntry {
             return this;
         }
         @CustomType.Setter
+        public Builder sourceIpVariable(String sourceIpVariable) {
+            if (sourceIpVariable == null) {
+              throw new MissingRequiredPropertyException("GetIpv4AclPolicyDefinitionSequenceMatchEntry", "sourceIpVariable");
+            }
+            this.sourceIpVariable = sourceIpVariable;
+            return this;
+        }
+        @CustomType.Setter
         public Builder sourcePorts(String sourcePorts) {
             if (sourcePorts == null) {
               throw new MissingRequiredPropertyException("GetIpv4AclPolicyDefinitionSequenceMatchEntry", "sourcePorts");
@@ -409,6 +453,7 @@ public final class GetIpv4AclPolicyDefinitionSequenceMatchEntry {
             _resultValue.destinationDataIpv4PrefixListId = destinationDataIpv4PrefixListId;
             _resultValue.destinationDataIpv4PrefixListVersion = destinationDataIpv4PrefixListVersion;
             _resultValue.destinationIp = destinationIp;
+            _resultValue.destinationIpVariable = destinationIpVariable;
             _resultValue.destinationPorts = destinationPorts;
             _resultValue.dscp = dscp;
             _resultValue.icmpMessage = icmpMessage;
@@ -418,6 +463,7 @@ public final class GetIpv4AclPolicyDefinitionSequenceMatchEntry {
             _resultValue.sourceDataIpv4PrefixListId = sourceDataIpv4PrefixListId;
             _resultValue.sourceDataIpv4PrefixListVersion = sourceDataIpv4PrefixListVersion;
             _resultValue.sourceIp = sourceIp;
+            _resultValue.sourceIpVariable = sourceIpVariable;
             _resultValue.sourcePorts = sourcePorts;
             _resultValue.tcp = tcp;
             _resultValue.type = type;

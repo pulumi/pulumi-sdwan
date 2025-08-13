@@ -39,6 +39,10 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string? ExpandedCommunityListId;
         /// <summary>
+        /// Expanded community list variable, Attribute conditional on `type` being equal to `expandedCommunityInline`
+        /// </summary>
+        public readonly string? ExpandedCommunityListVariable;
+        /// <summary>
         /// Expanded community list version
         /// </summary>
         public readonly int? ExpandedCommunityListVersion;
@@ -97,7 +101,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly int? PrefixListVersion;
         /// <summary>
         /// Type of match entry
-        ///   - Choices: `address`, `asPath`, `advancedCommunity`, `expandedCommunity`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
+        ///   - Choices: `address`, `asPath`, `advancedCommunity`, `expandedCommunity`, `expandedCommunityInline`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
         /// </summary>
         public readonly string Type;
 
@@ -114,6 +118,8 @@ namespace Pulumi.Sdwan.Outputs
             ImmutableArray<string> communityListVersions,
 
             string? expandedCommunityListId,
+
+            string? expandedCommunityListVariable,
 
             int? expandedCommunityListVersion,
 
@@ -149,6 +155,7 @@ namespace Pulumi.Sdwan.Outputs
             CommunityListMatchFlag = communityListMatchFlag;
             CommunityListVersions = communityListVersions;
             ExpandedCommunityListId = expandedCommunityListId;
+            ExpandedCommunityListVariable = expandedCommunityListVariable;
             ExpandedCommunityListVersion = expandedCommunityListVersion;
             ExtendedCommunityListId = extendedCommunityListId;
             ExtendedCommunityListVersion = extendedCommunityListVersion;

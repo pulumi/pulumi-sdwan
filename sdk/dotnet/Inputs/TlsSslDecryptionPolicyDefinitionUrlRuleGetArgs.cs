@@ -39,8 +39,8 @@ namespace Pulumi.Sdwan.Inputs
         /// <summary>
         /// TLS SSL Profile Policy version
         /// </summary>
-        [Input("tlsSslProfileVersion")]
-        public Input<int>? TlsSslProfileVersion { get; set; }
+        [Input("tlsSslProfilePolicyVersion")]
+        public Input<int>? TlsSslProfilePolicyVersion { get; set; }
 
         public TlsSslDecryptionPolicyDefinitionUrlRuleGetArgs()
         {

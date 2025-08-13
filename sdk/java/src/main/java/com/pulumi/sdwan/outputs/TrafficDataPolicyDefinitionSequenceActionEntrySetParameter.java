@@ -65,7 +65,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter {
      * @return Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
      * 
      */
-    private @Nullable String preferredColorGroupList;
+    private @Nullable String preferredColorGroupListId;
     /**
      * @return Preferred color group list version
      * 
@@ -228,8 +228,8 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter {
      * @return Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
      * 
      */
-    public Optional<String> preferredColorGroupList() {
-        return Optional.ofNullable(this.preferredColorGroupList);
+    public Optional<String> preferredColorGroupListId() {
+        return Optional.ofNullable(this.preferredColorGroupListId);
     }
     /**
      * @return Preferred color group list version
@@ -375,7 +375,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter {
         private @Nullable Boolean nextHopLoose;
         private @Nullable String policerListId;
         private @Nullable Integer policerListVersion;
-        private @Nullable String preferredColorGroupList;
+        private @Nullable String preferredColorGroupListId;
         private @Nullable Integer preferredColorGroupListVersion;
         private @Nullable String serviceTlocColor;
         private @Nullable String serviceTlocEncapsulation;
@@ -405,7 +405,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter {
     	      this.nextHopLoose = defaults.nextHopLoose;
     	      this.policerListId = defaults.policerListId;
     	      this.policerListVersion = defaults.policerListVersion;
-    	      this.preferredColorGroupList = defaults.preferredColorGroupList;
+    	      this.preferredColorGroupListId = defaults.preferredColorGroupListId;
     	      this.preferredColorGroupListVersion = defaults.preferredColorGroupListVersion;
     	      this.serviceTlocColor = defaults.serviceTlocColor;
     	      this.serviceTlocEncapsulation = defaults.serviceTlocEncapsulation;
@@ -480,9 +480,9 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter {
             return this;
         }
         @CustomType.Setter
-        public Builder preferredColorGroupList(@Nullable String preferredColorGroupList) {
+        public Builder preferredColorGroupListId(@Nullable String preferredColorGroupListId) {
 
-            this.preferredColorGroupList = preferredColorGroupList;
+            this.preferredColorGroupListId = preferredColorGroupListId;
             return this;
         }
         @CustomType.Setter
@@ -600,7 +600,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter {
             _resultValue.nextHopLoose = nextHopLoose;
             _resultValue.policerListId = policerListId;
             _resultValue.policerListVersion = policerListVersion;
-            _resultValue.preferredColorGroupList = preferredColorGroupList;
+            _resultValue.preferredColorGroupListId = preferredColorGroupListId;
             _resultValue.preferredColorGroupListVersion = preferredColorGroupListVersion;
             _resultValue.serviceTlocColor = serviceTlocColor;
             _resultValue.serviceTlocEncapsulation = serviceTlocEncapsulation;

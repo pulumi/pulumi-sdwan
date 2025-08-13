@@ -26,6 +26,10 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string? DestinationIp;
         /// <summary>
+        /// Destination IP prefix variable, Attribute conditional on `type` being equal to `destinationIp`
+        /// </summary>
+        public readonly string? DestinationIpVariable;
+        /// <summary>
         /// Destination port, only `22` and `161` supported, Attribute conditional on `type` being equal to `destinationPort`
         ///   - Range: `0`-`65535`
         /// </summary>
@@ -42,6 +46,10 @@ namespace Pulumi.Sdwan.Outputs
         /// Source IP prefix, Attribute conditional on `type` being equal to `sourceIp`
         /// </summary>
         public readonly string? SourceIp;
+        /// <summary>
+        /// Source IP prefix variable, Attribute conditional on `type` being equal to `sourceIp`
+        /// </summary>
+        public readonly string? SourceIpVariable;
         /// <summary>
         /// Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
         /// </summary>
@@ -60,6 +68,8 @@ namespace Pulumi.Sdwan.Outputs
 
             string? destinationIp,
 
+            string? destinationIpVariable,
+
             int? destinationPort,
 
             string? sourceDataIpv4PrefixListId,
@@ -68,6 +78,8 @@ namespace Pulumi.Sdwan.Outputs
 
             string? sourceIp,
 
+            string? sourceIpVariable,
+
             string? sourcePorts,
 
             string type)
@@ -75,10 +87,12 @@ namespace Pulumi.Sdwan.Outputs
             DestinationDataIpv4PrefixListId = destinationDataIpv4PrefixListId;
             DestinationDataIpv4PrefixListVersion = destinationDataIpv4PrefixListVersion;
             DestinationIp = destinationIp;
+            DestinationIpVariable = destinationIpVariable;
             DestinationPort = destinationPort;
             SourceDataIpv4PrefixListId = sourceDataIpv4PrefixListId;
             SourceDataIpv4PrefixListVersion = sourceDataIpv4PrefixListVersion;
             SourceIp = sourceIp;
+            SourceIpVariable = sourceIpVariable;
             SourcePorts = sourcePorts;
             Type = type;
         }

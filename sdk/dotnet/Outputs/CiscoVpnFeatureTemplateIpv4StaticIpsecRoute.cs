@@ -14,13 +14,13 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class CiscoVpnFeatureTemplateIpv4StaticIpsecRoute
     {
         /// <summary>
-        /// Variable name
-        /// </summary>
-        public readonly string? InterfaceVariable;
-        /// <summary>
         /// List of IPSEC Interfaces (Separated by commas)
         /// </summary>
         public readonly ImmutableArray<string> Interfaces;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string? InterfacesVariable;
         /// <summary>
         /// Indicates if list item is considered optional.
         /// </summary>
@@ -41,9 +41,9 @@ namespace Pulumi.Sdwan.Outputs
 
         [OutputConstructor]
         private CiscoVpnFeatureTemplateIpv4StaticIpsecRoute(
-            string? interfaceVariable,
-
             ImmutableArray<string> interfaces,
+
+            string? interfacesVariable,
 
             bool? optional,
 
@@ -53,8 +53,8 @@ namespace Pulumi.Sdwan.Outputs
 
             int? vpnId)
         {
-            InterfaceVariable = interfaceVariable;
             Interfaces = interfaces;
+            InterfacesVariable = interfacesVariable;
             Optional = optional;
             Prefix = prefix;
             PrefixVariable = prefixVariable;

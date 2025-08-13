@@ -42,6 +42,10 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly bool CommunityAdditive;
         /// <summary>
+        /// Community variable
+        /// </summary>
+        public readonly string CommunityVariable;
+        /// <summary>
         /// Local preference
         /// </summary>
         public readonly int LocalPreference;
@@ -98,6 +102,8 @@ namespace Pulumi.Sdwan.Outputs
 
             bool communityAdditive,
 
+            string communityVariable,
+
             int localPreference,
 
             int metric,
@@ -125,6 +131,7 @@ namespace Pulumi.Sdwan.Outputs
             AtomicAggregate = atomicAggregate;
             Community = community;
             CommunityAdditive = communityAdditive;
+            CommunityVariable = communityVariable;
             LocalPreference = localPreference;
             Metric = metric;
             MetricType = metricType;

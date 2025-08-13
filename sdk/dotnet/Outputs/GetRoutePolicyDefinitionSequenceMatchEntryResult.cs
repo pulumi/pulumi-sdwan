@@ -38,6 +38,10 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string ExpandedCommunityListId;
         /// <summary>
+        /// Expanded community list variable
+        /// </summary>
+        public readonly string ExpandedCommunityListVariable;
+        /// <summary>
         /// Expanded community list version
         /// </summary>
         public readonly int ExpandedCommunityListVersion;
@@ -108,6 +112,8 @@ namespace Pulumi.Sdwan.Outputs
 
             string expandedCommunityListId,
 
+            string expandedCommunityListVariable,
+
             int expandedCommunityListVersion,
 
             string extendedCommunityListId,
@@ -142,6 +148,7 @@ namespace Pulumi.Sdwan.Outputs
             CommunityListMatchFlag = communityListMatchFlag;
             CommunityListVersions = communityListVersions;
             ExpandedCommunityListId = expandedCommunityListId;
+            ExpandedCommunityListVariable = expandedCommunityListVariable;
             ExpandedCommunityListVersion = expandedCommunityListVersion;
             ExtendedCommunityListId = extendedCommunityListId;
             ExtendedCommunityListVersion = extendedCommunityListVersion;

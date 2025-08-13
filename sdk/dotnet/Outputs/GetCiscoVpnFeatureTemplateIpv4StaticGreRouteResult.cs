@@ -14,13 +14,13 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class GetCiscoVpnFeatureTemplateIpv4StaticGreRouteResult
     {
         /// <summary>
-        /// Variable name
-        /// </summary>
-        public readonly string InterfaceVariable;
-        /// <summary>
         /// List of GRE Interfaces
         /// </summary>
         public readonly ImmutableArray<string> Interfaces;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string InterfacesVariable;
         /// <summary>
         /// Indicates if list item is considered optional.
         /// </summary>
@@ -40,9 +40,9 @@ namespace Pulumi.Sdwan.Outputs
 
         [OutputConstructor]
         private GetCiscoVpnFeatureTemplateIpv4StaticGreRouteResult(
-            string interfaceVariable,
-
             ImmutableArray<string> interfaces,
+
+            string interfacesVariable,
 
             bool optional,
 
@@ -52,8 +52,8 @@ namespace Pulumi.Sdwan.Outputs
 
             int vpnId)
         {
-            InterfaceVariable = interfaceVariable;
             Interfaces = interfaces;
+            InterfacesVariable = interfacesVariable;
             Optional = optional;
             Prefix = prefix;
             PrefixVariable = prefixVariable;

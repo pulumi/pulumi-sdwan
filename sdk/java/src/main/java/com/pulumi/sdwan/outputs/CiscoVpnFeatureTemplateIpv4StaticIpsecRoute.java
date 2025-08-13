@@ -15,15 +15,15 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CiscoVpnFeatureTemplateIpv4StaticIpsecRoute {
     /**
-     * @return Variable name
-     * 
-     */
-    private @Nullable String interfaceVariable;
-    /**
      * @return List of IPSEC Interfaces (Separated by commas)
      * 
      */
     private @Nullable List<String> interfaces;
+    /**
+     * @return Variable name
+     * 
+     */
+    private @Nullable String interfacesVariable;
     /**
      * @return Indicates if list item is considered optional.
      * 
@@ -48,18 +48,18 @@ public final class CiscoVpnFeatureTemplateIpv4StaticIpsecRoute {
 
     private CiscoVpnFeatureTemplateIpv4StaticIpsecRoute() {}
     /**
-     * @return Variable name
-     * 
-     */
-    public Optional<String> interfaceVariable() {
-        return Optional.ofNullable(this.interfaceVariable);
-    }
-    /**
      * @return List of IPSEC Interfaces (Separated by commas)
      * 
      */
     public List<String> interfaces() {
         return this.interfaces == null ? List.of() : this.interfaces;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<String> interfacesVariable() {
+        return Optional.ofNullable(this.interfacesVariable);
     }
     /**
      * @return Indicates if list item is considered optional.
@@ -100,8 +100,8 @@ public final class CiscoVpnFeatureTemplateIpv4StaticIpsecRoute {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable String interfaceVariable;
         private @Nullable List<String> interfaces;
+        private @Nullable String interfacesVariable;
         private @Nullable Boolean optional;
         private @Nullable String prefix;
         private @Nullable String prefixVariable;
@@ -109,20 +109,14 @@ public final class CiscoVpnFeatureTemplateIpv4StaticIpsecRoute {
         public Builder() {}
         public Builder(CiscoVpnFeatureTemplateIpv4StaticIpsecRoute defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.interfaceVariable = defaults.interfaceVariable;
     	      this.interfaces = defaults.interfaces;
+    	      this.interfacesVariable = defaults.interfacesVariable;
     	      this.optional = defaults.optional;
     	      this.prefix = defaults.prefix;
     	      this.prefixVariable = defaults.prefixVariable;
     	      this.vpnId = defaults.vpnId;
         }
 
-        @CustomType.Setter
-        public Builder interfaceVariable(@Nullable String interfaceVariable) {
-
-            this.interfaceVariable = interfaceVariable;
-            return this;
-        }
         @CustomType.Setter
         public Builder interfaces(@Nullable List<String> interfaces) {
 
@@ -131,6 +125,12 @@ public final class CiscoVpnFeatureTemplateIpv4StaticIpsecRoute {
         }
         public Builder interfaces(String... interfaces) {
             return interfaces(List.of(interfaces));
+        }
+        @CustomType.Setter
+        public Builder interfacesVariable(@Nullable String interfacesVariable) {
+
+            this.interfacesVariable = interfacesVariable;
+            return this;
         }
         @CustomType.Setter
         public Builder optional(@Nullable Boolean optional) {
@@ -158,8 +158,8 @@ public final class CiscoVpnFeatureTemplateIpv4StaticIpsecRoute {
         }
         public CiscoVpnFeatureTemplateIpv4StaticIpsecRoute build() {
             final var _resultValue = new CiscoVpnFeatureTemplateIpv4StaticIpsecRoute();
-            _resultValue.interfaceVariable = interfaceVariable;
             _resultValue.interfaces = interfaces;
+            _resultValue.interfacesVariable = interfacesVariable;
             _resultValue.optional = optional;
             _resultValue.prefix = prefix;
             _resultValue.prefixVariable = prefixVariable;

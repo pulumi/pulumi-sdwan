@@ -161,15 +161,15 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntrySetParameterArg
      * Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
      * 
      */
-    @Import(name="preferredColorGroupList")
-    private @Nullable Output<String> preferredColorGroupList;
+    @Import(name="preferredColorGroupListId")
+    private @Nullable Output<String> preferredColorGroupListId;
 
     /**
      * @return Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
      * 
      */
-    public Optional<Output<String>> preferredColorGroupList() {
-        return Optional.ofNullable(this.preferredColorGroupList);
+    public Optional<Output<String>> preferredColorGroupListId() {
+        return Optional.ofNullable(this.preferredColorGroupListId);
     }
 
     /**
@@ -451,7 +451,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntrySetParameterArg
         this.nextHopLoose = $.nextHopLoose;
         this.policerListId = $.policerListId;
         this.policerListVersion = $.policerListVersion;
-        this.preferredColorGroupList = $.preferredColorGroupList;
+        this.preferredColorGroupListId = $.preferredColorGroupListId;
         this.preferredColorGroupListVersion = $.preferredColorGroupListVersion;
         this.serviceTlocColor = $.serviceTlocColor;
         this.serviceTlocEncapsulation = $.serviceTlocEncapsulation;
@@ -683,24 +683,24 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntrySetParameterArg
         }
 
         /**
-         * @param preferredColorGroupList Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
+         * @param preferredColorGroupListId Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
          * 
          * @return builder
          * 
          */
-        public Builder preferredColorGroupList(@Nullable Output<String> preferredColorGroupList) {
-            $.preferredColorGroupList = preferredColorGroupList;
+        public Builder preferredColorGroupListId(@Nullable Output<String> preferredColorGroupListId) {
+            $.preferredColorGroupListId = preferredColorGroupListId;
             return this;
         }
 
         /**
-         * @param preferredColorGroupList Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
+         * @param preferredColorGroupListId Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
          * 
          * @return builder
          * 
          */
-        public Builder preferredColorGroupList(String preferredColorGroupList) {
-            return preferredColorGroupList(Output.of(preferredColorGroupList));
+        public Builder preferredColorGroupListId(String preferredColorGroupListId) {
+            return preferredColorGroupListId(Output.of(preferredColorGroupListId));
         }
 
         /**

@@ -130,6 +130,12 @@ namespace Pulumi.Sdwan
         public Output<string?> EnableMrfMigration { get; private set; } = null!;
 
         /// <summary>
+        /// Enhanced App Aware Routing - Choices: `disabled`, `aggressive`, `moderate`, `conservative` - Default value: `disabled`
+        /// </summary>
+        [Output("enhancedAppAwareRouting")]
+        public Output<string?> EnhancedAppAwareRouting { get; private set; } = null!;
+
+        /// <summary>
         /// Enable Geo fencing - Default value: `false`
         /// </summary>
         [Output("geoFencing")]
@@ -720,6 +726,12 @@ namespace Pulumi.Sdwan
         public Input<string>? EnableMrfMigration { get; set; }
 
         /// <summary>
+        /// Enhanced App Aware Routing - Choices: `disabled`, `aggressive`, `moderate`, `conservative` - Default value: `disabled`
+        /// </summary>
+        [Input("enhancedAppAwareRouting")]
+        public Input<string>? EnhancedAppAwareRouting { get; set; }
+
+        /// <summary>
         /// Enable Geo fencing - Default value: `false`
         /// </summary>
         [Input("geoFencing")]
@@ -1276,6 +1288,12 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Input("enableMrfMigration")]
         public Input<string>? EnableMrfMigration { get; set; }
+
+        /// <summary>
+        /// Enhanced App Aware Routing - Choices: `disabled`, `aggressive`, `moderate`, `conservative` - Default value: `disabled`
+        /// </summary>
+        [Input("enhancedAppAwareRouting")]
+        public Input<string>? EnhancedAppAwareRouting { get; set; }
 
         /// <summary>
         /// Enable Geo fencing - Default value: `false`

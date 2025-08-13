@@ -13,53 +13,131 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServiceRoutingBgpFeatureIpv4NeighborAddressFamily {
     /**
+     * @return Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policy_type` being equal to `disable-peer`
+     *   - Range: `1`-`4294967295`
+     * 
+     */
+    private @Nullable Integer disablePeerMaxNumberOfPrefixes;
+    /**
+     * @return Variable name, Attribute conditional on `policy_type` being equal to `disable-peer`
+     * 
+     */
+    private @Nullable String disablePeerMaxNumberOfPrefixesVariable;
+    /**
+     * @return Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policy_type` being equal to `disable-peer`
+     *   - Range: `1`-`100`
+     *   - Default value: `75`
+     * 
+     */
+    private @Nullable Integer disablePeerThreshold;
+    /**
+     * @return Variable name, Attribute conditional on `policy_type` being equal to `disable-peer`
+     * 
+     */
+    private @Nullable String disablePeerThresholdVariable;
+    /**
      * @return Set IPv4 unicast address family
      * 
      */
     private @Nullable String familyType;
     private @Nullable String inRoutePolicyId;
-    /**
-     * @return Set maximum number of prefixes accepted from BGP peer
-     *   - Range: `1`-`4294967295`
-     * 
-     */
-    private @Nullable Integer maxNumberOfPrefixes;
-    /**
-     * @return Variable name
-     * 
-     */
-    private @Nullable String maxNumberOfPrefixesVariable;
     private @Nullable String outRoutePolicyId;
     /**
      * @return Neighbor received maximum prefix policy is disabled.
+     *   - Choices: `restart`, `off`, `warning-only`, `disable-peer`
      * 
      */
     private @Nullable String policyType;
     /**
-     * @return Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded
+     * @return Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policy_type` being equal to `restart`
      *   - Range: `1`-`65535`
      * 
      */
     private @Nullable Integer restartInterval;
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `policy_type` being equal to `restart`
      * 
      */
     private @Nullable String restartIntervalVariable;
     /**
-     * @return Set threshold(1 to 100) at which to generate a warning message
+     * @return Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policy_type` being equal to `restart`
+     *   - Range: `1`-`4294967295`
+     * 
+     */
+    private @Nullable Integer restartMaxNumberOfPrefixes;
+    /**
+     * @return Variable name, Attribute conditional on `policy_type` being equal to `restart`
+     * 
+     */
+    private @Nullable String restartMaxNumberOfPrefixesVariable;
+    /**
+     * @return Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policy_type` being equal to `restart`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      * 
      */
-    private @Nullable Integer threshold;
+    private @Nullable Integer restartThreshold;
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `policy_type` being equal to `restart`
      * 
      */
-    private @Nullable String thresholdVariable;
+    private @Nullable String restartThresholdVariable;
+    /**
+     * @return Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policy_type` being equal to `warning-only`
+     *   - Range: `1`-`4294967295`
+     * 
+     */
+    private @Nullable Integer warningMessageMaxNumberOfPrefixes;
+    /**
+     * @return Variable name, Attribute conditional on `policy_type` being equal to `warning-only`
+     * 
+     */
+    private @Nullable String warningMessageMaxNumberOfPrefixesVariable;
+    /**
+     * @return Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policy_type` being equal to `warning-only`
+     *   - Range: `1`-`100`
+     *   - Default value: `75`
+     * 
+     */
+    private @Nullable Integer warningMessageThreshold;
+    /**
+     * @return Variable name, Attribute conditional on `policy_type` being equal to `warning-only`
+     * 
+     */
+    private @Nullable String warningMessageThresholdVariable;
 
     private ServiceRoutingBgpFeatureIpv4NeighborAddressFamily() {}
+    /**
+     * @return Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policy_type` being equal to `disable-peer`
+     *   - Range: `1`-`4294967295`
+     * 
+     */
+    public Optional<Integer> disablePeerMaxNumberOfPrefixes() {
+        return Optional.ofNullable(this.disablePeerMaxNumberOfPrefixes);
+    }
+    /**
+     * @return Variable name, Attribute conditional on `policy_type` being equal to `disable-peer`
+     * 
+     */
+    public Optional<String> disablePeerMaxNumberOfPrefixesVariable() {
+        return Optional.ofNullable(this.disablePeerMaxNumberOfPrefixesVariable);
+    }
+    /**
+     * @return Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policy_type` being equal to `disable-peer`
+     *   - Range: `1`-`100`
+     *   - Default value: `75`
+     * 
+     */
+    public Optional<Integer> disablePeerThreshold() {
+        return Optional.ofNullable(this.disablePeerThreshold);
+    }
+    /**
+     * @return Variable name, Attribute conditional on `policy_type` being equal to `disable-peer`
+     * 
+     */
+    public Optional<String> disablePeerThresholdVariable() {
+        return Optional.ofNullable(this.disablePeerThresholdVariable);
+    }
     /**
      * @return Set IPv4 unicast address family
      * 
@@ -70,33 +148,19 @@ public final class ServiceRoutingBgpFeatureIpv4NeighborAddressFamily {
     public Optional<String> inRoutePolicyId() {
         return Optional.ofNullable(this.inRoutePolicyId);
     }
-    /**
-     * @return Set maximum number of prefixes accepted from BGP peer
-     *   - Range: `1`-`4294967295`
-     * 
-     */
-    public Optional<Integer> maxNumberOfPrefixes() {
-        return Optional.ofNullable(this.maxNumberOfPrefixes);
-    }
-    /**
-     * @return Variable name
-     * 
-     */
-    public Optional<String> maxNumberOfPrefixesVariable() {
-        return Optional.ofNullable(this.maxNumberOfPrefixesVariable);
-    }
     public Optional<String> outRoutePolicyId() {
         return Optional.ofNullable(this.outRoutePolicyId);
     }
     /**
      * @return Neighbor received maximum prefix policy is disabled.
+     *   - Choices: `restart`, `off`, `warning-only`, `disable-peer`
      * 
      */
     public Optional<String> policyType() {
         return Optional.ofNullable(this.policyType);
     }
     /**
-     * @return Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded
+     * @return Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policy_type` being equal to `restart`
      *   - Range: `1`-`65535`
      * 
      */
@@ -104,27 +168,73 @@ public final class ServiceRoutingBgpFeatureIpv4NeighborAddressFamily {
         return Optional.ofNullable(this.restartInterval);
     }
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `policy_type` being equal to `restart`
      * 
      */
     public Optional<String> restartIntervalVariable() {
         return Optional.ofNullable(this.restartIntervalVariable);
     }
     /**
-     * @return Set threshold(1 to 100) at which to generate a warning message
+     * @return Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policy_type` being equal to `restart`
+     *   - Range: `1`-`4294967295`
+     * 
+     */
+    public Optional<Integer> restartMaxNumberOfPrefixes() {
+        return Optional.ofNullable(this.restartMaxNumberOfPrefixes);
+    }
+    /**
+     * @return Variable name, Attribute conditional on `policy_type` being equal to `restart`
+     * 
+     */
+    public Optional<String> restartMaxNumberOfPrefixesVariable() {
+        return Optional.ofNullable(this.restartMaxNumberOfPrefixesVariable);
+    }
+    /**
+     * @return Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policy_type` being equal to `restart`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      * 
      */
-    public Optional<Integer> threshold() {
-        return Optional.ofNullable(this.threshold);
+    public Optional<Integer> restartThreshold() {
+        return Optional.ofNullable(this.restartThreshold);
     }
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `policy_type` being equal to `restart`
      * 
      */
-    public Optional<String> thresholdVariable() {
-        return Optional.ofNullable(this.thresholdVariable);
+    public Optional<String> restartThresholdVariable() {
+        return Optional.ofNullable(this.restartThresholdVariable);
+    }
+    /**
+     * @return Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policy_type` being equal to `warning-only`
+     *   - Range: `1`-`4294967295`
+     * 
+     */
+    public Optional<Integer> warningMessageMaxNumberOfPrefixes() {
+        return Optional.ofNullable(this.warningMessageMaxNumberOfPrefixes);
+    }
+    /**
+     * @return Variable name, Attribute conditional on `policy_type` being equal to `warning-only`
+     * 
+     */
+    public Optional<String> warningMessageMaxNumberOfPrefixesVariable() {
+        return Optional.ofNullable(this.warningMessageMaxNumberOfPrefixesVariable);
+    }
+    /**
+     * @return Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policy_type` being equal to `warning-only`
+     *   - Range: `1`-`100`
+     *   - Default value: `75`
+     * 
+     */
+    public Optional<Integer> warningMessageThreshold() {
+        return Optional.ofNullable(this.warningMessageThreshold);
+    }
+    /**
+     * @return Variable name, Attribute conditional on `policy_type` being equal to `warning-only`
+     * 
+     */
+    public Optional<String> warningMessageThresholdVariable() {
+        return Optional.ofNullable(this.warningMessageThresholdVariable);
     }
 
     public static Builder builder() {
@@ -136,31 +246,71 @@ public final class ServiceRoutingBgpFeatureIpv4NeighborAddressFamily {
     }
     @CustomType.Builder
     public static final class Builder {
+        private @Nullable Integer disablePeerMaxNumberOfPrefixes;
+        private @Nullable String disablePeerMaxNumberOfPrefixesVariable;
+        private @Nullable Integer disablePeerThreshold;
+        private @Nullable String disablePeerThresholdVariable;
         private @Nullable String familyType;
         private @Nullable String inRoutePolicyId;
-        private @Nullable Integer maxNumberOfPrefixes;
-        private @Nullable String maxNumberOfPrefixesVariable;
         private @Nullable String outRoutePolicyId;
         private @Nullable String policyType;
         private @Nullable Integer restartInterval;
         private @Nullable String restartIntervalVariable;
-        private @Nullable Integer threshold;
-        private @Nullable String thresholdVariable;
+        private @Nullable Integer restartMaxNumberOfPrefixes;
+        private @Nullable String restartMaxNumberOfPrefixesVariable;
+        private @Nullable Integer restartThreshold;
+        private @Nullable String restartThresholdVariable;
+        private @Nullable Integer warningMessageMaxNumberOfPrefixes;
+        private @Nullable String warningMessageMaxNumberOfPrefixesVariable;
+        private @Nullable Integer warningMessageThreshold;
+        private @Nullable String warningMessageThresholdVariable;
         public Builder() {}
         public Builder(ServiceRoutingBgpFeatureIpv4NeighborAddressFamily defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.disablePeerMaxNumberOfPrefixes = defaults.disablePeerMaxNumberOfPrefixes;
+    	      this.disablePeerMaxNumberOfPrefixesVariable = defaults.disablePeerMaxNumberOfPrefixesVariable;
+    	      this.disablePeerThreshold = defaults.disablePeerThreshold;
+    	      this.disablePeerThresholdVariable = defaults.disablePeerThresholdVariable;
     	      this.familyType = defaults.familyType;
     	      this.inRoutePolicyId = defaults.inRoutePolicyId;
-    	      this.maxNumberOfPrefixes = defaults.maxNumberOfPrefixes;
-    	      this.maxNumberOfPrefixesVariable = defaults.maxNumberOfPrefixesVariable;
     	      this.outRoutePolicyId = defaults.outRoutePolicyId;
     	      this.policyType = defaults.policyType;
     	      this.restartInterval = defaults.restartInterval;
     	      this.restartIntervalVariable = defaults.restartIntervalVariable;
-    	      this.threshold = defaults.threshold;
-    	      this.thresholdVariable = defaults.thresholdVariable;
+    	      this.restartMaxNumberOfPrefixes = defaults.restartMaxNumberOfPrefixes;
+    	      this.restartMaxNumberOfPrefixesVariable = defaults.restartMaxNumberOfPrefixesVariable;
+    	      this.restartThreshold = defaults.restartThreshold;
+    	      this.restartThresholdVariable = defaults.restartThresholdVariable;
+    	      this.warningMessageMaxNumberOfPrefixes = defaults.warningMessageMaxNumberOfPrefixes;
+    	      this.warningMessageMaxNumberOfPrefixesVariable = defaults.warningMessageMaxNumberOfPrefixesVariable;
+    	      this.warningMessageThreshold = defaults.warningMessageThreshold;
+    	      this.warningMessageThresholdVariable = defaults.warningMessageThresholdVariable;
         }
 
+        @CustomType.Setter
+        public Builder disablePeerMaxNumberOfPrefixes(@Nullable Integer disablePeerMaxNumberOfPrefixes) {
+
+            this.disablePeerMaxNumberOfPrefixes = disablePeerMaxNumberOfPrefixes;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder disablePeerMaxNumberOfPrefixesVariable(@Nullable String disablePeerMaxNumberOfPrefixesVariable) {
+
+            this.disablePeerMaxNumberOfPrefixesVariable = disablePeerMaxNumberOfPrefixesVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder disablePeerThreshold(@Nullable Integer disablePeerThreshold) {
+
+            this.disablePeerThreshold = disablePeerThreshold;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder disablePeerThresholdVariable(@Nullable String disablePeerThresholdVariable) {
+
+            this.disablePeerThresholdVariable = disablePeerThresholdVariable;
+            return this;
+        }
         @CustomType.Setter
         public Builder familyType(@Nullable String familyType) {
 
@@ -171,18 +321,6 @@ public final class ServiceRoutingBgpFeatureIpv4NeighborAddressFamily {
         public Builder inRoutePolicyId(@Nullable String inRoutePolicyId) {
 
             this.inRoutePolicyId = inRoutePolicyId;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder maxNumberOfPrefixes(@Nullable Integer maxNumberOfPrefixes) {
-
-            this.maxNumberOfPrefixes = maxNumberOfPrefixes;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder maxNumberOfPrefixesVariable(@Nullable String maxNumberOfPrefixesVariable) {
-
-            this.maxNumberOfPrefixesVariable = maxNumberOfPrefixesVariable;
             return this;
         }
         @CustomType.Setter
@@ -210,29 +348,73 @@ public final class ServiceRoutingBgpFeatureIpv4NeighborAddressFamily {
             return this;
         }
         @CustomType.Setter
-        public Builder threshold(@Nullable Integer threshold) {
+        public Builder restartMaxNumberOfPrefixes(@Nullable Integer restartMaxNumberOfPrefixes) {
 
-            this.threshold = threshold;
+            this.restartMaxNumberOfPrefixes = restartMaxNumberOfPrefixes;
             return this;
         }
         @CustomType.Setter
-        public Builder thresholdVariable(@Nullable String thresholdVariable) {
+        public Builder restartMaxNumberOfPrefixesVariable(@Nullable String restartMaxNumberOfPrefixesVariable) {
 
-            this.thresholdVariable = thresholdVariable;
+            this.restartMaxNumberOfPrefixesVariable = restartMaxNumberOfPrefixesVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder restartThreshold(@Nullable Integer restartThreshold) {
+
+            this.restartThreshold = restartThreshold;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder restartThresholdVariable(@Nullable String restartThresholdVariable) {
+
+            this.restartThresholdVariable = restartThresholdVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder warningMessageMaxNumberOfPrefixes(@Nullable Integer warningMessageMaxNumberOfPrefixes) {
+
+            this.warningMessageMaxNumberOfPrefixes = warningMessageMaxNumberOfPrefixes;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder warningMessageMaxNumberOfPrefixesVariable(@Nullable String warningMessageMaxNumberOfPrefixesVariable) {
+
+            this.warningMessageMaxNumberOfPrefixesVariable = warningMessageMaxNumberOfPrefixesVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder warningMessageThreshold(@Nullable Integer warningMessageThreshold) {
+
+            this.warningMessageThreshold = warningMessageThreshold;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder warningMessageThresholdVariable(@Nullable String warningMessageThresholdVariable) {
+
+            this.warningMessageThresholdVariable = warningMessageThresholdVariable;
             return this;
         }
         public ServiceRoutingBgpFeatureIpv4NeighborAddressFamily build() {
             final var _resultValue = new ServiceRoutingBgpFeatureIpv4NeighborAddressFamily();
+            _resultValue.disablePeerMaxNumberOfPrefixes = disablePeerMaxNumberOfPrefixes;
+            _resultValue.disablePeerMaxNumberOfPrefixesVariable = disablePeerMaxNumberOfPrefixesVariable;
+            _resultValue.disablePeerThreshold = disablePeerThreshold;
+            _resultValue.disablePeerThresholdVariable = disablePeerThresholdVariable;
             _resultValue.familyType = familyType;
             _resultValue.inRoutePolicyId = inRoutePolicyId;
-            _resultValue.maxNumberOfPrefixes = maxNumberOfPrefixes;
-            _resultValue.maxNumberOfPrefixesVariable = maxNumberOfPrefixesVariable;
             _resultValue.outRoutePolicyId = outRoutePolicyId;
             _resultValue.policyType = policyType;
             _resultValue.restartInterval = restartInterval;
             _resultValue.restartIntervalVariable = restartIntervalVariable;
-            _resultValue.threshold = threshold;
-            _resultValue.thresholdVariable = thresholdVariable;
+            _resultValue.restartMaxNumberOfPrefixes = restartMaxNumberOfPrefixes;
+            _resultValue.restartMaxNumberOfPrefixesVariable = restartMaxNumberOfPrefixesVariable;
+            _resultValue.restartThreshold = restartThreshold;
+            _resultValue.restartThresholdVariable = restartThresholdVariable;
+            _resultValue.warningMessageMaxNumberOfPrefixes = warningMessageMaxNumberOfPrefixes;
+            _resultValue.warningMessageMaxNumberOfPrefixesVariable = warningMessageMaxNumberOfPrefixesVariable;
+            _resultValue.warningMessageThreshold = warningMessageThreshold;
+            _resultValue.warningMessageThresholdVariable = warningMessageThresholdVariable;
             return _resultValue;
         }
     }

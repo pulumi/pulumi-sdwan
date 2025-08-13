@@ -85,7 +85,7 @@ export interface ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaCl
     /**
      * Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
      */
-    preferredColorGroupList?: pulumi.Input<string>;
+    preferredColorGroupListId?: pulumi.Input<string>;
     /**
      * Preferred color group list version
      */
@@ -93,7 +93,7 @@ export interface ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaCl
     /**
      * SLA class list ID, Attribute conditional on `type` being equal to `name`
      */
-    slaClassList?: pulumi.Input<string>;
+    slaClassListId?: pulumi.Input<string>;
     /**
      * SLA class list version
      */
@@ -4345,13 +4345,13 @@ export interface CiscoVpnFeatureTemplateDnsIpv6Server {
 
 export interface CiscoVpnFeatureTemplateIpv4StaticGreRoute {
     /**
-     * Variable name
-     */
-    interfaceVariable?: pulumi.Input<string>;
-    /**
      * List of GRE Interfaces
      */
     interfaces?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Variable name
+     */
+    interfacesVariable?: pulumi.Input<string>;
     /**
      * Indicates if list item is considered optional.
      */
@@ -4373,13 +4373,13 @@ export interface CiscoVpnFeatureTemplateIpv4StaticGreRoute {
 
 export interface CiscoVpnFeatureTemplateIpv4StaticIpsecRoute {
     /**
-     * Variable name
-     */
-    interfaceVariable?: pulumi.Input<string>;
-    /**
      * List of IPSEC Interfaces (Separated by commas)
      */
     interfaces?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Variable name
+     */
+    interfacesVariable?: pulumi.Input<string>;
     /**
      * Indicates if list item is considered optional.
      */
@@ -5892,7 +5892,7 @@ export interface ConfigurationGroupTopologyDeviceUnsupportedFeature {
     parcelId?: pulumi.Input<string>;
     /**
      * Parcel type
-     *   - Choices: `wan/vpn/interface/gre`, `wan/vpn/interface/ethernet`, `wan/vpn/interface/cellular`, `wan/vpn/interface/ipsec`, `wan/vpn/interface/serial`, `routing/ospf`, `lan/vpn/interface/ethernet`, `lan/vpn/interface/svi`, `lan/vpn/interface/ipsec`, `lan/vpn`
+     *   - Choices: `wan/vpn/interface/gre`, `wan/vpn/interface/ethernet`, `wan/vpn/interface/cellular`, `wan/vpn/interface/ipsec`, `wan/vpn/interface/serial`, `route-policy`, `routing/bgp`, `routing/ospf`, `lan/vpn/interface/ethernet`, `lan/vpn/interface/svi`, `lan/vpn/interface/ipsec`, `lan/vpn`
      */
     parcelType?: pulumi.Input<string>;
 }
@@ -6629,14 +6629,17 @@ export interface Ipv4AclPolicyDefinitionSequenceMatchEntry {
      */
     destinationIp?: pulumi.Input<string>;
     /**
+     * Destination IP prefix variable, Attribute conditional on `type` being equal to `destinationIp`
+     */
+    destinationIpVariable?: pulumi.Input<string>;
+    /**
      * Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `destinationPort`
      */
     destinationPorts?: pulumi.Input<string>;
     /**
      * DSCP value, Attribute conditional on `type` being equal to `dscp`
-     *   - Range: `0`-`63`
      */
-    dscp?: pulumi.Input<number>;
+    dscp?: pulumi.Input<string>;
     /**
      * ICMP Message, Attribute conditional on `type` being equal to `icmpMessage`
      */
@@ -6667,6 +6670,10 @@ export interface Ipv4AclPolicyDefinitionSequenceMatchEntry {
      * Source IP prefix, Attribute conditional on `type` being equal to `sourceIp`
      */
     sourceIp?: pulumi.Input<string>;
+    /**
+     * Source IP prefix variable, Attribute conditional on `type` being equal to `sourceIp`
+     */
+    sourceIpVariable?: pulumi.Input<string>;
     /**
      * Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
      */
@@ -6734,6 +6741,10 @@ export interface Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry {
      */
     destinationIp?: pulumi.Input<string>;
     /**
+     * Destination IP prefix variable, Attribute conditional on `type` being equal to `destinationIp`
+     */
+    destinationIpVariable?: pulumi.Input<string>;
+    /**
      * Destination port, only `22` and `161` supported, Attribute conditional on `type` being equal to `destinationPort`
      *   - Range: `0`-`65535`
      */
@@ -6750,6 +6761,10 @@ export interface Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry {
      * Source IP prefix, Attribute conditional on `type` being equal to `sourceIp`
      */
     sourceIp?: pulumi.Input<string>;
+    /**
+     * Source IP prefix variable, Attribute conditional on `type` being equal to `sourceIp`
+     */
+    sourceIpVariable?: pulumi.Input<string>;
     /**
      * Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
      */
@@ -7186,6 +7201,37 @@ export interface OtherUcseFeatureInterface {
      * Variable name
      */
     ucseInterfaceVpnVariable?: pulumi.Input<string>;
+}
+
+export interface PolicyGroupDevice {
+    /**
+     * Deploy to device if enabled.
+     *   - Default value: `false`
+     */
+    deploy?: pulumi.Input<boolean>;
+    /**
+     * Device ID
+     */
+    id?: pulumi.Input<string>;
+    /**
+     * List of variables
+     */
+    variables?: pulumi.Input<pulumi.Input<inputs.PolicyGroupDeviceVariable>[]>;
+}
+
+export interface PolicyGroupDeviceVariable {
+    /**
+     * Use this instead of `value` in case value is of type `List`.
+     */
+    listValues?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Variable name
+     */
+    name: pulumi.Input<string>;
+    /**
+     * Variable value
+     */
+    value?: pulumi.Input<string>;
 }
 
 export interface PolicyObjectAppProbeClassEntry {
@@ -7645,6 +7691,10 @@ export interface RoutePolicyDefinitionSequenceActionEntry {
      */
     communityAdditive?: pulumi.Input<boolean>;
     /**
+     * Community variable, Attribute conditional on `type` being equal to `community`
+     */
+    communityVariable?: pulumi.Input<string>;
+    /**
      * Local preference, Attribute conditional on `type` being equal to `localPreference`
      *   - Range: `0`-`4294967295`
      */
@@ -7721,6 +7771,10 @@ export interface RoutePolicyDefinitionSequenceMatchEntry {
      */
     expandedCommunityListId?: pulumi.Input<string>;
     /**
+     * Expanded community list variable, Attribute conditional on `type` being equal to `expandedCommunityInline`
+     */
+    expandedCommunityListVariable?: pulumi.Input<string>;
+    /**
      * Expanded community list version
      */
     expandedCommunityListVersion?: pulumi.Input<number>;
@@ -7779,7 +7833,7 @@ export interface RoutePolicyDefinitionSequenceMatchEntry {
     prefixListVersion?: pulumi.Input<number>;
     /**
      * Type of match entry
-     *   - Choices: `address`, `asPath`, `advancedCommunity`, `expandedCommunity`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
+     *   - Choices: `address`, `asPath`, `advancedCommunity`, `expandedCommunity`, `expandedCommunityInline`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
      */
     type: pulumi.Input<string>;
 }
@@ -8536,9 +8590,14 @@ export interface ServiceLanVpnFeatureIpv4ImportRouteTarget {
 
 export interface ServiceLanVpnFeatureIpv4StaticRoute {
     /**
-     * IPv4 Route Gateway DHCP
+     * IPv4 Route Gateway DHCP, Attribute conditional on `gateway` being equal to `dhcp`
      */
-    gatewayDhcp?: pulumi.Input<boolean>;
+    dhcp?: pulumi.Input<boolean>;
+    /**
+     * Gateway type
+     *   - Choices: `nextHop`, `null0`, `vpn`, `dhcp`
+     */
+    gateway?: pulumi.Input<string>;
     /**
      * IP Address
      */
@@ -8548,15 +8607,15 @@ export interface ServiceLanVpnFeatureIpv4StaticRoute {
      */
     networkAddressVariable?: pulumi.Input<string>;
     /**
-     * IPv4 Route Gateway Next Hop with Tracker
+     * IPv4 Route Gateway Next Hop with Tracker, Attribute conditional on `gateway` being equal to `nextHop`
      */
     nextHopWithTrackers?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTracker>[]>;
     /**
-     * IPv4 Route Gateway Next Hop
+     * IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
      */
     nextHops?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv4StaticRouteNextHop>[]>;
     /**
-     * IPv4 Route Gateway Next Hop
+     * IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `null0`
      */
     null0?: pulumi.Input<boolean>;
     /**
@@ -8569,7 +8628,7 @@ export interface ServiceLanVpnFeatureIpv4StaticRoute {
      */
     subnetMaskVariable?: pulumi.Input<string>;
     /**
-     * IPv4 Route Gateway VPN
+     * IPv4 Route Gateway VPN, Attribute conditional on `gateway` being equal to `vpn`
      */
     vpn?: pulumi.Input<boolean>;
 }
@@ -8639,20 +8698,25 @@ export interface ServiceLanVpnFeatureIpv6ImportRouteTarget {
 
 export interface ServiceLanVpnFeatureIpv6StaticRoute {
     /**
-     * IPv6 Nat
+     * Gateway type
+     *   - Choices: `nextHop`, `null0`, `nat`
+     */
+    gateway?: pulumi.Input<string>;
+    /**
+     * IPv6 Nat, Attribute conditional on `gateway` being equal to `nat`
      *   - Choices: `NAT64`, `NAT66`
      */
     nat?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `gateway` being equal to `nat`
      */
     natVariable?: pulumi.Input<string>;
     /**
-     * IPv6 Route Gateway Next Hop
+     * IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
      */
     nextHops?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv6StaticRouteNextHop>[]>;
     /**
-     * IPv6 Route Gateway Next Hop
+     * IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `null0`
      */
     null0?: pulumi.Input<boolean>;
     /**
@@ -10195,43 +10259,82 @@ export interface ServiceRoutingBgpFeatureIpv4Neighbor {
 
 export interface ServiceRoutingBgpFeatureIpv4NeighborAddressFamily {
     /**
+     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `disable-peer`
+     *   - Range: `1`-`4294967295`
+     */
+    disablePeerMaxNumberOfPrefixes?: pulumi.Input<number>;
+    /**
+     * Variable name, Attribute conditional on `policyType` being equal to `disable-peer`
+     */
+    disablePeerMaxNumberOfPrefixesVariable?: pulumi.Input<string>;
+    /**
+     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `disable-peer`
+     *   - Range: `1`-`100`
+     *   - Default value: `75`
+     */
+    disablePeerThreshold?: pulumi.Input<number>;
+    /**
+     * Variable name, Attribute conditional on `policyType` being equal to `disable-peer`
+     */
+    disablePeerThresholdVariable?: pulumi.Input<string>;
+    /**
      * Set IPv4 unicast address family
      */
     familyType?: pulumi.Input<string>;
     inRoutePolicyId?: pulumi.Input<string>;
-    /**
-     * Set maximum number of prefixes accepted from BGP peer
-     *   - Range: `1`-`4294967295`
-     */
-    maxNumberOfPrefixes?: pulumi.Input<number>;
-    /**
-     * Variable name
-     */
-    maxNumberOfPrefixesVariable?: pulumi.Input<string>;
     outRoutePolicyId?: pulumi.Input<string>;
     /**
      * Neighbor received maximum prefix policy is disabled.
+     *   - Choices: `restart`, `off`, `warning-only`, `disable-peer`
      */
     policyType?: pulumi.Input<string>;
     /**
-     * Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded
+     * Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policyType` being equal to `restart`
      *   - Range: `1`-`65535`
      */
     restartInterval?: pulumi.Input<number>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `policyType` being equal to `restart`
      */
     restartIntervalVariable?: pulumi.Input<string>;
     /**
-     * Set threshold(1 to 100) at which to generate a warning message
+     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `restart`
+     *   - Range: `1`-`4294967295`
+     */
+    restartMaxNumberOfPrefixes?: pulumi.Input<number>;
+    /**
+     * Variable name, Attribute conditional on `policyType` being equal to `restart`
+     */
+    restartMaxNumberOfPrefixesVariable?: pulumi.Input<string>;
+    /**
+     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `restart`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      */
-    threshold?: pulumi.Input<number>;
+    restartThreshold?: pulumi.Input<number>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `policyType` being equal to `restart`
      */
-    thresholdVariable?: pulumi.Input<string>;
+    restartThresholdVariable?: pulumi.Input<string>;
+    /**
+     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `warning-only`
+     *   - Range: `1`-`4294967295`
+     */
+    warningMessageMaxNumberOfPrefixes?: pulumi.Input<number>;
+    /**
+     * Variable name, Attribute conditional on `policyType` being equal to `warning-only`
+     */
+    warningMessageMaxNumberOfPrefixesVariable?: pulumi.Input<string>;
+    /**
+     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `warning-only`
+     *   - Range: `1`-`100`
+     *   - Default value: `75`
+     */
+    warningMessageThreshold?: pulumi.Input<number>;
+    /**
+     * Variable name, Attribute conditional on `policyType` being equal to `warning-only`
+     */
+    warningMessageThresholdVariable?: pulumi.Input<string>;
 }
 
 export interface ServiceRoutingBgpFeatureIpv4Network {
@@ -12795,7 +12898,7 @@ export interface TlsSslDecryptionPolicyDefinitionUrlRule {
     /**
      * TLS SSL Profile Policy version
      */
-    tlsSslProfileVersion?: pulumi.Input<number>;
+    tlsSslProfilePolicyVersion?: pulumi.Input<number>;
 }
 
 export interface TrafficDataPolicyDefinitionSequence {
@@ -12981,7 +13084,7 @@ export interface TrafficDataPolicyDefinitionSequenceActionEntrySetParameter {
     /**
      * Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
      */
-    preferredColorGroupList?: pulumi.Input<string>;
+    preferredColorGroupListId?: pulumi.Input<string>;
     /**
      * Preferred color group list version
      */

@@ -21,8 +21,8 @@ namespace Pulumi.Sdwan.Inputs
         /// <summary>
         /// Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
         /// </summary>
-        [Input("preferredColorGroupList")]
-        public Input<string>? PreferredColorGroupList { get; set; }
+        [Input("preferredColorGroupListId")]
+        public Input<string>? PreferredColorGroupListId { get; set; }
 
         /// <summary>
         /// Preferred color group list version
@@ -33,8 +33,8 @@ namespace Pulumi.Sdwan.Inputs
         /// <summary>
         /// SLA class list ID, Attribute conditional on `type` being equal to `name`
         /// </summary>
-        [Input("slaClassList")]
-        public Input<string>? SlaClassList { get; set; }
+        [Input("slaClassListId")]
+        public Input<string>? SlaClassListId { get; set; }
 
         /// <summary>
         /// SLA class list version

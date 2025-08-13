@@ -12,12 +12,6 @@ namespace Pulumi.Sdwan.Inputs
 
     public sealed class CiscoVpnFeatureTemplateIpv4StaticGreRouteGetArgs : global::Pulumi.ResourceArgs
     {
-        /// <summary>
-        /// Variable name
-        /// </summary>
-        [Input("interfaceVariable")]
-        public Input<string>? InterfaceVariable { get; set; }
-
         [Input("interfaces")]
         private InputList<string>? _interfaces;
 
@@ -29,6 +23,12 @@ namespace Pulumi.Sdwan.Inputs
             get => _interfaces ?? (_interfaces = new InputList<string>());
             set => _interfaces = value;
         }
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Input("interfacesVariable")]
+        public Input<string>? InterfacesVariable { get; set; }
 
         /// <summary>
         /// Indicates if list item is considered optional.

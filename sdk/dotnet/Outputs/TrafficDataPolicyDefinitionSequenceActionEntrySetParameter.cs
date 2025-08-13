@@ -54,7 +54,7 @@ namespace Pulumi.Sdwan.Outputs
         /// <summary>
         /// Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
         /// </summary>
-        public readonly string? PreferredColorGroupList;
+        public readonly string? PreferredColorGroupListId;
         /// <summary>
         /// Preferred color group list version
         /// </summary>
@@ -150,7 +150,7 @@ namespace Pulumi.Sdwan.Outputs
 
             int? policerListVersion,
 
-            string? preferredColorGroupList,
+            string? preferredColorGroupListId,
 
             int? preferredColorGroupListVersion,
 
@@ -195,7 +195,7 @@ namespace Pulumi.Sdwan.Outputs
             NextHopLoose = nextHopLoose;
             PolicerListId = policerListId;
             PolicerListVersion = policerListVersion;
-            PreferredColorGroupList = preferredColorGroupList;
+            PreferredColorGroupListId = preferredColorGroupListId;
             PreferredColorGroupListVersion = preferredColorGroupListVersion;
             ServiceTlocColor = serviceTlocColor;
             ServiceTlocEncapsulation = serviceTlocEncapsulation;

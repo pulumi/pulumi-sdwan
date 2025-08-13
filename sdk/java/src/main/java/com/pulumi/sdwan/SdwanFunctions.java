@@ -176,6 +176,8 @@ import com.pulumi.sdwan.inputs.GetOtherUcseFeatureArgs;
 import com.pulumi.sdwan.inputs.GetOtherUcseFeaturePlainArgs;
 import com.pulumi.sdwan.inputs.GetPolicerPolicyObjectArgs;
 import com.pulumi.sdwan.inputs.GetPolicerPolicyObjectPlainArgs;
+import com.pulumi.sdwan.inputs.GetPolicyGroupArgs;
+import com.pulumi.sdwan.inputs.GetPolicyGroupPlainArgs;
 import com.pulumi.sdwan.inputs.GetPolicyObjectAppProbeClassArgs;
 import com.pulumi.sdwan.inputs.GetPolicyObjectAppProbeClassPlainArgs;
 import com.pulumi.sdwan.inputs.GetPolicyObjectApplicationListArgs;
@@ -557,6 +559,7 @@ import com.pulumi.sdwan.outputs.GetOtherFeatureProfileResult;
 import com.pulumi.sdwan.outputs.GetOtherThousandeyesFeatureResult;
 import com.pulumi.sdwan.outputs.GetOtherUcseFeatureResult;
 import com.pulumi.sdwan.outputs.GetPolicerPolicyObjectResult;
+import com.pulumi.sdwan.outputs.GetPolicyGroupResult;
 import com.pulumi.sdwan.outputs.GetPolicyObjectAppProbeClassResult;
 import com.pulumi.sdwan.outputs.GetPolicyObjectApplicationListResult;
 import com.pulumi.sdwan.outputs.GetPolicyObjectAsPathListResult;
@@ -20948,6 +20951,216 @@ public final class SdwanFunctions {
      */
     public static CompletableFuture<GetPolicerPolicyObjectResult> getPolicerPolicyObjectPlain(GetPolicerPolicyObjectPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("sdwan:index/getPolicerPolicyObject:getPolicerPolicyObject", TypeShape.of(GetPolicerPolicyObjectResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Policy Group .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyGroupArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyGroup(GetPolicyGroupArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetPolicyGroupResult> getPolicyGroup(GetPolicyGroupArgs args) {
+        return getPolicyGroup(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Policy Group .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyGroupArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyGroup(GetPolicyGroupArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static CompletableFuture<GetPolicyGroupResult> getPolicyGroupPlain(GetPolicyGroupPlainArgs args) {
+        return getPolicyGroupPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Policy Group .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyGroupArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyGroup(GetPolicyGroupArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetPolicyGroupResult> getPolicyGroup(GetPolicyGroupArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getPolicyGroup:getPolicyGroup", TypeShape.of(GetPolicyGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Policy Group .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyGroupArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyGroup(GetPolicyGroupArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetPolicyGroupResult> getPolicyGroup(GetPolicyGroupArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getPolicyGroup:getPolicyGroup", TypeShape.of(GetPolicyGroupResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Policy Group .
+     * 
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyGroupArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyGroup(GetPolicyGroupArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static CompletableFuture<GetPolicyGroupResult> getPolicyGroupPlain(GetPolicyGroupPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getPolicyGroup:getPolicyGroup", TypeShape.of(GetPolicyGroupResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source can read the Policy Object App Probe Class Policy_object.

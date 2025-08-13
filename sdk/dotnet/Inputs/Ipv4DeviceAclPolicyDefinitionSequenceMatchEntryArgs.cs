@@ -31,6 +31,12 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? DestinationIp { get; set; }
 
         /// <summary>
+        /// Destination IP prefix variable, Attribute conditional on `type` being equal to `destinationIp`
+        /// </summary>
+        [Input("destinationIpVariable")]
+        public Input<string>? DestinationIpVariable { get; set; }
+
+        /// <summary>
         /// Destination port, only `22` and `161` supported, Attribute conditional on `type` being equal to `destinationPort`
         ///   - Range: `0`-`65535`
         /// </summary>
@@ -54,6 +60,12 @@ namespace Pulumi.Sdwan.Inputs
         /// </summary>
         [Input("sourceIp")]
         public Input<string>? SourceIp { get; set; }
+
+        /// <summary>
+        /// Source IP prefix variable, Attribute conditional on `type` being equal to `sourceIp`
+        /// </summary>
+        [Input("sourceIpVariable")]
+        public Input<string>? SourceIpVariable { get; set; }
 
         /// <summary>
         /// Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
