@@ -31,7 +31,7 @@ public final class GetTlsSslDecryptionPolicyDefinitionUrlRule {
      * @return TLS SSL Profile Policy version
      * 
      */
-    private Integer tlsSslProfileVersion;
+    private Integer tlsSslProfilePolicyVersion;
 
     private GetTlsSslDecryptionPolicyDefinitionUrlRule() {}
     /**
@@ -59,8 +59,8 @@ public final class GetTlsSslDecryptionPolicyDefinitionUrlRule {
      * @return TLS SSL Profile Policy version
      * 
      */
-    public Integer tlsSslProfileVersion() {
-        return this.tlsSslProfileVersion;
+    public Integer tlsSslProfilePolicyVersion() {
+        return this.tlsSslProfilePolicyVersion;
     }
 
     public static Builder builder() {
@@ -75,14 +75,14 @@ public final class GetTlsSslDecryptionPolicyDefinitionUrlRule {
         private String ruleName;
         private List<String> targetVpns;
         private String tlsSslProfilePolicyId;
-        private Integer tlsSslProfileVersion;
+        private Integer tlsSslProfilePolicyVersion;
         public Builder() {}
         public Builder(GetTlsSslDecryptionPolicyDefinitionUrlRule defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.ruleName = defaults.ruleName;
     	      this.targetVpns = defaults.targetVpns;
     	      this.tlsSslProfilePolicyId = defaults.tlsSslProfilePolicyId;
-    	      this.tlsSslProfileVersion = defaults.tlsSslProfileVersion;
+    	      this.tlsSslProfilePolicyVersion = defaults.tlsSslProfilePolicyVersion;
         }
 
         @CustomType.Setter
@@ -113,11 +113,11 @@ public final class GetTlsSslDecryptionPolicyDefinitionUrlRule {
             return this;
         }
         @CustomType.Setter
-        public Builder tlsSslProfileVersion(Integer tlsSslProfileVersion) {
-            if (tlsSslProfileVersion == null) {
-              throw new MissingRequiredPropertyException("GetTlsSslDecryptionPolicyDefinitionUrlRule", "tlsSslProfileVersion");
+        public Builder tlsSslProfilePolicyVersion(Integer tlsSslProfilePolicyVersion) {
+            if (tlsSslProfilePolicyVersion == null) {
+              throw new MissingRequiredPropertyException("GetTlsSslDecryptionPolicyDefinitionUrlRule", "tlsSslProfilePolicyVersion");
             }
-            this.tlsSslProfileVersion = tlsSslProfileVersion;
+            this.tlsSslProfilePolicyVersion = tlsSslProfilePolicyVersion;
             return this;
         }
         public GetTlsSslDecryptionPolicyDefinitionUrlRule build() {
@@ -125,7 +125,7 @@ public final class GetTlsSslDecryptionPolicyDefinitionUrlRule {
             _resultValue.ruleName = ruleName;
             _resultValue.targetVpns = targetVpns;
             _resultValue.tlsSslProfilePolicyId = tlsSslProfilePolicyId;
-            _resultValue.tlsSslProfileVersion = tlsSslProfileVersion;
+            _resultValue.tlsSslProfilePolicyVersion = tlsSslProfilePolicyVersion;
             return _resultValue;
         }
     }

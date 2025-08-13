@@ -745,6 +745,11 @@ export const getPolicerPolicyObject: typeof import("./getPolicerPolicyObject").g
 export const getPolicerPolicyObjectOutput: typeof import("./getPolicerPolicyObject").getPolicerPolicyObjectOutput = null as any;
 utilities.lazyLoad(exports, ["getPolicerPolicyObject","getPolicerPolicyObjectOutput"], () => require("./getPolicerPolicyObject"));
 
+export { GetPolicyGroupArgs, GetPolicyGroupResult, GetPolicyGroupOutputArgs } from "./getPolicyGroup";
+export const getPolicyGroup: typeof import("./getPolicyGroup").getPolicyGroup = null as any;
+export const getPolicyGroupOutput: typeof import("./getPolicyGroup").getPolicyGroupOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyGroup","getPolicyGroupOutput"], () => require("./getPolicyGroup"));
+
 export { GetPolicyObjectAppProbeClassArgs, GetPolicyObjectAppProbeClassResult, GetPolicyObjectAppProbeClassOutputArgs } from "./getPolicyObjectAppProbeClass";
 export const getPolicyObjectAppProbeClass: typeof import("./getPolicyObjectAppProbeClass").getPolicyObjectAppProbeClass = null as any;
 export const getPolicyObjectAppProbeClassOutput: typeof import("./getPolicyObjectAppProbeClass").getPolicyObjectAppProbeClassOutput = null as any;
@@ -1589,6 +1594,11 @@ export { PolicerPolicyObjectArgs, PolicerPolicyObjectState } from "./policerPoli
 export type PolicerPolicyObject = import("./policerPolicyObject").PolicerPolicyObject;
 export const PolicerPolicyObject: typeof import("./policerPolicyObject").PolicerPolicyObject = null as any;
 utilities.lazyLoad(exports, ["PolicerPolicyObject"], () => require("./policerPolicyObject"));
+
+export { PolicyGroupArgs, PolicyGroupState } from "./policyGroup";
+export type PolicyGroup = import("./policyGroup").PolicyGroup;
+export const PolicyGroup: typeof import("./policyGroup").PolicyGroup = null as any;
+utilities.lazyLoad(exports, ["PolicyGroup"], () => require("./policyGroup"));
 
 export { PolicyObjectAppProbeClassArgs, PolicyObjectAppProbeClassState } from "./policyObjectAppProbeClass";
 export type PolicyObjectAppProbeClass = import("./policyObjectAppProbeClass").PolicyObjectAppProbeClass;
@@ -2520,6 +2530,8 @@ const _module = {
                 return new OtherUcseFeature(name, <any>undefined, { urn })
             case "sdwan:index/policerPolicyObject:PolicerPolicyObject":
                 return new PolicerPolicyObject(name, <any>undefined, { urn })
+            case "sdwan:index/policyGroup:PolicyGroup":
+                return new PolicyGroup(name, <any>undefined, { urn })
             case "sdwan:index/policyObjectAppProbeClass:PolicyObjectAppProbeClass":
                 return new PolicyObjectAppProbeClass(name, <any>undefined, { urn })
             case "sdwan:index/policyObjectApplicationList:PolicyObjectApplicationList":
@@ -2907,6 +2919,7 @@ pulumi.runtime.registerResourceModule("sdwan", "index/otherFeatureProfile", _mod
 pulumi.runtime.registerResourceModule("sdwan", "index/otherThousandeyesFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/otherUcseFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policerPolicyObject", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyGroup", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectAppProbeClass", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectApplicationList", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectAsPathList", _module)

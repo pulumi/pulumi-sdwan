@@ -22,7 +22,7 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySla
      * @return Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
      * 
      */
-    private @Nullable String preferredColorGroupList;
+    private @Nullable String preferredColorGroupListId;
     /**
      * @return Preferred color group list version
      * 
@@ -32,7 +32,7 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySla
      * @return SLA class list ID, Attribute conditional on `type` being equal to `name`
      * 
      */
-    private @Nullable String slaClassList;
+    private @Nullable String slaClassListId;
     /**
      * @return SLA class list version
      * 
@@ -57,8 +57,8 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySla
      * @return Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
      * 
      */
-    public Optional<String> preferredColorGroupList() {
-        return Optional.ofNullable(this.preferredColorGroupList);
+    public Optional<String> preferredColorGroupListId() {
+        return Optional.ofNullable(this.preferredColorGroupListId);
     }
     /**
      * @return Preferred color group list version
@@ -71,8 +71,8 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySla
      * @return SLA class list ID, Attribute conditional on `type` being equal to `name`
      * 
      */
-    public Optional<String> slaClassList() {
-        return Optional.ofNullable(this.slaClassList);
+    public Optional<String> slaClassListId() {
+        return Optional.ofNullable(this.slaClassListId);
     }
     /**
      * @return SLA class list version
@@ -100,18 +100,18 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySla
     @CustomType.Builder
     public static final class Builder {
         private @Nullable String preferredColor;
-        private @Nullable String preferredColorGroupList;
+        private @Nullable String preferredColorGroupListId;
         private @Nullable Integer preferredColorGroupListVersion;
-        private @Nullable String slaClassList;
+        private @Nullable String slaClassListId;
         private @Nullable Integer slaClassListVersion;
         private String type;
         public Builder() {}
         public Builder(ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameter defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.preferredColor = defaults.preferredColor;
-    	      this.preferredColorGroupList = defaults.preferredColorGroupList;
+    	      this.preferredColorGroupListId = defaults.preferredColorGroupListId;
     	      this.preferredColorGroupListVersion = defaults.preferredColorGroupListVersion;
-    	      this.slaClassList = defaults.slaClassList;
+    	      this.slaClassListId = defaults.slaClassListId;
     	      this.slaClassListVersion = defaults.slaClassListVersion;
     	      this.type = defaults.type;
         }
@@ -123,9 +123,9 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySla
             return this;
         }
         @CustomType.Setter
-        public Builder preferredColorGroupList(@Nullable String preferredColorGroupList) {
+        public Builder preferredColorGroupListId(@Nullable String preferredColorGroupListId) {
 
-            this.preferredColorGroupList = preferredColorGroupList;
+            this.preferredColorGroupListId = preferredColorGroupListId;
             return this;
         }
         @CustomType.Setter
@@ -135,9 +135,9 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySla
             return this;
         }
         @CustomType.Setter
-        public Builder slaClassList(@Nullable String slaClassList) {
+        public Builder slaClassListId(@Nullable String slaClassListId) {
 
-            this.slaClassList = slaClassList;
+            this.slaClassListId = slaClassListId;
             return this;
         }
         @CustomType.Setter
@@ -157,9 +157,9 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySla
         public ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameter build() {
             final var _resultValue = new ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameter();
             _resultValue.preferredColor = preferredColor;
-            _resultValue.preferredColorGroupList = preferredColorGroupList;
+            _resultValue.preferredColorGroupListId = preferredColorGroupListId;
             _resultValue.preferredColorGroupListVersion = preferredColorGroupListVersion;
-            _resultValue.slaClassList = slaClassList;
+            _resultValue.slaClassListId = slaClassListId;
             _resultValue.slaClassListVersion = slaClassListVersion;
             _resultValue.type = type;
             return _resultValue;

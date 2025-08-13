@@ -36,15 +36,15 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySla
      * Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
      * 
      */
-    @Import(name="preferredColorGroupList")
-    private @Nullable Output<String> preferredColorGroupList;
+    @Import(name="preferredColorGroupListId")
+    private @Nullable Output<String> preferredColorGroupListId;
 
     /**
      * @return Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
      * 
      */
-    public Optional<Output<String>> preferredColorGroupList() {
-        return Optional.ofNullable(this.preferredColorGroupList);
+    public Optional<Output<String>> preferredColorGroupListId() {
+        return Optional.ofNullable(this.preferredColorGroupListId);
     }
 
     /**
@@ -66,15 +66,15 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySla
      * SLA class list ID, Attribute conditional on `type` being equal to `name`
      * 
      */
-    @Import(name="slaClassList")
-    private @Nullable Output<String> slaClassList;
+    @Import(name="slaClassListId")
+    private @Nullable Output<String> slaClassListId;
 
     /**
      * @return SLA class list ID, Attribute conditional on `type` being equal to `name`
      * 
      */
-    public Optional<Output<String>> slaClassList() {
-        return Optional.ofNullable(this.slaClassList);
+    public Optional<Output<String>> slaClassListId() {
+        return Optional.ofNullable(this.slaClassListId);
     }
 
     /**
@@ -113,9 +113,9 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySla
 
     private ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameterArgs(ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameterArgs $) {
         this.preferredColor = $.preferredColor;
-        this.preferredColorGroupList = $.preferredColorGroupList;
+        this.preferredColorGroupListId = $.preferredColorGroupListId;
         this.preferredColorGroupListVersion = $.preferredColorGroupListVersion;
-        this.slaClassList = $.slaClassList;
+        this.slaClassListId = $.slaClassListId;
         this.slaClassListVersion = $.slaClassListVersion;
         this.type = $.type;
     }
@@ -160,24 +160,24 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySla
         }
 
         /**
-         * @param preferredColorGroupList Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
+         * @param preferredColorGroupListId Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
          * 
          * @return builder
          * 
          */
-        public Builder preferredColorGroupList(@Nullable Output<String> preferredColorGroupList) {
-            $.preferredColorGroupList = preferredColorGroupList;
+        public Builder preferredColorGroupListId(@Nullable Output<String> preferredColorGroupListId) {
+            $.preferredColorGroupListId = preferredColorGroupListId;
             return this;
         }
 
         /**
-         * @param preferredColorGroupList Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
+         * @param preferredColorGroupListId Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
          * 
          * @return builder
          * 
          */
-        public Builder preferredColorGroupList(String preferredColorGroupList) {
-            return preferredColorGroupList(Output.of(preferredColorGroupList));
+        public Builder preferredColorGroupListId(String preferredColorGroupListId) {
+            return preferredColorGroupListId(Output.of(preferredColorGroupListId));
         }
 
         /**
@@ -202,24 +202,24 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySla
         }
 
         /**
-         * @param slaClassList SLA class list ID, Attribute conditional on `type` being equal to `name`
+         * @param slaClassListId SLA class list ID, Attribute conditional on `type` being equal to `name`
          * 
          * @return builder
          * 
          */
-        public Builder slaClassList(@Nullable Output<String> slaClassList) {
-            $.slaClassList = slaClassList;
+        public Builder slaClassListId(@Nullable Output<String> slaClassListId) {
+            $.slaClassListId = slaClassListId;
             return this;
         }
 
         /**
-         * @param slaClassList SLA class list ID, Attribute conditional on `type` being equal to `name`
+         * @param slaClassListId SLA class list ID, Attribute conditional on `type` being equal to `name`
          * 
          * @return builder
          * 
          */
-        public Builder slaClassList(String slaClassList) {
-            return slaClassList(Output.of(slaClassList));
+        public Builder slaClassListId(String slaClassListId) {
+            return slaClassListId(Output.of(slaClassListId));
         }
 
         /**

@@ -822,7 +822,7 @@
                         "maxItemsOne": false,
                         "elem": {
                             "fields": {
-                                "interface": {
+                                "interfaces": {
                                     "maxItemsOne": false
                                 }
                             }
@@ -832,7 +832,7 @@
                         "maxItemsOne": false,
                         "elem": {
                             "fields": {
-                                "interface": {
+                                "interfaces": {
                                     "maxItemsOne": false
                                 }
                             }
@@ -1526,6 +1526,34 @@
             },
             "sdwan_policer_policy_object": {
                 "current": "sdwan:index/policerPolicyObject:PolicerPolicyObject"
+            },
+            "sdwan_policy_group": {
+                "current": "sdwan:index/policyGroup:PolicyGroup",
+                "fields": {
+                    "devices": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "variables": {
+                                    "maxItemsOne": false,
+                                    "elem": {
+                                        "fields": {
+                                            "list_value": {
+                                                "maxItemsOne": false
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "feature_profile_ids": {
+                        "maxItemsOne": false
+                    },
+                    "policy_versions": {
+                        "maxItemsOne": false
+                    }
+                }
             },
             "sdwan_policy_object_app_probe_class": {
                 "current": "sdwan:index/policyObjectAppProbeClass:PolicyObjectAppProbeClass",
@@ -4521,7 +4549,7 @@
                         "maxItemsOne": false,
                         "elem": {
                             "fields": {
-                                "interface": {
+                                "interfaces": {
                                     "maxItemsOne": false
                                 }
                             }
@@ -4531,7 +4559,7 @@
                         "maxItemsOne": false,
                         "elem": {
                             "fields": {
-                                "interface": {
+                                "interfaces": {
                                     "maxItemsOne": false
                                 }
                             }
@@ -5233,6 +5261,34 @@
             },
             "sdwan_policer_policy_object": {
                 "current": "sdwan:index/getPolicerPolicyObject:getPolicerPolicyObject"
+            },
+            "sdwan_policy_group": {
+                "current": "sdwan:index/getPolicyGroup:getPolicyGroup",
+                "fields": {
+                    "devices": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "variables": {
+                                    "maxItemsOne": false,
+                                    "elem": {
+                                        "fields": {
+                                            "list_value": {
+                                                "maxItemsOne": false
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "feature_profile_ids": {
+                        "maxItemsOne": false
+                    },
+                    "policy_versions": {
+                        "maxItemsOne": false
+                    }
+                }
             },
             "sdwan_policy_object_app_probe_class": {
                 "current": "sdwan:index/getPolicyObjectAppProbeClass:getPolicyObjectAppProbeClass",

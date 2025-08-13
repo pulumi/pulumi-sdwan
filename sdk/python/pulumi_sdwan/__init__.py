@@ -154,6 +154,7 @@ from .get_other_feature_profile import *
 from .get_other_thousandeyes_feature import *
 from .get_other_ucse_feature import *
 from .get_policer_policy_object import *
+from .get_policy_group import *
 from .get_policy_object_app_probe_class import *
 from .get_policy_object_application_list import *
 from .get_policy_object_as_path_list import *
@@ -323,6 +324,7 @@ from .other_feature_profile import *
 from .other_thousandeyes_feature import *
 from .other_ucse_feature import *
 from .policer_policy_object import *
+from .policy_group import *
 from .policy_object_app_probe_class import *
 from .policy_object_application_list import *
 from .policy_object_as_path_list import *
@@ -1156,6 +1158,14 @@ _utilities.register(
   "fqn": "pulumi_sdwan",
   "classes": {
    "sdwan:index/policerPolicyObject:PolicerPolicyObject": "PolicerPolicyObject"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/policyGroup",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/policyGroup:PolicyGroup": "PolicyGroup"
   }
  },
  {

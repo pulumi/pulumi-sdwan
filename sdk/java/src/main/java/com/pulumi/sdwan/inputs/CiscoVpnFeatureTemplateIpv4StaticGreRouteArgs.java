@@ -19,21 +19,6 @@ public final class CiscoVpnFeatureTemplateIpv4StaticGreRouteArgs extends com.pul
     public static final CiscoVpnFeatureTemplateIpv4StaticGreRouteArgs Empty = new CiscoVpnFeatureTemplateIpv4StaticGreRouteArgs();
 
     /**
-     * Variable name
-     * 
-     */
-    @Import(name="interfaceVariable")
-    private @Nullable Output<String> interfaceVariable;
-
-    /**
-     * @return Variable name
-     * 
-     */
-    public Optional<Output<String>> interfaceVariable() {
-        return Optional.ofNullable(this.interfaceVariable);
-    }
-
-    /**
      * List of GRE Interfaces
      * 
      */
@@ -46,6 +31,21 @@ public final class CiscoVpnFeatureTemplateIpv4StaticGreRouteArgs extends com.pul
      */
     public Optional<Output<List<String>>> interfaces() {
         return Optional.ofNullable(this.interfaces);
+    }
+
+    /**
+     * Variable name
+     * 
+     */
+    @Import(name="interfacesVariable")
+    private @Nullable Output<String> interfacesVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<Output<String>> interfacesVariable() {
+        return Optional.ofNullable(this.interfacesVariable);
     }
 
     /**
@@ -113,8 +113,8 @@ public final class CiscoVpnFeatureTemplateIpv4StaticGreRouteArgs extends com.pul
     private CiscoVpnFeatureTemplateIpv4StaticGreRouteArgs() {}
 
     private CiscoVpnFeatureTemplateIpv4StaticGreRouteArgs(CiscoVpnFeatureTemplateIpv4StaticGreRouteArgs $) {
-        this.interfaceVariable = $.interfaceVariable;
         this.interfaces = $.interfaces;
+        this.interfacesVariable = $.interfacesVariable;
         this.optional = $.optional;
         this.prefix = $.prefix;
         this.prefixVariable = $.prefixVariable;
@@ -137,27 +137,6 @@ public final class CiscoVpnFeatureTemplateIpv4StaticGreRouteArgs extends com.pul
 
         public Builder(CiscoVpnFeatureTemplateIpv4StaticGreRouteArgs defaults) {
             $ = new CiscoVpnFeatureTemplateIpv4StaticGreRouteArgs(Objects.requireNonNull(defaults));
-        }
-
-        /**
-         * @param interfaceVariable Variable name
-         * 
-         * @return builder
-         * 
-         */
-        public Builder interfaceVariable(@Nullable Output<String> interfaceVariable) {
-            $.interfaceVariable = interfaceVariable;
-            return this;
-        }
-
-        /**
-         * @param interfaceVariable Variable name
-         * 
-         * @return builder
-         * 
-         */
-        public Builder interfaceVariable(String interfaceVariable) {
-            return interfaceVariable(Output.of(interfaceVariable));
         }
 
         /**
@@ -189,6 +168,27 @@ public final class CiscoVpnFeatureTemplateIpv4StaticGreRouteArgs extends com.pul
          */
         public Builder interfaces(String... interfaces) {
             return interfaces(List.of(interfaces));
+        }
+
+        /**
+         * @param interfacesVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder interfacesVariable(@Nullable Output<String> interfacesVariable) {
+            $.interfacesVariable = interfacesVariable;
+            return this;
+        }
+
+        /**
+         * @param interfacesVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder interfacesVariable(String interfacesVariable) {
+            return interfacesVariable(Output.of(interfacesVariable));
         }
 
         /**

@@ -29,6 +29,11 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry {
      */
     private @Nullable String destinationIp;
     /**
+     * @return Destination IP prefix variable, Attribute conditional on `type` being equal to `destinationIp`
+     * 
+     */
+    private @Nullable String destinationIpVariable;
+    /**
      * @return Destination port, only `22` and `161` supported, Attribute conditional on `type` being equal to `destinationPort`
      *   - Range: `0`-`65535`
      * 
@@ -49,6 +54,11 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry {
      * 
      */
     private @Nullable String sourceIp;
+    /**
+     * @return Source IP prefix variable, Attribute conditional on `type` being equal to `sourceIp`
+     * 
+     */
+    private @Nullable String sourceIpVariable;
     /**
      * @return Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
      * 
@@ -84,6 +94,13 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.destinationIp);
     }
     /**
+     * @return Destination IP prefix variable, Attribute conditional on `type` being equal to `destinationIp`
+     * 
+     */
+    public Optional<String> destinationIpVariable() {
+        return Optional.ofNullable(this.destinationIpVariable);
+    }
+    /**
      * @return Destination port, only `22` and `161` supported, Attribute conditional on `type` being equal to `destinationPort`
      *   - Range: `0`-`65535`
      * 
@@ -113,6 +130,13 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.sourceIp);
     }
     /**
+     * @return Source IP prefix variable, Attribute conditional on `type` being equal to `sourceIp`
+     * 
+     */
+    public Optional<String> sourceIpVariable() {
+        return Optional.ofNullable(this.sourceIpVariable);
+    }
+    /**
      * @return Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
      * 
      */
@@ -140,10 +164,12 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry {
         private @Nullable String destinationDataIpv4PrefixListId;
         private @Nullable Integer destinationDataIpv4PrefixListVersion;
         private @Nullable String destinationIp;
+        private @Nullable String destinationIpVariable;
         private @Nullable Integer destinationPort;
         private @Nullable String sourceDataIpv4PrefixListId;
         private @Nullable Integer sourceDataIpv4PrefixListVersion;
         private @Nullable String sourceIp;
+        private @Nullable String sourceIpVariable;
         private @Nullable String sourcePorts;
         private String type;
         public Builder() {}
@@ -152,10 +178,12 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry {
     	      this.destinationDataIpv4PrefixListId = defaults.destinationDataIpv4PrefixListId;
     	      this.destinationDataIpv4PrefixListVersion = defaults.destinationDataIpv4PrefixListVersion;
     	      this.destinationIp = defaults.destinationIp;
+    	      this.destinationIpVariable = defaults.destinationIpVariable;
     	      this.destinationPort = defaults.destinationPort;
     	      this.sourceDataIpv4PrefixListId = defaults.sourceDataIpv4PrefixListId;
     	      this.sourceDataIpv4PrefixListVersion = defaults.sourceDataIpv4PrefixListVersion;
     	      this.sourceIp = defaults.sourceIp;
+    	      this.sourceIpVariable = defaults.sourceIpVariable;
     	      this.sourcePorts = defaults.sourcePorts;
     	      this.type = defaults.type;
         }
@@ -176,6 +204,12 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry {
         public Builder destinationIp(@Nullable String destinationIp) {
 
             this.destinationIp = destinationIp;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder destinationIpVariable(@Nullable String destinationIpVariable) {
+
+            this.destinationIpVariable = destinationIpVariable;
             return this;
         }
         @CustomType.Setter
@@ -203,6 +237,12 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry {
             return this;
         }
         @CustomType.Setter
+        public Builder sourceIpVariable(@Nullable String sourceIpVariable) {
+
+            this.sourceIpVariable = sourceIpVariable;
+            return this;
+        }
+        @CustomType.Setter
         public Builder sourcePorts(@Nullable String sourcePorts) {
 
             this.sourcePorts = sourcePorts;
@@ -221,10 +261,12 @@ public final class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry {
             _resultValue.destinationDataIpv4PrefixListId = destinationDataIpv4PrefixListId;
             _resultValue.destinationDataIpv4PrefixListVersion = destinationDataIpv4PrefixListVersion;
             _resultValue.destinationIp = destinationIp;
+            _resultValue.destinationIpVariable = destinationIpVariable;
             _resultValue.destinationPort = destinationPort;
             _resultValue.sourceDataIpv4PrefixListId = sourceDataIpv4PrefixListId;
             _resultValue.sourceDataIpv4PrefixListVersion = sourceDataIpv4PrefixListVersion;
             _resultValue.sourceIp = sourceIp;
+            _resultValue.sourceIpVariable = sourceIpVariable;
             _resultValue.sourcePorts = sourcePorts;
             _resultValue.type = type;
             return _resultValue;

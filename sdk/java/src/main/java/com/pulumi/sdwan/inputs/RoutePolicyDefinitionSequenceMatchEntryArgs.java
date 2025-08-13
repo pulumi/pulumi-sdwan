@@ -111,6 +111,21 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
     }
 
     /**
+     * Expanded community list variable, Attribute conditional on `type` being equal to `expandedCommunityInline`
+     * 
+     */
+    @Import(name="expandedCommunityListVariable")
+    private @Nullable Output<String> expandedCommunityListVariable;
+
+    /**
+     * @return Expanded community list variable, Attribute conditional on `type` being equal to `expandedCommunityInline`
+     * 
+     */
+    public Optional<Output<String>> expandedCommunityListVariable() {
+        return Optional.ofNullable(this.expandedCommunityListVariable);
+    }
+
+    /**
      * Expanded community list version
      * 
      */
@@ -317,7 +332,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
 
     /**
      * Type of match entry
-     *   - Choices: `address`, `asPath`, `advancedCommunity`, `expandedCommunity`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
+     *   - Choices: `address`, `asPath`, `advancedCommunity`, `expandedCommunity`, `expandedCommunityInline`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
      * 
      */
     @Import(name="type", required=true)
@@ -325,7 +340,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
 
     /**
      * @return Type of match entry
-     *   - Choices: `address`, `asPath`, `advancedCommunity`, `expandedCommunity`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
+     *   - Choices: `address`, `asPath`, `advancedCommunity`, `expandedCommunity`, `expandedCommunityInline`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
      * 
      */
     public Output<String> type() {
@@ -341,6 +356,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
         this.communityListMatchFlag = $.communityListMatchFlag;
         this.communityListVersions = $.communityListVersions;
         this.expandedCommunityListId = $.expandedCommunityListId;
+        this.expandedCommunityListVariable = $.expandedCommunityListVariable;
         this.expandedCommunityListVersion = $.expandedCommunityListVersion;
         this.extendedCommunityListId = $.extendedCommunityListId;
         this.extendedCommunityListVersion = $.extendedCommunityListVersion;
@@ -521,6 +537,27 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
          */
         public Builder expandedCommunityListId(String expandedCommunityListId) {
             return expandedCommunityListId(Output.of(expandedCommunityListId));
+        }
+
+        /**
+         * @param expandedCommunityListVariable Expanded community list variable, Attribute conditional on `type` being equal to `expandedCommunityInline`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expandedCommunityListVariable(@Nullable Output<String> expandedCommunityListVariable) {
+            $.expandedCommunityListVariable = expandedCommunityListVariable;
+            return this;
+        }
+
+        /**
+         * @param expandedCommunityListVariable Expanded community list variable, Attribute conditional on `type` being equal to `expandedCommunityInline`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder expandedCommunityListVariable(String expandedCommunityListVariable) {
+            return expandedCommunityListVariable(Output.of(expandedCommunityListVariable));
         }
 
         /**
@@ -808,7 +845,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
 
         /**
          * @param type Type of match entry
-         *   - Choices: `address`, `asPath`, `advancedCommunity`, `expandedCommunity`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
+         *   - Choices: `address`, `asPath`, `advancedCommunity`, `expandedCommunity`, `expandedCommunityInline`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
          * 
          * @return builder
          * 
@@ -820,7 +857,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
 
         /**
          * @param type Type of match entry
-         *   - Choices: `address`, `asPath`, `advancedCommunity`, `expandedCommunity`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
+         *   - Choices: `address`, `asPath`, `advancedCommunity`, `expandedCommunity`, `expandedCommunityInline`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
          * 
          * @return builder
          * 

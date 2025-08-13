@@ -20,7 +20,7 @@ public final class GetApplicationAwareRoutingPolicyDefinitionSequenceActionEntry
      * @return Preferred color group list ID
      * 
      */
-    private String preferredColorGroupList;
+    private String preferredColorGroupListId;
     /**
      * @return Preferred color group list version
      * 
@@ -30,7 +30,7 @@ public final class GetApplicationAwareRoutingPolicyDefinitionSequenceActionEntry
      * @return SLA class list ID
      * 
      */
-    private String slaClassList;
+    private String slaClassListId;
     /**
      * @return SLA class list version
      * 
@@ -54,8 +54,8 @@ public final class GetApplicationAwareRoutingPolicyDefinitionSequenceActionEntry
      * @return Preferred color group list ID
      * 
      */
-    public String preferredColorGroupList() {
-        return this.preferredColorGroupList;
+    public String preferredColorGroupListId() {
+        return this.preferredColorGroupListId;
     }
     /**
      * @return Preferred color group list version
@@ -68,8 +68,8 @@ public final class GetApplicationAwareRoutingPolicyDefinitionSequenceActionEntry
      * @return SLA class list ID
      * 
      */
-    public String slaClassList() {
-        return this.slaClassList;
+    public String slaClassListId() {
+        return this.slaClassListId;
     }
     /**
      * @return SLA class list version
@@ -96,18 +96,18 @@ public final class GetApplicationAwareRoutingPolicyDefinitionSequenceActionEntry
     @CustomType.Builder
     public static final class Builder {
         private String preferredColor;
-        private String preferredColorGroupList;
+        private String preferredColorGroupListId;
         private Integer preferredColorGroupListVersion;
-        private String slaClassList;
+        private String slaClassListId;
         private Integer slaClassListVersion;
         private String type;
         public Builder() {}
         public Builder(GetApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameter defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.preferredColor = defaults.preferredColor;
-    	      this.preferredColorGroupList = defaults.preferredColorGroupList;
+    	      this.preferredColorGroupListId = defaults.preferredColorGroupListId;
     	      this.preferredColorGroupListVersion = defaults.preferredColorGroupListVersion;
-    	      this.slaClassList = defaults.slaClassList;
+    	      this.slaClassListId = defaults.slaClassListId;
     	      this.slaClassListVersion = defaults.slaClassListVersion;
     	      this.type = defaults.type;
         }
@@ -121,11 +121,11 @@ public final class GetApplicationAwareRoutingPolicyDefinitionSequenceActionEntry
             return this;
         }
         @CustomType.Setter
-        public Builder preferredColorGroupList(String preferredColorGroupList) {
-            if (preferredColorGroupList == null) {
-              throw new MissingRequiredPropertyException("GetApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameter", "preferredColorGroupList");
+        public Builder preferredColorGroupListId(String preferredColorGroupListId) {
+            if (preferredColorGroupListId == null) {
+              throw new MissingRequiredPropertyException("GetApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameter", "preferredColorGroupListId");
             }
-            this.preferredColorGroupList = preferredColorGroupList;
+            this.preferredColorGroupListId = preferredColorGroupListId;
             return this;
         }
         @CustomType.Setter
@@ -137,11 +137,11 @@ public final class GetApplicationAwareRoutingPolicyDefinitionSequenceActionEntry
             return this;
         }
         @CustomType.Setter
-        public Builder slaClassList(String slaClassList) {
-            if (slaClassList == null) {
-              throw new MissingRequiredPropertyException("GetApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameter", "slaClassList");
+        public Builder slaClassListId(String slaClassListId) {
+            if (slaClassListId == null) {
+              throw new MissingRequiredPropertyException("GetApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameter", "slaClassListId");
             }
-            this.slaClassList = slaClassList;
+            this.slaClassListId = slaClassListId;
             return this;
         }
         @CustomType.Setter
@@ -163,9 +163,9 @@ public final class GetApplicationAwareRoutingPolicyDefinitionSequenceActionEntry
         public GetApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameter build() {
             final var _resultValue = new GetApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameter();
             _resultValue.preferredColor = preferredColor;
-            _resultValue.preferredColorGroupList = preferredColorGroupList;
+            _resultValue.preferredColorGroupListId = preferredColorGroupListId;
             _resultValue.preferredColorGroupListVersion = preferredColorGroupListVersion;
-            _resultValue.slaClassList = slaClassList;
+            _resultValue.slaClassListId = slaClassListId;
             _resultValue.slaClassListVersion = slaClassListVersion;
             _resultValue.type = type;
             return _resultValue;

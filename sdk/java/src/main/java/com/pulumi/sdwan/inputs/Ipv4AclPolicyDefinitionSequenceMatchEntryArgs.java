@@ -93,6 +93,21 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
     }
 
     /**
+     * Destination IP prefix variable, Attribute conditional on `type` being equal to `destinationIp`
+     * 
+     */
+    @Import(name="destinationIpVariable")
+    private @Nullable Output<String> destinationIpVariable;
+
+    /**
+     * @return Destination IP prefix variable, Attribute conditional on `type` being equal to `destinationIp`
+     * 
+     */
+    public Optional<Output<String>> destinationIpVariable() {
+        return Optional.ofNullable(this.destinationIpVariable);
+    }
+
+    /**
      * Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `destinationPort`
      * 
      */
@@ -109,18 +124,16 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
 
     /**
      * DSCP value, Attribute conditional on `type` being equal to `dscp`
-     *   - Range: `0`-`63`
      * 
      */
     @Import(name="dscp")
-    private @Nullable Output<Integer> dscp;
+    private @Nullable Output<String> dscp;
 
     /**
      * @return DSCP value, Attribute conditional on `type` being equal to `dscp`
-     *   - Range: `0`-`63`
      * 
      */
-    public Optional<Output<Integer>> dscp() {
+    public Optional<Output<String>> dscp() {
         return Optional.ofNullable(this.dscp);
     }
 
@@ -234,6 +247,21 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
     }
 
     /**
+     * Source IP prefix variable, Attribute conditional on `type` being equal to `sourceIp`
+     * 
+     */
+    @Import(name="sourceIpVariable")
+    private @Nullable Output<String> sourceIpVariable;
+
+    /**
+     * @return Source IP prefix variable, Attribute conditional on `type` being equal to `sourceIp`
+     * 
+     */
+    public Optional<Output<String>> sourceIpVariable() {
+        return Optional.ofNullable(this.sourceIpVariable);
+    }
+
+    /**
      * Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
      * 
      */
@@ -290,6 +318,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         this.destinationDataIpv4PrefixListId = $.destinationDataIpv4PrefixListId;
         this.destinationDataIpv4PrefixListVersion = $.destinationDataIpv4PrefixListVersion;
         this.destinationIp = $.destinationIp;
+        this.destinationIpVariable = $.destinationIpVariable;
         this.destinationPorts = $.destinationPorts;
         this.dscp = $.dscp;
         this.icmpMessage = $.icmpMessage;
@@ -299,6 +328,7 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         this.sourceDataIpv4PrefixListId = $.sourceDataIpv4PrefixListId;
         this.sourceDataIpv4PrefixListVersion = $.sourceDataIpv4PrefixListVersion;
         this.sourceIp = $.sourceIp;
+        this.sourceIpVariable = $.sourceIpVariable;
         this.sourcePorts = $.sourcePorts;
         this.tcp = $.tcp;
         this.type = $.type;
@@ -428,6 +458,27 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
+         * @param destinationIpVariable Destination IP prefix variable, Attribute conditional on `type` being equal to `destinationIp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder destinationIpVariable(@Nullable Output<String> destinationIpVariable) {
+            $.destinationIpVariable = destinationIpVariable;
+            return this;
+        }
+
+        /**
+         * @param destinationIpVariable Destination IP prefix variable, Attribute conditional on `type` being equal to `destinationIp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder destinationIpVariable(String destinationIpVariable) {
+            return destinationIpVariable(Output.of(destinationIpVariable));
+        }
+
+        /**
          * @param destinationPorts Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `destinationPort`
          * 
          * @return builder
@@ -450,24 +501,22 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
 
         /**
          * @param dscp DSCP value, Attribute conditional on `type` being equal to `dscp`
-         *   - Range: `0`-`63`
          * 
          * @return builder
          * 
          */
-        public Builder dscp(@Nullable Output<Integer> dscp) {
+        public Builder dscp(@Nullable Output<String> dscp) {
             $.dscp = dscp;
             return this;
         }
 
         /**
          * @param dscp DSCP value, Attribute conditional on `type` being equal to `dscp`
-         *   - Range: `0`-`63`
          * 
          * @return builder
          * 
          */
-        public Builder dscp(Integer dscp) {
+        public Builder dscp(String dscp) {
             return dscp(Output.of(dscp));
         }
 
@@ -620,6 +669,27 @@ public final class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
          */
         public Builder sourceIp(String sourceIp) {
             return sourceIp(Output.of(sourceIp));
+        }
+
+        /**
+         * @param sourceIpVariable Source IP prefix variable, Attribute conditional on `type` being equal to `sourceIp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sourceIpVariable(@Nullable Output<String> sourceIpVariable) {
+            $.sourceIpVariable = sourceIpVariable;
+            return this;
+        }
+
+        /**
+         * @param sourceIpVariable Source IP prefix variable, Attribute conditional on `type` being equal to `sourceIp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sourceIpVariable(String sourceIpVariable) {
+            return sourceIpVariable(Output.of(sourceIpVariable));
         }
 
         /**

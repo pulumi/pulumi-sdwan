@@ -16,10 +16,16 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServiceLanVpnFeatureIpv4StaticRoute {
     /**
-     * @return IPv4 Route Gateway DHCP
+     * @return IPv4 Route Gateway DHCP, Attribute conditional on `gateway` being equal to `dhcp`
      * 
      */
-    private @Nullable Boolean gatewayDhcp;
+    private @Nullable Boolean dhcp;
+    /**
+     * @return Gateway type
+     *   - Choices: `nextHop`, `null0`, `vpn`, `dhcp`
+     * 
+     */
+    private @Nullable String gateway;
     /**
      * @return IP Address
      * 
@@ -31,17 +37,17 @@ public final class ServiceLanVpnFeatureIpv4StaticRoute {
      */
     private @Nullable String networkAddressVariable;
     /**
-     * @return IPv4 Route Gateway Next Hop with Tracker
+     * @return IPv4 Route Gateway Next Hop with Tracker, Attribute conditional on `gateway` being equal to `nextHop`
      * 
      */
     private @Nullable List<ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTracker> nextHopWithTrackers;
     /**
-     * @return IPv4 Route Gateway Next Hop
+     * @return IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
      * 
      */
     private @Nullable List<ServiceLanVpnFeatureIpv4StaticRouteNextHop> nextHops;
     /**
-     * @return IPv4 Route Gateway Next Hop
+     * @return IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `null0`
      * 
      */
     private @Nullable Boolean null0;
@@ -57,18 +63,26 @@ public final class ServiceLanVpnFeatureIpv4StaticRoute {
      */
     private @Nullable String subnetMaskVariable;
     /**
-     * @return IPv4 Route Gateway VPN
+     * @return IPv4 Route Gateway VPN, Attribute conditional on `gateway` being equal to `vpn`
      * 
      */
     private @Nullable Boolean vpn;
 
     private ServiceLanVpnFeatureIpv4StaticRoute() {}
     /**
-     * @return IPv4 Route Gateway DHCP
+     * @return IPv4 Route Gateway DHCP, Attribute conditional on `gateway` being equal to `dhcp`
      * 
      */
-    public Optional<Boolean> gatewayDhcp() {
-        return Optional.ofNullable(this.gatewayDhcp);
+    public Optional<Boolean> dhcp() {
+        return Optional.ofNullable(this.dhcp);
+    }
+    /**
+     * @return Gateway type
+     *   - Choices: `nextHop`, `null0`, `vpn`, `dhcp`
+     * 
+     */
+    public Optional<String> gateway() {
+        return Optional.ofNullable(this.gateway);
     }
     /**
      * @return IP Address
@@ -85,21 +99,21 @@ public final class ServiceLanVpnFeatureIpv4StaticRoute {
         return Optional.ofNullable(this.networkAddressVariable);
     }
     /**
-     * @return IPv4 Route Gateway Next Hop with Tracker
+     * @return IPv4 Route Gateway Next Hop with Tracker, Attribute conditional on `gateway` being equal to `nextHop`
      * 
      */
     public List<ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTracker> nextHopWithTrackers() {
         return this.nextHopWithTrackers == null ? List.of() : this.nextHopWithTrackers;
     }
     /**
-     * @return IPv4 Route Gateway Next Hop
+     * @return IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
      * 
      */
     public List<ServiceLanVpnFeatureIpv4StaticRouteNextHop> nextHops() {
         return this.nextHops == null ? List.of() : this.nextHops;
     }
     /**
-     * @return IPv4 Route Gateway Next Hop
+     * @return IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `null0`
      * 
      */
     public Optional<Boolean> null0() {
@@ -121,7 +135,7 @@ public final class ServiceLanVpnFeatureIpv4StaticRoute {
         return Optional.ofNullable(this.subnetMaskVariable);
     }
     /**
-     * @return IPv4 Route Gateway VPN
+     * @return IPv4 Route Gateway VPN, Attribute conditional on `gateway` being equal to `vpn`
      * 
      */
     public Optional<Boolean> vpn() {
@@ -137,7 +151,8 @@ public final class ServiceLanVpnFeatureIpv4StaticRoute {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable Boolean gatewayDhcp;
+        private @Nullable Boolean dhcp;
+        private @Nullable String gateway;
         private @Nullable String networkAddress;
         private @Nullable String networkAddressVariable;
         private @Nullable List<ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTracker> nextHopWithTrackers;
@@ -149,7 +164,8 @@ public final class ServiceLanVpnFeatureIpv4StaticRoute {
         public Builder() {}
         public Builder(ServiceLanVpnFeatureIpv4StaticRoute defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.gatewayDhcp = defaults.gatewayDhcp;
+    	      this.dhcp = defaults.dhcp;
+    	      this.gateway = defaults.gateway;
     	      this.networkAddress = defaults.networkAddress;
     	      this.networkAddressVariable = defaults.networkAddressVariable;
     	      this.nextHopWithTrackers = defaults.nextHopWithTrackers;
@@ -161,9 +177,15 @@ public final class ServiceLanVpnFeatureIpv4StaticRoute {
         }
 
         @CustomType.Setter
-        public Builder gatewayDhcp(@Nullable Boolean gatewayDhcp) {
+        public Builder dhcp(@Nullable Boolean dhcp) {
 
-            this.gatewayDhcp = gatewayDhcp;
+            this.dhcp = dhcp;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder gateway(@Nullable String gateway) {
+
+            this.gateway = gateway;
             return this;
         }
         @CustomType.Setter
@@ -222,7 +244,8 @@ public final class ServiceLanVpnFeatureIpv4StaticRoute {
         }
         public ServiceLanVpnFeatureIpv4StaticRoute build() {
             final var _resultValue = new ServiceLanVpnFeatureIpv4StaticRoute();
-            _resultValue.gatewayDhcp = gatewayDhcp;
+            _resultValue.dhcp = dhcp;
+            _resultValue.gateway = gateway;
             _resultValue.networkAddress = networkAddress;
             _resultValue.networkAddressVariable = networkAddressVariable;
             _resultValue.nextHopWithTrackers = nextHopWithTrackers;

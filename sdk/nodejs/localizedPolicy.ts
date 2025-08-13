@@ -72,21 +72,21 @@ export class LocalizedPolicy extends pulumi.CustomResource {
     }
 
     /**
-     * IPv4 application visibility - Default value: `true`
+     * IPv4 application visibility
      */
-    public readonly applicationVisibilityIpv4!: pulumi.Output<boolean>;
+    public readonly applicationVisibilityIpv4!: pulumi.Output<boolean | undefined>;
     /**
-     * IPv6 application visibility - Default value: `true`
+     * IPv6 application visibility
      */
-    public readonly applicationVisibilityIpv6!: pulumi.Output<boolean>;
+    public readonly applicationVisibilityIpv6!: pulumi.Output<boolean | undefined>;
     /**
-     * Cloud QoS - Default value: `true`
+     * Cloud QoS
      */
-    public readonly cloudQos!: pulumi.Output<boolean>;
+    public readonly cloudQos!: pulumi.Output<boolean | undefined>;
     /**
-     * Cloud QoS service side - Default value: `true`
+     * Cloud QoS service side
      */
-    public readonly cloudQosServiceSide!: pulumi.Output<boolean>;
+    public readonly cloudQosServiceSide!: pulumi.Output<boolean | undefined>;
     /**
      * List of policy definitions
      */
@@ -96,17 +96,17 @@ export class LocalizedPolicy extends pulumi.CustomResource {
      */
     public readonly description!: pulumi.Output<string>;
     /**
-     * IPv4 flow visibility - Default value: `true`
+     * IPv4 flow visibility
      */
-    public readonly flowVisibilityIpv4!: pulumi.Output<boolean>;
+    public readonly flowVisibilityIpv4!: pulumi.Output<boolean | undefined>;
     /**
-     * IPv6 flow visibility - Default value: `true`
+     * IPv6 flow visibility
      */
-    public readonly flowVisibilityIpv6!: pulumi.Output<boolean>;
+    public readonly flowVisibilityIpv6!: pulumi.Output<boolean | undefined>;
     /**
-     * Implicit ACL logging - Default value: `true`
+     * Implicit ACL logging
      */
-    public readonly implicitAclLogging!: pulumi.Output<boolean>;
+    public readonly implicitAclLogging!: pulumi.Output<boolean | undefined>;
     /**
      * IPv4 visibility cache entries - Range: `16`-`2000000`
      */
@@ -185,19 +185,19 @@ export class LocalizedPolicy extends pulumi.CustomResource {
  */
 export interface LocalizedPolicyState {
     /**
-     * IPv4 application visibility - Default value: `true`
+     * IPv4 application visibility
      */
     applicationVisibilityIpv4?: pulumi.Input<boolean>;
     /**
-     * IPv6 application visibility - Default value: `true`
+     * IPv6 application visibility
      */
     applicationVisibilityIpv6?: pulumi.Input<boolean>;
     /**
-     * Cloud QoS - Default value: `true`
+     * Cloud QoS
      */
     cloudQos?: pulumi.Input<boolean>;
     /**
-     * Cloud QoS service side - Default value: `true`
+     * Cloud QoS service side
      */
     cloudQosServiceSide?: pulumi.Input<boolean>;
     /**
@@ -209,15 +209,15 @@ export interface LocalizedPolicyState {
      */
     description?: pulumi.Input<string>;
     /**
-     * IPv4 flow visibility - Default value: `true`
+     * IPv4 flow visibility
      */
     flowVisibilityIpv4?: pulumi.Input<boolean>;
     /**
-     * IPv6 flow visibility - Default value: `true`
+     * IPv6 flow visibility
      */
     flowVisibilityIpv6?: pulumi.Input<boolean>;
     /**
-     * Implicit ACL logging - Default value: `true`
+     * Implicit ACL logging
      */
     implicitAclLogging?: pulumi.Input<boolean>;
     /**
@@ -247,19 +247,19 @@ export interface LocalizedPolicyState {
  */
 export interface LocalizedPolicyArgs {
     /**
-     * IPv4 application visibility - Default value: `true`
+     * IPv4 application visibility
      */
     applicationVisibilityIpv4?: pulumi.Input<boolean>;
     /**
-     * IPv6 application visibility - Default value: `true`
+     * IPv6 application visibility
      */
     applicationVisibilityIpv6?: pulumi.Input<boolean>;
     /**
-     * Cloud QoS - Default value: `true`
+     * Cloud QoS
      */
     cloudQos?: pulumi.Input<boolean>;
     /**
-     * Cloud QoS service side - Default value: `true`
+     * Cloud QoS service side
      */
     cloudQosServiceSide?: pulumi.Input<boolean>;
     /**
@@ -271,15 +271,15 @@ export interface LocalizedPolicyArgs {
      */
     description: pulumi.Input<string>;
     /**
-     * IPv4 flow visibility - Default value: `true`
+     * IPv4 flow visibility
      */
     flowVisibilityIpv4?: pulumi.Input<boolean>;
     /**
-     * IPv6 flow visibility - Default value: `true`
+     * IPv6 flow visibility
      */
     flowVisibilityIpv6?: pulumi.Input<boolean>;
     /**
-     * Implicit ACL logging - Default value: `true`
+     * Implicit ACL logging
      */
     implicitAclLogging?: pulumi.Input<boolean>;
     /**

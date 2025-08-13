@@ -67,24 +67,24 @@ import (
 type LocalizedPolicy struct {
 	pulumi.CustomResourceState
 
-	// IPv4 application visibility - Default value: `true`
-	ApplicationVisibilityIpv4 pulumi.BoolOutput `pulumi:"applicationVisibilityIpv4"`
-	// IPv6 application visibility - Default value: `true`
-	ApplicationVisibilityIpv6 pulumi.BoolOutput `pulumi:"applicationVisibilityIpv6"`
-	// Cloud QoS - Default value: `true`
-	CloudQos pulumi.BoolOutput `pulumi:"cloudQos"`
-	// Cloud QoS service side - Default value: `true`
-	CloudQosServiceSide pulumi.BoolOutput `pulumi:"cloudQosServiceSide"`
+	// IPv4 application visibility
+	ApplicationVisibilityIpv4 pulumi.BoolPtrOutput `pulumi:"applicationVisibilityIpv4"`
+	// IPv6 application visibility
+	ApplicationVisibilityIpv6 pulumi.BoolPtrOutput `pulumi:"applicationVisibilityIpv6"`
+	// Cloud QoS
+	CloudQos pulumi.BoolPtrOutput `pulumi:"cloudQos"`
+	// Cloud QoS service side
+	CloudQosServiceSide pulumi.BoolPtrOutput `pulumi:"cloudQosServiceSide"`
 	// List of policy definitions
 	Definitions LocalizedPolicyDefinitionArrayOutput `pulumi:"definitions"`
 	// The description of the localized policy
 	Description pulumi.StringOutput `pulumi:"description"`
-	// IPv4 flow visibility - Default value: `true`
-	FlowVisibilityIpv4 pulumi.BoolOutput `pulumi:"flowVisibilityIpv4"`
-	// IPv6 flow visibility - Default value: `true`
-	FlowVisibilityIpv6 pulumi.BoolOutput `pulumi:"flowVisibilityIpv6"`
-	// Implicit ACL logging - Default value: `true`
-	ImplicitAclLogging pulumi.BoolOutput `pulumi:"implicitAclLogging"`
+	// IPv4 flow visibility
+	FlowVisibilityIpv4 pulumi.BoolPtrOutput `pulumi:"flowVisibilityIpv4"`
+	// IPv6 flow visibility
+	FlowVisibilityIpv6 pulumi.BoolPtrOutput `pulumi:"flowVisibilityIpv6"`
+	// Implicit ACL logging
+	ImplicitAclLogging pulumi.BoolPtrOutput `pulumi:"implicitAclLogging"`
 	// IPv4 visibility cache entries - Range: `16`-`2000000`
 	Ipv4VisibilityCacheEntries pulumi.IntPtrOutput `pulumi:"ipv4VisibilityCacheEntries"`
 	// IPv6 visibility cache entries - Range: `16`-`2000000`
@@ -130,23 +130,23 @@ func GetLocalizedPolicy(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering LocalizedPolicy resources.
 type localizedPolicyState struct {
-	// IPv4 application visibility - Default value: `true`
+	// IPv4 application visibility
 	ApplicationVisibilityIpv4 *bool `pulumi:"applicationVisibilityIpv4"`
-	// IPv6 application visibility - Default value: `true`
+	// IPv6 application visibility
 	ApplicationVisibilityIpv6 *bool `pulumi:"applicationVisibilityIpv6"`
-	// Cloud QoS - Default value: `true`
+	// Cloud QoS
 	CloudQos *bool `pulumi:"cloudQos"`
-	// Cloud QoS service side - Default value: `true`
+	// Cloud QoS service side
 	CloudQosServiceSide *bool `pulumi:"cloudQosServiceSide"`
 	// List of policy definitions
 	Definitions []LocalizedPolicyDefinition `pulumi:"definitions"`
 	// The description of the localized policy
 	Description *string `pulumi:"description"`
-	// IPv4 flow visibility - Default value: `true`
+	// IPv4 flow visibility
 	FlowVisibilityIpv4 *bool `pulumi:"flowVisibilityIpv4"`
-	// IPv6 flow visibility - Default value: `true`
+	// IPv6 flow visibility
 	FlowVisibilityIpv6 *bool `pulumi:"flowVisibilityIpv6"`
-	// Implicit ACL logging - Default value: `true`
+	// Implicit ACL logging
 	ImplicitAclLogging *bool `pulumi:"implicitAclLogging"`
 	// IPv4 visibility cache entries - Range: `16`-`2000000`
 	Ipv4VisibilityCacheEntries *int `pulumi:"ipv4VisibilityCacheEntries"`
@@ -161,23 +161,23 @@ type localizedPolicyState struct {
 }
 
 type LocalizedPolicyState struct {
-	// IPv4 application visibility - Default value: `true`
+	// IPv4 application visibility
 	ApplicationVisibilityIpv4 pulumi.BoolPtrInput
-	// IPv6 application visibility - Default value: `true`
+	// IPv6 application visibility
 	ApplicationVisibilityIpv6 pulumi.BoolPtrInput
-	// Cloud QoS - Default value: `true`
+	// Cloud QoS
 	CloudQos pulumi.BoolPtrInput
-	// Cloud QoS service side - Default value: `true`
+	// Cloud QoS service side
 	CloudQosServiceSide pulumi.BoolPtrInput
 	// List of policy definitions
 	Definitions LocalizedPolicyDefinitionArrayInput
 	// The description of the localized policy
 	Description pulumi.StringPtrInput
-	// IPv4 flow visibility - Default value: `true`
+	// IPv4 flow visibility
 	FlowVisibilityIpv4 pulumi.BoolPtrInput
-	// IPv6 flow visibility - Default value: `true`
+	// IPv6 flow visibility
 	FlowVisibilityIpv6 pulumi.BoolPtrInput
-	// Implicit ACL logging - Default value: `true`
+	// Implicit ACL logging
 	ImplicitAclLogging pulumi.BoolPtrInput
 	// IPv4 visibility cache entries - Range: `16`-`2000000`
 	Ipv4VisibilityCacheEntries pulumi.IntPtrInput
@@ -196,23 +196,23 @@ func (LocalizedPolicyState) ElementType() reflect.Type {
 }
 
 type localizedPolicyArgs struct {
-	// IPv4 application visibility - Default value: `true`
+	// IPv4 application visibility
 	ApplicationVisibilityIpv4 *bool `pulumi:"applicationVisibilityIpv4"`
-	// IPv6 application visibility - Default value: `true`
+	// IPv6 application visibility
 	ApplicationVisibilityIpv6 *bool `pulumi:"applicationVisibilityIpv6"`
-	// Cloud QoS - Default value: `true`
+	// Cloud QoS
 	CloudQos *bool `pulumi:"cloudQos"`
-	// Cloud QoS service side - Default value: `true`
+	// Cloud QoS service side
 	CloudQosServiceSide *bool `pulumi:"cloudQosServiceSide"`
 	// List of policy definitions
 	Definitions []LocalizedPolicyDefinition `pulumi:"definitions"`
 	// The description of the localized policy
 	Description string `pulumi:"description"`
-	// IPv4 flow visibility - Default value: `true`
+	// IPv4 flow visibility
 	FlowVisibilityIpv4 *bool `pulumi:"flowVisibilityIpv4"`
-	// IPv6 flow visibility - Default value: `true`
+	// IPv6 flow visibility
 	FlowVisibilityIpv6 *bool `pulumi:"flowVisibilityIpv6"`
-	// Implicit ACL logging - Default value: `true`
+	// Implicit ACL logging
 	ImplicitAclLogging *bool `pulumi:"implicitAclLogging"`
 	// IPv4 visibility cache entries - Range: `16`-`2000000`
 	Ipv4VisibilityCacheEntries *int `pulumi:"ipv4VisibilityCacheEntries"`
@@ -226,23 +226,23 @@ type localizedPolicyArgs struct {
 
 // The set of arguments for constructing a LocalizedPolicy resource.
 type LocalizedPolicyArgs struct {
-	// IPv4 application visibility - Default value: `true`
+	// IPv4 application visibility
 	ApplicationVisibilityIpv4 pulumi.BoolPtrInput
-	// IPv6 application visibility - Default value: `true`
+	// IPv6 application visibility
 	ApplicationVisibilityIpv6 pulumi.BoolPtrInput
-	// Cloud QoS - Default value: `true`
+	// Cloud QoS
 	CloudQos pulumi.BoolPtrInput
-	// Cloud QoS service side - Default value: `true`
+	// Cloud QoS service side
 	CloudQosServiceSide pulumi.BoolPtrInput
 	// List of policy definitions
 	Definitions LocalizedPolicyDefinitionArrayInput
 	// The description of the localized policy
 	Description pulumi.StringInput
-	// IPv4 flow visibility - Default value: `true`
+	// IPv4 flow visibility
 	FlowVisibilityIpv4 pulumi.BoolPtrInput
-	// IPv6 flow visibility - Default value: `true`
+	// IPv6 flow visibility
 	FlowVisibilityIpv6 pulumi.BoolPtrInput
-	// Implicit ACL logging - Default value: `true`
+	// Implicit ACL logging
 	ImplicitAclLogging pulumi.BoolPtrInput
 	// IPv4 visibility cache entries - Range: `16`-`2000000`
 	Ipv4VisibilityCacheEntries pulumi.IntPtrInput
@@ -341,24 +341,24 @@ func (o LocalizedPolicyOutput) ToLocalizedPolicyOutputWithContext(ctx context.Co
 	return o
 }
 
-// IPv4 application visibility - Default value: `true`
-func (o LocalizedPolicyOutput) ApplicationVisibilityIpv4() pulumi.BoolOutput {
-	return o.ApplyT(func(v *LocalizedPolicy) pulumi.BoolOutput { return v.ApplicationVisibilityIpv4 }).(pulumi.BoolOutput)
+// IPv4 application visibility
+func (o LocalizedPolicyOutput) ApplicationVisibilityIpv4() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *LocalizedPolicy) pulumi.BoolPtrOutput { return v.ApplicationVisibilityIpv4 }).(pulumi.BoolPtrOutput)
 }
 
-// IPv6 application visibility - Default value: `true`
-func (o LocalizedPolicyOutput) ApplicationVisibilityIpv6() pulumi.BoolOutput {
-	return o.ApplyT(func(v *LocalizedPolicy) pulumi.BoolOutput { return v.ApplicationVisibilityIpv6 }).(pulumi.BoolOutput)
+// IPv6 application visibility
+func (o LocalizedPolicyOutput) ApplicationVisibilityIpv6() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *LocalizedPolicy) pulumi.BoolPtrOutput { return v.ApplicationVisibilityIpv6 }).(pulumi.BoolPtrOutput)
 }
 
-// Cloud QoS - Default value: `true`
-func (o LocalizedPolicyOutput) CloudQos() pulumi.BoolOutput {
-	return o.ApplyT(func(v *LocalizedPolicy) pulumi.BoolOutput { return v.CloudQos }).(pulumi.BoolOutput)
+// Cloud QoS
+func (o LocalizedPolicyOutput) CloudQos() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *LocalizedPolicy) pulumi.BoolPtrOutput { return v.CloudQos }).(pulumi.BoolPtrOutput)
 }
 
-// Cloud QoS service side - Default value: `true`
-func (o LocalizedPolicyOutput) CloudQosServiceSide() pulumi.BoolOutput {
-	return o.ApplyT(func(v *LocalizedPolicy) pulumi.BoolOutput { return v.CloudQosServiceSide }).(pulumi.BoolOutput)
+// Cloud QoS service side
+func (o LocalizedPolicyOutput) CloudQosServiceSide() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *LocalizedPolicy) pulumi.BoolPtrOutput { return v.CloudQosServiceSide }).(pulumi.BoolPtrOutput)
 }
 
 // List of policy definitions
@@ -371,19 +371,19 @@ func (o LocalizedPolicyOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v *LocalizedPolicy) pulumi.StringOutput { return v.Description }).(pulumi.StringOutput)
 }
 
-// IPv4 flow visibility - Default value: `true`
-func (o LocalizedPolicyOutput) FlowVisibilityIpv4() pulumi.BoolOutput {
-	return o.ApplyT(func(v *LocalizedPolicy) pulumi.BoolOutput { return v.FlowVisibilityIpv4 }).(pulumi.BoolOutput)
+// IPv4 flow visibility
+func (o LocalizedPolicyOutput) FlowVisibilityIpv4() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *LocalizedPolicy) pulumi.BoolPtrOutput { return v.FlowVisibilityIpv4 }).(pulumi.BoolPtrOutput)
 }
 
-// IPv6 flow visibility - Default value: `true`
-func (o LocalizedPolicyOutput) FlowVisibilityIpv6() pulumi.BoolOutput {
-	return o.ApplyT(func(v *LocalizedPolicy) pulumi.BoolOutput { return v.FlowVisibilityIpv6 }).(pulumi.BoolOutput)
+// IPv6 flow visibility
+func (o LocalizedPolicyOutput) FlowVisibilityIpv6() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *LocalizedPolicy) pulumi.BoolPtrOutput { return v.FlowVisibilityIpv6 }).(pulumi.BoolPtrOutput)
 }
 
-// Implicit ACL logging - Default value: `true`
-func (o LocalizedPolicyOutput) ImplicitAclLogging() pulumi.BoolOutput {
-	return o.ApplyT(func(v *LocalizedPolicy) pulumi.BoolOutput { return v.ImplicitAclLogging }).(pulumi.BoolOutput)
+// Implicit ACL logging
+func (o LocalizedPolicyOutput) ImplicitAclLogging() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *LocalizedPolicy) pulumi.BoolPtrOutput { return v.ImplicitAclLogging }).(pulumi.BoolPtrOutput)
 }
 
 // IPv4 visibility cache entries - Range: `16`-`2000000`

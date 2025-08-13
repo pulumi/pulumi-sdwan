@@ -56,6 +56,12 @@ namespace Pulumi.Sdwan.Inputs
         public Input<bool>? CommunityAdditive { get; set; }
 
         /// <summary>
+        /// Community variable, Attribute conditional on `type` being equal to `community`
+        /// </summary>
+        [Input("communityVariable")]
+        public Input<string>? CommunityVariable { get; set; }
+
+        /// <summary>
         /// Local preference, Attribute conditional on `type` being equal to `localPreference`
         ///   - Range: `0`-`4294967295`
         /// </summary>

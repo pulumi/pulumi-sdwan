@@ -43,6 +43,12 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? DestinationIp { get; set; }
 
         /// <summary>
+        /// Destination IP prefix variable, Attribute conditional on `type` being equal to `destinationIp`
+        /// </summary>
+        [Input("destinationIpVariable")]
+        public Input<string>? DestinationIpVariable { get; set; }
+
+        /// <summary>
         /// Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `destinationPort`
         /// </summary>
         [Input("destinationPorts")]
@@ -50,10 +56,9 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// DSCP value, Attribute conditional on `type` being equal to `dscp`
-        ///   - Range: `0`-`63`
         /// </summary>
         [Input("dscp")]
-        public Input<int>? Dscp { get; set; }
+        public Input<string>? Dscp { get; set; }
 
         /// <summary>
         /// ICMP Message, Attribute conditional on `type` being equal to `icmpMessage`
@@ -98,6 +103,12 @@ namespace Pulumi.Sdwan.Inputs
         /// </summary>
         [Input("sourceIp")]
         public Input<string>? SourceIp { get; set; }
+
+        /// <summary>
+        /// Source IP prefix variable, Attribute conditional on `type` being equal to `sourceIp`
+        /// </summary>
+        [Input("sourceIpVariable")]
+        public Input<string>? SourceIpVariable { get; set; }
 
         /// <summary>
         /// Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`

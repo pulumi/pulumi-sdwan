@@ -116,6 +116,10 @@ export interface GetCiscoSystemFeatureTemplateResult {
      */
     readonly enableMrfMigration: string;
     /**
+     * Enhanced App Aware Routing
+     */
+    readonly enhancedAppAwareRouting: string;
+    /**
      * Enable Geo fencing
      */
     readonly geoFencing: boolean;

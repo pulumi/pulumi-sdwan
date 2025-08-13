@@ -377,13 +377,13 @@ namespace Pulumi.Sdwan
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// NAT64 on this interface - Default value: `false`
+        /// NAT64 on this interface, Attribute conditional on `nat_ipv6` being equal to `true` - Default value: `false`
         /// </summary>
         [Output("nat64")]
         public Output<bool?> Nat64 { get; private set; } = null!;
 
         /// <summary>
-        /// NAT66 on this interface - Default value: `false`
+        /// NAT66 on this interface, Attribute conditional on `nat_ipv6` being equal to `true` - Default value: `false`
         /// </summary>
         [Output("nat66")]
         public Output<bool?> Nat66 { get; private set; } = null!;
@@ -413,115 +413,118 @@ namespace Pulumi.Sdwan
         public Output<string?> NatIpv6Variable { get; private set; } = null!;
 
         /// <summary>
-        /// NAT Inside Source Loopback Interface
+        /// NAT Inside Source Loopback Interface, Attribute conditional on `nat_ipv4` being equal to `true`
         /// </summary>
         [Output("natLoopback")]
         public Output<string?> NatLoopback { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         /// </summary>
         [Output("natLoopbackVariable")]
         public Output<string?> NatLoopbackVariable { get; private set; } = null!;
 
         /// <summary>
-        /// NAT Overload - Default value: `true`
+        /// NAT Overload, Attribute conditional on `nat_ipv4` being equal to `true` - Default value: `true`
         /// </summary>
         [Output("natOverload")]
         public Output<bool?> NatOverload { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         /// </summary>
         [Output("natOverloadVariable")]
         public Output<string?> NatOverloadVariable { get; private set; } = null!;
 
         /// <summary>
-        /// NAT Pool Prefix Length - Range: `1`-`32`
+        /// NAT Pool Prefix Length, Attribute conditional on `nat_ipv4` being equal to `true` - Range: `1`-`32`
         /// </summary>
         [Output("natPrefixLength")]
         public Output<int?> NatPrefixLength { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         /// </summary>
         [Output("natPrefixLengthVariable")]
         public Output<string?> NatPrefixLengthVariable { get; private set; } = null!;
 
         /// <summary>
-        /// NAT Pool Range End
+        /// NAT Pool Range End, Attribute conditional on `nat_ipv4` being equal to `true`
         /// </summary>
         [Output("natRangeEnd")]
         public Output<string?> NatRangeEnd { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         /// </summary>
         [Output("natRangeEndVariable")]
         public Output<string?> NatRangeEndVariable { get; private set; } = null!;
 
         /// <summary>
-        /// NAT Pool Range Start
+        /// NAT Pool Range Start, Attribute conditional on `nat_ipv4` being equal to `true`
         /// </summary>
         [Output("natRangeStart")]
         public Output<string?> NatRangeStart { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         /// </summary>
         [Output("natRangeStartVariable")]
         public Output<string?> NatRangeStartVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+        /// Set NAT TCP session timeout, in minutes, Attribute conditional on `nat_ipv4` being equal to `true` - Range: `1`-`8947` -
+        /// Default value: `60`
         /// </summary>
         [Output("natTcpTimeout")]
         public Output<int?> NatTcpTimeout { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         /// </summary>
         [Output("natTcpTimeoutVariable")]
         public Output<string?> NatTcpTimeoutVariable { get; private set; } = null!;
 
         /// <summary>
-        /// NAT Type - Choices: `interface`, `pool`, `loopback` - Default value: `interface`
+        /// NAT Type, Attribute conditional on `nat_ipv4` being equal to `true` - Choices: `interface`, `pool`, `loopback` - Default
+        /// value: `interface`
         /// </summary>
         [Output("natType")]
         public Output<string?> NatType { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         /// </summary>
         [Output("natTypeVariable")]
         public Output<string?> NatTypeVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+        /// Set NAT UDP session timeout, in minutes, Attribute conditional on `nat_ipv4` being equal to `true` - Range: `1`-`8947` -
+        /// Default value: `1`
         /// </summary>
         [Output("natUdpTimeout")]
         public Output<int?> NatUdpTimeout { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         /// </summary>
         [Output("natUdpTimeoutVariable")]
         public Output<string?> NatUdpTimeoutVariable { get; private set; } = null!;
 
         /// <summary>
-        /// static NAT
+        /// static NAT, Attribute conditional on `nat_ipv4` being equal to `true`
         /// </summary>
         [Output("newStaticNats")]
         public Output<ImmutableArray<Outputs.TransportWanVpnInterfaceEthernetFeatureNewStaticNat>> NewStaticNats { get; private set; } = null!;
 
         /// <summary>
-        /// Per-tunnel Qos - Default value: `false`
+        /// Per-tunnel Qos, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
         /// </summary>
         [Output("perTunnelQos")]
         public Output<bool?> PerTunnelQos { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Output("perTunnelQosVariable")]
         public Output<string?> PerTunnelQosVariable { get; private set; } = null!;
@@ -677,7 +680,7 @@ namespace Pulumi.Sdwan
         public Output<string?> SpeedVariable { get; private set; } = null!;
 
         /// <summary>
-        /// static NAT66
+        /// static NAT66, Attribute conditional on `nat_ipv6` being equal to `true`
         /// </summary>
         [Output("staticNat66s")]
         public Output<ImmutableArray<Outputs.TransportWanVpnInterfaceEthernetFeatureStaticNat66>> StaticNat66s { get; private set; } = null!;
@@ -725,13 +728,14 @@ namespace Pulumi.Sdwan
         public Output<string> TransportWanVpnFeatureId { get; private set; } = null!;
 
         /// <summary>
-        /// Tunnels Bandwidth Percent - Range: `1`-`100` - Default value: `50`
+        /// Tunnels Bandwidth Percent, Attribute conditional on `tunnel_interface` being equal to `true` - Range: `1`-`100` -
+        /// Default value: `50`
         /// </summary>
         [Output("tunnelBandwidthPercent")]
         public Output<int?> TunnelBandwidthPercent { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Output("tunnelBandwidthPercentVariable")]
         public Output<string?> TunnelBandwidthPercentVariable { get; private set; } = null!;
@@ -899,88 +903,93 @@ namespace Pulumi.Sdwan
         public Output<string?> TunnelInterfaceAllowStunVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Bind loopback tunnel interface to a physical interface
+        /// Bind loopback tunnel interface to a physical interface, Attribute conditional on `tunnel_interface` being equal to
+        /// `true`
         /// </summary>
         [Output("tunnelInterfaceBindLoopbackTunnel")]
         public Output<string?> TunnelInterfaceBindLoopbackTunnel { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Output("tunnelInterfaceBindLoopbackTunnelVariable")]
         public Output<string?> TunnelInterfaceBindLoopbackTunnelVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set TLOC as border TLOC - Default value: `false`
+        /// Set TLOC as border TLOC, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
         /// </summary>
         [Output("tunnelInterfaceBorder")]
         public Output<bool?> TunnelInterfaceBorder { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Output("tunnelInterfaceBorderVariable")]
         public Output<string?> TunnelInterfaceBorderVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-        /// `carrier7`, `carrier8` - Default value: `default`
+        /// Set carrier for TLOC, Attribute conditional on `tunnel_interface` being equal to `true` - Choices: `default`,
+        /// `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8` - Default value:
+        /// `default`
         /// </summary>
         [Output("tunnelInterfaceCarrier")]
         public Output<string?> TunnelInterfaceCarrier { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Output("tunnelInterfaceCarrierVariable")]
         public Output<string?> TunnelInterfaceCarrierVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        /// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnel_interface` being
+        /// equal to `true` - Default value: `false`
         /// </summary>
         [Output("tunnelInterfaceClearDontFragment")]
         public Output<bool?> TunnelInterfaceClearDontFragment { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Output("tunnelInterfaceClearDontFragmentVariable")]
         public Output<string?> TunnelInterfaceClearDontFragmentVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-        /// `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-        /// `private4`, `private5`, `private6` - Default value: `mpls`
+        /// Set color for TLOC, Attribute conditional on `tunnel_interface` being equal to `true` - Choices: `default`, `mpls`,
+        /// `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`,
+        /// `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6` - Default value:
+        /// `mpls`
         /// </summary>
         [Output("tunnelInterfaceColor")]
         public Output<string?> TunnelInterfaceColor { get; private set; } = null!;
 
         /// <summary>
-        /// Restrict this TLOC behavior - Default value: `false`
+        /// Restrict this TLOC behavior, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
         /// </summary>
         [Output("tunnelInterfaceColorRestrict")]
         public Output<bool?> TunnelInterfaceColorRestrict { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Output("tunnelInterfaceColorRestrictVariable")]
         public Output<string?> TunnelInterfaceColorRestrictVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Output("tunnelInterfaceColorVariable")]
         public Output<string?> TunnelInterfaceColorVariable { get; private set; } = null!;
 
         /// <summary>
-        /// CTS SGT Propagation configuration - Default value: `false`
+        /// CTS SGT Propagation configuration, Attribute conditional on `tunnel_interface` being equal to `true` - Default value:
+        /// `false`
         /// </summary>
         [Output("tunnelInterfaceCtsSgtPropagation")]
         public Output<bool?> TunnelInterfaceCtsSgtPropagation { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Output("tunnelInterfaceCtsSgtPropagationVariable")]
         public Output<string?> TunnelInterfaceCtsSgtPropagationVariable { get; private set; } = null!;
@@ -992,181 +1001,191 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulation>> TunnelInterfaceEncapsulations { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Output("tunnelInterfaceExcludeControllerGroupListVariable")]
         public Output<string?> TunnelInterfaceExcludeControllerGroupListVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Exclude the following controller groups defined in this list.
+        /// Exclude the following controller groups defined in this list., Attribute conditional on `tunnel_interface` being equal
+        /// to `true`
         /// </summary>
         [Output("tunnelInterfaceExcludeControllerGroupLists")]
         public Output<ImmutableArray<int>> TunnelInterfaceExcludeControllerGroupLists { get; private set; } = null!;
 
         /// <summary>
-        /// GRE tunnel destination IP
+        /// GRE tunnel destination IP, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Output("tunnelInterfaceGreTunnelDestinationIp")]
         public Output<string?> TunnelInterfaceGreTunnelDestinationIp { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Output("tunnelInterfaceGreTunnelDestinationIpVariable")]
         public Output<string?> TunnelInterfaceGreTunnelDestinationIpVariable { get; private set; } = null!;
 
         /// <summary>
-        /// List of groups - Range: `1`-`4294967295`
+        /// List of groups, Attribute conditional on `tunnel_interface` being equal to `true` - Range: `1`-`4294967295`
         /// </summary>
         [Output("tunnelInterfaceGroups")]
         public Output<int?> TunnelInterfaceGroups { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Output("tunnelInterfaceGroupsVariable")]
         public Output<string?> TunnelInterfaceGroupsVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set time period of control hello packets &lt;100..600000&gt; milli seconds - Range: `100`-`600000` - Default value: `1000`
+        /// Set time period of control hello packets &lt;100..600000&gt; milli seconds, Attribute conditional on `tunnel_interface` being
+        /// equal to `true` - Range: `100`-`600000` - Default value: `1000`
         /// </summary>
         [Output("tunnelInterfaceHelloInterval")]
         public Output<int?> TunnelInterfaceHelloInterval { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Output("tunnelInterfaceHelloIntervalVariable")]
         public Output<string?> TunnelInterfaceHelloIntervalVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set tolerance of control hello packets &lt;12..6000&gt; seconds - Range: `12`-`6000` - Default value: `12`
+        /// Set tolerance of control hello packets &lt;12..6000&gt; seconds, Attribute conditional on `tunnel_interface` being equal to
+        /// `true` - Range: `12`-`6000` - Default value: `12`
         /// </summary>
         [Output("tunnelInterfaceHelloTolerance")]
         public Output<int?> TunnelInterfaceHelloTolerance { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Output("tunnelInterfaceHelloToleranceVariable")]
         public Output<string?> TunnelInterfaceHelloToleranceVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set TLOC as last resort - Default value: `false`
+        /// Set TLOC as last resort, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
         /// </summary>
         [Output("tunnelInterfaceLastResortCircuit")]
         public Output<bool?> TunnelInterfaceLastResortCircuit { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Output("tunnelInterfaceLastResortCircuitVariable")]
         public Output<string?> TunnelInterfaceLastResortCircuitVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set the interface as a low-bandwidth circuit - Default value: `false`
+        /// Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnel_interface` being equal to `true` -
+        /// Default value: `false`
         /// </summary>
         [Output("tunnelInterfaceLowBandwidthLink")]
         public Output<bool?> TunnelInterfaceLowBandwidthLink { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Output("tunnelInterfaceLowBandwidthLinkVariable")]
         public Output<string?> TunnelInterfaceLowBandwidthLinkVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Maximum Control Connections - Range: `0`-`100`
+        /// Maximum Control Connections, Attribute conditional on `tunnel_interface` being equal to `true` - Range: `0`-`100`
         /// </summary>
         [Output("tunnelInterfaceMaxControlConnections")]
         public Output<int?> TunnelInterfaceMaxControlConnections { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Output("tunnelInterfaceMaxControlConnectionsVariable")]
         public Output<string?> TunnelInterfaceMaxControlConnectionsVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set time period of nat refresh packets &lt;1...60&gt; seconds - Range: `1`-`60` - Default value: `5`
+        /// Set time period of nat refresh packets &lt;1...60&gt; seconds, Attribute conditional on `tunnel_interface` being equal to
+        /// `true` - Range: `1`-`60` - Default value: `5`
         /// </summary>
         [Output("tunnelInterfaceNatRefreshInterval")]
         public Output<int?> TunnelInterfaceNatRefreshInterval { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Output("tunnelInterfaceNatRefreshIntervalVariable")]
         public Output<string?> TunnelInterfaceNatRefreshIntervalVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Accept and respond to network-prefix-directed broadcasts - Default value: `false`
+        /// Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnel_interface` being equal to
+        /// `true` - Default value: `false`
         /// </summary>
         [Output("tunnelInterfaceNetworkBroadcast")]
         public Output<bool?> TunnelInterfaceNetworkBroadcast { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Output("tunnelInterfaceNetworkBroadcastVariable")]
         public Output<string?> TunnelInterfaceNetworkBroadcastVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Disallow port hopping on the tunnel interface - Default value: `true`
+        /// Disallow port hopping on the tunnel interface, Attribute conditional on `tunnel_interface` being equal to `true` -
+        /// Default value: `true`
         /// </summary>
         [Output("tunnelInterfacePortHop")]
         public Output<bool?> TunnelInterfacePortHop { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Output("tunnelInterfacePortHopVariable")]
         public Output<string?> TunnelInterfacePortHopVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        /// Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnel_interface` being equal to `true` - Range:
+        /// `500`-`1460`
         /// </summary>
         [Output("tunnelInterfaceTunnelTcpMss")]
         public Output<int?> TunnelInterfaceTunnelTcpMss { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Output("tunnelInterfaceTunnelTcpMssVariable")]
         public Output<string?> TunnelInterfaceTunnelTcpMssVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Put this wan interface in STUN mode only - Default value: `false`
+        /// Put this wan interface in STUN mode only, Attribute conditional on `tunnel_interface` being equal to `true` - Default
+        /// value: `false`
         /// </summary>
         [Output("tunnelInterfaceVbondAsStunServer")]
         public Output<bool?> TunnelInterfaceVbondAsStunServer { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Output("tunnelInterfaceVbondAsStunServerVariable")]
         public Output<string?> TunnelInterfaceVbondAsStunServerVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set interface preference for control connection to vManage &lt;0..8&gt; - Range: `0`-`8` - Default value: `5`
+        /// Set interface preference for control connection to vManage &lt;0..8&gt;, Attribute conditional on `tunnel_interface` being
+        /// equal to `true` - Range: `0`-`8` - Default value: `5`
         /// </summary>
         [Output("tunnelInterfaceVmanageConnectionPreference")]
         public Output<int?> TunnelInterfaceVmanageConnectionPreference { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Output("tunnelInterfaceVmanageConnectionPreferenceVariable")]
         public Output<string?> TunnelInterfaceVmanageConnectionPreferenceVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set tunnel QoS mode - Choices: `hub`, `spoke`
+        /// Set tunnel QoS mode, Attribute conditional on `tunnel_interface` being equal to `true` - Choices: `hub`, `spoke`
         /// </summary>
         [Output("tunnelQosMode")]
         public Output<string?> TunnelQosMode { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Output("tunnelQosModeVariable")]
         public Output<string?> TunnelQosModeVariable { get; private set; } = null!;
@@ -1616,13 +1635,13 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// NAT64 on this interface - Default value: `false`
+        /// NAT64 on this interface, Attribute conditional on `nat_ipv6` being equal to `true` - Default value: `false`
         /// </summary>
         [Input("nat64")]
         public Input<bool>? Nat64 { get; set; }
 
         /// <summary>
-        /// NAT66 on this interface - Default value: `false`
+        /// NAT66 on this interface, Attribute conditional on `nat_ipv6` being equal to `true` - Default value: `false`
         /// </summary>
         [Input("nat66")]
         public Input<bool>? Nat66 { get; set; }
@@ -1652,97 +1671,100 @@ namespace Pulumi.Sdwan
         public Input<string>? NatIpv6Variable { get; set; }
 
         /// <summary>
-        /// NAT Inside Source Loopback Interface
+        /// NAT Inside Source Loopback Interface, Attribute conditional on `nat_ipv4` being equal to `true`
         /// </summary>
         [Input("natLoopback")]
         public Input<string>? NatLoopback { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         /// </summary>
         [Input("natLoopbackVariable")]
         public Input<string>? NatLoopbackVariable { get; set; }
 
         /// <summary>
-        /// NAT Overload - Default value: `true`
+        /// NAT Overload, Attribute conditional on `nat_ipv4` being equal to `true` - Default value: `true`
         /// </summary>
         [Input("natOverload")]
         public Input<bool>? NatOverload { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         /// </summary>
         [Input("natOverloadVariable")]
         public Input<string>? NatOverloadVariable { get; set; }
 
         /// <summary>
-        /// NAT Pool Prefix Length - Range: `1`-`32`
+        /// NAT Pool Prefix Length, Attribute conditional on `nat_ipv4` being equal to `true` - Range: `1`-`32`
         /// </summary>
         [Input("natPrefixLength")]
         public Input<int>? NatPrefixLength { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         /// </summary>
         [Input("natPrefixLengthVariable")]
         public Input<string>? NatPrefixLengthVariable { get; set; }
 
         /// <summary>
-        /// NAT Pool Range End
+        /// NAT Pool Range End, Attribute conditional on `nat_ipv4` being equal to `true`
         /// </summary>
         [Input("natRangeEnd")]
         public Input<string>? NatRangeEnd { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         /// </summary>
         [Input("natRangeEndVariable")]
         public Input<string>? NatRangeEndVariable { get; set; }
 
         /// <summary>
-        /// NAT Pool Range Start
+        /// NAT Pool Range Start, Attribute conditional on `nat_ipv4` being equal to `true`
         /// </summary>
         [Input("natRangeStart")]
         public Input<string>? NatRangeStart { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         /// </summary>
         [Input("natRangeStartVariable")]
         public Input<string>? NatRangeStartVariable { get; set; }
 
         /// <summary>
-        /// Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+        /// Set NAT TCP session timeout, in minutes, Attribute conditional on `nat_ipv4` being equal to `true` - Range: `1`-`8947` -
+        /// Default value: `60`
         /// </summary>
         [Input("natTcpTimeout")]
         public Input<int>? NatTcpTimeout { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         /// </summary>
         [Input("natTcpTimeoutVariable")]
         public Input<string>? NatTcpTimeoutVariable { get; set; }
 
         /// <summary>
-        /// NAT Type - Choices: `interface`, `pool`, `loopback` - Default value: `interface`
+        /// NAT Type, Attribute conditional on `nat_ipv4` being equal to `true` - Choices: `interface`, `pool`, `loopback` - Default
+        /// value: `interface`
         /// </summary>
         [Input("natType")]
         public Input<string>? NatType { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         /// </summary>
         [Input("natTypeVariable")]
         public Input<string>? NatTypeVariable { get; set; }
 
         /// <summary>
-        /// Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+        /// Set NAT UDP session timeout, in minutes, Attribute conditional on `nat_ipv4` being equal to `true` - Range: `1`-`8947` -
+        /// Default value: `1`
         /// </summary>
         [Input("natUdpTimeout")]
         public Input<int>? NatUdpTimeout { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         /// </summary>
         [Input("natUdpTimeoutVariable")]
         public Input<string>? NatUdpTimeoutVariable { get; set; }
@@ -1751,7 +1773,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs>? _newStaticNats;
 
         /// <summary>
-        /// static NAT
+        /// static NAT, Attribute conditional on `nat_ipv4` being equal to `true`
         /// </summary>
         public InputList<Inputs.TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs> NewStaticNats
         {
@@ -1760,13 +1782,13 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Per-tunnel Qos - Default value: `false`
+        /// Per-tunnel Qos, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
         /// </summary>
         [Input("perTunnelQos")]
         public Input<bool>? PerTunnelQos { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("perTunnelQosVariable")]
         public Input<string>? PerTunnelQosVariable { get; set; }
@@ -1925,7 +1947,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.TransportWanVpnInterfaceEthernetFeatureStaticNat66Args>? _staticNat66s;
 
         /// <summary>
-        /// static NAT66
+        /// static NAT66, Attribute conditional on `nat_ipv6` being equal to `true`
         /// </summary>
         public InputList<Inputs.TransportWanVpnInterfaceEthernetFeatureStaticNat66Args> StaticNat66s
         {
@@ -1976,13 +1998,14 @@ namespace Pulumi.Sdwan
         public Input<string> TransportWanVpnFeatureId { get; set; } = null!;
 
         /// <summary>
-        /// Tunnels Bandwidth Percent - Range: `1`-`100` - Default value: `50`
+        /// Tunnels Bandwidth Percent, Attribute conditional on `tunnel_interface` being equal to `true` - Range: `1`-`100` -
+        /// Default value: `50`
         /// </summary>
         [Input("tunnelBandwidthPercent")]
         public Input<int>? TunnelBandwidthPercent { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelBandwidthPercentVariable")]
         public Input<string>? TunnelBandwidthPercentVariable { get; set; }
@@ -2150,88 +2173,93 @@ namespace Pulumi.Sdwan
         public Input<string>? TunnelInterfaceAllowStunVariable { get; set; }
 
         /// <summary>
-        /// Bind loopback tunnel interface to a physical interface
+        /// Bind loopback tunnel interface to a physical interface, Attribute conditional on `tunnel_interface` being equal to
+        /// `true`
         /// </summary>
         [Input("tunnelInterfaceBindLoopbackTunnel")]
         public Input<string>? TunnelInterfaceBindLoopbackTunnel { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfaceBindLoopbackTunnelVariable")]
         public Input<string>? TunnelInterfaceBindLoopbackTunnelVariable { get; set; }
 
         /// <summary>
-        /// Set TLOC as border TLOC - Default value: `false`
+        /// Set TLOC as border TLOC, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
         /// </summary>
         [Input("tunnelInterfaceBorder")]
         public Input<bool>? TunnelInterfaceBorder { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfaceBorderVariable")]
         public Input<string>? TunnelInterfaceBorderVariable { get; set; }
 
         /// <summary>
-        /// Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-        /// `carrier7`, `carrier8` - Default value: `default`
+        /// Set carrier for TLOC, Attribute conditional on `tunnel_interface` being equal to `true` - Choices: `default`,
+        /// `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8` - Default value:
+        /// `default`
         /// </summary>
         [Input("tunnelInterfaceCarrier")]
         public Input<string>? TunnelInterfaceCarrier { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfaceCarrierVariable")]
         public Input<string>? TunnelInterfaceCarrierVariable { get; set; }
 
         /// <summary>
-        /// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        /// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnel_interface` being
+        /// equal to `true` - Default value: `false`
         /// </summary>
         [Input("tunnelInterfaceClearDontFragment")]
         public Input<bool>? TunnelInterfaceClearDontFragment { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfaceClearDontFragmentVariable")]
         public Input<string>? TunnelInterfaceClearDontFragmentVariable { get; set; }
 
         /// <summary>
-        /// Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-        /// `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-        /// `private4`, `private5`, `private6` - Default value: `mpls`
+        /// Set color for TLOC, Attribute conditional on `tunnel_interface` being equal to `true` - Choices: `default`, `mpls`,
+        /// `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`,
+        /// `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6` - Default value:
+        /// `mpls`
         /// </summary>
         [Input("tunnelInterfaceColor")]
         public Input<string>? TunnelInterfaceColor { get; set; }
 
         /// <summary>
-        /// Restrict this TLOC behavior - Default value: `false`
+        /// Restrict this TLOC behavior, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
         /// </summary>
         [Input("tunnelInterfaceColorRestrict")]
         public Input<bool>? TunnelInterfaceColorRestrict { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfaceColorRestrictVariable")]
         public Input<string>? TunnelInterfaceColorRestrictVariable { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfaceColorVariable")]
         public Input<string>? TunnelInterfaceColorVariable { get; set; }
 
         /// <summary>
-        /// CTS SGT Propagation configuration - Default value: `false`
+        /// CTS SGT Propagation configuration, Attribute conditional on `tunnel_interface` being equal to `true` - Default value:
+        /// `false`
         /// </summary>
         [Input("tunnelInterfaceCtsSgtPropagation")]
         public Input<bool>? TunnelInterfaceCtsSgtPropagation { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfaceCtsSgtPropagationVariable")]
         public Input<string>? TunnelInterfaceCtsSgtPropagationVariable { get; set; }
@@ -2249,7 +2277,7 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfaceExcludeControllerGroupListVariable")]
         public Input<string>? TunnelInterfaceExcludeControllerGroupListVariable { get; set; }
@@ -2258,7 +2286,8 @@ namespace Pulumi.Sdwan
         private InputList<int>? _tunnelInterfaceExcludeControllerGroupLists;
 
         /// <summary>
-        /// Exclude the following controller groups defined in this list.
+        /// Exclude the following controller groups defined in this list., Attribute conditional on `tunnel_interface` being equal
+        /// to `true`
         /// </summary>
         public InputList<int> TunnelInterfaceExcludeControllerGroupLists
         {
@@ -2267,169 +2296,178 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// GRE tunnel destination IP
+        /// GRE tunnel destination IP, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfaceGreTunnelDestinationIp")]
         public Input<string>? TunnelInterfaceGreTunnelDestinationIp { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfaceGreTunnelDestinationIpVariable")]
         public Input<string>? TunnelInterfaceGreTunnelDestinationIpVariable { get; set; }
 
         /// <summary>
-        /// List of groups - Range: `1`-`4294967295`
+        /// List of groups, Attribute conditional on `tunnel_interface` being equal to `true` - Range: `1`-`4294967295`
         /// </summary>
         [Input("tunnelInterfaceGroups")]
         public Input<int>? TunnelInterfaceGroups { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfaceGroupsVariable")]
         public Input<string>? TunnelInterfaceGroupsVariable { get; set; }
 
         /// <summary>
-        /// Set time period of control hello packets &lt;100..600000&gt; milli seconds - Range: `100`-`600000` - Default value: `1000`
+        /// Set time period of control hello packets &lt;100..600000&gt; milli seconds, Attribute conditional on `tunnel_interface` being
+        /// equal to `true` - Range: `100`-`600000` - Default value: `1000`
         /// </summary>
         [Input("tunnelInterfaceHelloInterval")]
         public Input<int>? TunnelInterfaceHelloInterval { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfaceHelloIntervalVariable")]
         public Input<string>? TunnelInterfaceHelloIntervalVariable { get; set; }
 
         /// <summary>
-        /// Set tolerance of control hello packets &lt;12..6000&gt; seconds - Range: `12`-`6000` - Default value: `12`
+        /// Set tolerance of control hello packets &lt;12..6000&gt; seconds, Attribute conditional on `tunnel_interface` being equal to
+        /// `true` - Range: `12`-`6000` - Default value: `12`
         /// </summary>
         [Input("tunnelInterfaceHelloTolerance")]
         public Input<int>? TunnelInterfaceHelloTolerance { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfaceHelloToleranceVariable")]
         public Input<string>? TunnelInterfaceHelloToleranceVariable { get; set; }
 
         /// <summary>
-        /// Set TLOC as last resort - Default value: `false`
+        /// Set TLOC as last resort, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
         /// </summary>
         [Input("tunnelInterfaceLastResortCircuit")]
         public Input<bool>? TunnelInterfaceLastResortCircuit { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfaceLastResortCircuitVariable")]
         public Input<string>? TunnelInterfaceLastResortCircuitVariable { get; set; }
 
         /// <summary>
-        /// Set the interface as a low-bandwidth circuit - Default value: `false`
+        /// Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnel_interface` being equal to `true` -
+        /// Default value: `false`
         /// </summary>
         [Input("tunnelInterfaceLowBandwidthLink")]
         public Input<bool>? TunnelInterfaceLowBandwidthLink { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfaceLowBandwidthLinkVariable")]
         public Input<string>? TunnelInterfaceLowBandwidthLinkVariable { get; set; }
 
         /// <summary>
-        /// Maximum Control Connections - Range: `0`-`100`
+        /// Maximum Control Connections, Attribute conditional on `tunnel_interface` being equal to `true` - Range: `0`-`100`
         /// </summary>
         [Input("tunnelInterfaceMaxControlConnections")]
         public Input<int>? TunnelInterfaceMaxControlConnections { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfaceMaxControlConnectionsVariable")]
         public Input<string>? TunnelInterfaceMaxControlConnectionsVariable { get; set; }
 
         /// <summary>
-        /// Set time period of nat refresh packets &lt;1...60&gt; seconds - Range: `1`-`60` - Default value: `5`
+        /// Set time period of nat refresh packets &lt;1...60&gt; seconds, Attribute conditional on `tunnel_interface` being equal to
+        /// `true` - Range: `1`-`60` - Default value: `5`
         /// </summary>
         [Input("tunnelInterfaceNatRefreshInterval")]
         public Input<int>? TunnelInterfaceNatRefreshInterval { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfaceNatRefreshIntervalVariable")]
         public Input<string>? TunnelInterfaceNatRefreshIntervalVariable { get; set; }
 
         /// <summary>
-        /// Accept and respond to network-prefix-directed broadcasts - Default value: `false`
+        /// Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnel_interface` being equal to
+        /// `true` - Default value: `false`
         /// </summary>
         [Input("tunnelInterfaceNetworkBroadcast")]
         public Input<bool>? TunnelInterfaceNetworkBroadcast { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfaceNetworkBroadcastVariable")]
         public Input<string>? TunnelInterfaceNetworkBroadcastVariable { get; set; }
 
         /// <summary>
-        /// Disallow port hopping on the tunnel interface - Default value: `true`
+        /// Disallow port hopping on the tunnel interface, Attribute conditional on `tunnel_interface` being equal to `true` -
+        /// Default value: `true`
         /// </summary>
         [Input("tunnelInterfacePortHop")]
         public Input<bool>? TunnelInterfacePortHop { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfacePortHopVariable")]
         public Input<string>? TunnelInterfacePortHopVariable { get; set; }
 
         /// <summary>
-        /// Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        /// Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnel_interface` being equal to `true` - Range:
+        /// `500`-`1460`
         /// </summary>
         [Input("tunnelInterfaceTunnelTcpMss")]
         public Input<int>? TunnelInterfaceTunnelTcpMss { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfaceTunnelTcpMssVariable")]
         public Input<string>? TunnelInterfaceTunnelTcpMssVariable { get; set; }
 
         /// <summary>
-        /// Put this wan interface in STUN mode only - Default value: `false`
+        /// Put this wan interface in STUN mode only, Attribute conditional on `tunnel_interface` being equal to `true` - Default
+        /// value: `false`
         /// </summary>
         [Input("tunnelInterfaceVbondAsStunServer")]
         public Input<bool>? TunnelInterfaceVbondAsStunServer { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfaceVbondAsStunServerVariable")]
         public Input<string>? TunnelInterfaceVbondAsStunServerVariable { get; set; }
 
         /// <summary>
-        /// Set interface preference for control connection to vManage &lt;0..8&gt; - Range: `0`-`8` - Default value: `5`
+        /// Set interface preference for control connection to vManage &lt;0..8&gt;, Attribute conditional on `tunnel_interface` being
+        /// equal to `true` - Range: `0`-`8` - Default value: `5`
         /// </summary>
         [Input("tunnelInterfaceVmanageConnectionPreference")]
         public Input<int>? TunnelInterfaceVmanageConnectionPreference { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfaceVmanageConnectionPreferenceVariable")]
         public Input<string>? TunnelInterfaceVmanageConnectionPreferenceVariable { get; set; }
 
         /// <summary>
-        /// Set tunnel QoS mode - Choices: `hub`, `spoke`
+        /// Set tunnel QoS mode, Attribute conditional on `tunnel_interface` being equal to `true` - Choices: `hub`, `spoke`
         /// </summary>
         [Input("tunnelQosMode")]
         public Input<string>? TunnelQosMode { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelQosModeVariable")]
         public Input<string>? TunnelQosModeVariable { get; set; }
@@ -2835,13 +2873,13 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// NAT64 on this interface - Default value: `false`
+        /// NAT64 on this interface, Attribute conditional on `nat_ipv6` being equal to `true` - Default value: `false`
         /// </summary>
         [Input("nat64")]
         public Input<bool>? Nat64 { get; set; }
 
         /// <summary>
-        /// NAT66 on this interface - Default value: `false`
+        /// NAT66 on this interface, Attribute conditional on `nat_ipv6` being equal to `true` - Default value: `false`
         /// </summary>
         [Input("nat66")]
         public Input<bool>? Nat66 { get; set; }
@@ -2871,97 +2909,100 @@ namespace Pulumi.Sdwan
         public Input<string>? NatIpv6Variable { get; set; }
 
         /// <summary>
-        /// NAT Inside Source Loopback Interface
+        /// NAT Inside Source Loopback Interface, Attribute conditional on `nat_ipv4` being equal to `true`
         /// </summary>
         [Input("natLoopback")]
         public Input<string>? NatLoopback { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         /// </summary>
         [Input("natLoopbackVariable")]
         public Input<string>? NatLoopbackVariable { get; set; }
 
         /// <summary>
-        /// NAT Overload - Default value: `true`
+        /// NAT Overload, Attribute conditional on `nat_ipv4` being equal to `true` - Default value: `true`
         /// </summary>
         [Input("natOverload")]
         public Input<bool>? NatOverload { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         /// </summary>
         [Input("natOverloadVariable")]
         public Input<string>? NatOverloadVariable { get; set; }
 
         /// <summary>
-        /// NAT Pool Prefix Length - Range: `1`-`32`
+        /// NAT Pool Prefix Length, Attribute conditional on `nat_ipv4` being equal to `true` - Range: `1`-`32`
         /// </summary>
         [Input("natPrefixLength")]
         public Input<int>? NatPrefixLength { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         /// </summary>
         [Input("natPrefixLengthVariable")]
         public Input<string>? NatPrefixLengthVariable { get; set; }
 
         /// <summary>
-        /// NAT Pool Range End
+        /// NAT Pool Range End, Attribute conditional on `nat_ipv4` being equal to `true`
         /// </summary>
         [Input("natRangeEnd")]
         public Input<string>? NatRangeEnd { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         /// </summary>
         [Input("natRangeEndVariable")]
         public Input<string>? NatRangeEndVariable { get; set; }
 
         /// <summary>
-        /// NAT Pool Range Start
+        /// NAT Pool Range Start, Attribute conditional on `nat_ipv4` being equal to `true`
         /// </summary>
         [Input("natRangeStart")]
         public Input<string>? NatRangeStart { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         /// </summary>
         [Input("natRangeStartVariable")]
         public Input<string>? NatRangeStartVariable { get; set; }
 
         /// <summary>
-        /// Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+        /// Set NAT TCP session timeout, in minutes, Attribute conditional on `nat_ipv4` being equal to `true` - Range: `1`-`8947` -
+        /// Default value: `60`
         /// </summary>
         [Input("natTcpTimeout")]
         public Input<int>? NatTcpTimeout { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         /// </summary>
         [Input("natTcpTimeoutVariable")]
         public Input<string>? NatTcpTimeoutVariable { get; set; }
 
         /// <summary>
-        /// NAT Type - Choices: `interface`, `pool`, `loopback` - Default value: `interface`
+        /// NAT Type, Attribute conditional on `nat_ipv4` being equal to `true` - Choices: `interface`, `pool`, `loopback` - Default
+        /// value: `interface`
         /// </summary>
         [Input("natType")]
         public Input<string>? NatType { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         /// </summary>
         [Input("natTypeVariable")]
         public Input<string>? NatTypeVariable { get; set; }
 
         /// <summary>
-        /// Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+        /// Set NAT UDP session timeout, in minutes, Attribute conditional on `nat_ipv4` being equal to `true` - Range: `1`-`8947` -
+        /// Default value: `1`
         /// </summary>
         [Input("natUdpTimeout")]
         public Input<int>? NatUdpTimeout { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         /// </summary>
         [Input("natUdpTimeoutVariable")]
         public Input<string>? NatUdpTimeoutVariable { get; set; }
@@ -2970,7 +3011,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.TransportWanVpnInterfaceEthernetFeatureNewStaticNatGetArgs>? _newStaticNats;
 
         /// <summary>
-        /// static NAT
+        /// static NAT, Attribute conditional on `nat_ipv4` being equal to `true`
         /// </summary>
         public InputList<Inputs.TransportWanVpnInterfaceEthernetFeatureNewStaticNatGetArgs> NewStaticNats
         {
@@ -2979,13 +3020,13 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Per-tunnel Qos - Default value: `false`
+        /// Per-tunnel Qos, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
         /// </summary>
         [Input("perTunnelQos")]
         public Input<bool>? PerTunnelQos { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("perTunnelQosVariable")]
         public Input<string>? PerTunnelQosVariable { get; set; }
@@ -3144,7 +3185,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.TransportWanVpnInterfaceEthernetFeatureStaticNat66GetArgs>? _staticNat66s;
 
         /// <summary>
-        /// static NAT66
+        /// static NAT66, Attribute conditional on `nat_ipv6` being equal to `true`
         /// </summary>
         public InputList<Inputs.TransportWanVpnInterfaceEthernetFeatureStaticNat66GetArgs> StaticNat66s
         {
@@ -3195,13 +3236,14 @@ namespace Pulumi.Sdwan
         public Input<string>? TransportWanVpnFeatureId { get; set; }
 
         /// <summary>
-        /// Tunnels Bandwidth Percent - Range: `1`-`100` - Default value: `50`
+        /// Tunnels Bandwidth Percent, Attribute conditional on `tunnel_interface` being equal to `true` - Range: `1`-`100` -
+        /// Default value: `50`
         /// </summary>
         [Input("tunnelBandwidthPercent")]
         public Input<int>? TunnelBandwidthPercent { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelBandwidthPercentVariable")]
         public Input<string>? TunnelBandwidthPercentVariable { get; set; }
@@ -3369,88 +3411,93 @@ namespace Pulumi.Sdwan
         public Input<string>? TunnelInterfaceAllowStunVariable { get; set; }
 
         /// <summary>
-        /// Bind loopback tunnel interface to a physical interface
+        /// Bind loopback tunnel interface to a physical interface, Attribute conditional on `tunnel_interface` being equal to
+        /// `true`
         /// </summary>
         [Input("tunnelInterfaceBindLoopbackTunnel")]
         public Input<string>? TunnelInterfaceBindLoopbackTunnel { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfaceBindLoopbackTunnelVariable")]
         public Input<string>? TunnelInterfaceBindLoopbackTunnelVariable { get; set; }
 
         /// <summary>
-        /// Set TLOC as border TLOC - Default value: `false`
+        /// Set TLOC as border TLOC, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
         /// </summary>
         [Input("tunnelInterfaceBorder")]
         public Input<bool>? TunnelInterfaceBorder { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfaceBorderVariable")]
         public Input<string>? TunnelInterfaceBorderVariable { get; set; }
 
         /// <summary>
-        /// Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-        /// `carrier7`, `carrier8` - Default value: `default`
+        /// Set carrier for TLOC, Attribute conditional on `tunnel_interface` being equal to `true` - Choices: `default`,
+        /// `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8` - Default value:
+        /// `default`
         /// </summary>
         [Input("tunnelInterfaceCarrier")]
         public Input<string>? TunnelInterfaceCarrier { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfaceCarrierVariable")]
         public Input<string>? TunnelInterfaceCarrierVariable { get; set; }
 
         /// <summary>
-        /// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        /// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnel_interface` being
+        /// equal to `true` - Default value: `false`
         /// </summary>
         [Input("tunnelInterfaceClearDontFragment")]
         public Input<bool>? TunnelInterfaceClearDontFragment { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfaceClearDontFragmentVariable")]
         public Input<string>? TunnelInterfaceClearDontFragmentVariable { get; set; }
 
         /// <summary>
-        /// Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-        /// `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-        /// `private4`, `private5`, `private6` - Default value: `mpls`
+        /// Set color for TLOC, Attribute conditional on `tunnel_interface` being equal to `true` - Choices: `default`, `mpls`,
+        /// `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`,
+        /// `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6` - Default value:
+        /// `mpls`
         /// </summary>
         [Input("tunnelInterfaceColor")]
         public Input<string>? TunnelInterfaceColor { get; set; }
 
         /// <summary>
-        /// Restrict this TLOC behavior - Default value: `false`
+        /// Restrict this TLOC behavior, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
         /// </summary>
         [Input("tunnelInterfaceColorRestrict")]
         public Input<bool>? TunnelInterfaceColorRestrict { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfaceColorRestrictVariable")]
         public Input<string>? TunnelInterfaceColorRestrictVariable { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfaceColorVariable")]
         public Input<string>? TunnelInterfaceColorVariable { get; set; }
 
         /// <summary>
-        /// CTS SGT Propagation configuration - Default value: `false`
+        /// CTS SGT Propagation configuration, Attribute conditional on `tunnel_interface` being equal to `true` - Default value:
+        /// `false`
         /// </summary>
         [Input("tunnelInterfaceCtsSgtPropagation")]
         public Input<bool>? TunnelInterfaceCtsSgtPropagation { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfaceCtsSgtPropagationVariable")]
         public Input<string>? TunnelInterfaceCtsSgtPropagationVariable { get; set; }
@@ -3468,7 +3515,7 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfaceExcludeControllerGroupListVariable")]
         public Input<string>? TunnelInterfaceExcludeControllerGroupListVariable { get; set; }
@@ -3477,7 +3524,8 @@ namespace Pulumi.Sdwan
         private InputList<int>? _tunnelInterfaceExcludeControllerGroupLists;
 
         /// <summary>
-        /// Exclude the following controller groups defined in this list.
+        /// Exclude the following controller groups defined in this list., Attribute conditional on `tunnel_interface` being equal
+        /// to `true`
         /// </summary>
         public InputList<int> TunnelInterfaceExcludeControllerGroupLists
         {
@@ -3486,169 +3534,178 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// GRE tunnel destination IP
+        /// GRE tunnel destination IP, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfaceGreTunnelDestinationIp")]
         public Input<string>? TunnelInterfaceGreTunnelDestinationIp { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfaceGreTunnelDestinationIpVariable")]
         public Input<string>? TunnelInterfaceGreTunnelDestinationIpVariable { get; set; }
 
         /// <summary>
-        /// List of groups - Range: `1`-`4294967295`
+        /// List of groups, Attribute conditional on `tunnel_interface` being equal to `true` - Range: `1`-`4294967295`
         /// </summary>
         [Input("tunnelInterfaceGroups")]
         public Input<int>? TunnelInterfaceGroups { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfaceGroupsVariable")]
         public Input<string>? TunnelInterfaceGroupsVariable { get; set; }
 
         /// <summary>
-        /// Set time period of control hello packets &lt;100..600000&gt; milli seconds - Range: `100`-`600000` - Default value: `1000`
+        /// Set time period of control hello packets &lt;100..600000&gt; milli seconds, Attribute conditional on `tunnel_interface` being
+        /// equal to `true` - Range: `100`-`600000` - Default value: `1000`
         /// </summary>
         [Input("tunnelInterfaceHelloInterval")]
         public Input<int>? TunnelInterfaceHelloInterval { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfaceHelloIntervalVariable")]
         public Input<string>? TunnelInterfaceHelloIntervalVariable { get; set; }
 
         /// <summary>
-        /// Set tolerance of control hello packets &lt;12..6000&gt; seconds - Range: `12`-`6000` - Default value: `12`
+        /// Set tolerance of control hello packets &lt;12..6000&gt; seconds, Attribute conditional on `tunnel_interface` being equal to
+        /// `true` - Range: `12`-`6000` - Default value: `12`
         /// </summary>
         [Input("tunnelInterfaceHelloTolerance")]
         public Input<int>? TunnelInterfaceHelloTolerance { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfaceHelloToleranceVariable")]
         public Input<string>? TunnelInterfaceHelloToleranceVariable { get; set; }
 
         /// <summary>
-        /// Set TLOC as last resort - Default value: `false`
+        /// Set TLOC as last resort, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
         /// </summary>
         [Input("tunnelInterfaceLastResortCircuit")]
         public Input<bool>? TunnelInterfaceLastResortCircuit { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfaceLastResortCircuitVariable")]
         public Input<string>? TunnelInterfaceLastResortCircuitVariable { get; set; }
 
         /// <summary>
-        /// Set the interface as a low-bandwidth circuit - Default value: `false`
+        /// Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnel_interface` being equal to `true` -
+        /// Default value: `false`
         /// </summary>
         [Input("tunnelInterfaceLowBandwidthLink")]
         public Input<bool>? TunnelInterfaceLowBandwidthLink { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfaceLowBandwidthLinkVariable")]
         public Input<string>? TunnelInterfaceLowBandwidthLinkVariable { get; set; }
 
         /// <summary>
-        /// Maximum Control Connections - Range: `0`-`100`
+        /// Maximum Control Connections, Attribute conditional on `tunnel_interface` being equal to `true` - Range: `0`-`100`
         /// </summary>
         [Input("tunnelInterfaceMaxControlConnections")]
         public Input<int>? TunnelInterfaceMaxControlConnections { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfaceMaxControlConnectionsVariable")]
         public Input<string>? TunnelInterfaceMaxControlConnectionsVariable { get; set; }
 
         /// <summary>
-        /// Set time period of nat refresh packets &lt;1...60&gt; seconds - Range: `1`-`60` - Default value: `5`
+        /// Set time period of nat refresh packets &lt;1...60&gt; seconds, Attribute conditional on `tunnel_interface` being equal to
+        /// `true` - Range: `1`-`60` - Default value: `5`
         /// </summary>
         [Input("tunnelInterfaceNatRefreshInterval")]
         public Input<int>? TunnelInterfaceNatRefreshInterval { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfaceNatRefreshIntervalVariable")]
         public Input<string>? TunnelInterfaceNatRefreshIntervalVariable { get; set; }
 
         /// <summary>
-        /// Accept and respond to network-prefix-directed broadcasts - Default value: `false`
+        /// Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnel_interface` being equal to
+        /// `true` - Default value: `false`
         /// </summary>
         [Input("tunnelInterfaceNetworkBroadcast")]
         public Input<bool>? TunnelInterfaceNetworkBroadcast { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfaceNetworkBroadcastVariable")]
         public Input<string>? TunnelInterfaceNetworkBroadcastVariable { get; set; }
 
         /// <summary>
-        /// Disallow port hopping on the tunnel interface - Default value: `true`
+        /// Disallow port hopping on the tunnel interface, Attribute conditional on `tunnel_interface` being equal to `true` -
+        /// Default value: `true`
         /// </summary>
         [Input("tunnelInterfacePortHop")]
         public Input<bool>? TunnelInterfacePortHop { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfacePortHopVariable")]
         public Input<string>? TunnelInterfacePortHopVariable { get; set; }
 
         /// <summary>
-        /// Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        /// Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnel_interface` being equal to `true` - Range:
+        /// `500`-`1460`
         /// </summary>
         [Input("tunnelInterfaceTunnelTcpMss")]
         public Input<int>? TunnelInterfaceTunnelTcpMss { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfaceTunnelTcpMssVariable")]
         public Input<string>? TunnelInterfaceTunnelTcpMssVariable { get; set; }
 
         /// <summary>
-        /// Put this wan interface in STUN mode only - Default value: `false`
+        /// Put this wan interface in STUN mode only, Attribute conditional on `tunnel_interface` being equal to `true` - Default
+        /// value: `false`
         /// </summary>
         [Input("tunnelInterfaceVbondAsStunServer")]
         public Input<bool>? TunnelInterfaceVbondAsStunServer { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfaceVbondAsStunServerVariable")]
         public Input<string>? TunnelInterfaceVbondAsStunServerVariable { get; set; }
 
         /// <summary>
-        /// Set interface preference for control connection to vManage &lt;0..8&gt; - Range: `0`-`8` - Default value: `5`
+        /// Set interface preference for control connection to vManage &lt;0..8&gt;, Attribute conditional on `tunnel_interface` being
+        /// equal to `true` - Range: `0`-`8` - Default value: `5`
         /// </summary>
         [Input("tunnelInterfaceVmanageConnectionPreference")]
         public Input<int>? TunnelInterfaceVmanageConnectionPreference { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelInterfaceVmanageConnectionPreferenceVariable")]
         public Input<string>? TunnelInterfaceVmanageConnectionPreferenceVariable { get; set; }
 
         /// <summary>
-        /// Set tunnel QoS mode - Choices: `hub`, `spoke`
+        /// Set tunnel QoS mode, Attribute conditional on `tunnel_interface` being equal to `true` - Choices: `hub`, `spoke`
         /// </summary>
         [Input("tunnelQosMode")]
         public Input<string>? TunnelQosMode { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         /// </summary>
         [Input("tunnelQosModeVariable")]
         public Input<string>? TunnelQosModeVariable { get; set; }

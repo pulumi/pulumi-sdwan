@@ -38,6 +38,7 @@ class CiscoSystemFeatureTemplateArgs:
                  device_groups: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  device_groups_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  enable_mrf_migration: Optional[pulumi.Input[_builtins.str]] = None,
+                 enhanced_app_aware_routing: Optional[pulumi.Input[_builtins.str]] = None,
                  geo_fencing: Optional[pulumi.Input[_builtins.bool]] = None,
                  geo_fencing_range: Optional[pulumi.Input[_builtins.int]] = None,
                  geo_fencing_range_variable: Optional[pulumi.Input[_builtins.str]] = None,
@@ -115,6 +116,7 @@ class CiscoSystemFeatureTemplateArgs:
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_groups: Device groups (Use comma(,) for multiple groups)
         :param pulumi.Input[_builtins.str] device_groups_variable: Variable name
         :param pulumi.Input[_builtins.str] enable_mrf_migration: Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
+        :param pulumi.Input[_builtins.str] enhanced_app_aware_routing: Enhanced App Aware Routing - Choices: `disabled`, `aggressive`, `moderate`, `conservative` - Default value: `disabled`
         :param pulumi.Input[_builtins.bool] geo_fencing: Enable Geo fencing - Default value: `false`
         :param pulumi.Input[_builtins.int] geo_fencing_range: Set the device’s geo fencing range - Range: `100`-`10000` - Default value: `100`
         :param pulumi.Input[_builtins.str] geo_fencing_range_variable: Variable name
@@ -276,6 +278,8 @@ class CiscoSystemFeatureTemplateArgs:
             pulumi.set(__self__, "device_groups_variable", device_groups_variable)
         if enable_mrf_migration is not None:
             pulumi.set(__self__, "enable_mrf_migration", enable_mrf_migration)
+        if enhanced_app_aware_routing is not None:
+            pulumi.set(__self__, "enhanced_app_aware_routing", enhanced_app_aware_routing)
         if geo_fencing is not None:
             pulumi.set(__self__, "geo_fencing", geo_fencing)
         if geo_fencing_range is not None:
@@ -593,6 +597,18 @@ class CiscoSystemFeatureTemplateArgs:
     @enable_mrf_migration.setter
     def enable_mrf_migration(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "enable_mrf_migration", value)
+
+    @_builtins.property
+    @pulumi.getter(name="enhancedAppAwareRouting")
+    def enhanced_app_aware_routing(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Enhanced App Aware Routing - Choices: `disabled`, `aggressive`, `moderate`, `conservative` - Default value: `disabled`
+        """
+        return pulumi.get(self, "enhanced_app_aware_routing")
+
+    @enhanced_app_aware_routing.setter
+    def enhanced_app_aware_routing(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "enhanced_app_aware_routing", value)
 
     @_builtins.property
     @pulumi.getter(name="geoFencing")
@@ -1348,6 +1364,7 @@ class _CiscoSystemFeatureTemplateState:
                  device_groups_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  enable_mrf_migration: Optional[pulumi.Input[_builtins.str]] = None,
+                 enhanced_app_aware_routing: Optional[pulumi.Input[_builtins.str]] = None,
                  geo_fencing: Optional[pulumi.Input[_builtins.bool]] = None,
                  geo_fencing_range: Optional[pulumi.Input[_builtins.int]] = None,
                  geo_fencing_range_variable: Optional[pulumi.Input[_builtins.str]] = None,
@@ -1427,6 +1444,7 @@ class _CiscoSystemFeatureTemplateState:
                `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
                `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[_builtins.str] enable_mrf_migration: Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
+        :param pulumi.Input[_builtins.str] enhanced_app_aware_routing: Enhanced App Aware Routing - Choices: `disabled`, `aggressive`, `moderate`, `conservative` - Default value: `disabled`
         :param pulumi.Input[_builtins.bool] geo_fencing: Enable Geo fencing - Default value: `false`
         :param pulumi.Input[_builtins.int] geo_fencing_range: Set the device’s geo fencing range - Range: `100`-`10000` - Default value: `100`
         :param pulumi.Input[_builtins.str] geo_fencing_range_variable: Variable name
@@ -1592,6 +1610,8 @@ class _CiscoSystemFeatureTemplateState:
             pulumi.set(__self__, "device_types", device_types)
         if enable_mrf_migration is not None:
             pulumi.set(__self__, "enable_mrf_migration", enable_mrf_migration)
+        if enhanced_app_aware_routing is not None:
+            pulumi.set(__self__, "enhanced_app_aware_routing", enhanced_app_aware_routing)
         if geo_fencing is not None:
             pulumi.set(__self__, "geo_fencing", geo_fencing)
         if geo_fencing_range is not None:
@@ -1913,6 +1933,18 @@ class _CiscoSystemFeatureTemplateState:
     @enable_mrf_migration.setter
     def enable_mrf_migration(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "enable_mrf_migration", value)
+
+    @_builtins.property
+    @pulumi.getter(name="enhancedAppAwareRouting")
+    def enhanced_app_aware_routing(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Enhanced App Aware Routing - Choices: `disabled`, `aggressive`, `moderate`, `conservative` - Default value: `disabled`
+        """
+        return pulumi.get(self, "enhanced_app_aware_routing")
+
+    @enhanced_app_aware_routing.setter
+    def enhanced_app_aware_routing(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "enhanced_app_aware_routing", value)
 
     @_builtins.property
     @pulumi.getter(name="geoFencing")
@@ -2695,6 +2727,7 @@ class CiscoSystemFeatureTemplate(pulumi.CustomResource):
                  device_groups_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  enable_mrf_migration: Optional[pulumi.Input[_builtins.str]] = None,
+                 enhanced_app_aware_routing: Optional[pulumi.Input[_builtins.str]] = None,
                  geo_fencing: Optional[pulumi.Input[_builtins.bool]] = None,
                  geo_fencing_range: Optional[pulumi.Input[_builtins.int]] = None,
                  geo_fencing_range_variable: Optional[pulumi.Input[_builtins.str]] = None,
@@ -2785,6 +2818,7 @@ class CiscoSystemFeatureTemplate(pulumi.CustomResource):
                `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
                `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[_builtins.str] enable_mrf_migration: Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
+        :param pulumi.Input[_builtins.str] enhanced_app_aware_routing: Enhanced App Aware Routing - Choices: `disabled`, `aggressive`, `moderate`, `conservative` - Default value: `disabled`
         :param pulumi.Input[_builtins.bool] geo_fencing: Enable Geo fencing - Default value: `false`
         :param pulumi.Input[_builtins.int] geo_fencing_range: Set the device’s geo fencing range - Range: `100`-`10000` - Default value: `100`
         :param pulumi.Input[_builtins.str] geo_fencing_range_variable: Variable name
@@ -2964,6 +2998,7 @@ class CiscoSystemFeatureTemplate(pulumi.CustomResource):
                  device_groups_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  enable_mrf_migration: Optional[pulumi.Input[_builtins.str]] = None,
+                 enhanced_app_aware_routing: Optional[pulumi.Input[_builtins.str]] = None,
                  geo_fencing: Optional[pulumi.Input[_builtins.bool]] = None,
                  geo_fencing_range: Optional[pulumi.Input[_builtins.int]] = None,
                  geo_fencing_range_variable: Optional[pulumi.Input[_builtins.str]] = None,
@@ -3049,6 +3084,7 @@ class CiscoSystemFeatureTemplate(pulumi.CustomResource):
                 raise TypeError("Missing required property 'device_types'")
             __props__.__dict__["device_types"] = device_types
             __props__.__dict__["enable_mrf_migration"] = enable_mrf_migration
+            __props__.__dict__["enhanced_app_aware_routing"] = enhanced_app_aware_routing
             __props__.__dict__["geo_fencing"] = geo_fencing
             __props__.__dict__["geo_fencing_range"] = geo_fencing_range
             __props__.__dict__["geo_fencing_range_variable"] = geo_fencing_range_variable
@@ -3133,6 +3169,7 @@ class CiscoSystemFeatureTemplate(pulumi.CustomResource):
             device_groups_variable: Optional[pulumi.Input[_builtins.str]] = None,
             device_types: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
             enable_mrf_migration: Optional[pulumi.Input[_builtins.str]] = None,
+            enhanced_app_aware_routing: Optional[pulumi.Input[_builtins.str]] = None,
             geo_fencing: Optional[pulumi.Input[_builtins.bool]] = None,
             geo_fencing_range: Optional[pulumi.Input[_builtins.int]] = None,
             geo_fencing_range_variable: Optional[pulumi.Input[_builtins.str]] = None,
@@ -3217,6 +3254,7 @@ class CiscoSystemFeatureTemplate(pulumi.CustomResource):
                `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
                `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[_builtins.str] enable_mrf_migration: Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
+        :param pulumi.Input[_builtins.str] enhanced_app_aware_routing: Enhanced App Aware Routing - Choices: `disabled`, `aggressive`, `moderate`, `conservative` - Default value: `disabled`
         :param pulumi.Input[_builtins.bool] geo_fencing: Enable Geo fencing - Default value: `false`
         :param pulumi.Input[_builtins.int] geo_fencing_range: Set the device’s geo fencing range - Range: `100`-`10000` - Default value: `100`
         :param pulumi.Input[_builtins.str] geo_fencing_range_variable: Variable name
@@ -3369,6 +3407,7 @@ class CiscoSystemFeatureTemplate(pulumi.CustomResource):
         __props__.__dict__["device_groups_variable"] = device_groups_variable
         __props__.__dict__["device_types"] = device_types
         __props__.__dict__["enable_mrf_migration"] = enable_mrf_migration
+        __props__.__dict__["enhanced_app_aware_routing"] = enhanced_app_aware_routing
         __props__.__dict__["geo_fencing"] = geo_fencing
         __props__.__dict__["geo_fencing_range"] = geo_fencing_range
         __props__.__dict__["geo_fencing_range_variable"] = geo_fencing_range_variable
@@ -3566,6 +3605,14 @@ class CiscoSystemFeatureTemplate(pulumi.CustomResource):
         Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
         """
         return pulumi.get(self, "enable_mrf_migration")
+
+    @_builtins.property
+    @pulumi.getter(name="enhancedAppAwareRouting")
+    def enhanced_app_aware_routing(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Enhanced App Aware Routing - Choices: `disabled`, `aggressive`, `moderate`, `conservative` - Default value: `disabled`
+        """
+        return pulumi.get(self, "enhanced_app_aware_routing")
 
     @_builtins.property
     @pulumi.getter(name="geoFencing")

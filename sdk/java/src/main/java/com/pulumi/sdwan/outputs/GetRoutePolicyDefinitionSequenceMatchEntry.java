@@ -43,6 +43,11 @@ public final class GetRoutePolicyDefinitionSequenceMatchEntry {
      */
     private String expandedCommunityListId;
     /**
+     * @return Expanded community list variable
+     * 
+     */
+    private String expandedCommunityListVariable;
+    /**
      * @return Expanded community list version
      * 
      */
@@ -155,6 +160,13 @@ public final class GetRoutePolicyDefinitionSequenceMatchEntry {
      */
     public String expandedCommunityListId() {
         return this.expandedCommunityListId;
+    }
+    /**
+     * @return Expanded community list variable
+     * 
+     */
+    public String expandedCommunityListVariable() {
+        return this.expandedCommunityListVariable;
     }
     /**
      * @return Expanded community list version
@@ -270,6 +282,7 @@ public final class GetRoutePolicyDefinitionSequenceMatchEntry {
         private String communityListMatchFlag;
         private List<String> communityListVersions;
         private String expandedCommunityListId;
+        private String expandedCommunityListVariable;
         private Integer expandedCommunityListVersion;
         private String extendedCommunityListId;
         private Integer extendedCommunityListVersion;
@@ -293,6 +306,7 @@ public final class GetRoutePolicyDefinitionSequenceMatchEntry {
     	      this.communityListMatchFlag = defaults.communityListMatchFlag;
     	      this.communityListVersions = defaults.communityListVersions;
     	      this.expandedCommunityListId = defaults.expandedCommunityListId;
+    	      this.expandedCommunityListVariable = defaults.expandedCommunityListVariable;
     	      this.expandedCommunityListVersion = defaults.expandedCommunityListVersion;
     	      this.extendedCommunityListId = defaults.extendedCommunityListId;
     	      this.extendedCommunityListVersion = defaults.extendedCommunityListVersion;
@@ -361,6 +375,14 @@ public final class GetRoutePolicyDefinitionSequenceMatchEntry {
               throw new MissingRequiredPropertyException("GetRoutePolicyDefinitionSequenceMatchEntry", "expandedCommunityListId");
             }
             this.expandedCommunityListId = expandedCommunityListId;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder expandedCommunityListVariable(String expandedCommunityListVariable) {
+            if (expandedCommunityListVariable == null) {
+              throw new MissingRequiredPropertyException("GetRoutePolicyDefinitionSequenceMatchEntry", "expandedCommunityListVariable");
+            }
+            this.expandedCommunityListVariable = expandedCommunityListVariable;
             return this;
         }
         @CustomType.Setter
@@ -483,6 +505,7 @@ public final class GetRoutePolicyDefinitionSequenceMatchEntry {
             _resultValue.communityListMatchFlag = communityListMatchFlag;
             _resultValue.communityListVersions = communityListVersions;
             _resultValue.expandedCommunityListId = expandedCommunityListId;
+            _resultValue.expandedCommunityListVariable = expandedCommunityListVariable;
             _resultValue.expandedCommunityListVersion = expandedCommunityListVersion;
             _resultValue.extendedCommunityListId = extendedCommunityListId;
             _resultValue.extendedCommunityListVersion = extendedCommunityListVersion;

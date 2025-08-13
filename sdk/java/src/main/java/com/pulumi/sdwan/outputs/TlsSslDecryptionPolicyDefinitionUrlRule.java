@@ -32,7 +32,7 @@ public final class TlsSslDecryptionPolicyDefinitionUrlRule {
      * @return TLS SSL Profile Policy version
      * 
      */
-    private @Nullable Integer tlsSslProfileVersion;
+    private @Nullable Integer tlsSslProfilePolicyVersion;
 
     private TlsSslDecryptionPolicyDefinitionUrlRule() {}
     /**
@@ -60,8 +60,8 @@ public final class TlsSslDecryptionPolicyDefinitionUrlRule {
      * @return TLS SSL Profile Policy version
      * 
      */
-    public Optional<Integer> tlsSslProfileVersion() {
-        return Optional.ofNullable(this.tlsSslProfileVersion);
+    public Optional<Integer> tlsSslProfilePolicyVersion() {
+        return Optional.ofNullable(this.tlsSslProfilePolicyVersion);
     }
 
     public static Builder builder() {
@@ -76,14 +76,14 @@ public final class TlsSslDecryptionPolicyDefinitionUrlRule {
         private @Nullable String ruleName;
         private @Nullable List<String> targetVpns;
         private @Nullable String tlsSslProfilePolicyId;
-        private @Nullable Integer tlsSslProfileVersion;
+        private @Nullable Integer tlsSslProfilePolicyVersion;
         public Builder() {}
         public Builder(TlsSslDecryptionPolicyDefinitionUrlRule defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.ruleName = defaults.ruleName;
     	      this.targetVpns = defaults.targetVpns;
     	      this.tlsSslProfilePolicyId = defaults.tlsSslProfilePolicyId;
-    	      this.tlsSslProfileVersion = defaults.tlsSslProfileVersion;
+    	      this.tlsSslProfilePolicyVersion = defaults.tlsSslProfilePolicyVersion;
         }
 
         @CustomType.Setter
@@ -108,9 +108,9 @@ public final class TlsSslDecryptionPolicyDefinitionUrlRule {
             return this;
         }
         @CustomType.Setter
-        public Builder tlsSslProfileVersion(@Nullable Integer tlsSslProfileVersion) {
+        public Builder tlsSslProfilePolicyVersion(@Nullable Integer tlsSslProfilePolicyVersion) {
 
-            this.tlsSslProfileVersion = tlsSslProfileVersion;
+            this.tlsSslProfilePolicyVersion = tlsSslProfilePolicyVersion;
             return this;
         }
         public TlsSslDecryptionPolicyDefinitionUrlRule build() {
@@ -118,7 +118,7 @@ public final class TlsSslDecryptionPolicyDefinitionUrlRule {
             _resultValue.ruleName = ruleName;
             _resultValue.targetVpns = targetVpns;
             _resultValue.tlsSslProfilePolicyId = tlsSslProfilePolicyId;
-            _resultValue.tlsSslProfileVersion = tlsSslProfileVersion;
+            _resultValue.tlsSslProfilePolicyVersion = tlsSslProfilePolicyVersion;
             return _resultValue;
         }
     }

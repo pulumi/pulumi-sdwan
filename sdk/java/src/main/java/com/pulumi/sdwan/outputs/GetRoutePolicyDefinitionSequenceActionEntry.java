@@ -48,6 +48,11 @@ public final class GetRoutePolicyDefinitionSequenceActionEntry {
      */
     private Boolean communityAdditive;
     /**
+     * @return Community variable
+     * 
+     */
+    private String communityVariable;
+    /**
      * @return Local preference
      * 
      */
@@ -149,6 +154,13 @@ public final class GetRoutePolicyDefinitionSequenceActionEntry {
         return this.communityAdditive;
     }
     /**
+     * @return Community variable
+     * 
+     */
+    public String communityVariable() {
+        return this.communityVariable;
+    }
+    /**
      * @return Local preference
      * 
      */
@@ -235,6 +247,7 @@ public final class GetRoutePolicyDefinitionSequenceActionEntry {
         private Boolean atomicAggregate;
         private String community;
         private Boolean communityAdditive;
+        private String communityVariable;
         private Integer localPreference;
         private Integer metric;
         private String metricType;
@@ -255,6 +268,7 @@ public final class GetRoutePolicyDefinitionSequenceActionEntry {
     	      this.atomicAggregate = defaults.atomicAggregate;
     	      this.community = defaults.community;
     	      this.communityAdditive = defaults.communityAdditive;
+    	      this.communityVariable = defaults.communityVariable;
     	      this.localPreference = defaults.localPreference;
     	      this.metric = defaults.metric;
     	      this.metricType = defaults.metricType;
@@ -321,6 +335,14 @@ public final class GetRoutePolicyDefinitionSequenceActionEntry {
               throw new MissingRequiredPropertyException("GetRoutePolicyDefinitionSequenceActionEntry", "communityAdditive");
             }
             this.communityAdditive = communityAdditive;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder communityVariable(String communityVariable) {
+            if (communityVariable == null) {
+              throw new MissingRequiredPropertyException("GetRoutePolicyDefinitionSequenceActionEntry", "communityVariable");
+            }
+            this.communityVariable = communityVariable;
             return this;
         }
         @CustomType.Setter
@@ -412,6 +434,7 @@ public final class GetRoutePolicyDefinitionSequenceActionEntry {
             _resultValue.atomicAggregate = atomicAggregate;
             _resultValue.community = community;
             _resultValue.communityAdditive = communityAdditive;
+            _resultValue.communityVariable = communityVariable;
             _resultValue.localPreference = localPreference;
             _resultValue.metric = metric;
             _resultValue.metricType = metricType;

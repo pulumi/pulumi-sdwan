@@ -46,6 +46,11 @@ public final class RoutePolicyDefinitionSequenceMatchEntry {
      */
     private @Nullable String expandedCommunityListId;
     /**
+     * @return Expanded community list variable, Attribute conditional on `type` being equal to `expandedCommunityInline`
+     * 
+     */
+    private @Nullable String expandedCommunityListVariable;
+    /**
      * @return Expanded community list version
      * 
      */
@@ -117,7 +122,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntry {
     private @Nullable Integer prefixListVersion;
     /**
      * @return Type of match entry
-     *   - Choices: `address`, `asPath`, `advancedCommunity`, `expandedCommunity`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
+     *   - Choices: `address`, `asPath`, `advancedCommunity`, `expandedCommunity`, `expandedCommunityInline`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
      * 
      */
     private String type;
@@ -165,6 +170,13 @@ public final class RoutePolicyDefinitionSequenceMatchEntry {
      */
     public Optional<String> expandedCommunityListId() {
         return Optional.ofNullable(this.expandedCommunityListId);
+    }
+    /**
+     * @return Expanded community list variable, Attribute conditional on `type` being equal to `expandedCommunityInline`
+     * 
+     */
+    public Optional<String> expandedCommunityListVariable() {
+        return Optional.ofNullable(this.expandedCommunityListVariable);
     }
     /**
      * @return Expanded community list version
@@ -264,7 +276,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntry {
     }
     /**
      * @return Type of match entry
-     *   - Choices: `address`, `asPath`, `advancedCommunity`, `expandedCommunity`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
+     *   - Choices: `address`, `asPath`, `advancedCommunity`, `expandedCommunity`, `expandedCommunityInline`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
      * 
      */
     public String type() {
@@ -286,6 +298,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntry {
         private @Nullable String communityListMatchFlag;
         private @Nullable List<String> communityListVersions;
         private @Nullable String expandedCommunityListId;
+        private @Nullable String expandedCommunityListVariable;
         private @Nullable Integer expandedCommunityListVersion;
         private @Nullable String extendedCommunityListId;
         private @Nullable Integer extendedCommunityListVersion;
@@ -309,6 +322,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntry {
     	      this.communityListMatchFlag = defaults.communityListMatchFlag;
     	      this.communityListVersions = defaults.communityListVersions;
     	      this.expandedCommunityListId = defaults.expandedCommunityListId;
+    	      this.expandedCommunityListVariable = defaults.expandedCommunityListVariable;
     	      this.expandedCommunityListVersion = defaults.expandedCommunityListVersion;
     	      this.extendedCommunityListId = defaults.extendedCommunityListId;
     	      this.extendedCommunityListVersion = defaults.extendedCommunityListVersion;
@@ -365,6 +379,12 @@ public final class RoutePolicyDefinitionSequenceMatchEntry {
         public Builder expandedCommunityListId(@Nullable String expandedCommunityListId) {
 
             this.expandedCommunityListId = expandedCommunityListId;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder expandedCommunityListVariable(@Nullable String expandedCommunityListVariable) {
+
+            this.expandedCommunityListVariable = expandedCommunityListVariable;
             return this;
         }
         @CustomType.Setter
@@ -461,6 +481,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntry {
             _resultValue.communityListMatchFlag = communityListMatchFlag;
             _resultValue.communityListVersions = communityListVersions;
             _resultValue.expandedCommunityListId = expandedCommunityListId;
+            _resultValue.expandedCommunityListVariable = expandedCommunityListVariable;
             _resultValue.expandedCommunityListVersion = expandedCommunityListVersion;
             _resultValue.extendedCommunityListId = extendedCommunityListId;
             _resultValue.extendedCommunityListVersion = extendedCommunityListVersion;

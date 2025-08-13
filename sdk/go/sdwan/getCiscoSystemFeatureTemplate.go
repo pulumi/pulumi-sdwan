@@ -92,6 +92,8 @@ type LookupCiscoSystemFeatureTemplateResult struct {
 	DeviceTypes []string `pulumi:"deviceTypes"`
 	// Enable migration mode to Multi-Region Fabric
 	EnableMrfMigration string `pulumi:"enableMrfMigration"`
+	// Enhanced App Aware Routing
+	EnhancedAppAwareRouting string `pulumi:"enhancedAppAwareRouting"`
 	// Enable Geo fencing
 	GeoFencing bool `pulumi:"geoFencing"`
 	// Set the device’s geo fencing range
@@ -329,6 +331,11 @@ func (o LookupCiscoSystemFeatureTemplateResultOutput) DeviceTypes() pulumi.Strin
 // Enable migration mode to Multi-Region Fabric
 func (o LookupCiscoSystemFeatureTemplateResultOutput) EnableMrfMigration() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupCiscoSystemFeatureTemplateResult) string { return v.EnableMrfMigration }).(pulumi.StringOutput)
+}
+
+// Enhanced App Aware Routing
+func (o LookupCiscoSystemFeatureTemplateResultOutput) EnhancedAppAwareRouting() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupCiscoSystemFeatureTemplateResult) string { return v.EnhancedAppAwareRouting }).(pulumi.StringOutput)
 }
 
 // Enable Geo fencing

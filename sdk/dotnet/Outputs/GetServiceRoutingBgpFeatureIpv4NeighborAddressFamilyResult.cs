@@ -14,18 +14,26 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class GetServiceRoutingBgpFeatureIpv4NeighborAddressFamilyResult
     {
         /// <summary>
+        /// Set maximum number of prefixes accepted from BGP peer
+        /// </summary>
+        public readonly int DisablePeerMaxNumberOfPrefixes;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string DisablePeerMaxNumberOfPrefixesVariable;
+        /// <summary>
+        /// Set threshold(1 to 100) at which to generate a warning message
+        /// </summary>
+        public readonly int DisablePeerThreshold;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string DisablePeerThresholdVariable;
+        /// <summary>
         /// Set IPv4 unicast address family
         /// </summary>
         public readonly string FamilyType;
         public readonly string InRoutePolicyId;
-        /// <summary>
-        /// Set maximum number of prefixes accepted from BGP peer
-        /// </summary>
-        public readonly int MaxNumberOfPrefixes;
-        /// <summary>
-        /// Variable name
-        /// </summary>
-        public readonly string MaxNumberOfPrefixesVariable;
         public readonly string OutRoutePolicyId;
         /// <summary>
         /// Neighbor received maximum prefix policy is disabled.
@@ -40,23 +48,51 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string RestartIntervalVariable;
         /// <summary>
-        /// Set threshold(1 to 100) at which to generate a warning message
+        /// Set maximum number of prefixes accepted from BGP peer
         /// </summary>
-        public readonly int Threshold;
+        public readonly int RestartMaxNumberOfPrefixes;
         /// <summary>
         /// Variable name
         /// </summary>
-        public readonly string ThresholdVariable;
+        public readonly string RestartMaxNumberOfPrefixesVariable;
+        /// <summary>
+        /// Set threshold(1 to 100) at which to generate a warning message
+        /// </summary>
+        public readonly int RestartThreshold;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string RestartThresholdVariable;
+        /// <summary>
+        /// Set maximum number of prefixes accepted from BGP peer
+        /// </summary>
+        public readonly int WarningMessageMaxNumberOfPrefixes;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string WarningMessageMaxNumberOfPrefixesVariable;
+        /// <summary>
+        /// Set threshold(1 to 100) at which to generate a warning message
+        /// </summary>
+        public readonly int WarningMessageThreshold;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string WarningMessageThresholdVariable;
 
         [OutputConstructor]
         private GetServiceRoutingBgpFeatureIpv4NeighborAddressFamilyResult(
+            int disablePeerMaxNumberOfPrefixes,
+
+            string disablePeerMaxNumberOfPrefixesVariable,
+
+            int disablePeerThreshold,
+
+            string disablePeerThresholdVariable,
+
             string familyType,
 
             string inRoutePolicyId,
-
-            int maxNumberOfPrefixes,
-
-            string maxNumberOfPrefixesVariable,
 
             string outRoutePolicyId,
 
@@ -66,20 +102,40 @@ namespace Pulumi.Sdwan.Outputs
 
             string restartIntervalVariable,
 
-            int threshold,
+            int restartMaxNumberOfPrefixes,
 
-            string thresholdVariable)
+            string restartMaxNumberOfPrefixesVariable,
+
+            int restartThreshold,
+
+            string restartThresholdVariable,
+
+            int warningMessageMaxNumberOfPrefixes,
+
+            string warningMessageMaxNumberOfPrefixesVariable,
+
+            int warningMessageThreshold,
+
+            string warningMessageThresholdVariable)
         {
+            DisablePeerMaxNumberOfPrefixes = disablePeerMaxNumberOfPrefixes;
+            DisablePeerMaxNumberOfPrefixesVariable = disablePeerMaxNumberOfPrefixesVariable;
+            DisablePeerThreshold = disablePeerThreshold;
+            DisablePeerThresholdVariable = disablePeerThresholdVariable;
             FamilyType = familyType;
             InRoutePolicyId = inRoutePolicyId;
-            MaxNumberOfPrefixes = maxNumberOfPrefixes;
-            MaxNumberOfPrefixesVariable = maxNumberOfPrefixesVariable;
             OutRoutePolicyId = outRoutePolicyId;
             PolicyType = policyType;
             RestartInterval = restartInterval;
             RestartIntervalVariable = restartIntervalVariable;
-            Threshold = threshold;
-            ThresholdVariable = thresholdVariable;
+            RestartMaxNumberOfPrefixes = restartMaxNumberOfPrefixes;
+            RestartMaxNumberOfPrefixesVariable = restartMaxNumberOfPrefixesVariable;
+            RestartThreshold = restartThreshold;
+            RestartThresholdVariable = restartThresholdVariable;
+            WarningMessageMaxNumberOfPrefixes = warningMessageMaxNumberOfPrefixes;
+            WarningMessageMaxNumberOfPrefixesVariable = warningMessageMaxNumberOfPrefixesVariable;
+            WarningMessageThreshold = warningMessageThreshold;
+            WarningMessageThresholdVariable = warningMessageThresholdVariable;
         }
     }
 }

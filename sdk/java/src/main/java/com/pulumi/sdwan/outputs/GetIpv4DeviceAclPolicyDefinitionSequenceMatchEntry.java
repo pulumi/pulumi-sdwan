@@ -27,6 +27,11 @@ public final class GetIpv4DeviceAclPolicyDefinitionSequenceMatchEntry {
      */
     private String destinationIp;
     /**
+     * @return Destination IP prefix variable
+     * 
+     */
+    private String destinationIpVariable;
+    /**
      * @return Destination port, only `22` and `161` supported
      * 
      */
@@ -46,6 +51,11 @@ public final class GetIpv4DeviceAclPolicyDefinitionSequenceMatchEntry {
      * 
      */
     private String sourceIp;
+    /**
+     * @return Source IP prefix variable
+     * 
+     */
+    private String sourceIpVariable;
     /**
      * @return Source ports. Single value (0-65535) or ranges separated by spaces.
      * 
@@ -80,6 +90,13 @@ public final class GetIpv4DeviceAclPolicyDefinitionSequenceMatchEntry {
         return this.destinationIp;
     }
     /**
+     * @return Destination IP prefix variable
+     * 
+     */
+    public String destinationIpVariable() {
+        return this.destinationIpVariable;
+    }
+    /**
      * @return Destination port, only `22` and `161` supported
      * 
      */
@@ -108,6 +125,13 @@ public final class GetIpv4DeviceAclPolicyDefinitionSequenceMatchEntry {
         return this.sourceIp;
     }
     /**
+     * @return Source IP prefix variable
+     * 
+     */
+    public String sourceIpVariable() {
+        return this.sourceIpVariable;
+    }
+    /**
      * @return Source ports. Single value (0-65535) or ranges separated by spaces.
      * 
      */
@@ -134,10 +158,12 @@ public final class GetIpv4DeviceAclPolicyDefinitionSequenceMatchEntry {
         private String destinationDataIpv4PrefixListId;
         private Integer destinationDataIpv4PrefixListVersion;
         private String destinationIp;
+        private String destinationIpVariable;
         private Integer destinationPort;
         private String sourceDataIpv4PrefixListId;
         private Integer sourceDataIpv4PrefixListVersion;
         private String sourceIp;
+        private String sourceIpVariable;
         private String sourcePorts;
         private String type;
         public Builder() {}
@@ -146,10 +172,12 @@ public final class GetIpv4DeviceAclPolicyDefinitionSequenceMatchEntry {
     	      this.destinationDataIpv4PrefixListId = defaults.destinationDataIpv4PrefixListId;
     	      this.destinationDataIpv4PrefixListVersion = defaults.destinationDataIpv4PrefixListVersion;
     	      this.destinationIp = defaults.destinationIp;
+    	      this.destinationIpVariable = defaults.destinationIpVariable;
     	      this.destinationPort = defaults.destinationPort;
     	      this.sourceDataIpv4PrefixListId = defaults.sourceDataIpv4PrefixListId;
     	      this.sourceDataIpv4PrefixListVersion = defaults.sourceDataIpv4PrefixListVersion;
     	      this.sourceIp = defaults.sourceIp;
+    	      this.sourceIpVariable = defaults.sourceIpVariable;
     	      this.sourcePorts = defaults.sourcePorts;
     	      this.type = defaults.type;
         }
@@ -176,6 +204,14 @@ public final class GetIpv4DeviceAclPolicyDefinitionSequenceMatchEntry {
               throw new MissingRequiredPropertyException("GetIpv4DeviceAclPolicyDefinitionSequenceMatchEntry", "destinationIp");
             }
             this.destinationIp = destinationIp;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder destinationIpVariable(String destinationIpVariable) {
+            if (destinationIpVariable == null) {
+              throw new MissingRequiredPropertyException("GetIpv4DeviceAclPolicyDefinitionSequenceMatchEntry", "destinationIpVariable");
+            }
+            this.destinationIpVariable = destinationIpVariable;
             return this;
         }
         @CustomType.Setter
@@ -211,6 +247,14 @@ public final class GetIpv4DeviceAclPolicyDefinitionSequenceMatchEntry {
             return this;
         }
         @CustomType.Setter
+        public Builder sourceIpVariable(String sourceIpVariable) {
+            if (sourceIpVariable == null) {
+              throw new MissingRequiredPropertyException("GetIpv4DeviceAclPolicyDefinitionSequenceMatchEntry", "sourceIpVariable");
+            }
+            this.sourceIpVariable = sourceIpVariable;
+            return this;
+        }
+        @CustomType.Setter
         public Builder sourcePorts(String sourcePorts) {
             if (sourcePorts == null) {
               throw new MissingRequiredPropertyException("GetIpv4DeviceAclPolicyDefinitionSequenceMatchEntry", "sourcePorts");
@@ -231,10 +275,12 @@ public final class GetIpv4DeviceAclPolicyDefinitionSequenceMatchEntry {
             _resultValue.destinationDataIpv4PrefixListId = destinationDataIpv4PrefixListId;
             _resultValue.destinationDataIpv4PrefixListVersion = destinationDataIpv4PrefixListVersion;
             _resultValue.destinationIp = destinationIp;
+            _resultValue.destinationIpVariable = destinationIpVariable;
             _resultValue.destinationPort = destinationPort;
             _resultValue.sourceDataIpv4PrefixListId = sourceDataIpv4PrefixListId;
             _resultValue.sourceDataIpv4PrefixListVersion = sourceDataIpv4PrefixListVersion;
             _resultValue.sourceIp = sourceIp;
+            _resultValue.sourceIpVariable = sourceIpVariable;
             _resultValue.sourcePorts = sourcePorts;
             _resultValue.type = type;
             return _resultValue;

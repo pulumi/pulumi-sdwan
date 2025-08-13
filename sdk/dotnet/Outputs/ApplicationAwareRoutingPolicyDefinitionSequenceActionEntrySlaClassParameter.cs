@@ -20,7 +20,7 @@ namespace Pulumi.Sdwan.Outputs
         /// <summary>
         /// Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
         /// </summary>
-        public readonly string? PreferredColorGroupList;
+        public readonly string? PreferredColorGroupListId;
         /// <summary>
         /// Preferred color group list version
         /// </summary>
@@ -28,7 +28,7 @@ namespace Pulumi.Sdwan.Outputs
         /// <summary>
         /// SLA class list ID, Attribute conditional on `type` being equal to `name`
         /// </summary>
-        public readonly string? SlaClassList;
+        public readonly string? SlaClassListId;
         /// <summary>
         /// SLA class list version
         /// </summary>
@@ -43,20 +43,20 @@ namespace Pulumi.Sdwan.Outputs
         private ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameter(
             string? preferredColor,
 
-            string? preferredColorGroupList,
+            string? preferredColorGroupListId,
 
             int? preferredColorGroupListVersion,
 
-            string? slaClassList,
+            string? slaClassListId,
 
             int? slaClassListVersion,
 
             string type)
         {
             PreferredColor = preferredColor;
-            PreferredColorGroupList = preferredColorGroupList;
+            PreferredColorGroupListId = preferredColorGroupListId;
             PreferredColorGroupListVersion = preferredColorGroupListVersion;
-            SlaClassList = slaClassList;
+            SlaClassListId = slaClassListId;
             SlaClassListVersion = slaClassListVersion;
             Type = type;
         }

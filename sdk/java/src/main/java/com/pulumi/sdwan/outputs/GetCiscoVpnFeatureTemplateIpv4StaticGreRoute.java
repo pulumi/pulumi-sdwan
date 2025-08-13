@@ -14,15 +14,15 @@ import java.util.Objects;
 @CustomType
 public final class GetCiscoVpnFeatureTemplateIpv4StaticGreRoute {
     /**
-     * @return Variable name
-     * 
-     */
-    private String interfaceVariable;
-    /**
      * @return List of GRE Interfaces
      * 
      */
     private List<String> interfaces;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String interfacesVariable;
     /**
      * @return Indicates if list item is considered optional.
      * 
@@ -46,18 +46,18 @@ public final class GetCiscoVpnFeatureTemplateIpv4StaticGreRoute {
 
     private GetCiscoVpnFeatureTemplateIpv4StaticGreRoute() {}
     /**
-     * @return Variable name
-     * 
-     */
-    public String interfaceVariable() {
-        return this.interfaceVariable;
-    }
-    /**
      * @return List of GRE Interfaces
      * 
      */
     public List<String> interfaces() {
         return this.interfaces;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String interfacesVariable() {
+        return this.interfacesVariable;
     }
     /**
      * @return Indicates if list item is considered optional.
@@ -97,8 +97,8 @@ public final class GetCiscoVpnFeatureTemplateIpv4StaticGreRoute {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String interfaceVariable;
         private List<String> interfaces;
+        private String interfacesVariable;
         private Boolean optional;
         private String prefix;
         private String prefixVariable;
@@ -106,22 +106,14 @@ public final class GetCiscoVpnFeatureTemplateIpv4StaticGreRoute {
         public Builder() {}
         public Builder(GetCiscoVpnFeatureTemplateIpv4StaticGreRoute defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.interfaceVariable = defaults.interfaceVariable;
     	      this.interfaces = defaults.interfaces;
+    	      this.interfacesVariable = defaults.interfacesVariable;
     	      this.optional = defaults.optional;
     	      this.prefix = defaults.prefix;
     	      this.prefixVariable = defaults.prefixVariable;
     	      this.vpnId = defaults.vpnId;
         }
 
-        @CustomType.Setter
-        public Builder interfaceVariable(String interfaceVariable) {
-            if (interfaceVariable == null) {
-              throw new MissingRequiredPropertyException("GetCiscoVpnFeatureTemplateIpv4StaticGreRoute", "interfaceVariable");
-            }
-            this.interfaceVariable = interfaceVariable;
-            return this;
-        }
         @CustomType.Setter
         public Builder interfaces(List<String> interfaces) {
             if (interfaces == null) {
@@ -132,6 +124,14 @@ public final class GetCiscoVpnFeatureTemplateIpv4StaticGreRoute {
         }
         public Builder interfaces(String... interfaces) {
             return interfaces(List.of(interfaces));
+        }
+        @CustomType.Setter
+        public Builder interfacesVariable(String interfacesVariable) {
+            if (interfacesVariable == null) {
+              throw new MissingRequiredPropertyException("GetCiscoVpnFeatureTemplateIpv4StaticGreRoute", "interfacesVariable");
+            }
+            this.interfacesVariable = interfacesVariable;
+            return this;
         }
         @CustomType.Setter
         public Builder optional(Boolean optional) {
@@ -167,8 +167,8 @@ public final class GetCiscoVpnFeatureTemplateIpv4StaticGreRoute {
         }
         public GetCiscoVpnFeatureTemplateIpv4StaticGreRoute build() {
             final var _resultValue = new GetCiscoVpnFeatureTemplateIpv4StaticGreRoute();
-            _resultValue.interfaceVariable = interfaceVariable;
             _resultValue.interfaces = interfaces;
+            _resultValue.interfacesVariable = interfacesVariable;
             _resultValue.optional = optional;
             _resultValue.prefix = prefix;
             _resultValue.prefixVariable = prefixVariable;

@@ -18,7 +18,12 @@ public final class GetServiceLanVpnFeatureIpv4StaticRoute {
      * @return IPv4 Route Gateway DHCP
      * 
      */
-    private Boolean gatewayDhcp;
+    private Boolean dhcp;
+    /**
+     * @return Gateway type
+     * 
+     */
+    private String gateway;
     /**
      * @return IP Address
      * 
@@ -65,8 +70,15 @@ public final class GetServiceLanVpnFeatureIpv4StaticRoute {
      * @return IPv4 Route Gateway DHCP
      * 
      */
-    public Boolean gatewayDhcp() {
-        return this.gatewayDhcp;
+    public Boolean dhcp() {
+        return this.dhcp;
+    }
+    /**
+     * @return Gateway type
+     * 
+     */
+    public String gateway() {
+        return this.gateway;
     }
     /**
      * @return IP Address
@@ -134,7 +146,8 @@ public final class GetServiceLanVpnFeatureIpv4StaticRoute {
     }
     @CustomType.Builder
     public static final class Builder {
-        private Boolean gatewayDhcp;
+        private Boolean dhcp;
+        private String gateway;
         private String networkAddress;
         private String networkAddressVariable;
         private List<GetServiceLanVpnFeatureIpv4StaticRouteNextHopWithTracker> nextHopWithTrackers;
@@ -146,7 +159,8 @@ public final class GetServiceLanVpnFeatureIpv4StaticRoute {
         public Builder() {}
         public Builder(GetServiceLanVpnFeatureIpv4StaticRoute defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.gatewayDhcp = defaults.gatewayDhcp;
+    	      this.dhcp = defaults.dhcp;
+    	      this.gateway = defaults.gateway;
     	      this.networkAddress = defaults.networkAddress;
     	      this.networkAddressVariable = defaults.networkAddressVariable;
     	      this.nextHopWithTrackers = defaults.nextHopWithTrackers;
@@ -158,11 +172,19 @@ public final class GetServiceLanVpnFeatureIpv4StaticRoute {
         }
 
         @CustomType.Setter
-        public Builder gatewayDhcp(Boolean gatewayDhcp) {
-            if (gatewayDhcp == null) {
-              throw new MissingRequiredPropertyException("GetServiceLanVpnFeatureIpv4StaticRoute", "gatewayDhcp");
+        public Builder dhcp(Boolean dhcp) {
+            if (dhcp == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnFeatureIpv4StaticRoute", "dhcp");
             }
-            this.gatewayDhcp = gatewayDhcp;
+            this.dhcp = dhcp;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder gateway(String gateway) {
+            if (gateway == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnFeatureIpv4StaticRoute", "gateway");
+            }
+            this.gateway = gateway;
             return this;
         }
         @CustomType.Setter
@@ -237,7 +259,8 @@ public final class GetServiceLanVpnFeatureIpv4StaticRoute {
         }
         public GetServiceLanVpnFeatureIpv4StaticRoute build() {
             final var _resultValue = new GetServiceLanVpnFeatureIpv4StaticRoute();
-            _resultValue.gatewayDhcp = gatewayDhcp;
+            _resultValue.dhcp = dhcp;
+            _resultValue.gateway = gateway;
             _resultValue.networkAddress = networkAddress;
             _resultValue.networkAddressVariable = networkAddressVariable;
             _resultValue.nextHopWithTrackers = nextHopWithTrackers;

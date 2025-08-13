@@ -62,6 +62,12 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? ExpandedCommunityListId { get; set; }
 
         /// <summary>
+        /// Expanded community list variable, Attribute conditional on `type` being equal to `expandedCommunityInline`
+        /// </summary>
+        [Input("expandedCommunityListVariable")]
+        public Input<string>? ExpandedCommunityListVariable { get; set; }
+
+        /// <summary>
         /// Expanded community list version
         /// </summary>
         [Input("expandedCommunityListVersion")]
@@ -146,7 +152,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Type of match entry
-        ///   - Choices: `address`, `asPath`, `advancedCommunity`, `expandedCommunity`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
+        ///   - Choices: `address`, `asPath`, `advancedCommunity`, `expandedCommunity`, `expandedCommunityInline`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
         /// </summary>
         [Input("type", required: true)]
         public Input<string> Type { get; set; } = null!;

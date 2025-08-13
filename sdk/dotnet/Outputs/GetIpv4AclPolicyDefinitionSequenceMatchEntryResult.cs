@@ -34,13 +34,17 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string DestinationIp;
         /// <summary>
+        /// Destination IP prefix variable
+        /// </summary>
+        public readonly string DestinationIpVariable;
+        /// <summary>
         /// Destination ports. Single value (0-65535) or ranges separated by spaces.
         /// </summary>
         public readonly string DestinationPorts;
         /// <summary>
         /// DSCP value
         /// </summary>
-        public readonly int Dscp;
+        public readonly string Dscp;
         /// <summary>
         /// ICMP Message
         /// </summary>
@@ -70,6 +74,10 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string SourceIp;
         /// <summary>
+        /// Source IP prefix variable
+        /// </summary>
+        public readonly string SourceIpVariable;
+        /// <summary>
         /// Source ports. Single value (0-65535) or ranges separated by spaces.
         /// </summary>
         public readonly string SourcePorts;
@@ -94,9 +102,11 @@ namespace Pulumi.Sdwan.Outputs
 
             string destinationIp,
 
+            string destinationIpVariable,
+
             string destinationPorts,
 
-            int dscp,
+            string dscp,
 
             string icmpMessage,
 
@@ -112,6 +122,8 @@ namespace Pulumi.Sdwan.Outputs
 
             string sourceIp,
 
+            string sourceIpVariable,
+
             string sourcePorts,
 
             string tcp,
@@ -123,6 +135,7 @@ namespace Pulumi.Sdwan.Outputs
             DestinationDataIpv4PrefixListId = destinationDataIpv4PrefixListId;
             DestinationDataIpv4PrefixListVersion = destinationDataIpv4PrefixListVersion;
             DestinationIp = destinationIp;
+            DestinationIpVariable = destinationIpVariable;
             DestinationPorts = destinationPorts;
             Dscp = dscp;
             IcmpMessage = icmpMessage;
@@ -132,6 +145,7 @@ namespace Pulumi.Sdwan.Outputs
             SourceDataIpv4PrefixListId = sourceDataIpv4PrefixListId;
             SourceDataIpv4PrefixListVersion = sourceDataIpv4PrefixListVersion;
             SourceIp = sourceIp;
+            SourceIpVariable = sourceIpVariable;
             SourcePorts = sourcePorts;
             Tcp = tcp;
             Type = type;

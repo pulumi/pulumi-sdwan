@@ -280,31 +280,34 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
         :param pulumi.Input[_builtins.str] media_type: Media type - Choices: `auto-select`, `rj45`, `sfp`
         :param pulumi.Input[_builtins.str] media_type_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.bool] nat64: NAT64 on this interface - Default value: `false`
-        :param pulumi.Input[_builtins.bool] nat66: NAT66 on this interface - Default value: `false`
+        :param pulumi.Input[_builtins.bool] nat64: NAT64 on this interface, Attribute conditional on `nat_ipv6` being equal to `true` - Default value: `false`
+        :param pulumi.Input[_builtins.bool] nat66: NAT66 on this interface, Attribute conditional on `nat_ipv6` being equal to `true` - Default value: `false`
         :param pulumi.Input[_builtins.bool] nat_ipv4: enable Network Address Translation on this interface - Default value: `false`
         :param pulumi.Input[_builtins.str] nat_ipv4_variable: Variable name
         :param pulumi.Input[_builtins.bool] nat_ipv6: enable Network Address Translation ipv6 on this interface - Default value: `false`
         :param pulumi.Input[_builtins.str] nat_ipv6_variable: Variable name
-        :param pulumi.Input[_builtins.str] nat_loopback: NAT Inside Source Loopback Interface
-        :param pulumi.Input[_builtins.str] nat_loopback_variable: Variable name
-        :param pulumi.Input[_builtins.bool] nat_overload: NAT Overload - Default value: `true`
-        :param pulumi.Input[_builtins.str] nat_overload_variable: Variable name
-        :param pulumi.Input[_builtins.int] nat_prefix_length: NAT Pool Prefix Length - Range: `1`-`32`
-        :param pulumi.Input[_builtins.str] nat_prefix_length_variable: Variable name
-        :param pulumi.Input[_builtins.str] nat_range_end: NAT Pool Range End
-        :param pulumi.Input[_builtins.str] nat_range_end_variable: Variable name
-        :param pulumi.Input[_builtins.str] nat_range_start: NAT Pool Range Start
-        :param pulumi.Input[_builtins.str] nat_range_start_variable: Variable name
-        :param pulumi.Input[_builtins.int] nat_tcp_timeout: Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
-        :param pulumi.Input[_builtins.str] nat_tcp_timeout_variable: Variable name
-        :param pulumi.Input[_builtins.str] nat_type: NAT Type - Choices: `interface`, `pool`, `loopback` - Default value: `interface`
-        :param pulumi.Input[_builtins.str] nat_type_variable: Variable name
-        :param pulumi.Input[_builtins.int] nat_udp_timeout: Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
-        :param pulumi.Input[_builtins.str] nat_udp_timeout_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input['TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs']]] new_static_nats: static NAT
-        :param pulumi.Input[_builtins.bool] per_tunnel_qos: Per-tunnel Qos - Default value: `false`
-        :param pulumi.Input[_builtins.str] per_tunnel_qos_variable: Variable name
+        :param pulumi.Input[_builtins.str] nat_loopback: NAT Inside Source Loopback Interface, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.str] nat_loopback_variable: Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.bool] nat_overload: NAT Overload, Attribute conditional on `nat_ipv4` being equal to `true` - Default value: `true`
+        :param pulumi.Input[_builtins.str] nat_overload_variable: Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.int] nat_prefix_length: NAT Pool Prefix Length, Attribute conditional on `nat_ipv4` being equal to `true` - Range: `1`-`32`
+        :param pulumi.Input[_builtins.str] nat_prefix_length_variable: Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.str] nat_range_end: NAT Pool Range End, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.str] nat_range_end_variable: Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.str] nat_range_start: NAT Pool Range Start, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.str] nat_range_start_variable: Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.int] nat_tcp_timeout: Set NAT TCP session timeout, in minutes, Attribute conditional on `nat_ipv4` being equal to `true` - Range: `1`-`8947` -
+               Default value: `60`
+        :param pulumi.Input[_builtins.str] nat_tcp_timeout_variable: Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.str] nat_type: NAT Type, Attribute conditional on `nat_ipv4` being equal to `true` - Choices: `interface`, `pool`, `loopback` - Default
+               value: `interface`
+        :param pulumi.Input[_builtins.str] nat_type_variable: Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.int] nat_udp_timeout: Set NAT UDP session timeout, in minutes, Attribute conditional on `nat_ipv4` being equal to `true` - Range: `1`-`8947` -
+               Default value: `1`
+        :param pulumi.Input[_builtins.str] nat_udp_timeout_variable: Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[Sequence[pulumi.Input['TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs']]] new_static_nats: static NAT, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.bool] per_tunnel_qos: Per-tunnel Qos, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
+        :param pulumi.Input[_builtins.str] per_tunnel_qos_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         :param pulumi.Input[_builtins.bool] qos_adaptive: Adaptive QoS - Default value: `false`
         :param pulumi.Input[_builtins.bool] qos_adaptive_bandwidth_downstream: Shaping Rate Downstream - Default value: `false`
         :param pulumi.Input[_builtins.bool] qos_adaptive_bandwidth_upstream: Shaping Rate Upstream - Default value: `false`
@@ -330,15 +333,16 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
         :param pulumi.Input[_builtins.str] speed: Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
         :param pulumi.Input[_builtins.str] speed_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input['TransportWanVpnInterfaceEthernetFeatureStaticNat66Args']]] static_nat66s: static NAT66
+        :param pulumi.Input[Sequence[pulumi.Input['TransportWanVpnInterfaceEthernetFeatureStaticNat66Args']]] static_nat66s: static NAT66, Attribute conditional on `nat_ipv6` being equal to `true`
         :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
         :param pulumi.Input[_builtins.str] tcp_mss_variable: Variable name
         :param pulumi.Input[_builtins.str] tloc_extension: Extends a local TLOC to a remote node only for vpn 0
         :param pulumi.Input[_builtins.str] tloc_extension_variable: Variable name
         :param pulumi.Input[_builtins.str] tracker: Enable tracker for this interface
         :param pulumi.Input[_builtins.str] tracker_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_bandwidth_percent: Tunnels Bandwidth Percent - Range: `1`-`100` - Default value: `50`
-        :param pulumi.Input[_builtins.str] tunnel_bandwidth_percent_variable: Variable name
+        :param pulumi.Input[_builtins.int] tunnel_bandwidth_percent: Tunnels Bandwidth Percent, Attribute conditional on `tunnel_interface` being equal to `true` - Range: `1`-`100` -
+               Default value: `50`
+        :param pulumi.Input[_builtins.str] tunnel_bandwidth_percent_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         :param pulumi.Input[_builtins.bool] tunnel_interface: Tunnel Interface on/off - Default value: `false`
         :param pulumi.Input[_builtins.bool] tunnel_interface_allow_all: Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_all_variable: Variable name
@@ -366,54 +370,69 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_ssh_variable: Variable name
         :param pulumi.Input[_builtins.bool] tunnel_interface_allow_stun: Allow/Deny STUN - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_stun_variable: Variable name
-        :param pulumi.Input[_builtins.str] tunnel_interface_bind_loopback_tunnel: Bind loopback tunnel interface to a physical interface
-        :param pulumi.Input[_builtins.str] tunnel_interface_bind_loopback_tunnel_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_border: Set TLOC as border TLOC - Default value: `false`
-        :param pulumi.Input[_builtins.str] tunnel_interface_border_variable: Variable name
-        :param pulumi.Input[_builtins.str] tunnel_interface_carrier: Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-               `carrier7`, `carrier8` - Default value: `default`
-        :param pulumi.Input[_builtins.str] tunnel_interface_carrier_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
-        :param pulumi.Input[_builtins.str] tunnel_interface_clear_dont_fragment_variable: Variable name
-        :param pulumi.Input[_builtins.str] tunnel_interface_color: Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-               `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-               `private4`, `private5`, `private6` - Default value: `mpls`
-        :param pulumi.Input[_builtins.bool] tunnel_interface_color_restrict: Restrict this TLOC behavior - Default value: `false`
-        :param pulumi.Input[_builtins.str] tunnel_interface_color_restrict_variable: Variable name
-        :param pulumi.Input[_builtins.str] tunnel_interface_color_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_cts_sgt_propagation: CTS SGT Propagation configuration - Default value: `false`
-        :param pulumi.Input[_builtins.str] tunnel_interface_cts_sgt_propagation_variable: Variable name
+        :param pulumi.Input[_builtins.str] tunnel_interface_bind_loopback_tunnel: Bind loopback tunnel interface to a physical interface, Attribute conditional on `tunnel_interface` being equal to
+               `true`
+        :param pulumi.Input[_builtins.str] tunnel_interface_bind_loopback_tunnel_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_border: Set TLOC as border TLOC, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_border_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.str] tunnel_interface_carrier: Set carrier for TLOC, Attribute conditional on `tunnel_interface` being equal to `true` - Choices: `default`,
+               `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8` - Default value:
+               `default`
+        :param pulumi.Input[_builtins.str] tunnel_interface_carrier_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnel_interface` being
+               equal to `true` - Default value: `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_clear_dont_fragment_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.str] tunnel_interface_color: Set color for TLOC, Attribute conditional on `tunnel_interface` being equal to `true` - Choices: `default`, `mpls`,
+               `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`,
+               `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6` - Default value:
+               `mpls`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_color_restrict: Restrict this TLOC behavior, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_color_restrict_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.str] tunnel_interface_color_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_cts_sgt_propagation: CTS SGT Propagation configuration, Attribute conditional on `tunnel_interface` being equal to `true` - Default value:
+               `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_cts_sgt_propagation_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         :param pulumi.Input[Sequence[pulumi.Input['TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgs']]] tunnel_interface_encapsulations: Encapsulation for TLOC
-        :param pulumi.Input[_builtins.str] tunnel_interface_exclude_controller_group_list_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] tunnel_interface_exclude_controller_group_lists: Exclude the following controller groups defined in this list.
-        :param pulumi.Input[_builtins.str] tunnel_interface_gre_tunnel_destination_ip: GRE tunnel destination IP
-        :param pulumi.Input[_builtins.str] tunnel_interface_gre_tunnel_destination_ip_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_groups: List of groups - Range: `1`-`4294967295`
-        :param pulumi.Input[_builtins.str] tunnel_interface_groups_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_hello_interval: Set time period of control hello packets <100..600000> milli seconds - Range: `100`-`600000` - Default value: `1000`
-        :param pulumi.Input[_builtins.str] tunnel_interface_hello_interval_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_hello_tolerance: Set tolerance of control hello packets <12..6000> seconds - Range: `12`-`6000` - Default value: `12`
-        :param pulumi.Input[_builtins.str] tunnel_interface_hello_tolerance_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_last_resort_circuit: Set TLOC as last resort - Default value: `false`
-        :param pulumi.Input[_builtins.str] tunnel_interface_last_resort_circuit_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_low_bandwidth_link: Set the interface as a low-bandwidth circuit - Default value: `false`
-        :param pulumi.Input[_builtins.str] tunnel_interface_low_bandwidth_link_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_max_control_connections: Maximum Control Connections - Range: `0`-`100`
-        :param pulumi.Input[_builtins.str] tunnel_interface_max_control_connections_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_nat_refresh_interval: Set time period of nat refresh packets <1...60> seconds - Range: `1`-`60` - Default value: `5`
-        :param pulumi.Input[_builtins.str] tunnel_interface_nat_refresh_interval_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_network_broadcast: Accept and respond to network-prefix-directed broadcasts - Default value: `false`
-        :param pulumi.Input[_builtins.str] tunnel_interface_network_broadcast_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_port_hop: Disallow port hopping on the tunnel interface - Default value: `true`
-        :param pulumi.Input[_builtins.str] tunnel_interface_port_hop_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_tunnel_tcp_mss: Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
-        :param pulumi.Input[_builtins.str] tunnel_interface_tunnel_tcp_mss_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_vbond_as_stun_server: Put this wan interface in STUN mode only - Default value: `false`
-        :param pulumi.Input[_builtins.str] tunnel_interface_vbond_as_stun_server_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_vmanage_connection_preference: Set interface preference for control connection to vManage <0..8> - Range: `0`-`8` - Default value: `5`
-        :param pulumi.Input[_builtins.str] tunnel_interface_vmanage_connection_preference_variable: Variable name
-        :param pulumi.Input[_builtins.str] tunnel_qos_mode: Set tunnel QoS mode - Choices: `hub`, `spoke`
-        :param pulumi.Input[_builtins.str] tunnel_qos_mode_variable: Variable name
+        :param pulumi.Input[_builtins.str] tunnel_interface_exclude_controller_group_list_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] tunnel_interface_exclude_controller_group_lists: Exclude the following controller groups defined in this list., Attribute conditional on `tunnel_interface` being equal
+               to `true`
+        :param pulumi.Input[_builtins.str] tunnel_interface_gre_tunnel_destination_ip: GRE tunnel destination IP, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.str] tunnel_interface_gre_tunnel_destination_ip_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.int] tunnel_interface_groups: List of groups, Attribute conditional on `tunnel_interface` being equal to `true` - Range: `1`-`4294967295`
+        :param pulumi.Input[_builtins.str] tunnel_interface_groups_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.int] tunnel_interface_hello_interval: Set time period of control hello packets <100..600000> milli seconds, Attribute conditional on `tunnel_interface` being
+               equal to `true` - Range: `100`-`600000` - Default value: `1000`
+        :param pulumi.Input[_builtins.str] tunnel_interface_hello_interval_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.int] tunnel_interface_hello_tolerance: Set tolerance of control hello packets <12..6000> seconds, Attribute conditional on `tunnel_interface` being equal to
+               `true` - Range: `12`-`6000` - Default value: `12`
+        :param pulumi.Input[_builtins.str] tunnel_interface_hello_tolerance_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_last_resort_circuit: Set TLOC as last resort, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_last_resort_circuit_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_low_bandwidth_link: Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnel_interface` being equal to `true` -
+               Default value: `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_low_bandwidth_link_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.int] tunnel_interface_max_control_connections: Maximum Control Connections, Attribute conditional on `tunnel_interface` being equal to `true` - Range: `0`-`100`
+        :param pulumi.Input[_builtins.str] tunnel_interface_max_control_connections_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.int] tunnel_interface_nat_refresh_interval: Set time period of nat refresh packets <1...60> seconds, Attribute conditional on `tunnel_interface` being equal to
+               `true` - Range: `1`-`60` - Default value: `5`
+        :param pulumi.Input[_builtins.str] tunnel_interface_nat_refresh_interval_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_network_broadcast: Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnel_interface` being equal to
+               `true` - Default value: `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_network_broadcast_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_port_hop: Disallow port hopping on the tunnel interface, Attribute conditional on `tunnel_interface` being equal to `true` -
+               Default value: `true`
+        :param pulumi.Input[_builtins.str] tunnel_interface_port_hop_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.int] tunnel_interface_tunnel_tcp_mss: Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnel_interface` being equal to `true` - Range:
+               `500`-`1460`
+        :param pulumi.Input[_builtins.str] tunnel_interface_tunnel_tcp_mss_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_vbond_as_stun_server: Put this wan interface in STUN mode only, Attribute conditional on `tunnel_interface` being equal to `true` - Default
+               value: `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_vbond_as_stun_server_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.int] tunnel_interface_vmanage_connection_preference: Set interface preference for control connection to vManage <0..8>, Attribute conditional on `tunnel_interface` being
+               equal to `true` - Range: `0`-`8` - Default value: `5`
+        :param pulumi.Input[_builtins.str] tunnel_interface_vmanage_connection_preference_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.str] tunnel_qos_mode: Set tunnel QoS mode, Attribute conditional on `tunnel_interface` being equal to `true` - Choices: `hub`, `spoke`
+        :param pulumi.Input[_builtins.str] tunnel_qos_mode_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         :param pulumi.Input[_builtins.str] xconnect: Extend remote TLOC over a GRE tunnel to a local WAN interface
         :param pulumi.Input[_builtins.str] xconnect_variable: Variable name
         """
@@ -1530,7 +1549,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter
     def nat64(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        NAT64 on this interface - Default value: `false`
+        NAT64 on this interface, Attribute conditional on `nat_ipv6` being equal to `true` - Default value: `false`
         """
         return pulumi.get(self, "nat64")
 
@@ -1542,7 +1561,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter
     def nat66(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        NAT66 on this interface - Default value: `false`
+        NAT66 on this interface, Attribute conditional on `nat_ipv6` being equal to `true` - Default value: `false`
         """
         return pulumi.get(self, "nat66")
 
@@ -1602,7 +1621,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="natLoopback")
     def nat_loopback(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        NAT Inside Source Loopback Interface
+        NAT Inside Source Loopback Interface, Attribute conditional on `nat_ipv4` being equal to `true`
         """
         return pulumi.get(self, "nat_loopback")
 
@@ -1614,7 +1633,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="natLoopbackVariable")
     def nat_loopback_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         """
         return pulumi.get(self, "nat_loopback_variable")
 
@@ -1626,7 +1645,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="natOverload")
     def nat_overload(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        NAT Overload - Default value: `true`
+        NAT Overload, Attribute conditional on `nat_ipv4` being equal to `true` - Default value: `true`
         """
         return pulumi.get(self, "nat_overload")
 
@@ -1638,7 +1657,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="natOverloadVariable")
     def nat_overload_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         """
         return pulumi.get(self, "nat_overload_variable")
 
@@ -1650,7 +1669,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="natPrefixLength")
     def nat_prefix_length(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        NAT Pool Prefix Length - Range: `1`-`32`
+        NAT Pool Prefix Length, Attribute conditional on `nat_ipv4` being equal to `true` - Range: `1`-`32`
         """
         return pulumi.get(self, "nat_prefix_length")
 
@@ -1662,7 +1681,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="natPrefixLengthVariable")
     def nat_prefix_length_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         """
         return pulumi.get(self, "nat_prefix_length_variable")
 
@@ -1674,7 +1693,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="natRangeEnd")
     def nat_range_end(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        NAT Pool Range End
+        NAT Pool Range End, Attribute conditional on `nat_ipv4` being equal to `true`
         """
         return pulumi.get(self, "nat_range_end")
 
@@ -1686,7 +1705,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="natRangeEndVariable")
     def nat_range_end_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         """
         return pulumi.get(self, "nat_range_end_variable")
 
@@ -1698,7 +1717,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="natRangeStart")
     def nat_range_start(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        NAT Pool Range Start
+        NAT Pool Range Start, Attribute conditional on `nat_ipv4` being equal to `true`
         """
         return pulumi.get(self, "nat_range_start")
 
@@ -1710,7 +1729,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="natRangeStartVariable")
     def nat_range_start_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         """
         return pulumi.get(self, "nat_range_start_variable")
 
@@ -1722,7 +1741,8 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="natTcpTimeout")
     def nat_tcp_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+        Set NAT TCP session timeout, in minutes, Attribute conditional on `nat_ipv4` being equal to `true` - Range: `1`-`8947` -
+        Default value: `60`
         """
         return pulumi.get(self, "nat_tcp_timeout")
 
@@ -1734,7 +1754,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="natTcpTimeoutVariable")
     def nat_tcp_timeout_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         """
         return pulumi.get(self, "nat_tcp_timeout_variable")
 
@@ -1746,7 +1766,8 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="natType")
     def nat_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        NAT Type - Choices: `interface`, `pool`, `loopback` - Default value: `interface`
+        NAT Type, Attribute conditional on `nat_ipv4` being equal to `true` - Choices: `interface`, `pool`, `loopback` - Default
+        value: `interface`
         """
         return pulumi.get(self, "nat_type")
 
@@ -1758,7 +1779,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="natTypeVariable")
     def nat_type_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         """
         return pulumi.get(self, "nat_type_variable")
 
@@ -1770,7 +1791,8 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="natUdpTimeout")
     def nat_udp_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+        Set NAT UDP session timeout, in minutes, Attribute conditional on `nat_ipv4` being equal to `true` - Range: `1`-`8947` -
+        Default value: `1`
         """
         return pulumi.get(self, "nat_udp_timeout")
 
@@ -1782,7 +1804,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="natUdpTimeoutVariable")
     def nat_udp_timeout_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         """
         return pulumi.get(self, "nat_udp_timeout_variable")
 
@@ -1794,7 +1816,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="newStaticNats")
     def new_static_nats(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs']]]]:
         """
-        static NAT
+        static NAT, Attribute conditional on `nat_ipv4` being equal to `true`
         """
         return pulumi.get(self, "new_static_nats")
 
@@ -1806,7 +1828,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="perTunnelQos")
     def per_tunnel_qos(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Per-tunnel Qos - Default value: `false`
+        Per-tunnel Qos, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
         """
         return pulumi.get(self, "per_tunnel_qos")
 
@@ -1818,7 +1840,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="perTunnelQosVariable")
     def per_tunnel_qos_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "per_tunnel_qos_variable")
 
@@ -2130,7 +2152,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="staticNat66s")
     def static_nat66s(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['TransportWanVpnInterfaceEthernetFeatureStaticNat66Args']]]]:
         """
-        static NAT66
+        static NAT66, Attribute conditional on `nat_ipv6` being equal to `true`
         """
         return pulumi.get(self, "static_nat66s")
 
@@ -2214,7 +2236,8 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelBandwidthPercent")
     def tunnel_bandwidth_percent(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Tunnels Bandwidth Percent - Range: `1`-`100` - Default value: `50`
+        Tunnels Bandwidth Percent, Attribute conditional on `tunnel_interface` being equal to `true` - Range: `1`-`100` -
+        Default value: `50`
         """
         return pulumi.get(self, "tunnel_bandwidth_percent")
 
@@ -2226,7 +2249,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelBandwidthPercentVariable")
     def tunnel_bandwidth_percent_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_bandwidth_percent_variable")
 
@@ -2562,7 +2585,8 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfaceBindLoopbackTunnel")
     def tunnel_interface_bind_loopback_tunnel(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Bind loopback tunnel interface to a physical interface
+        Bind loopback tunnel interface to a physical interface, Attribute conditional on `tunnel_interface` being equal to
+        `true`
         """
         return pulumi.get(self, "tunnel_interface_bind_loopback_tunnel")
 
@@ -2574,7 +2598,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfaceBindLoopbackTunnelVariable")
     def tunnel_interface_bind_loopback_tunnel_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_bind_loopback_tunnel_variable")
 
@@ -2586,7 +2610,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfaceBorder")
     def tunnel_interface_border(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Set TLOC as border TLOC - Default value: `false`
+        Set TLOC as border TLOC, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_border")
 
@@ -2598,7 +2622,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfaceBorderVariable")
     def tunnel_interface_border_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_border_variable")
 
@@ -2610,8 +2634,9 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfaceCarrier")
     def tunnel_interface_carrier(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-        `carrier7`, `carrier8` - Default value: `default`
+        Set carrier for TLOC, Attribute conditional on `tunnel_interface` being equal to `true` - Choices: `default`,
+        `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8` - Default value:
+        `default`
         """
         return pulumi.get(self, "tunnel_interface_carrier")
 
@@ -2623,7 +2648,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfaceCarrierVariable")
     def tunnel_interface_carrier_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_carrier_variable")
 
@@ -2635,7 +2660,8 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfaceClearDontFragment")
     def tunnel_interface_clear_dont_fragment(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnel_interface` being
+        equal to `true` - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_clear_dont_fragment")
 
@@ -2647,7 +2673,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfaceClearDontFragmentVariable")
     def tunnel_interface_clear_dont_fragment_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_clear_dont_fragment_variable")
 
@@ -2659,9 +2685,10 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfaceColor")
     def tunnel_interface_color(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-        `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-        `private4`, `private5`, `private6` - Default value: `mpls`
+        Set color for TLOC, Attribute conditional on `tunnel_interface` being equal to `true` - Choices: `default`, `mpls`,
+        `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`,
+        `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6` - Default value:
+        `mpls`
         """
         return pulumi.get(self, "tunnel_interface_color")
 
@@ -2673,7 +2700,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfaceColorRestrict")
     def tunnel_interface_color_restrict(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Restrict this TLOC behavior - Default value: `false`
+        Restrict this TLOC behavior, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_color_restrict")
 
@@ -2685,7 +2712,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfaceColorRestrictVariable")
     def tunnel_interface_color_restrict_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_color_restrict_variable")
 
@@ -2697,7 +2724,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfaceColorVariable")
     def tunnel_interface_color_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_color_variable")
 
@@ -2709,7 +2736,8 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfaceCtsSgtPropagation")
     def tunnel_interface_cts_sgt_propagation(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        CTS SGT Propagation configuration - Default value: `false`
+        CTS SGT Propagation configuration, Attribute conditional on `tunnel_interface` being equal to `true` - Default value:
+        `false`
         """
         return pulumi.get(self, "tunnel_interface_cts_sgt_propagation")
 
@@ -2721,7 +2749,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfaceCtsSgtPropagationVariable")
     def tunnel_interface_cts_sgt_propagation_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_cts_sgt_propagation_variable")
 
@@ -2745,7 +2773,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfaceExcludeControllerGroupListVariable")
     def tunnel_interface_exclude_controller_group_list_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_exclude_controller_group_list_variable")
 
@@ -2757,7 +2785,8 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfaceExcludeControllerGroupLists")
     def tunnel_interface_exclude_controller_group_lists(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]:
         """
-        Exclude the following controller groups defined in this list.
+        Exclude the following controller groups defined in this list., Attribute conditional on `tunnel_interface` being equal
+        to `true`
         """
         return pulumi.get(self, "tunnel_interface_exclude_controller_group_lists")
 
@@ -2769,7 +2798,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfaceGreTunnelDestinationIp")
     def tunnel_interface_gre_tunnel_destination_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        GRE tunnel destination IP
+        GRE tunnel destination IP, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_gre_tunnel_destination_ip")
 
@@ -2781,7 +2810,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfaceGreTunnelDestinationIpVariable")
     def tunnel_interface_gre_tunnel_destination_ip_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_gre_tunnel_destination_ip_variable")
 
@@ -2793,7 +2822,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfaceGroups")
     def tunnel_interface_groups(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        List of groups - Range: `1`-`4294967295`
+        List of groups, Attribute conditional on `tunnel_interface` being equal to `true` - Range: `1`-`4294967295`
         """
         return pulumi.get(self, "tunnel_interface_groups")
 
@@ -2805,7 +2834,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfaceGroupsVariable")
     def tunnel_interface_groups_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_groups_variable")
 
@@ -2817,7 +2846,8 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfaceHelloInterval")
     def tunnel_interface_hello_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set time period of control hello packets <100..600000> milli seconds - Range: `100`-`600000` - Default value: `1000`
+        Set time period of control hello packets <100..600000> milli seconds, Attribute conditional on `tunnel_interface` being
+        equal to `true` - Range: `100`-`600000` - Default value: `1000`
         """
         return pulumi.get(self, "tunnel_interface_hello_interval")
 
@@ -2829,7 +2859,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfaceHelloIntervalVariable")
     def tunnel_interface_hello_interval_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_hello_interval_variable")
 
@@ -2841,7 +2871,8 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfaceHelloTolerance")
     def tunnel_interface_hello_tolerance(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set tolerance of control hello packets <12..6000> seconds - Range: `12`-`6000` - Default value: `12`
+        Set tolerance of control hello packets <12..6000> seconds, Attribute conditional on `tunnel_interface` being equal to
+        `true` - Range: `12`-`6000` - Default value: `12`
         """
         return pulumi.get(self, "tunnel_interface_hello_tolerance")
 
@@ -2853,7 +2884,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfaceHelloToleranceVariable")
     def tunnel_interface_hello_tolerance_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_hello_tolerance_variable")
 
@@ -2865,7 +2896,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfaceLastResortCircuit")
     def tunnel_interface_last_resort_circuit(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Set TLOC as last resort - Default value: `false`
+        Set TLOC as last resort, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_last_resort_circuit")
 
@@ -2877,7 +2908,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfaceLastResortCircuitVariable")
     def tunnel_interface_last_resort_circuit_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_last_resort_circuit_variable")
 
@@ -2889,7 +2920,8 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfaceLowBandwidthLink")
     def tunnel_interface_low_bandwidth_link(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Set the interface as a low-bandwidth circuit - Default value: `false`
+        Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnel_interface` being equal to `true` -
+        Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_low_bandwidth_link")
 
@@ -2901,7 +2933,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfaceLowBandwidthLinkVariable")
     def tunnel_interface_low_bandwidth_link_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_low_bandwidth_link_variable")
 
@@ -2913,7 +2945,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfaceMaxControlConnections")
     def tunnel_interface_max_control_connections(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Maximum Control Connections - Range: `0`-`100`
+        Maximum Control Connections, Attribute conditional on `tunnel_interface` being equal to `true` - Range: `0`-`100`
         """
         return pulumi.get(self, "tunnel_interface_max_control_connections")
 
@@ -2925,7 +2957,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfaceMaxControlConnectionsVariable")
     def tunnel_interface_max_control_connections_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_max_control_connections_variable")
 
@@ -2937,7 +2969,8 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfaceNatRefreshInterval")
     def tunnel_interface_nat_refresh_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set time period of nat refresh packets <1...60> seconds - Range: `1`-`60` - Default value: `5`
+        Set time period of nat refresh packets <1...60> seconds, Attribute conditional on `tunnel_interface` being equal to
+        `true` - Range: `1`-`60` - Default value: `5`
         """
         return pulumi.get(self, "tunnel_interface_nat_refresh_interval")
 
@@ -2949,7 +2982,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfaceNatRefreshIntervalVariable")
     def tunnel_interface_nat_refresh_interval_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_nat_refresh_interval_variable")
 
@@ -2961,7 +2994,8 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfaceNetworkBroadcast")
     def tunnel_interface_network_broadcast(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Accept and respond to network-prefix-directed broadcasts - Default value: `false`
+        Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnel_interface` being equal to
+        `true` - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_network_broadcast")
 
@@ -2973,7 +3007,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfaceNetworkBroadcastVariable")
     def tunnel_interface_network_broadcast_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_network_broadcast_variable")
 
@@ -2985,7 +3019,8 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfacePortHop")
     def tunnel_interface_port_hop(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Disallow port hopping on the tunnel interface - Default value: `true`
+        Disallow port hopping on the tunnel interface, Attribute conditional on `tunnel_interface` being equal to `true` -
+        Default value: `true`
         """
         return pulumi.get(self, "tunnel_interface_port_hop")
 
@@ -2997,7 +3032,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfacePortHopVariable")
     def tunnel_interface_port_hop_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_port_hop_variable")
 
@@ -3009,7 +3044,8 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfaceTunnelTcpMss")
     def tunnel_interface_tunnel_tcp_mss(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnel_interface` being equal to `true` - Range:
+        `500`-`1460`
         """
         return pulumi.get(self, "tunnel_interface_tunnel_tcp_mss")
 
@@ -3021,7 +3057,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfaceTunnelTcpMssVariable")
     def tunnel_interface_tunnel_tcp_mss_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_tunnel_tcp_mss_variable")
 
@@ -3033,7 +3069,8 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfaceVbondAsStunServer")
     def tunnel_interface_vbond_as_stun_server(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Put this wan interface in STUN mode only - Default value: `false`
+        Put this wan interface in STUN mode only, Attribute conditional on `tunnel_interface` being equal to `true` - Default
+        value: `false`
         """
         return pulumi.get(self, "tunnel_interface_vbond_as_stun_server")
 
@@ -3045,7 +3082,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfaceVbondAsStunServerVariable")
     def tunnel_interface_vbond_as_stun_server_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_vbond_as_stun_server_variable")
 
@@ -3057,7 +3094,8 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfaceVmanageConnectionPreference")
     def tunnel_interface_vmanage_connection_preference(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set interface preference for control connection to vManage <0..8> - Range: `0`-`8` - Default value: `5`
+        Set interface preference for control connection to vManage <0..8>, Attribute conditional on `tunnel_interface` being
+        equal to `true` - Range: `0`-`8` - Default value: `5`
         """
         return pulumi.get(self, "tunnel_interface_vmanage_connection_preference")
 
@@ -3069,7 +3107,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelInterfaceVmanageConnectionPreferenceVariable")
     def tunnel_interface_vmanage_connection_preference_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_vmanage_connection_preference_variable")
 
@@ -3081,7 +3119,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelQosMode")
     def tunnel_qos_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set tunnel QoS mode - Choices: `hub`, `spoke`
+        Set tunnel QoS mode, Attribute conditional on `tunnel_interface` being equal to `true` - Choices: `hub`, `spoke`
         """
         return pulumi.get(self, "tunnel_qos_mode")
 
@@ -3093,7 +3131,7 @@ class TransportWanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tunnelQosModeVariable")
     def tunnel_qos_mode_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_qos_mode_variable")
 
@@ -3388,31 +3426,34 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
         :param pulumi.Input[_builtins.str] media_type: Media type - Choices: `auto-select`, `rj45`, `sfp`
         :param pulumi.Input[_builtins.str] media_type_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.bool] nat64: NAT64 on this interface - Default value: `false`
-        :param pulumi.Input[_builtins.bool] nat66: NAT66 on this interface - Default value: `false`
+        :param pulumi.Input[_builtins.bool] nat64: NAT64 on this interface, Attribute conditional on `nat_ipv6` being equal to `true` - Default value: `false`
+        :param pulumi.Input[_builtins.bool] nat66: NAT66 on this interface, Attribute conditional on `nat_ipv6` being equal to `true` - Default value: `false`
         :param pulumi.Input[_builtins.bool] nat_ipv4: enable Network Address Translation on this interface - Default value: `false`
         :param pulumi.Input[_builtins.str] nat_ipv4_variable: Variable name
         :param pulumi.Input[_builtins.bool] nat_ipv6: enable Network Address Translation ipv6 on this interface - Default value: `false`
         :param pulumi.Input[_builtins.str] nat_ipv6_variable: Variable name
-        :param pulumi.Input[_builtins.str] nat_loopback: NAT Inside Source Loopback Interface
-        :param pulumi.Input[_builtins.str] nat_loopback_variable: Variable name
-        :param pulumi.Input[_builtins.bool] nat_overload: NAT Overload - Default value: `true`
-        :param pulumi.Input[_builtins.str] nat_overload_variable: Variable name
-        :param pulumi.Input[_builtins.int] nat_prefix_length: NAT Pool Prefix Length - Range: `1`-`32`
-        :param pulumi.Input[_builtins.str] nat_prefix_length_variable: Variable name
-        :param pulumi.Input[_builtins.str] nat_range_end: NAT Pool Range End
-        :param pulumi.Input[_builtins.str] nat_range_end_variable: Variable name
-        :param pulumi.Input[_builtins.str] nat_range_start: NAT Pool Range Start
-        :param pulumi.Input[_builtins.str] nat_range_start_variable: Variable name
-        :param pulumi.Input[_builtins.int] nat_tcp_timeout: Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
-        :param pulumi.Input[_builtins.str] nat_tcp_timeout_variable: Variable name
-        :param pulumi.Input[_builtins.str] nat_type: NAT Type - Choices: `interface`, `pool`, `loopback` - Default value: `interface`
-        :param pulumi.Input[_builtins.str] nat_type_variable: Variable name
-        :param pulumi.Input[_builtins.int] nat_udp_timeout: Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
-        :param pulumi.Input[_builtins.str] nat_udp_timeout_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input['TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs']]] new_static_nats: static NAT
-        :param pulumi.Input[_builtins.bool] per_tunnel_qos: Per-tunnel Qos - Default value: `false`
-        :param pulumi.Input[_builtins.str] per_tunnel_qos_variable: Variable name
+        :param pulumi.Input[_builtins.str] nat_loopback: NAT Inside Source Loopback Interface, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.str] nat_loopback_variable: Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.bool] nat_overload: NAT Overload, Attribute conditional on `nat_ipv4` being equal to `true` - Default value: `true`
+        :param pulumi.Input[_builtins.str] nat_overload_variable: Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.int] nat_prefix_length: NAT Pool Prefix Length, Attribute conditional on `nat_ipv4` being equal to `true` - Range: `1`-`32`
+        :param pulumi.Input[_builtins.str] nat_prefix_length_variable: Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.str] nat_range_end: NAT Pool Range End, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.str] nat_range_end_variable: Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.str] nat_range_start: NAT Pool Range Start, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.str] nat_range_start_variable: Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.int] nat_tcp_timeout: Set NAT TCP session timeout, in minutes, Attribute conditional on `nat_ipv4` being equal to `true` - Range: `1`-`8947` -
+               Default value: `60`
+        :param pulumi.Input[_builtins.str] nat_tcp_timeout_variable: Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.str] nat_type: NAT Type, Attribute conditional on `nat_ipv4` being equal to `true` - Choices: `interface`, `pool`, `loopback` - Default
+               value: `interface`
+        :param pulumi.Input[_builtins.str] nat_type_variable: Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.int] nat_udp_timeout: Set NAT UDP session timeout, in minutes, Attribute conditional on `nat_ipv4` being equal to `true` - Range: `1`-`8947` -
+               Default value: `1`
+        :param pulumi.Input[_builtins.str] nat_udp_timeout_variable: Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[Sequence[pulumi.Input['TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs']]] new_static_nats: static NAT, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.bool] per_tunnel_qos: Per-tunnel Qos, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
+        :param pulumi.Input[_builtins.str] per_tunnel_qos_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         :param pulumi.Input[_builtins.bool] qos_adaptive: Adaptive QoS - Default value: `false`
         :param pulumi.Input[_builtins.bool] qos_adaptive_bandwidth_downstream: Shaping Rate Downstream - Default value: `false`
         :param pulumi.Input[_builtins.bool] qos_adaptive_bandwidth_upstream: Shaping Rate Upstream - Default value: `false`
@@ -3438,7 +3479,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
         :param pulumi.Input[_builtins.str] speed: Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
         :param pulumi.Input[_builtins.str] speed_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input['TransportWanVpnInterfaceEthernetFeatureStaticNat66Args']]] static_nat66s: static NAT66
+        :param pulumi.Input[Sequence[pulumi.Input['TransportWanVpnInterfaceEthernetFeatureStaticNat66Args']]] static_nat66s: static NAT66, Attribute conditional on `nat_ipv6` being equal to `true`
         :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
         :param pulumi.Input[_builtins.str] tcp_mss_variable: Variable name
         :param pulumi.Input[_builtins.str] tloc_extension: Extends a local TLOC to a remote node only for vpn 0
@@ -3446,8 +3487,9 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
         :param pulumi.Input[_builtins.str] tracker: Enable tracker for this interface
         :param pulumi.Input[_builtins.str] tracker_variable: Variable name
         :param pulumi.Input[_builtins.str] transport_wan_vpn_feature_id: Transport WAN VPN Feature ID
-        :param pulumi.Input[_builtins.int] tunnel_bandwidth_percent: Tunnels Bandwidth Percent - Range: `1`-`100` - Default value: `50`
-        :param pulumi.Input[_builtins.str] tunnel_bandwidth_percent_variable: Variable name
+        :param pulumi.Input[_builtins.int] tunnel_bandwidth_percent: Tunnels Bandwidth Percent, Attribute conditional on `tunnel_interface` being equal to `true` - Range: `1`-`100` -
+               Default value: `50`
+        :param pulumi.Input[_builtins.str] tunnel_bandwidth_percent_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         :param pulumi.Input[_builtins.bool] tunnel_interface: Tunnel Interface on/off - Default value: `false`
         :param pulumi.Input[_builtins.bool] tunnel_interface_allow_all: Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_all_variable: Variable name
@@ -3475,54 +3517,69 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_ssh_variable: Variable name
         :param pulumi.Input[_builtins.bool] tunnel_interface_allow_stun: Allow/Deny STUN - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_stun_variable: Variable name
-        :param pulumi.Input[_builtins.str] tunnel_interface_bind_loopback_tunnel: Bind loopback tunnel interface to a physical interface
-        :param pulumi.Input[_builtins.str] tunnel_interface_bind_loopback_tunnel_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_border: Set TLOC as border TLOC - Default value: `false`
-        :param pulumi.Input[_builtins.str] tunnel_interface_border_variable: Variable name
-        :param pulumi.Input[_builtins.str] tunnel_interface_carrier: Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-               `carrier7`, `carrier8` - Default value: `default`
-        :param pulumi.Input[_builtins.str] tunnel_interface_carrier_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
-        :param pulumi.Input[_builtins.str] tunnel_interface_clear_dont_fragment_variable: Variable name
-        :param pulumi.Input[_builtins.str] tunnel_interface_color: Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-               `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-               `private4`, `private5`, `private6` - Default value: `mpls`
-        :param pulumi.Input[_builtins.bool] tunnel_interface_color_restrict: Restrict this TLOC behavior - Default value: `false`
-        :param pulumi.Input[_builtins.str] tunnel_interface_color_restrict_variable: Variable name
-        :param pulumi.Input[_builtins.str] tunnel_interface_color_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_cts_sgt_propagation: CTS SGT Propagation configuration - Default value: `false`
-        :param pulumi.Input[_builtins.str] tunnel_interface_cts_sgt_propagation_variable: Variable name
+        :param pulumi.Input[_builtins.str] tunnel_interface_bind_loopback_tunnel: Bind loopback tunnel interface to a physical interface, Attribute conditional on `tunnel_interface` being equal to
+               `true`
+        :param pulumi.Input[_builtins.str] tunnel_interface_bind_loopback_tunnel_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_border: Set TLOC as border TLOC, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_border_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.str] tunnel_interface_carrier: Set carrier for TLOC, Attribute conditional on `tunnel_interface` being equal to `true` - Choices: `default`,
+               `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8` - Default value:
+               `default`
+        :param pulumi.Input[_builtins.str] tunnel_interface_carrier_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnel_interface` being
+               equal to `true` - Default value: `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_clear_dont_fragment_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.str] tunnel_interface_color: Set color for TLOC, Attribute conditional on `tunnel_interface` being equal to `true` - Choices: `default`, `mpls`,
+               `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`,
+               `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6` - Default value:
+               `mpls`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_color_restrict: Restrict this TLOC behavior, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_color_restrict_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.str] tunnel_interface_color_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_cts_sgt_propagation: CTS SGT Propagation configuration, Attribute conditional on `tunnel_interface` being equal to `true` - Default value:
+               `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_cts_sgt_propagation_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         :param pulumi.Input[Sequence[pulumi.Input['TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgs']]] tunnel_interface_encapsulations: Encapsulation for TLOC
-        :param pulumi.Input[_builtins.str] tunnel_interface_exclude_controller_group_list_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] tunnel_interface_exclude_controller_group_lists: Exclude the following controller groups defined in this list.
-        :param pulumi.Input[_builtins.str] tunnel_interface_gre_tunnel_destination_ip: GRE tunnel destination IP
-        :param pulumi.Input[_builtins.str] tunnel_interface_gre_tunnel_destination_ip_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_groups: List of groups - Range: `1`-`4294967295`
-        :param pulumi.Input[_builtins.str] tunnel_interface_groups_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_hello_interval: Set time period of control hello packets <100..600000> milli seconds - Range: `100`-`600000` - Default value: `1000`
-        :param pulumi.Input[_builtins.str] tunnel_interface_hello_interval_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_hello_tolerance: Set tolerance of control hello packets <12..6000> seconds - Range: `12`-`6000` - Default value: `12`
-        :param pulumi.Input[_builtins.str] tunnel_interface_hello_tolerance_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_last_resort_circuit: Set TLOC as last resort - Default value: `false`
-        :param pulumi.Input[_builtins.str] tunnel_interface_last_resort_circuit_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_low_bandwidth_link: Set the interface as a low-bandwidth circuit - Default value: `false`
-        :param pulumi.Input[_builtins.str] tunnel_interface_low_bandwidth_link_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_max_control_connections: Maximum Control Connections - Range: `0`-`100`
-        :param pulumi.Input[_builtins.str] tunnel_interface_max_control_connections_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_nat_refresh_interval: Set time period of nat refresh packets <1...60> seconds - Range: `1`-`60` - Default value: `5`
-        :param pulumi.Input[_builtins.str] tunnel_interface_nat_refresh_interval_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_network_broadcast: Accept and respond to network-prefix-directed broadcasts - Default value: `false`
-        :param pulumi.Input[_builtins.str] tunnel_interface_network_broadcast_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_port_hop: Disallow port hopping on the tunnel interface - Default value: `true`
-        :param pulumi.Input[_builtins.str] tunnel_interface_port_hop_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_tunnel_tcp_mss: Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
-        :param pulumi.Input[_builtins.str] tunnel_interface_tunnel_tcp_mss_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_vbond_as_stun_server: Put this wan interface in STUN mode only - Default value: `false`
-        :param pulumi.Input[_builtins.str] tunnel_interface_vbond_as_stun_server_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_vmanage_connection_preference: Set interface preference for control connection to vManage <0..8> - Range: `0`-`8` - Default value: `5`
-        :param pulumi.Input[_builtins.str] tunnel_interface_vmanage_connection_preference_variable: Variable name
-        :param pulumi.Input[_builtins.str] tunnel_qos_mode: Set tunnel QoS mode - Choices: `hub`, `spoke`
-        :param pulumi.Input[_builtins.str] tunnel_qos_mode_variable: Variable name
+        :param pulumi.Input[_builtins.str] tunnel_interface_exclude_controller_group_list_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] tunnel_interface_exclude_controller_group_lists: Exclude the following controller groups defined in this list., Attribute conditional on `tunnel_interface` being equal
+               to `true`
+        :param pulumi.Input[_builtins.str] tunnel_interface_gre_tunnel_destination_ip: GRE tunnel destination IP, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.str] tunnel_interface_gre_tunnel_destination_ip_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.int] tunnel_interface_groups: List of groups, Attribute conditional on `tunnel_interface` being equal to `true` - Range: `1`-`4294967295`
+        :param pulumi.Input[_builtins.str] tunnel_interface_groups_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.int] tunnel_interface_hello_interval: Set time period of control hello packets <100..600000> milli seconds, Attribute conditional on `tunnel_interface` being
+               equal to `true` - Range: `100`-`600000` - Default value: `1000`
+        :param pulumi.Input[_builtins.str] tunnel_interface_hello_interval_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.int] tunnel_interface_hello_tolerance: Set tolerance of control hello packets <12..6000> seconds, Attribute conditional on `tunnel_interface` being equal to
+               `true` - Range: `12`-`6000` - Default value: `12`
+        :param pulumi.Input[_builtins.str] tunnel_interface_hello_tolerance_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_last_resort_circuit: Set TLOC as last resort, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_last_resort_circuit_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_low_bandwidth_link: Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnel_interface` being equal to `true` -
+               Default value: `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_low_bandwidth_link_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.int] tunnel_interface_max_control_connections: Maximum Control Connections, Attribute conditional on `tunnel_interface` being equal to `true` - Range: `0`-`100`
+        :param pulumi.Input[_builtins.str] tunnel_interface_max_control_connections_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.int] tunnel_interface_nat_refresh_interval: Set time period of nat refresh packets <1...60> seconds, Attribute conditional on `tunnel_interface` being equal to
+               `true` - Range: `1`-`60` - Default value: `5`
+        :param pulumi.Input[_builtins.str] tunnel_interface_nat_refresh_interval_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_network_broadcast: Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnel_interface` being equal to
+               `true` - Default value: `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_network_broadcast_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_port_hop: Disallow port hopping on the tunnel interface, Attribute conditional on `tunnel_interface` being equal to `true` -
+               Default value: `true`
+        :param pulumi.Input[_builtins.str] tunnel_interface_port_hop_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.int] tunnel_interface_tunnel_tcp_mss: Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnel_interface` being equal to `true` - Range:
+               `500`-`1460`
+        :param pulumi.Input[_builtins.str] tunnel_interface_tunnel_tcp_mss_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_vbond_as_stun_server: Put this wan interface in STUN mode only, Attribute conditional on `tunnel_interface` being equal to `true` - Default
+               value: `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_vbond_as_stun_server_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.int] tunnel_interface_vmanage_connection_preference: Set interface preference for control connection to vManage <0..8>, Attribute conditional on `tunnel_interface` being
+               equal to `true` - Range: `0`-`8` - Default value: `5`
+        :param pulumi.Input[_builtins.str] tunnel_interface_vmanage_connection_preference_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.str] tunnel_qos_mode: Set tunnel QoS mode, Attribute conditional on `tunnel_interface` being equal to `true` - Choices: `hub`, `spoke`
+        :param pulumi.Input[_builtins.str] tunnel_qos_mode_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         :param pulumi.Input[_builtins.str] xconnect: Extend remote TLOC over a GRE tunnel to a local WAN interface
         :param pulumi.Input[_builtins.str] xconnect_variable: Variable name
@@ -4632,7 +4689,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter
     def nat64(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        NAT64 on this interface - Default value: `false`
+        NAT64 on this interface, Attribute conditional on `nat_ipv6` being equal to `true` - Default value: `false`
         """
         return pulumi.get(self, "nat64")
 
@@ -4644,7 +4701,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter
     def nat66(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        NAT66 on this interface - Default value: `false`
+        NAT66 on this interface, Attribute conditional on `nat_ipv6` being equal to `true` - Default value: `false`
         """
         return pulumi.get(self, "nat66")
 
@@ -4704,7 +4761,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="natLoopback")
     def nat_loopback(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        NAT Inside Source Loopback Interface
+        NAT Inside Source Loopback Interface, Attribute conditional on `nat_ipv4` being equal to `true`
         """
         return pulumi.get(self, "nat_loopback")
 
@@ -4716,7 +4773,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="natLoopbackVariable")
     def nat_loopback_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         """
         return pulumi.get(self, "nat_loopback_variable")
 
@@ -4728,7 +4785,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="natOverload")
     def nat_overload(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        NAT Overload - Default value: `true`
+        NAT Overload, Attribute conditional on `nat_ipv4` being equal to `true` - Default value: `true`
         """
         return pulumi.get(self, "nat_overload")
 
@@ -4740,7 +4797,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="natOverloadVariable")
     def nat_overload_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         """
         return pulumi.get(self, "nat_overload_variable")
 
@@ -4752,7 +4809,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="natPrefixLength")
     def nat_prefix_length(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        NAT Pool Prefix Length - Range: `1`-`32`
+        NAT Pool Prefix Length, Attribute conditional on `nat_ipv4` being equal to `true` - Range: `1`-`32`
         """
         return pulumi.get(self, "nat_prefix_length")
 
@@ -4764,7 +4821,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="natPrefixLengthVariable")
     def nat_prefix_length_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         """
         return pulumi.get(self, "nat_prefix_length_variable")
 
@@ -4776,7 +4833,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="natRangeEnd")
     def nat_range_end(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        NAT Pool Range End
+        NAT Pool Range End, Attribute conditional on `nat_ipv4` being equal to `true`
         """
         return pulumi.get(self, "nat_range_end")
 
@@ -4788,7 +4845,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="natRangeEndVariable")
     def nat_range_end_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         """
         return pulumi.get(self, "nat_range_end_variable")
 
@@ -4800,7 +4857,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="natRangeStart")
     def nat_range_start(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        NAT Pool Range Start
+        NAT Pool Range Start, Attribute conditional on `nat_ipv4` being equal to `true`
         """
         return pulumi.get(self, "nat_range_start")
 
@@ -4812,7 +4869,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="natRangeStartVariable")
     def nat_range_start_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         """
         return pulumi.get(self, "nat_range_start_variable")
 
@@ -4824,7 +4881,8 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="natTcpTimeout")
     def nat_tcp_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+        Set NAT TCP session timeout, in minutes, Attribute conditional on `nat_ipv4` being equal to `true` - Range: `1`-`8947` -
+        Default value: `60`
         """
         return pulumi.get(self, "nat_tcp_timeout")
 
@@ -4836,7 +4894,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="natTcpTimeoutVariable")
     def nat_tcp_timeout_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         """
         return pulumi.get(self, "nat_tcp_timeout_variable")
 
@@ -4848,7 +4906,8 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="natType")
     def nat_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        NAT Type - Choices: `interface`, `pool`, `loopback` - Default value: `interface`
+        NAT Type, Attribute conditional on `nat_ipv4` being equal to `true` - Choices: `interface`, `pool`, `loopback` - Default
+        value: `interface`
         """
         return pulumi.get(self, "nat_type")
 
@@ -4860,7 +4919,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="natTypeVariable")
     def nat_type_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         """
         return pulumi.get(self, "nat_type_variable")
 
@@ -4872,7 +4931,8 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="natUdpTimeout")
     def nat_udp_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+        Set NAT UDP session timeout, in minutes, Attribute conditional on `nat_ipv4` being equal to `true` - Range: `1`-`8947` -
+        Default value: `1`
         """
         return pulumi.get(self, "nat_udp_timeout")
 
@@ -4884,7 +4944,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="natUdpTimeoutVariable")
     def nat_udp_timeout_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         """
         return pulumi.get(self, "nat_udp_timeout_variable")
 
@@ -4896,7 +4956,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="newStaticNats")
     def new_static_nats(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs']]]]:
         """
-        static NAT
+        static NAT, Attribute conditional on `nat_ipv4` being equal to `true`
         """
         return pulumi.get(self, "new_static_nats")
 
@@ -4908,7 +4968,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="perTunnelQos")
     def per_tunnel_qos(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Per-tunnel Qos - Default value: `false`
+        Per-tunnel Qos, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
         """
         return pulumi.get(self, "per_tunnel_qos")
 
@@ -4920,7 +4980,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="perTunnelQosVariable")
     def per_tunnel_qos_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "per_tunnel_qos_variable")
 
@@ -5232,7 +5292,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="staticNat66s")
     def static_nat66s(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['TransportWanVpnInterfaceEthernetFeatureStaticNat66Args']]]]:
         """
-        static NAT66
+        static NAT66, Attribute conditional on `nat_ipv6` being equal to `true`
         """
         return pulumi.get(self, "static_nat66s")
 
@@ -5328,7 +5388,8 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelBandwidthPercent")
     def tunnel_bandwidth_percent(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Tunnels Bandwidth Percent - Range: `1`-`100` - Default value: `50`
+        Tunnels Bandwidth Percent, Attribute conditional on `tunnel_interface` being equal to `true` - Range: `1`-`100` -
+        Default value: `50`
         """
         return pulumi.get(self, "tunnel_bandwidth_percent")
 
@@ -5340,7 +5401,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelBandwidthPercentVariable")
     def tunnel_bandwidth_percent_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_bandwidth_percent_variable")
 
@@ -5676,7 +5737,8 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfaceBindLoopbackTunnel")
     def tunnel_interface_bind_loopback_tunnel(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Bind loopback tunnel interface to a physical interface
+        Bind loopback tunnel interface to a physical interface, Attribute conditional on `tunnel_interface` being equal to
+        `true`
         """
         return pulumi.get(self, "tunnel_interface_bind_loopback_tunnel")
 
@@ -5688,7 +5750,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfaceBindLoopbackTunnelVariable")
     def tunnel_interface_bind_loopback_tunnel_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_bind_loopback_tunnel_variable")
 
@@ -5700,7 +5762,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfaceBorder")
     def tunnel_interface_border(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Set TLOC as border TLOC - Default value: `false`
+        Set TLOC as border TLOC, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_border")
 
@@ -5712,7 +5774,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfaceBorderVariable")
     def tunnel_interface_border_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_border_variable")
 
@@ -5724,8 +5786,9 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfaceCarrier")
     def tunnel_interface_carrier(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-        `carrier7`, `carrier8` - Default value: `default`
+        Set carrier for TLOC, Attribute conditional on `tunnel_interface` being equal to `true` - Choices: `default`,
+        `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8` - Default value:
+        `default`
         """
         return pulumi.get(self, "tunnel_interface_carrier")
 
@@ -5737,7 +5800,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfaceCarrierVariable")
     def tunnel_interface_carrier_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_carrier_variable")
 
@@ -5749,7 +5812,8 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfaceClearDontFragment")
     def tunnel_interface_clear_dont_fragment(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnel_interface` being
+        equal to `true` - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_clear_dont_fragment")
 
@@ -5761,7 +5825,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfaceClearDontFragmentVariable")
     def tunnel_interface_clear_dont_fragment_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_clear_dont_fragment_variable")
 
@@ -5773,9 +5837,10 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfaceColor")
     def tunnel_interface_color(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-        `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-        `private4`, `private5`, `private6` - Default value: `mpls`
+        Set color for TLOC, Attribute conditional on `tunnel_interface` being equal to `true` - Choices: `default`, `mpls`,
+        `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`,
+        `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6` - Default value:
+        `mpls`
         """
         return pulumi.get(self, "tunnel_interface_color")
 
@@ -5787,7 +5852,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfaceColorRestrict")
     def tunnel_interface_color_restrict(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Restrict this TLOC behavior - Default value: `false`
+        Restrict this TLOC behavior, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_color_restrict")
 
@@ -5799,7 +5864,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfaceColorRestrictVariable")
     def tunnel_interface_color_restrict_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_color_restrict_variable")
 
@@ -5811,7 +5876,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfaceColorVariable")
     def tunnel_interface_color_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_color_variable")
 
@@ -5823,7 +5888,8 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfaceCtsSgtPropagation")
     def tunnel_interface_cts_sgt_propagation(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        CTS SGT Propagation configuration - Default value: `false`
+        CTS SGT Propagation configuration, Attribute conditional on `tunnel_interface` being equal to `true` - Default value:
+        `false`
         """
         return pulumi.get(self, "tunnel_interface_cts_sgt_propagation")
 
@@ -5835,7 +5901,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfaceCtsSgtPropagationVariable")
     def tunnel_interface_cts_sgt_propagation_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_cts_sgt_propagation_variable")
 
@@ -5859,7 +5925,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfaceExcludeControllerGroupListVariable")
     def tunnel_interface_exclude_controller_group_list_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_exclude_controller_group_list_variable")
 
@@ -5871,7 +5937,8 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfaceExcludeControllerGroupLists")
     def tunnel_interface_exclude_controller_group_lists(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]:
         """
-        Exclude the following controller groups defined in this list.
+        Exclude the following controller groups defined in this list., Attribute conditional on `tunnel_interface` being equal
+        to `true`
         """
         return pulumi.get(self, "tunnel_interface_exclude_controller_group_lists")
 
@@ -5883,7 +5950,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfaceGreTunnelDestinationIp")
     def tunnel_interface_gre_tunnel_destination_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        GRE tunnel destination IP
+        GRE tunnel destination IP, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_gre_tunnel_destination_ip")
 
@@ -5895,7 +5962,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfaceGreTunnelDestinationIpVariable")
     def tunnel_interface_gre_tunnel_destination_ip_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_gre_tunnel_destination_ip_variable")
 
@@ -5907,7 +5974,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfaceGroups")
     def tunnel_interface_groups(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        List of groups - Range: `1`-`4294967295`
+        List of groups, Attribute conditional on `tunnel_interface` being equal to `true` - Range: `1`-`4294967295`
         """
         return pulumi.get(self, "tunnel_interface_groups")
 
@@ -5919,7 +5986,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfaceGroupsVariable")
     def tunnel_interface_groups_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_groups_variable")
 
@@ -5931,7 +5998,8 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfaceHelloInterval")
     def tunnel_interface_hello_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set time period of control hello packets <100..600000> milli seconds - Range: `100`-`600000` - Default value: `1000`
+        Set time period of control hello packets <100..600000> milli seconds, Attribute conditional on `tunnel_interface` being
+        equal to `true` - Range: `100`-`600000` - Default value: `1000`
         """
         return pulumi.get(self, "tunnel_interface_hello_interval")
 
@@ -5943,7 +6011,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfaceHelloIntervalVariable")
     def tunnel_interface_hello_interval_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_hello_interval_variable")
 
@@ -5955,7 +6023,8 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfaceHelloTolerance")
     def tunnel_interface_hello_tolerance(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set tolerance of control hello packets <12..6000> seconds - Range: `12`-`6000` - Default value: `12`
+        Set tolerance of control hello packets <12..6000> seconds, Attribute conditional on `tunnel_interface` being equal to
+        `true` - Range: `12`-`6000` - Default value: `12`
         """
         return pulumi.get(self, "tunnel_interface_hello_tolerance")
 
@@ -5967,7 +6036,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfaceHelloToleranceVariable")
     def tunnel_interface_hello_tolerance_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_hello_tolerance_variable")
 
@@ -5979,7 +6048,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfaceLastResortCircuit")
     def tunnel_interface_last_resort_circuit(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Set TLOC as last resort - Default value: `false`
+        Set TLOC as last resort, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_last_resort_circuit")
 
@@ -5991,7 +6060,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfaceLastResortCircuitVariable")
     def tunnel_interface_last_resort_circuit_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_last_resort_circuit_variable")
 
@@ -6003,7 +6072,8 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfaceLowBandwidthLink")
     def tunnel_interface_low_bandwidth_link(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Set the interface as a low-bandwidth circuit - Default value: `false`
+        Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnel_interface` being equal to `true` -
+        Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_low_bandwidth_link")
 
@@ -6015,7 +6085,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfaceLowBandwidthLinkVariable")
     def tunnel_interface_low_bandwidth_link_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_low_bandwidth_link_variable")
 
@@ -6027,7 +6097,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfaceMaxControlConnections")
     def tunnel_interface_max_control_connections(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Maximum Control Connections - Range: `0`-`100`
+        Maximum Control Connections, Attribute conditional on `tunnel_interface` being equal to `true` - Range: `0`-`100`
         """
         return pulumi.get(self, "tunnel_interface_max_control_connections")
 
@@ -6039,7 +6109,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfaceMaxControlConnectionsVariable")
     def tunnel_interface_max_control_connections_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_max_control_connections_variable")
 
@@ -6051,7 +6121,8 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfaceNatRefreshInterval")
     def tunnel_interface_nat_refresh_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set time period of nat refresh packets <1...60> seconds - Range: `1`-`60` - Default value: `5`
+        Set time period of nat refresh packets <1...60> seconds, Attribute conditional on `tunnel_interface` being equal to
+        `true` - Range: `1`-`60` - Default value: `5`
         """
         return pulumi.get(self, "tunnel_interface_nat_refresh_interval")
 
@@ -6063,7 +6134,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfaceNatRefreshIntervalVariable")
     def tunnel_interface_nat_refresh_interval_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_nat_refresh_interval_variable")
 
@@ -6075,7 +6146,8 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfaceNetworkBroadcast")
     def tunnel_interface_network_broadcast(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Accept and respond to network-prefix-directed broadcasts - Default value: `false`
+        Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnel_interface` being equal to
+        `true` - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_network_broadcast")
 
@@ -6087,7 +6159,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfaceNetworkBroadcastVariable")
     def tunnel_interface_network_broadcast_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_network_broadcast_variable")
 
@@ -6099,7 +6171,8 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfacePortHop")
     def tunnel_interface_port_hop(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Disallow port hopping on the tunnel interface - Default value: `true`
+        Disallow port hopping on the tunnel interface, Attribute conditional on `tunnel_interface` being equal to `true` -
+        Default value: `true`
         """
         return pulumi.get(self, "tunnel_interface_port_hop")
 
@@ -6111,7 +6184,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfacePortHopVariable")
     def tunnel_interface_port_hop_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_port_hop_variable")
 
@@ -6123,7 +6196,8 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfaceTunnelTcpMss")
     def tunnel_interface_tunnel_tcp_mss(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnel_interface` being equal to `true` - Range:
+        `500`-`1460`
         """
         return pulumi.get(self, "tunnel_interface_tunnel_tcp_mss")
 
@@ -6135,7 +6209,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfaceTunnelTcpMssVariable")
     def tunnel_interface_tunnel_tcp_mss_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_tunnel_tcp_mss_variable")
 
@@ -6147,7 +6221,8 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfaceVbondAsStunServer")
     def tunnel_interface_vbond_as_stun_server(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Put this wan interface in STUN mode only - Default value: `false`
+        Put this wan interface in STUN mode only, Attribute conditional on `tunnel_interface` being equal to `true` - Default
+        value: `false`
         """
         return pulumi.get(self, "tunnel_interface_vbond_as_stun_server")
 
@@ -6159,7 +6234,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfaceVbondAsStunServerVariable")
     def tunnel_interface_vbond_as_stun_server_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_vbond_as_stun_server_variable")
 
@@ -6171,7 +6246,8 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfaceVmanageConnectionPreference")
     def tunnel_interface_vmanage_connection_preference(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set interface preference for control connection to vManage <0..8> - Range: `0`-`8` - Default value: `5`
+        Set interface preference for control connection to vManage <0..8>, Attribute conditional on `tunnel_interface` being
+        equal to `true` - Range: `0`-`8` - Default value: `5`
         """
         return pulumi.get(self, "tunnel_interface_vmanage_connection_preference")
 
@@ -6183,7 +6259,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelInterfaceVmanageConnectionPreferenceVariable")
     def tunnel_interface_vmanage_connection_preference_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_vmanage_connection_preference_variable")
 
@@ -6195,7 +6271,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelQosMode")
     def tunnel_qos_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set tunnel QoS mode - Choices: `hub`, `spoke`
+        Set tunnel QoS mode, Attribute conditional on `tunnel_interface` being equal to `true` - Choices: `hub`, `spoke`
         """
         return pulumi.get(self, "tunnel_qos_mode")
 
@@ -6207,7 +6283,7 @@ class _TransportWanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tunnelQosModeVariable")
     def tunnel_qos_mode_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_qos_mode_variable")
 
@@ -6531,31 +6607,34 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] media_type: Media type - Choices: `auto-select`, `rj45`, `sfp`
         :param pulumi.Input[_builtins.str] media_type_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.bool] nat64: NAT64 on this interface - Default value: `false`
-        :param pulumi.Input[_builtins.bool] nat66: NAT66 on this interface - Default value: `false`
+        :param pulumi.Input[_builtins.bool] nat64: NAT64 on this interface, Attribute conditional on `nat_ipv6` being equal to `true` - Default value: `false`
+        :param pulumi.Input[_builtins.bool] nat66: NAT66 on this interface, Attribute conditional on `nat_ipv6` being equal to `true` - Default value: `false`
         :param pulumi.Input[_builtins.bool] nat_ipv4: enable Network Address Translation on this interface - Default value: `false`
         :param pulumi.Input[_builtins.str] nat_ipv4_variable: Variable name
         :param pulumi.Input[_builtins.bool] nat_ipv6: enable Network Address Translation ipv6 on this interface - Default value: `false`
         :param pulumi.Input[_builtins.str] nat_ipv6_variable: Variable name
-        :param pulumi.Input[_builtins.str] nat_loopback: NAT Inside Source Loopback Interface
-        :param pulumi.Input[_builtins.str] nat_loopback_variable: Variable name
-        :param pulumi.Input[_builtins.bool] nat_overload: NAT Overload - Default value: `true`
-        :param pulumi.Input[_builtins.str] nat_overload_variable: Variable name
-        :param pulumi.Input[_builtins.int] nat_prefix_length: NAT Pool Prefix Length - Range: `1`-`32`
-        :param pulumi.Input[_builtins.str] nat_prefix_length_variable: Variable name
-        :param pulumi.Input[_builtins.str] nat_range_end: NAT Pool Range End
-        :param pulumi.Input[_builtins.str] nat_range_end_variable: Variable name
-        :param pulumi.Input[_builtins.str] nat_range_start: NAT Pool Range Start
-        :param pulumi.Input[_builtins.str] nat_range_start_variable: Variable name
-        :param pulumi.Input[_builtins.int] nat_tcp_timeout: Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
-        :param pulumi.Input[_builtins.str] nat_tcp_timeout_variable: Variable name
-        :param pulumi.Input[_builtins.str] nat_type: NAT Type - Choices: `interface`, `pool`, `loopback` - Default value: `interface`
-        :param pulumi.Input[_builtins.str] nat_type_variable: Variable name
-        :param pulumi.Input[_builtins.int] nat_udp_timeout: Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
-        :param pulumi.Input[_builtins.str] nat_udp_timeout_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs', 'TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgsDict']]]] new_static_nats: static NAT
-        :param pulumi.Input[_builtins.bool] per_tunnel_qos: Per-tunnel Qos - Default value: `false`
-        :param pulumi.Input[_builtins.str] per_tunnel_qos_variable: Variable name
+        :param pulumi.Input[_builtins.str] nat_loopback: NAT Inside Source Loopback Interface, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.str] nat_loopback_variable: Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.bool] nat_overload: NAT Overload, Attribute conditional on `nat_ipv4` being equal to `true` - Default value: `true`
+        :param pulumi.Input[_builtins.str] nat_overload_variable: Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.int] nat_prefix_length: NAT Pool Prefix Length, Attribute conditional on `nat_ipv4` being equal to `true` - Range: `1`-`32`
+        :param pulumi.Input[_builtins.str] nat_prefix_length_variable: Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.str] nat_range_end: NAT Pool Range End, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.str] nat_range_end_variable: Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.str] nat_range_start: NAT Pool Range Start, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.str] nat_range_start_variable: Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.int] nat_tcp_timeout: Set NAT TCP session timeout, in minutes, Attribute conditional on `nat_ipv4` being equal to `true` - Range: `1`-`8947` -
+               Default value: `60`
+        :param pulumi.Input[_builtins.str] nat_tcp_timeout_variable: Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.str] nat_type: NAT Type, Attribute conditional on `nat_ipv4` being equal to `true` - Choices: `interface`, `pool`, `loopback` - Default
+               value: `interface`
+        :param pulumi.Input[_builtins.str] nat_type_variable: Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.int] nat_udp_timeout: Set NAT UDP session timeout, in minutes, Attribute conditional on `nat_ipv4` being equal to `true` - Range: `1`-`8947` -
+               Default value: `1`
+        :param pulumi.Input[_builtins.str] nat_udp_timeout_variable: Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs', 'TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgsDict']]]] new_static_nats: static NAT, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.bool] per_tunnel_qos: Per-tunnel Qos, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
+        :param pulumi.Input[_builtins.str] per_tunnel_qos_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         :param pulumi.Input[_builtins.bool] qos_adaptive: Adaptive QoS - Default value: `false`
         :param pulumi.Input[_builtins.bool] qos_adaptive_bandwidth_downstream: Shaping Rate Downstream - Default value: `false`
         :param pulumi.Input[_builtins.bool] qos_adaptive_bandwidth_upstream: Shaping Rate Upstream - Default value: `false`
@@ -6581,7 +6660,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
         :param pulumi.Input[_builtins.str] speed: Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
         :param pulumi.Input[_builtins.str] speed_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureStaticNat66Args', 'TransportWanVpnInterfaceEthernetFeatureStaticNat66ArgsDict']]]] static_nat66s: static NAT66
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureStaticNat66Args', 'TransportWanVpnInterfaceEthernetFeatureStaticNat66ArgsDict']]]] static_nat66s: static NAT66, Attribute conditional on `nat_ipv6` being equal to `true`
         :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
         :param pulumi.Input[_builtins.str] tcp_mss_variable: Variable name
         :param pulumi.Input[_builtins.str] tloc_extension: Extends a local TLOC to a remote node only for vpn 0
@@ -6589,8 +6668,9 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] tracker: Enable tracker for this interface
         :param pulumi.Input[_builtins.str] tracker_variable: Variable name
         :param pulumi.Input[_builtins.str] transport_wan_vpn_feature_id: Transport WAN VPN Feature ID
-        :param pulumi.Input[_builtins.int] tunnel_bandwidth_percent: Tunnels Bandwidth Percent - Range: `1`-`100` - Default value: `50`
-        :param pulumi.Input[_builtins.str] tunnel_bandwidth_percent_variable: Variable name
+        :param pulumi.Input[_builtins.int] tunnel_bandwidth_percent: Tunnels Bandwidth Percent, Attribute conditional on `tunnel_interface` being equal to `true` - Range: `1`-`100` -
+               Default value: `50`
+        :param pulumi.Input[_builtins.str] tunnel_bandwidth_percent_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         :param pulumi.Input[_builtins.bool] tunnel_interface: Tunnel Interface on/off - Default value: `false`
         :param pulumi.Input[_builtins.bool] tunnel_interface_allow_all: Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_all_variable: Variable name
@@ -6618,54 +6698,69 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_ssh_variable: Variable name
         :param pulumi.Input[_builtins.bool] tunnel_interface_allow_stun: Allow/Deny STUN - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_stun_variable: Variable name
-        :param pulumi.Input[_builtins.str] tunnel_interface_bind_loopback_tunnel: Bind loopback tunnel interface to a physical interface
-        :param pulumi.Input[_builtins.str] tunnel_interface_bind_loopback_tunnel_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_border: Set TLOC as border TLOC - Default value: `false`
-        :param pulumi.Input[_builtins.str] tunnel_interface_border_variable: Variable name
-        :param pulumi.Input[_builtins.str] tunnel_interface_carrier: Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-               `carrier7`, `carrier8` - Default value: `default`
-        :param pulumi.Input[_builtins.str] tunnel_interface_carrier_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
-        :param pulumi.Input[_builtins.str] tunnel_interface_clear_dont_fragment_variable: Variable name
-        :param pulumi.Input[_builtins.str] tunnel_interface_color: Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-               `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-               `private4`, `private5`, `private6` - Default value: `mpls`
-        :param pulumi.Input[_builtins.bool] tunnel_interface_color_restrict: Restrict this TLOC behavior - Default value: `false`
-        :param pulumi.Input[_builtins.str] tunnel_interface_color_restrict_variable: Variable name
-        :param pulumi.Input[_builtins.str] tunnel_interface_color_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_cts_sgt_propagation: CTS SGT Propagation configuration - Default value: `false`
-        :param pulumi.Input[_builtins.str] tunnel_interface_cts_sgt_propagation_variable: Variable name
+        :param pulumi.Input[_builtins.str] tunnel_interface_bind_loopback_tunnel: Bind loopback tunnel interface to a physical interface, Attribute conditional on `tunnel_interface` being equal to
+               `true`
+        :param pulumi.Input[_builtins.str] tunnel_interface_bind_loopback_tunnel_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_border: Set TLOC as border TLOC, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_border_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.str] tunnel_interface_carrier: Set carrier for TLOC, Attribute conditional on `tunnel_interface` being equal to `true` - Choices: `default`,
+               `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8` - Default value:
+               `default`
+        :param pulumi.Input[_builtins.str] tunnel_interface_carrier_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnel_interface` being
+               equal to `true` - Default value: `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_clear_dont_fragment_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.str] tunnel_interface_color: Set color for TLOC, Attribute conditional on `tunnel_interface` being equal to `true` - Choices: `default`, `mpls`,
+               `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`,
+               `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6` - Default value:
+               `mpls`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_color_restrict: Restrict this TLOC behavior, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_color_restrict_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.str] tunnel_interface_color_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_cts_sgt_propagation: CTS SGT Propagation configuration, Attribute conditional on `tunnel_interface` being equal to `true` - Default value:
+               `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_cts_sgt_propagation_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgs', 'TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgsDict']]]] tunnel_interface_encapsulations: Encapsulation for TLOC
-        :param pulumi.Input[_builtins.str] tunnel_interface_exclude_controller_group_list_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] tunnel_interface_exclude_controller_group_lists: Exclude the following controller groups defined in this list.
-        :param pulumi.Input[_builtins.str] tunnel_interface_gre_tunnel_destination_ip: GRE tunnel destination IP
-        :param pulumi.Input[_builtins.str] tunnel_interface_gre_tunnel_destination_ip_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_groups: List of groups - Range: `1`-`4294967295`
-        :param pulumi.Input[_builtins.str] tunnel_interface_groups_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_hello_interval: Set time period of control hello packets <100..600000> milli seconds - Range: `100`-`600000` - Default value: `1000`
-        :param pulumi.Input[_builtins.str] tunnel_interface_hello_interval_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_hello_tolerance: Set tolerance of control hello packets <12..6000> seconds - Range: `12`-`6000` - Default value: `12`
-        :param pulumi.Input[_builtins.str] tunnel_interface_hello_tolerance_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_last_resort_circuit: Set TLOC as last resort - Default value: `false`
-        :param pulumi.Input[_builtins.str] tunnel_interface_last_resort_circuit_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_low_bandwidth_link: Set the interface as a low-bandwidth circuit - Default value: `false`
-        :param pulumi.Input[_builtins.str] tunnel_interface_low_bandwidth_link_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_max_control_connections: Maximum Control Connections - Range: `0`-`100`
-        :param pulumi.Input[_builtins.str] tunnel_interface_max_control_connections_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_nat_refresh_interval: Set time period of nat refresh packets <1...60> seconds - Range: `1`-`60` - Default value: `5`
-        :param pulumi.Input[_builtins.str] tunnel_interface_nat_refresh_interval_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_network_broadcast: Accept and respond to network-prefix-directed broadcasts - Default value: `false`
-        :param pulumi.Input[_builtins.str] tunnel_interface_network_broadcast_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_port_hop: Disallow port hopping on the tunnel interface - Default value: `true`
-        :param pulumi.Input[_builtins.str] tunnel_interface_port_hop_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_tunnel_tcp_mss: Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
-        :param pulumi.Input[_builtins.str] tunnel_interface_tunnel_tcp_mss_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_vbond_as_stun_server: Put this wan interface in STUN mode only - Default value: `false`
-        :param pulumi.Input[_builtins.str] tunnel_interface_vbond_as_stun_server_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_vmanage_connection_preference: Set interface preference for control connection to vManage <0..8> - Range: `0`-`8` - Default value: `5`
-        :param pulumi.Input[_builtins.str] tunnel_interface_vmanage_connection_preference_variable: Variable name
-        :param pulumi.Input[_builtins.str] tunnel_qos_mode: Set tunnel QoS mode - Choices: `hub`, `spoke`
-        :param pulumi.Input[_builtins.str] tunnel_qos_mode_variable: Variable name
+        :param pulumi.Input[_builtins.str] tunnel_interface_exclude_controller_group_list_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] tunnel_interface_exclude_controller_group_lists: Exclude the following controller groups defined in this list., Attribute conditional on `tunnel_interface` being equal
+               to `true`
+        :param pulumi.Input[_builtins.str] tunnel_interface_gre_tunnel_destination_ip: GRE tunnel destination IP, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.str] tunnel_interface_gre_tunnel_destination_ip_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.int] tunnel_interface_groups: List of groups, Attribute conditional on `tunnel_interface` being equal to `true` - Range: `1`-`4294967295`
+        :param pulumi.Input[_builtins.str] tunnel_interface_groups_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.int] tunnel_interface_hello_interval: Set time period of control hello packets <100..600000> milli seconds, Attribute conditional on `tunnel_interface` being
+               equal to `true` - Range: `100`-`600000` - Default value: `1000`
+        :param pulumi.Input[_builtins.str] tunnel_interface_hello_interval_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.int] tunnel_interface_hello_tolerance: Set tolerance of control hello packets <12..6000> seconds, Attribute conditional on `tunnel_interface` being equal to
+               `true` - Range: `12`-`6000` - Default value: `12`
+        :param pulumi.Input[_builtins.str] tunnel_interface_hello_tolerance_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_last_resort_circuit: Set TLOC as last resort, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_last_resort_circuit_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_low_bandwidth_link: Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnel_interface` being equal to `true` -
+               Default value: `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_low_bandwidth_link_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.int] tunnel_interface_max_control_connections: Maximum Control Connections, Attribute conditional on `tunnel_interface` being equal to `true` - Range: `0`-`100`
+        :param pulumi.Input[_builtins.str] tunnel_interface_max_control_connections_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.int] tunnel_interface_nat_refresh_interval: Set time period of nat refresh packets <1...60> seconds, Attribute conditional on `tunnel_interface` being equal to
+               `true` - Range: `1`-`60` - Default value: `5`
+        :param pulumi.Input[_builtins.str] tunnel_interface_nat_refresh_interval_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_network_broadcast: Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnel_interface` being equal to
+               `true` - Default value: `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_network_broadcast_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_port_hop: Disallow port hopping on the tunnel interface, Attribute conditional on `tunnel_interface` being equal to `true` -
+               Default value: `true`
+        :param pulumi.Input[_builtins.str] tunnel_interface_port_hop_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.int] tunnel_interface_tunnel_tcp_mss: Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnel_interface` being equal to `true` - Range:
+               `500`-`1460`
+        :param pulumi.Input[_builtins.str] tunnel_interface_tunnel_tcp_mss_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_vbond_as_stun_server: Put this wan interface in STUN mode only, Attribute conditional on `tunnel_interface` being equal to `true` - Default
+               value: `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_vbond_as_stun_server_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.int] tunnel_interface_vmanage_connection_preference: Set interface preference for control connection to vManage <0..8>, Attribute conditional on `tunnel_interface` being
+               equal to `true` - Range: `0`-`8` - Default value: `5`
+        :param pulumi.Input[_builtins.str] tunnel_interface_vmanage_connection_preference_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.str] tunnel_qos_mode: Set tunnel QoS mode, Attribute conditional on `tunnel_interface` being equal to `true` - Choices: `hub`, `spoke`
+        :param pulumi.Input[_builtins.str] tunnel_qos_mode_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         :param pulumi.Input[_builtins.str] xconnect: Extend remote TLOC over a GRE tunnel to a local WAN interface
         :param pulumi.Input[_builtins.str] xconnect_variable: Variable name
         """
@@ -7380,31 +7475,34 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] media_type: Media type - Choices: `auto-select`, `rj45`, `sfp`
         :param pulumi.Input[_builtins.str] media_type_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.bool] nat64: NAT64 on this interface - Default value: `false`
-        :param pulumi.Input[_builtins.bool] nat66: NAT66 on this interface - Default value: `false`
+        :param pulumi.Input[_builtins.bool] nat64: NAT64 on this interface, Attribute conditional on `nat_ipv6` being equal to `true` - Default value: `false`
+        :param pulumi.Input[_builtins.bool] nat66: NAT66 on this interface, Attribute conditional on `nat_ipv6` being equal to `true` - Default value: `false`
         :param pulumi.Input[_builtins.bool] nat_ipv4: enable Network Address Translation on this interface - Default value: `false`
         :param pulumi.Input[_builtins.str] nat_ipv4_variable: Variable name
         :param pulumi.Input[_builtins.bool] nat_ipv6: enable Network Address Translation ipv6 on this interface - Default value: `false`
         :param pulumi.Input[_builtins.str] nat_ipv6_variable: Variable name
-        :param pulumi.Input[_builtins.str] nat_loopback: NAT Inside Source Loopback Interface
-        :param pulumi.Input[_builtins.str] nat_loopback_variable: Variable name
-        :param pulumi.Input[_builtins.bool] nat_overload: NAT Overload - Default value: `true`
-        :param pulumi.Input[_builtins.str] nat_overload_variable: Variable name
-        :param pulumi.Input[_builtins.int] nat_prefix_length: NAT Pool Prefix Length - Range: `1`-`32`
-        :param pulumi.Input[_builtins.str] nat_prefix_length_variable: Variable name
-        :param pulumi.Input[_builtins.str] nat_range_end: NAT Pool Range End
-        :param pulumi.Input[_builtins.str] nat_range_end_variable: Variable name
-        :param pulumi.Input[_builtins.str] nat_range_start: NAT Pool Range Start
-        :param pulumi.Input[_builtins.str] nat_range_start_variable: Variable name
-        :param pulumi.Input[_builtins.int] nat_tcp_timeout: Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
-        :param pulumi.Input[_builtins.str] nat_tcp_timeout_variable: Variable name
-        :param pulumi.Input[_builtins.str] nat_type: NAT Type - Choices: `interface`, `pool`, `loopback` - Default value: `interface`
-        :param pulumi.Input[_builtins.str] nat_type_variable: Variable name
-        :param pulumi.Input[_builtins.int] nat_udp_timeout: Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
-        :param pulumi.Input[_builtins.str] nat_udp_timeout_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs', 'TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgsDict']]]] new_static_nats: static NAT
-        :param pulumi.Input[_builtins.bool] per_tunnel_qos: Per-tunnel Qos - Default value: `false`
-        :param pulumi.Input[_builtins.str] per_tunnel_qos_variable: Variable name
+        :param pulumi.Input[_builtins.str] nat_loopback: NAT Inside Source Loopback Interface, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.str] nat_loopback_variable: Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.bool] nat_overload: NAT Overload, Attribute conditional on `nat_ipv4` being equal to `true` - Default value: `true`
+        :param pulumi.Input[_builtins.str] nat_overload_variable: Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.int] nat_prefix_length: NAT Pool Prefix Length, Attribute conditional on `nat_ipv4` being equal to `true` - Range: `1`-`32`
+        :param pulumi.Input[_builtins.str] nat_prefix_length_variable: Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.str] nat_range_end: NAT Pool Range End, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.str] nat_range_end_variable: Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.str] nat_range_start: NAT Pool Range Start, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.str] nat_range_start_variable: Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.int] nat_tcp_timeout: Set NAT TCP session timeout, in minutes, Attribute conditional on `nat_ipv4` being equal to `true` - Range: `1`-`8947` -
+               Default value: `60`
+        :param pulumi.Input[_builtins.str] nat_tcp_timeout_variable: Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.str] nat_type: NAT Type, Attribute conditional on `nat_ipv4` being equal to `true` - Choices: `interface`, `pool`, `loopback` - Default
+               value: `interface`
+        :param pulumi.Input[_builtins.str] nat_type_variable: Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.int] nat_udp_timeout: Set NAT UDP session timeout, in minutes, Attribute conditional on `nat_ipv4` being equal to `true` - Range: `1`-`8947` -
+               Default value: `1`
+        :param pulumi.Input[_builtins.str] nat_udp_timeout_variable: Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs', 'TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgsDict']]]] new_static_nats: static NAT, Attribute conditional on `nat_ipv4` being equal to `true`
+        :param pulumi.Input[_builtins.bool] per_tunnel_qos: Per-tunnel Qos, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
+        :param pulumi.Input[_builtins.str] per_tunnel_qos_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         :param pulumi.Input[_builtins.bool] qos_adaptive: Adaptive QoS - Default value: `false`
         :param pulumi.Input[_builtins.bool] qos_adaptive_bandwidth_downstream: Shaping Rate Downstream - Default value: `false`
         :param pulumi.Input[_builtins.bool] qos_adaptive_bandwidth_upstream: Shaping Rate Upstream - Default value: `false`
@@ -7430,7 +7528,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
         :param pulumi.Input[_builtins.str] speed: Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
         :param pulumi.Input[_builtins.str] speed_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureStaticNat66Args', 'TransportWanVpnInterfaceEthernetFeatureStaticNat66ArgsDict']]]] static_nat66s: static NAT66
+        :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureStaticNat66Args', 'TransportWanVpnInterfaceEthernetFeatureStaticNat66ArgsDict']]]] static_nat66s: static NAT66, Attribute conditional on `nat_ipv6` being equal to `true`
         :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
         :param pulumi.Input[_builtins.str] tcp_mss_variable: Variable name
         :param pulumi.Input[_builtins.str] tloc_extension: Extends a local TLOC to a remote node only for vpn 0
@@ -7438,8 +7536,9 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] tracker: Enable tracker for this interface
         :param pulumi.Input[_builtins.str] tracker_variable: Variable name
         :param pulumi.Input[_builtins.str] transport_wan_vpn_feature_id: Transport WAN VPN Feature ID
-        :param pulumi.Input[_builtins.int] tunnel_bandwidth_percent: Tunnels Bandwidth Percent - Range: `1`-`100` - Default value: `50`
-        :param pulumi.Input[_builtins.str] tunnel_bandwidth_percent_variable: Variable name
+        :param pulumi.Input[_builtins.int] tunnel_bandwidth_percent: Tunnels Bandwidth Percent, Attribute conditional on `tunnel_interface` being equal to `true` - Range: `1`-`100` -
+               Default value: `50`
+        :param pulumi.Input[_builtins.str] tunnel_bandwidth_percent_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         :param pulumi.Input[_builtins.bool] tunnel_interface: Tunnel Interface on/off - Default value: `false`
         :param pulumi.Input[_builtins.bool] tunnel_interface_allow_all: Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_all_variable: Variable name
@@ -7467,54 +7566,69 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_ssh_variable: Variable name
         :param pulumi.Input[_builtins.bool] tunnel_interface_allow_stun: Allow/Deny STUN - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_stun_variable: Variable name
-        :param pulumi.Input[_builtins.str] tunnel_interface_bind_loopback_tunnel: Bind loopback tunnel interface to a physical interface
-        :param pulumi.Input[_builtins.str] tunnel_interface_bind_loopback_tunnel_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_border: Set TLOC as border TLOC - Default value: `false`
-        :param pulumi.Input[_builtins.str] tunnel_interface_border_variable: Variable name
-        :param pulumi.Input[_builtins.str] tunnel_interface_carrier: Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-               `carrier7`, `carrier8` - Default value: `default`
-        :param pulumi.Input[_builtins.str] tunnel_interface_carrier_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
-        :param pulumi.Input[_builtins.str] tunnel_interface_clear_dont_fragment_variable: Variable name
-        :param pulumi.Input[_builtins.str] tunnel_interface_color: Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-               `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-               `private4`, `private5`, `private6` - Default value: `mpls`
-        :param pulumi.Input[_builtins.bool] tunnel_interface_color_restrict: Restrict this TLOC behavior - Default value: `false`
-        :param pulumi.Input[_builtins.str] tunnel_interface_color_restrict_variable: Variable name
-        :param pulumi.Input[_builtins.str] tunnel_interface_color_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_cts_sgt_propagation: CTS SGT Propagation configuration - Default value: `false`
-        :param pulumi.Input[_builtins.str] tunnel_interface_cts_sgt_propagation_variable: Variable name
+        :param pulumi.Input[_builtins.str] tunnel_interface_bind_loopback_tunnel: Bind loopback tunnel interface to a physical interface, Attribute conditional on `tunnel_interface` being equal to
+               `true`
+        :param pulumi.Input[_builtins.str] tunnel_interface_bind_loopback_tunnel_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_border: Set TLOC as border TLOC, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_border_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.str] tunnel_interface_carrier: Set carrier for TLOC, Attribute conditional on `tunnel_interface` being equal to `true` - Choices: `default`,
+               `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8` - Default value:
+               `default`
+        :param pulumi.Input[_builtins.str] tunnel_interface_carrier_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnel_interface` being
+               equal to `true` - Default value: `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_clear_dont_fragment_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.str] tunnel_interface_color: Set color for TLOC, Attribute conditional on `tunnel_interface` being equal to `true` - Choices: `default`, `mpls`,
+               `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`,
+               `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6` - Default value:
+               `mpls`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_color_restrict: Restrict this TLOC behavior, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_color_restrict_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.str] tunnel_interface_color_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_cts_sgt_propagation: CTS SGT Propagation configuration, Attribute conditional on `tunnel_interface` being equal to `true` - Default value:
+               `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_cts_sgt_propagation_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgs', 'TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgsDict']]]] tunnel_interface_encapsulations: Encapsulation for TLOC
-        :param pulumi.Input[_builtins.str] tunnel_interface_exclude_controller_group_list_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] tunnel_interface_exclude_controller_group_lists: Exclude the following controller groups defined in this list.
-        :param pulumi.Input[_builtins.str] tunnel_interface_gre_tunnel_destination_ip: GRE tunnel destination IP
-        :param pulumi.Input[_builtins.str] tunnel_interface_gre_tunnel_destination_ip_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_groups: List of groups - Range: `1`-`4294967295`
-        :param pulumi.Input[_builtins.str] tunnel_interface_groups_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_hello_interval: Set time period of control hello packets <100..600000> milli seconds - Range: `100`-`600000` - Default value: `1000`
-        :param pulumi.Input[_builtins.str] tunnel_interface_hello_interval_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_hello_tolerance: Set tolerance of control hello packets <12..6000> seconds - Range: `12`-`6000` - Default value: `12`
-        :param pulumi.Input[_builtins.str] tunnel_interface_hello_tolerance_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_last_resort_circuit: Set TLOC as last resort - Default value: `false`
-        :param pulumi.Input[_builtins.str] tunnel_interface_last_resort_circuit_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_low_bandwidth_link: Set the interface as a low-bandwidth circuit - Default value: `false`
-        :param pulumi.Input[_builtins.str] tunnel_interface_low_bandwidth_link_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_max_control_connections: Maximum Control Connections - Range: `0`-`100`
-        :param pulumi.Input[_builtins.str] tunnel_interface_max_control_connections_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_nat_refresh_interval: Set time period of nat refresh packets <1...60> seconds - Range: `1`-`60` - Default value: `5`
-        :param pulumi.Input[_builtins.str] tunnel_interface_nat_refresh_interval_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_network_broadcast: Accept and respond to network-prefix-directed broadcasts - Default value: `false`
-        :param pulumi.Input[_builtins.str] tunnel_interface_network_broadcast_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_port_hop: Disallow port hopping on the tunnel interface - Default value: `true`
-        :param pulumi.Input[_builtins.str] tunnel_interface_port_hop_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_tunnel_tcp_mss: Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
-        :param pulumi.Input[_builtins.str] tunnel_interface_tunnel_tcp_mss_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_vbond_as_stun_server: Put this wan interface in STUN mode only - Default value: `false`
-        :param pulumi.Input[_builtins.str] tunnel_interface_vbond_as_stun_server_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_vmanage_connection_preference: Set interface preference for control connection to vManage <0..8> - Range: `0`-`8` - Default value: `5`
-        :param pulumi.Input[_builtins.str] tunnel_interface_vmanage_connection_preference_variable: Variable name
-        :param pulumi.Input[_builtins.str] tunnel_qos_mode: Set tunnel QoS mode - Choices: `hub`, `spoke`
-        :param pulumi.Input[_builtins.str] tunnel_qos_mode_variable: Variable name
+        :param pulumi.Input[_builtins.str] tunnel_interface_exclude_controller_group_list_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] tunnel_interface_exclude_controller_group_lists: Exclude the following controller groups defined in this list., Attribute conditional on `tunnel_interface` being equal
+               to `true`
+        :param pulumi.Input[_builtins.str] tunnel_interface_gre_tunnel_destination_ip: GRE tunnel destination IP, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.str] tunnel_interface_gre_tunnel_destination_ip_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.int] tunnel_interface_groups: List of groups, Attribute conditional on `tunnel_interface` being equal to `true` - Range: `1`-`4294967295`
+        :param pulumi.Input[_builtins.str] tunnel_interface_groups_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.int] tunnel_interface_hello_interval: Set time period of control hello packets <100..600000> milli seconds, Attribute conditional on `tunnel_interface` being
+               equal to `true` - Range: `100`-`600000` - Default value: `1000`
+        :param pulumi.Input[_builtins.str] tunnel_interface_hello_interval_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.int] tunnel_interface_hello_tolerance: Set tolerance of control hello packets <12..6000> seconds, Attribute conditional on `tunnel_interface` being equal to
+               `true` - Range: `12`-`6000` - Default value: `12`
+        :param pulumi.Input[_builtins.str] tunnel_interface_hello_tolerance_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_last_resort_circuit: Set TLOC as last resort, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_last_resort_circuit_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_low_bandwidth_link: Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnel_interface` being equal to `true` -
+               Default value: `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_low_bandwidth_link_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.int] tunnel_interface_max_control_connections: Maximum Control Connections, Attribute conditional on `tunnel_interface` being equal to `true` - Range: `0`-`100`
+        :param pulumi.Input[_builtins.str] tunnel_interface_max_control_connections_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.int] tunnel_interface_nat_refresh_interval: Set time period of nat refresh packets <1...60> seconds, Attribute conditional on `tunnel_interface` being equal to
+               `true` - Range: `1`-`60` - Default value: `5`
+        :param pulumi.Input[_builtins.str] tunnel_interface_nat_refresh_interval_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_network_broadcast: Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnel_interface` being equal to
+               `true` - Default value: `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_network_broadcast_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_port_hop: Disallow port hopping on the tunnel interface, Attribute conditional on `tunnel_interface` being equal to `true` -
+               Default value: `true`
+        :param pulumi.Input[_builtins.str] tunnel_interface_port_hop_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.int] tunnel_interface_tunnel_tcp_mss: Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnel_interface` being equal to `true` - Range:
+               `500`-`1460`
+        :param pulumi.Input[_builtins.str] tunnel_interface_tunnel_tcp_mss_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_vbond_as_stun_server: Put this wan interface in STUN mode only, Attribute conditional on `tunnel_interface` being equal to `true` - Default
+               value: `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_vbond_as_stun_server_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.int] tunnel_interface_vmanage_connection_preference: Set interface preference for control connection to vManage <0..8>, Attribute conditional on `tunnel_interface` being
+               equal to `true` - Range: `0`-`8` - Default value: `5`
+        :param pulumi.Input[_builtins.str] tunnel_interface_vmanage_connection_preference_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        :param pulumi.Input[_builtins.str] tunnel_qos_mode: Set tunnel QoS mode, Attribute conditional on `tunnel_interface` being equal to `true` - Choices: `hub`, `spoke`
+        :param pulumi.Input[_builtins.str] tunnel_qos_mode_variable: Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         :param pulumi.Input[_builtins.str] xconnect: Extend remote TLOC over a GRE tunnel to a local WAN interface
         :param pulumi.Input[_builtins.str] xconnect_variable: Variable name
@@ -8194,7 +8308,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter
     def nat64(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        NAT64 on this interface - Default value: `false`
+        NAT64 on this interface, Attribute conditional on `nat_ipv6` being equal to `true` - Default value: `false`
         """
         return pulumi.get(self, "nat64")
 
@@ -8202,7 +8316,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter
     def nat66(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        NAT66 on this interface - Default value: `false`
+        NAT66 on this interface, Attribute conditional on `nat_ipv6` being equal to `true` - Default value: `false`
         """
         return pulumi.get(self, "nat66")
 
@@ -8242,7 +8356,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="natLoopback")
     def nat_loopback(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        NAT Inside Source Loopback Interface
+        NAT Inside Source Loopback Interface, Attribute conditional on `nat_ipv4` being equal to `true`
         """
         return pulumi.get(self, "nat_loopback")
 
@@ -8250,7 +8364,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="natLoopbackVariable")
     def nat_loopback_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         """
         return pulumi.get(self, "nat_loopback_variable")
 
@@ -8258,7 +8372,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="natOverload")
     def nat_overload(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        NAT Overload - Default value: `true`
+        NAT Overload, Attribute conditional on `nat_ipv4` being equal to `true` - Default value: `true`
         """
         return pulumi.get(self, "nat_overload")
 
@@ -8266,7 +8380,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="natOverloadVariable")
     def nat_overload_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         """
         return pulumi.get(self, "nat_overload_variable")
 
@@ -8274,7 +8388,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="natPrefixLength")
     def nat_prefix_length(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        NAT Pool Prefix Length - Range: `1`-`32`
+        NAT Pool Prefix Length, Attribute conditional on `nat_ipv4` being equal to `true` - Range: `1`-`32`
         """
         return pulumi.get(self, "nat_prefix_length")
 
@@ -8282,7 +8396,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="natPrefixLengthVariable")
     def nat_prefix_length_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         """
         return pulumi.get(self, "nat_prefix_length_variable")
 
@@ -8290,7 +8404,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="natRangeEnd")
     def nat_range_end(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        NAT Pool Range End
+        NAT Pool Range End, Attribute conditional on `nat_ipv4` being equal to `true`
         """
         return pulumi.get(self, "nat_range_end")
 
@@ -8298,7 +8412,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="natRangeEndVariable")
     def nat_range_end_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         """
         return pulumi.get(self, "nat_range_end_variable")
 
@@ -8306,7 +8420,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="natRangeStart")
     def nat_range_start(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        NAT Pool Range Start
+        NAT Pool Range Start, Attribute conditional on `nat_ipv4` being equal to `true`
         """
         return pulumi.get(self, "nat_range_start")
 
@@ -8314,7 +8428,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="natRangeStartVariable")
     def nat_range_start_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         """
         return pulumi.get(self, "nat_range_start_variable")
 
@@ -8322,7 +8436,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="natTcpTimeout")
     def nat_tcp_timeout(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+        Set NAT TCP session timeout, in minutes, Attribute conditional on `nat_ipv4` being equal to `true` - Range: `1`-`8947` -
+        Default value: `60`
         """
         return pulumi.get(self, "nat_tcp_timeout")
 
@@ -8330,7 +8445,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="natTcpTimeoutVariable")
     def nat_tcp_timeout_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         """
         return pulumi.get(self, "nat_tcp_timeout_variable")
 
@@ -8338,7 +8453,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="natType")
     def nat_type(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        NAT Type - Choices: `interface`, `pool`, `loopback` - Default value: `interface`
+        NAT Type, Attribute conditional on `nat_ipv4` being equal to `true` - Choices: `interface`, `pool`, `loopback` - Default
+        value: `interface`
         """
         return pulumi.get(self, "nat_type")
 
@@ -8346,7 +8462,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="natTypeVariable")
     def nat_type_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         """
         return pulumi.get(self, "nat_type_variable")
 
@@ -8354,7 +8470,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="natUdpTimeout")
     def nat_udp_timeout(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+        Set NAT UDP session timeout, in minutes, Attribute conditional on `nat_ipv4` being equal to `true` - Range: `1`-`8947` -
+        Default value: `1`
         """
         return pulumi.get(self, "nat_udp_timeout")
 
@@ -8362,7 +8479,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="natUdpTimeoutVariable")
     def nat_udp_timeout_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
         """
         return pulumi.get(self, "nat_udp_timeout_variable")
 
@@ -8370,7 +8487,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="newStaticNats")
     def new_static_nats(self) -> pulumi.Output[Optional[Sequence['outputs.TransportWanVpnInterfaceEthernetFeatureNewStaticNat']]]:
         """
-        static NAT
+        static NAT, Attribute conditional on `nat_ipv4` being equal to `true`
         """
         return pulumi.get(self, "new_static_nats")
 
@@ -8378,7 +8495,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="perTunnelQos")
     def per_tunnel_qos(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Per-tunnel Qos - Default value: `false`
+        Per-tunnel Qos, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
         """
         return pulumi.get(self, "per_tunnel_qos")
 
@@ -8386,7 +8503,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="perTunnelQosVariable")
     def per_tunnel_qos_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "per_tunnel_qos_variable")
 
@@ -8594,7 +8711,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="staticNat66s")
     def static_nat66s(self) -> pulumi.Output[Optional[Sequence['outputs.TransportWanVpnInterfaceEthernetFeatureStaticNat66']]]:
         """
-        static NAT66
+        static NAT66, Attribute conditional on `nat_ipv6` being equal to `true`
         """
         return pulumi.get(self, "static_nat66s")
 
@@ -8658,7 +8775,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelBandwidthPercent")
     def tunnel_bandwidth_percent(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Tunnels Bandwidth Percent - Range: `1`-`100` - Default value: `50`
+        Tunnels Bandwidth Percent, Attribute conditional on `tunnel_interface` being equal to `true` - Range: `1`-`100` -
+        Default value: `50`
         """
         return pulumi.get(self, "tunnel_bandwidth_percent")
 
@@ -8666,7 +8784,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelBandwidthPercentVariable")
     def tunnel_bandwidth_percent_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_bandwidth_percent_variable")
 
@@ -8890,7 +9008,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceBindLoopbackTunnel")
     def tunnel_interface_bind_loopback_tunnel(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Bind loopback tunnel interface to a physical interface
+        Bind loopback tunnel interface to a physical interface, Attribute conditional on `tunnel_interface` being equal to
+        `true`
         """
         return pulumi.get(self, "tunnel_interface_bind_loopback_tunnel")
 
@@ -8898,7 +9017,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceBindLoopbackTunnelVariable")
     def tunnel_interface_bind_loopback_tunnel_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_bind_loopback_tunnel_variable")
 
@@ -8906,7 +9025,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceBorder")
     def tunnel_interface_border(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Set TLOC as border TLOC - Default value: `false`
+        Set TLOC as border TLOC, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_border")
 
@@ -8914,7 +9033,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceBorderVariable")
     def tunnel_interface_border_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_border_variable")
 
@@ -8922,8 +9041,9 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceCarrier")
     def tunnel_interface_carrier(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-        `carrier7`, `carrier8` - Default value: `default`
+        Set carrier for TLOC, Attribute conditional on `tunnel_interface` being equal to `true` - Choices: `default`,
+        `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8` - Default value:
+        `default`
         """
         return pulumi.get(self, "tunnel_interface_carrier")
 
@@ -8931,7 +9051,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceCarrierVariable")
     def tunnel_interface_carrier_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_carrier_variable")
 
@@ -8939,7 +9059,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceClearDontFragment")
     def tunnel_interface_clear_dont_fragment(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnel_interface` being
+        equal to `true` - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_clear_dont_fragment")
 
@@ -8947,7 +9068,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceClearDontFragmentVariable")
     def tunnel_interface_clear_dont_fragment_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_clear_dont_fragment_variable")
 
@@ -8955,9 +9076,10 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceColor")
     def tunnel_interface_color(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-        `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-        `private4`, `private5`, `private6` - Default value: `mpls`
+        Set color for TLOC, Attribute conditional on `tunnel_interface` being equal to `true` - Choices: `default`, `mpls`,
+        `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`,
+        `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6` - Default value:
+        `mpls`
         """
         return pulumi.get(self, "tunnel_interface_color")
 
@@ -8965,7 +9087,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceColorRestrict")
     def tunnel_interface_color_restrict(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Restrict this TLOC behavior - Default value: `false`
+        Restrict this TLOC behavior, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_color_restrict")
 
@@ -8973,7 +9095,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceColorRestrictVariable")
     def tunnel_interface_color_restrict_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_color_restrict_variable")
 
@@ -8981,7 +9103,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceColorVariable")
     def tunnel_interface_color_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_color_variable")
 
@@ -8989,7 +9111,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceCtsSgtPropagation")
     def tunnel_interface_cts_sgt_propagation(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        CTS SGT Propagation configuration - Default value: `false`
+        CTS SGT Propagation configuration, Attribute conditional on `tunnel_interface` being equal to `true` - Default value:
+        `false`
         """
         return pulumi.get(self, "tunnel_interface_cts_sgt_propagation")
 
@@ -8997,7 +9120,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceCtsSgtPropagationVariable")
     def tunnel_interface_cts_sgt_propagation_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_cts_sgt_propagation_variable")
 
@@ -9013,7 +9136,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceExcludeControllerGroupListVariable")
     def tunnel_interface_exclude_controller_group_list_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_exclude_controller_group_list_variable")
 
@@ -9021,7 +9144,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceExcludeControllerGroupLists")
     def tunnel_interface_exclude_controller_group_lists(self) -> pulumi.Output[Optional[Sequence[_builtins.int]]]:
         """
-        Exclude the following controller groups defined in this list.
+        Exclude the following controller groups defined in this list., Attribute conditional on `tunnel_interface` being equal
+        to `true`
         """
         return pulumi.get(self, "tunnel_interface_exclude_controller_group_lists")
 
@@ -9029,7 +9153,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceGreTunnelDestinationIp")
     def tunnel_interface_gre_tunnel_destination_ip(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        GRE tunnel destination IP
+        GRE tunnel destination IP, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_gre_tunnel_destination_ip")
 
@@ -9037,7 +9161,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceGreTunnelDestinationIpVariable")
     def tunnel_interface_gre_tunnel_destination_ip_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_gre_tunnel_destination_ip_variable")
 
@@ -9045,7 +9169,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceGroups")
     def tunnel_interface_groups(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        List of groups - Range: `1`-`4294967295`
+        List of groups, Attribute conditional on `tunnel_interface` being equal to `true` - Range: `1`-`4294967295`
         """
         return pulumi.get(self, "tunnel_interface_groups")
 
@@ -9053,7 +9177,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceGroupsVariable")
     def tunnel_interface_groups_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_groups_variable")
 
@@ -9061,7 +9185,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceHelloInterval")
     def tunnel_interface_hello_interval(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set time period of control hello packets <100..600000> milli seconds - Range: `100`-`600000` - Default value: `1000`
+        Set time period of control hello packets <100..600000> milli seconds, Attribute conditional on `tunnel_interface` being
+        equal to `true` - Range: `100`-`600000` - Default value: `1000`
         """
         return pulumi.get(self, "tunnel_interface_hello_interval")
 
@@ -9069,7 +9194,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceHelloIntervalVariable")
     def tunnel_interface_hello_interval_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_hello_interval_variable")
 
@@ -9077,7 +9202,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceHelloTolerance")
     def tunnel_interface_hello_tolerance(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set tolerance of control hello packets <12..6000> seconds - Range: `12`-`6000` - Default value: `12`
+        Set tolerance of control hello packets <12..6000> seconds, Attribute conditional on `tunnel_interface` being equal to
+        `true` - Range: `12`-`6000` - Default value: `12`
         """
         return pulumi.get(self, "tunnel_interface_hello_tolerance")
 
@@ -9085,7 +9211,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceHelloToleranceVariable")
     def tunnel_interface_hello_tolerance_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_hello_tolerance_variable")
 
@@ -9093,7 +9219,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceLastResortCircuit")
     def tunnel_interface_last_resort_circuit(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Set TLOC as last resort - Default value: `false`
+        Set TLOC as last resort, Attribute conditional on `tunnel_interface` being equal to `true` - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_last_resort_circuit")
 
@@ -9101,7 +9227,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceLastResortCircuitVariable")
     def tunnel_interface_last_resort_circuit_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_last_resort_circuit_variable")
 
@@ -9109,7 +9235,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceLowBandwidthLink")
     def tunnel_interface_low_bandwidth_link(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Set the interface as a low-bandwidth circuit - Default value: `false`
+        Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnel_interface` being equal to `true` -
+        Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_low_bandwidth_link")
 
@@ -9117,7 +9244,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceLowBandwidthLinkVariable")
     def tunnel_interface_low_bandwidth_link_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_low_bandwidth_link_variable")
 
@@ -9125,7 +9252,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceMaxControlConnections")
     def tunnel_interface_max_control_connections(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Maximum Control Connections - Range: `0`-`100`
+        Maximum Control Connections, Attribute conditional on `tunnel_interface` being equal to `true` - Range: `0`-`100`
         """
         return pulumi.get(self, "tunnel_interface_max_control_connections")
 
@@ -9133,7 +9260,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceMaxControlConnectionsVariable")
     def tunnel_interface_max_control_connections_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_max_control_connections_variable")
 
@@ -9141,7 +9268,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceNatRefreshInterval")
     def tunnel_interface_nat_refresh_interval(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set time period of nat refresh packets <1...60> seconds - Range: `1`-`60` - Default value: `5`
+        Set time period of nat refresh packets <1...60> seconds, Attribute conditional on `tunnel_interface` being equal to
+        `true` - Range: `1`-`60` - Default value: `5`
         """
         return pulumi.get(self, "tunnel_interface_nat_refresh_interval")
 
@@ -9149,7 +9277,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceNatRefreshIntervalVariable")
     def tunnel_interface_nat_refresh_interval_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_nat_refresh_interval_variable")
 
@@ -9157,7 +9285,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceNetworkBroadcast")
     def tunnel_interface_network_broadcast(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Accept and respond to network-prefix-directed broadcasts - Default value: `false`
+        Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnel_interface` being equal to
+        `true` - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_network_broadcast")
 
@@ -9165,7 +9294,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceNetworkBroadcastVariable")
     def tunnel_interface_network_broadcast_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_network_broadcast_variable")
 
@@ -9173,7 +9302,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfacePortHop")
     def tunnel_interface_port_hop(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Disallow port hopping on the tunnel interface - Default value: `true`
+        Disallow port hopping on the tunnel interface, Attribute conditional on `tunnel_interface` being equal to `true` -
+        Default value: `true`
         """
         return pulumi.get(self, "tunnel_interface_port_hop")
 
@@ -9181,7 +9311,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfacePortHopVariable")
     def tunnel_interface_port_hop_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_port_hop_variable")
 
@@ -9189,7 +9319,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceTunnelTcpMss")
     def tunnel_interface_tunnel_tcp_mss(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnel_interface` being equal to `true` - Range:
+        `500`-`1460`
         """
         return pulumi.get(self, "tunnel_interface_tunnel_tcp_mss")
 
@@ -9197,7 +9328,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceTunnelTcpMssVariable")
     def tunnel_interface_tunnel_tcp_mss_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_tunnel_tcp_mss_variable")
 
@@ -9205,7 +9336,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceVbondAsStunServer")
     def tunnel_interface_vbond_as_stun_server(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Put this wan interface in STUN mode only - Default value: `false`
+        Put this wan interface in STUN mode only, Attribute conditional on `tunnel_interface` being equal to `true` - Default
+        value: `false`
         """
         return pulumi.get(self, "tunnel_interface_vbond_as_stun_server")
 
@@ -9213,7 +9345,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceVbondAsStunServerVariable")
     def tunnel_interface_vbond_as_stun_server_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_vbond_as_stun_server_variable")
 
@@ -9221,7 +9353,8 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceVmanageConnectionPreference")
     def tunnel_interface_vmanage_connection_preference(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set interface preference for control connection to vManage <0..8> - Range: `0`-`8` - Default value: `5`
+        Set interface preference for control connection to vManage <0..8>, Attribute conditional on `tunnel_interface` being
+        equal to `true` - Range: `0`-`8` - Default value: `5`
         """
         return pulumi.get(self, "tunnel_interface_vmanage_connection_preference")
 
@@ -9229,7 +9362,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceVmanageConnectionPreferenceVariable")
     def tunnel_interface_vmanage_connection_preference_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_interface_vmanage_connection_preference_variable")
 
@@ -9237,7 +9370,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelQosMode")
     def tunnel_qos_mode(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Set tunnel QoS mode - Choices: `hub`, `spoke`
+        Set tunnel QoS mode, Attribute conditional on `tunnel_interface` being equal to `true` - Choices: `hub`, `spoke`
         """
         return pulumi.get(self, "tunnel_qos_mode")
 
@@ -9245,7 +9378,7 @@ class TransportWanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelQosModeVariable")
     def tunnel_qos_mode_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name
+        Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
         """
         return pulumi.get(self, "tunnel_qos_mode_variable")
 

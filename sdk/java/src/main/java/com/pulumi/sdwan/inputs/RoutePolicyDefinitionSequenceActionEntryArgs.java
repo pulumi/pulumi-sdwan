@@ -126,6 +126,21 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
     }
 
     /**
+     * Community variable, Attribute conditional on `type` being equal to `community`
+     * 
+     */
+    @Import(name="communityVariable")
+    private @Nullable Output<String> communityVariable;
+
+    /**
+     * @return Community variable, Attribute conditional on `type` being equal to `community`
+     * 
+     */
+    public Optional<Output<String>> communityVariable() {
+        return Optional.ofNullable(this.communityVariable);
+    }
+
+    /**
      * Local preference, Attribute conditional on `type` being equal to `localPreference`
      *   - Range: `0`-`4294967295`
      * 
@@ -301,6 +316,7 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
         this.atomicAggregate = $.atomicAggregate;
         this.community = $.community;
         this.communityAdditive = $.communityAdditive;
+        this.communityVariable = $.communityVariable;
         this.localPreference = $.localPreference;
         this.metric = $.metric;
         this.metricType = $.metricType;
@@ -478,6 +494,27 @@ public final class RoutePolicyDefinitionSequenceActionEntryArgs extends com.pulu
          */
         public Builder communityAdditive(Boolean communityAdditive) {
             return communityAdditive(Output.of(communityAdditive));
+        }
+
+        /**
+         * @param communityVariable Community variable, Attribute conditional on `type` being equal to `community`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder communityVariable(@Nullable Output<String> communityVariable) {
+            $.communityVariable = communityVariable;
+            return this;
+        }
+
+        /**
+         * @param communityVariable Community variable, Attribute conditional on `type` being equal to `community`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder communityVariable(String communityVariable) {
+            return communityVariable(Output.of(communityVariable));
         }
 
         /**

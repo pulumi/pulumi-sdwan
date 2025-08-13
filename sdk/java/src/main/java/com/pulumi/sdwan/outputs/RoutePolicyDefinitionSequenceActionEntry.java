@@ -51,6 +51,11 @@ public final class RoutePolicyDefinitionSequenceActionEntry {
      */
     private @Nullable Boolean communityAdditive;
     /**
+     * @return Community variable, Attribute conditional on `type` being equal to `community`
+     * 
+     */
+    private @Nullable String communityVariable;
+    /**
      * @return Local preference, Attribute conditional on `type` being equal to `localPreference`
      *   - Range: `0`-`4294967295`
      * 
@@ -161,6 +166,13 @@ public final class RoutePolicyDefinitionSequenceActionEntry {
         return Optional.ofNullable(this.communityAdditive);
     }
     /**
+     * @return Community variable, Attribute conditional on `type` being equal to `community`
+     * 
+     */
+    public Optional<String> communityVariable() {
+        return Optional.ofNullable(this.communityVariable);
+    }
+    /**
      * @return Local preference, Attribute conditional on `type` being equal to `localPreference`
      *   - Range: `0`-`4294967295`
      * 
@@ -255,6 +267,7 @@ public final class RoutePolicyDefinitionSequenceActionEntry {
         private @Nullable Boolean atomicAggregate;
         private @Nullable String community;
         private @Nullable Boolean communityAdditive;
+        private @Nullable String communityVariable;
         private @Nullable Integer localPreference;
         private @Nullable Integer metric;
         private @Nullable String metricType;
@@ -275,6 +288,7 @@ public final class RoutePolicyDefinitionSequenceActionEntry {
     	      this.atomicAggregate = defaults.atomicAggregate;
     	      this.community = defaults.community;
     	      this.communityAdditive = defaults.communityAdditive;
+    	      this.communityVariable = defaults.communityVariable;
     	      this.localPreference = defaults.localPreference;
     	      this.metric = defaults.metric;
     	      this.metricType = defaults.metricType;
@@ -327,6 +341,12 @@ public final class RoutePolicyDefinitionSequenceActionEntry {
         public Builder communityAdditive(@Nullable Boolean communityAdditive) {
 
             this.communityAdditive = communityAdditive;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder communityVariable(@Nullable String communityVariable) {
+
+            this.communityVariable = communityVariable;
             return this;
         }
         @CustomType.Setter
@@ -400,6 +420,7 @@ public final class RoutePolicyDefinitionSequenceActionEntry {
             _resultValue.atomicAggregate = atomicAggregate;
             _resultValue.community = community;
             _resultValue.communityAdditive = communityAdditive;
+            _resultValue.communityVariable = communityVariable;
             _resultValue.localPreference = localPreference;
             _resultValue.metric = metric;
             _resultValue.metricType = metricType;

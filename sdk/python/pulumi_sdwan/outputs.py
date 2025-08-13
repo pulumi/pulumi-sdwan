@@ -212,6 +212,8 @@ __all__ = [
     'MeshTopologyPolicyDefinitionRegion',
     'OtherThousandeyesFeatureVirtualApplication',
     'OtherUcseFeatureInterface',
+    'PolicyGroupDevice',
+    'PolicyGroupDeviceVariable',
     'PolicyObjectAppProbeClassEntry',
     'PolicyObjectAppProbeClassEntryMap',
     'PolicyObjectApplicationListEntry',
@@ -718,6 +720,8 @@ __all__ = [
     'GetMeshTopologyPolicyDefinitionRegionResult',
     'GetOtherThousandeyesFeatureVirtualApplicationResult',
     'GetOtherUcseFeatureInterfaceResult',
+    'GetPolicyGroupDeviceResult',
+    'GetPolicyGroupDeviceVariableResult',
     'GetPolicyObjectAppProbeClassEntryResult',
     'GetPolicyObjectAppProbeClassEntryMapResult',
     'GetPolicyObjectApplicationListEntryResult',
@@ -1280,12 +1284,12 @@ class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParamete
         suggest = None
         if key == "preferredColor":
             suggest = "preferred_color"
-        elif key == "preferredColorGroupList":
-            suggest = "preferred_color_group_list"
+        elif key == "preferredColorGroupListId":
+            suggest = "preferred_color_group_list_id"
         elif key == "preferredColorGroupListVersion":
             suggest = "preferred_color_group_list_version"
-        elif key == "slaClassList":
-            suggest = "sla_class_list"
+        elif key == "slaClassListId":
+            suggest = "sla_class_list_id"
         elif key == "slaClassListVersion":
             suggest = "sla_class_list_version"
 
@@ -1303,28 +1307,28 @@ class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParamete
     def __init__(__self__, *,
                  type: _builtins.str,
                  preferred_color: Optional[_builtins.str] = None,
-                 preferred_color_group_list: Optional[_builtins.str] = None,
+                 preferred_color_group_list_id: Optional[_builtins.str] = None,
                  preferred_color_group_list_version: Optional[_builtins.int] = None,
-                 sla_class_list: Optional[_builtins.str] = None,
+                 sla_class_list_id: Optional[_builtins.str] = None,
                  sla_class_list_version: Optional[_builtins.int] = None):
         """
         :param _builtins.str type: Type of SLA class parameter
                  - Choices: `name`, `preferredColor`, `preferredColorGroup`, `strict`, `fallbackToBestPath`
         :param _builtins.str preferred_color: preferred color (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `preferredColor`
-        :param _builtins.str preferred_color_group_list: Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
+        :param _builtins.str preferred_color_group_list_id: Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
         :param _builtins.int preferred_color_group_list_version: Preferred color group list version
-        :param _builtins.str sla_class_list: SLA class list ID, Attribute conditional on `type` being equal to `name`
+        :param _builtins.str sla_class_list_id: SLA class list ID, Attribute conditional on `type` being equal to `name`
         :param _builtins.int sla_class_list_version: SLA class list version
         """
         pulumi.set(__self__, "type", type)
         if preferred_color is not None:
             pulumi.set(__self__, "preferred_color", preferred_color)
-        if preferred_color_group_list is not None:
-            pulumi.set(__self__, "preferred_color_group_list", preferred_color_group_list)
+        if preferred_color_group_list_id is not None:
+            pulumi.set(__self__, "preferred_color_group_list_id", preferred_color_group_list_id)
         if preferred_color_group_list_version is not None:
             pulumi.set(__self__, "preferred_color_group_list_version", preferred_color_group_list_version)
-        if sla_class_list is not None:
-            pulumi.set(__self__, "sla_class_list", sla_class_list)
+        if sla_class_list_id is not None:
+            pulumi.set(__self__, "sla_class_list_id", sla_class_list_id)
         if sla_class_list_version is not None:
             pulumi.set(__self__, "sla_class_list_version", sla_class_list_version)
 
@@ -1346,12 +1350,12 @@ class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParamete
         return pulumi.get(self, "preferred_color")
 
     @_builtins.property
-    @pulumi.getter(name="preferredColorGroupList")
-    def preferred_color_group_list(self) -> Optional[_builtins.str]:
+    @pulumi.getter(name="preferredColorGroupListId")
+    def preferred_color_group_list_id(self) -> Optional[_builtins.str]:
         """
         Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
         """
-        return pulumi.get(self, "preferred_color_group_list")
+        return pulumi.get(self, "preferred_color_group_list_id")
 
     @_builtins.property
     @pulumi.getter(name="preferredColorGroupListVersion")
@@ -1362,12 +1366,12 @@ class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParamete
         return pulumi.get(self, "preferred_color_group_list_version")
 
     @_builtins.property
-    @pulumi.getter(name="slaClassList")
-    def sla_class_list(self) -> Optional[_builtins.str]:
+    @pulumi.getter(name="slaClassListId")
+    def sla_class_list_id(self) -> Optional[_builtins.str]:
         """
         SLA class list ID, Attribute conditional on `type` being equal to `name`
         """
-        return pulumi.get(self, "sla_class_list")
+        return pulumi.get(self, "sla_class_list_id")
 
     @_builtins.property
     @pulumi.getter(name="slaClassListVersion")
@@ -16571,8 +16575,8 @@ class CiscoVpnFeatureTemplateIpv4StaticGreRoute(dict):
     @staticmethod
     def __key_warning(key: str):
         suggest = None
-        if key == "interfaceVariable":
-            suggest = "interface_variable"
+        if key == "interfacesVariable":
+            suggest = "interfaces_variable"
         elif key == "prefixVariable":
             suggest = "prefix_variable"
         elif key == "vpnId":
@@ -16590,25 +16594,25 @@ class CiscoVpnFeatureTemplateIpv4StaticGreRoute(dict):
         return super().get(key, default)
 
     def __init__(__self__, *,
-                 interface_variable: Optional[_builtins.str] = None,
                  interfaces: Optional[Sequence[_builtins.str]] = None,
+                 interfaces_variable: Optional[_builtins.str] = None,
                  optional: Optional[_builtins.bool] = None,
                  prefix: Optional[_builtins.str] = None,
                  prefix_variable: Optional[_builtins.str] = None,
                  vpn_id: Optional[_builtins.int] = None):
         """
-        :param _builtins.str interface_variable: Variable name
         :param Sequence[_builtins.str] interfaces: List of GRE Interfaces
+        :param _builtins.str interfaces_variable: Variable name
         :param _builtins.bool optional: Indicates if list item is considered optional.
         :param _builtins.str prefix: Prefix
         :param _builtins.str prefix_variable: Variable name
         :param _builtins.int vpn_id: Destination VPN to resolve the prefix
                  - Default value: `0`
         """
-        if interface_variable is not None:
-            pulumi.set(__self__, "interface_variable", interface_variable)
         if interfaces is not None:
             pulumi.set(__self__, "interfaces", interfaces)
+        if interfaces_variable is not None:
+            pulumi.set(__self__, "interfaces_variable", interfaces_variable)
         if optional is not None:
             pulumi.set(__self__, "optional", optional)
         if prefix is not None:
@@ -16619,20 +16623,20 @@ class CiscoVpnFeatureTemplateIpv4StaticGreRoute(dict):
             pulumi.set(__self__, "vpn_id", vpn_id)
 
     @_builtins.property
-    @pulumi.getter(name="interfaceVariable")
-    def interface_variable(self) -> Optional[_builtins.str]:
-        """
-        Variable name
-        """
-        return pulumi.get(self, "interface_variable")
-
-    @_builtins.property
     @pulumi.getter
     def interfaces(self) -> Optional[Sequence[_builtins.str]]:
         """
         List of GRE Interfaces
         """
         return pulumi.get(self, "interfaces")
+
+    @_builtins.property
+    @pulumi.getter(name="interfacesVariable")
+    def interfaces_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "interfaces_variable")
 
     @_builtins.property
     @pulumi.getter
@@ -16673,8 +16677,8 @@ class CiscoVpnFeatureTemplateIpv4StaticIpsecRoute(dict):
     @staticmethod
     def __key_warning(key: str):
         suggest = None
-        if key == "interfaceVariable":
-            suggest = "interface_variable"
+        if key == "interfacesVariable":
+            suggest = "interfaces_variable"
         elif key == "prefixVariable":
             suggest = "prefix_variable"
         elif key == "vpnId":
@@ -16692,25 +16696,25 @@ class CiscoVpnFeatureTemplateIpv4StaticIpsecRoute(dict):
         return super().get(key, default)
 
     def __init__(__self__, *,
-                 interface_variable: Optional[_builtins.str] = None,
                  interfaces: Optional[Sequence[_builtins.str]] = None,
+                 interfaces_variable: Optional[_builtins.str] = None,
                  optional: Optional[_builtins.bool] = None,
                  prefix: Optional[_builtins.str] = None,
                  prefix_variable: Optional[_builtins.str] = None,
                  vpn_id: Optional[_builtins.int] = None):
         """
-        :param _builtins.str interface_variable: Variable name
         :param Sequence[_builtins.str] interfaces: List of IPSEC Interfaces (Separated by commas)
+        :param _builtins.str interfaces_variable: Variable name
         :param _builtins.bool optional: Indicates if list item is considered optional.
         :param _builtins.str prefix: Prefix
         :param _builtins.str prefix_variable: Variable name
         :param _builtins.int vpn_id: Destination VPN to resolve the prefix
                  - Default value: `0`
         """
-        if interface_variable is not None:
-            pulumi.set(__self__, "interface_variable", interface_variable)
         if interfaces is not None:
             pulumi.set(__self__, "interfaces", interfaces)
+        if interfaces_variable is not None:
+            pulumi.set(__self__, "interfaces_variable", interfaces_variable)
         if optional is not None:
             pulumi.set(__self__, "optional", optional)
         if prefix is not None:
@@ -16721,20 +16725,20 @@ class CiscoVpnFeatureTemplateIpv4StaticIpsecRoute(dict):
             pulumi.set(__self__, "vpn_id", vpn_id)
 
     @_builtins.property
-    @pulumi.getter(name="interfaceVariable")
-    def interface_variable(self) -> Optional[_builtins.str]:
-        """
-        Variable name
-        """
-        return pulumi.get(self, "interface_variable")
-
-    @_builtins.property
     @pulumi.getter
     def interfaces(self) -> Optional[Sequence[_builtins.str]]:
         """
         List of IPSEC Interfaces (Separated by commas)
         """
         return pulumi.get(self, "interfaces")
+
+    @_builtins.property
+    @pulumi.getter(name="interfacesVariable")
+    def interfaces_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "interfaces_variable")
 
     @_builtins.property
     @pulumi.getter
@@ -22138,7 +22142,7 @@ class ConfigurationGroupTopologyDeviceUnsupportedFeature(dict):
         """
         :param _builtins.str parcel_id: Parcel ID
         :param _builtins.str parcel_type: Parcel type
-                 - Choices: `wan/vpn/interface/gre`, `wan/vpn/interface/ethernet`, `wan/vpn/interface/cellular`, `wan/vpn/interface/ipsec`, `wan/vpn/interface/serial`, `routing/ospf`, `lan/vpn/interface/ethernet`, `lan/vpn/interface/svi`, `lan/vpn/interface/ipsec`, `lan/vpn`
+                 - Choices: `wan/vpn/interface/gre`, `wan/vpn/interface/ethernet`, `wan/vpn/interface/cellular`, `wan/vpn/interface/ipsec`, `wan/vpn/interface/serial`, `route-policy`, `routing/bgp`, `routing/ospf`, `lan/vpn/interface/ethernet`, `lan/vpn/interface/svi`, `lan/vpn/interface/ipsec`, `lan/vpn`
         """
         if parcel_id is not None:
             pulumi.set(__self__, "parcel_id", parcel_id)
@@ -22158,7 +22162,7 @@ class ConfigurationGroupTopologyDeviceUnsupportedFeature(dict):
     def parcel_type(self) -> Optional[_builtins.str]:
         """
         Parcel type
-          - Choices: `wan/vpn/interface/gre`, `wan/vpn/interface/ethernet`, `wan/vpn/interface/cellular`, `wan/vpn/interface/ipsec`, `wan/vpn/interface/serial`, `routing/ospf`, `lan/vpn/interface/ethernet`, `lan/vpn/interface/svi`, `lan/vpn/interface/ipsec`, `lan/vpn`
+          - Choices: `wan/vpn/interface/gre`, `wan/vpn/interface/ethernet`, `wan/vpn/interface/cellular`, `wan/vpn/interface/ipsec`, `wan/vpn/interface/serial`, `route-policy`, `routing/bgp`, `routing/ospf`, `lan/vpn/interface/ethernet`, `lan/vpn/interface/svi`, `lan/vpn/interface/ipsec`, `lan/vpn`
         """
         return pulumi.get(self, "parcel_type")
 
@@ -24693,6 +24697,8 @@ class Ipv4AclPolicyDefinitionSequenceMatchEntry(dict):
             suggest = "destination_data_ipv4_prefix_list_version"
         elif key == "destinationIp":
             suggest = "destination_ip"
+        elif key == "destinationIpVariable":
+            suggest = "destination_ip_variable"
         elif key == "destinationPorts":
             suggest = "destination_ports"
         elif key == "icmpMessage":
@@ -24705,6 +24711,8 @@ class Ipv4AclPolicyDefinitionSequenceMatchEntry(dict):
             suggest = "source_data_ipv4_prefix_list_version"
         elif key == "sourceIp":
             suggest = "source_ip"
+        elif key == "sourceIpVariable":
+            suggest = "source_ip_variable"
         elif key == "sourcePorts":
             suggest = "source_ports"
 
@@ -24726,8 +24734,9 @@ class Ipv4AclPolicyDefinitionSequenceMatchEntry(dict):
                  destination_data_ipv4_prefix_list_id: Optional[_builtins.str] = None,
                  destination_data_ipv4_prefix_list_version: Optional[_builtins.int] = None,
                  destination_ip: Optional[_builtins.str] = None,
+                 destination_ip_variable: Optional[_builtins.str] = None,
                  destination_ports: Optional[_builtins.str] = None,
-                 dscp: Optional[_builtins.int] = None,
+                 dscp: Optional[_builtins.str] = None,
                  icmp_message: Optional[_builtins.str] = None,
                  packet_length: Optional[_builtins.int] = None,
                  priority: Optional[_builtins.str] = None,
@@ -24735,6 +24744,7 @@ class Ipv4AclPolicyDefinitionSequenceMatchEntry(dict):
                  source_data_ipv4_prefix_list_id: Optional[_builtins.str] = None,
                  source_data_ipv4_prefix_list_version: Optional[_builtins.int] = None,
                  source_ip: Optional[_builtins.str] = None,
+                 source_ip_variable: Optional[_builtins.str] = None,
                  source_ports: Optional[_builtins.str] = None,
                  tcp: Optional[_builtins.str] = None):
         """
@@ -24745,9 +24755,9 @@ class Ipv4AclPolicyDefinitionSequenceMatchEntry(dict):
         :param _builtins.str destination_data_ipv4_prefix_list_id: Destination data IPv4 prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
         :param _builtins.int destination_data_ipv4_prefix_list_version: Destination data IPv4 prefix list version
         :param _builtins.str destination_ip: Destination IP prefix, Attribute conditional on `type` being equal to `destinationIp`
+        :param _builtins.str destination_ip_variable: Destination IP prefix variable, Attribute conditional on `type` being equal to `destinationIp`
         :param _builtins.str destination_ports: Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `destinationPort`
-        :param _builtins.int dscp: DSCP value, Attribute conditional on `type` being equal to `dscp`
-                 - Range: `0`-`63`
+        :param _builtins.str dscp: DSCP value, Attribute conditional on `type` being equal to `dscp`
         :param _builtins.str icmp_message: ICMP Message, Attribute conditional on `type` being equal to `icmpMessage`
         :param _builtins.int packet_length: Packet length, Attribute conditional on `type` being equal to `packetLength`
                  - Range: `0`-`65535`
@@ -24757,6 +24767,7 @@ class Ipv4AclPolicyDefinitionSequenceMatchEntry(dict):
         :param _builtins.str source_data_ipv4_prefix_list_id: Source data IPv4 prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
         :param _builtins.int source_data_ipv4_prefix_list_version: Source data IPv4 prefix list version
         :param _builtins.str source_ip: Source IP prefix, Attribute conditional on `type` being equal to `sourceIp`
+        :param _builtins.str source_ip_variable: Source IP prefix variable, Attribute conditional on `type` being equal to `sourceIp`
         :param _builtins.str source_ports: Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
         :param _builtins.str tcp: TCP parameters, Attribute conditional on `type` being equal to `tcp`
                  - Choices: `syn`
@@ -24772,6 +24783,8 @@ class Ipv4AclPolicyDefinitionSequenceMatchEntry(dict):
             pulumi.set(__self__, "destination_data_ipv4_prefix_list_version", destination_data_ipv4_prefix_list_version)
         if destination_ip is not None:
             pulumi.set(__self__, "destination_ip", destination_ip)
+        if destination_ip_variable is not None:
+            pulumi.set(__self__, "destination_ip_variable", destination_ip_variable)
         if destination_ports is not None:
             pulumi.set(__self__, "destination_ports", destination_ports)
         if dscp is not None:
@@ -24790,6 +24803,8 @@ class Ipv4AclPolicyDefinitionSequenceMatchEntry(dict):
             pulumi.set(__self__, "source_data_ipv4_prefix_list_version", source_data_ipv4_prefix_list_version)
         if source_ip is not None:
             pulumi.set(__self__, "source_ip", source_ip)
+        if source_ip_variable is not None:
+            pulumi.set(__self__, "source_ip_variable", source_ip_variable)
         if source_ports is not None:
             pulumi.set(__self__, "source_ports", source_ports)
         if tcp is not None:
@@ -24845,6 +24860,14 @@ class Ipv4AclPolicyDefinitionSequenceMatchEntry(dict):
         return pulumi.get(self, "destination_ip")
 
     @_builtins.property
+    @pulumi.getter(name="destinationIpVariable")
+    def destination_ip_variable(self) -> Optional[_builtins.str]:
+        """
+        Destination IP prefix variable, Attribute conditional on `type` being equal to `destinationIp`
+        """
+        return pulumi.get(self, "destination_ip_variable")
+
+    @_builtins.property
     @pulumi.getter(name="destinationPorts")
     def destination_ports(self) -> Optional[_builtins.str]:
         """
@@ -24854,10 +24877,9 @@ class Ipv4AclPolicyDefinitionSequenceMatchEntry(dict):
 
     @_builtins.property
     @pulumi.getter
-    def dscp(self) -> Optional[_builtins.int]:
+    def dscp(self) -> Optional[_builtins.str]:
         """
         DSCP value, Attribute conditional on `type` being equal to `dscp`
-          - Range: `0`-`63`
         """
         return pulumi.get(self, "dscp")
 
@@ -24918,6 +24940,14 @@ class Ipv4AclPolicyDefinitionSequenceMatchEntry(dict):
         Source IP prefix, Attribute conditional on `type` being equal to `sourceIp`
         """
         return pulumi.get(self, "source_ip")
+
+    @_builtins.property
+    @pulumi.getter(name="sourceIpVariable")
+    def source_ip_variable(self) -> Optional[_builtins.str]:
+        """
+        Source IP prefix variable, Attribute conditional on `type` being equal to `sourceIp`
+        """
+        return pulumi.get(self, "source_ip_variable")
 
     @_builtins.property
     @pulumi.getter(name="sourcePorts")
@@ -25087,6 +25117,8 @@ class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry(dict):
             suggest = "destination_data_ipv4_prefix_list_version"
         elif key == "destinationIp":
             suggest = "destination_ip"
+        elif key == "destinationIpVariable":
+            suggest = "destination_ip_variable"
         elif key == "destinationPort":
             suggest = "destination_port"
         elif key == "sourceDataIpv4PrefixListId":
@@ -25095,6 +25127,8 @@ class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry(dict):
             suggest = "source_data_ipv4_prefix_list_version"
         elif key == "sourceIp":
             suggest = "source_ip"
+        elif key == "sourceIpVariable":
+            suggest = "source_ip_variable"
         elif key == "sourcePorts":
             suggest = "source_ports"
 
@@ -25114,10 +25148,12 @@ class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry(dict):
                  destination_data_ipv4_prefix_list_id: Optional[_builtins.str] = None,
                  destination_data_ipv4_prefix_list_version: Optional[_builtins.int] = None,
                  destination_ip: Optional[_builtins.str] = None,
+                 destination_ip_variable: Optional[_builtins.str] = None,
                  destination_port: Optional[_builtins.int] = None,
                  source_data_ipv4_prefix_list_id: Optional[_builtins.str] = None,
                  source_data_ipv4_prefix_list_version: Optional[_builtins.int] = None,
                  source_ip: Optional[_builtins.str] = None,
+                 source_ip_variable: Optional[_builtins.str] = None,
                  source_ports: Optional[_builtins.str] = None):
         """
         :param _builtins.str type: Type of match entry
@@ -25125,11 +25161,13 @@ class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry(dict):
         :param _builtins.str destination_data_ipv4_prefix_list_id: Destination data IPv4 prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
         :param _builtins.int destination_data_ipv4_prefix_list_version: Destination data IPv4 prefix list version
         :param _builtins.str destination_ip: Destination IP prefix, Attribute conditional on `type` being equal to `destinationIp`
+        :param _builtins.str destination_ip_variable: Destination IP prefix variable, Attribute conditional on `type` being equal to `destinationIp`
         :param _builtins.int destination_port: Destination port, only `22` and `161` supported, Attribute conditional on `type` being equal to `destinationPort`
                  - Range: `0`-`65535`
         :param _builtins.str source_data_ipv4_prefix_list_id: Source data IPv4 prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
         :param _builtins.int source_data_ipv4_prefix_list_version: Source data IPv4 prefix list version
         :param _builtins.str source_ip: Source IP prefix, Attribute conditional on `type` being equal to `sourceIp`
+        :param _builtins.str source_ip_variable: Source IP prefix variable, Attribute conditional on `type` being equal to `sourceIp`
         :param _builtins.str source_ports: Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
         """
         pulumi.set(__self__, "type", type)
@@ -25139,6 +25177,8 @@ class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry(dict):
             pulumi.set(__self__, "destination_data_ipv4_prefix_list_version", destination_data_ipv4_prefix_list_version)
         if destination_ip is not None:
             pulumi.set(__self__, "destination_ip", destination_ip)
+        if destination_ip_variable is not None:
+            pulumi.set(__self__, "destination_ip_variable", destination_ip_variable)
         if destination_port is not None:
             pulumi.set(__self__, "destination_port", destination_port)
         if source_data_ipv4_prefix_list_id is not None:
@@ -25147,6 +25187,8 @@ class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry(dict):
             pulumi.set(__self__, "source_data_ipv4_prefix_list_version", source_data_ipv4_prefix_list_version)
         if source_ip is not None:
             pulumi.set(__self__, "source_ip", source_ip)
+        if source_ip_variable is not None:
+            pulumi.set(__self__, "source_ip_variable", source_ip_variable)
         if source_ports is not None:
             pulumi.set(__self__, "source_ports", source_ports)
 
@@ -25184,6 +25226,14 @@ class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry(dict):
         return pulumi.get(self, "destination_ip")
 
     @_builtins.property
+    @pulumi.getter(name="destinationIpVariable")
+    def destination_ip_variable(self) -> Optional[_builtins.str]:
+        """
+        Destination IP prefix variable, Attribute conditional on `type` being equal to `destinationIp`
+        """
+        return pulumi.get(self, "destination_ip_variable")
+
+    @_builtins.property
     @pulumi.getter(name="destinationPort")
     def destination_port(self) -> Optional[_builtins.int]:
         """
@@ -25215,6 +25265,14 @@ class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry(dict):
         Source IP prefix, Attribute conditional on `type` being equal to `sourceIp`
         """
         return pulumi.get(self, "source_ip")
+
+    @_builtins.property
+    @pulumi.getter(name="sourceIpVariable")
+    def source_ip_variable(self) -> Optional[_builtins.str]:
+        """
+        Source IP prefix variable, Attribute conditional on `type` being equal to `sourceIp`
+        """
+        return pulumi.get(self, "source_ip_variable")
 
     @_builtins.property
     @pulumi.getter(name="sourcePorts")
@@ -26738,6 +26796,110 @@ class OtherUcseFeatureInterface(dict):
         Variable name
         """
         return pulumi.get(self, "ucse_interface_vpn_variable")
+
+
+@pulumi.output_type
+class PolicyGroupDevice(dict):
+    def __init__(__self__, *,
+                 deploy: Optional[_builtins.bool] = None,
+                 id: Optional[_builtins.str] = None,
+                 variables: Optional[Sequence['outputs.PolicyGroupDeviceVariable']] = None):
+        """
+        :param _builtins.bool deploy: Deploy to device if enabled.
+                 - Default value: `false`
+        :param _builtins.str id: Device ID
+        :param Sequence['PolicyGroupDeviceVariableArgs'] variables: List of variables
+        """
+        if deploy is not None:
+            pulumi.set(__self__, "deploy", deploy)
+        if id is not None:
+            pulumi.set(__self__, "id", id)
+        if variables is not None:
+            pulumi.set(__self__, "variables", variables)
+
+    @_builtins.property
+    @pulumi.getter
+    def deploy(self) -> Optional[_builtins.bool]:
+        """
+        Deploy to device if enabled.
+          - Default value: `false`
+        """
+        return pulumi.get(self, "deploy")
+
+    @_builtins.property
+    @pulumi.getter
+    def id(self) -> Optional[_builtins.str]:
+        """
+        Device ID
+        """
+        return pulumi.get(self, "id")
+
+    @_builtins.property
+    @pulumi.getter
+    def variables(self) -> Optional[Sequence['outputs.PolicyGroupDeviceVariable']]:
+        """
+        List of variables
+        """
+        return pulumi.get(self, "variables")
+
+
+@pulumi.output_type
+class PolicyGroupDeviceVariable(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "listValues":
+            suggest = "list_values"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in PolicyGroupDeviceVariable. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        PolicyGroupDeviceVariable.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        PolicyGroupDeviceVariable.__key_warning(key)
+        return super().get(key, default)
+
+    def __init__(__self__, *,
+                 name: _builtins.str,
+                 list_values: Optional[Sequence[_builtins.str]] = None,
+                 value: Optional[_builtins.str] = None):
+        """
+        :param _builtins.str name: Variable name
+        :param Sequence[_builtins.str] list_values: Use this instead of `value` in case value is of type `List`.
+        :param _builtins.str value: Variable value
+        """
+        pulumi.set(__self__, "name", name)
+        if list_values is not None:
+            pulumi.set(__self__, "list_values", list_values)
+        if value is not None:
+            pulumi.set(__self__, "value", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def name(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "name")
+
+    @_builtins.property
+    @pulumi.getter(name="listValues")
+    def list_values(self) -> Optional[Sequence[_builtins.str]]:
+        """
+        Use this instead of `value` in case value is of type `List`.
+        """
+        return pulumi.get(self, "list_values")
+
+    @_builtins.property
+    @pulumi.getter
+    def value(self) -> Optional[_builtins.str]:
+        """
+        Variable value
+        """
+        return pulumi.get(self, "value")
 
 
 @pulumi.output_type
@@ -28458,6 +28620,8 @@ class RoutePolicyDefinitionSequenceActionEntry(dict):
             suggest = "atomic_aggregate"
         elif key == "communityAdditive":
             suggest = "community_additive"
+        elif key == "communityVariable":
+            suggest = "community_variable"
         elif key == "localPreference":
             suggest = "local_preference"
         elif key == "metricType":
@@ -28489,6 +28653,7 @@ class RoutePolicyDefinitionSequenceActionEntry(dict):
                  atomic_aggregate: Optional[_builtins.bool] = None,
                  community: Optional[_builtins.str] = None,
                  community_additive: Optional[_builtins.bool] = None,
+                 community_variable: Optional[_builtins.str] = None,
                  local_preference: Optional[_builtins.int] = None,
                  metric: Optional[_builtins.int] = None,
                  metric_type: Optional[_builtins.str] = None,
@@ -28509,6 +28674,7 @@ class RoutePolicyDefinitionSequenceActionEntry(dict):
         :param _builtins.bool atomic_aggregate: Atomic aggregate, Attribute conditional on `type` being equal to `atomicAggregate`
         :param _builtins.str community: Community value, e.g. `1000:10000` or `internet` or `local-AS`, Attribute conditional on `type` being equal to `community`
         :param _builtins.bool community_additive: Community additive, Attribute conditional on `type` being equal to `communityAdditive`
+        :param _builtins.str community_variable: Community variable, Attribute conditional on `type` being equal to `community`
         :param _builtins.int local_preference: Local preference, Attribute conditional on `type` being equal to `localPreference`
                  - Range: `0`-`4294967295`
         :param _builtins.int metric: Metric, Attribute conditional on `type` being equal to `metric`
@@ -28541,6 +28707,8 @@ class RoutePolicyDefinitionSequenceActionEntry(dict):
             pulumi.set(__self__, "community", community)
         if community_additive is not None:
             pulumi.set(__self__, "community_additive", community_additive)
+        if community_variable is not None:
+            pulumi.set(__self__, "community_variable", community_variable)
         if local_preference is not None:
             pulumi.set(__self__, "local_preference", local_preference)
         if metric is not None:
@@ -28625,6 +28793,14 @@ class RoutePolicyDefinitionSequenceActionEntry(dict):
         Community additive, Attribute conditional on `type` being equal to `communityAdditive`
         """
         return pulumi.get(self, "community_additive")
+
+    @_builtins.property
+    @pulumi.getter(name="communityVariable")
+    def community_variable(self) -> Optional[_builtins.str]:
+        """
+        Community variable, Attribute conditional on `type` being equal to `community`
+        """
+        return pulumi.get(self, "community_variable")
 
     @_builtins.property
     @pulumi.getter(name="localPreference")
@@ -28723,6 +28899,8 @@ class RoutePolicyDefinitionSequenceMatchEntry(dict):
             suggest = "community_list_versions"
         elif key == "expandedCommunityListId":
             suggest = "expanded_community_list_id"
+        elif key == "expandedCommunityListVariable":
+            suggest = "expanded_community_list_variable"
         elif key == "expandedCommunityListVersion":
             suggest = "expanded_community_list_version"
         elif key == "extendedCommunityListId":
@@ -28763,6 +28941,7 @@ class RoutePolicyDefinitionSequenceMatchEntry(dict):
                  community_list_match_flag: Optional[_builtins.str] = None,
                  community_list_versions: Optional[Sequence[_builtins.str]] = None,
                  expanded_community_list_id: Optional[_builtins.str] = None,
+                 expanded_community_list_variable: Optional[_builtins.str] = None,
                  expanded_community_list_version: Optional[_builtins.int] = None,
                  extended_community_list_id: Optional[_builtins.str] = None,
                  extended_community_list_version: Optional[_builtins.int] = None,
@@ -28778,7 +28957,7 @@ class RoutePolicyDefinitionSequenceMatchEntry(dict):
                  prefix_list_version: Optional[_builtins.int] = None):
         """
         :param _builtins.str type: Type of match entry
-                 - Choices: `address`, `asPath`, `advancedCommunity`, `expandedCommunity`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
+                 - Choices: `address`, `asPath`, `advancedCommunity`, `expandedCommunity`, `expandedCommunityInline`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
         :param _builtins.str as_path_list_id: AS path list ID, Attribute conditional on `type` being equal to `asPath`
         :param _builtins.int as_path_list_version: AS path list version
         :param Sequence[_builtins.str] community_list_ids: Community list IDs, Attribute conditional on `type` being equal to `advancedCommunity`
@@ -28786,6 +28965,7 @@ class RoutePolicyDefinitionSequenceMatchEntry(dict):
                  - Choices: `and`, `or`, `exact`
         :param Sequence[_builtins.str] community_list_versions: Community list versions
         :param _builtins.str expanded_community_list_id: Expanded community list ID, Attribute conditional on `type` being equal to `expandedCommunity`
+        :param _builtins.str expanded_community_list_variable: Expanded community list variable, Attribute conditional on `type` being equal to `expandedCommunityInline`
         :param _builtins.int expanded_community_list_version: Expanded community list version
         :param _builtins.str extended_community_list_id: Extended community list ID, Attribute conditional on `type` being equal to `extCommunity`
         :param _builtins.int extended_community_list_version: Extended community list version
@@ -28818,6 +28998,8 @@ class RoutePolicyDefinitionSequenceMatchEntry(dict):
             pulumi.set(__self__, "community_list_versions", community_list_versions)
         if expanded_community_list_id is not None:
             pulumi.set(__self__, "expanded_community_list_id", expanded_community_list_id)
+        if expanded_community_list_variable is not None:
+            pulumi.set(__self__, "expanded_community_list_variable", expanded_community_list_variable)
         if expanded_community_list_version is not None:
             pulumi.set(__self__, "expanded_community_list_version", expanded_community_list_version)
         if extended_community_list_id is not None:
@@ -28850,7 +29032,7 @@ class RoutePolicyDefinitionSequenceMatchEntry(dict):
     def type(self) -> _builtins.str:
         """
         Type of match entry
-          - Choices: `address`, `asPath`, `advancedCommunity`, `expandedCommunity`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
+          - Choices: `address`, `asPath`, `advancedCommunity`, `expandedCommunity`, `expandedCommunityInline`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
         """
         return pulumi.get(self, "type")
 
@@ -28902,6 +29084,14 @@ class RoutePolicyDefinitionSequenceMatchEntry(dict):
         Expanded community list ID, Attribute conditional on `type` being equal to `expandedCommunity`
         """
         return pulumi.get(self, "expanded_community_list_id")
+
+    @_builtins.property
+    @pulumi.getter(name="expandedCommunityListVariable")
+    def expanded_community_list_variable(self) -> Optional[_builtins.str]:
+        """
+        Expanded community list variable, Attribute conditional on `type` being equal to `expandedCommunityInline`
+        """
+        return pulumi.get(self, "expanded_community_list_variable")
 
     @_builtins.property
     @pulumi.getter(name="expandedCommunityListVersion")
@@ -31826,9 +32016,7 @@ class ServiceLanVpnFeatureIpv4StaticRoute(dict):
     @staticmethod
     def __key_warning(key: str):
         suggest = None
-        if key == "gatewayDhcp":
-            suggest = "gateway_dhcp"
-        elif key == "networkAddress":
+        if key == "networkAddress":
             suggest = "network_address"
         elif key == "networkAddressVariable":
             suggest = "network_address_variable"
@@ -31853,7 +32041,8 @@ class ServiceLanVpnFeatureIpv4StaticRoute(dict):
         return super().get(key, default)
 
     def __init__(__self__, *,
-                 gateway_dhcp: Optional[_builtins.bool] = None,
+                 dhcp: Optional[_builtins.bool] = None,
+                 gateway: Optional[_builtins.str] = None,
                  network_address: Optional[_builtins.str] = None,
                  network_address_variable: Optional[_builtins.str] = None,
                  next_hop_with_trackers: Optional[Sequence['outputs.ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTracker']] = None,
@@ -31863,19 +32052,23 @@ class ServiceLanVpnFeatureIpv4StaticRoute(dict):
                  subnet_mask_variable: Optional[_builtins.str] = None,
                  vpn: Optional[_builtins.bool] = None):
         """
-        :param _builtins.bool gateway_dhcp: IPv4 Route Gateway DHCP
+        :param _builtins.bool dhcp: IPv4 Route Gateway DHCP, Attribute conditional on `gateway` being equal to `dhcp`
+        :param _builtins.str gateway: Gateway type
+                 - Choices: `nextHop`, `null0`, `vpn`, `dhcp`
         :param _builtins.str network_address: IP Address
         :param _builtins.str network_address_variable: Variable name
-        :param Sequence['ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTrackerArgs'] next_hop_with_trackers: IPv4 Route Gateway Next Hop with Tracker
-        :param Sequence['ServiceLanVpnFeatureIpv4StaticRouteNextHopArgs'] next_hops: IPv4 Route Gateway Next Hop
-        :param _builtins.bool null0: IPv4 Route Gateway Next Hop
+        :param Sequence['ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTrackerArgs'] next_hop_with_trackers: IPv4 Route Gateway Next Hop with Tracker, Attribute conditional on `gateway` being equal to `nextHop`
+        :param Sequence['ServiceLanVpnFeatureIpv4StaticRouteNextHopArgs'] next_hops: IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
+        :param _builtins.bool null0: IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `null0`
         :param _builtins.str subnet_mask: Subnet Mask
                  - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param _builtins.str subnet_mask_variable: Variable name
-        :param _builtins.bool vpn: IPv4 Route Gateway VPN
+        :param _builtins.bool vpn: IPv4 Route Gateway VPN, Attribute conditional on `gateway` being equal to `vpn`
         """
-        if gateway_dhcp is not None:
-            pulumi.set(__self__, "gateway_dhcp", gateway_dhcp)
+        if dhcp is not None:
+            pulumi.set(__self__, "dhcp", dhcp)
+        if gateway is not None:
+            pulumi.set(__self__, "gateway", gateway)
         if network_address is not None:
             pulumi.set(__self__, "network_address", network_address)
         if network_address_variable is not None:
@@ -31894,12 +32087,21 @@ class ServiceLanVpnFeatureIpv4StaticRoute(dict):
             pulumi.set(__self__, "vpn", vpn)
 
     @_builtins.property
-    @pulumi.getter(name="gatewayDhcp")
-    def gateway_dhcp(self) -> Optional[_builtins.bool]:
+    @pulumi.getter
+    def dhcp(self) -> Optional[_builtins.bool]:
         """
-        IPv4 Route Gateway DHCP
+        IPv4 Route Gateway DHCP, Attribute conditional on `gateway` being equal to `dhcp`
         """
-        return pulumi.get(self, "gateway_dhcp")
+        return pulumi.get(self, "dhcp")
+
+    @_builtins.property
+    @pulumi.getter
+    def gateway(self) -> Optional[_builtins.str]:
+        """
+        Gateway type
+          - Choices: `nextHop`, `null0`, `vpn`, `dhcp`
+        """
+        return pulumi.get(self, "gateway")
 
     @_builtins.property
     @pulumi.getter(name="networkAddress")
@@ -31921,7 +32123,7 @@ class ServiceLanVpnFeatureIpv4StaticRoute(dict):
     @pulumi.getter(name="nextHopWithTrackers")
     def next_hop_with_trackers(self) -> Optional[Sequence['outputs.ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTracker']]:
         """
-        IPv4 Route Gateway Next Hop with Tracker
+        IPv4 Route Gateway Next Hop with Tracker, Attribute conditional on `gateway` being equal to `nextHop`
         """
         return pulumi.get(self, "next_hop_with_trackers")
 
@@ -31929,7 +32131,7 @@ class ServiceLanVpnFeatureIpv4StaticRoute(dict):
     @pulumi.getter(name="nextHops")
     def next_hops(self) -> Optional[Sequence['outputs.ServiceLanVpnFeatureIpv4StaticRouteNextHop']]:
         """
-        IPv4 Route Gateway Next Hop
+        IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
         """
         return pulumi.get(self, "next_hops")
 
@@ -31937,7 +32139,7 @@ class ServiceLanVpnFeatureIpv4StaticRoute(dict):
     @pulumi.getter
     def null0(self) -> Optional[_builtins.bool]:
         """
-        IPv4 Route Gateway Next Hop
+        IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `null0`
         """
         return pulumi.get(self, "null0")
 
@@ -31962,7 +32164,7 @@ class ServiceLanVpnFeatureIpv4StaticRoute(dict):
     @pulumi.getter
     def vpn(self) -> Optional[_builtins.bool]:
         """
-        IPv4 Route Gateway VPN
+        IPv4 Route Gateway VPN, Attribute conditional on `gateway` being equal to `vpn`
         """
         return pulumi.get(self, "vpn")
 
@@ -32257,6 +32459,7 @@ class ServiceLanVpnFeatureIpv6StaticRoute(dict):
         return super().get(key, default)
 
     def __init__(__self__, *,
+                 gateway: Optional[_builtins.str] = None,
                  nat: Optional[_builtins.str] = None,
                  nat_variable: Optional[_builtins.str] = None,
                  next_hops: Optional[Sequence['outputs.ServiceLanVpnFeatureIpv6StaticRouteNextHop']] = None,
@@ -32264,14 +32467,18 @@ class ServiceLanVpnFeatureIpv6StaticRoute(dict):
                  prefix: Optional[_builtins.str] = None,
                  prefix_variable: Optional[_builtins.str] = None):
         """
-        :param _builtins.str nat: IPv6 Nat
+        :param _builtins.str gateway: Gateway type
+                 - Choices: `nextHop`, `null0`, `nat`
+        :param _builtins.str nat: IPv6 Nat, Attribute conditional on `gateway` being equal to `nat`
                  - Choices: `NAT64`, `NAT66`
-        :param _builtins.str nat_variable: Variable name
-        :param Sequence['ServiceLanVpnFeatureIpv6StaticRouteNextHopArgs'] next_hops: IPv6 Route Gateway Next Hop
-        :param _builtins.bool null0: IPv6 Route Gateway Next Hop
+        :param _builtins.str nat_variable: Variable name, Attribute conditional on `gateway` being equal to `nat`
+        :param Sequence['ServiceLanVpnFeatureIpv6StaticRouteNextHopArgs'] next_hops: IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
+        :param _builtins.bool null0: IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `null0`
         :param _builtins.str prefix: Prefix
         :param _builtins.str prefix_variable: Variable name
         """
+        if gateway is not None:
+            pulumi.set(__self__, "gateway", gateway)
         if nat is not None:
             pulumi.set(__self__, "nat", nat)
         if nat_variable is not None:
@@ -32287,9 +32494,18 @@ class ServiceLanVpnFeatureIpv6StaticRoute(dict):
 
     @_builtins.property
     @pulumi.getter
+    def gateway(self) -> Optional[_builtins.str]:
+        """
+        Gateway type
+          - Choices: `nextHop`, `null0`, `nat`
+        """
+        return pulumi.get(self, "gateway")
+
+    @_builtins.property
+    @pulumi.getter
     def nat(self) -> Optional[_builtins.str]:
         """
-        IPv6 Nat
+        IPv6 Nat, Attribute conditional on `gateway` being equal to `nat`
           - Choices: `NAT64`, `NAT66`
         """
         return pulumi.get(self, "nat")
@@ -32298,7 +32514,7 @@ class ServiceLanVpnFeatureIpv6StaticRoute(dict):
     @pulumi.getter(name="natVariable")
     def nat_variable(self) -> Optional[_builtins.str]:
         """
-        Variable name
+        Variable name, Attribute conditional on `gateway` being equal to `nat`
         """
         return pulumi.get(self, "nat_variable")
 
@@ -32306,7 +32522,7 @@ class ServiceLanVpnFeatureIpv6StaticRoute(dict):
     @pulumi.getter(name="nextHops")
     def next_hops(self) -> Optional[Sequence['outputs.ServiceLanVpnFeatureIpv6StaticRouteNextHop']]:
         """
-        IPv6 Route Gateway Next Hop
+        IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
         """
         return pulumi.get(self, "next_hops")
 
@@ -32314,7 +32530,7 @@ class ServiceLanVpnFeatureIpv6StaticRoute(dict):
     @pulumi.getter
     def null0(self) -> Optional[_builtins.bool]:
         """
-        IPv6 Route Gateway Next Hop
+        IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `null0`
         """
         return pulumi.get(self, "null0")
 
@@ -38117,14 +38333,18 @@ class ServiceRoutingBgpFeatureIpv4NeighborAddressFamily(dict):
     @staticmethod
     def __key_warning(key: str):
         suggest = None
-        if key == "familyType":
+        if key == "disablePeerMaxNumberOfPrefixes":
+            suggest = "disable_peer_max_number_of_prefixes"
+        elif key == "disablePeerMaxNumberOfPrefixesVariable":
+            suggest = "disable_peer_max_number_of_prefixes_variable"
+        elif key == "disablePeerThreshold":
+            suggest = "disable_peer_threshold"
+        elif key == "disablePeerThresholdVariable":
+            suggest = "disable_peer_threshold_variable"
+        elif key == "familyType":
             suggest = "family_type"
         elif key == "inRoutePolicyId":
             suggest = "in_route_policy_id"
-        elif key == "maxNumberOfPrefixes":
-            suggest = "max_number_of_prefixes"
-        elif key == "maxNumberOfPrefixesVariable":
-            suggest = "max_number_of_prefixes_variable"
         elif key == "outRoutePolicyId":
             suggest = "out_route_policy_id"
         elif key == "policyType":
@@ -38133,8 +38353,22 @@ class ServiceRoutingBgpFeatureIpv4NeighborAddressFamily(dict):
             suggest = "restart_interval"
         elif key == "restartIntervalVariable":
             suggest = "restart_interval_variable"
-        elif key == "thresholdVariable":
-            suggest = "threshold_variable"
+        elif key == "restartMaxNumberOfPrefixes":
+            suggest = "restart_max_number_of_prefixes"
+        elif key == "restartMaxNumberOfPrefixesVariable":
+            suggest = "restart_max_number_of_prefixes_variable"
+        elif key == "restartThreshold":
+            suggest = "restart_threshold"
+        elif key == "restartThresholdVariable":
+            suggest = "restart_threshold_variable"
+        elif key == "warningMessageMaxNumberOfPrefixes":
+            suggest = "warning_message_max_number_of_prefixes"
+        elif key == "warningMessageMaxNumberOfPrefixesVariable":
+            suggest = "warning_message_max_number_of_prefixes_variable"
+        elif key == "warningMessageThreshold":
+            suggest = "warning_message_threshold"
+        elif key == "warningMessageThresholdVariable":
+            suggest = "warning_message_threshold_variable"
 
         if suggest:
             pulumi.log.warn(f"Key '{key}' not found in ServiceRoutingBgpFeatureIpv4NeighborAddressFamily. Access the value via the '{suggest}' property getter instead.")
@@ -38148,38 +38382,65 @@ class ServiceRoutingBgpFeatureIpv4NeighborAddressFamily(dict):
         return super().get(key, default)
 
     def __init__(__self__, *,
+                 disable_peer_max_number_of_prefixes: Optional[_builtins.int] = None,
+                 disable_peer_max_number_of_prefixes_variable: Optional[_builtins.str] = None,
+                 disable_peer_threshold: Optional[_builtins.int] = None,
+                 disable_peer_threshold_variable: Optional[_builtins.str] = None,
                  family_type: Optional[_builtins.str] = None,
                  in_route_policy_id: Optional[_builtins.str] = None,
-                 max_number_of_prefixes: Optional[_builtins.int] = None,
-                 max_number_of_prefixes_variable: Optional[_builtins.str] = None,
                  out_route_policy_id: Optional[_builtins.str] = None,
                  policy_type: Optional[_builtins.str] = None,
                  restart_interval: Optional[_builtins.int] = None,
                  restart_interval_variable: Optional[_builtins.str] = None,
-                 threshold: Optional[_builtins.int] = None,
-                 threshold_variable: Optional[_builtins.str] = None):
+                 restart_max_number_of_prefixes: Optional[_builtins.int] = None,
+                 restart_max_number_of_prefixes_variable: Optional[_builtins.str] = None,
+                 restart_threshold: Optional[_builtins.int] = None,
+                 restart_threshold_variable: Optional[_builtins.str] = None,
+                 warning_message_max_number_of_prefixes: Optional[_builtins.int] = None,
+                 warning_message_max_number_of_prefixes_variable: Optional[_builtins.str] = None,
+                 warning_message_threshold: Optional[_builtins.int] = None,
+                 warning_message_threshold_variable: Optional[_builtins.str] = None):
         """
-        :param _builtins.str family_type: Set IPv4 unicast address family
-        :param _builtins.int max_number_of_prefixes: Set maximum number of prefixes accepted from BGP peer
+        :param _builtins.int disable_peer_max_number_of_prefixes: Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policy_type` being equal to `disable-peer`
                  - Range: `1`-`4294967295`
-        :param _builtins.str max_number_of_prefixes_variable: Variable name
-        :param _builtins.str policy_type: Neighbor received maximum prefix policy is disabled.
-        :param _builtins.int restart_interval: Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded
-                 - Range: `1`-`65535`
-        :param _builtins.str restart_interval_variable: Variable name
-        :param _builtins.int threshold: Set threshold(1 to 100) at which to generate a warning message
+        :param _builtins.str disable_peer_max_number_of_prefixes_variable: Variable name, Attribute conditional on `policy_type` being equal to `disable-peer`
+        :param _builtins.int disable_peer_threshold: Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policy_type` being equal to `disable-peer`
                  - Range: `1`-`100`
                  - Default value: `75`
-        :param _builtins.str threshold_variable: Variable name
+        :param _builtins.str disable_peer_threshold_variable: Variable name, Attribute conditional on `policy_type` being equal to `disable-peer`
+        :param _builtins.str family_type: Set IPv4 unicast address family
+        :param _builtins.str policy_type: Neighbor received maximum prefix policy is disabled.
+                 - Choices: `restart`, `off`, `warning-only`, `disable-peer`
+        :param _builtins.int restart_interval: Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policy_type` being equal to `restart`
+                 - Range: `1`-`65535`
+        :param _builtins.str restart_interval_variable: Variable name, Attribute conditional on `policy_type` being equal to `restart`
+        :param _builtins.int restart_max_number_of_prefixes: Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policy_type` being equal to `restart`
+                 - Range: `1`-`4294967295`
+        :param _builtins.str restart_max_number_of_prefixes_variable: Variable name, Attribute conditional on `policy_type` being equal to `restart`
+        :param _builtins.int restart_threshold: Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policy_type` being equal to `restart`
+                 - Range: `1`-`100`
+                 - Default value: `75`
+        :param _builtins.str restart_threshold_variable: Variable name, Attribute conditional on `policy_type` being equal to `restart`
+        :param _builtins.int warning_message_max_number_of_prefixes: Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policy_type` being equal to `warning-only`
+                 - Range: `1`-`4294967295`
+        :param _builtins.str warning_message_max_number_of_prefixes_variable: Variable name, Attribute conditional on `policy_type` being equal to `warning-only`
+        :param _builtins.int warning_message_threshold: Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policy_type` being equal to `warning-only`
+                 - Range: `1`-`100`
+                 - Default value: `75`
+        :param _builtins.str warning_message_threshold_variable: Variable name, Attribute conditional on `policy_type` being equal to `warning-only`
         """
+        if disable_peer_max_number_of_prefixes is not None:
+            pulumi.set(__self__, "disable_peer_max_number_of_prefixes", disable_peer_max_number_of_prefixes)
+        if disable_peer_max_number_of_prefixes_variable is not None:
+            pulumi.set(__self__, "disable_peer_max_number_of_prefixes_variable", disable_peer_max_number_of_prefixes_variable)
+        if disable_peer_threshold is not None:
+            pulumi.set(__self__, "disable_peer_threshold", disable_peer_threshold)
+        if disable_peer_threshold_variable is not None:
+            pulumi.set(__self__, "disable_peer_threshold_variable", disable_peer_threshold_variable)
         if family_type is not None:
             pulumi.set(__self__, "family_type", family_type)
         if in_route_policy_id is not None:
             pulumi.set(__self__, "in_route_policy_id", in_route_policy_id)
-        if max_number_of_prefixes is not None:
-            pulumi.set(__self__, "max_number_of_prefixes", max_number_of_prefixes)
-        if max_number_of_prefixes_variable is not None:
-            pulumi.set(__self__, "max_number_of_prefixes_variable", max_number_of_prefixes_variable)
         if out_route_policy_id is not None:
             pulumi.set(__self__, "out_route_policy_id", out_route_policy_id)
         if policy_type is not None:
@@ -38188,10 +38449,57 @@ class ServiceRoutingBgpFeatureIpv4NeighborAddressFamily(dict):
             pulumi.set(__self__, "restart_interval", restart_interval)
         if restart_interval_variable is not None:
             pulumi.set(__self__, "restart_interval_variable", restart_interval_variable)
-        if threshold is not None:
-            pulumi.set(__self__, "threshold", threshold)
-        if threshold_variable is not None:
-            pulumi.set(__self__, "threshold_variable", threshold_variable)
+        if restart_max_number_of_prefixes is not None:
+            pulumi.set(__self__, "restart_max_number_of_prefixes", restart_max_number_of_prefixes)
+        if restart_max_number_of_prefixes_variable is not None:
+            pulumi.set(__self__, "restart_max_number_of_prefixes_variable", restart_max_number_of_prefixes_variable)
+        if restart_threshold is not None:
+            pulumi.set(__self__, "restart_threshold", restart_threshold)
+        if restart_threshold_variable is not None:
+            pulumi.set(__self__, "restart_threshold_variable", restart_threshold_variable)
+        if warning_message_max_number_of_prefixes is not None:
+            pulumi.set(__self__, "warning_message_max_number_of_prefixes", warning_message_max_number_of_prefixes)
+        if warning_message_max_number_of_prefixes_variable is not None:
+            pulumi.set(__self__, "warning_message_max_number_of_prefixes_variable", warning_message_max_number_of_prefixes_variable)
+        if warning_message_threshold is not None:
+            pulumi.set(__self__, "warning_message_threshold", warning_message_threshold)
+        if warning_message_threshold_variable is not None:
+            pulumi.set(__self__, "warning_message_threshold_variable", warning_message_threshold_variable)
+
+    @_builtins.property
+    @pulumi.getter(name="disablePeerMaxNumberOfPrefixes")
+    def disable_peer_max_number_of_prefixes(self) -> Optional[_builtins.int]:
+        """
+        Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policy_type` being equal to `disable-peer`
+          - Range: `1`-`4294967295`
+        """
+        return pulumi.get(self, "disable_peer_max_number_of_prefixes")
+
+    @_builtins.property
+    @pulumi.getter(name="disablePeerMaxNumberOfPrefixesVariable")
+    def disable_peer_max_number_of_prefixes_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name, Attribute conditional on `policy_type` being equal to `disable-peer`
+        """
+        return pulumi.get(self, "disable_peer_max_number_of_prefixes_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="disablePeerThreshold")
+    def disable_peer_threshold(self) -> Optional[_builtins.int]:
+        """
+        Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policy_type` being equal to `disable-peer`
+          - Range: `1`-`100`
+          - Default value: `75`
+        """
+        return pulumi.get(self, "disable_peer_threshold")
+
+    @_builtins.property
+    @pulumi.getter(name="disablePeerThresholdVariable")
+    def disable_peer_threshold_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name, Attribute conditional on `policy_type` being equal to `disable-peer`
+        """
+        return pulumi.get(self, "disable_peer_threshold_variable")
 
     @_builtins.property
     @pulumi.getter(name="familyType")
@@ -38207,23 +38515,6 @@ class ServiceRoutingBgpFeatureIpv4NeighborAddressFamily(dict):
         return pulumi.get(self, "in_route_policy_id")
 
     @_builtins.property
-    @pulumi.getter(name="maxNumberOfPrefixes")
-    def max_number_of_prefixes(self) -> Optional[_builtins.int]:
-        """
-        Set maximum number of prefixes accepted from BGP peer
-          - Range: `1`-`4294967295`
-        """
-        return pulumi.get(self, "max_number_of_prefixes")
-
-    @_builtins.property
-    @pulumi.getter(name="maxNumberOfPrefixesVariable")
-    def max_number_of_prefixes_variable(self) -> Optional[_builtins.str]:
-        """
-        Variable name
-        """
-        return pulumi.get(self, "max_number_of_prefixes_variable")
-
-    @_builtins.property
     @pulumi.getter(name="outRoutePolicyId")
     def out_route_policy_id(self) -> Optional[_builtins.str]:
         return pulumi.get(self, "out_route_policy_id")
@@ -38233,6 +38524,7 @@ class ServiceRoutingBgpFeatureIpv4NeighborAddressFamily(dict):
     def policy_type(self) -> Optional[_builtins.str]:
         """
         Neighbor received maximum prefix policy is disabled.
+          - Choices: `restart`, `off`, `warning-only`, `disable-peer`
         """
         return pulumi.get(self, "policy_type")
 
@@ -38240,7 +38532,7 @@ class ServiceRoutingBgpFeatureIpv4NeighborAddressFamily(dict):
     @pulumi.getter(name="restartInterval")
     def restart_interval(self) -> Optional[_builtins.int]:
         """
-        Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded
+        Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policy_type` being equal to `restart`
           - Range: `1`-`65535`
         """
         return pulumi.get(self, "restart_interval")
@@ -38249,27 +38541,79 @@ class ServiceRoutingBgpFeatureIpv4NeighborAddressFamily(dict):
     @pulumi.getter(name="restartIntervalVariable")
     def restart_interval_variable(self) -> Optional[_builtins.str]:
         """
-        Variable name
+        Variable name, Attribute conditional on `policy_type` being equal to `restart`
         """
         return pulumi.get(self, "restart_interval_variable")
 
     @_builtins.property
-    @pulumi.getter
-    def threshold(self) -> Optional[_builtins.int]:
+    @pulumi.getter(name="restartMaxNumberOfPrefixes")
+    def restart_max_number_of_prefixes(self) -> Optional[_builtins.int]:
         """
-        Set threshold(1 to 100) at which to generate a warning message
+        Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policy_type` being equal to `restart`
+          - Range: `1`-`4294967295`
+        """
+        return pulumi.get(self, "restart_max_number_of_prefixes")
+
+    @_builtins.property
+    @pulumi.getter(name="restartMaxNumberOfPrefixesVariable")
+    def restart_max_number_of_prefixes_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name, Attribute conditional on `policy_type` being equal to `restart`
+        """
+        return pulumi.get(self, "restart_max_number_of_prefixes_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="restartThreshold")
+    def restart_threshold(self) -> Optional[_builtins.int]:
+        """
+        Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policy_type` being equal to `restart`
           - Range: `1`-`100`
           - Default value: `75`
         """
-        return pulumi.get(self, "threshold")
+        return pulumi.get(self, "restart_threshold")
 
     @_builtins.property
-    @pulumi.getter(name="thresholdVariable")
-    def threshold_variable(self) -> Optional[_builtins.str]:
+    @pulumi.getter(name="restartThresholdVariable")
+    def restart_threshold_variable(self) -> Optional[_builtins.str]:
         """
-        Variable name
+        Variable name, Attribute conditional on `policy_type` being equal to `restart`
         """
-        return pulumi.get(self, "threshold_variable")
+        return pulumi.get(self, "restart_threshold_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="warningMessageMaxNumberOfPrefixes")
+    def warning_message_max_number_of_prefixes(self) -> Optional[_builtins.int]:
+        """
+        Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policy_type` being equal to `warning-only`
+          - Range: `1`-`4294967295`
+        """
+        return pulumi.get(self, "warning_message_max_number_of_prefixes")
+
+    @_builtins.property
+    @pulumi.getter(name="warningMessageMaxNumberOfPrefixesVariable")
+    def warning_message_max_number_of_prefixes_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name, Attribute conditional on `policy_type` being equal to `warning-only`
+        """
+        return pulumi.get(self, "warning_message_max_number_of_prefixes_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="warningMessageThreshold")
+    def warning_message_threshold(self) -> Optional[_builtins.int]:
+        """
+        Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policy_type` being equal to `warning-only`
+          - Range: `1`-`100`
+          - Default value: `75`
+        """
+        return pulumi.get(self, "warning_message_threshold")
+
+    @_builtins.property
+    @pulumi.getter(name="warningMessageThresholdVariable")
+    def warning_message_threshold_variable(self) -> Optional[_builtins.str]:
+        """
+        Variable name, Attribute conditional on `policy_type` being equal to `warning-only`
+        """
+        return pulumi.get(self, "warning_message_threshold_variable")
 
 
 @pulumi.output_type
@@ -47425,8 +47769,8 @@ class TlsSslDecryptionPolicyDefinitionUrlRule(dict):
             suggest = "target_vpns"
         elif key == "tlsSslProfilePolicyId":
             suggest = "tls_ssl_profile_policy_id"
-        elif key == "tlsSslProfileVersion":
-            suggest = "tls_ssl_profile_version"
+        elif key == "tlsSslProfilePolicyVersion":
+            suggest = "tls_ssl_profile_policy_version"
 
         if suggest:
             pulumi.log.warn(f"Key '{key}' not found in TlsSslDecryptionPolicyDefinitionUrlRule. Access the value via the '{suggest}' property getter instead.")
@@ -47443,12 +47787,12 @@ class TlsSslDecryptionPolicyDefinitionUrlRule(dict):
                  rule_name: Optional[_builtins.str] = None,
                  target_vpns: Optional[Sequence[_builtins.str]] = None,
                  tls_ssl_profile_policy_id: Optional[_builtins.str] = None,
-                 tls_ssl_profile_version: Optional[_builtins.int] = None):
+                 tls_ssl_profile_policy_version: Optional[_builtins.int] = None):
         """
         :param _builtins.str rule_name: Country
         :param Sequence[_builtins.str] target_vpns: List of VPN IDs
         :param _builtins.str tls_ssl_profile_policy_id: TLS SSL Profile Policy ID
-        :param _builtins.int tls_ssl_profile_version: TLS SSL Profile Policy version
+        :param _builtins.int tls_ssl_profile_policy_version: TLS SSL Profile Policy version
         """
         if rule_name is not None:
             pulumi.set(__self__, "rule_name", rule_name)
@@ -47456,8 +47800,8 @@ class TlsSslDecryptionPolicyDefinitionUrlRule(dict):
             pulumi.set(__self__, "target_vpns", target_vpns)
         if tls_ssl_profile_policy_id is not None:
             pulumi.set(__self__, "tls_ssl_profile_policy_id", tls_ssl_profile_policy_id)
-        if tls_ssl_profile_version is not None:
-            pulumi.set(__self__, "tls_ssl_profile_version", tls_ssl_profile_version)
+        if tls_ssl_profile_policy_version is not None:
+            pulumi.set(__self__, "tls_ssl_profile_policy_version", tls_ssl_profile_policy_version)
 
     @_builtins.property
     @pulumi.getter(name="ruleName")
@@ -47484,12 +47828,12 @@ class TlsSslDecryptionPolicyDefinitionUrlRule(dict):
         return pulumi.get(self, "tls_ssl_profile_policy_id")
 
     @_builtins.property
-    @pulumi.getter(name="tlsSslProfileVersion")
-    def tls_ssl_profile_version(self) -> Optional[_builtins.int]:
+    @pulumi.getter(name="tlsSslProfilePolicyVersion")
+    def tls_ssl_profile_policy_version(self) -> Optional[_builtins.int]:
         """
         TLS SSL Profile Policy version
         """
-        return pulumi.get(self, "tls_ssl_profile_version")
+        return pulumi.get(self, "tls_ssl_profile_policy_version")
 
 
 @pulumi.output_type
@@ -48000,8 +48344,8 @@ class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter(dict):
             suggest = "policer_list_id"
         elif key == "policerListVersion":
             suggest = "policer_list_version"
-        elif key == "preferredColorGroupList":
-            suggest = "preferred_color_group_list"
+        elif key == "preferredColorGroupListId":
+            suggest = "preferred_color_group_list_id"
         elif key == "preferredColorGroupListVersion":
             suggest = "preferred_color_group_list_version"
         elif key == "serviceTlocColor":
@@ -48057,7 +48401,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter(dict):
                  next_hop_loose: Optional[_builtins.bool] = None,
                  policer_list_id: Optional[_builtins.str] = None,
                  policer_list_version: Optional[_builtins.int] = None,
-                 preferred_color_group_list: Optional[_builtins.str] = None,
+                 preferred_color_group_list_id: Optional[_builtins.str] = None,
                  preferred_color_group_list_version: Optional[_builtins.int] = None,
                  service_tloc_color: Optional[_builtins.str] = None,
                  service_tloc_encapsulation: Optional[_builtins.str] = None,
@@ -48088,7 +48432,7 @@ class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter(dict):
         :param _builtins.bool next_hop_loose: Use routing table entry to forward the packet in case Next-hop is not available, Attribute conditional on `type` being equal to `nextHopLoose`
         :param _builtins.str policer_list_id: Policer list ID, Attribute conditional on `type` being equal to `policer`
         :param _builtins.int policer_list_version: Policer list version
-        :param _builtins.str preferred_color_group_list: Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
+        :param _builtins.str preferred_color_group_list_id: Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
         :param _builtins.int preferred_color_group_list_version: Preferred color group list version
         :param _builtins.str service_tloc_color: Service TLOC color, Attribute conditional on `type` being equal to `service`
         :param _builtins.str service_tloc_encapsulation: Service TLOC encapsulation, Attribute conditional on `type` being equal to `service`
@@ -48130,8 +48474,8 @@ class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter(dict):
             pulumi.set(__self__, "policer_list_id", policer_list_id)
         if policer_list_version is not None:
             pulumi.set(__self__, "policer_list_version", policer_list_version)
-        if preferred_color_group_list is not None:
-            pulumi.set(__self__, "preferred_color_group_list", preferred_color_group_list)
+        if preferred_color_group_list_id is not None:
+            pulumi.set(__self__, "preferred_color_group_list_id", preferred_color_group_list_id)
         if preferred_color_group_list_version is not None:
             pulumi.set(__self__, "preferred_color_group_list_version", preferred_color_group_list_version)
         if service_tloc_color is not None:
@@ -48249,12 +48593,12 @@ class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter(dict):
         return pulumi.get(self, "policer_list_version")
 
     @_builtins.property
-    @pulumi.getter(name="preferredColorGroupList")
-    def preferred_color_group_list(self) -> Optional[_builtins.str]:
+    @pulumi.getter(name="preferredColorGroupListId")
+    def preferred_color_group_list_id(self) -> Optional[_builtins.str]:
         """
         Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
         """
-        return pulumi.get(self, "preferred_color_group_list")
+        return pulumi.get(self, "preferred_color_group_list_id")
 
     @_builtins.property
     @pulumi.getter(name="preferredColorGroupListVersion")
@@ -62769,23 +63113,23 @@ class GetApplicationAwareRoutingPolicyDefinitionSequenceActionEntryResult(dict):
 class GetApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameterResult(dict):
     def __init__(__self__, *,
                  preferred_color: _builtins.str,
-                 preferred_color_group_list: _builtins.str,
+                 preferred_color_group_list_id: _builtins.str,
                  preferred_color_group_list_version: _builtins.int,
-                 sla_class_list: _builtins.str,
+                 sla_class_list_id: _builtins.str,
                  sla_class_list_version: _builtins.int,
                  type: _builtins.str):
         """
         :param _builtins.str preferred_color: preferred color (Single value or multiple values separated by spaces)
-        :param _builtins.str preferred_color_group_list: Preferred color group list ID
+        :param _builtins.str preferred_color_group_list_id: Preferred color group list ID
         :param _builtins.int preferred_color_group_list_version: Preferred color group list version
-        :param _builtins.str sla_class_list: SLA class list ID
+        :param _builtins.str sla_class_list_id: SLA class list ID
         :param _builtins.int sla_class_list_version: SLA class list version
         :param _builtins.str type: Type of SLA class parameter
         """
         pulumi.set(__self__, "preferred_color", preferred_color)
-        pulumi.set(__self__, "preferred_color_group_list", preferred_color_group_list)
+        pulumi.set(__self__, "preferred_color_group_list_id", preferred_color_group_list_id)
         pulumi.set(__self__, "preferred_color_group_list_version", preferred_color_group_list_version)
-        pulumi.set(__self__, "sla_class_list", sla_class_list)
+        pulumi.set(__self__, "sla_class_list_id", sla_class_list_id)
         pulumi.set(__self__, "sla_class_list_version", sla_class_list_version)
         pulumi.set(__self__, "type", type)
 
@@ -62798,12 +63142,12 @@ class GetApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParam
         return pulumi.get(self, "preferred_color")
 
     @_builtins.property
-    @pulumi.getter(name="preferredColorGroupList")
-    def preferred_color_group_list(self) -> _builtins.str:
+    @pulumi.getter(name="preferredColorGroupListId")
+    def preferred_color_group_list_id(self) -> _builtins.str:
         """
         Preferred color group list ID
         """
-        return pulumi.get(self, "preferred_color_group_list")
+        return pulumi.get(self, "preferred_color_group_list_id")
 
     @_builtins.property
     @pulumi.getter(name="preferredColorGroupListVersion")
@@ -62814,12 +63158,12 @@ class GetApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParam
         return pulumi.get(self, "preferred_color_group_list_version")
 
     @_builtins.property
-    @pulumi.getter(name="slaClassList")
-    def sla_class_list(self) -> _builtins.str:
+    @pulumi.getter(name="slaClassListId")
+    def sla_class_list_id(self) -> _builtins.str:
         """
         SLA class list ID
         """
-        return pulumi.get(self, "sla_class_list")
+        return pulumi.get(self, "sla_class_list_id")
 
     @_builtins.property
     @pulumi.getter(name="slaClassListVersion")
@@ -73574,34 +73918,26 @@ class GetCiscoVpnFeatureTemplateDnsIpv6ServerResult(dict):
 @pulumi.output_type
 class GetCiscoVpnFeatureTemplateIpv4StaticGreRouteResult(dict):
     def __init__(__self__, *,
-                 interface_variable: _builtins.str,
                  interfaces: Sequence[_builtins.str],
+                 interfaces_variable: _builtins.str,
                  optional: _builtins.bool,
                  prefix: _builtins.str,
                  prefix_variable: _builtins.str,
                  vpn_id: _builtins.int):
         """
-        :param _builtins.str interface_variable: Variable name
         :param Sequence[_builtins.str] interfaces: List of GRE Interfaces
+        :param _builtins.str interfaces_variable: Variable name
         :param _builtins.bool optional: Indicates if list item is considered optional.
         :param _builtins.str prefix: Prefix
         :param _builtins.str prefix_variable: Variable name
         :param _builtins.int vpn_id: Destination VPN to resolve the prefix
         """
-        pulumi.set(__self__, "interface_variable", interface_variable)
         pulumi.set(__self__, "interfaces", interfaces)
+        pulumi.set(__self__, "interfaces_variable", interfaces_variable)
         pulumi.set(__self__, "optional", optional)
         pulumi.set(__self__, "prefix", prefix)
         pulumi.set(__self__, "prefix_variable", prefix_variable)
         pulumi.set(__self__, "vpn_id", vpn_id)
-
-    @_builtins.property
-    @pulumi.getter(name="interfaceVariable")
-    def interface_variable(self) -> _builtins.str:
-        """
-        Variable name
-        """
-        return pulumi.get(self, "interface_variable")
 
     @_builtins.property
     @pulumi.getter
@@ -73610,6 +73946,14 @@ class GetCiscoVpnFeatureTemplateIpv4StaticGreRouteResult(dict):
         List of GRE Interfaces
         """
         return pulumi.get(self, "interfaces")
+
+    @_builtins.property
+    @pulumi.getter(name="interfacesVariable")
+    def interfaces_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "interfaces_variable")
 
     @_builtins.property
     @pulumi.getter
@@ -73647,34 +73991,26 @@ class GetCiscoVpnFeatureTemplateIpv4StaticGreRouteResult(dict):
 @pulumi.output_type
 class GetCiscoVpnFeatureTemplateIpv4StaticIpsecRouteResult(dict):
     def __init__(__self__, *,
-                 interface_variable: _builtins.str,
                  interfaces: Sequence[_builtins.str],
+                 interfaces_variable: _builtins.str,
                  optional: _builtins.bool,
                  prefix: _builtins.str,
                  prefix_variable: _builtins.str,
                  vpn_id: _builtins.int):
         """
-        :param _builtins.str interface_variable: Variable name
         :param Sequence[_builtins.str] interfaces: List of IPSEC Interfaces (Separated by commas)
+        :param _builtins.str interfaces_variable: Variable name
         :param _builtins.bool optional: Indicates if list item is considered optional.
         :param _builtins.str prefix: Prefix
         :param _builtins.str prefix_variable: Variable name
         :param _builtins.int vpn_id: Destination VPN to resolve the prefix
         """
-        pulumi.set(__self__, "interface_variable", interface_variable)
         pulumi.set(__self__, "interfaces", interfaces)
+        pulumi.set(__self__, "interfaces_variable", interfaces_variable)
         pulumi.set(__self__, "optional", optional)
         pulumi.set(__self__, "prefix", prefix)
         pulumi.set(__self__, "prefix_variable", prefix_variable)
         pulumi.set(__self__, "vpn_id", vpn_id)
-
-    @_builtins.property
-    @pulumi.getter(name="interfaceVariable")
-    def interface_variable(self) -> _builtins.str:
-        """
-        Variable name
-        """
-        return pulumi.get(self, "interface_variable")
 
     @_builtins.property
     @pulumi.getter
@@ -73683,6 +74019,14 @@ class GetCiscoVpnFeatureTemplateIpv4StaticIpsecRouteResult(dict):
         List of IPSEC Interfaces (Separated by commas)
         """
         return pulumi.get(self, "interfaces")
+
+    @_builtins.property
+    @pulumi.getter(name="interfacesVariable")
+    def interfaces_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "interfaces_variable")
 
     @_builtins.property
     @pulumi.getter
@@ -79417,8 +79761,9 @@ class GetIpv4AclPolicyDefinitionSequenceMatchEntryResult(dict):
                  destination_data_ipv4_prefix_list_id: _builtins.str,
                  destination_data_ipv4_prefix_list_version: _builtins.int,
                  destination_ip: _builtins.str,
+                 destination_ip_variable: _builtins.str,
                  destination_ports: _builtins.str,
-                 dscp: _builtins.int,
+                 dscp: _builtins.str,
                  icmp_message: _builtins.str,
                  packet_length: _builtins.int,
                  priority: _builtins.str,
@@ -79426,6 +79771,7 @@ class GetIpv4AclPolicyDefinitionSequenceMatchEntryResult(dict):
                  source_data_ipv4_prefix_list_id: _builtins.str,
                  source_data_ipv4_prefix_list_version: _builtins.int,
                  source_ip: _builtins.str,
+                 source_ip_variable: _builtins.str,
                  source_ports: _builtins.str,
                  tcp: _builtins.str,
                  type: _builtins.str):
@@ -79435,8 +79781,9 @@ class GetIpv4AclPolicyDefinitionSequenceMatchEntryResult(dict):
         :param _builtins.str destination_data_ipv4_prefix_list_id: Destination data IPv4 prefix list ID
         :param _builtins.int destination_data_ipv4_prefix_list_version: Destination data IPv4 prefix list version
         :param _builtins.str destination_ip: Destination IP prefix
+        :param _builtins.str destination_ip_variable: Destination IP prefix variable
         :param _builtins.str destination_ports: Destination ports. Single value (0-65535) or ranges separated by spaces.
-        :param _builtins.int dscp: DSCP value
+        :param _builtins.str dscp: DSCP value
         :param _builtins.str icmp_message: ICMP Message
         :param _builtins.int packet_length: Packet length
         :param _builtins.str priority: PLP - priority
@@ -79444,6 +79791,7 @@ class GetIpv4AclPolicyDefinitionSequenceMatchEntryResult(dict):
         :param _builtins.str source_data_ipv4_prefix_list_id: Source data IPv4 prefix list ID
         :param _builtins.int source_data_ipv4_prefix_list_version: Source data IPv4 prefix list version
         :param _builtins.str source_ip: Source IP prefix
+        :param _builtins.str source_ip_variable: Source IP prefix variable
         :param _builtins.str source_ports: Source ports. Single value (0-65535) or ranges separated by spaces.
         :param _builtins.str tcp: TCP parameters
         :param _builtins.str type: Type of match entry
@@ -79453,6 +79801,7 @@ class GetIpv4AclPolicyDefinitionSequenceMatchEntryResult(dict):
         pulumi.set(__self__, "destination_data_ipv4_prefix_list_id", destination_data_ipv4_prefix_list_id)
         pulumi.set(__self__, "destination_data_ipv4_prefix_list_version", destination_data_ipv4_prefix_list_version)
         pulumi.set(__self__, "destination_ip", destination_ip)
+        pulumi.set(__self__, "destination_ip_variable", destination_ip_variable)
         pulumi.set(__self__, "destination_ports", destination_ports)
         pulumi.set(__self__, "dscp", dscp)
         pulumi.set(__self__, "icmp_message", icmp_message)
@@ -79462,6 +79811,7 @@ class GetIpv4AclPolicyDefinitionSequenceMatchEntryResult(dict):
         pulumi.set(__self__, "source_data_ipv4_prefix_list_id", source_data_ipv4_prefix_list_id)
         pulumi.set(__self__, "source_data_ipv4_prefix_list_version", source_data_ipv4_prefix_list_version)
         pulumi.set(__self__, "source_ip", source_ip)
+        pulumi.set(__self__, "source_ip_variable", source_ip_variable)
         pulumi.set(__self__, "source_ports", source_ports)
         pulumi.set(__self__, "tcp", tcp)
         pulumi.set(__self__, "type", type)
@@ -79507,6 +79857,14 @@ class GetIpv4AclPolicyDefinitionSequenceMatchEntryResult(dict):
         return pulumi.get(self, "destination_ip")
 
     @_builtins.property
+    @pulumi.getter(name="destinationIpVariable")
+    def destination_ip_variable(self) -> _builtins.str:
+        """
+        Destination IP prefix variable
+        """
+        return pulumi.get(self, "destination_ip_variable")
+
+    @_builtins.property
     @pulumi.getter(name="destinationPorts")
     def destination_ports(self) -> _builtins.str:
         """
@@ -79516,7 +79874,7 @@ class GetIpv4AclPolicyDefinitionSequenceMatchEntryResult(dict):
 
     @_builtins.property
     @pulumi.getter
-    def dscp(self) -> _builtins.int:
+    def dscp(self) -> _builtins.str:
         """
         DSCP value
         """
@@ -79577,6 +79935,14 @@ class GetIpv4AclPolicyDefinitionSequenceMatchEntryResult(dict):
         Source IP prefix
         """
         return pulumi.get(self, "source_ip")
+
+    @_builtins.property
+    @pulumi.getter(name="sourceIpVariable")
+    def source_ip_variable(self) -> _builtins.str:
+        """
+        Source IP prefix variable
+        """
+        return pulumi.get(self, "source_ip_variable")
 
     @_builtins.property
     @pulumi.getter(name="sourcePorts")
@@ -79700,30 +80066,36 @@ class GetIpv4DeviceAclPolicyDefinitionSequenceMatchEntryResult(dict):
                  destination_data_ipv4_prefix_list_id: _builtins.str,
                  destination_data_ipv4_prefix_list_version: _builtins.int,
                  destination_ip: _builtins.str,
+                 destination_ip_variable: _builtins.str,
                  destination_port: _builtins.int,
                  source_data_ipv4_prefix_list_id: _builtins.str,
                  source_data_ipv4_prefix_list_version: _builtins.int,
                  source_ip: _builtins.str,
+                 source_ip_variable: _builtins.str,
                  source_ports: _builtins.str,
                  type: _builtins.str):
         """
         :param _builtins.str destination_data_ipv4_prefix_list_id: Destination data IPv4 prefix list ID
         :param _builtins.int destination_data_ipv4_prefix_list_version: Destination data IPv4 prefix list version
         :param _builtins.str destination_ip: Destination IP prefix
+        :param _builtins.str destination_ip_variable: Destination IP prefix variable
         :param _builtins.int destination_port: Destination port, only `22` and `161` supported
         :param _builtins.str source_data_ipv4_prefix_list_id: Source data IPv4 prefix list ID
         :param _builtins.int source_data_ipv4_prefix_list_version: Source data IPv4 prefix list version
         :param _builtins.str source_ip: Source IP prefix
+        :param _builtins.str source_ip_variable: Source IP prefix variable
         :param _builtins.str source_ports: Source ports. Single value (0-65535) or ranges separated by spaces.
         :param _builtins.str type: Type of match entry
         """
         pulumi.set(__self__, "destination_data_ipv4_prefix_list_id", destination_data_ipv4_prefix_list_id)
         pulumi.set(__self__, "destination_data_ipv4_prefix_list_version", destination_data_ipv4_prefix_list_version)
         pulumi.set(__self__, "destination_ip", destination_ip)
+        pulumi.set(__self__, "destination_ip_variable", destination_ip_variable)
         pulumi.set(__self__, "destination_port", destination_port)
         pulumi.set(__self__, "source_data_ipv4_prefix_list_id", source_data_ipv4_prefix_list_id)
         pulumi.set(__self__, "source_data_ipv4_prefix_list_version", source_data_ipv4_prefix_list_version)
         pulumi.set(__self__, "source_ip", source_ip)
+        pulumi.set(__self__, "source_ip_variable", source_ip_variable)
         pulumi.set(__self__, "source_ports", source_ports)
         pulumi.set(__self__, "type", type)
 
@@ -79750,6 +80122,14 @@ class GetIpv4DeviceAclPolicyDefinitionSequenceMatchEntryResult(dict):
         Destination IP prefix
         """
         return pulumi.get(self, "destination_ip")
+
+    @_builtins.property
+    @pulumi.getter(name="destinationIpVariable")
+    def destination_ip_variable(self) -> _builtins.str:
+        """
+        Destination IP prefix variable
+        """
+        return pulumi.get(self, "destination_ip_variable")
 
     @_builtins.property
     @pulumi.getter(name="destinationPort")
@@ -79782,6 +80162,14 @@ class GetIpv4DeviceAclPolicyDefinitionSequenceMatchEntryResult(dict):
         Source IP prefix
         """
         return pulumi.get(self, "source_ip")
+
+    @_builtins.property
+    @pulumi.getter(name="sourceIpVariable")
+    def source_ip_variable(self) -> _builtins.str:
+        """
+        Source IP prefix variable
+        """
+        return pulumi.get(self, "source_ip_variable")
 
     @_builtins.property
     @pulumi.getter(name="sourcePorts")
@@ -80900,6 +81288,86 @@ class GetOtherUcseFeatureInterfaceResult(dict):
 
 
 @pulumi.output_type
+class GetPolicyGroupDeviceResult(dict):
+    def __init__(__self__, *,
+                 deploy: _builtins.bool,
+                 id: _builtins.str,
+                 variables: Sequence['outputs.GetPolicyGroupDeviceVariableResult']):
+        """
+        :param _builtins.bool deploy: Deploy to device if enabled.
+        :param _builtins.str id: Device ID
+        :param Sequence['GetPolicyGroupDeviceVariableArgs'] variables: List of variables
+        """
+        pulumi.set(__self__, "deploy", deploy)
+        pulumi.set(__self__, "id", id)
+        pulumi.set(__self__, "variables", variables)
+
+    @_builtins.property
+    @pulumi.getter
+    def deploy(self) -> _builtins.bool:
+        """
+        Deploy to device if enabled.
+        """
+        return pulumi.get(self, "deploy")
+
+    @_builtins.property
+    @pulumi.getter
+    def id(self) -> _builtins.str:
+        """
+        Device ID
+        """
+        return pulumi.get(self, "id")
+
+    @_builtins.property
+    @pulumi.getter
+    def variables(self) -> Sequence['outputs.GetPolicyGroupDeviceVariableResult']:
+        """
+        List of variables
+        """
+        return pulumi.get(self, "variables")
+
+
+@pulumi.output_type
+class GetPolicyGroupDeviceVariableResult(dict):
+    def __init__(__self__, *,
+                 list_values: Sequence[_builtins.str],
+                 name: _builtins.str,
+                 value: _builtins.str):
+        """
+        :param Sequence[_builtins.str] list_values: Use this instead of `value` in case value is of type `List`.
+        :param _builtins.str name: Variable name
+        :param _builtins.str value: Variable value
+        """
+        pulumi.set(__self__, "list_values", list_values)
+        pulumi.set(__self__, "name", name)
+        pulumi.set(__self__, "value", value)
+
+    @_builtins.property
+    @pulumi.getter(name="listValues")
+    def list_values(self) -> Sequence[_builtins.str]:
+        """
+        Use this instead of `value` in case value is of type `List`.
+        """
+        return pulumi.get(self, "list_values")
+
+    @_builtins.property
+    @pulumi.getter
+    def name(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "name")
+
+    @_builtins.property
+    @pulumi.getter
+    def value(self) -> _builtins.str:
+        """
+        Variable value
+        """
+        return pulumi.get(self, "value")
+
+
+@pulumi.output_type
 class GetPolicyObjectAppProbeClassEntryResult(dict):
     def __init__(__self__, *,
                  forwarding_class: _builtins.str,
@@ -81962,6 +82430,7 @@ class GetRoutePolicyDefinitionSequenceActionEntryResult(dict):
                  atomic_aggregate: _builtins.bool,
                  community: _builtins.str,
                  community_additive: _builtins.bool,
+                 community_variable: _builtins.str,
                  local_preference: _builtins.int,
                  metric: _builtins.int,
                  metric_type: _builtins.str,
@@ -81980,6 +82449,7 @@ class GetRoutePolicyDefinitionSequenceActionEntryResult(dict):
         :param _builtins.bool atomic_aggregate: Atomic aggregate
         :param _builtins.str community: Community value, e.g. `1000:10000` or `internet` or `local-AS`
         :param _builtins.bool community_additive: Community additive
+        :param _builtins.str community_variable: Community variable
         :param _builtins.int local_preference: Local preference
         :param _builtins.int metric: Metric
         :param _builtins.str metric_type: Metric type
@@ -81998,6 +82468,7 @@ class GetRoutePolicyDefinitionSequenceActionEntryResult(dict):
         pulumi.set(__self__, "atomic_aggregate", atomic_aggregate)
         pulumi.set(__self__, "community", community)
         pulumi.set(__self__, "community_additive", community_additive)
+        pulumi.set(__self__, "community_variable", community_variable)
         pulumi.set(__self__, "local_preference", local_preference)
         pulumi.set(__self__, "metric", metric)
         pulumi.set(__self__, "metric_type", metric_type)
@@ -82064,6 +82535,14 @@ class GetRoutePolicyDefinitionSequenceActionEntryResult(dict):
         Community additive
         """
         return pulumi.get(self, "community_additive")
+
+    @_builtins.property
+    @pulumi.getter(name="communityVariable")
+    def community_variable(self) -> _builtins.str:
+        """
+        Community variable
+        """
+        return pulumi.get(self, "community_variable")
 
     @_builtins.property
     @pulumi.getter(name="localPreference")
@@ -82155,6 +82634,7 @@ class GetRoutePolicyDefinitionSequenceMatchEntryResult(dict):
                  community_list_match_flag: _builtins.str,
                  community_list_versions: Sequence[_builtins.str],
                  expanded_community_list_id: _builtins.str,
+                 expanded_community_list_variable: _builtins.str,
                  expanded_community_list_version: _builtins.int,
                  extended_community_list_id: _builtins.str,
                  extended_community_list_version: _builtins.int,
@@ -82176,6 +82656,7 @@ class GetRoutePolicyDefinitionSequenceMatchEntryResult(dict):
         :param _builtins.str community_list_match_flag: Community list match flag
         :param Sequence[_builtins.str] community_list_versions: Community list versions
         :param _builtins.str expanded_community_list_id: Expanded community list ID
+        :param _builtins.str expanded_community_list_variable: Expanded community list variable
         :param _builtins.int expanded_community_list_version: Expanded community list version
         :param _builtins.str extended_community_list_id: Extended community list ID
         :param _builtins.int extended_community_list_version: Extended community list version
@@ -82197,6 +82678,7 @@ class GetRoutePolicyDefinitionSequenceMatchEntryResult(dict):
         pulumi.set(__self__, "community_list_match_flag", community_list_match_flag)
         pulumi.set(__self__, "community_list_versions", community_list_versions)
         pulumi.set(__self__, "expanded_community_list_id", expanded_community_list_id)
+        pulumi.set(__self__, "expanded_community_list_variable", expanded_community_list_variable)
         pulumi.set(__self__, "expanded_community_list_version", expanded_community_list_version)
         pulumi.set(__self__, "extended_community_list_id", extended_community_list_id)
         pulumi.set(__self__, "extended_community_list_version", extended_community_list_version)
@@ -82259,6 +82741,14 @@ class GetRoutePolicyDefinitionSequenceMatchEntryResult(dict):
         Expanded community list ID
         """
         return pulumi.get(self, "expanded_community_list_id")
+
+    @_builtins.property
+    @pulumi.getter(name="expandedCommunityListVariable")
+    def expanded_community_list_variable(self) -> _builtins.str:
+        """
+        Expanded community list variable
+        """
+        return pulumi.get(self, "expanded_community_list_variable")
 
     @_builtins.property
     @pulumi.getter(name="expandedCommunityListVersion")
@@ -84351,7 +84841,8 @@ class GetServiceLanVpnFeatureIpv4ImportRouteTargetResult(dict):
 @pulumi.output_type
 class GetServiceLanVpnFeatureIpv4StaticRouteResult(dict):
     def __init__(__self__, *,
-                 gateway_dhcp: _builtins.bool,
+                 dhcp: _builtins.bool,
+                 gateway: _builtins.str,
                  network_address: _builtins.str,
                  network_address_variable: _builtins.str,
                  next_hop_with_trackers: Sequence['outputs.GetServiceLanVpnFeatureIpv4StaticRouteNextHopWithTrackerResult'],
@@ -84361,7 +84852,8 @@ class GetServiceLanVpnFeatureIpv4StaticRouteResult(dict):
                  subnet_mask_variable: _builtins.str,
                  vpn: _builtins.bool):
         """
-        :param _builtins.bool gateway_dhcp: IPv4 Route Gateway DHCP
+        :param _builtins.bool dhcp: IPv4 Route Gateway DHCP
+        :param _builtins.str gateway: Gateway type
         :param _builtins.str network_address: IP Address
         :param _builtins.str network_address_variable: Variable name
         :param Sequence['GetServiceLanVpnFeatureIpv4StaticRouteNextHopWithTrackerArgs'] next_hop_with_trackers: IPv4 Route Gateway Next Hop with Tracker
@@ -84371,7 +84863,8 @@ class GetServiceLanVpnFeatureIpv4StaticRouteResult(dict):
         :param _builtins.str subnet_mask_variable: Variable name
         :param _builtins.bool vpn: IPv4 Route Gateway VPN
         """
-        pulumi.set(__self__, "gateway_dhcp", gateway_dhcp)
+        pulumi.set(__self__, "dhcp", dhcp)
+        pulumi.set(__self__, "gateway", gateway)
         pulumi.set(__self__, "network_address", network_address)
         pulumi.set(__self__, "network_address_variable", network_address_variable)
         pulumi.set(__self__, "next_hop_with_trackers", next_hop_with_trackers)
@@ -84382,12 +84875,20 @@ class GetServiceLanVpnFeatureIpv4StaticRouteResult(dict):
         pulumi.set(__self__, "vpn", vpn)
 
     @_builtins.property
-    @pulumi.getter(name="gatewayDhcp")
-    def gateway_dhcp(self) -> _builtins.bool:
+    @pulumi.getter
+    def dhcp(self) -> _builtins.bool:
         """
         IPv4 Route Gateway DHCP
         """
-        return pulumi.get(self, "gateway_dhcp")
+        return pulumi.get(self, "dhcp")
+
+    @_builtins.property
+    @pulumi.getter
+    def gateway(self) -> _builtins.str:
+        """
+        Gateway type
+        """
+        return pulumi.get(self, "gateway")
 
     @_builtins.property
     @pulumi.getter(name="networkAddress")
@@ -84624,6 +85125,7 @@ class GetServiceLanVpnFeatureIpv6ImportRouteTargetResult(dict):
 @pulumi.output_type
 class GetServiceLanVpnFeatureIpv6StaticRouteResult(dict):
     def __init__(__self__, *,
+                 gateway: _builtins.str,
                  nat: _builtins.str,
                  nat_variable: _builtins.str,
                  next_hops: Sequence['outputs.GetServiceLanVpnFeatureIpv6StaticRouteNextHopResult'],
@@ -84631,6 +85133,7 @@ class GetServiceLanVpnFeatureIpv6StaticRouteResult(dict):
                  prefix: _builtins.str,
                  prefix_variable: _builtins.str):
         """
+        :param _builtins.str gateway: Gateway type
         :param _builtins.str nat: IPv6 Nat
         :param _builtins.str nat_variable: Variable name
         :param Sequence['GetServiceLanVpnFeatureIpv6StaticRouteNextHopArgs'] next_hops: IPv6 Route Gateway Next Hop
@@ -84638,12 +85141,21 @@ class GetServiceLanVpnFeatureIpv6StaticRouteResult(dict):
         :param _builtins.str prefix: Prefix
         :param _builtins.str prefix_variable: Variable name
         """
+        pulumi.set(__self__, "gateway", gateway)
         pulumi.set(__self__, "nat", nat)
         pulumi.set(__self__, "nat_variable", nat_variable)
         pulumi.set(__self__, "next_hops", next_hops)
         pulumi.set(__self__, "null0", null0)
         pulumi.set(__self__, "prefix", prefix)
         pulumi.set(__self__, "prefix_variable", prefix_variable)
+
+    @_builtins.property
+    @pulumi.getter
+    def gateway(self) -> _builtins.str:
+        """
+        Gateway type
+        """
+        return pulumi.get(self, "gateway")
 
     @_builtins.property
     @pulumi.getter
@@ -88613,36 +89125,92 @@ class GetServiceRoutingBgpFeatureIpv4NeighborResult(dict):
 @pulumi.output_type
 class GetServiceRoutingBgpFeatureIpv4NeighborAddressFamilyResult(dict):
     def __init__(__self__, *,
+                 disable_peer_max_number_of_prefixes: _builtins.int,
+                 disable_peer_max_number_of_prefixes_variable: _builtins.str,
+                 disable_peer_threshold: _builtins.int,
+                 disable_peer_threshold_variable: _builtins.str,
                  family_type: _builtins.str,
                  in_route_policy_id: _builtins.str,
-                 max_number_of_prefixes: _builtins.int,
-                 max_number_of_prefixes_variable: _builtins.str,
                  out_route_policy_id: _builtins.str,
                  policy_type: _builtins.str,
                  restart_interval: _builtins.int,
                  restart_interval_variable: _builtins.str,
-                 threshold: _builtins.int,
-                 threshold_variable: _builtins.str):
+                 restart_max_number_of_prefixes: _builtins.int,
+                 restart_max_number_of_prefixes_variable: _builtins.str,
+                 restart_threshold: _builtins.int,
+                 restart_threshold_variable: _builtins.str,
+                 warning_message_max_number_of_prefixes: _builtins.int,
+                 warning_message_max_number_of_prefixes_variable: _builtins.str,
+                 warning_message_threshold: _builtins.int,
+                 warning_message_threshold_variable: _builtins.str):
         """
+        :param _builtins.int disable_peer_max_number_of_prefixes: Set maximum number of prefixes accepted from BGP peer
+        :param _builtins.str disable_peer_max_number_of_prefixes_variable: Variable name
+        :param _builtins.int disable_peer_threshold: Set threshold(1 to 100) at which to generate a warning message
+        :param _builtins.str disable_peer_threshold_variable: Variable name
         :param _builtins.str family_type: Set IPv4 unicast address family
-        :param _builtins.int max_number_of_prefixes: Set maximum number of prefixes accepted from BGP peer
-        :param _builtins.str max_number_of_prefixes_variable: Variable name
         :param _builtins.str policy_type: Neighbor received maximum prefix policy is disabled.
         :param _builtins.int restart_interval: Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded
         :param _builtins.str restart_interval_variable: Variable name
-        :param _builtins.int threshold: Set threshold(1 to 100) at which to generate a warning message
-        :param _builtins.str threshold_variable: Variable name
+        :param _builtins.int restart_max_number_of_prefixes: Set maximum number of prefixes accepted from BGP peer
+        :param _builtins.str restart_max_number_of_prefixes_variable: Variable name
+        :param _builtins.int restart_threshold: Set threshold(1 to 100) at which to generate a warning message
+        :param _builtins.str restart_threshold_variable: Variable name
+        :param _builtins.int warning_message_max_number_of_prefixes: Set maximum number of prefixes accepted from BGP peer
+        :param _builtins.str warning_message_max_number_of_prefixes_variable: Variable name
+        :param _builtins.int warning_message_threshold: Set threshold(1 to 100) at which to generate a warning message
+        :param _builtins.str warning_message_threshold_variable: Variable name
         """
+        pulumi.set(__self__, "disable_peer_max_number_of_prefixes", disable_peer_max_number_of_prefixes)
+        pulumi.set(__self__, "disable_peer_max_number_of_prefixes_variable", disable_peer_max_number_of_prefixes_variable)
+        pulumi.set(__self__, "disable_peer_threshold", disable_peer_threshold)
+        pulumi.set(__self__, "disable_peer_threshold_variable", disable_peer_threshold_variable)
         pulumi.set(__self__, "family_type", family_type)
         pulumi.set(__self__, "in_route_policy_id", in_route_policy_id)
-        pulumi.set(__self__, "max_number_of_prefixes", max_number_of_prefixes)
-        pulumi.set(__self__, "max_number_of_prefixes_variable", max_number_of_prefixes_variable)
         pulumi.set(__self__, "out_route_policy_id", out_route_policy_id)
         pulumi.set(__self__, "policy_type", policy_type)
         pulumi.set(__self__, "restart_interval", restart_interval)
         pulumi.set(__self__, "restart_interval_variable", restart_interval_variable)
-        pulumi.set(__self__, "threshold", threshold)
-        pulumi.set(__self__, "threshold_variable", threshold_variable)
+        pulumi.set(__self__, "restart_max_number_of_prefixes", restart_max_number_of_prefixes)
+        pulumi.set(__self__, "restart_max_number_of_prefixes_variable", restart_max_number_of_prefixes_variable)
+        pulumi.set(__self__, "restart_threshold", restart_threshold)
+        pulumi.set(__self__, "restart_threshold_variable", restart_threshold_variable)
+        pulumi.set(__self__, "warning_message_max_number_of_prefixes", warning_message_max_number_of_prefixes)
+        pulumi.set(__self__, "warning_message_max_number_of_prefixes_variable", warning_message_max_number_of_prefixes_variable)
+        pulumi.set(__self__, "warning_message_threshold", warning_message_threshold)
+        pulumi.set(__self__, "warning_message_threshold_variable", warning_message_threshold_variable)
+
+    @_builtins.property
+    @pulumi.getter(name="disablePeerMaxNumberOfPrefixes")
+    def disable_peer_max_number_of_prefixes(self) -> _builtins.int:
+        """
+        Set maximum number of prefixes accepted from BGP peer
+        """
+        return pulumi.get(self, "disable_peer_max_number_of_prefixes")
+
+    @_builtins.property
+    @pulumi.getter(name="disablePeerMaxNumberOfPrefixesVariable")
+    def disable_peer_max_number_of_prefixes_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "disable_peer_max_number_of_prefixes_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="disablePeerThreshold")
+    def disable_peer_threshold(self) -> _builtins.int:
+        """
+        Set threshold(1 to 100) at which to generate a warning message
+        """
+        return pulumi.get(self, "disable_peer_threshold")
+
+    @_builtins.property
+    @pulumi.getter(name="disablePeerThresholdVariable")
+    def disable_peer_threshold_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "disable_peer_threshold_variable")
 
     @_builtins.property
     @pulumi.getter(name="familyType")
@@ -88656,22 +89224,6 @@ class GetServiceRoutingBgpFeatureIpv4NeighborAddressFamilyResult(dict):
     @pulumi.getter(name="inRoutePolicyId")
     def in_route_policy_id(self) -> _builtins.str:
         return pulumi.get(self, "in_route_policy_id")
-
-    @_builtins.property
-    @pulumi.getter(name="maxNumberOfPrefixes")
-    def max_number_of_prefixes(self) -> _builtins.int:
-        """
-        Set maximum number of prefixes accepted from BGP peer
-        """
-        return pulumi.get(self, "max_number_of_prefixes")
-
-    @_builtins.property
-    @pulumi.getter(name="maxNumberOfPrefixesVariable")
-    def max_number_of_prefixes_variable(self) -> _builtins.str:
-        """
-        Variable name
-        """
-        return pulumi.get(self, "max_number_of_prefixes_variable")
 
     @_builtins.property
     @pulumi.getter(name="outRoutePolicyId")
@@ -88703,20 +89255,68 @@ class GetServiceRoutingBgpFeatureIpv4NeighborAddressFamilyResult(dict):
         return pulumi.get(self, "restart_interval_variable")
 
     @_builtins.property
-    @pulumi.getter
-    def threshold(self) -> _builtins.int:
+    @pulumi.getter(name="restartMaxNumberOfPrefixes")
+    def restart_max_number_of_prefixes(self) -> _builtins.int:
         """
-        Set threshold(1 to 100) at which to generate a warning message
+        Set maximum number of prefixes accepted from BGP peer
         """
-        return pulumi.get(self, "threshold")
+        return pulumi.get(self, "restart_max_number_of_prefixes")
 
     @_builtins.property
-    @pulumi.getter(name="thresholdVariable")
-    def threshold_variable(self) -> _builtins.str:
+    @pulumi.getter(name="restartMaxNumberOfPrefixesVariable")
+    def restart_max_number_of_prefixes_variable(self) -> _builtins.str:
         """
         Variable name
         """
-        return pulumi.get(self, "threshold_variable")
+        return pulumi.get(self, "restart_max_number_of_prefixes_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="restartThreshold")
+    def restart_threshold(self) -> _builtins.int:
+        """
+        Set threshold(1 to 100) at which to generate a warning message
+        """
+        return pulumi.get(self, "restart_threshold")
+
+    @_builtins.property
+    @pulumi.getter(name="restartThresholdVariable")
+    def restart_threshold_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "restart_threshold_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="warningMessageMaxNumberOfPrefixes")
+    def warning_message_max_number_of_prefixes(self) -> _builtins.int:
+        """
+        Set maximum number of prefixes accepted from BGP peer
+        """
+        return pulumi.get(self, "warning_message_max_number_of_prefixes")
+
+    @_builtins.property
+    @pulumi.getter(name="warningMessageMaxNumberOfPrefixesVariable")
+    def warning_message_max_number_of_prefixes_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "warning_message_max_number_of_prefixes_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="warningMessageThreshold")
+    def warning_message_threshold(self) -> _builtins.int:
+        """
+        Set threshold(1 to 100) at which to generate a warning message
+        """
+        return pulumi.get(self, "warning_message_threshold")
+
+    @_builtins.property
+    @pulumi.getter(name="warningMessageThresholdVariable")
+    def warning_message_threshold_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "warning_message_threshold_variable")
 
 
 @pulumi.output_type
@@ -95101,17 +95701,17 @@ class GetTlsSslDecryptionPolicyDefinitionUrlRuleResult(dict):
                  rule_name: _builtins.str,
                  target_vpns: Sequence[_builtins.str],
                  tls_ssl_profile_policy_id: _builtins.str,
-                 tls_ssl_profile_version: _builtins.int):
+                 tls_ssl_profile_policy_version: _builtins.int):
         """
         :param _builtins.str rule_name: Country
         :param Sequence[_builtins.str] target_vpns: List of VPN IDs
         :param _builtins.str tls_ssl_profile_policy_id: TLS SSL Profile Policy ID
-        :param _builtins.int tls_ssl_profile_version: TLS SSL Profile Policy version
+        :param _builtins.int tls_ssl_profile_policy_version: TLS SSL Profile Policy version
         """
         pulumi.set(__self__, "rule_name", rule_name)
         pulumi.set(__self__, "target_vpns", target_vpns)
         pulumi.set(__self__, "tls_ssl_profile_policy_id", tls_ssl_profile_policy_id)
-        pulumi.set(__self__, "tls_ssl_profile_version", tls_ssl_profile_version)
+        pulumi.set(__self__, "tls_ssl_profile_policy_version", tls_ssl_profile_policy_version)
 
     @_builtins.property
     @pulumi.getter(name="ruleName")
@@ -95138,12 +95738,12 @@ class GetTlsSslDecryptionPolicyDefinitionUrlRuleResult(dict):
         return pulumi.get(self, "tls_ssl_profile_policy_id")
 
     @_builtins.property
-    @pulumi.getter(name="tlsSslProfileVersion")
-    def tls_ssl_profile_version(self) -> _builtins.int:
+    @pulumi.getter(name="tlsSslProfilePolicyVersion")
+    def tls_ssl_profile_policy_version(self) -> _builtins.int:
         """
         TLS SSL Profile Policy version
         """
-        return pulumi.get(self, "tls_ssl_profile_version")
+        return pulumi.get(self, "tls_ssl_profile_policy_version")
 
 
 @pulumi.output_type
@@ -95509,7 +96109,7 @@ class GetTrafficDataPolicyDefinitionSequenceActionEntrySetParameterResult(dict):
                  next_hop_loose: _builtins.bool,
                  policer_list_id: _builtins.str,
                  policer_list_version: _builtins.int,
-                 preferred_color_group_list: _builtins.str,
+                 preferred_color_group_list_id: _builtins.str,
                  preferred_color_group_list_version: _builtins.int,
                  service_tloc_color: _builtins.str,
                  service_tloc_encapsulation: _builtins.str,
@@ -95537,7 +96137,7 @@ class GetTrafficDataPolicyDefinitionSequenceActionEntrySetParameterResult(dict):
         :param _builtins.bool next_hop_loose: Use routing table entry to forward the packet in case Next-hop is not available
         :param _builtins.str policer_list_id: Policer list ID
         :param _builtins.int policer_list_version: Policer list version
-        :param _builtins.str preferred_color_group_list: Preferred color group list ID
+        :param _builtins.str preferred_color_group_list_id: Preferred color group list ID
         :param _builtins.int preferred_color_group_list_version: Preferred color group list version
         :param _builtins.str service_tloc_color: Service TLOC color
         :param _builtins.str service_tloc_encapsulation: Service TLOC encapsulation
@@ -95565,7 +96165,7 @@ class GetTrafficDataPolicyDefinitionSequenceActionEntrySetParameterResult(dict):
         pulumi.set(__self__, "next_hop_loose", next_hop_loose)
         pulumi.set(__self__, "policer_list_id", policer_list_id)
         pulumi.set(__self__, "policer_list_version", policer_list_version)
-        pulumi.set(__self__, "preferred_color_group_list", preferred_color_group_list)
+        pulumi.set(__self__, "preferred_color_group_list_id", preferred_color_group_list_id)
         pulumi.set(__self__, "preferred_color_group_list_version", preferred_color_group_list_version)
         pulumi.set(__self__, "service_tloc_color", service_tloc_color)
         pulumi.set(__self__, "service_tloc_encapsulation", service_tloc_encapsulation)
@@ -95657,12 +96257,12 @@ class GetTrafficDataPolicyDefinitionSequenceActionEntrySetParameterResult(dict):
         return pulumi.get(self, "policer_list_version")
 
     @_builtins.property
-    @pulumi.getter(name="preferredColorGroupList")
-    def preferred_color_group_list(self) -> _builtins.str:
+    @pulumi.getter(name="preferredColorGroupListId")
+    def preferred_color_group_list_id(self) -> _builtins.str:
         """
         Preferred color group list ID
         """
-        return pulumi.get(self, "preferred_color_group_list")
+        return pulumi.get(self, "preferred_color_group_list_id")
 
     @_builtins.property
     @pulumi.getter(name="preferredColorGroupListVersion")

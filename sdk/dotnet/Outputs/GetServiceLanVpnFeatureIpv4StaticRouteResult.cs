@@ -16,7 +16,11 @@ namespace Pulumi.Sdwan.Outputs
         /// <summary>
         /// IPv4 Route Gateway DHCP
         /// </summary>
-        public readonly bool GatewayDhcp;
+        public readonly bool Dhcp;
+        /// <summary>
+        /// Gateway type
+        /// </summary>
+        public readonly string Gateway;
         /// <summary>
         /// IP Address
         /// </summary>
@@ -52,7 +56,9 @@ namespace Pulumi.Sdwan.Outputs
 
         [OutputConstructor]
         private GetServiceLanVpnFeatureIpv4StaticRouteResult(
-            bool gatewayDhcp,
+            bool dhcp,
+
+            string gateway,
 
             string networkAddress,
 
@@ -70,7 +76,8 @@ namespace Pulumi.Sdwan.Outputs
 
             bool vpn)
         {
-            GatewayDhcp = gatewayDhcp;
+            Dhcp = dhcp;
+            Gateway = gateway;
             NetworkAddress = networkAddress;
             NetworkAddressVariable = networkAddressVariable;
             NextHopWithTrackers = nextHopWithTrackers;

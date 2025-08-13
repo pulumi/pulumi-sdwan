@@ -13,10 +13,17 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class ServiceLanVpnFeatureIpv4StaticRouteGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// IPv4 Route Gateway DHCP
+        /// IPv4 Route Gateway DHCP, Attribute conditional on `gateway` being equal to `dhcp`
         /// </summary>
-        [Input("gatewayDhcp")]
-        public Input<bool>? GatewayDhcp { get; set; }
+        [Input("dhcp")]
+        public Input<bool>? Dhcp { get; set; }
+
+        /// <summary>
+        /// Gateway type
+        ///   - Choices: `nextHop`, `null0`, `vpn`, `dhcp`
+        /// </summary>
+        [Input("gateway")]
+        public Input<string>? Gateway { get; set; }
 
         /// <summary>
         /// IP Address
@@ -34,7 +41,7 @@ namespace Pulumi.Sdwan.Inputs
         private InputList<Inputs.ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTrackerGetArgs>? _nextHopWithTrackers;
 
         /// <summary>
-        /// IPv4 Route Gateway Next Hop with Tracker
+        /// IPv4 Route Gateway Next Hop with Tracker, Attribute conditional on `gateway` being equal to `nextHop`
         /// </summary>
         public InputList<Inputs.ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTrackerGetArgs> NextHopWithTrackers
         {
@@ -46,7 +53,7 @@ namespace Pulumi.Sdwan.Inputs
         private InputList<Inputs.ServiceLanVpnFeatureIpv4StaticRouteNextHopGetArgs>? _nextHops;
 
         /// <summary>
-        /// IPv4 Route Gateway Next Hop
+        /// IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
         /// </summary>
         public InputList<Inputs.ServiceLanVpnFeatureIpv4StaticRouteNextHopGetArgs> NextHops
         {
@@ -55,7 +62,7 @@ namespace Pulumi.Sdwan.Inputs
         }
 
         /// <summary>
-        /// IPv4 Route Gateway Next Hop
+        /// IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `null0`
         /// </summary>
         [Input("null0")]
         public Input<bool>? Null0 { get; set; }
@@ -74,7 +81,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? SubnetMaskVariable { get; set; }
 
         /// <summary>
-        /// IPv4 Route Gateway VPN
+        /// IPv4 Route Gateway VPN, Attribute conditional on `gateway` being equal to `vpn`
         /// </summary>
         [Input("vpn")]
         public Input<bool>? Vpn { get; set; }
