@@ -4,6 +4,10 @@ go 1.24
 
 toolchain go1.24.6
 
+replace github.com/CiscoDevNet/terraform-provider-sdwan => ../upstream
+
+replace github.com/hashicorp/terraform-plugin-sdk/v2 => github.com/pulumi/terraform-plugin-sdk/v2 v2.0.0-20250530111747-935112552988
+
 require (
 	github.com/CiscoDevNet/terraform-provider-sdwan v0.3.9
 	github.com/pulumi/pulumi-terraform-bridge/v3 v3.111.0
@@ -197,6 +201,3 @@ require (
 	lukechampine.com/frand v1.4.2 // indirect
 )
 
-replace github.com/CiscoDevNet/terraform-provider-sdwan => ../upstream
-
-replace github.com/hashicorp/terraform-plugin-sdk/v2 => github.com/pulumi/terraform-plugin-sdk/v2 v2.0.0-20250530111747-935112552988
