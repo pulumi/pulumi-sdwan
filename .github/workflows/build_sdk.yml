@@ -26,11 +26,11 @@ jobs:
       fail-fast: ${{ ! contains(github.actor, 'renovate') }}
       matrix:
         language:
-        - nodejs
-        - python
-        - dotnet
-        - go
-        - java
+          - nodejs
+          - python
+          - dotnet
+          - go
+          - java
     steps:
       - name: Checkout Repo
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
@@ -46,6 +46,9 @@ jobs:
         uses: ./.github/actions/setup-tools
         with:
           tools: pulumictl, pulumicli, ${{ matrix.language }}
+      - if: inputs.tools == 'all' || contains(inputs.tools, 'java')
+        run: gradle -p ./sdk/java --stacktrace --info
+        shell: bash
       - name: Prepare local workspace
         run: make prepare_local_workspace
         env:
