@@ -46,6 +46,7 @@ jobs:
         uses: ./.github/actions/setup-tools
         with:
           tools: pulumictl, pulumicli, ${{ matrix.language }}
+        continue-on-error: true
       - if: inputs.tools == 'all' || contains(inputs.tools, 'java')
         run: gradle -p ./sdk/java --stacktrace --info
         shell: bash
