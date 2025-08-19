@@ -48,7 +48,7 @@ jobs:
           tools: pulumictl, pulumicli, ${{ matrix.language }}
         continue-on-error: true
       - if: matrix.language == 'java'
-        run: gradle -p ./sdk/java --stacktrace --info
+        run: /usr/bin/gradle -p ./sdk/java --stacktrace --info
         shell: bash
       - name: Prepare local workspace
         run: make prepare_local_workspace
