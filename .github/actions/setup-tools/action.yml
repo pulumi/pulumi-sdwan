@@ -90,6 +90,6 @@ runs:
       with:
         gradle-version: 7.6
 
-    - run: gradle --stacktrace --info
-      if: always()
+    - if: always()
+      run: gradle -p ./sdk/java --stacktrace --info
       shell: bash
