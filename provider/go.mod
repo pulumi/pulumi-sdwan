@@ -6,7 +6,7 @@ toolchain go1.24.6
 
 require (
 	github.com/CiscoDevNet/terraform-provider-sdwan v0.3.9
-	github.com/pulumi/pulumi-terraform-bridge/v3 v3.111.0
+	github.com/pulumi/pulumi-terraform-bridge/v3 v3.112.0
 	github.com/pulumi/pulumi/sdk/v3 v3.185.0
 )
 
