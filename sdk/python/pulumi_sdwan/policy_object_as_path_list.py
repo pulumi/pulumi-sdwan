@@ -28,7 +28,8 @@ class PolicyObjectAsPathListArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a PolicyObjectAsPathList resource.
-        :param pulumi.Input[_builtins.int] as_path_list_id: As path List Number - Range: `1`-`500`
+        :param pulumi.Input[_builtins.int] as_path_list_id: As path List Number
+                 - Range: `1`-`500`
         :param pulumi.Input[Sequence[pulumi.Input['PolicyObjectAsPathListEntryArgs']]] entries: AS Path List
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] description: The description of the Policy_object
@@ -46,7 +47,8 @@ class PolicyObjectAsPathListArgs:
     @pulumi.getter(name="asPathListId")
     def as_path_list_id(self) -> pulumi.Input[_builtins.int]:
         """
-        As path List Number - Range: `1`-`500`
+        As path List Number
+          - Range: `1`-`500`
         """
         return pulumi.get(self, "as_path_list_id")
 
@@ -114,7 +116,8 @@ class _PolicyObjectAsPathListState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering PolicyObjectAsPathList resources.
-        :param pulumi.Input[_builtins.int] as_path_list_id: As path List Number - Range: `1`-`500`
+        :param pulumi.Input[_builtins.int] as_path_list_id: As path List Number
+                 - Range: `1`-`500`
         :param pulumi.Input[_builtins.str] description: The description of the Policy_object
         :param pulumi.Input[Sequence[pulumi.Input['PolicyObjectAsPathListEntryArgs']]] entries: AS Path List
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
@@ -138,7 +141,8 @@ class _PolicyObjectAsPathListState:
     @pulumi.getter(name="asPathListId")
     def as_path_list_id(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        As path List Number - Range: `1`-`500`
+        As path List Number
+          - Range: `1`-`500`
         """
         return pulumi.get(self, "as_path_list_id")
 
@@ -235,7 +239,8 @@ class PolicyObjectAsPathList(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.int] as_path_list_id: As path List Number - Range: `1`-`500`
+        :param pulumi.Input[_builtins.int] as_path_list_id: As path List Number
+                 - Range: `1`-`500`
         :param pulumi.Input[_builtins.str] description: The description of the Policy_object
         :param pulumi.Input[Sequence[pulumi.Input[Union['PolicyObjectAsPathListEntryArgs', 'PolicyObjectAsPathListEntryArgsDict']]]] entries: AS Path List
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
@@ -325,7 +330,8 @@ class PolicyObjectAsPathList(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.int] as_path_list_id: As path List Number - Range: `1`-`500`
+        :param pulumi.Input[_builtins.int] as_path_list_id: As path List Number
+                 - Range: `1`-`500`
         :param pulumi.Input[_builtins.str] description: The description of the Policy_object
         :param pulumi.Input[Sequence[pulumi.Input[Union['PolicyObjectAsPathListEntryArgs', 'PolicyObjectAsPathListEntryArgsDict']]]] entries: AS Path List
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
@@ -348,7 +354,8 @@ class PolicyObjectAsPathList(pulumi.CustomResource):
     @pulumi.getter(name="asPathListId")
     def as_path_list_id(self) -> pulumi.Output[_builtins.int]:
         """
-        As path List Number - Range: `1`-`500`
+        As path List Number
+          - Range: `1`-`500`
         """
         return pulumi.get(self, "as_path_list_id")
 

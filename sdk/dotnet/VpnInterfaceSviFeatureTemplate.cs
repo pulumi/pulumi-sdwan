@@ -25,7 +25,9 @@ namespace Pulumi.Sdwan
     public partial class VpnInterfaceSviFeatureTemplate : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds - Range: `0`-`2678400` - Default value: `1200`
+        /// Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+        ///   - Range: `0`-`2678400`
+        ///   - Default value: `1200`
         /// </summary>
         [Output("arpTimeout")]
         public Output<int?> ArpTimeout { get; private set; } = null!;
@@ -43,9 +45,8 @@ namespace Pulumi.Sdwan
         public Output<string> Description { get; private set; } = null!;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         [Output("deviceTypes")]
         public Output<ImmutableArray<string>> DeviceTypes { get; private set; } = null!;
@@ -75,7 +76,8 @@ namespace Pulumi.Sdwan
         public Output<string?> InterfaceDescriptionVariable { get; private set; } = null!;
 
         /// <summary>
-        /// IP Directed-Broadcast - Default value: `false`
+        /// IP Directed-Broadcast
+        ///   - Default value: `false`
         /// </summary>
         [Output("ipDirectedBroadcast")]
         public Output<bool?> IpDirectedBroadcast { get; private set; } = null!;
@@ -87,7 +89,9 @@ namespace Pulumi.Sdwan
         public Output<string?> IpDirectedBroadcastVariable { get; private set; } = null!;
 
         /// <summary>
-        /// IP MTU &lt;576..Interface MTU&gt;, in bytes - Range: `576`-`9216` - Default value: `1500`
+        /// IP MTU &lt;576..Interface MTU&gt;, in bytes
+        ///   - Range: `576`-`9216`
+        ///   - Default value: `1500`
         /// </summary>
         [Output("ipMtu")]
         public Output<int?> IpMtu { get; private set; } = null!;
@@ -159,7 +163,8 @@ namespace Pulumi.Sdwan
         public Output<string?> Ipv6AddressVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Enable DHCPv6 - Default value: `false`
+        /// Enable DHCPv6
+        ///   - Default value: `false`
         /// </summary>
         [Output("ipv6DhcpClient")]
         public Output<bool?> Ipv6DhcpClient { get; private set; } = null!;
@@ -171,7 +176,9 @@ namespace Pulumi.Sdwan
         public Output<string?> Ipv6DhcpClientVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set administrative distance for DHCP default route - Range: `1`-`65536` - Default value: `1`
+        /// Set administrative distance for DHCP default route
+        ///   - Range: `1`-`65536`
+        ///   - Default value: `1`
         /// </summary>
         [Output("ipv6DhcpDistance")]
         public Output<int?> Ipv6DhcpDistance { get; private set; } = null!;
@@ -189,7 +196,8 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.VpnInterfaceSviFeatureTemplateIpv6DhcpHelper>> Ipv6DhcpHelpers { get; private set; } = null!;
 
         /// <summary>
-        /// Enable DHCPv6 rapid commit - Default value: `false`
+        /// Enable DHCPv6 rapid commit
+        ///   - Default value: `false`
         /// </summary>
         [Output("ipv6DhcpRapidCommit")]
         public Output<bool?> Ipv6DhcpRapidCommit { get; private set; } = null!;
@@ -213,7 +221,9 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.VpnInterfaceSviFeatureTemplateIpv6Vrrp>> Ipv6Vrrps { get; private set; } = null!;
 
         /// <summary>
-        /// Interface MTU &lt;1500..9216&gt; in bytes - Range: `1500`-`9216` - Default value: `1500`
+        /// Interface MTU &lt;1500..9216&gt; in bytes
+        ///   - Range: `1500`-`9216`
+        ///   - Default value: `1500`
         /// </summary>
         [Output("mtu")]
         public Output<int?> Mtu { get; private set; } = null!;
@@ -237,7 +247,8 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.VpnInterfaceSviFeatureTemplatePolicer>> Policers { get; private set; } = null!;
 
         /// <summary>
-        /// Administrative state - Default value: `true`
+        /// Administrative state
+        ///   - Default value: `true`
         /// </summary>
         [Output("shutdown")]
         public Output<bool?> Shutdown { get; private set; } = null!;
@@ -255,7 +266,8 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.VpnInterfaceSviFeatureTemplateStaticArpEntry>> StaticArpEntries { get; private set; } = null!;
 
         /// <summary>
-        /// TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+        /// TCP MSS on SYN packets, in bytes
+        ///   - Range: `552`-`1960`
         /// </summary>
         [Output("tcpMssAdjust")]
         public Output<int?> TcpMssAdjust { get; private set; } = null!;
@@ -325,7 +337,9 @@ namespace Pulumi.Sdwan
     public sealed class VpnInterfaceSviFeatureTemplateArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds - Range: `0`-`2678400` - Default value: `1200`
+        /// Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+        ///   - Range: `0`-`2678400`
+        ///   - Default value: `1200`
         /// </summary>
         [Input("arpTimeout")]
         public Input<int>? ArpTimeout { get; set; }
@@ -346,9 +360,8 @@ namespace Pulumi.Sdwan
         private InputList<string>? _deviceTypes;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         public InputList<string> DeviceTypes
         {
@@ -381,7 +394,8 @@ namespace Pulumi.Sdwan
         public Input<string>? InterfaceDescriptionVariable { get; set; }
 
         /// <summary>
-        /// IP Directed-Broadcast - Default value: `false`
+        /// IP Directed-Broadcast
+        ///   - Default value: `false`
         /// </summary>
         [Input("ipDirectedBroadcast")]
         public Input<bool>? IpDirectedBroadcast { get; set; }
@@ -393,7 +407,9 @@ namespace Pulumi.Sdwan
         public Input<string>? IpDirectedBroadcastVariable { get; set; }
 
         /// <summary>
-        /// IP MTU &lt;576..Interface MTU&gt;, in bytes - Range: `576`-`9216` - Default value: `1500`
+        /// IP MTU &lt;576..Interface MTU&gt;, in bytes
+        ///   - Range: `576`-`9216`
+        ///   - Default value: `1500`
         /// </summary>
         [Input("ipMtu")]
         public Input<int>? IpMtu { get; set; }
@@ -495,7 +511,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv6AddressVariable { get; set; }
 
         /// <summary>
-        /// Enable DHCPv6 - Default value: `false`
+        /// Enable DHCPv6
+        ///   - Default value: `false`
         /// </summary>
         [Input("ipv6DhcpClient")]
         public Input<bool>? Ipv6DhcpClient { get; set; }
@@ -507,7 +524,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv6DhcpClientVariable { get; set; }
 
         /// <summary>
-        /// Set administrative distance for DHCP default route - Range: `1`-`65536` - Default value: `1`
+        /// Set administrative distance for DHCP default route
+        ///   - Range: `1`-`65536`
+        ///   - Default value: `1`
         /// </summary>
         [Input("ipv6DhcpDistance")]
         public Input<int>? Ipv6DhcpDistance { get; set; }
@@ -531,7 +550,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Enable DHCPv6 rapid commit - Default value: `false`
+        /// Enable DHCPv6 rapid commit
+        ///   - Default value: `false`
         /// </summary>
         [Input("ipv6DhcpRapidCommit")]
         public Input<bool>? Ipv6DhcpRapidCommit { get; set; }
@@ -567,7 +587,9 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Interface MTU &lt;1500..9216&gt; in bytes - Range: `1500`-`9216` - Default value: `1500`
+        /// Interface MTU &lt;1500..9216&gt; in bytes
+        ///   - Range: `1500`-`9216`
+        ///   - Default value: `1500`
         /// </summary>
         [Input("mtu")]
         public Input<int>? Mtu { get; set; }
@@ -597,7 +619,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Administrative state - Default value: `true`
+        /// Administrative state
+        ///   - Default value: `true`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }
@@ -621,7 +644,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+        /// TCP MSS on SYN packets, in bytes
+        ///   - Range: `552`-`1960`
         /// </summary>
         [Input("tcpMssAdjust")]
         public Input<int>? TcpMssAdjust { get; set; }
@@ -641,7 +665,9 @@ namespace Pulumi.Sdwan
     public sealed class VpnInterfaceSviFeatureTemplateState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds - Range: `0`-`2678400` - Default value: `1200`
+        /// Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+        ///   - Range: `0`-`2678400`
+        ///   - Default value: `1200`
         /// </summary>
         [Input("arpTimeout")]
         public Input<int>? ArpTimeout { get; set; }
@@ -662,9 +688,8 @@ namespace Pulumi.Sdwan
         private InputList<string>? _deviceTypes;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         public InputList<string> DeviceTypes
         {
@@ -697,7 +722,8 @@ namespace Pulumi.Sdwan
         public Input<string>? InterfaceDescriptionVariable { get; set; }
 
         /// <summary>
-        /// IP Directed-Broadcast - Default value: `false`
+        /// IP Directed-Broadcast
+        ///   - Default value: `false`
         /// </summary>
         [Input("ipDirectedBroadcast")]
         public Input<bool>? IpDirectedBroadcast { get; set; }
@@ -709,7 +735,9 @@ namespace Pulumi.Sdwan
         public Input<string>? IpDirectedBroadcastVariable { get; set; }
 
         /// <summary>
-        /// IP MTU &lt;576..Interface MTU&gt;, in bytes - Range: `576`-`9216` - Default value: `1500`
+        /// IP MTU &lt;576..Interface MTU&gt;, in bytes
+        ///   - Range: `576`-`9216`
+        ///   - Default value: `1500`
         /// </summary>
         [Input("ipMtu")]
         public Input<int>? IpMtu { get; set; }
@@ -811,7 +839,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv6AddressVariable { get; set; }
 
         /// <summary>
-        /// Enable DHCPv6 - Default value: `false`
+        /// Enable DHCPv6
+        ///   - Default value: `false`
         /// </summary>
         [Input("ipv6DhcpClient")]
         public Input<bool>? Ipv6DhcpClient { get; set; }
@@ -823,7 +852,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv6DhcpClientVariable { get; set; }
 
         /// <summary>
-        /// Set administrative distance for DHCP default route - Range: `1`-`65536` - Default value: `1`
+        /// Set administrative distance for DHCP default route
+        ///   - Range: `1`-`65536`
+        ///   - Default value: `1`
         /// </summary>
         [Input("ipv6DhcpDistance")]
         public Input<int>? Ipv6DhcpDistance { get; set; }
@@ -847,7 +878,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Enable DHCPv6 rapid commit - Default value: `false`
+        /// Enable DHCPv6 rapid commit
+        ///   - Default value: `false`
         /// </summary>
         [Input("ipv6DhcpRapidCommit")]
         public Input<bool>? Ipv6DhcpRapidCommit { get; set; }
@@ -883,7 +915,9 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Interface MTU &lt;1500..9216&gt; in bytes - Range: `1500`-`9216` - Default value: `1500`
+        /// Interface MTU &lt;1500..9216&gt; in bytes
+        ///   - Range: `1500`-`9216`
+        ///   - Default value: `1500`
         /// </summary>
         [Input("mtu")]
         public Input<int>? Mtu { get; set; }
@@ -913,7 +947,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Administrative state - Default value: `true`
+        /// Administrative state
+        ///   - Default value: `true`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }
@@ -937,7 +972,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+        /// TCP MSS on SYN packets, in bytes
+        ///   - Range: `552`-`1960`
         /// </summary>
         [Input("tcpMssAdjust")]
         public Input<int>? TcpMssAdjust { get; set; }

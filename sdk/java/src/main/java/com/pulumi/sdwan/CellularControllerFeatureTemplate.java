@@ -95,32 +95,32 @@ public class CellularControllerFeatureTemplate extends com.pulumi.resources.Cust
         return this.description;
     }
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Export(name="deviceTypes", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Output<List<String>> deviceTypes() {
         return this.deviceTypes;
     }
     /**
-     * Enable/Disable Firmware Auto Sim - Default value: `true`
+     * Enable/Disable Firmware Auto Sim
+     *   - Default value: `true`
      * 
      */
     @Export(name="firmwareAutoSim", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> firmwareAutoSim;
 
     /**
-     * @return Enable/Disable Firmware Auto Sim - Default value: `true`
+     * @return Enable/Disable Firmware Auto Sim
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> firmwareAutoSim() {
@@ -155,14 +155,16 @@ public class CellularControllerFeatureTemplate extends com.pulumi.resources.Cust
         return this.name;
     }
     /**
-     * Set primary SIM slot - Range: `0`-`255`
+     * Set primary SIM slot
+     *   - Range: `0`-`255`
      * 
      */
     @Export(name="primarySimSlot", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> primarySimSlot;
 
     /**
-     * @return Set primary SIM slot - Range: `0`-`255`
+     * @return Set primary SIM slot
+     *   - Range: `0`-`255`
      * 
      */
     public Output<Optional<Integer>> primarySimSlot() {
@@ -183,14 +185,16 @@ public class CellularControllerFeatureTemplate extends com.pulumi.resources.Cust
         return Codegen.optional(this.primarySimSlotVariable);
     }
     /**
-     * Set SIM failover retries - Range: `0`-`65535`
+     * Set SIM failover retries
+     *   - Range: `0`-`65535`
      * 
      */
     @Export(name="simFailoverRetries", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> simFailoverRetries;
 
     /**
-     * @return Set SIM failover retries - Range: `0`-`65535`
+     * @return Set SIM failover retries
+     *   - Range: `0`-`65535`
      * 
      */
     public Output<Optional<Integer>> simFailoverRetries() {
@@ -211,14 +215,16 @@ public class CellularControllerFeatureTemplate extends com.pulumi.resources.Cust
         return Codegen.optional(this.simFailoverRetriesVariable);
     }
     /**
-     * Set SIM failover timeout in minutes - Range: `3`-`7`
+     * Set SIM failover timeout in minutes
+     *   - Range: `3`-`7`
      * 
      */
     @Export(name="simFailoverTimeout", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> simFailoverTimeout;
 
     /**
-     * @return Set SIM failover timeout in minutes - Range: `3`-`7`
+     * @return Set SIM failover timeout in minutes
+     *   - Range: `3`-`7`
      * 
      */
     public Output<Optional<Integer>> simFailoverTimeout() {

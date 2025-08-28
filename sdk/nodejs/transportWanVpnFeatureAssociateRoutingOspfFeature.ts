@@ -62,19 +62,19 @@ export class TransportWanVpnFeatureAssociateRoutingOspfFeature extends pulumi.Cu
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
      * Transport Routing OSPF Feature ID
      */
-    public readonly transportRoutingOspfFeatureId!: pulumi.Output<string>;
+    declare public readonly transportRoutingOspfFeatureId: pulumi.Output<string>;
     /**
      * Transport WAN VPN Feature ID
      */
-    public readonly transportWanVpnFeatureId!: pulumi.Output<string>;
+    declare public readonly transportWanVpnFeatureId: pulumi.Output<string>;
     /**
      * The version of the object
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a TransportWanVpnFeatureAssociateRoutingOspfFeature resource with the given unique name, arguments, and options.
@@ -89,24 +89,24 @@ export class TransportWanVpnFeatureAssociateRoutingOspfFeature extends pulumi.Cu
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as TransportWanVpnFeatureAssociateRoutingOspfFeatureState | undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["transportRoutingOspfFeatureId"] = state ? state.transportRoutingOspfFeatureId : undefined;
-            resourceInputs["transportWanVpnFeatureId"] = state ? state.transportWanVpnFeatureId : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["transportRoutingOspfFeatureId"] = state?.transportRoutingOspfFeatureId;
+            resourceInputs["transportWanVpnFeatureId"] = state?.transportWanVpnFeatureId;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as TransportWanVpnFeatureAssociateRoutingOspfFeatureArgs | undefined;
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            if ((!args || args.transportRoutingOspfFeatureId === undefined) && !opts.urn) {
+            if (args?.transportRoutingOspfFeatureId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'transportRoutingOspfFeatureId'");
             }
-            if ((!args || args.transportWanVpnFeatureId === undefined) && !opts.urn) {
+            if (args?.transportWanVpnFeatureId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'transportWanVpnFeatureId'");
             }
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["transportRoutingOspfFeatureId"] = args ? args.transportRoutingOspfFeatureId : undefined;
-            resourceInputs["transportWanVpnFeatureId"] = args ? args.transportWanVpnFeatureId : undefined;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["transportRoutingOspfFeatureId"] = args?.transportRoutingOspfFeatureId;
+            resourceInputs["transportWanVpnFeatureId"] = args?.transportWanVpnFeatureId;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

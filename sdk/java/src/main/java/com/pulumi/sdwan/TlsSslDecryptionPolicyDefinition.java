@@ -53,28 +53,32 @@ public class TlsSslDecryptionPolicyDefinition extends com.pulumi.resources.Custo
         return Codegen.optional(this.certificateLifetimeInDays);
     }
     /**
-     * Certificate revocation status - Choices: `ocsp`, `none`
+     * Certificate revocation status
+     *   - Choices: `ocsp`, `none`
      * 
      */
     @Export(name="certificateRevocationStatus", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> certificateRevocationStatus;
 
     /**
-     * @return Certificate revocation status - Choices: `ocsp`, `none`
+     * @return Certificate revocation status
+     *   - Choices: `ocsp`, `none`
      * 
      */
     public Output<Optional<String>> certificateRevocationStatus() {
         return Codegen.optional(this.certificateRevocationStatus);
     }
     /**
-     * Default action (applies when `mode` set to `security`) - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
+     * Default action (applies when `mode` set to `security`)
+     *   - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
      * 
      */
     @Export(name="defaultAction", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> defaultAction;
 
     /**
-     * @return Default action (applies when `mode` set to `security`) - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
+     * @return Default action (applies when `mode` set to `security`)
+     *   - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
      * 
      */
     public Output<Optional<String>> defaultAction() {
@@ -95,70 +99,80 @@ public class TlsSslDecryptionPolicyDefinition extends com.pulumi.resources.Custo
         return this.description;
     }
     /**
-     * EC Key Type - Choices: `P256`, `P384`, `P521`
+     * EC Key Type
+     *   - Choices: `P256`, `P384`, `P521`
      * 
      */
     @Export(name="ecKeyType", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ecKeyType;
 
     /**
-     * @return EC Key Type - Choices: `P256`, `P384`, `P521`
+     * @return EC Key Type
+     *   - Choices: `P256`, `P384`, `P521`
      * 
      */
     public Output<Optional<String>> ecKeyType() {
         return Codegen.optional(this.ecKeyType);
     }
     /**
-     * Expired certificate action - Choices: `drop`, `decrypt`
+     * Expired certificate action
+     *   - Choices: `drop`, `decrypt`
      * 
      */
     @Export(name="expiredCertificate", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> expiredCertificate;
 
     /**
-     * @return Expired certificate action - Choices: `drop`, `decrypt`
+     * @return Expired certificate action
+     *   - Choices: `drop`, `decrypt`
      * 
      */
     public Output<Optional<String>> expiredCertificate() {
         return Codegen.optional(this.expiredCertificate);
     }
     /**
-     * Failure mode - Choices: `open`, `close`
+     * Failure mode
+     *   - Choices: `open`, `close`
      * 
      */
     @Export(name="failureMode", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> failureMode;
 
     /**
-     * @return Failure mode - Choices: `open`, `close`
+     * @return Failure mode
+     *   - Choices: `open`, `close`
      * 
      */
     public Output<Optional<String>> failureMode() {
         return Codegen.optional(this.failureMode);
     }
     /**
-     * Minimal TLS Version - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
+     * Minimal TLS Version
+     *   - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
      * 
      */
     @Export(name="minimalTlsVersion", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> minimalTlsVersion;
 
     /**
-     * @return Minimal TLS Version - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
+     * @return Minimal TLS Version
+     *   - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
      * 
      */
     public Output<Optional<String>> minimalTlsVersion() {
         return Codegen.optional(this.minimalTlsVersion);
     }
     /**
-     * The policy mode - Choices: `security`, `unified`
+     * The policy mode
+     *   - Choices: `security`, `unified`
      * 
      */
     @Export(name="mode", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> mode;
 
     /**
-     * @return The policy mode - Choices: `security`, `unified`
+     * @return The policy mode
+     *   - Choices: `security`, `unified`
      * 
      */
     public Output<Optional<String>> mode() {
@@ -193,14 +207,16 @@ public class TlsSslDecryptionPolicyDefinition extends com.pulumi.resources.Custo
         return Codegen.optional(this.networkRules);
     }
     /**
-     * RSA key pair modules - Choices: `1024`, `2048`, `4096`
+     * RSA key pair modules
+     *   - Choices: `1024`, `2048`, `4096`
      * 
      */
     @Export(name="rsaKeyPairModulus", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> rsaKeyPairModulus;
 
     /**
-     * @return RSA key pair modules - Choices: `1024`, `2048`, `4096`
+     * @return RSA key pair modules
+     *   - Choices: `1024`, `2048`, `4096`
      * 
      */
     public Output<Optional<String>> rsaKeyPairModulus() {
@@ -221,56 +237,64 @@ public class TlsSslDecryptionPolicyDefinition extends com.pulumi.resources.Custo
         return Codegen.optional(this.sslDecryptionEnabled);
     }
     /**
-     * Unknown revocation status action - Choices: `drop`, `decrypt`
+     * Unknown revocation status action
+     *   - Choices: `drop`, `decrypt`
      * 
      */
     @Export(name="unknownRevocationStatus", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> unknownRevocationStatus;
 
     /**
-     * @return Unknown revocation status action - Choices: `drop`, `decrypt`
+     * @return Unknown revocation status action
+     *   - Choices: `drop`, `decrypt`
      * 
      */
     public Output<Optional<String>> unknownRevocationStatus() {
         return Codegen.optional(this.unknownRevocationStatus);
     }
     /**
-     * Unsupported cipher suites action - Choices: `drop`, `no-decrypt`
+     * Unsupported cipher suites action
+     *   - Choices: `drop`, `no-decrypt`
      * 
      */
     @Export(name="unsupportedCipherSuites", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> unsupportedCipherSuites;
 
     /**
-     * @return Unsupported cipher suites action - Choices: `drop`, `no-decrypt`
+     * @return Unsupported cipher suites action
+     *   - Choices: `drop`, `no-decrypt`
      * 
      */
     public Output<Optional<String>> unsupportedCipherSuites() {
         return Codegen.optional(this.unsupportedCipherSuites);
     }
     /**
-     * Unsupported protocol versions action - Choices: `drop`, `no-decrypt`
+     * Unsupported protocol versions action
+     *   - Choices: `drop`, `no-decrypt`
      * 
      */
     @Export(name="unsupportedProtocolVersions", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> unsupportedProtocolVersions;
 
     /**
-     * @return Unsupported protocol versions action - Choices: `drop`, `no-decrypt`
+     * @return Unsupported protocol versions action
+     *   - Choices: `drop`, `no-decrypt`
      * 
      */
     public Output<Optional<String>> unsupportedProtocolVersions() {
         return Codegen.optional(this.unsupportedProtocolVersions);
     }
     /**
-     * Untrusted certificate action - Choices: `drop`, `decrypt`
+     * Untrusted certificate action
+     *   - Choices: `drop`, `decrypt`
      * 
      */
     @Export(name="untrustedCertificate", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> untrustedCertificate;
 
     /**
-     * @return Untrusted certificate action - Choices: `drop`, `decrypt`
+     * @return Untrusted certificate action
+     *   - Choices: `drop`, `decrypt`
      * 
      */
     public Output<Optional<String>> untrustedCertificate() {

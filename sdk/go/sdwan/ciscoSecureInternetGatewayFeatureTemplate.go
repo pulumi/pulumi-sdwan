@@ -27,9 +27,8 @@ type CiscoSecureInternetGatewayFeatureTemplate struct {
 
 	// The description of the feature template
 	Description pulumi.StringOutput `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayOutput `pulumi:"deviceTypes"`
 	// Interface name: IPsec when present
 	Interfaces CiscoSecureInternetGatewayFeatureTemplateInterfaceArrayOutput `pulumi:"interfaces"`
@@ -47,7 +46,9 @@ type CiscoSecureInternetGatewayFeatureTemplate struct {
 	Trackers CiscoSecureInternetGatewayFeatureTemplateTrackerArrayOutput `pulumi:"trackers"`
 	// The version of the feature template
 	Version pulumi.IntOutput `pulumi:"version"`
-	// List of VPN instances - Range: `0`-`65527` - Default value: `0`
+	// List of VPN instances
+	//   - Range: `0`-`65527`
+	//   - Default value: `0`
 	VpnId pulumi.IntPtrOutput `pulumi:"vpnId"`
 }
 
@@ -89,9 +90,8 @@ func GetCiscoSecureInternetGatewayFeatureTemplate(ctx *pulumi.Context,
 type ciscoSecureInternetGatewayFeatureTemplateState struct {
 	// The description of the feature template
 	Description *string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
 	// Interface name: IPsec when present
 	Interfaces []CiscoSecureInternetGatewayFeatureTemplateInterface `pulumi:"interfaces"`
@@ -109,16 +109,17 @@ type ciscoSecureInternetGatewayFeatureTemplateState struct {
 	Trackers []CiscoSecureInternetGatewayFeatureTemplateTracker `pulumi:"trackers"`
 	// The version of the feature template
 	Version *int `pulumi:"version"`
-	// List of VPN instances - Range: `0`-`65527` - Default value: `0`
+	// List of VPN instances
+	//   - Range: `0`-`65527`
+	//   - Default value: `0`
 	VpnId *int `pulumi:"vpnId"`
 }
 
 type CiscoSecureInternetGatewayFeatureTemplateState struct {
 	// The description of the feature template
 	Description pulumi.StringPtrInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
 	// Interface name: IPsec when present
 	Interfaces CiscoSecureInternetGatewayFeatureTemplateInterfaceArrayInput
@@ -136,7 +137,9 @@ type CiscoSecureInternetGatewayFeatureTemplateState struct {
 	Trackers CiscoSecureInternetGatewayFeatureTemplateTrackerArrayInput
 	// The version of the feature template
 	Version pulumi.IntPtrInput
-	// List of VPN instances - Range: `0`-`65527` - Default value: `0`
+	// List of VPN instances
+	//   - Range: `0`-`65527`
+	//   - Default value: `0`
 	VpnId pulumi.IntPtrInput
 }
 
@@ -147,9 +150,8 @@ func (CiscoSecureInternetGatewayFeatureTemplateState) ElementType() reflect.Type
 type ciscoSecureInternetGatewayFeatureTemplateArgs struct {
 	// The description of the feature template
 	Description string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
 	// Interface name: IPsec when present
 	Interfaces []CiscoSecureInternetGatewayFeatureTemplateInterface `pulumi:"interfaces"`
@@ -163,7 +165,9 @@ type ciscoSecureInternetGatewayFeatureTemplateArgs struct {
 	TrackerSourceIpVariable *string `pulumi:"trackerSourceIpVariable"`
 	// Tracker configuration
 	Trackers []CiscoSecureInternetGatewayFeatureTemplateTracker `pulumi:"trackers"`
-	// List of VPN instances - Range: `0`-`65527` - Default value: `0`
+	// List of VPN instances
+	//   - Range: `0`-`65527`
+	//   - Default value: `0`
 	VpnId *int `pulumi:"vpnId"`
 }
 
@@ -171,9 +175,8 @@ type ciscoSecureInternetGatewayFeatureTemplateArgs struct {
 type CiscoSecureInternetGatewayFeatureTemplateArgs struct {
 	// The description of the feature template
 	Description pulumi.StringInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
 	// Interface name: IPsec when present
 	Interfaces CiscoSecureInternetGatewayFeatureTemplateInterfaceArrayInput
@@ -187,7 +190,9 @@ type CiscoSecureInternetGatewayFeatureTemplateArgs struct {
 	TrackerSourceIpVariable pulumi.StringPtrInput
 	// Tracker configuration
 	Trackers CiscoSecureInternetGatewayFeatureTemplateTrackerArrayInput
-	// List of VPN instances - Range: `0`-`65527` - Default value: `0`
+	// List of VPN instances
+	//   - Range: `0`-`65527`
+	//   - Default value: `0`
 	VpnId pulumi.IntPtrInput
 }
 
@@ -283,9 +288,8 @@ func (o CiscoSecureInternetGatewayFeatureTemplateOutput) Description() pulumi.St
 	return o.ApplyT(func(v *CiscoSecureInternetGatewayFeatureTemplate) pulumi.StringOutput { return v.Description }).(pulumi.StringOutput)
 }
 
-// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+// List of supported device types
+//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 func (o CiscoSecureInternetGatewayFeatureTemplateOutput) DeviceTypes() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *CiscoSecureInternetGatewayFeatureTemplate) pulumi.StringArrayOutput { return v.DeviceTypes }).(pulumi.StringArrayOutput)
 }
@@ -338,7 +342,9 @@ func (o CiscoSecureInternetGatewayFeatureTemplateOutput) Version() pulumi.IntOut
 	return o.ApplyT(func(v *CiscoSecureInternetGatewayFeatureTemplate) pulumi.IntOutput { return v.Version }).(pulumi.IntOutput)
 }
 
-// List of VPN instances - Range: `0`-`65527` - Default value: `0`
+// List of VPN instances
+//   - Range: `0`-`65527`
+//   - Default value: `0`
 func (o CiscoSecureInternetGatewayFeatureTemplateOutput) VpnId() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoSecureInternetGatewayFeatureTemplate) pulumi.IntPtrOutput { return v.VpnId }).(pulumi.IntPtrOutput)
 }

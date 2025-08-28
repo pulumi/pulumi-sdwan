@@ -33,13 +33,15 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.TransportRoutingOspfFeatureArea>> Areas { get; private set; } = null!;
 
         /// <summary>
-        /// Distribute default external route into OSPF - Default value: `false`
+        /// Distribute default external route into OSPF
+        ///   - Default value: `false`
         /// </summary>
         [Output("defaultInformationOriginate")]
         public Output<bool?> DefaultInformationOriginate { get; private set; } = null!;
 
         /// <summary>
-        /// Always advertise default route - Default value: `false`
+        /// Always advertise default route
+        ///   - Default value: `false`
         /// </summary>
         [Output("defaultInformationOriginateAlways")]
         public Output<bool?> DefaultInformationOriginateAlways { get; private set; } = null!;
@@ -51,13 +53,15 @@ namespace Pulumi.Sdwan
         public Output<string?> DefaultInformationOriginateAlwaysVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set metric used to generate default route &lt;0..16777214&gt; - Range: `0`-`16777214`
+        /// Set metric used to generate default route &lt;0..16777214&gt;
+        ///   - Range: `0`-`16777214`
         /// </summary>
         [Output("defaultInformationOriginateMetric")]
         public Output<int?> DefaultInformationOriginateMetric { get; private set; } = null!;
 
         /// <summary>
-        /// Set default route type - Choices: `type1`, `type2`
+        /// Set default route type
+        ///   - Choices: `type1`, `type2`
         /// </summary>
         [Output("defaultInformationOriginateMetricType")]
         public Output<string?> DefaultInformationOriginateMetricType { get; private set; } = null!;
@@ -81,7 +85,9 @@ namespace Pulumi.Sdwan
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// Set distance for external routes - Range: `1`-`255` - Default value: `110`
+        /// Set distance for external routes
+        ///   - Range: `1`-`255`
+        ///   - Default value: `110`
         /// </summary>
         [Output("distanceExternal")]
         public Output<int?> DistanceExternal { get; private set; } = null!;
@@ -93,7 +99,9 @@ namespace Pulumi.Sdwan
         public Output<string?> DistanceExternalVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set distance for inter-area routes - Range: `1`-`255` - Default value: `110`
+        /// Set distance for inter-area routes
+        ///   - Range: `1`-`255`
+        ///   - Default value: `110`
         /// </summary>
         [Output("distanceInterArea")]
         public Output<int?> DistanceInterArea { get; private set; } = null!;
@@ -105,7 +113,9 @@ namespace Pulumi.Sdwan
         public Output<string?> DistanceInterAreaVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set distance for intra-area routes - Range: `1`-`255` - Default value: `110`
+        /// Set distance for intra-area routes
+        ///   - Range: `1`-`255`
+        ///   - Default value: `110`
         /// </summary>
         [Output("distanceIntraArea")]
         public Output<int?> DistanceIntraArea { get; private set; } = null!;
@@ -135,7 +145,9 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.TransportRoutingOspfFeatureRedistribute>> Redistributes { get; private set; } = null!;
 
         /// <summary>
-        /// Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+        /// Set reference bandwidth method to assign OSPF cost
+        ///   - Range: `1`-`4294967`
+        ///   - Default value: `100`
         /// </summary>
         [Output("referenceBandwidth")]
         public Output<int?> ReferenceBandwidth { get; private set; } = null!;
@@ -147,7 +159,8 @@ namespace Pulumi.Sdwan
         public Output<string?> ReferenceBandwidthVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Calculate summary route cost based on RFC 1583 - Default value: `true`
+        /// Calculate summary route cost based on RFC 1583
+        ///   - Default value: `true`
         /// </summary>
         [Output("rfc1583Compatible")]
         public Output<bool?> Rfc1583Compatible { get; private set; } = null!;
@@ -180,7 +193,9 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.TransportRoutingOspfFeatureRouterLsa>> RouterLsas { get; private set; } = null!;
 
         /// <summary>
-        /// Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+        /// Set delay from first change received until performing SPF calculation
+        ///   - Range: `1`-`600000`
+        ///   - Default value: `200`
         /// </summary>
         [Output("spfCalculationDelay")]
         public Output<int?> SpfCalculationDelay { get; private set; } = null!;
@@ -192,7 +207,9 @@ namespace Pulumi.Sdwan
         public Output<string?> SpfCalculationDelayVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
+        /// Set initial hold time between consecutive SPF calculations
+        ///   - Range: `1`-`600000`
+        ///   - Default value: `1000`
         /// </summary>
         [Output("spfInitialHoldTime")]
         public Output<int?> SpfInitialHoldTime { get; private set; } = null!;
@@ -204,7 +221,9 @@ namespace Pulumi.Sdwan
         public Output<string?> SpfInitialHoldTimeVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+        /// Set maximum hold time between consecutive SPF calculations
+        ///   - Range: `1`-`600000`
+        ///   - Default value: `10000`
         /// </summary>
         [Output("spfMaximumHoldTime")]
         public Output<int?> SpfMaximumHoldTime { get; private set; } = null!;
@@ -280,13 +299,15 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Distribute default external route into OSPF - Default value: `false`
+        /// Distribute default external route into OSPF
+        ///   - Default value: `false`
         /// </summary>
         [Input("defaultInformationOriginate")]
         public Input<bool>? DefaultInformationOriginate { get; set; }
 
         /// <summary>
-        /// Always advertise default route - Default value: `false`
+        /// Always advertise default route
+        ///   - Default value: `false`
         /// </summary>
         [Input("defaultInformationOriginateAlways")]
         public Input<bool>? DefaultInformationOriginateAlways { get; set; }
@@ -298,13 +319,15 @@ namespace Pulumi.Sdwan
         public Input<string>? DefaultInformationOriginateAlwaysVariable { get; set; }
 
         /// <summary>
-        /// Set metric used to generate default route &lt;0..16777214&gt; - Range: `0`-`16777214`
+        /// Set metric used to generate default route &lt;0..16777214&gt;
+        ///   - Range: `0`-`16777214`
         /// </summary>
         [Input("defaultInformationOriginateMetric")]
         public Input<int>? DefaultInformationOriginateMetric { get; set; }
 
         /// <summary>
-        /// Set default route type - Choices: `type1`, `type2`
+        /// Set default route type
+        ///   - Choices: `type1`, `type2`
         /// </summary>
         [Input("defaultInformationOriginateMetricType")]
         public Input<string>? DefaultInformationOriginateMetricType { get; set; }
@@ -328,7 +351,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// Set distance for external routes - Range: `1`-`255` - Default value: `110`
+        /// Set distance for external routes
+        ///   - Range: `1`-`255`
+        ///   - Default value: `110`
         /// </summary>
         [Input("distanceExternal")]
         public Input<int>? DistanceExternal { get; set; }
@@ -340,7 +365,9 @@ namespace Pulumi.Sdwan
         public Input<string>? DistanceExternalVariable { get; set; }
 
         /// <summary>
-        /// Set distance for inter-area routes - Range: `1`-`255` - Default value: `110`
+        /// Set distance for inter-area routes
+        ///   - Range: `1`-`255`
+        ///   - Default value: `110`
         /// </summary>
         [Input("distanceInterArea")]
         public Input<int>? DistanceInterArea { get; set; }
@@ -352,7 +379,9 @@ namespace Pulumi.Sdwan
         public Input<string>? DistanceInterAreaVariable { get; set; }
 
         /// <summary>
-        /// Set distance for intra-area routes - Range: `1`-`255` - Default value: `110`
+        /// Set distance for intra-area routes
+        ///   - Range: `1`-`255`
+        ///   - Default value: `110`
         /// </summary>
         [Input("distanceIntraArea")]
         public Input<int>? DistanceIntraArea { get; set; }
@@ -388,7 +417,9 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+        /// Set reference bandwidth method to assign OSPF cost
+        ///   - Range: `1`-`4294967`
+        ///   - Default value: `100`
         /// </summary>
         [Input("referenceBandwidth")]
         public Input<int>? ReferenceBandwidth { get; set; }
@@ -400,7 +431,8 @@ namespace Pulumi.Sdwan
         public Input<string>? ReferenceBandwidthVariable { get; set; }
 
         /// <summary>
-        /// Calculate summary route cost based on RFC 1583 - Default value: `true`
+        /// Calculate summary route cost based on RFC 1583
+        ///   - Default value: `true`
         /// </summary>
         [Input("rfc1583Compatible")]
         public Input<bool>? Rfc1583Compatible { get; set; }
@@ -439,7 +471,9 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+        /// Set delay from first change received until performing SPF calculation
+        ///   - Range: `1`-`600000`
+        ///   - Default value: `200`
         /// </summary>
         [Input("spfCalculationDelay")]
         public Input<int>? SpfCalculationDelay { get; set; }
@@ -451,7 +485,9 @@ namespace Pulumi.Sdwan
         public Input<string>? SpfCalculationDelayVariable { get; set; }
 
         /// <summary>
-        /// Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
+        /// Set initial hold time between consecutive SPF calculations
+        ///   - Range: `1`-`600000`
+        ///   - Default value: `1000`
         /// </summary>
         [Input("spfInitialHoldTime")]
         public Input<int>? SpfInitialHoldTime { get; set; }
@@ -463,7 +499,9 @@ namespace Pulumi.Sdwan
         public Input<string>? SpfInitialHoldTimeVariable { get; set; }
 
         /// <summary>
-        /// Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+        /// Set maximum hold time between consecutive SPF calculations
+        ///   - Range: `1`-`600000`
+        ///   - Default value: `10000`
         /// </summary>
         [Input("spfMaximumHoldTime")]
         public Input<int>? SpfMaximumHoldTime { get; set; }
@@ -495,13 +533,15 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Distribute default external route into OSPF - Default value: `false`
+        /// Distribute default external route into OSPF
+        ///   - Default value: `false`
         /// </summary>
         [Input("defaultInformationOriginate")]
         public Input<bool>? DefaultInformationOriginate { get; set; }
 
         /// <summary>
-        /// Always advertise default route - Default value: `false`
+        /// Always advertise default route
+        ///   - Default value: `false`
         /// </summary>
         [Input("defaultInformationOriginateAlways")]
         public Input<bool>? DefaultInformationOriginateAlways { get; set; }
@@ -513,13 +553,15 @@ namespace Pulumi.Sdwan
         public Input<string>? DefaultInformationOriginateAlwaysVariable { get; set; }
 
         /// <summary>
-        /// Set metric used to generate default route &lt;0..16777214&gt; - Range: `0`-`16777214`
+        /// Set metric used to generate default route &lt;0..16777214&gt;
+        ///   - Range: `0`-`16777214`
         /// </summary>
         [Input("defaultInformationOriginateMetric")]
         public Input<int>? DefaultInformationOriginateMetric { get; set; }
 
         /// <summary>
-        /// Set default route type - Choices: `type1`, `type2`
+        /// Set default route type
+        ///   - Choices: `type1`, `type2`
         /// </summary>
         [Input("defaultInformationOriginateMetricType")]
         public Input<string>? DefaultInformationOriginateMetricType { get; set; }
@@ -543,7 +585,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// Set distance for external routes - Range: `1`-`255` - Default value: `110`
+        /// Set distance for external routes
+        ///   - Range: `1`-`255`
+        ///   - Default value: `110`
         /// </summary>
         [Input("distanceExternal")]
         public Input<int>? DistanceExternal { get; set; }
@@ -555,7 +599,9 @@ namespace Pulumi.Sdwan
         public Input<string>? DistanceExternalVariable { get; set; }
 
         /// <summary>
-        /// Set distance for inter-area routes - Range: `1`-`255` - Default value: `110`
+        /// Set distance for inter-area routes
+        ///   - Range: `1`-`255`
+        ///   - Default value: `110`
         /// </summary>
         [Input("distanceInterArea")]
         public Input<int>? DistanceInterArea { get; set; }
@@ -567,7 +613,9 @@ namespace Pulumi.Sdwan
         public Input<string>? DistanceInterAreaVariable { get; set; }
 
         /// <summary>
-        /// Set distance for intra-area routes - Range: `1`-`255` - Default value: `110`
+        /// Set distance for intra-area routes
+        ///   - Range: `1`-`255`
+        ///   - Default value: `110`
         /// </summary>
         [Input("distanceIntraArea")]
         public Input<int>? DistanceIntraArea { get; set; }
@@ -603,7 +651,9 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+        /// Set reference bandwidth method to assign OSPF cost
+        ///   - Range: `1`-`4294967`
+        ///   - Default value: `100`
         /// </summary>
         [Input("referenceBandwidth")]
         public Input<int>? ReferenceBandwidth { get; set; }
@@ -615,7 +665,8 @@ namespace Pulumi.Sdwan
         public Input<string>? ReferenceBandwidthVariable { get; set; }
 
         /// <summary>
-        /// Calculate summary route cost based on RFC 1583 - Default value: `true`
+        /// Calculate summary route cost based on RFC 1583
+        ///   - Default value: `true`
         /// </summary>
         [Input("rfc1583Compatible")]
         public Input<bool>? Rfc1583Compatible { get; set; }
@@ -654,7 +705,9 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+        /// Set delay from first change received until performing SPF calculation
+        ///   - Range: `1`-`600000`
+        ///   - Default value: `200`
         /// </summary>
         [Input("spfCalculationDelay")]
         public Input<int>? SpfCalculationDelay { get; set; }
@@ -666,7 +719,9 @@ namespace Pulumi.Sdwan
         public Input<string>? SpfCalculationDelayVariable { get; set; }
 
         /// <summary>
-        /// Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
+        /// Set initial hold time between consecutive SPF calculations
+        ///   - Range: `1`-`600000`
+        ///   - Default value: `1000`
         /// </summary>
         [Input("spfInitialHoldTime")]
         public Input<int>? SpfInitialHoldTime { get; set; }
@@ -678,7 +733,9 @@ namespace Pulumi.Sdwan
         public Input<string>? SpfInitialHoldTimeVariable { get; set; }
 
         /// <summary>
-        /// Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+        /// Set maximum hold time between consecutive SPF calculations
+        ///   - Range: `1`-`600000`
+        ///   - Default value: `10000`
         /// </summary>
         [Input("spfMaximumHoldTime")]
         public Input<int>? SpfMaximumHoldTime { get; set; }

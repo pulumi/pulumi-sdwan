@@ -72,7 +72,8 @@ namespace Pulumi.Sdwan
         public Output<string?> DestinationAddressVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Destination port - Range: `1`-`65535`
+        /// Destination port
+        ///   - Range: `1`-`65535`
         /// </summary>
         [Output("destinationPort")]
         public Output<int?> DestinationPort { get; private set; } = null!;
@@ -84,15 +85,15 @@ namespace Pulumi.Sdwan
         public Output<string?> DestinationPortVariable { get; private set; } = null!;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         [Output("deviceTypes")]
         public Output<ImmutableArray<string>> DeviceTypes { get; private set; } = null!;
 
         /// <summary>
-        /// Enable/disable GPS - Default value: `false`
+        /// Enable/disable GPS
+        ///   - Default value: `false`
         /// </summary>
         [Output("enable")]
         public Output<bool?> Enable { get; private set; } = null!;
@@ -104,7 +105,9 @@ namespace Pulumi.Sdwan
         public Output<string?> EnableVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+        /// Select GPS mode
+        ///   - Choices: `ms-based`, `standalone`
+        ///   - Default value: `ms-based`
         /// </summary>
         [Output("gpsMode")]
         public Output<string?> GpsMode { get; private set; } = null!;
@@ -122,7 +125,8 @@ namespace Pulumi.Sdwan
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// Enable/disable NMEA data - Default value: `false`
+        /// Enable/disable NMEA data
+        ///   - Default value: `false`
         /// </summary>
         [Output("nmea")]
         public Output<bool?> Nmea { get; private set; } = null!;
@@ -222,7 +226,8 @@ namespace Pulumi.Sdwan
         public Input<string>? DestinationAddressVariable { get; set; }
 
         /// <summary>
-        /// Destination port - Range: `1`-`65535`
+        /// Destination port
+        ///   - Range: `1`-`65535`
         /// </summary>
         [Input("destinationPort")]
         public Input<int>? DestinationPort { get; set; }
@@ -237,9 +242,8 @@ namespace Pulumi.Sdwan
         private InputList<string>? _deviceTypes;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         public InputList<string> DeviceTypes
         {
@@ -248,7 +252,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Enable/disable GPS - Default value: `false`
+        /// Enable/disable GPS
+        ///   - Default value: `false`
         /// </summary>
         [Input("enable")]
         public Input<bool>? Enable { get; set; }
@@ -260,7 +265,9 @@ namespace Pulumi.Sdwan
         public Input<string>? EnableVariable { get; set; }
 
         /// <summary>
-        /// Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+        /// Select GPS mode
+        ///   - Choices: `ms-based`, `standalone`
+        ///   - Default value: `ms-based`
         /// </summary>
         [Input("gpsMode")]
         public Input<string>? GpsMode { get; set; }
@@ -278,7 +285,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Enable/disable NMEA data - Default value: `false`
+        /// Enable/disable NMEA data
+        ///   - Default value: `false`
         /// </summary>
         [Input("nmea")]
         public Input<bool>? Nmea { get; set; }
@@ -328,7 +336,8 @@ namespace Pulumi.Sdwan
         public Input<string>? DestinationAddressVariable { get; set; }
 
         /// <summary>
-        /// Destination port - Range: `1`-`65535`
+        /// Destination port
+        ///   - Range: `1`-`65535`
         /// </summary>
         [Input("destinationPort")]
         public Input<int>? DestinationPort { get; set; }
@@ -343,9 +352,8 @@ namespace Pulumi.Sdwan
         private InputList<string>? _deviceTypes;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         public InputList<string> DeviceTypes
         {
@@ -354,7 +362,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Enable/disable GPS - Default value: `false`
+        /// Enable/disable GPS
+        ///   - Default value: `false`
         /// </summary>
         [Input("enable")]
         public Input<bool>? Enable { get; set; }
@@ -366,7 +375,9 @@ namespace Pulumi.Sdwan
         public Input<string>? EnableVariable { get; set; }
 
         /// <summary>
-        /// Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+        /// Select GPS mode
+        ///   - Choices: `ms-based`, `standalone`
+        ///   - Default value: `ms-based`
         /// </summary>
         [Input("gpsMode")]
         public Input<string>? GpsMode { get; set; }
@@ -384,7 +395,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Enable/disable NMEA data - Default value: `false`
+        /// Enable/disable NMEA data
+        ///   - Default value: `false`
         /// </summary>
         [Input("nmea")]
         public Input<bool>? Nmea { get; set; }

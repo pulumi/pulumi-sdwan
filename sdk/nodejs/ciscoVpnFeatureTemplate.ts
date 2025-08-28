@@ -49,145 +49,151 @@ export class CiscoVpnFeatureTemplate extends pulumi.CustomResource {
     /**
      * The description of the feature template
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    public readonly deviceTypes!: pulumi.Output<string[]>;
+    declare public readonly deviceTypes: pulumi.Output<string[]>;
     /**
      * Static DNS mapping
      */
-    public readonly dnsHosts!: pulumi.Output<outputs.CiscoVpnFeatureTemplateDnsHost[] | undefined>;
+    declare public readonly dnsHosts: pulumi.Output<outputs.CiscoVpnFeatureTemplateDnsHost[] | undefined>;
     /**
      * DNS
      */
-    public readonly dnsIpv4Servers!: pulumi.Output<outputs.CiscoVpnFeatureTemplateDnsIpv4Server[] | undefined>;
+    declare public readonly dnsIpv4Servers: pulumi.Output<outputs.CiscoVpnFeatureTemplateDnsIpv4Server[] | undefined>;
     /**
      * DNS
      */
-    public readonly dnsIpv6Servers!: pulumi.Output<outputs.CiscoVpnFeatureTemplateDnsIpv6Server[] | undefined>;
+    declare public readonly dnsIpv6Servers: pulumi.Output<outputs.CiscoVpnFeatureTemplateDnsIpv6Server[] | undefined>;
     /**
-     * Optional packet fields for ECMP keying - Default value: `false`
+     * Optional packet fields for ECMP keying
+     *   - Default value: `false`
      */
-    public readonly enhanceEcmpKeying!: pulumi.Output<boolean | undefined>;
+    declare public readonly enhanceEcmpKeying: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly enhanceEcmpKeyingVariable!: pulumi.Output<string | undefined>;
+    declare public readonly enhanceEcmpKeyingVariable: pulumi.Output<string | undefined>;
     /**
      * Configure routes pointing to a GRE tunnel
      */
-    public readonly ipv4StaticGreRoutes!: pulumi.Output<outputs.CiscoVpnFeatureTemplateIpv4StaticGreRoute[] | undefined>;
+    declare public readonly ipv4StaticGreRoutes: pulumi.Output<outputs.CiscoVpnFeatureTemplateIpv4StaticGreRoute[] | undefined>;
     /**
      * Configure routes pointing to a IPSEC tunnel
      */
-    public readonly ipv4StaticIpsecRoutes!: pulumi.Output<outputs.CiscoVpnFeatureTemplateIpv4StaticIpsecRoute[] | undefined>;
+    declare public readonly ipv4StaticIpsecRoutes: pulumi.Output<outputs.CiscoVpnFeatureTemplateIpv4StaticIpsecRoute[] | undefined>;
     /**
      * Configure IPv4 Static Routes
      */
-    public readonly ipv4StaticRoutes!: pulumi.Output<outputs.CiscoVpnFeatureTemplateIpv4StaticRoute[] | undefined>;
+    declare public readonly ipv4StaticRoutes: pulumi.Output<outputs.CiscoVpnFeatureTemplateIpv4StaticRoute[] | undefined>;
     /**
      * Configure IPv4 Static Service Routes
      */
-    public readonly ipv4StaticServiceRoutes!: pulumi.Output<outputs.CiscoVpnFeatureTemplateIpv4StaticServiceRoute[] | undefined>;
+    declare public readonly ipv4StaticServiceRoutes: pulumi.Output<outputs.CiscoVpnFeatureTemplateIpv4StaticServiceRoute[] | undefined>;
     /**
      * Configure IPv6 Static Routes
      */
-    public readonly ipv6StaticRoutes!: pulumi.Output<outputs.CiscoVpnFeatureTemplateIpv6StaticRoute[] | undefined>;
+    declare public readonly ipv6StaticRoutes: pulumi.Output<outputs.CiscoVpnFeatureTemplateIpv6StaticRoute[] | undefined>;
     /**
      * The name of the feature template
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * Set NAT64 v4 pool range
      */
-    public readonly nat64Pools!: pulumi.Output<outputs.CiscoVpnFeatureTemplateNat64Pool[] | undefined>;
+    declare public readonly nat64Pools: pulumi.Output<outputs.CiscoVpnFeatureTemplateNat64Pool[] | undefined>;
     /**
      * Configure NAT Pool entries
      */
-    public readonly natPools!: pulumi.Output<outputs.CiscoVpnFeatureTemplateNatPool[] | undefined>;
+    declare public readonly natPools: pulumi.Output<outputs.CiscoVpnFeatureTemplateNatPool[] | undefined>;
     /**
-     * omp-admin-distance-ipv4 - Range: `1`-`255`
+     * omp-admin-distance-ipv4
+     *   - Range: `1`-`255`
      */
-    public readonly ompAdminDistanceIpv4!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly ompAdminDistanceIpv4Variable!: pulumi.Output<string | undefined>;
-    /**
-     * omp-admin-distance-ipv6 - Range: `1`-`255`
-     */
-    public readonly ompAdminDistanceIpv6!: pulumi.Output<number | undefined>;
+    declare public readonly ompAdminDistanceIpv4: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly ompAdminDistanceIpv6Variable!: pulumi.Output<string | undefined>;
+    declare public readonly ompAdminDistanceIpv4Variable: pulumi.Output<string | undefined>;
+    /**
+     * omp-admin-distance-ipv6
+     *   - Range: `1`-`255`
+     */
+    declare public readonly ompAdminDistanceIpv6: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly ompAdminDistanceIpv6Variable: pulumi.Output<string | undefined>;
     /**
      * Advertise routes to OMP
      */
-    public readonly ompAdvertiseIpv4Routes!: pulumi.Output<outputs.CiscoVpnFeatureTemplateOmpAdvertiseIpv4Route[] | undefined>;
+    declare public readonly ompAdvertiseIpv4Routes: pulumi.Output<outputs.CiscoVpnFeatureTemplateOmpAdvertiseIpv4Route[] | undefined>;
     /**
      * Advertise routes to OMP
      */
-    public readonly ompAdvertiseIpv6Routes!: pulumi.Output<outputs.CiscoVpnFeatureTemplateOmpAdvertiseIpv6Route[] | undefined>;
+    declare public readonly ompAdvertiseIpv6Routes: pulumi.Output<outputs.CiscoVpnFeatureTemplateOmpAdvertiseIpv6Route[] | undefined>;
     /**
      * Org Name selected
      */
-    public readonly organizationName!: pulumi.Output<string | undefined>;
+    declare public readonly organizationName: pulumi.Output<string | undefined>;
     /**
      * Configure Port Forward entries
      */
-    public readonly portForwardRules!: pulumi.Output<outputs.CiscoVpnFeatureTemplatePortForwardRule[] | undefined>;
+    declare public readonly portForwardRules: pulumi.Output<outputs.CiscoVpnFeatureTemplatePortForwardRule[] | undefined>;
     /**
      * Enable route leaking to Global VPN from this Service VPN
      */
-    public readonly routeGlobalExports!: pulumi.Output<outputs.CiscoVpnFeatureTemplateRouteGlobalExport[] | undefined>;
+    declare public readonly routeGlobalExports: pulumi.Output<outputs.CiscoVpnFeatureTemplateRouteGlobalExport[] | undefined>;
     /**
      * Enable route leaking from Global VPN to this Service VPN
      */
-    public readonly routeGlobalImports!: pulumi.Output<outputs.CiscoVpnFeatureTemplateRouteGlobalImport[] | undefined>;
+    declare public readonly routeGlobalImports: pulumi.Output<outputs.CiscoVpnFeatureTemplateRouteGlobalImport[] | undefined>;
     /**
      * Enable route leak from Service VPN to current VPN
      */
-    public readonly routeVpnImports!: pulumi.Output<outputs.CiscoVpnFeatureTemplateRouteVpnImport[] | undefined>;
+    declare public readonly routeVpnImports: pulumi.Output<outputs.CiscoVpnFeatureTemplateRouteVpnImport[] | undefined>;
     /**
      * Configure services
      */
-    public readonly services!: pulumi.Output<outputs.CiscoVpnFeatureTemplateService[] | undefined>;
+    declare public readonly services: pulumi.Output<outputs.CiscoVpnFeatureTemplateService[] | undefined>;
     /**
      * Configure static NAT entries
      */
-    public readonly staticNatRules!: pulumi.Output<outputs.CiscoVpnFeatureTemplateStaticNatRule[] | undefined>;
+    declare public readonly staticNatRules: pulumi.Output<outputs.CiscoVpnFeatureTemplateStaticNatRule[] | undefined>;
     /**
      * Configure static NAT Subnet entries
      */
-    public readonly staticNatSubnetRules!: pulumi.Output<outputs.CiscoVpnFeatureTemplateStaticNatSubnetRule[] | undefined>;
+    declare public readonly staticNatSubnetRules: pulumi.Output<outputs.CiscoVpnFeatureTemplateStaticNatSubnetRule[] | undefined>;
     /**
      * The template type
      */
-    public /*out*/ readonly templateType!: pulumi.Output<string>;
+    declare public /*out*/ readonly templateType: pulumi.Output<string>;
     /**
-     * Tenant VPN - Range: `0`-`65527` - Default value: `0`
+     * Tenant VPN
+     *   - Range: `0`-`65527`
+     *   - Default value: `0`
      */
-    public readonly tenantVpnId!: pulumi.Output<number | undefined>;
+    declare public readonly tenantVpnId: pulumi.Output<number | undefined>;
     /**
      * The version of the feature template
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
     /**
-     * List of VPN instances - Range: `0`-`65527` - Default value: `0`
+     * List of VPN instances
+     *   - Range: `0`-`65527`
+     *   - Default value: `0`
      */
-    public readonly vpnId!: pulumi.Output<number | undefined>;
+    declare public readonly vpnId: pulumi.Output<number | undefined>;
     /**
      * Name
      */
-    public readonly vpnName!: pulumi.Output<string | undefined>;
+    declare public readonly vpnName: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly vpnNameVariable!: pulumi.Output<string | undefined>;
+    declare public readonly vpnNameVariable: pulumi.Output<string | undefined>;
 
     /**
      * Create a CiscoVpnFeatureTemplate resource with the given unique name, arguments, and options.
@@ -202,82 +208,82 @@ export class CiscoVpnFeatureTemplate extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as CiscoVpnFeatureTemplateState | undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["deviceTypes"] = state ? state.deviceTypes : undefined;
-            resourceInputs["dnsHosts"] = state ? state.dnsHosts : undefined;
-            resourceInputs["dnsIpv4Servers"] = state ? state.dnsIpv4Servers : undefined;
-            resourceInputs["dnsIpv6Servers"] = state ? state.dnsIpv6Servers : undefined;
-            resourceInputs["enhanceEcmpKeying"] = state ? state.enhanceEcmpKeying : undefined;
-            resourceInputs["enhanceEcmpKeyingVariable"] = state ? state.enhanceEcmpKeyingVariable : undefined;
-            resourceInputs["ipv4StaticGreRoutes"] = state ? state.ipv4StaticGreRoutes : undefined;
-            resourceInputs["ipv4StaticIpsecRoutes"] = state ? state.ipv4StaticIpsecRoutes : undefined;
-            resourceInputs["ipv4StaticRoutes"] = state ? state.ipv4StaticRoutes : undefined;
-            resourceInputs["ipv4StaticServiceRoutes"] = state ? state.ipv4StaticServiceRoutes : undefined;
-            resourceInputs["ipv6StaticRoutes"] = state ? state.ipv6StaticRoutes : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["nat64Pools"] = state ? state.nat64Pools : undefined;
-            resourceInputs["natPools"] = state ? state.natPools : undefined;
-            resourceInputs["ompAdminDistanceIpv4"] = state ? state.ompAdminDistanceIpv4 : undefined;
-            resourceInputs["ompAdminDistanceIpv4Variable"] = state ? state.ompAdminDistanceIpv4Variable : undefined;
-            resourceInputs["ompAdminDistanceIpv6"] = state ? state.ompAdminDistanceIpv6 : undefined;
-            resourceInputs["ompAdminDistanceIpv6Variable"] = state ? state.ompAdminDistanceIpv6Variable : undefined;
-            resourceInputs["ompAdvertiseIpv4Routes"] = state ? state.ompAdvertiseIpv4Routes : undefined;
-            resourceInputs["ompAdvertiseIpv6Routes"] = state ? state.ompAdvertiseIpv6Routes : undefined;
-            resourceInputs["organizationName"] = state ? state.organizationName : undefined;
-            resourceInputs["portForwardRules"] = state ? state.portForwardRules : undefined;
-            resourceInputs["routeGlobalExports"] = state ? state.routeGlobalExports : undefined;
-            resourceInputs["routeGlobalImports"] = state ? state.routeGlobalImports : undefined;
-            resourceInputs["routeVpnImports"] = state ? state.routeVpnImports : undefined;
-            resourceInputs["services"] = state ? state.services : undefined;
-            resourceInputs["staticNatRules"] = state ? state.staticNatRules : undefined;
-            resourceInputs["staticNatSubnetRules"] = state ? state.staticNatSubnetRules : undefined;
-            resourceInputs["templateType"] = state ? state.templateType : undefined;
-            resourceInputs["tenantVpnId"] = state ? state.tenantVpnId : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
-            resourceInputs["vpnId"] = state ? state.vpnId : undefined;
-            resourceInputs["vpnName"] = state ? state.vpnName : undefined;
-            resourceInputs["vpnNameVariable"] = state ? state.vpnNameVariable : undefined;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["deviceTypes"] = state?.deviceTypes;
+            resourceInputs["dnsHosts"] = state?.dnsHosts;
+            resourceInputs["dnsIpv4Servers"] = state?.dnsIpv4Servers;
+            resourceInputs["dnsIpv6Servers"] = state?.dnsIpv6Servers;
+            resourceInputs["enhanceEcmpKeying"] = state?.enhanceEcmpKeying;
+            resourceInputs["enhanceEcmpKeyingVariable"] = state?.enhanceEcmpKeyingVariable;
+            resourceInputs["ipv4StaticGreRoutes"] = state?.ipv4StaticGreRoutes;
+            resourceInputs["ipv4StaticIpsecRoutes"] = state?.ipv4StaticIpsecRoutes;
+            resourceInputs["ipv4StaticRoutes"] = state?.ipv4StaticRoutes;
+            resourceInputs["ipv4StaticServiceRoutes"] = state?.ipv4StaticServiceRoutes;
+            resourceInputs["ipv6StaticRoutes"] = state?.ipv6StaticRoutes;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["nat64Pools"] = state?.nat64Pools;
+            resourceInputs["natPools"] = state?.natPools;
+            resourceInputs["ompAdminDistanceIpv4"] = state?.ompAdminDistanceIpv4;
+            resourceInputs["ompAdminDistanceIpv4Variable"] = state?.ompAdminDistanceIpv4Variable;
+            resourceInputs["ompAdminDistanceIpv6"] = state?.ompAdminDistanceIpv6;
+            resourceInputs["ompAdminDistanceIpv6Variable"] = state?.ompAdminDistanceIpv6Variable;
+            resourceInputs["ompAdvertiseIpv4Routes"] = state?.ompAdvertiseIpv4Routes;
+            resourceInputs["ompAdvertiseIpv6Routes"] = state?.ompAdvertiseIpv6Routes;
+            resourceInputs["organizationName"] = state?.organizationName;
+            resourceInputs["portForwardRules"] = state?.portForwardRules;
+            resourceInputs["routeGlobalExports"] = state?.routeGlobalExports;
+            resourceInputs["routeGlobalImports"] = state?.routeGlobalImports;
+            resourceInputs["routeVpnImports"] = state?.routeVpnImports;
+            resourceInputs["services"] = state?.services;
+            resourceInputs["staticNatRules"] = state?.staticNatRules;
+            resourceInputs["staticNatSubnetRules"] = state?.staticNatSubnetRules;
+            resourceInputs["templateType"] = state?.templateType;
+            resourceInputs["tenantVpnId"] = state?.tenantVpnId;
+            resourceInputs["version"] = state?.version;
+            resourceInputs["vpnId"] = state?.vpnId;
+            resourceInputs["vpnName"] = state?.vpnName;
+            resourceInputs["vpnNameVariable"] = state?.vpnNameVariable;
         } else {
             const args = argsOrState as CiscoVpnFeatureTemplateArgs | undefined;
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            if ((!args || args.deviceTypes === undefined) && !opts.urn) {
+            if (args?.deviceTypes === undefined && !opts.urn) {
                 throw new Error("Missing required property 'deviceTypes'");
             }
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["deviceTypes"] = args ? args.deviceTypes : undefined;
-            resourceInputs["dnsHosts"] = args ? args.dnsHosts : undefined;
-            resourceInputs["dnsIpv4Servers"] = args ? args.dnsIpv4Servers : undefined;
-            resourceInputs["dnsIpv6Servers"] = args ? args.dnsIpv6Servers : undefined;
-            resourceInputs["enhanceEcmpKeying"] = args ? args.enhanceEcmpKeying : undefined;
-            resourceInputs["enhanceEcmpKeyingVariable"] = args ? args.enhanceEcmpKeyingVariable : undefined;
-            resourceInputs["ipv4StaticGreRoutes"] = args ? args.ipv4StaticGreRoutes : undefined;
-            resourceInputs["ipv4StaticIpsecRoutes"] = args ? args.ipv4StaticIpsecRoutes : undefined;
-            resourceInputs["ipv4StaticRoutes"] = args ? args.ipv4StaticRoutes : undefined;
-            resourceInputs["ipv4StaticServiceRoutes"] = args ? args.ipv4StaticServiceRoutes : undefined;
-            resourceInputs["ipv6StaticRoutes"] = args ? args.ipv6StaticRoutes : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["nat64Pools"] = args ? args.nat64Pools : undefined;
-            resourceInputs["natPools"] = args ? args.natPools : undefined;
-            resourceInputs["ompAdminDistanceIpv4"] = args ? args.ompAdminDistanceIpv4 : undefined;
-            resourceInputs["ompAdminDistanceIpv4Variable"] = args ? args.ompAdminDistanceIpv4Variable : undefined;
-            resourceInputs["ompAdminDistanceIpv6"] = args ? args.ompAdminDistanceIpv6 : undefined;
-            resourceInputs["ompAdminDistanceIpv6Variable"] = args ? args.ompAdminDistanceIpv6Variable : undefined;
-            resourceInputs["ompAdvertiseIpv4Routes"] = args ? args.ompAdvertiseIpv4Routes : undefined;
-            resourceInputs["ompAdvertiseIpv6Routes"] = args ? args.ompAdvertiseIpv6Routes : undefined;
-            resourceInputs["organizationName"] = args ? args.organizationName : undefined;
-            resourceInputs["portForwardRules"] = args ? args.portForwardRules : undefined;
-            resourceInputs["routeGlobalExports"] = args ? args.routeGlobalExports : undefined;
-            resourceInputs["routeGlobalImports"] = args ? args.routeGlobalImports : undefined;
-            resourceInputs["routeVpnImports"] = args ? args.routeVpnImports : undefined;
-            resourceInputs["services"] = args ? args.services : undefined;
-            resourceInputs["staticNatRules"] = args ? args.staticNatRules : undefined;
-            resourceInputs["staticNatSubnetRules"] = args ? args.staticNatSubnetRules : undefined;
-            resourceInputs["tenantVpnId"] = args ? args.tenantVpnId : undefined;
-            resourceInputs["vpnId"] = args ? args.vpnId : undefined;
-            resourceInputs["vpnName"] = args ? args.vpnName : undefined;
-            resourceInputs["vpnNameVariable"] = args ? args.vpnNameVariable : undefined;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["deviceTypes"] = args?.deviceTypes;
+            resourceInputs["dnsHosts"] = args?.dnsHosts;
+            resourceInputs["dnsIpv4Servers"] = args?.dnsIpv4Servers;
+            resourceInputs["dnsIpv6Servers"] = args?.dnsIpv6Servers;
+            resourceInputs["enhanceEcmpKeying"] = args?.enhanceEcmpKeying;
+            resourceInputs["enhanceEcmpKeyingVariable"] = args?.enhanceEcmpKeyingVariable;
+            resourceInputs["ipv4StaticGreRoutes"] = args?.ipv4StaticGreRoutes;
+            resourceInputs["ipv4StaticIpsecRoutes"] = args?.ipv4StaticIpsecRoutes;
+            resourceInputs["ipv4StaticRoutes"] = args?.ipv4StaticRoutes;
+            resourceInputs["ipv4StaticServiceRoutes"] = args?.ipv4StaticServiceRoutes;
+            resourceInputs["ipv6StaticRoutes"] = args?.ipv6StaticRoutes;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["nat64Pools"] = args?.nat64Pools;
+            resourceInputs["natPools"] = args?.natPools;
+            resourceInputs["ompAdminDistanceIpv4"] = args?.ompAdminDistanceIpv4;
+            resourceInputs["ompAdminDistanceIpv4Variable"] = args?.ompAdminDistanceIpv4Variable;
+            resourceInputs["ompAdminDistanceIpv6"] = args?.ompAdminDistanceIpv6;
+            resourceInputs["ompAdminDistanceIpv6Variable"] = args?.ompAdminDistanceIpv6Variable;
+            resourceInputs["ompAdvertiseIpv4Routes"] = args?.ompAdvertiseIpv4Routes;
+            resourceInputs["ompAdvertiseIpv6Routes"] = args?.ompAdvertiseIpv6Routes;
+            resourceInputs["organizationName"] = args?.organizationName;
+            resourceInputs["portForwardRules"] = args?.portForwardRules;
+            resourceInputs["routeGlobalExports"] = args?.routeGlobalExports;
+            resourceInputs["routeGlobalImports"] = args?.routeGlobalImports;
+            resourceInputs["routeVpnImports"] = args?.routeVpnImports;
+            resourceInputs["services"] = args?.services;
+            resourceInputs["staticNatRules"] = args?.staticNatRules;
+            resourceInputs["staticNatSubnetRules"] = args?.staticNatSubnetRules;
+            resourceInputs["tenantVpnId"] = args?.tenantVpnId;
+            resourceInputs["vpnId"] = args?.vpnId;
+            resourceInputs["vpnName"] = args?.vpnName;
+            resourceInputs["vpnNameVariable"] = args?.vpnNameVariable;
             resourceInputs["templateType"] = undefined /*out*/;
             resourceInputs["version"] = undefined /*out*/;
         }
@@ -295,9 +301,8 @@ export interface CiscoVpnFeatureTemplateState {
      */
     description?: pulumi.Input<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
     deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
     /**
@@ -313,7 +318,8 @@ export interface CiscoVpnFeatureTemplateState {
      */
     dnsIpv6Servers?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateDnsIpv6Server>[]>;
     /**
-     * Optional packet fields for ECMP keying - Default value: `false`
+     * Optional packet fields for ECMP keying
+     *   - Default value: `false`
      */
     enhanceEcmpKeying?: pulumi.Input<boolean>;
     /**
@@ -353,7 +359,8 @@ export interface CiscoVpnFeatureTemplateState {
      */
     natPools?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateNatPool>[]>;
     /**
-     * omp-admin-distance-ipv4 - Range: `1`-`255`
+     * omp-admin-distance-ipv4
+     *   - Range: `1`-`255`
      */
     ompAdminDistanceIpv4?: pulumi.Input<number>;
     /**
@@ -361,7 +368,8 @@ export interface CiscoVpnFeatureTemplateState {
      */
     ompAdminDistanceIpv4Variable?: pulumi.Input<string>;
     /**
-     * omp-admin-distance-ipv6 - Range: `1`-`255`
+     * omp-admin-distance-ipv6
+     *   - Range: `1`-`255`
      */
     ompAdminDistanceIpv6?: pulumi.Input<number>;
     /**
@@ -413,7 +421,9 @@ export interface CiscoVpnFeatureTemplateState {
      */
     templateType?: pulumi.Input<string>;
     /**
-     * Tenant VPN - Range: `0`-`65527` - Default value: `0`
+     * Tenant VPN
+     *   - Range: `0`-`65527`
+     *   - Default value: `0`
      */
     tenantVpnId?: pulumi.Input<number>;
     /**
@@ -421,7 +431,9 @@ export interface CiscoVpnFeatureTemplateState {
      */
     version?: pulumi.Input<number>;
     /**
-     * List of VPN instances - Range: `0`-`65527` - Default value: `0`
+     * List of VPN instances
+     *   - Range: `0`-`65527`
+     *   - Default value: `0`
      */
     vpnId?: pulumi.Input<number>;
     /**
@@ -443,9 +455,8 @@ export interface CiscoVpnFeatureTemplateArgs {
      */
     description: pulumi.Input<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
     deviceTypes: pulumi.Input<pulumi.Input<string>[]>;
     /**
@@ -461,7 +472,8 @@ export interface CiscoVpnFeatureTemplateArgs {
      */
     dnsIpv6Servers?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateDnsIpv6Server>[]>;
     /**
-     * Optional packet fields for ECMP keying - Default value: `false`
+     * Optional packet fields for ECMP keying
+     *   - Default value: `false`
      */
     enhanceEcmpKeying?: pulumi.Input<boolean>;
     /**
@@ -501,7 +513,8 @@ export interface CiscoVpnFeatureTemplateArgs {
      */
     natPools?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateNatPool>[]>;
     /**
-     * omp-admin-distance-ipv4 - Range: `1`-`255`
+     * omp-admin-distance-ipv4
+     *   - Range: `1`-`255`
      */
     ompAdminDistanceIpv4?: pulumi.Input<number>;
     /**
@@ -509,7 +522,8 @@ export interface CiscoVpnFeatureTemplateArgs {
      */
     ompAdminDistanceIpv4Variable?: pulumi.Input<string>;
     /**
-     * omp-admin-distance-ipv6 - Range: `1`-`255`
+     * omp-admin-distance-ipv6
+     *   - Range: `1`-`255`
      */
     ompAdminDistanceIpv6?: pulumi.Input<number>;
     /**
@@ -557,11 +571,15 @@ export interface CiscoVpnFeatureTemplateArgs {
      */
     staticNatSubnetRules?: pulumi.Input<pulumi.Input<inputs.CiscoVpnFeatureTemplateStaticNatSubnetRule>[]>;
     /**
-     * Tenant VPN - Range: `0`-`65527` - Default value: `0`
+     * Tenant VPN
+     *   - Range: `0`-`65527`
+     *   - Default value: `0`
      */
     tenantVpnId?: pulumi.Input<number>;
     /**
-     * List of VPN instances - Range: `0`-`65527` - Default value: `0`
+     * List of VPN instances
+     *   - Range: `0`-`65527`
+     *   - Default value: `0`
      */
     vpnId?: pulumi.Input<number>;
     /**

@@ -210,42 +210,48 @@ public class LocalizedPolicy extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.implicitAclLogging);
     }
     /**
-     * IPv4 visibility cache entries - Range: `16`-`2000000`
+     * IPv4 visibility cache entries
+     *   - Range: `16`-`2000000`
      * 
      */
     @Export(name="ipv4VisibilityCacheEntries", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipv4VisibilityCacheEntries;
 
     /**
-     * @return IPv4 visibility cache entries - Range: `16`-`2000000`
+     * @return IPv4 visibility cache entries
+     *   - Range: `16`-`2000000`
      * 
      */
     public Output<Optional<Integer>> ipv4VisibilityCacheEntries() {
         return Codegen.optional(this.ipv4VisibilityCacheEntries);
     }
     /**
-     * IPv6 visibility cache entries - Range: `16`-`2000000`
+     * IPv6 visibility cache entries
+     *   - Range: `16`-`2000000`
      * 
      */
     @Export(name="ipv6VisibilityCacheEntries", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipv6VisibilityCacheEntries;
 
     /**
-     * @return IPv6 visibility cache entries - Range: `16`-`2000000`
+     * @return IPv6 visibility cache entries
+     *   - Range: `16`-`2000000`
      * 
      */
     public Output<Optional<Integer>> ipv6VisibilityCacheEntries() {
         return Codegen.optional(this.ipv6VisibilityCacheEntries);
     }
     /**
-     * Log frequency - Range: `1`-`2147483647`
+     * Log frequency
+     *   - Range: `1`-`2147483647`
      * 
      */
     @Export(name="logFrequency", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> logFrequency;
 
     /**
-     * @return Log frequency - Range: `1`-`2147483647`
+     * @return Log frequency
+     *   - Range: `1`-`2147483647`
      * 
      */
     public Output<Optional<Integer>> logFrequency() {

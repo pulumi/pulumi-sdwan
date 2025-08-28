@@ -87,32 +87,32 @@ public class CedgeMulticastFeatureTemplate extends com.pulumi.resources.CustomRe
         return this.description;
     }
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Export(name="deviceTypes", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Output<List<String>> deviceTypes() {
         return this.deviceTypes;
     }
     /**
-     * Replicator is local to this device - Default value: `false`
+     * Replicator is local to this device
+     *   - Default value: `false`
      * 
      */
     @Export(name="localReplicator", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> localReplicator;
 
     /**
-     * @return Replicator is local to this device - Default value: `false`
+     * @return Replicator is local to this device
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> localReplicator() {
@@ -147,14 +147,16 @@ public class CedgeMulticastFeatureTemplate extends com.pulumi.resources.CustomRe
         return this.name;
     }
     /**
-     * Shortest Path Tree (SPT) Only Mode - Default value: `false`
+     * Shortest Path Tree (SPT) Only Mode
+     *   - Default value: `false`
      * 
      */
     @Export(name="sptOnly", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> sptOnly;
 
     /**
-     * @return Shortest Path Tree (SPT) Only Mode - Default value: `false`
+     * @return Shortest Path Tree (SPT) Only Mode
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> sptOnly() {
@@ -189,14 +191,16 @@ public class CedgeMulticastFeatureTemplate extends com.pulumi.resources.CustomRe
         return this.templateType;
     }
     /**
-     * Set number of joins per group the router supports - Range: `0`-`1000`
+     * Set number of joins per group the router supports
+     *   - Range: `0`-`1000`
      * 
      */
     @Export(name="threshold", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> threshold;
 
     /**
-     * @return Set number of joins per group the router supports - Range: `0`-`1000`
+     * @return Set number of joins per group the router supports
+     *   - Range: `0`-`1000`
      * 
      */
     public Output<Optional<Integer>> threshold() {

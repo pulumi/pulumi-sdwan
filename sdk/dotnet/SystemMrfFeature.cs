@@ -58,7 +58,8 @@ namespace Pulumi.Sdwan
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
+        /// Enable migration mode to Multi-Region Fabric
+        ///   - Choices: `enabled`, `enabled-from-bgp-core`
         /// </summary>
         [Output("enableMigrationToMrf")]
         public Output<string?> EnableMigrationToMrf { get; private set; } = null!;
@@ -70,7 +71,8 @@ namespace Pulumi.Sdwan
         public Output<string> FeatureProfileId { get; private set; } = null!;
 
         /// <summary>
-        /// Set BGP community during migration from BGP-core based network - Range: `1`-`4294967295`
+        /// Set BGP community during migration from BGP-core based network
+        ///   - Range: `1`-`4294967295`
         /// </summary>
         [Output("migrationBgpCommunity")]
         public Output<int?> MigrationBgpCommunity { get; private set; } = null!;
@@ -82,13 +84,15 @@ namespace Pulumi.Sdwan
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// Set region ID - Range: `1`-`63`
+        /// Set region ID
+        ///   - Range: `1`-`63`
         /// </summary>
         [Output("regionId")]
         public Output<int?> RegionId { get; private set; } = null!;
 
         /// <summary>
-        /// Set the role for router - Choices: `edge-router`, `border-router`
+        /// Set the role for router
+        ///   - Choices: `edge-router`, `border-router`
         /// </summary>
         [Output("role")]
         public Output<string?> Role { get; private set; } = null!;
@@ -100,7 +104,8 @@ namespace Pulumi.Sdwan
         public Output<string?> RoleVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set secondary region ID - Range: `1`-`63`
+        /// Set secondary region ID
+        ///   - Range: `1`-`63`
         /// </summary>
         [Output("secondaryRegionId")]
         public Output<int?> SecondaryRegionId { get; private set; } = null!;
@@ -170,7 +175,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
+        /// Enable migration mode to Multi-Region Fabric
+        ///   - Choices: `enabled`, `enabled-from-bgp-core`
         /// </summary>
         [Input("enableMigrationToMrf")]
         public Input<string>? EnableMigrationToMrf { get; set; }
@@ -182,7 +188,8 @@ namespace Pulumi.Sdwan
         public Input<string> FeatureProfileId { get; set; } = null!;
 
         /// <summary>
-        /// Set BGP community during migration from BGP-core based network - Range: `1`-`4294967295`
+        /// Set BGP community during migration from BGP-core based network
+        ///   - Range: `1`-`4294967295`
         /// </summary>
         [Input("migrationBgpCommunity")]
         public Input<int>? MigrationBgpCommunity { get; set; }
@@ -194,13 +201,15 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Set region ID - Range: `1`-`63`
+        /// Set region ID
+        ///   - Range: `1`-`63`
         /// </summary>
         [Input("regionId")]
         public Input<int>? RegionId { get; set; }
 
         /// <summary>
-        /// Set the role for router - Choices: `edge-router`, `border-router`
+        /// Set the role for router
+        ///   - Choices: `edge-router`, `border-router`
         /// </summary>
         [Input("role")]
         public Input<string>? Role { get; set; }
@@ -212,7 +221,8 @@ namespace Pulumi.Sdwan
         public Input<string>? RoleVariable { get; set; }
 
         /// <summary>
-        /// Set secondary region ID - Range: `1`-`63`
+        /// Set secondary region ID
+        ///   - Range: `1`-`63`
         /// </summary>
         [Input("secondaryRegionId")]
         public Input<int>? SecondaryRegionId { get; set; }
@@ -238,7 +248,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
+        /// Enable migration mode to Multi-Region Fabric
+        ///   - Choices: `enabled`, `enabled-from-bgp-core`
         /// </summary>
         [Input("enableMigrationToMrf")]
         public Input<string>? EnableMigrationToMrf { get; set; }
@@ -250,7 +261,8 @@ namespace Pulumi.Sdwan
         public Input<string>? FeatureProfileId { get; set; }
 
         /// <summary>
-        /// Set BGP community during migration from BGP-core based network - Range: `1`-`4294967295`
+        /// Set BGP community during migration from BGP-core based network
+        ///   - Range: `1`-`4294967295`
         /// </summary>
         [Input("migrationBgpCommunity")]
         public Input<int>? MigrationBgpCommunity { get; set; }
@@ -262,13 +274,15 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Set region ID - Range: `1`-`63`
+        /// Set region ID
+        ///   - Range: `1`-`63`
         /// </summary>
         [Input("regionId")]
         public Input<int>? RegionId { get; set; }
 
         /// <summary>
-        /// Set the role for router - Choices: `edge-router`, `border-router`
+        /// Set the role for router
+        ///   - Choices: `edge-router`, `border-router`
         /// </summary>
         [Input("role")]
         public Input<string>? Role { get; set; }
@@ -280,7 +294,8 @@ namespace Pulumi.Sdwan
         public Input<string>? RoleVariable { get; set; }
 
         /// <summary>
-        /// Set secondary region ID - Range: `1`-`63`
+        /// Set secondary region ID
+        ///   - Range: `1`-`63`
         /// </summary>
         [Input("secondaryRegionId")]
         public Input<int>? SecondaryRegionId { get; set; }

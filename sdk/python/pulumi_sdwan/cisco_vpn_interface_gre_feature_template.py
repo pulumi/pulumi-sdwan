@@ -56,29 +56,34 @@ class CiscoVpnInterfaceGreFeatureTemplateArgs:
         """
         The set of arguments for constructing a CiscoVpnInterfaceGreFeatureTemplate resource.
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[Sequence[pulumi.Input['CiscoVpnInterfaceGreFeatureTemplateAccessListArgs']]] access_lists: Apply ACL
-        :param pulumi.Input[_builtins.str] application: Enable Application Tunnel Type - Choices: `none`, `sig` - Default value: `none`
+        :param pulumi.Input[_builtins.str] application: Enable Application Tunnel Type
+                 - Choices: `none`, `sig`
+                 - Default value: `none`
         :param pulumi.Input[_builtins.str] application_variable: Variable name
-        :param pulumi.Input[_builtins.bool] clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        :param pulumi.Input[_builtins.bool] clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] clear_dont_fragment_variable: Variable name
         :param pulumi.Input[_builtins.str] interface_description: Interface description
         :param pulumi.Input[_builtins.str] interface_description_variable: Variable name
-        :param pulumi.Input[_builtins.str] interface_name: Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when
-               present
+        :param pulumi.Input[_builtins.str] interface_name: Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when present
         :param pulumi.Input[_builtins.str] interface_name_variable: Variable name
         :param pulumi.Input[_builtins.str] ip_address: Assign IPv4 address
         :param pulumi.Input[_builtins.str] ip_address_variable: Variable name
-        :param pulumi.Input[_builtins.int] ip_mtu: Interface MTU <576..2000>, in bytes - Range: `64`-`18000` - Default value: `1500`
+        :param pulumi.Input[_builtins.int] ip_mtu: Interface MTU <576..2000>, in bytes
+                 - Range: `64`-`18000`
+                 - Default value: `1500`
         :param pulumi.Input[_builtins.str] ip_mtu_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[_builtins.str] rewrite_rule: Name of rewrite rule
         :param pulumi.Input[_builtins.str] rewrite_rule_variable: Variable name
-        :param pulumi.Input[_builtins.bool] shutdown: Administrative state - Default value: `true`
+        :param pulumi.Input[_builtins.bool] shutdown: Administrative state
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
-        :param pulumi.Input[_builtins.int] tcp_mss_adjust: TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        :param pulumi.Input[_builtins.int] tcp_mss_adjust: TCP MSS on SYN packets, in bytes
+                 - Range: `500`-`1460`
         :param pulumi.Input[_builtins.str] tcp_mss_adjust_variable: Variable name
         :param pulumi.Input[_builtins.str] tracker_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] trackers: Enable tracker for this interface
@@ -170,9 +175,8 @@ class CiscoVpnInterfaceGreFeatureTemplateArgs:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -196,7 +200,9 @@ class CiscoVpnInterfaceGreFeatureTemplateArgs:
     @pulumi.getter
     def application(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Enable Application Tunnel Type - Choices: `none`, `sig` - Default value: `none`
+        Enable Application Tunnel Type
+          - Choices: `none`, `sig`
+          - Default value: `none`
         """
         return pulumi.get(self, "application")
 
@@ -220,7 +226,8 @@ class CiscoVpnInterfaceGreFeatureTemplateArgs:
     @pulumi.getter(name="clearDontFragment")
     def clear_dont_fragment(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+          - Default value: `false`
         """
         return pulumi.get(self, "clear_dont_fragment")
 
@@ -268,8 +275,7 @@ class CiscoVpnInterfaceGreFeatureTemplateArgs:
     @pulumi.getter(name="interfaceName")
     def interface_name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when
-        present
+        Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when present
         """
         return pulumi.get(self, "interface_name")
 
@@ -317,7 +323,9 @@ class CiscoVpnInterfaceGreFeatureTemplateArgs:
     @pulumi.getter(name="ipMtu")
     def ip_mtu(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Interface MTU <576..2000>, in bytes - Range: `64`-`18000` - Default value: `1500`
+        Interface MTU <576..2000>, in bytes
+          - Range: `64`-`18000`
+          - Default value: `1500`
         """
         return pulumi.get(self, "ip_mtu")
 
@@ -377,7 +385,8 @@ class CiscoVpnInterfaceGreFeatureTemplateArgs:
     @pulumi.getter
     def shutdown(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Administrative state - Default value: `true`
+        Administrative state
+          - Default value: `true`
         """
         return pulumi.get(self, "shutdown")
 
@@ -401,7 +410,8 @@ class CiscoVpnInterfaceGreFeatureTemplateArgs:
     @pulumi.getter(name="tcpMssAdjust")
     def tcp_mss_adjust(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        TCP MSS on SYN packets, in bytes
+          - Range: `500`-`1460`
         """
         return pulumi.get(self, "tcp_mss_adjust")
 
@@ -582,29 +592,34 @@ class _CiscoVpnInterfaceGreFeatureTemplateState:
         """
         Input properties used for looking up and filtering CiscoVpnInterfaceGreFeatureTemplate resources.
         :param pulumi.Input[Sequence[pulumi.Input['CiscoVpnInterfaceGreFeatureTemplateAccessListArgs']]] access_lists: Apply ACL
-        :param pulumi.Input[_builtins.str] application: Enable Application Tunnel Type - Choices: `none`, `sig` - Default value: `none`
+        :param pulumi.Input[_builtins.str] application: Enable Application Tunnel Type
+                 - Choices: `none`, `sig`
+                 - Default value: `none`
         :param pulumi.Input[_builtins.str] application_variable: Variable name
-        :param pulumi.Input[_builtins.bool] clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        :param pulumi.Input[_builtins.bool] clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] clear_dont_fragment_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[_builtins.str] interface_description: Interface description
         :param pulumi.Input[_builtins.str] interface_description_variable: Variable name
-        :param pulumi.Input[_builtins.str] interface_name: Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when
-               present
+        :param pulumi.Input[_builtins.str] interface_name: Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when present
         :param pulumi.Input[_builtins.str] interface_name_variable: Variable name
         :param pulumi.Input[_builtins.str] ip_address: Assign IPv4 address
         :param pulumi.Input[_builtins.str] ip_address_variable: Variable name
-        :param pulumi.Input[_builtins.int] ip_mtu: Interface MTU <576..2000>, in bytes - Range: `64`-`18000` - Default value: `1500`
+        :param pulumi.Input[_builtins.int] ip_mtu: Interface MTU <576..2000>, in bytes
+                 - Range: `64`-`18000`
+                 - Default value: `1500`
         :param pulumi.Input[_builtins.str] ip_mtu_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[_builtins.str] rewrite_rule: Name of rewrite rule
         :param pulumi.Input[_builtins.str] rewrite_rule_variable: Variable name
-        :param pulumi.Input[_builtins.bool] shutdown: Administrative state - Default value: `true`
+        :param pulumi.Input[_builtins.bool] shutdown: Administrative state
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
-        :param pulumi.Input[_builtins.int] tcp_mss_adjust: TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        :param pulumi.Input[_builtins.int] tcp_mss_adjust: TCP MSS on SYN packets, in bytes
+                 - Range: `500`-`1460`
         :param pulumi.Input[_builtins.str] tcp_mss_adjust_variable: Variable name
         :param pulumi.Input[_builtins.str] template_type: The template type
         :param pulumi.Input[_builtins.str] tracker_variable: Variable name
@@ -704,7 +719,9 @@ class _CiscoVpnInterfaceGreFeatureTemplateState:
     @pulumi.getter
     def application(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Enable Application Tunnel Type - Choices: `none`, `sig` - Default value: `none`
+        Enable Application Tunnel Type
+          - Choices: `none`, `sig`
+          - Default value: `none`
         """
         return pulumi.get(self, "application")
 
@@ -728,7 +745,8 @@ class _CiscoVpnInterfaceGreFeatureTemplateState:
     @pulumi.getter(name="clearDontFragment")
     def clear_dont_fragment(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+          - Default value: `false`
         """
         return pulumi.get(self, "clear_dont_fragment")
 
@@ -764,9 +782,8 @@ class _CiscoVpnInterfaceGreFeatureTemplateState:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -802,8 +819,7 @@ class _CiscoVpnInterfaceGreFeatureTemplateState:
     @pulumi.getter(name="interfaceName")
     def interface_name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when
-        present
+        Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when present
         """
         return pulumi.get(self, "interface_name")
 
@@ -851,7 +867,9 @@ class _CiscoVpnInterfaceGreFeatureTemplateState:
     @pulumi.getter(name="ipMtu")
     def ip_mtu(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Interface MTU <576..2000>, in bytes - Range: `64`-`18000` - Default value: `1500`
+        Interface MTU <576..2000>, in bytes
+          - Range: `64`-`18000`
+          - Default value: `1500`
         """
         return pulumi.get(self, "ip_mtu")
 
@@ -911,7 +929,8 @@ class _CiscoVpnInterfaceGreFeatureTemplateState:
     @pulumi.getter
     def shutdown(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Administrative state - Default value: `true`
+        Administrative state
+          - Default value: `true`
         """
         return pulumi.get(self, "shutdown")
 
@@ -935,7 +954,8 @@ class _CiscoVpnInterfaceGreFeatureTemplateState:
     @pulumi.getter(name="tcpMssAdjust")
     def tcp_mss_adjust(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        TCP MSS on SYN packets, in bytes
+          - Range: `500`-`1460`
         """
         return pulumi.get(self, "tcp_mss_adjust")
 
@@ -1154,29 +1174,34 @@ class CiscoVpnInterfaceGreFeatureTemplate(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceGreFeatureTemplateAccessListArgs', 'CiscoVpnInterfaceGreFeatureTemplateAccessListArgsDict']]]] access_lists: Apply ACL
-        :param pulumi.Input[_builtins.str] application: Enable Application Tunnel Type - Choices: `none`, `sig` - Default value: `none`
+        :param pulumi.Input[_builtins.str] application: Enable Application Tunnel Type
+                 - Choices: `none`, `sig`
+                 - Default value: `none`
         :param pulumi.Input[_builtins.str] application_variable: Variable name
-        :param pulumi.Input[_builtins.bool] clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        :param pulumi.Input[_builtins.bool] clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] clear_dont_fragment_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[_builtins.str] interface_description: Interface description
         :param pulumi.Input[_builtins.str] interface_description_variable: Variable name
-        :param pulumi.Input[_builtins.str] interface_name: Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when
-               present
+        :param pulumi.Input[_builtins.str] interface_name: Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when present
         :param pulumi.Input[_builtins.str] interface_name_variable: Variable name
         :param pulumi.Input[_builtins.str] ip_address: Assign IPv4 address
         :param pulumi.Input[_builtins.str] ip_address_variable: Variable name
-        :param pulumi.Input[_builtins.int] ip_mtu: Interface MTU <576..2000>, in bytes - Range: `64`-`18000` - Default value: `1500`
+        :param pulumi.Input[_builtins.int] ip_mtu: Interface MTU <576..2000>, in bytes
+                 - Range: `64`-`18000`
+                 - Default value: `1500`
         :param pulumi.Input[_builtins.str] ip_mtu_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[_builtins.str] rewrite_rule: Name of rewrite rule
         :param pulumi.Input[_builtins.str] rewrite_rule_variable: Variable name
-        :param pulumi.Input[_builtins.bool] shutdown: Administrative state - Default value: `true`
+        :param pulumi.Input[_builtins.bool] shutdown: Administrative state
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
-        :param pulumi.Input[_builtins.int] tcp_mss_adjust: TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        :param pulumi.Input[_builtins.int] tcp_mss_adjust: TCP MSS on SYN packets, in bytes
+                 - Range: `500`-`1460`
         :param pulumi.Input[_builtins.str] tcp_mss_adjust_variable: Variable name
         :param pulumi.Input[_builtins.str] tracker_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] trackers: Enable tracker for this interface
@@ -1353,29 +1378,34 @@ class CiscoVpnInterfaceGreFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnInterfaceGreFeatureTemplateAccessListArgs', 'CiscoVpnInterfaceGreFeatureTemplateAccessListArgsDict']]]] access_lists: Apply ACL
-        :param pulumi.Input[_builtins.str] application: Enable Application Tunnel Type - Choices: `none`, `sig` - Default value: `none`
+        :param pulumi.Input[_builtins.str] application: Enable Application Tunnel Type
+                 - Choices: `none`, `sig`
+                 - Default value: `none`
         :param pulumi.Input[_builtins.str] application_variable: Variable name
-        :param pulumi.Input[_builtins.bool] clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        :param pulumi.Input[_builtins.bool] clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] clear_dont_fragment_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[_builtins.str] interface_description: Interface description
         :param pulumi.Input[_builtins.str] interface_description_variable: Variable name
-        :param pulumi.Input[_builtins.str] interface_name: Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when
-               present
+        :param pulumi.Input[_builtins.str] interface_name: Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when present
         :param pulumi.Input[_builtins.str] interface_name_variable: Variable name
         :param pulumi.Input[_builtins.str] ip_address: Assign IPv4 address
         :param pulumi.Input[_builtins.str] ip_address_variable: Variable name
-        :param pulumi.Input[_builtins.int] ip_mtu: Interface MTU <576..2000>, in bytes - Range: `64`-`18000` - Default value: `1500`
+        :param pulumi.Input[_builtins.int] ip_mtu: Interface MTU <576..2000>, in bytes
+                 - Range: `64`-`18000`
+                 - Default value: `1500`
         :param pulumi.Input[_builtins.str] ip_mtu_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[_builtins.str] rewrite_rule: Name of rewrite rule
         :param pulumi.Input[_builtins.str] rewrite_rule_variable: Variable name
-        :param pulumi.Input[_builtins.bool] shutdown: Administrative state - Default value: `true`
+        :param pulumi.Input[_builtins.bool] shutdown: Administrative state
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
-        :param pulumi.Input[_builtins.int] tcp_mss_adjust: TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        :param pulumi.Input[_builtins.int] tcp_mss_adjust: TCP MSS on SYN packets, in bytes
+                 - Range: `500`-`1460`
         :param pulumi.Input[_builtins.str] tcp_mss_adjust_variable: Variable name
         :param pulumi.Input[_builtins.str] template_type: The template type
         :param pulumi.Input[_builtins.str] tracker_variable: Variable name
@@ -1442,7 +1472,9 @@ class CiscoVpnInterfaceGreFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter
     def application(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Enable Application Tunnel Type - Choices: `none`, `sig` - Default value: `none`
+        Enable Application Tunnel Type
+          - Choices: `none`, `sig`
+          - Default value: `none`
         """
         return pulumi.get(self, "application")
 
@@ -1458,7 +1490,8 @@ class CiscoVpnInterfaceGreFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="clearDontFragment")
     def clear_dont_fragment(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+          - Default value: `false`
         """
         return pulumi.get(self, "clear_dont_fragment")
 
@@ -1482,9 +1515,8 @@ class CiscoVpnInterfaceGreFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -1508,8 +1540,7 @@ class CiscoVpnInterfaceGreFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="interfaceName")
     def interface_name(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when
-        present
+        Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when present
         """
         return pulumi.get(self, "interface_name")
 
@@ -1541,7 +1572,9 @@ class CiscoVpnInterfaceGreFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="ipMtu")
     def ip_mtu(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Interface MTU <576..2000>, in bytes - Range: `64`-`18000` - Default value: `1500`
+        Interface MTU <576..2000>, in bytes
+          - Range: `64`-`18000`
+          - Default value: `1500`
         """
         return pulumi.get(self, "ip_mtu")
 
@@ -1581,7 +1614,8 @@ class CiscoVpnInterfaceGreFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter
     def shutdown(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Administrative state - Default value: `true`
+        Administrative state
+          - Default value: `true`
         """
         return pulumi.get(self, "shutdown")
 
@@ -1597,7 +1631,8 @@ class CiscoVpnInterfaceGreFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="tcpMssAdjust")
     def tcp_mss_adjust(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        TCP MSS on SYN packets, in bytes
+          - Range: `500`-`1460`
         """
         return pulumi.get(self, "tcp_mss_adjust")
 

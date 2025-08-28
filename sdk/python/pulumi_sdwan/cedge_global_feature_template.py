@@ -71,55 +71,78 @@ class CedgeGlobalFeatureTemplateArgs:
         """
         The set of arguments for constructing a CedgeGlobalFeatureTemplate resource.
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.bool] arp_proxy: Set ARP Proxy - Default value: `false`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.bool] arp_proxy: Set ARP Proxy
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] arp_proxy_variable: Variable name
-        :param pulumi.Input[_builtins.bool] bootp: Configure Ignore BOOTP - Default value: `true`
+        :param pulumi.Input[_builtins.bool] bootp: Configure Ignore BOOTP
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] bootp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] cdp: Configure CDP - Default value: `true`
+        :param pulumi.Input[_builtins.bool] cdp: Configure CDP
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] cdp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] console_logging: Configure Console Logging - Default value: `true`
+        :param pulumi.Input[_builtins.bool] console_logging: Configure Console Logging
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] console_logging_variable: Variable name
-        :param pulumi.Input[_builtins.bool] domain_lookup: Configure Domain-Lookup - Default value: `false`
+        :param pulumi.Input[_builtins.bool] domain_lookup: Configure Domain-Lookup
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] domain_lookup_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ftp_passive: Set Passive FTP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ftp_passive: Set Passive FTP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ftp_passive_variable: Variable name
-        :param pulumi.Input[_builtins.str] http_authentication: Set preference for HTTP Authentication - Choices: `local`, `aaa`
+        :param pulumi.Input[_builtins.str] http_authentication: Set preference for HTTP Authentication
+                 - Choices: `local`, `aaa`
         :param pulumi.Input[_builtins.str] http_authentication_variable: Variable name
-        :param pulumi.Input[_builtins.bool] http_server: Set HTTP Server - Default value: `false`
+        :param pulumi.Input[_builtins.bool] http_server: Set HTTP Server
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] http_server_variable: Variable name
-        :param pulumi.Input[_builtins.bool] https_server: Set HTTPS Server - Default value: `false`
+        :param pulumi.Input[_builtins.bool] https_server: Set HTTPS Server
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] https_server_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ip_source_routing: Set Source Route - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ip_source_routing: Set Source Route
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ip_source_routing_variable: Variable name
-        :param pulumi.Input[_builtins.bool] line_vty: Configure Telnet (Outbound) - Default value: `false`
+        :param pulumi.Input[_builtins.bool] line_vty: Configure Telnet (Outbound)
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] line_vty_variable: Variable name
-        :param pulumi.Input[_builtins.bool] lldp: Configure LLDP - Default value: `true`
+        :param pulumi.Input[_builtins.bool] lldp: Configure LLDP
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] lldp_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.int] nat64_tcp_timeout: Set NAT64 TCP session timeout, in seconds - Range: `1`-`536870` - Default value: `3600`
+        :param pulumi.Input[_builtins.int] nat64_tcp_timeout: Set NAT64 TCP session timeout, in seconds
+                 - Range: `1`-`536870`
+                 - Default value: `3600`
         :param pulumi.Input[_builtins.str] nat64_tcp_timeout_variable: Variable name
-        :param pulumi.Input[_builtins.int] nat64_udp_timeout: Set NAT64 UDP session timeout, in seconds - Range: `1`-`536870` - Default value: `300`
+        :param pulumi.Input[_builtins.int] nat64_udp_timeout: Set NAT64 UDP session timeout, in seconds
+                 - Range: `1`-`536870`
+                 - Default value: `300`
         :param pulumi.Input[_builtins.str] nat64_udp_timeout_variable: Variable name
-        :param pulumi.Input[_builtins.bool] rsh_rcp: Set RSH/RCP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] rsh_rcp: Set RSH/RCP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] rsh_rcp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] snmp_ifindex_persist: Configure SNMP Ifindex Persist - Default value: `true`
+        :param pulumi.Input[_builtins.bool] snmp_ifindex_persist: Configure SNMP Ifindex Persist
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] snmp_ifindex_persist_variable: Variable name
         :param pulumi.Input[_builtins.str] source_interface: Specify interface for source address in all HTTP(S) client connections
         :param pulumi.Input[_builtins.str] source_interface_variable: Variable name
-        :param pulumi.Input[_builtins.int] ssh_version: Set SSH version - Range: `1`-`2`
+        :param pulumi.Input[_builtins.int] ssh_version: Set SSH version
+                 - Range: `1`-`2`
         :param pulumi.Input[_builtins.str] ssh_version_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tcp_keepalives_in: Configure tcp-keepalives-in - Default value: `true`
+        :param pulumi.Input[_builtins.bool] tcp_keepalives_in: Configure tcp-keepalives-in
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] tcp_keepalives_in_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tcp_keepalives_out: Configure tcp-keepalives-out - Default value: `true`
+        :param pulumi.Input[_builtins.bool] tcp_keepalives_out: Configure tcp-keepalives-out
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] tcp_keepalives_out_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tcp_small_servers: Configure tcp-small-servers - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tcp_small_servers: Configure tcp-small-servers
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tcp_small_servers_variable: Variable name
-        :param pulumi.Input[_builtins.bool] udp_small_servers: Configure udp-small-servers - Default value: `false`
+        :param pulumi.Input[_builtins.bool] udp_small_servers: Configure udp-small-servers
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] udp_small_servers_variable: Variable name
-        :param pulumi.Input[_builtins.bool] vty_logging: Configure VTY Line Logging - Default value: `false`
+        :param pulumi.Input[_builtins.bool] vty_logging: Configure VTY Line Logging
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] vty_logging_variable: Variable name
         """
         pulumi.set(__self__, "description", description)
@@ -235,9 +258,8 @@ class CedgeGlobalFeatureTemplateArgs:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -249,7 +271,8 @@ class CedgeGlobalFeatureTemplateArgs:
     @pulumi.getter(name="arpProxy")
     def arp_proxy(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Set ARP Proxy - Default value: `false`
+        Set ARP Proxy
+          - Default value: `false`
         """
         return pulumi.get(self, "arp_proxy")
 
@@ -273,7 +296,8 @@ class CedgeGlobalFeatureTemplateArgs:
     @pulumi.getter
     def bootp(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Configure Ignore BOOTP - Default value: `true`
+        Configure Ignore BOOTP
+          - Default value: `true`
         """
         return pulumi.get(self, "bootp")
 
@@ -297,7 +321,8 @@ class CedgeGlobalFeatureTemplateArgs:
     @pulumi.getter
     def cdp(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Configure CDP - Default value: `true`
+        Configure CDP
+          - Default value: `true`
         """
         return pulumi.get(self, "cdp")
 
@@ -321,7 +346,8 @@ class CedgeGlobalFeatureTemplateArgs:
     @pulumi.getter(name="consoleLogging")
     def console_logging(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Configure Console Logging - Default value: `true`
+        Configure Console Logging
+          - Default value: `true`
         """
         return pulumi.get(self, "console_logging")
 
@@ -345,7 +371,8 @@ class CedgeGlobalFeatureTemplateArgs:
     @pulumi.getter(name="domainLookup")
     def domain_lookup(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Configure Domain-Lookup - Default value: `false`
+        Configure Domain-Lookup
+          - Default value: `false`
         """
         return pulumi.get(self, "domain_lookup")
 
@@ -369,7 +396,8 @@ class CedgeGlobalFeatureTemplateArgs:
     @pulumi.getter(name="ftpPassive")
     def ftp_passive(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Set Passive FTP - Default value: `false`
+        Set Passive FTP
+          - Default value: `false`
         """
         return pulumi.get(self, "ftp_passive")
 
@@ -393,7 +421,8 @@ class CedgeGlobalFeatureTemplateArgs:
     @pulumi.getter(name="httpAuthentication")
     def http_authentication(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set preference for HTTP Authentication - Choices: `local`, `aaa`
+        Set preference for HTTP Authentication
+          - Choices: `local`, `aaa`
         """
         return pulumi.get(self, "http_authentication")
 
@@ -417,7 +446,8 @@ class CedgeGlobalFeatureTemplateArgs:
     @pulumi.getter(name="httpServer")
     def http_server(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Set HTTP Server - Default value: `false`
+        Set HTTP Server
+          - Default value: `false`
         """
         return pulumi.get(self, "http_server")
 
@@ -441,7 +471,8 @@ class CedgeGlobalFeatureTemplateArgs:
     @pulumi.getter(name="httpsServer")
     def https_server(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Set HTTPS Server - Default value: `false`
+        Set HTTPS Server
+          - Default value: `false`
         """
         return pulumi.get(self, "https_server")
 
@@ -465,7 +496,8 @@ class CedgeGlobalFeatureTemplateArgs:
     @pulumi.getter(name="ipSourceRouting")
     def ip_source_routing(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Set Source Route - Default value: `false`
+        Set Source Route
+          - Default value: `false`
         """
         return pulumi.get(self, "ip_source_routing")
 
@@ -489,7 +521,8 @@ class CedgeGlobalFeatureTemplateArgs:
     @pulumi.getter(name="lineVty")
     def line_vty(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Configure Telnet (Outbound) - Default value: `false`
+        Configure Telnet (Outbound)
+          - Default value: `false`
         """
         return pulumi.get(self, "line_vty")
 
@@ -513,7 +546,8 @@ class CedgeGlobalFeatureTemplateArgs:
     @pulumi.getter
     def lldp(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Configure LLDP - Default value: `true`
+        Configure LLDP
+          - Default value: `true`
         """
         return pulumi.get(self, "lldp")
 
@@ -549,7 +583,9 @@ class CedgeGlobalFeatureTemplateArgs:
     @pulumi.getter(name="nat64TcpTimeout")
     def nat64_tcp_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set NAT64 TCP session timeout, in seconds - Range: `1`-`536870` - Default value: `3600`
+        Set NAT64 TCP session timeout, in seconds
+          - Range: `1`-`536870`
+          - Default value: `3600`
         """
         return pulumi.get(self, "nat64_tcp_timeout")
 
@@ -573,7 +609,9 @@ class CedgeGlobalFeatureTemplateArgs:
     @pulumi.getter(name="nat64UdpTimeout")
     def nat64_udp_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set NAT64 UDP session timeout, in seconds - Range: `1`-`536870` - Default value: `300`
+        Set NAT64 UDP session timeout, in seconds
+          - Range: `1`-`536870`
+          - Default value: `300`
         """
         return pulumi.get(self, "nat64_udp_timeout")
 
@@ -597,7 +635,8 @@ class CedgeGlobalFeatureTemplateArgs:
     @pulumi.getter(name="rshRcp")
     def rsh_rcp(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Set RSH/RCP - Default value: `false`
+        Set RSH/RCP
+          - Default value: `false`
         """
         return pulumi.get(self, "rsh_rcp")
 
@@ -621,7 +660,8 @@ class CedgeGlobalFeatureTemplateArgs:
     @pulumi.getter(name="snmpIfindexPersist")
     def snmp_ifindex_persist(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Configure SNMP Ifindex Persist - Default value: `true`
+        Configure SNMP Ifindex Persist
+          - Default value: `true`
         """
         return pulumi.get(self, "snmp_ifindex_persist")
 
@@ -669,7 +709,8 @@ class CedgeGlobalFeatureTemplateArgs:
     @pulumi.getter(name="sshVersion")
     def ssh_version(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set SSH version - Range: `1`-`2`
+        Set SSH version
+          - Range: `1`-`2`
         """
         return pulumi.get(self, "ssh_version")
 
@@ -693,7 +734,8 @@ class CedgeGlobalFeatureTemplateArgs:
     @pulumi.getter(name="tcpKeepalivesIn")
     def tcp_keepalives_in(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Configure tcp-keepalives-in - Default value: `true`
+        Configure tcp-keepalives-in
+          - Default value: `true`
         """
         return pulumi.get(self, "tcp_keepalives_in")
 
@@ -717,7 +759,8 @@ class CedgeGlobalFeatureTemplateArgs:
     @pulumi.getter(name="tcpKeepalivesOut")
     def tcp_keepalives_out(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Configure tcp-keepalives-out - Default value: `true`
+        Configure tcp-keepalives-out
+          - Default value: `true`
         """
         return pulumi.get(self, "tcp_keepalives_out")
 
@@ -741,7 +784,8 @@ class CedgeGlobalFeatureTemplateArgs:
     @pulumi.getter(name="tcpSmallServers")
     def tcp_small_servers(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Configure tcp-small-servers - Default value: `false`
+        Configure tcp-small-servers
+          - Default value: `false`
         """
         return pulumi.get(self, "tcp_small_servers")
 
@@ -765,7 +809,8 @@ class CedgeGlobalFeatureTemplateArgs:
     @pulumi.getter(name="udpSmallServers")
     def udp_small_servers(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Configure udp-small-servers - Default value: `false`
+        Configure udp-small-servers
+          - Default value: `false`
         """
         return pulumi.get(self, "udp_small_servers")
 
@@ -789,7 +834,8 @@ class CedgeGlobalFeatureTemplateArgs:
     @pulumi.getter(name="vtyLogging")
     def vty_logging(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Configure VTY Line Logging - Default value: `false`
+        Configure VTY Line Logging
+          - Default value: `false`
         """
         return pulumi.get(self, "vty_logging")
 
@@ -866,58 +912,81 @@ class _CedgeGlobalFeatureTemplateState:
                  vty_logging_variable: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering CedgeGlobalFeatureTemplate resources.
-        :param pulumi.Input[_builtins.bool] arp_proxy: Set ARP Proxy - Default value: `false`
+        :param pulumi.Input[_builtins.bool] arp_proxy: Set ARP Proxy
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] arp_proxy_variable: Variable name
-        :param pulumi.Input[_builtins.bool] bootp: Configure Ignore BOOTP - Default value: `true`
+        :param pulumi.Input[_builtins.bool] bootp: Configure Ignore BOOTP
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] bootp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] cdp: Configure CDP - Default value: `true`
+        :param pulumi.Input[_builtins.bool] cdp: Configure CDP
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] cdp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] console_logging: Configure Console Logging - Default value: `true`
+        :param pulumi.Input[_builtins.bool] console_logging: Configure Console Logging
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] console_logging_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.bool] domain_lookup: Configure Domain-Lookup - Default value: `false`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.bool] domain_lookup: Configure Domain-Lookup
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] domain_lookup_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ftp_passive: Set Passive FTP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ftp_passive: Set Passive FTP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ftp_passive_variable: Variable name
-        :param pulumi.Input[_builtins.str] http_authentication: Set preference for HTTP Authentication - Choices: `local`, `aaa`
+        :param pulumi.Input[_builtins.str] http_authentication: Set preference for HTTP Authentication
+                 - Choices: `local`, `aaa`
         :param pulumi.Input[_builtins.str] http_authentication_variable: Variable name
-        :param pulumi.Input[_builtins.bool] http_server: Set HTTP Server - Default value: `false`
+        :param pulumi.Input[_builtins.bool] http_server: Set HTTP Server
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] http_server_variable: Variable name
-        :param pulumi.Input[_builtins.bool] https_server: Set HTTPS Server - Default value: `false`
+        :param pulumi.Input[_builtins.bool] https_server: Set HTTPS Server
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] https_server_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ip_source_routing: Set Source Route - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ip_source_routing: Set Source Route
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ip_source_routing_variable: Variable name
-        :param pulumi.Input[_builtins.bool] line_vty: Configure Telnet (Outbound) - Default value: `false`
+        :param pulumi.Input[_builtins.bool] line_vty: Configure Telnet (Outbound)
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] line_vty_variable: Variable name
-        :param pulumi.Input[_builtins.bool] lldp: Configure LLDP - Default value: `true`
+        :param pulumi.Input[_builtins.bool] lldp: Configure LLDP
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] lldp_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.int] nat64_tcp_timeout: Set NAT64 TCP session timeout, in seconds - Range: `1`-`536870` - Default value: `3600`
+        :param pulumi.Input[_builtins.int] nat64_tcp_timeout: Set NAT64 TCP session timeout, in seconds
+                 - Range: `1`-`536870`
+                 - Default value: `3600`
         :param pulumi.Input[_builtins.str] nat64_tcp_timeout_variable: Variable name
-        :param pulumi.Input[_builtins.int] nat64_udp_timeout: Set NAT64 UDP session timeout, in seconds - Range: `1`-`536870` - Default value: `300`
+        :param pulumi.Input[_builtins.int] nat64_udp_timeout: Set NAT64 UDP session timeout, in seconds
+                 - Range: `1`-`536870`
+                 - Default value: `300`
         :param pulumi.Input[_builtins.str] nat64_udp_timeout_variable: Variable name
-        :param pulumi.Input[_builtins.bool] rsh_rcp: Set RSH/RCP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] rsh_rcp: Set RSH/RCP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] rsh_rcp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] snmp_ifindex_persist: Configure SNMP Ifindex Persist - Default value: `true`
+        :param pulumi.Input[_builtins.bool] snmp_ifindex_persist: Configure SNMP Ifindex Persist
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] snmp_ifindex_persist_variable: Variable name
         :param pulumi.Input[_builtins.str] source_interface: Specify interface for source address in all HTTP(S) client connections
         :param pulumi.Input[_builtins.str] source_interface_variable: Variable name
-        :param pulumi.Input[_builtins.int] ssh_version: Set SSH version - Range: `1`-`2`
+        :param pulumi.Input[_builtins.int] ssh_version: Set SSH version
+                 - Range: `1`-`2`
         :param pulumi.Input[_builtins.str] ssh_version_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tcp_keepalives_in: Configure tcp-keepalives-in - Default value: `true`
+        :param pulumi.Input[_builtins.bool] tcp_keepalives_in: Configure tcp-keepalives-in
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] tcp_keepalives_in_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tcp_keepalives_out: Configure tcp-keepalives-out - Default value: `true`
+        :param pulumi.Input[_builtins.bool] tcp_keepalives_out: Configure tcp-keepalives-out
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] tcp_keepalives_out_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tcp_small_servers: Configure tcp-small-servers - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tcp_small_servers: Configure tcp-small-servers
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tcp_small_servers_variable: Variable name
         :param pulumi.Input[_builtins.str] template_type: The template type
-        :param pulumi.Input[_builtins.bool] udp_small_servers: Configure udp-small-servers - Default value: `false`
+        :param pulumi.Input[_builtins.bool] udp_small_servers: Configure udp-small-servers
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] udp_small_servers_variable: Variable name
         :param pulumi.Input[_builtins.int] version: The version of the feature template
-        :param pulumi.Input[_builtins.bool] vty_logging: Configure VTY Line Logging - Default value: `false`
+        :param pulumi.Input[_builtins.bool] vty_logging: Configure VTY Line Logging
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] vty_logging_variable: Variable name
         """
         if arp_proxy is not None:
@@ -1027,7 +1096,8 @@ class _CedgeGlobalFeatureTemplateState:
     @pulumi.getter(name="arpProxy")
     def arp_proxy(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Set ARP Proxy - Default value: `false`
+        Set ARP Proxy
+          - Default value: `false`
         """
         return pulumi.get(self, "arp_proxy")
 
@@ -1051,7 +1121,8 @@ class _CedgeGlobalFeatureTemplateState:
     @pulumi.getter
     def bootp(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Configure Ignore BOOTP - Default value: `true`
+        Configure Ignore BOOTP
+          - Default value: `true`
         """
         return pulumi.get(self, "bootp")
 
@@ -1075,7 +1146,8 @@ class _CedgeGlobalFeatureTemplateState:
     @pulumi.getter
     def cdp(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Configure CDP - Default value: `true`
+        Configure CDP
+          - Default value: `true`
         """
         return pulumi.get(self, "cdp")
 
@@ -1099,7 +1171,8 @@ class _CedgeGlobalFeatureTemplateState:
     @pulumi.getter(name="consoleLogging")
     def console_logging(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Configure Console Logging - Default value: `true`
+        Configure Console Logging
+          - Default value: `true`
         """
         return pulumi.get(self, "console_logging")
 
@@ -1135,9 +1208,8 @@ class _CedgeGlobalFeatureTemplateState:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -1149,7 +1221,8 @@ class _CedgeGlobalFeatureTemplateState:
     @pulumi.getter(name="domainLookup")
     def domain_lookup(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Configure Domain-Lookup - Default value: `false`
+        Configure Domain-Lookup
+          - Default value: `false`
         """
         return pulumi.get(self, "domain_lookup")
 
@@ -1173,7 +1246,8 @@ class _CedgeGlobalFeatureTemplateState:
     @pulumi.getter(name="ftpPassive")
     def ftp_passive(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Set Passive FTP - Default value: `false`
+        Set Passive FTP
+          - Default value: `false`
         """
         return pulumi.get(self, "ftp_passive")
 
@@ -1197,7 +1271,8 @@ class _CedgeGlobalFeatureTemplateState:
     @pulumi.getter(name="httpAuthentication")
     def http_authentication(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set preference for HTTP Authentication - Choices: `local`, `aaa`
+        Set preference for HTTP Authentication
+          - Choices: `local`, `aaa`
         """
         return pulumi.get(self, "http_authentication")
 
@@ -1221,7 +1296,8 @@ class _CedgeGlobalFeatureTemplateState:
     @pulumi.getter(name="httpServer")
     def http_server(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Set HTTP Server - Default value: `false`
+        Set HTTP Server
+          - Default value: `false`
         """
         return pulumi.get(self, "http_server")
 
@@ -1245,7 +1321,8 @@ class _CedgeGlobalFeatureTemplateState:
     @pulumi.getter(name="httpsServer")
     def https_server(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Set HTTPS Server - Default value: `false`
+        Set HTTPS Server
+          - Default value: `false`
         """
         return pulumi.get(self, "https_server")
 
@@ -1269,7 +1346,8 @@ class _CedgeGlobalFeatureTemplateState:
     @pulumi.getter(name="ipSourceRouting")
     def ip_source_routing(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Set Source Route - Default value: `false`
+        Set Source Route
+          - Default value: `false`
         """
         return pulumi.get(self, "ip_source_routing")
 
@@ -1293,7 +1371,8 @@ class _CedgeGlobalFeatureTemplateState:
     @pulumi.getter(name="lineVty")
     def line_vty(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Configure Telnet (Outbound) - Default value: `false`
+        Configure Telnet (Outbound)
+          - Default value: `false`
         """
         return pulumi.get(self, "line_vty")
 
@@ -1317,7 +1396,8 @@ class _CedgeGlobalFeatureTemplateState:
     @pulumi.getter
     def lldp(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Configure LLDP - Default value: `true`
+        Configure LLDP
+          - Default value: `true`
         """
         return pulumi.get(self, "lldp")
 
@@ -1353,7 +1433,9 @@ class _CedgeGlobalFeatureTemplateState:
     @pulumi.getter(name="nat64TcpTimeout")
     def nat64_tcp_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set NAT64 TCP session timeout, in seconds - Range: `1`-`536870` - Default value: `3600`
+        Set NAT64 TCP session timeout, in seconds
+          - Range: `1`-`536870`
+          - Default value: `3600`
         """
         return pulumi.get(self, "nat64_tcp_timeout")
 
@@ -1377,7 +1459,9 @@ class _CedgeGlobalFeatureTemplateState:
     @pulumi.getter(name="nat64UdpTimeout")
     def nat64_udp_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set NAT64 UDP session timeout, in seconds - Range: `1`-`536870` - Default value: `300`
+        Set NAT64 UDP session timeout, in seconds
+          - Range: `1`-`536870`
+          - Default value: `300`
         """
         return pulumi.get(self, "nat64_udp_timeout")
 
@@ -1401,7 +1485,8 @@ class _CedgeGlobalFeatureTemplateState:
     @pulumi.getter(name="rshRcp")
     def rsh_rcp(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Set RSH/RCP - Default value: `false`
+        Set RSH/RCP
+          - Default value: `false`
         """
         return pulumi.get(self, "rsh_rcp")
 
@@ -1425,7 +1510,8 @@ class _CedgeGlobalFeatureTemplateState:
     @pulumi.getter(name="snmpIfindexPersist")
     def snmp_ifindex_persist(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Configure SNMP Ifindex Persist - Default value: `true`
+        Configure SNMP Ifindex Persist
+          - Default value: `true`
         """
         return pulumi.get(self, "snmp_ifindex_persist")
 
@@ -1473,7 +1559,8 @@ class _CedgeGlobalFeatureTemplateState:
     @pulumi.getter(name="sshVersion")
     def ssh_version(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set SSH version - Range: `1`-`2`
+        Set SSH version
+          - Range: `1`-`2`
         """
         return pulumi.get(self, "ssh_version")
 
@@ -1497,7 +1584,8 @@ class _CedgeGlobalFeatureTemplateState:
     @pulumi.getter(name="tcpKeepalivesIn")
     def tcp_keepalives_in(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Configure tcp-keepalives-in - Default value: `true`
+        Configure tcp-keepalives-in
+          - Default value: `true`
         """
         return pulumi.get(self, "tcp_keepalives_in")
 
@@ -1521,7 +1609,8 @@ class _CedgeGlobalFeatureTemplateState:
     @pulumi.getter(name="tcpKeepalivesOut")
     def tcp_keepalives_out(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Configure tcp-keepalives-out - Default value: `true`
+        Configure tcp-keepalives-out
+          - Default value: `true`
         """
         return pulumi.get(self, "tcp_keepalives_out")
 
@@ -1545,7 +1634,8 @@ class _CedgeGlobalFeatureTemplateState:
     @pulumi.getter(name="tcpSmallServers")
     def tcp_small_servers(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Configure tcp-small-servers - Default value: `false`
+        Configure tcp-small-servers
+          - Default value: `false`
         """
         return pulumi.get(self, "tcp_small_servers")
 
@@ -1581,7 +1671,8 @@ class _CedgeGlobalFeatureTemplateState:
     @pulumi.getter(name="udpSmallServers")
     def udp_small_servers(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Configure udp-small-servers - Default value: `false`
+        Configure udp-small-servers
+          - Default value: `false`
         """
         return pulumi.get(self, "udp_small_servers")
 
@@ -1617,7 +1708,8 @@ class _CedgeGlobalFeatureTemplateState:
     @pulumi.getter(name="vtyLogging")
     def vty_logging(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Configure VTY Line Logging - Default value: `false`
+        Configure VTY Line Logging
+          - Default value: `false`
         """
         return pulumi.get(self, "vty_logging")
 
@@ -1743,56 +1835,79 @@ class CedgeGlobalFeatureTemplate(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.bool] arp_proxy: Set ARP Proxy - Default value: `false`
+        :param pulumi.Input[_builtins.bool] arp_proxy: Set ARP Proxy
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] arp_proxy_variable: Variable name
-        :param pulumi.Input[_builtins.bool] bootp: Configure Ignore BOOTP - Default value: `true`
+        :param pulumi.Input[_builtins.bool] bootp: Configure Ignore BOOTP
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] bootp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] cdp: Configure CDP - Default value: `true`
+        :param pulumi.Input[_builtins.bool] cdp: Configure CDP
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] cdp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] console_logging: Configure Console Logging - Default value: `true`
+        :param pulumi.Input[_builtins.bool] console_logging: Configure Console Logging
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] console_logging_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.bool] domain_lookup: Configure Domain-Lookup - Default value: `false`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.bool] domain_lookup: Configure Domain-Lookup
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] domain_lookup_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ftp_passive: Set Passive FTP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ftp_passive: Set Passive FTP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ftp_passive_variable: Variable name
-        :param pulumi.Input[_builtins.str] http_authentication: Set preference for HTTP Authentication - Choices: `local`, `aaa`
+        :param pulumi.Input[_builtins.str] http_authentication: Set preference for HTTP Authentication
+                 - Choices: `local`, `aaa`
         :param pulumi.Input[_builtins.str] http_authentication_variable: Variable name
-        :param pulumi.Input[_builtins.bool] http_server: Set HTTP Server - Default value: `false`
+        :param pulumi.Input[_builtins.bool] http_server: Set HTTP Server
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] http_server_variable: Variable name
-        :param pulumi.Input[_builtins.bool] https_server: Set HTTPS Server - Default value: `false`
+        :param pulumi.Input[_builtins.bool] https_server: Set HTTPS Server
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] https_server_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ip_source_routing: Set Source Route - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ip_source_routing: Set Source Route
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ip_source_routing_variable: Variable name
-        :param pulumi.Input[_builtins.bool] line_vty: Configure Telnet (Outbound) - Default value: `false`
+        :param pulumi.Input[_builtins.bool] line_vty: Configure Telnet (Outbound)
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] line_vty_variable: Variable name
-        :param pulumi.Input[_builtins.bool] lldp: Configure LLDP - Default value: `true`
+        :param pulumi.Input[_builtins.bool] lldp: Configure LLDP
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] lldp_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.int] nat64_tcp_timeout: Set NAT64 TCP session timeout, in seconds - Range: `1`-`536870` - Default value: `3600`
+        :param pulumi.Input[_builtins.int] nat64_tcp_timeout: Set NAT64 TCP session timeout, in seconds
+                 - Range: `1`-`536870`
+                 - Default value: `3600`
         :param pulumi.Input[_builtins.str] nat64_tcp_timeout_variable: Variable name
-        :param pulumi.Input[_builtins.int] nat64_udp_timeout: Set NAT64 UDP session timeout, in seconds - Range: `1`-`536870` - Default value: `300`
+        :param pulumi.Input[_builtins.int] nat64_udp_timeout: Set NAT64 UDP session timeout, in seconds
+                 - Range: `1`-`536870`
+                 - Default value: `300`
         :param pulumi.Input[_builtins.str] nat64_udp_timeout_variable: Variable name
-        :param pulumi.Input[_builtins.bool] rsh_rcp: Set RSH/RCP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] rsh_rcp: Set RSH/RCP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] rsh_rcp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] snmp_ifindex_persist: Configure SNMP Ifindex Persist - Default value: `true`
+        :param pulumi.Input[_builtins.bool] snmp_ifindex_persist: Configure SNMP Ifindex Persist
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] snmp_ifindex_persist_variable: Variable name
         :param pulumi.Input[_builtins.str] source_interface: Specify interface for source address in all HTTP(S) client connections
         :param pulumi.Input[_builtins.str] source_interface_variable: Variable name
-        :param pulumi.Input[_builtins.int] ssh_version: Set SSH version - Range: `1`-`2`
+        :param pulumi.Input[_builtins.int] ssh_version: Set SSH version
+                 - Range: `1`-`2`
         :param pulumi.Input[_builtins.str] ssh_version_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tcp_keepalives_in: Configure tcp-keepalives-in - Default value: `true`
+        :param pulumi.Input[_builtins.bool] tcp_keepalives_in: Configure tcp-keepalives-in
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] tcp_keepalives_in_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tcp_keepalives_out: Configure tcp-keepalives-out - Default value: `true`
+        :param pulumi.Input[_builtins.bool] tcp_keepalives_out: Configure tcp-keepalives-out
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] tcp_keepalives_out_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tcp_small_servers: Configure tcp-small-servers - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tcp_small_servers: Configure tcp-small-servers
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tcp_small_servers_variable: Variable name
-        :param pulumi.Input[_builtins.bool] udp_small_servers: Configure udp-small-servers - Default value: `false`
+        :param pulumi.Input[_builtins.bool] udp_small_servers: Configure udp-small-servers
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] udp_small_servers_variable: Variable name
-        :param pulumi.Input[_builtins.bool] vty_logging: Configure VTY Line Logging - Default value: `false`
+        :param pulumi.Input[_builtins.bool] vty_logging: Configure VTY Line Logging
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] vty_logging_variable: Variable name
         """
         ...
@@ -2044,58 +2159,81 @@ class CedgeGlobalFeatureTemplate(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.bool] arp_proxy: Set ARP Proxy - Default value: `false`
+        :param pulumi.Input[_builtins.bool] arp_proxy: Set ARP Proxy
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] arp_proxy_variable: Variable name
-        :param pulumi.Input[_builtins.bool] bootp: Configure Ignore BOOTP - Default value: `true`
+        :param pulumi.Input[_builtins.bool] bootp: Configure Ignore BOOTP
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] bootp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] cdp: Configure CDP - Default value: `true`
+        :param pulumi.Input[_builtins.bool] cdp: Configure CDP
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] cdp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] console_logging: Configure Console Logging - Default value: `true`
+        :param pulumi.Input[_builtins.bool] console_logging: Configure Console Logging
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] console_logging_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.bool] domain_lookup: Configure Domain-Lookup - Default value: `false`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.bool] domain_lookup: Configure Domain-Lookup
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] domain_lookup_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ftp_passive: Set Passive FTP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ftp_passive: Set Passive FTP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ftp_passive_variable: Variable name
-        :param pulumi.Input[_builtins.str] http_authentication: Set preference for HTTP Authentication - Choices: `local`, `aaa`
+        :param pulumi.Input[_builtins.str] http_authentication: Set preference for HTTP Authentication
+                 - Choices: `local`, `aaa`
         :param pulumi.Input[_builtins.str] http_authentication_variable: Variable name
-        :param pulumi.Input[_builtins.bool] http_server: Set HTTP Server - Default value: `false`
+        :param pulumi.Input[_builtins.bool] http_server: Set HTTP Server
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] http_server_variable: Variable name
-        :param pulumi.Input[_builtins.bool] https_server: Set HTTPS Server - Default value: `false`
+        :param pulumi.Input[_builtins.bool] https_server: Set HTTPS Server
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] https_server_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ip_source_routing: Set Source Route - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ip_source_routing: Set Source Route
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ip_source_routing_variable: Variable name
-        :param pulumi.Input[_builtins.bool] line_vty: Configure Telnet (Outbound) - Default value: `false`
+        :param pulumi.Input[_builtins.bool] line_vty: Configure Telnet (Outbound)
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] line_vty_variable: Variable name
-        :param pulumi.Input[_builtins.bool] lldp: Configure LLDP - Default value: `true`
+        :param pulumi.Input[_builtins.bool] lldp: Configure LLDP
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] lldp_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.int] nat64_tcp_timeout: Set NAT64 TCP session timeout, in seconds - Range: `1`-`536870` - Default value: `3600`
+        :param pulumi.Input[_builtins.int] nat64_tcp_timeout: Set NAT64 TCP session timeout, in seconds
+                 - Range: `1`-`536870`
+                 - Default value: `3600`
         :param pulumi.Input[_builtins.str] nat64_tcp_timeout_variable: Variable name
-        :param pulumi.Input[_builtins.int] nat64_udp_timeout: Set NAT64 UDP session timeout, in seconds - Range: `1`-`536870` - Default value: `300`
+        :param pulumi.Input[_builtins.int] nat64_udp_timeout: Set NAT64 UDP session timeout, in seconds
+                 - Range: `1`-`536870`
+                 - Default value: `300`
         :param pulumi.Input[_builtins.str] nat64_udp_timeout_variable: Variable name
-        :param pulumi.Input[_builtins.bool] rsh_rcp: Set RSH/RCP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] rsh_rcp: Set RSH/RCP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] rsh_rcp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] snmp_ifindex_persist: Configure SNMP Ifindex Persist - Default value: `true`
+        :param pulumi.Input[_builtins.bool] snmp_ifindex_persist: Configure SNMP Ifindex Persist
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] snmp_ifindex_persist_variable: Variable name
         :param pulumi.Input[_builtins.str] source_interface: Specify interface for source address in all HTTP(S) client connections
         :param pulumi.Input[_builtins.str] source_interface_variable: Variable name
-        :param pulumi.Input[_builtins.int] ssh_version: Set SSH version - Range: `1`-`2`
+        :param pulumi.Input[_builtins.int] ssh_version: Set SSH version
+                 - Range: `1`-`2`
         :param pulumi.Input[_builtins.str] ssh_version_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tcp_keepalives_in: Configure tcp-keepalives-in - Default value: `true`
+        :param pulumi.Input[_builtins.bool] tcp_keepalives_in: Configure tcp-keepalives-in
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] tcp_keepalives_in_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tcp_keepalives_out: Configure tcp-keepalives-out - Default value: `true`
+        :param pulumi.Input[_builtins.bool] tcp_keepalives_out: Configure tcp-keepalives-out
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] tcp_keepalives_out_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tcp_small_servers: Configure tcp-small-servers - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tcp_small_servers: Configure tcp-small-servers
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tcp_small_servers_variable: Variable name
         :param pulumi.Input[_builtins.str] template_type: The template type
-        :param pulumi.Input[_builtins.bool] udp_small_servers: Configure udp-small-servers - Default value: `false`
+        :param pulumi.Input[_builtins.bool] udp_small_servers: Configure udp-small-servers
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] udp_small_servers_variable: Variable name
         :param pulumi.Input[_builtins.int] version: The version of the feature template
-        :param pulumi.Input[_builtins.bool] vty_logging: Configure VTY Line Logging - Default value: `false`
+        :param pulumi.Input[_builtins.bool] vty_logging: Configure VTY Line Logging
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] vty_logging_variable: Variable name
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -2159,7 +2297,8 @@ class CedgeGlobalFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="arpProxy")
     def arp_proxy(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Set ARP Proxy - Default value: `false`
+        Set ARP Proxy
+          - Default value: `false`
         """
         return pulumi.get(self, "arp_proxy")
 
@@ -2175,7 +2314,8 @@ class CedgeGlobalFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter
     def bootp(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Configure Ignore BOOTP - Default value: `true`
+        Configure Ignore BOOTP
+          - Default value: `true`
         """
         return pulumi.get(self, "bootp")
 
@@ -2191,7 +2331,8 @@ class CedgeGlobalFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter
     def cdp(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Configure CDP - Default value: `true`
+        Configure CDP
+          - Default value: `true`
         """
         return pulumi.get(self, "cdp")
 
@@ -2207,7 +2348,8 @@ class CedgeGlobalFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="consoleLogging")
     def console_logging(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Configure Console Logging - Default value: `true`
+        Configure Console Logging
+          - Default value: `true`
         """
         return pulumi.get(self, "console_logging")
 
@@ -2231,9 +2373,8 @@ class CedgeGlobalFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -2241,7 +2382,8 @@ class CedgeGlobalFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="domainLookup")
     def domain_lookup(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Configure Domain-Lookup - Default value: `false`
+        Configure Domain-Lookup
+          - Default value: `false`
         """
         return pulumi.get(self, "domain_lookup")
 
@@ -2257,7 +2399,8 @@ class CedgeGlobalFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="ftpPassive")
     def ftp_passive(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Set Passive FTP - Default value: `false`
+        Set Passive FTP
+          - Default value: `false`
         """
         return pulumi.get(self, "ftp_passive")
 
@@ -2273,7 +2416,8 @@ class CedgeGlobalFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="httpAuthentication")
     def http_authentication(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Set preference for HTTP Authentication - Choices: `local`, `aaa`
+        Set preference for HTTP Authentication
+          - Choices: `local`, `aaa`
         """
         return pulumi.get(self, "http_authentication")
 
@@ -2289,7 +2433,8 @@ class CedgeGlobalFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="httpServer")
     def http_server(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Set HTTP Server - Default value: `false`
+        Set HTTP Server
+          - Default value: `false`
         """
         return pulumi.get(self, "http_server")
 
@@ -2305,7 +2450,8 @@ class CedgeGlobalFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="httpsServer")
     def https_server(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Set HTTPS Server - Default value: `false`
+        Set HTTPS Server
+          - Default value: `false`
         """
         return pulumi.get(self, "https_server")
 
@@ -2321,7 +2467,8 @@ class CedgeGlobalFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="ipSourceRouting")
     def ip_source_routing(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Set Source Route - Default value: `false`
+        Set Source Route
+          - Default value: `false`
         """
         return pulumi.get(self, "ip_source_routing")
 
@@ -2337,7 +2484,8 @@ class CedgeGlobalFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="lineVty")
     def line_vty(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Configure Telnet (Outbound) - Default value: `false`
+        Configure Telnet (Outbound)
+          - Default value: `false`
         """
         return pulumi.get(self, "line_vty")
 
@@ -2353,7 +2501,8 @@ class CedgeGlobalFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter
     def lldp(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Configure LLDP - Default value: `true`
+        Configure LLDP
+          - Default value: `true`
         """
         return pulumi.get(self, "lldp")
 
@@ -2377,7 +2526,9 @@ class CedgeGlobalFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="nat64TcpTimeout")
     def nat64_tcp_timeout(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set NAT64 TCP session timeout, in seconds - Range: `1`-`536870` - Default value: `3600`
+        Set NAT64 TCP session timeout, in seconds
+          - Range: `1`-`536870`
+          - Default value: `3600`
         """
         return pulumi.get(self, "nat64_tcp_timeout")
 
@@ -2393,7 +2544,9 @@ class CedgeGlobalFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="nat64UdpTimeout")
     def nat64_udp_timeout(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set NAT64 UDP session timeout, in seconds - Range: `1`-`536870` - Default value: `300`
+        Set NAT64 UDP session timeout, in seconds
+          - Range: `1`-`536870`
+          - Default value: `300`
         """
         return pulumi.get(self, "nat64_udp_timeout")
 
@@ -2409,7 +2562,8 @@ class CedgeGlobalFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="rshRcp")
     def rsh_rcp(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Set RSH/RCP - Default value: `false`
+        Set RSH/RCP
+          - Default value: `false`
         """
         return pulumi.get(self, "rsh_rcp")
 
@@ -2425,7 +2579,8 @@ class CedgeGlobalFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="snmpIfindexPersist")
     def snmp_ifindex_persist(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Configure SNMP Ifindex Persist - Default value: `true`
+        Configure SNMP Ifindex Persist
+          - Default value: `true`
         """
         return pulumi.get(self, "snmp_ifindex_persist")
 
@@ -2457,7 +2612,8 @@ class CedgeGlobalFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="sshVersion")
     def ssh_version(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set SSH version - Range: `1`-`2`
+        Set SSH version
+          - Range: `1`-`2`
         """
         return pulumi.get(self, "ssh_version")
 
@@ -2473,7 +2629,8 @@ class CedgeGlobalFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="tcpKeepalivesIn")
     def tcp_keepalives_in(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Configure tcp-keepalives-in - Default value: `true`
+        Configure tcp-keepalives-in
+          - Default value: `true`
         """
         return pulumi.get(self, "tcp_keepalives_in")
 
@@ -2489,7 +2646,8 @@ class CedgeGlobalFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="tcpKeepalivesOut")
     def tcp_keepalives_out(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Configure tcp-keepalives-out - Default value: `true`
+        Configure tcp-keepalives-out
+          - Default value: `true`
         """
         return pulumi.get(self, "tcp_keepalives_out")
 
@@ -2505,7 +2663,8 @@ class CedgeGlobalFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="tcpSmallServers")
     def tcp_small_servers(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Configure tcp-small-servers - Default value: `false`
+        Configure tcp-small-servers
+          - Default value: `false`
         """
         return pulumi.get(self, "tcp_small_servers")
 
@@ -2529,7 +2688,8 @@ class CedgeGlobalFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="udpSmallServers")
     def udp_small_servers(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Configure udp-small-servers - Default value: `false`
+        Configure udp-small-servers
+          - Default value: `false`
         """
         return pulumi.get(self, "udp_small_servers")
 
@@ -2553,7 +2713,8 @@ class CedgeGlobalFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="vtyLogging")
     def vty_logging(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Configure VTY Line Logging - Default value: `false`
+        Configure VTY Line Logging
+          - Default value: `false`
         """
         return pulumi.get(self, "vty_logging")
 

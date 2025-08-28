@@ -29,7 +29,9 @@ type TransportManagementVpnInterfaceEthernetFeature struct {
 
 	// Configure ARP entries
 	ArpEntries TransportManagementVpnInterfaceEthernetFeatureArpEntryArrayOutput `pulumi:"arpEntries"`
-	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
+	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+	//   - Range: `0`-`2147483`
+	//   - Default value: `1200`
 	ArpTimeout pulumi.IntPtrOutput `pulumi:"arpTimeout"`
 	// Variable name
 	ArpTimeoutVariable pulumi.StringPtrOutput `pulumi:"arpTimeoutVariable"`
@@ -39,7 +41,8 @@ type TransportManagementVpnInterfaceEthernetFeature struct {
 	AutonegotiateVariable pulumi.StringPtrOutput `pulumi:"autonegotiateVariable"`
 	// The description of the Feature
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// Duplex mode - Choices: `full`, `half`, `auto`
+	// Duplex mode
+	//   - Choices: `full`, `half`, `auto`
 	Duplex pulumi.StringPtrOutput `pulumi:"duplex"`
 	// Variable name
 	DuplexVariable pulumi.StringPtrOutput `pulumi:"duplexVariable"`
@@ -47,26 +50,31 @@ type TransportManagementVpnInterfaceEthernetFeature struct {
 	EnableDhcpv6 pulumi.BoolPtrOutput `pulumi:"enableDhcpv6"`
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
-	// ICMP/ICMPv6 Redirect Disable - Default value: `true`
+	// ICMP/ICMPv6 Redirect Disable
+	//   - Default value: `true`
 	IcmpRedirectDisable pulumi.BoolPtrOutput `pulumi:"icmpRedirectDisable"`
 	// Variable name
 	IcmpRedirectDisableVariable pulumi.StringPtrOutput `pulumi:"icmpRedirectDisableVariable"`
 	InterfaceDescription        pulumi.StringPtrOutput `pulumi:"interfaceDescription"`
 	// Variable name
 	InterfaceDescriptionVariable pulumi.StringPtrOutput `pulumi:"interfaceDescriptionVariable"`
-	// Interface MTU - Range: `1500`-`9216` - Default value: `1500`
+	// Interface MTU
+	//   - Range: `1500`-`9216`
+	//   - Default value: `1500`
 	InterfaceMtu pulumi.IntPtrOutput `pulumi:"interfaceMtu"`
 	// Variable name
 	InterfaceMtuVariable pulumi.StringPtrOutput `pulumi:"interfaceMtuVariable"`
 	InterfaceName        pulumi.StringPtrOutput `pulumi:"interfaceName"`
 	// Variable name
 	InterfaceNameVariable pulumi.StringPtrOutput `pulumi:"interfaceNameVariable"`
-	// IP Directed-Broadcast - Default value: `false`
+	// IP Directed-Broadcast
+	//   - Default value: `false`
 	IpDirectedBroadcast pulumi.BoolPtrOutput `pulumi:"ipDirectedBroadcast"`
 	// Variable name
 	IpDirectedBroadcastVariable pulumi.StringPtrOutput `pulumi:"ipDirectedBroadcastVariable"`
-	// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces
-	// <576..2000> in bytes - Range: `576`-`9216` - Default value: `1500`
+	// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes
+	//   - Range: `576`-`9216`
+	//   - Default value: `1500`
 	IpMtu pulumi.IntPtrOutput `pulumi:"ipMtu"`
 	// Variable name
 	IpMtuVariable pulumi.StringPtrOutput `pulumi:"ipMtuVariable"`
@@ -74,14 +82,18 @@ type TransportManagementVpnInterfaceEthernetFeature struct {
 	Ipv4Address pulumi.StringPtrOutput `pulumi:"ipv4Address"`
 	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 	Ipv4AddressVariable pulumi.StringPtrOutput `pulumi:"ipv4AddressVariable"`
-	// Interface auto detect bandwidth - Default value: `false`
+	// Interface auto detect bandwidth
+	//   - Default value: `false`
 	Ipv4AutoDetectBandwidth pulumi.BoolPtrOutput `pulumi:"ipv4AutoDetectBandwidth"`
 	// Variable name
 	Ipv4AutoDetectBandwidthVariable pulumi.StringPtrOutput `pulumi:"ipv4AutoDetectBandwidthVariable"`
-	// IPv4 Configuration Type - Choices: `dynamic`, `static` - Default value: `dynamic`
+	// IPv4 Configuration Type
+	//   - Choices: `dynamic`, `static`
+	//   - Default value: `dynamic`
 	Ipv4ConfigurationType pulumi.StringPtrOutput `pulumi:"ipv4ConfigurationType"`
-	// DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic` - Range: `1`-`65536` - Default
-	// value: `1`
+	// DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
+	//   - Range: `1`-`65536`
+	//   - Default value: `1`
 	Ipv4DhcpDistance pulumi.IntPtrOutput `pulumi:"ipv4DhcpDistance"`
 	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
 	Ipv4DhcpDistanceVariable pulumi.StringPtrOutput `pulumi:"ipv4DhcpDistanceVariable"`
@@ -95,12 +107,8 @@ type TransportManagementVpnInterfaceEthernetFeature struct {
 	Ipv4IperfServerVariable pulumi.StringPtrOutput `pulumi:"ipv4IperfServerVariable"`
 	// Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 	Ipv4SecondaryAddresses TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput `pulumi:"ipv4SecondaryAddresses"`
-	// Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static` - Choices: `255.255.255.255`,
-	// `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`,
-	// `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`,
-	// `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`,
-	// `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`,
-	// `128.0.0.0`, `0.0.0.0`
+	// Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask pulumi.StringPtrOutput `pulumi:"ipv4SubnetMask"`
 	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 	Ipv4SubnetMaskVariable pulumi.StringPtrOutput `pulumi:"ipv4SubnetMaskVariable"`
@@ -108,9 +116,13 @@ type TransportManagementVpnInterfaceEthernetFeature struct {
 	Ipv6Address pulumi.StringPtrOutput `pulumi:"ipv6Address"`
 	// Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
 	Ipv6AddressVariable pulumi.StringPtrOutput `pulumi:"ipv6AddressVariable"`
-	// IPv6 Configuration Type - Choices: `dynamic`, `static`, `none` - Default value: `none`
+	// IPv6 Configuration Type
+	//   - Choices: `dynamic`, `static`, `none`
+	//   - Default value: `none`
 	Ipv6ConfigurationType pulumi.StringPtrOutput `pulumi:"ipv6ConfigurationType"`
-	// Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+	// Interval for interface load calculation
+	//   - Range: `30`-`600`
+	//   - Default value: `30`
 	LoadInterval pulumi.IntPtrOutput `pulumi:"loadInterval"`
 	// Variable name
 	LoadIntervalVariable pulumi.StringPtrOutput `pulumi:"loadIntervalVariable"`
@@ -118,7 +130,8 @@ type TransportManagementVpnInterfaceEthernetFeature struct {
 	MacAddress pulumi.StringPtrOutput `pulumi:"macAddress"`
 	// Variable name
 	MacAddressVariable pulumi.StringPtrOutput `pulumi:"macAddressVariable"`
-	// Media type - Choices: `auto-select`, `rj45`, `sfp`
+	// Media type
+	//   - Choices: `auto-select`, `rj45`, `sfp`
 	MediaType pulumi.StringPtrOutput `pulumi:"mediaType"`
 	// Variable name
 	MediaTypeVariable pulumi.StringPtrOutput `pulumi:"mediaTypeVariable"`
@@ -128,11 +141,13 @@ type TransportManagementVpnInterfaceEthernetFeature struct {
 	Shutdown pulumi.BoolPtrOutput `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable pulumi.StringPtrOutput `pulumi:"shutdownVariable"`
-	// Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+	// Set interface speed
+	//   - Choices: `10`, `100`, `1000`, `2500`, `10000`
 	Speed pulumi.StringPtrOutput `pulumi:"speed"`
 	// Variable name
 	SpeedVariable pulumi.StringPtrOutput `pulumi:"speedVariable"`
-	// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TcpMss pulumi.IntPtrOutput `pulumi:"tcpMss"`
 	// Variable name
 	TcpMssVariable pulumi.StringPtrOutput `pulumi:"tcpMssVariable"`
@@ -180,7 +195,9 @@ func GetTransportManagementVpnInterfaceEthernetFeature(ctx *pulumi.Context,
 type transportManagementVpnInterfaceEthernetFeatureState struct {
 	// Configure ARP entries
 	ArpEntries []TransportManagementVpnInterfaceEthernetFeatureArpEntry `pulumi:"arpEntries"`
-	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
+	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+	//   - Range: `0`-`2147483`
+	//   - Default value: `1200`
 	ArpTimeout *int `pulumi:"arpTimeout"`
 	// Variable name
 	ArpTimeoutVariable *string `pulumi:"arpTimeoutVariable"`
@@ -190,7 +207,8 @@ type transportManagementVpnInterfaceEthernetFeatureState struct {
 	AutonegotiateVariable *string `pulumi:"autonegotiateVariable"`
 	// The description of the Feature
 	Description *string `pulumi:"description"`
-	// Duplex mode - Choices: `full`, `half`, `auto`
+	// Duplex mode
+	//   - Choices: `full`, `half`, `auto`
 	Duplex *string `pulumi:"duplex"`
 	// Variable name
 	DuplexVariable *string `pulumi:"duplexVariable"`
@@ -198,26 +216,31 @@ type transportManagementVpnInterfaceEthernetFeatureState struct {
 	EnableDhcpv6 *bool `pulumi:"enableDhcpv6"`
 	// Feature Profile ID
 	FeatureProfileId *string `pulumi:"featureProfileId"`
-	// ICMP/ICMPv6 Redirect Disable - Default value: `true`
+	// ICMP/ICMPv6 Redirect Disable
+	//   - Default value: `true`
 	IcmpRedirectDisable *bool `pulumi:"icmpRedirectDisable"`
 	// Variable name
 	IcmpRedirectDisableVariable *string `pulumi:"icmpRedirectDisableVariable"`
 	InterfaceDescription        *string `pulumi:"interfaceDescription"`
 	// Variable name
 	InterfaceDescriptionVariable *string `pulumi:"interfaceDescriptionVariable"`
-	// Interface MTU - Range: `1500`-`9216` - Default value: `1500`
+	// Interface MTU
+	//   - Range: `1500`-`9216`
+	//   - Default value: `1500`
 	InterfaceMtu *int `pulumi:"interfaceMtu"`
 	// Variable name
 	InterfaceMtuVariable *string `pulumi:"interfaceMtuVariable"`
 	InterfaceName        *string `pulumi:"interfaceName"`
 	// Variable name
 	InterfaceNameVariable *string `pulumi:"interfaceNameVariable"`
-	// IP Directed-Broadcast - Default value: `false`
+	// IP Directed-Broadcast
+	//   - Default value: `false`
 	IpDirectedBroadcast *bool `pulumi:"ipDirectedBroadcast"`
 	// Variable name
 	IpDirectedBroadcastVariable *string `pulumi:"ipDirectedBroadcastVariable"`
-	// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces
-	// <576..2000> in bytes - Range: `576`-`9216` - Default value: `1500`
+	// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes
+	//   - Range: `576`-`9216`
+	//   - Default value: `1500`
 	IpMtu *int `pulumi:"ipMtu"`
 	// Variable name
 	IpMtuVariable *string `pulumi:"ipMtuVariable"`
@@ -225,14 +248,18 @@ type transportManagementVpnInterfaceEthernetFeatureState struct {
 	Ipv4Address *string `pulumi:"ipv4Address"`
 	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 	Ipv4AddressVariable *string `pulumi:"ipv4AddressVariable"`
-	// Interface auto detect bandwidth - Default value: `false`
+	// Interface auto detect bandwidth
+	//   - Default value: `false`
 	Ipv4AutoDetectBandwidth *bool `pulumi:"ipv4AutoDetectBandwidth"`
 	// Variable name
 	Ipv4AutoDetectBandwidthVariable *string `pulumi:"ipv4AutoDetectBandwidthVariable"`
-	// IPv4 Configuration Type - Choices: `dynamic`, `static` - Default value: `dynamic`
+	// IPv4 Configuration Type
+	//   - Choices: `dynamic`, `static`
+	//   - Default value: `dynamic`
 	Ipv4ConfigurationType *string `pulumi:"ipv4ConfigurationType"`
-	// DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic` - Range: `1`-`65536` - Default
-	// value: `1`
+	// DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
+	//   - Range: `1`-`65536`
+	//   - Default value: `1`
 	Ipv4DhcpDistance *int `pulumi:"ipv4DhcpDistance"`
 	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
 	Ipv4DhcpDistanceVariable *string `pulumi:"ipv4DhcpDistanceVariable"`
@@ -246,12 +273,8 @@ type transportManagementVpnInterfaceEthernetFeatureState struct {
 	Ipv4IperfServerVariable *string `pulumi:"ipv4IperfServerVariable"`
 	// Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 	Ipv4SecondaryAddresses []TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddress `pulumi:"ipv4SecondaryAddresses"`
-	// Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static` - Choices: `255.255.255.255`,
-	// `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`,
-	// `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`,
-	// `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`,
-	// `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`,
-	// `128.0.0.0`, `0.0.0.0`
+	// Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask *string `pulumi:"ipv4SubnetMask"`
 	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 	Ipv4SubnetMaskVariable *string `pulumi:"ipv4SubnetMaskVariable"`
@@ -259,9 +282,13 @@ type transportManagementVpnInterfaceEthernetFeatureState struct {
 	Ipv6Address *string `pulumi:"ipv6Address"`
 	// Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
 	Ipv6AddressVariable *string `pulumi:"ipv6AddressVariable"`
-	// IPv6 Configuration Type - Choices: `dynamic`, `static`, `none` - Default value: `none`
+	// IPv6 Configuration Type
+	//   - Choices: `dynamic`, `static`, `none`
+	//   - Default value: `none`
 	Ipv6ConfigurationType *string `pulumi:"ipv6ConfigurationType"`
-	// Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+	// Interval for interface load calculation
+	//   - Range: `30`-`600`
+	//   - Default value: `30`
 	LoadInterval *int `pulumi:"loadInterval"`
 	// Variable name
 	LoadIntervalVariable *string `pulumi:"loadIntervalVariable"`
@@ -269,7 +296,8 @@ type transportManagementVpnInterfaceEthernetFeatureState struct {
 	MacAddress *string `pulumi:"macAddress"`
 	// Variable name
 	MacAddressVariable *string `pulumi:"macAddressVariable"`
-	// Media type - Choices: `auto-select`, `rj45`, `sfp`
+	// Media type
+	//   - Choices: `auto-select`, `rj45`, `sfp`
 	MediaType *string `pulumi:"mediaType"`
 	// Variable name
 	MediaTypeVariable *string `pulumi:"mediaTypeVariable"`
@@ -279,11 +307,13 @@ type transportManagementVpnInterfaceEthernetFeatureState struct {
 	Shutdown *bool `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable *string `pulumi:"shutdownVariable"`
-	// Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+	// Set interface speed
+	//   - Choices: `10`, `100`, `1000`, `2500`, `10000`
 	Speed *string `pulumi:"speed"`
 	// Variable name
 	SpeedVariable *string `pulumi:"speedVariable"`
-	// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TcpMss *int `pulumi:"tcpMss"`
 	// Variable name
 	TcpMssVariable *string `pulumi:"tcpMssVariable"`
@@ -296,7 +326,9 @@ type transportManagementVpnInterfaceEthernetFeatureState struct {
 type TransportManagementVpnInterfaceEthernetFeatureState struct {
 	// Configure ARP entries
 	ArpEntries TransportManagementVpnInterfaceEthernetFeatureArpEntryArrayInput
-	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
+	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+	//   - Range: `0`-`2147483`
+	//   - Default value: `1200`
 	ArpTimeout pulumi.IntPtrInput
 	// Variable name
 	ArpTimeoutVariable pulumi.StringPtrInput
@@ -306,7 +338,8 @@ type TransportManagementVpnInterfaceEthernetFeatureState struct {
 	AutonegotiateVariable pulumi.StringPtrInput
 	// The description of the Feature
 	Description pulumi.StringPtrInput
-	// Duplex mode - Choices: `full`, `half`, `auto`
+	// Duplex mode
+	//   - Choices: `full`, `half`, `auto`
 	Duplex pulumi.StringPtrInput
 	// Variable name
 	DuplexVariable pulumi.StringPtrInput
@@ -314,26 +347,31 @@ type TransportManagementVpnInterfaceEthernetFeatureState struct {
 	EnableDhcpv6 pulumi.BoolPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringPtrInput
-	// ICMP/ICMPv6 Redirect Disable - Default value: `true`
+	// ICMP/ICMPv6 Redirect Disable
+	//   - Default value: `true`
 	IcmpRedirectDisable pulumi.BoolPtrInput
 	// Variable name
 	IcmpRedirectDisableVariable pulumi.StringPtrInput
 	InterfaceDescription        pulumi.StringPtrInput
 	// Variable name
 	InterfaceDescriptionVariable pulumi.StringPtrInput
-	// Interface MTU - Range: `1500`-`9216` - Default value: `1500`
+	// Interface MTU
+	//   - Range: `1500`-`9216`
+	//   - Default value: `1500`
 	InterfaceMtu pulumi.IntPtrInput
 	// Variable name
 	InterfaceMtuVariable pulumi.StringPtrInput
 	InterfaceName        pulumi.StringPtrInput
 	// Variable name
 	InterfaceNameVariable pulumi.StringPtrInput
-	// IP Directed-Broadcast - Default value: `false`
+	// IP Directed-Broadcast
+	//   - Default value: `false`
 	IpDirectedBroadcast pulumi.BoolPtrInput
 	// Variable name
 	IpDirectedBroadcastVariable pulumi.StringPtrInput
-	// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces
-	// <576..2000> in bytes - Range: `576`-`9216` - Default value: `1500`
+	// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes
+	//   - Range: `576`-`9216`
+	//   - Default value: `1500`
 	IpMtu pulumi.IntPtrInput
 	// Variable name
 	IpMtuVariable pulumi.StringPtrInput
@@ -341,14 +379,18 @@ type TransportManagementVpnInterfaceEthernetFeatureState struct {
 	Ipv4Address pulumi.StringPtrInput
 	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 	Ipv4AddressVariable pulumi.StringPtrInput
-	// Interface auto detect bandwidth - Default value: `false`
+	// Interface auto detect bandwidth
+	//   - Default value: `false`
 	Ipv4AutoDetectBandwidth pulumi.BoolPtrInput
 	// Variable name
 	Ipv4AutoDetectBandwidthVariable pulumi.StringPtrInput
-	// IPv4 Configuration Type - Choices: `dynamic`, `static` - Default value: `dynamic`
+	// IPv4 Configuration Type
+	//   - Choices: `dynamic`, `static`
+	//   - Default value: `dynamic`
 	Ipv4ConfigurationType pulumi.StringPtrInput
-	// DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic` - Range: `1`-`65536` - Default
-	// value: `1`
+	// DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
+	//   - Range: `1`-`65536`
+	//   - Default value: `1`
 	Ipv4DhcpDistance pulumi.IntPtrInput
 	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
 	Ipv4DhcpDistanceVariable pulumi.StringPtrInput
@@ -362,12 +404,8 @@ type TransportManagementVpnInterfaceEthernetFeatureState struct {
 	Ipv4IperfServerVariable pulumi.StringPtrInput
 	// Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 	Ipv4SecondaryAddresses TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayInput
-	// Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static` - Choices: `255.255.255.255`,
-	// `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`,
-	// `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`,
-	// `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`,
-	// `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`,
-	// `128.0.0.0`, `0.0.0.0`
+	// Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask pulumi.StringPtrInput
 	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 	Ipv4SubnetMaskVariable pulumi.StringPtrInput
@@ -375,9 +413,13 @@ type TransportManagementVpnInterfaceEthernetFeatureState struct {
 	Ipv6Address pulumi.StringPtrInput
 	// Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
 	Ipv6AddressVariable pulumi.StringPtrInput
-	// IPv6 Configuration Type - Choices: `dynamic`, `static`, `none` - Default value: `none`
+	// IPv6 Configuration Type
+	//   - Choices: `dynamic`, `static`, `none`
+	//   - Default value: `none`
 	Ipv6ConfigurationType pulumi.StringPtrInput
-	// Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+	// Interval for interface load calculation
+	//   - Range: `30`-`600`
+	//   - Default value: `30`
 	LoadInterval pulumi.IntPtrInput
 	// Variable name
 	LoadIntervalVariable pulumi.StringPtrInput
@@ -385,7 +427,8 @@ type TransportManagementVpnInterfaceEthernetFeatureState struct {
 	MacAddress pulumi.StringPtrInput
 	// Variable name
 	MacAddressVariable pulumi.StringPtrInput
-	// Media type - Choices: `auto-select`, `rj45`, `sfp`
+	// Media type
+	//   - Choices: `auto-select`, `rj45`, `sfp`
 	MediaType pulumi.StringPtrInput
 	// Variable name
 	MediaTypeVariable pulumi.StringPtrInput
@@ -395,11 +438,13 @@ type TransportManagementVpnInterfaceEthernetFeatureState struct {
 	Shutdown pulumi.BoolPtrInput
 	// Variable name
 	ShutdownVariable pulumi.StringPtrInput
-	// Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+	// Set interface speed
+	//   - Choices: `10`, `100`, `1000`, `2500`, `10000`
 	Speed pulumi.StringPtrInput
 	// Variable name
 	SpeedVariable pulumi.StringPtrInput
-	// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TcpMss pulumi.IntPtrInput
 	// Variable name
 	TcpMssVariable pulumi.StringPtrInput
@@ -416,7 +461,9 @@ func (TransportManagementVpnInterfaceEthernetFeatureState) ElementType() reflect
 type transportManagementVpnInterfaceEthernetFeatureArgs struct {
 	// Configure ARP entries
 	ArpEntries []TransportManagementVpnInterfaceEthernetFeatureArpEntry `pulumi:"arpEntries"`
-	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
+	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+	//   - Range: `0`-`2147483`
+	//   - Default value: `1200`
 	ArpTimeout *int `pulumi:"arpTimeout"`
 	// Variable name
 	ArpTimeoutVariable *string `pulumi:"arpTimeoutVariable"`
@@ -426,7 +473,8 @@ type transportManagementVpnInterfaceEthernetFeatureArgs struct {
 	AutonegotiateVariable *string `pulumi:"autonegotiateVariable"`
 	// The description of the Feature
 	Description *string `pulumi:"description"`
-	// Duplex mode - Choices: `full`, `half`, `auto`
+	// Duplex mode
+	//   - Choices: `full`, `half`, `auto`
 	Duplex *string `pulumi:"duplex"`
 	// Variable name
 	DuplexVariable *string `pulumi:"duplexVariable"`
@@ -434,26 +482,31 @@ type transportManagementVpnInterfaceEthernetFeatureArgs struct {
 	EnableDhcpv6 *bool `pulumi:"enableDhcpv6"`
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`
-	// ICMP/ICMPv6 Redirect Disable - Default value: `true`
+	// ICMP/ICMPv6 Redirect Disable
+	//   - Default value: `true`
 	IcmpRedirectDisable *bool `pulumi:"icmpRedirectDisable"`
 	// Variable name
 	IcmpRedirectDisableVariable *string `pulumi:"icmpRedirectDisableVariable"`
 	InterfaceDescription        *string `pulumi:"interfaceDescription"`
 	// Variable name
 	InterfaceDescriptionVariable *string `pulumi:"interfaceDescriptionVariable"`
-	// Interface MTU - Range: `1500`-`9216` - Default value: `1500`
+	// Interface MTU
+	//   - Range: `1500`-`9216`
+	//   - Default value: `1500`
 	InterfaceMtu *int `pulumi:"interfaceMtu"`
 	// Variable name
 	InterfaceMtuVariable *string `pulumi:"interfaceMtuVariable"`
 	InterfaceName        *string `pulumi:"interfaceName"`
 	// Variable name
 	InterfaceNameVariable *string `pulumi:"interfaceNameVariable"`
-	// IP Directed-Broadcast - Default value: `false`
+	// IP Directed-Broadcast
+	//   - Default value: `false`
 	IpDirectedBroadcast *bool `pulumi:"ipDirectedBroadcast"`
 	// Variable name
 	IpDirectedBroadcastVariable *string `pulumi:"ipDirectedBroadcastVariable"`
-	// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces
-	// <576..2000> in bytes - Range: `576`-`9216` - Default value: `1500`
+	// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes
+	//   - Range: `576`-`9216`
+	//   - Default value: `1500`
 	IpMtu *int `pulumi:"ipMtu"`
 	// Variable name
 	IpMtuVariable *string `pulumi:"ipMtuVariable"`
@@ -461,14 +514,18 @@ type transportManagementVpnInterfaceEthernetFeatureArgs struct {
 	Ipv4Address *string `pulumi:"ipv4Address"`
 	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 	Ipv4AddressVariable *string `pulumi:"ipv4AddressVariable"`
-	// Interface auto detect bandwidth - Default value: `false`
+	// Interface auto detect bandwidth
+	//   - Default value: `false`
 	Ipv4AutoDetectBandwidth *bool `pulumi:"ipv4AutoDetectBandwidth"`
 	// Variable name
 	Ipv4AutoDetectBandwidthVariable *string `pulumi:"ipv4AutoDetectBandwidthVariable"`
-	// IPv4 Configuration Type - Choices: `dynamic`, `static` - Default value: `dynamic`
+	// IPv4 Configuration Type
+	//   - Choices: `dynamic`, `static`
+	//   - Default value: `dynamic`
 	Ipv4ConfigurationType *string `pulumi:"ipv4ConfigurationType"`
-	// DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic` - Range: `1`-`65536` - Default
-	// value: `1`
+	// DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
+	//   - Range: `1`-`65536`
+	//   - Default value: `1`
 	Ipv4DhcpDistance *int `pulumi:"ipv4DhcpDistance"`
 	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
 	Ipv4DhcpDistanceVariable *string `pulumi:"ipv4DhcpDistanceVariable"`
@@ -482,12 +539,8 @@ type transportManagementVpnInterfaceEthernetFeatureArgs struct {
 	Ipv4IperfServerVariable *string `pulumi:"ipv4IperfServerVariable"`
 	// Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 	Ipv4SecondaryAddresses []TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddress `pulumi:"ipv4SecondaryAddresses"`
-	// Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static` - Choices: `255.255.255.255`,
-	// `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`,
-	// `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`,
-	// `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`,
-	// `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`,
-	// `128.0.0.0`, `0.0.0.0`
+	// Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask *string `pulumi:"ipv4SubnetMask"`
 	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 	Ipv4SubnetMaskVariable *string `pulumi:"ipv4SubnetMaskVariable"`
@@ -495,9 +548,13 @@ type transportManagementVpnInterfaceEthernetFeatureArgs struct {
 	Ipv6Address *string `pulumi:"ipv6Address"`
 	// Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
 	Ipv6AddressVariable *string `pulumi:"ipv6AddressVariable"`
-	// IPv6 Configuration Type - Choices: `dynamic`, `static`, `none` - Default value: `none`
+	// IPv6 Configuration Type
+	//   - Choices: `dynamic`, `static`, `none`
+	//   - Default value: `none`
 	Ipv6ConfigurationType *string `pulumi:"ipv6ConfigurationType"`
-	// Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+	// Interval for interface load calculation
+	//   - Range: `30`-`600`
+	//   - Default value: `30`
 	LoadInterval *int `pulumi:"loadInterval"`
 	// Variable name
 	LoadIntervalVariable *string `pulumi:"loadIntervalVariable"`
@@ -505,7 +562,8 @@ type transportManagementVpnInterfaceEthernetFeatureArgs struct {
 	MacAddress *string `pulumi:"macAddress"`
 	// Variable name
 	MacAddressVariable *string `pulumi:"macAddressVariable"`
-	// Media type - Choices: `auto-select`, `rj45`, `sfp`
+	// Media type
+	//   - Choices: `auto-select`, `rj45`, `sfp`
 	MediaType *string `pulumi:"mediaType"`
 	// Variable name
 	MediaTypeVariable *string `pulumi:"mediaTypeVariable"`
@@ -515,11 +573,13 @@ type transportManagementVpnInterfaceEthernetFeatureArgs struct {
 	Shutdown *bool `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable *string `pulumi:"shutdownVariable"`
-	// Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+	// Set interface speed
+	//   - Choices: `10`, `100`, `1000`, `2500`, `10000`
 	Speed *string `pulumi:"speed"`
 	// Variable name
 	SpeedVariable *string `pulumi:"speedVariable"`
-	// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TcpMss *int `pulumi:"tcpMss"`
 	// Variable name
 	TcpMssVariable *string `pulumi:"tcpMssVariable"`
@@ -531,7 +591,9 @@ type transportManagementVpnInterfaceEthernetFeatureArgs struct {
 type TransportManagementVpnInterfaceEthernetFeatureArgs struct {
 	// Configure ARP entries
 	ArpEntries TransportManagementVpnInterfaceEthernetFeatureArpEntryArrayInput
-	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
+	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+	//   - Range: `0`-`2147483`
+	//   - Default value: `1200`
 	ArpTimeout pulumi.IntPtrInput
 	// Variable name
 	ArpTimeoutVariable pulumi.StringPtrInput
@@ -541,7 +603,8 @@ type TransportManagementVpnInterfaceEthernetFeatureArgs struct {
 	AutonegotiateVariable pulumi.StringPtrInput
 	// The description of the Feature
 	Description pulumi.StringPtrInput
-	// Duplex mode - Choices: `full`, `half`, `auto`
+	// Duplex mode
+	//   - Choices: `full`, `half`, `auto`
 	Duplex pulumi.StringPtrInput
 	// Variable name
 	DuplexVariable pulumi.StringPtrInput
@@ -549,26 +612,31 @@ type TransportManagementVpnInterfaceEthernetFeatureArgs struct {
 	EnableDhcpv6 pulumi.BoolPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringInput
-	// ICMP/ICMPv6 Redirect Disable - Default value: `true`
+	// ICMP/ICMPv6 Redirect Disable
+	//   - Default value: `true`
 	IcmpRedirectDisable pulumi.BoolPtrInput
 	// Variable name
 	IcmpRedirectDisableVariable pulumi.StringPtrInput
 	InterfaceDescription        pulumi.StringPtrInput
 	// Variable name
 	InterfaceDescriptionVariable pulumi.StringPtrInput
-	// Interface MTU - Range: `1500`-`9216` - Default value: `1500`
+	// Interface MTU
+	//   - Range: `1500`-`9216`
+	//   - Default value: `1500`
 	InterfaceMtu pulumi.IntPtrInput
 	// Variable name
 	InterfaceMtuVariable pulumi.StringPtrInput
 	InterfaceName        pulumi.StringPtrInput
 	// Variable name
 	InterfaceNameVariable pulumi.StringPtrInput
-	// IP Directed-Broadcast - Default value: `false`
+	// IP Directed-Broadcast
+	//   - Default value: `false`
 	IpDirectedBroadcast pulumi.BoolPtrInput
 	// Variable name
 	IpDirectedBroadcastVariable pulumi.StringPtrInput
-	// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces
-	// <576..2000> in bytes - Range: `576`-`9216` - Default value: `1500`
+	// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes
+	//   - Range: `576`-`9216`
+	//   - Default value: `1500`
 	IpMtu pulumi.IntPtrInput
 	// Variable name
 	IpMtuVariable pulumi.StringPtrInput
@@ -576,14 +644,18 @@ type TransportManagementVpnInterfaceEthernetFeatureArgs struct {
 	Ipv4Address pulumi.StringPtrInput
 	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 	Ipv4AddressVariable pulumi.StringPtrInput
-	// Interface auto detect bandwidth - Default value: `false`
+	// Interface auto detect bandwidth
+	//   - Default value: `false`
 	Ipv4AutoDetectBandwidth pulumi.BoolPtrInput
 	// Variable name
 	Ipv4AutoDetectBandwidthVariable pulumi.StringPtrInput
-	// IPv4 Configuration Type - Choices: `dynamic`, `static` - Default value: `dynamic`
+	// IPv4 Configuration Type
+	//   - Choices: `dynamic`, `static`
+	//   - Default value: `dynamic`
 	Ipv4ConfigurationType pulumi.StringPtrInput
-	// DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic` - Range: `1`-`65536` - Default
-	// value: `1`
+	// DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
+	//   - Range: `1`-`65536`
+	//   - Default value: `1`
 	Ipv4DhcpDistance pulumi.IntPtrInput
 	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
 	Ipv4DhcpDistanceVariable pulumi.StringPtrInput
@@ -597,12 +669,8 @@ type TransportManagementVpnInterfaceEthernetFeatureArgs struct {
 	Ipv4IperfServerVariable pulumi.StringPtrInput
 	// Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 	Ipv4SecondaryAddresses TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayInput
-	// Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static` - Choices: `255.255.255.255`,
-	// `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`,
-	// `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`,
-	// `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`,
-	// `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`,
-	// `128.0.0.0`, `0.0.0.0`
+	// Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask pulumi.StringPtrInput
 	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 	Ipv4SubnetMaskVariable pulumi.StringPtrInput
@@ -610,9 +678,13 @@ type TransportManagementVpnInterfaceEthernetFeatureArgs struct {
 	Ipv6Address pulumi.StringPtrInput
 	// Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
 	Ipv6AddressVariable pulumi.StringPtrInput
-	// IPv6 Configuration Type - Choices: `dynamic`, `static`, `none` - Default value: `none`
+	// IPv6 Configuration Type
+	//   - Choices: `dynamic`, `static`, `none`
+	//   - Default value: `none`
 	Ipv6ConfigurationType pulumi.StringPtrInput
-	// Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+	// Interval for interface load calculation
+	//   - Range: `30`-`600`
+	//   - Default value: `30`
 	LoadInterval pulumi.IntPtrInput
 	// Variable name
 	LoadIntervalVariable pulumi.StringPtrInput
@@ -620,7 +692,8 @@ type TransportManagementVpnInterfaceEthernetFeatureArgs struct {
 	MacAddress pulumi.StringPtrInput
 	// Variable name
 	MacAddressVariable pulumi.StringPtrInput
-	// Media type - Choices: `auto-select`, `rj45`, `sfp`
+	// Media type
+	//   - Choices: `auto-select`, `rj45`, `sfp`
 	MediaType pulumi.StringPtrInput
 	// Variable name
 	MediaTypeVariable pulumi.StringPtrInput
@@ -630,11 +703,13 @@ type TransportManagementVpnInterfaceEthernetFeatureArgs struct {
 	Shutdown pulumi.BoolPtrInput
 	// Variable name
 	ShutdownVariable pulumi.StringPtrInput
-	// Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+	// Set interface speed
+	//   - Choices: `10`, `100`, `1000`, `2500`, `10000`
 	Speed pulumi.StringPtrInput
 	// Variable name
 	SpeedVariable pulumi.StringPtrInput
-	// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TcpMss pulumi.IntPtrInput
 	// Variable name
 	TcpMssVariable pulumi.StringPtrInput
@@ -736,7 +811,9 @@ func (o TransportManagementVpnInterfaceEthernetFeatureOutput) ArpEntries() Trans
 	}).(TransportManagementVpnInterfaceEthernetFeatureArpEntryArrayOutput)
 }
 
-// Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
+// Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+//   - Range: `0`-`2147483`
+//   - Default value: `1200`
 func (o TransportManagementVpnInterfaceEthernetFeatureOutput) ArpTimeout() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *TransportManagementVpnInterfaceEthernetFeature) pulumi.IntPtrOutput { return v.ArpTimeout }).(pulumi.IntPtrOutput)
 }
@@ -765,7 +842,8 @@ func (o TransportManagementVpnInterfaceEthernetFeatureOutput) Description() pulu
 	return o.ApplyT(func(v *TransportManagementVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// Duplex mode - Choices: `full`, `half`, `auto`
+// Duplex mode
+//   - Choices: `full`, `half`, `auto`
 func (o TransportManagementVpnInterfaceEthernetFeatureOutput) Duplex() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportManagementVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.Duplex }).(pulumi.StringPtrOutput)
 }
@@ -787,7 +865,8 @@ func (o TransportManagementVpnInterfaceEthernetFeatureOutput) FeatureProfileId()
 	return o.ApplyT(func(v *TransportManagementVpnInterfaceEthernetFeature) pulumi.StringOutput { return v.FeatureProfileId }).(pulumi.StringOutput)
 }
 
-// ICMP/ICMPv6 Redirect Disable - Default value: `true`
+// ICMP/ICMPv6 Redirect Disable
+//   - Default value: `true`
 func (o TransportManagementVpnInterfaceEthernetFeatureOutput) IcmpRedirectDisable() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportManagementVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput {
 		return v.IcmpRedirectDisable
@@ -814,7 +893,9 @@ func (o TransportManagementVpnInterfaceEthernetFeatureOutput) InterfaceDescripti
 	}).(pulumi.StringPtrOutput)
 }
 
-// Interface MTU - Range: `1500`-`9216` - Default value: `1500`
+// Interface MTU
+//   - Range: `1500`-`9216`
+//   - Default value: `1500`
 func (o TransportManagementVpnInterfaceEthernetFeatureOutput) InterfaceMtu() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *TransportManagementVpnInterfaceEthernetFeature) pulumi.IntPtrOutput { return v.InterfaceMtu }).(pulumi.IntPtrOutput)
 }
@@ -837,7 +918,8 @@ func (o TransportManagementVpnInterfaceEthernetFeatureOutput) InterfaceNameVaria
 	}).(pulumi.StringPtrOutput)
 }
 
-// IP Directed-Broadcast - Default value: `false`
+// IP Directed-Broadcast
+//   - Default value: `false`
 func (o TransportManagementVpnInterfaceEthernetFeatureOutput) IpDirectedBroadcast() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportManagementVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput {
 		return v.IpDirectedBroadcast
@@ -851,8 +933,9 @@ func (o TransportManagementVpnInterfaceEthernetFeatureOutput) IpDirectedBroadcas
 	}).(pulumi.StringPtrOutput)
 }
 
-// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces
-// <576..2000> in bytes - Range: `576`-`9216` - Default value: `1500`
+// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes
+//   - Range: `576`-`9216`
+//   - Default value: `1500`
 func (o TransportManagementVpnInterfaceEthernetFeatureOutput) IpMtu() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *TransportManagementVpnInterfaceEthernetFeature) pulumi.IntPtrOutput { return v.IpMtu }).(pulumi.IntPtrOutput)
 }
@@ -874,7 +957,8 @@ func (o TransportManagementVpnInterfaceEthernetFeatureOutput) Ipv4AddressVariabl
 	}).(pulumi.StringPtrOutput)
 }
 
-// Interface auto detect bandwidth - Default value: `false`
+// Interface auto detect bandwidth
+//   - Default value: `false`
 func (o TransportManagementVpnInterfaceEthernetFeatureOutput) Ipv4AutoDetectBandwidth() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportManagementVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput {
 		return v.Ipv4AutoDetectBandwidth
@@ -888,15 +972,18 @@ func (o TransportManagementVpnInterfaceEthernetFeatureOutput) Ipv4AutoDetectBand
 	}).(pulumi.StringPtrOutput)
 }
 
-// IPv4 Configuration Type - Choices: `dynamic`, `static` - Default value: `dynamic`
+// IPv4 Configuration Type
+//   - Choices: `dynamic`, `static`
+//   - Default value: `dynamic`
 func (o TransportManagementVpnInterfaceEthernetFeatureOutput) Ipv4ConfigurationType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportManagementVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.Ipv4ConfigurationType
 	}).(pulumi.StringPtrOutput)
 }
 
-// DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic` - Range: `1`-`65536` - Default
-// value: `1`
+// DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
+//   - Range: `1`-`65536`
+//   - Default value: `1`
 func (o TransportManagementVpnInterfaceEthernetFeatureOutput) Ipv4DhcpDistance() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *TransportManagementVpnInterfaceEthernetFeature) pulumi.IntPtrOutput { return v.Ipv4DhcpDistance }).(pulumi.IntPtrOutput)
 }
@@ -943,12 +1030,8 @@ func (o TransportManagementVpnInterfaceEthernetFeatureOutput) Ipv4SecondaryAddre
 	}).(TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput)
 }
 
-// Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static` - Choices: `255.255.255.255`,
-// `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`,
-// `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`,
-// `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`,
-// `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`,
-// `128.0.0.0`, `0.0.0.0`
+// Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 func (o TransportManagementVpnInterfaceEthernetFeatureOutput) Ipv4SubnetMask() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportManagementVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.Ipv4SubnetMask
@@ -974,14 +1057,18 @@ func (o TransportManagementVpnInterfaceEthernetFeatureOutput) Ipv6AddressVariabl
 	}).(pulumi.StringPtrOutput)
 }
 
-// IPv6 Configuration Type - Choices: `dynamic`, `static`, `none` - Default value: `none`
+// IPv6 Configuration Type
+//   - Choices: `dynamic`, `static`, `none`
+//   - Default value: `none`
 func (o TransportManagementVpnInterfaceEthernetFeatureOutput) Ipv6ConfigurationType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportManagementVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.Ipv6ConfigurationType
 	}).(pulumi.StringPtrOutput)
 }
 
-// Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+// Interval for interface load calculation
+//   - Range: `30`-`600`
+//   - Default value: `30`
 func (o TransportManagementVpnInterfaceEthernetFeatureOutput) LoadInterval() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *TransportManagementVpnInterfaceEthernetFeature) pulumi.IntPtrOutput { return v.LoadInterval }).(pulumi.IntPtrOutput)
 }
@@ -1005,7 +1092,8 @@ func (o TransportManagementVpnInterfaceEthernetFeatureOutput) MacAddressVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Media type - Choices: `auto-select`, `rj45`, `sfp`
+// Media type
+//   - Choices: `auto-select`, `rj45`, `sfp`
 func (o TransportManagementVpnInterfaceEthernetFeatureOutput) MediaType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportManagementVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.MediaType }).(pulumi.StringPtrOutput)
 }
@@ -1034,7 +1122,8 @@ func (o TransportManagementVpnInterfaceEthernetFeatureOutput) ShutdownVariable()
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+// Set interface speed
+//   - Choices: `10`, `100`, `1000`, `2500`, `10000`
 func (o TransportManagementVpnInterfaceEthernetFeatureOutput) Speed() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportManagementVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.Speed }).(pulumi.StringPtrOutput)
 }
@@ -1044,7 +1133,8 @@ func (o TransportManagementVpnInterfaceEthernetFeatureOutput) SpeedVariable() pu
 	return o.ApplyT(func(v *TransportManagementVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.SpeedVariable }).(pulumi.StringPtrOutput)
 }
 
-// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+// TCP MSS on SYN packets, in bytes
+//   - Range: `500`-`1460`
 func (o TransportManagementVpnInterfaceEthernetFeatureOutput) TcpMss() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *TransportManagementVpnInterfaceEthernetFeature) pulumi.IntPtrOutput { return v.TcpMss }).(pulumi.IntPtrOutput)
 }

@@ -65,43 +65,44 @@ export class FeatureDeviceTemplate extends pulumi.CustomResource {
     /**
      * The description of the device template
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
-     * The device role - Choices: `sdwan-edge`, `service-node`
+     * The device role
+     *   - Choices: `sdwan-edge`, `service-node`
      */
-    public readonly deviceRole!: pulumi.Output<string | undefined>;
+    declare public readonly deviceRole: pulumi.Output<string | undefined>;
     /**
      * The device type (e.g., `vedge-ISR-4331`)
      */
-    public readonly deviceType!: pulumi.Output<string>;
+    declare public readonly deviceType: pulumi.Output<string>;
     /**
      * List of general templates
      */
-    public readonly generalTemplates!: pulumi.Output<outputs.FeatureDeviceTemplateGeneralTemplate[] | undefined>;
+    declare public readonly generalTemplates: pulumi.Output<outputs.FeatureDeviceTemplateGeneralTemplate[] | undefined>;
     /**
      * The name of the device template
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The policy ID
      */
-    public readonly policyId!: pulumi.Output<string | undefined>;
+    declare public readonly policyId: pulumi.Output<string | undefined>;
     /**
      * The policy version
      */
-    public readonly policyVersion!: pulumi.Output<number | undefined>;
+    declare public readonly policyVersion: pulumi.Output<number | undefined>;
     /**
      * The security policy ID
      */
-    public readonly securityPolicyId!: pulumi.Output<string | undefined>;
+    declare public readonly securityPolicyId: pulumi.Output<string | undefined>;
     /**
      * The security policy version
      */
-    public readonly securityPolicyVersion!: pulumi.Output<number | undefined>;
+    declare public readonly securityPolicyVersion: pulumi.Output<number | undefined>;
     /**
      * The version of the object
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a FeatureDeviceTemplate resource with the given unique name, arguments, and options.
@@ -116,33 +117,33 @@ export class FeatureDeviceTemplate extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as FeatureDeviceTemplateState | undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["deviceRole"] = state ? state.deviceRole : undefined;
-            resourceInputs["deviceType"] = state ? state.deviceType : undefined;
-            resourceInputs["generalTemplates"] = state ? state.generalTemplates : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["policyId"] = state ? state.policyId : undefined;
-            resourceInputs["policyVersion"] = state ? state.policyVersion : undefined;
-            resourceInputs["securityPolicyId"] = state ? state.securityPolicyId : undefined;
-            resourceInputs["securityPolicyVersion"] = state ? state.securityPolicyVersion : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["deviceRole"] = state?.deviceRole;
+            resourceInputs["deviceType"] = state?.deviceType;
+            resourceInputs["generalTemplates"] = state?.generalTemplates;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["policyId"] = state?.policyId;
+            resourceInputs["policyVersion"] = state?.policyVersion;
+            resourceInputs["securityPolicyId"] = state?.securityPolicyId;
+            resourceInputs["securityPolicyVersion"] = state?.securityPolicyVersion;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as FeatureDeviceTemplateArgs | undefined;
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            if ((!args || args.deviceType === undefined) && !opts.urn) {
+            if (args?.deviceType === undefined && !opts.urn) {
                 throw new Error("Missing required property 'deviceType'");
             }
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["deviceRole"] = args ? args.deviceRole : undefined;
-            resourceInputs["deviceType"] = args ? args.deviceType : undefined;
-            resourceInputs["generalTemplates"] = args ? args.generalTemplates : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["policyId"] = args ? args.policyId : undefined;
-            resourceInputs["policyVersion"] = args ? args.policyVersion : undefined;
-            resourceInputs["securityPolicyId"] = args ? args.securityPolicyId : undefined;
-            resourceInputs["securityPolicyVersion"] = args ? args.securityPolicyVersion : undefined;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["deviceRole"] = args?.deviceRole;
+            resourceInputs["deviceType"] = args?.deviceType;
+            resourceInputs["generalTemplates"] = args?.generalTemplates;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["policyId"] = args?.policyId;
+            resourceInputs["policyVersion"] = args?.policyVersion;
+            resourceInputs["securityPolicyId"] = args?.securityPolicyId;
+            resourceInputs["securityPolicyVersion"] = args?.securityPolicyVersion;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -159,7 +160,8 @@ export interface FeatureDeviceTemplateState {
      */
     description?: pulumi.Input<string>;
     /**
-     * The device role - Choices: `sdwan-edge`, `service-node`
+     * The device role
+     *   - Choices: `sdwan-edge`, `service-node`
      */
     deviceRole?: pulumi.Input<string>;
     /**
@@ -205,7 +207,8 @@ export interface FeatureDeviceTemplateArgs {
      */
     description: pulumi.Input<string>;
     /**
-     * The device role - Choices: `sdwan-edge`, `service-node`
+     * The device role
+     *   - Choices: `sdwan-edge`, `service-node`
      */
     deviceRole?: pulumi.Input<string>;
     /**

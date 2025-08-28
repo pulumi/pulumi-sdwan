@@ -118,14 +118,16 @@ public class GpsFeatureTemplate extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.destinationAddressVariable);
     }
     /**
-     * Destination port - Range: `1`-`65535`
+     * Destination port
+     *   - Range: `1`-`65535`
      * 
      */
     @Export(name="destinationPort", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> destinationPort;
 
     /**
-     * @return Destination port - Range: `1`-`65535`
+     * @return Destination port
+     *   - Range: `1`-`65535`
      * 
      */
     public Output<Optional<Integer>> destinationPort() {
@@ -146,32 +148,32 @@ public class GpsFeatureTemplate extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.destinationPortVariable);
     }
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Export(name="deviceTypes", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Output<List<String>> deviceTypes() {
         return this.deviceTypes;
     }
     /**
-     * Enable/disable GPS - Default value: `false`
+     * Enable/disable GPS
+     *   - Default value: `false`
      * 
      */
     @Export(name="enable", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> enable;
 
     /**
-     * @return Enable/disable GPS - Default value: `false`
+     * @return Enable/disable GPS
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> enable() {
@@ -192,14 +194,18 @@ public class GpsFeatureTemplate extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.enableVariable);
     }
     /**
-     * Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+     * Select GPS mode
+     *   - Choices: `ms-based`, `standalone`
+     *   - Default value: `ms-based`
      * 
      */
     @Export(name="gpsMode", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> gpsMode;
 
     /**
-     * @return Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+     * @return Select GPS mode
+     *   - Choices: `ms-based`, `standalone`
+     *   - Default value: `ms-based`
      * 
      */
     public Output<Optional<String>> gpsMode() {
@@ -234,14 +240,16 @@ public class GpsFeatureTemplate extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * Enable/disable NMEA data - Default value: `false`
+     * Enable/disable NMEA data
+     *   - Default value: `false`
      * 
      */
     @Export(name="nmea", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> nmea;
 
     /**
-     * @return Enable/disable NMEA data - Default value: `false`
+     * @return Enable/disable NMEA data
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> nmea() {

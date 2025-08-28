@@ -109,14 +109,16 @@ public final class TransportT1E1ControllerFeatureArgs extends com.pulumi.resourc
     }
 
     /**
-     * Card Type - Choices: `e1`, `t1`
+     * Card Type
+     *   - Choices: `e1`, `t1`
      * 
      */
     @Import(name="type", required=true)
     private Output<String> type;
 
     /**
-     * @return Card Type - Choices: `e1`, `t1`
+     * @return Card Type
+     *   - Choices: `e1`, `t1`
      * 
      */
     public Output<String> type() {
@@ -290,7 +292,8 @@ public final class TransportT1E1ControllerFeatureArgs extends com.pulumi.resourc
         }
 
         /**
-         * @param type Card Type - Choices: `e1`, `t1`
+         * @param type Card Type
+         *   - Choices: `e1`, `t1`
          * 
          * @return builder
          * 
@@ -301,7 +304,8 @@ public final class TransportT1E1ControllerFeatureArgs extends com.pulumi.resourc
         }
 
         /**
-         * @param type Card Type - Choices: `e1`, `t1`
+         * @param type Card Type
+         *   - Choices: `e1`, `t1`
          * 
          * @return builder
          * 

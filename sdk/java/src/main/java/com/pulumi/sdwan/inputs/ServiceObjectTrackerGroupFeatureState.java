@@ -64,14 +64,16 @@ public final class ServiceObjectTrackerGroupFeatureState extends com.pulumi.reso
     }
 
     /**
-     * Object ID - Range: `1`-`1000`
+     * Object ID
+     *   - Range: `1`-`1000`
      * 
      */
     @Import(name="objectTrackerId")
     private @Nullable Output<Integer> objectTrackerId;
 
     /**
-     * @return Object ID - Range: `1`-`1000`
+     * @return Object ID
+     *   - Range: `1`-`1000`
      * 
      */
     public Optional<Output<Integer>> objectTrackerId() {
@@ -94,14 +96,18 @@ public final class ServiceObjectTrackerGroupFeatureState extends com.pulumi.reso
     }
 
     /**
-     * tracker ref list criteria boolean and or - Choices: `and`, `or` - Default value: `or`
+     * tracker ref list criteria boolean and or
+     *   - Choices: `and`, `or`
+     *   - Default value: `or`
      * 
      */
     @Import(name="reachable")
     private @Nullable Output<String> reachable;
 
     /**
-     * @return tracker ref list criteria boolean and or - Choices: `and`, `or` - Default value: `or`
+     * @return tracker ref list criteria boolean and or
+     *   - Choices: `and`, `or`
+     *   - Default value: `or`
      * 
      */
     public Optional<Output<String>> reachable() {
@@ -249,7 +255,8 @@ public final class ServiceObjectTrackerGroupFeatureState extends com.pulumi.reso
         }
 
         /**
-         * @param objectTrackerId Object ID - Range: `1`-`1000`
+         * @param objectTrackerId Object ID
+         *   - Range: `1`-`1000`
          * 
          * @return builder
          * 
@@ -260,7 +267,8 @@ public final class ServiceObjectTrackerGroupFeatureState extends com.pulumi.reso
         }
 
         /**
-         * @param objectTrackerId Object ID - Range: `1`-`1000`
+         * @param objectTrackerId Object ID
+         *   - Range: `1`-`1000`
          * 
          * @return builder
          * 
@@ -291,7 +299,9 @@ public final class ServiceObjectTrackerGroupFeatureState extends com.pulumi.reso
         }
 
         /**
-         * @param reachable tracker ref list criteria boolean and or - Choices: `and`, `or` - Default value: `or`
+         * @param reachable tracker ref list criteria boolean and or
+         *   - Choices: `and`, `or`
+         *   - Default value: `or`
          * 
          * @return builder
          * 
@@ -302,7 +312,9 @@ public final class ServiceObjectTrackerGroupFeatureState extends com.pulumi.reso
         }
 
         /**
-         * @param reachable tracker ref list criteria boolean and or - Choices: `and`, `or` - Default value: `or`
+         * @param reachable tracker ref list criteria boolean and or
+         *   - Choices: `and`, `or`
+         *   - Default value: `or`
          * 
          * @return builder
          * 

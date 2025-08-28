@@ -27,11 +27,13 @@ type CedgeAaaFeatureTemplate struct {
 
 	// Configure the accounting rules
 	AccountingRules CedgeAaaFeatureTemplateAccountingRuleArrayOutput `pulumi:"accountingRules"`
-	// For configuration mode commands. - Default value: `false`
+	// For configuration mode commands.
+	//   - Default value: `false`
 	AuthorizationConfigCommands pulumi.BoolPtrOutput `pulumi:"authorizationConfigCommands"`
 	// Variable name
 	AuthorizationConfigCommandsVariable pulumi.StringPtrOutput `pulumi:"authorizationConfigCommandsVariable"`
-	// For enabling console authorization - Default value: `false`
+	// For enabling console authorization
+	//   - Default value: `false`
 	AuthorizationConsole pulumi.BoolPtrOutput `pulumi:"authorizationConsole"`
 	// Variable name
 	AuthorizationConsoleVariable pulumi.StringPtrOutput `pulumi:"authorizationConsoleVariable"`
@@ -39,15 +41,16 @@ type CedgeAaaFeatureTemplate struct {
 	AuthorizationRules CedgeAaaFeatureTemplateAuthorizationRuleArrayOutput `pulumi:"authorizationRules"`
 	// The description of the feature template
 	Description pulumi.StringOutput `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayOutput `pulumi:"deviceTypes"`
-	// Accounting configurations parameters - Default value: `false`
+	// Accounting configurations parameters
+	//   - Default value: `false`
 	Dot1xAccounting pulumi.BoolPtrOutput `pulumi:"dot1xAccounting"`
 	// Variable name
 	Dot1xAccountingVariable pulumi.StringPtrOutput `pulumi:"dot1xAccountingVariable"`
-	// Authentication configurations parameters - Default value: `false`
+	// Authentication configurations parameters
+	//   - Default value: `false`
 	Dot1xAuthentication pulumi.BoolPtrOutput `pulumi:"dot1xAuthentication"`
 	// Variable name
 	Dot1xAuthenticationVariable pulumi.StringPtrOutput `pulumi:"dot1xAuthenticationVariable"`
@@ -55,15 +58,21 @@ type CedgeAaaFeatureTemplate struct {
 	Name pulumi.StringOutput `pulumi:"name"`
 	// Specify a RADIUS client
 	RadiusClients CedgeAaaFeatureTemplateRadiusClientArrayOutput `pulumi:"radiusClients"`
-	// Authentication Type - Choices: `any`, `all`, `session-key` - Default value: `any`
+	// Authentication Type
+	//   - Choices: `any`, `all`, `session-key`
+	//   - Default value: `any`
 	RadiusDynamicAuthorAuthenticationType pulumi.StringPtrOutput `pulumi:"radiusDynamicAuthorAuthenticationType"`
 	// Variable name
 	RadiusDynamicAuthorAuthenticationTypeVariable pulumi.StringPtrOutput `pulumi:"radiusDynamicAuthorAuthenticationTypeVariable"`
-	// Domain Stripping - Choices: `yes`, `no`, `right-to-left` - Default value: `no`
+	// Domain Stripping
+	//   - Choices: `yes`, `no`, `right-to-left`
+	//   - Default value: `no`
 	RadiusDynamicAuthorDomainStripping pulumi.StringPtrOutput `pulumi:"radiusDynamicAuthorDomainStripping"`
 	// Variable name
 	RadiusDynamicAuthorDomainStrippingVariable pulumi.StringPtrOutput `pulumi:"radiusDynamicAuthorDomainStrippingVariable"`
-	// Specify Radius Dynamic Author Port - Range: `0`-`65535` - Default value: `1700`
+	// Specify Radius Dynamic Author Port
+	//   - Range: `0`-`65535`
+	//   - Default value: `1700`
 	RadiusDynamicAuthorPort pulumi.IntPtrOutput `pulumi:"radiusDynamicAuthorPort"`
 	// Variable name
 	RadiusDynamicAuthorPortVariable pulumi.StringPtrOutput `pulumi:"radiusDynamicAuthorPortVariable"`
@@ -79,7 +88,8 @@ type CedgeAaaFeatureTemplate struct {
 	RadiusTrustsecCtsAuthorizationListVariable pulumi.StringPtrOutput `pulumi:"radiusTrustsecCtsAuthorizationListVariable"`
 	// RADIUS trustsec group
 	RadiusTrustsecGroup pulumi.StringPtrOutput `pulumi:"radiusTrustsecGroup"`
-	// ServerGroups priority order - Default value: `local`
+	// ServerGroups priority order
+	//   - Default value: `local`
 	ServerGroupsPriorityOrder pulumi.StringPtrOutput `pulumi:"serverGroupsPriorityOrder"`
 	// Configure the TACACS serverGroup
 	TacacsServerGroups CedgeAaaFeatureTemplateTacacsServerGroupArrayOutput `pulumi:"tacacsServerGroups"`
@@ -129,11 +139,13 @@ func GetCedgeAaaFeatureTemplate(ctx *pulumi.Context,
 type cedgeAaaFeatureTemplateState struct {
 	// Configure the accounting rules
 	AccountingRules []CedgeAaaFeatureTemplateAccountingRule `pulumi:"accountingRules"`
-	// For configuration mode commands. - Default value: `false`
+	// For configuration mode commands.
+	//   - Default value: `false`
 	AuthorizationConfigCommands *bool `pulumi:"authorizationConfigCommands"`
 	// Variable name
 	AuthorizationConfigCommandsVariable *string `pulumi:"authorizationConfigCommandsVariable"`
-	// For enabling console authorization - Default value: `false`
+	// For enabling console authorization
+	//   - Default value: `false`
 	AuthorizationConsole *bool `pulumi:"authorizationConsole"`
 	// Variable name
 	AuthorizationConsoleVariable *string `pulumi:"authorizationConsoleVariable"`
@@ -141,15 +153,16 @@ type cedgeAaaFeatureTemplateState struct {
 	AuthorizationRules []CedgeAaaFeatureTemplateAuthorizationRule `pulumi:"authorizationRules"`
 	// The description of the feature template
 	Description *string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
-	// Accounting configurations parameters - Default value: `false`
+	// Accounting configurations parameters
+	//   - Default value: `false`
 	Dot1xAccounting *bool `pulumi:"dot1xAccounting"`
 	// Variable name
 	Dot1xAccountingVariable *string `pulumi:"dot1xAccountingVariable"`
-	// Authentication configurations parameters - Default value: `false`
+	// Authentication configurations parameters
+	//   - Default value: `false`
 	Dot1xAuthentication *bool `pulumi:"dot1xAuthentication"`
 	// Variable name
 	Dot1xAuthenticationVariable *string `pulumi:"dot1xAuthenticationVariable"`
@@ -157,15 +170,21 @@ type cedgeAaaFeatureTemplateState struct {
 	Name *string `pulumi:"name"`
 	// Specify a RADIUS client
 	RadiusClients []CedgeAaaFeatureTemplateRadiusClient `pulumi:"radiusClients"`
-	// Authentication Type - Choices: `any`, `all`, `session-key` - Default value: `any`
+	// Authentication Type
+	//   - Choices: `any`, `all`, `session-key`
+	//   - Default value: `any`
 	RadiusDynamicAuthorAuthenticationType *string `pulumi:"radiusDynamicAuthorAuthenticationType"`
 	// Variable name
 	RadiusDynamicAuthorAuthenticationTypeVariable *string `pulumi:"radiusDynamicAuthorAuthenticationTypeVariable"`
-	// Domain Stripping - Choices: `yes`, `no`, `right-to-left` - Default value: `no`
+	// Domain Stripping
+	//   - Choices: `yes`, `no`, `right-to-left`
+	//   - Default value: `no`
 	RadiusDynamicAuthorDomainStripping *string `pulumi:"radiusDynamicAuthorDomainStripping"`
 	// Variable name
 	RadiusDynamicAuthorDomainStrippingVariable *string `pulumi:"radiusDynamicAuthorDomainStrippingVariable"`
-	// Specify Radius Dynamic Author Port - Range: `0`-`65535` - Default value: `1700`
+	// Specify Radius Dynamic Author Port
+	//   - Range: `0`-`65535`
+	//   - Default value: `1700`
 	RadiusDynamicAuthorPort *int `pulumi:"radiusDynamicAuthorPort"`
 	// Variable name
 	RadiusDynamicAuthorPortVariable *string `pulumi:"radiusDynamicAuthorPortVariable"`
@@ -181,7 +200,8 @@ type cedgeAaaFeatureTemplateState struct {
 	RadiusTrustsecCtsAuthorizationListVariable *string `pulumi:"radiusTrustsecCtsAuthorizationListVariable"`
 	// RADIUS trustsec group
 	RadiusTrustsecGroup *string `pulumi:"radiusTrustsecGroup"`
-	// ServerGroups priority order - Default value: `local`
+	// ServerGroups priority order
+	//   - Default value: `local`
 	ServerGroupsPriorityOrder *string `pulumi:"serverGroupsPriorityOrder"`
 	// Configure the TACACS serverGroup
 	TacacsServerGroups []CedgeAaaFeatureTemplateTacacsServerGroup `pulumi:"tacacsServerGroups"`
@@ -196,11 +216,13 @@ type cedgeAaaFeatureTemplateState struct {
 type CedgeAaaFeatureTemplateState struct {
 	// Configure the accounting rules
 	AccountingRules CedgeAaaFeatureTemplateAccountingRuleArrayInput
-	// For configuration mode commands. - Default value: `false`
+	// For configuration mode commands.
+	//   - Default value: `false`
 	AuthorizationConfigCommands pulumi.BoolPtrInput
 	// Variable name
 	AuthorizationConfigCommandsVariable pulumi.StringPtrInput
-	// For enabling console authorization - Default value: `false`
+	// For enabling console authorization
+	//   - Default value: `false`
 	AuthorizationConsole pulumi.BoolPtrInput
 	// Variable name
 	AuthorizationConsoleVariable pulumi.StringPtrInput
@@ -208,15 +230,16 @@ type CedgeAaaFeatureTemplateState struct {
 	AuthorizationRules CedgeAaaFeatureTemplateAuthorizationRuleArrayInput
 	// The description of the feature template
 	Description pulumi.StringPtrInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
-	// Accounting configurations parameters - Default value: `false`
+	// Accounting configurations parameters
+	//   - Default value: `false`
 	Dot1xAccounting pulumi.BoolPtrInput
 	// Variable name
 	Dot1xAccountingVariable pulumi.StringPtrInput
-	// Authentication configurations parameters - Default value: `false`
+	// Authentication configurations parameters
+	//   - Default value: `false`
 	Dot1xAuthentication pulumi.BoolPtrInput
 	// Variable name
 	Dot1xAuthenticationVariable pulumi.StringPtrInput
@@ -224,15 +247,21 @@ type CedgeAaaFeatureTemplateState struct {
 	Name pulumi.StringPtrInput
 	// Specify a RADIUS client
 	RadiusClients CedgeAaaFeatureTemplateRadiusClientArrayInput
-	// Authentication Type - Choices: `any`, `all`, `session-key` - Default value: `any`
+	// Authentication Type
+	//   - Choices: `any`, `all`, `session-key`
+	//   - Default value: `any`
 	RadiusDynamicAuthorAuthenticationType pulumi.StringPtrInput
 	// Variable name
 	RadiusDynamicAuthorAuthenticationTypeVariable pulumi.StringPtrInput
-	// Domain Stripping - Choices: `yes`, `no`, `right-to-left` - Default value: `no`
+	// Domain Stripping
+	//   - Choices: `yes`, `no`, `right-to-left`
+	//   - Default value: `no`
 	RadiusDynamicAuthorDomainStripping pulumi.StringPtrInput
 	// Variable name
 	RadiusDynamicAuthorDomainStrippingVariable pulumi.StringPtrInput
-	// Specify Radius Dynamic Author Port - Range: `0`-`65535` - Default value: `1700`
+	// Specify Radius Dynamic Author Port
+	//   - Range: `0`-`65535`
+	//   - Default value: `1700`
 	RadiusDynamicAuthorPort pulumi.IntPtrInput
 	// Variable name
 	RadiusDynamicAuthorPortVariable pulumi.StringPtrInput
@@ -248,7 +277,8 @@ type CedgeAaaFeatureTemplateState struct {
 	RadiusTrustsecCtsAuthorizationListVariable pulumi.StringPtrInput
 	// RADIUS trustsec group
 	RadiusTrustsecGroup pulumi.StringPtrInput
-	// ServerGroups priority order - Default value: `local`
+	// ServerGroups priority order
+	//   - Default value: `local`
 	ServerGroupsPriorityOrder pulumi.StringPtrInput
 	// Configure the TACACS serverGroup
 	TacacsServerGroups CedgeAaaFeatureTemplateTacacsServerGroupArrayInput
@@ -267,11 +297,13 @@ func (CedgeAaaFeatureTemplateState) ElementType() reflect.Type {
 type cedgeAaaFeatureTemplateArgs struct {
 	// Configure the accounting rules
 	AccountingRules []CedgeAaaFeatureTemplateAccountingRule `pulumi:"accountingRules"`
-	// For configuration mode commands. - Default value: `false`
+	// For configuration mode commands.
+	//   - Default value: `false`
 	AuthorizationConfigCommands *bool `pulumi:"authorizationConfigCommands"`
 	// Variable name
 	AuthorizationConfigCommandsVariable *string `pulumi:"authorizationConfigCommandsVariable"`
-	// For enabling console authorization - Default value: `false`
+	// For enabling console authorization
+	//   - Default value: `false`
 	AuthorizationConsole *bool `pulumi:"authorizationConsole"`
 	// Variable name
 	AuthorizationConsoleVariable *string `pulumi:"authorizationConsoleVariable"`
@@ -279,15 +311,16 @@ type cedgeAaaFeatureTemplateArgs struct {
 	AuthorizationRules []CedgeAaaFeatureTemplateAuthorizationRule `pulumi:"authorizationRules"`
 	// The description of the feature template
 	Description string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
-	// Accounting configurations parameters - Default value: `false`
+	// Accounting configurations parameters
+	//   - Default value: `false`
 	Dot1xAccounting *bool `pulumi:"dot1xAccounting"`
 	// Variable name
 	Dot1xAccountingVariable *string `pulumi:"dot1xAccountingVariable"`
-	// Authentication configurations parameters - Default value: `false`
+	// Authentication configurations parameters
+	//   - Default value: `false`
 	Dot1xAuthentication *bool `pulumi:"dot1xAuthentication"`
 	// Variable name
 	Dot1xAuthenticationVariable *string `pulumi:"dot1xAuthenticationVariable"`
@@ -295,15 +328,21 @@ type cedgeAaaFeatureTemplateArgs struct {
 	Name *string `pulumi:"name"`
 	// Specify a RADIUS client
 	RadiusClients []CedgeAaaFeatureTemplateRadiusClient `pulumi:"radiusClients"`
-	// Authentication Type - Choices: `any`, `all`, `session-key` - Default value: `any`
+	// Authentication Type
+	//   - Choices: `any`, `all`, `session-key`
+	//   - Default value: `any`
 	RadiusDynamicAuthorAuthenticationType *string `pulumi:"radiusDynamicAuthorAuthenticationType"`
 	// Variable name
 	RadiusDynamicAuthorAuthenticationTypeVariable *string `pulumi:"radiusDynamicAuthorAuthenticationTypeVariable"`
-	// Domain Stripping - Choices: `yes`, `no`, `right-to-left` - Default value: `no`
+	// Domain Stripping
+	//   - Choices: `yes`, `no`, `right-to-left`
+	//   - Default value: `no`
 	RadiusDynamicAuthorDomainStripping *string `pulumi:"radiusDynamicAuthorDomainStripping"`
 	// Variable name
 	RadiusDynamicAuthorDomainStrippingVariable *string `pulumi:"radiusDynamicAuthorDomainStrippingVariable"`
-	// Specify Radius Dynamic Author Port - Range: `0`-`65535` - Default value: `1700`
+	// Specify Radius Dynamic Author Port
+	//   - Range: `0`-`65535`
+	//   - Default value: `1700`
 	RadiusDynamicAuthorPort *int `pulumi:"radiusDynamicAuthorPort"`
 	// Variable name
 	RadiusDynamicAuthorPortVariable *string `pulumi:"radiusDynamicAuthorPortVariable"`
@@ -319,7 +358,8 @@ type cedgeAaaFeatureTemplateArgs struct {
 	RadiusTrustsecCtsAuthorizationListVariable *string `pulumi:"radiusTrustsecCtsAuthorizationListVariable"`
 	// RADIUS trustsec group
 	RadiusTrustsecGroup *string `pulumi:"radiusTrustsecGroup"`
-	// ServerGroups priority order - Default value: `local`
+	// ServerGroups priority order
+	//   - Default value: `local`
 	ServerGroupsPriorityOrder *string `pulumi:"serverGroupsPriorityOrder"`
 	// Configure the TACACS serverGroup
 	TacacsServerGroups []CedgeAaaFeatureTemplateTacacsServerGroup `pulumi:"tacacsServerGroups"`
@@ -331,11 +371,13 @@ type cedgeAaaFeatureTemplateArgs struct {
 type CedgeAaaFeatureTemplateArgs struct {
 	// Configure the accounting rules
 	AccountingRules CedgeAaaFeatureTemplateAccountingRuleArrayInput
-	// For configuration mode commands. - Default value: `false`
+	// For configuration mode commands.
+	//   - Default value: `false`
 	AuthorizationConfigCommands pulumi.BoolPtrInput
 	// Variable name
 	AuthorizationConfigCommandsVariable pulumi.StringPtrInput
-	// For enabling console authorization - Default value: `false`
+	// For enabling console authorization
+	//   - Default value: `false`
 	AuthorizationConsole pulumi.BoolPtrInput
 	// Variable name
 	AuthorizationConsoleVariable pulumi.StringPtrInput
@@ -343,15 +385,16 @@ type CedgeAaaFeatureTemplateArgs struct {
 	AuthorizationRules CedgeAaaFeatureTemplateAuthorizationRuleArrayInput
 	// The description of the feature template
 	Description pulumi.StringInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
-	// Accounting configurations parameters - Default value: `false`
+	// Accounting configurations parameters
+	//   - Default value: `false`
 	Dot1xAccounting pulumi.BoolPtrInput
 	// Variable name
 	Dot1xAccountingVariable pulumi.StringPtrInput
-	// Authentication configurations parameters - Default value: `false`
+	// Authentication configurations parameters
+	//   - Default value: `false`
 	Dot1xAuthentication pulumi.BoolPtrInput
 	// Variable name
 	Dot1xAuthenticationVariable pulumi.StringPtrInput
@@ -359,15 +402,21 @@ type CedgeAaaFeatureTemplateArgs struct {
 	Name pulumi.StringPtrInput
 	// Specify a RADIUS client
 	RadiusClients CedgeAaaFeatureTemplateRadiusClientArrayInput
-	// Authentication Type - Choices: `any`, `all`, `session-key` - Default value: `any`
+	// Authentication Type
+	//   - Choices: `any`, `all`, `session-key`
+	//   - Default value: `any`
 	RadiusDynamicAuthorAuthenticationType pulumi.StringPtrInput
 	// Variable name
 	RadiusDynamicAuthorAuthenticationTypeVariable pulumi.StringPtrInput
-	// Domain Stripping - Choices: `yes`, `no`, `right-to-left` - Default value: `no`
+	// Domain Stripping
+	//   - Choices: `yes`, `no`, `right-to-left`
+	//   - Default value: `no`
 	RadiusDynamicAuthorDomainStripping pulumi.StringPtrInput
 	// Variable name
 	RadiusDynamicAuthorDomainStrippingVariable pulumi.StringPtrInput
-	// Specify Radius Dynamic Author Port - Range: `0`-`65535` - Default value: `1700`
+	// Specify Radius Dynamic Author Port
+	//   - Range: `0`-`65535`
+	//   - Default value: `1700`
 	RadiusDynamicAuthorPort pulumi.IntPtrInput
 	// Variable name
 	RadiusDynamicAuthorPortVariable pulumi.StringPtrInput
@@ -383,7 +432,8 @@ type CedgeAaaFeatureTemplateArgs struct {
 	RadiusTrustsecCtsAuthorizationListVariable pulumi.StringPtrInput
 	// RADIUS trustsec group
 	RadiusTrustsecGroup pulumi.StringPtrInput
-	// ServerGroups priority order - Default value: `local`
+	// ServerGroups priority order
+	//   - Default value: `local`
 	ServerGroupsPriorityOrder pulumi.StringPtrInput
 	// Configure the TACACS serverGroup
 	TacacsServerGroups CedgeAaaFeatureTemplateTacacsServerGroupArrayInput
@@ -485,7 +535,8 @@ func (o CedgeAaaFeatureTemplateOutput) AccountingRules() CedgeAaaFeatureTemplate
 	}).(CedgeAaaFeatureTemplateAccountingRuleArrayOutput)
 }
 
-// For configuration mode commands. - Default value: `false`
+// For configuration mode commands.
+//   - Default value: `false`
 func (o CedgeAaaFeatureTemplateOutput) AuthorizationConfigCommands() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CedgeAaaFeatureTemplate) pulumi.BoolPtrOutput { return v.AuthorizationConfigCommands }).(pulumi.BoolPtrOutput)
 }
@@ -495,7 +546,8 @@ func (o CedgeAaaFeatureTemplateOutput) AuthorizationConfigCommandsVariable() pul
 	return o.ApplyT(func(v *CedgeAaaFeatureTemplate) pulumi.StringPtrOutput { return v.AuthorizationConfigCommandsVariable }).(pulumi.StringPtrOutput)
 }
 
-// For enabling console authorization - Default value: `false`
+// For enabling console authorization
+//   - Default value: `false`
 func (o CedgeAaaFeatureTemplateOutput) AuthorizationConsole() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CedgeAaaFeatureTemplate) pulumi.BoolPtrOutput { return v.AuthorizationConsole }).(pulumi.BoolPtrOutput)
 }
@@ -517,14 +569,14 @@ func (o CedgeAaaFeatureTemplateOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v *CedgeAaaFeatureTemplate) pulumi.StringOutput { return v.Description }).(pulumi.StringOutput)
 }
 
-// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+// List of supported device types
+//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 func (o CedgeAaaFeatureTemplateOutput) DeviceTypes() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *CedgeAaaFeatureTemplate) pulumi.StringArrayOutput { return v.DeviceTypes }).(pulumi.StringArrayOutput)
 }
 
-// Accounting configurations parameters - Default value: `false`
+// Accounting configurations parameters
+//   - Default value: `false`
 func (o CedgeAaaFeatureTemplateOutput) Dot1xAccounting() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CedgeAaaFeatureTemplate) pulumi.BoolPtrOutput { return v.Dot1xAccounting }).(pulumi.BoolPtrOutput)
 }
@@ -534,7 +586,8 @@ func (o CedgeAaaFeatureTemplateOutput) Dot1xAccountingVariable() pulumi.StringPt
 	return o.ApplyT(func(v *CedgeAaaFeatureTemplate) pulumi.StringPtrOutput { return v.Dot1xAccountingVariable }).(pulumi.StringPtrOutput)
 }
 
-// Authentication configurations parameters - Default value: `false`
+// Authentication configurations parameters
+//   - Default value: `false`
 func (o CedgeAaaFeatureTemplateOutput) Dot1xAuthentication() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CedgeAaaFeatureTemplate) pulumi.BoolPtrOutput { return v.Dot1xAuthentication }).(pulumi.BoolPtrOutput)
 }
@@ -556,7 +609,9 @@ func (o CedgeAaaFeatureTemplateOutput) RadiusClients() CedgeAaaFeatureTemplateRa
 	}).(CedgeAaaFeatureTemplateRadiusClientArrayOutput)
 }
 
-// Authentication Type - Choices: `any`, `all`, `session-key` - Default value: `any`
+// Authentication Type
+//   - Choices: `any`, `all`, `session-key`
+//   - Default value: `any`
 func (o CedgeAaaFeatureTemplateOutput) RadiusDynamicAuthorAuthenticationType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CedgeAaaFeatureTemplate) pulumi.StringPtrOutput {
 		return v.RadiusDynamicAuthorAuthenticationType
@@ -570,7 +625,9 @@ func (o CedgeAaaFeatureTemplateOutput) RadiusDynamicAuthorAuthenticationTypeVari
 	}).(pulumi.StringPtrOutput)
 }
 
-// Domain Stripping - Choices: `yes`, `no`, `right-to-left` - Default value: `no`
+// Domain Stripping
+//   - Choices: `yes`, `no`, `right-to-left`
+//   - Default value: `no`
 func (o CedgeAaaFeatureTemplateOutput) RadiusDynamicAuthorDomainStripping() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CedgeAaaFeatureTemplate) pulumi.StringPtrOutput { return v.RadiusDynamicAuthorDomainStripping }).(pulumi.StringPtrOutput)
 }
@@ -582,7 +639,9 @@ func (o CedgeAaaFeatureTemplateOutput) RadiusDynamicAuthorDomainStrippingVariabl
 	}).(pulumi.StringPtrOutput)
 }
 
-// Specify Radius Dynamic Author Port - Range: `0`-`65535` - Default value: `1700`
+// Specify Radius Dynamic Author Port
+//   - Range: `0`-`65535`
+//   - Default value: `1700`
 func (o CedgeAaaFeatureTemplateOutput) RadiusDynamicAuthorPort() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CedgeAaaFeatureTemplate) pulumi.IntPtrOutput { return v.RadiusDynamicAuthorPort }).(pulumi.IntPtrOutput)
 }
@@ -626,7 +685,8 @@ func (o CedgeAaaFeatureTemplateOutput) RadiusTrustsecGroup() pulumi.StringPtrOut
 	return o.ApplyT(func(v *CedgeAaaFeatureTemplate) pulumi.StringPtrOutput { return v.RadiusTrustsecGroup }).(pulumi.StringPtrOutput)
 }
 
-// ServerGroups priority order - Default value: `local`
+// ServerGroups priority order
+//   - Default value: `local`
 func (o CedgeAaaFeatureTemplateOutput) ServerGroupsPriorityOrder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CedgeAaaFeatureTemplate) pulumi.StringPtrOutput { return v.ServerGroupsPriorityOrder }).(pulumi.StringPtrOutput)
 }

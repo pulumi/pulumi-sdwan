@@ -31,15 +31,17 @@ class CedgeMulticastFeatureTemplateArgs:
         """
         The set of arguments for constructing a CedgeMulticastFeatureTemplate resource.
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.bool] local_replicator: Replicator is local to this device - Default value: `false`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.bool] local_replicator: Replicator is local to this device
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] local_replicator_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.bool] spt_only: Shortest Path Tree (SPT) Only Mode - Default value: `false`
+        :param pulumi.Input[_builtins.bool] spt_only: Shortest Path Tree (SPT) Only Mode
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] spt_only_variable: Variable name
-        :param pulumi.Input[_builtins.int] threshold: Set number of joins per group the router supports - Range: `0`-`1000`
+        :param pulumi.Input[_builtins.int] threshold: Set number of joins per group the router supports
+                 - Range: `0`-`1000`
         :param pulumi.Input[_builtins.str] threshold_variable: Variable name
         """
         pulumi.set(__self__, "description", description)
@@ -75,9 +77,8 @@ class CedgeMulticastFeatureTemplateArgs:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -89,7 +90,8 @@ class CedgeMulticastFeatureTemplateArgs:
     @pulumi.getter(name="localReplicator")
     def local_replicator(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Replicator is local to this device - Default value: `false`
+        Replicator is local to this device
+          - Default value: `false`
         """
         return pulumi.get(self, "local_replicator")
 
@@ -125,7 +127,8 @@ class CedgeMulticastFeatureTemplateArgs:
     @pulumi.getter(name="sptOnly")
     def spt_only(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Shortest Path Tree (SPT) Only Mode - Default value: `false`
+        Shortest Path Tree (SPT) Only Mode
+          - Default value: `false`
         """
         return pulumi.get(self, "spt_only")
 
@@ -149,7 +152,8 @@ class CedgeMulticastFeatureTemplateArgs:
     @pulumi.getter
     def threshold(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set number of joins per group the router supports - Range: `0`-`1000`
+        Set number of joins per group the router supports
+          - Range: `0`-`1000`
         """
         return pulumi.get(self, "threshold")
 
@@ -187,16 +191,18 @@ class _CedgeMulticastFeatureTemplateState:
         """
         Input properties used for looking up and filtering CedgeMulticastFeatureTemplate resources.
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.bool] local_replicator: Replicator is local to this device - Default value: `false`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.bool] local_replicator: Replicator is local to this device
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] local_replicator_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.bool] spt_only: Shortest Path Tree (SPT) Only Mode - Default value: `false`
+        :param pulumi.Input[_builtins.bool] spt_only: Shortest Path Tree (SPT) Only Mode
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] spt_only_variable: Variable name
         :param pulumi.Input[_builtins.str] template_type: The template type
-        :param pulumi.Input[_builtins.int] threshold: Set number of joins per group the router supports - Range: `0`-`1000`
+        :param pulumi.Input[_builtins.int] threshold: Set number of joins per group the router supports
+                 - Range: `0`-`1000`
         :param pulumi.Input[_builtins.str] threshold_variable: Variable name
         :param pulumi.Input[_builtins.int] version: The version of the feature template
         """
@@ -239,9 +245,8 @@ class _CedgeMulticastFeatureTemplateState:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -253,7 +258,8 @@ class _CedgeMulticastFeatureTemplateState:
     @pulumi.getter(name="localReplicator")
     def local_replicator(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Replicator is local to this device - Default value: `false`
+        Replicator is local to this device
+          - Default value: `false`
         """
         return pulumi.get(self, "local_replicator")
 
@@ -289,7 +295,8 @@ class _CedgeMulticastFeatureTemplateState:
     @pulumi.getter(name="sptOnly")
     def spt_only(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Shortest Path Tree (SPT) Only Mode - Default value: `false`
+        Shortest Path Tree (SPT) Only Mode
+          - Default value: `false`
         """
         return pulumi.get(self, "spt_only")
 
@@ -325,7 +332,8 @@ class _CedgeMulticastFeatureTemplateState:
     @pulumi.getter
     def threshold(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set number of joins per group the router supports - Range: `0`-`1000`
+        Set number of joins per group the router supports
+          - Range: `0`-`1000`
         """
         return pulumi.get(self, "threshold")
 
@@ -404,15 +412,17 @@ class CedgeMulticastFeatureTemplate(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.bool] local_replicator: Replicator is local to this device - Default value: `false`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.bool] local_replicator: Replicator is local to this device
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] local_replicator_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.bool] spt_only: Shortest Path Tree (SPT) Only Mode - Default value: `false`
+        :param pulumi.Input[_builtins.bool] spt_only: Shortest Path Tree (SPT) Only Mode
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] spt_only_variable: Variable name
-        :param pulumi.Input[_builtins.int] threshold: Set number of joins per group the router supports - Range: `0`-`1000`
+        :param pulumi.Input[_builtins.int] threshold: Set number of joins per group the router supports
+                 - Range: `0`-`1000`
         :param pulumi.Input[_builtins.str] threshold_variable: Variable name
         """
         ...
@@ -525,16 +535,18 @@ class CedgeMulticastFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.bool] local_replicator: Replicator is local to this device - Default value: `false`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.bool] local_replicator: Replicator is local to this device
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] local_replicator_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.bool] spt_only: Shortest Path Tree (SPT) Only Mode - Default value: `false`
+        :param pulumi.Input[_builtins.bool] spt_only: Shortest Path Tree (SPT) Only Mode
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] spt_only_variable: Variable name
         :param pulumi.Input[_builtins.str] template_type: The template type
-        :param pulumi.Input[_builtins.int] threshold: Set number of joins per group the router supports - Range: `0`-`1000`
+        :param pulumi.Input[_builtins.int] threshold: Set number of joins per group the router supports
+                 - Range: `0`-`1000`
         :param pulumi.Input[_builtins.str] threshold_variable: Variable name
         :param pulumi.Input[_builtins.int] version: The version of the feature template
         """
@@ -567,9 +579,8 @@ class CedgeMulticastFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -577,7 +588,8 @@ class CedgeMulticastFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="localReplicator")
     def local_replicator(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Replicator is local to this device - Default value: `false`
+        Replicator is local to this device
+          - Default value: `false`
         """
         return pulumi.get(self, "local_replicator")
 
@@ -601,7 +613,8 @@ class CedgeMulticastFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="sptOnly")
     def spt_only(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Shortest Path Tree (SPT) Only Mode - Default value: `false`
+        Shortest Path Tree (SPT) Only Mode
+          - Default value: `false`
         """
         return pulumi.get(self, "spt_only")
 
@@ -625,7 +638,8 @@ class CedgeMulticastFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter
     def threshold(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set number of joins per group the router supports - Range: `0`-`1000`
+        Set number of joins per group the router supports
+          - Range: `0`-`1000`
         """
         return pulumi.get(self, "threshold")
 

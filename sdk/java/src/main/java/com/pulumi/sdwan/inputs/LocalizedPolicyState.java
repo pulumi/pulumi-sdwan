@@ -155,14 +155,16 @@ public final class LocalizedPolicyState extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * IPv4 visibility cache entries - Range: `16`-`2000000`
+     * IPv4 visibility cache entries
+     *   - Range: `16`-`2000000`
      * 
      */
     @Import(name="ipv4VisibilityCacheEntries")
     private @Nullable Output<Integer> ipv4VisibilityCacheEntries;
 
     /**
-     * @return IPv4 visibility cache entries - Range: `16`-`2000000`
+     * @return IPv4 visibility cache entries
+     *   - Range: `16`-`2000000`
      * 
      */
     public Optional<Output<Integer>> ipv4VisibilityCacheEntries() {
@@ -170,14 +172,16 @@ public final class LocalizedPolicyState extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * IPv6 visibility cache entries - Range: `16`-`2000000`
+     * IPv6 visibility cache entries
+     *   - Range: `16`-`2000000`
      * 
      */
     @Import(name="ipv6VisibilityCacheEntries")
     private @Nullable Output<Integer> ipv6VisibilityCacheEntries;
 
     /**
-     * @return IPv6 visibility cache entries - Range: `16`-`2000000`
+     * @return IPv6 visibility cache entries
+     *   - Range: `16`-`2000000`
      * 
      */
     public Optional<Output<Integer>> ipv6VisibilityCacheEntries() {
@@ -185,14 +189,16 @@ public final class LocalizedPolicyState extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * Log frequency - Range: `1`-`2147483647`
+     * Log frequency
+     *   - Range: `1`-`2147483647`
      * 
      */
     @Import(name="logFrequency")
     private @Nullable Output<Integer> logFrequency;
 
     /**
-     * @return Log frequency - Range: `1`-`2147483647`
+     * @return Log frequency
+     *   - Range: `1`-`2147483647`
      * 
      */
     public Optional<Output<Integer>> logFrequency() {
@@ -466,7 +472,8 @@ public final class LocalizedPolicyState extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param ipv4VisibilityCacheEntries IPv4 visibility cache entries - Range: `16`-`2000000`
+         * @param ipv4VisibilityCacheEntries IPv4 visibility cache entries
+         *   - Range: `16`-`2000000`
          * 
          * @return builder
          * 
@@ -477,7 +484,8 @@ public final class LocalizedPolicyState extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param ipv4VisibilityCacheEntries IPv4 visibility cache entries - Range: `16`-`2000000`
+         * @param ipv4VisibilityCacheEntries IPv4 visibility cache entries
+         *   - Range: `16`-`2000000`
          * 
          * @return builder
          * 
@@ -487,7 +495,8 @@ public final class LocalizedPolicyState extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param ipv6VisibilityCacheEntries IPv6 visibility cache entries - Range: `16`-`2000000`
+         * @param ipv6VisibilityCacheEntries IPv6 visibility cache entries
+         *   - Range: `16`-`2000000`
          * 
          * @return builder
          * 
@@ -498,7 +507,8 @@ public final class LocalizedPolicyState extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param ipv6VisibilityCacheEntries IPv6 visibility cache entries - Range: `16`-`2000000`
+         * @param ipv6VisibilityCacheEntries IPv6 visibility cache entries
+         *   - Range: `16`-`2000000`
          * 
          * @return builder
          * 
@@ -508,7 +518,8 @@ public final class LocalizedPolicyState extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param logFrequency Log frequency - Range: `1`-`2147483647`
+         * @param logFrequency Log frequency
+         *   - Range: `1`-`2147483647`
          * 
          * @return builder
          * 
@@ -519,7 +530,8 @@ public final class LocalizedPolicyState extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param logFrequency Log frequency - Range: `1`-`2147483647`
+         * @param logFrequency Log frequency
+         *   - Range: `1`-`2147483647`
          * 
          * @return builder
          * 

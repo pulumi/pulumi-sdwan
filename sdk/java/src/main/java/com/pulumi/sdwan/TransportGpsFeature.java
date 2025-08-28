@@ -105,14 +105,16 @@ public class TransportGpsFeature extends com.pulumi.resources.CustomResource {
         return this.featureProfileId;
     }
     /**
-     * Enable/disable GPS - Default value: `false`
+     * Enable/disable GPS
+     *   - Default value: `false`
      * 
      */
     @Export(name="gpsEnable", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> gpsEnable;
 
     /**
-     * @return Enable/disable GPS - Default value: `false`
+     * @return Enable/disable GPS
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> gpsEnable() {
@@ -133,14 +135,18 @@ public class TransportGpsFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.gpsEnableVariable);
     }
     /**
-     * Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+     * Select GPS mode
+     *   - Choices: `ms-based`, `standalone`
+     *   - Default value: `ms-based`
      * 
      */
     @Export(name="gpsMode", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> gpsMode;
 
     /**
-     * @return Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+     * @return Select GPS mode
+     *   - Choices: `ms-based`, `standalone`
+     *   - Default value: `ms-based`
      * 
      */
     public Output<Optional<String>> gpsMode() {
@@ -203,14 +209,16 @@ public class TransportGpsFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.nmeaDestinationAddressVariable);
     }
     /**
-     * Destination port - Range: `1`-`65535`
+     * Destination port
+     *   - Range: `1`-`65535`
      * 
      */
     @Export(name="nmeaDestinationPort", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> nmeaDestinationPort;
 
     /**
-     * @return Destination port - Range: `1`-`65535`
+     * @return Destination port
+     *   - Range: `1`-`65535`
      * 
      */
     public Output<Optional<Integer>> nmeaDestinationPort() {
@@ -231,14 +239,16 @@ public class TransportGpsFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.nmeaDestinationPortVariable);
     }
     /**
-     * Enable/disable NMEA data - Default value: `false`
+     * Enable/disable NMEA data
+     *   - Default value: `false`
      * 
      */
     @Export(name="nmeaEnable", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> nmeaEnable;
 
     /**
-     * @return Enable/disable NMEA data - Default value: `false`
+     * @return Enable/disable NMEA data
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> nmeaEnable() {

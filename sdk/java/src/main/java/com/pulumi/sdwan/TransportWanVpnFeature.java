@@ -59,14 +59,16 @@ public class TransportWanVpnFeature extends com.pulumi.resources.CustomResource 
         return Codegen.optional(this.description);
     }
     /**
-     * Enhance ECMP Keying - Default value: `false`
+     * Enhance ECMP Keying
+     *   - Default value: `false`
      * 
      */
     @Export(name="enhanceEcmpKeying", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> enhanceEcmpKeying;
 
     /**
-     * @return Enhance ECMP Keying - Default value: `false`
+     * @return Enhance ECMP Keying
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> enhanceEcmpKeying() {
@@ -303,14 +305,16 @@ public class TransportWanVpnFeature extends com.pulumi.resources.CustomResource 
         return this.version;
     }
     /**
-     * VPN - Default value: `0`
+     * VPN
+     *   - Default value: `0`
      * 
      */
     @Export(name="vpn", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> vpn;
 
     /**
-     * @return VPN - Default value: `0`
+     * @return VPN
+     *   - Default value: `0`
      * 
      */
     public Output<Optional<Integer>> vpn() {

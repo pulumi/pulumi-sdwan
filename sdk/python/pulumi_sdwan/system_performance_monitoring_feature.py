@@ -32,12 +32,16 @@ class SystemPerformanceMonitoringFeatureArgs:
         The set of arguments for constructing a SystemPerformanceMonitoringFeature resource.
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] app_perf_monitor_app_groups: Application groups to be monitored
-        :param pulumi.Input[_builtins.bool] app_perf_monitor_enabled: Application performance monitoring enable or disable - Default value: `false`
+        :param pulumi.Input[_builtins.bool] app_perf_monitor_enabled: Application performance monitoring enable or disable
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.bool] event_driven_config_enabled: UMTS event driven monitoring enable or disable - Default value: `false`
+        :param pulumi.Input[_builtins.bool] event_driven_config_enabled: UMTS event driven monitoring enable or disable
+                 - Default value: `false`
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] event_driven_events: UMTS events
-        :param pulumi.Input[_builtins.bool] monitoring_config_enabled: UMTS monitoring enable or disable - Default value: `false`
-        :param pulumi.Input[_builtins.str] monitoring_config_interval: UMTS monitoring interval(Minutes) - Choices: `30`, `60`
+        :param pulumi.Input[_builtins.bool] monitoring_config_enabled: UMTS monitoring enable or disable
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] monitoring_config_interval: UMTS monitoring interval(Minutes)
+                 - Choices: `30`, `60`
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         """
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
@@ -86,7 +90,8 @@ class SystemPerformanceMonitoringFeatureArgs:
     @pulumi.getter(name="appPerfMonitorEnabled")
     def app_perf_monitor_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Application performance monitoring enable or disable - Default value: `false`
+        Application performance monitoring enable or disable
+          - Default value: `false`
         """
         return pulumi.get(self, "app_perf_monitor_enabled")
 
@@ -110,7 +115,8 @@ class SystemPerformanceMonitoringFeatureArgs:
     @pulumi.getter(name="eventDrivenConfigEnabled")
     def event_driven_config_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        UMTS event driven monitoring enable or disable - Default value: `false`
+        UMTS event driven monitoring enable or disable
+          - Default value: `false`
         """
         return pulumi.get(self, "event_driven_config_enabled")
 
@@ -134,7 +140,8 @@ class SystemPerformanceMonitoringFeatureArgs:
     @pulumi.getter(name="monitoringConfigEnabled")
     def monitoring_config_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        UMTS monitoring enable or disable - Default value: `false`
+        UMTS monitoring enable or disable
+          - Default value: `false`
         """
         return pulumi.get(self, "monitoring_config_enabled")
 
@@ -146,7 +153,8 @@ class SystemPerformanceMonitoringFeatureArgs:
     @pulumi.getter(name="monitoringConfigInterval")
     def monitoring_config_interval(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        UMTS monitoring interval(Minutes) - Choices: `30`, `60`
+        UMTS monitoring interval(Minutes)
+          - Choices: `30`, `60`
         """
         return pulumi.get(self, "monitoring_config_interval")
 
@@ -183,13 +191,17 @@ class _SystemPerformanceMonitoringFeatureState:
         """
         Input properties used for looking up and filtering SystemPerformanceMonitoringFeature resources.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] app_perf_monitor_app_groups: Application groups to be monitored
-        :param pulumi.Input[_builtins.bool] app_perf_monitor_enabled: Application performance monitoring enable or disable - Default value: `false`
+        :param pulumi.Input[_builtins.bool] app_perf_monitor_enabled: Application performance monitoring enable or disable
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.bool] event_driven_config_enabled: UMTS event driven monitoring enable or disable - Default value: `false`
+        :param pulumi.Input[_builtins.bool] event_driven_config_enabled: UMTS event driven monitoring enable or disable
+                 - Default value: `false`
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] event_driven_events: UMTS events
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.bool] monitoring_config_enabled: UMTS monitoring enable or disable - Default value: `false`
-        :param pulumi.Input[_builtins.str] monitoring_config_interval: UMTS monitoring interval(Minutes) - Choices: `30`, `60`
+        :param pulumi.Input[_builtins.bool] monitoring_config_enabled: UMTS monitoring enable or disable
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] monitoring_config_interval: UMTS monitoring interval(Minutes)
+                 - Choices: `30`, `60`
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
@@ -230,7 +242,8 @@ class _SystemPerformanceMonitoringFeatureState:
     @pulumi.getter(name="appPerfMonitorEnabled")
     def app_perf_monitor_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Application performance monitoring enable or disable - Default value: `false`
+        Application performance monitoring enable or disable
+          - Default value: `false`
         """
         return pulumi.get(self, "app_perf_monitor_enabled")
 
@@ -254,7 +267,8 @@ class _SystemPerformanceMonitoringFeatureState:
     @pulumi.getter(name="eventDrivenConfigEnabled")
     def event_driven_config_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        UMTS event driven monitoring enable or disable - Default value: `false`
+        UMTS event driven monitoring enable or disable
+          - Default value: `false`
         """
         return pulumi.get(self, "event_driven_config_enabled")
 
@@ -290,7 +304,8 @@ class _SystemPerformanceMonitoringFeatureState:
     @pulumi.getter(name="monitoringConfigEnabled")
     def monitoring_config_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        UMTS monitoring enable or disable - Default value: `false`
+        UMTS monitoring enable or disable
+          - Default value: `false`
         """
         return pulumi.get(self, "monitoring_config_enabled")
 
@@ -302,7 +317,8 @@ class _SystemPerformanceMonitoringFeatureState:
     @pulumi.getter(name="monitoringConfigInterval")
     def monitoring_config_interval(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        UMTS monitoring interval(Minutes) - Choices: `30`, `60`
+        UMTS monitoring interval(Minutes)
+          - Choices: `30`, `60`
         """
         return pulumi.get(self, "monitoring_config_interval")
 
@@ -386,13 +402,17 @@ class SystemPerformanceMonitoringFeature(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] app_perf_monitor_app_groups: Application groups to be monitored
-        :param pulumi.Input[_builtins.bool] app_perf_monitor_enabled: Application performance monitoring enable or disable - Default value: `false`
+        :param pulumi.Input[_builtins.bool] app_perf_monitor_enabled: Application performance monitoring enable or disable
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.bool] event_driven_config_enabled: UMTS event driven monitoring enable or disable - Default value: `false`
+        :param pulumi.Input[_builtins.bool] event_driven_config_enabled: UMTS event driven monitoring enable or disable
+                 - Default value: `false`
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] event_driven_events: UMTS events
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.bool] monitoring_config_enabled: UMTS monitoring enable or disable - Default value: `false`
-        :param pulumi.Input[_builtins.str] monitoring_config_interval: UMTS monitoring interval(Minutes) - Choices: `30`, `60`
+        :param pulumi.Input[_builtins.bool] monitoring_config_enabled: UMTS monitoring enable or disable
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] monitoring_config_interval: UMTS monitoring interval(Minutes)
+                 - Choices: `30`, `60`
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         """
         ...
@@ -506,13 +526,17 @@ class SystemPerformanceMonitoringFeature(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] app_perf_monitor_app_groups: Application groups to be monitored
-        :param pulumi.Input[_builtins.bool] app_perf_monitor_enabled: Application performance monitoring enable or disable - Default value: `false`
+        :param pulumi.Input[_builtins.bool] app_perf_monitor_enabled: Application performance monitoring enable or disable
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.bool] event_driven_config_enabled: UMTS event driven monitoring enable or disable - Default value: `false`
+        :param pulumi.Input[_builtins.bool] event_driven_config_enabled: UMTS event driven monitoring enable or disable
+                 - Default value: `false`
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] event_driven_events: UMTS events
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.bool] monitoring_config_enabled: UMTS monitoring enable or disable - Default value: `false`
-        :param pulumi.Input[_builtins.str] monitoring_config_interval: UMTS monitoring interval(Minutes) - Choices: `30`, `60`
+        :param pulumi.Input[_builtins.bool] monitoring_config_enabled: UMTS monitoring enable or disable
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.str] monitoring_config_interval: UMTS monitoring interval(Minutes)
+                 - Choices: `30`, `60`
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
@@ -544,7 +568,8 @@ class SystemPerformanceMonitoringFeature(pulumi.CustomResource):
     @pulumi.getter(name="appPerfMonitorEnabled")
     def app_perf_monitor_enabled(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Application performance monitoring enable or disable - Default value: `false`
+        Application performance monitoring enable or disable
+          - Default value: `false`
         """
         return pulumi.get(self, "app_perf_monitor_enabled")
 
@@ -560,7 +585,8 @@ class SystemPerformanceMonitoringFeature(pulumi.CustomResource):
     @pulumi.getter(name="eventDrivenConfigEnabled")
     def event_driven_config_enabled(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        UMTS event driven monitoring enable or disable - Default value: `false`
+        UMTS event driven monitoring enable or disable
+          - Default value: `false`
         """
         return pulumi.get(self, "event_driven_config_enabled")
 
@@ -584,7 +610,8 @@ class SystemPerformanceMonitoringFeature(pulumi.CustomResource):
     @pulumi.getter(name="monitoringConfigEnabled")
     def monitoring_config_enabled(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        UMTS monitoring enable or disable - Default value: `false`
+        UMTS monitoring enable or disable
+          - Default value: `false`
         """
         return pulumi.get(self, "monitoring_config_enabled")
 
@@ -592,7 +619,8 @@ class SystemPerformanceMonitoringFeature(pulumi.CustomResource):
     @pulumi.getter(name="monitoringConfigInterval")
     def monitoring_config_interval(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        UMTS monitoring interval(Minutes) - Choices: `30`, `60`
+        UMTS monitoring interval(Minutes)
+          - Choices: `30`, `60`
         """
         return pulumi.get(self, "monitoring_config_interval")
 

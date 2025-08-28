@@ -90,268 +90,280 @@ export class ServiceLanVpnInterfaceIpsecFeature extends pulumi.CustomResource {
     }
 
     /**
-     * Enable Application Tunnel Type - Choices: `none`, `sig`
+     * Enable Application Tunnel Type
+     *   - Choices: `none`, `sig`
      */
-    public readonly applicationTunnelType!: pulumi.Output<string | undefined>;
+    declare public readonly applicationTunnelType: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly applicationTunnelTypeVariable!: pulumi.Output<string | undefined>;
+    declare public readonly applicationTunnelTypeVariable: pulumi.Output<string | undefined>;
     /**
-     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+     *   - Default value: `false`
      */
-    public readonly clearDontFragment!: pulumi.Output<boolean | undefined>;
+    declare public readonly clearDontFragment: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly clearDontFragmentVariable!: pulumi.Output<string | undefined>;
+    declare public readonly clearDontFragmentVariable: pulumi.Output<string | undefined>;
     /**
      * The description of the Feature
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * IKE keepalive interval (seconds) - Range: `10`-`3600` - Default value: `10`
+     * IKE keepalive interval (seconds)
+     *   - Range: `10`-`3600`
+     *   - Default value: `10`
      */
-    public readonly dpdInterval!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly dpdIntervalVariable!: pulumi.Output<string | undefined>;
-    /**
-     * IKE keepalive retries - Range: `2`-`60` - Default value: `3`
-     */
-    public readonly dpdRetries!: pulumi.Output<number | undefined>;
+    declare public readonly dpdInterval: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly dpdRetriesVariable!: pulumi.Output<string | undefined>;
+    declare public readonly dpdIntervalVariable: pulumi.Output<string | undefined>;
+    /**
+     * IKE keepalive retries
+     *   - Range: `2`-`60`
+     *   - Default value: `3`
+     */
+    declare public readonly dpdRetries: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly dpdRetriesVariable: pulumi.Output<string | undefined>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
-     * IKE identity the IKE preshared secret belongs to - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`,
-     * `aes128-cbc-sha2` - Default value: `aes256-cbc-sha1`
+     * IKE identity the IKE preshared secret belongs to
+     *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+     *   - Default value: `aes256-cbc-sha1`
      */
-    public readonly ikeCiphersuite!: pulumi.Output<string | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly ikeCiphersuiteVariable!: pulumi.Output<string | undefined>;
-    /**
-     * IKE Diffie Hellman Groups - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24` - Default value: `16`
-     */
-    public readonly ikeDiffieHellmanGroup!: pulumi.Output<string | undefined>;
+    declare public readonly ikeCiphersuite: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly ikeDiffieHellmanGroupVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ikeCiphersuiteVariable: pulumi.Output<string | undefined>;
+    /**
+     * IKE Diffie Hellman Groups
+     *   - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
+     *   - Default value: `16`
+     */
+    declare public readonly ikeDiffieHellmanGroup: pulumi.Output<string | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly ikeDiffieHellmanGroupVariable: pulumi.Output<string | undefined>;
     /**
      * IKE ID for the local endpoint. Input IPv4 address, domain name, or email address
      */
-    public readonly ikeIdLocalEndPoint!: pulumi.Output<string | undefined>;
+    declare public readonly ikeIdLocalEndPoint: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly ikeIdLocalEndPointVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ikeIdLocalEndPointVariable: pulumi.Output<string | undefined>;
     /**
      * IKE ID for the remote endpoint. Input IPv4 address, domain name, or email address
      */
-    public readonly ikeIdRemoteEndPoint!: pulumi.Output<string | undefined>;
+    declare public readonly ikeIdRemoteEndPoint: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly ikeIdRemoteEndPointVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ikeIdRemoteEndPointVariable: pulumi.Output<string | undefined>;
     /**
-     * IKE integrity protocol - Choices: `main`, `aggressive` - Default value: `main`
+     * IKE integrity protocol
+     *   - Choices: `main`, `aggressive`
+     *   - Default value: `main`
      */
-    public readonly ikeIntegrityProtocol!: pulumi.Output<string | undefined>;
+    declare public readonly ikeIntegrityProtocol: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly ikeIntegrityProtocolVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ikeIntegrityProtocolVariable: pulumi.Output<string | undefined>;
     /**
      * Use preshared key to authenticate IKE peer
      */
-    public readonly ikePresharedKey!: pulumi.Output<string | undefined>;
+    declare public readonly ikePresharedKey: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly ikePresharedKeyVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ikePresharedKeyVariable: pulumi.Output<string | undefined>;
     /**
-     * IKE rekey interval <60..86400> seconds - Range: `60`-`86400` - Default value: `14400`
+     * IKE rekey interval <60..86400> seconds
+     *   - Range: `60`-`86400`
+     *   - Default value: `14400`
      */
-    public readonly ikeRekeyInterval!: pulumi.Output<number | undefined>;
+    declare public readonly ikeRekeyInterval: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly ikeRekeyIntervalVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ikeRekeyIntervalVariable: pulumi.Output<string | undefined>;
     /**
-     * IKE Version <1..2> - Range: `1`-`2` - Default value: `1`
+     * IKE Version <1..2>
+     *   - Range: `1`-`2`
+     *   - Default value: `1`
      */
-    public readonly ikeVersion!: pulumi.Output<number | undefined>;
+    declare public readonly ikeVersion: pulumi.Output<number | undefined>;
     /**
      * Interface description
      */
-    public readonly interfaceDescription!: pulumi.Output<string | undefined>;
+    declare public readonly interfaceDescription: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly interfaceDescriptionVariable!: pulumi.Output<string | undefined>;
+    declare public readonly interfaceDescriptionVariable: pulumi.Output<string | undefined>;
     /**
      * Interface name: IPsec when present
      */
-    public readonly interfaceName!: pulumi.Output<string | undefined>;
+    declare public readonly interfaceName: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly interfaceNameVariable!: pulumi.Output<string | undefined>;
+    declare public readonly interfaceNameVariable: pulumi.Output<string | undefined>;
     /**
-     * Interface MTU <68..9216>, in bytes - Range: `68`-`9216` - Default value: `1500`
+     * Interface MTU <68..9216>, in bytes
+     *   - Range: `68`-`9216`
+     *   - Default value: `1500`
      */
-    public readonly ipMtu!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly ipMtuVariable!: pulumi.Output<string | undefined>;
-    /**
-     * IPsec(ESP) encryption and integrity protocol - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`,
-     * `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512` - Default value:
-     * `aes256-gcm`
-     */
-    public readonly ipsecCiphersuite!: pulumi.Output<string | undefined>;
+    declare public readonly ipMtu: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly ipsecCiphersuiteVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ipMtuVariable: pulumi.Output<string | undefined>;
     /**
-     * IPsec rekey interval <300..1209600> seconds - Range: `120`-`2592000` - Default value: `3600`
+     * IPsec(ESP) encryption and integrity protocol
+     *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
+     *   - Default value: `aes256-gcm`
      */
-    public readonly ipsecRekeyInterval!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly ipsecRekeyIntervalVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Replay window size 32..8192 (must be a power of 2) - Range: `64`-`4096` - Default value: `512`
-     */
-    public readonly ipsecReplayWindow!: pulumi.Output<number | undefined>;
+    declare public readonly ipsecCiphersuite: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly ipsecReplayWindowVariable!: pulumi.Output<string | undefined>;
-    public readonly ipv4Address!: pulumi.Output<string | undefined>;
+    declare public readonly ipsecCiphersuiteVariable: pulumi.Output<string | undefined>;
+    /**
+     * IPsec rekey interval <300..1209600> seconds
+     *   - Range: `120`-`2592000`
+     *   - Default value: `3600`
+     */
+    declare public readonly ipsecRekeyInterval: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly ipv4AddressVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ipsecRekeyIntervalVariable: pulumi.Output<string | undefined>;
     /**
-     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * Replay window size 32..8192 (must be a power of 2)
+     *   - Range: `64`-`4096`
+     *   - Default value: `512`
      */
-    public readonly ipv4SubnetMask!: pulumi.Output<string | undefined>;
+    declare public readonly ipsecReplayWindow: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly ipv4SubnetMaskVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ipsecReplayWindowVariable: pulumi.Output<string | undefined>;
+    declare public readonly ipv4Address: pulumi.Output<string | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly ipv4AddressVariable: pulumi.Output<string | undefined>;
+    /**
+     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     */
+    declare public readonly ipv4SubnetMask: pulumi.Output<string | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly ipv4SubnetMaskVariable: pulumi.Output<string | undefined>;
     /**
      * The name of the Feature
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
-     * IPsec perfect forward secrecy settings - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`,
-     * `group-19`, `group-20`, `group-21`, `group-24`, `none` - Default value: `group-16`
+     * IPsec perfect forward secrecy settings
+     *   - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+     *   - Default value: `group-16`
      */
-    public readonly perfectForwardSecrecy!: pulumi.Output<string | undefined>;
+    declare public readonly perfectForwardSecrecy: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly perfectForwardSecrecyVariable!: pulumi.Output<string | undefined>;
+    declare public readonly perfectForwardSecrecyVariable: pulumi.Output<string | undefined>;
     /**
      * Service LAN VPN Feature ID
      */
-    public readonly serviceLanVpnFeatureId!: pulumi.Output<string>;
+    declare public readonly serviceLanVpnFeatureId: pulumi.Output<string>;
     /**
-     * Administrative state - Default value: `true`
+     * Administrative state
+     *   - Default value: `true`
      */
-    public readonly shutdown!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly shutdownVariable!: pulumi.Output<string | undefined>;
-    /**
-     * TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
-     */
-    public readonly tcpMss!: pulumi.Output<number | undefined>;
+    declare public readonly shutdown: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly tcpMssVariable!: pulumi.Output<string | undefined>;
+    declare public readonly shutdownVariable: pulumi.Output<string | undefined>;
+    /**
+     * TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
+     */
+    declare public readonly tcpMss: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly tcpMssVariable: pulumi.Output<string | undefined>;
     /**
      * Enable tracker for this interface
      */
-    public readonly trackerId!: pulumi.Output<string | undefined>;
+    declare public readonly trackerId: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly trackerIdVariable!: pulumi.Output<string | undefined>;
-    public readonly tunnelDestinationIpv4Address!: pulumi.Output<string | undefined>;
+    declare public readonly trackerIdVariable: pulumi.Output<string | undefined>;
+    declare public readonly tunnelDestinationIpv4Address: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly tunnelDestinationIpv4AddressVariable!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelDestinationIpv4AddressVariable: pulumi.Output<string | undefined>;
     /**
-     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
-    public readonly tunnelDestinationIpv4SubnetMask!: pulumi.Output<string>;
+    declare public readonly tunnelDestinationIpv4SubnetMask: pulumi.Output<string>;
     /**
      * Variable name
      */
-    public readonly tunnelDestinationIpv4SubnetMaskVariable!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelDestinationIpv4SubnetMaskVariable: pulumi.Output<string | undefined>;
     /**
      * <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
      */
-    public readonly tunnelRouteVia!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelRouteVia: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly tunnelRouteViaVariable!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelRouteViaVariable: pulumi.Output<string | undefined>;
     /**
      * <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
      */
-    public readonly tunnelSourceInterface!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelSourceInterface: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly tunnelSourceInterfaceVariable!: pulumi.Output<string | undefined>;
-    public readonly tunnelSourceIpv4Address!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelSourceInterfaceVariable: pulumi.Output<string | undefined>;
+    declare public readonly tunnelSourceIpv4Address: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly tunnelSourceIpv4AddressVariable!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelSourceIpv4AddressVariable: pulumi.Output<string | undefined>;
     /**
-     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
-    public readonly tunnelSourceIpv4SubnetMask!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelSourceIpv4SubnetMask: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly tunnelSourceIpv4SubnetMaskVariable!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelSourceIpv4SubnetMaskVariable: pulumi.Output<string | undefined>;
     /**
      * The version of the Feature
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a ServiceLanVpnInterfaceIpsecFeature resource with the given unique name, arguments, and options.
@@ -366,144 +378,144 @@ export class ServiceLanVpnInterfaceIpsecFeature extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ServiceLanVpnInterfaceIpsecFeatureState | undefined;
-            resourceInputs["applicationTunnelType"] = state ? state.applicationTunnelType : undefined;
-            resourceInputs["applicationTunnelTypeVariable"] = state ? state.applicationTunnelTypeVariable : undefined;
-            resourceInputs["clearDontFragment"] = state ? state.clearDontFragment : undefined;
-            resourceInputs["clearDontFragmentVariable"] = state ? state.clearDontFragmentVariable : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["dpdInterval"] = state ? state.dpdInterval : undefined;
-            resourceInputs["dpdIntervalVariable"] = state ? state.dpdIntervalVariable : undefined;
-            resourceInputs["dpdRetries"] = state ? state.dpdRetries : undefined;
-            resourceInputs["dpdRetriesVariable"] = state ? state.dpdRetriesVariable : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["ikeCiphersuite"] = state ? state.ikeCiphersuite : undefined;
-            resourceInputs["ikeCiphersuiteVariable"] = state ? state.ikeCiphersuiteVariable : undefined;
-            resourceInputs["ikeDiffieHellmanGroup"] = state ? state.ikeDiffieHellmanGroup : undefined;
-            resourceInputs["ikeDiffieHellmanGroupVariable"] = state ? state.ikeDiffieHellmanGroupVariable : undefined;
-            resourceInputs["ikeIdLocalEndPoint"] = state ? state.ikeIdLocalEndPoint : undefined;
-            resourceInputs["ikeIdLocalEndPointVariable"] = state ? state.ikeIdLocalEndPointVariable : undefined;
-            resourceInputs["ikeIdRemoteEndPoint"] = state ? state.ikeIdRemoteEndPoint : undefined;
-            resourceInputs["ikeIdRemoteEndPointVariable"] = state ? state.ikeIdRemoteEndPointVariable : undefined;
-            resourceInputs["ikeIntegrityProtocol"] = state ? state.ikeIntegrityProtocol : undefined;
-            resourceInputs["ikeIntegrityProtocolVariable"] = state ? state.ikeIntegrityProtocolVariable : undefined;
-            resourceInputs["ikePresharedKey"] = state ? state.ikePresharedKey : undefined;
-            resourceInputs["ikePresharedKeyVariable"] = state ? state.ikePresharedKeyVariable : undefined;
-            resourceInputs["ikeRekeyInterval"] = state ? state.ikeRekeyInterval : undefined;
-            resourceInputs["ikeRekeyIntervalVariable"] = state ? state.ikeRekeyIntervalVariable : undefined;
-            resourceInputs["ikeVersion"] = state ? state.ikeVersion : undefined;
-            resourceInputs["interfaceDescription"] = state ? state.interfaceDescription : undefined;
-            resourceInputs["interfaceDescriptionVariable"] = state ? state.interfaceDescriptionVariable : undefined;
-            resourceInputs["interfaceName"] = state ? state.interfaceName : undefined;
-            resourceInputs["interfaceNameVariable"] = state ? state.interfaceNameVariable : undefined;
-            resourceInputs["ipMtu"] = state ? state.ipMtu : undefined;
-            resourceInputs["ipMtuVariable"] = state ? state.ipMtuVariable : undefined;
-            resourceInputs["ipsecCiphersuite"] = state ? state.ipsecCiphersuite : undefined;
-            resourceInputs["ipsecCiphersuiteVariable"] = state ? state.ipsecCiphersuiteVariable : undefined;
-            resourceInputs["ipsecRekeyInterval"] = state ? state.ipsecRekeyInterval : undefined;
-            resourceInputs["ipsecRekeyIntervalVariable"] = state ? state.ipsecRekeyIntervalVariable : undefined;
-            resourceInputs["ipsecReplayWindow"] = state ? state.ipsecReplayWindow : undefined;
-            resourceInputs["ipsecReplayWindowVariable"] = state ? state.ipsecReplayWindowVariable : undefined;
-            resourceInputs["ipv4Address"] = state ? state.ipv4Address : undefined;
-            resourceInputs["ipv4AddressVariable"] = state ? state.ipv4AddressVariable : undefined;
-            resourceInputs["ipv4SubnetMask"] = state ? state.ipv4SubnetMask : undefined;
-            resourceInputs["ipv4SubnetMaskVariable"] = state ? state.ipv4SubnetMaskVariable : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["perfectForwardSecrecy"] = state ? state.perfectForwardSecrecy : undefined;
-            resourceInputs["perfectForwardSecrecyVariable"] = state ? state.perfectForwardSecrecyVariable : undefined;
-            resourceInputs["serviceLanVpnFeatureId"] = state ? state.serviceLanVpnFeatureId : undefined;
-            resourceInputs["shutdown"] = state ? state.shutdown : undefined;
-            resourceInputs["shutdownVariable"] = state ? state.shutdownVariable : undefined;
-            resourceInputs["tcpMss"] = state ? state.tcpMss : undefined;
-            resourceInputs["tcpMssVariable"] = state ? state.tcpMssVariable : undefined;
-            resourceInputs["trackerId"] = state ? state.trackerId : undefined;
-            resourceInputs["trackerIdVariable"] = state ? state.trackerIdVariable : undefined;
-            resourceInputs["tunnelDestinationIpv4Address"] = state ? state.tunnelDestinationIpv4Address : undefined;
-            resourceInputs["tunnelDestinationIpv4AddressVariable"] = state ? state.tunnelDestinationIpv4AddressVariable : undefined;
-            resourceInputs["tunnelDestinationIpv4SubnetMask"] = state ? state.tunnelDestinationIpv4SubnetMask : undefined;
-            resourceInputs["tunnelDestinationIpv4SubnetMaskVariable"] = state ? state.tunnelDestinationIpv4SubnetMaskVariable : undefined;
-            resourceInputs["tunnelRouteVia"] = state ? state.tunnelRouteVia : undefined;
-            resourceInputs["tunnelRouteViaVariable"] = state ? state.tunnelRouteViaVariable : undefined;
-            resourceInputs["tunnelSourceInterface"] = state ? state.tunnelSourceInterface : undefined;
-            resourceInputs["tunnelSourceInterfaceVariable"] = state ? state.tunnelSourceInterfaceVariable : undefined;
-            resourceInputs["tunnelSourceIpv4Address"] = state ? state.tunnelSourceIpv4Address : undefined;
-            resourceInputs["tunnelSourceIpv4AddressVariable"] = state ? state.tunnelSourceIpv4AddressVariable : undefined;
-            resourceInputs["tunnelSourceIpv4SubnetMask"] = state ? state.tunnelSourceIpv4SubnetMask : undefined;
-            resourceInputs["tunnelSourceIpv4SubnetMaskVariable"] = state ? state.tunnelSourceIpv4SubnetMaskVariable : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["applicationTunnelType"] = state?.applicationTunnelType;
+            resourceInputs["applicationTunnelTypeVariable"] = state?.applicationTunnelTypeVariable;
+            resourceInputs["clearDontFragment"] = state?.clearDontFragment;
+            resourceInputs["clearDontFragmentVariable"] = state?.clearDontFragmentVariable;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["dpdInterval"] = state?.dpdInterval;
+            resourceInputs["dpdIntervalVariable"] = state?.dpdIntervalVariable;
+            resourceInputs["dpdRetries"] = state?.dpdRetries;
+            resourceInputs["dpdRetriesVariable"] = state?.dpdRetriesVariable;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["ikeCiphersuite"] = state?.ikeCiphersuite;
+            resourceInputs["ikeCiphersuiteVariable"] = state?.ikeCiphersuiteVariable;
+            resourceInputs["ikeDiffieHellmanGroup"] = state?.ikeDiffieHellmanGroup;
+            resourceInputs["ikeDiffieHellmanGroupVariable"] = state?.ikeDiffieHellmanGroupVariable;
+            resourceInputs["ikeIdLocalEndPoint"] = state?.ikeIdLocalEndPoint;
+            resourceInputs["ikeIdLocalEndPointVariable"] = state?.ikeIdLocalEndPointVariable;
+            resourceInputs["ikeIdRemoteEndPoint"] = state?.ikeIdRemoteEndPoint;
+            resourceInputs["ikeIdRemoteEndPointVariable"] = state?.ikeIdRemoteEndPointVariable;
+            resourceInputs["ikeIntegrityProtocol"] = state?.ikeIntegrityProtocol;
+            resourceInputs["ikeIntegrityProtocolVariable"] = state?.ikeIntegrityProtocolVariable;
+            resourceInputs["ikePresharedKey"] = state?.ikePresharedKey;
+            resourceInputs["ikePresharedKeyVariable"] = state?.ikePresharedKeyVariable;
+            resourceInputs["ikeRekeyInterval"] = state?.ikeRekeyInterval;
+            resourceInputs["ikeRekeyIntervalVariable"] = state?.ikeRekeyIntervalVariable;
+            resourceInputs["ikeVersion"] = state?.ikeVersion;
+            resourceInputs["interfaceDescription"] = state?.interfaceDescription;
+            resourceInputs["interfaceDescriptionVariable"] = state?.interfaceDescriptionVariable;
+            resourceInputs["interfaceName"] = state?.interfaceName;
+            resourceInputs["interfaceNameVariable"] = state?.interfaceNameVariable;
+            resourceInputs["ipMtu"] = state?.ipMtu;
+            resourceInputs["ipMtuVariable"] = state?.ipMtuVariable;
+            resourceInputs["ipsecCiphersuite"] = state?.ipsecCiphersuite;
+            resourceInputs["ipsecCiphersuiteVariable"] = state?.ipsecCiphersuiteVariable;
+            resourceInputs["ipsecRekeyInterval"] = state?.ipsecRekeyInterval;
+            resourceInputs["ipsecRekeyIntervalVariable"] = state?.ipsecRekeyIntervalVariable;
+            resourceInputs["ipsecReplayWindow"] = state?.ipsecReplayWindow;
+            resourceInputs["ipsecReplayWindowVariable"] = state?.ipsecReplayWindowVariable;
+            resourceInputs["ipv4Address"] = state?.ipv4Address;
+            resourceInputs["ipv4AddressVariable"] = state?.ipv4AddressVariable;
+            resourceInputs["ipv4SubnetMask"] = state?.ipv4SubnetMask;
+            resourceInputs["ipv4SubnetMaskVariable"] = state?.ipv4SubnetMaskVariable;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["perfectForwardSecrecy"] = state?.perfectForwardSecrecy;
+            resourceInputs["perfectForwardSecrecyVariable"] = state?.perfectForwardSecrecyVariable;
+            resourceInputs["serviceLanVpnFeatureId"] = state?.serviceLanVpnFeatureId;
+            resourceInputs["shutdown"] = state?.shutdown;
+            resourceInputs["shutdownVariable"] = state?.shutdownVariable;
+            resourceInputs["tcpMss"] = state?.tcpMss;
+            resourceInputs["tcpMssVariable"] = state?.tcpMssVariable;
+            resourceInputs["trackerId"] = state?.trackerId;
+            resourceInputs["trackerIdVariable"] = state?.trackerIdVariable;
+            resourceInputs["tunnelDestinationIpv4Address"] = state?.tunnelDestinationIpv4Address;
+            resourceInputs["tunnelDestinationIpv4AddressVariable"] = state?.tunnelDestinationIpv4AddressVariable;
+            resourceInputs["tunnelDestinationIpv4SubnetMask"] = state?.tunnelDestinationIpv4SubnetMask;
+            resourceInputs["tunnelDestinationIpv4SubnetMaskVariable"] = state?.tunnelDestinationIpv4SubnetMaskVariable;
+            resourceInputs["tunnelRouteVia"] = state?.tunnelRouteVia;
+            resourceInputs["tunnelRouteViaVariable"] = state?.tunnelRouteViaVariable;
+            resourceInputs["tunnelSourceInterface"] = state?.tunnelSourceInterface;
+            resourceInputs["tunnelSourceInterfaceVariable"] = state?.tunnelSourceInterfaceVariable;
+            resourceInputs["tunnelSourceIpv4Address"] = state?.tunnelSourceIpv4Address;
+            resourceInputs["tunnelSourceIpv4AddressVariable"] = state?.tunnelSourceIpv4AddressVariable;
+            resourceInputs["tunnelSourceIpv4SubnetMask"] = state?.tunnelSourceIpv4SubnetMask;
+            resourceInputs["tunnelSourceIpv4SubnetMaskVariable"] = state?.tunnelSourceIpv4SubnetMaskVariable;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as ServiceLanVpnInterfaceIpsecFeatureArgs | undefined;
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            if ((!args || args.serviceLanVpnFeatureId === undefined) && !opts.urn) {
+            if (args?.serviceLanVpnFeatureId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'serviceLanVpnFeatureId'");
             }
-            if ((!args || args.tunnelDestinationIpv4SubnetMask === undefined) && !opts.urn) {
+            if (args?.tunnelDestinationIpv4SubnetMask === undefined && !opts.urn) {
                 throw new Error("Missing required property 'tunnelDestinationIpv4SubnetMask'");
             }
-            resourceInputs["applicationTunnelType"] = args ? args.applicationTunnelType : undefined;
-            resourceInputs["applicationTunnelTypeVariable"] = args ? args.applicationTunnelTypeVariable : undefined;
-            resourceInputs["clearDontFragment"] = args ? args.clearDontFragment : undefined;
-            resourceInputs["clearDontFragmentVariable"] = args ? args.clearDontFragmentVariable : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["dpdInterval"] = args ? args.dpdInterval : undefined;
-            resourceInputs["dpdIntervalVariable"] = args ? args.dpdIntervalVariable : undefined;
-            resourceInputs["dpdRetries"] = args ? args.dpdRetries : undefined;
-            resourceInputs["dpdRetriesVariable"] = args ? args.dpdRetriesVariable : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["ikeCiphersuite"] = args ? args.ikeCiphersuite : undefined;
-            resourceInputs["ikeCiphersuiteVariable"] = args ? args.ikeCiphersuiteVariable : undefined;
-            resourceInputs["ikeDiffieHellmanGroup"] = args ? args.ikeDiffieHellmanGroup : undefined;
-            resourceInputs["ikeDiffieHellmanGroupVariable"] = args ? args.ikeDiffieHellmanGroupVariable : undefined;
-            resourceInputs["ikeIdLocalEndPoint"] = args ? args.ikeIdLocalEndPoint : undefined;
-            resourceInputs["ikeIdLocalEndPointVariable"] = args ? args.ikeIdLocalEndPointVariable : undefined;
-            resourceInputs["ikeIdRemoteEndPoint"] = args ? args.ikeIdRemoteEndPoint : undefined;
-            resourceInputs["ikeIdRemoteEndPointVariable"] = args ? args.ikeIdRemoteEndPointVariable : undefined;
-            resourceInputs["ikeIntegrityProtocol"] = args ? args.ikeIntegrityProtocol : undefined;
-            resourceInputs["ikeIntegrityProtocolVariable"] = args ? args.ikeIntegrityProtocolVariable : undefined;
-            resourceInputs["ikePresharedKey"] = args ? args.ikePresharedKey : undefined;
-            resourceInputs["ikePresharedKeyVariable"] = args ? args.ikePresharedKeyVariable : undefined;
-            resourceInputs["ikeRekeyInterval"] = args ? args.ikeRekeyInterval : undefined;
-            resourceInputs["ikeRekeyIntervalVariable"] = args ? args.ikeRekeyIntervalVariable : undefined;
-            resourceInputs["ikeVersion"] = args ? args.ikeVersion : undefined;
-            resourceInputs["interfaceDescription"] = args ? args.interfaceDescription : undefined;
-            resourceInputs["interfaceDescriptionVariable"] = args ? args.interfaceDescriptionVariable : undefined;
-            resourceInputs["interfaceName"] = args ? args.interfaceName : undefined;
-            resourceInputs["interfaceNameVariable"] = args ? args.interfaceNameVariable : undefined;
-            resourceInputs["ipMtu"] = args ? args.ipMtu : undefined;
-            resourceInputs["ipMtuVariable"] = args ? args.ipMtuVariable : undefined;
-            resourceInputs["ipsecCiphersuite"] = args ? args.ipsecCiphersuite : undefined;
-            resourceInputs["ipsecCiphersuiteVariable"] = args ? args.ipsecCiphersuiteVariable : undefined;
-            resourceInputs["ipsecRekeyInterval"] = args ? args.ipsecRekeyInterval : undefined;
-            resourceInputs["ipsecRekeyIntervalVariable"] = args ? args.ipsecRekeyIntervalVariable : undefined;
-            resourceInputs["ipsecReplayWindow"] = args ? args.ipsecReplayWindow : undefined;
-            resourceInputs["ipsecReplayWindowVariable"] = args ? args.ipsecReplayWindowVariable : undefined;
-            resourceInputs["ipv4Address"] = args ? args.ipv4Address : undefined;
-            resourceInputs["ipv4AddressVariable"] = args ? args.ipv4AddressVariable : undefined;
-            resourceInputs["ipv4SubnetMask"] = args ? args.ipv4SubnetMask : undefined;
-            resourceInputs["ipv4SubnetMaskVariable"] = args ? args.ipv4SubnetMaskVariable : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["perfectForwardSecrecy"] = args ? args.perfectForwardSecrecy : undefined;
-            resourceInputs["perfectForwardSecrecyVariable"] = args ? args.perfectForwardSecrecyVariable : undefined;
-            resourceInputs["serviceLanVpnFeatureId"] = args ? args.serviceLanVpnFeatureId : undefined;
-            resourceInputs["shutdown"] = args ? args.shutdown : undefined;
-            resourceInputs["shutdownVariable"] = args ? args.shutdownVariable : undefined;
-            resourceInputs["tcpMss"] = args ? args.tcpMss : undefined;
-            resourceInputs["tcpMssVariable"] = args ? args.tcpMssVariable : undefined;
-            resourceInputs["trackerId"] = args ? args.trackerId : undefined;
-            resourceInputs["trackerIdVariable"] = args ? args.trackerIdVariable : undefined;
-            resourceInputs["tunnelDestinationIpv4Address"] = args ? args.tunnelDestinationIpv4Address : undefined;
-            resourceInputs["tunnelDestinationIpv4AddressVariable"] = args ? args.tunnelDestinationIpv4AddressVariable : undefined;
-            resourceInputs["tunnelDestinationIpv4SubnetMask"] = args ? args.tunnelDestinationIpv4SubnetMask : undefined;
-            resourceInputs["tunnelDestinationIpv4SubnetMaskVariable"] = args ? args.tunnelDestinationIpv4SubnetMaskVariable : undefined;
-            resourceInputs["tunnelRouteVia"] = args ? args.tunnelRouteVia : undefined;
-            resourceInputs["tunnelRouteViaVariable"] = args ? args.tunnelRouteViaVariable : undefined;
-            resourceInputs["tunnelSourceInterface"] = args ? args.tunnelSourceInterface : undefined;
-            resourceInputs["tunnelSourceInterfaceVariable"] = args ? args.tunnelSourceInterfaceVariable : undefined;
-            resourceInputs["tunnelSourceIpv4Address"] = args ? args.tunnelSourceIpv4Address : undefined;
-            resourceInputs["tunnelSourceIpv4AddressVariable"] = args ? args.tunnelSourceIpv4AddressVariable : undefined;
-            resourceInputs["tunnelSourceIpv4SubnetMask"] = args ? args.tunnelSourceIpv4SubnetMask : undefined;
-            resourceInputs["tunnelSourceIpv4SubnetMaskVariable"] = args ? args.tunnelSourceIpv4SubnetMaskVariable : undefined;
+            resourceInputs["applicationTunnelType"] = args?.applicationTunnelType;
+            resourceInputs["applicationTunnelTypeVariable"] = args?.applicationTunnelTypeVariable;
+            resourceInputs["clearDontFragment"] = args?.clearDontFragment;
+            resourceInputs["clearDontFragmentVariable"] = args?.clearDontFragmentVariable;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["dpdInterval"] = args?.dpdInterval;
+            resourceInputs["dpdIntervalVariable"] = args?.dpdIntervalVariable;
+            resourceInputs["dpdRetries"] = args?.dpdRetries;
+            resourceInputs["dpdRetriesVariable"] = args?.dpdRetriesVariable;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["ikeCiphersuite"] = args?.ikeCiphersuite;
+            resourceInputs["ikeCiphersuiteVariable"] = args?.ikeCiphersuiteVariable;
+            resourceInputs["ikeDiffieHellmanGroup"] = args?.ikeDiffieHellmanGroup;
+            resourceInputs["ikeDiffieHellmanGroupVariable"] = args?.ikeDiffieHellmanGroupVariable;
+            resourceInputs["ikeIdLocalEndPoint"] = args?.ikeIdLocalEndPoint;
+            resourceInputs["ikeIdLocalEndPointVariable"] = args?.ikeIdLocalEndPointVariable;
+            resourceInputs["ikeIdRemoteEndPoint"] = args?.ikeIdRemoteEndPoint;
+            resourceInputs["ikeIdRemoteEndPointVariable"] = args?.ikeIdRemoteEndPointVariable;
+            resourceInputs["ikeIntegrityProtocol"] = args?.ikeIntegrityProtocol;
+            resourceInputs["ikeIntegrityProtocolVariable"] = args?.ikeIntegrityProtocolVariable;
+            resourceInputs["ikePresharedKey"] = args?.ikePresharedKey;
+            resourceInputs["ikePresharedKeyVariable"] = args?.ikePresharedKeyVariable;
+            resourceInputs["ikeRekeyInterval"] = args?.ikeRekeyInterval;
+            resourceInputs["ikeRekeyIntervalVariable"] = args?.ikeRekeyIntervalVariable;
+            resourceInputs["ikeVersion"] = args?.ikeVersion;
+            resourceInputs["interfaceDescription"] = args?.interfaceDescription;
+            resourceInputs["interfaceDescriptionVariable"] = args?.interfaceDescriptionVariable;
+            resourceInputs["interfaceName"] = args?.interfaceName;
+            resourceInputs["interfaceNameVariable"] = args?.interfaceNameVariable;
+            resourceInputs["ipMtu"] = args?.ipMtu;
+            resourceInputs["ipMtuVariable"] = args?.ipMtuVariable;
+            resourceInputs["ipsecCiphersuite"] = args?.ipsecCiphersuite;
+            resourceInputs["ipsecCiphersuiteVariable"] = args?.ipsecCiphersuiteVariable;
+            resourceInputs["ipsecRekeyInterval"] = args?.ipsecRekeyInterval;
+            resourceInputs["ipsecRekeyIntervalVariable"] = args?.ipsecRekeyIntervalVariable;
+            resourceInputs["ipsecReplayWindow"] = args?.ipsecReplayWindow;
+            resourceInputs["ipsecReplayWindowVariable"] = args?.ipsecReplayWindowVariable;
+            resourceInputs["ipv4Address"] = args?.ipv4Address;
+            resourceInputs["ipv4AddressVariable"] = args?.ipv4AddressVariable;
+            resourceInputs["ipv4SubnetMask"] = args?.ipv4SubnetMask;
+            resourceInputs["ipv4SubnetMaskVariable"] = args?.ipv4SubnetMaskVariable;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["perfectForwardSecrecy"] = args?.perfectForwardSecrecy;
+            resourceInputs["perfectForwardSecrecyVariable"] = args?.perfectForwardSecrecyVariable;
+            resourceInputs["serviceLanVpnFeatureId"] = args?.serviceLanVpnFeatureId;
+            resourceInputs["shutdown"] = args?.shutdown;
+            resourceInputs["shutdownVariable"] = args?.shutdownVariable;
+            resourceInputs["tcpMss"] = args?.tcpMss;
+            resourceInputs["tcpMssVariable"] = args?.tcpMssVariable;
+            resourceInputs["trackerId"] = args?.trackerId;
+            resourceInputs["trackerIdVariable"] = args?.trackerIdVariable;
+            resourceInputs["tunnelDestinationIpv4Address"] = args?.tunnelDestinationIpv4Address;
+            resourceInputs["tunnelDestinationIpv4AddressVariable"] = args?.tunnelDestinationIpv4AddressVariable;
+            resourceInputs["tunnelDestinationIpv4SubnetMask"] = args?.tunnelDestinationIpv4SubnetMask;
+            resourceInputs["tunnelDestinationIpv4SubnetMaskVariable"] = args?.tunnelDestinationIpv4SubnetMaskVariable;
+            resourceInputs["tunnelRouteVia"] = args?.tunnelRouteVia;
+            resourceInputs["tunnelRouteViaVariable"] = args?.tunnelRouteViaVariable;
+            resourceInputs["tunnelSourceInterface"] = args?.tunnelSourceInterface;
+            resourceInputs["tunnelSourceInterfaceVariable"] = args?.tunnelSourceInterfaceVariable;
+            resourceInputs["tunnelSourceIpv4Address"] = args?.tunnelSourceIpv4Address;
+            resourceInputs["tunnelSourceIpv4AddressVariable"] = args?.tunnelSourceIpv4AddressVariable;
+            resourceInputs["tunnelSourceIpv4SubnetMask"] = args?.tunnelSourceIpv4SubnetMask;
+            resourceInputs["tunnelSourceIpv4SubnetMaskVariable"] = args?.tunnelSourceIpv4SubnetMaskVariable;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -516,7 +528,8 @@ export class ServiceLanVpnInterfaceIpsecFeature extends pulumi.CustomResource {
  */
 export interface ServiceLanVpnInterfaceIpsecFeatureState {
     /**
-     * Enable Application Tunnel Type - Choices: `none`, `sig`
+     * Enable Application Tunnel Type
+     *   - Choices: `none`, `sig`
      */
     applicationTunnelType?: pulumi.Input<string>;
     /**
@@ -524,7 +537,8 @@ export interface ServiceLanVpnInterfaceIpsecFeatureState {
      */
     applicationTunnelTypeVariable?: pulumi.Input<string>;
     /**
-     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+     *   - Default value: `false`
      */
     clearDontFragment?: pulumi.Input<boolean>;
     /**
@@ -536,7 +550,9 @@ export interface ServiceLanVpnInterfaceIpsecFeatureState {
      */
     description?: pulumi.Input<string>;
     /**
-     * IKE keepalive interval (seconds) - Range: `10`-`3600` - Default value: `10`
+     * IKE keepalive interval (seconds)
+     *   - Range: `10`-`3600`
+     *   - Default value: `10`
      */
     dpdInterval?: pulumi.Input<number>;
     /**
@@ -544,7 +560,9 @@ export interface ServiceLanVpnInterfaceIpsecFeatureState {
      */
     dpdIntervalVariable?: pulumi.Input<string>;
     /**
-     * IKE keepalive retries - Range: `2`-`60` - Default value: `3`
+     * IKE keepalive retries
+     *   - Range: `2`-`60`
+     *   - Default value: `3`
      */
     dpdRetries?: pulumi.Input<number>;
     /**
@@ -556,8 +574,9 @@ export interface ServiceLanVpnInterfaceIpsecFeatureState {
      */
     featureProfileId?: pulumi.Input<string>;
     /**
-     * IKE identity the IKE preshared secret belongs to - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`,
-     * `aes128-cbc-sha2` - Default value: `aes256-cbc-sha1`
+     * IKE identity the IKE preshared secret belongs to
+     *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+     *   - Default value: `aes256-cbc-sha1`
      */
     ikeCiphersuite?: pulumi.Input<string>;
     /**
@@ -565,7 +584,9 @@ export interface ServiceLanVpnInterfaceIpsecFeatureState {
      */
     ikeCiphersuiteVariable?: pulumi.Input<string>;
     /**
-     * IKE Diffie Hellman Groups - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24` - Default value: `16`
+     * IKE Diffie Hellman Groups
+     *   - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
+     *   - Default value: `16`
      */
     ikeDiffieHellmanGroup?: pulumi.Input<string>;
     /**
@@ -589,7 +610,9 @@ export interface ServiceLanVpnInterfaceIpsecFeatureState {
      */
     ikeIdRemoteEndPointVariable?: pulumi.Input<string>;
     /**
-     * IKE integrity protocol - Choices: `main`, `aggressive` - Default value: `main`
+     * IKE integrity protocol
+     *   - Choices: `main`, `aggressive`
+     *   - Default value: `main`
      */
     ikeIntegrityProtocol?: pulumi.Input<string>;
     /**
@@ -605,7 +628,9 @@ export interface ServiceLanVpnInterfaceIpsecFeatureState {
      */
     ikePresharedKeyVariable?: pulumi.Input<string>;
     /**
-     * IKE rekey interval <60..86400> seconds - Range: `60`-`86400` - Default value: `14400`
+     * IKE rekey interval <60..86400> seconds
+     *   - Range: `60`-`86400`
+     *   - Default value: `14400`
      */
     ikeRekeyInterval?: pulumi.Input<number>;
     /**
@@ -613,7 +638,9 @@ export interface ServiceLanVpnInterfaceIpsecFeatureState {
      */
     ikeRekeyIntervalVariable?: pulumi.Input<string>;
     /**
-     * IKE Version <1..2> - Range: `1`-`2` - Default value: `1`
+     * IKE Version <1..2>
+     *   - Range: `1`-`2`
+     *   - Default value: `1`
      */
     ikeVersion?: pulumi.Input<number>;
     /**
@@ -633,7 +660,9 @@ export interface ServiceLanVpnInterfaceIpsecFeatureState {
      */
     interfaceNameVariable?: pulumi.Input<string>;
     /**
-     * Interface MTU <68..9216>, in bytes - Range: `68`-`9216` - Default value: `1500`
+     * Interface MTU <68..9216>, in bytes
+     *   - Range: `68`-`9216`
+     *   - Default value: `1500`
      */
     ipMtu?: pulumi.Input<number>;
     /**
@@ -641,9 +670,9 @@ export interface ServiceLanVpnInterfaceIpsecFeatureState {
      */
     ipMtuVariable?: pulumi.Input<string>;
     /**
-     * IPsec(ESP) encryption and integrity protocol - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`,
-     * `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512` - Default value:
-     * `aes256-gcm`
+     * IPsec(ESP) encryption and integrity protocol
+     *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
+     *   - Default value: `aes256-gcm`
      */
     ipsecCiphersuite?: pulumi.Input<string>;
     /**
@@ -651,7 +680,9 @@ export interface ServiceLanVpnInterfaceIpsecFeatureState {
      */
     ipsecCiphersuiteVariable?: pulumi.Input<string>;
     /**
-     * IPsec rekey interval <300..1209600> seconds - Range: `120`-`2592000` - Default value: `3600`
+     * IPsec rekey interval <300..1209600> seconds
+     *   - Range: `120`-`2592000`
+     *   - Default value: `3600`
      */
     ipsecRekeyInterval?: pulumi.Input<number>;
     /**
@@ -659,7 +690,9 @@ export interface ServiceLanVpnInterfaceIpsecFeatureState {
      */
     ipsecRekeyIntervalVariable?: pulumi.Input<string>;
     /**
-     * Replay window size 32..8192 (must be a power of 2) - Range: `64`-`4096` - Default value: `512`
+     * Replay window size 32..8192 (must be a power of 2)
+     *   - Range: `64`-`4096`
+     *   - Default value: `512`
      */
     ipsecReplayWindow?: pulumi.Input<number>;
     /**
@@ -672,11 +705,7 @@ export interface ServiceLanVpnInterfaceIpsecFeatureState {
      */
     ipv4AddressVariable?: pulumi.Input<string>;
     /**
-     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     ipv4SubnetMask?: pulumi.Input<string>;
     /**
@@ -688,8 +717,9 @@ export interface ServiceLanVpnInterfaceIpsecFeatureState {
      */
     name?: pulumi.Input<string>;
     /**
-     * IPsec perfect forward secrecy settings - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`,
-     * `group-19`, `group-20`, `group-21`, `group-24`, `none` - Default value: `group-16`
+     * IPsec perfect forward secrecy settings
+     *   - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+     *   - Default value: `group-16`
      */
     perfectForwardSecrecy?: pulumi.Input<string>;
     /**
@@ -701,7 +731,8 @@ export interface ServiceLanVpnInterfaceIpsecFeatureState {
      */
     serviceLanVpnFeatureId?: pulumi.Input<string>;
     /**
-     * Administrative state - Default value: `true`
+     * Administrative state
+     *   - Default value: `true`
      */
     shutdown?: pulumi.Input<boolean>;
     /**
@@ -709,7 +740,8 @@ export interface ServiceLanVpnInterfaceIpsecFeatureState {
      */
     shutdownVariable?: pulumi.Input<string>;
     /**
-     * TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      */
     tcpMss?: pulumi.Input<number>;
     /**
@@ -730,11 +762,7 @@ export interface ServiceLanVpnInterfaceIpsecFeatureState {
      */
     tunnelDestinationIpv4AddressVariable?: pulumi.Input<string>;
     /**
-     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     tunnelDestinationIpv4SubnetMask?: pulumi.Input<string>;
     /**
@@ -763,11 +791,7 @@ export interface ServiceLanVpnInterfaceIpsecFeatureState {
      */
     tunnelSourceIpv4AddressVariable?: pulumi.Input<string>;
     /**
-     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     tunnelSourceIpv4SubnetMask?: pulumi.Input<string>;
     /**
@@ -785,7 +809,8 @@ export interface ServiceLanVpnInterfaceIpsecFeatureState {
  */
 export interface ServiceLanVpnInterfaceIpsecFeatureArgs {
     /**
-     * Enable Application Tunnel Type - Choices: `none`, `sig`
+     * Enable Application Tunnel Type
+     *   - Choices: `none`, `sig`
      */
     applicationTunnelType?: pulumi.Input<string>;
     /**
@@ -793,7 +818,8 @@ export interface ServiceLanVpnInterfaceIpsecFeatureArgs {
      */
     applicationTunnelTypeVariable?: pulumi.Input<string>;
     /**
-     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+     *   - Default value: `false`
      */
     clearDontFragment?: pulumi.Input<boolean>;
     /**
@@ -805,7 +831,9 @@ export interface ServiceLanVpnInterfaceIpsecFeatureArgs {
      */
     description?: pulumi.Input<string>;
     /**
-     * IKE keepalive interval (seconds) - Range: `10`-`3600` - Default value: `10`
+     * IKE keepalive interval (seconds)
+     *   - Range: `10`-`3600`
+     *   - Default value: `10`
      */
     dpdInterval?: pulumi.Input<number>;
     /**
@@ -813,7 +841,9 @@ export interface ServiceLanVpnInterfaceIpsecFeatureArgs {
      */
     dpdIntervalVariable?: pulumi.Input<string>;
     /**
-     * IKE keepalive retries - Range: `2`-`60` - Default value: `3`
+     * IKE keepalive retries
+     *   - Range: `2`-`60`
+     *   - Default value: `3`
      */
     dpdRetries?: pulumi.Input<number>;
     /**
@@ -825,8 +855,9 @@ export interface ServiceLanVpnInterfaceIpsecFeatureArgs {
      */
     featureProfileId: pulumi.Input<string>;
     /**
-     * IKE identity the IKE preshared secret belongs to - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`,
-     * `aes128-cbc-sha2` - Default value: `aes256-cbc-sha1`
+     * IKE identity the IKE preshared secret belongs to
+     *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+     *   - Default value: `aes256-cbc-sha1`
      */
     ikeCiphersuite?: pulumi.Input<string>;
     /**
@@ -834,7 +865,9 @@ export interface ServiceLanVpnInterfaceIpsecFeatureArgs {
      */
     ikeCiphersuiteVariable?: pulumi.Input<string>;
     /**
-     * IKE Diffie Hellman Groups - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24` - Default value: `16`
+     * IKE Diffie Hellman Groups
+     *   - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
+     *   - Default value: `16`
      */
     ikeDiffieHellmanGroup?: pulumi.Input<string>;
     /**
@@ -858,7 +891,9 @@ export interface ServiceLanVpnInterfaceIpsecFeatureArgs {
      */
     ikeIdRemoteEndPointVariable?: pulumi.Input<string>;
     /**
-     * IKE integrity protocol - Choices: `main`, `aggressive` - Default value: `main`
+     * IKE integrity protocol
+     *   - Choices: `main`, `aggressive`
+     *   - Default value: `main`
      */
     ikeIntegrityProtocol?: pulumi.Input<string>;
     /**
@@ -874,7 +909,9 @@ export interface ServiceLanVpnInterfaceIpsecFeatureArgs {
      */
     ikePresharedKeyVariable?: pulumi.Input<string>;
     /**
-     * IKE rekey interval <60..86400> seconds - Range: `60`-`86400` - Default value: `14400`
+     * IKE rekey interval <60..86400> seconds
+     *   - Range: `60`-`86400`
+     *   - Default value: `14400`
      */
     ikeRekeyInterval?: pulumi.Input<number>;
     /**
@@ -882,7 +919,9 @@ export interface ServiceLanVpnInterfaceIpsecFeatureArgs {
      */
     ikeRekeyIntervalVariable?: pulumi.Input<string>;
     /**
-     * IKE Version <1..2> - Range: `1`-`2` - Default value: `1`
+     * IKE Version <1..2>
+     *   - Range: `1`-`2`
+     *   - Default value: `1`
      */
     ikeVersion?: pulumi.Input<number>;
     /**
@@ -902,7 +941,9 @@ export interface ServiceLanVpnInterfaceIpsecFeatureArgs {
      */
     interfaceNameVariable?: pulumi.Input<string>;
     /**
-     * Interface MTU <68..9216>, in bytes - Range: `68`-`9216` - Default value: `1500`
+     * Interface MTU <68..9216>, in bytes
+     *   - Range: `68`-`9216`
+     *   - Default value: `1500`
      */
     ipMtu?: pulumi.Input<number>;
     /**
@@ -910,9 +951,9 @@ export interface ServiceLanVpnInterfaceIpsecFeatureArgs {
      */
     ipMtuVariable?: pulumi.Input<string>;
     /**
-     * IPsec(ESP) encryption and integrity protocol - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`,
-     * `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512` - Default value:
-     * `aes256-gcm`
+     * IPsec(ESP) encryption and integrity protocol
+     *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
+     *   - Default value: `aes256-gcm`
      */
     ipsecCiphersuite?: pulumi.Input<string>;
     /**
@@ -920,7 +961,9 @@ export interface ServiceLanVpnInterfaceIpsecFeatureArgs {
      */
     ipsecCiphersuiteVariable?: pulumi.Input<string>;
     /**
-     * IPsec rekey interval <300..1209600> seconds - Range: `120`-`2592000` - Default value: `3600`
+     * IPsec rekey interval <300..1209600> seconds
+     *   - Range: `120`-`2592000`
+     *   - Default value: `3600`
      */
     ipsecRekeyInterval?: pulumi.Input<number>;
     /**
@@ -928,7 +971,9 @@ export interface ServiceLanVpnInterfaceIpsecFeatureArgs {
      */
     ipsecRekeyIntervalVariable?: pulumi.Input<string>;
     /**
-     * Replay window size 32..8192 (must be a power of 2) - Range: `64`-`4096` - Default value: `512`
+     * Replay window size 32..8192 (must be a power of 2)
+     *   - Range: `64`-`4096`
+     *   - Default value: `512`
      */
     ipsecReplayWindow?: pulumi.Input<number>;
     /**
@@ -941,11 +986,7 @@ export interface ServiceLanVpnInterfaceIpsecFeatureArgs {
      */
     ipv4AddressVariable?: pulumi.Input<string>;
     /**
-     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     ipv4SubnetMask?: pulumi.Input<string>;
     /**
@@ -957,8 +998,9 @@ export interface ServiceLanVpnInterfaceIpsecFeatureArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * IPsec perfect forward secrecy settings - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`,
-     * `group-19`, `group-20`, `group-21`, `group-24`, `none` - Default value: `group-16`
+     * IPsec perfect forward secrecy settings
+     *   - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+     *   - Default value: `group-16`
      */
     perfectForwardSecrecy?: pulumi.Input<string>;
     /**
@@ -970,7 +1012,8 @@ export interface ServiceLanVpnInterfaceIpsecFeatureArgs {
      */
     serviceLanVpnFeatureId: pulumi.Input<string>;
     /**
-     * Administrative state - Default value: `true`
+     * Administrative state
+     *   - Default value: `true`
      */
     shutdown?: pulumi.Input<boolean>;
     /**
@@ -978,7 +1021,8 @@ export interface ServiceLanVpnInterfaceIpsecFeatureArgs {
      */
     shutdownVariable?: pulumi.Input<string>;
     /**
-     * TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      */
     tcpMss?: pulumi.Input<number>;
     /**
@@ -999,11 +1043,7 @@ export interface ServiceLanVpnInterfaceIpsecFeatureArgs {
      */
     tunnelDestinationIpv4AddressVariable?: pulumi.Input<string>;
     /**
-     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     tunnelDestinationIpv4SubnetMask: pulumi.Input<string>;
     /**
@@ -1032,11 +1072,7 @@ export interface ServiceLanVpnInterfaceIpsecFeatureArgs {
      */
     tunnelSourceIpv4AddressVariable?: pulumi.Input<string>;
     /**
-     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     tunnelSourceIpv4SubnetMask?: pulumi.Input<string>;
     /**

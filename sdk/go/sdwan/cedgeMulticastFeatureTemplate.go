@@ -60,23 +60,25 @@ type CedgeMulticastFeatureTemplate struct {
 
 	// The description of the feature template
 	Description pulumi.StringOutput `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayOutput `pulumi:"deviceTypes"`
-	// Replicator is local to this device - Default value: `false`
+	// Replicator is local to this device
+	//   - Default value: `false`
 	LocalReplicator pulumi.BoolPtrOutput `pulumi:"localReplicator"`
 	// Variable name
 	LocalReplicatorVariable pulumi.StringPtrOutput `pulumi:"localReplicatorVariable"`
 	// The name of the feature template
 	Name pulumi.StringOutput `pulumi:"name"`
-	// Shortest Path Tree (SPT) Only Mode - Default value: `false`
+	// Shortest Path Tree (SPT) Only Mode
+	//   - Default value: `false`
 	SptOnly pulumi.BoolPtrOutput `pulumi:"sptOnly"`
 	// Variable name
 	SptOnlyVariable pulumi.StringPtrOutput `pulumi:"sptOnlyVariable"`
 	// The template type
 	TemplateType pulumi.StringOutput `pulumi:"templateType"`
-	// Set number of joins per group the router supports - Range: `0`-`1000`
+	// Set number of joins per group the router supports
+	//   - Range: `0`-`1000`
 	Threshold pulumi.IntPtrOutput `pulumi:"threshold"`
 	// Variable name
 	ThresholdVariable pulumi.StringPtrOutput `pulumi:"thresholdVariable"`
@@ -122,23 +124,25 @@ func GetCedgeMulticastFeatureTemplate(ctx *pulumi.Context,
 type cedgeMulticastFeatureTemplateState struct {
 	// The description of the feature template
 	Description *string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
-	// Replicator is local to this device - Default value: `false`
+	// Replicator is local to this device
+	//   - Default value: `false`
 	LocalReplicator *bool `pulumi:"localReplicator"`
 	// Variable name
 	LocalReplicatorVariable *string `pulumi:"localReplicatorVariable"`
 	// The name of the feature template
 	Name *string `pulumi:"name"`
-	// Shortest Path Tree (SPT) Only Mode - Default value: `false`
+	// Shortest Path Tree (SPT) Only Mode
+	//   - Default value: `false`
 	SptOnly *bool `pulumi:"sptOnly"`
 	// Variable name
 	SptOnlyVariable *string `pulumi:"sptOnlyVariable"`
 	// The template type
 	TemplateType *string `pulumi:"templateType"`
-	// Set number of joins per group the router supports - Range: `0`-`1000`
+	// Set number of joins per group the router supports
+	//   - Range: `0`-`1000`
 	Threshold *int `pulumi:"threshold"`
 	// Variable name
 	ThresholdVariable *string `pulumi:"thresholdVariable"`
@@ -149,23 +153,25 @@ type cedgeMulticastFeatureTemplateState struct {
 type CedgeMulticastFeatureTemplateState struct {
 	// The description of the feature template
 	Description pulumi.StringPtrInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
-	// Replicator is local to this device - Default value: `false`
+	// Replicator is local to this device
+	//   - Default value: `false`
 	LocalReplicator pulumi.BoolPtrInput
 	// Variable name
 	LocalReplicatorVariable pulumi.StringPtrInput
 	// The name of the feature template
 	Name pulumi.StringPtrInput
-	// Shortest Path Tree (SPT) Only Mode - Default value: `false`
+	// Shortest Path Tree (SPT) Only Mode
+	//   - Default value: `false`
 	SptOnly pulumi.BoolPtrInput
 	// Variable name
 	SptOnlyVariable pulumi.StringPtrInput
 	// The template type
 	TemplateType pulumi.StringPtrInput
-	// Set number of joins per group the router supports - Range: `0`-`1000`
+	// Set number of joins per group the router supports
+	//   - Range: `0`-`1000`
 	Threshold pulumi.IntPtrInput
 	// Variable name
 	ThresholdVariable pulumi.StringPtrInput
@@ -180,21 +186,23 @@ func (CedgeMulticastFeatureTemplateState) ElementType() reflect.Type {
 type cedgeMulticastFeatureTemplateArgs struct {
 	// The description of the feature template
 	Description string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
-	// Replicator is local to this device - Default value: `false`
+	// Replicator is local to this device
+	//   - Default value: `false`
 	LocalReplicator *bool `pulumi:"localReplicator"`
 	// Variable name
 	LocalReplicatorVariable *string `pulumi:"localReplicatorVariable"`
 	// The name of the feature template
 	Name *string `pulumi:"name"`
-	// Shortest Path Tree (SPT) Only Mode - Default value: `false`
+	// Shortest Path Tree (SPT) Only Mode
+	//   - Default value: `false`
 	SptOnly *bool `pulumi:"sptOnly"`
 	// Variable name
 	SptOnlyVariable *string `pulumi:"sptOnlyVariable"`
-	// Set number of joins per group the router supports - Range: `0`-`1000`
+	// Set number of joins per group the router supports
+	//   - Range: `0`-`1000`
 	Threshold *int `pulumi:"threshold"`
 	// Variable name
 	ThresholdVariable *string `pulumi:"thresholdVariable"`
@@ -204,21 +212,23 @@ type cedgeMulticastFeatureTemplateArgs struct {
 type CedgeMulticastFeatureTemplateArgs struct {
 	// The description of the feature template
 	Description pulumi.StringInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
-	// Replicator is local to this device - Default value: `false`
+	// Replicator is local to this device
+	//   - Default value: `false`
 	LocalReplicator pulumi.BoolPtrInput
 	// Variable name
 	LocalReplicatorVariable pulumi.StringPtrInput
 	// The name of the feature template
 	Name pulumi.StringPtrInput
-	// Shortest Path Tree (SPT) Only Mode - Default value: `false`
+	// Shortest Path Tree (SPT) Only Mode
+	//   - Default value: `false`
 	SptOnly pulumi.BoolPtrInput
 	// Variable name
 	SptOnlyVariable pulumi.StringPtrInput
-	// Set number of joins per group the router supports - Range: `0`-`1000`
+	// Set number of joins per group the router supports
+	//   - Range: `0`-`1000`
 	Threshold pulumi.IntPtrInput
 	// Variable name
 	ThresholdVariable pulumi.StringPtrInput
@@ -316,14 +326,14 @@ func (o CedgeMulticastFeatureTemplateOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v *CedgeMulticastFeatureTemplate) pulumi.StringOutput { return v.Description }).(pulumi.StringOutput)
 }
 
-// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+// List of supported device types
+//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 func (o CedgeMulticastFeatureTemplateOutput) DeviceTypes() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *CedgeMulticastFeatureTemplate) pulumi.StringArrayOutput { return v.DeviceTypes }).(pulumi.StringArrayOutput)
 }
 
-// Replicator is local to this device - Default value: `false`
+// Replicator is local to this device
+//   - Default value: `false`
 func (o CedgeMulticastFeatureTemplateOutput) LocalReplicator() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CedgeMulticastFeatureTemplate) pulumi.BoolPtrOutput { return v.LocalReplicator }).(pulumi.BoolPtrOutput)
 }
@@ -338,7 +348,8 @@ func (o CedgeMulticastFeatureTemplateOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *CedgeMulticastFeatureTemplate) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// Shortest Path Tree (SPT) Only Mode - Default value: `false`
+// Shortest Path Tree (SPT) Only Mode
+//   - Default value: `false`
 func (o CedgeMulticastFeatureTemplateOutput) SptOnly() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CedgeMulticastFeatureTemplate) pulumi.BoolPtrOutput { return v.SptOnly }).(pulumi.BoolPtrOutput)
 }
@@ -353,7 +364,8 @@ func (o CedgeMulticastFeatureTemplateOutput) TemplateType() pulumi.StringOutput 
 	return o.ApplyT(func(v *CedgeMulticastFeatureTemplate) pulumi.StringOutput { return v.TemplateType }).(pulumi.StringOutput)
 }
 
-// Set number of joins per group the router supports - Range: `0`-`1000`
+// Set number of joins per group the router supports
+//   - Range: `0`-`1000`
 func (o CedgeMulticastFeatureTemplateOutput) Threshold() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CedgeMulticastFeatureTemplate) pulumi.IntPtrOutput { return v.Threshold }).(pulumi.IntPtrOutput)
 }

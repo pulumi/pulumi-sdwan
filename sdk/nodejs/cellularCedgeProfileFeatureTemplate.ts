@@ -67,81 +67,85 @@ export class CellularCedgeProfileFeatureTemplate extends pulumi.CustomResource {
     /**
      * Set access point name
      */
-    public readonly accessPointName!: pulumi.Output<string | undefined>;
+    declare public readonly accessPointName: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly accessPointNameVariable!: pulumi.Output<string | undefined>;
+    declare public readonly accessPointNameVariable: pulumi.Output<string | undefined>;
     /**
-     * Set authentication type - Choices: `none`, `pap`, `chap`, `papChap` - Default value: `none`
+     * Set authentication type
+     *   - Choices: `none`, `pap`, `chap`, `papChap`
+     *   - Default value: `none`
      */
-    public readonly authenticationType!: pulumi.Output<string | undefined>;
+    declare public readonly authenticationType: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly authenticationTypeVariable!: pulumi.Output<string | undefined>;
+    declare public readonly authenticationTypeVariable: pulumi.Output<string | undefined>;
     /**
      * The description of the feature template
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    public readonly deviceTypes!: pulumi.Output<string[]>;
+    declare public readonly deviceTypes: pulumi.Output<string[]>;
     /**
      * The name of the feature template
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * No Overwrite
      */
-    public readonly noOverwrite!: pulumi.Output<boolean | undefined>;
+    declare public readonly noOverwrite: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly noOverwriteVariable!: pulumi.Output<string | undefined>;
+    declare public readonly noOverwriteVariable: pulumi.Output<string | undefined>;
     /**
-     * Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+     * Set packet data network type
+     *   - Choices: `ipv4`, `ipv4v6`, `ipv6`
+     *   - Default value: `ipv4`
      */
-    public readonly packetDataNetworkType!: pulumi.Output<string | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly packetDataNetworkTypeVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Set Profile ID - Range: `1`-`16`
-     */
-    public readonly profileId!: pulumi.Output<number | undefined>;
+    declare public readonly packetDataNetworkType: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly profileIdVariable!: pulumi.Output<string | undefined>;
+    declare public readonly packetDataNetworkTypeVariable: pulumi.Output<string | undefined>;
+    /**
+     * Set Profile ID
+     *   - Range: `1`-`16`
+     */
+    declare public readonly profileId: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly profileIdVariable: pulumi.Output<string | undefined>;
     /**
      * Set the profile password
      */
-    public readonly profilePassword!: pulumi.Output<string | undefined>;
+    declare public readonly profilePassword: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly profilePasswordVariable!: pulumi.Output<string | undefined>;
+    declare public readonly profilePasswordVariable: pulumi.Output<string | undefined>;
     /**
      * Set the profile username
      */
-    public readonly profileUsername!: pulumi.Output<string | undefined>;
+    declare public readonly profileUsername: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly profileUsernameVariable!: pulumi.Output<string | undefined>;
+    declare public readonly profileUsernameVariable: pulumi.Output<string | undefined>;
     /**
      * The template type
      */
-    public /*out*/ readonly templateType!: pulumi.Output<string>;
+    declare public /*out*/ readonly templateType: pulumi.Output<string>;
     /**
      * The version of the feature template
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a CellularCedgeProfileFeatureTemplate resource with the given unique name, arguments, and options.
@@ -156,50 +160,50 @@ export class CellularCedgeProfileFeatureTemplate extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as CellularCedgeProfileFeatureTemplateState | undefined;
-            resourceInputs["accessPointName"] = state ? state.accessPointName : undefined;
-            resourceInputs["accessPointNameVariable"] = state ? state.accessPointNameVariable : undefined;
-            resourceInputs["authenticationType"] = state ? state.authenticationType : undefined;
-            resourceInputs["authenticationTypeVariable"] = state ? state.authenticationTypeVariable : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["deviceTypes"] = state ? state.deviceTypes : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["noOverwrite"] = state ? state.noOverwrite : undefined;
-            resourceInputs["noOverwriteVariable"] = state ? state.noOverwriteVariable : undefined;
-            resourceInputs["packetDataNetworkType"] = state ? state.packetDataNetworkType : undefined;
-            resourceInputs["packetDataNetworkTypeVariable"] = state ? state.packetDataNetworkTypeVariable : undefined;
-            resourceInputs["profileId"] = state ? state.profileId : undefined;
-            resourceInputs["profileIdVariable"] = state ? state.profileIdVariable : undefined;
-            resourceInputs["profilePassword"] = state ? state.profilePassword : undefined;
-            resourceInputs["profilePasswordVariable"] = state ? state.profilePasswordVariable : undefined;
-            resourceInputs["profileUsername"] = state ? state.profileUsername : undefined;
-            resourceInputs["profileUsernameVariable"] = state ? state.profileUsernameVariable : undefined;
-            resourceInputs["templateType"] = state ? state.templateType : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["accessPointName"] = state?.accessPointName;
+            resourceInputs["accessPointNameVariable"] = state?.accessPointNameVariable;
+            resourceInputs["authenticationType"] = state?.authenticationType;
+            resourceInputs["authenticationTypeVariable"] = state?.authenticationTypeVariable;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["deviceTypes"] = state?.deviceTypes;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["noOverwrite"] = state?.noOverwrite;
+            resourceInputs["noOverwriteVariable"] = state?.noOverwriteVariable;
+            resourceInputs["packetDataNetworkType"] = state?.packetDataNetworkType;
+            resourceInputs["packetDataNetworkTypeVariable"] = state?.packetDataNetworkTypeVariable;
+            resourceInputs["profileId"] = state?.profileId;
+            resourceInputs["profileIdVariable"] = state?.profileIdVariable;
+            resourceInputs["profilePassword"] = state?.profilePassword;
+            resourceInputs["profilePasswordVariable"] = state?.profilePasswordVariable;
+            resourceInputs["profileUsername"] = state?.profileUsername;
+            resourceInputs["profileUsernameVariable"] = state?.profileUsernameVariable;
+            resourceInputs["templateType"] = state?.templateType;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as CellularCedgeProfileFeatureTemplateArgs | undefined;
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            if ((!args || args.deviceTypes === undefined) && !opts.urn) {
+            if (args?.deviceTypes === undefined && !opts.urn) {
                 throw new Error("Missing required property 'deviceTypes'");
             }
-            resourceInputs["accessPointName"] = args ? args.accessPointName : undefined;
-            resourceInputs["accessPointNameVariable"] = args ? args.accessPointNameVariable : undefined;
-            resourceInputs["authenticationType"] = args ? args.authenticationType : undefined;
-            resourceInputs["authenticationTypeVariable"] = args ? args.authenticationTypeVariable : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["deviceTypes"] = args ? args.deviceTypes : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["noOverwrite"] = args ? args.noOverwrite : undefined;
-            resourceInputs["noOverwriteVariable"] = args ? args.noOverwriteVariable : undefined;
-            resourceInputs["packetDataNetworkType"] = args ? args.packetDataNetworkType : undefined;
-            resourceInputs["packetDataNetworkTypeVariable"] = args ? args.packetDataNetworkTypeVariable : undefined;
-            resourceInputs["profileId"] = args ? args.profileId : undefined;
-            resourceInputs["profileIdVariable"] = args ? args.profileIdVariable : undefined;
-            resourceInputs["profilePassword"] = args ? args.profilePassword : undefined;
-            resourceInputs["profilePasswordVariable"] = args ? args.profilePasswordVariable : undefined;
-            resourceInputs["profileUsername"] = args ? args.profileUsername : undefined;
-            resourceInputs["profileUsernameVariable"] = args ? args.profileUsernameVariable : undefined;
+            resourceInputs["accessPointName"] = args?.accessPointName;
+            resourceInputs["accessPointNameVariable"] = args?.accessPointNameVariable;
+            resourceInputs["authenticationType"] = args?.authenticationType;
+            resourceInputs["authenticationTypeVariable"] = args?.authenticationTypeVariable;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["deviceTypes"] = args?.deviceTypes;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["noOverwrite"] = args?.noOverwrite;
+            resourceInputs["noOverwriteVariable"] = args?.noOverwriteVariable;
+            resourceInputs["packetDataNetworkType"] = args?.packetDataNetworkType;
+            resourceInputs["packetDataNetworkTypeVariable"] = args?.packetDataNetworkTypeVariable;
+            resourceInputs["profileId"] = args?.profileId;
+            resourceInputs["profileIdVariable"] = args?.profileIdVariable;
+            resourceInputs["profilePassword"] = args?.profilePassword;
+            resourceInputs["profilePasswordVariable"] = args?.profilePasswordVariable;
+            resourceInputs["profileUsername"] = args?.profileUsername;
+            resourceInputs["profileUsernameVariable"] = args?.profileUsernameVariable;
             resourceInputs["templateType"] = undefined /*out*/;
             resourceInputs["version"] = undefined /*out*/;
         }
@@ -221,7 +225,9 @@ export interface CellularCedgeProfileFeatureTemplateState {
      */
     accessPointNameVariable?: pulumi.Input<string>;
     /**
-     * Set authentication type - Choices: `none`, `pap`, `chap`, `papChap` - Default value: `none`
+     * Set authentication type
+     *   - Choices: `none`, `pap`, `chap`, `papChap`
+     *   - Default value: `none`
      */
     authenticationType?: pulumi.Input<string>;
     /**
@@ -233,9 +239,8 @@ export interface CellularCedgeProfileFeatureTemplateState {
      */
     description?: pulumi.Input<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
     deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
     /**
@@ -251,7 +256,9 @@ export interface CellularCedgeProfileFeatureTemplateState {
      */
     noOverwriteVariable?: pulumi.Input<string>;
     /**
-     * Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+     * Set packet data network type
+     *   - Choices: `ipv4`, `ipv4v6`, `ipv6`
+     *   - Default value: `ipv4`
      */
     packetDataNetworkType?: pulumi.Input<string>;
     /**
@@ -259,7 +266,8 @@ export interface CellularCedgeProfileFeatureTemplateState {
      */
     packetDataNetworkTypeVariable?: pulumi.Input<string>;
     /**
-     * Set Profile ID - Range: `1`-`16`
+     * Set Profile ID
+     *   - Range: `1`-`16`
      */
     profileId?: pulumi.Input<number>;
     /**
@@ -305,7 +313,9 @@ export interface CellularCedgeProfileFeatureTemplateArgs {
      */
     accessPointNameVariable?: pulumi.Input<string>;
     /**
-     * Set authentication type - Choices: `none`, `pap`, `chap`, `papChap` - Default value: `none`
+     * Set authentication type
+     *   - Choices: `none`, `pap`, `chap`, `papChap`
+     *   - Default value: `none`
      */
     authenticationType?: pulumi.Input<string>;
     /**
@@ -317,9 +327,8 @@ export interface CellularCedgeProfileFeatureTemplateArgs {
      */
     description: pulumi.Input<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
     deviceTypes: pulumi.Input<pulumi.Input<string>[]>;
     /**
@@ -335,7 +344,9 @@ export interface CellularCedgeProfileFeatureTemplateArgs {
      */
     noOverwriteVariable?: pulumi.Input<string>;
     /**
-     * Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+     * Set packet data network type
+     *   - Choices: `ipv4`, `ipv4v6`, `ipv6`
+     *   - Default value: `ipv4`
      */
     packetDataNetworkType?: pulumi.Input<string>;
     /**
@@ -343,7 +354,8 @@ export interface CellularCedgeProfileFeatureTemplateArgs {
      */
     packetDataNetworkTypeVariable?: pulumi.Input<string>;
     /**
-     * Set Profile ID - Range: `1`-`16`
+     * Set Profile ID
+     *   - Range: `1`-`16`
      */
     profileId?: pulumi.Input<number>;
     /**

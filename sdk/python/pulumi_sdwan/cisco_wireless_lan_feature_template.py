@@ -44,28 +44,28 @@ class CiscoWirelessLanFeatureTemplateArgs:
         """
         The set of arguments for constructing a CiscoWirelessLanFeatureTemplate resource.
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.str] controller_default_gateway: Set mobile express default gateway - Default value: `0.0.0.0`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.str] controller_default_gateway: Set mobile express default gateway
+                 - Default value: `0.0.0.0`
         :param pulumi.Input[_builtins.str] controller_default_gateway_variable: Variable name
-        :param pulumi.Input[_builtins.str] controller_ip_address: Set mobile express controller address - Default value: `0.0.0.0`
+        :param pulumi.Input[_builtins.str] controller_ip_address: Set mobile express controller address
+                 - Default value: `0.0.0.0`
         :param pulumi.Input[_builtins.str] controller_ip_address_variable: Variable name
-        :param pulumi.Input[_builtins.str] controller_subnet_mask: Set mobile express controller subnet mask - Default value: `0.0.0.0`
+        :param pulumi.Input[_builtins.str] controller_subnet_mask: Set mobile express controller subnet mask
+                 - Default value: `0.0.0.0`
         :param pulumi.Input[_builtins.str] controller_subnet_mask_variable: Variable name
-        :param pulumi.Input[_builtins.str] country: Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-               `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-               `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-               `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-               `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-               `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+        :param pulumi.Input[_builtins.str] country: Select country
+                 - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
         :param pulumi.Input[_builtins.str] country_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[_builtins.str] password: Set management password
         :param pulumi.Input[_builtins.str] password_variable: Variable name
-        :param pulumi.Input[_builtins.bool] shutdown24ghz: 2.4GHz Shutdown - Default value: `false`
+        :param pulumi.Input[_builtins.bool] shutdown24ghz: 2.4GHz Shutdown
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] shutdown24ghz_variable: Variable name
-        :param pulumi.Input[_builtins.bool] shutdown5ghz: 5GHz Shutdown - Default value: `false`
+        :param pulumi.Input[_builtins.bool] shutdown5ghz: 5GHz Shutdown
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] shutdown5ghz_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['CiscoWirelessLanFeatureTemplateSsidArgs']]] ssids: Configure Wi-Fi SSID
         :param pulumi.Input[_builtins.str] username: Set management username
@@ -126,9 +126,8 @@ class CiscoWirelessLanFeatureTemplateArgs:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -140,7 +139,8 @@ class CiscoWirelessLanFeatureTemplateArgs:
     @pulumi.getter(name="controllerDefaultGateway")
     def controller_default_gateway(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set mobile express default gateway - Default value: `0.0.0.0`
+        Set mobile express default gateway
+          - Default value: `0.0.0.0`
         """
         return pulumi.get(self, "controller_default_gateway")
 
@@ -164,7 +164,8 @@ class CiscoWirelessLanFeatureTemplateArgs:
     @pulumi.getter(name="controllerIpAddress")
     def controller_ip_address(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set mobile express controller address - Default value: `0.0.0.0`
+        Set mobile express controller address
+          - Default value: `0.0.0.0`
         """
         return pulumi.get(self, "controller_ip_address")
 
@@ -188,7 +189,8 @@ class CiscoWirelessLanFeatureTemplateArgs:
     @pulumi.getter(name="controllerSubnetMask")
     def controller_subnet_mask(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set mobile express controller subnet mask - Default value: `0.0.0.0`
+        Set mobile express controller subnet mask
+          - Default value: `0.0.0.0`
         """
         return pulumi.get(self, "controller_subnet_mask")
 
@@ -212,12 +214,8 @@ class CiscoWirelessLanFeatureTemplateArgs:
     @pulumi.getter
     def country(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-        `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-        `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-        `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-        `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-        `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+        Select country
+          - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
         """
         return pulumi.get(self, "country")
 
@@ -277,7 +275,8 @@ class CiscoWirelessLanFeatureTemplateArgs:
     @pulumi.getter
     def shutdown24ghz(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        2.4GHz Shutdown - Default value: `false`
+        2.4GHz Shutdown
+          - Default value: `false`
         """
         return pulumi.get(self, "shutdown24ghz")
 
@@ -301,7 +300,8 @@ class CiscoWirelessLanFeatureTemplateArgs:
     @pulumi.getter
     def shutdown5ghz(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        5GHz Shutdown - Default value: `false`
+        5GHz Shutdown
+          - Default value: `false`
         """
         return pulumi.get(self, "shutdown5ghz")
 
@@ -385,29 +385,29 @@ class _CiscoWirelessLanFeatureTemplateState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering CiscoWirelessLanFeatureTemplate resources.
-        :param pulumi.Input[_builtins.str] controller_default_gateway: Set mobile express default gateway - Default value: `0.0.0.0`
+        :param pulumi.Input[_builtins.str] controller_default_gateway: Set mobile express default gateway
+                 - Default value: `0.0.0.0`
         :param pulumi.Input[_builtins.str] controller_default_gateway_variable: Variable name
-        :param pulumi.Input[_builtins.str] controller_ip_address: Set mobile express controller address - Default value: `0.0.0.0`
+        :param pulumi.Input[_builtins.str] controller_ip_address: Set mobile express controller address
+                 - Default value: `0.0.0.0`
         :param pulumi.Input[_builtins.str] controller_ip_address_variable: Variable name
-        :param pulumi.Input[_builtins.str] controller_subnet_mask: Set mobile express controller subnet mask - Default value: `0.0.0.0`
+        :param pulumi.Input[_builtins.str] controller_subnet_mask: Set mobile express controller subnet mask
+                 - Default value: `0.0.0.0`
         :param pulumi.Input[_builtins.str] controller_subnet_mask_variable: Variable name
-        :param pulumi.Input[_builtins.str] country: Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-               `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-               `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-               `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-               `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-               `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+        :param pulumi.Input[_builtins.str] country: Select country
+                 - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
         :param pulumi.Input[_builtins.str] country_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[_builtins.str] password: Set management password
         :param pulumi.Input[_builtins.str] password_variable: Variable name
-        :param pulumi.Input[_builtins.bool] shutdown24ghz: 2.4GHz Shutdown - Default value: `false`
+        :param pulumi.Input[_builtins.bool] shutdown24ghz: 2.4GHz Shutdown
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] shutdown24ghz_variable: Variable name
-        :param pulumi.Input[_builtins.bool] shutdown5ghz: 5GHz Shutdown - Default value: `false`
+        :param pulumi.Input[_builtins.bool] shutdown5ghz: 5GHz Shutdown
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] shutdown5ghz_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['CiscoWirelessLanFeatureTemplateSsidArgs']]] ssids: Configure Wi-Fi SSID
         :param pulumi.Input[_builtins.str] template_type: The template type
@@ -464,7 +464,8 @@ class _CiscoWirelessLanFeatureTemplateState:
     @pulumi.getter(name="controllerDefaultGateway")
     def controller_default_gateway(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set mobile express default gateway - Default value: `0.0.0.0`
+        Set mobile express default gateway
+          - Default value: `0.0.0.0`
         """
         return pulumi.get(self, "controller_default_gateway")
 
@@ -488,7 +489,8 @@ class _CiscoWirelessLanFeatureTemplateState:
     @pulumi.getter(name="controllerIpAddress")
     def controller_ip_address(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set mobile express controller address - Default value: `0.0.0.0`
+        Set mobile express controller address
+          - Default value: `0.0.0.0`
         """
         return pulumi.get(self, "controller_ip_address")
 
@@ -512,7 +514,8 @@ class _CiscoWirelessLanFeatureTemplateState:
     @pulumi.getter(name="controllerSubnetMask")
     def controller_subnet_mask(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set mobile express controller subnet mask - Default value: `0.0.0.0`
+        Set mobile express controller subnet mask
+          - Default value: `0.0.0.0`
         """
         return pulumi.get(self, "controller_subnet_mask")
 
@@ -536,12 +539,8 @@ class _CiscoWirelessLanFeatureTemplateState:
     @pulumi.getter
     def country(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-        `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-        `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-        `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-        `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-        `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+        Select country
+          - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
         """
         return pulumi.get(self, "country")
 
@@ -577,9 +576,8 @@ class _CiscoWirelessLanFeatureTemplateState:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -627,7 +625,8 @@ class _CiscoWirelessLanFeatureTemplateState:
     @pulumi.getter
     def shutdown24ghz(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        2.4GHz Shutdown - Default value: `false`
+        2.4GHz Shutdown
+          - Default value: `false`
         """
         return pulumi.get(self, "shutdown24ghz")
 
@@ -651,7 +650,8 @@ class _CiscoWirelessLanFeatureTemplateState:
     @pulumi.getter
     def shutdown5ghz(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        5GHz Shutdown - Default value: `false`
+        5GHz Shutdown
+          - Default value: `false`
         """
         return pulumi.get(self, "shutdown5ghz")
 
@@ -773,29 +773,29 @@ class CiscoWirelessLanFeatureTemplate(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] controller_default_gateway: Set mobile express default gateway - Default value: `0.0.0.0`
+        :param pulumi.Input[_builtins.str] controller_default_gateway: Set mobile express default gateway
+                 - Default value: `0.0.0.0`
         :param pulumi.Input[_builtins.str] controller_default_gateway_variable: Variable name
-        :param pulumi.Input[_builtins.str] controller_ip_address: Set mobile express controller address - Default value: `0.0.0.0`
+        :param pulumi.Input[_builtins.str] controller_ip_address: Set mobile express controller address
+                 - Default value: `0.0.0.0`
         :param pulumi.Input[_builtins.str] controller_ip_address_variable: Variable name
-        :param pulumi.Input[_builtins.str] controller_subnet_mask: Set mobile express controller subnet mask - Default value: `0.0.0.0`
+        :param pulumi.Input[_builtins.str] controller_subnet_mask: Set mobile express controller subnet mask
+                 - Default value: `0.0.0.0`
         :param pulumi.Input[_builtins.str] controller_subnet_mask_variable: Variable name
-        :param pulumi.Input[_builtins.str] country: Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-               `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-               `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-               `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-               `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-               `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+        :param pulumi.Input[_builtins.str] country: Select country
+                 - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
         :param pulumi.Input[_builtins.str] country_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[_builtins.str] password: Set management password
         :param pulumi.Input[_builtins.str] password_variable: Variable name
-        :param pulumi.Input[_builtins.bool] shutdown24ghz: 2.4GHz Shutdown - Default value: `false`
+        :param pulumi.Input[_builtins.bool] shutdown24ghz: 2.4GHz Shutdown
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] shutdown24ghz_variable: Variable name
-        :param pulumi.Input[_builtins.bool] shutdown5ghz: 5GHz Shutdown - Default value: `false`
+        :param pulumi.Input[_builtins.bool] shutdown5ghz: 5GHz Shutdown
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] shutdown5ghz_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoWirelessLanFeatureTemplateSsidArgs', 'CiscoWirelessLanFeatureTemplateSsidArgsDict']]]] ssids: Configure Wi-Fi SSID
         :param pulumi.Input[_builtins.str] username: Set management username
@@ -928,29 +928,29 @@ class CiscoWirelessLanFeatureTemplate(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] controller_default_gateway: Set mobile express default gateway - Default value: `0.0.0.0`
+        :param pulumi.Input[_builtins.str] controller_default_gateway: Set mobile express default gateway
+                 - Default value: `0.0.0.0`
         :param pulumi.Input[_builtins.str] controller_default_gateway_variable: Variable name
-        :param pulumi.Input[_builtins.str] controller_ip_address: Set mobile express controller address - Default value: `0.0.0.0`
+        :param pulumi.Input[_builtins.str] controller_ip_address: Set mobile express controller address
+                 - Default value: `0.0.0.0`
         :param pulumi.Input[_builtins.str] controller_ip_address_variable: Variable name
-        :param pulumi.Input[_builtins.str] controller_subnet_mask: Set mobile express controller subnet mask - Default value: `0.0.0.0`
+        :param pulumi.Input[_builtins.str] controller_subnet_mask: Set mobile express controller subnet mask
+                 - Default value: `0.0.0.0`
         :param pulumi.Input[_builtins.str] controller_subnet_mask_variable: Variable name
-        :param pulumi.Input[_builtins.str] country: Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-               `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-               `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-               `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-               `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-               `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+        :param pulumi.Input[_builtins.str] country: Select country
+                 - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
         :param pulumi.Input[_builtins.str] country_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[_builtins.str] password: Set management password
         :param pulumi.Input[_builtins.str] password_variable: Variable name
-        :param pulumi.Input[_builtins.bool] shutdown24ghz: 2.4GHz Shutdown - Default value: `false`
+        :param pulumi.Input[_builtins.bool] shutdown24ghz: 2.4GHz Shutdown
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] shutdown24ghz_variable: Variable name
-        :param pulumi.Input[_builtins.bool] shutdown5ghz: 5GHz Shutdown - Default value: `false`
+        :param pulumi.Input[_builtins.bool] shutdown5ghz: 5GHz Shutdown
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] shutdown5ghz_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoWirelessLanFeatureTemplateSsidArgs', 'CiscoWirelessLanFeatureTemplateSsidArgsDict']]]] ssids: Configure Wi-Fi SSID
         :param pulumi.Input[_builtins.str] template_type: The template type
@@ -990,7 +990,8 @@ class CiscoWirelessLanFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="controllerDefaultGateway")
     def controller_default_gateway(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Set mobile express default gateway - Default value: `0.0.0.0`
+        Set mobile express default gateway
+          - Default value: `0.0.0.0`
         """
         return pulumi.get(self, "controller_default_gateway")
 
@@ -1006,7 +1007,8 @@ class CiscoWirelessLanFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="controllerIpAddress")
     def controller_ip_address(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Set mobile express controller address - Default value: `0.0.0.0`
+        Set mobile express controller address
+          - Default value: `0.0.0.0`
         """
         return pulumi.get(self, "controller_ip_address")
 
@@ -1022,7 +1024,8 @@ class CiscoWirelessLanFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="controllerSubnetMask")
     def controller_subnet_mask(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Set mobile express controller subnet mask - Default value: `0.0.0.0`
+        Set mobile express controller subnet mask
+          - Default value: `0.0.0.0`
         """
         return pulumi.get(self, "controller_subnet_mask")
 
@@ -1038,12 +1041,8 @@ class CiscoWirelessLanFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter
     def country(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-        `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-        `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-        `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-        `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-        `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+        Select country
+          - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
         """
         return pulumi.get(self, "country")
 
@@ -1067,9 +1066,8 @@ class CiscoWirelessLanFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -1101,7 +1099,8 @@ class CiscoWirelessLanFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter
     def shutdown24ghz(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        2.4GHz Shutdown - Default value: `false`
+        2.4GHz Shutdown
+          - Default value: `false`
         """
         return pulumi.get(self, "shutdown24ghz")
 
@@ -1117,7 +1116,8 @@ class CiscoWirelessLanFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter
     def shutdown5ghz(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        5GHz Shutdown - Default value: `false`
+        5GHz Shutdown
+          - Default value: `false`
         """
         return pulumi.get(self, "shutdown5ghz")
 

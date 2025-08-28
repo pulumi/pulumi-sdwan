@@ -34,14 +34,16 @@ public final class SystemPerformanceMonitoringFeatureArgs extends com.pulumi.res
     }
 
     /**
-     * Application performance monitoring enable or disable - Default value: `false`
+     * Application performance monitoring enable or disable
+     *   - Default value: `false`
      * 
      */
     @Import(name="appPerfMonitorEnabled")
     private @Nullable Output<Boolean> appPerfMonitorEnabled;
 
     /**
-     * @return Application performance monitoring enable or disable - Default value: `false`
+     * @return Application performance monitoring enable or disable
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> appPerfMonitorEnabled() {
@@ -64,14 +66,16 @@ public final class SystemPerformanceMonitoringFeatureArgs extends com.pulumi.res
     }
 
     /**
-     * UMTS event driven monitoring enable or disable - Default value: `false`
+     * UMTS event driven monitoring enable or disable
+     *   - Default value: `false`
      * 
      */
     @Import(name="eventDrivenConfigEnabled")
     private @Nullable Output<Boolean> eventDrivenConfigEnabled;
 
     /**
-     * @return UMTS event driven monitoring enable or disable - Default value: `false`
+     * @return UMTS event driven monitoring enable or disable
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> eventDrivenConfigEnabled() {
@@ -109,14 +113,16 @@ public final class SystemPerformanceMonitoringFeatureArgs extends com.pulumi.res
     }
 
     /**
-     * UMTS monitoring enable or disable - Default value: `false`
+     * UMTS monitoring enable or disable
+     *   - Default value: `false`
      * 
      */
     @Import(name="monitoringConfigEnabled")
     private @Nullable Output<Boolean> monitoringConfigEnabled;
 
     /**
-     * @return UMTS monitoring enable or disable - Default value: `false`
+     * @return UMTS monitoring enable or disable
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> monitoringConfigEnabled() {
@@ -124,14 +130,16 @@ public final class SystemPerformanceMonitoringFeatureArgs extends com.pulumi.res
     }
 
     /**
-     * UMTS monitoring interval(Minutes) - Choices: `30`, `60`
+     * UMTS monitoring interval(Minutes)
+     *   - Choices: `30`, `60`
      * 
      */
     @Import(name="monitoringConfigInterval")
     private @Nullable Output<String> monitoringConfigInterval;
 
     /**
-     * @return UMTS monitoring interval(Minutes) - Choices: `30`, `60`
+     * @return UMTS monitoring interval(Minutes)
+     *   - Choices: `30`, `60`
      * 
      */
     public Optional<Output<String>> monitoringConfigInterval() {
@@ -217,7 +225,8 @@ public final class SystemPerformanceMonitoringFeatureArgs extends com.pulumi.res
         }
 
         /**
-         * @param appPerfMonitorEnabled Application performance monitoring enable or disable - Default value: `false`
+         * @param appPerfMonitorEnabled Application performance monitoring enable or disable
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -228,7 +237,8 @@ public final class SystemPerformanceMonitoringFeatureArgs extends com.pulumi.res
         }
 
         /**
-         * @param appPerfMonitorEnabled Application performance monitoring enable or disable - Default value: `false`
+         * @param appPerfMonitorEnabled Application performance monitoring enable or disable
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -259,7 +269,8 @@ public final class SystemPerformanceMonitoringFeatureArgs extends com.pulumi.res
         }
 
         /**
-         * @param eventDrivenConfigEnabled UMTS event driven monitoring enable or disable - Default value: `false`
+         * @param eventDrivenConfigEnabled UMTS event driven monitoring enable or disable
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -270,7 +281,8 @@ public final class SystemPerformanceMonitoringFeatureArgs extends com.pulumi.res
         }
 
         /**
-         * @param eventDrivenConfigEnabled UMTS event driven monitoring enable or disable - Default value: `false`
+         * @param eventDrivenConfigEnabled UMTS event driven monitoring enable or disable
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -332,7 +344,8 @@ public final class SystemPerformanceMonitoringFeatureArgs extends com.pulumi.res
         }
 
         /**
-         * @param monitoringConfigEnabled UMTS monitoring enable or disable - Default value: `false`
+         * @param monitoringConfigEnabled UMTS monitoring enable or disable
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -343,7 +356,8 @@ public final class SystemPerformanceMonitoringFeatureArgs extends com.pulumi.res
         }
 
         /**
-         * @param monitoringConfigEnabled UMTS monitoring enable or disable - Default value: `false`
+         * @param monitoringConfigEnabled UMTS monitoring enable or disable
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -353,7 +367,8 @@ public final class SystemPerformanceMonitoringFeatureArgs extends com.pulumi.res
         }
 
         /**
-         * @param monitoringConfigInterval UMTS monitoring interval(Minutes) - Choices: `30`, `60`
+         * @param monitoringConfigInterval UMTS monitoring interval(Minutes)
+         *   - Choices: `30`, `60`
          * 
          * @return builder
          * 
@@ -364,7 +379,8 @@ public final class SystemPerformanceMonitoringFeatureArgs extends com.pulumi.res
         }
 
         /**
-         * @param monitoringConfigInterval UMTS monitoring interval(Minutes) - Choices: `30`, `60`
+         * @param monitoringConfigInterval UMTS monitoring interval(Minutes)
+         *   - Choices: `30`, `60`
          * 
          * @return builder
          * 

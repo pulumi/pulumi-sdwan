@@ -55,9 +55,8 @@ namespace Pulumi.Sdwan
         public Output<string> Description { get; private set; } = null!;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         [Output("deviceTypes")]
         public Output<ImmutableArray<string>> DeviceTypes { get; private set; } = null!;
@@ -99,7 +98,8 @@ namespace Pulumi.Sdwan
         public Output<string?> ExcludeAddressesVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set MTU on interface to DHCP client - Range: `68`-`65535`
+        /// Set MTU on interface to DHCP client
+        ///   - Range: `68`-`65535`
         /// </summary>
         [Output("interfaceMtu")]
         public Output<int?> InterfaceMtu { get; private set; } = null!;
@@ -111,7 +111,9 @@ namespace Pulumi.Sdwan
         public Output<string?> InterfaceMtuVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+        /// Configure how long a DHCP-assigned IP address is valid
+        ///   - Range: `60`-`31536000`
+        ///   - Default value: `86400`
         /// </summary>
         [Output("leaseTime")]
         public Output<int?> LeaseTime { get; private set; } = null!;
@@ -244,9 +246,8 @@ namespace Pulumi.Sdwan
         private InputList<string>? _deviceTypes;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         public InputList<string> DeviceTypes
         {
@@ -303,7 +304,8 @@ namespace Pulumi.Sdwan
         public Input<string>? ExcludeAddressesVariable { get; set; }
 
         /// <summary>
-        /// Set MTU on interface to DHCP client - Range: `68`-`65535`
+        /// Set MTU on interface to DHCP client
+        ///   - Range: `68`-`65535`
         /// </summary>
         [Input("interfaceMtu")]
         public Input<int>? InterfaceMtu { get; set; }
@@ -315,7 +317,9 @@ namespace Pulumi.Sdwan
         public Input<string>? InterfaceMtuVariable { get; set; }
 
         /// <summary>
-        /// Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+        /// Configure how long a DHCP-assigned IP address is valid
+        ///   - Range: `60`-`31536000`
+        ///   - Default value: `86400`
         /// </summary>
         [Input("leaseTime")]
         public Input<int>? LeaseTime { get; set; }
@@ -416,9 +420,8 @@ namespace Pulumi.Sdwan
         private InputList<string>? _deviceTypes;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         public InputList<string> DeviceTypes
         {
@@ -475,7 +478,8 @@ namespace Pulumi.Sdwan
         public Input<string>? ExcludeAddressesVariable { get; set; }
 
         /// <summary>
-        /// Set MTU on interface to DHCP client - Range: `68`-`65535`
+        /// Set MTU on interface to DHCP client
+        ///   - Range: `68`-`65535`
         /// </summary>
         [Input("interfaceMtu")]
         public Input<int>? InterfaceMtu { get; set; }
@@ -487,7 +491,9 @@ namespace Pulumi.Sdwan
         public Input<string>? InterfaceMtuVariable { get; set; }
 
         /// <summary>
-        /// Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+        /// Configure how long a DHCP-assigned IP address is valid
+        ///   - Range: `60`-`31536000`
+        ///   - Default value: `86400`
         /// </summary>
         [Input("leaseTime")]
         public Input<int>? LeaseTime { get; set; }

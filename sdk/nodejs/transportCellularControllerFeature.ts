@@ -67,59 +67,63 @@ export class TransportCellularControllerFeature extends pulumi.CustomResource {
     /**
      * Cellular ID
      */
-    public readonly cellularId!: pulumi.Output<string>;
+    declare public readonly cellularId: pulumi.Output<string>;
     /**
      * Variable name
      */
-    public readonly cellularIdVariable!: pulumi.Output<string | undefined>;
+    declare public readonly cellularIdVariable: pulumi.Output<string | undefined>;
     /**
      * The description of the Feature
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
-     * Enable/Disable Firmware Auto Sim - Default value: `true`
+     * Enable/Disable Firmware Auto Sim
+     *   - Default value: `true`
      */
-    public readonly firmwareAutoSim!: pulumi.Output<boolean | undefined>;
+    declare public readonly firmwareAutoSim: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly firmwareAutoSimVariable!: pulumi.Output<string | undefined>;
+    declare public readonly firmwareAutoSimVariable: pulumi.Output<string | undefined>;
     /**
      * The name of the Feature
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
-     * Set primary SIM slot - Range: `0`-`1`
+     * Set primary SIM slot
+     *   - Range: `0`-`1`
      */
-    public readonly primarySimSlot!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly primarySimSlotVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Set SIM failover retries - Range: `0`-`65535`
-     */
-    public readonly simFailoverRetries!: pulumi.Output<number | undefined>;
+    declare public readonly primarySimSlot: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly simFailoverRetriesVariable!: pulumi.Output<string | undefined>;
+    declare public readonly primarySimSlotVariable: pulumi.Output<string | undefined>;
     /**
-     * Set SIM failover timeout in minutes - Range: `3`-`7`
+     * Set SIM failover retries
+     *   - Range: `0`-`65535`
      */
-    public readonly simFailoverTimeout!: pulumi.Output<number | undefined>;
+    declare public readonly simFailoverRetries: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly simFailoverTimeoutVariable!: pulumi.Output<string | undefined>;
+    declare public readonly simFailoverRetriesVariable: pulumi.Output<string | undefined>;
+    /**
+     * Set SIM failover timeout in minutes
+     *   - Range: `3`-`7`
+     */
+    declare public readonly simFailoverTimeout: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly simFailoverTimeoutVariable: pulumi.Output<string | undefined>;
     /**
      * The version of the Feature
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a TransportCellularControllerFeature resource with the given unique name, arguments, and options.
@@ -134,41 +138,41 @@ export class TransportCellularControllerFeature extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as TransportCellularControllerFeatureState | undefined;
-            resourceInputs["cellularId"] = state ? state.cellularId : undefined;
-            resourceInputs["cellularIdVariable"] = state ? state.cellularIdVariable : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["firmwareAutoSim"] = state ? state.firmwareAutoSim : undefined;
-            resourceInputs["firmwareAutoSimVariable"] = state ? state.firmwareAutoSimVariable : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["primarySimSlot"] = state ? state.primarySimSlot : undefined;
-            resourceInputs["primarySimSlotVariable"] = state ? state.primarySimSlotVariable : undefined;
-            resourceInputs["simFailoverRetries"] = state ? state.simFailoverRetries : undefined;
-            resourceInputs["simFailoverRetriesVariable"] = state ? state.simFailoverRetriesVariable : undefined;
-            resourceInputs["simFailoverTimeout"] = state ? state.simFailoverTimeout : undefined;
-            resourceInputs["simFailoverTimeoutVariable"] = state ? state.simFailoverTimeoutVariable : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["cellularId"] = state?.cellularId;
+            resourceInputs["cellularIdVariable"] = state?.cellularIdVariable;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["firmwareAutoSim"] = state?.firmwareAutoSim;
+            resourceInputs["firmwareAutoSimVariable"] = state?.firmwareAutoSimVariable;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["primarySimSlot"] = state?.primarySimSlot;
+            resourceInputs["primarySimSlotVariable"] = state?.primarySimSlotVariable;
+            resourceInputs["simFailoverRetries"] = state?.simFailoverRetries;
+            resourceInputs["simFailoverRetriesVariable"] = state?.simFailoverRetriesVariable;
+            resourceInputs["simFailoverTimeout"] = state?.simFailoverTimeout;
+            resourceInputs["simFailoverTimeoutVariable"] = state?.simFailoverTimeoutVariable;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as TransportCellularControllerFeatureArgs | undefined;
-            if ((!args || args.cellularId === undefined) && !opts.urn) {
+            if (args?.cellularId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'cellularId'");
             }
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            resourceInputs["cellularId"] = args ? args.cellularId : undefined;
-            resourceInputs["cellularIdVariable"] = args ? args.cellularIdVariable : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["firmwareAutoSim"] = args ? args.firmwareAutoSim : undefined;
-            resourceInputs["firmwareAutoSimVariable"] = args ? args.firmwareAutoSimVariable : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["primarySimSlot"] = args ? args.primarySimSlot : undefined;
-            resourceInputs["primarySimSlotVariable"] = args ? args.primarySimSlotVariable : undefined;
-            resourceInputs["simFailoverRetries"] = args ? args.simFailoverRetries : undefined;
-            resourceInputs["simFailoverRetriesVariable"] = args ? args.simFailoverRetriesVariable : undefined;
-            resourceInputs["simFailoverTimeout"] = args ? args.simFailoverTimeout : undefined;
-            resourceInputs["simFailoverTimeoutVariable"] = args ? args.simFailoverTimeoutVariable : undefined;
+            resourceInputs["cellularId"] = args?.cellularId;
+            resourceInputs["cellularIdVariable"] = args?.cellularIdVariable;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["firmwareAutoSim"] = args?.firmwareAutoSim;
+            resourceInputs["firmwareAutoSimVariable"] = args?.firmwareAutoSimVariable;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["primarySimSlot"] = args?.primarySimSlot;
+            resourceInputs["primarySimSlotVariable"] = args?.primarySimSlotVariable;
+            resourceInputs["simFailoverRetries"] = args?.simFailoverRetries;
+            resourceInputs["simFailoverRetriesVariable"] = args?.simFailoverRetriesVariable;
+            resourceInputs["simFailoverTimeout"] = args?.simFailoverTimeout;
+            resourceInputs["simFailoverTimeoutVariable"] = args?.simFailoverTimeoutVariable;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -197,7 +201,8 @@ export interface TransportCellularControllerFeatureState {
      */
     featureProfileId?: pulumi.Input<string>;
     /**
-     * Enable/Disable Firmware Auto Sim - Default value: `true`
+     * Enable/Disable Firmware Auto Sim
+     *   - Default value: `true`
      */
     firmwareAutoSim?: pulumi.Input<boolean>;
     /**
@@ -209,7 +214,8 @@ export interface TransportCellularControllerFeatureState {
      */
     name?: pulumi.Input<string>;
     /**
-     * Set primary SIM slot - Range: `0`-`1`
+     * Set primary SIM slot
+     *   - Range: `0`-`1`
      */
     primarySimSlot?: pulumi.Input<number>;
     /**
@@ -217,7 +223,8 @@ export interface TransportCellularControllerFeatureState {
      */
     primarySimSlotVariable?: pulumi.Input<string>;
     /**
-     * Set SIM failover retries - Range: `0`-`65535`
+     * Set SIM failover retries
+     *   - Range: `0`-`65535`
      */
     simFailoverRetries?: pulumi.Input<number>;
     /**
@@ -225,7 +232,8 @@ export interface TransportCellularControllerFeatureState {
      */
     simFailoverRetriesVariable?: pulumi.Input<string>;
     /**
-     * Set SIM failover timeout in minutes - Range: `3`-`7`
+     * Set SIM failover timeout in minutes
+     *   - Range: `3`-`7`
      */
     simFailoverTimeout?: pulumi.Input<number>;
     /**
@@ -259,7 +267,8 @@ export interface TransportCellularControllerFeatureArgs {
      */
     featureProfileId: pulumi.Input<string>;
     /**
-     * Enable/Disable Firmware Auto Sim - Default value: `true`
+     * Enable/Disable Firmware Auto Sim
+     *   - Default value: `true`
      */
     firmwareAutoSim?: pulumi.Input<boolean>;
     /**
@@ -271,7 +280,8 @@ export interface TransportCellularControllerFeatureArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * Set primary SIM slot - Range: `0`-`1`
+     * Set primary SIM slot
+     *   - Range: `0`-`1`
      */
     primarySimSlot?: pulumi.Input<number>;
     /**
@@ -279,7 +289,8 @@ export interface TransportCellularControllerFeatureArgs {
      */
     primarySimSlotVariable?: pulumi.Input<string>;
     /**
-     * Set SIM failover retries - Range: `0`-`65535`
+     * Set SIM failover retries
+     *   - Range: `0`-`65535`
      */
     simFailoverRetries?: pulumi.Input<number>;
     /**
@@ -287,7 +298,8 @@ export interface TransportCellularControllerFeatureArgs {
      */
     simFailoverRetriesVariable?: pulumi.Input<string>;
     /**
-     * Set SIM failover timeout in minutes - Range: `3`-`7`
+     * Set SIM failover timeout in minutes
+     *   - Range: `3`-`7`
      */
     simFailoverTimeout?: pulumi.Input<number>;
     /**

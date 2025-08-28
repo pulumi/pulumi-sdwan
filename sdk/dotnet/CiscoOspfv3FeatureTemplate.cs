@@ -31,9 +31,8 @@ namespace Pulumi.Sdwan
         public Output<string> Description { get; private set; } = null!;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         [Output("deviceTypes")]
         public Output<ImmutableArray<string>> DeviceTypes { get; private set; } = null!;
@@ -45,7 +44,9 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.CiscoOspfv3FeatureTemplateIpv4Area>> Ipv4Areas { get; private set; } = null!;
 
         /// <summary>
-        /// Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+        /// Set reference bandwidth method to assign OSPF cost
+        ///   - Range: `1`-`4294967`
+        ///   - Default value: `100`
         /// </summary>
         [Output("ipv4AutoCostReferenceBandwidth")]
         public Output<int?> Ipv4AutoCostReferenceBandwidth { get; private set; } = null!;
@@ -57,7 +58,8 @@ namespace Pulumi.Sdwan
         public Output<string?> Ipv4AutoCostReferenceBandwidthVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Calculate summary route cost based on RFC 1583 - Default value: `true`
+        /// Calculate summary route cost based on RFC 1583
+        ///   - Default value: `true`
         /// </summary>
         [Output("ipv4CompatibleRfc1583")]
         public Output<bool?> Ipv4CompatibleRfc1583 { get; private set; } = null!;
@@ -69,13 +71,15 @@ namespace Pulumi.Sdwan
         public Output<string?> Ipv4CompatibleRfc1583Variable { get; private set; } = null!;
 
         /// <summary>
-        /// Distribute default external route into OSPF - Default value: `false`
+        /// Distribute default external route into OSPF
+        ///   - Default value: `false`
         /// </summary>
         [Output("ipv4DefaultInformationOriginate")]
         public Output<bool?> Ipv4DefaultInformationOriginate { get; private set; } = null!;
 
         /// <summary>
-        /// Always advertise default route - Default value: `false`
+        /// Always advertise default route
+        ///   - Default value: `false`
         /// </summary>
         [Output("ipv4DefaultInformationOriginateAlways")]
         public Output<bool?> Ipv4DefaultInformationOriginateAlways { get; private set; } = null!;
@@ -87,13 +91,15 @@ namespace Pulumi.Sdwan
         public Output<string?> Ipv4DefaultInformationOriginateAlwaysVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set metric used to generate default route &lt;0..16777214&gt; - Range: `0`-`16777214`
+        /// Set metric used to generate default route &lt;0..16777214&gt;
+        ///   - Range: `0`-`16777214`
         /// </summary>
         [Output("ipv4DefaultInformationOriginateMetric")]
         public Output<int?> Ipv4DefaultInformationOriginateMetric { get; private set; } = null!;
 
         /// <summary>
-        /// Set default route type - Choices: `type1`, `type2`
+        /// Set default route type
+        ///   - Choices: `type1`, `type2`
         /// </summary>
         [Output("ipv4DefaultInformationOriginateMetricType")]
         public Output<string?> Ipv4DefaultInformationOriginateMetricType { get; private set; } = null!;
@@ -111,13 +117,17 @@ namespace Pulumi.Sdwan
         public Output<string?> Ipv4DefaultInformationOriginateMetricVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Distance - Range: `1`-`255` - Default value: `110`
+        /// Distance
+        ///   - Range: `1`-`255`
+        ///   - Default value: `110`
         /// </summary>
         [Output("ipv4Distance")]
         public Output<int?> Ipv4Distance { get; private set; } = null!;
 
         /// <summary>
-        /// Set distance for external routes - Range: `1`-`254` - Default value: `110`
+        /// Set distance for external routes
+        ///   - Range: `1`-`254`
+        ///   - Default value: `110`
         /// </summary>
         [Output("ipv4DistanceExternal")]
         public Output<int?> Ipv4DistanceExternal { get; private set; } = null!;
@@ -129,7 +139,9 @@ namespace Pulumi.Sdwan
         public Output<string?> Ipv4DistanceExternalVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set distance for inter-area routes - Range: `1`-`254` - Default value: `110`
+        /// Set distance for inter-area routes
+        ///   - Range: `1`-`254`
+        ///   - Default value: `110`
         /// </summary>
         [Output("ipv4DistanceInterArea")]
         public Output<int?> Ipv4DistanceInterArea { get; private set; } = null!;
@@ -141,7 +153,9 @@ namespace Pulumi.Sdwan
         public Output<string?> Ipv4DistanceInterAreaVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set distance for intra-area routes - Range: `1`-`254` - Default value: `110`
+        /// Set distance for intra-area routes
+        ///   - Range: `1`-`254`
+        ///   - Default value: `110`
         /// </summary>
         [Output("ipv4DistanceIntraArea")]
         public Output<int?> Ipv4DistanceIntraArea { get; private set; } = null!;
@@ -159,7 +173,8 @@ namespace Pulumi.Sdwan
         public Output<string?> Ipv4DistanceVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Filter - Default value: `false`
+        /// Filter
+        ///   - Default value: `false`
         /// </summary>
         [Output("ipv4Filter")]
         public Output<bool?> Ipv4Filter { get; private set; } = null!;
@@ -207,7 +222,9 @@ namespace Pulumi.Sdwan
         public Output<string?> Ipv4RouterIdVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+        /// Set delay from first change received until performing SPF calculation
+        ///   - Range: `1`-`600000`
+        ///   - Default value: `200`
         /// </summary>
         [Output("ipv4TimersSpfDelay")]
         public Output<int?> Ipv4TimersSpfDelay { get; private set; } = null!;
@@ -219,7 +236,9 @@ namespace Pulumi.Sdwan
         public Output<string?> Ipv4TimersSpfDelayVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
+        /// Set initial hold time between consecutive SPF calculations
+        ///   - Range: `1`-`600000`
+        ///   - Default value: `1000`
         /// </summary>
         [Output("ipv4TimersSpfInitialHold")]
         public Output<int?> Ipv4TimersSpfInitialHold { get; private set; } = null!;
@@ -231,7 +250,9 @@ namespace Pulumi.Sdwan
         public Output<string?> Ipv4TimersSpfInitialHoldVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+        /// Set maximum hold time between consecutive SPF calculations
+        ///   - Range: `1`-`600000`
+        ///   - Default value: `10000`
         /// </summary>
         [Output("ipv4TimersSpfMaxHold")]
         public Output<int?> Ipv4TimersSpfMaxHold { get; private set; } = null!;
@@ -249,7 +270,9 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.CiscoOspfv3FeatureTemplateIpv6Area>> Ipv6Areas { get; private set; } = null!;
 
         /// <summary>
-        /// Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+        /// Set reference bandwidth method to assign OSPF cost
+        ///   - Range: `1`-`4294967`
+        ///   - Default value: `100`
         /// </summary>
         [Output("ipv6AutoCostReferenceBandwidth")]
         public Output<int?> Ipv6AutoCostReferenceBandwidth { get; private set; } = null!;
@@ -261,7 +284,8 @@ namespace Pulumi.Sdwan
         public Output<string?> Ipv6AutoCostReferenceBandwidthVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Calculate summary route cost based on RFC 1583 - Default value: `true`
+        /// Calculate summary route cost based on RFC 1583
+        ///   - Default value: `true`
         /// </summary>
         [Output("ipv6CompatibleRfc1583")]
         public Output<bool?> Ipv6CompatibleRfc1583 { get; private set; } = null!;
@@ -273,13 +297,15 @@ namespace Pulumi.Sdwan
         public Output<string?> Ipv6CompatibleRfc1583Variable { get; private set; } = null!;
 
         /// <summary>
-        /// Distribute default external route into OSPF - Default value: `false`
+        /// Distribute default external route into OSPF
+        ///   - Default value: `false`
         /// </summary>
         [Output("ipv6DefaultInformationOriginate")]
         public Output<bool?> Ipv6DefaultInformationOriginate { get; private set; } = null!;
 
         /// <summary>
-        /// Always advertise default route - Default value: `false`
+        /// Always advertise default route
+        ///   - Default value: `false`
         /// </summary>
         [Output("ipv6DefaultInformationOriginateAlways")]
         public Output<bool?> Ipv6DefaultInformationOriginateAlways { get; private set; } = null!;
@@ -291,13 +317,15 @@ namespace Pulumi.Sdwan
         public Output<string?> Ipv6DefaultInformationOriginateAlwaysVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set metric used to generate default route &lt;0..16777214&gt; - Range: `0`-`16777214`
+        /// Set metric used to generate default route &lt;0..16777214&gt;
+        ///   - Range: `0`-`16777214`
         /// </summary>
         [Output("ipv6DefaultInformationOriginateMetric")]
         public Output<int?> Ipv6DefaultInformationOriginateMetric { get; private set; } = null!;
 
         /// <summary>
-        /// Set default route type - Choices: `type1`, `type2`
+        /// Set default route type
+        ///   - Choices: `type1`, `type2`
         /// </summary>
         [Output("ipv6DefaultInformationOriginateMetricType")]
         public Output<string?> Ipv6DefaultInformationOriginateMetricType { get; private set; } = null!;
@@ -315,13 +343,17 @@ namespace Pulumi.Sdwan
         public Output<string?> Ipv6DefaultInformationOriginateMetricVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Distance - Range: `1`-`254` - Default value: `110`
+        /// Distance
+        ///   - Range: `1`-`254`
+        ///   - Default value: `110`
         /// </summary>
         [Output("ipv6Distance")]
         public Output<int?> Ipv6Distance { get; private set; } = null!;
 
         /// <summary>
-        /// Set distance for external routes - Range: `1`-`254` - Default value: `110`
+        /// Set distance for external routes
+        ///   - Range: `1`-`254`
+        ///   - Default value: `110`
         /// </summary>
         [Output("ipv6DistanceExternal")]
         public Output<int?> Ipv6DistanceExternal { get; private set; } = null!;
@@ -333,7 +365,9 @@ namespace Pulumi.Sdwan
         public Output<string?> Ipv6DistanceExternalVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set distance for inter-area routes - Range: `1`-`254` - Default value: `110`
+        /// Set distance for inter-area routes
+        ///   - Range: `1`-`254`
+        ///   - Default value: `110`
         /// </summary>
         [Output("ipv6DistanceInterArea")]
         public Output<int?> Ipv6DistanceInterArea { get; private set; } = null!;
@@ -345,7 +379,9 @@ namespace Pulumi.Sdwan
         public Output<string?> Ipv6DistanceInterAreaVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set distance for intra-area routes - Range: `1`-`254` - Default value: `110`
+        /// Set distance for intra-area routes
+        ///   - Range: `1`-`254`
+        ///   - Default value: `110`
         /// </summary>
         [Output("ipv6DistanceIntraArea")]
         public Output<int?> Ipv6DistanceIntraArea { get; private set; } = null!;
@@ -363,7 +399,8 @@ namespace Pulumi.Sdwan
         public Output<string?> Ipv6DistanceVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Filter - Default value: `false`
+        /// Filter
+        ///   - Default value: `false`
         /// </summary>
         [Output("ipv6Filter")]
         public Output<bool?> Ipv6Filter { get; private set; } = null!;
@@ -411,7 +448,9 @@ namespace Pulumi.Sdwan
         public Output<string?> Ipv6RouterIdVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set delay from first change received until performing SPF calculation - Range: `0`-`600000` - Default value: `200`
+        /// Set delay from first change received until performing SPF calculation
+        ///   - Range: `0`-`600000`
+        ///   - Default value: `200`
         /// </summary>
         [Output("ipv6TimersSpfDelay")]
         public Output<int?> Ipv6TimersSpfDelay { get; private set; } = null!;
@@ -423,7 +462,9 @@ namespace Pulumi.Sdwan
         public Output<string?> Ipv6TimersSpfDelayVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set initial hold time between consecutive SPF calculations - Range: `0`-`600000` - Default value: `1000`
+        /// Set initial hold time between consecutive SPF calculations
+        ///   - Range: `0`-`600000`
+        ///   - Default value: `1000`
         /// </summary>
         [Output("ipv6TimersSpfInitialHold")]
         public Output<int?> Ipv6TimersSpfInitialHold { get; private set; } = null!;
@@ -435,7 +476,9 @@ namespace Pulumi.Sdwan
         public Output<string?> Ipv6TimersSpfInitialHoldVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set maximum hold time between consecutive SPF calculations - Range: `0`-`600000` - Default value: `10000`
+        /// Set maximum hold time between consecutive SPF calculations
+        ///   - Range: `0`-`600000`
+        ///   - Default value: `10000`
         /// </summary>
         [Output("ipv6TimersSpfMaxHold")]
         public Output<int?> Ipv6TimersSpfMaxHold { get; private set; } = null!;
@@ -520,9 +563,8 @@ namespace Pulumi.Sdwan
         private InputList<string>? _deviceTypes;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         public InputList<string> DeviceTypes
         {
@@ -543,7 +585,9 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+        /// Set reference bandwidth method to assign OSPF cost
+        ///   - Range: `1`-`4294967`
+        ///   - Default value: `100`
         /// </summary>
         [Input("ipv4AutoCostReferenceBandwidth")]
         public Input<int>? Ipv4AutoCostReferenceBandwidth { get; set; }
@@ -555,7 +599,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4AutoCostReferenceBandwidthVariable { get; set; }
 
         /// <summary>
-        /// Calculate summary route cost based on RFC 1583 - Default value: `true`
+        /// Calculate summary route cost based on RFC 1583
+        ///   - Default value: `true`
         /// </summary>
         [Input("ipv4CompatibleRfc1583")]
         public Input<bool>? Ipv4CompatibleRfc1583 { get; set; }
@@ -567,13 +612,15 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4CompatibleRfc1583Variable { get; set; }
 
         /// <summary>
-        /// Distribute default external route into OSPF - Default value: `false`
+        /// Distribute default external route into OSPF
+        ///   - Default value: `false`
         /// </summary>
         [Input("ipv4DefaultInformationOriginate")]
         public Input<bool>? Ipv4DefaultInformationOriginate { get; set; }
 
         /// <summary>
-        /// Always advertise default route - Default value: `false`
+        /// Always advertise default route
+        ///   - Default value: `false`
         /// </summary>
         [Input("ipv4DefaultInformationOriginateAlways")]
         public Input<bool>? Ipv4DefaultInformationOriginateAlways { get; set; }
@@ -585,13 +632,15 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4DefaultInformationOriginateAlwaysVariable { get; set; }
 
         /// <summary>
-        /// Set metric used to generate default route &lt;0..16777214&gt; - Range: `0`-`16777214`
+        /// Set metric used to generate default route &lt;0..16777214&gt;
+        ///   - Range: `0`-`16777214`
         /// </summary>
         [Input("ipv4DefaultInformationOriginateMetric")]
         public Input<int>? Ipv4DefaultInformationOriginateMetric { get; set; }
 
         /// <summary>
-        /// Set default route type - Choices: `type1`, `type2`
+        /// Set default route type
+        ///   - Choices: `type1`, `type2`
         /// </summary>
         [Input("ipv4DefaultInformationOriginateMetricType")]
         public Input<string>? Ipv4DefaultInformationOriginateMetricType { get; set; }
@@ -609,13 +658,17 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4DefaultInformationOriginateMetricVariable { get; set; }
 
         /// <summary>
-        /// Distance - Range: `1`-`255` - Default value: `110`
+        /// Distance
+        ///   - Range: `1`-`255`
+        ///   - Default value: `110`
         /// </summary>
         [Input("ipv4Distance")]
         public Input<int>? Ipv4Distance { get; set; }
 
         /// <summary>
-        /// Set distance for external routes - Range: `1`-`254` - Default value: `110`
+        /// Set distance for external routes
+        ///   - Range: `1`-`254`
+        ///   - Default value: `110`
         /// </summary>
         [Input("ipv4DistanceExternal")]
         public Input<int>? Ipv4DistanceExternal { get; set; }
@@ -627,7 +680,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4DistanceExternalVariable { get; set; }
 
         /// <summary>
-        /// Set distance for inter-area routes - Range: `1`-`254` - Default value: `110`
+        /// Set distance for inter-area routes
+        ///   - Range: `1`-`254`
+        ///   - Default value: `110`
         /// </summary>
         [Input("ipv4DistanceInterArea")]
         public Input<int>? Ipv4DistanceInterArea { get; set; }
@@ -639,7 +694,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4DistanceInterAreaVariable { get; set; }
 
         /// <summary>
-        /// Set distance for intra-area routes - Range: `1`-`254` - Default value: `110`
+        /// Set distance for intra-area routes
+        ///   - Range: `1`-`254`
+        ///   - Default value: `110`
         /// </summary>
         [Input("ipv4DistanceIntraArea")]
         public Input<int>? Ipv4DistanceIntraArea { get; set; }
@@ -657,7 +714,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4DistanceVariable { get; set; }
 
         /// <summary>
-        /// Filter - Default value: `false`
+        /// Filter
+        ///   - Default value: `false`
         /// </summary>
         [Input("ipv4Filter")]
         public Input<bool>? Ipv4Filter { get; set; }
@@ -717,7 +775,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4RouterIdVariable { get; set; }
 
         /// <summary>
-        /// Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+        /// Set delay from first change received until performing SPF calculation
+        ///   - Range: `1`-`600000`
+        ///   - Default value: `200`
         /// </summary>
         [Input("ipv4TimersSpfDelay")]
         public Input<int>? Ipv4TimersSpfDelay { get; set; }
@@ -729,7 +789,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4TimersSpfDelayVariable { get; set; }
 
         /// <summary>
-        /// Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
+        /// Set initial hold time between consecutive SPF calculations
+        ///   - Range: `1`-`600000`
+        ///   - Default value: `1000`
         /// </summary>
         [Input("ipv4TimersSpfInitialHold")]
         public Input<int>? Ipv4TimersSpfInitialHold { get; set; }
@@ -741,7 +803,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4TimersSpfInitialHoldVariable { get; set; }
 
         /// <summary>
-        /// Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+        /// Set maximum hold time between consecutive SPF calculations
+        ///   - Range: `1`-`600000`
+        ///   - Default value: `10000`
         /// </summary>
         [Input("ipv4TimersSpfMaxHold")]
         public Input<int>? Ipv4TimersSpfMaxHold { get; set; }
@@ -765,7 +829,9 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+        /// Set reference bandwidth method to assign OSPF cost
+        ///   - Range: `1`-`4294967`
+        ///   - Default value: `100`
         /// </summary>
         [Input("ipv6AutoCostReferenceBandwidth")]
         public Input<int>? Ipv6AutoCostReferenceBandwidth { get; set; }
@@ -777,7 +843,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv6AutoCostReferenceBandwidthVariable { get; set; }
 
         /// <summary>
-        /// Calculate summary route cost based on RFC 1583 - Default value: `true`
+        /// Calculate summary route cost based on RFC 1583
+        ///   - Default value: `true`
         /// </summary>
         [Input("ipv6CompatibleRfc1583")]
         public Input<bool>? Ipv6CompatibleRfc1583 { get; set; }
@@ -789,13 +856,15 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv6CompatibleRfc1583Variable { get; set; }
 
         /// <summary>
-        /// Distribute default external route into OSPF - Default value: `false`
+        /// Distribute default external route into OSPF
+        ///   - Default value: `false`
         /// </summary>
         [Input("ipv6DefaultInformationOriginate")]
         public Input<bool>? Ipv6DefaultInformationOriginate { get; set; }
 
         /// <summary>
-        /// Always advertise default route - Default value: `false`
+        /// Always advertise default route
+        ///   - Default value: `false`
         /// </summary>
         [Input("ipv6DefaultInformationOriginateAlways")]
         public Input<bool>? Ipv6DefaultInformationOriginateAlways { get; set; }
@@ -807,13 +876,15 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv6DefaultInformationOriginateAlwaysVariable { get; set; }
 
         /// <summary>
-        /// Set metric used to generate default route &lt;0..16777214&gt; - Range: `0`-`16777214`
+        /// Set metric used to generate default route &lt;0..16777214&gt;
+        ///   - Range: `0`-`16777214`
         /// </summary>
         [Input("ipv6DefaultInformationOriginateMetric")]
         public Input<int>? Ipv6DefaultInformationOriginateMetric { get; set; }
 
         /// <summary>
-        /// Set default route type - Choices: `type1`, `type2`
+        /// Set default route type
+        ///   - Choices: `type1`, `type2`
         /// </summary>
         [Input("ipv6DefaultInformationOriginateMetricType")]
         public Input<string>? Ipv6DefaultInformationOriginateMetricType { get; set; }
@@ -831,13 +902,17 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv6DefaultInformationOriginateMetricVariable { get; set; }
 
         /// <summary>
-        /// Distance - Range: `1`-`254` - Default value: `110`
+        /// Distance
+        ///   - Range: `1`-`254`
+        ///   - Default value: `110`
         /// </summary>
         [Input("ipv6Distance")]
         public Input<int>? Ipv6Distance { get; set; }
 
         /// <summary>
-        /// Set distance for external routes - Range: `1`-`254` - Default value: `110`
+        /// Set distance for external routes
+        ///   - Range: `1`-`254`
+        ///   - Default value: `110`
         /// </summary>
         [Input("ipv6DistanceExternal")]
         public Input<int>? Ipv6DistanceExternal { get; set; }
@@ -849,7 +924,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv6DistanceExternalVariable { get; set; }
 
         /// <summary>
-        /// Set distance for inter-area routes - Range: `1`-`254` - Default value: `110`
+        /// Set distance for inter-area routes
+        ///   - Range: `1`-`254`
+        ///   - Default value: `110`
         /// </summary>
         [Input("ipv6DistanceInterArea")]
         public Input<int>? Ipv6DistanceInterArea { get; set; }
@@ -861,7 +938,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv6DistanceInterAreaVariable { get; set; }
 
         /// <summary>
-        /// Set distance for intra-area routes - Range: `1`-`254` - Default value: `110`
+        /// Set distance for intra-area routes
+        ///   - Range: `1`-`254`
+        ///   - Default value: `110`
         /// </summary>
         [Input("ipv6DistanceIntraArea")]
         public Input<int>? Ipv6DistanceIntraArea { get; set; }
@@ -879,7 +958,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv6DistanceVariable { get; set; }
 
         /// <summary>
-        /// Filter - Default value: `false`
+        /// Filter
+        ///   - Default value: `false`
         /// </summary>
         [Input("ipv6Filter")]
         public Input<bool>? Ipv6Filter { get; set; }
@@ -939,7 +1019,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv6RouterIdVariable { get; set; }
 
         /// <summary>
-        /// Set delay from first change received until performing SPF calculation - Range: `0`-`600000` - Default value: `200`
+        /// Set delay from first change received until performing SPF calculation
+        ///   - Range: `0`-`600000`
+        ///   - Default value: `200`
         /// </summary>
         [Input("ipv6TimersSpfDelay")]
         public Input<int>? Ipv6TimersSpfDelay { get; set; }
@@ -951,7 +1033,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv6TimersSpfDelayVariable { get; set; }
 
         /// <summary>
-        /// Set initial hold time between consecutive SPF calculations - Range: `0`-`600000` - Default value: `1000`
+        /// Set initial hold time between consecutive SPF calculations
+        ///   - Range: `0`-`600000`
+        ///   - Default value: `1000`
         /// </summary>
         [Input("ipv6TimersSpfInitialHold")]
         public Input<int>? Ipv6TimersSpfInitialHold { get; set; }
@@ -963,7 +1047,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv6TimersSpfInitialHoldVariable { get; set; }
 
         /// <summary>
-        /// Set maximum hold time between consecutive SPF calculations - Range: `0`-`600000` - Default value: `10000`
+        /// Set maximum hold time between consecutive SPF calculations
+        ///   - Range: `0`-`600000`
+        ///   - Default value: `10000`
         /// </summary>
         [Input("ipv6TimersSpfMaxHold")]
         public Input<int>? Ipv6TimersSpfMaxHold { get; set; }
@@ -998,9 +1084,8 @@ namespace Pulumi.Sdwan
         private InputList<string>? _deviceTypes;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         public InputList<string> DeviceTypes
         {
@@ -1021,7 +1106,9 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+        /// Set reference bandwidth method to assign OSPF cost
+        ///   - Range: `1`-`4294967`
+        ///   - Default value: `100`
         /// </summary>
         [Input("ipv4AutoCostReferenceBandwidth")]
         public Input<int>? Ipv4AutoCostReferenceBandwidth { get; set; }
@@ -1033,7 +1120,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4AutoCostReferenceBandwidthVariable { get; set; }
 
         /// <summary>
-        /// Calculate summary route cost based on RFC 1583 - Default value: `true`
+        /// Calculate summary route cost based on RFC 1583
+        ///   - Default value: `true`
         /// </summary>
         [Input("ipv4CompatibleRfc1583")]
         public Input<bool>? Ipv4CompatibleRfc1583 { get; set; }
@@ -1045,13 +1133,15 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4CompatibleRfc1583Variable { get; set; }
 
         /// <summary>
-        /// Distribute default external route into OSPF - Default value: `false`
+        /// Distribute default external route into OSPF
+        ///   - Default value: `false`
         /// </summary>
         [Input("ipv4DefaultInformationOriginate")]
         public Input<bool>? Ipv4DefaultInformationOriginate { get; set; }
 
         /// <summary>
-        /// Always advertise default route - Default value: `false`
+        /// Always advertise default route
+        ///   - Default value: `false`
         /// </summary>
         [Input("ipv4DefaultInformationOriginateAlways")]
         public Input<bool>? Ipv4DefaultInformationOriginateAlways { get; set; }
@@ -1063,13 +1153,15 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4DefaultInformationOriginateAlwaysVariable { get; set; }
 
         /// <summary>
-        /// Set metric used to generate default route &lt;0..16777214&gt; - Range: `0`-`16777214`
+        /// Set metric used to generate default route &lt;0..16777214&gt;
+        ///   - Range: `0`-`16777214`
         /// </summary>
         [Input("ipv4DefaultInformationOriginateMetric")]
         public Input<int>? Ipv4DefaultInformationOriginateMetric { get; set; }
 
         /// <summary>
-        /// Set default route type - Choices: `type1`, `type2`
+        /// Set default route type
+        ///   - Choices: `type1`, `type2`
         /// </summary>
         [Input("ipv4DefaultInformationOriginateMetricType")]
         public Input<string>? Ipv4DefaultInformationOriginateMetricType { get; set; }
@@ -1087,13 +1179,17 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4DefaultInformationOriginateMetricVariable { get; set; }
 
         /// <summary>
-        /// Distance - Range: `1`-`255` - Default value: `110`
+        /// Distance
+        ///   - Range: `1`-`255`
+        ///   - Default value: `110`
         /// </summary>
         [Input("ipv4Distance")]
         public Input<int>? Ipv4Distance { get; set; }
 
         /// <summary>
-        /// Set distance for external routes - Range: `1`-`254` - Default value: `110`
+        /// Set distance for external routes
+        ///   - Range: `1`-`254`
+        ///   - Default value: `110`
         /// </summary>
         [Input("ipv4DistanceExternal")]
         public Input<int>? Ipv4DistanceExternal { get; set; }
@@ -1105,7 +1201,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4DistanceExternalVariable { get; set; }
 
         /// <summary>
-        /// Set distance for inter-area routes - Range: `1`-`254` - Default value: `110`
+        /// Set distance for inter-area routes
+        ///   - Range: `1`-`254`
+        ///   - Default value: `110`
         /// </summary>
         [Input("ipv4DistanceInterArea")]
         public Input<int>? Ipv4DistanceInterArea { get; set; }
@@ -1117,7 +1215,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4DistanceInterAreaVariable { get; set; }
 
         /// <summary>
-        /// Set distance for intra-area routes - Range: `1`-`254` - Default value: `110`
+        /// Set distance for intra-area routes
+        ///   - Range: `1`-`254`
+        ///   - Default value: `110`
         /// </summary>
         [Input("ipv4DistanceIntraArea")]
         public Input<int>? Ipv4DistanceIntraArea { get; set; }
@@ -1135,7 +1235,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4DistanceVariable { get; set; }
 
         /// <summary>
-        /// Filter - Default value: `false`
+        /// Filter
+        ///   - Default value: `false`
         /// </summary>
         [Input("ipv4Filter")]
         public Input<bool>? Ipv4Filter { get; set; }
@@ -1195,7 +1296,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4RouterIdVariable { get; set; }
 
         /// <summary>
-        /// Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+        /// Set delay from first change received until performing SPF calculation
+        ///   - Range: `1`-`600000`
+        ///   - Default value: `200`
         /// </summary>
         [Input("ipv4TimersSpfDelay")]
         public Input<int>? Ipv4TimersSpfDelay { get; set; }
@@ -1207,7 +1310,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4TimersSpfDelayVariable { get; set; }
 
         /// <summary>
-        /// Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
+        /// Set initial hold time between consecutive SPF calculations
+        ///   - Range: `1`-`600000`
+        ///   - Default value: `1000`
         /// </summary>
         [Input("ipv4TimersSpfInitialHold")]
         public Input<int>? Ipv4TimersSpfInitialHold { get; set; }
@@ -1219,7 +1324,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4TimersSpfInitialHoldVariable { get; set; }
 
         /// <summary>
-        /// Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+        /// Set maximum hold time between consecutive SPF calculations
+        ///   - Range: `1`-`600000`
+        ///   - Default value: `10000`
         /// </summary>
         [Input("ipv4TimersSpfMaxHold")]
         public Input<int>? Ipv4TimersSpfMaxHold { get; set; }
@@ -1243,7 +1350,9 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+        /// Set reference bandwidth method to assign OSPF cost
+        ///   - Range: `1`-`4294967`
+        ///   - Default value: `100`
         /// </summary>
         [Input("ipv6AutoCostReferenceBandwidth")]
         public Input<int>? Ipv6AutoCostReferenceBandwidth { get; set; }
@@ -1255,7 +1364,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv6AutoCostReferenceBandwidthVariable { get; set; }
 
         /// <summary>
-        /// Calculate summary route cost based on RFC 1583 - Default value: `true`
+        /// Calculate summary route cost based on RFC 1583
+        ///   - Default value: `true`
         /// </summary>
         [Input("ipv6CompatibleRfc1583")]
         public Input<bool>? Ipv6CompatibleRfc1583 { get; set; }
@@ -1267,13 +1377,15 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv6CompatibleRfc1583Variable { get; set; }
 
         /// <summary>
-        /// Distribute default external route into OSPF - Default value: `false`
+        /// Distribute default external route into OSPF
+        ///   - Default value: `false`
         /// </summary>
         [Input("ipv6DefaultInformationOriginate")]
         public Input<bool>? Ipv6DefaultInformationOriginate { get; set; }
 
         /// <summary>
-        /// Always advertise default route - Default value: `false`
+        /// Always advertise default route
+        ///   - Default value: `false`
         /// </summary>
         [Input("ipv6DefaultInformationOriginateAlways")]
         public Input<bool>? Ipv6DefaultInformationOriginateAlways { get; set; }
@@ -1285,13 +1397,15 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv6DefaultInformationOriginateAlwaysVariable { get; set; }
 
         /// <summary>
-        /// Set metric used to generate default route &lt;0..16777214&gt; - Range: `0`-`16777214`
+        /// Set metric used to generate default route &lt;0..16777214&gt;
+        ///   - Range: `0`-`16777214`
         /// </summary>
         [Input("ipv6DefaultInformationOriginateMetric")]
         public Input<int>? Ipv6DefaultInformationOriginateMetric { get; set; }
 
         /// <summary>
-        /// Set default route type - Choices: `type1`, `type2`
+        /// Set default route type
+        ///   - Choices: `type1`, `type2`
         /// </summary>
         [Input("ipv6DefaultInformationOriginateMetricType")]
         public Input<string>? Ipv6DefaultInformationOriginateMetricType { get; set; }
@@ -1309,13 +1423,17 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv6DefaultInformationOriginateMetricVariable { get; set; }
 
         /// <summary>
-        /// Distance - Range: `1`-`254` - Default value: `110`
+        /// Distance
+        ///   - Range: `1`-`254`
+        ///   - Default value: `110`
         /// </summary>
         [Input("ipv6Distance")]
         public Input<int>? Ipv6Distance { get; set; }
 
         /// <summary>
-        /// Set distance for external routes - Range: `1`-`254` - Default value: `110`
+        /// Set distance for external routes
+        ///   - Range: `1`-`254`
+        ///   - Default value: `110`
         /// </summary>
         [Input("ipv6DistanceExternal")]
         public Input<int>? Ipv6DistanceExternal { get; set; }
@@ -1327,7 +1445,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv6DistanceExternalVariable { get; set; }
 
         /// <summary>
-        /// Set distance for inter-area routes - Range: `1`-`254` - Default value: `110`
+        /// Set distance for inter-area routes
+        ///   - Range: `1`-`254`
+        ///   - Default value: `110`
         /// </summary>
         [Input("ipv6DistanceInterArea")]
         public Input<int>? Ipv6DistanceInterArea { get; set; }
@@ -1339,7 +1459,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv6DistanceInterAreaVariable { get; set; }
 
         /// <summary>
-        /// Set distance for intra-area routes - Range: `1`-`254` - Default value: `110`
+        /// Set distance for intra-area routes
+        ///   - Range: `1`-`254`
+        ///   - Default value: `110`
         /// </summary>
         [Input("ipv6DistanceIntraArea")]
         public Input<int>? Ipv6DistanceIntraArea { get; set; }
@@ -1357,7 +1479,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv6DistanceVariable { get; set; }
 
         /// <summary>
-        /// Filter - Default value: `false`
+        /// Filter
+        ///   - Default value: `false`
         /// </summary>
         [Input("ipv6Filter")]
         public Input<bool>? Ipv6Filter { get; set; }
@@ -1417,7 +1540,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv6RouterIdVariable { get; set; }
 
         /// <summary>
-        /// Set delay from first change received until performing SPF calculation - Range: `0`-`600000` - Default value: `200`
+        /// Set delay from first change received until performing SPF calculation
+        ///   - Range: `0`-`600000`
+        ///   - Default value: `200`
         /// </summary>
         [Input("ipv6TimersSpfDelay")]
         public Input<int>? Ipv6TimersSpfDelay { get; set; }
@@ -1429,7 +1554,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv6TimersSpfDelayVariable { get; set; }
 
         /// <summary>
-        /// Set initial hold time between consecutive SPF calculations - Range: `0`-`600000` - Default value: `1000`
+        /// Set initial hold time between consecutive SPF calculations
+        ///   - Range: `0`-`600000`
+        ///   - Default value: `1000`
         /// </summary>
         [Input("ipv6TimersSpfInitialHold")]
         public Input<int>? Ipv6TimersSpfInitialHold { get; set; }
@@ -1441,7 +1568,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv6TimersSpfInitialHoldVariable { get; set; }
 
         /// <summary>
-        /// Set maximum hold time between consecutive SPF calculations - Range: `0`-`600000` - Default value: `10000`
+        /// Set maximum hold time between consecutive SPF calculations
+        ///   - Range: `0`-`600000`
+        ///   - Default value: `10000`
         /// </summary>
         [Input("ipv6TimersSpfMaxHold")]
         public Input<int>? Ipv6TimersSpfMaxHold { get; set; }

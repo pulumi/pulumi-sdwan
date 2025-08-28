@@ -58,18 +58,16 @@ public class CiscoOspfv3FeatureTemplate extends com.pulumi.resources.CustomResou
         return this.description;
     }
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Export(name="deviceTypes", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Output<List<String>> deviceTypes() {
@@ -90,14 +88,18 @@ public class CiscoOspfv3FeatureTemplate extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.ipv4Areas);
     }
     /**
-     * Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+     * Set reference bandwidth method to assign OSPF cost
+     *   - Range: `1`-`4294967`
+     *   - Default value: `100`
      * 
      */
     @Export(name="ipv4AutoCostReferenceBandwidth", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipv4AutoCostReferenceBandwidth;
 
     /**
-     * @return Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+     * @return Set reference bandwidth method to assign OSPF cost
+     *   - Range: `1`-`4294967`
+     *   - Default value: `100`
      * 
      */
     public Output<Optional<Integer>> ipv4AutoCostReferenceBandwidth() {
@@ -118,14 +120,16 @@ public class CiscoOspfv3FeatureTemplate extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.ipv4AutoCostReferenceBandwidthVariable);
     }
     /**
-     * Calculate summary route cost based on RFC 1583 - Default value: `true`
+     * Calculate summary route cost based on RFC 1583
+     *   - Default value: `true`
      * 
      */
     @Export(name="ipv4CompatibleRfc1583", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> ipv4CompatibleRfc1583;
 
     /**
-     * @return Calculate summary route cost based on RFC 1583 - Default value: `true`
+     * @return Calculate summary route cost based on RFC 1583
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> ipv4CompatibleRfc1583() {
@@ -146,28 +150,32 @@ public class CiscoOspfv3FeatureTemplate extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.ipv4CompatibleRfc1583Variable);
     }
     /**
-     * Distribute default external route into OSPF - Default value: `false`
+     * Distribute default external route into OSPF
+     *   - Default value: `false`
      * 
      */
     @Export(name="ipv4DefaultInformationOriginate", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> ipv4DefaultInformationOriginate;
 
     /**
-     * @return Distribute default external route into OSPF - Default value: `false`
+     * @return Distribute default external route into OSPF
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> ipv4DefaultInformationOriginate() {
         return Codegen.optional(this.ipv4DefaultInformationOriginate);
     }
     /**
-     * Always advertise default route - Default value: `false`
+     * Always advertise default route
+     *   - Default value: `false`
      * 
      */
     @Export(name="ipv4DefaultInformationOriginateAlways", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> ipv4DefaultInformationOriginateAlways;
 
     /**
-     * @return Always advertise default route - Default value: `false`
+     * @return Always advertise default route
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> ipv4DefaultInformationOriginateAlways() {
@@ -188,28 +196,32 @@ public class CiscoOspfv3FeatureTemplate extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.ipv4DefaultInformationOriginateAlwaysVariable);
     }
     /**
-     * Set metric used to generate default route &lt;0..16777214&gt; - Range: `0`-`16777214`
+     * Set metric used to generate default route &lt;0..16777214&gt;
+     *   - Range: `0`-`16777214`
      * 
      */
     @Export(name="ipv4DefaultInformationOriginateMetric", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipv4DefaultInformationOriginateMetric;
 
     /**
-     * @return Set metric used to generate default route &lt;0..16777214&gt; - Range: `0`-`16777214`
+     * @return Set metric used to generate default route &lt;0..16777214&gt;
+     *   - Range: `0`-`16777214`
      * 
      */
     public Output<Optional<Integer>> ipv4DefaultInformationOriginateMetric() {
         return Codegen.optional(this.ipv4DefaultInformationOriginateMetric);
     }
     /**
-     * Set default route type - Choices: `type1`, `type2`
+     * Set default route type
+     *   - Choices: `type1`, `type2`
      * 
      */
     @Export(name="ipv4DefaultInformationOriginateMetricType", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4DefaultInformationOriginateMetricType;
 
     /**
-     * @return Set default route type - Choices: `type1`, `type2`
+     * @return Set default route type
+     *   - Choices: `type1`, `type2`
      * 
      */
     public Output<Optional<String>> ipv4DefaultInformationOriginateMetricType() {
@@ -244,28 +256,36 @@ public class CiscoOspfv3FeatureTemplate extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.ipv4DefaultInformationOriginateMetricVariable);
     }
     /**
-     * Distance - Range: `1`-`255` - Default value: `110`
+     * Distance
+     *   - Range: `1`-`255`
+     *   - Default value: `110`
      * 
      */
     @Export(name="ipv4Distance", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipv4Distance;
 
     /**
-     * @return Distance - Range: `1`-`255` - Default value: `110`
+     * @return Distance
+     *   - Range: `1`-`255`
+     *   - Default value: `110`
      * 
      */
     public Output<Optional<Integer>> ipv4Distance() {
         return Codegen.optional(this.ipv4Distance);
     }
     /**
-     * Set distance for external routes - Range: `1`-`254` - Default value: `110`
+     * Set distance for external routes
+     *   - Range: `1`-`254`
+     *   - Default value: `110`
      * 
      */
     @Export(name="ipv4DistanceExternal", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipv4DistanceExternal;
 
     /**
-     * @return Set distance for external routes - Range: `1`-`254` - Default value: `110`
+     * @return Set distance for external routes
+     *   - Range: `1`-`254`
+     *   - Default value: `110`
      * 
      */
     public Output<Optional<Integer>> ipv4DistanceExternal() {
@@ -286,14 +306,18 @@ public class CiscoOspfv3FeatureTemplate extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.ipv4DistanceExternalVariable);
     }
     /**
-     * Set distance for inter-area routes - Range: `1`-`254` - Default value: `110`
+     * Set distance for inter-area routes
+     *   - Range: `1`-`254`
+     *   - Default value: `110`
      * 
      */
     @Export(name="ipv4DistanceInterArea", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipv4DistanceInterArea;
 
     /**
-     * @return Set distance for inter-area routes - Range: `1`-`254` - Default value: `110`
+     * @return Set distance for inter-area routes
+     *   - Range: `1`-`254`
+     *   - Default value: `110`
      * 
      */
     public Output<Optional<Integer>> ipv4DistanceInterArea() {
@@ -314,14 +338,18 @@ public class CiscoOspfv3FeatureTemplate extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.ipv4DistanceInterAreaVariable);
     }
     /**
-     * Set distance for intra-area routes - Range: `1`-`254` - Default value: `110`
+     * Set distance for intra-area routes
+     *   - Range: `1`-`254`
+     *   - Default value: `110`
      * 
      */
     @Export(name="ipv4DistanceIntraArea", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipv4DistanceIntraArea;
 
     /**
-     * @return Set distance for intra-area routes - Range: `1`-`254` - Default value: `110`
+     * @return Set distance for intra-area routes
+     *   - Range: `1`-`254`
+     *   - Default value: `110`
      * 
      */
     public Output<Optional<Integer>> ipv4DistanceIntraArea() {
@@ -356,14 +384,16 @@ public class CiscoOspfv3FeatureTemplate extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.ipv4DistanceVariable);
     }
     /**
-     * Filter - Default value: `false`
+     * Filter
+     *   - Default value: `false`
      * 
      */
     @Export(name="ipv4Filter", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> ipv4Filter;
 
     /**
-     * @return Filter - Default value: `false`
+     * @return Filter
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> ipv4Filter() {
@@ -468,14 +498,18 @@ public class CiscoOspfv3FeatureTemplate extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.ipv4RouterIdVariable);
     }
     /**
-     * Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+     * Set delay from first change received until performing SPF calculation
+     *   - Range: `1`-`600000`
+     *   - Default value: `200`
      * 
      */
     @Export(name="ipv4TimersSpfDelay", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipv4TimersSpfDelay;
 
     /**
-     * @return Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+     * @return Set delay from first change received until performing SPF calculation
+     *   - Range: `1`-`600000`
+     *   - Default value: `200`
      * 
      */
     public Output<Optional<Integer>> ipv4TimersSpfDelay() {
@@ -496,14 +530,18 @@ public class CiscoOspfv3FeatureTemplate extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.ipv4TimersSpfDelayVariable);
     }
     /**
-     * Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
+     * Set initial hold time between consecutive SPF calculations
+     *   - Range: `1`-`600000`
+     *   - Default value: `1000`
      * 
      */
     @Export(name="ipv4TimersSpfInitialHold", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipv4TimersSpfInitialHold;
 
     /**
-     * @return Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
+     * @return Set initial hold time between consecutive SPF calculations
+     *   - Range: `1`-`600000`
+     *   - Default value: `1000`
      * 
      */
     public Output<Optional<Integer>> ipv4TimersSpfInitialHold() {
@@ -524,14 +562,18 @@ public class CiscoOspfv3FeatureTemplate extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.ipv4TimersSpfInitialHoldVariable);
     }
     /**
-     * Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+     * Set maximum hold time between consecutive SPF calculations
+     *   - Range: `1`-`600000`
+     *   - Default value: `10000`
      * 
      */
     @Export(name="ipv4TimersSpfMaxHold", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipv4TimersSpfMaxHold;
 
     /**
-     * @return Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+     * @return Set maximum hold time between consecutive SPF calculations
+     *   - Range: `1`-`600000`
+     *   - Default value: `10000`
      * 
      */
     public Output<Optional<Integer>> ipv4TimersSpfMaxHold() {
@@ -566,14 +608,18 @@ public class CiscoOspfv3FeatureTemplate extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.ipv6Areas);
     }
     /**
-     * Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+     * Set reference bandwidth method to assign OSPF cost
+     *   - Range: `1`-`4294967`
+     *   - Default value: `100`
      * 
      */
     @Export(name="ipv6AutoCostReferenceBandwidth", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipv6AutoCostReferenceBandwidth;
 
     /**
-     * @return Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+     * @return Set reference bandwidth method to assign OSPF cost
+     *   - Range: `1`-`4294967`
+     *   - Default value: `100`
      * 
      */
     public Output<Optional<Integer>> ipv6AutoCostReferenceBandwidth() {
@@ -594,14 +640,16 @@ public class CiscoOspfv3FeatureTemplate extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.ipv6AutoCostReferenceBandwidthVariable);
     }
     /**
-     * Calculate summary route cost based on RFC 1583 - Default value: `true`
+     * Calculate summary route cost based on RFC 1583
+     *   - Default value: `true`
      * 
      */
     @Export(name="ipv6CompatibleRfc1583", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> ipv6CompatibleRfc1583;
 
     /**
-     * @return Calculate summary route cost based on RFC 1583 - Default value: `true`
+     * @return Calculate summary route cost based on RFC 1583
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> ipv6CompatibleRfc1583() {
@@ -622,28 +670,32 @@ public class CiscoOspfv3FeatureTemplate extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.ipv6CompatibleRfc1583Variable);
     }
     /**
-     * Distribute default external route into OSPF - Default value: `false`
+     * Distribute default external route into OSPF
+     *   - Default value: `false`
      * 
      */
     @Export(name="ipv6DefaultInformationOriginate", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> ipv6DefaultInformationOriginate;
 
     /**
-     * @return Distribute default external route into OSPF - Default value: `false`
+     * @return Distribute default external route into OSPF
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> ipv6DefaultInformationOriginate() {
         return Codegen.optional(this.ipv6DefaultInformationOriginate);
     }
     /**
-     * Always advertise default route - Default value: `false`
+     * Always advertise default route
+     *   - Default value: `false`
      * 
      */
     @Export(name="ipv6DefaultInformationOriginateAlways", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> ipv6DefaultInformationOriginateAlways;
 
     /**
-     * @return Always advertise default route - Default value: `false`
+     * @return Always advertise default route
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> ipv6DefaultInformationOriginateAlways() {
@@ -664,28 +716,32 @@ public class CiscoOspfv3FeatureTemplate extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.ipv6DefaultInformationOriginateAlwaysVariable);
     }
     /**
-     * Set metric used to generate default route &lt;0..16777214&gt; - Range: `0`-`16777214`
+     * Set metric used to generate default route &lt;0..16777214&gt;
+     *   - Range: `0`-`16777214`
      * 
      */
     @Export(name="ipv6DefaultInformationOriginateMetric", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipv6DefaultInformationOriginateMetric;
 
     /**
-     * @return Set metric used to generate default route &lt;0..16777214&gt; - Range: `0`-`16777214`
+     * @return Set metric used to generate default route &lt;0..16777214&gt;
+     *   - Range: `0`-`16777214`
      * 
      */
     public Output<Optional<Integer>> ipv6DefaultInformationOriginateMetric() {
         return Codegen.optional(this.ipv6DefaultInformationOriginateMetric);
     }
     /**
-     * Set default route type - Choices: `type1`, `type2`
+     * Set default route type
+     *   - Choices: `type1`, `type2`
      * 
      */
     @Export(name="ipv6DefaultInformationOriginateMetricType", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv6DefaultInformationOriginateMetricType;
 
     /**
-     * @return Set default route type - Choices: `type1`, `type2`
+     * @return Set default route type
+     *   - Choices: `type1`, `type2`
      * 
      */
     public Output<Optional<String>> ipv6DefaultInformationOriginateMetricType() {
@@ -720,28 +776,36 @@ public class CiscoOspfv3FeatureTemplate extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.ipv6DefaultInformationOriginateMetricVariable);
     }
     /**
-     * Distance - Range: `1`-`254` - Default value: `110`
+     * Distance
+     *   - Range: `1`-`254`
+     *   - Default value: `110`
      * 
      */
     @Export(name="ipv6Distance", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipv6Distance;
 
     /**
-     * @return Distance - Range: `1`-`254` - Default value: `110`
+     * @return Distance
+     *   - Range: `1`-`254`
+     *   - Default value: `110`
      * 
      */
     public Output<Optional<Integer>> ipv6Distance() {
         return Codegen.optional(this.ipv6Distance);
     }
     /**
-     * Set distance for external routes - Range: `1`-`254` - Default value: `110`
+     * Set distance for external routes
+     *   - Range: `1`-`254`
+     *   - Default value: `110`
      * 
      */
     @Export(name="ipv6DistanceExternal", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipv6DistanceExternal;
 
     /**
-     * @return Set distance for external routes - Range: `1`-`254` - Default value: `110`
+     * @return Set distance for external routes
+     *   - Range: `1`-`254`
+     *   - Default value: `110`
      * 
      */
     public Output<Optional<Integer>> ipv6DistanceExternal() {
@@ -762,14 +826,18 @@ public class CiscoOspfv3FeatureTemplate extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.ipv6DistanceExternalVariable);
     }
     /**
-     * Set distance for inter-area routes - Range: `1`-`254` - Default value: `110`
+     * Set distance for inter-area routes
+     *   - Range: `1`-`254`
+     *   - Default value: `110`
      * 
      */
     @Export(name="ipv6DistanceInterArea", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipv6DistanceInterArea;
 
     /**
-     * @return Set distance for inter-area routes - Range: `1`-`254` - Default value: `110`
+     * @return Set distance for inter-area routes
+     *   - Range: `1`-`254`
+     *   - Default value: `110`
      * 
      */
     public Output<Optional<Integer>> ipv6DistanceInterArea() {
@@ -790,14 +858,18 @@ public class CiscoOspfv3FeatureTemplate extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.ipv6DistanceInterAreaVariable);
     }
     /**
-     * Set distance for intra-area routes - Range: `1`-`254` - Default value: `110`
+     * Set distance for intra-area routes
+     *   - Range: `1`-`254`
+     *   - Default value: `110`
      * 
      */
     @Export(name="ipv6DistanceIntraArea", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipv6DistanceIntraArea;
 
     /**
-     * @return Set distance for intra-area routes - Range: `1`-`254` - Default value: `110`
+     * @return Set distance for intra-area routes
+     *   - Range: `1`-`254`
+     *   - Default value: `110`
      * 
      */
     public Output<Optional<Integer>> ipv6DistanceIntraArea() {
@@ -832,14 +904,16 @@ public class CiscoOspfv3FeatureTemplate extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.ipv6DistanceVariable);
     }
     /**
-     * Filter - Default value: `false`
+     * Filter
+     *   - Default value: `false`
      * 
      */
     @Export(name="ipv6Filter", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> ipv6Filter;
 
     /**
-     * @return Filter - Default value: `false`
+     * @return Filter
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> ipv6Filter() {
@@ -944,14 +1018,18 @@ public class CiscoOspfv3FeatureTemplate extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.ipv6RouterIdVariable);
     }
     /**
-     * Set delay from first change received until performing SPF calculation - Range: `0`-`600000` - Default value: `200`
+     * Set delay from first change received until performing SPF calculation
+     *   - Range: `0`-`600000`
+     *   - Default value: `200`
      * 
      */
     @Export(name="ipv6TimersSpfDelay", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipv6TimersSpfDelay;
 
     /**
-     * @return Set delay from first change received until performing SPF calculation - Range: `0`-`600000` - Default value: `200`
+     * @return Set delay from first change received until performing SPF calculation
+     *   - Range: `0`-`600000`
+     *   - Default value: `200`
      * 
      */
     public Output<Optional<Integer>> ipv6TimersSpfDelay() {
@@ -972,14 +1050,18 @@ public class CiscoOspfv3FeatureTemplate extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.ipv6TimersSpfDelayVariable);
     }
     /**
-     * Set initial hold time between consecutive SPF calculations - Range: `0`-`600000` - Default value: `1000`
+     * Set initial hold time between consecutive SPF calculations
+     *   - Range: `0`-`600000`
+     *   - Default value: `1000`
      * 
      */
     @Export(name="ipv6TimersSpfInitialHold", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipv6TimersSpfInitialHold;
 
     /**
-     * @return Set initial hold time between consecutive SPF calculations - Range: `0`-`600000` - Default value: `1000`
+     * @return Set initial hold time between consecutive SPF calculations
+     *   - Range: `0`-`600000`
+     *   - Default value: `1000`
      * 
      */
     public Output<Optional<Integer>> ipv6TimersSpfInitialHold() {
@@ -1000,14 +1082,18 @@ public class CiscoOspfv3FeatureTemplate extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.ipv6TimersSpfInitialHoldVariable);
     }
     /**
-     * Set maximum hold time between consecutive SPF calculations - Range: `0`-`600000` - Default value: `10000`
+     * Set maximum hold time between consecutive SPF calculations
+     *   - Range: `0`-`600000`
+     *   - Default value: `10000`
      * 
      */
     @Export(name="ipv6TimersSpfMaxHold", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipv6TimersSpfMaxHold;
 
     /**
-     * @return Set maximum hold time between consecutive SPF calculations - Range: `0`-`600000` - Default value: `10000`
+     * @return Set maximum hold time between consecutive SPF calculations
+     *   - Range: `0`-`600000`
+     *   - Default value: `10000`
      * 
      */
     public Output<Optional<Integer>> ipv6TimersSpfMaxHold() {

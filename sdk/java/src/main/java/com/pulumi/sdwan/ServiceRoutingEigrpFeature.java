@@ -44,14 +44,16 @@ import javax.annotation.Nullable;
 @ResourceType(type="sdwan:index/serviceRoutingEigrpFeature:ServiceRoutingEigrpFeature")
 public class ServiceRoutingEigrpFeature extends com.pulumi.resources.CustomResource {
     /**
-     * Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+     * Set EIGRP router authentication type
+     *   - Choices: `md5`, `hmac-sha-256`
      * 
      */
     @Export(name="authenticationType", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> authenticationType;
 
     /**
-     * @return Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+     * @return Set EIGRP router authentication type
+     *   - Choices: `md5`, `hmac-sha-256`
      * 
      */
     public Output<Optional<String>> authenticationType() {
@@ -72,14 +74,16 @@ public class ServiceRoutingEigrpFeature extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.authenticationTypeVariable);
     }
     /**
-     * Set autonomous system ID &lt;1..65535&gt; - Range: `1`-`65535`
+     * Set autonomous system ID &lt;1..65535&gt;
+     *   - Range: `1`-`65535`
      * 
      */
     @Export(name="autonomousSystemId", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> autonomousSystemId;
 
     /**
-     * @return Set autonomous system ID &lt;1..65535&gt; - Range: `1`-`65535`
+     * @return Set autonomous system ID &lt;1..65535&gt;
+     *   - Range: `1`-`65535`
      * 
      */
     public Output<Optional<Integer>> autonomousSystemId() {
@@ -128,14 +132,16 @@ public class ServiceRoutingEigrpFeature extends com.pulumi.resources.CustomResou
         return this.featureProfileId;
     }
     /**
-     * Selective route download - Default value: `false`
+     * Selective route download
+     *   - Default value: `false`
      * 
      */
     @Export(name="filter", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> filter;
 
     /**
-     * @return Selective route download - Default value: `false`
+     * @return Selective route download
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> filter() {
@@ -156,14 +162,18 @@ public class ServiceRoutingEigrpFeature extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.filterVariable);
     }
     /**
-     * Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+     * Set EIGRP hello interval
+     *   - Range: `0`-`65535`
+     *   - Default value: `5`
      * 
      */
     @Export(name="helloInterval", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> helloInterval;
 
     /**
-     * @return Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+     * @return Set EIGRP hello interval
+     *   - Range: `0`-`65535`
+     *   - Default value: `5`
      * 
      */
     public Output<Optional<Integer>> helloInterval() {
@@ -212,14 +222,18 @@ public class ServiceRoutingEigrpFeature extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.hmacAuthenticationKeyVariable);
     }
     /**
-     * Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+     * Set EIGRP hold time
+     *   - Range: `0`-`65535`
+     *   - Default value: `15`
      * 
      */
     @Export(name="holdTime", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> holdTime;
 
     /**
-     * @return Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+     * @return Set EIGRP hold time
+     *   - Range: `0`-`65535`
+     *   - Default value: `15`
      * 
      */
     public Output<Optional<Integer>> holdTime() {

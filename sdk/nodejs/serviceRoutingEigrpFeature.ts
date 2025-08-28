@@ -49,86 +49,93 @@ export class ServiceRoutingEigrpFeature extends pulumi.CustomResource {
     }
 
     /**
-     * Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+     * Set EIGRP router authentication type
+     *   - Choices: `md5`, `hmac-sha-256`
      */
-    public readonly authenticationType!: pulumi.Output<string | undefined>;
+    declare public readonly authenticationType: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly authenticationTypeVariable!: pulumi.Output<string | undefined>;
+    declare public readonly authenticationTypeVariable: pulumi.Output<string | undefined>;
     /**
-     * Set autonomous system ID <1..65535> - Range: `1`-`65535`
+     * Set autonomous system ID <1..65535>
+     *   - Range: `1`-`65535`
      */
-    public readonly autonomousSystemId!: pulumi.Output<number | undefined>;
+    declare public readonly autonomousSystemId: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly autonomousSystemIdVariable!: pulumi.Output<string | undefined>;
+    declare public readonly autonomousSystemIdVariable: pulumi.Output<string | undefined>;
     /**
      * The description of the Feature
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
-     * Selective route download - Default value: `false`
+     * Selective route download
+     *   - Default value: `false`
      */
-    public readonly filter!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly filterVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
-     */
-    public readonly helloInterval!: pulumi.Output<number | undefined>;
+    declare public readonly filter: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly helloIntervalVariable!: pulumi.Output<string | undefined>;
+    declare public readonly filterVariable: pulumi.Output<string | undefined>;
+    /**
+     * Set EIGRP hello interval
+     *   - Range: `0`-`65535`
+     *   - Default value: `5`
+     */
+    declare public readonly helloInterval: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly helloIntervalVariable: pulumi.Output<string | undefined>;
     /**
      * Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
      */
-    public readonly hmacAuthenticationKey!: pulumi.Output<string | undefined>;
+    declare public readonly hmacAuthenticationKey: pulumi.Output<string | undefined>;
     /**
      * Variable name, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
      */
-    public readonly hmacAuthenticationKeyVariable!: pulumi.Output<string | undefined>;
+    declare public readonly hmacAuthenticationKeyVariable: pulumi.Output<string | undefined>;
     /**
-     * Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+     * Set EIGRP hold time
+     *   - Range: `0`-`65535`
+     *   - Default value: `15`
      */
-    public readonly holdTime!: pulumi.Output<number | undefined>;
+    declare public readonly holdTime: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly holdTimeVariable!: pulumi.Output<string | undefined>;
+    declare public readonly holdTimeVariable: pulumi.Output<string | undefined>;
     /**
      * Configure IPv4 Static Routes
      */
-    public readonly interfaces!: pulumi.Output<outputs.ServiceRoutingEigrpFeatureInterface[] | undefined>;
+    declare public readonly interfaces: pulumi.Output<outputs.ServiceRoutingEigrpFeatureInterface[] | undefined>;
     /**
      * Set keychain details, Attribute conditional on `authenticationType` being equal to `md5`
      */
-    public readonly md5Keys!: pulumi.Output<outputs.ServiceRoutingEigrpFeatureMd5Key[] | undefined>;
+    declare public readonly md5Keys: pulumi.Output<outputs.ServiceRoutingEigrpFeatureMd5Key[] | undefined>;
     /**
      * The name of the Feature
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * Configure the networks for EIGRP to advertise
      */
-    public readonly networks!: pulumi.Output<outputs.ServiceRoutingEigrpFeatureNetwork[]>;
+    declare public readonly networks: pulumi.Output<outputs.ServiceRoutingEigrpFeatureNetwork[]>;
     /**
      * Redistribute routes into EIGRP
      */
-    public readonly redistributes!: pulumi.Output<outputs.ServiceRoutingEigrpFeatureRedistribute[] | undefined>;
-    public readonly routePolicyId!: pulumi.Output<string | undefined>;
+    declare public readonly redistributes: pulumi.Output<outputs.ServiceRoutingEigrpFeatureRedistribute[] | undefined>;
+    declare public readonly routePolicyId: pulumi.Output<string | undefined>;
     /**
      * The version of the Feature
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a ServiceRoutingEigrpFeature resource with the given unique name, arguments, and options.
@@ -143,55 +150,55 @@ export class ServiceRoutingEigrpFeature extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ServiceRoutingEigrpFeatureState | undefined;
-            resourceInputs["authenticationType"] = state ? state.authenticationType : undefined;
-            resourceInputs["authenticationTypeVariable"] = state ? state.authenticationTypeVariable : undefined;
-            resourceInputs["autonomousSystemId"] = state ? state.autonomousSystemId : undefined;
-            resourceInputs["autonomousSystemIdVariable"] = state ? state.autonomousSystemIdVariable : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["filter"] = state ? state.filter : undefined;
-            resourceInputs["filterVariable"] = state ? state.filterVariable : undefined;
-            resourceInputs["helloInterval"] = state ? state.helloInterval : undefined;
-            resourceInputs["helloIntervalVariable"] = state ? state.helloIntervalVariable : undefined;
-            resourceInputs["hmacAuthenticationKey"] = state ? state.hmacAuthenticationKey : undefined;
-            resourceInputs["hmacAuthenticationKeyVariable"] = state ? state.hmacAuthenticationKeyVariable : undefined;
-            resourceInputs["holdTime"] = state ? state.holdTime : undefined;
-            resourceInputs["holdTimeVariable"] = state ? state.holdTimeVariable : undefined;
-            resourceInputs["interfaces"] = state ? state.interfaces : undefined;
-            resourceInputs["md5Keys"] = state ? state.md5Keys : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["networks"] = state ? state.networks : undefined;
-            resourceInputs["redistributes"] = state ? state.redistributes : undefined;
-            resourceInputs["routePolicyId"] = state ? state.routePolicyId : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["authenticationType"] = state?.authenticationType;
+            resourceInputs["authenticationTypeVariable"] = state?.authenticationTypeVariable;
+            resourceInputs["autonomousSystemId"] = state?.autonomousSystemId;
+            resourceInputs["autonomousSystemIdVariable"] = state?.autonomousSystemIdVariable;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["filter"] = state?.filter;
+            resourceInputs["filterVariable"] = state?.filterVariable;
+            resourceInputs["helloInterval"] = state?.helloInterval;
+            resourceInputs["helloIntervalVariable"] = state?.helloIntervalVariable;
+            resourceInputs["hmacAuthenticationKey"] = state?.hmacAuthenticationKey;
+            resourceInputs["hmacAuthenticationKeyVariable"] = state?.hmacAuthenticationKeyVariable;
+            resourceInputs["holdTime"] = state?.holdTime;
+            resourceInputs["holdTimeVariable"] = state?.holdTimeVariable;
+            resourceInputs["interfaces"] = state?.interfaces;
+            resourceInputs["md5Keys"] = state?.md5Keys;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["networks"] = state?.networks;
+            resourceInputs["redistributes"] = state?.redistributes;
+            resourceInputs["routePolicyId"] = state?.routePolicyId;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as ServiceRoutingEigrpFeatureArgs | undefined;
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            if ((!args || args.networks === undefined) && !opts.urn) {
+            if (args?.networks === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networks'");
             }
-            resourceInputs["authenticationType"] = args ? args.authenticationType : undefined;
-            resourceInputs["authenticationTypeVariable"] = args ? args.authenticationTypeVariable : undefined;
-            resourceInputs["autonomousSystemId"] = args ? args.autonomousSystemId : undefined;
-            resourceInputs["autonomousSystemIdVariable"] = args ? args.autonomousSystemIdVariable : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["filter"] = args ? args.filter : undefined;
-            resourceInputs["filterVariable"] = args ? args.filterVariable : undefined;
-            resourceInputs["helloInterval"] = args ? args.helloInterval : undefined;
-            resourceInputs["helloIntervalVariable"] = args ? args.helloIntervalVariable : undefined;
-            resourceInputs["hmacAuthenticationKey"] = args ? args.hmacAuthenticationKey : undefined;
-            resourceInputs["hmacAuthenticationKeyVariable"] = args ? args.hmacAuthenticationKeyVariable : undefined;
-            resourceInputs["holdTime"] = args ? args.holdTime : undefined;
-            resourceInputs["holdTimeVariable"] = args ? args.holdTimeVariable : undefined;
-            resourceInputs["interfaces"] = args ? args.interfaces : undefined;
-            resourceInputs["md5Keys"] = args ? args.md5Keys : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["networks"] = args ? args.networks : undefined;
-            resourceInputs["redistributes"] = args ? args.redistributes : undefined;
-            resourceInputs["routePolicyId"] = args ? args.routePolicyId : undefined;
+            resourceInputs["authenticationType"] = args?.authenticationType;
+            resourceInputs["authenticationTypeVariable"] = args?.authenticationTypeVariable;
+            resourceInputs["autonomousSystemId"] = args?.autonomousSystemId;
+            resourceInputs["autonomousSystemIdVariable"] = args?.autonomousSystemIdVariable;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["filter"] = args?.filter;
+            resourceInputs["filterVariable"] = args?.filterVariable;
+            resourceInputs["helloInterval"] = args?.helloInterval;
+            resourceInputs["helloIntervalVariable"] = args?.helloIntervalVariable;
+            resourceInputs["hmacAuthenticationKey"] = args?.hmacAuthenticationKey;
+            resourceInputs["hmacAuthenticationKeyVariable"] = args?.hmacAuthenticationKeyVariable;
+            resourceInputs["holdTime"] = args?.holdTime;
+            resourceInputs["holdTimeVariable"] = args?.holdTimeVariable;
+            resourceInputs["interfaces"] = args?.interfaces;
+            resourceInputs["md5Keys"] = args?.md5Keys;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["networks"] = args?.networks;
+            resourceInputs["redistributes"] = args?.redistributes;
+            resourceInputs["routePolicyId"] = args?.routePolicyId;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -204,7 +211,8 @@ export class ServiceRoutingEigrpFeature extends pulumi.CustomResource {
  */
 export interface ServiceRoutingEigrpFeatureState {
     /**
-     * Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+     * Set EIGRP router authentication type
+     *   - Choices: `md5`, `hmac-sha-256`
      */
     authenticationType?: pulumi.Input<string>;
     /**
@@ -212,7 +220,8 @@ export interface ServiceRoutingEigrpFeatureState {
      */
     authenticationTypeVariable?: pulumi.Input<string>;
     /**
-     * Set autonomous system ID <1..65535> - Range: `1`-`65535`
+     * Set autonomous system ID <1..65535>
+     *   - Range: `1`-`65535`
      */
     autonomousSystemId?: pulumi.Input<number>;
     /**
@@ -228,7 +237,8 @@ export interface ServiceRoutingEigrpFeatureState {
      */
     featureProfileId?: pulumi.Input<string>;
     /**
-     * Selective route download - Default value: `false`
+     * Selective route download
+     *   - Default value: `false`
      */
     filter?: pulumi.Input<boolean>;
     /**
@@ -236,7 +246,9 @@ export interface ServiceRoutingEigrpFeatureState {
      */
     filterVariable?: pulumi.Input<string>;
     /**
-     * Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+     * Set EIGRP hello interval
+     *   - Range: `0`-`65535`
+     *   - Default value: `5`
      */
     helloInterval?: pulumi.Input<number>;
     /**
@@ -252,7 +264,9 @@ export interface ServiceRoutingEigrpFeatureState {
      */
     hmacAuthenticationKeyVariable?: pulumi.Input<string>;
     /**
-     * Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+     * Set EIGRP hold time
+     *   - Range: `0`-`65535`
+     *   - Default value: `15`
      */
     holdTime?: pulumi.Input<number>;
     /**
@@ -291,7 +305,8 @@ export interface ServiceRoutingEigrpFeatureState {
  */
 export interface ServiceRoutingEigrpFeatureArgs {
     /**
-     * Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+     * Set EIGRP router authentication type
+     *   - Choices: `md5`, `hmac-sha-256`
      */
     authenticationType?: pulumi.Input<string>;
     /**
@@ -299,7 +314,8 @@ export interface ServiceRoutingEigrpFeatureArgs {
      */
     authenticationTypeVariable?: pulumi.Input<string>;
     /**
-     * Set autonomous system ID <1..65535> - Range: `1`-`65535`
+     * Set autonomous system ID <1..65535>
+     *   - Range: `1`-`65535`
      */
     autonomousSystemId?: pulumi.Input<number>;
     /**
@@ -315,7 +331,8 @@ export interface ServiceRoutingEigrpFeatureArgs {
      */
     featureProfileId: pulumi.Input<string>;
     /**
-     * Selective route download - Default value: `false`
+     * Selective route download
+     *   - Default value: `false`
      */
     filter?: pulumi.Input<boolean>;
     /**
@@ -323,7 +340,9 @@ export interface ServiceRoutingEigrpFeatureArgs {
      */
     filterVariable?: pulumi.Input<string>;
     /**
-     * Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+     * Set EIGRP hello interval
+     *   - Range: `0`-`65535`
+     *   - Default value: `5`
      */
     helloInterval?: pulumi.Input<number>;
     /**
@@ -339,7 +358,9 @@ export interface ServiceRoutingEigrpFeatureArgs {
      */
     hmacAuthenticationKeyVariable?: pulumi.Input<string>;
     /**
-     * Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+     * Set EIGRP hold time
+     *   - Range: `0`-`65535`
+     *   - Default value: `15`
      */
     holdTime?: pulumi.Input<number>;
     /**

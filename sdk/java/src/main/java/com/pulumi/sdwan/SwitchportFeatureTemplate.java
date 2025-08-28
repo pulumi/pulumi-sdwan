@@ -39,14 +39,18 @@ import javax.annotation.Nullable;
 @ResourceType(type="sdwan:index/switchportFeatureTemplate:SwitchportFeatureTemplate")
 public class SwitchportFeatureTemplate extends com.pulumi.resources.CustomResource {
     /**
-     * Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+     * Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+     *   - Range: `0`-`1000000`
+     *   - Default value: `300`
      * 
      */
     @Export(name="ageOutTime", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ageOutTime;
 
     /**
-     * @return Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+     * @return Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+     *   - Range: `0`-`1000000`
+     *   - Default value: `300`
      * 
      */
     public Output<Optional<Integer>> ageOutTime() {
@@ -81,18 +85,16 @@ public class SwitchportFeatureTemplate extends com.pulumi.resources.CustomResour
         return this.description;
     }
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Export(name="deviceTypes", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Output<List<String>> deviceTypes() {
@@ -113,14 +115,16 @@ public class SwitchportFeatureTemplate extends com.pulumi.resources.CustomResour
         return Codegen.optional(this.interfaces);
     }
     /**
-     * Module type - Choices: `4`, `8`, `22`, `50`
+     * Module type
+     *   - Choices: `4`, `8`, `22`, `50`
      * 
      */
     @Export(name="moduleType", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> moduleType;
 
     /**
-     * @return Module type - Choices: `4`, `8`, `22`, `50`
+     * @return Module type
+     *   - Choices: `4`, `8`, `22`, `50`
      * 
      */
     public Output<Optional<String>> moduleType() {
@@ -141,14 +145,18 @@ public class SwitchportFeatureTemplate extends com.pulumi.resources.CustomResour
         return this.name;
     }
     /**
-     * Number of Slots - Range: `0`-`31` - Default value: `0`
+     * Number of Slots
+     *   - Range: `0`-`31`
+     *   - Default value: `0`
      * 
      */
     @Export(name="slot", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> slot;
 
     /**
-     * @return Number of Slots - Range: `0`-`31` - Default value: `0`
+     * @return Number of Slots
+     *   - Range: `0`-`31`
+     *   - Default value: `0`
      * 
      */
     public Output<Optional<Integer>> slot() {
@@ -169,14 +177,18 @@ public class SwitchportFeatureTemplate extends com.pulumi.resources.CustomResour
         return Codegen.optional(this.staticMacAddresses);
     }
     /**
-     * Number of Sub-Slots - Range: `0`-`31` - Default value: `0`
+     * Number of Sub-Slots
+     *   - Range: `0`-`31`
+     *   - Default value: `0`
      * 
      */
     @Export(name="subSlot", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> subSlot;
 
     /**
-     * @return Number of Sub-Slots - Range: `0`-`31` - Default value: `0`
+     * @return Number of Sub-Slots
+     *   - Range: `0`-`31`
+     *   - Default value: `0`
      * 
      */
     public Output<Optional<Integer>> subSlot() {

@@ -63,23 +63,23 @@ export class ServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature extends 
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
      * Service DHCP Server Feature ID
      */
-    public readonly serviceDhcpServerFeatureId!: pulumi.Output<string>;
+    declare public readonly serviceDhcpServerFeatureId: pulumi.Output<string>;
     /**
      * Service LAN VPN Feature ID
      */
-    public readonly serviceLanVpnFeatureId!: pulumi.Output<string>;
+    declare public readonly serviceLanVpnFeatureId: pulumi.Output<string>;
     /**
      * Service LAN VPN Interface SVI Feature ID
      */
-    public readonly serviceLanVpnInterfaceSviFeatureId!: pulumi.Output<string>;
+    declare public readonly serviceLanVpnInterfaceSviFeatureId: pulumi.Output<string>;
     /**
      * The version of the object
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a ServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature resource with the given unique name, arguments, and options.
@@ -94,29 +94,29 @@ export class ServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeature extends 
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeatureState | undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["serviceDhcpServerFeatureId"] = state ? state.serviceDhcpServerFeatureId : undefined;
-            resourceInputs["serviceLanVpnFeatureId"] = state ? state.serviceLanVpnFeatureId : undefined;
-            resourceInputs["serviceLanVpnInterfaceSviFeatureId"] = state ? state.serviceLanVpnInterfaceSviFeatureId : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["serviceDhcpServerFeatureId"] = state?.serviceDhcpServerFeatureId;
+            resourceInputs["serviceLanVpnFeatureId"] = state?.serviceLanVpnFeatureId;
+            resourceInputs["serviceLanVpnInterfaceSviFeatureId"] = state?.serviceLanVpnInterfaceSviFeatureId;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as ServiceLanVpnInterfaceSviFeatureAssociateDhcpServerFeatureArgs | undefined;
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            if ((!args || args.serviceDhcpServerFeatureId === undefined) && !opts.urn) {
+            if (args?.serviceDhcpServerFeatureId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'serviceDhcpServerFeatureId'");
             }
-            if ((!args || args.serviceLanVpnFeatureId === undefined) && !opts.urn) {
+            if (args?.serviceLanVpnFeatureId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'serviceLanVpnFeatureId'");
             }
-            if ((!args || args.serviceLanVpnInterfaceSviFeatureId === undefined) && !opts.urn) {
+            if (args?.serviceLanVpnInterfaceSviFeatureId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'serviceLanVpnInterfaceSviFeatureId'");
             }
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["serviceDhcpServerFeatureId"] = args ? args.serviceDhcpServerFeatureId : undefined;
-            resourceInputs["serviceLanVpnFeatureId"] = args ? args.serviceLanVpnFeatureId : undefined;
-            resourceInputs["serviceLanVpnInterfaceSviFeatureId"] = args ? args.serviceLanVpnInterfaceSviFeatureId : undefined;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["serviceDhcpServerFeatureId"] = args?.serviceDhcpServerFeatureId;
+            resourceInputs["serviceLanVpnFeatureId"] = args?.serviceLanVpnFeatureId;
+            resourceInputs["serviceLanVpnInterfaceSviFeatureId"] = args?.serviceLanVpnInterfaceSviFeatureId;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

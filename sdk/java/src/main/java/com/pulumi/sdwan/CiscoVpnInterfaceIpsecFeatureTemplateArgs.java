@@ -20,14 +20,18 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
     public static final CiscoVpnInterfaceIpsecFeatureTemplateArgs Empty = new CiscoVpnInterfaceIpsecFeatureTemplateArgs();
 
     /**
-     * Enable Application Tunnel Type - Choices: `none`, `sig` - Default value: `none`
+     * Enable Application Tunnel Type
+     *   - Choices: `none`, `sig`
+     *   - Default value: `none`
      * 
      */
     @Import(name="application")
     private @Nullable Output<String> application;
 
     /**
-     * @return Enable Application Tunnel Type - Choices: `none`, `sig` - Default value: `none`
+     * @return Enable Application Tunnel Type
+     *   - Choices: `none`, `sig`
+     *   - Default value: `none`
      * 
      */
     public Optional<Output<String>> application() {
@@ -50,14 +54,16 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
     }
 
     /**
-     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+     *   - Default value: `false`
      * 
      */
     @Import(name="clearDontFragment")
     private @Nullable Output<Boolean> clearDontFragment;
 
     /**
-     * @return Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+     * @return Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> clearDontFragment() {
@@ -80,14 +86,18 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
     }
 
     /**
-     * IKE keepalive interval (seconds) - Range: `10`-`3600` - Default value: `10`
+     * IKE keepalive interval (seconds)
+     *   - Range: `10`-`3600`
+     *   - Default value: `10`
      * 
      */
     @Import(name="deadPeerDetectionInterval")
     private @Nullable Output<Integer> deadPeerDetectionInterval;
 
     /**
-     * @return IKE keepalive interval (seconds) - Range: `10`-`3600` - Default value: `10`
+     * @return IKE keepalive interval (seconds)
+     *   - Range: `10`-`3600`
+     *   - Default value: `10`
      * 
      */
     public Optional<Output<Integer>> deadPeerDetectionInterval() {
@@ -110,14 +120,18 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
     }
 
     /**
-     * IKE keepalive retries - Range: `2`-`60` - Default value: `3`
+     * IKE keepalive retries
+     *   - Range: `2`-`60`
+     *   - Default value: `3`
      * 
      */
     @Import(name="deadPeerDetectionRetries")
     private @Nullable Output<Integer> deadPeerDetectionRetries;
 
     /**
-     * @return IKE keepalive retries - Range: `2`-`60` - Default value: `3`
+     * @return IKE keepalive retries
+     *   - Range: `2`-`60`
+     *   - Default value: `3`
      * 
      */
     public Optional<Output<Integer>> deadPeerDetectionRetries() {
@@ -155,18 +169,16 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
     }
 
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Import(name="deviceTypes", required=true)
     private Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Output<List<String>> deviceTypes() {
@@ -174,16 +186,18 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
     }
 
     /**
-     * IKE identity the IKE preshared secret belongs to - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`,
-     * `aes128-cbc-sha2` - Default value: `aes256-cbc-sha1`
+     * IKE identity the IKE preshared secret belongs to
+     *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+     *   - Default value: `aes256-cbc-sha1`
      * 
      */
     @Import(name="ikeCiphersuite")
     private @Nullable Output<String> ikeCiphersuite;
 
     /**
-     * @return IKE identity the IKE preshared secret belongs to - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`,
-     * `aes128-cbc-sha2` - Default value: `aes256-cbc-sha1`
+     * @return IKE identity the IKE preshared secret belongs to
+     *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+     *   - Default value: `aes256-cbc-sha1`
      * 
      */
     public Optional<Output<String>> ikeCiphersuite() {
@@ -206,14 +220,18 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
     }
 
     /**
-     * IKE Diffie Hellman Groups - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24` - Default value: `16`
+     * IKE Diffie Hellman Groups
+     *   - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
+     *   - Default value: `16`
      * 
      */
     @Import(name="ikeGroup")
     private @Nullable Output<String> ikeGroup;
 
     /**
-     * @return IKE Diffie Hellman Groups - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24` - Default value: `16`
+     * @return IKE Diffie Hellman Groups
+     *   - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
+     *   - Default value: `16`
      * 
      */
     public Optional<Output<String>> ikeGroup() {
@@ -236,14 +254,18 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
     }
 
     /**
-     * IKE integrity protocol - Choices: `main`, `aggressive` - Default value: `main`
+     * IKE integrity protocol
+     *   - Choices: `main`, `aggressive`
+     *   - Default value: `main`
      * 
      */
     @Import(name="ikeMode")
     private @Nullable Output<String> ikeMode;
 
     /**
-     * @return IKE integrity protocol - Choices: `main`, `aggressive` - Default value: `main`
+     * @return IKE integrity protocol
+     *   - Choices: `main`, `aggressive`
+     *   - Default value: `main`
      * 
      */
     public Optional<Output<String>> ikeMode() {
@@ -356,14 +378,18 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
     }
 
     /**
-     * IKE rekey interval &lt;60..86400&gt; seconds - Range: `60`-`86400` - Default value: `14400`
+     * IKE rekey interval &lt;60..86400&gt; seconds
+     *   - Range: `60`-`86400`
+     *   - Default value: `14400`
      * 
      */
     @Import(name="ikeRekeyInterval")
     private @Nullable Output<Integer> ikeRekeyInterval;
 
     /**
-     * @return IKE rekey interval &lt;60..86400&gt; seconds - Range: `60`-`86400` - Default value: `14400`
+     * @return IKE rekey interval &lt;60..86400&gt; seconds
+     *   - Range: `60`-`86400`
+     *   - Default value: `14400`
      * 
      */
     public Optional<Output<Integer>> ikeRekeyInterval() {
@@ -386,14 +412,18 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
     }
 
     /**
-     * IKE Version &lt;1..2&gt; - Range: `1`-`2` - Default value: `1`
+     * IKE Version &lt;1..2&gt;
+     *   - Range: `1`-`2`
+     *   - Default value: `1`
      * 
      */
     @Import(name="ikeVersion")
     private @Nullable Output<Integer> ikeVersion;
 
     /**
-     * @return IKE Version &lt;1..2&gt; - Range: `1`-`2` - Default value: `1`
+     * @return IKE Version &lt;1..2&gt;
+     *   - Range: `1`-`2`
+     *   - Default value: `1`
      * 
      */
     public Optional<Output<Integer>> ikeVersion() {
@@ -491,18 +521,18 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
     }
 
     /**
-     * IPsec(ESP) encryption and integrity protocol - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`,
-     * `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512` - Default value:
-     * `aes256-gcm`
+     * IPsec(ESP) encryption and integrity protocol
+     *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
+     *   - Default value: `aes256-gcm`
      * 
      */
     @Import(name="ipsecCiphersuite")
     private @Nullable Output<String> ipsecCiphersuite;
 
     /**
-     * @return IPsec(ESP) encryption and integrity protocol - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`,
-     * `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512` - Default value:
-     * `aes256-gcm`
+     * @return IPsec(ESP) encryption and integrity protocol
+     *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
+     *   - Default value: `aes256-gcm`
      * 
      */
     public Optional<Output<String>> ipsecCiphersuite() {
@@ -525,16 +555,18 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
     }
 
     /**
-     * IPsec perfect forward secrecy settings - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`,
-     * `group-19`, `group-20`, `group-21`, `group-24`, `none` - Default value: `group-16`
+     * IPsec perfect forward secrecy settings
+     *   - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+     *   - Default value: `group-16`
      * 
      */
     @Import(name="ipsecPerfectForwardSecrecy")
     private @Nullable Output<String> ipsecPerfectForwardSecrecy;
 
     /**
-     * @return IPsec perfect forward secrecy settings - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`,
-     * `group-19`, `group-20`, `group-21`, `group-24`, `none` - Default value: `group-16`
+     * @return IPsec perfect forward secrecy settings
+     *   - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+     *   - Default value: `group-16`
      * 
      */
     public Optional<Output<String>> ipsecPerfectForwardSecrecy() {
@@ -557,14 +589,18 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
     }
 
     /**
-     * IPsec rekey interval &lt;300..1209600&gt; seconds - Range: `120`-`2592000` - Default value: `3600`
+     * IPsec rekey interval &lt;300..1209600&gt; seconds
+     *   - Range: `120`-`2592000`
+     *   - Default value: `3600`
      * 
      */
     @Import(name="ipsecRekeyInterval")
     private @Nullable Output<Integer> ipsecRekeyInterval;
 
     /**
-     * @return IPsec rekey interval &lt;300..1209600&gt; seconds - Range: `120`-`2592000` - Default value: `3600`
+     * @return IPsec rekey interval &lt;300..1209600&gt; seconds
+     *   - Range: `120`-`2592000`
+     *   - Default value: `3600`
      * 
      */
     public Optional<Output<Integer>> ipsecRekeyInterval() {
@@ -587,14 +623,18 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
     }
 
     /**
-     * Replay window size 32..8192 (must be a power of 2) - Range: `64`-`4096` - Default value: `512`
+     * Replay window size 32..8192 (must be a power of 2)
+     *   - Range: `64`-`4096`
+     *   - Default value: `512`
      * 
      */
     @Import(name="ipsecReplayWindow")
     private @Nullable Output<Integer> ipsecReplayWindow;
 
     /**
-     * @return Replay window size 32..8192 (must be a power of 2) - Range: `64`-`4096` - Default value: `512`
+     * @return Replay window size 32..8192 (must be a power of 2)
+     *   - Range: `64`-`4096`
+     *   - Default value: `512`
      * 
      */
     public Optional<Output<Integer>> ipsecReplayWindow() {
@@ -617,14 +657,18 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
     }
 
     /**
-     * Interface MTU &lt;68..9216&gt;, in bytes - Range: `68`-`9216` - Default value: `1500`
+     * Interface MTU &lt;68..9216&gt;, in bytes
+     *   - Range: `68`-`9216`
+     *   - Default value: `1500`
      * 
      */
     @Import(name="mtu")
     private @Nullable Output<Integer> mtu;
 
     /**
-     * @return Interface MTU &lt;68..9216&gt;, in bytes - Range: `68`-`9216` - Default value: `1500`
+     * @return Interface MTU &lt;68..9216&gt;, in bytes
+     *   - Range: `68`-`9216`
+     *   - Default value: `1500`
      * 
      */
     public Optional<Output<Integer>> mtu() {
@@ -662,14 +706,16 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
     }
 
     /**
-     * Administrative state - Default value: `true`
+     * Administrative state
+     *   - Default value: `true`
      * 
      */
     @Import(name="shutdown")
     private @Nullable Output<Boolean> shutdown;
 
     /**
-     * @return Administrative state - Default value: `true`
+     * @return Administrative state
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> shutdown() {
@@ -692,14 +738,16 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
     }
 
     /**
-     * TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      * 
      */
     @Import(name="tcpMssAdjust")
     private @Nullable Output<Integer> tcpMssAdjust;
 
     /**
-     * @return TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * @return TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      * 
      */
     public Optional<Output<Integer>> tcpMssAdjust() {
@@ -951,7 +999,9 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
         }
 
         /**
-         * @param application Enable Application Tunnel Type - Choices: `none`, `sig` - Default value: `none`
+         * @param application Enable Application Tunnel Type
+         *   - Choices: `none`, `sig`
+         *   - Default value: `none`
          * 
          * @return builder
          * 
@@ -962,7 +1012,9 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
         }
 
         /**
-         * @param application Enable Application Tunnel Type - Choices: `none`, `sig` - Default value: `none`
+         * @param application Enable Application Tunnel Type
+         *   - Choices: `none`, `sig`
+         *   - Default value: `none`
          * 
          * @return builder
          * 
@@ -993,7 +1045,8 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
         }
 
         /**
-         * @param clearDontFragment Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+         * @param clearDontFragment Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1004,7 +1057,8 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
         }
 
         /**
-         * @param clearDontFragment Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+         * @param clearDontFragment Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1035,7 +1089,9 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
         }
 
         /**
-         * @param deadPeerDetectionInterval IKE keepalive interval (seconds) - Range: `10`-`3600` - Default value: `10`
+         * @param deadPeerDetectionInterval IKE keepalive interval (seconds)
+         *   - Range: `10`-`3600`
+         *   - Default value: `10`
          * 
          * @return builder
          * 
@@ -1046,7 +1102,9 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
         }
 
         /**
-         * @param deadPeerDetectionInterval IKE keepalive interval (seconds) - Range: `10`-`3600` - Default value: `10`
+         * @param deadPeerDetectionInterval IKE keepalive interval (seconds)
+         *   - Range: `10`-`3600`
+         *   - Default value: `10`
          * 
          * @return builder
          * 
@@ -1077,7 +1135,9 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
         }
 
         /**
-         * @param deadPeerDetectionRetries IKE keepalive retries - Range: `2`-`60` - Default value: `3`
+         * @param deadPeerDetectionRetries IKE keepalive retries
+         *   - Range: `2`-`60`
+         *   - Default value: `3`
          * 
          * @return builder
          * 
@@ -1088,7 +1148,9 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
         }
 
         /**
-         * @param deadPeerDetectionRetries IKE keepalive retries - Range: `2`-`60` - Default value: `3`
+         * @param deadPeerDetectionRetries IKE keepalive retries
+         *   - Range: `2`-`60`
+         *   - Default value: `3`
          * 
          * @return builder
          * 
@@ -1140,9 +1202,8 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -1153,9 +1214,8 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -1165,9 +1225,8 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -1177,8 +1236,9 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
         }
 
         /**
-         * @param ikeCiphersuite IKE identity the IKE preshared secret belongs to - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`,
-         * `aes128-cbc-sha2` - Default value: `aes256-cbc-sha1`
+         * @param ikeCiphersuite IKE identity the IKE preshared secret belongs to
+         *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+         *   - Default value: `aes256-cbc-sha1`
          * 
          * @return builder
          * 
@@ -1189,8 +1249,9 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
         }
 
         /**
-         * @param ikeCiphersuite IKE identity the IKE preshared secret belongs to - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`,
-         * `aes128-cbc-sha2` - Default value: `aes256-cbc-sha1`
+         * @param ikeCiphersuite IKE identity the IKE preshared secret belongs to
+         *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+         *   - Default value: `aes256-cbc-sha1`
          * 
          * @return builder
          * 
@@ -1221,7 +1282,9 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
         }
 
         /**
-         * @param ikeGroup IKE Diffie Hellman Groups - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24` - Default value: `16`
+         * @param ikeGroup IKE Diffie Hellman Groups
+         *   - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
+         *   - Default value: `16`
          * 
          * @return builder
          * 
@@ -1232,7 +1295,9 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
         }
 
         /**
-         * @param ikeGroup IKE Diffie Hellman Groups - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24` - Default value: `16`
+         * @param ikeGroup IKE Diffie Hellman Groups
+         *   - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
+         *   - Default value: `16`
          * 
          * @return builder
          * 
@@ -1263,7 +1328,9 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
         }
 
         /**
-         * @param ikeMode IKE integrity protocol - Choices: `main`, `aggressive` - Default value: `main`
+         * @param ikeMode IKE integrity protocol
+         *   - Choices: `main`, `aggressive`
+         *   - Default value: `main`
          * 
          * @return builder
          * 
@@ -1274,7 +1341,9 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
         }
 
         /**
-         * @param ikeMode IKE integrity protocol - Choices: `main`, `aggressive` - Default value: `main`
+         * @param ikeMode IKE integrity protocol
+         *   - Choices: `main`, `aggressive`
+         *   - Default value: `main`
          * 
          * @return builder
          * 
@@ -1431,7 +1500,9 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
         }
 
         /**
-         * @param ikeRekeyInterval IKE rekey interval &lt;60..86400&gt; seconds - Range: `60`-`86400` - Default value: `14400`
+         * @param ikeRekeyInterval IKE rekey interval &lt;60..86400&gt; seconds
+         *   - Range: `60`-`86400`
+         *   - Default value: `14400`
          * 
          * @return builder
          * 
@@ -1442,7 +1513,9 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
         }
 
         /**
-         * @param ikeRekeyInterval IKE rekey interval &lt;60..86400&gt; seconds - Range: `60`-`86400` - Default value: `14400`
+         * @param ikeRekeyInterval IKE rekey interval &lt;60..86400&gt; seconds
+         *   - Range: `60`-`86400`
+         *   - Default value: `14400`
          * 
          * @return builder
          * 
@@ -1473,7 +1546,9 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
         }
 
         /**
-         * @param ikeVersion IKE Version &lt;1..2&gt; - Range: `1`-`2` - Default value: `1`
+         * @param ikeVersion IKE Version &lt;1..2&gt;
+         *   - Range: `1`-`2`
+         *   - Default value: `1`
          * 
          * @return builder
          * 
@@ -1484,7 +1559,9 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
         }
 
         /**
-         * @param ikeVersion IKE Version &lt;1..2&gt; - Range: `1`-`2` - Default value: `1`
+         * @param ikeVersion IKE Version &lt;1..2&gt;
+         *   - Range: `1`-`2`
+         *   - Default value: `1`
          * 
          * @return builder
          * 
@@ -1620,9 +1697,9 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
         }
 
         /**
-         * @param ipsecCiphersuite IPsec(ESP) encryption and integrity protocol - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`,
-         * `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512` - Default value:
-         * `aes256-gcm`
+         * @param ipsecCiphersuite IPsec(ESP) encryption and integrity protocol
+         *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
+         *   - Default value: `aes256-gcm`
          * 
          * @return builder
          * 
@@ -1633,9 +1710,9 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
         }
 
         /**
-         * @param ipsecCiphersuite IPsec(ESP) encryption and integrity protocol - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`,
-         * `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512` - Default value:
-         * `aes256-gcm`
+         * @param ipsecCiphersuite IPsec(ESP) encryption and integrity protocol
+         *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
+         *   - Default value: `aes256-gcm`
          * 
          * @return builder
          * 
@@ -1666,8 +1743,9 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
         }
 
         /**
-         * @param ipsecPerfectForwardSecrecy IPsec perfect forward secrecy settings - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`,
-         * `group-19`, `group-20`, `group-21`, `group-24`, `none` - Default value: `group-16`
+         * @param ipsecPerfectForwardSecrecy IPsec perfect forward secrecy settings
+         *   - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+         *   - Default value: `group-16`
          * 
          * @return builder
          * 
@@ -1678,8 +1756,9 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
         }
 
         /**
-         * @param ipsecPerfectForwardSecrecy IPsec perfect forward secrecy settings - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`,
-         * `group-19`, `group-20`, `group-21`, `group-24`, `none` - Default value: `group-16`
+         * @param ipsecPerfectForwardSecrecy IPsec perfect forward secrecy settings
+         *   - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+         *   - Default value: `group-16`
          * 
          * @return builder
          * 
@@ -1710,7 +1789,9 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
         }
 
         /**
-         * @param ipsecRekeyInterval IPsec rekey interval &lt;300..1209600&gt; seconds - Range: `120`-`2592000` - Default value: `3600`
+         * @param ipsecRekeyInterval IPsec rekey interval &lt;300..1209600&gt; seconds
+         *   - Range: `120`-`2592000`
+         *   - Default value: `3600`
          * 
          * @return builder
          * 
@@ -1721,7 +1802,9 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
         }
 
         /**
-         * @param ipsecRekeyInterval IPsec rekey interval &lt;300..1209600&gt; seconds - Range: `120`-`2592000` - Default value: `3600`
+         * @param ipsecRekeyInterval IPsec rekey interval &lt;300..1209600&gt; seconds
+         *   - Range: `120`-`2592000`
+         *   - Default value: `3600`
          * 
          * @return builder
          * 
@@ -1752,7 +1835,9 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
         }
 
         /**
-         * @param ipsecReplayWindow Replay window size 32..8192 (must be a power of 2) - Range: `64`-`4096` - Default value: `512`
+         * @param ipsecReplayWindow Replay window size 32..8192 (must be a power of 2)
+         *   - Range: `64`-`4096`
+         *   - Default value: `512`
          * 
          * @return builder
          * 
@@ -1763,7 +1848,9 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
         }
 
         /**
-         * @param ipsecReplayWindow Replay window size 32..8192 (must be a power of 2) - Range: `64`-`4096` - Default value: `512`
+         * @param ipsecReplayWindow Replay window size 32..8192 (must be a power of 2)
+         *   - Range: `64`-`4096`
+         *   - Default value: `512`
          * 
          * @return builder
          * 
@@ -1794,7 +1881,9 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
         }
 
         /**
-         * @param mtu Interface MTU &lt;68..9216&gt;, in bytes - Range: `68`-`9216` - Default value: `1500`
+         * @param mtu Interface MTU &lt;68..9216&gt;, in bytes
+         *   - Range: `68`-`9216`
+         *   - Default value: `1500`
          * 
          * @return builder
          * 
@@ -1805,7 +1894,9 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
         }
 
         /**
-         * @param mtu Interface MTU &lt;68..9216&gt;, in bytes - Range: `68`-`9216` - Default value: `1500`
+         * @param mtu Interface MTU &lt;68..9216&gt;, in bytes
+         *   - Range: `68`-`9216`
+         *   - Default value: `1500`
          * 
          * @return builder
          * 
@@ -1857,7 +1948,8 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
         }
 
         /**
-         * @param shutdown Administrative state - Default value: `true`
+         * @param shutdown Administrative state
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -1868,7 +1960,8 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
         }
 
         /**
-         * @param shutdown Administrative state - Default value: `true`
+         * @param shutdown Administrative state
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -1899,7 +1992,8 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
         }
 
         /**
-         * @param tcpMssAdjust TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+         * @param tcpMssAdjust TCP MSS on SYN packets, in bytes
+         *   - Range: `500`-`1460`
          * 
          * @return builder
          * 
@@ -1910,7 +2004,8 @@ public final class CiscoVpnInterfaceIpsecFeatureTemplateArgs extends com.pulumi.
         }
 
         /**
-         * @param tcpMssAdjust TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+         * @param tcpMssAdjust TCP MSS on SYN packets, in bytes
+         *   - Range: `500`-`1460`
          * 
          * @return builder
          * 

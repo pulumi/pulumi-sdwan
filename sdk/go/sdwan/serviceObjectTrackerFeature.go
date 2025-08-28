@@ -68,27 +68,28 @@ type ServiceObjectTrackerFeature struct {
 	InterfaceVariable pulumi.StringPtrOutput `pulumi:"interfaceVariable"`
 	// The name of the Feature
 	Name pulumi.StringOutput `pulumi:"name"`
-	// Object tracker ID - Range: `1`-`1000`
+	// Object tracker ID
+	//   - Range: `1`-`1000`
 	ObjectTrackerId pulumi.IntPtrOutput `pulumi:"objectTrackerId"`
 	// Variable name
 	ObjectTrackerIdVariable pulumi.StringPtrOutput `pulumi:"objectTrackerIdVariable"`
-	// objectTrackerType:Interface SIG Route - Choices: `Interface`, `SIG`, `Route`
+	// objectTrackerType:Interface SIG Route
+	//   - Choices: `Interface`, `SIG`, `Route`
 	ObjectTrackerType pulumi.StringOutput `pulumi:"objectTrackerType"`
 	// IP address
 	RouteIp pulumi.StringPtrOutput `pulumi:"routeIp"`
 	// Variable name
 	RouteIpVariable pulumi.StringPtrOutput `pulumi:"routeIpVariable"`
-	// IP mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-	// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-	// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-	// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-	// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0` - Default value: `0.0.0.0`
+	// IP mask
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	//   - Default value: `0.0.0.0`
 	RouteMask pulumi.StringPtrOutput `pulumi:"routeMask"`
 	// Variable name
 	RouteMaskVariable pulumi.StringPtrOutput `pulumi:"routeMaskVariable"`
 	// The version of the Feature
 	Version pulumi.IntOutput `pulumi:"version"`
-	// VPN - Range: `0`-`65530`
+	// VPN
+	//   - Range: `0`-`65530`
 	Vpn pulumi.IntPtrOutput `pulumi:"vpn"`
 	// Variable name
 	VpnVariable pulumi.StringPtrOutput `pulumi:"vpnVariable"`
@@ -140,27 +141,28 @@ type serviceObjectTrackerFeatureState struct {
 	InterfaceVariable *string `pulumi:"interfaceVariable"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
-	// Object tracker ID - Range: `1`-`1000`
+	// Object tracker ID
+	//   - Range: `1`-`1000`
 	ObjectTrackerId *int `pulumi:"objectTrackerId"`
 	// Variable name
 	ObjectTrackerIdVariable *string `pulumi:"objectTrackerIdVariable"`
-	// objectTrackerType:Interface SIG Route - Choices: `Interface`, `SIG`, `Route`
+	// objectTrackerType:Interface SIG Route
+	//   - Choices: `Interface`, `SIG`, `Route`
 	ObjectTrackerType *string `pulumi:"objectTrackerType"`
 	// IP address
 	RouteIp *string `pulumi:"routeIp"`
 	// Variable name
 	RouteIpVariable *string `pulumi:"routeIpVariable"`
-	// IP mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-	// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-	// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-	// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-	// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0` - Default value: `0.0.0.0`
+	// IP mask
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	//   - Default value: `0.0.0.0`
 	RouteMask *string `pulumi:"routeMask"`
 	// Variable name
 	RouteMaskVariable *string `pulumi:"routeMaskVariable"`
 	// The version of the Feature
 	Version *int `pulumi:"version"`
-	// VPN - Range: `0`-`65530`
+	// VPN
+	//   - Range: `0`-`65530`
 	Vpn *int `pulumi:"vpn"`
 	// Variable name
 	VpnVariable *string `pulumi:"vpnVariable"`
@@ -177,27 +179,28 @@ type ServiceObjectTrackerFeatureState struct {
 	InterfaceVariable pulumi.StringPtrInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
-	// Object tracker ID - Range: `1`-`1000`
+	// Object tracker ID
+	//   - Range: `1`-`1000`
 	ObjectTrackerId pulumi.IntPtrInput
 	// Variable name
 	ObjectTrackerIdVariable pulumi.StringPtrInput
-	// objectTrackerType:Interface SIG Route - Choices: `Interface`, `SIG`, `Route`
+	// objectTrackerType:Interface SIG Route
+	//   - Choices: `Interface`, `SIG`, `Route`
 	ObjectTrackerType pulumi.StringPtrInput
 	// IP address
 	RouteIp pulumi.StringPtrInput
 	// Variable name
 	RouteIpVariable pulumi.StringPtrInput
-	// IP mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-	// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-	// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-	// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-	// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0` - Default value: `0.0.0.0`
+	// IP mask
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	//   - Default value: `0.0.0.0`
 	RouteMask pulumi.StringPtrInput
 	// Variable name
 	RouteMaskVariable pulumi.StringPtrInput
 	// The version of the Feature
 	Version pulumi.IntPtrInput
-	// VPN - Range: `0`-`65530`
+	// VPN
+	//   - Range: `0`-`65530`
 	Vpn pulumi.IntPtrInput
 	// Variable name
 	VpnVariable pulumi.StringPtrInput
@@ -218,25 +221,26 @@ type serviceObjectTrackerFeatureArgs struct {
 	InterfaceVariable *string `pulumi:"interfaceVariable"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
-	// Object tracker ID - Range: `1`-`1000`
+	// Object tracker ID
+	//   - Range: `1`-`1000`
 	ObjectTrackerId *int `pulumi:"objectTrackerId"`
 	// Variable name
 	ObjectTrackerIdVariable *string `pulumi:"objectTrackerIdVariable"`
-	// objectTrackerType:Interface SIG Route - Choices: `Interface`, `SIG`, `Route`
+	// objectTrackerType:Interface SIG Route
+	//   - Choices: `Interface`, `SIG`, `Route`
 	ObjectTrackerType string `pulumi:"objectTrackerType"`
 	// IP address
 	RouteIp *string `pulumi:"routeIp"`
 	// Variable name
 	RouteIpVariable *string `pulumi:"routeIpVariable"`
-	// IP mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-	// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-	// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-	// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-	// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0` - Default value: `0.0.0.0`
+	// IP mask
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	//   - Default value: `0.0.0.0`
 	RouteMask *string `pulumi:"routeMask"`
 	// Variable name
 	RouteMaskVariable *string `pulumi:"routeMaskVariable"`
-	// VPN - Range: `0`-`65530`
+	// VPN
+	//   - Range: `0`-`65530`
 	Vpn *int `pulumi:"vpn"`
 	// Variable name
 	VpnVariable *string `pulumi:"vpnVariable"`
@@ -254,25 +258,26 @@ type ServiceObjectTrackerFeatureArgs struct {
 	InterfaceVariable pulumi.StringPtrInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
-	// Object tracker ID - Range: `1`-`1000`
+	// Object tracker ID
+	//   - Range: `1`-`1000`
 	ObjectTrackerId pulumi.IntPtrInput
 	// Variable name
 	ObjectTrackerIdVariable pulumi.StringPtrInput
-	// objectTrackerType:Interface SIG Route - Choices: `Interface`, `SIG`, `Route`
+	// objectTrackerType:Interface SIG Route
+	//   - Choices: `Interface`, `SIG`, `Route`
 	ObjectTrackerType pulumi.StringInput
 	// IP address
 	RouteIp pulumi.StringPtrInput
 	// Variable name
 	RouteIpVariable pulumi.StringPtrInput
-	// IP mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-	// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-	// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-	// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-	// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0` - Default value: `0.0.0.0`
+	// IP mask
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	//   - Default value: `0.0.0.0`
 	RouteMask pulumi.StringPtrInput
 	// Variable name
 	RouteMaskVariable pulumi.StringPtrInput
-	// VPN - Range: `0`-`65530`
+	// VPN
+	//   - Range: `0`-`65530`
 	Vpn pulumi.IntPtrInput
 	// Variable name
 	VpnVariable pulumi.StringPtrInput
@@ -390,7 +395,8 @@ func (o ServiceObjectTrackerFeatureOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *ServiceObjectTrackerFeature) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// Object tracker ID - Range: `1`-`1000`
+// Object tracker ID
+//   - Range: `1`-`1000`
 func (o ServiceObjectTrackerFeatureOutput) ObjectTrackerId() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceObjectTrackerFeature) pulumi.IntPtrOutput { return v.ObjectTrackerId }).(pulumi.IntPtrOutput)
 }
@@ -400,7 +406,8 @@ func (o ServiceObjectTrackerFeatureOutput) ObjectTrackerIdVariable() pulumi.Stri
 	return o.ApplyT(func(v *ServiceObjectTrackerFeature) pulumi.StringPtrOutput { return v.ObjectTrackerIdVariable }).(pulumi.StringPtrOutput)
 }
 
-// objectTrackerType:Interface SIG Route - Choices: `Interface`, `SIG`, `Route`
+// objectTrackerType:Interface SIG Route
+//   - Choices: `Interface`, `SIG`, `Route`
 func (o ServiceObjectTrackerFeatureOutput) ObjectTrackerType() pulumi.StringOutput {
 	return o.ApplyT(func(v *ServiceObjectTrackerFeature) pulumi.StringOutput { return v.ObjectTrackerType }).(pulumi.StringOutput)
 }
@@ -415,11 +422,9 @@ func (o ServiceObjectTrackerFeatureOutput) RouteIpVariable() pulumi.StringPtrOut
 	return o.ApplyT(func(v *ServiceObjectTrackerFeature) pulumi.StringPtrOutput { return v.RouteIpVariable }).(pulumi.StringPtrOutput)
 }
 
-// IP mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0` - Default value: `0.0.0.0`
+// IP mask
+//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+//   - Default value: `0.0.0.0`
 func (o ServiceObjectTrackerFeatureOutput) RouteMask() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceObjectTrackerFeature) pulumi.StringPtrOutput { return v.RouteMask }).(pulumi.StringPtrOutput)
 }
@@ -434,7 +439,8 @@ func (o ServiceObjectTrackerFeatureOutput) Version() pulumi.IntOutput {
 	return o.ApplyT(func(v *ServiceObjectTrackerFeature) pulumi.IntOutput { return v.Version }).(pulumi.IntOutput)
 }
 
-// VPN - Range: `0`-`65530`
+// VPN
+//   - Range: `0`-`65530`
 func (o ServiceObjectTrackerFeatureOutput) Vpn() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceObjectTrackerFeature) pulumi.IntPtrOutput { return v.Vpn }).(pulumi.IntPtrOutput)
 }

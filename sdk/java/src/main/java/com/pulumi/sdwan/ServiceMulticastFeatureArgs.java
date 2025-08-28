@@ -73,14 +73,16 @@ public final class ServiceMulticastFeatureArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Enable or disable auto-RP - Default value: `false`
+     * Enable or disable auto-RP
+     *   - Default value: `false`
      * 
      */
     @Import(name="enableAutoRp")
     private @Nullable Output<Boolean> enableAutoRp;
 
     /**
-     * @return Enable or disable auto-RP - Default value: `false`
+     * @return Enable or disable auto-RP
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> enableAutoRp() {
@@ -133,14 +135,16 @@ public final class ServiceMulticastFeatureArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Replicator is local to this device - Default value: `false`
+     * Replicator is local to this device
+     *   - Default value: `false`
      * 
      */
     @Import(name="localReplicator")
     private @Nullable Output<Boolean> localReplicator;
 
     /**
-     * @return Replicator is local to this device - Default value: `false`
+     * @return Replicator is local to this device
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> localReplicator() {
@@ -148,14 +152,16 @@ public final class ServiceMulticastFeatureArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Set number of joins per group the router supports - Range: `0`-`131072`
+     * Set number of joins per group the router supports
+     *   - Range: `0`-`131072`
      * 
      */
     @Import(name="localReplicatorThreshold")
     private @Nullable Output<Integer> localReplicatorThreshold;
 
     /**
-     * @return Set number of joins per group the router supports - Range: `0`-`131072`
+     * @return Set number of joins per group the router supports
+     *   - Range: `0`-`131072`
      * 
      */
     public Optional<Output<Integer>> localReplicatorThreshold() {
@@ -193,14 +199,16 @@ public final class ServiceMulticastFeatureArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Set MSDP refresh timer - Range: `1`-`60`
+     * Set MSDP refresh timer
+     *   - Range: `1`-`60`
      * 
      */
     @Import(name="msdpConnectionRetryInterval")
     private @Nullable Output<Integer> msdpConnectionRetryInterval;
 
     /**
-     * @return Set MSDP refresh timer - Range: `1`-`60`
+     * @return Set MSDP refresh timer
+     *   - Range: `1`-`60`
      * 
      */
     public Optional<Output<Integer>> msdpConnectionRetryInterval() {
@@ -373,14 +381,18 @@ public final class ServiceMulticastFeatureArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity` - Default value: `0`
+     * Set when PIM router joins the SPT (kbps)
+     *   - Choices: `0`, `infinity`
+     *   - Default value: `0`
      * 
      */
     @Import(name="pimSptThreshold")
     private @Nullable Output<String> pimSptThreshold;
 
     /**
-     * @return Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity` - Default value: `0`
+     * @return Set when PIM router joins the SPT (kbps)
+     *   - Choices: `0`, `infinity`
+     *   - Default value: `0`
      * 
      */
     public Optional<Output<String>> pimSptThreshold() {
@@ -403,14 +415,16 @@ public final class ServiceMulticastFeatureArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Shortest Path Tree (SPT) Only Mode - Default value: `false`
+     * Shortest Path Tree (SPT) Only Mode
+     *   - Default value: `false`
      * 
      */
     @Import(name="sptOnly")
     private @Nullable Output<Boolean> sptOnly;
 
     /**
-     * @return Shortest Path Tree (SPT) Only Mode - Default value: `false`
+     * @return Shortest Path Tree (SPT) Only Mode
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> sptOnly() {
@@ -582,7 +596,8 @@ public final class ServiceMulticastFeatureArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param enableAutoRp Enable or disable auto-RP - Default value: `false`
+         * @param enableAutoRp Enable or disable auto-RP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -593,7 +608,8 @@ public final class ServiceMulticastFeatureArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param enableAutoRp Enable or disable auto-RP - Default value: `false`
+         * @param enableAutoRp Enable or disable auto-RP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -676,7 +692,8 @@ public final class ServiceMulticastFeatureArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param localReplicator Replicator is local to this device - Default value: `false`
+         * @param localReplicator Replicator is local to this device
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -687,7 +704,8 @@ public final class ServiceMulticastFeatureArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param localReplicator Replicator is local to this device - Default value: `false`
+         * @param localReplicator Replicator is local to this device
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -697,7 +715,8 @@ public final class ServiceMulticastFeatureArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param localReplicatorThreshold Set number of joins per group the router supports - Range: `0`-`131072`
+         * @param localReplicatorThreshold Set number of joins per group the router supports
+         *   - Range: `0`-`131072`
          * 
          * @return builder
          * 
@@ -708,7 +727,8 @@ public final class ServiceMulticastFeatureArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param localReplicatorThreshold Set number of joins per group the router supports - Range: `0`-`131072`
+         * @param localReplicatorThreshold Set number of joins per group the router supports
+         *   - Range: `0`-`131072`
          * 
          * @return builder
          * 
@@ -760,7 +780,8 @@ public final class ServiceMulticastFeatureArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param msdpConnectionRetryInterval Set MSDP refresh timer - Range: `1`-`60`
+         * @param msdpConnectionRetryInterval Set MSDP refresh timer
+         *   - Range: `1`-`60`
          * 
          * @return builder
          * 
@@ -771,7 +792,8 @@ public final class ServiceMulticastFeatureArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param msdpConnectionRetryInterval Set MSDP refresh timer - Range: `1`-`60`
+         * @param msdpConnectionRetryInterval Set MSDP refresh timer
+         *   - Range: `1`-`60`
          * 
          * @return builder
          * 
@@ -1052,7 +1074,9 @@ public final class ServiceMulticastFeatureArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param pimSptThreshold Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity` - Default value: `0`
+         * @param pimSptThreshold Set when PIM router joins the SPT (kbps)
+         *   - Choices: `0`, `infinity`
+         *   - Default value: `0`
          * 
          * @return builder
          * 
@@ -1063,7 +1087,9 @@ public final class ServiceMulticastFeatureArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param pimSptThreshold Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity` - Default value: `0`
+         * @param pimSptThreshold Set when PIM router joins the SPT (kbps)
+         *   - Choices: `0`, `infinity`
+         *   - Default value: `0`
          * 
          * @return builder
          * 
@@ -1094,7 +1120,8 @@ public final class ServiceMulticastFeatureArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param sptOnly Shortest Path Tree (SPT) Only Mode - Default value: `false`
+         * @param sptOnly Shortest Path Tree (SPT) Only Mode
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1105,7 +1132,8 @@ public final class ServiceMulticastFeatureArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param sptOnly Shortest Path Tree (SPT) Only Mode - Default value: `false`
+         * @param sptOnly Shortest Path Tree (SPT) Only Mode
+         *   - Default value: `false`
          * 
          * @return builder
          * 

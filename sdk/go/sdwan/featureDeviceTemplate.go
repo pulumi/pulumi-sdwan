@@ -60,7 +60,8 @@ type FeatureDeviceTemplate struct {
 
 	// The description of the device template
 	Description pulumi.StringOutput `pulumi:"description"`
-	// The device role - Choices: `sdwan-edge`, `service-node`
+	// The device role
+	//   - Choices: `sdwan-edge`, `service-node`
 	DeviceRole pulumi.StringPtrOutput `pulumi:"deviceRole"`
 	// The device type (e.g., `vedge-ISR-4331`)
 	DeviceType pulumi.StringOutput `pulumi:"deviceType"`
@@ -118,7 +119,8 @@ func GetFeatureDeviceTemplate(ctx *pulumi.Context,
 type featureDeviceTemplateState struct {
 	// The description of the device template
 	Description *string `pulumi:"description"`
-	// The device role - Choices: `sdwan-edge`, `service-node`
+	// The device role
+	//   - Choices: `sdwan-edge`, `service-node`
 	DeviceRole *string `pulumi:"deviceRole"`
 	// The device type (e.g., `vedge-ISR-4331`)
 	DeviceType *string `pulumi:"deviceType"`
@@ -141,7 +143,8 @@ type featureDeviceTemplateState struct {
 type FeatureDeviceTemplateState struct {
 	// The description of the device template
 	Description pulumi.StringPtrInput
-	// The device role - Choices: `sdwan-edge`, `service-node`
+	// The device role
+	//   - Choices: `sdwan-edge`, `service-node`
 	DeviceRole pulumi.StringPtrInput
 	// The device type (e.g., `vedge-ISR-4331`)
 	DeviceType pulumi.StringPtrInput
@@ -168,7 +171,8 @@ func (FeatureDeviceTemplateState) ElementType() reflect.Type {
 type featureDeviceTemplateArgs struct {
 	// The description of the device template
 	Description string `pulumi:"description"`
-	// The device role - Choices: `sdwan-edge`, `service-node`
+	// The device role
+	//   - Choices: `sdwan-edge`, `service-node`
 	DeviceRole *string `pulumi:"deviceRole"`
 	// The device type (e.g., `vedge-ISR-4331`)
 	DeviceType string `pulumi:"deviceType"`
@@ -190,7 +194,8 @@ type featureDeviceTemplateArgs struct {
 type FeatureDeviceTemplateArgs struct {
 	// The description of the device template
 	Description pulumi.StringInput
-	// The device role - Choices: `sdwan-edge`, `service-node`
+	// The device role
+	//   - Choices: `sdwan-edge`, `service-node`
 	DeviceRole pulumi.StringPtrInput
 	// The device type (e.g., `vedge-ISR-4331`)
 	DeviceType pulumi.StringInput
@@ -300,7 +305,8 @@ func (o FeatureDeviceTemplateOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v *FeatureDeviceTemplate) pulumi.StringOutput { return v.Description }).(pulumi.StringOutput)
 }
 
-// The device role - Choices: `sdwan-edge`, `service-node`
+// The device role
+//   - Choices: `sdwan-edge`, `service-node`
 func (o FeatureDeviceTemplateOutput) DeviceRole() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *FeatureDeviceTemplate) pulumi.StringPtrOutput { return v.DeviceRole }).(pulumi.StringPtrOutput)
 }

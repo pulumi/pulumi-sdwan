@@ -27,7 +27,9 @@ import (
 type ServiceRoutePolicyFeature struct {
 	pulumi.CustomResourceState
 
-	// Default Action - Choices: `reject`, `accept` - Default value: `reject`
+	// Default Action
+	//   - Choices: `reject`, `accept`
+	//   - Default value: `reject`
 	DefaultAction pulumi.StringPtrOutput `pulumi:"defaultAction"`
 	// The description of the Feature
 	Description pulumi.StringPtrOutput `pulumi:"description"`
@@ -74,7 +76,9 @@ func GetServiceRoutePolicyFeature(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering ServiceRoutePolicyFeature resources.
 type serviceRoutePolicyFeatureState struct {
-	// Default Action - Choices: `reject`, `accept` - Default value: `reject`
+	// Default Action
+	//   - Choices: `reject`, `accept`
+	//   - Default value: `reject`
 	DefaultAction *string `pulumi:"defaultAction"`
 	// The description of the Feature
 	Description *string `pulumi:"description"`
@@ -89,7 +93,9 @@ type serviceRoutePolicyFeatureState struct {
 }
 
 type ServiceRoutePolicyFeatureState struct {
-	// Default Action - Choices: `reject`, `accept` - Default value: `reject`
+	// Default Action
+	//   - Choices: `reject`, `accept`
+	//   - Default value: `reject`
 	DefaultAction pulumi.StringPtrInput
 	// The description of the Feature
 	Description pulumi.StringPtrInput
@@ -108,7 +114,9 @@ func (ServiceRoutePolicyFeatureState) ElementType() reflect.Type {
 }
 
 type serviceRoutePolicyFeatureArgs struct {
-	// Default Action - Choices: `reject`, `accept` - Default value: `reject`
+	// Default Action
+	//   - Choices: `reject`, `accept`
+	//   - Default value: `reject`
 	DefaultAction *string `pulumi:"defaultAction"`
 	// The description of the Feature
 	Description *string `pulumi:"description"`
@@ -122,7 +130,9 @@ type serviceRoutePolicyFeatureArgs struct {
 
 // The set of arguments for constructing a ServiceRoutePolicyFeature resource.
 type ServiceRoutePolicyFeatureArgs struct {
-	// Default Action - Choices: `reject`, `accept` - Default value: `reject`
+	// Default Action
+	//   - Choices: `reject`, `accept`
+	//   - Default value: `reject`
 	DefaultAction pulumi.StringPtrInput
 	// The description of the Feature
 	Description pulumi.StringPtrInput
@@ -221,7 +231,9 @@ func (o ServiceRoutePolicyFeatureOutput) ToServiceRoutePolicyFeatureOutputWithCo
 	return o
 }
 
-// Default Action - Choices: `reject`, `accept` - Default value: `reject`
+// Default Action
+//   - Choices: `reject`, `accept`
+//   - Default value: `reject`
 func (o ServiceRoutePolicyFeatureOutput) DefaultAction() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutePolicyFeature) pulumi.StringPtrOutput { return v.DefaultAction }).(pulumi.StringPtrOutput)
 }

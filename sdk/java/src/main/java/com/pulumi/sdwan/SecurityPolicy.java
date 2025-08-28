@@ -39,14 +39,16 @@ import javax.annotation.Nullable;
 @ResourceType(type="sdwan:index/securityPolicy:SecurityPolicy")
 public class SecurityPolicy extends com.pulumi.resources.CustomResource {
     /**
-     * Audit trail - Choices: `on`, `off`
+     * Audit trail
+     *   - Choices: `on`, `off`
      * 
      */
     @Export(name="auditTrail", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> auditTrail;
 
     /**
-     * @return Audit trail - Choices: `on`, `off`
+     * @return Audit trail
+     *   - Choices: `on`, `off`
      * 
      */
     public Output<Optional<String>> auditTrail() {
@@ -81,28 +83,32 @@ public class SecurityPolicy extends com.pulumi.resources.CustomResource {
         return this.description;
     }
     /**
-     * Bypass firewall policy and allow all Internet traffic to/from VPN 0 - Choices: `allow`, `deny`
+     * Bypass firewall policy and allow all Internet traffic to/from VPN 0
+     *   - Choices: `allow`, `deny`
      * 
      */
     @Export(name="directInternetApplications", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> directInternetApplications;
 
     /**
-     * @return Bypass firewall policy and allow all Internet traffic to/from VPN 0 - Choices: `allow`, `deny`
+     * @return Bypass firewall policy and allow all Internet traffic to/from VPN 0
+     *   - Choices: `allow`, `deny`
      * 
      */
     public Output<Optional<String>> directInternetApplications() {
         return Codegen.optional(this.directInternetApplications);
     }
     /**
-     * Failure mode - Choices: `open`, `close`
+     * Failure mode
+     *   - Choices: `open`, `close`
      * 
      */
     @Export(name="failureMode", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> failureMode;
 
     /**
-     * @return Failure mode - Choices: `open`, `close`
+     * @return Failure mode
+     *   - Choices: `open`, `close`
      * 
      */
     public Output<Optional<String>> failureMode() {
@@ -185,14 +191,16 @@ public class SecurityPolicy extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.loggings);
     }
     /**
-     * Match Statistics per-filter - Choices: `on`, `off`
+     * Match Statistics per-filter
+     *   - Choices: `on`, `off`
      * 
      */
     @Export(name="matchStatisticsPerFilter", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> matchStatisticsPerFilter;
 
     /**
-     * @return Match Statistics per-filter - Choices: `on`, `off`
+     * @return Match Statistics per-filter
+     *   - Choices: `on`, `off`
      * 
      */
     public Output<Optional<String>> matchStatisticsPerFilter() {
@@ -241,14 +249,18 @@ public class SecurityPolicy extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.maxIncompleteUdpLimit);
     }
     /**
-     * The policy mode - Choices: `security`, `unified` - Default value: `security`
+     * The policy mode
+     *   - Choices: `security`, `unified`
+     *   - Default value: `security`
      * 
      */
     @Export(name="mode", refs={String.class}, tree="[0]")
     private Output<String> mode;
 
     /**
-     * @return The policy mode - Choices: `security`, `unified` - Default value: `security`
+     * @return The policy mode
+     *   - Choices: `security`, `unified`
+     *   - Default value: `security`
      * 
      */
     public Output<String> mode() {
@@ -311,16 +323,18 @@ public class SecurityPolicy extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.unifiedLogging);
     }
     /**
-     * The use case of the security policy - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`,
-     * `directInternetAccess`, `directCloudAccess` - Default value: `custom`
+     * The use case of the security policy
+     *   - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`, `directInternetAccess`, `directCloudAccess`
+     *   - Default value: `custom`
      * 
      */
     @Export(name="useCase", refs={String.class}, tree="[0]")
     private Output<String> useCase;
 
     /**
-     * @return The use case of the security policy - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`,
-     * `directInternetAccess`, `directCloudAccess` - Default value: `custom`
+     * @return The use case of the security policy
+     *   - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`, `directInternetAccess`, `directCloudAccess`
+     *   - Default value: `custom`
      * 
      */
     public Output<String> useCase() {

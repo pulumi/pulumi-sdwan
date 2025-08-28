@@ -23,7 +23,8 @@ class ClassMapPolicyObjectArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a ClassMapPolicyObject resource.
-        :param pulumi.Input[_builtins.int] queue: Queue - Range: `0`-`7`
+        :param pulumi.Input[_builtins.int] queue: Queue
+                 - Range: `0`-`7`
         :param pulumi.Input[_builtins.str] name: The name of the policy object
         """
         pulumi.set(__self__, "queue", queue)
@@ -34,7 +35,8 @@ class ClassMapPolicyObjectArgs:
     @pulumi.getter
     def queue(self) -> pulumi.Input[_builtins.int]:
         """
-        Queue - Range: `0`-`7`
+        Queue
+          - Range: `0`-`7`
         """
         return pulumi.get(self, "queue")
 
@@ -64,7 +66,8 @@ class _ClassMapPolicyObjectState:
         """
         Input properties used for looking up and filtering ClassMapPolicyObject resources.
         :param pulumi.Input[_builtins.str] name: The name of the policy object
-        :param pulumi.Input[_builtins.int] queue: Queue - Range: `0`-`7`
+        :param pulumi.Input[_builtins.int] queue: Queue
+                 - Range: `0`-`7`
         :param pulumi.Input[_builtins.int] version: The version of the object
         """
         if name is not None:
@@ -90,7 +93,8 @@ class _ClassMapPolicyObjectState:
     @pulumi.getter
     def queue(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Queue - Range: `0`-`7`
+        Queue
+          - Range: `0`-`7`
         """
         return pulumi.get(self, "queue")
 
@@ -145,7 +149,8 @@ class ClassMapPolicyObject(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] name: The name of the policy object
-        :param pulumi.Input[_builtins.int] queue: Queue - Range: `0`-`7`
+        :param pulumi.Input[_builtins.int] queue: Queue
+                 - Range: `0`-`7`
         """
         ...
     @overload
@@ -227,7 +232,8 @@ class ClassMapPolicyObject(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] name: The name of the policy object
-        :param pulumi.Input[_builtins.int] queue: Queue - Range: `0`-`7`
+        :param pulumi.Input[_builtins.int] queue: Queue
+                 - Range: `0`-`7`
         :param pulumi.Input[_builtins.int] version: The version of the object
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -251,7 +257,8 @@ class ClassMapPolicyObject(pulumi.CustomResource):
     @pulumi.getter
     def queue(self) -> pulumi.Output[_builtins.int]:
         """
-        Queue - Range: `0`-`7`
+        Queue
+          - Range: `0`-`7`
         """
         return pulumi.get(self, "queue")
 

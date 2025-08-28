@@ -39,7 +39,8 @@ type TransportT1E1ControllerFeature struct {
 	Slot pulumi.StringPtrOutput `pulumi:"slot"`
 	// Variable name
 	SlotVariable pulumi.StringPtrOutput `pulumi:"slotVariable"`
-	// Card Type - Choices: `e1`, `t1`
+	// Card Type
+	//   - Choices: `e1`, `t1`
 	Type pulumi.StringOutput `pulumi:"type"`
 	// The version of the Feature
 	Version pulumi.IntOutput `pulumi:"version"`
@@ -96,7 +97,8 @@ type transportT1E1ControllerFeatureState struct {
 	Slot *string `pulumi:"slot"`
 	// Variable name
 	SlotVariable *string `pulumi:"slotVariable"`
-	// Card Type - Choices: `e1`, `t1`
+	// Card Type
+	//   - Choices: `e1`, `t1`
 	Type *string `pulumi:"type"`
 	// The version of the Feature
 	Version *int `pulumi:"version"`
@@ -115,7 +117,8 @@ type TransportT1E1ControllerFeatureState struct {
 	Slot pulumi.StringPtrInput
 	// Variable name
 	SlotVariable pulumi.StringPtrInput
-	// Card Type - Choices: `e1`, `t1`
+	// Card Type
+	//   - Choices: `e1`, `t1`
 	Type pulumi.StringPtrInput
 	// The version of the Feature
 	Version pulumi.IntPtrInput
@@ -138,7 +141,8 @@ type transportT1E1ControllerFeatureArgs struct {
 	Slot *string `pulumi:"slot"`
 	// Variable name
 	SlotVariable *string `pulumi:"slotVariable"`
-	// Card Type - Choices: `e1`, `t1`
+	// Card Type
+	//   - Choices: `e1`, `t1`
 	Type string `pulumi:"type"`
 }
 
@@ -156,7 +160,8 @@ type TransportT1E1ControllerFeatureArgs struct {
 	Slot pulumi.StringPtrInput
 	// Variable name
 	SlotVariable pulumi.StringPtrInput
-	// Card Type - Choices: `e1`, `t1`
+	// Card Type
+	//   - Choices: `e1`, `t1`
 	Type pulumi.StringInput
 }
 
@@ -279,7 +284,8 @@ func (o TransportT1E1ControllerFeatureOutput) SlotVariable() pulumi.StringPtrOut
 	return o.ApplyT(func(v *TransportT1E1ControllerFeature) pulumi.StringPtrOutput { return v.SlotVariable }).(pulumi.StringPtrOutput)
 }
 
-// Card Type - Choices: `e1`, `t1`
+// Card Type
+//   - Choices: `e1`, `t1`
 func (o TransportT1E1ControllerFeatureOutput) Type() pulumi.StringOutput {
 	return o.ApplyT(func(v *TransportT1E1ControllerFeature) pulumi.StringOutput { return v.Type }).(pulumi.StringOutput)
 }

@@ -31,7 +31,9 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.CiscoBfdFeatureTemplateColor>> Colors { get; private set; } = null!;
 
         /// <summary>
-        /// Set default DSCP value for BFD packets - Range: `0`-`63` - Default value: `48`
+        /// Set default DSCP value for BFD packets
+        ///   - Range: `0`-`63`
+        ///   - Default value: `48`
         /// </summary>
         [Output("defaultDscp")]
         public Output<int?> DefaultDscp { get; private set; } = null!;
@@ -49,15 +51,16 @@ namespace Pulumi.Sdwan
         public Output<string> Description { get; private set; } = null!;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         [Output("deviceTypes")]
         public Output<ImmutableArray<string>> DeviceTypes { get; private set; } = null!;
 
         /// <summary>
-        /// Set the number of polling intervals used to determine tunnel SLA class - Range: `1`-`6` - Default value: `6`
+        /// Set the number of polling intervals used to determine tunnel SLA class
+        ///   - Range: `1`-`6`
+        ///   - Default value: `6`
         /// </summary>
         [Output("multiplier")]
         public Output<int?> Multiplier { get; private set; } = null!;
@@ -75,8 +78,9 @@ namespace Pulumi.Sdwan
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// Set how often BFD polls tunnels to collect packet latency, loss, and statistics - Range: `1`-`4294967295` - Default
-        /// value: `600000`
+        /// Set how often BFD polls tunnels to collect packet latency, loss, and statistics
+        ///   - Range: `1`-`4294967295`
+        ///   - Default value: `600000`
         /// </summary>
         [Output("pollInterval")]
         public Output<int?> PollInterval { get; private set; } = null!;
@@ -158,7 +162,9 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Set default DSCP value for BFD packets - Range: `0`-`63` - Default value: `48`
+        /// Set default DSCP value for BFD packets
+        ///   - Range: `0`-`63`
+        ///   - Default value: `48`
         /// </summary>
         [Input("defaultDscp")]
         public Input<int>? DefaultDscp { get; set; }
@@ -179,9 +185,8 @@ namespace Pulumi.Sdwan
         private InputList<string>? _deviceTypes;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         public InputList<string> DeviceTypes
         {
@@ -190,7 +195,9 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Set the number of polling intervals used to determine tunnel SLA class - Range: `1`-`6` - Default value: `6`
+        /// Set the number of polling intervals used to determine tunnel SLA class
+        ///   - Range: `1`-`6`
+        ///   - Default value: `6`
         /// </summary>
         [Input("multiplier")]
         public Input<int>? Multiplier { get; set; }
@@ -208,8 +215,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Set how often BFD polls tunnels to collect packet latency, loss, and statistics - Range: `1`-`4294967295` - Default
-        /// value: `600000`
+        /// Set how often BFD polls tunnels to collect packet latency, loss, and statistics
+        ///   - Range: `1`-`4294967295`
+        ///   - Default value: `600000`
         /// </summary>
         [Input("pollInterval")]
         public Input<int>? PollInterval { get; set; }
@@ -241,7 +249,9 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Set default DSCP value for BFD packets - Range: `0`-`63` - Default value: `48`
+        /// Set default DSCP value for BFD packets
+        ///   - Range: `0`-`63`
+        ///   - Default value: `48`
         /// </summary>
         [Input("defaultDscp")]
         public Input<int>? DefaultDscp { get; set; }
@@ -262,9 +272,8 @@ namespace Pulumi.Sdwan
         private InputList<string>? _deviceTypes;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         public InputList<string> DeviceTypes
         {
@@ -273,7 +282,9 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Set the number of polling intervals used to determine tunnel SLA class - Range: `1`-`6` - Default value: `6`
+        /// Set the number of polling intervals used to determine tunnel SLA class
+        ///   - Range: `1`-`6`
+        ///   - Default value: `6`
         /// </summary>
         [Input("multiplier")]
         public Input<int>? Multiplier { get; set; }
@@ -291,8 +302,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Set how often BFD polls tunnels to collect packet latency, loss, and statistics - Range: `1`-`4294967295` - Default
-        /// value: `600000`
+        /// Set how often BFD polls tunnels to collect packet latency, loss, and statistics
+        ///   - Range: `1`-`4294967295`
+        ///   - Default value: `600000`
         /// </summary>
         [Input("pollInterval")]
         public Input<int>? PollInterval { get; set; }

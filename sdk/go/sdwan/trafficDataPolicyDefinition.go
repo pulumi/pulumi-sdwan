@@ -24,7 +24,8 @@ import (
 type TrafficDataPolicyDefinition struct {
 	pulumi.CustomResourceState
 
-	// Default action, either `accept` or `drop` - Choices: `accept`, `drop`
+	// Default action, either `accept` or `drop`
+	//   - Choices: `accept`, `drop`
 	DefaultAction pulumi.StringPtrOutput `pulumi:"defaultAction"`
 	// The description of the policy definition
 	Description pulumi.StringOutput `pulumi:"description"`
@@ -74,7 +75,8 @@ func GetTrafficDataPolicyDefinition(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering TrafficDataPolicyDefinition resources.
 type trafficDataPolicyDefinitionState struct {
-	// Default action, either `accept` or `drop` - Choices: `accept`, `drop`
+	// Default action, either `accept` or `drop`
+	//   - Choices: `accept`, `drop`
 	DefaultAction *string `pulumi:"defaultAction"`
 	// The description of the policy definition
 	Description *string `pulumi:"description"`
@@ -89,7 +91,8 @@ type trafficDataPolicyDefinitionState struct {
 }
 
 type TrafficDataPolicyDefinitionState struct {
-	// Default action, either `accept` or `drop` - Choices: `accept`, `drop`
+	// Default action, either `accept` or `drop`
+	//   - Choices: `accept`, `drop`
 	DefaultAction pulumi.StringPtrInput
 	// The description of the policy definition
 	Description pulumi.StringPtrInput
@@ -108,7 +111,8 @@ func (TrafficDataPolicyDefinitionState) ElementType() reflect.Type {
 }
 
 type trafficDataPolicyDefinitionArgs struct {
-	// Default action, either `accept` or `drop` - Choices: `accept`, `drop`
+	// Default action, either `accept` or `drop`
+	//   - Choices: `accept`, `drop`
 	DefaultAction *string `pulumi:"defaultAction"`
 	// The description of the policy definition
 	Description string `pulumi:"description"`
@@ -120,7 +124,8 @@ type trafficDataPolicyDefinitionArgs struct {
 
 // The set of arguments for constructing a TrafficDataPolicyDefinition resource.
 type TrafficDataPolicyDefinitionArgs struct {
-	// Default action, either `accept` or `drop` - Choices: `accept`, `drop`
+	// Default action, either `accept` or `drop`
+	//   - Choices: `accept`, `drop`
 	DefaultAction pulumi.StringPtrInput
 	// The description of the policy definition
 	Description pulumi.StringInput
@@ -217,7 +222,8 @@ func (o TrafficDataPolicyDefinitionOutput) ToTrafficDataPolicyDefinitionOutputWi
 	return o
 }
 
-// Default action, either `accept` or `drop` - Choices: `accept`, `drop`
+// Default action, either `accept` or `drop`
+//   - Choices: `accept`, `drop`
 func (o TrafficDataPolicyDefinitionOutput) DefaultAction() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TrafficDataPolicyDefinition) pulumi.StringPtrOutput { return v.DefaultAction }).(pulumi.StringPtrOutput)
 }

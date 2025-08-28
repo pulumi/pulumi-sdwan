@@ -20,14 +20,16 @@ public final class OtherUcseFeatureState extends com.pulumi.resources.ResourceAr
     public static final OtherUcseFeatureState Empty = new OtherUcseFeatureState();
 
     /**
-     * Dedicated - Default value: `true`
+     * Dedicated
+     *   - Default value: `true`
      * 
      */
     @Import(name="accessPortDedicated")
     private @Nullable Output<Boolean> accessPortDedicated;
 
     /**
-     * @return Dedicated - Default value: `true`
+     * @return Dedicated
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> accessPortDedicated() {
@@ -35,14 +37,16 @@ public final class OtherUcseFeatureState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge2`, `te2`
+     * , Attribute conditional on `access_port_dedicated` being equal to `false`
+     *   - Choices: `ge2`, `te2`
      * 
      */
     @Import(name="accessPortSharedFailoverType")
     private @Nullable Output<String> accessPortSharedFailoverType;
 
     /**
-     * @return , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge2`, `te2`
+     * @return , Attribute conditional on `access_port_dedicated` being equal to `false`
+     *   - Choices: `ge2`, `te2`
      * 
      */
     public Optional<Output<String>> accessPortSharedFailoverType() {
@@ -50,16 +54,16 @@ public final class OtherUcseFeatureState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
-     * `console`, `failover`
+     * , Attribute conditional on `access_port_dedicated` being equal to `false`
+     *   - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
      * 
      */
     @Import(name="accessPortSharedType")
     private @Nullable Output<String> accessPortSharedType;
 
     /**
-     * @return , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
-     * `console`, `failover`
+     * @return , Attribute conditional on `access_port_dedicated` being equal to `false`
+     *   - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
      * 
      */
     public Optional<Output<String>> accessPortSharedType() {
@@ -67,14 +71,16 @@ public final class OtherUcseFeatureState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Assign priority - Range: `0`-`7`
+     * Assign priority
+     *   - Range: `0`-`7`
      * 
      */
     @Import(name="assignPriority")
     private @Nullable Output<Integer> assignPriority;
 
     /**
-     * @return Assign priority - Range: `0`-`7`
+     * @return Assign priority
+     *   - Range: `0`-`7`
      * 
      */
     public Optional<Output<Integer>> assignPriority() {
@@ -97,14 +103,16 @@ public final class OtherUcseFeatureState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Bay - Range: `0`-`2`
+     * Bay
+     *   - Range: `0`-`2`
      * 
      */
     @Import(name="bay")
     private @Nullable Output<Integer> bay;
 
     /**
-     * @return Bay - Range: `0`-`2`
+     * @return Bay
+     *   - Range: `0`-`2`
      * 
      */
     public Optional<Output<Integer>> bay() {
@@ -232,14 +240,16 @@ public final class OtherUcseFeatureState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Slot - Range: `0`-`3`
+     * Slot
+     *   - Range: `0`-`3`
      * 
      */
     @Import(name="slot")
     private @Nullable Output<Integer> slot;
 
     /**
-     * @return Slot - Range: `0`-`3`
+     * @return Slot
+     *   - Range: `0`-`3`
      * 
      */
     public Optional<Output<Integer>> slot() {
@@ -262,14 +272,16 @@ public final class OtherUcseFeatureState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Assign Vlan Id - Range: `2`-`4095`
+     * Assign Vlan Id
+     *   - Range: `2`-`4095`
      * 
      */
     @Import(name="vlanId")
     private @Nullable Output<Integer> vlanId;
 
     /**
-     * @return Assign Vlan Id - Range: `2`-`4095`
+     * @return Assign Vlan Id
+     *   - Range: `2`-`4095`
      * 
      */
     public Optional<Output<Integer>> vlanId() {
@@ -333,7 +345,8 @@ public final class OtherUcseFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param accessPortDedicated Dedicated - Default value: `true`
+         * @param accessPortDedicated Dedicated
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -344,7 +357,8 @@ public final class OtherUcseFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param accessPortDedicated Dedicated - Default value: `true`
+         * @param accessPortDedicated Dedicated
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -354,7 +368,8 @@ public final class OtherUcseFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param accessPortSharedFailoverType , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge2`, `te2`
+         * @param accessPortSharedFailoverType , Attribute conditional on `access_port_dedicated` being equal to `false`
+         *   - Choices: `ge2`, `te2`
          * 
          * @return builder
          * 
@@ -365,7 +380,8 @@ public final class OtherUcseFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param accessPortSharedFailoverType , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge2`, `te2`
+         * @param accessPortSharedFailoverType , Attribute conditional on `access_port_dedicated` being equal to `false`
+         *   - Choices: `ge2`, `te2`
          * 
          * @return builder
          * 
@@ -375,8 +391,8 @@ public final class OtherUcseFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param accessPortSharedType , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
-         * `console`, `failover`
+         * @param accessPortSharedType , Attribute conditional on `access_port_dedicated` being equal to `false`
+         *   - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
          * 
          * @return builder
          * 
@@ -387,8 +403,8 @@ public final class OtherUcseFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param accessPortSharedType , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
-         * `console`, `failover`
+         * @param accessPortSharedType , Attribute conditional on `access_port_dedicated` being equal to `false`
+         *   - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
          * 
          * @return builder
          * 
@@ -398,7 +414,8 @@ public final class OtherUcseFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param assignPriority Assign priority - Range: `0`-`7`
+         * @param assignPriority Assign priority
+         *   - Range: `0`-`7`
          * 
          * @return builder
          * 
@@ -409,7 +426,8 @@ public final class OtherUcseFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param assignPriority Assign priority - Range: `0`-`7`
+         * @param assignPriority Assign priority
+         *   - Range: `0`-`7`
          * 
          * @return builder
          * 
@@ -440,7 +458,8 @@ public final class OtherUcseFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param bay Bay - Range: `0`-`2`
+         * @param bay Bay
+         *   - Range: `0`-`2`
          * 
          * @return builder
          * 
@@ -451,7 +470,8 @@ public final class OtherUcseFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param bay Bay - Range: `0`-`2`
+         * @param bay Bay
+         *   - Range: `0`-`2`
          * 
          * @return builder
          * 
@@ -639,7 +659,8 @@ public final class OtherUcseFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param slot Slot - Range: `0`-`3`
+         * @param slot Slot
+         *   - Range: `0`-`3`
          * 
          * @return builder
          * 
@@ -650,7 +671,8 @@ public final class OtherUcseFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param slot Slot - Range: `0`-`3`
+         * @param slot Slot
+         *   - Range: `0`-`3`
          * 
          * @return builder
          * 
@@ -681,7 +703,8 @@ public final class OtherUcseFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param vlanId Assign Vlan Id - Range: `2`-`4095`
+         * @param vlanId Assign Vlan Id
+         *   - Range: `2`-`4095`
          * 
          * @return builder
          * 
@@ -692,7 +715,8 @@ public final class OtherUcseFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param vlanId Assign Vlan Id - Range: `2`-`4095`
+         * @param vlanId Assign Vlan Id
+         *   - Range: `2`-`4095`
          * 
          * @return builder
          * 

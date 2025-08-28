@@ -18,14 +18,16 @@ public final class PolicerPolicyObjectArgs extends com.pulumi.resources.Resource
     public static final PolicerPolicyObjectArgs Empty = new PolicerPolicyObjectArgs();
 
     /**
-     * Burst in bytes - Range: `15000`-`10000000`
+     * Burst in bytes
+     *   - Range: `15000`-`10000000`
      * 
      */
     @Import(name="burst", required=true)
     private Output<Integer> burst;
 
     /**
-     * @return Burst in bytes - Range: `15000`-`10000000`
+     * @return Burst in bytes
+     *   - Range: `15000`-`10000000`
      * 
      */
     public Output<Integer> burst() {
@@ -33,14 +35,16 @@ public final class PolicerPolicyObjectArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * Exceed action - Choices: `drop`, `remark`
+     * Exceed action
+     *   - Choices: `drop`, `remark`
      * 
      */
     @Import(name="exceedAction", required=true)
     private Output<String> exceedAction;
 
     /**
-     * @return Exceed action - Choices: `drop`, `remark`
+     * @return Exceed action
+     *   - Choices: `drop`, `remark`
      * 
      */
     public Output<String> exceedAction() {
@@ -63,14 +67,16 @@ public final class PolicerPolicyObjectArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * Rate in bps - Range: `8`-`100000000000`
+     * Rate in bps
+     *   - Range: `8`-`100000000000`
      * 
      */
     @Import(name="rate", required=true)
     private Output<Integer> rate;
 
     /**
-     * @return Rate in bps - Range: `8`-`100000000000`
+     * @return Rate in bps
+     *   - Range: `8`-`100000000000`
      * 
      */
     public Output<Integer> rate() {
@@ -105,7 +111,8 @@ public final class PolicerPolicyObjectArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param burst Burst in bytes - Range: `15000`-`10000000`
+         * @param burst Burst in bytes
+         *   - Range: `15000`-`10000000`
          * 
          * @return builder
          * 
@@ -116,7 +123,8 @@ public final class PolicerPolicyObjectArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param burst Burst in bytes - Range: `15000`-`10000000`
+         * @param burst Burst in bytes
+         *   - Range: `15000`-`10000000`
          * 
          * @return builder
          * 
@@ -126,7 +134,8 @@ public final class PolicerPolicyObjectArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param exceedAction Exceed action - Choices: `drop`, `remark`
+         * @param exceedAction Exceed action
+         *   - Choices: `drop`, `remark`
          * 
          * @return builder
          * 
@@ -137,7 +146,8 @@ public final class PolicerPolicyObjectArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param exceedAction Exceed action - Choices: `drop`, `remark`
+         * @param exceedAction Exceed action
+         *   - Choices: `drop`, `remark`
          * 
          * @return builder
          * 
@@ -168,7 +178,8 @@ public final class PolicerPolicyObjectArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param rate Rate in bps - Range: `8`-`100000000000`
+         * @param rate Rate in bps
+         *   - Range: `8`-`100000000000`
          * 
          * @return builder
          * 
@@ -179,7 +190,8 @@ public final class PolicerPolicyObjectArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param rate Rate in bps - Range: `8`-`100000000000`
+         * @param rate Rate in bps
+         *   - Range: `8`-`100000000000`
          * 
          * @return builder
          * 

@@ -45,7 +45,9 @@ namespace Pulumi.Sdwan
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// tracker ref list combine boolean and or - Choices: `and`, `or` - Default value: `or`
+        /// tracker ref list combine boolean and or
+        ///   - Choices: `and`, `or`
+        ///   - Default value: `or`
         /// </summary>
         [Output("trackerBoolean")]
         public Output<string?> TrackerBoolean { get; private set; } = null!;
@@ -145,7 +147,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// tracker ref list combine boolean and or - Choices: `and`, `or` - Default value: `or`
+        /// tracker ref list combine boolean and or
+        ///   - Choices: `and`, `or`
+        ///   - Default value: `or`
         /// </summary>
         [Input("trackerBoolean")]
         public Input<string>? TrackerBoolean { get; set; }
@@ -207,7 +211,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// tracker ref list combine boolean and or - Choices: `and`, `or` - Default value: `or`
+        /// tracker ref list combine boolean and or
+        ///   - Choices: `and`, `or`
+        ///   - Default value: `or`
         /// </summary>
         [Input("trackerBoolean")]
         public Input<string>? TrackerBoolean { get; set; }

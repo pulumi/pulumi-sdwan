@@ -49,7 +49,8 @@ namespace Pulumi.Sdwan
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// Queue - Range: `0`-`7`
+        /// Queue
+        ///   - Range: `0`-`7`
         /// </summary>
         [Output("queue")]
         public Output<int> Queue { get; private set; } = null!;
@@ -113,7 +114,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Queue - Range: `0`-`7`
+        /// Queue
+        ///   - Range: `0`-`7`
         /// </summary>
         [Input("queue", required: true)]
         public Input<int> Queue { get; set; } = null!;
@@ -133,7 +135,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Queue - Range: `0`-`7`
+        /// Queue
+        ///   - Range: `0`-`7`
         /// </summary>
         [Input("queue")]
         public Input<int>? Queue { get; set; }

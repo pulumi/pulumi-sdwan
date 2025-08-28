@@ -32,14 +32,16 @@ public final class CliDeviceTemplateArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * CLI type - Choices: `device`, `intend`
+     * CLI type
+     *   - Choices: `device`, `intend`
      * 
      */
     @Import(name="cliType", required=true)
     private Output<String> cliType;
 
     /**
-     * @return CLI type - Choices: `device`, `intend`
+     * @return CLI type
+     *   - Choices: `device`, `intend`
      * 
      */
     public Output<String> cliType() {
@@ -141,7 +143,8 @@ public final class CliDeviceTemplateArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param cliType CLI type - Choices: `device`, `intend`
+         * @param cliType CLI type
+         *   - Choices: `device`, `intend`
          * 
          * @return builder
          * 
@@ -152,7 +155,8 @@ public final class CliDeviceTemplateArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param cliType CLI type - Choices: `device`, `intend`
+         * @param cliType CLI type
+         *   - Choices: `device`, `intend`
          * 
          * @return builder
          * 

@@ -19,14 +19,18 @@ public final class ServiceRoutePolicyFeatureState extends com.pulumi.resources.R
     public static final ServiceRoutePolicyFeatureState Empty = new ServiceRoutePolicyFeatureState();
 
     /**
-     * Default Action - Choices: `reject`, `accept` - Default value: `reject`
+     * Default Action
+     *   - Choices: `reject`, `accept`
+     *   - Default value: `reject`
      * 
      */
     @Import(name="defaultAction")
     private @Nullable Output<String> defaultAction;
 
     /**
-     * @return Default Action - Choices: `reject`, `accept` - Default value: `reject`
+     * @return Default Action
+     *   - Choices: `reject`, `accept`
+     *   - Default value: `reject`
      * 
      */
     public Optional<Output<String>> defaultAction() {
@@ -138,7 +142,9 @@ public final class ServiceRoutePolicyFeatureState extends com.pulumi.resources.R
         }
 
         /**
-         * @param defaultAction Default Action - Choices: `reject`, `accept` - Default value: `reject`
+         * @param defaultAction Default Action
+         *   - Choices: `reject`, `accept`
+         *   - Default value: `reject`
          * 
          * @return builder
          * 
@@ -149,7 +155,9 @@ public final class ServiceRoutePolicyFeatureState extends com.pulumi.resources.R
         }
 
         /**
-         * @param defaultAction Default Action - Choices: `reject`, `accept` - Default value: `reject`
+         * @param defaultAction Default Action
+         *   - Choices: `reject`, `accept`
+         *   - Default value: `reject`
          * 
          * @return builder
          * 

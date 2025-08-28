@@ -51,103 +51,103 @@ export class ServiceDhcpServerFeature extends pulumi.CustomResource {
     /**
      * Set IP address of default gateway
      */
-    public readonly defaultGateway!: pulumi.Output<string | undefined>;
+    declare public readonly defaultGateway: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly defaultGatewayVariable!: pulumi.Output<string | undefined>;
+    declare public readonly defaultGatewayVariable: pulumi.Output<string | undefined>;
     /**
      * The description of the Feature
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * Configure one or more DNS server IP addresses
      */
-    public readonly dnsServers!: pulumi.Output<string[] | undefined>;
+    declare public readonly dnsServers: pulumi.Output<string[] | undefined>;
     /**
      * Variable name
      */
-    public readonly dnsServersVariable!: pulumi.Output<string | undefined>;
+    declare public readonly dnsServersVariable: pulumi.Output<string | undefined>;
     /**
      * Set domain name client uses to resolve hostnames
      */
-    public readonly domainName!: pulumi.Output<string | undefined>;
+    declare public readonly domainName: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly domainNameVariable!: pulumi.Output<string | undefined>;
+    declare public readonly domainNameVariable: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly excludeVariable!: pulumi.Output<string | undefined>;
+    declare public readonly excludeVariable: pulumi.Output<string | undefined>;
     /**
      * Configure IPv4 address to exclude from DHCP address pool
      */
-    public readonly excludes!: pulumi.Output<string[] | undefined>;
+    declare public readonly excludes: pulumi.Output<string[] | undefined>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
-     * Set MTU on interface to DHCP client - Range: `68`-`65535`
+     * Set MTU on interface to DHCP client
+     *   - Range: `68`-`65535`
      */
-    public readonly interfaceMtu!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly interfaceMtuVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
-     */
-    public readonly leaseTime!: pulumi.Output<number | undefined>;
+    declare public readonly interfaceMtu: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly leaseTimeVariable!: pulumi.Output<string | undefined>;
+    declare public readonly interfaceMtuVariable: pulumi.Output<string | undefined>;
+    /**
+     * Configure how long a DHCP-assigned IP address is valid
+     *   - Range: `60`-`31536000`
+     *   - Default value: `86400`
+     */
+    declare public readonly leaseTime: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly leaseTimeVariable: pulumi.Output<string | undefined>;
     /**
      * The name of the Feature
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * Network Address
      */
-    public readonly networkAddress!: pulumi.Output<string | undefined>;
+    declare public readonly networkAddress: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly networkAddressVariable!: pulumi.Output<string | undefined>;
+    declare public readonly networkAddressVariable: pulumi.Output<string | undefined>;
     /**
      * Configure Options Code
      */
-    public readonly optionCodes!: pulumi.Output<outputs.ServiceDhcpServerFeatureOptionCode[] | undefined>;
+    declare public readonly optionCodes: pulumi.Output<outputs.ServiceDhcpServerFeatureOptionCode[] | undefined>;
     /**
      * Configure static IP addresses
      */
-    public readonly staticLeases!: pulumi.Output<outputs.ServiceDhcpServerFeatureStaticLease[] | undefined>;
+    declare public readonly staticLeases: pulumi.Output<outputs.ServiceDhcpServerFeatureStaticLease[] | undefined>;
     /**
-     * Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * Subnet Mask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
-    public readonly subnetMask!: pulumi.Output<string | undefined>;
+    declare public readonly subnetMask: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly subnetMaskVariable!: pulumi.Output<string | undefined>;
+    declare public readonly subnetMaskVariable: pulumi.Output<string | undefined>;
     /**
      * Configure TFTP server IP addresses
      */
-    public readonly tftpServers!: pulumi.Output<string[] | undefined>;
+    declare public readonly tftpServers: pulumi.Output<string[] | undefined>;
     /**
      * Variable name
      */
-    public readonly tftpServersVariable!: pulumi.Output<string | undefined>;
+    declare public readonly tftpServersVariable: pulumi.Output<string | undefined>;
     /**
      * The version of the Feature
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a ServiceDhcpServerFeature resource with the given unique name, arguments, and options.
@@ -162,58 +162,58 @@ export class ServiceDhcpServerFeature extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ServiceDhcpServerFeatureState | undefined;
-            resourceInputs["defaultGateway"] = state ? state.defaultGateway : undefined;
-            resourceInputs["defaultGatewayVariable"] = state ? state.defaultGatewayVariable : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["dnsServers"] = state ? state.dnsServers : undefined;
-            resourceInputs["dnsServersVariable"] = state ? state.dnsServersVariable : undefined;
-            resourceInputs["domainName"] = state ? state.domainName : undefined;
-            resourceInputs["domainNameVariable"] = state ? state.domainNameVariable : undefined;
-            resourceInputs["excludeVariable"] = state ? state.excludeVariable : undefined;
-            resourceInputs["excludes"] = state ? state.excludes : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["interfaceMtu"] = state ? state.interfaceMtu : undefined;
-            resourceInputs["interfaceMtuVariable"] = state ? state.interfaceMtuVariable : undefined;
-            resourceInputs["leaseTime"] = state ? state.leaseTime : undefined;
-            resourceInputs["leaseTimeVariable"] = state ? state.leaseTimeVariable : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["networkAddress"] = state ? state.networkAddress : undefined;
-            resourceInputs["networkAddressVariable"] = state ? state.networkAddressVariable : undefined;
-            resourceInputs["optionCodes"] = state ? state.optionCodes : undefined;
-            resourceInputs["staticLeases"] = state ? state.staticLeases : undefined;
-            resourceInputs["subnetMask"] = state ? state.subnetMask : undefined;
-            resourceInputs["subnetMaskVariable"] = state ? state.subnetMaskVariable : undefined;
-            resourceInputs["tftpServers"] = state ? state.tftpServers : undefined;
-            resourceInputs["tftpServersVariable"] = state ? state.tftpServersVariable : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["defaultGateway"] = state?.defaultGateway;
+            resourceInputs["defaultGatewayVariable"] = state?.defaultGatewayVariable;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["dnsServers"] = state?.dnsServers;
+            resourceInputs["dnsServersVariable"] = state?.dnsServersVariable;
+            resourceInputs["domainName"] = state?.domainName;
+            resourceInputs["domainNameVariable"] = state?.domainNameVariable;
+            resourceInputs["excludeVariable"] = state?.excludeVariable;
+            resourceInputs["excludes"] = state?.excludes;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["interfaceMtu"] = state?.interfaceMtu;
+            resourceInputs["interfaceMtuVariable"] = state?.interfaceMtuVariable;
+            resourceInputs["leaseTime"] = state?.leaseTime;
+            resourceInputs["leaseTimeVariable"] = state?.leaseTimeVariable;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["networkAddress"] = state?.networkAddress;
+            resourceInputs["networkAddressVariable"] = state?.networkAddressVariable;
+            resourceInputs["optionCodes"] = state?.optionCodes;
+            resourceInputs["staticLeases"] = state?.staticLeases;
+            resourceInputs["subnetMask"] = state?.subnetMask;
+            resourceInputs["subnetMaskVariable"] = state?.subnetMaskVariable;
+            resourceInputs["tftpServers"] = state?.tftpServers;
+            resourceInputs["tftpServersVariable"] = state?.tftpServersVariable;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as ServiceDhcpServerFeatureArgs | undefined;
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            resourceInputs["defaultGateway"] = args ? args.defaultGateway : undefined;
-            resourceInputs["defaultGatewayVariable"] = args ? args.defaultGatewayVariable : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["dnsServers"] = args ? args.dnsServers : undefined;
-            resourceInputs["dnsServersVariable"] = args ? args.dnsServersVariable : undefined;
-            resourceInputs["domainName"] = args ? args.domainName : undefined;
-            resourceInputs["domainNameVariable"] = args ? args.domainNameVariable : undefined;
-            resourceInputs["excludeVariable"] = args ? args.excludeVariable : undefined;
-            resourceInputs["excludes"] = args ? args.excludes : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["interfaceMtu"] = args ? args.interfaceMtu : undefined;
-            resourceInputs["interfaceMtuVariable"] = args ? args.interfaceMtuVariable : undefined;
-            resourceInputs["leaseTime"] = args ? args.leaseTime : undefined;
-            resourceInputs["leaseTimeVariable"] = args ? args.leaseTimeVariable : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["networkAddress"] = args ? args.networkAddress : undefined;
-            resourceInputs["networkAddressVariable"] = args ? args.networkAddressVariable : undefined;
-            resourceInputs["optionCodes"] = args ? args.optionCodes : undefined;
-            resourceInputs["staticLeases"] = args ? args.staticLeases : undefined;
-            resourceInputs["subnetMask"] = args ? args.subnetMask : undefined;
-            resourceInputs["subnetMaskVariable"] = args ? args.subnetMaskVariable : undefined;
-            resourceInputs["tftpServers"] = args ? args.tftpServers : undefined;
-            resourceInputs["tftpServersVariable"] = args ? args.tftpServersVariable : undefined;
+            resourceInputs["defaultGateway"] = args?.defaultGateway;
+            resourceInputs["defaultGatewayVariable"] = args?.defaultGatewayVariable;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["dnsServers"] = args?.dnsServers;
+            resourceInputs["dnsServersVariable"] = args?.dnsServersVariable;
+            resourceInputs["domainName"] = args?.domainName;
+            resourceInputs["domainNameVariable"] = args?.domainNameVariable;
+            resourceInputs["excludeVariable"] = args?.excludeVariable;
+            resourceInputs["excludes"] = args?.excludes;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["interfaceMtu"] = args?.interfaceMtu;
+            resourceInputs["interfaceMtuVariable"] = args?.interfaceMtuVariable;
+            resourceInputs["leaseTime"] = args?.leaseTime;
+            resourceInputs["leaseTimeVariable"] = args?.leaseTimeVariable;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["networkAddress"] = args?.networkAddress;
+            resourceInputs["networkAddressVariable"] = args?.networkAddressVariable;
+            resourceInputs["optionCodes"] = args?.optionCodes;
+            resourceInputs["staticLeases"] = args?.staticLeases;
+            resourceInputs["subnetMask"] = args?.subnetMask;
+            resourceInputs["subnetMaskVariable"] = args?.subnetMaskVariable;
+            resourceInputs["tftpServers"] = args?.tftpServers;
+            resourceInputs["tftpServersVariable"] = args?.tftpServersVariable;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -266,7 +266,8 @@ export interface ServiceDhcpServerFeatureState {
      */
     featureProfileId?: pulumi.Input<string>;
     /**
-     * Set MTU on interface to DHCP client - Range: `68`-`65535`
+     * Set MTU on interface to DHCP client
+     *   - Range: `68`-`65535`
      */
     interfaceMtu?: pulumi.Input<number>;
     /**
@@ -274,7 +275,9 @@ export interface ServiceDhcpServerFeatureState {
      */
     interfaceMtuVariable?: pulumi.Input<string>;
     /**
-     * Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+     * Configure how long a DHCP-assigned IP address is valid
+     *   - Range: `60`-`31536000`
+     *   - Default value: `86400`
      */
     leaseTime?: pulumi.Input<number>;
     /**
@@ -302,11 +305,8 @@ export interface ServiceDhcpServerFeatureState {
      */
     staticLeases?: pulumi.Input<pulumi.Input<inputs.ServiceDhcpServerFeatureStaticLease>[]>;
     /**
-     * Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * Subnet Mask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     subnetMask?: pulumi.Input<string>;
     /**
@@ -372,7 +372,8 @@ export interface ServiceDhcpServerFeatureArgs {
      */
     featureProfileId: pulumi.Input<string>;
     /**
-     * Set MTU on interface to DHCP client - Range: `68`-`65535`
+     * Set MTU on interface to DHCP client
+     *   - Range: `68`-`65535`
      */
     interfaceMtu?: pulumi.Input<number>;
     /**
@@ -380,7 +381,9 @@ export interface ServiceDhcpServerFeatureArgs {
      */
     interfaceMtuVariable?: pulumi.Input<string>;
     /**
-     * Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+     * Configure how long a DHCP-assigned IP address is valid
+     *   - Range: `60`-`31536000`
+     *   - Default value: `86400`
      */
     leaseTime?: pulumi.Input<number>;
     /**
@@ -408,11 +411,8 @@ export interface ServiceDhcpServerFeatureArgs {
      */
     staticLeases?: pulumi.Input<pulumi.Input<inputs.ServiceDhcpServerFeatureStaticLease>[]>;
     /**
-     * Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * Subnet Mask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     subnetMask?: pulumi.Input<string>;
     /**

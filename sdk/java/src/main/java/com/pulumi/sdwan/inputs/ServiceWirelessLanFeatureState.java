@@ -20,24 +20,16 @@ public final class ServiceWirelessLanFeatureState extends com.pulumi.resources.R
     public static final ServiceWirelessLanFeatureState Empty = new ServiceWirelessLanFeatureState();
 
     /**
-     * Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-     * `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-     * `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-     * `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-     * `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-     * `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+     * Select country
+     *   - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
      * 
      */
     @Import(name="country")
     private @Nullable Output<String> country;
 
     /**
-     * @return Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-     * `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-     * `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-     * `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-     * `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-     * `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+     * @return Select country
+     *   - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
      * 
      */
     public Optional<Output<String>> country() {
@@ -75,14 +67,16 @@ public final class ServiceWirelessLanFeatureState extends com.pulumi.resources.R
     }
 
     /**
-     * 2.4GHz Enabled - Default value: `true`
+     * 2.4GHz Enabled
+     *   - Default value: `true`
      * 
      */
     @Import(name="enable24g")
     private @Nullable Output<Boolean> enable24g;
 
     /**
-     * @return 2.4GHz Enabled - Default value: `true`
+     * @return 2.4GHz Enabled
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> enable24g() {
@@ -105,14 +99,16 @@ public final class ServiceWirelessLanFeatureState extends com.pulumi.resources.R
     }
 
     /**
-     * 5GHz Enabled - Default value: `true`
+     * 5GHz Enabled
+     *   - Default value: `true`
      * 
      */
     @Import(name="enable5g")
     private @Nullable Output<Boolean> enable5g;
 
     /**
-     * @return 5GHz Enabled - Default value: `true`
+     * @return 5GHz Enabled
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> enable5g() {
@@ -225,22 +221,16 @@ public final class ServiceWirelessLanFeatureState extends com.pulumi.resources.R
     }
 
     /**
-     * Set mobile express controller subnet mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`,
-     * `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`,
-     * `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`,
-     * `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`,
-     * `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * Set mobile express controller subnet mask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     @Import(name="meSubnetMask")
     private @Nullable Output<String> meSubnetMask;
 
     /**
-     * @return Set mobile express controller subnet mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`,
-     * `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`,
-     * `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`,
-     * `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`,
-     * `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * @return Set mobile express controller subnet mask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     public Optional<Output<String>> meSubnetMask() {
@@ -278,22 +268,14 @@ public final class ServiceWirelessLanFeatureState extends com.pulumi.resources.R
     }
 
     /**
-     * Set management password,the password must contains characters from all of the following classes,lowercase
-     * letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three
-     * times consecutively. The password must not be the same as the associated username or the username reversed. The password
-     * must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In
-     * addition,you can&#39;t substitute 1,l,or ! for i,0 for o,$ for s.
+     * Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can&#39;t substitute 1,l,or ! for i,0 for o,$ for s.
      * 
      */
     @Import(name="password")
     private @Nullable Output<String> password;
 
     /**
-     * @return Set management password,the password must contains characters from all of the following classes,lowercase
-     * letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three
-     * times consecutively. The password must not be the same as the associated username or the username reversed. The password
-     * must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In
-     * addition,you can&#39;t substitute 1,l,or ! for i,0 for o,$ for s.
+     * @return Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can&#39;t substitute 1,l,or ! for i,0 for o,$ for s.
      * 
      */
     public Optional<Output<String>> password() {
@@ -421,12 +403,8 @@ public final class ServiceWirelessLanFeatureState extends com.pulumi.resources.R
         }
 
         /**
-         * @param country Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-         * `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-         * `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-         * `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-         * `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-         * `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+         * @param country Select country
+         *   - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
          * 
          * @return builder
          * 
@@ -437,12 +415,8 @@ public final class ServiceWirelessLanFeatureState extends com.pulumi.resources.R
         }
 
         /**
-         * @param country Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-         * `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-         * `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-         * `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-         * `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-         * `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+         * @param country Select country
+         *   - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
          * 
          * @return builder
          * 
@@ -494,7 +468,8 @@ public final class ServiceWirelessLanFeatureState extends com.pulumi.resources.R
         }
 
         /**
-         * @param enable24g 2.4GHz Enabled - Default value: `true`
+         * @param enable24g 2.4GHz Enabled
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -505,7 +480,8 @@ public final class ServiceWirelessLanFeatureState extends com.pulumi.resources.R
         }
 
         /**
-         * @param enable24g 2.4GHz Enabled - Default value: `true`
+         * @param enable24g 2.4GHz Enabled
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -536,7 +512,8 @@ public final class ServiceWirelessLanFeatureState extends com.pulumi.resources.R
         }
 
         /**
-         * @param enable5g 5GHz Enabled - Default value: `true`
+         * @param enable5g 5GHz Enabled
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -547,7 +524,8 @@ public final class ServiceWirelessLanFeatureState extends com.pulumi.resources.R
         }
 
         /**
-         * @param enable5g 5GHz Enabled - Default value: `true`
+         * @param enable5g 5GHz Enabled
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -704,11 +682,8 @@ public final class ServiceWirelessLanFeatureState extends com.pulumi.resources.R
         }
 
         /**
-         * @param meSubnetMask Set mobile express controller subnet mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`,
-         * `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`,
-         * `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`,
-         * `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`,
-         * `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+         * @param meSubnetMask Set mobile express controller subnet mask
+         *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
          * 
          * @return builder
          * 
@@ -719,11 +694,8 @@ public final class ServiceWirelessLanFeatureState extends com.pulumi.resources.R
         }
 
         /**
-         * @param meSubnetMask Set mobile express controller subnet mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`,
-         * `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`,
-         * `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`,
-         * `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`,
-         * `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+         * @param meSubnetMask Set mobile express controller subnet mask
+         *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
          * 
          * @return builder
          * 
@@ -775,11 +747,7 @@ public final class ServiceWirelessLanFeatureState extends com.pulumi.resources.R
         }
 
         /**
-         * @param password Set management password,the password must contains characters from all of the following classes,lowercase
-         * letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three
-         * times consecutively. The password must not be the same as the associated username or the username reversed. The password
-         * must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In
-         * addition,you can&#39;t substitute 1,l,or ! for i,0 for o,$ for s.
+         * @param password Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can&#39;t substitute 1,l,or ! for i,0 for o,$ for s.
          * 
          * @return builder
          * 
@@ -790,11 +758,7 @@ public final class ServiceWirelessLanFeatureState extends com.pulumi.resources.R
         }
 
         /**
-         * @param password Set management password,the password must contains characters from all of the following classes,lowercase
-         * letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three
-         * times consecutively. The password must not be the same as the associated username or the username reversed. The password
-         * must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In
-         * addition,you can&#39;t substitute 1,l,or ! for i,0 for o,$ for s.
+         * @param password Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can&#39;t substitute 1,l,or ! for i,0 for o,$ for s.
          * 
          * @return builder
          * 

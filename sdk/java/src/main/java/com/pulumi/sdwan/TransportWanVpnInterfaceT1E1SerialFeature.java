@@ -155,28 +155,32 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return Codegen.optional(this.aclIpv6IngressFeatureId);
     }
     /**
-     * Interface bandwidth capacity, in kbps - Range: `1`-`200000000`
+     * Interface bandwidth capacity, in kbps
+     *   - Range: `1`-`200000000`
      * 
      */
     @Export(name="bandwidth", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> bandwidth;
 
     /**
-     * @return Interface bandwidth capacity, in kbps - Range: `1`-`200000000`
+     * @return Interface bandwidth capacity, in kbps
+     *   - Range: `1`-`200000000`
      * 
      */
     public Output<Optional<Integer>> bandwidth() {
         return Codegen.optional(this.bandwidth);
     }
     /**
-     * Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+     * Interface downstream bandwidth capacity, in kbps
+     *   - Range: `1`-`2147483647`
      * 
      */
     @Export(name="bandwidthDownstream", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> bandwidthDownstream;
 
     /**
-     * @return Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+     * @return Interface downstream bandwidth capacity, in kbps
+     *   - Range: `1`-`2147483647`
      * 
      */
     public Output<Optional<Integer>> bandwidthDownstream() {
@@ -211,18 +215,16 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return Codegen.optional(this.bandwidthVariable);
     }
     /**
-     * Set preference for interface Clock speed - Choices: `1200`, `2400`, `4800`, `9600`, `14400`, `19200`, `28800`, `32000`,
-     * `38400`, `48000`, `56000`, `57600`, `64000`, `72000`, `115200`, `125000`, `148000`, `192000`, `250000`, `256000`,
-     * `384000`, `500000`, `512000`, `768000`, `800000`, `1000000`, `2000000`, `4000000`, `5300000`, `8000000`
+     * Set preference for interface Clock speed
+     *   - Choices: `1200`, `2400`, `4800`, `9600`, `14400`, `19200`, `28800`, `32000`, `38400`, `48000`, `56000`, `57600`, `64000`, `72000`, `115200`, `125000`, `148000`, `192000`, `250000`, `256000`, `384000`, `500000`, `512000`, `768000`, `800000`, `1000000`, `2000000`, `4000000`, `5300000`, `8000000`
      * 
      */
     @Export(name="clockRate", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> clockRate;
 
     /**
-     * @return Set preference for interface Clock speed - Choices: `1200`, `2400`, `4800`, `9600`, `14400`, `19200`, `28800`, `32000`,
-     * `38400`, `48000`, `56000`, `57600`, `64000`, `72000`, `115200`, `125000`, `148000`, `192000`, `250000`, `256000`,
-     * `384000`, `500000`, `512000`, `768000`, `800000`, `1000000`, `2000000`, `4000000`, `5300000`, `8000000`
+     * @return Set preference for interface Clock speed
+     *   - Choices: `1200`, `2400`, `4800`, `9600`, `14400`, `19200`, `28800`, `32000`, `38400`, `48000`, `56000`, `57600`, `64000`, `72000`, `115200`, `125000`, `148000`, `192000`, `250000`, `256000`, `384000`, `500000`, `512000`, `768000`, `800000`, `1000000`, `2000000`, `4000000`, `5300000`, `8000000`
      * 
      */
     public Output<Optional<String>> clockRate() {
@@ -257,14 +259,16 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return Codegen.optional(this.description);
     }
     /**
-     * Configure Encapsulation for interface - Choices: `hdlc`, `ppp`, `frame-relay`
+     * Configure Encapsulation for interface
+     *   - Choices: `hdlc`, `ppp`, `frame-relay`
      * 
      */
     @Export(name="encapsulation", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> encapsulation;
 
     /**
-     * @return Configure Encapsulation for interface - Choices: `hdlc`, `ppp`, `frame-relay`
+     * @return Configure Encapsulation for interface
+     *   - Choices: `hdlc`, `ppp`, `frame-relay`
      * 
      */
     public Output<Optional<String>> encapsulation() {
@@ -327,14 +331,18 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return Codegen.optional(this.interfaceNameVariable);
     }
     /**
-     * Set ip mtu - Range: `576`-`9216` - Default value: `1500`
+     * Set ip mtu
+     *   - Range: `576`-`9216`
+     *   - Default value: `1500`
      * 
      */
     @Export(name="ipMtu", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipMtu;
 
     /**
-     * @return Set ip mtu - Range: `576`-`9216` - Default value: `1500`
+     * @return Set ip mtu
+     *   - Range: `576`-`9216`
+     *   - Default value: `1500`
      * 
      */
     public Output<Optional<Integer>> ipMtu() {
@@ -375,22 +383,14 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return Codegen.optional(this.ipv4AddressVariable);
     }
     /**
-     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     *   `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     *   `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     *   `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     *   `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     @Export(name="ipv4SubnetMask", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4SubnetMask;
 
     /**
-     * @return - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * @return - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     public Output<Optional<String>> ipv4SubnetMask() {
@@ -439,14 +439,18 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return Codegen.optional(this.ipv6AddressVariable);
     }
     /**
-     * Interface MTU &lt;68...2000&gt;, in bytes - Range: `576`-`9216` - Default value: `1500`
+     * Interface MTU &lt;68...2000&gt;, in bytes
+     *   - Range: `576`-`9216`
+     *   - Default value: `1500`
      * 
      */
     @Export(name="mtu", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> mtu;
 
     /**
-     * @return Interface MTU &lt;68...2000&gt;, in bytes - Range: `576`-`9216` - Default value: `1500`
+     * @return Interface MTU &lt;68...2000&gt;, in bytes
+     *   - Range: `576`-`9216`
+     *   - Default value: `1500`
      * 
      */
     public Output<Optional<Integer>> mtu() {
@@ -481,28 +485,32 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return this.name;
     }
     /**
-     * Per-tunnel Qos - Default value: `false`
+     * Per-tunnel Qos
+     *   - Default value: `false`
      * 
      */
     @Export(name="perTunnelQos", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> perTunnelQos;
 
     /**
-     * @return Per-tunnel Qos - Default value: `false`
+     * @return Per-tunnel Qos
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> perTunnelQos() {
         return Codegen.optional(this.perTunnelQos);
     }
     /**
-     * Per-tunnel QoS Aggregator - Default value: `false`
+     * Per-tunnel QoS Aggregator
+     *   - Default value: `false`
      * 
      */
     @Export(name="perTunnelQosAggregator", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> perTunnelQosAggregator;
 
     /**
-     * @return Per-tunnel QoS Aggregator - Default value: `false`
+     * @return Per-tunnel QoS Aggregator
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> perTunnelQosAggregator() {
@@ -537,14 +545,16 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return Codegen.optional(this.perTunnelQosVariable);
     }
     /**
-     * 1ge interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps - Range: `8`-`100000000`
+     * 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
+     *   - Range: `8`-`100000000`
      * 
      */
     @Export(name="qosShapingRate", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> qosShapingRate;
 
     /**
-     * @return 1ge interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps - Range: `8`-`100000000`
+     * @return 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
+     *   - Range: `8`-`100000000`
      * 
      */
     public Output<Optional<Integer>> qosShapingRate() {
@@ -565,14 +575,16 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return Codegen.optional(this.qosShapingRateVariable);
     }
     /**
-     * Administrative state - Default value: `true`
+     * Administrative state
+     *   - Default value: `true`
      * 
      */
     @Export(name="shutdown", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> shutdown;
 
     /**
-     * @return Administrative state - Default value: `true`
+     * @return Administrative state
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> shutdown() {
@@ -593,14 +605,16 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return Codegen.optional(this.shutdownVariable);
     }
     /**
-     * TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      * 
      */
     @Export(name="tcpMss", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> tcpMss;
 
     /**
-     * @return TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * @return TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      * 
      */
     public Output<Optional<Integer>> tcpMss() {
@@ -663,28 +677,32 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return this.transportWanVpnFeatureId;
     }
     /**
-     * Tunnel Interface - Default value: `false`
+     * Tunnel Interface
+     *   - Default value: `false`
      * 
      */
     @Export(name="tunnelInterface", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterface;
 
     /**
-     * @return Tunnel Interface - Default value: `false`
+     * @return Tunnel Interface
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterface() {
         return Codegen.optional(this.tunnelInterface);
     }
     /**
-     * Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
+     * Allow all traffic. Overrides all other allow-service options if allow-service all is set
+     *   - Default value: `false`
      * 
      */
     @Export(name="tunnelInterfaceAllowAll", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceAllowAll;
 
     /**
-     * @return Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
+     * @return Allow all traffic. Overrides all other allow-service options if allow-service all is set
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceAllowAll() {
@@ -705,14 +723,16 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return Codegen.optional(this.tunnelInterfaceAllowAllVariable);
     }
     /**
-     * Allow/Deny BFD - Default value: `false`
+     * Allow/Deny BFD
+     *   - Default value: `false`
      * 
      */
     @Export(name="tunnelInterfaceAllowBfd", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceAllowBfd;
 
     /**
-     * @return Allow/Deny BFD - Default value: `false`
+     * @return Allow/Deny BFD
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceAllowBfd() {
@@ -733,14 +753,16 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return Codegen.optional(this.tunnelInterfaceAllowBfdVariable);
     }
     /**
-     * Allow/deny BGP - Default value: `false`
+     * Allow/deny BGP
+     *   - Default value: `false`
      * 
      */
     @Export(name="tunnelInterfaceAllowBgp", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceAllowBgp;
 
     /**
-     * @return Allow/deny BGP - Default value: `false`
+     * @return Allow/deny BGP
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceAllowBgp() {
@@ -761,14 +783,16 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return Codegen.optional(this.tunnelInterfaceAllowBgpVariable);
     }
     /**
-     * Allow/Deny DHCP - Default value: `true`
+     * Allow/Deny DHCP
+     *   - Default value: `true`
      * 
      */
     @Export(name="tunnelInterfaceAllowDhcp", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceAllowDhcp;
 
     /**
-     * @return Allow/Deny DHCP - Default value: `true`
+     * @return Allow/Deny DHCP
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceAllowDhcp() {
@@ -789,14 +813,16 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return Codegen.optional(this.tunnelInterfaceAllowDhcpVariable);
     }
     /**
-     * Allow/Deny DNS - Default value: `true`
+     * Allow/Deny DNS
+     *   - Default value: `true`
      * 
      */
     @Export(name="tunnelInterfaceAllowDns", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceAllowDns;
 
     /**
-     * @return Allow/Deny DNS - Default value: `true`
+     * @return Allow/Deny DNS
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceAllowDns() {
@@ -817,14 +843,16 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return Codegen.optional(this.tunnelInterfaceAllowDnsVariable);
     }
     /**
-     * Allow/Deny Https - Default value: `true`
+     * Allow/Deny Https
+     *   - Default value: `true`
      * 
      */
     @Export(name="tunnelInterfaceAllowHttps", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceAllowHttps;
 
     /**
-     * @return Allow/Deny Https - Default value: `true`
+     * @return Allow/Deny Https
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceAllowHttps() {
@@ -845,14 +873,16 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return Codegen.optional(this.tunnelInterfaceAllowHttpsVariable);
     }
     /**
-     * Allow/Deny ICMP - Default value: `true`
+     * Allow/Deny ICMP
+     *   - Default value: `true`
      * 
      */
     @Export(name="tunnelInterfaceAllowIcmp", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceAllowIcmp;
 
     /**
-     * @return Allow/Deny ICMP - Default value: `true`
+     * @return Allow/Deny ICMP
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceAllowIcmp() {
@@ -873,14 +903,16 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return Codegen.optional(this.tunnelInterfaceAllowIcmpVariable);
     }
     /**
-     * Allow/Deny NETCONF - Default value: `false`
+     * Allow/Deny NETCONF
+     *   - Default value: `false`
      * 
      */
     @Export(name="tunnelInterfaceAllowNetconf", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceAllowNetconf;
 
     /**
-     * @return Allow/Deny NETCONF - Default value: `false`
+     * @return Allow/Deny NETCONF
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceAllowNetconf() {
@@ -901,14 +933,16 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return Codegen.optional(this.tunnelInterfaceAllowNetconfVariable);
     }
     /**
-     * Allow/Deny NTP - Default value: `false`
+     * Allow/Deny NTP
+     *   - Default value: `false`
      * 
      */
     @Export(name="tunnelInterfaceAllowNtp", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceAllowNtp;
 
     /**
-     * @return Allow/Deny NTP - Default value: `false`
+     * @return Allow/Deny NTP
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceAllowNtp() {
@@ -929,14 +963,16 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return Codegen.optional(this.tunnelInterfaceAllowNtpVariable);
     }
     /**
-     * Allow/Deny OSPF - Default value: `false`
+     * Allow/Deny OSPF
+     *   - Default value: `false`
      * 
      */
     @Export(name="tunnelInterfaceAllowOspf", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceAllowOspf;
 
     /**
-     * @return Allow/Deny OSPF - Default value: `false`
+     * @return Allow/Deny OSPF
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceAllowOspf() {
@@ -957,14 +993,16 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return Codegen.optional(this.tunnelInterfaceAllowOspfVariable);
     }
     /**
-     * Allow/Deny SNMP - Default value: `false`
+     * Allow/Deny SNMP
+     *   - Default value: `false`
      * 
      */
     @Export(name="tunnelInterfaceAllowSnmp", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceAllowSnmp;
 
     /**
-     * @return Allow/Deny SNMP - Default value: `false`
+     * @return Allow/Deny SNMP
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceAllowSnmp() {
@@ -985,14 +1023,16 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return Codegen.optional(this.tunnelInterfaceAllowSnmpVariable);
     }
     /**
-     * Allow/Deny SSH - Default value: `false`
+     * Allow/Deny SSH
+     *   - Default value: `false`
      * 
      */
     @Export(name="tunnelInterfaceAllowSsh", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceAllowSsh;
 
     /**
-     * @return Allow/Deny SSH - Default value: `false`
+     * @return Allow/Deny SSH
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceAllowSsh() {
@@ -1013,14 +1053,16 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return Codegen.optional(this.tunnelInterfaceAllowSshVariable);
     }
     /**
-     * Allow/Deny STUN - Default value: `false`
+     * Allow/Deny STUN
+     *   - Default value: `false`
      * 
      */
     @Export(name="tunnelInterfaceAllowStun", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceAllowStun;
 
     /**
-     * @return Allow/Deny STUN - Default value: `false`
+     * @return Allow/Deny STUN
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceAllowStun() {
@@ -1069,14 +1111,16 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return Codegen.optional(this.tunnelInterfaceBindLoopbackTunnelVariable);
     }
     /**
-     * Set TLOC as border TLOC - Default value: `false`
+     * Set TLOC as border TLOC
+     *   - Default value: `false`
      * 
      */
     @Export(name="tunnelInterfaceBorder", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceBorder;
 
     /**
-     * @return Set TLOC as border TLOC - Default value: `false`
+     * @return Set TLOC as border TLOC
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceBorder() {
@@ -1097,16 +1141,18 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return Codegen.optional(this.tunnelInterfaceBorderVariable);
     }
     /**
-     * Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-     * `carrier7`, `carrier8` - Default value: `default`
+     * Set carrier for TLOC
+     *   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+     *   - Default value: `default`
      * 
      */
     @Export(name="tunnelInterfaceCarrier", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceCarrier;
 
     /**
-     * @return Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-     * `carrier7`, `carrier8` - Default value: `default`
+     * @return Set carrier for TLOC
+     *   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+     *   - Default value: `default`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceCarrier() {
@@ -1127,14 +1173,16 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return Codegen.optional(this.tunnelInterfaceCarrierVariable);
     }
     /**
-     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+     *   - Default value: `false`
      * 
      */
     @Export(name="tunnelInterfaceClearDontFragment", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceClearDontFragment;
 
     /**
-     * @return Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+     * @return Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceClearDontFragment() {
@@ -1155,14 +1203,16 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return Codegen.optional(this.tunnelInterfaceClearDontFragmentVariable);
     }
     /**
-     * Accept and respond to network-prefix-directed broadcasts) - Default value: `false`
+     * Accept and respond to network-prefix-directed broadcasts)
+     *   - Default value: `false`
      * 
      */
     @Export(name="tunnelInterfaceClearNetworkBroadcast", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceClearNetworkBroadcast;
 
     /**
-     * @return Accept and respond to network-prefix-directed broadcasts) - Default value: `false`
+     * @return Accept and respond to network-prefix-directed broadcasts)
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceClearNetworkBroadcast() {
@@ -1183,18 +1233,18 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return Codegen.optional(this.tunnelInterfaceClearNetworkBroadcastVariable);
     }
     /**
-     * Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-     * `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-     * `private4`, `private5`, `private6` - Default value: `default`
+     * Set color for TLOC
+     *   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+     *   - Default value: `default`
      * 
      */
     @Export(name="tunnelInterfaceColor", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceColor;
 
     /**
-     * @return Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-     * `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-     * `private4`, `private5`, `private6` - Default value: `default`
+     * @return Set color for TLOC
+     *   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+     *   - Default value: `default`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceColor() {
@@ -1257,14 +1307,16 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return Codegen.optional(this.tunnelInterfaceExcludeControllerGroupLists);
     }
     /**
-     * List of groups - Range: `1`-`4294967295`
+     * List of groups
+     *   - Range: `1`-`4294967295`
      * 
      */
     @Export(name="tunnelInterfaceGroups", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> tunnelInterfaceGroups;
 
     /**
-     * @return List of groups - Range: `1`-`4294967295`
+     * @return List of groups
+     *   - Range: `1`-`4294967295`
      * 
      */
     public Output<Optional<Integer>> tunnelInterfaceGroups() {
@@ -1285,14 +1337,18 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return Codegen.optional(this.tunnelInterfaceGroupsVariable);
     }
     /**
-     * Set time period of control hello packets &lt;100..600000&gt; milli seconds - Range: `100`-`600000` - Default value: `1000`
+     * Set time period of control hello packets &lt;100..600000&gt; milli seconds
+     *   - Range: `100`-`600000`
+     *   - Default value: `1000`
      * 
      */
     @Export(name="tunnelInterfaceHelloInterval", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> tunnelInterfaceHelloInterval;
 
     /**
-     * @return Set time period of control hello packets &lt;100..600000&gt; milli seconds - Range: `100`-`600000` - Default value: `1000`
+     * @return Set time period of control hello packets &lt;100..600000&gt; milli seconds
+     *   - Range: `100`-`600000`
+     *   - Default value: `1000`
      * 
      */
     public Output<Optional<Integer>> tunnelInterfaceHelloInterval() {
@@ -1313,14 +1369,18 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return Codegen.optional(this.tunnelInterfaceHelloIntervalVariable);
     }
     /**
-     * Set tolerance of control hello packets &lt;12..6000&gt; seconds - Range: `12`-`6000` - Default value: `12`
+     * Set tolerance of control hello packets &lt;12..6000&gt; seconds
+     *   - Range: `12`-`6000`
+     *   - Default value: `12`
      * 
      */
     @Export(name="tunnelInterfaceHelloTolerance", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> tunnelInterfaceHelloTolerance;
 
     /**
-     * @return Set tolerance of control hello packets &lt;12..6000&gt; seconds - Range: `12`-`6000` - Default value: `12`
+     * @return Set tolerance of control hello packets &lt;12..6000&gt; seconds
+     *   - Range: `12`-`6000`
+     *   - Default value: `12`
      * 
      */
     public Output<Optional<Integer>> tunnelInterfaceHelloTolerance() {
@@ -1341,14 +1401,16 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return Codegen.optional(this.tunnelInterfaceHelloToleranceVariable);
     }
     /**
-     * Set TLOC as last resort - Default value: `false`
+     * Set TLOC as last resort
+     *   - Default value: `false`
      * 
      */
     @Export(name="tunnelInterfaceLastResortCircuit", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceLastResortCircuit;
 
     /**
-     * @return Set TLOC as last resort - Default value: `false`
+     * @return Set TLOC as last resort
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceLastResortCircuit() {
@@ -1369,14 +1431,16 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return Codegen.optional(this.tunnelInterfaceLastResortCircuitVariable);
     }
     /**
-     * Set the interface as a low-bandwidth circuit - Default value: `false`
+     * Set the interface as a low-bandwidth circuit
+     *   - Default value: `false`
      * 
      */
     @Export(name="tunnelInterfaceLowBandwidthLink", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceLowBandwidthLink;
 
     /**
-     * @return Set the interface as a low-bandwidth circuit - Default value: `false`
+     * @return Set the interface as a low-bandwidth circuit
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceLowBandwidthLink() {
@@ -1397,14 +1461,16 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return Codegen.optional(this.tunnelInterfaceLowBandwidthLinkVariable);
     }
     /**
-     * Set the maximum number of control connections for this TLOC - Range: `0`-`100`
+     * Set the maximum number of control connections for this TLOC
+     *   - Range: `0`-`100`
      * 
      */
     @Export(name="tunnelInterfaceMaxControlConnections", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> tunnelInterfaceMaxControlConnections;
 
     /**
-     * @return Set the maximum number of control connections for this TLOC - Range: `0`-`100`
+     * @return Set the maximum number of control connections for this TLOC
+     *   - Range: `0`-`100`
      * 
      */
     public Output<Optional<Integer>> tunnelInterfaceMaxControlConnections() {
@@ -1425,14 +1491,18 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return Codegen.optional(this.tunnelInterfaceMaxControlConnectionsVariable);
     }
     /**
-     * Set time period of nat refresh packets &lt;1...60&gt; seconds - Range: `1`-`60` - Default value: `5`
+     * Set time period of nat refresh packets &lt;1...60&gt; seconds
+     *   - Range: `1`-`60`
+     *   - Default value: `5`
      * 
      */
     @Export(name="tunnelInterfaceNatRefreshInterval", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> tunnelInterfaceNatRefreshInterval;
 
     /**
-     * @return Set time period of nat refresh packets &lt;1...60&gt; seconds - Range: `1`-`60` - Default value: `5`
+     * @return Set time period of nat refresh packets &lt;1...60&gt; seconds
+     *   - Range: `1`-`60`
+     *   - Default value: `5`
      * 
      */
     public Output<Optional<Integer>> tunnelInterfaceNatRefreshInterval() {
@@ -1453,14 +1523,16 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return Codegen.optional(this.tunnelInterfaceNatRefreshIntervalVariable);
     }
     /**
-     * Disallow port hopping on the tunnel interface - Default value: `true`
+     * Disallow port hopping on the tunnel interface
+     *   - Default value: `true`
      * 
      */
     @Export(name="tunnelInterfacePortHop", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfacePortHop;
 
     /**
-     * @return Disallow port hopping on the tunnel interface - Default value: `true`
+     * @return Disallow port hopping on the tunnel interface
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfacePortHop() {
@@ -1481,14 +1553,16 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return Codegen.optional(this.tunnelInterfacePortHopVariable);
     }
     /**
-     * Restrict this TLOC behavior - Default value: `false`
+     * Restrict this TLOC behavior
+     *   - Default value: `false`
      * 
      */
     @Export(name="tunnelInterfaceRestrict", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceRestrict;
 
     /**
-     * @return Restrict this TLOC behavior - Default value: `false`
+     * @return Restrict this TLOC behavior
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceRestrict() {
@@ -1509,14 +1583,16 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return Codegen.optional(this.tunnelInterfaceRestrictVariable);
     }
     /**
-     * Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * Tunnel TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      * 
      */
     @Export(name="tunnelInterfaceTunnelTcpMss", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> tunnelInterfaceTunnelTcpMss;
 
     /**
-     * @return Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * @return Tunnel TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      * 
      */
     public Output<Optional<Integer>> tunnelInterfaceTunnelTcpMss() {
@@ -1537,14 +1613,16 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return Codegen.optional(this.tunnelInterfaceTunnelTcpMssVariable);
     }
     /**
-     * Put this wan interface in STUN mode only - Default value: `false`
+     * Put this wan interface in STUN mode only
+     *   - Default value: `false`
      * 
      */
     @Export(name="tunnelInterfaceVbondAsStunServer", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceVbondAsStunServer;
 
     /**
-     * @return Put this wan interface in STUN mode only - Default value: `false`
+     * @return Put this wan interface in STUN mode only
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceVbondAsStunServer() {
@@ -1565,14 +1643,18 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return Codegen.optional(this.tunnelInterfaceVbondAsStunServerVariable);
     }
     /**
-     * Set interface preference for control connection to vManage &lt;0..8&gt; - Range: `0`-`8` - Default value: `5`
+     * Set interface preference for control connection to vManage &lt;0..8&gt;
+     *   - Range: `0`-`8`
+     *   - Default value: `5`
      * 
      */
     @Export(name="tunnelInterfaceVmanageConnectionPreference", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> tunnelInterfaceVmanageConnectionPreference;
 
     /**
-     * @return Set interface preference for control connection to vManage &lt;0..8&gt; - Range: `0`-`8` - Default value: `5`
+     * @return Set interface preference for control connection to vManage &lt;0..8&gt;
+     *   - Range: `0`-`8`
+     *   - Default value: `5`
      * 
      */
     public Output<Optional<Integer>> tunnelInterfaceVmanageConnectionPreference() {
@@ -1593,14 +1675,16 @@ public class TransportWanVpnInterfaceT1E1SerialFeature extends com.pulumi.resour
         return Codegen.optional(this.tunnelInterfaceVmanageConnectionPreferenceVariable);
     }
     /**
-     * Set tunnel QoS mode - Choices: `spoke`, `hub`
+     * Set tunnel QoS mode
+     *   - Choices: `spoke`, `hub`
      * 
      */
     @Export(name="tunnelQosMode", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelQosMode;
 
     /**
-     * @return Set tunnel QoS mode - Choices: `spoke`, `hub`
+     * @return Set tunnel QoS mode
+     *   - Choices: `spoke`, `hub`
      * 
      */
     public Output<Optional<String>> tunnelQosMode() {

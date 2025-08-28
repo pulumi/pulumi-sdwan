@@ -51,35 +51,36 @@ export class TransportT1E1ControllerFeature extends pulumi.CustomResource {
     /**
      * The description of the Feature
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * Controller tx-ex List
      */
-    public readonly entries!: pulumi.Output<outputs.TransportT1E1ControllerFeatureEntry[]>;
+    declare public readonly entries: pulumi.Output<outputs.TransportT1E1ControllerFeatureEntry[]>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
      * The name of the Feature
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * Slot number
      */
-    public readonly slot!: pulumi.Output<string | undefined>;
+    declare public readonly slot: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly slotVariable!: pulumi.Output<string | undefined>;
+    declare public readonly slotVariable: pulumi.Output<string | undefined>;
     /**
-     * Card Type - Choices: `e1`, `t1`
+     * Card Type
+     *   - Choices: `e1`, `t1`
      */
-    public readonly type!: pulumi.Output<string>;
+    declare public readonly type: pulumi.Output<string>;
     /**
      * The version of the Feature
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a TransportT1E1ControllerFeature resource with the given unique name, arguments, and options.
@@ -94,32 +95,32 @@ export class TransportT1E1ControllerFeature extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as TransportT1E1ControllerFeatureState | undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["entries"] = state ? state.entries : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["slot"] = state ? state.slot : undefined;
-            resourceInputs["slotVariable"] = state ? state.slotVariable : undefined;
-            resourceInputs["type"] = state ? state.type : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["entries"] = state?.entries;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["slot"] = state?.slot;
+            resourceInputs["slotVariable"] = state?.slotVariable;
+            resourceInputs["type"] = state?.type;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as TransportT1E1ControllerFeatureArgs | undefined;
-            if ((!args || args.entries === undefined) && !opts.urn) {
+            if (args?.entries === undefined && !opts.urn) {
                 throw new Error("Missing required property 'entries'");
             }
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            if ((!args || args.type === undefined) && !opts.urn) {
+            if (args?.type === undefined && !opts.urn) {
                 throw new Error("Missing required property 'type'");
             }
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["entries"] = args ? args.entries : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["slot"] = args ? args.slot : undefined;
-            resourceInputs["slotVariable"] = args ? args.slotVariable : undefined;
-            resourceInputs["type"] = args ? args.type : undefined;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["entries"] = args?.entries;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["slot"] = args?.slot;
+            resourceInputs["slotVariable"] = args?.slotVariable;
+            resourceInputs["type"] = args?.type;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -156,7 +157,8 @@ export interface TransportT1E1ControllerFeatureState {
      */
     slotVariable?: pulumi.Input<string>;
     /**
-     * Card Type - Choices: `e1`, `t1`
+     * Card Type
+     *   - Choices: `e1`, `t1`
      */
     type?: pulumi.Input<string>;
     /**
@@ -194,7 +196,8 @@ export interface TransportT1E1ControllerFeatureArgs {
      */
     slotVariable?: pulumi.Input<string>;
     /**
-     * Card Type - Choices: `e1`, `t1`
+     * Card Type
+     *   - Choices: `e1`, `t1`
      */
     type: pulumi.Input<string>;
 }

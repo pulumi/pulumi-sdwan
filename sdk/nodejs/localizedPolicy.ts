@@ -74,59 +74,62 @@ export class LocalizedPolicy extends pulumi.CustomResource {
     /**
      * IPv4 application visibility
      */
-    public readonly applicationVisibilityIpv4!: pulumi.Output<boolean | undefined>;
+    declare public readonly applicationVisibilityIpv4: pulumi.Output<boolean | undefined>;
     /**
      * IPv6 application visibility
      */
-    public readonly applicationVisibilityIpv6!: pulumi.Output<boolean | undefined>;
+    declare public readonly applicationVisibilityIpv6: pulumi.Output<boolean | undefined>;
     /**
      * Cloud QoS
      */
-    public readonly cloudQos!: pulumi.Output<boolean | undefined>;
+    declare public readonly cloudQos: pulumi.Output<boolean | undefined>;
     /**
      * Cloud QoS service side
      */
-    public readonly cloudQosServiceSide!: pulumi.Output<boolean | undefined>;
+    declare public readonly cloudQosServiceSide: pulumi.Output<boolean | undefined>;
     /**
      * List of policy definitions
      */
-    public readonly definitions!: pulumi.Output<outputs.LocalizedPolicyDefinition[] | undefined>;
+    declare public readonly definitions: pulumi.Output<outputs.LocalizedPolicyDefinition[] | undefined>;
     /**
      * The description of the localized policy
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
      * IPv4 flow visibility
      */
-    public readonly flowVisibilityIpv4!: pulumi.Output<boolean | undefined>;
+    declare public readonly flowVisibilityIpv4: pulumi.Output<boolean | undefined>;
     /**
      * IPv6 flow visibility
      */
-    public readonly flowVisibilityIpv6!: pulumi.Output<boolean | undefined>;
+    declare public readonly flowVisibilityIpv6: pulumi.Output<boolean | undefined>;
     /**
      * Implicit ACL logging
      */
-    public readonly implicitAclLogging!: pulumi.Output<boolean | undefined>;
+    declare public readonly implicitAclLogging: pulumi.Output<boolean | undefined>;
     /**
-     * IPv4 visibility cache entries - Range: `16`-`2000000`
+     * IPv4 visibility cache entries
+     *   - Range: `16`-`2000000`
      */
-    public readonly ipv4VisibilityCacheEntries!: pulumi.Output<number | undefined>;
+    declare public readonly ipv4VisibilityCacheEntries: pulumi.Output<number | undefined>;
     /**
-     * IPv6 visibility cache entries - Range: `16`-`2000000`
+     * IPv6 visibility cache entries
+     *   - Range: `16`-`2000000`
      */
-    public readonly ipv6VisibilityCacheEntries!: pulumi.Output<number | undefined>;
+    declare public readonly ipv6VisibilityCacheEntries: pulumi.Output<number | undefined>;
     /**
-     * Log frequency - Range: `1`-`2147483647`
+     * Log frequency
+     *   - Range: `1`-`2147483647`
      */
-    public readonly logFrequency!: pulumi.Output<number | undefined>;
+    declare public readonly logFrequency: pulumi.Output<number | undefined>;
     /**
      * The name of the localized policy
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The version of the object
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a LocalizedPolicy resource with the given unique name, arguments, and options.
@@ -141,38 +144,38 @@ export class LocalizedPolicy extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as LocalizedPolicyState | undefined;
-            resourceInputs["applicationVisibilityIpv4"] = state ? state.applicationVisibilityIpv4 : undefined;
-            resourceInputs["applicationVisibilityIpv6"] = state ? state.applicationVisibilityIpv6 : undefined;
-            resourceInputs["cloudQos"] = state ? state.cloudQos : undefined;
-            resourceInputs["cloudQosServiceSide"] = state ? state.cloudQosServiceSide : undefined;
-            resourceInputs["definitions"] = state ? state.definitions : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["flowVisibilityIpv4"] = state ? state.flowVisibilityIpv4 : undefined;
-            resourceInputs["flowVisibilityIpv6"] = state ? state.flowVisibilityIpv6 : undefined;
-            resourceInputs["implicitAclLogging"] = state ? state.implicitAclLogging : undefined;
-            resourceInputs["ipv4VisibilityCacheEntries"] = state ? state.ipv4VisibilityCacheEntries : undefined;
-            resourceInputs["ipv6VisibilityCacheEntries"] = state ? state.ipv6VisibilityCacheEntries : undefined;
-            resourceInputs["logFrequency"] = state ? state.logFrequency : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["applicationVisibilityIpv4"] = state?.applicationVisibilityIpv4;
+            resourceInputs["applicationVisibilityIpv6"] = state?.applicationVisibilityIpv6;
+            resourceInputs["cloudQos"] = state?.cloudQos;
+            resourceInputs["cloudQosServiceSide"] = state?.cloudQosServiceSide;
+            resourceInputs["definitions"] = state?.definitions;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["flowVisibilityIpv4"] = state?.flowVisibilityIpv4;
+            resourceInputs["flowVisibilityIpv6"] = state?.flowVisibilityIpv6;
+            resourceInputs["implicitAclLogging"] = state?.implicitAclLogging;
+            resourceInputs["ipv4VisibilityCacheEntries"] = state?.ipv4VisibilityCacheEntries;
+            resourceInputs["ipv6VisibilityCacheEntries"] = state?.ipv6VisibilityCacheEntries;
+            resourceInputs["logFrequency"] = state?.logFrequency;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as LocalizedPolicyArgs | undefined;
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            resourceInputs["applicationVisibilityIpv4"] = args ? args.applicationVisibilityIpv4 : undefined;
-            resourceInputs["applicationVisibilityIpv6"] = args ? args.applicationVisibilityIpv6 : undefined;
-            resourceInputs["cloudQos"] = args ? args.cloudQos : undefined;
-            resourceInputs["cloudQosServiceSide"] = args ? args.cloudQosServiceSide : undefined;
-            resourceInputs["definitions"] = args ? args.definitions : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["flowVisibilityIpv4"] = args ? args.flowVisibilityIpv4 : undefined;
-            resourceInputs["flowVisibilityIpv6"] = args ? args.flowVisibilityIpv6 : undefined;
-            resourceInputs["implicitAclLogging"] = args ? args.implicitAclLogging : undefined;
-            resourceInputs["ipv4VisibilityCacheEntries"] = args ? args.ipv4VisibilityCacheEntries : undefined;
-            resourceInputs["ipv6VisibilityCacheEntries"] = args ? args.ipv6VisibilityCacheEntries : undefined;
-            resourceInputs["logFrequency"] = args ? args.logFrequency : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
+            resourceInputs["applicationVisibilityIpv4"] = args?.applicationVisibilityIpv4;
+            resourceInputs["applicationVisibilityIpv6"] = args?.applicationVisibilityIpv6;
+            resourceInputs["cloudQos"] = args?.cloudQos;
+            resourceInputs["cloudQosServiceSide"] = args?.cloudQosServiceSide;
+            resourceInputs["definitions"] = args?.definitions;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["flowVisibilityIpv4"] = args?.flowVisibilityIpv4;
+            resourceInputs["flowVisibilityIpv6"] = args?.flowVisibilityIpv6;
+            resourceInputs["implicitAclLogging"] = args?.implicitAclLogging;
+            resourceInputs["ipv4VisibilityCacheEntries"] = args?.ipv4VisibilityCacheEntries;
+            resourceInputs["ipv6VisibilityCacheEntries"] = args?.ipv6VisibilityCacheEntries;
+            resourceInputs["logFrequency"] = args?.logFrequency;
+            resourceInputs["name"] = args?.name;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -221,15 +224,18 @@ export interface LocalizedPolicyState {
      */
     implicitAclLogging?: pulumi.Input<boolean>;
     /**
-     * IPv4 visibility cache entries - Range: `16`-`2000000`
+     * IPv4 visibility cache entries
+     *   - Range: `16`-`2000000`
      */
     ipv4VisibilityCacheEntries?: pulumi.Input<number>;
     /**
-     * IPv6 visibility cache entries - Range: `16`-`2000000`
+     * IPv6 visibility cache entries
+     *   - Range: `16`-`2000000`
      */
     ipv6VisibilityCacheEntries?: pulumi.Input<number>;
     /**
-     * Log frequency - Range: `1`-`2147483647`
+     * Log frequency
+     *   - Range: `1`-`2147483647`
      */
     logFrequency?: pulumi.Input<number>;
     /**
@@ -283,15 +289,18 @@ export interface LocalizedPolicyArgs {
      */
     implicitAclLogging?: pulumi.Input<boolean>;
     /**
-     * IPv4 visibility cache entries - Range: `16`-`2000000`
+     * IPv4 visibility cache entries
+     *   - Range: `16`-`2000000`
      */
     ipv4VisibilityCacheEntries?: pulumi.Input<number>;
     /**
-     * IPv6 visibility cache entries - Range: `16`-`2000000`
+     * IPv6 visibility cache entries
+     *   - Range: `16`-`2000000`
      */
     ipv6VisibilityCacheEntries?: pulumi.Input<number>;
     /**
-     * Log frequency - Range: `1`-`2147483647`
+     * Log frequency
+     *   - Range: `1`-`2147483647`
      */
     logFrequency?: pulumi.Input<number>;
     /**

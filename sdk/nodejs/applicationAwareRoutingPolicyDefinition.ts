@@ -48,23 +48,23 @@ export class ApplicationAwareRoutingPolicyDefinition extends pulumi.CustomResour
     /**
      * The description of the policy definition
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
      * The name of the policy definition
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * List of sequences
      */
-    public readonly sequences!: pulumi.Output<outputs.ApplicationAwareRoutingPolicyDefinitionSequence[]>;
+    declare public readonly sequences: pulumi.Output<outputs.ApplicationAwareRoutingPolicyDefinitionSequence[]>;
     /**
      * Type
      */
-    public /*out*/ readonly type!: pulumi.Output<string>;
+    declare public /*out*/ readonly type: pulumi.Output<string>;
     /**
      * The version of the object
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a ApplicationAwareRoutingPolicyDefinition resource with the given unique name, arguments, and options.
@@ -79,22 +79,22 @@ export class ApplicationAwareRoutingPolicyDefinition extends pulumi.CustomResour
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ApplicationAwareRoutingPolicyDefinitionState | undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["sequences"] = state ? state.sequences : undefined;
-            resourceInputs["type"] = state ? state.type : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["sequences"] = state?.sequences;
+            resourceInputs["type"] = state?.type;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as ApplicationAwareRoutingPolicyDefinitionArgs | undefined;
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            if ((!args || args.sequences === undefined) && !opts.urn) {
+            if (args?.sequences === undefined && !opts.urn) {
                 throw new Error("Missing required property 'sequences'");
             }
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["sequences"] = args ? args.sequences : undefined;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["sequences"] = args?.sequences;
             resourceInputs["type"] = undefined /*out*/;
             resourceInputs["version"] = undefined /*out*/;
         }

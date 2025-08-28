@@ -71,7 +71,8 @@ type PolicyGroup struct {
 	Name pulumi.StringOutput `pulumi:"name"`
 	// List of all associated policy versions
 	PolicyVersions pulumi.StringArrayOutput `pulumi:"policyVersions"`
-	// Type of solution - Choices: `sdwan`
+	// Type of solution
+	//   - Choices: `sdwan`
 	Solution pulumi.StringOutput `pulumi:"solution"`
 }
 
@@ -121,7 +122,8 @@ type policyGroupState struct {
 	Name *string `pulumi:"name"`
 	// List of all associated policy versions
 	PolicyVersions []string `pulumi:"policyVersions"`
-	// Type of solution - Choices: `sdwan`
+	// Type of solution
+	//   - Choices: `sdwan`
 	Solution *string `pulumi:"solution"`
 }
 
@@ -136,7 +138,8 @@ type PolicyGroupState struct {
 	Name pulumi.StringPtrInput
 	// List of all associated policy versions
 	PolicyVersions pulumi.StringArrayInput
-	// Type of solution - Choices: `sdwan`
+	// Type of solution
+	//   - Choices: `sdwan`
 	Solution pulumi.StringPtrInput
 }
 
@@ -155,7 +158,8 @@ type policyGroupArgs struct {
 	Name *string `pulumi:"name"`
 	// List of all associated policy versions
 	PolicyVersions []string `pulumi:"policyVersions"`
-	// Type of solution - Choices: `sdwan`
+	// Type of solution
+	//   - Choices: `sdwan`
 	Solution string `pulumi:"solution"`
 }
 
@@ -171,7 +175,8 @@ type PolicyGroupArgs struct {
 	Name pulumi.StringPtrInput
 	// List of all associated policy versions
 	PolicyVersions pulumi.StringArrayInput
-	// Type of solution - Choices: `sdwan`
+	// Type of solution
+	//   - Choices: `sdwan`
 	Solution pulumi.StringInput
 }
 
@@ -287,7 +292,8 @@ func (o PolicyGroupOutput) PolicyVersions() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *PolicyGroup) pulumi.StringArrayOutput { return v.PolicyVersions }).(pulumi.StringArrayOutput)
 }
 
-// Type of solution - Choices: `sdwan`
+// Type of solution
+//   - Choices: `sdwan`
 func (o PolicyGroupOutput) Solution() pulumi.StringOutput {
 	return o.ApplyT(func(v *PolicyGroup) pulumi.StringOutput { return v.Solution }).(pulumi.StringOutput)
 }

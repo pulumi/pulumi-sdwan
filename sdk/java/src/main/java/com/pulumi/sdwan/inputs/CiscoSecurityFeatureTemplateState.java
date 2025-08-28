@@ -66,18 +66,16 @@ public final class CiscoSecurityFeatureTemplateState extends com.pulumi.resource
     }
 
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Import(name="deviceTypes")
     private @Nullable Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Optional<Output<List<String>>> deviceTypes() {
@@ -85,14 +83,18 @@ public final class CiscoSecurityFeatureTemplateState extends com.pulumi.resource
     }
 
     /**
-     * Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+     * Extended Anti-Replay Window
+     *   - Range: `10`-`2048`
+     *   - Default value: `256`
      * 
      */
     @Import(name="extendedArWindow")
     private @Nullable Output<Integer> extendedArWindow;
 
     /**
-     * @return Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+     * @return Extended Anti-Replay Window
+     *   - Range: `10`-`2048`
+     *   - Default value: `256`
      * 
      */
     public Optional<Output<Integer>> extendedArWindow() {
@@ -190,14 +192,16 @@ public final class CiscoSecurityFeatureTemplateState extends com.pulumi.resource
     }
 
     /**
-     * Enable or disable IPsec pairwise-keying - Default value: `false`
+     * Enable or disable IPsec pairwise-keying
+     *   - Default value: `false`
      * 
      */
     @Import(name="pairwiseKeying")
     private @Nullable Output<Boolean> pairwiseKeying;
 
     /**
-     * @return Enable or disable IPsec pairwise-keying - Default value: `false`
+     * @return Enable or disable IPsec pairwise-keying
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> pairwiseKeying() {
@@ -220,14 +224,18 @@ public final class CiscoSecurityFeatureTemplateState extends com.pulumi.resource
     }
 
     /**
-     * Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+     * Set how often to change the AES key for DTLS connections
+     *   - Range: `10`-`1209600`
+     *   - Default value: `86400`
      * 
      */
     @Import(name="rekeyInterval")
     private @Nullable Output<Integer> rekeyInterval;
 
     /**
-     * @return Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+     * @return Set how often to change the AES key for DTLS connections
+     *   - Range: `10`-`1209600`
+     *   - Default value: `86400`
      * 
      */
     public Optional<Output<Integer>> rekeyInterval() {
@@ -250,16 +258,18 @@ public final class CiscoSecurityFeatureTemplateState extends com.pulumi.resource
     }
 
     /**
-     * Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-     * `512`
+     * Set the sliding replay window size
+     *   - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+     *   - Default value: `512`
      * 
      */
     @Import(name="replayWindow")
     private @Nullable Output<String> replayWindow;
 
     /**
-     * @return Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-     * `512`
+     * @return Set the sliding replay window size
+     *   - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+     *   - Default value: `512`
      * 
      */
     public Optional<Output<String>> replayWindow() {
@@ -427,9 +437,8 @@ public final class CiscoSecurityFeatureTemplateState extends com.pulumi.resource
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -440,9 +449,8 @@ public final class CiscoSecurityFeatureTemplateState extends com.pulumi.resource
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -452,9 +460,8 @@ public final class CiscoSecurityFeatureTemplateState extends com.pulumi.resource
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -464,7 +471,9 @@ public final class CiscoSecurityFeatureTemplateState extends com.pulumi.resource
         }
 
         /**
-         * @param extendedArWindow Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+         * @param extendedArWindow Extended Anti-Replay Window
+         *   - Range: `10`-`2048`
+         *   - Default value: `256`
          * 
          * @return builder
          * 
@@ -475,7 +484,9 @@ public final class CiscoSecurityFeatureTemplateState extends com.pulumi.resource
         }
 
         /**
-         * @param extendedArWindow Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+         * @param extendedArWindow Extended Anti-Replay Window
+         *   - Range: `10`-`2048`
+         *   - Default value: `256`
          * 
          * @return builder
          * 
@@ -641,7 +652,8 @@ public final class CiscoSecurityFeatureTemplateState extends com.pulumi.resource
         }
 
         /**
-         * @param pairwiseKeying Enable or disable IPsec pairwise-keying - Default value: `false`
+         * @param pairwiseKeying Enable or disable IPsec pairwise-keying
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -652,7 +664,8 @@ public final class CiscoSecurityFeatureTemplateState extends com.pulumi.resource
         }
 
         /**
-         * @param pairwiseKeying Enable or disable IPsec pairwise-keying - Default value: `false`
+         * @param pairwiseKeying Enable or disable IPsec pairwise-keying
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -683,7 +696,9 @@ public final class CiscoSecurityFeatureTemplateState extends com.pulumi.resource
         }
 
         /**
-         * @param rekeyInterval Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+         * @param rekeyInterval Set how often to change the AES key for DTLS connections
+         *   - Range: `10`-`1209600`
+         *   - Default value: `86400`
          * 
          * @return builder
          * 
@@ -694,7 +709,9 @@ public final class CiscoSecurityFeatureTemplateState extends com.pulumi.resource
         }
 
         /**
-         * @param rekeyInterval Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+         * @param rekeyInterval Set how often to change the AES key for DTLS connections
+         *   - Range: `10`-`1209600`
+         *   - Default value: `86400`
          * 
          * @return builder
          * 
@@ -725,8 +742,9 @@ public final class CiscoSecurityFeatureTemplateState extends com.pulumi.resource
         }
 
         /**
-         * @param replayWindow Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-         * `512`
+         * @param replayWindow Set the sliding replay window size
+         *   - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+         *   - Default value: `512`
          * 
          * @return builder
          * 
@@ -737,8 +755,9 @@ public final class CiscoSecurityFeatureTemplateState extends com.pulumi.resource
         }
 
         /**
-         * @param replayWindow Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-         * `512`
+         * @param replayWindow Set the sliding replay window size
+         *   - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+         *   - Default value: `512`
          * 
          * @return builder
          * 

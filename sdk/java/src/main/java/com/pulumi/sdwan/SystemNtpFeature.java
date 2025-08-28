@@ -56,14 +56,16 @@ public class SystemNtpFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.authenticationKeys);
     }
     /**
-     * Enable device as NTP Leader - Default value: `false`
+     * Enable device as NTP Leader
+     *   - Default value: `false`
      * 
      */
     @Export(name="authoritativeNtpServer", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> authoritativeNtpServer;
 
     /**
-     * @return Enable device as NTP Leader - Default value: `false`
+     * @return Enable device as NTP Leader
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> authoritativeNtpServer() {
@@ -168,14 +170,16 @@ public class SystemNtpFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.sourceInterfaceVariable);
     }
     /**
-     * Enable device as NTP Leader - Range: `1`-`15`
+     * Enable device as NTP Leader
+     *   - Range: `1`-`15`
      * 
      */
     @Export(name="stratum", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> stratum;
 
     /**
-     * @return Enable device as NTP Leader - Range: `1`-`15`
+     * @return Enable device as NTP Leader
+     *   - Range: `1`-`15`
      * 
      */
     public Output<Optional<Integer>> stratum() {

@@ -68,9 +68,8 @@ type CiscoSigCredentialsFeatureTemplate struct {
 
 	// The description of the feature template
 	Description pulumi.StringOutput `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayOutput `pulumi:"deviceTypes"`
 	// The name of the feature template
 	Name pulumi.StringOutput `pulumi:"name"`
@@ -90,7 +89,8 @@ type CiscoSigCredentialsFeatureTemplate struct {
 	UmbrellaOrganizationIdVariable pulumi.StringPtrOutput `pulumi:"umbrellaOrganizationIdVariable"`
 	// The version of the feature template
 	Version pulumi.IntOutput `pulumi:"version"`
-	// Third Party Cloud Name - Range: `0`-`255`
+	// Third Party Cloud Name
+	//   - Range: `0`-`255`
 	ZscalerCloudName pulumi.IntPtrOutput `pulumi:"zscalerCloudName"`
 	// Variable name
 	ZscalerCloudNameVariable pulumi.StringPtrOutput `pulumi:"zscalerCloudNameVariable"`
@@ -162,9 +162,8 @@ func GetCiscoSigCredentialsFeatureTemplate(ctx *pulumi.Context,
 type ciscoSigCredentialsFeatureTemplateState struct {
 	// The description of the feature template
 	Description *string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
 	// The name of the feature template
 	Name *string `pulumi:"name"`
@@ -184,7 +183,8 @@ type ciscoSigCredentialsFeatureTemplateState struct {
 	UmbrellaOrganizationIdVariable *string `pulumi:"umbrellaOrganizationIdVariable"`
 	// The version of the feature template
 	Version *int `pulumi:"version"`
-	// Third Party Cloud Name - Range: `0`-`255`
+	// Third Party Cloud Name
+	//   - Range: `0`-`255`
 	ZscalerCloudName *int `pulumi:"zscalerCloudName"`
 	// Variable name
 	ZscalerCloudNameVariable *string `pulumi:"zscalerCloudNameVariable"`
@@ -221,9 +221,8 @@ type ciscoSigCredentialsFeatureTemplateState struct {
 type CiscoSigCredentialsFeatureTemplateState struct {
 	// The description of the feature template
 	Description pulumi.StringPtrInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
 	// The name of the feature template
 	Name pulumi.StringPtrInput
@@ -243,7 +242,8 @@ type CiscoSigCredentialsFeatureTemplateState struct {
 	UmbrellaOrganizationIdVariable pulumi.StringPtrInput
 	// The version of the feature template
 	Version pulumi.IntPtrInput
-	// Third Party Cloud Name - Range: `0`-`255`
+	// Third Party Cloud Name
+	//   - Range: `0`-`255`
 	ZscalerCloudName pulumi.IntPtrInput
 	// Variable name
 	ZscalerCloudNameVariable pulumi.StringPtrInput
@@ -284,9 +284,8 @@ func (CiscoSigCredentialsFeatureTemplateState) ElementType() reflect.Type {
 type ciscoSigCredentialsFeatureTemplateArgs struct {
 	// The description of the feature template
 	Description string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
 	// The name of the feature template
 	Name *string `pulumi:"name"`
@@ -302,7 +301,8 @@ type ciscoSigCredentialsFeatureTemplateArgs struct {
 	UmbrellaOrganizationId *string `pulumi:"umbrellaOrganizationId"`
 	// Variable name
 	UmbrellaOrganizationIdVariable *string `pulumi:"umbrellaOrganizationIdVariable"`
-	// Third Party Cloud Name - Range: `0`-`255`
+	// Third Party Cloud Name
+	//   - Range: `0`-`255`
 	ZscalerCloudName *int `pulumi:"zscalerCloudName"`
 	// Variable name
 	ZscalerCloudNameVariable *string `pulumi:"zscalerCloudNameVariable"`
@@ -340,9 +340,8 @@ type ciscoSigCredentialsFeatureTemplateArgs struct {
 type CiscoSigCredentialsFeatureTemplateArgs struct {
 	// The description of the feature template
 	Description pulumi.StringInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
 	// The name of the feature template
 	Name pulumi.StringPtrInput
@@ -358,7 +357,8 @@ type CiscoSigCredentialsFeatureTemplateArgs struct {
 	UmbrellaOrganizationId pulumi.StringPtrInput
 	// Variable name
 	UmbrellaOrganizationIdVariable pulumi.StringPtrInput
-	// Third Party Cloud Name - Range: `0`-`255`
+	// Third Party Cloud Name
+	//   - Range: `0`-`255`
 	ZscalerCloudName pulumi.IntPtrInput
 	// Variable name
 	ZscalerCloudNameVariable pulumi.StringPtrInput
@@ -484,9 +484,8 @@ func (o CiscoSigCredentialsFeatureTemplateOutput) Description() pulumi.StringOut
 	return o.ApplyT(func(v *CiscoSigCredentialsFeatureTemplate) pulumi.StringOutput { return v.Description }).(pulumi.StringOutput)
 }
 
-// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+// List of supported device types
+//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 func (o CiscoSigCredentialsFeatureTemplateOutput) DeviceTypes() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *CiscoSigCredentialsFeatureTemplate) pulumi.StringArrayOutput { return v.DeviceTypes }).(pulumi.StringArrayOutput)
 }
@@ -538,7 +537,8 @@ func (o CiscoSigCredentialsFeatureTemplateOutput) Version() pulumi.IntOutput {
 	return o.ApplyT(func(v *CiscoSigCredentialsFeatureTemplate) pulumi.IntOutput { return v.Version }).(pulumi.IntOutput)
 }
 
-// Third Party Cloud Name - Range: `0`-`255`
+// Third Party Cloud Name
+//   - Range: `0`-`255`
 func (o CiscoSigCredentialsFeatureTemplateOutput) ZscalerCloudName() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoSigCredentialsFeatureTemplate) pulumi.IntPtrOutput { return v.ZscalerCloudName }).(pulumi.IntPtrOutput)
 }

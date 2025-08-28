@@ -37,14 +37,16 @@ import javax.annotation.Nullable;
 @ResourceType(type="sdwan:index/customControlTopologyPolicyDefinition:CustomControlTopologyPolicyDefinition")
 public class CustomControlTopologyPolicyDefinition extends com.pulumi.resources.CustomResource {
     /**
-     * Default action, either `accept` or `reject` - Choices: `accept`, `reject`
+     * Default action, either `accept` or `reject`
+     *   - Choices: `accept`, `reject`
      * 
      */
     @Export(name="defaultAction", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> defaultAction;
 
     /**
-     * @return Default action, either `accept` or `reject` - Choices: `accept`, `reject`
+     * @return Default action, either `accept` or `reject`
+     *   - Choices: `accept`, `reject`
      * 
      */
     public Output<Optional<String>> defaultAction() {

@@ -38,14 +38,16 @@ class SystemNtpFeatureArgs:
         The set of arguments for constructing a SystemNtpFeature resource.
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[Sequence[pulumi.Input['SystemNtpFeatureAuthenticationKeyArgs']]] authentication_keys: Set MD5 authentication key
-        :param pulumi.Input[_builtins.bool] authoritative_ntp_server: Enable device as NTP Leader - Default value: `false`
+        :param pulumi.Input[_builtins.bool] authoritative_ntp_server: Enable device as NTP Leader
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] authoritative_ntp_server_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[Sequence[pulumi.Input['SystemNtpFeatureServerArgs']]] servers: Configure NTP servers
         :param pulumi.Input[_builtins.str] source_interface: Enable device as NTP Leader
         :param pulumi.Input[_builtins.str] source_interface_variable: Variable name
-        :param pulumi.Input[_builtins.int] stratum: Enable device as NTP Leader - Range: `1`-`15`
+        :param pulumi.Input[_builtins.int] stratum: Enable device as NTP Leader
+                 - Range: `1`-`15`
         :param pulumi.Input[_builtins.str] stratum_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] trusted_keys: Designate authentication key as trustworthy
         :param pulumi.Input[_builtins.str] trusted_keys_variable: Variable name
@@ -104,7 +106,8 @@ class SystemNtpFeatureArgs:
     @pulumi.getter(name="authoritativeNtpServer")
     def authoritative_ntp_server(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable device as NTP Leader - Default value: `false`
+        Enable device as NTP Leader
+          - Default value: `false`
         """
         return pulumi.get(self, "authoritative_ntp_server")
 
@@ -188,7 +191,8 @@ class SystemNtpFeatureArgs:
     @pulumi.getter
     def stratum(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Enable device as NTP Leader - Range: `1`-`15`
+        Enable device as NTP Leader
+          - Range: `1`-`15`
         """
         return pulumi.get(self, "stratum")
 
@@ -253,7 +257,8 @@ class _SystemNtpFeatureState:
         """
         Input properties used for looking up and filtering SystemNtpFeature resources.
         :param pulumi.Input[Sequence[pulumi.Input['SystemNtpFeatureAuthenticationKeyArgs']]] authentication_keys: Set MD5 authentication key
-        :param pulumi.Input[_builtins.bool] authoritative_ntp_server: Enable device as NTP Leader - Default value: `false`
+        :param pulumi.Input[_builtins.bool] authoritative_ntp_server: Enable device as NTP Leader
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] authoritative_ntp_server_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
@@ -261,7 +266,8 @@ class _SystemNtpFeatureState:
         :param pulumi.Input[Sequence[pulumi.Input['SystemNtpFeatureServerArgs']]] servers: Configure NTP servers
         :param pulumi.Input[_builtins.str] source_interface: Enable device as NTP Leader
         :param pulumi.Input[_builtins.str] source_interface_variable: Variable name
-        :param pulumi.Input[_builtins.int] stratum: Enable device as NTP Leader - Range: `1`-`15`
+        :param pulumi.Input[_builtins.int] stratum: Enable device as NTP Leader
+                 - Range: `1`-`15`
         :param pulumi.Input[_builtins.str] stratum_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] trusted_keys: Designate authentication key as trustworthy
         :param pulumi.Input[_builtins.str] trusted_keys_variable: Variable name
@@ -312,7 +318,8 @@ class _SystemNtpFeatureState:
     @pulumi.getter(name="authoritativeNtpServer")
     def authoritative_ntp_server(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable device as NTP Leader - Default value: `false`
+        Enable device as NTP Leader
+          - Default value: `false`
         """
         return pulumi.get(self, "authoritative_ntp_server")
 
@@ -408,7 +415,8 @@ class _SystemNtpFeatureState:
     @pulumi.getter
     def stratum(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Enable device as NTP Leader - Range: `1`-`15`
+        Enable device as NTP Leader
+          - Range: `1`-`15`
         """
         return pulumi.get(self, "stratum")
 
@@ -502,7 +510,8 @@ class SystemNtpFeature(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['SystemNtpFeatureAuthenticationKeyArgs', 'SystemNtpFeatureAuthenticationKeyArgsDict']]]] authentication_keys: Set MD5 authentication key
-        :param pulumi.Input[_builtins.bool] authoritative_ntp_server: Enable device as NTP Leader - Default value: `false`
+        :param pulumi.Input[_builtins.bool] authoritative_ntp_server: Enable device as NTP Leader
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] authoritative_ntp_server_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
@@ -510,7 +519,8 @@ class SystemNtpFeature(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[Union['SystemNtpFeatureServerArgs', 'SystemNtpFeatureServerArgsDict']]]] servers: Configure NTP servers
         :param pulumi.Input[_builtins.str] source_interface: Enable device as NTP Leader
         :param pulumi.Input[_builtins.str] source_interface_variable: Variable name
-        :param pulumi.Input[_builtins.int] stratum: Enable device as NTP Leader - Range: `1`-`15`
+        :param pulumi.Input[_builtins.int] stratum: Enable device as NTP Leader
+                 - Range: `1`-`15`
         :param pulumi.Input[_builtins.str] stratum_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] trusted_keys: Designate authentication key as trustworthy
         :param pulumi.Input[_builtins.str] trusted_keys_variable: Variable name
@@ -620,7 +630,8 @@ class SystemNtpFeature(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['SystemNtpFeatureAuthenticationKeyArgs', 'SystemNtpFeatureAuthenticationKeyArgsDict']]]] authentication_keys: Set MD5 authentication key
-        :param pulumi.Input[_builtins.bool] authoritative_ntp_server: Enable device as NTP Leader - Default value: `false`
+        :param pulumi.Input[_builtins.bool] authoritative_ntp_server: Enable device as NTP Leader
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] authoritative_ntp_server_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
@@ -628,7 +639,8 @@ class SystemNtpFeature(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[Union['SystemNtpFeatureServerArgs', 'SystemNtpFeatureServerArgsDict']]]] servers: Configure NTP servers
         :param pulumi.Input[_builtins.str] source_interface: Enable device as NTP Leader
         :param pulumi.Input[_builtins.str] source_interface_variable: Variable name
-        :param pulumi.Input[_builtins.int] stratum: Enable device as NTP Leader - Range: `1`-`15`
+        :param pulumi.Input[_builtins.int] stratum: Enable device as NTP Leader
+                 - Range: `1`-`15`
         :param pulumi.Input[_builtins.str] stratum_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] trusted_keys: Designate authentication key as trustworthy
         :param pulumi.Input[_builtins.str] trusted_keys_variable: Variable name
@@ -666,7 +678,8 @@ class SystemNtpFeature(pulumi.CustomResource):
     @pulumi.getter(name="authoritativeNtpServer")
     def authoritative_ntp_server(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Enable device as NTP Leader - Default value: `false`
+        Enable device as NTP Leader
+          - Default value: `false`
         """
         return pulumi.get(self, "authoritative_ntp_server")
 
@@ -730,7 +743,8 @@ class SystemNtpFeature(pulumi.CustomResource):
     @pulumi.getter
     def stratum(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Enable device as NTP Leader - Range: `1`-`15`
+        Enable device as NTP Leader
+          - Range: `1`-`15`
         """
         return pulumi.get(self, "stratum")
 

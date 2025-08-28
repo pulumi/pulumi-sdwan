@@ -86,79 +86,91 @@ class TransportWanVpnInterfaceIpsecFeatureArgs:
         The set of arguments for constructing a TransportWanVpnInterfaceIpsecFeature resource.
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] transport_wan_vpn_feature_id: Transport WAN VPN Feature ID
-        :param pulumi.Input[_builtins.str] application_tunnel_type: Enable Application Tunnel Type - Choices: `none`, `sig`
+        :param pulumi.Input[_builtins.str] application_tunnel_type: Enable Application Tunnel Type
+                 - Choices: `none`, `sig`
         :param pulumi.Input[_builtins.str] application_tunnel_type_variable: Variable name
-        :param pulumi.Input[_builtins.bool] clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        :param pulumi.Input[_builtins.bool] clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] clear_dont_fragment_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.int] dpd_interval: IKE keepalive interval (seconds) - Range: `10`-`3600` - Default value: `10`
+        :param pulumi.Input[_builtins.int] dpd_interval: IKE keepalive interval (seconds)
+                 - Range: `10`-`3600`
+                 - Default value: `10`
         :param pulumi.Input[_builtins.str] dpd_interval_variable: Variable name
-        :param pulumi.Input[_builtins.int] dpd_retries: IKE keepalive retries - Range: `2`-`60` - Default value: `3`
+        :param pulumi.Input[_builtins.int] dpd_retries: IKE keepalive retries
+                 - Range: `2`-`60`
+                 - Default value: `3`
         :param pulumi.Input[_builtins.str] dpd_retries_variable: Variable name
-        :param pulumi.Input[_builtins.str] ike_ciphersuite: IKE identity the IKE preshared secret belongs to - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`,
-               `aes128-cbc-sha2` - Default value: `aes256-cbc-sha1`
+        :param pulumi.Input[_builtins.str] ike_ciphersuite: IKE identity the IKE preshared secret belongs to
+                 - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+                 - Default value: `aes256-cbc-sha1`
         :param pulumi.Input[_builtins.str] ike_ciphersuite_variable: Variable name
-        :param pulumi.Input[_builtins.str] ike_diffie_hellman_group: IKE Diffie Hellman Groups - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24` - Default value: `16`
+        :param pulumi.Input[_builtins.str] ike_diffie_hellman_group: IKE Diffie Hellman Groups
+                 - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
+                 - Default value: `16`
         :param pulumi.Input[_builtins.str] ike_diffie_hellman_group_variable: Variable name
         :param pulumi.Input[_builtins.str] ike_id_local_end_point: IKE ID for the local endpoint. Input IPv4 address, domain name, or email address
         :param pulumi.Input[_builtins.str] ike_id_local_end_point_variable: Variable name
         :param pulumi.Input[_builtins.str] ike_id_remote_end_point: IKE ID for the remote endpoint. Input IPv4 address, domain name, or email address
         :param pulumi.Input[_builtins.str] ike_id_remote_end_point_variable: Variable name
-        :param pulumi.Input[_builtins.str] ike_integrity_protocol: IKE integrity protocol - Choices: `main`, `aggressive` - Default value: `main`
+        :param pulumi.Input[_builtins.str] ike_integrity_protocol: IKE integrity protocol
+                 - Choices: `main`, `aggressive`
+                 - Default value: `main`
         :param pulumi.Input[_builtins.str] ike_integrity_protocol_variable: Variable name
         :param pulumi.Input[_builtins.str] ike_preshared_key: Use preshared key to authenticate IKE peer
         :param pulumi.Input[_builtins.str] ike_preshared_key_variable: Variable name
-        :param pulumi.Input[_builtins.int] ike_rekey_interval: IKE rekey interval <60..86400> seconds - Range: `60`-`86400` - Default value: `14400`
+        :param pulumi.Input[_builtins.int] ike_rekey_interval: IKE rekey interval <60..86400> seconds
+                 - Range: `60`-`86400`
+                 - Default value: `14400`
         :param pulumi.Input[_builtins.str] ike_rekey_interval_variable: Variable name
-        :param pulumi.Input[_builtins.int] ike_version: IKE Version <1..2> - Range: `1`-`2` - Default value: `1`
+        :param pulumi.Input[_builtins.int] ike_version: IKE Version <1..2>
+                 - Range: `1`-`2`
+                 - Default value: `1`
         :param pulumi.Input[_builtins.str] interface_description: Interface description
         :param pulumi.Input[_builtins.str] interface_description_variable: Variable name
         :param pulumi.Input[_builtins.str] interface_name: Interface name: IPsec when present
         :param pulumi.Input[_builtins.str] interface_name_variable: Variable name
-        :param pulumi.Input[_builtins.int] ip_mtu: Interface MTU <68..9216>, in bytes - Range: `68`-`9216` - Default value: `1500`
+        :param pulumi.Input[_builtins.int] ip_mtu: Interface MTU <68..9216>, in bytes
+                 - Range: `68`-`9216`
+                 - Default value: `1500`
         :param pulumi.Input[_builtins.str] ip_mtu_variable: Variable name
-        :param pulumi.Input[_builtins.str] ipsec_ciphersuite: IPsec(ESP) encryption and integrity protocol - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`,
-               `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512` - Default value:
-               `aes256-gcm`
+        :param pulumi.Input[_builtins.str] ipsec_ciphersuite: IPsec(ESP) encryption and integrity protocol
+                 - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
+                 - Default value: `aes256-gcm`
         :param pulumi.Input[_builtins.str] ipsec_ciphersuite_variable: Variable name
-        :param pulumi.Input[_builtins.int] ipsec_rekey_interval: IPsec rekey interval <300..1209600> seconds - Range: `120`-`2592000` - Default value: `3600`
+        :param pulumi.Input[_builtins.int] ipsec_rekey_interval: IPsec rekey interval <300..1209600> seconds
+                 - Range: `120`-`2592000`
+                 - Default value: `3600`
         :param pulumi.Input[_builtins.str] ipsec_rekey_interval_variable: Variable name
-        :param pulumi.Input[_builtins.int] ipsec_replay_window: Replay window size 32..8192 (must be a power of 2) - Range: `64`-`4096` - Default value: `512`
+        :param pulumi.Input[_builtins.int] ipsec_replay_window: Replay window size 32..8192 (must be a power of 2)
+                 - Range: `64`-`4096`
+                 - Default value: `512`
         :param pulumi.Input[_builtins.str] ipsec_replay_window_variable: Variable name
         :param pulumi.Input[_builtins.str] ipv4_address_variable: Variable name
-        :param pulumi.Input[_builtins.str] ipv4_subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-               `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-               `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-               `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-               `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[_builtins.str] ipv4_subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] ipv4_subnet_mask_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.str] perfect_forward_secrecy: IPsec perfect forward secrecy settings - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`,
-               `group-19`, `group-20`, `group-21`, `group-24`, `none` - Default value: `group-16`
+        :param pulumi.Input[_builtins.str] perfect_forward_secrecy: IPsec perfect forward secrecy settings
+                 - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+                 - Default value: `group-16`
         :param pulumi.Input[_builtins.str] perfect_forward_secrecy_variable: Variable name
-        :param pulumi.Input[_builtins.bool] shutdown: Administrative state - Default value: `true`
+        :param pulumi.Input[_builtins.bool] shutdown: Administrative state
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
-        :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes
+                 - Range: `500`-`1460`
         :param pulumi.Input[_builtins.str] tcp_mss_variable: Variable name
         :param pulumi.Input[_builtins.str] tracker_id: Enable tracker for this interface
         :param pulumi.Input[_builtins.str] tracker_id_variable: Variable name
         :param pulumi.Input[_builtins.str] tunnel_destination_ipv4_address_variable: Variable name
-        :param pulumi.Input[_builtins.str] tunnel_destination_ipv4_subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-               `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-               `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-               `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-               `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[_builtins.str] tunnel_destination_ipv4_subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] tunnel_destination_ipv4_subnet_mask_variable: Variable name
         :param pulumi.Input[_builtins.str] tunnel_route_via: <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
         :param pulumi.Input[_builtins.str] tunnel_route_via_variable: Variable name
         :param pulumi.Input[_builtins.str] tunnel_source_interface: <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
         :param pulumi.Input[_builtins.str] tunnel_source_interface_variable: Variable name
         :param pulumi.Input[_builtins.str] tunnel_source_ipv4_address_variable: Variable name
-        :param pulumi.Input[_builtins.str] tunnel_source_ipv4_subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-               `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-               `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-               `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-               `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[_builtins.str] tunnel_source_ipv4_subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] tunnel_source_ipv4_subnet_mask_variable: Variable name
         """
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
@@ -314,7 +326,8 @@ class TransportWanVpnInterfaceIpsecFeatureArgs:
     @pulumi.getter(name="applicationTunnelType")
     def application_tunnel_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Enable Application Tunnel Type - Choices: `none`, `sig`
+        Enable Application Tunnel Type
+          - Choices: `none`, `sig`
         """
         return pulumi.get(self, "application_tunnel_type")
 
@@ -338,7 +351,8 @@ class TransportWanVpnInterfaceIpsecFeatureArgs:
     @pulumi.getter(name="clearDontFragment")
     def clear_dont_fragment(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+          - Default value: `false`
         """
         return pulumi.get(self, "clear_dont_fragment")
 
@@ -374,7 +388,9 @@ class TransportWanVpnInterfaceIpsecFeatureArgs:
     @pulumi.getter(name="dpdInterval")
     def dpd_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        IKE keepalive interval (seconds) - Range: `10`-`3600` - Default value: `10`
+        IKE keepalive interval (seconds)
+          - Range: `10`-`3600`
+          - Default value: `10`
         """
         return pulumi.get(self, "dpd_interval")
 
@@ -398,7 +414,9 @@ class TransportWanVpnInterfaceIpsecFeatureArgs:
     @pulumi.getter(name="dpdRetries")
     def dpd_retries(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        IKE keepalive retries - Range: `2`-`60` - Default value: `3`
+        IKE keepalive retries
+          - Range: `2`-`60`
+          - Default value: `3`
         """
         return pulumi.get(self, "dpd_retries")
 
@@ -422,8 +440,9 @@ class TransportWanVpnInterfaceIpsecFeatureArgs:
     @pulumi.getter(name="ikeCiphersuite")
     def ike_ciphersuite(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        IKE identity the IKE preshared secret belongs to - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`,
-        `aes128-cbc-sha2` - Default value: `aes256-cbc-sha1`
+        IKE identity the IKE preshared secret belongs to
+          - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+          - Default value: `aes256-cbc-sha1`
         """
         return pulumi.get(self, "ike_ciphersuite")
 
@@ -447,7 +466,9 @@ class TransportWanVpnInterfaceIpsecFeatureArgs:
     @pulumi.getter(name="ikeDiffieHellmanGroup")
     def ike_diffie_hellman_group(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        IKE Diffie Hellman Groups - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24` - Default value: `16`
+        IKE Diffie Hellman Groups
+          - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
+          - Default value: `16`
         """
         return pulumi.get(self, "ike_diffie_hellman_group")
 
@@ -519,7 +540,9 @@ class TransportWanVpnInterfaceIpsecFeatureArgs:
     @pulumi.getter(name="ikeIntegrityProtocol")
     def ike_integrity_protocol(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        IKE integrity protocol - Choices: `main`, `aggressive` - Default value: `main`
+        IKE integrity protocol
+          - Choices: `main`, `aggressive`
+          - Default value: `main`
         """
         return pulumi.get(self, "ike_integrity_protocol")
 
@@ -567,7 +590,9 @@ class TransportWanVpnInterfaceIpsecFeatureArgs:
     @pulumi.getter(name="ikeRekeyInterval")
     def ike_rekey_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        IKE rekey interval <60..86400> seconds - Range: `60`-`86400` - Default value: `14400`
+        IKE rekey interval <60..86400> seconds
+          - Range: `60`-`86400`
+          - Default value: `14400`
         """
         return pulumi.get(self, "ike_rekey_interval")
 
@@ -591,7 +616,9 @@ class TransportWanVpnInterfaceIpsecFeatureArgs:
     @pulumi.getter(name="ikeVersion")
     def ike_version(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        IKE Version <1..2> - Range: `1`-`2` - Default value: `1`
+        IKE Version <1..2>
+          - Range: `1`-`2`
+          - Default value: `1`
         """
         return pulumi.get(self, "ike_version")
 
@@ -651,7 +678,9 @@ class TransportWanVpnInterfaceIpsecFeatureArgs:
     @pulumi.getter(name="ipMtu")
     def ip_mtu(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Interface MTU <68..9216>, in bytes - Range: `68`-`9216` - Default value: `1500`
+        Interface MTU <68..9216>, in bytes
+          - Range: `68`-`9216`
+          - Default value: `1500`
         """
         return pulumi.get(self, "ip_mtu")
 
@@ -675,9 +704,9 @@ class TransportWanVpnInterfaceIpsecFeatureArgs:
     @pulumi.getter(name="ipsecCiphersuite")
     def ipsec_ciphersuite(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        IPsec(ESP) encryption and integrity protocol - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`,
-        `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512` - Default value:
-        `aes256-gcm`
+        IPsec(ESP) encryption and integrity protocol
+          - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
+          - Default value: `aes256-gcm`
         """
         return pulumi.get(self, "ipsec_ciphersuite")
 
@@ -701,7 +730,9 @@ class TransportWanVpnInterfaceIpsecFeatureArgs:
     @pulumi.getter(name="ipsecRekeyInterval")
     def ipsec_rekey_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        IPsec rekey interval <300..1209600> seconds - Range: `120`-`2592000` - Default value: `3600`
+        IPsec rekey interval <300..1209600> seconds
+          - Range: `120`-`2592000`
+          - Default value: `3600`
         """
         return pulumi.get(self, "ipsec_rekey_interval")
 
@@ -725,7 +756,9 @@ class TransportWanVpnInterfaceIpsecFeatureArgs:
     @pulumi.getter(name="ipsecReplayWindow")
     def ipsec_replay_window(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Replay window size 32..8192 (must be a power of 2) - Range: `64`-`4096` - Default value: `512`
+        Replay window size 32..8192 (must be a power of 2)
+          - Range: `64`-`4096`
+          - Default value: `512`
         """
         return pulumi.get(self, "ipsec_replay_window")
 
@@ -770,11 +803,7 @@ class TransportWanVpnInterfaceIpsecFeatureArgs:
     @pulumi.getter(name="ipv4SubnetMask")
     def ipv4_subnet_mask(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "ipv4_subnet_mask")
 
@@ -810,8 +839,9 @@ class TransportWanVpnInterfaceIpsecFeatureArgs:
     @pulumi.getter(name="perfectForwardSecrecy")
     def perfect_forward_secrecy(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        IPsec perfect forward secrecy settings - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`,
-        `group-19`, `group-20`, `group-21`, `group-24`, `none` - Default value: `group-16`
+        IPsec perfect forward secrecy settings
+          - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+          - Default value: `group-16`
         """
         return pulumi.get(self, "perfect_forward_secrecy")
 
@@ -835,7 +865,8 @@ class TransportWanVpnInterfaceIpsecFeatureArgs:
     @pulumi.getter
     def shutdown(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Administrative state - Default value: `true`
+        Administrative state
+          - Default value: `true`
         """
         return pulumi.get(self, "shutdown")
 
@@ -859,7 +890,8 @@ class TransportWanVpnInterfaceIpsecFeatureArgs:
     @pulumi.getter(name="tcpMss")
     def tcp_mss(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        TCP MSS on SYN packets, in bytes
+          - Range: `500`-`1460`
         """
         return pulumi.get(self, "tcp_mss")
 
@@ -928,11 +960,7 @@ class TransportWanVpnInterfaceIpsecFeatureArgs:
     @pulumi.getter(name="tunnelDestinationIpv4SubnetMask")
     def tunnel_destination_ipv4_subnet_mask(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "tunnel_destination_ipv4_subnet_mask")
 
@@ -1025,11 +1053,7 @@ class TransportWanVpnInterfaceIpsecFeatureArgs:
     @pulumi.getter(name="tunnelSourceIpv4SubnetMask")
     def tunnel_source_ipv4_subnet_mask(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "tunnel_source_ipv4_subnet_mask")
 
@@ -1119,81 +1143,93 @@ class _TransportWanVpnInterfaceIpsecFeatureState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering TransportWanVpnInterfaceIpsecFeature resources.
-        :param pulumi.Input[_builtins.str] application_tunnel_type: Enable Application Tunnel Type - Choices: `none`, `sig`
+        :param pulumi.Input[_builtins.str] application_tunnel_type: Enable Application Tunnel Type
+                 - Choices: `none`, `sig`
         :param pulumi.Input[_builtins.str] application_tunnel_type_variable: Variable name
-        :param pulumi.Input[_builtins.bool] clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        :param pulumi.Input[_builtins.bool] clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] clear_dont_fragment_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.int] dpd_interval: IKE keepalive interval (seconds) - Range: `10`-`3600` - Default value: `10`
+        :param pulumi.Input[_builtins.int] dpd_interval: IKE keepalive interval (seconds)
+                 - Range: `10`-`3600`
+                 - Default value: `10`
         :param pulumi.Input[_builtins.str] dpd_interval_variable: Variable name
-        :param pulumi.Input[_builtins.int] dpd_retries: IKE keepalive retries - Range: `2`-`60` - Default value: `3`
+        :param pulumi.Input[_builtins.int] dpd_retries: IKE keepalive retries
+                 - Range: `2`-`60`
+                 - Default value: `3`
         :param pulumi.Input[_builtins.str] dpd_retries_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.str] ike_ciphersuite: IKE identity the IKE preshared secret belongs to - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`,
-               `aes128-cbc-sha2` - Default value: `aes256-cbc-sha1`
+        :param pulumi.Input[_builtins.str] ike_ciphersuite: IKE identity the IKE preshared secret belongs to
+                 - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+                 - Default value: `aes256-cbc-sha1`
         :param pulumi.Input[_builtins.str] ike_ciphersuite_variable: Variable name
-        :param pulumi.Input[_builtins.str] ike_diffie_hellman_group: IKE Diffie Hellman Groups - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24` - Default value: `16`
+        :param pulumi.Input[_builtins.str] ike_diffie_hellman_group: IKE Diffie Hellman Groups
+                 - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
+                 - Default value: `16`
         :param pulumi.Input[_builtins.str] ike_diffie_hellman_group_variable: Variable name
         :param pulumi.Input[_builtins.str] ike_id_local_end_point: IKE ID for the local endpoint. Input IPv4 address, domain name, or email address
         :param pulumi.Input[_builtins.str] ike_id_local_end_point_variable: Variable name
         :param pulumi.Input[_builtins.str] ike_id_remote_end_point: IKE ID for the remote endpoint. Input IPv4 address, domain name, or email address
         :param pulumi.Input[_builtins.str] ike_id_remote_end_point_variable: Variable name
-        :param pulumi.Input[_builtins.str] ike_integrity_protocol: IKE integrity protocol - Choices: `main`, `aggressive` - Default value: `main`
+        :param pulumi.Input[_builtins.str] ike_integrity_protocol: IKE integrity protocol
+                 - Choices: `main`, `aggressive`
+                 - Default value: `main`
         :param pulumi.Input[_builtins.str] ike_integrity_protocol_variable: Variable name
         :param pulumi.Input[_builtins.str] ike_preshared_key: Use preshared key to authenticate IKE peer
         :param pulumi.Input[_builtins.str] ike_preshared_key_variable: Variable name
-        :param pulumi.Input[_builtins.int] ike_rekey_interval: IKE rekey interval <60..86400> seconds - Range: `60`-`86400` - Default value: `14400`
+        :param pulumi.Input[_builtins.int] ike_rekey_interval: IKE rekey interval <60..86400> seconds
+                 - Range: `60`-`86400`
+                 - Default value: `14400`
         :param pulumi.Input[_builtins.str] ike_rekey_interval_variable: Variable name
-        :param pulumi.Input[_builtins.int] ike_version: IKE Version <1..2> - Range: `1`-`2` - Default value: `1`
+        :param pulumi.Input[_builtins.int] ike_version: IKE Version <1..2>
+                 - Range: `1`-`2`
+                 - Default value: `1`
         :param pulumi.Input[_builtins.str] interface_description: Interface description
         :param pulumi.Input[_builtins.str] interface_description_variable: Variable name
         :param pulumi.Input[_builtins.str] interface_name: Interface name: IPsec when present
         :param pulumi.Input[_builtins.str] interface_name_variable: Variable name
-        :param pulumi.Input[_builtins.int] ip_mtu: Interface MTU <68..9216>, in bytes - Range: `68`-`9216` - Default value: `1500`
+        :param pulumi.Input[_builtins.int] ip_mtu: Interface MTU <68..9216>, in bytes
+                 - Range: `68`-`9216`
+                 - Default value: `1500`
         :param pulumi.Input[_builtins.str] ip_mtu_variable: Variable name
-        :param pulumi.Input[_builtins.str] ipsec_ciphersuite: IPsec(ESP) encryption and integrity protocol - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`,
-               `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512` - Default value:
-               `aes256-gcm`
+        :param pulumi.Input[_builtins.str] ipsec_ciphersuite: IPsec(ESP) encryption and integrity protocol
+                 - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
+                 - Default value: `aes256-gcm`
         :param pulumi.Input[_builtins.str] ipsec_ciphersuite_variable: Variable name
-        :param pulumi.Input[_builtins.int] ipsec_rekey_interval: IPsec rekey interval <300..1209600> seconds - Range: `120`-`2592000` - Default value: `3600`
+        :param pulumi.Input[_builtins.int] ipsec_rekey_interval: IPsec rekey interval <300..1209600> seconds
+                 - Range: `120`-`2592000`
+                 - Default value: `3600`
         :param pulumi.Input[_builtins.str] ipsec_rekey_interval_variable: Variable name
-        :param pulumi.Input[_builtins.int] ipsec_replay_window: Replay window size 32..8192 (must be a power of 2) - Range: `64`-`4096` - Default value: `512`
+        :param pulumi.Input[_builtins.int] ipsec_replay_window: Replay window size 32..8192 (must be a power of 2)
+                 - Range: `64`-`4096`
+                 - Default value: `512`
         :param pulumi.Input[_builtins.str] ipsec_replay_window_variable: Variable name
         :param pulumi.Input[_builtins.str] ipv4_address_variable: Variable name
-        :param pulumi.Input[_builtins.str] ipv4_subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-               `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-               `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-               `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-               `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[_builtins.str] ipv4_subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] ipv4_subnet_mask_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.str] perfect_forward_secrecy: IPsec perfect forward secrecy settings - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`,
-               `group-19`, `group-20`, `group-21`, `group-24`, `none` - Default value: `group-16`
+        :param pulumi.Input[_builtins.str] perfect_forward_secrecy: IPsec perfect forward secrecy settings
+                 - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+                 - Default value: `group-16`
         :param pulumi.Input[_builtins.str] perfect_forward_secrecy_variable: Variable name
-        :param pulumi.Input[_builtins.bool] shutdown: Administrative state - Default value: `true`
+        :param pulumi.Input[_builtins.bool] shutdown: Administrative state
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
-        :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes
+                 - Range: `500`-`1460`
         :param pulumi.Input[_builtins.str] tcp_mss_variable: Variable name
         :param pulumi.Input[_builtins.str] tracker_id: Enable tracker for this interface
         :param pulumi.Input[_builtins.str] tracker_id_variable: Variable name
         :param pulumi.Input[_builtins.str] transport_wan_vpn_feature_id: Transport WAN VPN Feature ID
         :param pulumi.Input[_builtins.str] tunnel_destination_ipv4_address_variable: Variable name
-        :param pulumi.Input[_builtins.str] tunnel_destination_ipv4_subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-               `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-               `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-               `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-               `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[_builtins.str] tunnel_destination_ipv4_subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] tunnel_destination_ipv4_subnet_mask_variable: Variable name
         :param pulumi.Input[_builtins.str] tunnel_route_via: <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
         :param pulumi.Input[_builtins.str] tunnel_route_via_variable: Variable name
         :param pulumi.Input[_builtins.str] tunnel_source_interface: <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
         :param pulumi.Input[_builtins.str] tunnel_source_interface_variable: Variable name
         :param pulumi.Input[_builtins.str] tunnel_source_ipv4_address_variable: Variable name
-        :param pulumi.Input[_builtins.str] tunnel_source_ipv4_subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-               `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-               `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-               `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-               `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[_builtins.str] tunnel_source_ipv4_subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] tunnel_source_ipv4_subnet_mask_variable: Variable name
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
@@ -1330,7 +1366,8 @@ class _TransportWanVpnInterfaceIpsecFeatureState:
     @pulumi.getter(name="applicationTunnelType")
     def application_tunnel_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Enable Application Tunnel Type - Choices: `none`, `sig`
+        Enable Application Tunnel Type
+          - Choices: `none`, `sig`
         """
         return pulumi.get(self, "application_tunnel_type")
 
@@ -1354,7 +1391,8 @@ class _TransportWanVpnInterfaceIpsecFeatureState:
     @pulumi.getter(name="clearDontFragment")
     def clear_dont_fragment(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+          - Default value: `false`
         """
         return pulumi.get(self, "clear_dont_fragment")
 
@@ -1390,7 +1428,9 @@ class _TransportWanVpnInterfaceIpsecFeatureState:
     @pulumi.getter(name="dpdInterval")
     def dpd_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        IKE keepalive interval (seconds) - Range: `10`-`3600` - Default value: `10`
+        IKE keepalive interval (seconds)
+          - Range: `10`-`3600`
+          - Default value: `10`
         """
         return pulumi.get(self, "dpd_interval")
 
@@ -1414,7 +1454,9 @@ class _TransportWanVpnInterfaceIpsecFeatureState:
     @pulumi.getter(name="dpdRetries")
     def dpd_retries(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        IKE keepalive retries - Range: `2`-`60` - Default value: `3`
+        IKE keepalive retries
+          - Range: `2`-`60`
+          - Default value: `3`
         """
         return pulumi.get(self, "dpd_retries")
 
@@ -1450,8 +1492,9 @@ class _TransportWanVpnInterfaceIpsecFeatureState:
     @pulumi.getter(name="ikeCiphersuite")
     def ike_ciphersuite(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        IKE identity the IKE preshared secret belongs to - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`,
-        `aes128-cbc-sha2` - Default value: `aes256-cbc-sha1`
+        IKE identity the IKE preshared secret belongs to
+          - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+          - Default value: `aes256-cbc-sha1`
         """
         return pulumi.get(self, "ike_ciphersuite")
 
@@ -1475,7 +1518,9 @@ class _TransportWanVpnInterfaceIpsecFeatureState:
     @pulumi.getter(name="ikeDiffieHellmanGroup")
     def ike_diffie_hellman_group(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        IKE Diffie Hellman Groups - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24` - Default value: `16`
+        IKE Diffie Hellman Groups
+          - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
+          - Default value: `16`
         """
         return pulumi.get(self, "ike_diffie_hellman_group")
 
@@ -1547,7 +1592,9 @@ class _TransportWanVpnInterfaceIpsecFeatureState:
     @pulumi.getter(name="ikeIntegrityProtocol")
     def ike_integrity_protocol(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        IKE integrity protocol - Choices: `main`, `aggressive` - Default value: `main`
+        IKE integrity protocol
+          - Choices: `main`, `aggressive`
+          - Default value: `main`
         """
         return pulumi.get(self, "ike_integrity_protocol")
 
@@ -1595,7 +1642,9 @@ class _TransportWanVpnInterfaceIpsecFeatureState:
     @pulumi.getter(name="ikeRekeyInterval")
     def ike_rekey_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        IKE rekey interval <60..86400> seconds - Range: `60`-`86400` - Default value: `14400`
+        IKE rekey interval <60..86400> seconds
+          - Range: `60`-`86400`
+          - Default value: `14400`
         """
         return pulumi.get(self, "ike_rekey_interval")
 
@@ -1619,7 +1668,9 @@ class _TransportWanVpnInterfaceIpsecFeatureState:
     @pulumi.getter(name="ikeVersion")
     def ike_version(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        IKE Version <1..2> - Range: `1`-`2` - Default value: `1`
+        IKE Version <1..2>
+          - Range: `1`-`2`
+          - Default value: `1`
         """
         return pulumi.get(self, "ike_version")
 
@@ -1679,7 +1730,9 @@ class _TransportWanVpnInterfaceIpsecFeatureState:
     @pulumi.getter(name="ipMtu")
     def ip_mtu(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Interface MTU <68..9216>, in bytes - Range: `68`-`9216` - Default value: `1500`
+        Interface MTU <68..9216>, in bytes
+          - Range: `68`-`9216`
+          - Default value: `1500`
         """
         return pulumi.get(self, "ip_mtu")
 
@@ -1703,9 +1756,9 @@ class _TransportWanVpnInterfaceIpsecFeatureState:
     @pulumi.getter(name="ipsecCiphersuite")
     def ipsec_ciphersuite(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        IPsec(ESP) encryption and integrity protocol - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`,
-        `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512` - Default value:
-        `aes256-gcm`
+        IPsec(ESP) encryption and integrity protocol
+          - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
+          - Default value: `aes256-gcm`
         """
         return pulumi.get(self, "ipsec_ciphersuite")
 
@@ -1729,7 +1782,9 @@ class _TransportWanVpnInterfaceIpsecFeatureState:
     @pulumi.getter(name="ipsecRekeyInterval")
     def ipsec_rekey_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        IPsec rekey interval <300..1209600> seconds - Range: `120`-`2592000` - Default value: `3600`
+        IPsec rekey interval <300..1209600> seconds
+          - Range: `120`-`2592000`
+          - Default value: `3600`
         """
         return pulumi.get(self, "ipsec_rekey_interval")
 
@@ -1753,7 +1808,9 @@ class _TransportWanVpnInterfaceIpsecFeatureState:
     @pulumi.getter(name="ipsecReplayWindow")
     def ipsec_replay_window(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Replay window size 32..8192 (must be a power of 2) - Range: `64`-`4096` - Default value: `512`
+        Replay window size 32..8192 (must be a power of 2)
+          - Range: `64`-`4096`
+          - Default value: `512`
         """
         return pulumi.get(self, "ipsec_replay_window")
 
@@ -1798,11 +1855,7 @@ class _TransportWanVpnInterfaceIpsecFeatureState:
     @pulumi.getter(name="ipv4SubnetMask")
     def ipv4_subnet_mask(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "ipv4_subnet_mask")
 
@@ -1838,8 +1891,9 @@ class _TransportWanVpnInterfaceIpsecFeatureState:
     @pulumi.getter(name="perfectForwardSecrecy")
     def perfect_forward_secrecy(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        IPsec perfect forward secrecy settings - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`,
-        `group-19`, `group-20`, `group-21`, `group-24`, `none` - Default value: `group-16`
+        IPsec perfect forward secrecy settings
+          - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+          - Default value: `group-16`
         """
         return pulumi.get(self, "perfect_forward_secrecy")
 
@@ -1863,7 +1917,8 @@ class _TransportWanVpnInterfaceIpsecFeatureState:
     @pulumi.getter
     def shutdown(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Administrative state - Default value: `true`
+        Administrative state
+          - Default value: `true`
         """
         return pulumi.get(self, "shutdown")
 
@@ -1887,7 +1942,8 @@ class _TransportWanVpnInterfaceIpsecFeatureState:
     @pulumi.getter(name="tcpMss")
     def tcp_mss(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        TCP MSS on SYN packets, in bytes
+          - Range: `500`-`1460`
         """
         return pulumi.get(self, "tcp_mss")
 
@@ -1968,11 +2024,7 @@ class _TransportWanVpnInterfaceIpsecFeatureState:
     @pulumi.getter(name="tunnelDestinationIpv4SubnetMask")
     def tunnel_destination_ipv4_subnet_mask(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "tunnel_destination_ipv4_subnet_mask")
 
@@ -2065,11 +2117,7 @@ class _TransportWanVpnInterfaceIpsecFeatureState:
     @pulumi.getter(name="tunnelSourceIpv4SubnetMask")
     def tunnel_source_ipv4_subnet_mask(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "tunnel_source_ipv4_subnet_mask")
 
@@ -2230,81 +2278,93 @@ class TransportWanVpnInterfaceIpsecFeature(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] application_tunnel_type: Enable Application Tunnel Type - Choices: `none`, `sig`
+        :param pulumi.Input[_builtins.str] application_tunnel_type: Enable Application Tunnel Type
+                 - Choices: `none`, `sig`
         :param pulumi.Input[_builtins.str] application_tunnel_type_variable: Variable name
-        :param pulumi.Input[_builtins.bool] clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        :param pulumi.Input[_builtins.bool] clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] clear_dont_fragment_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.int] dpd_interval: IKE keepalive interval (seconds) - Range: `10`-`3600` - Default value: `10`
+        :param pulumi.Input[_builtins.int] dpd_interval: IKE keepalive interval (seconds)
+                 - Range: `10`-`3600`
+                 - Default value: `10`
         :param pulumi.Input[_builtins.str] dpd_interval_variable: Variable name
-        :param pulumi.Input[_builtins.int] dpd_retries: IKE keepalive retries - Range: `2`-`60` - Default value: `3`
+        :param pulumi.Input[_builtins.int] dpd_retries: IKE keepalive retries
+                 - Range: `2`-`60`
+                 - Default value: `3`
         :param pulumi.Input[_builtins.str] dpd_retries_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.str] ike_ciphersuite: IKE identity the IKE preshared secret belongs to - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`,
-               `aes128-cbc-sha2` - Default value: `aes256-cbc-sha1`
+        :param pulumi.Input[_builtins.str] ike_ciphersuite: IKE identity the IKE preshared secret belongs to
+                 - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+                 - Default value: `aes256-cbc-sha1`
         :param pulumi.Input[_builtins.str] ike_ciphersuite_variable: Variable name
-        :param pulumi.Input[_builtins.str] ike_diffie_hellman_group: IKE Diffie Hellman Groups - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24` - Default value: `16`
+        :param pulumi.Input[_builtins.str] ike_diffie_hellman_group: IKE Diffie Hellman Groups
+                 - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
+                 - Default value: `16`
         :param pulumi.Input[_builtins.str] ike_diffie_hellman_group_variable: Variable name
         :param pulumi.Input[_builtins.str] ike_id_local_end_point: IKE ID for the local endpoint. Input IPv4 address, domain name, or email address
         :param pulumi.Input[_builtins.str] ike_id_local_end_point_variable: Variable name
         :param pulumi.Input[_builtins.str] ike_id_remote_end_point: IKE ID for the remote endpoint. Input IPv4 address, domain name, or email address
         :param pulumi.Input[_builtins.str] ike_id_remote_end_point_variable: Variable name
-        :param pulumi.Input[_builtins.str] ike_integrity_protocol: IKE integrity protocol - Choices: `main`, `aggressive` - Default value: `main`
+        :param pulumi.Input[_builtins.str] ike_integrity_protocol: IKE integrity protocol
+                 - Choices: `main`, `aggressive`
+                 - Default value: `main`
         :param pulumi.Input[_builtins.str] ike_integrity_protocol_variable: Variable name
         :param pulumi.Input[_builtins.str] ike_preshared_key: Use preshared key to authenticate IKE peer
         :param pulumi.Input[_builtins.str] ike_preshared_key_variable: Variable name
-        :param pulumi.Input[_builtins.int] ike_rekey_interval: IKE rekey interval <60..86400> seconds - Range: `60`-`86400` - Default value: `14400`
+        :param pulumi.Input[_builtins.int] ike_rekey_interval: IKE rekey interval <60..86400> seconds
+                 - Range: `60`-`86400`
+                 - Default value: `14400`
         :param pulumi.Input[_builtins.str] ike_rekey_interval_variable: Variable name
-        :param pulumi.Input[_builtins.int] ike_version: IKE Version <1..2> - Range: `1`-`2` - Default value: `1`
+        :param pulumi.Input[_builtins.int] ike_version: IKE Version <1..2>
+                 - Range: `1`-`2`
+                 - Default value: `1`
         :param pulumi.Input[_builtins.str] interface_description: Interface description
         :param pulumi.Input[_builtins.str] interface_description_variable: Variable name
         :param pulumi.Input[_builtins.str] interface_name: Interface name: IPsec when present
         :param pulumi.Input[_builtins.str] interface_name_variable: Variable name
-        :param pulumi.Input[_builtins.int] ip_mtu: Interface MTU <68..9216>, in bytes - Range: `68`-`9216` - Default value: `1500`
+        :param pulumi.Input[_builtins.int] ip_mtu: Interface MTU <68..9216>, in bytes
+                 - Range: `68`-`9216`
+                 - Default value: `1500`
         :param pulumi.Input[_builtins.str] ip_mtu_variable: Variable name
-        :param pulumi.Input[_builtins.str] ipsec_ciphersuite: IPsec(ESP) encryption and integrity protocol - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`,
-               `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512` - Default value:
-               `aes256-gcm`
+        :param pulumi.Input[_builtins.str] ipsec_ciphersuite: IPsec(ESP) encryption and integrity protocol
+                 - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
+                 - Default value: `aes256-gcm`
         :param pulumi.Input[_builtins.str] ipsec_ciphersuite_variable: Variable name
-        :param pulumi.Input[_builtins.int] ipsec_rekey_interval: IPsec rekey interval <300..1209600> seconds - Range: `120`-`2592000` - Default value: `3600`
+        :param pulumi.Input[_builtins.int] ipsec_rekey_interval: IPsec rekey interval <300..1209600> seconds
+                 - Range: `120`-`2592000`
+                 - Default value: `3600`
         :param pulumi.Input[_builtins.str] ipsec_rekey_interval_variable: Variable name
-        :param pulumi.Input[_builtins.int] ipsec_replay_window: Replay window size 32..8192 (must be a power of 2) - Range: `64`-`4096` - Default value: `512`
+        :param pulumi.Input[_builtins.int] ipsec_replay_window: Replay window size 32..8192 (must be a power of 2)
+                 - Range: `64`-`4096`
+                 - Default value: `512`
         :param pulumi.Input[_builtins.str] ipsec_replay_window_variable: Variable name
         :param pulumi.Input[_builtins.str] ipv4_address_variable: Variable name
-        :param pulumi.Input[_builtins.str] ipv4_subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-               `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-               `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-               `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-               `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[_builtins.str] ipv4_subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] ipv4_subnet_mask_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.str] perfect_forward_secrecy: IPsec perfect forward secrecy settings - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`,
-               `group-19`, `group-20`, `group-21`, `group-24`, `none` - Default value: `group-16`
+        :param pulumi.Input[_builtins.str] perfect_forward_secrecy: IPsec perfect forward secrecy settings
+                 - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+                 - Default value: `group-16`
         :param pulumi.Input[_builtins.str] perfect_forward_secrecy_variable: Variable name
-        :param pulumi.Input[_builtins.bool] shutdown: Administrative state - Default value: `true`
+        :param pulumi.Input[_builtins.bool] shutdown: Administrative state
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
-        :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes
+                 - Range: `500`-`1460`
         :param pulumi.Input[_builtins.str] tcp_mss_variable: Variable name
         :param pulumi.Input[_builtins.str] tracker_id: Enable tracker for this interface
         :param pulumi.Input[_builtins.str] tracker_id_variable: Variable name
         :param pulumi.Input[_builtins.str] transport_wan_vpn_feature_id: Transport WAN VPN Feature ID
         :param pulumi.Input[_builtins.str] tunnel_destination_ipv4_address_variable: Variable name
-        :param pulumi.Input[_builtins.str] tunnel_destination_ipv4_subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-               `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-               `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-               `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-               `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[_builtins.str] tunnel_destination_ipv4_subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] tunnel_destination_ipv4_subnet_mask_variable: Variable name
         :param pulumi.Input[_builtins.str] tunnel_route_via: <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
         :param pulumi.Input[_builtins.str] tunnel_route_via_variable: Variable name
         :param pulumi.Input[_builtins.str] tunnel_source_interface: <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
         :param pulumi.Input[_builtins.str] tunnel_source_interface_variable: Variable name
         :param pulumi.Input[_builtins.str] tunnel_source_ipv4_address_variable: Variable name
-        :param pulumi.Input[_builtins.str] tunnel_source_ipv4_subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-               `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-               `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-               `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-               `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[_builtins.str] tunnel_source_ipv4_subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] tunnel_source_ipv4_subnet_mask_variable: Variable name
         """
         ...
@@ -2605,81 +2665,93 @@ class TransportWanVpnInterfaceIpsecFeature(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] application_tunnel_type: Enable Application Tunnel Type - Choices: `none`, `sig`
+        :param pulumi.Input[_builtins.str] application_tunnel_type: Enable Application Tunnel Type
+                 - Choices: `none`, `sig`
         :param pulumi.Input[_builtins.str] application_tunnel_type_variable: Variable name
-        :param pulumi.Input[_builtins.bool] clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        :param pulumi.Input[_builtins.bool] clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] clear_dont_fragment_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.int] dpd_interval: IKE keepalive interval (seconds) - Range: `10`-`3600` - Default value: `10`
+        :param pulumi.Input[_builtins.int] dpd_interval: IKE keepalive interval (seconds)
+                 - Range: `10`-`3600`
+                 - Default value: `10`
         :param pulumi.Input[_builtins.str] dpd_interval_variable: Variable name
-        :param pulumi.Input[_builtins.int] dpd_retries: IKE keepalive retries - Range: `2`-`60` - Default value: `3`
+        :param pulumi.Input[_builtins.int] dpd_retries: IKE keepalive retries
+                 - Range: `2`-`60`
+                 - Default value: `3`
         :param pulumi.Input[_builtins.str] dpd_retries_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.str] ike_ciphersuite: IKE identity the IKE preshared secret belongs to - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`,
-               `aes128-cbc-sha2` - Default value: `aes256-cbc-sha1`
+        :param pulumi.Input[_builtins.str] ike_ciphersuite: IKE identity the IKE preshared secret belongs to
+                 - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+                 - Default value: `aes256-cbc-sha1`
         :param pulumi.Input[_builtins.str] ike_ciphersuite_variable: Variable name
-        :param pulumi.Input[_builtins.str] ike_diffie_hellman_group: IKE Diffie Hellman Groups - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24` - Default value: `16`
+        :param pulumi.Input[_builtins.str] ike_diffie_hellman_group: IKE Diffie Hellman Groups
+                 - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
+                 - Default value: `16`
         :param pulumi.Input[_builtins.str] ike_diffie_hellman_group_variable: Variable name
         :param pulumi.Input[_builtins.str] ike_id_local_end_point: IKE ID for the local endpoint. Input IPv4 address, domain name, or email address
         :param pulumi.Input[_builtins.str] ike_id_local_end_point_variable: Variable name
         :param pulumi.Input[_builtins.str] ike_id_remote_end_point: IKE ID for the remote endpoint. Input IPv4 address, domain name, or email address
         :param pulumi.Input[_builtins.str] ike_id_remote_end_point_variable: Variable name
-        :param pulumi.Input[_builtins.str] ike_integrity_protocol: IKE integrity protocol - Choices: `main`, `aggressive` - Default value: `main`
+        :param pulumi.Input[_builtins.str] ike_integrity_protocol: IKE integrity protocol
+                 - Choices: `main`, `aggressive`
+                 - Default value: `main`
         :param pulumi.Input[_builtins.str] ike_integrity_protocol_variable: Variable name
         :param pulumi.Input[_builtins.str] ike_preshared_key: Use preshared key to authenticate IKE peer
         :param pulumi.Input[_builtins.str] ike_preshared_key_variable: Variable name
-        :param pulumi.Input[_builtins.int] ike_rekey_interval: IKE rekey interval <60..86400> seconds - Range: `60`-`86400` - Default value: `14400`
+        :param pulumi.Input[_builtins.int] ike_rekey_interval: IKE rekey interval <60..86400> seconds
+                 - Range: `60`-`86400`
+                 - Default value: `14400`
         :param pulumi.Input[_builtins.str] ike_rekey_interval_variable: Variable name
-        :param pulumi.Input[_builtins.int] ike_version: IKE Version <1..2> - Range: `1`-`2` - Default value: `1`
+        :param pulumi.Input[_builtins.int] ike_version: IKE Version <1..2>
+                 - Range: `1`-`2`
+                 - Default value: `1`
         :param pulumi.Input[_builtins.str] interface_description: Interface description
         :param pulumi.Input[_builtins.str] interface_description_variable: Variable name
         :param pulumi.Input[_builtins.str] interface_name: Interface name: IPsec when present
         :param pulumi.Input[_builtins.str] interface_name_variable: Variable name
-        :param pulumi.Input[_builtins.int] ip_mtu: Interface MTU <68..9216>, in bytes - Range: `68`-`9216` - Default value: `1500`
+        :param pulumi.Input[_builtins.int] ip_mtu: Interface MTU <68..9216>, in bytes
+                 - Range: `68`-`9216`
+                 - Default value: `1500`
         :param pulumi.Input[_builtins.str] ip_mtu_variable: Variable name
-        :param pulumi.Input[_builtins.str] ipsec_ciphersuite: IPsec(ESP) encryption and integrity protocol - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`,
-               `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512` - Default value:
-               `aes256-gcm`
+        :param pulumi.Input[_builtins.str] ipsec_ciphersuite: IPsec(ESP) encryption and integrity protocol
+                 - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
+                 - Default value: `aes256-gcm`
         :param pulumi.Input[_builtins.str] ipsec_ciphersuite_variable: Variable name
-        :param pulumi.Input[_builtins.int] ipsec_rekey_interval: IPsec rekey interval <300..1209600> seconds - Range: `120`-`2592000` - Default value: `3600`
+        :param pulumi.Input[_builtins.int] ipsec_rekey_interval: IPsec rekey interval <300..1209600> seconds
+                 - Range: `120`-`2592000`
+                 - Default value: `3600`
         :param pulumi.Input[_builtins.str] ipsec_rekey_interval_variable: Variable name
-        :param pulumi.Input[_builtins.int] ipsec_replay_window: Replay window size 32..8192 (must be a power of 2) - Range: `64`-`4096` - Default value: `512`
+        :param pulumi.Input[_builtins.int] ipsec_replay_window: Replay window size 32..8192 (must be a power of 2)
+                 - Range: `64`-`4096`
+                 - Default value: `512`
         :param pulumi.Input[_builtins.str] ipsec_replay_window_variable: Variable name
         :param pulumi.Input[_builtins.str] ipv4_address_variable: Variable name
-        :param pulumi.Input[_builtins.str] ipv4_subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-               `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-               `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-               `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-               `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[_builtins.str] ipv4_subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] ipv4_subnet_mask_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.str] perfect_forward_secrecy: IPsec perfect forward secrecy settings - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`,
-               `group-19`, `group-20`, `group-21`, `group-24`, `none` - Default value: `group-16`
+        :param pulumi.Input[_builtins.str] perfect_forward_secrecy: IPsec perfect forward secrecy settings
+                 - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+                 - Default value: `group-16`
         :param pulumi.Input[_builtins.str] perfect_forward_secrecy_variable: Variable name
-        :param pulumi.Input[_builtins.bool] shutdown: Administrative state - Default value: `true`
+        :param pulumi.Input[_builtins.bool] shutdown: Administrative state
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
-        :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes
+                 - Range: `500`-`1460`
         :param pulumi.Input[_builtins.str] tcp_mss_variable: Variable name
         :param pulumi.Input[_builtins.str] tracker_id: Enable tracker for this interface
         :param pulumi.Input[_builtins.str] tracker_id_variable: Variable name
         :param pulumi.Input[_builtins.str] transport_wan_vpn_feature_id: Transport WAN VPN Feature ID
         :param pulumi.Input[_builtins.str] tunnel_destination_ipv4_address_variable: Variable name
-        :param pulumi.Input[_builtins.str] tunnel_destination_ipv4_subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-               `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-               `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-               `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-               `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[_builtins.str] tunnel_destination_ipv4_subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] tunnel_destination_ipv4_subnet_mask_variable: Variable name
         :param pulumi.Input[_builtins.str] tunnel_route_via: <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
         :param pulumi.Input[_builtins.str] tunnel_route_via_variable: Variable name
         :param pulumi.Input[_builtins.str] tunnel_source_interface: <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
         :param pulumi.Input[_builtins.str] tunnel_source_interface_variable: Variable name
         :param pulumi.Input[_builtins.str] tunnel_source_ipv4_address_variable: Variable name
-        :param pulumi.Input[_builtins.str] tunnel_source_ipv4_subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-               `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-               `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-               `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-               `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[_builtins.str] tunnel_source_ipv4_subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] tunnel_source_ipv4_subnet_mask_variable: Variable name
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
@@ -2757,7 +2829,8 @@ class TransportWanVpnInterfaceIpsecFeature(pulumi.CustomResource):
     @pulumi.getter(name="applicationTunnelType")
     def application_tunnel_type(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Enable Application Tunnel Type - Choices: `none`, `sig`
+        Enable Application Tunnel Type
+          - Choices: `none`, `sig`
         """
         return pulumi.get(self, "application_tunnel_type")
 
@@ -2773,7 +2846,8 @@ class TransportWanVpnInterfaceIpsecFeature(pulumi.CustomResource):
     @pulumi.getter(name="clearDontFragment")
     def clear_dont_fragment(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+          - Default value: `false`
         """
         return pulumi.get(self, "clear_dont_fragment")
 
@@ -2797,7 +2871,9 @@ class TransportWanVpnInterfaceIpsecFeature(pulumi.CustomResource):
     @pulumi.getter(name="dpdInterval")
     def dpd_interval(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        IKE keepalive interval (seconds) - Range: `10`-`3600` - Default value: `10`
+        IKE keepalive interval (seconds)
+          - Range: `10`-`3600`
+          - Default value: `10`
         """
         return pulumi.get(self, "dpd_interval")
 
@@ -2813,7 +2889,9 @@ class TransportWanVpnInterfaceIpsecFeature(pulumi.CustomResource):
     @pulumi.getter(name="dpdRetries")
     def dpd_retries(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        IKE keepalive retries - Range: `2`-`60` - Default value: `3`
+        IKE keepalive retries
+          - Range: `2`-`60`
+          - Default value: `3`
         """
         return pulumi.get(self, "dpd_retries")
 
@@ -2837,8 +2915,9 @@ class TransportWanVpnInterfaceIpsecFeature(pulumi.CustomResource):
     @pulumi.getter(name="ikeCiphersuite")
     def ike_ciphersuite(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        IKE identity the IKE preshared secret belongs to - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`,
-        `aes128-cbc-sha2` - Default value: `aes256-cbc-sha1`
+        IKE identity the IKE preshared secret belongs to
+          - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+          - Default value: `aes256-cbc-sha1`
         """
         return pulumi.get(self, "ike_ciphersuite")
 
@@ -2854,7 +2933,9 @@ class TransportWanVpnInterfaceIpsecFeature(pulumi.CustomResource):
     @pulumi.getter(name="ikeDiffieHellmanGroup")
     def ike_diffie_hellman_group(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        IKE Diffie Hellman Groups - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24` - Default value: `16`
+        IKE Diffie Hellman Groups
+          - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
+          - Default value: `16`
         """
         return pulumi.get(self, "ike_diffie_hellman_group")
 
@@ -2902,7 +2983,9 @@ class TransportWanVpnInterfaceIpsecFeature(pulumi.CustomResource):
     @pulumi.getter(name="ikeIntegrityProtocol")
     def ike_integrity_protocol(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        IKE integrity protocol - Choices: `main`, `aggressive` - Default value: `main`
+        IKE integrity protocol
+          - Choices: `main`, `aggressive`
+          - Default value: `main`
         """
         return pulumi.get(self, "ike_integrity_protocol")
 
@@ -2934,7 +3017,9 @@ class TransportWanVpnInterfaceIpsecFeature(pulumi.CustomResource):
     @pulumi.getter(name="ikeRekeyInterval")
     def ike_rekey_interval(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        IKE rekey interval <60..86400> seconds - Range: `60`-`86400` - Default value: `14400`
+        IKE rekey interval <60..86400> seconds
+          - Range: `60`-`86400`
+          - Default value: `14400`
         """
         return pulumi.get(self, "ike_rekey_interval")
 
@@ -2950,7 +3035,9 @@ class TransportWanVpnInterfaceIpsecFeature(pulumi.CustomResource):
     @pulumi.getter(name="ikeVersion")
     def ike_version(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        IKE Version <1..2> - Range: `1`-`2` - Default value: `1`
+        IKE Version <1..2>
+          - Range: `1`-`2`
+          - Default value: `1`
         """
         return pulumi.get(self, "ike_version")
 
@@ -2990,7 +3077,9 @@ class TransportWanVpnInterfaceIpsecFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipMtu")
     def ip_mtu(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Interface MTU <68..9216>, in bytes - Range: `68`-`9216` - Default value: `1500`
+        Interface MTU <68..9216>, in bytes
+          - Range: `68`-`9216`
+          - Default value: `1500`
         """
         return pulumi.get(self, "ip_mtu")
 
@@ -3006,9 +3095,9 @@ class TransportWanVpnInterfaceIpsecFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipsecCiphersuite")
     def ipsec_ciphersuite(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        IPsec(ESP) encryption and integrity protocol - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`,
-        `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512` - Default value:
-        `aes256-gcm`
+        IPsec(ESP) encryption and integrity protocol
+          - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
+          - Default value: `aes256-gcm`
         """
         return pulumi.get(self, "ipsec_ciphersuite")
 
@@ -3024,7 +3113,9 @@ class TransportWanVpnInterfaceIpsecFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipsecRekeyInterval")
     def ipsec_rekey_interval(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        IPsec rekey interval <300..1209600> seconds - Range: `120`-`2592000` - Default value: `3600`
+        IPsec rekey interval <300..1209600> seconds
+          - Range: `120`-`2592000`
+          - Default value: `3600`
         """
         return pulumi.get(self, "ipsec_rekey_interval")
 
@@ -3040,7 +3131,9 @@ class TransportWanVpnInterfaceIpsecFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipsecReplayWindow")
     def ipsec_replay_window(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Replay window size 32..8192 (must be a power of 2) - Range: `64`-`4096` - Default value: `512`
+        Replay window size 32..8192 (must be a power of 2)
+          - Range: `64`-`4096`
+          - Default value: `512`
         """
         return pulumi.get(self, "ipsec_replay_window")
 
@@ -3069,11 +3162,7 @@ class TransportWanVpnInterfaceIpsecFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipv4SubnetMask")
     def ipv4_subnet_mask(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "ipv4_subnet_mask")
 
@@ -3097,8 +3186,9 @@ class TransportWanVpnInterfaceIpsecFeature(pulumi.CustomResource):
     @pulumi.getter(name="perfectForwardSecrecy")
     def perfect_forward_secrecy(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        IPsec perfect forward secrecy settings - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`,
-        `group-19`, `group-20`, `group-21`, `group-24`, `none` - Default value: `group-16`
+        IPsec perfect forward secrecy settings
+          - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+          - Default value: `group-16`
         """
         return pulumi.get(self, "perfect_forward_secrecy")
 
@@ -3114,7 +3204,8 @@ class TransportWanVpnInterfaceIpsecFeature(pulumi.CustomResource):
     @pulumi.getter
     def shutdown(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Administrative state - Default value: `true`
+        Administrative state
+          - Default value: `true`
         """
         return pulumi.get(self, "shutdown")
 
@@ -3130,7 +3221,8 @@ class TransportWanVpnInterfaceIpsecFeature(pulumi.CustomResource):
     @pulumi.getter(name="tcpMss")
     def tcp_mss(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        TCP MSS on SYN packets, in bytes
+          - Range: `500`-`1460`
         """
         return pulumi.get(self, "tcp_mss")
 
@@ -3183,11 +3275,7 @@ class TransportWanVpnInterfaceIpsecFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelDestinationIpv4SubnetMask")
     def tunnel_destination_ipv4_subnet_mask(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "tunnel_destination_ipv4_subnet_mask")
 
@@ -3248,11 +3336,7 @@ class TransportWanVpnInterfaceIpsecFeature(pulumi.CustomResource):
     @pulumi.getter(name="tunnelSourceIpv4SubnetMask")
     def tunnel_source_ipv4_subnet_mask(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "tunnel_source_ipv4_subnet_mask")
 

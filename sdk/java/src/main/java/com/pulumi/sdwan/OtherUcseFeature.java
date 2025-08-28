@@ -41,58 +41,64 @@ import javax.annotation.Nullable;
 @ResourceType(type="sdwan:index/otherUcseFeature:OtherUcseFeature")
 public class OtherUcseFeature extends com.pulumi.resources.CustomResource {
     /**
-     * Dedicated - Default value: `true`
+     * Dedicated
+     *   - Default value: `true`
      * 
      */
     @Export(name="accessPortDedicated", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> accessPortDedicated;
 
     /**
-     * @return Dedicated - Default value: `true`
+     * @return Dedicated
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> accessPortDedicated() {
         return Codegen.optional(this.accessPortDedicated);
     }
     /**
-     * , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge2`, `te2`
+     * , Attribute conditional on `access_port_dedicated` being equal to `false`
+     *   - Choices: `ge2`, `te2`
      * 
      */
     @Export(name="accessPortSharedFailoverType", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> accessPortSharedFailoverType;
 
     /**
-     * @return , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge2`, `te2`
+     * @return , Attribute conditional on `access_port_dedicated` being equal to `false`
+     *   - Choices: `ge2`, `te2`
      * 
      */
     public Output<Optional<String>> accessPortSharedFailoverType() {
         return Codegen.optional(this.accessPortSharedFailoverType);
     }
     /**
-     * , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
-     * `console`, `failover`
+     * , Attribute conditional on `access_port_dedicated` being equal to `false`
+     *   - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
      * 
      */
     @Export(name="accessPortSharedType", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> accessPortSharedType;
 
     /**
-     * @return , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
-     * `console`, `failover`
+     * @return , Attribute conditional on `access_port_dedicated` being equal to `false`
+     *   - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
      * 
      */
     public Output<Optional<String>> accessPortSharedType() {
         return Codegen.optional(this.accessPortSharedType);
     }
     /**
-     * Assign priority - Range: `0`-`7`
+     * Assign priority
+     *   - Range: `0`-`7`
      * 
      */
     @Export(name="assignPriority", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> assignPriority;
 
     /**
-     * @return Assign priority - Range: `0`-`7`
+     * @return Assign priority
+     *   - Range: `0`-`7`
      * 
      */
     public Output<Optional<Integer>> assignPriority() {
@@ -113,14 +119,16 @@ public class OtherUcseFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.assignPriorityVariable);
     }
     /**
-     * Bay - Range: `0`-`2`
+     * Bay
+     *   - Range: `0`-`2`
      * 
      */
     @Export(name="bay", refs={Integer.class}, tree="[0]")
     private Output<Integer> bay;
 
     /**
-     * @return Bay - Range: `0`-`2`
+     * @return Bay
+     *   - Range: `0`-`2`
      * 
      */
     public Output<Integer> bay() {
@@ -239,14 +247,16 @@ public class OtherUcseFeature extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * Slot - Range: `0`-`3`
+     * Slot
+     *   - Range: `0`-`3`
      * 
      */
     @Export(name="slot", refs={Integer.class}, tree="[0]")
     private Output<Integer> slot;
 
     /**
-     * @return Slot - Range: `0`-`3`
+     * @return Slot
+     *   - Range: `0`-`3`
      * 
      */
     public Output<Integer> slot() {
@@ -267,14 +277,16 @@ public class OtherUcseFeature extends com.pulumi.resources.CustomResource {
         return this.version;
     }
     /**
-     * Assign Vlan Id - Range: `2`-`4095`
+     * Assign Vlan Id
+     *   - Range: `2`-`4095`
      * 
      */
     @Export(name="vlanId", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> vlanId;
 
     /**
-     * @return Assign Vlan Id - Range: `2`-`4095`
+     * @return Assign Vlan Id
+     *   - Range: `2`-`4095`
      * 
      */
     public Output<Optional<Integer>> vlanId() {

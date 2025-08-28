@@ -45,9 +45,12 @@ class LocalizedPolicyArgs:
         :param pulumi.Input[_builtins.bool] flow_visibility_ipv4: IPv4 flow visibility
         :param pulumi.Input[_builtins.bool] flow_visibility_ipv6: IPv6 flow visibility
         :param pulumi.Input[_builtins.bool] implicit_acl_logging: Implicit ACL logging
-        :param pulumi.Input[_builtins.int] ipv4_visibility_cache_entries: IPv4 visibility cache entries - Range: `16`-`2000000`
-        :param pulumi.Input[_builtins.int] ipv6_visibility_cache_entries: IPv6 visibility cache entries - Range: `16`-`2000000`
-        :param pulumi.Input[_builtins.int] log_frequency: Log frequency - Range: `1`-`2147483647`
+        :param pulumi.Input[_builtins.int] ipv4_visibility_cache_entries: IPv4 visibility cache entries
+                 - Range: `16`-`2000000`
+        :param pulumi.Input[_builtins.int] ipv6_visibility_cache_entries: IPv6 visibility cache entries
+                 - Range: `16`-`2000000`
+        :param pulumi.Input[_builtins.int] log_frequency: Log frequency
+                 - Range: `1`-`2147483647`
         :param pulumi.Input[_builtins.str] name: The name of the localized policy
         """
         pulumi.set(__self__, "description", description)
@@ -188,7 +191,8 @@ class LocalizedPolicyArgs:
     @pulumi.getter(name="ipv4VisibilityCacheEntries")
     def ipv4_visibility_cache_entries(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        IPv4 visibility cache entries - Range: `16`-`2000000`
+        IPv4 visibility cache entries
+          - Range: `16`-`2000000`
         """
         return pulumi.get(self, "ipv4_visibility_cache_entries")
 
@@ -200,7 +204,8 @@ class LocalizedPolicyArgs:
     @pulumi.getter(name="ipv6VisibilityCacheEntries")
     def ipv6_visibility_cache_entries(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        IPv6 visibility cache entries - Range: `16`-`2000000`
+        IPv6 visibility cache entries
+          - Range: `16`-`2000000`
         """
         return pulumi.get(self, "ipv6_visibility_cache_entries")
 
@@ -212,7 +217,8 @@ class LocalizedPolicyArgs:
     @pulumi.getter(name="logFrequency")
     def log_frequency(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Log frequency - Range: `1`-`2147483647`
+        Log frequency
+          - Range: `1`-`2147483647`
         """
         return pulumi.get(self, "log_frequency")
 
@@ -261,9 +267,12 @@ class _LocalizedPolicyState:
         :param pulumi.Input[_builtins.bool] flow_visibility_ipv4: IPv4 flow visibility
         :param pulumi.Input[_builtins.bool] flow_visibility_ipv6: IPv6 flow visibility
         :param pulumi.Input[_builtins.bool] implicit_acl_logging: Implicit ACL logging
-        :param pulumi.Input[_builtins.int] ipv4_visibility_cache_entries: IPv4 visibility cache entries - Range: `16`-`2000000`
-        :param pulumi.Input[_builtins.int] ipv6_visibility_cache_entries: IPv6 visibility cache entries - Range: `16`-`2000000`
-        :param pulumi.Input[_builtins.int] log_frequency: Log frequency - Range: `1`-`2147483647`
+        :param pulumi.Input[_builtins.int] ipv4_visibility_cache_entries: IPv4 visibility cache entries
+                 - Range: `16`-`2000000`
+        :param pulumi.Input[_builtins.int] ipv6_visibility_cache_entries: IPv6 visibility cache entries
+                 - Range: `16`-`2000000`
+        :param pulumi.Input[_builtins.int] log_frequency: Log frequency
+                 - Range: `1`-`2147483647`
         :param pulumi.Input[_builtins.str] name: The name of the localized policy
         :param pulumi.Input[_builtins.int] version: The version of the object
         """
@@ -408,7 +417,8 @@ class _LocalizedPolicyState:
     @pulumi.getter(name="ipv4VisibilityCacheEntries")
     def ipv4_visibility_cache_entries(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        IPv4 visibility cache entries - Range: `16`-`2000000`
+        IPv4 visibility cache entries
+          - Range: `16`-`2000000`
         """
         return pulumi.get(self, "ipv4_visibility_cache_entries")
 
@@ -420,7 +430,8 @@ class _LocalizedPolicyState:
     @pulumi.getter(name="ipv6VisibilityCacheEntries")
     def ipv6_visibility_cache_entries(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        IPv6 visibility cache entries - Range: `16`-`2000000`
+        IPv6 visibility cache entries
+          - Range: `16`-`2000000`
         """
         return pulumi.get(self, "ipv6_visibility_cache_entries")
 
@@ -432,7 +443,8 @@ class _LocalizedPolicyState:
     @pulumi.getter(name="logFrequency")
     def log_frequency(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Log frequency - Range: `1`-`2147483647`
+        Log frequency
+          - Range: `1`-`2147483647`
         """
         return pulumi.get(self, "log_frequency")
 
@@ -532,9 +544,12 @@ class LocalizedPolicy(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] flow_visibility_ipv4: IPv4 flow visibility
         :param pulumi.Input[_builtins.bool] flow_visibility_ipv6: IPv6 flow visibility
         :param pulumi.Input[_builtins.bool] implicit_acl_logging: Implicit ACL logging
-        :param pulumi.Input[_builtins.int] ipv4_visibility_cache_entries: IPv4 visibility cache entries - Range: `16`-`2000000`
-        :param pulumi.Input[_builtins.int] ipv6_visibility_cache_entries: IPv6 visibility cache entries - Range: `16`-`2000000`
-        :param pulumi.Input[_builtins.int] log_frequency: Log frequency - Range: `1`-`2147483647`
+        :param pulumi.Input[_builtins.int] ipv4_visibility_cache_entries: IPv4 visibility cache entries
+                 - Range: `16`-`2000000`
+        :param pulumi.Input[_builtins.int] ipv6_visibility_cache_entries: IPv6 visibility cache entries
+                 - Range: `16`-`2000000`
+        :param pulumi.Input[_builtins.int] log_frequency: Log frequency
+                 - Range: `1`-`2147483647`
         :param pulumi.Input[_builtins.str] name: The name of the localized policy
         """
         ...
@@ -672,9 +687,12 @@ class LocalizedPolicy(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] flow_visibility_ipv4: IPv4 flow visibility
         :param pulumi.Input[_builtins.bool] flow_visibility_ipv6: IPv6 flow visibility
         :param pulumi.Input[_builtins.bool] implicit_acl_logging: Implicit ACL logging
-        :param pulumi.Input[_builtins.int] ipv4_visibility_cache_entries: IPv4 visibility cache entries - Range: `16`-`2000000`
-        :param pulumi.Input[_builtins.int] ipv6_visibility_cache_entries: IPv6 visibility cache entries - Range: `16`-`2000000`
-        :param pulumi.Input[_builtins.int] log_frequency: Log frequency - Range: `1`-`2147483647`
+        :param pulumi.Input[_builtins.int] ipv4_visibility_cache_entries: IPv4 visibility cache entries
+                 - Range: `16`-`2000000`
+        :param pulumi.Input[_builtins.int] ipv6_visibility_cache_entries: IPv6 visibility cache entries
+                 - Range: `16`-`2000000`
+        :param pulumi.Input[_builtins.int] log_frequency: Log frequency
+                 - Range: `1`-`2147483647`
         :param pulumi.Input[_builtins.str] name: The name of the localized policy
         :param pulumi.Input[_builtins.int] version: The version of the object
         """
@@ -774,7 +792,8 @@ class LocalizedPolicy(pulumi.CustomResource):
     @pulumi.getter(name="ipv4VisibilityCacheEntries")
     def ipv4_visibility_cache_entries(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        IPv4 visibility cache entries - Range: `16`-`2000000`
+        IPv4 visibility cache entries
+          - Range: `16`-`2000000`
         """
         return pulumi.get(self, "ipv4_visibility_cache_entries")
 
@@ -782,7 +801,8 @@ class LocalizedPolicy(pulumi.CustomResource):
     @pulumi.getter(name="ipv6VisibilityCacheEntries")
     def ipv6_visibility_cache_entries(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        IPv6 visibility cache entries - Range: `16`-`2000000`
+        IPv6 visibility cache entries
+          - Range: `16`-`2000000`
         """
         return pulumi.get(self, "ipv6_visibility_cache_entries")
 
@@ -790,7 +810,8 @@ class LocalizedPolicy(pulumi.CustomResource):
     @pulumi.getter(name="logFrequency")
     def log_frequency(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Log frequency - Range: `1`-`2147483647`
+        Log frequency
+          - Range: `1`-`2147483647`
         """
         return pulumi.get(self, "log_frequency")
 

@@ -179,14 +179,18 @@ public class ServiceTrackerFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.endpointIpVariable);
     }
     /**
-     * Endpoint Tracker Type - Choices: `static-route` - Default value: `static-route`
+     * Endpoint Tracker Type
+     *   - Choices: `static-route`
+     *   - Default value: `static-route`
      * 
      */
     @Export(name="endpointTrackerType", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> endpointTrackerType;
 
     /**
-     * @return Endpoint Tracker Type - Choices: `static-route` - Default value: `static-route`
+     * @return Endpoint Tracker Type
+     *   - Choices: `static-route`
+     *   - Default value: `static-route`
      * 
      */
     public Output<Optional<String>> endpointTrackerType() {
@@ -221,14 +225,18 @@ public class ServiceTrackerFeature extends com.pulumi.resources.CustomResource {
         return this.featureProfileId;
     }
     /**
-     * Interval - Range: `20`-`600` - Default value: `60`
+     * Interval
+     *   - Range: `20`-`600`
+     *   - Default value: `60`
      * 
      */
     @Export(name="interval", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> interval;
 
     /**
-     * @return Interval - Range: `20`-`600` - Default value: `60`
+     * @return Interval
+     *   - Range: `20`-`600`
+     *   - Default value: `60`
      * 
      */
     public Output<Optional<Integer>> interval() {
@@ -249,14 +257,18 @@ public class ServiceTrackerFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.intervalVariable);
     }
     /**
-     * Multiplier - Range: `1`-`10` - Default value: `3`
+     * Multiplier
+     *   - Range: `1`-`10`
+     *   - Default value: `3`
      * 
      */
     @Export(name="multiplier", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> multiplier;
 
     /**
-     * @return Multiplier - Range: `1`-`10` - Default value: `3`
+     * @return Multiplier
+     *   - Range: `1`-`10`
+     *   - Default value: `3`
      * 
      */
     public Output<Optional<Integer>> multiplier() {
@@ -347,14 +359,18 @@ public class ServiceTrackerFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.protocolVariable);
     }
     /**
-     * Threshold - Range: `100`-`1000` - Default value: `300`
+     * Threshold
+     *   - Range: `100`-`1000`
+     *   - Default value: `300`
      * 
      */
     @Export(name="threshold", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> threshold;
 
     /**
-     * @return Threshold - Range: `100`-`1000` - Default value: `300`
+     * @return Threshold
+     *   - Range: `100`-`1000`
+     *   - Default value: `300`
      * 
      */
     public Output<Optional<Integer>> threshold() {
@@ -403,14 +419,18 @@ public class ServiceTrackerFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.trackerNameVariable);
     }
     /**
-     * Tracker Type - Choices: `endpoint` - Default value: `endpoint`
+     * Tracker Type
+     *   - Choices: `endpoint`
+     *   - Default value: `endpoint`
      * 
      */
     @Export(name="trackerType", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> trackerType;
 
     /**
-     * @return Tracker Type - Choices: `endpoint` - Default value: `endpoint`
+     * @return Tracker Type
+     *   - Choices: `endpoint`
+     *   - Default value: `endpoint`
      * 
      */
     public Output<Optional<String>> trackerType() {

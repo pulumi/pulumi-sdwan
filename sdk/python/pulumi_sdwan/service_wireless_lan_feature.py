@@ -47,34 +47,25 @@ class ServiceWirelessLanFeatureArgs:
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.bool] me_dynamic_ip_enabled: ME management IP dynamic allocated by DHCP
         :param pulumi.Input[Sequence[pulumi.Input['ServiceWirelessLanFeatureSsidArgs']]] ssids: Configure Wi-Fi SSID profile
-        :param pulumi.Input[_builtins.str] country: Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-               `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-               `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-               `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-               `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-               `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+        :param pulumi.Input[_builtins.str] country: Select country
+                 - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
         :param pulumi.Input[_builtins.str] country_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.bool] enable24g: 2.4GHz Enabled - Default value: `true`
+        :param pulumi.Input[_builtins.bool] enable24g: 2.4GHz Enabled
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] enable24g_variable: Variable name
-        :param pulumi.Input[_builtins.bool] enable5g: 5GHz Enabled - Default value: `true`
+        :param pulumi.Input[_builtins.bool] enable5g: 5GHz Enabled
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] enable5g_variable: Variable name
         :param pulumi.Input[_builtins.str] me_default_gateway: Set mobile express default gateway
         :param pulumi.Input[_builtins.str] me_default_gateway_variable: Variable name
         :param pulumi.Input[_builtins.str] me_ipv4_address: Set mobile express controller address
         :param pulumi.Input[_builtins.str] me_ipv4_address_variable: Variable name
-        :param pulumi.Input[_builtins.str] me_subnet_mask: Set mobile express controller subnet mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`,
-               `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`,
-               `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`,
-               `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`,
-               `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[_builtins.str] me_subnet_mask: Set mobile express controller subnet mask
+                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] me_subnet_mask_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.str] password: Set management password,the password must contains characters from all of the following classes,lowercase
-               letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three
-               times consecutively. The password must not be the same as the associated username or the username reversed. The password
-               must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In
-               addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+        :param pulumi.Input[_builtins.str] password: Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
         :param pulumi.Input[_builtins.str] password_variable: Variable name
         :param pulumi.Input[_builtins.str] username: Set management username
         :param pulumi.Input[_builtins.str] username_variable: Variable name
@@ -159,12 +150,8 @@ class ServiceWirelessLanFeatureArgs:
     @pulumi.getter
     def country(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-        `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-        `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-        `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-        `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-        `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+        Select country
+          - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
         """
         return pulumi.get(self, "country")
 
@@ -200,7 +187,8 @@ class ServiceWirelessLanFeatureArgs:
     @pulumi.getter
     def enable24g(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        2.4GHz Enabled - Default value: `true`
+        2.4GHz Enabled
+          - Default value: `true`
         """
         return pulumi.get(self, "enable24g")
 
@@ -224,7 +212,8 @@ class ServiceWirelessLanFeatureArgs:
     @pulumi.getter
     def enable5g(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        5GHz Enabled - Default value: `true`
+        5GHz Enabled
+          - Default value: `true`
         """
         return pulumi.get(self, "enable5g")
 
@@ -296,11 +285,8 @@ class ServiceWirelessLanFeatureArgs:
     @pulumi.getter(name="meSubnetMask")
     def me_subnet_mask(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set mobile express controller subnet mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`,
-        `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`,
-        `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`,
-        `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`,
-        `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        Set mobile express controller subnet mask
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "me_subnet_mask")
 
@@ -336,11 +322,7 @@ class ServiceWirelessLanFeatureArgs:
     @pulumi.getter
     def password(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set management password,the password must contains characters from all of the following classes,lowercase
-        letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three
-        times consecutively. The password must not be the same as the associated username or the username reversed. The password
-        must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In
-        addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+        Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
         """
         return pulumi.get(self, "password")
 
@@ -412,17 +394,15 @@ class _ServiceWirelessLanFeatureState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering ServiceWirelessLanFeature resources.
-        :param pulumi.Input[_builtins.str] country: Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-               `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-               `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-               `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-               `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-               `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+        :param pulumi.Input[_builtins.str] country: Select country
+                 - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
         :param pulumi.Input[_builtins.str] country_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.bool] enable24g: 2.4GHz Enabled - Default value: `true`
+        :param pulumi.Input[_builtins.bool] enable24g: 2.4GHz Enabled
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] enable24g_variable: Variable name
-        :param pulumi.Input[_builtins.bool] enable5g: 5GHz Enabled - Default value: `true`
+        :param pulumi.Input[_builtins.bool] enable5g: 5GHz Enabled
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] enable5g_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] me_default_gateway: Set mobile express default gateway
@@ -430,18 +410,11 @@ class _ServiceWirelessLanFeatureState:
         :param pulumi.Input[_builtins.bool] me_dynamic_ip_enabled: ME management IP dynamic allocated by DHCP
         :param pulumi.Input[_builtins.str] me_ipv4_address: Set mobile express controller address
         :param pulumi.Input[_builtins.str] me_ipv4_address_variable: Variable name
-        :param pulumi.Input[_builtins.str] me_subnet_mask: Set mobile express controller subnet mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`,
-               `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`,
-               `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`,
-               `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`,
-               `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[_builtins.str] me_subnet_mask: Set mobile express controller subnet mask
+                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] me_subnet_mask_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.str] password: Set management password,the password must contains characters from all of the following classes,lowercase
-               letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three
-               times consecutively. The password must not be the same as the associated username or the username reversed. The password
-               must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In
-               addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+        :param pulumi.Input[_builtins.str] password: Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
         :param pulumi.Input[_builtins.str] password_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['ServiceWirelessLanFeatureSsidArgs']]] ssids: Configure Wi-Fi SSID profile
         :param pulumi.Input[_builtins.str] username: Set management username
@@ -497,12 +470,8 @@ class _ServiceWirelessLanFeatureState:
     @pulumi.getter
     def country(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-        `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-        `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-        `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-        `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-        `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+        Select country
+          - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
         """
         return pulumi.get(self, "country")
 
@@ -538,7 +507,8 @@ class _ServiceWirelessLanFeatureState:
     @pulumi.getter
     def enable24g(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        2.4GHz Enabled - Default value: `true`
+        2.4GHz Enabled
+          - Default value: `true`
         """
         return pulumi.get(self, "enable24g")
 
@@ -562,7 +532,8 @@ class _ServiceWirelessLanFeatureState:
     @pulumi.getter
     def enable5g(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        5GHz Enabled - Default value: `true`
+        5GHz Enabled
+          - Default value: `true`
         """
         return pulumi.get(self, "enable5g")
 
@@ -658,11 +629,8 @@ class _ServiceWirelessLanFeatureState:
     @pulumi.getter(name="meSubnetMask")
     def me_subnet_mask(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set mobile express controller subnet mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`,
-        `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`,
-        `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`,
-        `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`,
-        `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        Set mobile express controller subnet mask
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "me_subnet_mask")
 
@@ -698,11 +666,7 @@ class _ServiceWirelessLanFeatureState:
     @pulumi.getter
     def password(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set management password,the password must contains characters from all of the following classes,lowercase
-        letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three
-        times consecutively. The password must not be the same as the associated username or the username reversed. The password
-        must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In
-        addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+        Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
         """
         return pulumi.get(self, "password")
 
@@ -815,17 +779,15 @@ class ServiceWirelessLanFeature(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] country: Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-               `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-               `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-               `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-               `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-               `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+        :param pulumi.Input[_builtins.str] country: Select country
+                 - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
         :param pulumi.Input[_builtins.str] country_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.bool] enable24g: 2.4GHz Enabled - Default value: `true`
+        :param pulumi.Input[_builtins.bool] enable24g: 2.4GHz Enabled
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] enable24g_variable: Variable name
-        :param pulumi.Input[_builtins.bool] enable5g: 5GHz Enabled - Default value: `true`
+        :param pulumi.Input[_builtins.bool] enable5g: 5GHz Enabled
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] enable5g_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] me_default_gateway: Set mobile express default gateway
@@ -833,18 +795,11 @@ class ServiceWirelessLanFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] me_dynamic_ip_enabled: ME management IP dynamic allocated by DHCP
         :param pulumi.Input[_builtins.str] me_ipv4_address: Set mobile express controller address
         :param pulumi.Input[_builtins.str] me_ipv4_address_variable: Variable name
-        :param pulumi.Input[_builtins.str] me_subnet_mask: Set mobile express controller subnet mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`,
-               `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`,
-               `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`,
-               `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`,
-               `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[_builtins.str] me_subnet_mask: Set mobile express controller subnet mask
+                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] me_subnet_mask_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.str] password: Set management password,the password must contains characters from all of the following classes,lowercase
-               letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three
-               times consecutively. The password must not be the same as the associated username or the username reversed. The password
-               must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In
-               addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+        :param pulumi.Input[_builtins.str] password: Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
         :param pulumi.Input[_builtins.str] password_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceWirelessLanFeatureSsidArgs', 'ServiceWirelessLanFeatureSsidArgsDict']]]] ssids: Configure Wi-Fi SSID profile
         :param pulumi.Input[_builtins.str] username: Set management username
@@ -982,17 +937,15 @@ class ServiceWirelessLanFeature(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] country: Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-               `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-               `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-               `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-               `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-               `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+        :param pulumi.Input[_builtins.str] country: Select country
+                 - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
         :param pulumi.Input[_builtins.str] country_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.bool] enable24g: 2.4GHz Enabled - Default value: `true`
+        :param pulumi.Input[_builtins.bool] enable24g: 2.4GHz Enabled
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] enable24g_variable: Variable name
-        :param pulumi.Input[_builtins.bool] enable5g: 5GHz Enabled - Default value: `true`
+        :param pulumi.Input[_builtins.bool] enable5g: 5GHz Enabled
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] enable5g_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] me_default_gateway: Set mobile express default gateway
@@ -1000,18 +953,11 @@ class ServiceWirelessLanFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] me_dynamic_ip_enabled: ME management IP dynamic allocated by DHCP
         :param pulumi.Input[_builtins.str] me_ipv4_address: Set mobile express controller address
         :param pulumi.Input[_builtins.str] me_ipv4_address_variable: Variable name
-        :param pulumi.Input[_builtins.str] me_subnet_mask: Set mobile express controller subnet mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`,
-               `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`,
-               `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`,
-               `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`,
-               `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[_builtins.str] me_subnet_mask: Set mobile express controller subnet mask
+                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] me_subnet_mask_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.str] password: Set management password,the password must contains characters from all of the following classes,lowercase
-               letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three
-               times consecutively. The password must not be the same as the associated username or the username reversed. The password
-               must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In
-               addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+        :param pulumi.Input[_builtins.str] password: Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
         :param pulumi.Input[_builtins.str] password_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceWirelessLanFeatureSsidArgs', 'ServiceWirelessLanFeatureSsidArgsDict']]]] ssids: Configure Wi-Fi SSID profile
         :param pulumi.Input[_builtins.str] username: Set management username
@@ -1050,12 +996,8 @@ class ServiceWirelessLanFeature(pulumi.CustomResource):
     @pulumi.getter
     def country(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-        `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-        `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-        `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-        `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-        `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+        Select country
+          - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
         """
         return pulumi.get(self, "country")
 
@@ -1079,7 +1021,8 @@ class ServiceWirelessLanFeature(pulumi.CustomResource):
     @pulumi.getter
     def enable24g(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        2.4GHz Enabled - Default value: `true`
+        2.4GHz Enabled
+          - Default value: `true`
         """
         return pulumi.get(self, "enable24g")
 
@@ -1095,7 +1038,8 @@ class ServiceWirelessLanFeature(pulumi.CustomResource):
     @pulumi.getter
     def enable5g(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        5GHz Enabled - Default value: `true`
+        5GHz Enabled
+          - Default value: `true`
         """
         return pulumi.get(self, "enable5g")
 
@@ -1159,11 +1103,8 @@ class ServiceWirelessLanFeature(pulumi.CustomResource):
     @pulumi.getter(name="meSubnetMask")
     def me_subnet_mask(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Set mobile express controller subnet mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`,
-        `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`,
-        `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`,
-        `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`,
-        `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        Set mobile express controller subnet mask
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "me_subnet_mask")
 
@@ -1187,11 +1128,7 @@ class ServiceWirelessLanFeature(pulumi.CustomResource):
     @pulumi.getter
     def password(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Set management password,the password must contains characters from all of the following classes,lowercase
-        letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three
-        times consecutively. The password must not be the same as the associated username or the username reversed. The password
-        must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In
-        addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+        Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
         """
         return pulumi.get(self, "password")
 

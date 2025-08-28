@@ -63,15 +63,15 @@ export class GeoLocationListPolicyObject extends pulumi.CustomResource {
     /**
      * List of entries
      */
-    public readonly entries!: pulumi.Output<outputs.GeoLocationListPolicyObjectEntry[]>;
+    declare public readonly entries: pulumi.Output<outputs.GeoLocationListPolicyObjectEntry[]>;
     /**
      * The name of the policy object
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The version of the object
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a GeoLocationListPolicyObject resource with the given unique name, arguments, and options.
@@ -86,16 +86,16 @@ export class GeoLocationListPolicyObject extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as GeoLocationListPolicyObjectState | undefined;
-            resourceInputs["entries"] = state ? state.entries : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["entries"] = state?.entries;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as GeoLocationListPolicyObjectArgs | undefined;
-            if ((!args || args.entries === undefined) && !opts.urn) {
+            if (args?.entries === undefined && !opts.urn) {
                 throw new Error("Missing required property 'entries'");
             }
-            resourceInputs["entries"] = args ? args.entries : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
+            resourceInputs["entries"] = args?.entries;
+            resourceInputs["name"] = args?.name;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

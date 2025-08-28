@@ -33,13 +33,18 @@ class SystemMrfFeatureArgs:
         The set of arguments for constructing a SystemMrfFeature resource.
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.str] enable_migration_to_mrf: Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
-        :param pulumi.Input[_builtins.int] migration_bgp_community: Set BGP community during migration from BGP-core based network - Range: `1`-`4294967295`
+        :param pulumi.Input[_builtins.str] enable_migration_to_mrf: Enable migration mode to Multi-Region Fabric
+                 - Choices: `enabled`, `enabled-from-bgp-core`
+        :param pulumi.Input[_builtins.int] migration_bgp_community: Set BGP community during migration from BGP-core based network
+                 - Range: `1`-`4294967295`
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.int] region_id: Set region ID - Range: `1`-`63`
-        :param pulumi.Input[_builtins.str] role: Set the role for router - Choices: `edge-router`, `border-router`
+        :param pulumi.Input[_builtins.int] region_id: Set region ID
+                 - Range: `1`-`63`
+        :param pulumi.Input[_builtins.str] role: Set the role for router
+                 - Choices: `edge-router`, `border-router`
         :param pulumi.Input[_builtins.str] role_variable: Variable name
-        :param pulumi.Input[_builtins.int] secondary_region_id: Set secondary region ID - Range: `1`-`63`
+        :param pulumi.Input[_builtins.int] secondary_region_id: Set secondary region ID
+                 - Range: `1`-`63`
         :param pulumi.Input[_builtins.str] secondary_region_id_variable: Variable name
         """
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
@@ -90,7 +95,8 @@ class SystemMrfFeatureArgs:
     @pulumi.getter(name="enableMigrationToMrf")
     def enable_migration_to_mrf(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
+        Enable migration mode to Multi-Region Fabric
+          - Choices: `enabled`, `enabled-from-bgp-core`
         """
         return pulumi.get(self, "enable_migration_to_mrf")
 
@@ -102,7 +108,8 @@ class SystemMrfFeatureArgs:
     @pulumi.getter(name="migrationBgpCommunity")
     def migration_bgp_community(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set BGP community during migration from BGP-core based network - Range: `1`-`4294967295`
+        Set BGP community during migration from BGP-core based network
+          - Range: `1`-`4294967295`
         """
         return pulumi.get(self, "migration_bgp_community")
 
@@ -126,7 +133,8 @@ class SystemMrfFeatureArgs:
     @pulumi.getter(name="regionId")
     def region_id(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set region ID - Range: `1`-`63`
+        Set region ID
+          - Range: `1`-`63`
         """
         return pulumi.get(self, "region_id")
 
@@ -138,7 +146,8 @@ class SystemMrfFeatureArgs:
     @pulumi.getter
     def role(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set the role for router - Choices: `edge-router`, `border-router`
+        Set the role for router
+          - Choices: `edge-router`, `border-router`
         """
         return pulumi.get(self, "role")
 
@@ -162,7 +171,8 @@ class SystemMrfFeatureArgs:
     @pulumi.getter(name="secondaryRegionId")
     def secondary_region_id(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set secondary region ID - Range: `1`-`63`
+        Set secondary region ID
+          - Range: `1`-`63`
         """
         return pulumi.get(self, "secondary_region_id")
 
@@ -200,14 +210,19 @@ class _SystemMrfFeatureState:
         """
         Input properties used for looking up and filtering SystemMrfFeature resources.
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.str] enable_migration_to_mrf: Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
+        :param pulumi.Input[_builtins.str] enable_migration_to_mrf: Enable migration mode to Multi-Region Fabric
+                 - Choices: `enabled`, `enabled-from-bgp-core`
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.int] migration_bgp_community: Set BGP community during migration from BGP-core based network - Range: `1`-`4294967295`
+        :param pulumi.Input[_builtins.int] migration_bgp_community: Set BGP community during migration from BGP-core based network
+                 - Range: `1`-`4294967295`
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.int] region_id: Set region ID - Range: `1`-`63`
-        :param pulumi.Input[_builtins.str] role: Set the role for router - Choices: `edge-router`, `border-router`
+        :param pulumi.Input[_builtins.int] region_id: Set region ID
+                 - Range: `1`-`63`
+        :param pulumi.Input[_builtins.str] role: Set the role for router
+                 - Choices: `edge-router`, `border-router`
         :param pulumi.Input[_builtins.str] role_variable: Variable name
-        :param pulumi.Input[_builtins.int] secondary_region_id: Set secondary region ID - Range: `1`-`63`
+        :param pulumi.Input[_builtins.int] secondary_region_id: Set secondary region ID
+                 - Range: `1`-`63`
         :param pulumi.Input[_builtins.str] secondary_region_id_variable: Variable name
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
@@ -250,7 +265,8 @@ class _SystemMrfFeatureState:
     @pulumi.getter(name="enableMigrationToMrf")
     def enable_migration_to_mrf(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
+        Enable migration mode to Multi-Region Fabric
+          - Choices: `enabled`, `enabled-from-bgp-core`
         """
         return pulumi.get(self, "enable_migration_to_mrf")
 
@@ -274,7 +290,8 @@ class _SystemMrfFeatureState:
     @pulumi.getter(name="migrationBgpCommunity")
     def migration_bgp_community(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set BGP community during migration from BGP-core based network - Range: `1`-`4294967295`
+        Set BGP community during migration from BGP-core based network
+          - Range: `1`-`4294967295`
         """
         return pulumi.get(self, "migration_bgp_community")
 
@@ -298,7 +315,8 @@ class _SystemMrfFeatureState:
     @pulumi.getter(name="regionId")
     def region_id(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set region ID - Range: `1`-`63`
+        Set region ID
+          - Range: `1`-`63`
         """
         return pulumi.get(self, "region_id")
 
@@ -310,7 +328,8 @@ class _SystemMrfFeatureState:
     @pulumi.getter
     def role(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set the role for router - Choices: `edge-router`, `border-router`
+        Set the role for router
+          - Choices: `edge-router`, `border-router`
         """
         return pulumi.get(self, "role")
 
@@ -334,7 +353,8 @@ class _SystemMrfFeatureState:
     @pulumi.getter(name="secondaryRegionId")
     def secondary_region_id(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set secondary region ID - Range: `1`-`63`
+        Set secondary region ID
+          - Range: `1`-`63`
         """
         return pulumi.get(self, "secondary_region_id")
 
@@ -418,14 +438,19 @@ class SystemMrfFeature(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.str] enable_migration_to_mrf: Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
+        :param pulumi.Input[_builtins.str] enable_migration_to_mrf: Enable migration mode to Multi-Region Fabric
+                 - Choices: `enabled`, `enabled-from-bgp-core`
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.int] migration_bgp_community: Set BGP community during migration from BGP-core based network - Range: `1`-`4294967295`
+        :param pulumi.Input[_builtins.int] migration_bgp_community: Set BGP community during migration from BGP-core based network
+                 - Range: `1`-`4294967295`
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.int] region_id: Set region ID - Range: `1`-`63`
-        :param pulumi.Input[_builtins.str] role: Set the role for router - Choices: `edge-router`, `border-router`
+        :param pulumi.Input[_builtins.int] region_id: Set region ID
+                 - Range: `1`-`63`
+        :param pulumi.Input[_builtins.str] role: Set the role for router
+                 - Choices: `edge-router`, `border-router`
         :param pulumi.Input[_builtins.str] role_variable: Variable name
-        :param pulumi.Input[_builtins.int] secondary_region_id: Set secondary region ID - Range: `1`-`63`
+        :param pulumi.Input[_builtins.int] secondary_region_id: Set secondary region ID
+                 - Range: `1`-`63`
         :param pulumi.Input[_builtins.str] secondary_region_id_variable: Variable name
         """
         ...
@@ -541,14 +566,19 @@ class SystemMrfFeature(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.str] enable_migration_to_mrf: Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
+        :param pulumi.Input[_builtins.str] enable_migration_to_mrf: Enable migration mode to Multi-Region Fabric
+                 - Choices: `enabled`, `enabled-from-bgp-core`
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.int] migration_bgp_community: Set BGP community during migration from BGP-core based network - Range: `1`-`4294967295`
+        :param pulumi.Input[_builtins.int] migration_bgp_community: Set BGP community during migration from BGP-core based network
+                 - Range: `1`-`4294967295`
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.int] region_id: Set region ID - Range: `1`-`63`
-        :param pulumi.Input[_builtins.str] role: Set the role for router - Choices: `edge-router`, `border-router`
+        :param pulumi.Input[_builtins.int] region_id: Set region ID
+                 - Range: `1`-`63`
+        :param pulumi.Input[_builtins.str] role: Set the role for router
+                 - Choices: `edge-router`, `border-router`
         :param pulumi.Input[_builtins.str] role_variable: Variable name
-        :param pulumi.Input[_builtins.int] secondary_region_id: Set secondary region ID - Range: `1`-`63`
+        :param pulumi.Input[_builtins.int] secondary_region_id: Set secondary region ID
+                 - Range: `1`-`63`
         :param pulumi.Input[_builtins.str] secondary_region_id_variable: Variable name
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
@@ -581,7 +611,8 @@ class SystemMrfFeature(pulumi.CustomResource):
     @pulumi.getter(name="enableMigrationToMrf")
     def enable_migration_to_mrf(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
+        Enable migration mode to Multi-Region Fabric
+          - Choices: `enabled`, `enabled-from-bgp-core`
         """
         return pulumi.get(self, "enable_migration_to_mrf")
 
@@ -597,7 +628,8 @@ class SystemMrfFeature(pulumi.CustomResource):
     @pulumi.getter(name="migrationBgpCommunity")
     def migration_bgp_community(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set BGP community during migration from BGP-core based network - Range: `1`-`4294967295`
+        Set BGP community during migration from BGP-core based network
+          - Range: `1`-`4294967295`
         """
         return pulumi.get(self, "migration_bgp_community")
 
@@ -613,7 +645,8 @@ class SystemMrfFeature(pulumi.CustomResource):
     @pulumi.getter(name="regionId")
     def region_id(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set region ID - Range: `1`-`63`
+        Set region ID
+          - Range: `1`-`63`
         """
         return pulumi.get(self, "region_id")
 
@@ -621,7 +654,8 @@ class SystemMrfFeature(pulumi.CustomResource):
     @pulumi.getter
     def role(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Set the role for router - Choices: `edge-router`, `border-router`
+        Set the role for router
+          - Choices: `edge-router`, `border-router`
         """
         return pulumi.get(self, "role")
 
@@ -637,7 +671,8 @@ class SystemMrfFeature(pulumi.CustomResource):
     @pulumi.getter(name="secondaryRegionId")
     def secondary_region_id(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set secondary region ID - Range: `1`-`63`
+        Set secondary region ID
+          - Range: `1`-`63`
         """
         return pulumi.get(self, "secondary_region_id")
 

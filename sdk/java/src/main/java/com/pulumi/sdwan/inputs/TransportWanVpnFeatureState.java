@@ -39,14 +39,16 @@ public final class TransportWanVpnFeatureState extends com.pulumi.resources.Reso
     }
 
     /**
-     * Enhance ECMP Keying - Default value: `false`
+     * Enhance ECMP Keying
+     *   - Default value: `false`
      * 
      */
     @Import(name="enhanceEcmpKeying")
     private @Nullable Output<Boolean> enhanceEcmpKeying;
 
     /**
-     * @return Enhance ECMP Keying - Default value: `false`
+     * @return Enhance ECMP Keying
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> enhanceEcmpKeying() {
@@ -301,14 +303,16 @@ public final class TransportWanVpnFeatureState extends com.pulumi.resources.Reso
     }
 
     /**
-     * VPN - Default value: `0`
+     * VPN
+     *   - Default value: `0`
      * 
      */
     @Import(name="vpn")
     private @Nullable Output<Integer> vpn;
 
     /**
-     * @return VPN - Default value: `0`
+     * @return VPN
+     *   - Default value: `0`
      * 
      */
     public Optional<Output<Integer>> vpn() {
@@ -380,7 +384,8 @@ public final class TransportWanVpnFeatureState extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param enhanceEcmpKeying Enhance ECMP Keying - Default value: `false`
+         * @param enhanceEcmpKeying Enhance ECMP Keying
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -391,7 +396,8 @@ public final class TransportWanVpnFeatureState extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param enhanceEcmpKeying Enhance ECMP Keying - Default value: `false`
+         * @param enhanceEcmpKeying Enhance ECMP Keying
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -790,7 +796,8 @@ public final class TransportWanVpnFeatureState extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param vpn VPN - Default value: `0`
+         * @param vpn VPN
+         *   - Default value: `0`
          * 
          * @return builder
          * 
@@ -801,7 +808,8 @@ public final class TransportWanVpnFeatureState extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param vpn VPN - Default value: `0`
+         * @param vpn VPN
+         *   - Default value: `0`
          * 
          * @return builder
          * 

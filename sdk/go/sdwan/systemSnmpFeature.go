@@ -45,7 +45,8 @@ type SystemSnmpFeature struct {
 	LocationOfDeviceVariable pulumi.StringPtrOutput `pulumi:"locationOfDeviceVariable"`
 	// The name of the Feature
 	Name pulumi.StringOutput `pulumi:"name"`
-	// Enable or disable SNMP - Default value: `false`
+	// Enable or disable SNMP
+	//   - Default value: `false`
 	Shutdown pulumi.BoolPtrOutput `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable pulumi.StringPtrOutput `pulumi:"shutdownVariable"`
@@ -110,7 +111,8 @@ type systemSnmpFeatureState struct {
 	LocationOfDeviceVariable *string `pulumi:"locationOfDeviceVariable"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
-	// Enable or disable SNMP - Default value: `false`
+	// Enable or disable SNMP
+	//   - Default value: `false`
 	Shutdown *bool `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable *string `pulumi:"shutdownVariable"`
@@ -143,7 +145,8 @@ type SystemSnmpFeatureState struct {
 	LocationOfDeviceVariable pulumi.StringPtrInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
-	// Enable or disable SNMP - Default value: `false`
+	// Enable or disable SNMP
+	//   - Default value: `false`
 	Shutdown pulumi.BoolPtrInput
 	// Variable name
 	ShutdownVariable pulumi.StringPtrInput
@@ -180,7 +183,8 @@ type systemSnmpFeatureArgs struct {
 	LocationOfDeviceVariable *string `pulumi:"locationOfDeviceVariable"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
-	// Enable or disable SNMP - Default value: `false`
+	// Enable or disable SNMP
+	//   - Default value: `false`
 	Shutdown *bool `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable *string `pulumi:"shutdownVariable"`
@@ -212,7 +216,8 @@ type SystemSnmpFeatureArgs struct {
 	LocationOfDeviceVariable pulumi.StringPtrInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
-	// Enable or disable SNMP - Default value: `false`
+	// Enable or disable SNMP
+	//   - Default value: `false`
 	Shutdown pulumi.BoolPtrInput
 	// Variable name
 	ShutdownVariable pulumi.StringPtrInput
@@ -356,7 +361,8 @@ func (o SystemSnmpFeatureOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *SystemSnmpFeature) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// Enable or disable SNMP - Default value: `false`
+// Enable or disable SNMP
+//   - Default value: `false`
 func (o SystemSnmpFeatureOutput) Shutdown() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemSnmpFeature) pulumi.BoolPtrOutput { return v.Shutdown }).(pulumi.BoolPtrOutput)
 }

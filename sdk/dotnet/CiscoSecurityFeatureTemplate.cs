@@ -43,15 +43,16 @@ namespace Pulumi.Sdwan
         public Output<string> Description { get; private set; } = null!;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         [Output("deviceTypes")]
         public Output<ImmutableArray<string>> DeviceTypes { get; private set; } = null!;
 
         /// <summary>
-        /// Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+        /// Extended Anti-Replay Window
+        ///   - Range: `10`-`2048`
+        ///   - Default value: `256`
         /// </summary>
         [Output("extendedArWindow")]
         public Output<int?> ExtendedArWindow { get; private set; } = null!;
@@ -93,7 +94,8 @@ namespace Pulumi.Sdwan
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// Enable or disable IPsec pairwise-keying - Default value: `false`
+        /// Enable or disable IPsec pairwise-keying
+        ///   - Default value: `false`
         /// </summary>
         [Output("pairwiseKeying")]
         public Output<bool?> PairwiseKeying { get; private set; } = null!;
@@ -105,7 +107,9 @@ namespace Pulumi.Sdwan
         public Output<string?> PairwiseKeyingVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+        /// Set how often to change the AES key for DTLS connections
+        ///   - Range: `10`-`1209600`
+        ///   - Default value: `86400`
         /// </summary>
         [Output("rekeyInterval")]
         public Output<int?> RekeyInterval { get; private set; } = null!;
@@ -117,8 +121,9 @@ namespace Pulumi.Sdwan
         public Output<string?> RekeyIntervalVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-        /// `512`
+        /// Set the sliding replay window size
+        ///   - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+        ///   - Default value: `512`
         /// </summary>
         [Output("replayWindow")]
         public Output<string?> ReplayWindow { get; private set; } = null!;
@@ -215,9 +220,8 @@ namespace Pulumi.Sdwan
         private InputList<string>? _deviceTypes;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         public InputList<string> DeviceTypes
         {
@@ -226,7 +230,9 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+        /// Extended Anti-Replay Window
+        ///   - Range: `10`-`2048`
+        ///   - Default value: `256`
         /// </summary>
         [Input("extendedArWindow")]
         public Input<int>? ExtendedArWindow { get; set; }
@@ -286,7 +292,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Enable or disable IPsec pairwise-keying - Default value: `false`
+        /// Enable or disable IPsec pairwise-keying
+        ///   - Default value: `false`
         /// </summary>
         [Input("pairwiseKeying")]
         public Input<bool>? PairwiseKeying { get; set; }
@@ -298,7 +305,9 @@ namespace Pulumi.Sdwan
         public Input<string>? PairwiseKeyingVariable { get; set; }
 
         /// <summary>
-        /// Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+        /// Set how often to change the AES key for DTLS connections
+        ///   - Range: `10`-`1209600`
+        ///   - Default value: `86400`
         /// </summary>
         [Input("rekeyInterval")]
         public Input<int>? RekeyInterval { get; set; }
@@ -310,8 +319,9 @@ namespace Pulumi.Sdwan
         public Input<string>? RekeyIntervalVariable { get; set; }
 
         /// <summary>
-        /// Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-        /// `512`
+        /// Set the sliding replay window size
+        ///   - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+        ///   - Default value: `512`
         /// </summary>
         [Input("replayWindow")]
         public Input<string>? ReplayWindow { get; set; }
@@ -358,9 +368,8 @@ namespace Pulumi.Sdwan
         private InputList<string>? _deviceTypes;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         public InputList<string> DeviceTypes
         {
@@ -369,7 +378,9 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+        /// Extended Anti-Replay Window
+        ///   - Range: `10`-`2048`
+        ///   - Default value: `256`
         /// </summary>
         [Input("extendedArWindow")]
         public Input<int>? ExtendedArWindow { get; set; }
@@ -429,7 +440,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Enable or disable IPsec pairwise-keying - Default value: `false`
+        /// Enable or disable IPsec pairwise-keying
+        ///   - Default value: `false`
         /// </summary>
         [Input("pairwiseKeying")]
         public Input<bool>? PairwiseKeying { get; set; }
@@ -441,7 +453,9 @@ namespace Pulumi.Sdwan
         public Input<string>? PairwiseKeyingVariable { get; set; }
 
         /// <summary>
-        /// Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+        /// Set how often to change the AES key for DTLS connections
+        ///   - Range: `10`-`1209600`
+        ///   - Default value: `86400`
         /// </summary>
         [Input("rekeyInterval")]
         public Input<int>? RekeyInterval { get; set; }
@@ -453,8 +467,9 @@ namespace Pulumi.Sdwan
         public Input<string>? RekeyIntervalVariable { get; set; }
 
         /// <summary>
-        /// Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-        /// `512`
+        /// Set the sliding replay window size
+        ///   - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+        ///   - Default value: `512`
         /// </summary>
         [Input("replayWindow")]
         public Input<string>? ReplayWindow { get; set; }

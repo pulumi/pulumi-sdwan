@@ -82,14 +82,18 @@ public class TransportTrackerGroupFeature extends com.pulumi.resources.CustomRes
         return this.name;
     }
     /**
-     * tracker ref list combine boolean and or - Choices: `and`, `or` - Default value: `or`
+     * tracker ref list combine boolean and or
+     *   - Choices: `and`, `or`
+     *   - Default value: `or`
      * 
      */
     @Export(name="trackerBoolean", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> trackerBoolean;
 
     /**
-     * @return tracker ref list combine boolean and or - Choices: `and`, `or` - Default value: `or`
+     * @return tracker ref list combine boolean and or
+     *   - Choices: `and`, `or`
+     *   - Default value: `or`
      * 
      */
     public Output<Optional<String>> trackerBoolean() {

@@ -27,7 +27,8 @@ namespace Pulumi.Sdwan
     public partial class ServiceRoutingEigrpFeature : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+        /// Set EIGRP router authentication type
+        ///   - Choices: `md5`, `hmac-sha-256`
         /// </summary>
         [Output("authenticationType")]
         public Output<string?> AuthenticationType { get; private set; } = null!;
@@ -39,7 +40,8 @@ namespace Pulumi.Sdwan
         public Output<string?> AuthenticationTypeVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set autonomous system ID &lt;1..65535&gt; - Range: `1`-`65535`
+        /// Set autonomous system ID &lt;1..65535&gt;
+        ///   - Range: `1`-`65535`
         /// </summary>
         [Output("autonomousSystemId")]
         public Output<int?> AutonomousSystemId { get; private set; } = null!;
@@ -63,7 +65,8 @@ namespace Pulumi.Sdwan
         public Output<string> FeatureProfileId { get; private set; } = null!;
 
         /// <summary>
-        /// Selective route download - Default value: `false`
+        /// Selective route download
+        ///   - Default value: `false`
         /// </summary>
         [Output("filter")]
         public Output<bool?> Filter { get; private set; } = null!;
@@ -75,7 +78,9 @@ namespace Pulumi.Sdwan
         public Output<string?> FilterVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+        /// Set EIGRP hello interval
+        ///   - Range: `0`-`65535`
+        ///   - Default value: `5`
         /// </summary>
         [Output("helloInterval")]
         public Output<int?> HelloInterval { get; private set; } = null!;
@@ -99,7 +104,9 @@ namespace Pulumi.Sdwan
         public Output<string?> HmacAuthenticationKeyVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+        /// Set EIGRP hold time
+        ///   - Range: `0`-`65535`
+        ///   - Default value: `15`
         /// </summary>
         [Output("holdTime")]
         public Output<int?> HoldTime { get; private set; } = null!;
@@ -196,7 +203,8 @@ namespace Pulumi.Sdwan
     public sealed class ServiceRoutingEigrpFeatureArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+        /// Set EIGRP router authentication type
+        ///   - Choices: `md5`, `hmac-sha-256`
         /// </summary>
         [Input("authenticationType")]
         public Input<string>? AuthenticationType { get; set; }
@@ -208,7 +216,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AuthenticationTypeVariable { get; set; }
 
         /// <summary>
-        /// Set autonomous system ID &lt;1..65535&gt; - Range: `1`-`65535`
+        /// Set autonomous system ID &lt;1..65535&gt;
+        ///   - Range: `1`-`65535`
         /// </summary>
         [Input("autonomousSystemId")]
         public Input<int>? AutonomousSystemId { get; set; }
@@ -232,7 +241,8 @@ namespace Pulumi.Sdwan
         public Input<string> FeatureProfileId { get; set; } = null!;
 
         /// <summary>
-        /// Selective route download - Default value: `false`
+        /// Selective route download
+        ///   - Default value: `false`
         /// </summary>
         [Input("filter")]
         public Input<bool>? Filter { get; set; }
@@ -244,7 +254,9 @@ namespace Pulumi.Sdwan
         public Input<string>? FilterVariable { get; set; }
 
         /// <summary>
-        /// Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+        /// Set EIGRP hello interval
+        ///   - Range: `0`-`65535`
+        ///   - Default value: `5`
         /// </summary>
         [Input("helloInterval")]
         public Input<int>? HelloInterval { get; set; }
@@ -268,7 +280,9 @@ namespace Pulumi.Sdwan
         public Input<string>? HmacAuthenticationKeyVariable { get; set; }
 
         /// <summary>
-        /// Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+        /// Set EIGRP hold time
+        ///   - Range: `0`-`65535`
+        ///   - Default value: `15`
         /// </summary>
         [Input("holdTime")]
         public Input<int>? HoldTime { get; set; }
@@ -345,7 +359,8 @@ namespace Pulumi.Sdwan
     public sealed class ServiceRoutingEigrpFeatureState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+        /// Set EIGRP router authentication type
+        ///   - Choices: `md5`, `hmac-sha-256`
         /// </summary>
         [Input("authenticationType")]
         public Input<string>? AuthenticationType { get; set; }
@@ -357,7 +372,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AuthenticationTypeVariable { get; set; }
 
         /// <summary>
-        /// Set autonomous system ID &lt;1..65535&gt; - Range: `1`-`65535`
+        /// Set autonomous system ID &lt;1..65535&gt;
+        ///   - Range: `1`-`65535`
         /// </summary>
         [Input("autonomousSystemId")]
         public Input<int>? AutonomousSystemId { get; set; }
@@ -381,7 +397,8 @@ namespace Pulumi.Sdwan
         public Input<string>? FeatureProfileId { get; set; }
 
         /// <summary>
-        /// Selective route download - Default value: `false`
+        /// Selective route download
+        ///   - Default value: `false`
         /// </summary>
         [Input("filter")]
         public Input<bool>? Filter { get; set; }
@@ -393,7 +410,9 @@ namespace Pulumi.Sdwan
         public Input<string>? FilterVariable { get; set; }
 
         /// <summary>
-        /// Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+        /// Set EIGRP hello interval
+        ///   - Range: `0`-`65535`
+        ///   - Default value: `5`
         /// </summary>
         [Input("helloInterval")]
         public Input<int>? HelloInterval { get; set; }
@@ -417,7 +436,9 @@ namespace Pulumi.Sdwan
         public Input<string>? HmacAuthenticationKeyVariable { get; set; }
 
         /// <summary>
-        /// Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+        /// Set EIGRP hold time
+        ///   - Range: `0`-`65535`
+        ///   - Default value: `15`
         /// </summary>
         [Input("holdTime")]
         public Input<int>? HoldTime { get; set; }

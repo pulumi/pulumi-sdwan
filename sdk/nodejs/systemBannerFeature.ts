@@ -64,29 +64,29 @@ export class SystemBannerFeature extends pulumi.CustomResource {
     /**
      * The description of the Feature
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
-    public readonly login!: pulumi.Output<string | undefined>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
+    declare public readonly login: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly loginVariable!: pulumi.Output<string | undefined>;
-    public readonly motd!: pulumi.Output<string | undefined>;
+    declare public readonly loginVariable: pulumi.Output<string | undefined>;
+    declare public readonly motd: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly motdVariable!: pulumi.Output<string | undefined>;
+    declare public readonly motdVariable: pulumi.Output<string | undefined>;
     /**
      * The name of the Feature
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The version of the Feature
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a SystemBannerFeature resource with the given unique name, arguments, and options.
@@ -101,26 +101,26 @@ export class SystemBannerFeature extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SystemBannerFeatureState | undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["login"] = state ? state.login : undefined;
-            resourceInputs["loginVariable"] = state ? state.loginVariable : undefined;
-            resourceInputs["motd"] = state ? state.motd : undefined;
-            resourceInputs["motdVariable"] = state ? state.motdVariable : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["login"] = state?.login;
+            resourceInputs["loginVariable"] = state?.loginVariable;
+            resourceInputs["motd"] = state?.motd;
+            resourceInputs["motdVariable"] = state?.motdVariable;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as SystemBannerFeatureArgs | undefined;
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["login"] = args ? args.login : undefined;
-            resourceInputs["loginVariable"] = args ? args.loginVariable : undefined;
-            resourceInputs["motd"] = args ? args.motd : undefined;
-            resourceInputs["motdVariable"] = args ? args.motdVariable : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["login"] = args?.login;
+            resourceInputs["loginVariable"] = args?.loginVariable;
+            resourceInputs["motd"] = args?.motd;
+            resourceInputs["motdVariable"] = args?.motdVariable;
+            resourceInputs["name"] = args?.name;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

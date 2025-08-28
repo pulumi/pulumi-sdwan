@@ -35,9 +35,8 @@ type CiscoDhcpServerFeatureTemplate struct {
 	DefaultGatewayVariable pulumi.StringPtrOutput `pulumi:"defaultGatewayVariable"`
 	// The description of the feature template
 	Description pulumi.StringOutput `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayOutput `pulumi:"deviceTypes"`
 	// Configure one or more DNS server IP addresses
 	DnsServers pulumi.StringArrayOutput `pulumi:"dnsServers"`
@@ -51,11 +50,14 @@ type CiscoDhcpServerFeatureTemplate struct {
 	ExcludeAddresses pulumi.StringArrayOutput `pulumi:"excludeAddresses"`
 	// Variable name
 	ExcludeAddressesVariable pulumi.StringPtrOutput `pulumi:"excludeAddressesVariable"`
-	// Set MTU on interface to DHCP client - Range: `68`-`65535`
+	// Set MTU on interface to DHCP client
+	//   - Range: `68`-`65535`
 	InterfaceMtu pulumi.IntPtrOutput `pulumi:"interfaceMtu"`
 	// Variable name
 	InterfaceMtuVariable pulumi.StringPtrOutput `pulumi:"interfaceMtuVariable"`
-	// Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+	// Configure how long a DHCP-assigned IP address is valid
+	//   - Range: `60`-`31536000`
+	//   - Default value: `86400`
 	LeaseTime pulumi.IntPtrOutput `pulumi:"leaseTime"`
 	// Variable name
 	LeaseTimeVariable pulumi.StringPtrOutput `pulumi:"leaseTimeVariable"`
@@ -121,9 +123,8 @@ type ciscoDhcpServerFeatureTemplateState struct {
 	DefaultGatewayVariable *string `pulumi:"defaultGatewayVariable"`
 	// The description of the feature template
 	Description *string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
 	// Configure one or more DNS server IP addresses
 	DnsServers []string `pulumi:"dnsServers"`
@@ -137,11 +138,14 @@ type ciscoDhcpServerFeatureTemplateState struct {
 	ExcludeAddresses []string `pulumi:"excludeAddresses"`
 	// Variable name
 	ExcludeAddressesVariable *string `pulumi:"excludeAddressesVariable"`
-	// Set MTU on interface to DHCP client - Range: `68`-`65535`
+	// Set MTU on interface to DHCP client
+	//   - Range: `68`-`65535`
 	InterfaceMtu *int `pulumi:"interfaceMtu"`
 	// Variable name
 	InterfaceMtuVariable *string `pulumi:"interfaceMtuVariable"`
-	// Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+	// Configure how long a DHCP-assigned IP address is valid
+	//   - Range: `60`-`31536000`
+	//   - Default value: `86400`
 	LeaseTime *int `pulumi:"leaseTime"`
 	// Variable name
 	LeaseTimeVariable *string `pulumi:"leaseTimeVariable"`
@@ -172,9 +176,8 @@ type CiscoDhcpServerFeatureTemplateState struct {
 	DefaultGatewayVariable pulumi.StringPtrInput
 	// The description of the feature template
 	Description pulumi.StringPtrInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
 	// Configure one or more DNS server IP addresses
 	DnsServers pulumi.StringArrayInput
@@ -188,11 +191,14 @@ type CiscoDhcpServerFeatureTemplateState struct {
 	ExcludeAddresses pulumi.StringArrayInput
 	// Variable name
 	ExcludeAddressesVariable pulumi.StringPtrInput
-	// Set MTU on interface to DHCP client - Range: `68`-`65535`
+	// Set MTU on interface to DHCP client
+	//   - Range: `68`-`65535`
 	InterfaceMtu pulumi.IntPtrInput
 	// Variable name
 	InterfaceMtuVariable pulumi.StringPtrInput
-	// Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+	// Configure how long a DHCP-assigned IP address is valid
+	//   - Range: `60`-`31536000`
+	//   - Default value: `86400`
 	LeaseTime pulumi.IntPtrInput
 	// Variable name
 	LeaseTimeVariable pulumi.StringPtrInput
@@ -227,9 +233,8 @@ type ciscoDhcpServerFeatureTemplateArgs struct {
 	DefaultGatewayVariable *string `pulumi:"defaultGatewayVariable"`
 	// The description of the feature template
 	Description string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
 	// Configure one or more DNS server IP addresses
 	DnsServers []string `pulumi:"dnsServers"`
@@ -243,11 +248,14 @@ type ciscoDhcpServerFeatureTemplateArgs struct {
 	ExcludeAddresses []string `pulumi:"excludeAddresses"`
 	// Variable name
 	ExcludeAddressesVariable *string `pulumi:"excludeAddressesVariable"`
-	// Set MTU on interface to DHCP client - Range: `68`-`65535`
+	// Set MTU on interface to DHCP client
+	//   - Range: `68`-`65535`
 	InterfaceMtu *int `pulumi:"interfaceMtu"`
 	// Variable name
 	InterfaceMtuVariable *string `pulumi:"interfaceMtuVariable"`
-	// Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+	// Configure how long a DHCP-assigned IP address is valid
+	//   - Range: `60`-`31536000`
+	//   - Default value: `86400`
 	LeaseTime *int `pulumi:"leaseTime"`
 	// Variable name
 	LeaseTimeVariable *string `pulumi:"leaseTimeVariable"`
@@ -275,9 +283,8 @@ type CiscoDhcpServerFeatureTemplateArgs struct {
 	DefaultGatewayVariable pulumi.StringPtrInput
 	// The description of the feature template
 	Description pulumi.StringInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
 	// Configure one or more DNS server IP addresses
 	DnsServers pulumi.StringArrayInput
@@ -291,11 +298,14 @@ type CiscoDhcpServerFeatureTemplateArgs struct {
 	ExcludeAddresses pulumi.StringArrayInput
 	// Variable name
 	ExcludeAddressesVariable pulumi.StringPtrInput
-	// Set MTU on interface to DHCP client - Range: `68`-`65535`
+	// Set MTU on interface to DHCP client
+	//   - Range: `68`-`65535`
 	InterfaceMtu pulumi.IntPtrInput
 	// Variable name
 	InterfaceMtuVariable pulumi.StringPtrInput
-	// Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+	// Configure how long a DHCP-assigned IP address is valid
+	//   - Range: `60`-`31536000`
+	//   - Default value: `86400`
 	LeaseTime pulumi.IntPtrInput
 	// Variable name
 	LeaseTimeVariable pulumi.StringPtrInput
@@ -423,9 +433,8 @@ func (o CiscoDhcpServerFeatureTemplateOutput) Description() pulumi.StringOutput 
 	return o.ApplyT(func(v *CiscoDhcpServerFeatureTemplate) pulumi.StringOutput { return v.Description }).(pulumi.StringOutput)
 }
 
-// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+// List of supported device types
+//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 func (o CiscoDhcpServerFeatureTemplateOutput) DeviceTypes() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *CiscoDhcpServerFeatureTemplate) pulumi.StringArrayOutput { return v.DeviceTypes }).(pulumi.StringArrayOutput)
 }
@@ -460,7 +469,8 @@ func (o CiscoDhcpServerFeatureTemplateOutput) ExcludeAddressesVariable() pulumi.
 	return o.ApplyT(func(v *CiscoDhcpServerFeatureTemplate) pulumi.StringPtrOutput { return v.ExcludeAddressesVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set MTU on interface to DHCP client - Range: `68`-`65535`
+// Set MTU on interface to DHCP client
+//   - Range: `68`-`65535`
 func (o CiscoDhcpServerFeatureTemplateOutput) InterfaceMtu() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoDhcpServerFeatureTemplate) pulumi.IntPtrOutput { return v.InterfaceMtu }).(pulumi.IntPtrOutput)
 }
@@ -470,7 +480,9 @@ func (o CiscoDhcpServerFeatureTemplateOutput) InterfaceMtuVariable() pulumi.Stri
 	return o.ApplyT(func(v *CiscoDhcpServerFeatureTemplate) pulumi.StringPtrOutput { return v.InterfaceMtuVariable }).(pulumi.StringPtrOutput)
 }
 
-// Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+// Configure how long a DHCP-assigned IP address is valid
+//   - Range: `60`-`31536000`
+//   - Default value: `86400`
 func (o CiscoDhcpServerFeatureTemplateOutput) LeaseTime() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoDhcpServerFeatureTemplate) pulumi.IntPtrOutput { return v.LeaseTime }).(pulumi.IntPtrOutput)
 }

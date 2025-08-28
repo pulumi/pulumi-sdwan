@@ -27,8 +27,9 @@ namespace Pulumi.Sdwan
     public partial class SystemSecurityFeature : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-        /// `512`
+        /// Set the sliding replay window size
+        ///   - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+        ///   - Default value: `512`
         /// </summary>
         [Output("antiReplayWindow")]
         public Output<string?> AntiReplayWindow { get; private set; } = null!;
@@ -46,7 +47,9 @@ namespace Pulumi.Sdwan
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+        /// Extended Anti-Replay Window
+        ///   - Range: `10`-`2048`
+        ///   - Default value: `256`
         /// </summary>
         [Output("extendedAntiReplayWindow")]
         public Output<int?> ExtendedAntiReplayWindow { get; private set; } = null!;
@@ -76,7 +79,8 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<string>> IntegrityTypes { get; private set; } = null!;
 
         /// <summary>
-        /// Enable or disable IPsec pairwise-keying - Default value: `false`
+        /// Enable or disable IPsec pairwise-keying
+        ///   - Default value: `false`
         /// </summary>
         [Output("ipsecPairwiseKeying")]
         public Output<bool?> IpsecPairwiseKeying { get; private set; } = null!;
@@ -106,7 +110,9 @@ namespace Pulumi.Sdwan
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+        /// Set how often to change the AES key for DTLS connections
+        ///   - Range: `10`-`1209600`
+        ///   - Default value: `86400`
         /// </summary>
         [Output("rekey")]
         public Output<int?> Rekey { get; private set; } = null!;
@@ -170,8 +176,9 @@ namespace Pulumi.Sdwan
     public sealed class SystemSecurityFeatureArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-        /// `512`
+        /// Set the sliding replay window size
+        ///   - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+        ///   - Default value: `512`
         /// </summary>
         [Input("antiReplayWindow")]
         public Input<string>? AntiReplayWindow { get; set; }
@@ -189,7 +196,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+        /// Extended Anti-Replay Window
+        ///   - Range: `10`-`2048`
+        ///   - Default value: `256`
         /// </summary>
         [Input("extendedAntiReplayWindow")]
         public Input<int>? ExtendedAntiReplayWindow { get; set; }
@@ -225,7 +234,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Enable or disable IPsec pairwise-keying - Default value: `false`
+        /// Enable or disable IPsec pairwise-keying
+        ///   - Default value: `false`
         /// </summary>
         [Input("ipsecPairwiseKeying")]
         public Input<bool>? IpsecPairwiseKeying { get; set; }
@@ -267,7 +277,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+        /// Set how often to change the AES key for DTLS connections
+        ///   - Range: `10`-`1209600`
+        ///   - Default value: `86400`
         /// </summary>
         [Input("rekey")]
         public Input<int>? Rekey { get; set; }
@@ -287,8 +299,9 @@ namespace Pulumi.Sdwan
     public sealed class SystemSecurityFeatureState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-        /// `512`
+        /// Set the sliding replay window size
+        ///   - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+        ///   - Default value: `512`
         /// </summary>
         [Input("antiReplayWindow")]
         public Input<string>? AntiReplayWindow { get; set; }
@@ -306,7 +319,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+        /// Extended Anti-Replay Window
+        ///   - Range: `10`-`2048`
+        ///   - Default value: `256`
         /// </summary>
         [Input("extendedAntiReplayWindow")]
         public Input<int>? ExtendedAntiReplayWindow { get; set; }
@@ -342,7 +357,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Enable or disable IPsec pairwise-keying - Default value: `false`
+        /// Enable or disable IPsec pairwise-keying
+        ///   - Default value: `false`
         /// </summary>
         [Input("ipsecPairwiseKeying")]
         public Input<bool>? IpsecPairwiseKeying { get; set; }
@@ -384,7 +400,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+        /// Set how often to change the AES key for DTLS connections
+        ///   - Range: `10`-`1209600`
+        ///   - Default value: `86400`
         /// </summary>
         [Input("rekey")]
         public Input<int>? Rekey { get; set; }

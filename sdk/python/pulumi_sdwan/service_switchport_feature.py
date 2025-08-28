@@ -31,7 +31,9 @@ class ServiceSwitchportFeatureArgs:
         """
         The set of arguments for constructing a ServiceSwitchportFeature resource.
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.int] age_out_time: Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+        :param pulumi.Input[_builtins.int] age_out_time: Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+                 - Range: `0`-`1000000`
+                 - Default value: `300`
         :param pulumi.Input[_builtins.str] age_out_time_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[Sequence[pulumi.Input['ServiceSwitchportFeatureInterfaceArgs']]] interfaces: Interface name: GigabitEthernet0/<>/<> when present
@@ -68,7 +70,9 @@ class ServiceSwitchportFeatureArgs:
     @pulumi.getter(name="ageOutTime")
     def age_out_time(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+        Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+          - Range: `0`-`1000000`
+          - Default value: `300`
         """
         return pulumi.get(self, "age_out_time")
 
@@ -150,7 +154,9 @@ class _ServiceSwitchportFeatureState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering ServiceSwitchportFeature resources.
-        :param pulumi.Input[_builtins.int] age_out_time: Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+        :param pulumi.Input[_builtins.int] age_out_time: Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+                 - Range: `0`-`1000000`
+                 - Default value: `300`
         :param pulumi.Input[_builtins.str] age_out_time_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
@@ -180,7 +186,9 @@ class _ServiceSwitchportFeatureState:
     @pulumi.getter(name="ageOutTime")
     def age_out_time(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+        Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+          - Range: `0`-`1000000`
+          - Default value: `300`
         """
         return pulumi.get(self, "age_out_time")
 
@@ -303,7 +311,9 @@ class ServiceSwitchportFeature(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.int] age_out_time: Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+        :param pulumi.Input[_builtins.int] age_out_time: Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+                 - Range: `0`-`1000000`
+                 - Default value: `300`
         :param pulumi.Input[_builtins.str] age_out_time_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
@@ -397,7 +407,9 @@ class ServiceSwitchportFeature(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.int] age_out_time: Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+        :param pulumi.Input[_builtins.int] age_out_time: Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+                 - Range: `0`-`1000000`
+                 - Default value: `300`
         :param pulumi.Input[_builtins.str] age_out_time_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
@@ -424,7 +436,9 @@ class ServiceSwitchportFeature(pulumi.CustomResource):
     @pulumi.getter(name="ageOutTime")
     def age_out_time(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+        Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+          - Range: `0`-`1000000`
+          - Default value: `300`
         """
         return pulumi.get(self, "age_out_time")
 

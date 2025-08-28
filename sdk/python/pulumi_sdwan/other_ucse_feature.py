@@ -40,14 +40,19 @@ class OtherUcseFeatureArgs:
                  vlan_id_variable: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a OtherUcseFeature resource.
-        :param pulumi.Input[_builtins.int] bay: Bay - Range: `0`-`2`
+        :param pulumi.Input[_builtins.int] bay: Bay
+                 - Range: `0`-`2`
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.int] slot: Slot - Range: `0`-`3`
-        :param pulumi.Input[_builtins.bool] access_port_dedicated: Dedicated - Default value: `true`
-        :param pulumi.Input[_builtins.str] access_port_shared_failover_type: , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge2`, `te2`
-        :param pulumi.Input[_builtins.str] access_port_shared_type: , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
-               `console`, `failover`
-        :param pulumi.Input[_builtins.int] assign_priority: Assign priority - Range: `0`-`7`
+        :param pulumi.Input[_builtins.int] slot: Slot
+                 - Range: `0`-`3`
+        :param pulumi.Input[_builtins.bool] access_port_dedicated: Dedicated
+                 - Default value: `true`
+        :param pulumi.Input[_builtins.str] access_port_shared_failover_type: , Attribute conditional on `access_port_dedicated` being equal to `false`
+                 - Choices: `ge2`, `te2`
+        :param pulumi.Input[_builtins.str] access_port_shared_type: , Attribute conditional on `access_port_dedicated` being equal to `false`
+                 - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
+        :param pulumi.Input[_builtins.int] assign_priority: Assign priority
+                 - Range: `0`-`7`
         :param pulumi.Input[_builtins.str] assign_priority_variable: Variable name
         :param pulumi.Input[_builtins.str] default_gateway: Assign default gateway
         :param pulumi.Input[_builtins.str] default_gateway_variable: Variable name
@@ -56,7 +61,8 @@ class OtherUcseFeatureArgs:
         :param pulumi.Input[_builtins.str] ipv4_address: Assign IPv4 address
         :param pulumi.Input[_builtins.str] ipv4_address_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.int] vlan_id: Assign Vlan Id - Range: `2`-`4095`
+        :param pulumi.Input[_builtins.int] vlan_id: Assign Vlan Id
+                 - Range: `2`-`4095`
         :param pulumi.Input[_builtins.str] vlan_id_variable: Variable name
         """
         pulumi.set(__self__, "bay", bay)
@@ -95,7 +101,8 @@ class OtherUcseFeatureArgs:
     @pulumi.getter
     def bay(self) -> pulumi.Input[_builtins.int]:
         """
-        Bay - Range: `0`-`2`
+        Bay
+          - Range: `0`-`2`
         """
         return pulumi.get(self, "bay")
 
@@ -119,7 +126,8 @@ class OtherUcseFeatureArgs:
     @pulumi.getter
     def slot(self) -> pulumi.Input[_builtins.int]:
         """
-        Slot - Range: `0`-`3`
+        Slot
+          - Range: `0`-`3`
         """
         return pulumi.get(self, "slot")
 
@@ -131,7 +139,8 @@ class OtherUcseFeatureArgs:
     @pulumi.getter(name="accessPortDedicated")
     def access_port_dedicated(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Dedicated - Default value: `true`
+        Dedicated
+          - Default value: `true`
         """
         return pulumi.get(self, "access_port_dedicated")
 
@@ -143,7 +152,8 @@ class OtherUcseFeatureArgs:
     @pulumi.getter(name="accessPortSharedFailoverType")
     def access_port_shared_failover_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge2`, `te2`
+        , Attribute conditional on `access_port_dedicated` being equal to `false`
+          - Choices: `ge2`, `te2`
         """
         return pulumi.get(self, "access_port_shared_failover_type")
 
@@ -155,8 +165,8 @@ class OtherUcseFeatureArgs:
     @pulumi.getter(name="accessPortSharedType")
     def access_port_shared_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
-        `console`, `failover`
+        , Attribute conditional on `access_port_dedicated` being equal to `false`
+          - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
         """
         return pulumi.get(self, "access_port_shared_type")
 
@@ -168,7 +178,8 @@ class OtherUcseFeatureArgs:
     @pulumi.getter(name="assignPriority")
     def assign_priority(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Assign priority - Range: `0`-`7`
+        Assign priority
+          - Range: `0`-`7`
         """
         return pulumi.get(self, "assign_priority")
 
@@ -276,7 +287,8 @@ class OtherUcseFeatureArgs:
     @pulumi.getter(name="vlanId")
     def vlan_id(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Assign Vlan Id - Range: `2`-`4095`
+        Assign Vlan Id
+          - Range: `2`-`4095`
         """
         return pulumi.get(self, "vlan_id")
 
@@ -320,13 +332,17 @@ class _OtherUcseFeatureState:
                  vlan_id_variable: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering OtherUcseFeature resources.
-        :param pulumi.Input[_builtins.bool] access_port_dedicated: Dedicated - Default value: `true`
-        :param pulumi.Input[_builtins.str] access_port_shared_failover_type: , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge2`, `te2`
-        :param pulumi.Input[_builtins.str] access_port_shared_type: , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
-               `console`, `failover`
-        :param pulumi.Input[_builtins.int] assign_priority: Assign priority - Range: `0`-`7`
+        :param pulumi.Input[_builtins.bool] access_port_dedicated: Dedicated
+                 - Default value: `true`
+        :param pulumi.Input[_builtins.str] access_port_shared_failover_type: , Attribute conditional on `access_port_dedicated` being equal to `false`
+                 - Choices: `ge2`, `te2`
+        :param pulumi.Input[_builtins.str] access_port_shared_type: , Attribute conditional on `access_port_dedicated` being equal to `false`
+                 - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
+        :param pulumi.Input[_builtins.int] assign_priority: Assign priority
+                 - Range: `0`-`7`
         :param pulumi.Input[_builtins.str] assign_priority_variable: Variable name
-        :param pulumi.Input[_builtins.int] bay: Bay - Range: `0`-`2`
+        :param pulumi.Input[_builtins.int] bay: Bay
+                 - Range: `0`-`2`
         :param pulumi.Input[_builtins.str] default_gateway: Assign default gateway
         :param pulumi.Input[_builtins.str] default_gateway_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
@@ -335,9 +351,11 @@ class _OtherUcseFeatureState:
         :param pulumi.Input[_builtins.str] ipv4_address: Assign IPv4 address
         :param pulumi.Input[_builtins.str] ipv4_address_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.int] slot: Slot - Range: `0`-`3`
+        :param pulumi.Input[_builtins.int] slot: Slot
+                 - Range: `0`-`3`
         :param pulumi.Input[_builtins.int] version: The version of the Feature
-        :param pulumi.Input[_builtins.int] vlan_id: Assign Vlan Id - Range: `2`-`4095`
+        :param pulumi.Input[_builtins.int] vlan_id: Assign Vlan Id
+                 - Range: `2`-`4095`
         :param pulumi.Input[_builtins.str] vlan_id_variable: Variable name
         """
         if access_port_dedicated is not None:
@@ -381,7 +399,8 @@ class _OtherUcseFeatureState:
     @pulumi.getter(name="accessPortDedicated")
     def access_port_dedicated(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Dedicated - Default value: `true`
+        Dedicated
+          - Default value: `true`
         """
         return pulumi.get(self, "access_port_dedicated")
 
@@ -393,7 +412,8 @@ class _OtherUcseFeatureState:
     @pulumi.getter(name="accessPortSharedFailoverType")
     def access_port_shared_failover_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge2`, `te2`
+        , Attribute conditional on `access_port_dedicated` being equal to `false`
+          - Choices: `ge2`, `te2`
         """
         return pulumi.get(self, "access_port_shared_failover_type")
 
@@ -405,8 +425,8 @@ class _OtherUcseFeatureState:
     @pulumi.getter(name="accessPortSharedType")
     def access_port_shared_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
-        `console`, `failover`
+        , Attribute conditional on `access_port_dedicated` being equal to `false`
+          - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
         """
         return pulumi.get(self, "access_port_shared_type")
 
@@ -418,7 +438,8 @@ class _OtherUcseFeatureState:
     @pulumi.getter(name="assignPriority")
     def assign_priority(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Assign priority - Range: `0`-`7`
+        Assign priority
+          - Range: `0`-`7`
         """
         return pulumi.get(self, "assign_priority")
 
@@ -442,7 +463,8 @@ class _OtherUcseFeatureState:
     @pulumi.getter
     def bay(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Bay - Range: `0`-`2`
+        Bay
+          - Range: `0`-`2`
         """
         return pulumi.get(self, "bay")
 
@@ -550,7 +572,8 @@ class _OtherUcseFeatureState:
     @pulumi.getter
     def slot(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Slot - Range: `0`-`3`
+        Slot
+          - Range: `0`-`3`
         """
         return pulumi.get(self, "slot")
 
@@ -574,7 +597,8 @@ class _OtherUcseFeatureState:
     @pulumi.getter(name="vlanId")
     def vlan_id(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Assign Vlan Id - Range: `2`-`4095`
+        Assign Vlan Id
+          - Range: `2`-`4095`
         """
         return pulumi.get(self, "vlan_id")
 
@@ -635,13 +659,17 @@ class OtherUcseFeature(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.bool] access_port_dedicated: Dedicated - Default value: `true`
-        :param pulumi.Input[_builtins.str] access_port_shared_failover_type: , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge2`, `te2`
-        :param pulumi.Input[_builtins.str] access_port_shared_type: , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
-               `console`, `failover`
-        :param pulumi.Input[_builtins.int] assign_priority: Assign priority - Range: `0`-`7`
+        :param pulumi.Input[_builtins.bool] access_port_dedicated: Dedicated
+                 - Default value: `true`
+        :param pulumi.Input[_builtins.str] access_port_shared_failover_type: , Attribute conditional on `access_port_dedicated` being equal to `false`
+                 - Choices: `ge2`, `te2`
+        :param pulumi.Input[_builtins.str] access_port_shared_type: , Attribute conditional on `access_port_dedicated` being equal to `false`
+                 - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
+        :param pulumi.Input[_builtins.int] assign_priority: Assign priority
+                 - Range: `0`-`7`
         :param pulumi.Input[_builtins.str] assign_priority_variable: Variable name
-        :param pulumi.Input[_builtins.int] bay: Bay - Range: `0`-`2`
+        :param pulumi.Input[_builtins.int] bay: Bay
+                 - Range: `0`-`2`
         :param pulumi.Input[_builtins.str] default_gateway: Assign default gateway
         :param pulumi.Input[_builtins.str] default_gateway_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
@@ -650,8 +678,10 @@ class OtherUcseFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] ipv4_address: Assign IPv4 address
         :param pulumi.Input[_builtins.str] ipv4_address_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.int] slot: Slot - Range: `0`-`3`
-        :param pulumi.Input[_builtins.int] vlan_id: Assign Vlan Id - Range: `2`-`4095`
+        :param pulumi.Input[_builtins.int] slot: Slot
+                 - Range: `0`-`3`
+        :param pulumi.Input[_builtins.int] vlan_id: Assign Vlan Id
+                 - Range: `2`-`4095`
         :param pulumi.Input[_builtins.str] vlan_id_variable: Variable name
         """
         ...
@@ -774,13 +804,17 @@ class OtherUcseFeature(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.bool] access_port_dedicated: Dedicated - Default value: `true`
-        :param pulumi.Input[_builtins.str] access_port_shared_failover_type: , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge2`, `te2`
-        :param pulumi.Input[_builtins.str] access_port_shared_type: , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
-               `console`, `failover`
-        :param pulumi.Input[_builtins.int] assign_priority: Assign priority - Range: `0`-`7`
+        :param pulumi.Input[_builtins.bool] access_port_dedicated: Dedicated
+                 - Default value: `true`
+        :param pulumi.Input[_builtins.str] access_port_shared_failover_type: , Attribute conditional on `access_port_dedicated` being equal to `false`
+                 - Choices: `ge2`, `te2`
+        :param pulumi.Input[_builtins.str] access_port_shared_type: , Attribute conditional on `access_port_dedicated` being equal to `false`
+                 - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
+        :param pulumi.Input[_builtins.int] assign_priority: Assign priority
+                 - Range: `0`-`7`
         :param pulumi.Input[_builtins.str] assign_priority_variable: Variable name
-        :param pulumi.Input[_builtins.int] bay: Bay - Range: `0`-`2`
+        :param pulumi.Input[_builtins.int] bay: Bay
+                 - Range: `0`-`2`
         :param pulumi.Input[_builtins.str] default_gateway: Assign default gateway
         :param pulumi.Input[_builtins.str] default_gateway_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
@@ -789,9 +823,11 @@ class OtherUcseFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] ipv4_address: Assign IPv4 address
         :param pulumi.Input[_builtins.str] ipv4_address_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.int] slot: Slot - Range: `0`-`3`
+        :param pulumi.Input[_builtins.int] slot: Slot
+                 - Range: `0`-`3`
         :param pulumi.Input[_builtins.int] version: The version of the Feature
-        :param pulumi.Input[_builtins.int] vlan_id: Assign Vlan Id - Range: `2`-`4095`
+        :param pulumi.Input[_builtins.int] vlan_id: Assign Vlan Id
+                 - Range: `2`-`4095`
         :param pulumi.Input[_builtins.str] vlan_id_variable: Variable name
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -822,7 +858,8 @@ class OtherUcseFeature(pulumi.CustomResource):
     @pulumi.getter(name="accessPortDedicated")
     def access_port_dedicated(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Dedicated - Default value: `true`
+        Dedicated
+          - Default value: `true`
         """
         return pulumi.get(self, "access_port_dedicated")
 
@@ -830,7 +867,8 @@ class OtherUcseFeature(pulumi.CustomResource):
     @pulumi.getter(name="accessPortSharedFailoverType")
     def access_port_shared_failover_type(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge2`, `te2`
+        , Attribute conditional on `access_port_dedicated` being equal to `false`
+          - Choices: `ge2`, `te2`
         """
         return pulumi.get(self, "access_port_shared_failover_type")
 
@@ -838,8 +876,8 @@ class OtherUcseFeature(pulumi.CustomResource):
     @pulumi.getter(name="accessPortSharedType")
     def access_port_shared_type(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
-        `console`, `failover`
+        , Attribute conditional on `access_port_dedicated` being equal to `false`
+          - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
         """
         return pulumi.get(self, "access_port_shared_type")
 
@@ -847,7 +885,8 @@ class OtherUcseFeature(pulumi.CustomResource):
     @pulumi.getter(name="assignPriority")
     def assign_priority(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Assign priority - Range: `0`-`7`
+        Assign priority
+          - Range: `0`-`7`
         """
         return pulumi.get(self, "assign_priority")
 
@@ -863,7 +902,8 @@ class OtherUcseFeature(pulumi.CustomResource):
     @pulumi.getter
     def bay(self) -> pulumi.Output[_builtins.int]:
         """
-        Bay - Range: `0`-`2`
+        Bay
+          - Range: `0`-`2`
         """
         return pulumi.get(self, "bay")
 
@@ -935,7 +975,8 @@ class OtherUcseFeature(pulumi.CustomResource):
     @pulumi.getter
     def slot(self) -> pulumi.Output[_builtins.int]:
         """
-        Slot - Range: `0`-`3`
+        Slot
+          - Range: `0`-`3`
         """
         return pulumi.get(self, "slot")
 
@@ -951,7 +992,8 @@ class OtherUcseFeature(pulumi.CustomResource):
     @pulumi.getter(name="vlanId")
     def vlan_id(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Assign Vlan Id - Range: `2`-`4095`
+        Assign Vlan Id
+          - Range: `2`-`4095`
         """
         return pulumi.get(self, "vlan_id")
 

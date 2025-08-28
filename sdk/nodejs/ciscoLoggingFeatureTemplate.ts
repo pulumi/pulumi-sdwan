@@ -49,61 +49,65 @@ export class CiscoLoggingFeatureTemplate extends pulumi.CustomResource {
     /**
      * The description of the feature template
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    public readonly deviceTypes!: pulumi.Output<string[]>;
+    declare public readonly deviceTypes: pulumi.Output<string[]>;
     /**
-     * Enable logging to local disk - Default value: `true`
+     * Enable logging to local disk
+     *   - Default value: `true`
      */
-    public readonly diskLogging!: pulumi.Output<boolean | undefined>;
+    declare public readonly diskLogging: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly diskLoggingVariable!: pulumi.Output<string | undefined>;
+    declare public readonly diskLoggingVariable: pulumi.Output<string | undefined>;
     /**
      * Enable logging to remote server
      */
-    public readonly ipv4Servers!: pulumi.Output<outputs.CiscoLoggingFeatureTemplateIpv4Server[] | undefined>;
+    declare public readonly ipv4Servers: pulumi.Output<outputs.CiscoLoggingFeatureTemplateIpv4Server[] | undefined>;
     /**
      * Enable logging to remote IPv6 server
      */
-    public readonly ipv6Servers!: pulumi.Output<outputs.CiscoLoggingFeatureTemplateIpv6Server[] | undefined>;
+    declare public readonly ipv6Servers: pulumi.Output<outputs.CiscoLoggingFeatureTemplateIpv6Server[] | undefined>;
     /**
-     * Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+     * Set number of syslog files to create before discarding oldest files
+     *   - Range: `1`-`10`
+     *   - Default value: `10`
      */
-    public readonly logRotations!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly logRotationsVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
-     */
-    public readonly maxSize!: pulumi.Output<number | undefined>;
+    declare public readonly logRotations: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly maxSizeVariable!: pulumi.Output<string | undefined>;
+    declare public readonly logRotationsVariable: pulumi.Output<string | undefined>;
+    /**
+     * Set maximum size of file before it is rotated
+     *   - Range: `1`-`20`
+     *   - Default value: `10`
+     */
+    declare public readonly maxSize: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly maxSizeVariable: pulumi.Output<string | undefined>;
     /**
      * The name of the feature template
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The template type
      */
-    public /*out*/ readonly templateType!: pulumi.Output<string>;
+    declare public /*out*/ readonly templateType: pulumi.Output<string>;
     /**
      * Configure a TLS profile
      */
-    public readonly tlsProfiles!: pulumi.Output<outputs.CiscoLoggingFeatureTemplateTlsProfile[] | undefined>;
+    declare public readonly tlsProfiles: pulumi.Output<outputs.CiscoLoggingFeatureTemplateTlsProfile[] | undefined>;
     /**
      * The version of the feature template
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a CiscoLoggingFeatureTemplate resource with the given unique name, arguments, and options.
@@ -118,40 +122,40 @@ export class CiscoLoggingFeatureTemplate extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as CiscoLoggingFeatureTemplateState | undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["deviceTypes"] = state ? state.deviceTypes : undefined;
-            resourceInputs["diskLogging"] = state ? state.diskLogging : undefined;
-            resourceInputs["diskLoggingVariable"] = state ? state.diskLoggingVariable : undefined;
-            resourceInputs["ipv4Servers"] = state ? state.ipv4Servers : undefined;
-            resourceInputs["ipv6Servers"] = state ? state.ipv6Servers : undefined;
-            resourceInputs["logRotations"] = state ? state.logRotations : undefined;
-            resourceInputs["logRotationsVariable"] = state ? state.logRotationsVariable : undefined;
-            resourceInputs["maxSize"] = state ? state.maxSize : undefined;
-            resourceInputs["maxSizeVariable"] = state ? state.maxSizeVariable : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["templateType"] = state ? state.templateType : undefined;
-            resourceInputs["tlsProfiles"] = state ? state.tlsProfiles : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["deviceTypes"] = state?.deviceTypes;
+            resourceInputs["diskLogging"] = state?.diskLogging;
+            resourceInputs["diskLoggingVariable"] = state?.diskLoggingVariable;
+            resourceInputs["ipv4Servers"] = state?.ipv4Servers;
+            resourceInputs["ipv6Servers"] = state?.ipv6Servers;
+            resourceInputs["logRotations"] = state?.logRotations;
+            resourceInputs["logRotationsVariable"] = state?.logRotationsVariable;
+            resourceInputs["maxSize"] = state?.maxSize;
+            resourceInputs["maxSizeVariable"] = state?.maxSizeVariable;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["templateType"] = state?.templateType;
+            resourceInputs["tlsProfiles"] = state?.tlsProfiles;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as CiscoLoggingFeatureTemplateArgs | undefined;
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            if ((!args || args.deviceTypes === undefined) && !opts.urn) {
+            if (args?.deviceTypes === undefined && !opts.urn) {
                 throw new Error("Missing required property 'deviceTypes'");
             }
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["deviceTypes"] = args ? args.deviceTypes : undefined;
-            resourceInputs["diskLogging"] = args ? args.diskLogging : undefined;
-            resourceInputs["diskLoggingVariable"] = args ? args.diskLoggingVariable : undefined;
-            resourceInputs["ipv4Servers"] = args ? args.ipv4Servers : undefined;
-            resourceInputs["ipv6Servers"] = args ? args.ipv6Servers : undefined;
-            resourceInputs["logRotations"] = args ? args.logRotations : undefined;
-            resourceInputs["logRotationsVariable"] = args ? args.logRotationsVariable : undefined;
-            resourceInputs["maxSize"] = args ? args.maxSize : undefined;
-            resourceInputs["maxSizeVariable"] = args ? args.maxSizeVariable : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["tlsProfiles"] = args ? args.tlsProfiles : undefined;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["deviceTypes"] = args?.deviceTypes;
+            resourceInputs["diskLogging"] = args?.diskLogging;
+            resourceInputs["diskLoggingVariable"] = args?.diskLoggingVariable;
+            resourceInputs["ipv4Servers"] = args?.ipv4Servers;
+            resourceInputs["ipv6Servers"] = args?.ipv6Servers;
+            resourceInputs["logRotations"] = args?.logRotations;
+            resourceInputs["logRotationsVariable"] = args?.logRotationsVariable;
+            resourceInputs["maxSize"] = args?.maxSize;
+            resourceInputs["maxSizeVariable"] = args?.maxSizeVariable;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["tlsProfiles"] = args?.tlsProfiles;
             resourceInputs["templateType"] = undefined /*out*/;
             resourceInputs["version"] = undefined /*out*/;
         }
@@ -169,13 +173,13 @@ export interface CiscoLoggingFeatureTemplateState {
      */
     description?: pulumi.Input<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
     deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Enable logging to local disk - Default value: `true`
+     * Enable logging to local disk
+     *   - Default value: `true`
      */
     diskLogging?: pulumi.Input<boolean>;
     /**
@@ -191,7 +195,9 @@ export interface CiscoLoggingFeatureTemplateState {
      */
     ipv6Servers?: pulumi.Input<pulumi.Input<inputs.CiscoLoggingFeatureTemplateIpv6Server>[]>;
     /**
-     * Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+     * Set number of syslog files to create before discarding oldest files
+     *   - Range: `1`-`10`
+     *   - Default value: `10`
      */
     logRotations?: pulumi.Input<number>;
     /**
@@ -199,7 +205,9 @@ export interface CiscoLoggingFeatureTemplateState {
      */
     logRotationsVariable?: pulumi.Input<string>;
     /**
-     * Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+     * Set maximum size of file before it is rotated
+     *   - Range: `1`-`20`
+     *   - Default value: `10`
      */
     maxSize?: pulumi.Input<number>;
     /**
@@ -233,13 +241,13 @@ export interface CiscoLoggingFeatureTemplateArgs {
      */
     description: pulumi.Input<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
     deviceTypes: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Enable logging to local disk - Default value: `true`
+     * Enable logging to local disk
+     *   - Default value: `true`
      */
     diskLogging?: pulumi.Input<boolean>;
     /**
@@ -255,7 +263,9 @@ export interface CiscoLoggingFeatureTemplateArgs {
      */
     ipv6Servers?: pulumi.Input<pulumi.Input<inputs.CiscoLoggingFeatureTemplateIpv6Server>[]>;
     /**
-     * Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+     * Set number of syslog files to create before discarding oldest files
+     *   - Range: `1`-`10`
+     *   - Default value: `10`
      */
     logRotations?: pulumi.Input<number>;
     /**
@@ -263,7 +273,9 @@ export interface CiscoLoggingFeatureTemplateArgs {
      */
     logRotationsVariable?: pulumi.Input<string>;
     /**
-     * Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+     * Set maximum size of file before it is rotated
+     *   - Range: `1`-`20`
+     *   - Default value: `10`
      */
     maxSize?: pulumi.Input<number>;
     /**

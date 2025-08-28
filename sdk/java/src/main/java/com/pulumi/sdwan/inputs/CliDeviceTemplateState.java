@@ -32,14 +32,16 @@ public final class CliDeviceTemplateState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * CLI type - Choices: `device`, `intend`
+     * CLI type
+     *   - Choices: `device`, `intend`
      * 
      */
     @Import(name="cliType")
     private @Nullable Output<String> cliType;
 
     /**
-     * @return CLI type - Choices: `device`, `intend`
+     * @return CLI type
+     *   - Choices: `device`, `intend`
      * 
      */
     public Optional<Output<String>> cliType() {
@@ -157,7 +159,8 @@ public final class CliDeviceTemplateState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param cliType CLI type - Choices: `device`, `intend`
+         * @param cliType CLI type
+         *   - Choices: `device`, `intend`
          * 
          * @return builder
          * 
@@ -168,7 +171,8 @@ public final class CliDeviceTemplateState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param cliType CLI type - Choices: `device`, `intend`
+         * @param cliType CLI type
+         *   - Choices: `device`, `intend`
          * 
          * @return builder
          * 

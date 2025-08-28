@@ -68,43 +68,47 @@ export class SystemPerformanceMonitoringFeature extends pulumi.CustomResource {
     /**
      * Application groups to be monitored
      */
-    public readonly appPerfMonitorAppGroups!: pulumi.Output<string[] | undefined>;
+    declare public readonly appPerfMonitorAppGroups: pulumi.Output<string[] | undefined>;
     /**
-     * Application performance monitoring enable or disable - Default value: `false`
+     * Application performance monitoring enable or disable
+     *   - Default value: `false`
      */
-    public readonly appPerfMonitorEnabled!: pulumi.Output<boolean | undefined>;
+    declare public readonly appPerfMonitorEnabled: pulumi.Output<boolean | undefined>;
     /**
      * The description of the Feature
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * UMTS event driven monitoring enable or disable - Default value: `false`
+     * UMTS event driven monitoring enable or disable
+     *   - Default value: `false`
      */
-    public readonly eventDrivenConfigEnabled!: pulumi.Output<boolean | undefined>;
+    declare public readonly eventDrivenConfigEnabled: pulumi.Output<boolean | undefined>;
     /**
      * UMTS events
      */
-    public readonly eventDrivenEvents!: pulumi.Output<string[] | undefined>;
+    declare public readonly eventDrivenEvents: pulumi.Output<string[] | undefined>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
-     * UMTS monitoring enable or disable - Default value: `false`
+     * UMTS monitoring enable or disable
+     *   - Default value: `false`
      */
-    public readonly monitoringConfigEnabled!: pulumi.Output<boolean | undefined>;
+    declare public readonly monitoringConfigEnabled: pulumi.Output<boolean | undefined>;
     /**
-     * UMTS monitoring interval(Minutes) - Choices: `30`, `60`
+     * UMTS monitoring interval(Minutes)
+     *   - Choices: `30`, `60`
      */
-    public readonly monitoringConfigInterval!: pulumi.Output<string | undefined>;
+    declare public readonly monitoringConfigInterval: pulumi.Output<string | undefined>;
     /**
      * The name of the Feature
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The version of the Feature
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a SystemPerformanceMonitoringFeature resource with the given unique name, arguments, and options.
@@ -119,30 +123,30 @@ export class SystemPerformanceMonitoringFeature extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SystemPerformanceMonitoringFeatureState | undefined;
-            resourceInputs["appPerfMonitorAppGroups"] = state ? state.appPerfMonitorAppGroups : undefined;
-            resourceInputs["appPerfMonitorEnabled"] = state ? state.appPerfMonitorEnabled : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["eventDrivenConfigEnabled"] = state ? state.eventDrivenConfigEnabled : undefined;
-            resourceInputs["eventDrivenEvents"] = state ? state.eventDrivenEvents : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["monitoringConfigEnabled"] = state ? state.monitoringConfigEnabled : undefined;
-            resourceInputs["monitoringConfigInterval"] = state ? state.monitoringConfigInterval : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["appPerfMonitorAppGroups"] = state?.appPerfMonitorAppGroups;
+            resourceInputs["appPerfMonitorEnabled"] = state?.appPerfMonitorEnabled;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["eventDrivenConfigEnabled"] = state?.eventDrivenConfigEnabled;
+            resourceInputs["eventDrivenEvents"] = state?.eventDrivenEvents;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["monitoringConfigEnabled"] = state?.monitoringConfigEnabled;
+            resourceInputs["monitoringConfigInterval"] = state?.monitoringConfigInterval;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as SystemPerformanceMonitoringFeatureArgs | undefined;
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            resourceInputs["appPerfMonitorAppGroups"] = args ? args.appPerfMonitorAppGroups : undefined;
-            resourceInputs["appPerfMonitorEnabled"] = args ? args.appPerfMonitorEnabled : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["eventDrivenConfigEnabled"] = args ? args.eventDrivenConfigEnabled : undefined;
-            resourceInputs["eventDrivenEvents"] = args ? args.eventDrivenEvents : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["monitoringConfigEnabled"] = args ? args.monitoringConfigEnabled : undefined;
-            resourceInputs["monitoringConfigInterval"] = args ? args.monitoringConfigInterval : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
+            resourceInputs["appPerfMonitorAppGroups"] = args?.appPerfMonitorAppGroups;
+            resourceInputs["appPerfMonitorEnabled"] = args?.appPerfMonitorEnabled;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["eventDrivenConfigEnabled"] = args?.eventDrivenConfigEnabled;
+            resourceInputs["eventDrivenEvents"] = args?.eventDrivenEvents;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["monitoringConfigEnabled"] = args?.monitoringConfigEnabled;
+            resourceInputs["monitoringConfigInterval"] = args?.monitoringConfigInterval;
+            resourceInputs["name"] = args?.name;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -159,7 +163,8 @@ export interface SystemPerformanceMonitoringFeatureState {
      */
     appPerfMonitorAppGroups?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Application performance monitoring enable or disable - Default value: `false`
+     * Application performance monitoring enable or disable
+     *   - Default value: `false`
      */
     appPerfMonitorEnabled?: pulumi.Input<boolean>;
     /**
@@ -167,7 +172,8 @@ export interface SystemPerformanceMonitoringFeatureState {
      */
     description?: pulumi.Input<string>;
     /**
-     * UMTS event driven monitoring enable or disable - Default value: `false`
+     * UMTS event driven monitoring enable or disable
+     *   - Default value: `false`
      */
     eventDrivenConfigEnabled?: pulumi.Input<boolean>;
     /**
@@ -179,11 +185,13 @@ export interface SystemPerformanceMonitoringFeatureState {
      */
     featureProfileId?: pulumi.Input<string>;
     /**
-     * UMTS monitoring enable or disable - Default value: `false`
+     * UMTS monitoring enable or disable
+     *   - Default value: `false`
      */
     monitoringConfigEnabled?: pulumi.Input<boolean>;
     /**
-     * UMTS monitoring interval(Minutes) - Choices: `30`, `60`
+     * UMTS monitoring interval(Minutes)
+     *   - Choices: `30`, `60`
      */
     monitoringConfigInterval?: pulumi.Input<string>;
     /**
@@ -205,7 +213,8 @@ export interface SystemPerformanceMonitoringFeatureArgs {
      */
     appPerfMonitorAppGroups?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Application performance monitoring enable or disable - Default value: `false`
+     * Application performance monitoring enable or disable
+     *   - Default value: `false`
      */
     appPerfMonitorEnabled?: pulumi.Input<boolean>;
     /**
@@ -213,7 +222,8 @@ export interface SystemPerformanceMonitoringFeatureArgs {
      */
     description?: pulumi.Input<string>;
     /**
-     * UMTS event driven monitoring enable or disable - Default value: `false`
+     * UMTS event driven monitoring enable or disable
+     *   - Default value: `false`
      */
     eventDrivenConfigEnabled?: pulumi.Input<boolean>;
     /**
@@ -225,11 +235,13 @@ export interface SystemPerformanceMonitoringFeatureArgs {
      */
     featureProfileId: pulumi.Input<string>;
     /**
-     * UMTS monitoring enable or disable - Default value: `false`
+     * UMTS monitoring enable or disable
+     *   - Default value: `false`
      */
     monitoringConfigEnabled?: pulumi.Input<boolean>;
     /**
-     * UMTS monitoring interval(Minutes) - Choices: `30`, `60`
+     * UMTS monitoring interval(Minutes)
+     *   - Choices: `30`, `60`
      */
     monitoringConfigInterval?: pulumi.Input<string>;
     /**

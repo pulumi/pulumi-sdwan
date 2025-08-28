@@ -45,7 +45,8 @@ namespace Pulumi.Sdwan
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// Object ID - Range: `1`-`1000`
+        /// Object ID
+        ///   - Range: `1`-`1000`
         /// </summary>
         [Output("objectTrackerId")]
         public Output<int?> ObjectTrackerId { get; private set; } = null!;
@@ -57,7 +58,9 @@ namespace Pulumi.Sdwan
         public Output<string?> ObjectTrackerIdVariable { get; private set; } = null!;
 
         /// <summary>
-        /// tracker ref list criteria boolean and or - Choices: `and`, `or` - Default value: `or`
+        /// tracker ref list criteria boolean and or
+        ///   - Choices: `and`, `or`
+        ///   - Default value: `or`
         /// </summary>
         [Output("reachable")]
         public Output<string?> Reachable { get; private set; } = null!;
@@ -145,7 +148,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Object ID - Range: `1`-`1000`
+        /// Object ID
+        ///   - Range: `1`-`1000`
         /// </summary>
         [Input("objectTrackerId")]
         public Input<int>? ObjectTrackerId { get; set; }
@@ -157,7 +161,9 @@ namespace Pulumi.Sdwan
         public Input<string>? ObjectTrackerIdVariable { get; set; }
 
         /// <summary>
-        /// tracker ref list criteria boolean and or - Choices: `and`, `or` - Default value: `or`
+        /// tracker ref list criteria boolean and or
+        ///   - Choices: `and`, `or`
+        ///   - Default value: `or`
         /// </summary>
         [Input("reachable")]
         public Input<string>? Reachable { get; set; }
@@ -207,7 +213,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Object ID - Range: `1`-`1000`
+        /// Object ID
+        ///   - Range: `1`-`1000`
         /// </summary>
         [Input("objectTrackerId")]
         public Input<int>? ObjectTrackerId { get; set; }
@@ -219,7 +226,9 @@ namespace Pulumi.Sdwan
         public Input<string>? ObjectTrackerIdVariable { get; set; }
 
         /// <summary>
-        /// tracker ref list criteria boolean and or - Choices: `and`, `or` - Default value: `or`
+        /// tracker ref list criteria boolean and or
+        ///   - Choices: `and`, `or`
+        ///   - Default value: `or`
         /// </summary>
         [Input("reachable")]
         public Input<string>? Reachable { get; set; }

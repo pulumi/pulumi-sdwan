@@ -38,9 +38,8 @@ class CiscoSnmpFeatureTemplateArgs:
         """
         The set of arguments for constructing a CiscoSnmpFeatureTemplate resource.
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[Sequence[pulumi.Input['CiscoSnmpFeatureTemplateCommunityArgs']]] communities: Configure SNMP community
         :param pulumi.Input[_builtins.str] contact: Set the contact for this managed node
         :param pulumi.Input[_builtins.str] contact_variable: Variable name
@@ -48,7 +47,8 @@ class CiscoSnmpFeatureTemplateArgs:
         :param pulumi.Input[_builtins.str] location: Set the physical location of this managed node
         :param pulumi.Input[_builtins.str] location_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.bool] shutdown: Enable or disable SNMP - Default value: `true`
+        :param pulumi.Input[_builtins.bool] shutdown: Enable or disable SNMP
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['CiscoSnmpFeatureTemplateTrapTargetArgs']]] trap_targets: Configure SNMP server to receive SNMP traps
         :param pulumi.Input[Sequence[pulumi.Input['CiscoSnmpFeatureTemplateUserArgs']]] users: Configure an SNMP user
@@ -97,9 +97,8 @@ class CiscoSnmpFeatureTemplateArgs:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -195,7 +194,8 @@ class CiscoSnmpFeatureTemplateArgs:
     @pulumi.getter
     def shutdown(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable or disable SNMP - Default value: `true`
+        Enable or disable SNMP
+          - Default value: `true`
         """
         return pulumi.get(self, "shutdown")
 
@@ -277,14 +277,14 @@ class _CiscoSnmpFeatureTemplateState:
         :param pulumi.Input[_builtins.str] contact: Set the contact for this managed node
         :param pulumi.Input[_builtins.str] contact_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[Sequence[pulumi.Input['CiscoSnmpFeatureTemplateGroupArgs']]] groups: Configure an SNMP group
         :param pulumi.Input[_builtins.str] location: Set the physical location of this managed node
         :param pulumi.Input[_builtins.str] location_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.bool] shutdown: Enable or disable SNMP - Default value: `true`
+        :param pulumi.Input[_builtins.bool] shutdown: Enable or disable SNMP
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
         :param pulumi.Input[_builtins.str] template_type: The template type
         :param pulumi.Input[Sequence[pulumi.Input['CiscoSnmpFeatureTemplateTrapTargetArgs']]] trap_targets: Configure SNMP server to receive SNMP traps
@@ -377,9 +377,8 @@ class _CiscoSnmpFeatureTemplateState:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -439,7 +438,8 @@ class _CiscoSnmpFeatureTemplateState:
     @pulumi.getter
     def shutdown(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable or disable SNMP - Default value: `true`
+        Enable or disable SNMP
+          - Default value: `true`
         """
         return pulumi.get(self, "shutdown")
 
@@ -559,14 +559,14 @@ class CiscoSnmpFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] contact: Set the contact for this managed node
         :param pulumi.Input[_builtins.str] contact_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateGroupArgs', 'CiscoSnmpFeatureTemplateGroupArgsDict']]]] groups: Configure an SNMP group
         :param pulumi.Input[_builtins.str] location: Set the physical location of this managed node
         :param pulumi.Input[_builtins.str] location_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.bool] shutdown: Enable or disable SNMP - Default value: `true`
+        :param pulumi.Input[_builtins.bool] shutdown: Enable or disable SNMP
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateTrapTargetArgs', 'CiscoSnmpFeatureTemplateTrapTargetArgsDict']]]] trap_targets: Configure SNMP server to receive SNMP traps
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateUserArgs', 'CiscoSnmpFeatureTemplateUserArgsDict']]]] users: Configure an SNMP user
@@ -685,14 +685,14 @@ class CiscoSnmpFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] contact: Set the contact for this managed node
         :param pulumi.Input[_builtins.str] contact_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateGroupArgs', 'CiscoSnmpFeatureTemplateGroupArgsDict']]]] groups: Configure an SNMP group
         :param pulumi.Input[_builtins.str] location: Set the physical location of this managed node
         :param pulumi.Input[_builtins.str] location_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.bool] shutdown: Enable or disable SNMP - Default value: `true`
+        :param pulumi.Input[_builtins.bool] shutdown: Enable or disable SNMP
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
         :param pulumi.Input[_builtins.str] template_type: The template type
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSnmpFeatureTemplateTrapTargetArgs', 'CiscoSnmpFeatureTemplateTrapTargetArgsDict']]]] trap_targets: Configure SNMP server to receive SNMP traps
@@ -758,9 +758,8 @@ class CiscoSnmpFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -800,7 +799,8 @@ class CiscoSnmpFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter
     def shutdown(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Enable or disable SNMP - Default value: `true`
+        Enable or disable SNMP
+          - Default value: `true`
         """
         return pulumi.get(self, "shutdown")
 

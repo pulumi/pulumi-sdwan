@@ -34,17 +34,23 @@ class SwitchportFeatureTemplateArgs:
         """
         The set of arguments for constructing a SwitchportFeatureTemplate resource.
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.int] age_out_time: Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.int] age_out_time: Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+                 - Range: `0`-`1000000`
+                 - Default value: `300`
         :param pulumi.Input[_builtins.str] age_out_time_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['SwitchportFeatureTemplateInterfaceArgs']]] interfaces: Interface name: GigabitEthernet0/<>/<> when present
-        :param pulumi.Input[_builtins.str] module_type: Module type - Choices: `4`, `8`, `22`, `50`
+        :param pulumi.Input[_builtins.str] module_type: Module type
+                 - Choices: `4`, `8`, `22`, `50`
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.int] slot: Number of Slots - Range: `0`-`31` - Default value: `0`
+        :param pulumi.Input[_builtins.int] slot: Number of Slots
+                 - Range: `0`-`31`
+                 - Default value: `0`
         :param pulumi.Input[Sequence[pulumi.Input['SwitchportFeatureTemplateStaticMacAddressArgs']]] static_mac_addresses: Add static MAC address entries for interface
-        :param pulumi.Input[_builtins.int] sub_slot: Number of Sub-Slots - Range: `0`-`31` - Default value: `0`
+        :param pulumi.Input[_builtins.int] sub_slot: Number of Sub-Slots
+                 - Range: `0`-`31`
+                 - Default value: `0`
         """
         pulumi.set(__self__, "description", description)
         pulumi.set(__self__, "device_types", device_types)
@@ -81,9 +87,8 @@ class SwitchportFeatureTemplateArgs:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -95,7 +100,9 @@ class SwitchportFeatureTemplateArgs:
     @pulumi.getter(name="ageOutTime")
     def age_out_time(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+        Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+          - Range: `0`-`1000000`
+          - Default value: `300`
         """
         return pulumi.get(self, "age_out_time")
 
@@ -131,7 +138,8 @@ class SwitchportFeatureTemplateArgs:
     @pulumi.getter(name="moduleType")
     def module_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Module type - Choices: `4`, `8`, `22`, `50`
+        Module type
+          - Choices: `4`, `8`, `22`, `50`
         """
         return pulumi.get(self, "module_type")
 
@@ -155,7 +163,9 @@ class SwitchportFeatureTemplateArgs:
     @pulumi.getter
     def slot(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Number of Slots - Range: `0`-`31` - Default value: `0`
+        Number of Slots
+          - Range: `0`-`31`
+          - Default value: `0`
         """
         return pulumi.get(self, "slot")
 
@@ -179,7 +189,9 @@ class SwitchportFeatureTemplateArgs:
     @pulumi.getter(name="subSlot")
     def sub_slot(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Number of Sub-Slots - Range: `0`-`31` - Default value: `0`
+        Number of Sub-Slots
+          - Range: `0`-`31`
+          - Default value: `0`
         """
         return pulumi.get(self, "sub_slot")
 
@@ -205,18 +217,24 @@ class _SwitchportFeatureTemplateState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering SwitchportFeatureTemplate resources.
-        :param pulumi.Input[_builtins.int] age_out_time: Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+        :param pulumi.Input[_builtins.int] age_out_time: Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+                 - Range: `0`-`1000000`
+                 - Default value: `300`
         :param pulumi.Input[_builtins.str] age_out_time_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[Sequence[pulumi.Input['SwitchportFeatureTemplateInterfaceArgs']]] interfaces: Interface name: GigabitEthernet0/<>/<> when present
-        :param pulumi.Input[_builtins.str] module_type: Module type - Choices: `4`, `8`, `22`, `50`
+        :param pulumi.Input[_builtins.str] module_type: Module type
+                 - Choices: `4`, `8`, `22`, `50`
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.int] slot: Number of Slots - Range: `0`-`31` - Default value: `0`
+        :param pulumi.Input[_builtins.int] slot: Number of Slots
+                 - Range: `0`-`31`
+                 - Default value: `0`
         :param pulumi.Input[Sequence[pulumi.Input['SwitchportFeatureTemplateStaticMacAddressArgs']]] static_mac_addresses: Add static MAC address entries for interface
-        :param pulumi.Input[_builtins.int] sub_slot: Number of Sub-Slots - Range: `0`-`31` - Default value: `0`
+        :param pulumi.Input[_builtins.int] sub_slot: Number of Sub-Slots
+                 - Range: `0`-`31`
+                 - Default value: `0`
         :param pulumi.Input[_builtins.str] template_type: The template type
         :param pulumi.Input[_builtins.int] version: The version of the feature template
         """
@@ -249,7 +267,9 @@ class _SwitchportFeatureTemplateState:
     @pulumi.getter(name="ageOutTime")
     def age_out_time(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+        Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+          - Range: `0`-`1000000`
+          - Default value: `300`
         """
         return pulumi.get(self, "age_out_time")
 
@@ -285,9 +305,8 @@ class _SwitchportFeatureTemplateState:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -311,7 +330,8 @@ class _SwitchportFeatureTemplateState:
     @pulumi.getter(name="moduleType")
     def module_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Module type - Choices: `4`, `8`, `22`, `50`
+        Module type
+          - Choices: `4`, `8`, `22`, `50`
         """
         return pulumi.get(self, "module_type")
 
@@ -335,7 +355,9 @@ class _SwitchportFeatureTemplateState:
     @pulumi.getter
     def slot(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Number of Slots - Range: `0`-`31` - Default value: `0`
+        Number of Slots
+          - Range: `0`-`31`
+          - Default value: `0`
         """
         return pulumi.get(self, "slot")
 
@@ -359,7 +381,9 @@ class _SwitchportFeatureTemplateState:
     @pulumi.getter(name="subSlot")
     def sub_slot(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Number of Sub-Slots - Range: `0`-`31` - Default value: `0`
+        Number of Sub-Slots
+          - Range: `0`-`31`
+          - Default value: `0`
         """
         return pulumi.get(self, "sub_slot")
 
@@ -423,18 +447,24 @@ class SwitchportFeatureTemplate(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.int] age_out_time: Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+        :param pulumi.Input[_builtins.int] age_out_time: Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+                 - Range: `0`-`1000000`
+                 - Default value: `300`
         :param pulumi.Input[_builtins.str] age_out_time_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchportFeatureTemplateInterfaceArgs', 'SwitchportFeatureTemplateInterfaceArgsDict']]]] interfaces: Interface name: GigabitEthernet0/<>/<> when present
-        :param pulumi.Input[_builtins.str] module_type: Module type - Choices: `4`, `8`, `22`, `50`
+        :param pulumi.Input[_builtins.str] module_type: Module type
+                 - Choices: `4`, `8`, `22`, `50`
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.int] slot: Number of Slots - Range: `0`-`31` - Default value: `0`
+        :param pulumi.Input[_builtins.int] slot: Number of Slots
+                 - Range: `0`-`31`
+                 - Default value: `0`
         :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchportFeatureTemplateStaticMacAddressArgs', 'SwitchportFeatureTemplateStaticMacAddressArgsDict']]]] static_mac_addresses: Add static MAC address entries for interface
-        :param pulumi.Input[_builtins.int] sub_slot: Number of Sub-Slots - Range: `0`-`31` - Default value: `0`
+        :param pulumi.Input[_builtins.int] sub_slot: Number of Sub-Slots
+                 - Range: `0`-`31`
+                 - Default value: `0`
         """
         ...
     @overload
@@ -533,18 +563,24 @@ class SwitchportFeatureTemplate(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.int] age_out_time: Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+        :param pulumi.Input[_builtins.int] age_out_time: Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+                 - Range: `0`-`1000000`
+                 - Default value: `300`
         :param pulumi.Input[_builtins.str] age_out_time_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchportFeatureTemplateInterfaceArgs', 'SwitchportFeatureTemplateInterfaceArgsDict']]]] interfaces: Interface name: GigabitEthernet0/<>/<> when present
-        :param pulumi.Input[_builtins.str] module_type: Module type - Choices: `4`, `8`, `22`, `50`
+        :param pulumi.Input[_builtins.str] module_type: Module type
+                 - Choices: `4`, `8`, `22`, `50`
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.int] slot: Number of Slots - Range: `0`-`31` - Default value: `0`
+        :param pulumi.Input[_builtins.int] slot: Number of Slots
+                 - Range: `0`-`31`
+                 - Default value: `0`
         :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchportFeatureTemplateStaticMacAddressArgs', 'SwitchportFeatureTemplateStaticMacAddressArgsDict']]]] static_mac_addresses: Add static MAC address entries for interface
-        :param pulumi.Input[_builtins.int] sub_slot: Number of Sub-Slots - Range: `0`-`31` - Default value: `0`
+        :param pulumi.Input[_builtins.int] sub_slot: Number of Sub-Slots
+                 - Range: `0`-`31`
+                 - Default value: `0`
         :param pulumi.Input[_builtins.str] template_type: The template type
         :param pulumi.Input[_builtins.int] version: The version of the feature template
         """
@@ -570,7 +606,9 @@ class SwitchportFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="ageOutTime")
     def age_out_time(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+        Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+          - Range: `0`-`1000000`
+          - Default value: `300`
         """
         return pulumi.get(self, "age_out_time")
 
@@ -594,9 +632,8 @@ class SwitchportFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -612,7 +649,8 @@ class SwitchportFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="moduleType")
     def module_type(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Module type - Choices: `4`, `8`, `22`, `50`
+        Module type
+          - Choices: `4`, `8`, `22`, `50`
         """
         return pulumi.get(self, "module_type")
 
@@ -628,7 +666,9 @@ class SwitchportFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter
     def slot(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Number of Slots - Range: `0`-`31` - Default value: `0`
+        Number of Slots
+          - Range: `0`-`31`
+          - Default value: `0`
         """
         return pulumi.get(self, "slot")
 
@@ -644,7 +684,9 @@ class SwitchportFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="subSlot")
     def sub_slot(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Number of Sub-Slots - Range: `0`-`31` - Default value: `0`
+        Number of Sub-Slots
+          - Range: `0`-`31`
+          - Default value: `0`
         """
         return pulumi.get(self, "sub_slot")
 

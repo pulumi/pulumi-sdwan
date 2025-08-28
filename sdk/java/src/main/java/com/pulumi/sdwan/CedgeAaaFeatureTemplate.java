@@ -58,14 +58,16 @@ public class CedgeAaaFeatureTemplate extends com.pulumi.resources.CustomResource
         return Codegen.optional(this.accountingRules);
     }
     /**
-     * For configuration mode commands. - Default value: `false`
+     * For configuration mode commands.
+     *   - Default value: `false`
      * 
      */
     @Export(name="authorizationConfigCommands", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> authorizationConfigCommands;
 
     /**
-     * @return For configuration mode commands. - Default value: `false`
+     * @return For configuration mode commands.
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> authorizationConfigCommands() {
@@ -86,14 +88,16 @@ public class CedgeAaaFeatureTemplate extends com.pulumi.resources.CustomResource
         return Codegen.optional(this.authorizationConfigCommandsVariable);
     }
     /**
-     * For enabling console authorization - Default value: `false`
+     * For enabling console authorization
+     *   - Default value: `false`
      * 
      */
     @Export(name="authorizationConsole", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> authorizationConsole;
 
     /**
-     * @return For enabling console authorization - Default value: `false`
+     * @return For enabling console authorization
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> authorizationConsole() {
@@ -142,32 +146,32 @@ public class CedgeAaaFeatureTemplate extends com.pulumi.resources.CustomResource
         return this.description;
     }
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Export(name="deviceTypes", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Output<List<String>> deviceTypes() {
         return this.deviceTypes;
     }
     /**
-     * Accounting configurations parameters - Default value: `false`
+     * Accounting configurations parameters
+     *   - Default value: `false`
      * 
      */
     @Export(name="dot1xAccounting", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> dot1xAccounting;
 
     /**
-     * @return Accounting configurations parameters - Default value: `false`
+     * @return Accounting configurations parameters
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> dot1xAccounting() {
@@ -188,14 +192,16 @@ public class CedgeAaaFeatureTemplate extends com.pulumi.resources.CustomResource
         return Codegen.optional(this.dot1xAccountingVariable);
     }
     /**
-     * Authentication configurations parameters - Default value: `false`
+     * Authentication configurations parameters
+     *   - Default value: `false`
      * 
      */
     @Export(name="dot1xAuthentication", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> dot1xAuthentication;
 
     /**
-     * @return Authentication configurations parameters - Default value: `false`
+     * @return Authentication configurations parameters
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> dot1xAuthentication() {
@@ -244,14 +250,18 @@ public class CedgeAaaFeatureTemplate extends com.pulumi.resources.CustomResource
         return Codegen.optional(this.radiusClients);
     }
     /**
-     * Authentication Type - Choices: `any`, `all`, `session-key` - Default value: `any`
+     * Authentication Type
+     *   - Choices: `any`, `all`, `session-key`
+     *   - Default value: `any`
      * 
      */
     @Export(name="radiusDynamicAuthorAuthenticationType", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> radiusDynamicAuthorAuthenticationType;
 
     /**
-     * @return Authentication Type - Choices: `any`, `all`, `session-key` - Default value: `any`
+     * @return Authentication Type
+     *   - Choices: `any`, `all`, `session-key`
+     *   - Default value: `any`
      * 
      */
     public Output<Optional<String>> radiusDynamicAuthorAuthenticationType() {
@@ -272,14 +282,18 @@ public class CedgeAaaFeatureTemplate extends com.pulumi.resources.CustomResource
         return Codegen.optional(this.radiusDynamicAuthorAuthenticationTypeVariable);
     }
     /**
-     * Domain Stripping - Choices: `yes`, `no`, `right-to-left` - Default value: `no`
+     * Domain Stripping
+     *   - Choices: `yes`, `no`, `right-to-left`
+     *   - Default value: `no`
      * 
      */
     @Export(name="radiusDynamicAuthorDomainStripping", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> radiusDynamicAuthorDomainStripping;
 
     /**
-     * @return Domain Stripping - Choices: `yes`, `no`, `right-to-left` - Default value: `no`
+     * @return Domain Stripping
+     *   - Choices: `yes`, `no`, `right-to-left`
+     *   - Default value: `no`
      * 
      */
     public Output<Optional<String>> radiusDynamicAuthorDomainStripping() {
@@ -300,14 +314,18 @@ public class CedgeAaaFeatureTemplate extends com.pulumi.resources.CustomResource
         return Codegen.optional(this.radiusDynamicAuthorDomainStrippingVariable);
     }
     /**
-     * Specify Radius Dynamic Author Port - Range: `0`-`65535` - Default value: `1700`
+     * Specify Radius Dynamic Author Port
+     *   - Range: `0`-`65535`
+     *   - Default value: `1700`
      * 
      */
     @Export(name="radiusDynamicAuthorPort", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> radiusDynamicAuthorPort;
 
     /**
-     * @return Specify Radius Dynamic Author Port - Range: `0`-`65535` - Default value: `1700`
+     * @return Specify Radius Dynamic Author Port
+     *   - Range: `0`-`65535`
+     *   - Default value: `1700`
      * 
      */
     public Output<Optional<Integer>> radiusDynamicAuthorPort() {
@@ -412,14 +430,16 @@ public class CedgeAaaFeatureTemplate extends com.pulumi.resources.CustomResource
         return Codegen.optional(this.radiusTrustsecGroup);
     }
     /**
-     * ServerGroups priority order - Default value: `local`
+     * ServerGroups priority order
+     *   - Default value: `local`
      * 
      */
     @Export(name="serverGroupsPriorityOrder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> serverGroupsPriorityOrder;
 
     /**
-     * @return ServerGroups priority order - Default value: `local`
+     * @return ServerGroups priority order
+     *   - Default value: `local`
      * 
      */
     public Output<Optional<String>> serverGroupsPriorityOrder() {

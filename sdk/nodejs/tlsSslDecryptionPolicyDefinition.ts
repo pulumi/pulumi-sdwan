@@ -48,83 +48,95 @@ export class TlsSslDecryptionPolicyDefinition extends pulumi.CustomResource {
     /**
      * Certificate Lifetime(in Days)
      */
-    public readonly certificateLifetimeInDays!: pulumi.Output<number | undefined>;
+    declare public readonly certificateLifetimeInDays: pulumi.Output<number | undefined>;
     /**
-     * Certificate revocation status - Choices: `ocsp`, `none`
+     * Certificate revocation status
+     *   - Choices: `ocsp`, `none`
      */
-    public readonly certificateRevocationStatus!: pulumi.Output<string | undefined>;
+    declare public readonly certificateRevocationStatus: pulumi.Output<string | undefined>;
     /**
-     * Default action (applies when `mode` set to `security`) - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
+     * Default action (applies when `mode` set to `security`)
+     *   - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
      */
-    public readonly defaultAction!: pulumi.Output<string | undefined>;
+    declare public readonly defaultAction: pulumi.Output<string | undefined>;
     /**
      * The description of the policy definition.
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
-     * EC Key Type - Choices: `P256`, `P384`, `P521`
+     * EC Key Type
+     *   - Choices: `P256`, `P384`, `P521`
      */
-    public readonly ecKeyType!: pulumi.Output<string | undefined>;
+    declare public readonly ecKeyType: pulumi.Output<string | undefined>;
     /**
-     * Expired certificate action - Choices: `drop`, `decrypt`
+     * Expired certificate action
+     *   - Choices: `drop`, `decrypt`
      */
-    public readonly expiredCertificate!: pulumi.Output<string | undefined>;
+    declare public readonly expiredCertificate: pulumi.Output<string | undefined>;
     /**
-     * Failure mode - Choices: `open`, `close`
+     * Failure mode
+     *   - Choices: `open`, `close`
      */
-    public readonly failureMode!: pulumi.Output<string | undefined>;
+    declare public readonly failureMode: pulumi.Output<string | undefined>;
     /**
-     * Minimal TLS Version - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
+     * Minimal TLS Version
+     *   - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
      */
-    public readonly minimalTlsVersion!: pulumi.Output<string | undefined>;
+    declare public readonly minimalTlsVersion: pulumi.Output<string | undefined>;
     /**
-     * The policy mode - Choices: `security`, `unified`
+     * The policy mode
+     *   - Choices: `security`, `unified`
      */
-    public readonly mode!: pulumi.Output<string | undefined>;
+    declare public readonly mode: pulumi.Output<string | undefined>;
     /**
      * The name of the policy definition.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * List of network rules (applies when `mode` set to `security`)
      */
-    public readonly networkRules!: pulumi.Output<outputs.TlsSslDecryptionPolicyDefinitionNetworkRule[] | undefined>;
+    declare public readonly networkRules: pulumi.Output<outputs.TlsSslDecryptionPolicyDefinitionNetworkRule[] | undefined>;
     /**
-     * RSA key pair modules - Choices: `1024`, `2048`, `4096`
+     * RSA key pair modules
+     *   - Choices: `1024`, `2048`, `4096`
      */
-    public readonly rsaKeyPairModulus!: pulumi.Output<string | undefined>;
+    declare public readonly rsaKeyPairModulus: pulumi.Output<string | undefined>;
     /**
      * SSL decryption enabled
      */
-    public readonly sslDecryptionEnabled!: pulumi.Output<string | undefined>;
+    declare public readonly sslDecryptionEnabled: pulumi.Output<string | undefined>;
     /**
-     * Unknown revocation status action - Choices: `drop`, `decrypt`
+     * Unknown revocation status action
+     *   - Choices: `drop`, `decrypt`
      */
-    public readonly unknownRevocationStatus!: pulumi.Output<string | undefined>;
+    declare public readonly unknownRevocationStatus: pulumi.Output<string | undefined>;
     /**
-     * Unsupported cipher suites action - Choices: `drop`, `no-decrypt`
+     * Unsupported cipher suites action
+     *   - Choices: `drop`, `no-decrypt`
      */
-    public readonly unsupportedCipherSuites!: pulumi.Output<string | undefined>;
+    declare public readonly unsupportedCipherSuites: pulumi.Output<string | undefined>;
     /**
-     * Unsupported protocol versions action - Choices: `drop`, `no-decrypt`
+     * Unsupported protocol versions action
+     *   - Choices: `drop`, `no-decrypt`
      */
-    public readonly unsupportedProtocolVersions!: pulumi.Output<string | undefined>;
+    declare public readonly unsupportedProtocolVersions: pulumi.Output<string | undefined>;
     /**
-     * Untrusted certificate action - Choices: `drop`, `decrypt`
+     * Untrusted certificate action
+     *   - Choices: `drop`, `decrypt`
      */
-    public readonly untrustedCertificate!: pulumi.Output<string | undefined>;
+    declare public readonly untrustedCertificate: pulumi.Output<string | undefined>;
     /**
      * List of url rules (applies when `mode` set to `security`)
      */
-    public readonly urlRules!: pulumi.Output<outputs.TlsSslDecryptionPolicyDefinitionUrlRule[] | undefined>;
+    declare public readonly urlRules: pulumi.Output<outputs.TlsSslDecryptionPolicyDefinitionUrlRule[] | undefined>;
     /**
      * Use default CA certificate bundle
      */
-    public readonly useDefaultCaCertBundle!: pulumi.Output<boolean | undefined>;
+    declare public readonly useDefaultCaCertBundle: pulumi.Output<boolean | undefined>;
     /**
      * The version of the object
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a TlsSslDecryptionPolicyDefinition resource with the given unique name, arguments, and options.
@@ -139,50 +151,50 @@ export class TlsSslDecryptionPolicyDefinition extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as TlsSslDecryptionPolicyDefinitionState | undefined;
-            resourceInputs["certificateLifetimeInDays"] = state ? state.certificateLifetimeInDays : undefined;
-            resourceInputs["certificateRevocationStatus"] = state ? state.certificateRevocationStatus : undefined;
-            resourceInputs["defaultAction"] = state ? state.defaultAction : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["ecKeyType"] = state ? state.ecKeyType : undefined;
-            resourceInputs["expiredCertificate"] = state ? state.expiredCertificate : undefined;
-            resourceInputs["failureMode"] = state ? state.failureMode : undefined;
-            resourceInputs["minimalTlsVersion"] = state ? state.minimalTlsVersion : undefined;
-            resourceInputs["mode"] = state ? state.mode : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["networkRules"] = state ? state.networkRules : undefined;
-            resourceInputs["rsaKeyPairModulus"] = state ? state.rsaKeyPairModulus : undefined;
-            resourceInputs["sslDecryptionEnabled"] = state ? state.sslDecryptionEnabled : undefined;
-            resourceInputs["unknownRevocationStatus"] = state ? state.unknownRevocationStatus : undefined;
-            resourceInputs["unsupportedCipherSuites"] = state ? state.unsupportedCipherSuites : undefined;
-            resourceInputs["unsupportedProtocolVersions"] = state ? state.unsupportedProtocolVersions : undefined;
-            resourceInputs["untrustedCertificate"] = state ? state.untrustedCertificate : undefined;
-            resourceInputs["urlRules"] = state ? state.urlRules : undefined;
-            resourceInputs["useDefaultCaCertBundle"] = state ? state.useDefaultCaCertBundle : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["certificateLifetimeInDays"] = state?.certificateLifetimeInDays;
+            resourceInputs["certificateRevocationStatus"] = state?.certificateRevocationStatus;
+            resourceInputs["defaultAction"] = state?.defaultAction;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["ecKeyType"] = state?.ecKeyType;
+            resourceInputs["expiredCertificate"] = state?.expiredCertificate;
+            resourceInputs["failureMode"] = state?.failureMode;
+            resourceInputs["minimalTlsVersion"] = state?.minimalTlsVersion;
+            resourceInputs["mode"] = state?.mode;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["networkRules"] = state?.networkRules;
+            resourceInputs["rsaKeyPairModulus"] = state?.rsaKeyPairModulus;
+            resourceInputs["sslDecryptionEnabled"] = state?.sslDecryptionEnabled;
+            resourceInputs["unknownRevocationStatus"] = state?.unknownRevocationStatus;
+            resourceInputs["unsupportedCipherSuites"] = state?.unsupportedCipherSuites;
+            resourceInputs["unsupportedProtocolVersions"] = state?.unsupportedProtocolVersions;
+            resourceInputs["untrustedCertificate"] = state?.untrustedCertificate;
+            resourceInputs["urlRules"] = state?.urlRules;
+            resourceInputs["useDefaultCaCertBundle"] = state?.useDefaultCaCertBundle;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as TlsSslDecryptionPolicyDefinitionArgs | undefined;
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            resourceInputs["certificateLifetimeInDays"] = args ? args.certificateLifetimeInDays : undefined;
-            resourceInputs["certificateRevocationStatus"] = args ? args.certificateRevocationStatus : undefined;
-            resourceInputs["defaultAction"] = args ? args.defaultAction : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["ecKeyType"] = args ? args.ecKeyType : undefined;
-            resourceInputs["expiredCertificate"] = args ? args.expiredCertificate : undefined;
-            resourceInputs["failureMode"] = args ? args.failureMode : undefined;
-            resourceInputs["minimalTlsVersion"] = args ? args.minimalTlsVersion : undefined;
-            resourceInputs["mode"] = args ? args.mode : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["networkRules"] = args ? args.networkRules : undefined;
-            resourceInputs["rsaKeyPairModulus"] = args ? args.rsaKeyPairModulus : undefined;
-            resourceInputs["sslDecryptionEnabled"] = args ? args.sslDecryptionEnabled : undefined;
-            resourceInputs["unknownRevocationStatus"] = args ? args.unknownRevocationStatus : undefined;
-            resourceInputs["unsupportedCipherSuites"] = args ? args.unsupportedCipherSuites : undefined;
-            resourceInputs["unsupportedProtocolVersions"] = args ? args.unsupportedProtocolVersions : undefined;
-            resourceInputs["untrustedCertificate"] = args ? args.untrustedCertificate : undefined;
-            resourceInputs["urlRules"] = args ? args.urlRules : undefined;
-            resourceInputs["useDefaultCaCertBundle"] = args ? args.useDefaultCaCertBundle : undefined;
+            resourceInputs["certificateLifetimeInDays"] = args?.certificateLifetimeInDays;
+            resourceInputs["certificateRevocationStatus"] = args?.certificateRevocationStatus;
+            resourceInputs["defaultAction"] = args?.defaultAction;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["ecKeyType"] = args?.ecKeyType;
+            resourceInputs["expiredCertificate"] = args?.expiredCertificate;
+            resourceInputs["failureMode"] = args?.failureMode;
+            resourceInputs["minimalTlsVersion"] = args?.minimalTlsVersion;
+            resourceInputs["mode"] = args?.mode;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["networkRules"] = args?.networkRules;
+            resourceInputs["rsaKeyPairModulus"] = args?.rsaKeyPairModulus;
+            resourceInputs["sslDecryptionEnabled"] = args?.sslDecryptionEnabled;
+            resourceInputs["unknownRevocationStatus"] = args?.unknownRevocationStatus;
+            resourceInputs["unsupportedCipherSuites"] = args?.unsupportedCipherSuites;
+            resourceInputs["unsupportedProtocolVersions"] = args?.unsupportedProtocolVersions;
+            resourceInputs["untrustedCertificate"] = args?.untrustedCertificate;
+            resourceInputs["urlRules"] = args?.urlRules;
+            resourceInputs["useDefaultCaCertBundle"] = args?.useDefaultCaCertBundle;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -199,11 +211,13 @@ export interface TlsSslDecryptionPolicyDefinitionState {
      */
     certificateLifetimeInDays?: pulumi.Input<number>;
     /**
-     * Certificate revocation status - Choices: `ocsp`, `none`
+     * Certificate revocation status
+     *   - Choices: `ocsp`, `none`
      */
     certificateRevocationStatus?: pulumi.Input<string>;
     /**
-     * Default action (applies when `mode` set to `security`) - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
+     * Default action (applies when `mode` set to `security`)
+     *   - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
      */
     defaultAction?: pulumi.Input<string>;
     /**
@@ -211,23 +225,28 @@ export interface TlsSslDecryptionPolicyDefinitionState {
      */
     description?: pulumi.Input<string>;
     /**
-     * EC Key Type - Choices: `P256`, `P384`, `P521`
+     * EC Key Type
+     *   - Choices: `P256`, `P384`, `P521`
      */
     ecKeyType?: pulumi.Input<string>;
     /**
-     * Expired certificate action - Choices: `drop`, `decrypt`
+     * Expired certificate action
+     *   - Choices: `drop`, `decrypt`
      */
     expiredCertificate?: pulumi.Input<string>;
     /**
-     * Failure mode - Choices: `open`, `close`
+     * Failure mode
+     *   - Choices: `open`, `close`
      */
     failureMode?: pulumi.Input<string>;
     /**
-     * Minimal TLS Version - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
+     * Minimal TLS Version
+     *   - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
      */
     minimalTlsVersion?: pulumi.Input<string>;
     /**
-     * The policy mode - Choices: `security`, `unified`
+     * The policy mode
+     *   - Choices: `security`, `unified`
      */
     mode?: pulumi.Input<string>;
     /**
@@ -239,7 +258,8 @@ export interface TlsSslDecryptionPolicyDefinitionState {
      */
     networkRules?: pulumi.Input<pulumi.Input<inputs.TlsSslDecryptionPolicyDefinitionNetworkRule>[]>;
     /**
-     * RSA key pair modules - Choices: `1024`, `2048`, `4096`
+     * RSA key pair modules
+     *   - Choices: `1024`, `2048`, `4096`
      */
     rsaKeyPairModulus?: pulumi.Input<string>;
     /**
@@ -247,19 +267,23 @@ export interface TlsSslDecryptionPolicyDefinitionState {
      */
     sslDecryptionEnabled?: pulumi.Input<string>;
     /**
-     * Unknown revocation status action - Choices: `drop`, `decrypt`
+     * Unknown revocation status action
+     *   - Choices: `drop`, `decrypt`
      */
     unknownRevocationStatus?: pulumi.Input<string>;
     /**
-     * Unsupported cipher suites action - Choices: `drop`, `no-decrypt`
+     * Unsupported cipher suites action
+     *   - Choices: `drop`, `no-decrypt`
      */
     unsupportedCipherSuites?: pulumi.Input<string>;
     /**
-     * Unsupported protocol versions action - Choices: `drop`, `no-decrypt`
+     * Unsupported protocol versions action
+     *   - Choices: `drop`, `no-decrypt`
      */
     unsupportedProtocolVersions?: pulumi.Input<string>;
     /**
-     * Untrusted certificate action - Choices: `drop`, `decrypt`
+     * Untrusted certificate action
+     *   - Choices: `drop`, `decrypt`
      */
     untrustedCertificate?: pulumi.Input<string>;
     /**
@@ -285,11 +309,13 @@ export interface TlsSslDecryptionPolicyDefinitionArgs {
      */
     certificateLifetimeInDays?: pulumi.Input<number>;
     /**
-     * Certificate revocation status - Choices: `ocsp`, `none`
+     * Certificate revocation status
+     *   - Choices: `ocsp`, `none`
      */
     certificateRevocationStatus?: pulumi.Input<string>;
     /**
-     * Default action (applies when `mode` set to `security`) - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
+     * Default action (applies when `mode` set to `security`)
+     *   - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
      */
     defaultAction?: pulumi.Input<string>;
     /**
@@ -297,23 +323,28 @@ export interface TlsSslDecryptionPolicyDefinitionArgs {
      */
     description: pulumi.Input<string>;
     /**
-     * EC Key Type - Choices: `P256`, `P384`, `P521`
+     * EC Key Type
+     *   - Choices: `P256`, `P384`, `P521`
      */
     ecKeyType?: pulumi.Input<string>;
     /**
-     * Expired certificate action - Choices: `drop`, `decrypt`
+     * Expired certificate action
+     *   - Choices: `drop`, `decrypt`
      */
     expiredCertificate?: pulumi.Input<string>;
     /**
-     * Failure mode - Choices: `open`, `close`
+     * Failure mode
+     *   - Choices: `open`, `close`
      */
     failureMode?: pulumi.Input<string>;
     /**
-     * Minimal TLS Version - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
+     * Minimal TLS Version
+     *   - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
      */
     minimalTlsVersion?: pulumi.Input<string>;
     /**
-     * The policy mode - Choices: `security`, `unified`
+     * The policy mode
+     *   - Choices: `security`, `unified`
      */
     mode?: pulumi.Input<string>;
     /**
@@ -325,7 +356,8 @@ export interface TlsSslDecryptionPolicyDefinitionArgs {
      */
     networkRules?: pulumi.Input<pulumi.Input<inputs.TlsSslDecryptionPolicyDefinitionNetworkRule>[]>;
     /**
-     * RSA key pair modules - Choices: `1024`, `2048`, `4096`
+     * RSA key pair modules
+     *   - Choices: `1024`, `2048`, `4096`
      */
     rsaKeyPairModulus?: pulumi.Input<string>;
     /**
@@ -333,19 +365,23 @@ export interface TlsSslDecryptionPolicyDefinitionArgs {
      */
     sslDecryptionEnabled?: pulumi.Input<string>;
     /**
-     * Unknown revocation status action - Choices: `drop`, `decrypt`
+     * Unknown revocation status action
+     *   - Choices: `drop`, `decrypt`
      */
     unknownRevocationStatus?: pulumi.Input<string>;
     /**
-     * Unsupported cipher suites action - Choices: `drop`, `no-decrypt`
+     * Unsupported cipher suites action
+     *   - Choices: `drop`, `no-decrypt`
      */
     unsupportedCipherSuites?: pulumi.Input<string>;
     /**
-     * Unsupported protocol versions action - Choices: `drop`, `no-decrypt`
+     * Unsupported protocol versions action
+     *   - Choices: `drop`, `no-decrypt`
      */
     unsupportedProtocolVersions?: pulumi.Input<string>;
     /**
-     * Untrusted certificate action - Choices: `drop`, `decrypt`
+     * Untrusted certificate action
+     *   - Choices: `drop`, `decrypt`
      */
     untrustedCertificate?: pulumi.Input<string>;
     /**

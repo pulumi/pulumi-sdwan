@@ -67,34 +67,40 @@ class ServiceLanVpnInterfaceSviFeatureArgs:
         The set of arguments for constructing a ServiceLanVpnInterfaceSviFeature resource.
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] service_lan_vpn_feature_id: Service LAN VPN Feature ID
-        :param pulumi.Input[_builtins.int] arp_timeout: Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2678400` - Default value: `1200`
+        :param pulumi.Input[_builtins.int] arp_timeout: Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+                 - Range: `0`-`2678400`
+                 - Default value: `1200`
         :param pulumi.Input[_builtins.str] arp_timeout_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceSviFeatureArpArgs']]] arps: Configure static ARP entries
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.bool] enable_dhcpv6: Enable DHCPv6 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enable_dhcpv6: Enable DHCPv6
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] enable_dhcpv6_variable: Variable name
-        :param pulumi.Input[_builtins.bool] icmp_redirect_disable: ICMP/ICMPv6 Redirect Disable - Default value: `true`
+        :param pulumi.Input[_builtins.bool] icmp_redirect_disable: ICMP/ICMPv6 Redirect Disable
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] icmp_redirect_disable_variable: Variable name
         :param pulumi.Input[_builtins.str] interface_description: Interface description
         :param pulumi.Input[_builtins.str] interface_description_variable: Variable name
-        :param pulumi.Input[_builtins.int] interface_mtu: Interface MTU <1500..9216> in bytes - Range: `1500`-`9216` - Default value: `1500`
+        :param pulumi.Input[_builtins.int] interface_mtu: Interface MTU <1500..9216> in bytes
+                 - Range: `1500`-`9216`
+                 - Default value: `1500`
         :param pulumi.Input[_builtins.str] interface_mtu_variable: Variable name
         :param pulumi.Input[_builtins.str] interface_name: Interface name: VLAN 1 - VLAN 4094 when present
         :param pulumi.Input[_builtins.str] interface_name_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ip_directed_broadcast: IP Directed-Broadcast - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ip_directed_broadcast: IP Directed-Broadcast
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ip_directed_broadcast_variable: Variable name
-        :param pulumi.Input[_builtins.int] ip_mtu: IP MTU <576..Interface MTU>, in bytes - Range: `576`-`9216` - Default value: `1500`
+        :param pulumi.Input[_builtins.int] ip_mtu: IP MTU <576..Interface MTU>, in bytes
+                 - Range: `576`-`9216`
+                 - Default value: `1500`
         :param pulumi.Input[_builtins.str] ip_mtu_variable: Variable name
         :param pulumi.Input[_builtins.str] ipv4_address: IP Address
         :param pulumi.Input[_builtins.str] ipv4_address_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ipv4_dhcp_helpers: List of DHCP helper addresses
         :param pulumi.Input[_builtins.str] ipv4_dhcp_helpers_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceSviFeatureIpv4SecondaryAddressArgs']]] ipv4_secondary_addresses: Assign secondary IP addresses
-        :param pulumi.Input[_builtins.str] ipv4_subnet_mask: Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-               `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-               `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-               `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-               `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[_builtins.str] ipv4_subnet_mask: Subnet Mask
+                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] ipv4_subnet_mask_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceSviFeatureIpv4VrrpArgs']]] ipv4_vrrps: Enable ipv4 VRRP
         :param pulumi.Input[_builtins.str] ipv6_address: Assign IPv6 address
@@ -103,9 +109,11 @@ class ServiceLanVpnInterfaceSviFeatureArgs:
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceSviFeatureIpv6SecondaryAddressArgs']]] ipv6_secondary_addresses: Assign secondary IPv6 addresses
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceSviFeatureIpv6VrrpArgs']]] ipv6_vrrps: Enable ipv6 VRRP
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.bool] shutdown: Administrative state - Default value: `true`
+        :param pulumi.Input[_builtins.bool] shutdown: Administrative state
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
-        :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+        :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes
+                 - Range: `552`-`1960`
         :param pulumi.Input[_builtins.str] tcp_mss_variable: Variable name
         """
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
@@ -255,7 +263,9 @@ class ServiceLanVpnInterfaceSviFeatureArgs:
     @pulumi.getter(name="arpTimeout")
     def arp_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2678400` - Default value: `1200`
+        Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+          - Range: `0`-`2678400`
+          - Default value: `1200`
         """
         return pulumi.get(self, "arp_timeout")
 
@@ -303,7 +313,8 @@ class ServiceLanVpnInterfaceSviFeatureArgs:
     @pulumi.getter(name="enableDhcpv6")
     def enable_dhcpv6(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable DHCPv6 - Default value: `false`
+        Enable DHCPv6
+          - Default value: `false`
         """
         return pulumi.get(self, "enable_dhcpv6")
 
@@ -327,7 +338,8 @@ class ServiceLanVpnInterfaceSviFeatureArgs:
     @pulumi.getter(name="icmpRedirectDisable")
     def icmp_redirect_disable(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        ICMP/ICMPv6 Redirect Disable - Default value: `true`
+        ICMP/ICMPv6 Redirect Disable
+          - Default value: `true`
         """
         return pulumi.get(self, "icmp_redirect_disable")
 
@@ -375,7 +387,9 @@ class ServiceLanVpnInterfaceSviFeatureArgs:
     @pulumi.getter(name="interfaceMtu")
     def interface_mtu(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Interface MTU <1500..9216> in bytes - Range: `1500`-`9216` - Default value: `1500`
+        Interface MTU <1500..9216> in bytes
+          - Range: `1500`-`9216`
+          - Default value: `1500`
         """
         return pulumi.get(self, "interface_mtu")
 
@@ -423,7 +437,8 @@ class ServiceLanVpnInterfaceSviFeatureArgs:
     @pulumi.getter(name="ipDirectedBroadcast")
     def ip_directed_broadcast(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        IP Directed-Broadcast - Default value: `false`
+        IP Directed-Broadcast
+          - Default value: `false`
         """
         return pulumi.get(self, "ip_directed_broadcast")
 
@@ -447,7 +462,9 @@ class ServiceLanVpnInterfaceSviFeatureArgs:
     @pulumi.getter(name="ipMtu")
     def ip_mtu(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        IP MTU <576..Interface MTU>, in bytes - Range: `576`-`9216` - Default value: `1500`
+        IP MTU <576..Interface MTU>, in bytes
+          - Range: `576`-`9216`
+          - Default value: `1500`
         """
         return pulumi.get(self, "ip_mtu")
 
@@ -531,11 +548,8 @@ class ServiceLanVpnInterfaceSviFeatureArgs:
     @pulumi.getter(name="ipv4SubnetMask")
     def ipv4_subnet_mask(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        Subnet Mask
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "ipv4_subnet_mask")
 
@@ -643,7 +657,8 @@ class ServiceLanVpnInterfaceSviFeatureArgs:
     @pulumi.getter
     def shutdown(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Administrative state - Default value: `true`
+        Administrative state
+          - Default value: `true`
         """
         return pulumi.get(self, "shutdown")
 
@@ -667,7 +682,8 @@ class ServiceLanVpnInterfaceSviFeatureArgs:
     @pulumi.getter(name="tcpMss")
     def tcp_mss(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+        TCP MSS on SYN packets, in bytes
+          - Range: `552`-`1960`
         """
         return pulumi.get(self, "tcp_mss")
 
@@ -736,35 +752,41 @@ class _ServiceLanVpnInterfaceSviFeatureState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering ServiceLanVpnInterfaceSviFeature resources.
-        :param pulumi.Input[_builtins.int] arp_timeout: Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2678400` - Default value: `1200`
+        :param pulumi.Input[_builtins.int] arp_timeout: Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+                 - Range: `0`-`2678400`
+                 - Default value: `1200`
         :param pulumi.Input[_builtins.str] arp_timeout_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceSviFeatureArpArgs']]] arps: Configure static ARP entries
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.bool] enable_dhcpv6: Enable DHCPv6 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enable_dhcpv6: Enable DHCPv6
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] enable_dhcpv6_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.bool] icmp_redirect_disable: ICMP/ICMPv6 Redirect Disable - Default value: `true`
+        :param pulumi.Input[_builtins.bool] icmp_redirect_disable: ICMP/ICMPv6 Redirect Disable
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] icmp_redirect_disable_variable: Variable name
         :param pulumi.Input[_builtins.str] interface_description: Interface description
         :param pulumi.Input[_builtins.str] interface_description_variable: Variable name
-        :param pulumi.Input[_builtins.int] interface_mtu: Interface MTU <1500..9216> in bytes - Range: `1500`-`9216` - Default value: `1500`
+        :param pulumi.Input[_builtins.int] interface_mtu: Interface MTU <1500..9216> in bytes
+                 - Range: `1500`-`9216`
+                 - Default value: `1500`
         :param pulumi.Input[_builtins.str] interface_mtu_variable: Variable name
         :param pulumi.Input[_builtins.str] interface_name: Interface name: VLAN 1 - VLAN 4094 when present
         :param pulumi.Input[_builtins.str] interface_name_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ip_directed_broadcast: IP Directed-Broadcast - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ip_directed_broadcast: IP Directed-Broadcast
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ip_directed_broadcast_variable: Variable name
-        :param pulumi.Input[_builtins.int] ip_mtu: IP MTU <576..Interface MTU>, in bytes - Range: `576`-`9216` - Default value: `1500`
+        :param pulumi.Input[_builtins.int] ip_mtu: IP MTU <576..Interface MTU>, in bytes
+                 - Range: `576`-`9216`
+                 - Default value: `1500`
         :param pulumi.Input[_builtins.str] ip_mtu_variable: Variable name
         :param pulumi.Input[_builtins.str] ipv4_address: IP Address
         :param pulumi.Input[_builtins.str] ipv4_address_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ipv4_dhcp_helpers: List of DHCP helper addresses
         :param pulumi.Input[_builtins.str] ipv4_dhcp_helpers_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceSviFeatureIpv4SecondaryAddressArgs']]] ipv4_secondary_addresses: Assign secondary IP addresses
-        :param pulumi.Input[_builtins.str] ipv4_subnet_mask: Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-               `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-               `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-               `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-               `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[_builtins.str] ipv4_subnet_mask: Subnet Mask
+                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] ipv4_subnet_mask_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceSviFeatureIpv4VrrpArgs']]] ipv4_vrrps: Enable ipv4 VRRP
         :param pulumi.Input[_builtins.str] ipv6_address: Assign IPv6 address
@@ -774,9 +796,11 @@ class _ServiceLanVpnInterfaceSviFeatureState:
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceSviFeatureIpv6VrrpArgs']]] ipv6_vrrps: Enable ipv6 VRRP
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.str] service_lan_vpn_feature_id: Service LAN VPN Feature ID
-        :param pulumi.Input[_builtins.bool] shutdown: Administrative state - Default value: `true`
+        :param pulumi.Input[_builtins.bool] shutdown: Administrative state
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
-        :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+        :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes
+                 - Range: `552`-`1960`
         :param pulumi.Input[_builtins.str] tcp_mss_variable: Variable name
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
@@ -907,7 +931,9 @@ class _ServiceLanVpnInterfaceSviFeatureState:
     @pulumi.getter(name="arpTimeout")
     def arp_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2678400` - Default value: `1200`
+        Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+          - Range: `0`-`2678400`
+          - Default value: `1200`
         """
         return pulumi.get(self, "arp_timeout")
 
@@ -955,7 +981,8 @@ class _ServiceLanVpnInterfaceSviFeatureState:
     @pulumi.getter(name="enableDhcpv6")
     def enable_dhcpv6(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable DHCPv6 - Default value: `false`
+        Enable DHCPv6
+          - Default value: `false`
         """
         return pulumi.get(self, "enable_dhcpv6")
 
@@ -991,7 +1018,8 @@ class _ServiceLanVpnInterfaceSviFeatureState:
     @pulumi.getter(name="icmpRedirectDisable")
     def icmp_redirect_disable(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        ICMP/ICMPv6 Redirect Disable - Default value: `true`
+        ICMP/ICMPv6 Redirect Disable
+          - Default value: `true`
         """
         return pulumi.get(self, "icmp_redirect_disable")
 
@@ -1039,7 +1067,9 @@ class _ServiceLanVpnInterfaceSviFeatureState:
     @pulumi.getter(name="interfaceMtu")
     def interface_mtu(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Interface MTU <1500..9216> in bytes - Range: `1500`-`9216` - Default value: `1500`
+        Interface MTU <1500..9216> in bytes
+          - Range: `1500`-`9216`
+          - Default value: `1500`
         """
         return pulumi.get(self, "interface_mtu")
 
@@ -1087,7 +1117,8 @@ class _ServiceLanVpnInterfaceSviFeatureState:
     @pulumi.getter(name="ipDirectedBroadcast")
     def ip_directed_broadcast(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        IP Directed-Broadcast - Default value: `false`
+        IP Directed-Broadcast
+          - Default value: `false`
         """
         return pulumi.get(self, "ip_directed_broadcast")
 
@@ -1111,7 +1142,9 @@ class _ServiceLanVpnInterfaceSviFeatureState:
     @pulumi.getter(name="ipMtu")
     def ip_mtu(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        IP MTU <576..Interface MTU>, in bytes - Range: `576`-`9216` - Default value: `1500`
+        IP MTU <576..Interface MTU>, in bytes
+          - Range: `576`-`9216`
+          - Default value: `1500`
         """
         return pulumi.get(self, "ip_mtu")
 
@@ -1195,11 +1228,8 @@ class _ServiceLanVpnInterfaceSviFeatureState:
     @pulumi.getter(name="ipv4SubnetMask")
     def ipv4_subnet_mask(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        Subnet Mask
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "ipv4_subnet_mask")
 
@@ -1319,7 +1349,8 @@ class _ServiceLanVpnInterfaceSviFeatureState:
     @pulumi.getter
     def shutdown(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Administrative state - Default value: `true`
+        Administrative state
+          - Default value: `true`
         """
         return pulumi.get(self, "shutdown")
 
@@ -1343,7 +1374,8 @@ class _ServiceLanVpnInterfaceSviFeatureState:
     @pulumi.getter(name="tcpMss")
     def tcp_mss(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+        TCP MSS on SYN packets, in bytes
+          - Range: `552`-`1960`
         """
         return pulumi.get(self, "tcp_mss")
 
@@ -1441,35 +1473,41 @@ class ServiceLanVpnInterfaceSviFeature(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.int] arp_timeout: Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2678400` - Default value: `1200`
+        :param pulumi.Input[_builtins.int] arp_timeout: Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+                 - Range: `0`-`2678400`
+                 - Default value: `1200`
         :param pulumi.Input[_builtins.str] arp_timeout_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceSviFeatureArpArgs', 'ServiceLanVpnInterfaceSviFeatureArpArgsDict']]]] arps: Configure static ARP entries
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.bool] enable_dhcpv6: Enable DHCPv6 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enable_dhcpv6: Enable DHCPv6
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] enable_dhcpv6_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.bool] icmp_redirect_disable: ICMP/ICMPv6 Redirect Disable - Default value: `true`
+        :param pulumi.Input[_builtins.bool] icmp_redirect_disable: ICMP/ICMPv6 Redirect Disable
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] icmp_redirect_disable_variable: Variable name
         :param pulumi.Input[_builtins.str] interface_description: Interface description
         :param pulumi.Input[_builtins.str] interface_description_variable: Variable name
-        :param pulumi.Input[_builtins.int] interface_mtu: Interface MTU <1500..9216> in bytes - Range: `1500`-`9216` - Default value: `1500`
+        :param pulumi.Input[_builtins.int] interface_mtu: Interface MTU <1500..9216> in bytes
+                 - Range: `1500`-`9216`
+                 - Default value: `1500`
         :param pulumi.Input[_builtins.str] interface_mtu_variable: Variable name
         :param pulumi.Input[_builtins.str] interface_name: Interface name: VLAN 1 - VLAN 4094 when present
         :param pulumi.Input[_builtins.str] interface_name_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ip_directed_broadcast: IP Directed-Broadcast - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ip_directed_broadcast: IP Directed-Broadcast
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ip_directed_broadcast_variable: Variable name
-        :param pulumi.Input[_builtins.int] ip_mtu: IP MTU <576..Interface MTU>, in bytes - Range: `576`-`9216` - Default value: `1500`
+        :param pulumi.Input[_builtins.int] ip_mtu: IP MTU <576..Interface MTU>, in bytes
+                 - Range: `576`-`9216`
+                 - Default value: `1500`
         :param pulumi.Input[_builtins.str] ip_mtu_variable: Variable name
         :param pulumi.Input[_builtins.str] ipv4_address: IP Address
         :param pulumi.Input[_builtins.str] ipv4_address_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ipv4_dhcp_helpers: List of DHCP helper addresses
         :param pulumi.Input[_builtins.str] ipv4_dhcp_helpers_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceSviFeatureIpv4SecondaryAddressArgs', 'ServiceLanVpnInterfaceSviFeatureIpv4SecondaryAddressArgsDict']]]] ipv4_secondary_addresses: Assign secondary IP addresses
-        :param pulumi.Input[_builtins.str] ipv4_subnet_mask: Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-               `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-               `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-               `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-               `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[_builtins.str] ipv4_subnet_mask: Subnet Mask
+                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] ipv4_subnet_mask_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceSviFeatureIpv4VrrpArgs', 'ServiceLanVpnInterfaceSviFeatureIpv4VrrpArgsDict']]]] ipv4_vrrps: Enable ipv4 VRRP
         :param pulumi.Input[_builtins.str] ipv6_address: Assign IPv6 address
@@ -1479,9 +1517,11 @@ class ServiceLanVpnInterfaceSviFeature(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceSviFeatureIpv6VrrpArgs', 'ServiceLanVpnInterfaceSviFeatureIpv6VrrpArgsDict']]]] ipv6_vrrps: Enable ipv6 VRRP
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.str] service_lan_vpn_feature_id: Service LAN VPN Feature ID
-        :param pulumi.Input[_builtins.bool] shutdown: Administrative state - Default value: `true`
+        :param pulumi.Input[_builtins.bool] shutdown: Administrative state
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
-        :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+        :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes
+                 - Range: `552`-`1960`
         :param pulumi.Input[_builtins.str] tcp_mss_variable: Variable name
         """
         ...
@@ -1677,35 +1717,41 @@ class ServiceLanVpnInterfaceSviFeature(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.int] arp_timeout: Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2678400` - Default value: `1200`
+        :param pulumi.Input[_builtins.int] arp_timeout: Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+                 - Range: `0`-`2678400`
+                 - Default value: `1200`
         :param pulumi.Input[_builtins.str] arp_timeout_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceSviFeatureArpArgs', 'ServiceLanVpnInterfaceSviFeatureArpArgsDict']]]] arps: Configure static ARP entries
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.bool] enable_dhcpv6: Enable DHCPv6 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enable_dhcpv6: Enable DHCPv6
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] enable_dhcpv6_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.bool] icmp_redirect_disable: ICMP/ICMPv6 Redirect Disable - Default value: `true`
+        :param pulumi.Input[_builtins.bool] icmp_redirect_disable: ICMP/ICMPv6 Redirect Disable
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] icmp_redirect_disable_variable: Variable name
         :param pulumi.Input[_builtins.str] interface_description: Interface description
         :param pulumi.Input[_builtins.str] interface_description_variable: Variable name
-        :param pulumi.Input[_builtins.int] interface_mtu: Interface MTU <1500..9216> in bytes - Range: `1500`-`9216` - Default value: `1500`
+        :param pulumi.Input[_builtins.int] interface_mtu: Interface MTU <1500..9216> in bytes
+                 - Range: `1500`-`9216`
+                 - Default value: `1500`
         :param pulumi.Input[_builtins.str] interface_mtu_variable: Variable name
         :param pulumi.Input[_builtins.str] interface_name: Interface name: VLAN 1 - VLAN 4094 when present
         :param pulumi.Input[_builtins.str] interface_name_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ip_directed_broadcast: IP Directed-Broadcast - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ip_directed_broadcast: IP Directed-Broadcast
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ip_directed_broadcast_variable: Variable name
-        :param pulumi.Input[_builtins.int] ip_mtu: IP MTU <576..Interface MTU>, in bytes - Range: `576`-`9216` - Default value: `1500`
+        :param pulumi.Input[_builtins.int] ip_mtu: IP MTU <576..Interface MTU>, in bytes
+                 - Range: `576`-`9216`
+                 - Default value: `1500`
         :param pulumi.Input[_builtins.str] ip_mtu_variable: Variable name
         :param pulumi.Input[_builtins.str] ipv4_address: IP Address
         :param pulumi.Input[_builtins.str] ipv4_address_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ipv4_dhcp_helpers: List of DHCP helper addresses
         :param pulumi.Input[_builtins.str] ipv4_dhcp_helpers_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceSviFeatureIpv4SecondaryAddressArgs', 'ServiceLanVpnInterfaceSviFeatureIpv4SecondaryAddressArgsDict']]]] ipv4_secondary_addresses: Assign secondary IP addresses
-        :param pulumi.Input[_builtins.str] ipv4_subnet_mask: Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-               `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-               `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-               `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-               `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[_builtins.str] ipv4_subnet_mask: Subnet Mask
+                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] ipv4_subnet_mask_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceSviFeatureIpv4VrrpArgs', 'ServiceLanVpnInterfaceSviFeatureIpv4VrrpArgsDict']]]] ipv4_vrrps: Enable ipv4 VRRP
         :param pulumi.Input[_builtins.str] ipv6_address: Assign IPv6 address
@@ -1715,9 +1761,11 @@ class ServiceLanVpnInterfaceSviFeature(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceSviFeatureIpv6VrrpArgs', 'ServiceLanVpnInterfaceSviFeatureIpv6VrrpArgsDict']]]] ipv6_vrrps: Enable ipv6 VRRP
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.str] service_lan_vpn_feature_id: Service LAN VPN Feature ID
-        :param pulumi.Input[_builtins.bool] shutdown: Administrative state - Default value: `true`
+        :param pulumi.Input[_builtins.bool] shutdown: Administrative state
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
-        :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+        :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes
+                 - Range: `552`-`1960`
         :param pulumi.Input[_builtins.str] tcp_mss_variable: Variable name
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
@@ -1794,7 +1842,9 @@ class ServiceLanVpnInterfaceSviFeature(pulumi.CustomResource):
     @pulumi.getter(name="arpTimeout")
     def arp_timeout(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2678400` - Default value: `1200`
+        Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+          - Range: `0`-`2678400`
+          - Default value: `1200`
         """
         return pulumi.get(self, "arp_timeout")
 
@@ -1826,7 +1876,8 @@ class ServiceLanVpnInterfaceSviFeature(pulumi.CustomResource):
     @pulumi.getter(name="enableDhcpv6")
     def enable_dhcpv6(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Enable DHCPv6 - Default value: `false`
+        Enable DHCPv6
+          - Default value: `false`
         """
         return pulumi.get(self, "enable_dhcpv6")
 
@@ -1850,7 +1901,8 @@ class ServiceLanVpnInterfaceSviFeature(pulumi.CustomResource):
     @pulumi.getter(name="icmpRedirectDisable")
     def icmp_redirect_disable(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        ICMP/ICMPv6 Redirect Disable - Default value: `true`
+        ICMP/ICMPv6 Redirect Disable
+          - Default value: `true`
         """
         return pulumi.get(self, "icmp_redirect_disable")
 
@@ -1882,7 +1934,9 @@ class ServiceLanVpnInterfaceSviFeature(pulumi.CustomResource):
     @pulumi.getter(name="interfaceMtu")
     def interface_mtu(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Interface MTU <1500..9216> in bytes - Range: `1500`-`9216` - Default value: `1500`
+        Interface MTU <1500..9216> in bytes
+          - Range: `1500`-`9216`
+          - Default value: `1500`
         """
         return pulumi.get(self, "interface_mtu")
 
@@ -1914,7 +1968,8 @@ class ServiceLanVpnInterfaceSviFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipDirectedBroadcast")
     def ip_directed_broadcast(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        IP Directed-Broadcast - Default value: `false`
+        IP Directed-Broadcast
+          - Default value: `false`
         """
         return pulumi.get(self, "ip_directed_broadcast")
 
@@ -1930,7 +1985,9 @@ class ServiceLanVpnInterfaceSviFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipMtu")
     def ip_mtu(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        IP MTU <576..Interface MTU>, in bytes - Range: `576`-`9216` - Default value: `1500`
+        IP MTU <576..Interface MTU>, in bytes
+          - Range: `576`-`9216`
+          - Default value: `1500`
         """
         return pulumi.get(self, "ip_mtu")
 
@@ -1986,11 +2043,8 @@ class ServiceLanVpnInterfaceSviFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipv4SubnetMask")
     def ipv4_subnet_mask(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        Subnet Mask
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "ipv4_subnet_mask")
 
@@ -2070,7 +2124,8 @@ class ServiceLanVpnInterfaceSviFeature(pulumi.CustomResource):
     @pulumi.getter
     def shutdown(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Administrative state - Default value: `true`
+        Administrative state
+          - Default value: `true`
         """
         return pulumi.get(self, "shutdown")
 
@@ -2086,7 +2141,8 @@ class ServiceLanVpnInterfaceSviFeature(pulumi.CustomResource):
     @pulumi.getter(name="tcpMss")
     def tcp_mss(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+        TCP MSS on SYN packets, in bytes
+          - Range: `552`-`1960`
         """
         return pulumi.get(self, "tcp_mss")
 

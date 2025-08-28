@@ -79,14 +79,16 @@ public class ClassMapPolicyObject extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * Queue - Range: `0`-`7`
+     * Queue
+     *   - Range: `0`-`7`
      * 
      */
     @Export(name="queue", refs={Integer.class}, tree="[0]")
     private Output<Integer> queue;
 
     /**
-     * @return Queue - Range: `0`-`7`
+     * @return Queue
+     *   - Range: `0`-`7`
      * 
      */
     public Output<Integer> queue() {

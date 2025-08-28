@@ -93,14 +93,16 @@ public final class ServiceObjectTrackerFeatureArgs extends com.pulumi.resources.
     }
 
     /**
-     * Object tracker ID - Range: `1`-`1000`
+     * Object tracker ID
+     *   - Range: `1`-`1000`
      * 
      */
     @Import(name="objectTrackerId")
     private @Nullable Output<Integer> objectTrackerId;
 
     /**
-     * @return Object tracker ID - Range: `1`-`1000`
+     * @return Object tracker ID
+     *   - Range: `1`-`1000`
      * 
      */
     public Optional<Output<Integer>> objectTrackerId() {
@@ -123,14 +125,16 @@ public final class ServiceObjectTrackerFeatureArgs extends com.pulumi.resources.
     }
 
     /**
-     * objectTrackerType:Interface SIG Route - Choices: `Interface`, `SIG`, `Route`
+     * objectTrackerType:Interface SIG Route
+     *   - Choices: `Interface`, `SIG`, `Route`
      * 
      */
     @Import(name="objectTrackerType", required=true)
     private Output<String> objectTrackerType;
 
     /**
-     * @return objectTrackerType:Interface SIG Route - Choices: `Interface`, `SIG`, `Route`
+     * @return objectTrackerType:Interface SIG Route
+     *   - Choices: `Interface`, `SIG`, `Route`
      * 
      */
     public Output<String> objectTrackerType() {
@@ -168,22 +172,18 @@ public final class ServiceObjectTrackerFeatureArgs extends com.pulumi.resources.
     }
 
     /**
-     * IP mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0` - Default value: `0.0.0.0`
+     * IP mask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     *   - Default value: `0.0.0.0`
      * 
      */
     @Import(name="routeMask")
     private @Nullable Output<String> routeMask;
 
     /**
-     * @return IP mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0` - Default value: `0.0.0.0`
+     * @return IP mask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     *   - Default value: `0.0.0.0`
      * 
      */
     public Optional<Output<String>> routeMask() {
@@ -206,14 +206,16 @@ public final class ServiceObjectTrackerFeatureArgs extends com.pulumi.resources.
     }
 
     /**
-     * VPN - Range: `0`-`65530`
+     * VPN
+     *   - Range: `0`-`65530`
      * 
      */
     @Import(name="vpn")
     private @Nullable Output<Integer> vpn;
 
     /**
-     * @return VPN - Range: `0`-`65530`
+     * @return VPN
+     *   - Range: `0`-`65530`
      * 
      */
     public Optional<Output<Integer>> vpn() {
@@ -378,7 +380,8 @@ public final class ServiceObjectTrackerFeatureArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param objectTrackerId Object tracker ID - Range: `1`-`1000`
+         * @param objectTrackerId Object tracker ID
+         *   - Range: `1`-`1000`
          * 
          * @return builder
          * 
@@ -389,7 +392,8 @@ public final class ServiceObjectTrackerFeatureArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param objectTrackerId Object tracker ID - Range: `1`-`1000`
+         * @param objectTrackerId Object tracker ID
+         *   - Range: `1`-`1000`
          * 
          * @return builder
          * 
@@ -420,7 +424,8 @@ public final class ServiceObjectTrackerFeatureArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param objectTrackerType objectTrackerType:Interface SIG Route - Choices: `Interface`, `SIG`, `Route`
+         * @param objectTrackerType objectTrackerType:Interface SIG Route
+         *   - Choices: `Interface`, `SIG`, `Route`
          * 
          * @return builder
          * 
@@ -431,7 +436,8 @@ public final class ServiceObjectTrackerFeatureArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param objectTrackerType objectTrackerType:Interface SIG Route - Choices: `Interface`, `SIG`, `Route`
+         * @param objectTrackerType objectTrackerType:Interface SIG Route
+         *   - Choices: `Interface`, `SIG`, `Route`
          * 
          * @return builder
          * 
@@ -483,11 +489,9 @@ public final class ServiceObjectTrackerFeatureArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param routeMask IP mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-         * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-         * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-         * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-         * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0` - Default value: `0.0.0.0`
+         * @param routeMask IP mask
+         *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+         *   - Default value: `0.0.0.0`
          * 
          * @return builder
          * 
@@ -498,11 +502,9 @@ public final class ServiceObjectTrackerFeatureArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param routeMask IP mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-         * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-         * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-         * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-         * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0` - Default value: `0.0.0.0`
+         * @param routeMask IP mask
+         *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+         *   - Default value: `0.0.0.0`
          * 
          * @return builder
          * 
@@ -533,7 +535,8 @@ public final class ServiceObjectTrackerFeatureArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param vpn VPN - Range: `0`-`65530`
+         * @param vpn VPN
+         *   - Range: `0`-`65530`
          * 
          * @return builder
          * 
@@ -544,7 +547,8 @@ public final class ServiceObjectTrackerFeatureArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param vpn VPN - Range: `0`-`65530`
+         * @param vpn VPN
+         *   - Range: `0`-`65530`
          * 
          * @return builder
          * 

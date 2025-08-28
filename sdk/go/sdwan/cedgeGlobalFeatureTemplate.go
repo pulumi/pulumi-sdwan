@@ -78,75 +78,92 @@ import (
 type CedgeGlobalFeatureTemplate struct {
 	pulumi.CustomResourceState
 
-	// Set ARP Proxy - Default value: `false`
+	// Set ARP Proxy
+	//   - Default value: `false`
 	ArpProxy pulumi.BoolPtrOutput `pulumi:"arpProxy"`
 	// Variable name
 	ArpProxyVariable pulumi.StringPtrOutput `pulumi:"arpProxyVariable"`
-	// Configure Ignore BOOTP - Default value: `true`
+	// Configure Ignore BOOTP
+	//   - Default value: `true`
 	Bootp pulumi.BoolPtrOutput `pulumi:"bootp"`
 	// Variable name
 	BootpVariable pulumi.StringPtrOutput `pulumi:"bootpVariable"`
-	// Configure CDP - Default value: `true`
+	// Configure CDP
+	//   - Default value: `true`
 	Cdp pulumi.BoolPtrOutput `pulumi:"cdp"`
 	// Variable name
 	CdpVariable pulumi.StringPtrOutput `pulumi:"cdpVariable"`
-	// Configure Console Logging - Default value: `true`
+	// Configure Console Logging
+	//   - Default value: `true`
 	ConsoleLogging pulumi.BoolPtrOutput `pulumi:"consoleLogging"`
 	// Variable name
 	ConsoleLoggingVariable pulumi.StringPtrOutput `pulumi:"consoleLoggingVariable"`
 	// The description of the feature template
 	Description pulumi.StringOutput `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayOutput `pulumi:"deviceTypes"`
-	// Configure Domain-Lookup - Default value: `false`
+	// Configure Domain-Lookup
+	//   - Default value: `false`
 	DomainLookup pulumi.BoolPtrOutput `pulumi:"domainLookup"`
 	// Variable name
 	DomainLookupVariable pulumi.StringPtrOutput `pulumi:"domainLookupVariable"`
-	// Set Passive FTP - Default value: `false`
+	// Set Passive FTP
+	//   - Default value: `false`
 	FtpPassive pulumi.BoolPtrOutput `pulumi:"ftpPassive"`
 	// Variable name
 	FtpPassiveVariable pulumi.StringPtrOutput `pulumi:"ftpPassiveVariable"`
-	// Set preference for HTTP Authentication - Choices: `local`, `aaa`
+	// Set preference for HTTP Authentication
+	//   - Choices: `local`, `aaa`
 	HttpAuthentication pulumi.StringPtrOutput `pulumi:"httpAuthentication"`
 	// Variable name
 	HttpAuthenticationVariable pulumi.StringPtrOutput `pulumi:"httpAuthenticationVariable"`
-	// Set HTTP Server - Default value: `false`
+	// Set HTTP Server
+	//   - Default value: `false`
 	HttpServer pulumi.BoolPtrOutput `pulumi:"httpServer"`
 	// Variable name
 	HttpServerVariable pulumi.StringPtrOutput `pulumi:"httpServerVariable"`
-	// Set HTTPS Server - Default value: `false`
+	// Set HTTPS Server
+	//   - Default value: `false`
 	HttpsServer pulumi.BoolPtrOutput `pulumi:"httpsServer"`
 	// Variable name
 	HttpsServerVariable pulumi.StringPtrOutput `pulumi:"httpsServerVariable"`
-	// Set Source Route - Default value: `false`
+	// Set Source Route
+	//   - Default value: `false`
 	IpSourceRouting pulumi.BoolPtrOutput `pulumi:"ipSourceRouting"`
 	// Variable name
 	IpSourceRoutingVariable pulumi.StringPtrOutput `pulumi:"ipSourceRoutingVariable"`
-	// Configure Telnet (Outbound) - Default value: `false`
+	// Configure Telnet (Outbound)
+	//   - Default value: `false`
 	LineVty pulumi.BoolPtrOutput `pulumi:"lineVty"`
 	// Variable name
 	LineVtyVariable pulumi.StringPtrOutput `pulumi:"lineVtyVariable"`
-	// Configure LLDP - Default value: `true`
+	// Configure LLDP
+	//   - Default value: `true`
 	Lldp pulumi.BoolPtrOutput `pulumi:"lldp"`
 	// Variable name
 	LldpVariable pulumi.StringPtrOutput `pulumi:"lldpVariable"`
 	// The name of the feature template
 	Name pulumi.StringOutput `pulumi:"name"`
-	// Set NAT64 TCP session timeout, in seconds - Range: `1`-`536870` - Default value: `3600`
+	// Set NAT64 TCP session timeout, in seconds
+	//   - Range: `1`-`536870`
+	//   - Default value: `3600`
 	Nat64TcpTimeout pulumi.IntPtrOutput `pulumi:"nat64TcpTimeout"`
 	// Variable name
 	Nat64TcpTimeoutVariable pulumi.StringPtrOutput `pulumi:"nat64TcpTimeoutVariable"`
-	// Set NAT64 UDP session timeout, in seconds - Range: `1`-`536870` - Default value: `300`
+	// Set NAT64 UDP session timeout, in seconds
+	//   - Range: `1`-`536870`
+	//   - Default value: `300`
 	Nat64UdpTimeout pulumi.IntPtrOutput `pulumi:"nat64UdpTimeout"`
 	// Variable name
 	Nat64UdpTimeoutVariable pulumi.StringPtrOutput `pulumi:"nat64UdpTimeoutVariable"`
-	// Set RSH/RCP - Default value: `false`
+	// Set RSH/RCP
+	//   - Default value: `false`
 	RshRcp pulumi.BoolPtrOutput `pulumi:"rshRcp"`
 	// Variable name
 	RshRcpVariable pulumi.StringPtrOutput `pulumi:"rshRcpVariable"`
-	// Configure SNMP Ifindex Persist - Default value: `true`
+	// Configure SNMP Ifindex Persist
+	//   - Default value: `true`
 	SnmpIfindexPersist pulumi.BoolPtrOutput `pulumi:"snmpIfindexPersist"`
 	// Variable name
 	SnmpIfindexPersistVariable pulumi.StringPtrOutput `pulumi:"snmpIfindexPersistVariable"`
@@ -154,31 +171,37 @@ type CedgeGlobalFeatureTemplate struct {
 	SourceInterface pulumi.StringPtrOutput `pulumi:"sourceInterface"`
 	// Variable name
 	SourceInterfaceVariable pulumi.StringPtrOutput `pulumi:"sourceInterfaceVariable"`
-	// Set SSH version - Range: `1`-`2`
+	// Set SSH version
+	//   - Range: `1`-`2`
 	SshVersion pulumi.IntPtrOutput `pulumi:"sshVersion"`
 	// Variable name
 	SshVersionVariable pulumi.StringPtrOutput `pulumi:"sshVersionVariable"`
-	// Configure tcp-keepalives-in - Default value: `true`
+	// Configure tcp-keepalives-in
+	//   - Default value: `true`
 	TcpKeepalivesIn pulumi.BoolPtrOutput `pulumi:"tcpKeepalivesIn"`
 	// Variable name
 	TcpKeepalivesInVariable pulumi.StringPtrOutput `pulumi:"tcpKeepalivesInVariable"`
-	// Configure tcp-keepalives-out - Default value: `true`
+	// Configure tcp-keepalives-out
+	//   - Default value: `true`
 	TcpKeepalivesOut pulumi.BoolPtrOutput `pulumi:"tcpKeepalivesOut"`
 	// Variable name
 	TcpKeepalivesOutVariable pulumi.StringPtrOutput `pulumi:"tcpKeepalivesOutVariable"`
-	// Configure tcp-small-servers - Default value: `false`
+	// Configure tcp-small-servers
+	//   - Default value: `false`
 	TcpSmallServers pulumi.BoolPtrOutput `pulumi:"tcpSmallServers"`
 	// Variable name
 	TcpSmallServersVariable pulumi.StringPtrOutput `pulumi:"tcpSmallServersVariable"`
 	// The template type
 	TemplateType pulumi.StringOutput `pulumi:"templateType"`
-	// Configure udp-small-servers - Default value: `false`
+	// Configure udp-small-servers
+	//   - Default value: `false`
 	UdpSmallServers pulumi.BoolPtrOutput `pulumi:"udpSmallServers"`
 	// Variable name
 	UdpSmallServersVariable pulumi.StringPtrOutput `pulumi:"udpSmallServersVariable"`
 	// The version of the feature template
 	Version pulumi.IntOutput `pulumi:"version"`
-	// Configure VTY Line Logging - Default value: `false`
+	// Configure VTY Line Logging
+	//   - Default value: `false`
 	VtyLogging pulumi.BoolPtrOutput `pulumi:"vtyLogging"`
 	// Variable name
 	VtyLoggingVariable pulumi.StringPtrOutput `pulumi:"vtyLoggingVariable"`
@@ -220,75 +243,92 @@ func GetCedgeGlobalFeatureTemplate(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering CedgeGlobalFeatureTemplate resources.
 type cedgeGlobalFeatureTemplateState struct {
-	// Set ARP Proxy - Default value: `false`
+	// Set ARP Proxy
+	//   - Default value: `false`
 	ArpProxy *bool `pulumi:"arpProxy"`
 	// Variable name
 	ArpProxyVariable *string `pulumi:"arpProxyVariable"`
-	// Configure Ignore BOOTP - Default value: `true`
+	// Configure Ignore BOOTP
+	//   - Default value: `true`
 	Bootp *bool `pulumi:"bootp"`
 	// Variable name
 	BootpVariable *string `pulumi:"bootpVariable"`
-	// Configure CDP - Default value: `true`
+	// Configure CDP
+	//   - Default value: `true`
 	Cdp *bool `pulumi:"cdp"`
 	// Variable name
 	CdpVariable *string `pulumi:"cdpVariable"`
-	// Configure Console Logging - Default value: `true`
+	// Configure Console Logging
+	//   - Default value: `true`
 	ConsoleLogging *bool `pulumi:"consoleLogging"`
 	// Variable name
 	ConsoleLoggingVariable *string `pulumi:"consoleLoggingVariable"`
 	// The description of the feature template
 	Description *string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
-	// Configure Domain-Lookup - Default value: `false`
+	// Configure Domain-Lookup
+	//   - Default value: `false`
 	DomainLookup *bool `pulumi:"domainLookup"`
 	// Variable name
 	DomainLookupVariable *string `pulumi:"domainLookupVariable"`
-	// Set Passive FTP - Default value: `false`
+	// Set Passive FTP
+	//   - Default value: `false`
 	FtpPassive *bool `pulumi:"ftpPassive"`
 	// Variable name
 	FtpPassiveVariable *string `pulumi:"ftpPassiveVariable"`
-	// Set preference for HTTP Authentication - Choices: `local`, `aaa`
+	// Set preference for HTTP Authentication
+	//   - Choices: `local`, `aaa`
 	HttpAuthentication *string `pulumi:"httpAuthentication"`
 	// Variable name
 	HttpAuthenticationVariable *string `pulumi:"httpAuthenticationVariable"`
-	// Set HTTP Server - Default value: `false`
+	// Set HTTP Server
+	//   - Default value: `false`
 	HttpServer *bool `pulumi:"httpServer"`
 	// Variable name
 	HttpServerVariable *string `pulumi:"httpServerVariable"`
-	// Set HTTPS Server - Default value: `false`
+	// Set HTTPS Server
+	//   - Default value: `false`
 	HttpsServer *bool `pulumi:"httpsServer"`
 	// Variable name
 	HttpsServerVariable *string `pulumi:"httpsServerVariable"`
-	// Set Source Route - Default value: `false`
+	// Set Source Route
+	//   - Default value: `false`
 	IpSourceRouting *bool `pulumi:"ipSourceRouting"`
 	// Variable name
 	IpSourceRoutingVariable *string `pulumi:"ipSourceRoutingVariable"`
-	// Configure Telnet (Outbound) - Default value: `false`
+	// Configure Telnet (Outbound)
+	//   - Default value: `false`
 	LineVty *bool `pulumi:"lineVty"`
 	// Variable name
 	LineVtyVariable *string `pulumi:"lineVtyVariable"`
-	// Configure LLDP - Default value: `true`
+	// Configure LLDP
+	//   - Default value: `true`
 	Lldp *bool `pulumi:"lldp"`
 	// Variable name
 	LldpVariable *string `pulumi:"lldpVariable"`
 	// The name of the feature template
 	Name *string `pulumi:"name"`
-	// Set NAT64 TCP session timeout, in seconds - Range: `1`-`536870` - Default value: `3600`
+	// Set NAT64 TCP session timeout, in seconds
+	//   - Range: `1`-`536870`
+	//   - Default value: `3600`
 	Nat64TcpTimeout *int `pulumi:"nat64TcpTimeout"`
 	// Variable name
 	Nat64TcpTimeoutVariable *string `pulumi:"nat64TcpTimeoutVariable"`
-	// Set NAT64 UDP session timeout, in seconds - Range: `1`-`536870` - Default value: `300`
+	// Set NAT64 UDP session timeout, in seconds
+	//   - Range: `1`-`536870`
+	//   - Default value: `300`
 	Nat64UdpTimeout *int `pulumi:"nat64UdpTimeout"`
 	// Variable name
 	Nat64UdpTimeoutVariable *string `pulumi:"nat64UdpTimeoutVariable"`
-	// Set RSH/RCP - Default value: `false`
+	// Set RSH/RCP
+	//   - Default value: `false`
 	RshRcp *bool `pulumi:"rshRcp"`
 	// Variable name
 	RshRcpVariable *string `pulumi:"rshRcpVariable"`
-	// Configure SNMP Ifindex Persist - Default value: `true`
+	// Configure SNMP Ifindex Persist
+	//   - Default value: `true`
 	SnmpIfindexPersist *bool `pulumi:"snmpIfindexPersist"`
 	// Variable name
 	SnmpIfindexPersistVariable *string `pulumi:"snmpIfindexPersistVariable"`
@@ -296,106 +336,129 @@ type cedgeGlobalFeatureTemplateState struct {
 	SourceInterface *string `pulumi:"sourceInterface"`
 	// Variable name
 	SourceInterfaceVariable *string `pulumi:"sourceInterfaceVariable"`
-	// Set SSH version - Range: `1`-`2`
+	// Set SSH version
+	//   - Range: `1`-`2`
 	SshVersion *int `pulumi:"sshVersion"`
 	// Variable name
 	SshVersionVariable *string `pulumi:"sshVersionVariable"`
-	// Configure tcp-keepalives-in - Default value: `true`
+	// Configure tcp-keepalives-in
+	//   - Default value: `true`
 	TcpKeepalivesIn *bool `pulumi:"tcpKeepalivesIn"`
 	// Variable name
 	TcpKeepalivesInVariable *string `pulumi:"tcpKeepalivesInVariable"`
-	// Configure tcp-keepalives-out - Default value: `true`
+	// Configure tcp-keepalives-out
+	//   - Default value: `true`
 	TcpKeepalivesOut *bool `pulumi:"tcpKeepalivesOut"`
 	// Variable name
 	TcpKeepalivesOutVariable *string `pulumi:"tcpKeepalivesOutVariable"`
-	// Configure tcp-small-servers - Default value: `false`
+	// Configure tcp-small-servers
+	//   - Default value: `false`
 	TcpSmallServers *bool `pulumi:"tcpSmallServers"`
 	// Variable name
 	TcpSmallServersVariable *string `pulumi:"tcpSmallServersVariable"`
 	// The template type
 	TemplateType *string `pulumi:"templateType"`
-	// Configure udp-small-servers - Default value: `false`
+	// Configure udp-small-servers
+	//   - Default value: `false`
 	UdpSmallServers *bool `pulumi:"udpSmallServers"`
 	// Variable name
 	UdpSmallServersVariable *string `pulumi:"udpSmallServersVariable"`
 	// The version of the feature template
 	Version *int `pulumi:"version"`
-	// Configure VTY Line Logging - Default value: `false`
+	// Configure VTY Line Logging
+	//   - Default value: `false`
 	VtyLogging *bool `pulumi:"vtyLogging"`
 	// Variable name
 	VtyLoggingVariable *string `pulumi:"vtyLoggingVariable"`
 }
 
 type CedgeGlobalFeatureTemplateState struct {
-	// Set ARP Proxy - Default value: `false`
+	// Set ARP Proxy
+	//   - Default value: `false`
 	ArpProxy pulumi.BoolPtrInput
 	// Variable name
 	ArpProxyVariable pulumi.StringPtrInput
-	// Configure Ignore BOOTP - Default value: `true`
+	// Configure Ignore BOOTP
+	//   - Default value: `true`
 	Bootp pulumi.BoolPtrInput
 	// Variable name
 	BootpVariable pulumi.StringPtrInput
-	// Configure CDP - Default value: `true`
+	// Configure CDP
+	//   - Default value: `true`
 	Cdp pulumi.BoolPtrInput
 	// Variable name
 	CdpVariable pulumi.StringPtrInput
-	// Configure Console Logging - Default value: `true`
+	// Configure Console Logging
+	//   - Default value: `true`
 	ConsoleLogging pulumi.BoolPtrInput
 	// Variable name
 	ConsoleLoggingVariable pulumi.StringPtrInput
 	// The description of the feature template
 	Description pulumi.StringPtrInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
-	// Configure Domain-Lookup - Default value: `false`
+	// Configure Domain-Lookup
+	//   - Default value: `false`
 	DomainLookup pulumi.BoolPtrInput
 	// Variable name
 	DomainLookupVariable pulumi.StringPtrInput
-	// Set Passive FTP - Default value: `false`
+	// Set Passive FTP
+	//   - Default value: `false`
 	FtpPassive pulumi.BoolPtrInput
 	// Variable name
 	FtpPassiveVariable pulumi.StringPtrInput
-	// Set preference for HTTP Authentication - Choices: `local`, `aaa`
+	// Set preference for HTTP Authentication
+	//   - Choices: `local`, `aaa`
 	HttpAuthentication pulumi.StringPtrInput
 	// Variable name
 	HttpAuthenticationVariable pulumi.StringPtrInput
-	// Set HTTP Server - Default value: `false`
+	// Set HTTP Server
+	//   - Default value: `false`
 	HttpServer pulumi.BoolPtrInput
 	// Variable name
 	HttpServerVariable pulumi.StringPtrInput
-	// Set HTTPS Server - Default value: `false`
+	// Set HTTPS Server
+	//   - Default value: `false`
 	HttpsServer pulumi.BoolPtrInput
 	// Variable name
 	HttpsServerVariable pulumi.StringPtrInput
-	// Set Source Route - Default value: `false`
+	// Set Source Route
+	//   - Default value: `false`
 	IpSourceRouting pulumi.BoolPtrInput
 	// Variable name
 	IpSourceRoutingVariable pulumi.StringPtrInput
-	// Configure Telnet (Outbound) - Default value: `false`
+	// Configure Telnet (Outbound)
+	//   - Default value: `false`
 	LineVty pulumi.BoolPtrInput
 	// Variable name
 	LineVtyVariable pulumi.StringPtrInput
-	// Configure LLDP - Default value: `true`
+	// Configure LLDP
+	//   - Default value: `true`
 	Lldp pulumi.BoolPtrInput
 	// Variable name
 	LldpVariable pulumi.StringPtrInput
 	// The name of the feature template
 	Name pulumi.StringPtrInput
-	// Set NAT64 TCP session timeout, in seconds - Range: `1`-`536870` - Default value: `3600`
+	// Set NAT64 TCP session timeout, in seconds
+	//   - Range: `1`-`536870`
+	//   - Default value: `3600`
 	Nat64TcpTimeout pulumi.IntPtrInput
 	// Variable name
 	Nat64TcpTimeoutVariable pulumi.StringPtrInput
-	// Set NAT64 UDP session timeout, in seconds - Range: `1`-`536870` - Default value: `300`
+	// Set NAT64 UDP session timeout, in seconds
+	//   - Range: `1`-`536870`
+	//   - Default value: `300`
 	Nat64UdpTimeout pulumi.IntPtrInput
 	// Variable name
 	Nat64UdpTimeoutVariable pulumi.StringPtrInput
-	// Set RSH/RCP - Default value: `false`
+	// Set RSH/RCP
+	//   - Default value: `false`
 	RshRcp pulumi.BoolPtrInput
 	// Variable name
 	RshRcpVariable pulumi.StringPtrInput
-	// Configure SNMP Ifindex Persist - Default value: `true`
+	// Configure SNMP Ifindex Persist
+	//   - Default value: `true`
 	SnmpIfindexPersist pulumi.BoolPtrInput
 	// Variable name
 	SnmpIfindexPersistVariable pulumi.StringPtrInput
@@ -403,31 +466,37 @@ type CedgeGlobalFeatureTemplateState struct {
 	SourceInterface pulumi.StringPtrInput
 	// Variable name
 	SourceInterfaceVariable pulumi.StringPtrInput
-	// Set SSH version - Range: `1`-`2`
+	// Set SSH version
+	//   - Range: `1`-`2`
 	SshVersion pulumi.IntPtrInput
 	// Variable name
 	SshVersionVariable pulumi.StringPtrInput
-	// Configure tcp-keepalives-in - Default value: `true`
+	// Configure tcp-keepalives-in
+	//   - Default value: `true`
 	TcpKeepalivesIn pulumi.BoolPtrInput
 	// Variable name
 	TcpKeepalivesInVariable pulumi.StringPtrInput
-	// Configure tcp-keepalives-out - Default value: `true`
+	// Configure tcp-keepalives-out
+	//   - Default value: `true`
 	TcpKeepalivesOut pulumi.BoolPtrInput
 	// Variable name
 	TcpKeepalivesOutVariable pulumi.StringPtrInput
-	// Configure tcp-small-servers - Default value: `false`
+	// Configure tcp-small-servers
+	//   - Default value: `false`
 	TcpSmallServers pulumi.BoolPtrInput
 	// Variable name
 	TcpSmallServersVariable pulumi.StringPtrInput
 	// The template type
 	TemplateType pulumi.StringPtrInput
-	// Configure udp-small-servers - Default value: `false`
+	// Configure udp-small-servers
+	//   - Default value: `false`
 	UdpSmallServers pulumi.BoolPtrInput
 	// Variable name
 	UdpSmallServersVariable pulumi.StringPtrInput
 	// The version of the feature template
 	Version pulumi.IntPtrInput
-	// Configure VTY Line Logging - Default value: `false`
+	// Configure VTY Line Logging
+	//   - Default value: `false`
 	VtyLogging pulumi.BoolPtrInput
 	// Variable name
 	VtyLoggingVariable pulumi.StringPtrInput
@@ -438,75 +507,92 @@ func (CedgeGlobalFeatureTemplateState) ElementType() reflect.Type {
 }
 
 type cedgeGlobalFeatureTemplateArgs struct {
-	// Set ARP Proxy - Default value: `false`
+	// Set ARP Proxy
+	//   - Default value: `false`
 	ArpProxy *bool `pulumi:"arpProxy"`
 	// Variable name
 	ArpProxyVariable *string `pulumi:"arpProxyVariable"`
-	// Configure Ignore BOOTP - Default value: `true`
+	// Configure Ignore BOOTP
+	//   - Default value: `true`
 	Bootp *bool `pulumi:"bootp"`
 	// Variable name
 	BootpVariable *string `pulumi:"bootpVariable"`
-	// Configure CDP - Default value: `true`
+	// Configure CDP
+	//   - Default value: `true`
 	Cdp *bool `pulumi:"cdp"`
 	// Variable name
 	CdpVariable *string `pulumi:"cdpVariable"`
-	// Configure Console Logging - Default value: `true`
+	// Configure Console Logging
+	//   - Default value: `true`
 	ConsoleLogging *bool `pulumi:"consoleLogging"`
 	// Variable name
 	ConsoleLoggingVariable *string `pulumi:"consoleLoggingVariable"`
 	// The description of the feature template
 	Description string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
-	// Configure Domain-Lookup - Default value: `false`
+	// Configure Domain-Lookup
+	//   - Default value: `false`
 	DomainLookup *bool `pulumi:"domainLookup"`
 	// Variable name
 	DomainLookupVariable *string `pulumi:"domainLookupVariable"`
-	// Set Passive FTP - Default value: `false`
+	// Set Passive FTP
+	//   - Default value: `false`
 	FtpPassive *bool `pulumi:"ftpPassive"`
 	// Variable name
 	FtpPassiveVariable *string `pulumi:"ftpPassiveVariable"`
-	// Set preference for HTTP Authentication - Choices: `local`, `aaa`
+	// Set preference for HTTP Authentication
+	//   - Choices: `local`, `aaa`
 	HttpAuthentication *string `pulumi:"httpAuthentication"`
 	// Variable name
 	HttpAuthenticationVariable *string `pulumi:"httpAuthenticationVariable"`
-	// Set HTTP Server - Default value: `false`
+	// Set HTTP Server
+	//   - Default value: `false`
 	HttpServer *bool `pulumi:"httpServer"`
 	// Variable name
 	HttpServerVariable *string `pulumi:"httpServerVariable"`
-	// Set HTTPS Server - Default value: `false`
+	// Set HTTPS Server
+	//   - Default value: `false`
 	HttpsServer *bool `pulumi:"httpsServer"`
 	// Variable name
 	HttpsServerVariable *string `pulumi:"httpsServerVariable"`
-	// Set Source Route - Default value: `false`
+	// Set Source Route
+	//   - Default value: `false`
 	IpSourceRouting *bool `pulumi:"ipSourceRouting"`
 	// Variable name
 	IpSourceRoutingVariable *string `pulumi:"ipSourceRoutingVariable"`
-	// Configure Telnet (Outbound) - Default value: `false`
+	// Configure Telnet (Outbound)
+	//   - Default value: `false`
 	LineVty *bool `pulumi:"lineVty"`
 	// Variable name
 	LineVtyVariable *string `pulumi:"lineVtyVariable"`
-	// Configure LLDP - Default value: `true`
+	// Configure LLDP
+	//   - Default value: `true`
 	Lldp *bool `pulumi:"lldp"`
 	// Variable name
 	LldpVariable *string `pulumi:"lldpVariable"`
 	// The name of the feature template
 	Name *string `pulumi:"name"`
-	// Set NAT64 TCP session timeout, in seconds - Range: `1`-`536870` - Default value: `3600`
+	// Set NAT64 TCP session timeout, in seconds
+	//   - Range: `1`-`536870`
+	//   - Default value: `3600`
 	Nat64TcpTimeout *int `pulumi:"nat64TcpTimeout"`
 	// Variable name
 	Nat64TcpTimeoutVariable *string `pulumi:"nat64TcpTimeoutVariable"`
-	// Set NAT64 UDP session timeout, in seconds - Range: `1`-`536870` - Default value: `300`
+	// Set NAT64 UDP session timeout, in seconds
+	//   - Range: `1`-`536870`
+	//   - Default value: `300`
 	Nat64UdpTimeout *int `pulumi:"nat64UdpTimeout"`
 	// Variable name
 	Nat64UdpTimeoutVariable *string `pulumi:"nat64UdpTimeoutVariable"`
-	// Set RSH/RCP - Default value: `false`
+	// Set RSH/RCP
+	//   - Default value: `false`
 	RshRcp *bool `pulumi:"rshRcp"`
 	// Variable name
 	RshRcpVariable *string `pulumi:"rshRcpVariable"`
-	// Configure SNMP Ifindex Persist - Default value: `true`
+	// Configure SNMP Ifindex Persist
+	//   - Default value: `true`
 	SnmpIfindexPersist *bool `pulumi:"snmpIfindexPersist"`
 	// Variable name
 	SnmpIfindexPersistVariable *string `pulumi:"snmpIfindexPersistVariable"`
@@ -514,27 +600,33 @@ type cedgeGlobalFeatureTemplateArgs struct {
 	SourceInterface *string `pulumi:"sourceInterface"`
 	// Variable name
 	SourceInterfaceVariable *string `pulumi:"sourceInterfaceVariable"`
-	// Set SSH version - Range: `1`-`2`
+	// Set SSH version
+	//   - Range: `1`-`2`
 	SshVersion *int `pulumi:"sshVersion"`
 	// Variable name
 	SshVersionVariable *string `pulumi:"sshVersionVariable"`
-	// Configure tcp-keepalives-in - Default value: `true`
+	// Configure tcp-keepalives-in
+	//   - Default value: `true`
 	TcpKeepalivesIn *bool `pulumi:"tcpKeepalivesIn"`
 	// Variable name
 	TcpKeepalivesInVariable *string `pulumi:"tcpKeepalivesInVariable"`
-	// Configure tcp-keepalives-out - Default value: `true`
+	// Configure tcp-keepalives-out
+	//   - Default value: `true`
 	TcpKeepalivesOut *bool `pulumi:"tcpKeepalivesOut"`
 	// Variable name
 	TcpKeepalivesOutVariable *string `pulumi:"tcpKeepalivesOutVariable"`
-	// Configure tcp-small-servers - Default value: `false`
+	// Configure tcp-small-servers
+	//   - Default value: `false`
 	TcpSmallServers *bool `pulumi:"tcpSmallServers"`
 	// Variable name
 	TcpSmallServersVariable *string `pulumi:"tcpSmallServersVariable"`
-	// Configure udp-small-servers - Default value: `false`
+	// Configure udp-small-servers
+	//   - Default value: `false`
 	UdpSmallServers *bool `pulumi:"udpSmallServers"`
 	// Variable name
 	UdpSmallServersVariable *string `pulumi:"udpSmallServersVariable"`
-	// Configure VTY Line Logging - Default value: `false`
+	// Configure VTY Line Logging
+	//   - Default value: `false`
 	VtyLogging *bool `pulumi:"vtyLogging"`
 	// Variable name
 	VtyLoggingVariable *string `pulumi:"vtyLoggingVariable"`
@@ -542,75 +634,92 @@ type cedgeGlobalFeatureTemplateArgs struct {
 
 // The set of arguments for constructing a CedgeGlobalFeatureTemplate resource.
 type CedgeGlobalFeatureTemplateArgs struct {
-	// Set ARP Proxy - Default value: `false`
+	// Set ARP Proxy
+	//   - Default value: `false`
 	ArpProxy pulumi.BoolPtrInput
 	// Variable name
 	ArpProxyVariable pulumi.StringPtrInput
-	// Configure Ignore BOOTP - Default value: `true`
+	// Configure Ignore BOOTP
+	//   - Default value: `true`
 	Bootp pulumi.BoolPtrInput
 	// Variable name
 	BootpVariable pulumi.StringPtrInput
-	// Configure CDP - Default value: `true`
+	// Configure CDP
+	//   - Default value: `true`
 	Cdp pulumi.BoolPtrInput
 	// Variable name
 	CdpVariable pulumi.StringPtrInput
-	// Configure Console Logging - Default value: `true`
+	// Configure Console Logging
+	//   - Default value: `true`
 	ConsoleLogging pulumi.BoolPtrInput
 	// Variable name
 	ConsoleLoggingVariable pulumi.StringPtrInput
 	// The description of the feature template
 	Description pulumi.StringInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
-	// Configure Domain-Lookup - Default value: `false`
+	// Configure Domain-Lookup
+	//   - Default value: `false`
 	DomainLookup pulumi.BoolPtrInput
 	// Variable name
 	DomainLookupVariable pulumi.StringPtrInput
-	// Set Passive FTP - Default value: `false`
+	// Set Passive FTP
+	//   - Default value: `false`
 	FtpPassive pulumi.BoolPtrInput
 	// Variable name
 	FtpPassiveVariable pulumi.StringPtrInput
-	// Set preference for HTTP Authentication - Choices: `local`, `aaa`
+	// Set preference for HTTP Authentication
+	//   - Choices: `local`, `aaa`
 	HttpAuthentication pulumi.StringPtrInput
 	// Variable name
 	HttpAuthenticationVariable pulumi.StringPtrInput
-	// Set HTTP Server - Default value: `false`
+	// Set HTTP Server
+	//   - Default value: `false`
 	HttpServer pulumi.BoolPtrInput
 	// Variable name
 	HttpServerVariable pulumi.StringPtrInput
-	// Set HTTPS Server - Default value: `false`
+	// Set HTTPS Server
+	//   - Default value: `false`
 	HttpsServer pulumi.BoolPtrInput
 	// Variable name
 	HttpsServerVariable pulumi.StringPtrInput
-	// Set Source Route - Default value: `false`
+	// Set Source Route
+	//   - Default value: `false`
 	IpSourceRouting pulumi.BoolPtrInput
 	// Variable name
 	IpSourceRoutingVariable pulumi.StringPtrInput
-	// Configure Telnet (Outbound) - Default value: `false`
+	// Configure Telnet (Outbound)
+	//   - Default value: `false`
 	LineVty pulumi.BoolPtrInput
 	// Variable name
 	LineVtyVariable pulumi.StringPtrInput
-	// Configure LLDP - Default value: `true`
+	// Configure LLDP
+	//   - Default value: `true`
 	Lldp pulumi.BoolPtrInput
 	// Variable name
 	LldpVariable pulumi.StringPtrInput
 	// The name of the feature template
 	Name pulumi.StringPtrInput
-	// Set NAT64 TCP session timeout, in seconds - Range: `1`-`536870` - Default value: `3600`
+	// Set NAT64 TCP session timeout, in seconds
+	//   - Range: `1`-`536870`
+	//   - Default value: `3600`
 	Nat64TcpTimeout pulumi.IntPtrInput
 	// Variable name
 	Nat64TcpTimeoutVariable pulumi.StringPtrInput
-	// Set NAT64 UDP session timeout, in seconds - Range: `1`-`536870` - Default value: `300`
+	// Set NAT64 UDP session timeout, in seconds
+	//   - Range: `1`-`536870`
+	//   - Default value: `300`
 	Nat64UdpTimeout pulumi.IntPtrInput
 	// Variable name
 	Nat64UdpTimeoutVariable pulumi.StringPtrInput
-	// Set RSH/RCP - Default value: `false`
+	// Set RSH/RCP
+	//   - Default value: `false`
 	RshRcp pulumi.BoolPtrInput
 	// Variable name
 	RshRcpVariable pulumi.StringPtrInput
-	// Configure SNMP Ifindex Persist - Default value: `true`
+	// Configure SNMP Ifindex Persist
+	//   - Default value: `true`
 	SnmpIfindexPersist pulumi.BoolPtrInput
 	// Variable name
 	SnmpIfindexPersistVariable pulumi.StringPtrInput
@@ -618,27 +727,33 @@ type CedgeGlobalFeatureTemplateArgs struct {
 	SourceInterface pulumi.StringPtrInput
 	// Variable name
 	SourceInterfaceVariable pulumi.StringPtrInput
-	// Set SSH version - Range: `1`-`2`
+	// Set SSH version
+	//   - Range: `1`-`2`
 	SshVersion pulumi.IntPtrInput
 	// Variable name
 	SshVersionVariable pulumi.StringPtrInput
-	// Configure tcp-keepalives-in - Default value: `true`
+	// Configure tcp-keepalives-in
+	//   - Default value: `true`
 	TcpKeepalivesIn pulumi.BoolPtrInput
 	// Variable name
 	TcpKeepalivesInVariable pulumi.StringPtrInput
-	// Configure tcp-keepalives-out - Default value: `true`
+	// Configure tcp-keepalives-out
+	//   - Default value: `true`
 	TcpKeepalivesOut pulumi.BoolPtrInput
 	// Variable name
 	TcpKeepalivesOutVariable pulumi.StringPtrInput
-	// Configure tcp-small-servers - Default value: `false`
+	// Configure tcp-small-servers
+	//   - Default value: `false`
 	TcpSmallServers pulumi.BoolPtrInput
 	// Variable name
 	TcpSmallServersVariable pulumi.StringPtrInput
-	// Configure udp-small-servers - Default value: `false`
+	// Configure udp-small-servers
+	//   - Default value: `false`
 	UdpSmallServers pulumi.BoolPtrInput
 	// Variable name
 	UdpSmallServersVariable pulumi.StringPtrInput
-	// Configure VTY Line Logging - Default value: `false`
+	// Configure VTY Line Logging
+	//   - Default value: `false`
 	VtyLogging pulumi.BoolPtrInput
 	// Variable name
 	VtyLoggingVariable pulumi.StringPtrInput
@@ -731,7 +846,8 @@ func (o CedgeGlobalFeatureTemplateOutput) ToCedgeGlobalFeatureTemplateOutputWith
 	return o
 }
 
-// Set ARP Proxy - Default value: `false`
+// Set ARP Proxy
+//   - Default value: `false`
 func (o CedgeGlobalFeatureTemplateOutput) ArpProxy() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.BoolPtrOutput { return v.ArpProxy }).(pulumi.BoolPtrOutput)
 }
@@ -741,7 +857,8 @@ func (o CedgeGlobalFeatureTemplateOutput) ArpProxyVariable() pulumi.StringPtrOut
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.StringPtrOutput { return v.ArpProxyVariable }).(pulumi.StringPtrOutput)
 }
 
-// Configure Ignore BOOTP - Default value: `true`
+// Configure Ignore BOOTP
+//   - Default value: `true`
 func (o CedgeGlobalFeatureTemplateOutput) Bootp() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.BoolPtrOutput { return v.Bootp }).(pulumi.BoolPtrOutput)
 }
@@ -751,7 +868,8 @@ func (o CedgeGlobalFeatureTemplateOutput) BootpVariable() pulumi.StringPtrOutput
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.StringPtrOutput { return v.BootpVariable }).(pulumi.StringPtrOutput)
 }
 
-// Configure CDP - Default value: `true`
+// Configure CDP
+//   - Default value: `true`
 func (o CedgeGlobalFeatureTemplateOutput) Cdp() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.BoolPtrOutput { return v.Cdp }).(pulumi.BoolPtrOutput)
 }
@@ -761,7 +879,8 @@ func (o CedgeGlobalFeatureTemplateOutput) CdpVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.StringPtrOutput { return v.CdpVariable }).(pulumi.StringPtrOutput)
 }
 
-// Configure Console Logging - Default value: `true`
+// Configure Console Logging
+//   - Default value: `true`
 func (o CedgeGlobalFeatureTemplateOutput) ConsoleLogging() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.BoolPtrOutput { return v.ConsoleLogging }).(pulumi.BoolPtrOutput)
 }
@@ -776,14 +895,14 @@ func (o CedgeGlobalFeatureTemplateOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.StringOutput { return v.Description }).(pulumi.StringOutput)
 }
 
-// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+// List of supported device types
+//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 func (o CedgeGlobalFeatureTemplateOutput) DeviceTypes() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.StringArrayOutput { return v.DeviceTypes }).(pulumi.StringArrayOutput)
 }
 
-// Configure Domain-Lookup - Default value: `false`
+// Configure Domain-Lookup
+//   - Default value: `false`
 func (o CedgeGlobalFeatureTemplateOutput) DomainLookup() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.BoolPtrOutput { return v.DomainLookup }).(pulumi.BoolPtrOutput)
 }
@@ -793,7 +912,8 @@ func (o CedgeGlobalFeatureTemplateOutput) DomainLookupVariable() pulumi.StringPt
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.StringPtrOutput { return v.DomainLookupVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set Passive FTP - Default value: `false`
+// Set Passive FTP
+//   - Default value: `false`
 func (o CedgeGlobalFeatureTemplateOutput) FtpPassive() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.BoolPtrOutput { return v.FtpPassive }).(pulumi.BoolPtrOutput)
 }
@@ -803,7 +923,8 @@ func (o CedgeGlobalFeatureTemplateOutput) FtpPassiveVariable() pulumi.StringPtrO
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.StringPtrOutput { return v.FtpPassiveVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set preference for HTTP Authentication - Choices: `local`, `aaa`
+// Set preference for HTTP Authentication
+//   - Choices: `local`, `aaa`
 func (o CedgeGlobalFeatureTemplateOutput) HttpAuthentication() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.StringPtrOutput { return v.HttpAuthentication }).(pulumi.StringPtrOutput)
 }
@@ -813,7 +934,8 @@ func (o CedgeGlobalFeatureTemplateOutput) HttpAuthenticationVariable() pulumi.St
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.StringPtrOutput { return v.HttpAuthenticationVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set HTTP Server - Default value: `false`
+// Set HTTP Server
+//   - Default value: `false`
 func (o CedgeGlobalFeatureTemplateOutput) HttpServer() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.BoolPtrOutput { return v.HttpServer }).(pulumi.BoolPtrOutput)
 }
@@ -823,7 +945,8 @@ func (o CedgeGlobalFeatureTemplateOutput) HttpServerVariable() pulumi.StringPtrO
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.StringPtrOutput { return v.HttpServerVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set HTTPS Server - Default value: `false`
+// Set HTTPS Server
+//   - Default value: `false`
 func (o CedgeGlobalFeatureTemplateOutput) HttpsServer() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.BoolPtrOutput { return v.HttpsServer }).(pulumi.BoolPtrOutput)
 }
@@ -833,7 +956,8 @@ func (o CedgeGlobalFeatureTemplateOutput) HttpsServerVariable() pulumi.StringPtr
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.StringPtrOutput { return v.HttpsServerVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set Source Route - Default value: `false`
+// Set Source Route
+//   - Default value: `false`
 func (o CedgeGlobalFeatureTemplateOutput) IpSourceRouting() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.BoolPtrOutput { return v.IpSourceRouting }).(pulumi.BoolPtrOutput)
 }
@@ -843,7 +967,8 @@ func (o CedgeGlobalFeatureTemplateOutput) IpSourceRoutingVariable() pulumi.Strin
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.StringPtrOutput { return v.IpSourceRoutingVariable }).(pulumi.StringPtrOutput)
 }
 
-// Configure Telnet (Outbound) - Default value: `false`
+// Configure Telnet (Outbound)
+//   - Default value: `false`
 func (o CedgeGlobalFeatureTemplateOutput) LineVty() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.BoolPtrOutput { return v.LineVty }).(pulumi.BoolPtrOutput)
 }
@@ -853,7 +978,8 @@ func (o CedgeGlobalFeatureTemplateOutput) LineVtyVariable() pulumi.StringPtrOutp
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.StringPtrOutput { return v.LineVtyVariable }).(pulumi.StringPtrOutput)
 }
 
-// Configure LLDP - Default value: `true`
+// Configure LLDP
+//   - Default value: `true`
 func (o CedgeGlobalFeatureTemplateOutput) Lldp() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.BoolPtrOutput { return v.Lldp }).(pulumi.BoolPtrOutput)
 }
@@ -868,7 +994,9 @@ func (o CedgeGlobalFeatureTemplateOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// Set NAT64 TCP session timeout, in seconds - Range: `1`-`536870` - Default value: `3600`
+// Set NAT64 TCP session timeout, in seconds
+//   - Range: `1`-`536870`
+//   - Default value: `3600`
 func (o CedgeGlobalFeatureTemplateOutput) Nat64TcpTimeout() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.IntPtrOutput { return v.Nat64TcpTimeout }).(pulumi.IntPtrOutput)
 }
@@ -878,7 +1006,9 @@ func (o CedgeGlobalFeatureTemplateOutput) Nat64TcpTimeoutVariable() pulumi.Strin
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.StringPtrOutput { return v.Nat64TcpTimeoutVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set NAT64 UDP session timeout, in seconds - Range: `1`-`536870` - Default value: `300`
+// Set NAT64 UDP session timeout, in seconds
+//   - Range: `1`-`536870`
+//   - Default value: `300`
 func (o CedgeGlobalFeatureTemplateOutput) Nat64UdpTimeout() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.IntPtrOutput { return v.Nat64UdpTimeout }).(pulumi.IntPtrOutput)
 }
@@ -888,7 +1018,8 @@ func (o CedgeGlobalFeatureTemplateOutput) Nat64UdpTimeoutVariable() pulumi.Strin
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.StringPtrOutput { return v.Nat64UdpTimeoutVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set RSH/RCP - Default value: `false`
+// Set RSH/RCP
+//   - Default value: `false`
 func (o CedgeGlobalFeatureTemplateOutput) RshRcp() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.BoolPtrOutput { return v.RshRcp }).(pulumi.BoolPtrOutput)
 }
@@ -898,7 +1029,8 @@ func (o CedgeGlobalFeatureTemplateOutput) RshRcpVariable() pulumi.StringPtrOutpu
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.StringPtrOutput { return v.RshRcpVariable }).(pulumi.StringPtrOutput)
 }
 
-// Configure SNMP Ifindex Persist - Default value: `true`
+// Configure SNMP Ifindex Persist
+//   - Default value: `true`
 func (o CedgeGlobalFeatureTemplateOutput) SnmpIfindexPersist() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.BoolPtrOutput { return v.SnmpIfindexPersist }).(pulumi.BoolPtrOutput)
 }
@@ -918,7 +1050,8 @@ func (o CedgeGlobalFeatureTemplateOutput) SourceInterfaceVariable() pulumi.Strin
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.StringPtrOutput { return v.SourceInterfaceVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set SSH version - Range: `1`-`2`
+// Set SSH version
+//   - Range: `1`-`2`
 func (o CedgeGlobalFeatureTemplateOutput) SshVersion() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.IntPtrOutput { return v.SshVersion }).(pulumi.IntPtrOutput)
 }
@@ -928,7 +1061,8 @@ func (o CedgeGlobalFeatureTemplateOutput) SshVersionVariable() pulumi.StringPtrO
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.StringPtrOutput { return v.SshVersionVariable }).(pulumi.StringPtrOutput)
 }
 
-// Configure tcp-keepalives-in - Default value: `true`
+// Configure tcp-keepalives-in
+//   - Default value: `true`
 func (o CedgeGlobalFeatureTemplateOutput) TcpKeepalivesIn() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.BoolPtrOutput { return v.TcpKeepalivesIn }).(pulumi.BoolPtrOutput)
 }
@@ -938,7 +1072,8 @@ func (o CedgeGlobalFeatureTemplateOutput) TcpKeepalivesInVariable() pulumi.Strin
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.StringPtrOutput { return v.TcpKeepalivesInVariable }).(pulumi.StringPtrOutput)
 }
 
-// Configure tcp-keepalives-out - Default value: `true`
+// Configure tcp-keepalives-out
+//   - Default value: `true`
 func (o CedgeGlobalFeatureTemplateOutput) TcpKeepalivesOut() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.BoolPtrOutput { return v.TcpKeepalivesOut }).(pulumi.BoolPtrOutput)
 }
@@ -948,7 +1083,8 @@ func (o CedgeGlobalFeatureTemplateOutput) TcpKeepalivesOutVariable() pulumi.Stri
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.StringPtrOutput { return v.TcpKeepalivesOutVariable }).(pulumi.StringPtrOutput)
 }
 
-// Configure tcp-small-servers - Default value: `false`
+// Configure tcp-small-servers
+//   - Default value: `false`
 func (o CedgeGlobalFeatureTemplateOutput) TcpSmallServers() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.BoolPtrOutput { return v.TcpSmallServers }).(pulumi.BoolPtrOutput)
 }
@@ -963,7 +1099,8 @@ func (o CedgeGlobalFeatureTemplateOutput) TemplateType() pulumi.StringOutput {
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.StringOutput { return v.TemplateType }).(pulumi.StringOutput)
 }
 
-// Configure udp-small-servers - Default value: `false`
+// Configure udp-small-servers
+//   - Default value: `false`
 func (o CedgeGlobalFeatureTemplateOutput) UdpSmallServers() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.BoolPtrOutput { return v.UdpSmallServers }).(pulumi.BoolPtrOutput)
 }
@@ -978,7 +1115,8 @@ func (o CedgeGlobalFeatureTemplateOutput) Version() pulumi.IntOutput {
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.IntOutput { return v.Version }).(pulumi.IntOutput)
 }
 
-// Configure VTY Line Logging - Default value: `false`
+// Configure VTY Line Logging
+//   - Default value: `false`
 func (o CedgeGlobalFeatureTemplateOutput) VtyLogging() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CedgeGlobalFeatureTemplate) pulumi.BoolPtrOutput { return v.VtyLogging }).(pulumi.BoolPtrOutput)
 }

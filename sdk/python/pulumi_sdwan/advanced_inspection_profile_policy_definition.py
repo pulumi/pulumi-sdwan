@@ -38,7 +38,8 @@ class AdvancedInspectionProfilePolicyDefinitionArgs:
         :param pulumi.Input[_builtins.str] intrusion_prevention_id: Intrusion prevention ID (unified mode)
         :param pulumi.Input[_builtins.int] intrusion_prevention_version: Intrusion prevention version
         :param pulumi.Input[_builtins.str] name: The name of the policy definition.
-        :param pulumi.Input[_builtins.str] tls_action: TLS Action - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
+        :param pulumi.Input[_builtins.str] tls_action: TLS Action
+                 - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
         :param pulumi.Input[_builtins.str] tls_ssl_decryption_id: TLS/SSL decryption ID
         :param pulumi.Input[_builtins.int] tls_ssl_decryption_version: TLS/SSL decryption version
         :param pulumi.Input[_builtins.str] url_filtering_id: URL filtering ID (unified mode)
@@ -142,7 +143,8 @@ class AdvancedInspectionProfilePolicyDefinitionArgs:
     @pulumi.getter(name="tlsAction")
     def tls_action(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        TLS Action - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
+        TLS Action
+          - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
         """
         return pulumi.get(self, "tls_action")
 
@@ -222,7 +224,8 @@ class _AdvancedInspectionProfilePolicyDefinitionState:
         :param pulumi.Input[_builtins.str] intrusion_prevention_id: Intrusion prevention ID (unified mode)
         :param pulumi.Input[_builtins.int] intrusion_prevention_version: Intrusion prevention version
         :param pulumi.Input[_builtins.str] name: The name of the policy definition.
-        :param pulumi.Input[_builtins.str] tls_action: TLS Action - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
+        :param pulumi.Input[_builtins.str] tls_action: TLS Action
+                 - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
         :param pulumi.Input[_builtins.str] tls_ssl_decryption_id: TLS/SSL decryption ID
         :param pulumi.Input[_builtins.int] tls_ssl_decryption_version: TLS/SSL decryption version
         :param pulumi.Input[_builtins.str] url_filtering_id: URL filtering ID (unified mode)
@@ -330,7 +333,8 @@ class _AdvancedInspectionProfilePolicyDefinitionState:
     @pulumi.getter(name="tlsAction")
     def tls_action(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        TLS Action - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
+        TLS Action
+          - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
         """
         return pulumi.get(self, "tls_action")
 
@@ -449,7 +453,8 @@ class AdvancedInspectionProfilePolicyDefinition(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] intrusion_prevention_id: Intrusion prevention ID (unified mode)
         :param pulumi.Input[_builtins.int] intrusion_prevention_version: Intrusion prevention version
         :param pulumi.Input[_builtins.str] name: The name of the policy definition.
-        :param pulumi.Input[_builtins.str] tls_action: TLS Action - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
+        :param pulumi.Input[_builtins.str] tls_action: TLS Action
+                 - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
         :param pulumi.Input[_builtins.str] tls_ssl_decryption_id: TLS/SSL decryption ID
         :param pulumi.Input[_builtins.int] tls_ssl_decryption_version: TLS/SSL decryption version
         :param pulumi.Input[_builtins.str] url_filtering_id: URL filtering ID (unified mode)
@@ -569,7 +574,8 @@ class AdvancedInspectionProfilePolicyDefinition(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] intrusion_prevention_id: Intrusion prevention ID (unified mode)
         :param pulumi.Input[_builtins.int] intrusion_prevention_version: Intrusion prevention version
         :param pulumi.Input[_builtins.str] name: The name of the policy definition.
-        :param pulumi.Input[_builtins.str] tls_action: TLS Action - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
+        :param pulumi.Input[_builtins.str] tls_action: TLS Action
+                 - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
         :param pulumi.Input[_builtins.str] tls_ssl_decryption_id: TLS/SSL decryption ID
         :param pulumi.Input[_builtins.int] tls_ssl_decryption_version: TLS/SSL decryption version
         :param pulumi.Input[_builtins.str] url_filtering_id: URL filtering ID (unified mode)
@@ -646,7 +652,8 @@ class AdvancedInspectionProfilePolicyDefinition(pulumi.CustomResource):
     @pulumi.getter(name="tlsAction")
     def tls_action(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        TLS Action - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
+        TLS Action
+          - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
         """
         return pulumi.get(self, "tls_action")
 

@@ -94,7 +94,8 @@ namespace Pulumi.Sdwan
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// Type of solution - Choices: `mobility`, `sdwan`, `nfvirtual`
+        /// Type of solution
+        ///   - Choices: `mobility`, `sdwan`, `nfvirtual`
         /// </summary>
         [Output("solution")]
         public Output<string> Solution { get; private set; } = null!;
@@ -106,7 +107,8 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.ConfigurationGroupTopologyDevice>> TopologyDevices { get; private set; } = null!;
 
         /// <summary>
-        /// Number of devices per site - Range: `1`-`20`
+        /// Number of devices per site
+        ///   - Range: `1`-`20`
         /// </summary>
         [Output("topologySiteDevices")]
         public Output<int?> TopologySiteDevices { get; private set; } = null!;
@@ -206,7 +208,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Type of solution - Choices: `mobility`, `sdwan`, `nfvirtual`
+        /// Type of solution
+        ///   - Choices: `mobility`, `sdwan`, `nfvirtual`
         /// </summary>
         [Input("solution", required: true)]
         public Input<string> Solution { get; set; } = null!;
@@ -224,7 +227,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Number of devices per site - Range: `1`-`20`
+        /// Number of devices per site
+        ///   - Range: `1`-`20`
         /// </summary>
         [Input("topologySiteDevices")]
         public Input<int>? TopologySiteDevices { get; set; }
@@ -286,7 +290,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Type of solution - Choices: `mobility`, `sdwan`, `nfvirtual`
+        /// Type of solution
+        ///   - Choices: `mobility`, `sdwan`, `nfvirtual`
         /// </summary>
         [Input("solution")]
         public Input<string>? Solution { get; set; }
@@ -304,7 +309,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Number of devices per site - Range: `1`-`20`
+        /// Number of devices per site
+        ///   - Range: `1`-`20`
         /// </summary>
         [Input("topologySiteDevices")]
         public Input<int>? TopologySiteDevices { get; set; }

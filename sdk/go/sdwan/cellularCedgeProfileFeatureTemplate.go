@@ -66,15 +66,16 @@ type CellularCedgeProfileFeatureTemplate struct {
 	AccessPointName pulumi.StringPtrOutput `pulumi:"accessPointName"`
 	// Variable name
 	AccessPointNameVariable pulumi.StringPtrOutput `pulumi:"accessPointNameVariable"`
-	// Set authentication type - Choices: `none`, `pap`, `chap`, `papChap` - Default value: `none`
+	// Set authentication type
+	//   - Choices: `none`, `pap`, `chap`, `papChap`
+	//   - Default value: `none`
 	AuthenticationType pulumi.StringPtrOutput `pulumi:"authenticationType"`
 	// Variable name
 	AuthenticationTypeVariable pulumi.StringPtrOutput `pulumi:"authenticationTypeVariable"`
 	// The description of the feature template
 	Description pulumi.StringOutput `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayOutput `pulumi:"deviceTypes"`
 	// The name of the feature template
 	Name pulumi.StringOutput `pulumi:"name"`
@@ -82,11 +83,14 @@ type CellularCedgeProfileFeatureTemplate struct {
 	NoOverwrite pulumi.BoolPtrOutput `pulumi:"noOverwrite"`
 	// Variable name
 	NoOverwriteVariable pulumi.StringPtrOutput `pulumi:"noOverwriteVariable"`
-	// Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+	// Set packet data network type
+	//   - Choices: `ipv4`, `ipv4v6`, `ipv6`
+	//   - Default value: `ipv4`
 	PacketDataNetworkType pulumi.StringPtrOutput `pulumi:"packetDataNetworkType"`
 	// Variable name
 	PacketDataNetworkTypeVariable pulumi.StringPtrOutput `pulumi:"packetDataNetworkTypeVariable"`
-	// Set Profile ID - Range: `1`-`16`
+	// Set Profile ID
+	//   - Range: `1`-`16`
 	ProfileId pulumi.IntPtrOutput `pulumi:"profileId"`
 	// Variable name
 	ProfileIdVariable pulumi.StringPtrOutput `pulumi:"profileIdVariable"`
@@ -144,15 +148,16 @@ type cellularCedgeProfileFeatureTemplateState struct {
 	AccessPointName *string `pulumi:"accessPointName"`
 	// Variable name
 	AccessPointNameVariable *string `pulumi:"accessPointNameVariable"`
-	// Set authentication type - Choices: `none`, `pap`, `chap`, `papChap` - Default value: `none`
+	// Set authentication type
+	//   - Choices: `none`, `pap`, `chap`, `papChap`
+	//   - Default value: `none`
 	AuthenticationType *string `pulumi:"authenticationType"`
 	// Variable name
 	AuthenticationTypeVariable *string `pulumi:"authenticationTypeVariable"`
 	// The description of the feature template
 	Description *string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
 	// The name of the feature template
 	Name *string `pulumi:"name"`
@@ -160,11 +165,14 @@ type cellularCedgeProfileFeatureTemplateState struct {
 	NoOverwrite *bool `pulumi:"noOverwrite"`
 	// Variable name
 	NoOverwriteVariable *string `pulumi:"noOverwriteVariable"`
-	// Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+	// Set packet data network type
+	//   - Choices: `ipv4`, `ipv4v6`, `ipv6`
+	//   - Default value: `ipv4`
 	PacketDataNetworkType *string `pulumi:"packetDataNetworkType"`
 	// Variable name
 	PacketDataNetworkTypeVariable *string `pulumi:"packetDataNetworkTypeVariable"`
-	// Set Profile ID - Range: `1`-`16`
+	// Set Profile ID
+	//   - Range: `1`-`16`
 	ProfileId *int `pulumi:"profileId"`
 	// Variable name
 	ProfileIdVariable *string `pulumi:"profileIdVariable"`
@@ -187,15 +195,16 @@ type CellularCedgeProfileFeatureTemplateState struct {
 	AccessPointName pulumi.StringPtrInput
 	// Variable name
 	AccessPointNameVariable pulumi.StringPtrInput
-	// Set authentication type - Choices: `none`, `pap`, `chap`, `papChap` - Default value: `none`
+	// Set authentication type
+	//   - Choices: `none`, `pap`, `chap`, `papChap`
+	//   - Default value: `none`
 	AuthenticationType pulumi.StringPtrInput
 	// Variable name
 	AuthenticationTypeVariable pulumi.StringPtrInput
 	// The description of the feature template
 	Description pulumi.StringPtrInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
 	// The name of the feature template
 	Name pulumi.StringPtrInput
@@ -203,11 +212,14 @@ type CellularCedgeProfileFeatureTemplateState struct {
 	NoOverwrite pulumi.BoolPtrInput
 	// Variable name
 	NoOverwriteVariable pulumi.StringPtrInput
-	// Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+	// Set packet data network type
+	//   - Choices: `ipv4`, `ipv4v6`, `ipv6`
+	//   - Default value: `ipv4`
 	PacketDataNetworkType pulumi.StringPtrInput
 	// Variable name
 	PacketDataNetworkTypeVariable pulumi.StringPtrInput
-	// Set Profile ID - Range: `1`-`16`
+	// Set Profile ID
+	//   - Range: `1`-`16`
 	ProfileId pulumi.IntPtrInput
 	// Variable name
 	ProfileIdVariable pulumi.StringPtrInput
@@ -234,15 +246,16 @@ type cellularCedgeProfileFeatureTemplateArgs struct {
 	AccessPointName *string `pulumi:"accessPointName"`
 	// Variable name
 	AccessPointNameVariable *string `pulumi:"accessPointNameVariable"`
-	// Set authentication type - Choices: `none`, `pap`, `chap`, `papChap` - Default value: `none`
+	// Set authentication type
+	//   - Choices: `none`, `pap`, `chap`, `papChap`
+	//   - Default value: `none`
 	AuthenticationType *string `pulumi:"authenticationType"`
 	// Variable name
 	AuthenticationTypeVariable *string `pulumi:"authenticationTypeVariable"`
 	// The description of the feature template
 	Description string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
 	// The name of the feature template
 	Name *string `pulumi:"name"`
@@ -250,11 +263,14 @@ type cellularCedgeProfileFeatureTemplateArgs struct {
 	NoOverwrite *bool `pulumi:"noOverwrite"`
 	// Variable name
 	NoOverwriteVariable *string `pulumi:"noOverwriteVariable"`
-	// Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+	// Set packet data network type
+	//   - Choices: `ipv4`, `ipv4v6`, `ipv6`
+	//   - Default value: `ipv4`
 	PacketDataNetworkType *string `pulumi:"packetDataNetworkType"`
 	// Variable name
 	PacketDataNetworkTypeVariable *string `pulumi:"packetDataNetworkTypeVariable"`
-	// Set Profile ID - Range: `1`-`16`
+	// Set Profile ID
+	//   - Range: `1`-`16`
 	ProfileId *int `pulumi:"profileId"`
 	// Variable name
 	ProfileIdVariable *string `pulumi:"profileIdVariable"`
@@ -274,15 +290,16 @@ type CellularCedgeProfileFeatureTemplateArgs struct {
 	AccessPointName pulumi.StringPtrInput
 	// Variable name
 	AccessPointNameVariable pulumi.StringPtrInput
-	// Set authentication type - Choices: `none`, `pap`, `chap`, `papChap` - Default value: `none`
+	// Set authentication type
+	//   - Choices: `none`, `pap`, `chap`, `papChap`
+	//   - Default value: `none`
 	AuthenticationType pulumi.StringPtrInput
 	// Variable name
 	AuthenticationTypeVariable pulumi.StringPtrInput
 	// The description of the feature template
 	Description pulumi.StringInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
 	// The name of the feature template
 	Name pulumi.StringPtrInput
@@ -290,11 +307,14 @@ type CellularCedgeProfileFeatureTemplateArgs struct {
 	NoOverwrite pulumi.BoolPtrInput
 	// Variable name
 	NoOverwriteVariable pulumi.StringPtrInput
-	// Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+	// Set packet data network type
+	//   - Choices: `ipv4`, `ipv4v6`, `ipv6`
+	//   - Default value: `ipv4`
 	PacketDataNetworkType pulumi.StringPtrInput
 	// Variable name
 	PacketDataNetworkTypeVariable pulumi.StringPtrInput
-	// Set Profile ID - Range: `1`-`16`
+	// Set Profile ID
+	//   - Range: `1`-`16`
 	ProfileId pulumi.IntPtrInput
 	// Variable name
 	ProfileIdVariable pulumi.StringPtrInput
@@ -405,7 +425,9 @@ func (o CellularCedgeProfileFeatureTemplateOutput) AccessPointNameVariable() pul
 	return o.ApplyT(func(v *CellularCedgeProfileFeatureTemplate) pulumi.StringPtrOutput { return v.AccessPointNameVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set authentication type - Choices: `none`, `pap`, `chap`, `papChap` - Default value: `none`
+// Set authentication type
+//   - Choices: `none`, `pap`, `chap`, `papChap`
+//   - Default value: `none`
 func (o CellularCedgeProfileFeatureTemplateOutput) AuthenticationType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CellularCedgeProfileFeatureTemplate) pulumi.StringPtrOutput { return v.AuthenticationType }).(pulumi.StringPtrOutput)
 }
@@ -422,9 +444,8 @@ func (o CellularCedgeProfileFeatureTemplateOutput) Description() pulumi.StringOu
 	return o.ApplyT(func(v *CellularCedgeProfileFeatureTemplate) pulumi.StringOutput { return v.Description }).(pulumi.StringOutput)
 }
 
-// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+// List of supported device types
+//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 func (o CellularCedgeProfileFeatureTemplateOutput) DeviceTypes() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *CellularCedgeProfileFeatureTemplate) pulumi.StringArrayOutput { return v.DeviceTypes }).(pulumi.StringArrayOutput)
 }
@@ -444,7 +465,9 @@ func (o CellularCedgeProfileFeatureTemplateOutput) NoOverwriteVariable() pulumi.
 	return o.ApplyT(func(v *CellularCedgeProfileFeatureTemplate) pulumi.StringPtrOutput { return v.NoOverwriteVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+// Set packet data network type
+//   - Choices: `ipv4`, `ipv4v6`, `ipv6`
+//   - Default value: `ipv4`
 func (o CellularCedgeProfileFeatureTemplateOutput) PacketDataNetworkType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CellularCedgeProfileFeatureTemplate) pulumi.StringPtrOutput { return v.PacketDataNetworkType }).(pulumi.StringPtrOutput)
 }
@@ -456,7 +479,8 @@ func (o CellularCedgeProfileFeatureTemplateOutput) PacketDataNetworkTypeVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set Profile ID - Range: `1`-`16`
+// Set Profile ID
+//   - Range: `1`-`16`
 func (o CellularCedgeProfileFeatureTemplateOutput) ProfileId() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CellularCedgeProfileFeatureTemplate) pulumi.IntPtrOutput { return v.ProfileId }).(pulumi.IntPtrOutput)
 }

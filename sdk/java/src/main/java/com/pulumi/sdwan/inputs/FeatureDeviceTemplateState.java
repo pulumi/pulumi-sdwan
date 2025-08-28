@@ -34,14 +34,16 @@ public final class FeatureDeviceTemplateState extends com.pulumi.resources.Resou
     }
 
     /**
-     * The device role - Choices: `sdwan-edge`, `service-node`
+     * The device role
+     *   - Choices: `sdwan-edge`, `service-node`
      * 
      */
     @Import(name="deviceRole")
     private @Nullable Output<String> deviceRole;
 
     /**
-     * @return The device role - Choices: `sdwan-edge`, `service-node`
+     * @return The device role
+     *   - Choices: `sdwan-edge`, `service-node`
      * 
      */
     public Optional<Output<String>> deviceRole() {
@@ -223,7 +225,8 @@ public final class FeatureDeviceTemplateState extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param deviceRole The device role - Choices: `sdwan-edge`, `service-node`
+         * @param deviceRole The device role
+         *   - Choices: `sdwan-edge`, `service-node`
          * 
          * @return builder
          * 
@@ -234,7 +237,8 @@ public final class FeatureDeviceTemplateState extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param deviceRole The device role - Choices: `sdwan-edge`, `service-node`
+         * @param deviceRole The device role
+         *   - Choices: `sdwan-edge`, `service-node`
          * 
          * @return builder
          * 

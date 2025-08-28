@@ -83,14 +83,16 @@ import javax.annotation.Nullable;
 @ResourceType(type="sdwan:index/serviceLanVpnInterfaceGreFeature:ServiceLanVpnInterfaceGreFeature")
 public class ServiceLanVpnInterfaceGreFeature extends com.pulumi.resources.CustomResource {
     /**
-     * Enable Application Tunnel Type - Choices: `none`, `sig`
+     * Enable Application Tunnel Type
+     *   - Choices: `none`, `sig`
      * 
      */
     @Export(name="applicationTunnelType", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> applicationTunnelType;
 
     /**
-     * @return Enable Application Tunnel Type - Choices: `none`, `sig`
+     * @return Enable Application Tunnel Type
+     *   - Choices: `none`, `sig`
      * 
      */
     public Output<Optional<String>> applicationTunnelType() {
@@ -111,14 +113,16 @@ public class ServiceLanVpnInterfaceGreFeature extends com.pulumi.resources.Custo
         return Codegen.optional(this.applicationTunnelTypeVariable);
     }
     /**
-     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+     *   - Default value: `false`
      * 
      */
     @Export(name="clearDontFragment", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> clearDontFragment;
 
     /**
-     * @return Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+     * @return Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> clearDontFragment() {
@@ -223,14 +227,18 @@ public class ServiceLanVpnInterfaceGreFeature extends com.pulumi.resources.Custo
         return Codegen.optional(this.interfaceNameVariable);
     }
     /**
-     * Interface MTU &lt;576..9976&gt;, in bytes - Range: `576`-`9976` - Default value: `1500`
+     * Interface MTU &lt;576..9976&gt;, in bytes
+     *   - Range: `576`-`9976`
+     *   - Default value: `1500`
      * 
      */
     @Export(name="ipMtu", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipMtu;
 
     /**
-     * @return Interface MTU &lt;576..9976&gt;, in bytes - Range: `576`-`9976` - Default value: `1500`
+     * @return Interface MTU &lt;576..9976&gt;, in bytes
+     *   - Range: `576`-`9976`
+     *   - Default value: `1500`
      * 
      */
     public Output<Optional<Integer>> ipMtu() {
@@ -271,22 +279,14 @@ public class ServiceLanVpnInterfaceGreFeature extends com.pulumi.resources.Custo
         return Codegen.optional(this.ipv4AddressVariable);
     }
     /**
-     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     *   `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     *   `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     *   `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     *   `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     @Export(name="ipv4SubnetMask", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4SubnetMask;
 
     /**
-     * @return - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * @return - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     public Output<Optional<String>> ipv4SubnetMask() {
@@ -335,14 +335,16 @@ public class ServiceLanVpnInterfaceGreFeature extends com.pulumi.resources.Custo
         return this.serviceLanVpnFeatureId;
     }
     /**
-     * Administrative state - Default value: `false`
+     * Administrative state
+     *   - Default value: `false`
      * 
      */
     @Export(name="shutdown", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> shutdown;
 
     /**
-     * @return Administrative state - Default value: `false`
+     * @return Administrative state
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> shutdown() {
@@ -363,14 +365,16 @@ public class ServiceLanVpnInterfaceGreFeature extends com.pulumi.resources.Custo
         return Codegen.optional(this.shutdownVariable);
     }
     /**
-     * TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      * 
      */
     @Export(name="tcpMss", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> tcpMss;
 
     /**
-     * @return TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * @return TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      * 
      */
     public Output<Optional<Integer>> tcpMss() {

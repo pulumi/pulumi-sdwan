@@ -27,7 +27,9 @@ import (
 type ServiceIpv4AclFeature struct {
 	pulumi.CustomResourceState
 
-	// Default Action - Choices: `drop`, `accept` - Default value: `drop`
+	// Default Action
+	//   - Choices: `drop`, `accept`
+	//   - Default value: `drop`
 	DefaultAction pulumi.StringPtrOutput `pulumi:"defaultAction"`
 	// The description of the Feature
 	Description pulumi.StringPtrOutput `pulumi:"description"`
@@ -74,7 +76,9 @@ func GetServiceIpv4AclFeature(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering ServiceIpv4AclFeature resources.
 type serviceIpv4AclFeatureState struct {
-	// Default Action - Choices: `drop`, `accept` - Default value: `drop`
+	// Default Action
+	//   - Choices: `drop`, `accept`
+	//   - Default value: `drop`
 	DefaultAction *string `pulumi:"defaultAction"`
 	// The description of the Feature
 	Description *string `pulumi:"description"`
@@ -89,7 +93,9 @@ type serviceIpv4AclFeatureState struct {
 }
 
 type ServiceIpv4AclFeatureState struct {
-	// Default Action - Choices: `drop`, `accept` - Default value: `drop`
+	// Default Action
+	//   - Choices: `drop`, `accept`
+	//   - Default value: `drop`
 	DefaultAction pulumi.StringPtrInput
 	// The description of the Feature
 	Description pulumi.StringPtrInput
@@ -108,7 +114,9 @@ func (ServiceIpv4AclFeatureState) ElementType() reflect.Type {
 }
 
 type serviceIpv4AclFeatureArgs struct {
-	// Default Action - Choices: `drop`, `accept` - Default value: `drop`
+	// Default Action
+	//   - Choices: `drop`, `accept`
+	//   - Default value: `drop`
 	DefaultAction *string `pulumi:"defaultAction"`
 	// The description of the Feature
 	Description *string `pulumi:"description"`
@@ -122,7 +130,9 @@ type serviceIpv4AclFeatureArgs struct {
 
 // The set of arguments for constructing a ServiceIpv4AclFeature resource.
 type ServiceIpv4AclFeatureArgs struct {
-	// Default Action - Choices: `drop`, `accept` - Default value: `drop`
+	// Default Action
+	//   - Choices: `drop`, `accept`
+	//   - Default value: `drop`
 	DefaultAction pulumi.StringPtrInput
 	// The description of the Feature
 	Description pulumi.StringPtrInput
@@ -221,7 +231,9 @@ func (o ServiceIpv4AclFeatureOutput) ToServiceIpv4AclFeatureOutputWithContext(ct
 	return o
 }
 
-// Default Action - Choices: `drop`, `accept` - Default value: `drop`
+// Default Action
+//   - Choices: `drop`, `accept`
+//   - Default value: `drop`
 func (o ServiceIpv4AclFeatureOutput) DefaultAction() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceIpv4AclFeature) pulumi.StringPtrOutput { return v.DefaultAction }).(pulumi.StringPtrOutput)
 }

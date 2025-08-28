@@ -49,220 +49,242 @@ export class TransportRoutingBgpFeature extends pulumi.CustomResource {
     }
 
     /**
-     * Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+     * Compare MEDs from all ASs when selecting active BGP paths
+     *   - Default value: `false`
      */
-    public readonly alwaysCompareMed!: pulumi.Output<boolean | undefined>;
+    declare public readonly alwaysCompareMed: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly alwaysCompareMedVariable!: pulumi.Output<string | undefined>;
+    declare public readonly alwaysCompareMedVariable: pulumi.Output<string | undefined>;
     /**
      * Set autonomous system number <1..4294967295> or <XX.YY>
      */
-    public readonly asNumber!: pulumi.Output<number | undefined>;
+    declare public readonly asNumber: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly asNumberVariable!: pulumi.Output<string | undefined>;
+    declare public readonly asNumberVariable: pulumi.Output<string | undefined>;
     /**
-     * Compare router IDs when selecting active BGP paths - Default value: `false`
+     * Compare router IDs when selecting active BGP paths
+     *   - Default value: `false`
      */
-    public readonly compareRouterId!: pulumi.Output<boolean | undefined>;
+    declare public readonly compareRouterId: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly compareRouterIdVariable!: pulumi.Output<string | undefined>;
+    declare public readonly compareRouterIdVariable: pulumi.Output<string | undefined>;
     /**
      * The description of the Feature
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+     * Compare MEDs from all routes from same AS when selecting active BGP paths
+     *   - Default value: `false`
      */
-    public readonly deterministicMed!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly deterministicMedVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
-     */
-    public readonly externalRoutesDistance!: pulumi.Output<number | undefined>;
+    declare public readonly deterministicMed: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly externalRoutesDistanceVariable!: pulumi.Output<string | undefined>;
+    declare public readonly deterministicMedVariable: pulumi.Output<string | undefined>;
+    /**
+     * Set administrative distance for external BGP routes
+     *   - Range: `1`-`255`
+     *   - Default value: `20`
+     */
+    declare public readonly externalRoutesDistance: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly externalRoutesDistanceVariable: pulumi.Output<string | undefined>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
-     * Interval (seconds) not receiving a keepalive message declares a BGP peer down - Range: `0`-`65535` - Default value:
-     * `180`
+     * Interval (seconds) not receiving a keepalive message declares a BGP peer down
+     *   - Range: `0`-`65535`
+     *   - Default value: `180`
      */
-    public readonly holdTime!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly holdTimeVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
-     */
-    public readonly internalRoutesDistance!: pulumi.Output<number | undefined>;
+    declare public readonly holdTime: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly internalRoutesDistanceVariable!: pulumi.Output<string | undefined>;
+    declare public readonly holdTimeVariable: pulumi.Output<string | undefined>;
+    /**
+     * Set administrative distance for internal BGP routes
+     *   - Range: `1`-`255`
+     *   - Default value: `200`
+     */
+    declare public readonly internalRoutesDistance: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly internalRoutesDistanceVariable: pulumi.Output<string | undefined>;
     /**
      * Aggregate prefixes in specific range
      */
-    public readonly ipv4AggregateAddresses!: pulumi.Output<outputs.TransportRoutingBgpFeatureIpv4AggregateAddress[] | undefined>;
+    declare public readonly ipv4AggregateAddresses: pulumi.Output<outputs.TransportRoutingBgpFeatureIpv4AggregateAddress[] | undefined>;
     /**
-     * Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+     * Set maximum number of parallel IBGP paths for multipath load sharing
+     *   - Range: `1`-`32`
      */
-    public readonly ipv4EibgpMaximumPaths!: pulumi.Output<number | undefined>;
+    declare public readonly ipv4EibgpMaximumPaths: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly ipv4EibgpMaximumPathsVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ipv4EibgpMaximumPathsVariable: pulumi.Output<string | undefined>;
     /**
      * Set BGP IPv4 neighbors
      */
-    public readonly ipv4Neighbors!: pulumi.Output<outputs.TransportRoutingBgpFeatureIpv4Neighbor[] | undefined>;
+    declare public readonly ipv4Neighbors: pulumi.Output<outputs.TransportRoutingBgpFeatureIpv4Neighbor[] | undefined>;
     /**
      * Configure the networks for BGP to advertise
      */
-    public readonly ipv4Networks!: pulumi.Output<outputs.TransportRoutingBgpFeatureIpv4Network[] | undefined>;
+    declare public readonly ipv4Networks: pulumi.Output<outputs.TransportRoutingBgpFeatureIpv4Network[] | undefined>;
     /**
-     * BGP Default Information Originate - Default value: `false`
+     * BGP Default Information Originate
+     *   - Default value: `false`
      */
-    public readonly ipv4Originate!: pulumi.Output<boolean | undefined>;
+    declare public readonly ipv4Originate: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly ipv4OriginateVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ipv4OriginateVariable: pulumi.Output<string | undefined>;
     /**
      * Redistribute routes into BGP
      */
-    public readonly ipv4Redistributes!: pulumi.Output<outputs.TransportRoutingBgpFeatureIpv4Redistribute[] | undefined>;
+    declare public readonly ipv4Redistributes: pulumi.Output<outputs.TransportRoutingBgpFeatureIpv4Redistribute[] | undefined>;
     /**
-     * Table map filtered or not - Default value: `false`
+     * Table map filtered or not
+     *   - Default value: `false`
      */
-    public readonly ipv4TableMapFilter!: pulumi.Output<boolean | undefined>;
+    declare public readonly ipv4TableMapFilter: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly ipv4TableMapFilterVariable!: pulumi.Output<string | undefined>;
-    public readonly ipv4TableMapRoutePolicyId!: pulumi.Output<string | undefined>;
+    declare public readonly ipv4TableMapFilterVariable: pulumi.Output<string | undefined>;
+    declare public readonly ipv4TableMapRoutePolicyId: pulumi.Output<string | undefined>;
     /**
      * IPv6 Aggregate prefixes in specific range
      */
-    public readonly ipv6AggregateAddresses!: pulumi.Output<outputs.TransportRoutingBgpFeatureIpv6AggregateAddress[] | undefined>;
+    declare public readonly ipv6AggregateAddresses: pulumi.Output<outputs.TransportRoutingBgpFeatureIpv6AggregateAddress[] | undefined>;
     /**
-     * Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+     * Set maximum number of parallel IBGP paths for multipath load sharing
+     *   - Range: `1`-`32`
      */
-    public readonly ipv6EibgpMaximumPaths!: pulumi.Output<number | undefined>;
+    declare public readonly ipv6EibgpMaximumPaths: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly ipv6EibgpMaximumPathsVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ipv6EibgpMaximumPathsVariable: pulumi.Output<string | undefined>;
     /**
      * Set BGP IPv6 neighbors
      */
-    public readonly ipv6Neighbors!: pulumi.Output<outputs.TransportRoutingBgpFeatureIpv6Neighbor[] | undefined>;
+    declare public readonly ipv6Neighbors: pulumi.Output<outputs.TransportRoutingBgpFeatureIpv6Neighbor[] | undefined>;
     /**
      * Configure the networks for BGP to advertise
      */
-    public readonly ipv6Networks!: pulumi.Output<outputs.TransportRoutingBgpFeatureIpv6Network[] | undefined>;
+    declare public readonly ipv6Networks: pulumi.Output<outputs.TransportRoutingBgpFeatureIpv6Network[] | undefined>;
     /**
-     * BGP Default Information Originate - Default value: `false`
+     * BGP Default Information Originate
+     *   - Default value: `false`
      */
-    public readonly ipv6Originate!: pulumi.Output<boolean | undefined>;
+    declare public readonly ipv6Originate: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly ipv6OriginateVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ipv6OriginateVariable: pulumi.Output<string | undefined>;
     /**
      * Redistribute routes into BGP
      */
-    public readonly ipv6Redistributes!: pulumi.Output<outputs.TransportRoutingBgpFeatureIpv6Redistribute[] | undefined>;
+    declare public readonly ipv6Redistributes: pulumi.Output<outputs.TransportRoutingBgpFeatureIpv6Redistribute[] | undefined>;
     /**
-     * Table map filtered or not - Default value: `false`
+     * Table map filtered or not
+     *   - Default value: `false`
      */
-    public readonly ipv6TableMapFilter!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly ipv6TableMapFilterVariable!: pulumi.Output<string | undefined>;
-    public readonly ipv6TableMapRoutePolicyId!: pulumi.Output<string | undefined>;
-    /**
-     * Interval (seconds) of keepalive messages sent to its BGP peer - Range: `0`-`65535` - Default value: `60`
-     */
-    public readonly keepaliveTime!: pulumi.Output<number | undefined>;
+    declare public readonly ipv6TableMapFilter: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly keepaliveTimeVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ipv6TableMapFilterVariable: pulumi.Output<string | undefined>;
+    declare public readonly ipv6TableMapRoutePolicyId: pulumi.Output<string | undefined>;
     /**
-     * Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+     * Interval (seconds) of keepalive messages sent to its BGP peer
+     *   - Range: `0`-`65535`
+     *   - Default value: `60`
      */
-    public readonly localRoutesDistance!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly localRoutesDistanceVariable!: pulumi.Output<string | undefined>;
-    /**
-     * If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
-     */
-    public readonly missingMedAsWorst!: pulumi.Output<boolean | undefined>;
+    declare public readonly keepaliveTime: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly missingMedAsWorstVariable!: pulumi.Output<string | undefined>;
+    declare public readonly keepaliveTimeVariable: pulumi.Output<string | undefined>;
+    /**
+     * Set administrative distance for local BGP routes
+     *   - Range: `1`-`255`
+     *   - Default value: `20`
+     */
+    declare public readonly localRoutesDistance: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly localRoutesDistanceVariable: pulumi.Output<string | undefined>;
+    /**
+     * If path has no MED, consider it to be worst path when selecting active BGP paths
+     *   - Default value: `false`
+     */
+    declare public readonly missingMedAsWorst: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly missingMedAsWorstVariable: pulumi.Output<string | undefined>;
     /**
      * MPLS BGP Interface
      */
-    public readonly mplsInterfaces!: pulumi.Output<outputs.TransportRoutingBgpFeatureMplsInterface[] | undefined>;
+    declare public readonly mplsInterfaces: pulumi.Output<outputs.TransportRoutingBgpFeatureMplsInterface[] | undefined>;
     /**
-     * Ignore AS for multipath selection - Default value: `false`
+     * Ignore AS for multipath selection
+     *   - Default value: `false`
      */
-    public readonly multipathRelax!: pulumi.Output<boolean | undefined>;
+    declare public readonly multipathRelax: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly multipathRelaxVariable!: pulumi.Output<string | undefined>;
+    declare public readonly multipathRelaxVariable: pulumi.Output<string | undefined>;
     /**
      * The name of the Feature
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
-     * Propagate AS Path - Default value: `false`
+     * Propagate AS Path
+     *   - Default value: `false`
      */
-    public readonly propagateAsPath!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly propagateAsPathVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Propagate Community - Default value: `false`
-     */
-    public readonly propagateCommunity!: pulumi.Output<boolean | undefined>;
+    declare public readonly propagateAsPath: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly propagateCommunityVariable!: pulumi.Output<string | undefined>;
+    declare public readonly propagateAsPathVariable: pulumi.Output<string | undefined>;
+    /**
+     * Propagate Community
+     *   - Default value: `false`
+     */
+    declare public readonly propagateCommunity: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly propagateCommunityVariable: pulumi.Output<string | undefined>;
     /**
      * Configure BGP router identifier
      */
-    public readonly routerId!: pulumi.Output<string | undefined>;
+    declare public readonly routerId: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly routerIdVariable!: pulumi.Output<string | undefined>;
+    declare public readonly routerIdVariable: pulumi.Output<string | undefined>;
     /**
      * The version of the Feature
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a TransportRoutingBgpFeature resource with the given unique name, arguments, and options.
@@ -277,120 +299,120 @@ export class TransportRoutingBgpFeature extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as TransportRoutingBgpFeatureState | undefined;
-            resourceInputs["alwaysCompareMed"] = state ? state.alwaysCompareMed : undefined;
-            resourceInputs["alwaysCompareMedVariable"] = state ? state.alwaysCompareMedVariable : undefined;
-            resourceInputs["asNumber"] = state ? state.asNumber : undefined;
-            resourceInputs["asNumberVariable"] = state ? state.asNumberVariable : undefined;
-            resourceInputs["compareRouterId"] = state ? state.compareRouterId : undefined;
-            resourceInputs["compareRouterIdVariable"] = state ? state.compareRouterIdVariable : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["deterministicMed"] = state ? state.deterministicMed : undefined;
-            resourceInputs["deterministicMedVariable"] = state ? state.deterministicMedVariable : undefined;
-            resourceInputs["externalRoutesDistance"] = state ? state.externalRoutesDistance : undefined;
-            resourceInputs["externalRoutesDistanceVariable"] = state ? state.externalRoutesDistanceVariable : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["holdTime"] = state ? state.holdTime : undefined;
-            resourceInputs["holdTimeVariable"] = state ? state.holdTimeVariable : undefined;
-            resourceInputs["internalRoutesDistance"] = state ? state.internalRoutesDistance : undefined;
-            resourceInputs["internalRoutesDistanceVariable"] = state ? state.internalRoutesDistanceVariable : undefined;
-            resourceInputs["ipv4AggregateAddresses"] = state ? state.ipv4AggregateAddresses : undefined;
-            resourceInputs["ipv4EibgpMaximumPaths"] = state ? state.ipv4EibgpMaximumPaths : undefined;
-            resourceInputs["ipv4EibgpMaximumPathsVariable"] = state ? state.ipv4EibgpMaximumPathsVariable : undefined;
-            resourceInputs["ipv4Neighbors"] = state ? state.ipv4Neighbors : undefined;
-            resourceInputs["ipv4Networks"] = state ? state.ipv4Networks : undefined;
-            resourceInputs["ipv4Originate"] = state ? state.ipv4Originate : undefined;
-            resourceInputs["ipv4OriginateVariable"] = state ? state.ipv4OriginateVariable : undefined;
-            resourceInputs["ipv4Redistributes"] = state ? state.ipv4Redistributes : undefined;
-            resourceInputs["ipv4TableMapFilter"] = state ? state.ipv4TableMapFilter : undefined;
-            resourceInputs["ipv4TableMapFilterVariable"] = state ? state.ipv4TableMapFilterVariable : undefined;
-            resourceInputs["ipv4TableMapRoutePolicyId"] = state ? state.ipv4TableMapRoutePolicyId : undefined;
-            resourceInputs["ipv6AggregateAddresses"] = state ? state.ipv6AggregateAddresses : undefined;
-            resourceInputs["ipv6EibgpMaximumPaths"] = state ? state.ipv6EibgpMaximumPaths : undefined;
-            resourceInputs["ipv6EibgpMaximumPathsVariable"] = state ? state.ipv6EibgpMaximumPathsVariable : undefined;
-            resourceInputs["ipv6Neighbors"] = state ? state.ipv6Neighbors : undefined;
-            resourceInputs["ipv6Networks"] = state ? state.ipv6Networks : undefined;
-            resourceInputs["ipv6Originate"] = state ? state.ipv6Originate : undefined;
-            resourceInputs["ipv6OriginateVariable"] = state ? state.ipv6OriginateVariable : undefined;
-            resourceInputs["ipv6Redistributes"] = state ? state.ipv6Redistributes : undefined;
-            resourceInputs["ipv6TableMapFilter"] = state ? state.ipv6TableMapFilter : undefined;
-            resourceInputs["ipv6TableMapFilterVariable"] = state ? state.ipv6TableMapFilterVariable : undefined;
-            resourceInputs["ipv6TableMapRoutePolicyId"] = state ? state.ipv6TableMapRoutePolicyId : undefined;
-            resourceInputs["keepaliveTime"] = state ? state.keepaliveTime : undefined;
-            resourceInputs["keepaliveTimeVariable"] = state ? state.keepaliveTimeVariable : undefined;
-            resourceInputs["localRoutesDistance"] = state ? state.localRoutesDistance : undefined;
-            resourceInputs["localRoutesDistanceVariable"] = state ? state.localRoutesDistanceVariable : undefined;
-            resourceInputs["missingMedAsWorst"] = state ? state.missingMedAsWorst : undefined;
-            resourceInputs["missingMedAsWorstVariable"] = state ? state.missingMedAsWorstVariable : undefined;
-            resourceInputs["mplsInterfaces"] = state ? state.mplsInterfaces : undefined;
-            resourceInputs["multipathRelax"] = state ? state.multipathRelax : undefined;
-            resourceInputs["multipathRelaxVariable"] = state ? state.multipathRelaxVariable : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["propagateAsPath"] = state ? state.propagateAsPath : undefined;
-            resourceInputs["propagateAsPathVariable"] = state ? state.propagateAsPathVariable : undefined;
-            resourceInputs["propagateCommunity"] = state ? state.propagateCommunity : undefined;
-            resourceInputs["propagateCommunityVariable"] = state ? state.propagateCommunityVariable : undefined;
-            resourceInputs["routerId"] = state ? state.routerId : undefined;
-            resourceInputs["routerIdVariable"] = state ? state.routerIdVariable : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["alwaysCompareMed"] = state?.alwaysCompareMed;
+            resourceInputs["alwaysCompareMedVariable"] = state?.alwaysCompareMedVariable;
+            resourceInputs["asNumber"] = state?.asNumber;
+            resourceInputs["asNumberVariable"] = state?.asNumberVariable;
+            resourceInputs["compareRouterId"] = state?.compareRouterId;
+            resourceInputs["compareRouterIdVariable"] = state?.compareRouterIdVariable;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["deterministicMed"] = state?.deterministicMed;
+            resourceInputs["deterministicMedVariable"] = state?.deterministicMedVariable;
+            resourceInputs["externalRoutesDistance"] = state?.externalRoutesDistance;
+            resourceInputs["externalRoutesDistanceVariable"] = state?.externalRoutesDistanceVariable;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["holdTime"] = state?.holdTime;
+            resourceInputs["holdTimeVariable"] = state?.holdTimeVariable;
+            resourceInputs["internalRoutesDistance"] = state?.internalRoutesDistance;
+            resourceInputs["internalRoutesDistanceVariable"] = state?.internalRoutesDistanceVariable;
+            resourceInputs["ipv4AggregateAddresses"] = state?.ipv4AggregateAddresses;
+            resourceInputs["ipv4EibgpMaximumPaths"] = state?.ipv4EibgpMaximumPaths;
+            resourceInputs["ipv4EibgpMaximumPathsVariable"] = state?.ipv4EibgpMaximumPathsVariable;
+            resourceInputs["ipv4Neighbors"] = state?.ipv4Neighbors;
+            resourceInputs["ipv4Networks"] = state?.ipv4Networks;
+            resourceInputs["ipv4Originate"] = state?.ipv4Originate;
+            resourceInputs["ipv4OriginateVariable"] = state?.ipv4OriginateVariable;
+            resourceInputs["ipv4Redistributes"] = state?.ipv4Redistributes;
+            resourceInputs["ipv4TableMapFilter"] = state?.ipv4TableMapFilter;
+            resourceInputs["ipv4TableMapFilterVariable"] = state?.ipv4TableMapFilterVariable;
+            resourceInputs["ipv4TableMapRoutePolicyId"] = state?.ipv4TableMapRoutePolicyId;
+            resourceInputs["ipv6AggregateAddresses"] = state?.ipv6AggregateAddresses;
+            resourceInputs["ipv6EibgpMaximumPaths"] = state?.ipv6EibgpMaximumPaths;
+            resourceInputs["ipv6EibgpMaximumPathsVariable"] = state?.ipv6EibgpMaximumPathsVariable;
+            resourceInputs["ipv6Neighbors"] = state?.ipv6Neighbors;
+            resourceInputs["ipv6Networks"] = state?.ipv6Networks;
+            resourceInputs["ipv6Originate"] = state?.ipv6Originate;
+            resourceInputs["ipv6OriginateVariable"] = state?.ipv6OriginateVariable;
+            resourceInputs["ipv6Redistributes"] = state?.ipv6Redistributes;
+            resourceInputs["ipv6TableMapFilter"] = state?.ipv6TableMapFilter;
+            resourceInputs["ipv6TableMapFilterVariable"] = state?.ipv6TableMapFilterVariable;
+            resourceInputs["ipv6TableMapRoutePolicyId"] = state?.ipv6TableMapRoutePolicyId;
+            resourceInputs["keepaliveTime"] = state?.keepaliveTime;
+            resourceInputs["keepaliveTimeVariable"] = state?.keepaliveTimeVariable;
+            resourceInputs["localRoutesDistance"] = state?.localRoutesDistance;
+            resourceInputs["localRoutesDistanceVariable"] = state?.localRoutesDistanceVariable;
+            resourceInputs["missingMedAsWorst"] = state?.missingMedAsWorst;
+            resourceInputs["missingMedAsWorstVariable"] = state?.missingMedAsWorstVariable;
+            resourceInputs["mplsInterfaces"] = state?.mplsInterfaces;
+            resourceInputs["multipathRelax"] = state?.multipathRelax;
+            resourceInputs["multipathRelaxVariable"] = state?.multipathRelaxVariable;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["propagateAsPath"] = state?.propagateAsPath;
+            resourceInputs["propagateAsPathVariable"] = state?.propagateAsPathVariable;
+            resourceInputs["propagateCommunity"] = state?.propagateCommunity;
+            resourceInputs["propagateCommunityVariable"] = state?.propagateCommunityVariable;
+            resourceInputs["routerId"] = state?.routerId;
+            resourceInputs["routerIdVariable"] = state?.routerIdVariable;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as TransportRoutingBgpFeatureArgs | undefined;
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            resourceInputs["alwaysCompareMed"] = args ? args.alwaysCompareMed : undefined;
-            resourceInputs["alwaysCompareMedVariable"] = args ? args.alwaysCompareMedVariable : undefined;
-            resourceInputs["asNumber"] = args ? args.asNumber : undefined;
-            resourceInputs["asNumberVariable"] = args ? args.asNumberVariable : undefined;
-            resourceInputs["compareRouterId"] = args ? args.compareRouterId : undefined;
-            resourceInputs["compareRouterIdVariable"] = args ? args.compareRouterIdVariable : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["deterministicMed"] = args ? args.deterministicMed : undefined;
-            resourceInputs["deterministicMedVariable"] = args ? args.deterministicMedVariable : undefined;
-            resourceInputs["externalRoutesDistance"] = args ? args.externalRoutesDistance : undefined;
-            resourceInputs["externalRoutesDistanceVariable"] = args ? args.externalRoutesDistanceVariable : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["holdTime"] = args ? args.holdTime : undefined;
-            resourceInputs["holdTimeVariable"] = args ? args.holdTimeVariable : undefined;
-            resourceInputs["internalRoutesDistance"] = args ? args.internalRoutesDistance : undefined;
-            resourceInputs["internalRoutesDistanceVariable"] = args ? args.internalRoutesDistanceVariable : undefined;
-            resourceInputs["ipv4AggregateAddresses"] = args ? args.ipv4AggregateAddresses : undefined;
-            resourceInputs["ipv4EibgpMaximumPaths"] = args ? args.ipv4EibgpMaximumPaths : undefined;
-            resourceInputs["ipv4EibgpMaximumPathsVariable"] = args ? args.ipv4EibgpMaximumPathsVariable : undefined;
-            resourceInputs["ipv4Neighbors"] = args ? args.ipv4Neighbors : undefined;
-            resourceInputs["ipv4Networks"] = args ? args.ipv4Networks : undefined;
-            resourceInputs["ipv4Originate"] = args ? args.ipv4Originate : undefined;
-            resourceInputs["ipv4OriginateVariable"] = args ? args.ipv4OriginateVariable : undefined;
-            resourceInputs["ipv4Redistributes"] = args ? args.ipv4Redistributes : undefined;
-            resourceInputs["ipv4TableMapFilter"] = args ? args.ipv4TableMapFilter : undefined;
-            resourceInputs["ipv4TableMapFilterVariable"] = args ? args.ipv4TableMapFilterVariable : undefined;
-            resourceInputs["ipv4TableMapRoutePolicyId"] = args ? args.ipv4TableMapRoutePolicyId : undefined;
-            resourceInputs["ipv6AggregateAddresses"] = args ? args.ipv6AggregateAddresses : undefined;
-            resourceInputs["ipv6EibgpMaximumPaths"] = args ? args.ipv6EibgpMaximumPaths : undefined;
-            resourceInputs["ipv6EibgpMaximumPathsVariable"] = args ? args.ipv6EibgpMaximumPathsVariable : undefined;
-            resourceInputs["ipv6Neighbors"] = args ? args.ipv6Neighbors : undefined;
-            resourceInputs["ipv6Networks"] = args ? args.ipv6Networks : undefined;
-            resourceInputs["ipv6Originate"] = args ? args.ipv6Originate : undefined;
-            resourceInputs["ipv6OriginateVariable"] = args ? args.ipv6OriginateVariable : undefined;
-            resourceInputs["ipv6Redistributes"] = args ? args.ipv6Redistributes : undefined;
-            resourceInputs["ipv6TableMapFilter"] = args ? args.ipv6TableMapFilter : undefined;
-            resourceInputs["ipv6TableMapFilterVariable"] = args ? args.ipv6TableMapFilterVariable : undefined;
-            resourceInputs["ipv6TableMapRoutePolicyId"] = args ? args.ipv6TableMapRoutePolicyId : undefined;
-            resourceInputs["keepaliveTime"] = args ? args.keepaliveTime : undefined;
-            resourceInputs["keepaliveTimeVariable"] = args ? args.keepaliveTimeVariable : undefined;
-            resourceInputs["localRoutesDistance"] = args ? args.localRoutesDistance : undefined;
-            resourceInputs["localRoutesDistanceVariable"] = args ? args.localRoutesDistanceVariable : undefined;
-            resourceInputs["missingMedAsWorst"] = args ? args.missingMedAsWorst : undefined;
-            resourceInputs["missingMedAsWorstVariable"] = args ? args.missingMedAsWorstVariable : undefined;
-            resourceInputs["mplsInterfaces"] = args ? args.mplsInterfaces : undefined;
-            resourceInputs["multipathRelax"] = args ? args.multipathRelax : undefined;
-            resourceInputs["multipathRelaxVariable"] = args ? args.multipathRelaxVariable : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["propagateAsPath"] = args ? args.propagateAsPath : undefined;
-            resourceInputs["propagateAsPathVariable"] = args ? args.propagateAsPathVariable : undefined;
-            resourceInputs["propagateCommunity"] = args ? args.propagateCommunity : undefined;
-            resourceInputs["propagateCommunityVariable"] = args ? args.propagateCommunityVariable : undefined;
-            resourceInputs["routerId"] = args ? args.routerId : undefined;
-            resourceInputs["routerIdVariable"] = args ? args.routerIdVariable : undefined;
+            resourceInputs["alwaysCompareMed"] = args?.alwaysCompareMed;
+            resourceInputs["alwaysCompareMedVariable"] = args?.alwaysCompareMedVariable;
+            resourceInputs["asNumber"] = args?.asNumber;
+            resourceInputs["asNumberVariable"] = args?.asNumberVariable;
+            resourceInputs["compareRouterId"] = args?.compareRouterId;
+            resourceInputs["compareRouterIdVariable"] = args?.compareRouterIdVariable;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["deterministicMed"] = args?.deterministicMed;
+            resourceInputs["deterministicMedVariable"] = args?.deterministicMedVariable;
+            resourceInputs["externalRoutesDistance"] = args?.externalRoutesDistance;
+            resourceInputs["externalRoutesDistanceVariable"] = args?.externalRoutesDistanceVariable;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["holdTime"] = args?.holdTime;
+            resourceInputs["holdTimeVariable"] = args?.holdTimeVariable;
+            resourceInputs["internalRoutesDistance"] = args?.internalRoutesDistance;
+            resourceInputs["internalRoutesDistanceVariable"] = args?.internalRoutesDistanceVariable;
+            resourceInputs["ipv4AggregateAddresses"] = args?.ipv4AggregateAddresses;
+            resourceInputs["ipv4EibgpMaximumPaths"] = args?.ipv4EibgpMaximumPaths;
+            resourceInputs["ipv4EibgpMaximumPathsVariable"] = args?.ipv4EibgpMaximumPathsVariable;
+            resourceInputs["ipv4Neighbors"] = args?.ipv4Neighbors;
+            resourceInputs["ipv4Networks"] = args?.ipv4Networks;
+            resourceInputs["ipv4Originate"] = args?.ipv4Originate;
+            resourceInputs["ipv4OriginateVariable"] = args?.ipv4OriginateVariable;
+            resourceInputs["ipv4Redistributes"] = args?.ipv4Redistributes;
+            resourceInputs["ipv4TableMapFilter"] = args?.ipv4TableMapFilter;
+            resourceInputs["ipv4TableMapFilterVariable"] = args?.ipv4TableMapFilterVariable;
+            resourceInputs["ipv4TableMapRoutePolicyId"] = args?.ipv4TableMapRoutePolicyId;
+            resourceInputs["ipv6AggregateAddresses"] = args?.ipv6AggregateAddresses;
+            resourceInputs["ipv6EibgpMaximumPaths"] = args?.ipv6EibgpMaximumPaths;
+            resourceInputs["ipv6EibgpMaximumPathsVariable"] = args?.ipv6EibgpMaximumPathsVariable;
+            resourceInputs["ipv6Neighbors"] = args?.ipv6Neighbors;
+            resourceInputs["ipv6Networks"] = args?.ipv6Networks;
+            resourceInputs["ipv6Originate"] = args?.ipv6Originate;
+            resourceInputs["ipv6OriginateVariable"] = args?.ipv6OriginateVariable;
+            resourceInputs["ipv6Redistributes"] = args?.ipv6Redistributes;
+            resourceInputs["ipv6TableMapFilter"] = args?.ipv6TableMapFilter;
+            resourceInputs["ipv6TableMapFilterVariable"] = args?.ipv6TableMapFilterVariable;
+            resourceInputs["ipv6TableMapRoutePolicyId"] = args?.ipv6TableMapRoutePolicyId;
+            resourceInputs["keepaliveTime"] = args?.keepaliveTime;
+            resourceInputs["keepaliveTimeVariable"] = args?.keepaliveTimeVariable;
+            resourceInputs["localRoutesDistance"] = args?.localRoutesDistance;
+            resourceInputs["localRoutesDistanceVariable"] = args?.localRoutesDistanceVariable;
+            resourceInputs["missingMedAsWorst"] = args?.missingMedAsWorst;
+            resourceInputs["missingMedAsWorstVariable"] = args?.missingMedAsWorstVariable;
+            resourceInputs["mplsInterfaces"] = args?.mplsInterfaces;
+            resourceInputs["multipathRelax"] = args?.multipathRelax;
+            resourceInputs["multipathRelaxVariable"] = args?.multipathRelaxVariable;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["propagateAsPath"] = args?.propagateAsPath;
+            resourceInputs["propagateAsPathVariable"] = args?.propagateAsPathVariable;
+            resourceInputs["propagateCommunity"] = args?.propagateCommunity;
+            resourceInputs["propagateCommunityVariable"] = args?.propagateCommunityVariable;
+            resourceInputs["routerId"] = args?.routerId;
+            resourceInputs["routerIdVariable"] = args?.routerIdVariable;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -403,7 +425,8 @@ export class TransportRoutingBgpFeature extends pulumi.CustomResource {
  */
 export interface TransportRoutingBgpFeatureState {
     /**
-     * Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+     * Compare MEDs from all ASs when selecting active BGP paths
+     *   - Default value: `false`
      */
     alwaysCompareMed?: pulumi.Input<boolean>;
     /**
@@ -419,7 +442,8 @@ export interface TransportRoutingBgpFeatureState {
      */
     asNumberVariable?: pulumi.Input<string>;
     /**
-     * Compare router IDs when selecting active BGP paths - Default value: `false`
+     * Compare router IDs when selecting active BGP paths
+     *   - Default value: `false`
      */
     compareRouterId?: pulumi.Input<boolean>;
     /**
@@ -431,7 +455,8 @@ export interface TransportRoutingBgpFeatureState {
      */
     description?: pulumi.Input<string>;
     /**
-     * Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+     * Compare MEDs from all routes from same AS when selecting active BGP paths
+     *   - Default value: `false`
      */
     deterministicMed?: pulumi.Input<boolean>;
     /**
@@ -439,7 +464,9 @@ export interface TransportRoutingBgpFeatureState {
      */
     deterministicMedVariable?: pulumi.Input<string>;
     /**
-     * Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+     * Set administrative distance for external BGP routes
+     *   - Range: `1`-`255`
+     *   - Default value: `20`
      */
     externalRoutesDistance?: pulumi.Input<number>;
     /**
@@ -451,8 +478,9 @@ export interface TransportRoutingBgpFeatureState {
      */
     featureProfileId?: pulumi.Input<string>;
     /**
-     * Interval (seconds) not receiving a keepalive message declares a BGP peer down - Range: `0`-`65535` - Default value:
-     * `180`
+     * Interval (seconds) not receiving a keepalive message declares a BGP peer down
+     *   - Range: `0`-`65535`
+     *   - Default value: `180`
      */
     holdTime?: pulumi.Input<number>;
     /**
@@ -460,7 +488,9 @@ export interface TransportRoutingBgpFeatureState {
      */
     holdTimeVariable?: pulumi.Input<string>;
     /**
-     * Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+     * Set administrative distance for internal BGP routes
+     *   - Range: `1`-`255`
+     *   - Default value: `200`
      */
     internalRoutesDistance?: pulumi.Input<number>;
     /**
@@ -472,7 +502,8 @@ export interface TransportRoutingBgpFeatureState {
      */
     ipv4AggregateAddresses?: pulumi.Input<pulumi.Input<inputs.TransportRoutingBgpFeatureIpv4AggregateAddress>[]>;
     /**
-     * Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+     * Set maximum number of parallel IBGP paths for multipath load sharing
+     *   - Range: `1`-`32`
      */
     ipv4EibgpMaximumPaths?: pulumi.Input<number>;
     /**
@@ -488,7 +519,8 @@ export interface TransportRoutingBgpFeatureState {
      */
     ipv4Networks?: pulumi.Input<pulumi.Input<inputs.TransportRoutingBgpFeatureIpv4Network>[]>;
     /**
-     * BGP Default Information Originate - Default value: `false`
+     * BGP Default Information Originate
+     *   - Default value: `false`
      */
     ipv4Originate?: pulumi.Input<boolean>;
     /**
@@ -500,7 +532,8 @@ export interface TransportRoutingBgpFeatureState {
      */
     ipv4Redistributes?: pulumi.Input<pulumi.Input<inputs.TransportRoutingBgpFeatureIpv4Redistribute>[]>;
     /**
-     * Table map filtered or not - Default value: `false`
+     * Table map filtered or not
+     *   - Default value: `false`
      */
     ipv4TableMapFilter?: pulumi.Input<boolean>;
     /**
@@ -513,7 +546,8 @@ export interface TransportRoutingBgpFeatureState {
      */
     ipv6AggregateAddresses?: pulumi.Input<pulumi.Input<inputs.TransportRoutingBgpFeatureIpv6AggregateAddress>[]>;
     /**
-     * Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+     * Set maximum number of parallel IBGP paths for multipath load sharing
+     *   - Range: `1`-`32`
      */
     ipv6EibgpMaximumPaths?: pulumi.Input<number>;
     /**
@@ -529,7 +563,8 @@ export interface TransportRoutingBgpFeatureState {
      */
     ipv6Networks?: pulumi.Input<pulumi.Input<inputs.TransportRoutingBgpFeatureIpv6Network>[]>;
     /**
-     * BGP Default Information Originate - Default value: `false`
+     * BGP Default Information Originate
+     *   - Default value: `false`
      */
     ipv6Originate?: pulumi.Input<boolean>;
     /**
@@ -541,7 +576,8 @@ export interface TransportRoutingBgpFeatureState {
      */
     ipv6Redistributes?: pulumi.Input<pulumi.Input<inputs.TransportRoutingBgpFeatureIpv6Redistribute>[]>;
     /**
-     * Table map filtered or not - Default value: `false`
+     * Table map filtered or not
+     *   - Default value: `false`
      */
     ipv6TableMapFilter?: pulumi.Input<boolean>;
     /**
@@ -550,7 +586,9 @@ export interface TransportRoutingBgpFeatureState {
     ipv6TableMapFilterVariable?: pulumi.Input<string>;
     ipv6TableMapRoutePolicyId?: pulumi.Input<string>;
     /**
-     * Interval (seconds) of keepalive messages sent to its BGP peer - Range: `0`-`65535` - Default value: `60`
+     * Interval (seconds) of keepalive messages sent to its BGP peer
+     *   - Range: `0`-`65535`
+     *   - Default value: `60`
      */
     keepaliveTime?: pulumi.Input<number>;
     /**
@@ -558,7 +596,9 @@ export interface TransportRoutingBgpFeatureState {
      */
     keepaliveTimeVariable?: pulumi.Input<string>;
     /**
-     * Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+     * Set administrative distance for local BGP routes
+     *   - Range: `1`-`255`
+     *   - Default value: `20`
      */
     localRoutesDistance?: pulumi.Input<number>;
     /**
@@ -566,7 +606,8 @@ export interface TransportRoutingBgpFeatureState {
      */
     localRoutesDistanceVariable?: pulumi.Input<string>;
     /**
-     * If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+     * If path has no MED, consider it to be worst path when selecting active BGP paths
+     *   - Default value: `false`
      */
     missingMedAsWorst?: pulumi.Input<boolean>;
     /**
@@ -578,7 +619,8 @@ export interface TransportRoutingBgpFeatureState {
      */
     mplsInterfaces?: pulumi.Input<pulumi.Input<inputs.TransportRoutingBgpFeatureMplsInterface>[]>;
     /**
-     * Ignore AS for multipath selection - Default value: `false`
+     * Ignore AS for multipath selection
+     *   - Default value: `false`
      */
     multipathRelax?: pulumi.Input<boolean>;
     /**
@@ -590,7 +632,8 @@ export interface TransportRoutingBgpFeatureState {
      */
     name?: pulumi.Input<string>;
     /**
-     * Propagate AS Path - Default value: `false`
+     * Propagate AS Path
+     *   - Default value: `false`
      */
     propagateAsPath?: pulumi.Input<boolean>;
     /**
@@ -598,7 +641,8 @@ export interface TransportRoutingBgpFeatureState {
      */
     propagateAsPathVariable?: pulumi.Input<string>;
     /**
-     * Propagate Community - Default value: `false`
+     * Propagate Community
+     *   - Default value: `false`
      */
     propagateCommunity?: pulumi.Input<boolean>;
     /**
@@ -624,7 +668,8 @@ export interface TransportRoutingBgpFeatureState {
  */
 export interface TransportRoutingBgpFeatureArgs {
     /**
-     * Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+     * Compare MEDs from all ASs when selecting active BGP paths
+     *   - Default value: `false`
      */
     alwaysCompareMed?: pulumi.Input<boolean>;
     /**
@@ -640,7 +685,8 @@ export interface TransportRoutingBgpFeatureArgs {
      */
     asNumberVariable?: pulumi.Input<string>;
     /**
-     * Compare router IDs when selecting active BGP paths - Default value: `false`
+     * Compare router IDs when selecting active BGP paths
+     *   - Default value: `false`
      */
     compareRouterId?: pulumi.Input<boolean>;
     /**
@@ -652,7 +698,8 @@ export interface TransportRoutingBgpFeatureArgs {
      */
     description?: pulumi.Input<string>;
     /**
-     * Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+     * Compare MEDs from all routes from same AS when selecting active BGP paths
+     *   - Default value: `false`
      */
     deterministicMed?: pulumi.Input<boolean>;
     /**
@@ -660,7 +707,9 @@ export interface TransportRoutingBgpFeatureArgs {
      */
     deterministicMedVariable?: pulumi.Input<string>;
     /**
-     * Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+     * Set administrative distance for external BGP routes
+     *   - Range: `1`-`255`
+     *   - Default value: `20`
      */
     externalRoutesDistance?: pulumi.Input<number>;
     /**
@@ -672,8 +721,9 @@ export interface TransportRoutingBgpFeatureArgs {
      */
     featureProfileId: pulumi.Input<string>;
     /**
-     * Interval (seconds) not receiving a keepalive message declares a BGP peer down - Range: `0`-`65535` - Default value:
-     * `180`
+     * Interval (seconds) not receiving a keepalive message declares a BGP peer down
+     *   - Range: `0`-`65535`
+     *   - Default value: `180`
      */
     holdTime?: pulumi.Input<number>;
     /**
@@ -681,7 +731,9 @@ export interface TransportRoutingBgpFeatureArgs {
      */
     holdTimeVariable?: pulumi.Input<string>;
     /**
-     * Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+     * Set administrative distance for internal BGP routes
+     *   - Range: `1`-`255`
+     *   - Default value: `200`
      */
     internalRoutesDistance?: pulumi.Input<number>;
     /**
@@ -693,7 +745,8 @@ export interface TransportRoutingBgpFeatureArgs {
      */
     ipv4AggregateAddresses?: pulumi.Input<pulumi.Input<inputs.TransportRoutingBgpFeatureIpv4AggregateAddress>[]>;
     /**
-     * Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+     * Set maximum number of parallel IBGP paths for multipath load sharing
+     *   - Range: `1`-`32`
      */
     ipv4EibgpMaximumPaths?: pulumi.Input<number>;
     /**
@@ -709,7 +762,8 @@ export interface TransportRoutingBgpFeatureArgs {
      */
     ipv4Networks?: pulumi.Input<pulumi.Input<inputs.TransportRoutingBgpFeatureIpv4Network>[]>;
     /**
-     * BGP Default Information Originate - Default value: `false`
+     * BGP Default Information Originate
+     *   - Default value: `false`
      */
     ipv4Originate?: pulumi.Input<boolean>;
     /**
@@ -721,7 +775,8 @@ export interface TransportRoutingBgpFeatureArgs {
      */
     ipv4Redistributes?: pulumi.Input<pulumi.Input<inputs.TransportRoutingBgpFeatureIpv4Redistribute>[]>;
     /**
-     * Table map filtered or not - Default value: `false`
+     * Table map filtered or not
+     *   - Default value: `false`
      */
     ipv4TableMapFilter?: pulumi.Input<boolean>;
     /**
@@ -734,7 +789,8 @@ export interface TransportRoutingBgpFeatureArgs {
      */
     ipv6AggregateAddresses?: pulumi.Input<pulumi.Input<inputs.TransportRoutingBgpFeatureIpv6AggregateAddress>[]>;
     /**
-     * Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+     * Set maximum number of parallel IBGP paths for multipath load sharing
+     *   - Range: `1`-`32`
      */
     ipv6EibgpMaximumPaths?: pulumi.Input<number>;
     /**
@@ -750,7 +806,8 @@ export interface TransportRoutingBgpFeatureArgs {
      */
     ipv6Networks?: pulumi.Input<pulumi.Input<inputs.TransportRoutingBgpFeatureIpv6Network>[]>;
     /**
-     * BGP Default Information Originate - Default value: `false`
+     * BGP Default Information Originate
+     *   - Default value: `false`
      */
     ipv6Originate?: pulumi.Input<boolean>;
     /**
@@ -762,7 +819,8 @@ export interface TransportRoutingBgpFeatureArgs {
      */
     ipv6Redistributes?: pulumi.Input<pulumi.Input<inputs.TransportRoutingBgpFeatureIpv6Redistribute>[]>;
     /**
-     * Table map filtered or not - Default value: `false`
+     * Table map filtered or not
+     *   - Default value: `false`
      */
     ipv6TableMapFilter?: pulumi.Input<boolean>;
     /**
@@ -771,7 +829,9 @@ export interface TransportRoutingBgpFeatureArgs {
     ipv6TableMapFilterVariable?: pulumi.Input<string>;
     ipv6TableMapRoutePolicyId?: pulumi.Input<string>;
     /**
-     * Interval (seconds) of keepalive messages sent to its BGP peer - Range: `0`-`65535` - Default value: `60`
+     * Interval (seconds) of keepalive messages sent to its BGP peer
+     *   - Range: `0`-`65535`
+     *   - Default value: `60`
      */
     keepaliveTime?: pulumi.Input<number>;
     /**
@@ -779,7 +839,9 @@ export interface TransportRoutingBgpFeatureArgs {
      */
     keepaliveTimeVariable?: pulumi.Input<string>;
     /**
-     * Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+     * Set administrative distance for local BGP routes
+     *   - Range: `1`-`255`
+     *   - Default value: `20`
      */
     localRoutesDistance?: pulumi.Input<number>;
     /**
@@ -787,7 +849,8 @@ export interface TransportRoutingBgpFeatureArgs {
      */
     localRoutesDistanceVariable?: pulumi.Input<string>;
     /**
-     * If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+     * If path has no MED, consider it to be worst path when selecting active BGP paths
+     *   - Default value: `false`
      */
     missingMedAsWorst?: pulumi.Input<boolean>;
     /**
@@ -799,7 +862,8 @@ export interface TransportRoutingBgpFeatureArgs {
      */
     mplsInterfaces?: pulumi.Input<pulumi.Input<inputs.TransportRoutingBgpFeatureMplsInterface>[]>;
     /**
-     * Ignore AS for multipath selection - Default value: `false`
+     * Ignore AS for multipath selection
+     *   - Default value: `false`
      */
     multipathRelax?: pulumi.Input<boolean>;
     /**
@@ -811,7 +875,8 @@ export interface TransportRoutingBgpFeatureArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * Propagate AS Path - Default value: `false`
+     * Propagate AS Path
+     *   - Default value: `false`
      */
     propagateAsPath?: pulumi.Input<boolean>;
     /**
@@ -819,7 +884,8 @@ export interface TransportRoutingBgpFeatureArgs {
      */
     propagateAsPathVariable?: pulumi.Input<string>;
     /**
-     * Propagate Community - Default value: `false`
+     * Propagate Community
+     *   - Default value: `false`
      */
     propagateCommunity?: pulumi.Input<boolean>;
     /**

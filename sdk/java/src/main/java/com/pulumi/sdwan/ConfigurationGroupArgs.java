@@ -96,14 +96,16 @@ public final class ConfigurationGroupArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Type of solution - Choices: `mobility`, `sdwan`, `nfvirtual`
+     * Type of solution
+     *   - Choices: `mobility`, `sdwan`, `nfvirtual`
      * 
      */
     @Import(name="solution", required=true)
     private Output<String> solution;
 
     /**
-     * @return Type of solution - Choices: `mobility`, `sdwan`, `nfvirtual`
+     * @return Type of solution
+     *   - Choices: `mobility`, `sdwan`, `nfvirtual`
      * 
      */
     public Output<String> solution() {
@@ -126,14 +128,16 @@ public final class ConfigurationGroupArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Number of devices per site - Range: `1`-`20`
+     * Number of devices per site
+     *   - Range: `1`-`20`
      * 
      */
     @Import(name="topologySiteDevices")
     private @Nullable Output<Integer> topologySiteDevices;
 
     /**
-     * @return Number of devices per site - Range: `1`-`20`
+     * @return Number of devices per site
+     *   - Range: `1`-`20`
      * 
      */
     public Optional<Output<Integer>> topologySiteDevices() {
@@ -307,7 +311,8 @@ public final class ConfigurationGroupArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param solution Type of solution - Choices: `mobility`, `sdwan`, `nfvirtual`
+         * @param solution Type of solution
+         *   - Choices: `mobility`, `sdwan`, `nfvirtual`
          * 
          * @return builder
          * 
@@ -318,7 +323,8 @@ public final class ConfigurationGroupArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param solution Type of solution - Choices: `mobility`, `sdwan`, `nfvirtual`
+         * @param solution Type of solution
+         *   - Choices: `mobility`, `sdwan`, `nfvirtual`
          * 
          * @return builder
          * 
@@ -359,7 +365,8 @@ public final class ConfigurationGroupArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param topologySiteDevices Number of devices per site - Range: `1`-`20`
+         * @param topologySiteDevices Number of devices per site
+         *   - Range: `1`-`20`
          * 
          * @return builder
          * 
@@ -370,7 +377,8 @@ public final class ConfigurationGroupArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param topologySiteDevices Number of devices per site - Range: `1`-`20`
+         * @param topologySiteDevices Number of devices per site
+         *   - Range: `1`-`20`
          * 
          * @return builder
          * 

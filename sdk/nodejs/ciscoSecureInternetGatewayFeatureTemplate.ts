@@ -49,49 +49,50 @@ export class CiscoSecureInternetGatewayFeatureTemplate extends pulumi.CustomReso
     /**
      * The description of the feature template
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    public readonly deviceTypes!: pulumi.Output<string[]>;
+    declare public readonly deviceTypes: pulumi.Output<string[]>;
     /**
      * Interface name: IPsec when present
      */
-    public readonly interfaces!: pulumi.Output<outputs.CiscoSecureInternetGatewayFeatureTemplateInterface[] | undefined>;
+    declare public readonly interfaces: pulumi.Output<outputs.CiscoSecureInternetGatewayFeatureTemplateInterface[] | undefined>;
     /**
      * The name of the feature template
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * Configure services
      */
-    public readonly services!: pulumi.Output<outputs.CiscoSecureInternetGatewayFeatureTemplateService[] | undefined>;
+    declare public readonly services: pulumi.Output<outputs.CiscoSecureInternetGatewayFeatureTemplateService[] | undefined>;
     /**
      * The template type
      */
-    public /*out*/ readonly templateType!: pulumi.Output<string>;
+    declare public /*out*/ readonly templateType: pulumi.Output<string>;
     /**
      * Source IP address for Tracker
      */
-    public readonly trackerSourceIp!: pulumi.Output<string | undefined>;
+    declare public readonly trackerSourceIp: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly trackerSourceIpVariable!: pulumi.Output<string | undefined>;
+    declare public readonly trackerSourceIpVariable: pulumi.Output<string | undefined>;
     /**
      * Tracker configuration
      */
-    public readonly trackers!: pulumi.Output<outputs.CiscoSecureInternetGatewayFeatureTemplateTracker[] | undefined>;
+    declare public readonly trackers: pulumi.Output<outputs.CiscoSecureInternetGatewayFeatureTemplateTracker[] | undefined>;
     /**
      * The version of the feature template
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
     /**
-     * List of VPN instances - Range: `0`-`65527` - Default value: `0`
+     * List of VPN instances
+     *   - Range: `0`-`65527`
+     *   - Default value: `0`
      */
-    public readonly vpnId!: pulumi.Output<number | undefined>;
+    declare public readonly vpnId: pulumi.Output<number | undefined>;
 
     /**
      * Create a CiscoSecureInternetGatewayFeatureTemplate resource with the given unique name, arguments, and options.
@@ -106,34 +107,34 @@ export class CiscoSecureInternetGatewayFeatureTemplate extends pulumi.CustomReso
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as CiscoSecureInternetGatewayFeatureTemplateState | undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["deviceTypes"] = state ? state.deviceTypes : undefined;
-            resourceInputs["interfaces"] = state ? state.interfaces : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["services"] = state ? state.services : undefined;
-            resourceInputs["templateType"] = state ? state.templateType : undefined;
-            resourceInputs["trackerSourceIp"] = state ? state.trackerSourceIp : undefined;
-            resourceInputs["trackerSourceIpVariable"] = state ? state.trackerSourceIpVariable : undefined;
-            resourceInputs["trackers"] = state ? state.trackers : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
-            resourceInputs["vpnId"] = state ? state.vpnId : undefined;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["deviceTypes"] = state?.deviceTypes;
+            resourceInputs["interfaces"] = state?.interfaces;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["services"] = state?.services;
+            resourceInputs["templateType"] = state?.templateType;
+            resourceInputs["trackerSourceIp"] = state?.trackerSourceIp;
+            resourceInputs["trackerSourceIpVariable"] = state?.trackerSourceIpVariable;
+            resourceInputs["trackers"] = state?.trackers;
+            resourceInputs["version"] = state?.version;
+            resourceInputs["vpnId"] = state?.vpnId;
         } else {
             const args = argsOrState as CiscoSecureInternetGatewayFeatureTemplateArgs | undefined;
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            if ((!args || args.deviceTypes === undefined) && !opts.urn) {
+            if (args?.deviceTypes === undefined && !opts.urn) {
                 throw new Error("Missing required property 'deviceTypes'");
             }
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["deviceTypes"] = args ? args.deviceTypes : undefined;
-            resourceInputs["interfaces"] = args ? args.interfaces : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["services"] = args ? args.services : undefined;
-            resourceInputs["trackerSourceIp"] = args ? args.trackerSourceIp : undefined;
-            resourceInputs["trackerSourceIpVariable"] = args ? args.trackerSourceIpVariable : undefined;
-            resourceInputs["trackers"] = args ? args.trackers : undefined;
-            resourceInputs["vpnId"] = args ? args.vpnId : undefined;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["deviceTypes"] = args?.deviceTypes;
+            resourceInputs["interfaces"] = args?.interfaces;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["services"] = args?.services;
+            resourceInputs["trackerSourceIp"] = args?.trackerSourceIp;
+            resourceInputs["trackerSourceIpVariable"] = args?.trackerSourceIpVariable;
+            resourceInputs["trackers"] = args?.trackers;
+            resourceInputs["vpnId"] = args?.vpnId;
             resourceInputs["templateType"] = undefined /*out*/;
             resourceInputs["version"] = undefined /*out*/;
         }
@@ -151,9 +152,8 @@ export interface CiscoSecureInternetGatewayFeatureTemplateState {
      */
     description?: pulumi.Input<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
     deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
     /**
@@ -189,7 +189,9 @@ export interface CiscoSecureInternetGatewayFeatureTemplateState {
      */
     version?: pulumi.Input<number>;
     /**
-     * List of VPN instances - Range: `0`-`65527` - Default value: `0`
+     * List of VPN instances
+     *   - Range: `0`-`65527`
+     *   - Default value: `0`
      */
     vpnId?: pulumi.Input<number>;
 }
@@ -203,9 +205,8 @@ export interface CiscoSecureInternetGatewayFeatureTemplateArgs {
      */
     description: pulumi.Input<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
     deviceTypes: pulumi.Input<pulumi.Input<string>[]>;
     /**
@@ -233,7 +234,9 @@ export interface CiscoSecureInternetGatewayFeatureTemplateArgs {
      */
     trackers?: pulumi.Input<pulumi.Input<inputs.CiscoSecureInternetGatewayFeatureTemplateTracker>[]>;
     /**
-     * List of VPN instances - Range: `0`-`65527` - Default value: `0`
+     * List of VPN instances
+     *   - Range: `0`-`65527`
+     *   - Default value: `0`
      */
     vpnId?: pulumi.Input<number>;
 }

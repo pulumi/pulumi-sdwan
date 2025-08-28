@@ -152,14 +152,16 @@ public class AdvancedInspectionProfilePolicyDefinition extends com.pulumi.resour
         return this.name;
     }
     /**
-     * TLS Action - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
+     * TLS Action
+     *   - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
      * 
      */
     @Export(name="tlsAction", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tlsAction;
 
     /**
-     * @return TLS Action - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
+     * @return TLS Action
+     *   - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
      * 
      */
     public Output<Optional<String>> tlsAction() {

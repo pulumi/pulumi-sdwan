@@ -19,14 +19,16 @@ public final class Ipv4AclPolicyDefinitionState extends com.pulumi.resources.Res
     public static final Ipv4AclPolicyDefinitionState Empty = new Ipv4AclPolicyDefinitionState();
 
     /**
-     * Default action, either `accept` or `drop` - Choices: `accept`, `drop`
+     * Default action, either `accept` or `drop`
+     *   - Choices: `accept`, `drop`
      * 
      */
     @Import(name="defaultAction")
     private @Nullable Output<String> defaultAction;
 
     /**
-     * @return Default action, either `accept` or `drop` - Choices: `accept`, `drop`
+     * @return Default action, either `accept` or `drop`
+     *   - Choices: `accept`, `drop`
      * 
      */
     public Optional<Output<String>> defaultAction() {
@@ -138,7 +140,8 @@ public final class Ipv4AclPolicyDefinitionState extends com.pulumi.resources.Res
         }
 
         /**
-         * @param defaultAction Default action, either `accept` or `drop` - Choices: `accept`, `drop`
+         * @param defaultAction Default action, either `accept` or `drop`
+         *   - Choices: `accept`, `drop`
          * 
          * @return builder
          * 
@@ -149,7 +152,8 @@ public final class Ipv4AclPolicyDefinitionState extends com.pulumi.resources.Res
         }
 
         /**
-         * @param defaultAction Default action, either `accept` or `drop` - Choices: `accept`, `drop`
+         * @param defaultAction Default action, either `accept` or `drop`
+         *   - Choices: `accept`, `drop`
          * 
          * @return builder
          * 

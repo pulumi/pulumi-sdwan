@@ -79,14 +79,16 @@ public class UrlFilteringPolicyDefinition extends com.pulumi.resources.CustomRes
         return Codegen.optional(this.allowUrlListVersion);
     }
     /**
-     * Redirect to a URL or display a message when a blocked page is accessed. - Choices: `text`, `redirectUrl`
+     * Redirect to a URL or display a message when a blocked page is accessed.
+     *   - Choices: `text`, `redirectUrl`
      * 
      */
     @Export(name="blockPageAction", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> blockPageAction;
 
     /**
-     * @return Redirect to a URL or display a message when a blocked page is accessed. - Choices: `text`, `redirectUrl`
+     * @return Redirect to a URL or display a message when a blocked page is accessed.
+     *   - Choices: `text`, `redirectUrl`
      * 
      */
     public Output<Optional<String>> blockPageAction() {
@@ -155,14 +157,16 @@ public class UrlFilteringPolicyDefinition extends com.pulumi.resources.CustomRes
         return Codegen.optional(this.loggings);
     }
     /**
-     * The policy mode - Choices: `security`, `unified`
+     * The policy mode
+     *   - Choices: `security`, `unified`
      * 
      */
     @Export(name="mode", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> mode;
 
     /**
-     * @return The policy mode - Choices: `security`, `unified`
+     * @return The policy mode
+     *   - Choices: `security`, `unified`
      * 
      */
     public Output<Optional<String>> mode() {
@@ -225,30 +229,32 @@ public class UrlFilteringPolicyDefinition extends com.pulumi.resources.CustomRes
         return Codegen.optional(this.webCategories);
     }
     /**
-     * whether the selected web categories should be blocked or allowed. - Choices: `block`, `allow`
+     * whether the selected web categories should be blocked or allowed.
+     *   - Choices: `block`, `allow`
      * 
      */
     @Export(name="webCategoriesAction", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> webCategoriesAction;
 
     /**
-     * @return whether the selected web categories should be blocked or allowed. - Choices: `block`, `allow`
+     * @return whether the selected web categories should be blocked or allowed.
+     *   - Choices: `block`, `allow`
      * 
      */
     public Output<Optional<String>> webCategoriesAction() {
         return Codegen.optional(this.webCategoriesAction);
     }
     /**
-     * The web reputation of the policy definition - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`,
-     * `trustworthy`
+     * The web reputation of the policy definition
+     *   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
      * 
      */
     @Export(name="webReputation", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> webReputation;
 
     /**
-     * @return The web reputation of the policy definition - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`,
-     * `trustworthy`
+     * @return The web reputation of the policy definition
+     *   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
      * 
      */
     public Output<Optional<String>> webReputation() {

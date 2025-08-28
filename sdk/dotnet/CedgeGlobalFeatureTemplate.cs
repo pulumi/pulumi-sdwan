@@ -71,7 +71,8 @@ namespace Pulumi.Sdwan
     public partial class CedgeGlobalFeatureTemplate : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// Set ARP Proxy - Default value: `false`
+        /// Set ARP Proxy
+        ///   - Default value: `false`
         /// </summary>
         [Output("arpProxy")]
         public Output<bool?> ArpProxy { get; private set; } = null!;
@@ -83,7 +84,8 @@ namespace Pulumi.Sdwan
         public Output<string?> ArpProxyVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Configure Ignore BOOTP - Default value: `true`
+        /// Configure Ignore BOOTP
+        ///   - Default value: `true`
         /// </summary>
         [Output("bootp")]
         public Output<bool?> Bootp { get; private set; } = null!;
@@ -95,7 +97,8 @@ namespace Pulumi.Sdwan
         public Output<string?> BootpVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Configure CDP - Default value: `true`
+        /// Configure CDP
+        ///   - Default value: `true`
         /// </summary>
         [Output("cdp")]
         public Output<bool?> Cdp { get; private set; } = null!;
@@ -107,7 +110,8 @@ namespace Pulumi.Sdwan
         public Output<string?> CdpVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Configure Console Logging - Default value: `true`
+        /// Configure Console Logging
+        ///   - Default value: `true`
         /// </summary>
         [Output("consoleLogging")]
         public Output<bool?> ConsoleLogging { get; private set; } = null!;
@@ -125,15 +129,15 @@ namespace Pulumi.Sdwan
         public Output<string> Description { get; private set; } = null!;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         [Output("deviceTypes")]
         public Output<ImmutableArray<string>> DeviceTypes { get; private set; } = null!;
 
         /// <summary>
-        /// Configure Domain-Lookup - Default value: `false`
+        /// Configure Domain-Lookup
+        ///   - Default value: `false`
         /// </summary>
         [Output("domainLookup")]
         public Output<bool?> DomainLookup { get; private set; } = null!;
@@ -145,7 +149,8 @@ namespace Pulumi.Sdwan
         public Output<string?> DomainLookupVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set Passive FTP - Default value: `false`
+        /// Set Passive FTP
+        ///   - Default value: `false`
         /// </summary>
         [Output("ftpPassive")]
         public Output<bool?> FtpPassive { get; private set; } = null!;
@@ -157,7 +162,8 @@ namespace Pulumi.Sdwan
         public Output<string?> FtpPassiveVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set preference for HTTP Authentication - Choices: `local`, `aaa`
+        /// Set preference for HTTP Authentication
+        ///   - Choices: `local`, `aaa`
         /// </summary>
         [Output("httpAuthentication")]
         public Output<string?> HttpAuthentication { get; private set; } = null!;
@@ -169,7 +175,8 @@ namespace Pulumi.Sdwan
         public Output<string?> HttpAuthenticationVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set HTTP Server - Default value: `false`
+        /// Set HTTP Server
+        ///   - Default value: `false`
         /// </summary>
         [Output("httpServer")]
         public Output<bool?> HttpServer { get; private set; } = null!;
@@ -181,7 +188,8 @@ namespace Pulumi.Sdwan
         public Output<string?> HttpServerVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set HTTPS Server - Default value: `false`
+        /// Set HTTPS Server
+        ///   - Default value: `false`
         /// </summary>
         [Output("httpsServer")]
         public Output<bool?> HttpsServer { get; private set; } = null!;
@@ -193,7 +201,8 @@ namespace Pulumi.Sdwan
         public Output<string?> HttpsServerVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set Source Route - Default value: `false`
+        /// Set Source Route
+        ///   - Default value: `false`
         /// </summary>
         [Output("ipSourceRouting")]
         public Output<bool?> IpSourceRouting { get; private set; } = null!;
@@ -205,7 +214,8 @@ namespace Pulumi.Sdwan
         public Output<string?> IpSourceRoutingVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Configure Telnet (Outbound) - Default value: `false`
+        /// Configure Telnet (Outbound)
+        ///   - Default value: `false`
         /// </summary>
         [Output("lineVty")]
         public Output<bool?> LineVty { get; private set; } = null!;
@@ -217,7 +227,8 @@ namespace Pulumi.Sdwan
         public Output<string?> LineVtyVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Configure LLDP - Default value: `true`
+        /// Configure LLDP
+        ///   - Default value: `true`
         /// </summary>
         [Output("lldp")]
         public Output<bool?> Lldp { get; private set; } = null!;
@@ -235,7 +246,9 @@ namespace Pulumi.Sdwan
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// Set NAT64 TCP session timeout, in seconds - Range: `1`-`536870` - Default value: `3600`
+        /// Set NAT64 TCP session timeout, in seconds
+        ///   - Range: `1`-`536870`
+        ///   - Default value: `3600`
         /// </summary>
         [Output("nat64TcpTimeout")]
         public Output<int?> Nat64TcpTimeout { get; private set; } = null!;
@@ -247,7 +260,9 @@ namespace Pulumi.Sdwan
         public Output<string?> Nat64TcpTimeoutVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set NAT64 UDP session timeout, in seconds - Range: `1`-`536870` - Default value: `300`
+        /// Set NAT64 UDP session timeout, in seconds
+        ///   - Range: `1`-`536870`
+        ///   - Default value: `300`
         /// </summary>
         [Output("nat64UdpTimeout")]
         public Output<int?> Nat64UdpTimeout { get; private set; } = null!;
@@ -259,7 +274,8 @@ namespace Pulumi.Sdwan
         public Output<string?> Nat64UdpTimeoutVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set RSH/RCP - Default value: `false`
+        /// Set RSH/RCP
+        ///   - Default value: `false`
         /// </summary>
         [Output("rshRcp")]
         public Output<bool?> RshRcp { get; private set; } = null!;
@@ -271,7 +287,8 @@ namespace Pulumi.Sdwan
         public Output<string?> RshRcpVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Configure SNMP Ifindex Persist - Default value: `true`
+        /// Configure SNMP Ifindex Persist
+        ///   - Default value: `true`
         /// </summary>
         [Output("snmpIfindexPersist")]
         public Output<bool?> SnmpIfindexPersist { get; private set; } = null!;
@@ -295,7 +312,8 @@ namespace Pulumi.Sdwan
         public Output<string?> SourceInterfaceVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set SSH version - Range: `1`-`2`
+        /// Set SSH version
+        ///   - Range: `1`-`2`
         /// </summary>
         [Output("sshVersion")]
         public Output<int?> SshVersion { get; private set; } = null!;
@@ -307,7 +325,8 @@ namespace Pulumi.Sdwan
         public Output<string?> SshVersionVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Configure tcp-keepalives-in - Default value: `true`
+        /// Configure tcp-keepalives-in
+        ///   - Default value: `true`
         /// </summary>
         [Output("tcpKeepalivesIn")]
         public Output<bool?> TcpKeepalivesIn { get; private set; } = null!;
@@ -319,7 +338,8 @@ namespace Pulumi.Sdwan
         public Output<string?> TcpKeepalivesInVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Configure tcp-keepalives-out - Default value: `true`
+        /// Configure tcp-keepalives-out
+        ///   - Default value: `true`
         /// </summary>
         [Output("tcpKeepalivesOut")]
         public Output<bool?> TcpKeepalivesOut { get; private set; } = null!;
@@ -331,7 +351,8 @@ namespace Pulumi.Sdwan
         public Output<string?> TcpKeepalivesOutVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Configure tcp-small-servers - Default value: `false`
+        /// Configure tcp-small-servers
+        ///   - Default value: `false`
         /// </summary>
         [Output("tcpSmallServers")]
         public Output<bool?> TcpSmallServers { get; private set; } = null!;
@@ -349,7 +370,8 @@ namespace Pulumi.Sdwan
         public Output<string> TemplateType { get; private set; } = null!;
 
         /// <summary>
-        /// Configure udp-small-servers - Default value: `false`
+        /// Configure udp-small-servers
+        ///   - Default value: `false`
         /// </summary>
         [Output("udpSmallServers")]
         public Output<bool?> UdpSmallServers { get; private set; } = null!;
@@ -367,7 +389,8 @@ namespace Pulumi.Sdwan
         public Output<int> Version { get; private set; } = null!;
 
         /// <summary>
-        /// Configure VTY Line Logging - Default value: `false`
+        /// Configure VTY Line Logging
+        ///   - Default value: `false`
         /// </summary>
         [Output("vtyLogging")]
         public Output<bool?> VtyLogging { get; private set; } = null!;
@@ -425,7 +448,8 @@ namespace Pulumi.Sdwan
     public sealed class CedgeGlobalFeatureTemplateArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Set ARP Proxy - Default value: `false`
+        /// Set ARP Proxy
+        ///   - Default value: `false`
         /// </summary>
         [Input("arpProxy")]
         public Input<bool>? ArpProxy { get; set; }
@@ -437,7 +461,8 @@ namespace Pulumi.Sdwan
         public Input<string>? ArpProxyVariable { get; set; }
 
         /// <summary>
-        /// Configure Ignore BOOTP - Default value: `true`
+        /// Configure Ignore BOOTP
+        ///   - Default value: `true`
         /// </summary>
         [Input("bootp")]
         public Input<bool>? Bootp { get; set; }
@@ -449,7 +474,8 @@ namespace Pulumi.Sdwan
         public Input<string>? BootpVariable { get; set; }
 
         /// <summary>
-        /// Configure CDP - Default value: `true`
+        /// Configure CDP
+        ///   - Default value: `true`
         /// </summary>
         [Input("cdp")]
         public Input<bool>? Cdp { get; set; }
@@ -461,7 +487,8 @@ namespace Pulumi.Sdwan
         public Input<string>? CdpVariable { get; set; }
 
         /// <summary>
-        /// Configure Console Logging - Default value: `true`
+        /// Configure Console Logging
+        ///   - Default value: `true`
         /// </summary>
         [Input("consoleLogging")]
         public Input<bool>? ConsoleLogging { get; set; }
@@ -482,9 +509,8 @@ namespace Pulumi.Sdwan
         private InputList<string>? _deviceTypes;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         public InputList<string> DeviceTypes
         {
@@ -493,7 +519,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Configure Domain-Lookup - Default value: `false`
+        /// Configure Domain-Lookup
+        ///   - Default value: `false`
         /// </summary>
         [Input("domainLookup")]
         public Input<bool>? DomainLookup { get; set; }
@@ -505,7 +532,8 @@ namespace Pulumi.Sdwan
         public Input<string>? DomainLookupVariable { get; set; }
 
         /// <summary>
-        /// Set Passive FTP - Default value: `false`
+        /// Set Passive FTP
+        ///   - Default value: `false`
         /// </summary>
         [Input("ftpPassive")]
         public Input<bool>? FtpPassive { get; set; }
@@ -517,7 +545,8 @@ namespace Pulumi.Sdwan
         public Input<string>? FtpPassiveVariable { get; set; }
 
         /// <summary>
-        /// Set preference for HTTP Authentication - Choices: `local`, `aaa`
+        /// Set preference for HTTP Authentication
+        ///   - Choices: `local`, `aaa`
         /// </summary>
         [Input("httpAuthentication")]
         public Input<string>? HttpAuthentication { get; set; }
@@ -529,7 +558,8 @@ namespace Pulumi.Sdwan
         public Input<string>? HttpAuthenticationVariable { get; set; }
 
         /// <summary>
-        /// Set HTTP Server - Default value: `false`
+        /// Set HTTP Server
+        ///   - Default value: `false`
         /// </summary>
         [Input("httpServer")]
         public Input<bool>? HttpServer { get; set; }
@@ -541,7 +571,8 @@ namespace Pulumi.Sdwan
         public Input<string>? HttpServerVariable { get; set; }
 
         /// <summary>
-        /// Set HTTPS Server - Default value: `false`
+        /// Set HTTPS Server
+        ///   - Default value: `false`
         /// </summary>
         [Input("httpsServer")]
         public Input<bool>? HttpsServer { get; set; }
@@ -553,7 +584,8 @@ namespace Pulumi.Sdwan
         public Input<string>? HttpsServerVariable { get; set; }
 
         /// <summary>
-        /// Set Source Route - Default value: `false`
+        /// Set Source Route
+        ///   - Default value: `false`
         /// </summary>
         [Input("ipSourceRouting")]
         public Input<bool>? IpSourceRouting { get; set; }
@@ -565,7 +597,8 @@ namespace Pulumi.Sdwan
         public Input<string>? IpSourceRoutingVariable { get; set; }
 
         /// <summary>
-        /// Configure Telnet (Outbound) - Default value: `false`
+        /// Configure Telnet (Outbound)
+        ///   - Default value: `false`
         /// </summary>
         [Input("lineVty")]
         public Input<bool>? LineVty { get; set; }
@@ -577,7 +610,8 @@ namespace Pulumi.Sdwan
         public Input<string>? LineVtyVariable { get; set; }
 
         /// <summary>
-        /// Configure LLDP - Default value: `true`
+        /// Configure LLDP
+        ///   - Default value: `true`
         /// </summary>
         [Input("lldp")]
         public Input<bool>? Lldp { get; set; }
@@ -595,7 +629,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Set NAT64 TCP session timeout, in seconds - Range: `1`-`536870` - Default value: `3600`
+        /// Set NAT64 TCP session timeout, in seconds
+        ///   - Range: `1`-`536870`
+        ///   - Default value: `3600`
         /// </summary>
         [Input("nat64TcpTimeout")]
         public Input<int>? Nat64TcpTimeout { get; set; }
@@ -607,7 +643,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Nat64TcpTimeoutVariable { get; set; }
 
         /// <summary>
-        /// Set NAT64 UDP session timeout, in seconds - Range: `1`-`536870` - Default value: `300`
+        /// Set NAT64 UDP session timeout, in seconds
+        ///   - Range: `1`-`536870`
+        ///   - Default value: `300`
         /// </summary>
         [Input("nat64UdpTimeout")]
         public Input<int>? Nat64UdpTimeout { get; set; }
@@ -619,7 +657,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Nat64UdpTimeoutVariable { get; set; }
 
         /// <summary>
-        /// Set RSH/RCP - Default value: `false`
+        /// Set RSH/RCP
+        ///   - Default value: `false`
         /// </summary>
         [Input("rshRcp")]
         public Input<bool>? RshRcp { get; set; }
@@ -631,7 +670,8 @@ namespace Pulumi.Sdwan
         public Input<string>? RshRcpVariable { get; set; }
 
         /// <summary>
-        /// Configure SNMP Ifindex Persist - Default value: `true`
+        /// Configure SNMP Ifindex Persist
+        ///   - Default value: `true`
         /// </summary>
         [Input("snmpIfindexPersist")]
         public Input<bool>? SnmpIfindexPersist { get; set; }
@@ -655,7 +695,8 @@ namespace Pulumi.Sdwan
         public Input<string>? SourceInterfaceVariable { get; set; }
 
         /// <summary>
-        /// Set SSH version - Range: `1`-`2`
+        /// Set SSH version
+        ///   - Range: `1`-`2`
         /// </summary>
         [Input("sshVersion")]
         public Input<int>? SshVersion { get; set; }
@@ -667,7 +708,8 @@ namespace Pulumi.Sdwan
         public Input<string>? SshVersionVariable { get; set; }
 
         /// <summary>
-        /// Configure tcp-keepalives-in - Default value: `true`
+        /// Configure tcp-keepalives-in
+        ///   - Default value: `true`
         /// </summary>
         [Input("tcpKeepalivesIn")]
         public Input<bool>? TcpKeepalivesIn { get; set; }
@@ -679,7 +721,8 @@ namespace Pulumi.Sdwan
         public Input<string>? TcpKeepalivesInVariable { get; set; }
 
         /// <summary>
-        /// Configure tcp-keepalives-out - Default value: `true`
+        /// Configure tcp-keepalives-out
+        ///   - Default value: `true`
         /// </summary>
         [Input("tcpKeepalivesOut")]
         public Input<bool>? TcpKeepalivesOut { get; set; }
@@ -691,7 +734,8 @@ namespace Pulumi.Sdwan
         public Input<string>? TcpKeepalivesOutVariable { get; set; }
 
         /// <summary>
-        /// Configure tcp-small-servers - Default value: `false`
+        /// Configure tcp-small-servers
+        ///   - Default value: `false`
         /// </summary>
         [Input("tcpSmallServers")]
         public Input<bool>? TcpSmallServers { get; set; }
@@ -703,7 +747,8 @@ namespace Pulumi.Sdwan
         public Input<string>? TcpSmallServersVariable { get; set; }
 
         /// <summary>
-        /// Configure udp-small-servers - Default value: `false`
+        /// Configure udp-small-servers
+        ///   - Default value: `false`
         /// </summary>
         [Input("udpSmallServers")]
         public Input<bool>? UdpSmallServers { get; set; }
@@ -715,7 +760,8 @@ namespace Pulumi.Sdwan
         public Input<string>? UdpSmallServersVariable { get; set; }
 
         /// <summary>
-        /// Configure VTY Line Logging - Default value: `false`
+        /// Configure VTY Line Logging
+        ///   - Default value: `false`
         /// </summary>
         [Input("vtyLogging")]
         public Input<bool>? VtyLogging { get; set; }
@@ -735,7 +781,8 @@ namespace Pulumi.Sdwan
     public sealed class CedgeGlobalFeatureTemplateState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Set ARP Proxy - Default value: `false`
+        /// Set ARP Proxy
+        ///   - Default value: `false`
         /// </summary>
         [Input("arpProxy")]
         public Input<bool>? ArpProxy { get; set; }
@@ -747,7 +794,8 @@ namespace Pulumi.Sdwan
         public Input<string>? ArpProxyVariable { get; set; }
 
         /// <summary>
-        /// Configure Ignore BOOTP - Default value: `true`
+        /// Configure Ignore BOOTP
+        ///   - Default value: `true`
         /// </summary>
         [Input("bootp")]
         public Input<bool>? Bootp { get; set; }
@@ -759,7 +807,8 @@ namespace Pulumi.Sdwan
         public Input<string>? BootpVariable { get; set; }
 
         /// <summary>
-        /// Configure CDP - Default value: `true`
+        /// Configure CDP
+        ///   - Default value: `true`
         /// </summary>
         [Input("cdp")]
         public Input<bool>? Cdp { get; set; }
@@ -771,7 +820,8 @@ namespace Pulumi.Sdwan
         public Input<string>? CdpVariable { get; set; }
 
         /// <summary>
-        /// Configure Console Logging - Default value: `true`
+        /// Configure Console Logging
+        ///   - Default value: `true`
         /// </summary>
         [Input("consoleLogging")]
         public Input<bool>? ConsoleLogging { get; set; }
@@ -792,9 +842,8 @@ namespace Pulumi.Sdwan
         private InputList<string>? _deviceTypes;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         public InputList<string> DeviceTypes
         {
@@ -803,7 +852,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Configure Domain-Lookup - Default value: `false`
+        /// Configure Domain-Lookup
+        ///   - Default value: `false`
         /// </summary>
         [Input("domainLookup")]
         public Input<bool>? DomainLookup { get; set; }
@@ -815,7 +865,8 @@ namespace Pulumi.Sdwan
         public Input<string>? DomainLookupVariable { get; set; }
 
         /// <summary>
-        /// Set Passive FTP - Default value: `false`
+        /// Set Passive FTP
+        ///   - Default value: `false`
         /// </summary>
         [Input("ftpPassive")]
         public Input<bool>? FtpPassive { get; set; }
@@ -827,7 +878,8 @@ namespace Pulumi.Sdwan
         public Input<string>? FtpPassiveVariable { get; set; }
 
         /// <summary>
-        /// Set preference for HTTP Authentication - Choices: `local`, `aaa`
+        /// Set preference for HTTP Authentication
+        ///   - Choices: `local`, `aaa`
         /// </summary>
         [Input("httpAuthentication")]
         public Input<string>? HttpAuthentication { get; set; }
@@ -839,7 +891,8 @@ namespace Pulumi.Sdwan
         public Input<string>? HttpAuthenticationVariable { get; set; }
 
         /// <summary>
-        /// Set HTTP Server - Default value: `false`
+        /// Set HTTP Server
+        ///   - Default value: `false`
         /// </summary>
         [Input("httpServer")]
         public Input<bool>? HttpServer { get; set; }
@@ -851,7 +904,8 @@ namespace Pulumi.Sdwan
         public Input<string>? HttpServerVariable { get; set; }
 
         /// <summary>
-        /// Set HTTPS Server - Default value: `false`
+        /// Set HTTPS Server
+        ///   - Default value: `false`
         /// </summary>
         [Input("httpsServer")]
         public Input<bool>? HttpsServer { get; set; }
@@ -863,7 +917,8 @@ namespace Pulumi.Sdwan
         public Input<string>? HttpsServerVariable { get; set; }
 
         /// <summary>
-        /// Set Source Route - Default value: `false`
+        /// Set Source Route
+        ///   - Default value: `false`
         /// </summary>
         [Input("ipSourceRouting")]
         public Input<bool>? IpSourceRouting { get; set; }
@@ -875,7 +930,8 @@ namespace Pulumi.Sdwan
         public Input<string>? IpSourceRoutingVariable { get; set; }
 
         /// <summary>
-        /// Configure Telnet (Outbound) - Default value: `false`
+        /// Configure Telnet (Outbound)
+        ///   - Default value: `false`
         /// </summary>
         [Input("lineVty")]
         public Input<bool>? LineVty { get; set; }
@@ -887,7 +943,8 @@ namespace Pulumi.Sdwan
         public Input<string>? LineVtyVariable { get; set; }
 
         /// <summary>
-        /// Configure LLDP - Default value: `true`
+        /// Configure LLDP
+        ///   - Default value: `true`
         /// </summary>
         [Input("lldp")]
         public Input<bool>? Lldp { get; set; }
@@ -905,7 +962,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Set NAT64 TCP session timeout, in seconds - Range: `1`-`536870` - Default value: `3600`
+        /// Set NAT64 TCP session timeout, in seconds
+        ///   - Range: `1`-`536870`
+        ///   - Default value: `3600`
         /// </summary>
         [Input("nat64TcpTimeout")]
         public Input<int>? Nat64TcpTimeout { get; set; }
@@ -917,7 +976,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Nat64TcpTimeoutVariable { get; set; }
 
         /// <summary>
-        /// Set NAT64 UDP session timeout, in seconds - Range: `1`-`536870` - Default value: `300`
+        /// Set NAT64 UDP session timeout, in seconds
+        ///   - Range: `1`-`536870`
+        ///   - Default value: `300`
         /// </summary>
         [Input("nat64UdpTimeout")]
         public Input<int>? Nat64UdpTimeout { get; set; }
@@ -929,7 +990,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Nat64UdpTimeoutVariable { get; set; }
 
         /// <summary>
-        /// Set RSH/RCP - Default value: `false`
+        /// Set RSH/RCP
+        ///   - Default value: `false`
         /// </summary>
         [Input("rshRcp")]
         public Input<bool>? RshRcp { get; set; }
@@ -941,7 +1003,8 @@ namespace Pulumi.Sdwan
         public Input<string>? RshRcpVariable { get; set; }
 
         /// <summary>
-        /// Configure SNMP Ifindex Persist - Default value: `true`
+        /// Configure SNMP Ifindex Persist
+        ///   - Default value: `true`
         /// </summary>
         [Input("snmpIfindexPersist")]
         public Input<bool>? SnmpIfindexPersist { get; set; }
@@ -965,7 +1028,8 @@ namespace Pulumi.Sdwan
         public Input<string>? SourceInterfaceVariable { get; set; }
 
         /// <summary>
-        /// Set SSH version - Range: `1`-`2`
+        /// Set SSH version
+        ///   - Range: `1`-`2`
         /// </summary>
         [Input("sshVersion")]
         public Input<int>? SshVersion { get; set; }
@@ -977,7 +1041,8 @@ namespace Pulumi.Sdwan
         public Input<string>? SshVersionVariable { get; set; }
 
         /// <summary>
-        /// Configure tcp-keepalives-in - Default value: `true`
+        /// Configure tcp-keepalives-in
+        ///   - Default value: `true`
         /// </summary>
         [Input("tcpKeepalivesIn")]
         public Input<bool>? TcpKeepalivesIn { get; set; }
@@ -989,7 +1054,8 @@ namespace Pulumi.Sdwan
         public Input<string>? TcpKeepalivesInVariable { get; set; }
 
         /// <summary>
-        /// Configure tcp-keepalives-out - Default value: `true`
+        /// Configure tcp-keepalives-out
+        ///   - Default value: `true`
         /// </summary>
         [Input("tcpKeepalivesOut")]
         public Input<bool>? TcpKeepalivesOut { get; set; }
@@ -1001,7 +1067,8 @@ namespace Pulumi.Sdwan
         public Input<string>? TcpKeepalivesOutVariable { get; set; }
 
         /// <summary>
-        /// Configure tcp-small-servers - Default value: `false`
+        /// Configure tcp-small-servers
+        ///   - Default value: `false`
         /// </summary>
         [Input("tcpSmallServers")]
         public Input<bool>? TcpSmallServers { get; set; }
@@ -1019,7 +1086,8 @@ namespace Pulumi.Sdwan
         public Input<string>? TemplateType { get; set; }
 
         /// <summary>
-        /// Configure udp-small-servers - Default value: `false`
+        /// Configure udp-small-servers
+        ///   - Default value: `false`
         /// </summary>
         [Input("udpSmallServers")]
         public Input<bool>? UdpSmallServers { get; set; }
@@ -1037,7 +1105,8 @@ namespace Pulumi.Sdwan
         public Input<int>? Version { get; set; }
 
         /// <summary>
-        /// Configure VTY Line Logging - Default value: `false`
+        /// Configure VTY Line Logging
+        ///   - Default value: `false`
         /// </summary>
         [Input("vtyLogging")]
         public Input<bool>? VtyLogging { get; set; }

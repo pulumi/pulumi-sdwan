@@ -47,9 +47,8 @@ class CiscoSigCredentialsFeatureTemplateArgs:
         """
         The set of arguments for constructing a CiscoSigCredentialsFeatureTemplate resource.
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[_builtins.str] umbrella_api_key: API Key
         :param pulumi.Input[_builtins.str] umbrella_api_key_variable: Variable name
@@ -57,7 +56,8 @@ class CiscoSigCredentialsFeatureTemplateArgs:
         :param pulumi.Input[_builtins.str] umbrella_api_secret_variable: Variable name
         :param pulumi.Input[_builtins.str] umbrella_organization_id: Ord ID
         :param pulumi.Input[_builtins.str] umbrella_organization_id_variable: Variable name
-        :param pulumi.Input[_builtins.int] zscaler_cloud_name: Third Party Cloud Name - Range: `0`-`255`
+        :param pulumi.Input[_builtins.int] zscaler_cloud_name: Third Party Cloud Name
+                 - Range: `0`-`255`
         :param pulumi.Input[_builtins.str] zscaler_cloud_name_variable: Variable name
         :param pulumi.Input[_builtins.str] zscaler_organization: Organization Name
         :param pulumi.Input[_builtins.str] zscaler_organization_variable: Variable name
@@ -139,9 +139,8 @@ class CiscoSigCredentialsFeatureTemplateArgs:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -237,7 +236,8 @@ class CiscoSigCredentialsFeatureTemplateArgs:
     @pulumi.getter(name="zscalerCloudName")
     def zscaler_cloud_name(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Third Party Cloud Name - Range: `0`-`255`
+        Third Party Cloud Name
+          - Range: `0`-`255`
         """
         return pulumi.get(self, "zscaler_cloud_name")
 
@@ -459,9 +459,8 @@ class _CiscoSigCredentialsFeatureTemplateState:
         """
         Input properties used for looking up and filtering CiscoSigCredentialsFeatureTemplate resources.
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[_builtins.str] template_type: The template type
         :param pulumi.Input[_builtins.str] umbrella_api_key: API Key
@@ -471,7 +470,8 @@ class _CiscoSigCredentialsFeatureTemplateState:
         :param pulumi.Input[_builtins.str] umbrella_organization_id: Ord ID
         :param pulumi.Input[_builtins.str] umbrella_organization_id_variable: Variable name
         :param pulumi.Input[_builtins.int] version: The version of the feature template
-        :param pulumi.Input[_builtins.int] zscaler_cloud_name: Third Party Cloud Name - Range: `0`-`255`
+        :param pulumi.Input[_builtins.int] zscaler_cloud_name: Third Party Cloud Name
+                 - Range: `0`-`255`
         :param pulumi.Input[_builtins.str] zscaler_cloud_name_variable: Variable name
         :param pulumi.Input[_builtins.str] zscaler_organization: Organization Name
         :param pulumi.Input[_builtins.str] zscaler_organization_variable: Variable name
@@ -559,9 +559,8 @@ class _CiscoSigCredentialsFeatureTemplateState:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -681,7 +680,8 @@ class _CiscoSigCredentialsFeatureTemplateState:
     @pulumi.getter(name="zscalerCloudName")
     def zscaler_cloud_name(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Third Party Cloud Name - Range: `0`-`255`
+        Third Party Cloud Name
+          - Range: `0`-`255`
         """
         return pulumi.get(self, "zscaler_cloud_name")
 
@@ -940,9 +940,8 @@ class CiscoSigCredentialsFeatureTemplate(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[_builtins.str] umbrella_api_key: API Key
         :param pulumi.Input[_builtins.str] umbrella_api_key_variable: Variable name
@@ -950,7 +949,8 @@ class CiscoSigCredentialsFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] umbrella_api_secret_variable: Variable name
         :param pulumi.Input[_builtins.str] umbrella_organization_id: Ord ID
         :param pulumi.Input[_builtins.str] umbrella_organization_id_variable: Variable name
-        :param pulumi.Input[_builtins.int] zscaler_cloud_name: Third Party Cloud Name - Range: `0`-`255`
+        :param pulumi.Input[_builtins.int] zscaler_cloud_name: Third Party Cloud Name
+                 - Range: `0`-`255`
         :param pulumi.Input[_builtins.str] zscaler_cloud_name_variable: Variable name
         :param pulumi.Input[_builtins.str] zscaler_organization: Organization Name
         :param pulumi.Input[_builtins.str] zscaler_organization_variable: Variable name
@@ -1133,9 +1133,8 @@ class CiscoSigCredentialsFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[_builtins.str] template_type: The template type
         :param pulumi.Input[_builtins.str] umbrella_api_key: API Key
@@ -1145,7 +1144,8 @@ class CiscoSigCredentialsFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] umbrella_organization_id: Ord ID
         :param pulumi.Input[_builtins.str] umbrella_organization_id_variable: Variable name
         :param pulumi.Input[_builtins.int] version: The version of the feature template
-        :param pulumi.Input[_builtins.int] zscaler_cloud_name: Third Party Cloud Name - Range: `0`-`255`
+        :param pulumi.Input[_builtins.int] zscaler_cloud_name: Third Party Cloud Name
+                 - Range: `0`-`255`
         :param pulumi.Input[_builtins.str] zscaler_cloud_name_variable: Variable name
         :param pulumi.Input[_builtins.str] zscaler_organization: Organization Name
         :param pulumi.Input[_builtins.str] zscaler_organization_variable: Variable name
@@ -1207,9 +1207,8 @@ class CiscoSigCredentialsFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -1289,7 +1288,8 @@ class CiscoSigCredentialsFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="zscalerCloudName")
     def zscaler_cloud_name(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Third Party Cloud Name - Range: `0`-`255`
+        Third Party Cloud Name
+          - Range: `0`-`255`
         """
         return pulumi.get(self, "zscaler_cloud_name")
 

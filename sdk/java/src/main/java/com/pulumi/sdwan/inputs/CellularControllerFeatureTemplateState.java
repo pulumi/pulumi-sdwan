@@ -80,18 +80,16 @@ public final class CellularControllerFeatureTemplateState extends com.pulumi.res
     }
 
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Import(name="deviceTypes")
     private @Nullable Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Optional<Output<List<String>>> deviceTypes() {
@@ -99,14 +97,16 @@ public final class CellularControllerFeatureTemplateState extends com.pulumi.res
     }
 
     /**
-     * Enable/Disable Firmware Auto Sim - Default value: `true`
+     * Enable/Disable Firmware Auto Sim
+     *   - Default value: `true`
      * 
      */
     @Import(name="firmwareAutoSim")
     private @Nullable Output<Boolean> firmwareAutoSim;
 
     /**
-     * @return Enable/Disable Firmware Auto Sim - Default value: `true`
+     * @return Enable/Disable Firmware Auto Sim
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> firmwareAutoSim() {
@@ -144,14 +144,16 @@ public final class CellularControllerFeatureTemplateState extends com.pulumi.res
     }
 
     /**
-     * Set primary SIM slot - Range: `0`-`255`
+     * Set primary SIM slot
+     *   - Range: `0`-`255`
      * 
      */
     @Import(name="primarySimSlot")
     private @Nullable Output<Integer> primarySimSlot;
 
     /**
-     * @return Set primary SIM slot - Range: `0`-`255`
+     * @return Set primary SIM slot
+     *   - Range: `0`-`255`
      * 
      */
     public Optional<Output<Integer>> primarySimSlot() {
@@ -174,14 +176,16 @@ public final class CellularControllerFeatureTemplateState extends com.pulumi.res
     }
 
     /**
-     * Set SIM failover retries - Range: `0`-`65535`
+     * Set SIM failover retries
+     *   - Range: `0`-`65535`
      * 
      */
     @Import(name="simFailoverRetries")
     private @Nullable Output<Integer> simFailoverRetries;
 
     /**
-     * @return Set SIM failover retries - Range: `0`-`65535`
+     * @return Set SIM failover retries
+     *   - Range: `0`-`65535`
      * 
      */
     public Optional<Output<Integer>> simFailoverRetries() {
@@ -204,14 +208,16 @@ public final class CellularControllerFeatureTemplateState extends com.pulumi.res
     }
 
     /**
-     * Set SIM failover timeout in minutes - Range: `3`-`7`
+     * Set SIM failover timeout in minutes
+     *   - Range: `3`-`7`
      * 
      */
     @Import(name="simFailoverTimeout")
     private @Nullable Output<Integer> simFailoverTimeout;
 
     /**
-     * @return Set SIM failover timeout in minutes - Range: `3`-`7`
+     * @return Set SIM failover timeout in minutes
+     *   - Range: `3`-`7`
      * 
      */
     public Optional<Output<Integer>> simFailoverTimeout() {
@@ -397,9 +403,8 @@ public final class CellularControllerFeatureTemplateState extends com.pulumi.res
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -410,9 +415,8 @@ public final class CellularControllerFeatureTemplateState extends com.pulumi.res
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -422,9 +426,8 @@ public final class CellularControllerFeatureTemplateState extends com.pulumi.res
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -434,7 +437,8 @@ public final class CellularControllerFeatureTemplateState extends com.pulumi.res
         }
 
         /**
-         * @param firmwareAutoSim Enable/Disable Firmware Auto Sim - Default value: `true`
+         * @param firmwareAutoSim Enable/Disable Firmware Auto Sim
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -445,7 +449,8 @@ public final class CellularControllerFeatureTemplateState extends com.pulumi.res
         }
 
         /**
-         * @param firmwareAutoSim Enable/Disable Firmware Auto Sim - Default value: `true`
+         * @param firmwareAutoSim Enable/Disable Firmware Auto Sim
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -497,7 +502,8 @@ public final class CellularControllerFeatureTemplateState extends com.pulumi.res
         }
 
         /**
-         * @param primarySimSlot Set primary SIM slot - Range: `0`-`255`
+         * @param primarySimSlot Set primary SIM slot
+         *   - Range: `0`-`255`
          * 
          * @return builder
          * 
@@ -508,7 +514,8 @@ public final class CellularControllerFeatureTemplateState extends com.pulumi.res
         }
 
         /**
-         * @param primarySimSlot Set primary SIM slot - Range: `0`-`255`
+         * @param primarySimSlot Set primary SIM slot
+         *   - Range: `0`-`255`
          * 
          * @return builder
          * 
@@ -539,7 +546,8 @@ public final class CellularControllerFeatureTemplateState extends com.pulumi.res
         }
 
         /**
-         * @param simFailoverRetries Set SIM failover retries - Range: `0`-`65535`
+         * @param simFailoverRetries Set SIM failover retries
+         *   - Range: `0`-`65535`
          * 
          * @return builder
          * 
@@ -550,7 +558,8 @@ public final class CellularControllerFeatureTemplateState extends com.pulumi.res
         }
 
         /**
-         * @param simFailoverRetries Set SIM failover retries - Range: `0`-`65535`
+         * @param simFailoverRetries Set SIM failover retries
+         *   - Range: `0`-`65535`
          * 
          * @return builder
          * 
@@ -581,7 +590,8 @@ public final class CellularControllerFeatureTemplateState extends com.pulumi.res
         }
 
         /**
-         * @param simFailoverTimeout Set SIM failover timeout in minutes - Range: `3`-`7`
+         * @param simFailoverTimeout Set SIM failover timeout in minutes
+         *   - Range: `3`-`7`
          * 
          * @return builder
          * 
@@ -592,7 +602,8 @@ public final class CellularControllerFeatureTemplateState extends com.pulumi.res
         }
 
         /**
-         * @param simFailoverTimeout Set SIM failover timeout in minutes - Range: `3`-`7`
+         * @param simFailoverTimeout Set SIM failover timeout in minutes
+         *   - Range: `3`-`7`
          * 
          * @return builder
          * 

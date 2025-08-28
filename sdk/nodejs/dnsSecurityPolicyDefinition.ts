@@ -66,55 +66,55 @@ export class DnsSecurityPolicyDefinition extends pulumi.CustomResource {
     /**
      * Credentials feature template ID
      */
-    public readonly ciscoSigCredentialsFeatureTemplateId!: pulumi.Output<string>;
+    declare public readonly ciscoSigCredentialsFeatureTemplateId: pulumi.Output<string>;
     /**
      * Credentials feature template version
      */
-    public readonly ciscoSigCredentialsFeatureTemplateVersion!: pulumi.Output<number | undefined>;
+    declare public readonly ciscoSigCredentialsFeatureTemplateVersion: pulumi.Output<number | undefined>;
     /**
      * Only relevant when `umbrellaDnsDefault` is `false`
      */
-    public readonly customDnsServerIp!: pulumi.Output<string | undefined>;
+    declare public readonly customDnsServerIp: pulumi.Output<string | undefined>;
     /**
      * The description of the policy definition.
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
      * Should DNSCrypt be enabled
      */
-    public readonly dnscrypt!: pulumi.Output<boolean | undefined>;
+    declare public readonly dnscrypt: pulumi.Output<boolean | undefined>;
     /**
      * Local domain bypass list ID
      */
-    public readonly domainListId!: pulumi.Output<string | undefined>;
+    declare public readonly domainListId: pulumi.Output<string | undefined>;
     /**
      * Local domain bypass list version
      */
-    public readonly domainListVersion!: pulumi.Output<number | undefined>;
+    declare public readonly domainListVersion: pulumi.Output<number | undefined>;
     /**
      * Should the local domain bypass list be enabled
      */
-    public readonly localDomainBypassEnabled!: pulumi.Output<boolean | undefined>;
+    declare public readonly localDomainBypassEnabled: pulumi.Output<boolean | undefined>;
     /**
      * Should use match all VPN
      */
-    public readonly matchAllVpn!: pulumi.Output<boolean>;
+    declare public readonly matchAllVpn: pulumi.Output<boolean>;
     /**
      * The name of the policy definition.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * Only relevant when `matchAllVpn` is `false`
      */
-    public readonly targetVpns!: pulumi.Output<outputs.DnsSecurityPolicyDefinitionTargetVpn[] | undefined>;
+    declare public readonly targetVpns: pulumi.Output<outputs.DnsSecurityPolicyDefinitionTargetVpn[] | undefined>;
     /**
      * Should use umbrella as DNS Server
      */
-    public readonly umbrellaDnsDefault!: pulumi.Output<boolean>;
+    declare public readonly umbrellaDnsDefault: pulumi.Output<boolean>;
     /**
      * The version of the object
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a DnsSecurityPolicyDefinition resource with the given unique name, arguments, and options.
@@ -129,45 +129,45 @@ export class DnsSecurityPolicyDefinition extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as DnsSecurityPolicyDefinitionState | undefined;
-            resourceInputs["ciscoSigCredentialsFeatureTemplateId"] = state ? state.ciscoSigCredentialsFeatureTemplateId : undefined;
-            resourceInputs["ciscoSigCredentialsFeatureTemplateVersion"] = state ? state.ciscoSigCredentialsFeatureTemplateVersion : undefined;
-            resourceInputs["customDnsServerIp"] = state ? state.customDnsServerIp : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["dnscrypt"] = state ? state.dnscrypt : undefined;
-            resourceInputs["domainListId"] = state ? state.domainListId : undefined;
-            resourceInputs["domainListVersion"] = state ? state.domainListVersion : undefined;
-            resourceInputs["localDomainBypassEnabled"] = state ? state.localDomainBypassEnabled : undefined;
-            resourceInputs["matchAllVpn"] = state ? state.matchAllVpn : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["targetVpns"] = state ? state.targetVpns : undefined;
-            resourceInputs["umbrellaDnsDefault"] = state ? state.umbrellaDnsDefault : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["ciscoSigCredentialsFeatureTemplateId"] = state?.ciscoSigCredentialsFeatureTemplateId;
+            resourceInputs["ciscoSigCredentialsFeatureTemplateVersion"] = state?.ciscoSigCredentialsFeatureTemplateVersion;
+            resourceInputs["customDnsServerIp"] = state?.customDnsServerIp;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["dnscrypt"] = state?.dnscrypt;
+            resourceInputs["domainListId"] = state?.domainListId;
+            resourceInputs["domainListVersion"] = state?.domainListVersion;
+            resourceInputs["localDomainBypassEnabled"] = state?.localDomainBypassEnabled;
+            resourceInputs["matchAllVpn"] = state?.matchAllVpn;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["targetVpns"] = state?.targetVpns;
+            resourceInputs["umbrellaDnsDefault"] = state?.umbrellaDnsDefault;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as DnsSecurityPolicyDefinitionArgs | undefined;
-            if ((!args || args.ciscoSigCredentialsFeatureTemplateId === undefined) && !opts.urn) {
+            if (args?.ciscoSigCredentialsFeatureTemplateId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'ciscoSigCredentialsFeatureTemplateId'");
             }
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            if ((!args || args.matchAllVpn === undefined) && !opts.urn) {
+            if (args?.matchAllVpn === undefined && !opts.urn) {
                 throw new Error("Missing required property 'matchAllVpn'");
             }
-            if ((!args || args.umbrellaDnsDefault === undefined) && !opts.urn) {
+            if (args?.umbrellaDnsDefault === undefined && !opts.urn) {
                 throw new Error("Missing required property 'umbrellaDnsDefault'");
             }
-            resourceInputs["ciscoSigCredentialsFeatureTemplateId"] = args ? args.ciscoSigCredentialsFeatureTemplateId : undefined;
-            resourceInputs["ciscoSigCredentialsFeatureTemplateVersion"] = args ? args.ciscoSigCredentialsFeatureTemplateVersion : undefined;
-            resourceInputs["customDnsServerIp"] = args ? args.customDnsServerIp : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["dnscrypt"] = args ? args.dnscrypt : undefined;
-            resourceInputs["domainListId"] = args ? args.domainListId : undefined;
-            resourceInputs["domainListVersion"] = args ? args.domainListVersion : undefined;
-            resourceInputs["localDomainBypassEnabled"] = args ? args.localDomainBypassEnabled : undefined;
-            resourceInputs["matchAllVpn"] = args ? args.matchAllVpn : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["targetVpns"] = args ? args.targetVpns : undefined;
-            resourceInputs["umbrellaDnsDefault"] = args ? args.umbrellaDnsDefault : undefined;
+            resourceInputs["ciscoSigCredentialsFeatureTemplateId"] = args?.ciscoSigCredentialsFeatureTemplateId;
+            resourceInputs["ciscoSigCredentialsFeatureTemplateVersion"] = args?.ciscoSigCredentialsFeatureTemplateVersion;
+            resourceInputs["customDnsServerIp"] = args?.customDnsServerIp;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["dnscrypt"] = args?.dnscrypt;
+            resourceInputs["domainListId"] = args?.domainListId;
+            resourceInputs["domainListVersion"] = args?.domainListVersion;
+            resourceInputs["localDomainBypassEnabled"] = args?.localDomainBypassEnabled;
+            resourceInputs["matchAllVpn"] = args?.matchAllVpn;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["targetVpns"] = args?.targetVpns;
+            resourceInputs["umbrellaDnsDefault"] = args?.umbrellaDnsDefault;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

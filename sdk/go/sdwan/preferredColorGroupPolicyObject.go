@@ -60,15 +60,18 @@ type PreferredColorGroupPolicyObject struct {
 	Name pulumi.StringOutput `pulumi:"name"`
 	// Color or space separated list of colors
 	PrimaryColorPreference pulumi.StringOutput `pulumi:"primaryColorPreference"`
-	// Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+	// Path preference
+	//   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
 	PrimaryPathPreference pulumi.StringPtrOutput `pulumi:"primaryPathPreference"`
 	// Color or space separated list of colors
 	SecondaryColorPreference pulumi.StringPtrOutput `pulumi:"secondaryColorPreference"`
-	// Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+	// Path preference
+	//   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
 	SecondaryPathPreference pulumi.StringPtrOutput `pulumi:"secondaryPathPreference"`
 	// Color or space separated list of colors
 	TertiaryColorPreference pulumi.StringPtrOutput `pulumi:"tertiaryColorPreference"`
-	// Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+	// Path preference
+	//   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
 	TertiaryPathPreference pulumi.StringPtrOutput `pulumi:"tertiaryPathPreference"`
 	// The version of the object
 	Version pulumi.IntOutput `pulumi:"version"`
@@ -111,15 +114,18 @@ type preferredColorGroupPolicyObjectState struct {
 	Name *string `pulumi:"name"`
 	// Color or space separated list of colors
 	PrimaryColorPreference *string `pulumi:"primaryColorPreference"`
-	// Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+	// Path preference
+	//   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
 	PrimaryPathPreference *string `pulumi:"primaryPathPreference"`
 	// Color or space separated list of colors
 	SecondaryColorPreference *string `pulumi:"secondaryColorPreference"`
-	// Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+	// Path preference
+	//   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
 	SecondaryPathPreference *string `pulumi:"secondaryPathPreference"`
 	// Color or space separated list of colors
 	TertiaryColorPreference *string `pulumi:"tertiaryColorPreference"`
-	// Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+	// Path preference
+	//   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
 	TertiaryPathPreference *string `pulumi:"tertiaryPathPreference"`
 	// The version of the object
 	Version *int `pulumi:"version"`
@@ -130,15 +136,18 @@ type PreferredColorGroupPolicyObjectState struct {
 	Name pulumi.StringPtrInput
 	// Color or space separated list of colors
 	PrimaryColorPreference pulumi.StringPtrInput
-	// Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+	// Path preference
+	//   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
 	PrimaryPathPreference pulumi.StringPtrInput
 	// Color or space separated list of colors
 	SecondaryColorPreference pulumi.StringPtrInput
-	// Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+	// Path preference
+	//   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
 	SecondaryPathPreference pulumi.StringPtrInput
 	// Color or space separated list of colors
 	TertiaryColorPreference pulumi.StringPtrInput
-	// Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+	// Path preference
+	//   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
 	TertiaryPathPreference pulumi.StringPtrInput
 	// The version of the object
 	Version pulumi.IntPtrInput
@@ -153,15 +162,18 @@ type preferredColorGroupPolicyObjectArgs struct {
 	Name *string `pulumi:"name"`
 	// Color or space separated list of colors
 	PrimaryColorPreference string `pulumi:"primaryColorPreference"`
-	// Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+	// Path preference
+	//   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
 	PrimaryPathPreference *string `pulumi:"primaryPathPreference"`
 	// Color or space separated list of colors
 	SecondaryColorPreference *string `pulumi:"secondaryColorPreference"`
-	// Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+	// Path preference
+	//   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
 	SecondaryPathPreference *string `pulumi:"secondaryPathPreference"`
 	// Color or space separated list of colors
 	TertiaryColorPreference *string `pulumi:"tertiaryColorPreference"`
-	// Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+	// Path preference
+	//   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
 	TertiaryPathPreference *string `pulumi:"tertiaryPathPreference"`
 }
 
@@ -171,15 +183,18 @@ type PreferredColorGroupPolicyObjectArgs struct {
 	Name pulumi.StringPtrInput
 	// Color or space separated list of colors
 	PrimaryColorPreference pulumi.StringInput
-	// Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+	// Path preference
+	//   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
 	PrimaryPathPreference pulumi.StringPtrInput
 	// Color or space separated list of colors
 	SecondaryColorPreference pulumi.StringPtrInput
-	// Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+	// Path preference
+	//   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
 	SecondaryPathPreference pulumi.StringPtrInput
 	// Color or space separated list of colors
 	TertiaryColorPreference pulumi.StringPtrInput
-	// Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+	// Path preference
+	//   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
 	TertiaryPathPreference pulumi.StringPtrInput
 }
 
@@ -280,7 +295,8 @@ func (o PreferredColorGroupPolicyObjectOutput) PrimaryColorPreference() pulumi.S
 	return o.ApplyT(func(v *PreferredColorGroupPolicyObject) pulumi.StringOutput { return v.PrimaryColorPreference }).(pulumi.StringOutput)
 }
 
-// Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+// Path preference
+//   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
 func (o PreferredColorGroupPolicyObjectOutput) PrimaryPathPreference() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *PreferredColorGroupPolicyObject) pulumi.StringPtrOutput { return v.PrimaryPathPreference }).(pulumi.StringPtrOutput)
 }
@@ -290,7 +306,8 @@ func (o PreferredColorGroupPolicyObjectOutput) SecondaryColorPreference() pulumi
 	return o.ApplyT(func(v *PreferredColorGroupPolicyObject) pulumi.StringPtrOutput { return v.SecondaryColorPreference }).(pulumi.StringPtrOutput)
 }
 
-// Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+// Path preference
+//   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
 func (o PreferredColorGroupPolicyObjectOutput) SecondaryPathPreference() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *PreferredColorGroupPolicyObject) pulumi.StringPtrOutput { return v.SecondaryPathPreference }).(pulumi.StringPtrOutput)
 }
@@ -300,7 +317,8 @@ func (o PreferredColorGroupPolicyObjectOutput) TertiaryColorPreference() pulumi.
 	return o.ApplyT(func(v *PreferredColorGroupPolicyObject) pulumi.StringPtrOutput { return v.TertiaryColorPreference }).(pulumi.StringPtrOutput)
 }
 
-// Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+// Path preference
+//   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
 func (o PreferredColorGroupPolicyObjectOutput) TertiaryPathPreference() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *PreferredColorGroupPolicyObject) pulumi.StringPtrOutput { return v.TertiaryPathPreference }).(pulumi.StringPtrOutput)
 }

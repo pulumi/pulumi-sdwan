@@ -49,69 +49,72 @@ export class CellularControllerFeatureTemplate extends pulumi.CustomResource {
     /**
      * Cellular interface name
      */
-    public readonly cellularInterfaceId!: pulumi.Output<string | undefined>;
+    declare public readonly cellularInterfaceId: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly cellularInterfaceIdVariable!: pulumi.Output<string | undefined>;
+    declare public readonly cellularInterfaceIdVariable: pulumi.Output<string | undefined>;
     /**
      * Data Profile List
      */
-    public readonly dataProfiles!: pulumi.Output<outputs.CellularControllerFeatureTemplateDataProfile[] | undefined>;
+    declare public readonly dataProfiles: pulumi.Output<outputs.CellularControllerFeatureTemplateDataProfile[] | undefined>;
     /**
      * The description of the feature template
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    public readonly deviceTypes!: pulumi.Output<string[]>;
+    declare public readonly deviceTypes: pulumi.Output<string[]>;
     /**
-     * Enable/Disable Firmware Auto Sim - Default value: `true`
+     * Enable/Disable Firmware Auto Sim
+     *   - Default value: `true`
      */
-    public readonly firmwareAutoSim!: pulumi.Output<boolean | undefined>;
+    declare public readonly firmwareAutoSim: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly firmwareAutoSimVariable!: pulumi.Output<string | undefined>;
+    declare public readonly firmwareAutoSimVariable: pulumi.Output<string | undefined>;
     /**
      * The name of the feature template
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
-     * Set primary SIM slot - Range: `0`-`255`
+     * Set primary SIM slot
+     *   - Range: `0`-`255`
      */
-    public readonly primarySimSlot!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly primarySimSlotVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Set SIM failover retries - Range: `0`-`65535`
-     */
-    public readonly simFailoverRetries!: pulumi.Output<number | undefined>;
+    declare public readonly primarySimSlot: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly simFailoverRetriesVariable!: pulumi.Output<string | undefined>;
+    declare public readonly primarySimSlotVariable: pulumi.Output<string | undefined>;
     /**
-     * Set SIM failover timeout in minutes - Range: `3`-`7`
+     * Set SIM failover retries
+     *   - Range: `0`-`65535`
      */
-    public readonly simFailoverTimeout!: pulumi.Output<number | undefined>;
+    declare public readonly simFailoverRetries: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly simFailoverTimeoutVariable!: pulumi.Output<string | undefined>;
+    declare public readonly simFailoverRetriesVariable: pulumi.Output<string | undefined>;
+    /**
+     * Set SIM failover timeout in minutes
+     *   - Range: `3`-`7`
+     */
+    declare public readonly simFailoverTimeout: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly simFailoverTimeoutVariable: pulumi.Output<string | undefined>;
     /**
      * The template type
      */
-    public /*out*/ readonly templateType!: pulumi.Output<string>;
+    declare public /*out*/ readonly templateType: pulumi.Output<string>;
     /**
      * The version of the feature template
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a CellularControllerFeatureTemplate resource with the given unique name, arguments, and options.
@@ -126,44 +129,44 @@ export class CellularControllerFeatureTemplate extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as CellularControllerFeatureTemplateState | undefined;
-            resourceInputs["cellularInterfaceId"] = state ? state.cellularInterfaceId : undefined;
-            resourceInputs["cellularInterfaceIdVariable"] = state ? state.cellularInterfaceIdVariable : undefined;
-            resourceInputs["dataProfiles"] = state ? state.dataProfiles : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["deviceTypes"] = state ? state.deviceTypes : undefined;
-            resourceInputs["firmwareAutoSim"] = state ? state.firmwareAutoSim : undefined;
-            resourceInputs["firmwareAutoSimVariable"] = state ? state.firmwareAutoSimVariable : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["primarySimSlot"] = state ? state.primarySimSlot : undefined;
-            resourceInputs["primarySimSlotVariable"] = state ? state.primarySimSlotVariable : undefined;
-            resourceInputs["simFailoverRetries"] = state ? state.simFailoverRetries : undefined;
-            resourceInputs["simFailoverRetriesVariable"] = state ? state.simFailoverRetriesVariable : undefined;
-            resourceInputs["simFailoverTimeout"] = state ? state.simFailoverTimeout : undefined;
-            resourceInputs["simFailoverTimeoutVariable"] = state ? state.simFailoverTimeoutVariable : undefined;
-            resourceInputs["templateType"] = state ? state.templateType : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["cellularInterfaceId"] = state?.cellularInterfaceId;
+            resourceInputs["cellularInterfaceIdVariable"] = state?.cellularInterfaceIdVariable;
+            resourceInputs["dataProfiles"] = state?.dataProfiles;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["deviceTypes"] = state?.deviceTypes;
+            resourceInputs["firmwareAutoSim"] = state?.firmwareAutoSim;
+            resourceInputs["firmwareAutoSimVariable"] = state?.firmwareAutoSimVariable;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["primarySimSlot"] = state?.primarySimSlot;
+            resourceInputs["primarySimSlotVariable"] = state?.primarySimSlotVariable;
+            resourceInputs["simFailoverRetries"] = state?.simFailoverRetries;
+            resourceInputs["simFailoverRetriesVariable"] = state?.simFailoverRetriesVariable;
+            resourceInputs["simFailoverTimeout"] = state?.simFailoverTimeout;
+            resourceInputs["simFailoverTimeoutVariable"] = state?.simFailoverTimeoutVariable;
+            resourceInputs["templateType"] = state?.templateType;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as CellularControllerFeatureTemplateArgs | undefined;
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            if ((!args || args.deviceTypes === undefined) && !opts.urn) {
+            if (args?.deviceTypes === undefined && !opts.urn) {
                 throw new Error("Missing required property 'deviceTypes'");
             }
-            resourceInputs["cellularInterfaceId"] = args ? args.cellularInterfaceId : undefined;
-            resourceInputs["cellularInterfaceIdVariable"] = args ? args.cellularInterfaceIdVariable : undefined;
-            resourceInputs["dataProfiles"] = args ? args.dataProfiles : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["deviceTypes"] = args ? args.deviceTypes : undefined;
-            resourceInputs["firmwareAutoSim"] = args ? args.firmwareAutoSim : undefined;
-            resourceInputs["firmwareAutoSimVariable"] = args ? args.firmwareAutoSimVariable : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["primarySimSlot"] = args ? args.primarySimSlot : undefined;
-            resourceInputs["primarySimSlotVariable"] = args ? args.primarySimSlotVariable : undefined;
-            resourceInputs["simFailoverRetries"] = args ? args.simFailoverRetries : undefined;
-            resourceInputs["simFailoverRetriesVariable"] = args ? args.simFailoverRetriesVariable : undefined;
-            resourceInputs["simFailoverTimeout"] = args ? args.simFailoverTimeout : undefined;
-            resourceInputs["simFailoverTimeoutVariable"] = args ? args.simFailoverTimeoutVariable : undefined;
+            resourceInputs["cellularInterfaceId"] = args?.cellularInterfaceId;
+            resourceInputs["cellularInterfaceIdVariable"] = args?.cellularInterfaceIdVariable;
+            resourceInputs["dataProfiles"] = args?.dataProfiles;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["deviceTypes"] = args?.deviceTypes;
+            resourceInputs["firmwareAutoSim"] = args?.firmwareAutoSim;
+            resourceInputs["firmwareAutoSimVariable"] = args?.firmwareAutoSimVariable;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["primarySimSlot"] = args?.primarySimSlot;
+            resourceInputs["primarySimSlotVariable"] = args?.primarySimSlotVariable;
+            resourceInputs["simFailoverRetries"] = args?.simFailoverRetries;
+            resourceInputs["simFailoverRetriesVariable"] = args?.simFailoverRetriesVariable;
+            resourceInputs["simFailoverTimeout"] = args?.simFailoverTimeout;
+            resourceInputs["simFailoverTimeoutVariable"] = args?.simFailoverTimeoutVariable;
             resourceInputs["templateType"] = undefined /*out*/;
             resourceInputs["version"] = undefined /*out*/;
         }
@@ -193,13 +196,13 @@ export interface CellularControllerFeatureTemplateState {
      */
     description?: pulumi.Input<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
     deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Enable/Disable Firmware Auto Sim - Default value: `true`
+     * Enable/Disable Firmware Auto Sim
+     *   - Default value: `true`
      */
     firmwareAutoSim?: pulumi.Input<boolean>;
     /**
@@ -211,7 +214,8 @@ export interface CellularControllerFeatureTemplateState {
      */
     name?: pulumi.Input<string>;
     /**
-     * Set primary SIM slot - Range: `0`-`255`
+     * Set primary SIM slot
+     *   - Range: `0`-`255`
      */
     primarySimSlot?: pulumi.Input<number>;
     /**
@@ -219,7 +223,8 @@ export interface CellularControllerFeatureTemplateState {
      */
     primarySimSlotVariable?: pulumi.Input<string>;
     /**
-     * Set SIM failover retries - Range: `0`-`65535`
+     * Set SIM failover retries
+     *   - Range: `0`-`65535`
      */
     simFailoverRetries?: pulumi.Input<number>;
     /**
@@ -227,7 +232,8 @@ export interface CellularControllerFeatureTemplateState {
      */
     simFailoverRetriesVariable?: pulumi.Input<string>;
     /**
-     * Set SIM failover timeout in minutes - Range: `3`-`7`
+     * Set SIM failover timeout in minutes
+     *   - Range: `3`-`7`
      */
     simFailoverTimeout?: pulumi.Input<number>;
     /**
@@ -265,13 +271,13 @@ export interface CellularControllerFeatureTemplateArgs {
      */
     description: pulumi.Input<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
     deviceTypes: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Enable/Disable Firmware Auto Sim - Default value: `true`
+     * Enable/Disable Firmware Auto Sim
+     *   - Default value: `true`
      */
     firmwareAutoSim?: pulumi.Input<boolean>;
     /**
@@ -283,7 +289,8 @@ export interface CellularControllerFeatureTemplateArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * Set primary SIM slot - Range: `0`-`255`
+     * Set primary SIM slot
+     *   - Range: `0`-`255`
      */
     primarySimSlot?: pulumi.Input<number>;
     /**
@@ -291,7 +298,8 @@ export interface CellularControllerFeatureTemplateArgs {
      */
     primarySimSlotVariable?: pulumi.Input<string>;
     /**
-     * Set SIM failover retries - Range: `0`-`65535`
+     * Set SIM failover retries
+     *   - Range: `0`-`65535`
      */
     simFailoverRetries?: pulumi.Input<number>;
     /**
@@ -299,7 +307,8 @@ export interface CellularControllerFeatureTemplateArgs {
      */
     simFailoverRetriesVariable?: pulumi.Input<string>;
     /**
-     * Set SIM failover timeout in minutes - Range: `3`-`7`
+     * Set SIM failover timeout in minutes
+     *   - Range: `3`-`7`
      */
     simFailoverTimeout?: pulumi.Input<number>;
     /**

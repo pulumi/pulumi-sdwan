@@ -66,14 +66,16 @@ public class IntrusionPreventionPolicyDefinition extends com.pulumi.resources.Cu
         return this.description;
     }
     /**
-     * The inspection mode - Choices: `protection`, `detection`
+     * The inspection mode
+     *   - Choices: `protection`, `detection`
      * 
      */
     @Export(name="inspectionMode", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> inspectionMode;
 
     /**
-     * @return The inspection mode - Choices: `protection`, `detection`
+     * @return The inspection mode
+     *   - Choices: `protection`, `detection`
      * 
      */
     public Output<Optional<String>> inspectionMode() {
@@ -108,14 +110,16 @@ public class IntrusionPreventionPolicyDefinition extends com.pulumi.resources.Cu
         return Codegen.optional(this.ipsSignatureListVersion);
     }
     /**
-     * Log level - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
+     * Log level
+     *   - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
      * 
      */
     @Export(name="logLevel", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> logLevel;
 
     /**
-     * @return Log level - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
+     * @return Log level
+     *   - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
      * 
      */
     public Output<Optional<String>> logLevel() {
@@ -128,14 +132,16 @@ public class IntrusionPreventionPolicyDefinition extends com.pulumi.resources.Cu
         return Codegen.optional(this.loggings);
     }
     /**
-     * The policy mode - Choices: `security`, `unified`
+     * The policy mode
+     *   - Choices: `security`, `unified`
      * 
      */
     @Export(name="mode", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> mode;
 
     /**
-     * @return The policy mode - Choices: `security`, `unified`
+     * @return The policy mode
+     *   - Choices: `security`, `unified`
      * 
      */
     public Output<Optional<String>> mode() {
@@ -156,14 +162,16 @@ public class IntrusionPreventionPolicyDefinition extends com.pulumi.resources.Cu
         return this.name;
     }
     /**
-     * Signature set - Choices: `balanced`, `connectivity`, `security`
+     * Signature set
+     *   - Choices: `balanced`, `connectivity`, `security`
      * 
      */
     @Export(name="signatureSet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> signatureSet;
 
     /**
-     * @return Signature set - Choices: `balanced`, `connectivity`, `security`
+     * @return Signature set
+     *   - Choices: `balanced`, `connectivity`, `security`
      * 
      */
     public Output<Optional<String>> signatureSet() {

@@ -38,14 +38,18 @@ public final class CiscoOspfFeatureTemplateState extends com.pulumi.resources.Re
     }
 
     /**
-     * Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+     * Set reference bandwidth method to assign OSPF cost
+     *   - Range: `1`-`4294967`
+     *   - Default value: `100`
      * 
      */
     @Import(name="autoCostReferenceBandwidth")
     private @Nullable Output<Integer> autoCostReferenceBandwidth;
 
     /**
-     * @return Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+     * @return Set reference bandwidth method to assign OSPF cost
+     *   - Range: `1`-`4294967`
+     *   - Default value: `100`
      * 
      */
     public Optional<Output<Integer>> autoCostReferenceBandwidth() {
@@ -68,14 +72,16 @@ public final class CiscoOspfFeatureTemplateState extends com.pulumi.resources.Re
     }
 
     /**
-     * Calculate summary route cost based on RFC 1583 - Default value: `true`
+     * Calculate summary route cost based on RFC 1583
+     *   - Default value: `true`
      * 
      */
     @Import(name="compatibleRfc1583")
     private @Nullable Output<Boolean> compatibleRfc1583;
 
     /**
-     * @return Calculate summary route cost based on RFC 1583 - Default value: `true`
+     * @return Calculate summary route cost based on RFC 1583
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> compatibleRfc1583() {
@@ -98,14 +104,16 @@ public final class CiscoOspfFeatureTemplateState extends com.pulumi.resources.Re
     }
 
     /**
-     * Distribute default external route into OSPF - Default value: `false`
+     * Distribute default external route into OSPF
+     *   - Default value: `false`
      * 
      */
     @Import(name="defaultInformationOriginate")
     private @Nullable Output<Boolean> defaultInformationOriginate;
 
     /**
-     * @return Distribute default external route into OSPF - Default value: `false`
+     * @return Distribute default external route into OSPF
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> defaultInformationOriginate() {
@@ -113,14 +121,16 @@ public final class CiscoOspfFeatureTemplateState extends com.pulumi.resources.Re
     }
 
     /**
-     * Always advertise default route - Default value: `false`
+     * Always advertise default route
+     *   - Default value: `false`
      * 
      */
     @Import(name="defaultInformationOriginateAlways")
     private @Nullable Output<Boolean> defaultInformationOriginateAlways;
 
     /**
-     * @return Always advertise default route - Default value: `false`
+     * @return Always advertise default route
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> defaultInformationOriginateAlways() {
@@ -143,14 +153,16 @@ public final class CiscoOspfFeatureTemplateState extends com.pulumi.resources.Re
     }
 
     /**
-     * Set metric used to generate default route &lt;0..16777214&gt; - Range: `0`-`16777214`
+     * Set metric used to generate default route &lt;0..16777214&gt;
+     *   - Range: `0`-`16777214`
      * 
      */
     @Import(name="defaultInformationOriginateMetric")
     private @Nullable Output<Integer> defaultInformationOriginateMetric;
 
     /**
-     * @return Set metric used to generate default route &lt;0..16777214&gt; - Range: `0`-`16777214`
+     * @return Set metric used to generate default route &lt;0..16777214&gt;
+     *   - Range: `0`-`16777214`
      * 
      */
     public Optional<Output<Integer>> defaultInformationOriginateMetric() {
@@ -158,14 +170,16 @@ public final class CiscoOspfFeatureTemplateState extends com.pulumi.resources.Re
     }
 
     /**
-     * Set default route type - Choices: `type1`, `type2`
+     * Set default route type
+     *   - Choices: `type1`, `type2`
      * 
      */
     @Import(name="defaultInformationOriginateMetricType")
     private @Nullable Output<String> defaultInformationOriginateMetricType;
 
     /**
-     * @return Set default route type - Choices: `type1`, `type2`
+     * @return Set default route type
+     *   - Choices: `type1`, `type2`
      * 
      */
     public Optional<Output<String>> defaultInformationOriginateMetricType() {
@@ -218,18 +232,16 @@ public final class CiscoOspfFeatureTemplateState extends com.pulumi.resources.Re
     }
 
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Import(name="deviceTypes")
     private @Nullable Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Optional<Output<List<String>>> deviceTypes() {
@@ -237,14 +249,18 @@ public final class CiscoOspfFeatureTemplateState extends com.pulumi.resources.Re
     }
 
     /**
-     * Set distance for external routes - Range: `1`-`255` - Default value: `110`
+     * Set distance for external routes
+     *   - Range: `1`-`255`
+     *   - Default value: `110`
      * 
      */
     @Import(name="distanceExternal")
     private @Nullable Output<Integer> distanceExternal;
 
     /**
-     * @return Set distance for external routes - Range: `1`-`255` - Default value: `110`
+     * @return Set distance for external routes
+     *   - Range: `1`-`255`
+     *   - Default value: `110`
      * 
      */
     public Optional<Output<Integer>> distanceExternal() {
@@ -267,14 +283,18 @@ public final class CiscoOspfFeatureTemplateState extends com.pulumi.resources.Re
     }
 
     /**
-     * Set distance for inter-area routes - Range: `1`-`255` - Default value: `110`
+     * Set distance for inter-area routes
+     *   - Range: `1`-`255`
+     *   - Default value: `110`
      * 
      */
     @Import(name="distanceInterArea")
     private @Nullable Output<Integer> distanceInterArea;
 
     /**
-     * @return Set distance for inter-area routes - Range: `1`-`255` - Default value: `110`
+     * @return Set distance for inter-area routes
+     *   - Range: `1`-`255`
+     *   - Default value: `110`
      * 
      */
     public Optional<Output<Integer>> distanceInterArea() {
@@ -297,14 +317,18 @@ public final class CiscoOspfFeatureTemplateState extends com.pulumi.resources.Re
     }
 
     /**
-     * Set distance for intra-area routes - Range: `1`-`255` - Default value: `110`
+     * Set distance for intra-area routes
+     *   - Range: `1`-`255`
+     *   - Default value: `110`
      * 
      */
     @Import(name="distanceIntraArea")
     private @Nullable Output<Integer> distanceIntraArea;
 
     /**
-     * @return Set distance for intra-area routes - Range: `1`-`255` - Default value: `110`
+     * @return Set distance for intra-area routes
+     *   - Range: `1`-`255`
+     *   - Default value: `110`
      * 
      */
     public Optional<Output<Integer>> distanceIntraArea() {
@@ -432,14 +456,18 @@ public final class CiscoOspfFeatureTemplateState extends com.pulumi.resources.Re
     }
 
     /**
-     * Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+     * Set delay from first change received until performing SPF calculation
+     *   - Range: `1`-`600000`
+     *   - Default value: `200`
      * 
      */
     @Import(name="timersSpfDelay")
     private @Nullable Output<Integer> timersSpfDelay;
 
     /**
-     * @return Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+     * @return Set delay from first change received until performing SPF calculation
+     *   - Range: `1`-`600000`
+     *   - Default value: `200`
      * 
      */
     public Optional<Output<Integer>> timersSpfDelay() {
@@ -462,14 +490,18 @@ public final class CiscoOspfFeatureTemplateState extends com.pulumi.resources.Re
     }
 
     /**
-     * Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
+     * Set initial hold time between consecutive SPF calculations
+     *   - Range: `1`-`600000`
+     *   - Default value: `1000`
      * 
      */
     @Import(name="timersSpfInitialHold")
     private @Nullable Output<Integer> timersSpfInitialHold;
 
     /**
-     * @return Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
+     * @return Set initial hold time between consecutive SPF calculations
+     *   - Range: `1`-`600000`
+     *   - Default value: `1000`
      * 
      */
     public Optional<Output<Integer>> timersSpfInitialHold() {
@@ -492,14 +524,18 @@ public final class CiscoOspfFeatureTemplateState extends com.pulumi.resources.Re
     }
 
     /**
-     * Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+     * Set maximum hold time between consecutive SPF calculations
+     *   - Range: `1`-`600000`
+     *   - Default value: `10000`
      * 
      */
     @Import(name="timersSpfMaxHold")
     private @Nullable Output<Integer> timersSpfMaxHold;
 
     /**
-     * @return Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+     * @return Set maximum hold time between consecutive SPF calculations
+     *   - Range: `1`-`600000`
+     *   - Default value: `10000`
      * 
      */
     public Optional<Output<Integer>> timersSpfMaxHold() {
@@ -625,7 +661,9 @@ public final class CiscoOspfFeatureTemplateState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param autoCostReferenceBandwidth Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+         * @param autoCostReferenceBandwidth Set reference bandwidth method to assign OSPF cost
+         *   - Range: `1`-`4294967`
+         *   - Default value: `100`
          * 
          * @return builder
          * 
@@ -636,7 +674,9 @@ public final class CiscoOspfFeatureTemplateState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param autoCostReferenceBandwidth Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+         * @param autoCostReferenceBandwidth Set reference bandwidth method to assign OSPF cost
+         *   - Range: `1`-`4294967`
+         *   - Default value: `100`
          * 
          * @return builder
          * 
@@ -667,7 +707,8 @@ public final class CiscoOspfFeatureTemplateState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param compatibleRfc1583 Calculate summary route cost based on RFC 1583 - Default value: `true`
+         * @param compatibleRfc1583 Calculate summary route cost based on RFC 1583
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -678,7 +719,8 @@ public final class CiscoOspfFeatureTemplateState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param compatibleRfc1583 Calculate summary route cost based on RFC 1583 - Default value: `true`
+         * @param compatibleRfc1583 Calculate summary route cost based on RFC 1583
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -709,7 +751,8 @@ public final class CiscoOspfFeatureTemplateState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param defaultInformationOriginate Distribute default external route into OSPF - Default value: `false`
+         * @param defaultInformationOriginate Distribute default external route into OSPF
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -720,7 +763,8 @@ public final class CiscoOspfFeatureTemplateState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param defaultInformationOriginate Distribute default external route into OSPF - Default value: `false`
+         * @param defaultInformationOriginate Distribute default external route into OSPF
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -730,7 +774,8 @@ public final class CiscoOspfFeatureTemplateState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param defaultInformationOriginateAlways Always advertise default route - Default value: `false`
+         * @param defaultInformationOriginateAlways Always advertise default route
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -741,7 +786,8 @@ public final class CiscoOspfFeatureTemplateState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param defaultInformationOriginateAlways Always advertise default route - Default value: `false`
+         * @param defaultInformationOriginateAlways Always advertise default route
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -772,7 +818,8 @@ public final class CiscoOspfFeatureTemplateState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param defaultInformationOriginateMetric Set metric used to generate default route &lt;0..16777214&gt; - Range: `0`-`16777214`
+         * @param defaultInformationOriginateMetric Set metric used to generate default route &lt;0..16777214&gt;
+         *   - Range: `0`-`16777214`
          * 
          * @return builder
          * 
@@ -783,7 +830,8 @@ public final class CiscoOspfFeatureTemplateState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param defaultInformationOriginateMetric Set metric used to generate default route &lt;0..16777214&gt; - Range: `0`-`16777214`
+         * @param defaultInformationOriginateMetric Set metric used to generate default route &lt;0..16777214&gt;
+         *   - Range: `0`-`16777214`
          * 
          * @return builder
          * 
@@ -793,7 +841,8 @@ public final class CiscoOspfFeatureTemplateState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param defaultInformationOriginateMetricType Set default route type - Choices: `type1`, `type2`
+         * @param defaultInformationOriginateMetricType Set default route type
+         *   - Choices: `type1`, `type2`
          * 
          * @return builder
          * 
@@ -804,7 +853,8 @@ public final class CiscoOspfFeatureTemplateState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param defaultInformationOriginateMetricType Set default route type - Choices: `type1`, `type2`
+         * @param defaultInformationOriginateMetricType Set default route type
+         *   - Choices: `type1`, `type2`
          * 
          * @return builder
          * 
@@ -877,9 +927,8 @@ public final class CiscoOspfFeatureTemplateState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -890,9 +939,8 @@ public final class CiscoOspfFeatureTemplateState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -902,9 +950,8 @@ public final class CiscoOspfFeatureTemplateState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -914,7 +961,9 @@ public final class CiscoOspfFeatureTemplateState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param distanceExternal Set distance for external routes - Range: `1`-`255` - Default value: `110`
+         * @param distanceExternal Set distance for external routes
+         *   - Range: `1`-`255`
+         *   - Default value: `110`
          * 
          * @return builder
          * 
@@ -925,7 +974,9 @@ public final class CiscoOspfFeatureTemplateState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param distanceExternal Set distance for external routes - Range: `1`-`255` - Default value: `110`
+         * @param distanceExternal Set distance for external routes
+         *   - Range: `1`-`255`
+         *   - Default value: `110`
          * 
          * @return builder
          * 
@@ -956,7 +1007,9 @@ public final class CiscoOspfFeatureTemplateState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param distanceInterArea Set distance for inter-area routes - Range: `1`-`255` - Default value: `110`
+         * @param distanceInterArea Set distance for inter-area routes
+         *   - Range: `1`-`255`
+         *   - Default value: `110`
          * 
          * @return builder
          * 
@@ -967,7 +1020,9 @@ public final class CiscoOspfFeatureTemplateState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param distanceInterArea Set distance for inter-area routes - Range: `1`-`255` - Default value: `110`
+         * @param distanceInterArea Set distance for inter-area routes
+         *   - Range: `1`-`255`
+         *   - Default value: `110`
          * 
          * @return builder
          * 
@@ -998,7 +1053,9 @@ public final class CiscoOspfFeatureTemplateState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param distanceIntraArea Set distance for intra-area routes - Range: `1`-`255` - Default value: `110`
+         * @param distanceIntraArea Set distance for intra-area routes
+         *   - Range: `1`-`255`
+         *   - Default value: `110`
          * 
          * @return builder
          * 
@@ -1009,7 +1066,9 @@ public final class CiscoOspfFeatureTemplateState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param distanceIntraArea Set distance for intra-area routes - Range: `1`-`255` - Default value: `110`
+         * @param distanceIntraArea Set distance for intra-area routes
+         *   - Range: `1`-`255`
+         *   - Default value: `110`
          * 
          * @return builder
          * 
@@ -1217,7 +1276,9 @@ public final class CiscoOspfFeatureTemplateState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param timersSpfDelay Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+         * @param timersSpfDelay Set delay from first change received until performing SPF calculation
+         *   - Range: `1`-`600000`
+         *   - Default value: `200`
          * 
          * @return builder
          * 
@@ -1228,7 +1289,9 @@ public final class CiscoOspfFeatureTemplateState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param timersSpfDelay Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+         * @param timersSpfDelay Set delay from first change received until performing SPF calculation
+         *   - Range: `1`-`600000`
+         *   - Default value: `200`
          * 
          * @return builder
          * 
@@ -1259,7 +1322,9 @@ public final class CiscoOspfFeatureTemplateState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param timersSpfInitialHold Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
+         * @param timersSpfInitialHold Set initial hold time between consecutive SPF calculations
+         *   - Range: `1`-`600000`
+         *   - Default value: `1000`
          * 
          * @return builder
          * 
@@ -1270,7 +1335,9 @@ public final class CiscoOspfFeatureTemplateState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param timersSpfInitialHold Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
+         * @param timersSpfInitialHold Set initial hold time between consecutive SPF calculations
+         *   - Range: `1`-`600000`
+         *   - Default value: `1000`
          * 
          * @return builder
          * 
@@ -1301,7 +1368,9 @@ public final class CiscoOspfFeatureTemplateState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param timersSpfMaxHold Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+         * @param timersSpfMaxHold Set maximum hold time between consecutive SPF calculations
+         *   - Range: `1`-`600000`
+         *   - Default value: `10000`
          * 
          * @return builder
          * 
@@ -1312,7 +1381,9 @@ public final class CiscoOspfFeatureTemplateState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param timersSpfMaxHold Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+         * @param timersSpfMaxHold Set maximum hold time between consecutive SPF calculations
+         *   - Range: `1`-`600000`
+         *   - Default value: `10000`
          * 
          * @return builder
          * 

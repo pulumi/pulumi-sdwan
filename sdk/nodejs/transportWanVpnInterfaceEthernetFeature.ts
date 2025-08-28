@@ -48,796 +48,859 @@ export class TransportWanVpnInterfaceEthernetFeature extends pulumi.CustomResour
         return obj['__pulumiType'] === TransportWanVpnInterfaceEthernetFeature.__pulumiType;
     }
 
-    public readonly aclIpv4EgressFeatureId!: pulumi.Output<string | undefined>;
-    public readonly aclIpv4IngressFeatureId!: pulumi.Output<string | undefined>;
-    public readonly aclIpv6EgressFeatureId!: pulumi.Output<string | undefined>;
-    public readonly aclIpv6IngressFeatureId!: pulumi.Output<string | undefined>;
+    declare public readonly aclIpv4EgressFeatureId: pulumi.Output<string | undefined>;
+    declare public readonly aclIpv4IngressFeatureId: pulumi.Output<string | undefined>;
+    declare public readonly aclIpv6EgressFeatureId: pulumi.Output<string | undefined>;
+    declare public readonly aclIpv6IngressFeatureId: pulumi.Output<string | undefined>;
     /**
-     * Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
+     * Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+     *   - Range: `0`-`2147483`
+     *   - Default value: `1200`
      */
-    public readonly arpTimeout!: pulumi.Output<number | undefined>;
+    declare public readonly arpTimeout: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly arpTimeoutVariable!: pulumi.Output<string | undefined>;
+    declare public readonly arpTimeoutVariable: pulumi.Output<string | undefined>;
     /**
      * Configure ARP entries
      */
-    public readonly arps!: pulumi.Output<outputs.TransportWanVpnInterfaceEthernetFeatureArp[] | undefined>;
+    declare public readonly arps: pulumi.Output<outputs.TransportWanVpnInterfaceEthernetFeatureArp[] | undefined>;
     /**
-     * Interface auto detect bandwidth - Default value: `false`
+     * Interface auto detect bandwidth
+     *   - Default value: `false`
      */
-    public readonly autoDetectBandwidth!: pulumi.Output<boolean | undefined>;
+    declare public readonly autoDetectBandwidth: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly autoDetectBandwidthVariable!: pulumi.Output<string | undefined>;
+    declare public readonly autoDetectBandwidthVariable: pulumi.Output<string | undefined>;
     /**
      * Link autonegotiation
      */
-    public readonly autonegotiate!: pulumi.Output<boolean | undefined>;
+    declare public readonly autonegotiate: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly autonegotiateVariable!: pulumi.Output<string | undefined>;
+    declare public readonly autonegotiateVariable: pulumi.Output<string | undefined>;
     /**
-     * Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+     * Interface downstream bandwidth capacity, in kbps
+     *   - Range: `1`-`2147483647`
      */
-    public readonly bandwidthDownstream!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly bandwidthDownstreamVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Interface upstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
-     */
-    public readonly bandwidthUpstream!: pulumi.Output<number | undefined>;
+    declare public readonly bandwidthDownstream: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly bandwidthUpstreamVariable!: pulumi.Output<string | undefined>;
+    declare public readonly bandwidthDownstreamVariable: pulumi.Output<string | undefined>;
     /**
-     * Block packets originating from IP address that is not from this source - Default value: `false`
+     * Interface upstream bandwidth capacity, in kbps
+     *   - Range: `1`-`2147483647`
      */
-    public readonly blockNonSourceIp!: pulumi.Output<boolean | undefined>;
+    declare public readonly bandwidthUpstream: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly blockNonSourceIpVariable!: pulumi.Output<string | undefined>;
+    declare public readonly bandwidthUpstreamVariable: pulumi.Output<string | undefined>;
+    /**
+     * Block packets originating from IP address that is not from this source
+     *   - Default value: `false`
+     */
+    declare public readonly blockNonSourceIp: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly blockNonSourceIpVariable: pulumi.Output<string | undefined>;
     /**
      * The description of the Feature
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * Duplex mode - Choices: `full`, `half`, `auto`
+     * Duplex mode
+     *   - Choices: `full`, `half`, `auto`
      */
-    public readonly duplex!: pulumi.Output<string | undefined>;
+    declare public readonly duplex: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly duplexVariable!: pulumi.Output<string | undefined>;
+    declare public readonly duplexVariable: pulumi.Output<string | undefined>;
     /**
      * Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
      */
-    public readonly enableDhcpv6!: pulumi.Output<boolean | undefined>;
+    declare public readonly enableDhcpv6: pulumi.Output<boolean | undefined>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
      * GRE tunnel source IP
      */
-    public readonly greTunnelSourceIp!: pulumi.Output<string | undefined>;
+    declare public readonly greTunnelSourceIp: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly greTunnelSourceIpVariable!: pulumi.Output<string | undefined>;
+    declare public readonly greTunnelSourceIpVariable: pulumi.Output<string | undefined>;
     /**
-     * ICMP/ICMPv6 Redirect Disable - Default value: `true`
+     * ICMP/ICMPv6 Redirect Disable
+     *   - Default value: `true`
      */
-    public readonly icmpRedirectDisable!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly icmpRedirectDisableVariable!: pulumi.Output<string | undefined>;
-    public readonly interfaceDescription!: pulumi.Output<string | undefined>;
+    declare public readonly icmpRedirectDisable: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly interfaceDescriptionVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Interface MTU GigabitEthernet0 <1500..1518>, Other GigabitEthernet <1500..9216> in bytes - Range: `1500`-`9216` -
-     * Default value: `1500`
-     */
-    public readonly interfaceMtu!: pulumi.Output<number | undefined>;
+    declare public readonly icmpRedirectDisableVariable: pulumi.Output<string | undefined>;
+    declare public readonly interfaceDescription: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly interfaceMtuVariable!: pulumi.Output<string | undefined>;
-    public readonly interfaceName!: pulumi.Output<string | undefined>;
+    declare public readonly interfaceDescriptionVariable: pulumi.Output<string | undefined>;
+    /**
+     * Interface MTU GigabitEthernet0 <1500..1518>, Other GigabitEthernet <1500..9216> in bytes
+     *   - Range: `1500`-`9216`
+     *   - Default value: `1500`
+     */
+    declare public readonly interfaceMtu: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly interfaceNameVariable!: pulumi.Output<string | undefined>;
-    /**
-     * IP Directed-Broadcast - Default value: `false`
-     */
-    public readonly ipDirectedBroadcast!: pulumi.Output<boolean | undefined>;
+    declare public readonly interfaceMtuVariable: pulumi.Output<string | undefined>;
+    declare public readonly interfaceName: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly ipDirectedBroadcastVariable!: pulumi.Output<string | undefined>;
+    declare public readonly interfaceNameVariable: pulumi.Output<string | undefined>;
     /**
-     * IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces
-     * <576..2000> in bytes - Range: `576`-`9216` - Default value: `1500`
+     * IP Directed-Broadcast
+     *   - Default value: `false`
      */
-    public readonly ipMtu!: pulumi.Output<number | undefined>;
+    declare public readonly ipDirectedBroadcast: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly ipMtuVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ipDirectedBroadcastVariable: pulumi.Output<string | undefined>;
+    /**
+     * IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes
+     *   - Range: `576`-`9216`
+     *   - Default value: `1500`
+     */
+    declare public readonly ipMtu: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly ipMtuVariable: pulumi.Output<string | undefined>;
     /**
      * Iperf server for auto bandwidth detect
      */
-    public readonly iperfServer!: pulumi.Output<string | undefined>;
+    declare public readonly iperfServer: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly iperfServerVariable!: pulumi.Output<string | undefined>;
+    declare public readonly iperfServerVariable: pulumi.Output<string | undefined>;
     /**
      * IP Address, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      */
-    public readonly ipv4Address!: pulumi.Output<string | undefined>;
+    declare public readonly ipv4Address: pulumi.Output<string | undefined>;
     /**
      * Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      */
-    public readonly ipv4AddressVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ipv4AddressVariable: pulumi.Output<string | undefined>;
     /**
-     * IPv4 Configuration Type - Choices: `dynamic`, `static` - Default value: `dynamic`
+     * IPv4 Configuration Type
+     *   - Choices: `dynamic`, `static`
+     *   - Default value: `dynamic`
      */
-    public readonly ipv4ConfigurationType!: pulumi.Output<string | undefined>;
+    declare public readonly ipv4ConfigurationType: pulumi.Output<string | undefined>;
     /**
-     * DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic` - Range: `1`-`65536` - Default
-     * value: `1`
+     * DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
+     *   - Range: `1`-`65536`
+     *   - Default value: `1`
      */
-    public readonly ipv4DhcpDistance!: pulumi.Output<number | undefined>;
+    declare public readonly ipv4DhcpDistance: pulumi.Output<number | undefined>;
     /**
      * Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
      */
-    public readonly ipv4DhcpDistanceVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ipv4DhcpDistanceVariable: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly ipv4DhcpHelperVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ipv4DhcpHelperVariable: pulumi.Output<string | undefined>;
     /**
      * List of DHCP IPv4 helper addresses (min 1, max 8)
      */
-    public readonly ipv4DhcpHelpers!: pulumi.Output<string[] | undefined>;
+    declare public readonly ipv4DhcpHelpers: pulumi.Output<string[] | undefined>;
     /**
      * Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      */
-    public readonly ipv4SecondaryAddresses!: pulumi.Output<outputs.TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress[] | undefined>;
+    declare public readonly ipv4SecondaryAddresses: pulumi.Output<outputs.TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress[] | undefined>;
     /**
-     * Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static` - Choices: `255.255.255.255`,
-     * `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`,
-     * `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`,
-     * `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`,
-     * `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`,
-     * `128.0.0.0`, `0.0.0.0`
+     * Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
-    public readonly ipv4SubnetMask!: pulumi.Output<string | undefined>;
+    declare public readonly ipv4SubnetMask: pulumi.Output<string | undefined>;
     /**
      * Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      */
-    public readonly ipv4SubnetMaskVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ipv4SubnetMaskVariable: pulumi.Output<string | undefined>;
     /**
      * IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
      */
-    public readonly ipv6Address!: pulumi.Output<string | undefined>;
+    declare public readonly ipv6Address: pulumi.Output<string | undefined>;
     /**
      * Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
      */
-    public readonly ipv6AddressVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ipv6AddressVariable: pulumi.Output<string | undefined>;
     /**
-     * IPv6 Configuration Type - Choices: `dynamic`, `static`, `none` - Default value: `none`
+     * IPv6 Configuration Type
+     *   - Choices: `dynamic`, `static`, `none`
+     *   - Default value: `none`
      */
-    public readonly ipv6ConfigurationType!: pulumi.Output<string | undefined>;
+    declare public readonly ipv6ConfigurationType: pulumi.Output<string | undefined>;
     /**
      * secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
      */
-    public readonly ipv6DhcpSecondaryAddresses!: pulumi.Output<outputs.TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress[] | undefined>;
+    declare public readonly ipv6DhcpSecondaryAddresses: pulumi.Output<outputs.TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress[] | undefined>;
     /**
      * Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
      */
-    public readonly ipv6SecondaryAddresses!: pulumi.Output<outputs.TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress[] | undefined>;
+    declare public readonly ipv6SecondaryAddresses: pulumi.Output<outputs.TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress[] | undefined>;
     /**
-     * Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+     * Interval for interface load calculation
+     *   - Range: `30`-`600`
+     *   - Default value: `30`
      */
-    public readonly loadInterval!: pulumi.Output<number | undefined>;
+    declare public readonly loadInterval: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly loadIntervalVariable!: pulumi.Output<string | undefined>;
+    declare public readonly loadIntervalVariable: pulumi.Output<string | undefined>;
     /**
      * MAC Address
      */
-    public readonly macAddress!: pulumi.Output<string | undefined>;
+    declare public readonly macAddress: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly macAddressVariable!: pulumi.Output<string | undefined>;
+    declare public readonly macAddressVariable: pulumi.Output<string | undefined>;
     /**
-     * Media type - Choices: `auto-select`, `rj45`, `sfp`
+     * Media type
+     *   - Choices: `auto-select`, `rj45`, `sfp`
      */
-    public readonly mediaType!: pulumi.Output<string | undefined>;
+    declare public readonly mediaType: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly mediaTypeVariable!: pulumi.Output<string | undefined>;
+    declare public readonly mediaTypeVariable: pulumi.Output<string | undefined>;
     /**
      * The name of the Feature
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
-     * NAT64 on this interface, Attribute conditional on `natIpv6` being equal to `true` - Default value: `false`
+     * NAT64 on this interface, Attribute conditional on `natIpv6` being equal to `true`
+     *   - Default value: `false`
      */
-    public readonly nat64!: pulumi.Output<boolean | undefined>;
+    declare public readonly nat64: pulumi.Output<boolean | undefined>;
     /**
-     * NAT66 on this interface, Attribute conditional on `natIpv6` being equal to `true` - Default value: `false`
+     * NAT66 on this interface, Attribute conditional on `natIpv6` being equal to `true`
+     *   - Default value: `false`
      */
-    public readonly nat66!: pulumi.Output<boolean | undefined>;
+    declare public readonly nat66: pulumi.Output<boolean | undefined>;
     /**
-     * enable Network Address Translation on this interface - Default value: `false`
+     * enable Network Address Translation on this interface
+     *   - Default value: `false`
      */
-    public readonly natIpv4!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly natIpv4Variable!: pulumi.Output<string | undefined>;
-    /**
-     * enable Network Address Translation ipv6 on this interface - Default value: `false`
-     */
-    public readonly natIpv6!: pulumi.Output<boolean | undefined>;
+    declare public readonly natIpv4: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly natIpv6Variable!: pulumi.Output<string | undefined>;
+    declare public readonly natIpv4Variable: pulumi.Output<string | undefined>;
+    /**
+     * enable Network Address Translation ipv6 on this interface
+     *   - Default value: `false`
+     */
+    declare public readonly natIpv6: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly natIpv6Variable: pulumi.Output<string | undefined>;
     /**
      * NAT Inside Source Loopback Interface, Attribute conditional on `natIpv4` being equal to `true`
      */
-    public readonly natLoopback!: pulumi.Output<string | undefined>;
+    declare public readonly natLoopback: pulumi.Output<string | undefined>;
     /**
      * Variable name, Attribute conditional on `natIpv4` being equal to `true`
      */
-    public readonly natLoopbackVariable!: pulumi.Output<string | undefined>;
+    declare public readonly natLoopbackVariable: pulumi.Output<string | undefined>;
     /**
-     * NAT Overload, Attribute conditional on `natIpv4` being equal to `true` - Default value: `true`
+     * NAT Overload, Attribute conditional on `natIpv4` being equal to `true`
+     *   - Default value: `true`
      */
-    public readonly natOverload!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name, Attribute conditional on `natIpv4` being equal to `true`
-     */
-    public readonly natOverloadVariable!: pulumi.Output<string | undefined>;
-    /**
-     * NAT Pool Prefix Length, Attribute conditional on `natIpv4` being equal to `true` - Range: `1`-`32`
-     */
-    public readonly natPrefixLength!: pulumi.Output<number | undefined>;
+    declare public readonly natOverload: pulumi.Output<boolean | undefined>;
     /**
      * Variable name, Attribute conditional on `natIpv4` being equal to `true`
      */
-    public readonly natPrefixLengthVariable!: pulumi.Output<string | undefined>;
+    declare public readonly natOverloadVariable: pulumi.Output<string | undefined>;
+    /**
+     * NAT Pool Prefix Length, Attribute conditional on `natIpv4` being equal to `true`
+     *   - Range: `1`-`32`
+     */
+    declare public readonly natPrefixLength: pulumi.Output<number | undefined>;
+    /**
+     * Variable name, Attribute conditional on `natIpv4` being equal to `true`
+     */
+    declare public readonly natPrefixLengthVariable: pulumi.Output<string | undefined>;
     /**
      * NAT Pool Range End, Attribute conditional on `natIpv4` being equal to `true`
      */
-    public readonly natRangeEnd!: pulumi.Output<string | undefined>;
+    declare public readonly natRangeEnd: pulumi.Output<string | undefined>;
     /**
      * Variable name, Attribute conditional on `natIpv4` being equal to `true`
      */
-    public readonly natRangeEndVariable!: pulumi.Output<string | undefined>;
+    declare public readonly natRangeEndVariable: pulumi.Output<string | undefined>;
     /**
      * NAT Pool Range Start, Attribute conditional on `natIpv4` being equal to `true`
      */
-    public readonly natRangeStart!: pulumi.Output<string | undefined>;
+    declare public readonly natRangeStart: pulumi.Output<string | undefined>;
     /**
      * Variable name, Attribute conditional on `natIpv4` being equal to `true`
      */
-    public readonly natRangeStartVariable!: pulumi.Output<string | undefined>;
+    declare public readonly natRangeStartVariable: pulumi.Output<string | undefined>;
     /**
-     * Set NAT TCP session timeout, in minutes, Attribute conditional on `natIpv4` being equal to `true` - Range: `1`-`8947` -
-     * Default value: `60`
+     * Set NAT TCP session timeout, in minutes, Attribute conditional on `natIpv4` being equal to `true`
+     *   - Range: `1`-`8947`
+     *   - Default value: `60`
      */
-    public readonly natTcpTimeout!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name, Attribute conditional on `natIpv4` being equal to `true`
-     */
-    public readonly natTcpTimeoutVariable!: pulumi.Output<string | undefined>;
-    /**
-     * NAT Type, Attribute conditional on `natIpv4` being equal to `true` - Choices: `interface`, `pool`, `loopback` - Default
-     * value: `interface`
-     */
-    public readonly natType!: pulumi.Output<string | undefined>;
+    declare public readonly natTcpTimeout: pulumi.Output<number | undefined>;
     /**
      * Variable name, Attribute conditional on `natIpv4` being equal to `true`
      */
-    public readonly natTypeVariable!: pulumi.Output<string | undefined>;
+    declare public readonly natTcpTimeoutVariable: pulumi.Output<string | undefined>;
     /**
-     * Set NAT UDP session timeout, in minutes, Attribute conditional on `natIpv4` being equal to `true` - Range: `1`-`8947` -
-     * Default value: `1`
+     * NAT Type, Attribute conditional on `natIpv4` being equal to `true`
+     *   - Choices: `interface`, `pool`, `loopback`
+     *   - Default value: `interface`
      */
-    public readonly natUdpTimeout!: pulumi.Output<number | undefined>;
+    declare public readonly natType: pulumi.Output<string | undefined>;
     /**
      * Variable name, Attribute conditional on `natIpv4` being equal to `true`
      */
-    public readonly natUdpTimeoutVariable!: pulumi.Output<string | undefined>;
+    declare public readonly natTypeVariable: pulumi.Output<string | undefined>;
+    /**
+     * Set NAT UDP session timeout, in minutes, Attribute conditional on `natIpv4` being equal to `true`
+     *   - Range: `1`-`8947`
+     *   - Default value: `1`
+     */
+    declare public readonly natUdpTimeout: pulumi.Output<number | undefined>;
+    /**
+     * Variable name, Attribute conditional on `natIpv4` being equal to `true`
+     */
+    declare public readonly natUdpTimeoutVariable: pulumi.Output<string | undefined>;
     /**
      * static NAT, Attribute conditional on `natIpv4` being equal to `true`
      */
-    public readonly newStaticNats!: pulumi.Output<outputs.TransportWanVpnInterfaceEthernetFeatureNewStaticNat[] | undefined>;
+    declare public readonly newStaticNats: pulumi.Output<outputs.TransportWanVpnInterfaceEthernetFeatureNewStaticNat[] | undefined>;
     /**
-     * Per-tunnel Qos, Attribute conditional on `tunnelInterface` being equal to `true` - Default value: `false`
+     * Per-tunnel Qos, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Default value: `false`
      */
-    public readonly perTunnelQos!: pulumi.Output<boolean | undefined>;
+    declare public readonly perTunnelQos: pulumi.Output<boolean | undefined>;
     /**
      * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
      */
-    public readonly perTunnelQosVariable!: pulumi.Output<string | undefined>;
+    declare public readonly perTunnelQosVariable: pulumi.Output<string | undefined>;
     /**
-     * Adaptive QoS - Default value: `false`
+     * Adaptive QoS
+     *   - Default value: `false`
      */
-    public readonly qosAdaptive!: pulumi.Output<boolean | undefined>;
+    declare public readonly qosAdaptive: pulumi.Output<boolean | undefined>;
     /**
-     * Shaping Rate Downstream - Default value: `false`
+     * Shaping Rate Downstream
+     *   - Default value: `false`
      */
-    public readonly qosAdaptiveBandwidthDownstream!: pulumi.Output<boolean | undefined>;
+    declare public readonly qosAdaptiveBandwidthDownstream: pulumi.Output<boolean | undefined>;
     /**
-     * Shaping Rate Upstream - Default value: `false`
+     * Shaping Rate Upstream
+     *   - Default value: `false`
      */
-    public readonly qosAdaptiveBandwidthUpstream!: pulumi.Output<boolean | undefined>;
+    declare public readonly qosAdaptiveBandwidthUpstream: pulumi.Output<boolean | undefined>;
     /**
-     * Adaptive QoS default downstream bandwidth (kbps) - Range: `8`-`100000000`
+     * Adaptive QoS default downstream bandwidth (kbps)
+     *   - Range: `8`-`100000000`
      */
-    public readonly qosAdaptiveDefaultDownstream!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly qosAdaptiveDefaultDownstreamVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Adaptive QoS default upstream bandwidth (kbps) - Range: `8`-`100000000`
-     */
-    public readonly qosAdaptiveDefaultUpstream!: pulumi.Output<number | undefined>;
+    declare public readonly qosAdaptiveDefaultDownstream: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly qosAdaptiveDefaultUpstreamVariable!: pulumi.Output<string | undefined>;
+    declare public readonly qosAdaptiveDefaultDownstreamVariable: pulumi.Output<string | undefined>;
     /**
-     * Downstream max bandwidth limit (kbps) - Range: `8`-`100000000`
+     * Adaptive QoS default upstream bandwidth (kbps)
+     *   - Range: `8`-`100000000`
      */
-    public readonly qosAdaptiveMaxDownstream!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly qosAdaptiveMaxDownstreamVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Upstream max bandwidth limit (kbps) - Range: `8`-`100000000`
-     */
-    public readonly qosAdaptiveMaxUpstream!: pulumi.Output<number | undefined>;
+    declare public readonly qosAdaptiveDefaultUpstream: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly qosAdaptiveMaxUpstreamVariable!: pulumi.Output<string | undefined>;
+    declare public readonly qosAdaptiveDefaultUpstreamVariable: pulumi.Output<string | undefined>;
     /**
-     * Downstream min bandwidth limit (kbps) - Range: `8`-`100000000`
+     * Downstream max bandwidth limit (kbps)
+     *   - Range: `8`-`100000000`
      */
-    public readonly qosAdaptiveMinDownstream!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly qosAdaptiveMinDownstreamVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Upstream min bandwidth limit (kbps) - Range: `8`-`100000000`
-     */
-    public readonly qosAdaptiveMinUpstream!: pulumi.Output<number | undefined>;
+    declare public readonly qosAdaptiveMaxDownstream: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly qosAdaptiveMinUpstreamVariable!: pulumi.Output<string | undefined>;
+    declare public readonly qosAdaptiveMaxDownstreamVariable: pulumi.Output<string | undefined>;
     /**
-     * Adapt Period(Minutes) - Range: `1`-`720` - Default value: `15`
+     * Upstream max bandwidth limit (kbps)
+     *   - Range: `8`-`100000000`
      */
-    public readonly qosAdaptivePeriod!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly qosAdaptivePeriodVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Shaping Rate (Kbps) - Range: `8`-`100000000`
-     */
-    public readonly qosShapingRate!: pulumi.Output<number | undefined>;
+    declare public readonly qosAdaptiveMaxUpstream: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly qosShapingRateVariable!: pulumi.Output<string | undefined>;
+    declare public readonly qosAdaptiveMaxUpstreamVariable: pulumi.Output<string | undefined>;
+    /**
+     * Downstream min bandwidth limit (kbps)
+     *   - Range: `8`-`100000000`
+     */
+    declare public readonly qosAdaptiveMinDownstream: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly qosAdaptiveMinDownstreamVariable: pulumi.Output<string | undefined>;
+    /**
+     * Upstream min bandwidth limit (kbps)
+     *   - Range: `8`-`100000000`
+     */
+    declare public readonly qosAdaptiveMinUpstream: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly qosAdaptiveMinUpstreamVariable: pulumi.Output<string | undefined>;
+    /**
+     * Adapt Period(Minutes)
+     *   - Range: `1`-`720`
+     *   - Default value: `15`
+     */
+    declare public readonly qosAdaptivePeriod: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly qosAdaptivePeriodVariable: pulumi.Output<string | undefined>;
+    /**
+     * Shaping Rate (Kbps)
+     *   - Range: `8`-`100000000`
+     */
+    declare public readonly qosShapingRate: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly qosShapingRateVariable: pulumi.Output<string | undefined>;
     /**
      * Service Provider Name
      */
-    public readonly serviceProvider!: pulumi.Output<string | undefined>;
+    declare public readonly serviceProvider: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly serviceProviderVariable!: pulumi.Output<string | undefined>;
+    declare public readonly serviceProviderVariable: pulumi.Output<string | undefined>;
     /**
      * - Default value: `true`
      */
-    public readonly shutdown!: pulumi.Output<boolean | undefined>;
+    declare public readonly shutdown: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly shutdownVariable!: pulumi.Output<string | undefined>;
+    declare public readonly shutdownVariable: pulumi.Output<string | undefined>;
     /**
-     * Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+     * Set interface speed
+     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
      */
-    public readonly speed!: pulumi.Output<string | undefined>;
+    declare public readonly speed: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly speedVariable!: pulumi.Output<string | undefined>;
+    declare public readonly speedVariable: pulumi.Output<string | undefined>;
     /**
      * static NAT66, Attribute conditional on `natIpv6` being equal to `true`
      */
-    public readonly staticNat66s!: pulumi.Output<outputs.TransportWanVpnInterfaceEthernetFeatureStaticNat66[] | undefined>;
+    declare public readonly staticNat66s: pulumi.Output<outputs.TransportWanVpnInterfaceEthernetFeatureStaticNat66[] | undefined>;
     /**
-     * TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      */
-    public readonly tcpMss!: pulumi.Output<number | undefined>;
+    declare public readonly tcpMss: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly tcpMssVariable!: pulumi.Output<string | undefined>;
+    declare public readonly tcpMssVariable: pulumi.Output<string | undefined>;
     /**
      * Extends a local TLOC to a remote node only for vpn 0
      */
-    public readonly tlocExtension!: pulumi.Output<string | undefined>;
+    declare public readonly tlocExtension: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly tlocExtensionVariable!: pulumi.Output<string | undefined>;
+    declare public readonly tlocExtensionVariable: pulumi.Output<string | undefined>;
     /**
      * Enable tracker for this interface
      */
-    public readonly tracker!: pulumi.Output<string | undefined>;
+    declare public readonly tracker: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly trackerVariable!: pulumi.Output<string | undefined>;
+    declare public readonly trackerVariable: pulumi.Output<string | undefined>;
     /**
      * Transport WAN VPN Feature ID
      */
-    public readonly transportWanVpnFeatureId!: pulumi.Output<string>;
+    declare public readonly transportWanVpnFeatureId: pulumi.Output<string>;
     /**
-     * Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` being equal to `true` - Range: `1`-`100` - Default
-     * value: `50`
+     * Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Range: `1`-`100`
+     *   - Default value: `50`
      */
-    public readonly tunnelBandwidthPercent!: pulumi.Output<number | undefined>;
+    declare public readonly tunnelBandwidthPercent: pulumi.Output<number | undefined>;
     /**
      * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
      */
-    public readonly tunnelBandwidthPercentVariable!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelBandwidthPercentVariable: pulumi.Output<string | undefined>;
     /**
-     * Tunnel Interface on/off - Default value: `false`
+     * Tunnel Interface on/off
+     *   - Default value: `false`
      */
-    public readonly tunnelInterface!: pulumi.Output<boolean | undefined>;
+    declare public readonly tunnelInterface: pulumi.Output<boolean | undefined>;
     /**
-     * Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
+     * Allow all traffic. Overrides all other allow-service options if allow-service all is set
+     *   - Default value: `false`
      */
-    public readonly tunnelInterfaceAllowAll!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly tunnelInterfaceAllowAllVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Allow/Deny BFD - Default value: `false`
-     */
-    public readonly tunnelInterfaceAllowBfd!: pulumi.Output<boolean | undefined>;
+    declare public readonly tunnelInterfaceAllowAll: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly tunnelInterfaceAllowBfdVariable!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelInterfaceAllowAllVariable: pulumi.Output<string | undefined>;
     /**
-     * Allow/deny BGP - Default value: `false`
+     * Allow/Deny BFD
+     *   - Default value: `false`
      */
-    public readonly tunnelInterfaceAllowBgp!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly tunnelInterfaceAllowBgpVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Allow/Deny DHCP - Default value: `true`
-     */
-    public readonly tunnelInterfaceAllowDhcp!: pulumi.Output<boolean | undefined>;
+    declare public readonly tunnelInterfaceAllowBfd: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly tunnelInterfaceAllowDhcpVariable!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelInterfaceAllowBfdVariable: pulumi.Output<string | undefined>;
     /**
-     * Allow/Deny DNS - Default value: `true`
+     * Allow/deny BGP
+     *   - Default value: `false`
      */
-    public readonly tunnelInterfaceAllowDns!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly tunnelInterfaceAllowDnsVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Allow/Deny HTTPS - Default value: `true`
-     */
-    public readonly tunnelInterfaceAllowHttps!: pulumi.Output<boolean | undefined>;
+    declare public readonly tunnelInterfaceAllowBgp: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly tunnelInterfaceAllowHttpsVariable!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelInterfaceAllowBgpVariable: pulumi.Output<string | undefined>;
     /**
-     * Allow/Deny ICMP - Default value: `true`
+     * Allow/Deny DHCP
+     *   - Default value: `true`
      */
-    public readonly tunnelInterfaceAllowIcmp!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly tunnelInterfaceAllowIcmpVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Allow/Deny NETCONF - Default value: `false`
-     */
-    public readonly tunnelInterfaceAllowNetconf!: pulumi.Output<boolean | undefined>;
+    declare public readonly tunnelInterfaceAllowDhcp: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly tunnelInterfaceAllowNetconfVariable!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelInterfaceAllowDhcpVariable: pulumi.Output<string | undefined>;
     /**
-     * Allow/Deny NTP - Default value: `true`
+     * Allow/Deny DNS
+     *   - Default value: `true`
      */
-    public readonly tunnelInterfaceAllowNtp!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly tunnelInterfaceAllowNtpVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Allow/Deny OSPF - Default value: `false`
-     */
-    public readonly tunnelInterfaceAllowOspf!: pulumi.Output<boolean | undefined>;
+    declare public readonly tunnelInterfaceAllowDns: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly tunnelInterfaceAllowOspfVariable!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelInterfaceAllowDnsVariable: pulumi.Output<string | undefined>;
     /**
-     * Allow/Deny SNMP - Default value: `false`
+     * Allow/Deny HTTPS
+     *   - Default value: `true`
      */
-    public readonly tunnelInterfaceAllowSnmp!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly tunnelInterfaceAllowSnmpVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Allow/Deny SSH - Default value: `true`
-     */
-    public readonly tunnelInterfaceAllowSsh!: pulumi.Output<boolean | undefined>;
+    declare public readonly tunnelInterfaceAllowHttps: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly tunnelInterfaceAllowSshVariable!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelInterfaceAllowHttpsVariable: pulumi.Output<string | undefined>;
     /**
-     * Allow/Deny STUN - Default value: `false`
+     * Allow/Deny ICMP
+     *   - Default value: `true`
      */
-    public readonly tunnelInterfaceAllowStun!: pulumi.Output<boolean | undefined>;
+    declare public readonly tunnelInterfaceAllowIcmp: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly tunnelInterfaceAllowStunVariable!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelInterfaceAllowIcmpVariable: pulumi.Output<string | undefined>;
+    /**
+     * Allow/Deny NETCONF
+     *   - Default value: `false`
+     */
+    declare public readonly tunnelInterfaceAllowNetconf: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly tunnelInterfaceAllowNetconfVariable: pulumi.Output<string | undefined>;
+    /**
+     * Allow/Deny NTP
+     *   - Default value: `true`
+     */
+    declare public readonly tunnelInterfaceAllowNtp: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly tunnelInterfaceAllowNtpVariable: pulumi.Output<string | undefined>;
+    /**
+     * Allow/Deny OSPF
+     *   - Default value: `false`
+     */
+    declare public readonly tunnelInterfaceAllowOspf: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly tunnelInterfaceAllowOspfVariable: pulumi.Output<string | undefined>;
+    /**
+     * Allow/Deny SNMP
+     *   - Default value: `false`
+     */
+    declare public readonly tunnelInterfaceAllowSnmp: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly tunnelInterfaceAllowSnmpVariable: pulumi.Output<string | undefined>;
+    /**
+     * Allow/Deny SSH
+     *   - Default value: `true`
+     */
+    declare public readonly tunnelInterfaceAllowSsh: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly tunnelInterfaceAllowSshVariable: pulumi.Output<string | undefined>;
+    /**
+     * Allow/Deny STUN
+     *   - Default value: `false`
+     */
+    declare public readonly tunnelInterfaceAllowStun: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly tunnelInterfaceAllowStunVariable: pulumi.Output<string | undefined>;
     /**
      * Bind loopback tunnel interface to a physical interface, Attribute conditional on `tunnelInterface` being equal to `true`
      */
-    public readonly tunnelInterfaceBindLoopbackTunnel!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelInterfaceBindLoopbackTunnel: pulumi.Output<string | undefined>;
     /**
      * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
      */
-    public readonly tunnelInterfaceBindLoopbackTunnelVariable!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelInterfaceBindLoopbackTunnelVariable: pulumi.Output<string | undefined>;
     /**
-     * Set TLOC as border TLOC, Attribute conditional on `tunnelInterface` being equal to `true` - Default value: `false`
+     * Set TLOC as border TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Default value: `false`
      */
-    public readonly tunnelInterfaceBorder!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
-     */
-    public readonly tunnelInterfaceBorderVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Set carrier for TLOC, Attribute conditional on `tunnelInterface` being equal to `true` - Choices: `default`, `carrier1`,
-     * `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8` - Default value: `default`
-     */
-    public readonly tunnelInterfaceCarrier!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelInterfaceBorder: pulumi.Output<boolean | undefined>;
     /**
      * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
      */
-    public readonly tunnelInterfaceCarrierVariable!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelInterfaceBorderVariable: pulumi.Output<string | undefined>;
     /**
-     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnelInterface` being
-     * equal to `true` - Default value: `false`
+     * Set carrier for TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+     *   - Default value: `default`
      */
-    public readonly tunnelInterfaceClearDontFragment!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
-     */
-    public readonly tunnelInterfaceClearDontFragmentVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Set color for TLOC, Attribute conditional on `tunnelInterface` being equal to `true` - Choices: `default`, `mpls`,
-     * `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`,
-     * `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6` - Default value:
-     * `mpls`
-     */
-    public readonly tunnelInterfaceColor!: pulumi.Output<string | undefined>;
-    /**
-     * Restrict this TLOC behavior, Attribute conditional on `tunnelInterface` being equal to `true` - Default value: `false`
-     */
-    public readonly tunnelInterfaceColorRestrict!: pulumi.Output<boolean | undefined>;
+    declare public readonly tunnelInterfaceCarrier: pulumi.Output<string | undefined>;
     /**
      * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
      */
-    public readonly tunnelInterfaceColorRestrictVariable!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelInterfaceCarrierVariable: pulumi.Output<string | undefined>;
+    /**
+     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Default value: `false`
+     */
+    declare public readonly tunnelInterfaceClearDontFragment: pulumi.Output<boolean | undefined>;
     /**
      * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
      */
-    public readonly tunnelInterfaceColorVariable!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelInterfaceClearDontFragmentVariable: pulumi.Output<string | undefined>;
     /**
-     * CTS SGT Propagation configuration, Attribute conditional on `tunnelInterface` being equal to `true` - Default value:
-     * `false`
+     * Set color for TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+     *   - Default value: `mpls`
      */
-    public readonly tunnelInterfaceCtsSgtPropagation!: pulumi.Output<boolean | undefined>;
+    declare public readonly tunnelInterfaceColor: pulumi.Output<string | undefined>;
+    /**
+     * Restrict this TLOC behavior, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Default value: `false`
+     */
+    declare public readonly tunnelInterfaceColorRestrict: pulumi.Output<boolean | undefined>;
     /**
      * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
      */
-    public readonly tunnelInterfaceCtsSgtPropagationVariable!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelInterfaceColorRestrictVariable: pulumi.Output<string | undefined>;
+    /**
+     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     */
+    declare public readonly tunnelInterfaceColorVariable: pulumi.Output<string | undefined>;
+    /**
+     * CTS SGT Propagation configuration, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Default value: `false`
+     */
+    declare public readonly tunnelInterfaceCtsSgtPropagation: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     */
+    declare public readonly tunnelInterfaceCtsSgtPropagationVariable: pulumi.Output<string | undefined>;
     /**
      * Encapsulation for TLOC
      */
-    public readonly tunnelInterfaceEncapsulations!: pulumi.Output<outputs.TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulation[] | undefined>;
+    declare public readonly tunnelInterfaceEncapsulations: pulumi.Output<outputs.TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulation[] | undefined>;
     /**
      * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
      */
-    public readonly tunnelInterfaceExcludeControllerGroupListVariable!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelInterfaceExcludeControllerGroupListVariable: pulumi.Output<string | undefined>;
     /**
-     * Exclude the following controller groups defined in this list., Attribute conditional on `tunnelInterface` being equal to
-     * `true`
+     * Exclude the following controller groups defined in this list., Attribute conditional on `tunnelInterface` being equal to `true`
      */
-    public readonly tunnelInterfaceExcludeControllerGroupLists!: pulumi.Output<number[] | undefined>;
+    declare public readonly tunnelInterfaceExcludeControllerGroupLists: pulumi.Output<number[] | undefined>;
     /**
      * GRE tunnel destination IP, Attribute conditional on `tunnelInterface` being equal to `true`
      */
-    public readonly tunnelInterfaceGreTunnelDestinationIp!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelInterfaceGreTunnelDestinationIp: pulumi.Output<string | undefined>;
     /**
      * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
      */
-    public readonly tunnelInterfaceGreTunnelDestinationIpVariable!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelInterfaceGreTunnelDestinationIpVariable: pulumi.Output<string | undefined>;
     /**
-     * List of groups, Attribute conditional on `tunnelInterface` being equal to `true` - Range: `1`-`4294967295`
+     * List of groups, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Range: `1`-`4294967295`
      */
-    public readonly tunnelInterfaceGroups!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
-     */
-    public readonly tunnelInterfaceGroupsVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Set time period of control hello packets <100..600000> milli seconds, Attribute conditional on `tunnelInterface` being
-     * equal to `true` - Range: `100`-`600000` - Default value: `1000`
-     */
-    public readonly tunnelInterfaceHelloInterval!: pulumi.Output<number | undefined>;
+    declare public readonly tunnelInterfaceGroups: pulumi.Output<number | undefined>;
     /**
      * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
      */
-    public readonly tunnelInterfaceHelloIntervalVariable!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelInterfaceGroupsVariable: pulumi.Output<string | undefined>;
     /**
-     * Set tolerance of control hello packets <12..6000> seconds, Attribute conditional on `tunnelInterface` being equal to
-     * `true` - Range: `12`-`6000` - Default value: `12`
+     * Set time period of control hello packets <100..600000> milli seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Range: `100`-`600000`
+     *   - Default value: `1000`
      */
-    public readonly tunnelInterfaceHelloTolerance!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
-     */
-    public readonly tunnelInterfaceHelloToleranceVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Set TLOC as last resort, Attribute conditional on `tunnelInterface` being equal to `true` - Default value: `false`
-     */
-    public readonly tunnelInterfaceLastResortCircuit!: pulumi.Output<boolean | undefined>;
+    declare public readonly tunnelInterfaceHelloInterval: pulumi.Output<number | undefined>;
     /**
      * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
      */
-    public readonly tunnelInterfaceLastResortCircuitVariable!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelInterfaceHelloIntervalVariable: pulumi.Output<string | undefined>;
     /**
-     * Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnelInterface` being equal to `true` - Default
-     * value: `false`
+     * Set tolerance of control hello packets <12..6000> seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Range: `12`-`6000`
+     *   - Default value: `12`
      */
-    public readonly tunnelInterfaceLowBandwidthLink!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
-     */
-    public readonly tunnelInterfaceLowBandwidthLinkVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Maximum Control Connections, Attribute conditional on `tunnelInterface` being equal to `true` - Range: `0`-`100`
-     */
-    public readonly tunnelInterfaceMaxControlConnections!: pulumi.Output<number | undefined>;
+    declare public readonly tunnelInterfaceHelloTolerance: pulumi.Output<number | undefined>;
     /**
      * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
      */
-    public readonly tunnelInterfaceMaxControlConnectionsVariable!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelInterfaceHelloToleranceVariable: pulumi.Output<string | undefined>;
     /**
-     * Set time period of nat refresh packets <1...60> seconds, Attribute conditional on `tunnelInterface` being equal to
-     * `true` - Range: `1`-`60` - Default value: `5`
+     * Set TLOC as last resort, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Default value: `false`
      */
-    public readonly tunnelInterfaceNatRefreshInterval!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
-     */
-    public readonly tunnelInterfaceNatRefreshIntervalVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnelInterface` being equal to
-     * `true` - Default value: `false`
-     */
-    public readonly tunnelInterfaceNetworkBroadcast!: pulumi.Output<boolean | undefined>;
+    declare public readonly tunnelInterfaceLastResortCircuit: pulumi.Output<boolean | undefined>;
     /**
      * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
      */
-    public readonly tunnelInterfaceNetworkBroadcastVariable!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelInterfaceLastResortCircuitVariable: pulumi.Output<string | undefined>;
     /**
-     * Disallow port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` being equal to `true` -
-     * Default value: `true`
+     * Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Default value: `false`
      */
-    public readonly tunnelInterfacePortHop!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
-     */
-    public readonly tunnelInterfacePortHopVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelInterface` being equal to `true` - Range:
-     * `500`-`1460`
-     */
-    public readonly tunnelInterfaceTunnelTcpMss!: pulumi.Output<number | undefined>;
+    declare public readonly tunnelInterfaceLowBandwidthLink: pulumi.Output<boolean | undefined>;
     /**
      * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
      */
-    public readonly tunnelInterfaceTunnelTcpMssVariable!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelInterfaceLowBandwidthLinkVariable: pulumi.Output<string | undefined>;
     /**
-     * Put this wan interface in STUN mode only, Attribute conditional on `tunnelInterface` being equal to `true` - Default
-     * value: `false`
+     * Maximum Control Connections, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Range: `0`-`100`
      */
-    public readonly tunnelInterfaceVbondAsStunServer!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
-     */
-    public readonly tunnelInterfaceVbondAsStunServerVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Set interface preference for control connection to vManage <0..8>, Attribute conditional on `tunnelInterface` being
-     * equal to `true` - Range: `0`-`8` - Default value: `5`
-     */
-    public readonly tunnelInterfaceVmanageConnectionPreference!: pulumi.Output<number | undefined>;
+    declare public readonly tunnelInterfaceMaxControlConnections: pulumi.Output<number | undefined>;
     /**
      * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
      */
-    public readonly tunnelInterfaceVmanageConnectionPreferenceVariable!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelInterfaceMaxControlConnectionsVariable: pulumi.Output<string | undefined>;
     /**
-     * Set tunnel QoS mode, Attribute conditional on `tunnelInterface` being equal to `true` - Choices: `hub`, `spoke`
+     * Set time period of nat refresh packets <1...60> seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Range: `1`-`60`
+     *   - Default value: `5`
      */
-    public readonly tunnelQosMode!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelInterfaceNatRefreshInterval: pulumi.Output<number | undefined>;
     /**
      * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
      */
-    public readonly tunnelQosModeVariable!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelInterfaceNatRefreshIntervalVariable: pulumi.Output<string | undefined>;
+    /**
+     * Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Default value: `false`
+     */
+    declare public readonly tunnelInterfaceNetworkBroadcast: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     */
+    declare public readonly tunnelInterfaceNetworkBroadcastVariable: pulumi.Output<string | undefined>;
+    /**
+     * Disallow port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Default value: `true`
+     */
+    declare public readonly tunnelInterfacePortHop: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     */
+    declare public readonly tunnelInterfacePortHopVariable: pulumi.Output<string | undefined>;
+    /**
+     * Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Range: `500`-`1460`
+     */
+    declare public readonly tunnelInterfaceTunnelTcpMss: pulumi.Output<number | undefined>;
+    /**
+     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     */
+    declare public readonly tunnelInterfaceTunnelTcpMssVariable: pulumi.Output<string | undefined>;
+    /**
+     * Put this wan interface in STUN mode only, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Default value: `false`
+     */
+    declare public readonly tunnelInterfaceVbondAsStunServer: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     */
+    declare public readonly tunnelInterfaceVbondAsStunServerVariable: pulumi.Output<string | undefined>;
+    /**
+     * Set interface preference for control connection to vManage <0..8>, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Range: `0`-`8`
+     *   - Default value: `5`
+     */
+    declare public readonly tunnelInterfaceVmanageConnectionPreference: pulumi.Output<number | undefined>;
+    /**
+     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     */
+    declare public readonly tunnelInterfaceVmanageConnectionPreferenceVariable: pulumi.Output<string | undefined>;
+    /**
+     * Set tunnel QoS mode, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Choices: `hub`, `spoke`
+     */
+    declare public readonly tunnelQosMode: pulumi.Output<string | undefined>;
+    /**
+     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     */
+    declare public readonly tunnelQosModeVariable: pulumi.Output<string | undefined>;
     /**
      * The version of the Feature
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
     /**
      * Extend remote TLOC over a GRE tunnel to a local WAN interface
      */
-    public readonly xconnect!: pulumi.Output<string | undefined>;
+    declare public readonly xconnect: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly xconnectVariable!: pulumi.Output<string | undefined>;
+    declare public readonly xconnectVariable: pulumi.Output<string | undefined>;
 
     /**
      * Create a TransportWanVpnInterfaceEthernetFeature resource with the given unique name, arguments, and options.
@@ -852,403 +915,403 @@ export class TransportWanVpnInterfaceEthernetFeature extends pulumi.CustomResour
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as TransportWanVpnInterfaceEthernetFeatureState | undefined;
-            resourceInputs["aclIpv4EgressFeatureId"] = state ? state.aclIpv4EgressFeatureId : undefined;
-            resourceInputs["aclIpv4IngressFeatureId"] = state ? state.aclIpv4IngressFeatureId : undefined;
-            resourceInputs["aclIpv6EgressFeatureId"] = state ? state.aclIpv6EgressFeatureId : undefined;
-            resourceInputs["aclIpv6IngressFeatureId"] = state ? state.aclIpv6IngressFeatureId : undefined;
-            resourceInputs["arpTimeout"] = state ? state.arpTimeout : undefined;
-            resourceInputs["arpTimeoutVariable"] = state ? state.arpTimeoutVariable : undefined;
-            resourceInputs["arps"] = state ? state.arps : undefined;
-            resourceInputs["autoDetectBandwidth"] = state ? state.autoDetectBandwidth : undefined;
-            resourceInputs["autoDetectBandwidthVariable"] = state ? state.autoDetectBandwidthVariable : undefined;
-            resourceInputs["autonegotiate"] = state ? state.autonegotiate : undefined;
-            resourceInputs["autonegotiateVariable"] = state ? state.autonegotiateVariable : undefined;
-            resourceInputs["bandwidthDownstream"] = state ? state.bandwidthDownstream : undefined;
-            resourceInputs["bandwidthDownstreamVariable"] = state ? state.bandwidthDownstreamVariable : undefined;
-            resourceInputs["bandwidthUpstream"] = state ? state.bandwidthUpstream : undefined;
-            resourceInputs["bandwidthUpstreamVariable"] = state ? state.bandwidthUpstreamVariable : undefined;
-            resourceInputs["blockNonSourceIp"] = state ? state.blockNonSourceIp : undefined;
-            resourceInputs["blockNonSourceIpVariable"] = state ? state.blockNonSourceIpVariable : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["duplex"] = state ? state.duplex : undefined;
-            resourceInputs["duplexVariable"] = state ? state.duplexVariable : undefined;
-            resourceInputs["enableDhcpv6"] = state ? state.enableDhcpv6 : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["greTunnelSourceIp"] = state ? state.greTunnelSourceIp : undefined;
-            resourceInputs["greTunnelSourceIpVariable"] = state ? state.greTunnelSourceIpVariable : undefined;
-            resourceInputs["icmpRedirectDisable"] = state ? state.icmpRedirectDisable : undefined;
-            resourceInputs["icmpRedirectDisableVariable"] = state ? state.icmpRedirectDisableVariable : undefined;
-            resourceInputs["interfaceDescription"] = state ? state.interfaceDescription : undefined;
-            resourceInputs["interfaceDescriptionVariable"] = state ? state.interfaceDescriptionVariable : undefined;
-            resourceInputs["interfaceMtu"] = state ? state.interfaceMtu : undefined;
-            resourceInputs["interfaceMtuVariable"] = state ? state.interfaceMtuVariable : undefined;
-            resourceInputs["interfaceName"] = state ? state.interfaceName : undefined;
-            resourceInputs["interfaceNameVariable"] = state ? state.interfaceNameVariable : undefined;
-            resourceInputs["ipDirectedBroadcast"] = state ? state.ipDirectedBroadcast : undefined;
-            resourceInputs["ipDirectedBroadcastVariable"] = state ? state.ipDirectedBroadcastVariable : undefined;
-            resourceInputs["ipMtu"] = state ? state.ipMtu : undefined;
-            resourceInputs["ipMtuVariable"] = state ? state.ipMtuVariable : undefined;
-            resourceInputs["iperfServer"] = state ? state.iperfServer : undefined;
-            resourceInputs["iperfServerVariable"] = state ? state.iperfServerVariable : undefined;
-            resourceInputs["ipv4Address"] = state ? state.ipv4Address : undefined;
-            resourceInputs["ipv4AddressVariable"] = state ? state.ipv4AddressVariable : undefined;
-            resourceInputs["ipv4ConfigurationType"] = state ? state.ipv4ConfigurationType : undefined;
-            resourceInputs["ipv4DhcpDistance"] = state ? state.ipv4DhcpDistance : undefined;
-            resourceInputs["ipv4DhcpDistanceVariable"] = state ? state.ipv4DhcpDistanceVariable : undefined;
-            resourceInputs["ipv4DhcpHelperVariable"] = state ? state.ipv4DhcpHelperVariable : undefined;
-            resourceInputs["ipv4DhcpHelpers"] = state ? state.ipv4DhcpHelpers : undefined;
-            resourceInputs["ipv4SecondaryAddresses"] = state ? state.ipv4SecondaryAddresses : undefined;
-            resourceInputs["ipv4SubnetMask"] = state ? state.ipv4SubnetMask : undefined;
-            resourceInputs["ipv4SubnetMaskVariable"] = state ? state.ipv4SubnetMaskVariable : undefined;
-            resourceInputs["ipv6Address"] = state ? state.ipv6Address : undefined;
-            resourceInputs["ipv6AddressVariable"] = state ? state.ipv6AddressVariable : undefined;
-            resourceInputs["ipv6ConfigurationType"] = state ? state.ipv6ConfigurationType : undefined;
-            resourceInputs["ipv6DhcpSecondaryAddresses"] = state ? state.ipv6DhcpSecondaryAddresses : undefined;
-            resourceInputs["ipv6SecondaryAddresses"] = state ? state.ipv6SecondaryAddresses : undefined;
-            resourceInputs["loadInterval"] = state ? state.loadInterval : undefined;
-            resourceInputs["loadIntervalVariable"] = state ? state.loadIntervalVariable : undefined;
-            resourceInputs["macAddress"] = state ? state.macAddress : undefined;
-            resourceInputs["macAddressVariable"] = state ? state.macAddressVariable : undefined;
-            resourceInputs["mediaType"] = state ? state.mediaType : undefined;
-            resourceInputs["mediaTypeVariable"] = state ? state.mediaTypeVariable : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["nat64"] = state ? state.nat64 : undefined;
-            resourceInputs["nat66"] = state ? state.nat66 : undefined;
-            resourceInputs["natIpv4"] = state ? state.natIpv4 : undefined;
-            resourceInputs["natIpv4Variable"] = state ? state.natIpv4Variable : undefined;
-            resourceInputs["natIpv6"] = state ? state.natIpv6 : undefined;
-            resourceInputs["natIpv6Variable"] = state ? state.natIpv6Variable : undefined;
-            resourceInputs["natLoopback"] = state ? state.natLoopback : undefined;
-            resourceInputs["natLoopbackVariable"] = state ? state.natLoopbackVariable : undefined;
-            resourceInputs["natOverload"] = state ? state.natOverload : undefined;
-            resourceInputs["natOverloadVariable"] = state ? state.natOverloadVariable : undefined;
-            resourceInputs["natPrefixLength"] = state ? state.natPrefixLength : undefined;
-            resourceInputs["natPrefixLengthVariable"] = state ? state.natPrefixLengthVariable : undefined;
-            resourceInputs["natRangeEnd"] = state ? state.natRangeEnd : undefined;
-            resourceInputs["natRangeEndVariable"] = state ? state.natRangeEndVariable : undefined;
-            resourceInputs["natRangeStart"] = state ? state.natRangeStart : undefined;
-            resourceInputs["natRangeStartVariable"] = state ? state.natRangeStartVariable : undefined;
-            resourceInputs["natTcpTimeout"] = state ? state.natTcpTimeout : undefined;
-            resourceInputs["natTcpTimeoutVariable"] = state ? state.natTcpTimeoutVariable : undefined;
-            resourceInputs["natType"] = state ? state.natType : undefined;
-            resourceInputs["natTypeVariable"] = state ? state.natTypeVariable : undefined;
-            resourceInputs["natUdpTimeout"] = state ? state.natUdpTimeout : undefined;
-            resourceInputs["natUdpTimeoutVariable"] = state ? state.natUdpTimeoutVariable : undefined;
-            resourceInputs["newStaticNats"] = state ? state.newStaticNats : undefined;
-            resourceInputs["perTunnelQos"] = state ? state.perTunnelQos : undefined;
-            resourceInputs["perTunnelQosVariable"] = state ? state.perTunnelQosVariable : undefined;
-            resourceInputs["qosAdaptive"] = state ? state.qosAdaptive : undefined;
-            resourceInputs["qosAdaptiveBandwidthDownstream"] = state ? state.qosAdaptiveBandwidthDownstream : undefined;
-            resourceInputs["qosAdaptiveBandwidthUpstream"] = state ? state.qosAdaptiveBandwidthUpstream : undefined;
-            resourceInputs["qosAdaptiveDefaultDownstream"] = state ? state.qosAdaptiveDefaultDownstream : undefined;
-            resourceInputs["qosAdaptiveDefaultDownstreamVariable"] = state ? state.qosAdaptiveDefaultDownstreamVariable : undefined;
-            resourceInputs["qosAdaptiveDefaultUpstream"] = state ? state.qosAdaptiveDefaultUpstream : undefined;
-            resourceInputs["qosAdaptiveDefaultUpstreamVariable"] = state ? state.qosAdaptiveDefaultUpstreamVariable : undefined;
-            resourceInputs["qosAdaptiveMaxDownstream"] = state ? state.qosAdaptiveMaxDownstream : undefined;
-            resourceInputs["qosAdaptiveMaxDownstreamVariable"] = state ? state.qosAdaptiveMaxDownstreamVariable : undefined;
-            resourceInputs["qosAdaptiveMaxUpstream"] = state ? state.qosAdaptiveMaxUpstream : undefined;
-            resourceInputs["qosAdaptiveMaxUpstreamVariable"] = state ? state.qosAdaptiveMaxUpstreamVariable : undefined;
-            resourceInputs["qosAdaptiveMinDownstream"] = state ? state.qosAdaptiveMinDownstream : undefined;
-            resourceInputs["qosAdaptiveMinDownstreamVariable"] = state ? state.qosAdaptiveMinDownstreamVariable : undefined;
-            resourceInputs["qosAdaptiveMinUpstream"] = state ? state.qosAdaptiveMinUpstream : undefined;
-            resourceInputs["qosAdaptiveMinUpstreamVariable"] = state ? state.qosAdaptiveMinUpstreamVariable : undefined;
-            resourceInputs["qosAdaptivePeriod"] = state ? state.qosAdaptivePeriod : undefined;
-            resourceInputs["qosAdaptivePeriodVariable"] = state ? state.qosAdaptivePeriodVariable : undefined;
-            resourceInputs["qosShapingRate"] = state ? state.qosShapingRate : undefined;
-            resourceInputs["qosShapingRateVariable"] = state ? state.qosShapingRateVariable : undefined;
-            resourceInputs["serviceProvider"] = state ? state.serviceProvider : undefined;
-            resourceInputs["serviceProviderVariable"] = state ? state.serviceProviderVariable : undefined;
-            resourceInputs["shutdown"] = state ? state.shutdown : undefined;
-            resourceInputs["shutdownVariable"] = state ? state.shutdownVariable : undefined;
-            resourceInputs["speed"] = state ? state.speed : undefined;
-            resourceInputs["speedVariable"] = state ? state.speedVariable : undefined;
-            resourceInputs["staticNat66s"] = state ? state.staticNat66s : undefined;
-            resourceInputs["tcpMss"] = state ? state.tcpMss : undefined;
-            resourceInputs["tcpMssVariable"] = state ? state.tcpMssVariable : undefined;
-            resourceInputs["tlocExtension"] = state ? state.tlocExtension : undefined;
-            resourceInputs["tlocExtensionVariable"] = state ? state.tlocExtensionVariable : undefined;
-            resourceInputs["tracker"] = state ? state.tracker : undefined;
-            resourceInputs["trackerVariable"] = state ? state.trackerVariable : undefined;
-            resourceInputs["transportWanVpnFeatureId"] = state ? state.transportWanVpnFeatureId : undefined;
-            resourceInputs["tunnelBandwidthPercent"] = state ? state.tunnelBandwidthPercent : undefined;
-            resourceInputs["tunnelBandwidthPercentVariable"] = state ? state.tunnelBandwidthPercentVariable : undefined;
-            resourceInputs["tunnelInterface"] = state ? state.tunnelInterface : undefined;
-            resourceInputs["tunnelInterfaceAllowAll"] = state ? state.tunnelInterfaceAllowAll : undefined;
-            resourceInputs["tunnelInterfaceAllowAllVariable"] = state ? state.tunnelInterfaceAllowAllVariable : undefined;
-            resourceInputs["tunnelInterfaceAllowBfd"] = state ? state.tunnelInterfaceAllowBfd : undefined;
-            resourceInputs["tunnelInterfaceAllowBfdVariable"] = state ? state.tunnelInterfaceAllowBfdVariable : undefined;
-            resourceInputs["tunnelInterfaceAllowBgp"] = state ? state.tunnelInterfaceAllowBgp : undefined;
-            resourceInputs["tunnelInterfaceAllowBgpVariable"] = state ? state.tunnelInterfaceAllowBgpVariable : undefined;
-            resourceInputs["tunnelInterfaceAllowDhcp"] = state ? state.tunnelInterfaceAllowDhcp : undefined;
-            resourceInputs["tunnelInterfaceAllowDhcpVariable"] = state ? state.tunnelInterfaceAllowDhcpVariable : undefined;
-            resourceInputs["tunnelInterfaceAllowDns"] = state ? state.tunnelInterfaceAllowDns : undefined;
-            resourceInputs["tunnelInterfaceAllowDnsVariable"] = state ? state.tunnelInterfaceAllowDnsVariable : undefined;
-            resourceInputs["tunnelInterfaceAllowHttps"] = state ? state.tunnelInterfaceAllowHttps : undefined;
-            resourceInputs["tunnelInterfaceAllowHttpsVariable"] = state ? state.tunnelInterfaceAllowHttpsVariable : undefined;
-            resourceInputs["tunnelInterfaceAllowIcmp"] = state ? state.tunnelInterfaceAllowIcmp : undefined;
-            resourceInputs["tunnelInterfaceAllowIcmpVariable"] = state ? state.tunnelInterfaceAllowIcmpVariable : undefined;
-            resourceInputs["tunnelInterfaceAllowNetconf"] = state ? state.tunnelInterfaceAllowNetconf : undefined;
-            resourceInputs["tunnelInterfaceAllowNetconfVariable"] = state ? state.tunnelInterfaceAllowNetconfVariable : undefined;
-            resourceInputs["tunnelInterfaceAllowNtp"] = state ? state.tunnelInterfaceAllowNtp : undefined;
-            resourceInputs["tunnelInterfaceAllowNtpVariable"] = state ? state.tunnelInterfaceAllowNtpVariable : undefined;
-            resourceInputs["tunnelInterfaceAllowOspf"] = state ? state.tunnelInterfaceAllowOspf : undefined;
-            resourceInputs["tunnelInterfaceAllowOspfVariable"] = state ? state.tunnelInterfaceAllowOspfVariable : undefined;
-            resourceInputs["tunnelInterfaceAllowSnmp"] = state ? state.tunnelInterfaceAllowSnmp : undefined;
-            resourceInputs["tunnelInterfaceAllowSnmpVariable"] = state ? state.tunnelInterfaceAllowSnmpVariable : undefined;
-            resourceInputs["tunnelInterfaceAllowSsh"] = state ? state.tunnelInterfaceAllowSsh : undefined;
-            resourceInputs["tunnelInterfaceAllowSshVariable"] = state ? state.tunnelInterfaceAllowSshVariable : undefined;
-            resourceInputs["tunnelInterfaceAllowStun"] = state ? state.tunnelInterfaceAllowStun : undefined;
-            resourceInputs["tunnelInterfaceAllowStunVariable"] = state ? state.tunnelInterfaceAllowStunVariable : undefined;
-            resourceInputs["tunnelInterfaceBindLoopbackTunnel"] = state ? state.tunnelInterfaceBindLoopbackTunnel : undefined;
-            resourceInputs["tunnelInterfaceBindLoopbackTunnelVariable"] = state ? state.tunnelInterfaceBindLoopbackTunnelVariable : undefined;
-            resourceInputs["tunnelInterfaceBorder"] = state ? state.tunnelInterfaceBorder : undefined;
-            resourceInputs["tunnelInterfaceBorderVariable"] = state ? state.tunnelInterfaceBorderVariable : undefined;
-            resourceInputs["tunnelInterfaceCarrier"] = state ? state.tunnelInterfaceCarrier : undefined;
-            resourceInputs["tunnelInterfaceCarrierVariable"] = state ? state.tunnelInterfaceCarrierVariable : undefined;
-            resourceInputs["tunnelInterfaceClearDontFragment"] = state ? state.tunnelInterfaceClearDontFragment : undefined;
-            resourceInputs["tunnelInterfaceClearDontFragmentVariable"] = state ? state.tunnelInterfaceClearDontFragmentVariable : undefined;
-            resourceInputs["tunnelInterfaceColor"] = state ? state.tunnelInterfaceColor : undefined;
-            resourceInputs["tunnelInterfaceColorRestrict"] = state ? state.tunnelInterfaceColorRestrict : undefined;
-            resourceInputs["tunnelInterfaceColorRestrictVariable"] = state ? state.tunnelInterfaceColorRestrictVariable : undefined;
-            resourceInputs["tunnelInterfaceColorVariable"] = state ? state.tunnelInterfaceColorVariable : undefined;
-            resourceInputs["tunnelInterfaceCtsSgtPropagation"] = state ? state.tunnelInterfaceCtsSgtPropagation : undefined;
-            resourceInputs["tunnelInterfaceCtsSgtPropagationVariable"] = state ? state.tunnelInterfaceCtsSgtPropagationVariable : undefined;
-            resourceInputs["tunnelInterfaceEncapsulations"] = state ? state.tunnelInterfaceEncapsulations : undefined;
-            resourceInputs["tunnelInterfaceExcludeControllerGroupListVariable"] = state ? state.tunnelInterfaceExcludeControllerGroupListVariable : undefined;
-            resourceInputs["tunnelInterfaceExcludeControllerGroupLists"] = state ? state.tunnelInterfaceExcludeControllerGroupLists : undefined;
-            resourceInputs["tunnelInterfaceGreTunnelDestinationIp"] = state ? state.tunnelInterfaceGreTunnelDestinationIp : undefined;
-            resourceInputs["tunnelInterfaceGreTunnelDestinationIpVariable"] = state ? state.tunnelInterfaceGreTunnelDestinationIpVariable : undefined;
-            resourceInputs["tunnelInterfaceGroups"] = state ? state.tunnelInterfaceGroups : undefined;
-            resourceInputs["tunnelInterfaceGroupsVariable"] = state ? state.tunnelInterfaceGroupsVariable : undefined;
-            resourceInputs["tunnelInterfaceHelloInterval"] = state ? state.tunnelInterfaceHelloInterval : undefined;
-            resourceInputs["tunnelInterfaceHelloIntervalVariable"] = state ? state.tunnelInterfaceHelloIntervalVariable : undefined;
-            resourceInputs["tunnelInterfaceHelloTolerance"] = state ? state.tunnelInterfaceHelloTolerance : undefined;
-            resourceInputs["tunnelInterfaceHelloToleranceVariable"] = state ? state.tunnelInterfaceHelloToleranceVariable : undefined;
-            resourceInputs["tunnelInterfaceLastResortCircuit"] = state ? state.tunnelInterfaceLastResortCircuit : undefined;
-            resourceInputs["tunnelInterfaceLastResortCircuitVariable"] = state ? state.tunnelInterfaceLastResortCircuitVariable : undefined;
-            resourceInputs["tunnelInterfaceLowBandwidthLink"] = state ? state.tunnelInterfaceLowBandwidthLink : undefined;
-            resourceInputs["tunnelInterfaceLowBandwidthLinkVariable"] = state ? state.tunnelInterfaceLowBandwidthLinkVariable : undefined;
-            resourceInputs["tunnelInterfaceMaxControlConnections"] = state ? state.tunnelInterfaceMaxControlConnections : undefined;
-            resourceInputs["tunnelInterfaceMaxControlConnectionsVariable"] = state ? state.tunnelInterfaceMaxControlConnectionsVariable : undefined;
-            resourceInputs["tunnelInterfaceNatRefreshInterval"] = state ? state.tunnelInterfaceNatRefreshInterval : undefined;
-            resourceInputs["tunnelInterfaceNatRefreshIntervalVariable"] = state ? state.tunnelInterfaceNatRefreshIntervalVariable : undefined;
-            resourceInputs["tunnelInterfaceNetworkBroadcast"] = state ? state.tunnelInterfaceNetworkBroadcast : undefined;
-            resourceInputs["tunnelInterfaceNetworkBroadcastVariable"] = state ? state.tunnelInterfaceNetworkBroadcastVariable : undefined;
-            resourceInputs["tunnelInterfacePortHop"] = state ? state.tunnelInterfacePortHop : undefined;
-            resourceInputs["tunnelInterfacePortHopVariable"] = state ? state.tunnelInterfacePortHopVariable : undefined;
-            resourceInputs["tunnelInterfaceTunnelTcpMss"] = state ? state.tunnelInterfaceTunnelTcpMss : undefined;
-            resourceInputs["tunnelInterfaceTunnelTcpMssVariable"] = state ? state.tunnelInterfaceTunnelTcpMssVariable : undefined;
-            resourceInputs["tunnelInterfaceVbondAsStunServer"] = state ? state.tunnelInterfaceVbondAsStunServer : undefined;
-            resourceInputs["tunnelInterfaceVbondAsStunServerVariable"] = state ? state.tunnelInterfaceVbondAsStunServerVariable : undefined;
-            resourceInputs["tunnelInterfaceVmanageConnectionPreference"] = state ? state.tunnelInterfaceVmanageConnectionPreference : undefined;
-            resourceInputs["tunnelInterfaceVmanageConnectionPreferenceVariable"] = state ? state.tunnelInterfaceVmanageConnectionPreferenceVariable : undefined;
-            resourceInputs["tunnelQosMode"] = state ? state.tunnelQosMode : undefined;
-            resourceInputs["tunnelQosModeVariable"] = state ? state.tunnelQosModeVariable : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
-            resourceInputs["xconnect"] = state ? state.xconnect : undefined;
-            resourceInputs["xconnectVariable"] = state ? state.xconnectVariable : undefined;
+            resourceInputs["aclIpv4EgressFeatureId"] = state?.aclIpv4EgressFeatureId;
+            resourceInputs["aclIpv4IngressFeatureId"] = state?.aclIpv4IngressFeatureId;
+            resourceInputs["aclIpv6EgressFeatureId"] = state?.aclIpv6EgressFeatureId;
+            resourceInputs["aclIpv6IngressFeatureId"] = state?.aclIpv6IngressFeatureId;
+            resourceInputs["arpTimeout"] = state?.arpTimeout;
+            resourceInputs["arpTimeoutVariable"] = state?.arpTimeoutVariable;
+            resourceInputs["arps"] = state?.arps;
+            resourceInputs["autoDetectBandwidth"] = state?.autoDetectBandwidth;
+            resourceInputs["autoDetectBandwidthVariable"] = state?.autoDetectBandwidthVariable;
+            resourceInputs["autonegotiate"] = state?.autonegotiate;
+            resourceInputs["autonegotiateVariable"] = state?.autonegotiateVariable;
+            resourceInputs["bandwidthDownstream"] = state?.bandwidthDownstream;
+            resourceInputs["bandwidthDownstreamVariable"] = state?.bandwidthDownstreamVariable;
+            resourceInputs["bandwidthUpstream"] = state?.bandwidthUpstream;
+            resourceInputs["bandwidthUpstreamVariable"] = state?.bandwidthUpstreamVariable;
+            resourceInputs["blockNonSourceIp"] = state?.blockNonSourceIp;
+            resourceInputs["blockNonSourceIpVariable"] = state?.blockNonSourceIpVariable;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["duplex"] = state?.duplex;
+            resourceInputs["duplexVariable"] = state?.duplexVariable;
+            resourceInputs["enableDhcpv6"] = state?.enableDhcpv6;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["greTunnelSourceIp"] = state?.greTunnelSourceIp;
+            resourceInputs["greTunnelSourceIpVariable"] = state?.greTunnelSourceIpVariable;
+            resourceInputs["icmpRedirectDisable"] = state?.icmpRedirectDisable;
+            resourceInputs["icmpRedirectDisableVariable"] = state?.icmpRedirectDisableVariable;
+            resourceInputs["interfaceDescription"] = state?.interfaceDescription;
+            resourceInputs["interfaceDescriptionVariable"] = state?.interfaceDescriptionVariable;
+            resourceInputs["interfaceMtu"] = state?.interfaceMtu;
+            resourceInputs["interfaceMtuVariable"] = state?.interfaceMtuVariable;
+            resourceInputs["interfaceName"] = state?.interfaceName;
+            resourceInputs["interfaceNameVariable"] = state?.interfaceNameVariable;
+            resourceInputs["ipDirectedBroadcast"] = state?.ipDirectedBroadcast;
+            resourceInputs["ipDirectedBroadcastVariable"] = state?.ipDirectedBroadcastVariable;
+            resourceInputs["ipMtu"] = state?.ipMtu;
+            resourceInputs["ipMtuVariable"] = state?.ipMtuVariable;
+            resourceInputs["iperfServer"] = state?.iperfServer;
+            resourceInputs["iperfServerVariable"] = state?.iperfServerVariable;
+            resourceInputs["ipv4Address"] = state?.ipv4Address;
+            resourceInputs["ipv4AddressVariable"] = state?.ipv4AddressVariable;
+            resourceInputs["ipv4ConfigurationType"] = state?.ipv4ConfigurationType;
+            resourceInputs["ipv4DhcpDistance"] = state?.ipv4DhcpDistance;
+            resourceInputs["ipv4DhcpDistanceVariable"] = state?.ipv4DhcpDistanceVariable;
+            resourceInputs["ipv4DhcpHelperVariable"] = state?.ipv4DhcpHelperVariable;
+            resourceInputs["ipv4DhcpHelpers"] = state?.ipv4DhcpHelpers;
+            resourceInputs["ipv4SecondaryAddresses"] = state?.ipv4SecondaryAddresses;
+            resourceInputs["ipv4SubnetMask"] = state?.ipv4SubnetMask;
+            resourceInputs["ipv4SubnetMaskVariable"] = state?.ipv4SubnetMaskVariable;
+            resourceInputs["ipv6Address"] = state?.ipv6Address;
+            resourceInputs["ipv6AddressVariable"] = state?.ipv6AddressVariable;
+            resourceInputs["ipv6ConfigurationType"] = state?.ipv6ConfigurationType;
+            resourceInputs["ipv6DhcpSecondaryAddresses"] = state?.ipv6DhcpSecondaryAddresses;
+            resourceInputs["ipv6SecondaryAddresses"] = state?.ipv6SecondaryAddresses;
+            resourceInputs["loadInterval"] = state?.loadInterval;
+            resourceInputs["loadIntervalVariable"] = state?.loadIntervalVariable;
+            resourceInputs["macAddress"] = state?.macAddress;
+            resourceInputs["macAddressVariable"] = state?.macAddressVariable;
+            resourceInputs["mediaType"] = state?.mediaType;
+            resourceInputs["mediaTypeVariable"] = state?.mediaTypeVariable;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["nat64"] = state?.nat64;
+            resourceInputs["nat66"] = state?.nat66;
+            resourceInputs["natIpv4"] = state?.natIpv4;
+            resourceInputs["natIpv4Variable"] = state?.natIpv4Variable;
+            resourceInputs["natIpv6"] = state?.natIpv6;
+            resourceInputs["natIpv6Variable"] = state?.natIpv6Variable;
+            resourceInputs["natLoopback"] = state?.natLoopback;
+            resourceInputs["natLoopbackVariable"] = state?.natLoopbackVariable;
+            resourceInputs["natOverload"] = state?.natOverload;
+            resourceInputs["natOverloadVariable"] = state?.natOverloadVariable;
+            resourceInputs["natPrefixLength"] = state?.natPrefixLength;
+            resourceInputs["natPrefixLengthVariable"] = state?.natPrefixLengthVariable;
+            resourceInputs["natRangeEnd"] = state?.natRangeEnd;
+            resourceInputs["natRangeEndVariable"] = state?.natRangeEndVariable;
+            resourceInputs["natRangeStart"] = state?.natRangeStart;
+            resourceInputs["natRangeStartVariable"] = state?.natRangeStartVariable;
+            resourceInputs["natTcpTimeout"] = state?.natTcpTimeout;
+            resourceInputs["natTcpTimeoutVariable"] = state?.natTcpTimeoutVariable;
+            resourceInputs["natType"] = state?.natType;
+            resourceInputs["natTypeVariable"] = state?.natTypeVariable;
+            resourceInputs["natUdpTimeout"] = state?.natUdpTimeout;
+            resourceInputs["natUdpTimeoutVariable"] = state?.natUdpTimeoutVariable;
+            resourceInputs["newStaticNats"] = state?.newStaticNats;
+            resourceInputs["perTunnelQos"] = state?.perTunnelQos;
+            resourceInputs["perTunnelQosVariable"] = state?.perTunnelQosVariable;
+            resourceInputs["qosAdaptive"] = state?.qosAdaptive;
+            resourceInputs["qosAdaptiveBandwidthDownstream"] = state?.qosAdaptiveBandwidthDownstream;
+            resourceInputs["qosAdaptiveBandwidthUpstream"] = state?.qosAdaptiveBandwidthUpstream;
+            resourceInputs["qosAdaptiveDefaultDownstream"] = state?.qosAdaptiveDefaultDownstream;
+            resourceInputs["qosAdaptiveDefaultDownstreamVariable"] = state?.qosAdaptiveDefaultDownstreamVariable;
+            resourceInputs["qosAdaptiveDefaultUpstream"] = state?.qosAdaptiveDefaultUpstream;
+            resourceInputs["qosAdaptiveDefaultUpstreamVariable"] = state?.qosAdaptiveDefaultUpstreamVariable;
+            resourceInputs["qosAdaptiveMaxDownstream"] = state?.qosAdaptiveMaxDownstream;
+            resourceInputs["qosAdaptiveMaxDownstreamVariable"] = state?.qosAdaptiveMaxDownstreamVariable;
+            resourceInputs["qosAdaptiveMaxUpstream"] = state?.qosAdaptiveMaxUpstream;
+            resourceInputs["qosAdaptiveMaxUpstreamVariable"] = state?.qosAdaptiveMaxUpstreamVariable;
+            resourceInputs["qosAdaptiveMinDownstream"] = state?.qosAdaptiveMinDownstream;
+            resourceInputs["qosAdaptiveMinDownstreamVariable"] = state?.qosAdaptiveMinDownstreamVariable;
+            resourceInputs["qosAdaptiveMinUpstream"] = state?.qosAdaptiveMinUpstream;
+            resourceInputs["qosAdaptiveMinUpstreamVariable"] = state?.qosAdaptiveMinUpstreamVariable;
+            resourceInputs["qosAdaptivePeriod"] = state?.qosAdaptivePeriod;
+            resourceInputs["qosAdaptivePeriodVariable"] = state?.qosAdaptivePeriodVariable;
+            resourceInputs["qosShapingRate"] = state?.qosShapingRate;
+            resourceInputs["qosShapingRateVariable"] = state?.qosShapingRateVariable;
+            resourceInputs["serviceProvider"] = state?.serviceProvider;
+            resourceInputs["serviceProviderVariable"] = state?.serviceProviderVariable;
+            resourceInputs["shutdown"] = state?.shutdown;
+            resourceInputs["shutdownVariable"] = state?.shutdownVariable;
+            resourceInputs["speed"] = state?.speed;
+            resourceInputs["speedVariable"] = state?.speedVariable;
+            resourceInputs["staticNat66s"] = state?.staticNat66s;
+            resourceInputs["tcpMss"] = state?.tcpMss;
+            resourceInputs["tcpMssVariable"] = state?.tcpMssVariable;
+            resourceInputs["tlocExtension"] = state?.tlocExtension;
+            resourceInputs["tlocExtensionVariable"] = state?.tlocExtensionVariable;
+            resourceInputs["tracker"] = state?.tracker;
+            resourceInputs["trackerVariable"] = state?.trackerVariable;
+            resourceInputs["transportWanVpnFeatureId"] = state?.transportWanVpnFeatureId;
+            resourceInputs["tunnelBandwidthPercent"] = state?.tunnelBandwidthPercent;
+            resourceInputs["tunnelBandwidthPercentVariable"] = state?.tunnelBandwidthPercentVariable;
+            resourceInputs["tunnelInterface"] = state?.tunnelInterface;
+            resourceInputs["tunnelInterfaceAllowAll"] = state?.tunnelInterfaceAllowAll;
+            resourceInputs["tunnelInterfaceAllowAllVariable"] = state?.tunnelInterfaceAllowAllVariable;
+            resourceInputs["tunnelInterfaceAllowBfd"] = state?.tunnelInterfaceAllowBfd;
+            resourceInputs["tunnelInterfaceAllowBfdVariable"] = state?.tunnelInterfaceAllowBfdVariable;
+            resourceInputs["tunnelInterfaceAllowBgp"] = state?.tunnelInterfaceAllowBgp;
+            resourceInputs["tunnelInterfaceAllowBgpVariable"] = state?.tunnelInterfaceAllowBgpVariable;
+            resourceInputs["tunnelInterfaceAllowDhcp"] = state?.tunnelInterfaceAllowDhcp;
+            resourceInputs["tunnelInterfaceAllowDhcpVariable"] = state?.tunnelInterfaceAllowDhcpVariable;
+            resourceInputs["tunnelInterfaceAllowDns"] = state?.tunnelInterfaceAllowDns;
+            resourceInputs["tunnelInterfaceAllowDnsVariable"] = state?.tunnelInterfaceAllowDnsVariable;
+            resourceInputs["tunnelInterfaceAllowHttps"] = state?.tunnelInterfaceAllowHttps;
+            resourceInputs["tunnelInterfaceAllowHttpsVariable"] = state?.tunnelInterfaceAllowHttpsVariable;
+            resourceInputs["tunnelInterfaceAllowIcmp"] = state?.tunnelInterfaceAllowIcmp;
+            resourceInputs["tunnelInterfaceAllowIcmpVariable"] = state?.tunnelInterfaceAllowIcmpVariable;
+            resourceInputs["tunnelInterfaceAllowNetconf"] = state?.tunnelInterfaceAllowNetconf;
+            resourceInputs["tunnelInterfaceAllowNetconfVariable"] = state?.tunnelInterfaceAllowNetconfVariable;
+            resourceInputs["tunnelInterfaceAllowNtp"] = state?.tunnelInterfaceAllowNtp;
+            resourceInputs["tunnelInterfaceAllowNtpVariable"] = state?.tunnelInterfaceAllowNtpVariable;
+            resourceInputs["tunnelInterfaceAllowOspf"] = state?.tunnelInterfaceAllowOspf;
+            resourceInputs["tunnelInterfaceAllowOspfVariable"] = state?.tunnelInterfaceAllowOspfVariable;
+            resourceInputs["tunnelInterfaceAllowSnmp"] = state?.tunnelInterfaceAllowSnmp;
+            resourceInputs["tunnelInterfaceAllowSnmpVariable"] = state?.tunnelInterfaceAllowSnmpVariable;
+            resourceInputs["tunnelInterfaceAllowSsh"] = state?.tunnelInterfaceAllowSsh;
+            resourceInputs["tunnelInterfaceAllowSshVariable"] = state?.tunnelInterfaceAllowSshVariable;
+            resourceInputs["tunnelInterfaceAllowStun"] = state?.tunnelInterfaceAllowStun;
+            resourceInputs["tunnelInterfaceAllowStunVariable"] = state?.tunnelInterfaceAllowStunVariable;
+            resourceInputs["tunnelInterfaceBindLoopbackTunnel"] = state?.tunnelInterfaceBindLoopbackTunnel;
+            resourceInputs["tunnelInterfaceBindLoopbackTunnelVariable"] = state?.tunnelInterfaceBindLoopbackTunnelVariable;
+            resourceInputs["tunnelInterfaceBorder"] = state?.tunnelInterfaceBorder;
+            resourceInputs["tunnelInterfaceBorderVariable"] = state?.tunnelInterfaceBorderVariable;
+            resourceInputs["tunnelInterfaceCarrier"] = state?.tunnelInterfaceCarrier;
+            resourceInputs["tunnelInterfaceCarrierVariable"] = state?.tunnelInterfaceCarrierVariable;
+            resourceInputs["tunnelInterfaceClearDontFragment"] = state?.tunnelInterfaceClearDontFragment;
+            resourceInputs["tunnelInterfaceClearDontFragmentVariable"] = state?.tunnelInterfaceClearDontFragmentVariable;
+            resourceInputs["tunnelInterfaceColor"] = state?.tunnelInterfaceColor;
+            resourceInputs["tunnelInterfaceColorRestrict"] = state?.tunnelInterfaceColorRestrict;
+            resourceInputs["tunnelInterfaceColorRestrictVariable"] = state?.tunnelInterfaceColorRestrictVariable;
+            resourceInputs["tunnelInterfaceColorVariable"] = state?.tunnelInterfaceColorVariable;
+            resourceInputs["tunnelInterfaceCtsSgtPropagation"] = state?.tunnelInterfaceCtsSgtPropagation;
+            resourceInputs["tunnelInterfaceCtsSgtPropagationVariable"] = state?.tunnelInterfaceCtsSgtPropagationVariable;
+            resourceInputs["tunnelInterfaceEncapsulations"] = state?.tunnelInterfaceEncapsulations;
+            resourceInputs["tunnelInterfaceExcludeControllerGroupListVariable"] = state?.tunnelInterfaceExcludeControllerGroupListVariable;
+            resourceInputs["tunnelInterfaceExcludeControllerGroupLists"] = state?.tunnelInterfaceExcludeControllerGroupLists;
+            resourceInputs["tunnelInterfaceGreTunnelDestinationIp"] = state?.tunnelInterfaceGreTunnelDestinationIp;
+            resourceInputs["tunnelInterfaceGreTunnelDestinationIpVariable"] = state?.tunnelInterfaceGreTunnelDestinationIpVariable;
+            resourceInputs["tunnelInterfaceGroups"] = state?.tunnelInterfaceGroups;
+            resourceInputs["tunnelInterfaceGroupsVariable"] = state?.tunnelInterfaceGroupsVariable;
+            resourceInputs["tunnelInterfaceHelloInterval"] = state?.tunnelInterfaceHelloInterval;
+            resourceInputs["tunnelInterfaceHelloIntervalVariable"] = state?.tunnelInterfaceHelloIntervalVariable;
+            resourceInputs["tunnelInterfaceHelloTolerance"] = state?.tunnelInterfaceHelloTolerance;
+            resourceInputs["tunnelInterfaceHelloToleranceVariable"] = state?.tunnelInterfaceHelloToleranceVariable;
+            resourceInputs["tunnelInterfaceLastResortCircuit"] = state?.tunnelInterfaceLastResortCircuit;
+            resourceInputs["tunnelInterfaceLastResortCircuitVariable"] = state?.tunnelInterfaceLastResortCircuitVariable;
+            resourceInputs["tunnelInterfaceLowBandwidthLink"] = state?.tunnelInterfaceLowBandwidthLink;
+            resourceInputs["tunnelInterfaceLowBandwidthLinkVariable"] = state?.tunnelInterfaceLowBandwidthLinkVariable;
+            resourceInputs["tunnelInterfaceMaxControlConnections"] = state?.tunnelInterfaceMaxControlConnections;
+            resourceInputs["tunnelInterfaceMaxControlConnectionsVariable"] = state?.tunnelInterfaceMaxControlConnectionsVariable;
+            resourceInputs["tunnelInterfaceNatRefreshInterval"] = state?.tunnelInterfaceNatRefreshInterval;
+            resourceInputs["tunnelInterfaceNatRefreshIntervalVariable"] = state?.tunnelInterfaceNatRefreshIntervalVariable;
+            resourceInputs["tunnelInterfaceNetworkBroadcast"] = state?.tunnelInterfaceNetworkBroadcast;
+            resourceInputs["tunnelInterfaceNetworkBroadcastVariable"] = state?.tunnelInterfaceNetworkBroadcastVariable;
+            resourceInputs["tunnelInterfacePortHop"] = state?.tunnelInterfacePortHop;
+            resourceInputs["tunnelInterfacePortHopVariable"] = state?.tunnelInterfacePortHopVariable;
+            resourceInputs["tunnelInterfaceTunnelTcpMss"] = state?.tunnelInterfaceTunnelTcpMss;
+            resourceInputs["tunnelInterfaceTunnelTcpMssVariable"] = state?.tunnelInterfaceTunnelTcpMssVariable;
+            resourceInputs["tunnelInterfaceVbondAsStunServer"] = state?.tunnelInterfaceVbondAsStunServer;
+            resourceInputs["tunnelInterfaceVbondAsStunServerVariable"] = state?.tunnelInterfaceVbondAsStunServerVariable;
+            resourceInputs["tunnelInterfaceVmanageConnectionPreference"] = state?.tunnelInterfaceVmanageConnectionPreference;
+            resourceInputs["tunnelInterfaceVmanageConnectionPreferenceVariable"] = state?.tunnelInterfaceVmanageConnectionPreferenceVariable;
+            resourceInputs["tunnelQosMode"] = state?.tunnelQosMode;
+            resourceInputs["tunnelQosModeVariable"] = state?.tunnelQosModeVariable;
+            resourceInputs["version"] = state?.version;
+            resourceInputs["xconnect"] = state?.xconnect;
+            resourceInputs["xconnectVariable"] = state?.xconnectVariable;
         } else {
             const args = argsOrState as TransportWanVpnInterfaceEthernetFeatureArgs | undefined;
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            if ((!args || args.transportWanVpnFeatureId === undefined) && !opts.urn) {
+            if (args?.transportWanVpnFeatureId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'transportWanVpnFeatureId'");
             }
-            resourceInputs["aclIpv4EgressFeatureId"] = args ? args.aclIpv4EgressFeatureId : undefined;
-            resourceInputs["aclIpv4IngressFeatureId"] = args ? args.aclIpv4IngressFeatureId : undefined;
-            resourceInputs["aclIpv6EgressFeatureId"] = args ? args.aclIpv6EgressFeatureId : undefined;
-            resourceInputs["aclIpv6IngressFeatureId"] = args ? args.aclIpv6IngressFeatureId : undefined;
-            resourceInputs["arpTimeout"] = args ? args.arpTimeout : undefined;
-            resourceInputs["arpTimeoutVariable"] = args ? args.arpTimeoutVariable : undefined;
-            resourceInputs["arps"] = args ? args.arps : undefined;
-            resourceInputs["autoDetectBandwidth"] = args ? args.autoDetectBandwidth : undefined;
-            resourceInputs["autoDetectBandwidthVariable"] = args ? args.autoDetectBandwidthVariable : undefined;
-            resourceInputs["autonegotiate"] = args ? args.autonegotiate : undefined;
-            resourceInputs["autonegotiateVariable"] = args ? args.autonegotiateVariable : undefined;
-            resourceInputs["bandwidthDownstream"] = args ? args.bandwidthDownstream : undefined;
-            resourceInputs["bandwidthDownstreamVariable"] = args ? args.bandwidthDownstreamVariable : undefined;
-            resourceInputs["bandwidthUpstream"] = args ? args.bandwidthUpstream : undefined;
-            resourceInputs["bandwidthUpstreamVariable"] = args ? args.bandwidthUpstreamVariable : undefined;
-            resourceInputs["blockNonSourceIp"] = args ? args.blockNonSourceIp : undefined;
-            resourceInputs["blockNonSourceIpVariable"] = args ? args.blockNonSourceIpVariable : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["duplex"] = args ? args.duplex : undefined;
-            resourceInputs["duplexVariable"] = args ? args.duplexVariable : undefined;
-            resourceInputs["enableDhcpv6"] = args ? args.enableDhcpv6 : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["greTunnelSourceIp"] = args ? args.greTunnelSourceIp : undefined;
-            resourceInputs["greTunnelSourceIpVariable"] = args ? args.greTunnelSourceIpVariable : undefined;
-            resourceInputs["icmpRedirectDisable"] = args ? args.icmpRedirectDisable : undefined;
-            resourceInputs["icmpRedirectDisableVariable"] = args ? args.icmpRedirectDisableVariable : undefined;
-            resourceInputs["interfaceDescription"] = args ? args.interfaceDescription : undefined;
-            resourceInputs["interfaceDescriptionVariable"] = args ? args.interfaceDescriptionVariable : undefined;
-            resourceInputs["interfaceMtu"] = args ? args.interfaceMtu : undefined;
-            resourceInputs["interfaceMtuVariable"] = args ? args.interfaceMtuVariable : undefined;
-            resourceInputs["interfaceName"] = args ? args.interfaceName : undefined;
-            resourceInputs["interfaceNameVariable"] = args ? args.interfaceNameVariable : undefined;
-            resourceInputs["ipDirectedBroadcast"] = args ? args.ipDirectedBroadcast : undefined;
-            resourceInputs["ipDirectedBroadcastVariable"] = args ? args.ipDirectedBroadcastVariable : undefined;
-            resourceInputs["ipMtu"] = args ? args.ipMtu : undefined;
-            resourceInputs["ipMtuVariable"] = args ? args.ipMtuVariable : undefined;
-            resourceInputs["iperfServer"] = args ? args.iperfServer : undefined;
-            resourceInputs["iperfServerVariable"] = args ? args.iperfServerVariable : undefined;
-            resourceInputs["ipv4Address"] = args ? args.ipv4Address : undefined;
-            resourceInputs["ipv4AddressVariable"] = args ? args.ipv4AddressVariable : undefined;
-            resourceInputs["ipv4ConfigurationType"] = args ? args.ipv4ConfigurationType : undefined;
-            resourceInputs["ipv4DhcpDistance"] = args ? args.ipv4DhcpDistance : undefined;
-            resourceInputs["ipv4DhcpDistanceVariable"] = args ? args.ipv4DhcpDistanceVariable : undefined;
-            resourceInputs["ipv4DhcpHelperVariable"] = args ? args.ipv4DhcpHelperVariable : undefined;
-            resourceInputs["ipv4DhcpHelpers"] = args ? args.ipv4DhcpHelpers : undefined;
-            resourceInputs["ipv4SecondaryAddresses"] = args ? args.ipv4SecondaryAddresses : undefined;
-            resourceInputs["ipv4SubnetMask"] = args ? args.ipv4SubnetMask : undefined;
-            resourceInputs["ipv4SubnetMaskVariable"] = args ? args.ipv4SubnetMaskVariable : undefined;
-            resourceInputs["ipv6Address"] = args ? args.ipv6Address : undefined;
-            resourceInputs["ipv6AddressVariable"] = args ? args.ipv6AddressVariable : undefined;
-            resourceInputs["ipv6ConfigurationType"] = args ? args.ipv6ConfigurationType : undefined;
-            resourceInputs["ipv6DhcpSecondaryAddresses"] = args ? args.ipv6DhcpSecondaryAddresses : undefined;
-            resourceInputs["ipv6SecondaryAddresses"] = args ? args.ipv6SecondaryAddresses : undefined;
-            resourceInputs["loadInterval"] = args ? args.loadInterval : undefined;
-            resourceInputs["loadIntervalVariable"] = args ? args.loadIntervalVariable : undefined;
-            resourceInputs["macAddress"] = args ? args.macAddress : undefined;
-            resourceInputs["macAddressVariable"] = args ? args.macAddressVariable : undefined;
-            resourceInputs["mediaType"] = args ? args.mediaType : undefined;
-            resourceInputs["mediaTypeVariable"] = args ? args.mediaTypeVariable : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["nat64"] = args ? args.nat64 : undefined;
-            resourceInputs["nat66"] = args ? args.nat66 : undefined;
-            resourceInputs["natIpv4"] = args ? args.natIpv4 : undefined;
-            resourceInputs["natIpv4Variable"] = args ? args.natIpv4Variable : undefined;
-            resourceInputs["natIpv6"] = args ? args.natIpv6 : undefined;
-            resourceInputs["natIpv6Variable"] = args ? args.natIpv6Variable : undefined;
-            resourceInputs["natLoopback"] = args ? args.natLoopback : undefined;
-            resourceInputs["natLoopbackVariable"] = args ? args.natLoopbackVariable : undefined;
-            resourceInputs["natOverload"] = args ? args.natOverload : undefined;
-            resourceInputs["natOverloadVariable"] = args ? args.natOverloadVariable : undefined;
-            resourceInputs["natPrefixLength"] = args ? args.natPrefixLength : undefined;
-            resourceInputs["natPrefixLengthVariable"] = args ? args.natPrefixLengthVariable : undefined;
-            resourceInputs["natRangeEnd"] = args ? args.natRangeEnd : undefined;
-            resourceInputs["natRangeEndVariable"] = args ? args.natRangeEndVariable : undefined;
-            resourceInputs["natRangeStart"] = args ? args.natRangeStart : undefined;
-            resourceInputs["natRangeStartVariable"] = args ? args.natRangeStartVariable : undefined;
-            resourceInputs["natTcpTimeout"] = args ? args.natTcpTimeout : undefined;
-            resourceInputs["natTcpTimeoutVariable"] = args ? args.natTcpTimeoutVariable : undefined;
-            resourceInputs["natType"] = args ? args.natType : undefined;
-            resourceInputs["natTypeVariable"] = args ? args.natTypeVariable : undefined;
-            resourceInputs["natUdpTimeout"] = args ? args.natUdpTimeout : undefined;
-            resourceInputs["natUdpTimeoutVariable"] = args ? args.natUdpTimeoutVariable : undefined;
-            resourceInputs["newStaticNats"] = args ? args.newStaticNats : undefined;
-            resourceInputs["perTunnelQos"] = args ? args.perTunnelQos : undefined;
-            resourceInputs["perTunnelQosVariable"] = args ? args.perTunnelQosVariable : undefined;
-            resourceInputs["qosAdaptive"] = args ? args.qosAdaptive : undefined;
-            resourceInputs["qosAdaptiveBandwidthDownstream"] = args ? args.qosAdaptiveBandwidthDownstream : undefined;
-            resourceInputs["qosAdaptiveBandwidthUpstream"] = args ? args.qosAdaptiveBandwidthUpstream : undefined;
-            resourceInputs["qosAdaptiveDefaultDownstream"] = args ? args.qosAdaptiveDefaultDownstream : undefined;
-            resourceInputs["qosAdaptiveDefaultDownstreamVariable"] = args ? args.qosAdaptiveDefaultDownstreamVariable : undefined;
-            resourceInputs["qosAdaptiveDefaultUpstream"] = args ? args.qosAdaptiveDefaultUpstream : undefined;
-            resourceInputs["qosAdaptiveDefaultUpstreamVariable"] = args ? args.qosAdaptiveDefaultUpstreamVariable : undefined;
-            resourceInputs["qosAdaptiveMaxDownstream"] = args ? args.qosAdaptiveMaxDownstream : undefined;
-            resourceInputs["qosAdaptiveMaxDownstreamVariable"] = args ? args.qosAdaptiveMaxDownstreamVariable : undefined;
-            resourceInputs["qosAdaptiveMaxUpstream"] = args ? args.qosAdaptiveMaxUpstream : undefined;
-            resourceInputs["qosAdaptiveMaxUpstreamVariable"] = args ? args.qosAdaptiveMaxUpstreamVariable : undefined;
-            resourceInputs["qosAdaptiveMinDownstream"] = args ? args.qosAdaptiveMinDownstream : undefined;
-            resourceInputs["qosAdaptiveMinDownstreamVariable"] = args ? args.qosAdaptiveMinDownstreamVariable : undefined;
-            resourceInputs["qosAdaptiveMinUpstream"] = args ? args.qosAdaptiveMinUpstream : undefined;
-            resourceInputs["qosAdaptiveMinUpstreamVariable"] = args ? args.qosAdaptiveMinUpstreamVariable : undefined;
-            resourceInputs["qosAdaptivePeriod"] = args ? args.qosAdaptivePeriod : undefined;
-            resourceInputs["qosAdaptivePeriodVariable"] = args ? args.qosAdaptivePeriodVariable : undefined;
-            resourceInputs["qosShapingRate"] = args ? args.qosShapingRate : undefined;
-            resourceInputs["qosShapingRateVariable"] = args ? args.qosShapingRateVariable : undefined;
-            resourceInputs["serviceProvider"] = args ? args.serviceProvider : undefined;
-            resourceInputs["serviceProviderVariable"] = args ? args.serviceProviderVariable : undefined;
-            resourceInputs["shutdown"] = args ? args.shutdown : undefined;
-            resourceInputs["shutdownVariable"] = args ? args.shutdownVariable : undefined;
-            resourceInputs["speed"] = args ? args.speed : undefined;
-            resourceInputs["speedVariable"] = args ? args.speedVariable : undefined;
-            resourceInputs["staticNat66s"] = args ? args.staticNat66s : undefined;
-            resourceInputs["tcpMss"] = args ? args.tcpMss : undefined;
-            resourceInputs["tcpMssVariable"] = args ? args.tcpMssVariable : undefined;
-            resourceInputs["tlocExtension"] = args ? args.tlocExtension : undefined;
-            resourceInputs["tlocExtensionVariable"] = args ? args.tlocExtensionVariable : undefined;
-            resourceInputs["tracker"] = args ? args.tracker : undefined;
-            resourceInputs["trackerVariable"] = args ? args.trackerVariable : undefined;
-            resourceInputs["transportWanVpnFeatureId"] = args ? args.transportWanVpnFeatureId : undefined;
-            resourceInputs["tunnelBandwidthPercent"] = args ? args.tunnelBandwidthPercent : undefined;
-            resourceInputs["tunnelBandwidthPercentVariable"] = args ? args.tunnelBandwidthPercentVariable : undefined;
-            resourceInputs["tunnelInterface"] = args ? args.tunnelInterface : undefined;
-            resourceInputs["tunnelInterfaceAllowAll"] = args ? args.tunnelInterfaceAllowAll : undefined;
-            resourceInputs["tunnelInterfaceAllowAllVariable"] = args ? args.tunnelInterfaceAllowAllVariable : undefined;
-            resourceInputs["tunnelInterfaceAllowBfd"] = args ? args.tunnelInterfaceAllowBfd : undefined;
-            resourceInputs["tunnelInterfaceAllowBfdVariable"] = args ? args.tunnelInterfaceAllowBfdVariable : undefined;
-            resourceInputs["tunnelInterfaceAllowBgp"] = args ? args.tunnelInterfaceAllowBgp : undefined;
-            resourceInputs["tunnelInterfaceAllowBgpVariable"] = args ? args.tunnelInterfaceAllowBgpVariable : undefined;
-            resourceInputs["tunnelInterfaceAllowDhcp"] = args ? args.tunnelInterfaceAllowDhcp : undefined;
-            resourceInputs["tunnelInterfaceAllowDhcpVariable"] = args ? args.tunnelInterfaceAllowDhcpVariable : undefined;
-            resourceInputs["tunnelInterfaceAllowDns"] = args ? args.tunnelInterfaceAllowDns : undefined;
-            resourceInputs["tunnelInterfaceAllowDnsVariable"] = args ? args.tunnelInterfaceAllowDnsVariable : undefined;
-            resourceInputs["tunnelInterfaceAllowHttps"] = args ? args.tunnelInterfaceAllowHttps : undefined;
-            resourceInputs["tunnelInterfaceAllowHttpsVariable"] = args ? args.tunnelInterfaceAllowHttpsVariable : undefined;
-            resourceInputs["tunnelInterfaceAllowIcmp"] = args ? args.tunnelInterfaceAllowIcmp : undefined;
-            resourceInputs["tunnelInterfaceAllowIcmpVariable"] = args ? args.tunnelInterfaceAllowIcmpVariable : undefined;
-            resourceInputs["tunnelInterfaceAllowNetconf"] = args ? args.tunnelInterfaceAllowNetconf : undefined;
-            resourceInputs["tunnelInterfaceAllowNetconfVariable"] = args ? args.tunnelInterfaceAllowNetconfVariable : undefined;
-            resourceInputs["tunnelInterfaceAllowNtp"] = args ? args.tunnelInterfaceAllowNtp : undefined;
-            resourceInputs["tunnelInterfaceAllowNtpVariable"] = args ? args.tunnelInterfaceAllowNtpVariable : undefined;
-            resourceInputs["tunnelInterfaceAllowOspf"] = args ? args.tunnelInterfaceAllowOspf : undefined;
-            resourceInputs["tunnelInterfaceAllowOspfVariable"] = args ? args.tunnelInterfaceAllowOspfVariable : undefined;
-            resourceInputs["tunnelInterfaceAllowSnmp"] = args ? args.tunnelInterfaceAllowSnmp : undefined;
-            resourceInputs["tunnelInterfaceAllowSnmpVariable"] = args ? args.tunnelInterfaceAllowSnmpVariable : undefined;
-            resourceInputs["tunnelInterfaceAllowSsh"] = args ? args.tunnelInterfaceAllowSsh : undefined;
-            resourceInputs["tunnelInterfaceAllowSshVariable"] = args ? args.tunnelInterfaceAllowSshVariable : undefined;
-            resourceInputs["tunnelInterfaceAllowStun"] = args ? args.tunnelInterfaceAllowStun : undefined;
-            resourceInputs["tunnelInterfaceAllowStunVariable"] = args ? args.tunnelInterfaceAllowStunVariable : undefined;
-            resourceInputs["tunnelInterfaceBindLoopbackTunnel"] = args ? args.tunnelInterfaceBindLoopbackTunnel : undefined;
-            resourceInputs["tunnelInterfaceBindLoopbackTunnelVariable"] = args ? args.tunnelInterfaceBindLoopbackTunnelVariable : undefined;
-            resourceInputs["tunnelInterfaceBorder"] = args ? args.tunnelInterfaceBorder : undefined;
-            resourceInputs["tunnelInterfaceBorderVariable"] = args ? args.tunnelInterfaceBorderVariable : undefined;
-            resourceInputs["tunnelInterfaceCarrier"] = args ? args.tunnelInterfaceCarrier : undefined;
-            resourceInputs["tunnelInterfaceCarrierVariable"] = args ? args.tunnelInterfaceCarrierVariable : undefined;
-            resourceInputs["tunnelInterfaceClearDontFragment"] = args ? args.tunnelInterfaceClearDontFragment : undefined;
-            resourceInputs["tunnelInterfaceClearDontFragmentVariable"] = args ? args.tunnelInterfaceClearDontFragmentVariable : undefined;
-            resourceInputs["tunnelInterfaceColor"] = args ? args.tunnelInterfaceColor : undefined;
-            resourceInputs["tunnelInterfaceColorRestrict"] = args ? args.tunnelInterfaceColorRestrict : undefined;
-            resourceInputs["tunnelInterfaceColorRestrictVariable"] = args ? args.tunnelInterfaceColorRestrictVariable : undefined;
-            resourceInputs["tunnelInterfaceColorVariable"] = args ? args.tunnelInterfaceColorVariable : undefined;
-            resourceInputs["tunnelInterfaceCtsSgtPropagation"] = args ? args.tunnelInterfaceCtsSgtPropagation : undefined;
-            resourceInputs["tunnelInterfaceCtsSgtPropagationVariable"] = args ? args.tunnelInterfaceCtsSgtPropagationVariable : undefined;
-            resourceInputs["tunnelInterfaceEncapsulations"] = args ? args.tunnelInterfaceEncapsulations : undefined;
-            resourceInputs["tunnelInterfaceExcludeControllerGroupListVariable"] = args ? args.tunnelInterfaceExcludeControllerGroupListVariable : undefined;
-            resourceInputs["tunnelInterfaceExcludeControllerGroupLists"] = args ? args.tunnelInterfaceExcludeControllerGroupLists : undefined;
-            resourceInputs["tunnelInterfaceGreTunnelDestinationIp"] = args ? args.tunnelInterfaceGreTunnelDestinationIp : undefined;
-            resourceInputs["tunnelInterfaceGreTunnelDestinationIpVariable"] = args ? args.tunnelInterfaceGreTunnelDestinationIpVariable : undefined;
-            resourceInputs["tunnelInterfaceGroups"] = args ? args.tunnelInterfaceGroups : undefined;
-            resourceInputs["tunnelInterfaceGroupsVariable"] = args ? args.tunnelInterfaceGroupsVariable : undefined;
-            resourceInputs["tunnelInterfaceHelloInterval"] = args ? args.tunnelInterfaceHelloInterval : undefined;
-            resourceInputs["tunnelInterfaceHelloIntervalVariable"] = args ? args.tunnelInterfaceHelloIntervalVariable : undefined;
-            resourceInputs["tunnelInterfaceHelloTolerance"] = args ? args.tunnelInterfaceHelloTolerance : undefined;
-            resourceInputs["tunnelInterfaceHelloToleranceVariable"] = args ? args.tunnelInterfaceHelloToleranceVariable : undefined;
-            resourceInputs["tunnelInterfaceLastResortCircuit"] = args ? args.tunnelInterfaceLastResortCircuit : undefined;
-            resourceInputs["tunnelInterfaceLastResortCircuitVariable"] = args ? args.tunnelInterfaceLastResortCircuitVariable : undefined;
-            resourceInputs["tunnelInterfaceLowBandwidthLink"] = args ? args.tunnelInterfaceLowBandwidthLink : undefined;
-            resourceInputs["tunnelInterfaceLowBandwidthLinkVariable"] = args ? args.tunnelInterfaceLowBandwidthLinkVariable : undefined;
-            resourceInputs["tunnelInterfaceMaxControlConnections"] = args ? args.tunnelInterfaceMaxControlConnections : undefined;
-            resourceInputs["tunnelInterfaceMaxControlConnectionsVariable"] = args ? args.tunnelInterfaceMaxControlConnectionsVariable : undefined;
-            resourceInputs["tunnelInterfaceNatRefreshInterval"] = args ? args.tunnelInterfaceNatRefreshInterval : undefined;
-            resourceInputs["tunnelInterfaceNatRefreshIntervalVariable"] = args ? args.tunnelInterfaceNatRefreshIntervalVariable : undefined;
-            resourceInputs["tunnelInterfaceNetworkBroadcast"] = args ? args.tunnelInterfaceNetworkBroadcast : undefined;
-            resourceInputs["tunnelInterfaceNetworkBroadcastVariable"] = args ? args.tunnelInterfaceNetworkBroadcastVariable : undefined;
-            resourceInputs["tunnelInterfacePortHop"] = args ? args.tunnelInterfacePortHop : undefined;
-            resourceInputs["tunnelInterfacePortHopVariable"] = args ? args.tunnelInterfacePortHopVariable : undefined;
-            resourceInputs["tunnelInterfaceTunnelTcpMss"] = args ? args.tunnelInterfaceTunnelTcpMss : undefined;
-            resourceInputs["tunnelInterfaceTunnelTcpMssVariable"] = args ? args.tunnelInterfaceTunnelTcpMssVariable : undefined;
-            resourceInputs["tunnelInterfaceVbondAsStunServer"] = args ? args.tunnelInterfaceVbondAsStunServer : undefined;
-            resourceInputs["tunnelInterfaceVbondAsStunServerVariable"] = args ? args.tunnelInterfaceVbondAsStunServerVariable : undefined;
-            resourceInputs["tunnelInterfaceVmanageConnectionPreference"] = args ? args.tunnelInterfaceVmanageConnectionPreference : undefined;
-            resourceInputs["tunnelInterfaceVmanageConnectionPreferenceVariable"] = args ? args.tunnelInterfaceVmanageConnectionPreferenceVariable : undefined;
-            resourceInputs["tunnelQosMode"] = args ? args.tunnelQosMode : undefined;
-            resourceInputs["tunnelQosModeVariable"] = args ? args.tunnelQosModeVariable : undefined;
-            resourceInputs["xconnect"] = args ? args.xconnect : undefined;
-            resourceInputs["xconnectVariable"] = args ? args.xconnectVariable : undefined;
+            resourceInputs["aclIpv4EgressFeatureId"] = args?.aclIpv4EgressFeatureId;
+            resourceInputs["aclIpv4IngressFeatureId"] = args?.aclIpv4IngressFeatureId;
+            resourceInputs["aclIpv6EgressFeatureId"] = args?.aclIpv6EgressFeatureId;
+            resourceInputs["aclIpv6IngressFeatureId"] = args?.aclIpv6IngressFeatureId;
+            resourceInputs["arpTimeout"] = args?.arpTimeout;
+            resourceInputs["arpTimeoutVariable"] = args?.arpTimeoutVariable;
+            resourceInputs["arps"] = args?.arps;
+            resourceInputs["autoDetectBandwidth"] = args?.autoDetectBandwidth;
+            resourceInputs["autoDetectBandwidthVariable"] = args?.autoDetectBandwidthVariable;
+            resourceInputs["autonegotiate"] = args?.autonegotiate;
+            resourceInputs["autonegotiateVariable"] = args?.autonegotiateVariable;
+            resourceInputs["bandwidthDownstream"] = args?.bandwidthDownstream;
+            resourceInputs["bandwidthDownstreamVariable"] = args?.bandwidthDownstreamVariable;
+            resourceInputs["bandwidthUpstream"] = args?.bandwidthUpstream;
+            resourceInputs["bandwidthUpstreamVariable"] = args?.bandwidthUpstreamVariable;
+            resourceInputs["blockNonSourceIp"] = args?.blockNonSourceIp;
+            resourceInputs["blockNonSourceIpVariable"] = args?.blockNonSourceIpVariable;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["duplex"] = args?.duplex;
+            resourceInputs["duplexVariable"] = args?.duplexVariable;
+            resourceInputs["enableDhcpv6"] = args?.enableDhcpv6;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["greTunnelSourceIp"] = args?.greTunnelSourceIp;
+            resourceInputs["greTunnelSourceIpVariable"] = args?.greTunnelSourceIpVariable;
+            resourceInputs["icmpRedirectDisable"] = args?.icmpRedirectDisable;
+            resourceInputs["icmpRedirectDisableVariable"] = args?.icmpRedirectDisableVariable;
+            resourceInputs["interfaceDescription"] = args?.interfaceDescription;
+            resourceInputs["interfaceDescriptionVariable"] = args?.interfaceDescriptionVariable;
+            resourceInputs["interfaceMtu"] = args?.interfaceMtu;
+            resourceInputs["interfaceMtuVariable"] = args?.interfaceMtuVariable;
+            resourceInputs["interfaceName"] = args?.interfaceName;
+            resourceInputs["interfaceNameVariable"] = args?.interfaceNameVariable;
+            resourceInputs["ipDirectedBroadcast"] = args?.ipDirectedBroadcast;
+            resourceInputs["ipDirectedBroadcastVariable"] = args?.ipDirectedBroadcastVariable;
+            resourceInputs["ipMtu"] = args?.ipMtu;
+            resourceInputs["ipMtuVariable"] = args?.ipMtuVariable;
+            resourceInputs["iperfServer"] = args?.iperfServer;
+            resourceInputs["iperfServerVariable"] = args?.iperfServerVariable;
+            resourceInputs["ipv4Address"] = args?.ipv4Address;
+            resourceInputs["ipv4AddressVariable"] = args?.ipv4AddressVariable;
+            resourceInputs["ipv4ConfigurationType"] = args?.ipv4ConfigurationType;
+            resourceInputs["ipv4DhcpDistance"] = args?.ipv4DhcpDistance;
+            resourceInputs["ipv4DhcpDistanceVariable"] = args?.ipv4DhcpDistanceVariable;
+            resourceInputs["ipv4DhcpHelperVariable"] = args?.ipv4DhcpHelperVariable;
+            resourceInputs["ipv4DhcpHelpers"] = args?.ipv4DhcpHelpers;
+            resourceInputs["ipv4SecondaryAddresses"] = args?.ipv4SecondaryAddresses;
+            resourceInputs["ipv4SubnetMask"] = args?.ipv4SubnetMask;
+            resourceInputs["ipv4SubnetMaskVariable"] = args?.ipv4SubnetMaskVariable;
+            resourceInputs["ipv6Address"] = args?.ipv6Address;
+            resourceInputs["ipv6AddressVariable"] = args?.ipv6AddressVariable;
+            resourceInputs["ipv6ConfigurationType"] = args?.ipv6ConfigurationType;
+            resourceInputs["ipv6DhcpSecondaryAddresses"] = args?.ipv6DhcpSecondaryAddresses;
+            resourceInputs["ipv6SecondaryAddresses"] = args?.ipv6SecondaryAddresses;
+            resourceInputs["loadInterval"] = args?.loadInterval;
+            resourceInputs["loadIntervalVariable"] = args?.loadIntervalVariable;
+            resourceInputs["macAddress"] = args?.macAddress;
+            resourceInputs["macAddressVariable"] = args?.macAddressVariable;
+            resourceInputs["mediaType"] = args?.mediaType;
+            resourceInputs["mediaTypeVariable"] = args?.mediaTypeVariable;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["nat64"] = args?.nat64;
+            resourceInputs["nat66"] = args?.nat66;
+            resourceInputs["natIpv4"] = args?.natIpv4;
+            resourceInputs["natIpv4Variable"] = args?.natIpv4Variable;
+            resourceInputs["natIpv6"] = args?.natIpv6;
+            resourceInputs["natIpv6Variable"] = args?.natIpv6Variable;
+            resourceInputs["natLoopback"] = args?.natLoopback;
+            resourceInputs["natLoopbackVariable"] = args?.natLoopbackVariable;
+            resourceInputs["natOverload"] = args?.natOverload;
+            resourceInputs["natOverloadVariable"] = args?.natOverloadVariable;
+            resourceInputs["natPrefixLength"] = args?.natPrefixLength;
+            resourceInputs["natPrefixLengthVariable"] = args?.natPrefixLengthVariable;
+            resourceInputs["natRangeEnd"] = args?.natRangeEnd;
+            resourceInputs["natRangeEndVariable"] = args?.natRangeEndVariable;
+            resourceInputs["natRangeStart"] = args?.natRangeStart;
+            resourceInputs["natRangeStartVariable"] = args?.natRangeStartVariable;
+            resourceInputs["natTcpTimeout"] = args?.natTcpTimeout;
+            resourceInputs["natTcpTimeoutVariable"] = args?.natTcpTimeoutVariable;
+            resourceInputs["natType"] = args?.natType;
+            resourceInputs["natTypeVariable"] = args?.natTypeVariable;
+            resourceInputs["natUdpTimeout"] = args?.natUdpTimeout;
+            resourceInputs["natUdpTimeoutVariable"] = args?.natUdpTimeoutVariable;
+            resourceInputs["newStaticNats"] = args?.newStaticNats;
+            resourceInputs["perTunnelQos"] = args?.perTunnelQos;
+            resourceInputs["perTunnelQosVariable"] = args?.perTunnelQosVariable;
+            resourceInputs["qosAdaptive"] = args?.qosAdaptive;
+            resourceInputs["qosAdaptiveBandwidthDownstream"] = args?.qosAdaptiveBandwidthDownstream;
+            resourceInputs["qosAdaptiveBandwidthUpstream"] = args?.qosAdaptiveBandwidthUpstream;
+            resourceInputs["qosAdaptiveDefaultDownstream"] = args?.qosAdaptiveDefaultDownstream;
+            resourceInputs["qosAdaptiveDefaultDownstreamVariable"] = args?.qosAdaptiveDefaultDownstreamVariable;
+            resourceInputs["qosAdaptiveDefaultUpstream"] = args?.qosAdaptiveDefaultUpstream;
+            resourceInputs["qosAdaptiveDefaultUpstreamVariable"] = args?.qosAdaptiveDefaultUpstreamVariable;
+            resourceInputs["qosAdaptiveMaxDownstream"] = args?.qosAdaptiveMaxDownstream;
+            resourceInputs["qosAdaptiveMaxDownstreamVariable"] = args?.qosAdaptiveMaxDownstreamVariable;
+            resourceInputs["qosAdaptiveMaxUpstream"] = args?.qosAdaptiveMaxUpstream;
+            resourceInputs["qosAdaptiveMaxUpstreamVariable"] = args?.qosAdaptiveMaxUpstreamVariable;
+            resourceInputs["qosAdaptiveMinDownstream"] = args?.qosAdaptiveMinDownstream;
+            resourceInputs["qosAdaptiveMinDownstreamVariable"] = args?.qosAdaptiveMinDownstreamVariable;
+            resourceInputs["qosAdaptiveMinUpstream"] = args?.qosAdaptiveMinUpstream;
+            resourceInputs["qosAdaptiveMinUpstreamVariable"] = args?.qosAdaptiveMinUpstreamVariable;
+            resourceInputs["qosAdaptivePeriod"] = args?.qosAdaptivePeriod;
+            resourceInputs["qosAdaptivePeriodVariable"] = args?.qosAdaptivePeriodVariable;
+            resourceInputs["qosShapingRate"] = args?.qosShapingRate;
+            resourceInputs["qosShapingRateVariable"] = args?.qosShapingRateVariable;
+            resourceInputs["serviceProvider"] = args?.serviceProvider;
+            resourceInputs["serviceProviderVariable"] = args?.serviceProviderVariable;
+            resourceInputs["shutdown"] = args?.shutdown;
+            resourceInputs["shutdownVariable"] = args?.shutdownVariable;
+            resourceInputs["speed"] = args?.speed;
+            resourceInputs["speedVariable"] = args?.speedVariable;
+            resourceInputs["staticNat66s"] = args?.staticNat66s;
+            resourceInputs["tcpMss"] = args?.tcpMss;
+            resourceInputs["tcpMssVariable"] = args?.tcpMssVariable;
+            resourceInputs["tlocExtension"] = args?.tlocExtension;
+            resourceInputs["tlocExtensionVariable"] = args?.tlocExtensionVariable;
+            resourceInputs["tracker"] = args?.tracker;
+            resourceInputs["trackerVariable"] = args?.trackerVariable;
+            resourceInputs["transportWanVpnFeatureId"] = args?.transportWanVpnFeatureId;
+            resourceInputs["tunnelBandwidthPercent"] = args?.tunnelBandwidthPercent;
+            resourceInputs["tunnelBandwidthPercentVariable"] = args?.tunnelBandwidthPercentVariable;
+            resourceInputs["tunnelInterface"] = args?.tunnelInterface;
+            resourceInputs["tunnelInterfaceAllowAll"] = args?.tunnelInterfaceAllowAll;
+            resourceInputs["tunnelInterfaceAllowAllVariable"] = args?.tunnelInterfaceAllowAllVariable;
+            resourceInputs["tunnelInterfaceAllowBfd"] = args?.tunnelInterfaceAllowBfd;
+            resourceInputs["tunnelInterfaceAllowBfdVariable"] = args?.tunnelInterfaceAllowBfdVariable;
+            resourceInputs["tunnelInterfaceAllowBgp"] = args?.tunnelInterfaceAllowBgp;
+            resourceInputs["tunnelInterfaceAllowBgpVariable"] = args?.tunnelInterfaceAllowBgpVariable;
+            resourceInputs["tunnelInterfaceAllowDhcp"] = args?.tunnelInterfaceAllowDhcp;
+            resourceInputs["tunnelInterfaceAllowDhcpVariable"] = args?.tunnelInterfaceAllowDhcpVariable;
+            resourceInputs["tunnelInterfaceAllowDns"] = args?.tunnelInterfaceAllowDns;
+            resourceInputs["tunnelInterfaceAllowDnsVariable"] = args?.tunnelInterfaceAllowDnsVariable;
+            resourceInputs["tunnelInterfaceAllowHttps"] = args?.tunnelInterfaceAllowHttps;
+            resourceInputs["tunnelInterfaceAllowHttpsVariable"] = args?.tunnelInterfaceAllowHttpsVariable;
+            resourceInputs["tunnelInterfaceAllowIcmp"] = args?.tunnelInterfaceAllowIcmp;
+            resourceInputs["tunnelInterfaceAllowIcmpVariable"] = args?.tunnelInterfaceAllowIcmpVariable;
+            resourceInputs["tunnelInterfaceAllowNetconf"] = args?.tunnelInterfaceAllowNetconf;
+            resourceInputs["tunnelInterfaceAllowNetconfVariable"] = args?.tunnelInterfaceAllowNetconfVariable;
+            resourceInputs["tunnelInterfaceAllowNtp"] = args?.tunnelInterfaceAllowNtp;
+            resourceInputs["tunnelInterfaceAllowNtpVariable"] = args?.tunnelInterfaceAllowNtpVariable;
+            resourceInputs["tunnelInterfaceAllowOspf"] = args?.tunnelInterfaceAllowOspf;
+            resourceInputs["tunnelInterfaceAllowOspfVariable"] = args?.tunnelInterfaceAllowOspfVariable;
+            resourceInputs["tunnelInterfaceAllowSnmp"] = args?.tunnelInterfaceAllowSnmp;
+            resourceInputs["tunnelInterfaceAllowSnmpVariable"] = args?.tunnelInterfaceAllowSnmpVariable;
+            resourceInputs["tunnelInterfaceAllowSsh"] = args?.tunnelInterfaceAllowSsh;
+            resourceInputs["tunnelInterfaceAllowSshVariable"] = args?.tunnelInterfaceAllowSshVariable;
+            resourceInputs["tunnelInterfaceAllowStun"] = args?.tunnelInterfaceAllowStun;
+            resourceInputs["tunnelInterfaceAllowStunVariable"] = args?.tunnelInterfaceAllowStunVariable;
+            resourceInputs["tunnelInterfaceBindLoopbackTunnel"] = args?.tunnelInterfaceBindLoopbackTunnel;
+            resourceInputs["tunnelInterfaceBindLoopbackTunnelVariable"] = args?.tunnelInterfaceBindLoopbackTunnelVariable;
+            resourceInputs["tunnelInterfaceBorder"] = args?.tunnelInterfaceBorder;
+            resourceInputs["tunnelInterfaceBorderVariable"] = args?.tunnelInterfaceBorderVariable;
+            resourceInputs["tunnelInterfaceCarrier"] = args?.tunnelInterfaceCarrier;
+            resourceInputs["tunnelInterfaceCarrierVariable"] = args?.tunnelInterfaceCarrierVariable;
+            resourceInputs["tunnelInterfaceClearDontFragment"] = args?.tunnelInterfaceClearDontFragment;
+            resourceInputs["tunnelInterfaceClearDontFragmentVariable"] = args?.tunnelInterfaceClearDontFragmentVariable;
+            resourceInputs["tunnelInterfaceColor"] = args?.tunnelInterfaceColor;
+            resourceInputs["tunnelInterfaceColorRestrict"] = args?.tunnelInterfaceColorRestrict;
+            resourceInputs["tunnelInterfaceColorRestrictVariable"] = args?.tunnelInterfaceColorRestrictVariable;
+            resourceInputs["tunnelInterfaceColorVariable"] = args?.tunnelInterfaceColorVariable;
+            resourceInputs["tunnelInterfaceCtsSgtPropagation"] = args?.tunnelInterfaceCtsSgtPropagation;
+            resourceInputs["tunnelInterfaceCtsSgtPropagationVariable"] = args?.tunnelInterfaceCtsSgtPropagationVariable;
+            resourceInputs["tunnelInterfaceEncapsulations"] = args?.tunnelInterfaceEncapsulations;
+            resourceInputs["tunnelInterfaceExcludeControllerGroupListVariable"] = args?.tunnelInterfaceExcludeControllerGroupListVariable;
+            resourceInputs["tunnelInterfaceExcludeControllerGroupLists"] = args?.tunnelInterfaceExcludeControllerGroupLists;
+            resourceInputs["tunnelInterfaceGreTunnelDestinationIp"] = args?.tunnelInterfaceGreTunnelDestinationIp;
+            resourceInputs["tunnelInterfaceGreTunnelDestinationIpVariable"] = args?.tunnelInterfaceGreTunnelDestinationIpVariable;
+            resourceInputs["tunnelInterfaceGroups"] = args?.tunnelInterfaceGroups;
+            resourceInputs["tunnelInterfaceGroupsVariable"] = args?.tunnelInterfaceGroupsVariable;
+            resourceInputs["tunnelInterfaceHelloInterval"] = args?.tunnelInterfaceHelloInterval;
+            resourceInputs["tunnelInterfaceHelloIntervalVariable"] = args?.tunnelInterfaceHelloIntervalVariable;
+            resourceInputs["tunnelInterfaceHelloTolerance"] = args?.tunnelInterfaceHelloTolerance;
+            resourceInputs["tunnelInterfaceHelloToleranceVariable"] = args?.tunnelInterfaceHelloToleranceVariable;
+            resourceInputs["tunnelInterfaceLastResortCircuit"] = args?.tunnelInterfaceLastResortCircuit;
+            resourceInputs["tunnelInterfaceLastResortCircuitVariable"] = args?.tunnelInterfaceLastResortCircuitVariable;
+            resourceInputs["tunnelInterfaceLowBandwidthLink"] = args?.tunnelInterfaceLowBandwidthLink;
+            resourceInputs["tunnelInterfaceLowBandwidthLinkVariable"] = args?.tunnelInterfaceLowBandwidthLinkVariable;
+            resourceInputs["tunnelInterfaceMaxControlConnections"] = args?.tunnelInterfaceMaxControlConnections;
+            resourceInputs["tunnelInterfaceMaxControlConnectionsVariable"] = args?.tunnelInterfaceMaxControlConnectionsVariable;
+            resourceInputs["tunnelInterfaceNatRefreshInterval"] = args?.tunnelInterfaceNatRefreshInterval;
+            resourceInputs["tunnelInterfaceNatRefreshIntervalVariable"] = args?.tunnelInterfaceNatRefreshIntervalVariable;
+            resourceInputs["tunnelInterfaceNetworkBroadcast"] = args?.tunnelInterfaceNetworkBroadcast;
+            resourceInputs["tunnelInterfaceNetworkBroadcastVariable"] = args?.tunnelInterfaceNetworkBroadcastVariable;
+            resourceInputs["tunnelInterfacePortHop"] = args?.tunnelInterfacePortHop;
+            resourceInputs["tunnelInterfacePortHopVariable"] = args?.tunnelInterfacePortHopVariable;
+            resourceInputs["tunnelInterfaceTunnelTcpMss"] = args?.tunnelInterfaceTunnelTcpMss;
+            resourceInputs["tunnelInterfaceTunnelTcpMssVariable"] = args?.tunnelInterfaceTunnelTcpMssVariable;
+            resourceInputs["tunnelInterfaceVbondAsStunServer"] = args?.tunnelInterfaceVbondAsStunServer;
+            resourceInputs["tunnelInterfaceVbondAsStunServerVariable"] = args?.tunnelInterfaceVbondAsStunServerVariable;
+            resourceInputs["tunnelInterfaceVmanageConnectionPreference"] = args?.tunnelInterfaceVmanageConnectionPreference;
+            resourceInputs["tunnelInterfaceVmanageConnectionPreferenceVariable"] = args?.tunnelInterfaceVmanageConnectionPreferenceVariable;
+            resourceInputs["tunnelQosMode"] = args?.tunnelQosMode;
+            resourceInputs["tunnelQosModeVariable"] = args?.tunnelQosModeVariable;
+            resourceInputs["xconnect"] = args?.xconnect;
+            resourceInputs["xconnectVariable"] = args?.xconnectVariable;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -1265,7 +1328,9 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
     aclIpv6EgressFeatureId?: pulumi.Input<string>;
     aclIpv6IngressFeatureId?: pulumi.Input<string>;
     /**
-     * Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
+     * Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+     *   - Range: `0`-`2147483`
+     *   - Default value: `1200`
      */
     arpTimeout?: pulumi.Input<number>;
     /**
@@ -1277,7 +1342,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     arps?: pulumi.Input<pulumi.Input<inputs.TransportWanVpnInterfaceEthernetFeatureArp>[]>;
     /**
-     * Interface auto detect bandwidth - Default value: `false`
+     * Interface auto detect bandwidth
+     *   - Default value: `false`
      */
     autoDetectBandwidth?: pulumi.Input<boolean>;
     /**
@@ -1293,7 +1359,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     autonegotiateVariable?: pulumi.Input<string>;
     /**
-     * Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+     * Interface downstream bandwidth capacity, in kbps
+     *   - Range: `1`-`2147483647`
      */
     bandwidthDownstream?: pulumi.Input<number>;
     /**
@@ -1301,7 +1368,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     bandwidthDownstreamVariable?: pulumi.Input<string>;
     /**
-     * Interface upstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+     * Interface upstream bandwidth capacity, in kbps
+     *   - Range: `1`-`2147483647`
      */
     bandwidthUpstream?: pulumi.Input<number>;
     /**
@@ -1309,7 +1377,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     bandwidthUpstreamVariable?: pulumi.Input<string>;
     /**
-     * Block packets originating from IP address that is not from this source - Default value: `false`
+     * Block packets originating from IP address that is not from this source
+     *   - Default value: `false`
      */
     blockNonSourceIp?: pulumi.Input<boolean>;
     /**
@@ -1321,7 +1390,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     description?: pulumi.Input<string>;
     /**
-     * Duplex mode - Choices: `full`, `half`, `auto`
+     * Duplex mode
+     *   - Choices: `full`, `half`, `auto`
      */
     duplex?: pulumi.Input<string>;
     /**
@@ -1345,7 +1415,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     greTunnelSourceIpVariable?: pulumi.Input<string>;
     /**
-     * ICMP/ICMPv6 Redirect Disable - Default value: `true`
+     * ICMP/ICMPv6 Redirect Disable
+     *   - Default value: `true`
      */
     icmpRedirectDisable?: pulumi.Input<boolean>;
     /**
@@ -1358,8 +1429,9 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     interfaceDescriptionVariable?: pulumi.Input<string>;
     /**
-     * Interface MTU GigabitEthernet0 <1500..1518>, Other GigabitEthernet <1500..9216> in bytes - Range: `1500`-`9216` -
-     * Default value: `1500`
+     * Interface MTU GigabitEthernet0 <1500..1518>, Other GigabitEthernet <1500..9216> in bytes
+     *   - Range: `1500`-`9216`
+     *   - Default value: `1500`
      */
     interfaceMtu?: pulumi.Input<number>;
     /**
@@ -1372,7 +1444,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     interfaceNameVariable?: pulumi.Input<string>;
     /**
-     * IP Directed-Broadcast - Default value: `false`
+     * IP Directed-Broadcast
+     *   - Default value: `false`
      */
     ipDirectedBroadcast?: pulumi.Input<boolean>;
     /**
@@ -1380,8 +1453,9 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     ipDirectedBroadcastVariable?: pulumi.Input<string>;
     /**
-     * IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces
-     * <576..2000> in bytes - Range: `576`-`9216` - Default value: `1500`
+     * IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes
+     *   - Range: `576`-`9216`
+     *   - Default value: `1500`
      */
     ipMtu?: pulumi.Input<number>;
     /**
@@ -1405,12 +1479,15 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     ipv4AddressVariable?: pulumi.Input<string>;
     /**
-     * IPv4 Configuration Type - Choices: `dynamic`, `static` - Default value: `dynamic`
+     * IPv4 Configuration Type
+     *   - Choices: `dynamic`, `static`
+     *   - Default value: `dynamic`
      */
     ipv4ConfigurationType?: pulumi.Input<string>;
     /**
-     * DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic` - Range: `1`-`65536` - Default
-     * value: `1`
+     * DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
+     *   - Range: `1`-`65536`
+     *   - Default value: `1`
      */
     ipv4DhcpDistance?: pulumi.Input<number>;
     /**
@@ -1430,12 +1507,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     ipv4SecondaryAddresses?: pulumi.Input<pulumi.Input<inputs.TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress>[]>;
     /**
-     * Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static` - Choices: `255.255.255.255`,
-     * `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`,
-     * `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`,
-     * `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`,
-     * `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`,
-     * `128.0.0.0`, `0.0.0.0`
+     * Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     ipv4SubnetMask?: pulumi.Input<string>;
     /**
@@ -1451,7 +1524,9 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     ipv6AddressVariable?: pulumi.Input<string>;
     /**
-     * IPv6 Configuration Type - Choices: `dynamic`, `static`, `none` - Default value: `none`
+     * IPv6 Configuration Type
+     *   - Choices: `dynamic`, `static`, `none`
+     *   - Default value: `none`
      */
     ipv6ConfigurationType?: pulumi.Input<string>;
     /**
@@ -1463,7 +1538,9 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     ipv6SecondaryAddresses?: pulumi.Input<pulumi.Input<inputs.TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress>[]>;
     /**
-     * Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+     * Interval for interface load calculation
+     *   - Range: `30`-`600`
+     *   - Default value: `30`
      */
     loadInterval?: pulumi.Input<number>;
     /**
@@ -1479,7 +1556,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     macAddressVariable?: pulumi.Input<string>;
     /**
-     * Media type - Choices: `auto-select`, `rj45`, `sfp`
+     * Media type
+     *   - Choices: `auto-select`, `rj45`, `sfp`
      */
     mediaType?: pulumi.Input<string>;
     /**
@@ -1491,15 +1569,18 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     name?: pulumi.Input<string>;
     /**
-     * NAT64 on this interface, Attribute conditional on `natIpv6` being equal to `true` - Default value: `false`
+     * NAT64 on this interface, Attribute conditional on `natIpv6` being equal to `true`
+     *   - Default value: `false`
      */
     nat64?: pulumi.Input<boolean>;
     /**
-     * NAT66 on this interface, Attribute conditional on `natIpv6` being equal to `true` - Default value: `false`
+     * NAT66 on this interface, Attribute conditional on `natIpv6` being equal to `true`
+     *   - Default value: `false`
      */
     nat66?: pulumi.Input<boolean>;
     /**
-     * enable Network Address Translation on this interface - Default value: `false`
+     * enable Network Address Translation on this interface
+     *   - Default value: `false`
      */
     natIpv4?: pulumi.Input<boolean>;
     /**
@@ -1507,7 +1588,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     natIpv4Variable?: pulumi.Input<string>;
     /**
-     * enable Network Address Translation ipv6 on this interface - Default value: `false`
+     * enable Network Address Translation ipv6 on this interface
+     *   - Default value: `false`
      */
     natIpv6?: pulumi.Input<boolean>;
     /**
@@ -1523,7 +1605,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     natLoopbackVariable?: pulumi.Input<string>;
     /**
-     * NAT Overload, Attribute conditional on `natIpv4` being equal to `true` - Default value: `true`
+     * NAT Overload, Attribute conditional on `natIpv4` being equal to `true`
+     *   - Default value: `true`
      */
     natOverload?: pulumi.Input<boolean>;
     /**
@@ -1531,7 +1614,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     natOverloadVariable?: pulumi.Input<string>;
     /**
-     * NAT Pool Prefix Length, Attribute conditional on `natIpv4` being equal to `true` - Range: `1`-`32`
+     * NAT Pool Prefix Length, Attribute conditional on `natIpv4` being equal to `true`
+     *   - Range: `1`-`32`
      */
     natPrefixLength?: pulumi.Input<number>;
     /**
@@ -1555,8 +1639,9 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     natRangeStartVariable?: pulumi.Input<string>;
     /**
-     * Set NAT TCP session timeout, in minutes, Attribute conditional on `natIpv4` being equal to `true` - Range: `1`-`8947` -
-     * Default value: `60`
+     * Set NAT TCP session timeout, in minutes, Attribute conditional on `natIpv4` being equal to `true`
+     *   - Range: `1`-`8947`
+     *   - Default value: `60`
      */
     natTcpTimeout?: pulumi.Input<number>;
     /**
@@ -1564,8 +1649,9 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     natTcpTimeoutVariable?: pulumi.Input<string>;
     /**
-     * NAT Type, Attribute conditional on `natIpv4` being equal to `true` - Choices: `interface`, `pool`, `loopback` - Default
-     * value: `interface`
+     * NAT Type, Attribute conditional on `natIpv4` being equal to `true`
+     *   - Choices: `interface`, `pool`, `loopback`
+     *   - Default value: `interface`
      */
     natType?: pulumi.Input<string>;
     /**
@@ -1573,8 +1659,9 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     natTypeVariable?: pulumi.Input<string>;
     /**
-     * Set NAT UDP session timeout, in minutes, Attribute conditional on `natIpv4` being equal to `true` - Range: `1`-`8947` -
-     * Default value: `1`
+     * Set NAT UDP session timeout, in minutes, Attribute conditional on `natIpv4` being equal to `true`
+     *   - Range: `1`-`8947`
+     *   - Default value: `1`
      */
     natUdpTimeout?: pulumi.Input<number>;
     /**
@@ -1586,7 +1673,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     newStaticNats?: pulumi.Input<pulumi.Input<inputs.TransportWanVpnInterfaceEthernetFeatureNewStaticNat>[]>;
     /**
-     * Per-tunnel Qos, Attribute conditional on `tunnelInterface` being equal to `true` - Default value: `false`
+     * Per-tunnel Qos, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Default value: `false`
      */
     perTunnelQos?: pulumi.Input<boolean>;
     /**
@@ -1594,19 +1682,23 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     perTunnelQosVariable?: pulumi.Input<string>;
     /**
-     * Adaptive QoS - Default value: `false`
+     * Adaptive QoS
+     *   - Default value: `false`
      */
     qosAdaptive?: pulumi.Input<boolean>;
     /**
-     * Shaping Rate Downstream - Default value: `false`
+     * Shaping Rate Downstream
+     *   - Default value: `false`
      */
     qosAdaptiveBandwidthDownstream?: pulumi.Input<boolean>;
     /**
-     * Shaping Rate Upstream - Default value: `false`
+     * Shaping Rate Upstream
+     *   - Default value: `false`
      */
     qosAdaptiveBandwidthUpstream?: pulumi.Input<boolean>;
     /**
-     * Adaptive QoS default downstream bandwidth (kbps) - Range: `8`-`100000000`
+     * Adaptive QoS default downstream bandwidth (kbps)
+     *   - Range: `8`-`100000000`
      */
     qosAdaptiveDefaultDownstream?: pulumi.Input<number>;
     /**
@@ -1614,7 +1706,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     qosAdaptiveDefaultDownstreamVariable?: pulumi.Input<string>;
     /**
-     * Adaptive QoS default upstream bandwidth (kbps) - Range: `8`-`100000000`
+     * Adaptive QoS default upstream bandwidth (kbps)
+     *   - Range: `8`-`100000000`
      */
     qosAdaptiveDefaultUpstream?: pulumi.Input<number>;
     /**
@@ -1622,7 +1715,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     qosAdaptiveDefaultUpstreamVariable?: pulumi.Input<string>;
     /**
-     * Downstream max bandwidth limit (kbps) - Range: `8`-`100000000`
+     * Downstream max bandwidth limit (kbps)
+     *   - Range: `8`-`100000000`
      */
     qosAdaptiveMaxDownstream?: pulumi.Input<number>;
     /**
@@ -1630,7 +1724,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     qosAdaptiveMaxDownstreamVariable?: pulumi.Input<string>;
     /**
-     * Upstream max bandwidth limit (kbps) - Range: `8`-`100000000`
+     * Upstream max bandwidth limit (kbps)
+     *   - Range: `8`-`100000000`
      */
     qosAdaptiveMaxUpstream?: pulumi.Input<number>;
     /**
@@ -1638,7 +1733,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     qosAdaptiveMaxUpstreamVariable?: pulumi.Input<string>;
     /**
-     * Downstream min bandwidth limit (kbps) - Range: `8`-`100000000`
+     * Downstream min bandwidth limit (kbps)
+     *   - Range: `8`-`100000000`
      */
     qosAdaptiveMinDownstream?: pulumi.Input<number>;
     /**
@@ -1646,7 +1742,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     qosAdaptiveMinDownstreamVariable?: pulumi.Input<string>;
     /**
-     * Upstream min bandwidth limit (kbps) - Range: `8`-`100000000`
+     * Upstream min bandwidth limit (kbps)
+     *   - Range: `8`-`100000000`
      */
     qosAdaptiveMinUpstream?: pulumi.Input<number>;
     /**
@@ -1654,7 +1751,9 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     qosAdaptiveMinUpstreamVariable?: pulumi.Input<string>;
     /**
-     * Adapt Period(Minutes) - Range: `1`-`720` - Default value: `15`
+     * Adapt Period(Minutes)
+     *   - Range: `1`-`720`
+     *   - Default value: `15`
      */
     qosAdaptivePeriod?: pulumi.Input<number>;
     /**
@@ -1662,7 +1761,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     qosAdaptivePeriodVariable?: pulumi.Input<string>;
     /**
-     * Shaping Rate (Kbps) - Range: `8`-`100000000`
+     * Shaping Rate (Kbps)
+     *   - Range: `8`-`100000000`
      */
     qosShapingRate?: pulumi.Input<number>;
     /**
@@ -1686,7 +1786,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     shutdownVariable?: pulumi.Input<string>;
     /**
-     * Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+     * Set interface speed
+     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
      */
     speed?: pulumi.Input<string>;
     /**
@@ -1698,7 +1799,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     staticNat66s?: pulumi.Input<pulumi.Input<inputs.TransportWanVpnInterfaceEthernetFeatureStaticNat66>[]>;
     /**
-     * TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      */
     tcpMss?: pulumi.Input<number>;
     /**
@@ -1726,8 +1828,9 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     transportWanVpnFeatureId?: pulumi.Input<string>;
     /**
-     * Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` being equal to `true` - Range: `1`-`100` - Default
-     * value: `50`
+     * Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Range: `1`-`100`
+     *   - Default value: `50`
      */
     tunnelBandwidthPercent?: pulumi.Input<number>;
     /**
@@ -1735,11 +1838,13 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     tunnelBandwidthPercentVariable?: pulumi.Input<string>;
     /**
-     * Tunnel Interface on/off - Default value: `false`
+     * Tunnel Interface on/off
+     *   - Default value: `false`
      */
     tunnelInterface?: pulumi.Input<boolean>;
     /**
-     * Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
+     * Allow all traffic. Overrides all other allow-service options if allow-service all is set
+     *   - Default value: `false`
      */
     tunnelInterfaceAllowAll?: pulumi.Input<boolean>;
     /**
@@ -1747,7 +1852,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     tunnelInterfaceAllowAllVariable?: pulumi.Input<string>;
     /**
-     * Allow/Deny BFD - Default value: `false`
+     * Allow/Deny BFD
+     *   - Default value: `false`
      */
     tunnelInterfaceAllowBfd?: pulumi.Input<boolean>;
     /**
@@ -1755,7 +1861,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     tunnelInterfaceAllowBfdVariable?: pulumi.Input<string>;
     /**
-     * Allow/deny BGP - Default value: `false`
+     * Allow/deny BGP
+     *   - Default value: `false`
      */
     tunnelInterfaceAllowBgp?: pulumi.Input<boolean>;
     /**
@@ -1763,7 +1870,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     tunnelInterfaceAllowBgpVariable?: pulumi.Input<string>;
     /**
-     * Allow/Deny DHCP - Default value: `true`
+     * Allow/Deny DHCP
+     *   - Default value: `true`
      */
     tunnelInterfaceAllowDhcp?: pulumi.Input<boolean>;
     /**
@@ -1771,7 +1879,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     tunnelInterfaceAllowDhcpVariable?: pulumi.Input<string>;
     /**
-     * Allow/Deny DNS - Default value: `true`
+     * Allow/Deny DNS
+     *   - Default value: `true`
      */
     tunnelInterfaceAllowDns?: pulumi.Input<boolean>;
     /**
@@ -1779,7 +1888,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     tunnelInterfaceAllowDnsVariable?: pulumi.Input<string>;
     /**
-     * Allow/Deny HTTPS - Default value: `true`
+     * Allow/Deny HTTPS
+     *   - Default value: `true`
      */
     tunnelInterfaceAllowHttps?: pulumi.Input<boolean>;
     /**
@@ -1787,7 +1897,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     tunnelInterfaceAllowHttpsVariable?: pulumi.Input<string>;
     /**
-     * Allow/Deny ICMP - Default value: `true`
+     * Allow/Deny ICMP
+     *   - Default value: `true`
      */
     tunnelInterfaceAllowIcmp?: pulumi.Input<boolean>;
     /**
@@ -1795,7 +1906,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     tunnelInterfaceAllowIcmpVariable?: pulumi.Input<string>;
     /**
-     * Allow/Deny NETCONF - Default value: `false`
+     * Allow/Deny NETCONF
+     *   - Default value: `false`
      */
     tunnelInterfaceAllowNetconf?: pulumi.Input<boolean>;
     /**
@@ -1803,7 +1915,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     tunnelInterfaceAllowNetconfVariable?: pulumi.Input<string>;
     /**
-     * Allow/Deny NTP - Default value: `true`
+     * Allow/Deny NTP
+     *   - Default value: `true`
      */
     tunnelInterfaceAllowNtp?: pulumi.Input<boolean>;
     /**
@@ -1811,7 +1924,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     tunnelInterfaceAllowNtpVariable?: pulumi.Input<string>;
     /**
-     * Allow/Deny OSPF - Default value: `false`
+     * Allow/Deny OSPF
+     *   - Default value: `false`
      */
     tunnelInterfaceAllowOspf?: pulumi.Input<boolean>;
     /**
@@ -1819,7 +1933,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     tunnelInterfaceAllowOspfVariable?: pulumi.Input<string>;
     /**
-     * Allow/Deny SNMP - Default value: `false`
+     * Allow/Deny SNMP
+     *   - Default value: `false`
      */
     tunnelInterfaceAllowSnmp?: pulumi.Input<boolean>;
     /**
@@ -1827,7 +1942,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     tunnelInterfaceAllowSnmpVariable?: pulumi.Input<string>;
     /**
-     * Allow/Deny SSH - Default value: `true`
+     * Allow/Deny SSH
+     *   - Default value: `true`
      */
     tunnelInterfaceAllowSsh?: pulumi.Input<boolean>;
     /**
@@ -1835,7 +1951,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     tunnelInterfaceAllowSshVariable?: pulumi.Input<string>;
     /**
-     * Allow/Deny STUN - Default value: `false`
+     * Allow/Deny STUN
+     *   - Default value: `false`
      */
     tunnelInterfaceAllowStun?: pulumi.Input<boolean>;
     /**
@@ -1851,7 +1968,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     tunnelInterfaceBindLoopbackTunnelVariable?: pulumi.Input<string>;
     /**
-     * Set TLOC as border TLOC, Attribute conditional on `tunnelInterface` being equal to `true` - Default value: `false`
+     * Set TLOC as border TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Default value: `false`
      */
     tunnelInterfaceBorder?: pulumi.Input<boolean>;
     /**
@@ -1859,8 +1977,9 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     tunnelInterfaceBorderVariable?: pulumi.Input<string>;
     /**
-     * Set carrier for TLOC, Attribute conditional on `tunnelInterface` being equal to `true` - Choices: `default`, `carrier1`,
-     * `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8` - Default value: `default`
+     * Set carrier for TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+     *   - Default value: `default`
      */
     tunnelInterfaceCarrier?: pulumi.Input<string>;
     /**
@@ -1868,8 +1987,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     tunnelInterfaceCarrierVariable?: pulumi.Input<string>;
     /**
-     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnelInterface` being
-     * equal to `true` - Default value: `false`
+     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Default value: `false`
      */
     tunnelInterfaceClearDontFragment?: pulumi.Input<boolean>;
     /**
@@ -1877,14 +1996,14 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     tunnelInterfaceClearDontFragmentVariable?: pulumi.Input<string>;
     /**
-     * Set color for TLOC, Attribute conditional on `tunnelInterface` being equal to `true` - Choices: `default`, `mpls`,
-     * `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`,
-     * `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6` - Default value:
-     * `mpls`
+     * Set color for TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+     *   - Default value: `mpls`
      */
     tunnelInterfaceColor?: pulumi.Input<string>;
     /**
-     * Restrict this TLOC behavior, Attribute conditional on `tunnelInterface` being equal to `true` - Default value: `false`
+     * Restrict this TLOC behavior, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Default value: `false`
      */
     tunnelInterfaceColorRestrict?: pulumi.Input<boolean>;
     /**
@@ -1896,8 +2015,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     tunnelInterfaceColorVariable?: pulumi.Input<string>;
     /**
-     * CTS SGT Propagation configuration, Attribute conditional on `tunnelInterface` being equal to `true` - Default value:
-     * `false`
+     * CTS SGT Propagation configuration, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Default value: `false`
      */
     tunnelInterfaceCtsSgtPropagation?: pulumi.Input<boolean>;
     /**
@@ -1913,8 +2032,7 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     tunnelInterfaceExcludeControllerGroupListVariable?: pulumi.Input<string>;
     /**
-     * Exclude the following controller groups defined in this list., Attribute conditional on `tunnelInterface` being equal to
-     * `true`
+     * Exclude the following controller groups defined in this list., Attribute conditional on `tunnelInterface` being equal to `true`
      */
     tunnelInterfaceExcludeControllerGroupLists?: pulumi.Input<pulumi.Input<number>[]>;
     /**
@@ -1926,7 +2044,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     tunnelInterfaceGreTunnelDestinationIpVariable?: pulumi.Input<string>;
     /**
-     * List of groups, Attribute conditional on `tunnelInterface` being equal to `true` - Range: `1`-`4294967295`
+     * List of groups, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Range: `1`-`4294967295`
      */
     tunnelInterfaceGroups?: pulumi.Input<number>;
     /**
@@ -1934,8 +2053,9 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     tunnelInterfaceGroupsVariable?: pulumi.Input<string>;
     /**
-     * Set time period of control hello packets <100..600000> milli seconds, Attribute conditional on `tunnelInterface` being
-     * equal to `true` - Range: `100`-`600000` - Default value: `1000`
+     * Set time period of control hello packets <100..600000> milli seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Range: `100`-`600000`
+     *   - Default value: `1000`
      */
     tunnelInterfaceHelloInterval?: pulumi.Input<number>;
     /**
@@ -1943,8 +2063,9 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     tunnelInterfaceHelloIntervalVariable?: pulumi.Input<string>;
     /**
-     * Set tolerance of control hello packets <12..6000> seconds, Attribute conditional on `tunnelInterface` being equal to
-     * `true` - Range: `12`-`6000` - Default value: `12`
+     * Set tolerance of control hello packets <12..6000> seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Range: `12`-`6000`
+     *   - Default value: `12`
      */
     tunnelInterfaceHelloTolerance?: pulumi.Input<number>;
     /**
@@ -1952,7 +2073,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     tunnelInterfaceHelloToleranceVariable?: pulumi.Input<string>;
     /**
-     * Set TLOC as last resort, Attribute conditional on `tunnelInterface` being equal to `true` - Default value: `false`
+     * Set TLOC as last resort, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Default value: `false`
      */
     tunnelInterfaceLastResortCircuit?: pulumi.Input<boolean>;
     /**
@@ -1960,8 +2082,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     tunnelInterfaceLastResortCircuitVariable?: pulumi.Input<string>;
     /**
-     * Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnelInterface` being equal to `true` - Default
-     * value: `false`
+     * Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Default value: `false`
      */
     tunnelInterfaceLowBandwidthLink?: pulumi.Input<boolean>;
     /**
@@ -1969,7 +2091,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     tunnelInterfaceLowBandwidthLinkVariable?: pulumi.Input<string>;
     /**
-     * Maximum Control Connections, Attribute conditional on `tunnelInterface` being equal to `true` - Range: `0`-`100`
+     * Maximum Control Connections, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Range: `0`-`100`
      */
     tunnelInterfaceMaxControlConnections?: pulumi.Input<number>;
     /**
@@ -1977,8 +2100,9 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     tunnelInterfaceMaxControlConnectionsVariable?: pulumi.Input<string>;
     /**
-     * Set time period of nat refresh packets <1...60> seconds, Attribute conditional on `tunnelInterface` being equal to
-     * `true` - Range: `1`-`60` - Default value: `5`
+     * Set time period of nat refresh packets <1...60> seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Range: `1`-`60`
+     *   - Default value: `5`
      */
     tunnelInterfaceNatRefreshInterval?: pulumi.Input<number>;
     /**
@@ -1986,8 +2110,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     tunnelInterfaceNatRefreshIntervalVariable?: pulumi.Input<string>;
     /**
-     * Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnelInterface` being equal to
-     * `true` - Default value: `false`
+     * Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Default value: `false`
      */
     tunnelInterfaceNetworkBroadcast?: pulumi.Input<boolean>;
     /**
@@ -1995,8 +2119,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     tunnelInterfaceNetworkBroadcastVariable?: pulumi.Input<string>;
     /**
-     * Disallow port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` being equal to `true` -
-     * Default value: `true`
+     * Disallow port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Default value: `true`
      */
     tunnelInterfacePortHop?: pulumi.Input<boolean>;
     /**
@@ -2004,8 +2128,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     tunnelInterfacePortHopVariable?: pulumi.Input<string>;
     /**
-     * Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelInterface` being equal to `true` - Range:
-     * `500`-`1460`
+     * Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Range: `500`-`1460`
      */
     tunnelInterfaceTunnelTcpMss?: pulumi.Input<number>;
     /**
@@ -2013,8 +2137,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     tunnelInterfaceTunnelTcpMssVariable?: pulumi.Input<string>;
     /**
-     * Put this wan interface in STUN mode only, Attribute conditional on `tunnelInterface` being equal to `true` - Default
-     * value: `false`
+     * Put this wan interface in STUN mode only, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Default value: `false`
      */
     tunnelInterfaceVbondAsStunServer?: pulumi.Input<boolean>;
     /**
@@ -2022,8 +2146,9 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     tunnelInterfaceVbondAsStunServerVariable?: pulumi.Input<string>;
     /**
-     * Set interface preference for control connection to vManage <0..8>, Attribute conditional on `tunnelInterface` being
-     * equal to `true` - Range: `0`-`8` - Default value: `5`
+     * Set interface preference for control connection to vManage <0..8>, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Range: `0`-`8`
+     *   - Default value: `5`
      */
     tunnelInterfaceVmanageConnectionPreference?: pulumi.Input<number>;
     /**
@@ -2031,7 +2156,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureState {
      */
     tunnelInterfaceVmanageConnectionPreferenceVariable?: pulumi.Input<string>;
     /**
-     * Set tunnel QoS mode, Attribute conditional on `tunnelInterface` being equal to `true` - Choices: `hub`, `spoke`
+     * Set tunnel QoS mode, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Choices: `hub`, `spoke`
      */
     tunnelQosMode?: pulumi.Input<string>;
     /**
@@ -2061,7 +2187,9 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
     aclIpv6EgressFeatureId?: pulumi.Input<string>;
     aclIpv6IngressFeatureId?: pulumi.Input<string>;
     /**
-     * Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
+     * Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+     *   - Range: `0`-`2147483`
+     *   - Default value: `1200`
      */
     arpTimeout?: pulumi.Input<number>;
     /**
@@ -2073,7 +2201,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     arps?: pulumi.Input<pulumi.Input<inputs.TransportWanVpnInterfaceEthernetFeatureArp>[]>;
     /**
-     * Interface auto detect bandwidth - Default value: `false`
+     * Interface auto detect bandwidth
+     *   - Default value: `false`
      */
     autoDetectBandwidth?: pulumi.Input<boolean>;
     /**
@@ -2089,7 +2218,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     autonegotiateVariable?: pulumi.Input<string>;
     /**
-     * Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+     * Interface downstream bandwidth capacity, in kbps
+     *   - Range: `1`-`2147483647`
      */
     bandwidthDownstream?: pulumi.Input<number>;
     /**
@@ -2097,7 +2227,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     bandwidthDownstreamVariable?: pulumi.Input<string>;
     /**
-     * Interface upstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+     * Interface upstream bandwidth capacity, in kbps
+     *   - Range: `1`-`2147483647`
      */
     bandwidthUpstream?: pulumi.Input<number>;
     /**
@@ -2105,7 +2236,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     bandwidthUpstreamVariable?: pulumi.Input<string>;
     /**
-     * Block packets originating from IP address that is not from this source - Default value: `false`
+     * Block packets originating from IP address that is not from this source
+     *   - Default value: `false`
      */
     blockNonSourceIp?: pulumi.Input<boolean>;
     /**
@@ -2117,7 +2249,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     description?: pulumi.Input<string>;
     /**
-     * Duplex mode - Choices: `full`, `half`, `auto`
+     * Duplex mode
+     *   - Choices: `full`, `half`, `auto`
      */
     duplex?: pulumi.Input<string>;
     /**
@@ -2141,7 +2274,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     greTunnelSourceIpVariable?: pulumi.Input<string>;
     /**
-     * ICMP/ICMPv6 Redirect Disable - Default value: `true`
+     * ICMP/ICMPv6 Redirect Disable
+     *   - Default value: `true`
      */
     icmpRedirectDisable?: pulumi.Input<boolean>;
     /**
@@ -2154,8 +2288,9 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     interfaceDescriptionVariable?: pulumi.Input<string>;
     /**
-     * Interface MTU GigabitEthernet0 <1500..1518>, Other GigabitEthernet <1500..9216> in bytes - Range: `1500`-`9216` -
-     * Default value: `1500`
+     * Interface MTU GigabitEthernet0 <1500..1518>, Other GigabitEthernet <1500..9216> in bytes
+     *   - Range: `1500`-`9216`
+     *   - Default value: `1500`
      */
     interfaceMtu?: pulumi.Input<number>;
     /**
@@ -2168,7 +2303,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     interfaceNameVariable?: pulumi.Input<string>;
     /**
-     * IP Directed-Broadcast - Default value: `false`
+     * IP Directed-Broadcast
+     *   - Default value: `false`
      */
     ipDirectedBroadcast?: pulumi.Input<boolean>;
     /**
@@ -2176,8 +2312,9 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     ipDirectedBroadcastVariable?: pulumi.Input<string>;
     /**
-     * IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces
-     * <576..2000> in bytes - Range: `576`-`9216` - Default value: `1500`
+     * IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes
+     *   - Range: `576`-`9216`
+     *   - Default value: `1500`
      */
     ipMtu?: pulumi.Input<number>;
     /**
@@ -2201,12 +2338,15 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     ipv4AddressVariable?: pulumi.Input<string>;
     /**
-     * IPv4 Configuration Type - Choices: `dynamic`, `static` - Default value: `dynamic`
+     * IPv4 Configuration Type
+     *   - Choices: `dynamic`, `static`
+     *   - Default value: `dynamic`
      */
     ipv4ConfigurationType?: pulumi.Input<string>;
     /**
-     * DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic` - Range: `1`-`65536` - Default
-     * value: `1`
+     * DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
+     *   - Range: `1`-`65536`
+     *   - Default value: `1`
      */
     ipv4DhcpDistance?: pulumi.Input<number>;
     /**
@@ -2226,12 +2366,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     ipv4SecondaryAddresses?: pulumi.Input<pulumi.Input<inputs.TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress>[]>;
     /**
-     * Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static` - Choices: `255.255.255.255`,
-     * `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`,
-     * `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`,
-     * `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`,
-     * `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`,
-     * `128.0.0.0`, `0.0.0.0`
+     * Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     ipv4SubnetMask?: pulumi.Input<string>;
     /**
@@ -2247,7 +2383,9 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     ipv6AddressVariable?: pulumi.Input<string>;
     /**
-     * IPv6 Configuration Type - Choices: `dynamic`, `static`, `none` - Default value: `none`
+     * IPv6 Configuration Type
+     *   - Choices: `dynamic`, `static`, `none`
+     *   - Default value: `none`
      */
     ipv6ConfigurationType?: pulumi.Input<string>;
     /**
@@ -2259,7 +2397,9 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     ipv6SecondaryAddresses?: pulumi.Input<pulumi.Input<inputs.TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress>[]>;
     /**
-     * Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+     * Interval for interface load calculation
+     *   - Range: `30`-`600`
+     *   - Default value: `30`
      */
     loadInterval?: pulumi.Input<number>;
     /**
@@ -2275,7 +2415,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     macAddressVariable?: pulumi.Input<string>;
     /**
-     * Media type - Choices: `auto-select`, `rj45`, `sfp`
+     * Media type
+     *   - Choices: `auto-select`, `rj45`, `sfp`
      */
     mediaType?: pulumi.Input<string>;
     /**
@@ -2287,15 +2428,18 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * NAT64 on this interface, Attribute conditional on `natIpv6` being equal to `true` - Default value: `false`
+     * NAT64 on this interface, Attribute conditional on `natIpv6` being equal to `true`
+     *   - Default value: `false`
      */
     nat64?: pulumi.Input<boolean>;
     /**
-     * NAT66 on this interface, Attribute conditional on `natIpv6` being equal to `true` - Default value: `false`
+     * NAT66 on this interface, Attribute conditional on `natIpv6` being equal to `true`
+     *   - Default value: `false`
      */
     nat66?: pulumi.Input<boolean>;
     /**
-     * enable Network Address Translation on this interface - Default value: `false`
+     * enable Network Address Translation on this interface
+     *   - Default value: `false`
      */
     natIpv4?: pulumi.Input<boolean>;
     /**
@@ -2303,7 +2447,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     natIpv4Variable?: pulumi.Input<string>;
     /**
-     * enable Network Address Translation ipv6 on this interface - Default value: `false`
+     * enable Network Address Translation ipv6 on this interface
+     *   - Default value: `false`
      */
     natIpv6?: pulumi.Input<boolean>;
     /**
@@ -2319,7 +2464,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     natLoopbackVariable?: pulumi.Input<string>;
     /**
-     * NAT Overload, Attribute conditional on `natIpv4` being equal to `true` - Default value: `true`
+     * NAT Overload, Attribute conditional on `natIpv4` being equal to `true`
+     *   - Default value: `true`
      */
     natOverload?: pulumi.Input<boolean>;
     /**
@@ -2327,7 +2473,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     natOverloadVariable?: pulumi.Input<string>;
     /**
-     * NAT Pool Prefix Length, Attribute conditional on `natIpv4` being equal to `true` - Range: `1`-`32`
+     * NAT Pool Prefix Length, Attribute conditional on `natIpv4` being equal to `true`
+     *   - Range: `1`-`32`
      */
     natPrefixLength?: pulumi.Input<number>;
     /**
@@ -2351,8 +2498,9 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     natRangeStartVariable?: pulumi.Input<string>;
     /**
-     * Set NAT TCP session timeout, in minutes, Attribute conditional on `natIpv4` being equal to `true` - Range: `1`-`8947` -
-     * Default value: `60`
+     * Set NAT TCP session timeout, in minutes, Attribute conditional on `natIpv4` being equal to `true`
+     *   - Range: `1`-`8947`
+     *   - Default value: `60`
      */
     natTcpTimeout?: pulumi.Input<number>;
     /**
@@ -2360,8 +2508,9 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     natTcpTimeoutVariable?: pulumi.Input<string>;
     /**
-     * NAT Type, Attribute conditional on `natIpv4` being equal to `true` - Choices: `interface`, `pool`, `loopback` - Default
-     * value: `interface`
+     * NAT Type, Attribute conditional on `natIpv4` being equal to `true`
+     *   - Choices: `interface`, `pool`, `loopback`
+     *   - Default value: `interface`
      */
     natType?: pulumi.Input<string>;
     /**
@@ -2369,8 +2518,9 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     natTypeVariable?: pulumi.Input<string>;
     /**
-     * Set NAT UDP session timeout, in minutes, Attribute conditional on `natIpv4` being equal to `true` - Range: `1`-`8947` -
-     * Default value: `1`
+     * Set NAT UDP session timeout, in minutes, Attribute conditional on `natIpv4` being equal to `true`
+     *   - Range: `1`-`8947`
+     *   - Default value: `1`
      */
     natUdpTimeout?: pulumi.Input<number>;
     /**
@@ -2382,7 +2532,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     newStaticNats?: pulumi.Input<pulumi.Input<inputs.TransportWanVpnInterfaceEthernetFeatureNewStaticNat>[]>;
     /**
-     * Per-tunnel Qos, Attribute conditional on `tunnelInterface` being equal to `true` - Default value: `false`
+     * Per-tunnel Qos, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Default value: `false`
      */
     perTunnelQos?: pulumi.Input<boolean>;
     /**
@@ -2390,19 +2541,23 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     perTunnelQosVariable?: pulumi.Input<string>;
     /**
-     * Adaptive QoS - Default value: `false`
+     * Adaptive QoS
+     *   - Default value: `false`
      */
     qosAdaptive?: pulumi.Input<boolean>;
     /**
-     * Shaping Rate Downstream - Default value: `false`
+     * Shaping Rate Downstream
+     *   - Default value: `false`
      */
     qosAdaptiveBandwidthDownstream?: pulumi.Input<boolean>;
     /**
-     * Shaping Rate Upstream - Default value: `false`
+     * Shaping Rate Upstream
+     *   - Default value: `false`
      */
     qosAdaptiveBandwidthUpstream?: pulumi.Input<boolean>;
     /**
-     * Adaptive QoS default downstream bandwidth (kbps) - Range: `8`-`100000000`
+     * Adaptive QoS default downstream bandwidth (kbps)
+     *   - Range: `8`-`100000000`
      */
     qosAdaptiveDefaultDownstream?: pulumi.Input<number>;
     /**
@@ -2410,7 +2565,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     qosAdaptiveDefaultDownstreamVariable?: pulumi.Input<string>;
     /**
-     * Adaptive QoS default upstream bandwidth (kbps) - Range: `8`-`100000000`
+     * Adaptive QoS default upstream bandwidth (kbps)
+     *   - Range: `8`-`100000000`
      */
     qosAdaptiveDefaultUpstream?: pulumi.Input<number>;
     /**
@@ -2418,7 +2574,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     qosAdaptiveDefaultUpstreamVariable?: pulumi.Input<string>;
     /**
-     * Downstream max bandwidth limit (kbps) - Range: `8`-`100000000`
+     * Downstream max bandwidth limit (kbps)
+     *   - Range: `8`-`100000000`
      */
     qosAdaptiveMaxDownstream?: pulumi.Input<number>;
     /**
@@ -2426,7 +2583,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     qosAdaptiveMaxDownstreamVariable?: pulumi.Input<string>;
     /**
-     * Upstream max bandwidth limit (kbps) - Range: `8`-`100000000`
+     * Upstream max bandwidth limit (kbps)
+     *   - Range: `8`-`100000000`
      */
     qosAdaptiveMaxUpstream?: pulumi.Input<number>;
     /**
@@ -2434,7 +2592,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     qosAdaptiveMaxUpstreamVariable?: pulumi.Input<string>;
     /**
-     * Downstream min bandwidth limit (kbps) - Range: `8`-`100000000`
+     * Downstream min bandwidth limit (kbps)
+     *   - Range: `8`-`100000000`
      */
     qosAdaptiveMinDownstream?: pulumi.Input<number>;
     /**
@@ -2442,7 +2601,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     qosAdaptiveMinDownstreamVariable?: pulumi.Input<string>;
     /**
-     * Upstream min bandwidth limit (kbps) - Range: `8`-`100000000`
+     * Upstream min bandwidth limit (kbps)
+     *   - Range: `8`-`100000000`
      */
     qosAdaptiveMinUpstream?: pulumi.Input<number>;
     /**
@@ -2450,7 +2610,9 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     qosAdaptiveMinUpstreamVariable?: pulumi.Input<string>;
     /**
-     * Adapt Period(Minutes) - Range: `1`-`720` - Default value: `15`
+     * Adapt Period(Minutes)
+     *   - Range: `1`-`720`
+     *   - Default value: `15`
      */
     qosAdaptivePeriod?: pulumi.Input<number>;
     /**
@@ -2458,7 +2620,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     qosAdaptivePeriodVariable?: pulumi.Input<string>;
     /**
-     * Shaping Rate (Kbps) - Range: `8`-`100000000`
+     * Shaping Rate (Kbps)
+     *   - Range: `8`-`100000000`
      */
     qosShapingRate?: pulumi.Input<number>;
     /**
@@ -2482,7 +2645,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     shutdownVariable?: pulumi.Input<string>;
     /**
-     * Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+     * Set interface speed
+     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
      */
     speed?: pulumi.Input<string>;
     /**
@@ -2494,7 +2658,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     staticNat66s?: pulumi.Input<pulumi.Input<inputs.TransportWanVpnInterfaceEthernetFeatureStaticNat66>[]>;
     /**
-     * TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      */
     tcpMss?: pulumi.Input<number>;
     /**
@@ -2522,8 +2687,9 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     transportWanVpnFeatureId: pulumi.Input<string>;
     /**
-     * Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` being equal to `true` - Range: `1`-`100` - Default
-     * value: `50`
+     * Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Range: `1`-`100`
+     *   - Default value: `50`
      */
     tunnelBandwidthPercent?: pulumi.Input<number>;
     /**
@@ -2531,11 +2697,13 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     tunnelBandwidthPercentVariable?: pulumi.Input<string>;
     /**
-     * Tunnel Interface on/off - Default value: `false`
+     * Tunnel Interface on/off
+     *   - Default value: `false`
      */
     tunnelInterface?: pulumi.Input<boolean>;
     /**
-     * Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
+     * Allow all traffic. Overrides all other allow-service options if allow-service all is set
+     *   - Default value: `false`
      */
     tunnelInterfaceAllowAll?: pulumi.Input<boolean>;
     /**
@@ -2543,7 +2711,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     tunnelInterfaceAllowAllVariable?: pulumi.Input<string>;
     /**
-     * Allow/Deny BFD - Default value: `false`
+     * Allow/Deny BFD
+     *   - Default value: `false`
      */
     tunnelInterfaceAllowBfd?: pulumi.Input<boolean>;
     /**
@@ -2551,7 +2720,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     tunnelInterfaceAllowBfdVariable?: pulumi.Input<string>;
     /**
-     * Allow/deny BGP - Default value: `false`
+     * Allow/deny BGP
+     *   - Default value: `false`
      */
     tunnelInterfaceAllowBgp?: pulumi.Input<boolean>;
     /**
@@ -2559,7 +2729,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     tunnelInterfaceAllowBgpVariable?: pulumi.Input<string>;
     /**
-     * Allow/Deny DHCP - Default value: `true`
+     * Allow/Deny DHCP
+     *   - Default value: `true`
      */
     tunnelInterfaceAllowDhcp?: pulumi.Input<boolean>;
     /**
@@ -2567,7 +2738,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     tunnelInterfaceAllowDhcpVariable?: pulumi.Input<string>;
     /**
-     * Allow/Deny DNS - Default value: `true`
+     * Allow/Deny DNS
+     *   - Default value: `true`
      */
     tunnelInterfaceAllowDns?: pulumi.Input<boolean>;
     /**
@@ -2575,7 +2747,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     tunnelInterfaceAllowDnsVariable?: pulumi.Input<string>;
     /**
-     * Allow/Deny HTTPS - Default value: `true`
+     * Allow/Deny HTTPS
+     *   - Default value: `true`
      */
     tunnelInterfaceAllowHttps?: pulumi.Input<boolean>;
     /**
@@ -2583,7 +2756,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     tunnelInterfaceAllowHttpsVariable?: pulumi.Input<string>;
     /**
-     * Allow/Deny ICMP - Default value: `true`
+     * Allow/Deny ICMP
+     *   - Default value: `true`
      */
     tunnelInterfaceAllowIcmp?: pulumi.Input<boolean>;
     /**
@@ -2591,7 +2765,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     tunnelInterfaceAllowIcmpVariable?: pulumi.Input<string>;
     /**
-     * Allow/Deny NETCONF - Default value: `false`
+     * Allow/Deny NETCONF
+     *   - Default value: `false`
      */
     tunnelInterfaceAllowNetconf?: pulumi.Input<boolean>;
     /**
@@ -2599,7 +2774,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     tunnelInterfaceAllowNetconfVariable?: pulumi.Input<string>;
     /**
-     * Allow/Deny NTP - Default value: `true`
+     * Allow/Deny NTP
+     *   - Default value: `true`
      */
     tunnelInterfaceAllowNtp?: pulumi.Input<boolean>;
     /**
@@ -2607,7 +2783,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     tunnelInterfaceAllowNtpVariable?: pulumi.Input<string>;
     /**
-     * Allow/Deny OSPF - Default value: `false`
+     * Allow/Deny OSPF
+     *   - Default value: `false`
      */
     tunnelInterfaceAllowOspf?: pulumi.Input<boolean>;
     /**
@@ -2615,7 +2792,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     tunnelInterfaceAllowOspfVariable?: pulumi.Input<string>;
     /**
-     * Allow/Deny SNMP - Default value: `false`
+     * Allow/Deny SNMP
+     *   - Default value: `false`
      */
     tunnelInterfaceAllowSnmp?: pulumi.Input<boolean>;
     /**
@@ -2623,7 +2801,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     tunnelInterfaceAllowSnmpVariable?: pulumi.Input<string>;
     /**
-     * Allow/Deny SSH - Default value: `true`
+     * Allow/Deny SSH
+     *   - Default value: `true`
      */
     tunnelInterfaceAllowSsh?: pulumi.Input<boolean>;
     /**
@@ -2631,7 +2810,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     tunnelInterfaceAllowSshVariable?: pulumi.Input<string>;
     /**
-     * Allow/Deny STUN - Default value: `false`
+     * Allow/Deny STUN
+     *   - Default value: `false`
      */
     tunnelInterfaceAllowStun?: pulumi.Input<boolean>;
     /**
@@ -2647,7 +2827,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     tunnelInterfaceBindLoopbackTunnelVariable?: pulumi.Input<string>;
     /**
-     * Set TLOC as border TLOC, Attribute conditional on `tunnelInterface` being equal to `true` - Default value: `false`
+     * Set TLOC as border TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Default value: `false`
      */
     tunnelInterfaceBorder?: pulumi.Input<boolean>;
     /**
@@ -2655,8 +2836,9 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     tunnelInterfaceBorderVariable?: pulumi.Input<string>;
     /**
-     * Set carrier for TLOC, Attribute conditional on `tunnelInterface` being equal to `true` - Choices: `default`, `carrier1`,
-     * `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8` - Default value: `default`
+     * Set carrier for TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+     *   - Default value: `default`
      */
     tunnelInterfaceCarrier?: pulumi.Input<string>;
     /**
@@ -2664,8 +2846,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     tunnelInterfaceCarrierVariable?: pulumi.Input<string>;
     /**
-     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnelInterface` being
-     * equal to `true` - Default value: `false`
+     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Default value: `false`
      */
     tunnelInterfaceClearDontFragment?: pulumi.Input<boolean>;
     /**
@@ -2673,14 +2855,14 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     tunnelInterfaceClearDontFragmentVariable?: pulumi.Input<string>;
     /**
-     * Set color for TLOC, Attribute conditional on `tunnelInterface` being equal to `true` - Choices: `default`, `mpls`,
-     * `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`,
-     * `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6` - Default value:
-     * `mpls`
+     * Set color for TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+     *   - Default value: `mpls`
      */
     tunnelInterfaceColor?: pulumi.Input<string>;
     /**
-     * Restrict this TLOC behavior, Attribute conditional on `tunnelInterface` being equal to `true` - Default value: `false`
+     * Restrict this TLOC behavior, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Default value: `false`
      */
     tunnelInterfaceColorRestrict?: pulumi.Input<boolean>;
     /**
@@ -2692,8 +2874,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     tunnelInterfaceColorVariable?: pulumi.Input<string>;
     /**
-     * CTS SGT Propagation configuration, Attribute conditional on `tunnelInterface` being equal to `true` - Default value:
-     * `false`
+     * CTS SGT Propagation configuration, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Default value: `false`
      */
     tunnelInterfaceCtsSgtPropagation?: pulumi.Input<boolean>;
     /**
@@ -2709,8 +2891,7 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     tunnelInterfaceExcludeControllerGroupListVariable?: pulumi.Input<string>;
     /**
-     * Exclude the following controller groups defined in this list., Attribute conditional on `tunnelInterface` being equal to
-     * `true`
+     * Exclude the following controller groups defined in this list., Attribute conditional on `tunnelInterface` being equal to `true`
      */
     tunnelInterfaceExcludeControllerGroupLists?: pulumi.Input<pulumi.Input<number>[]>;
     /**
@@ -2722,7 +2903,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     tunnelInterfaceGreTunnelDestinationIpVariable?: pulumi.Input<string>;
     /**
-     * List of groups, Attribute conditional on `tunnelInterface` being equal to `true` - Range: `1`-`4294967295`
+     * List of groups, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Range: `1`-`4294967295`
      */
     tunnelInterfaceGroups?: pulumi.Input<number>;
     /**
@@ -2730,8 +2912,9 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     tunnelInterfaceGroupsVariable?: pulumi.Input<string>;
     /**
-     * Set time period of control hello packets <100..600000> milli seconds, Attribute conditional on `tunnelInterface` being
-     * equal to `true` - Range: `100`-`600000` - Default value: `1000`
+     * Set time period of control hello packets <100..600000> milli seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Range: `100`-`600000`
+     *   - Default value: `1000`
      */
     tunnelInterfaceHelloInterval?: pulumi.Input<number>;
     /**
@@ -2739,8 +2922,9 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     tunnelInterfaceHelloIntervalVariable?: pulumi.Input<string>;
     /**
-     * Set tolerance of control hello packets <12..6000> seconds, Attribute conditional on `tunnelInterface` being equal to
-     * `true` - Range: `12`-`6000` - Default value: `12`
+     * Set tolerance of control hello packets <12..6000> seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Range: `12`-`6000`
+     *   - Default value: `12`
      */
     tunnelInterfaceHelloTolerance?: pulumi.Input<number>;
     /**
@@ -2748,7 +2932,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     tunnelInterfaceHelloToleranceVariable?: pulumi.Input<string>;
     /**
-     * Set TLOC as last resort, Attribute conditional on `tunnelInterface` being equal to `true` - Default value: `false`
+     * Set TLOC as last resort, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Default value: `false`
      */
     tunnelInterfaceLastResortCircuit?: pulumi.Input<boolean>;
     /**
@@ -2756,8 +2941,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     tunnelInterfaceLastResortCircuitVariable?: pulumi.Input<string>;
     /**
-     * Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnelInterface` being equal to `true` - Default
-     * value: `false`
+     * Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Default value: `false`
      */
     tunnelInterfaceLowBandwidthLink?: pulumi.Input<boolean>;
     /**
@@ -2765,7 +2950,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     tunnelInterfaceLowBandwidthLinkVariable?: pulumi.Input<string>;
     /**
-     * Maximum Control Connections, Attribute conditional on `tunnelInterface` being equal to `true` - Range: `0`-`100`
+     * Maximum Control Connections, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Range: `0`-`100`
      */
     tunnelInterfaceMaxControlConnections?: pulumi.Input<number>;
     /**
@@ -2773,8 +2959,9 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     tunnelInterfaceMaxControlConnectionsVariable?: pulumi.Input<string>;
     /**
-     * Set time period of nat refresh packets <1...60> seconds, Attribute conditional on `tunnelInterface` being equal to
-     * `true` - Range: `1`-`60` - Default value: `5`
+     * Set time period of nat refresh packets <1...60> seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Range: `1`-`60`
+     *   - Default value: `5`
      */
     tunnelInterfaceNatRefreshInterval?: pulumi.Input<number>;
     /**
@@ -2782,8 +2969,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     tunnelInterfaceNatRefreshIntervalVariable?: pulumi.Input<string>;
     /**
-     * Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnelInterface` being equal to
-     * `true` - Default value: `false`
+     * Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Default value: `false`
      */
     tunnelInterfaceNetworkBroadcast?: pulumi.Input<boolean>;
     /**
@@ -2791,8 +2978,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     tunnelInterfaceNetworkBroadcastVariable?: pulumi.Input<string>;
     /**
-     * Disallow port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` being equal to `true` -
-     * Default value: `true`
+     * Disallow port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Default value: `true`
      */
     tunnelInterfacePortHop?: pulumi.Input<boolean>;
     /**
@@ -2800,8 +2987,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     tunnelInterfacePortHopVariable?: pulumi.Input<string>;
     /**
-     * Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelInterface` being equal to `true` - Range:
-     * `500`-`1460`
+     * Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Range: `500`-`1460`
      */
     tunnelInterfaceTunnelTcpMss?: pulumi.Input<number>;
     /**
@@ -2809,8 +2996,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     tunnelInterfaceTunnelTcpMssVariable?: pulumi.Input<string>;
     /**
-     * Put this wan interface in STUN mode only, Attribute conditional on `tunnelInterface` being equal to `true` - Default
-     * value: `false`
+     * Put this wan interface in STUN mode only, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Default value: `false`
      */
     tunnelInterfaceVbondAsStunServer?: pulumi.Input<boolean>;
     /**
@@ -2818,8 +3005,9 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     tunnelInterfaceVbondAsStunServerVariable?: pulumi.Input<string>;
     /**
-     * Set interface preference for control connection to vManage <0..8>, Attribute conditional on `tunnelInterface` being
-     * equal to `true` - Range: `0`-`8` - Default value: `5`
+     * Set interface preference for control connection to vManage <0..8>, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Range: `0`-`8`
+     *   - Default value: `5`
      */
     tunnelInterfaceVmanageConnectionPreference?: pulumi.Input<number>;
     /**
@@ -2827,7 +3015,8 @@ export interface TransportWanVpnInterfaceEthernetFeatureArgs {
      */
     tunnelInterfaceVmanageConnectionPreferenceVariable?: pulumi.Input<string>;
     /**
-     * Set tunnel QoS mode, Attribute conditional on `tunnelInterface` being equal to `true` - Choices: `hub`, `spoke`
+     * Set tunnel QoS mode, Attribute conditional on `tunnelInterface` being equal to `true`
+     *   - Choices: `hub`, `spoke`
      */
     tunnelQosMode?: pulumi.Input<string>;
     /**

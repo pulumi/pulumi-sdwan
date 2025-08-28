@@ -27,7 +27,8 @@ class CliDeviceTemplateArgs:
         """
         The set of arguments for constructing a CliDeviceTemplate resource.
         :param pulumi.Input[_builtins.str] cli_configuration: CLI configuration
-        :param pulumi.Input[_builtins.str] cli_type: CLI type - Choices: `device`, `intend`
+        :param pulumi.Input[_builtins.str] cli_type: CLI type
+                 - Choices: `device`, `intend`
         :param pulumi.Input[_builtins.str] description: The description of the device template
         :param pulumi.Input[_builtins.str] device_type: The device type (e.g., `vedge-ISR-4331`)
         :param pulumi.Input[_builtins.str] name: The name of the device template
@@ -55,7 +56,8 @@ class CliDeviceTemplateArgs:
     @pulumi.getter(name="cliType")
     def cli_type(self) -> pulumi.Input[_builtins.str]:
         """
-        CLI type - Choices: `device`, `intend`
+        CLI type
+          - Choices: `device`, `intend`
         """
         return pulumi.get(self, "cli_type")
 
@@ -112,7 +114,8 @@ class _CliDeviceTemplateState:
         """
         Input properties used for looking up and filtering CliDeviceTemplate resources.
         :param pulumi.Input[_builtins.str] cli_configuration: CLI configuration
-        :param pulumi.Input[_builtins.str] cli_type: CLI type - Choices: `device`, `intend`
+        :param pulumi.Input[_builtins.str] cli_type: CLI type
+                 - Choices: `device`, `intend`
         :param pulumi.Input[_builtins.str] description: The description of the device template
         :param pulumi.Input[_builtins.str] device_type: The device type (e.g., `vedge-ISR-4331`)
         :param pulumi.Input[_builtins.str] name: The name of the device template
@@ -147,7 +150,8 @@ class _CliDeviceTemplateState:
     @pulumi.getter(name="cliType")
     def cli_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        CLI type - Choices: `device`, `intend`
+        CLI type
+          - Choices: `device`, `intend`
         """
         return pulumi.get(self, "cli_type")
 
@@ -245,7 +249,8 @@ class CliDeviceTemplate(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] cli_configuration: CLI configuration
-        :param pulumi.Input[_builtins.str] cli_type: CLI type - Choices: `device`, `intend`
+        :param pulumi.Input[_builtins.str] cli_type: CLI type
+                 - Choices: `device`, `intend`
         :param pulumi.Input[_builtins.str] description: The description of the device template
         :param pulumi.Input[_builtins.str] device_type: The device type (e.g., `vedge-ISR-4331`)
         :param pulumi.Input[_builtins.str] name: The name of the device template
@@ -349,7 +354,8 @@ class CliDeviceTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] cli_configuration: CLI configuration
-        :param pulumi.Input[_builtins.str] cli_type: CLI type - Choices: `device`, `intend`
+        :param pulumi.Input[_builtins.str] cli_type: CLI type
+                 - Choices: `device`, `intend`
         :param pulumi.Input[_builtins.str] description: The description of the device template
         :param pulumi.Input[_builtins.str] device_type: The device type (e.g., `vedge-ISR-4331`)
         :param pulumi.Input[_builtins.str] name: The name of the device template
@@ -379,7 +385,8 @@ class CliDeviceTemplate(pulumi.CustomResource):
     @pulumi.getter(name="cliType")
     def cli_type(self) -> pulumi.Output[_builtins.str]:
         """
-        CLI type - Choices: `device`, `intend`
+        CLI type
+          - Choices: `device`, `intend`
         """
         return pulumi.get(self, "cli_type")
 

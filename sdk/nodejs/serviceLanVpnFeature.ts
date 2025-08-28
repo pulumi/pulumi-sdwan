@@ -51,152 +51,157 @@ export class ServiceLanVpnFeature extends pulumi.CustomResource {
     /**
      * OMP Advertise IPv4
      */
-    public readonly advertiseOmpIpv4s!: pulumi.Output<outputs.ServiceLanVpnFeatureAdvertiseOmpIpv4[] | undefined>;
+    declare public readonly advertiseOmpIpv4s: pulumi.Output<outputs.ServiceLanVpnFeatureAdvertiseOmpIpv4[] | undefined>;
     /**
      * OMP Advertise IPv6
      */
-    public readonly advertiseOmpIpv6s!: pulumi.Output<outputs.ServiceLanVpnFeatureAdvertiseOmpIpv6[] | undefined>;
+    declare public readonly advertiseOmpIpv6s: pulumi.Output<outputs.ServiceLanVpnFeatureAdvertiseOmpIpv6[] | undefined>;
     /**
      * Name
      */
-    public readonly configDescription!: pulumi.Output<string | undefined>;
+    declare public readonly configDescription: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly configDescriptionVariable!: pulumi.Output<string | undefined>;
+    declare public readonly configDescriptionVariable: pulumi.Output<string | undefined>;
     /**
      * The description of the Feature
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * Enable SDWAN Remote Access - Default value: `false`
+     * Enable SDWAN Remote Access
+     *   - Default value: `false`
      */
-    public readonly enableSdwanRemoteAccess!: pulumi.Output<boolean | undefined>;
+    declare public readonly enableSdwanRemoteAccess: pulumi.Output<boolean | undefined>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
      * IPv4 Static GRE Route
      */
-    public readonly greRoutes!: pulumi.Output<outputs.ServiceLanVpnFeatureGreRoute[] | undefined>;
-    public readonly hostMappings!: pulumi.Output<outputs.ServiceLanVpnFeatureHostMapping[] | undefined>;
+    declare public readonly greRoutes: pulumi.Output<outputs.ServiceLanVpnFeatureGreRoute[] | undefined>;
+    declare public readonly hostMappings: pulumi.Output<outputs.ServiceLanVpnFeatureHostMapping[] | undefined>;
     /**
      * IPv4 Static IPSEC Route
      */
-    public readonly ipsecRoutes!: pulumi.Output<outputs.ServiceLanVpnFeatureIpsecRoute[] | undefined>;
-    public readonly ipv4ExportRouteTargets!: pulumi.Output<outputs.ServiceLanVpnFeatureIpv4ExportRouteTarget[] | undefined>;
-    public readonly ipv4ImportRouteTargets!: pulumi.Output<outputs.ServiceLanVpnFeatureIpv4ImportRouteTarget[] | undefined>;
+    declare public readonly ipsecRoutes: pulumi.Output<outputs.ServiceLanVpnFeatureIpsecRoute[] | undefined>;
+    declare public readonly ipv4ExportRouteTargets: pulumi.Output<outputs.ServiceLanVpnFeatureIpv4ExportRouteTarget[] | undefined>;
+    declare public readonly ipv4ImportRouteTargets: pulumi.Output<outputs.ServiceLanVpnFeatureIpv4ImportRouteTarget[] | undefined>;
     /**
      * IPv4 Static Route
      */
-    public readonly ipv4StaticRoutes!: pulumi.Output<outputs.ServiceLanVpnFeatureIpv4StaticRoute[] | undefined>;
-    public readonly ipv6ExportRouteTargets!: pulumi.Output<outputs.ServiceLanVpnFeatureIpv6ExportRouteTarget[] | undefined>;
-    public readonly ipv6ImportRouteTargets!: pulumi.Output<outputs.ServiceLanVpnFeatureIpv6ImportRouteTarget[] | undefined>;
+    declare public readonly ipv4StaticRoutes: pulumi.Output<outputs.ServiceLanVpnFeatureIpv4StaticRoute[] | undefined>;
+    declare public readonly ipv6ExportRouteTargets: pulumi.Output<outputs.ServiceLanVpnFeatureIpv6ExportRouteTarget[] | undefined>;
+    declare public readonly ipv6ImportRouteTargets: pulumi.Output<outputs.ServiceLanVpnFeatureIpv6ImportRouteTarget[] | undefined>;
     /**
      * IPv6 Static Route
      */
-    public readonly ipv6StaticRoutes!: pulumi.Output<outputs.ServiceLanVpnFeatureIpv6StaticRoute[] | undefined>;
+    declare public readonly ipv6StaticRoutes: pulumi.Output<outputs.ServiceLanVpnFeatureIpv6StaticRoute[] | undefined>;
     /**
      * The name of the Feature
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * NAT64 V4 Pool
      */
-    public readonly nat64V4Pools!: pulumi.Output<outputs.ServiceLanVpnFeatureNat64V4Pool[] | undefined>;
+    declare public readonly nat64V4Pools: pulumi.Output<outputs.ServiceLanVpnFeatureNat64V4Pool[] | undefined>;
     /**
      * NAT Pool
      */
-    public readonly natPools!: pulumi.Output<outputs.ServiceLanVpnFeatureNatPool[] | undefined>;
+    declare public readonly natPools: pulumi.Output<outputs.ServiceLanVpnFeatureNatPool[] | undefined>;
     /**
      * NAT Port Forward
      */
-    public readonly natPortForwards!: pulumi.Output<outputs.ServiceLanVpnFeatureNatPortForward[] | undefined>;
+    declare public readonly natPortForwards: pulumi.Output<outputs.ServiceLanVpnFeatureNatPortForward[] | undefined>;
     /**
-     * OMP Admin Distance IPv4 - Range: `1`-`255`
+     * OMP Admin Distance IPv4
+     *   - Range: `1`-`255`
      */
-    public readonly ompAdminDistanceIpv4!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly ompAdminDistanceIpv4Variable!: pulumi.Output<string | undefined>;
-    /**
-     * OMP Admin Distance IPv6 - Range: `1`-`255`
-     */
-    public readonly ompAdminDistanceIpv6!: pulumi.Output<number | undefined>;
+    declare public readonly ompAdminDistanceIpv4: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly ompAdminDistanceIpv6Variable!: pulumi.Output<string | undefined>;
+    declare public readonly ompAdminDistanceIpv4Variable: pulumi.Output<string | undefined>;
+    /**
+     * OMP Admin Distance IPv6
+     *   - Range: `1`-`255`
+     */
+    declare public readonly ompAdminDistanceIpv6: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly ompAdminDistanceIpv6Variable: pulumi.Output<string | undefined>;
     /**
      * Primary DNS Address (IPv4)
      */
-    public readonly primaryDnsAddressIpv4!: pulumi.Output<string | undefined>;
+    declare public readonly primaryDnsAddressIpv4: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly primaryDnsAddressIpv4Variable!: pulumi.Output<string | undefined>;
+    declare public readonly primaryDnsAddressIpv4Variable: pulumi.Output<string | undefined>;
     /**
      * Primary DNS Address (IPv6)
      */
-    public readonly primaryDnsAddressIpv6!: pulumi.Output<string | undefined>;
+    declare public readonly primaryDnsAddressIpv6: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly primaryDnsAddressIpv6Variable!: pulumi.Output<string | undefined>;
+    declare public readonly primaryDnsAddressIpv6Variable: pulumi.Output<string | undefined>;
     /**
      * Enable route leaking from Global to Service VPN
      */
-    public readonly routeLeakFromGlobalVpns!: pulumi.Output<outputs.ServiceLanVpnFeatureRouteLeakFromGlobalVpn[] | undefined>;
+    declare public readonly routeLeakFromGlobalVpns: pulumi.Output<outputs.ServiceLanVpnFeatureRouteLeakFromGlobalVpn[] | undefined>;
     /**
      * Enable route leak from another Service VPN to current Service VPN
      */
-    public readonly routeLeakFromOtherServices!: pulumi.Output<outputs.ServiceLanVpnFeatureRouteLeakFromOtherService[] | undefined>;
+    declare public readonly routeLeakFromOtherServices: pulumi.Output<outputs.ServiceLanVpnFeatureRouteLeakFromOtherService[] | undefined>;
     /**
      * Enable route leaking from Service to Global VPN
      */
-    public readonly routeLeakToGlobalVpns!: pulumi.Output<outputs.ServiceLanVpnFeatureRouteLeakToGlobalVpn[] | undefined>;
+    declare public readonly routeLeakToGlobalVpns: pulumi.Output<outputs.ServiceLanVpnFeatureRouteLeakToGlobalVpn[] | undefined>;
     /**
      * Secondary DNS Address (IPv4)
      */
-    public readonly secondaryDnsAddressIpv4!: pulumi.Output<string | undefined>;
+    declare public readonly secondaryDnsAddressIpv4: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly secondaryDnsAddressIpv4Variable!: pulumi.Output<string | undefined>;
+    declare public readonly secondaryDnsAddressIpv4Variable: pulumi.Output<string | undefined>;
     /**
      * Secondary DNS Address (IPv6)
      */
-    public readonly secondaryDnsAddressIpv6!: pulumi.Output<string | undefined>;
+    declare public readonly secondaryDnsAddressIpv6: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly secondaryDnsAddressIpv6Variable!: pulumi.Output<string | undefined>;
+    declare public readonly secondaryDnsAddressIpv6Variable: pulumi.Output<string | undefined>;
     /**
      * Service
      */
-    public readonly serviceRoutes!: pulumi.Output<outputs.ServiceLanVpnFeatureServiceRoute[] | undefined>;
+    declare public readonly serviceRoutes: pulumi.Output<outputs.ServiceLanVpnFeatureServiceRoute[] | undefined>;
     /**
      * Service
      */
-    public readonly services!: pulumi.Output<outputs.ServiceLanVpnFeatureService[] | undefined>;
+    declare public readonly services: pulumi.Output<outputs.ServiceLanVpnFeatureService[] | undefined>;
     /**
      * Static NAT Rules
      */
-    public readonly staticNats!: pulumi.Output<outputs.ServiceLanVpnFeatureStaticNat[] | undefined>;
+    declare public readonly staticNats: pulumi.Output<outputs.ServiceLanVpnFeatureStaticNat[] | undefined>;
     /**
      * The version of the Feature
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
     /**
-     * VPN - Range: `1`-`65527` - Default value: `0`
+     * VPN
+     *   - Range: `1`-`65527`
+     *   - Default value: `0`
      */
-    public readonly vpn!: pulumi.Output<number | undefined>;
+    declare public readonly vpn: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly vpnVariable!: pulumi.Output<string | undefined>;
+    declare public readonly vpnVariable: pulumi.Output<string | undefined>;
 
     /**
      * Create a ServiceLanVpnFeature resource with the given unique name, arguments, and options.
@@ -211,92 +216,92 @@ export class ServiceLanVpnFeature extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ServiceLanVpnFeatureState | undefined;
-            resourceInputs["advertiseOmpIpv4s"] = state ? state.advertiseOmpIpv4s : undefined;
-            resourceInputs["advertiseOmpIpv6s"] = state ? state.advertiseOmpIpv6s : undefined;
-            resourceInputs["configDescription"] = state ? state.configDescription : undefined;
-            resourceInputs["configDescriptionVariable"] = state ? state.configDescriptionVariable : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["enableSdwanRemoteAccess"] = state ? state.enableSdwanRemoteAccess : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["greRoutes"] = state ? state.greRoutes : undefined;
-            resourceInputs["hostMappings"] = state ? state.hostMappings : undefined;
-            resourceInputs["ipsecRoutes"] = state ? state.ipsecRoutes : undefined;
-            resourceInputs["ipv4ExportRouteTargets"] = state ? state.ipv4ExportRouteTargets : undefined;
-            resourceInputs["ipv4ImportRouteTargets"] = state ? state.ipv4ImportRouteTargets : undefined;
-            resourceInputs["ipv4StaticRoutes"] = state ? state.ipv4StaticRoutes : undefined;
-            resourceInputs["ipv6ExportRouteTargets"] = state ? state.ipv6ExportRouteTargets : undefined;
-            resourceInputs["ipv6ImportRouteTargets"] = state ? state.ipv6ImportRouteTargets : undefined;
-            resourceInputs["ipv6StaticRoutes"] = state ? state.ipv6StaticRoutes : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["nat64V4Pools"] = state ? state.nat64V4Pools : undefined;
-            resourceInputs["natPools"] = state ? state.natPools : undefined;
-            resourceInputs["natPortForwards"] = state ? state.natPortForwards : undefined;
-            resourceInputs["ompAdminDistanceIpv4"] = state ? state.ompAdminDistanceIpv4 : undefined;
-            resourceInputs["ompAdminDistanceIpv4Variable"] = state ? state.ompAdminDistanceIpv4Variable : undefined;
-            resourceInputs["ompAdminDistanceIpv6"] = state ? state.ompAdminDistanceIpv6 : undefined;
-            resourceInputs["ompAdminDistanceIpv6Variable"] = state ? state.ompAdminDistanceIpv6Variable : undefined;
-            resourceInputs["primaryDnsAddressIpv4"] = state ? state.primaryDnsAddressIpv4 : undefined;
-            resourceInputs["primaryDnsAddressIpv4Variable"] = state ? state.primaryDnsAddressIpv4Variable : undefined;
-            resourceInputs["primaryDnsAddressIpv6"] = state ? state.primaryDnsAddressIpv6 : undefined;
-            resourceInputs["primaryDnsAddressIpv6Variable"] = state ? state.primaryDnsAddressIpv6Variable : undefined;
-            resourceInputs["routeLeakFromGlobalVpns"] = state ? state.routeLeakFromGlobalVpns : undefined;
-            resourceInputs["routeLeakFromOtherServices"] = state ? state.routeLeakFromOtherServices : undefined;
-            resourceInputs["routeLeakToGlobalVpns"] = state ? state.routeLeakToGlobalVpns : undefined;
-            resourceInputs["secondaryDnsAddressIpv4"] = state ? state.secondaryDnsAddressIpv4 : undefined;
-            resourceInputs["secondaryDnsAddressIpv4Variable"] = state ? state.secondaryDnsAddressIpv4Variable : undefined;
-            resourceInputs["secondaryDnsAddressIpv6"] = state ? state.secondaryDnsAddressIpv6 : undefined;
-            resourceInputs["secondaryDnsAddressIpv6Variable"] = state ? state.secondaryDnsAddressIpv6Variable : undefined;
-            resourceInputs["serviceRoutes"] = state ? state.serviceRoutes : undefined;
-            resourceInputs["services"] = state ? state.services : undefined;
-            resourceInputs["staticNats"] = state ? state.staticNats : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
-            resourceInputs["vpn"] = state ? state.vpn : undefined;
-            resourceInputs["vpnVariable"] = state ? state.vpnVariable : undefined;
+            resourceInputs["advertiseOmpIpv4s"] = state?.advertiseOmpIpv4s;
+            resourceInputs["advertiseOmpIpv6s"] = state?.advertiseOmpIpv6s;
+            resourceInputs["configDescription"] = state?.configDescription;
+            resourceInputs["configDescriptionVariable"] = state?.configDescriptionVariable;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["enableSdwanRemoteAccess"] = state?.enableSdwanRemoteAccess;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["greRoutes"] = state?.greRoutes;
+            resourceInputs["hostMappings"] = state?.hostMappings;
+            resourceInputs["ipsecRoutes"] = state?.ipsecRoutes;
+            resourceInputs["ipv4ExportRouteTargets"] = state?.ipv4ExportRouteTargets;
+            resourceInputs["ipv4ImportRouteTargets"] = state?.ipv4ImportRouteTargets;
+            resourceInputs["ipv4StaticRoutes"] = state?.ipv4StaticRoutes;
+            resourceInputs["ipv6ExportRouteTargets"] = state?.ipv6ExportRouteTargets;
+            resourceInputs["ipv6ImportRouteTargets"] = state?.ipv6ImportRouteTargets;
+            resourceInputs["ipv6StaticRoutes"] = state?.ipv6StaticRoutes;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["nat64V4Pools"] = state?.nat64V4Pools;
+            resourceInputs["natPools"] = state?.natPools;
+            resourceInputs["natPortForwards"] = state?.natPortForwards;
+            resourceInputs["ompAdminDistanceIpv4"] = state?.ompAdminDistanceIpv4;
+            resourceInputs["ompAdminDistanceIpv4Variable"] = state?.ompAdminDistanceIpv4Variable;
+            resourceInputs["ompAdminDistanceIpv6"] = state?.ompAdminDistanceIpv6;
+            resourceInputs["ompAdminDistanceIpv6Variable"] = state?.ompAdminDistanceIpv6Variable;
+            resourceInputs["primaryDnsAddressIpv4"] = state?.primaryDnsAddressIpv4;
+            resourceInputs["primaryDnsAddressIpv4Variable"] = state?.primaryDnsAddressIpv4Variable;
+            resourceInputs["primaryDnsAddressIpv6"] = state?.primaryDnsAddressIpv6;
+            resourceInputs["primaryDnsAddressIpv6Variable"] = state?.primaryDnsAddressIpv6Variable;
+            resourceInputs["routeLeakFromGlobalVpns"] = state?.routeLeakFromGlobalVpns;
+            resourceInputs["routeLeakFromOtherServices"] = state?.routeLeakFromOtherServices;
+            resourceInputs["routeLeakToGlobalVpns"] = state?.routeLeakToGlobalVpns;
+            resourceInputs["secondaryDnsAddressIpv4"] = state?.secondaryDnsAddressIpv4;
+            resourceInputs["secondaryDnsAddressIpv4Variable"] = state?.secondaryDnsAddressIpv4Variable;
+            resourceInputs["secondaryDnsAddressIpv6"] = state?.secondaryDnsAddressIpv6;
+            resourceInputs["secondaryDnsAddressIpv6Variable"] = state?.secondaryDnsAddressIpv6Variable;
+            resourceInputs["serviceRoutes"] = state?.serviceRoutes;
+            resourceInputs["services"] = state?.services;
+            resourceInputs["staticNats"] = state?.staticNats;
+            resourceInputs["version"] = state?.version;
+            resourceInputs["vpn"] = state?.vpn;
+            resourceInputs["vpnVariable"] = state?.vpnVariable;
         } else {
             const args = argsOrState as ServiceLanVpnFeatureArgs | undefined;
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            resourceInputs["advertiseOmpIpv4s"] = args ? args.advertiseOmpIpv4s : undefined;
-            resourceInputs["advertiseOmpIpv6s"] = args ? args.advertiseOmpIpv6s : undefined;
-            resourceInputs["configDescription"] = args ? args.configDescription : undefined;
-            resourceInputs["configDescriptionVariable"] = args ? args.configDescriptionVariable : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["enableSdwanRemoteAccess"] = args ? args.enableSdwanRemoteAccess : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["greRoutes"] = args ? args.greRoutes : undefined;
-            resourceInputs["hostMappings"] = args ? args.hostMappings : undefined;
-            resourceInputs["ipsecRoutes"] = args ? args.ipsecRoutes : undefined;
-            resourceInputs["ipv4ExportRouteTargets"] = args ? args.ipv4ExportRouteTargets : undefined;
-            resourceInputs["ipv4ImportRouteTargets"] = args ? args.ipv4ImportRouteTargets : undefined;
-            resourceInputs["ipv4StaticRoutes"] = args ? args.ipv4StaticRoutes : undefined;
-            resourceInputs["ipv6ExportRouteTargets"] = args ? args.ipv6ExportRouteTargets : undefined;
-            resourceInputs["ipv6ImportRouteTargets"] = args ? args.ipv6ImportRouteTargets : undefined;
-            resourceInputs["ipv6StaticRoutes"] = args ? args.ipv6StaticRoutes : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["nat64V4Pools"] = args ? args.nat64V4Pools : undefined;
-            resourceInputs["natPools"] = args ? args.natPools : undefined;
-            resourceInputs["natPortForwards"] = args ? args.natPortForwards : undefined;
-            resourceInputs["ompAdminDistanceIpv4"] = args ? args.ompAdminDistanceIpv4 : undefined;
-            resourceInputs["ompAdminDistanceIpv4Variable"] = args ? args.ompAdminDistanceIpv4Variable : undefined;
-            resourceInputs["ompAdminDistanceIpv6"] = args ? args.ompAdminDistanceIpv6 : undefined;
-            resourceInputs["ompAdminDistanceIpv6Variable"] = args ? args.ompAdminDistanceIpv6Variable : undefined;
-            resourceInputs["primaryDnsAddressIpv4"] = args ? args.primaryDnsAddressIpv4 : undefined;
-            resourceInputs["primaryDnsAddressIpv4Variable"] = args ? args.primaryDnsAddressIpv4Variable : undefined;
-            resourceInputs["primaryDnsAddressIpv6"] = args ? args.primaryDnsAddressIpv6 : undefined;
-            resourceInputs["primaryDnsAddressIpv6Variable"] = args ? args.primaryDnsAddressIpv6Variable : undefined;
-            resourceInputs["routeLeakFromGlobalVpns"] = args ? args.routeLeakFromGlobalVpns : undefined;
-            resourceInputs["routeLeakFromOtherServices"] = args ? args.routeLeakFromOtherServices : undefined;
-            resourceInputs["routeLeakToGlobalVpns"] = args ? args.routeLeakToGlobalVpns : undefined;
-            resourceInputs["secondaryDnsAddressIpv4"] = args ? args.secondaryDnsAddressIpv4 : undefined;
-            resourceInputs["secondaryDnsAddressIpv4Variable"] = args ? args.secondaryDnsAddressIpv4Variable : undefined;
-            resourceInputs["secondaryDnsAddressIpv6"] = args ? args.secondaryDnsAddressIpv6 : undefined;
-            resourceInputs["secondaryDnsAddressIpv6Variable"] = args ? args.secondaryDnsAddressIpv6Variable : undefined;
-            resourceInputs["serviceRoutes"] = args ? args.serviceRoutes : undefined;
-            resourceInputs["services"] = args ? args.services : undefined;
-            resourceInputs["staticNats"] = args ? args.staticNats : undefined;
-            resourceInputs["vpn"] = args ? args.vpn : undefined;
-            resourceInputs["vpnVariable"] = args ? args.vpnVariable : undefined;
+            resourceInputs["advertiseOmpIpv4s"] = args?.advertiseOmpIpv4s;
+            resourceInputs["advertiseOmpIpv6s"] = args?.advertiseOmpIpv6s;
+            resourceInputs["configDescription"] = args?.configDescription;
+            resourceInputs["configDescriptionVariable"] = args?.configDescriptionVariable;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["enableSdwanRemoteAccess"] = args?.enableSdwanRemoteAccess;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["greRoutes"] = args?.greRoutes;
+            resourceInputs["hostMappings"] = args?.hostMappings;
+            resourceInputs["ipsecRoutes"] = args?.ipsecRoutes;
+            resourceInputs["ipv4ExportRouteTargets"] = args?.ipv4ExportRouteTargets;
+            resourceInputs["ipv4ImportRouteTargets"] = args?.ipv4ImportRouteTargets;
+            resourceInputs["ipv4StaticRoutes"] = args?.ipv4StaticRoutes;
+            resourceInputs["ipv6ExportRouteTargets"] = args?.ipv6ExportRouteTargets;
+            resourceInputs["ipv6ImportRouteTargets"] = args?.ipv6ImportRouteTargets;
+            resourceInputs["ipv6StaticRoutes"] = args?.ipv6StaticRoutes;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["nat64V4Pools"] = args?.nat64V4Pools;
+            resourceInputs["natPools"] = args?.natPools;
+            resourceInputs["natPortForwards"] = args?.natPortForwards;
+            resourceInputs["ompAdminDistanceIpv4"] = args?.ompAdminDistanceIpv4;
+            resourceInputs["ompAdminDistanceIpv4Variable"] = args?.ompAdminDistanceIpv4Variable;
+            resourceInputs["ompAdminDistanceIpv6"] = args?.ompAdminDistanceIpv6;
+            resourceInputs["ompAdminDistanceIpv6Variable"] = args?.ompAdminDistanceIpv6Variable;
+            resourceInputs["primaryDnsAddressIpv4"] = args?.primaryDnsAddressIpv4;
+            resourceInputs["primaryDnsAddressIpv4Variable"] = args?.primaryDnsAddressIpv4Variable;
+            resourceInputs["primaryDnsAddressIpv6"] = args?.primaryDnsAddressIpv6;
+            resourceInputs["primaryDnsAddressIpv6Variable"] = args?.primaryDnsAddressIpv6Variable;
+            resourceInputs["routeLeakFromGlobalVpns"] = args?.routeLeakFromGlobalVpns;
+            resourceInputs["routeLeakFromOtherServices"] = args?.routeLeakFromOtherServices;
+            resourceInputs["routeLeakToGlobalVpns"] = args?.routeLeakToGlobalVpns;
+            resourceInputs["secondaryDnsAddressIpv4"] = args?.secondaryDnsAddressIpv4;
+            resourceInputs["secondaryDnsAddressIpv4Variable"] = args?.secondaryDnsAddressIpv4Variable;
+            resourceInputs["secondaryDnsAddressIpv6"] = args?.secondaryDnsAddressIpv6;
+            resourceInputs["secondaryDnsAddressIpv6Variable"] = args?.secondaryDnsAddressIpv6Variable;
+            resourceInputs["serviceRoutes"] = args?.serviceRoutes;
+            resourceInputs["services"] = args?.services;
+            resourceInputs["staticNats"] = args?.staticNats;
+            resourceInputs["vpn"] = args?.vpn;
+            resourceInputs["vpnVariable"] = args?.vpnVariable;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -329,7 +334,8 @@ export interface ServiceLanVpnFeatureState {
      */
     description?: pulumi.Input<string>;
     /**
-     * Enable SDWAN Remote Access - Default value: `false`
+     * Enable SDWAN Remote Access
+     *   - Default value: `false`
      */
     enableSdwanRemoteAccess?: pulumi.Input<boolean>;
     /**
@@ -374,7 +380,8 @@ export interface ServiceLanVpnFeatureState {
      */
     natPortForwards?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureNatPortForward>[]>;
     /**
-     * OMP Admin Distance IPv4 - Range: `1`-`255`
+     * OMP Admin Distance IPv4
+     *   - Range: `1`-`255`
      */
     ompAdminDistanceIpv4?: pulumi.Input<number>;
     /**
@@ -382,7 +389,8 @@ export interface ServiceLanVpnFeatureState {
      */
     ompAdminDistanceIpv4Variable?: pulumi.Input<string>;
     /**
-     * OMP Admin Distance IPv6 - Range: `1`-`255`
+     * OMP Admin Distance IPv6
+     *   - Range: `1`-`255`
      */
     ompAdminDistanceIpv6?: pulumi.Input<number>;
     /**
@@ -450,7 +458,9 @@ export interface ServiceLanVpnFeatureState {
      */
     version?: pulumi.Input<number>;
     /**
-     * VPN - Range: `1`-`65527` - Default value: `0`
+     * VPN
+     *   - Range: `1`-`65527`
+     *   - Default value: `0`
      */
     vpn?: pulumi.Input<number>;
     /**
@@ -484,7 +494,8 @@ export interface ServiceLanVpnFeatureArgs {
      */
     description?: pulumi.Input<string>;
     /**
-     * Enable SDWAN Remote Access - Default value: `false`
+     * Enable SDWAN Remote Access
+     *   - Default value: `false`
      */
     enableSdwanRemoteAccess?: pulumi.Input<boolean>;
     /**
@@ -529,7 +540,8 @@ export interface ServiceLanVpnFeatureArgs {
      */
     natPortForwards?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureNatPortForward>[]>;
     /**
-     * OMP Admin Distance IPv4 - Range: `1`-`255`
+     * OMP Admin Distance IPv4
+     *   - Range: `1`-`255`
      */
     ompAdminDistanceIpv4?: pulumi.Input<number>;
     /**
@@ -537,7 +549,8 @@ export interface ServiceLanVpnFeatureArgs {
      */
     ompAdminDistanceIpv4Variable?: pulumi.Input<string>;
     /**
-     * OMP Admin Distance IPv6 - Range: `1`-`255`
+     * OMP Admin Distance IPv6
+     *   - Range: `1`-`255`
      */
     ompAdminDistanceIpv6?: pulumi.Input<number>;
     /**
@@ -601,7 +614,9 @@ export interface ServiceLanVpnFeatureArgs {
      */
     staticNats?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureStaticNat>[]>;
     /**
-     * VPN - Range: `1`-`65527` - Default value: `0`
+     * VPN
+     *   - Range: `1`-`65527`
+     *   - Default value: `0`
      */
     vpn?: pulumi.Input<number>;
     /**

@@ -98,28 +98,32 @@ public class ServiceRoutingOspfv3Ipv4Feature extends com.pulumi.resources.Custom
         return Codegen.optional(this.defaultInformationOriginateAlwaysVariable);
     }
     /**
-     * Set metric used to generate default route &lt;0..16777214&gt; - Range: `0`-`16777214`
+     * Set metric used to generate default route &lt;0..16777214&gt;
+     *   - Range: `0`-`16777214`
      * 
      */
     @Export(name="defaultInformationOriginateMetric", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> defaultInformationOriginateMetric;
 
     /**
-     * @return Set metric used to generate default route &lt;0..16777214&gt; - Range: `0`-`16777214`
+     * @return Set metric used to generate default route &lt;0..16777214&gt;
+     *   - Range: `0`-`16777214`
      * 
      */
     public Output<Optional<Integer>> defaultInformationOriginateMetric() {
         return Codegen.optional(this.defaultInformationOriginateMetric);
     }
     /**
-     * Set default route metric type - Choices: `type1`, `type2`
+     * Set default route metric type
+     *   - Choices: `type1`, `type2`
      * 
      */
     @Export(name="defaultInformationOriginateMetricType", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> defaultInformationOriginateMetricType;
 
     /**
-     * @return Set default route metric type - Choices: `type1`, `type2`
+     * @return Set default route metric type
+     *   - Choices: `type1`, `type2`
      * 
      */
     public Output<Optional<String>> defaultInformationOriginateMetricType() {
@@ -168,28 +172,36 @@ public class ServiceRoutingOspfv3Ipv4Feature extends com.pulumi.resources.Custom
         return Codegen.optional(this.description);
     }
     /**
-     * Distance - Range: `1`-`255` - Default value: `110`
+     * Distance
+     *   - Range: `1`-`255`
+     *   - Default value: `110`
      * 
      */
     @Export(name="distance", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> distance;
 
     /**
-     * @return Distance - Range: `1`-`255` - Default value: `110`
+     * @return Distance
+     *   - Range: `1`-`255`
+     *   - Default value: `110`
      * 
      */
     public Output<Optional<Integer>> distance() {
         return Codegen.optional(this.distance);
     }
     /**
-     * Set distance for external routes - Range: `1`-`254` - Default value: `110`
+     * Set distance for external routes
+     *   - Range: `1`-`254`
+     *   - Default value: `110`
      * 
      */
     @Export(name="distanceExternal", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> distanceExternal;
 
     /**
-     * @return Set distance for external routes - Range: `1`-`254` - Default value: `110`
+     * @return Set distance for external routes
+     *   - Range: `1`-`254`
+     *   - Default value: `110`
      * 
      */
     public Output<Optional<Integer>> distanceExternal() {
@@ -210,14 +222,18 @@ public class ServiceRoutingOspfv3Ipv4Feature extends com.pulumi.resources.Custom
         return Codegen.optional(this.distanceExternalVariable);
     }
     /**
-     * Set distance for inter-area routes - Range: `1`-`254` - Default value: `110`
+     * Set distance for inter-area routes
+     *   - Range: `1`-`254`
+     *   - Default value: `110`
      * 
      */
     @Export(name="distanceInterArea", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> distanceInterArea;
 
     /**
-     * @return Set distance for inter-area routes - Range: `1`-`254` - Default value: `110`
+     * @return Set distance for inter-area routes
+     *   - Range: `1`-`254`
+     *   - Default value: `110`
      * 
      */
     public Output<Optional<Integer>> distanceInterArea() {
@@ -238,14 +254,18 @@ public class ServiceRoutingOspfv3Ipv4Feature extends com.pulumi.resources.Custom
         return Codegen.optional(this.distanceInterAreaVariable);
     }
     /**
-     * Set distance for intra-area routes - Range: `1`-`254` - Default value: `110`
+     * Set distance for intra-area routes
+     *   - Range: `1`-`254`
+     *   - Default value: `110`
      * 
      */
     @Export(name="distanceIntraArea", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> distanceIntraArea;
 
     /**
-     * @return Set distance for intra-area routes - Range: `1`-`254` - Default value: `110`
+     * @return Set distance for intra-area routes
+     *   - Range: `1`-`254`
+     *   - Default value: `110`
      * 
      */
     public Output<Optional<Integer>> distanceIntraArea() {
@@ -294,14 +314,16 @@ public class ServiceRoutingOspfv3Ipv4Feature extends com.pulumi.resources.Custom
         return this.featureProfileId;
     }
     /**
-     * Table map filtered or not - Default value: `false`
+     * Table map filtered or not
+     *   - Default value: `false`
      * 
      */
     @Export(name="filter", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> filter;
 
     /**
-     * @return Table map filtered or not - Default value: `false`
+     * @return Table map filtered or not
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> filter() {
@@ -350,14 +372,18 @@ public class ServiceRoutingOspfv3Ipv4Feature extends com.pulumi.resources.Custom
         return Codegen.optional(this.redistributes);
     }
     /**
-     * Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+     * Set reference bandwidth method to assign OSPF cost
+     *   - Range: `1`-`4294967`
+     *   - Default value: `100`
      * 
      */
     @Export(name="referenceBandwidth", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> referenceBandwidth;
 
     /**
-     * @return Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+     * @return Set reference bandwidth method to assign OSPF cost
+     *   - Range: `1`-`4294967`
+     *   - Default value: `100`
      * 
      */
     public Output<Optional<Integer>> referenceBandwidth() {
@@ -378,14 +404,16 @@ public class ServiceRoutingOspfv3Ipv4Feature extends com.pulumi.resources.Custom
         return Codegen.optional(this.referenceBandwidthVariable);
     }
     /**
-     * Calculate summary route cost based on RFC 1583 - Default value: `true`
+     * Calculate summary route cost based on RFC 1583
+     *   - Default value: `true`
      * 
      */
     @Export(name="rfc1583Compatible", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> rfc1583Compatible;
 
     /**
-     * @return Calculate summary route cost based on RFC 1583 - Default value: `true`
+     * @return Calculate summary route cost based on RFC 1583
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> rfc1583Compatible() {
@@ -454,14 +482,16 @@ public class ServiceRoutingOspfv3Ipv4Feature extends com.pulumi.resources.Custom
         return Codegen.optional(this.routerLsaAction);
     }
     /**
-     * Set how long to advertise maximum metric after router boot up - Range: `5`-`86400`
+     * Set how long to advertise maximum metric after router boot up
+     *   - Range: `5`-`86400`
      * 
      */
     @Export(name="routerLsaOnStartupTime", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> routerLsaOnStartupTime;
 
     /**
-     * @return Set how long to advertise maximum metric after router boot up - Range: `5`-`86400`
+     * @return Set how long to advertise maximum metric after router boot up
+     *   - Range: `5`-`86400`
      * 
      */
     public Output<Optional<Integer>> routerLsaOnStartupTime() {
@@ -482,14 +512,18 @@ public class ServiceRoutingOspfv3Ipv4Feature extends com.pulumi.resources.Custom
         return Codegen.optional(this.routerLsaOnStartupTimeVariable);
     }
     /**
-     * Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+     * Set delay from first change received until performing SPF calculation
+     *   - Range: `1`-`600000`
+     *   - Default value: `200`
      * 
      */
     @Export(name="spfCalculationDelay", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> spfCalculationDelay;
 
     /**
-     * @return Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+     * @return Set delay from first change received until performing SPF calculation
+     *   - Range: `1`-`600000`
+     *   - Default value: `200`
      * 
      */
     public Output<Optional<Integer>> spfCalculationDelay() {
@@ -510,14 +544,18 @@ public class ServiceRoutingOspfv3Ipv4Feature extends com.pulumi.resources.Custom
         return Codegen.optional(this.spfCalculationDelayVariable);
     }
     /**
-     * Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
+     * Set initial hold time between consecutive SPF calculations
+     *   - Range: `1`-`600000`
+     *   - Default value: `1000`
      * 
      */
     @Export(name="spfInitialHoldTime", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> spfInitialHoldTime;
 
     /**
-     * @return Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
+     * @return Set initial hold time between consecutive SPF calculations
+     *   - Range: `1`-`600000`
+     *   - Default value: `1000`
      * 
      */
     public Output<Optional<Integer>> spfInitialHoldTime() {
@@ -538,14 +576,18 @@ public class ServiceRoutingOspfv3Ipv4Feature extends com.pulumi.resources.Custom
         return Codegen.optional(this.spfInitialHoldTimeVariable);
     }
     /**
-     * Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+     * Set maximum hold time between consecutive SPF calculations
+     *   - Range: `1`-`600000`
+     *   - Default value: `10000`
      * 
      */
     @Export(name="spfMaximumHoldTime", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> spfMaximumHoldTime;
 
     /**
-     * @return Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+     * @return Set maximum hold time between consecutive SPF calculations
+     *   - Range: `1`-`600000`
+     *   - Default value: `10000`
      * 
      */
     public Output<Optional<Integer>> spfMaximumHoldTime() {

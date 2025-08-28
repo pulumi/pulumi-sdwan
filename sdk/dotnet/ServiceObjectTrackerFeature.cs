@@ -80,7 +80,8 @@ namespace Pulumi.Sdwan
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// Object tracker ID - Range: `1`-`1000`
+        /// Object tracker ID
+        ///   - Range: `1`-`1000`
         /// </summary>
         [Output("objectTrackerId")]
         public Output<int?> ObjectTrackerId { get; private set; } = null!;
@@ -92,7 +93,8 @@ namespace Pulumi.Sdwan
         public Output<string?> ObjectTrackerIdVariable { get; private set; } = null!;
 
         /// <summary>
-        /// objectTrackerType:Interface SIG Route - Choices: `Interface`, `SIG`, `Route`
+        /// objectTrackerType:Interface SIG Route
+        ///   - Choices: `Interface`, `SIG`, `Route`
         /// </summary>
         [Output("objectTrackerType")]
         public Output<string> ObjectTrackerType { get; private set; } = null!;
@@ -110,11 +112,9 @@ namespace Pulumi.Sdwan
         public Output<string?> RouteIpVariable { get; private set; } = null!;
 
         /// <summary>
-        /// IP mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        /// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        /// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        /// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        /// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0` - Default value: `0.0.0.0`
+        /// IP mask
+        ///   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        ///   - Default value: `0.0.0.0`
         /// </summary>
         [Output("routeMask")]
         public Output<string?> RouteMask { get; private set; } = null!;
@@ -132,7 +132,8 @@ namespace Pulumi.Sdwan
         public Output<int> Version { get; private set; } = null!;
 
         /// <summary>
-        /// VPN - Range: `0`-`65530`
+        /// VPN
+        ///   - Range: `0`-`65530`
         /// </summary>
         [Output("vpn")]
         public Output<int?> Vpn { get; private set; } = null!;
@@ -220,7 +221,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Object tracker ID - Range: `1`-`1000`
+        /// Object tracker ID
+        ///   - Range: `1`-`1000`
         /// </summary>
         [Input("objectTrackerId")]
         public Input<int>? ObjectTrackerId { get; set; }
@@ -232,7 +234,8 @@ namespace Pulumi.Sdwan
         public Input<string>? ObjectTrackerIdVariable { get; set; }
 
         /// <summary>
-        /// objectTrackerType:Interface SIG Route - Choices: `Interface`, `SIG`, `Route`
+        /// objectTrackerType:Interface SIG Route
+        ///   - Choices: `Interface`, `SIG`, `Route`
         /// </summary>
         [Input("objectTrackerType", required: true)]
         public Input<string> ObjectTrackerType { get; set; } = null!;
@@ -250,11 +253,9 @@ namespace Pulumi.Sdwan
         public Input<string>? RouteIpVariable { get; set; }
 
         /// <summary>
-        /// IP mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        /// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        /// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        /// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        /// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0` - Default value: `0.0.0.0`
+        /// IP mask
+        ///   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        ///   - Default value: `0.0.0.0`
         /// </summary>
         [Input("routeMask")]
         public Input<string>? RouteMask { get; set; }
@@ -266,7 +267,8 @@ namespace Pulumi.Sdwan
         public Input<string>? RouteMaskVariable { get; set; }
 
         /// <summary>
-        /// VPN - Range: `0`-`65530`
+        /// VPN
+        ///   - Range: `0`-`65530`
         /// </summary>
         [Input("vpn")]
         public Input<int>? Vpn { get; set; }
@@ -316,7 +318,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Object tracker ID - Range: `1`-`1000`
+        /// Object tracker ID
+        ///   - Range: `1`-`1000`
         /// </summary>
         [Input("objectTrackerId")]
         public Input<int>? ObjectTrackerId { get; set; }
@@ -328,7 +331,8 @@ namespace Pulumi.Sdwan
         public Input<string>? ObjectTrackerIdVariable { get; set; }
 
         /// <summary>
-        /// objectTrackerType:Interface SIG Route - Choices: `Interface`, `SIG`, `Route`
+        /// objectTrackerType:Interface SIG Route
+        ///   - Choices: `Interface`, `SIG`, `Route`
         /// </summary>
         [Input("objectTrackerType")]
         public Input<string>? ObjectTrackerType { get; set; }
@@ -346,11 +350,9 @@ namespace Pulumi.Sdwan
         public Input<string>? RouteIpVariable { get; set; }
 
         /// <summary>
-        /// IP mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        /// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        /// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        /// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        /// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0` - Default value: `0.0.0.0`
+        /// IP mask
+        ///   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        ///   - Default value: `0.0.0.0`
         /// </summary>
         [Input("routeMask")]
         public Input<string>? RouteMask { get; set; }
@@ -368,7 +370,8 @@ namespace Pulumi.Sdwan
         public Input<int>? Version { get; set; }
 
         /// <summary>
-        /// VPN - Range: `0`-`65530`
+        /// VPN
+        ///   - Range: `0`-`65530`
         /// </summary>
         [Input("vpn")]
         public Input<int>? Vpn { get; set; }

@@ -99,14 +99,16 @@ public class PreferredColorGroupPolicyObject extends com.pulumi.resources.Custom
         return this.primaryColorPreference;
     }
     /**
-     * Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+     * Path preference
+     *   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
      * 
      */
     @Export(name="primaryPathPreference", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> primaryPathPreference;
 
     /**
-     * @return Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+     * @return Path preference
+     *   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
      * 
      */
     public Output<Optional<String>> primaryPathPreference() {
@@ -127,14 +129,16 @@ public class PreferredColorGroupPolicyObject extends com.pulumi.resources.Custom
         return Codegen.optional(this.secondaryColorPreference);
     }
     /**
-     * Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+     * Path preference
+     *   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
      * 
      */
     @Export(name="secondaryPathPreference", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> secondaryPathPreference;
 
     /**
-     * @return Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+     * @return Path preference
+     *   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
      * 
      */
     public Output<Optional<String>> secondaryPathPreference() {
@@ -155,14 +159,16 @@ public class PreferredColorGroupPolicyObject extends com.pulumi.resources.Custom
         return Codegen.optional(this.tertiaryColorPreference);
     }
     /**
-     * Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+     * Path preference
+     *   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
      * 
      */
     @Export(name="tertiaryPathPreference", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tertiaryPathPreference;
 
     /**
-     * @return Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+     * @return Path preference
+     *   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
      * 
      */
     public Output<Optional<String>> tertiaryPathPreference() {

@@ -31,7 +31,8 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.CedgeAaaFeatureTemplateAccountingRule>> AccountingRules { get; private set; } = null!;
 
         /// <summary>
-        /// For configuration mode commands. - Default value: `false`
+        /// For configuration mode commands.
+        ///   - Default value: `false`
         /// </summary>
         [Output("authorizationConfigCommands")]
         public Output<bool?> AuthorizationConfigCommands { get; private set; } = null!;
@@ -43,7 +44,8 @@ namespace Pulumi.Sdwan
         public Output<string?> AuthorizationConfigCommandsVariable { get; private set; } = null!;
 
         /// <summary>
-        /// For enabling console authorization - Default value: `false`
+        /// For enabling console authorization
+        ///   - Default value: `false`
         /// </summary>
         [Output("authorizationConsole")]
         public Output<bool?> AuthorizationConsole { get; private set; } = null!;
@@ -67,15 +69,15 @@ namespace Pulumi.Sdwan
         public Output<string> Description { get; private set; } = null!;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         [Output("deviceTypes")]
         public Output<ImmutableArray<string>> DeviceTypes { get; private set; } = null!;
 
         /// <summary>
-        /// Accounting configurations parameters - Default value: `false`
+        /// Accounting configurations parameters
+        ///   - Default value: `false`
         /// </summary>
         [Output("dot1xAccounting")]
         public Output<bool?> Dot1xAccounting { get; private set; } = null!;
@@ -87,7 +89,8 @@ namespace Pulumi.Sdwan
         public Output<string?> Dot1xAccountingVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Authentication configurations parameters - Default value: `false`
+        /// Authentication configurations parameters
+        ///   - Default value: `false`
         /// </summary>
         [Output("dot1xAuthentication")]
         public Output<bool?> Dot1xAuthentication { get; private set; } = null!;
@@ -111,7 +114,9 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.CedgeAaaFeatureTemplateRadiusClient>> RadiusClients { get; private set; } = null!;
 
         /// <summary>
-        /// Authentication Type - Choices: `any`, `all`, `session-key` - Default value: `any`
+        /// Authentication Type
+        ///   - Choices: `any`, `all`, `session-key`
+        ///   - Default value: `any`
         /// </summary>
         [Output("radiusDynamicAuthorAuthenticationType")]
         public Output<string?> RadiusDynamicAuthorAuthenticationType { get; private set; } = null!;
@@ -123,7 +128,9 @@ namespace Pulumi.Sdwan
         public Output<string?> RadiusDynamicAuthorAuthenticationTypeVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Domain Stripping - Choices: `yes`, `no`, `right-to-left` - Default value: `no`
+        /// Domain Stripping
+        ///   - Choices: `yes`, `no`, `right-to-left`
+        ///   - Default value: `no`
         /// </summary>
         [Output("radiusDynamicAuthorDomainStripping")]
         public Output<string?> RadiusDynamicAuthorDomainStripping { get; private set; } = null!;
@@ -135,7 +142,9 @@ namespace Pulumi.Sdwan
         public Output<string?> RadiusDynamicAuthorDomainStrippingVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Specify Radius Dynamic Author Port - Range: `0`-`65535` - Default value: `1700`
+        /// Specify Radius Dynamic Author Port
+        ///   - Range: `0`-`65535`
+        ///   - Default value: `1700`
         /// </summary>
         [Output("radiusDynamicAuthorPort")]
         public Output<int?> RadiusDynamicAuthorPort { get; private set; } = null!;
@@ -183,7 +192,8 @@ namespace Pulumi.Sdwan
         public Output<string?> RadiusTrustsecGroup { get; private set; } = null!;
 
         /// <summary>
-        /// ServerGroups priority order - Default value: `local`
+        /// ServerGroups priority order
+        ///   - Default value: `local`
         /// </summary>
         [Output("serverGroupsPriorityOrder")]
         public Output<string?> ServerGroupsPriorityOrder { get; private set; } = null!;
@@ -271,7 +281,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// For configuration mode commands. - Default value: `false`
+        /// For configuration mode commands.
+        ///   - Default value: `false`
         /// </summary>
         [Input("authorizationConfigCommands")]
         public Input<bool>? AuthorizationConfigCommands { get; set; }
@@ -283,7 +294,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AuthorizationConfigCommandsVariable { get; set; }
 
         /// <summary>
-        /// For enabling console authorization - Default value: `false`
+        /// For enabling console authorization
+        ///   - Default value: `false`
         /// </summary>
         [Input("authorizationConsole")]
         public Input<bool>? AuthorizationConsole { get; set; }
@@ -316,9 +328,8 @@ namespace Pulumi.Sdwan
         private InputList<string>? _deviceTypes;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         public InputList<string> DeviceTypes
         {
@@ -327,7 +338,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Accounting configurations parameters - Default value: `false`
+        /// Accounting configurations parameters
+        ///   - Default value: `false`
         /// </summary>
         [Input("dot1xAccounting")]
         public Input<bool>? Dot1xAccounting { get; set; }
@@ -339,7 +351,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Dot1xAccountingVariable { get; set; }
 
         /// <summary>
-        /// Authentication configurations parameters - Default value: `false`
+        /// Authentication configurations parameters
+        ///   - Default value: `false`
         /// </summary>
         [Input("dot1xAuthentication")]
         public Input<bool>? Dot1xAuthentication { get; set; }
@@ -369,7 +382,9 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Authentication Type - Choices: `any`, `all`, `session-key` - Default value: `any`
+        /// Authentication Type
+        ///   - Choices: `any`, `all`, `session-key`
+        ///   - Default value: `any`
         /// </summary>
         [Input("radiusDynamicAuthorAuthenticationType")]
         public Input<string>? RadiusDynamicAuthorAuthenticationType { get; set; }
@@ -381,7 +396,9 @@ namespace Pulumi.Sdwan
         public Input<string>? RadiusDynamicAuthorAuthenticationTypeVariable { get; set; }
 
         /// <summary>
-        /// Domain Stripping - Choices: `yes`, `no`, `right-to-left` - Default value: `no`
+        /// Domain Stripping
+        ///   - Choices: `yes`, `no`, `right-to-left`
+        ///   - Default value: `no`
         /// </summary>
         [Input("radiusDynamicAuthorDomainStripping")]
         public Input<string>? RadiusDynamicAuthorDomainStripping { get; set; }
@@ -393,7 +410,9 @@ namespace Pulumi.Sdwan
         public Input<string>? RadiusDynamicAuthorDomainStrippingVariable { get; set; }
 
         /// <summary>
-        /// Specify Radius Dynamic Author Port - Range: `0`-`65535` - Default value: `1700`
+        /// Specify Radius Dynamic Author Port
+        ///   - Range: `0`-`65535`
+        ///   - Default value: `1700`
         /// </summary>
         [Input("radiusDynamicAuthorPort")]
         public Input<int>? RadiusDynamicAuthorPort { get; set; }
@@ -447,7 +466,8 @@ namespace Pulumi.Sdwan
         public Input<string>? RadiusTrustsecGroup { get; set; }
 
         /// <summary>
-        /// ServerGroups priority order - Default value: `local`
+        /// ServerGroups priority order
+        ///   - Default value: `local`
         /// </summary>
         [Input("serverGroupsPriorityOrder")]
         public Input<string>? ServerGroupsPriorityOrder { get; set; }
@@ -497,7 +517,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// For configuration mode commands. - Default value: `false`
+        /// For configuration mode commands.
+        ///   - Default value: `false`
         /// </summary>
         [Input("authorizationConfigCommands")]
         public Input<bool>? AuthorizationConfigCommands { get; set; }
@@ -509,7 +530,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AuthorizationConfigCommandsVariable { get; set; }
 
         /// <summary>
-        /// For enabling console authorization - Default value: `false`
+        /// For enabling console authorization
+        ///   - Default value: `false`
         /// </summary>
         [Input("authorizationConsole")]
         public Input<bool>? AuthorizationConsole { get; set; }
@@ -542,9 +564,8 @@ namespace Pulumi.Sdwan
         private InputList<string>? _deviceTypes;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         public InputList<string> DeviceTypes
         {
@@ -553,7 +574,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Accounting configurations parameters - Default value: `false`
+        /// Accounting configurations parameters
+        ///   - Default value: `false`
         /// </summary>
         [Input("dot1xAccounting")]
         public Input<bool>? Dot1xAccounting { get; set; }
@@ -565,7 +587,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Dot1xAccountingVariable { get; set; }
 
         /// <summary>
-        /// Authentication configurations parameters - Default value: `false`
+        /// Authentication configurations parameters
+        ///   - Default value: `false`
         /// </summary>
         [Input("dot1xAuthentication")]
         public Input<bool>? Dot1xAuthentication { get; set; }
@@ -595,7 +618,9 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Authentication Type - Choices: `any`, `all`, `session-key` - Default value: `any`
+        /// Authentication Type
+        ///   - Choices: `any`, `all`, `session-key`
+        ///   - Default value: `any`
         /// </summary>
         [Input("radiusDynamicAuthorAuthenticationType")]
         public Input<string>? RadiusDynamicAuthorAuthenticationType { get; set; }
@@ -607,7 +632,9 @@ namespace Pulumi.Sdwan
         public Input<string>? RadiusDynamicAuthorAuthenticationTypeVariable { get; set; }
 
         /// <summary>
-        /// Domain Stripping - Choices: `yes`, `no`, `right-to-left` - Default value: `no`
+        /// Domain Stripping
+        ///   - Choices: `yes`, `no`, `right-to-left`
+        ///   - Default value: `no`
         /// </summary>
         [Input("radiusDynamicAuthorDomainStripping")]
         public Input<string>? RadiusDynamicAuthorDomainStripping { get; set; }
@@ -619,7 +646,9 @@ namespace Pulumi.Sdwan
         public Input<string>? RadiusDynamicAuthorDomainStrippingVariable { get; set; }
 
         /// <summary>
-        /// Specify Radius Dynamic Author Port - Range: `0`-`65535` - Default value: `1700`
+        /// Specify Radius Dynamic Author Port
+        ///   - Range: `0`-`65535`
+        ///   - Default value: `1700`
         /// </summary>
         [Input("radiusDynamicAuthorPort")]
         public Input<int>? RadiusDynamicAuthorPort { get; set; }
@@ -673,7 +702,8 @@ namespace Pulumi.Sdwan
         public Input<string>? RadiusTrustsecGroup { get; set; }
 
         /// <summary>
-        /// ServerGroups priority order - Default value: `local`
+        /// ServerGroups priority order
+        ///   - Default value: `local`
         /// </summary>
         [Input("serverGroupsPriorityOrder")]
         public Input<string>? ServerGroupsPriorityOrder { get; set; }

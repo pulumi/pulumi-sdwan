@@ -58,7 +58,8 @@ namespace Pulumi.Sdwan
         public Output<string> Description { get; private set; } = null!;
 
         /// <summary>
-        /// The device role - Choices: `sdwan-edge`, `service-node`
+        /// The device role
+        ///   - Choices: `sdwan-edge`, `service-node`
         /// </summary>
         [Output("deviceRole")]
         public Output<string?> DeviceRole { get; private set; } = null!;
@@ -164,7 +165,8 @@ namespace Pulumi.Sdwan
         public Input<string> Description { get; set; } = null!;
 
         /// <summary>
-        /// The device role - Choices: `sdwan-edge`, `service-node`
+        /// The device role
+        ///   - Choices: `sdwan-edge`, `service-node`
         /// </summary>
         [Input("deviceRole")]
         public Input<string>? DeviceRole { get; set; }
@@ -232,7 +234,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// The device role - Choices: `sdwan-edge`, `service-node`
+        /// The device role
+        ///   - Choices: `sdwan-edge`, `service-node`
         /// </summary>
         [Input("deviceRole")]
         public Input<string>? DeviceRole { get; set; }

@@ -45,14 +45,16 @@ import javax.annotation.Nullable;
 @ResourceType(type="sdwan:index/systemAaaFeature:SystemAaaFeature")
 public class SystemAaaFeature extends com.pulumi.resources.CustomResource {
     /**
-     * Accounting configurations parameters - Default value: `false`
+     * Accounting configurations parameters
+     *   - Default value: `false`
      * 
      */
     @Export(name="accountingGroup", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> accountingGroup;
 
     /**
-     * @return Accounting configurations parameters - Default value: `false`
+     * @return Accounting configurations parameters
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> accountingGroup() {
@@ -87,14 +89,16 @@ public class SystemAaaFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.accountingRules);
     }
     /**
-     * Authentication configurations parameters - Default value: `false`
+     * Authentication configurations parameters
+     *   - Default value: `false`
      * 
      */
     @Export(name="authenticationGroup", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> authenticationGroup;
 
     /**
-     * @return Authentication configurations parameters - Default value: `false`
+     * @return Authentication configurations parameters
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> authenticationGroup() {
@@ -115,14 +119,16 @@ public class SystemAaaFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.authenticationGroupVariable);
     }
     /**
-     * For configuration mode commands. - Default value: `false`
+     * For configuration mode commands.
+     *   - Default value: `false`
      * 
      */
     @Export(name="authorizationConfigCommands", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> authorizationConfigCommands;
 
     /**
-     * @return For configuration mode commands. - Default value: `false`
+     * @return For configuration mode commands.
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> authorizationConfigCommands() {
@@ -143,14 +149,16 @@ public class SystemAaaFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.authorizationConfigCommandsVariable);
     }
     /**
-     * For enabling console authorization - Default value: `false`
+     * For enabling console authorization
+     *   - Default value: `false`
      * 
      */
     @Export(name="authorizationConsole", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> authorizationConsole;
 
     /**
-     * @return For enabling console authorization - Default value: `false`
+     * @return For enabling console authorization
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> authorizationConsole() {

@@ -30,7 +30,8 @@ class PolicyGroupArgs:
         """
         The set of arguments for constructing a PolicyGroup resource.
         :param pulumi.Input[_builtins.str] description: Description
-        :param pulumi.Input[_builtins.str] solution: Type of solution - Choices: `sdwan`
+        :param pulumi.Input[_builtins.str] solution: Type of solution
+                 - Choices: `sdwan`
         :param pulumi.Input[Sequence[pulumi.Input['PolicyGroupDeviceArgs']]] devices: List of devices
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] feature_profile_ids: List of feature profile IDs
         :param pulumi.Input[_builtins.str] name: The name of the policy group
@@ -63,7 +64,8 @@ class PolicyGroupArgs:
     @pulumi.getter
     def solution(self) -> pulumi.Input[_builtins.str]:
         """
-        Type of solution - Choices: `sdwan`
+        Type of solution
+          - Choices: `sdwan`
         """
         return pulumi.get(self, "solution")
 
@@ -136,7 +138,8 @@ class _PolicyGroupState:
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] feature_profile_ids: List of feature profile IDs
         :param pulumi.Input[_builtins.str] name: The name of the policy group
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] policy_versions: List of all associated policy versions
-        :param pulumi.Input[_builtins.str] solution: Type of solution - Choices: `sdwan`
+        :param pulumi.Input[_builtins.str] solution: Type of solution
+                 - Choices: `sdwan`
         """
         if description is not None:
             pulumi.set(__self__, "description", description)
@@ -215,7 +218,8 @@ class _PolicyGroupState:
     @pulumi.getter
     def solution(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Type of solution - Choices: `sdwan`
+        Type of solution
+          - Choices: `sdwan`
         """
         return pulumi.get(self, "solution")
 
@@ -272,7 +276,8 @@ class PolicyGroup(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] feature_profile_ids: List of feature profile IDs
         :param pulumi.Input[_builtins.str] name: The name of the policy group
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] policy_versions: List of all associated policy versions
-        :param pulumi.Input[_builtins.str] solution: Type of solution - Choices: `sdwan`
+        :param pulumi.Input[_builtins.str] solution: Type of solution
+                 - Choices: `sdwan`
         """
         ...
     @overload
@@ -376,7 +381,8 @@ class PolicyGroup(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] feature_profile_ids: List of feature profile IDs
         :param pulumi.Input[_builtins.str] name: The name of the policy group
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] policy_versions: List of all associated policy versions
-        :param pulumi.Input[_builtins.str] solution: Type of solution - Choices: `sdwan`
+        :param pulumi.Input[_builtins.str] solution: Type of solution
+                 - Choices: `sdwan`
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -434,7 +440,8 @@ class PolicyGroup(pulumi.CustomResource):
     @pulumi.getter
     def solution(self) -> pulumi.Output[_builtins.str]:
         """
-        Type of solution - Choices: `sdwan`
+        Type of solution
+          - Choices: `sdwan`
         """
         return pulumi.get(self, "solution")
 

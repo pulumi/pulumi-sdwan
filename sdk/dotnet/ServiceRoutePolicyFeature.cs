@@ -27,7 +27,9 @@ namespace Pulumi.Sdwan
     public partial class ServiceRoutePolicyFeature : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// Default Action - Choices: `reject`, `accept` - Default value: `reject`
+        /// Default Action
+        ///   - Choices: `reject`, `accept`
+        ///   - Default value: `reject`
         /// </summary>
         [Output("defaultAction")]
         public Output<string?> DefaultAction { get; private set; } = null!;
@@ -109,7 +111,9 @@ namespace Pulumi.Sdwan
     public sealed class ServiceRoutePolicyFeatureArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Default Action - Choices: `reject`, `accept` - Default value: `reject`
+        /// Default Action
+        ///   - Choices: `reject`, `accept`
+        ///   - Default value: `reject`
         /// </summary>
         [Input("defaultAction")]
         public Input<string>? DefaultAction { get; set; }
@@ -153,7 +157,9 @@ namespace Pulumi.Sdwan
     public sealed class ServiceRoutePolicyFeatureState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Default Action - Choices: `reject`, `accept` - Default value: `reject`
+        /// Default Action
+        ///   - Choices: `reject`, `accept`
+        ///   - Default value: `reject`
         /// </summary>
         [Input("defaultAction")]
         public Input<string>? DefaultAction { get; set; }

@@ -35,14 +35,18 @@ public final class CiscoBfdFeatureTemplateArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Set default DSCP value for BFD packets - Range: `0`-`63` - Default value: `48`
+     * Set default DSCP value for BFD packets
+     *   - Range: `0`-`63`
+     *   - Default value: `48`
      * 
      */
     @Import(name="defaultDscp")
     private @Nullable Output<Integer> defaultDscp;
 
     /**
-     * @return Set default DSCP value for BFD packets - Range: `0`-`63` - Default value: `48`
+     * @return Set default DSCP value for BFD packets
+     *   - Range: `0`-`63`
+     *   - Default value: `48`
      * 
      */
     public Optional<Output<Integer>> defaultDscp() {
@@ -80,18 +84,16 @@ public final class CiscoBfdFeatureTemplateArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Import(name="deviceTypes", required=true)
     private Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Output<List<String>> deviceTypes() {
@@ -99,14 +101,18 @@ public final class CiscoBfdFeatureTemplateArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Set the number of polling intervals used to determine tunnel SLA class - Range: `1`-`6` - Default value: `6`
+     * Set the number of polling intervals used to determine tunnel SLA class
+     *   - Range: `1`-`6`
+     *   - Default value: `6`
      * 
      */
     @Import(name="multiplier")
     private @Nullable Output<Integer> multiplier;
 
     /**
-     * @return Set the number of polling intervals used to determine tunnel SLA class - Range: `1`-`6` - Default value: `6`
+     * @return Set the number of polling intervals used to determine tunnel SLA class
+     *   - Range: `1`-`6`
+     *   - Default value: `6`
      * 
      */
     public Optional<Output<Integer>> multiplier() {
@@ -144,16 +150,18 @@ public final class CiscoBfdFeatureTemplateArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Set how often BFD polls tunnels to collect packet latency, loss, and statistics - Range: `1`-`4294967295` - Default
-     * value: `600000`
+     * Set how often BFD polls tunnels to collect packet latency, loss, and statistics
+     *   - Range: `1`-`4294967295`
+     *   - Default value: `600000`
      * 
      */
     @Import(name="pollInterval")
     private @Nullable Output<Integer> pollInterval;
 
     /**
-     * @return Set how often BFD polls tunnels to collect packet latency, loss, and statistics - Range: `1`-`4294967295` - Default
-     * value: `600000`
+     * @return Set how often BFD polls tunnels to collect packet latency, loss, and statistics
+     *   - Range: `1`-`4294967295`
+     *   - Default value: `600000`
      * 
      */
     public Optional<Output<Integer>> pollInterval() {
@@ -240,7 +248,9 @@ public final class CiscoBfdFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param defaultDscp Set default DSCP value for BFD packets - Range: `0`-`63` - Default value: `48`
+         * @param defaultDscp Set default DSCP value for BFD packets
+         *   - Range: `0`-`63`
+         *   - Default value: `48`
          * 
          * @return builder
          * 
@@ -251,7 +261,9 @@ public final class CiscoBfdFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param defaultDscp Set default DSCP value for BFD packets - Range: `0`-`63` - Default value: `48`
+         * @param defaultDscp Set default DSCP value for BFD packets
+         *   - Range: `0`-`63`
+         *   - Default value: `48`
          * 
          * @return builder
          * 
@@ -303,9 +315,8 @@ public final class CiscoBfdFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -316,9 +327,8 @@ public final class CiscoBfdFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -328,9 +338,8 @@ public final class CiscoBfdFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -340,7 +349,9 @@ public final class CiscoBfdFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param multiplier Set the number of polling intervals used to determine tunnel SLA class - Range: `1`-`6` - Default value: `6`
+         * @param multiplier Set the number of polling intervals used to determine tunnel SLA class
+         *   - Range: `1`-`6`
+         *   - Default value: `6`
          * 
          * @return builder
          * 
@@ -351,7 +362,9 @@ public final class CiscoBfdFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param multiplier Set the number of polling intervals used to determine tunnel SLA class - Range: `1`-`6` - Default value: `6`
+         * @param multiplier Set the number of polling intervals used to determine tunnel SLA class
+         *   - Range: `1`-`6`
+         *   - Default value: `6`
          * 
          * @return builder
          * 
@@ -403,8 +416,9 @@ public final class CiscoBfdFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param pollInterval Set how often BFD polls tunnels to collect packet latency, loss, and statistics - Range: `1`-`4294967295` - Default
-         * value: `600000`
+         * @param pollInterval Set how often BFD polls tunnels to collect packet latency, loss, and statistics
+         *   - Range: `1`-`4294967295`
+         *   - Default value: `600000`
          * 
          * @return builder
          * 
@@ -415,8 +429,9 @@ public final class CiscoBfdFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param pollInterval Set how often BFD polls tunnels to collect packet latency, loss, and statistics - Range: `1`-`4294967295` - Default
-         * value: `600000`
+         * @param pollInterval Set how often BFD polls tunnels to collect packet latency, loss, and statistics
+         *   - Range: `1`-`4294967295`
+         *   - Default value: `600000`
          * 
          * @return builder
          * 

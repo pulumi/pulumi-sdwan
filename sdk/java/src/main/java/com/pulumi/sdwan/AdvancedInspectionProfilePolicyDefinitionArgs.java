@@ -108,14 +108,16 @@ public final class AdvancedInspectionProfilePolicyDefinitionArgs extends com.pul
     }
 
     /**
-     * TLS Action - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
+     * TLS Action
+     *   - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
      * 
      */
     @Import(name="tlsAction")
     private @Nullable Output<String> tlsAction;
 
     /**
-     * @return TLS Action - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
+     * @return TLS Action
+     *   - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
      * 
      */
     public Optional<Output<String>> tlsAction() {
@@ -343,7 +345,8 @@ public final class AdvancedInspectionProfilePolicyDefinitionArgs extends com.pul
         }
 
         /**
-         * @param tlsAction TLS Action - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
+         * @param tlsAction TLS Action
+         *   - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
          * 
          * @return builder
          * 
@@ -354,7 +357,8 @@ public final class AdvancedInspectionProfilePolicyDefinitionArgs extends com.pul
         }
 
         /**
-         * @param tlsAction TLS Action - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
+         * @param tlsAction TLS Action
+         *   - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
          * 
          * @return builder
          * 

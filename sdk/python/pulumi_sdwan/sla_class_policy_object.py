@@ -33,15 +33,19 @@ class SlaClassPolicyObjectArgs:
         The set of arguments for constructing a SlaClassPolicyObject resource.
         :param pulumi.Input[_builtins.str] app_probe_class_id: App Probe Class Policy Object ID
         :param pulumi.Input[_builtins.int] app_probe_class_version: App Probe Class Policy Object version
-        :param pulumi.Input[_builtins.str] fallback_best_tunnel_criteria: - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`,
-               `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`,
-               `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
-        :param pulumi.Input[_builtins.int] fallback_best_tunnel_jitter: Jitter variance in ms - Range: `1`-`1000`
-        :param pulumi.Input[_builtins.int] fallback_best_tunnel_latency: Latency variance in ms - Range: `1`-`1000`
-        :param pulumi.Input[_builtins.int] fallback_best_tunnel_loss: Loss variance in percent - Range: `1`-`100`
-        :param pulumi.Input[_builtins.int] jitter: Jitter in ms - Range: `1`-`1000`
-        :param pulumi.Input[_builtins.int] latency: Latency in ms - Range: `1`-`1000`
-        :param pulumi.Input[_builtins.int] loss: Loss in percent - Range: `1`-`100`
+        :param pulumi.Input[_builtins.str] fallback_best_tunnel_criteria: - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
+        :param pulumi.Input[_builtins.int] fallback_best_tunnel_jitter: Jitter variance in ms
+                 - Range: `1`-`1000`
+        :param pulumi.Input[_builtins.int] fallback_best_tunnel_latency: Latency variance in ms
+                 - Range: `1`-`1000`
+        :param pulumi.Input[_builtins.int] fallback_best_tunnel_loss: Loss variance in percent
+                 - Range: `1`-`100`
+        :param pulumi.Input[_builtins.int] jitter: Jitter in ms
+                 - Range: `1`-`1000`
+        :param pulumi.Input[_builtins.int] latency: Latency in ms
+                 - Range: `1`-`1000`
+        :param pulumi.Input[_builtins.int] loss: Loss in percent
+                 - Range: `1`-`100`
         :param pulumi.Input[_builtins.str] name: The name of the policy object
         """
         if app_probe_class_id is not None:
@@ -93,9 +97,7 @@ class SlaClassPolicyObjectArgs:
     @pulumi.getter(name="fallbackBestTunnelCriteria")
     def fallback_best_tunnel_criteria(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`,
-        `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`,
-        `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
+        - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
         """
         return pulumi.get(self, "fallback_best_tunnel_criteria")
 
@@ -107,7 +109,8 @@ class SlaClassPolicyObjectArgs:
     @pulumi.getter(name="fallbackBestTunnelJitter")
     def fallback_best_tunnel_jitter(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Jitter variance in ms - Range: `1`-`1000`
+        Jitter variance in ms
+          - Range: `1`-`1000`
         """
         return pulumi.get(self, "fallback_best_tunnel_jitter")
 
@@ -119,7 +122,8 @@ class SlaClassPolicyObjectArgs:
     @pulumi.getter(name="fallbackBestTunnelLatency")
     def fallback_best_tunnel_latency(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Latency variance in ms - Range: `1`-`1000`
+        Latency variance in ms
+          - Range: `1`-`1000`
         """
         return pulumi.get(self, "fallback_best_tunnel_latency")
 
@@ -131,7 +135,8 @@ class SlaClassPolicyObjectArgs:
     @pulumi.getter(name="fallbackBestTunnelLoss")
     def fallback_best_tunnel_loss(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Loss variance in percent - Range: `1`-`100`
+        Loss variance in percent
+          - Range: `1`-`100`
         """
         return pulumi.get(self, "fallback_best_tunnel_loss")
 
@@ -143,7 +148,8 @@ class SlaClassPolicyObjectArgs:
     @pulumi.getter
     def jitter(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Jitter in ms - Range: `1`-`1000`
+        Jitter in ms
+          - Range: `1`-`1000`
         """
         return pulumi.get(self, "jitter")
 
@@ -155,7 +161,8 @@ class SlaClassPolicyObjectArgs:
     @pulumi.getter
     def latency(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Latency in ms - Range: `1`-`1000`
+        Latency in ms
+          - Range: `1`-`1000`
         """
         return pulumi.get(self, "latency")
 
@@ -167,7 +174,8 @@ class SlaClassPolicyObjectArgs:
     @pulumi.getter
     def loss(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Loss in percent - Range: `1`-`100`
+        Loss in percent
+          - Range: `1`-`100`
         """
         return pulumi.get(self, "loss")
 
@@ -206,15 +214,19 @@ class _SlaClassPolicyObjectState:
         Input properties used for looking up and filtering SlaClassPolicyObject resources.
         :param pulumi.Input[_builtins.str] app_probe_class_id: App Probe Class Policy Object ID
         :param pulumi.Input[_builtins.int] app_probe_class_version: App Probe Class Policy Object version
-        :param pulumi.Input[_builtins.str] fallback_best_tunnel_criteria: - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`,
-               `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`,
-               `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
-        :param pulumi.Input[_builtins.int] fallback_best_tunnel_jitter: Jitter variance in ms - Range: `1`-`1000`
-        :param pulumi.Input[_builtins.int] fallback_best_tunnel_latency: Latency variance in ms - Range: `1`-`1000`
-        :param pulumi.Input[_builtins.int] fallback_best_tunnel_loss: Loss variance in percent - Range: `1`-`100`
-        :param pulumi.Input[_builtins.int] jitter: Jitter in ms - Range: `1`-`1000`
-        :param pulumi.Input[_builtins.int] latency: Latency in ms - Range: `1`-`1000`
-        :param pulumi.Input[_builtins.int] loss: Loss in percent - Range: `1`-`100`
+        :param pulumi.Input[_builtins.str] fallback_best_tunnel_criteria: - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
+        :param pulumi.Input[_builtins.int] fallback_best_tunnel_jitter: Jitter variance in ms
+                 - Range: `1`-`1000`
+        :param pulumi.Input[_builtins.int] fallback_best_tunnel_latency: Latency variance in ms
+                 - Range: `1`-`1000`
+        :param pulumi.Input[_builtins.int] fallback_best_tunnel_loss: Loss variance in percent
+                 - Range: `1`-`100`
+        :param pulumi.Input[_builtins.int] jitter: Jitter in ms
+                 - Range: `1`-`1000`
+        :param pulumi.Input[_builtins.int] latency: Latency in ms
+                 - Range: `1`-`1000`
+        :param pulumi.Input[_builtins.int] loss: Loss in percent
+                 - Range: `1`-`100`
         :param pulumi.Input[_builtins.str] name: The name of the policy object
         :param pulumi.Input[_builtins.int] version: The version of the object
         """
@@ -269,9 +281,7 @@ class _SlaClassPolicyObjectState:
     @pulumi.getter(name="fallbackBestTunnelCriteria")
     def fallback_best_tunnel_criteria(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`,
-        `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`,
-        `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
+        - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
         """
         return pulumi.get(self, "fallback_best_tunnel_criteria")
 
@@ -283,7 +293,8 @@ class _SlaClassPolicyObjectState:
     @pulumi.getter(name="fallbackBestTunnelJitter")
     def fallback_best_tunnel_jitter(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Jitter variance in ms - Range: `1`-`1000`
+        Jitter variance in ms
+          - Range: `1`-`1000`
         """
         return pulumi.get(self, "fallback_best_tunnel_jitter")
 
@@ -295,7 +306,8 @@ class _SlaClassPolicyObjectState:
     @pulumi.getter(name="fallbackBestTunnelLatency")
     def fallback_best_tunnel_latency(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Latency variance in ms - Range: `1`-`1000`
+        Latency variance in ms
+          - Range: `1`-`1000`
         """
         return pulumi.get(self, "fallback_best_tunnel_latency")
 
@@ -307,7 +319,8 @@ class _SlaClassPolicyObjectState:
     @pulumi.getter(name="fallbackBestTunnelLoss")
     def fallback_best_tunnel_loss(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Loss variance in percent - Range: `1`-`100`
+        Loss variance in percent
+          - Range: `1`-`100`
         """
         return pulumi.get(self, "fallback_best_tunnel_loss")
 
@@ -319,7 +332,8 @@ class _SlaClassPolicyObjectState:
     @pulumi.getter
     def jitter(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Jitter in ms - Range: `1`-`1000`
+        Jitter in ms
+          - Range: `1`-`1000`
         """
         return pulumi.get(self, "jitter")
 
@@ -331,7 +345,8 @@ class _SlaClassPolicyObjectState:
     @pulumi.getter
     def latency(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Latency in ms - Range: `1`-`1000`
+        Latency in ms
+          - Range: `1`-`1000`
         """
         return pulumi.get(self, "latency")
 
@@ -343,7 +358,8 @@ class _SlaClassPolicyObjectState:
     @pulumi.getter
     def loss(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Loss in percent - Range: `1`-`100`
+        Loss in percent
+          - Range: `1`-`100`
         """
         return pulumi.get(self, "loss")
 
@@ -425,15 +441,19 @@ class SlaClassPolicyObject(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] app_probe_class_id: App Probe Class Policy Object ID
         :param pulumi.Input[_builtins.int] app_probe_class_version: App Probe Class Policy Object version
-        :param pulumi.Input[_builtins.str] fallback_best_tunnel_criteria: - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`,
-               `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`,
-               `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
-        :param pulumi.Input[_builtins.int] fallback_best_tunnel_jitter: Jitter variance in ms - Range: `1`-`1000`
-        :param pulumi.Input[_builtins.int] fallback_best_tunnel_latency: Latency variance in ms - Range: `1`-`1000`
-        :param pulumi.Input[_builtins.int] fallback_best_tunnel_loss: Loss variance in percent - Range: `1`-`100`
-        :param pulumi.Input[_builtins.int] jitter: Jitter in ms - Range: `1`-`1000`
-        :param pulumi.Input[_builtins.int] latency: Latency in ms - Range: `1`-`1000`
-        :param pulumi.Input[_builtins.int] loss: Loss in percent - Range: `1`-`100`
+        :param pulumi.Input[_builtins.str] fallback_best_tunnel_criteria: - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
+        :param pulumi.Input[_builtins.int] fallback_best_tunnel_jitter: Jitter variance in ms
+                 - Range: `1`-`1000`
+        :param pulumi.Input[_builtins.int] fallback_best_tunnel_latency: Latency variance in ms
+                 - Range: `1`-`1000`
+        :param pulumi.Input[_builtins.int] fallback_best_tunnel_loss: Loss variance in percent
+                 - Range: `1`-`100`
+        :param pulumi.Input[_builtins.int] jitter: Jitter in ms
+                 - Range: `1`-`1000`
+        :param pulumi.Input[_builtins.int] latency: Latency in ms
+                 - Range: `1`-`1000`
+        :param pulumi.Input[_builtins.int] loss: Loss in percent
+                 - Range: `1`-`100`
         :param pulumi.Input[_builtins.str] name: The name of the policy object
         """
         ...
@@ -545,15 +565,19 @@ class SlaClassPolicyObject(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] app_probe_class_id: App Probe Class Policy Object ID
         :param pulumi.Input[_builtins.int] app_probe_class_version: App Probe Class Policy Object version
-        :param pulumi.Input[_builtins.str] fallback_best_tunnel_criteria: - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`,
-               `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`,
-               `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
-        :param pulumi.Input[_builtins.int] fallback_best_tunnel_jitter: Jitter variance in ms - Range: `1`-`1000`
-        :param pulumi.Input[_builtins.int] fallback_best_tunnel_latency: Latency variance in ms - Range: `1`-`1000`
-        :param pulumi.Input[_builtins.int] fallback_best_tunnel_loss: Loss variance in percent - Range: `1`-`100`
-        :param pulumi.Input[_builtins.int] jitter: Jitter in ms - Range: `1`-`1000`
-        :param pulumi.Input[_builtins.int] latency: Latency in ms - Range: `1`-`1000`
-        :param pulumi.Input[_builtins.int] loss: Loss in percent - Range: `1`-`100`
+        :param pulumi.Input[_builtins.str] fallback_best_tunnel_criteria: - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
+        :param pulumi.Input[_builtins.int] fallback_best_tunnel_jitter: Jitter variance in ms
+                 - Range: `1`-`1000`
+        :param pulumi.Input[_builtins.int] fallback_best_tunnel_latency: Latency variance in ms
+                 - Range: `1`-`1000`
+        :param pulumi.Input[_builtins.int] fallback_best_tunnel_loss: Loss variance in percent
+                 - Range: `1`-`100`
+        :param pulumi.Input[_builtins.int] jitter: Jitter in ms
+                 - Range: `1`-`1000`
+        :param pulumi.Input[_builtins.int] latency: Latency in ms
+                 - Range: `1`-`1000`
+        :param pulumi.Input[_builtins.int] loss: Loss in percent
+                 - Range: `1`-`100`
         :param pulumi.Input[_builtins.str] name: The name of the policy object
         :param pulumi.Input[_builtins.int] version: The version of the object
         """
@@ -594,9 +618,7 @@ class SlaClassPolicyObject(pulumi.CustomResource):
     @pulumi.getter(name="fallbackBestTunnelCriteria")
     def fallback_best_tunnel_criteria(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`,
-        `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`,
-        `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
+        - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
         """
         return pulumi.get(self, "fallback_best_tunnel_criteria")
 
@@ -604,7 +626,8 @@ class SlaClassPolicyObject(pulumi.CustomResource):
     @pulumi.getter(name="fallbackBestTunnelJitter")
     def fallback_best_tunnel_jitter(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Jitter variance in ms - Range: `1`-`1000`
+        Jitter variance in ms
+          - Range: `1`-`1000`
         """
         return pulumi.get(self, "fallback_best_tunnel_jitter")
 
@@ -612,7 +635,8 @@ class SlaClassPolicyObject(pulumi.CustomResource):
     @pulumi.getter(name="fallbackBestTunnelLatency")
     def fallback_best_tunnel_latency(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Latency variance in ms - Range: `1`-`1000`
+        Latency variance in ms
+          - Range: `1`-`1000`
         """
         return pulumi.get(self, "fallback_best_tunnel_latency")
 
@@ -620,7 +644,8 @@ class SlaClassPolicyObject(pulumi.CustomResource):
     @pulumi.getter(name="fallbackBestTunnelLoss")
     def fallback_best_tunnel_loss(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Loss variance in percent - Range: `1`-`100`
+        Loss variance in percent
+          - Range: `1`-`100`
         """
         return pulumi.get(self, "fallback_best_tunnel_loss")
 
@@ -628,7 +653,8 @@ class SlaClassPolicyObject(pulumi.CustomResource):
     @pulumi.getter
     def jitter(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Jitter in ms - Range: `1`-`1000`
+        Jitter in ms
+          - Range: `1`-`1000`
         """
         return pulumi.get(self, "jitter")
 
@@ -636,7 +662,8 @@ class SlaClassPolicyObject(pulumi.CustomResource):
     @pulumi.getter
     def latency(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Latency in ms - Range: `1`-`1000`
+        Latency in ms
+          - Range: `1`-`1000`
         """
         return pulumi.get(self, "latency")
 
@@ -644,7 +671,8 @@ class SlaClassPolicyObject(pulumi.CustomResource):
     @pulumi.getter
     def loss(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Loss in percent - Range: `1`-`100`
+        Loss in percent
+          - Range: `1`-`100`
         """
         return pulumi.get(self, "loss")
 

@@ -49,78 +49,84 @@ export class OtherUcseFeature extends pulumi.CustomResource {
     }
 
     /**
-     * Dedicated - Default value: `true`
+     * Dedicated
+     *   - Default value: `true`
      */
-    public readonly accessPortDedicated!: pulumi.Output<boolean | undefined>;
+    declare public readonly accessPortDedicated: pulumi.Output<boolean | undefined>;
     /**
-     * , Attribute conditional on `accessPortDedicated` being equal to `false` - Choices: `ge2`, `te2`
+     * , Attribute conditional on `accessPortDedicated` being equal to `false`
+     *   - Choices: `ge2`, `te2`
      */
-    public readonly accessPortSharedFailoverType!: pulumi.Output<string | undefined>;
+    declare public readonly accessPortSharedFailoverType: pulumi.Output<string | undefined>;
     /**
-     * , Attribute conditional on `accessPortDedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
-     * `console`, `failover`
+     * , Attribute conditional on `accessPortDedicated` being equal to `false`
+     *   - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
      */
-    public readonly accessPortSharedType!: pulumi.Output<string | undefined>;
+    declare public readonly accessPortSharedType: pulumi.Output<string | undefined>;
     /**
-     * Assign priority - Range: `0`-`7`
+     * Assign priority
+     *   - Range: `0`-`7`
      */
-    public readonly assignPriority!: pulumi.Output<number | undefined>;
+    declare public readonly assignPriority: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly assignPriorityVariable!: pulumi.Output<string | undefined>;
+    declare public readonly assignPriorityVariable: pulumi.Output<string | undefined>;
     /**
-     * Bay - Range: `0`-`2`
+     * Bay
+     *   - Range: `0`-`2`
      */
-    public readonly bay!: pulumi.Output<number>;
+    declare public readonly bay: pulumi.Output<number>;
     /**
      * Assign default gateway
      */
-    public readonly defaultGateway!: pulumi.Output<string | undefined>;
+    declare public readonly defaultGateway: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly defaultGatewayVariable!: pulumi.Output<string | undefined>;
+    declare public readonly defaultGatewayVariable: pulumi.Output<string | undefined>;
     /**
      * The description of the Feature
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
      * Interface name: GigabitEthernet0/<>/<> when present
      */
-    public readonly interfaces!: pulumi.Output<outputs.OtherUcseFeatureInterface[] | undefined>;
+    declare public readonly interfaces: pulumi.Output<outputs.OtherUcseFeatureInterface[] | undefined>;
     /**
      * Assign IPv4 address
      */
-    public readonly ipv4Address!: pulumi.Output<string | undefined>;
+    declare public readonly ipv4Address: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly ipv4AddressVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ipv4AddressVariable: pulumi.Output<string | undefined>;
     /**
      * The name of the Feature
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
-     * Slot - Range: `0`-`3`
+     * Slot
+     *   - Range: `0`-`3`
      */
-    public readonly slot!: pulumi.Output<number>;
+    declare public readonly slot: pulumi.Output<number>;
     /**
      * The version of the Feature
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
     /**
-     * Assign Vlan Id - Range: `2`-`4095`
+     * Assign Vlan Id
+     *   - Range: `2`-`4095`
      */
-    public readonly vlanId!: pulumi.Output<number | undefined>;
+    declare public readonly vlanId: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly vlanIdVariable!: pulumi.Output<string | undefined>;
+    declare public readonly vlanIdVariable: pulumi.Output<string | undefined>;
 
     /**
      * Create a OtherUcseFeature resource with the given unique name, arguments, and options.
@@ -135,52 +141,52 @@ export class OtherUcseFeature extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as OtherUcseFeatureState | undefined;
-            resourceInputs["accessPortDedicated"] = state ? state.accessPortDedicated : undefined;
-            resourceInputs["accessPortSharedFailoverType"] = state ? state.accessPortSharedFailoverType : undefined;
-            resourceInputs["accessPortSharedType"] = state ? state.accessPortSharedType : undefined;
-            resourceInputs["assignPriority"] = state ? state.assignPriority : undefined;
-            resourceInputs["assignPriorityVariable"] = state ? state.assignPriorityVariable : undefined;
-            resourceInputs["bay"] = state ? state.bay : undefined;
-            resourceInputs["defaultGateway"] = state ? state.defaultGateway : undefined;
-            resourceInputs["defaultGatewayVariable"] = state ? state.defaultGatewayVariable : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["interfaces"] = state ? state.interfaces : undefined;
-            resourceInputs["ipv4Address"] = state ? state.ipv4Address : undefined;
-            resourceInputs["ipv4AddressVariable"] = state ? state.ipv4AddressVariable : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["slot"] = state ? state.slot : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
-            resourceInputs["vlanId"] = state ? state.vlanId : undefined;
-            resourceInputs["vlanIdVariable"] = state ? state.vlanIdVariable : undefined;
+            resourceInputs["accessPortDedicated"] = state?.accessPortDedicated;
+            resourceInputs["accessPortSharedFailoverType"] = state?.accessPortSharedFailoverType;
+            resourceInputs["accessPortSharedType"] = state?.accessPortSharedType;
+            resourceInputs["assignPriority"] = state?.assignPriority;
+            resourceInputs["assignPriorityVariable"] = state?.assignPriorityVariable;
+            resourceInputs["bay"] = state?.bay;
+            resourceInputs["defaultGateway"] = state?.defaultGateway;
+            resourceInputs["defaultGatewayVariable"] = state?.defaultGatewayVariable;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["interfaces"] = state?.interfaces;
+            resourceInputs["ipv4Address"] = state?.ipv4Address;
+            resourceInputs["ipv4AddressVariable"] = state?.ipv4AddressVariable;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["slot"] = state?.slot;
+            resourceInputs["version"] = state?.version;
+            resourceInputs["vlanId"] = state?.vlanId;
+            resourceInputs["vlanIdVariable"] = state?.vlanIdVariable;
         } else {
             const args = argsOrState as OtherUcseFeatureArgs | undefined;
-            if ((!args || args.bay === undefined) && !opts.urn) {
+            if (args?.bay === undefined && !opts.urn) {
                 throw new Error("Missing required property 'bay'");
             }
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            if ((!args || args.slot === undefined) && !opts.urn) {
+            if (args?.slot === undefined && !opts.urn) {
                 throw new Error("Missing required property 'slot'");
             }
-            resourceInputs["accessPortDedicated"] = args ? args.accessPortDedicated : undefined;
-            resourceInputs["accessPortSharedFailoverType"] = args ? args.accessPortSharedFailoverType : undefined;
-            resourceInputs["accessPortSharedType"] = args ? args.accessPortSharedType : undefined;
-            resourceInputs["assignPriority"] = args ? args.assignPriority : undefined;
-            resourceInputs["assignPriorityVariable"] = args ? args.assignPriorityVariable : undefined;
-            resourceInputs["bay"] = args ? args.bay : undefined;
-            resourceInputs["defaultGateway"] = args ? args.defaultGateway : undefined;
-            resourceInputs["defaultGatewayVariable"] = args ? args.defaultGatewayVariable : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["interfaces"] = args ? args.interfaces : undefined;
-            resourceInputs["ipv4Address"] = args ? args.ipv4Address : undefined;
-            resourceInputs["ipv4AddressVariable"] = args ? args.ipv4AddressVariable : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["slot"] = args ? args.slot : undefined;
-            resourceInputs["vlanId"] = args ? args.vlanId : undefined;
-            resourceInputs["vlanIdVariable"] = args ? args.vlanIdVariable : undefined;
+            resourceInputs["accessPortDedicated"] = args?.accessPortDedicated;
+            resourceInputs["accessPortSharedFailoverType"] = args?.accessPortSharedFailoverType;
+            resourceInputs["accessPortSharedType"] = args?.accessPortSharedType;
+            resourceInputs["assignPriority"] = args?.assignPriority;
+            resourceInputs["assignPriorityVariable"] = args?.assignPriorityVariable;
+            resourceInputs["bay"] = args?.bay;
+            resourceInputs["defaultGateway"] = args?.defaultGateway;
+            resourceInputs["defaultGatewayVariable"] = args?.defaultGatewayVariable;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["interfaces"] = args?.interfaces;
+            resourceInputs["ipv4Address"] = args?.ipv4Address;
+            resourceInputs["ipv4AddressVariable"] = args?.ipv4AddressVariable;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["slot"] = args?.slot;
+            resourceInputs["vlanId"] = args?.vlanId;
+            resourceInputs["vlanIdVariable"] = args?.vlanIdVariable;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -193,20 +199,23 @@ export class OtherUcseFeature extends pulumi.CustomResource {
  */
 export interface OtherUcseFeatureState {
     /**
-     * Dedicated - Default value: `true`
+     * Dedicated
+     *   - Default value: `true`
      */
     accessPortDedicated?: pulumi.Input<boolean>;
     /**
-     * , Attribute conditional on `accessPortDedicated` being equal to `false` - Choices: `ge2`, `te2`
+     * , Attribute conditional on `accessPortDedicated` being equal to `false`
+     *   - Choices: `ge2`, `te2`
      */
     accessPortSharedFailoverType?: pulumi.Input<string>;
     /**
-     * , Attribute conditional on `accessPortDedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
-     * `console`, `failover`
+     * , Attribute conditional on `accessPortDedicated` being equal to `false`
+     *   - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
      */
     accessPortSharedType?: pulumi.Input<string>;
     /**
-     * Assign priority - Range: `0`-`7`
+     * Assign priority
+     *   - Range: `0`-`7`
      */
     assignPriority?: pulumi.Input<number>;
     /**
@@ -214,7 +223,8 @@ export interface OtherUcseFeatureState {
      */
     assignPriorityVariable?: pulumi.Input<string>;
     /**
-     * Bay - Range: `0`-`2`
+     * Bay
+     *   - Range: `0`-`2`
      */
     bay?: pulumi.Input<number>;
     /**
@@ -250,7 +260,8 @@ export interface OtherUcseFeatureState {
      */
     name?: pulumi.Input<string>;
     /**
-     * Slot - Range: `0`-`3`
+     * Slot
+     *   - Range: `0`-`3`
      */
     slot?: pulumi.Input<number>;
     /**
@@ -258,7 +269,8 @@ export interface OtherUcseFeatureState {
      */
     version?: pulumi.Input<number>;
     /**
-     * Assign Vlan Id - Range: `2`-`4095`
+     * Assign Vlan Id
+     *   - Range: `2`-`4095`
      */
     vlanId?: pulumi.Input<number>;
     /**
@@ -272,20 +284,23 @@ export interface OtherUcseFeatureState {
  */
 export interface OtherUcseFeatureArgs {
     /**
-     * Dedicated - Default value: `true`
+     * Dedicated
+     *   - Default value: `true`
      */
     accessPortDedicated?: pulumi.Input<boolean>;
     /**
-     * , Attribute conditional on `accessPortDedicated` being equal to `false` - Choices: `ge2`, `te2`
+     * , Attribute conditional on `accessPortDedicated` being equal to `false`
+     *   - Choices: `ge2`, `te2`
      */
     accessPortSharedFailoverType?: pulumi.Input<string>;
     /**
-     * , Attribute conditional on `accessPortDedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
-     * `console`, `failover`
+     * , Attribute conditional on `accessPortDedicated` being equal to `false`
+     *   - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
      */
     accessPortSharedType?: pulumi.Input<string>;
     /**
-     * Assign priority - Range: `0`-`7`
+     * Assign priority
+     *   - Range: `0`-`7`
      */
     assignPriority?: pulumi.Input<number>;
     /**
@@ -293,7 +308,8 @@ export interface OtherUcseFeatureArgs {
      */
     assignPriorityVariable?: pulumi.Input<string>;
     /**
-     * Bay - Range: `0`-`2`
+     * Bay
+     *   - Range: `0`-`2`
      */
     bay: pulumi.Input<number>;
     /**
@@ -329,11 +345,13 @@ export interface OtherUcseFeatureArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * Slot - Range: `0`-`3`
+     * Slot
+     *   - Range: `0`-`3`
      */
     slot: pulumi.Input<number>;
     /**
-     * Assign Vlan Id - Range: `2`-`4095`
+     * Assign Vlan Id
+     *   - Range: `2`-`4095`
      */
     vlanId?: pulumi.Input<number>;
     /**

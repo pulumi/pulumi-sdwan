@@ -115,19 +115,22 @@ namespace Pulumi.Sdwan
         public Output<bool?> ImplicitAclLogging { get; private set; } = null!;
 
         /// <summary>
-        /// IPv4 visibility cache entries - Range: `16`-`2000000`
+        /// IPv4 visibility cache entries
+        ///   - Range: `16`-`2000000`
         /// </summary>
         [Output("ipv4VisibilityCacheEntries")]
         public Output<int?> Ipv4VisibilityCacheEntries { get; private set; } = null!;
 
         /// <summary>
-        /// IPv6 visibility cache entries - Range: `16`-`2000000`
+        /// IPv6 visibility cache entries
+        ///   - Range: `16`-`2000000`
         /// </summary>
         [Output("ipv6VisibilityCacheEntries")]
         public Output<int?> Ipv6VisibilityCacheEntries { get; private set; } = null!;
 
         /// <summary>
-        /// Log frequency - Range: `1`-`2147483647`
+        /// Log frequency
+        ///   - Range: `1`-`2147483647`
         /// </summary>
         [Output("logFrequency")]
         public Output<int?> LogFrequency { get; private set; } = null!;
@@ -251,19 +254,22 @@ namespace Pulumi.Sdwan
         public Input<bool>? ImplicitAclLogging { get; set; }
 
         /// <summary>
-        /// IPv4 visibility cache entries - Range: `16`-`2000000`
+        /// IPv4 visibility cache entries
+        ///   - Range: `16`-`2000000`
         /// </summary>
         [Input("ipv4VisibilityCacheEntries")]
         public Input<int>? Ipv4VisibilityCacheEntries { get; set; }
 
         /// <summary>
-        /// IPv6 visibility cache entries - Range: `16`-`2000000`
+        /// IPv6 visibility cache entries
+        ///   - Range: `16`-`2000000`
         /// </summary>
         [Input("ipv6VisibilityCacheEntries")]
         public Input<int>? Ipv6VisibilityCacheEntries { get; set; }
 
         /// <summary>
-        /// Log frequency - Range: `1`-`2147483647`
+        /// Log frequency
+        ///   - Range: `1`-`2147483647`
         /// </summary>
         [Input("logFrequency")]
         public Input<int>? LogFrequency { get; set; }
@@ -343,19 +349,22 @@ namespace Pulumi.Sdwan
         public Input<bool>? ImplicitAclLogging { get; set; }
 
         /// <summary>
-        /// IPv4 visibility cache entries - Range: `16`-`2000000`
+        /// IPv4 visibility cache entries
+        ///   - Range: `16`-`2000000`
         /// </summary>
         [Input("ipv4VisibilityCacheEntries")]
         public Input<int>? Ipv4VisibilityCacheEntries { get; set; }
 
         /// <summary>
-        /// IPv6 visibility cache entries - Range: `16`-`2000000`
+        /// IPv6 visibility cache entries
+        ///   - Range: `16`-`2000000`
         /// </summary>
         [Input("ipv6VisibilityCacheEntries")]
         public Input<int>? Ipv6VisibilityCacheEntries { get; set; }
 
         /// <summary>
-        /// Log frequency - Range: `1`-`2147483647`
+        /// Log frequency
+        ///   - Range: `1`-`2147483647`
         /// </summary>
         [Input("logFrequency")]
         public Input<int>? LogFrequency { get; set; }

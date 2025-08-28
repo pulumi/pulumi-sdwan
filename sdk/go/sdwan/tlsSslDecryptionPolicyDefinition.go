@@ -26,37 +26,49 @@ type TlsSslDecryptionPolicyDefinition struct {
 
 	// Certificate Lifetime(in Days)
 	CertificateLifetimeInDays pulumi.IntPtrOutput `pulumi:"certificateLifetimeInDays"`
-	// Certificate revocation status - Choices: `ocsp`, `none`
+	// Certificate revocation status
+	//   - Choices: `ocsp`, `none`
 	CertificateRevocationStatus pulumi.StringPtrOutput `pulumi:"certificateRevocationStatus"`
-	// Default action (applies when `mode` set to `security`) - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
+	// Default action (applies when `mode` set to `security`)
+	//   - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
 	DefaultAction pulumi.StringPtrOutput `pulumi:"defaultAction"`
 	// The description of the policy definition.
 	Description pulumi.StringOutput `pulumi:"description"`
-	// EC Key Type - Choices: `P256`, `P384`, `P521`
+	// EC Key Type
+	//   - Choices: `P256`, `P384`, `P521`
 	EcKeyType pulumi.StringPtrOutput `pulumi:"ecKeyType"`
-	// Expired certificate action - Choices: `drop`, `decrypt`
+	// Expired certificate action
+	//   - Choices: `drop`, `decrypt`
 	ExpiredCertificate pulumi.StringPtrOutput `pulumi:"expiredCertificate"`
-	// Failure mode - Choices: `open`, `close`
+	// Failure mode
+	//   - Choices: `open`, `close`
 	FailureMode pulumi.StringPtrOutput `pulumi:"failureMode"`
-	// Minimal TLS Version - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
+	// Minimal TLS Version
+	//   - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
 	MinimalTlsVersion pulumi.StringPtrOutput `pulumi:"minimalTlsVersion"`
-	// The policy mode - Choices: `security`, `unified`
+	// The policy mode
+	//   - Choices: `security`, `unified`
 	Mode pulumi.StringPtrOutput `pulumi:"mode"`
 	// The name of the policy definition.
 	Name pulumi.StringOutput `pulumi:"name"`
 	// List of network rules (applies when `mode` set to `security`)
 	NetworkRules TlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutput `pulumi:"networkRules"`
-	// RSA key pair modules - Choices: `1024`, `2048`, `4096`
+	// RSA key pair modules
+	//   - Choices: `1024`, `2048`, `4096`
 	RsaKeyPairModulus pulumi.StringPtrOutput `pulumi:"rsaKeyPairModulus"`
 	// SSL decryption enabled
 	SslDecryptionEnabled pulumi.StringPtrOutput `pulumi:"sslDecryptionEnabled"`
-	// Unknown revocation status action - Choices: `drop`, `decrypt`
+	// Unknown revocation status action
+	//   - Choices: `drop`, `decrypt`
 	UnknownRevocationStatus pulumi.StringPtrOutput `pulumi:"unknownRevocationStatus"`
-	// Unsupported cipher suites action - Choices: `drop`, `no-decrypt`
+	// Unsupported cipher suites action
+	//   - Choices: `drop`, `no-decrypt`
 	UnsupportedCipherSuites pulumi.StringPtrOutput `pulumi:"unsupportedCipherSuites"`
-	// Unsupported protocol versions action - Choices: `drop`, `no-decrypt`
+	// Unsupported protocol versions action
+	//   - Choices: `drop`, `no-decrypt`
 	UnsupportedProtocolVersions pulumi.StringPtrOutput `pulumi:"unsupportedProtocolVersions"`
-	// Untrusted certificate action - Choices: `drop`, `decrypt`
+	// Untrusted certificate action
+	//   - Choices: `drop`, `decrypt`
 	UntrustedCertificate pulumi.StringPtrOutput `pulumi:"untrustedCertificate"`
 	// List of url rules (applies when `mode` set to `security`)
 	UrlRules TlsSslDecryptionPolicyDefinitionUrlRuleArrayOutput `pulumi:"urlRules"`
@@ -101,37 +113,49 @@ func GetTlsSslDecryptionPolicyDefinition(ctx *pulumi.Context,
 type tlsSslDecryptionPolicyDefinitionState struct {
 	// Certificate Lifetime(in Days)
 	CertificateLifetimeInDays *int `pulumi:"certificateLifetimeInDays"`
-	// Certificate revocation status - Choices: `ocsp`, `none`
+	// Certificate revocation status
+	//   - Choices: `ocsp`, `none`
 	CertificateRevocationStatus *string `pulumi:"certificateRevocationStatus"`
-	// Default action (applies when `mode` set to `security`) - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
+	// Default action (applies when `mode` set to `security`)
+	//   - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
 	DefaultAction *string `pulumi:"defaultAction"`
 	// The description of the policy definition.
 	Description *string `pulumi:"description"`
-	// EC Key Type - Choices: `P256`, `P384`, `P521`
+	// EC Key Type
+	//   - Choices: `P256`, `P384`, `P521`
 	EcKeyType *string `pulumi:"ecKeyType"`
-	// Expired certificate action - Choices: `drop`, `decrypt`
+	// Expired certificate action
+	//   - Choices: `drop`, `decrypt`
 	ExpiredCertificate *string `pulumi:"expiredCertificate"`
-	// Failure mode - Choices: `open`, `close`
+	// Failure mode
+	//   - Choices: `open`, `close`
 	FailureMode *string `pulumi:"failureMode"`
-	// Minimal TLS Version - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
+	// Minimal TLS Version
+	//   - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
 	MinimalTlsVersion *string `pulumi:"minimalTlsVersion"`
-	// The policy mode - Choices: `security`, `unified`
+	// The policy mode
+	//   - Choices: `security`, `unified`
 	Mode *string `pulumi:"mode"`
 	// The name of the policy definition.
 	Name *string `pulumi:"name"`
 	// List of network rules (applies when `mode` set to `security`)
 	NetworkRules []TlsSslDecryptionPolicyDefinitionNetworkRule `pulumi:"networkRules"`
-	// RSA key pair modules - Choices: `1024`, `2048`, `4096`
+	// RSA key pair modules
+	//   - Choices: `1024`, `2048`, `4096`
 	RsaKeyPairModulus *string `pulumi:"rsaKeyPairModulus"`
 	// SSL decryption enabled
 	SslDecryptionEnabled *string `pulumi:"sslDecryptionEnabled"`
-	// Unknown revocation status action - Choices: `drop`, `decrypt`
+	// Unknown revocation status action
+	//   - Choices: `drop`, `decrypt`
 	UnknownRevocationStatus *string `pulumi:"unknownRevocationStatus"`
-	// Unsupported cipher suites action - Choices: `drop`, `no-decrypt`
+	// Unsupported cipher suites action
+	//   - Choices: `drop`, `no-decrypt`
 	UnsupportedCipherSuites *string `pulumi:"unsupportedCipherSuites"`
-	// Unsupported protocol versions action - Choices: `drop`, `no-decrypt`
+	// Unsupported protocol versions action
+	//   - Choices: `drop`, `no-decrypt`
 	UnsupportedProtocolVersions *string `pulumi:"unsupportedProtocolVersions"`
-	// Untrusted certificate action - Choices: `drop`, `decrypt`
+	// Untrusted certificate action
+	//   - Choices: `drop`, `decrypt`
 	UntrustedCertificate *string `pulumi:"untrustedCertificate"`
 	// List of url rules (applies when `mode` set to `security`)
 	UrlRules []TlsSslDecryptionPolicyDefinitionUrlRule `pulumi:"urlRules"`
@@ -144,37 +168,49 @@ type tlsSslDecryptionPolicyDefinitionState struct {
 type TlsSslDecryptionPolicyDefinitionState struct {
 	// Certificate Lifetime(in Days)
 	CertificateLifetimeInDays pulumi.IntPtrInput
-	// Certificate revocation status - Choices: `ocsp`, `none`
+	// Certificate revocation status
+	//   - Choices: `ocsp`, `none`
 	CertificateRevocationStatus pulumi.StringPtrInput
-	// Default action (applies when `mode` set to `security`) - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
+	// Default action (applies when `mode` set to `security`)
+	//   - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
 	DefaultAction pulumi.StringPtrInput
 	// The description of the policy definition.
 	Description pulumi.StringPtrInput
-	// EC Key Type - Choices: `P256`, `P384`, `P521`
+	// EC Key Type
+	//   - Choices: `P256`, `P384`, `P521`
 	EcKeyType pulumi.StringPtrInput
-	// Expired certificate action - Choices: `drop`, `decrypt`
+	// Expired certificate action
+	//   - Choices: `drop`, `decrypt`
 	ExpiredCertificate pulumi.StringPtrInput
-	// Failure mode - Choices: `open`, `close`
+	// Failure mode
+	//   - Choices: `open`, `close`
 	FailureMode pulumi.StringPtrInput
-	// Minimal TLS Version - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
+	// Minimal TLS Version
+	//   - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
 	MinimalTlsVersion pulumi.StringPtrInput
-	// The policy mode - Choices: `security`, `unified`
+	// The policy mode
+	//   - Choices: `security`, `unified`
 	Mode pulumi.StringPtrInput
 	// The name of the policy definition.
 	Name pulumi.StringPtrInput
 	// List of network rules (applies when `mode` set to `security`)
 	NetworkRules TlsSslDecryptionPolicyDefinitionNetworkRuleArrayInput
-	// RSA key pair modules - Choices: `1024`, `2048`, `4096`
+	// RSA key pair modules
+	//   - Choices: `1024`, `2048`, `4096`
 	RsaKeyPairModulus pulumi.StringPtrInput
 	// SSL decryption enabled
 	SslDecryptionEnabled pulumi.StringPtrInput
-	// Unknown revocation status action - Choices: `drop`, `decrypt`
+	// Unknown revocation status action
+	//   - Choices: `drop`, `decrypt`
 	UnknownRevocationStatus pulumi.StringPtrInput
-	// Unsupported cipher suites action - Choices: `drop`, `no-decrypt`
+	// Unsupported cipher suites action
+	//   - Choices: `drop`, `no-decrypt`
 	UnsupportedCipherSuites pulumi.StringPtrInput
-	// Unsupported protocol versions action - Choices: `drop`, `no-decrypt`
+	// Unsupported protocol versions action
+	//   - Choices: `drop`, `no-decrypt`
 	UnsupportedProtocolVersions pulumi.StringPtrInput
-	// Untrusted certificate action - Choices: `drop`, `decrypt`
+	// Untrusted certificate action
+	//   - Choices: `drop`, `decrypt`
 	UntrustedCertificate pulumi.StringPtrInput
 	// List of url rules (applies when `mode` set to `security`)
 	UrlRules TlsSslDecryptionPolicyDefinitionUrlRuleArrayInput
@@ -191,37 +227,49 @@ func (TlsSslDecryptionPolicyDefinitionState) ElementType() reflect.Type {
 type tlsSslDecryptionPolicyDefinitionArgs struct {
 	// Certificate Lifetime(in Days)
 	CertificateLifetimeInDays *int `pulumi:"certificateLifetimeInDays"`
-	// Certificate revocation status - Choices: `ocsp`, `none`
+	// Certificate revocation status
+	//   - Choices: `ocsp`, `none`
 	CertificateRevocationStatus *string `pulumi:"certificateRevocationStatus"`
-	// Default action (applies when `mode` set to `security`) - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
+	// Default action (applies when `mode` set to `security`)
+	//   - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
 	DefaultAction *string `pulumi:"defaultAction"`
 	// The description of the policy definition.
 	Description string `pulumi:"description"`
-	// EC Key Type - Choices: `P256`, `P384`, `P521`
+	// EC Key Type
+	//   - Choices: `P256`, `P384`, `P521`
 	EcKeyType *string `pulumi:"ecKeyType"`
-	// Expired certificate action - Choices: `drop`, `decrypt`
+	// Expired certificate action
+	//   - Choices: `drop`, `decrypt`
 	ExpiredCertificate *string `pulumi:"expiredCertificate"`
-	// Failure mode - Choices: `open`, `close`
+	// Failure mode
+	//   - Choices: `open`, `close`
 	FailureMode *string `pulumi:"failureMode"`
-	// Minimal TLS Version - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
+	// Minimal TLS Version
+	//   - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
 	MinimalTlsVersion *string `pulumi:"minimalTlsVersion"`
-	// The policy mode - Choices: `security`, `unified`
+	// The policy mode
+	//   - Choices: `security`, `unified`
 	Mode *string `pulumi:"mode"`
 	// The name of the policy definition.
 	Name *string `pulumi:"name"`
 	// List of network rules (applies when `mode` set to `security`)
 	NetworkRules []TlsSslDecryptionPolicyDefinitionNetworkRule `pulumi:"networkRules"`
-	// RSA key pair modules - Choices: `1024`, `2048`, `4096`
+	// RSA key pair modules
+	//   - Choices: `1024`, `2048`, `4096`
 	RsaKeyPairModulus *string `pulumi:"rsaKeyPairModulus"`
 	// SSL decryption enabled
 	SslDecryptionEnabled *string `pulumi:"sslDecryptionEnabled"`
-	// Unknown revocation status action - Choices: `drop`, `decrypt`
+	// Unknown revocation status action
+	//   - Choices: `drop`, `decrypt`
 	UnknownRevocationStatus *string `pulumi:"unknownRevocationStatus"`
-	// Unsupported cipher suites action - Choices: `drop`, `no-decrypt`
+	// Unsupported cipher suites action
+	//   - Choices: `drop`, `no-decrypt`
 	UnsupportedCipherSuites *string `pulumi:"unsupportedCipherSuites"`
-	// Unsupported protocol versions action - Choices: `drop`, `no-decrypt`
+	// Unsupported protocol versions action
+	//   - Choices: `drop`, `no-decrypt`
 	UnsupportedProtocolVersions *string `pulumi:"unsupportedProtocolVersions"`
-	// Untrusted certificate action - Choices: `drop`, `decrypt`
+	// Untrusted certificate action
+	//   - Choices: `drop`, `decrypt`
 	UntrustedCertificate *string `pulumi:"untrustedCertificate"`
 	// List of url rules (applies when `mode` set to `security`)
 	UrlRules []TlsSslDecryptionPolicyDefinitionUrlRule `pulumi:"urlRules"`
@@ -233,37 +281,49 @@ type tlsSslDecryptionPolicyDefinitionArgs struct {
 type TlsSslDecryptionPolicyDefinitionArgs struct {
 	// Certificate Lifetime(in Days)
 	CertificateLifetimeInDays pulumi.IntPtrInput
-	// Certificate revocation status - Choices: `ocsp`, `none`
+	// Certificate revocation status
+	//   - Choices: `ocsp`, `none`
 	CertificateRevocationStatus pulumi.StringPtrInput
-	// Default action (applies when `mode` set to `security`) - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
+	// Default action (applies when `mode` set to `security`)
+	//   - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
 	DefaultAction pulumi.StringPtrInput
 	// The description of the policy definition.
 	Description pulumi.StringInput
-	// EC Key Type - Choices: `P256`, `P384`, `P521`
+	// EC Key Type
+	//   - Choices: `P256`, `P384`, `P521`
 	EcKeyType pulumi.StringPtrInput
-	// Expired certificate action - Choices: `drop`, `decrypt`
+	// Expired certificate action
+	//   - Choices: `drop`, `decrypt`
 	ExpiredCertificate pulumi.StringPtrInput
-	// Failure mode - Choices: `open`, `close`
+	// Failure mode
+	//   - Choices: `open`, `close`
 	FailureMode pulumi.StringPtrInput
-	// Minimal TLS Version - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
+	// Minimal TLS Version
+	//   - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
 	MinimalTlsVersion pulumi.StringPtrInput
-	// The policy mode - Choices: `security`, `unified`
+	// The policy mode
+	//   - Choices: `security`, `unified`
 	Mode pulumi.StringPtrInput
 	// The name of the policy definition.
 	Name pulumi.StringPtrInput
 	// List of network rules (applies when `mode` set to `security`)
 	NetworkRules TlsSslDecryptionPolicyDefinitionNetworkRuleArrayInput
-	// RSA key pair modules - Choices: `1024`, `2048`, `4096`
+	// RSA key pair modules
+	//   - Choices: `1024`, `2048`, `4096`
 	RsaKeyPairModulus pulumi.StringPtrInput
 	// SSL decryption enabled
 	SslDecryptionEnabled pulumi.StringPtrInput
-	// Unknown revocation status action - Choices: `drop`, `decrypt`
+	// Unknown revocation status action
+	//   - Choices: `drop`, `decrypt`
 	UnknownRevocationStatus pulumi.StringPtrInput
-	// Unsupported cipher suites action - Choices: `drop`, `no-decrypt`
+	// Unsupported cipher suites action
+	//   - Choices: `drop`, `no-decrypt`
 	UnsupportedCipherSuites pulumi.StringPtrInput
-	// Unsupported protocol versions action - Choices: `drop`, `no-decrypt`
+	// Unsupported protocol versions action
+	//   - Choices: `drop`, `no-decrypt`
 	UnsupportedProtocolVersions pulumi.StringPtrInput
-	// Untrusted certificate action - Choices: `drop`, `decrypt`
+	// Untrusted certificate action
+	//   - Choices: `drop`, `decrypt`
 	UntrustedCertificate pulumi.StringPtrInput
 	// List of url rules (applies when `mode` set to `security`)
 	UrlRules TlsSslDecryptionPolicyDefinitionUrlRuleArrayInput
@@ -363,12 +423,14 @@ func (o TlsSslDecryptionPolicyDefinitionOutput) CertificateLifetimeInDays() pulu
 	return o.ApplyT(func(v *TlsSslDecryptionPolicyDefinition) pulumi.IntPtrOutput { return v.CertificateLifetimeInDays }).(pulumi.IntPtrOutput)
 }
 
-// Certificate revocation status - Choices: `ocsp`, `none`
+// Certificate revocation status
+//   - Choices: `ocsp`, `none`
 func (o TlsSslDecryptionPolicyDefinitionOutput) CertificateRevocationStatus() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TlsSslDecryptionPolicyDefinition) pulumi.StringPtrOutput { return v.CertificateRevocationStatus }).(pulumi.StringPtrOutput)
 }
 
-// Default action (applies when `mode` set to `security`) - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
+// Default action (applies when `mode` set to `security`)
+//   - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
 func (o TlsSslDecryptionPolicyDefinitionOutput) DefaultAction() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TlsSslDecryptionPolicyDefinition) pulumi.StringPtrOutput { return v.DefaultAction }).(pulumi.StringPtrOutput)
 }
@@ -378,27 +440,32 @@ func (o TlsSslDecryptionPolicyDefinitionOutput) Description() pulumi.StringOutpu
 	return o.ApplyT(func(v *TlsSslDecryptionPolicyDefinition) pulumi.StringOutput { return v.Description }).(pulumi.StringOutput)
 }
 
-// EC Key Type - Choices: `P256`, `P384`, `P521`
+// EC Key Type
+//   - Choices: `P256`, `P384`, `P521`
 func (o TlsSslDecryptionPolicyDefinitionOutput) EcKeyType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TlsSslDecryptionPolicyDefinition) pulumi.StringPtrOutput { return v.EcKeyType }).(pulumi.StringPtrOutput)
 }
 
-// Expired certificate action - Choices: `drop`, `decrypt`
+// Expired certificate action
+//   - Choices: `drop`, `decrypt`
 func (o TlsSslDecryptionPolicyDefinitionOutput) ExpiredCertificate() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TlsSslDecryptionPolicyDefinition) pulumi.StringPtrOutput { return v.ExpiredCertificate }).(pulumi.StringPtrOutput)
 }
 
-// Failure mode - Choices: `open`, `close`
+// Failure mode
+//   - Choices: `open`, `close`
 func (o TlsSslDecryptionPolicyDefinitionOutput) FailureMode() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TlsSslDecryptionPolicyDefinition) pulumi.StringPtrOutput { return v.FailureMode }).(pulumi.StringPtrOutput)
 }
 
-// Minimal TLS Version - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
+// Minimal TLS Version
+//   - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
 func (o TlsSslDecryptionPolicyDefinitionOutput) MinimalTlsVersion() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TlsSslDecryptionPolicyDefinition) pulumi.StringPtrOutput { return v.MinimalTlsVersion }).(pulumi.StringPtrOutput)
 }
 
-// The policy mode - Choices: `security`, `unified`
+// The policy mode
+//   - Choices: `security`, `unified`
 func (o TlsSslDecryptionPolicyDefinitionOutput) Mode() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TlsSslDecryptionPolicyDefinition) pulumi.StringPtrOutput { return v.Mode }).(pulumi.StringPtrOutput)
 }
@@ -415,7 +482,8 @@ func (o TlsSslDecryptionPolicyDefinitionOutput) NetworkRules() TlsSslDecryptionP
 	}).(TlsSslDecryptionPolicyDefinitionNetworkRuleArrayOutput)
 }
 
-// RSA key pair modules - Choices: `1024`, `2048`, `4096`
+// RSA key pair modules
+//   - Choices: `1024`, `2048`, `4096`
 func (o TlsSslDecryptionPolicyDefinitionOutput) RsaKeyPairModulus() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TlsSslDecryptionPolicyDefinition) pulumi.StringPtrOutput { return v.RsaKeyPairModulus }).(pulumi.StringPtrOutput)
 }
@@ -425,22 +493,26 @@ func (o TlsSslDecryptionPolicyDefinitionOutput) SslDecryptionEnabled() pulumi.St
 	return o.ApplyT(func(v *TlsSslDecryptionPolicyDefinition) pulumi.StringPtrOutput { return v.SslDecryptionEnabled }).(pulumi.StringPtrOutput)
 }
 
-// Unknown revocation status action - Choices: `drop`, `decrypt`
+// Unknown revocation status action
+//   - Choices: `drop`, `decrypt`
 func (o TlsSslDecryptionPolicyDefinitionOutput) UnknownRevocationStatus() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TlsSslDecryptionPolicyDefinition) pulumi.StringPtrOutput { return v.UnknownRevocationStatus }).(pulumi.StringPtrOutput)
 }
 
-// Unsupported cipher suites action - Choices: `drop`, `no-decrypt`
+// Unsupported cipher suites action
+//   - Choices: `drop`, `no-decrypt`
 func (o TlsSslDecryptionPolicyDefinitionOutput) UnsupportedCipherSuites() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TlsSslDecryptionPolicyDefinition) pulumi.StringPtrOutput { return v.UnsupportedCipherSuites }).(pulumi.StringPtrOutput)
 }
 
-// Unsupported protocol versions action - Choices: `drop`, `no-decrypt`
+// Unsupported protocol versions action
+//   - Choices: `drop`, `no-decrypt`
 func (o TlsSslDecryptionPolicyDefinitionOutput) UnsupportedProtocolVersions() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TlsSslDecryptionPolicyDefinition) pulumi.StringPtrOutput { return v.UnsupportedProtocolVersions }).(pulumi.StringPtrOutput)
 }
 
-// Untrusted certificate action - Choices: `drop`, `decrypt`
+// Untrusted certificate action
+//   - Choices: `drop`, `decrypt`
 func (o TlsSslDecryptionPolicyDefinitionOutput) UntrustedCertificate() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TlsSslDecryptionPolicyDefinition) pulumi.StringPtrOutput { return v.UntrustedCertificate }).(pulumi.StringPtrOutput)
 }

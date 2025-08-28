@@ -37,11 +37,16 @@ class SystemLoggingFeatureArgs:
         The set of arguments for constructing a SystemLoggingFeature resource.
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.bool] disk_enable: Enable logging to local disk - Default value: `true`
+        :param pulumi.Input[_builtins.bool] disk_enable: Enable logging to local disk
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] disk_enable_variable: Variable name
-        :param pulumi.Input[_builtins.int] disk_file_rotate: Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+        :param pulumi.Input[_builtins.int] disk_file_rotate: Set number of syslog files to create before discarding oldest files
+                 - Range: `1`-`10`
+                 - Default value: `10`
         :param pulumi.Input[_builtins.str] disk_file_rotate_variable: Variable name
-        :param pulumi.Input[_builtins.int] disk_file_size: Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+        :param pulumi.Input[_builtins.int] disk_file_size: Set maximum size of file before it is rotated
+                 - Range: `1`-`20`
+                 - Default value: `10`
         :param pulumi.Input[_builtins.str] disk_file_size_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['SystemLoggingFeatureIpv4ServerArgs']]] ipv4_servers: Enable logging to remote server
         :param pulumi.Input[Sequence[pulumi.Input['SystemLoggingFeatureIpv6ServerArgs']]] ipv6_servers: Enable logging to remote ipv6 server
@@ -100,7 +105,8 @@ class SystemLoggingFeatureArgs:
     @pulumi.getter(name="diskEnable")
     def disk_enable(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable logging to local disk - Default value: `true`
+        Enable logging to local disk
+          - Default value: `true`
         """
         return pulumi.get(self, "disk_enable")
 
@@ -124,7 +130,9 @@ class SystemLoggingFeatureArgs:
     @pulumi.getter(name="diskFileRotate")
     def disk_file_rotate(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+        Set number of syslog files to create before discarding oldest files
+          - Range: `1`-`10`
+          - Default value: `10`
         """
         return pulumi.get(self, "disk_file_rotate")
 
@@ -148,7 +156,9 @@ class SystemLoggingFeatureArgs:
     @pulumi.getter(name="diskFileSize")
     def disk_file_size(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+        Set maximum size of file before it is rotated
+          - Range: `1`-`20`
+          - Default value: `10`
         """
         return pulumi.get(self, "disk_file_size")
 
@@ -236,11 +246,16 @@ class _SystemLoggingFeatureState:
         """
         Input properties used for looking up and filtering SystemLoggingFeature resources.
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.bool] disk_enable: Enable logging to local disk - Default value: `true`
+        :param pulumi.Input[_builtins.bool] disk_enable: Enable logging to local disk
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] disk_enable_variable: Variable name
-        :param pulumi.Input[_builtins.int] disk_file_rotate: Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+        :param pulumi.Input[_builtins.int] disk_file_rotate: Set number of syslog files to create before discarding oldest files
+                 - Range: `1`-`10`
+                 - Default value: `10`
         :param pulumi.Input[_builtins.str] disk_file_rotate_variable: Variable name
-        :param pulumi.Input[_builtins.int] disk_file_size: Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+        :param pulumi.Input[_builtins.int] disk_file_size: Set maximum size of file before it is rotated
+                 - Range: `1`-`20`
+                 - Default value: `10`
         :param pulumi.Input[_builtins.str] disk_file_size_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[Sequence[pulumi.Input['SystemLoggingFeatureIpv4ServerArgs']]] ipv4_servers: Enable logging to remote server
@@ -292,7 +307,8 @@ class _SystemLoggingFeatureState:
     @pulumi.getter(name="diskEnable")
     def disk_enable(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable logging to local disk - Default value: `true`
+        Enable logging to local disk
+          - Default value: `true`
         """
         return pulumi.get(self, "disk_enable")
 
@@ -316,7 +332,9 @@ class _SystemLoggingFeatureState:
     @pulumi.getter(name="diskFileRotate")
     def disk_file_rotate(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+        Set number of syslog files to create before discarding oldest files
+          - Range: `1`-`10`
+          - Default value: `10`
         """
         return pulumi.get(self, "disk_file_rotate")
 
@@ -340,7 +358,9 @@ class _SystemLoggingFeatureState:
     @pulumi.getter(name="diskFileSize")
     def disk_file_size(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+        Set maximum size of file before it is rotated
+          - Range: `1`-`20`
+          - Default value: `10`
         """
         return pulumi.get(self, "disk_file_size")
 
@@ -469,11 +489,16 @@ class SystemLoggingFeature(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.bool] disk_enable: Enable logging to local disk - Default value: `true`
+        :param pulumi.Input[_builtins.bool] disk_enable: Enable logging to local disk
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] disk_enable_variable: Variable name
-        :param pulumi.Input[_builtins.int] disk_file_rotate: Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+        :param pulumi.Input[_builtins.int] disk_file_rotate: Set number of syslog files to create before discarding oldest files
+                 - Range: `1`-`10`
+                 - Default value: `10`
         :param pulumi.Input[_builtins.str] disk_file_rotate_variable: Variable name
-        :param pulumi.Input[_builtins.int] disk_file_size: Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+        :param pulumi.Input[_builtins.int] disk_file_size: Set maximum size of file before it is rotated
+                 - Range: `1`-`20`
+                 - Default value: `10`
         :param pulumi.Input[_builtins.str] disk_file_size_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[Sequence[pulumi.Input[Union['SystemLoggingFeatureIpv4ServerArgs', 'SystemLoggingFeatureIpv4ServerArgsDict']]]] ipv4_servers: Enable logging to remote server
@@ -583,11 +608,16 @@ class SystemLoggingFeature(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.bool] disk_enable: Enable logging to local disk - Default value: `true`
+        :param pulumi.Input[_builtins.bool] disk_enable: Enable logging to local disk
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] disk_enable_variable: Variable name
-        :param pulumi.Input[_builtins.int] disk_file_rotate: Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+        :param pulumi.Input[_builtins.int] disk_file_rotate: Set number of syslog files to create before discarding oldest files
+                 - Range: `1`-`10`
+                 - Default value: `10`
         :param pulumi.Input[_builtins.str] disk_file_rotate_variable: Variable name
-        :param pulumi.Input[_builtins.int] disk_file_size: Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+        :param pulumi.Input[_builtins.int] disk_file_size: Set maximum size of file before it is rotated
+                 - Range: `1`-`20`
+                 - Default value: `10`
         :param pulumi.Input[_builtins.str] disk_file_size_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[Sequence[pulumi.Input[Union['SystemLoggingFeatureIpv4ServerArgs', 'SystemLoggingFeatureIpv4ServerArgsDict']]]] ipv4_servers: Enable logging to remote server
@@ -627,7 +657,8 @@ class SystemLoggingFeature(pulumi.CustomResource):
     @pulumi.getter(name="diskEnable")
     def disk_enable(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Enable logging to local disk - Default value: `true`
+        Enable logging to local disk
+          - Default value: `true`
         """
         return pulumi.get(self, "disk_enable")
 
@@ -643,7 +674,9 @@ class SystemLoggingFeature(pulumi.CustomResource):
     @pulumi.getter(name="diskFileRotate")
     def disk_file_rotate(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+        Set number of syslog files to create before discarding oldest files
+          - Range: `1`-`10`
+          - Default value: `10`
         """
         return pulumi.get(self, "disk_file_rotate")
 
@@ -659,7 +692,9 @@ class SystemLoggingFeature(pulumi.CustomResource):
     @pulumi.getter(name="diskFileSize")
     def disk_file_size(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+        Set maximum size of file before it is rotated
+          - Range: `1`-`20`
+          - Default value: `10`
         """
         return pulumi.get(self, "disk_file_size")
 

@@ -51,68 +51,68 @@ export class TransportManagementVpnFeature extends pulumi.CustomResource {
     /**
      * The description of the Feature
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
      * IPv4 Static Route
      */
-    public readonly ipv4StaticRoutes!: pulumi.Output<outputs.TransportManagementVpnFeatureIpv4StaticRoute[] | undefined>;
+    declare public readonly ipv4StaticRoutes: pulumi.Output<outputs.TransportManagementVpnFeatureIpv4StaticRoute[] | undefined>;
     /**
      * IPv6 Static Route
      */
-    public readonly ipv6StaticRoutes!: pulumi.Output<outputs.TransportManagementVpnFeatureIpv6StaticRoute[] | undefined>;
+    declare public readonly ipv6StaticRoutes: pulumi.Output<outputs.TransportManagementVpnFeatureIpv6StaticRoute[] | undefined>;
     /**
      * The name of the Feature
      */
-    public readonly name!: pulumi.Output<string>;
-    public readonly newHostMappings!: pulumi.Output<outputs.TransportManagementVpnFeatureNewHostMapping[] | undefined>;
+    declare public readonly name: pulumi.Output<string>;
+    declare public readonly newHostMappings: pulumi.Output<outputs.TransportManagementVpnFeatureNewHostMapping[] | undefined>;
     /**
      * Primary DNS Address (IPv4)
      */
-    public readonly primaryDnsAddressIpv4!: pulumi.Output<string | undefined>;
+    declare public readonly primaryDnsAddressIpv4: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly primaryDnsAddressIpv4Variable!: pulumi.Output<string | undefined>;
+    declare public readonly primaryDnsAddressIpv4Variable: pulumi.Output<string | undefined>;
     /**
      * Primary DNS Address (IPv6)
      */
-    public readonly primaryDnsAddressIpv6!: pulumi.Output<string | undefined>;
+    declare public readonly primaryDnsAddressIpv6: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly primaryDnsAddressIpv6Variable!: pulumi.Output<string | undefined>;
+    declare public readonly primaryDnsAddressIpv6Variable: pulumi.Output<string | undefined>;
     /**
      * Secondary DNS Address (IPv4)
      */
-    public readonly secondaryDnsAddressIpv4!: pulumi.Output<string | undefined>;
+    declare public readonly secondaryDnsAddressIpv4: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly secondaryDnsAddressIpv4Variable!: pulumi.Output<string | undefined>;
+    declare public readonly secondaryDnsAddressIpv4Variable: pulumi.Output<string | undefined>;
     /**
      * Secondary DNS Address (IPv6)
      */
-    public readonly secondaryDnsAddressIpv6!: pulumi.Output<string | undefined>;
+    declare public readonly secondaryDnsAddressIpv6: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly secondaryDnsAddressIpv6Variable!: pulumi.Output<string | undefined>;
+    declare public readonly secondaryDnsAddressIpv6Variable: pulumi.Output<string | undefined>;
     /**
      * The version of the Feature
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
     /**
      * Name
      */
-    public readonly vpnDescription!: pulumi.Output<string | undefined>;
+    declare public readonly vpnDescription: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly vpnDescriptionVariable!: pulumi.Output<string | undefined>;
+    declare public readonly vpnDescriptionVariable: pulumi.Output<string | undefined>;
 
     /**
      * Create a TransportManagementVpnFeature resource with the given unique name, arguments, and options.
@@ -127,44 +127,44 @@ export class TransportManagementVpnFeature extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as TransportManagementVpnFeatureState | undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["ipv4StaticRoutes"] = state ? state.ipv4StaticRoutes : undefined;
-            resourceInputs["ipv6StaticRoutes"] = state ? state.ipv6StaticRoutes : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["newHostMappings"] = state ? state.newHostMappings : undefined;
-            resourceInputs["primaryDnsAddressIpv4"] = state ? state.primaryDnsAddressIpv4 : undefined;
-            resourceInputs["primaryDnsAddressIpv4Variable"] = state ? state.primaryDnsAddressIpv4Variable : undefined;
-            resourceInputs["primaryDnsAddressIpv6"] = state ? state.primaryDnsAddressIpv6 : undefined;
-            resourceInputs["primaryDnsAddressIpv6Variable"] = state ? state.primaryDnsAddressIpv6Variable : undefined;
-            resourceInputs["secondaryDnsAddressIpv4"] = state ? state.secondaryDnsAddressIpv4 : undefined;
-            resourceInputs["secondaryDnsAddressIpv4Variable"] = state ? state.secondaryDnsAddressIpv4Variable : undefined;
-            resourceInputs["secondaryDnsAddressIpv6"] = state ? state.secondaryDnsAddressIpv6 : undefined;
-            resourceInputs["secondaryDnsAddressIpv6Variable"] = state ? state.secondaryDnsAddressIpv6Variable : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
-            resourceInputs["vpnDescription"] = state ? state.vpnDescription : undefined;
-            resourceInputs["vpnDescriptionVariable"] = state ? state.vpnDescriptionVariable : undefined;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["ipv4StaticRoutes"] = state?.ipv4StaticRoutes;
+            resourceInputs["ipv6StaticRoutes"] = state?.ipv6StaticRoutes;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["newHostMappings"] = state?.newHostMappings;
+            resourceInputs["primaryDnsAddressIpv4"] = state?.primaryDnsAddressIpv4;
+            resourceInputs["primaryDnsAddressIpv4Variable"] = state?.primaryDnsAddressIpv4Variable;
+            resourceInputs["primaryDnsAddressIpv6"] = state?.primaryDnsAddressIpv6;
+            resourceInputs["primaryDnsAddressIpv6Variable"] = state?.primaryDnsAddressIpv6Variable;
+            resourceInputs["secondaryDnsAddressIpv4"] = state?.secondaryDnsAddressIpv4;
+            resourceInputs["secondaryDnsAddressIpv4Variable"] = state?.secondaryDnsAddressIpv4Variable;
+            resourceInputs["secondaryDnsAddressIpv6"] = state?.secondaryDnsAddressIpv6;
+            resourceInputs["secondaryDnsAddressIpv6Variable"] = state?.secondaryDnsAddressIpv6Variable;
+            resourceInputs["version"] = state?.version;
+            resourceInputs["vpnDescription"] = state?.vpnDescription;
+            resourceInputs["vpnDescriptionVariable"] = state?.vpnDescriptionVariable;
         } else {
             const args = argsOrState as TransportManagementVpnFeatureArgs | undefined;
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["ipv4StaticRoutes"] = args ? args.ipv4StaticRoutes : undefined;
-            resourceInputs["ipv6StaticRoutes"] = args ? args.ipv6StaticRoutes : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["newHostMappings"] = args ? args.newHostMappings : undefined;
-            resourceInputs["primaryDnsAddressIpv4"] = args ? args.primaryDnsAddressIpv4 : undefined;
-            resourceInputs["primaryDnsAddressIpv4Variable"] = args ? args.primaryDnsAddressIpv4Variable : undefined;
-            resourceInputs["primaryDnsAddressIpv6"] = args ? args.primaryDnsAddressIpv6 : undefined;
-            resourceInputs["primaryDnsAddressIpv6Variable"] = args ? args.primaryDnsAddressIpv6Variable : undefined;
-            resourceInputs["secondaryDnsAddressIpv4"] = args ? args.secondaryDnsAddressIpv4 : undefined;
-            resourceInputs["secondaryDnsAddressIpv4Variable"] = args ? args.secondaryDnsAddressIpv4Variable : undefined;
-            resourceInputs["secondaryDnsAddressIpv6"] = args ? args.secondaryDnsAddressIpv6 : undefined;
-            resourceInputs["secondaryDnsAddressIpv6Variable"] = args ? args.secondaryDnsAddressIpv6Variable : undefined;
-            resourceInputs["vpnDescription"] = args ? args.vpnDescription : undefined;
-            resourceInputs["vpnDescriptionVariable"] = args ? args.vpnDescriptionVariable : undefined;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["ipv4StaticRoutes"] = args?.ipv4StaticRoutes;
+            resourceInputs["ipv6StaticRoutes"] = args?.ipv6StaticRoutes;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["newHostMappings"] = args?.newHostMappings;
+            resourceInputs["primaryDnsAddressIpv4"] = args?.primaryDnsAddressIpv4;
+            resourceInputs["primaryDnsAddressIpv4Variable"] = args?.primaryDnsAddressIpv4Variable;
+            resourceInputs["primaryDnsAddressIpv6"] = args?.primaryDnsAddressIpv6;
+            resourceInputs["primaryDnsAddressIpv6Variable"] = args?.primaryDnsAddressIpv6Variable;
+            resourceInputs["secondaryDnsAddressIpv4"] = args?.secondaryDnsAddressIpv4;
+            resourceInputs["secondaryDnsAddressIpv4Variable"] = args?.secondaryDnsAddressIpv4Variable;
+            resourceInputs["secondaryDnsAddressIpv6"] = args?.secondaryDnsAddressIpv6;
+            resourceInputs["secondaryDnsAddressIpv6Variable"] = args?.secondaryDnsAddressIpv6Variable;
+            resourceInputs["vpnDescription"] = args?.vpnDescription;
+            resourceInputs["vpnDescriptionVariable"] = args?.vpnDescriptionVariable;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

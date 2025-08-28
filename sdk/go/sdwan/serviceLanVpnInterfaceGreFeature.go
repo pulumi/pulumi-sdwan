@@ -67,11 +67,13 @@ import (
 type ServiceLanVpnInterfaceGreFeature struct {
 	pulumi.CustomResourceState
 
-	// Enable Application Tunnel Type - Choices: `none`, `sig`
+	// Enable Application Tunnel Type
+	//   - Choices: `none`, `sig`
 	ApplicationTunnelType pulumi.StringPtrOutput `pulumi:"applicationTunnelType"`
 	// Variable name
 	ApplicationTunnelTypeVariable pulumi.StringPtrOutput `pulumi:"applicationTunnelTypeVariable"`
-	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+	//   - Default value: `false`
 	ClearDontFragment pulumi.BoolPtrOutput `pulumi:"clearDontFragment"`
 	// Variable name
 	ClearDontFragmentVariable pulumi.StringPtrOutput `pulumi:"clearDontFragmentVariable"`
@@ -87,18 +89,16 @@ type ServiceLanVpnInterfaceGreFeature struct {
 	InterfaceName pulumi.StringPtrOutput `pulumi:"interfaceName"`
 	// Variable name
 	InterfaceNameVariable pulumi.StringPtrOutput `pulumi:"interfaceNameVariable"`
-	// Interface MTU <576..9976>, in bytes - Range: `576`-`9976` - Default value: `1500`
+	// Interface MTU <576..9976>, in bytes
+	//   - Range: `576`-`9976`
+	//   - Default value: `1500`
 	IpMtu pulumi.IntPtrOutput `pulumi:"ipMtu"`
 	// Variable name
 	IpMtuVariable pulumi.StringPtrOutput `pulumi:"ipMtuVariable"`
 	Ipv4Address   pulumi.StringPtrOutput `pulumi:"ipv4Address"`
 	// Variable name
 	Ipv4AddressVariable pulumi.StringPtrOutput `pulumi:"ipv4AddressVariable"`
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-	//   `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-	//   `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-	//   `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-	//   `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask pulumi.StringPtrOutput `pulumi:"ipv4SubnetMask"`
 	// Variable name
 	Ipv4SubnetMaskVariable pulumi.StringPtrOutput `pulumi:"ipv4SubnetMaskVariable"`
@@ -106,11 +106,13 @@ type ServiceLanVpnInterfaceGreFeature struct {
 	Name pulumi.StringOutput `pulumi:"name"`
 	// Service LAN VPN Feature ID
 	ServiceLanVpnFeatureId pulumi.StringOutput `pulumi:"serviceLanVpnFeatureId"`
-	// Administrative state - Default value: `false`
+	// Administrative state
+	//   - Default value: `false`
 	Shutdown pulumi.BoolPtrOutput `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable pulumi.StringPtrOutput `pulumi:"shutdownVariable"`
-	// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TcpMss pulumi.IntPtrOutput `pulumi:"tcpMss"`
 	// Variable name
 	TcpMssVariable pulumi.StringPtrOutput `pulumi:"tcpMssVariable"`
@@ -174,11 +176,13 @@ func GetServiceLanVpnInterfaceGreFeature(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering ServiceLanVpnInterfaceGreFeature resources.
 type serviceLanVpnInterfaceGreFeatureState struct {
-	// Enable Application Tunnel Type - Choices: `none`, `sig`
+	// Enable Application Tunnel Type
+	//   - Choices: `none`, `sig`
 	ApplicationTunnelType *string `pulumi:"applicationTunnelType"`
 	// Variable name
 	ApplicationTunnelTypeVariable *string `pulumi:"applicationTunnelTypeVariable"`
-	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+	//   - Default value: `false`
 	ClearDontFragment *bool `pulumi:"clearDontFragment"`
 	// Variable name
 	ClearDontFragmentVariable *string `pulumi:"clearDontFragmentVariable"`
@@ -194,18 +198,16 @@ type serviceLanVpnInterfaceGreFeatureState struct {
 	InterfaceName *string `pulumi:"interfaceName"`
 	// Variable name
 	InterfaceNameVariable *string `pulumi:"interfaceNameVariable"`
-	// Interface MTU <576..9976>, in bytes - Range: `576`-`9976` - Default value: `1500`
+	// Interface MTU <576..9976>, in bytes
+	//   - Range: `576`-`9976`
+	//   - Default value: `1500`
 	IpMtu *int `pulumi:"ipMtu"`
 	// Variable name
 	IpMtuVariable *string `pulumi:"ipMtuVariable"`
 	Ipv4Address   *string `pulumi:"ipv4Address"`
 	// Variable name
 	Ipv4AddressVariable *string `pulumi:"ipv4AddressVariable"`
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-	//   `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-	//   `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-	//   `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-	//   `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask *string `pulumi:"ipv4SubnetMask"`
 	// Variable name
 	Ipv4SubnetMaskVariable *string `pulumi:"ipv4SubnetMaskVariable"`
@@ -213,11 +215,13 @@ type serviceLanVpnInterfaceGreFeatureState struct {
 	Name *string `pulumi:"name"`
 	// Service LAN VPN Feature ID
 	ServiceLanVpnFeatureId *string `pulumi:"serviceLanVpnFeatureId"`
-	// Administrative state - Default value: `false`
+	// Administrative state
+	//   - Default value: `false`
 	Shutdown *bool `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable *string `pulumi:"shutdownVariable"`
-	// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TcpMss *int `pulumi:"tcpMss"`
 	// Variable name
 	TcpMssVariable *string `pulumi:"tcpMssVariable"`
@@ -246,11 +250,13 @@ type serviceLanVpnInterfaceGreFeatureState struct {
 }
 
 type ServiceLanVpnInterfaceGreFeatureState struct {
-	// Enable Application Tunnel Type - Choices: `none`, `sig`
+	// Enable Application Tunnel Type
+	//   - Choices: `none`, `sig`
 	ApplicationTunnelType pulumi.StringPtrInput
 	// Variable name
 	ApplicationTunnelTypeVariable pulumi.StringPtrInput
-	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+	//   - Default value: `false`
 	ClearDontFragment pulumi.BoolPtrInput
 	// Variable name
 	ClearDontFragmentVariable pulumi.StringPtrInput
@@ -266,18 +272,16 @@ type ServiceLanVpnInterfaceGreFeatureState struct {
 	InterfaceName pulumi.StringPtrInput
 	// Variable name
 	InterfaceNameVariable pulumi.StringPtrInput
-	// Interface MTU <576..9976>, in bytes - Range: `576`-`9976` - Default value: `1500`
+	// Interface MTU <576..9976>, in bytes
+	//   - Range: `576`-`9976`
+	//   - Default value: `1500`
 	IpMtu pulumi.IntPtrInput
 	// Variable name
 	IpMtuVariable pulumi.StringPtrInput
 	Ipv4Address   pulumi.StringPtrInput
 	// Variable name
 	Ipv4AddressVariable pulumi.StringPtrInput
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-	//   `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-	//   `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-	//   `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-	//   `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask pulumi.StringPtrInput
 	// Variable name
 	Ipv4SubnetMaskVariable pulumi.StringPtrInput
@@ -285,11 +289,13 @@ type ServiceLanVpnInterfaceGreFeatureState struct {
 	Name pulumi.StringPtrInput
 	// Service LAN VPN Feature ID
 	ServiceLanVpnFeatureId pulumi.StringPtrInput
-	// Administrative state - Default value: `false`
+	// Administrative state
+	//   - Default value: `false`
 	Shutdown pulumi.BoolPtrInput
 	// Variable name
 	ShutdownVariable pulumi.StringPtrInput
-	// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TcpMss pulumi.IntPtrInput
 	// Variable name
 	TcpMssVariable pulumi.StringPtrInput
@@ -322,11 +328,13 @@ func (ServiceLanVpnInterfaceGreFeatureState) ElementType() reflect.Type {
 }
 
 type serviceLanVpnInterfaceGreFeatureArgs struct {
-	// Enable Application Tunnel Type - Choices: `none`, `sig`
+	// Enable Application Tunnel Type
+	//   - Choices: `none`, `sig`
 	ApplicationTunnelType *string `pulumi:"applicationTunnelType"`
 	// Variable name
 	ApplicationTunnelTypeVariable *string `pulumi:"applicationTunnelTypeVariable"`
-	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+	//   - Default value: `false`
 	ClearDontFragment *bool `pulumi:"clearDontFragment"`
 	// Variable name
 	ClearDontFragmentVariable *string `pulumi:"clearDontFragmentVariable"`
@@ -342,18 +350,16 @@ type serviceLanVpnInterfaceGreFeatureArgs struct {
 	InterfaceName *string `pulumi:"interfaceName"`
 	// Variable name
 	InterfaceNameVariable *string `pulumi:"interfaceNameVariable"`
-	// Interface MTU <576..9976>, in bytes - Range: `576`-`9976` - Default value: `1500`
+	// Interface MTU <576..9976>, in bytes
+	//   - Range: `576`-`9976`
+	//   - Default value: `1500`
 	IpMtu *int `pulumi:"ipMtu"`
 	// Variable name
 	IpMtuVariable *string `pulumi:"ipMtuVariable"`
 	Ipv4Address   *string `pulumi:"ipv4Address"`
 	// Variable name
 	Ipv4AddressVariable *string `pulumi:"ipv4AddressVariable"`
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-	//   `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-	//   `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-	//   `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-	//   `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask *string `pulumi:"ipv4SubnetMask"`
 	// Variable name
 	Ipv4SubnetMaskVariable *string `pulumi:"ipv4SubnetMaskVariable"`
@@ -361,11 +367,13 @@ type serviceLanVpnInterfaceGreFeatureArgs struct {
 	Name *string `pulumi:"name"`
 	// Service LAN VPN Feature ID
 	ServiceLanVpnFeatureId string `pulumi:"serviceLanVpnFeatureId"`
-	// Administrative state - Default value: `false`
+	// Administrative state
+	//   - Default value: `false`
 	Shutdown *bool `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable *string `pulumi:"shutdownVariable"`
-	// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TcpMss *int `pulumi:"tcpMss"`
 	// Variable name
 	TcpMssVariable *string `pulumi:"tcpMssVariable"`
@@ -393,11 +401,13 @@ type serviceLanVpnInterfaceGreFeatureArgs struct {
 
 // The set of arguments for constructing a ServiceLanVpnInterfaceGreFeature resource.
 type ServiceLanVpnInterfaceGreFeatureArgs struct {
-	// Enable Application Tunnel Type - Choices: `none`, `sig`
+	// Enable Application Tunnel Type
+	//   - Choices: `none`, `sig`
 	ApplicationTunnelType pulumi.StringPtrInput
 	// Variable name
 	ApplicationTunnelTypeVariable pulumi.StringPtrInput
-	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+	//   - Default value: `false`
 	ClearDontFragment pulumi.BoolPtrInput
 	// Variable name
 	ClearDontFragmentVariable pulumi.StringPtrInput
@@ -413,18 +423,16 @@ type ServiceLanVpnInterfaceGreFeatureArgs struct {
 	InterfaceName pulumi.StringPtrInput
 	// Variable name
 	InterfaceNameVariable pulumi.StringPtrInput
-	// Interface MTU <576..9976>, in bytes - Range: `576`-`9976` - Default value: `1500`
+	// Interface MTU <576..9976>, in bytes
+	//   - Range: `576`-`9976`
+	//   - Default value: `1500`
 	IpMtu pulumi.IntPtrInput
 	// Variable name
 	IpMtuVariable pulumi.StringPtrInput
 	Ipv4Address   pulumi.StringPtrInput
 	// Variable name
 	Ipv4AddressVariable pulumi.StringPtrInput
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-	//   `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-	//   `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-	//   `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-	//   `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask pulumi.StringPtrInput
 	// Variable name
 	Ipv4SubnetMaskVariable pulumi.StringPtrInput
@@ -432,11 +440,13 @@ type ServiceLanVpnInterfaceGreFeatureArgs struct {
 	Name pulumi.StringPtrInput
 	// Service LAN VPN Feature ID
 	ServiceLanVpnFeatureId pulumi.StringInput
-	// Administrative state - Default value: `false`
+	// Administrative state
+	//   - Default value: `false`
 	Shutdown pulumi.BoolPtrInput
 	// Variable name
 	ShutdownVariable pulumi.StringPtrInput
-	// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TcpMss pulumi.IntPtrInput
 	// Variable name
 	TcpMssVariable pulumi.StringPtrInput
@@ -549,7 +559,8 @@ func (o ServiceLanVpnInterfaceGreFeatureOutput) ToServiceLanVpnInterfaceGreFeatu
 	return o
 }
 
-// Enable Application Tunnel Type - Choices: `none`, `sig`
+// Enable Application Tunnel Type
+//   - Choices: `none`, `sig`
 func (o ServiceLanVpnInterfaceGreFeatureOutput) ApplicationTunnelType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceGreFeature) pulumi.StringPtrOutput { return v.ApplicationTunnelType }).(pulumi.StringPtrOutput)
 }
@@ -561,7 +572,8 @@ func (o ServiceLanVpnInterfaceGreFeatureOutput) ApplicationTunnelTypeVariable() 
 	}).(pulumi.StringPtrOutput)
 }
 
-// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+//   - Default value: `false`
 func (o ServiceLanVpnInterfaceGreFeatureOutput) ClearDontFragment() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceGreFeature) pulumi.BoolPtrOutput { return v.ClearDontFragment }).(pulumi.BoolPtrOutput)
 }
@@ -603,7 +615,9 @@ func (o ServiceLanVpnInterfaceGreFeatureOutput) InterfaceNameVariable() pulumi.S
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceGreFeature) pulumi.StringPtrOutput { return v.InterfaceNameVariable }).(pulumi.StringPtrOutput)
 }
 
-// Interface MTU <576..9976>, in bytes - Range: `576`-`9976` - Default value: `1500`
+// Interface MTU <576..9976>, in bytes
+//   - Range: `576`-`9976`
+//   - Default value: `1500`
 func (o ServiceLanVpnInterfaceGreFeatureOutput) IpMtu() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceGreFeature) pulumi.IntPtrOutput { return v.IpMtu }).(pulumi.IntPtrOutput)
 }
@@ -622,11 +636,7 @@ func (o ServiceLanVpnInterfaceGreFeatureOutput) Ipv4AddressVariable() pulumi.Str
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceGreFeature) pulumi.StringPtrOutput { return v.Ipv4AddressVariable }).(pulumi.StringPtrOutput)
 }
 
-//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-//     `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-//     `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-//     `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-//     `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 func (o ServiceLanVpnInterfaceGreFeatureOutput) Ipv4SubnetMask() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceGreFeature) pulumi.StringPtrOutput { return v.Ipv4SubnetMask }).(pulumi.StringPtrOutput)
 }
@@ -646,7 +656,8 @@ func (o ServiceLanVpnInterfaceGreFeatureOutput) ServiceLanVpnFeatureId() pulumi.
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceGreFeature) pulumi.StringOutput { return v.ServiceLanVpnFeatureId }).(pulumi.StringOutput)
 }
 
-// Administrative state - Default value: `false`
+// Administrative state
+//   - Default value: `false`
 func (o ServiceLanVpnInterfaceGreFeatureOutput) Shutdown() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceGreFeature) pulumi.BoolPtrOutput { return v.Shutdown }).(pulumi.BoolPtrOutput)
 }
@@ -656,7 +667,8 @@ func (o ServiceLanVpnInterfaceGreFeatureOutput) ShutdownVariable() pulumi.String
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceGreFeature) pulumi.StringPtrOutput { return v.ShutdownVariable }).(pulumi.StringPtrOutput)
 }
 
-// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+// TCP MSS on SYN packets, in bytes
+//   - Range: `500`-`1460`
 func (o ServiceLanVpnInterfaceGreFeatureOutput) TcpMss() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceGreFeature) pulumi.IntPtrOutput { return v.TcpMss }).(pulumi.IntPtrOutput)
 }

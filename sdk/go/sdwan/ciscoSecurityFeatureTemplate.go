@@ -31,11 +31,12 @@ type CiscoSecurityFeatureTemplate struct {
 	AuthenticationTypes pulumi.StringArrayOutput `pulumi:"authenticationTypes"`
 	// The description of the feature template
 	Description pulumi.StringOutput `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayOutput `pulumi:"deviceTypes"`
-	// Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+	// Extended Anti-Replay Window
+	//   - Range: `10`-`2048`
+	//   - Default value: `256`
 	ExtendedArWindow pulumi.IntPtrOutput `pulumi:"extendedArWindow"`
 	// Variable name
 	ExtendedArWindowVariable pulumi.StringPtrOutput `pulumi:"extendedArWindowVariable"`
@@ -49,16 +50,20 @@ type CiscoSecurityFeatureTemplate struct {
 	Keys CiscoSecurityFeatureTemplateKeyArrayOutput `pulumi:"keys"`
 	// The name of the feature template
 	Name pulumi.StringOutput `pulumi:"name"`
-	// Enable or disable IPsec pairwise-keying - Default value: `false`
+	// Enable or disable IPsec pairwise-keying
+	//   - Default value: `false`
 	PairwiseKeying pulumi.BoolPtrOutput `pulumi:"pairwiseKeying"`
 	// Variable name
 	PairwiseKeyingVariable pulumi.StringPtrOutput `pulumi:"pairwiseKeyingVariable"`
-	// Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+	// Set how often to change the AES key for DTLS connections
+	//   - Range: `10`-`1209600`
+	//   - Default value: `86400`
 	RekeyInterval pulumi.IntPtrOutput `pulumi:"rekeyInterval"`
 	// Variable name
 	RekeyIntervalVariable pulumi.StringPtrOutput `pulumi:"rekeyIntervalVariable"`
-	// Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-	// `512`
+	// Set the sliding replay window size
+	//   - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+	//   - Default value: `512`
 	ReplayWindow pulumi.StringPtrOutput `pulumi:"replayWindow"`
 	// Variable name
 	ReplayWindowVariable pulumi.StringPtrOutput `pulumi:"replayWindowVariable"`
@@ -110,11 +115,12 @@ type ciscoSecurityFeatureTemplateState struct {
 	AuthenticationTypes []string `pulumi:"authenticationTypes"`
 	// The description of the feature template
 	Description *string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
-	// Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+	// Extended Anti-Replay Window
+	//   - Range: `10`-`2048`
+	//   - Default value: `256`
 	ExtendedArWindow *int `pulumi:"extendedArWindow"`
 	// Variable name
 	ExtendedArWindowVariable *string `pulumi:"extendedArWindowVariable"`
@@ -128,16 +134,20 @@ type ciscoSecurityFeatureTemplateState struct {
 	Keys []CiscoSecurityFeatureTemplateKey `pulumi:"keys"`
 	// The name of the feature template
 	Name *string `pulumi:"name"`
-	// Enable or disable IPsec pairwise-keying - Default value: `false`
+	// Enable or disable IPsec pairwise-keying
+	//   - Default value: `false`
 	PairwiseKeying *bool `pulumi:"pairwiseKeying"`
 	// Variable name
 	PairwiseKeyingVariable *string `pulumi:"pairwiseKeyingVariable"`
-	// Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+	// Set how often to change the AES key for DTLS connections
+	//   - Range: `10`-`1209600`
+	//   - Default value: `86400`
 	RekeyInterval *int `pulumi:"rekeyInterval"`
 	// Variable name
 	RekeyIntervalVariable *string `pulumi:"rekeyIntervalVariable"`
-	// Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-	// `512`
+	// Set the sliding replay window size
+	//   - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+	//   - Default value: `512`
 	ReplayWindow *string `pulumi:"replayWindow"`
 	// Variable name
 	ReplayWindowVariable *string `pulumi:"replayWindowVariable"`
@@ -154,11 +164,12 @@ type CiscoSecurityFeatureTemplateState struct {
 	AuthenticationTypes pulumi.StringArrayInput
 	// The description of the feature template
 	Description pulumi.StringPtrInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
-	// Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+	// Extended Anti-Replay Window
+	//   - Range: `10`-`2048`
+	//   - Default value: `256`
 	ExtendedArWindow pulumi.IntPtrInput
 	// Variable name
 	ExtendedArWindowVariable pulumi.StringPtrInput
@@ -172,16 +183,20 @@ type CiscoSecurityFeatureTemplateState struct {
 	Keys CiscoSecurityFeatureTemplateKeyArrayInput
 	// The name of the feature template
 	Name pulumi.StringPtrInput
-	// Enable or disable IPsec pairwise-keying - Default value: `false`
+	// Enable or disable IPsec pairwise-keying
+	//   - Default value: `false`
 	PairwiseKeying pulumi.BoolPtrInput
 	// Variable name
 	PairwiseKeyingVariable pulumi.StringPtrInput
-	// Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+	// Set how often to change the AES key for DTLS connections
+	//   - Range: `10`-`1209600`
+	//   - Default value: `86400`
 	RekeyInterval pulumi.IntPtrInput
 	// Variable name
 	RekeyIntervalVariable pulumi.StringPtrInput
-	// Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-	// `512`
+	// Set the sliding replay window size
+	//   - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+	//   - Default value: `512`
 	ReplayWindow pulumi.StringPtrInput
 	// Variable name
 	ReplayWindowVariable pulumi.StringPtrInput
@@ -202,11 +217,12 @@ type ciscoSecurityFeatureTemplateArgs struct {
 	AuthenticationTypes []string `pulumi:"authenticationTypes"`
 	// The description of the feature template
 	Description string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
-	// Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+	// Extended Anti-Replay Window
+	//   - Range: `10`-`2048`
+	//   - Default value: `256`
 	ExtendedArWindow *int `pulumi:"extendedArWindow"`
 	// Variable name
 	ExtendedArWindowVariable *string `pulumi:"extendedArWindowVariable"`
@@ -220,16 +236,20 @@ type ciscoSecurityFeatureTemplateArgs struct {
 	Keys []CiscoSecurityFeatureTemplateKey `pulumi:"keys"`
 	// The name of the feature template
 	Name *string `pulumi:"name"`
-	// Enable or disable IPsec pairwise-keying - Default value: `false`
+	// Enable or disable IPsec pairwise-keying
+	//   - Default value: `false`
 	PairwiseKeying *bool `pulumi:"pairwiseKeying"`
 	// Variable name
 	PairwiseKeyingVariable *string `pulumi:"pairwiseKeyingVariable"`
-	// Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+	// Set how often to change the AES key for DTLS connections
+	//   - Range: `10`-`1209600`
+	//   - Default value: `86400`
 	RekeyInterval *int `pulumi:"rekeyInterval"`
 	// Variable name
 	RekeyIntervalVariable *string `pulumi:"rekeyIntervalVariable"`
-	// Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-	// `512`
+	// Set the sliding replay window size
+	//   - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+	//   - Default value: `512`
 	ReplayWindow *string `pulumi:"replayWindow"`
 	// Variable name
 	ReplayWindowVariable *string `pulumi:"replayWindowVariable"`
@@ -243,11 +263,12 @@ type CiscoSecurityFeatureTemplateArgs struct {
 	AuthenticationTypes pulumi.StringArrayInput
 	// The description of the feature template
 	Description pulumi.StringInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
-	// Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+	// Extended Anti-Replay Window
+	//   - Range: `10`-`2048`
+	//   - Default value: `256`
 	ExtendedArWindow pulumi.IntPtrInput
 	// Variable name
 	ExtendedArWindowVariable pulumi.StringPtrInput
@@ -261,16 +282,20 @@ type CiscoSecurityFeatureTemplateArgs struct {
 	Keys CiscoSecurityFeatureTemplateKeyArrayInput
 	// The name of the feature template
 	Name pulumi.StringPtrInput
-	// Enable or disable IPsec pairwise-keying - Default value: `false`
+	// Enable or disable IPsec pairwise-keying
+	//   - Default value: `false`
 	PairwiseKeying pulumi.BoolPtrInput
 	// Variable name
 	PairwiseKeyingVariable pulumi.StringPtrInput
-	// Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+	// Set how often to change the AES key for DTLS connections
+	//   - Range: `10`-`1209600`
+	//   - Default value: `86400`
 	RekeyInterval pulumi.IntPtrInput
 	// Variable name
 	RekeyIntervalVariable pulumi.StringPtrInput
-	// Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-	// `512`
+	// Set the sliding replay window size
+	//   - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+	//   - Default value: `512`
 	ReplayWindow pulumi.StringPtrInput
 	// Variable name
 	ReplayWindowVariable pulumi.StringPtrInput
@@ -378,14 +403,15 @@ func (o CiscoSecurityFeatureTemplateOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v *CiscoSecurityFeatureTemplate) pulumi.StringOutput { return v.Description }).(pulumi.StringOutput)
 }
 
-// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+// List of supported device types
+//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 func (o CiscoSecurityFeatureTemplateOutput) DeviceTypes() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *CiscoSecurityFeatureTemplate) pulumi.StringArrayOutput { return v.DeviceTypes }).(pulumi.StringArrayOutput)
 }
 
-// Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+// Extended Anti-Replay Window
+//   - Range: `10`-`2048`
+//   - Default value: `256`
 func (o CiscoSecurityFeatureTemplateOutput) ExtendedArWindow() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoSecurityFeatureTemplate) pulumi.IntPtrOutput { return v.ExtendedArWindow }).(pulumi.IntPtrOutput)
 }
@@ -422,7 +448,8 @@ func (o CiscoSecurityFeatureTemplateOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *CiscoSecurityFeatureTemplate) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// Enable or disable IPsec pairwise-keying - Default value: `false`
+// Enable or disable IPsec pairwise-keying
+//   - Default value: `false`
 func (o CiscoSecurityFeatureTemplateOutput) PairwiseKeying() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoSecurityFeatureTemplate) pulumi.BoolPtrOutput { return v.PairwiseKeying }).(pulumi.BoolPtrOutput)
 }
@@ -432,7 +459,9 @@ func (o CiscoSecurityFeatureTemplateOutput) PairwiseKeyingVariable() pulumi.Stri
 	return o.ApplyT(func(v *CiscoSecurityFeatureTemplate) pulumi.StringPtrOutput { return v.PairwiseKeyingVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+// Set how often to change the AES key for DTLS connections
+//   - Range: `10`-`1209600`
+//   - Default value: `86400`
 func (o CiscoSecurityFeatureTemplateOutput) RekeyInterval() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoSecurityFeatureTemplate) pulumi.IntPtrOutput { return v.RekeyInterval }).(pulumi.IntPtrOutput)
 }
@@ -442,8 +471,9 @@ func (o CiscoSecurityFeatureTemplateOutput) RekeyIntervalVariable() pulumi.Strin
 	return o.ApplyT(func(v *CiscoSecurityFeatureTemplate) pulumi.StringPtrOutput { return v.RekeyIntervalVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-// `512`
+// Set the sliding replay window size
+//   - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+//   - Default value: `512`
 func (o CiscoSecurityFeatureTemplateOutput) ReplayWindow() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CiscoSecurityFeatureTemplate) pulumi.StringPtrOutput { return v.ReplayWindow }).(pulumi.StringPtrOutput)
 }

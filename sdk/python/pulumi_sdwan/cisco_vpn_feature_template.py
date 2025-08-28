@@ -57,13 +57,13 @@ class CiscoVpnFeatureTemplateArgs:
         """
         The set of arguments for constructing a CiscoVpnFeatureTemplate resource.
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[Sequence[pulumi.Input['CiscoVpnFeatureTemplateDnsHostArgs']]] dns_hosts: Static DNS mapping
         :param pulumi.Input[Sequence[pulumi.Input['CiscoVpnFeatureTemplateDnsIpv4ServerArgs']]] dns_ipv4_servers: DNS
         :param pulumi.Input[Sequence[pulumi.Input['CiscoVpnFeatureTemplateDnsIpv6ServerArgs']]] dns_ipv6_servers: DNS
-        :param pulumi.Input[_builtins.bool] enhance_ecmp_keying: Optional packet fields for ECMP keying - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enhance_ecmp_keying: Optional packet fields for ECMP keying
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] enhance_ecmp_keying_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['CiscoVpnFeatureTemplateIpv4StaticGreRouteArgs']]] ipv4_static_gre_routes: Configure routes pointing to a GRE tunnel
         :param pulumi.Input[Sequence[pulumi.Input['CiscoVpnFeatureTemplateIpv4StaticIpsecRouteArgs']]] ipv4_static_ipsec_routes: Configure routes pointing to a IPSEC tunnel
@@ -73,9 +73,11 @@ class CiscoVpnFeatureTemplateArgs:
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[Sequence[pulumi.Input['CiscoVpnFeatureTemplateNat64PoolArgs']]] nat64_pools: Set NAT64 v4 pool range
         :param pulumi.Input[Sequence[pulumi.Input['CiscoVpnFeatureTemplateNatPoolArgs']]] nat_pools: Configure NAT Pool entries
-        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv4: omp-admin-distance-ipv4 - Range: `1`-`255`
+        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv4: omp-admin-distance-ipv4
+                 - Range: `1`-`255`
         :param pulumi.Input[_builtins.str] omp_admin_distance_ipv4_variable: Variable name
-        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv6: omp-admin-distance-ipv6 - Range: `1`-`255`
+        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv6: omp-admin-distance-ipv6
+                 - Range: `1`-`255`
         :param pulumi.Input[_builtins.str] omp_admin_distance_ipv6_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['CiscoVpnFeatureTemplateOmpAdvertiseIpv4RouteArgs']]] omp_advertise_ipv4_routes: Advertise routes to OMP
         :param pulumi.Input[Sequence[pulumi.Input['CiscoVpnFeatureTemplateOmpAdvertiseIpv6RouteArgs']]] omp_advertise_ipv6_routes: Advertise routes to OMP
@@ -87,8 +89,12 @@ class CiscoVpnFeatureTemplateArgs:
         :param pulumi.Input[Sequence[pulumi.Input['CiscoVpnFeatureTemplateServiceArgs']]] services: Configure services
         :param pulumi.Input[Sequence[pulumi.Input['CiscoVpnFeatureTemplateStaticNatRuleArgs']]] static_nat_rules: Configure static NAT entries
         :param pulumi.Input[Sequence[pulumi.Input['CiscoVpnFeatureTemplateStaticNatSubnetRuleArgs']]] static_nat_subnet_rules: Configure static NAT Subnet entries
-        :param pulumi.Input[_builtins.int] tenant_vpn_id: Tenant VPN - Range: `0`-`65527` - Default value: `0`
-        :param pulumi.Input[_builtins.int] vpn_id: List of VPN instances - Range: `0`-`65527` - Default value: `0`
+        :param pulumi.Input[_builtins.int] tenant_vpn_id: Tenant VPN
+                 - Range: `0`-`65527`
+                 - Default value: `0`
+        :param pulumi.Input[_builtins.int] vpn_id: List of VPN instances
+                 - Range: `0`-`65527`
+                 - Default value: `0`
         :param pulumi.Input[_builtins.str] vpn_name: Name
         :param pulumi.Input[_builtins.str] vpn_name_variable: Variable name
         """
@@ -173,9 +179,8 @@ class CiscoVpnFeatureTemplateArgs:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -223,7 +228,8 @@ class CiscoVpnFeatureTemplateArgs:
     @pulumi.getter(name="enhanceEcmpKeying")
     def enhance_ecmp_keying(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Optional packet fields for ECMP keying - Default value: `false`
+        Optional packet fields for ECMP keying
+          - Default value: `false`
         """
         return pulumi.get(self, "enhance_ecmp_keying")
 
@@ -343,7 +349,8 @@ class CiscoVpnFeatureTemplateArgs:
     @pulumi.getter(name="ompAdminDistanceIpv4")
     def omp_admin_distance_ipv4(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        omp-admin-distance-ipv4 - Range: `1`-`255`
+        omp-admin-distance-ipv4
+          - Range: `1`-`255`
         """
         return pulumi.get(self, "omp_admin_distance_ipv4")
 
@@ -367,7 +374,8 @@ class CiscoVpnFeatureTemplateArgs:
     @pulumi.getter(name="ompAdminDistanceIpv6")
     def omp_admin_distance_ipv6(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        omp-admin-distance-ipv6 - Range: `1`-`255`
+        omp-admin-distance-ipv6
+          - Range: `1`-`255`
         """
         return pulumi.get(self, "omp_admin_distance_ipv6")
 
@@ -511,7 +519,9 @@ class CiscoVpnFeatureTemplateArgs:
     @pulumi.getter(name="tenantVpnId")
     def tenant_vpn_id(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Tenant VPN - Range: `0`-`65527` - Default value: `0`
+        Tenant VPN
+          - Range: `0`-`65527`
+          - Default value: `0`
         """
         return pulumi.get(self, "tenant_vpn_id")
 
@@ -523,7 +533,9 @@ class CiscoVpnFeatureTemplateArgs:
     @pulumi.getter(name="vpnId")
     def vpn_id(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        List of VPN instances - Range: `0`-`65527` - Default value: `0`
+        List of VPN instances
+          - Range: `0`-`65527`
+          - Default value: `0`
         """
         return pulumi.get(self, "vpn_id")
 
@@ -597,13 +609,13 @@ class _CiscoVpnFeatureTemplateState:
         """
         Input properties used for looking up and filtering CiscoVpnFeatureTemplate resources.
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[Sequence[pulumi.Input['CiscoVpnFeatureTemplateDnsHostArgs']]] dns_hosts: Static DNS mapping
         :param pulumi.Input[Sequence[pulumi.Input['CiscoVpnFeatureTemplateDnsIpv4ServerArgs']]] dns_ipv4_servers: DNS
         :param pulumi.Input[Sequence[pulumi.Input['CiscoVpnFeatureTemplateDnsIpv6ServerArgs']]] dns_ipv6_servers: DNS
-        :param pulumi.Input[_builtins.bool] enhance_ecmp_keying: Optional packet fields for ECMP keying - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enhance_ecmp_keying: Optional packet fields for ECMP keying
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] enhance_ecmp_keying_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['CiscoVpnFeatureTemplateIpv4StaticGreRouteArgs']]] ipv4_static_gre_routes: Configure routes pointing to a GRE tunnel
         :param pulumi.Input[Sequence[pulumi.Input['CiscoVpnFeatureTemplateIpv4StaticIpsecRouteArgs']]] ipv4_static_ipsec_routes: Configure routes pointing to a IPSEC tunnel
@@ -613,9 +625,11 @@ class _CiscoVpnFeatureTemplateState:
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[Sequence[pulumi.Input['CiscoVpnFeatureTemplateNat64PoolArgs']]] nat64_pools: Set NAT64 v4 pool range
         :param pulumi.Input[Sequence[pulumi.Input['CiscoVpnFeatureTemplateNatPoolArgs']]] nat_pools: Configure NAT Pool entries
-        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv4: omp-admin-distance-ipv4 - Range: `1`-`255`
+        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv4: omp-admin-distance-ipv4
+                 - Range: `1`-`255`
         :param pulumi.Input[_builtins.str] omp_admin_distance_ipv4_variable: Variable name
-        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv6: omp-admin-distance-ipv6 - Range: `1`-`255`
+        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv6: omp-admin-distance-ipv6
+                 - Range: `1`-`255`
         :param pulumi.Input[_builtins.str] omp_admin_distance_ipv6_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['CiscoVpnFeatureTemplateOmpAdvertiseIpv4RouteArgs']]] omp_advertise_ipv4_routes: Advertise routes to OMP
         :param pulumi.Input[Sequence[pulumi.Input['CiscoVpnFeatureTemplateOmpAdvertiseIpv6RouteArgs']]] omp_advertise_ipv6_routes: Advertise routes to OMP
@@ -628,9 +642,13 @@ class _CiscoVpnFeatureTemplateState:
         :param pulumi.Input[Sequence[pulumi.Input['CiscoVpnFeatureTemplateStaticNatRuleArgs']]] static_nat_rules: Configure static NAT entries
         :param pulumi.Input[Sequence[pulumi.Input['CiscoVpnFeatureTemplateStaticNatSubnetRuleArgs']]] static_nat_subnet_rules: Configure static NAT Subnet entries
         :param pulumi.Input[_builtins.str] template_type: The template type
-        :param pulumi.Input[_builtins.int] tenant_vpn_id: Tenant VPN - Range: `0`-`65527` - Default value: `0`
+        :param pulumi.Input[_builtins.int] tenant_vpn_id: Tenant VPN
+                 - Range: `0`-`65527`
+                 - Default value: `0`
         :param pulumi.Input[_builtins.int] version: The version of the feature template
-        :param pulumi.Input[_builtins.int] vpn_id: List of VPN instances - Range: `0`-`65527` - Default value: `0`
+        :param pulumi.Input[_builtins.int] vpn_id: List of VPN instances
+                 - Range: `0`-`65527`
+                 - Default value: `0`
         :param pulumi.Input[_builtins.str] vpn_name: Name
         :param pulumi.Input[_builtins.str] vpn_name_variable: Variable name
         """
@@ -721,9 +739,8 @@ class _CiscoVpnFeatureTemplateState:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -771,7 +788,8 @@ class _CiscoVpnFeatureTemplateState:
     @pulumi.getter(name="enhanceEcmpKeying")
     def enhance_ecmp_keying(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Optional packet fields for ECMP keying - Default value: `false`
+        Optional packet fields for ECMP keying
+          - Default value: `false`
         """
         return pulumi.get(self, "enhance_ecmp_keying")
 
@@ -891,7 +909,8 @@ class _CiscoVpnFeatureTemplateState:
     @pulumi.getter(name="ompAdminDistanceIpv4")
     def omp_admin_distance_ipv4(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        omp-admin-distance-ipv4 - Range: `1`-`255`
+        omp-admin-distance-ipv4
+          - Range: `1`-`255`
         """
         return pulumi.get(self, "omp_admin_distance_ipv4")
 
@@ -915,7 +934,8 @@ class _CiscoVpnFeatureTemplateState:
     @pulumi.getter(name="ompAdminDistanceIpv6")
     def omp_admin_distance_ipv6(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        omp-admin-distance-ipv6 - Range: `1`-`255`
+        omp-admin-distance-ipv6
+          - Range: `1`-`255`
         """
         return pulumi.get(self, "omp_admin_distance_ipv6")
 
@@ -1071,7 +1091,9 @@ class _CiscoVpnFeatureTemplateState:
     @pulumi.getter(name="tenantVpnId")
     def tenant_vpn_id(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Tenant VPN - Range: `0`-`65527` - Default value: `0`
+        Tenant VPN
+          - Range: `0`-`65527`
+          - Default value: `0`
         """
         return pulumi.get(self, "tenant_vpn_id")
 
@@ -1095,7 +1117,9 @@ class _CiscoVpnFeatureTemplateState:
     @pulumi.getter(name="vpnId")
     def vpn_id(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        List of VPN instances - Range: `0`-`65527` - Default value: `0`
+        List of VPN instances
+          - Range: `0`-`65527`
+          - Default value: `0`
         """
         return pulumi.get(self, "vpn_id")
 
@@ -1183,13 +1207,13 @@ class CiscoVpnFeatureTemplate(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnFeatureTemplateDnsHostArgs', 'CiscoVpnFeatureTemplateDnsHostArgsDict']]]] dns_hosts: Static DNS mapping
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnFeatureTemplateDnsIpv4ServerArgs', 'CiscoVpnFeatureTemplateDnsIpv4ServerArgsDict']]]] dns_ipv4_servers: DNS
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnFeatureTemplateDnsIpv6ServerArgs', 'CiscoVpnFeatureTemplateDnsIpv6ServerArgsDict']]]] dns_ipv6_servers: DNS
-        :param pulumi.Input[_builtins.bool] enhance_ecmp_keying: Optional packet fields for ECMP keying - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enhance_ecmp_keying: Optional packet fields for ECMP keying
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] enhance_ecmp_keying_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnFeatureTemplateIpv4StaticGreRouteArgs', 'CiscoVpnFeatureTemplateIpv4StaticGreRouteArgsDict']]]] ipv4_static_gre_routes: Configure routes pointing to a GRE tunnel
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnFeatureTemplateIpv4StaticIpsecRouteArgs', 'CiscoVpnFeatureTemplateIpv4StaticIpsecRouteArgsDict']]]] ipv4_static_ipsec_routes: Configure routes pointing to a IPSEC tunnel
@@ -1199,9 +1223,11 @@ class CiscoVpnFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnFeatureTemplateNat64PoolArgs', 'CiscoVpnFeatureTemplateNat64PoolArgsDict']]]] nat64_pools: Set NAT64 v4 pool range
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnFeatureTemplateNatPoolArgs', 'CiscoVpnFeatureTemplateNatPoolArgsDict']]]] nat_pools: Configure NAT Pool entries
-        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv4: omp-admin-distance-ipv4 - Range: `1`-`255`
+        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv4: omp-admin-distance-ipv4
+                 - Range: `1`-`255`
         :param pulumi.Input[_builtins.str] omp_admin_distance_ipv4_variable: Variable name
-        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv6: omp-admin-distance-ipv6 - Range: `1`-`255`
+        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv6: omp-admin-distance-ipv6
+                 - Range: `1`-`255`
         :param pulumi.Input[_builtins.str] omp_admin_distance_ipv6_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnFeatureTemplateOmpAdvertiseIpv4RouteArgs', 'CiscoVpnFeatureTemplateOmpAdvertiseIpv4RouteArgsDict']]]] omp_advertise_ipv4_routes: Advertise routes to OMP
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnFeatureTemplateOmpAdvertiseIpv6RouteArgs', 'CiscoVpnFeatureTemplateOmpAdvertiseIpv6RouteArgsDict']]]] omp_advertise_ipv6_routes: Advertise routes to OMP
@@ -1213,8 +1239,12 @@ class CiscoVpnFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnFeatureTemplateServiceArgs', 'CiscoVpnFeatureTemplateServiceArgsDict']]]] services: Configure services
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnFeatureTemplateStaticNatRuleArgs', 'CiscoVpnFeatureTemplateStaticNatRuleArgsDict']]]] static_nat_rules: Configure static NAT entries
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnFeatureTemplateStaticNatSubnetRuleArgs', 'CiscoVpnFeatureTemplateStaticNatSubnetRuleArgsDict']]]] static_nat_subnet_rules: Configure static NAT Subnet entries
-        :param pulumi.Input[_builtins.int] tenant_vpn_id: Tenant VPN - Range: `0`-`65527` - Default value: `0`
-        :param pulumi.Input[_builtins.int] vpn_id: List of VPN instances - Range: `0`-`65527` - Default value: `0`
+        :param pulumi.Input[_builtins.int] tenant_vpn_id: Tenant VPN
+                 - Range: `0`-`65527`
+                 - Default value: `0`
+        :param pulumi.Input[_builtins.int] vpn_id: List of VPN instances
+                 - Range: `0`-`65527`
+                 - Default value: `0`
         :param pulumi.Input[_builtins.str] vpn_name: Name
         :param pulumi.Input[_builtins.str] vpn_name_variable: Variable name
         """
@@ -1385,13 +1415,13 @@ class CiscoVpnFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnFeatureTemplateDnsHostArgs', 'CiscoVpnFeatureTemplateDnsHostArgsDict']]]] dns_hosts: Static DNS mapping
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnFeatureTemplateDnsIpv4ServerArgs', 'CiscoVpnFeatureTemplateDnsIpv4ServerArgsDict']]]] dns_ipv4_servers: DNS
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnFeatureTemplateDnsIpv6ServerArgs', 'CiscoVpnFeatureTemplateDnsIpv6ServerArgsDict']]]] dns_ipv6_servers: DNS
-        :param pulumi.Input[_builtins.bool] enhance_ecmp_keying: Optional packet fields for ECMP keying - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enhance_ecmp_keying: Optional packet fields for ECMP keying
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] enhance_ecmp_keying_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnFeatureTemplateIpv4StaticGreRouteArgs', 'CiscoVpnFeatureTemplateIpv4StaticGreRouteArgsDict']]]] ipv4_static_gre_routes: Configure routes pointing to a GRE tunnel
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnFeatureTemplateIpv4StaticIpsecRouteArgs', 'CiscoVpnFeatureTemplateIpv4StaticIpsecRouteArgsDict']]]] ipv4_static_ipsec_routes: Configure routes pointing to a IPSEC tunnel
@@ -1401,9 +1431,11 @@ class CiscoVpnFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnFeatureTemplateNat64PoolArgs', 'CiscoVpnFeatureTemplateNat64PoolArgsDict']]]] nat64_pools: Set NAT64 v4 pool range
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnFeatureTemplateNatPoolArgs', 'CiscoVpnFeatureTemplateNatPoolArgsDict']]]] nat_pools: Configure NAT Pool entries
-        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv4: omp-admin-distance-ipv4 - Range: `1`-`255`
+        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv4: omp-admin-distance-ipv4
+                 - Range: `1`-`255`
         :param pulumi.Input[_builtins.str] omp_admin_distance_ipv4_variable: Variable name
-        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv6: omp-admin-distance-ipv6 - Range: `1`-`255`
+        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv6: omp-admin-distance-ipv6
+                 - Range: `1`-`255`
         :param pulumi.Input[_builtins.str] omp_admin_distance_ipv6_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnFeatureTemplateOmpAdvertiseIpv4RouteArgs', 'CiscoVpnFeatureTemplateOmpAdvertiseIpv4RouteArgsDict']]]] omp_advertise_ipv4_routes: Advertise routes to OMP
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnFeatureTemplateOmpAdvertiseIpv6RouteArgs', 'CiscoVpnFeatureTemplateOmpAdvertiseIpv6RouteArgsDict']]]] omp_advertise_ipv6_routes: Advertise routes to OMP
@@ -1416,9 +1448,13 @@ class CiscoVpnFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnFeatureTemplateStaticNatRuleArgs', 'CiscoVpnFeatureTemplateStaticNatRuleArgsDict']]]] static_nat_rules: Configure static NAT entries
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoVpnFeatureTemplateStaticNatSubnetRuleArgs', 'CiscoVpnFeatureTemplateStaticNatSubnetRuleArgsDict']]]] static_nat_subnet_rules: Configure static NAT Subnet entries
         :param pulumi.Input[_builtins.str] template_type: The template type
-        :param pulumi.Input[_builtins.int] tenant_vpn_id: Tenant VPN - Range: `0`-`65527` - Default value: `0`
+        :param pulumi.Input[_builtins.int] tenant_vpn_id: Tenant VPN
+                 - Range: `0`-`65527`
+                 - Default value: `0`
         :param pulumi.Input[_builtins.int] version: The version of the feature template
-        :param pulumi.Input[_builtins.int] vpn_id: List of VPN instances - Range: `0`-`65527` - Default value: `0`
+        :param pulumi.Input[_builtins.int] vpn_id: List of VPN instances
+                 - Range: `0`-`65527`
+                 - Default value: `0`
         :param pulumi.Input[_builtins.str] vpn_name: Name
         :param pulumi.Input[_builtins.str] vpn_name_variable: Variable name
         """
@@ -1475,9 +1511,8 @@ class CiscoVpnFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -1509,7 +1544,8 @@ class CiscoVpnFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="enhanceEcmpKeying")
     def enhance_ecmp_keying(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Optional packet fields for ECMP keying - Default value: `false`
+        Optional packet fields for ECMP keying
+          - Default value: `false`
         """
         return pulumi.get(self, "enhance_ecmp_keying")
 
@@ -1589,7 +1625,8 @@ class CiscoVpnFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="ompAdminDistanceIpv4")
     def omp_admin_distance_ipv4(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        omp-admin-distance-ipv4 - Range: `1`-`255`
+        omp-admin-distance-ipv4
+          - Range: `1`-`255`
         """
         return pulumi.get(self, "omp_admin_distance_ipv4")
 
@@ -1605,7 +1642,8 @@ class CiscoVpnFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="ompAdminDistanceIpv6")
     def omp_admin_distance_ipv6(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        omp-admin-distance-ipv6 - Range: `1`-`255`
+        omp-admin-distance-ipv6
+          - Range: `1`-`255`
         """
         return pulumi.get(self, "omp_admin_distance_ipv6")
 
@@ -1709,7 +1747,9 @@ class CiscoVpnFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="tenantVpnId")
     def tenant_vpn_id(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Tenant VPN - Range: `0`-`65527` - Default value: `0`
+        Tenant VPN
+          - Range: `0`-`65527`
+          - Default value: `0`
         """
         return pulumi.get(self, "tenant_vpn_id")
 
@@ -1725,7 +1765,9 @@ class CiscoVpnFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="vpnId")
     def vpn_id(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        List of VPN instances - Range: `0`-`65527` - Default value: `0`
+        List of VPN instances
+          - Range: `0`-`65527`
+          - Default value: `0`
         """
         return pulumi.get(self, "vpn_id")
 

@@ -51,14 +51,15 @@ class CedgePimFeatureTemplateArgs:
         """
         The set of arguments for constructing a CedgePimFeatureTemplate resource.
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.bool] auto_rp: Enable or disable auto-RP - Default value: `false`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.bool] auto_rp: Enable or disable auto-RP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] auto_rp_variable: Variable name
         :param pulumi.Input[_builtins.str] bsr_candidate: Set Autonomic-Networking virtual interface
         :param pulumi.Input[_builtins.str] bsr_candidate_variable: Variable name
-        :param pulumi.Input[_builtins.bool] default: Turn SSM On / Off - Default value: `false`
+        :param pulumi.Input[_builtins.bool] default: Turn SSM On / Off
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] default_variable: Variable name
         :param pulumi.Input[_builtins.str] hash_mask_length: Hash Mask length for RP selection
         :param pulumi.Input[_builtins.str] hash_mask_length_variable: Variable name
@@ -66,7 +67,8 @@ class CedgePimFeatureTemplateArgs:
         :param pulumi.Input[_builtins.str] interface_name_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['CedgePimFeatureTemplateInterfaceArgs']]] interfaces: Set PIM interface parameters
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.int] priority: Set RP candidate priority - Range: `0`-`255`
+        :param pulumi.Input[_builtins.int] priority: Set RP candidate priority
+                 - Range: `0`-`255`
         :param pulumi.Input[_builtins.str] priority_variable: Variable name
         :param pulumi.Input[_builtins.str] range: Set Access List for PIM SSM
         :param pulumi.Input[_builtins.str] range_variable: Variable name
@@ -75,9 +77,11 @@ class CedgePimFeatureTemplateArgs:
         :param pulumi.Input[_builtins.str] rp_candidate_access_list: Set BSR RP candidate filter
         :param pulumi.Input[_builtins.str] rp_candidate_access_list_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['CedgePimFeatureTemplateRpCandidateArgs']]] rp_candidates: Set RP Discovery Scope
-        :param pulumi.Input[_builtins.int] scope: Set RP Discovery Scope - Range: `1`-`255`
+        :param pulumi.Input[_builtins.int] scope: Set RP Discovery Scope
+                 - Range: `1`-`255`
         :param pulumi.Input[_builtins.str] scope_variable: Variable name
-        :param pulumi.Input[_builtins.str] spt_threshold: Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity`
+        :param pulumi.Input[_builtins.str] spt_threshold: Set when PIM router joins the SPT (kbps)
+                 - Choices: `0`, `infinity`
         :param pulumi.Input[_builtins.str] spt_threshold_variable: Variable name
         """
         pulumi.set(__self__, "description", description)
@@ -149,9 +153,8 @@ class CedgePimFeatureTemplateArgs:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -163,7 +166,8 @@ class CedgePimFeatureTemplateArgs:
     @pulumi.getter(name="autoRp")
     def auto_rp(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable or disable auto-RP - Default value: `false`
+        Enable or disable auto-RP
+          - Default value: `false`
         """
         return pulumi.get(self, "auto_rp")
 
@@ -211,7 +215,8 @@ class CedgePimFeatureTemplateArgs:
     @pulumi.getter
     def default(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Turn SSM On / Off - Default value: `false`
+        Turn SSM On / Off
+          - Default value: `false`
         """
         return pulumi.get(self, "default")
 
@@ -307,7 +312,8 @@ class CedgePimFeatureTemplateArgs:
     @pulumi.getter
     def priority(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set RP candidate priority - Range: `0`-`255`
+        Set RP candidate priority
+          - Range: `0`-`255`
         """
         return pulumi.get(self, "priority")
 
@@ -415,7 +421,8 @@ class CedgePimFeatureTemplateArgs:
     @pulumi.getter
     def scope(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set RP Discovery Scope - Range: `1`-`255`
+        Set RP Discovery Scope
+          - Range: `1`-`255`
         """
         return pulumi.get(self, "scope")
 
@@ -439,7 +446,8 @@ class CedgePimFeatureTemplateArgs:
     @pulumi.getter(name="sptThreshold")
     def spt_threshold(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity`
+        Set when PIM router joins the SPT (kbps)
+          - Choices: `0`, `infinity`
         """
         return pulumi.get(self, "spt_threshold")
 
@@ -494,23 +502,25 @@ class _CedgePimFeatureTemplateState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering CedgePimFeatureTemplate resources.
-        :param pulumi.Input[_builtins.bool] auto_rp: Enable or disable auto-RP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] auto_rp: Enable or disable auto-RP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] auto_rp_variable: Variable name
         :param pulumi.Input[_builtins.str] bsr_candidate: Set Autonomic-Networking virtual interface
         :param pulumi.Input[_builtins.str] bsr_candidate_variable: Variable name
-        :param pulumi.Input[_builtins.bool] default: Turn SSM On / Off - Default value: `false`
+        :param pulumi.Input[_builtins.bool] default: Turn SSM On / Off
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] default_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[_builtins.str] hash_mask_length: Hash Mask length for RP selection
         :param pulumi.Input[_builtins.str] hash_mask_length_variable: Variable name
         :param pulumi.Input[_builtins.str] interface_name: Set RP Discovery Interface Name
         :param pulumi.Input[_builtins.str] interface_name_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['CedgePimFeatureTemplateInterfaceArgs']]] interfaces: Set PIM interface parameters
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.int] priority: Set RP candidate priority - Range: `0`-`255`
+        :param pulumi.Input[_builtins.int] priority: Set RP candidate priority
+                 - Range: `0`-`255`
         :param pulumi.Input[_builtins.str] priority_variable: Variable name
         :param pulumi.Input[_builtins.str] range: Set Access List for PIM SSM
         :param pulumi.Input[_builtins.str] range_variable: Variable name
@@ -519,9 +529,11 @@ class _CedgePimFeatureTemplateState:
         :param pulumi.Input[_builtins.str] rp_candidate_access_list: Set BSR RP candidate filter
         :param pulumi.Input[_builtins.str] rp_candidate_access_list_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['CedgePimFeatureTemplateRpCandidateArgs']]] rp_candidates: Set RP Discovery Scope
-        :param pulumi.Input[_builtins.int] scope: Set RP Discovery Scope - Range: `1`-`255`
+        :param pulumi.Input[_builtins.int] scope: Set RP Discovery Scope
+                 - Range: `1`-`255`
         :param pulumi.Input[_builtins.str] scope_variable: Variable name
-        :param pulumi.Input[_builtins.str] spt_threshold: Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity`
+        :param pulumi.Input[_builtins.str] spt_threshold: Set when PIM router joins the SPT (kbps)
+                 - Choices: `0`, `infinity`
         :param pulumi.Input[_builtins.str] spt_threshold_variable: Variable name
         :param pulumi.Input[_builtins.str] template_type: The template type
         :param pulumi.Input[_builtins.int] version: The version of the feature template
@@ -589,7 +601,8 @@ class _CedgePimFeatureTemplateState:
     @pulumi.getter(name="autoRp")
     def auto_rp(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable or disable auto-RP - Default value: `false`
+        Enable or disable auto-RP
+          - Default value: `false`
         """
         return pulumi.get(self, "auto_rp")
 
@@ -637,7 +650,8 @@ class _CedgePimFeatureTemplateState:
     @pulumi.getter
     def default(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Turn SSM On / Off - Default value: `false`
+        Turn SSM On / Off
+          - Default value: `false`
         """
         return pulumi.get(self, "default")
 
@@ -673,9 +687,8 @@ class _CedgePimFeatureTemplateState:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -759,7 +772,8 @@ class _CedgePimFeatureTemplateState:
     @pulumi.getter
     def priority(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set RP candidate priority - Range: `0`-`255`
+        Set RP candidate priority
+          - Range: `0`-`255`
         """
         return pulumi.get(self, "priority")
 
@@ -867,7 +881,8 @@ class _CedgePimFeatureTemplateState:
     @pulumi.getter
     def scope(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set RP Discovery Scope - Range: `1`-`255`
+        Set RP Discovery Scope
+          - Range: `1`-`255`
         """
         return pulumi.get(self, "scope")
 
@@ -891,7 +906,8 @@ class _CedgePimFeatureTemplateState:
     @pulumi.getter(name="sptThreshold")
     def spt_threshold(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity`
+        Set when PIM router joins the SPT (kbps)
+          - Choices: `0`, `infinity`
         """
         return pulumi.get(self, "spt_threshold")
 
@@ -984,23 +1000,25 @@ class CedgePimFeatureTemplate(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.bool] auto_rp: Enable or disable auto-RP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] auto_rp: Enable or disable auto-RP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] auto_rp_variable: Variable name
         :param pulumi.Input[_builtins.str] bsr_candidate: Set Autonomic-Networking virtual interface
         :param pulumi.Input[_builtins.str] bsr_candidate_variable: Variable name
-        :param pulumi.Input[_builtins.bool] default: Turn SSM On / Off - Default value: `false`
+        :param pulumi.Input[_builtins.bool] default: Turn SSM On / Off
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] default_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[_builtins.str] hash_mask_length: Hash Mask length for RP selection
         :param pulumi.Input[_builtins.str] hash_mask_length_variable: Variable name
         :param pulumi.Input[_builtins.str] interface_name: Set RP Discovery Interface Name
         :param pulumi.Input[_builtins.str] interface_name_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateInterfaceArgs', 'CedgePimFeatureTemplateInterfaceArgsDict']]]] interfaces: Set PIM interface parameters
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.int] priority: Set RP candidate priority - Range: `0`-`255`
+        :param pulumi.Input[_builtins.int] priority: Set RP candidate priority
+                 - Range: `0`-`255`
         :param pulumi.Input[_builtins.str] priority_variable: Variable name
         :param pulumi.Input[_builtins.str] range: Set Access List for PIM SSM
         :param pulumi.Input[_builtins.str] range_variable: Variable name
@@ -1009,9 +1027,11 @@ class CedgePimFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] rp_candidate_access_list: Set BSR RP candidate filter
         :param pulumi.Input[_builtins.str] rp_candidate_access_list_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateRpCandidateArgs', 'CedgePimFeatureTemplateRpCandidateArgsDict']]]] rp_candidates: Set RP Discovery Scope
-        :param pulumi.Input[_builtins.int] scope: Set RP Discovery Scope - Range: `1`-`255`
+        :param pulumi.Input[_builtins.int] scope: Set RP Discovery Scope
+                 - Range: `1`-`255`
         :param pulumi.Input[_builtins.str] scope_variable: Variable name
-        :param pulumi.Input[_builtins.str] spt_threshold: Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity`
+        :param pulumi.Input[_builtins.str] spt_threshold: Set when PIM router joins the SPT (kbps)
+                 - Choices: `0`, `infinity`
         :param pulumi.Input[_builtins.str] spt_threshold_variable: Variable name
         """
         ...
@@ -1162,23 +1182,25 @@ class CedgePimFeatureTemplate(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.bool] auto_rp: Enable or disable auto-RP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] auto_rp: Enable or disable auto-RP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] auto_rp_variable: Variable name
         :param pulumi.Input[_builtins.str] bsr_candidate: Set Autonomic-Networking virtual interface
         :param pulumi.Input[_builtins.str] bsr_candidate_variable: Variable name
-        :param pulumi.Input[_builtins.bool] default: Turn SSM On / Off - Default value: `false`
+        :param pulumi.Input[_builtins.bool] default: Turn SSM On / Off
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] default_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[_builtins.str] hash_mask_length: Hash Mask length for RP selection
         :param pulumi.Input[_builtins.str] hash_mask_length_variable: Variable name
         :param pulumi.Input[_builtins.str] interface_name: Set RP Discovery Interface Name
         :param pulumi.Input[_builtins.str] interface_name_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateInterfaceArgs', 'CedgePimFeatureTemplateInterfaceArgsDict']]]] interfaces: Set PIM interface parameters
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.int] priority: Set RP candidate priority - Range: `0`-`255`
+        :param pulumi.Input[_builtins.int] priority: Set RP candidate priority
+                 - Range: `0`-`255`
         :param pulumi.Input[_builtins.str] priority_variable: Variable name
         :param pulumi.Input[_builtins.str] range: Set Access List for PIM SSM
         :param pulumi.Input[_builtins.str] range_variable: Variable name
@@ -1187,9 +1209,11 @@ class CedgePimFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] rp_candidate_access_list: Set BSR RP candidate filter
         :param pulumi.Input[_builtins.str] rp_candidate_access_list_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['CedgePimFeatureTemplateRpCandidateArgs', 'CedgePimFeatureTemplateRpCandidateArgsDict']]]] rp_candidates: Set RP Discovery Scope
-        :param pulumi.Input[_builtins.int] scope: Set RP Discovery Scope - Range: `1`-`255`
+        :param pulumi.Input[_builtins.int] scope: Set RP Discovery Scope
+                 - Range: `1`-`255`
         :param pulumi.Input[_builtins.str] scope_variable: Variable name
-        :param pulumi.Input[_builtins.str] spt_threshold: Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity`
+        :param pulumi.Input[_builtins.str] spt_threshold: Set when PIM router joins the SPT (kbps)
+                 - Choices: `0`, `infinity`
         :param pulumi.Input[_builtins.str] spt_threshold_variable: Variable name
         :param pulumi.Input[_builtins.str] template_type: The template type
         :param pulumi.Input[_builtins.int] version: The version of the feature template
@@ -1233,7 +1257,8 @@ class CedgePimFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="autoRp")
     def auto_rp(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Enable or disable auto-RP - Default value: `false`
+        Enable or disable auto-RP
+          - Default value: `false`
         """
         return pulumi.get(self, "auto_rp")
 
@@ -1265,7 +1290,8 @@ class CedgePimFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter
     def default(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Turn SSM On / Off - Default value: `false`
+        Turn SSM On / Off
+          - Default value: `false`
         """
         return pulumi.get(self, "default")
 
@@ -1289,9 +1315,8 @@ class CedgePimFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -1347,7 +1372,8 @@ class CedgePimFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter
     def priority(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set RP candidate priority - Range: `0`-`255`
+        Set RP candidate priority
+          - Range: `0`-`255`
         """
         return pulumi.get(self, "priority")
 
@@ -1419,7 +1445,8 @@ class CedgePimFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter
     def scope(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set RP Discovery Scope - Range: `1`-`255`
+        Set RP Discovery Scope
+          - Range: `1`-`255`
         """
         return pulumi.get(self, "scope")
 
@@ -1435,7 +1462,8 @@ class CedgePimFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="sptThreshold")
     def spt_threshold(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity`
+        Set when PIM router joins the SPT (kbps)
+          - Choices: `0`, `infinity`
         """
         return pulumi.get(self, "spt_threshold")
 

@@ -55,37 +55,54 @@ class CiscoOmpFeatureTemplateArgs:
         """
         The set of arguments for constructing a CiscoOmpFeatureTemplate resource.
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[Sequence[pulumi.Input['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs']]] advertise_ipv4_routes: Advertise locally learned routes to OMP
         :param pulumi.Input[Sequence[pulumi.Input['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs']]] advertise_ipv6_routes: Advertise locally learned routes to OMP
-        :param pulumi.Input[_builtins.int] advertisement_interval: Set the time between OMP Update packets - Range: `0`-`65535` - Default value: `1`
+        :param pulumi.Input[_builtins.int] advertisement_interval: Set the time between OMP Update packets
+                 - Range: `0`-`65535`
+                 - Default value: `1`
         :param pulumi.Input[_builtins.str] advertisement_interval_variable: Variable name
-        :param pulumi.Input[_builtins.int] ecmp_limit: Set maximum number of OMP paths to install in vEdge route table - Range: `1`-`16` - Default value: `4`
+        :param pulumi.Input[_builtins.int] ecmp_limit: Set maximum number of OMP paths to install in vEdge route table
+                 - Range: `1`-`16`
+                 - Default value: `4`
         :param pulumi.Input[_builtins.str] ecmp_limit_variable: Variable name
-        :param pulumi.Input[_builtins.int] eor_timer: End of RIB timer <1..604800> seconds - Range: `1`-`3600` - Default value: `300`
+        :param pulumi.Input[_builtins.int] eor_timer: End of RIB timer <1..604800> seconds
+                 - Range: `1`-`3600`
+                 - Default value: `300`
         :param pulumi.Input[_builtins.str] eor_timer_variable: Variable name
-        :param pulumi.Input[_builtins.bool] graceful_restart: Enable or disable OMP graceful restart - Default value: `true`
-        :param pulumi.Input[_builtins.int] graceful_restart_timer: Set the OMP graceful restart timer - Range: `1`-`604800` - Default value: `43200`
+        :param pulumi.Input[_builtins.bool] graceful_restart: Enable or disable OMP graceful restart
+                 - Default value: `true`
+        :param pulumi.Input[_builtins.int] graceful_restart_timer: Set the OMP graceful restart timer
+                 - Range: `1`-`604800`
+                 - Default value: `43200`
         :param pulumi.Input[_builtins.str] graceful_restart_timer_variable: Variable name
         :param pulumi.Input[_builtins.str] graceful_restart_variable: Variable name
-        :param pulumi.Input[_builtins.int] holdtime: Set how long to wait before closing OMP peer connection - Default value: `60`
+        :param pulumi.Input[_builtins.int] holdtime: Set how long to wait before closing OMP peer connection
+                 - Default value: `60`
         :param pulumi.Input[_builtins.str] holdtime_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ignore_region_path_length: Ignore Region-Path Length During Best-Path Algorithm - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ignore_region_path_length: Ignore Region-Path Length During Best-Path Algorithm
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ignore_region_path_length_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv4: omp-admin-distance-ipv4 - Range: `1`-`255`
+        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv4: omp-admin-distance-ipv4
+                 - Range: `1`-`255`
         :param pulumi.Input[_builtins.str] omp_admin_distance_ipv4_variable: Variable name
-        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv6: omp-admin-distance-ipv6 - Range: `1`-`255`
+        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv6: omp-admin-distance-ipv6
+                 - Range: `1`-`255`
         :param pulumi.Input[_builtins.str] omp_admin_distance_ipv6_variable: Variable name
-        :param pulumi.Input[_builtins.int] overlay_as: Set Overlay AS number <1..4294967295> or <XX.YY> - Range: `1`-`4294967295`
+        :param pulumi.Input[_builtins.int] overlay_as: Set Overlay AS number <1..4294967295> or <XX.YY>
+                 - Range: `1`-`4294967295`
         :param pulumi.Input[_builtins.str] overlay_as_variable: Variable name
-        :param pulumi.Input[_builtins.int] send_path_limit: Set number of TLOC routes advertised between vSmart and vEdge - Range: `1`-`16` - Default value: `4`
+        :param pulumi.Input[_builtins.int] send_path_limit: Set number of TLOC routes advertised between vSmart and vEdge
+                 - Range: `1`-`16`
+                 - Default value: `4`
         :param pulumi.Input[_builtins.str] send_path_limit_variable: Variable name
-        :param pulumi.Input[_builtins.bool] shutdown: Enable or disable OMP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] shutdown: Enable or disable OMP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
-        :param pulumi.Input[_builtins.str] transport_gateway: Transport gateway path computation - Choices: `prefer`, `ecmp-with-direct-path`
+        :param pulumi.Input[_builtins.str] transport_gateway: Transport gateway path computation
+                 - Choices: `prefer`, `ecmp-with-direct-path`
         :param pulumi.Input[_builtins.str] transport_gateway_variable: Variable name
         """
         pulumi.set(__self__, "description", description)
@@ -165,9 +182,8 @@ class CiscoOmpFeatureTemplateArgs:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -203,7 +219,9 @@ class CiscoOmpFeatureTemplateArgs:
     @pulumi.getter(name="advertisementInterval")
     def advertisement_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set the time between OMP Update packets - Range: `0`-`65535` - Default value: `1`
+        Set the time between OMP Update packets
+          - Range: `0`-`65535`
+          - Default value: `1`
         """
         return pulumi.get(self, "advertisement_interval")
 
@@ -227,7 +245,9 @@ class CiscoOmpFeatureTemplateArgs:
     @pulumi.getter(name="ecmpLimit")
     def ecmp_limit(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set maximum number of OMP paths to install in vEdge route table - Range: `1`-`16` - Default value: `4`
+        Set maximum number of OMP paths to install in vEdge route table
+          - Range: `1`-`16`
+          - Default value: `4`
         """
         return pulumi.get(self, "ecmp_limit")
 
@@ -251,7 +271,9 @@ class CiscoOmpFeatureTemplateArgs:
     @pulumi.getter(name="eorTimer")
     def eor_timer(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        End of RIB timer <1..604800> seconds - Range: `1`-`3600` - Default value: `300`
+        End of RIB timer <1..604800> seconds
+          - Range: `1`-`3600`
+          - Default value: `300`
         """
         return pulumi.get(self, "eor_timer")
 
@@ -275,7 +297,8 @@ class CiscoOmpFeatureTemplateArgs:
     @pulumi.getter(name="gracefulRestart")
     def graceful_restart(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable or disable OMP graceful restart - Default value: `true`
+        Enable or disable OMP graceful restart
+          - Default value: `true`
         """
         return pulumi.get(self, "graceful_restart")
 
@@ -287,7 +310,9 @@ class CiscoOmpFeatureTemplateArgs:
     @pulumi.getter(name="gracefulRestartTimer")
     def graceful_restart_timer(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set the OMP graceful restart timer - Range: `1`-`604800` - Default value: `43200`
+        Set the OMP graceful restart timer
+          - Range: `1`-`604800`
+          - Default value: `43200`
         """
         return pulumi.get(self, "graceful_restart_timer")
 
@@ -323,7 +348,8 @@ class CiscoOmpFeatureTemplateArgs:
     @pulumi.getter
     def holdtime(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set how long to wait before closing OMP peer connection - Default value: `60`
+        Set how long to wait before closing OMP peer connection
+          - Default value: `60`
         """
         return pulumi.get(self, "holdtime")
 
@@ -347,7 +373,8 @@ class CiscoOmpFeatureTemplateArgs:
     @pulumi.getter(name="ignoreRegionPathLength")
     def ignore_region_path_length(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Ignore Region-Path Length During Best-Path Algorithm - Default value: `false`
+        Ignore Region-Path Length During Best-Path Algorithm
+          - Default value: `false`
         """
         return pulumi.get(self, "ignore_region_path_length")
 
@@ -383,7 +410,8 @@ class CiscoOmpFeatureTemplateArgs:
     @pulumi.getter(name="ompAdminDistanceIpv4")
     def omp_admin_distance_ipv4(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        omp-admin-distance-ipv4 - Range: `1`-`255`
+        omp-admin-distance-ipv4
+          - Range: `1`-`255`
         """
         return pulumi.get(self, "omp_admin_distance_ipv4")
 
@@ -407,7 +435,8 @@ class CiscoOmpFeatureTemplateArgs:
     @pulumi.getter(name="ompAdminDistanceIpv6")
     def omp_admin_distance_ipv6(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        omp-admin-distance-ipv6 - Range: `1`-`255`
+        omp-admin-distance-ipv6
+          - Range: `1`-`255`
         """
         return pulumi.get(self, "omp_admin_distance_ipv6")
 
@@ -431,7 +460,8 @@ class CiscoOmpFeatureTemplateArgs:
     @pulumi.getter(name="overlayAs")
     def overlay_as(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set Overlay AS number <1..4294967295> or <XX.YY> - Range: `1`-`4294967295`
+        Set Overlay AS number <1..4294967295> or <XX.YY>
+          - Range: `1`-`4294967295`
         """
         return pulumi.get(self, "overlay_as")
 
@@ -455,7 +485,9 @@ class CiscoOmpFeatureTemplateArgs:
     @pulumi.getter(name="sendPathLimit")
     def send_path_limit(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set number of TLOC routes advertised between vSmart and vEdge - Range: `1`-`16` - Default value: `4`
+        Set number of TLOC routes advertised between vSmart and vEdge
+          - Range: `1`-`16`
+          - Default value: `4`
         """
         return pulumi.get(self, "send_path_limit")
 
@@ -479,7 +511,8 @@ class CiscoOmpFeatureTemplateArgs:
     @pulumi.getter
     def shutdown(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable or disable OMP - Default value: `false`
+        Enable or disable OMP
+          - Default value: `false`
         """
         return pulumi.get(self, "shutdown")
 
@@ -503,7 +536,8 @@ class CiscoOmpFeatureTemplateArgs:
     @pulumi.getter(name="transportGateway")
     def transport_gateway(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Transport gateway path computation - Choices: `prefer`, `ecmp-with-direct-path`
+        Transport gateway path computation
+          - Choices: `prefer`, `ecmp-with-direct-path`
         """
         return pulumi.get(self, "transport_gateway")
 
@@ -564,37 +598,54 @@ class _CiscoOmpFeatureTemplateState:
         Input properties used for looking up and filtering CiscoOmpFeatureTemplate resources.
         :param pulumi.Input[Sequence[pulumi.Input['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs']]] advertise_ipv4_routes: Advertise locally learned routes to OMP
         :param pulumi.Input[Sequence[pulumi.Input['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs']]] advertise_ipv6_routes: Advertise locally learned routes to OMP
-        :param pulumi.Input[_builtins.int] advertisement_interval: Set the time between OMP Update packets - Range: `0`-`65535` - Default value: `1`
+        :param pulumi.Input[_builtins.int] advertisement_interval: Set the time between OMP Update packets
+                 - Range: `0`-`65535`
+                 - Default value: `1`
         :param pulumi.Input[_builtins.str] advertisement_interval_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.int] ecmp_limit: Set maximum number of OMP paths to install in vEdge route table - Range: `1`-`16` - Default value: `4`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.int] ecmp_limit: Set maximum number of OMP paths to install in vEdge route table
+                 - Range: `1`-`16`
+                 - Default value: `4`
         :param pulumi.Input[_builtins.str] ecmp_limit_variable: Variable name
-        :param pulumi.Input[_builtins.int] eor_timer: End of RIB timer <1..604800> seconds - Range: `1`-`3600` - Default value: `300`
+        :param pulumi.Input[_builtins.int] eor_timer: End of RIB timer <1..604800> seconds
+                 - Range: `1`-`3600`
+                 - Default value: `300`
         :param pulumi.Input[_builtins.str] eor_timer_variable: Variable name
-        :param pulumi.Input[_builtins.bool] graceful_restart: Enable or disable OMP graceful restart - Default value: `true`
-        :param pulumi.Input[_builtins.int] graceful_restart_timer: Set the OMP graceful restart timer - Range: `1`-`604800` - Default value: `43200`
+        :param pulumi.Input[_builtins.bool] graceful_restart: Enable or disable OMP graceful restart
+                 - Default value: `true`
+        :param pulumi.Input[_builtins.int] graceful_restart_timer: Set the OMP graceful restart timer
+                 - Range: `1`-`604800`
+                 - Default value: `43200`
         :param pulumi.Input[_builtins.str] graceful_restart_timer_variable: Variable name
         :param pulumi.Input[_builtins.str] graceful_restart_variable: Variable name
-        :param pulumi.Input[_builtins.int] holdtime: Set how long to wait before closing OMP peer connection - Default value: `60`
+        :param pulumi.Input[_builtins.int] holdtime: Set how long to wait before closing OMP peer connection
+                 - Default value: `60`
         :param pulumi.Input[_builtins.str] holdtime_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ignore_region_path_length: Ignore Region-Path Length During Best-Path Algorithm - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ignore_region_path_length: Ignore Region-Path Length During Best-Path Algorithm
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ignore_region_path_length_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv4: omp-admin-distance-ipv4 - Range: `1`-`255`
+        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv4: omp-admin-distance-ipv4
+                 - Range: `1`-`255`
         :param pulumi.Input[_builtins.str] omp_admin_distance_ipv4_variable: Variable name
-        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv6: omp-admin-distance-ipv6 - Range: `1`-`255`
+        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv6: omp-admin-distance-ipv6
+                 - Range: `1`-`255`
         :param pulumi.Input[_builtins.str] omp_admin_distance_ipv6_variable: Variable name
-        :param pulumi.Input[_builtins.int] overlay_as: Set Overlay AS number <1..4294967295> or <XX.YY> - Range: `1`-`4294967295`
+        :param pulumi.Input[_builtins.int] overlay_as: Set Overlay AS number <1..4294967295> or <XX.YY>
+                 - Range: `1`-`4294967295`
         :param pulumi.Input[_builtins.str] overlay_as_variable: Variable name
-        :param pulumi.Input[_builtins.int] send_path_limit: Set number of TLOC routes advertised between vSmart and vEdge - Range: `1`-`16` - Default value: `4`
+        :param pulumi.Input[_builtins.int] send_path_limit: Set number of TLOC routes advertised between vSmart and vEdge
+                 - Range: `1`-`16`
+                 - Default value: `4`
         :param pulumi.Input[_builtins.str] send_path_limit_variable: Variable name
-        :param pulumi.Input[_builtins.bool] shutdown: Enable or disable OMP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] shutdown: Enable or disable OMP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
         :param pulumi.Input[_builtins.str] template_type: The template type
-        :param pulumi.Input[_builtins.str] transport_gateway: Transport gateway path computation - Choices: `prefer`, `ecmp-with-direct-path`
+        :param pulumi.Input[_builtins.str] transport_gateway: Transport gateway path computation
+                 - Choices: `prefer`, `ecmp-with-direct-path`
         :param pulumi.Input[_builtins.str] transport_gateway_variable: Variable name
         :param pulumi.Input[_builtins.int] version: The version of the feature template
         """
@@ -693,7 +744,9 @@ class _CiscoOmpFeatureTemplateState:
     @pulumi.getter(name="advertisementInterval")
     def advertisement_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set the time between OMP Update packets - Range: `0`-`65535` - Default value: `1`
+        Set the time between OMP Update packets
+          - Range: `0`-`65535`
+          - Default value: `1`
         """
         return pulumi.get(self, "advertisement_interval")
 
@@ -729,9 +782,8 @@ class _CiscoOmpFeatureTemplateState:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -743,7 +795,9 @@ class _CiscoOmpFeatureTemplateState:
     @pulumi.getter(name="ecmpLimit")
     def ecmp_limit(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set maximum number of OMP paths to install in vEdge route table - Range: `1`-`16` - Default value: `4`
+        Set maximum number of OMP paths to install in vEdge route table
+          - Range: `1`-`16`
+          - Default value: `4`
         """
         return pulumi.get(self, "ecmp_limit")
 
@@ -767,7 +821,9 @@ class _CiscoOmpFeatureTemplateState:
     @pulumi.getter(name="eorTimer")
     def eor_timer(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        End of RIB timer <1..604800> seconds - Range: `1`-`3600` - Default value: `300`
+        End of RIB timer <1..604800> seconds
+          - Range: `1`-`3600`
+          - Default value: `300`
         """
         return pulumi.get(self, "eor_timer")
 
@@ -791,7 +847,8 @@ class _CiscoOmpFeatureTemplateState:
     @pulumi.getter(name="gracefulRestart")
     def graceful_restart(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable or disable OMP graceful restart - Default value: `true`
+        Enable or disable OMP graceful restart
+          - Default value: `true`
         """
         return pulumi.get(self, "graceful_restart")
 
@@ -803,7 +860,9 @@ class _CiscoOmpFeatureTemplateState:
     @pulumi.getter(name="gracefulRestartTimer")
     def graceful_restart_timer(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set the OMP graceful restart timer - Range: `1`-`604800` - Default value: `43200`
+        Set the OMP graceful restart timer
+          - Range: `1`-`604800`
+          - Default value: `43200`
         """
         return pulumi.get(self, "graceful_restart_timer")
 
@@ -839,7 +898,8 @@ class _CiscoOmpFeatureTemplateState:
     @pulumi.getter
     def holdtime(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set how long to wait before closing OMP peer connection - Default value: `60`
+        Set how long to wait before closing OMP peer connection
+          - Default value: `60`
         """
         return pulumi.get(self, "holdtime")
 
@@ -863,7 +923,8 @@ class _CiscoOmpFeatureTemplateState:
     @pulumi.getter(name="ignoreRegionPathLength")
     def ignore_region_path_length(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Ignore Region-Path Length During Best-Path Algorithm - Default value: `false`
+        Ignore Region-Path Length During Best-Path Algorithm
+          - Default value: `false`
         """
         return pulumi.get(self, "ignore_region_path_length")
 
@@ -899,7 +960,8 @@ class _CiscoOmpFeatureTemplateState:
     @pulumi.getter(name="ompAdminDistanceIpv4")
     def omp_admin_distance_ipv4(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        omp-admin-distance-ipv4 - Range: `1`-`255`
+        omp-admin-distance-ipv4
+          - Range: `1`-`255`
         """
         return pulumi.get(self, "omp_admin_distance_ipv4")
 
@@ -923,7 +985,8 @@ class _CiscoOmpFeatureTemplateState:
     @pulumi.getter(name="ompAdminDistanceIpv6")
     def omp_admin_distance_ipv6(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        omp-admin-distance-ipv6 - Range: `1`-`255`
+        omp-admin-distance-ipv6
+          - Range: `1`-`255`
         """
         return pulumi.get(self, "omp_admin_distance_ipv6")
 
@@ -947,7 +1010,8 @@ class _CiscoOmpFeatureTemplateState:
     @pulumi.getter(name="overlayAs")
     def overlay_as(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set Overlay AS number <1..4294967295> or <XX.YY> - Range: `1`-`4294967295`
+        Set Overlay AS number <1..4294967295> or <XX.YY>
+          - Range: `1`-`4294967295`
         """
         return pulumi.get(self, "overlay_as")
 
@@ -971,7 +1035,9 @@ class _CiscoOmpFeatureTemplateState:
     @pulumi.getter(name="sendPathLimit")
     def send_path_limit(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set number of TLOC routes advertised between vSmart and vEdge - Range: `1`-`16` - Default value: `4`
+        Set number of TLOC routes advertised between vSmart and vEdge
+          - Range: `1`-`16`
+          - Default value: `4`
         """
         return pulumi.get(self, "send_path_limit")
 
@@ -995,7 +1061,8 @@ class _CiscoOmpFeatureTemplateState:
     @pulumi.getter
     def shutdown(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable or disable OMP - Default value: `false`
+        Enable or disable OMP
+          - Default value: `false`
         """
         return pulumi.get(self, "shutdown")
 
@@ -1031,7 +1098,8 @@ class _CiscoOmpFeatureTemplateState:
     @pulumi.getter(name="transportGateway")
     def transport_gateway(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Transport gateway path computation - Choices: `prefer`, `ecmp-with-direct-path`
+        Transport gateway path computation
+          - Choices: `prefer`, `ecmp-with-direct-path`
         """
         return pulumi.get(self, "transport_gateway")
 
@@ -1118,36 +1186,53 @@ class CiscoOmpFeatureTemplate(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgsDict']]]] advertise_ipv4_routes: Advertise locally learned routes to OMP
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgsDict']]]] advertise_ipv6_routes: Advertise locally learned routes to OMP
-        :param pulumi.Input[_builtins.int] advertisement_interval: Set the time between OMP Update packets - Range: `0`-`65535` - Default value: `1`
+        :param pulumi.Input[_builtins.int] advertisement_interval: Set the time between OMP Update packets
+                 - Range: `0`-`65535`
+                 - Default value: `1`
         :param pulumi.Input[_builtins.str] advertisement_interval_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.int] ecmp_limit: Set maximum number of OMP paths to install in vEdge route table - Range: `1`-`16` - Default value: `4`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.int] ecmp_limit: Set maximum number of OMP paths to install in vEdge route table
+                 - Range: `1`-`16`
+                 - Default value: `4`
         :param pulumi.Input[_builtins.str] ecmp_limit_variable: Variable name
-        :param pulumi.Input[_builtins.int] eor_timer: End of RIB timer <1..604800> seconds - Range: `1`-`3600` - Default value: `300`
+        :param pulumi.Input[_builtins.int] eor_timer: End of RIB timer <1..604800> seconds
+                 - Range: `1`-`3600`
+                 - Default value: `300`
         :param pulumi.Input[_builtins.str] eor_timer_variable: Variable name
-        :param pulumi.Input[_builtins.bool] graceful_restart: Enable or disable OMP graceful restart - Default value: `true`
-        :param pulumi.Input[_builtins.int] graceful_restart_timer: Set the OMP graceful restart timer - Range: `1`-`604800` - Default value: `43200`
+        :param pulumi.Input[_builtins.bool] graceful_restart: Enable or disable OMP graceful restart
+                 - Default value: `true`
+        :param pulumi.Input[_builtins.int] graceful_restart_timer: Set the OMP graceful restart timer
+                 - Range: `1`-`604800`
+                 - Default value: `43200`
         :param pulumi.Input[_builtins.str] graceful_restart_timer_variable: Variable name
         :param pulumi.Input[_builtins.str] graceful_restart_variable: Variable name
-        :param pulumi.Input[_builtins.int] holdtime: Set how long to wait before closing OMP peer connection - Default value: `60`
+        :param pulumi.Input[_builtins.int] holdtime: Set how long to wait before closing OMP peer connection
+                 - Default value: `60`
         :param pulumi.Input[_builtins.str] holdtime_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ignore_region_path_length: Ignore Region-Path Length During Best-Path Algorithm - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ignore_region_path_length: Ignore Region-Path Length During Best-Path Algorithm
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ignore_region_path_length_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv4: omp-admin-distance-ipv4 - Range: `1`-`255`
+        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv4: omp-admin-distance-ipv4
+                 - Range: `1`-`255`
         :param pulumi.Input[_builtins.str] omp_admin_distance_ipv4_variable: Variable name
-        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv6: omp-admin-distance-ipv6 - Range: `1`-`255`
+        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv6: omp-admin-distance-ipv6
+                 - Range: `1`-`255`
         :param pulumi.Input[_builtins.str] omp_admin_distance_ipv6_variable: Variable name
-        :param pulumi.Input[_builtins.int] overlay_as: Set Overlay AS number <1..4294967295> or <XX.YY> - Range: `1`-`4294967295`
+        :param pulumi.Input[_builtins.int] overlay_as: Set Overlay AS number <1..4294967295> or <XX.YY>
+                 - Range: `1`-`4294967295`
         :param pulumi.Input[_builtins.str] overlay_as_variable: Variable name
-        :param pulumi.Input[_builtins.int] send_path_limit: Set number of TLOC routes advertised between vSmart and vEdge - Range: `1`-`16` - Default value: `4`
+        :param pulumi.Input[_builtins.int] send_path_limit: Set number of TLOC routes advertised between vSmart and vEdge
+                 - Range: `1`-`16`
+                 - Default value: `4`
         :param pulumi.Input[_builtins.str] send_path_limit_variable: Variable name
-        :param pulumi.Input[_builtins.bool] shutdown: Enable or disable OMP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] shutdown: Enable or disable OMP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
-        :param pulumi.Input[_builtins.str] transport_gateway: Transport gateway path computation - Choices: `prefer`, `ecmp-with-direct-path`
+        :param pulumi.Input[_builtins.str] transport_gateway: Transport gateway path computation
+                 - Choices: `prefer`, `ecmp-with-direct-path`
         :param pulumi.Input[_builtins.str] transport_gateway_variable: Variable name
         """
         ...
@@ -1312,37 +1397,54 @@ class CiscoOmpFeatureTemplate(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgsDict']]]] advertise_ipv4_routes: Advertise locally learned routes to OMP
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs', 'CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgsDict']]]] advertise_ipv6_routes: Advertise locally learned routes to OMP
-        :param pulumi.Input[_builtins.int] advertisement_interval: Set the time between OMP Update packets - Range: `0`-`65535` - Default value: `1`
+        :param pulumi.Input[_builtins.int] advertisement_interval: Set the time between OMP Update packets
+                 - Range: `0`-`65535`
+                 - Default value: `1`
         :param pulumi.Input[_builtins.str] advertisement_interval_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.int] ecmp_limit: Set maximum number of OMP paths to install in vEdge route table - Range: `1`-`16` - Default value: `4`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.int] ecmp_limit: Set maximum number of OMP paths to install in vEdge route table
+                 - Range: `1`-`16`
+                 - Default value: `4`
         :param pulumi.Input[_builtins.str] ecmp_limit_variable: Variable name
-        :param pulumi.Input[_builtins.int] eor_timer: End of RIB timer <1..604800> seconds - Range: `1`-`3600` - Default value: `300`
+        :param pulumi.Input[_builtins.int] eor_timer: End of RIB timer <1..604800> seconds
+                 - Range: `1`-`3600`
+                 - Default value: `300`
         :param pulumi.Input[_builtins.str] eor_timer_variable: Variable name
-        :param pulumi.Input[_builtins.bool] graceful_restart: Enable or disable OMP graceful restart - Default value: `true`
-        :param pulumi.Input[_builtins.int] graceful_restart_timer: Set the OMP graceful restart timer - Range: `1`-`604800` - Default value: `43200`
+        :param pulumi.Input[_builtins.bool] graceful_restart: Enable or disable OMP graceful restart
+                 - Default value: `true`
+        :param pulumi.Input[_builtins.int] graceful_restart_timer: Set the OMP graceful restart timer
+                 - Range: `1`-`604800`
+                 - Default value: `43200`
         :param pulumi.Input[_builtins.str] graceful_restart_timer_variable: Variable name
         :param pulumi.Input[_builtins.str] graceful_restart_variable: Variable name
-        :param pulumi.Input[_builtins.int] holdtime: Set how long to wait before closing OMP peer connection - Default value: `60`
+        :param pulumi.Input[_builtins.int] holdtime: Set how long to wait before closing OMP peer connection
+                 - Default value: `60`
         :param pulumi.Input[_builtins.str] holdtime_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ignore_region_path_length: Ignore Region-Path Length During Best-Path Algorithm - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ignore_region_path_length: Ignore Region-Path Length During Best-Path Algorithm
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ignore_region_path_length_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv4: omp-admin-distance-ipv4 - Range: `1`-`255`
+        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv4: omp-admin-distance-ipv4
+                 - Range: `1`-`255`
         :param pulumi.Input[_builtins.str] omp_admin_distance_ipv4_variable: Variable name
-        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv6: omp-admin-distance-ipv6 - Range: `1`-`255`
+        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv6: omp-admin-distance-ipv6
+                 - Range: `1`-`255`
         :param pulumi.Input[_builtins.str] omp_admin_distance_ipv6_variable: Variable name
-        :param pulumi.Input[_builtins.int] overlay_as: Set Overlay AS number <1..4294967295> or <XX.YY> - Range: `1`-`4294967295`
+        :param pulumi.Input[_builtins.int] overlay_as: Set Overlay AS number <1..4294967295> or <XX.YY>
+                 - Range: `1`-`4294967295`
         :param pulumi.Input[_builtins.str] overlay_as_variable: Variable name
-        :param pulumi.Input[_builtins.int] send_path_limit: Set number of TLOC routes advertised between vSmart and vEdge - Range: `1`-`16` - Default value: `4`
+        :param pulumi.Input[_builtins.int] send_path_limit: Set number of TLOC routes advertised between vSmart and vEdge
+                 - Range: `1`-`16`
+                 - Default value: `4`
         :param pulumi.Input[_builtins.str] send_path_limit_variable: Variable name
-        :param pulumi.Input[_builtins.bool] shutdown: Enable or disable OMP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] shutdown: Enable or disable OMP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
         :param pulumi.Input[_builtins.str] template_type: The template type
-        :param pulumi.Input[_builtins.str] transport_gateway: Transport gateway path computation - Choices: `prefer`, `ecmp-with-direct-path`
+        :param pulumi.Input[_builtins.str] transport_gateway: Transport gateway path computation
+                 - Choices: `prefer`, `ecmp-with-direct-path`
         :param pulumi.Input[_builtins.str] transport_gateway_variable: Variable name
         :param pulumi.Input[_builtins.int] version: The version of the feature template
         """
@@ -1405,7 +1507,9 @@ class CiscoOmpFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="advertisementInterval")
     def advertisement_interval(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set the time between OMP Update packets - Range: `0`-`65535` - Default value: `1`
+        Set the time between OMP Update packets
+          - Range: `0`-`65535`
+          - Default value: `1`
         """
         return pulumi.get(self, "advertisement_interval")
 
@@ -1429,9 +1533,8 @@ class CiscoOmpFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -1439,7 +1542,9 @@ class CiscoOmpFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="ecmpLimit")
     def ecmp_limit(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set maximum number of OMP paths to install in vEdge route table - Range: `1`-`16` - Default value: `4`
+        Set maximum number of OMP paths to install in vEdge route table
+          - Range: `1`-`16`
+          - Default value: `4`
         """
         return pulumi.get(self, "ecmp_limit")
 
@@ -1455,7 +1560,9 @@ class CiscoOmpFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="eorTimer")
     def eor_timer(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        End of RIB timer <1..604800> seconds - Range: `1`-`3600` - Default value: `300`
+        End of RIB timer <1..604800> seconds
+          - Range: `1`-`3600`
+          - Default value: `300`
         """
         return pulumi.get(self, "eor_timer")
 
@@ -1471,7 +1578,8 @@ class CiscoOmpFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="gracefulRestart")
     def graceful_restart(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Enable or disable OMP graceful restart - Default value: `true`
+        Enable or disable OMP graceful restart
+          - Default value: `true`
         """
         return pulumi.get(self, "graceful_restart")
 
@@ -1479,7 +1587,9 @@ class CiscoOmpFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="gracefulRestartTimer")
     def graceful_restart_timer(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set the OMP graceful restart timer - Range: `1`-`604800` - Default value: `43200`
+        Set the OMP graceful restart timer
+          - Range: `1`-`604800`
+          - Default value: `43200`
         """
         return pulumi.get(self, "graceful_restart_timer")
 
@@ -1503,7 +1613,8 @@ class CiscoOmpFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter
     def holdtime(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set how long to wait before closing OMP peer connection - Default value: `60`
+        Set how long to wait before closing OMP peer connection
+          - Default value: `60`
         """
         return pulumi.get(self, "holdtime")
 
@@ -1519,7 +1630,8 @@ class CiscoOmpFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="ignoreRegionPathLength")
     def ignore_region_path_length(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Ignore Region-Path Length During Best-Path Algorithm - Default value: `false`
+        Ignore Region-Path Length During Best-Path Algorithm
+          - Default value: `false`
         """
         return pulumi.get(self, "ignore_region_path_length")
 
@@ -1543,7 +1655,8 @@ class CiscoOmpFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="ompAdminDistanceIpv4")
     def omp_admin_distance_ipv4(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        omp-admin-distance-ipv4 - Range: `1`-`255`
+        omp-admin-distance-ipv4
+          - Range: `1`-`255`
         """
         return pulumi.get(self, "omp_admin_distance_ipv4")
 
@@ -1559,7 +1672,8 @@ class CiscoOmpFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="ompAdminDistanceIpv6")
     def omp_admin_distance_ipv6(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        omp-admin-distance-ipv6 - Range: `1`-`255`
+        omp-admin-distance-ipv6
+          - Range: `1`-`255`
         """
         return pulumi.get(self, "omp_admin_distance_ipv6")
 
@@ -1575,7 +1689,8 @@ class CiscoOmpFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="overlayAs")
     def overlay_as(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set Overlay AS number <1..4294967295> or <XX.YY> - Range: `1`-`4294967295`
+        Set Overlay AS number <1..4294967295> or <XX.YY>
+          - Range: `1`-`4294967295`
         """
         return pulumi.get(self, "overlay_as")
 
@@ -1591,7 +1706,9 @@ class CiscoOmpFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="sendPathLimit")
     def send_path_limit(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set number of TLOC routes advertised between vSmart and vEdge - Range: `1`-`16` - Default value: `4`
+        Set number of TLOC routes advertised between vSmart and vEdge
+          - Range: `1`-`16`
+          - Default value: `4`
         """
         return pulumi.get(self, "send_path_limit")
 
@@ -1607,7 +1724,8 @@ class CiscoOmpFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter
     def shutdown(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Enable or disable OMP - Default value: `false`
+        Enable or disable OMP
+          - Default value: `false`
         """
         return pulumi.get(self, "shutdown")
 
@@ -1631,7 +1749,8 @@ class CiscoOmpFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="transportGateway")
     def transport_gateway(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Transport gateway path computation - Choices: `prefer`, `ecmp-with-direct-path`
+        Transport gateway path computation
+          - Choices: `prefer`, `ecmp-with-direct-path`
         """
         return pulumi.get(self, "transport_gateway")
 

@@ -65,7 +65,8 @@ namespace Pulumi.Sdwan
         public Output<string> FeatureProfileId { get; private set; } = null!;
 
         /// <summary>
-        /// Enable/disable GPS - Default value: `false`
+        /// Enable/disable GPS
+        ///   - Default value: `false`
         /// </summary>
         [Output("gpsEnable")]
         public Output<bool?> GpsEnable { get; private set; } = null!;
@@ -77,7 +78,9 @@ namespace Pulumi.Sdwan
         public Output<string?> GpsEnableVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+        /// Select GPS mode
+        ///   - Choices: `ms-based`, `standalone`
+        ///   - Default value: `ms-based`
         /// </summary>
         [Output("gpsMode")]
         public Output<string?> GpsMode { get; private set; } = null!;
@@ -107,7 +110,8 @@ namespace Pulumi.Sdwan
         public Output<string?> NmeaDestinationAddressVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Destination port - Range: `1`-`65535`
+        /// Destination port
+        ///   - Range: `1`-`65535`
         /// </summary>
         [Output("nmeaDestinationPort")]
         public Output<int?> NmeaDestinationPort { get; private set; } = null!;
@@ -119,7 +123,8 @@ namespace Pulumi.Sdwan
         public Output<string?> NmeaDestinationPortVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Enable/disable NMEA data - Default value: `false`
+        /// Enable/disable NMEA data
+        ///   - Default value: `false`
         /// </summary>
         [Output("nmeaEnable")]
         public Output<bool?> NmeaEnable { get; private set; } = null!;
@@ -207,7 +212,8 @@ namespace Pulumi.Sdwan
         public Input<string> FeatureProfileId { get; set; } = null!;
 
         /// <summary>
-        /// Enable/disable GPS - Default value: `false`
+        /// Enable/disable GPS
+        ///   - Default value: `false`
         /// </summary>
         [Input("gpsEnable")]
         public Input<bool>? GpsEnable { get; set; }
@@ -219,7 +225,9 @@ namespace Pulumi.Sdwan
         public Input<string>? GpsEnableVariable { get; set; }
 
         /// <summary>
-        /// Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+        /// Select GPS mode
+        ///   - Choices: `ms-based`, `standalone`
+        ///   - Default value: `ms-based`
         /// </summary>
         [Input("gpsMode")]
         public Input<string>? GpsMode { get; set; }
@@ -249,7 +257,8 @@ namespace Pulumi.Sdwan
         public Input<string>? NmeaDestinationAddressVariable { get; set; }
 
         /// <summary>
-        /// Destination port - Range: `1`-`65535`
+        /// Destination port
+        ///   - Range: `1`-`65535`
         /// </summary>
         [Input("nmeaDestinationPort")]
         public Input<int>? NmeaDestinationPort { get; set; }
@@ -261,7 +270,8 @@ namespace Pulumi.Sdwan
         public Input<string>? NmeaDestinationPortVariable { get; set; }
 
         /// <summary>
-        /// Enable/disable NMEA data - Default value: `false`
+        /// Enable/disable NMEA data
+        ///   - Default value: `false`
         /// </summary>
         [Input("nmeaEnable")]
         public Input<bool>? NmeaEnable { get; set; }
@@ -305,7 +315,8 @@ namespace Pulumi.Sdwan
         public Input<string>? FeatureProfileId { get; set; }
 
         /// <summary>
-        /// Enable/disable GPS - Default value: `false`
+        /// Enable/disable GPS
+        ///   - Default value: `false`
         /// </summary>
         [Input("gpsEnable")]
         public Input<bool>? GpsEnable { get; set; }
@@ -317,7 +328,9 @@ namespace Pulumi.Sdwan
         public Input<string>? GpsEnableVariable { get; set; }
 
         /// <summary>
-        /// Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+        /// Select GPS mode
+        ///   - Choices: `ms-based`, `standalone`
+        ///   - Default value: `ms-based`
         /// </summary>
         [Input("gpsMode")]
         public Input<string>? GpsMode { get; set; }
@@ -347,7 +360,8 @@ namespace Pulumi.Sdwan
         public Input<string>? NmeaDestinationAddressVariable { get; set; }
 
         /// <summary>
-        /// Destination port - Range: `1`-`65535`
+        /// Destination port
+        ///   - Range: `1`-`65535`
         /// </summary>
         [Input("nmeaDestinationPort")]
         public Input<int>? NmeaDestinationPort { get; set; }
@@ -359,7 +373,8 @@ namespace Pulumi.Sdwan
         public Input<string>? NmeaDestinationPortVariable { get; set; }
 
         /// <summary>
-        /// Enable/disable NMEA data - Default value: `false`
+        /// Enable/disable NMEA data
+        ///   - Default value: `false`
         /// </summary>
         [Input("nmeaEnable")]
         public Input<bool>? NmeaEnable { get; set; }

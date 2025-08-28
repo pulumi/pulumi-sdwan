@@ -50,11 +50,11 @@ export class AttachFeatureDeviceTemplate extends pulumi.CustomResource {
     /**
      * Devices
      */
-    public readonly devices!: pulumi.Output<outputs.AttachFeatureDeviceTemplateDevice[]>;
+    declare public readonly devices: pulumi.Output<outputs.AttachFeatureDeviceTemplateDevice[]>;
     /**
      * The version of the device template
      */
-    public readonly version!: pulumi.Output<number | undefined>;
+    declare public readonly version: pulumi.Output<number | undefined>;
 
     /**
      * Create a AttachFeatureDeviceTemplate resource with the given unique name, arguments, and options.
@@ -69,15 +69,15 @@ export class AttachFeatureDeviceTemplate extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as AttachFeatureDeviceTemplateState | undefined;
-            resourceInputs["devices"] = state ? state.devices : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["devices"] = state?.devices;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as AttachFeatureDeviceTemplateArgs | undefined;
-            if ((!args || args.devices === undefined) && !opts.urn) {
+            if (args?.devices === undefined && !opts.urn) {
                 throw new Error("Missing required property 'devices'");
             }
-            resourceInputs["devices"] = args ? args.devices : undefined;
-            resourceInputs["version"] = args ? args.version : undefined;
+            resourceInputs["devices"] = args?.devices;
+            resourceInputs["version"] = args?.version;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(AttachFeatureDeviceTemplate.__pulumiType, name, resourceInputs, opts);

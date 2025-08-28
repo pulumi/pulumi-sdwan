@@ -41,14 +41,18 @@ import javax.annotation.Nullable;
 @ResourceType(type="sdwan:index/serviceSwitchportFeature:ServiceSwitchportFeature")
 public class ServiceSwitchportFeature extends com.pulumi.resources.CustomResource {
     /**
-     * Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+     * Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+     *   - Range: `0`-`1000000`
+     *   - Default value: `300`
      * 
      */
     @Export(name="ageOutTime", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ageOutTime;
 
     /**
-     * @return Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+     * @return Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+     *   - Range: `0`-`1000000`
+     *   - Default value: `300`
      * 
      */
     public Output<Optional<Integer>> ageOutTime() {

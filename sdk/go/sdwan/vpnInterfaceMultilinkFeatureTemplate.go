@@ -27,15 +27,18 @@ type VpnInterfaceMultilinkFeatureTemplate struct {
 
 	// Apply ACL
 	AccessLists VpnInterfaceMultilinkFeatureTemplateAccessListArrayOutput `pulumi:"accessLists"`
-	// Link autonegotiation - Default value: `true`
+	// Link autonegotiation
+	//   - Default value: `true`
 	Autonegotiate pulumi.BoolPtrOutput `pulumi:"autonegotiate"`
 	// Variable name
 	AutonegotiateVariable pulumi.StringPtrOutput `pulumi:"autonegotiateVariable"`
-	// Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+	// Interface downstream bandwidth capacity, in kbps
+	//   - Range: `1`-`2147483647`
 	BandwidthDownstream pulumi.IntPtrOutput `pulumi:"bandwidthDownstream"`
 	// Variable name
 	BandwidthDownstreamVariable pulumi.StringPtrOutput `pulumi:"bandwidthDownstreamVariable"`
-	// Interface upstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+	// Interface upstream bandwidth capacity, in kbps
+	//   - Range: `1`-`2147483647`
 	BandwidthUpstream pulumi.IntPtrOutput `pulumi:"bandwidthUpstream"`
 	// Variable name
 	BandwidthUpstreamVariable pulumi.StringPtrOutput `pulumi:"bandwidthUpstreamVariable"`
@@ -47,27 +50,32 @@ type VpnInterfaceMultilinkFeatureTemplate struct {
 	ChapPppAuthPassword pulumi.StringPtrOutput `pulumi:"chapPppAuthPassword"`
 	// Variable name
 	ChapPppAuthPasswordVariable pulumi.StringPtrOutput `pulumi:"chapPppAuthPasswordVariable"`
-	// Clear don't fragment bit - Default value: `false`
+	// Clear don't fragment bit
+	//   - Default value: `false`
 	ClearDontFragmentBit pulumi.BoolPtrOutput `pulumi:"clearDontFragmentBit"`
 	// Variable name
 	ClearDontFragmentBitVariable pulumi.StringPtrOutput `pulumi:"clearDontFragmentBitVariable"`
-	// Enable core region - Choices: `core`, `core-shared` - Default value: `core`
+	// Enable core region
+	//   - Choices: `core`, `core-shared`
+	//   - Default value: `core`
 	CoreRegion pulumi.StringPtrOutput `pulumi:"coreRegion"`
 	// Variable name
 	CoreRegionVariable pulumi.StringPtrOutput `pulumi:"coreRegionVariable"`
 	// The description of the feature template
 	Description pulumi.StringOutput `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayOutput `pulumi:"deviceTypes"`
-	// Suppresss multilink fragmentation - Default value: `false`
+	// Suppresss multilink fragmentation
+	//   - Default value: `false`
 	DisableFragmentation pulumi.BoolPtrOutput `pulumi:"disableFragmentation"`
-	// Enable core region - Default value: `false`
+	// Enable core region
+	//   - Default value: `false`
 	EnableCoreRegion pulumi.BoolPtrOutput `pulumi:"enableCoreRegion"`
 	// Variable name
 	EnableCoreRegionVariable pulumi.StringPtrOutput `pulumi:"enableCoreRegionVariable"`
-	// Maximum delay for each fragment - Range: `0`-`1000`
+	// Maximum delay for each fragment
+	//   - Range: `0`-`1000`
 	FragmentMaxDelay pulumi.IntPtrOutput `pulumi:"fragmentMaxDelay"`
 	// Variable name
 	FragmentMaxDelayVariable pulumi.StringPtrOutput `pulumi:"fragmentMaxDelayVariable"`
@@ -79,9 +87,12 @@ type VpnInterfaceMultilinkFeatureTemplate struct {
 	InterfaceName pulumi.StringPtrOutput `pulumi:"interfaceName"`
 	// Variable name
 	InterfaceNameVariable pulumi.StringPtrOutput `pulumi:"interfaceNameVariable"`
-	// Allow interleaving of packets with fragments - Default value: `false`
+	// Allow interleaving of packets with fragments
+	//   - Default value: `false`
 	InterleavingFragment pulumi.BoolPtrOutput `pulumi:"interleavingFragment"`
-	// Interface MTU <68...2000>, in bytes - Range: `68`-`2000` - Default value: `1500`
+	// Interface MTU <68...2000>, in bytes
+	//   - Range: `68`-`2000`
+	//   - Default value: `1500`
 	IpMtu pulumi.IntPtrOutput `pulumi:"ipMtu"`
 	// Variable name
 	IpMtuVariable pulumi.StringPtrOutput `pulumi:"ipMtuVariable"`
@@ -95,7 +106,8 @@ type VpnInterfaceMultilinkFeatureTemplate struct {
 	Ipv6Address pulumi.StringPtrOutput `pulumi:"ipv6Address"`
 	// Variable name
 	Ipv6AddressVariable pulumi.StringPtrOutput `pulumi:"ipv6AddressVariable"`
-	// MultiLink Group Number - Range: `1`-`2147483647`
+	// MultiLink Group Number
+	//   - Range: `1`-`2147483647`
 	MultilinkGroupNumber pulumi.IntPtrOutput `pulumi:"multilinkGroupNumber"`
 	// Variable name
 	MultilinkGroupNumberVariable pulumi.StringPtrOutput `pulumi:"multilinkGroupNumberVariable"`
@@ -115,23 +127,30 @@ type VpnInterfaceMultilinkFeatureTemplate struct {
 	PapUsername pulumi.StringPtrOutput `pulumi:"papUsername"`
 	// Variable name
 	PapUsernameVariable pulumi.StringPtrOutput `pulumi:"papUsernameVariable"`
-	// Per-tunnel Qos - Default value: `false`
+	// Per-tunnel Qos
+	//   - Default value: `false`
 	PerTunnelQos pulumi.BoolPtrOutput `pulumi:"perTunnelQos"`
-	// Per-tunnel QoS Aggregator - Default value: `false`
+	// Per-tunnel QoS Aggregator
+	//   - Default value: `false`
 	PerTunnelQosAggregator pulumi.BoolPtrOutput `pulumi:"perTunnelQosAggregator"`
 	// Variable name
 	PerTunnelQosAggregatorVariable pulumi.StringPtrOutput `pulumi:"perTunnelQosAggregatorVariable"`
 	// Variable name
 	PerTunnelQosVariable pulumi.StringPtrOutput `pulumi:"perTunnelQosVariable"`
-	// Path MTU Discovery - Default value: `false`
+	// Path MTU Discovery
+	//   - Default value: `false`
 	PmtuDiscovery pulumi.BoolPtrOutput `pulumi:"pmtuDiscovery"`
 	// Variable name
 	PmtuDiscoveryVariable pulumi.StringPtrOutput `pulumi:"pmtuDiscoveryVariable"`
-	// PPP Link Authentication Protocol - Choices: `chap`, `pap`
+	// PPP Link Authentication Protocol
+	//   - Choices: `chap`, `pap`
 	PppAuthenticationProtocol pulumi.StringPtrOutput `pulumi:"pppAuthenticationProtocol"`
-	// PPP Authentication Protocol PAP - Default value: `false`
+	// PPP Authentication Protocol PAP
+	//   - Default value: `false`
 	PppAuthenticationProtocolPap pulumi.BoolPtrOutput `pulumi:"pppAuthenticationProtocolPap"`
-	// Authenticate remote on incoming call only - Choices: `callin`, `false` - Default value: `callin`
+	// Authenticate remote on incoming call only
+	//   - Choices: `callin`, `false`
+	//   - Default value: `callin`
 	PppAuthenticationType pulumi.StringPtrOutput `pulumi:"pppAuthenticationType"`
 	// Name of QoS map
 	QosMap pulumi.StringPtrOutput `pulumi:"qosMap"`
@@ -141,23 +160,29 @@ type VpnInterfaceMultilinkFeatureTemplate struct {
 	QosMapVpn pulumi.StringPtrOutput `pulumi:"qosMapVpn"`
 	// Variable name
 	QosMapVpnVariable pulumi.StringPtrOutput `pulumi:"qosMapVpnVariable"`
-	// Enable secondary region - Choices: `off`, `secondary-only`, `secondary-shared` - Default value: `off`
+	// Enable secondary region
+	//   - Choices: `off`, `secondary-only`, `secondary-shared`
+	//   - Default value: `off`
 	SecondaryRegion pulumi.StringPtrOutput `pulumi:"secondaryRegion"`
 	// Variable name
 	SecondaryRegionVariable pulumi.StringPtrOutput `pulumi:"secondaryRegionVariable"`
-	// 1ge interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps - Range: `8`-`100000000`
+	// 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
+	//   - Range: `8`-`100000000`
 	ShapingRate pulumi.IntPtrOutput `pulumi:"shapingRate"`
 	// Variable name
 	ShapingRateVariable pulumi.StringPtrOutput `pulumi:"shapingRateVariable"`
-	// Administrative state - Default value: `true`
+	// Administrative state
+	//   - Default value: `true`
 	Shutdown pulumi.BoolPtrOutput `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable pulumi.StringPtrOutput `pulumi:"shutdownVariable"`
-	// Static ingress QoS for the port - Range: `0`-`7`
+	// Static ingress QoS for the port
+	//   - Range: `0`-`7`
 	StaticIngressQos pulumi.IntPtrOutput `pulumi:"staticIngressQos"`
 	// Variable name
 	StaticIngressQosVariable pulumi.StringPtrOutput `pulumi:"staticIngressQosVariable"`
-	// TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `552`-`1960`
 	TcpMss pulumi.IntPtrOutput `pulumi:"tcpMss"`
 	// Variable name
 	TcpMssVariable pulumi.StringPtrOutput `pulumi:"tcpMssVariable"`
@@ -167,51 +192,63 @@ type VpnInterfaceMultilinkFeatureTemplate struct {
 	TlocExtension pulumi.StringPtrOutput `pulumi:"tlocExtension"`
 	// Variable name
 	TlocExtensionVariable pulumi.StringPtrOutput `pulumi:"tlocExtensionVariable"`
-	// Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
+	// Allow all traffic. Overrides all other allow-service options if allow-service all is set
+	//   - Default value: `false`
 	TunnelInterfaceAllowAll pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceAllowAll"`
 	// Variable name
 	TunnelInterfaceAllowAllVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceAllowAllVariable"`
-	// Allow/deny BGP - Default value: `false`
+	// Allow/deny BGP
+	//   - Default value: `false`
 	TunnelInterfaceAllowBgp pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceAllowBgp"`
 	// Variable name
 	TunnelInterfaceAllowBgpVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceAllowBgpVariable"`
-	// Allow/Deny DHCP - Default value: `true`
+	// Allow/Deny DHCP
+	//   - Default value: `true`
 	TunnelInterfaceAllowDhcp pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceAllowDhcp"`
 	// Variable name
 	TunnelInterfaceAllowDhcpVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceAllowDhcpVariable"`
-	// Allow/Deny DNS - Default value: `true`
+	// Allow/Deny DNS
+	//   - Default value: `true`
 	TunnelInterfaceAllowDns pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceAllowDns"`
 	// Variable name
 	TunnelInterfaceAllowDnsVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceAllowDnsVariable"`
-	// Allow/Deny Https - Default value: `true`
+	// Allow/Deny Https
+	//   - Default value: `true`
 	TunnelInterfaceAllowHttps pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceAllowHttps"`
 	// Variable name
 	TunnelInterfaceAllowHttpsVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceAllowHttpsVariable"`
-	// Allow/Deny ICMP - Default value: `true`
+	// Allow/Deny ICMP
+	//   - Default value: `true`
 	TunnelInterfaceAllowIcmp pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceAllowIcmp"`
 	// Variable name
 	TunnelInterfaceAllowIcmpVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceAllowIcmpVariable"`
-	// Allow/Deny NETCONF - Default value: `false`
+	// Allow/Deny NETCONF
+	//   - Default value: `false`
 	TunnelInterfaceAllowNetconf pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceAllowNetconf"`
 	// Variable name
 	TunnelInterfaceAllowNetconfVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceAllowNetconfVariable"`
-	// Allow/Deny NTP - Default value: `false`
+	// Allow/Deny NTP
+	//   - Default value: `false`
 	TunnelInterfaceAllowNtp pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceAllowNtp"`
 	// Variable name
 	TunnelInterfaceAllowNtpVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceAllowNtpVariable"`
-	// Allow/Deny OSPF - Default value: `false`
+	// Allow/Deny OSPF
+	//   - Default value: `false`
 	TunnelInterfaceAllowOspf pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceAllowOspf"`
 	// Variable name
 	TunnelInterfaceAllowOspfVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceAllowOspfVariable"`
-	// Allow/Deny SNMP - Default value: `false`
+	// Allow/Deny SNMP
+	//   - Default value: `false`
 	TunnelInterfaceAllowSnmp pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceAllowSnmp"`
 	// Variable name
 	TunnelInterfaceAllowSnmpVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceAllowSnmpVariable"`
-	// Allow/Deny SSH - Default value: `false`
+	// Allow/Deny SSH
+	//   - Default value: `false`
 	TunnelInterfaceAllowSsh pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceAllowSsh"`
 	// Variable name
 	TunnelInterfaceAllowSshVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceAllowSshVariable"`
-	// Allow/Deny STUN - Default value: `false`
+	// Allow/Deny STUN
+	//   - Default value: `false`
 	TunnelInterfaceAllowStun pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceAllowStun"`
 	// Variable name
 	TunnelInterfaceAllowStunVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceAllowStunVariable"`
@@ -219,28 +256,33 @@ type VpnInterfaceMultilinkFeatureTemplate struct {
 	TunnelInterfaceBindLoopbackTunnel pulumi.StringPtrOutput `pulumi:"tunnelInterfaceBindLoopbackTunnel"`
 	// Variable name
 	TunnelInterfaceBindLoopbackTunnelVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceBindLoopbackTunnelVariable"`
-	// Set TLOC as border TLOC - Default value: `false`
+	// Set TLOC as border TLOC
+	//   - Default value: `false`
 	TunnelInterfaceBorder pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceBorder"`
 	// Variable name
 	TunnelInterfaceBorderVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceBorderVariable"`
-	// Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-	// `carrier7`, `carrier8` - Default value: `default`
+	// Set carrier for TLOC
+	//   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+	//   - Default value: `default`
 	TunnelInterfaceCarrier pulumi.StringPtrOutput `pulumi:"tunnelInterfaceCarrier"`
 	// Variable name
 	TunnelInterfaceCarrierVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceCarrierVariable"`
-	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+	//   - Default value: `false`
 	TunnelInterfaceClearDontFragment pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceClearDontFragment"`
 	// Variable name
 	TunnelInterfaceClearDontFragmentVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceClearDontFragmentVariable"`
-	// Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-	// `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-	// `private4`, `private5`, `private6` - Default value: `default`
+	// Set color for TLOC
+	//   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+	//   - Default value: `default`
 	TunnelInterfaceColor pulumi.StringPtrOutput `pulumi:"tunnelInterfaceColor"`
-	// Restrict this TLOC behavior - Default value: `false`
+	// Restrict this TLOC behavior
+	//   - Default value: `false`
 	TunnelInterfaceColorRestrict pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceColorRestrict"`
 	// Variable name
 	TunnelInterfaceColorVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceColorVariable"`
-	// Allow Control Connection - Default value: `true`
+	// Allow Control Connection
+	//   - Default value: `true`
 	TunnelInterfaceControlConnections pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceControlConnections"`
 	// Variable name
 	TunnelInterfaceControlConnectionsVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceControlConnectionsVariable"`
@@ -254,51 +296,67 @@ type VpnInterfaceMultilinkFeatureTemplate struct {
 	TunnelInterfaceGroups pulumi.IntArrayOutput `pulumi:"tunnelInterfaceGroups"`
 	// Variable name
 	TunnelInterfaceGroupsVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceGroupsVariable"`
-	// Set time period of control hello packets <100..600000> milli seconds - Range: `100`-`600000` - Default value: `1000`
+	// Set time period of control hello packets <100..600000> milli seconds
+	//   - Range: `100`-`600000`
+	//   - Default value: `1000`
 	TunnelInterfaceHelloInterval pulumi.IntPtrOutput `pulumi:"tunnelInterfaceHelloInterval"`
 	// Variable name
 	TunnelInterfaceHelloIntervalVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceHelloIntervalVariable"`
-	// Set tolerance of control hello packets <12..6000> seconds - Range: `12`-`6000` - Default value: `12`
+	// Set tolerance of control hello packets <12..6000> seconds
+	//   - Range: `12`-`6000`
+	//   - Default value: `12`
 	TunnelInterfaceHelloTolerance pulumi.IntPtrOutput `pulumi:"tunnelInterfaceHelloTolerance"`
 	// Variable name
 	TunnelInterfaceHelloToleranceVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceHelloToleranceVariable"`
-	// Set TLOC as last resort - Default value: `false`
+	// Set TLOC as last resort
+	//   - Default value: `false`
 	TunnelInterfaceLastResortCircuit pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceLastResortCircuit"`
 	// Variable name
 	TunnelInterfaceLastResortCircuitVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceLastResortCircuitVariable"`
-	// Set the interface as a low-bandwidth circuit - Default value: `false`
+	// Set the interface as a low-bandwidth circuit
+	//   - Default value: `false`
 	TunnelInterfaceLowBandwidthLink pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceLowBandwidthLink"`
 	// Variable name
 	TunnelInterfaceLowBandwidthLinkVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceLowBandwidthLinkVariable"`
-	// Set the maximum number of control connections for this TLOC - Range: `0`-`8`
+	// Set the maximum number of control connections for this TLOC
+	//   - Range: `0`-`8`
 	TunnelInterfaceMaxControlConnections pulumi.IntPtrOutput `pulumi:"tunnelInterfaceMaxControlConnections"`
 	// Variable name
 	TunnelInterfaceMaxControlConnectionsVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceMaxControlConnectionsVariable"`
-	// Set time period of nat refresh packets <1...60> seconds - Range: `1`-`60` - Default value: `5`
+	// Set time period of nat refresh packets <1...60> seconds
+	//   - Range: `1`-`60`
+	//   - Default value: `5`
 	TunnelInterfaceNatRefreshInterval pulumi.IntPtrOutput `pulumi:"tunnelInterfaceNatRefreshInterval"`
 	// Variable name
 	TunnelInterfaceNatRefreshIntervalVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceNatRefreshIntervalVariable"`
-	// Accept and respond to network-prefix-directed broadcasts) - Default value: `false`
+	// Accept and respond to network-prefix-directed broadcasts)
+	//   - Default value: `false`
 	TunnelInterfaceNetworkBroadcast pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceNetworkBroadcast"`
 	// Variable name
 	TunnelInterfaceNetworkBroadcastVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceNetworkBroadcastVariable"`
-	// Disallow port hopping on the tunnel interface - Default value: `true`
+	// Disallow port hopping on the tunnel interface
+	//   - Default value: `true`
 	TunnelInterfacePortHop pulumi.BoolPtrOutput `pulumi:"tunnelInterfacePortHop"`
 	// Variable name
 	TunnelInterfacePortHopVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfacePortHopVariable"`
-	// Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// Tunnel TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TunnelInterfaceTunnelTcpMss pulumi.IntPtrOutput `pulumi:"tunnelInterfaceTunnelTcpMss"`
 	// Variable name
 	TunnelInterfaceTunnelTcpMssVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceTunnelTcpMssVariable"`
-	// Put this wan interface in STUN mode only - Default value: `false`
+	// Put this wan interface in STUN mode only
+	//   - Default value: `false`
 	TunnelInterfaceVbondAsStunServer pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceVbondAsStunServer"`
 	// Variable name
 	TunnelInterfaceVbondAsStunServerVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceVbondAsStunServerVariable"`
-	// Set interface preference for control connection to vManage <0..8> - Range: `0`-`8` - Default value: `5`
+	// Set interface preference for control connection to vManage <0..8>
+	//   - Range: `0`-`8`
+	//   - Default value: `5`
 	TunnelInterfaceVmanageConnectionPreference pulumi.IntPtrOutput `pulumi:"tunnelInterfaceVmanageConnectionPreference"`
 	// Variable name
 	TunnelInterfaceVmanageConnectionPreferenceVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceVmanageConnectionPreferenceVariable"`
-	// Set tunnel QoS mode - Choices: `spoke`
+	// Set tunnel QoS mode
+	//   - Choices: `spoke`
 	TunnelQosMode pulumi.StringPtrOutput `pulumi:"tunnelQosMode"`
 	// Variable name
 	TunnelQosModeVariable pulumi.StringPtrOutput `pulumi:"tunnelQosModeVariable"`
@@ -348,15 +406,18 @@ func GetVpnInterfaceMultilinkFeatureTemplate(ctx *pulumi.Context,
 type vpnInterfaceMultilinkFeatureTemplateState struct {
 	// Apply ACL
 	AccessLists []VpnInterfaceMultilinkFeatureTemplateAccessList `pulumi:"accessLists"`
-	// Link autonegotiation - Default value: `true`
+	// Link autonegotiation
+	//   - Default value: `true`
 	Autonegotiate *bool `pulumi:"autonegotiate"`
 	// Variable name
 	AutonegotiateVariable *string `pulumi:"autonegotiateVariable"`
-	// Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+	// Interface downstream bandwidth capacity, in kbps
+	//   - Range: `1`-`2147483647`
 	BandwidthDownstream *int `pulumi:"bandwidthDownstream"`
 	// Variable name
 	BandwidthDownstreamVariable *string `pulumi:"bandwidthDownstreamVariable"`
-	// Interface upstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+	// Interface upstream bandwidth capacity, in kbps
+	//   - Range: `1`-`2147483647`
 	BandwidthUpstream *int `pulumi:"bandwidthUpstream"`
 	// Variable name
 	BandwidthUpstreamVariable *string `pulumi:"bandwidthUpstreamVariable"`
@@ -368,27 +429,32 @@ type vpnInterfaceMultilinkFeatureTemplateState struct {
 	ChapPppAuthPassword *string `pulumi:"chapPppAuthPassword"`
 	// Variable name
 	ChapPppAuthPasswordVariable *string `pulumi:"chapPppAuthPasswordVariable"`
-	// Clear don't fragment bit - Default value: `false`
+	// Clear don't fragment bit
+	//   - Default value: `false`
 	ClearDontFragmentBit *bool `pulumi:"clearDontFragmentBit"`
 	// Variable name
 	ClearDontFragmentBitVariable *string `pulumi:"clearDontFragmentBitVariable"`
-	// Enable core region - Choices: `core`, `core-shared` - Default value: `core`
+	// Enable core region
+	//   - Choices: `core`, `core-shared`
+	//   - Default value: `core`
 	CoreRegion *string `pulumi:"coreRegion"`
 	// Variable name
 	CoreRegionVariable *string `pulumi:"coreRegionVariable"`
 	// The description of the feature template
 	Description *string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
-	// Suppresss multilink fragmentation - Default value: `false`
+	// Suppresss multilink fragmentation
+	//   - Default value: `false`
 	DisableFragmentation *bool `pulumi:"disableFragmentation"`
-	// Enable core region - Default value: `false`
+	// Enable core region
+	//   - Default value: `false`
 	EnableCoreRegion *bool `pulumi:"enableCoreRegion"`
 	// Variable name
 	EnableCoreRegionVariable *string `pulumi:"enableCoreRegionVariable"`
-	// Maximum delay for each fragment - Range: `0`-`1000`
+	// Maximum delay for each fragment
+	//   - Range: `0`-`1000`
 	FragmentMaxDelay *int `pulumi:"fragmentMaxDelay"`
 	// Variable name
 	FragmentMaxDelayVariable *string `pulumi:"fragmentMaxDelayVariable"`
@@ -400,9 +466,12 @@ type vpnInterfaceMultilinkFeatureTemplateState struct {
 	InterfaceName *string `pulumi:"interfaceName"`
 	// Variable name
 	InterfaceNameVariable *string `pulumi:"interfaceNameVariable"`
-	// Allow interleaving of packets with fragments - Default value: `false`
+	// Allow interleaving of packets with fragments
+	//   - Default value: `false`
 	InterleavingFragment *bool `pulumi:"interleavingFragment"`
-	// Interface MTU <68...2000>, in bytes - Range: `68`-`2000` - Default value: `1500`
+	// Interface MTU <68...2000>, in bytes
+	//   - Range: `68`-`2000`
+	//   - Default value: `1500`
 	IpMtu *int `pulumi:"ipMtu"`
 	// Variable name
 	IpMtuVariable *string `pulumi:"ipMtuVariable"`
@@ -416,7 +485,8 @@ type vpnInterfaceMultilinkFeatureTemplateState struct {
 	Ipv6Address *string `pulumi:"ipv6Address"`
 	// Variable name
 	Ipv6AddressVariable *string `pulumi:"ipv6AddressVariable"`
-	// MultiLink Group Number - Range: `1`-`2147483647`
+	// MultiLink Group Number
+	//   - Range: `1`-`2147483647`
 	MultilinkGroupNumber *int `pulumi:"multilinkGroupNumber"`
 	// Variable name
 	MultilinkGroupNumberVariable *string `pulumi:"multilinkGroupNumberVariable"`
@@ -436,23 +506,30 @@ type vpnInterfaceMultilinkFeatureTemplateState struct {
 	PapUsername *string `pulumi:"papUsername"`
 	// Variable name
 	PapUsernameVariable *string `pulumi:"papUsernameVariable"`
-	// Per-tunnel Qos - Default value: `false`
+	// Per-tunnel Qos
+	//   - Default value: `false`
 	PerTunnelQos *bool `pulumi:"perTunnelQos"`
-	// Per-tunnel QoS Aggregator - Default value: `false`
+	// Per-tunnel QoS Aggregator
+	//   - Default value: `false`
 	PerTunnelQosAggregator *bool `pulumi:"perTunnelQosAggregator"`
 	// Variable name
 	PerTunnelQosAggregatorVariable *string `pulumi:"perTunnelQosAggregatorVariable"`
 	// Variable name
 	PerTunnelQosVariable *string `pulumi:"perTunnelQosVariable"`
-	// Path MTU Discovery - Default value: `false`
+	// Path MTU Discovery
+	//   - Default value: `false`
 	PmtuDiscovery *bool `pulumi:"pmtuDiscovery"`
 	// Variable name
 	PmtuDiscoveryVariable *string `pulumi:"pmtuDiscoveryVariable"`
-	// PPP Link Authentication Protocol - Choices: `chap`, `pap`
+	// PPP Link Authentication Protocol
+	//   - Choices: `chap`, `pap`
 	PppAuthenticationProtocol *string `pulumi:"pppAuthenticationProtocol"`
-	// PPP Authentication Protocol PAP - Default value: `false`
+	// PPP Authentication Protocol PAP
+	//   - Default value: `false`
 	PppAuthenticationProtocolPap *bool `pulumi:"pppAuthenticationProtocolPap"`
-	// Authenticate remote on incoming call only - Choices: `callin`, `false` - Default value: `callin`
+	// Authenticate remote on incoming call only
+	//   - Choices: `callin`, `false`
+	//   - Default value: `callin`
 	PppAuthenticationType *string `pulumi:"pppAuthenticationType"`
 	// Name of QoS map
 	QosMap *string `pulumi:"qosMap"`
@@ -462,23 +539,29 @@ type vpnInterfaceMultilinkFeatureTemplateState struct {
 	QosMapVpn *string `pulumi:"qosMapVpn"`
 	// Variable name
 	QosMapVpnVariable *string `pulumi:"qosMapVpnVariable"`
-	// Enable secondary region - Choices: `off`, `secondary-only`, `secondary-shared` - Default value: `off`
+	// Enable secondary region
+	//   - Choices: `off`, `secondary-only`, `secondary-shared`
+	//   - Default value: `off`
 	SecondaryRegion *string `pulumi:"secondaryRegion"`
 	// Variable name
 	SecondaryRegionVariable *string `pulumi:"secondaryRegionVariable"`
-	// 1ge interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps - Range: `8`-`100000000`
+	// 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
+	//   - Range: `8`-`100000000`
 	ShapingRate *int `pulumi:"shapingRate"`
 	// Variable name
 	ShapingRateVariable *string `pulumi:"shapingRateVariable"`
-	// Administrative state - Default value: `true`
+	// Administrative state
+	//   - Default value: `true`
 	Shutdown *bool `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable *string `pulumi:"shutdownVariable"`
-	// Static ingress QoS for the port - Range: `0`-`7`
+	// Static ingress QoS for the port
+	//   - Range: `0`-`7`
 	StaticIngressQos *int `pulumi:"staticIngressQos"`
 	// Variable name
 	StaticIngressQosVariable *string `pulumi:"staticIngressQosVariable"`
-	// TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `552`-`1960`
 	TcpMss *int `pulumi:"tcpMss"`
 	// Variable name
 	TcpMssVariable *string `pulumi:"tcpMssVariable"`
@@ -488,51 +571,63 @@ type vpnInterfaceMultilinkFeatureTemplateState struct {
 	TlocExtension *string `pulumi:"tlocExtension"`
 	// Variable name
 	TlocExtensionVariable *string `pulumi:"tlocExtensionVariable"`
-	// Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
+	// Allow all traffic. Overrides all other allow-service options if allow-service all is set
+	//   - Default value: `false`
 	TunnelInterfaceAllowAll *bool `pulumi:"tunnelInterfaceAllowAll"`
 	// Variable name
 	TunnelInterfaceAllowAllVariable *string `pulumi:"tunnelInterfaceAllowAllVariable"`
-	// Allow/deny BGP - Default value: `false`
+	// Allow/deny BGP
+	//   - Default value: `false`
 	TunnelInterfaceAllowBgp *bool `pulumi:"tunnelInterfaceAllowBgp"`
 	// Variable name
 	TunnelInterfaceAllowBgpVariable *string `pulumi:"tunnelInterfaceAllowBgpVariable"`
-	// Allow/Deny DHCP - Default value: `true`
+	// Allow/Deny DHCP
+	//   - Default value: `true`
 	TunnelInterfaceAllowDhcp *bool `pulumi:"tunnelInterfaceAllowDhcp"`
 	// Variable name
 	TunnelInterfaceAllowDhcpVariable *string `pulumi:"tunnelInterfaceAllowDhcpVariable"`
-	// Allow/Deny DNS - Default value: `true`
+	// Allow/Deny DNS
+	//   - Default value: `true`
 	TunnelInterfaceAllowDns *bool `pulumi:"tunnelInterfaceAllowDns"`
 	// Variable name
 	TunnelInterfaceAllowDnsVariable *string `pulumi:"tunnelInterfaceAllowDnsVariable"`
-	// Allow/Deny Https - Default value: `true`
+	// Allow/Deny Https
+	//   - Default value: `true`
 	TunnelInterfaceAllowHttps *bool `pulumi:"tunnelInterfaceAllowHttps"`
 	// Variable name
 	TunnelInterfaceAllowHttpsVariable *string `pulumi:"tunnelInterfaceAllowHttpsVariable"`
-	// Allow/Deny ICMP - Default value: `true`
+	// Allow/Deny ICMP
+	//   - Default value: `true`
 	TunnelInterfaceAllowIcmp *bool `pulumi:"tunnelInterfaceAllowIcmp"`
 	// Variable name
 	TunnelInterfaceAllowIcmpVariable *string `pulumi:"tunnelInterfaceAllowIcmpVariable"`
-	// Allow/Deny NETCONF - Default value: `false`
+	// Allow/Deny NETCONF
+	//   - Default value: `false`
 	TunnelInterfaceAllowNetconf *bool `pulumi:"tunnelInterfaceAllowNetconf"`
 	// Variable name
 	TunnelInterfaceAllowNetconfVariable *string `pulumi:"tunnelInterfaceAllowNetconfVariable"`
-	// Allow/Deny NTP - Default value: `false`
+	// Allow/Deny NTP
+	//   - Default value: `false`
 	TunnelInterfaceAllowNtp *bool `pulumi:"tunnelInterfaceAllowNtp"`
 	// Variable name
 	TunnelInterfaceAllowNtpVariable *string `pulumi:"tunnelInterfaceAllowNtpVariable"`
-	// Allow/Deny OSPF - Default value: `false`
+	// Allow/Deny OSPF
+	//   - Default value: `false`
 	TunnelInterfaceAllowOspf *bool `pulumi:"tunnelInterfaceAllowOspf"`
 	// Variable name
 	TunnelInterfaceAllowOspfVariable *string `pulumi:"tunnelInterfaceAllowOspfVariable"`
-	// Allow/Deny SNMP - Default value: `false`
+	// Allow/Deny SNMP
+	//   - Default value: `false`
 	TunnelInterfaceAllowSnmp *bool `pulumi:"tunnelInterfaceAllowSnmp"`
 	// Variable name
 	TunnelInterfaceAllowSnmpVariable *string `pulumi:"tunnelInterfaceAllowSnmpVariable"`
-	// Allow/Deny SSH - Default value: `false`
+	// Allow/Deny SSH
+	//   - Default value: `false`
 	TunnelInterfaceAllowSsh *bool `pulumi:"tunnelInterfaceAllowSsh"`
 	// Variable name
 	TunnelInterfaceAllowSshVariable *string `pulumi:"tunnelInterfaceAllowSshVariable"`
-	// Allow/Deny STUN - Default value: `false`
+	// Allow/Deny STUN
+	//   - Default value: `false`
 	TunnelInterfaceAllowStun *bool `pulumi:"tunnelInterfaceAllowStun"`
 	// Variable name
 	TunnelInterfaceAllowStunVariable *string `pulumi:"tunnelInterfaceAllowStunVariable"`
@@ -540,28 +635,33 @@ type vpnInterfaceMultilinkFeatureTemplateState struct {
 	TunnelInterfaceBindLoopbackTunnel *string `pulumi:"tunnelInterfaceBindLoopbackTunnel"`
 	// Variable name
 	TunnelInterfaceBindLoopbackTunnelVariable *string `pulumi:"tunnelInterfaceBindLoopbackTunnelVariable"`
-	// Set TLOC as border TLOC - Default value: `false`
+	// Set TLOC as border TLOC
+	//   - Default value: `false`
 	TunnelInterfaceBorder *bool `pulumi:"tunnelInterfaceBorder"`
 	// Variable name
 	TunnelInterfaceBorderVariable *string `pulumi:"tunnelInterfaceBorderVariable"`
-	// Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-	// `carrier7`, `carrier8` - Default value: `default`
+	// Set carrier for TLOC
+	//   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+	//   - Default value: `default`
 	TunnelInterfaceCarrier *string `pulumi:"tunnelInterfaceCarrier"`
 	// Variable name
 	TunnelInterfaceCarrierVariable *string `pulumi:"tunnelInterfaceCarrierVariable"`
-	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+	//   - Default value: `false`
 	TunnelInterfaceClearDontFragment *bool `pulumi:"tunnelInterfaceClearDontFragment"`
 	// Variable name
 	TunnelInterfaceClearDontFragmentVariable *string `pulumi:"tunnelInterfaceClearDontFragmentVariable"`
-	// Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-	// `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-	// `private4`, `private5`, `private6` - Default value: `default`
+	// Set color for TLOC
+	//   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+	//   - Default value: `default`
 	TunnelInterfaceColor *string `pulumi:"tunnelInterfaceColor"`
-	// Restrict this TLOC behavior - Default value: `false`
+	// Restrict this TLOC behavior
+	//   - Default value: `false`
 	TunnelInterfaceColorRestrict *bool `pulumi:"tunnelInterfaceColorRestrict"`
 	// Variable name
 	TunnelInterfaceColorVariable *string `pulumi:"tunnelInterfaceColorVariable"`
-	// Allow Control Connection - Default value: `true`
+	// Allow Control Connection
+	//   - Default value: `true`
 	TunnelInterfaceControlConnections *bool `pulumi:"tunnelInterfaceControlConnections"`
 	// Variable name
 	TunnelInterfaceControlConnectionsVariable *string `pulumi:"tunnelInterfaceControlConnectionsVariable"`
@@ -575,51 +675,67 @@ type vpnInterfaceMultilinkFeatureTemplateState struct {
 	TunnelInterfaceGroups []int `pulumi:"tunnelInterfaceGroups"`
 	// Variable name
 	TunnelInterfaceGroupsVariable *string `pulumi:"tunnelInterfaceGroupsVariable"`
-	// Set time period of control hello packets <100..600000> milli seconds - Range: `100`-`600000` - Default value: `1000`
+	// Set time period of control hello packets <100..600000> milli seconds
+	//   - Range: `100`-`600000`
+	//   - Default value: `1000`
 	TunnelInterfaceHelloInterval *int `pulumi:"tunnelInterfaceHelloInterval"`
 	// Variable name
 	TunnelInterfaceHelloIntervalVariable *string `pulumi:"tunnelInterfaceHelloIntervalVariable"`
-	// Set tolerance of control hello packets <12..6000> seconds - Range: `12`-`6000` - Default value: `12`
+	// Set tolerance of control hello packets <12..6000> seconds
+	//   - Range: `12`-`6000`
+	//   - Default value: `12`
 	TunnelInterfaceHelloTolerance *int `pulumi:"tunnelInterfaceHelloTolerance"`
 	// Variable name
 	TunnelInterfaceHelloToleranceVariable *string `pulumi:"tunnelInterfaceHelloToleranceVariable"`
-	// Set TLOC as last resort - Default value: `false`
+	// Set TLOC as last resort
+	//   - Default value: `false`
 	TunnelInterfaceLastResortCircuit *bool `pulumi:"tunnelInterfaceLastResortCircuit"`
 	// Variable name
 	TunnelInterfaceLastResortCircuitVariable *string `pulumi:"tunnelInterfaceLastResortCircuitVariable"`
-	// Set the interface as a low-bandwidth circuit - Default value: `false`
+	// Set the interface as a low-bandwidth circuit
+	//   - Default value: `false`
 	TunnelInterfaceLowBandwidthLink *bool `pulumi:"tunnelInterfaceLowBandwidthLink"`
 	// Variable name
 	TunnelInterfaceLowBandwidthLinkVariable *string `pulumi:"tunnelInterfaceLowBandwidthLinkVariable"`
-	// Set the maximum number of control connections for this TLOC - Range: `0`-`8`
+	// Set the maximum number of control connections for this TLOC
+	//   - Range: `0`-`8`
 	TunnelInterfaceMaxControlConnections *int `pulumi:"tunnelInterfaceMaxControlConnections"`
 	// Variable name
 	TunnelInterfaceMaxControlConnectionsVariable *string `pulumi:"tunnelInterfaceMaxControlConnectionsVariable"`
-	// Set time period of nat refresh packets <1...60> seconds - Range: `1`-`60` - Default value: `5`
+	// Set time period of nat refresh packets <1...60> seconds
+	//   - Range: `1`-`60`
+	//   - Default value: `5`
 	TunnelInterfaceNatRefreshInterval *int `pulumi:"tunnelInterfaceNatRefreshInterval"`
 	// Variable name
 	TunnelInterfaceNatRefreshIntervalVariable *string `pulumi:"tunnelInterfaceNatRefreshIntervalVariable"`
-	// Accept and respond to network-prefix-directed broadcasts) - Default value: `false`
+	// Accept and respond to network-prefix-directed broadcasts)
+	//   - Default value: `false`
 	TunnelInterfaceNetworkBroadcast *bool `pulumi:"tunnelInterfaceNetworkBroadcast"`
 	// Variable name
 	TunnelInterfaceNetworkBroadcastVariable *string `pulumi:"tunnelInterfaceNetworkBroadcastVariable"`
-	// Disallow port hopping on the tunnel interface - Default value: `true`
+	// Disallow port hopping on the tunnel interface
+	//   - Default value: `true`
 	TunnelInterfacePortHop *bool `pulumi:"tunnelInterfacePortHop"`
 	// Variable name
 	TunnelInterfacePortHopVariable *string `pulumi:"tunnelInterfacePortHopVariable"`
-	// Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// Tunnel TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TunnelInterfaceTunnelTcpMss *int `pulumi:"tunnelInterfaceTunnelTcpMss"`
 	// Variable name
 	TunnelInterfaceTunnelTcpMssVariable *string `pulumi:"tunnelInterfaceTunnelTcpMssVariable"`
-	// Put this wan interface in STUN mode only - Default value: `false`
+	// Put this wan interface in STUN mode only
+	//   - Default value: `false`
 	TunnelInterfaceVbondAsStunServer *bool `pulumi:"tunnelInterfaceVbondAsStunServer"`
 	// Variable name
 	TunnelInterfaceVbondAsStunServerVariable *string `pulumi:"tunnelInterfaceVbondAsStunServerVariable"`
-	// Set interface preference for control connection to vManage <0..8> - Range: `0`-`8` - Default value: `5`
+	// Set interface preference for control connection to vManage <0..8>
+	//   - Range: `0`-`8`
+	//   - Default value: `5`
 	TunnelInterfaceVmanageConnectionPreference *int `pulumi:"tunnelInterfaceVmanageConnectionPreference"`
 	// Variable name
 	TunnelInterfaceVmanageConnectionPreferenceVariable *string `pulumi:"tunnelInterfaceVmanageConnectionPreferenceVariable"`
-	// Set tunnel QoS mode - Choices: `spoke`
+	// Set tunnel QoS mode
+	//   - Choices: `spoke`
 	TunnelQosMode *string `pulumi:"tunnelQosMode"`
 	// Variable name
 	TunnelQosModeVariable *string `pulumi:"tunnelQosModeVariable"`
@@ -634,15 +750,18 @@ type vpnInterfaceMultilinkFeatureTemplateState struct {
 type VpnInterfaceMultilinkFeatureTemplateState struct {
 	// Apply ACL
 	AccessLists VpnInterfaceMultilinkFeatureTemplateAccessListArrayInput
-	// Link autonegotiation - Default value: `true`
+	// Link autonegotiation
+	//   - Default value: `true`
 	Autonegotiate pulumi.BoolPtrInput
 	// Variable name
 	AutonegotiateVariable pulumi.StringPtrInput
-	// Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+	// Interface downstream bandwidth capacity, in kbps
+	//   - Range: `1`-`2147483647`
 	BandwidthDownstream pulumi.IntPtrInput
 	// Variable name
 	BandwidthDownstreamVariable pulumi.StringPtrInput
-	// Interface upstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+	// Interface upstream bandwidth capacity, in kbps
+	//   - Range: `1`-`2147483647`
 	BandwidthUpstream pulumi.IntPtrInput
 	// Variable name
 	BandwidthUpstreamVariable pulumi.StringPtrInput
@@ -654,27 +773,32 @@ type VpnInterfaceMultilinkFeatureTemplateState struct {
 	ChapPppAuthPassword pulumi.StringPtrInput
 	// Variable name
 	ChapPppAuthPasswordVariable pulumi.StringPtrInput
-	// Clear don't fragment bit - Default value: `false`
+	// Clear don't fragment bit
+	//   - Default value: `false`
 	ClearDontFragmentBit pulumi.BoolPtrInput
 	// Variable name
 	ClearDontFragmentBitVariable pulumi.StringPtrInput
-	// Enable core region - Choices: `core`, `core-shared` - Default value: `core`
+	// Enable core region
+	//   - Choices: `core`, `core-shared`
+	//   - Default value: `core`
 	CoreRegion pulumi.StringPtrInput
 	// Variable name
 	CoreRegionVariable pulumi.StringPtrInput
 	// The description of the feature template
 	Description pulumi.StringPtrInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
-	// Suppresss multilink fragmentation - Default value: `false`
+	// Suppresss multilink fragmentation
+	//   - Default value: `false`
 	DisableFragmentation pulumi.BoolPtrInput
-	// Enable core region - Default value: `false`
+	// Enable core region
+	//   - Default value: `false`
 	EnableCoreRegion pulumi.BoolPtrInput
 	// Variable name
 	EnableCoreRegionVariable pulumi.StringPtrInput
-	// Maximum delay for each fragment - Range: `0`-`1000`
+	// Maximum delay for each fragment
+	//   - Range: `0`-`1000`
 	FragmentMaxDelay pulumi.IntPtrInput
 	// Variable name
 	FragmentMaxDelayVariable pulumi.StringPtrInput
@@ -686,9 +810,12 @@ type VpnInterfaceMultilinkFeatureTemplateState struct {
 	InterfaceName pulumi.StringPtrInput
 	// Variable name
 	InterfaceNameVariable pulumi.StringPtrInput
-	// Allow interleaving of packets with fragments - Default value: `false`
+	// Allow interleaving of packets with fragments
+	//   - Default value: `false`
 	InterleavingFragment pulumi.BoolPtrInput
-	// Interface MTU <68...2000>, in bytes - Range: `68`-`2000` - Default value: `1500`
+	// Interface MTU <68...2000>, in bytes
+	//   - Range: `68`-`2000`
+	//   - Default value: `1500`
 	IpMtu pulumi.IntPtrInput
 	// Variable name
 	IpMtuVariable pulumi.StringPtrInput
@@ -702,7 +829,8 @@ type VpnInterfaceMultilinkFeatureTemplateState struct {
 	Ipv6Address pulumi.StringPtrInput
 	// Variable name
 	Ipv6AddressVariable pulumi.StringPtrInput
-	// MultiLink Group Number - Range: `1`-`2147483647`
+	// MultiLink Group Number
+	//   - Range: `1`-`2147483647`
 	MultilinkGroupNumber pulumi.IntPtrInput
 	// Variable name
 	MultilinkGroupNumberVariable pulumi.StringPtrInput
@@ -722,23 +850,30 @@ type VpnInterfaceMultilinkFeatureTemplateState struct {
 	PapUsername pulumi.StringPtrInput
 	// Variable name
 	PapUsernameVariable pulumi.StringPtrInput
-	// Per-tunnel Qos - Default value: `false`
+	// Per-tunnel Qos
+	//   - Default value: `false`
 	PerTunnelQos pulumi.BoolPtrInput
-	// Per-tunnel QoS Aggregator - Default value: `false`
+	// Per-tunnel QoS Aggregator
+	//   - Default value: `false`
 	PerTunnelQosAggregator pulumi.BoolPtrInput
 	// Variable name
 	PerTunnelQosAggregatorVariable pulumi.StringPtrInput
 	// Variable name
 	PerTunnelQosVariable pulumi.StringPtrInput
-	// Path MTU Discovery - Default value: `false`
+	// Path MTU Discovery
+	//   - Default value: `false`
 	PmtuDiscovery pulumi.BoolPtrInput
 	// Variable name
 	PmtuDiscoveryVariable pulumi.StringPtrInput
-	// PPP Link Authentication Protocol - Choices: `chap`, `pap`
+	// PPP Link Authentication Protocol
+	//   - Choices: `chap`, `pap`
 	PppAuthenticationProtocol pulumi.StringPtrInput
-	// PPP Authentication Protocol PAP - Default value: `false`
+	// PPP Authentication Protocol PAP
+	//   - Default value: `false`
 	PppAuthenticationProtocolPap pulumi.BoolPtrInput
-	// Authenticate remote on incoming call only - Choices: `callin`, `false` - Default value: `callin`
+	// Authenticate remote on incoming call only
+	//   - Choices: `callin`, `false`
+	//   - Default value: `callin`
 	PppAuthenticationType pulumi.StringPtrInput
 	// Name of QoS map
 	QosMap pulumi.StringPtrInput
@@ -748,23 +883,29 @@ type VpnInterfaceMultilinkFeatureTemplateState struct {
 	QosMapVpn pulumi.StringPtrInput
 	// Variable name
 	QosMapVpnVariable pulumi.StringPtrInput
-	// Enable secondary region - Choices: `off`, `secondary-only`, `secondary-shared` - Default value: `off`
+	// Enable secondary region
+	//   - Choices: `off`, `secondary-only`, `secondary-shared`
+	//   - Default value: `off`
 	SecondaryRegion pulumi.StringPtrInput
 	// Variable name
 	SecondaryRegionVariable pulumi.StringPtrInput
-	// 1ge interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps - Range: `8`-`100000000`
+	// 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
+	//   - Range: `8`-`100000000`
 	ShapingRate pulumi.IntPtrInput
 	// Variable name
 	ShapingRateVariable pulumi.StringPtrInput
-	// Administrative state - Default value: `true`
+	// Administrative state
+	//   - Default value: `true`
 	Shutdown pulumi.BoolPtrInput
 	// Variable name
 	ShutdownVariable pulumi.StringPtrInput
-	// Static ingress QoS for the port - Range: `0`-`7`
+	// Static ingress QoS for the port
+	//   - Range: `0`-`7`
 	StaticIngressQos pulumi.IntPtrInput
 	// Variable name
 	StaticIngressQosVariable pulumi.StringPtrInput
-	// TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `552`-`1960`
 	TcpMss pulumi.IntPtrInput
 	// Variable name
 	TcpMssVariable pulumi.StringPtrInput
@@ -774,51 +915,63 @@ type VpnInterfaceMultilinkFeatureTemplateState struct {
 	TlocExtension pulumi.StringPtrInput
 	// Variable name
 	TlocExtensionVariable pulumi.StringPtrInput
-	// Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
+	// Allow all traffic. Overrides all other allow-service options if allow-service all is set
+	//   - Default value: `false`
 	TunnelInterfaceAllowAll pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowAllVariable pulumi.StringPtrInput
-	// Allow/deny BGP - Default value: `false`
+	// Allow/deny BGP
+	//   - Default value: `false`
 	TunnelInterfaceAllowBgp pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowBgpVariable pulumi.StringPtrInput
-	// Allow/Deny DHCP - Default value: `true`
+	// Allow/Deny DHCP
+	//   - Default value: `true`
 	TunnelInterfaceAllowDhcp pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowDhcpVariable pulumi.StringPtrInput
-	// Allow/Deny DNS - Default value: `true`
+	// Allow/Deny DNS
+	//   - Default value: `true`
 	TunnelInterfaceAllowDns pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowDnsVariable pulumi.StringPtrInput
-	// Allow/Deny Https - Default value: `true`
+	// Allow/Deny Https
+	//   - Default value: `true`
 	TunnelInterfaceAllowHttps pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowHttpsVariable pulumi.StringPtrInput
-	// Allow/Deny ICMP - Default value: `true`
+	// Allow/Deny ICMP
+	//   - Default value: `true`
 	TunnelInterfaceAllowIcmp pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowIcmpVariable pulumi.StringPtrInput
-	// Allow/Deny NETCONF - Default value: `false`
+	// Allow/Deny NETCONF
+	//   - Default value: `false`
 	TunnelInterfaceAllowNetconf pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowNetconfVariable pulumi.StringPtrInput
-	// Allow/Deny NTP - Default value: `false`
+	// Allow/Deny NTP
+	//   - Default value: `false`
 	TunnelInterfaceAllowNtp pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowNtpVariable pulumi.StringPtrInput
-	// Allow/Deny OSPF - Default value: `false`
+	// Allow/Deny OSPF
+	//   - Default value: `false`
 	TunnelInterfaceAllowOspf pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowOspfVariable pulumi.StringPtrInput
-	// Allow/Deny SNMP - Default value: `false`
+	// Allow/Deny SNMP
+	//   - Default value: `false`
 	TunnelInterfaceAllowSnmp pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowSnmpVariable pulumi.StringPtrInput
-	// Allow/Deny SSH - Default value: `false`
+	// Allow/Deny SSH
+	//   - Default value: `false`
 	TunnelInterfaceAllowSsh pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowSshVariable pulumi.StringPtrInput
-	// Allow/Deny STUN - Default value: `false`
+	// Allow/Deny STUN
+	//   - Default value: `false`
 	TunnelInterfaceAllowStun pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowStunVariable pulumi.StringPtrInput
@@ -826,28 +979,33 @@ type VpnInterfaceMultilinkFeatureTemplateState struct {
 	TunnelInterfaceBindLoopbackTunnel pulumi.StringPtrInput
 	// Variable name
 	TunnelInterfaceBindLoopbackTunnelVariable pulumi.StringPtrInput
-	// Set TLOC as border TLOC - Default value: `false`
+	// Set TLOC as border TLOC
+	//   - Default value: `false`
 	TunnelInterfaceBorder pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceBorderVariable pulumi.StringPtrInput
-	// Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-	// `carrier7`, `carrier8` - Default value: `default`
+	// Set carrier for TLOC
+	//   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+	//   - Default value: `default`
 	TunnelInterfaceCarrier pulumi.StringPtrInput
 	// Variable name
 	TunnelInterfaceCarrierVariable pulumi.StringPtrInput
-	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+	//   - Default value: `false`
 	TunnelInterfaceClearDontFragment pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceClearDontFragmentVariable pulumi.StringPtrInput
-	// Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-	// `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-	// `private4`, `private5`, `private6` - Default value: `default`
+	// Set color for TLOC
+	//   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+	//   - Default value: `default`
 	TunnelInterfaceColor pulumi.StringPtrInput
-	// Restrict this TLOC behavior - Default value: `false`
+	// Restrict this TLOC behavior
+	//   - Default value: `false`
 	TunnelInterfaceColorRestrict pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceColorVariable pulumi.StringPtrInput
-	// Allow Control Connection - Default value: `true`
+	// Allow Control Connection
+	//   - Default value: `true`
 	TunnelInterfaceControlConnections pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceControlConnectionsVariable pulumi.StringPtrInput
@@ -861,51 +1019,67 @@ type VpnInterfaceMultilinkFeatureTemplateState struct {
 	TunnelInterfaceGroups pulumi.IntArrayInput
 	// Variable name
 	TunnelInterfaceGroupsVariable pulumi.StringPtrInput
-	// Set time period of control hello packets <100..600000> milli seconds - Range: `100`-`600000` - Default value: `1000`
+	// Set time period of control hello packets <100..600000> milli seconds
+	//   - Range: `100`-`600000`
+	//   - Default value: `1000`
 	TunnelInterfaceHelloInterval pulumi.IntPtrInput
 	// Variable name
 	TunnelInterfaceHelloIntervalVariable pulumi.StringPtrInput
-	// Set tolerance of control hello packets <12..6000> seconds - Range: `12`-`6000` - Default value: `12`
+	// Set tolerance of control hello packets <12..6000> seconds
+	//   - Range: `12`-`6000`
+	//   - Default value: `12`
 	TunnelInterfaceHelloTolerance pulumi.IntPtrInput
 	// Variable name
 	TunnelInterfaceHelloToleranceVariable pulumi.StringPtrInput
-	// Set TLOC as last resort - Default value: `false`
+	// Set TLOC as last resort
+	//   - Default value: `false`
 	TunnelInterfaceLastResortCircuit pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceLastResortCircuitVariable pulumi.StringPtrInput
-	// Set the interface as a low-bandwidth circuit - Default value: `false`
+	// Set the interface as a low-bandwidth circuit
+	//   - Default value: `false`
 	TunnelInterfaceLowBandwidthLink pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceLowBandwidthLinkVariable pulumi.StringPtrInput
-	// Set the maximum number of control connections for this TLOC - Range: `0`-`8`
+	// Set the maximum number of control connections for this TLOC
+	//   - Range: `0`-`8`
 	TunnelInterfaceMaxControlConnections pulumi.IntPtrInput
 	// Variable name
 	TunnelInterfaceMaxControlConnectionsVariable pulumi.StringPtrInput
-	// Set time period of nat refresh packets <1...60> seconds - Range: `1`-`60` - Default value: `5`
+	// Set time period of nat refresh packets <1...60> seconds
+	//   - Range: `1`-`60`
+	//   - Default value: `5`
 	TunnelInterfaceNatRefreshInterval pulumi.IntPtrInput
 	// Variable name
 	TunnelInterfaceNatRefreshIntervalVariable pulumi.StringPtrInput
-	// Accept and respond to network-prefix-directed broadcasts) - Default value: `false`
+	// Accept and respond to network-prefix-directed broadcasts)
+	//   - Default value: `false`
 	TunnelInterfaceNetworkBroadcast pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceNetworkBroadcastVariable pulumi.StringPtrInput
-	// Disallow port hopping on the tunnel interface - Default value: `true`
+	// Disallow port hopping on the tunnel interface
+	//   - Default value: `true`
 	TunnelInterfacePortHop pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfacePortHopVariable pulumi.StringPtrInput
-	// Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// Tunnel TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TunnelInterfaceTunnelTcpMss pulumi.IntPtrInput
 	// Variable name
 	TunnelInterfaceTunnelTcpMssVariable pulumi.StringPtrInput
-	// Put this wan interface in STUN mode only - Default value: `false`
+	// Put this wan interface in STUN mode only
+	//   - Default value: `false`
 	TunnelInterfaceVbondAsStunServer pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceVbondAsStunServerVariable pulumi.StringPtrInput
-	// Set interface preference for control connection to vManage <0..8> - Range: `0`-`8` - Default value: `5`
+	// Set interface preference for control connection to vManage <0..8>
+	//   - Range: `0`-`8`
+	//   - Default value: `5`
 	TunnelInterfaceVmanageConnectionPreference pulumi.IntPtrInput
 	// Variable name
 	TunnelInterfaceVmanageConnectionPreferenceVariable pulumi.StringPtrInput
-	// Set tunnel QoS mode - Choices: `spoke`
+	// Set tunnel QoS mode
+	//   - Choices: `spoke`
 	TunnelQosMode pulumi.StringPtrInput
 	// Variable name
 	TunnelQosModeVariable pulumi.StringPtrInput
@@ -924,15 +1098,18 @@ func (VpnInterfaceMultilinkFeatureTemplateState) ElementType() reflect.Type {
 type vpnInterfaceMultilinkFeatureTemplateArgs struct {
 	// Apply ACL
 	AccessLists []VpnInterfaceMultilinkFeatureTemplateAccessList `pulumi:"accessLists"`
-	// Link autonegotiation - Default value: `true`
+	// Link autonegotiation
+	//   - Default value: `true`
 	Autonegotiate *bool `pulumi:"autonegotiate"`
 	// Variable name
 	AutonegotiateVariable *string `pulumi:"autonegotiateVariable"`
-	// Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+	// Interface downstream bandwidth capacity, in kbps
+	//   - Range: `1`-`2147483647`
 	BandwidthDownstream *int `pulumi:"bandwidthDownstream"`
 	// Variable name
 	BandwidthDownstreamVariable *string `pulumi:"bandwidthDownstreamVariable"`
-	// Interface upstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+	// Interface upstream bandwidth capacity, in kbps
+	//   - Range: `1`-`2147483647`
 	BandwidthUpstream *int `pulumi:"bandwidthUpstream"`
 	// Variable name
 	BandwidthUpstreamVariable *string `pulumi:"bandwidthUpstreamVariable"`
@@ -944,27 +1121,32 @@ type vpnInterfaceMultilinkFeatureTemplateArgs struct {
 	ChapPppAuthPassword *string `pulumi:"chapPppAuthPassword"`
 	// Variable name
 	ChapPppAuthPasswordVariable *string `pulumi:"chapPppAuthPasswordVariable"`
-	// Clear don't fragment bit - Default value: `false`
+	// Clear don't fragment bit
+	//   - Default value: `false`
 	ClearDontFragmentBit *bool `pulumi:"clearDontFragmentBit"`
 	// Variable name
 	ClearDontFragmentBitVariable *string `pulumi:"clearDontFragmentBitVariable"`
-	// Enable core region - Choices: `core`, `core-shared` - Default value: `core`
+	// Enable core region
+	//   - Choices: `core`, `core-shared`
+	//   - Default value: `core`
 	CoreRegion *string `pulumi:"coreRegion"`
 	// Variable name
 	CoreRegionVariable *string `pulumi:"coreRegionVariable"`
 	// The description of the feature template
 	Description string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
-	// Suppresss multilink fragmentation - Default value: `false`
+	// Suppresss multilink fragmentation
+	//   - Default value: `false`
 	DisableFragmentation *bool `pulumi:"disableFragmentation"`
-	// Enable core region - Default value: `false`
+	// Enable core region
+	//   - Default value: `false`
 	EnableCoreRegion *bool `pulumi:"enableCoreRegion"`
 	// Variable name
 	EnableCoreRegionVariable *string `pulumi:"enableCoreRegionVariable"`
-	// Maximum delay for each fragment - Range: `0`-`1000`
+	// Maximum delay for each fragment
+	//   - Range: `0`-`1000`
 	FragmentMaxDelay *int `pulumi:"fragmentMaxDelay"`
 	// Variable name
 	FragmentMaxDelayVariable *string `pulumi:"fragmentMaxDelayVariable"`
@@ -976,9 +1158,12 @@ type vpnInterfaceMultilinkFeatureTemplateArgs struct {
 	InterfaceName *string `pulumi:"interfaceName"`
 	// Variable name
 	InterfaceNameVariable *string `pulumi:"interfaceNameVariable"`
-	// Allow interleaving of packets with fragments - Default value: `false`
+	// Allow interleaving of packets with fragments
+	//   - Default value: `false`
 	InterleavingFragment *bool `pulumi:"interleavingFragment"`
-	// Interface MTU <68...2000>, in bytes - Range: `68`-`2000` - Default value: `1500`
+	// Interface MTU <68...2000>, in bytes
+	//   - Range: `68`-`2000`
+	//   - Default value: `1500`
 	IpMtu *int `pulumi:"ipMtu"`
 	// Variable name
 	IpMtuVariable *string `pulumi:"ipMtuVariable"`
@@ -992,7 +1177,8 @@ type vpnInterfaceMultilinkFeatureTemplateArgs struct {
 	Ipv6Address *string `pulumi:"ipv6Address"`
 	// Variable name
 	Ipv6AddressVariable *string `pulumi:"ipv6AddressVariable"`
-	// MultiLink Group Number - Range: `1`-`2147483647`
+	// MultiLink Group Number
+	//   - Range: `1`-`2147483647`
 	MultilinkGroupNumber *int `pulumi:"multilinkGroupNumber"`
 	// Variable name
 	MultilinkGroupNumberVariable *string `pulumi:"multilinkGroupNumberVariable"`
@@ -1012,23 +1198,30 @@ type vpnInterfaceMultilinkFeatureTemplateArgs struct {
 	PapUsername *string `pulumi:"papUsername"`
 	// Variable name
 	PapUsernameVariable *string `pulumi:"papUsernameVariable"`
-	// Per-tunnel Qos - Default value: `false`
+	// Per-tunnel Qos
+	//   - Default value: `false`
 	PerTunnelQos *bool `pulumi:"perTunnelQos"`
-	// Per-tunnel QoS Aggregator - Default value: `false`
+	// Per-tunnel QoS Aggregator
+	//   - Default value: `false`
 	PerTunnelQosAggregator *bool `pulumi:"perTunnelQosAggregator"`
 	// Variable name
 	PerTunnelQosAggregatorVariable *string `pulumi:"perTunnelQosAggregatorVariable"`
 	// Variable name
 	PerTunnelQosVariable *string `pulumi:"perTunnelQosVariable"`
-	// Path MTU Discovery - Default value: `false`
+	// Path MTU Discovery
+	//   - Default value: `false`
 	PmtuDiscovery *bool `pulumi:"pmtuDiscovery"`
 	// Variable name
 	PmtuDiscoveryVariable *string `pulumi:"pmtuDiscoveryVariable"`
-	// PPP Link Authentication Protocol - Choices: `chap`, `pap`
+	// PPP Link Authentication Protocol
+	//   - Choices: `chap`, `pap`
 	PppAuthenticationProtocol *string `pulumi:"pppAuthenticationProtocol"`
-	// PPP Authentication Protocol PAP - Default value: `false`
+	// PPP Authentication Protocol PAP
+	//   - Default value: `false`
 	PppAuthenticationProtocolPap *bool `pulumi:"pppAuthenticationProtocolPap"`
-	// Authenticate remote on incoming call only - Choices: `callin`, `false` - Default value: `callin`
+	// Authenticate remote on incoming call only
+	//   - Choices: `callin`, `false`
+	//   - Default value: `callin`
 	PppAuthenticationType *string `pulumi:"pppAuthenticationType"`
 	// Name of QoS map
 	QosMap *string `pulumi:"qosMap"`
@@ -1038,23 +1231,29 @@ type vpnInterfaceMultilinkFeatureTemplateArgs struct {
 	QosMapVpn *string `pulumi:"qosMapVpn"`
 	// Variable name
 	QosMapVpnVariable *string `pulumi:"qosMapVpnVariable"`
-	// Enable secondary region - Choices: `off`, `secondary-only`, `secondary-shared` - Default value: `off`
+	// Enable secondary region
+	//   - Choices: `off`, `secondary-only`, `secondary-shared`
+	//   - Default value: `off`
 	SecondaryRegion *string `pulumi:"secondaryRegion"`
 	// Variable name
 	SecondaryRegionVariable *string `pulumi:"secondaryRegionVariable"`
-	// 1ge interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps - Range: `8`-`100000000`
+	// 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
+	//   - Range: `8`-`100000000`
 	ShapingRate *int `pulumi:"shapingRate"`
 	// Variable name
 	ShapingRateVariable *string `pulumi:"shapingRateVariable"`
-	// Administrative state - Default value: `true`
+	// Administrative state
+	//   - Default value: `true`
 	Shutdown *bool `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable *string `pulumi:"shutdownVariable"`
-	// Static ingress QoS for the port - Range: `0`-`7`
+	// Static ingress QoS for the port
+	//   - Range: `0`-`7`
 	StaticIngressQos *int `pulumi:"staticIngressQos"`
 	// Variable name
 	StaticIngressQosVariable *string `pulumi:"staticIngressQosVariable"`
-	// TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `552`-`1960`
 	TcpMss *int `pulumi:"tcpMss"`
 	// Variable name
 	TcpMssVariable *string `pulumi:"tcpMssVariable"`
@@ -1062,51 +1261,63 @@ type vpnInterfaceMultilinkFeatureTemplateArgs struct {
 	TlocExtension *string `pulumi:"tlocExtension"`
 	// Variable name
 	TlocExtensionVariable *string `pulumi:"tlocExtensionVariable"`
-	// Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
+	// Allow all traffic. Overrides all other allow-service options if allow-service all is set
+	//   - Default value: `false`
 	TunnelInterfaceAllowAll *bool `pulumi:"tunnelInterfaceAllowAll"`
 	// Variable name
 	TunnelInterfaceAllowAllVariable *string `pulumi:"tunnelInterfaceAllowAllVariable"`
-	// Allow/deny BGP - Default value: `false`
+	// Allow/deny BGP
+	//   - Default value: `false`
 	TunnelInterfaceAllowBgp *bool `pulumi:"tunnelInterfaceAllowBgp"`
 	// Variable name
 	TunnelInterfaceAllowBgpVariable *string `pulumi:"tunnelInterfaceAllowBgpVariable"`
-	// Allow/Deny DHCP - Default value: `true`
+	// Allow/Deny DHCP
+	//   - Default value: `true`
 	TunnelInterfaceAllowDhcp *bool `pulumi:"tunnelInterfaceAllowDhcp"`
 	// Variable name
 	TunnelInterfaceAllowDhcpVariable *string `pulumi:"tunnelInterfaceAllowDhcpVariable"`
-	// Allow/Deny DNS - Default value: `true`
+	// Allow/Deny DNS
+	//   - Default value: `true`
 	TunnelInterfaceAllowDns *bool `pulumi:"tunnelInterfaceAllowDns"`
 	// Variable name
 	TunnelInterfaceAllowDnsVariable *string `pulumi:"tunnelInterfaceAllowDnsVariable"`
-	// Allow/Deny Https - Default value: `true`
+	// Allow/Deny Https
+	//   - Default value: `true`
 	TunnelInterfaceAllowHttps *bool `pulumi:"tunnelInterfaceAllowHttps"`
 	// Variable name
 	TunnelInterfaceAllowHttpsVariable *string `pulumi:"tunnelInterfaceAllowHttpsVariable"`
-	// Allow/Deny ICMP - Default value: `true`
+	// Allow/Deny ICMP
+	//   - Default value: `true`
 	TunnelInterfaceAllowIcmp *bool `pulumi:"tunnelInterfaceAllowIcmp"`
 	// Variable name
 	TunnelInterfaceAllowIcmpVariable *string `pulumi:"tunnelInterfaceAllowIcmpVariable"`
-	// Allow/Deny NETCONF - Default value: `false`
+	// Allow/Deny NETCONF
+	//   - Default value: `false`
 	TunnelInterfaceAllowNetconf *bool `pulumi:"tunnelInterfaceAllowNetconf"`
 	// Variable name
 	TunnelInterfaceAllowNetconfVariable *string `pulumi:"tunnelInterfaceAllowNetconfVariable"`
-	// Allow/Deny NTP - Default value: `false`
+	// Allow/Deny NTP
+	//   - Default value: `false`
 	TunnelInterfaceAllowNtp *bool `pulumi:"tunnelInterfaceAllowNtp"`
 	// Variable name
 	TunnelInterfaceAllowNtpVariable *string `pulumi:"tunnelInterfaceAllowNtpVariable"`
-	// Allow/Deny OSPF - Default value: `false`
+	// Allow/Deny OSPF
+	//   - Default value: `false`
 	TunnelInterfaceAllowOspf *bool `pulumi:"tunnelInterfaceAllowOspf"`
 	// Variable name
 	TunnelInterfaceAllowOspfVariable *string `pulumi:"tunnelInterfaceAllowOspfVariable"`
-	// Allow/Deny SNMP - Default value: `false`
+	// Allow/Deny SNMP
+	//   - Default value: `false`
 	TunnelInterfaceAllowSnmp *bool `pulumi:"tunnelInterfaceAllowSnmp"`
 	// Variable name
 	TunnelInterfaceAllowSnmpVariable *string `pulumi:"tunnelInterfaceAllowSnmpVariable"`
-	// Allow/Deny SSH - Default value: `false`
+	// Allow/Deny SSH
+	//   - Default value: `false`
 	TunnelInterfaceAllowSsh *bool `pulumi:"tunnelInterfaceAllowSsh"`
 	// Variable name
 	TunnelInterfaceAllowSshVariable *string `pulumi:"tunnelInterfaceAllowSshVariable"`
-	// Allow/Deny STUN - Default value: `false`
+	// Allow/Deny STUN
+	//   - Default value: `false`
 	TunnelInterfaceAllowStun *bool `pulumi:"tunnelInterfaceAllowStun"`
 	// Variable name
 	TunnelInterfaceAllowStunVariable *string `pulumi:"tunnelInterfaceAllowStunVariable"`
@@ -1114,28 +1325,33 @@ type vpnInterfaceMultilinkFeatureTemplateArgs struct {
 	TunnelInterfaceBindLoopbackTunnel *string `pulumi:"tunnelInterfaceBindLoopbackTunnel"`
 	// Variable name
 	TunnelInterfaceBindLoopbackTunnelVariable *string `pulumi:"tunnelInterfaceBindLoopbackTunnelVariable"`
-	// Set TLOC as border TLOC - Default value: `false`
+	// Set TLOC as border TLOC
+	//   - Default value: `false`
 	TunnelInterfaceBorder *bool `pulumi:"tunnelInterfaceBorder"`
 	// Variable name
 	TunnelInterfaceBorderVariable *string `pulumi:"tunnelInterfaceBorderVariable"`
-	// Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-	// `carrier7`, `carrier8` - Default value: `default`
+	// Set carrier for TLOC
+	//   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+	//   - Default value: `default`
 	TunnelInterfaceCarrier *string `pulumi:"tunnelInterfaceCarrier"`
 	// Variable name
 	TunnelInterfaceCarrierVariable *string `pulumi:"tunnelInterfaceCarrierVariable"`
-	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+	//   - Default value: `false`
 	TunnelInterfaceClearDontFragment *bool `pulumi:"tunnelInterfaceClearDontFragment"`
 	// Variable name
 	TunnelInterfaceClearDontFragmentVariable *string `pulumi:"tunnelInterfaceClearDontFragmentVariable"`
-	// Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-	// `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-	// `private4`, `private5`, `private6` - Default value: `default`
+	// Set color for TLOC
+	//   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+	//   - Default value: `default`
 	TunnelInterfaceColor *string `pulumi:"tunnelInterfaceColor"`
-	// Restrict this TLOC behavior - Default value: `false`
+	// Restrict this TLOC behavior
+	//   - Default value: `false`
 	TunnelInterfaceColorRestrict *bool `pulumi:"tunnelInterfaceColorRestrict"`
 	// Variable name
 	TunnelInterfaceColorVariable *string `pulumi:"tunnelInterfaceColorVariable"`
-	// Allow Control Connection - Default value: `true`
+	// Allow Control Connection
+	//   - Default value: `true`
 	TunnelInterfaceControlConnections *bool `pulumi:"tunnelInterfaceControlConnections"`
 	// Variable name
 	TunnelInterfaceControlConnectionsVariable *string `pulumi:"tunnelInterfaceControlConnectionsVariable"`
@@ -1149,51 +1365,67 @@ type vpnInterfaceMultilinkFeatureTemplateArgs struct {
 	TunnelInterfaceGroups []int `pulumi:"tunnelInterfaceGroups"`
 	// Variable name
 	TunnelInterfaceGroupsVariable *string `pulumi:"tunnelInterfaceGroupsVariable"`
-	// Set time period of control hello packets <100..600000> milli seconds - Range: `100`-`600000` - Default value: `1000`
+	// Set time period of control hello packets <100..600000> milli seconds
+	//   - Range: `100`-`600000`
+	//   - Default value: `1000`
 	TunnelInterfaceHelloInterval *int `pulumi:"tunnelInterfaceHelloInterval"`
 	// Variable name
 	TunnelInterfaceHelloIntervalVariable *string `pulumi:"tunnelInterfaceHelloIntervalVariable"`
-	// Set tolerance of control hello packets <12..6000> seconds - Range: `12`-`6000` - Default value: `12`
+	// Set tolerance of control hello packets <12..6000> seconds
+	//   - Range: `12`-`6000`
+	//   - Default value: `12`
 	TunnelInterfaceHelloTolerance *int `pulumi:"tunnelInterfaceHelloTolerance"`
 	// Variable name
 	TunnelInterfaceHelloToleranceVariable *string `pulumi:"tunnelInterfaceHelloToleranceVariable"`
-	// Set TLOC as last resort - Default value: `false`
+	// Set TLOC as last resort
+	//   - Default value: `false`
 	TunnelInterfaceLastResortCircuit *bool `pulumi:"tunnelInterfaceLastResortCircuit"`
 	// Variable name
 	TunnelInterfaceLastResortCircuitVariable *string `pulumi:"tunnelInterfaceLastResortCircuitVariable"`
-	// Set the interface as a low-bandwidth circuit - Default value: `false`
+	// Set the interface as a low-bandwidth circuit
+	//   - Default value: `false`
 	TunnelInterfaceLowBandwidthLink *bool `pulumi:"tunnelInterfaceLowBandwidthLink"`
 	// Variable name
 	TunnelInterfaceLowBandwidthLinkVariable *string `pulumi:"tunnelInterfaceLowBandwidthLinkVariable"`
-	// Set the maximum number of control connections for this TLOC - Range: `0`-`8`
+	// Set the maximum number of control connections for this TLOC
+	//   - Range: `0`-`8`
 	TunnelInterfaceMaxControlConnections *int `pulumi:"tunnelInterfaceMaxControlConnections"`
 	// Variable name
 	TunnelInterfaceMaxControlConnectionsVariable *string `pulumi:"tunnelInterfaceMaxControlConnectionsVariable"`
-	// Set time period of nat refresh packets <1...60> seconds - Range: `1`-`60` - Default value: `5`
+	// Set time period of nat refresh packets <1...60> seconds
+	//   - Range: `1`-`60`
+	//   - Default value: `5`
 	TunnelInterfaceNatRefreshInterval *int `pulumi:"tunnelInterfaceNatRefreshInterval"`
 	// Variable name
 	TunnelInterfaceNatRefreshIntervalVariable *string `pulumi:"tunnelInterfaceNatRefreshIntervalVariable"`
-	// Accept and respond to network-prefix-directed broadcasts) - Default value: `false`
+	// Accept and respond to network-prefix-directed broadcasts)
+	//   - Default value: `false`
 	TunnelInterfaceNetworkBroadcast *bool `pulumi:"tunnelInterfaceNetworkBroadcast"`
 	// Variable name
 	TunnelInterfaceNetworkBroadcastVariable *string `pulumi:"tunnelInterfaceNetworkBroadcastVariable"`
-	// Disallow port hopping on the tunnel interface - Default value: `true`
+	// Disallow port hopping on the tunnel interface
+	//   - Default value: `true`
 	TunnelInterfacePortHop *bool `pulumi:"tunnelInterfacePortHop"`
 	// Variable name
 	TunnelInterfacePortHopVariable *string `pulumi:"tunnelInterfacePortHopVariable"`
-	// Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// Tunnel TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TunnelInterfaceTunnelTcpMss *int `pulumi:"tunnelInterfaceTunnelTcpMss"`
 	// Variable name
 	TunnelInterfaceTunnelTcpMssVariable *string `pulumi:"tunnelInterfaceTunnelTcpMssVariable"`
-	// Put this wan interface in STUN mode only - Default value: `false`
+	// Put this wan interface in STUN mode only
+	//   - Default value: `false`
 	TunnelInterfaceVbondAsStunServer *bool `pulumi:"tunnelInterfaceVbondAsStunServer"`
 	// Variable name
 	TunnelInterfaceVbondAsStunServerVariable *string `pulumi:"tunnelInterfaceVbondAsStunServerVariable"`
-	// Set interface preference for control connection to vManage <0..8> - Range: `0`-`8` - Default value: `5`
+	// Set interface preference for control connection to vManage <0..8>
+	//   - Range: `0`-`8`
+	//   - Default value: `5`
 	TunnelInterfaceVmanageConnectionPreference *int `pulumi:"tunnelInterfaceVmanageConnectionPreference"`
 	// Variable name
 	TunnelInterfaceVmanageConnectionPreferenceVariable *string `pulumi:"tunnelInterfaceVmanageConnectionPreferenceVariable"`
-	// Set tunnel QoS mode - Choices: `spoke`
+	// Set tunnel QoS mode
+	//   - Choices: `spoke`
 	TunnelQosMode *string `pulumi:"tunnelQosMode"`
 	// Variable name
 	TunnelQosModeVariable *string `pulumi:"tunnelQosModeVariable"`
@@ -1207,15 +1439,18 @@ type vpnInterfaceMultilinkFeatureTemplateArgs struct {
 type VpnInterfaceMultilinkFeatureTemplateArgs struct {
 	// Apply ACL
 	AccessLists VpnInterfaceMultilinkFeatureTemplateAccessListArrayInput
-	// Link autonegotiation - Default value: `true`
+	// Link autonegotiation
+	//   - Default value: `true`
 	Autonegotiate pulumi.BoolPtrInput
 	// Variable name
 	AutonegotiateVariable pulumi.StringPtrInput
-	// Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+	// Interface downstream bandwidth capacity, in kbps
+	//   - Range: `1`-`2147483647`
 	BandwidthDownstream pulumi.IntPtrInput
 	// Variable name
 	BandwidthDownstreamVariable pulumi.StringPtrInput
-	// Interface upstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+	// Interface upstream bandwidth capacity, in kbps
+	//   - Range: `1`-`2147483647`
 	BandwidthUpstream pulumi.IntPtrInput
 	// Variable name
 	BandwidthUpstreamVariable pulumi.StringPtrInput
@@ -1227,27 +1462,32 @@ type VpnInterfaceMultilinkFeatureTemplateArgs struct {
 	ChapPppAuthPassword pulumi.StringPtrInput
 	// Variable name
 	ChapPppAuthPasswordVariable pulumi.StringPtrInput
-	// Clear don't fragment bit - Default value: `false`
+	// Clear don't fragment bit
+	//   - Default value: `false`
 	ClearDontFragmentBit pulumi.BoolPtrInput
 	// Variable name
 	ClearDontFragmentBitVariable pulumi.StringPtrInput
-	// Enable core region - Choices: `core`, `core-shared` - Default value: `core`
+	// Enable core region
+	//   - Choices: `core`, `core-shared`
+	//   - Default value: `core`
 	CoreRegion pulumi.StringPtrInput
 	// Variable name
 	CoreRegionVariable pulumi.StringPtrInput
 	// The description of the feature template
 	Description pulumi.StringInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
-	// Suppresss multilink fragmentation - Default value: `false`
+	// Suppresss multilink fragmentation
+	//   - Default value: `false`
 	DisableFragmentation pulumi.BoolPtrInput
-	// Enable core region - Default value: `false`
+	// Enable core region
+	//   - Default value: `false`
 	EnableCoreRegion pulumi.BoolPtrInput
 	// Variable name
 	EnableCoreRegionVariable pulumi.StringPtrInput
-	// Maximum delay for each fragment - Range: `0`-`1000`
+	// Maximum delay for each fragment
+	//   - Range: `0`-`1000`
 	FragmentMaxDelay pulumi.IntPtrInput
 	// Variable name
 	FragmentMaxDelayVariable pulumi.StringPtrInput
@@ -1259,9 +1499,12 @@ type VpnInterfaceMultilinkFeatureTemplateArgs struct {
 	InterfaceName pulumi.StringPtrInput
 	// Variable name
 	InterfaceNameVariable pulumi.StringPtrInput
-	// Allow interleaving of packets with fragments - Default value: `false`
+	// Allow interleaving of packets with fragments
+	//   - Default value: `false`
 	InterleavingFragment pulumi.BoolPtrInput
-	// Interface MTU <68...2000>, in bytes - Range: `68`-`2000` - Default value: `1500`
+	// Interface MTU <68...2000>, in bytes
+	//   - Range: `68`-`2000`
+	//   - Default value: `1500`
 	IpMtu pulumi.IntPtrInput
 	// Variable name
 	IpMtuVariable pulumi.StringPtrInput
@@ -1275,7 +1518,8 @@ type VpnInterfaceMultilinkFeatureTemplateArgs struct {
 	Ipv6Address pulumi.StringPtrInput
 	// Variable name
 	Ipv6AddressVariable pulumi.StringPtrInput
-	// MultiLink Group Number - Range: `1`-`2147483647`
+	// MultiLink Group Number
+	//   - Range: `1`-`2147483647`
 	MultilinkGroupNumber pulumi.IntPtrInput
 	// Variable name
 	MultilinkGroupNumberVariable pulumi.StringPtrInput
@@ -1295,23 +1539,30 @@ type VpnInterfaceMultilinkFeatureTemplateArgs struct {
 	PapUsername pulumi.StringPtrInput
 	// Variable name
 	PapUsernameVariable pulumi.StringPtrInput
-	// Per-tunnel Qos - Default value: `false`
+	// Per-tunnel Qos
+	//   - Default value: `false`
 	PerTunnelQos pulumi.BoolPtrInput
-	// Per-tunnel QoS Aggregator - Default value: `false`
+	// Per-tunnel QoS Aggregator
+	//   - Default value: `false`
 	PerTunnelQosAggregator pulumi.BoolPtrInput
 	// Variable name
 	PerTunnelQosAggregatorVariable pulumi.StringPtrInput
 	// Variable name
 	PerTunnelQosVariable pulumi.StringPtrInput
-	// Path MTU Discovery - Default value: `false`
+	// Path MTU Discovery
+	//   - Default value: `false`
 	PmtuDiscovery pulumi.BoolPtrInput
 	// Variable name
 	PmtuDiscoveryVariable pulumi.StringPtrInput
-	// PPP Link Authentication Protocol - Choices: `chap`, `pap`
+	// PPP Link Authentication Protocol
+	//   - Choices: `chap`, `pap`
 	PppAuthenticationProtocol pulumi.StringPtrInput
-	// PPP Authentication Protocol PAP - Default value: `false`
+	// PPP Authentication Protocol PAP
+	//   - Default value: `false`
 	PppAuthenticationProtocolPap pulumi.BoolPtrInput
-	// Authenticate remote on incoming call only - Choices: `callin`, `false` - Default value: `callin`
+	// Authenticate remote on incoming call only
+	//   - Choices: `callin`, `false`
+	//   - Default value: `callin`
 	PppAuthenticationType pulumi.StringPtrInput
 	// Name of QoS map
 	QosMap pulumi.StringPtrInput
@@ -1321,23 +1572,29 @@ type VpnInterfaceMultilinkFeatureTemplateArgs struct {
 	QosMapVpn pulumi.StringPtrInput
 	// Variable name
 	QosMapVpnVariable pulumi.StringPtrInput
-	// Enable secondary region - Choices: `off`, `secondary-only`, `secondary-shared` - Default value: `off`
+	// Enable secondary region
+	//   - Choices: `off`, `secondary-only`, `secondary-shared`
+	//   - Default value: `off`
 	SecondaryRegion pulumi.StringPtrInput
 	// Variable name
 	SecondaryRegionVariable pulumi.StringPtrInput
-	// 1ge interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps - Range: `8`-`100000000`
+	// 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
+	//   - Range: `8`-`100000000`
 	ShapingRate pulumi.IntPtrInput
 	// Variable name
 	ShapingRateVariable pulumi.StringPtrInput
-	// Administrative state - Default value: `true`
+	// Administrative state
+	//   - Default value: `true`
 	Shutdown pulumi.BoolPtrInput
 	// Variable name
 	ShutdownVariable pulumi.StringPtrInput
-	// Static ingress QoS for the port - Range: `0`-`7`
+	// Static ingress QoS for the port
+	//   - Range: `0`-`7`
 	StaticIngressQos pulumi.IntPtrInput
 	// Variable name
 	StaticIngressQosVariable pulumi.StringPtrInput
-	// TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `552`-`1960`
 	TcpMss pulumi.IntPtrInput
 	// Variable name
 	TcpMssVariable pulumi.StringPtrInput
@@ -1345,51 +1602,63 @@ type VpnInterfaceMultilinkFeatureTemplateArgs struct {
 	TlocExtension pulumi.StringPtrInput
 	// Variable name
 	TlocExtensionVariable pulumi.StringPtrInput
-	// Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
+	// Allow all traffic. Overrides all other allow-service options if allow-service all is set
+	//   - Default value: `false`
 	TunnelInterfaceAllowAll pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowAllVariable pulumi.StringPtrInput
-	// Allow/deny BGP - Default value: `false`
+	// Allow/deny BGP
+	//   - Default value: `false`
 	TunnelInterfaceAllowBgp pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowBgpVariable pulumi.StringPtrInput
-	// Allow/Deny DHCP - Default value: `true`
+	// Allow/Deny DHCP
+	//   - Default value: `true`
 	TunnelInterfaceAllowDhcp pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowDhcpVariable pulumi.StringPtrInput
-	// Allow/Deny DNS - Default value: `true`
+	// Allow/Deny DNS
+	//   - Default value: `true`
 	TunnelInterfaceAllowDns pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowDnsVariable pulumi.StringPtrInput
-	// Allow/Deny Https - Default value: `true`
+	// Allow/Deny Https
+	//   - Default value: `true`
 	TunnelInterfaceAllowHttps pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowHttpsVariable pulumi.StringPtrInput
-	// Allow/Deny ICMP - Default value: `true`
+	// Allow/Deny ICMP
+	//   - Default value: `true`
 	TunnelInterfaceAllowIcmp pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowIcmpVariable pulumi.StringPtrInput
-	// Allow/Deny NETCONF - Default value: `false`
+	// Allow/Deny NETCONF
+	//   - Default value: `false`
 	TunnelInterfaceAllowNetconf pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowNetconfVariable pulumi.StringPtrInput
-	// Allow/Deny NTP - Default value: `false`
+	// Allow/Deny NTP
+	//   - Default value: `false`
 	TunnelInterfaceAllowNtp pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowNtpVariable pulumi.StringPtrInput
-	// Allow/Deny OSPF - Default value: `false`
+	// Allow/Deny OSPF
+	//   - Default value: `false`
 	TunnelInterfaceAllowOspf pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowOspfVariable pulumi.StringPtrInput
-	// Allow/Deny SNMP - Default value: `false`
+	// Allow/Deny SNMP
+	//   - Default value: `false`
 	TunnelInterfaceAllowSnmp pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowSnmpVariable pulumi.StringPtrInput
-	// Allow/Deny SSH - Default value: `false`
+	// Allow/Deny SSH
+	//   - Default value: `false`
 	TunnelInterfaceAllowSsh pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowSshVariable pulumi.StringPtrInput
-	// Allow/Deny STUN - Default value: `false`
+	// Allow/Deny STUN
+	//   - Default value: `false`
 	TunnelInterfaceAllowStun pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowStunVariable pulumi.StringPtrInput
@@ -1397,28 +1666,33 @@ type VpnInterfaceMultilinkFeatureTemplateArgs struct {
 	TunnelInterfaceBindLoopbackTunnel pulumi.StringPtrInput
 	// Variable name
 	TunnelInterfaceBindLoopbackTunnelVariable pulumi.StringPtrInput
-	// Set TLOC as border TLOC - Default value: `false`
+	// Set TLOC as border TLOC
+	//   - Default value: `false`
 	TunnelInterfaceBorder pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceBorderVariable pulumi.StringPtrInput
-	// Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-	// `carrier7`, `carrier8` - Default value: `default`
+	// Set carrier for TLOC
+	//   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+	//   - Default value: `default`
 	TunnelInterfaceCarrier pulumi.StringPtrInput
 	// Variable name
 	TunnelInterfaceCarrierVariable pulumi.StringPtrInput
-	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+	//   - Default value: `false`
 	TunnelInterfaceClearDontFragment pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceClearDontFragmentVariable pulumi.StringPtrInput
-	// Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-	// `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-	// `private4`, `private5`, `private6` - Default value: `default`
+	// Set color for TLOC
+	//   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+	//   - Default value: `default`
 	TunnelInterfaceColor pulumi.StringPtrInput
-	// Restrict this TLOC behavior - Default value: `false`
+	// Restrict this TLOC behavior
+	//   - Default value: `false`
 	TunnelInterfaceColorRestrict pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceColorVariable pulumi.StringPtrInput
-	// Allow Control Connection - Default value: `true`
+	// Allow Control Connection
+	//   - Default value: `true`
 	TunnelInterfaceControlConnections pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceControlConnectionsVariable pulumi.StringPtrInput
@@ -1432,51 +1706,67 @@ type VpnInterfaceMultilinkFeatureTemplateArgs struct {
 	TunnelInterfaceGroups pulumi.IntArrayInput
 	// Variable name
 	TunnelInterfaceGroupsVariable pulumi.StringPtrInput
-	// Set time period of control hello packets <100..600000> milli seconds - Range: `100`-`600000` - Default value: `1000`
+	// Set time period of control hello packets <100..600000> milli seconds
+	//   - Range: `100`-`600000`
+	//   - Default value: `1000`
 	TunnelInterfaceHelloInterval pulumi.IntPtrInput
 	// Variable name
 	TunnelInterfaceHelloIntervalVariable pulumi.StringPtrInput
-	// Set tolerance of control hello packets <12..6000> seconds - Range: `12`-`6000` - Default value: `12`
+	// Set tolerance of control hello packets <12..6000> seconds
+	//   - Range: `12`-`6000`
+	//   - Default value: `12`
 	TunnelInterfaceHelloTolerance pulumi.IntPtrInput
 	// Variable name
 	TunnelInterfaceHelloToleranceVariable pulumi.StringPtrInput
-	// Set TLOC as last resort - Default value: `false`
+	// Set TLOC as last resort
+	//   - Default value: `false`
 	TunnelInterfaceLastResortCircuit pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceLastResortCircuitVariable pulumi.StringPtrInput
-	// Set the interface as a low-bandwidth circuit - Default value: `false`
+	// Set the interface as a low-bandwidth circuit
+	//   - Default value: `false`
 	TunnelInterfaceLowBandwidthLink pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceLowBandwidthLinkVariable pulumi.StringPtrInput
-	// Set the maximum number of control connections for this TLOC - Range: `0`-`8`
+	// Set the maximum number of control connections for this TLOC
+	//   - Range: `0`-`8`
 	TunnelInterfaceMaxControlConnections pulumi.IntPtrInput
 	// Variable name
 	TunnelInterfaceMaxControlConnectionsVariable pulumi.StringPtrInput
-	// Set time period of nat refresh packets <1...60> seconds - Range: `1`-`60` - Default value: `5`
+	// Set time period of nat refresh packets <1...60> seconds
+	//   - Range: `1`-`60`
+	//   - Default value: `5`
 	TunnelInterfaceNatRefreshInterval pulumi.IntPtrInput
 	// Variable name
 	TunnelInterfaceNatRefreshIntervalVariable pulumi.StringPtrInput
-	// Accept and respond to network-prefix-directed broadcasts) - Default value: `false`
+	// Accept and respond to network-prefix-directed broadcasts)
+	//   - Default value: `false`
 	TunnelInterfaceNetworkBroadcast pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceNetworkBroadcastVariable pulumi.StringPtrInput
-	// Disallow port hopping on the tunnel interface - Default value: `true`
+	// Disallow port hopping on the tunnel interface
+	//   - Default value: `true`
 	TunnelInterfacePortHop pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfacePortHopVariable pulumi.StringPtrInput
-	// Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// Tunnel TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TunnelInterfaceTunnelTcpMss pulumi.IntPtrInput
 	// Variable name
 	TunnelInterfaceTunnelTcpMssVariable pulumi.StringPtrInput
-	// Put this wan interface in STUN mode only - Default value: `false`
+	// Put this wan interface in STUN mode only
+	//   - Default value: `false`
 	TunnelInterfaceVbondAsStunServer pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceVbondAsStunServerVariable pulumi.StringPtrInput
-	// Set interface preference for control connection to vManage <0..8> - Range: `0`-`8` - Default value: `5`
+	// Set interface preference for control connection to vManage <0..8>
+	//   - Range: `0`-`8`
+	//   - Default value: `5`
 	TunnelInterfaceVmanageConnectionPreference pulumi.IntPtrInput
 	// Variable name
 	TunnelInterfaceVmanageConnectionPreferenceVariable pulumi.StringPtrInput
-	// Set tunnel QoS mode - Choices: `spoke`
+	// Set tunnel QoS mode
+	//   - Choices: `spoke`
 	TunnelQosMode pulumi.StringPtrInput
 	// Variable name
 	TunnelQosModeVariable pulumi.StringPtrInput
@@ -1580,7 +1870,8 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) AccessLists() VpnInterfaceMu
 	}).(VpnInterfaceMultilinkFeatureTemplateAccessListArrayOutput)
 }
 
-// Link autonegotiation - Default value: `true`
+// Link autonegotiation
+//   - Default value: `true`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) Autonegotiate() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.BoolPtrOutput { return v.Autonegotiate }).(pulumi.BoolPtrOutput)
 }
@@ -1590,7 +1881,8 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) AutonegotiateVariable() pulu
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.StringPtrOutput { return v.AutonegotiateVariable }).(pulumi.StringPtrOutput)
 }
 
-// Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+// Interface downstream bandwidth capacity, in kbps
+//   - Range: `1`-`2147483647`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) BandwidthDownstream() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.IntPtrOutput { return v.BandwidthDownstream }).(pulumi.IntPtrOutput)
 }
@@ -1602,7 +1894,8 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) BandwidthDownstreamVariable(
 	}).(pulumi.StringPtrOutput)
 }
 
-// Interface upstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+// Interface upstream bandwidth capacity, in kbps
+//   - Range: `1`-`2147483647`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) BandwidthUpstream() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.IntPtrOutput { return v.BandwidthUpstream }).(pulumi.IntPtrOutput)
 }
@@ -1636,7 +1929,8 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) ChapPppAuthPasswordVariable(
 	}).(pulumi.StringPtrOutput)
 }
 
-// Clear don't fragment bit - Default value: `false`
+// Clear don't fragment bit
+//   - Default value: `false`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) ClearDontFragmentBit() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.BoolPtrOutput { return v.ClearDontFragmentBit }).(pulumi.BoolPtrOutput)
 }
@@ -1648,7 +1942,9 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) ClearDontFragmentBitVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Enable core region - Choices: `core`, `core-shared` - Default value: `core`
+// Enable core region
+//   - Choices: `core`, `core-shared`
+//   - Default value: `core`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) CoreRegion() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.StringPtrOutput { return v.CoreRegion }).(pulumi.StringPtrOutput)
 }
@@ -1663,19 +1959,20 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) Description() pulumi.StringO
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.StringOutput { return v.Description }).(pulumi.StringOutput)
 }
 
-// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+// List of supported device types
+//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) DeviceTypes() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.StringArrayOutput { return v.DeviceTypes }).(pulumi.StringArrayOutput)
 }
 
-// Suppresss multilink fragmentation - Default value: `false`
+// Suppresss multilink fragmentation
+//   - Default value: `false`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) DisableFragmentation() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.BoolPtrOutput { return v.DisableFragmentation }).(pulumi.BoolPtrOutput)
 }
 
-// Enable core region - Default value: `false`
+// Enable core region
+//   - Default value: `false`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) EnableCoreRegion() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.BoolPtrOutput { return v.EnableCoreRegion }).(pulumi.BoolPtrOutput)
 }
@@ -1687,7 +1984,8 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) EnableCoreRegionVariable() p
 	}).(pulumi.StringPtrOutput)
 }
 
-// Maximum delay for each fragment - Range: `0`-`1000`
+// Maximum delay for each fragment
+//   - Range: `0`-`1000`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) FragmentMaxDelay() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.IntPtrOutput { return v.FragmentMaxDelay }).(pulumi.IntPtrOutput)
 }
@@ -1721,12 +2019,15 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) InterfaceNameVariable() pulu
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.StringPtrOutput { return v.InterfaceNameVariable }).(pulumi.StringPtrOutput)
 }
 
-// Allow interleaving of packets with fragments - Default value: `false`
+// Allow interleaving of packets with fragments
+//   - Default value: `false`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) InterleavingFragment() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.BoolPtrOutput { return v.InterleavingFragment }).(pulumi.BoolPtrOutput)
 }
 
-// Interface MTU <68...2000>, in bytes - Range: `68`-`2000` - Default value: `1500`
+// Interface MTU <68...2000>, in bytes
+//   - Range: `68`-`2000`
+//   - Default value: `1500`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) IpMtu() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.IntPtrOutput { return v.IpMtu }).(pulumi.IntPtrOutput)
 }
@@ -1763,7 +2064,8 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) Ipv6AddressVariable() pulumi
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.StringPtrOutput { return v.Ipv6AddressVariable }).(pulumi.StringPtrOutput)
 }
 
-// MultiLink Group Number - Range: `1`-`2147483647`
+// MultiLink Group Number
+//   - Range: `1`-`2147483647`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) MultilinkGroupNumber() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.IntPtrOutput { return v.MultilinkGroupNumber }).(pulumi.IntPtrOutput)
 }
@@ -1821,12 +2123,14 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) PapUsernameVariable() pulumi
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.StringPtrOutput { return v.PapUsernameVariable }).(pulumi.StringPtrOutput)
 }
 
-// Per-tunnel Qos - Default value: `false`
+// Per-tunnel Qos
+//   - Default value: `false`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) PerTunnelQos() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.BoolPtrOutput { return v.PerTunnelQos }).(pulumi.BoolPtrOutput)
 }
 
-// Per-tunnel QoS Aggregator - Default value: `false`
+// Per-tunnel QoS Aggregator
+//   - Default value: `false`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) PerTunnelQosAggregator() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.BoolPtrOutput { return v.PerTunnelQosAggregator }).(pulumi.BoolPtrOutput)
 }
@@ -1843,7 +2147,8 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) PerTunnelQosVariable() pulum
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.StringPtrOutput { return v.PerTunnelQosVariable }).(pulumi.StringPtrOutput)
 }
 
-// Path MTU Discovery - Default value: `false`
+// Path MTU Discovery
+//   - Default value: `false`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) PmtuDiscovery() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.BoolPtrOutput { return v.PmtuDiscovery }).(pulumi.BoolPtrOutput)
 }
@@ -1853,21 +2158,25 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) PmtuDiscoveryVariable() pulu
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.StringPtrOutput { return v.PmtuDiscoveryVariable }).(pulumi.StringPtrOutput)
 }
 
-// PPP Link Authentication Protocol - Choices: `chap`, `pap`
+// PPP Link Authentication Protocol
+//   - Choices: `chap`, `pap`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) PppAuthenticationProtocol() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.StringPtrOutput {
 		return v.PppAuthenticationProtocol
 	}).(pulumi.StringPtrOutput)
 }
 
-// PPP Authentication Protocol PAP - Default value: `false`
+// PPP Authentication Protocol PAP
+//   - Default value: `false`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) PppAuthenticationProtocolPap() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.BoolPtrOutput {
 		return v.PppAuthenticationProtocolPap
 	}).(pulumi.BoolPtrOutput)
 }
 
-// Authenticate remote on incoming call only - Choices: `callin`, `false` - Default value: `callin`
+// Authenticate remote on incoming call only
+//   - Choices: `callin`, `false`
+//   - Default value: `callin`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) PppAuthenticationType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.StringPtrOutput { return v.PppAuthenticationType }).(pulumi.StringPtrOutput)
 }
@@ -1892,7 +2201,9 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) QosMapVpnVariable() pulumi.S
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.StringPtrOutput { return v.QosMapVpnVariable }).(pulumi.StringPtrOutput)
 }
 
-// Enable secondary region - Choices: `off`, `secondary-only`, `secondary-shared` - Default value: `off`
+// Enable secondary region
+//   - Choices: `off`, `secondary-only`, `secondary-shared`
+//   - Default value: `off`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) SecondaryRegion() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.StringPtrOutput { return v.SecondaryRegion }).(pulumi.StringPtrOutput)
 }
@@ -1902,7 +2213,8 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) SecondaryRegionVariable() pu
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.StringPtrOutput { return v.SecondaryRegionVariable }).(pulumi.StringPtrOutput)
 }
 
-// 1ge interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps - Range: `8`-`100000000`
+// 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
+//   - Range: `8`-`100000000`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) ShapingRate() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.IntPtrOutput { return v.ShapingRate }).(pulumi.IntPtrOutput)
 }
@@ -1912,7 +2224,8 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) ShapingRateVariable() pulumi
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.StringPtrOutput { return v.ShapingRateVariable }).(pulumi.StringPtrOutput)
 }
 
-// Administrative state - Default value: `true`
+// Administrative state
+//   - Default value: `true`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) Shutdown() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.BoolPtrOutput { return v.Shutdown }).(pulumi.BoolPtrOutput)
 }
@@ -1922,7 +2235,8 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) ShutdownVariable() pulumi.St
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.StringPtrOutput { return v.ShutdownVariable }).(pulumi.StringPtrOutput)
 }
 
-// Static ingress QoS for the port - Range: `0`-`7`
+// Static ingress QoS for the port
+//   - Range: `0`-`7`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) StaticIngressQos() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.IntPtrOutput { return v.StaticIngressQos }).(pulumi.IntPtrOutput)
 }
@@ -1934,7 +2248,8 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) StaticIngressQosVariable() p
 	}).(pulumi.StringPtrOutput)
 }
 
-// TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+// TCP MSS on SYN packets, in bytes
+//   - Range: `552`-`1960`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) TcpMss() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.IntPtrOutput { return v.TcpMss }).(pulumi.IntPtrOutput)
 }
@@ -1959,7 +2274,8 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) TlocExtensionVariable() pulu
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.StringPtrOutput { return v.TlocExtensionVariable }).(pulumi.StringPtrOutput)
 }
 
-// Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
+// Allow all traffic. Overrides all other allow-service options if allow-service all is set
+//   - Default value: `false`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceAllowAll() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.BoolPtrOutput { return v.TunnelInterfaceAllowAll }).(pulumi.BoolPtrOutput)
 }
@@ -1971,7 +2287,8 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceAllowAllVaria
 	}).(pulumi.StringPtrOutput)
 }
 
-// Allow/deny BGP - Default value: `false`
+// Allow/deny BGP
+//   - Default value: `false`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceAllowBgp() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.BoolPtrOutput { return v.TunnelInterfaceAllowBgp }).(pulumi.BoolPtrOutput)
 }
@@ -1983,7 +2300,8 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceAllowBgpVaria
 	}).(pulumi.StringPtrOutput)
 }
 
-// Allow/Deny DHCP - Default value: `true`
+// Allow/Deny DHCP
+//   - Default value: `true`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceAllowDhcp() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.BoolPtrOutput { return v.TunnelInterfaceAllowDhcp }).(pulumi.BoolPtrOutput)
 }
@@ -1995,7 +2313,8 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceAllowDhcpVari
 	}).(pulumi.StringPtrOutput)
 }
 
-// Allow/Deny DNS - Default value: `true`
+// Allow/Deny DNS
+//   - Default value: `true`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceAllowDns() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.BoolPtrOutput { return v.TunnelInterfaceAllowDns }).(pulumi.BoolPtrOutput)
 }
@@ -2007,7 +2326,8 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceAllowDnsVaria
 	}).(pulumi.StringPtrOutput)
 }
 
-// Allow/Deny Https - Default value: `true`
+// Allow/Deny Https
+//   - Default value: `true`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceAllowHttps() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.BoolPtrOutput { return v.TunnelInterfaceAllowHttps }).(pulumi.BoolPtrOutput)
 }
@@ -2019,7 +2339,8 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceAllowHttpsVar
 	}).(pulumi.StringPtrOutput)
 }
 
-// Allow/Deny ICMP - Default value: `true`
+// Allow/Deny ICMP
+//   - Default value: `true`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceAllowIcmp() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.BoolPtrOutput { return v.TunnelInterfaceAllowIcmp }).(pulumi.BoolPtrOutput)
 }
@@ -2031,7 +2352,8 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceAllowIcmpVari
 	}).(pulumi.StringPtrOutput)
 }
 
-// Allow/Deny NETCONF - Default value: `false`
+// Allow/Deny NETCONF
+//   - Default value: `false`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceAllowNetconf() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.BoolPtrOutput {
 		return v.TunnelInterfaceAllowNetconf
@@ -2045,7 +2367,8 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceAllowNetconfV
 	}).(pulumi.StringPtrOutput)
 }
 
-// Allow/Deny NTP - Default value: `false`
+// Allow/Deny NTP
+//   - Default value: `false`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceAllowNtp() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.BoolPtrOutput { return v.TunnelInterfaceAllowNtp }).(pulumi.BoolPtrOutput)
 }
@@ -2057,7 +2380,8 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceAllowNtpVaria
 	}).(pulumi.StringPtrOutput)
 }
 
-// Allow/Deny OSPF - Default value: `false`
+// Allow/Deny OSPF
+//   - Default value: `false`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceAllowOspf() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.BoolPtrOutput { return v.TunnelInterfaceAllowOspf }).(pulumi.BoolPtrOutput)
 }
@@ -2069,7 +2393,8 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceAllowOspfVari
 	}).(pulumi.StringPtrOutput)
 }
 
-// Allow/Deny SNMP - Default value: `false`
+// Allow/Deny SNMP
+//   - Default value: `false`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceAllowSnmp() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.BoolPtrOutput { return v.TunnelInterfaceAllowSnmp }).(pulumi.BoolPtrOutput)
 }
@@ -2081,7 +2406,8 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceAllowSnmpVari
 	}).(pulumi.StringPtrOutput)
 }
 
-// Allow/Deny SSH - Default value: `false`
+// Allow/Deny SSH
+//   - Default value: `false`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceAllowSsh() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.BoolPtrOutput { return v.TunnelInterfaceAllowSsh }).(pulumi.BoolPtrOutput)
 }
@@ -2093,7 +2419,8 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceAllowSshVaria
 	}).(pulumi.StringPtrOutput)
 }
 
-// Allow/Deny STUN - Default value: `false`
+// Allow/Deny STUN
+//   - Default value: `false`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceAllowStun() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.BoolPtrOutput { return v.TunnelInterfaceAllowStun }).(pulumi.BoolPtrOutput)
 }
@@ -2119,7 +2446,8 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceBindLoopbackT
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set TLOC as border TLOC - Default value: `false`
+// Set TLOC as border TLOC
+//   - Default value: `false`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceBorder() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.BoolPtrOutput { return v.TunnelInterfaceBorder }).(pulumi.BoolPtrOutput)
 }
@@ -2131,8 +2459,9 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceBorderVariabl
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-// `carrier7`, `carrier8` - Default value: `default`
+// Set carrier for TLOC
+//   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+//   - Default value: `default`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceCarrier() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.StringPtrOutput { return v.TunnelInterfaceCarrier }).(pulumi.StringPtrOutput)
 }
@@ -2144,7 +2473,8 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceCarrierVariab
 	}).(pulumi.StringPtrOutput)
 }
 
-// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+//   - Default value: `false`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceClearDontFragment() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.BoolPtrOutput {
 		return v.TunnelInterfaceClearDontFragment
@@ -2158,14 +2488,15 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceClearDontFrag
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-// `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-// `private4`, `private5`, `private6` - Default value: `default`
+// Set color for TLOC
+//   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+//   - Default value: `default`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceColor() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.StringPtrOutput { return v.TunnelInterfaceColor }).(pulumi.StringPtrOutput)
 }
 
-// Restrict this TLOC behavior - Default value: `false`
+// Restrict this TLOC behavior
+//   - Default value: `false`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceColorRestrict() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.BoolPtrOutput {
 		return v.TunnelInterfaceColorRestrict
@@ -2179,7 +2510,8 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceColorVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Allow Control Connection - Default value: `true`
+// Allow Control Connection
+//   - Default value: `true`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceControlConnections() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.BoolPtrOutput {
 		return v.TunnelInterfaceControlConnections
@@ -2226,7 +2558,9 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceGroupsVariabl
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set time period of control hello packets <100..600000> milli seconds - Range: `100`-`600000` - Default value: `1000`
+// Set time period of control hello packets <100..600000> milli seconds
+//   - Range: `100`-`600000`
+//   - Default value: `1000`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceHelloInterval() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.IntPtrOutput {
 		return v.TunnelInterfaceHelloInterval
@@ -2240,7 +2574,9 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceHelloInterval
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set tolerance of control hello packets <12..6000> seconds - Range: `12`-`6000` - Default value: `12`
+// Set tolerance of control hello packets <12..6000> seconds
+//   - Range: `12`-`6000`
+//   - Default value: `12`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceHelloTolerance() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.IntPtrOutput {
 		return v.TunnelInterfaceHelloTolerance
@@ -2254,7 +2590,8 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceHelloToleranc
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set TLOC as last resort - Default value: `false`
+// Set TLOC as last resort
+//   - Default value: `false`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceLastResortCircuit() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.BoolPtrOutput {
 		return v.TunnelInterfaceLastResortCircuit
@@ -2268,7 +2605,8 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceLastResortCir
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set the interface as a low-bandwidth circuit - Default value: `false`
+// Set the interface as a low-bandwidth circuit
+//   - Default value: `false`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceLowBandwidthLink() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.BoolPtrOutput {
 		return v.TunnelInterfaceLowBandwidthLink
@@ -2282,7 +2620,8 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceLowBandwidthL
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set the maximum number of control connections for this TLOC - Range: `0`-`8`
+// Set the maximum number of control connections for this TLOC
+//   - Range: `0`-`8`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceMaxControlConnections() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.IntPtrOutput {
 		return v.TunnelInterfaceMaxControlConnections
@@ -2296,7 +2635,9 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceMaxControlCon
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set time period of nat refresh packets <1...60> seconds - Range: `1`-`60` - Default value: `5`
+// Set time period of nat refresh packets <1...60> seconds
+//   - Range: `1`-`60`
+//   - Default value: `5`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceNatRefreshInterval() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.IntPtrOutput {
 		return v.TunnelInterfaceNatRefreshInterval
@@ -2310,7 +2651,8 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceNatRefreshInt
 	}).(pulumi.StringPtrOutput)
 }
 
-// Accept and respond to network-prefix-directed broadcasts) - Default value: `false`
+// Accept and respond to network-prefix-directed broadcasts)
+//   - Default value: `false`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceNetworkBroadcast() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.BoolPtrOutput {
 		return v.TunnelInterfaceNetworkBroadcast
@@ -2324,7 +2666,8 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceNetworkBroadc
 	}).(pulumi.StringPtrOutput)
 }
 
-// Disallow port hopping on the tunnel interface - Default value: `true`
+// Disallow port hopping on the tunnel interface
+//   - Default value: `true`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfacePortHop() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.BoolPtrOutput { return v.TunnelInterfacePortHop }).(pulumi.BoolPtrOutput)
 }
@@ -2336,7 +2679,8 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfacePortHopVariab
 	}).(pulumi.StringPtrOutput)
 }
 
-// Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+// Tunnel TCP MSS on SYN packets, in bytes
+//   - Range: `500`-`1460`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceTunnelTcpMss() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.IntPtrOutput {
 		return v.TunnelInterfaceTunnelTcpMss
@@ -2350,7 +2694,8 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceTunnelTcpMssV
 	}).(pulumi.StringPtrOutput)
 }
 
-// Put this wan interface in STUN mode only - Default value: `false`
+// Put this wan interface in STUN mode only
+//   - Default value: `false`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceVbondAsStunServer() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.BoolPtrOutput {
 		return v.TunnelInterfaceVbondAsStunServer
@@ -2364,7 +2709,9 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceVbondAsStunSe
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set interface preference for control connection to vManage <0..8> - Range: `0`-`8` - Default value: `5`
+// Set interface preference for control connection to vManage <0..8>
+//   - Range: `0`-`8`
+//   - Default value: `5`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceVmanageConnectionPreference() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.IntPtrOutput {
 		return v.TunnelInterfaceVmanageConnectionPreference
@@ -2378,7 +2725,8 @@ func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelInterfaceVmanageConnec
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set tunnel QoS mode - Choices: `spoke`
+// Set tunnel QoS mode
+//   - Choices: `spoke`
 func (o VpnInterfaceMultilinkFeatureTemplateOutput) TunnelQosMode() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceMultilinkFeatureTemplate) pulumi.StringPtrOutput { return v.TunnelQosMode }).(pulumi.StringPtrOutput)
 }

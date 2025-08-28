@@ -181,14 +181,16 @@ public class ServiceDhcpServerFeature extends com.pulumi.resources.CustomResourc
         return this.featureProfileId;
     }
     /**
-     * Set MTU on interface to DHCP client - Range: `68`-`65535`
+     * Set MTU on interface to DHCP client
+     *   - Range: `68`-`65535`
      * 
      */
     @Export(name="interfaceMtu", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> interfaceMtu;
 
     /**
-     * @return Set MTU on interface to DHCP client - Range: `68`-`65535`
+     * @return Set MTU on interface to DHCP client
+     *   - Range: `68`-`65535`
      * 
      */
     public Output<Optional<Integer>> interfaceMtu() {
@@ -209,14 +211,18 @@ public class ServiceDhcpServerFeature extends com.pulumi.resources.CustomResourc
         return Codegen.optional(this.interfaceMtuVariable);
     }
     /**
-     * Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+     * Configure how long a DHCP-assigned IP address is valid
+     *   - Range: `60`-`31536000`
+     *   - Default value: `86400`
      * 
      */
     @Export(name="leaseTime", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> leaseTime;
 
     /**
-     * @return Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+     * @return Configure how long a DHCP-assigned IP address is valid
+     *   - Range: `60`-`31536000`
+     *   - Default value: `86400`
      * 
      */
     public Output<Optional<Integer>> leaseTime() {
@@ -307,22 +313,16 @@ public class ServiceDhcpServerFeature extends com.pulumi.resources.CustomResourc
         return Codegen.optional(this.staticLeases);
     }
     /**
-     * Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * Subnet Mask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     @Export(name="subnetMask", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> subnetMask;
 
     /**
-     * @return Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * @return Subnet Mask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     public Output<Optional<String>> subnetMask() {

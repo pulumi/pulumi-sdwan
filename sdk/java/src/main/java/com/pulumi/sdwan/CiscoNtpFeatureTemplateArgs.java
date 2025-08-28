@@ -52,18 +52,16 @@ public final class CiscoNtpFeatureTemplateArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Import(name="deviceTypes", required=true)
     private Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Output<List<String>> deviceTypes() {
@@ -71,14 +69,16 @@ public final class CiscoNtpFeatureTemplateArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Configure device as NTP master - Default value: `false`
+     * Configure device as NTP master
+     *   - Default value: `false`
      * 
      */
     @Import(name="master")
     private @Nullable Output<Boolean> master;
 
     /**
-     * @return Configure device as NTP master - Default value: `false`
+     * @return Configure device as NTP master
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> master() {
@@ -116,14 +116,16 @@ public final class CiscoNtpFeatureTemplateArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Master Stratum &lt;1..15&gt; - Range: `1`-`15`
+     * Master Stratum &lt;1..15&gt;
+     *   - Range: `1`-`15`
      * 
      */
     @Import(name="masterStratum")
     private @Nullable Output<Integer> masterStratum;
 
     /**
-     * @return Master Stratum &lt;1..15&gt; - Range: `1`-`15`
+     * @return Master Stratum &lt;1..15&gt;
+     *   - Range: `1`-`15`
      * 
      */
     public Optional<Output<Integer>> masterStratum() {
@@ -309,9 +311,8 @@ public final class CiscoNtpFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -322,9 +323,8 @@ public final class CiscoNtpFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -334,9 +334,8 @@ public final class CiscoNtpFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -346,7 +345,8 @@ public final class CiscoNtpFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param master Configure device as NTP master - Default value: `false`
+         * @param master Configure device as NTP master
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -357,7 +357,8 @@ public final class CiscoNtpFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param master Configure device as NTP master - Default value: `false`
+         * @param master Configure device as NTP master
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -409,7 +410,8 @@ public final class CiscoNtpFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param masterStratum Master Stratum &lt;1..15&gt; - Range: `1`-`15`
+         * @param masterStratum Master Stratum &lt;1..15&gt;
+         *   - Range: `1`-`15`
          * 
          * @return builder
          * 
@@ -420,7 +422,8 @@ public final class CiscoNtpFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param masterStratum Master Stratum &lt;1..15&gt; - Range: `1`-`15`
+         * @param masterStratum Master Stratum &lt;1..15&gt;
+         *   - Range: `1`-`15`
          * 
          * @return builder
          * 

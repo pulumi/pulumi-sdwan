@@ -171,14 +171,16 @@ public final class ServiceDhcpServerFeatureArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * Set MTU on interface to DHCP client - Range: `68`-`65535`
+     * Set MTU on interface to DHCP client
+     *   - Range: `68`-`65535`
      * 
      */
     @Import(name="interfaceMtu")
     private @Nullable Output<Integer> interfaceMtu;
 
     /**
-     * @return Set MTU on interface to DHCP client - Range: `68`-`65535`
+     * @return Set MTU on interface to DHCP client
+     *   - Range: `68`-`65535`
      * 
      */
     public Optional<Output<Integer>> interfaceMtu() {
@@ -201,14 +203,18 @@ public final class ServiceDhcpServerFeatureArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+     * Configure how long a DHCP-assigned IP address is valid
+     *   - Range: `60`-`31536000`
+     *   - Default value: `86400`
      * 
      */
     @Import(name="leaseTime")
     private @Nullable Output<Integer> leaseTime;
 
     /**
-     * @return Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+     * @return Configure how long a DHCP-assigned IP address is valid
+     *   - Range: `60`-`31536000`
+     *   - Default value: `86400`
      * 
      */
     public Optional<Output<Integer>> leaseTime() {
@@ -306,22 +312,16 @@ public final class ServiceDhcpServerFeatureArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * Subnet Mask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     @Import(name="subnetMask")
     private @Nullable Output<String> subnetMask;
 
     /**
-     * @return Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * @return Subnet Mask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     public Optional<Output<String>> subnetMask() {
@@ -650,7 +650,8 @@ public final class ServiceDhcpServerFeatureArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param interfaceMtu Set MTU on interface to DHCP client - Range: `68`-`65535`
+         * @param interfaceMtu Set MTU on interface to DHCP client
+         *   - Range: `68`-`65535`
          * 
          * @return builder
          * 
@@ -661,7 +662,8 @@ public final class ServiceDhcpServerFeatureArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param interfaceMtu Set MTU on interface to DHCP client - Range: `68`-`65535`
+         * @param interfaceMtu Set MTU on interface to DHCP client
+         *   - Range: `68`-`65535`
          * 
          * @return builder
          * 
@@ -692,7 +694,9 @@ public final class ServiceDhcpServerFeatureArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param leaseTime Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+         * @param leaseTime Configure how long a DHCP-assigned IP address is valid
+         *   - Range: `60`-`31536000`
+         *   - Default value: `86400`
          * 
          * @return builder
          * 
@@ -703,7 +707,9 @@ public final class ServiceDhcpServerFeatureArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param leaseTime Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+         * @param leaseTime Configure how long a DHCP-assigned IP address is valid
+         *   - Range: `60`-`31536000`
+         *   - Default value: `86400`
          * 
          * @return builder
          * 
@@ -859,11 +865,8 @@ public final class ServiceDhcpServerFeatureArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param subnetMask Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-         * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-         * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-         * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-         * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+         * @param subnetMask Subnet Mask
+         *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
          * 
          * @return builder
          * 
@@ -874,11 +877,8 @@ public final class ServiceDhcpServerFeatureArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param subnetMask Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-         * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-         * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-         * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-         * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+         * @param subnetMask Subnet Mask
+         *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
          * 
          * @return builder
          * 

@@ -143,14 +143,16 @@ public class ServiceObjectTrackerFeature extends com.pulumi.resources.CustomReso
         return this.name;
     }
     /**
-     * Object tracker ID - Range: `1`-`1000`
+     * Object tracker ID
+     *   - Range: `1`-`1000`
      * 
      */
     @Export(name="objectTrackerId", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> objectTrackerId;
 
     /**
-     * @return Object tracker ID - Range: `1`-`1000`
+     * @return Object tracker ID
+     *   - Range: `1`-`1000`
      * 
      */
     public Output<Optional<Integer>> objectTrackerId() {
@@ -171,14 +173,16 @@ public class ServiceObjectTrackerFeature extends com.pulumi.resources.CustomReso
         return Codegen.optional(this.objectTrackerIdVariable);
     }
     /**
-     * objectTrackerType:Interface SIG Route - Choices: `Interface`, `SIG`, `Route`
+     * objectTrackerType:Interface SIG Route
+     *   - Choices: `Interface`, `SIG`, `Route`
      * 
      */
     @Export(name="objectTrackerType", refs={String.class}, tree="[0]")
     private Output<String> objectTrackerType;
 
     /**
-     * @return objectTrackerType:Interface SIG Route - Choices: `Interface`, `SIG`, `Route`
+     * @return objectTrackerType:Interface SIG Route
+     *   - Choices: `Interface`, `SIG`, `Route`
      * 
      */
     public Output<String> objectTrackerType() {
@@ -213,22 +217,18 @@ public class ServiceObjectTrackerFeature extends com.pulumi.resources.CustomReso
         return Codegen.optional(this.routeIpVariable);
     }
     /**
-     * IP mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0` - Default value: `0.0.0.0`
+     * IP mask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     *   - Default value: `0.0.0.0`
      * 
      */
     @Export(name="routeMask", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> routeMask;
 
     /**
-     * @return IP mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0` - Default value: `0.0.0.0`
+     * @return IP mask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     *   - Default value: `0.0.0.0`
      * 
      */
     public Output<Optional<String>> routeMask() {
@@ -263,14 +263,16 @@ public class ServiceObjectTrackerFeature extends com.pulumi.resources.CustomReso
         return this.version;
     }
     /**
-     * VPN - Range: `0`-`65530`
+     * VPN
+     *   - Range: `0`-`65530`
      * 
      */
     @Export(name="vpn", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> vpn;
 
     /**
-     * @return VPN - Range: `0`-`65530`
+     * @return VPN
+     *   - Range: `0`-`65530`
      * 
      */
     public Output<Optional<Integer>> vpn() {

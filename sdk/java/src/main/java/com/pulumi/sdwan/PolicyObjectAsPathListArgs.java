@@ -20,14 +20,16 @@ public final class PolicyObjectAsPathListArgs extends com.pulumi.resources.Resou
     public static final PolicyObjectAsPathListArgs Empty = new PolicyObjectAsPathListArgs();
 
     /**
-     * As path List Number - Range: `1`-`500`
+     * As path List Number
+     *   - Range: `1`-`500`
      * 
      */
     @Import(name="asPathListId", required=true)
     private Output<Integer> asPathListId;
 
     /**
-     * @return As path List Number - Range: `1`-`500`
+     * @return As path List Number
+     *   - Range: `1`-`500`
      * 
      */
     public Output<Integer> asPathListId() {
@@ -123,7 +125,8 @@ public final class PolicyObjectAsPathListArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param asPathListId As path List Number - Range: `1`-`500`
+         * @param asPathListId As path List Number
+         *   - Range: `1`-`500`
          * 
          * @return builder
          * 
@@ -134,7 +137,8 @@ public final class PolicyObjectAsPathListArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param asPathListId As path List Number - Range: `1`-`500`
+         * @param asPathListId As path List Number
+         *   - Range: `1`-`500`
          * 
          * @return builder
          * 

@@ -77,7 +77,8 @@ namespace Pulumi.Sdwan
     public partial class ServiceLanVpnInterfaceIpsecFeature : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// Enable Application Tunnel Type - Choices: `none`, `sig`
+        /// Enable Application Tunnel Type
+        ///   - Choices: `none`, `sig`
         /// </summary>
         [Output("applicationTunnelType")]
         public Output<string?> ApplicationTunnelType { get; private set; } = null!;
@@ -89,7 +90,8 @@ namespace Pulumi.Sdwan
         public Output<string?> ApplicationTunnelTypeVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        /// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+        ///   - Default value: `false`
         /// </summary>
         [Output("clearDontFragment")]
         public Output<bool?> ClearDontFragment { get; private set; } = null!;
@@ -107,7 +109,9 @@ namespace Pulumi.Sdwan
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// IKE keepalive interval (seconds) - Range: `10`-`3600` - Default value: `10`
+        /// IKE keepalive interval (seconds)
+        ///   - Range: `10`-`3600`
+        ///   - Default value: `10`
         /// </summary>
         [Output("dpdInterval")]
         public Output<int?> DpdInterval { get; private set; } = null!;
@@ -119,7 +123,9 @@ namespace Pulumi.Sdwan
         public Output<string?> DpdIntervalVariable { get; private set; } = null!;
 
         /// <summary>
-        /// IKE keepalive retries - Range: `2`-`60` - Default value: `3`
+        /// IKE keepalive retries
+        ///   - Range: `2`-`60`
+        ///   - Default value: `3`
         /// </summary>
         [Output("dpdRetries")]
         public Output<int?> DpdRetries { get; private set; } = null!;
@@ -137,8 +143,9 @@ namespace Pulumi.Sdwan
         public Output<string> FeatureProfileId { get; private set; } = null!;
 
         /// <summary>
-        /// IKE identity the IKE preshared secret belongs to - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`,
-        /// `aes128-cbc-sha2` - Default value: `aes256-cbc-sha1`
+        /// IKE identity the IKE preshared secret belongs to
+        ///   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+        ///   - Default value: `aes256-cbc-sha1`
         /// </summary>
         [Output("ikeCiphersuite")]
         public Output<string?> IkeCiphersuite { get; private set; } = null!;
@@ -150,7 +157,9 @@ namespace Pulumi.Sdwan
         public Output<string?> IkeCiphersuiteVariable { get; private set; } = null!;
 
         /// <summary>
-        /// IKE Diffie Hellman Groups - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24` - Default value: `16`
+        /// IKE Diffie Hellman Groups
+        ///   - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
+        ///   - Default value: `16`
         /// </summary>
         [Output("ikeDiffieHellmanGroup")]
         public Output<string?> IkeDiffieHellmanGroup { get; private set; } = null!;
@@ -186,7 +195,9 @@ namespace Pulumi.Sdwan
         public Output<string?> IkeIdRemoteEndPointVariable { get; private set; } = null!;
 
         /// <summary>
-        /// IKE integrity protocol - Choices: `main`, `aggressive` - Default value: `main`
+        /// IKE integrity protocol
+        ///   - Choices: `main`, `aggressive`
+        ///   - Default value: `main`
         /// </summary>
         [Output("ikeIntegrityProtocol")]
         public Output<string?> IkeIntegrityProtocol { get; private set; } = null!;
@@ -210,7 +221,9 @@ namespace Pulumi.Sdwan
         public Output<string?> IkePresharedKeyVariable { get; private set; } = null!;
 
         /// <summary>
-        /// IKE rekey interval &lt;60..86400&gt; seconds - Range: `60`-`86400` - Default value: `14400`
+        /// IKE rekey interval &lt;60..86400&gt; seconds
+        ///   - Range: `60`-`86400`
+        ///   - Default value: `14400`
         /// </summary>
         [Output("ikeRekeyInterval")]
         public Output<int?> IkeRekeyInterval { get; private set; } = null!;
@@ -222,7 +235,9 @@ namespace Pulumi.Sdwan
         public Output<string?> IkeRekeyIntervalVariable { get; private set; } = null!;
 
         /// <summary>
-        /// IKE Version &lt;1..2&gt; - Range: `1`-`2` - Default value: `1`
+        /// IKE Version &lt;1..2&gt;
+        ///   - Range: `1`-`2`
+        ///   - Default value: `1`
         /// </summary>
         [Output("ikeVersion")]
         public Output<int?> IkeVersion { get; private set; } = null!;
@@ -252,7 +267,9 @@ namespace Pulumi.Sdwan
         public Output<string?> InterfaceNameVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Interface MTU &lt;68..9216&gt;, in bytes - Range: `68`-`9216` - Default value: `1500`
+        /// Interface MTU &lt;68..9216&gt;, in bytes
+        ///   - Range: `68`-`9216`
+        ///   - Default value: `1500`
         /// </summary>
         [Output("ipMtu")]
         public Output<int?> IpMtu { get; private set; } = null!;
@@ -264,9 +281,9 @@ namespace Pulumi.Sdwan
         public Output<string?> IpMtuVariable { get; private set; } = null!;
 
         /// <summary>
-        /// IPsec(ESP) encryption and integrity protocol - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`,
-        /// `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512` - Default value:
-        /// `aes256-gcm`
+        /// IPsec(ESP) encryption and integrity protocol
+        ///   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
+        ///   - Default value: `aes256-gcm`
         /// </summary>
         [Output("ipsecCiphersuite")]
         public Output<string?> IpsecCiphersuite { get; private set; } = null!;
@@ -278,7 +295,9 @@ namespace Pulumi.Sdwan
         public Output<string?> IpsecCiphersuiteVariable { get; private set; } = null!;
 
         /// <summary>
-        /// IPsec rekey interval &lt;300..1209600&gt; seconds - Range: `120`-`2592000` - Default value: `3600`
+        /// IPsec rekey interval &lt;300..1209600&gt; seconds
+        ///   - Range: `120`-`2592000`
+        ///   - Default value: `3600`
         /// </summary>
         [Output("ipsecRekeyInterval")]
         public Output<int?> IpsecRekeyInterval { get; private set; } = null!;
@@ -290,7 +309,9 @@ namespace Pulumi.Sdwan
         public Output<string?> IpsecRekeyIntervalVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Replay window size 32..8192 (must be a power of 2) - Range: `64`-`4096` - Default value: `512`
+        /// Replay window size 32..8192 (must be a power of 2)
+        ///   - Range: `64`-`4096`
+        ///   - Default value: `512`
         /// </summary>
         [Output("ipsecReplayWindow")]
         public Output<int?> IpsecReplayWindow { get; private set; } = null!;
@@ -311,11 +332,7 @@ namespace Pulumi.Sdwan
         public Output<string?> Ipv4AddressVariable { get; private set; } = null!;
 
         /// <summary>
-        /// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        /// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        /// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        /// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        /// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        /// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         /// </summary>
         [Output("ipv4SubnetMask")]
         public Output<string?> Ipv4SubnetMask { get; private set; } = null!;
@@ -333,8 +350,9 @@ namespace Pulumi.Sdwan
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// IPsec perfect forward secrecy settings - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`,
-        /// `group-19`, `group-20`, `group-21`, `group-24`, `none` - Default value: `group-16`
+        /// IPsec perfect forward secrecy settings
+        ///   - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+        ///   - Default value: `group-16`
         /// </summary>
         [Output("perfectForwardSecrecy")]
         public Output<string?> PerfectForwardSecrecy { get; private set; } = null!;
@@ -352,7 +370,8 @@ namespace Pulumi.Sdwan
         public Output<string> ServiceLanVpnFeatureId { get; private set; } = null!;
 
         /// <summary>
-        /// Administrative state - Default value: `true`
+        /// Administrative state
+        ///   - Default value: `true`
         /// </summary>
         [Output("shutdown")]
         public Output<bool?> Shutdown { get; private set; } = null!;
@@ -364,7 +383,8 @@ namespace Pulumi.Sdwan
         public Output<string?> ShutdownVariable { get; private set; } = null!;
 
         /// <summary>
-        /// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        /// TCP MSS on SYN packets, in bytes
+        ///   - Range: `500`-`1460`
         /// </summary>
         [Output("tcpMss")]
         public Output<int?> TcpMss { get; private set; } = null!;
@@ -397,11 +417,7 @@ namespace Pulumi.Sdwan
         public Output<string?> TunnelDestinationIpv4AddressVariable { get; private set; } = null!;
 
         /// <summary>
-        /// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        /// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        /// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        /// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        /// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        /// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         /// </summary>
         [Output("tunnelDestinationIpv4SubnetMask")]
         public Output<string> TunnelDestinationIpv4SubnetMask { get; private set; } = null!;
@@ -446,11 +462,7 @@ namespace Pulumi.Sdwan
         public Output<string?> TunnelSourceIpv4AddressVariable { get; private set; } = null!;
 
         /// <summary>
-        /// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        /// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        /// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        /// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        /// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        /// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         /// </summary>
         [Output("tunnelSourceIpv4SubnetMask")]
         public Output<string?> TunnelSourceIpv4SubnetMask { get; private set; } = null!;
@@ -514,7 +526,8 @@ namespace Pulumi.Sdwan
     public sealed class ServiceLanVpnInterfaceIpsecFeatureArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Enable Application Tunnel Type - Choices: `none`, `sig`
+        /// Enable Application Tunnel Type
+        ///   - Choices: `none`, `sig`
         /// </summary>
         [Input("applicationTunnelType")]
         public Input<string>? ApplicationTunnelType { get; set; }
@@ -526,7 +539,8 @@ namespace Pulumi.Sdwan
         public Input<string>? ApplicationTunnelTypeVariable { get; set; }
 
         /// <summary>
-        /// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        /// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+        ///   - Default value: `false`
         /// </summary>
         [Input("clearDontFragment")]
         public Input<bool>? ClearDontFragment { get; set; }
@@ -544,7 +558,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// IKE keepalive interval (seconds) - Range: `10`-`3600` - Default value: `10`
+        /// IKE keepalive interval (seconds)
+        ///   - Range: `10`-`3600`
+        ///   - Default value: `10`
         /// </summary>
         [Input("dpdInterval")]
         public Input<int>? DpdInterval { get; set; }
@@ -556,7 +572,9 @@ namespace Pulumi.Sdwan
         public Input<string>? DpdIntervalVariable { get; set; }
 
         /// <summary>
-        /// IKE keepalive retries - Range: `2`-`60` - Default value: `3`
+        /// IKE keepalive retries
+        ///   - Range: `2`-`60`
+        ///   - Default value: `3`
         /// </summary>
         [Input("dpdRetries")]
         public Input<int>? DpdRetries { get; set; }
@@ -574,8 +592,9 @@ namespace Pulumi.Sdwan
         public Input<string> FeatureProfileId { get; set; } = null!;
 
         /// <summary>
-        /// IKE identity the IKE preshared secret belongs to - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`,
-        /// `aes128-cbc-sha2` - Default value: `aes256-cbc-sha1`
+        /// IKE identity the IKE preshared secret belongs to
+        ///   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+        ///   - Default value: `aes256-cbc-sha1`
         /// </summary>
         [Input("ikeCiphersuite")]
         public Input<string>? IkeCiphersuite { get; set; }
@@ -587,7 +606,9 @@ namespace Pulumi.Sdwan
         public Input<string>? IkeCiphersuiteVariable { get; set; }
 
         /// <summary>
-        /// IKE Diffie Hellman Groups - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24` - Default value: `16`
+        /// IKE Diffie Hellman Groups
+        ///   - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
+        ///   - Default value: `16`
         /// </summary>
         [Input("ikeDiffieHellmanGroup")]
         public Input<string>? IkeDiffieHellmanGroup { get; set; }
@@ -623,7 +644,9 @@ namespace Pulumi.Sdwan
         public Input<string>? IkeIdRemoteEndPointVariable { get; set; }
 
         /// <summary>
-        /// IKE integrity protocol - Choices: `main`, `aggressive` - Default value: `main`
+        /// IKE integrity protocol
+        ///   - Choices: `main`, `aggressive`
+        ///   - Default value: `main`
         /// </summary>
         [Input("ikeIntegrityProtocol")]
         public Input<string>? IkeIntegrityProtocol { get; set; }
@@ -647,7 +670,9 @@ namespace Pulumi.Sdwan
         public Input<string>? IkePresharedKeyVariable { get; set; }
 
         /// <summary>
-        /// IKE rekey interval &lt;60..86400&gt; seconds - Range: `60`-`86400` - Default value: `14400`
+        /// IKE rekey interval &lt;60..86400&gt; seconds
+        ///   - Range: `60`-`86400`
+        ///   - Default value: `14400`
         /// </summary>
         [Input("ikeRekeyInterval")]
         public Input<int>? IkeRekeyInterval { get; set; }
@@ -659,7 +684,9 @@ namespace Pulumi.Sdwan
         public Input<string>? IkeRekeyIntervalVariable { get; set; }
 
         /// <summary>
-        /// IKE Version &lt;1..2&gt; - Range: `1`-`2` - Default value: `1`
+        /// IKE Version &lt;1..2&gt;
+        ///   - Range: `1`-`2`
+        ///   - Default value: `1`
         /// </summary>
         [Input("ikeVersion")]
         public Input<int>? IkeVersion { get; set; }
@@ -689,7 +716,9 @@ namespace Pulumi.Sdwan
         public Input<string>? InterfaceNameVariable { get; set; }
 
         /// <summary>
-        /// Interface MTU &lt;68..9216&gt;, in bytes - Range: `68`-`9216` - Default value: `1500`
+        /// Interface MTU &lt;68..9216&gt;, in bytes
+        ///   - Range: `68`-`9216`
+        ///   - Default value: `1500`
         /// </summary>
         [Input("ipMtu")]
         public Input<int>? IpMtu { get; set; }
@@ -701,9 +730,9 @@ namespace Pulumi.Sdwan
         public Input<string>? IpMtuVariable { get; set; }
 
         /// <summary>
-        /// IPsec(ESP) encryption and integrity protocol - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`,
-        /// `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512` - Default value:
-        /// `aes256-gcm`
+        /// IPsec(ESP) encryption and integrity protocol
+        ///   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
+        ///   - Default value: `aes256-gcm`
         /// </summary>
         [Input("ipsecCiphersuite")]
         public Input<string>? IpsecCiphersuite { get; set; }
@@ -715,7 +744,9 @@ namespace Pulumi.Sdwan
         public Input<string>? IpsecCiphersuiteVariable { get; set; }
 
         /// <summary>
-        /// IPsec rekey interval &lt;300..1209600&gt; seconds - Range: `120`-`2592000` - Default value: `3600`
+        /// IPsec rekey interval &lt;300..1209600&gt; seconds
+        ///   - Range: `120`-`2592000`
+        ///   - Default value: `3600`
         /// </summary>
         [Input("ipsecRekeyInterval")]
         public Input<int>? IpsecRekeyInterval { get; set; }
@@ -727,7 +758,9 @@ namespace Pulumi.Sdwan
         public Input<string>? IpsecRekeyIntervalVariable { get; set; }
 
         /// <summary>
-        /// Replay window size 32..8192 (must be a power of 2) - Range: `64`-`4096` - Default value: `512`
+        /// Replay window size 32..8192 (must be a power of 2)
+        ///   - Range: `64`-`4096`
+        ///   - Default value: `512`
         /// </summary>
         [Input("ipsecReplayWindow")]
         public Input<int>? IpsecReplayWindow { get; set; }
@@ -748,11 +781,7 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4AddressVariable { get; set; }
 
         /// <summary>
-        /// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        /// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        /// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        /// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        /// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        /// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         /// </summary>
         [Input("ipv4SubnetMask")]
         public Input<string>? Ipv4SubnetMask { get; set; }
@@ -770,8 +799,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// IPsec perfect forward secrecy settings - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`,
-        /// `group-19`, `group-20`, `group-21`, `group-24`, `none` - Default value: `group-16`
+        /// IPsec perfect forward secrecy settings
+        ///   - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+        ///   - Default value: `group-16`
         /// </summary>
         [Input("perfectForwardSecrecy")]
         public Input<string>? PerfectForwardSecrecy { get; set; }
@@ -789,7 +819,8 @@ namespace Pulumi.Sdwan
         public Input<string> ServiceLanVpnFeatureId { get; set; } = null!;
 
         /// <summary>
-        /// Administrative state - Default value: `true`
+        /// Administrative state
+        ///   - Default value: `true`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }
@@ -801,7 +832,8 @@ namespace Pulumi.Sdwan
         public Input<string>? ShutdownVariable { get; set; }
 
         /// <summary>
-        /// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        /// TCP MSS on SYN packets, in bytes
+        ///   - Range: `500`-`1460`
         /// </summary>
         [Input("tcpMss")]
         public Input<int>? TcpMss { get; set; }
@@ -834,11 +866,7 @@ namespace Pulumi.Sdwan
         public Input<string>? TunnelDestinationIpv4AddressVariable { get; set; }
 
         /// <summary>
-        /// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        /// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        /// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        /// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        /// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        /// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         /// </summary>
         [Input("tunnelDestinationIpv4SubnetMask", required: true)]
         public Input<string> TunnelDestinationIpv4SubnetMask { get; set; } = null!;
@@ -883,11 +911,7 @@ namespace Pulumi.Sdwan
         public Input<string>? TunnelSourceIpv4AddressVariable { get; set; }
 
         /// <summary>
-        /// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        /// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        /// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        /// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        /// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        /// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         /// </summary>
         [Input("tunnelSourceIpv4SubnetMask")]
         public Input<string>? TunnelSourceIpv4SubnetMask { get; set; }
@@ -907,7 +931,8 @@ namespace Pulumi.Sdwan
     public sealed class ServiceLanVpnInterfaceIpsecFeatureState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Enable Application Tunnel Type - Choices: `none`, `sig`
+        /// Enable Application Tunnel Type
+        ///   - Choices: `none`, `sig`
         /// </summary>
         [Input("applicationTunnelType")]
         public Input<string>? ApplicationTunnelType { get; set; }
@@ -919,7 +944,8 @@ namespace Pulumi.Sdwan
         public Input<string>? ApplicationTunnelTypeVariable { get; set; }
 
         /// <summary>
-        /// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        /// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+        ///   - Default value: `false`
         /// </summary>
         [Input("clearDontFragment")]
         public Input<bool>? ClearDontFragment { get; set; }
@@ -937,7 +963,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// IKE keepalive interval (seconds) - Range: `10`-`3600` - Default value: `10`
+        /// IKE keepalive interval (seconds)
+        ///   - Range: `10`-`3600`
+        ///   - Default value: `10`
         /// </summary>
         [Input("dpdInterval")]
         public Input<int>? DpdInterval { get; set; }
@@ -949,7 +977,9 @@ namespace Pulumi.Sdwan
         public Input<string>? DpdIntervalVariable { get; set; }
 
         /// <summary>
-        /// IKE keepalive retries - Range: `2`-`60` - Default value: `3`
+        /// IKE keepalive retries
+        ///   - Range: `2`-`60`
+        ///   - Default value: `3`
         /// </summary>
         [Input("dpdRetries")]
         public Input<int>? DpdRetries { get; set; }
@@ -967,8 +997,9 @@ namespace Pulumi.Sdwan
         public Input<string>? FeatureProfileId { get; set; }
 
         /// <summary>
-        /// IKE identity the IKE preshared secret belongs to - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`,
-        /// `aes128-cbc-sha2` - Default value: `aes256-cbc-sha1`
+        /// IKE identity the IKE preshared secret belongs to
+        ///   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+        ///   - Default value: `aes256-cbc-sha1`
         /// </summary>
         [Input("ikeCiphersuite")]
         public Input<string>? IkeCiphersuite { get; set; }
@@ -980,7 +1011,9 @@ namespace Pulumi.Sdwan
         public Input<string>? IkeCiphersuiteVariable { get; set; }
 
         /// <summary>
-        /// IKE Diffie Hellman Groups - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24` - Default value: `16`
+        /// IKE Diffie Hellman Groups
+        ///   - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
+        ///   - Default value: `16`
         /// </summary>
         [Input("ikeDiffieHellmanGroup")]
         public Input<string>? IkeDiffieHellmanGroup { get; set; }
@@ -1016,7 +1049,9 @@ namespace Pulumi.Sdwan
         public Input<string>? IkeIdRemoteEndPointVariable { get; set; }
 
         /// <summary>
-        /// IKE integrity protocol - Choices: `main`, `aggressive` - Default value: `main`
+        /// IKE integrity protocol
+        ///   - Choices: `main`, `aggressive`
+        ///   - Default value: `main`
         /// </summary>
         [Input("ikeIntegrityProtocol")]
         public Input<string>? IkeIntegrityProtocol { get; set; }
@@ -1040,7 +1075,9 @@ namespace Pulumi.Sdwan
         public Input<string>? IkePresharedKeyVariable { get; set; }
 
         /// <summary>
-        /// IKE rekey interval &lt;60..86400&gt; seconds - Range: `60`-`86400` - Default value: `14400`
+        /// IKE rekey interval &lt;60..86400&gt; seconds
+        ///   - Range: `60`-`86400`
+        ///   - Default value: `14400`
         /// </summary>
         [Input("ikeRekeyInterval")]
         public Input<int>? IkeRekeyInterval { get; set; }
@@ -1052,7 +1089,9 @@ namespace Pulumi.Sdwan
         public Input<string>? IkeRekeyIntervalVariable { get; set; }
 
         /// <summary>
-        /// IKE Version &lt;1..2&gt; - Range: `1`-`2` - Default value: `1`
+        /// IKE Version &lt;1..2&gt;
+        ///   - Range: `1`-`2`
+        ///   - Default value: `1`
         /// </summary>
         [Input("ikeVersion")]
         public Input<int>? IkeVersion { get; set; }
@@ -1082,7 +1121,9 @@ namespace Pulumi.Sdwan
         public Input<string>? InterfaceNameVariable { get; set; }
 
         /// <summary>
-        /// Interface MTU &lt;68..9216&gt;, in bytes - Range: `68`-`9216` - Default value: `1500`
+        /// Interface MTU &lt;68..9216&gt;, in bytes
+        ///   - Range: `68`-`9216`
+        ///   - Default value: `1500`
         /// </summary>
         [Input("ipMtu")]
         public Input<int>? IpMtu { get; set; }
@@ -1094,9 +1135,9 @@ namespace Pulumi.Sdwan
         public Input<string>? IpMtuVariable { get; set; }
 
         /// <summary>
-        /// IPsec(ESP) encryption and integrity protocol - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`,
-        /// `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512` - Default value:
-        /// `aes256-gcm`
+        /// IPsec(ESP) encryption and integrity protocol
+        ///   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
+        ///   - Default value: `aes256-gcm`
         /// </summary>
         [Input("ipsecCiphersuite")]
         public Input<string>? IpsecCiphersuite { get; set; }
@@ -1108,7 +1149,9 @@ namespace Pulumi.Sdwan
         public Input<string>? IpsecCiphersuiteVariable { get; set; }
 
         /// <summary>
-        /// IPsec rekey interval &lt;300..1209600&gt; seconds - Range: `120`-`2592000` - Default value: `3600`
+        /// IPsec rekey interval &lt;300..1209600&gt; seconds
+        ///   - Range: `120`-`2592000`
+        ///   - Default value: `3600`
         /// </summary>
         [Input("ipsecRekeyInterval")]
         public Input<int>? IpsecRekeyInterval { get; set; }
@@ -1120,7 +1163,9 @@ namespace Pulumi.Sdwan
         public Input<string>? IpsecRekeyIntervalVariable { get; set; }
 
         /// <summary>
-        /// Replay window size 32..8192 (must be a power of 2) - Range: `64`-`4096` - Default value: `512`
+        /// Replay window size 32..8192 (must be a power of 2)
+        ///   - Range: `64`-`4096`
+        ///   - Default value: `512`
         /// </summary>
         [Input("ipsecReplayWindow")]
         public Input<int>? IpsecReplayWindow { get; set; }
@@ -1141,11 +1186,7 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4AddressVariable { get; set; }
 
         /// <summary>
-        /// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        /// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        /// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        /// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        /// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        /// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         /// </summary>
         [Input("ipv4SubnetMask")]
         public Input<string>? Ipv4SubnetMask { get; set; }
@@ -1163,8 +1204,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// IPsec perfect forward secrecy settings - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`,
-        /// `group-19`, `group-20`, `group-21`, `group-24`, `none` - Default value: `group-16`
+        /// IPsec perfect forward secrecy settings
+        ///   - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+        ///   - Default value: `group-16`
         /// </summary>
         [Input("perfectForwardSecrecy")]
         public Input<string>? PerfectForwardSecrecy { get; set; }
@@ -1182,7 +1224,8 @@ namespace Pulumi.Sdwan
         public Input<string>? ServiceLanVpnFeatureId { get; set; }
 
         /// <summary>
-        /// Administrative state - Default value: `true`
+        /// Administrative state
+        ///   - Default value: `true`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }
@@ -1194,7 +1237,8 @@ namespace Pulumi.Sdwan
         public Input<string>? ShutdownVariable { get; set; }
 
         /// <summary>
-        /// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        /// TCP MSS on SYN packets, in bytes
+        ///   - Range: `500`-`1460`
         /// </summary>
         [Input("tcpMss")]
         public Input<int>? TcpMss { get; set; }
@@ -1227,11 +1271,7 @@ namespace Pulumi.Sdwan
         public Input<string>? TunnelDestinationIpv4AddressVariable { get; set; }
 
         /// <summary>
-        /// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        /// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        /// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        /// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        /// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        /// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         /// </summary>
         [Input("tunnelDestinationIpv4SubnetMask")]
         public Input<string>? TunnelDestinationIpv4SubnetMask { get; set; }
@@ -1276,11 +1316,7 @@ namespace Pulumi.Sdwan
         public Input<string>? TunnelSourceIpv4AddressVariable { get; set; }
 
         /// <summary>
-        /// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        /// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        /// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        /// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        /// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        /// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         /// </summary>
         [Input("tunnelSourceIpv4SubnetMask")]
         public Input<string>? TunnelSourceIpv4SubnetMask { get; set; }

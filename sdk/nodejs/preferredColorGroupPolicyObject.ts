@@ -63,35 +63,38 @@ export class PreferredColorGroupPolicyObject extends pulumi.CustomResource {
     /**
      * The name of the policy object
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * Color or space separated list of colors
      */
-    public readonly primaryColorPreference!: pulumi.Output<string>;
+    declare public readonly primaryColorPreference: pulumi.Output<string>;
     /**
-     * Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+     * Path preference
+     *   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
      */
-    public readonly primaryPathPreference!: pulumi.Output<string | undefined>;
-    /**
-     * Color or space separated list of colors
-     */
-    public readonly secondaryColorPreference!: pulumi.Output<string | undefined>;
-    /**
-     * Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
-     */
-    public readonly secondaryPathPreference!: pulumi.Output<string | undefined>;
+    declare public readonly primaryPathPreference: pulumi.Output<string | undefined>;
     /**
      * Color or space separated list of colors
      */
-    public readonly tertiaryColorPreference!: pulumi.Output<string | undefined>;
+    declare public readonly secondaryColorPreference: pulumi.Output<string | undefined>;
     /**
-     * Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+     * Path preference
+     *   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
      */
-    public readonly tertiaryPathPreference!: pulumi.Output<string | undefined>;
+    declare public readonly secondaryPathPreference: pulumi.Output<string | undefined>;
+    /**
+     * Color or space separated list of colors
+     */
+    declare public readonly tertiaryColorPreference: pulumi.Output<string | undefined>;
+    /**
+     * Path preference
+     *   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+     */
+    declare public readonly tertiaryPathPreference: pulumi.Output<string | undefined>;
     /**
      * The version of the object
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a PreferredColorGroupPolicyObject resource with the given unique name, arguments, and options.
@@ -106,26 +109,26 @@ export class PreferredColorGroupPolicyObject extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as PreferredColorGroupPolicyObjectState | undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["primaryColorPreference"] = state ? state.primaryColorPreference : undefined;
-            resourceInputs["primaryPathPreference"] = state ? state.primaryPathPreference : undefined;
-            resourceInputs["secondaryColorPreference"] = state ? state.secondaryColorPreference : undefined;
-            resourceInputs["secondaryPathPreference"] = state ? state.secondaryPathPreference : undefined;
-            resourceInputs["tertiaryColorPreference"] = state ? state.tertiaryColorPreference : undefined;
-            resourceInputs["tertiaryPathPreference"] = state ? state.tertiaryPathPreference : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["primaryColorPreference"] = state?.primaryColorPreference;
+            resourceInputs["primaryPathPreference"] = state?.primaryPathPreference;
+            resourceInputs["secondaryColorPreference"] = state?.secondaryColorPreference;
+            resourceInputs["secondaryPathPreference"] = state?.secondaryPathPreference;
+            resourceInputs["tertiaryColorPreference"] = state?.tertiaryColorPreference;
+            resourceInputs["tertiaryPathPreference"] = state?.tertiaryPathPreference;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as PreferredColorGroupPolicyObjectArgs | undefined;
-            if ((!args || args.primaryColorPreference === undefined) && !opts.urn) {
+            if (args?.primaryColorPreference === undefined && !opts.urn) {
                 throw new Error("Missing required property 'primaryColorPreference'");
             }
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["primaryColorPreference"] = args ? args.primaryColorPreference : undefined;
-            resourceInputs["primaryPathPreference"] = args ? args.primaryPathPreference : undefined;
-            resourceInputs["secondaryColorPreference"] = args ? args.secondaryColorPreference : undefined;
-            resourceInputs["secondaryPathPreference"] = args ? args.secondaryPathPreference : undefined;
-            resourceInputs["tertiaryColorPreference"] = args ? args.tertiaryColorPreference : undefined;
-            resourceInputs["tertiaryPathPreference"] = args ? args.tertiaryPathPreference : undefined;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["primaryColorPreference"] = args?.primaryColorPreference;
+            resourceInputs["primaryPathPreference"] = args?.primaryPathPreference;
+            resourceInputs["secondaryColorPreference"] = args?.secondaryColorPreference;
+            resourceInputs["secondaryPathPreference"] = args?.secondaryPathPreference;
+            resourceInputs["tertiaryColorPreference"] = args?.tertiaryColorPreference;
+            resourceInputs["tertiaryPathPreference"] = args?.tertiaryPathPreference;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -146,7 +149,8 @@ export interface PreferredColorGroupPolicyObjectState {
      */
     primaryColorPreference?: pulumi.Input<string>;
     /**
-     * Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+     * Path preference
+     *   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
      */
     primaryPathPreference?: pulumi.Input<string>;
     /**
@@ -154,7 +158,8 @@ export interface PreferredColorGroupPolicyObjectState {
      */
     secondaryColorPreference?: pulumi.Input<string>;
     /**
-     * Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+     * Path preference
+     *   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
      */
     secondaryPathPreference?: pulumi.Input<string>;
     /**
@@ -162,7 +167,8 @@ export interface PreferredColorGroupPolicyObjectState {
      */
     tertiaryColorPreference?: pulumi.Input<string>;
     /**
-     * Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+     * Path preference
+     *   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
      */
     tertiaryPathPreference?: pulumi.Input<string>;
     /**
@@ -184,7 +190,8 @@ export interface PreferredColorGroupPolicyObjectArgs {
      */
     primaryColorPreference: pulumi.Input<string>;
     /**
-     * Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+     * Path preference
+     *   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
      */
     primaryPathPreference?: pulumi.Input<string>;
     /**
@@ -192,7 +199,8 @@ export interface PreferredColorGroupPolicyObjectArgs {
      */
     secondaryColorPreference?: pulumi.Input<string>;
     /**
-     * Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+     * Path preference
+     *   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
      */
     secondaryPathPreference?: pulumi.Input<string>;
     /**
@@ -200,7 +208,8 @@ export interface PreferredColorGroupPolicyObjectArgs {
      */
     tertiaryColorPreference?: pulumi.Input<string>;
     /**
-     * Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+     * Path preference
+     *   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
      */
     tertiaryPathPreference?: pulumi.Input<string>;
 }

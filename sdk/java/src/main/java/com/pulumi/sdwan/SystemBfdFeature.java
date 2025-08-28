@@ -54,14 +54,16 @@ public class SystemBfdFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.colors);
     }
     /**
-     * - Range: `0`-`63` - Default value: `48`
+     * - Range: `0`-`63`
+     *   - Default value: `48`
      * 
      */
     @Export(name="defaultDscp", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> defaultDscp;
 
     /**
-     * @return - Range: `0`-`63` - Default value: `48`
+     * @return - Range: `0`-`63`
+     *   - Default value: `48`
      * 
      */
     public Output<Optional<Integer>> defaultDscp() {
@@ -110,14 +112,16 @@ public class SystemBfdFeature extends com.pulumi.resources.CustomResource {
         return this.featureProfileId;
     }
     /**
-     * - Range: `1`-`6` - Default value: `6`
+     * - Range: `1`-`6`
+     *   - Default value: `6`
      * 
      */
     @Export(name="multiplier", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> multiplier;
 
     /**
-     * @return - Range: `1`-`6` - Default value: `6`
+     * @return - Range: `1`-`6`
+     *   - Default value: `6`
      * 
      */
     public Output<Optional<Integer>> multiplier() {
@@ -152,14 +156,16 @@ public class SystemBfdFeature extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * - Range: `1`-`4294967295` - Default value: `600000`
+     * - Range: `1`-`4294967295`
+     *   - Default value: `600000`
      * 
      */
     @Export(name="pollInterval", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> pollInterval;
 
     /**
-     * @return - Range: `1`-`4294967295` - Default value: `600000`
+     * @return - Range: `1`-`4294967295`
+     *   - Default value: `600000`
      * 
      */
     public Output<Optional<Integer>> pollInterval() {

@@ -26,11 +26,13 @@ type ZoneBasedFirewallPolicyDefinition struct {
 
 	// , Attribute conditional on `mode` being equal to `security`
 	ApplyZonePairs ZoneBasedFirewallPolicyDefinitionApplyZonePairArrayOutput `pulumi:"applyZonePairs"`
-	// Default Action - Choices: `pass`, `drop`
+	// Default Action
+	//   - Choices: `pass`, `drop`
 	DefaultAction pulumi.StringOutput `pulumi:"defaultAction"`
 	// The description of the policy definition
 	Description pulumi.StringOutput `pulumi:"description"`
-	// The policy mode - Choices: `security`, `unified`
+	// The policy mode
+	//   - Choices: `security`, `unified`
 	Mode pulumi.StringOutput `pulumi:"mode"`
 	// The name of the policy definition
 	Name  pulumi.StringOutput                              `pulumi:"name"`
@@ -83,11 +85,13 @@ func GetZoneBasedFirewallPolicyDefinition(ctx *pulumi.Context,
 type zoneBasedFirewallPolicyDefinitionState struct {
 	// , Attribute conditional on `mode` being equal to `security`
 	ApplyZonePairs []ZoneBasedFirewallPolicyDefinitionApplyZonePair `pulumi:"applyZonePairs"`
-	// Default Action - Choices: `pass`, `drop`
+	// Default Action
+	//   - Choices: `pass`, `drop`
 	DefaultAction *string `pulumi:"defaultAction"`
 	// The description of the policy definition
 	Description *string `pulumi:"description"`
-	// The policy mode - Choices: `security`, `unified`
+	// The policy mode
+	//   - Choices: `security`, `unified`
 	Mode *string `pulumi:"mode"`
 	// The name of the policy definition
 	Name  *string                                 `pulumi:"name"`
@@ -99,11 +103,13 @@ type zoneBasedFirewallPolicyDefinitionState struct {
 type ZoneBasedFirewallPolicyDefinitionState struct {
 	// , Attribute conditional on `mode` being equal to `security`
 	ApplyZonePairs ZoneBasedFirewallPolicyDefinitionApplyZonePairArrayInput
-	// Default Action - Choices: `pass`, `drop`
+	// Default Action
+	//   - Choices: `pass`, `drop`
 	DefaultAction pulumi.StringPtrInput
 	// The description of the policy definition
 	Description pulumi.StringPtrInput
-	// The policy mode - Choices: `security`, `unified`
+	// The policy mode
+	//   - Choices: `security`, `unified`
 	Mode pulumi.StringPtrInput
 	// The name of the policy definition
 	Name  pulumi.StringPtrInput
@@ -119,11 +125,13 @@ func (ZoneBasedFirewallPolicyDefinitionState) ElementType() reflect.Type {
 type zoneBasedFirewallPolicyDefinitionArgs struct {
 	// , Attribute conditional on `mode` being equal to `security`
 	ApplyZonePairs []ZoneBasedFirewallPolicyDefinitionApplyZonePair `pulumi:"applyZonePairs"`
-	// Default Action - Choices: `pass`, `drop`
+	// Default Action
+	//   - Choices: `pass`, `drop`
 	DefaultAction string `pulumi:"defaultAction"`
 	// The description of the policy definition
 	Description string `pulumi:"description"`
-	// The policy mode - Choices: `security`, `unified`
+	// The policy mode
+	//   - Choices: `security`, `unified`
 	Mode string `pulumi:"mode"`
 	// The name of the policy definition
 	Name  *string                                 `pulumi:"name"`
@@ -134,11 +142,13 @@ type zoneBasedFirewallPolicyDefinitionArgs struct {
 type ZoneBasedFirewallPolicyDefinitionArgs struct {
 	// , Attribute conditional on `mode` being equal to `security`
 	ApplyZonePairs ZoneBasedFirewallPolicyDefinitionApplyZonePairArrayInput
-	// Default Action - Choices: `pass`, `drop`
+	// Default Action
+	//   - Choices: `pass`, `drop`
 	DefaultAction pulumi.StringInput
 	// The description of the policy definition
 	Description pulumi.StringInput
-	// The policy mode - Choices: `security`, `unified`
+	// The policy mode
+	//   - Choices: `security`, `unified`
 	Mode pulumi.StringInput
 	// The name of the policy definition
 	Name  pulumi.StringPtrInput
@@ -239,7 +249,8 @@ func (o ZoneBasedFirewallPolicyDefinitionOutput) ApplyZonePairs() ZoneBasedFirew
 	}).(ZoneBasedFirewallPolicyDefinitionApplyZonePairArrayOutput)
 }
 
-// Default Action - Choices: `pass`, `drop`
+// Default Action
+//   - Choices: `pass`, `drop`
 func (o ZoneBasedFirewallPolicyDefinitionOutput) DefaultAction() pulumi.StringOutput {
 	return o.ApplyT(func(v *ZoneBasedFirewallPolicyDefinition) pulumi.StringOutput { return v.DefaultAction }).(pulumi.StringOutput)
 }
@@ -249,7 +260,8 @@ func (o ZoneBasedFirewallPolicyDefinitionOutput) Description() pulumi.StringOutp
 	return o.ApplyT(func(v *ZoneBasedFirewallPolicyDefinition) pulumi.StringOutput { return v.Description }).(pulumi.StringOutput)
 }
 
-// The policy mode - Choices: `security`, `unified`
+// The policy mode
+//   - Choices: `security`, `unified`
 func (o ZoneBasedFirewallPolicyDefinitionOutput) Mode() pulumi.StringOutput {
 	return o.ApplyT(func(v *ZoneBasedFirewallPolicyDefinition) pulumi.StringOutput { return v.Mode }).(pulumi.StringOutput)
 }

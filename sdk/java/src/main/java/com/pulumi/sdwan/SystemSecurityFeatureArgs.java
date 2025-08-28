@@ -22,16 +22,18 @@ public final class SystemSecurityFeatureArgs extends com.pulumi.resources.Resour
     public static final SystemSecurityFeatureArgs Empty = new SystemSecurityFeatureArgs();
 
     /**
-     * Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-     * `512`
+     * Set the sliding replay window size
+     *   - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+     *   - Default value: `512`
      * 
      */
     @Import(name="antiReplayWindow")
     private @Nullable Output<String> antiReplayWindow;
 
     /**
-     * @return Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-     * `512`
+     * @return Set the sliding replay window size
+     *   - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+     *   - Default value: `512`
      * 
      */
     public Optional<Output<String>> antiReplayWindow() {
@@ -69,14 +71,18 @@ public final class SystemSecurityFeatureArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+     * Extended Anti-Replay Window
+     *   - Range: `10`-`2048`
+     *   - Default value: `256`
      * 
      */
     @Import(name="extendedAntiReplayWindow")
     private @Nullable Output<Integer> extendedAntiReplayWindow;
 
     /**
-     * @return Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+     * @return Extended Anti-Replay Window
+     *   - Range: `10`-`2048`
+     *   - Default value: `256`
      * 
      */
     public Optional<Output<Integer>> extendedAntiReplayWindow() {
@@ -144,14 +150,16 @@ public final class SystemSecurityFeatureArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * Enable or disable IPsec pairwise-keying - Default value: `false`
+     * Enable or disable IPsec pairwise-keying
+     *   - Default value: `false`
      * 
      */
     @Import(name="ipsecPairwiseKeying")
     private @Nullable Output<Boolean> ipsecPairwiseKeying;
 
     /**
-     * @return Enable or disable IPsec pairwise-keying - Default value: `false`
+     * @return Enable or disable IPsec pairwise-keying
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> ipsecPairwiseKeying() {
@@ -219,14 +227,18 @@ public final class SystemSecurityFeatureArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+     * Set how often to change the AES key for DTLS connections
+     *   - Range: `10`-`1209600`
+     *   - Default value: `86400`
      * 
      */
     @Import(name="rekey")
     private @Nullable Output<Integer> rekey;
 
     /**
-     * @return Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+     * @return Set how often to change the AES key for DTLS connections
+     *   - Range: `10`-`1209600`
+     *   - Default value: `86400`
      * 
      */
     public Optional<Output<Integer>> rekey() {
@@ -287,8 +299,9 @@ public final class SystemSecurityFeatureArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param antiReplayWindow Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-         * `512`
+         * @param antiReplayWindow Set the sliding replay window size
+         *   - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+         *   - Default value: `512`
          * 
          * @return builder
          * 
@@ -299,8 +312,9 @@ public final class SystemSecurityFeatureArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param antiReplayWindow Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-         * `512`
+         * @param antiReplayWindow Set the sliding replay window size
+         *   - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+         *   - Default value: `512`
          * 
          * @return builder
          * 
@@ -352,7 +366,9 @@ public final class SystemSecurityFeatureArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param extendedAntiReplayWindow Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+         * @param extendedAntiReplayWindow Extended Anti-Replay Window
+         *   - Range: `10`-`2048`
+         *   - Default value: `256`
          * 
          * @return builder
          * 
@@ -363,7 +379,9 @@ public final class SystemSecurityFeatureArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param extendedAntiReplayWindow Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+         * @param extendedAntiReplayWindow Extended Anti-Replay Window
+         *   - Range: `10`-`2048`
+         *   - Default value: `256`
          * 
          * @return builder
          * 
@@ -467,7 +485,8 @@ public final class SystemSecurityFeatureArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param ipsecPairwiseKeying Enable or disable IPsec pairwise-keying - Default value: `false`
+         * @param ipsecPairwiseKeying Enable or disable IPsec pairwise-keying
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -478,7 +497,8 @@ public final class SystemSecurityFeatureArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param ipsecPairwiseKeying Enable or disable IPsec pairwise-keying - Default value: `false`
+         * @param ipsecPairwiseKeying Enable or disable IPsec pairwise-keying
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -592,7 +612,9 @@ public final class SystemSecurityFeatureArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param rekey Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+         * @param rekey Set how often to change the AES key for DTLS connections
+         *   - Range: `10`-`1209600`
+         *   - Default value: `86400`
          * 
          * @return builder
          * 
@@ -603,7 +625,9 @@ public final class SystemSecurityFeatureArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param rekey Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+         * @param rekey Set how often to change the AES key for DTLS connections
+         *   - Range: `10`-`1209600`
+         *   - Default value: `86400`
          * 
          * @return builder
          * 

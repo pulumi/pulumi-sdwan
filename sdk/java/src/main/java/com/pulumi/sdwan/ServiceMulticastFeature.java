@@ -90,14 +90,16 @@ public class ServiceMulticastFeature extends com.pulumi.resources.CustomResource
         return Codegen.optional(this.description);
     }
     /**
-     * Enable or disable auto-RP - Default value: `false`
+     * Enable or disable auto-RP
+     *   - Default value: `false`
      * 
      */
     @Export(name="enableAutoRp", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> enableAutoRp;
 
     /**
-     * @return Enable or disable auto-RP - Default value: `false`
+     * @return Enable or disable auto-RP
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> enableAutoRp() {
@@ -146,28 +148,32 @@ public class ServiceMulticastFeature extends com.pulumi.resources.CustomResource
         return Codegen.optional(this.igmpInterfaces);
     }
     /**
-     * Replicator is local to this device - Default value: `false`
+     * Replicator is local to this device
+     *   - Default value: `false`
      * 
      */
     @Export(name="localReplicator", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> localReplicator;
 
     /**
-     * @return Replicator is local to this device - Default value: `false`
+     * @return Replicator is local to this device
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> localReplicator() {
         return Codegen.optional(this.localReplicator);
     }
     /**
-     * Set number of joins per group the router supports - Range: `0`-`131072`
+     * Set number of joins per group the router supports
+     *   - Range: `0`-`131072`
      * 
      */
     @Export(name="localReplicatorThreshold", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> localReplicatorThreshold;
 
     /**
-     * @return Set number of joins per group the router supports - Range: `0`-`131072`
+     * @return Set number of joins per group the router supports
+     *   - Range: `0`-`131072`
      * 
      */
     public Output<Optional<Integer>> localReplicatorThreshold() {
@@ -202,14 +208,16 @@ public class ServiceMulticastFeature extends com.pulumi.resources.CustomResource
         return Codegen.optional(this.localReplicatorVariable);
     }
     /**
-     * Set MSDP refresh timer - Range: `1`-`60`
+     * Set MSDP refresh timer
+     *   - Range: `1`-`60`
      * 
      */
     @Export(name="msdpConnectionRetryInterval", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> msdpConnectionRetryInterval;
 
     /**
-     * @return Set MSDP refresh timer - Range: `1`-`60`
+     * @return Set MSDP refresh timer
+     *   - Range: `1`-`60`
      * 
      */
     public Output<Optional<Integer>> msdpConnectionRetryInterval() {
@@ -370,14 +378,18 @@ public class ServiceMulticastFeature extends com.pulumi.resources.CustomResource
         return this.pimSourceSpecificMulticastEnable;
     }
     /**
-     * Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity` - Default value: `0`
+     * Set when PIM router joins the SPT (kbps)
+     *   - Choices: `0`, `infinity`
+     *   - Default value: `0`
      * 
      */
     @Export(name="pimSptThreshold", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> pimSptThreshold;
 
     /**
-     * @return Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity` - Default value: `0`
+     * @return Set when PIM router joins the SPT (kbps)
+     *   - Choices: `0`, `infinity`
+     *   - Default value: `0`
      * 
      */
     public Output<Optional<String>> pimSptThreshold() {
@@ -398,14 +410,16 @@ public class ServiceMulticastFeature extends com.pulumi.resources.CustomResource
         return Codegen.optional(this.pimSptThresholdVariable);
     }
     /**
-     * Shortest Path Tree (SPT) Only Mode - Default value: `false`
+     * Shortest Path Tree (SPT) Only Mode
+     *   - Default value: `false`
      * 
      */
     @Export(name="sptOnly", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> sptOnly;
 
     /**
-     * @return Shortest Path Tree (SPT) Only Mode - Default value: `false`
+     * @return Shortest Path Tree (SPT) Only Mode
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> sptOnly() {

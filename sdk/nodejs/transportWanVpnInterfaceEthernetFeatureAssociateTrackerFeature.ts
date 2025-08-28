@@ -63,23 +63,23 @@ export class TransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeature exte
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
      * Transport Tracker Feature ID
      */
-    public readonly transportTrackerFeatureId!: pulumi.Output<string>;
+    declare public readonly transportTrackerFeatureId: pulumi.Output<string>;
     /**
      * Transport WAN VPN Feature ID
      */
-    public readonly transportWanVpnFeatureId!: pulumi.Output<string>;
+    declare public readonly transportWanVpnFeatureId: pulumi.Output<string>;
     /**
      * Transport WAN VPN Interface Ethernet Feature ID
      */
-    public readonly transportWanVpnInterfaceEthernetFeatureId!: pulumi.Output<string>;
+    declare public readonly transportWanVpnInterfaceEthernetFeatureId: pulumi.Output<string>;
     /**
      * The version of the object
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a TransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeature resource with the given unique name, arguments, and options.
@@ -94,29 +94,29 @@ export class TransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeature exte
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as TransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeatureState | undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["transportTrackerFeatureId"] = state ? state.transportTrackerFeatureId : undefined;
-            resourceInputs["transportWanVpnFeatureId"] = state ? state.transportWanVpnFeatureId : undefined;
-            resourceInputs["transportWanVpnInterfaceEthernetFeatureId"] = state ? state.transportWanVpnInterfaceEthernetFeatureId : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["transportTrackerFeatureId"] = state?.transportTrackerFeatureId;
+            resourceInputs["transportWanVpnFeatureId"] = state?.transportWanVpnFeatureId;
+            resourceInputs["transportWanVpnInterfaceEthernetFeatureId"] = state?.transportWanVpnInterfaceEthernetFeatureId;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as TransportWanVpnInterfaceEthernetFeatureAssociateTrackerFeatureArgs | undefined;
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            if ((!args || args.transportTrackerFeatureId === undefined) && !opts.urn) {
+            if (args?.transportTrackerFeatureId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'transportTrackerFeatureId'");
             }
-            if ((!args || args.transportWanVpnFeatureId === undefined) && !opts.urn) {
+            if (args?.transportWanVpnFeatureId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'transportWanVpnFeatureId'");
             }
-            if ((!args || args.transportWanVpnInterfaceEthernetFeatureId === undefined) && !opts.urn) {
+            if (args?.transportWanVpnInterfaceEthernetFeatureId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'transportWanVpnInterfaceEthernetFeatureId'");
             }
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["transportTrackerFeatureId"] = args ? args.transportTrackerFeatureId : undefined;
-            resourceInputs["transportWanVpnFeatureId"] = args ? args.transportWanVpnFeatureId : undefined;
-            resourceInputs["transportWanVpnInterfaceEthernetFeatureId"] = args ? args.transportWanVpnInterfaceEthernetFeatureId : undefined;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["transportTrackerFeatureId"] = args?.transportTrackerFeatureId;
+            resourceInputs["transportWanVpnFeatureId"] = args?.transportWanVpnFeatureId;
+            resourceInputs["transportWanVpnInterfaceEthernetFeatureId"] = args?.transportWanVpnInterfaceEthernetFeatureId;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

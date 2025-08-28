@@ -124,14 +124,16 @@ public class TransportT1E1ControllerFeature extends com.pulumi.resources.CustomR
         return Codegen.optional(this.slotVariable);
     }
     /**
-     * Card Type - Choices: `e1`, `t1`
+     * Card Type
+     *   - Choices: `e1`, `t1`
      * 
      */
     @Export(name="type", refs={String.class}, tree="[0]")
     private Output<String> type;
 
     /**
-     * @return Card Type - Choices: `e1`, `t1`
+     * @return Card Type
+     *   - Choices: `e1`, `t1`
      * 
      */
     public Output<String> type() {

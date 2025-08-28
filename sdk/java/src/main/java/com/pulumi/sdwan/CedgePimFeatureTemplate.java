@@ -42,14 +42,16 @@ import javax.annotation.Nullable;
 @ResourceType(type="sdwan:index/cedgePimFeatureTemplate:CedgePimFeatureTemplate")
 public class CedgePimFeatureTemplate extends com.pulumi.resources.CustomResource {
     /**
-     * Enable or disable auto-RP - Default value: `false`
+     * Enable or disable auto-RP
+     *   - Default value: `false`
      * 
      */
     @Export(name="autoRp", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> autoRp;
 
     /**
-     * @return Enable or disable auto-RP - Default value: `false`
+     * @return Enable or disable auto-RP
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> autoRp() {
@@ -98,14 +100,16 @@ public class CedgePimFeatureTemplate extends com.pulumi.resources.CustomResource
         return Codegen.optional(this.bsrCandidateVariable);
     }
     /**
-     * Turn SSM On / Off - Default value: `false`
+     * Turn SSM On / Off
+     *   - Default value: `false`
      * 
      */
     @Export(name="default", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> default_;
 
     /**
-     * @return Turn SSM On / Off - Default value: `false`
+     * @return Turn SSM On / Off
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> default_() {
@@ -140,18 +144,16 @@ public class CedgePimFeatureTemplate extends com.pulumi.resources.CustomResource
         return this.description;
     }
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Export(name="deviceTypes", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Output<List<String>> deviceTypes() {
@@ -242,14 +244,16 @@ public class CedgePimFeatureTemplate extends com.pulumi.resources.CustomResource
         return this.name;
     }
     /**
-     * Set RP candidate priority - Range: `0`-`255`
+     * Set RP candidate priority
+     *   - Range: `0`-`255`
      * 
      */
     @Export(name="priority", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> priority;
 
     /**
-     * @return Set RP candidate priority - Range: `0`-`255`
+     * @return Set RP candidate priority
+     *   - Range: `0`-`255`
      * 
      */
     public Output<Optional<Integer>> priority() {
@@ -368,14 +372,16 @@ public class CedgePimFeatureTemplate extends com.pulumi.resources.CustomResource
         return Codegen.optional(this.rpCandidates);
     }
     /**
-     * Set RP Discovery Scope - Range: `1`-`255`
+     * Set RP Discovery Scope
+     *   - Range: `1`-`255`
      * 
      */
     @Export(name="scope", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> scope;
 
     /**
-     * @return Set RP Discovery Scope - Range: `1`-`255`
+     * @return Set RP Discovery Scope
+     *   - Range: `1`-`255`
      * 
      */
     public Output<Optional<Integer>> scope() {
@@ -396,14 +402,16 @@ public class CedgePimFeatureTemplate extends com.pulumi.resources.CustomResource
         return Codegen.optional(this.scopeVariable);
     }
     /**
-     * Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity`
+     * Set when PIM router joins the SPT (kbps)
+     *   - Choices: `0`, `infinity`
      * 
      */
     @Export(name="sptThreshold", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> sptThreshold;
 
     /**
-     * @return Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity`
+     * @return Set when PIM router joins the SPT (kbps)
+     *   - Choices: `0`, `infinity`
      * 
      */
     public Output<Optional<String>> sptThreshold() {

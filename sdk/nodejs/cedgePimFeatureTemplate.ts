@@ -47,123 +47,127 @@ export class CedgePimFeatureTemplate extends pulumi.CustomResource {
     }
 
     /**
-     * Enable or disable auto-RP - Default value: `false`
+     * Enable or disable auto-RP
+     *   - Default value: `false`
      */
-    public readonly autoRp!: pulumi.Output<boolean | undefined>;
+    declare public readonly autoRp: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly autoRpVariable!: pulumi.Output<string | undefined>;
+    declare public readonly autoRpVariable: pulumi.Output<string | undefined>;
     /**
      * Set Autonomic-Networking virtual interface
      */
-    public readonly bsrCandidate!: pulumi.Output<string | undefined>;
+    declare public readonly bsrCandidate: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly bsrCandidateVariable!: pulumi.Output<string | undefined>;
+    declare public readonly bsrCandidateVariable: pulumi.Output<string | undefined>;
     /**
-     * Turn SSM On / Off - Default value: `false`
+     * Turn SSM On / Off
+     *   - Default value: `false`
      */
-    public readonly default!: pulumi.Output<boolean | undefined>;
+    declare public readonly default: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly defaultVariable!: pulumi.Output<string | undefined>;
+    declare public readonly defaultVariable: pulumi.Output<string | undefined>;
     /**
      * The description of the feature template
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    public readonly deviceTypes!: pulumi.Output<string[]>;
+    declare public readonly deviceTypes: pulumi.Output<string[]>;
     /**
      * Hash Mask length for RP selection
      */
-    public readonly hashMaskLength!: pulumi.Output<string | undefined>;
+    declare public readonly hashMaskLength: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly hashMaskLengthVariable!: pulumi.Output<string | undefined>;
+    declare public readonly hashMaskLengthVariable: pulumi.Output<string | undefined>;
     /**
      * Set RP Discovery Interface Name
      */
-    public readonly interfaceName!: pulumi.Output<string | undefined>;
+    declare public readonly interfaceName: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly interfaceNameVariable!: pulumi.Output<string | undefined>;
+    declare public readonly interfaceNameVariable: pulumi.Output<string | undefined>;
     /**
      * Set PIM interface parameters
      */
-    public readonly interfaces!: pulumi.Output<outputs.CedgePimFeatureTemplateInterface[] | undefined>;
+    declare public readonly interfaces: pulumi.Output<outputs.CedgePimFeatureTemplateInterface[] | undefined>;
     /**
      * The name of the feature template
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
-     * Set RP candidate priority - Range: `0`-`255`
+     * Set RP candidate priority
+     *   - Range: `0`-`255`
      */
-    public readonly priority!: pulumi.Output<number | undefined>;
+    declare public readonly priority: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly priorityVariable!: pulumi.Output<string | undefined>;
+    declare public readonly priorityVariable: pulumi.Output<string | undefined>;
     /**
      * Set Access List for PIM SSM
      */
-    public readonly range!: pulumi.Output<string | undefined>;
+    declare public readonly range: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly rangeVariable!: pulumi.Output<string | undefined>;
+    declare public readonly rangeVariable: pulumi.Output<string | undefined>;
     /**
      * Set Static RP Address(es)
      */
-    public readonly rpAddresses!: pulumi.Output<outputs.CedgePimFeatureTemplateRpAddress[] | undefined>;
+    declare public readonly rpAddresses: pulumi.Output<outputs.CedgePimFeatureTemplateRpAddress[] | undefined>;
     /**
      * Enable or disable RP Announce
      */
-    public readonly rpAnnounceFields!: pulumi.Output<outputs.CedgePimFeatureTemplateRpAnnounceField[] | undefined>;
+    declare public readonly rpAnnounceFields: pulumi.Output<outputs.CedgePimFeatureTemplateRpAnnounceField[] | undefined>;
     /**
      * Set BSR RP candidate filter
      */
-    public readonly rpCandidateAccessList!: pulumi.Output<string | undefined>;
+    declare public readonly rpCandidateAccessList: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly rpCandidateAccessListVariable!: pulumi.Output<string | undefined>;
+    declare public readonly rpCandidateAccessListVariable: pulumi.Output<string | undefined>;
     /**
      * Set RP Discovery Scope
      */
-    public readonly rpCandidates!: pulumi.Output<outputs.CedgePimFeatureTemplateRpCandidate[] | undefined>;
+    declare public readonly rpCandidates: pulumi.Output<outputs.CedgePimFeatureTemplateRpCandidate[] | undefined>;
     /**
-     * Set RP Discovery Scope - Range: `1`-`255`
+     * Set RP Discovery Scope
+     *   - Range: `1`-`255`
      */
-    public readonly scope!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly scopeVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity`
-     */
-    public readonly sptThreshold!: pulumi.Output<string | undefined>;
+    declare public readonly scope: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly sptThresholdVariable!: pulumi.Output<string | undefined>;
+    declare public readonly scopeVariable: pulumi.Output<string | undefined>;
+    /**
+     * Set when PIM router joins the SPT (kbps)
+     *   - Choices: `0`, `infinity`
+     */
+    declare public readonly sptThreshold: pulumi.Output<string | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly sptThresholdVariable: pulumi.Output<string | undefined>;
     /**
      * The template type
      */
-    public /*out*/ readonly templateType!: pulumi.Output<string>;
+    declare public /*out*/ readonly templateType: pulumi.Output<string>;
     /**
      * The version of the feature template
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a CedgePimFeatureTemplate resource with the given unique name, arguments, and options.
@@ -178,70 +182,70 @@ export class CedgePimFeatureTemplate extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as CedgePimFeatureTemplateState | undefined;
-            resourceInputs["autoRp"] = state ? state.autoRp : undefined;
-            resourceInputs["autoRpVariable"] = state ? state.autoRpVariable : undefined;
-            resourceInputs["bsrCandidate"] = state ? state.bsrCandidate : undefined;
-            resourceInputs["bsrCandidateVariable"] = state ? state.bsrCandidateVariable : undefined;
-            resourceInputs["default"] = state ? state.default : undefined;
-            resourceInputs["defaultVariable"] = state ? state.defaultVariable : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["deviceTypes"] = state ? state.deviceTypes : undefined;
-            resourceInputs["hashMaskLength"] = state ? state.hashMaskLength : undefined;
-            resourceInputs["hashMaskLengthVariable"] = state ? state.hashMaskLengthVariable : undefined;
-            resourceInputs["interfaceName"] = state ? state.interfaceName : undefined;
-            resourceInputs["interfaceNameVariable"] = state ? state.interfaceNameVariable : undefined;
-            resourceInputs["interfaces"] = state ? state.interfaces : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["priority"] = state ? state.priority : undefined;
-            resourceInputs["priorityVariable"] = state ? state.priorityVariable : undefined;
-            resourceInputs["range"] = state ? state.range : undefined;
-            resourceInputs["rangeVariable"] = state ? state.rangeVariable : undefined;
-            resourceInputs["rpAddresses"] = state ? state.rpAddresses : undefined;
-            resourceInputs["rpAnnounceFields"] = state ? state.rpAnnounceFields : undefined;
-            resourceInputs["rpCandidateAccessList"] = state ? state.rpCandidateAccessList : undefined;
-            resourceInputs["rpCandidateAccessListVariable"] = state ? state.rpCandidateAccessListVariable : undefined;
-            resourceInputs["rpCandidates"] = state ? state.rpCandidates : undefined;
-            resourceInputs["scope"] = state ? state.scope : undefined;
-            resourceInputs["scopeVariable"] = state ? state.scopeVariable : undefined;
-            resourceInputs["sptThreshold"] = state ? state.sptThreshold : undefined;
-            resourceInputs["sptThresholdVariable"] = state ? state.sptThresholdVariable : undefined;
-            resourceInputs["templateType"] = state ? state.templateType : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["autoRp"] = state?.autoRp;
+            resourceInputs["autoRpVariable"] = state?.autoRpVariable;
+            resourceInputs["bsrCandidate"] = state?.bsrCandidate;
+            resourceInputs["bsrCandidateVariable"] = state?.bsrCandidateVariable;
+            resourceInputs["default"] = state?.default;
+            resourceInputs["defaultVariable"] = state?.defaultVariable;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["deviceTypes"] = state?.deviceTypes;
+            resourceInputs["hashMaskLength"] = state?.hashMaskLength;
+            resourceInputs["hashMaskLengthVariable"] = state?.hashMaskLengthVariable;
+            resourceInputs["interfaceName"] = state?.interfaceName;
+            resourceInputs["interfaceNameVariable"] = state?.interfaceNameVariable;
+            resourceInputs["interfaces"] = state?.interfaces;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["priority"] = state?.priority;
+            resourceInputs["priorityVariable"] = state?.priorityVariable;
+            resourceInputs["range"] = state?.range;
+            resourceInputs["rangeVariable"] = state?.rangeVariable;
+            resourceInputs["rpAddresses"] = state?.rpAddresses;
+            resourceInputs["rpAnnounceFields"] = state?.rpAnnounceFields;
+            resourceInputs["rpCandidateAccessList"] = state?.rpCandidateAccessList;
+            resourceInputs["rpCandidateAccessListVariable"] = state?.rpCandidateAccessListVariable;
+            resourceInputs["rpCandidates"] = state?.rpCandidates;
+            resourceInputs["scope"] = state?.scope;
+            resourceInputs["scopeVariable"] = state?.scopeVariable;
+            resourceInputs["sptThreshold"] = state?.sptThreshold;
+            resourceInputs["sptThresholdVariable"] = state?.sptThresholdVariable;
+            resourceInputs["templateType"] = state?.templateType;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as CedgePimFeatureTemplateArgs | undefined;
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            if ((!args || args.deviceTypes === undefined) && !opts.urn) {
+            if (args?.deviceTypes === undefined && !opts.urn) {
                 throw new Error("Missing required property 'deviceTypes'");
             }
-            resourceInputs["autoRp"] = args ? args.autoRp : undefined;
-            resourceInputs["autoRpVariable"] = args ? args.autoRpVariable : undefined;
-            resourceInputs["bsrCandidate"] = args ? args.bsrCandidate : undefined;
-            resourceInputs["bsrCandidateVariable"] = args ? args.bsrCandidateVariable : undefined;
-            resourceInputs["default"] = args ? args.default : undefined;
-            resourceInputs["defaultVariable"] = args ? args.defaultVariable : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["deviceTypes"] = args ? args.deviceTypes : undefined;
-            resourceInputs["hashMaskLength"] = args ? args.hashMaskLength : undefined;
-            resourceInputs["hashMaskLengthVariable"] = args ? args.hashMaskLengthVariable : undefined;
-            resourceInputs["interfaceName"] = args ? args.interfaceName : undefined;
-            resourceInputs["interfaceNameVariable"] = args ? args.interfaceNameVariable : undefined;
-            resourceInputs["interfaces"] = args ? args.interfaces : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["priority"] = args ? args.priority : undefined;
-            resourceInputs["priorityVariable"] = args ? args.priorityVariable : undefined;
-            resourceInputs["range"] = args ? args.range : undefined;
-            resourceInputs["rangeVariable"] = args ? args.rangeVariable : undefined;
-            resourceInputs["rpAddresses"] = args ? args.rpAddresses : undefined;
-            resourceInputs["rpAnnounceFields"] = args ? args.rpAnnounceFields : undefined;
-            resourceInputs["rpCandidateAccessList"] = args ? args.rpCandidateAccessList : undefined;
-            resourceInputs["rpCandidateAccessListVariable"] = args ? args.rpCandidateAccessListVariable : undefined;
-            resourceInputs["rpCandidates"] = args ? args.rpCandidates : undefined;
-            resourceInputs["scope"] = args ? args.scope : undefined;
-            resourceInputs["scopeVariable"] = args ? args.scopeVariable : undefined;
-            resourceInputs["sptThreshold"] = args ? args.sptThreshold : undefined;
-            resourceInputs["sptThresholdVariable"] = args ? args.sptThresholdVariable : undefined;
+            resourceInputs["autoRp"] = args?.autoRp;
+            resourceInputs["autoRpVariable"] = args?.autoRpVariable;
+            resourceInputs["bsrCandidate"] = args?.bsrCandidate;
+            resourceInputs["bsrCandidateVariable"] = args?.bsrCandidateVariable;
+            resourceInputs["default"] = args?.default;
+            resourceInputs["defaultVariable"] = args?.defaultVariable;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["deviceTypes"] = args?.deviceTypes;
+            resourceInputs["hashMaskLength"] = args?.hashMaskLength;
+            resourceInputs["hashMaskLengthVariable"] = args?.hashMaskLengthVariable;
+            resourceInputs["interfaceName"] = args?.interfaceName;
+            resourceInputs["interfaceNameVariable"] = args?.interfaceNameVariable;
+            resourceInputs["interfaces"] = args?.interfaces;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["priority"] = args?.priority;
+            resourceInputs["priorityVariable"] = args?.priorityVariable;
+            resourceInputs["range"] = args?.range;
+            resourceInputs["rangeVariable"] = args?.rangeVariable;
+            resourceInputs["rpAddresses"] = args?.rpAddresses;
+            resourceInputs["rpAnnounceFields"] = args?.rpAnnounceFields;
+            resourceInputs["rpCandidateAccessList"] = args?.rpCandidateAccessList;
+            resourceInputs["rpCandidateAccessListVariable"] = args?.rpCandidateAccessListVariable;
+            resourceInputs["rpCandidates"] = args?.rpCandidates;
+            resourceInputs["scope"] = args?.scope;
+            resourceInputs["scopeVariable"] = args?.scopeVariable;
+            resourceInputs["sptThreshold"] = args?.sptThreshold;
+            resourceInputs["sptThresholdVariable"] = args?.sptThresholdVariable;
             resourceInputs["templateType"] = undefined /*out*/;
             resourceInputs["version"] = undefined /*out*/;
         }
@@ -255,7 +259,8 @@ export class CedgePimFeatureTemplate extends pulumi.CustomResource {
  */
 export interface CedgePimFeatureTemplateState {
     /**
-     * Enable or disable auto-RP - Default value: `false`
+     * Enable or disable auto-RP
+     *   - Default value: `false`
      */
     autoRp?: pulumi.Input<boolean>;
     /**
@@ -271,7 +276,8 @@ export interface CedgePimFeatureTemplateState {
      */
     bsrCandidateVariable?: pulumi.Input<string>;
     /**
-     * Turn SSM On / Off - Default value: `false`
+     * Turn SSM On / Off
+     *   - Default value: `false`
      */
     default?: pulumi.Input<boolean>;
     /**
@@ -283,9 +289,8 @@ export interface CedgePimFeatureTemplateState {
      */
     description?: pulumi.Input<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
     deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
     /**
@@ -313,7 +318,8 @@ export interface CedgePimFeatureTemplateState {
      */
     name?: pulumi.Input<string>;
     /**
-     * Set RP candidate priority - Range: `0`-`255`
+     * Set RP candidate priority
+     *   - Range: `0`-`255`
      */
     priority?: pulumi.Input<number>;
     /**
@@ -349,7 +355,8 @@ export interface CedgePimFeatureTemplateState {
      */
     rpCandidates?: pulumi.Input<pulumi.Input<inputs.CedgePimFeatureTemplateRpCandidate>[]>;
     /**
-     * Set RP Discovery Scope - Range: `1`-`255`
+     * Set RP Discovery Scope
+     *   - Range: `1`-`255`
      */
     scope?: pulumi.Input<number>;
     /**
@@ -357,7 +364,8 @@ export interface CedgePimFeatureTemplateState {
      */
     scopeVariable?: pulumi.Input<string>;
     /**
-     * Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity`
+     * Set when PIM router joins the SPT (kbps)
+     *   - Choices: `0`, `infinity`
      */
     sptThreshold?: pulumi.Input<string>;
     /**
@@ -379,7 +387,8 @@ export interface CedgePimFeatureTemplateState {
  */
 export interface CedgePimFeatureTemplateArgs {
     /**
-     * Enable or disable auto-RP - Default value: `false`
+     * Enable or disable auto-RP
+     *   - Default value: `false`
      */
     autoRp?: pulumi.Input<boolean>;
     /**
@@ -395,7 +404,8 @@ export interface CedgePimFeatureTemplateArgs {
      */
     bsrCandidateVariable?: pulumi.Input<string>;
     /**
-     * Turn SSM On / Off - Default value: `false`
+     * Turn SSM On / Off
+     *   - Default value: `false`
      */
     default?: pulumi.Input<boolean>;
     /**
@@ -407,9 +417,8 @@ export interface CedgePimFeatureTemplateArgs {
      */
     description: pulumi.Input<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
     deviceTypes: pulumi.Input<pulumi.Input<string>[]>;
     /**
@@ -437,7 +446,8 @@ export interface CedgePimFeatureTemplateArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * Set RP candidate priority - Range: `0`-`255`
+     * Set RP candidate priority
+     *   - Range: `0`-`255`
      */
     priority?: pulumi.Input<number>;
     /**
@@ -473,7 +483,8 @@ export interface CedgePimFeatureTemplateArgs {
      */
     rpCandidates?: pulumi.Input<pulumi.Input<inputs.CedgePimFeatureTemplateRpCandidate>[]>;
     /**
-     * Set RP Discovery Scope - Range: `1`-`255`
+     * Set RP Discovery Scope
+     *   - Range: `1`-`255`
      */
     scope?: pulumi.Input<number>;
     /**
@@ -481,7 +492,8 @@ export interface CedgePimFeatureTemplateArgs {
      */
     scopeVariable?: pulumi.Input<string>;
     /**
-     * Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity`
+     * Set when PIM router joins the SPT (kbps)
+     *   - Choices: `0`, `infinity`
      */
     sptThreshold?: pulumi.Input<string>;
     /**

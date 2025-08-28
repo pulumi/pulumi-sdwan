@@ -21,14 +21,16 @@ public final class CflowdPolicyDefinitionArgs extends com.pulumi.resources.Resou
     public static final CflowdPolicyDefinitionArgs Empty = new CflowdPolicyDefinitionArgs();
 
     /**
-     * Active flow timeout in seconds - Range: `30`-`3600`
+     * Active flow timeout in seconds
+     *   - Range: `30`-`3600`
      * 
      */
     @Import(name="activeFlowTimeout")
     private @Nullable Output<Integer> activeFlowTimeout;
 
     /**
-     * @return Active flow timeout in seconds - Range: `30`-`3600`
+     * @return Active flow timeout in seconds
+     *   - Range: `30`-`3600`
      * 
      */
     public Optional<Output<Integer>> activeFlowTimeout() {
@@ -66,14 +68,16 @@ public final class CflowdPolicyDefinitionArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * Flow refresh in seconds - Range: `60`-`86400`
+     * Flow refresh in seconds
+     *   - Range: `60`-`86400`
      * 
      */
     @Import(name="flowRefresh")
     private @Nullable Output<Integer> flowRefresh;
 
     /**
-     * @return Flow refresh in seconds - Range: `60`-`86400`
+     * @return Flow refresh in seconds
+     *   - Range: `60`-`86400`
      * 
      */
     public Optional<Output<Integer>> flowRefresh() {
@@ -81,14 +85,16 @@ public final class CflowdPolicyDefinitionArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * Inactive flow timeout in seconds - Range: `1`-`3600`
+     * Inactive flow timeout in seconds
+     *   - Range: `1`-`3600`
      * 
      */
     @Import(name="inactiveFlowTimeout")
     private @Nullable Output<Integer> inactiveFlowTimeout;
 
     /**
-     * @return Inactive flow timeout in seconds - Range: `1`-`3600`
+     * @return Inactive flow timeout in seconds
+     *   - Range: `1`-`3600`
      * 
      */
     public Optional<Output<Integer>> inactiveFlowTimeout() {
@@ -111,14 +117,16 @@ public final class CflowdPolicyDefinitionArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * Protocol, either `ipv4`, `ipv6` or `all` - Choices: `ipv4`, `ipv6`, `all`
+     * Protocol, either `ipv4`, `ipv6` or `all`
+     *   - Choices: `ipv4`, `ipv6`, `all`
      * 
      */
     @Import(name="protocol")
     private @Nullable Output<String> protocol;
 
     /**
-     * @return Protocol, either `ipv4`, `ipv6` or `all` - Choices: `ipv4`, `ipv6`, `all`
+     * @return Protocol, either `ipv4`, `ipv6` or `all`
+     *   - Choices: `ipv4`, `ipv6`, `all`
      * 
      */
     public Optional<Output<String>> protocol() {
@@ -141,14 +149,16 @@ public final class CflowdPolicyDefinitionArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * Flow sampling interval - Range: `1`-`65536`
+     * Flow sampling interval
+     *   - Range: `1`-`65536`
      * 
      */
     @Import(name="samplingInterval")
     private @Nullable Output<Integer> samplingInterval;
 
     /**
-     * @return Flow sampling interval - Range: `1`-`65536`
+     * @return Flow sampling interval
+     *   - Range: `1`-`65536`
      * 
      */
     public Optional<Output<Integer>> samplingInterval() {
@@ -204,7 +214,8 @@ public final class CflowdPolicyDefinitionArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param activeFlowTimeout Active flow timeout in seconds - Range: `30`-`3600`
+         * @param activeFlowTimeout Active flow timeout in seconds
+         *   - Range: `30`-`3600`
          * 
          * @return builder
          * 
@@ -215,7 +226,8 @@ public final class CflowdPolicyDefinitionArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param activeFlowTimeout Active flow timeout in seconds - Range: `30`-`3600`
+         * @param activeFlowTimeout Active flow timeout in seconds
+         *   - Range: `30`-`3600`
          * 
          * @return builder
          * 
@@ -277,7 +289,8 @@ public final class CflowdPolicyDefinitionArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param flowRefresh Flow refresh in seconds - Range: `60`-`86400`
+         * @param flowRefresh Flow refresh in seconds
+         *   - Range: `60`-`86400`
          * 
          * @return builder
          * 
@@ -288,7 +301,8 @@ public final class CflowdPolicyDefinitionArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param flowRefresh Flow refresh in seconds - Range: `60`-`86400`
+         * @param flowRefresh Flow refresh in seconds
+         *   - Range: `60`-`86400`
          * 
          * @return builder
          * 
@@ -298,7 +312,8 @@ public final class CflowdPolicyDefinitionArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param inactiveFlowTimeout Inactive flow timeout in seconds - Range: `1`-`3600`
+         * @param inactiveFlowTimeout Inactive flow timeout in seconds
+         *   - Range: `1`-`3600`
          * 
          * @return builder
          * 
@@ -309,7 +324,8 @@ public final class CflowdPolicyDefinitionArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param inactiveFlowTimeout Inactive flow timeout in seconds - Range: `1`-`3600`
+         * @param inactiveFlowTimeout Inactive flow timeout in seconds
+         *   - Range: `1`-`3600`
          * 
          * @return builder
          * 
@@ -340,7 +356,8 @@ public final class CflowdPolicyDefinitionArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param protocol Protocol, either `ipv4`, `ipv6` or `all` - Choices: `ipv4`, `ipv6`, `all`
+         * @param protocol Protocol, either `ipv4`, `ipv6` or `all`
+         *   - Choices: `ipv4`, `ipv6`, `all`
          * 
          * @return builder
          * 
@@ -351,7 +368,8 @@ public final class CflowdPolicyDefinitionArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param protocol Protocol, either `ipv4`, `ipv6` or `all` - Choices: `ipv4`, `ipv6`, `all`
+         * @param protocol Protocol, either `ipv4`, `ipv6` or `all`
+         *   - Choices: `ipv4`, `ipv6`, `all`
          * 
          * @return builder
          * 
@@ -382,7 +400,8 @@ public final class CflowdPolicyDefinitionArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param samplingInterval Flow sampling interval - Range: `1`-`65536`
+         * @param samplingInterval Flow sampling interval
+         *   - Range: `1`-`65536`
          * 
          * @return builder
          * 
@@ -393,7 +412,8 @@ public final class CflowdPolicyDefinitionArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param samplingInterval Flow sampling interval - Range: `1`-`65536`
+         * @param samplingInterval Flow sampling interval
+         *   - Range: `1`-`65536`
          * 
          * @return builder
          * 

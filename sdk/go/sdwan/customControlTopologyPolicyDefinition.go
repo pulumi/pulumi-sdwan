@@ -24,7 +24,8 @@ import (
 type CustomControlTopologyPolicyDefinition struct {
 	pulumi.CustomResourceState
 
-	// Default action, either `accept` or `reject` - Choices: `accept`, `reject`
+	// Default action, either `accept` or `reject`
+	//   - Choices: `accept`, `reject`
 	DefaultAction pulumi.StringPtrOutput `pulumi:"defaultAction"`
 	// The description of the policy definition
 	Description pulumi.StringOutput `pulumi:"description"`
@@ -71,7 +72,8 @@ func GetCustomControlTopologyPolicyDefinition(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering CustomControlTopologyPolicyDefinition resources.
 type customControlTopologyPolicyDefinitionState struct {
-	// Default action, either `accept` or `reject` - Choices: `accept`, `reject`
+	// Default action, either `accept` or `reject`
+	//   - Choices: `accept`, `reject`
 	DefaultAction *string `pulumi:"defaultAction"`
 	// The description of the policy definition
 	Description *string `pulumi:"description"`
@@ -86,7 +88,8 @@ type customControlTopologyPolicyDefinitionState struct {
 }
 
 type CustomControlTopologyPolicyDefinitionState struct {
-	// Default action, either `accept` or `reject` - Choices: `accept`, `reject`
+	// Default action, either `accept` or `reject`
+	//   - Choices: `accept`, `reject`
 	DefaultAction pulumi.StringPtrInput
 	// The description of the policy definition
 	Description pulumi.StringPtrInput
@@ -105,7 +108,8 @@ func (CustomControlTopologyPolicyDefinitionState) ElementType() reflect.Type {
 }
 
 type customControlTopologyPolicyDefinitionArgs struct {
-	// Default action, either `accept` or `reject` - Choices: `accept`, `reject`
+	// Default action, either `accept` or `reject`
+	//   - Choices: `accept`, `reject`
 	DefaultAction *string `pulumi:"defaultAction"`
 	// The description of the policy definition
 	Description string `pulumi:"description"`
@@ -117,7 +121,8 @@ type customControlTopologyPolicyDefinitionArgs struct {
 
 // The set of arguments for constructing a CustomControlTopologyPolicyDefinition resource.
 type CustomControlTopologyPolicyDefinitionArgs struct {
-	// Default action, either `accept` or `reject` - Choices: `accept`, `reject`
+	// Default action, either `accept` or `reject`
+	//   - Choices: `accept`, `reject`
 	DefaultAction pulumi.StringPtrInput
 	// The description of the policy definition
 	Description pulumi.StringInput
@@ -214,7 +219,8 @@ func (o CustomControlTopologyPolicyDefinitionOutput) ToCustomControlTopologyPoli
 	return o
 }
 
-// Default action, either `accept` or `reject` - Choices: `accept`, `reject`
+// Default action, either `accept` or `reject`
+//   - Choices: `accept`, `reject`
 func (o CustomControlTopologyPolicyDefinitionOutput) DefaultAction() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CustomControlTopologyPolicyDefinition) pulumi.StringPtrOutput { return v.DefaultAction }).(pulumi.StringPtrOutput)
 }

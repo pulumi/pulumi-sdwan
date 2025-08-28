@@ -114,89 +114,115 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
         The set of arguments for constructing a ServiceLanVpnInterfaceEthernetFeature resource.
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] service_lan_vpn_feature_id: Service LAN VPN Feature ID
-        :param pulumi.Input[_builtins.int] acl_shaping_rate: Shaping Rate (Kbps) - Range: `8`-`100000000`
+        :param pulumi.Input[_builtins.int] acl_shaping_rate: Shaping Rate (Kbps)
+                 - Range: `8`-`100000000`
         :param pulumi.Input[_builtins.str] acl_shaping_rate_variable: Variable name
-        :param pulumi.Input[_builtins.int] arp_timeout: Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
+        :param pulumi.Input[_builtins.int] arp_timeout: Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+                 - Range: `0`-`2147483`
+                 - Default value: `1200`
         :param pulumi.Input[_builtins.str] arp_timeout_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceEthernetFeatureArpArgs']]] arps: Configure ARP entries
         :param pulumi.Input[_builtins.bool] autonegotiate: Link autonegotiation
         :param pulumi.Input[_builtins.str] autonegotiate_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.str] duplex: Duplex mode - Choices: `full`, `half`, `auto`
+        :param pulumi.Input[_builtins.str] duplex: Duplex mode
+                 - Choices: `full`, `half`, `auto`
         :param pulumi.Input[_builtins.str] duplex_variable: Variable name
         :param pulumi.Input[_builtins.bool] enable_dhcpv6: Enable DHCPv6
-        :param pulumi.Input[_builtins.bool] icmp_redirect_disable: ICMP/ICMPv6 Redirect Disable - Default value: `true`
+        :param pulumi.Input[_builtins.bool] icmp_redirect_disable: ICMP/ICMPv6 Redirect Disable
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] icmp_redirect_disable_variable: Variable name
         :param pulumi.Input[_builtins.str] interface_description_variable: Variable name
-        :param pulumi.Input[_builtins.int] interface_mtu: Interface MTU - Range: `1500`-`9216` - Default value: `1500`
+        :param pulumi.Input[_builtins.int] interface_mtu: Interface MTU
+                 - Range: `1500`-`9216`
+                 - Default value: `1500`
         :param pulumi.Input[_builtins.str] interface_mtu_variable: Variable name
         :param pulumi.Input[_builtins.str] interface_name_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ip_directed_broadcast: IP Directed-Broadcast - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ip_directed_broadcast: IP Directed-Broadcast
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ip_directed_broadcast_variable: Variable name
-        :param pulumi.Input[_builtins.int] ip_mtu: IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces
-               <576..2000> in bytes - Range: `576`-`9216` - Default value: `1500`
+        :param pulumi.Input[_builtins.int] ip_mtu: IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes
+                 - Range: `576`-`9216`
+                 - Default value: `1500`
         :param pulumi.Input[_builtins.str] ip_mtu_variable: Variable name
         :param pulumi.Input[_builtins.str] ipv4_address: IP Address
         :param pulumi.Input[_builtins.str] ipv4_address_variable: Variable name
-        :param pulumi.Input[_builtins.int] ipv4_dhcp_distance: DHCP Distance - Range: `1`-`65536`
+        :param pulumi.Input[_builtins.int] ipv4_dhcp_distance: DHCP Distance
+                 - Range: `1`-`65536`
         :param pulumi.Input[_builtins.str] ipv4_dhcp_distance_variable: Variable name
         :param pulumi.Input[_builtins.str] ipv4_dhcp_helper_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ipv4_dhcp_helpers: List of DHCP IPv4 helper addresses (min 1, max 8)
-        :param pulumi.Input[_builtins.bool] ipv4_nat: enable Network Address Translation on this interface - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ipv4_nat: enable Network Address Translation on this interface
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ipv4_nat_loopback: NAT Inside Source Loopback Interface
         :param pulumi.Input[_builtins.str] ipv4_nat_loopback_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ipv4_nat_overload: NAT Overload - Default value: `true`
+        :param pulumi.Input[_builtins.bool] ipv4_nat_overload: NAT Overload
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] ipv4_nat_overload_variable: Variable name
-        :param pulumi.Input[_builtins.int] ipv4_nat_prefix_length: NAT Pool Prefix Length - Range: `1`-`32`
+        :param pulumi.Input[_builtins.int] ipv4_nat_prefix_length: NAT Pool Prefix Length
+                 - Range: `1`-`32`
         :param pulumi.Input[_builtins.str] ipv4_nat_prefix_length_variable: Variable name
         :param pulumi.Input[_builtins.str] ipv4_nat_range_end: NAT Pool Range End
         :param pulumi.Input[_builtins.str] ipv4_nat_range_end_variable: Variable name
         :param pulumi.Input[_builtins.str] ipv4_nat_range_start: NAT Pool Range Start
         :param pulumi.Input[_builtins.str] ipv4_nat_range_start_variable: Variable name
-        :param pulumi.Input[_builtins.int] ipv4_nat_tcp_timeout: Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+        :param pulumi.Input[_builtins.int] ipv4_nat_tcp_timeout: Set NAT TCP session timeout, in minutes
+                 - Range: `1`-`8947`
+                 - Default value: `60`
         :param pulumi.Input[_builtins.str] ipv4_nat_tcp_timeout_variable: Variable name
-        :param pulumi.Input[_builtins.str] ipv4_nat_type: NAT Type - Choices: `pool`, `loopback`
+        :param pulumi.Input[_builtins.str] ipv4_nat_type: NAT Type
+                 - Choices: `pool`, `loopback`
         :param pulumi.Input[_builtins.str] ipv4_nat_type_variable: Variable name
-        :param pulumi.Input[_builtins.int] ipv4_nat_udp_timeout: Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+        :param pulumi.Input[_builtins.int] ipv4_nat_udp_timeout: Set NAT UDP session timeout, in minutes
+                 - Range: `1`-`8947`
+                 - Default value: `1`
         :param pulumi.Input[_builtins.str] ipv4_nat_udp_timeout_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs']]] ipv4_secondary_addresses: Secondary IpV4 Addresses
-        :param pulumi.Input[_builtins.str] ipv4_subnet_mask: Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-               `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-               `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-               `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-               `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[_builtins.str] ipv4_subnet_mask: Subnet Mask
+                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] ipv4_subnet_mask_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArgs']]] ipv4_vrrps: Enable VRRP
         :param pulumi.Input[_builtins.str] ipv6_address: IPv6 Address Secondary
         :param pulumi.Input[_builtins.str] ipv6_address_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperArgs']]] ipv6_dhcp_helpers: DHCPv6 Helper
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs']]] ipv6_dhcp_secondary_addresses: secondary IPv6 addresses
-        :param pulumi.Input[_builtins.bool] ipv6_nat: enable Network Address Translation ipv6 on this interface - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ipv6_nat: enable Network Address Translation ipv6 on this interface
+                 - Default value: `false`
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs']]] ipv6_secondary_addresses: Static secondary IPv6 addresses
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArgs']]] ipv6_vrrps: Enable VRRP Ipv6
-        :param pulumi.Input[_builtins.int] load_interval: Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+        :param pulumi.Input[_builtins.int] load_interval: Interval for interface load calculation
+                 - Range: `30`-`600`
+                 - Default value: `30`
         :param pulumi.Input[_builtins.str] load_interval_variable: Variable name
         :param pulumi.Input[_builtins.str] mac_address: MAC Address
         :param pulumi.Input[_builtins.str] mac_address_variable: Variable name
-        :param pulumi.Input[_builtins.str] media_type: Media type - Choices: `auto-select`, `rj45`, `sfp`
+        :param pulumi.Input[_builtins.str] media_type: Media type
+                 - Choices: `auto-select`, `rj45`, `sfp`
         :param pulumi.Input[_builtins.str] media_type_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.bool] nat64: NAT64 on this interface - Default value: `false`
+        :param pulumi.Input[_builtins.bool] nat64: NAT64 on this interface
+                 - Default value: `false`
         :param pulumi.Input[_builtins.bool] shutdown: - Default value: `true`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
-        :param pulumi.Input[_builtins.str] speed: Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+        :param pulumi.Input[_builtins.str] speed: Set interface speed
+                 - Choices: `10`, `100`, `1000`, `2500`, `10000`
         :param pulumi.Input[_builtins.str] speed_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceEthernetFeatureStaticNatArgs']]] static_nats: static NAT
-        :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes
+                 - Range: `500`-`1460`
         :param pulumi.Input[_builtins.str] tcp_mss_variable: Variable name
         :param pulumi.Input[_builtins.str] tracker: Enable tracker for this interface
         :param pulumi.Input[_builtins.str] tracker_variable: Variable name
         :param pulumi.Input[_builtins.bool] trustsec_enable_enforced_propogation: Enable/Disable SGT Enforcement on an interface
-        :param pulumi.Input[_builtins.bool] trustsec_enable_sgt_propogation: Indicates that the interface is trustworthy for CTS - Default value: `false`
-        :param pulumi.Input[_builtins.int] trustsec_enforced_security_group_tag: SGT value between 2 and 65519 - Range: `2`-`65519`
+        :param pulumi.Input[_builtins.bool] trustsec_enable_sgt_propogation: Indicates that the interface is trustworthy for CTS
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.int] trustsec_enforced_security_group_tag: SGT value between 2 and 65519
+                 - Range: `2`-`65519`
         :param pulumi.Input[_builtins.str] trustsec_enforced_security_group_tag_variable: Variable name
-        :param pulumi.Input[_builtins.bool] trustsec_propogate: Enables the interface for CTS SGT authorization and forwarding - Default value: `true`
-        :param pulumi.Input[_builtins.int] trustsec_security_group_tag: SGT value between 2 and 65519 - Range: `2`-`65519`
+        :param pulumi.Input[_builtins.bool] trustsec_propogate: Enables the interface for CTS SGT authorization and forwarding
+                 - Default value: `true`
+        :param pulumi.Input[_builtins.int] trustsec_security_group_tag: SGT value between 2 and 65519
+                 - Range: `2`-`65519`
         :param pulumi.Input[_builtins.str] trustsec_security_group_tag_variable: Variable name
         :param pulumi.Input[_builtins.str] xconnect: Extend remote TLOC over a GRE tunnel to a local LAN interface
         :param pulumi.Input[_builtins.str] xconnect_variable: Variable name
@@ -442,7 +468,8 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="aclShapingRate")
     def acl_shaping_rate(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Shaping Rate (Kbps) - Range: `8`-`100000000`
+        Shaping Rate (Kbps)
+          - Range: `8`-`100000000`
         """
         return pulumi.get(self, "acl_shaping_rate")
 
@@ -466,7 +493,9 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="arpTimeout")
     def arp_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
+        Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+          - Range: `0`-`2147483`
+          - Default value: `1200`
         """
         return pulumi.get(self, "arp_timeout")
 
@@ -538,7 +567,8 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter
     def duplex(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Duplex mode - Choices: `full`, `half`, `auto`
+        Duplex mode
+          - Choices: `full`, `half`, `auto`
         """
         return pulumi.get(self, "duplex")
 
@@ -574,7 +604,8 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="icmpRedirectDisable")
     def icmp_redirect_disable(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        ICMP/ICMPv6 Redirect Disable - Default value: `true`
+        ICMP/ICMPv6 Redirect Disable
+          - Default value: `true`
         """
         return pulumi.get(self, "icmp_redirect_disable")
 
@@ -619,7 +650,9 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="interfaceMtu")
     def interface_mtu(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Interface MTU - Range: `1500`-`9216` - Default value: `1500`
+        Interface MTU
+          - Range: `1500`-`9216`
+          - Default value: `1500`
         """
         return pulumi.get(self, "interface_mtu")
 
@@ -664,7 +697,8 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="ipDirectedBroadcast")
     def ip_directed_broadcast(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        IP Directed-Broadcast - Default value: `false`
+        IP Directed-Broadcast
+          - Default value: `false`
         """
         return pulumi.get(self, "ip_directed_broadcast")
 
@@ -688,8 +722,9 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="ipMtu")
     def ip_mtu(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces
-        <576..2000> in bytes - Range: `576`-`9216` - Default value: `1500`
+        IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes
+          - Range: `576`-`9216`
+          - Default value: `1500`
         """
         return pulumi.get(self, "ip_mtu")
 
@@ -737,7 +772,8 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="ipv4DhcpDistance")
     def ipv4_dhcp_distance(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        DHCP Distance - Range: `1`-`65536`
+        DHCP Distance
+          - Range: `1`-`65536`
         """
         return pulumi.get(self, "ipv4_dhcp_distance")
 
@@ -785,7 +821,8 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="ipv4Nat")
     def ipv4_nat(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        enable Network Address Translation on this interface - Default value: `false`
+        enable Network Address Translation on this interface
+          - Default value: `false`
         """
         return pulumi.get(self, "ipv4_nat")
 
@@ -821,7 +858,8 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="ipv4NatOverload")
     def ipv4_nat_overload(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        NAT Overload - Default value: `true`
+        NAT Overload
+          - Default value: `true`
         """
         return pulumi.get(self, "ipv4_nat_overload")
 
@@ -845,7 +883,8 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="ipv4NatPrefixLength")
     def ipv4_nat_prefix_length(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        NAT Pool Prefix Length - Range: `1`-`32`
+        NAT Pool Prefix Length
+          - Range: `1`-`32`
         """
         return pulumi.get(self, "ipv4_nat_prefix_length")
 
@@ -917,7 +956,9 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="ipv4NatTcpTimeout")
     def ipv4_nat_tcp_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+        Set NAT TCP session timeout, in minutes
+          - Range: `1`-`8947`
+          - Default value: `60`
         """
         return pulumi.get(self, "ipv4_nat_tcp_timeout")
 
@@ -941,7 +982,8 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="ipv4NatType")
     def ipv4_nat_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        NAT Type - Choices: `pool`, `loopback`
+        NAT Type
+          - Choices: `pool`, `loopback`
         """
         return pulumi.get(self, "ipv4_nat_type")
 
@@ -965,7 +1007,9 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="ipv4NatUdpTimeout")
     def ipv4_nat_udp_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+        Set NAT UDP session timeout, in minutes
+          - Range: `1`-`8947`
+          - Default value: `1`
         """
         return pulumi.get(self, "ipv4_nat_udp_timeout")
 
@@ -1001,11 +1045,8 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="ipv4SubnetMask")
     def ipv4_subnet_mask(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        Subnet Mask
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "ipv4_subnet_mask")
 
@@ -1089,7 +1130,8 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="ipv6Nat")
     def ipv6_nat(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        enable Network Address Translation ipv6 on this interface - Default value: `false`
+        enable Network Address Translation ipv6 on this interface
+          - Default value: `false`
         """
         return pulumi.get(self, "ipv6_nat")
 
@@ -1125,7 +1167,9 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="loadInterval")
     def load_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+        Interval for interface load calculation
+          - Range: `30`-`600`
+          - Default value: `30`
         """
         return pulumi.get(self, "load_interval")
 
@@ -1173,7 +1217,8 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="mediaType")
     def media_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Media type - Choices: `auto-select`, `rj45`, `sfp`
+        Media type
+          - Choices: `auto-select`, `rj45`, `sfp`
         """
         return pulumi.get(self, "media_type")
 
@@ -1209,7 +1254,8 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter
     def nat64(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        NAT64 on this interface - Default value: `false`
+        NAT64 on this interface
+          - Default value: `false`
         """
         return pulumi.get(self, "nat64")
 
@@ -1245,7 +1291,8 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter
     def speed(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+        Set interface speed
+          - Choices: `10`, `100`, `1000`, `2500`, `10000`
         """
         return pulumi.get(self, "speed")
 
@@ -1281,7 +1328,8 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="tcpMss")
     def tcp_mss(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        TCP MSS on SYN packets, in bytes
+          - Range: `500`-`1460`
         """
         return pulumi.get(self, "tcp_mss")
 
@@ -1341,7 +1389,8 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="trustsecEnableSgtPropogation")
     def trustsec_enable_sgt_propogation(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Indicates that the interface is trustworthy for CTS - Default value: `false`
+        Indicates that the interface is trustworthy for CTS
+          - Default value: `false`
         """
         return pulumi.get(self, "trustsec_enable_sgt_propogation")
 
@@ -1353,7 +1402,8 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="trustsecEnforcedSecurityGroupTag")
     def trustsec_enforced_security_group_tag(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        SGT value between 2 and 65519 - Range: `2`-`65519`
+        SGT value between 2 and 65519
+          - Range: `2`-`65519`
         """
         return pulumi.get(self, "trustsec_enforced_security_group_tag")
 
@@ -1377,7 +1427,8 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="trustsecPropogate")
     def trustsec_propogate(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enables the interface for CTS SGT authorization and forwarding - Default value: `true`
+        Enables the interface for CTS SGT authorization and forwarding
+          - Default value: `true`
         """
         return pulumi.get(self, "trustsec_propogate")
 
@@ -1389,7 +1440,8 @@ class ServiceLanVpnInterfaceEthernetFeatureArgs:
     @pulumi.getter(name="trustsecSecurityGroupTag")
     def trustsec_security_group_tag(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        SGT value between 2 and 65519 - Range: `2`-`65519`
+        SGT value between 2 and 65519
+          - Range: `2`-`65519`
         """
         return pulumi.get(self, "trustsec_security_group_tag")
 
@@ -1529,91 +1581,117 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
                  xconnect_variable: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ServiceLanVpnInterfaceEthernetFeature resources.
-        :param pulumi.Input[_builtins.int] acl_shaping_rate: Shaping Rate (Kbps) - Range: `8`-`100000000`
+        :param pulumi.Input[_builtins.int] acl_shaping_rate: Shaping Rate (Kbps)
+                 - Range: `8`-`100000000`
         :param pulumi.Input[_builtins.str] acl_shaping_rate_variable: Variable name
-        :param pulumi.Input[_builtins.int] arp_timeout: Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
+        :param pulumi.Input[_builtins.int] arp_timeout: Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+                 - Range: `0`-`2147483`
+                 - Default value: `1200`
         :param pulumi.Input[_builtins.str] arp_timeout_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceEthernetFeatureArpArgs']]] arps: Configure ARP entries
         :param pulumi.Input[_builtins.bool] autonegotiate: Link autonegotiation
         :param pulumi.Input[_builtins.str] autonegotiate_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.str] duplex: Duplex mode - Choices: `full`, `half`, `auto`
+        :param pulumi.Input[_builtins.str] duplex: Duplex mode
+                 - Choices: `full`, `half`, `auto`
         :param pulumi.Input[_builtins.str] duplex_variable: Variable name
         :param pulumi.Input[_builtins.bool] enable_dhcpv6: Enable DHCPv6
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.bool] icmp_redirect_disable: ICMP/ICMPv6 Redirect Disable - Default value: `true`
+        :param pulumi.Input[_builtins.bool] icmp_redirect_disable: ICMP/ICMPv6 Redirect Disable
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] icmp_redirect_disable_variable: Variable name
         :param pulumi.Input[_builtins.str] interface_description_variable: Variable name
-        :param pulumi.Input[_builtins.int] interface_mtu: Interface MTU - Range: `1500`-`9216` - Default value: `1500`
+        :param pulumi.Input[_builtins.int] interface_mtu: Interface MTU
+                 - Range: `1500`-`9216`
+                 - Default value: `1500`
         :param pulumi.Input[_builtins.str] interface_mtu_variable: Variable name
         :param pulumi.Input[_builtins.str] interface_name_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ip_directed_broadcast: IP Directed-Broadcast - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ip_directed_broadcast: IP Directed-Broadcast
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ip_directed_broadcast_variable: Variable name
-        :param pulumi.Input[_builtins.int] ip_mtu: IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces
-               <576..2000> in bytes - Range: `576`-`9216` - Default value: `1500`
+        :param pulumi.Input[_builtins.int] ip_mtu: IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes
+                 - Range: `576`-`9216`
+                 - Default value: `1500`
         :param pulumi.Input[_builtins.str] ip_mtu_variable: Variable name
         :param pulumi.Input[_builtins.str] ipv4_address: IP Address
         :param pulumi.Input[_builtins.str] ipv4_address_variable: Variable name
-        :param pulumi.Input[_builtins.int] ipv4_dhcp_distance: DHCP Distance - Range: `1`-`65536`
+        :param pulumi.Input[_builtins.int] ipv4_dhcp_distance: DHCP Distance
+                 - Range: `1`-`65536`
         :param pulumi.Input[_builtins.str] ipv4_dhcp_distance_variable: Variable name
         :param pulumi.Input[_builtins.str] ipv4_dhcp_helper_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ipv4_dhcp_helpers: List of DHCP IPv4 helper addresses (min 1, max 8)
-        :param pulumi.Input[_builtins.bool] ipv4_nat: enable Network Address Translation on this interface - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ipv4_nat: enable Network Address Translation on this interface
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ipv4_nat_loopback: NAT Inside Source Loopback Interface
         :param pulumi.Input[_builtins.str] ipv4_nat_loopback_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ipv4_nat_overload: NAT Overload - Default value: `true`
+        :param pulumi.Input[_builtins.bool] ipv4_nat_overload: NAT Overload
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] ipv4_nat_overload_variable: Variable name
-        :param pulumi.Input[_builtins.int] ipv4_nat_prefix_length: NAT Pool Prefix Length - Range: `1`-`32`
+        :param pulumi.Input[_builtins.int] ipv4_nat_prefix_length: NAT Pool Prefix Length
+                 - Range: `1`-`32`
         :param pulumi.Input[_builtins.str] ipv4_nat_prefix_length_variable: Variable name
         :param pulumi.Input[_builtins.str] ipv4_nat_range_end: NAT Pool Range End
         :param pulumi.Input[_builtins.str] ipv4_nat_range_end_variable: Variable name
         :param pulumi.Input[_builtins.str] ipv4_nat_range_start: NAT Pool Range Start
         :param pulumi.Input[_builtins.str] ipv4_nat_range_start_variable: Variable name
-        :param pulumi.Input[_builtins.int] ipv4_nat_tcp_timeout: Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+        :param pulumi.Input[_builtins.int] ipv4_nat_tcp_timeout: Set NAT TCP session timeout, in minutes
+                 - Range: `1`-`8947`
+                 - Default value: `60`
         :param pulumi.Input[_builtins.str] ipv4_nat_tcp_timeout_variable: Variable name
-        :param pulumi.Input[_builtins.str] ipv4_nat_type: NAT Type - Choices: `pool`, `loopback`
+        :param pulumi.Input[_builtins.str] ipv4_nat_type: NAT Type
+                 - Choices: `pool`, `loopback`
         :param pulumi.Input[_builtins.str] ipv4_nat_type_variable: Variable name
-        :param pulumi.Input[_builtins.int] ipv4_nat_udp_timeout: Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+        :param pulumi.Input[_builtins.int] ipv4_nat_udp_timeout: Set NAT UDP session timeout, in minutes
+                 - Range: `1`-`8947`
+                 - Default value: `1`
         :param pulumi.Input[_builtins.str] ipv4_nat_udp_timeout_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs']]] ipv4_secondary_addresses: Secondary IpV4 Addresses
-        :param pulumi.Input[_builtins.str] ipv4_subnet_mask: Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-               `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-               `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-               `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-               `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[_builtins.str] ipv4_subnet_mask: Subnet Mask
+                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] ipv4_subnet_mask_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArgs']]] ipv4_vrrps: Enable VRRP
         :param pulumi.Input[_builtins.str] ipv6_address: IPv6 Address Secondary
         :param pulumi.Input[_builtins.str] ipv6_address_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperArgs']]] ipv6_dhcp_helpers: DHCPv6 Helper
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs']]] ipv6_dhcp_secondary_addresses: secondary IPv6 addresses
-        :param pulumi.Input[_builtins.bool] ipv6_nat: enable Network Address Translation ipv6 on this interface - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ipv6_nat: enable Network Address Translation ipv6 on this interface
+                 - Default value: `false`
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs']]] ipv6_secondary_addresses: Static secondary IPv6 addresses
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArgs']]] ipv6_vrrps: Enable VRRP Ipv6
-        :param pulumi.Input[_builtins.int] load_interval: Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+        :param pulumi.Input[_builtins.int] load_interval: Interval for interface load calculation
+                 - Range: `30`-`600`
+                 - Default value: `30`
         :param pulumi.Input[_builtins.str] load_interval_variable: Variable name
         :param pulumi.Input[_builtins.str] mac_address: MAC Address
         :param pulumi.Input[_builtins.str] mac_address_variable: Variable name
-        :param pulumi.Input[_builtins.str] media_type: Media type - Choices: `auto-select`, `rj45`, `sfp`
+        :param pulumi.Input[_builtins.str] media_type: Media type
+                 - Choices: `auto-select`, `rj45`, `sfp`
         :param pulumi.Input[_builtins.str] media_type_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.bool] nat64: NAT64 on this interface - Default value: `false`
+        :param pulumi.Input[_builtins.bool] nat64: NAT64 on this interface
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] service_lan_vpn_feature_id: Service LAN VPN Feature ID
         :param pulumi.Input[_builtins.bool] shutdown: - Default value: `true`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
-        :param pulumi.Input[_builtins.str] speed: Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+        :param pulumi.Input[_builtins.str] speed: Set interface speed
+                 - Choices: `10`, `100`, `1000`, `2500`, `10000`
         :param pulumi.Input[_builtins.str] speed_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnInterfaceEthernetFeatureStaticNatArgs']]] static_nats: static NAT
-        :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes
+                 - Range: `500`-`1460`
         :param pulumi.Input[_builtins.str] tcp_mss_variable: Variable name
         :param pulumi.Input[_builtins.str] tracker: Enable tracker for this interface
         :param pulumi.Input[_builtins.str] tracker_variable: Variable name
         :param pulumi.Input[_builtins.bool] trustsec_enable_enforced_propogation: Enable/Disable SGT Enforcement on an interface
-        :param pulumi.Input[_builtins.bool] trustsec_enable_sgt_propogation: Indicates that the interface is trustworthy for CTS - Default value: `false`
-        :param pulumi.Input[_builtins.int] trustsec_enforced_security_group_tag: SGT value between 2 and 65519 - Range: `2`-`65519`
+        :param pulumi.Input[_builtins.bool] trustsec_enable_sgt_propogation: Indicates that the interface is trustworthy for CTS
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.int] trustsec_enforced_security_group_tag: SGT value between 2 and 65519
+                 - Range: `2`-`65519`
         :param pulumi.Input[_builtins.str] trustsec_enforced_security_group_tag_variable: Variable name
-        :param pulumi.Input[_builtins.bool] trustsec_propogate: Enables the interface for CTS SGT authorization and forwarding - Default value: `true`
-        :param pulumi.Input[_builtins.int] trustsec_security_group_tag: SGT value between 2 and 65519 - Range: `2`-`65519`
+        :param pulumi.Input[_builtins.bool] trustsec_propogate: Enables the interface for CTS SGT authorization and forwarding
+                 - Default value: `true`
+        :param pulumi.Input[_builtins.int] trustsec_security_group_tag: SGT value between 2 and 65519
+                 - Range: `2`-`65519`
         :param pulumi.Input[_builtins.str] trustsec_security_group_tag_variable: Variable name
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         :param pulumi.Input[_builtins.str] xconnect: Extend remote TLOC over a GRE tunnel to a local LAN interface
@@ -1840,7 +1918,8 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="aclShapingRate")
     def acl_shaping_rate(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Shaping Rate (Kbps) - Range: `8`-`100000000`
+        Shaping Rate (Kbps)
+          - Range: `8`-`100000000`
         """
         return pulumi.get(self, "acl_shaping_rate")
 
@@ -1864,7 +1943,9 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="arpTimeout")
     def arp_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
+        Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+          - Range: `0`-`2147483`
+          - Default value: `1200`
         """
         return pulumi.get(self, "arp_timeout")
 
@@ -1936,7 +2017,8 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     @pulumi.getter
     def duplex(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Duplex mode - Choices: `full`, `half`, `auto`
+        Duplex mode
+          - Choices: `full`, `half`, `auto`
         """
         return pulumi.get(self, "duplex")
 
@@ -1984,7 +2066,8 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="icmpRedirectDisable")
     def icmp_redirect_disable(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        ICMP/ICMPv6 Redirect Disable - Default value: `true`
+        ICMP/ICMPv6 Redirect Disable
+          - Default value: `true`
         """
         return pulumi.get(self, "icmp_redirect_disable")
 
@@ -2029,7 +2112,9 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="interfaceMtu")
     def interface_mtu(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Interface MTU - Range: `1500`-`9216` - Default value: `1500`
+        Interface MTU
+          - Range: `1500`-`9216`
+          - Default value: `1500`
         """
         return pulumi.get(self, "interface_mtu")
 
@@ -2074,7 +2159,8 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="ipDirectedBroadcast")
     def ip_directed_broadcast(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        IP Directed-Broadcast - Default value: `false`
+        IP Directed-Broadcast
+          - Default value: `false`
         """
         return pulumi.get(self, "ip_directed_broadcast")
 
@@ -2098,8 +2184,9 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="ipMtu")
     def ip_mtu(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces
-        <576..2000> in bytes - Range: `576`-`9216` - Default value: `1500`
+        IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes
+          - Range: `576`-`9216`
+          - Default value: `1500`
         """
         return pulumi.get(self, "ip_mtu")
 
@@ -2147,7 +2234,8 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="ipv4DhcpDistance")
     def ipv4_dhcp_distance(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        DHCP Distance - Range: `1`-`65536`
+        DHCP Distance
+          - Range: `1`-`65536`
         """
         return pulumi.get(self, "ipv4_dhcp_distance")
 
@@ -2195,7 +2283,8 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="ipv4Nat")
     def ipv4_nat(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        enable Network Address Translation on this interface - Default value: `false`
+        enable Network Address Translation on this interface
+          - Default value: `false`
         """
         return pulumi.get(self, "ipv4_nat")
 
@@ -2231,7 +2320,8 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="ipv4NatOverload")
     def ipv4_nat_overload(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        NAT Overload - Default value: `true`
+        NAT Overload
+          - Default value: `true`
         """
         return pulumi.get(self, "ipv4_nat_overload")
 
@@ -2255,7 +2345,8 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="ipv4NatPrefixLength")
     def ipv4_nat_prefix_length(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        NAT Pool Prefix Length - Range: `1`-`32`
+        NAT Pool Prefix Length
+          - Range: `1`-`32`
         """
         return pulumi.get(self, "ipv4_nat_prefix_length")
 
@@ -2327,7 +2418,9 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="ipv4NatTcpTimeout")
     def ipv4_nat_tcp_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+        Set NAT TCP session timeout, in minutes
+          - Range: `1`-`8947`
+          - Default value: `60`
         """
         return pulumi.get(self, "ipv4_nat_tcp_timeout")
 
@@ -2351,7 +2444,8 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="ipv4NatType")
     def ipv4_nat_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        NAT Type - Choices: `pool`, `loopback`
+        NAT Type
+          - Choices: `pool`, `loopback`
         """
         return pulumi.get(self, "ipv4_nat_type")
 
@@ -2375,7 +2469,9 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="ipv4NatUdpTimeout")
     def ipv4_nat_udp_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+        Set NAT UDP session timeout, in minutes
+          - Range: `1`-`8947`
+          - Default value: `1`
         """
         return pulumi.get(self, "ipv4_nat_udp_timeout")
 
@@ -2411,11 +2507,8 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="ipv4SubnetMask")
     def ipv4_subnet_mask(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        Subnet Mask
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "ipv4_subnet_mask")
 
@@ -2499,7 +2592,8 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="ipv6Nat")
     def ipv6_nat(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        enable Network Address Translation ipv6 on this interface - Default value: `false`
+        enable Network Address Translation ipv6 on this interface
+          - Default value: `false`
         """
         return pulumi.get(self, "ipv6_nat")
 
@@ -2535,7 +2629,9 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="loadInterval")
     def load_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+        Interval for interface load calculation
+          - Range: `30`-`600`
+          - Default value: `30`
         """
         return pulumi.get(self, "load_interval")
 
@@ -2583,7 +2679,8 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="mediaType")
     def media_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Media type - Choices: `auto-select`, `rj45`, `sfp`
+        Media type
+          - Choices: `auto-select`, `rj45`, `sfp`
         """
         return pulumi.get(self, "media_type")
 
@@ -2619,7 +2716,8 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     @pulumi.getter
     def nat64(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        NAT64 on this interface - Default value: `false`
+        NAT64 on this interface
+          - Default value: `false`
         """
         return pulumi.get(self, "nat64")
 
@@ -2667,7 +2765,8 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     @pulumi.getter
     def speed(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+        Set interface speed
+          - Choices: `10`, `100`, `1000`, `2500`, `10000`
         """
         return pulumi.get(self, "speed")
 
@@ -2703,7 +2802,8 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="tcpMss")
     def tcp_mss(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        TCP MSS on SYN packets, in bytes
+          - Range: `500`-`1460`
         """
         return pulumi.get(self, "tcp_mss")
 
@@ -2763,7 +2863,8 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="trustsecEnableSgtPropogation")
     def trustsec_enable_sgt_propogation(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Indicates that the interface is trustworthy for CTS - Default value: `false`
+        Indicates that the interface is trustworthy for CTS
+          - Default value: `false`
         """
         return pulumi.get(self, "trustsec_enable_sgt_propogation")
 
@@ -2775,7 +2876,8 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="trustsecEnforcedSecurityGroupTag")
     def trustsec_enforced_security_group_tag(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        SGT value between 2 and 65519 - Range: `2`-`65519`
+        SGT value between 2 and 65519
+          - Range: `2`-`65519`
         """
         return pulumi.get(self, "trustsec_enforced_security_group_tag")
 
@@ -2799,7 +2901,8 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="trustsecPropogate")
     def trustsec_propogate(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enables the interface for CTS SGT authorization and forwarding - Default value: `true`
+        Enables the interface for CTS SGT authorization and forwarding
+          - Default value: `true`
         """
         return pulumi.get(self, "trustsec_propogate")
 
@@ -2811,7 +2914,8 @@ class _ServiceLanVpnInterfaceEthernetFeatureState:
     @pulumi.getter(name="trustsecSecurityGroupTag")
     def trustsec_security_group_tag(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        SGT value between 2 and 65519 - Range: `2`-`65519`
+        SGT value between 2 and 65519
+          - Range: `2`-`65519`
         """
         return pulumi.get(self, "trustsec_security_group_tag")
 
@@ -2980,91 +3084,117 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.int] acl_shaping_rate: Shaping Rate (Kbps) - Range: `8`-`100000000`
+        :param pulumi.Input[_builtins.int] acl_shaping_rate: Shaping Rate (Kbps)
+                 - Range: `8`-`100000000`
         :param pulumi.Input[_builtins.str] acl_shaping_rate_variable: Variable name
-        :param pulumi.Input[_builtins.int] arp_timeout: Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
+        :param pulumi.Input[_builtins.int] arp_timeout: Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+                 - Range: `0`-`2147483`
+                 - Default value: `1200`
         :param pulumi.Input[_builtins.str] arp_timeout_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetFeatureArpArgs', 'ServiceLanVpnInterfaceEthernetFeatureArpArgsDict']]]] arps: Configure ARP entries
         :param pulumi.Input[_builtins.bool] autonegotiate: Link autonegotiation
         :param pulumi.Input[_builtins.str] autonegotiate_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.str] duplex: Duplex mode - Choices: `full`, `half`, `auto`
+        :param pulumi.Input[_builtins.str] duplex: Duplex mode
+                 - Choices: `full`, `half`, `auto`
         :param pulumi.Input[_builtins.str] duplex_variable: Variable name
         :param pulumi.Input[_builtins.bool] enable_dhcpv6: Enable DHCPv6
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.bool] icmp_redirect_disable: ICMP/ICMPv6 Redirect Disable - Default value: `true`
+        :param pulumi.Input[_builtins.bool] icmp_redirect_disable: ICMP/ICMPv6 Redirect Disable
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] icmp_redirect_disable_variable: Variable name
         :param pulumi.Input[_builtins.str] interface_description_variable: Variable name
-        :param pulumi.Input[_builtins.int] interface_mtu: Interface MTU - Range: `1500`-`9216` - Default value: `1500`
+        :param pulumi.Input[_builtins.int] interface_mtu: Interface MTU
+                 - Range: `1500`-`9216`
+                 - Default value: `1500`
         :param pulumi.Input[_builtins.str] interface_mtu_variable: Variable name
         :param pulumi.Input[_builtins.str] interface_name_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ip_directed_broadcast: IP Directed-Broadcast - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ip_directed_broadcast: IP Directed-Broadcast
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ip_directed_broadcast_variable: Variable name
-        :param pulumi.Input[_builtins.int] ip_mtu: IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces
-               <576..2000> in bytes - Range: `576`-`9216` - Default value: `1500`
+        :param pulumi.Input[_builtins.int] ip_mtu: IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes
+                 - Range: `576`-`9216`
+                 - Default value: `1500`
         :param pulumi.Input[_builtins.str] ip_mtu_variable: Variable name
         :param pulumi.Input[_builtins.str] ipv4_address: IP Address
         :param pulumi.Input[_builtins.str] ipv4_address_variable: Variable name
-        :param pulumi.Input[_builtins.int] ipv4_dhcp_distance: DHCP Distance - Range: `1`-`65536`
+        :param pulumi.Input[_builtins.int] ipv4_dhcp_distance: DHCP Distance
+                 - Range: `1`-`65536`
         :param pulumi.Input[_builtins.str] ipv4_dhcp_distance_variable: Variable name
         :param pulumi.Input[_builtins.str] ipv4_dhcp_helper_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ipv4_dhcp_helpers: List of DHCP IPv4 helper addresses (min 1, max 8)
-        :param pulumi.Input[_builtins.bool] ipv4_nat: enable Network Address Translation on this interface - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ipv4_nat: enable Network Address Translation on this interface
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ipv4_nat_loopback: NAT Inside Source Loopback Interface
         :param pulumi.Input[_builtins.str] ipv4_nat_loopback_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ipv4_nat_overload: NAT Overload - Default value: `true`
+        :param pulumi.Input[_builtins.bool] ipv4_nat_overload: NAT Overload
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] ipv4_nat_overload_variable: Variable name
-        :param pulumi.Input[_builtins.int] ipv4_nat_prefix_length: NAT Pool Prefix Length - Range: `1`-`32`
+        :param pulumi.Input[_builtins.int] ipv4_nat_prefix_length: NAT Pool Prefix Length
+                 - Range: `1`-`32`
         :param pulumi.Input[_builtins.str] ipv4_nat_prefix_length_variable: Variable name
         :param pulumi.Input[_builtins.str] ipv4_nat_range_end: NAT Pool Range End
         :param pulumi.Input[_builtins.str] ipv4_nat_range_end_variable: Variable name
         :param pulumi.Input[_builtins.str] ipv4_nat_range_start: NAT Pool Range Start
         :param pulumi.Input[_builtins.str] ipv4_nat_range_start_variable: Variable name
-        :param pulumi.Input[_builtins.int] ipv4_nat_tcp_timeout: Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+        :param pulumi.Input[_builtins.int] ipv4_nat_tcp_timeout: Set NAT TCP session timeout, in minutes
+                 - Range: `1`-`8947`
+                 - Default value: `60`
         :param pulumi.Input[_builtins.str] ipv4_nat_tcp_timeout_variable: Variable name
-        :param pulumi.Input[_builtins.str] ipv4_nat_type: NAT Type - Choices: `pool`, `loopback`
+        :param pulumi.Input[_builtins.str] ipv4_nat_type: NAT Type
+                 - Choices: `pool`, `loopback`
         :param pulumi.Input[_builtins.str] ipv4_nat_type_variable: Variable name
-        :param pulumi.Input[_builtins.int] ipv4_nat_udp_timeout: Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+        :param pulumi.Input[_builtins.int] ipv4_nat_udp_timeout: Set NAT UDP session timeout, in minutes
+                 - Range: `1`-`8947`
+                 - Default value: `1`
         :param pulumi.Input[_builtins.str] ipv4_nat_udp_timeout_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs', 'ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgsDict']]]] ipv4_secondary_addresses: Secondary IpV4 Addresses
-        :param pulumi.Input[_builtins.str] ipv4_subnet_mask: Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-               `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-               `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-               `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-               `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[_builtins.str] ipv4_subnet_mask: Subnet Mask
+                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] ipv4_subnet_mask_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArgs', 'ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArgsDict']]]] ipv4_vrrps: Enable VRRP
         :param pulumi.Input[_builtins.str] ipv6_address: IPv6 Address Secondary
         :param pulumi.Input[_builtins.str] ipv6_address_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperArgs', 'ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperArgsDict']]]] ipv6_dhcp_helpers: DHCPv6 Helper
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs', 'ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgsDict']]]] ipv6_dhcp_secondary_addresses: secondary IPv6 addresses
-        :param pulumi.Input[_builtins.bool] ipv6_nat: enable Network Address Translation ipv6 on this interface - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ipv6_nat: enable Network Address Translation ipv6 on this interface
+                 - Default value: `false`
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs', 'ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgsDict']]]] ipv6_secondary_addresses: Static secondary IPv6 addresses
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArgs', 'ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArgsDict']]]] ipv6_vrrps: Enable VRRP Ipv6
-        :param pulumi.Input[_builtins.int] load_interval: Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+        :param pulumi.Input[_builtins.int] load_interval: Interval for interface load calculation
+                 - Range: `30`-`600`
+                 - Default value: `30`
         :param pulumi.Input[_builtins.str] load_interval_variable: Variable name
         :param pulumi.Input[_builtins.str] mac_address: MAC Address
         :param pulumi.Input[_builtins.str] mac_address_variable: Variable name
-        :param pulumi.Input[_builtins.str] media_type: Media type - Choices: `auto-select`, `rj45`, `sfp`
+        :param pulumi.Input[_builtins.str] media_type: Media type
+                 - Choices: `auto-select`, `rj45`, `sfp`
         :param pulumi.Input[_builtins.str] media_type_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.bool] nat64: NAT64 on this interface - Default value: `false`
+        :param pulumi.Input[_builtins.bool] nat64: NAT64 on this interface
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] service_lan_vpn_feature_id: Service LAN VPN Feature ID
         :param pulumi.Input[_builtins.bool] shutdown: - Default value: `true`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
-        :param pulumi.Input[_builtins.str] speed: Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+        :param pulumi.Input[_builtins.str] speed: Set interface speed
+                 - Choices: `10`, `100`, `1000`, `2500`, `10000`
         :param pulumi.Input[_builtins.str] speed_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetFeatureStaticNatArgs', 'ServiceLanVpnInterfaceEthernetFeatureStaticNatArgsDict']]]] static_nats: static NAT
-        :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes
+                 - Range: `500`-`1460`
         :param pulumi.Input[_builtins.str] tcp_mss_variable: Variable name
         :param pulumi.Input[_builtins.str] tracker: Enable tracker for this interface
         :param pulumi.Input[_builtins.str] tracker_variable: Variable name
         :param pulumi.Input[_builtins.bool] trustsec_enable_enforced_propogation: Enable/Disable SGT Enforcement on an interface
-        :param pulumi.Input[_builtins.bool] trustsec_enable_sgt_propogation: Indicates that the interface is trustworthy for CTS - Default value: `false`
-        :param pulumi.Input[_builtins.int] trustsec_enforced_security_group_tag: SGT value between 2 and 65519 - Range: `2`-`65519`
+        :param pulumi.Input[_builtins.bool] trustsec_enable_sgt_propogation: Indicates that the interface is trustworthy for CTS
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.int] trustsec_enforced_security_group_tag: SGT value between 2 and 65519
+                 - Range: `2`-`65519`
         :param pulumi.Input[_builtins.str] trustsec_enforced_security_group_tag_variable: Variable name
-        :param pulumi.Input[_builtins.bool] trustsec_propogate: Enables the interface for CTS SGT authorization and forwarding - Default value: `true`
-        :param pulumi.Input[_builtins.int] trustsec_security_group_tag: SGT value between 2 and 65519 - Range: `2`-`65519`
+        :param pulumi.Input[_builtins.bool] trustsec_propogate: Enables the interface for CTS SGT authorization and forwarding
+                 - Default value: `true`
+        :param pulumi.Input[_builtins.int] trustsec_security_group_tag: SGT value between 2 and 65519
+                 - Range: `2`-`65519`
         :param pulumi.Input[_builtins.str] trustsec_security_group_tag_variable: Variable name
         :param pulumi.Input[_builtins.str] xconnect: Extend remote TLOC over a GRE tunnel to a local LAN interface
         :param pulumi.Input[_builtins.str] xconnect_variable: Variable name
@@ -3403,91 +3533,117 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.int] acl_shaping_rate: Shaping Rate (Kbps) - Range: `8`-`100000000`
+        :param pulumi.Input[_builtins.int] acl_shaping_rate: Shaping Rate (Kbps)
+                 - Range: `8`-`100000000`
         :param pulumi.Input[_builtins.str] acl_shaping_rate_variable: Variable name
-        :param pulumi.Input[_builtins.int] arp_timeout: Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
+        :param pulumi.Input[_builtins.int] arp_timeout: Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+                 - Range: `0`-`2147483`
+                 - Default value: `1200`
         :param pulumi.Input[_builtins.str] arp_timeout_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetFeatureArpArgs', 'ServiceLanVpnInterfaceEthernetFeatureArpArgsDict']]]] arps: Configure ARP entries
         :param pulumi.Input[_builtins.bool] autonegotiate: Link autonegotiation
         :param pulumi.Input[_builtins.str] autonegotiate_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.str] duplex: Duplex mode - Choices: `full`, `half`, `auto`
+        :param pulumi.Input[_builtins.str] duplex: Duplex mode
+                 - Choices: `full`, `half`, `auto`
         :param pulumi.Input[_builtins.str] duplex_variable: Variable name
         :param pulumi.Input[_builtins.bool] enable_dhcpv6: Enable DHCPv6
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.bool] icmp_redirect_disable: ICMP/ICMPv6 Redirect Disable - Default value: `true`
+        :param pulumi.Input[_builtins.bool] icmp_redirect_disable: ICMP/ICMPv6 Redirect Disable
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] icmp_redirect_disable_variable: Variable name
         :param pulumi.Input[_builtins.str] interface_description_variable: Variable name
-        :param pulumi.Input[_builtins.int] interface_mtu: Interface MTU - Range: `1500`-`9216` - Default value: `1500`
+        :param pulumi.Input[_builtins.int] interface_mtu: Interface MTU
+                 - Range: `1500`-`9216`
+                 - Default value: `1500`
         :param pulumi.Input[_builtins.str] interface_mtu_variable: Variable name
         :param pulumi.Input[_builtins.str] interface_name_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ip_directed_broadcast: IP Directed-Broadcast - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ip_directed_broadcast: IP Directed-Broadcast
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ip_directed_broadcast_variable: Variable name
-        :param pulumi.Input[_builtins.int] ip_mtu: IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces
-               <576..2000> in bytes - Range: `576`-`9216` - Default value: `1500`
+        :param pulumi.Input[_builtins.int] ip_mtu: IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes
+                 - Range: `576`-`9216`
+                 - Default value: `1500`
         :param pulumi.Input[_builtins.str] ip_mtu_variable: Variable name
         :param pulumi.Input[_builtins.str] ipv4_address: IP Address
         :param pulumi.Input[_builtins.str] ipv4_address_variable: Variable name
-        :param pulumi.Input[_builtins.int] ipv4_dhcp_distance: DHCP Distance - Range: `1`-`65536`
+        :param pulumi.Input[_builtins.int] ipv4_dhcp_distance: DHCP Distance
+                 - Range: `1`-`65536`
         :param pulumi.Input[_builtins.str] ipv4_dhcp_distance_variable: Variable name
         :param pulumi.Input[_builtins.str] ipv4_dhcp_helper_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ipv4_dhcp_helpers: List of DHCP IPv4 helper addresses (min 1, max 8)
-        :param pulumi.Input[_builtins.bool] ipv4_nat: enable Network Address Translation on this interface - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ipv4_nat: enable Network Address Translation on this interface
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ipv4_nat_loopback: NAT Inside Source Loopback Interface
         :param pulumi.Input[_builtins.str] ipv4_nat_loopback_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ipv4_nat_overload: NAT Overload - Default value: `true`
+        :param pulumi.Input[_builtins.bool] ipv4_nat_overload: NAT Overload
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] ipv4_nat_overload_variable: Variable name
-        :param pulumi.Input[_builtins.int] ipv4_nat_prefix_length: NAT Pool Prefix Length - Range: `1`-`32`
+        :param pulumi.Input[_builtins.int] ipv4_nat_prefix_length: NAT Pool Prefix Length
+                 - Range: `1`-`32`
         :param pulumi.Input[_builtins.str] ipv4_nat_prefix_length_variable: Variable name
         :param pulumi.Input[_builtins.str] ipv4_nat_range_end: NAT Pool Range End
         :param pulumi.Input[_builtins.str] ipv4_nat_range_end_variable: Variable name
         :param pulumi.Input[_builtins.str] ipv4_nat_range_start: NAT Pool Range Start
         :param pulumi.Input[_builtins.str] ipv4_nat_range_start_variable: Variable name
-        :param pulumi.Input[_builtins.int] ipv4_nat_tcp_timeout: Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+        :param pulumi.Input[_builtins.int] ipv4_nat_tcp_timeout: Set NAT TCP session timeout, in minutes
+                 - Range: `1`-`8947`
+                 - Default value: `60`
         :param pulumi.Input[_builtins.str] ipv4_nat_tcp_timeout_variable: Variable name
-        :param pulumi.Input[_builtins.str] ipv4_nat_type: NAT Type - Choices: `pool`, `loopback`
+        :param pulumi.Input[_builtins.str] ipv4_nat_type: NAT Type
+                 - Choices: `pool`, `loopback`
         :param pulumi.Input[_builtins.str] ipv4_nat_type_variable: Variable name
-        :param pulumi.Input[_builtins.int] ipv4_nat_udp_timeout: Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+        :param pulumi.Input[_builtins.int] ipv4_nat_udp_timeout: Set NAT UDP session timeout, in minutes
+                 - Range: `1`-`8947`
+                 - Default value: `1`
         :param pulumi.Input[_builtins.str] ipv4_nat_udp_timeout_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs', 'ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgsDict']]]] ipv4_secondary_addresses: Secondary IpV4 Addresses
-        :param pulumi.Input[_builtins.str] ipv4_subnet_mask: Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-               `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-               `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-               `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-               `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[_builtins.str] ipv4_subnet_mask: Subnet Mask
+                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] ipv4_subnet_mask_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArgs', 'ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArgsDict']]]] ipv4_vrrps: Enable VRRP
         :param pulumi.Input[_builtins.str] ipv6_address: IPv6 Address Secondary
         :param pulumi.Input[_builtins.str] ipv6_address_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperArgs', 'ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperArgsDict']]]] ipv6_dhcp_helpers: DHCPv6 Helper
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs', 'ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgsDict']]]] ipv6_dhcp_secondary_addresses: secondary IPv6 addresses
-        :param pulumi.Input[_builtins.bool] ipv6_nat: enable Network Address Translation ipv6 on this interface - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ipv6_nat: enable Network Address Translation ipv6 on this interface
+                 - Default value: `false`
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs', 'ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgsDict']]]] ipv6_secondary_addresses: Static secondary IPv6 addresses
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArgs', 'ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArgsDict']]]] ipv6_vrrps: Enable VRRP Ipv6
-        :param pulumi.Input[_builtins.int] load_interval: Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+        :param pulumi.Input[_builtins.int] load_interval: Interval for interface load calculation
+                 - Range: `30`-`600`
+                 - Default value: `30`
         :param pulumi.Input[_builtins.str] load_interval_variable: Variable name
         :param pulumi.Input[_builtins.str] mac_address: MAC Address
         :param pulumi.Input[_builtins.str] mac_address_variable: Variable name
-        :param pulumi.Input[_builtins.str] media_type: Media type - Choices: `auto-select`, `rj45`, `sfp`
+        :param pulumi.Input[_builtins.str] media_type: Media type
+                 - Choices: `auto-select`, `rj45`, `sfp`
         :param pulumi.Input[_builtins.str] media_type_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.bool] nat64: NAT64 on this interface - Default value: `false`
+        :param pulumi.Input[_builtins.bool] nat64: NAT64 on this interface
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] service_lan_vpn_feature_id: Service LAN VPN Feature ID
         :param pulumi.Input[_builtins.bool] shutdown: - Default value: `true`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
-        :param pulumi.Input[_builtins.str] speed: Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+        :param pulumi.Input[_builtins.str] speed: Set interface speed
+                 - Choices: `10`, `100`, `1000`, `2500`, `10000`
         :param pulumi.Input[_builtins.str] speed_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnInterfaceEthernetFeatureStaticNatArgs', 'ServiceLanVpnInterfaceEthernetFeatureStaticNatArgsDict']]]] static_nats: static NAT
-        :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes
+                 - Range: `500`-`1460`
         :param pulumi.Input[_builtins.str] tcp_mss_variable: Variable name
         :param pulumi.Input[_builtins.str] tracker: Enable tracker for this interface
         :param pulumi.Input[_builtins.str] tracker_variable: Variable name
         :param pulumi.Input[_builtins.bool] trustsec_enable_enforced_propogation: Enable/Disable SGT Enforcement on an interface
-        :param pulumi.Input[_builtins.bool] trustsec_enable_sgt_propogation: Indicates that the interface is trustworthy for CTS - Default value: `false`
-        :param pulumi.Input[_builtins.int] trustsec_enforced_security_group_tag: SGT value between 2 and 65519 - Range: `2`-`65519`
+        :param pulumi.Input[_builtins.bool] trustsec_enable_sgt_propogation: Indicates that the interface is trustworthy for CTS
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.int] trustsec_enforced_security_group_tag: SGT value between 2 and 65519
+                 - Range: `2`-`65519`
         :param pulumi.Input[_builtins.str] trustsec_enforced_security_group_tag_variable: Variable name
-        :param pulumi.Input[_builtins.bool] trustsec_propogate: Enables the interface for CTS SGT authorization and forwarding - Default value: `true`
-        :param pulumi.Input[_builtins.int] trustsec_security_group_tag: SGT value between 2 and 65519 - Range: `2`-`65519`
+        :param pulumi.Input[_builtins.bool] trustsec_propogate: Enables the interface for CTS SGT authorization and forwarding
+                 - Default value: `true`
+        :param pulumi.Input[_builtins.int] trustsec_security_group_tag: SGT value between 2 and 65519
+                 - Range: `2`-`65519`
         :param pulumi.Input[_builtins.str] trustsec_security_group_tag_variable: Variable name
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         :param pulumi.Input[_builtins.str] xconnect: Extend remote TLOC over a GRE tunnel to a local LAN interface
@@ -3613,7 +3769,8 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="aclShapingRate")
     def acl_shaping_rate(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Shaping Rate (Kbps) - Range: `8`-`100000000`
+        Shaping Rate (Kbps)
+          - Range: `8`-`100000000`
         """
         return pulumi.get(self, "acl_shaping_rate")
 
@@ -3629,7 +3786,9 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="arpTimeout")
     def arp_timeout(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
+        Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+          - Range: `0`-`2147483`
+          - Default value: `1200`
         """
         return pulumi.get(self, "arp_timeout")
 
@@ -3677,7 +3836,8 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter
     def duplex(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Duplex mode - Choices: `full`, `half`, `auto`
+        Duplex mode
+          - Choices: `full`, `half`, `auto`
         """
         return pulumi.get(self, "duplex")
 
@@ -3709,7 +3869,8 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="icmpRedirectDisable")
     def icmp_redirect_disable(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        ICMP/ICMPv6 Redirect Disable - Default value: `true`
+        ICMP/ICMPv6 Redirect Disable
+          - Default value: `true`
         """
         return pulumi.get(self, "icmp_redirect_disable")
 
@@ -3738,7 +3899,9 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="interfaceMtu")
     def interface_mtu(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Interface MTU - Range: `1500`-`9216` - Default value: `1500`
+        Interface MTU
+          - Range: `1500`-`9216`
+          - Default value: `1500`
         """
         return pulumi.get(self, "interface_mtu")
 
@@ -3767,7 +3930,8 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipDirectedBroadcast")
     def ip_directed_broadcast(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        IP Directed-Broadcast - Default value: `false`
+        IP Directed-Broadcast
+          - Default value: `false`
         """
         return pulumi.get(self, "ip_directed_broadcast")
 
@@ -3783,8 +3947,9 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipMtu")
     def ip_mtu(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces
-        <576..2000> in bytes - Range: `576`-`9216` - Default value: `1500`
+        IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes
+          - Range: `576`-`9216`
+          - Default value: `1500`
         """
         return pulumi.get(self, "ip_mtu")
 
@@ -3816,7 +3981,8 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipv4DhcpDistance")
     def ipv4_dhcp_distance(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        DHCP Distance - Range: `1`-`65536`
+        DHCP Distance
+          - Range: `1`-`65536`
         """
         return pulumi.get(self, "ipv4_dhcp_distance")
 
@@ -3848,7 +4014,8 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipv4Nat")
     def ipv4_nat(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        enable Network Address Translation on this interface - Default value: `false`
+        enable Network Address Translation on this interface
+          - Default value: `false`
         """
         return pulumi.get(self, "ipv4_nat")
 
@@ -3872,7 +4039,8 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipv4NatOverload")
     def ipv4_nat_overload(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        NAT Overload - Default value: `true`
+        NAT Overload
+          - Default value: `true`
         """
         return pulumi.get(self, "ipv4_nat_overload")
 
@@ -3888,7 +4056,8 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipv4NatPrefixLength")
     def ipv4_nat_prefix_length(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        NAT Pool Prefix Length - Range: `1`-`32`
+        NAT Pool Prefix Length
+          - Range: `1`-`32`
         """
         return pulumi.get(self, "ipv4_nat_prefix_length")
 
@@ -3936,7 +4105,9 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipv4NatTcpTimeout")
     def ipv4_nat_tcp_timeout(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+        Set NAT TCP session timeout, in minutes
+          - Range: `1`-`8947`
+          - Default value: `60`
         """
         return pulumi.get(self, "ipv4_nat_tcp_timeout")
 
@@ -3952,7 +4123,8 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipv4NatType")
     def ipv4_nat_type(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        NAT Type - Choices: `pool`, `loopback`
+        NAT Type
+          - Choices: `pool`, `loopback`
         """
         return pulumi.get(self, "ipv4_nat_type")
 
@@ -3968,7 +4140,9 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipv4NatUdpTimeout")
     def ipv4_nat_udp_timeout(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+        Set NAT UDP session timeout, in minutes
+          - Range: `1`-`8947`
+          - Default value: `1`
         """
         return pulumi.get(self, "ipv4_nat_udp_timeout")
 
@@ -3992,11 +4166,8 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipv4SubnetMask")
     def ipv4_subnet_mask(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        Subnet Mask
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "ipv4_subnet_mask")
 
@@ -4052,7 +4223,8 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipv6Nat")
     def ipv6_nat(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        enable Network Address Translation ipv6 on this interface - Default value: `false`
+        enable Network Address Translation ipv6 on this interface
+          - Default value: `false`
         """
         return pulumi.get(self, "ipv6_nat")
 
@@ -4076,7 +4248,9 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="loadInterval")
     def load_interval(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+        Interval for interface load calculation
+          - Range: `30`-`600`
+          - Default value: `30`
         """
         return pulumi.get(self, "load_interval")
 
@@ -4108,7 +4282,8 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="mediaType")
     def media_type(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Media type - Choices: `auto-select`, `rj45`, `sfp`
+        Media type
+          - Choices: `auto-select`, `rj45`, `sfp`
         """
         return pulumi.get(self, "media_type")
 
@@ -4132,7 +4307,8 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter
     def nat64(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        NAT64 on this interface - Default value: `false`
+        NAT64 on this interface
+          - Default value: `false`
         """
         return pulumi.get(self, "nat64")
 
@@ -4164,7 +4340,8 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter
     def speed(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+        Set interface speed
+          - Choices: `10`, `100`, `1000`, `2500`, `10000`
         """
         return pulumi.get(self, "speed")
 
@@ -4188,7 +4365,8 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="tcpMss")
     def tcp_mss(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        TCP MSS on SYN packets, in bytes
+          - Range: `500`-`1460`
         """
         return pulumi.get(self, "tcp_mss")
 
@@ -4228,7 +4406,8 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="trustsecEnableSgtPropogation")
     def trustsec_enable_sgt_propogation(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Indicates that the interface is trustworthy for CTS - Default value: `false`
+        Indicates that the interface is trustworthy for CTS
+          - Default value: `false`
         """
         return pulumi.get(self, "trustsec_enable_sgt_propogation")
 
@@ -4236,7 +4415,8 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="trustsecEnforcedSecurityGroupTag")
     def trustsec_enforced_security_group_tag(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        SGT value between 2 and 65519 - Range: `2`-`65519`
+        SGT value between 2 and 65519
+          - Range: `2`-`65519`
         """
         return pulumi.get(self, "trustsec_enforced_security_group_tag")
 
@@ -4252,7 +4432,8 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="trustsecPropogate")
     def trustsec_propogate(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Enables the interface for CTS SGT authorization and forwarding - Default value: `true`
+        Enables the interface for CTS SGT authorization and forwarding
+          - Default value: `true`
         """
         return pulumi.get(self, "trustsec_propogate")
 
@@ -4260,7 +4441,8 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
     @pulumi.getter(name="trustsecSecurityGroupTag")
     def trustsec_security_group_tag(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        SGT value between 2 and 65519 - Range: `2`-`65519`
+        SGT value between 2 and 65519
+          - Range: `2`-`65519`
         """
         return pulumi.get(self, "trustsec_security_group_tag")
 

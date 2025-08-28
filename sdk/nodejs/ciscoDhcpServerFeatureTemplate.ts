@@ -49,97 +49,99 @@ export class CiscoDhcpServerFeatureTemplate extends pulumi.CustomResource {
     /**
      * Configure IPv4 prefix range of the DHCP address pool
      */
-    public readonly addressPool!: pulumi.Output<string | undefined>;
+    declare public readonly addressPool: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly addressPoolVariable!: pulumi.Output<string | undefined>;
+    declare public readonly addressPoolVariable: pulumi.Output<string | undefined>;
     /**
      * Set IP address of default gateway
      */
-    public readonly defaultGateway!: pulumi.Output<string | undefined>;
+    declare public readonly defaultGateway: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly defaultGatewayVariable!: pulumi.Output<string | undefined>;
+    declare public readonly defaultGatewayVariable: pulumi.Output<string | undefined>;
     /**
      * The description of the feature template
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    public readonly deviceTypes!: pulumi.Output<string[]>;
+    declare public readonly deviceTypes: pulumi.Output<string[]>;
     /**
      * Configure one or more DNS server IP addresses
      */
-    public readonly dnsServers!: pulumi.Output<string[] | undefined>;
+    declare public readonly dnsServers: pulumi.Output<string[] | undefined>;
     /**
      * Variable name
      */
-    public readonly dnsServersVariable!: pulumi.Output<string | undefined>;
+    declare public readonly dnsServersVariable: pulumi.Output<string | undefined>;
     /**
      * Set domain name client uses to resolve hostnames
      */
-    public readonly domainName!: pulumi.Output<string | undefined>;
+    declare public readonly domainName: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly domainNameVariable!: pulumi.Output<string | undefined>;
+    declare public readonly domainNameVariable: pulumi.Output<string | undefined>;
     /**
      * Configure IPv4 address to exclude from DHCP address pool
      */
-    public readonly excludeAddresses!: pulumi.Output<string[] | undefined>;
+    declare public readonly excludeAddresses: pulumi.Output<string[] | undefined>;
     /**
      * Variable name
      */
-    public readonly excludeAddressesVariable!: pulumi.Output<string | undefined>;
+    declare public readonly excludeAddressesVariable: pulumi.Output<string | undefined>;
     /**
-     * Set MTU on interface to DHCP client - Range: `68`-`65535`
+     * Set MTU on interface to DHCP client
+     *   - Range: `68`-`65535`
      */
-    public readonly interfaceMtu!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly interfaceMtuVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
-     */
-    public readonly leaseTime!: pulumi.Output<number | undefined>;
+    declare public readonly interfaceMtu: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly leaseTimeVariable!: pulumi.Output<string | undefined>;
+    declare public readonly interfaceMtuVariable: pulumi.Output<string | undefined>;
+    /**
+     * Configure how long a DHCP-assigned IP address is valid
+     *   - Range: `60`-`31536000`
+     *   - Default value: `86400`
+     */
+    declare public readonly leaseTime: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly leaseTimeVariable: pulumi.Output<string | undefined>;
     /**
      * The name of the feature template
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * Configure Options Code
      */
-    public readonly options!: pulumi.Output<outputs.CiscoDhcpServerFeatureTemplateOption[] | undefined>;
+    declare public readonly options: pulumi.Output<outputs.CiscoDhcpServerFeatureTemplateOption[] | undefined>;
     /**
      * Configure static IP addresses
      */
-    public readonly staticLeases!: pulumi.Output<outputs.CiscoDhcpServerFeatureTemplateStaticLease[] | undefined>;
+    declare public readonly staticLeases: pulumi.Output<outputs.CiscoDhcpServerFeatureTemplateStaticLease[] | undefined>;
     /**
      * The template type
      */
-    public /*out*/ readonly templateType!: pulumi.Output<string>;
+    declare public /*out*/ readonly templateType: pulumi.Output<string>;
     /**
      * Configure TFTP server IP addresses
      */
-    public readonly tftpServers!: pulumi.Output<string[] | undefined>;
+    declare public readonly tftpServers: pulumi.Output<string[] | undefined>;
     /**
      * Variable name
      */
-    public readonly tftpServersVariable!: pulumi.Output<string | undefined>;
+    declare public readonly tftpServersVariable: pulumi.Output<string | undefined>;
     /**
      * The version of the feature template
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a CiscoDhcpServerFeatureTemplate resource with the given unique name, arguments, and options.
@@ -154,58 +156,58 @@ export class CiscoDhcpServerFeatureTemplate extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as CiscoDhcpServerFeatureTemplateState | undefined;
-            resourceInputs["addressPool"] = state ? state.addressPool : undefined;
-            resourceInputs["addressPoolVariable"] = state ? state.addressPoolVariable : undefined;
-            resourceInputs["defaultGateway"] = state ? state.defaultGateway : undefined;
-            resourceInputs["defaultGatewayVariable"] = state ? state.defaultGatewayVariable : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["deviceTypes"] = state ? state.deviceTypes : undefined;
-            resourceInputs["dnsServers"] = state ? state.dnsServers : undefined;
-            resourceInputs["dnsServersVariable"] = state ? state.dnsServersVariable : undefined;
-            resourceInputs["domainName"] = state ? state.domainName : undefined;
-            resourceInputs["domainNameVariable"] = state ? state.domainNameVariable : undefined;
-            resourceInputs["excludeAddresses"] = state ? state.excludeAddresses : undefined;
-            resourceInputs["excludeAddressesVariable"] = state ? state.excludeAddressesVariable : undefined;
-            resourceInputs["interfaceMtu"] = state ? state.interfaceMtu : undefined;
-            resourceInputs["interfaceMtuVariable"] = state ? state.interfaceMtuVariable : undefined;
-            resourceInputs["leaseTime"] = state ? state.leaseTime : undefined;
-            resourceInputs["leaseTimeVariable"] = state ? state.leaseTimeVariable : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["options"] = state ? state.options : undefined;
-            resourceInputs["staticLeases"] = state ? state.staticLeases : undefined;
-            resourceInputs["templateType"] = state ? state.templateType : undefined;
-            resourceInputs["tftpServers"] = state ? state.tftpServers : undefined;
-            resourceInputs["tftpServersVariable"] = state ? state.tftpServersVariable : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["addressPool"] = state?.addressPool;
+            resourceInputs["addressPoolVariable"] = state?.addressPoolVariable;
+            resourceInputs["defaultGateway"] = state?.defaultGateway;
+            resourceInputs["defaultGatewayVariable"] = state?.defaultGatewayVariable;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["deviceTypes"] = state?.deviceTypes;
+            resourceInputs["dnsServers"] = state?.dnsServers;
+            resourceInputs["dnsServersVariable"] = state?.dnsServersVariable;
+            resourceInputs["domainName"] = state?.domainName;
+            resourceInputs["domainNameVariable"] = state?.domainNameVariable;
+            resourceInputs["excludeAddresses"] = state?.excludeAddresses;
+            resourceInputs["excludeAddressesVariable"] = state?.excludeAddressesVariable;
+            resourceInputs["interfaceMtu"] = state?.interfaceMtu;
+            resourceInputs["interfaceMtuVariable"] = state?.interfaceMtuVariable;
+            resourceInputs["leaseTime"] = state?.leaseTime;
+            resourceInputs["leaseTimeVariable"] = state?.leaseTimeVariable;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["options"] = state?.options;
+            resourceInputs["staticLeases"] = state?.staticLeases;
+            resourceInputs["templateType"] = state?.templateType;
+            resourceInputs["tftpServers"] = state?.tftpServers;
+            resourceInputs["tftpServersVariable"] = state?.tftpServersVariable;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as CiscoDhcpServerFeatureTemplateArgs | undefined;
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            if ((!args || args.deviceTypes === undefined) && !opts.urn) {
+            if (args?.deviceTypes === undefined && !opts.urn) {
                 throw new Error("Missing required property 'deviceTypes'");
             }
-            resourceInputs["addressPool"] = args ? args.addressPool : undefined;
-            resourceInputs["addressPoolVariable"] = args ? args.addressPoolVariable : undefined;
-            resourceInputs["defaultGateway"] = args ? args.defaultGateway : undefined;
-            resourceInputs["defaultGatewayVariable"] = args ? args.defaultGatewayVariable : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["deviceTypes"] = args ? args.deviceTypes : undefined;
-            resourceInputs["dnsServers"] = args ? args.dnsServers : undefined;
-            resourceInputs["dnsServersVariable"] = args ? args.dnsServersVariable : undefined;
-            resourceInputs["domainName"] = args ? args.domainName : undefined;
-            resourceInputs["domainNameVariable"] = args ? args.domainNameVariable : undefined;
-            resourceInputs["excludeAddresses"] = args ? args.excludeAddresses : undefined;
-            resourceInputs["excludeAddressesVariable"] = args ? args.excludeAddressesVariable : undefined;
-            resourceInputs["interfaceMtu"] = args ? args.interfaceMtu : undefined;
-            resourceInputs["interfaceMtuVariable"] = args ? args.interfaceMtuVariable : undefined;
-            resourceInputs["leaseTime"] = args ? args.leaseTime : undefined;
-            resourceInputs["leaseTimeVariable"] = args ? args.leaseTimeVariable : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["options"] = args ? args.options : undefined;
-            resourceInputs["staticLeases"] = args ? args.staticLeases : undefined;
-            resourceInputs["tftpServers"] = args ? args.tftpServers : undefined;
-            resourceInputs["tftpServersVariable"] = args ? args.tftpServersVariable : undefined;
+            resourceInputs["addressPool"] = args?.addressPool;
+            resourceInputs["addressPoolVariable"] = args?.addressPoolVariable;
+            resourceInputs["defaultGateway"] = args?.defaultGateway;
+            resourceInputs["defaultGatewayVariable"] = args?.defaultGatewayVariable;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["deviceTypes"] = args?.deviceTypes;
+            resourceInputs["dnsServers"] = args?.dnsServers;
+            resourceInputs["dnsServersVariable"] = args?.dnsServersVariable;
+            resourceInputs["domainName"] = args?.domainName;
+            resourceInputs["domainNameVariable"] = args?.domainNameVariable;
+            resourceInputs["excludeAddresses"] = args?.excludeAddresses;
+            resourceInputs["excludeAddressesVariable"] = args?.excludeAddressesVariable;
+            resourceInputs["interfaceMtu"] = args?.interfaceMtu;
+            resourceInputs["interfaceMtuVariable"] = args?.interfaceMtuVariable;
+            resourceInputs["leaseTime"] = args?.leaseTime;
+            resourceInputs["leaseTimeVariable"] = args?.leaseTimeVariable;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["options"] = args?.options;
+            resourceInputs["staticLeases"] = args?.staticLeases;
+            resourceInputs["tftpServers"] = args?.tftpServers;
+            resourceInputs["tftpServersVariable"] = args?.tftpServersVariable;
             resourceInputs["templateType"] = undefined /*out*/;
             resourceInputs["version"] = undefined /*out*/;
         }
@@ -239,9 +241,8 @@ export interface CiscoDhcpServerFeatureTemplateState {
      */
     description?: pulumi.Input<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
     deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
     /**
@@ -269,7 +270,8 @@ export interface CiscoDhcpServerFeatureTemplateState {
      */
     excludeAddressesVariable?: pulumi.Input<string>;
     /**
-     * Set MTU on interface to DHCP client - Range: `68`-`65535`
+     * Set MTU on interface to DHCP client
+     *   - Range: `68`-`65535`
      */
     interfaceMtu?: pulumi.Input<number>;
     /**
@@ -277,7 +279,9 @@ export interface CiscoDhcpServerFeatureTemplateState {
      */
     interfaceMtuVariable?: pulumi.Input<string>;
     /**
-     * Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+     * Configure how long a DHCP-assigned IP address is valid
+     *   - Range: `60`-`31536000`
+     *   - Default value: `86400`
      */
     leaseTime?: pulumi.Input<number>;
     /**
@@ -339,9 +343,8 @@ export interface CiscoDhcpServerFeatureTemplateArgs {
      */
     description: pulumi.Input<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
     deviceTypes: pulumi.Input<pulumi.Input<string>[]>;
     /**
@@ -369,7 +372,8 @@ export interface CiscoDhcpServerFeatureTemplateArgs {
      */
     excludeAddressesVariable?: pulumi.Input<string>;
     /**
-     * Set MTU on interface to DHCP client - Range: `68`-`65535`
+     * Set MTU on interface to DHCP client
+     *   - Range: `68`-`65535`
      */
     interfaceMtu?: pulumi.Input<number>;
     /**
@@ -377,7 +381,9 @@ export interface CiscoDhcpServerFeatureTemplateArgs {
      */
     interfaceMtuVariable?: pulumi.Input<string>;
     /**
-     * Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+     * Configure how long a DHCP-assigned IP address is valid
+     *   - Range: `60`-`31536000`
+     *   - Default value: `86400`
      */
     leaseTime?: pulumi.Input<number>;
     /**

@@ -85,11 +85,14 @@ type LocalizedPolicy struct {
 	FlowVisibilityIpv6 pulumi.BoolPtrOutput `pulumi:"flowVisibilityIpv6"`
 	// Implicit ACL logging
 	ImplicitAclLogging pulumi.BoolPtrOutput `pulumi:"implicitAclLogging"`
-	// IPv4 visibility cache entries - Range: `16`-`2000000`
+	// IPv4 visibility cache entries
+	//   - Range: `16`-`2000000`
 	Ipv4VisibilityCacheEntries pulumi.IntPtrOutput `pulumi:"ipv4VisibilityCacheEntries"`
-	// IPv6 visibility cache entries - Range: `16`-`2000000`
+	// IPv6 visibility cache entries
+	//   - Range: `16`-`2000000`
 	Ipv6VisibilityCacheEntries pulumi.IntPtrOutput `pulumi:"ipv6VisibilityCacheEntries"`
-	// Log frequency - Range: `1`-`2147483647`
+	// Log frequency
+	//   - Range: `1`-`2147483647`
 	LogFrequency pulumi.IntPtrOutput `pulumi:"logFrequency"`
 	// The name of the localized policy
 	Name pulumi.StringOutput `pulumi:"name"`
@@ -148,11 +151,14 @@ type localizedPolicyState struct {
 	FlowVisibilityIpv6 *bool `pulumi:"flowVisibilityIpv6"`
 	// Implicit ACL logging
 	ImplicitAclLogging *bool `pulumi:"implicitAclLogging"`
-	// IPv4 visibility cache entries - Range: `16`-`2000000`
+	// IPv4 visibility cache entries
+	//   - Range: `16`-`2000000`
 	Ipv4VisibilityCacheEntries *int `pulumi:"ipv4VisibilityCacheEntries"`
-	// IPv6 visibility cache entries - Range: `16`-`2000000`
+	// IPv6 visibility cache entries
+	//   - Range: `16`-`2000000`
 	Ipv6VisibilityCacheEntries *int `pulumi:"ipv6VisibilityCacheEntries"`
-	// Log frequency - Range: `1`-`2147483647`
+	// Log frequency
+	//   - Range: `1`-`2147483647`
 	LogFrequency *int `pulumi:"logFrequency"`
 	// The name of the localized policy
 	Name *string `pulumi:"name"`
@@ -179,11 +185,14 @@ type LocalizedPolicyState struct {
 	FlowVisibilityIpv6 pulumi.BoolPtrInput
 	// Implicit ACL logging
 	ImplicitAclLogging pulumi.BoolPtrInput
-	// IPv4 visibility cache entries - Range: `16`-`2000000`
+	// IPv4 visibility cache entries
+	//   - Range: `16`-`2000000`
 	Ipv4VisibilityCacheEntries pulumi.IntPtrInput
-	// IPv6 visibility cache entries - Range: `16`-`2000000`
+	// IPv6 visibility cache entries
+	//   - Range: `16`-`2000000`
 	Ipv6VisibilityCacheEntries pulumi.IntPtrInput
-	// Log frequency - Range: `1`-`2147483647`
+	// Log frequency
+	//   - Range: `1`-`2147483647`
 	LogFrequency pulumi.IntPtrInput
 	// The name of the localized policy
 	Name pulumi.StringPtrInput
@@ -214,11 +223,14 @@ type localizedPolicyArgs struct {
 	FlowVisibilityIpv6 *bool `pulumi:"flowVisibilityIpv6"`
 	// Implicit ACL logging
 	ImplicitAclLogging *bool `pulumi:"implicitAclLogging"`
-	// IPv4 visibility cache entries - Range: `16`-`2000000`
+	// IPv4 visibility cache entries
+	//   - Range: `16`-`2000000`
 	Ipv4VisibilityCacheEntries *int `pulumi:"ipv4VisibilityCacheEntries"`
-	// IPv6 visibility cache entries - Range: `16`-`2000000`
+	// IPv6 visibility cache entries
+	//   - Range: `16`-`2000000`
 	Ipv6VisibilityCacheEntries *int `pulumi:"ipv6VisibilityCacheEntries"`
-	// Log frequency - Range: `1`-`2147483647`
+	// Log frequency
+	//   - Range: `1`-`2147483647`
 	LogFrequency *int `pulumi:"logFrequency"`
 	// The name of the localized policy
 	Name *string `pulumi:"name"`
@@ -244,11 +256,14 @@ type LocalizedPolicyArgs struct {
 	FlowVisibilityIpv6 pulumi.BoolPtrInput
 	// Implicit ACL logging
 	ImplicitAclLogging pulumi.BoolPtrInput
-	// IPv4 visibility cache entries - Range: `16`-`2000000`
+	// IPv4 visibility cache entries
+	//   - Range: `16`-`2000000`
 	Ipv4VisibilityCacheEntries pulumi.IntPtrInput
-	// IPv6 visibility cache entries - Range: `16`-`2000000`
+	// IPv6 visibility cache entries
+	//   - Range: `16`-`2000000`
 	Ipv6VisibilityCacheEntries pulumi.IntPtrInput
-	// Log frequency - Range: `1`-`2147483647`
+	// Log frequency
+	//   - Range: `1`-`2147483647`
 	LogFrequency pulumi.IntPtrInput
 	// The name of the localized policy
 	Name pulumi.StringPtrInput
@@ -386,17 +401,20 @@ func (o LocalizedPolicyOutput) ImplicitAclLogging() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *LocalizedPolicy) pulumi.BoolPtrOutput { return v.ImplicitAclLogging }).(pulumi.BoolPtrOutput)
 }
 
-// IPv4 visibility cache entries - Range: `16`-`2000000`
+// IPv4 visibility cache entries
+//   - Range: `16`-`2000000`
 func (o LocalizedPolicyOutput) Ipv4VisibilityCacheEntries() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *LocalizedPolicy) pulumi.IntPtrOutput { return v.Ipv4VisibilityCacheEntries }).(pulumi.IntPtrOutput)
 }
 
-// IPv6 visibility cache entries - Range: `16`-`2000000`
+// IPv6 visibility cache entries
+//   - Range: `16`-`2000000`
 func (o LocalizedPolicyOutput) Ipv6VisibilityCacheEntries() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *LocalizedPolicy) pulumi.IntPtrOutput { return v.Ipv6VisibilityCacheEntries }).(pulumi.IntPtrOutput)
 }
 
-// Log frequency - Range: `1`-`2147483647`
+// Log frequency
+//   - Range: `1`-`2147483647`
 func (o LocalizedPolicyOutput) LogFrequency() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *LocalizedPolicy) pulumi.IntPtrOutput { return v.LogFrequency }).(pulumi.IntPtrOutput)
 }

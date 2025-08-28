@@ -79,7 +79,8 @@ namespace Pulumi.Sdwan
     public partial class SystemOmpFeature : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// BGP - Default value: `false`
+        /// BGP
+        ///   - Default value: `false`
         /// </summary>
         [Output("advertiseIpv4Bgp")]
         public Output<bool?> AdvertiseIpv4Bgp { get; private set; } = null!;
@@ -91,7 +92,8 @@ namespace Pulumi.Sdwan
         public Output<string?> AdvertiseIpv4BgpVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Connected - Default value: `true`
+        /// Connected
+        ///   - Default value: `true`
         /// </summary>
         [Output("advertiseIpv4Connected")]
         public Output<bool?> AdvertiseIpv4Connected { get; private set; } = null!;
@@ -103,7 +105,8 @@ namespace Pulumi.Sdwan
         public Output<string?> AdvertiseIpv4ConnectedVariable { get; private set; } = null!;
 
         /// <summary>
-        /// EIGRP - Default value: `false`
+        /// EIGRP
+        ///   - Default value: `false`
         /// </summary>
         [Output("advertiseIpv4Eigrp")]
         public Output<bool?> AdvertiseIpv4Eigrp { get; private set; } = null!;
@@ -115,7 +118,8 @@ namespace Pulumi.Sdwan
         public Output<string?> AdvertiseIpv4EigrpVariable { get; private set; } = null!;
 
         /// <summary>
-        /// ISIS - Default value: `false`
+        /// ISIS
+        ///   - Default value: `false`
         /// </summary>
         [Output("advertiseIpv4Isis")]
         public Output<bool?> AdvertiseIpv4Isis { get; private set; } = null!;
@@ -127,7 +131,8 @@ namespace Pulumi.Sdwan
         public Output<string?> AdvertiseIpv4IsisVariable { get; private set; } = null!;
 
         /// <summary>
-        /// LISP - Default value: `false`
+        /// LISP
+        ///   - Default value: `false`
         /// </summary>
         [Output("advertiseIpv4Lisp")]
         public Output<bool?> AdvertiseIpv4Lisp { get; private set; } = null!;
@@ -139,13 +144,15 @@ namespace Pulumi.Sdwan
         public Output<string?> AdvertiseIpv4LispVariable { get; private set; } = null!;
 
         /// <summary>
-        /// OSPF - Default value: `false`
+        /// OSPF
+        ///   - Default value: `false`
         /// </summary>
         [Output("advertiseIpv4Ospf")]
         public Output<bool?> AdvertiseIpv4Ospf { get; private set; } = null!;
 
         /// <summary>
-        /// OSPFV3 - Default value: `false`
+        /// OSPFV3
+        ///   - Default value: `false`
         /// </summary>
         [Output("advertiseIpv4OspfV3")]
         public Output<bool?> AdvertiseIpv4OspfV3 { get; private set; } = null!;
@@ -163,7 +170,8 @@ namespace Pulumi.Sdwan
         public Output<string?> AdvertiseIpv4OspfVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Static - Default value: `true`
+        /// Static
+        ///   - Default value: `true`
         /// </summary>
         [Output("advertiseIpv4Static")]
         public Output<bool?> AdvertiseIpv4Static { get; private set; } = null!;
@@ -175,7 +183,8 @@ namespace Pulumi.Sdwan
         public Output<string?> AdvertiseIpv4StaticVariable { get; private set; } = null!;
 
         /// <summary>
-        /// BGP - Default value: `false`
+        /// BGP
+        ///   - Default value: `false`
         /// </summary>
         [Output("advertiseIpv6Bgp")]
         public Output<bool?> AdvertiseIpv6Bgp { get; private set; } = null!;
@@ -187,7 +196,8 @@ namespace Pulumi.Sdwan
         public Output<string?> AdvertiseIpv6BgpVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Connected - Default value: `false`
+        /// Connected
+        ///   - Default value: `false`
         /// </summary>
         [Output("advertiseIpv6Connected")]
         public Output<bool?> AdvertiseIpv6Connected { get; private set; } = null!;
@@ -199,7 +209,8 @@ namespace Pulumi.Sdwan
         public Output<string?> AdvertiseIpv6ConnectedVariable { get; private set; } = null!;
 
         /// <summary>
-        /// EIGRP - Default value: `false`
+        /// EIGRP
+        ///   - Default value: `false`
         /// </summary>
         [Output("advertiseIpv6Eigrp")]
         public Output<bool?> AdvertiseIpv6Eigrp { get; private set; } = null!;
@@ -211,7 +222,8 @@ namespace Pulumi.Sdwan
         public Output<string?> AdvertiseIpv6EigrpVariable { get; private set; } = null!;
 
         /// <summary>
-        /// ISIS - Default value: `false`
+        /// ISIS
+        ///   - Default value: `false`
         /// </summary>
         [Output("advertiseIpv6Isis")]
         public Output<bool?> AdvertiseIpv6Isis { get; private set; } = null!;
@@ -223,7 +235,8 @@ namespace Pulumi.Sdwan
         public Output<string?> AdvertiseIpv6IsisVariable { get; private set; } = null!;
 
         /// <summary>
-        /// LISP - Default value: `false`
+        /// LISP
+        ///   - Default value: `false`
         /// </summary>
         [Output("advertiseIpv6Lisp")]
         public Output<bool?> AdvertiseIpv6Lisp { get; private set; } = null!;
@@ -235,7 +248,8 @@ namespace Pulumi.Sdwan
         public Output<string?> AdvertiseIpv6LispVariable { get; private set; } = null!;
 
         /// <summary>
-        /// OSPF - Default value: `false`
+        /// OSPF
+        ///   - Default value: `false`
         /// </summary>
         [Output("advertiseIpv6Ospf")]
         public Output<bool?> AdvertiseIpv6Ospf { get; private set; } = null!;
@@ -247,7 +261,8 @@ namespace Pulumi.Sdwan
         public Output<string?> AdvertiseIpv6OspfVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Static - Default value: `false`
+        /// Static
+        ///   - Default value: `false`
         /// </summary>
         [Output("advertiseIpv6Static")]
         public Output<bool?> AdvertiseIpv6Static { get; private set; } = null!;
@@ -259,7 +274,9 @@ namespace Pulumi.Sdwan
         public Output<string?> AdvertiseIpv6StaticVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Advertisement Interval (seconds) - Range: `0`-`65535` - Default value: `1`
+        /// Advertisement Interval (seconds)
+        ///   - Range: `0`-`65535`
+        ///   - Default value: `1`
         /// </summary>
         [Output("advertisementInterval")]
         public Output<int?> AdvertisementInterval { get; private set; } = null!;
@@ -277,7 +294,9 @@ namespace Pulumi.Sdwan
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// Set maximum number of OMP paths to install in cEdge route table - Range: `1`-`0` - Default value: `4`
+        /// Set maximum number of OMP paths to install in cEdge route table
+        ///   - Range: `1`-`0`
+        ///   - Default value: `4`
         /// </summary>
         [Output("ecmpLimit")]
         public Output<int?> EcmpLimit { get; private set; } = null!;
@@ -289,7 +308,9 @@ namespace Pulumi.Sdwan
         public Output<string?> EcmpLimitVariable { get; private set; } = null!;
 
         /// <summary>
-        /// EOR Timer - Range: `1`-`3600` - Default value: `300`
+        /// EOR Timer
+        ///   - Range: `1`-`3600`
+        ///   - Default value: `300`
         /// </summary>
         [Output("eorTimer")]
         public Output<int?> EorTimer { get; private set; } = null!;
@@ -307,13 +328,16 @@ namespace Pulumi.Sdwan
         public Output<string> FeatureProfileId { get; private set; } = null!;
 
         /// <summary>
-        /// Graceful Restart for OMP - Default value: `true`
+        /// Graceful Restart for OMP
+        ///   - Default value: `true`
         /// </summary>
         [Output("gracefulRestart")]
         public Output<bool?> GracefulRestart { get; private set; } = null!;
 
         /// <summary>
-        /// Graceful Restart Timer (seconds) - Range: `1`-`604800` - Default value: `43200`
+        /// Graceful Restart Timer (seconds)
+        ///   - Range: `1`-`604800`
+        ///   - Default value: `43200`
         /// </summary>
         [Output("gracefulRestartTimer")]
         public Output<int?> GracefulRestartTimer { get; private set; } = null!;
@@ -331,7 +355,8 @@ namespace Pulumi.Sdwan
         public Output<string?> GracefulRestartVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Hold Time (seconds) - Default value: `60`
+        /// Hold Time (seconds)
+        ///   - Default value: `60`
         /// </summary>
         [Output("holdtime")]
         public Output<int?> Holdtime { get; private set; } = null!;
@@ -343,7 +368,8 @@ namespace Pulumi.Sdwan
         public Output<string?> HoldtimeVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Treat hierarchical and direct (secondary region) paths equally - Default value: `false`
+        /// Treat hierarchical and direct (secondary region) paths equally
+        ///   - Default value: `false`
         /// </summary>
         [Output("ignoreRegionPathLength")]
         public Output<bool?> IgnoreRegionPathLength { get; private set; } = null!;
@@ -361,7 +387,9 @@ namespace Pulumi.Sdwan
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// OMP Admin Distance IPv4 - Range: `1`-`255` - Default value: `251`
+        /// OMP Admin Distance IPv4
+        ///   - Range: `1`-`255`
+        ///   - Default value: `251`
         /// </summary>
         [Output("ompAdminDistanceIpv4")]
         public Output<int?> OmpAdminDistanceIpv4 { get; private set; } = null!;
@@ -373,7 +401,9 @@ namespace Pulumi.Sdwan
         public Output<string?> OmpAdminDistanceIpv4Variable { get; private set; } = null!;
 
         /// <summary>
-        /// OMP Admin Distance IPv6 - Range: `1`-`255` - Default value: `251`
+        /// OMP Admin Distance IPv6
+        ///   - Range: `1`-`255`
+        ///   - Default value: `251`
         /// </summary>
         [Output("ompAdminDistanceIpv6")]
         public Output<int?> OmpAdminDistanceIpv6 { get; private set; } = null!;
@@ -385,7 +415,8 @@ namespace Pulumi.Sdwan
         public Output<string?> OmpAdminDistanceIpv6Variable { get; private set; } = null!;
 
         /// <summary>
-        /// Overlay AS Number - Range: `1`-`4294967295`
+        /// Overlay AS Number
+        ///   - Range: `1`-`4294967295`
         /// </summary>
         [Output("overlayAs")]
         public Output<int?> OverlayAs { get; private set; } = null!;
@@ -397,7 +428,9 @@ namespace Pulumi.Sdwan
         public Output<string?> OverlayAsVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Number of Paths Advertised per Prefix - Range: `1`-`16` - Default value: `4`
+        /// Number of Paths Advertised per Prefix
+        ///   - Range: `1`-`16`
+        ///   - Default value: `4`
         /// </summary>
         [Output("pathsAdvertisedPerPrefix")]
         public Output<int?> PathsAdvertisedPerPrefix { get; private set; } = null!;
@@ -409,7 +442,8 @@ namespace Pulumi.Sdwan
         public Output<string?> PathsAdvertisedPerPrefixVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Shutdown - Default value: `false`
+        /// Shutdown
+        ///   - Default value: `false`
         /// </summary>
         [Output("shutdown")]
         public Output<bool?> Shutdown { get; private set; } = null!;
@@ -433,7 +467,8 @@ namespace Pulumi.Sdwan
         public Output<string?> SiteTypesVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Transport Gateway Path Behavior - Choices: `prefer`, `ecmp-with-direct-path`
+        /// Transport Gateway Path Behavior
+        ///   - Choices: `prefer`, `ecmp-with-direct-path`
         /// </summary>
         [Output("transportGateway")]
         public Output<string?> TransportGateway { get; private set; } = null!;
@@ -497,7 +532,8 @@ namespace Pulumi.Sdwan
     public sealed class SystemOmpFeatureArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// BGP - Default value: `false`
+        /// BGP
+        ///   - Default value: `false`
         /// </summary>
         [Input("advertiseIpv4Bgp")]
         public Input<bool>? AdvertiseIpv4Bgp { get; set; }
@@ -509,7 +545,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AdvertiseIpv4BgpVariable { get; set; }
 
         /// <summary>
-        /// Connected - Default value: `true`
+        /// Connected
+        ///   - Default value: `true`
         /// </summary>
         [Input("advertiseIpv4Connected")]
         public Input<bool>? AdvertiseIpv4Connected { get; set; }
@@ -521,7 +558,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AdvertiseIpv4ConnectedVariable { get; set; }
 
         /// <summary>
-        /// EIGRP - Default value: `false`
+        /// EIGRP
+        ///   - Default value: `false`
         /// </summary>
         [Input("advertiseIpv4Eigrp")]
         public Input<bool>? AdvertiseIpv4Eigrp { get; set; }
@@ -533,7 +571,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AdvertiseIpv4EigrpVariable { get; set; }
 
         /// <summary>
-        /// ISIS - Default value: `false`
+        /// ISIS
+        ///   - Default value: `false`
         /// </summary>
         [Input("advertiseIpv4Isis")]
         public Input<bool>? AdvertiseIpv4Isis { get; set; }
@@ -545,7 +584,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AdvertiseIpv4IsisVariable { get; set; }
 
         /// <summary>
-        /// LISP - Default value: `false`
+        /// LISP
+        ///   - Default value: `false`
         /// </summary>
         [Input("advertiseIpv4Lisp")]
         public Input<bool>? AdvertiseIpv4Lisp { get; set; }
@@ -557,13 +597,15 @@ namespace Pulumi.Sdwan
         public Input<string>? AdvertiseIpv4LispVariable { get; set; }
 
         /// <summary>
-        /// OSPF - Default value: `false`
+        /// OSPF
+        ///   - Default value: `false`
         /// </summary>
         [Input("advertiseIpv4Ospf")]
         public Input<bool>? AdvertiseIpv4Ospf { get; set; }
 
         /// <summary>
-        /// OSPFV3 - Default value: `false`
+        /// OSPFV3
+        ///   - Default value: `false`
         /// </summary>
         [Input("advertiseIpv4OspfV3")]
         public Input<bool>? AdvertiseIpv4OspfV3 { get; set; }
@@ -581,7 +623,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AdvertiseIpv4OspfVariable { get; set; }
 
         /// <summary>
-        /// Static - Default value: `true`
+        /// Static
+        ///   - Default value: `true`
         /// </summary>
         [Input("advertiseIpv4Static")]
         public Input<bool>? AdvertiseIpv4Static { get; set; }
@@ -593,7 +636,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AdvertiseIpv4StaticVariable { get; set; }
 
         /// <summary>
-        /// BGP - Default value: `false`
+        /// BGP
+        ///   - Default value: `false`
         /// </summary>
         [Input("advertiseIpv6Bgp")]
         public Input<bool>? AdvertiseIpv6Bgp { get; set; }
@@ -605,7 +649,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AdvertiseIpv6BgpVariable { get; set; }
 
         /// <summary>
-        /// Connected - Default value: `false`
+        /// Connected
+        ///   - Default value: `false`
         /// </summary>
         [Input("advertiseIpv6Connected")]
         public Input<bool>? AdvertiseIpv6Connected { get; set; }
@@ -617,7 +662,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AdvertiseIpv6ConnectedVariable { get; set; }
 
         /// <summary>
-        /// EIGRP - Default value: `false`
+        /// EIGRP
+        ///   - Default value: `false`
         /// </summary>
         [Input("advertiseIpv6Eigrp")]
         public Input<bool>? AdvertiseIpv6Eigrp { get; set; }
@@ -629,7 +675,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AdvertiseIpv6EigrpVariable { get; set; }
 
         /// <summary>
-        /// ISIS - Default value: `false`
+        /// ISIS
+        ///   - Default value: `false`
         /// </summary>
         [Input("advertiseIpv6Isis")]
         public Input<bool>? AdvertiseIpv6Isis { get; set; }
@@ -641,7 +688,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AdvertiseIpv6IsisVariable { get; set; }
 
         /// <summary>
-        /// LISP - Default value: `false`
+        /// LISP
+        ///   - Default value: `false`
         /// </summary>
         [Input("advertiseIpv6Lisp")]
         public Input<bool>? AdvertiseIpv6Lisp { get; set; }
@@ -653,7 +701,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AdvertiseIpv6LispVariable { get; set; }
 
         /// <summary>
-        /// OSPF - Default value: `false`
+        /// OSPF
+        ///   - Default value: `false`
         /// </summary>
         [Input("advertiseIpv6Ospf")]
         public Input<bool>? AdvertiseIpv6Ospf { get; set; }
@@ -665,7 +714,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AdvertiseIpv6OspfVariable { get; set; }
 
         /// <summary>
-        /// Static - Default value: `false`
+        /// Static
+        ///   - Default value: `false`
         /// </summary>
         [Input("advertiseIpv6Static")]
         public Input<bool>? AdvertiseIpv6Static { get; set; }
@@ -677,7 +727,9 @@ namespace Pulumi.Sdwan
         public Input<string>? AdvertiseIpv6StaticVariable { get; set; }
 
         /// <summary>
-        /// Advertisement Interval (seconds) - Range: `0`-`65535` - Default value: `1`
+        /// Advertisement Interval (seconds)
+        ///   - Range: `0`-`65535`
+        ///   - Default value: `1`
         /// </summary>
         [Input("advertisementInterval")]
         public Input<int>? AdvertisementInterval { get; set; }
@@ -695,7 +747,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// Set maximum number of OMP paths to install in cEdge route table - Range: `1`-`0` - Default value: `4`
+        /// Set maximum number of OMP paths to install in cEdge route table
+        ///   - Range: `1`-`0`
+        ///   - Default value: `4`
         /// </summary>
         [Input("ecmpLimit")]
         public Input<int>? EcmpLimit { get; set; }
@@ -707,7 +761,9 @@ namespace Pulumi.Sdwan
         public Input<string>? EcmpLimitVariable { get; set; }
 
         /// <summary>
-        /// EOR Timer - Range: `1`-`3600` - Default value: `300`
+        /// EOR Timer
+        ///   - Range: `1`-`3600`
+        ///   - Default value: `300`
         /// </summary>
         [Input("eorTimer")]
         public Input<int>? EorTimer { get; set; }
@@ -725,13 +781,16 @@ namespace Pulumi.Sdwan
         public Input<string> FeatureProfileId { get; set; } = null!;
 
         /// <summary>
-        /// Graceful Restart for OMP - Default value: `true`
+        /// Graceful Restart for OMP
+        ///   - Default value: `true`
         /// </summary>
         [Input("gracefulRestart")]
         public Input<bool>? GracefulRestart { get; set; }
 
         /// <summary>
-        /// Graceful Restart Timer (seconds) - Range: `1`-`604800` - Default value: `43200`
+        /// Graceful Restart Timer (seconds)
+        ///   - Range: `1`-`604800`
+        ///   - Default value: `43200`
         /// </summary>
         [Input("gracefulRestartTimer")]
         public Input<int>? GracefulRestartTimer { get; set; }
@@ -749,7 +808,8 @@ namespace Pulumi.Sdwan
         public Input<string>? GracefulRestartVariable { get; set; }
 
         /// <summary>
-        /// Hold Time (seconds) - Default value: `60`
+        /// Hold Time (seconds)
+        ///   - Default value: `60`
         /// </summary>
         [Input("holdtime")]
         public Input<int>? Holdtime { get; set; }
@@ -761,7 +821,8 @@ namespace Pulumi.Sdwan
         public Input<string>? HoldtimeVariable { get; set; }
 
         /// <summary>
-        /// Treat hierarchical and direct (secondary region) paths equally - Default value: `false`
+        /// Treat hierarchical and direct (secondary region) paths equally
+        ///   - Default value: `false`
         /// </summary>
         [Input("ignoreRegionPathLength")]
         public Input<bool>? IgnoreRegionPathLength { get; set; }
@@ -779,7 +840,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// OMP Admin Distance IPv4 - Range: `1`-`255` - Default value: `251`
+        /// OMP Admin Distance IPv4
+        ///   - Range: `1`-`255`
+        ///   - Default value: `251`
         /// </summary>
         [Input("ompAdminDistanceIpv4")]
         public Input<int>? OmpAdminDistanceIpv4 { get; set; }
@@ -791,7 +854,9 @@ namespace Pulumi.Sdwan
         public Input<string>? OmpAdminDistanceIpv4Variable { get; set; }
 
         /// <summary>
-        /// OMP Admin Distance IPv6 - Range: `1`-`255` - Default value: `251`
+        /// OMP Admin Distance IPv6
+        ///   - Range: `1`-`255`
+        ///   - Default value: `251`
         /// </summary>
         [Input("ompAdminDistanceIpv6")]
         public Input<int>? OmpAdminDistanceIpv6 { get; set; }
@@ -803,7 +868,8 @@ namespace Pulumi.Sdwan
         public Input<string>? OmpAdminDistanceIpv6Variable { get; set; }
 
         /// <summary>
-        /// Overlay AS Number - Range: `1`-`4294967295`
+        /// Overlay AS Number
+        ///   - Range: `1`-`4294967295`
         /// </summary>
         [Input("overlayAs")]
         public Input<int>? OverlayAs { get; set; }
@@ -815,7 +881,9 @@ namespace Pulumi.Sdwan
         public Input<string>? OverlayAsVariable { get; set; }
 
         /// <summary>
-        /// Number of Paths Advertised per Prefix - Range: `1`-`16` - Default value: `4`
+        /// Number of Paths Advertised per Prefix
+        ///   - Range: `1`-`16`
+        ///   - Default value: `4`
         /// </summary>
         [Input("pathsAdvertisedPerPrefix")]
         public Input<int>? PathsAdvertisedPerPrefix { get; set; }
@@ -827,7 +895,8 @@ namespace Pulumi.Sdwan
         public Input<string>? PathsAdvertisedPerPrefixVariable { get; set; }
 
         /// <summary>
-        /// Shutdown - Default value: `false`
+        /// Shutdown
+        ///   - Default value: `false`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }
@@ -857,7 +926,8 @@ namespace Pulumi.Sdwan
         public Input<string>? SiteTypesVariable { get; set; }
 
         /// <summary>
-        /// Transport Gateway Path Behavior - Choices: `prefer`, `ecmp-with-direct-path`
+        /// Transport Gateway Path Behavior
+        ///   - Choices: `prefer`, `ecmp-with-direct-path`
         /// </summary>
         [Input("transportGateway")]
         public Input<string>? TransportGateway { get; set; }
@@ -877,7 +947,8 @@ namespace Pulumi.Sdwan
     public sealed class SystemOmpFeatureState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// BGP - Default value: `false`
+        /// BGP
+        ///   - Default value: `false`
         /// </summary>
         [Input("advertiseIpv4Bgp")]
         public Input<bool>? AdvertiseIpv4Bgp { get; set; }
@@ -889,7 +960,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AdvertiseIpv4BgpVariable { get; set; }
 
         /// <summary>
-        /// Connected - Default value: `true`
+        /// Connected
+        ///   - Default value: `true`
         /// </summary>
         [Input("advertiseIpv4Connected")]
         public Input<bool>? AdvertiseIpv4Connected { get; set; }
@@ -901,7 +973,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AdvertiseIpv4ConnectedVariable { get; set; }
 
         /// <summary>
-        /// EIGRP - Default value: `false`
+        /// EIGRP
+        ///   - Default value: `false`
         /// </summary>
         [Input("advertiseIpv4Eigrp")]
         public Input<bool>? AdvertiseIpv4Eigrp { get; set; }
@@ -913,7 +986,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AdvertiseIpv4EigrpVariable { get; set; }
 
         /// <summary>
-        /// ISIS - Default value: `false`
+        /// ISIS
+        ///   - Default value: `false`
         /// </summary>
         [Input("advertiseIpv4Isis")]
         public Input<bool>? AdvertiseIpv4Isis { get; set; }
@@ -925,7 +999,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AdvertiseIpv4IsisVariable { get; set; }
 
         /// <summary>
-        /// LISP - Default value: `false`
+        /// LISP
+        ///   - Default value: `false`
         /// </summary>
         [Input("advertiseIpv4Lisp")]
         public Input<bool>? AdvertiseIpv4Lisp { get; set; }
@@ -937,13 +1012,15 @@ namespace Pulumi.Sdwan
         public Input<string>? AdvertiseIpv4LispVariable { get; set; }
 
         /// <summary>
-        /// OSPF - Default value: `false`
+        /// OSPF
+        ///   - Default value: `false`
         /// </summary>
         [Input("advertiseIpv4Ospf")]
         public Input<bool>? AdvertiseIpv4Ospf { get; set; }
 
         /// <summary>
-        /// OSPFV3 - Default value: `false`
+        /// OSPFV3
+        ///   - Default value: `false`
         /// </summary>
         [Input("advertiseIpv4OspfV3")]
         public Input<bool>? AdvertiseIpv4OspfV3 { get; set; }
@@ -961,7 +1038,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AdvertiseIpv4OspfVariable { get; set; }
 
         /// <summary>
-        /// Static - Default value: `true`
+        /// Static
+        ///   - Default value: `true`
         /// </summary>
         [Input("advertiseIpv4Static")]
         public Input<bool>? AdvertiseIpv4Static { get; set; }
@@ -973,7 +1051,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AdvertiseIpv4StaticVariable { get; set; }
 
         /// <summary>
-        /// BGP - Default value: `false`
+        /// BGP
+        ///   - Default value: `false`
         /// </summary>
         [Input("advertiseIpv6Bgp")]
         public Input<bool>? AdvertiseIpv6Bgp { get; set; }
@@ -985,7 +1064,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AdvertiseIpv6BgpVariable { get; set; }
 
         /// <summary>
-        /// Connected - Default value: `false`
+        /// Connected
+        ///   - Default value: `false`
         /// </summary>
         [Input("advertiseIpv6Connected")]
         public Input<bool>? AdvertiseIpv6Connected { get; set; }
@@ -997,7 +1077,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AdvertiseIpv6ConnectedVariable { get; set; }
 
         /// <summary>
-        /// EIGRP - Default value: `false`
+        /// EIGRP
+        ///   - Default value: `false`
         /// </summary>
         [Input("advertiseIpv6Eigrp")]
         public Input<bool>? AdvertiseIpv6Eigrp { get; set; }
@@ -1009,7 +1090,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AdvertiseIpv6EigrpVariable { get; set; }
 
         /// <summary>
-        /// ISIS - Default value: `false`
+        /// ISIS
+        ///   - Default value: `false`
         /// </summary>
         [Input("advertiseIpv6Isis")]
         public Input<bool>? AdvertiseIpv6Isis { get; set; }
@@ -1021,7 +1103,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AdvertiseIpv6IsisVariable { get; set; }
 
         /// <summary>
-        /// LISP - Default value: `false`
+        /// LISP
+        ///   - Default value: `false`
         /// </summary>
         [Input("advertiseIpv6Lisp")]
         public Input<bool>? AdvertiseIpv6Lisp { get; set; }
@@ -1033,7 +1116,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AdvertiseIpv6LispVariable { get; set; }
 
         /// <summary>
-        /// OSPF - Default value: `false`
+        /// OSPF
+        ///   - Default value: `false`
         /// </summary>
         [Input("advertiseIpv6Ospf")]
         public Input<bool>? AdvertiseIpv6Ospf { get; set; }
@@ -1045,7 +1129,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AdvertiseIpv6OspfVariable { get; set; }
 
         /// <summary>
-        /// Static - Default value: `false`
+        /// Static
+        ///   - Default value: `false`
         /// </summary>
         [Input("advertiseIpv6Static")]
         public Input<bool>? AdvertiseIpv6Static { get; set; }
@@ -1057,7 +1142,9 @@ namespace Pulumi.Sdwan
         public Input<string>? AdvertiseIpv6StaticVariable { get; set; }
 
         /// <summary>
-        /// Advertisement Interval (seconds) - Range: `0`-`65535` - Default value: `1`
+        /// Advertisement Interval (seconds)
+        ///   - Range: `0`-`65535`
+        ///   - Default value: `1`
         /// </summary>
         [Input("advertisementInterval")]
         public Input<int>? AdvertisementInterval { get; set; }
@@ -1075,7 +1162,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// Set maximum number of OMP paths to install in cEdge route table - Range: `1`-`0` - Default value: `4`
+        /// Set maximum number of OMP paths to install in cEdge route table
+        ///   - Range: `1`-`0`
+        ///   - Default value: `4`
         /// </summary>
         [Input("ecmpLimit")]
         public Input<int>? EcmpLimit { get; set; }
@@ -1087,7 +1176,9 @@ namespace Pulumi.Sdwan
         public Input<string>? EcmpLimitVariable { get; set; }
 
         /// <summary>
-        /// EOR Timer - Range: `1`-`3600` - Default value: `300`
+        /// EOR Timer
+        ///   - Range: `1`-`3600`
+        ///   - Default value: `300`
         /// </summary>
         [Input("eorTimer")]
         public Input<int>? EorTimer { get; set; }
@@ -1105,13 +1196,16 @@ namespace Pulumi.Sdwan
         public Input<string>? FeatureProfileId { get; set; }
 
         /// <summary>
-        /// Graceful Restart for OMP - Default value: `true`
+        /// Graceful Restart for OMP
+        ///   - Default value: `true`
         /// </summary>
         [Input("gracefulRestart")]
         public Input<bool>? GracefulRestart { get; set; }
 
         /// <summary>
-        /// Graceful Restart Timer (seconds) - Range: `1`-`604800` - Default value: `43200`
+        /// Graceful Restart Timer (seconds)
+        ///   - Range: `1`-`604800`
+        ///   - Default value: `43200`
         /// </summary>
         [Input("gracefulRestartTimer")]
         public Input<int>? GracefulRestartTimer { get; set; }
@@ -1129,7 +1223,8 @@ namespace Pulumi.Sdwan
         public Input<string>? GracefulRestartVariable { get; set; }
 
         /// <summary>
-        /// Hold Time (seconds) - Default value: `60`
+        /// Hold Time (seconds)
+        ///   - Default value: `60`
         /// </summary>
         [Input("holdtime")]
         public Input<int>? Holdtime { get; set; }
@@ -1141,7 +1236,8 @@ namespace Pulumi.Sdwan
         public Input<string>? HoldtimeVariable { get; set; }
 
         /// <summary>
-        /// Treat hierarchical and direct (secondary region) paths equally - Default value: `false`
+        /// Treat hierarchical and direct (secondary region) paths equally
+        ///   - Default value: `false`
         /// </summary>
         [Input("ignoreRegionPathLength")]
         public Input<bool>? IgnoreRegionPathLength { get; set; }
@@ -1159,7 +1255,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// OMP Admin Distance IPv4 - Range: `1`-`255` - Default value: `251`
+        /// OMP Admin Distance IPv4
+        ///   - Range: `1`-`255`
+        ///   - Default value: `251`
         /// </summary>
         [Input("ompAdminDistanceIpv4")]
         public Input<int>? OmpAdminDistanceIpv4 { get; set; }
@@ -1171,7 +1269,9 @@ namespace Pulumi.Sdwan
         public Input<string>? OmpAdminDistanceIpv4Variable { get; set; }
 
         /// <summary>
-        /// OMP Admin Distance IPv6 - Range: `1`-`255` - Default value: `251`
+        /// OMP Admin Distance IPv6
+        ///   - Range: `1`-`255`
+        ///   - Default value: `251`
         /// </summary>
         [Input("ompAdminDistanceIpv6")]
         public Input<int>? OmpAdminDistanceIpv6 { get; set; }
@@ -1183,7 +1283,8 @@ namespace Pulumi.Sdwan
         public Input<string>? OmpAdminDistanceIpv6Variable { get; set; }
 
         /// <summary>
-        /// Overlay AS Number - Range: `1`-`4294967295`
+        /// Overlay AS Number
+        ///   - Range: `1`-`4294967295`
         /// </summary>
         [Input("overlayAs")]
         public Input<int>? OverlayAs { get; set; }
@@ -1195,7 +1296,9 @@ namespace Pulumi.Sdwan
         public Input<string>? OverlayAsVariable { get; set; }
 
         /// <summary>
-        /// Number of Paths Advertised per Prefix - Range: `1`-`16` - Default value: `4`
+        /// Number of Paths Advertised per Prefix
+        ///   - Range: `1`-`16`
+        ///   - Default value: `4`
         /// </summary>
         [Input("pathsAdvertisedPerPrefix")]
         public Input<int>? PathsAdvertisedPerPrefix { get; set; }
@@ -1207,7 +1310,8 @@ namespace Pulumi.Sdwan
         public Input<string>? PathsAdvertisedPerPrefixVariable { get; set; }
 
         /// <summary>
-        /// Shutdown - Default value: `false`
+        /// Shutdown
+        ///   - Default value: `false`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }
@@ -1237,7 +1341,8 @@ namespace Pulumi.Sdwan
         public Input<string>? SiteTypesVariable { get; set; }
 
         /// <summary>
-        /// Transport Gateway Path Behavior - Choices: `prefer`, `ecmp-with-direct-path`
+        /// Transport Gateway Path Behavior
+        ///   - Choices: `prefer`, `ecmp-with-direct-path`
         /// </summary>
         [Input("transportGateway")]
         public Input<string>? TransportGateway { get; set; }

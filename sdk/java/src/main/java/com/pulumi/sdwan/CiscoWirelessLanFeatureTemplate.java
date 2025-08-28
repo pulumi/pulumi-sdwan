@@ -39,14 +39,16 @@ import javax.annotation.Nullable;
 @ResourceType(type="sdwan:index/ciscoWirelessLanFeatureTemplate:CiscoWirelessLanFeatureTemplate")
 public class CiscoWirelessLanFeatureTemplate extends com.pulumi.resources.CustomResource {
     /**
-     * Set mobile express default gateway - Default value: `0.0.0.0`
+     * Set mobile express default gateway
+     *   - Default value: `0.0.0.0`
      * 
      */
     @Export(name="controllerDefaultGateway", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> controllerDefaultGateway;
 
     /**
-     * @return Set mobile express default gateway - Default value: `0.0.0.0`
+     * @return Set mobile express default gateway
+     *   - Default value: `0.0.0.0`
      * 
      */
     public Output<Optional<String>> controllerDefaultGateway() {
@@ -67,14 +69,16 @@ public class CiscoWirelessLanFeatureTemplate extends com.pulumi.resources.Custom
         return Codegen.optional(this.controllerDefaultGatewayVariable);
     }
     /**
-     * Set mobile express controller address - Default value: `0.0.0.0`
+     * Set mobile express controller address
+     *   - Default value: `0.0.0.0`
      * 
      */
     @Export(name="controllerIpAddress", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> controllerIpAddress;
 
     /**
-     * @return Set mobile express controller address - Default value: `0.0.0.0`
+     * @return Set mobile express controller address
+     *   - Default value: `0.0.0.0`
      * 
      */
     public Output<Optional<String>> controllerIpAddress() {
@@ -95,14 +99,16 @@ public class CiscoWirelessLanFeatureTemplate extends com.pulumi.resources.Custom
         return Codegen.optional(this.controllerIpAddressVariable);
     }
     /**
-     * Set mobile express controller subnet mask - Default value: `0.0.0.0`
+     * Set mobile express controller subnet mask
+     *   - Default value: `0.0.0.0`
      * 
      */
     @Export(name="controllerSubnetMask", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> controllerSubnetMask;
 
     /**
-     * @return Set mobile express controller subnet mask - Default value: `0.0.0.0`
+     * @return Set mobile express controller subnet mask
+     *   - Default value: `0.0.0.0`
      * 
      */
     public Output<Optional<String>> controllerSubnetMask() {
@@ -123,24 +129,16 @@ public class CiscoWirelessLanFeatureTemplate extends com.pulumi.resources.Custom
         return Codegen.optional(this.controllerSubnetMaskVariable);
     }
     /**
-     * Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-     * `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-     * `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-     * `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-     * `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-     * `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+     * Select country
+     *   - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
      * 
      */
     @Export(name="country", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> country;
 
     /**
-     * @return Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-     * `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-     * `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-     * `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-     * `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-     * `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+     * @return Select country
+     *   - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
      * 
      */
     public Output<Optional<String>> country() {
@@ -175,18 +173,16 @@ public class CiscoWirelessLanFeatureTemplate extends com.pulumi.resources.Custom
         return this.description;
     }
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Export(name="deviceTypes", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Output<List<String>> deviceTypes() {
@@ -235,14 +231,16 @@ public class CiscoWirelessLanFeatureTemplate extends com.pulumi.resources.Custom
         return Codegen.optional(this.passwordVariable);
     }
     /**
-     * 2.4GHz Shutdown - Default value: `false`
+     * 2.4GHz Shutdown
+     *   - Default value: `false`
      * 
      */
     @Export(name="shutdown24ghz", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> shutdown24ghz;
 
     /**
-     * @return 2.4GHz Shutdown - Default value: `false`
+     * @return 2.4GHz Shutdown
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> shutdown24ghz() {
@@ -263,14 +261,16 @@ public class CiscoWirelessLanFeatureTemplate extends com.pulumi.resources.Custom
         return Codegen.optional(this.shutdown24ghzVariable);
     }
     /**
-     * 5GHz Shutdown - Default value: `false`
+     * 5GHz Shutdown
+     *   - Default value: `false`
      * 
      */
     @Export(name="shutdown5ghz", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> shutdown5ghz;
 
     /**
-     * @return 5GHz Shutdown - Default value: `false`
+     * @return 5GHz Shutdown
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> shutdown5ghz() {

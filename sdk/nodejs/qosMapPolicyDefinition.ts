@@ -48,23 +48,23 @@ export class QosMapPolicyDefinition extends pulumi.CustomResource {
     /**
      * The description of the policy definition
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
      * The name of the policy definition
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * List of QoS schedulers
      */
-    public readonly qosSchedulers!: pulumi.Output<outputs.QosMapPolicyDefinitionQosScheduler[]>;
+    declare public readonly qosSchedulers: pulumi.Output<outputs.QosMapPolicyDefinitionQosScheduler[]>;
     /**
      * Type
      */
-    public /*out*/ readonly type!: pulumi.Output<string>;
+    declare public /*out*/ readonly type: pulumi.Output<string>;
     /**
      * The version of the object
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a QosMapPolicyDefinition resource with the given unique name, arguments, and options.
@@ -79,22 +79,22 @@ export class QosMapPolicyDefinition extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as QosMapPolicyDefinitionState | undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["qosSchedulers"] = state ? state.qosSchedulers : undefined;
-            resourceInputs["type"] = state ? state.type : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["qosSchedulers"] = state?.qosSchedulers;
+            resourceInputs["type"] = state?.type;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as QosMapPolicyDefinitionArgs | undefined;
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            if ((!args || args.qosSchedulers === undefined) && !opts.urn) {
+            if (args?.qosSchedulers === undefined && !opts.urn) {
                 throw new Error("Missing required property 'qosSchedulers'");
             }
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["qosSchedulers"] = args ? args.qosSchedulers : undefined;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["qosSchedulers"] = args?.qosSchedulers;
             resourceInputs["type"] = undefined /*out*/;
             resourceInputs["version"] = undefined /*out*/;
         }

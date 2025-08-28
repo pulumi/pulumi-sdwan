@@ -62,67 +62,67 @@ export class ObjectGroupPolicyDefinition extends pulumi.CustomResource {
     /**
      * Data FQDN prefix list ID
      */
-    public readonly dataFqdnPrefixListId!: pulumi.Output<string | undefined>;
+    declare public readonly dataFqdnPrefixListId: pulumi.Output<string | undefined>;
     /**
      * Data FQDN prefix list version
      */
-    public readonly dataFqdnPrefixListVersion!: pulumi.Output<number | undefined>;
+    declare public readonly dataFqdnPrefixListVersion: pulumi.Output<number | undefined>;
     /**
      * Data IPv4 prefix list ID
      */
-    public readonly dataIpv4PrefixListId!: pulumi.Output<string | undefined>;
+    declare public readonly dataIpv4PrefixListId: pulumi.Output<string | undefined>;
     /**
      * Data IPv4 prefix list version
      */
-    public readonly dataIpv4PrefixListVersion!: pulumi.Output<number | undefined>;
+    declare public readonly dataIpv4PrefixListVersion: pulumi.Output<number | undefined>;
     /**
      * The description of the policy definition
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
      * Fully qualified domain name
      */
-    public readonly fqdn!: pulumi.Output<string | undefined>;
+    declare public readonly fqdn: pulumi.Output<string | undefined>;
     /**
      * Geo location
      */
-    public readonly geoLocation!: pulumi.Output<string | undefined>;
+    declare public readonly geoLocation: pulumi.Output<string | undefined>;
     /**
      * Geo location list ID
      */
-    public readonly geoLocationListId!: pulumi.Output<string | undefined>;
+    declare public readonly geoLocationListId: pulumi.Output<string | undefined>;
     /**
      * Geo location list version
      */
-    public readonly geoLocationListVersion!: pulumi.Output<number | undefined>;
+    declare public readonly geoLocationListVersion: pulumi.Output<number | undefined>;
     /**
      * IPv4 prefix
      */
-    public readonly ipv4Prefix!: pulumi.Output<string | undefined>;
+    declare public readonly ipv4Prefix: pulumi.Output<string | undefined>;
     /**
      * IPv4 prefix variable name
      */
-    public readonly ipv4PrefixVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ipv4PrefixVariable: pulumi.Output<string | undefined>;
     /**
      * The name of the policy definition
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * Port or range of ports
      */
-    public readonly port!: pulumi.Output<string | undefined>;
+    declare public readonly port: pulumi.Output<string | undefined>;
     /**
      * Port list ID
      */
-    public readonly portListId!: pulumi.Output<string | undefined>;
+    declare public readonly portListId: pulumi.Output<string | undefined>;
     /**
      * Port list version
      */
-    public readonly portListVersion!: pulumi.Output<number | undefined>;
+    declare public readonly portListVersion: pulumi.Output<number | undefined>;
     /**
      * The version of the object
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a ObjectGroupPolicyDefinition resource with the given unique name, arguments, and options.
@@ -137,42 +137,42 @@ export class ObjectGroupPolicyDefinition extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ObjectGroupPolicyDefinitionState | undefined;
-            resourceInputs["dataFqdnPrefixListId"] = state ? state.dataFqdnPrefixListId : undefined;
-            resourceInputs["dataFqdnPrefixListVersion"] = state ? state.dataFqdnPrefixListVersion : undefined;
-            resourceInputs["dataIpv4PrefixListId"] = state ? state.dataIpv4PrefixListId : undefined;
-            resourceInputs["dataIpv4PrefixListVersion"] = state ? state.dataIpv4PrefixListVersion : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["fqdn"] = state ? state.fqdn : undefined;
-            resourceInputs["geoLocation"] = state ? state.geoLocation : undefined;
-            resourceInputs["geoLocationListId"] = state ? state.geoLocationListId : undefined;
-            resourceInputs["geoLocationListVersion"] = state ? state.geoLocationListVersion : undefined;
-            resourceInputs["ipv4Prefix"] = state ? state.ipv4Prefix : undefined;
-            resourceInputs["ipv4PrefixVariable"] = state ? state.ipv4PrefixVariable : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["port"] = state ? state.port : undefined;
-            resourceInputs["portListId"] = state ? state.portListId : undefined;
-            resourceInputs["portListVersion"] = state ? state.portListVersion : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["dataFqdnPrefixListId"] = state?.dataFqdnPrefixListId;
+            resourceInputs["dataFqdnPrefixListVersion"] = state?.dataFqdnPrefixListVersion;
+            resourceInputs["dataIpv4PrefixListId"] = state?.dataIpv4PrefixListId;
+            resourceInputs["dataIpv4PrefixListVersion"] = state?.dataIpv4PrefixListVersion;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["fqdn"] = state?.fqdn;
+            resourceInputs["geoLocation"] = state?.geoLocation;
+            resourceInputs["geoLocationListId"] = state?.geoLocationListId;
+            resourceInputs["geoLocationListVersion"] = state?.geoLocationListVersion;
+            resourceInputs["ipv4Prefix"] = state?.ipv4Prefix;
+            resourceInputs["ipv4PrefixVariable"] = state?.ipv4PrefixVariable;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["port"] = state?.port;
+            resourceInputs["portListId"] = state?.portListId;
+            resourceInputs["portListVersion"] = state?.portListVersion;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as ObjectGroupPolicyDefinitionArgs | undefined;
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            resourceInputs["dataFqdnPrefixListId"] = args ? args.dataFqdnPrefixListId : undefined;
-            resourceInputs["dataFqdnPrefixListVersion"] = args ? args.dataFqdnPrefixListVersion : undefined;
-            resourceInputs["dataIpv4PrefixListId"] = args ? args.dataIpv4PrefixListId : undefined;
-            resourceInputs["dataIpv4PrefixListVersion"] = args ? args.dataIpv4PrefixListVersion : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["fqdn"] = args ? args.fqdn : undefined;
-            resourceInputs["geoLocation"] = args ? args.geoLocation : undefined;
-            resourceInputs["geoLocationListId"] = args ? args.geoLocationListId : undefined;
-            resourceInputs["geoLocationListVersion"] = args ? args.geoLocationListVersion : undefined;
-            resourceInputs["ipv4Prefix"] = args ? args.ipv4Prefix : undefined;
-            resourceInputs["ipv4PrefixVariable"] = args ? args.ipv4PrefixVariable : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["port"] = args ? args.port : undefined;
-            resourceInputs["portListId"] = args ? args.portListId : undefined;
-            resourceInputs["portListVersion"] = args ? args.portListVersion : undefined;
+            resourceInputs["dataFqdnPrefixListId"] = args?.dataFqdnPrefixListId;
+            resourceInputs["dataFqdnPrefixListVersion"] = args?.dataFqdnPrefixListVersion;
+            resourceInputs["dataIpv4PrefixListId"] = args?.dataIpv4PrefixListId;
+            resourceInputs["dataIpv4PrefixListVersion"] = args?.dataIpv4PrefixListVersion;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["fqdn"] = args?.fqdn;
+            resourceInputs["geoLocation"] = args?.geoLocation;
+            resourceInputs["geoLocationListId"] = args?.geoLocationListId;
+            resourceInputs["geoLocationListVersion"] = args?.geoLocationListVersion;
+            resourceInputs["ipv4Prefix"] = args?.ipv4Prefix;
+            resourceInputs["ipv4PrefixVariable"] = args?.ipv4PrefixVariable;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["port"] = args?.port;
+            resourceInputs["portListId"] = args?.portListId;
+            resourceInputs["portListVersion"] = args?.portListVersion;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

@@ -93,14 +93,16 @@ import javax.annotation.Nullable;
 @ResourceType(type="sdwan:index/cedgeGlobalFeatureTemplate:CedgeGlobalFeatureTemplate")
 public class CedgeGlobalFeatureTemplate extends com.pulumi.resources.CustomResource {
     /**
-     * Set ARP Proxy - Default value: `false`
+     * Set ARP Proxy
+     *   - Default value: `false`
      * 
      */
     @Export(name="arpProxy", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> arpProxy;
 
     /**
-     * @return Set ARP Proxy - Default value: `false`
+     * @return Set ARP Proxy
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> arpProxy() {
@@ -121,14 +123,16 @@ public class CedgeGlobalFeatureTemplate extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.arpProxyVariable);
     }
     /**
-     * Configure Ignore BOOTP - Default value: `true`
+     * Configure Ignore BOOTP
+     *   - Default value: `true`
      * 
      */
     @Export(name="bootp", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> bootp;
 
     /**
-     * @return Configure Ignore BOOTP - Default value: `true`
+     * @return Configure Ignore BOOTP
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> bootp() {
@@ -149,14 +153,16 @@ public class CedgeGlobalFeatureTemplate extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.bootpVariable);
     }
     /**
-     * Configure CDP - Default value: `true`
+     * Configure CDP
+     *   - Default value: `true`
      * 
      */
     @Export(name="cdp", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> cdp;
 
     /**
-     * @return Configure CDP - Default value: `true`
+     * @return Configure CDP
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> cdp() {
@@ -177,14 +183,16 @@ public class CedgeGlobalFeatureTemplate extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.cdpVariable);
     }
     /**
-     * Configure Console Logging - Default value: `true`
+     * Configure Console Logging
+     *   - Default value: `true`
      * 
      */
     @Export(name="consoleLogging", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> consoleLogging;
 
     /**
-     * @return Configure Console Logging - Default value: `true`
+     * @return Configure Console Logging
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> consoleLogging() {
@@ -219,32 +227,32 @@ public class CedgeGlobalFeatureTemplate extends com.pulumi.resources.CustomResou
         return this.description;
     }
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Export(name="deviceTypes", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Output<List<String>> deviceTypes() {
         return this.deviceTypes;
     }
     /**
-     * Configure Domain-Lookup - Default value: `false`
+     * Configure Domain-Lookup
+     *   - Default value: `false`
      * 
      */
     @Export(name="domainLookup", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> domainLookup;
 
     /**
-     * @return Configure Domain-Lookup - Default value: `false`
+     * @return Configure Domain-Lookup
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> domainLookup() {
@@ -265,14 +273,16 @@ public class CedgeGlobalFeatureTemplate extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.domainLookupVariable);
     }
     /**
-     * Set Passive FTP - Default value: `false`
+     * Set Passive FTP
+     *   - Default value: `false`
      * 
      */
     @Export(name="ftpPassive", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> ftpPassive;
 
     /**
-     * @return Set Passive FTP - Default value: `false`
+     * @return Set Passive FTP
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> ftpPassive() {
@@ -293,14 +303,16 @@ public class CedgeGlobalFeatureTemplate extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.ftpPassiveVariable);
     }
     /**
-     * Set preference for HTTP Authentication - Choices: `local`, `aaa`
+     * Set preference for HTTP Authentication
+     *   - Choices: `local`, `aaa`
      * 
      */
     @Export(name="httpAuthentication", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> httpAuthentication;
 
     /**
-     * @return Set preference for HTTP Authentication - Choices: `local`, `aaa`
+     * @return Set preference for HTTP Authentication
+     *   - Choices: `local`, `aaa`
      * 
      */
     public Output<Optional<String>> httpAuthentication() {
@@ -321,14 +333,16 @@ public class CedgeGlobalFeatureTemplate extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.httpAuthenticationVariable);
     }
     /**
-     * Set HTTP Server - Default value: `false`
+     * Set HTTP Server
+     *   - Default value: `false`
      * 
      */
     @Export(name="httpServer", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> httpServer;
 
     /**
-     * @return Set HTTP Server - Default value: `false`
+     * @return Set HTTP Server
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> httpServer() {
@@ -349,14 +363,16 @@ public class CedgeGlobalFeatureTemplate extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.httpServerVariable);
     }
     /**
-     * Set HTTPS Server - Default value: `false`
+     * Set HTTPS Server
+     *   - Default value: `false`
      * 
      */
     @Export(name="httpsServer", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> httpsServer;
 
     /**
-     * @return Set HTTPS Server - Default value: `false`
+     * @return Set HTTPS Server
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> httpsServer() {
@@ -377,14 +393,16 @@ public class CedgeGlobalFeatureTemplate extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.httpsServerVariable);
     }
     /**
-     * Set Source Route - Default value: `false`
+     * Set Source Route
+     *   - Default value: `false`
      * 
      */
     @Export(name="ipSourceRouting", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> ipSourceRouting;
 
     /**
-     * @return Set Source Route - Default value: `false`
+     * @return Set Source Route
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> ipSourceRouting() {
@@ -405,14 +423,16 @@ public class CedgeGlobalFeatureTemplate extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.ipSourceRoutingVariable);
     }
     /**
-     * Configure Telnet (Outbound) - Default value: `false`
+     * Configure Telnet (Outbound)
+     *   - Default value: `false`
      * 
      */
     @Export(name="lineVty", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> lineVty;
 
     /**
-     * @return Configure Telnet (Outbound) - Default value: `false`
+     * @return Configure Telnet (Outbound)
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> lineVty() {
@@ -433,14 +453,16 @@ public class CedgeGlobalFeatureTemplate extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.lineVtyVariable);
     }
     /**
-     * Configure LLDP - Default value: `true`
+     * Configure LLDP
+     *   - Default value: `true`
      * 
      */
     @Export(name="lldp", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> lldp;
 
     /**
-     * @return Configure LLDP - Default value: `true`
+     * @return Configure LLDP
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> lldp() {
@@ -475,14 +497,18 @@ public class CedgeGlobalFeatureTemplate extends com.pulumi.resources.CustomResou
         return this.name;
     }
     /**
-     * Set NAT64 TCP session timeout, in seconds - Range: `1`-`536870` - Default value: `3600`
+     * Set NAT64 TCP session timeout, in seconds
+     *   - Range: `1`-`536870`
+     *   - Default value: `3600`
      * 
      */
     @Export(name="nat64TcpTimeout", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> nat64TcpTimeout;
 
     /**
-     * @return Set NAT64 TCP session timeout, in seconds - Range: `1`-`536870` - Default value: `3600`
+     * @return Set NAT64 TCP session timeout, in seconds
+     *   - Range: `1`-`536870`
+     *   - Default value: `3600`
      * 
      */
     public Output<Optional<Integer>> nat64TcpTimeout() {
@@ -503,14 +529,18 @@ public class CedgeGlobalFeatureTemplate extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.nat64TcpTimeoutVariable);
     }
     /**
-     * Set NAT64 UDP session timeout, in seconds - Range: `1`-`536870` - Default value: `300`
+     * Set NAT64 UDP session timeout, in seconds
+     *   - Range: `1`-`536870`
+     *   - Default value: `300`
      * 
      */
     @Export(name="nat64UdpTimeout", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> nat64UdpTimeout;
 
     /**
-     * @return Set NAT64 UDP session timeout, in seconds - Range: `1`-`536870` - Default value: `300`
+     * @return Set NAT64 UDP session timeout, in seconds
+     *   - Range: `1`-`536870`
+     *   - Default value: `300`
      * 
      */
     public Output<Optional<Integer>> nat64UdpTimeout() {
@@ -531,14 +561,16 @@ public class CedgeGlobalFeatureTemplate extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.nat64UdpTimeoutVariable);
     }
     /**
-     * Set RSH/RCP - Default value: `false`
+     * Set RSH/RCP
+     *   - Default value: `false`
      * 
      */
     @Export(name="rshRcp", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> rshRcp;
 
     /**
-     * @return Set RSH/RCP - Default value: `false`
+     * @return Set RSH/RCP
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> rshRcp() {
@@ -559,14 +591,16 @@ public class CedgeGlobalFeatureTemplate extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.rshRcpVariable);
     }
     /**
-     * Configure SNMP Ifindex Persist - Default value: `true`
+     * Configure SNMP Ifindex Persist
+     *   - Default value: `true`
      * 
      */
     @Export(name="snmpIfindexPersist", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> snmpIfindexPersist;
 
     /**
-     * @return Configure SNMP Ifindex Persist - Default value: `true`
+     * @return Configure SNMP Ifindex Persist
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> snmpIfindexPersist() {
@@ -615,14 +649,16 @@ public class CedgeGlobalFeatureTemplate extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.sourceInterfaceVariable);
     }
     /**
-     * Set SSH version - Range: `1`-`2`
+     * Set SSH version
+     *   - Range: `1`-`2`
      * 
      */
     @Export(name="sshVersion", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> sshVersion;
 
     /**
-     * @return Set SSH version - Range: `1`-`2`
+     * @return Set SSH version
+     *   - Range: `1`-`2`
      * 
      */
     public Output<Optional<Integer>> sshVersion() {
@@ -643,14 +679,16 @@ public class CedgeGlobalFeatureTemplate extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.sshVersionVariable);
     }
     /**
-     * Configure tcp-keepalives-in - Default value: `true`
+     * Configure tcp-keepalives-in
+     *   - Default value: `true`
      * 
      */
     @Export(name="tcpKeepalivesIn", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tcpKeepalivesIn;
 
     /**
-     * @return Configure tcp-keepalives-in - Default value: `true`
+     * @return Configure tcp-keepalives-in
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> tcpKeepalivesIn() {
@@ -671,14 +709,16 @@ public class CedgeGlobalFeatureTemplate extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.tcpKeepalivesInVariable);
     }
     /**
-     * Configure tcp-keepalives-out - Default value: `true`
+     * Configure tcp-keepalives-out
+     *   - Default value: `true`
      * 
      */
     @Export(name="tcpKeepalivesOut", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tcpKeepalivesOut;
 
     /**
-     * @return Configure tcp-keepalives-out - Default value: `true`
+     * @return Configure tcp-keepalives-out
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> tcpKeepalivesOut() {
@@ -699,14 +739,16 @@ public class CedgeGlobalFeatureTemplate extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.tcpKeepalivesOutVariable);
     }
     /**
-     * Configure tcp-small-servers - Default value: `false`
+     * Configure tcp-small-servers
+     *   - Default value: `false`
      * 
      */
     @Export(name="tcpSmallServers", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tcpSmallServers;
 
     /**
-     * @return Configure tcp-small-servers - Default value: `false`
+     * @return Configure tcp-small-servers
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> tcpSmallServers() {
@@ -741,14 +783,16 @@ public class CedgeGlobalFeatureTemplate extends com.pulumi.resources.CustomResou
         return this.templateType;
     }
     /**
-     * Configure udp-small-servers - Default value: `false`
+     * Configure udp-small-servers
+     *   - Default value: `false`
      * 
      */
     @Export(name="udpSmallServers", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> udpSmallServers;
 
     /**
-     * @return Configure udp-small-servers - Default value: `false`
+     * @return Configure udp-small-servers
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> udpSmallServers() {
@@ -783,14 +827,16 @@ public class CedgeGlobalFeatureTemplate extends com.pulumi.resources.CustomResou
         return this.version;
     }
     /**
-     * Configure VTY Line Logging - Default value: `false`
+     * Configure VTY Line Logging
+     *   - Default value: `false`
      * 
      */
     @Export(name="vtyLogging", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> vtyLogging;
 
     /**
-     * @return Configure VTY Line Logging - Default value: `false`
+     * @return Configure VTY Line Logging
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> vtyLogging() {

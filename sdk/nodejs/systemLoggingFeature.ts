@@ -51,55 +51,60 @@ export class SystemLoggingFeature extends pulumi.CustomResource {
     /**
      * The description of the Feature
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * Enable logging to local disk - Default value: `true`
+     * Enable logging to local disk
+     *   - Default value: `true`
      */
-    public readonly diskEnable!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly diskEnableVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
-     */
-    public readonly diskFileRotate!: pulumi.Output<number | undefined>;
+    declare public readonly diskEnable: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly diskFileRotateVariable!: pulumi.Output<string | undefined>;
+    declare public readonly diskEnableVariable: pulumi.Output<string | undefined>;
     /**
-     * Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+     * Set number of syslog files to create before discarding oldest files
+     *   - Range: `1`-`10`
+     *   - Default value: `10`
      */
-    public readonly diskFileSize!: pulumi.Output<number | undefined>;
+    declare public readonly diskFileRotate: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly diskFileSizeVariable!: pulumi.Output<string | undefined>;
+    declare public readonly diskFileRotateVariable: pulumi.Output<string | undefined>;
+    /**
+     * Set maximum size of file before it is rotated
+     *   - Range: `1`-`20`
+     *   - Default value: `10`
+     */
+    declare public readonly diskFileSize: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly diskFileSizeVariable: pulumi.Output<string | undefined>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
      * Enable logging to remote server
      */
-    public readonly ipv4Servers!: pulumi.Output<outputs.SystemLoggingFeatureIpv4Server[] | undefined>;
+    declare public readonly ipv4Servers: pulumi.Output<outputs.SystemLoggingFeatureIpv4Server[] | undefined>;
     /**
      * Enable logging to remote ipv6 server
      */
-    public readonly ipv6Servers!: pulumi.Output<outputs.SystemLoggingFeatureIpv6Server[] | undefined>;
+    declare public readonly ipv6Servers: pulumi.Output<outputs.SystemLoggingFeatureIpv6Server[] | undefined>;
     /**
      * The name of the Feature
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * Configure a TLS profile
      */
-    public readonly tlsProfiles!: pulumi.Output<outputs.SystemLoggingFeatureTlsProfile[] | undefined>;
+    declare public readonly tlsProfiles: pulumi.Output<outputs.SystemLoggingFeatureTlsProfile[] | undefined>;
     /**
      * The version of the Feature
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a SystemLoggingFeature resource with the given unique name, arguments, and options.
@@ -114,36 +119,36 @@ export class SystemLoggingFeature extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SystemLoggingFeatureState | undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["diskEnable"] = state ? state.diskEnable : undefined;
-            resourceInputs["diskEnableVariable"] = state ? state.diskEnableVariable : undefined;
-            resourceInputs["diskFileRotate"] = state ? state.diskFileRotate : undefined;
-            resourceInputs["diskFileRotateVariable"] = state ? state.diskFileRotateVariable : undefined;
-            resourceInputs["diskFileSize"] = state ? state.diskFileSize : undefined;
-            resourceInputs["diskFileSizeVariable"] = state ? state.diskFileSizeVariable : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["ipv4Servers"] = state ? state.ipv4Servers : undefined;
-            resourceInputs["ipv6Servers"] = state ? state.ipv6Servers : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["tlsProfiles"] = state ? state.tlsProfiles : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["diskEnable"] = state?.diskEnable;
+            resourceInputs["diskEnableVariable"] = state?.diskEnableVariable;
+            resourceInputs["diskFileRotate"] = state?.diskFileRotate;
+            resourceInputs["diskFileRotateVariable"] = state?.diskFileRotateVariable;
+            resourceInputs["diskFileSize"] = state?.diskFileSize;
+            resourceInputs["diskFileSizeVariable"] = state?.diskFileSizeVariable;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["ipv4Servers"] = state?.ipv4Servers;
+            resourceInputs["ipv6Servers"] = state?.ipv6Servers;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["tlsProfiles"] = state?.tlsProfiles;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as SystemLoggingFeatureArgs | undefined;
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["diskEnable"] = args ? args.diskEnable : undefined;
-            resourceInputs["diskEnableVariable"] = args ? args.diskEnableVariable : undefined;
-            resourceInputs["diskFileRotate"] = args ? args.diskFileRotate : undefined;
-            resourceInputs["diskFileRotateVariable"] = args ? args.diskFileRotateVariable : undefined;
-            resourceInputs["diskFileSize"] = args ? args.diskFileSize : undefined;
-            resourceInputs["diskFileSizeVariable"] = args ? args.diskFileSizeVariable : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["ipv4Servers"] = args ? args.ipv4Servers : undefined;
-            resourceInputs["ipv6Servers"] = args ? args.ipv6Servers : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["tlsProfiles"] = args ? args.tlsProfiles : undefined;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["diskEnable"] = args?.diskEnable;
+            resourceInputs["diskEnableVariable"] = args?.diskEnableVariable;
+            resourceInputs["diskFileRotate"] = args?.diskFileRotate;
+            resourceInputs["diskFileRotateVariable"] = args?.diskFileRotateVariable;
+            resourceInputs["diskFileSize"] = args?.diskFileSize;
+            resourceInputs["diskFileSizeVariable"] = args?.diskFileSizeVariable;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["ipv4Servers"] = args?.ipv4Servers;
+            resourceInputs["ipv6Servers"] = args?.ipv6Servers;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["tlsProfiles"] = args?.tlsProfiles;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -160,7 +165,8 @@ export interface SystemLoggingFeatureState {
      */
     description?: pulumi.Input<string>;
     /**
-     * Enable logging to local disk - Default value: `true`
+     * Enable logging to local disk
+     *   - Default value: `true`
      */
     diskEnable?: pulumi.Input<boolean>;
     /**
@@ -168,7 +174,9 @@ export interface SystemLoggingFeatureState {
      */
     diskEnableVariable?: pulumi.Input<string>;
     /**
-     * Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+     * Set number of syslog files to create before discarding oldest files
+     *   - Range: `1`-`10`
+     *   - Default value: `10`
      */
     diskFileRotate?: pulumi.Input<number>;
     /**
@@ -176,7 +184,9 @@ export interface SystemLoggingFeatureState {
      */
     diskFileRotateVariable?: pulumi.Input<string>;
     /**
-     * Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+     * Set maximum size of file before it is rotated
+     *   - Range: `1`-`20`
+     *   - Default value: `10`
      */
     diskFileSize?: pulumi.Input<number>;
     /**
@@ -218,7 +228,8 @@ export interface SystemLoggingFeatureArgs {
      */
     description?: pulumi.Input<string>;
     /**
-     * Enable logging to local disk - Default value: `true`
+     * Enable logging to local disk
+     *   - Default value: `true`
      */
     diskEnable?: pulumi.Input<boolean>;
     /**
@@ -226,7 +237,9 @@ export interface SystemLoggingFeatureArgs {
      */
     diskEnableVariable?: pulumi.Input<string>;
     /**
-     * Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+     * Set number of syslog files to create before discarding oldest files
+     *   - Range: `1`-`10`
+     *   - Default value: `10`
      */
     diskFileRotate?: pulumi.Input<number>;
     /**
@@ -234,7 +247,9 @@ export interface SystemLoggingFeatureArgs {
      */
     diskFileRotateVariable?: pulumi.Input<string>;
     /**
-     * Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+     * Set maximum size of file before it is rotated
+     *   - Range: `1`-`20`
+     *   - Default value: `10`
      */
     diskFileSize?: pulumi.Input<number>;
     /**

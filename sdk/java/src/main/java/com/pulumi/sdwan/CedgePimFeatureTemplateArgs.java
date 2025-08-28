@@ -24,14 +24,16 @@ public final class CedgePimFeatureTemplateArgs extends com.pulumi.resources.Reso
     public static final CedgePimFeatureTemplateArgs Empty = new CedgePimFeatureTemplateArgs();
 
     /**
-     * Enable or disable auto-RP - Default value: `false`
+     * Enable or disable auto-RP
+     *   - Default value: `false`
      * 
      */
     @Import(name="autoRp")
     private @Nullable Output<Boolean> autoRp;
 
     /**
-     * @return Enable or disable auto-RP - Default value: `false`
+     * @return Enable or disable auto-RP
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> autoRp() {
@@ -84,14 +86,16 @@ public final class CedgePimFeatureTemplateArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Turn SSM On / Off - Default value: `false`
+     * Turn SSM On / Off
+     *   - Default value: `false`
      * 
      */
     @Import(name="default")
     private @Nullable Output<Boolean> default_;
 
     /**
-     * @return Turn SSM On / Off - Default value: `false`
+     * @return Turn SSM On / Off
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> default_() {
@@ -129,18 +133,16 @@ public final class CedgePimFeatureTemplateArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Import(name="deviceTypes", required=true)
     private Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Output<List<String>> deviceTypes() {
@@ -238,14 +240,16 @@ public final class CedgePimFeatureTemplateArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Set RP candidate priority - Range: `0`-`255`
+     * Set RP candidate priority
+     *   - Range: `0`-`255`
      * 
      */
     @Import(name="priority")
     private @Nullable Output<Integer> priority;
 
     /**
-     * @return Set RP candidate priority - Range: `0`-`255`
+     * @return Set RP candidate priority
+     *   - Range: `0`-`255`
      * 
      */
     public Optional<Output<Integer>> priority() {
@@ -373,14 +377,16 @@ public final class CedgePimFeatureTemplateArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Set RP Discovery Scope - Range: `1`-`255`
+     * Set RP Discovery Scope
+     *   - Range: `1`-`255`
      * 
      */
     @Import(name="scope")
     private @Nullable Output<Integer> scope;
 
     /**
-     * @return Set RP Discovery Scope - Range: `1`-`255`
+     * @return Set RP Discovery Scope
+     *   - Range: `1`-`255`
      * 
      */
     public Optional<Output<Integer>> scope() {
@@ -403,14 +409,16 @@ public final class CedgePimFeatureTemplateArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity`
+     * Set when PIM router joins the SPT (kbps)
+     *   - Choices: `0`, `infinity`
      * 
      */
     @Import(name="sptThreshold")
     private @Nullable Output<String> sptThreshold;
 
     /**
-     * @return Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity`
+     * @return Set when PIM router joins the SPT (kbps)
+     *   - Choices: `0`, `infinity`
      * 
      */
     public Optional<Output<String>> sptThreshold() {
@@ -483,7 +491,8 @@ public final class CedgePimFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param autoRp Enable or disable auto-RP - Default value: `false`
+         * @param autoRp Enable or disable auto-RP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -494,7 +503,8 @@ public final class CedgePimFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param autoRp Enable or disable auto-RP - Default value: `false`
+         * @param autoRp Enable or disable auto-RP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -567,7 +577,8 @@ public final class CedgePimFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param default_ Turn SSM On / Off - Default value: `false`
+         * @param default_ Turn SSM On / Off
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -578,7 +589,8 @@ public final class CedgePimFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param default_ Turn SSM On / Off - Default value: `false`
+         * @param default_ Turn SSM On / Off
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -630,9 +642,8 @@ public final class CedgePimFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -643,9 +654,8 @@ public final class CedgePimFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -655,9 +665,8 @@ public final class CedgePimFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -803,7 +812,8 @@ public final class CedgePimFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param priority Set RP candidate priority - Range: `0`-`255`
+         * @param priority Set RP candidate priority
+         *   - Range: `0`-`255`
          * 
          * @return builder
          * 
@@ -814,7 +824,8 @@ public final class CedgePimFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param priority Set RP candidate priority - Range: `0`-`255`
+         * @param priority Set RP candidate priority
+         *   - Range: `0`-`255`
          * 
          * @return builder
          * 
@@ -1022,7 +1033,8 @@ public final class CedgePimFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param scope Set RP Discovery Scope - Range: `1`-`255`
+         * @param scope Set RP Discovery Scope
+         *   - Range: `1`-`255`
          * 
          * @return builder
          * 
@@ -1033,7 +1045,8 @@ public final class CedgePimFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param scope Set RP Discovery Scope - Range: `1`-`255`
+         * @param scope Set RP Discovery Scope
+         *   - Range: `1`-`255`
          * 
          * @return builder
          * 
@@ -1064,7 +1077,8 @@ public final class CedgePimFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param sptThreshold Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity`
+         * @param sptThreshold Set when PIM router joins the SPT (kbps)
+         *   - Choices: `0`, `infinity`
          * 
          * @return builder
          * 
@@ -1075,7 +1089,8 @@ public final class CedgePimFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param sptThreshold Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity`
+         * @param sptThreshold Set when PIM router joins the SPT (kbps)
+         *   - Choices: `0`, `infinity`
          * 
          * @return builder
          * 

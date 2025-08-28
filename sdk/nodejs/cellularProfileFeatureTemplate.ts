@@ -71,113 +71,116 @@ export class CellularProfileFeatureTemplate extends pulumi.CustomResource {
     /**
      * Set access point name
      */
-    public readonly accessPointName!: pulumi.Output<string | undefined>;
+    declare public readonly accessPointName: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly accessPointNameVariable!: pulumi.Output<string | undefined>;
+    declare public readonly accessPointNameVariable: pulumi.Output<string | undefined>;
     /**
-     * Set authentication type - Choices: `None`, `PAP`, `CHAP`, `PAP/CHAP` - Default value: `None`
+     * Set authentication type
+     *   - Choices: `None`, `PAP`, `CHAP`, `PAP/CHAP`
+     *   - Default value: `None`
      */
-    public readonly authenticationType!: pulumi.Output<string | undefined>;
+    declare public readonly authenticationType: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly authenticationTypeVariable!: pulumi.Output<string | undefined>;
+    declare public readonly authenticationTypeVariable: pulumi.Output<string | undefined>;
     /**
      * The description of the feature template
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    public readonly deviceTypes!: pulumi.Output<string[]>;
+    declare public readonly deviceTypes: pulumi.Output<string[]>;
     /**
      * Set interface name
      */
-    public readonly ifName!: pulumi.Output<string | undefined>;
+    declare public readonly ifName: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly ifNameVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ifNameVariable: pulumi.Output<string | undefined>;
     /**
      * Set IP address
      */
-    public readonly ipAddress!: pulumi.Output<string | undefined>;
+    declare public readonly ipAddress: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly ipAddressVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ipAddressVariable: pulumi.Output<string | undefined>;
     /**
      * The name of the feature template
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
-     * Set packet data network type - Choices: `ipv4`, `ipv6`, `ipv46`
+     * Set packet data network type
+     *   - Choices: `ipv4`, `ipv6`, `ipv46`
      */
-    public readonly packetDataNetworkType!: pulumi.Output<string | undefined>;
+    declare public readonly packetDataNetworkType: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly packetDataNetworkTypeVariable!: pulumi.Output<string | undefined>;
+    declare public readonly packetDataNetworkTypeVariable: pulumi.Output<string | undefined>;
     /**
      * Set the address of the primary DNS server
      */
-    public readonly primaryDnsAddress!: pulumi.Output<string | undefined>;
+    declare public readonly primaryDnsAddress: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly primaryDnsAddressVariable!: pulumi.Output<string | undefined>;
+    declare public readonly primaryDnsAddressVariable: pulumi.Output<string | undefined>;
     /**
-     * Set Profile ID - Range: `1`-`16`
+     * Set Profile ID
+     *   - Range: `1`-`16`
      */
-    public readonly profileId!: pulumi.Output<number | undefined>;
+    declare public readonly profileId: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly profileIdVariable!: pulumi.Output<string | undefined>;
+    declare public readonly profileIdVariable: pulumi.Output<string | undefined>;
     /**
      * Set profile name
      */
-    public readonly profileName!: pulumi.Output<string | undefined>;
+    declare public readonly profileName: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly profileNameVariable!: pulumi.Output<string | undefined>;
+    declare public readonly profileNameVariable: pulumi.Output<string | undefined>;
     /**
      * Set the profile password
      */
-    public readonly profilePassword!: pulumi.Output<string | undefined>;
+    declare public readonly profilePassword: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly profilePasswordVariable!: pulumi.Output<string | undefined>;
+    declare public readonly profilePasswordVariable: pulumi.Output<string | undefined>;
     /**
      * Set the profile username
      */
-    public readonly profileUsername!: pulumi.Output<string | undefined>;
+    declare public readonly profileUsername: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly profileUsernameVariable!: pulumi.Output<string | undefined>;
+    declare public readonly profileUsernameVariable: pulumi.Output<string | undefined>;
     /**
      * Set the address of the secondary DNS server
      */
-    public readonly secondaryDnsAddress!: pulumi.Output<string | undefined>;
+    declare public readonly secondaryDnsAddress: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly secondaryDnsAddressVariable!: pulumi.Output<string | undefined>;
+    declare public readonly secondaryDnsAddressVariable: pulumi.Output<string | undefined>;
     /**
      * The template type
      */
-    public /*out*/ readonly templateType!: pulumi.Output<string>;
+    declare public /*out*/ readonly templateType: pulumi.Output<string>;
     /**
      * The version of the feature template
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a CellularProfileFeatureTemplate resource with the given unique name, arguments, and options.
@@ -192,66 +195,66 @@ export class CellularProfileFeatureTemplate extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as CellularProfileFeatureTemplateState | undefined;
-            resourceInputs["accessPointName"] = state ? state.accessPointName : undefined;
-            resourceInputs["accessPointNameVariable"] = state ? state.accessPointNameVariable : undefined;
-            resourceInputs["authenticationType"] = state ? state.authenticationType : undefined;
-            resourceInputs["authenticationTypeVariable"] = state ? state.authenticationTypeVariable : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["deviceTypes"] = state ? state.deviceTypes : undefined;
-            resourceInputs["ifName"] = state ? state.ifName : undefined;
-            resourceInputs["ifNameVariable"] = state ? state.ifNameVariable : undefined;
-            resourceInputs["ipAddress"] = state ? state.ipAddress : undefined;
-            resourceInputs["ipAddressVariable"] = state ? state.ipAddressVariable : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["packetDataNetworkType"] = state ? state.packetDataNetworkType : undefined;
-            resourceInputs["packetDataNetworkTypeVariable"] = state ? state.packetDataNetworkTypeVariable : undefined;
-            resourceInputs["primaryDnsAddress"] = state ? state.primaryDnsAddress : undefined;
-            resourceInputs["primaryDnsAddressVariable"] = state ? state.primaryDnsAddressVariable : undefined;
-            resourceInputs["profileId"] = state ? state.profileId : undefined;
-            resourceInputs["profileIdVariable"] = state ? state.profileIdVariable : undefined;
-            resourceInputs["profileName"] = state ? state.profileName : undefined;
-            resourceInputs["profileNameVariable"] = state ? state.profileNameVariable : undefined;
-            resourceInputs["profilePassword"] = state ? state.profilePassword : undefined;
-            resourceInputs["profilePasswordVariable"] = state ? state.profilePasswordVariable : undefined;
-            resourceInputs["profileUsername"] = state ? state.profileUsername : undefined;
-            resourceInputs["profileUsernameVariable"] = state ? state.profileUsernameVariable : undefined;
-            resourceInputs["secondaryDnsAddress"] = state ? state.secondaryDnsAddress : undefined;
-            resourceInputs["secondaryDnsAddressVariable"] = state ? state.secondaryDnsAddressVariable : undefined;
-            resourceInputs["templateType"] = state ? state.templateType : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["accessPointName"] = state?.accessPointName;
+            resourceInputs["accessPointNameVariable"] = state?.accessPointNameVariable;
+            resourceInputs["authenticationType"] = state?.authenticationType;
+            resourceInputs["authenticationTypeVariable"] = state?.authenticationTypeVariable;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["deviceTypes"] = state?.deviceTypes;
+            resourceInputs["ifName"] = state?.ifName;
+            resourceInputs["ifNameVariable"] = state?.ifNameVariable;
+            resourceInputs["ipAddress"] = state?.ipAddress;
+            resourceInputs["ipAddressVariable"] = state?.ipAddressVariable;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["packetDataNetworkType"] = state?.packetDataNetworkType;
+            resourceInputs["packetDataNetworkTypeVariable"] = state?.packetDataNetworkTypeVariable;
+            resourceInputs["primaryDnsAddress"] = state?.primaryDnsAddress;
+            resourceInputs["primaryDnsAddressVariable"] = state?.primaryDnsAddressVariable;
+            resourceInputs["profileId"] = state?.profileId;
+            resourceInputs["profileIdVariable"] = state?.profileIdVariable;
+            resourceInputs["profileName"] = state?.profileName;
+            resourceInputs["profileNameVariable"] = state?.profileNameVariable;
+            resourceInputs["profilePassword"] = state?.profilePassword;
+            resourceInputs["profilePasswordVariable"] = state?.profilePasswordVariable;
+            resourceInputs["profileUsername"] = state?.profileUsername;
+            resourceInputs["profileUsernameVariable"] = state?.profileUsernameVariable;
+            resourceInputs["secondaryDnsAddress"] = state?.secondaryDnsAddress;
+            resourceInputs["secondaryDnsAddressVariable"] = state?.secondaryDnsAddressVariable;
+            resourceInputs["templateType"] = state?.templateType;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as CellularProfileFeatureTemplateArgs | undefined;
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            if ((!args || args.deviceTypes === undefined) && !opts.urn) {
+            if (args?.deviceTypes === undefined && !opts.urn) {
                 throw new Error("Missing required property 'deviceTypes'");
             }
-            resourceInputs["accessPointName"] = args ? args.accessPointName : undefined;
-            resourceInputs["accessPointNameVariable"] = args ? args.accessPointNameVariable : undefined;
-            resourceInputs["authenticationType"] = args ? args.authenticationType : undefined;
-            resourceInputs["authenticationTypeVariable"] = args ? args.authenticationTypeVariable : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["deviceTypes"] = args ? args.deviceTypes : undefined;
-            resourceInputs["ifName"] = args ? args.ifName : undefined;
-            resourceInputs["ifNameVariable"] = args ? args.ifNameVariable : undefined;
-            resourceInputs["ipAddress"] = args ? args.ipAddress : undefined;
-            resourceInputs["ipAddressVariable"] = args ? args.ipAddressVariable : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["packetDataNetworkType"] = args ? args.packetDataNetworkType : undefined;
-            resourceInputs["packetDataNetworkTypeVariable"] = args ? args.packetDataNetworkTypeVariable : undefined;
-            resourceInputs["primaryDnsAddress"] = args ? args.primaryDnsAddress : undefined;
-            resourceInputs["primaryDnsAddressVariable"] = args ? args.primaryDnsAddressVariable : undefined;
-            resourceInputs["profileId"] = args ? args.profileId : undefined;
-            resourceInputs["profileIdVariable"] = args ? args.profileIdVariable : undefined;
-            resourceInputs["profileName"] = args ? args.profileName : undefined;
-            resourceInputs["profileNameVariable"] = args ? args.profileNameVariable : undefined;
-            resourceInputs["profilePassword"] = args ? args.profilePassword : undefined;
-            resourceInputs["profilePasswordVariable"] = args ? args.profilePasswordVariable : undefined;
-            resourceInputs["profileUsername"] = args ? args.profileUsername : undefined;
-            resourceInputs["profileUsernameVariable"] = args ? args.profileUsernameVariable : undefined;
-            resourceInputs["secondaryDnsAddress"] = args ? args.secondaryDnsAddress : undefined;
-            resourceInputs["secondaryDnsAddressVariable"] = args ? args.secondaryDnsAddressVariable : undefined;
+            resourceInputs["accessPointName"] = args?.accessPointName;
+            resourceInputs["accessPointNameVariable"] = args?.accessPointNameVariable;
+            resourceInputs["authenticationType"] = args?.authenticationType;
+            resourceInputs["authenticationTypeVariable"] = args?.authenticationTypeVariable;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["deviceTypes"] = args?.deviceTypes;
+            resourceInputs["ifName"] = args?.ifName;
+            resourceInputs["ifNameVariable"] = args?.ifNameVariable;
+            resourceInputs["ipAddress"] = args?.ipAddress;
+            resourceInputs["ipAddressVariable"] = args?.ipAddressVariable;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["packetDataNetworkType"] = args?.packetDataNetworkType;
+            resourceInputs["packetDataNetworkTypeVariable"] = args?.packetDataNetworkTypeVariable;
+            resourceInputs["primaryDnsAddress"] = args?.primaryDnsAddress;
+            resourceInputs["primaryDnsAddressVariable"] = args?.primaryDnsAddressVariable;
+            resourceInputs["profileId"] = args?.profileId;
+            resourceInputs["profileIdVariable"] = args?.profileIdVariable;
+            resourceInputs["profileName"] = args?.profileName;
+            resourceInputs["profileNameVariable"] = args?.profileNameVariable;
+            resourceInputs["profilePassword"] = args?.profilePassword;
+            resourceInputs["profilePasswordVariable"] = args?.profilePasswordVariable;
+            resourceInputs["profileUsername"] = args?.profileUsername;
+            resourceInputs["profileUsernameVariable"] = args?.profileUsernameVariable;
+            resourceInputs["secondaryDnsAddress"] = args?.secondaryDnsAddress;
+            resourceInputs["secondaryDnsAddressVariable"] = args?.secondaryDnsAddressVariable;
             resourceInputs["templateType"] = undefined /*out*/;
             resourceInputs["version"] = undefined /*out*/;
         }
@@ -273,7 +276,9 @@ export interface CellularProfileFeatureTemplateState {
      */
     accessPointNameVariable?: pulumi.Input<string>;
     /**
-     * Set authentication type - Choices: `None`, `PAP`, `CHAP`, `PAP/CHAP` - Default value: `None`
+     * Set authentication type
+     *   - Choices: `None`, `PAP`, `CHAP`, `PAP/CHAP`
+     *   - Default value: `None`
      */
     authenticationType?: pulumi.Input<string>;
     /**
@@ -285,9 +290,8 @@ export interface CellularProfileFeatureTemplateState {
      */
     description?: pulumi.Input<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
     deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
     /**
@@ -311,7 +315,8 @@ export interface CellularProfileFeatureTemplateState {
      */
     name?: pulumi.Input<string>;
     /**
-     * Set packet data network type - Choices: `ipv4`, `ipv6`, `ipv46`
+     * Set packet data network type
+     *   - Choices: `ipv4`, `ipv6`, `ipv46`
      */
     packetDataNetworkType?: pulumi.Input<string>;
     /**
@@ -327,7 +332,8 @@ export interface CellularProfileFeatureTemplateState {
      */
     primaryDnsAddressVariable?: pulumi.Input<string>;
     /**
-     * Set Profile ID - Range: `1`-`16`
+     * Set Profile ID
+     *   - Range: `1`-`16`
      */
     profileId?: pulumi.Input<number>;
     /**
@@ -389,7 +395,9 @@ export interface CellularProfileFeatureTemplateArgs {
      */
     accessPointNameVariable?: pulumi.Input<string>;
     /**
-     * Set authentication type - Choices: `None`, `PAP`, `CHAP`, `PAP/CHAP` - Default value: `None`
+     * Set authentication type
+     *   - Choices: `None`, `PAP`, `CHAP`, `PAP/CHAP`
+     *   - Default value: `None`
      */
     authenticationType?: pulumi.Input<string>;
     /**
@@ -401,9 +409,8 @@ export interface CellularProfileFeatureTemplateArgs {
      */
     description: pulumi.Input<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
     deviceTypes: pulumi.Input<pulumi.Input<string>[]>;
     /**
@@ -427,7 +434,8 @@ export interface CellularProfileFeatureTemplateArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * Set packet data network type - Choices: `ipv4`, `ipv6`, `ipv46`
+     * Set packet data network type
+     *   - Choices: `ipv4`, `ipv6`, `ipv46`
      */
     packetDataNetworkType?: pulumi.Input<string>;
     /**
@@ -443,7 +451,8 @@ export interface CellularProfileFeatureTemplateArgs {
      */
     primaryDnsAddressVariable?: pulumi.Input<string>;
     /**
-     * Set Profile ID - Range: `1`-`16`
+     * Set Profile ID
+     *   - Range: `1`-`16`
      */
     profileId?: pulumi.Input<number>;
     /**

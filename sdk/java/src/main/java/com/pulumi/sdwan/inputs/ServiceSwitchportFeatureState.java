@@ -20,14 +20,18 @@ public final class ServiceSwitchportFeatureState extends com.pulumi.resources.Re
     public static final ServiceSwitchportFeatureState Empty = new ServiceSwitchportFeatureState();
 
     /**
-     * Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+     * Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+     *   - Range: `0`-`1000000`
+     *   - Default value: `300`
      * 
      */
     @Import(name="ageOutTime")
     private @Nullable Output<Integer> ageOutTime;
 
     /**
-     * @return Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+     * @return Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+     *   - Range: `0`-`1000000`
+     *   - Default value: `300`
      * 
      */
     public Optional<Output<Integer>> ageOutTime() {
@@ -171,7 +175,9 @@ public final class ServiceSwitchportFeatureState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param ageOutTime Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+         * @param ageOutTime Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+         *   - Range: `0`-`1000000`
+         *   - Default value: `300`
          * 
          * @return builder
          * 
@@ -182,7 +188,9 @@ public final class ServiceSwitchportFeatureState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param ageOutTime Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+         * @param ageOutTime Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+         *   - Range: `0`-`1000000`
+         *   - Default value: `300`
          * 
          * @return builder
          * 

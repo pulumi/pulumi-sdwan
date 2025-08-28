@@ -47,153 +47,166 @@ export class CiscoTrustsecFeatureTemplate extends pulumi.CustomResource {
     }
 
     /**
-     * Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32
-     * char)
+     * Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32 char)
      */
-    public readonly credentialsId!: pulumi.Output<string | undefined>;
+    declare public readonly credentialsId: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly credentialsIdVariable!: pulumi.Output<string | undefined>;
+    declare public readonly credentialsIdVariable: pulumi.Output<string | undefined>;
     /**
      * Set the password for the device
      */
-    public readonly credentialsPassword!: pulumi.Output<string | undefined>;
+    declare public readonly credentialsPassword: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly credentialsPasswordVariable!: pulumi.Output<string | undefined>;
+    declare public readonly credentialsPasswordVariable: pulumi.Output<string | undefined>;
     /**
      * The description of the feature template
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
-     * Configure Local device security group <2..65519> - Range: `2`-`65519`
+     * Configure Local device security group <2..65519>
+     *   - Range: `2`-`65519`
      */
-    public readonly deviceSgt!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly deviceSgtVariable!: pulumi.Output<string | undefined>;
-    /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-     */
-    public readonly deviceTypes!: pulumi.Output<string[]>;
-    /**
-     * Enable Role-based Access Control enforcement - Default value: `false`
-     */
-    public readonly enableEnforcement!: pulumi.Output<boolean | undefined>;
+    declare public readonly deviceSgt: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly enableEnforcementVariable!: pulumi.Output<string | undefined>;
+    declare public readonly deviceSgtVariable: pulumi.Output<string | undefined>;
     /**
-     * Enable CTS SXP support - Default value: `false`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    public readonly enableSxp!: pulumi.Output<boolean | undefined>;
+    declare public readonly deviceTypes: pulumi.Output<string[]>;
     /**
-     * Configure Maximum allowed hold-time for listener in seconds <1..65534> - Range: `1`-`65534` - Default value: `180`
+     * Enable Role-based Access Control enforcement
+     *   - Default value: `false`
      */
-    public readonly maximumListenerHoldTime!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly maximumListenerHoldTimeVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Configure Minimum allowed hold-time for listener in seconds <1..65534> - Range: `1`-`65534` - Default value: `90`
-     */
-    public readonly minimumListenerHoldTime!: pulumi.Output<number | undefined>;
+    declare public readonly enableEnforcement: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly minimumListenerHoldTimeVariable!: pulumi.Output<string | undefined>;
+    declare public readonly enableEnforcementVariable: pulumi.Output<string | undefined>;
+    /**
+     * Enable CTS SXP support
+     *   - Default value: `false`
+     */
+    declare public readonly enableSxp: pulumi.Output<boolean | undefined>;
+    /**
+     * Configure Maximum allowed hold-time for listener in seconds <1..65534>
+     *   - Range: `1`-`65534`
+     *   - Default value: `180`
+     */
+    declare public readonly maximumListenerHoldTime: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly maximumListenerHoldTimeVariable: pulumi.Output<string | undefined>;
+    /**
+     * Configure Minimum allowed hold-time for listener in seconds <1..65534>
+     *   - Range: `1`-`65534`
+     *   - Default value: `90`
+     */
+    declare public readonly minimumListenerHoldTime: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly minimumListenerHoldTimeVariable: pulumi.Output<string | undefined>;
     /**
      * The name of the feature template
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
-     * Configure Speaker hold-time in seconds <1..65534> - Range: `1`-`65534` - Default value: `120`
+     * Configure Speaker hold-time in seconds <1..65534>
+     *   - Range: `1`-`65534`
+     *   - Default value: `120`
      */
-    public readonly speakerHoldTime!: pulumi.Output<number | undefined>;
+    declare public readonly speakerHoldTime: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly speakerHoldTimeVariable!: pulumi.Output<string | undefined>;
+    declare public readonly speakerHoldTimeVariable: pulumi.Output<string | undefined>;
     /**
      * Configure SXP Connections
      */
-    public readonly sxpConnections!: pulumi.Output<outputs.CiscoTrustsecFeatureTemplateSxpConnection[] | undefined>;
+    declare public readonly sxpConnections: pulumi.Output<outputs.CiscoTrustsecFeatureTemplateSxpConnection[] | undefined>;
     /**
      * Configure SXP default password
      */
-    public readonly sxpDefaultPassword!: pulumi.Output<string | undefined>;
+    declare public readonly sxpDefaultPassword: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly sxpDefaultPasswordVariable!: pulumi.Output<string | undefined>;
+    declare public readonly sxpDefaultPasswordVariable: pulumi.Output<string | undefined>;
     /**
      * Configure SXP key-chain
      */
-    public readonly sxpKeyChain!: pulumi.Output<string | undefined>;
+    declare public readonly sxpKeyChain: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly sxpKeyChainVariable!: pulumi.Output<string | undefined>;
+    declare public readonly sxpKeyChainVariable: pulumi.Output<string | undefined>;
     /**
-     * Enables logging for IP-to-SGT binding changes - Default value: `false`
+     * Enables logging for IP-to-SGT binding changes
+     *   - Default value: `false`
      */
-    public readonly sxpLogBindingChanges!: pulumi.Output<boolean | undefined>;
+    declare public readonly sxpLogBindingChanges: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly sxpLogBindingChangesVariable!: pulumi.Output<string | undefined>;
+    declare public readonly sxpLogBindingChangesVariable: pulumi.Output<string | undefined>;
     /**
      * Configure SXP Node ID <IP, 8 char string or interface name>
      */
-    public readonly sxpNodeId!: pulumi.Output<string | undefined>;
+    declare public readonly sxpNodeId: pulumi.Output<string | undefined>;
     /**
-     * Define SXP Node ID type <IP, 8 char string or interface name> - Choices: `ip`, `interface-name`, `8-char-hex-string` -
-     * Default value: `ip`
+     * Define SXP Node ID type <IP, 8 char string or interface name>
+     *   - Choices: `ip`, `interface-name`, `8-char-hex-string`
+     *   - Default value: `ip`
      */
-    public readonly sxpNodeIdType!: pulumi.Output<string | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly sxpNodeIdVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Configure the SXP reconciliation period in seconds <0..64000> - Range: `0`-`64000` - Default value: `120`
-     */
-    public readonly sxpReconciliationPeriod!: pulumi.Output<number | undefined>;
+    declare public readonly sxpNodeIdType: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly sxpReconciliationPeriodVariable!: pulumi.Output<string | undefined>;
+    declare public readonly sxpNodeIdVariable: pulumi.Output<string | undefined>;
     /**
-     * Configure Retry period for SXP connection in seconds <0..64000> - Range: `0`-`64000` - Default value: `120`
+     * Configure the SXP reconciliation period in seconds <0..64000>
+     *   - Range: `0`-`64000`
+     *   - Default value: `120`
      */
-    public readonly sxpRetryPeriod!: pulumi.Output<number | undefined>;
+    declare public readonly sxpReconciliationPeriod: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly sxpRetryPeriodVariable!: pulumi.Output<string | undefined>;
+    declare public readonly sxpReconciliationPeriodVariable: pulumi.Output<string | undefined>;
+    /**
+     * Configure Retry period for SXP connection in seconds <0..64000>
+     *   - Range: `0`-`64000`
+     *   - Default value: `120`
+     */
+    declare public readonly sxpRetryPeriod: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly sxpRetryPeriodVariable: pulumi.Output<string | undefined>;
     /**
      * SXP Source IP
      */
-    public readonly sxpSourceIp!: pulumi.Output<string | undefined>;
+    declare public readonly sxpSourceIp: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly sxpSourceIpVariable!: pulumi.Output<string | undefined>;
+    declare public readonly sxpSourceIpVariable: pulumi.Output<string | undefined>;
     /**
      * The template type
      */
-    public /*out*/ readonly templateType!: pulumi.Output<string>;
+    declare public /*out*/ readonly templateType: pulumi.Output<string>;
     /**
      * The version of the feature template
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a CiscoTrustsecFeatureTemplate resource with the given unique name, arguments, and options.
@@ -208,84 +221,84 @@ export class CiscoTrustsecFeatureTemplate extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as CiscoTrustsecFeatureTemplateState | undefined;
-            resourceInputs["credentialsId"] = state ? state.credentialsId : undefined;
-            resourceInputs["credentialsIdVariable"] = state ? state.credentialsIdVariable : undefined;
-            resourceInputs["credentialsPassword"] = state ? state.credentialsPassword : undefined;
-            resourceInputs["credentialsPasswordVariable"] = state ? state.credentialsPasswordVariable : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["deviceSgt"] = state ? state.deviceSgt : undefined;
-            resourceInputs["deviceSgtVariable"] = state ? state.deviceSgtVariable : undefined;
-            resourceInputs["deviceTypes"] = state ? state.deviceTypes : undefined;
-            resourceInputs["enableEnforcement"] = state ? state.enableEnforcement : undefined;
-            resourceInputs["enableEnforcementVariable"] = state ? state.enableEnforcementVariable : undefined;
-            resourceInputs["enableSxp"] = state ? state.enableSxp : undefined;
-            resourceInputs["maximumListenerHoldTime"] = state ? state.maximumListenerHoldTime : undefined;
-            resourceInputs["maximumListenerHoldTimeVariable"] = state ? state.maximumListenerHoldTimeVariable : undefined;
-            resourceInputs["minimumListenerHoldTime"] = state ? state.minimumListenerHoldTime : undefined;
-            resourceInputs["minimumListenerHoldTimeVariable"] = state ? state.minimumListenerHoldTimeVariable : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["speakerHoldTime"] = state ? state.speakerHoldTime : undefined;
-            resourceInputs["speakerHoldTimeVariable"] = state ? state.speakerHoldTimeVariable : undefined;
-            resourceInputs["sxpConnections"] = state ? state.sxpConnections : undefined;
-            resourceInputs["sxpDefaultPassword"] = state ? state.sxpDefaultPassword : undefined;
-            resourceInputs["sxpDefaultPasswordVariable"] = state ? state.sxpDefaultPasswordVariable : undefined;
-            resourceInputs["sxpKeyChain"] = state ? state.sxpKeyChain : undefined;
-            resourceInputs["sxpKeyChainVariable"] = state ? state.sxpKeyChainVariable : undefined;
-            resourceInputs["sxpLogBindingChanges"] = state ? state.sxpLogBindingChanges : undefined;
-            resourceInputs["sxpLogBindingChangesVariable"] = state ? state.sxpLogBindingChangesVariable : undefined;
-            resourceInputs["sxpNodeId"] = state ? state.sxpNodeId : undefined;
-            resourceInputs["sxpNodeIdType"] = state ? state.sxpNodeIdType : undefined;
-            resourceInputs["sxpNodeIdVariable"] = state ? state.sxpNodeIdVariable : undefined;
-            resourceInputs["sxpReconciliationPeriod"] = state ? state.sxpReconciliationPeriod : undefined;
-            resourceInputs["sxpReconciliationPeriodVariable"] = state ? state.sxpReconciliationPeriodVariable : undefined;
-            resourceInputs["sxpRetryPeriod"] = state ? state.sxpRetryPeriod : undefined;
-            resourceInputs["sxpRetryPeriodVariable"] = state ? state.sxpRetryPeriodVariable : undefined;
-            resourceInputs["sxpSourceIp"] = state ? state.sxpSourceIp : undefined;
-            resourceInputs["sxpSourceIpVariable"] = state ? state.sxpSourceIpVariable : undefined;
-            resourceInputs["templateType"] = state ? state.templateType : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["credentialsId"] = state?.credentialsId;
+            resourceInputs["credentialsIdVariable"] = state?.credentialsIdVariable;
+            resourceInputs["credentialsPassword"] = state?.credentialsPassword;
+            resourceInputs["credentialsPasswordVariable"] = state?.credentialsPasswordVariable;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["deviceSgt"] = state?.deviceSgt;
+            resourceInputs["deviceSgtVariable"] = state?.deviceSgtVariable;
+            resourceInputs["deviceTypes"] = state?.deviceTypes;
+            resourceInputs["enableEnforcement"] = state?.enableEnforcement;
+            resourceInputs["enableEnforcementVariable"] = state?.enableEnforcementVariable;
+            resourceInputs["enableSxp"] = state?.enableSxp;
+            resourceInputs["maximumListenerHoldTime"] = state?.maximumListenerHoldTime;
+            resourceInputs["maximumListenerHoldTimeVariable"] = state?.maximumListenerHoldTimeVariable;
+            resourceInputs["minimumListenerHoldTime"] = state?.minimumListenerHoldTime;
+            resourceInputs["minimumListenerHoldTimeVariable"] = state?.minimumListenerHoldTimeVariable;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["speakerHoldTime"] = state?.speakerHoldTime;
+            resourceInputs["speakerHoldTimeVariable"] = state?.speakerHoldTimeVariable;
+            resourceInputs["sxpConnections"] = state?.sxpConnections;
+            resourceInputs["sxpDefaultPassword"] = state?.sxpDefaultPassword;
+            resourceInputs["sxpDefaultPasswordVariable"] = state?.sxpDefaultPasswordVariable;
+            resourceInputs["sxpKeyChain"] = state?.sxpKeyChain;
+            resourceInputs["sxpKeyChainVariable"] = state?.sxpKeyChainVariable;
+            resourceInputs["sxpLogBindingChanges"] = state?.sxpLogBindingChanges;
+            resourceInputs["sxpLogBindingChangesVariable"] = state?.sxpLogBindingChangesVariable;
+            resourceInputs["sxpNodeId"] = state?.sxpNodeId;
+            resourceInputs["sxpNodeIdType"] = state?.sxpNodeIdType;
+            resourceInputs["sxpNodeIdVariable"] = state?.sxpNodeIdVariable;
+            resourceInputs["sxpReconciliationPeriod"] = state?.sxpReconciliationPeriod;
+            resourceInputs["sxpReconciliationPeriodVariable"] = state?.sxpReconciliationPeriodVariable;
+            resourceInputs["sxpRetryPeriod"] = state?.sxpRetryPeriod;
+            resourceInputs["sxpRetryPeriodVariable"] = state?.sxpRetryPeriodVariable;
+            resourceInputs["sxpSourceIp"] = state?.sxpSourceIp;
+            resourceInputs["sxpSourceIpVariable"] = state?.sxpSourceIpVariable;
+            resourceInputs["templateType"] = state?.templateType;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as CiscoTrustsecFeatureTemplateArgs | undefined;
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            if ((!args || args.deviceTypes === undefined) && !opts.urn) {
+            if (args?.deviceTypes === undefined && !opts.urn) {
                 throw new Error("Missing required property 'deviceTypes'");
             }
-            resourceInputs["credentialsId"] = args ? args.credentialsId : undefined;
-            resourceInputs["credentialsIdVariable"] = args ? args.credentialsIdVariable : undefined;
-            resourceInputs["credentialsPassword"] = args ? args.credentialsPassword : undefined;
-            resourceInputs["credentialsPasswordVariable"] = args ? args.credentialsPasswordVariable : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["deviceSgt"] = args ? args.deviceSgt : undefined;
-            resourceInputs["deviceSgtVariable"] = args ? args.deviceSgtVariable : undefined;
-            resourceInputs["deviceTypes"] = args ? args.deviceTypes : undefined;
-            resourceInputs["enableEnforcement"] = args ? args.enableEnforcement : undefined;
-            resourceInputs["enableEnforcementVariable"] = args ? args.enableEnforcementVariable : undefined;
-            resourceInputs["enableSxp"] = args ? args.enableSxp : undefined;
-            resourceInputs["maximumListenerHoldTime"] = args ? args.maximumListenerHoldTime : undefined;
-            resourceInputs["maximumListenerHoldTimeVariable"] = args ? args.maximumListenerHoldTimeVariable : undefined;
-            resourceInputs["minimumListenerHoldTime"] = args ? args.minimumListenerHoldTime : undefined;
-            resourceInputs["minimumListenerHoldTimeVariable"] = args ? args.minimumListenerHoldTimeVariable : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["speakerHoldTime"] = args ? args.speakerHoldTime : undefined;
-            resourceInputs["speakerHoldTimeVariable"] = args ? args.speakerHoldTimeVariable : undefined;
-            resourceInputs["sxpConnections"] = args ? args.sxpConnections : undefined;
-            resourceInputs["sxpDefaultPassword"] = args ? args.sxpDefaultPassword : undefined;
-            resourceInputs["sxpDefaultPasswordVariable"] = args ? args.sxpDefaultPasswordVariable : undefined;
-            resourceInputs["sxpKeyChain"] = args ? args.sxpKeyChain : undefined;
-            resourceInputs["sxpKeyChainVariable"] = args ? args.sxpKeyChainVariable : undefined;
-            resourceInputs["sxpLogBindingChanges"] = args ? args.sxpLogBindingChanges : undefined;
-            resourceInputs["sxpLogBindingChangesVariable"] = args ? args.sxpLogBindingChangesVariable : undefined;
-            resourceInputs["sxpNodeId"] = args ? args.sxpNodeId : undefined;
-            resourceInputs["sxpNodeIdType"] = args ? args.sxpNodeIdType : undefined;
-            resourceInputs["sxpNodeIdVariable"] = args ? args.sxpNodeIdVariable : undefined;
-            resourceInputs["sxpReconciliationPeriod"] = args ? args.sxpReconciliationPeriod : undefined;
-            resourceInputs["sxpReconciliationPeriodVariable"] = args ? args.sxpReconciliationPeriodVariable : undefined;
-            resourceInputs["sxpRetryPeriod"] = args ? args.sxpRetryPeriod : undefined;
-            resourceInputs["sxpRetryPeriodVariable"] = args ? args.sxpRetryPeriodVariable : undefined;
-            resourceInputs["sxpSourceIp"] = args ? args.sxpSourceIp : undefined;
-            resourceInputs["sxpSourceIpVariable"] = args ? args.sxpSourceIpVariable : undefined;
+            resourceInputs["credentialsId"] = args?.credentialsId;
+            resourceInputs["credentialsIdVariable"] = args?.credentialsIdVariable;
+            resourceInputs["credentialsPassword"] = args?.credentialsPassword;
+            resourceInputs["credentialsPasswordVariable"] = args?.credentialsPasswordVariable;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["deviceSgt"] = args?.deviceSgt;
+            resourceInputs["deviceSgtVariable"] = args?.deviceSgtVariable;
+            resourceInputs["deviceTypes"] = args?.deviceTypes;
+            resourceInputs["enableEnforcement"] = args?.enableEnforcement;
+            resourceInputs["enableEnforcementVariable"] = args?.enableEnforcementVariable;
+            resourceInputs["enableSxp"] = args?.enableSxp;
+            resourceInputs["maximumListenerHoldTime"] = args?.maximumListenerHoldTime;
+            resourceInputs["maximumListenerHoldTimeVariable"] = args?.maximumListenerHoldTimeVariable;
+            resourceInputs["minimumListenerHoldTime"] = args?.minimumListenerHoldTime;
+            resourceInputs["minimumListenerHoldTimeVariable"] = args?.minimumListenerHoldTimeVariable;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["speakerHoldTime"] = args?.speakerHoldTime;
+            resourceInputs["speakerHoldTimeVariable"] = args?.speakerHoldTimeVariable;
+            resourceInputs["sxpConnections"] = args?.sxpConnections;
+            resourceInputs["sxpDefaultPassword"] = args?.sxpDefaultPassword;
+            resourceInputs["sxpDefaultPasswordVariable"] = args?.sxpDefaultPasswordVariable;
+            resourceInputs["sxpKeyChain"] = args?.sxpKeyChain;
+            resourceInputs["sxpKeyChainVariable"] = args?.sxpKeyChainVariable;
+            resourceInputs["sxpLogBindingChanges"] = args?.sxpLogBindingChanges;
+            resourceInputs["sxpLogBindingChangesVariable"] = args?.sxpLogBindingChangesVariable;
+            resourceInputs["sxpNodeId"] = args?.sxpNodeId;
+            resourceInputs["sxpNodeIdType"] = args?.sxpNodeIdType;
+            resourceInputs["sxpNodeIdVariable"] = args?.sxpNodeIdVariable;
+            resourceInputs["sxpReconciliationPeriod"] = args?.sxpReconciliationPeriod;
+            resourceInputs["sxpReconciliationPeriodVariable"] = args?.sxpReconciliationPeriodVariable;
+            resourceInputs["sxpRetryPeriod"] = args?.sxpRetryPeriod;
+            resourceInputs["sxpRetryPeriodVariable"] = args?.sxpRetryPeriodVariable;
+            resourceInputs["sxpSourceIp"] = args?.sxpSourceIp;
+            resourceInputs["sxpSourceIpVariable"] = args?.sxpSourceIpVariable;
             resourceInputs["templateType"] = undefined /*out*/;
             resourceInputs["version"] = undefined /*out*/;
         }
@@ -299,8 +312,7 @@ export class CiscoTrustsecFeatureTemplate extends pulumi.CustomResource {
  */
 export interface CiscoTrustsecFeatureTemplateState {
     /**
-     * Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32
-     * char)
+     * Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32 char)
      */
     credentialsId?: pulumi.Input<string>;
     /**
@@ -320,7 +332,8 @@ export interface CiscoTrustsecFeatureTemplateState {
      */
     description?: pulumi.Input<string>;
     /**
-     * Configure Local device security group <2..65519> - Range: `2`-`65519`
+     * Configure Local device security group <2..65519>
+     *   - Range: `2`-`65519`
      */
     deviceSgt?: pulumi.Input<number>;
     /**
@@ -328,13 +341,13 @@ export interface CiscoTrustsecFeatureTemplateState {
      */
     deviceSgtVariable?: pulumi.Input<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
     deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Enable Role-based Access Control enforcement - Default value: `false`
+     * Enable Role-based Access Control enforcement
+     *   - Default value: `false`
      */
     enableEnforcement?: pulumi.Input<boolean>;
     /**
@@ -342,11 +355,14 @@ export interface CiscoTrustsecFeatureTemplateState {
      */
     enableEnforcementVariable?: pulumi.Input<string>;
     /**
-     * Enable CTS SXP support - Default value: `false`
+     * Enable CTS SXP support
+     *   - Default value: `false`
      */
     enableSxp?: pulumi.Input<boolean>;
     /**
-     * Configure Maximum allowed hold-time for listener in seconds <1..65534> - Range: `1`-`65534` - Default value: `180`
+     * Configure Maximum allowed hold-time for listener in seconds <1..65534>
+     *   - Range: `1`-`65534`
+     *   - Default value: `180`
      */
     maximumListenerHoldTime?: pulumi.Input<number>;
     /**
@@ -354,7 +370,9 @@ export interface CiscoTrustsecFeatureTemplateState {
      */
     maximumListenerHoldTimeVariable?: pulumi.Input<string>;
     /**
-     * Configure Minimum allowed hold-time for listener in seconds <1..65534> - Range: `1`-`65534` - Default value: `90`
+     * Configure Minimum allowed hold-time for listener in seconds <1..65534>
+     *   - Range: `1`-`65534`
+     *   - Default value: `90`
      */
     minimumListenerHoldTime?: pulumi.Input<number>;
     /**
@@ -366,7 +384,9 @@ export interface CiscoTrustsecFeatureTemplateState {
      */
     name?: pulumi.Input<string>;
     /**
-     * Configure Speaker hold-time in seconds <1..65534> - Range: `1`-`65534` - Default value: `120`
+     * Configure Speaker hold-time in seconds <1..65534>
+     *   - Range: `1`-`65534`
+     *   - Default value: `120`
      */
     speakerHoldTime?: pulumi.Input<number>;
     /**
@@ -394,7 +414,8 @@ export interface CiscoTrustsecFeatureTemplateState {
      */
     sxpKeyChainVariable?: pulumi.Input<string>;
     /**
-     * Enables logging for IP-to-SGT binding changes - Default value: `false`
+     * Enables logging for IP-to-SGT binding changes
+     *   - Default value: `false`
      */
     sxpLogBindingChanges?: pulumi.Input<boolean>;
     /**
@@ -406,8 +427,9 @@ export interface CiscoTrustsecFeatureTemplateState {
      */
     sxpNodeId?: pulumi.Input<string>;
     /**
-     * Define SXP Node ID type <IP, 8 char string or interface name> - Choices: `ip`, `interface-name`, `8-char-hex-string` -
-     * Default value: `ip`
+     * Define SXP Node ID type <IP, 8 char string or interface name>
+     *   - Choices: `ip`, `interface-name`, `8-char-hex-string`
+     *   - Default value: `ip`
      */
     sxpNodeIdType?: pulumi.Input<string>;
     /**
@@ -415,7 +437,9 @@ export interface CiscoTrustsecFeatureTemplateState {
      */
     sxpNodeIdVariable?: pulumi.Input<string>;
     /**
-     * Configure the SXP reconciliation period in seconds <0..64000> - Range: `0`-`64000` - Default value: `120`
+     * Configure the SXP reconciliation period in seconds <0..64000>
+     *   - Range: `0`-`64000`
+     *   - Default value: `120`
      */
     sxpReconciliationPeriod?: pulumi.Input<number>;
     /**
@@ -423,7 +447,9 @@ export interface CiscoTrustsecFeatureTemplateState {
      */
     sxpReconciliationPeriodVariable?: pulumi.Input<string>;
     /**
-     * Configure Retry period for SXP connection in seconds <0..64000> - Range: `0`-`64000` - Default value: `120`
+     * Configure Retry period for SXP connection in seconds <0..64000>
+     *   - Range: `0`-`64000`
+     *   - Default value: `120`
      */
     sxpRetryPeriod?: pulumi.Input<number>;
     /**
@@ -453,8 +479,7 @@ export interface CiscoTrustsecFeatureTemplateState {
  */
 export interface CiscoTrustsecFeatureTemplateArgs {
     /**
-     * Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32
-     * char)
+     * Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32 char)
      */
     credentialsId?: pulumi.Input<string>;
     /**
@@ -474,7 +499,8 @@ export interface CiscoTrustsecFeatureTemplateArgs {
      */
     description: pulumi.Input<string>;
     /**
-     * Configure Local device security group <2..65519> - Range: `2`-`65519`
+     * Configure Local device security group <2..65519>
+     *   - Range: `2`-`65519`
      */
     deviceSgt?: pulumi.Input<number>;
     /**
@@ -482,13 +508,13 @@ export interface CiscoTrustsecFeatureTemplateArgs {
      */
     deviceSgtVariable?: pulumi.Input<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
     deviceTypes: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Enable Role-based Access Control enforcement - Default value: `false`
+     * Enable Role-based Access Control enforcement
+     *   - Default value: `false`
      */
     enableEnforcement?: pulumi.Input<boolean>;
     /**
@@ -496,11 +522,14 @@ export interface CiscoTrustsecFeatureTemplateArgs {
      */
     enableEnforcementVariable?: pulumi.Input<string>;
     /**
-     * Enable CTS SXP support - Default value: `false`
+     * Enable CTS SXP support
+     *   - Default value: `false`
      */
     enableSxp?: pulumi.Input<boolean>;
     /**
-     * Configure Maximum allowed hold-time for listener in seconds <1..65534> - Range: `1`-`65534` - Default value: `180`
+     * Configure Maximum allowed hold-time for listener in seconds <1..65534>
+     *   - Range: `1`-`65534`
+     *   - Default value: `180`
      */
     maximumListenerHoldTime?: pulumi.Input<number>;
     /**
@@ -508,7 +537,9 @@ export interface CiscoTrustsecFeatureTemplateArgs {
      */
     maximumListenerHoldTimeVariable?: pulumi.Input<string>;
     /**
-     * Configure Minimum allowed hold-time for listener in seconds <1..65534> - Range: `1`-`65534` - Default value: `90`
+     * Configure Minimum allowed hold-time for listener in seconds <1..65534>
+     *   - Range: `1`-`65534`
+     *   - Default value: `90`
      */
     minimumListenerHoldTime?: pulumi.Input<number>;
     /**
@@ -520,7 +551,9 @@ export interface CiscoTrustsecFeatureTemplateArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * Configure Speaker hold-time in seconds <1..65534> - Range: `1`-`65534` - Default value: `120`
+     * Configure Speaker hold-time in seconds <1..65534>
+     *   - Range: `1`-`65534`
+     *   - Default value: `120`
      */
     speakerHoldTime?: pulumi.Input<number>;
     /**
@@ -548,7 +581,8 @@ export interface CiscoTrustsecFeatureTemplateArgs {
      */
     sxpKeyChainVariable?: pulumi.Input<string>;
     /**
-     * Enables logging for IP-to-SGT binding changes - Default value: `false`
+     * Enables logging for IP-to-SGT binding changes
+     *   - Default value: `false`
      */
     sxpLogBindingChanges?: pulumi.Input<boolean>;
     /**
@@ -560,8 +594,9 @@ export interface CiscoTrustsecFeatureTemplateArgs {
      */
     sxpNodeId?: pulumi.Input<string>;
     /**
-     * Define SXP Node ID type <IP, 8 char string or interface name> - Choices: `ip`, `interface-name`, `8-char-hex-string` -
-     * Default value: `ip`
+     * Define SXP Node ID type <IP, 8 char string or interface name>
+     *   - Choices: `ip`, `interface-name`, `8-char-hex-string`
+     *   - Default value: `ip`
      */
     sxpNodeIdType?: pulumi.Input<string>;
     /**
@@ -569,7 +604,9 @@ export interface CiscoTrustsecFeatureTemplateArgs {
      */
     sxpNodeIdVariable?: pulumi.Input<string>;
     /**
-     * Configure the SXP reconciliation period in seconds <0..64000> - Range: `0`-`64000` - Default value: `120`
+     * Configure the SXP reconciliation period in seconds <0..64000>
+     *   - Range: `0`-`64000`
+     *   - Default value: `120`
      */
     sxpReconciliationPeriod?: pulumi.Input<number>;
     /**
@@ -577,7 +614,9 @@ export interface CiscoTrustsecFeatureTemplateArgs {
      */
     sxpReconciliationPeriodVariable?: pulumi.Input<string>;
     /**
-     * Configure Retry period for SXP connection in seconds <0..64000> - Range: `0`-`64000` - Default value: `120`
+     * Configure Retry period for SXP connection in seconds <0..64000>
+     *   - Range: `0`-`64000`
+     *   - Default value: `120`
      */
     sxpRetryPeriod?: pulumi.Input<number>;
     /**

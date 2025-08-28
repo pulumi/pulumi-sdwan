@@ -44,7 +44,8 @@ class TransportWanVpnFeatureArgs:
         The set of arguments for constructing a TransportWanVpnFeature resource.
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.bool] enhance_ecmp_keying: Enhance ECMP Keying - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enhance_ecmp_keying: Enhance ECMP Keying
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] enhance_ecmp_keying_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['TransportWanVpnFeatureIpv4StaticRouteArgs']]] ipv4_static_routes: IPv4 Static Route
         :param pulumi.Input[Sequence[pulumi.Input['TransportWanVpnFeatureIpv6StaticRouteArgs']]] ipv6_static_routes: IPv6 Static Route
@@ -59,7 +60,8 @@ class TransportWanVpnFeatureArgs:
         :param pulumi.Input[_builtins.str] secondary_dns_address_ipv6: Secondary DNS Address (IPv6)
         :param pulumi.Input[_builtins.str] secondary_dns_address_ipv6_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['TransportWanVpnFeatureServiceArgs']]] services: Service
-        :param pulumi.Input[_builtins.int] vpn: VPN - Default value: `0`
+        :param pulumi.Input[_builtins.int] vpn: VPN
+                 - Default value: `0`
         """
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
         if description is not None:
@@ -127,7 +129,8 @@ class TransportWanVpnFeatureArgs:
     @pulumi.getter(name="enhanceEcmpKeying")
     def enhance_ecmp_keying(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enhance ECMP Keying - Default value: `false`
+        Enhance ECMP Keying
+          - Default value: `false`
         """
         return pulumi.get(self, "enhance_ecmp_keying")
 
@@ -316,7 +319,8 @@ class TransportWanVpnFeatureArgs:
     @pulumi.getter
     def vpn(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        VPN - Default value: `0`
+        VPN
+          - Default value: `0`
         """
         return pulumi.get(self, "vpn")
 
@@ -351,7 +355,8 @@ class _TransportWanVpnFeatureState:
         """
         Input properties used for looking up and filtering TransportWanVpnFeature resources.
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.bool] enhance_ecmp_keying: Enhance ECMP Keying - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enhance_ecmp_keying: Enhance ECMP Keying
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] enhance_ecmp_keying_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[Sequence[pulumi.Input['TransportWanVpnFeatureIpv4StaticRouteArgs']]] ipv4_static_routes: IPv4 Static Route
@@ -368,7 +373,8 @@ class _TransportWanVpnFeatureState:
         :param pulumi.Input[_builtins.str] secondary_dns_address_ipv6_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['TransportWanVpnFeatureServiceArgs']]] services: Service
         :param pulumi.Input[_builtins.int] version: The version of the Feature
-        :param pulumi.Input[_builtins.int] vpn: VPN - Default value: `0`
+        :param pulumi.Input[_builtins.int] vpn: VPN
+                 - Default value: `0`
         """
         if description is not None:
             pulumi.set(__self__, "description", description)
@@ -427,7 +433,8 @@ class _TransportWanVpnFeatureState:
     @pulumi.getter(name="enhanceEcmpKeying")
     def enhance_ecmp_keying(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enhance ECMP Keying - Default value: `false`
+        Enhance ECMP Keying
+          - Default value: `false`
         """
         return pulumi.get(self, "enhance_ecmp_keying")
 
@@ -640,7 +647,8 @@ class _TransportWanVpnFeatureState:
     @pulumi.getter
     def vpn(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        VPN - Default value: `0`
+        VPN
+          - Default value: `0`
         """
         return pulumi.get(self, "vpn")
 
@@ -692,7 +700,8 @@ class TransportWanVpnFeature(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.bool] enhance_ecmp_keying: Enhance ECMP Keying - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enhance_ecmp_keying: Enhance ECMP Keying
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] enhance_ecmp_keying_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnFeatureIpv4StaticRouteArgs', 'TransportWanVpnFeatureIpv4StaticRouteArgsDict']]]] ipv4_static_routes: IPv4 Static Route
@@ -708,7 +717,8 @@ class TransportWanVpnFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] secondary_dns_address_ipv6: Secondary DNS Address (IPv6)
         :param pulumi.Input[_builtins.str] secondary_dns_address_ipv6_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnFeatureServiceArgs', 'TransportWanVpnFeatureServiceArgsDict']]]] services: Service
-        :param pulumi.Input[_builtins.int] vpn: VPN - Default value: `0`
+        :param pulumi.Input[_builtins.int] vpn: VPN
+                 - Default value: `0`
         """
         ...
     @overload
@@ -833,7 +843,8 @@ class TransportWanVpnFeature(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.bool] enhance_ecmp_keying: Enhance ECMP Keying - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enhance_ecmp_keying: Enhance ECMP Keying
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] enhance_ecmp_keying_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnFeatureIpv4StaticRouteArgs', 'TransportWanVpnFeatureIpv4StaticRouteArgsDict']]]] ipv4_static_routes: IPv4 Static Route
@@ -850,7 +861,8 @@ class TransportWanVpnFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] secondary_dns_address_ipv6_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['TransportWanVpnFeatureServiceArgs', 'TransportWanVpnFeatureServiceArgsDict']]]] services: Service
         :param pulumi.Input[_builtins.int] version: The version of the Feature
-        :param pulumi.Input[_builtins.int] vpn: VPN - Default value: `0`
+        :param pulumi.Input[_builtins.int] vpn: VPN
+                 - Default value: `0`
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -890,7 +902,8 @@ class TransportWanVpnFeature(pulumi.CustomResource):
     @pulumi.getter(name="enhanceEcmpKeying")
     def enhance_ecmp_keying(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Enhance ECMP Keying - Default value: `false`
+        Enhance ECMP Keying
+          - Default value: `false`
         """
         return pulumi.get(self, "enhance_ecmp_keying")
 
@@ -1031,7 +1044,8 @@ class TransportWanVpnFeature(pulumi.CustomResource):
     @pulumi.getter
     def vpn(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        VPN - Default value: `0`
+        VPN
+          - Default value: `0`
         """
         return pulumi.get(self, "vpn")
 

@@ -27,7 +27,8 @@ type CiscoBgpFeatureTemplate struct {
 
 	// Set BGP address family
 	AddressFamilies CiscoBgpFeatureTemplateAddressFamilyArrayOutput `pulumi:"addressFamilies"`
-	// Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+	// Compare MEDs from all ASs when selecting active BGP paths
+	//   - Default value: `false`
 	AlwaysCompareMed pulumi.BoolPtrOutput `pulumi:"alwaysCompareMed"`
 	// Variable name
 	AlwaysCompareMedVariable pulumi.StringPtrOutput `pulumi:"alwaysCompareMedVariable"`
@@ -35,33 +36,42 @@ type CiscoBgpFeatureTemplate struct {
 	AsNumber pulumi.StringPtrOutput `pulumi:"asNumber"`
 	// Variable name
 	AsNumberVariable pulumi.StringPtrOutput `pulumi:"asNumberVariable"`
-	// Compare router IDs when selecting active BGP paths - Default value: `false`
+	// Compare router IDs when selecting active BGP paths
+	//   - Default value: `false`
 	CompareRouterId pulumi.BoolPtrOutput `pulumi:"compareRouterId"`
 	// Variable name
 	CompareRouterIdVariable pulumi.StringPtrOutput `pulumi:"compareRouterIdVariable"`
 	// The description of the feature template
 	Description pulumi.StringOutput `pulumi:"description"`
-	// Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+	// Compare MEDs from all routes from same AS when selecting active BGP paths
+	//   - Default value: `false`
 	DeterministicMed pulumi.BoolPtrOutput `pulumi:"deterministicMed"`
 	// Variable name
 	DeterministicMedVariable pulumi.StringPtrOutput `pulumi:"deterministicMedVariable"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayOutput `pulumi:"deviceTypes"`
-	// Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+	// Set administrative distance for external BGP routes
+	//   - Range: `1`-`255`
+	//   - Default value: `20`
 	DistanceExternal pulumi.IntPtrOutput `pulumi:"distanceExternal"`
 	// Variable name
 	DistanceExternalVariable pulumi.StringPtrOutput `pulumi:"distanceExternalVariable"`
-	// Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+	// Set administrative distance for internal BGP routes
+	//   - Range: `1`-`255`
+	//   - Default value: `200`
 	DistanceInternal pulumi.IntPtrOutput `pulumi:"distanceInternal"`
 	// Variable name
 	DistanceInternalVariable pulumi.StringPtrOutput `pulumi:"distanceInternalVariable"`
-	// Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+	// Set administrative distance for local BGP routes
+	//   - Range: `1`-`255`
+	//   - Default value: `20`
 	DistanceLocal pulumi.IntPtrOutput `pulumi:"distanceLocal"`
 	// Variable name
 	DistanceLocalVariable pulumi.StringPtrOutput `pulumi:"distanceLocalVariable"`
-	// Set the interval when BGP considers a neighbor to be down - Range: `0`-`65535` - Default value: `180`
+	// Set the interval when BGP considers a neighbor to be down
+	//   - Range: `0`-`65535`
+	//   - Default value: `180`
 	Holdtime pulumi.IntPtrOutput `pulumi:"holdtime"`
 	// Variable name
 	HoldtimeVariable pulumi.StringPtrOutput `pulumi:"holdtimeVariable"`
@@ -73,27 +83,33 @@ type CiscoBgpFeatureTemplate struct {
 	Ipv6Neighbors CiscoBgpFeatureTemplateIpv6NeighborArrayOutput `pulumi:"ipv6Neighbors"`
 	// Router Target for IPV6
 	Ipv6RouteTargets CiscoBgpFeatureTemplateIpv6RouteTargetArrayOutput `pulumi:"ipv6RouteTargets"`
-	// Set how often keepalive messages are sent to BGP peer - Range: `0`-`65535` - Default value: `60`
+	// Set how often keepalive messages are sent to BGP peer
+	//   - Range: `0`-`65535`
+	//   - Default value: `60`
 	Keepalive pulumi.IntPtrOutput `pulumi:"keepalive"`
 	// Variable name
 	KeepaliveVariable pulumi.StringPtrOutput `pulumi:"keepaliveVariable"`
-	// If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+	// If path has no MED, consider it to be worst path when selecting active BGP paths
+	//   - Default value: `false`
 	MissingMedWorst pulumi.BoolPtrOutput `pulumi:"missingMedWorst"`
 	// Variable name
 	MissingMedWorstVariable pulumi.StringPtrOutput `pulumi:"missingMedWorstVariable"`
 	// MPLS BGP Interface
 	MplsInterfaces CiscoBgpFeatureTemplateMplsInterfaceArrayOutput `pulumi:"mplsInterfaces"`
-	// Ignore AS for multipath selection - Default value: `false`
+	// Ignore AS for multipath selection
+	//   - Default value: `false`
 	MultipathRelax pulumi.BoolPtrOutput `pulumi:"multipathRelax"`
 	// Variable name
 	MultipathRelaxVariable pulumi.StringPtrOutput `pulumi:"multipathRelaxVariable"`
 	// The name of the feature template
 	Name pulumi.StringOutput `pulumi:"name"`
-	// Propagate AS Path - Default value: `false`
+	// Propagate AS Path
+	//   - Default value: `false`
 	PropagateAspath pulumi.BoolPtrOutput `pulumi:"propagateAspath"`
 	// Variable name
 	PropagateAspathVariable pulumi.StringPtrOutput `pulumi:"propagateAspathVariable"`
-	// Propagate Community - Default value: `false`
+	// Propagate Community
+	//   - Default value: `false`
 	PropagateCommunity pulumi.BoolPtrOutput `pulumi:"propagateCommunity"`
 	// Variable name
 	PropagateCommunityVariable pulumi.StringPtrOutput `pulumi:"propagateCommunityVariable"`
@@ -101,7 +117,8 @@ type CiscoBgpFeatureTemplate struct {
 	RouterId pulumi.StringPtrOutput `pulumi:"routerId"`
 	// Variable name
 	RouterIdVariable pulumi.StringPtrOutput `pulumi:"routerIdVariable"`
-	// Enable or disable BGP - Default value: `false`
+	// Enable or disable BGP
+	//   - Default value: `false`
 	Shutdown pulumi.BoolPtrOutput `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable pulumi.StringPtrOutput `pulumi:"shutdownVariable"`
@@ -149,7 +166,8 @@ func GetCiscoBgpFeatureTemplate(ctx *pulumi.Context,
 type ciscoBgpFeatureTemplateState struct {
 	// Set BGP address family
 	AddressFamilies []CiscoBgpFeatureTemplateAddressFamily `pulumi:"addressFamilies"`
-	// Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+	// Compare MEDs from all ASs when selecting active BGP paths
+	//   - Default value: `false`
 	AlwaysCompareMed *bool `pulumi:"alwaysCompareMed"`
 	// Variable name
 	AlwaysCompareMedVariable *string `pulumi:"alwaysCompareMedVariable"`
@@ -157,33 +175,42 @@ type ciscoBgpFeatureTemplateState struct {
 	AsNumber *string `pulumi:"asNumber"`
 	// Variable name
 	AsNumberVariable *string `pulumi:"asNumberVariable"`
-	// Compare router IDs when selecting active BGP paths - Default value: `false`
+	// Compare router IDs when selecting active BGP paths
+	//   - Default value: `false`
 	CompareRouterId *bool `pulumi:"compareRouterId"`
 	// Variable name
 	CompareRouterIdVariable *string `pulumi:"compareRouterIdVariable"`
 	// The description of the feature template
 	Description *string `pulumi:"description"`
-	// Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+	// Compare MEDs from all routes from same AS when selecting active BGP paths
+	//   - Default value: `false`
 	DeterministicMed *bool `pulumi:"deterministicMed"`
 	// Variable name
 	DeterministicMedVariable *string `pulumi:"deterministicMedVariable"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
-	// Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+	// Set administrative distance for external BGP routes
+	//   - Range: `1`-`255`
+	//   - Default value: `20`
 	DistanceExternal *int `pulumi:"distanceExternal"`
 	// Variable name
 	DistanceExternalVariable *string `pulumi:"distanceExternalVariable"`
-	// Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+	// Set administrative distance for internal BGP routes
+	//   - Range: `1`-`255`
+	//   - Default value: `200`
 	DistanceInternal *int `pulumi:"distanceInternal"`
 	// Variable name
 	DistanceInternalVariable *string `pulumi:"distanceInternalVariable"`
-	// Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+	// Set administrative distance for local BGP routes
+	//   - Range: `1`-`255`
+	//   - Default value: `20`
 	DistanceLocal *int `pulumi:"distanceLocal"`
 	// Variable name
 	DistanceLocalVariable *string `pulumi:"distanceLocalVariable"`
-	// Set the interval when BGP considers a neighbor to be down - Range: `0`-`65535` - Default value: `180`
+	// Set the interval when BGP considers a neighbor to be down
+	//   - Range: `0`-`65535`
+	//   - Default value: `180`
 	Holdtime *int `pulumi:"holdtime"`
 	// Variable name
 	HoldtimeVariable *string `pulumi:"holdtimeVariable"`
@@ -195,27 +222,33 @@ type ciscoBgpFeatureTemplateState struct {
 	Ipv6Neighbors []CiscoBgpFeatureTemplateIpv6Neighbor `pulumi:"ipv6Neighbors"`
 	// Router Target for IPV6
 	Ipv6RouteTargets []CiscoBgpFeatureTemplateIpv6RouteTarget `pulumi:"ipv6RouteTargets"`
-	// Set how often keepalive messages are sent to BGP peer - Range: `0`-`65535` - Default value: `60`
+	// Set how often keepalive messages are sent to BGP peer
+	//   - Range: `0`-`65535`
+	//   - Default value: `60`
 	Keepalive *int `pulumi:"keepalive"`
 	// Variable name
 	KeepaliveVariable *string `pulumi:"keepaliveVariable"`
-	// If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+	// If path has no MED, consider it to be worst path when selecting active BGP paths
+	//   - Default value: `false`
 	MissingMedWorst *bool `pulumi:"missingMedWorst"`
 	// Variable name
 	MissingMedWorstVariable *string `pulumi:"missingMedWorstVariable"`
 	// MPLS BGP Interface
 	MplsInterfaces []CiscoBgpFeatureTemplateMplsInterface `pulumi:"mplsInterfaces"`
-	// Ignore AS for multipath selection - Default value: `false`
+	// Ignore AS for multipath selection
+	//   - Default value: `false`
 	MultipathRelax *bool `pulumi:"multipathRelax"`
 	// Variable name
 	MultipathRelaxVariable *string `pulumi:"multipathRelaxVariable"`
 	// The name of the feature template
 	Name *string `pulumi:"name"`
-	// Propagate AS Path - Default value: `false`
+	// Propagate AS Path
+	//   - Default value: `false`
 	PropagateAspath *bool `pulumi:"propagateAspath"`
 	// Variable name
 	PropagateAspathVariable *string `pulumi:"propagateAspathVariable"`
-	// Propagate Community - Default value: `false`
+	// Propagate Community
+	//   - Default value: `false`
 	PropagateCommunity *bool `pulumi:"propagateCommunity"`
 	// Variable name
 	PropagateCommunityVariable *string `pulumi:"propagateCommunityVariable"`
@@ -223,7 +256,8 @@ type ciscoBgpFeatureTemplateState struct {
 	RouterId *string `pulumi:"routerId"`
 	// Variable name
 	RouterIdVariable *string `pulumi:"routerIdVariable"`
-	// Enable or disable BGP - Default value: `false`
+	// Enable or disable BGP
+	//   - Default value: `false`
 	Shutdown *bool `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable *string `pulumi:"shutdownVariable"`
@@ -236,7 +270,8 @@ type ciscoBgpFeatureTemplateState struct {
 type CiscoBgpFeatureTemplateState struct {
 	// Set BGP address family
 	AddressFamilies CiscoBgpFeatureTemplateAddressFamilyArrayInput
-	// Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+	// Compare MEDs from all ASs when selecting active BGP paths
+	//   - Default value: `false`
 	AlwaysCompareMed pulumi.BoolPtrInput
 	// Variable name
 	AlwaysCompareMedVariable pulumi.StringPtrInput
@@ -244,33 +279,42 @@ type CiscoBgpFeatureTemplateState struct {
 	AsNumber pulumi.StringPtrInput
 	// Variable name
 	AsNumberVariable pulumi.StringPtrInput
-	// Compare router IDs when selecting active BGP paths - Default value: `false`
+	// Compare router IDs when selecting active BGP paths
+	//   - Default value: `false`
 	CompareRouterId pulumi.BoolPtrInput
 	// Variable name
 	CompareRouterIdVariable pulumi.StringPtrInput
 	// The description of the feature template
 	Description pulumi.StringPtrInput
-	// Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+	// Compare MEDs from all routes from same AS when selecting active BGP paths
+	//   - Default value: `false`
 	DeterministicMed pulumi.BoolPtrInput
 	// Variable name
 	DeterministicMedVariable pulumi.StringPtrInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
-	// Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+	// Set administrative distance for external BGP routes
+	//   - Range: `1`-`255`
+	//   - Default value: `20`
 	DistanceExternal pulumi.IntPtrInput
 	// Variable name
 	DistanceExternalVariable pulumi.StringPtrInput
-	// Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+	// Set administrative distance for internal BGP routes
+	//   - Range: `1`-`255`
+	//   - Default value: `200`
 	DistanceInternal pulumi.IntPtrInput
 	// Variable name
 	DistanceInternalVariable pulumi.StringPtrInput
-	// Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+	// Set administrative distance for local BGP routes
+	//   - Range: `1`-`255`
+	//   - Default value: `20`
 	DistanceLocal pulumi.IntPtrInput
 	// Variable name
 	DistanceLocalVariable pulumi.StringPtrInput
-	// Set the interval when BGP considers a neighbor to be down - Range: `0`-`65535` - Default value: `180`
+	// Set the interval when BGP considers a neighbor to be down
+	//   - Range: `0`-`65535`
+	//   - Default value: `180`
 	Holdtime pulumi.IntPtrInput
 	// Variable name
 	HoldtimeVariable pulumi.StringPtrInput
@@ -282,27 +326,33 @@ type CiscoBgpFeatureTemplateState struct {
 	Ipv6Neighbors CiscoBgpFeatureTemplateIpv6NeighborArrayInput
 	// Router Target for IPV6
 	Ipv6RouteTargets CiscoBgpFeatureTemplateIpv6RouteTargetArrayInput
-	// Set how often keepalive messages are sent to BGP peer - Range: `0`-`65535` - Default value: `60`
+	// Set how often keepalive messages are sent to BGP peer
+	//   - Range: `0`-`65535`
+	//   - Default value: `60`
 	Keepalive pulumi.IntPtrInput
 	// Variable name
 	KeepaliveVariable pulumi.StringPtrInput
-	// If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+	// If path has no MED, consider it to be worst path when selecting active BGP paths
+	//   - Default value: `false`
 	MissingMedWorst pulumi.BoolPtrInput
 	// Variable name
 	MissingMedWorstVariable pulumi.StringPtrInput
 	// MPLS BGP Interface
 	MplsInterfaces CiscoBgpFeatureTemplateMplsInterfaceArrayInput
-	// Ignore AS for multipath selection - Default value: `false`
+	// Ignore AS for multipath selection
+	//   - Default value: `false`
 	MultipathRelax pulumi.BoolPtrInput
 	// Variable name
 	MultipathRelaxVariable pulumi.StringPtrInput
 	// The name of the feature template
 	Name pulumi.StringPtrInput
-	// Propagate AS Path - Default value: `false`
+	// Propagate AS Path
+	//   - Default value: `false`
 	PropagateAspath pulumi.BoolPtrInput
 	// Variable name
 	PropagateAspathVariable pulumi.StringPtrInput
-	// Propagate Community - Default value: `false`
+	// Propagate Community
+	//   - Default value: `false`
 	PropagateCommunity pulumi.BoolPtrInput
 	// Variable name
 	PropagateCommunityVariable pulumi.StringPtrInput
@@ -310,7 +360,8 @@ type CiscoBgpFeatureTemplateState struct {
 	RouterId pulumi.StringPtrInput
 	// Variable name
 	RouterIdVariable pulumi.StringPtrInput
-	// Enable or disable BGP - Default value: `false`
+	// Enable or disable BGP
+	//   - Default value: `false`
 	Shutdown pulumi.BoolPtrInput
 	// Variable name
 	ShutdownVariable pulumi.StringPtrInput
@@ -327,7 +378,8 @@ func (CiscoBgpFeatureTemplateState) ElementType() reflect.Type {
 type ciscoBgpFeatureTemplateArgs struct {
 	// Set BGP address family
 	AddressFamilies []CiscoBgpFeatureTemplateAddressFamily `pulumi:"addressFamilies"`
-	// Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+	// Compare MEDs from all ASs when selecting active BGP paths
+	//   - Default value: `false`
 	AlwaysCompareMed *bool `pulumi:"alwaysCompareMed"`
 	// Variable name
 	AlwaysCompareMedVariable *string `pulumi:"alwaysCompareMedVariable"`
@@ -335,33 +387,42 @@ type ciscoBgpFeatureTemplateArgs struct {
 	AsNumber *string `pulumi:"asNumber"`
 	// Variable name
 	AsNumberVariable *string `pulumi:"asNumberVariable"`
-	// Compare router IDs when selecting active BGP paths - Default value: `false`
+	// Compare router IDs when selecting active BGP paths
+	//   - Default value: `false`
 	CompareRouterId *bool `pulumi:"compareRouterId"`
 	// Variable name
 	CompareRouterIdVariable *string `pulumi:"compareRouterIdVariable"`
 	// The description of the feature template
 	Description string `pulumi:"description"`
-	// Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+	// Compare MEDs from all routes from same AS when selecting active BGP paths
+	//   - Default value: `false`
 	DeterministicMed *bool `pulumi:"deterministicMed"`
 	// Variable name
 	DeterministicMedVariable *string `pulumi:"deterministicMedVariable"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
-	// Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+	// Set administrative distance for external BGP routes
+	//   - Range: `1`-`255`
+	//   - Default value: `20`
 	DistanceExternal *int `pulumi:"distanceExternal"`
 	// Variable name
 	DistanceExternalVariable *string `pulumi:"distanceExternalVariable"`
-	// Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+	// Set administrative distance for internal BGP routes
+	//   - Range: `1`-`255`
+	//   - Default value: `200`
 	DistanceInternal *int `pulumi:"distanceInternal"`
 	// Variable name
 	DistanceInternalVariable *string `pulumi:"distanceInternalVariable"`
-	// Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+	// Set administrative distance for local BGP routes
+	//   - Range: `1`-`255`
+	//   - Default value: `20`
 	DistanceLocal *int `pulumi:"distanceLocal"`
 	// Variable name
 	DistanceLocalVariable *string `pulumi:"distanceLocalVariable"`
-	// Set the interval when BGP considers a neighbor to be down - Range: `0`-`65535` - Default value: `180`
+	// Set the interval when BGP considers a neighbor to be down
+	//   - Range: `0`-`65535`
+	//   - Default value: `180`
 	Holdtime *int `pulumi:"holdtime"`
 	// Variable name
 	HoldtimeVariable *string `pulumi:"holdtimeVariable"`
@@ -373,27 +434,33 @@ type ciscoBgpFeatureTemplateArgs struct {
 	Ipv6Neighbors []CiscoBgpFeatureTemplateIpv6Neighbor `pulumi:"ipv6Neighbors"`
 	// Router Target for IPV6
 	Ipv6RouteTargets []CiscoBgpFeatureTemplateIpv6RouteTarget `pulumi:"ipv6RouteTargets"`
-	// Set how often keepalive messages are sent to BGP peer - Range: `0`-`65535` - Default value: `60`
+	// Set how often keepalive messages are sent to BGP peer
+	//   - Range: `0`-`65535`
+	//   - Default value: `60`
 	Keepalive *int `pulumi:"keepalive"`
 	// Variable name
 	KeepaliveVariable *string `pulumi:"keepaliveVariable"`
-	// If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+	// If path has no MED, consider it to be worst path when selecting active BGP paths
+	//   - Default value: `false`
 	MissingMedWorst *bool `pulumi:"missingMedWorst"`
 	// Variable name
 	MissingMedWorstVariable *string `pulumi:"missingMedWorstVariable"`
 	// MPLS BGP Interface
 	MplsInterfaces []CiscoBgpFeatureTemplateMplsInterface `pulumi:"mplsInterfaces"`
-	// Ignore AS for multipath selection - Default value: `false`
+	// Ignore AS for multipath selection
+	//   - Default value: `false`
 	MultipathRelax *bool `pulumi:"multipathRelax"`
 	// Variable name
 	MultipathRelaxVariable *string `pulumi:"multipathRelaxVariable"`
 	// The name of the feature template
 	Name *string `pulumi:"name"`
-	// Propagate AS Path - Default value: `false`
+	// Propagate AS Path
+	//   - Default value: `false`
 	PropagateAspath *bool `pulumi:"propagateAspath"`
 	// Variable name
 	PropagateAspathVariable *string `pulumi:"propagateAspathVariable"`
-	// Propagate Community - Default value: `false`
+	// Propagate Community
+	//   - Default value: `false`
 	PropagateCommunity *bool `pulumi:"propagateCommunity"`
 	// Variable name
 	PropagateCommunityVariable *string `pulumi:"propagateCommunityVariable"`
@@ -401,7 +468,8 @@ type ciscoBgpFeatureTemplateArgs struct {
 	RouterId *string `pulumi:"routerId"`
 	// Variable name
 	RouterIdVariable *string `pulumi:"routerIdVariable"`
-	// Enable or disable BGP - Default value: `false`
+	// Enable or disable BGP
+	//   - Default value: `false`
 	Shutdown *bool `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable *string `pulumi:"shutdownVariable"`
@@ -411,7 +479,8 @@ type ciscoBgpFeatureTemplateArgs struct {
 type CiscoBgpFeatureTemplateArgs struct {
 	// Set BGP address family
 	AddressFamilies CiscoBgpFeatureTemplateAddressFamilyArrayInput
-	// Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+	// Compare MEDs from all ASs when selecting active BGP paths
+	//   - Default value: `false`
 	AlwaysCompareMed pulumi.BoolPtrInput
 	// Variable name
 	AlwaysCompareMedVariable pulumi.StringPtrInput
@@ -419,33 +488,42 @@ type CiscoBgpFeatureTemplateArgs struct {
 	AsNumber pulumi.StringPtrInput
 	// Variable name
 	AsNumberVariable pulumi.StringPtrInput
-	// Compare router IDs when selecting active BGP paths - Default value: `false`
+	// Compare router IDs when selecting active BGP paths
+	//   - Default value: `false`
 	CompareRouterId pulumi.BoolPtrInput
 	// Variable name
 	CompareRouterIdVariable pulumi.StringPtrInput
 	// The description of the feature template
 	Description pulumi.StringInput
-	// Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+	// Compare MEDs from all routes from same AS when selecting active BGP paths
+	//   - Default value: `false`
 	DeterministicMed pulumi.BoolPtrInput
 	// Variable name
 	DeterministicMedVariable pulumi.StringPtrInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
-	// Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+	// Set administrative distance for external BGP routes
+	//   - Range: `1`-`255`
+	//   - Default value: `20`
 	DistanceExternal pulumi.IntPtrInput
 	// Variable name
 	DistanceExternalVariable pulumi.StringPtrInput
-	// Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+	// Set administrative distance for internal BGP routes
+	//   - Range: `1`-`255`
+	//   - Default value: `200`
 	DistanceInternal pulumi.IntPtrInput
 	// Variable name
 	DistanceInternalVariable pulumi.StringPtrInput
-	// Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+	// Set administrative distance for local BGP routes
+	//   - Range: `1`-`255`
+	//   - Default value: `20`
 	DistanceLocal pulumi.IntPtrInput
 	// Variable name
 	DistanceLocalVariable pulumi.StringPtrInput
-	// Set the interval when BGP considers a neighbor to be down - Range: `0`-`65535` - Default value: `180`
+	// Set the interval when BGP considers a neighbor to be down
+	//   - Range: `0`-`65535`
+	//   - Default value: `180`
 	Holdtime pulumi.IntPtrInput
 	// Variable name
 	HoldtimeVariable pulumi.StringPtrInput
@@ -457,27 +535,33 @@ type CiscoBgpFeatureTemplateArgs struct {
 	Ipv6Neighbors CiscoBgpFeatureTemplateIpv6NeighborArrayInput
 	// Router Target for IPV6
 	Ipv6RouteTargets CiscoBgpFeatureTemplateIpv6RouteTargetArrayInput
-	// Set how often keepalive messages are sent to BGP peer - Range: `0`-`65535` - Default value: `60`
+	// Set how often keepalive messages are sent to BGP peer
+	//   - Range: `0`-`65535`
+	//   - Default value: `60`
 	Keepalive pulumi.IntPtrInput
 	// Variable name
 	KeepaliveVariable pulumi.StringPtrInput
-	// If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+	// If path has no MED, consider it to be worst path when selecting active BGP paths
+	//   - Default value: `false`
 	MissingMedWorst pulumi.BoolPtrInput
 	// Variable name
 	MissingMedWorstVariable pulumi.StringPtrInput
 	// MPLS BGP Interface
 	MplsInterfaces CiscoBgpFeatureTemplateMplsInterfaceArrayInput
-	// Ignore AS for multipath selection - Default value: `false`
+	// Ignore AS for multipath selection
+	//   - Default value: `false`
 	MultipathRelax pulumi.BoolPtrInput
 	// Variable name
 	MultipathRelaxVariable pulumi.StringPtrInput
 	// The name of the feature template
 	Name pulumi.StringPtrInput
-	// Propagate AS Path - Default value: `false`
+	// Propagate AS Path
+	//   - Default value: `false`
 	PropagateAspath pulumi.BoolPtrInput
 	// Variable name
 	PropagateAspathVariable pulumi.StringPtrInput
-	// Propagate Community - Default value: `false`
+	// Propagate Community
+	//   - Default value: `false`
 	PropagateCommunity pulumi.BoolPtrInput
 	// Variable name
 	PropagateCommunityVariable pulumi.StringPtrInput
@@ -485,7 +569,8 @@ type CiscoBgpFeatureTemplateArgs struct {
 	RouterId pulumi.StringPtrInput
 	// Variable name
 	RouterIdVariable pulumi.StringPtrInput
-	// Enable or disable BGP - Default value: `false`
+	// Enable or disable BGP
+	//   - Default value: `false`
 	Shutdown pulumi.BoolPtrInput
 	// Variable name
 	ShutdownVariable pulumi.StringPtrInput
@@ -585,7 +670,8 @@ func (o CiscoBgpFeatureTemplateOutput) AddressFamilies() CiscoBgpFeatureTemplate
 	}).(CiscoBgpFeatureTemplateAddressFamilyArrayOutput)
 }
 
-// Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+// Compare MEDs from all ASs when selecting active BGP paths
+//   - Default value: `false`
 func (o CiscoBgpFeatureTemplateOutput) AlwaysCompareMed() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoBgpFeatureTemplate) pulumi.BoolPtrOutput { return v.AlwaysCompareMed }).(pulumi.BoolPtrOutput)
 }
@@ -605,7 +691,8 @@ func (o CiscoBgpFeatureTemplateOutput) AsNumberVariable() pulumi.StringPtrOutput
 	return o.ApplyT(func(v *CiscoBgpFeatureTemplate) pulumi.StringPtrOutput { return v.AsNumberVariable }).(pulumi.StringPtrOutput)
 }
 
-// Compare router IDs when selecting active BGP paths - Default value: `false`
+// Compare router IDs when selecting active BGP paths
+//   - Default value: `false`
 func (o CiscoBgpFeatureTemplateOutput) CompareRouterId() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoBgpFeatureTemplate) pulumi.BoolPtrOutput { return v.CompareRouterId }).(pulumi.BoolPtrOutput)
 }
@@ -620,7 +707,8 @@ func (o CiscoBgpFeatureTemplateOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v *CiscoBgpFeatureTemplate) pulumi.StringOutput { return v.Description }).(pulumi.StringOutput)
 }
 
-// Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+// Compare MEDs from all routes from same AS when selecting active BGP paths
+//   - Default value: `false`
 func (o CiscoBgpFeatureTemplateOutput) DeterministicMed() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoBgpFeatureTemplate) pulumi.BoolPtrOutput { return v.DeterministicMed }).(pulumi.BoolPtrOutput)
 }
@@ -630,14 +718,15 @@ func (o CiscoBgpFeatureTemplateOutput) DeterministicMedVariable() pulumi.StringP
 	return o.ApplyT(func(v *CiscoBgpFeatureTemplate) pulumi.StringPtrOutput { return v.DeterministicMedVariable }).(pulumi.StringPtrOutput)
 }
 
-// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+// List of supported device types
+//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 func (o CiscoBgpFeatureTemplateOutput) DeviceTypes() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *CiscoBgpFeatureTemplate) pulumi.StringArrayOutput { return v.DeviceTypes }).(pulumi.StringArrayOutput)
 }
 
-// Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+// Set administrative distance for external BGP routes
+//   - Range: `1`-`255`
+//   - Default value: `20`
 func (o CiscoBgpFeatureTemplateOutput) DistanceExternal() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoBgpFeatureTemplate) pulumi.IntPtrOutput { return v.DistanceExternal }).(pulumi.IntPtrOutput)
 }
@@ -647,7 +736,9 @@ func (o CiscoBgpFeatureTemplateOutput) DistanceExternalVariable() pulumi.StringP
 	return o.ApplyT(func(v *CiscoBgpFeatureTemplate) pulumi.StringPtrOutput { return v.DistanceExternalVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+// Set administrative distance for internal BGP routes
+//   - Range: `1`-`255`
+//   - Default value: `200`
 func (o CiscoBgpFeatureTemplateOutput) DistanceInternal() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoBgpFeatureTemplate) pulumi.IntPtrOutput { return v.DistanceInternal }).(pulumi.IntPtrOutput)
 }
@@ -657,7 +748,9 @@ func (o CiscoBgpFeatureTemplateOutput) DistanceInternalVariable() pulumi.StringP
 	return o.ApplyT(func(v *CiscoBgpFeatureTemplate) pulumi.StringPtrOutput { return v.DistanceInternalVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+// Set administrative distance for local BGP routes
+//   - Range: `1`-`255`
+//   - Default value: `20`
 func (o CiscoBgpFeatureTemplateOutput) DistanceLocal() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoBgpFeatureTemplate) pulumi.IntPtrOutput { return v.DistanceLocal }).(pulumi.IntPtrOutput)
 }
@@ -667,7 +760,9 @@ func (o CiscoBgpFeatureTemplateOutput) DistanceLocalVariable() pulumi.StringPtrO
 	return o.ApplyT(func(v *CiscoBgpFeatureTemplate) pulumi.StringPtrOutput { return v.DistanceLocalVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set the interval when BGP considers a neighbor to be down - Range: `0`-`65535` - Default value: `180`
+// Set the interval when BGP considers a neighbor to be down
+//   - Range: `0`-`65535`
+//   - Default value: `180`
 func (o CiscoBgpFeatureTemplateOutput) Holdtime() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoBgpFeatureTemplate) pulumi.IntPtrOutput { return v.Holdtime }).(pulumi.IntPtrOutput)
 }
@@ -705,7 +800,9 @@ func (o CiscoBgpFeatureTemplateOutput) Ipv6RouteTargets() CiscoBgpFeatureTemplat
 	}).(CiscoBgpFeatureTemplateIpv6RouteTargetArrayOutput)
 }
 
-// Set how often keepalive messages are sent to BGP peer - Range: `0`-`65535` - Default value: `60`
+// Set how often keepalive messages are sent to BGP peer
+//   - Range: `0`-`65535`
+//   - Default value: `60`
 func (o CiscoBgpFeatureTemplateOutput) Keepalive() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoBgpFeatureTemplate) pulumi.IntPtrOutput { return v.Keepalive }).(pulumi.IntPtrOutput)
 }
@@ -715,7 +812,8 @@ func (o CiscoBgpFeatureTemplateOutput) KeepaliveVariable() pulumi.StringPtrOutpu
 	return o.ApplyT(func(v *CiscoBgpFeatureTemplate) pulumi.StringPtrOutput { return v.KeepaliveVariable }).(pulumi.StringPtrOutput)
 }
 
-// If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+// If path has no MED, consider it to be worst path when selecting active BGP paths
+//   - Default value: `false`
 func (o CiscoBgpFeatureTemplateOutput) MissingMedWorst() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoBgpFeatureTemplate) pulumi.BoolPtrOutput { return v.MissingMedWorst }).(pulumi.BoolPtrOutput)
 }
@@ -732,7 +830,8 @@ func (o CiscoBgpFeatureTemplateOutput) MplsInterfaces() CiscoBgpFeatureTemplateM
 	}).(CiscoBgpFeatureTemplateMplsInterfaceArrayOutput)
 }
 
-// Ignore AS for multipath selection - Default value: `false`
+// Ignore AS for multipath selection
+//   - Default value: `false`
 func (o CiscoBgpFeatureTemplateOutput) MultipathRelax() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoBgpFeatureTemplate) pulumi.BoolPtrOutput { return v.MultipathRelax }).(pulumi.BoolPtrOutput)
 }
@@ -747,7 +846,8 @@ func (o CiscoBgpFeatureTemplateOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *CiscoBgpFeatureTemplate) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// Propagate AS Path - Default value: `false`
+// Propagate AS Path
+//   - Default value: `false`
 func (o CiscoBgpFeatureTemplateOutput) PropagateAspath() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoBgpFeatureTemplate) pulumi.BoolPtrOutput { return v.PropagateAspath }).(pulumi.BoolPtrOutput)
 }
@@ -757,7 +857,8 @@ func (o CiscoBgpFeatureTemplateOutput) PropagateAspathVariable() pulumi.StringPt
 	return o.ApplyT(func(v *CiscoBgpFeatureTemplate) pulumi.StringPtrOutput { return v.PropagateAspathVariable }).(pulumi.StringPtrOutput)
 }
 
-// Propagate Community - Default value: `false`
+// Propagate Community
+//   - Default value: `false`
 func (o CiscoBgpFeatureTemplateOutput) PropagateCommunity() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoBgpFeatureTemplate) pulumi.BoolPtrOutput { return v.PropagateCommunity }).(pulumi.BoolPtrOutput)
 }
@@ -777,7 +878,8 @@ func (o CiscoBgpFeatureTemplateOutput) RouterIdVariable() pulumi.StringPtrOutput
 	return o.ApplyT(func(v *CiscoBgpFeatureTemplate) pulumi.StringPtrOutput { return v.RouterIdVariable }).(pulumi.StringPtrOutput)
 }
 
-// Enable or disable BGP - Default value: `false`
+// Enable or disable BGP
+//   - Default value: `false`
 func (o CiscoBgpFeatureTemplateOutput) Shutdown() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoBgpFeatureTemplate) pulumi.BoolPtrOutput { return v.Shutdown }).(pulumi.BoolPtrOutput)
 }

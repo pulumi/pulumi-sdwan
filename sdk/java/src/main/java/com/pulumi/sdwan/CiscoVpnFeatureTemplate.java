@@ -71,18 +71,16 @@ public class CiscoVpnFeatureTemplate extends com.pulumi.resources.CustomResource
         return this.description;
     }
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Export(name="deviceTypes", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Output<List<String>> deviceTypes() {
@@ -131,14 +129,16 @@ public class CiscoVpnFeatureTemplate extends com.pulumi.resources.CustomResource
         return Codegen.optional(this.dnsIpv6Servers);
     }
     /**
-     * Optional packet fields for ECMP keying - Default value: `false`
+     * Optional packet fields for ECMP keying
+     *   - Default value: `false`
      * 
      */
     @Export(name="enhanceEcmpKeying", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> enhanceEcmpKeying;
 
     /**
-     * @return Optional packet fields for ECMP keying - Default value: `false`
+     * @return Optional packet fields for ECMP keying
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> enhanceEcmpKeying() {
@@ -271,14 +271,16 @@ public class CiscoVpnFeatureTemplate extends com.pulumi.resources.CustomResource
         return Codegen.optional(this.natPools);
     }
     /**
-     * omp-admin-distance-ipv4 - Range: `1`-`255`
+     * omp-admin-distance-ipv4
+     *   - Range: `1`-`255`
      * 
      */
     @Export(name="ompAdminDistanceIpv4", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ompAdminDistanceIpv4;
 
     /**
-     * @return omp-admin-distance-ipv4 - Range: `1`-`255`
+     * @return omp-admin-distance-ipv4
+     *   - Range: `1`-`255`
      * 
      */
     public Output<Optional<Integer>> ompAdminDistanceIpv4() {
@@ -299,14 +301,16 @@ public class CiscoVpnFeatureTemplate extends com.pulumi.resources.CustomResource
         return Codegen.optional(this.ompAdminDistanceIpv4Variable);
     }
     /**
-     * omp-admin-distance-ipv6 - Range: `1`-`255`
+     * omp-admin-distance-ipv6
+     *   - Range: `1`-`255`
      * 
      */
     @Export(name="ompAdminDistanceIpv6", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ompAdminDistanceIpv6;
 
     /**
-     * @return omp-admin-distance-ipv6 - Range: `1`-`255`
+     * @return omp-admin-distance-ipv6
+     *   - Range: `1`-`255`
      * 
      */
     public Output<Optional<Integer>> ompAdminDistanceIpv6() {
@@ -481,14 +485,18 @@ public class CiscoVpnFeatureTemplate extends com.pulumi.resources.CustomResource
         return this.templateType;
     }
     /**
-     * Tenant VPN - Range: `0`-`65527` - Default value: `0`
+     * Tenant VPN
+     *   - Range: `0`-`65527`
+     *   - Default value: `0`
      * 
      */
     @Export(name="tenantVpnId", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> tenantVpnId;
 
     /**
-     * @return Tenant VPN - Range: `0`-`65527` - Default value: `0`
+     * @return Tenant VPN
+     *   - Range: `0`-`65527`
+     *   - Default value: `0`
      * 
      */
     public Output<Optional<Integer>> tenantVpnId() {
@@ -509,14 +517,18 @@ public class CiscoVpnFeatureTemplate extends com.pulumi.resources.CustomResource
         return this.version;
     }
     /**
-     * List of VPN instances - Range: `0`-`65527` - Default value: `0`
+     * List of VPN instances
+     *   - Range: `0`-`65527`
+     *   - Default value: `0`
      * 
      */
     @Export(name="vpnId", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> vpnId;
 
     /**
-     * @return List of VPN instances - Range: `0`-`65527` - Default value: `0`
+     * @return List of VPN instances
+     *   - Range: `0`-`65527`
+     *   - Default value: `0`
      * 
      */
     public Output<Optional<Integer>> vpnId() {

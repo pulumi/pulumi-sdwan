@@ -35,14 +35,16 @@ public final class ZoneBasedFirewallPolicyDefinitionArgs extends com.pulumi.reso
     }
 
     /**
-     * Default Action - Choices: `pass`, `drop`
+     * Default Action
+     *   - Choices: `pass`, `drop`
      * 
      */
     @Import(name="defaultAction", required=true)
     private Output<String> defaultAction;
 
     /**
-     * @return Default Action - Choices: `pass`, `drop`
+     * @return Default Action
+     *   - Choices: `pass`, `drop`
      * 
      */
     public Output<String> defaultAction() {
@@ -65,14 +67,16 @@ public final class ZoneBasedFirewallPolicyDefinitionArgs extends com.pulumi.reso
     }
 
     /**
-     * The policy mode - Choices: `security`, `unified`
+     * The policy mode
+     *   - Choices: `security`, `unified`
      * 
      */
     @Import(name="mode", required=true)
     private Output<String> mode;
 
     /**
-     * @return The policy mode - Choices: `security`, `unified`
+     * @return The policy mode
+     *   - Choices: `security`, `unified`
      * 
      */
     public Output<String> mode() {
@@ -162,7 +166,8 @@ public final class ZoneBasedFirewallPolicyDefinitionArgs extends com.pulumi.reso
         }
 
         /**
-         * @param defaultAction Default Action - Choices: `pass`, `drop`
+         * @param defaultAction Default Action
+         *   - Choices: `pass`, `drop`
          * 
          * @return builder
          * 
@@ -173,7 +178,8 @@ public final class ZoneBasedFirewallPolicyDefinitionArgs extends com.pulumi.reso
         }
 
         /**
-         * @param defaultAction Default Action - Choices: `pass`, `drop`
+         * @param defaultAction Default Action
+         *   - Choices: `pass`, `drop`
          * 
          * @return builder
          * 
@@ -204,7 +210,8 @@ public final class ZoneBasedFirewallPolicyDefinitionArgs extends com.pulumi.reso
         }
 
         /**
-         * @param mode The policy mode - Choices: `security`, `unified`
+         * @param mode The policy mode
+         *   - Choices: `security`, `unified`
          * 
          * @return builder
          * 
@@ -215,7 +222,8 @@ public final class ZoneBasedFirewallPolicyDefinitionArgs extends com.pulumi.reso
         }
 
         /**
-         * @param mode The policy mode - Choices: `security`, `unified`
+         * @param mode The policy mode
+         *   - Choices: `security`, `unified`
          * 
          * @return builder
          * 
