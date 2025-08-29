@@ -108,6 +108,11 @@ public final class GetCiscoSystemFeatureTemplateResult {
      */
     private String enhancedAppAwareRouting;
     /**
+     * @return Variable name
+     * 
+     */
+    private String enhancedAppAwareRoutingVariable;
+    /**
      * @return Enable Geo fencing
      * 
      */
@@ -524,6 +529,13 @@ public final class GetCiscoSystemFeatureTemplateResult {
      */
     public String enhancedAppAwareRouting() {
         return this.enhancedAppAwareRouting;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String enhancedAppAwareRoutingVariable() {
+        return this.enhancedAppAwareRoutingVariable;
     }
     /**
      * @return Enable Geo fencing
@@ -959,6 +971,7 @@ public final class GetCiscoSystemFeatureTemplateResult {
         private List<String> deviceTypes;
         private String enableMrfMigration;
         private String enhancedAppAwareRouting;
+        private String enhancedAppAwareRoutingVariable;
         private Boolean geoFencing;
         private Integer geoFencingRange;
         private String geoFencingRangeVariable;
@@ -1038,6 +1051,7 @@ public final class GetCiscoSystemFeatureTemplateResult {
     	      this.deviceTypes = defaults.deviceTypes;
     	      this.enableMrfMigration = defaults.enableMrfMigration;
     	      this.enhancedAppAwareRouting = defaults.enhancedAppAwareRouting;
+    	      this.enhancedAppAwareRoutingVariable = defaults.enhancedAppAwareRoutingVariable;
     	      this.geoFencing = defaults.geoFencing;
     	      this.geoFencingRange = defaults.geoFencingRange;
     	      this.geoFencingRangeVariable = defaults.geoFencingRangeVariable;
@@ -1252,6 +1266,14 @@ public final class GetCiscoSystemFeatureTemplateResult {
               throw new MissingRequiredPropertyException("GetCiscoSystemFeatureTemplateResult", "enhancedAppAwareRouting");
             }
             this.enhancedAppAwareRouting = enhancedAppAwareRouting;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder enhancedAppAwareRoutingVariable(String enhancedAppAwareRoutingVariable) {
+            if (enhancedAppAwareRoutingVariable == null) {
+              throw new MissingRequiredPropertyException("GetCiscoSystemFeatureTemplateResult", "enhancedAppAwareRoutingVariable");
+            }
+            this.enhancedAppAwareRoutingVariable = enhancedAppAwareRoutingVariable;
             return this;
         }
         @CustomType.Setter
@@ -1747,6 +1769,7 @@ public final class GetCiscoSystemFeatureTemplateResult {
             _resultValue.deviceTypes = deviceTypes;
             _resultValue.enableMrfMigration = enableMrfMigration;
             _resultValue.enhancedAppAwareRouting = enhancedAppAwareRouting;
+            _resultValue.enhancedAppAwareRoutingVariable = enhancedAppAwareRoutingVariable;
             _resultValue.geoFencing = geoFencing;
             _resultValue.geoFencingRange = geoFencingRange;
             _resultValue.geoFencingRangeVariable = geoFencingRangeVariable;

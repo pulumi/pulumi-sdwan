@@ -84,32 +84,32 @@ import javax.annotation.Nullable;
 @ResourceType(type="sdwan:index/localizedPolicy:LocalizedPolicy")
 public class LocalizedPolicy extends com.pulumi.resources.CustomResource {
     /**
-     * IPv4 application visibility
+     * IPv4 application visibility - Default value: `false`
      * 
      */
     @Export(name="applicationVisibilityIpv4", refs={Boolean.class}, tree="[0]")
-    private Output</* @Nullable */ Boolean> applicationVisibilityIpv4;
+    private Output<Boolean> applicationVisibilityIpv4;
 
     /**
-     * @return IPv4 application visibility
+     * @return IPv4 application visibility - Default value: `false`
      * 
      */
-    public Output<Optional<Boolean>> applicationVisibilityIpv4() {
-        return Codegen.optional(this.applicationVisibilityIpv4);
+    public Output<Boolean> applicationVisibilityIpv4() {
+        return this.applicationVisibilityIpv4;
     }
     /**
-     * IPv6 application visibility
+     * IPv6 application visibility - Default value: `false`
      * 
      */
     @Export(name="applicationVisibilityIpv6", refs={Boolean.class}, tree="[0]")
-    private Output</* @Nullable */ Boolean> applicationVisibilityIpv6;
+    private Output<Boolean> applicationVisibilityIpv6;
 
     /**
-     * @return IPv6 application visibility
+     * @return IPv6 application visibility - Default value: `false`
      * 
      */
-    public Output<Optional<Boolean>> applicationVisibilityIpv6() {
-        return Codegen.optional(this.applicationVisibilityIpv6);
+    public Output<Boolean> applicationVisibilityIpv6() {
+        return this.applicationVisibilityIpv6;
     }
     /**
      * Cloud QoS
@@ -168,46 +168,46 @@ public class LocalizedPolicy extends com.pulumi.resources.CustomResource {
         return this.description;
     }
     /**
-     * IPv4 flow visibility
+     * IPv4 flow visibility - Default value: `false`
      * 
      */
     @Export(name="flowVisibilityIpv4", refs={Boolean.class}, tree="[0]")
-    private Output</* @Nullable */ Boolean> flowVisibilityIpv4;
+    private Output<Boolean> flowVisibilityIpv4;
 
     /**
-     * @return IPv4 flow visibility
+     * @return IPv4 flow visibility - Default value: `false`
      * 
      */
-    public Output<Optional<Boolean>> flowVisibilityIpv4() {
-        return Codegen.optional(this.flowVisibilityIpv4);
+    public Output<Boolean> flowVisibilityIpv4() {
+        return this.flowVisibilityIpv4;
     }
     /**
-     * IPv6 flow visibility
+     * IPv6 flow visibility - Default value: `false`
      * 
      */
     @Export(name="flowVisibilityIpv6", refs={Boolean.class}, tree="[0]")
-    private Output</* @Nullable */ Boolean> flowVisibilityIpv6;
+    private Output<Boolean> flowVisibilityIpv6;
 
     /**
-     * @return IPv6 flow visibility
+     * @return IPv6 flow visibility - Default value: `false`
      * 
      */
-    public Output<Optional<Boolean>> flowVisibilityIpv6() {
-        return Codegen.optional(this.flowVisibilityIpv6);
+    public Output<Boolean> flowVisibilityIpv6() {
+        return this.flowVisibilityIpv6;
     }
     /**
-     * Implicit ACL logging
+     * Implicit ACL logging - Default value: `false`
      * 
      */
     @Export(name="implicitAclLogging", refs={Boolean.class}, tree="[0]")
-    private Output</* @Nullable */ Boolean> implicitAclLogging;
+    private Output<Boolean> implicitAclLogging;
 
     /**
-     * @return Implicit ACL logging
+     * @return Implicit ACL logging - Default value: `false`
      * 
      */
-    public Output<Optional<Boolean>> implicitAclLogging() {
-        return Codegen.optional(this.implicitAclLogging);
+    public Output<Boolean> implicitAclLogging() {
+        return this.implicitAclLogging;
     }
     /**
      * IPv4 visibility cache entries - Range: `16`-`2000000`

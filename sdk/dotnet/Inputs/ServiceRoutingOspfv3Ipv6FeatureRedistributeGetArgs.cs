@@ -28,6 +28,13 @@ namespace Pulumi.Sdwan.Inputs
         [Input("routePolicyId")]
         public Input<string>? RoutePolicyId { get; set; }
 
+        /// <summary>
+        /// Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+        ///   - Default value: `false`
+        /// </summary>
+        [Input("translateRibMetric")]
+        public Input<bool>? TranslateRibMetric { get; set; }
+
         public ServiceRoutingOspfv3Ipv6FeatureRedistributeGetArgs()
         {
         }

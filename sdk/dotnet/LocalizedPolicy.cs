@@ -61,16 +61,16 @@ namespace Pulumi.Sdwan
     public partial class LocalizedPolicy : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// IPv4 application visibility
+        /// IPv4 application visibility - Default value: `false`
         /// </summary>
         [Output("applicationVisibilityIpv4")]
-        public Output<bool?> ApplicationVisibilityIpv4 { get; private set; } = null!;
+        public Output<bool> ApplicationVisibilityIpv4 { get; private set; } = null!;
 
         /// <summary>
-        /// IPv6 application visibility
+        /// IPv6 application visibility - Default value: `false`
         /// </summary>
         [Output("applicationVisibilityIpv6")]
-        public Output<bool?> ApplicationVisibilityIpv6 { get; private set; } = null!;
+        public Output<bool> ApplicationVisibilityIpv6 { get; private set; } = null!;
 
         /// <summary>
         /// Cloud QoS
@@ -97,22 +97,22 @@ namespace Pulumi.Sdwan
         public Output<string> Description { get; private set; } = null!;
 
         /// <summary>
-        /// IPv4 flow visibility
+        /// IPv4 flow visibility - Default value: `false`
         /// </summary>
         [Output("flowVisibilityIpv4")]
-        public Output<bool?> FlowVisibilityIpv4 { get; private set; } = null!;
+        public Output<bool> FlowVisibilityIpv4 { get; private set; } = null!;
 
         /// <summary>
-        /// IPv6 flow visibility
+        /// IPv6 flow visibility - Default value: `false`
         /// </summary>
         [Output("flowVisibilityIpv6")]
-        public Output<bool?> FlowVisibilityIpv6 { get; private set; } = null!;
+        public Output<bool> FlowVisibilityIpv6 { get; private set; } = null!;
 
         /// <summary>
-        /// Implicit ACL logging
+        /// Implicit ACL logging - Default value: `false`
         /// </summary>
         [Output("implicitAclLogging")]
-        public Output<bool?> ImplicitAclLogging { get; private set; } = null!;
+        public Output<bool> ImplicitAclLogging { get; private set; } = null!;
 
         /// <summary>
         /// IPv4 visibility cache entries - Range: `16`-`2000000`
@@ -191,13 +191,13 @@ namespace Pulumi.Sdwan
     public sealed class LocalizedPolicyArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// IPv4 application visibility
+        /// IPv4 application visibility - Default value: `false`
         /// </summary>
         [Input("applicationVisibilityIpv4")]
         public Input<bool>? ApplicationVisibilityIpv4 { get; set; }
 
         /// <summary>
-        /// IPv6 application visibility
+        /// IPv6 application visibility - Default value: `false`
         /// </summary>
         [Input("applicationVisibilityIpv6")]
         public Input<bool>? ApplicationVisibilityIpv6 { get; set; }
@@ -233,19 +233,19 @@ namespace Pulumi.Sdwan
         public Input<string> Description { get; set; } = null!;
 
         /// <summary>
-        /// IPv4 flow visibility
+        /// IPv4 flow visibility - Default value: `false`
         /// </summary>
         [Input("flowVisibilityIpv4")]
         public Input<bool>? FlowVisibilityIpv4 { get; set; }
 
         /// <summary>
-        /// IPv6 flow visibility
+        /// IPv6 flow visibility - Default value: `false`
         /// </summary>
         [Input("flowVisibilityIpv6")]
         public Input<bool>? FlowVisibilityIpv6 { get; set; }
 
         /// <summary>
-        /// Implicit ACL logging
+        /// Implicit ACL logging - Default value: `false`
         /// </summary>
         [Input("implicitAclLogging")]
         public Input<bool>? ImplicitAclLogging { get; set; }
@@ -283,13 +283,13 @@ namespace Pulumi.Sdwan
     public sealed class LocalizedPolicyState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// IPv4 application visibility
+        /// IPv4 application visibility - Default value: `false`
         /// </summary>
         [Input("applicationVisibilityIpv4")]
         public Input<bool>? ApplicationVisibilityIpv4 { get; set; }
 
         /// <summary>
-        /// IPv6 application visibility
+        /// IPv6 application visibility - Default value: `false`
         /// </summary>
         [Input("applicationVisibilityIpv6")]
         public Input<bool>? ApplicationVisibilityIpv6 { get; set; }
@@ -325,19 +325,19 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// IPv4 flow visibility
+        /// IPv4 flow visibility - Default value: `false`
         /// </summary>
         [Input("flowVisibilityIpv4")]
         public Input<bool>? FlowVisibilityIpv4 { get; set; }
 
         /// <summary>
-        /// IPv6 flow visibility
+        /// IPv6 flow visibility - Default value: `false`
         /// </summary>
         [Input("flowVisibilityIpv6")]
         public Input<bool>? FlowVisibilityIpv6 { get; set; }
 
         /// <summary>
-        /// Implicit ACL logging
+        /// Implicit ACL logging - Default value: `false`
         /// </summary>
         [Input("implicitAclLogging")]
         public Input<bool>? ImplicitAclLogging { get; set; }

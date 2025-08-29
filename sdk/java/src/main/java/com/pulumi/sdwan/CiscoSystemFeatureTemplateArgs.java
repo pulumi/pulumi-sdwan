@@ -300,6 +300,21 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
     }
 
     /**
+     * Variable name
+     * 
+     */
+    @Import(name="enhancedAppAwareRoutingVariable")
+    private @Nullable Output<String> enhancedAppAwareRoutingVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<Output<String>> enhancedAppAwareRoutingVariable() {
+        return Optional.ofNullable(this.enhancedAppAwareRoutingVariable);
+    }
+
+    /**
      * Enable Geo fencing - Default value: `false`
      * 
      */
@@ -1291,6 +1306,7 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         this.deviceTypes = $.deviceTypes;
         this.enableMrfMigration = $.enableMrfMigration;
         this.enhancedAppAwareRouting = $.enhancedAppAwareRouting;
+        this.enhancedAppAwareRoutingVariable = $.enhancedAppAwareRoutingVariable;
         this.geoFencing = $.geoFencing;
         this.geoFencingRange = $.geoFencingRange;
         this.geoFencingRangeVariable = $.geoFencingRangeVariable;
@@ -1790,6 +1806,27 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
          */
         public Builder enhancedAppAwareRouting(String enhancedAppAwareRouting) {
             return enhancedAppAwareRouting(Output.of(enhancedAppAwareRouting));
+        }
+
+        /**
+         * @param enhancedAppAwareRoutingVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enhancedAppAwareRoutingVariable(@Nullable Output<String> enhancedAppAwareRoutingVariable) {
+            $.enhancedAppAwareRoutingVariable = enhancedAppAwareRoutingVariable;
+            return this;
+        }
+
+        /**
+         * @param enhancedAppAwareRoutingVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enhancedAppAwareRoutingVariable(String enhancedAppAwareRoutingVariable) {
+            return enhancedAppAwareRoutingVariable(Output.of(enhancedAppAwareRoutingVariable));
         }
 
         /**

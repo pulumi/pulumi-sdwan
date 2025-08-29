@@ -27,7 +27,7 @@ class GetCiscoSystemFeatureTemplateResult:
     """
     A collection of values returned by getCiscoSystemFeatureTemplate.
     """
-    def __init__(__self__, admin_tech_on_failure=None, admin_tech_on_failure_variable=None, affinity_group_number=None, affinity_group_number_variable=None, affinity_group_preference_variable=None, affinity_group_preferences=None, console_baud_rate=None, console_baud_rate_variable=None, control_session_pps=None, control_session_pps_variable=None, controller_group_list_variable=None, controller_group_lists=None, description=None, device_groups=None, device_groups_variable=None, device_types=None, enable_mrf_migration=None, enhanced_app_aware_routing=None, geo_fencing=None, geo_fencing_range=None, geo_fencing_range_variable=None, geo_fencing_sms=None, geo_fencing_sms_phone_numbers=None, hostname=None, hostname_variable=None, id=None, idle_timeout=None, idle_timeout_variable=None, latitude=None, latitude_variable=None, location=None, location_variable=None, longitude=None, longitude_variable=None, max_omp_sessions=None, max_omp_sessions_variable=None, migration_bgp_community=None, multi_tenant=None, multi_tenant_variable=None, name=None, object_trackers=None, on_demand_tunnel=None, on_demand_tunnel_idle_timeout=None, on_demand_tunnel_idle_timeout_variable=None, on_demand_tunnel_variable=None, overlay_id=None, overlay_id_variable=None, port_hopping=None, port_hopping_variable=None, port_offset=None, port_offset_variable=None, region_id=None, region_id_variable=None, role=None, role_variable=None, secondary_region_id=None, secondary_region_id_variable=None, site_id=None, site_id_variable=None, system_description=None, system_description_variable=None, system_ip=None, system_ip_variable=None, template_type=None, timezone=None, timezone_variable=None, track_default_gateway=None, track_default_gateway_variable=None, track_interface_tag=None, track_interface_tag_variable=None, track_transport=None, track_transport_variable=None, trackers=None, transport_gateway=None, transport_gateway_variable=None, version=None):
+    def __init__(__self__, admin_tech_on_failure=None, admin_tech_on_failure_variable=None, affinity_group_number=None, affinity_group_number_variable=None, affinity_group_preference_variable=None, affinity_group_preferences=None, console_baud_rate=None, console_baud_rate_variable=None, control_session_pps=None, control_session_pps_variable=None, controller_group_list_variable=None, controller_group_lists=None, description=None, device_groups=None, device_groups_variable=None, device_types=None, enable_mrf_migration=None, enhanced_app_aware_routing=None, enhanced_app_aware_routing_variable=None, geo_fencing=None, geo_fencing_range=None, geo_fencing_range_variable=None, geo_fencing_sms=None, geo_fencing_sms_phone_numbers=None, hostname=None, hostname_variable=None, id=None, idle_timeout=None, idle_timeout_variable=None, latitude=None, latitude_variable=None, location=None, location_variable=None, longitude=None, longitude_variable=None, max_omp_sessions=None, max_omp_sessions_variable=None, migration_bgp_community=None, multi_tenant=None, multi_tenant_variable=None, name=None, object_trackers=None, on_demand_tunnel=None, on_demand_tunnel_idle_timeout=None, on_demand_tunnel_idle_timeout_variable=None, on_demand_tunnel_variable=None, overlay_id=None, overlay_id_variable=None, port_hopping=None, port_hopping_variable=None, port_offset=None, port_offset_variable=None, region_id=None, region_id_variable=None, role=None, role_variable=None, secondary_region_id=None, secondary_region_id_variable=None, site_id=None, site_id_variable=None, system_description=None, system_description_variable=None, system_ip=None, system_ip_variable=None, template_type=None, timezone=None, timezone_variable=None, track_default_gateway=None, track_default_gateway_variable=None, track_interface_tag=None, track_interface_tag_variable=None, track_transport=None, track_transport_variable=None, trackers=None, transport_gateway=None, transport_gateway_variable=None, version=None):
         if admin_tech_on_failure and not isinstance(admin_tech_on_failure, bool):
             raise TypeError("Expected argument 'admin_tech_on_failure' to be a bool")
         pulumi.set(__self__, "admin_tech_on_failure", admin_tech_on_failure)
@@ -82,6 +82,9 @@ class GetCiscoSystemFeatureTemplateResult:
         if enhanced_app_aware_routing and not isinstance(enhanced_app_aware_routing, str):
             raise TypeError("Expected argument 'enhanced_app_aware_routing' to be a str")
         pulumi.set(__self__, "enhanced_app_aware_routing", enhanced_app_aware_routing)
+        if enhanced_app_aware_routing_variable and not isinstance(enhanced_app_aware_routing_variable, str):
+            raise TypeError("Expected argument 'enhanced_app_aware_routing_variable' to be a str")
+        pulumi.set(__self__, "enhanced_app_aware_routing_variable", enhanced_app_aware_routing_variable)
         if geo_fencing and not isinstance(geo_fencing, bool):
             raise TypeError("Expected argument 'geo_fencing' to be a bool")
         pulumi.set(__self__, "geo_fencing", geo_fencing)
@@ -400,6 +403,14 @@ class GetCiscoSystemFeatureTemplateResult:
         Enhanced App Aware Routing
         """
         return pulumi.get(self, "enhanced_app_aware_routing")
+
+    @_builtins.property
+    @pulumi.getter(name="enhancedAppAwareRoutingVariable")
+    def enhanced_app_aware_routing_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "enhanced_app_aware_routing_variable")
 
     @_builtins.property
     @pulumi.getter(name="geoFencing")
@@ -890,6 +901,7 @@ class AwaitableGetCiscoSystemFeatureTemplateResult(GetCiscoSystemFeatureTemplate
             device_types=self.device_types,
             enable_mrf_migration=self.enable_mrf_migration,
             enhanced_app_aware_routing=self.enhanced_app_aware_routing,
+            enhanced_app_aware_routing_variable=self.enhanced_app_aware_routing_variable,
             geo_fencing=self.geo_fencing,
             geo_fencing_range=self.geo_fencing_range,
             geo_fencing_range_variable=self.geo_fencing_range_variable,
@@ -994,6 +1006,7 @@ def get_cisco_system_feature_template(id: Optional[_builtins.str] = None,
         device_types=pulumi.get(__ret__, 'device_types'),
         enable_mrf_migration=pulumi.get(__ret__, 'enable_mrf_migration'),
         enhanced_app_aware_routing=pulumi.get(__ret__, 'enhanced_app_aware_routing'),
+        enhanced_app_aware_routing_variable=pulumi.get(__ret__, 'enhanced_app_aware_routing_variable'),
         geo_fencing=pulumi.get(__ret__, 'geo_fencing'),
         geo_fencing_range=pulumi.get(__ret__, 'geo_fencing_range'),
         geo_fencing_range_variable=pulumi.get(__ret__, 'geo_fencing_range_variable'),
@@ -1095,6 +1108,7 @@ def get_cisco_system_feature_template_output(id: Optional[pulumi.Input[Optional[
         device_types=pulumi.get(__response__, 'device_types'),
         enable_mrf_migration=pulumi.get(__response__, 'enable_mrf_migration'),
         enhanced_app_aware_routing=pulumi.get(__response__, 'enhanced_app_aware_routing'),
+        enhanced_app_aware_routing_variable=pulumi.get(__response__, 'enhanced_app_aware_routing_variable'),
         geo_fencing=pulumi.get(__response__, 'geo_fencing'),
         geo_fencing_range=pulumi.get(__response__, 'geo_fencing_range'),
         geo_fencing_range_variable=pulumi.get(__response__, 'geo_fencing_range_variable'),

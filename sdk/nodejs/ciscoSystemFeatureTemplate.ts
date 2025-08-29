@@ -122,6 +122,10 @@ export class CiscoSystemFeatureTemplate extends pulumi.CustomResource {
      */
     public readonly enhancedAppAwareRouting!: pulumi.Output<string | undefined>;
     /**
+     * Variable name
+     */
+    public readonly enhancedAppAwareRoutingVariable!: pulumi.Output<string | undefined>;
+    /**
      * Enable Geo fencing - Default value: `false`
      */
     public readonly geoFencing!: pulumi.Output<boolean | undefined>;
@@ -454,6 +458,7 @@ export class CiscoSystemFeatureTemplate extends pulumi.CustomResource {
             resourceInputs["deviceTypes"] = state ? state.deviceTypes : undefined;
             resourceInputs["enableMrfMigration"] = state ? state.enableMrfMigration : undefined;
             resourceInputs["enhancedAppAwareRouting"] = state ? state.enhancedAppAwareRouting : undefined;
+            resourceInputs["enhancedAppAwareRoutingVariable"] = state ? state.enhancedAppAwareRoutingVariable : undefined;
             resourceInputs["geoFencing"] = state ? state.geoFencing : undefined;
             resourceInputs["geoFencingRange"] = state ? state.geoFencingRange : undefined;
             resourceInputs["geoFencingRangeVariable"] = state ? state.geoFencingRangeVariable : undefined;
@@ -537,6 +542,7 @@ export class CiscoSystemFeatureTemplate extends pulumi.CustomResource {
             resourceInputs["deviceTypes"] = args ? args.deviceTypes : undefined;
             resourceInputs["enableMrfMigration"] = args ? args.enableMrfMigration : undefined;
             resourceInputs["enhancedAppAwareRouting"] = args ? args.enhancedAppAwareRouting : undefined;
+            resourceInputs["enhancedAppAwareRoutingVariable"] = args ? args.enhancedAppAwareRoutingVariable : undefined;
             resourceInputs["geoFencing"] = args ? args.geoFencing : undefined;
             resourceInputs["geoFencingRange"] = args ? args.geoFencingRange : undefined;
             resourceInputs["geoFencingRangeVariable"] = args ? args.geoFencingRangeVariable : undefined;
@@ -679,6 +685,10 @@ export interface CiscoSystemFeatureTemplateState {
      * Enhanced App Aware Routing - Choices: `disabled`, `aggressive`, `moderate`, `conservative` - Default value: `disabled`
      */
     enhancedAppAwareRouting?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    enhancedAppAwareRoutingVariable?: pulumi.Input<string>;
     /**
      * Enable Geo fencing - Default value: `false`
      */
@@ -1061,6 +1071,10 @@ export interface CiscoSystemFeatureTemplateArgs {
      * Enhanced App Aware Routing - Choices: `disabled`, `aggressive`, `moderate`, `conservative` - Default value: `disabled`
      */
     enhancedAppAwareRouting?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    enhancedAppAwareRoutingVariable?: pulumi.Input<string>;
     /**
      * Enable Geo fencing - Default value: `false`
      */

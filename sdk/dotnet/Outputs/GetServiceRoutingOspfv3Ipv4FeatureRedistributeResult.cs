@@ -30,6 +30,10 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string ProtocolVariable;
         public readonly string RoutePolicyId;
+        /// <summary>
+        /// Translate Rib Metric
+        /// </summary>
+        public readonly bool TranslateRibMetric;
 
         [OutputConstructor]
         private GetServiceRoutingOspfv3Ipv4FeatureRedistributeResult(
@@ -41,13 +45,16 @@ namespace Pulumi.Sdwan.Outputs
 
             string protocolVariable,
 
-            string routePolicyId)
+            string routePolicyId,
+
+            bool translateRibMetric)
         {
             NatDia = natDia;
             NatDiaVariable = natDiaVariable;
             Protocol = protocol;
             ProtocolVariable = protocolVariable;
             RoutePolicyId = routePolicyId;
+            TranslateRibMetric = translateRibMetric;
         }
     }
 }

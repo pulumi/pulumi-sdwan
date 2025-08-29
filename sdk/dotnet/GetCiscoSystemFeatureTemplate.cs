@@ -202,6 +202,10 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string EnhancedAppAwareRouting;
         /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string EnhancedAppAwareRoutingVariable;
+        /// <summary>
         /// Enable Geo fencing
         /// </summary>
         public readonly bool GeoFencing;
@@ -472,6 +476,8 @@ namespace Pulumi.Sdwan
 
             string enhancedAppAwareRouting,
 
+            string enhancedAppAwareRoutingVariable,
+
             bool geoFencing,
 
             int geoFencingRange,
@@ -606,6 +612,7 @@ namespace Pulumi.Sdwan
             DeviceTypes = deviceTypes;
             EnableMrfMigration = enableMrfMigration;
             EnhancedAppAwareRouting = enhancedAppAwareRouting;
+            EnhancedAppAwareRoutingVariable = enhancedAppAwareRoutingVariable;
             GeoFencing = geoFencing;
             GeoFencingRange = geoFencingRange;
             GeoFencingRangeVariable = geoFencingRangeVariable;

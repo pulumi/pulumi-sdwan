@@ -5,6 +5,7 @@ package com.pulumi.sdwan.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,12 +55,30 @@ public final class ServiceRoutingOspfv3Ipv6FeatureRedistributeArgs extends com.p
         return Optional.ofNullable(this.routePolicyId);
     }
 
+    /**
+     * Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+     *   - Default value: `false`
+     * 
+     */
+    @Import(name="translateRibMetric")
+    private @Nullable Output<Boolean> translateRibMetric;
+
+    /**
+     * @return Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+     *   - Default value: `false`
+     * 
+     */
+    public Optional<Output<Boolean>> translateRibMetric() {
+        return Optional.ofNullable(this.translateRibMetric);
+    }
+
     private ServiceRoutingOspfv3Ipv6FeatureRedistributeArgs() {}
 
     private ServiceRoutingOspfv3Ipv6FeatureRedistributeArgs(ServiceRoutingOspfv3Ipv6FeatureRedistributeArgs $) {
         this.protocol = $.protocol;
         this.protocolVariable = $.protocolVariable;
         this.routePolicyId = $.routePolicyId;
+        this.translateRibMetric = $.translateRibMetric;
     }
 
     public static Builder builder() {
@@ -131,6 +150,29 @@ public final class ServiceRoutingOspfv3Ipv6FeatureRedistributeArgs extends com.p
 
         public Builder routePolicyId(String routePolicyId) {
             return routePolicyId(Output.of(routePolicyId));
+        }
+
+        /**
+         * @param translateRibMetric Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder translateRibMetric(@Nullable Output<Boolean> translateRibMetric) {
+            $.translateRibMetric = translateRibMetric;
+            return this;
+        }
+
+        /**
+         * @param translateRibMetric Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder translateRibMetric(Boolean translateRibMetric) {
+            return translateRibMetric(Output.of(translateRibMetric));
         }
 
         public ServiceRoutingOspfv3Ipv6FeatureRedistributeArgs build() {

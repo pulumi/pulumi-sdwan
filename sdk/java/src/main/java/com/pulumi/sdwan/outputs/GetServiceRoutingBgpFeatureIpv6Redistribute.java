@@ -5,6 +5,7 @@ package com.pulumi.sdwan.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,6 +22,11 @@ public final class GetServiceRoutingBgpFeatureIpv6Redistribute {
      */
     private String protocolVariable;
     private String routePolicyId;
+    /**
+     * @return Translate Rib Metric
+     * 
+     */
+    private Boolean translateRibMetric;
 
     private GetServiceRoutingBgpFeatureIpv6Redistribute() {}
     /**
@@ -40,6 +46,13 @@ public final class GetServiceRoutingBgpFeatureIpv6Redistribute {
     public String routePolicyId() {
         return this.routePolicyId;
     }
+    /**
+     * @return Translate Rib Metric
+     * 
+     */
+    public Boolean translateRibMetric() {
+        return this.translateRibMetric;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -53,12 +66,14 @@ public final class GetServiceRoutingBgpFeatureIpv6Redistribute {
         private String protocol;
         private String protocolVariable;
         private String routePolicyId;
+        private Boolean translateRibMetric;
         public Builder() {}
         public Builder(GetServiceRoutingBgpFeatureIpv6Redistribute defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.protocol = defaults.protocol;
     	      this.protocolVariable = defaults.protocolVariable;
     	      this.routePolicyId = defaults.routePolicyId;
+    	      this.translateRibMetric = defaults.translateRibMetric;
         }
 
         @CustomType.Setter
@@ -85,11 +100,20 @@ public final class GetServiceRoutingBgpFeatureIpv6Redistribute {
             this.routePolicyId = routePolicyId;
             return this;
         }
+        @CustomType.Setter
+        public Builder translateRibMetric(Boolean translateRibMetric) {
+            if (translateRibMetric == null) {
+              throw new MissingRequiredPropertyException("GetServiceRoutingBgpFeatureIpv6Redistribute", "translateRibMetric");
+            }
+            this.translateRibMetric = translateRibMetric;
+            return this;
+        }
         public GetServiceRoutingBgpFeatureIpv6Redistribute build() {
             final var _resultValue = new GetServiceRoutingBgpFeatureIpv6Redistribute();
             _resultValue.protocol = protocol;
             _resultValue.protocolVariable = protocolVariable;
             _resultValue.routePolicyId = routePolicyId;
+            _resultValue.translateRibMetric = translateRibMetric;
             return _resultValue;
         }
     }
